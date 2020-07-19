@@ -18,7 +18,7 @@ END_TYPE;
 TYPE IfcAngularVelocityMeasure = REAL;
 END_TYPE;
 
-TYPE IfcArcIndex = LIST [3:3] OF IfcPositiveInteger;
+TYPE IfcArcIndex = IfcList33OfIfcpositiveinteger;
 END_TYPE;
 
 TYPE IfcAreaDensityMeasure = REAL;
@@ -182,7 +182,7 @@ END_TYPE;
 TYPE IfcLengthMeasure = REAL;
 END_TYPE;
 
-TYPE IfcLineIndex = LIST [2:?] OF IfcPositiveInteger;
+TYPE IfcLineIndex = IfcList2OfIfcpositiveinteger;
 END_TYPE;
 
 TYPE IfcLinearForceMeasure = REAL;
@@ -312,7 +312,7 @@ END_TYPE;
 TYPE IfcPressureMeasure = REAL;
 END_TYPE;
 
-TYPE IfcPropertySetDefinitionSet = SET [1:?] OF IfcPropertySetDefinition;
+TYPE IfcPropertySetDefinitionSet = IfcSet1OfIfcpropertysetdefinition;
 END_TYPE;
 
 TYPE IfcRadioActivityMeasure = REAL;
@@ -2749,13 +2749,13 @@ END_TYPE;
 ENTITY IfcHighwaySExpiration;
 END_ENTITY;
 
-ENTITY (Ifc) Railway Element
+ENTITY IfcRailwayElement
  SUPERTYPE OF (ONEOF
-	((Ifc) Signalling Element));
+	(IfcSignallingElement));
 END_ENTITY;
 
-ENTITY (Ifc) Signalling Element
- SUBTYPE OF ((Ifc) Railway Element);
+ENTITY IfcSignallingElement
+ SUBTYPE OF (IfcRailwayElement);
 END_ENTITY;
 
 ENTITY IfcRtmSpotlocation;
