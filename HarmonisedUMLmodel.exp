@@ -751,7 +751,19 @@ TYPE IfcBuildingElementProxyTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcBuildingSystemTypeEnum = ENUMERATION OF
-	(USERDEFINED
+	(REINFORCING
+	,MOORING
+	,OUTERSHELL
+	,TRACKCIRCUIT
+	,EROSIONPREVENTION
+	,FOUNDATION
+	,LOADBEARING
+	,SHADING
+	,FENESTRATION
+	,MOORINGSYSTEM
+	,TRANSPORT
+	,PRESTRESSING
+	,USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
@@ -2263,7 +2275,8 @@ TYPE IfcProjectionElementTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcPropertySetTemplateTypeEnum = ENUMERATION OF
-	(QTO_OCCURRENCEDRIVEN
+	(NOTDEFINED
+	,QTO_OCCURRENCEDRIVEN
 	,QTO_TYPEDRIVENONLY
 	,PSET_TYPEDRIVENONLY
 	,PSET_PERFORMANCEDRIVEN
@@ -3966,7 +3979,7 @@ ENTITY IfcAlignment2DCantSegment
 	StartCantRight : IfcLengthMeasure;
 	EndCantRight : OPTIONAL IfcLengthMeasure;
  INVERSE
-	ToCant : IfcAlignment2DCant FOR Segments;
+	ToCant : SET [1:1] OF IfcAlignment2DCant FOR Segments;
 END_ENTITY;
 
 ENTITY IfcAlignment2DHorizontal
@@ -4240,7 +4253,7 @@ ENTITY IfcAxisLateralInclination
 	(IfcAlignment2DCant))
  SUBTYPE OF (IfcGeometricRepresentationItem);
  INVERSE
-	ToLinearAxis : IfcLinearAxisWithInclination FOR Inclinating;
+	ToLinearAxis : SET [1:1] OF IfcLinearAxisWithInclination FOR Inclinating;
 END_ENTITY;
 
 ENTITY IfcBSplineCurve
@@ -4282,7 +4295,7 @@ ENTITY IfcBSplineSurface
  SUBTYPE OF (IfcBoundedSurface);
 	UDegree : IfcInteger;
 	VDegree : IfcInteger;
-	ControlPointsList : LIST [2:?] OF IfcCartesianPoint;
+	ControlPointsList : LIST [2:?] OF LIST [2:?] OF IfcCartesianPoint;
 	SurfaceForm : IfcBSplineSurfaceForm;
 	UClosed : IfcLogical;
 	VClosed : IfcLogical;
@@ -7683,7 +7696,7 @@ END_ENTITY;
 
 ENTITY IfcLinearPlacementWithInclination
  SUBTYPE OF (IfcLinearPlacement);
-	Inclinating : IfcAxisLateralInclination;
+	Inclinating : SET [1:1] OF IfcAxisLateralInclination;
 END_ENTITY;
 
 ENTITY IfcLinearPositioningElement
