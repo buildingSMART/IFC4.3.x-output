@@ -83,6 +83,14 @@
                 "Description": "Indicates the maximum close off torque for the actuator."
               }
             }
+          },
+          "Qto_ActuatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -204,6 +212,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_AlarmBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -273,6 +289,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_ControllerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -484,6 +508,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_FlowInstrumentBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -603,6 +635,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_SensorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -1080,6 +1120,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_UnitaryControlElementBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -1139,6 +1187,50 @@
         "Parent": "IfcUnitaryControlElement",
         "Description": "A control element at which the detection of gas is annunciated."
       },
+      "IfcConstructionEquipmentResource": {
+        "Parent": "IfcConstructionResource",
+        "Description": "IfcConstructionEquipmentResource is usage of construction equipment to assist in the performance of construction. Construction Equipment resources are wholly or partially consumed or occupied in the performance of construction. HISTORY New entity in IFC2.0. Occurrences of IfcConstructionEquipmentResource are products that are used as resources to assist the process of construction. More specifically, they are products that are standalone items brought to a project to fulfil a particular purpose. Examples might be a tower crane or other mobile crane, a screwing machine, or a lifting hoist. Instances of any subtype of IfcProduct may be assigned to the equipment resource using IfcRelAssignsToResource in order to characterize the equipment further, as described at the supertype IfcResource . Examples of relevant subtypes of IfcProduct are IfcTransportElement , IfcDiscreteAccessory , or IfcProxy for particular cases where more precise usage details are not available bSI Documentation",
+        "Psets": {
+          "Qto_ConstructionEquipmentResourceBaseQuantities": {
+            "Properties": {
+              "OperatingTime": {
+                "type": "q_time",
+                "Description": "Productive time using the equipment including operating time and excluding idle time."
+              },
+              "UsageTime": {
+                "type": "q_time",
+                "Description": "Total time using the equipment including operating time and idle time."
+              }
+            }
+          }
+        }
+      },
+      "IfcConstructionMaterialResource": {
+        "Parent": "IfcConstructionResource",
+        "Description": "IfcConstructionMaterialResource identifies a material resource type in a construction project. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE The attribute Suppliers has been deleted use IfcRelAssignsToResource to assign an IfcActor to fulfill the role as a supplier. The attribute UsageRatio has been deleted use BaseQuantityConsumed and BaseQuantityProduced to indicate material usage. Occurrences of IfcConstructionMaterialResource are consumed wholly or partially , or occupied during a construction work task IfcTask . Similar to IfcConstructionProductResource , sometimes things such as 5000kg of gravel are already instantiated as an instance of an IfcProduct subtype because it is a result of a work task for example, transporting gravel . In this case, the instance of IfcConstructionMaterialResource can be associated with the product instance 5000kg of gravel to provide more information for resource uses. Nevertheless, IfcConstructionMaterialResource should only be used to represent resource usage, but not product substances. NOTE This entity is not the same as IfcMaterial . One one hand, IfcConstructionMaterialResource represents usage of bulk materials such as sand, gravels, nails and so on. Physical manifestations can be instantiated from IfcProduct as well, depending on their uses in the system, and such an IfcProduct object can be assigned to the IfcConstructionMaterialResource object via IfcRelAssignsToResource . On the other hand, IfcMaterial is about physical materials that a physical building element consists of, possibly with detailed material layering information. bSI Documentation",
+        "Psets": {
+          "Qto_ConstructionMaterialResourceBaseQuantities": {
+            "Properties": {
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the material, including material placed and wasted."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the material, including material placed and wasted."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the material, including material placed but excluding material wasted."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the material, including material placed but excluding material wasted."
+              }
+            }
+          }
+        }
+      },
       "IfcConstructionResource": {
         "Parent": "IfcResource",
         "Description": "IfcConstructionResource is an abstract generalization of the different resources used in construction projects, mainly labour, material, equipment and product resources, plus subcontracted resources and aggregations such as a crew resource. A resource represents use of something and does not necessarily correspond to a single item such as a person or vehicle, but represents a pool of items having limited availability such as general labor or an equipment fleet. A resource can represent either a generic resource pool not having any task assignment or a task specific resource allocation having an IfcTask assignment . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Modified in to promote ResourceIdentifer and ResourceGroup renamed to LongDescription to supertype IfcResource and add attributes as described. .use head Declaration use definition A root level resource specifically IfcCrewResource or IfcSubContractResource is declared within the project by IfcRelDeclares where RelatingContext refers to the single IfcProject and RelatedObjects refers to one or more IfcConstructionResource , and other root level objects within the project. .use head Assignment use definition A resource may be assigned to an actor by IfcRelAssignsToActor where RelatingActor refers to an IfcActor and RelatedObjects refers to one or more IfcConstructionResource or other objects. Such relationship indicates the actor responsible for allocating the resource such as partitioning into task specific allocations, delegating to other actors, and or scheduling over time. Note that this assignment does not indicate the person or organization performing the work that is indicated by IfcRelAssignsToResource . The actor responsible for the resource may or may not be the same as any actor s performing work. A resource may be assigned to a control by IfcRelAssignsToControl where RelatingProduct refers to an IfcControl and RelatedObjects refers to one or more IfcConstructionResource or other objects. Most commonly an IfcWorkCalendar is assigned indicating availability of the resource, where such calendar is nested within a base calendar or an IfcWorkPlan which in turn is assigned to the IfcProject . A resource may be assigned to a group by IfcRelAssignsToGroup where RelatingGroup refers to an IfcGroup and RelatedObjects refers to one or more IfcConstructionResource or other objects. Most commonly an IfcAsset is assigned indicating the asset to be tracked, where such asset is nested within an IfcInventory which in turn is assigned to the IfcProject . A resource may be assigned to a product by IfcRelAssignsToProduct where RelatingProduct refers to an IfcProduct and RelatedObjects refers to one or more IfcConstructionResource or other objects. Most commonly an IfcElement subtype is assigned indicating the product to be constructed, where such product is connected to a spatial structure which in turn is aggregated within the IfcProject . A resource may be assigned to a process by IfcRelAssignsToProcess where RelatingProcess refers to an IfcProcess and RelatedObjects refers to one or more IfcConstructionResource or other objects. Most commonly an IfcTask is assigned indicating the task to be performed by the resource, where such task is nested within a summary task which in turn is assigned to the IfcProject . A resource may have assignments of other objects using IfcRelAssignsToResource where RelatingResource refers to the IfcConstructionResource and RelatedObjects refers to one or more objects such as IfcActor or IfcProduct subtypes. This relationship indicates specific objects assigned to fulfill resource usage. Figure 1 illustrates resource assignment. Assignment Use Definition .. .. .. .. .. .. figures ifcconstructionresource assignment.png Figure 1 Construction resource assignment use .use head Baseline use definition A resource may have any number of baselines defined using the relationship IfcRelDefinesByObject where RelatingObject is the current resource and RelatedObjects consists of multiple baseline resources, each representing a copy of the resource as it existed at an earlier point in time as shown in Figure 185. Each baseline IfcConstructionResource is identified by its nested IfcRelAssignsToControl relationship to an IfcWorkSchedule having PredefinedType BASELINE , IfcWorkSchedule.CreationDate indicating the date of the baseline, and IfcWorkSchedule.Name indicating the name of the baseline. Baseline Use Definition .. .. .. .. .. .. figures ifcconstructionresource baseline.png Figure 2 Construction resource baseline use bSI Documentation",
@@ -1176,6 +1268,24 @@
               "ScheduleWork": {
                 "type": "string",
                 "Description": "The scheduled work on behalf of the resource allocation."
+              }
+            }
+          }
+        }
+      },
+      "IfcLaborResource": {
+        "Parent": "IfcConstructionResource",
+        "Description": "An IfcLaborResource is used in construction with particular skills or crafts required to perform certain types of construction or management related work. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE The attribute Skillset has been deleted use LongDescription to describe the skillset. The purpose of an IfcLaborResource is to identify a skillset that may be required or used. The skillset identified may be for instance charge hand, foreman, labourer, plumbers mate etc. and provides a designation of a particular level of skill. It can be used to identify the generic type of labour resource that is required for a purpose without having to be specific about the actor person or organization providing the resource occurrence. It may be particularly useful when creating an overall plan for a process or processes. For instance, within maintenance or work planning there may be a known task that needs to be done which is planned to require a chargehand pipe fitter . There may be several such labour resources available and so the need to identify which will be used is not necessary at the planning stage. At a later stage, individual actors can be determined for the labour resources. This is achieved through specifying the actor through IfcActor . The actor is then identified as the labour resource occurrence through the IfcRelAssignsToResource.RelatedResource attribute. The IfcLaborResource provides the IfcRelAssignsToResource . RelatingResource attribute. bSI Documentation",
+        "Psets": {
+          "Qto_LaborResourceBaseQuantities": {
+            "Properties": {
+              "OvertimeWork": {
+                "type": "q_time",
+                "Description": "Work that is performed after exceeding a particular limit such as hours per day and or hours per week, after which company or municipal policy requires a different rate to apply. Note Policies for when overtime takes effect are the responsibility of the user or application they are not modelled in IFC."
+              },
+              "StandardWork": {
+                "type": "q_time",
+                "Description": "Work that is performed at regular times, up to a particular limit after which overtime rates may apply."
               }
             }
           }
@@ -1226,6 +1336,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_AudioVisualApplianceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -1570,6 +1688,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_CableCarrierFittingBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -1602,6 +1728,26 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_CableCarrierSegmentBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the segment, calculated at midpoint of cross section, equal to the distance between inlet and outlet ports."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total surface area."
               }
             }
           }
@@ -1758,6 +1904,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_CableFittingBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -1872,6 +2026,26 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_CableSegmentBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the segment, calculated at midpoint of cross section, equal to the distance between inlet and outlet ports."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total surface area of the cable."
               }
             }
           }
@@ -2140,6 +2314,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_CommunicationsApplianceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -2268,6 +2450,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_ElectricApplianceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -2390,6 +2580,18 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_DistributionBoardBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "NumberOfCircuits": {
+                "type": "q_count",
+                "Description": "Number of circuits in the distribution board."
+              }
+            }
           }
         }
       },
@@ -2488,6 +2690,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_ElectricFlowStorageDeviceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -2552,6 +2762,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_ElectricGeneratorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -2638,6 +2856,14 @@
                 "Description": "The maximum time in s at which the motor could run with locked rotor when the motor is used in an EX environment. The time indicates that a protective device should trip before this time when the starting current of the motor is slowing through the device."
               }
             }
+          },
+          "Qto_ElectricMotorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -2674,6 +2900,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_ElectricTimeControlBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -2736,6 +2970,18 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_JunctionBoxBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "NumberOfGangs": {
+                "type": "q_count",
+                "Description": "Number of gangs in the junction box."
               }
             }
           }
@@ -2808,6 +3054,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_LampBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -2913,6 +3167,14 @@
                 "Description": "Wattage on whole lightfitting device with all sources intact."
               }
             }
+          },
+          "Qto_LightFixtureBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -2973,6 +3235,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_MotorConnectionBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -3014,6 +3284,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_OutletBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -3246,6 +3524,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_ProtectiveDeviceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -3662,6 +3948,14 @@
                 ]
               }
             }
+          },
+          "Qto_ProtectiveDeviceTrippingUnitBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -4043,6 +4337,18 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_SolarDeviceBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Area of the solar device including the outer frame."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -4107,6 +4413,14 @@
               "SetPoint": {
                 "type": "integer",
                 "Description": "Indicates the switch position over time according to Pset SwitchingDeviceTypeCommon.SetPoint."
+              }
+            }
+          },
+          "Qto_SwitchingDeviceBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -4400,6 +4714,14 @@
                 ]
               }
             }
+          },
+          "Qto_TransformerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -4608,6 +4930,22 @@
                 "Description": "The horizontal or vertical axial distance an airstream travels after leaving an AirTerminal before the maximum stream velocity is reduced to a specified terminal velocity under isothermal conditions at the upper value of the AirFlowrateRange."
               }
             }
+          },
+          "Qto_AirTerminalBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "Perimeter": {
+                "type": "q_length",
+                "Description": "Perimeter of the air terminal face plate."
+              },
+              "TotalSurfaceArea": {
+                "type": "q_area",
+                "Description": "Gross area of the air terminal face plate."
+              }
+            }
           }
         }
       },
@@ -4708,6 +5046,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_AirTerminalBoxTypeBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -4814,6 +5160,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_AirToAirHeatRecoveryBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -4958,6 +5312,22 @@
                 "Description": "Water storage capacity."
               }
             }
+          },
+          "Qto_BoilerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element, not including contained fluid."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element, including contained fluid as designed."
+              },
+              "TotalSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total surface area of the element."
+              }
+            }
           }
         }
       },
@@ -5018,6 +5388,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_BurnerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -5088,6 +5466,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_ChillerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -5236,6 +5622,14 @@
               "WetCoilFraction": {
                 "type": "real",
                 "Description": "Fraction of coil surface area that is wet 0 1 ."
+              }
+            }
+          },
+          "Qto_CoilBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -5388,6 +5782,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_CompressorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -5536,6 +5938,14 @@
               "Status": {
                 "type": "string",
                 "Description": ""
+              }
+            }
+          },
+          "Qto_CondenserBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -5720,6 +6130,14 @@
                 "Description": "Allowable water circuit working pressure range."
               }
             }
+          },
+          "Qto_CooledBeamBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -5846,6 +6264,14 @@
               "WaterRequirement": {
                 "type": "real",
                 "Description": "Make up water requirements."
+              }
+            }
+          },
+          "Qto_CoolingTowerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -6000,6 +6426,14 @@
               "TemperatureRating": {
                 "type": "real",
                 "Description": "Temperature rating."
+              }
+            }
+          },
+          "Qto_DamperBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -6188,6 +6622,30 @@
                 "Description": "Allowable maximum and minimum temperature."
               }
             }
+          },
+          "Qto_DuctFittingBaseQuantities": {
+            "Properties": {
+              "GrossCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section at the inlet, including the duct fitting itself and the interior flow space."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the duct fitting."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the fitting, calculated at midpoint of cross section and equal to the distance along the flow path from the port inlet to the port outlet. For junction fittings, it indicates the length of the longest flow path."
+              },
+              "NetCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section at the inlet, including the duct fitting and excluding the interior flow space."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the fitting not taking into account the end cap areas ."
+              }
+            }
           }
         }
       },
@@ -6306,6 +6764,30 @@
                 "Description": "Pressure classification as defined by the authority having jurisdiction e.g., SMACNA, etc. ."
               }
             }
+          },
+          "Qto_DuctSegmentBaseQuantities": {
+            "Properties": {
+              "GrossCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section, including the duct itself and the interior flow space."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the duct segment."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the segment, calculated at midpoint of cross section, equal to the distance between inlet and outlet ports."
+              },
+              "NetCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section of the duct, excluding the interior flow space."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the duct not taking into account the end cap areas , normally generated as perimeter length."
+              }
+            }
           }
         }
       },
@@ -6374,6 +6856,14 @@
               "WorkingPressureRange": {
                 "type": "real",
                 "Description": "Allowable minimum and maximum working pressure relative to ambient pressure ."
+              }
+            }
+          },
+          "Qto_DuctSilencerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -6486,6 +6976,14 @@
               "WaterRequirement": {
                 "type": "real",
                 "Description": "Make up water requirement."
+              }
+            }
+          },
+          "Qto_EvaporativeCoolerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -6629,6 +7127,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_EvaporatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -6797,6 +7303,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_FanBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -6901,6 +7415,14 @@
               "Weight": {
                 "type": "real",
                 "Description": "Weight of filter."
+              }
+            }
+          },
+          "Qto_FilterBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -7060,6 +7582,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_FlowMeterBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -7195,6 +7725,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_HeatExchangerBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -7277,6 +7815,14 @@
               "Weight": {
                 "type": "real",
                 "Description": "The weight of the humidifier."
+              }
+            }
+          },
+          "Qto_HumidifierBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -7425,6 +7971,34 @@
               "TemperatureRange": {
                 "type": "real",
                 "Description": "Allowable maximum and minimum temperature."
+              }
+            }
+          },
+          "Qto_PipeFittingBaseQuantities": {
+            "Properties": {
+              "GrossCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section at the inlet, including the pipe fitting itself and the interior flow space."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the pipe fitting itself, not including contained fluid."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the fitting, calculated at midpoint of cross section and equal to the distance along the flow path from the port inlet to the port outlet. For junction fittings, it indicates the length of the longest flow path."
+              },
+              "NetCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section at the inlet, including the pipe fitting and excluding the interior flow space."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the pipe fitting, including contained fluid as designed."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the fitting not taking into account the end cap areas ."
               }
             }
           }
@@ -7601,6 +8175,34 @@
                 "Description": "Working pressure."
               }
             }
+          },
+          "Qto_PipeSegmentBaseQuantities": {
+            "Properties": {
+              "GrossCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section, including the pipe itself and the interior flow space."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the pipe segment itself, not including contained fluid."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the segment, calculated at midpoint of cross section, equal to the distance between inlet and outlet ports."
+              },
+              "NetCrossSectionArea": {
+                "type": "q_area",
+                "Description": "Area of the cross section of the pipe, excluding the interior flow space."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the pipe segment, including contained fluid as designed."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the pipe not taking into account the end cap areas , normally generated as perimeter length."
+              }
+            }
           }
         }
       },
@@ -7735,6 +8337,14 @@
                 "Description": "Allowable operational range of the fluid temperature."
               }
             }
+          },
+          "Qto_PumpBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -7863,6 +8473,22 @@
               "ThermalMassHeatCapacity": {
                 "type": "real",
                 "Description": "Product of component mass and specific heat."
+              }
+            }
+          },
+          "Qto_SpaceHeaterBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element itself, not including contained fluid."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the water tube inside the component, if applicable."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element, including contained fluid as designed."
               }
             }
           }
@@ -7998,6 +8624,22 @@
               "StorageType": {
                 "type": "string",
                 "Description": "Defines the general material category intended to be stored."
+              }
+            }
+          },
+          "Qto_TankBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element itself, not including contained fluid."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element, including contained fluid as designed."
+              },
+              "TotalSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total surface area of the element."
               }
             }
           }
@@ -8146,6 +8788,18 @@
                 "Description": "Total volume of fluid in the tubes and their headers."
               }
             }
+          },
+          "Qto_TubeBundleBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element itself, not including contained fluid."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element, including contained fluid as designed."
+              }
+            }
           }
         }
       },
@@ -8208,6 +8862,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_UnitaryEquipmentBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -8398,6 +9060,14 @@
               "WorkingPressure": {
                 "type": "real",
                 "Description": "The normally expected maximum working pressure of the valve."
+              }
+            }
+          },
+          "Qto_ValveBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -8668,7 +9338,17 @@
       },
       "IfcVibrationIsolator": {
         "Parent": "IfcElementComponent",
-        "Description": "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure. HISTORY New entity in IFC4 bSI Documentation"
+        "Description": "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure. HISTORY New entity in IFC4 bSI Documentation",
+        "Psets": {
+          "Qto_VibrationIsolatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
+          }
+        }
       },
       "IfcVibrationIsolator.SPRING": {
         "Parent": "IfcVibrationIsolator",
@@ -9249,6 +9929,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_FireSuppressionTerminalBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -9529,6 +10217,14 @@
                 "Description": "Size of the ventilating pipe s ."
               }
             }
+          },
+          "Qto_InterceptorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -9577,6 +10273,14 @@
               "Status": {
                 "type": "string",
                 "Description": ""
+              }
+            }
+          },
+          "Qto_SanitaryTerminalBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -9918,6 +10622,14 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_StackTerminalBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              }
+            }
           }
         }
       },
@@ -9946,6 +10658,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_WasteTerminalBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
               }
             }
           }
@@ -10596,6 +11316,38 @@
               }
             }
           },
+          "Qto_BuildingBaseQuantities": {
+            "Properties": {
+              "EavesHeight": {
+                "type": "q_length",
+                "Description": "Standard net height of this storey, from the top surface of the construction floor, to the bottom surface of the construction floor or roof above. Only provided is there is a constant height."
+              },
+              "FootprintArea": {
+                "type": "q_area",
+                "Description": "Gross area of the site covered by the building s ."
+              },
+              "GrossFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all gross areas of spaces within the building. It includes the area of construction elements within the building. May be provided in addition to the quantities of the spaces and the construction elements assigend to the building. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Sum of all gross volumes of spaces enclosed by the building. It includes the volumes of construction elements within the building. May be provided in addition to the quantities of the spaces and the construction elements assigend to the building. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Standard gross height of this building, from the top surface of the construction floor, to the top surface of the construction floor or roof above. Only provided is there is a constant height."
+              },
+              "NetFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all net areas of spaces within the building. It excludes the area of construction elements within the building. May be provided in addition to the quantities of the spaces assigend to the building. In case of inconsistencies, the individual quantities of spaces take precedence."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Sum of all net volumes of spaces enclosed by the building. It iexcludes the volumes of construction elements within the building. May be provided in addition to the quantities of the spaces assigend to the building. In case of inconsistencies, the individual quantities of spaces take precedence."
+              }
+            }
+          },
           "Pset_OutsideDesignCriteria": {
             "Properties": {
               "BuildingThermalExposure": {
@@ -10729,6 +11481,38 @@
                   "TRUE",
                   "FALSE"
                 ]
+              }
+            }
+          },
+          "Qto_BuildingStoreyBaseQuantities": {
+            "Properties": {
+              "GrossFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+              },
+              "GrossHeight": {
+                "type": "q_length",
+                "Description": "Standard gross height of this storey, from the top surface of the construction floor, to the top surface of the construction floor or roof above. Only provided is there is a constant height."
+              },
+              "GrossPerimeter": {
+                "type": "q_length",
+                "Description": "Perimeter of the outer contour of the building story without taking interior slab openings into account."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+              },
+              "NetFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+              },
+              "NetHeigtht": {
+                "type": "q_length",
+                "Description": "Standard net height of this storey, from the top surface of the construction floor, to the bottom surface of the construction floor or roof above. Only provided is there is a constant height."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           }
@@ -11568,6 +12352,30 @@
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
               }
             }
+          },
+          "Qto_OpeningElementBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "q_area",
+                "Description": "Area of the opening as viewed by an elevation view for wall openings or as viewed by a ground floor view for slab openings ."
+              },
+              "Depth": {
+                "type": "q_length",
+                "Description": "Depth or thickness of the opening, in case of openings it shall be identical to the width or thickness of the voided element, in case of recesses it shall be less. Only provided, if the depth is constant."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Height of the opening, in case of wall openings it is the vertical dimension in case of slab openings it is one horizontal dimension. Only provided, if the area is rectangular."
+              },
+              "Volume": {
+                "type": "q_volume",
+                "Description": "Volume of the opening. It is the subtraction volume of the opening from the voided element e.g. wall or slab . In case that the geometric volume of the opening is bigger then the subtraction volume, only the subtraction volume should be used."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Width of the opening, in case of wall openings it is the horizontal dimension in case of slab openings it is one horizontal dimension. Only provided, if the area is rectangular."
+              }
+            }
           }
         }
       },
@@ -11593,7 +12401,21 @@
       },
       "IfcProjectionElement": {
         "Parent": "IfcFeatureElementAddition",
-        "Description": "The projection element is a specialization of the general feature element to represent projections applied to building elements. It represents a solid attached to any element that has physical manifestation. EXAMPLE A wall projection such as a pilaster strip is handled by IfcProjectionElement NOTE View definitions or implementer agreements may restrict the types of elements to which IfcProjectionElement can be applied. An IfcProjectionElement has to be linked to a element all subtypes of IfcElement by using the IfcRelProjectsElement relationship. Its existence depends on the existence of the master element. The relationship implies a Boolean union operation between the volume of the projection element and the volume of the element. The IfcProjectionElement shall not participate in the containment relationship, i.e. it is not linked directly to the spatial structure of the project. It has a mandatory ProjectsElements inverse relationship pointing to the IfcElement that is contained in the spatial structure. The inverse relationship ContainedInStructure shall be NIL. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE The attribute PredefinedType has been added at the end of attribute list. bSI Documentation"
+        "Description": "The projection element is a specialization of the general feature element to represent projections applied to building elements. It represents a solid attached to any element that has physical manifestation. EXAMPLE A wall projection such as a pilaster strip is handled by IfcProjectionElement NOTE View definitions or implementer agreements may restrict the types of elements to which IfcProjectionElement can be applied. An IfcProjectionElement has to be linked to a element all subtypes of IfcElement by using the IfcRelProjectsElement relationship. Its existence depends on the existence of the master element. The relationship implies a Boolean union operation between the volume of the projection element and the volume of the element. The IfcProjectionElement shall not participate in the containment relationship, i.e. it is not linked directly to the spatial structure of the project. It has a mandatory ProjectsElements inverse relationship pointing to the IfcElement that is contained in the spatial structure. The inverse relationship ContainedInStructure shall be NIL. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE The attribute PredefinedType has been added at the end of attribute list. bSI Documentation",
+        "Psets": {
+          "Qto_ProjectionElementBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "q_area",
+                "Description": "Area of the projection as viewed by an elevation view for wall projections or as viewed by a ground floor view for slab projections ."
+              },
+              "Volume": {
+                "type": "q_volume",
+                "Description": "Volume of the opening. It is the addition volume of the project to the element e.g. wall or slab ."
+              }
+            }
+          }
+        }
       },
       "IfcProjectionElement.BLISTER": {
         "Parent": "IfcProjectionElement",
@@ -11672,6 +12494,18 @@
               "TotalArea": {
                 "type": "real",
                 "Description": "Total planned area for the site. Used for programming the site space."
+              }
+            }
+          },
+          "Qto_SiteBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Gross area for this site, measured in horizontal projections."
+              },
+              "GrossPerimeter": {
+                "type": "q_length",
+                "Description": "Perimeter of the site boundary, measured in horizontal projection."
               }
             }
           }
@@ -12006,6 +12840,62 @@
               "SpaceTemperatureWinterMin": {
                 "type": "real",
                 "Description": "Minimal temperature of the space or zone for the cold winter period, that is required from user designer view point and provided as requirement for heating."
+              }
+            }
+          },
+          "Qto_SpaceBaseQuantities": {
+            "Properties": {
+              "FinishCeilingHeight": {
+                "type": "q_length",
+                "Description": "Height of the suspended ceiling from top of flooring to the bottom of the suspended ceiling . To be provided only if the space has a suspended ceiling with constant height."
+              },
+              "FinishFloorHeight": {
+                "type": "q_length",
+                "Description": "Height of the flooring from base slab without flooring to the flooring height . To be provided only if the space has a constant flooring height."
+              },
+              "GrossCeilingArea": {
+                "type": "q_area",
+                "Description": "Sum of all ceiling areas of the space. It includes the area covered by elementsinside the space columns, inner walls, etc. . The ceiling area is the real and not the projected area e.g. in case of sloped ceilings ."
+              },
+              "GrossFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all floor areas covered by the space. It includes the area covered by elementsinside the space columns, inner walls, etc. and excludes the area covered by wall claddings."
+              },
+              "GrossPerimeter": {
+                "type": "q_length",
+                "Description": "Gross perimeter at the floor level of this space. It all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings like doors ."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Gross volume enclosed by the space, including the volume of construction elements inside the space."
+              },
+              "GrossWallArea": {
+                "type": "q_area",
+                "Description": "Sum of all wall and other vertically bounding elements, like columns areas bounded by the space. It includes the area covered by elements inside the wall area doors, windows, other openings, etc. ."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total height from base slab without flooring to ceiling without suspended ceiling for this space measured from top of slab below to bottom of slab above . To be provided only if the space has a constant height."
+              },
+              "NetCeilingArea": {
+                "type": "q_area",
+                "Description": "Sum of all ceiling areas of the space. It excludes the area covered by elementsinside the space columns, inner walls, etc. . The ceiling area is the real and not the projected area e.g. in case of sloped ceilings ."
+              },
+              "NetFloorArea": {
+                "type": "q_area",
+                "Description": "Sum of all usable floor areas covered by the space. It excludes the area covered by elements inside the space columns, inner walls, built in s etc. , slab openings, or other protruding elements. Varying heights are not taking into account i.e. no reduction for areas under a minimum headroom ."
+              },
+              "NetPerimeter": {
+                "type": "q_length",
+                "Description": "Net perimeter at the floor level of this space. It excludes those parts of the perimeter that are created by by virtual boundaries and openings like doors . It is the measurement used for skirting boards and may includes the perimeter of internal fixed objects like columns."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Net volume enclosed by the space, excluding the volume of construction elements inside the space."
+              },
+              "NetWallArea": {
+                "type": "q_area",
+                "Description": "Sum of all wall and other vertically bounding elements, like columns areas bounded by the space. It excludes the area covered by elements inside the wall area doors, windows, other openings, etc. ."
               }
             }
           },
@@ -13240,6 +14130,46 @@
               }
             }
           },
+          "Qto_BeamBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Total area of the cross section or profile of the beam."
+              },
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the beam, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the beam, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the beam without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the beam, not taking into account any cut out s or other processing features."
+              },
+              "NetSurfaceArea": {
+                "type": "q_area",
+                "Description": "Net surface area of the beam, normally generated as perimeter length 2 cross section area taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the beam, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the beam without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the beam not taking into account the end cap areas , normally generated as perimeter length."
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -13576,6 +14506,18 @@
               }
             }
           },
+          "Qto_BuildingElementProxyQuantities": {
+            "Properties": {
+              "NetSurfaceArea": {
+                "type": "q_count",
+                "Description": ""
+              },
+              "NetVolume": {
+                "type": "q_count",
+                "Description": ""
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -13862,6 +14804,14 @@
               }
             }
           },
+          "Qto_ChimneyBaseQuantities": {
+            "Properties": {
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the chimney from the foundation or beginning to the top not taking into account any cut out s or other processing features."
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -14073,6 +15023,46 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of the element. Here the total thermal transmittance coefficient through the column within the direction of the thermal flow including all materials . Nore new property in IFC4"
+              }
+            }
+          },
+          "Qto_ColumnBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Total area of the cross section or profile of the column."
+              },
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the column, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the column, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the column without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the column not taking into account any cut out s or other processing features."
+              },
+              "NetSurfaceArea": {
+                "type": "q_area",
+                "Description": "Net surface area of the column, normally generated as perimeter length 2 cross section area taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the column, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the column without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the column not taking into account the end cap areas , normally generated as perimeter length."
               }
             }
           },
@@ -14365,6 +15355,22 @@
                 "Description": "Thermal transmittance coefficient U Value of an element. Here the total thermal transmittance coefficient through the covering including all materials ."
               }
             }
+          },
+          "Qto_CoveringBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Sum of all gross areas of the covering facing the space. No opening that is included in the covering is subtracted."
+              },
+              "NetArea": {
+                "type": "q_area",
+                "Description": "Sum of all net areas of the covering facing the space. All openings that is included in the covering are subtracted."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Nominal width or thickness of the plate. Only given, if the covering is prismatic constant thickess ."
+              }
+            }
           }
         }
       },
@@ -14497,6 +15503,30 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of a material. Here the total thermal transmittance coefficient through the wall including all materials ."
+              }
+            }
+          },
+          "Qto_CurtainWallQuantities": {
+            "Properties": {
+              "GrossSideArea": {
+                "type": "q_area",
+                "Description": "Area of the curtain wall as viewed by an elevation view of the middle plane of the curtain wall. It does not take into account any curtain wall modifications."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total height of the curtain wall. It should only be provided, if it is constant along the curtain wall path."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the curtain wall along the cutain wall center line even if different to the curtain wall path ."
+              },
+              "NetSideArea": {
+                "type": "q_area",
+                "Description": "Area of the curtain wall as viewed by an elevation view of the middle plane of the curtain wall. It does take into account all curtain wall modifications."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Thickness of the curtain wall. It should only be provided, if it is constant along the curtain wall path."
               }
             }
           }
@@ -14709,6 +15739,26 @@
                 "Description": "Fraction of the visible light that passes the glazing at normal incidence. It is a value without unit."
               }
             }
+          },
+          "Qto_DoorBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "q_area",
+                "Description": "Total area of the outer lining of the door."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total outer heigth of the door lining. It should only be provided, if it is a rectangular door."
+              },
+              "Perimeter": {
+                "type": "q_length",
+                "Description": "Total perimeter of the outer lining of the door."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Total outer width of the door lining. It should only be provided, if it is a rectangular door."
+              }
+            }
           }
         }
       },
@@ -14795,6 +15845,46 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of a material. Here the total thermal transmittance coefficient through the member within the direction of the thermal flow including all materials . Note new property in IFC4."
+              }
+            }
+          },
+          "Qto_MemberBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Total area of the cross section or profile of the member."
+              },
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the member, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the member, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the member without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total nominal length of the member, not taking into account any cut out s or other processing features."
+              },
+              "NetSurfaceArea": {
+                "type": "q_area",
+                "Description": "Net surface area of the member, normally generated as perimeter length 2 cross section area taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the member, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the member without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the member not taking into account the end cap areas , normally generated as perimeter length."
               }
             }
           },
@@ -15088,6 +16178,42 @@
               }
             }
           },
+          "Qto_PlateBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded area of the plate. Openings, recesses and projections are not taken into account. Only given, if the plate is prismatic."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the plate. Openings, recesses, and projections are not taken into account."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the plate without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded area of the plate. Openings and recesses are taken into account by subtraction, projections by addition. Only given, if the plate is prismatic."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the plate. Openings and recesses are taken into account by subtraction, projections by addition."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the plate without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Perimeter": {
+                "type": "q_length",
+                "Description": "Perimeter measured along the outer boundaries of the plate. Only given, if the plate is prismatic constant thickness ."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Nominal width or thickness of the plate. Only given, if the plate is prismatic constant thickess ."
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -15323,6 +16449,14 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_RailingBaseQuantities": {
+            "Properties": {
+              "Length": {
+                "type": "q_length",
+                "Description": "Total nominal length of the railing, not taking into account any cut out s or other processing features."
               }
             }
           },
@@ -15688,6 +16822,34 @@
               }
             }
           },
+          "Qto_RampFlightBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Total area of the ramp flight not the projected area . Openings, recesses and projections are not taken into account. Only given, if the ramp flight is prismatic."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the ramp flight. Openings, recesses, and projections are not taken into account."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the ramp flight along the walking line."
+              },
+              "NetArea": {
+                "type": "q_area",
+                "Description": "Total area of the ramp flight not the projected area . Openings and recesses are taken into account by subtraction, projections by addition. Only given, if the ramp flight is prismatic."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the ramp flight. Openings and recesses are taken into account by subtraction, projections by addition."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Thickness of the ramp flight. It should only be provided, if it is constant."
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -15919,6 +17081,22 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of a material. Here the total thermal transmittance coefficient through the roof surface including all materials ."
+              }
+            }
+          },
+          "Qto_RoofBaseQuantities": {
+            "Properties": {
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Total gross area of the outer surface of the roof. It is the sum of all roof slab gross areas. Roof openings, like sky windows and other openings and cut outs are not taken into account."
+              },
+              "NetArea": {
+                "type": "q_area",
+                "Description": "Total net area of the outer surface of the roof. It is the suma of all roof slab net areas. Roof openings, like sky windows and other openings and cut outs are taken into account."
+              },
+              "ProjectedArea": {
+                "type": "q_area",
+                "Description": "Total gross area of the outer surfaces of the roof, projected tp the ground. It is the sum of all projected roof slab gross areas. Roof openings, like sky windows and other openings and cut outs are not taken into account."
               }
             }
           },
@@ -16295,6 +17473,50 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of a material. Here the total thermal transmittance coefficient through the slab including all materials ."
+              }
+            }
+          },
+          "Qto_SlabBaseQuantities": {
+            "Properties": {
+              "Depth": {
+                "type": "q_length",
+                "Description": "Depth one direction of the non projected foot print area of the slab. It shall only be provided, if the slab is rectangular. NOTE Also refered to as width, but not to be confused with the Width quantity, that denotes the thickness in the context of the slab."
+              },
+              "GrossArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded area of the slab. Openings, recesses and projections are not taken into account. Only given, if the slab is prismatic."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the slab. Openings, recesses, and projections are not taken into account."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the slab without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length one direction of the non projected foot print area of the slab. It shall only be provided, if the slab is rectangular."
+              },
+              "NetArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded area of the slab. Openings and recesses are taken into account by subtraction, projections by addition. Only given, if the slab is prismatic."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the slab. Openings and recesses are taken into account by subtraction, projections by addition."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the slab without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Perimeter": {
+                "type": "q_length",
+                "Description": "Perimeter measured along the outer boundaries of the slab. Only given, if the slab is prismatic constant thickness ."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Nominal width or thickness of the slab. Only given, if the slab is prismatic constant thickess ."
               }
             }
           },
@@ -16918,6 +18140,22 @@
               }
             }
           },
+          "Qto_StairFlightBaseQuantities": {
+            "Properties": {
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the stair flight. Openings, recesses, and projections are not taken into account."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the stair flight along the walking line."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the stair flight. Openings and recesses are taken into account by subtraction, projections by addition."
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -17233,6 +18471,54 @@
               "ThermalTransmittance": {
                 "type": "real",
                 "Description": "Thermal transmittance coefficient U Value of a material. Here the total thermal transmittance coefficient through the wall including all materials ."
+              }
+            }
+          },
+          "Qto_WallBaseQuantities": {
+            "Properties": {
+              "GrossFootprintArea": {
+                "type": "q_area",
+                "Description": "Area of the wall as viewed by a ground floor view, not taking any wall modifications like recesses into account. It is also referred to as the foot print of the wall."
+              },
+              "GrossSideArea": {
+                "type": "q_area",
+                "Description": "Area of the wall as viewed by an elevation view of the middle plane of the wall. It does not take into account any wall modifications such as openings ."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Volume of the wall, without taking into account the openings and the connection geometry."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the wall, without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total nominal height of the wall. It should only be provided, if it is constant along the wall path."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total nominal length of the wall along the wall center line even if different to the wall path ."
+              },
+              "NetFootprintArea": {
+                "type": "q_area",
+                "Description": "Area of the wall as viewed by a ground floor view, taking all wall modifications like recesses into account. It is also referred to as the foot print of the wall."
+              },
+              "NetSideArea": {
+                "type": "q_area",
+                "Description": "Area of the wall as viewed by an elevation view of the middle plane. It does take into account all wall modifications such as openings ."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Volume of the wall, after subtracting the openings and after considering the connection geometry."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the wall, without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Total nominal width or thickness of the wall measured perpendicular to the wall path. It should only be provided, if it is constant along the wall path."
               }
             }
           },
@@ -17615,6 +18901,26 @@
                 "Description": "Wind load resistance rating for this object. It is provided according to the national building code."
               }
             }
+          },
+          "Qto_WindowBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "q_area",
+                "Description": "Total area of the outer lining of the window."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total outer heigth of the window lining. It should only be provided, if it is a rectangular window."
+              },
+              "Perimeter": {
+                "type": "q_length",
+                "Description": "Total perimeter of the outer lining of the window."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Total outer width of the window lining. It should only be provided, if it is a rectangular window."
+              }
+            }
           }
         }
       },
@@ -17647,6 +18953,26 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_DistributionChamberElementBaseQuantities": {
+            "Properties": {
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total gross area of the inner surface of the chamber, not taking into account openings such as for pipes, ducts, or cables."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the chamber, not taking into account any enclosed elements such as pipes, ducts, cables, or equipment."
+              },
+              "NetSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total net area of the inner surface of the chamber, subtracting any openings such as for pipes, ducts, or cables."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the chamber, subtracting any enclosed elements such as pipes, ducts, cables, or equipment."
               }
             }
           }
@@ -19844,6 +21170,50 @@
                 "Description": "A descriptive label for the general reinforcement type."
               }
             }
+          },
+          "Qto_FootingBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Total area of the cross section or profile of the footing."
+              },
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the footing, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the footing, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the footing without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Height": {
+                "type": "q_length",
+                "Description": "Total nominal height of the footing. It should only be provided, if it is constant."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Length of the footing, not taking into account any cut out s or other processing features. For strip footings it is measured along the path, for other footings it is one of the horizontal dimensions. It should only be provided, if it is constant."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the footing, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the footing without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the footing not taking into account the end cap areas , normally generated as perimeter length."
+              },
+              "Width": {
+                "type": "q_length",
+                "Description": "Total nominal width or thickness of the footing. For strip footings it is measured perpendicular to the footing path or longitudial axis . For other footings it is one of the horizontal dimensions. It should only be provided, if it is constant."
+              }
+            }
           }
         }
       },
@@ -20054,6 +21424,42 @@
                 "Description": "Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one letter acronym, e.g. P Column, K reinforced concrete beam,etc."
               }
             }
+          },
+          "Qto_PileBaseQuantities": {
+            "Properties": {
+              "CrossSectionArea": {
+                "type": "q_area",
+                "Description": "Total area of the cross section or profile of the pile."
+              },
+              "GrossSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the pile, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "q_volume",
+                "Description": "Total gross volume of the pile, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Total gross weight of the pile without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of the pile not taking into account any cut out s or other processing features."
+              },
+              "NetVolume": {
+                "type": "q_volume",
+                "Description": "Total net volume of the pile, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "NetWeight": {
+                "type": "q_weight",
+                "Description": "Total net weight of the pile without add on parts, taking into account possible processing features cut out s, etc. or openings and recesses."
+              },
+              "OuterSurfaceArea": {
+                "type": "q_area",
+                "Description": "Total area of the extruded surfaces of the pile not taking into account the end cap areas , normally generated as perimeter length."
+              }
+            }
           }
         }
       },
@@ -20123,7 +21529,25 @@
       },
       "IfcReinforcingElement": {
         "Parent": "IfcElementComponent",
-        "Description": "A reinforcing element represents bars, wires, strands, meshes, tendons, and other components embedded in concrete in such a manner that the reinforcement and the concrete act together in resisting forces. .extDef NOTE Definition according to ISO 6707 1 rod s , bar s , fabric, fibres, wires and cable s added to give additional strength or support to a material or component. One or several instances of subtypes of IfcReinforcingElement should always be accompanied by a defining instance of a respective subtype of IfcReinforcingElementType . The type object holds shape and material information. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Attribute SteelGrade deprecated. bSI Documentation"
+        "Description": "A reinforcing element represents bars, wires, strands, meshes, tendons, and other components embedded in concrete in such a manner that the reinforcement and the concrete act together in resisting forces. .extDef NOTE Definition according to ISO 6707 1 rod s , bar s , fabric, fibres, wires and cable s added to give additional strength or support to a material or component. One or several instances of subtypes of IfcReinforcingElement should always be accompanied by a defining instance of a respective subtype of IfcReinforcingElementType . The type object holds shape and material information. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Attribute SteelGrade deprecated. bSI Documentation",
+        "Psets": {
+          "Qto_ReinforcingElementBaseQuantities": {
+            "Properties": {
+              "Count": {
+                "type": "q_count",
+                "Description": "Total count of reinforcing items."
+              },
+              "Length": {
+                "type": "q_length",
+                "Description": "Total length of reinforcing."
+              },
+              "Weight": {
+                "type": "q_weight",
+                "Description": "Total weight of reinforcing."
+              }
+            }
+          }
+        }
       },
       "IfcReinforcingMesh": {
         "Parent": "IfcReinforcingElement",
@@ -21610,6 +23034,18 @@
               "Status": {
                 "type": "string",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as New element designed as new addition, Existing element exists and remains, Demolish element existed but is to be demolished, Temporary element will exists only temporary like a temporary support structure ."
+              }
+            }
+          },
+          "Qto_DistributionBoardBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "q_weight",
+                "Description": "Weight of the element."
+              },
+              "NumberOfCircuits": {
+                "type": "q_count",
+                "Description": "Number of circuits in the distribution board."
               }
             }
           }
