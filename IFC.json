@@ -4042,6 +4042,10 @@
                   "EP_TIMEDELAYED"
                 ]
               },
+              "NominalCurrents": {
+                "type": "real",
+                "Description": "A set of values providing information on available modules chips for setting the nominal current of the protective device. If the set is empty, no nominal current modules are available for the tripping unit."
+              },
               "N_Protection": {
                 "type": "boolean",
                 "Description": "An indication whether the electronic tripping unit has separate protection for the N conductor, or not.",
@@ -4073,10 +4077,6 @@
                   "TRUE",
                   "FALSE"
                 ]
-              },
-              "NominalCurrents": {
-                "type": "real",
-                "Description": "A set of values providing information on available modules chips for setting the nominal current of the protective device. If the set is empty, no nominal current modules are available for the tripping unit."
               }
             }
           }
@@ -10256,6 +10256,10 @@
         "Parent": "IfcInterceptor",
         "Description": "Two or more chambers with inlet and outlet pipes arranged to allow petrol gasoline collected on the surface of water drained into them to evaporate through ventilating pipes."
       },
+      "IfcLiquidTerminal": {
+        "Parent": "IfcFlowTerminal",
+        "Description": "A liquid terminal is a terminating or origination point for the transfer of liquid between distribution system s . this is the point where the liquid distribution system interacts with the external environment. An example of this is a loading arm for the transfer of liquid from a docked vessel."
+      },
       "IfcSanitaryTerminal": {
         "Parent": "IfcFlowTerminal",
         "Description": "A sanitary terminal is a fixed appliance or terminal usually supplied with water and used for drinking, cleaning or foul water disposal or that is an item of equipment directly used with such an appliance or terminal. HISTORY New entity in IFC4 .note bSI Documentation",
@@ -10985,14 +10989,6 @@
             }
           }
         }
-      },
-      "IfcConveyorSegment": {
-        "Parent": "IfcFlowSegment",
-        "Description": "A conveyor segment defines an occurrence of a flow segment continuous run within a conveyor system that joins two sections of the system. these can utilise different carrying methods such as belt, rope, chain, screw etc. NOTE Definition according to ISO6707 1 machine that continuously transports material or objects along a gentle slope using an endless belt, rope or chain, or rollers."
-      },
-      "IfcLiquidTerminal": {
-        "Parent": "IfcFlowTerminal",
-        "Description": "A liquid terminal is a terminating or origination point for the transfer of liquid between distribution system s . this is the point where the liquid distribution system interacts with the external environment. An example of this is a loading arm for the transfer of liquid from a docked vessel."
       },
       "IfcMarineFacility": {
         "Parent": "IfcFacility",
@@ -12120,6 +12116,22 @@
               "AssessmentDescription": {
                 "type": "string",
                 "Description": "Qualitative description of the condition."
+              },
+              "AssessmentType": {
+                "type": "string",
+                "Description": ""
+              },
+              "AssessmentMethod": {
+                "type": "ifcexternalreference",
+                "Description": ""
+              },
+              "LastAssessmentReport": {
+                "type": "string",
+                "Description": ""
+              },
+              "NextAssessmentDate": {
+                "type": "string",
+                "Description": ""
               }
             }
           },
@@ -12176,6 +12188,18 @@
               "ProductionYear": {
                 "type": "string",
                 "Description": "The year of production of the manufactured item."
+              },
+              "OperationalDocument": {
+                "type": "ifcexternalreference",
+                "Description": ""
+              },
+              "SafetyDocument": {
+                "type": "ifcexternalreference",
+                "Description": ""
+              },
+              "PerformanceCertificate": {
+                "type": "ifcexternalreference",
+                "Description": ""
               }
             }
           },
@@ -20827,6 +20851,10 @@
         "Parent": "IfcVibrationDamper",
         "Description": "A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction."
       },
+      "IfcImpactProtectionDevice": {
+        "Parent": "IfcElementComponent",
+        "Description": "A impact protection device is a component used to protect other built elements from kinetic damage. impact protection devices currently come in 3 different varieties A vibration damper used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive elastic, frictional, inertia or active in a system using sensors and actuators . A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure. Impact devices that dissipate kinetic energy from impacting elements such as vehicles by deformation or elastic mechanics."
+      },
       "IfcAsset": {
         "Parent": "IfcGroup",
         "Description": "An asset is a uniquely identifiable grouping of elements acting as a single entity that has a financial value or that can be operated on as a single unit. An asset is generally the level of granularity at which maintenance operations are undertaken. An asset is a group that can contain one or more elements. Whilst the financial value of a component or element can be defined, financial value is also defined for accounting purposes at the level of the asset. There are a number of actors that can be associated with an asset, each actor having a role. Actors within the scope of the project are indicated using the IfcRelAssignsToActor .. .. ifckernel lexical ifcrelassignstoactor.htm relationship in which case roles should be defined through the IfcActorRole .. .. ifcactorresource lexical ifcactorrole.htm class otherwise principal actors are identified as attributes of the class. In the existence of both, direct attributes take precedence. There are a number of costs that can be associated with an asset, each cost having a role. These are specified through the OriginalValue , CurrentValue , TotalReplacementCost and DepreciatedValue attributes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE All attributes made optional and date values changed to use IfcDate . bSI Documentation",
@@ -20856,6 +20884,38 @@
                   "CAPITALISED",
                   "EXPENSED"
                 ]
+              },
+              "AssetStatus": {
+                "type": "string",
+                "Description": ""
+              },
+              "AssetUse": {
+                "type": "string",
+                "Description": ""
+              },
+              "Owner": {
+                "type": "ifcactorselect",
+                "Description": ""
+              },
+              "Operator": {
+                "type": "ifcactorselect",
+                "Description": ""
+              },
+              "ResponsiblePerson": {
+                "type": "ifcperson",
+                "Description": ""
+              },
+              "OriginalValue": {
+                "type": "ifcappliedvalue",
+                "Description": ""
+              },
+              "CurrentValue": {
+                "type": "ifcappliedvalue",
+                "Description": ""
+              },
+              "DepreciatedValue": {
+                "type": "ifcappliedvalue",
+                "Description": ""
               }
             }
           }
@@ -21084,6 +21144,10 @@
             }
           }
         }
+      },
+      "IfcConveyorSegment": {
+        "Parent": "IfcFlowSegment",
+        "Description": "A conveyor segment defines an occurrence of a flow segment continuous run within a conveyor system that joins two sections of the system. these can utilise different carrying methods such as belt, rope, chain, screw etc. NOTE Definition according to ISO6707 1 machine that continuously transports material or objects along a gentle slope using an endless belt, rope or chain, or rollers."
       },
       "IfcFacilityPart.LATERAL": {
         "Parent": "IfcFacilityPart",
@@ -22074,10 +22138,6 @@
       "IfcEarthworksCut.BASE_EXCAVATION": {
         "Parent": "IfcEarthworksCut",
         "Description": "Excavation for basements of buildings, abutments of bridges or similar structures either partially or completely below ground level."
-      },
-      "IfcImpactProtectionDevice": {
-        "Parent": "IfcElementComponent",
-        "Description": "A impact protection device is a component used to protect other built elements from kinetic damage. impact protection devices currently come in 3 different varieties A vibration damper used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive elastic, frictional, inertia or active in a system using sensors and actuators . A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure. Impact devices that dissipate kinetic energy from impacting elements such as vehicles by deformation or elastic mechanics."
       },
       "IfcPavement": {
         "Parent": "IfcBuiltElement",
