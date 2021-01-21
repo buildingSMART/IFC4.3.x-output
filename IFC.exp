@@ -783,6 +783,7 @@ END_TYPE;
 TYPE IfcBuildingSystemTypeEnum = ENUMERATION OF
 	(REINFORCING
 	,OUTERSHELL
+	,EROSIONPREVENTION
 	,FOUNDATION
 	,LOADBEARING
 	,SHADING
@@ -3995,8 +3996,8 @@ END_ENTITY;
 
 ENTITY IfcAlignmentCant
  SUBTYPE OF (IfcLinearElement);
-	Segments : LIST [1:?] OF IfcAlignmentCantSegment;
 	RailHeadDistance : IfcPositiveLengthMeasure;
+	Segments : LIST [1:?] OF IfcAlignmentCantSegment;
 END_ENTITY;
 
 ENTITY IfcAlignmentCantSegment
@@ -4057,7 +4058,7 @@ ENTITY IfcAlignmentVertical
 END_ENTITY;
 
 ENTITY IfcAlignmentVerticalSegment
- ABSTRACT SUPERTYPE OF (ONEOF
+ SUPERTYPE OF (ONEOF
 	(IfcAlignment2DVerSegCircularArc
 	,IfcAlignment2DVerSegLine
 	,IfcAlignment2DVerSegParabolicArc))
@@ -4242,9 +4243,9 @@ ENTITY IfcAxis2Placement2D
  DERIVE
 	P : LIST [2:2] OF IfcDirection := IfcBuild2Axes(RefDirection);
  WHERE
-	LocationIsCP : 'IFC4X3_RC2.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 	RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);
 	LocationIs2D : SELF\IfcPlacement.Location.Dim = 2;
+	LocationIsCP : 'IFC4X3_RC2.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 END_ENTITY;
 
 ENTITY IfcAxis2Placement3D
@@ -4254,18 +4255,21 @@ ENTITY IfcAxis2Placement3D
  DERIVE
 	P : LIST [3:3] OF IfcDirection := IfcBuildAxes(Axis, RefDirection);
  WHERE
-	LocationIsCP : 'IFC4X3_RC2.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 	LocationIs3D : SELF\IfcPlacement.Location.Dim = 3;
 	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
 	RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);
 	AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 	AxisAndRefDirProvision : NOT ((EXISTS (Axis)) XOR (EXISTS (RefDirection)));
+	LocationIsCP : 'IFC4X3_RC2.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 END_ENTITY;
 
 ENTITY IfcAxis2PlacementLinear
  SUBTYPE OF (IfcPlacement);
 	Axis : OPTIONAL IfcDirection;
 	RefDirection : OPTIONAL IfcDirection;
+ WHERE
+	WR1 : 'IFC4X3_RC2.IfcPointByDistanceExpression' IN TYPEOF(SELF\IfcPlacement.Location);
+	WR2 : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 END_ENTITY;
 
 ENTITY IfcAxisLateralInclination
@@ -4567,7 +4571,6 @@ END_ENTITY;
 
 ENTITY IfcBridgePart
  SUBTYPE OF (IfcFacilityPart);
-	PredefinedType : OPTIONAL IfcBridgePartTypeEnum;
 END_ENTITY;
 
 ENTITY IfcBuilding
@@ -5153,7 +5156,7 @@ ENTITY IfcCompositeCurve
  SUPERTYPE OF (ONEOF
 	(IfcCompositeCurveOnSurface))
  SUBTYPE OF (IfcBoundedCurve);
-	Segments : LIST [1:?] OF IfcCompositeCurveSegment;
+	Segments : LIST [1:?] OF IfcSegment;
 	SelfIntersect : IfcLogical;
  DERIVE
 	NSegments : IfcInteger := SIZEOF(Segments);
@@ -5181,8 +5184,6 @@ ENTITY IfcCompositeCurveSegment
 	ParentCurve : IfcCurve;
  DERIVE
 	Dim : IfcDimensionCount := ParentCurve.Dim;
- INVERSE
-	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
  WHERE
 	ParentIsBoundedCurve : ('IFC4X3_RC2.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
@@ -6359,6 +6360,8 @@ ENTITY IfcElement
 	,IfcVirtualElement))
  SUBTYPE OF (IfcProduct);
 	Tag : OPTIONAL IfcIdentifier;
+	InterferesElements : SET [0:1] OF IfcRelInterferesElements;
+	IsInterferedByElements : SET [0:1] OF IfcRelInterferesElements;
  INVERSE
 	FillsVoids : SET [0:1] OF IfcRelFillsElement FOR RelatedBuildingElement;
 	ConnectedTo : SET [0:?] OF IfcRelConnectsElements FOR RelatingElement;
@@ -6809,7 +6812,7 @@ ENTITY IfcFeatureElementAddition
 	(IfcProjectionElement))
  SUBTYPE OF (IfcFeatureElement);
  INVERSE
-	ProjectsElements : SET [0:1] OF IfcRelProjectsElement FOR RelatedFeatureElement;
+	ProjectsElements : SET [1:1] OF IfcRelProjectsElement FOR RelatedFeatureElement;
 END_ENTITY;
 
 ENTITY IfcFeatureElementSubtraction
@@ -6819,7 +6822,7 @@ ENTITY IfcFeatureElementSubtraction
 	,IfcVoidingFeature))
  SUBTYPE OF (IfcFeatureElement);
  INVERSE
-	VoidsElements : SET [0:1] OF IfcRelVoidsElement FOR RelatedOpeningElement;
+	VoidsElements : SET [1:1] OF IfcRelVoidsElement FOR RelatedOpeningElement;
  WHERE
 	HasNoSubtraction : SIZEOF(SELF\IfcElement.HasOpenings) = 0;
 	IsNotFilling : SIZEOF(SELF\IfcElement.FillsVoids) = 0;
@@ -6828,7 +6831,7 @@ END_ENTITY;
 ENTITY IfcFillAreaStyle
  SUBTYPE OF (IfcPresentationStyle);
 	FillStyles : SET [1:?] OF IfcFillStyleSelect;
-	ModelorDraughting : OPTIONAL IfcBoolean;
+	ModelOrDraughting : OPTIONAL IfcBoolean;
  WHERE
 	MaxOneColour : SIZEOF(QUERY(Style <* SELF.FillStyles |
   'IFC4X3_RC2.IFCCOLOUR' IN
@@ -7216,7 +7219,6 @@ ENTITY IfcGeometricRepresentationItem
 	,IfcPlacement
 	,IfcPlanarExtent
 	,IfcPoint
-	,IfcPointByDistanceExpression
 	,IfcSectionedSpine
 	,IfcSegment
 	,IfcShellBasedSurfaceModel
@@ -7736,7 +7738,7 @@ ENTITY IfcLinearPlacement
  SUBTYPE OF (IfcObjectPlacement);
 	PlacementMeasuredAlong : IfcCurve;
 	Distance : IfcPointByDistanceExpression;
-	RelativePlacement : OPTIONAL IfcAxis2PlacementLinear;
+	RelativePlacement : IfcAxis2PlacementLinear;
 	CartesianPosition : OPTIONAL IfcAxis2Placement3D;
 END_ENTITY;
 
@@ -7809,7 +7811,7 @@ END_ENTITY;
 
 ENTITY IfcMarineFacility
  SUBTYPE OF (IfcFacility);
-	PredefinedType : IfcMarinefacilitytypeenum;
+	PredefinedType : IfcMarineFacilityTypeEnum;
 END_ENTITY;
 
 ENTITY IfcMaterial
@@ -8246,8 +8248,8 @@ END_ENTITY;
 
 ENTITY IfcOpenCrossProfileDef
  SUBTYPE OF (IfcProfileDef);
-	Widths : LIST [1:?] OF IfcNonNegativeLengthMeasure;
 	HorizontalWidths : IfcBoolean;
+	Widths : LIST [1:?] OF IfcNonNegativeLengthMeasure;
 	Slopes : LIST [1:?] OF IfcPlaneAngleMeasure;
 	Tags : OPTIONAL LIST [2:?] OF IfcLabel;
  WHERE
@@ -8603,13 +8605,14 @@ END_ENTITY;
 ENTITY IfcPoint
  ABSTRACT SUPERTYPE OF (ONEOF
 	(IfcCartesianPoint
+	,IfcPointByDistanceExpression
 	,IfcPointOnCurve
 	,IfcPointOnSurface))
  SUBTYPE OF (IfcGeometricRepresentationItem);
 END_ENTITY;
 
 ENTITY IfcPointByDistanceExpression
- SUBTYPE OF (IfcGeometricRepresentationItem);
+ SUBTYPE OF (IfcPoint);
 	DistanceAlong : IfcCurveMeasureSelect;
 	OffsetLateral : OPTIONAL IfcLengthMeasure;
 	OffsetVertical : OPTIONAL IfcLengthMeasure;
@@ -9857,8 +9860,8 @@ END_ENTITY;
 
 ENTITY IfcRelInterferesElements
  SUBTYPE OF (IfcRelConnects);
-	RelatedElement : IfcInterferenceSelect;
 	RelatingElement : IfcInterferenceSelect;
+	RelatedElement : IfcInterferenceSelect;
 	InterferenceGeometry : OPTIONAL IfcConnectionGeometry;
 	InterferenceType : OPTIONAL IfcIdentifier;
 	ImpliedOrder : IfcLogical;
@@ -10262,6 +10265,8 @@ ENTITY IfcSegment
 	,IfcCurveSegment))
  SUBTYPE OF (IfcGeometricRepresentationItem);
 	Transition : IfcTransitionCode;
+ INVERSE
+	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
 END_ENTITY;
 
 ENTITY IfcSegmentedReferenceCurve
@@ -10396,6 +10401,7 @@ END_ENTITY;
 
 ENTITY IfcSimplePropertyTemplate
  SUBTYPE OF (IfcPropertyTemplate);
+	TemplateType : OPTIONAL IfcSimplePropertyTemplateTypeEnum;
 	PrimaryMeasureType : OPTIONAL IfcLabel;
 	SecondaryMeasureType : OPTIONAL IfcLabel;
 	Enumerators : OPTIONAL IfcPropertyEnumeration;
