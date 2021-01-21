@@ -5824,7 +5824,8 @@ ENTITY IfcDirectrixCurveSweptAreaSolid
 	EndParam : OPTIONAL IfcCurveMeasureSelect;
  WHERE
 	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFC4X3_RC2.IFCCONIC', 'IFC4X3_RC2.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
+(SIZEOF(['IFC4X3_RC2.IFCCONIC', 'IFC4X3_RC2.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1)
+;
 END_ENTITY;
 
 ENTITY IfcDirectrixDistanceSweptAreaSolid
@@ -6852,7 +6853,8 @@ ENTITY IfcFillAreaStyleHatching
 	PatternStart : OPTIONAL IfcCartesianPoint;
 	HatchLineAngle : IfcPlaneAngleMeasure;
  WHERE
-	PatternStart2D : NOT(EXISTS(PatternStart)) OR (PatternStart.Dim = 2);
+	PatternStart2D : NOT(EXISTS(PatternStart)) OR (PatternStart.Dim = 2)
+;
 	RefHatchLine2D : NOT(EXISTS(PointOfReferenceHatchLine)) OR (PointOfReferenceHatchLine.Dim = 2);
 END_ENTITY;
 
@@ -7110,7 +7112,8 @@ ENTITY IfcFooting
 (PredefinedType <> IfcFootingTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcFootingTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-('IFC4X3_RC2.IFCFOOTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+('IFC4X3_RC2.IFCFOOTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType))
+;
 END_ENTITY;
 
 ENTITY IfcFootingType
@@ -9358,7 +9361,8 @@ ENTITY IfcRectangleHollowProfileDef
 (WallThickness < (SELF\IfcRectangleProfileDef.YDim/2.));
 	ValidInnerRadius : NOT(EXISTS(InnerFilletRadius)) OR 
 ((InnerFilletRadius <= (SELF\IfcRectangleProfileDef.XDim/2. - WallThickness)) AND 
- (InnerFilletRadius <= (SELF\IfcRectangleProfileDef.YDim/2. - WallThickness)));
+ (InnerFilletRadius <= (SELF\IfcRectangleProfileDef.YDim/2. - WallThickness)))
+;
 	ValidOuterRadius : NOT(EXISTS(OuterFilletRadius)) OR 
 ((OuterFilletRadius <= (SELF\IfcRectangleProfileDef.XDim/2.)) AND 
  (OuterFilletRadius <= (SELF\IfcRectangleProfileDef.YDim/2.)));
@@ -9461,7 +9465,8 @@ ENTITY IfcReinforcingBar
  WHERE
 	CorrectPredefinedType : NOT EXISTS(PredefinedType) OR
 (PredefinedType <> IfcReinforcingBarTypeEnum.USERDEFINED) OR
-((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType))
+;
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
 ('IFC4X3_RC2.IFCREINFORCINGBARTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
@@ -9518,7 +9523,8 @@ ENTITY IfcReinforcingMesh
 (PredefinedType <> IfcReinforcingMeshTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcReinforcingMeshTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-('IFC4X3_RC2.IFCREINFORCINGMESHTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+('IFC4X3_RC2.IFCREINFORCINGMESHTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType))
+;
 END_ENTITY;
 
 ENTITY IfcReinforcingMeshType
@@ -11436,7 +11442,8 @@ ENTITY IfcTendon
 (PredefinedType <> IfcTendonTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcTendonTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-('IFC4X3_RC2.IFCTENDONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+('IFC4X3_RC2.IFCTENDONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType))
+;
 END_ENTITY;
 
 ENTITY IfcTendonAnchor
@@ -11636,6 +11643,7 @@ ENTITY IfcTopologyRepresentation
 	WR21 : SIZEOF(QUERY(temp <* SELF\IfcRepresentation.Items | 
   NOT('IFC4X3_RC2.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
 )) = 0
+
 ;
 	WR22 : EXISTS(SELF\IfcRepresentation.RepresentationType);
 	WR23 : IfcTopologyRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
