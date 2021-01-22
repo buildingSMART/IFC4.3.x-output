@@ -4109,7 +4109,7 @@ ENTITY IfcAppliedValue
 	Category : OPTIONAL IfcLabel;
 	Condition : OPTIONAL IfcLabel;
 	ArithmeticOperator : OPTIONAL IfcArithmeticOperatorEnum;
-	Components : OPTIONAL LIST [1:?] OF IfcAppliedValue;
+	Components : LIST [1:?] OF IfcAppliedValue;
  INVERSE
 	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 END_ENTITY;
@@ -5032,8 +5032,8 @@ ENTITY IfcClassificationReference
 	Description : OPTIONAL IfcText;
 	Sort : OPTIONAL IfcIdentifier;
  INVERSE
-	HasReferences : SET [0:?] OF IfcClassificationReference FOR ReferencedSource;
 	ClassificationRefForObjects : SET [0:?] OF IfcRelAssociatesClassification FOR RelatingClassification;
+	HasReferences : SET [0:?] OF IfcClassificationReference FOR ReferencedSource;
 END_ENTITY;
 
 ENTITY IfcClosedShell
@@ -9949,14 +9949,16 @@ ENTITY IfcRelSpaceBoundary1stLevel
  SUPERTYPE OF (ONEOF
 	(IfcRelSpaceBoundary2ndLevel))
  SUBTYPE OF (IfcRelSpaceBoundary);
-	InnerBoundaries : OPTIONAL IfcRelSpaceBoundary1stLevel;
-	ParentBoundary : OPTIONAL IfcRelSpaceBoundary1stLevel;
+ INVERSE
+	InnerBoundaries : SET [0:?] OF IfcRelSpaceBoundary1stLevel FOR ParentBoundary;
+	ParentBoundary : SET [0:1] OF IfcRelSpaceBoundary1stLevel FOR InnerBoundaries;
 END_ENTITY;
 
 ENTITY IfcRelSpaceBoundary2ndLevel
  SUBTYPE OF (IfcRelSpaceBoundary1stLevel);
-	CorrespondingBoundary : OPTIONAL IfcRelSpaceBoundary2ndLevel;
-	Corresponds : OPTIONAL IfcRelSpaceBoundary2ndLevel;
+ INVERSE
+	CorrespondingBoundary : SET [0:1] OF IfcRelSpaceBoundary2ndLevel FOR Corresponds;
+	Corresponds : SET [0:1] OF IfcRelSpaceBoundary2ndLevel FOR CorrespondingBoundary;
 END_ENTITY;
 
 ENTITY IfcRelVoidsElement
