@@ -3788,6 +3788,10 @@ ENTITY IfcActionRequest
 	PredefinedType : OPTIONAL IfcActionRequestTypeEnum;
 	Status : OPTIONAL IfcLabel;
 	LongDescription : OPTIONAL IfcText;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcActionRequestTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcActionRequestTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcActor
@@ -3976,6 +3980,10 @@ END_ENTITY;
 ENTITY IfcAlignment
  SUBTYPE OF (IfcLinearPositioningElement);
 	PredefinedType : OPTIONAL IfcAlignmentTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcAlignmentTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcAlignmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcAlignment2DVerSegCircularArc
@@ -4079,6 +4087,10 @@ ENTITY IfcAnnotation
 	PredefinedType : OPTIONAL IfcAnnotationTypeEnum;
  INVERSE
 	ContainedInStructure : SET [0:1] OF IfcRelContainedInSpatialStructure FOR RelatedElements;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcAnnotationTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcAnnotationTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcAnnotationFillArea
@@ -4567,6 +4579,10 @@ END_ENTITY;
 ENTITY IfcBridge
  SUBTYPE OF (IfcFacility);
 	PredefinedType : OPTIONAL IfcBridgeTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcBridgeTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcBridgeTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcBridgePart
@@ -4628,6 +4644,10 @@ ENTITY IfcBuildingSystem
  SUBTYPE OF (IfcSystem);
 	PredefinedType : OPTIONAL IfcBuildingSystemTypeEnum;
 	LongName : OPTIONAL IfcLabel;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcBuildingSystemTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcBuildingSystemTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcBuiltElement
@@ -4667,6 +4687,8 @@ ENTITY IfcBuiltElement
 	MaxOneMaterialAssociation : SIZEOF (QUERY(temp <* SELF\IfcObjectDefinition.HasAssociations |
   'IFC4X3_RC2.IFCRELASSOCIATESMATERIAL' IN TYPEOF(temp)
   )) <= 1;
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCBUILTELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBuiltElementType
@@ -4707,6 +4729,10 @@ ENTITY IfcBuiltSystem
  SUBTYPE OF (IfcSystem);
 	PredefinedType : OPTIONAL IfcBuiltSystemTypeEnum;
 	LongName : OPTIONAL IfcLabel;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcBuiltSystemTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcBuiltSystemTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcBurner
@@ -5006,6 +5032,9 @@ END_ENTITY;
 
 ENTITY IfcCivilElement
  SUBTYPE OF (IfcElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCIVILELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCivilElementType
@@ -5318,6 +5347,8 @@ ENTITY IfcConstructionEquipmentResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcConstructionEquipmentResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcConstructionEquipmentResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCONSTRUCTIONEQUIPMENTRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConstructionEquipmentResourceType
@@ -5335,6 +5366,8 @@ ENTITY IfcConstructionMaterialResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcConstructionMaterialResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcConstructionMaterialResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCONSTRUCTIONMATERIALRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConstructionMaterialResourceType
@@ -5352,6 +5385,8 @@ ENTITY IfcConstructionProductResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcConstructionProductResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcConstructionProductResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCONSTRUCTIONPRODUCTRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConstructionProductResourceType
@@ -5374,6 +5409,9 @@ ENTITY IfcConstructionResource
 	Usage : OPTIONAL IfcResourceTime;
 	BaseCosts : OPTIONAL LIST [1:?] OF IfcAppliedValue;
 	BaseQuantity : OPTIONAL IfcPhysicalQuantity;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCONSTRUCTIONRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConstructionResourceType
@@ -5464,11 +5502,20 @@ END_ENTITY;
 ENTITY IfcConveyorSegment
  SUBTYPE OF (IfcFlowSegment);
 	PredefinedType : OPTIONAL IfcConveyorSegmentTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcConveyorSegmentTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcConveyorSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCONVEYORSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConveyorSegmentType
  SUBTYPE OF (IfcFlowSegmentType);
 	PredefinedType : IfcConveyorSegmentTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcConveyorSegmentTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcConveyorSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcCooledBeam
@@ -5532,6 +5579,10 @@ ENTITY IfcCostItem
 	PredefinedType : OPTIONAL IfcCostItemTypeEnum;
 	CostValues : OPTIONAL LIST [1:?] OF IfcCostValue;
 	CostQuantities : OPTIONAL LIST [1:?] OF IfcPhysicalQuantity;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcCostItemTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcCostItemTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcCostSchedule
@@ -5540,6 +5591,10 @@ ENTITY IfcCostSchedule
 	Status : OPTIONAL IfcLabel;
 	SubmittedOn : OPTIONAL IfcDateTime;
 	UpdateDate : OPTIONAL IfcDateTime;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcCostScheduleTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcCostScheduleTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcCostValue
@@ -5549,11 +5604,20 @@ END_ENTITY;
 ENTITY IfcCourse
  SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcCourseTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcCourseTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcCourseTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCOURSETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCourseType
  SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcCourseTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcCourseTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcCourseTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcCovering
@@ -5585,6 +5649,8 @@ ENTITY IfcCrewResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcCrewResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcCrewResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCCREWRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCrewResourceType
@@ -5859,11 +5925,20 @@ END_ENTITY;
 ENTITY IfcDistributionBoard
  SUBTYPE OF (IfcFlowController);
 	PredefinedType : OPTIONAL IfcDistributionBoardTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcDistributionBoardTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcDistributionBoardTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCDISTRIBUTIONBOARDTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionBoardType
  SUBTYPE OF (IfcFlowControllerType);
 	PredefinedType : IfcDistributionBoardTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcDistributionBoardTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcDistributionBoardTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcDistributionChamberElement
@@ -5901,6 +5976,9 @@ ENTITY IfcDistributionControlElement
  SUBTYPE OF (IfcDistributionElement);
  INVERSE
 	AssignedToFlowElement : SET [0:1] OF IfcRelFlowControlElements FOR RelatedControlElements;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCDISTRIBUTIONCONTROLELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionControlElementType
@@ -5922,6 +6000,9 @@ ENTITY IfcDistributionElement
  SUBTYPE OF (IfcElement);
  INVERSE
 	HasPorts : SET [0:?] OF IfcRelConnectsPortToElement FOR RelatedElement;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCDISTRIBUTIONELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionElementType
@@ -5945,6 +6026,9 @@ ENTITY IfcDistributionFlowElement
  SUBTYPE OF (IfcDistributionElement);
  INVERSE
 	HasControlElements : SET [0:1] OF IfcRelFlowControlElements FOR RelatingFlowElement;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCDISTRIBUTIONFLOWELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionFlowElementType
@@ -5965,6 +6049,10 @@ ENTITY IfcDistributionPort
  SUBTYPE OF (IfcPort);
 	FlowDirection : OPTIONAL IfcFlowDirectionEnum;
 	PredefinedType : OPTIONAL IfcDistributionPortTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcDistributionPortTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcDistributionPortTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcDistributionSystem
@@ -5973,6 +6061,10 @@ ENTITY IfcDistributionSystem
  SUBTYPE OF (IfcSystem);
 	LongName : OPTIONAL IfcLabel;
 	PredefinedType : OPTIONAL IfcDistributionSystemEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcDistributionSystemEnum.USERDEFINED) OR
+ ((PredefinedType = IfcDistributionSystemEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcDocumentInformation
@@ -6030,6 +6122,11 @@ ENTITY IfcDoor
  WHERE
 	CorrectStyleAssigned : (SIZEOF(IsTypedBy) = 0) 
 OR ('IFC4X3_RC2.IFCDOORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcDoorTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcDoorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCDOORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDoorLiningProperties
@@ -6182,6 +6279,10 @@ END_ENTITY;
 ENTITY IfcEarthworksCut
  SUBTYPE OF (IfcFeatureElementSubtraction);
 	PredefinedType : OPTIONAL IfcEarthworksCutTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcEarthworksCutTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcEarthworksCutTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcEarthworksElement
@@ -6194,6 +6295,10 @@ END_ENTITY;
 ENTITY IfcEarthworksFill
  SUBTYPE OF (IfcEarthworksElement);
 	PredefinedType : OPTIONAL IfcEarthworksFillTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcEarthworksFillTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcEarthworksFillTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcEdge
@@ -6282,11 +6387,20 @@ END_ENTITY;
 ENTITY IfcElectricFlowTreatmentDevice
  SUBTYPE OF (IfcFlowTreatmentDevice);
 	PredefinedType : OPTIONAL IfcElectricFlowTreatmentDeviceTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCELECTRICFLOWTREATMENTDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricFlowTreatmentDeviceType
  SUBTYPE OF (IfcFlowTreatmentDeviceType);
 	PredefinedType : IfcElectricFlowTreatmentDeviceTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcElectricGenerator
@@ -6373,6 +6487,9 @@ ENTITY IfcElement
 	ConnectedFrom : SET [0:?] OF IfcRelConnectsElements FOR RelatedElement;
 	ContainedInStructure : SET [0:1] OF IfcRelContainedInSpatialStructure FOR RelatedElements;
 	HasCoverings : SET [0:?] OF IfcRelCoversBldgElements FOR RelatingBuildingElement;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElementAssembly
@@ -6407,6 +6524,9 @@ ENTITY IfcElementComponent
 	,IfcVibrationDamper
 	,IfcVibrationIsolator))
  SUBTYPE OF (IfcElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCELEMENTCOMPONENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElementComponentType
@@ -6490,6 +6610,9 @@ ENTITY IfcEnergyConversionDevice
 	,IfcTubeBundle
 	,IfcUnitaryEquipment))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCENERGYCONVERSIONDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcEnergyConversionDeviceType
@@ -6648,6 +6771,10 @@ ENTITY IfcExternalSpatialElement
 	PredefinedType : OPTIONAL IfcExternalSpatialElementTypeEnum;
  INVERSE
 	BoundedBy : SET [0:?] OF IfcRelSpaceBoundary FOR RelatingSpace;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcExternalSpatialElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcExternalSpatialElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcExternalSpatialStructureElement
@@ -6750,6 +6877,8 @@ ENTITY IfcFacilityPart
  SUBTYPE OF (IfcSpatialStructureElement);
 	PredefinedType : IfcFacilityPartTypeSelect;
 	UsageType : IfcFacilityUsageEnum;
+ WHERE
+	CorrectPredefinedType : ((PredefinedType <> IfcBridgePartTypeEnum.USERDEFINED) AND (PredefinedType <> IfcFacilityPartCommonTypeEnum.USERDEFINED) AND (PredefinedType <> IfcMarinePartTypeEnum.USERDEFINED) AND (PredefinedType <> IfcRailwayPartTypeEnum.USERDEFINED) AND (PredefinedType <> IfcRoadPartTypeEnum.USERDEFINED)) OR (((PredefinedType = IfcBridgePartTypeEnum.USERDEFINED) OR (PredefinedType = IfcFacilityPartCommonTypeEnum.USERDEFINED) OR (PredefinedType = IfcMarinePartTypeEnum.USERDEFINED) OR (PredefinedType = IfcRailwayPartTypeEnum.USERDEFINED) OR (PredefinedType = IfcRoadPartTypeEnum.USERDEFINED)) AND EXISTS(SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcFailureConnectionCondition
@@ -6920,6 +7049,9 @@ ENTITY IfcFlowController
 	,IfcSwitchingDevice
 	,IfcValve))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWCONTROLLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowControllerType
@@ -6944,6 +7076,9 @@ ENTITY IfcFlowFitting
 	,IfcJunctionBox
 	,IfcPipeFitting))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowFittingType
@@ -7000,6 +7135,9 @@ ENTITY IfcFlowMovingDevice
 	,IfcFan
 	,IfcPump))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWMOVINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowMovingDeviceType
@@ -7018,6 +7156,9 @@ ENTITY IfcFlowSegment
 	,IfcDuctSegment
 	,IfcPipeSegment))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowSegmentType
@@ -7035,6 +7176,9 @@ ENTITY IfcFlowStorageDevice
 	(IfcElectricFlowStorageDevice
 	,IfcTank))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWSTORAGEDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowStorageDeviceType
@@ -7063,6 +7207,9 @@ ENTITY IfcFlowTerminal
 	,IfcStackTerminal
 	,IfcWasteTerminal))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowTerminalType
@@ -7093,6 +7240,9 @@ ENTITY IfcFlowTreatmentDevice
 	,IfcFilter
 	,IfcInterceptor))
  SUBTYPE OF (IfcDistributionFlowElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFLOWTREATMENTDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowTreatmentDeviceType
@@ -7129,6 +7279,9 @@ ENTITY IfcFurnishingElement
 	(IfcFurniture
 	,IfcSystemFurnitureElement))
  SUBTYPE OF (IfcElement);
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCFURNISHINGELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFurnishingElementType
@@ -7310,6 +7463,10 @@ ENTITY IfcGrid
 	VAxes : LIST [1:?] OF IfcGridAxis;
 	WAxes : OPTIONAL LIST [1:?] OF IfcGridAxis;
 	PredefinedType : OPTIONAL IfcGridTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcGridTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcGridTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcGridAxis;
@@ -7418,11 +7575,17 @@ END_ENTITY;
 ENTITY IfcImpactProtectionDevice
  SUBTYPE OF (IfcElementComponent);
 	PredefinedType : OPTIONAL IfcImpactProtectionDeviceTypeSelect;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR ((PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND (PredefinedType <> IfcVibrationDamperTypeEnum.USERDEFINED) AND (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED)) OR (((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) OR (PredefinedType = IfcVibrationDamperTypeEnum.USERDEFINED) OR (PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED)) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCIMPACTPROTECTIONDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcImpactProtectionDeviceType
  SUBTYPE OF (IfcElementComponentType);
 	PredefinedType : IfcImpactProtectionDeviceTypeSelect;
+ WHERE
+	CorrectPredefinedType : ((PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND (PredefinedType <> IfcVibrationDamperTypeEnum.USERDEFINED) AND (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED)) OR (((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) OR (PredefinedType = IfcVibrationDamperTypeEnum.USERDEFINED) OR (PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED)) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcInclinedReferenceSweptAreaSolid
@@ -7509,6 +7672,10 @@ ENTITY IfcInventory
 	LastUpdateDate : OPTIONAL IfcDate;
 	CurrentValue : OPTIONAL IfcCostValue;
 	OriginalValue : OPTIONAL IfcCostValue;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcInventoryTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcInventoryTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcIrregularTimeSeries
@@ -7543,6 +7710,9 @@ END_ENTITY;
 ENTITY IfcKerb
  SUBTYPE OF (IfcBuiltElement);
 	Mountable : IfcBoolean;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCKERBTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcKerbType
@@ -7569,6 +7739,8 @@ ENTITY IfcLaborResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcLaborResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcLaborResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCLABORRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcLaborResourceType
@@ -7766,11 +7938,20 @@ END_ENTITY;
 ENTITY IfcLiquidTerminal
  SUBTYPE OF (IfcFlowTerminal);
 	PredefinedType : OPTIONAL IfcLiquidTerminalTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcLiquidTerminalTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcLiquidTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCLIQUIDTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcLiquidTerminalType
  SUBTYPE OF (IfcFlowTerminalType);
 	PredefinedType : IfcLiquidTerminalTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcLiquidTerminalTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcLiquidTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcLocalPlacement
@@ -7815,6 +7996,9 @@ END_ENTITY;
 ENTITY IfcMarineFacility
  SUBTYPE OF (IfcFacility);
 	PredefinedType : IfcMarineFacilityTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcMarineFacilityTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcMarineFacilityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcMaterial
@@ -8092,11 +8276,20 @@ END_ENTITY;
 ENTITY IfcMobileTelecommunicationsAppliance
  SUBTYPE OF (IfcFlowTerminal);
 	PredefinedType : OPTIONAL IfcMobileTelecommunicationsApplianceTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCMOBILETELECOMMUNICATIONSAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMobileTelecommunicationsApplianceType
  SUBTYPE OF (IfcFlowTerminalType);
 	PredefinedType : IfcMobileTelecommunicationsApplianceTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcMonetaryUnit;
@@ -8106,11 +8299,20 @@ END_ENTITY;
 ENTITY IfcMooringDevice
  SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcMooringDeviceTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcMooringDeviceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcMooringDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCMOORINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMooringDeviceType
  SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcMooringDeviceTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcMooringDeviceTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcMooringDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcMotorConnection
@@ -8146,11 +8348,20 @@ END_ENTITY;
 ENTITY IfcNavigationElement
  SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcNavigationElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcNavigationElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcNavigationElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCNAVIGATIONELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcNavigationElementType
  SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcNavigationElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcNavigationElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcNavigationElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcObject
@@ -8215,6 +8426,9 @@ ENTITY IfcOccupant
  WHERE
 	WR31 : NOT(PredefinedType = IfcOccupantTypeEnum.USERDEFINED) 
 OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcOccupantTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcOccupantTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcOffsetCurve
@@ -8272,6 +8486,10 @@ ENTITY IfcOpeningElement
 	PredefinedType : OPTIONAL IfcOpeningElementTypeEnum;
  INVERSE
 	HasFillings : SET [0:?] OF IfcRelFillsElement FOR RelatingOpeningElement;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcOpeningElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcOpeningElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcOpeningStandardCase
@@ -8374,6 +8592,9 @@ END_ENTITY;
 ENTITY IfcPavement
  SUBTYPE OF (IfcBuiltElement);
 	Flexible : OPTIONAL IfcBoolean;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCPAVEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPavementType
@@ -8393,6 +8614,10 @@ ENTITY IfcPerformanceHistory
  SUBTYPE OF (IfcControl);
 	LifeCyclePhase : IfcLabel;
 	PredefinedType : OPTIONAL IfcPerformanceHistoryTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcPerformanceHistoryTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcPerformanceHistoryTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcPermeableCoveringProperties
@@ -8409,6 +8634,10 @@ ENTITY IfcPermit
 	PredefinedType : OPTIONAL IfcPermitTypeEnum;
 	Status : OPTIONAL IfcLabel;
 	LongDescription : OPTIONAL IfcText;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcPermitTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcPermitTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcPerson;
@@ -8830,6 +9059,8 @@ ENTITY IfcProcedure
 	HasName : EXISTS(SELF\IfcRoot.Name);
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType <> IfcProcedureTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcProcedureTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCPROCEDURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcProcedureType
@@ -8938,6 +9169,10 @@ ENTITY IfcProjectOrder
 	PredefinedType : OPTIONAL IfcProjectOrderTypeEnum;
 	Status : OPTIONAL IfcLabel;
 	LongDescription : OPTIONAL IfcText;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcProjectOrderTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcProjectOrderTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcProjectedCRS
@@ -8952,6 +9187,10 @@ END_ENTITY;
 ENTITY IfcProjectionElement
  SUBTYPE OF (IfcFeatureElementAddition);
 	PredefinedType : OPTIONAL IfcProjectionElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcProjectionElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcProjectionElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcProperty
@@ -9261,11 +9500,20 @@ END_ENTITY;
 ENTITY IfcRail
  SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcRailTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcRailTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcRailTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCRAILTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRailType
  SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcRailTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcRailTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcRailTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcRailing
@@ -9426,6 +9674,10 @@ ENTITY IfcReferent
  SUBTYPE OF (IfcPositioningElement);
 	PredefinedType : OPTIONAL IfcReferentTypeEnum;
 	RestartDistance : OPTIONAL IfcLengthMeasure;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcReferentTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcReferentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcRegularTimeSeries
@@ -9437,6 +9689,10 @@ END_ENTITY;
 ENTITY IfcReinforcedSoil
  SUBTYPE OF (IfcEarthworksElement);
 	PredefinedType : OPTIONAL IfcReinforcedSoilTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcReinforcedSoilTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcReinforcedSoilTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcReinforcementBarProperties
@@ -9495,6 +9751,9 @@ ENTITY IfcReinforcingElement
 	,IfcTendonConduit))
  SUBTYPE OF (IfcElementComponent);
 	SteelGrade : OPTIONAL IfcLabel;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCREINFORCINGELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcReinforcingElementType
@@ -10379,21 +10638,39 @@ END_ENTITY;
 ENTITY IfcSign
  SUBTYPE OF (IfcElementComponent);
 	PredefinedType : OPTIONAL IfcSignTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcSignTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcSignTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCSIGNTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSignType
  SUBTYPE OF (IfcElementComponentType);
 	PredefinedType : IfcSignTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcSignTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcSignTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcSignal
  SUBTYPE OF (IfcFlowTerminal);
 	PredefinedType : OPTIONAL IfcSignalTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcSignalTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcSignalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCSIGNALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSignalType
  SUBTYPE OF (IfcFlowTerminalType);
 	PredefinedType : IfcSignalTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcSignalTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcSignalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcSimpleProperty
@@ -10561,6 +10838,9 @@ ENTITY IfcSpatialElement
 	ContainsElements : SET [0:?] OF IfcRelContainedInSpatialStructure FOR RelatingStructure;
 	ServicedBySystems : SET [0:?] OF IfcRelServicesBuildings FOR RelatedBuildings;
 	ReferencesElements : SET [0:?] OF IfcRelReferencedInSpatialStructure FOR RelatingStructure;
+ WHERE
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCSPATIALELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSpatialElementType
@@ -10588,6 +10868,8 @@ AND
 (('IFC4X3_RC2.IFCPROJECT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject)) OR
  ('IFC4X3_RC2.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject))
 );
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCSPATIALSTRUCTUREELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSpatialStructureElementType
@@ -10716,6 +10998,8 @@ ENTITY IfcStructuralAnalysisModel
 	SharedPlacement : OPTIONAL IfcObjectPlacement;
  WHERE
 	HasObjectType : (PredefinedType <> IfcAnalysisModelTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcAnalysisModelTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcAnalysisModelTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralConnection
@@ -10748,6 +11032,8 @@ ENTITY IfcStructuralCurveAction
  (SELF\IfcStructuralActivity.GlobalOrLocal = GLOBAL_COORDS));
 	HasObjectType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 	SuitablePredefinedType : PredefinedType <> IfcStructuralCurveActivityTypeEnum.EQUIDISTANT;
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralCurveActivityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralCurveConnection
@@ -10763,6 +11049,8 @@ ENTITY IfcStructuralCurveMember
 	Axis : IfcDirection;
  WHERE
 	HasObjectType : (PredefinedType <> IfcStructuralCurveMemberTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralCurveMemberTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralCurveMemberTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralCurveMemberVarying
@@ -10775,6 +11063,8 @@ ENTITY IfcStructuralCurveReaction
  WHERE
 	HasObjectType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
 	SuitablePredefinedType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.SINUS) AND (PredefinedType <> IfcStructuralCurveActivityTypeEnum.PARABOLA);
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralCurveActivityTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralCurveActivityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralItem
@@ -10833,6 +11123,8 @@ ENTITY IfcStructuralLoadGroup
   (ActionType <> IfcActionTypeEnum.USERDEFINED) AND
   (ActionSource <> IfcActionSourceTypeEnum.USERDEFINED)
 ) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcLoadGroupTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcLoadGroupTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralLoadLinearForce
@@ -10973,6 +11265,8 @@ ENTITY IfcStructuralSurfaceAction
 ((ProjectedOrTrue <> PROJECTED_LENGTH) OR
  (SELF\IfcStructuralActivity.GlobalOrLocal = GLOBAL_COORDS));
 	HasObjectType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralSurfaceConnection
@@ -10987,6 +11281,8 @@ ENTITY IfcStructuralSurfaceMember
 	Thickness : OPTIONAL IfcPositiveLengthMeasure;
  WHERE
 	HasObjectType : (PredefinedType <> IfcStructuralSurfaceMemberTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralSurfaceMemberTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralSurfaceMemberTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStructuralSurfaceMemberVarying
@@ -10998,6 +11294,8 @@ ENTITY IfcStructuralSurfaceReaction
 	PredefinedType : IfcStructuralSurfaceActivityTypeEnum;
  WHERE
 	HasPredefinedType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : (PredefinedType <> IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcStructuralSurfaceActivityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcStyleModel
@@ -11030,6 +11328,8 @@ ENTITY IfcSubContractResource
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR 
  (PredefinedType <> IfcSubContractResourceTypeEnum.USERDEFINED) OR 
  ((PredefinedType = IfcSubContractResourceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCSUBCONTRACTRESOURCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSubContractResourceType
@@ -11081,6 +11381,9 @@ ENTITY IfcSurfaceFeature
 	PredefinedType : OPTIONAL IfcSurfaceFeatureTypeEnum;
  WHERE
 	HasObjectType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcSurfaceFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcSurfaceFeatureTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcSurfaceFeatureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcSurfaceOfLinearExtrusion
@@ -11374,6 +11677,8 @@ ENTITY IfcTask
  WHERE
 	HasName : EXISTS(SELF\IfcRoot.Name);
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR (PredefinedType <> IfcTaskTypeEnum.USERDEFINED) OR ((PredefinedType = IfcTaskTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCTASKTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTaskTime
@@ -11662,11 +11967,20 @@ END_ENTITY;
 ENTITY IfcTrackElement
  SUBTYPE OF (IfcBuiltElement);
 	PredefinedType : OPTIONAL IfcTrackElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcTrackElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcTrackElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCTRACKELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTrackElementType
  SUBTYPE OF (IfcBuiltElementType);
 	PredefinedType : IfcTrackElementTypeEnum;
+ WHERE
+	CorrectPredefinedType : (PredefinedType <> IfcTrackElementTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcTrackElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcElementType.ElementType));
 END_ENTITY;
 
 ENTITY IfcTransformer
@@ -11701,7 +12015,7 @@ ENTITY IfcTransportElement
  SUBTYPE OF (IfcElement);
 	PredefinedType : OPTIONAL IfcTransportElementTypeSelect;
  WHERE
-	 CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
 ((PredefinedType <> IfcTransportElementFixedTypeEnum.USERDEFINED) AND (PredefinedType <> IfcTransportElementNonFixedTypeEnum.USERDEFINED)) OR
 (((PredefinedType = IfcTransportElementFixedTypeEnum.USERDEFINED) OR (PredefinedType = IfcTransportElementNonFixedTypeEnum.USERDEFINED)) AND EXISTS(SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
@@ -11991,6 +12305,9 @@ ENTITY IfcVoidingFeature
 	PredefinedType : OPTIONAL IfcVoidingFeatureTypeEnum;
  WHERE
 	HasObjectType : NOT EXISTS(PredefinedType) OR (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR EXISTS(SELF\IfcObject.ObjectType);
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcVoidingFeatureTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcVoidingFeatureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcWall
@@ -12065,6 +12382,11 @@ ENTITY IfcWindow
  WHERE
 	CorrectStyleAssigned : (SIZEOF(IsTypedBy) = 0) 
 OR ('IFC4X3_RC2.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcWindowTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcWindowTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_RC2.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcWindowLiningProperties
