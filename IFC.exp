@@ -4121,7 +4121,7 @@ ENTITY IfcAppliedValue
 	Category : OPTIONAL IfcLabel;
 	Condition : OPTIONAL IfcLabel;
 	ArithmeticOperator : OPTIONAL IfcArithmeticOperatorEnum;
-	Components : LIST [1:?] OF IfcAppliedValue;
+	Components : OPTIONAL LIST [1:?] OF IfcAppliedValue;
  INVERSE
 	HasExternalReference : SET [0:?] OF IfcExternalReferenceRelationship FOR RelatedResourceObjects;
 END_ENTITY;
@@ -6475,8 +6475,6 @@ ENTITY IfcElement
 	,IfcVirtualElement))
  SUBTYPE OF (IfcProduct);
 	Tag : OPTIONAL IfcIdentifier;
-	InterferesElements : SET [0:1] OF IfcRelInterferesElements;
-	IsInterferedByElements : SET [0:1] OF IfcRelInterferesElements;
  INVERSE
 	FillsVoids : SET [0:1] OF IfcRelFillsElement FOR RelatedBuildingElement;
 	ConnectedTo : SET [0:?] OF IfcRelConnectsElements FOR RelatingElement;
@@ -7459,9 +7457,9 @@ END_ENTITY;
 
 ENTITY IfcGrid
  SUBTYPE OF (IfcPositioningElement);
-	UAxes : LIST [1:?] OF IfcGridAxis;
-	VAxes : LIST [1:?] OF IfcGridAxis;
-	WAxes : OPTIONAL LIST [1:?] OF IfcGridAxis;
+	UAxes : LIST [1:?] OF UNIQUE IfcGridAxis;
+	VAxes : LIST [1:?] OF UNIQUE IfcGridAxis;
+	WAxes : OPTIONAL LIST [1:?] OF UNIQUE IfcGridAxis;
 	PredefinedType : OPTIONAL IfcGridTypeEnum;
  WHERE
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
@@ -8583,7 +8581,7 @@ END_ENTITY;
 
 ENTITY IfcPath
  SUBTYPE OF (IfcTopologicalRepresentationItem);
-	EdgeList : LIST [1:?] OF IfcOrientedEdge;
+	EdgeList : LIST [1:?] OF UNIQUE IfcOrientedEdge;
  WHERE
 	IsContinuous : IfcPathHeadToTail(SELF);
 END_ENTITY;
@@ -8872,7 +8870,7 @@ END_ENTITY;
 
 ENTITY IfcPolyLoop
  SUBTYPE OF (IfcLoop);
-	Polygon : LIST [3:?] OF IfcCartesianPoint;
+	Polygon : LIST [3:?] OF UNIQUE IfcCartesianPoint;
  WHERE
 	AllPointsSameDim : SIZEOF(QUERY(Temp <* Polygon | Temp.Dim <> Polygon[1].Dim)) = 0;
 END_ENTITY;
@@ -10205,15 +10203,15 @@ ENTITY IfcRelSpaceBoundary1stLevel
  SUPERTYPE OF (ONEOF
 	(IfcRelSpaceBoundary2ndLevel))
  SUBTYPE OF (IfcRelSpaceBoundary);
+	ParentBoundary : OPTIONAL IfcRelSpaceBoundary1stLevel;
  INVERSE
 	InnerBoundaries : SET [0:?] OF IfcRelSpaceBoundary1stLevel FOR ParentBoundary;
-	ParentBoundary : SET [0:1] OF IfcRelSpaceBoundary1stLevel FOR InnerBoundaries;
 END_ENTITY;
 
 ENTITY IfcRelSpaceBoundary2ndLevel
  SUBTYPE OF (IfcRelSpaceBoundary1stLevel);
+	CorrespondingBoundary : OPTIONAL IfcRelSpaceBoundary2ndLevel;
  INVERSE
-	CorrespondingBoundary : SET [0:1] OF IfcRelSpaceBoundary2ndLevel FOR Corresponds;
 	Corresponds : SET [0:1] OF IfcRelSpaceBoundary2ndLevel FOR CorrespondingBoundary;
 END_ENTITY;
 
@@ -12121,7 +12119,7 @@ ENTITY IfcTypeProduct
 	,IfcSpatialElementType
 	,IfcWindowStyle))
  SUBTYPE OF (IfcTypeObject);
-	RepresentationMaps : OPTIONAL LIST [1:?] OF IfcRepresentationMap;
+	RepresentationMaps : OPTIONAL LIST [1:?] OF UNIQUE IfcRepresentationMap;
 	Tag : OPTIONAL IfcLabel;
  INVERSE
 	ReferencedBy : SET [0:?] OF IfcRelAssignsToProduct FOR RelatingProduct;
@@ -12289,7 +12287,7 @@ ENTITY IfcVirtualElement
 END_ENTITY;
 
 ENTITY IfcVirtualGridIntersection;
-	IntersectingAxes : LIST [2:2] OF IfcGridAxis;
+	IntersectingAxes : LIST [2:2] OF UNIQUE IfcGridAxis;
 	OffsetDistances : LIST [2:3] OF IfcLengthMeasure;
 END_ENTITY;
 
