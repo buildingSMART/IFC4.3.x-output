@@ -7919,15 +7919,14 @@ END_ENTITY;
 
 ENTITY IfcLinearPlacementWithInclination
  SUBTYPE OF (IfcLinearPlacement);
-	Inclinating : SET [1:1] OF IfcAxisLateralInclination;
+	Inclinating : IfcAxisLateralInclination;
 END_ENTITY;
 
 ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
 	(IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
- INVERSE
-	Axis : SET [0:1] OF IfcBoundedCurve FOR PositioningElement;
+	Axis : IfcBoundedCurve;
 END_ENTITY;
 
 ENTITY IfcLinearSpanPlacement
@@ -9097,8 +9096,8 @@ ENTITY IfcProduct
 	,IfcStructuralItem))
  SUBTYPE OF (IfcObject);
 	ObjectPlacement : OPTIONAL IfcObjectPlacement;
+	Representation : IfcProductDefinitionShape;
  INVERSE
-	Representation : SET [0:1] OF IfcProductDefinitionShape FOR ShapeOfProduct;
 	ReferencedBy : SET [0:?] OF IfcRelAssignsToProduct FOR RelatingProduct;
 	PositionedRelativeTo : SET [0:1] OF IfcRelPositions FOR RelatedProducts;
 	ReferencedInStructures : SET [0:?] OF IfcRelReferencedInSpatialStructure FOR RelatedElements;
@@ -10093,8 +10092,7 @@ END_ENTITY;
 ENTITY IfcRelDefinesByProperties
  SUBTYPE OF (IfcRelDefines);
 	RelatingPropertyDefinition : IfcPropertySetDefinitionSelect;
- INVERSE
-	RelatedObjects : SET [0:1] OF IfcContext FOR IsDefinedBy;
+	RelatedObjects : IfcContext;
  WHERE
 	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4X3_RC2.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
 END_ENTITY;
@@ -10159,8 +10157,7 @@ END_ENTITY;
 ENTITY IfcRelReferencedInSpatialStructure
  SUBTYPE OF (IfcRelConnects);
 	RelatingStructure : IfcSpatialElement;
- INVERSE
-	RelatedElements : SET [0:1] OF IfcProduct FOR ReferencedInStructures;
+	RelatedElements : IfcProduct;
  WHERE
 	AllowedRelatedElements : SIZEOF(QUERY(temp <* RelatedElements | ('IFC4X3_RC2.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp)) AND (NOT ('IFC4X3_RC2.IFCSPACE' IN TYPEOF(temp)))
 )) = 0;
