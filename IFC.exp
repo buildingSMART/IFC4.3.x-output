@@ -1077,7 +1077,8 @@ TYPE IfcCostScheduleTypeEnum = ENUMERATION OF
 END_TYPE;
 
 TYPE IfcCourseTypeEnum = ENUMERATION OF
-	(FILTER
+	(ARMOUR
+	,FILTER
 	,BALLASTBED
 	,CORE
 	,PAVEMENT
@@ -3171,6 +3172,7 @@ END_TYPE;
 
 TYPE IfcWallTypeEnum = ENUMERATION OF
 	(STANDARD
+	,WAVEWALL
 	,ELEMENTEDWALL
 	,PLUMBINGWALL
 	,PARAPET
@@ -4018,12 +4020,12 @@ ENTITY IfcAlignmentCantSegment
 	EndCantRight : OPTIONAL IfcLengthMeasure;
 	SmoothingLength : OPTIONAL IfcPositiveLengthMeasure;
 	PredefinedType : IfcAlignmentCantSegmentTypeEnum;
- INVERSE
-	ToCant : SET [1:1] OF IfcAlignmentCant FOR Segments;
 END_ENTITY;
 
 ENTITY IfcAlignmentCurve
  SUBTYPE OF (IfcBoundedCurve);
+	Horizontal : IfcAlignmentHorizontal;
+	Vertical : OPTIONAL IfcAlignmentVertical;
 	Tag : OPTIONAL IfcLabel;
 END_ENTITY;
 
@@ -4042,8 +4044,6 @@ ENTITY IfcAlignmentHorizontalSegment
 	SegmentLength : IfcPositiveLengthMeasure;
 	GravityCenterLineHeight : OPTIONAL IfcPositiveLengthMeasure;
 	PredefinedType : IfcAlignmentHorizontalSegmentTypeEnum;
- INVERSE
-	ToHorizontal : SET [1:1] OF IfcAlignmentHorizontal FOR Segments;
 END_ENTITY;
 
 ENTITY IfcAlignmentParameterSegment
@@ -4078,8 +4078,6 @@ ENTITY IfcAlignmentVerticalSegment
 	EndGradient : IfcRatioMeasure;
 	RadiusOfCurvature : OPTIONAL IfcPositiveLengthMeasure;
 	PredefinedType : IfcAlignmentVerticalSegmentTypeEnum;
- INVERSE
-	ToVertical : SET [1:1] OF IfcAlignmentVertical FOR Segments;
 END_ENTITY;
 
 ENTITY IfcAnnotation
@@ -5185,8 +5183,8 @@ ENTITY IfcCompositeCurve
  SUPERTYPE OF (ONEOF
 	(IfcCompositeCurveOnSurface))
  SUBTYPE OF (IfcBoundedCurve);
-	Segments : LIST [1:?] OF IfcSegment;
 	SelfIntersect : IfcLogical;
+	Segments : IfcCompositeCurveSegment;
  DERIVE
 	NSegments : IfcInteger := SIZEOF(Segments);
 	ClosedCurve : IfcLogical := Segments[NSegments].Transition <> Discontinuous;
@@ -5213,6 +5211,8 @@ ENTITY IfcCompositeCurveSegment
 	ParentCurve : IfcCurve;
  DERIVE
 	Dim : IfcDimensionCount := ParentCurve.Dim;
+ INVERSE
+	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
  WHERE
 	ParentIsBoundedCurve : ('IFC4X3_RC2.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
@@ -6478,8 +6478,8 @@ ENTITY IfcElement
  INVERSE
 	FillsVoids : SET [0:1] OF IfcRelFillsElement FOR RelatedBuildingElement;
 	ConnectedTo : SET [0:?] OF IfcRelConnectsElements FOR RelatingElement;
-	HasProjections : SET [0:?] OF IfcRelProjectsElement FOR RelatingElement;
-	HasOpenings : SET [0:?] OF IfcRelVoidsElement FOR RelatingBuildingElement;
+	IsInterferedByElements : SET [0:?] OF IfcRelInterferesElements FOR RelatedElement;
+	InterferesElements : SET [0:?] OF IfcRelInterferesElements FOR RelatingElement;
 	IsConnectionRealization : SET [0:?] OF IfcRelConnectsWithRealizingElements FOR RealizingElements;
 	ProvidesBoundaries : SET [0:?] OF IfcRelSpaceBoundary FOR RelatedBuildingElement;
 	ConnectedFrom : SET [0:?] OF IfcRelConnectsElements FOR RelatedElement;
@@ -10089,8 +10089,8 @@ END_ENTITY;
 
 ENTITY IfcRelDefinesByProperties
  SUBTYPE OF (IfcRelDefines);
+	RelatedObjects : SET [1:?] OF IfcObjectDefinition;
 	RelatingPropertyDefinition : IfcPropertySetDefinitionSelect;
-	RelatedObjects : IfcContext;
  WHERE
 	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4X3_RC2.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
 END_ENTITY;
@@ -10121,11 +10121,11 @@ END_ENTITY;
 
 ENTITY IfcRelInterferesElements
  SUBTYPE OF (IfcRelConnects);
-	RelatingElement : IfcInterferenceSelect;
-	RelatedElement : IfcInterferenceSelect;
 	InterferenceGeometry : OPTIONAL IfcConnectionGeometry;
 	InterferenceType : OPTIONAL IfcIdentifier;
 	ImpliedOrder : IfcLogical;
+	RelatedElement : IfcElement;
+	RelatingElement : IfcElement;
  WHERE
 	NoSelfReference : RelatingElement :<>: RelatedElement;
 END_ENTITY;
@@ -10148,7 +10148,6 @@ END_ENTITY;
 
 ENTITY IfcRelProjectsElement
  SUBTYPE OF (IfcRelDecomposes);
-	RelatingElement : IfcElement;
 	RelatedFeatureElement : IfcFeatureElementAddition;
 END_ENTITY;
 
@@ -10217,7 +10216,6 @@ END_ENTITY;
 
 ENTITY IfcRelVoidsElement
  SUBTYPE OF (IfcRelDecomposes);
-	RelatingBuildingElement : IfcElement;
 	RelatedOpeningElement : IfcFeatureElementSubtraction;
 END_ENTITY;
 
@@ -10527,8 +10525,6 @@ ENTITY IfcSegment
 	,IfcCurveSegment))
  SUBTYPE OF (IfcGeometricRepresentationItem);
 	Transition : IfcTransitionCode;
- INVERSE
-	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
 END_ENTITY;
 
 ENTITY IfcSegmentedReferenceCurve

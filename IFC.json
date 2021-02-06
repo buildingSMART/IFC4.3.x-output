@@ -9476,119 +9476,24 @@
           }
         }
       },
-      "IfcActor": {
-        "Parent": "IfcObject",
-        "Description": "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model. This includes name, address, telecommunication addresses, and roles. HISTORY New entity in IFC2.0 bSI Documentation",
-        "Psets": {
-          "Pset_ActorCommon": {
-            "Properties": {
-              "Category": {
-                "type": "string",
-                "Description": "Designation of the category into which the actors in the population belong."
-              },
-              "NumberOfActors": {
-                "type": "number",
-                "Description": "The number of actors that are to be dealt with together in the population."
-              },
-              "SkillLevel": {
-                "type": "string",
-                "Description": "Skill level exhibited by the actor and which indicates an extent of their capability to perform actions on the artefacts upon which they can act."
-              }
-            }
-          }
-        }
+      "IfcTypeProduct": {
+        "Parent": "IfcTypeObject",
+        "Description": "IfcTypeProduct defines a type definition of a product without being already inserted into a project structure without having a placement , and not being included in the geometric representation context of the project. S It is used to define a product specification, that is, the specific product information that is common to all occurrences of that product type. An IfcTypeProduct may have a list of property set attached and an optional set of product representations. Values of these properties and the representation maps are common to all occurrences S of that product type. S The type occurrence relationship is realized using the objectified relationship IfcRelDefinesByType . NOTE The product representations are defined as representation maps, which may be assigned by a product instance through the representation item s being an IfcShapeRepresentation and having Items of type S IfcMappedItem . The representations at the occurrence level represented by subtypes of IfcProduct can override the specific representations at the type level for geometric representations, a Cartesian transformation operator can be applied at the occurrence level. for property sets, a property within an occurrence property set, assigned at the product occurrence, overrides the same property assigned to the product type. An IfcTypeProduct may be exchanged without being already assigned to subtypes of IfcProduct . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The entity IfcTypeProduct shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC. bSI Documentation"
       },
-      "IfcControl": {
-        "Parent": "IfcObject",
-        "Description": "IfcControl is the abstract generalization of all concepts that control or constrain the utilization of products, processes, or resources in general. It can be seen as a regulation, cost schedule, request or order, or other requirements applied to a product, process or resource whose requirements and provisions must be fulfilled. EXAMPLE Controls include action requests, cost schedules, project orders, work plans, and work calendars. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE Attribute Identification added. bSI Documentation"
-      },
-      "IfcGroup": {
-        "Parent": "IfcObject",
-        "Description": "IfcGroup is an generalization of any arbitrary group. A group is a logical collection of objects. It does not have its own position, nor can it hold its own shape representation. Therefore a group is an aggregation under some non geometrical topological grouping aspects. EXAMPLE An example for a group is a system, since it groups elements under the aspect of their role, regardless of their position in a building. One of the most important usage of a group representing a system is the IfcDistributionSystem , that groups distribution components, such as space heaters and valves into a heating system. A group can hold any collection of objects, the relationship IfcRelAssignsToGroup is used to establish the group collection. Objects within a group are S products, processes, controls, resources, actors or other groups, thus groups can be nested. An object can be part of zero, one, or many groups. Grouping relationships are not required to be hierarchical nor do they imply a dependency. Groups are assigned to other objects such as a process or a resource by the relationship object that refers to the corresponding object Process assigned using IfcRelAssignsToProcess Resource assigned using IfcRelAssignsToResource Controls affecting the group using IfcRelAssignsToControl A group can be exchanged without having already objects within the group collection. IfcGroup does not define an own object coordinate system, nor does it have an independent shape representation. NOTE Use IfcRelAggregates together with the appropriate subtypes of IfcProduct to define an aggregation of products that may have its own position and shape representation. This relationship shall be used to create a product breakdown structure. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE The inverse IsGroupedBy relationship is set to 0..n bSI Documentation"
-      },
-      "IfcObject": {
+      "IfcTypeObject": {
         "Parent": "IfcObjectDefinition",
-        "Description": "An IfcObject is the generalization of any semantically treated thing or process. Objects are things as they appear i.e. occurrences. NOTE Examples of IfcObject include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process. Objects can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. The ObjectType attribute is used to store the user defined value for all subtypes of IfcObject , where a PredefinedType attribute is given, and its value is set to USERDEFINED. to provide a type information could be seen as a very lightweight classifier of the subtype of IfcObject , if no PredefinedType attribute is given. This is often the case, if no comprehensive list of predefined types is available. Objects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved Association to external internal resource information an association relationship that refers to external internal sources of information. See supertype IfcObjectDefinition for more information. Assignment of other objects an assignment relationship that refers to other types of objects. See supertype IfcObjectDefinition for more information. Aggregation of other objects an aggregation relationship that establishes a whole part relation. Objects can either be a whole, or a part, or both. See supertype IfcObjectDefinition for more information. Assignment of a type IsTypedBy a definition relationship IfcRelDefinesByType that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of a partial type IsDeclaredBy , Declares a definition relationship IfcRelDefinesByObject that uses a component of a type definition a part of a type, called the declaring part to define a component of an occurence part of occurrence, called the reflected part . This is also refered to as a deep copy . The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of property sets IsDefinedBy a definition relationship IfcRelDefinesByProperties that assignes property set definitions to the object occurrence. NOTE See IfcRelDefinesByType for an explanatory figure. Also see there for how to override type properties by occurrence properties. See IfcRelDefinesByObject for an explanatory figure for the assignment of a partial type. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The inverse relationships Declares , IsDeclaredBy , and IsTypedBy have been added, types are not longer included in the IsDefinesBy relationship. IfcProject has been promoted to be a subtype of IfcObjectDefinition IfcContext . .spec head Informal Propositions 1. A partial type assignment, i.e. the inverse attribute IsDeclaredBy , or Declares shall only be used, if the object is part of a decomposition, i.e. if either IsDecomposedBy , or Decomposes is exerted. bSI Documentation"
+        "Description": "The object type defines the specific information about a type, being common to all occurrences of this type. It refers to the specific level of the well recognized generic specific occurrance modeling paradigm. The IfcTypeObject gets assigned to the individual object instances the occurrences via the IfcRelDefinesByType relationship. NOTE The terms Type and Style are often used interchangeably. The object type is represented by a set of property set definitions. The attached property sets describe the available alpha numeric information about the object type. and are used to define all common properties that apply to all object occurrences of that type. NOTE If a property having having the same name is used within the IfcPropertySet assigned to an IfcTypeObject and subtypes and to an occurrence of that type, then the occurrence property overrides the type property. See IfcRelDefinesByType for an explanatory figure. Object types may be exchanged without being already assigned to objects. An object type may have an indication of the library or catalogue from which its definition originates. This association is handled by the inherited HasAssociations relationship pointing to IfcRelAssociatesLibrary . HISTORY New entity in IFC2x .change ifc2x3 IFC2x3 CHANGE The IfcTypeObject is now subtyped from the new supertype IfcObjectDefinition , and the attribute HasPropertySets has been changed from a LIST into a SET. .change ifc2x4 IFC4 CHANGE The entity IfcTypeObject shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC. The inverse attribute Types has been renamed from ObjectTypeOf . bSI Documentation"
       },
-      "IfcObjectDefinition": {
-        "Parent": "IfcRoot",
-        "Description": "An IfcObjectDefinition is the generalization of any semantically treated thing or process, either being a type or an occurrences. Object defintions can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. A context is a specific kind of object definition as it provides the project or library context in which object types and object occurrences are defined. Objects are independent pieces of information that might contain or reference other pieces of information. There are four essential kinds of relationships in which object definitons by their instantiable subtypes can be involved Assignment of other objects an assignment relationship IfcRelAssigns that refers to other types of objects and creates a bi directional association. The semantic of the assignment is established at the level of the subtypes of the general IfcRelAssigns relationship. There is no dependency implied a priori by the assignment. Association to external resources an association relationship IfcRelAssociates that refers to external sources of information most notably a classification or document and creates a uni directional association. There is no dependency implied by the association. Aggregation of other objects an aggregation relationship IfcRelAggregates that establishes an unordered, spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Nesting of other objects a nesting relationship IfcRelNests that establishes an ordered, non spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Declaration within a context a relationship IfcRelDeclares of the uppermost object definition within the object definition tree e.g. the summary object within an object nesting tree to the context a project or project library . It applies the units, representation context and other context information to this object definition and all dependent ones. NOTE The link between the uppermost object in the spatial structure tree, that is IfcSite or ifcBuilding , and the context provided by IfcProject is created using the IfcRelAggregates relationship. See IfcProject for more information. HISTORY New abstract entity in IFC2x3. .change ifc2x4 IFC4 CHANGE The new subtype IfcContext and the relationship to context HasContext has been added . The decomposition relationship is split into ordered nesting Nests , IsNestedBy and un ordered aggregating Decomposes , IsDecomposedBy . bSI Documentation"
+      "IfcRoot": {
+        "Description": "IfcRoot is the most abstract and root class for all entity definitions that roots in the kernel or in subsequent layers of the IFC specification. It is therefore the common supertype of all IFC entities, beside those defined in an IFC resource schema. All entities that are subtypes of IfcRoot can be used independently, whereas resource schema entities, that are not subtypes of IfcRoot , are not supposed to be independent entities. NOTE View definitions and implementation agreement may impose additional restrictions on the use of the OwnerHistory to handle object versioning. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The attribute OwnerHistory has been made OPTIONAL. bSI Documentation"
       },
-      "IfcProcess": {
+      "IfcResource": {
         "Parent": "IfcObject",
-        "Description": "IfcProcess is defined as one individual activity or event, that is ordered in time, that has sequence relationships with other processes, which transforms input in output, and may connect to other other processes through input output relationships. An IfcProcess can be an activity or task , or an event. It takes usually place in building construction with the intent of designing, costing, acquiring, constructing, or maintaining products or other and similar tasks or procedures. Figure 1 illustrates process relationships. .extDef NOTE Definition according to ISO9000 A process is a set of activities that are interrelated or that interact with one another. Processes use resources to transform inputs into outputs. Processes are interconnected because the output from one process becomes the input for another process. In effect, processes are glued together by means of such input output relationships. icon diagram .. .. .. .. .. .. figures ifcprocess icon fig.png Figure 1 Process relationships and the ICON process diagram. Process information relates to other objects by establishing the following relationships Nesting of processes IfcRelNests A process can contain sub processes and thereby be nested. Sequencing of processes IfcRelSequence Processes can be placed in sequence including overlapping for parallel tasks , and have predecessors and successors. Assigning process to schedules IfcRelAssignsToControl Activities such as tasks, and predominately summary tasks, are assigned to a work schedule. Having a product assigned to the process as input IfcRelAssignsToProcess Products can be assigned as input to a process, such as for construction process planning. Having a product assigned to the process as output IfcRelAssignsToProduct Products can be assigned as output to a process, such as for construction process planning. Having a control assigned to the process as process control IfcRelAssignsToProcess Items that act as a control onto the process can be assigned to a process, such as for cost management a cost item assigned to a work task . Having a resource assigned to the process as consumed by the process IfcRelAssignsToProcess Items that act as a mechanism to a process, such as labor, material and equipment in cost calculations. HISTORY New entity in IFC1.0. .change ifc2x IFC2x CHANGE The attribute Productivity has been removed. .change ifc2x4 IFC4 CHANGE The attribute Identification has been promoted from subtypes IfcTask and others. bSI Documentation",
-        "Psets": {
-          "Pset_Risk": {
-            "Properties": {
-              "RiskName": {
-                "type": "string",
-                "Description": "A locally unique identifier for the risk entry that can be used to track the development and mitigation of the risk throughout the project life cycle"
-              },
-              "RiskType": {
-                "type": "PEnum_RiskType",
-                "Description": "Identifies the predefined types of risk from which the type required may be set.",
-                "values": [
-                  "BUSINESS",
-                  "HAZARD",
-                  "HEALTHANDSAFETY",
-                  "INSURANCE"
-                ]
-              },
-              "NatureOfRisk": {
-                "type": "string",
-                "Description": "An indication of the generic nature of the risk that might be encountered. NOTE It is anticipated that there will be a local agreement that constrains the values that might be assigned to this property. An example might be Fall or Fall of grille unit causing injury and damage to person and property."
-              },
-              "AssociatedProduct": {
-                "type": "string",
-                "Description": "An indication or link to any associated product or material that may trigger the hazard."
-              },
-              "AssociatedActivity": {
-                "type": "string",
-                "Description": "An indication or link to any associated activity or process that may trigger the hazard."
-              },
-              "AssociatedLocation": {
-                "type": "string",
-                "Description": "An indication or link to any associated location or space that may trigger the hazard."
-              },
-              "RiskAssessmentMethodology": {
-                "type": "string",
-                "Description": "An indication or link to the chosen risk assessment methodology, for example UK PAS1192 6 or a chosen ISO13100 annex."
-              },
-              "UnmitigatedRiskLikelihood": {
-                "type": "penum_riskrating",
-                "Description": "Identifies the likelihood of the hazard prior to any specific mitigation."
-              },
-              "UnmitigatedRiskConsequence": {
-                "type": "penum_riskrating",
-                "Description": "Indicates the level of severity of the consequences that the risk would have in case it happens."
-              },
-              "UnmitigatedRiskSignificance": {
-                "type": "penum_riskrating",
-                "Description": "Identifies the significance of the risk given the likelihood and consequence prior to any specific mitigation."
-              },
-              "MitigationPlanned": {
-                "type": "string",
-                "Description": "Identifies preventive measures to be taken to mitigate risk."
-              },
-              "MitigatedRiskLikelihood": {
-                "type": "penum_riskrating",
-                "Description": "Identifies the likelihood of the hazard given the planned mitigation."
-              },
-              "MitigatedRiskConsequence": {
-                "type": "penum_riskrating",
-                "Description": "Indicates the level of severity of the consequences that the risk would have in case it happens."
-              },
-              "MitigatedRiskSignificance": {
-                "type": "penum_riskrating",
-                "Description": "Identifies the significance of the risk given the mitigation of likelihood and consequence."
-              },
-              "MitigationProposed": {
-                "type": "string",
-                "Description": "Any proposed, but not yet agreed and irrevocable, mitigation of the likelihood and consequences of the hazard."
-              }
-            }
-          }
-        }
+        "Description": "IfcResource contains the information needed to represent the costs, schedule, and other impacts from the use of a thing in a process. It is not intended to use IfcResource to model the general properties of the things themselves, while an optional linkage from IfcResource to the things to be used can be specified specifically, the relationship from subtypes of IfcResource to IfcProduct through the IfcRelAssignsToResource relationship . There are two basic intended uses of IfcResource . First, if the attributes of the thing are not needed for the purpose of the use of IfcResource , or the types of things are not explicitly modeled in IFC yet, then the linkage between the resource and the thing doesn t have to be instantiated in the system. That is, the attributes of IfcResource or its subtypes alone are sufficient to represent the use of the thing as a resource for the purpose of the project. EXAMPLE construction equipment such as earth moving vehicles or tools are not currently modeled within the IFC. For the purpose of estimating and scheduling, these can be represented using subtypes of IfcResource alone. Second, if the attributes of the thing are needed for the use of IfcResource objects, and they are modeled explicitly as objects, then the IfcResource instances can be linked to the instances of the type of the things being referenced. Things that might be used as resources and that are already modeled in the IFC include physical products, people and organizations, and materials. The relationship object IfcRelAssignsToResource is provided for this approach. The inherited attribute ObjectType is used as a textual code that identifies the resource type. HISTORY New entity in IFC1.0 .change ifc2x IFC2x CHANGE The attributes BaseUnit and ResourceConsumption have been removed from the abstract entity they are reintroduced at a lower level in the hierarchy. bSI Documentation"
+      },
+      "IfcProxy": {
+        "Parent": "IfcProduct",
+        "Description": "IfcProxy is intended to be a kind of a container for wrapping objects which are defined by associated properties, which may or may not have a geometric representation and placement in space. A proxy may have a semantic meaning, defined by the Name attribute, and property definitions, attached through the property assignment relationship, which definition may be outside of the definitions given by the current release of IFC. The ProxyType may give an indication to which high level semantic breakdown of object the semantic definition of the proxy relates to. the Tag attribute may be used to assign a human or system interpretable identifier such as a serial number or bar code . NOTE Given that only a limited number of semantic constructs can be formally defined within IFC and it will never be possible to define all , there has to be a mechanism for capturing those constructs that are not yet defined by IFC. NOTE Product proxies are a mechanism that allows to exchange data that is part of the project but not necessarily part of the IFC model. Those proxies may have geometric representations assigned. HISTORY New entity in IFC1.5. .deprecated DEPRECATION The entity is deprecated and shall not be used. bSI Documentation"
       },
       "IfcProduct": {
         "Parent": "IfcObject",
@@ -9666,24 +9571,119 @@
           }
         }
       },
-      "IfcProxy": {
-        "Parent": "IfcProduct",
-        "Description": "IfcProxy is intended to be a kind of a container for wrapping objects which are defined by associated properties, which may or may not have a geometric representation and placement in space. A proxy may have a semantic meaning, defined by the Name attribute, and property definitions, attached through the property assignment relationship, which definition may be outside of the definitions given by the current release of IFC. The ProxyType may give an indication to which high level semantic breakdown of object the semantic definition of the proxy relates to. the Tag attribute may be used to assign a human or system interpretable identifier such as a serial number or bar code . NOTE Given that only a limited number of semantic constructs can be formally defined within IFC and it will never be possible to define all , there has to be a mechanism for capturing those constructs that are not yet defined by IFC. NOTE Product proxies are a mechanism that allows to exchange data that is part of the project but not necessarily part of the IFC model. Those proxies may have geometric representations assigned. HISTORY New entity in IFC1.5. .deprecated DEPRECATION The entity is deprecated and shall not be used. bSI Documentation"
-      },
-      "IfcResource": {
+      "IfcProcess": {
         "Parent": "IfcObject",
-        "Description": "IfcResource contains the information needed to represent the costs, schedule, and other impacts from the use of a thing in a process. It is not intended to use IfcResource to model the general properties of the things themselves, while an optional linkage from IfcResource to the things to be used can be specified specifically, the relationship from subtypes of IfcResource to IfcProduct through the IfcRelAssignsToResource relationship . There are two basic intended uses of IfcResource . First, if the attributes of the thing are not needed for the purpose of the use of IfcResource , or the types of things are not explicitly modeled in IFC yet, then the linkage between the resource and the thing doesn t have to be instantiated in the system. That is, the attributes of IfcResource or its subtypes alone are sufficient to represent the use of the thing as a resource for the purpose of the project. EXAMPLE construction equipment such as earth moving vehicles or tools are not currently modeled within the IFC. For the purpose of estimating and scheduling, these can be represented using subtypes of IfcResource alone. Second, if the attributes of the thing are needed for the use of IfcResource objects, and they are modeled explicitly as objects, then the IfcResource instances can be linked to the instances of the type of the things being referenced. Things that might be used as resources and that are already modeled in the IFC include physical products, people and organizations, and materials. The relationship object IfcRelAssignsToResource is provided for this approach. The inherited attribute ObjectType is used as a textual code that identifies the resource type. HISTORY New entity in IFC1.0 .change ifc2x IFC2x CHANGE The attributes BaseUnit and ResourceConsumption have been removed from the abstract entity they are reintroduced at a lower level in the hierarchy. bSI Documentation"
+        "Description": "IfcProcess is defined as one individual activity or event, that is ordered in time, that has sequence relationships with other processes, which transforms input in output, and may connect to other other processes through input output relationships. An IfcProcess can be an activity or task , or an event. It takes usually place in building construction with the intent of designing, costing, acquiring, constructing, or maintaining products or other and similar tasks or procedures. Figure 1 illustrates process relationships. .extDef NOTE Definition according to ISO9000 A process is a set of activities that are interrelated or that interact with one another. Processes use resources to transform inputs into outputs. Processes are interconnected because the output from one process becomes the input for another process. In effect, processes are glued together by means of such input output relationships. icon diagram .. .. .. .. .. .. figures ifcprocess icon fig.png Figure 1 Process relationships and the ICON process diagram. Process information relates to other objects by establishing the following relationships Nesting of processes IfcRelNests A process can contain sub processes and thereby be nested. Sequencing of processes IfcRelSequence Processes can be placed in sequence including overlapping for parallel tasks , and have predecessors and successors. Assigning process to schedules IfcRelAssignsToControl Activities such as tasks, and predominately summary tasks, are assigned to a work schedule. Having a product assigned to the process as input IfcRelAssignsToProcess Products can be assigned as input to a process, such as for construction process planning. Having a product assigned to the process as output IfcRelAssignsToProduct Products can be assigned as output to a process, such as for construction process planning. Having a control assigned to the process as process control IfcRelAssignsToProcess Items that act as a control onto the process can be assigned to a process, such as for cost management a cost item assigned to a work task . Having a resource assigned to the process as consumed by the process IfcRelAssignsToProcess Items that act as a mechanism to a process, such as labor, material and equipment in cost calculations. HISTORY New entity in IFC1.0. .change ifc2x IFC2x CHANGE The attribute Productivity has been removed. .change ifc2x4 IFC4 CHANGE The attribute Identification has been promoted from subtypes IfcTask and others. bSI Documentation",
+        "Psets": {
+          "Pset_Risk": {
+            "Properties": {
+              "RiskName": {
+                "type": "string",
+                "Description": "A locally unique identifier for the risk entry that can be used to track the development and mitigation of the risk throughout the project life cycle"
+              },
+              "RiskType": {
+                "type": "PEnum_RiskType",
+                "Description": "Identifies the predefined types of risk from which the type required may be set.",
+                "values": [
+                  "BUSINESS",
+                  "HAZARD",
+                  "HEALTHANDSAFETY",
+                  "INSURANCE"
+                ]
+              },
+              "NatureOfRisk": {
+                "type": "string",
+                "Description": "An indication of the generic nature of the risk that might be encountered. NOTE It is anticipated that there will be a local agreement that constrains the values that might be assigned to this property. An example might be Fall or Fall of grille unit causing injury and damage to person and property."
+              },
+              "AssociatedProduct": {
+                "type": "string",
+                "Description": "An indication or link to any associated product or material that may trigger the hazard."
+              },
+              "AssociatedActivity": {
+                "type": "string",
+                "Description": "An indication or link to any associated activity or process that may trigger the hazard."
+              },
+              "AssociatedLocation": {
+                "type": "string",
+                "Description": "An indication or link to any associated location or space that may trigger the hazard."
+              },
+              "RiskAssessmentMethodology": {
+                "type": "string",
+                "Description": "An indication or link to the chosen risk assessment methodology, for example UK PAS1192 6 or a chosen ISO13100 annex."
+              },
+              "UnmitigatedRiskLikelihood": {
+                "type": "penum_riskrating",
+                "Description": "Identifies the likelihood of the hazard prior to any specific mitigation."
+              },
+              "UnmitigatedRiskConsequence": {
+                "type": "penum_riskrating",
+                "Description": "Indicates the level of severity of the consequences that the risk would have in case it happens."
+              },
+              "UnmitigatedRiskSignificance": {
+                "type": "penum_riskrating",
+                "Description": "Identifies the significance of the risk given the likelihood and consequence prior to any specific mitigation."
+              },
+              "MitigationPlanned": {
+                "type": "string",
+                "Description": "Identifies preventive measures to be taken to mitigate risk."
+              },
+              "MitigatedRiskLikelihood": {
+                "type": "penum_riskrating",
+                "Description": "Identifies the likelihood of the hazard given the planned mitigation."
+              },
+              "MitigatedRiskConsequence": {
+                "type": "penum_riskrating",
+                "Description": "Indicates the level of severity of the consequences that the risk would have in case it happens."
+              },
+              "MitigatedRiskSignificance": {
+                "type": "penum_riskrating",
+                "Description": "Identifies the significance of the risk given the mitigation of likelihood and consequence."
+              },
+              "MitigationProposed": {
+                "type": "string",
+                "Description": "Any proposed, but not yet agreed and irrevocable, mitigation of the likelihood and consequences of the hazard."
+              }
+            }
+          }
+        }
       },
-      "IfcRoot": {
-        "Description": "IfcRoot is the most abstract and root class for all entity definitions that roots in the kernel or in subsequent layers of the IFC specification. It is therefore the common supertype of all IFC entities, beside those defined in an IFC resource schema. All entities that are subtypes of IfcRoot can be used independently, whereas resource schema entities, that are not subtypes of IfcRoot , are not supposed to be independent entities. NOTE View definitions and implementation agreement may impose additional restrictions on the use of the OwnerHistory to handle object versioning. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The attribute OwnerHistory has been made OPTIONAL. bSI Documentation"
+      "IfcObjectDefinition": {
+        "Parent": "IfcRoot",
+        "Description": "An IfcObjectDefinition is the generalization of any semantically treated thing or process, either being a type or an occurrences. Object defintions can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. A context is a specific kind of object definition as it provides the project or library context in which object types and object occurrences are defined. Objects are independent pieces of information that might contain or reference other pieces of information. There are four essential kinds of relationships in which object definitons by their instantiable subtypes can be involved Assignment of other objects an assignment relationship IfcRelAssigns that refers to other types of objects and creates a bi directional association. The semantic of the assignment is established at the level of the subtypes of the general IfcRelAssigns relationship. There is no dependency implied a priori by the assignment. Association to external resources an association relationship IfcRelAssociates that refers to external sources of information most notably a classification or document and creates a uni directional association. There is no dependency implied by the association. Aggregation of other objects an aggregation relationship IfcRelAggregates that establishes an unordered, spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Nesting of other objects a nesting relationship IfcRelNests that establishes an ordered, non spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Declaration within a context a relationship IfcRelDeclares of the uppermost object definition within the object definition tree e.g. the summary object within an object nesting tree to the context a project or project library . It applies the units, representation context and other context information to this object definition and all dependent ones. NOTE The link between the uppermost object in the spatial structure tree, that is IfcSite or ifcBuilding , and the context provided by IfcProject is created using the IfcRelAggregates relationship. See IfcProject for more information. HISTORY New abstract entity in IFC2x3. .change ifc2x4 IFC4 CHANGE The new subtype IfcContext and the relationship to context HasContext has been added . The decomposition relationship is split into ordered nesting Nests , IsNestedBy and un ordered aggregating Decomposes , IsDecomposedBy . bSI Documentation"
       },
-      "IfcTypeObject": {
+      "IfcObject": {
         "Parent": "IfcObjectDefinition",
-        "Description": "The object type defines the specific information about a type, being common to all occurrences of this type. It refers to the specific level of the well recognized generic specific occurrance modeling paradigm. The IfcTypeObject gets assigned to the individual object instances the occurrences via the IfcRelDefinesByType relationship. NOTE The terms Type and Style are often used interchangeably. The object type is represented by a set of property set definitions. The attached property sets describe the available alpha numeric information about the object type. and are used to define all common properties that apply to all object occurrences of that type. NOTE If a property having having the same name is used within the IfcPropertySet assigned to an IfcTypeObject and subtypes and to an occurrence of that type, then the occurrence property overrides the type property. See IfcRelDefinesByType for an explanatory figure. Object types may be exchanged without being already assigned to objects. An object type may have an indication of the library or catalogue from which its definition originates. This association is handled by the inherited HasAssociations relationship pointing to IfcRelAssociatesLibrary . HISTORY New entity in IFC2x .change ifc2x3 IFC2x3 CHANGE The IfcTypeObject is now subtyped from the new supertype IfcObjectDefinition , and the attribute HasPropertySets has been changed from a LIST into a SET. .change ifc2x4 IFC4 CHANGE The entity IfcTypeObject shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC. The inverse attribute Types has been renamed from ObjectTypeOf . bSI Documentation"
+        "Description": "An IfcObject is the generalization of any semantically treated thing or process. Objects are things as they appear i.e. occurrences. NOTE Examples of IfcObject include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process. Objects can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. The ObjectType attribute is used to store the user defined value for all subtypes of IfcObject , where a PredefinedType attribute is given, and its value is set to USERDEFINED. to provide a type information could be seen as a very lightweight classifier of the subtype of IfcObject , if no PredefinedType attribute is given. This is often the case, if no comprehensive list of predefined types is available. Objects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved Association to external internal resource information an association relationship that refers to external internal sources of information. See supertype IfcObjectDefinition for more information. Assignment of other objects an assignment relationship that refers to other types of objects. See supertype IfcObjectDefinition for more information. Aggregation of other objects an aggregation relationship that establishes a whole part relation. Objects can either be a whole, or a part, or both. See supertype IfcObjectDefinition for more information. Assignment of a type IsTypedBy a definition relationship IfcRelDefinesByType that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of a partial type IsDeclaredBy , Declares a definition relationship IfcRelDefinesByObject that uses a component of a type definition a part of a type, called the declaring part to define a component of an occurence part of occurrence, called the reflected part . This is also refered to as a deep copy . The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of property sets IsDefinedBy a definition relationship IfcRelDefinesByProperties that assignes property set definitions to the object occurrence. NOTE See IfcRelDefinesByType for an explanatory figure. Also see there for how to override type properties by occurrence properties. See IfcRelDefinesByObject for an explanatory figure for the assignment of a partial type. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The inverse relationships Declares , IsDeclaredBy , and IsTypedBy have been added, types are not longer included in the IsDefinesBy relationship. IfcProject has been promoted to be a subtype of IfcObjectDefinition IfcContext . .spec head Informal Propositions 1. A partial type assignment, i.e. the inverse attribute IsDeclaredBy , or Declares shall only be used, if the object is part of a decomposition, i.e. if either IsDecomposedBy , or Decomposes is exerted. bSI Documentation"
       },
-      "IfcTypeProduct": {
-        "Parent": "IfcTypeObject",
-        "Description": "IfcTypeProduct defines a type definition of a product without being already inserted into a project structure without having a placement , and not being included in the geometric representation context of the project. S It is used to define a product specification, that is, the specific product information that is common to all occurrences of that product type. An IfcTypeProduct may have a list of property set attached and an optional set of product representations. Values of these properties and the representation maps are common to all occurrences S of that product type. S The type occurrence relationship is realized using the objectified relationship IfcRelDefinesByType . NOTE The product representations are defined as representation maps, which may be assigned by a product instance through the representation item s being an IfcShapeRepresentation and having Items of type S IfcMappedItem . The representations at the occurrence level represented by subtypes of IfcProduct can override the specific representations at the type level for geometric representations, a Cartesian transformation operator can be applied at the occurrence level. for property sets, a property within an occurrence property set, assigned at the product occurrence, overrides the same property assigned to the product type. An IfcTypeProduct may be exchanged without being already assigned to subtypes of IfcProduct . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The entity IfcTypeProduct shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC. bSI Documentation"
+      "IfcGroup": {
+        "Parent": "IfcObject",
+        "Description": "IfcGroup is an generalization of any arbitrary group. A group is a logical collection of objects. It does not have its own position, nor can it hold its own shape representation. Therefore a group is an aggregation under some non geometrical topological grouping aspects. EXAMPLE An example for a group is a system, since it groups elements under the aspect of their role, regardless of their position in a building. One of the most important usage of a group representing a system is the IfcDistributionSystem , that groups distribution components, such as space heaters and valves into a heating system. A group can hold any collection of objects, the relationship IfcRelAssignsToGroup is used to establish the group collection. Objects within a group are S products, processes, controls, resources, actors or other groups, thus groups can be nested. An object can be part of zero, one, or many groups. Grouping relationships are not required to be hierarchical nor do they imply a dependency. Groups are assigned to other objects such as a process or a resource by the relationship object that refers to the corresponding object Process assigned using IfcRelAssignsToProcess Resource assigned using IfcRelAssignsToResource Controls affecting the group using IfcRelAssignsToControl A group can be exchanged without having already objects within the group collection. IfcGroup does not define an own object coordinate system, nor does it have an independent shape representation. NOTE Use IfcRelAggregates together with the appropriate subtypes of IfcProduct to define an aggregation of products that may have its own position and shape representation. This relationship shall be used to create a product breakdown structure. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE The inverse IsGroupedBy relationship is set to 0..n bSI Documentation"
+      },
+      "IfcControl": {
+        "Parent": "IfcObject",
+        "Description": "IfcControl is the abstract generalization of all concepts that control or constrain the utilization of products, processes, or resources in general. It can be seen as a regulation, cost schedule, request or order, or other requirements applied to a product, process or resource whose requirements and provisions must be fulfilled. EXAMPLE Controls include action requests, cost schedules, project orders, work plans, and work calendars. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE Attribute Identification added. bSI Documentation"
+      },
+      "IfcActor": {
+        "Parent": "IfcObject",
+        "Description": "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model. This includes name, address, telecommunication addresses, and roles. HISTORY New entity in IFC2.0 bSI Documentation",
+        "Psets": {
+          "Pset_ActorCommon": {
+            "Properties": {
+              "Category": {
+                "type": "string",
+                "Description": "Designation of the category into which the actors in the population belong."
+              },
+              "NumberOfActors": {
+                "type": "number",
+                "Description": "The number of actors that are to be dealt with together in the population."
+              },
+              "SkillLevel": {
+                "type": "string",
+                "Description": "Skill level exhibited by the actor and which indicates an extent of their capability to perform actions on the artefacts upon which they can act."
+              }
+            }
+          }
+        }
       },
       "IfcMaterial": {
         "Parent": "IfcMaterialDefinition",
@@ -19242,6 +19242,10 @@
         "Parent": "IfcWall",
         "Description": "A standard wall, extruded vertically with a constant thickness along the wall path. X 0D .deprecated X 0D The value is deprecated, it is expressed by choosing the subtype IfcWallStandardCase ."
       },
+      "IfcWall.WAVEWALL": {
+        "Parent": "IfcWall",
+        "Description": "Protective wall or screen to block overtopping and impact of waves across a breakwater"
+      },
       "IfcWall.ELEMENTEDWALL": {
         "Parent": "IfcWall",
         "Description": "A stud wall framed with studs and faced with sheetings, sidings, wallboard, or plasterwork. X 0D .deprecated X 0D The value is deprecated, it is expressed by choosing the subtype IfcWallElementedCase ."
@@ -22014,6 +22018,10 @@
             }
           }
         }
+      },
+      "IfcCourse.ARMOUR": {
+        "Parent": "IfcCourse",
+        "Description": "An Aggregate layer whose primary function is to protect against erosion of the underlying material by water e.g. riprap. NOTE Definition from ISO 21650 protective layer on a breakwater, seawall or other rubble mound structures composed of armour units"
       },
       "IfcCourse.FILTER": {
         "Parent": "IfcCourse",
