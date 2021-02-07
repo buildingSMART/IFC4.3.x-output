@@ -5166,8 +5166,8 @@ ENTITY IfcCompositeCurve
  SUPERTYPE OF (ONEOF
 	(IfcCompositeCurveOnSurface))
  SUBTYPE OF (IfcBoundedCurve);
+	Segments : LIST [1:?] OF IfcSegment;
 	SelfIntersect : IfcLogical;
-	Segments : IfcCompositeCurveSegment;
  DERIVE
 	NSegments : IfcInteger := SIZEOF(Segments);
 	ClosedCurve : IfcLogical := Segments[NSegments].Transition <> Discontinuous;
@@ -6004,6 +6004,7 @@ ENTITY IfcDistributionPort
  SUBTYPE OF (IfcPort);
 	FlowDirection : OPTIONAL IfcFlowDirectionEnum;
 	PredefinedType : OPTIONAL IfcDistributionPortTypeEnum;
+	SystemType : OPTIONAL IfcDistributionSystemEnum;
 END_ENTITY;
 
 ENTITY IfcDistributionSystem
@@ -6431,6 +6432,8 @@ ENTITY IfcElement
 	ConnectedTo : SET [0:?] OF IfcRelConnectsElements FOR RelatingElement;
 	IsInterferedByElements : SET [0:?] OF IfcRelInterferesElements FOR RelatedElement;
 	InterferesElements : SET [0:?] OF IfcRelInterferesElements FOR RelatingElement;
+	HasProjections : SET [0:?] OF IfcRelProjectsElement FOR RelatingElement;
+	HasOpenings : SET [0:?] OF IfcRelVoidsElement FOR RelatingBuildingElement;
 	IsConnectionRealization : SET [0:?] OF IfcRelConnectsWithRealizingElements FOR RealizingElements;
 	ProvidesBoundaries : SET [0:?] OF IfcRelSpaceBoundary FOR RelatedBuildingElement;
 	ConnectedFrom : SET [0:?] OF IfcRelConnectsElements FOR RelatedElement;
@@ -7825,7 +7828,7 @@ ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
 	(IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
-	Axis : IfcBoundedCurve;
+	Axis : IfcCurve;
 END_ENTITY;
 
 ENTITY IfcLinearSpanPlacement
@@ -9963,8 +9966,8 @@ END_ENTITY;
 
 ENTITY IfcRelDefinesByProperties
  SUBTYPE OF (IfcRelDefines);
-	RelatedObjects : SET [1:?] OF IfcObjectDefinition;
 	RelatingPropertyDefinition : IfcPropertySetDefinitionSelect;
+	RelatedObjects : IfcContext;
  WHERE
 	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4X3_RC2.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
 END_ENTITY;
@@ -10022,6 +10025,7 @@ END_ENTITY;
 
 ENTITY IfcRelProjectsElement
  SUBTYPE OF (IfcRelDecomposes);
+	RelatingElement : IfcElement;
 	RelatedFeatureElement : IfcFeatureElementAddition;
 END_ENTITY;
 
@@ -10090,6 +10094,7 @@ END_ENTITY;
 
 ENTITY IfcRelVoidsElement
  SUBTYPE OF (IfcRelDecomposes);
+	RelatingBuildingElement : IfcElement;
 	RelatedOpeningElement : IfcFeatureElementSubtraction;
 END_ENTITY;
 
