@@ -5166,8 +5166,8 @@ ENTITY IfcCompositeCurve
  SUPERTYPE OF (ONEOF
 	(IfcCompositeCurveOnSurface))
  SUBTYPE OF (IfcBoundedCurve);
-	Segments : LIST [1:?] OF IfcSegment;
 	SelfIntersect : IfcLogical;
+	Segments : IfcCompositeCurveSegment;
  DERIVE
 	NSegments : IfcInteger := SIZEOF(Segments);
 	ClosedCurve : IfcLogical := Segments[NSegments].Transition <> Discontinuous;
@@ -7828,7 +7828,7 @@ ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
 	(IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
-	Axis : IfcCurve;
+	Axis : IfcBoundedCurve;
 END_ENTITY;
 
 ENTITY IfcLinearSpanPlacement
@@ -7926,7 +7926,7 @@ ENTITY IfcMaterialConstituent
 	Fraction : OPTIONAL IfcNormalisedRatioMeasure;
 	Category : OPTIONAL IfcLabel;
  INVERSE
-	ToMaterialConstituentSet : SET [0:1] OF IfcMaterialConstituentSet FOR MaterialConstituents;
+	ToMaterialConstituentSet : SET [1:1] OF IfcMaterialConstituentSet FOR MaterialConstituents;
 END_ENTITY;
 
 ENTITY IfcMaterialConstituentSet
@@ -7972,7 +7972,7 @@ ENTITY IfcMaterialLayer
 	Category : OPTIONAL IfcLabel;
 	Priority : OPTIONAL IfcInteger;
  INVERSE
-	ToMaterialLayerSet : SET [0:1] OF IfcMaterialLayerSet FOR MaterialLayers;
+	ToMaterialLayerSet : SET [1:1] OF IfcMaterialLayerSet FOR MaterialLayers;
  WHERE
 	NormalizedPriority : NOT(EXISTS(Priority)) OR {0 <= Priority <= 100};
 END_ENTITY;
@@ -8016,7 +8016,7 @@ ENTITY IfcMaterialProfile
 	Priority : OPTIONAL IfcInteger;
 	Category : OPTIONAL IfcLabel;
  INVERSE
-	ToMaterialProfileSet : SET [0:1] OF IfcMaterialProfileSet FOR MaterialProfiles;
+	ToMaterialProfileSet : SET [1:1] OF IfcMaterialProfileSet FOR MaterialProfiles;
  WHERE
 	NormalizedPriority : NOT(EXISTS(Priority)) OR {0 <= Priority <= 100};
 END_ENTITY;

@@ -1,21 +1,24 @@
 # Express schema differences
 
-38 items
+41 items
 
 ### Entity
 
-18 items
+21 items
 
 | Name                                               | IFC4x3_RC2.exp                                                                                    | IFC.exp                                                                                           |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | IfcAlignmentVerticalSegment.StartGradient          | StartGradient : IfcLengthMeasure                                                                  | StartGradient : IfcRatioMeasure                                                                   |
 | IfcAlignmentVerticalSegment.EndGradient            | EndGradient : IfcLengthMeasure                                                                    | EndGradient : IfcRatioMeasure                                                                     |
+| IfcCompositeCurve attributes                       | ['Segments', 'SelfIntersect']                                                                     | ['SelfIntersect', 'Segments']                                                                     |
+| IfcCompositeCurve.Segments                         | Segments : list[1:?] of IfcSegment                                                                | Segments : IfcCompositeCurveSegment                                                               |
 | IfcCurveSegment attributes                         | ['StartPlacement', 'SegmentLength', 'ParentCurve']                                                | ['Placement', 'SegmentStart', 'SegmentLength', 'ParentCurve']                                     |
 | IfcFeatureElementAddition.ProjectsElements         | ProjectsElements : IfcRelProjectsElement FOR RelatedFeatureElement                                | ProjectsElements : SET OF [1:1] IfcRelProjectsElement FOR RelatedFeatureElement                   |
 | IfcFeatureElementSubtraction.VoidsElements         | VoidsElements : IfcRelVoidsElement FOR RelatedOpeningElement                                      | VoidsElements : SET OF [1:1] IfcRelVoidsElement FOR RelatedOpeningElement                         |
-| IfcMaterialConstituent.ToMaterialConstituentSet    | ToMaterialConstituentSet : IfcMaterialConstituentSet FOR MaterialConstituents                     | ToMaterialConstituentSet : SET OF [0:1] IfcMaterialConstituentSet FOR MaterialConstituents        |
-| IfcMaterialLayer.ToMaterialLayerSet                | ToMaterialLayerSet : IfcMaterialLayerSet FOR MaterialLayers                                       | ToMaterialLayerSet : SET OF [0:1] IfcMaterialLayerSet FOR MaterialLayers                          |
-| IfcMaterialProfile.ToMaterialProfileSet            | ToMaterialProfileSet : IfcMaterialProfileSet FOR MaterialProfiles                                 | ToMaterialProfileSet : SET OF [0:1] IfcMaterialProfileSet FOR MaterialProfiles                    |
+| IfcLinearPositioningElement.Axis                   | Axis : IfcCurve                                                                                   | Axis : IfcBoundedCurve                                                                            |
+| IfcMaterialConstituent.ToMaterialConstituentSet    | ToMaterialConstituentSet : IfcMaterialConstituentSet FOR MaterialConstituents                     | ToMaterialConstituentSet : SET OF [1:1] IfcMaterialConstituentSet FOR MaterialConstituents        |
+| IfcMaterialLayer.ToMaterialLayerSet                | ToMaterialLayerSet : IfcMaterialLayerSet FOR MaterialLayers                                       | ToMaterialLayerSet : SET OF [1:1] IfcMaterialLayerSet FOR MaterialLayers                          |
+| IfcMaterialProfile.ToMaterialProfileSet            | ToMaterialProfileSet : IfcMaterialProfileSet FOR MaterialProfiles                                 | ToMaterialProfileSet : SET OF [1:1] IfcMaterialProfileSet FOR MaterialProfiles                    |
 | IfcProduct.Representation                          | Representation : optional IfcProductRepresentation                                                | Representation : IfcProductDefinitionShape                                                        |
 | IfcPropertyEnumeration.EnumerationValues           | EnumerationValues : list[1:?] of unique IfcValue                                                  | EnumerationValues : list[1:?] of IfcValue                                                         |
 | IfcPropertyTableValue.DefiningValues               | DefiningValues : optional list[1:?] of unique IfcValue                                            | DefiningValues : optional list[1:?] of IfcValue                                                   |
