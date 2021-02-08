@@ -1,10 +1,10 @@
 # Express schema differences
 
-39 items
+38 items
 
 ### Entity
 
-19 items
+18 items
 
 | Name                                               | IFC4x3_RC2.exp                                                                                    | IFC.exp                                                                                           |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -22,11 +22,10 @@
 | IfcRelDefinesByProperties attributes               | ['RelatedObjects', 'RelatingPropertyDefinition']                                                  | ['RelatingPropertyDefinition', 'RelatedObjects']                                                  |
 | IfcRelDefinesByProperties.RelatedObjects           | RelatedObjects : set[1:?] of IfcObjectDefinition                                                  | RelatedObjects : IfcContext                                                                       |
 | IfcRelInterferesElements attributes                | ['RelatingElement', 'RelatedElement', 'InterferenceGeometry', 'InterferenceType', 'ImpliedOrder'] | ['InterferenceGeometry', 'InterferenceType', 'ImpliedOrder', 'RelatedElement', 'RelatingElement'] |
-| IfcRelInterferesElements.RelatingElement           | RelatingElement : IfcInterferenceSelect                                                           | RelatingElement : IfcElement                                                                      |
 | IfcRelInterferesElements.RelatedElement            | RelatedElement : IfcInterferenceSelect                                                            | RelatedElement : IfcElement                                                                       |
+| IfcRelInterferesElements.RelatingElement           | RelatingElement : IfcInterferenceSelect                                                           | RelatingElement : IfcElement                                                                      |
 | IfcRelReferencedInSpatialStructure attributes      | ['RelatedElements', 'RelatingStructure']                                                          | ['RelatingStructure', 'RelatedElements']                                                          |
 | IfcRelReferencedInSpatialStructure.RelatedElements | RelatedElements : set[1:?] of IfcSpatialReferenceSelect                                           | RelatedElements : IfcProduct                                                                      |
-| IfcSystem inverses                                 | ['ServicesBuildings', 'ServicesFacilities']                                                       | ['ServicesFacilities', 'ServicesBuildings']                                                       |
 ### Type
 
 6 items
