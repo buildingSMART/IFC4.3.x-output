@@ -9,331 +9,816 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcGeometricConstraintResource.pot\n"
+"X-Crowdin-File-ID: 42\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-02-11 15:54\n"
+"PO-Revision-Date: 2021-02-11 18:30\n"
 
-#:IFC.xml:44317
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:9231
+msgid "IfcAlignment2DVerSegCircularArc"
+msgstr "IfcAlignment2DVerSegCircularArc"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 bSI Documentation"
+msgid "IfcAlignment2DVerSegCircularArc_DEFINITION"
+msgstr "El segmento vertical de arco circular se define como arco utilizando los atributos heredados de IfcAlignment2DVerticalSegment y los siguientes parámetros adicionales de curva Radius como radio del arco circular, y IsConvex para indicar si el arco circular define un sag i. . cóncava, cada vez más degradante o cresta i.e. convex, degradante decreciente . El arco circular es descrito por x offset como medida de longitud relativa al inicio del segmento de curva, es decir, 0 está en cabeza . g X 7E1 X 7E StartGradient como proporción de radio R como medida de longitud para curvas crestas donde IsConvex es Verdadero , la elevación de un punto a lo largo de la curva relativa a StartHeight se define como Imagen . .. .. .. .. .. figuras ifcalignment2dversegcircularc fórmula concave. ng punto de inicio proporcionado por StartDistAlong y StartHeightinstanteneous gradient proporcionado por StartGradient, y longitud proporcionada por HorizontalLength Figura 1 segmento de arco vertical Alineamiento convex Para curvas de saque donde IsConvex es False , la elevación de un punto a lo largo de la curva relativa a StartHeight se define como Imagen . .. .. .. .. .. figuras ifcalignment2dversegcircularc fórmula convex. ng punto de inicio proporcionado por StartDistAlong y StartHeightinstanteneous gradient proporcionado por StartGradient, y longitud proporcionada por HorizontalLength Figura 2 segmento vertical arco concave documentación bSI alineamiento"
 
-#:IFC.xml:44332
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:9232
+msgid "IfcAlignment2DVerSegCircularArc_Radius"
+msgstr "Radius"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "Returns the first choice, if TRUE, otherwise the second choice. .extDef NOTE Definition according to ISO CD 10303 42 1992 This function returns one of two choices depending on the value of a Boolean input argument. The two choices are also input arguments. NOTE Function adapted from boolean choose defined in ISO10303 42. HISTORY New function in IFC2.0"
+msgid "IfcAlignment2DVerSegCircularArc_Radius_DEFINITION"
+msgstr "radio del arco circular"
 
-#:IFC.xml:44340
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:9237
+msgid "IfcAlignment2DVerSegCircularArc_IsConvex"
+msgstr "IsConvex"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcAlignment2DVerSegCircularArc_IsConvex_DEFINITION"
+msgstr "Orientación del arco circular, convex Boolean X2 201D X0 verdadero X2 201D X0 significa decreciente degradado a lo largo del arco al principio como en la cresta de un colmillo concave Boolean X2 201D X0 false X2 201D X0 significa aumentar el degradado a lo largo del arco al principio como en la base de un valle."
 
-#:IFC.xml:44345
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConexión Conexión"
+#:IFC.xml:9244
+msgid "IfcAlignment2DVerSegLine"
+msgstr "IfcAlignment2DVerSegLine"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A connected face set is a set of faces such that the domain of faces together with their bounding edges and vertices is connected. NOTE Entity adapted from connected face set defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. The union of the domains of the faces and their bounding loops shall be arcwise connected. bSI Documentation"
+msgid "IfcAlignment2DVerSegLine_DEFINITION"
+msgstr "El segmento de recta vertical se define como una línea usando los atributos heredados de IfcAlignment2DVerticalSegment ."
 
-#:IFC.xml:44348
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+#:IFC.xml:9247
+msgid "IfcAlignment2DVerSegParabolicArc"
+msgstr "IfcAlignment2DVerSegParabolicArc"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "CfsFaces"
+msgid "IfcAlignment2DVerSegParabolicArc_DEFINITION"
+msgstr "El segmento de parásito vertical se define como una parábola utilizando los atributos heredados de IfcAlignment2DVerticalSegment y los siguientes parámetros adicionales de curva ParabolaConstant como el radio mínimo del arco parabólico en su ápez, y IsConvex para indicar si el arco parabólico definió un sag o un cofre. El arco parabólico se describe por la figura 1 R firmada ParabolaConstant , si IsConvex true, entonces R, si IsConvex false, then R as length measure s X 7E0 X 7E StartDistAlong as length measure z X 7E0 X 7E StartHeight as length measure g X 7E0 X 7E StartGradient as ratio The following equations are used for any point along the parabola at any point s X 7E1 X 7E1 X 7E along the HorizontalLength the gradient g X 7E1 X 7E1 X 7E s X 7E1 X 7E1 X 7E s X 7E0 X 7E R g X 7E0 X 7E0 X 7E s X 7E1 X 7E s X 7E1 X 7E1 X 7E g X 7E0 X 7E0 X 7E0 X 7E0 X 7E Legend red the parabola curve with start point and calculated end point used as an vertical la constante, y el gradiente inicial Figura 1 Alineamiento vertical de segmento parabola convex punto de partida proporcionado por StartDistAlong y StartHeightInsteneous gradient proporcionada por StartGradient, y la longitud proporcionada por HorizontalLength Figure 3 Alignment vertical parabólico segmento de arco convex punto de partida proporcionado por StartDistAlong y StartHeightinstanteneous gradient proporcionada por StartGradient, y longitud proporcionada por HorizontalLength Figura 3 Alineamiento vertical parabólico segmento concave bSI Documentación"
 
-#:IFC.xml:44360
-msgid "IfcEdge"
-msgstr "Borde Ifc"
+#:IFC.xml:9248
+msgid "IfcAlignment2DVerSegParabolicArc_ParabolaConstant"
+msgstr "ParabolaConstant"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero. bSI Documentation"
+msgid "IfcAlignment2DVerSegParabolicArc_ParabolaConstant_DEFINITION"
+msgstr "Parabola constante determinando el X2 201C X0 empinado X2 201D X0 de la parabola . La constante de la parabola es proporcionada por el radio mínimo de la parabola X2 201D X0 de 201C X0 , el verdadero radio de una parabola en su eje vertical el punto cero degradante de la parabola . El radio mínimo es el doble de la longitud focal de la parábola de la distancia entre el punto focal y el vértice ."
 
-#:IFC.xml:44363
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:9253
+msgid "IfcAlignment2DVerSegParabolicArc_IsConvex"
+msgstr "IsConvex"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcAlignment2DVerSegParabolicArc_IsConvex_DEFINITION"
+msgstr "Orientación del arco parabólico convex Boolean X2 201D X0 verdadero X2 201D X0 significa decreciente degradado a lo largo del arco al principio como en la cresta de un colmillo concave Boolean X2 201D X0 false X2 201D X0 significa aumentar el degradado a lo largo del arco al principio como en la base de un valle."
 
-#:IFC.xml:44375
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:9260
+msgid "IfcAlignmentCantSegment"
+msgstr "IfcAlignmentCantSegment"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcAlignmentCantSegment_DEFINITION"
+msgstr "Un IfcAlignment2DCantSegment es un segmento individual a lo largo del IfcAlignment2DCant. Los puntos definidos en un segmento de alineamiento de cantes se definen en un plano con x distancia a lo largo de la alineación horizontal y altura y relativa a los puntos proyectados en la alineación vertical. Los siguientes tipos de segmento de cant son definidos segmento de línea IfcAlignment2DCantSegLine curva de transición segmento IfcAlignment2DCantSegTransition Para cada segmento de cante, la siguiente información se proporciona el punto de inicio, definido por la distancia a lo largo del alineamiento horizontal la longitud como longitud horizontal a lo largo de la distancia a lo largo de la longitud del segmento de la curva el cante inicial, dado por los valores del cante izquierdo y del cante derecho, medido relativamente a la alineación vertical del cante final, dado por los valores del cante izquierdo y del cante derecho, medido desde la alineación vertical la información de continuidad tangencial que se puede utilizar para comprobar la continuidad de los segmentos e. no válido el cambio repentino de cant o falta información de cant si el punto final y el punto de partida difieren sobre un umbral ."
 
-#:IFC.xml:44411
-msgid "IfcEdgeCurve"
-msgstr "Curva IfcEdge"
+#:IFC.xml:9261
+msgid "IfcAlignmentCantSegment_StartDistAlong"
+msgstr "Iniciar Dististar"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry. bSI Documentation"
+msgid "IfcAlignmentCantSegment_StartDistAlong_DEFINITION"
+msgstr "Distancia a lo largo de la alineación horizontal, medida a lo largo de la IfcAlignment2DHorizontal dada en la unidad de longitud del global [[IfcUnitAssignment]]."
 
-#:IFC.xml:12211
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometry"
+#:IFC.xml:9266
+msgid "IfcAlignmentCantSegment_HorizontalLength"
+msgstr "Longitud horizontal"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "EdgeGeometry"
+msgid "IfcAlignmentCantSegment_HorizontalLength_DEFINITION"
+msgstr "Longitud medida como distancia a lo largo del alineamiento horizontal del segmento."
 
-#:IFC.xml:44412
-msgid "IfcEdgeCurve_SameSense"
+#:IFC.xml:9271
+msgid "IfcAlignmentCantSegment_StartCantLeft"
+msgstr "StartCantLeft"
+
+msgid "IfcAlignmentCantSegment_StartCantLeft_DEFINITION"
+msgstr "Longitud medida para el cante izquierdo al comienzo del segmento."
+
+#:IFC.xml:9276
+msgid "IfcAlignmentCantSegment_EndCantLeft"
+msgstr "Cante final izquierdo"
+
+msgid "IfcAlignmentCantSegment_EndCantLeft_DEFINITION"
+msgstr "Longitud medida para el cante izquierdo al final del segmento."
+
+#:IFC.xml:9281
+msgid "IfcAlignmentCantSegment_StartCantRight"
+msgstr "CantDerecha inicial"
+
+msgid "IfcAlignmentCantSegment_StartCantRight_DEFINITION"
+msgstr "Longitud medida para el cante derecho al comienzo del segmento."
+
+#:IFC.xml:9286
+msgid "IfcAlignmentCantSegment_EndCantRight"
+msgstr "CantDerecha Final"
+
+msgid "IfcAlignmentCantSegment_EndCantRight_DEFINITION"
+msgstr "Longitud medida para el cante derecho al final del segmento."
+
+#:IFC.xml:9291
+msgid "IfcAlignmentCantSegment_SmoothingLength"
+msgstr "Longitud de suavizado"
+
+msgid "IfcAlignmentCantSegment_SmoothingLength_DEFINITION"
+msgstr "Longitud de suavizado"
+
+#:IFC.xml:9296
+msgid "IfcAlignmentCantSegment_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcAlignmentCantSegment_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:9317
+msgid "IfcAlignmentCurve"
+msgstr "IfcAlignmentCurve"
+
+msgid "IfcAlignmentCurve_DEFINITION"
+msgstr "Un [[IfcAlignmentCurve]] describe una curva 3D basada en una curva vertical 2D definida a lo largo del camino de una curva horizontal 2D. Documentación bSI"
+
+#:IFC.xml:9325
+msgid "IfcAlignmentCurve_Horizontal"
+msgstr "Horizontal"
+
+msgid "IfcAlignmentCurve_Horizontal_DEFINITION"
+msgstr "Horizontal"
+
+#:IFC.xml:9337
+msgid "IfcAlignmentCurve_Vertical"
+msgstr "Vertical"
+
+msgid "IfcAlignmentCurve_Vertical_DEFINITION"
+msgstr "Vertical"
+
+#:IFC.xml:9318
+msgid "IfcAlignmentCurve_Tag"
+msgstr "Etiqueta"
+
+msgid "IfcAlignmentCurve_Tag_DEFINITION"
+msgstr "Identificador opcional de la curva, que puede utilizarse para correlacionar puntos de una sección variable cruzada."
+
+#:IFC.xml:9349
+msgid "IfcAlignmentHorizontal"
+msgstr "IfcAlineación horizontal"
+
+msgid "IfcAlignmentHorizontal_DEFINITION"
+msgstr "Un IfcAlignment2DHorizontal es una referencia lineal proyectada en el plano horizontal x y. Los puntos a lo largo de un alineamiento horizontal tienen dos valores de coordinación, x e y en el sistema de ingeniería local Cartesiano. La alineación horizontal es definida por segmentos que están conectados al final del comienzo. La transición en la conexión del segmento no es forzada para ser tangencial, si la continuidad tangencial X2 201C X0 X2 201D X0 está puesta en falsa, de lo contrario se conservará una continuidad tangencial. Basados en el contexto del proyecto, son geo referenciados y convertibles en valores Norte-Sur y Orientales. La eferenciación de NOTA es proporcionada por [[IfcMapConversion]] a través del [[IfcGeometricRepresentationContext]] definido en [[IfcProject]] . Documentación bSI"
+
+#:IFC.xml:9357
+msgid "IfcAlignmentHorizontal_Segments"
+msgstr "Segmento"
+
+msgid "IfcAlignmentHorizontal_Segments_DEFINITION"
+msgstr "Segmento"
+
+#:IFC.xml:9350
+msgid "IfcAlignmentHorizontal_StartDistAlong"
+msgstr "Iniciar Dististar"
+
+msgid "IfcAlignmentHorizontal_StartDistAlong_DEFINITION"
+msgstr "El valor de la distancia a lo largo del comienzo de la alineación horizontal. Si se omite el estándar se establece en cero."
+
+#:IFC.xml:9370
+msgid "IfcAlignmentHorizontalSegment"
+msgstr "IfcAlignmentHorizontalSegment"
+
+msgid "IfcAlignmentHorizontalSegment_DEFINITION"
+msgstr "Segmento Individual a lo largo del IfcAlignment2DHorizontal , definido en el espacio de coordenadas x y cada segmento de alineamiento horizontal tiene una geometría de curva asociada. Los siguientes tipos de curva de segmento son definidos por la CurveGeometry para el segmento de línea [[IfcLineSegment2D]] segmento de arco circular [[IfcCircularArcSegment2D]] segmento de arco clotoidal IfcClothoidalArcSegment2D Para cada segmento horizontal, la siguiente información no redundante se proporciona el punto de inicio en x y coordina la dirección de inicio en radianes o grados, con local x este siendo 0, y aumentar el contador de reloj sabiamente la longitud del segmento del parámetro de la curva necesaria para segmentos de arco circular y de ropa. La siguiente información se puede calcular y por lo tanto no se intercambia explícitamente para evitar redundancia e inconsistencias el punto final del punto de inicio, dirección, longitud del segmento y parámetro de la curva de la distancia de inicio a lo largo de la distancia final a lo largo del segmento anterior, o la distancia de inicio a lo largo del alineamiento horizontal si es el primer segmento de la distancia final a lo largo de la distancia de inicio y la longitud del segmento de la dirección final desde el parámetro de la curva, la dirección de inicio y la longitud del segmento el punto de intersección desde la dirección de inicio y la dirección final. Se pueden hacer las siguientes comprobaciones para validar la continuidad de intercambio correcta X2 2013 X0 realiza el punto final calculado de las coincidencias del segmento anterior con el punto de inicio proporcionado de esta continuidad tangencial de segmento, X2 2013 X0 realiza la dirección final calculada de las coincidencias del segmento anterior con la dirección de inicio proporcionada de este segmento bSI Documentación"
+
+#:IFC.xml:9404
+msgid "IfcAlignmentHorizontalSegment_StartPoint"
+msgstr "Punto de inicio"
+
+msgid "IfcAlignmentHorizontalSegment_StartPoint_DEFINITION"
+msgstr "Punto de inicio"
+
+#:IFC.xml:9371
+msgid "IfcAlignmentHorizontalSegment_StartDirection"
+msgstr "Dirección de inicio"
+
+msgid "IfcAlignmentHorizontalSegment_StartDirection_DEFINITION"
+msgstr "Dirección de inicio"
+
+#:IFC.xml:9376
+msgid "IfcAlignmentHorizontalSegment_StartRadiusOfCurvature"
+msgstr "Radius de inicio en curvatura"
+
+msgid "IfcAlignmentHorizontalSegment_StartRadiusOfCurvature_DEFINITION"
+msgstr "Radius de inicio en curvatura"
+
+#:IFC.xml:9381
+msgid "IfcAlignmentHorizontalSegment_EndRadiusOfCurvature"
+msgstr "Radius final de curvatura"
+
+msgid "IfcAlignmentHorizontalSegment_EndRadiusOfCurvature_DEFINITION"
+msgstr "Radius final de curvatura"
+
+#:IFC.xml:9386
+msgid "IfcAlignmentHorizontalSegment_SegmentLength"
+msgstr "Longitud del segmento"
+
+msgid "IfcAlignmentHorizontalSegment_SegmentLength_DEFINITION"
+msgstr "Longitud del segmento"
+
+#:IFC.xml:9391
+msgid "IfcAlignmentHorizontalSegment_GravityCenterLineHeight"
+msgstr "Altura de la línea central de gravedad"
+
+msgid "IfcAlignmentHorizontalSegment_GravityCenterLineHeight_DEFINITION"
+msgstr "Altura de la línea central de gravedad"
+
+#:IFC.xml:9396
+msgid "IfcAlignmentHorizontalSegment_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcAlignmentHorizontalSegment_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:9418
+msgid "IfcAlignmentParameterSegment"
+msgstr "IfcAlignmentParameterSegment"
+
+#:IFC.xml:9419
+msgid "IfcAlignmentParameterSegment_StartTag"
+msgstr "StartTag"
+
+msgid "IfcAlignmentParameterSegment_StartTag_DEFINITION"
+msgstr "StartTag"
+
+#:IFC.xml:9424
+msgid "IfcAlignmentParameterSegment_EndTag"
+msgstr "EndTag"
+
+msgid "IfcAlignmentParameterSegment_EndTag_DEFINITION"
+msgstr "EndTag"
+
+#:IFC.xml:9442
+msgid "IfcAlignmentSegment"
+msgstr "Segmento de alineamiento Ifc"
+
+msgid "IfcAlignmentSegment_DEFINITION"
+msgstr "Una entidad abstracta que define información común sobre segmentos de alineación horizontal y vertical. NOTA La etiqueta de inicio y final se definen como anotaciones, no como referencias a lo largo del alineamiento. Sólo las expresiones absolutas de distancia están en el ámbito, no las distancias por delante o por detrás de un referente, como una estación. Sin embargo, tal información puede ser intercambiada como etiquetas. Documentación bSI"
+
+#:IFC.xml:9430
+msgid "IfcAlignmentSegment_GeometricParameters"
+msgstr "Parámetros geométricos"
+
+msgid "IfcAlignmentSegment_GeometricParameters_DEFINITION"
+msgstr "Parámetros geométricos"
+
+#:IFC.xml:9445
+msgid "IfcAlignmentVertical"
+msgstr "Alineación Ifcvertical"
+
+msgid "IfcAlignmentVertical_DEFINITION"
+msgstr "Un IfcAlignment2DVertical es un perfil de altura a lo largo del alineamiento horizontal. Los puntos a lo largo de una alineación vertical tienen dos valores de coordenadas. El primer valor es la distancia a lo largo de la alineación horizontal, el segundo valor es la altura según el sistema de coordenadas de ingeniería del proyecto. Basados en el contexto del proyecto, son referenciados geométricamente y el valor de altura es convertible en altura ortogonal por encima del dato vertical. La eferenciación de NOTA es proporcionada por [[IfcMapConversion]] a través del [[IfcGeometricRepresentationContext]] definido en [[IfcProject]] . Documentación bSI"
+
+#:IFC.xml:9448
+msgid "IfcAlignmentVertical_Segments"
+msgstr "Segmento"
+
+msgid "IfcAlignmentVertical_Segments_DEFINITION"
+msgstr "Segmento"
+
+#:IFC.xml:9461
+msgid "IfcAlignmentVerticalSegment"
+msgstr "Segmento vertical IfcAlineamiento"
+
+msgid "IfcAlignmentVerticalSegment_DEFINITION"
+msgstr "Segmento individual a lo largo del IfcAlignment2DVertical , definido en la distancia a lo largo del espacio de coordenadas z. El alineamiento vertical se define por segmentos que conectan el final al comienzo. La curva de alineación vertical geométrica se define en un plano con x distancia a lo largo de horizontal, la altura y o la elevación . La transición en la conexión del segmento no es forzada para ser tangencial, si la continuidad tangencial X2 201C X0 X2 201D X0 está puesta en falsa, de lo contrario se conservará una continuidad tangencial. Los siguientes tipos de segmento vertical son definidos como segmento de línea [[IfcAlignment2DVerSegLine]] segmento circular de arco [[IfcAlignment2DVerSegCircularArc]] segmento de arco parabólico [[IfcAlignment2DVerSegParabolicArc]] que puede describir parabollas simétricas e insimétricas para cada segmento vertical, la siguiente información no redundante se proporciona el punto de inicio en la distancia a lo largo de las coordenadas de altura del degradado inicial como medida de la relación con el horizontal 0, positiva arriba, y negativa descendente normalmente entre 1 n 1 igual a un porcentaje de 100 n 100 , o a un grado de 45 n 45 pero valores más altos son posibles la longitud como longitud horizontal a lo largo de la distancia no a lo largo de la longitud del segmento de curva el parámetro de curva necesario para segmentos circulares y arco parabólico. La siguiente información puede ser calculada y por lo tanto no se intercambia explícitamente para evitar redundancia e inconsistencias la distancia final a lo largo de la distancia y la longitud del segmento la altura final desde la distancia de inicio parámetro de gradiente, longitud y curva la dirección final desde la dirección de inicio, la longitud del segmento y el parámetro de curva el punto de intersección vertical desde la dirección de inicio y la dirección final. Las siguientes comprobaciones pueden hacerse para validar la continuidad de intercambio correcta, X2 2013 X0 realiza la distancia final calculada a lo largo de las partidas previas del segmento con la distancia de inicio proporcionada a lo largo de la continuidad tangencial de este segmento X2 2013 X0 hace el degradado final calculado del segmento anterior con el gradiente de inicio proporcionado de este segmento NOTA subtipos específicos de los segmentos IfcAlignment2DVerticalSegment agrega parámetros específicos de curva geométrica. La conectividad entre segmentos verticales no es necesariamente tangencial, pero esto puede ser ejecutado como un requisito a través del atributo TangentialContinuity . .. .. .. .. figuras ifcalignment2dverticalsegment.png Figura 1 segmento vertical de alineamiento bSI Documentación"
+
+#:IFC.xml:9462
+msgid "IfcAlignmentVerticalSegment_StartDistAlong"
+msgstr "Iniciar Dististar"
+
+msgid "IfcAlignmentVerticalSegment_StartDistAlong_DEFINITION"
+msgstr "Distancia a lo largo de la alineación horizontal, medida a lo largo del IfcAlignment2DHorizontal dada en la unidad de longitud del global [[IfcUnitAssignment]] ."
+
+#:IFC.xml:9467
+msgid "IfcAlignmentVerticalSegment_HorizontalLength"
+msgstr "Longitud horizontal"
+
+msgid "IfcAlignmentVerticalSegment_HorizontalLength_DEFINITION"
+msgstr "Longitud medida como distancia a lo largo del alineamiento horizontal del segmento."
+
+#:IFC.xml:9472
+msgid "IfcAlignmentVerticalSegment_StartHeight"
+msgstr "Altura de inicio"
+
+msgid "IfcAlignmentVerticalSegment_StartHeight_DEFINITION"
+msgstr "Comunicación en Z del punto de inicio relativa al sistema de coordenadas [[IfcAlignment]]. X 0D NOTE Se recomienda encarecidamente no compensar el sistema de coordenadas [[IfcAlignment]] del sistema de coordenadas de ingeniería del proyecto."
+
+#:IFC.xml:9477
+msgid "IfcAlignmentVerticalSegment_StartGradient"
+msgstr "Iniciar evaluación"
+
+msgid "IfcAlignmentVerticalSegment_StartGradient_DEFINITION"
+msgstr "Gradiente de la tangente del segmento vertical en el punto de partida. Se proporciona como medida de cociencia. La proporción es 100 0.1 igual a 10 . Tiene un rango teórico de X2 221E X0 n X2 221E X0 usando una medida de la relación. El rango equivalente medido en grado es 90 S 0 n 90 S 0. X 0D NOTA para aplicación práctica del degradado de inicio, el rango de la medida de la proporción debe estar dentro de los límites de 1 X2 2264 X0 n X2 2264 X0 equivalente en grado 45 S 0 X2 2264 X0 n X2 2264 X0 45 S 0 . Sin embargo, los límites más grandes pueden aplicarse para usos particulares. degradado positivo X 0D X 0D significa una altura creciente en el inicio o arriba, un degradado negativo significa una disminución de la altura al principio o a la bajada ."
+
+#:IFC.xml:9482
+msgid "IfcAlignmentVerticalSegment_EndGradient"
+msgstr "Gradiente final"
+
+msgid "IfcAlignmentVerticalSegment_EndGradient_DEFINITION"
+msgstr "Gradiente final"
+
+#:IFC.xml:9487
+msgid "IfcAlignmentVerticalSegment_RadiusOfCurvature"
+msgstr "Radius de curvatura"
+
+msgid "IfcAlignmentVerticalSegment_RadiusOfCurvature_DEFINITION"
+msgstr "Radius de curvatura"
+
+#:IFC.xml:9492
+msgid "IfcAlignmentVerticalSegment_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcAlignmentVerticalSegment_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:9502
+msgid "IfcConnectionCurveGeometry"
+msgstr "IfcGeometría de la curva de conexión"
+
+msgid "IfcConnectionCurveGeometry_DEFINITION"
+msgstr "[[IfcConnectionCurveGeometry]] se utiliza para describir las restricciones geométricas que facilitan la conexión física de dos objetos en una curva o en un borde con la geometría de la curva asociada. Se ve como un control que se aplica a las relaciones de conexión de elementos. El [[IfcCurve]] o el [[IfcEdgeCurve]] con un asociado [[IfcCurve]] en el atributo CurveOnRelatingElement define la curva donde se conectan los elementos básicos de geometría de los elementos conectados. La geometría de la curva y las coordenadas se proporcionan dentro del sistema de coordenadas local del RelatingElement , como se especifica en el subtipo [[IfcRelConnects]] que utiliza el [[IfcConnectionCurveGeometry]] . Opcionalmente, la misma geometría de curva y coordenadas también se pueden proporcionar dentro del sistema de coordenadas locales del Elemento Relacionado utilizando el atributo CurveOnRelatedElement. EXAMPLE La relación de conexión entre dos paredes tiene una restricción geométrica que describe las tapas finales o cortadas de los extremos de la pared por un CurveOnRelatingElement para la primera pared y un CurveOnRelatedElement para la segunda pared. El uso exacto del [[IfcConnectionCurveGeometry]] se define aún más en las secciones de geometría de los elementos que lo utilizan. La geometría disponible para la restricción de conexión puede restringirse aún más para permitir únicamente segmentos rectos aplicando [[IfcPolyline]] solamente. Tal restricción de uso se proporciona en la definición del objeto del subtipo [[IfcElement]], utilizando la conexión del elemento refiriéndose al subtipo de [[IfcRelConnects]] con el asociado [[IfcConnectionCurveGeometry]]. HISTORY Nueva entidad en IFC1. .change ifc2x IFC2x CHANGE Renombrado de IfcLineConnectionGeometry . hange ifc2x3 IFC2x3 CHANGE La provisión de topología con geometry asociada, [[IfcEdgeCurve]] , está habilitada usando el [[IfcCurveOrEdgeCurve]] . documentación bSI"
+
+#:IFC.xml:9503
+msgid "IfcConnectionCurveGeometry_CurveOnRelatingElement"
+msgstr "Curva en relación"
+
+msgid "IfcConnectionCurveGeometry_CurveOnRelatingElement_DEFINITION"
+msgstr "La curva delimitada en la que los objetos conectados están alineados en el elemento relacionado, indicado en el LCS del elemento relacionado."
+
+#:IFC.xml:9508
+msgid "IfcConnectionCurveGeometry_CurveOnRelatedElement"
+msgstr "Curva en el elemento relacionado"
+
+msgid "IfcConnectionCurveGeometry_CurveOnRelatedElement_DEFINITION"
+msgstr "La curva delimitada en la que los objetos conectados están alineados en el elemento relacionado, dado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+
+#:IFC.xml:9515
+msgid "IfcConnectionGeometry"
+msgstr "IfcGeometría de conexión"
+
+msgid "IfcConnectionGeometry_DEFINITION"
+msgstr "[[IfcConnectionGeometry]] se utiliza para describir las restricciones geométricas y topológicas que facilitan la conexión física de dos objetos. Se ve como un control que se aplica a las relaciones de conexión de elementos. NOTA La relación de conexión del elemento normalmente proporciona información de conexión lógica, haciendo referencia a los elementos relacionados y relacionados. Si además se proporciona un [[IfcConnectionGeometry]], la información de conexión física se da especificando exactamente dónde en el elemento relativo y relacionado se produce la conexión del elemento. Utilizando los subtipos de excentricidad, la conexión también se puede describir cuando hay una distancia física o excentricidad entre los elementos de conexión. El [[IfcConnectionGeometry]] permite la provisión de restricciones de conexión entre elementos geométricos y topológicos, los siguientes tipos de topología geométrica de la conexión son en punto de vértice de punto de alcance, curva de borde de la curva, superficie de la superficie, HISTORY Nueva entidad en IFC1. .change ifc2x3 IFC2x3 CHANGE La definición de los subtipos se ha mejorado permitiendo tanto la representación geométrica de los elementos de la superficie de la curva como la representación topológica con la cara asociada de la curva del borde del vértice geométrico . documentación bSI"
+
+#:IFC.xml:9564
+msgid "IfcConnectionPointEccentricity"
+msgstr "IfcConnectionPointEccentricidad"
+
+msgid "IfcConnectionPointEccentricity_DEFINITION"
+msgstr "[[IfcConnectionPointEccentricity]] se utiliza para describir las restricciones geométricas que facilitan la conexión física de dos objetos en un punto o punto de vértice con coordenadas de punto asociadas. Hay una distancia física, o excentricidad, etween los puntos de conexión de ambos objetos. La excentricidad se puede dar proporcionando el elemento PointOnRelatingElement y el elemento PointOnRelatedElement , donde ambas coordenadas de punto S no son idénticas dentro de un sistema de coordenadas padre común últimamente dentro del sistema de coordenadas mundiales , proporcionando el PointOnRelatingElement y las tres medidas de distancia, EccentricityInX , EccentricityInY , y EccentricityInZ o sólo EccentricityInX , y EccentricityInY si el sistema de coordenadas subyacente es de dos dimensiones o proporciona ambas. NOTA S Si ambos, PointOnRelatedElement , y EccentricityInX , EccentricityInY , EccentricityInZ , los valores deben ser consistentes. En caso de falta de consistencia, la distancia calculada entre PointOnRelatingElement y PointOnRelatedElement tiene prioridad. El [[IfcPoint]] o el [[IfcVertexPoint]] con un asociado [[IfcPoint]] en el atributo PointOnRelatingElement define el punto donde se conectan los elementos básicos de geometría de los elementos conectados. Las coordenadas de puntos se proporcionan dentro del sistema de coordenadas locales del RelatingElement , como se especifica en el subtipo [[IfcRelConnects]] que utiliza el [[IfcConnectionPointGeometry]] . Opcionalmente, las coordenadas del mismo punto también se pueden proporcionar dentro del sistema de coordenadas locales del elemento RelatedElement usando el atributo PointOnRelatedElement, de lo contrario la distancia hasta el punto del RelatedElement debe ser dada por los tres valores de excentricidad. Los valores explícitos para EccentricityInX , EccentricityInY , y EccentricityInZ siempre se miden en la siguiente dirección y sistema de coordenadas definiendo cuándo el valor es positivo o negativo desde el PointOnRelatedElement a PointOnRelatingElement dentro del sistema de coordenadas del RelatingElement . además cuando se utiliza para especificar conexiones en modelos de análisis estructurales, el [[IfcStructuralMember]] debe ser usado como el RelatingElement del objeto de relación utilizando [[IfcConnectionPointEccentricity]] , y el [[IfcStructuralConnection]] es el RelatedElement . HISTORY Nueva entidad en IFC2x3. BSI Documentation"
+
+#:IFC.xml:9565
+msgid "IfcConnectionPointEccentricity_EccentricityInX"
+msgstr "EccentricityInX"
+
+msgid "IfcConnectionPointEccentricity_EccentricityInX_DEFINITION"
+msgstr "Distancia en la dirección x entre los dos puntos o puntos de vértice involucrados en la conexión del punto."
+
+#:IFC.xml:9570
+msgid "IfcConnectionPointEccentricity_EccentricityInY"
+msgstr "EccentricityInY"
+
+msgid "IfcConnectionPointEccentricity_EccentricityInY_DEFINITION"
+msgstr "Distancia en la dirección y entre los dos puntos o puntos de vértices involucrados en la conexión del punto."
+
+#:IFC.xml:9575
+msgid "IfcConnectionPointEccentricity_EccentricityInZ"
+msgstr "EccentricityInZ"
+
+msgid "IfcConnectionPointEccentricity_EccentricityInZ_DEFINITION"
+msgstr "Distancia en la dirección z entre los dos puntos o puntos de vértices que participan en la conexión del punto."
+
+#:IFC.xml:9582
+msgid "IfcConnectionPointGeometry"
+msgstr "Geometría de punto de conexión Ifc"
+
+msgid "IfcConnectionPointGeometry_DEFINITION"
+msgstr "[[IfcConnectionPointGeometry]] se utiliza para describir las restricciones geométricas que facilitan la conexión física de dos objetos en un punto aquí [[IfcCartesianPoint]] o en un vértice con coordenadas de punto asociadas. Se ve como un control que se aplica a las relaciones de conexión de elementos. EXAMPLE La relación de conexión entre dos elementos basados en rutas como una columna y un haz tiene una restricción geométrica que describe los puntos de conexión por un PointOnRelatingElement para la columna y un PointOnRelatedElement para la viga. El uso exacto del [[IfcConnectionPointGeometry]] se define aún más en las secciones de geometría de los elementos que lo utilizan. El [[IfcPoint]] o el [[IfcVertexPoint]] con un asociado [[IfcPoint]] en el atributo PointOnRelatingElement define el punto donde se conectan los elementos básicos de geometría de los elementos conectados. Las coordenadas de puntos se proporcionan dentro del sistema de coordenadas locales del RelatingElement , como se especifica en el IfcRelConnectsSubtype que utiliza el [[IfcConnectionPointGeometry]] . Opcionalmente, las coordenadas del mismo punto también se pueden proporcionar dentro del sistema de coordenadas locales del elemento RelatedElement usando el atributo PointOnRelatedElement. Si ambas coordenadas no son idénticas dentro de un sistema de coordenadas padre común en el sistema de coordenadas mundiales , se utilizará el subtipo [[IfcConnectionPointEccentricity]]. NOTA Si la conexión de puntos tiene un desplazamiento si los dos puntos o vértices apuntan al elemento relativo y relacionado no coinciden físicamente , se utilizará el subtipo [[IfcConnectionPointEccentricity]]. HISTORY Nueva entidad en IFC1.5. hange ifc2x IFC2x CHANGE Renombrado de IfcPointConnectionGeometry . hange ifc2x3 IFC2x3 CHANGE La provisión de topología con geometry asociada, [[IfcVertexPoint]] , está habilitada usando el [[IfcPointOrVertexPoint]] . documentación bSI"
+
+#:IFC.xml:9583
+msgid "IfcConnectionPointGeometry_PointOnRelatingElement"
+msgstr "Elemento Relacionado"
+
+msgid "IfcConnectionPointGeometry_PointOnRelatingElement_DEFINITION"
+msgstr "Punto en el que el objeto conectado está alineado al elemento relacionado, indicado en el LCS del elemento relacionado."
+
+#:IFC.xml:9588
+msgid "IfcConnectionPointGeometry_PointOnRelatedElement"
+msgstr "Elemento relacionado con puntos"
+
+msgid "IfcConnectionPointGeometry_PointOnRelatedElement_DEFINITION"
+msgstr "Punto en el que los objetos conectados están alineados al elemento relacionado, dado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+
+#:IFC.xml:9595
+msgid "IfcConnectionSurfaceGeometry"
+msgstr "Geometría superficial IfcConnectionSurfacetry"
+
+msgid "IfcConnectionSurfaceGeometry_DEFINITION"
+msgstr "[[IfcConnectionSurfaceGeometry]] se utiliza para describir las restricciones geométricas que facilitan la conexión física de dos objetos en una superficie o en una cara con geometría de superficie asociada. Se ve como un control que se aplica a las relaciones de conexión de elementos. El [[IfcSurface]] o el [[IfcFaceSurface]] con un asociado [[IfcSurface]] en el atributo SurfaceOnRelatingElement define la superficie donde se conectan los elementos básicos de geometría de los elementos conectados. La geometría y las coordenadas de la superficie se proporcionan dentro del sistema de coordenadas locales del RelatingElement , como se especifica en el IfcRelConnectsSubtype que utiliza el [[IfcConnectionSurfaceGeometry]] . Opcionalmente, la misma geometría y coordenadas de superficie también se pueden proporcionar dentro del sistema de coordenadas locales del Elemento Relacionado usando el atributo SurfaceOnRelatedElement. HISTORY Nueva entidad en IFC2x. hange ifc2x3 IFC2x3 CHANGE La provisión de topología con geometry asociada, [[IfcFaceSurface]] , está habilitada usando el [[IfcSurfaceOrFaceSurface]] . documentación bSI"
+
+#:IFC.xml:9596
+msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatingElement"
+msgstr "Superficie en relación"
+
+msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatingElement_DEFINITION"
+msgstr "Superficie en la que el objeto relacionado está alineado en el elemento relacionado, indicado en el LCS del elemento relacionado."
+
+#:IFC.xml:9601
+msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatedElement"
+msgstr "Superficie en relación"
+
+msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatedElement_DEFINITION"
+msgstr "Superficie en la que el elemento relativo está alineado con el elemento relacionado, indicado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+
+#:IFC.xml:9608
+msgid "IfcConnectionVolumeGeometry"
+msgstr "IfcVolúmen de conexión"
+
+msgid "IfcConnectionVolumeGeometry_DEFINITION"
+msgstr "[[IfcConnectionVolumeGeometry]] se utiliza para describir las restricciones geométricas que facilitan la conexión física o la superposición de dos objetos en un volumen definido por un shell sólido o cerrado. Se ve como un control que se aplica a la conexión de elementos o a las relaciones de interferencia. El [[IfcSolidModel]] o el [[IfcClosedShell]] en el atributo VolumeOnRelatingElement define el volumen donde se superponen los elementos de geometría básicos de los elementos de interferencia. La geometría de volumen y las coordenadas se proporcionan dentro del sistema de coordenadas local del RelatingElement , como se especifica en los subtipos de la relación [[IfcRelConnects]] que utiliza el [[IfcConnectionSurfaceGeometry]] . Opcionalmente, la misma geometría y coordenadas de volumen S también se pueden proporcionar dentro del sistema de coordenadas locales del Elemento Relacionado usando el atributo VolumeOnRelatedElement. HISTORY S Nueva entidad en IFC4. BSI Documentation"
+
+#:IFC.xml:9609
+msgid "IfcConnectionVolumeGeometry_VolumeOnRelatingElement"
+msgstr "Volumen en relación al elemento"
+
+msgid "IfcConnectionVolumeGeometry_VolumeOnRelatingElement_DEFINITION"
+msgstr "Volumen en el que el objeto relacionado se solapa con el elemento relacionado, indicado en el LCS del elemento relacionado."
+
+#:IFC.xml:9614
+msgid "IfcConnectionVolumeGeometry_VolumeOnRelatedElement"
+msgstr "Volumen en Relacionado"
+
+msgid "IfcConnectionVolumeGeometry_VolumeOnRelatedElement_DEFINITION"
+msgstr "Volumen en el que el objeto relacionado se solapa con el elemento relacionado, indicado en el LCS del elemento relacionado."
+
+#:IFC.xml:9621
+msgid "IfcCorrectLocalPlacement"
+msgstr "IfcCorrectLocalPlacement"
+
+msgid "IfcCorrectLocalPlacement_DEFINITION"
+msgstr "La función comprueba que una ubicación relativa e.j. relativo a otra ubicación local, y no la colocación de cuadrícula de una ubicación local en 3D tiene que ser relativa a una colocación padre en 3D y no a una colocación padre en 2D . HISTORY Nueva función en la versión IFC2x Edición 2."
+
+#:IFC.xml:9629
+msgid "IfcGridAxis"
+msgstr "IfcGridAxis"
+
+msgid "IfcGridAxis_DEFINITION"
+msgstr "Un eje individual, [[IfcGridAxis]] , se define en el contexto de una cuadrícula de diseño. La definición del eje se basa en una curva de dimensión 2. El eje de cuadrícula está posicionado dentro del plano XY del sistema de coordenadas de posición definido por el [[IfcGrid]] . La representación geométrica estándar de [[IfcGridAxis]] se define mediante una entidad de curva 2D. Los ejes de cuadrícula normalmente se definen por un desplazamiento a otro eje. El [[IfcOffsetCurve2D]] soporta este concepto. Cada eje de cuadrícula tiene un sentido dado por la parametrización de la curva. El atributo SameSense es un indicador de si el sentido del eje de rejilla concuerda o se opone al de la curva subyacente. Como se muestra en la Figura 1, el eje de cuadrícula se define como una curva 2D dentro del plano xy del sistema de coordenadas de posición. Cualquier curva puede utilizarse para definir un eje de cuadrícula, lo más común es el uso de [[IfcLine]] para rejillas lineales y [[IfcCircle]] para rejillas radiales. La mayoría de las rejillas son definidas por un par de listas de ejes, cada uno definido por un eje de cuadrícula base y ejes dados por un desplazamiento al eje base. El uso de [[IfcOffsetCurve2D]] como subyacente AxisCurve soporta este concepto. Figura 1 eje cuadrícula HISTORY Nueva entidad en IFC1.0 bSI Documentation"
+
+#:IFC.xml:9649
+msgid "IfcGridAxis_AxisCurve"
+msgstr "AxisCurve"
+
+msgid "IfcGridAxis_AxisCurve_DEFINITION"
+msgstr "AxisCurve"
+
+#:IFC.xml:9661
+msgid "IfcGridAxis_PartOfU"
+msgstr "PartOfU"
+
+msgid "IfcGridAxis_PartOfU_DEFINITION"
+msgstr "PartOfU"
+
+#:IFC.xml:9675
+msgid "IfcGridAxis_PartOfW"
+msgstr "PartOfW"
+
+msgid "IfcGridAxis_PartOfW_DEFINITION"
+msgstr "PartOfW"
+
+#:IFC.xml:9689
+msgid "IfcGridAxis_PartOfV"
+msgstr "PartOfV"
+
+msgid "IfcGridAxis_PartOfV_DEFINITION"
+msgstr "PartOfV"
+
+#:IFC.xml:9703
+msgid "IfcGridAxis_HasIntersections"
+msgstr "Intersecciones"
+
+msgid "IfcGridAxis_HasIntersections_DEFINITION"
+msgstr "Intersecciones"
+
+#:IFC.xml:9638
+msgid "IfcGridAxis_AxisTag"
+msgstr "AxisTag"
+
+msgid "IfcGridAxis_AxisTag_DEFINITION"
+msgstr "La etiqueta o nombre para este eje de cuadrícula."
+
+#:IFC.xml:9643
+msgid "IfcGridAxis_SameSense"
 msgstr "SameSense"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "This logical flag indicates whether TRUE , or not FALSE the senses of the edge and the curve defining the edge geometry are the same. The sense of an edge is from the edge start vertex to the edge end vertex the sense of a curve is in the direction of increasing parameter."
+msgid "IfcGridAxis_SameSense_DEFINITION"
+msgstr "Define si se utiliza el sentido original de la curva o si se revierte en el contexto del eje de la cuadrícula."
 
-#:IFC.xml:44420
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:9717
+msgid "IfcGridPlacement"
+msgstr "IfcGridPlacement"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE. bSI Documentation"
+msgid "IfcGridPlacement_DEFINITION"
+msgstr "[[IfcGridPlacement]] provides a specialization of [[IfcObjectPlacement]] in which the placement and axis direction of the object coordinate system is defined by a reference to the design grid as defined in [[IfcGrid]] . The location of the object coordinate system is given by the attribute PlacementLocation . It is defined as an [[IfcVirtualGridIntersection]] , that is, an intersection between two grid axes with optional offsets. The axis direction of the x axis of the object coordinate system is given either PlacementRefDirection NIL by the tangent of the first grid axis PlacementLocation.IntersectingAxes 1 at the virtual intersection maybe using the offset curve, if PlacementLocation.OffsetDistances is given PlacementRefDirection [[IfcDirection]] by the explicitly provided direction information PlacementRefDirection [[IfcVirtualGridIntersection]] by the tangent between the virtual grid intersection of PlacementLocation and the virtual grid intersection of PlacementRefDirection . Offsets as potentially provided in the [[IfcVirtualGridIntersection]] s of PlacementLocation and PlacementRefDirection have to be taken into account. The direction of the y axis of the [[IfcGridPlacement]] is the orthogonal complement to the x axis. The plane defined by the x and y axis shall be co planar to the xy plane of the local placement of the [[IfcGrid]] . The direction of the z axis is the orientation of the cross product of the x axis and the y axis, i.e. the z axis of the [[IfcGridPlacement]] shall be co linear to the z axis of the local placement of the [[IfcGrid]] . NOTE The [[IfcGrid]] local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the virtual grid intersection. NOTE The PlacementLocation.OffsetDistances 3 and the PlacementRefDirection.OffsetDistances 3 shall either not be assigned or should have the same z offset value. The following figures show the usage of placement location and direction for an [[IfcGridPlacement]] . Figure 1 illustrates the case where PlacementRefDirection is not given the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the tangent of the first intersecting axis in the offset location of the virtual grid intersection Figure 1 Grid placement Figure 2 illustrates the case where PlacementRefDirection is given as an [[IfcDirection]] the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the DirectionRatios of the [[IfcDirection]], only the ratios for x and y are taken into account, Figure 2 Grid placement with direction Figure 3 illustrates the case where PlacementRefDirection is given as an [[IfcVirtualGridIntersection]] the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the tangent of the line between the virtual grid intersection of the PlacementLocation and the virtual grid intersection of the PlacementRefDirection. Figure 3 Grid placement with intersection HISTORY S New entity in IFC1.5. The entity name was changed from IfcConstrainedPlacement in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute data type of PlacementRefDirection has been changed to [[IfcGridPlacementDirectionSelect]] . bSI Documentation"
 
-#:IFC.xml:44436
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:9725
+msgid "IfcGridPlacement_PlacementLocation"
+msgstr "Ubicación"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "EdgeList"
+msgid "IfcGridPlacement_PlacementLocation_DEFINITION"
+msgstr "Ubicación"
 
-#:IFC.xml:44429
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ne"
+#:IFC.xml:9718
+msgid "IfcGridPlacement_PlacementRefDirection"
+msgstr "Dirección de ubicación"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "The number of elements in the edge list."
+msgid "IfcGridPlacement_PlacementRefDirection_DEFINITION"
+msgstr "Referencia a una dirección explícita, o a un segundo eje de cuadrícula de intersección, que define la orientación de la posición de la cuadrícula. X 0D .change ifc2x4 X 0D IFC4 CHANGE La selección de una dirección explicada se ha añadido."
 
-#:IFC.xml:44448
-msgid "IfcFace"
-msgstr "Cara IfcIfc"
+#:IFC.xml:9737
+msgid "IfcLinearPlacement"
+msgstr "IfcLinearPlacement"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcLinearPlacement_DEFINITION"
+msgstr "[[IfcLinearPlacement]] proporciona una especialización de [[IfcObjectPlacement]] en la que la posición y dirección del eje del sistema de coordenadas de objetos se define mediante una referencia a una curva como [[IfcAlignmentCurve]] . documentación bSI"
 
-#:IFC.xml:26317
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:9740
+msgid "IfcLinearPlacement_CartesianPosition"
+msgstr "Posición cartesiana"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcLinearPlacement_CartesianPosition_DEFINITION"
+msgstr "Posición cartesiana"
 
-#:IFC.xml:44455
-msgid "IfcFace_Bounds"
-msgstr "Bounds"
+#:IFC.xml:9752
+msgid "IfcLinearPlacement_RelativePlacement"
+msgstr "Ubicación relativa"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Bounds"
+msgid "IfcLinearPlacement_RelativePlacement_DEFINITION"
+msgstr "Ubicación relativa"
 
-#:IFC.xml:44467
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:9764
+msgid "IfcLinearPlacement_PlacementMeasuredAlong"
+msgstr "Colocación medida"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face bound is a loop which is intended to be used for bounding a face. NOTE Entity adapted from face bound defined in ISO 10303 42. HISTORY New entity in IFC1.0 bSI Documentation"
+msgid "IfcLinearPlacement_PlacementMeasuredAlong_DEFINITION"
+msgstr "Colocación medida"
 
-#:IFC.xml:44475
-msgid "IfcFaceBound_Bound"
-msgstr "Bound"
+#:IFC.xml:9776
+msgid "IfcLinearPlacement_Distance"
+msgstr "Distancia"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Bound"
+msgid "IfcLinearPlacement_Distance_DEFINITION"
+msgstr "Distancia"
 
-#:IFC.xml:44468
-msgid "IfcFaceBound_Orientation"
-msgstr "Orientation"
+#:IFC.xml:9788
+msgid "IfcLocalPlacement"
+msgstr "IfcLocalPlacement"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "This indicated whether TRUE or not FALSE the loop has the same sense when used to bound the face as when first defined. If sense is FALSE the senses of all its component oriented edges are implicitly reversed when used in the face."
+msgid "IfcLocalPlacement_DEFINITION"
+msgstr "An [[IfcLocalPlacement]] defines the relative placement of a product in relation to the placement of another product or the absolute placement of a product within the geometric representation context of the project. The [[IfcLocalPlacement]] allows that an [[IfcProduct]] can be placed by this [[IfcLocalPlacement]] through the attribute ObjectPlacement within the local coordinate system of the object placement of another [[IfcProduct]] , which is referenced by the PlacementRelTo . Rules to prevent cyclic relative placements have to be introduced on the application level. If the PlacementRelTo is not given, then the [[IfcProduct]] is placed absolutely within the world coordinate system. The following conventions shall apply as default relative positions if the relative placement is used. The conventions are given for all five direct subtypes of [[IfcProduct]] , the [[IfcSpatialStructureElement]] , [[IfcElement]] , [[IfcAnnotation]] , [[IfcGrid]] , [[IfcPort]] . More detailed placement information is given at the level of subtypes of those five types mentioned. For the subtypes of [[IfcSpatialStructureElement]] the following conventions apply [[IfcSite]] shall be placed absolutely within the world coordinate system established by the geometric representation context of the [[IfcProject]] [[IfcFacility]] shall be placed relative to the local placement of [[IfcSite]] [[IfcFacilityPart]] shall be placed relative to the local placement of [[IfcFacility]] For [[IfcGrid]] and [[IfcAnnotation]] the convention applies that it shall be placed relative to the local placement of its container, either [[IfcSite]] , [[IfcBuilding]] , or [[IfcBuildingStorey]] it should be the same container element that is referenced by the [[IfcRelContainedInSpatialStructure]] containment relationship, For [[IfcAlignment]] placed relative to the local placement of its container [[IfcSite]] when not placed absolutely within the world coordinate system. For [[IfcPort]] the convention applies that it shall be placed relative to the local placement of the [[IfcElement]] it belongs to it should be the same element that is referenced by the [[IfcRelConnectsPortToElement]] connection relationship, For [[IfcElement]] the convention applies that it shall be placed relative to the local placement of its container, either [[IfcSite]] , [[IfcFacility]] , or [[IfcFacilityPart]] it should be the same container element that is referenced by the [[IfcRelContainedInSpatialStructure]] containment relationship, to the local placement of the [[IfcElement]] to which it is tied by an element composition relationship for features that are located relative to the main component such as openings , as expressed by [[IfcRelVoidsElement]] and [[IfcRelProjectsElement]] for elements that fill an opening such as doors or windows , as expressed by [[IfcRelFillsElement]] for coverings that cover the element, as expressed by [[IfcRelCoversBldgElements]] for sub components that are aggregated to the main component, as expressed by [[IfcRelAggregates]] and [[IfcRelNests]] . HISTORY New entity in IFC1.0. bSI Documentation"
 
-#:IFC.xml:44487
-msgid "IfcFaceOuterBound"
-msgstr "Límite de IfcCara"
+#:IFC.xml:9793
+msgid "IfcLocalPlacement_RelativePlacement"
+msgstr "Ubicación relativa"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carries the additional semantics of defining an outer boundary on the face. No more than one boundary of a face shall be of this type. NOTE Entity adapted from face outer bound defined in ISO 10303 42. HISTORY New entity in IFC1.0 bSI Documentation"
+msgid "IfcLocalPlacement_RelativePlacement_DEFINITION"
+msgstr "Colocación geométrica que define la transformación del sistema de coordenadas relacionado a la relación. La colocación puede ser tanto 2D como 3D, dependiendo del conteo de dimensiones del sistema de coordenadas."
 
-#:IFC.xml:44490
-msgid "IfcFaceSurface"
-msgstr "Superficie IfcFaceSurface"
+#:IFC.xml:9800
+msgid "IfcObjectPlacement"
+msgstr "Colocación de objetos Ifc"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "The [[IfcFaceSurface]] defines the underlying geometry of the associated surface to the face. NOTE The topology is used to trim the geometry of the surface. There is no need to geometrically trim the surface to match the topology. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face surface is a subtype of face in which the geometry is defined by an associated surface. The portion of the surface used by the face shall be embeddable in the plane as an open disk, possibly with holes. However, the union of the face with the edges and vertices of its bounding loops need not be embeddable in the plane. It may, for example, cover an entire sphere or torus. As both a face and a geometric surface have defined normal directions, a BOOLEAN flag the orientation attribute is used to indicate whether the surface normal agrees with TRUE or is opposed to FALSE the face normal direction. The geometry associated with any component of the loops of the face shall be consistent with the surface geometry, in the sense that the domains of all the vertex points and edge curves are contained in the face geometry surface. A surface may be referenced by more than one face surface. NOTE Entity adapted from face surface defined in ISO 10303 42. HISTORY New entity in IFC2x .spec head Informal Propositions 1. The domain of the face surface is formally defined to be the domain of its face geometry as trimmed by the loops, this domain does not include the bounding loops. 2. A face surface has non zero finite extent. 3. A face surface is a manifold. 4. A face surface is arcwise connected. 5. A face surface has surface genus 0. 6. The loops are not part of the face domain. 7. Loop geometry shall be consistent with face geometry. This implies that any edge curves or vertex points used in defining the loops bounding the face surface shall lie on the face geometry. 8. The loops of the face shall not intersect. bSI Documentation"
+msgid "IfcObjectPlacement_DEFINITION"
+msgstr "[[IfcObjectPlacement]] es un supertipo abstracto para los tipos especiales que definen el sistema de coordenadas de objeto. El [[IfcObjectPlacement]] debe ser proporcionado para cada producto que tenga una representación de forma. La colocación del objeto puede ser dada absoluta por un eje 2, relativo al sistema de coordenadas mundiales, relativo por una posición del eje 2, relativa a la posición del objeto de otro producto, por referencia de la cuadrícula por la intersección virtual y dirección de referencia dada por dos ejes de una cuadrícula de diseño, posición lineal por distancia a lo largo de una curva, con posibles desplazamientos. En cualquier caso, la posición del objeto tiene que definir de forma unambigua el sistema de coordenadas del objeto como colocación de ejes de dos dimensiones [[IfcAxis2Placement2D]] o posición del eje tridimensional [[IfcAxis2Placement3D]] . La posición del eje debe ser calculada. Nueva entidad HISTORY en IFC2x. Documentación bSI"
 
-#:IFC.xml:13278
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "FaceSurface"
+#:IFC.xml:9801
+msgid "IfcObjectPlacement_PlacementRelTo"
+msgstr "Colocar en"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "FaceSurface"
+msgid "IfcObjectPlacement_PlacementRelTo_DEFINITION"
+msgstr "Colocar en"
 
-#:IFC.xml:44491
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:9825
+msgid "IfcObjectPlacement_PlacesObject"
+msgstr "Colocar objeto"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "This flag indicates whether the sense of the surface normal agrees with TRUE , or opposes FALSE , the sense of the topological normal to the face."
+msgid "IfcObjectPlacement_PlacesObject_DEFINITION"
+msgstr "Colocar objeto"
 
-#:IFC.xml:44499
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:9839
+msgid "IfcVirtualGridIntersection"
+msgstr "IfcVirtualGridIntersección"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A loop is a topological entity constructed from a single vertex, or by stringing together connected oriented edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0 dimensional loop is a single point. The domain of a 1 dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning ending point is arbitrary. The domain of the loop includes its bounds, an 0 Ξ . A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so M and the graph genus G l may be determined by the graph traversal algorithm. Since M 1, the Euler equation 1 reduces in this case to Image .. .. .. .. .. .. figures ifcloop math1.gif where V and E X 7El X 7E are the number of unique vertices and oriented edges in the loop and G l is the genus of the loop. NOTE Entity adapted from loop defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. A loop has a finite extent. 2. A loop describes a closed topological curve with coincident start and end vertices. bSI Documentation"
+msgid "IfcVirtualGridIntersection_DEFINITION"
+msgstr "[[IfcVirtualGridIntersection]] defines the derived location of the intersection between two grid axes. Offset values may be given to set an offset distance to the grid axis for the calculation of the virtual grid intersection. The two intersecting axes IntersectingAxes define the intersection point, which exact location in terms of the Cartesian point representing the intersection has to be calculated from the geometric representation of the two participating curves. NOTE The [[IfcGrid]] local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the [[IfcVirtualGridIntersection]] . Where rules and informal rules ensure, that the IntersectingAxes belong to the same [[IfcGrid]] Offset values may be given OffsetDistances . If given, the position within the list of OffsetDistances corresponds with the position within the list of IntersectingAxes . Therefore OffsetDistances 1 sets the offset to IntersectingAxes 1 , OffsetDistances 2 sets the offset to IntersectingAxes 2 , and OffsetDistances 3 sets the offset to the virtual intersection in direction of the orientation of the cross product of IntersectingAxes 1 and the orthogonal complement of the IntersectingAxes 1 which is the positive or negative direction of the z axis of the design grid position . The following figures explain the usage of the OffsetDistances and IntersectingAxes attributes. Figure 1 illustrates two offset distances given where the virtual intersection is defined in the xy plane of the grid axis placement. Figure 1 Virtual grid intersection with two offsets Figure 2 illustrates three offset distances given where the virtual intersection is defined by an offset in direction of the z axis of the design grid placement to the virtual intersection in the xy plane of the grid axis placement. Figure 2 Virtual grid intersection with three offsets The distance of the offset curve OffsetDistances n is measured from the basis curve. The distance may be positive, negative or zero. A positive value of distance defines an offset in the direction which is normal to the curve in the sense of an anti clockwise rotation through 90 degrees from the tangent vector T at the given point. This is in the direction of orthogonal complement T . This can be reverted by the SameSense attribute at [[IfcGridAxis]] which may switch the sense of the AxisCurve . Figure 3 illustrates an example of a negative offset where the figure shows the side of the offset. IntersectingAxes 1 .AxisCurve is an [[IfcTrimmedCurve]] with an [[IfcCircle]] as BasisCurve and SenseAgreement TRUE. IntersectingAxes 1 .SameSense TRUE. OffsetDistances 1 is a negative length measure Figure 3 Virtual grid intersection negative offset HISTORY New entity in IFC1.5. .change ifc2x IFC2x CHANGE Renamed from IfcConstraintRelIntersection. .spec head Informal Propositions 1. Both, IntersectingAxes 1 and IntersectingAxes 2 shall be two [[IfcGridAxis]] defined by the same [[IfcGrid]] . 2. IntersectingAxes 1 and IntersectingAxes 2 shall not be part of the same row of grid axes, i.e. both shall not be within the same set of [[IfcGrid]].UAxes or [[IfcGrid]].VAxes of the corresponding [[IfcGrid]] . bSI Documentation"
 
-#:IFC.xml:44502
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail ALoop"
+#:IFC.xml:9703
+msgid "IfcVirtualGridIntersection_IntersectingAxes"
+msgstr "Ejes intersectoriales"
 
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "This function returns TRUE if for the edges of the input edge loop the end vertex of each edge is the same as the start vertex of its successor. HISTORY New function in IFC2x2"
+msgid "IfcVirtualGridIntersection_IntersectingAxes_DEFINITION"
+msgstr "Ejes intersectoriales"
 
-#:IFC.xml:44510
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:9840
+msgid "IfcVirtualGridIntersection_OffsetDistances"
+msgstr "OfsetDistances"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. An open shell shall have at least one face. A given face may exist in more than one open shell. The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. NOTE Entity adapted from open shell defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the face bounds of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. bSI Documentation"
+msgid "IfcVirtualGridIntersection_OffsetDistances_DEFINITION"
+msgstr "Desplaza las distancias a los ejes de la cuadrícula. Si se indica, define las curvas de desplazamiento virtuales a los ejes de la cuadrícula. La intersección de las curvas de desplazamiento especifica la intersección de cuadrícula virtual."
 
-#:IFC.xml:44514
-msgid "IfcOrientedEdge"
-msgstr "Filo IfcOrientado"
+#:IFC.xml:9847
+msgid "IfcCurveOrEdgeCurve"
+msgstr "IfcCurva Ordena"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added. bSI Documentation"
+msgid "IfcCurveOrEdgeCurve_DEFINITION"
+msgstr "[[IfcCurveOrEdgeCurve]] proporciona la opción de seleccionar una curva geométrica [[IfcCurve]] y subtipos dentro de un modelo geométrico, o una curva con geometría asociada y coordina Ifc EdgeCurve dentro de un modelo topológico. HISTORY Nuevo tipo de selección en IFC2x3."
 
-#:IFC.xml:44399
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "EdgeElement"
+#:IFC.xml:9848
+msgid "IfcGridPlacementDirectionSelect"
+msgstr "IfcGridPlacementDirectionSelect"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "EdgeElement"
+msgid "IfcGridPlacementDirectionSelect_DEFINITION"
+msgstr "[[IfcGridPlacementDirectionSelect]] permite la elección de definir una colocación de cuadrícula sea una dirección explícita o haciendo referencia a una segunda intersección de cuadrícula para proporcionar la dirección. HISTORY S Nuevo tipo de selección en IFC4."
 
-#:IFC.xml:44519
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Orientation"
+#:IFC.xml:9849
+msgid "IfcPointOrVertexPoint"
+msgstr "IfcPointOrVertexPoint"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, If TRUE the topological orientation as used coincides with the orientation from start vertex to end vertex of the edge element. If FALSE otherwise."
+msgid "IfcPointOrVertexPoint_DEFINITION"
+msgstr "[[IfcPointOrVertexPoint]] proporciona la opción de seleccionar un punto geométrico, [[IfcPoint]] y subtipos dentro de un modelo geométrico, o un vértice con coordenadas de puntos asociados [[IfcVertexPoint]] dentro de un modelo topológico. HISTORY Nuevo tipo de selección en IFC2x3."
 
-#:IFC.xml:44524
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:9850
+msgid "IfcSolidOrShell"
+msgstr "IfcSolidOrShell"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcSolidOrShell_DEFINITION"
+msgstr "El [[IfcSolidOrShell]] proporciona la opción de seleccionar un volumen geométrico [[IfcSolidModel]] y subtipos dentro de un modelo geométrico, o un shell [[IfcClosedShell]] dentro de un modelo topológico. HISTORY S Nuevo tipo de selección en IFC4."
 
-#:IFC.xml:44528
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:9851
+msgid "IfcSurfaceOrFaceSurface"
+msgstr "Superficie IfcSurfaceOrFacesuperficie"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcSurfaceOrFaceSurface_DEFINITION"
+msgstr "[[IfcSurfaceOrFaceSurface]] proporciona la opción de seleccionar una superficie geométrica [[IfcSurface]] y subtipos dentro de un modelo geométrico, o una cara con la geometría de superficie asociada y coordenadas [[IfcFaceSurface]] dentro de un modelo topológico. HISTORY Nuevo tipo de selección en IFC2x3."
 
-#:IFC.xml:44546
-msgid "IfcPath"
-msgstr "Ruta Ifc"
+#:IFC.xml:9852
+msgid "IfcAlignmentCantSegmentTypeEnum"
+msgstr "IfcAlignmentCantSegmentTypeEnum"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path TRUE or is the opposite direction FALSE . An individual edge can only be referenced once by an individual path. An edge can be referenced by multiple paths. An edge can exist independently of a path. NOTE Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. A path has dimensionality 1. 2. A path is arcwise connected. 3. The edges of the path do not intersect except at common vertices. 4. A path has a finite, non zero extent. bSI Documentation"
+#:IFC.xml:9853
+msgid "IfcAlignmentCantSegmentTypeEnum_CONSTANTCANT"
+msgstr "CONSTANTCANT"
 
-#:IFC.xml:44534
-msgid "IfcPath_EdgeList"
-msgstr "EdgeList"
+msgid "IfcAlignmentCantSegmentTypeEnum_CONSTANTCANT_DEFINITION"
+msgstr "CONSTANTCANT"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "EdgeList"
+#:IFC.xml:9854
+msgid "IfcAlignmentCantSegmentTypeEnum_LINEARTRANSITION"
+msgstr "LINERTRANSIÓN"
 
-#:IFC.xml:44553
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+msgid "IfcAlignmentCantSegmentTypeEnum_LINEARTRANSITION_DEFINITION"
+msgstr "LINERTRANSIÓN"
 
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "This function returns TRUE if all edges of the input path are consecutive. .extDef NOTE Definition according to ISO CD 10303 42 1992 This function returns TRUE if for the edges of the input path the end vertex of each edge is the same as the start vertex of its successor. NOTE Function adapted from path head to tail defined in ISO10303 42. HISTORY New function in IFC2.0"
+#:IFC.xml:9855
+msgid "IfcAlignmentCantSegmentTypeEnum_BIQUADRATICPARABOLA"
+msgstr "BIQUADRATICPARABOLA"
 
-#:IFC.xml:44561
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+msgid "IfcAlignmentCantSegmentTypeEnum_BIQUADRATICPARABOLA_DEFINITION"
+msgstr "BIQUADRATICPARABOLA"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value. bSI Documentation"
+#:IFC.xml:9856
+msgid "IfcAlignmentCantSegmentTypeEnum_BLOSSCURVE"
+msgstr "BLOSSCURVE"
 
-#:IFC.xml:11649
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+msgid "IfcAlignmentCantSegmentTypeEnum_BLOSSCURVE_DEFINITION"
+msgstr "BLOSSCURVE"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Polygon"
+#:IFC.xml:9857
+msgid "IfcAlignmentCantSegmentTypeEnum_COSINECURVE"
+msgstr "COSINECURVO"
 
-#:IFC.xml:44568
-msgid "IfcSubedge"
-msgstr "Subbordes Ifc"
+msgid "IfcAlignmentCantSegmentTypeEnum_COSINECURVE_DEFINITION"
+msgstr "COSINECURVO"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A subedge is an edge whose domain is a connected portion of the domain of an existing edge. The topological constraints on a subedge are the same as those on an edge. NOTE Entity adapted from subedge defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The domain of the subedge is formally defined to be the domain of the parent edge, as trimmed by the subedge start vertex and subedge end vertex. 2. The start vertex and end vertex shall be within the union of the domains of the vertices of the parent edge and the domain of the parent edge . bSI Documentation"
+#:IFC.xml:9858
+msgid "IfcAlignmentCantSegmentTypeEnum_SINECURVE"
+msgstr "INECURVO"
 
-#:IFC.xml:44387
-msgid "IfcSubedge_ParentEdge"
-msgstr "ParentEdge"
+msgid "IfcAlignmentCantSegmentTypeEnum_SINECURVE_DEFINITION"
+msgstr "INECURVO"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "ParentEdge"
+#:IFC.xml:9859
+msgid "IfcAlignmentCantSegmentTypeEnum_VIENNESEBEND"
+msgstr "VIENNESEBEND"
 
-#:IFC.xml:44571
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+msgid "IfcAlignmentCantSegmentTypeEnum_VIENNESEBEND_DEFINITION"
+msgstr "VIENNESEBEND"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 The topological representation item is the supertype for all the topological representation items in the geometry resource. NOTE Entity adapted from topological representation item defined in ISO 10303 42. HISTORY New entity in IFC1.5 bSI Documentation"
+#:IFC.xml:9861
+msgid "IfcAlignmentHorizontalSegmentTypeEnum"
+msgstr "IfcAlignmentHorizontalSegmentTypeEnum"
 
-#:IFC.xml:44574
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:9862
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_LINE"
+msgstr "LÍNEA"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex is the topological construct corresponding to a point. It has dimensionality 0 and extent 0. The domain of a vertex, if present, is a point in m dimensional real space R M this is represented by the vertex point subtype. NOTE Entity adapted from vertex defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The vertex has dimensionality 0. This is a fundamental property of the vertex. 2. The extent of a vertex is defined to be zero. bSI Documentation"
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_LINE_DEFINITION"
+msgstr "LÍNEA"
 
-#:IFC.xml:44589
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:9863
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CIRCULARARC"
+msgstr "CIRCULARC"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex loop is a loop of zero genus consisting of a single vertex. A vertex can exist independently of a vertex loop. The topological data shall satisfy the following constraint Image .. .. .. .. .. .. figures ifcvertexloop math1.gif NOTE Entity adapted from vertex loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. A vertex loop has zero extent and dimensionality. 2. The vertex loop has genus 0. bSI Documentation"
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CIRCULARARC_DEFINITION"
+msgstr "CIRCULARC"
 
-#:IFC.xml:44577
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:9864
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CLOTHOID"
+msgstr "CLOTODOS"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "LoopVertex"
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CLOTHOID_DEFINITION"
+msgstr "CLOTODOS"
 
-#:IFC.xml:44592
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:9865
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBICPARABOLA"
+msgstr "CUBICPARABOLA"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex point is a vertex which has its geometry defined as a point. NOTE Entity adapted from vertex point defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the vertex is formally defined to be the domain of its vertex point. bSI Documentation"
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBICPARABOLA_DEFINITION"
+msgstr "CUBICPARABOLA"
 
-#:IFC.xml:12848
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometry"
+#:IFC.xml:9866
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBICSPIRAL"
+msgstr "CUBICSPIRAL"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "VertexGeometry"
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBICSPIRAL_DEFINITION"
+msgstr "CUBICSPIRAL"
 
-#:IFC.xml:44596
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:9867
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_BIQUADRATICPARABOLA"
+msgstr "BIQUADRATICPARABOLA"
 
-msgid "IfcShell_DEFINITION"
-msgstr "A type comprising different kinds of shell. .extDef NOTE Definition according to ISO CD 10303 42 1992 This type collects together, for reference when constructing more complex models, the subtypes which have the characteristics of a shell. A shell is a connected object of fixed dimensionality d 0 1 or 2, typically used to bound a region. The domain of a shell, if present, includes its bounds and 0 Ξ A shell of dimensionality 0 is represented by a graph consisting of a single vertex. The vertex shall not have any associated edges. A shell of dimensionality 1 is represented by a connected graph of dimensionality 1. A shell of dimensionality 2 is a topological entity constructed by joining faces along edges. Its domain, if present, is a connected, orientable 2 manifold with boundary, that is, a connected, oriented, finite, non self intersecting surface, which may be closed or open. NOTE Type adapted from shell defined in ISO 10303 42. HISTORY New type in IFC2x."
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_BIQUADRATICPARABOLA_DEFINITION"
+msgstr "BIQUADRATICPARABOLA"
+
+#:IFC.xml:9868
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_BLOSSCURVE"
+msgstr "BLOSSCURVE"
+
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_BLOSSCURVE_DEFINITION"
+msgstr "BLOSSCURVE"
+
+#:IFC.xml:9869
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_COSINECURVE"
+msgstr "COSINECURVO"
+
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_COSINECURVE_DEFINITION"
+msgstr "COSINECURVO"
+
+#:IFC.xml:9870
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_SINECURVE"
+msgstr "INECURVO"
+
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_SINECURVE_DEFINITION"
+msgstr "INECURVO"
+
+#:IFC.xml:9871
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_VIENNESEBEND"
+msgstr "VIENNESEBEND"
+
+msgid "IfcAlignmentHorizontalSegmentTypeEnum_VIENNESEBEND_DEFINITION"
+msgstr "VIENNESEBEND"
+
+#:IFC.xml:9873
+msgid "IfcAlignmentVerticalSegmentTypeEnum"
+msgstr "IfcAlineación VerticalSegmentTypeEnum"
+
+#:IFC.xml:9874
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CONSTANTGRADIENT"
+msgstr "CONSTANTANTGRADIENTE"
+
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CONSTANTGRADIENT_DEFINITION"
+msgstr "CONSTANTANTGRADIENTE"
+
+#:IFC.xml:9875
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CIRCULARARC"
+msgstr "CIRCULARC"
+
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CIRCULARARC_DEFINITION"
+msgstr "CIRCULARC"
+
+#:IFC.xml:9876
+msgid "IfcAlignmentVerticalSegmentTypeEnum_PARABOLICARC"
+msgstr "PARABOLICARC"
+
+msgid "IfcAlignmentVerticalSegmentTypeEnum_PARABOLICARC_DEFINITION"
+msgstr "PARABOLICARC"
+
+#:IFC.xml:9877
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CLOTHOID"
+msgstr "CLOTODOS"
+
+msgid "IfcAlignmentVerticalSegmentTypeEnum_CLOTHOID_DEFINITION"
+msgstr "CLOTODOS"
 
