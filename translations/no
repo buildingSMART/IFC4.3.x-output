@@ -9,1019 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
-"X-Crowdin-File-ID: 86\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: no_NO\n"
 "PO-Revision-Date: 2021-02-11 18:28\n"
 
-#:IFC.xml:38611
-msgid "IfcBuildingElementPart"
-msgstr "IfcBuildingElementPart"
+#:IFC.xml:44317
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBuildingElementPart_DEFINITION"
-msgstr "[[IfcBuildingElementPart]] representerer hovedkomponenter som underliggende deler av en bygningsdel. Typiske brukseksempler omfatter prefabrikkerte betongsandwichvegger, der lagene kan ha ulike geometriske framstillinger. I dette tilfellet beskrives ikke representasjonen av lagdelt materiale i tilstrekkelig grad elementet. Hvert lag representeres av en egen instans av [[IfcBuildingElementPart]] med sin egen geometribeskrivelse. Typen bygningsdeldel er nærmere angitt i et tilsvarende eksempel på [[IfcBuildingElementPartType]], omhandlet av [[IfcRelDefinesByType]]. HISTORY Ny enhet i IFC2x2. bSI dokumentasjon"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "En avansert flate er en spesialisering av en flate som må oppfylle krav om bruk av bestemte topologiske og geometriske framstillingselementer for å definere flatene sine, kanter og vertikaler. En [[IfcAdvancedFace]] er begrenset til å ha en overflategeometri av type i ansiktet [[IfcElementarySurface]] [[IfcSweptSurface]] eller [[IfcBSplineSurface]] , ha én [[IfcFaceOuterBound]] som randen av ansiktet, med unntak av lukkede overflater, ha alle flatene som skal bindes med [[IfcEdgeLoop]] eller [[IfcVertexLoop]], ha alle kantenes geometri, har kantkurvens geometri begrenset til [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , eller [[IfcBSplineCurve]] I tilfeller med lukkede flater med periodiske overflater, for eksempel sylindriske eller sfæriske overflater, i det følgende gjelder kantene på den lukkede overflaten, når det gjelder en sylindrisk overflate den øvre og nedre hetten, referer til samme forekomst av [[IfcVertexPoint]] to ganger, ikke [[IfcFaceOuterBound]] er gitt, eller [[IfcFaceOuterBound]] er konstruert ved hjelp av en [[IfcSeamCurve]] i den periodiske enden av den underliggende lukkede overflaten, for en sylindrisk overflate ved 0. 360. grader sylindrisk flate ... .. .. .. .. ... ... figurer ifcadvedface 01. ng Figur 1 Bruk av [[IfcCylindricalSurface]] som underliggende overflate for en [[IfcAdvancedFace]] MERKNAD Entisitet tilpasset fra avansert flate definert i NS-EN ISO 10303 511. HISTORY Ny enhet i IFC4 bSI dokumentasjon"
 
-#:IFC.xml:38620
-msgid "IfcBuildingElementPart_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44332
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Returnerer det første valget, hvis SANN ellers det andre valget. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne funksjonen returnerer ett av to valg, avhengig av verdien av et boolsk inngangsargument. De to valgene er også input argumenter. MERKNAD Funksjon tilpasset fra boolsk velge definert i ISO10303 42. HISTORY Ny funksjon i IFC2.0"
 
-#:IFC.xml:38639
-msgid "IfcBuildingElementPartType"
-msgstr "IfcBuildingElementPartType"
+#:IFC.xml:44340
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcBuildingElementPartType_DEFINITION"
-msgstr "Deltypen av bygningsdeler definerer lister over definisjoner av felles egenskaper og kart over deler av en bygningsdel. HISTORY Ny enhet i IFC4. bSI dokumentasjon"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:38644
-msgid "IfcBuildingElementPartType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44345
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En tilkoblet flate er et sett med flater, slik at området til flatene sammen med deres avgrensede kanter og vertikalser kobles til. MERKNAD Enhet tilpasset fra tilkoblede flatesett definert i ISO 10303 42. HISTORY Ny enhet i IFC1.0 .spec head uformelle Proposisjon 1. Unionen over de flatene og deres grenselåser skal være søkte. bSI-dokumentasjon er ikke forbundet med hverandre"
 
-#:IFC.xml:38663
-msgid "IfcBuildingElementPartTypeEnum"
-msgstr "IfcBuildingElementPartTypeEnum"
+#:IFC.xml:44348
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "FifsFlater"
 
-msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
-msgstr "Dette nummereringen definerer de ulike typene byggedeler. HISTORY Nytt nummer i IFC4. bSI-dokumentasjon"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "FifsFlater"
 
-#:IFC.xml:38673
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
-msgstr "SAFETYCAGE"
+#:IFC.xml:44360
+msgid "IfcEdge"
+msgstr "Slovenija"
 
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
-msgstr "Sikkerhetstrenger er en sammenstilling av runde og vertikale stenger som er festet til de faste stiger og som er oppstilt slik at de lukker veien til en arbeidstaker når de klatrer stigen. Barna så vedlagte stiger kalles også sorte og svevebaner."
+msgid "IfcEdge_DEFINITION"
+msgstr "En [[IfcEdge]] definerer to punkter som er tilknyttet emner. Den geometriske framstillingen av forbindelsen mellom de to versjonene settes til en rett linje hvis ingen kurvgeometri tildeles med undertypen [[IfcEdgeCurve]] . [[IfcEdge]] kan derfor brukes til å utveksle rette kanter uten tilhørende geometri gitt av [[IfcLine]] eller [[IfcPolyline]] antatt [[IfcEdgeCurve]]. dgeometri . EKSEMPEL Figur 1 illustrerer et eksempel der grensene for [[IfcEdge]] er angitt ved EdgeStart og EdgeEnd som også bestemmer kantens retning. Plasseringen i et koordinatområde bestemmes av [[IfcVertexPoint]] typen for EdgeStart og EdgeEnd. Siden det ikke er tilordnet kantgeometri, settes den som standard en rett linje som sier ja til retningen for den. Figur 1 Framstilling av kant. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kant er den topologiske konstruksjonen som tilsvarer forbindelsen til to vertikaler. En mer abstrakt kan stå for et logisk forhold mellom to vertikaler. Området for en kant, hvis det finnes, er en slutt; ikke-selvkryssende åpen kurve i R M , det vil si en sammenkoplet 1-dimensjonal manifold. Grensene for en kant er to punkter som ikke trenger å være forskjellige. Kanten orienteres ved å velge tilbaketraktretning som skal gå fra første til andre vertspunkt. Hvis de to versjonene er de samme, er kanten en egen løkke. Kantens domene innbefatter ikke sine grenser, og 0 ε. Tilknytt en kant kan være en geometrisk kurve for å lokalisere kanten i et koordinatområde, representert ved kantkurveundertypen. Kurven skal være ensartet og ikke krysser seg selv innenfor kantens område. En kant er en graf, så multiplikasjon M og graf genus G kan bestemmes av kurvkurvkurvens algoritme. Siden M E 1 reduseres Euler likningen 1 i tilfellet til bilde . .. .. .. .. .. .. figurer hvis kantens mat1.gif hvor V 1 eller 2, og G e 1 eller 0. Spesifikt skal topologisk kant som definerer data, tilfredsstille en kant har to punkter bilder . .. .. .. .. .. .. figurer ved kile math2.gif må ikke være forskjellig bilde .. .. .. .. .. .. .. tall hviskedmath3. Hvis likning skal inneholde bilde .. .. .. .. .. .. .. figurer hvis kile math4. MERKNAD Entity tilpasset fra kanten definert i ISO 10303 42. HISTORY Ny enhet i IFC2. spec head uformelle posisjoner 1. Kanten har dimensjonalitet 1. 2. Omfanget av en kant skal være ordentlig og ikke null. bSI dokumentasjon"
 
-#:IFC.xml:38671
-msgid "IfcBuildingElementPartTypeEnum_INSULATION"
-msgstr "INSULASJON"
+#:IFC.xml:44363
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
-msgstr "INSULASJON"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:38672
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
-msgstr "PREKASTPANEL"
+#:IFC.xml:44375
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
-msgstr "Delen er en prefabrikkert plate, vanligvis som et innvendig eller utvendig lag i en sandwichplate."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:38670
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
-msgstr "ARMOURUNIT"
+#:IFC.xml:44411
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
-msgstr "En stor steinstein eller betongformet enhet som brukes til å forhindre erosjon på skråninger, som for eksempel omstøtninger og gjennombrudd. Disse enhetene grupperes sammen i et faglag. MERKNAD Definisjon i ISO 21650 relativt stor steinstein eller betongformet enhet som velges for å passe til spesifiserte geometriske egenskaper og tetthet."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "En [[IfcEdgeCurve]] definerer to punkter som forbindes med den geometriske representasjonen av forbindelsen. MERKNAD Topologien brukes til å trimme geometrien til kanten. Det er ikke nødvendig å gi geometrisk trim til kanten for å passe til topologien. EKSEMPEL Figur 1 illustrerer et eksempel der kantgeometrien angis med en ubegrenset kurve, her [[IfcCircle]]. Grensene leveres av EdgeStart og EdgeEnd, den topologiske retningen til [[IfcEdgeCurve]] motsetter retningen til [[IfcCircle]] med SameSense FALSE. Figur 1 Edge kurve. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantkurve er en spesiell kanttype som har sin geometri fullstendig definert. Geometrien defineres ved å knytte kanten til en kurve som kan avgrenses. Etter hvert som de topologiske og geometriske retningene er motsatt. en indikator brukes samme mening for å identifisere om kanten og kurven er enig eller mottatt. Den Boolske verdien angir om kurveretningen samsvarer med TRUE eller er i motsatt retning FALSE til kantretningen. Eventuell geometri knyttet til kantens vertikaler skal stemme overens med kantgeometrien. Flere kanter kan referere til samme kurve. MERKNAD Entity tilpasset fra kantkurve definert i NS-EN ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for kantkurven er formelt definert som det aktuelle området for kantgeometrien som beskåret av vertikalene. Dette domenet omfatter ikke vertikalene. 2. En kantkurve har ikke null finfordelt utstrekning 3. En kantkurve er et manifold. 4. En kantkurve er underordnet tilkoblet. 5. Ansiden starter ikke er en del av kantdomenet. 6. Kantenden er ikke en del av kanten domene. 7. Vertex geometri skal samsvare med kantgeometri. bSI-dokumentasjon"
 
-#:IFC.xml:38669
-msgid "IfcBuildingElementPartTypeEnum_APRON"
-msgstr "APRON"
+#:IFC.xml:12211
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "EdgeGeometri"
 
-msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
-msgstr "En form for utskalling som består av tre, betong, ripografi, vegdekker eller annen konstruksjon som er plassert ved landkar og pilarer for å hindre undergraving."
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "EdgeGeometri"
 
-#:IFC.xml:38674
-msgid "IfcDiscreteAccessory"
-msgstr "IfcDiscreteTilbehør"
+#:IFC.xml:44412
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessory_DEFINITION"
-msgstr "Et separat tilbehør er en framstilling av ulike typer tilbehør som er omfattet eller lagt til i elementene. HISTORY Ny enhet i IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute PredefinedType lagt til. bSI dokumentasjon"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Dette logiske flagget angir hvorvidt TRUE , eller ikke USANT sansene på kanten og kurven som definerer kantgeometrien, er de samme. Følelsen av en kant er fra kantens start vertex til kantens ende ende vertex er i retning av økende parameter."
 
-#:IFC.xml:38685
-msgid "IfcDiscreteAccessory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44420
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantsløyfe er en sløyfe med ikke null. Det er en sti der start- og slutt-vertikalene er de samme. Dette domenet er en lukket kurve. En kantløkke kan overlappe seg selv. MERKNAD Enhet tilpasset fra kantsløyfe definert i ISO 10303 42. HISTORY Ny enhet i IFC2x2. .spec head Informal Proposisjon 1. I artsgruppen til [[IfcEdgeLoop]] skal være 1 eller høyere. 2. Eulerformelen skal være tilfredsstilt antall skjærende slektning på 1 3. Ingen kant kan refereres mer enn én gang til det samme [[IfcEdgeLoop]] med samme mening. For dette formålet regnes en kant som ikke er orientert kant som refereres til TRUE som bSI-dokumentasjonen."
 
-#:IFC.xml:38697
-msgid "IfcDiscreteAccessoryType"
-msgstr "IfcDiscreteAccessoryType"
+#:IFC.xml:44436
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Redigeringsliste"
 
-msgid "IfcDiscreteAccessoryType_DEFINITION"
-msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted. bSI Documentation"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Redigeringsliste"
 
-#:IFC.xml:38704
-msgid "IfcDiscreteAccessoryType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44429
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ni"
 
-msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Antall elementer i kantlisten."
 
-#:IFC.xml:38716
-msgid "IfcDiscreteAccessoryTypeEnum"
-msgstr "IfcDiscreteAccessoryTypeEnum"
+#:IFC.xml:44448
+msgid "IfcFace"
+msgstr "IfcFace"
 
-msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
-msgstr "Dette tall definerer de ulike typene av atskilte tilbehør. HISTORY Nytt registrering i IFC4. bSI Dokumentasjon av"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:39393
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
-msgstr "PANEL STYRING"
+#:IFC.xml:26317
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
-msgstr "En komponent som minimerer effekten til pumpen av understrukturen."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:39390
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
-msgstr "RAILPAD"
+#:IFC.xml:44455
+msgid "IfcFace_Bounds"
+msgstr "Lyder"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
-msgstr "En ikke-metallisk plate eller en skive som er plassert mellom skinner og bærelag, perre eller plate. Merk merkedefinisjonen fra NS-EN 13481"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Lyder"
 
-#:IFC.xml:39392
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
-msgstr "SLIDINGCHAIR"
+#:IFC.xml:44467
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
-msgstr "en komponent som støtter og beholder bæretauskinnen og et flatt underlag der foten på skinner for skliene"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate som er bundet er en løkke som er ment å skulle brukes for å begrense et fly. MERKNAD Enhet tilpasset fra ansiktsbundet, definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 bSI dokumentasjon"
 
-#:IFC.xml:39383
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
-msgstr "POINTMACHINEMOUNTINGENVICE"
+#:IFC.xml:44475
+msgid "IfcFaceBound_Bound"
+msgstr "Bundet"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
-msgstr "En enhet brukt i sporopptak, for å installere og koble en punktmaskin til utløpskomponentene."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Bundet"
 
-#:IFC.xml:39395
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
-msgstr "ELASTIC KUSHION"
+#:IFC.xml:44468
+msgid "IfcFaceBound_Orientation"
+msgstr "Retning"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
-msgstr "Et spor elastisk pute er en type lag som er satt på sporsidene av et betongfundament, som brukes til å dempe støt fra laster i lengderetningen og sideveis på sporkonstruksjoner. En støtdemping med spor skal bare skje i ballastløse sporkonstruksjoner."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Dette indikerer om SANN eller ikke FALSE løkken har samme sann når den brukes til å binde ansiktet som når den først defineres. Hvis fornuft er FALSE, blir sansene på alle de komponentorienterte kantene implisitt reversert når de brukes i ansiktet."
 
-#:IFC.xml:38739
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
-msgstr "BRACKET"
+#:IFC.xml:44487
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
-msgstr "Et L-formet eller lignende tilbehør som er festet i et hjørne mellom konstruksjonsdeler for å holde dem sammen eller bære en sekundær bygningsdel."
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En ytterflate er en spesiell undertype flate som bærer den ekstra halvdelen av overflaten med å definere en ytre grense på flaten. Ikke mer enn én grense for en flate skal være av denne typen. MERKNAD Enhet tilpasset fra et yttergrense definert i ISO 10303 42. HISTORY en ny enhet i IFC1.0 bSI dokumentasjon"
 
-#:IFC.xml:39379
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
-msgstr "POING MAKSIMSPUNKTENDE ENHETEN"
+#:IFC.xml:44490
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
-msgstr "En mekanisk innretning som låser punktmaskinen i en viss posisjon fra utsiden."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] definerer den underliggende geometrien til den tilknyttede overflaten til ansiktet. MERKNAD Topologien brukes til å trimme geometrien til overflaten. Det er ikke nødvendig å gi overflaten en geometrisk trim som passer med topologien. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate er en underflate der geometrien er definert av en tilhørende overflate. Den delen av overflaten som overflaten brukte på, skal være innstøpt i planet som en åpen skive, eventuelt med hull. Unionen på overflaten med kantene og vertikalene av låsene trenger imidlertid ikke kunne støpes inn i planet. Det kan for eksempel dekke et helt sfære eller torus. Siden både flaten og den geometriske overflaten har definert normale retninger et BOOLEAN flagg orienteringsattributtet brukes til å indikere om overflatenormale samtykker i SAN, eller er i motsetning til USANT ansiktet normal retning. Geometrien knyttet til en av delene av løkkene i overflaten skal være forenlig med overflategeometrien. i den forstand at alle virvlpunktene og kantkurvene ligger i overflaten av ansiktet, mot geometri. En overflate kan refereres til med mer enn én overflate. MERKNAD Enhet tilpasset fra flateoverflaten, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for overflaten er formelt definert som det området for ansiktsgeometrien som kuttet i løkkene, dette domenet inneholder ikke noen løkker. 2. En ansiktsflate har ikke endelig utstrekning. 3. En flateflate er en manifold. 4. En flate er liten, liten. 5. En overflate har en genus 0. 6. Løkkene er ikke en del av domenet i ansiktet. 7. Løkkegeometri skal stemme overens med overflatens geometri. Dette innebærer at eventuelle kantkurver eller vertex-punkter som brukes ved fastsetting av løkkeflaten, skal ligge i ansiktsgeometrien. 8. Løkkene på overflaten skal ikke krysses. bSI-dokumentasjon"
 
-#:IFC.xml:39394
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
-msgstr "RAILBRACE"
+#:IFC.xml:13278
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Overflate"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
-msgstr "En skinnkomponent som forhindrer skinner fra å veltes og vri."
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Overflate"
 
-#:IFC.xml:38746
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
-msgstr "INSULATOR"
+#:IFC.xml:44491
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
-msgstr "En enhet konstruert for å støtte og isolere en ledende bygningsdel. Merknad fra IEC 151 15 39."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Dette flagget angir om følelsen av overflaten normal er enig med SAN, eller er motstander av FALSE, den topologiske normalen til ansiktet."
 
-#:IFC.xml:38741
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
-msgstr "CABLEARRANGER"
+#:IFC.xml:44499
+msgid "IfcLoop"
+msgstr "Smykke"
 
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
-msgstr "En kabelinnretning er et fleksibelt tilbehør eller en del av en komponent plassert rundt kabler for å ordne og minimere bøying av dem i det punktet der de er plassert."
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En løkke er en topologisk enhet laget av en enkelt verteks. eller ved å strengere sammen bearbeidede kanter eller lineære segmenter som begynner og slutter i samme vertspunkt. Den brukes vanligvis til å binde en flate som ligger på en overflate. En løkke har dimensjonalitet på 0 eller 1. Domenet for en 0-dimensjonal løkke er et enkelt punkt. Domenet i en dimensjonal løkke er en koblet, orientert kurve, men trenger ikke å manifesteres. Ettersom løkka er en sirkel, er avslutningspunktet for begynnelsen vilkårlig. Domenet for gjennomløpet inneholder grensene, en 0 ε. En løkke representeres av en enkelt verteks, en samling orienterte kanter eller av en bestilt samling av punkter. En løkke er en graf, så M og diagrammet G l kan bestemmes av kurvens kurvkurvalgoritme. Siden M 1, reduseres Euler likning 1 i denne saken til bilde .. .. .. .. ... figurer kappe math1. Hvis V og E X 7El X 7E er antall unike punkter og orienterte kanter i løkka og G l er slekten av løkken. MERKNAD Enhet tilpasset fra løkke, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformelle Proposi- sjoner 1. En løkke står nært. En løkke beskriver en lukket topologisk kurve med sammenfallende start og sluttversjon. bSI-dokumentasjon"
 
-#:IFC.xml:39397
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
-msgstr "RAIL LUBRICATION"
+#:IFC.xml:44502
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToail ALoop"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
-msgstr "En enhet som hindrer bruk av skinner gjennom hele hjulets flens for å redusere støyutslipp. Det plasseres ofte på innsiden av ytre skinne i en kurve eller nær dreieskive, avhenger av funksjonen som slitasje eller støyreduksjon."
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Denne funksjonen returnerer SANN hvis du vil skrive en inngang i en loop enden vertex i hver kant er den samme som startviseren i sin suksess. HISTORY Ny funksjon i IFC2x2"
 
-#:IFC.xml:39396
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
-msgstr "SOUNDABSORTERING"
+#:IFC.xml:44510
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
-msgstr "En komponent i sporet for lydabsorpsjon og kan også absorbere vibrasjoner. Den brukes ofte i kombinasjon med heller og platesporer."
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et åpent skall er et skall av dimensjonen 2. Den dommere, om den finnes, er en endelig, forbundet med hverandre, orientert to manifestert med grense, men ikke en lukket overflate. Man mener at det er et lukket skall med ett eller flere hull slått på. Domenet til et åpent skall tilfredsstiller 0 ° 1. Et åpent skall er mer generelt enn en flate fordi domenet kan håndteres. Skallet er definert av en samling av ansikter, som kan være orientert ansikt. Etter at det er tatt hensyn til orienteringen, skal den avtale skallet normalt, som definert nedenfor. Retningen kan leveres direkte som et BOOLEAN-attributt for et orientert ansikt, eller være standard til TRUE hvis skallelementet er et ansikt uten retteattributtet. Følgende helt kombinerte restriksjoner på åpne skall og geometriske restriksjoner på deres domener er utformet, sammen med de uformelle proposi- sjonene, for å sørge for at alle domener som er knyttet til et åpent skall, er et rettmessig manifold. Hver side skal være unik. Et åpent skall skal ha minst én flate. Det kan finnes en gitt flate i mer enn ett åpent skall. Grensen for et åpent skall består av kantene som refereres til bare én gang av flatens grensetilstander, sammen med alle sine verter. Domenet til et åpent helvete, hvis det finnes, inneholder alle kanter og overflater av overflatene. MERKNAD Merk at dette avviker noe fra definisjonen av et ansiktsdomene som omfatter ingen av dets grenser. For eksempel kan et ansiktsdomene utelukke et isolert punkt eller en linjesegment. Et åpent skalldomene kan ikke vises. Se algoritmen for databehandling nedenfor. MERKNAD Enhet tilpasset fra åpne skall definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformell posisjon 1. Hver kant skal refereres til nøyaktig to ganger gjennom ansiktsgrensen. Hver orienterte kant skal være unikt. 3. Ingen kant skal henvises til mer enn to ansikter. 4. Distinke flater på skallet krysser ikke, men kan dele kanter og vertikaler. 5. Ulike kanter krysser ikke, men kan dele vertikaler. 6. Hver ansiktsreferanse skal være unik. 7. Løkkene på skallet skal ikke være en blanding av poly-sløyfe og andre løkketyper. Merk dette gitt, siden bare høflig sløyfe defineres som definisjonen for ansiktsgrensen. 8. Det lukkede skallet skal være orientert lita koblet 2 manifold. 9. The Euler formel er fornøyd. SI-dokumentasjon."
 
-#:IFC.xml:38750
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
-msgstr "VIS"
+#:IFC.xml:44514
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
-msgstr "Sko fra en søyle eller en bjelkestempe, som brukes til å støtte eller sikre et element"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "[[IfcOrientedEdge]] representerer en [[IfcEdge]med en Orientasjonsflagg i bruk. Det kan bruke det samme [[IfcEdge]] ved omvendt nøyaktig to ganger, én gang fremover og én gang bakover. MERKNAD Det normale til [[IfcFace]] er bare bestemt fra kantene. Hvis alle kantene på ansiktet er festet på en måte som følger med kantorienteringen, vil ansiktet peke utover hverandre. Vanlig til det underliggende [[IfcFaceSurface]] som representerer geometrien i dette inntrykket ikke har betydning for dette. Formålet med [[IfcFaceSurface]]. ameSense attributten er å gi ytterligere informasjon for verifiseringsformål. SameSense TRUE betyr overflatevariant og ansikt normalt er de sameSense FALSE betyr at de er i motsatt retning. Den gjenbrukte kanten med en geometrisk framstilling som [[IfcEdgeCurve]] definerer kanten i 3D-koordinatrom. I enkelte tilfeller, særlig ved bruk av elementære eller sveipete overflater, er det en risiko for unøyaktig kartlegging av 3D-x, y, z [[IfcEdgeCurve]] på de tilstøtende flatene for å bestemme grensene for disse overflatene. Den valgfrie CurveOnSurface definerer 2D u, v kanten innenfor parametrisk område på overflaten. Den kan brukes til å bestemme hvor korrekt kartleggingen av 3D-en [[IfcEdgeCurve]] er på denne overflaten. EKSEMPEL Figur 1 illustrerer et eksempel der CurveOnSurface er brukt, i tillegg til kurvegeometrien til [[IfcEdgeCurve]Figur 1 Kurve på overflateframstilling av en [[IfcOrientedEdge]] . xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En orientert kant er bygd fra en annen kant og inneholder et BOOLEAN-retningsflagg som skal angi om orienteringen av den konstruerte kanten er enig med orienteringen av den opprinnelige kanten. Bortsett fra kanskje orientering tilsvarer den orienterte kanten den opprinnelige kanten. En vanlig praksis er solide modelleringssystemer er å ha en enhet som representerer bruken eller traversiteten av en kant. Enheten som bruker uttrykkelig angir kravet i en manifold fast at hver kant skal ha en omvendt nøyaktig to ganger, én gang i hver retning. Bruksfunksjonaliteten er gitt av kantens undertype-orienterte mot. MERKNAD Entidigt tilpasset fra orientert kant definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Attributtet CurveOnSurface har blitt lagt til. bSI dokumentasjon"
 
-#:IFC.xml:38736
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
-msgstr "ANCHORPLAT"
+#:IFC.xml:44399
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Redigerelement"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
-msgstr "Tilbehør bestående av en stålplate, skjærdybler eller sveist på stang, som er støpt inn i overflaten til et betongelement, slik at andre deler kan sveises eller skrues på siden av det."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Redigerelement"
 
-#:IFC.xml:38745
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
-msgstr "UTLØPSDATOVERFØRT ENHET"
+#:IFC.xml:44519
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Retning"
 
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
-msgstr "Sammenføyningselementet mellom konstruksjonselementene skal tillate en termisk differensiell utvidelse."
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "Hvis denne er topologisk orientering som brukt sammenfaller med orienteringen fra start vertex til slutten av kantelementet. Hvis tilbakekallingen skjer."
 
-#:IFC.xml:39376
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
-msgstr "LÅS"
+#:IFC.xml:44524
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
-msgstr "En lås er en mekanisk eller elektronisk festeinnretning som utløses enten av et fysisk objekt, for eksempel nøkkelen, fingeravtrykk, RFID-kort, sikkerhetstoken osv. ved å levere hemmelig informasjon, f.eks. nummerpermutasjon, passord , eller en kombinasjon av disse."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:39385
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
-msgstr "MENNSJONESMÅL"
+#:IFC.xml:44528
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
-msgstr "Et utstyr som brukes til å opprettholde spenningen i lederne eller kablene."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:39398
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
-msgstr "RAIL MECHANISKE EQUIPMENT"
+#:IFC.xml:44546
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
-msgstr "Et skinnemekanisk utstyr er et meknisk utstyr som er installert på jernbanen, som blokkerende innretning, fartsregulator, biodrivstoff, sporskala eller kontrollerbar retur."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 En bane er en topologisk enhet bestående av en bestilt samling av orienterte kanter, slik at kantstammen starter vertex over hver kant samtidig med kanten på slutten av sin forgjenger. Banen er bestilt fra kantens start på den første orienterte kanten til kanten av den siste kanten. BOOLEAN-verdien i den orienterte kanten viser om kantretningen samsvarer med retningen til stien TRUE eller er motsatt retning FALSE . En enkelt kant kan bare refereres til én gang med en enkelt sti. En kant kan refereres til med flere veier. En kant kan finnes uavhengig av bane. MERKNAD Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2. .spec head uformelle Proposis 1. En bane har dimensjonalitet 1. 2. En vei er arktisk knyttet sammen. 3. Kantene av veien krysser ikke unntatt i felles verdier 4. Veien har en rettvisende, ikke noe dekkende vei. bSI-dokumentasjon er lik null."
 
-#:IFC.xml:38737
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
-msgstr "BIRDPROTEKSJON"
+#:IFC.xml:44534
+msgid "IfcPath_EdgeList"
+msgstr "Redigeringsliste"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
-msgstr "En enhet som forhindrer at en sittende nedover fugler på elektrisk kritiske punkter, og dermed beskyttes mot elektriske sjokk og forstyrrelser av kortslutning, er unngått."
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Redigeringsliste"
 
-#:IFC.xml:38752
-msgid "IfcElementComponent"
-msgstr "IfcElementKomponent"
+#:IFC.xml:44553
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail-APat"
 
-msgid "IfcElementComponent_DEFINITION"
-msgstr "En elementkomponent er en representasjon for mindre elementer som er inkludert i, lagt til eller kobler til eller mellom elementer, – som vanligvis ikke er interessante ut fra bygningens samlede holdningspunkt. Disse små delene kan imidlertid ha viktige funksjoner og lastbærende funksjoner inne i konstruksjonen. Disse elementene gir ingen faktiske romgrenser. Typiske eksempler på IfcElementComponenter omfatter ulike typer festemidler og forskjellige tilbehør. Ett eller flere tilfeller av undertyper av [[IfcElementComponent]] bør alltid være ledsaget av et definert eksempel på en bestemt undertype på [[IfcElementComponentType]]. Typeobjektet inneholder form- og materialinformasjon. HISTORY Ny enhet i IFC2x2 Det er ofte ønskelig å modellere en rekke samme elementkomponenter ved hjelp av et enkelt forekommende objekt, e. . flere skruer innenfor en forbindelse eller en armeringsrekke. I denne IFC-frigivelsen er dette mulig ved hjelp av en flere kartlagte representasjoner, som dokumentert nedenfor. For å uttrykke multiplisiteten av konstruksjonsdeler også på et høyere semantisk nivå, a Qto ElementComponentPatternties bør angis via [[IfcRelDefinesByProperties]] og inneholder antallet stykker som plasseres med én enkelt [[IfcElementComponent]forekomst. Symbolsk representant En symbolsk framstilling er definert for en rekke komponenter eller flere rader med komponenter i et enkelt eksempel på [[IfcElementComponent]]. Slike rader eller liste kan inneholde muligens et stort antall individuelle stykker. Produktdefinisjonen består av en [[IfcShapeRepresentation]] med attributtverdiene Representasjonsidentifikator Rad Representasjonstype GeometriCurveSet og én eller flere kurver som geometriske elementer. Kurvene representerer der referansepunktene for stykkene er plassert. For eksempel kan slike referansepunkter være på toppen av mekaniske festemidler eller i startpunktet til ekstruderingsaksen til armeringsstengene. Når det gjelder rette deler, spiker, stifter, rette armeringsstenger, eller lignende; den lokale utplasseringen av [[IfcElementComponent]] skal plasseres og orienteres slik at den lokale z-aksen er parallell med komponentenes akser. En Qto ElementComponentPatternties bør angi antall stykker i raden eller matrisen og avstanden mellom disse. bSI dokumentasjon"
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Denne funksjonen returnerer SANN hvis alle kantene i inntastingsbanen er konsekvent. xtDef MERKNAD Definisjon i henhold til ISO CD 10303 42 1992 Denne funksjonen returnerer TRUE hvis for kantene av inngangsbanen er enden med hver kant det samme som startvertex i sin etterfølger. MERKNAD Funksjon tilpasset fra veihode til hale, definert i ISO10303 42. Ny funksjon HISTORY i IFC2.0"
 
-#:IFC.xml:38756
-msgid "IfcElementComponentType"
-msgstr "IfcElementComponentType"
+#:IFC.xml:44561
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcElementComponentType_DEFINITION"
-msgstr "Elementtypen [[IfcElementComponentType]] definerer vanlig delt informasjon for forekomst av elementkomponenter. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap angir felles framstillinger av materialer felles sammensetning av bygningsdeler Det brukes til å definere en spesifikasjon av typen bygningsdel som angir den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcElementComponentType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcElementComponentType]] er representert ved tilfeller av [[IfcElementComponent]]. HISTORY Ny enhet i IFC2x2. bSI Dokumentasjon"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En poly løkke er en løkke med rette kanter som avgrenser et plan område i rommet. En poly-løkke er en løkke med genet 1 der løkken representeres av en bestilt kobbersamling med punkter som utgjør løkkens vertikal. Utløkka består av rette linje-segmenter som forbinder et punkt i samlingen med det suksesspunktet i samlingen. Det avsluttende segmentet er fra det siste til det første punktet i samlingen. Utløkkens retning er i linjesegmentenes retning. En pol-løkke skal samsvare med følgende topologiske begrensninger i løkken har slekten av en. følgende likning skal være tilfredsstilt bilde .. .. .. .. .. figurer ihcpolylooplakk1. hvis [[IfcPolyLoop]] alltid er lukket og det siste segmentet er fra den siste [[IfcCartesianPoint]] i listen over Polygon s til den første [[IfcCartesianPoint]] . Det første punktet skal derfor ikke gjentas ved slutten av listen, eller ved å referere til samme forekomst. eller ved å bruke en ekstra forekomst på [[IfcCartesianPoint]] med koordinatene som det første punktet. MERKNAD Denne enheten finnes primært for å legge til rette for effektiv kommunikasjon av anerkjente B-representerende modeller. MERKNAD Enhet tilpasset fra høfsløyfe definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 . Uformell pec head-posisjon 1. Alle punktene i mangekanten som definerer poly-løkken, skal være koplare. 2. Den første og den siste Polygon skal være forskjellig etter verdi. bSI-dokumentasjon"
 
-#:IFC.xml:38759
-msgid "IfcFastener"
-msgstr "IfcFastener"
+#:IFC.xml:11649
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polygon"
 
-msgid "IfcFastener_DEFINITION"
-msgstr "Representasjoner for festedeler som brukes som festemidler for å forbinde eller sammenføyde elementer med andre elementer. Unntatt er mekaniske festemidler som er modellert av en egen enhet [[IfcMechanicalFastener]] . HISTORY Ny enhet i IFC2x2 .change ifc2x4 IFC4 CHANGE Attribute PredefinedType lagt til. bSI dokumentasjon"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polygon"
 
-#:IFC.xml:38770
-msgid "IfcFastener_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44568
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "IfcFastener_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definisjon etter ISO CD 10303 42 1992 En underkant er en kant med domene som er en forbundet del av domenet til en eksisterende kant. De topologiske begrensningene på en kile er de samme som på en kant. MERKNAD Enhet tilpasset fra underkant definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. topp-hode uformelle posisjoner 1. Domenet til kanten er formelt definert som det overordnede domenet for den overordnede kanten, som trimmes av subkantens start vertex og innleder slutt på verten. 2. Start vertex og ende vertex skal ligge under unionen av de vertices domener fra overordnet kant og domenet til overordnet kant . bSI dokumentasjon"
 
-#:IFC.xml:38782
-msgid "IfcFastenerType"
-msgstr "IfcFastenerType"
+#:IFC.xml:44387
+msgid "IfcSubedge_ParentEdge"
+msgstr "Fornavn"
 
-msgid "IfcFastenerType_DEFINITION"
-msgstr "Elementkomponenttypen [[IfcFastenerType]] definerer vanlig delt informasjon for forekomster av festemidler. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskaper og felles egenskaper som angir felles presentasjoner av bygningsdelenes felles materialer, felles sammensetning, og det brukes til å definere en spesifikasjon av festemidler type, som indikerer den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcFastenerType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcFastenerType]] er representert ved forekomster av [[IfcFastener]] . HISTORY Ny enhet i IFC2x2. bSI Dokumentasjon"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Fornavn"
 
-#:IFC.xml:38789
-msgid "IfcFastenerType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44571
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcFastenerType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr "extDef NOTE Definisjon etter ISO CD 10303 42 1992 Det topologiske representasjonselementet er supertypen for alle de topologiske representasjonsgjenstandene i geometriressursen. MERKNAD Enhet tilpasset fra topologisk fremføringselement definert i ISO 10303 42. HISTORY ny enhet i IFC1.5 bSI dokumentasjon"
 
-#:IFC.xml:38801
-msgid "IfcFastenerTypeEnum"
-msgstr "IfcFastenerTypeEnum"
+#:IFC.xml:44574
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcFastenerTypeEnum_DEFINITION"
-msgstr "Dette nummereringen definerer de ulike typene festemidler, unntatt mekaniske festemidler. HISTORY Nytt enumeration i IFC4. bSI Dokumentasjon av mekanisk festemidler."
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex er den topologiske konstruksjonen som tilsvarer et punkt. Den har dimensjonalitet 0 og utstrekning 0. Domenet til et verteks, hvis tilstede, er et punkt i m dimensjons virkelige rom R , representert ved vertex punkt undertype. MERKNAD Enhet tilpasset fra vertex definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0 .spec head Informal Propositions 1. vertex har en dimensjonalitet 0. Dette er en grunnleggende egenskap ved verten. 2. Omfanget av vertex er definert som null. bSI-dokumentasjon"
 
-#:IFC.xml:38805
-msgid "IfcFastenerTypeEnum_GLUE"
-msgstr "STØRRELSE"
+#:IFC.xml:44589
+msgid "IfcVertexLoop"
+msgstr "IfcVertexloop"
 
-msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
-msgstr "En festeforbindelse der limet brukes til å sammenføye elementer."
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex løkke er en løkke med null genus som består av en enkelt vertex. En vertex kan finnes uavhengig av vertex løkke. The topological data skal tilfredsstille følgende begrensningsbilde .. .. .. .. .. figurer ifcvertexloop math1.gif NOTE Entity adapted from vertex loop definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. pec head informal Propositions 1. En vertex løkke har null omfang og dimensjonalitet. 2. vertex loop har genus 0. bSI dokumentasjon"
 
-#:IFC.xml:38807
-msgid "IfcFastenerTypeEnum_WELD"
-msgstr "VELG"
+#:IFC.xml:44577
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
-msgstr "En sveiseslange mellom deler av metalliske materialer eller andre egnede materialer."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-#:IFC.xml:38806
-msgid "IfcFastenerTypeEnum_MORTAR"
-msgstr "MORTAR"
+#:IFC.xml:44592
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
-msgstr "En komposisjon av mineralsk eller andre materialer som brukes til å fylle sprik og muligens oppfylle en lastrolle."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 A vertex point er en vertex som har dens geometri definert som et punkt. MERKNAD Enhetstilpasset fra vertex punkt definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Domenet til vertex er formelt definert som det samme området som vertex punktet. bSI Dokumentasjon"
 
-#:IFC.xml:38812
-msgid "IfcMechanicalFastener"
-msgstr "IfcMechanicalFastener"
+#:IFC.xml:12848
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "VertexGeometri"
 
-msgid "IfcMechanicalFastener_DEFINITION"
-msgstr "Mekaniske festemidler som forbinder bygningsdeler eller deler mekanisk. En enkelt forekomst av denne klassen kan representere én eller mange faktiske mekaniske festemidler, for eksempel en liste med skruer eller en spikerplate. HISTORY Ny enhet i IFC2x2 IFC4 CHANGE Supertype endret fra [[IfcFastener]] til [[IfcElementComponent]]. Attributt fordefinertType lagt til. Attributter NominalDiameter og NominalLength avskrevet. BSI Dokumentasjon"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "VertexGeometri"
 
-#:IFC.xml:38821
-msgid "IfcMechanicalFastener_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:44596
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som beskriver tverrsnittets størrelse av festemiddeltypen, X0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Deprecated the respective attribute of [[IfcMechanicalFastenerType]] bør brukes i stedet."
-
-#:IFC.xml:38826
-msgid "IfcMechanicalFastener_NominalLength"
-msgstr "Nominell lengde"
-
-msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
-msgstr "Den nominelle lengden som beskriver spikerplatens langsgående dimensjoner. X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Deprecated the respective attribute of [[IfcMechanicalFastenerType]] bør brukes i stedet."
-
-#:IFC.xml:38831
-msgid "IfcMechanicalFastener_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38851
-msgid "IfcMechanicalFastenerType"
-msgstr "IfcMechanicalFastenerType"
-
-msgid "IfcMechanicalFastenerType_DEFINITION"
-msgstr "Elementkomponenttypen [[IfcMechanicalFastenerType]] definerer vanlig delt informasjon for forekomst av mekaniske festemidler. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap og angir felles framstillinger av bygningsdelenes felles materialer, felles sammensetning, og det brukes til å definere en spesifikasjon av mekaniske festemidletype, som angir den spesifikke produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcMechanicalFastenerType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcMechanicalFastenerType]] er representert ved tilfeller av [[IfcMechanicalFastener]]. HISTORY Ny enhet i IFC2x2 IFC4 CHANGE Supertype endret fra [[IfcFastenerType]] til [[IfcElementComponentType]]. Attributter fordefinertType , nominalDiameter, NominalLengde. Klassifisering Bruk Definisjon Mekaniske festemidler, spesielt skruer, er ofte standardisert. For å vise til en formell betegnelse på festemidler etter en standard et produktnorm , [[IfcRelAssociatesClassification]] bør brukes sammen med [[IfcClassificationReference]] [[IfcClassificationReference]].Identifikasjon inneholder en lesbar form av den formelle festemiddelbetegnelsen fra normen. Eksempel M16X80 10.9 HV for en høyfast skruesett av bærende skruesett for forspenning med sekskantbolt og mutter. På den annen side inneholder [[IfcMechanicalFastenerType]].Name et utvisbart navn som kanskje ikke nødvendigvis er det samme som den formelle betegnelsen. [[IfcClassificationReference]].Navn har kort navn på festemiddelnormen. Eksempel NS-EN 14399 4 som den respektive europeiske standarden for høyfast sekskantskruer. Eventuelt kan normalen beskrives nærmere ved [[IfcClassificationReference]]. eferencedSource , inkludert informasjon som utgiver og dato for utstedelse av normen. Videre kan [[IfcRelAssociatesLibrary]] sammen med [[IfcLibraryReference]] brukes til å referere til et bibliotek som inneholder festemiddeldefinisjoner. bSI-dokumentasjon"
-
-#:IFC.xml:38856
-msgid "IfcMechanicalFastenerType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38861
-msgid "IfcMechanicalFastenerType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som beskriver tverrsnittsstørrelsen på festemiddeltypen."
-
-#:IFC.xml:38866
-msgid "IfcMechanicalFastenerType_NominalLength"
-msgstr "Nominell lengde"
-
-msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
-msgstr "Den nominelle lengden som beskriver spikerplatens langsgående dimensjoner."
-
-#:IFC.xml:38885
-msgid "IfcMechanicalFastenerTypeEnum"
-msgstr "IfcMechanicalFastenerTypeEnum"
-
-msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
-msgstr "Dette nummereringen definerer de ulike typene mekaniske raskere. HISTORY ny rangering i IFC4. bSI-dokumentasjon"
-
-#:IFC.xml:38908
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
-msgstr "KUPLER"
-
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
-msgstr "KUPLER"
-
-#:IFC.xml:38905
-msgid "IfcMechanicalFastenerTypeEnum_BOLT"
-msgstr "TILBAKESTILL"
-
-msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
-msgstr "En gjenget sylindrisk stav som er i en mutter og på samme måte har et gjenget hull eller en annen del som danner en festemiddel. Den mekaniske festemidlet omfatter ofte én eller flere underlagsskiver og ett eller flere muttere."
-
-#:IFC.xml:38913
-msgid "IfcMechanicalFastenerTypeEnum_ROPE"
-msgstr "ROPE"
-
-msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
-msgstr "en lengde på tykk hard streng som dannes ved å tvinge sammen tråder av hempe, sisal, nylon eller lignende materiale, som primært brukes til ankerfartøyer"
-
-#:IFC.xml:39367
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
-msgstr "RAILJOINT"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
-msgstr "En mekanisk montasje med f.eks. fiskeplater som henger i to skinne med valgfri isolasjon eller ekspansjonskapasitet ."
-
-#:IFC.xml:38907
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
-msgstr "KJØP"
-
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
-msgstr "en rekke forbundne metallringer brukt til å feste eller til å sikre noe, eller til å trekke laster."
-
-#:IFC.xml:38915
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
-msgstr "DOSEPOSE"
-
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
-msgstr "En ringkontakt som er godkjent ved å ringe nøkkelveier i de sammenkoblede delene eller en tannformet eller firkantet kobling som trykkes inn i de innfestede stykkene."
-
-#:IFC.xml:38910
-msgid "IfcMechanicalFastenerTypeEnum_NAIL"
-msgstr "NAIL"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
-msgstr "Et tynt spiss metallstykke som slås fast i materialer som en rasker."
-
-#:IFC.xml:38901
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
-msgstr "ANSKJØR"
-
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
-msgstr "En spesiell skrue som er forankret i betong, stein eller murverk."
-
-#:IFC.xml:38917
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
-msgstr "STUDSHEARCONNECTOR"
-
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
-msgstr "Skrueforbindelser er sylindriske festedeler med et hode på den ene siden. På den andre siden sveises de på stålkomponenter for bruk i samvirkekonstruksjoner av stål og betong."
-
-#:IFC.xml:38909
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
-msgstr "DOWEL"
-
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
-msgstr "En sylindrisk stang som kjøres inn i hullene i de sammenkoblede delene."
-
-#:IFC.xml:38912
-msgid "IfcMechanicalFastenerTypeEnum_RIVET"
-msgstr "SKRIFT"
-
-msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
-msgstr "En festedel med hode i den ene enden og den andre enden med et flatt slag etter å ha passert hull i stykkene som er festet sammen."
-
-#:IFC.xml:38914
-msgid "IfcMechanicalFastenerTypeEnum_SCREW"
-msgstr "SKJUL"
-
-msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
-msgstr "En festemiddel med en nedgradert gjenget skaft og et avlange hode."
-
-#:IFC.xml:38911
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
-msgstr "NEDLAG"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
-msgstr "Et stykke metall med punkter, som overlapper de sammenkoblede brikkene, og presses inn i materialet."
-
-#:IFC.xml:38916
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
-msgstr "STAPLE"
-
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
-msgstr "Et dobbelt spiss stykke metall som slås sammen til materialer som en raskere."
-
-#:IFC.xml:39381
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
-msgstr "RAILFASTENING"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
-msgstr "En sammenstilling av komponenter som sikrer en skinne til støttekonstruksjonen og beholder den på det nødvendige stedet mens den tillater nødvendig vertikal, sideveis og langsgående bevegelse. Merk definisjonen fra NS-EN 13481"
-
-#:IFC.xml:38918
-msgid "IfcVibrationDamper"
-msgstr "hviskVibrasjonSkade"
-
-msgid "IfcVibrationDamper_DEFINITION"
-msgstr "En vibrasjonsdemping er en innretning som brukes for å minimere virkningen av vibrasjoner i en konstruksjon ved å dissipere kinetisk energi. Djederen kan være passiv, friksjonell, treghet eller aktiv i et system som bruker sensorer og aktuatorer . bSI dokumentasjon"
-
-#:IFC.xml:38929
-msgid "IfcVibrationDamper_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVibrationDamper_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38941
-msgid "IfcVibrationDamperType"
-msgstr "IfcVibrationDamperType"
-
-msgid "IfcVibrationDamperType_DEFINITION"
-msgstr "bSI dokumentasjon"
-
-#:IFC.xml:38948
-msgid "IfcVibrationDamperType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVibrationDamperType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38960
-msgid "IfcVibrationDamperTypeEnum"
-msgstr "IfcVibrationDamperTypeEnum"
-
-msgid "IfcVibrationDamperTypeEnum_DEFINITION"
-msgstr "Denne beholderen definerer de ulike forhåndsdefinerte typene vibrasjonsspjeld som kan angi en [[IfcImpactProtectionDevice]] eller [[IfcImpactProtectionDeviceType]]. bSI-dokumentasjon"
-
-#:IFC.xml:38970
-msgid "IfcVibrationDamperTypeEnum_FRICTION"
-msgstr "FRIKSJON"
-
-msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
-msgstr "Friksjonstypen er en demper som bruker friksjon som virker på kontaktflaten til et materiale."
-
-#:IFC.xml:38969
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
-msgstr "SLUTTENDE YIELD"
-
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
-msgstr "En forskyvningsavhengig damp der kraften som genereres, bestemmes av den plastiske tøyningen som bruker plastiske deformasjoner i stålmaterialet. Bøyningsflyten er en demper som gir stålmateriale ved bøying."
-
-#:IFC.xml:38971
-msgid "IfcVibrationDamperTypeEnum_RUBBER"
-msgstr "RUBBER"
-
-msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
-msgstr "Gummiparken er en fuktig som absorberer energi ved å benytte deformasjon av laminert gummi. Forskjellen mellom den seismiske isolasjonen og gummistempelen er om de skal bære vekten av de øvre konstruksjonene eller ikke. Gummispjeld overfører ikke vekten av de øvre konstruksjonene til underkonstruksjonen."
-
-#:IFC.xml:38972
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
-msgstr "HØR YIELD"
-
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
-msgstr "En forskyvningsavhengig damp der kraften som genereres, bestemmes av den plastiske tøyningen som bruker plastiske deformasjoner i stålmaterialet. Det skjærende flytegrenset er en demper som får stålmaterialet til å flyte for deformasjon i den retningen som konstruksjonsdelen står vinkelrett på."
-
-#:IFC.xml:38973
-msgid "IfcVibrationDamperTypeEnum_VISCOUS"
-msgstr "Finlands"
-
-msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
-msgstr "Den tyktflytende typen er en damp som absorberer energien ved å benytte motstanden til et viskøst organ."
-
-#:IFC.xml:38968
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
-msgstr "AXIAL YIELD"
-
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
-msgstr "En forskyvningsavhengig damp der kraften som genereres, bestemmes av den plastiske tøyningen som bruker plastiske deformasjoner i stålmaterialet. Den aksiale flytegrensen er en dempning som gir energi ved å absorbere stålmaterialet mot deformasjon i aksialretningen; det vil si i retning av utvidelse og kontraksjon."
-
-#:IFC.xml:38989
-msgid "Pset_DiscreteAccessoryColumnShoe"
-msgstr "Pset DiscreteAccessoryColumnShoe"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
-msgstr "Formegenskaper som er vanlige for kolonnesko. bSI dokumentasjon"
-
-#:IFC.xml:38990
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth"
-msgstr "ColumnShoeBasePlateDepth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth_DEFINITION"
-msgstr "Dybden på skoen på søylefotplaten."
-
-#:IFC.xml:38995
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness"
-msgstr "ColumnShoeBasePlateThickness"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness_DEFINITION"
-msgstr "Tykkelsen på søylens bunnplate."
-
-#:IFC.xml:39000
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth"
-msgstr "KolnShoeBasePlateBredde"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth_DEFINITION"
-msgstr "Bredden på skalaens bunnplate."
-
-#:IFC.xml:39005
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth"
-msgstr "ColumnShoeCasingDepth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth_DEFINITION"
-msgstr "Dybden på søylens sko fôringsrør"
-
-#:IFC.xml:39010
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight"
-msgstr "KolonneplaseHøyde"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight_DEFINITION"
-msgstr "Høyden på søylen som støttes."
-
-#:IFC.xml:39015
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth"
-msgstr "KolonneKasingBredde"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth_DEFINITION"
-msgstr "Bredden på søylen av fôringsrøret til kolonnen."
-
-#:IFC.xml:39199
-msgid "Pset_ElementComponentCommon"
-msgstr "Pset elementkomponenter Vanlige"
-
-msgid "Pset_ElementComponentCommon_DEFINITION"
-msgstr "Sett med vanlige egenskaper for komponentene, spesielt separat tilbehør, men også for festemidler, armeringselselementer eller andre typer komponenter . bSI dokumentasjon"
-
-#:IFC.xml:39200
-msgid "Pset_ElementComponentCommon_CorrosionTreatment"
-msgstr "KorrosjonBehandling"
-
-msgid "Pset_ElementComponentCommon_CorrosionTreatment_DEFINITION"
-msgstr "Bestemmer korrosjonsbehandling for metallkomponenter. Denne egenskapen gis hvis kravet må uttrykkes en uavhengig av en materialspesifikasjon og b som en enestående kravspesifikasjon i stedet for en arbeidsplastisk behandlingsfunksjon."
-
-#:IFC.xml:39205
-msgid "Pset_ElementComponentCommon_DeliveryType"
-msgstr "Leveransetype"
-
-msgid "Pset_ElementComponentCommon_DeliveryType_DEFINITION"
-msgstr "Angir hvordan tilbehøret skal leveres til nettstedet."
-
-#:IFC.xml:39210
-msgid "Pset_ElementComponentCommon_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ElementComponentCommon_Reference_DEFINITION"
-msgstr "Referanse-ID for denne typen i dette prosjektet, f.eks. type A 1, , også referert til som byggetype . Som et alternativ til navnet på objekttypen bør det fremlegges som et alternativ hvis programvaren ikke støtter objekttyper."
-
-#:IFC.xml:39215
-msgid "Pset_ElementComponentCommon_Status"
-msgstr "Status:"
-
-msgid "Pset_ElementComponentCommon_Status_DEFINITION"
-msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
-
-#:IFC.xml:39221
-msgid "Pset_FastenerWeld"
-msgstr "Pset FastenerWeld"
-
-msgid "Pset_FastenerWeld_DEFINITION"
-msgstr "Egenskaper knyttet til sveiste forbindelser. bSI-dokumentasjon"
-
-#:IFC.xml:39222
-msgid "Pset_FastenerWeld_a"
-msgstr "en"
-
-msgid "Pset_FastenerWeld_a_DEFINITION"
-msgstr "Mål a i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39227
-msgid "Pset_FastenerWeld_c"
-msgstr "c"
-
-msgid "Pset_FastenerWeld_c_DEFINITION"
-msgstr "Mål c i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39232
-msgid "Pset_FastenerWeld_d"
-msgstr "D"
-
-msgid "Pset_FastenerWeld_d_DEFINITION"
-msgstr "Mål d i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39237
-msgid "Pset_FastenerWeld_e"
-msgstr "e"
-
-msgid "Pset_FastenerWeld_e_DEFINITION"
-msgstr "Tiltak i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39242
-msgid "Pset_FastenerWeld_Intermittent"
-msgstr "Periodisk"
-
-msgid "Pset_FastenerWeld_Intermittent_DEFINITION"
-msgstr "Om kilsveis, oppdelt eller ikke"
-
-#:IFC.xml:39247
-msgid "Pset_FastenerWeld_l"
-msgstr "L"
-
-msgid "Pset_FastenerWeld_l_DEFINITION"
-msgstr "Mål l i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39252
-msgid "Pset_FastenerWeld_n"
-msgstr "n"
-
-msgid "Pset_FastenerWeld_n_DEFINITION"
-msgstr "Tell n i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39257
-msgid "Pset_FastenerWeld_Process"
-msgstr "Prosess"
-
-msgid "Pset_FastenerWeld_Process_DEFINITION"
-msgstr "Referansenummer til sveisemetoden i henhold til NS-EN ISO 4063 – et antall med en inntil tre sifre"
-
-#:IFC.xml:39262
-msgid "Pset_FastenerWeld_ProcessName"
-msgstr "ProsessNavn"
-
-msgid "Pset_FastenerWeld_ProcessName_DEFINITION"
-msgstr "Navn på sveisemetoden. Alternativ til egenskapen numerisk prosess."
-
-#:IFC.xml:39267
-msgid "Pset_FastenerWeld_s"
-msgstr "S"
-
-msgid "Pset_FastenerWeld_s_DEFINITION"
-msgstr "Mål i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39272
-msgid "Pset_FastenerWeld_Staggered"
-msgstr "forskjøvet"
-
-msgid "Pset_FastenerWeld_Staggered_DEFINITION"
-msgstr "Om oppdelt sveis, forskjøvet eller ikke"
-
-#:IFC.xml:39277
-msgid "Pset_FastenerWeld_Surface1"
-msgstr "Overflate1"
-
-msgid "Pset_FastenerWeld_Surface1_DEFINITION"
-msgstr "Aspekt på overflaten av sveisesømmen, dvs. planet, buet eller hul. Kombinerte sveiser er gitt med to tilhørende symboler, analogt til type 1 og type 2."
-
-#:IFC.xml:39282
-msgid "Pset_FastenerWeld_Surface2"
-msgstr "Overflate2"
-
-msgid "Pset_FastenerWeld_Surface2_DEFINITION"
-msgstr "Se Surface1."
-
-#:IFC.xml:39287
-msgid "Pset_FastenerWeld_Type1"
-msgstr "Type1"
-
-msgid "Pset_FastenerWeld_Type1_DEFINITION"
-msgstr "Type sveis i samsvar med NS-EN ISO 2553. Merknad, kombinerte sveiser er gitt med to symboler i retningen på den normale aksen til koordinatsystemet. For eksempel er en X-sveis angitt med type 1 V og type 2 V."
-
-#:IFC.xml:39292
-msgid "Pset_FastenerWeld_Type2"
-msgstr "Type2"
-
-msgid "Pset_FastenerWeld_Type2_DEFINITION"
-msgstr "Se type 1."
-
-#:IFC.xml:39297
-msgid "Pset_FastenerWeld_z"
-msgstr "z"
-
-msgid "Pset_FastenerWeld_z_DEFINITION"
-msgstr "Mål z i henhold til NS-EN ISO 2553"
-
-#:IFC.xml:39303
-msgid "Pset_MechanicalFastenerAnchorBolt"
-msgstr "Pset MechanicalFastenerAnchorBolt"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
-msgstr "Egenskaper felles for forskjellige typer ankerbolt. bSI dokumentasjon"
-
-#:IFC.xml:39304
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter"
-msgstr "AnkerBoltDiameter"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter_DEFINITION"
-msgstr "Den nominelle diameteren til fundamentbolten s ."
-
-#:IFC.xml:39309
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength"
-msgstr "AnkerBoltLengde"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength_DEFINITION"
-msgstr "Lengden av fundamentbolten"
-
-#:IFC.xml:39314
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength"
-msgstr "AnkerBoltProtrusionLengde"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength_DEFINITION"
-msgstr "Lengden på den utstikkende delen av fundamentbolten."
-
-#:IFC.xml:39319
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength"
-msgstr "AnkerBoltThreadLengde"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength_DEFINITION"
-msgstr "Lengden på den gjengede delen av fundamentbolten."
-
-#:IFC.xml:39325
-msgid "Pset_MechanicalFastenerBolt"
-msgstr "Pset MechanicalFastBolt"
-
-msgid "Pset_MechanicalFastenerBolt_DEFINITION"
-msgstr "Egenskaper knyttet til skruetypen kan monteres ved hjelp av egenskapene til et helt sett med skrue, underlagsskiver og mutter. Merk at det vanligvis ikke er nødvendig å overføre disse egenskapene ved standardiserte bolter. I stedet vises det til standarden til bokstav SI-dokumentasjon."
-
-#:IFC.xml:39326
-msgid "Pset_MechanicalFastenerBolt_HeadShape"
-msgstr "Hodeform"
-
-msgid "Pset_MechanicalFastenerBolt_HeadShape_DEFINITION"
-msgstr "Form på skruehodet, f.eks. seksagon, hodekorn , ost"
-
-#:IFC.xml:39331
-msgid "Pset_MechanicalFastenerBolt_KeyShape"
-msgstr "Nøkkelform"
-
-msgid "Pset_MechanicalFastenerBolt_KeyShape_DEFINITION"
-msgstr "Hvis aktuelt, form på hodet s spor, f.eks. spor , Allen"
-
-#:IFC.xml:39336
-msgid "Pset_MechanicalFastenerBolt_NutsCount"
-msgstr "Ernæringsantall"
-
-msgid "Pset_MechanicalFastenerBolt_NutsCount_DEFINITION"
-msgstr "Antall muttere som skal monteres på én skrue"
-
-#:IFC.xml:39341
-msgid "Pset_MechanicalFastenerBolt_NutShape"
-msgstr "Ernæringsinnhold"
-
-msgid "Pset_MechanicalFastenerBolt_NutShape_DEFINITION"
-msgstr "Form på mutteren, for eksempel Hexagon , Cap , Castle , Wing"
-
-#:IFC.xml:39346
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter"
-msgstr "Tråd Diameter"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter_DEFINITION"
-msgstr "Nominell diameter for gjengene hvis de avviker fra skruene for største nominelle diameter"
-
-#:IFC.xml:39351
-msgid "Pset_MechanicalFastenerBolt_ThreadLength"
-msgstr "Tråd Lengde"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadLength_DEFINITION"
-msgstr "Nominell lengde for gjengene"
-
-#:IFC.xml:39356
-msgid "Pset_MechanicalFastenerBolt_WashersCount"
-msgstr "Bearbeidertelling"
-
-msgid "Pset_MechanicalFastenerBolt_WashersCount_DEFINITION"
-msgstr "Antall underlagsskiver som skal monteres på én skrue"
-
-#:IFC.xml:39361
-msgid "Pset_MechanicalFastenerBolt_WasherShape"
-msgstr "WasherForm"
-
-msgid "Pset_MechanicalFastenerBolt_WasherShape_DEFINITION"
-msgstr "Form på underlagsskivene, f.eks. Standard , Kvadrat"
-
-#:IFC.xml:39399
-msgid "IfcImpactProtectionDevice"
-msgstr "IfcImpactProtectionEnhet"
-
-msgid "IfcImpactProtectionDevice_DEFINITION"
-msgstr "En støtbeskyttelsesinnretning er en komponent som brukes til å beskytte andre bygningsdeler mot kinetisk skade. slagbeskyttelsesinnretninger kommer i 3 ulike varianter En vibrasjonsdemper som brukes for å minimere virkningen av vibrasjoner i en konstruksjon ved å fjerne kinetisk energi. Djederen kan være passiv elastisk, friksjonell, treghet eller aktiv i et system med sensorer og aktuatorer . En vibrasjonsisolator brukes til å minimere virkningene av vibrasjonsoverføring i en konstruksjon. Innvirkingsenheter som demonterer kinetisk energi fra virkende elementer, for eksempel ved deformasjon eller elastisk mekanikk."
-
-#:IFC.xml:39400
-msgid "IfcImpactProtectionDevice_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcImpactProtectionDevice_PredefinedType_DEFINITION"
-msgstr "Identifiserer den forhåndsdefinerte typen støtinnretning som den modelleres fra, kan settes. Denne typen kan knytte spesifikke sett til tilleggsegenskaper. MERKNAD Forhåndsdefinert type skal bare brukes hvis ingen [[IfcImpactProtectionDeviceType]] er tildelt, som gir sin egen [[IfcImpactProtectionDeviceType].PredefinedType."
-
-#:IFC.xml:39419
-msgid "IfcImpactProtectionDeviceType"
-msgstr "IfcImpactProtectionDeviceType"
-
-msgid "IfcImpactProtectionDeviceType_DEFINITION"
-msgstr "[[IfcImpactProtectionDeviceType]] gir typen informasjon for [[IfcImpactProtectionDevice]] forekomster. En støtbeskyttelsesinnretning er en komponent som brukes til å beskytte andre bygningsdeler mot kinetisk skade."
-
-#:IFC.xml:39420
-msgid "IfcImpactProtectionDeviceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcImpactProtectionDeviceType_PredefinedType_DEFINITION"
-msgstr "Identifiserer den forhåndsdefinerte typen av en støtinnretning som den modelleres fra, kan settes."
-
-#:IFC.xml:39439
-msgid "IfcImpactProtectionDeviceTypeEnum"
-msgstr "IfcImpactProtectionDeviceTypeEnum"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DEFINITION"
-msgstr "Denne beholderen definerer de ulike forhåndsdefinerte typene kinetiske støtbeskyttelse som kan angi en [[IfcImpactProtectionDevice]eller [[IfcImpactProtectionDeviceType]]."
-
-#:IFC.xml:41012
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION"
-msgstr "CRASHCUSHION"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION_DEFINITION"
-msgstr "MERKNAD Definisjon fra NS-EN 1317 1 2010 energiabsorberende utstyr for kjøretøyer installert for én eller flere farer for å redusere alvorlighetsgraden av impact MERKNAD Definisjon fra ISO6707 1 energiabsorberende innretning installert foran et stivt objekt for å redusere alvorlighetsgraden av virkningen av et kjøretøy, Impact barrier, US"
-
-#:IFC.xml:40564
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM"
-msgstr "DAMPINGSYSTEM"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM_DEFINITION"
-msgstr "Et elastisk element som er satt inn mellom overstruktursporet og platen på dekke eller ballastseng med ballast satt inn og tunnelstolpe. Noen av de elastiske konstruksjonsdelene har en delvis dekomplingseffekt mellom overkonstruksjonen og undergrunnen forårsaket av vibrasjoner. Både spiralfjærer og elastomerblokker eller elastomerstrimler kan brukes i opphengssystemer."
-
-#:IFC.xml:38811
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER"
-msgstr "FENDER"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER_DEFINITION"
-msgstr "En passiv eller aktiv innretning dannet av en demper og et støtpanel som er montert på kaisiden for å beskytte mot fartøystøt."
-
-#:IFC.xml:40563
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER"
-msgstr "KJØP"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER_DEFINITION"
-msgstr "En støtfanger er et bufferobjekt på slutten av sporet som forhindrer kjøring over. Den kan festes på skinner eller i skinnepanelet, eller den kan også være et naturlig element, f.eks. stein, sand ."
-
-#:IFC.xml:39445
-msgid "Pset_DiscreteAccessoryOccurenceCableArranger"
-msgstr "Pset DiscreteAccessoryOccurenceCableArranger"
-
-#:IFC.xml:39446
-msgid "Pset_BalanceWeightTensioner"
-msgstr "Pset BalanceWeightTensioner"
-
-msgid "Pset_BalanceWeightTensioner_DEFINITION"
-msgstr "Automatisk strekkpåkjenning ofte forbundet med en søyle for å sikre konstant strekk i ledere ved hjelp av balansevekter."
-
-#:IFC.xml:39448
-msgid "Pset_HydraulicTensioner"
-msgstr "Pset HydraulicTensioner"
-
-msgid "Pset_HydraulicTensioner_DEFINITION"
-msgstr "Automatisk strekkpåkjenning ofte forbundet med en søyle for å sikre konstant strekk i ledere ved hjelp av Hydraulics."
-
-#:IFC.xml:39450
-msgid "Pset_RailJoint"
-msgstr "Sette Jernblader"
-
-msgid "Pset_RailJoint_DEFINITION"
-msgstr "Bygningen som er satt av til å skille mellom forskjellige typer jernbaneforbindelser."
-
-#:IFC.xml:39451
-msgid "Pset_RailJoint_IsInsulated"
-msgstr "Isisolert"
-
-msgid "Pset_RailJoint_IsInsulated_DEFINITION"
-msgstr "Isisolert"
-
-#:IFC.xml:39456
-msgid "Pset_RailJoint_IsTemporary"
-msgstr "Midlertidig"
-
-msgid "Pset_RailJoint_IsTemporary_DEFINITION"
-msgstr "Midlertidig"
-
-#:IFC.xml:39462
-msgid "Pset_RailJoint_Welded"
-msgstr "Sette RailJoint Welded"
-
-msgid "Pset_RailJoint_Welded_DEFINITION"
-msgstr "Bygningen som brukes til å skille mellom de sveiste jernbaneforbindelsene."
-
-#:IFC.xml:39463
-msgid "Pset_RailJoint_Welded_IsInsulated"
-msgstr "Isisolert"
-
-msgid "Pset_RailJoint_Welded_IsInsulated_DEFINITION"
-msgstr "Isisolert"
-
-#:IFC.xml:39468
-msgid "Pset_RailJoint_Welded_IsTemporary"
-msgstr "Midlertidig"
-
-msgid "Pset_RailJoint_Welded_IsTemporary_DEFINITION"
-msgstr "Midlertidig"
-
-#:IFC.xml:39474
-msgid "Pset_SpringTensioner"
-msgstr "Pset SpringTensioner"
-
-msgid "Pset_SpringTensioner_DEFINITION"
-msgstr "Automatisk strekkpåkjenning ofte forbundet med en søyle for å sikre konstant strekk i ledere eller registreringskabler i tverrspenn ved hjelp av fjærer."
-
-#:IFC.xml:39476
-msgid "Pset_Railpad"
-msgstr "Sette Skinnestift"
-
-#:IFC.xml:39478
-msgid "Pset_RailFasteningGeneral"
-msgstr "Fest RailFasteningGeneral"
-
-#:IFC.xml:39479
-msgid "Pset_MechanicalFastener"
-msgstr "Pset MechanicalFastener"
-
-#:IFC.xml:39480
-msgid "Pset_MechanicalFastener_IsInsulated"
-msgstr "Isisolert"
-
-msgid "Pset_MechanicalFastener_IsInsulated_DEFINITION"
-msgstr "Isisolert"
-
-#:IFC.xml:39488
-msgid "IfcImpactProtectionDeviceTypeSelect"
-msgstr "IfcImpactProtectionEnviceTypeVelg"
-
-msgid "IfcImpactProtectionDeviceTypeSelect_DEFINITION"
-msgstr "Dette er et valg av nummereringer som skal gi muligheter for grupper av forhåndsdefinerte typer for en [[IfcImpactProtectionDevice]eller [[IfcImpactProtectionDeviceType]]."
+msgid "IfcShell_DEFINITION"
+msgstr "En type som består av ulike skall. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne typen samler sammen, referanse for ved konstruksjon av mer komplekse modeller, undertyper som har egenskaper ved et skall. Et skall er et forbundet objekt med en fast dimensjon d 0 1 eller 2, som vanligvis brukes til å binde en region. Domenet til et helvete, hvis mulig, inneholder sine grenser og 0 A dimensjonalskall 0 representeres av en graf som består av et enkelt vertspunkt. vertex skal ikke ha noen tilknyttede kanter. Et dimensjonal 1 er representert med et tilkoblet graf med dimensjonal 1. En dimensjonalitetskall 2 er en topologisk enhet laget av flater langs skråninger. Bestandens domene, dersom det finnes, er et koblet, orientert 2 manifold med grenseverdi, det vil si, koplet, orientert overflate, ikke-kryssende overflate, som kan lukkes eller åpnes. MERKNAD Type tilpasset fra skall definert i NS-EN ISO 10303 42. Ny type HISTORY i IFC2x."
 
