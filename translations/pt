@@ -9,394 +9,237 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcActorResource.pot\n"
-"X-Crowdin-File-ID: 20\n"
+"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
+"X-Crowdin-File-ID: 102\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2021-02-11 15:46\n"
+"PO-Revision-Date: 2021-02-11 15:47\n"
 
-#:IFC.xml:16
-msgid "IfcActorRole"
-msgstr "IfcActorRole"
+#:IFC.xml:44624
+msgid "IfcApplication"
+msgstr "Aplicativo"
 
-msgid "IfcActorRole_DEFINITION"
-msgstr "Esta entidade indica um papel que é executado por um ator ou por uma pessoa relacionada a uma organização. NOTA: A lista de funções dos valores de enumeração do atributo Função nunca pode ser concluída. Portanto, usando o valor de enumeração USERDEFINIDO, o usuário pode fornecer qualquer função como um valor do atributo UserDefinedRole . NOTE Entidade adaptada do papel da organização e do papel de pessoa definido no ISO 10303 41. HISTÓRIA nova entidade na documentação IFC1.5.1. bSI"
+msgid "IfcApplication_DEFINITION"
+msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5. bSI Documentation"
 
-#:IFC.xml:86
-msgid "IfcActorRole_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:189
+msgid "IfcApplication_ApplicationDeveloper"
+msgstr "ApplicationDeveloper"
 
-msgid "IfcActorRole_HasExternalReference_DEFINITION"
-msgstr "HasExternalReference"
+msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
+msgstr "ApplicationDeveloper"
 
-#:IFC.xml:21
-msgid "IfcActorRole_Role"
-msgstr "Funções"
+#:IFC.xml:44633
+msgid "IfcApplication_Version"
+msgstr "Version"
 
-msgid "IfcActorRole_Role_DEFINITION"
-msgstr "O nome do papel desempenhado por um ator. Se a função tem o valor USUÁRIO e, em seguida, X 0D a função definida pelo usuário será fornecida como um valor do atributo UserDefinedRole."
+msgid "IfcApplication_Version_DEFINITION"
+msgstr "The version number of this software as specified by the developer of the application."
 
-#:IFC.xml:26
-msgid "IfcActorRole_UserDefinedRole"
-msgstr "Papel"
+#:IFC.xml:44638
+msgid "IfcApplication_ApplicationFullName"
+msgstr "ApplicationFullName"
 
-msgid "IfcActorRole_UserDefinedRole_DEFINITION"
-msgstr "Permite a especificação de funções definidas pelo usuário além dos valores de enumeração X 0D fornecidos pelo Papel atributo do tipo [[IfcRoleEnum]]. X 0D Quando um valor é fornecido para atributo UserDefinedRole em paralelo X 0D, a função de atributo deve ter o valor de enumeração USERDEFINADO."
+msgid "IfcApplication_ApplicationFullName_DEFINITION"
+msgstr "The full name of the application as specified by the application developer."
 
-#:IFC.xml:31
-msgid "IfcActorRole_Description"
-msgstr "Descrição:"
+#:IFC.xml:44643
+msgid "IfcApplication_ApplicationIdentifier"
+msgstr "ApplicationIdentifier"
 
-msgid "IfcActorRole_Description_DEFINITION"
-msgstr "Uma descrição textual relacionada com a natureza do papel desempenhado por um ator."
+msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
+msgstr "Short identifying name for the application."
 
-#:IFC.xml:98
-msgid "IfcAddress"
-msgstr "IfcEndereço"
+#:IFC.xml:44673
+msgid "IfcChangeActionEnum"
+msgstr "IfcChangeActionEnum"
 
-msgid "IfcAddress_DEFINITION"
-msgstr "Esta entidade abstrata representa vários tipos de endereços postais e de telecomunicações. NOTE Entidade adaptada do endereço definido no ISO 10303 41. HISTÓRIA Nova entidade na documentação IFC1.5.1. bSI"
+msgid "IfcChangeActionEnum_DEFINITION"
+msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed bSI Documentation"
 
-#:IFC.xml:120
-msgid "IfcAddress_OfPerson"
-msgstr "Soldado"
+#:IFC.xml:44680
+msgid "IfcOwnerHistory"
+msgstr "IfcOwnerHistory"
 
-msgid "IfcAddress_OfPerson_DEFINITION"
-msgstr "Soldado"
+msgid "IfcOwnerHistory_DEFINITION"
+msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate. bSI Documentation"
 
-#:IFC.xml:134
-msgid "IfcAddress_OfOrganization"
-msgstr "Oferta"
+#:IFC.xml:329
+msgid "IfcOwnerHistory_LastModifyingUser"
+msgstr "LastModifyingUser"
 
-msgid "IfcAddress_OfOrganization_DEFINITION"
-msgstr "Oferta"
+msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
+msgstr "LastModifyingUser"
 
-#:IFC.xml:103
-msgid "IfcAddress_Purpose"
-msgstr "Objetivo"
+#:IFC.xml:341
+msgid "IfcOwnerHistory_OwningUser"
+msgstr "OwningUser"
 
-msgid "IfcAddress_Purpose_DEFINITION"
-msgstr "Identifica a localização lógica do endereço."
+msgid "IfcOwnerHistory_OwningUser_DEFINITION"
+msgstr "OwningUser"
 
-#:IFC.xml:108
-msgid "IfcAddress_Description"
-msgstr "Descrição:"
+#:IFC.xml:44649
+msgid "IfcOwnerHistory_OwningApplication"
+msgstr "OwningApplication"
 
-msgid "IfcAddress_Description_DEFINITION"
-msgstr "Texto que relaciona a natureza do endereço."
+msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
+msgstr "OwningApplication"
 
-#:IFC.xml:113
-msgid "IfcAddress_UserDefinedPurpose"
-msgstr "Propósito"
+#:IFC.xml:44661
+msgid "IfcOwnerHistory_LastModifyingApplication"
+msgstr "LastModifyingApplication"
 
-msgid "IfcAddress_UserDefinedPurpose_DEFINITION"
-msgstr "Permite a especificação da finalidade do usuário específica do endereço além dos valores de enumeração X 0D fornecidos por Finalidade do atributo do tipo [[IfcAddressTypeEnum]]. X 0D quando um valor é fornecido para o atributo UserDefinedPurpose, em paralelo o propósito do atributo X 0D deve ter o valor de enumeração USERDEFINIDO."
+msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
+msgstr "LastModifyingApplication"
 
-#:IFC.xml:148
-msgid "IfcAddressTypeEnum"
-msgstr "IfcAddressTypeEnum"
+#:IFC.xml:44685
+msgid "IfcOwnerHistory_State"
+msgstr "State"
 
-msgid "IfcAddressTypeEnum_DEFINITION"
-msgstr "Esta enumeração identifica a localização lógica do endereço. HISTORY Nova enumeração na documentação IFC2x. bSI"
+msgid "IfcOwnerHistory_State_DEFINITION"
+msgstr "Enumeration that defines the current access state of the object."
 
-#:IFC.xml:155
-msgid "IfcOrganization"
-msgstr "Organização"
+#:IFC.xml:44690
+msgid "IfcOwnerHistory_ChangeAction"
+msgstr "ChangeAction"
 
-msgid "IfcOrganization_DEFINITION"
-msgstr "Um agrupamento nomeado e estruturado com uma identidade corporativa. NOTA: As relações entre [[IfcOrganization]], como entre o departamento dentro de uma empresa, podem ser expressas usando o relacionamento objetivo [[IfcOrganizationRelationship]]. NOTE Entidade adaptada da organização definida no ISO 10303 41. HISTÓRIA nova entidade no IFC1. .1. .change ifc2x4 IFC4 ID do Atributo CHANGE renomeado para identificação . Documentação bSI"
+msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
+msgstr "Enumeration that defines the actions associated with changes made to the object."
 
-#:IFC.xml:74
-msgid "IfcOrganization_Roles"
-msgstr "Papéis"
+#:IFC.xml:44695
+msgid "IfcOwnerHistory_LastModifiedDate"
+msgstr "LastModifiedDate"
 
-msgid "IfcOrganization_Roles_DEFINITION"
-msgstr "Papéis"
+msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
+msgstr "Date and Time expressed in UTC Universal Time Coordinated, formerly Greenwich Mean Time or GMT at which the last modification was made by LastModifyingUser and LastModifyingApplication."
 
-#:IFC.xml:134
-msgid "IfcOrganization_Addresses"
-msgstr "Endereços"
+#:IFC.xml:44700
+msgid "IfcOwnerHistory_CreationDate"
+msgstr "CreationDate"
 
-msgid "IfcOrganization_Addresses_DEFINITION"
-msgstr "Endereços"
+msgid "IfcOwnerHistory_CreationDate_DEFINITION"
+msgstr "The date and time expressed in UTC Universal Time Coordinated, formerly Greenwich Mean Time or GMT when first created by the original OwningApplication. Once defined this value remains unchanged through the lifetime of the entity."
 
-#:IFC.xml:175
-msgid "IfcOrganization_Engages"
-msgstr "Envolamentos"
+#:IFC.xml:44706
+msgid "IfcStateEnum"
+msgstr "IfcStateEnum"
 
-msgid "IfcOrganization_Engages_DEFINITION"
-msgstr "Envolamentos"
+msgid "IfcStateEnum_DEFINITION"
+msgstr "The [[IfcStateEnum]] enumeration identifies the state or accessibility of the object for example, read write, locked . Valid enumerations are HISTORY New enumeration in IFC2.0. .change ifc2x3 IFC2x3 CHANGE This concept was initially introduced in IFC2.0 as IfcModifiedFlag of type BINARY 3 FIXED and has been modified in R2x3 to an enumeration. It was initially introduced as a first step towards providing facilities for partial model exchange and is intended for use primarily by a model server so that an application can identify the state of the object. bSI Documentation"
 
-#:IFC.xml:201
-msgid "IfcOrganization_IsRelatedBy"
-msgstr "Relacionado"
+#:IFC.xml:44713
+msgid "IfcTable"
+msgstr "Tabela"
 
-msgid "IfcOrganization_IsRelatedBy_DEFINITION"
-msgstr "Relacionado"
+msgid "IfcTable_DEFINITION"
+msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. .. .. .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. .. .. .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added. bSI Documentation"
 
-#:IFC.xml:215
-msgid "IfcOrganization_Relates"
-msgstr "Relações"
+#:IFC.xml:44743
+msgid "IfcTable_Rows"
+msgstr "Rows"
 
-msgid "IfcOrganization_Relates_DEFINITION"
-msgstr "Relações"
+msgid "IfcTable_Rows_DEFINITION"
+msgstr "Rows"
 
-#:IFC.xml:156
-msgid "IfcOrganization_Identification"
-msgstr "Identificação"
+#:IFC.xml:44756
+msgid "IfcTable_Columns"
+msgstr "Columns"
 
-msgid "IfcOrganization_Identification_DEFINITION"
-msgstr "Identificação da organização."
+msgid "IfcTable_Columns_DEFINITION"
+msgstr "Columns"
 
-#:IFC.xml:161
-msgid "IfcOrganization_Name"
+#:IFC.xml:44722
+msgid "IfcTable_Name"
 msgstr "Nome:"
 
-msgid "IfcOrganization_Name_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, a que se refere a organização."
+#:IFC.xml:44727
+msgid "IfcTable_NumberOfCellsInRow"
+msgstr "NumberOfCellsInRow"
 
-#:IFC.xml:166
-msgid "IfcOrganization_Description"
+msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
+msgstr "The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list."
+
+#:IFC.xml:44732
+msgid "IfcTable_NumberOfHeadings"
+msgstr "NumberOfHeadings"
+
+msgid "IfcTable_NumberOfHeadings_DEFINITION"
+msgstr "The number of headings in a table. This is restricted by WR3 to max. one."
+
+#:IFC.xml:44737
+msgid "IfcTable_NumberOfDataRows"
+msgstr "NumberOfDataRows"
+
+msgid "IfcTable_NumberOfDataRows_DEFINITION"
+msgstr "The number of rows in a table that contains data, i.e. total number of rows minus number of heading rows in table."
+
+#:IFC.xml:44769
+msgid "IfcTableColumn"
+msgstr "IfcTableColumn"
+
+msgid "IfcTableColumn_DEFINITION"
+msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4. bSI Documentation"
+
+#:IFC.xml:2725
+msgid "IfcTableColumn_ReferencePath"
+msgstr "ReferencePath"
+
+msgid "IfcTableColumn_ReferencePath_DEFINITION"
+msgstr "ReferencePath"
+
+#:IFC.xml:44770
+msgid "IfcTableColumn_Identifier"
+msgstr "Identifier"
+
+msgid "IfcTableColumn_Identifier_DEFINITION"
+msgstr "The Identifier identifies the column within the table. If provided, it must be unique within the table. Columns may be cross referenced across multiple tables by sharing the same column identifier."
+
+#:IFC.xml:44775
+msgid "IfcTableColumn_Name"
+msgstr "Nome:"
+
+msgid "IfcTableColumn_Name_DEFINITION"
+msgstr "The Name is a human readable caption for the table column. It is not necessarilly unique."
+
+#:IFC.xml:44780
+msgid "IfcTableColumn_Description"
 msgstr "Descrição:"
 
-msgid "IfcOrganization_Description_DEFINITION"
-msgstr "Texto que diz respeito à natureza da organização."
+msgid "IfcTableColumn_Description_DEFINITION"
+msgstr "The Description provides human readable text describing the table column."
 
-#:IFC.xml:229
-msgid "IfcOrganizationRelationship"
-msgstr "Relacionamento"
+#:IFC.xml:44785
+msgid "IfcTableColumn_Unit"
+msgstr "Unit"
 
-msgid "IfcOrganizationRelationship_DEFINITION"
-msgstr "A [[IfcOrganizationRelationship]] estabelece uma associação entre uma organização relacionada e uma ou mais organizações relacionadas. NOTE Entidade adaptada da relação da organização definida no ISO 10303 41. HISTORY Nova entidade em IFC2x .change ifc2x4 IFC4 CHANGE Nome e Descrição promovida para novo supertipo [[IfcResourceLevelRelationship]] . bSI Documentação"
+msgid "IfcTableColumn_Unit_DEFINITION"
+msgstr "The Unit indicates the unit of measure to be used for this column s data. If not provided, then project default units are assumed. If ReferencePath is provided, the the unit must be of the same measure as the referenced attribute."
 
-#:IFC.xml:201
-msgid "IfcOrganizationRelationship_RelatedOrganizations"
-msgstr "Organizações Relacionadas"
+#:IFC.xml:44791
+msgid "IfcTableRow"
+msgstr "Linha IfcTableLinha"
 
-msgid "IfcOrganizationRelationship_RelatedOrganizations_DEFINITION"
-msgstr "Organizações Relacionadas"
+msgid "IfcTableRow_DEFINITION"
+msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. Figure 337 illustrates table row use. Figure 337 Table row use Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . Figure 338 Table row use alternative HISTORY New entity in IFC1.5. bSI Documentation"
 
-#:IFC.xml:215
-msgid "IfcOrganizationRelationship_RelatingOrganization"
-msgstr "Organização"
+#:IFC.xml:44792
+msgid "IfcTableRow_RowCells"
+msgstr "RowCells"
 
-msgid "IfcOrganizationRelationship_RelatingOrganization_DEFINITION"
-msgstr "Organização"
+msgid "IfcTableRow_RowCells_DEFINITION"
+msgstr "The data value of the table cell.."
 
-#:IFC.xml:232
-msgid "IfcPerson"
-msgstr "IfcPerson"
+#:IFC.xml:44797
+msgid "IfcTableRow_IsHeading"
+msgstr "IsHeading"
 
-msgid "IfcPerson_DEFINITION"
-msgstr "Esta entidade representa um ser humano individual; note-se que, em muitos países, existe legislação relativa à identificação de pessoas individuais nas bases de dados. Embora a intenção do modelo IFC seja agir como uma especificação para troca de dados e compartilhamento, em algumas situações, um arquivo IFC poderá ser considerado uma base de dados que permita a identificação de uma determinada pessoa nos termos dessa legislação. Os utilizadores devem estar cientes das restrições da legislação que podem ser aplicadas nos locais onde são utilizados os ficheiros IFC. NOTE Entidade adaptada de pessoa definida em ISO 10303 41. HISTÓRIA Nova entidade em IFC1.5.1. Alterar ifc2x4 IFC4 CHANGE Id do atributo renomeado para Identificação. Regra de WHERE relaxada para permitir omissão de nomes se a identificação for fornecida. Documentação bSI"
+msgid "IfcTableRow_IsHeading_DEFINITION"
+msgstr "Flag which identifies if the row is a heading row or a row which contains row values. X 0D NOTE If the row is a heading, the flag takes the value TRUE."
 
-#:IFC.xml:50
-msgid "IfcPerson_Roles"
-msgstr "Papéis"
+#:IFC.xml:44803
+msgid "IfcGloballyUniqueId"
+msgstr "IfcGloballyUniqueId"
 
-msgid "IfcPerson_Roles_DEFINITION"
-msgstr "Papéis"
-
-#:IFC.xml:120
-msgid "IfcPerson_Addresses"
-msgstr "Endereços"
-
-msgid "IfcPerson_Addresses_DEFINITION"
-msgstr "Endereços"
-
-#:IFC.xml:287
-msgid "IfcPerson_EngagedIn"
-msgstr "Envolvido"
-
-msgid "IfcPerson_EngagedIn_DEFINITION"
-msgstr "Envolvido"
-
-#:IFC.xml:241
-msgid "IfcPerson_Identification"
-msgstr "Identificação"
-
-msgid "IfcPerson_Identification_DEFINITION"
-msgstr "Identificação da pessoa."
-
-#:IFC.xml:246
-msgid "IfcPerson_FamilyName"
-msgstr "FamilyName"
-
-msgid "IfcPerson_FamilyName_DEFINITION"
-msgstr "O nome pelo qual a identidade familiar da pessoa pode ser reconhecida. X 0D NOTE dependendo da localização geográfica e cultura, o nome de família pode aparecer como o primeiro ou último componente de um nome."
-
-#:IFC.xml:251
-msgid "IfcPerson_GivenName"
-msgstr "GivenName"
-
-msgid "IfcPerson_GivenName_DEFINITION"
-msgstr "O nome pelo qual uma pessoa é conhecida no seio de uma família e pelo qual pode ser familiarmente reconhecida. X 0D NOTE dependendo da localização geográfica e da cultura, esse nome pode aparecer como o primeiro ou último componente de um nome."
-
-#:IFC.xml:256
-msgid "IfcPerson_MiddleNames"
-msgstr "MeioNomes"
-
-msgid "IfcPerson_MiddleNames_DEFINITION"
-msgstr "Nomes adicionais dados a uma pessoa que ative sua identificação, além de outras pessoas que possam ter a mesma ou semelhante família e que tenham os mesmos nomes. X 0D NOTE Middle names normalmente não são usados em comunicação familiar, mas pode ser afirmado para fornecer identificação adicional de uma pessoa em particular, se necessário. Podem ser particularmente úteis em situações em que a pessoa em causa tem um nome de família que ocorre normalmente na região geográfica."
-
-#:IFC.xml:261
-msgid "IfcPerson_PrefixTitles"
-msgstr "Prefixos"
-
-msgid "IfcPerson_PrefixTitles_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, que especifica a pessoa em posição social ou profissional e aparece diante dos seus nomes."
-
-#:IFC.xml:266
-msgid "IfcPerson_SuffixTitles"
-msgstr "Sufixos"
-
-msgid "IfcPerson_SuffixTitles_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, que especifica a pessoa em posição social ou profissional e aparece depois de seus nomes."
-
-#:IFC.xml:325
-msgid "IfcPersonAndOrganization"
-msgstr "Organização"
-
-msgid "IfcPersonAndOrganization_DEFINITION"
-msgstr "Essa entidade representa uma pessoa agindo em nome de uma organização. NOTE Entidade adaptada de pessoa e organização definida no ISO 10303 41. HISTÓRIA Nova entidade na documentação IFC1.5.1. bSI"
-
-#:IFC.xml:38
-msgid "IfcPersonAndOrganization_Roles"
-msgstr "Papéis"
-
-msgid "IfcPersonAndOrganization_Roles_DEFINITION"
-msgstr "Papéis"
-
-#:IFC.xml:175
-msgid "IfcPersonAndOrganization_TheOrganization"
-msgstr "Organização"
-
-msgid "IfcPersonAndOrganization_TheOrganization_DEFINITION"
-msgstr "Organização"
-
-#:IFC.xml:287
-msgid "IfcPersonAndOrganization_ThePerson"
-msgstr "ThePerson"
-
-msgid "IfcPersonAndOrganization_ThePerson_DEFINITION"
-msgstr "ThePerson"
-
-#:IFC.xml:353
-msgid "IfcPostalAddress"
-msgstr "IfcPostalAddress"
-
-msgid "IfcPostalAddress_DEFINITION"
-msgstr "Esta entidade representa um endereço para entrega de correio com base em papel e outras entregas. HISTORY nova entidade na documentação IFC2x. bSI"
-
-#:IFC.xml:358
-msgid "IfcPostalAddress_InternalLocation"
-msgstr "Localização"
-
-msgid "IfcPostalAddress_InternalLocation_DEFINITION"
-msgstr "Um endereço definido pela organização para a entrega de correio interno."
-
-#:IFC.xml:363
-msgid "IfcPostalAddress_AddressLines"
-msgstr "Linhas"
-
-msgid "IfcPostalAddress_AddressLines_DEFINITION"
-msgstr "O endereço postal. X 0D NOTE Um endereço postal pode ocupar várias linhas ou elementos quando gravado. Espera-se que o uso normal incorpore elementos relevantes dos seguintes conceitos de endereço A local em um edifício. Nome de construção do Floor - Ex.: Número da Casa de Interoperabilidade - Rua, por exemplo 6400 ruas. . Boulevard da Aliança. O conteúdo típico das linhas de endereços pode variar em diferentes países."
-
-#:IFC.xml:368
-msgid "IfcPostalAddress_PostalBox"
-msgstr "Caixa"
-
-msgid "IfcPostalAddress_PostalBox_DEFINITION"
-msgstr "Um endereço que é implícito por um drop de e-mail identificável."
-
-#:IFC.xml:373
-msgid "IfcPostalAddress_Town"
-msgstr "Cidade"
-
-msgid "IfcPostalAddress_Town_DEFINITION"
-msgstr "O nome de uma cidade."
-
-#:IFC.xml:378
-msgid "IfcPostalAddress_Region"
-msgstr "Região"
-
-msgid "IfcPostalAddress_Region_DEFINITION"
-msgstr "O nome de uma região. X 0D NOTE Os países do Reino Unido e os estados da América do Norte são exemplos de regiões."
-
-#:IFC.xml:383
-msgid "IfcPostalAddress_PostalCode"
-msgstr "PostalCode"
-
-msgid "IfcPostalAddress_PostalCode_DEFINITION"
-msgstr "O código utilizado pelo país é o correio."
-
-#:IFC.xml:388
-msgid "IfcPostalAddress_Country"
-msgstr "País/região"
-
-msgid "IfcPostalAddress_Country_DEFINITION"
-msgstr "O nome de um país."
-
-#:IFC.xml:419
-msgid "IfcRoleEnum"
-msgstr "IfcRoleEnum"
-
-msgid "IfcRoleEnum_DEFINITION"
-msgstr "Esta enumeração define funções que podem ser tocadas por um ator. HISTORY Novo tipo em IFC1.5. .change ifc2x4 IFC4 CHANGE de COMMISSIONINGENGINEER corrigido."
-
-#:IFC.xml:444
-msgid "IfcTelecomAddress"
-msgstr "IfcTelecomAddress"
-
-msgid "IfcTelecomAddress_DEFINITION"
-msgstr "Esta entidade representa um endereço ao qual o telefone, o correio electrónico e outras formas de telecomunicações devem ser dirigidos: a nova entidade na IFC2x. hange ifc2x4 IFC4 CHANGE Adicionado atributo MessagingIDs . Tipo do atributo WWWHomePageURL compatível de [[IfcLabel]] para [[IfcURIReference]] . bSI Documentação"
-
-#:IFC.xml:449
-msgid "IfcTelecomAddress_TelephoneNumbers"
-msgstr "Números de Telefone"
-
-msgid "IfcTelecomAddress_TelephoneNumbers_DEFINITION"
-msgstr "Lista de números de telefone em que as mensagens telefônicas podem ser recebidas."
-
-#:IFC.xml:454
-msgid "IfcTelecomAddress_FacsimileNumbers"
-msgstr "FacsimileNumbers"
-
-msgid "IfcTelecomAddress_FacsimileNumbers_DEFINITION"
-msgstr "Lista de números de fax em que as mensagens de fax podem ser recebidas."
-
-#:IFC.xml:459
-msgid "IfcTelecomAddress_PagerNumber"
-msgstr "Número"
-
-msgid "IfcTelecomAddress_PagerNumber_DEFINITION"
-msgstr "Número do pager em que a paginação de mensagens pode ser recebida."
-
-#:IFC.xml:464
-msgid "IfcTelecomAddress_ElectronicMailAddresses"
-msgstr "Endereços ElectronicMails"
-
-msgid "IfcTelecomAddress_ElectronicMailAddresses_DEFINITION"
-msgstr "Lista de endereços de e-mail em que as mensagens de email podem ser recebidas."
-
-#:IFC.xml:469
-msgid "IfcTelecomAddress_WWWHomePageURL"
-msgstr "URL WWWWHomePageURL"
-
-msgid "IfcTelecomAddress_WWWHomePageURL_DEFINITION"
-msgstr "O endereço web mundial onde se encontra a página preliminar da informação para a pessoa ou organização. X 0D NOTE que as informações sobre a rede mundial para uma pessoa ou organização podem ser separadas em várias páginas e em vários sites de host. tudo isso pode estar interligado. Presume-se que todas essas informações podem ser referenciadas a partir de uma única página que é apelidada de home page para essa pessoa ou organização."
-
-#:IFC.xml:474
-msgid "IfcTelecomAddress_MessagingIDs"
-msgstr "IDs Mensagens"
-
-msgid "IfcTelecomAddress_MessagingIDs_DEFINITION"
-msgstr "IDs ou endereços para qualquer outro meio de telecomunicação, por exemplo, mensagens instantâneas, voz sobre IP ou protocolos de transferência de arquivos. O protocolo de comunicação é indicado pelo valor do URI com designações de esquema como irc , sip ou ftp ."
-
-#:IFC.xml:481
-msgid "IfcActorSelect"
-msgstr "Selecionar"
-
-msgid "IfcActorSelect_DEFINITION"
-msgstr "O tipo de seleção do ator permite que uma pessoa, ou uma organização ou uma pessoa associada a uma organização seja referenciada. NOTA Tipo adaptado de organização de pessoas seleciona no ISO 10303 41. HISTÓRIA Nova entidade no IFC1.5.1"
+msgid "IfcGloballyUniqueId_DEFINITION"
+msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 X 09 X 09 0123456789012345678901234567890123456789012345678901234567890123 X 09 X 09 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1. bSI Documentation"
 
