@@ -9,331 +9,604 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: nl\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
+"X-Crowdin-File-ID: 98\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: nl_NL\n"
 "PO-Revision-Date: 2021-02-11 18:27\n"
 
-#:IFC.xml:44317
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:43912
+msgid "IfcBoundaryCondition"
+msgstr "IfcBoundaryConditie"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "Een geavanceerd gezicht is een specialisatie van een oppervlak dat moet voldoen aan de eisen voor het gebruik van bepaalde topologische en geometrische vertegenwoordigingsartikelen voor de definitie van de gezichten, randen en hoekpunten. Een [[IfcAdvancedFace]] is beperkt tot een geometrie van oppervlak [[IfcElementarySurface]] , [[IfcSweptSurface]] of [[IfcBSplineSurface]] , een [[IfcFaceOuterBound]] hebben als de grens van de gezicht, met uitzondering van gesloten oppervlakken, moeten alle vlakken gebonden zijn aan [[IfcEdgeLoop]] of [[IfcVertexLoop]] , hebben alle randen om een randcurve geometrie te hebben. de randcurve geometrie beperkt tot [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , , , , , , , of [[IfcBSplineCurve]] In geval van gesloten gezichten met periodieke oppervlakken, zoals cilindrische of bolvormige oppervlakken, het volgende past de randen van het gesloten oppervlak toe, in het geval van een cilindrische bovenste en onderste pet, verwijzen naar hetzelfde exemplaar van [[IfcVertexPoint]] twee keer, er wordt geen [[IfcFaceOuterBound]] verstrekt, of de [[IfcFaceOuterBound]] wordt gebouwd met een [[IfcSeamCurve]] aan het periodieke einde van het onderliggende gesloten oppervlak, in geval van een cilindrische oppervlakte op 0. 360. Cylindrische oppervlakte .. .. .. .. .. .. .. cijfers ifcadvancedface 01. ng Figure 1 gebruik van [[IfcCylindricalSurface]] als onderliggende oppervlakte van een [[IfcAdvancedFace]] NOTE Entiteit aangepast aan geavanceerd gezicht gedefinieerd in ISO 10303 511. HISTORY Nieuwe entiteit in IFC4 bSI Documentatie"
+msgid "IfcBoundaryCondition_DEFINITION"
+msgstr "De abstract entiteit [[IfcBoundaryCondition]] is het supertype van alle grenzeloze omstandigheden die kunnen worden toegepast op structurele verbindingsdefinities, ofwel rechtstreeks voor de verbinding. . - het gewricht of voor de relatie tussen een structureel lid en de verbinding. OPMERKING De grenscondities worden gebruikt binnen andere onderdelen, vooral door de voorbeelden van [[IfcStructuralConnection]] voor de definitie van steun en gevallen van [[IfcRelConnectsStructuralMember]] voor de definitie van verbindingen tussen structurele lidstaten en structurele verbindingen . HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:44332
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:43913
+msgid "IfcBoundaryCondition_Name"
+msgstr "naam"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "Geeft als resultaat de eerste keuze, als de WAAR anders de tweede keuze. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 geeft deze functie een van de twee keuzes terug afhankelijk van de waarde van een Boolean invoerargument. De twee keuzes zijn ook invoerargumenten. NOTE Functie aangepast van boolean kies gedefinieerd in ISO10303 42. HISTORY nieuwe functie in IFC2.0"
+msgid "IfcBoundaryCondition_Name_DEFINITION"
+msgstr "Definieer optioneel een naam voor deze randvoorwaarde."
 
-#:IFC.xml:44340
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:43919
+msgid "IfcBoundaryEdgeCondition"
+msgstr "IfcBoundaryEdgeCondition"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcBoundaryEdgeCondition_DEFINITION"
+msgstr "Beschrijft de lineaire elastische ondersteuningsvoorwaarden of verbindingsvoorwaarden. De toepassingscurve ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. IFC 2x4 verandering Attributen LinearStiffnessX Y Z hernoemd naar TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 wijzigt alle attribuutdata types veranderd van numeriek naar SELECT tussen Boolean en cijfer. Stijgende aandoeningen kunnen nu ook negatief uitpakken, bijvoorbeeld het destabiliseren van grensomstandigheden, de IFC2x3-overeenkomst van 1. De oneindige stijfheid is niet meer geldig en mag niet worden gebruikt. Oneindige stijfheid van i. . vaste ondersteuningen, worden nu gemodelleerd met de Booleaanse waarde WAAR. bSI Documentatie"
 
-#:IFC.xml:44345
-msgid "IfcConnectedFaceSet"
-msgstr "Verbonden FaceSet"
+#:IFC.xml:43920
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
+msgstr "TranslationalStiffnessByLengthX"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 A verbonden gezicht is een set gezichten die zodanig zijn dat het domein van de gezichten en hun grenzen met elkaar verbonden zijn. NOTE Entiteit aangepast van verbonden gezichtsset gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 .spec head Informal Proposities 1. De vereniging van de vlakken en hun grenzeloze lussen zullen nauw met elkaar verbonden zijn. bSI documentatie"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in x richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44348
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "Tekenvlakken"
+#:IFC.xml:43925
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
+msgstr "VertalingStiffnessByLengthY"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "Tekenvlakken"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in y-richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44360
-msgid "IfcEdge"
-msgstr "IfcEdge"
+#:IFC.xml:43930
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
+msgstr "TranslationalStiffnessByLengthZ"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "Een [[IfcEdge]] definieert twee hoekpunten die verbonden zijn met topologie. De geometrische weergave van de verbinding tussen de twee hoekpunten standaard op een rechte lijn als er geen geometrie is toegewezen met het subtype [[IfcEdgeCurve]] . De [[IfcEdge]] kan daarom worden gebruikt voor het uitwisselen van rechte randen zonder een bijbehorende geometrie van [[IfcLine]] of [[IfcPolyline]] gedachten [[IfcEdgeCurve]]. dgeometrie . EXAMPLE Figure 1 toont een voorbeeld waarbij de grenzen van de [[IfcEdge]] door de EdgeStart en EdgeEnd ook de richting van de rand bepalen. De locatie binnen een coördinaatruimte wordt bepaald door het type [[IfcVertexPoint]] voor EdgeStart en EdgeEnd. Aangezien er geen geometrie is toegewezen, is het standaard een rechte lijn die de zin in de richting accepteert. Figuur 1 Edge vertegenwoordigt . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een rand de topologische constructie die overeenkomt met de verbinding van twee hoekpunten. Op meer abstracte wijze zou het kunnen staan voor een logische relatie tussen twee hoekpunten. Het domein van een rand, indien aanwezig, is een afronding, niet zelf de open curve in R M overlappen, dat wil zeggen een verbonden 1 dimensionale manier. De grenzen van een rand zijn twee hoeken, die niet verschillend hoeven te zijn. De rand is georiënteerd door zijn traversale richting te kiezen om van de eerste naar de tweede te rennen. Als de twee hoekpunten gelijk zijn, is de rand een zelflus. Het domein van de rand omvat niet zijn grenzen, en 0 Febru. Gekoppeld aan een rand kan een geometrische curve zijn om de rand te vinden in een coördinaatruimte die wordt weergegeven door de rand subtype. De curve moet eindig zijn en niet doorsneden binnen het domein van de rand. Een rand is een grafiek, dus de multiplicity M en grafiek genus G e kunnen worden bepaald door het grafiek traversale algoritme. Sinds M E 1 reduceert de Euler vergelijking 1 in het geval tot de afbeelding. .. .. .. .. getallen. ifcedge math1.gif waar V 1 of 2, en G e 1 of 0. Concreet stelt de bovenmenselijke rand gegevensdefinitie vast aan een rand met twee hoekpunten. .. .. .. .. .. getallen. ifcedge math2.gif de hoekpunten hoeven niet te zijn gescheiden afbeelding .. .. .. .. .. .. .. .. getallen. .. .. figuren ifcedge wiskunde. als een vergelijking een afbeelding inhoud .. .. .. .. .. figuren ifcedge wiskunde. als NOTE Entiteit is aangepast van de rand gedefinieerd in ISO 10303 42. HISTORY nieuwe entiteit in IFC2. .spec head Informal Proposities 1. De rand heeft dimensionaliteit 1. De afmetingen van een rand zijn eindig en niet nul. BSI Documentatie"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in z richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44363
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:43935
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
+msgstr "RotationalStiffnessByLengthX"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de x-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44375
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:43940
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
+msgstr "RotationalStiffnessByLengthY"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de y-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44411
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+#:IFC.xml:43945
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
+msgstr "RotationalStiffnessByLengthZ"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "Een [[IfcEdgeCurve]] definieert twee hoekpunten die topologisch verbonden zijn, inclusief de geometrische voorstelling van de verbinding. NOTE De topologie wordt gebruikt om de geometrie van de rand bij te snijden. Het is niet nodig om de rand te knippen om de topologie aan te passen. EXAMPLE Figure 1 illustreert een voorbeeld waar de geometrie wordt gegeven door een onbegrensde curve, hier [[IfcCircle]]. De grenzen worden geboden door EdgeStart en EdgeEnd, de topologische richting van de [[IfcEdgeCurve]] verzet zich tegen de richting van de [[IfcCircle]] door SameSense FALSE. Figuur 1 Rand curve . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een rand curve een speciaal subtype rand dat zijn geometrie volledig definieert. De geometrie wordt gedefinieerd door de rand te koppelen aan een curve die ongebonden kan zijn. De topologische en geometrische richtingen kunnen worden tegengegaan, een indicator dezelfde zin wordt gebruikt om te bepalen of de rand en curve richtingen overeenkomen of tegen zijn. De booleaanse waarde geeft aan of de curve richting overeenkomt met TRUE of in de tegenovergestelde richting van FALSE naar de randrichting wijst. Elke geometrie die geassocieerd wordt met de randen van de rand is consistent met de geometrie. Meerdere randen kunnen verwijzen naar dezelfde curve. NOTE Entiteit aangepast aan de randcurve gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x. .spec head Informal Proposities 1. Het domein van de randcurve wordt formeel gedefinieerd als het domein van de randgeometrie, zoals afgeknipt door de hoekpunten. Dit domein omvat niet de hoekpunten. 2. Een randcurve heeft geen eindige grootte. 3. Een randcurve is een veelvoud. 4. Er is een rand curve met boog. 5. De rand begint is geen deel van het randdomein. 6. De rand is geen randdomein. 7. De tekst-geometrie is consistent met de geometrie. bSI documentatie"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de z-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:12211
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "Edgeometrie"
+#:IFC.xml:43952
+msgid "IfcBoundaryFaceCondition"
+msgstr "IfcBoundaryFaceConditie"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "Edgeometrie"
+msgid "IfcBoundaryFaceCondition_DEFINITION"
+msgstr "Beschrijft lineale elastische ondersteuningsvoorwaarden of verbindingsvoorwaarden. Applicatie Surface ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. IFC 2x4 verandering Attributen LinearStiffnessX Y Z hernoemd naar TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 wijzigt alle attribuutdata types veranderd van numeriek naar SELECT tussen Boolean en cijfer. Stijgende aandoeningen kunnen nu ook negatief uitpakken, bijvoorbeeld het destabiliseren van grensomstandigheden, de IFC2x3-overeenkomst van 1. De oneindige stijfheid is niet meer geldig en mag niet worden gebruikt. Oneindige stijfheid van i. . vaste ondersteuningen, worden nu gemodelleerd met de Booleaanse waarde WAAR. bSI Documentatie"
 
-#:IFC.xml:44412
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:43953
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
+msgstr "TranslationalStiffnessByAreaX"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Deze logische vlag geeft aan of HANELEN of niet, de zinnen van de rand en de curve de randgeometrie hetzelfde zijn. Het gevoel van een rand is van de rand start vertex tot de eindpunt de richting van de stijgende parameter."
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in x richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44420
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:43958
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
+msgstr "TranslationalStiffnessByAreaY"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een lusje met een niet-grote lus. Het is een pad waarin de begin- en eindpunten hetzelfde zijn. Het domein, indien aanwezig, is een gesloten curve. Een rand lus kan elkaar overlappen. NOTE Entiteit aangepast aan de rand loop gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. .spec head Informal Proposities 1. Het geslacht van de [[IfcEdgeLoop]] zal 1 of hoger zijn. 2. De formule van de Euler moet voldoen aan het aantal hoekengenen van de randen 1 3. Er mag geen rand meer dan één keer door dezelfde [[IfcEdgeLoop]] met dezelfde zin worden genoemd. Voor dit doel wordt verwezen naar een rand die niet georiënteerd is, als refererend met de zin TRUE. bSI Documentatie"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in y-richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44436
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:43963
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
+msgstr "TranslationalStiffnessByAreaZ"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "EdgeList"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in z richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44429
-msgid "IfcEdgeLoop_Ne"
-msgstr "Nee"
+#:IFC.xml:43970
+msgid "IfcBoundaryNodeCondition"
+msgstr "IfcBoundaryNodeConditie"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "Het aantal elementen in de rand lijst."
+msgid "IfcBoundaryNodeCondition_DEFINITION"
+msgstr "Beschrijft de lineaire elastische ondersteuningsvoorwaarden of verbindingsvoorwaarden. Toepassingspunt ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. IFC 2x4 verandering Attributen LinearStiffnessX Y Z hernoemd naar TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 CHANGE Alle attribuut-data types veranderd van numeriek naar SELECT tussen Boolean en cijfers. Stijgende aandoeningen kunnen nu ook negatief uitpakken, bijvoorbeeld het destabiliseren van grensomstandigheden, de IFC2x3-overeenkomst van 1. De oneindige stijfheid is niet meer geldig en mag niet worden gebruikt. Oneindige stijfheid van i. . vaste ondersteuningen, worden nu gemodelleerd met de Booleaanse waarde WAAR. bSI Documentatie"
 
-#:IFC.xml:44448
-msgid "IfcFace"
-msgstr "Ijskegel"
+#:IFC.xml:43971
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
+msgstr "VertalingStiffnessX"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in x richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:26317
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:43976
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
+msgstr "TranslationalStiffnessY"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in y-richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44455
-msgid "IfcFace_Bounds"
-msgstr "Geluiden"
+#:IFC.xml:43981
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
+msgstr "TranslationalStiffnessZ"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Geluiden"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
+msgstr "Vertaalstijfheidswaarde in z richting van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44467
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:43986
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
+msgstr "RotationalStiffnessX"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een band met een gezicht. NOTE Entiteit aangepast aan gezicht gebonden gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 bSI documentatie"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de x-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44475
-msgid "IfcFaceBound_Bound"
-msgstr "Gekoppeld"
+#:IFC.xml:43991
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
+msgstr "RotationalStiffnessY"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Gekoppeld"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de y-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44468
-msgid "IfcFaceBound_Orientation"
-msgstr "Oriëntatie"
+#:IFC.xml:43996
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
+msgstr "RotationalStiffnessZ"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dit gaf aan of HANDEL de lus wel of niet dezelfde zin heeft wanneer ze gebruikt wordt om het gezicht aan te hangen als wanneer ze voor het eerst gedefinieerd is. Als het gezond verstand is, worden alle zinnen van de op de inhoud georiënteerde randen impliciet omgedraaid wanneer ze in het gezicht worden gebruikt."
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
+msgstr "Rotationele stijfheid waarde over de z-as van het coördinaatsysteem gedefinieerd door de instantie die dit hulpbronobject gebruikt."
 
-#:IFC.xml:44487
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+#:IFC.xml:44003
+msgid "IfcBoundaryNodeConditionWarping"
+msgstr "IfcBoundaryNodeConditionWarping"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 A face outside is een speciaal gezicht, dat de extra emantiek draagt bij het definiëren van een buitengrens op het gezicht. Niet meer dan één grens van een gezicht mag van dit type zijn. NOTE Entiteit aangepast naar buiten gezichten gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 bSI documentatie"
+msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
+msgstr "Beschrijft algemeen elastische ondersteuningsvoorwaarden of verbindingsvoorwaarden, met inbegrip van lineaire elastische warping restraints. Toepassingspunt ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. .change ifc2x4 IFC4 CHANGE All attribuut data types veranderd van numeriek naar SELECT tussen Boolean en numeriek Stijgende aandoeningen kunnen nu ook negatief uitpakken, bijvoorbeeld het destabiliseren van grensomstandigheden, de IFC2x3-overeenkomst van 1. De oneindige stijfheid is niet meer geldig en mag niet worden gebruikt. Oneindige stijfheid van i. . vaste ondersteuningen, worden nu gemodelleerd met de Booleaanse waarde WAAR. bSI Documentatie"
 
-#:IFC.xml:44490
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+#:IFC.xml:44004
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
+msgstr "Oorlogstiften"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "De [[IfcFaceSurface]] definieert de onderliggende geometrie van het bijbehorende oppervlak aan het gezicht. OPMERKING De topologie wordt gebruikt om de geometrie van het oppervlak bij te werken. Het is niet nodig om het oppervlak aan te passen aan de topologie. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een oppervlak met een gezicht waarin de geometrie wordt gedefinieerd door een bijbehorend oppervlak. Het gedeelte van het oppervlak dat door het gezicht wordt gebruikt is te beddenbaar in het vliegtuig als een open schijf, mogelijk met gaten. De unie van het gezicht met de randen en hoekpunten van haar randlussen hoeft echter niet in het vliegtuig te worden opgenomen. Het kan bijvoorbeeld een hele sfeer of een hele reeks torens omvatten. Omdat zowel een gezicht als een geometrisch oppervlak normale richtingen hebben gedefinieerd, een BOOLEAN-vlag die het oriëntatieattribuut gebruikt wordt om aan te geven of de oppervlakte normaal akkoord gaat met TRUE of is tegen de normale richting van de gezicht. De geometrie die is gekoppeld aan elk onderdeel van de lussen van het gezicht is consistent met de meetkunde van de oppervlakte. in de zin dat de domeinen van alle hoekpunten en randcurven op het geometrie oppervlak staan. Een oppervlakte kan gerefereerd worden door meer dan één oppervlak. NOTE Entiteit aangepast van oppervlak gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x .spec head Informal Proposities 1. Het domein van het oppervlak wordt formeel gedefinieerd als het domein van de gezichtsgeometrie zoals afgekort door lussen, Dit domein omvat niet de grenslussen. 2. Een oppervlak heeft een oneindige oppervlakte. 3. Een oppervlak is een veelvoud. 4. Een oppervlak is een boogschuim. 5. Een oppervlak heeft oppervlaktegenus 0. 6. De lussen maken geen deel uit van het vlakdomein 7. Loop geometrie zal consistent zijn met geometrie. Dit impliceert dat alle randcurven of eindpuntjes die worden gebruikt om te definiëren welke lussen aan het oppervlak gebonden zijn, op de geometrie liggen. 8. De lussen van het gezicht zullen niet kruisen. bSI Documentatie"
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
+msgstr "Definieert de stijfheid van de strijd."
 
-#:IFC.xml:13278
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "FaceSurface"
+#:IFC.xml:44011
+msgid "IfcFailureConnectionCondition"
+msgstr "IfcFailureVerbindingsvoorwaarde"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "FaceSurface"
+msgid "IfcFailureConnectionCondition_DEFINITION"
+msgstr "Definieert waar een ondersteuning of verbinding niet werkt. Toepassingspunt ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:44491
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:44012
+msgid "IfcFailureConnectionCondition_TensionFailureX"
+msgstr "SpanningFailureX"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Deze vlag geeft aan of de betekenis van de oppervlakte normaal akkoord gaat met TRUE , of verzet zich tegen het normale topologische gevoel voor de gezicht."
+msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
+msgstr "Spanningskracht in x richting leidt tot falen van de verbinding."
 
-#:IFC.xml:44499
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:44017
+msgid "IfcFailureConnectionCondition_TensionFailureY"
+msgstr "SpanningZakelijk"
 
-msgid "IfcLoop_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een topologische entiteit gebouwd van een enkele hoeksteken, of door samen verbonden georiënteerde randen, of lineaire segmenten die beginnen en eindigen op dezelfde hoektje. Het wordt meestal gebruikt om een gezicht op een oppervlak te binden. Een lus heeft een afmeting van 0 of 1. Het domein van een 0-dimensionale lus is een enkel punt. Het domein van een 1 dimensionale lus is een verbonden, georiënteerde curve, maar hoeft niet veel te zijn. Aangezien de lus een cirkel is, is de locatie van het begin eindpunt willekeurig. Het domein van de lus bevat zijn grenzen, een 0 ľ. Een lus wordt weergegeven door een enkele hoek, of door een geordende verzameling georiënteerde randen, of door een geordende verzameling punten. Een lus is een grafiek, dus M en het grafiek genus G l kan worden bepaald door het grafiek traversale algoritme. Sinds M 1, vermindert de Euler vergelijking 1 in dit geval tot afbeelding... .. .. .. .. cijfers ifcloop wis1. als V en E X 7El X 7E het aantal unieke hoekpunten en georiënteerde randen in de lus en G l het geslacht is van de lus. NOTE Entiteit aangepast aan de lus gedefinieerd in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Proposities 1. Een lus heeft een eindige omvang. 2. Een lus beschrijft een gesloten topologische curve met begin- en eindhoekpunten. bSI-documentatie"
+msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
+msgstr "Spanningskracht in y richting leidt tot falen van de verbinding."
 
-#:IFC.xml:44502
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail Aloop"
+#:IFC.xml:44022
+msgid "IfcFailureConnectionCondition_TensionFailureZ"
+msgstr "SpanningFailureZ"
 
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "Deze functie geeft TRUE terug als voor de randen van de ingangslus de eindpunt van elke rand hetzelfde is als de begintop van de opvolger. HISTORY Nieuwe functie in IFC2x2"
+msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
+msgstr "Spanningskracht in z richting leidt tot falen van de verbinding."
 
-#:IFC.xml:44510
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:44027
+msgid "IfcFailureConnectionCondition_CompressionFailureX"
+msgstr "CompressieFailureX"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ". extDef NOTE definitie volgens ISO CD 10303 42 1992 is een open granaat van de dimensie 2. Het domein, indien aanwezig, is een afgeslankt, verbonden en tweevoudig gevarieerd, maar is geen gesloten oppervlak. Het kan worden beschouwd als een gesloten schilderij met een of meer gaten erin. Het domein van een open granaat voldoet aan 0 01. Een open shell is functioneel algemener dan een gezicht omdat het domein ervan handvatten kan hebben. De granaat wordt gedefinieerd door een verzameling gezichten die georiënteerd kunnen zijn. Het gevoel van elk gezicht, na rekening te houden met de oriëntatie, zal overeenkomen met de normale granaat zoals hieronder gedefinieerd. De oriëntatie kan direct worden geleverd als een BOOLEAN-kenmerk van een georiënteerd gezicht. of standaard TRUE als het shell-lid een gezicht is zonder oriëntatiekenmerk. De volgende combinatiebeperkingen voor open granaten en geometrische beperkingen op hun domeinen zijn ontworpen, samen met de informele voorstellen om ervoor te zorgen dat elk domein dat is gekoppeld aan een open shell een georiënteerde veelvoud is. Elke gezichtsreferentie is uniek. Een open shell heeft ten minste één gezicht. Een bepaald gezicht kan in meer dan één open shell bestaan. De grens van een open shell bestaat uit de randen waarnaar slechts eenmaal wordt verwezen door de geleideslijn van zijn gezichten, samen met al hun hoekpunten. Het domein van een open schelp, indien aanwezig, bevat alle randen en hoekpunten van zijn gezicht. Let op: dit is iets anders dan de definitie van een gezichtsdomein, dat geen van zijn grenzen bevat. Een gezichtsdomein kan bijvoorbeeld een geïsoleerd punt of lijn segment uitsluiten. Een open shell domein kan dat niet. Zie het algoritme voor de berekening hieronder. NOTE Entiteit aangepast aan open shell gedefinieerd in ISO 10303 42. HISTORY New entiteit in IFC2x. .spec head Informal Proposities 1. Aan elke rand wordt precies twee keer gerefereerd door de gezichtsgrenzen van het gezicht. Elke georiënteerde rand is uniek. 3. Er wordt naar geen enkele rand verwezen door meer dan twee gezichten. 4. Verschillende vlakken van de shell snijden, maar kunnen de randen of hoekpunten delen. 5. Verschillende randen overlappen niet met elkaar maar kunnen hoekpunten delen. Elke face-referentie is uniek. 7. De lussen van de shell zijn geen mengsel van poly loop en andere lussoorten. Opmerking: dit wordt gegeven, omdat alleen poly Loop wordt gedefinieerd als face bound definitie. 8. De gesloten granaat is een georiënteerde boogwijze aangesloten op 2 manieren. 9. De kelner vergelijking is tevreden. bSI documentatie"
+msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
+msgstr "Compressie forceren in x richting wat leidt tot het mislukken van de verbinding."
 
-#:IFC.xml:44514
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:44032
+msgid "IfcFailureConnectionCondition_CompressionFailureY"
+msgstr "CompressieFoutief"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "De [[IfcOrientedEdge]] vertegenwoordigt een [[IfcEdge]] met een Orientatie-vlag. Het maakt het mogelijk om dezelfde [[IfcEdge]] te hergebruiken wanneer hij precies twee keer vertraagd is, een keer vooruit en een keer achteruit. Opmerking: het gevoel van de normale gang van zaken naar de [[IfcFace]] wordt uitsluitend bepaald door de randen. Als alle randen van het gezicht op een tellende manier met de klok verbonden zijn na de randgerichtheid zal het gezicht normaal naar buiten wijzen. De normale gang van zaken bij de onderliggende [[IfcFaceSurface]] die de geometrie van dat gezicht weergeeft, heeft hier geen enkele relevantie. Het doel van de [[IfcFaceSurface]]. ameSense attribuut is om aanvullende informatie te geven voor verificatiedoeleinden. SameSense TRUE betekent dat de oppervlakte normaal is en het gezicht normaal is hetzelfde, SameSense FALSE betekent dat ze in tegengestelde richtingen zijn. De hergebruikte rand met een geometrische vertegenwoordiging als [[IfcEdgeCurve]] definieert de rand in 3D-coördinatenruimte. In sommige gevallen, met name bij het gebruik van elementaire of zwevende oppervlakken, bestaat het risico van onnauwkeurige kaarten van de 3D-x, y, z [[IfcEdgeCurve]] op de aangrenzende oppervlakken om de grenzen van deze oppervlakken te bepalen. De optionele CurveOnSurface definieert de 2D u, v rand binnen de parametrische ruimte van het oppervlak. Het zou kunnen worden gebruikt om de juistheid van de mapping van de 3D [[IfcEdgeCurve]] op dit oppervlak te bepalen. EXAMPLE Figure 1 illustreert een voorbeeld waarbij de CurveOnSurface naast de geometrie van de [[IfcEdgeCurve]] wordt aangeboden. Figuur 1 Curve op oppervlakte representatie van een [[IfcOrientedEdge]] . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een georiënteerde rand aan een andere rand en bevat een BOOLEAN-richtingsvlag om aan te geven of de richting van de aangebrachte rand overeenkomt met de oriëntatie van de oorspronkelijke rand. Behalve wat georiënteerd is, komt de georiënteerde rand overeen met de oorspronkelijke voorsprong. Een gangbare praktijk is dat er solide modelsystemen moeten zijn om een entiteit te hebben die het gebruik of de vertaling van een voorsprong weergeeft. Deze gebruiksentiteit vertegenwoordigt expliciet de vereiste in een veelvoud mouw dat elke rand precies twee keer verlegd moet worden, eenmaal in elke richting. De functie wordt gebruikt door de georiënteerde rand van het ondertype. NOTE Entiteit aangepast van georiënteerde rand gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribuut CurveOnSurface is toegevoegd. bSI Documentatie"
+msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
+msgstr "Compressie forceren in de y-richting wat leidt tot het mislukken van de verbinding."
 
-#:IFC.xml:44399
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "EdgeElement"
+#:IFC.xml:44037
+msgid "IfcFailureConnectionCondition_CompressionFailureZ"
+msgstr "CompressionFailureZ"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "EdgeElement"
+msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
+msgstr "Compressie forceren in z richting wat leidt tot het mislukken van de verbinding."
 
-#:IFC.xml:44519
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Oriëntatie"
+#:IFC.xml:44044
+msgid "IfcSlippageConnectionCondition"
+msgstr "IfcSlippageConnectionConditie"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, als de beugel de topologische oriëntatie zoals die wordt gebruikt samenvalt met de oriëntatie van begin vertico tot eind top van het randelement. Als het anders niet mogelijk is."
+msgid "IfcSlippageConnectionCondition_DEFINITION"
+msgstr "Beschrijft slippage in ondersteuningsvoorwaarden of verbindingsvoorwaarden. Slippage betekent dat een relatieve verplaatsing in een support of verbinding kan plaatsvinden voordat de ondersteuning of connectie reacties ontwaakt. Toepassingspunt ondersteunt en verbindingen, curve ondersteunt en verbindingen, oppervlakte ondersteunt en verbindingen. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:44524
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF EdgeStart"
+#:IFC.xml:44045
+msgid "IfcSlippageConnectionCondition_SlippageX"
+msgstr "SlippageX"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
+msgstr "Slippage in x richting van het coördinaatsysteem gedefinieerd door de instantie die dit bronobject gebruikt."
 
-#:IFC.xml:44528
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:44050
+msgid "IfcSlippageConnectionCondition_SlippageY"
+msgstr "SlippageY"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
+msgstr "Slippage in y richting van het coördinaatsysteem gedefinieerd door de instantie die dit bronobject gebruikt."
 
-#:IFC.xml:44546
-msgid "IfcPath"
-msgstr "Ifcpad"
+#:IFC.xml:44055
+msgid "IfcSlippageConnectionCondition_SlippageZ"
+msgstr "SlippageZ"
 
-msgid "IfcPath_DEFINITION"
-msgstr "extDef NOTE definitie volgens ISO CD 10303 42 1992 is een topologische entiteit bestaande uit een geordende verzameling georiënteerde randen, zo dat de rand-top van elke rand samenvalt met de rand van zijn voorganger. Het pad wordt geordend van de rand van de eerste georiënteerde rand tot de rand van de laatste rand. De betekenis van de BOOLEAN-waarde in de georiënteerde rand geeft aan of de randrichting overeenkomt met de richting van het pad TRUE of de tegenovergestelde richting FALSE is. Een individuele rand kan alleen worden gerefereerd door een individueel pad. Er kan worden verwezen naar meerdere paden. Een rand kan bestaan onafhankelijk van een pad. NOTE Entiteit aangepast van pad gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2. .spec head Informal Proposities 1. Een pad heeft dimensionaliteit 1. 2. Een pad is boogwijze verbonden. 3. De randen van de weg overlappen niet met elkaar behalve bij gemeenschappelijke hoekpunten. 4. Een pad heeft een eindige, niet nul. bSI-documentatie"
+msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
+msgstr "Slippage in z richting van het coördinaatsysteem gedefinieerd door de instantie die dit bronobject gebruikt."
 
-#:IFC.xml:44534
-msgid "IfcPath_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:44062
+msgid "IfcStructuralConnectionCondition"
+msgstr "IfcStructuralVerbindingsvoorwaarde"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "EdgeList"
+msgid "IfcStructuralConnectionCondition_DEFINITION"
+msgstr "Beschrijf meer dan geen benodigde verbindingseigenschappen. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:44553
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+#:IFC.xml:44063
+msgid "IfcStructuralConnectionCondition_Name"
+msgstr "naam"
 
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "Deze functie retourneert TRUE als alle randen van het invoerpad opeenvolgende zijn. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 geeft deze functie TRUE terug als voor de randen van het invoerpad de eindpunt van elke rand hetzelfde is als de begin-top van de opvolger. NOTE Functie aangepast van pad naar staart gedefinieerd in ISO10303 42. Nieuwe functie HISTORY in IFC2.0"
+msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
+msgstr "Definieer optioneel een naam voor deze verbindingsvoorwaarde."
 
-#:IFC.xml:44561
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:44069
+msgid "IfcStructuralLoad"
+msgstr "IfcStructuralLoad"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een poellus een lus met rechte randen die een vlak gebied in de ruimte begrendelen. Een poly lus is een genus 1-lus waarin de lus wordt weergegeven door een geordende coplanaire collectie van punten die de hoekpunten van de lus vormen. De lus bestaat uit rechte lijnsegmenten die zich aansluiten bij de collectie tot het succesvolle punt in de collectie. Het sluitende segment is van het laatste tot het eerste punt in de collectie. De richting van de lus is in de richting van de lijnsegmenten. Een poly loop zal voldoen aan de volgende topologische beperkingen die de lus het geslacht van een lus heeft. de volgende vergelijking moet tevreden zijn met afbeelding. .. .. .. .. getallen ifcpolyloop math1. als de [[IfcPolyLoop]] altijd is gesloten en het laatste segment van de laatste [[IfcCartesianPoint]] in de lijst van Polyken tot de eerste [[IfcCartesianPoint]] is. Daarom zal het eerste punt aan het einde van de lijst niet worden herhaald noch door naar dezelfde instantie te verwijzen. noch door een extra exemplaar van [[IfcCartesianPoint]] te gebruiken met de coördinaten als eerste punt. NOTITIE: deze entiteit bestaat voornamelijk om de efficiënte communicatie van gefacetteerde B-rep-modellen te vergemakkelijken. NOTE Entiteit aangepast aan poly loop gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 . pec head Informal Proposities 1. Alle punten in de veelhoek die de poly lus definiëren zijn coplanar. 2. De eerste en laatste polygoon zullen per waarde verschillend zijn. bSI Documentatie"
+msgid "IfcStructuralLoad_DEFINITION"
+msgstr "Deze abstracte entiteit is het supertype van alle ladingen of reacties of van bepaalde eisen die voortkomen uit structurele analyse. of bepaalde bepalingen die de structurele analyse beïnvloeden. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:11649
-msgid "IfcPolyLoop_Polygon"
-msgstr "Veelhoek"
+#:IFC.xml:44070
+msgid "IfcStructuralLoad_Name"
+msgstr "naam"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Veelhoek"
+msgid "IfcStructuralLoad_Name_DEFINITION"
+msgstr "Definieer optioneel een naam voor deze lading."
 
-#:IFC.xml:44568
-msgid "IfcSubedge"
-msgstr "Ijssubedge"
+#:IFC.xml:44076
+msgid "IfcStructuralLoadConfiguration"
+msgstr "IfcStructuralLoadConfiguration"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ". extDef NOTE definitie volgens ISO CD 10303 42 1992 A subedge is een rand met een verbonden deel van het domein van een bestaande rand. De topologische beperkingen van een subedge zijn dezelfde als die aan een rand. NOTE Entiteit aangepast vanaf subedge gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. pec head Informal Proposities 1. Het domein van de ondergang is formeel gedefinieerd als het domein van de bovenliggende rand als bijgesneden door de subedge begint top top en subedge eindpunt. 2. De begintop en eindpunt liggen binnen de vakbond van de hoekpunten van de bovenliggende rand en het domein van de bovenliggende rand. bSI Documentatie"
+msgid "IfcStructuralLoadConfiguration_DEFINITION"
+msgstr "Deze klasse combineert een of meer laad- of resultaatwaarden in een dimensionale configuratie. HISTORY Nieuwe entiteit in IFC4. .spec head Informal Proposities 1. Alle items in waarden zullen van hetzelfde type zijn. 2. Als de lasten of resultaten een curve activiteit bevatten, worden er 1 dimensionale locaties gegeven, gemeten lokaal aan de curve. De locatie mag de grenzen van de curve niet overschrijden. De load samples en overeenkomstige locaties worden gegeven in oplopende volgorde van locaties. 3. Als de lasten of resultaten een oppervlakte-activiteit omvatten, worden er 2 dimensionale locaties gegeven, gemeten in de lokale en y-richtingen van de oppervlakteactiviteit. De locatie mag niet hoger zijn dan de grenzen van de oppervlakteactiviteit. NOTE Er zijn geen bestellingsvereisten in de 2 dimensionale zaak, maar de 1 dimensionale zaak wordt voor eenvoud besteld. bSI Documentatie"
 
-#:IFC.xml:44387
-msgid "IfcSubedge_ParentEdge"
-msgstr "OuderEdge"
+#:IFC.xml:44088
+msgid "IfcStructuralLoadConfiguration_Values"
+msgstr "Waarden"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "OuderEdge"
+msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
+msgstr "Waarden"
 
-#:IFC.xml:44571
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:44081
+msgid "IfcStructuralLoadConfiguration_Locations"
+msgstr "Locaties"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 is het supertype voor alle topologische vertegenwoordigingsitems in de geometrie. NOTE Entiteit aangepast aan de top ologische representatie item gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.5 bSI documentatie"
+msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
+msgstr "Locaties van de load samples of resultaat samples, gegeven binnen het lokale coördinaatsysteem dat is gedefinieerd door de instantie die dit resource object gebruikt. Elk item in de lijst met locaties heeft betrekking op het waardes lijst item in dezelfde lijst index. Dit attribuut is optioneel voor configuraties waarin de locaties impliciet bekend zijn met hogere niveaudefinities."
 
-#:IFC.xml:44574
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:44100
+msgid "IfcStructuralLoadLinearForce"
+msgstr "IfcStructuralLoadLinearForce"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 is A topologische constructie die overeenkomt met een punt. Het heeft dimensie 0 en omvang 0. Het domein van een vertex, indien aanwezig, is een punt in m dimensionale real space R M dit wordt weergegeven door het top punt subtype. NOTE Entiteit aangepast van top gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2.0 .spec head Informal Proposities 1. De top heeft dimensionaliteit 0. Dit is een fundamenteel kenmerk van de vertex. 2. De omvang van een top is gedefinieerd als nul. bSI Documentatie"
+msgid "IfcStructuralLoadLinearForce_DEFINITION"
+msgstr "Een exemplaar van de entiteit [[IfcStructuralLoadLinearForce]] zal worden gebruikt om acties op curves te definiëren. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
 
-#:IFC.xml:44589
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:44101
+msgid "IfcStructuralLoadLinearForce_LinearForceX"
+msgstr "LinearForceX"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 A top lus is een lus van nul genus die bestaat uit één hoekpunt. Een top top kan onafhankelijk zijn van een top lus. De topologische gegevens voldoen aan de volgende beperking afbeelding .. .. figuren ifcvertexloop math1.gif NOTE Entiteit aangepast aan top lus gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. Pc head Informal Proposities 1. Een top lus heeft nul en dimensionaliteit. 2. De top lus heeft een genus 0. bSI documentatie"
+msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
+msgstr "Lineaire force waarde in x richting."
 
-#:IFC.xml:44577
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:44106
+msgid "IfcStructuralLoadLinearForce_LinearForceY"
+msgstr "LineForceY"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "LoopVertex"
+msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
+msgstr "Lineaire force waarde in y-richting."
 
-#:IFC.xml:44592
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:44111
+msgid "IfcStructuralLoadLinearForce_LinearForceZ"
+msgstr "LineearForceZ"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definitie volgens ISO CD 10303 42 1992 is A top punt een top die zijn geometrie gedefinieerd als een punt. NOTE Entiteit aangepast van top punt gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x. .spec head Informal Proposities 1. Het domein van de top wordt formeel gedefinieerd als het domein van het top punt. bSI documentatie"
+msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
+msgstr "Lineaire force waarde in z richting."
 
-#:IFC.xml:12848
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometrie"
+#:IFC.xml:44116
+msgid "IfcStructuralLoadLinearForce_LinearMomentX"
+msgstr "LinearMomentX"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "VertexGeometrie"
+msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
+msgstr "Lineair moment voor de x-as."
 
-#:IFC.xml:44596
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:44121
+msgid "IfcStructuralLoadLinearForce_LinearMomentY"
+msgstr "LinearMomentY"
 
-msgid "IfcShell_DEFINITION"
-msgstr "Een type bestaande uit verschillende soorten shell. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 verzamelt dit type samen voor referentie bij het bouwen van complexere modellen, de subtypes die de kenmerken van een shell hebben. Een granaat is een verbonden object met een vaste dimensionaliteit d 0 1 of 2, meestal gebruikt om een regio te koppelen. Het domein van een shell, indien aanwezig, bevat zijn grenzen. Een schilderij van dimensionaliteit 0 wordt weergegeven door een grafiek bestaande uit een enkele hoekper. De top zal geen gekoppelde randen hebben. Een schilderij van dimensionaliteit 1 wordt vertegenwoordigd door een gekoppelde grafiek van dimensionaliteit 1. Een granaat van dimensionaliteit 2 is een topologische entiteit die wordt gebouwd door samen te voegen langs de randen. Het domein, indien aanwezig, is een verbonden, oriënteerbare tweevoudig met grens, dat wil zeggen een verbonden, georiënteerd, finite, niet zelf snijdend oppervlak, dat mogelijk gesloten of open is. NOTE type aangepast van shell defined in ISO 10303 42. HISTORY Nieuw type in IFC2x."
+msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
+msgstr "Lineair moment voor de y-as."
+
+#:IFC.xml:44126
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
+msgstr "LinearMomentZ"
+
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
+msgstr "Lineair moment voor de z-as."
+
+#:IFC.xml:44133
+msgid "IfcStructuralLoadOrResult"
+msgstr "IfcStructuralLoadOrResult"
+
+msgid "IfcStructuralLoadOrResult_DEFINITION"
+msgstr "Abstracte superklasse van eenvoudige apparatuur of resultaatklasse. HISTORY nieuwe abstracte entiteit in IFC4, compatibiliteit van alle subtypes blijft bewaard. bSI Documentatie"
+
+#:IFC.xml:44136
+msgid "IfcStructuralLoadPlanarForce"
+msgstr "IfcStructuralLoadPlanarForce"
+
+msgid "IfcStructuralLoadPlanarForce_DEFINITION"
+msgstr "Een exemplaar van de entiteit [[IfcStructuralLoadPlanarForce]] zal worden gebruikt om acties op gezichten te definiëren. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44137
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
+msgstr "PlanarForceX"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
+msgstr "Planar force waarde in x richting."
+
+#:IFC.xml:44142
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
+msgstr "PlanarForceY"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
+msgstr "Planar force waarde in y richting."
+
+#:IFC.xml:44147
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
+msgstr "PlanarForceZ"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
+msgstr "Planar force waarde in z richting."
+
+#:IFC.xml:44154
+msgid "IfcStructuralLoadSingleDisplacement"
+msgstr "IfcStructuralLoadSingleDisplacement"
+
+msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
+msgstr "Instanties van de entiteit [[IfcStructuralLoadSingleDisplacement]] worden gebruikt voor het definiëren van verplaatsingen. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44155
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
+msgstr "DisplacementX"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
+msgstr "Verplaatsing in x richting."
+
+#:IFC.xml:44160
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
+msgstr "Verplaatsing"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
+msgstr "Verplaatsing in de y-richting."
+
+#:IFC.xml:44165
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
+msgstr "Verplaatsing"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
+msgstr "Verplaatsing in z-richting."
+
+#:IFC.xml:44170
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
+msgstr "RotationalDisplacementRX"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
+msgstr "Rotatie over de x-as."
+
+#:IFC.xml:44175
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
+msgstr "RotationalDisplacementRY"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
+msgstr "Rotatie over de y-as."
+
+#:IFC.xml:44180
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
+msgstr "RotationalDisplacementRZ"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
+msgstr "Rotatie over de z-as."
+
+#:IFC.xml:44187
+msgid "IfcStructuralLoadSingleDisplacementDistortion"
+msgstr "IfcStructuralLoadSingleDisplacementDistortion"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
+msgstr "Definieert een verplaatsing met warping. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44188
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
+msgstr "Vervorming"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
+msgstr "De vervorming kromming dus, d.w.z. een cross sectionele deplanting gegeven aan de verplaatsingslading."
+
+#:IFC.xml:44195
+msgid "IfcStructuralLoadSingleForce"
+msgstr "IfcStructuralLoadSingleForce"
+
+msgid "IfcStructuralLoadSingleForce_DEFINITION"
+msgstr "De instanties van de entiteit [[IfcStructuralLoadSingleForce]] moeten worden gebruikt om de krachten en momenten van een actie op een enkel punt te definiëren. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44196
+msgid "IfcStructuralLoadSingleForce_ForceX"
+msgstr "ForceX"
+
+msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
+msgstr "Forceer waarde in x-richting."
+
+#:IFC.xml:44201
+msgid "IfcStructuralLoadSingleForce_ForceY"
+msgstr "Forceer"
+
+msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
+msgstr "Forceer waarde in y-richting."
+
+#:IFC.xml:44206
+msgid "IfcStructuralLoadSingleForce_ForceZ"
+msgstr "ForceZ"
+
+msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
+msgstr "Forceer waarde in z-richting."
+
+#:IFC.xml:44211
+msgid "IfcStructuralLoadSingleForce_MomentX"
+msgstr "MomentX"
+
+msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
+msgstr "Moment over de x-as."
+
+#:IFC.xml:44216
+msgid "IfcStructuralLoadSingleForce_MomentY"
+msgstr "MomentY"
+
+msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
+msgstr "Moment over de y-as."
+
+#:IFC.xml:44221
+msgid "IfcStructuralLoadSingleForce_MomentZ"
+msgstr "MomentZ"
+
+msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
+msgstr "Moment over de z-as."
+
+#:IFC.xml:44228
+msgid "IfcStructuralLoadSingleForceWarping"
+msgstr "IfcStructuralLoadSingleForceWarping"
+
+msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
+msgstr "Instanties van de entiteit [[IfcStructuralLoadSingleForceWarping]] , als een subtype van [[IfcStructuralLoadSingleForce]] , zal worden gebruikt om een actie op een enkel punt te definiëren. Naast krachten en momenten gedefinieerd door het supertype kan een warping moment worden gedefinieerd. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44229
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
+msgstr "WarpingMoment"
+
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
+msgstr "Het spanningsmoment bij het laden van punten."
+
+#:IFC.xml:44236
+msgid "IfcStructuralLoadStatic"
+msgstr "IfcStructuralLoadStatic"
+
+msgid "IfcStructuralLoadStatic_DEFINITION"
+msgstr "De abstract entiteit [[IfcStructuralLoadStatic]] is het supertype van alle statische lasten acties of reacties die kunnen worden gedefinieerd. Binnen het toepassingsgebied gaat het om concentrerende krachten en momenten, lineaire dus. een dimensionaal gedistribueerde krachten en momenten, planar d.w.z. twee dimensionaal gedistribueerde krachten, verder verplaatsen en temperatuur belastingen. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+
+#:IFC.xml:44239
+msgid "IfcStructuralLoadTemperature"
+msgstr "IfcStructuralLoadTemperatuur"
+
+msgid "IfcStructuralLoadTemperature_DEFINITION"
+msgstr "Een exemplaar van de entiteit [[IfcStructuralLoadTemperature]] zal worden gebruikt om acties te definiëren die worden veroorzaakt door een temperatuurwijziging. Zoals getoond in figuur 1, de temperatuurverandering wordt gegeven met een constante waarde die wordt toegepast op het volledige gedeelte en de waarden voor temperatuurverschillen tussen buitenste vezels van het onderdeel. HISTORY Nieuwe entiteit in IFC2x2. .. .. .. .. .. cijfers structurele temperatuur.gif Figure 1 structurele belasting bSI documentatie"
+
+#:IFC.xml:44240
+msgid "IfcStructuralLoadTemperature_DeltaTConstant"
+msgstr "DeltaTConstant"
+
+msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
+msgstr "Temperatuurverandering die het volledige deel van het structurele lid beïnvloedt, of het uniforme gedeelte van een niet-uniforme temperatuurwijziging. X 0D X 0D NOTE A positieve waarde beschrijft een stijging van de temperatuur. I.e. een positieve constante temperatuurwijziging veroorzaakt ongatie van een lid, of compressie in het lid als er respectievelijke beperkingen zijn."
+
+#:IFC.xml:44245
+msgid "IfcStructuralLoadTemperature_DeltaTY"
+msgstr "DeltaTY"
+
+msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
+msgstr "Niet-uniforme temperatuurwijziging gespecificeerd als het verschil van de temperatuurverandering op de buitenste vezel van de positieve y-richting min de temperatuurverandering op de buitenvezel van de negatieve y-richting van het analyse-lid. X 0D X 0D NOTE Een positieve niet uniforme temperatuurverandering in y leidt tot een negatieve curve van het lid over z, of een positief buigend moment over z als er sprake is van respectievelijke beperkingen. y en z zijn lokale ledenassen."
+
+#:IFC.xml:44250
+msgid "IfcStructuralLoadTemperature_DeltaTZ"
+msgstr "DeltaTZ"
+
+msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
+msgstr "Niet-uniforme temperatuurwijziging gespecificeerd als het verschil van de temperatuurverandering op de buitenste vezel van de positieve z richting minus de temperatuurverandering op de buitenvezel van de negatieve z richting van het analyse-lid. X 0D X 0D NOTE Een positieve niet-uniforme temperatuurverandering in z leidt tot een positieve kromming van het lid over y, of een negatief buigend moment over y als er sprake is van respectievelijke beperkingen. y en z zijn lokale ledenassen."
+
+#:IFC.xml:44257
+msgid "IfcSurfaceReinforcementArea"
+msgstr "IfcSurfaceReinforcementArea"
+
+msgid "IfcSurfaceReinforcementArea_DEFINITION"
+msgstr "Beschrijft vereist of verstrekt versterkingsgebied van oppervlakteleden. NOTITIELD ontwerpparameters zoals betonnen cover, effectieve diepte, oriëntatie van meshes of rebars twee, optioneel drie richtingen etc. zijn niet gespecificeerd in IfcStructuralLoadResource schema. Ze zullen worden gespecificeerd op het niveau van de structurele leden. HISTORY Nieuwe entiteit in IFC4. bSI Documentatie"
+
+#:IFC.xml:44274
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
+msgstr "SurfaceVersterking1"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
+msgstr "Versterking op het gezicht van het lid dat zich bevindt aan de kant van de positieve lokale z-richting van het oppervlaktelid. Opgegeven als gebied per lengte, bv. . Vierkante meter per meter lengtemaat, bijv. meter. Het versterkingsgebied kan worden opgegeven voor twee of drie richtingen van versterkingsrails."
+
+#:IFC.xml:44279
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
+msgstr "SurfaceVersterking2"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
+msgstr "Versterking op het gezicht van het lid dat zich bevindt aan de kant van de negatieve lokale z-richting van het oppervlaktelid. Opgegeven als gebied per lengte, bv. . Vierkante meter per meter lengtemaat, bijv. meter. Het versterkingsgebied kan worden opgegeven voor twee of drie richtingen van versterkingsrails."
+
+#:IFC.xml:44284
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
+msgstr "Scherpe Versterking"
+
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
+msgstr "Afschuiving versteviging. Opgegeven als gebied per gebied, bijv. vierkante meter per vierkante meter hoeveelheid, d.w.z. eenheid."
+
+#:IFC.xml:44291
+msgid "IfcModulusOfRotationalSubgradeReactionSelect"
+msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
+
+msgid "IfcModulusOfRotationalSubgradeReactionSelect_DEFINITION"
+msgstr "Een maatregel voor modulatie van de reactiesnelheid van ondermaatse kwaliteit die de roulatiebedding van een structurele kromming per lengte weerspiegelt. TRUE denotes infinite stijfheid . FALSE denotes zijn geen stijfheid van een release. Een numerieke waarde denotes finite lineaire elastische stijfheid. HISTORY Nieuw type in IFC4."
+
+#:IFC.xml:44292
+msgid "IfcModulusOfSubgradeReactionSelect"
+msgstr "IfcModulusOfSubgradeReactionSelect"
+
+msgid "IfcModulusOfSubgradeReactionSelect_DEFINITION"
+msgstr "Draadmaatregel die de bedding van een structureel gezichtsitem per gebied weerspiegelt. TRUE denieert oneindige stijfheid . FALSE denoteert geen stijfheid van een release. Een numerieke waarde denoteert eindige lineaire elastische stijfheid. HISTORY nieuw type in IFC4."
+
+#:IFC.xml:44293
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
+msgstr "IfcModulusOfTranslationalSubgradeReactionSelect"
+
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect_DEFINITION"
+msgstr "Een maatregel voor modulus van translationele subgrade reactie die de vertaalbedding van een structurele curve item per lengte weerspiegelt. TRUE denotes infinite stijfheid . FALSE denotes zijn geen stijfheid van een release. Een numerieke waarde denotes finite lineaire elastische stijfheid. HISTORY Nieuw type in IFC4."
+
+#:IFC.xml:44294
+msgid "IfcRotationalStiffnessSelect"
+msgstr "IfcRotationalStiffnessSelect"
+
+msgid "IfcRotationalStiffnessSelect_DEFINITION"
+msgstr "Een zekere mate van rotationele stijfheid. TRUE denotes oneindige stijfheid . FALSE denotes zijn geen stijfheid van een release. Een numerieke waarde denotes finite lineaire elastische stijfheid. HISTORY Nieuw type in IFC4."
+
+#:IFC.xml:44295
+msgid "IfcTranslationalStiffnessSelect"
+msgstr "IfcTranslationalStiffnessSelect"
+
+msgid "IfcTranslationalStiffnessSelect_DEFINITION"
+msgstr "Een bepaalde mate van lineaire stijfheid. TRUE denoert oneindige stijfheid . FALSE denotes zijn geen stijfheid van een release. Een numerieke waarde denotes finite lineaire elastische stijfheid. HISTORY Nieuw type in IFC4."
+
+#:IFC.xml:44296
+msgid "IfcWarpingStiffnessSelect"
+msgstr "IfcWarpingStiffnessSelect"
+
+msgid "IfcWarpingStiffnessSelect_DEFINITION"
+msgstr "Een bepaalde mate van stijfheid. TRUE denotes oneindige stijfheid . FALSE denotes zijn geen stijfheid van een release. Een numerieke waarde denotes finite lineaire elastische stijfheid. HISTORY Nieuw type in IFC4."
 
