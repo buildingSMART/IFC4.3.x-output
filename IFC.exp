@@ -563,7 +563,7 @@ TYPE IfcAlignmentHorizontalSegmentTypeEnum = ENUMERATION OF
 	(LINE
 	,CIRCULARARC
 	,CLOTHOID
-	,CUBICPARABOLA
+	,CUBIC
 	,CUBICSPIRAL
 	,BIQUADRATICPARABOLA
 	,BLOSSCURVE
@@ -1972,7 +1972,7 @@ END_TYPE;
 TYPE IfcMarineFacilityTypeEnum = ENUMERATION OF
 	(CANAL
 	,WATERWAYSHIPLIFT
-	,EMBANKMENT
+	,REVETMENT
 	,LAUNCHRECOVERY
 	,MARINEDEFENCE
 	,HYDROLIFT
@@ -2111,10 +2111,6 @@ TYPE IfcNavigationElementTypeEnum = ENUMERATION OF
 	,BUOY
 	,USERDEFINED
 	,NOTDEFINED);
-END_TYPE;
-
-TYPE IfcNullStyle = ENUMERATION OF
-	(NULL);
 END_TYPE;
 
 TYPE IfcObjectTypeEnum = ENUMERATION OF
@@ -2381,6 +2377,11 @@ TYPE IfcRailwayPartTypeEnum = ENUMERATION OF
 	,NOTDEFINED);
 END_TYPE;
 
+TYPE IfcRailwayTypeEnum = ENUMERATION OF
+	(USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
 TYPE IfcRampFlightTypeEnum = ENUMERATION OF
 	(STRAIGHT
 	,SPIRAL
@@ -2506,6 +2507,11 @@ TYPE IfcRoadPartTypeEnum = ENUMERATION OF
 	,CARRIAGEWAY
 	,TRAFFICISLAND
 	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;
+
+TYPE IfcRoadTypeEnum = ENUMERATION OF
+	(USERDEFINED
 	,NOTDEFINED);
 END_TYPE;
 
@@ -2741,6 +2747,7 @@ END_TYPE;
 TYPE IfcSpaceTypeEnum = ENUMERATION OF
 	(PARKING
 	,GFA
+	,BERTH
 	,SPACE
 	,INTERNAL
 	,EXTERNAL
@@ -3010,15 +3017,6 @@ TYPE IfcTransitionCode = ENUMERATION OF
 	,CONTINUOUS
 	,CONTSAMEGRADIENT
 	,CONTSAMEGRADIENTSAMECURVATURE);
-END_TYPE;
-
-TYPE IfcTransitionCurveType = ENUMERATION OF
-	(BIQUADRATICPARABOLA
-	,BLOSSCURVE
-	,CLOTHOIDCURVE
-	,COSINECURVE
-	,CUBICPARABOLA
-	,SINECURVE);
 END_TYPE;
 
 TYPE IfcTransportElementFixedTypeEnum = ENUMERATION OF
@@ -3522,11 +3520,6 @@ TYPE IfcLightDistributionDataSourceSelect = SELECT
 	,IfcLightIntensityDistribution);
 END_TYPE;
 
-TYPE IfcLinearAxisSelect = SELECT
-	(IfcCurve
-	,IfcLinearAxisWithInclination);
-END_TYPE;
-
 TYPE IfcMaterialSelect = SELECT
 	(IfcMaterialDefinition
 	,IfcMaterialList
@@ -3598,14 +3591,6 @@ END_TYPE;
 TYPE IfcPointOrVertexPoint = SELECT
 	(IfcPoint
 	,IfcVertexPoint);
-END_TYPE;
-
-TYPE IfcPresentationStyleSelect = SELECT
-	(IfcCurveStyle
-	,IfcFillAreaStyle
-	,IfcNullStyle
-	,IfcSurfaceStyle
-	,IfcTextStyle);
 END_TYPE;
 
 TYPE IfcProcessSelect = SELECT
@@ -3717,11 +3702,6 @@ END_TYPE;
 TYPE IfcStructuralActivityAssignmentSelect = SELECT
 	(IfcElement
 	,IfcStructuralItem);
-END_TYPE;
-
-TYPE IfcStyleAssignmentSelect = SELECT
-	(IfcPresentationStyle
-	,IfcPresentationStyleAssignment);
 END_TYPE;
 
 TYPE IfcSurfaceOrFaceSurface = SELECT
@@ -3980,26 +3960,9 @@ ENTITY IfcAlignment
 	PredefinedType : OPTIONAL IfcAlignmentTypeEnum;
 END_ENTITY;
 
-ENTITY IfcAlignment2DVerSegCircularArc
- SUBTYPE OF (IfcAlignmentVerticalSegment);
-	Radius : IfcPositiveLengthMeasure;
-	IsConvex : IfcBoolean;
-END_ENTITY;
-
-ENTITY IfcAlignment2DVerSegLine
- SUBTYPE OF (IfcAlignmentVerticalSegment);
-END_ENTITY;
-
-ENTITY IfcAlignment2DVerSegParabolicArc
- SUBTYPE OF (IfcAlignmentVerticalSegment);
-	ParabolaConstant : IfcPositiveLengthMeasure;
-	IsConvex : IfcBoolean;
-END_ENTITY;
-
 ENTITY IfcAlignmentCant
  SUBTYPE OF (IfcLinearElement);
 	RailHeadDistance : IfcPositiveLengthMeasure;
-	Segments : LIST [1:?] OF IfcAlignmentCantSegment;
 END_ENTITY;
 
 ENTITY IfcAlignmentCantSegment
@@ -4014,17 +3977,9 @@ ENTITY IfcAlignmentCantSegment
 	PredefinedType : IfcAlignmentCantSegmentTypeEnum;
 END_ENTITY;
 
-ENTITY IfcAlignmentCurve
- SUBTYPE OF (IfcBoundedCurve);
-	Horizontal : IfcAlignmentHorizontal;
-	Vertical : OPTIONAL IfcAlignmentVertical;
-	Tag : OPTIONAL IfcLabel;
-END_ENTITY;
-
 ENTITY IfcAlignmentHorizontal
  SUBTYPE OF (IfcLinearElement);
 	StartDistAlong : OPTIONAL IfcLengthMeasure;
-	Segments : LIST [1:?] OF IfcAlignmentHorizontalSegment;
 END_ENTITY;
 
 ENTITY IfcAlignmentHorizontalSegment
@@ -4033,7 +3988,7 @@ ENTITY IfcAlignmentHorizontalSegment
 	StartDirection : IfcPlaneAngleMeasure;
 	StartRadiusOfCurvature : IfcLengthMeasure;
 	EndRadiusOfCurvature : IfcLengthMeasure;
-	SegmentLength : IfcPositiveLengthMeasure;
+	SegmentLength : IfcNonNegativeLengthMeasure;
 	GravityCenterLineHeight : OPTIONAL IfcPositiveLengthMeasure;
 	PredefinedType : IfcAlignmentHorizontalSegmentTypeEnum;
 END_ENTITY;
@@ -4049,19 +4004,14 @@ END_ENTITY;
 
 ENTITY IfcAlignmentSegment
  SUBTYPE OF (IfcLinearElement);
-	GeometricParameters : IfcAlignmentParameterSegment;
+	DesignParameters : IfcAlignmentParameterSegment;
 END_ENTITY;
 
 ENTITY IfcAlignmentVertical
  SUBTYPE OF (IfcLinearElement);
-	Segments : LIST [1:?] OF IfcAlignmentVerticalSegment;
 END_ENTITY;
 
 ENTITY IfcAlignmentVerticalSegment
- SUPERTYPE OF (ONEOF
-	(IfcAlignment2DVerSegCircularArc
-	,IfcAlignment2DVerSegLine
-	,IfcAlignment2DVerSegParabolicArc))
  SUBTYPE OF (IfcAlignmentParameterSegment);
 	StartDistAlong : IfcLengthMeasure;
 	HorizontalLength : IfcPositiveLengthMeasure;
@@ -4270,12 +4220,6 @@ ENTITY IfcAxis2PlacementLinear
 	WR2 : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 END_ENTITY;
 
-ENTITY IfcAxisLateralInclination
- SUBTYPE OF (IfcGeometricRepresentationItem);
- INVERSE
-	ToLinearAxis : SET [1:1] OF IfcLinearAxisWithInclination FOR Inclinating;
-END_ENTITY;
-
 ENTITY IfcBSplineCurve
  ABSTRACT SUPERTYPE OF (ONEOF
 	(IfcBSplineCurveWithKnots))
@@ -4416,10 +4360,10 @@ ENTITY IfcBlock
 END_ENTITY;
 
 ENTITY IfcBlossCurve
- SUBTYPE OF (IfcCurve);
-	Position : IfcAxis2Placement;
-	CurveLength : IfcPositiveLengthMeasure;
-	Radius : IfcPositiveLengthMeasure;
+ SUBTYPE OF (IfcSpiral);
+	QubicTerm : IfcLengthMeasure;
+	QuadraticTerm : OPTIONAL IfcLengthMeasure;
+	LinearTerm : OPTIONAL IfcLengthMeasure;
 END_ENTITY;
 
 ENTITY IfcBoiler
@@ -4522,18 +4466,13 @@ END_ENTITY;
 
 ENTITY IfcBoundedCurve
  ABSTRACT SUPERTYPE OF (ONEOF
-	(IfcAlignmentCurve
-	,IfcBSplineCurve
+	(IfcBSplineCurve
 	,IfcCompositeCurve
-	,IfcCurveSegment2D
-	,IfcGradientCurve
 	,IfcIndexedPolyCurve
 	,IfcPolyline
-	,IfcSegmentedReferenceCurve
-	,IfcTrimmedCurve))
+	,IfcTrimmedCurve
+	,IfcVienneseBend))
  SUBTYPE OF (IfcCurve);
- INVERSE
-	PositioningElement : SET [0:1] OF IfcLinearPositioningElement FOR Axis;
 END_ENTITY;
 
 ENTITY IfcBoundedSurface
@@ -4569,10 +4508,6 @@ ENTITY IfcBridge
 	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
  (PredefinedType <> IfcBridgeTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBridgeTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
-END_ENTITY;
-
-ENTITY IfcBridgePart
- SUBTYPE OF (IfcFacilityPart);
 END_ENTITY;
 
 ENTITY IfcBuilding
@@ -5008,12 +4943,6 @@ ENTITY IfcCircleProfileDef
 	Radius : IfcPositiveLengthMeasure;
 END_ENTITY;
 
-ENTITY IfcCircularArcSegment2D
- SUBTYPE OF (IfcCurveSegment2D);
-	Radius : IfcPositiveLengthMeasure;
-	IsCCW : IfcBoolean;
-END_ENTITY;
-
 ENTITY IfcCivilElement
  SUBTYPE OF (IfcElement);
 END_ENTITY;
@@ -5051,8 +4980,7 @@ ENTITY IfcClosedShell
 END_ENTITY;
 
 ENTITY IfcClothoid
- SUBTYPE OF (IfcCurve);
-	Position : IfcAxis2Placement;
+ SUBTYPE OF (IfcSpiral);
 	ClothoidConstant : IfcLengthMeasure;
 END_ENTITY;
 
@@ -5164,10 +5092,12 @@ END_ENTITY;
 
 ENTITY IfcCompositeCurve
  SUPERTYPE OF (ONEOF
-	(IfcCompositeCurveOnSurface))
+	(IfcCompositeCurveOnSurface
+	,IfcGradientCurve
+	,IfcSegmentedReferenceCurve))
  SUBTYPE OF (IfcBoundedCurve);
+	Segments : LIST [1:?] OF IfcSegment;
 	SelfIntersect : IfcLogical;
-	Segments : IfcCompositeCurveSegment;
  DERIVE
 	NSegments : IfcInteger := SIZEOF(Segments);
 	ClosedCurve : IfcLogical := Segments[NSegments].Transition <> Discontinuous;
@@ -5194,8 +5124,6 @@ ENTITY IfcCompositeCurveSegment
 	ParentCurve : IfcCurve;
  DERIVE
 	Dim : IfcDimensionCount := ParentCurve.Dim;
- INVERSE
-	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
  WHERE
 	ParentIsBoundedCurve : ('IFC4X3_RC2.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
@@ -5548,6 +5476,12 @@ ENTITY IfcCoordinateReferenceSystem
 	HasCoordinateOperation : SET [0:1] OF IfcCoordinateOperation FOR SourceCRS;
 END_ENTITY;
 
+ENTITY IfcCosine
+ SUBTYPE OF (IfcSpiral);
+	CosineTerm : IfcLengthMeasure;
+	ConstantTerm : IfcReal;
+END_ENTITY;
+
 ENTITY IfcCostItem
  SUBTYPE OF (IfcControl);
 	PredefinedType : OPTIONAL IfcCostItemTypeEnum;
@@ -5673,14 +5607,13 @@ END_ENTITY;
 
 ENTITY IfcCurve
  ABSTRACT SUPERTYPE OF (ONEOF
-	(IfcBlossCurve
-	,IfcBoundedCurve
-	,IfcClothoid
+	(IfcBoundedCurve
 	,IfcConic
 	,IfcLine
 	,IfcOffsetCurve
 	,IfcPcurve
-	,IfcSeriesParameterCurve
+	,IfcPolynomialCurve
+	,IfcSpiral
 	,IfcSurfaceCurve))
  SUBTYPE OF (IfcGeometricRepresentationItem);
  DERIVE
@@ -5707,17 +5640,6 @@ ENTITY IfcCurveSegment
 	SegmentStart : IfcCurveMeasureSelect;
 	SegmentLength : IfcCurveMeasureSelect;
 	ParentCurve : IfcCurve;
-END_ENTITY;
-
-ENTITY IfcCurveSegment2D
- ABSTRACT SUPERTYPE OF (ONEOF
-	(IfcCircularArcSegment2D
-	,IfcLineSegment2D
-	,IfcTransitionCurveSegment2D))
- SUBTYPE OF (IfcBoundedCurve);
-	StartPoint : IfcCartesianPoint;
-	StartDirection : IfcPlaneAngleMeasure;
-	SegmentLength : IfcPositiveLengthMeasure;
 END_ENTITY;
 
 ENTITY IfcCurveStyle
@@ -6811,8 +6733,6 @@ ENTITY IfcFacility
 END_ENTITY;
 
 ENTITY IfcFacilityPart
- SUPERTYPE OF (ONEOF
-	(IfcBridgePart))
  SUBTYPE OF (IfcSpatialStructureElement);
 	PredefinedType : IfcFacilityPartTypeSelect;
 	UsageType : IfcFacilityUsageEnum;
@@ -7272,7 +7192,6 @@ END_ENTITY;
 ENTITY IfcGeometricRepresentationItem
  ABSTRACT SUPERTYPE OF (ONEOF
 	(IfcAnnotationFillArea
-	,IfcAxisLateralInclination
 	,IfcBooleanResult
 	,IfcBoundingBox
 	,IfcCartesianPointList
@@ -7286,7 +7205,6 @@ ENTITY IfcGeometricRepresentationItem
 	,IfcGeometricSet
 	,IfcHalfSpaceSolid
 	,IfcLightSource
-	,IfcLinearAxisWithInclination
 	,IfcPlacement
 	,IfcPlanarExtent
 	,IfcPoint
@@ -7364,12 +7282,11 @@ ENTITY IfcGeotechnicalStratum
 END_ENTITY;
 
 ENTITY IfcGradientCurve
- SUBTYPE OF (IfcBoundedCurve);
+ SUBTYPE OF (IfcCompositeCurve);
 	BaseCurve : IfcBoundedCurve;
-	Segments : LIST [1:?] OF IfcCurveSegment;
 	EndPoint : OPTIONAL IfcCartesianPoint;
  DERIVE
-	Height : IfcLengthMeasure := IfcGradient(SELF);
+	RelativeElevation : IfcLengthMeasure := IfcGradient(SELF);
 END_ENTITY;
 
 ENTITY IfcGrid
@@ -7442,6 +7359,13 @@ ENTITY IfcHeatExchangerType
 ((PredefinedType = IfcHeatExchangerTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
+ENTITY IfcHelmertCurve
+ SUBTYPE OF (IfcSpiral);
+	QuadraticTerm : IfcLengthMeasure;
+	LinearTerm : OPTIONAL IfcLengthMeasure;
+	ConstantTerm : OPTIONAL IfcReal;
+END_ENTITY;
+
 ENTITY IfcHumidifier
  SUBTYPE OF (IfcEnergyConversionDevice);
 	PredefinedType : OPTIONAL IfcHumidifierTypeEnum;
@@ -7502,7 +7426,6 @@ END_ENTITY;
 ENTITY IfcInclinedReferenceSweptAreaSolid
  SUBTYPE OF (IfcDirectrixDistanceSweptAreaSolid);
 	FixedAxisVertical : OPTIONAL IfcBoolean;
-	Inclinating : IfcAxisLateralInclination;
 END_ENTITY;
 
 ENTITY IfcIndexedColourMap
@@ -7789,16 +7712,6 @@ ENTITY IfcLine
 	SameDim : Dir.Dim = Pnt.Dim;
 END_ENTITY;
 
-ENTITY IfcLineSegment2D
- SUBTYPE OF (IfcCurveSegment2D);
-END_ENTITY;
-
-ENTITY IfcLinearAxisWithInclination
- SUBTYPE OF (IfcGeometricRepresentationItem);
-	Directrix : IfcCurve;
-	Inclinating : IfcAxisLateralInclination;
-END_ENTITY;
-
 ENTITY IfcLinearElement
  ABSTRACT SUPERTYPE OF (ONEOF
 	(IfcAlignmentCant
@@ -7809,31 +7722,15 @@ ENTITY IfcLinearElement
 END_ENTITY;
 
 ENTITY IfcLinearPlacement
- SUPERTYPE OF (ONEOF
-	(IfcLinearPlacementWithInclination
-	,IfcLinearSpanPlacement))
  SUBTYPE OF (IfcObjectPlacement);
-	PlacementMeasuredAlong : IfcCurve;
-	Distance : IfcPointByDistanceExpression;
 	RelativePlacement : IfcAxis2PlacementLinear;
 	CartesianPosition : OPTIONAL IfcAxis2Placement3D;
-END_ENTITY;
-
-ENTITY IfcLinearPlacementWithInclination
- SUBTYPE OF (IfcLinearPlacement);
-	Inclinating : IfcAxisLateralInclination;
 END_ENTITY;
 
 ENTITY IfcLinearPositioningElement
  SUPERTYPE OF (ONEOF
 	(IfcAlignment))
  SUBTYPE OF (IfcPositioningElement);
-	Axis : IfcBoundedCurve;
-END_ENTITY;
-
-ENTITY IfcLinearSpanPlacement
- SUBTYPE OF (IfcLinearPlacement);
-	Span : IfcPositiveLengthMeasure;
 END_ENTITY;
 
 ENTITY IfcLiquidTerminal
@@ -7886,6 +7783,8 @@ ENTITY IfcMapConversion
 	XAxisAbscissa : OPTIONAL IfcReal;
 	XAxisOrdinate : OPTIONAL IfcReal;
 	Scale : OPTIONAL IfcReal;
+	ScaleY : OPTIONAL IfcReal;
+	ScaleZ : OPTIONAL IfcReal;
 END_ENTITY;
 
 ENTITY IfcMappedItem
@@ -7896,9 +7795,10 @@ END_ENTITY;
 
 ENTITY IfcMarineFacility
  SUBTYPE OF (IfcFacility);
-	PredefinedType : IfcMarineFacilityTypeEnum;
+	PredefinedType : OPTIONAL IfcMarineFacilityTypeEnum;
  WHERE
-	CorrectPredefinedType : (PredefinedType <> IfcMarineFacilityTypeEnum.USERDEFINED) OR
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcMarineFacilityTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMarineFacilityTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
@@ -8791,6 +8691,14 @@ ENTITY IfcPolyline
 	SameDim : SIZEOF(QUERY(Temp <* Points | Temp.Dim <> Points[1].Dim)) = 0;
 END_ENTITY;
 
+ENTITY IfcPolynomialCurve
+ SUBTYPE OF (IfcCurve);
+	Position : IfcPlacement;
+	CoefficientsX : OPTIONAL LIST [2:?] OF IfcReal;
+	CoefficientsY : OPTIONAL LIST [2:?] OF IfcReal;
+	CoefficentsZ : OPTIONAL LIST [2:?] OF IfcReal;
+END_ENTITY;
+
 ENTITY IfcPort
  ABSTRACT SUPERTYPE OF (ONEOF
 	(IfcDistributionPort))
@@ -8933,10 +8841,6 @@ ENTITY IfcPresentationStyle
 	,IfcSurfaceStyle
 	,IfcTextStyle));
 	Name : OPTIONAL IfcLabel;
-END_ENTITY;
-
-ENTITY IfcPresentationStyleAssignment;
-	Styles : SET [1:?] OF IfcPresentationStyleSelect;
 END_ENTITY;
 
 ENTITY IfcProcedure
@@ -9418,6 +9322,11 @@ END_ENTITY;
 
 ENTITY IfcRailway
  SUBTYPE OF (IfcFacility);
+	PredefinedType : OPTIONAL IfcRailwayTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcRailwayTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcRailwayTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcRamp
@@ -10251,6 +10160,11 @@ END_ENTITY;
 
 ENTITY IfcRoad
  SUBTYPE OF (IfcFacility);
+	PredefinedType : OPTIONAL IfcRoadTypeEnum;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType <> IfcRoadTypeEnum.USERDEFINED) OR
+ ((PredefinedType = IfcRoadTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 END_ENTITY;
 
 ENTITY IfcRoof
@@ -10404,12 +10318,13 @@ ENTITY IfcSegment
 	,IfcCurveSegment))
  SUBTYPE OF (IfcGeometricRepresentationItem);
 	Transition : IfcTransitionCode;
+ INVERSE
+	UsingCurves : SET [1:?] OF IfcCompositeCurve FOR Segments;
 END_ENTITY;
 
 ENTITY IfcSegmentedReferenceCurve
- SUBTYPE OF (IfcBoundedCurve);
+ SUBTYPE OF (IfcCompositeCurve);
 	BaseCurve : IfcBoundedCurve;
-	Segments : LIST [1:?] OF IfcCurveSegment;
 	EndPoint : OPTIONAL IfcPlacement;
 END_ENTITY;
 
@@ -10430,13 +10345,6 @@ ENTITY IfcSensorType
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcSensorTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcSensorTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
-END_ENTITY;
-
-ENTITY IfcSeriesParameterCurve
- SUBTYPE OF (IfcCurve);
-	Position : IfcPlacement;
-	CoefficientsX : LIST [2:?] OF IfcReal;
-	CoefficientsY : LIST [2:?] OF IfcReal;
 END_ENTITY;
 
 ENTITY IfcShadingDevice
@@ -10564,6 +10472,12 @@ ENTITY IfcSimplePropertyTemplate
 	SecondaryUnit : OPTIONAL IfcUnit;
 	Expression : OPTIONAL IfcLabel;
 	AccessState : OPTIONAL IfcStateEnum;
+END_ENTITY;
+
+ENTITY IfcSine
+ SUBTYPE OF (IfcSpiral);
+	SineTerm : IfcLengthMeasure;
+	LinearTerm : IfcLengthMeasure;
 END_ENTITY;
 
 ENTITY IfcSite
@@ -10771,6 +10685,17 @@ END_ENTITY;
 ENTITY IfcSphericalSurface
  SUBTYPE OF (IfcElementarySurface);
 	Radius : IfcPositiveLengthMeasure;
+END_ENTITY;
+
+ENTITY IfcSpiral
+ ABSTRACT SUPERTYPE OF (ONEOF
+	(IfcBlossCurve
+	,IfcClothoid
+	,IfcCosine
+	,IfcHelmertCurve
+	,IfcSine))
+ SUBTYPE OF (IfcCurve);
+	Position : OPTIONAL IfcAxis2Placement;
 END_ENTITY;
 
 ENTITY IfcStackTerminal
@@ -11158,7 +11083,7 @@ END_ENTITY;
 ENTITY IfcStyledItem
  SUBTYPE OF (IfcRepresentationItem);
 	Item : OPTIONAL IfcRepresentationItem;
-	Styles : SET [1:?] OF IfcStyleAssignmentSelect;
+	Styles : IfcPresentationStyle;
 	Name : OPTIONAL IfcLabel;
  WHERE
 	ApplicableItem : NOT('IFC4X3_RC2.IFCSTYLEDITEM' IN TYPEOF(Item));
@@ -11849,15 +11774,6 @@ ENTITY IfcTransformerType
 ((PredefinedType = IfcTransformerTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
 END_ENTITY;
 
-ENTITY IfcTransitionCurveSegment2D
- SUBTYPE OF (IfcCurveSegment2D);
-	StartRadius : OPTIONAL IfcPositiveLengthMeasure;
-	EndRadius : OPTIONAL IfcPositiveLengthMeasure;
-	IsStartRadiusCCW : IfcBoolean;
-	IsEndRadiusCCW : IfcBoolean;
-	TransitionCurveType : IfcTransitionCurveType;
-END_ENTITY;
-
 ENTITY IfcTransportElement
  SUBTYPE OF (IfcElement);
 	PredefinedType : OPTIONAL IfcTransportElementTypeSelect;
@@ -12132,6 +12048,14 @@ ENTITY IfcVibrationIsolatorType
  WHERE
 	CorrectPredefinedType : (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED) OR
 ((PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcElementType.ElementType));
+END_ENTITY;
+
+ENTITY IfcVienneseBend
+ SUBTYPE OF (IfcBoundedCurve);
+	StartCurvature : IfcCurvatureMeasure;
+	EndCurvature : IfcCurvatureMeasure;
+	GravityCenterHeight : IfcLengthMeasure;
+	SegmentLength : IfcLengthMeasure;
 END_ENTITY;
 
 ENTITY IfcVirtualElement
