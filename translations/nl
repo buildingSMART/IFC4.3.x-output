@@ -9,1019 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: nl\n"
-"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
-"X-Crowdin-File-ID: 86\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: nl_NL\n"
 "PO-Revision-Date: 2021-03-09 11:48\n"
 
-#:IFC.xml:38406
-msgid "IfcBuildingElementPart"
-msgstr "IfcBuildingElementPart"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBuildingElementPart_DEFINITION"
-msgstr "[[IfcBuildingElementPart]] vertegenwoordigt belangrijke onderdelen als ondergeschikte onderdelen van een bouwelement. Gebruikelijke voorbeelden van gebruik zijn eerdere betonnen sandwich muren, waar de lagen verschillende geometrie weergaven kunnen hebben. In dit geval beschrijft de gelaagde materiële vertegenwoordiging het element niet. Elke laag wordt vertegenwoordigd door een eigen exemplaar van de [[IfcBuildingElementPart]] met zijn eigen geometrie beschrijving. Het type bouwelement wordt verder gespecificeerd door een overeenkomend exemplaar van [[IfcBuildingElementPartType]], waarnaar wordt verwezen door [[IfcRelDefinesByType]]. HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Een geavanceerd gezicht is een specialisatie van een oppervlak dat moet voldoen aan de eisen voor het gebruik van bepaalde topologische en geometrische vertegenwoordigingsartikelen voor de definitie van de gezichten, randen en hoekpunten. Een [[IfcAdvancedFace]] is beperkt tot een geometrie van oppervlak [[IfcElementarySurface]] , [[IfcSweptSurface]] of [[IfcBSplineSurface]] , een [[IfcFaceOuterBound]] hebben als de grens van de gezicht, met uitzondering van gesloten oppervlakken, moeten alle vlakken gebonden zijn aan [[IfcEdgeLoop]] of [[IfcVertexLoop]] , hebben alle randen om een randcurve geometrie te hebben. de randcurve geometrie beperkt tot [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , , , , , , , of [[IfcBSplineCurve]] In geval van gesloten gezichten met periodieke oppervlakken, zoals cilindrische of bolvormige oppervlakken, het volgende past de randen van het gesloten oppervlak toe, in het geval van een cilindrische bovenste en onderste pet, verwijzen naar hetzelfde exemplaar van [[IfcVertexPoint]] twee keer, er wordt geen [[IfcFaceOuterBound]] verstrekt, of de [[IfcFaceOuterBound]] wordt gebouwd met een [[IfcSeamCurve]] aan het periodieke einde van het onderliggende gesloten oppervlak, in geval van een cilindrische oppervlakte op 0. 360. Cylindrische oppervlakte .. .. .. .. .. .. .. cijfers ifcadvancedface 01. ng Figure 1 gebruik van [[IfcCylindricalSurface]] als onderliggende oppervlakte van een [[IfcAdvancedFace]] NOTE Entiteit aangepast aan geavanceerd gezicht gedefinieerd in ISO 10303 511. HISTORY Nieuwe entiteit in IFC4 bSI Documentatie"
 
-#:IFC.xml:38415
-msgid "IfcBuildingElementPart_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Geeft als resultaat de eerste keuze, als de WAAR anders de tweede keuze. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 geeft deze functie een van de twee keuzes terug afhankelijk van de waarde van een Boolean invoerargument. De twee keuzes zijn ook invoerargumenten. NOTE Functie aangepast van boolean kies gedefinieerd in ISO10303 42. HISTORY nieuwe functie in IFC2.0"
 
-#:IFC.xml:38434
-msgid "IfcBuildingElementPartType"
-msgstr "IfcBuildingElementPartType"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcBuildingElementPartType_DEFINITION"
-msgstr "Het bouwonderdeel type definieert lijsten van gemeenschappelijk eigendom set definities en representatiekaarten van delen van een bouwelement. HISTORY Nieuwe entiteit in IFC4. bSI Documentatie"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:38439
-msgid "IfcBuildingElementPartType_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "Verbonden FaceSet"
 
-msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 A verbonden gezicht is een set gezichten die zodanig zijn dat het domein van de gezichten en hun grenzen met elkaar verbonden zijn. NOTE Entiteit aangepast van verbonden gezichtsset gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 .spec head Informal Proposities 1. De vereniging van de vlakken en hun grenzeloze lussen zullen nauw met elkaar verbonden zijn. bSI documentatie"
 
-#:IFC.xml:38458
-msgid "IfcBuildingElementPartTypeEnum"
-msgstr "IfcBuildingElementPartTypeEnum"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "Tekenvlakken"
 
-msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
-msgstr "Deze enumeratie definieert de verschillende soorten bouwelementonderdelen. HISTORY nieuwe opsomming in IFC4. bSI Documentatie"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "Tekenvlakken"
 
-#:IFC.xml:38468
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
-msgstr "SAFETYCAGE"
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
-msgstr "Veiligheidskooien zijn een assemblee van circulaire en verticale bars die aan de stijlen van vaste ladders zijn geplakt en die het pad van een werknemer bij het klimmen van de ladder kunnen omslaan. Ladders so enclosed zijn ook bekend als kooi- of ophangladders."
+msgid "IfcEdge_DEFINITION"
+msgstr "Een [[IfcEdge]] definieert twee hoekpunten die verbonden zijn met topologie. De geometrische weergave van de verbinding tussen de twee hoekpunten standaard op een rechte lijn als er geen geometrie is toegewezen met het subtype [[IfcEdgeCurve]] . De [[IfcEdge]] kan daarom worden gebruikt voor het uitwisselen van rechte randen zonder een bijbehorende geometrie van [[IfcLine]] of [[IfcPolyline]] gedachten [[IfcEdgeCurve]]. dgeometrie . EXAMPLE Figure 1 toont een voorbeeld waarbij de grenzen van de [[IfcEdge]] door de EdgeStart en EdgeEnd ook de richting van de rand bepalen. De locatie binnen een coördinaatruimte wordt bepaald door het type [[IfcVertexPoint]] voor EdgeStart en EdgeEnd. Aangezien er geen geometrie is toegewezen, is het standaard een rechte lijn die de zin in de richting accepteert. Figuur 1 Edge vertegenwoordigt . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een rand de topologische constructie die overeenkomt met de verbinding van twee hoekpunten. Op meer abstracte wijze zou het kunnen staan voor een logische relatie tussen twee hoekpunten. Het domein van een rand, indien aanwezig, is een afronding, niet zelf de open curve in R M overlappen, dat wil zeggen een verbonden 1 dimensionale manier. De grenzen van een rand zijn twee hoeken, die niet verschillend hoeven te zijn. De rand is georiënteerd door zijn traversale richting te kiezen om van de eerste naar de tweede te rennen. Als de twee hoekpunten gelijk zijn, is de rand een zelflus. Het domein van de rand omvat niet zijn grenzen, en 0 Febru. Gekoppeld aan een rand kan een geometrische curve zijn om de rand te vinden in een coördinaatruimte die wordt weergegeven door de rand subtype. De curve moet eindig zijn en niet doorsneden binnen het domein van de rand. Een rand is een grafiek, dus de multiplicity M en grafiek genus G e kunnen worden bepaald door het grafiek traversale algoritme. Sinds M E 1 reduceert de Euler vergelijking 1 in het geval tot de afbeelding. .. .. .. .. getallen. ifcedge math1.gif waar V 1 of 2, en G e 1 of 0. Concreet stelt de bovenmenselijke rand gegevensdefinitie vast aan een rand met twee hoekpunten. .. .. .. .. .. getallen. ifcedge math2.gif de hoekpunten hoeven niet te zijn gescheiden afbeelding .. .. .. .. .. .. .. .. getallen. .. .. figuren ifcedge wiskunde. als een vergelijking een afbeelding inhoud .. .. .. .. .. figuren ifcedge wiskunde. als NOTE Entiteit is aangepast van de rand gedefinieerd in ISO 10303 42. HISTORY nieuwe entiteit in IFC2. .spec head Informal Proposities 1. De rand heeft dimensionaliteit 1. De afmetingen van een rand zijn eindig en niet nul. BSI Documentatie"
 
-#:IFC.xml:38466
-msgid "IfcBuildingElementPartTypeEnum_INSULATION"
-msgstr "INSULATIE"
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
-msgstr "INSULATIE"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:38467
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
-msgstr "PRECASTPANEL"
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
-msgstr "Het deel is een voorloper panel, meestal als een interne of externe laag in een sandwich wandpaneel."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:38465
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
-msgstr "ARMOURUNIT"
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
-msgstr "Een grote steen- of betonnen eenheid gebruikt als erosiepreventie op hellingen zoals kweekvijgen en ademhalingen. deze eenheden worden in een cursuslaag gegroepeerd. NOTE-definitie in ISO 21650 relatief grote steen, of betonnen eenheid die is geselecteerd voor specifieke geometrische kenmerken en dichtheid."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Een [[IfcEdgeCurve]] definieert twee hoekpunten die topologisch verbonden zijn, inclusief de geometrische voorstelling van de verbinding. NOTE De topologie wordt gebruikt om de geometrie van de rand bij te snijden. Het is niet nodig om de rand te knippen om de topologie aan te passen. EXAMPLE Figure 1 illustreert een voorbeeld waar de geometrie wordt gegeven door een onbegrensde curve, hier [[IfcCircle]]. De grenzen worden geboden door EdgeStart en EdgeEnd, de topologische richting van de [[IfcEdgeCurve]] verzet zich tegen de richting van de [[IfcCircle]] door SameSense FALSE. Figuur 1 Rand curve . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een rand curve een speciaal subtype rand dat zijn geometrie volledig definieert. De geometrie wordt gedefinieerd door de rand te koppelen aan een curve die ongebonden kan zijn. De topologische en geometrische richtingen kunnen worden tegengegaan, een indicator dezelfde zin wordt gebruikt om te bepalen of de rand en curve richtingen overeenkomen of tegen zijn. De booleaanse waarde geeft aan of de curve richting overeenkomt met TRUE of in de tegenovergestelde richting van FALSE naar de randrichting wijst. Elke geometrie die geassocieerd wordt met de randen van de rand is consistent met de geometrie. Meerdere randen kunnen verwijzen naar dezelfde curve. NOTE Entiteit aangepast aan de randcurve gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x. .spec head Informal Proposities 1. Het domein van de randcurve wordt formeel gedefinieerd als het domein van de randgeometrie, zoals afgeknipt door de hoekpunten. Dit domein omvat niet de hoekpunten. 2. Een randcurve heeft geen eindige grootte. 3. Een randcurve is een veelvoud. 4. Er is een rand curve met boog. 5. De rand begint is geen deel van het randdomein. 6. De rand is geen randdomein. 7. De tekst-geometrie is consistent met de geometrie. bSI documentatie"
 
-#:IFC.xml:38464
-msgid "IfcBuildingElementPartTypeEnum_APRON"
-msgstr "APRON"
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Edgeometrie"
 
-msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
-msgstr "Een vorm van ontwenningsbescherming die bestaat uit hout, beton, riprap, plak of andere bouwwerken die grenzend zijn aan abutties en piers om ondermijning te voorkomen."
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Edgeometrie"
 
-#:IFC.xml:38469
-msgid "IfcDiscreteAccessory"
-msgstr "IfcDiscreteAccessoire"
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessory_DEFINITION"
-msgstr "Een discrete accessoire is een vertegenwoordiging van verschillende soorten accessoires die zijn opgenomen of zijn toegevoegd aan elementen. HISTORY Nieuwe entiteit in IFC2x2. .change ifc2x4 IFC4 IFC4 attribuut voorgedefinieerde entiteit. bSI documentatie"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Deze logische vlag geeft aan of HANELEN of niet, de zinnen van de rand en de curve de randgeometrie hetzelfde zijn. Het gevoel van een rand is van de rand start vertex tot de eindpunt de richting van de stijgende parameter."
 
-#:IFC.xml:38480
-msgid "IfcDiscreteAccessory_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een lusje met een niet-grote lus. Het is een pad waarin de begin- en eindpunten hetzelfde zijn. Het domein, indien aanwezig, is een gesloten curve. Een rand lus kan elkaar overlappen. NOTE Entiteit aangepast aan de rand loop gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. .spec head Informal Proposities 1. Het geslacht van de [[IfcEdgeLoop]] zal 1 of hoger zijn. 2. De formule van de Euler moet voldoen aan het aantal hoekengenen van de randen 1 3. Er mag geen rand meer dan één keer door dezelfde [[IfcEdgeLoop]] met dezelfde zin worden genoemd. Voor dit doel wordt verwezen naar een rand die niet georiënteerd is, als refererend met de zin TRUE. bSI Documentatie"
 
-#:IFC.xml:38492
-msgid "IfcDiscreteAccessoryType"
-msgstr "IfcDiscreteAccessoryType"
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcDiscreteAccessoryType_DEFINITION"
-msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted. bSI Documentation"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "EdgeList"
 
-#:IFC.xml:38499
-msgid "IfcDiscreteAccessoryType_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "Nee"
 
-msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Het aantal elementen in de rand lijst."
 
-#:IFC.xml:38511
-msgid "IfcDiscreteAccessoryTypeEnum"
-msgstr "IfcDiscreteAccessoryTypeEnum"
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "Ijskegel"
 
-msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
-msgstr "Deze opsomming definieert de verschillende soorten discrete accessoires. HISTORY nieuwe opsomming in IFC4. bSI documentatie"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:39190
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
-msgstr "PANEL STRENGTHENING"
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
-msgstr "Een component die pompeffecten van de substructuur minimaliseert."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:39187
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
-msgstr "RAILPAD"
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "Geluiden"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
-msgstr "Een niet-metallic pad geplaatst tussen spoor en baseplaat of spoor en slaapbord, houder of slaap. Opmerking definitie van EN 13481 1."
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Geluiden"
 
-#:IFC.xml:39189
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
-msgstr "SLIDINGCHAIR"
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
-msgstr "Een onderdeel dat het aandelenspoor en een plat oppervlak waarop de voet van de schakelrails glijt, ondersteunt en behoudt."
+msgid "IfcFaceBound_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een band met een gezicht. NOTE Entiteit aangepast aan gezicht gebonden gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 bSI documentatie"
 
-#:IFC.xml:39180
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
-msgstr "PUNTMACHINEMOUNTINGDEVICE"
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "Gekoppeld"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
-msgstr "Een apparaat dat wordt gebruikt in bijval om te installeren en een puntmachine te verbinden met de opkomstcomponenten."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Gekoppeld"
 
-#:IFC.xml:39192
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
-msgstr "ELASTISCHE KUSHIE"
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "Oriëntatie"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
-msgstr "Een bijpassende elastische kussen is een soort laag aan plantaardige kanten van een betonnen basis, die wordt gebruikt om de gevolgen van longitudinale en laterale belasting op de spoorstructuren te verzachten. Een elastische kussen wordt alleen weergegeven in ballingloze spoorstructuren."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Dit gaf aan of HANDEL de lus wel of niet dezelfde zin heeft wanneer ze gebruikt wordt om het gezicht aan te hangen als wanneer ze voor het eerst gedefinieerd is. Als het gezond verstand is, worden alle zinnen van de op de inhoud georiënteerde randen impliciet omgedraaid wanneer ze in het gezicht worden gebruikt."
 
-#:IFC.xml:38534
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
-msgstr "BRACHTIGE"
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
-msgstr "Een L vormige of een vergelijkbaar vorm accessoire bevestigd in een hoek tussen elementen om ze samen te houden of om een secundair element te dragen."
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 A face outside is een speciaal gezicht, dat de extra emantiek draagt bij het definiëren van een buitengrens op het gezicht. Niet meer dan één grens van een gezicht mag van dit type zijn. NOTE Entiteit aangepast naar buiten gezichten gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 bSI documentatie"
 
-#:IFC.xml:39176
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
-msgstr "PUNT MACHINE LOCKKELIJK APPARAAT"
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
-msgstr "Een mechanische apparatuur die de puntmachine op een bepaalde positie van buiten vergrendelt."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "De [[IfcFaceSurface]] definieert de onderliggende geometrie van het bijbehorende oppervlak aan het gezicht. OPMERKING De topologie wordt gebruikt om de geometrie van het oppervlak bij te werken. Het is niet nodig om het oppervlak aan te passen aan de topologie. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een oppervlak met een gezicht waarin de geometrie wordt gedefinieerd door een bijbehorend oppervlak. Het gedeelte van het oppervlak dat door het gezicht wordt gebruikt is te beddenbaar in het vliegtuig als een open schijf, mogelijk met gaten. De unie van het gezicht met de randen en hoekpunten van haar randlussen hoeft echter niet in het vliegtuig te worden opgenomen. Het kan bijvoorbeeld een hele sfeer of een hele reeks torens omvatten. Omdat zowel een gezicht als een geometrisch oppervlak normale richtingen hebben gedefinieerd, een BOOLEAN-vlag die het oriëntatieattribuut gebruikt wordt om aan te geven of de oppervlakte normaal akkoord gaat met TRUE of is tegen de normale richting van de gezicht. De geometrie die is gekoppeld aan elk onderdeel van de lussen van het gezicht is consistent met de meetkunde van de oppervlakte. in de zin dat de domeinen van alle hoekpunten en randcurven op het geometrie oppervlak staan. Een oppervlakte kan gerefereerd worden door meer dan één oppervlak. NOTE Entiteit aangepast van oppervlak gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x .spec head Informal Proposities 1. Het domein van het oppervlak wordt formeel gedefinieerd als het domein van de gezichtsgeometrie zoals afgekort door lussen, Dit domein omvat niet de grenslussen. 2. Een oppervlak heeft een oneindige oppervlakte. 3. Een oppervlak is een veelvoud. 4. Een oppervlak is een boogschuim. 5. Een oppervlak heeft oppervlaktegenus 0. 6. De lussen maken geen deel uit van het vlakdomein 7. Loop geometrie zal consistent zijn met geometrie. Dit impliceert dat alle randcurven of eindpuntjes die worden gebruikt om te definiëren welke lussen aan het oppervlak gebonden zijn, op de geometrie liggen. 8. De lussen van het gezicht zullen niet kruisen. bSI Documentatie"
 
-#:IFC.xml:39191
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
-msgstr "RAILBRACE"
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "FaceSurface"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
-msgstr "Een spoorwegcomponent die ervoor zorgt dat rails geen fooi en draaien."
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "FaceSurface"
 
-#:IFC.xml:38541
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
-msgstr "INSULATOR"
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
-msgstr "Een apparaat ontworpen om een geleidend element te ondersteunen en te isoleren. Notitiedefinitie van IEC 151 15 39."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Deze vlag geeft aan of de betekenis van de oppervlakte normaal akkoord gaat met TRUE , of verzet zich tegen het normale topologische gevoel voor de gezicht."
 
-#:IFC.xml:38536
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
-msgstr "CABLEARRANGER"
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
-msgstr "Een kabelbord is een flexibel accessoire of een onderdeel van een component rond kabels geplaatst om de buiging ervan te ordenen en minimaliseren op het punt waar het is geplaatst."
+msgid "IfcLoop_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een topologische entiteit gebouwd van een enkele hoeksteken, of door samen verbonden georiënteerde randen, of lineaire segmenten die beginnen en eindigen op dezelfde hoektje. Het wordt meestal gebruikt om een gezicht op een oppervlak te binden. Een lus heeft een afmeting van 0 of 1. Het domein van een 0-dimensionale lus is een enkel punt. Het domein van een 1 dimensionale lus is een verbonden, georiënteerde curve, maar hoeft niet veel te zijn. Aangezien de lus een cirkel is, is de locatie van het begin eindpunt willekeurig. Het domein van de lus bevat zijn grenzen, een 0 ľ. Een lus wordt weergegeven door een enkele hoek, of door een geordende verzameling georiënteerde randen, of door een geordende verzameling punten. Een lus is een grafiek, dus M en het grafiek genus G l kan worden bepaald door het grafiek traversale algoritme. Sinds M 1, vermindert de Euler vergelijking 1 in dit geval tot afbeelding... .. .. .. .. cijfers ifcloop wis1. als V en E X 7El X 7E het aantal unieke hoekpunten en georiënteerde randen in de lus en G l het geslacht is van de lus. NOTE Entiteit aangepast aan de lus gedefinieerd in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Proposities 1. Een lus heeft een eindige omvang. 2. Een lus beschrijft een gesloten topologische curve met begin- en eindhoekpunten. bSI-documentatie"
 
-#:IFC.xml:39194
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
-msgstr "RAIL LUBRICATIE"
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail Aloop"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
-msgstr "Een apparaat dat het dragen van de rails door de hele flens van het wiel verhindert om geluidsemissies te verminderen. Ze bevinden zich vaak aan de binnenzijde van het buitenspoor in een curve of in de buurt van een opkomst, afhankelijk van het dragen of verminderen van lawaai."
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Deze functie geeft TRUE terug als voor de randen van de ingangslus de eindpunt van elke rand hetzelfde is als de begintop van de opvolger. HISTORY Nieuwe functie in IFC2x2"
 
-#:IFC.xml:39193
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
-msgstr "SOUNDABSORPTIE"
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
-msgstr "Een component op het spoor voor geluidsabsorptie en kan ook trillingen absorberen. Het wordt vaak gebruikt in combinatie met plaknummers."
+msgid "IfcOpenShell_DEFINITION"
+msgstr ". extDef NOTE definitie volgens ISO CD 10303 42 1992 is een open granaat van de dimensie 2. Het domein, indien aanwezig, is een afgeslankt, verbonden en tweevoudig gevarieerd, maar is geen gesloten oppervlak. Het kan worden beschouwd als een gesloten schilderij met een of meer gaten erin. Het domein van een open granaat voldoet aan 0 01. Een open shell is functioneel algemener dan een gezicht omdat het domein ervan handvatten kan hebben. De granaat wordt gedefinieerd door een verzameling gezichten die georiënteerd kunnen zijn. Het gevoel van elk gezicht, na rekening te houden met de oriëntatie, zal overeenkomen met de normale granaat zoals hieronder gedefinieerd. De oriëntatie kan direct worden geleverd als een BOOLEAN-kenmerk van een georiënteerd gezicht. of standaard TRUE als het shell-lid een gezicht is zonder oriëntatiekenmerk. De volgende combinatiebeperkingen voor open granaten en geometrische beperkingen op hun domeinen zijn ontworpen, samen met de informele voorstellen om ervoor te zorgen dat elk domein dat is gekoppeld aan een open shell een georiënteerde veelvoud is. Elke gezichtsreferentie is uniek. Een open shell heeft ten minste één gezicht. Een bepaald gezicht kan in meer dan één open shell bestaan. De grens van een open shell bestaat uit de randen waarnaar slechts eenmaal wordt verwezen door de geleideslijn van zijn gezichten, samen met al hun hoekpunten. Het domein van een open schelp, indien aanwezig, bevat alle randen en hoekpunten van zijn gezicht. Let op: dit is iets anders dan de definitie van een gezichtsdomein, dat geen van zijn grenzen bevat. Een gezichtsdomein kan bijvoorbeeld een geïsoleerd punt of lijn segment uitsluiten. Een open shell domein kan dat niet. Zie het algoritme voor de berekening hieronder. NOTE Entiteit aangepast aan open shell gedefinieerd in ISO 10303 42. HISTORY New entiteit in IFC2x. .spec head Informal Proposities 1. Aan elke rand wordt precies twee keer gerefereerd door de gezichtsgrenzen van het gezicht. Elke georiënteerde rand is uniek. 3. Er wordt naar geen enkele rand verwezen door meer dan twee gezichten. 4. Verschillende vlakken van de shell snijden, maar kunnen de randen of hoekpunten delen. 5. Verschillende randen overlappen niet met elkaar maar kunnen hoekpunten delen. Elke face-referentie is uniek. 7. De lussen van de shell zijn geen mengsel van poly loop en andere lussoorten. Opmerking: dit wordt gegeven, omdat alleen poly Loop wordt gedefinieerd als face bound definitie. 8. De gesloten granaat is een georiënteerde boogwijze aangesloten op 2 manieren. 9. De kelner vergelijking is tevreden. bSI documentatie"
 
-#:IFC.xml:38545
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
-msgstr "SCHERM"
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
-msgstr "Een kolomschoen of een balkschoenenhanger gebruikt om een element te ondersteunen of veilig te maken."
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "De [[IfcOrientedEdge]] vertegenwoordigt een [[IfcEdge]] met een Orientatie-vlag. Het maakt het mogelijk om dezelfde [[IfcEdge]] te hergebruiken wanneer hij precies twee keer vertraagd is, een keer vooruit en een keer achteruit. Opmerking: het gevoel van de normale gang van zaken naar de [[IfcFace]] wordt uitsluitend bepaald door de randen. Als alle randen van het gezicht op een tellende manier met de klok verbonden zijn na de randgerichtheid zal het gezicht normaal naar buiten wijzen. De normale gang van zaken bij de onderliggende [[IfcFaceSurface]] die de geometrie van dat gezicht weergeeft, heeft hier geen enkele relevantie. Het doel van de [[IfcFaceSurface]]. ameSense attribuut is om aanvullende informatie te geven voor verificatiedoeleinden. SameSense TRUE betekent dat de oppervlakte normaal is en het gezicht normaal is hetzelfde, SameSense FALSE betekent dat ze in tegengestelde richtingen zijn. De hergebruikte rand met een geometrische vertegenwoordiging als [[IfcEdgeCurve]] definieert de rand in 3D-coördinatenruimte. In sommige gevallen, met name bij het gebruik van elementaire of zwevende oppervlakken, bestaat het risico van onnauwkeurige kaarten van de 3D-x, y, z [[IfcEdgeCurve]] op de aangrenzende oppervlakken om de grenzen van deze oppervlakken te bepalen. De optionele CurveOnSurface definieert de 2D u, v rand binnen de parametrische ruimte van het oppervlak. Het zou kunnen worden gebruikt om de juistheid van de mapping van de 3D [[IfcEdgeCurve]] op dit oppervlak te bepalen. EXAMPLE Figure 1 illustreert een voorbeeld waarbij de CurveOnSurface naast de geometrie van de [[IfcEdgeCurve]] wordt aangeboden. Figuur 1 Curve op oppervlakte representatie van een [[IfcOrientedEdge]] . xtDef NOTE Definitie volgens ISO CD 10303 42 1992 is een georiënteerde rand aan een andere rand en bevat een BOOLEAN-richtingsvlag om aan te geven of de richting van de aangebrachte rand overeenkomt met de oriëntatie van de oorspronkelijke rand. Behalve wat georiënteerd is, komt de georiënteerde rand overeen met de oorspronkelijke voorsprong. Een gangbare praktijk is dat er solide modelsystemen moeten zijn om een entiteit te hebben die het gebruik of de vertaling van een voorsprong weergeeft. Deze gebruiksentiteit vertegenwoordigt expliciet de vereiste in een veelvoud mouw dat elke rand precies twee keer verlegd moet worden, eenmaal in elke richting. De functie wordt gebruikt door de georiënteerde rand van het ondertype. NOTE Entiteit aangepast van georiënteerde rand gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribuut CurveOnSurface is toegevoegd. bSI Documentatie"
 
-#:IFC.xml:38531
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
-msgstr "ANCHORPLATE"
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "EdgeElement"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
-msgstr "Een accessoire bestaande uit een stalen bord, Afschuddende connectors of gebonden op de rebar die is ingebed in een betononderdeel zodat andere elementen later kunnen worden gelast of opgeblazen."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "EdgeElement"
 
-#:IFC.xml:38540
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
-msgstr "EXPANSIE JOINT APPARAAT"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Oriëntatie"
 
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
-msgstr "Assembly-verbindingselement tussen constructie-elementen om thermische verschillen te vergroten."
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, als de beugel de topologische oriëntatie zoals die wordt gebruikt samenvalt met de oriëntatie van begin vertico tot eind top van het randelement. Als het anders niet mogelijk is."
 
-#:IFC.xml:39173
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
-msgstr "VERGRENEN"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF EdgeStart"
 
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
-msgstr "Een slot is een mechanische of elektronische bevestigingsapparaat dat wordt vrijgegeven door een fysieke object b.v. toets, vingerafdruk, RFID kaart, security token etc. door het invoeren van geheime informatie, b.v. nummer, wachtwoord , of combinatie."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:39182
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
-msgstr "TENSIONINGEQUIPMENT"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
-msgstr "Een uitrusting die gebruikt wordt om de spanning van geleiders of kabels te onderhouden."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:39195
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
-msgstr "RAIL MECHANICALE EQUIPMENT"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "Ifcpad"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
-msgstr "Een mechanische spoorwegapparatuur is een mechnische uitrusting die op de rails is geïnstalleerd, zoals blokkeringsapparaat, snelheidsregelaar, bias geladen inspecteur, spoor schaal of controleerbare retarder."
+msgid "IfcPath_DEFINITION"
+msgstr "extDef NOTE definitie volgens ISO CD 10303 42 1992 is een topologische entiteit bestaande uit een geordende verzameling georiënteerde randen, zo dat de rand-top van elke rand samenvalt met de rand van zijn voorganger. Het pad wordt geordend van de rand van de eerste georiënteerde rand tot de rand van de laatste rand. De betekenis van de BOOLEAN-waarde in de georiënteerde rand geeft aan of de randrichting overeenkomt met de richting van het pad TRUE of de tegenovergestelde richting FALSE is. Een individuele rand kan alleen worden gerefereerd door een individueel pad. Er kan worden verwezen naar meerdere paden. Een rand kan bestaan onafhankelijk van een pad. NOTE Entiteit aangepast van pad gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2. .spec head Informal Proposities 1. Een pad heeft dimensionaliteit 1. 2. Een pad is boogwijze verbonden. 3. De randen van de weg overlappen niet met elkaar behalve bij gemeenschappelijke hoekpunten. 4. Een pad heeft een eindige, niet nul. bSI-documentatie"
 
-#:IFC.xml:38532
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
-msgstr "BIRDPROTECTIE"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
-msgstr "Een apparaat dat een verblijf van vogels op elektrisch kritieke punten verhindert en waarmee vogels worden beschermd tegen elektrische schokken en verstoringen door een kort circuit voorkomen."
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "EdgeList"
 
-#:IFC.xml:38547
-msgid "IfcElementComponent"
-msgstr "IfcElementComponent"
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-msgid "IfcElementComponent_DEFINITION"
-msgstr "Een element is een representatie voor kleine items inbegrepen in, toegevoegd of verbinden met of tussen elementen, die meestal niet van belang zijn vanuit het oogpunt van de algehele gebouwenstructuur. Deze kleine onderdelen kunnen echter van levensbelang zijn en een last dragen in de bouw. Deze voorwerpen bieden geen werkelijke ruimtegrenzen. Typische voorbeelden van IfcElementComponenten bevatten verschillende soorten sluiters en verschillende accessoires. Een of meerdere subtypes van [[IfcElementComponent]] moeten altijd worden begeleid door een definitie van een betreffende subtype van [[IfcElementComponentType]]. Het type object blijft vorm en materiaalinformatie behouden. HISTORY Nieuwe entiteit in IFC2x2 Het is vaak gewenst om een aantal dezelfde vormige elementen te modelleren door middel van één voorval voorwerp. . verschillende bouten binnen een verbinding of een rij van versterkende elementen. In deze IFC-release is dit mogelijk door middel van meerdere toegewezen representaties zoals hieronder gedocumenteerd. Om de veelheid van elementen uit te drukken ook op een hoger semantisch niveau. een Qto ElementComponentPatternHoeveelheden moet worden verstrekt via [[IfcRelDefinesByProperties]] en het aantal stukken bevatten die worden geplaatst door één [[IfcElementComponent]] instantie. Symbolische vertegenwoordiging Een symbolische vertegenwoordiging wordt gedefinieerd voor een rij componenten of meerdere rijen onderdelen binnen een enkel geval van [[IfcElementComponent]]. Dergelijke rijen of arrays kunnen mogelijk grote aantallen afzonderlijke stukken bevatten. De productdefinitie bestaat uit een [[IfcShapeRepresentation]] met de attribuutwaarden representationIdentifier Row RepresentationType GeometricCurveSet en een of meerdere curves als geometrische items. De curves geven aan waar referentiepunten van de stukken staan. Dergelijke referentiepunten kunnen bijvoorbeeld worden gegeven aan de hoofden van de mechanische sluiters of aan het begin van de extrusiesas van de versterkingsbalken. In het geval van rechte onderdelen bollen, nagels, nietjes, rechte versterkingsbalken of gelijksoortige , de lokale plaatsing van de [[IfcElementComponent]] moet zodanig worden gevestigd dat de lokale z-as parallel loopt met de assen van de componenten. Een Qto ElementComponentPatternQuantities moeten het aantal stuks in de rij of de array en hun afstand aangeven. bSI Documentatie"
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Deze functie retourneert TRUE als alle randen van het invoerpad opeenvolgende zijn. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 geeft deze functie TRUE terug als voor de randen van het invoerpad de eindpunt van elke rand hetzelfde is als de begin-top van de opvolger. NOTE Functie aangepast van pad naar staart gedefinieerd in ISO10303 42. Nieuwe functie HISTORY in IFC2.0"
 
-#:IFC.xml:38551
-msgid "IfcElementComponentType"
-msgstr "IfcElementComponentType"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcElementComponentType_DEFINITION"
-msgstr "Het elementtype [[IfcElementComponentType]] definieert veel gedeelde informatie voor voorvallen van element componenten. De set van gedeelde informatie kan gemeenschappelijke eigenschappen bevatten met gemeenschappelijke eigenschappen, gemeenschappelijke beschrijvingen van gemeenschappelijke materialen, gemeenschappelijke samenstelling van elementen. Het wordt gebruikt om een element componentspecificatie te definiëren die de specifieke productinformatie aangeeft die voor alle voorvallen van dat producttype geldt. De [[IfcElementComponentType]] kan binnen [[IfcProject]] of [[IfcProjectLibrary]] worden afgemeld met [[IfcRelDeclares]] en kan worden uitgewisseld met of zonder voorvallen van het type. De voorvallen van [[IfcElementComponentType]] worden weergegeven door instanties van [[IfcElementComponent]]. HISTORY New entity in IFC2x2. bSI Documentatie"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr "extDef NOTE Definitie volgens ISO CD 10303 42 1992 is een poellus een lus met rechte randen die een vlak gebied in de ruimte begrendelen. Een poly lus is een genus 1-lus waarin de lus wordt weergegeven door een geordende coplanaire collectie van punten die de hoekpunten van de lus vormen. De lus bestaat uit rechte lijnsegmenten die zich aansluiten bij de collectie tot het succesvolle punt in de collectie. Het sluitende segment is van het laatste tot het eerste punt in de collectie. De richting van de lus is in de richting van de lijnsegmenten. Een poly loop zal voldoen aan de volgende topologische beperkingen die de lus het geslacht van een lus heeft. de volgende vergelijking moet tevreden zijn met afbeelding. .. .. .. .. getallen ifcpolyloop math1. als de [[IfcPolyLoop]] altijd is gesloten en het laatste segment van de laatste [[IfcCartesianPoint]] in de lijst van Polyken tot de eerste [[IfcCartesianPoint]] is. Daarom zal het eerste punt aan het einde van de lijst niet worden herhaald noch door naar dezelfde instantie te verwijzen. noch door een extra exemplaar van [[IfcCartesianPoint]] te gebruiken met de coördinaten als eerste punt. NOTITIE: deze entiteit bestaat voornamelijk om de efficiënte communicatie van gefacetteerde B-rep-modellen te vergemakkelijken. NOTE Entiteit aangepast aan poly loop gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.0 . pec head Informal Proposities 1. Alle punten in de veelhoek die de poly lus definiëren zijn coplanar. 2. De eerste en laatste polygoon zullen per waarde verschillend zijn. bSI Documentatie"
 
-#:IFC.xml:38554
-msgid "IfcFastener"
-msgstr "Sneller"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "Veelhoek"
 
-msgid "IfcFastener_DEFINITION"
-msgstr "Representaties van vaste onderdelen die worden gebruikt als sluiters om elementen te verbinden of deel te nemen aan andere elementen. Uitgesloten zijn mechanische fasteners die zijn gemodelleerd door een afzonderlijke entiteit [[IfcMechanicalFastener]] . HISTORY Nieuwe entiteit in IFC2x2 .change ifc2x4 IFC4 IFC4 attribuut voorgedefinieerde entiteit. bSI documentatie"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Veelhoek"
 
-#:IFC.xml:38565
-msgid "IfcFastener_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "Ijssubedge"
 
-msgid "IfcFastener_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcSubedge_DEFINITION"
+msgstr ". extDef NOTE definitie volgens ISO CD 10303 42 1992 A subedge is een rand met een verbonden deel van het domein van een bestaande rand. De topologische beperkingen van een subedge zijn dezelfde als die aan een rand. NOTE Entiteit aangepast vanaf subedge gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. pec head Informal Proposities 1. Het domein van de ondergang is formeel gedefinieerd als het domein van de bovenliggende rand als bijgesneden door de subedge begint top top en subedge eindpunt. 2. De begintop en eindpunt liggen binnen de vakbond van de hoekpunten van de bovenliggende rand en het domein van de bovenliggende rand. bSI Documentatie"
 
-#:IFC.xml:38577
-msgid "IfcFastenerType"
-msgstr "IfcFastenerType"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "OuderEdge"
 
-msgid "IfcFastenerType_DEFINITION"
-msgstr "Het elementcomponenttype [[IfcFastenerType]] definieert veel gedeelde informatie voor voorvallen van sluitingen. De set van gedeelde informatie kan gemeenschappelijke eigenschappen bevatten met gemeenschappelijke eigendommen sets gemeenschappelijke vermeldingen van gemeenschappelijke materialen, gemeenschappelijke samenstelling van elementen. Het wordt gebruikt om een fastener-specificatie te definiëren die de specifieke productinformatie aangeeft die gebruikelijk is voor alle gebeurtenissen van dat producttype. De [[IfcFastenerType]] kan binnen [[IfcProject]] of [[IfcProjectLibrary]] worden afgemeld met [[IfcRelDeclares]] en kan worden uitgewisseld met of zonder voorvallen van het type. De voorvallen van [[IfcFastenerType]] worden weergegeven door instanties van [[IfcFastener]] . HISTORY Nieuwe entiteit in IFC2x2. bSI Documentatie"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "OuderEdge"
 
-#:IFC.xml:38584
-msgid "IfcFastenerType_PredefinedType"
-msgstr "VoorgedefineerdType"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcFastenerType_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 is het supertype voor alle topologische vertegenwoordigingsitems in de geometrie. NOTE Entiteit aangepast aan de top ologische representatie item gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC1.5 bSI documentatie"
 
-#:IFC.xml:38596
-msgid "IfcFastenerTypeEnum"
-msgstr "IfcFastenerTypeEnum"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcFastenerTypeEnum_DEFINITION"
-msgstr "Dit nummer definieert de verschillende soorten bevestigingsmiddelen, behalve voor mechanische bevestigingen. HISTORY nieuwe opsomming in IFC4. bSI documentatie"
+msgid "IfcVertex_DEFINITION"
+msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 is A topologische constructie die overeenkomt met een punt. Het heeft dimensie 0 en omvang 0. Het domein van een vertex, indien aanwezig, is een punt in m dimensionale real space R M dit wordt weergegeven door het top punt subtype. NOTE Entiteit aangepast van top gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2.0 .spec head Informal Proposities 1. De top heeft dimensionaliteit 0. Dit is een fundamenteel kenmerk van de vertex. 2. De omvang van een top is gedefinieerd als nul. bSI Documentatie"
 
-#:IFC.xml:38600
-msgid "IfcFastenerTypeEnum_GLUE"
-msgstr "GLUE"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
-msgstr "Een bevestigende verbinding waar lijm wordt gebruikt om elementen samen te voegen."
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ". extDef NOTE Definitie volgens ISO CD 10303 42 1992 A top lus is een lus van nul genus die bestaat uit één hoekpunt. Een top top kan onafhankelijk zijn van een top lus. De topologische gegevens voldoen aan de volgende beperking afbeelding .. .. figuren ifcvertexloop math1.gif NOTE Entiteit aangepast aan top lus gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x2. Pc head Informal Proposities 1. Een top lus heeft nul en dimensionaliteit. 2. De top lus heeft een genus 0. bSI documentatie"
 
-#:IFC.xml:38602
-msgid "IfcFastenerTypeEnum_WELD"
-msgstr "WELD"
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
-msgstr "Een paspelnaad tussen delen van metallic materiaal of andere geschikte materialen."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-#:IFC.xml:38601
-msgid "IfcFastenerTypeEnum_MORTAR"
-msgstr "MELDING"
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
-msgstr "Een samenstelling van minerale of andere materialen die gebruikt worden om gaten te vullen en mogelijk een lastdragende rol te vervullen."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definitie volgens ISO CD 10303 42 1992 is A top punt een top die zijn geometrie gedefinieerd als een punt. NOTE Entiteit aangepast van top punt gedefinieerd in ISO 10303 42. HISTORY Nieuwe entiteit in IFC2x. .spec head Informal Proposities 1. Het domein van de top wordt formeel gedefinieerd als het domein van het top punt. bSI documentatie"
 
-#:IFC.xml:38608
-msgid "IfcMechanicalFastener"
-msgstr "IfcMechanicalFastener"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "VertexGeometrie"
 
-msgid "IfcMechanicalFastener_DEFINITION"
-msgstr "Een mechanische sluiters die bouwelementen of onderdelen mechanisch met elkaar verbinden. Een enkel geval van deze klas kan een of veel van de feitelijke mechanische bevestigingsmiddelen vertegenwoordigen, bijvoorbeeld een reeks bouts of een rij nagels. HISTORY Nieuwe entiteit in IFC2x2 IFC4 CHANGE Supertype veranderd van [[IfcFastener]] naar [[IfcElementComponent]]. Attribuut voordefinedType toegevoegd. Attributen NominalDiameter en NominalLength verouderd. bSI Documentatie"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "VertexGeometrie"
 
-#:IFC.xml:38617
-msgid "IfcMechanicalFastener_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
-msgstr "De nominale diameter beschrijft de kruissectie grootte van het bevestigingstype. X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE moet in plaats daarvan het respectieve attribuut van [[IfcMechanicalFastenerType]] worden gebruikt."
-
-#:IFC.xml:38622
-msgid "IfcMechanicalFastener_NominalLength"
-msgstr "NominalLengte"
-
-msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
-msgstr "De nominale lengte die de longitudinale afmetingen van het bevestigingstype beschrijft. X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE moet in plaats daarvan het respectieve attribuut van [[IfcMechanicalFastenerType]] worden gebruikt."
-
-#:IFC.xml:38627
-msgid "IfcMechanicalFastener_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
-
-#:IFC.xml:38647
-msgid "IfcMechanicalFastenerType"
-msgstr "IfcMechanicalFastenerType"
-
-msgid "IfcMechanicalFastenerType_DEFINITION"
-msgstr "Het elementcomponenttype [[IfcMechanicalFastenerType]] definieert veel gedeelde informatie voor voorvallen van mechanische bevestigingsmiddelen. De set van gedeelde informatie kan gemeenschappelijke eigenschappen bevatten met gemeenschappelijke eigendommen sets gemeenschappelijke vermeldingen van gemeenschappelijke materialen, gemeenschappelijke samenstelling van elementen. Het wordt gebruikt om een mechanische fastener-soort specificatie te definiëren die de specifieke productinformatie weergeeft die gebruikelijk is voor alle gebeurtenissen van dat producttype. De [[IfcMechanicalFastenerType]] kan binnen [[IfcProject]] of [[IfcProjectLibrary]] worden afgemeld met [[IfcRelDeclares]] en kan worden uitgewisseld met of zonder voorvallen van het type. De voorvallen van [[IfcMechanicalFastenerType]] worden weergegeven door instanties van [[IfcMechanicalFastener]]. HISTORY New entity in IFC2x2 IFC4 CHANGE Supertype veranderd van [[IfcFastenerType]] naar [[IfcElementComponentType]]. Attributen PredefinedType , NominalDiameter, NominalLength toegevoegd. Classificatie gebruik definitie Mechanische bevestigingsmiddelen, vooral bolten, zijn vaak gestandaardiseerd. Om naar een formele fastener-aanduiding volgens een standaard een product norm te verwijzen , [[IfcRelAssociatesClassification]] moet samen met [[IfcClassificationReference]] worden gebruikt. [[IfcClassificationReference]].Identificatie bevat een machine-leesbare vorm van de formele fastener-aanduiding van de norm. Voorbeeld M16X80 10.9 HV voor een structurele bolwerk van hoge sterkte voor het voorladen van de zeshoek bolt en de not. Aan de andere kant bevat [[IfcMechanicalFastenerType]].Name een weergeefbare naam die niet noodzakelijkerwijs hetzelfde is als de formele aanduiding. [[IfcClassificationReference]].Name draagt de korte naam van de fastener norm. Bijvoorbeeld EN 14399 4 als de Europese standaard voor hexagon bouts. Optioneel kan de norm verder worden beschreven door [[IfcClassificationReference]]. eferencedSource , inclusief informatie zoals publisher en datum van uitgifte van de norm. Bovendien kunnen [[IfcRelAssociatesLibrary]] samen met [[IfcLibraryReference]] worden gebruikt om te verwijzen naar een bibliotheek met fastener definities. bSI documentatie"
-
-#:IFC.xml:38652
-msgid "IfcMechanicalFastenerType_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
-
-#:IFC.xml:38657
-msgid "IfcMechanicalFastenerType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
-msgstr "De nominale diameter beschrijft de kruissectie grootte van het type sluiting."
-
-#:IFC.xml:38662
-msgid "IfcMechanicalFastenerType_NominalLength"
-msgstr "NominalLengte"
-
-msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
-msgstr "De nominale lengte die de longitudinale afmetingen van het bevestigingstype beschrijft."
-
-#:IFC.xml:38681
-msgid "IfcMechanicalFastenerTypeEnum"
-msgstr "IfcMechanicalFastenerTypeEnum"
-
-msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
-msgstr "Deze opsomming definieert de verschillende soorten mechanische bevestigingsmiddelen. HISTORY nieuwe opsomming in IFC4. bSI documentatie"
-
-#:IFC.xml:38704
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
-msgstr "VOLLEDIG"
-
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
-msgstr "VOLLEDIG"
-
-#:IFC.xml:38701
-msgid "IfcMechanicalFastenerTypeEnum_BOLT"
-msgstr "BOLT"
-
-msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
-msgstr "Een draadloze cilindrische stang die een vergelijkbaar versleten gat in een nop of een ander deel bevat om een bevestigingsstof te vormen. De mechanische sluiter omvat vaak ook één of meer wassers, één of meer noten."
-
-#:IFC.xml:38709
-msgid "IfcMechanicalFastenerTypeEnum_ROPE"
-msgstr "ROPE"
-
-msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
-msgstr "een lengte van dik stevig koord gemaakt door hennep, sisal, nylon of vergelijkbaar materiaal samen te vegen voor vissersvaartuigen"
-
-#:IFC.xml:39164
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
-msgstr "RAILJOINT"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
-msgstr "Een mechanische assemblage met bijvoorbeeld vissersplaten om toe te treden tot twee rails eindigt met optionele isolatie of uitbreidingscapaciteit."
-
-#:IFC.xml:38703
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
-msgstr "CHAIN"
-
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
-msgstr "een reeks gekoppelde metalen ringen gebruikt om iets vast te leggen of te beveiligen, of om belasting te trekken."
-
-#:IFC.xml:38712
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
-msgstr "SHOARCONNECTOR"
-
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
-msgstr "Een ringconnector die wordt geaccepteerd door ring op snelwegen in aangesloten stukjes of een getooste cirkel- of vierkante connector die in de aangesloten stukken wordt gedrukt."
-
-#:IFC.xml:38706
-msgid "IfcMechanicalFastenerTypeEnum_NAIL"
-msgstr "NAIL"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
-msgstr "Een dun stuk metaal dat in materialen wordt gehamerd als bevestigingsmiddel."
-
-#:IFC.xml:38697
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
-msgstr "ANCHORBOLT"
-
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
-msgstr "Een speciale bout die is verankerd in beton, steen of bakstenen."
-
-#:IFC.xml:38714
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
-msgstr "STUDSHEARCONNECTOR"
-
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
-msgstr "Stud afschuifconnectors zijn cillindrische bevestigingsonderdelen met één kant van een hoofd. Aan de andere kant worden ze aan de leden opgehangen voor gebruik in samengestelde staal en betonnen structuren."
-
-#:IFC.xml:38705
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
-msgstr "DOWEL"
-
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
-msgstr "Een cilindrische staaf die in gaten wordt gehouden van de verbonden stukken."
-
-#:IFC.xml:38708
-msgid "IfcMechanicalFastenerTypeEnum_RIVET"
-msgstr "RIVET"
-
-msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
-msgstr "Een bevestigend deel met een kop aan de ene kant en de andere kant wordt plat gehamerd nadat hij door de gaten in de stukken die samen worden vastgeklapt."
-
-#:IFC.xml:38711
-msgid "IfcMechanicalFastenerTypeEnum_SCREW"
-msgstr "SCHERM"
-
-msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
-msgstr "Een sluiter met afgeronde rotzooi en een geslokte hoofd."
-
-#:IFC.xml:38707
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
-msgstr "NAILPLATIE"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
-msgstr "Een metaal van het plaatmateriaal met geplooide punten die de aangesloten stukken overlapt en in hun materiaal wordt gestreken."
-
-#:IFC.xml:38713
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
-msgstr "STAPLEN"
-
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
-msgstr "Een dubbelzijdig stuk metaal dat als bevestigingsstof in materialen wordt geduwd."
-
-#:IFC.xml:39178
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
-msgstr "RAILFASTENS"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
-msgstr "Een assemblage van onderdelen die een spoor naar de ondersteunende structuur beveiligt en deze in de vereiste positie behoudt en alle noodzakelijke verticale elementen toestaat laterale en longitudinale beweging. Notitie definitie van EN 13481 1."
-
-#:IFC.xml:38715
-msgid "IfcVibrationDamper"
-msgstr "IfcVibrationDamper"
-
-msgid "IfcVibrationDamper_DEFINITION"
-msgstr "Een trillingsdemper is een apparaat dat gebruikt wordt om de effecten van trillingen in een structuur te minimaliseren door kinetische energie te verspillen. De demper kan passief elastisch, frictioneel, inertie of actief zijn in een systeem met behulp van sensoren en actuatoren. bSI documentatie"
-
-#:IFC.xml:38726
-msgid "IfcVibrationDamper_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcVibrationDamper_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
-
-#:IFC.xml:38738
-msgid "IfcVibrationDamperType"
-msgstr "IfcVibrationDamperType"
-
-msgid "IfcVibrationDamperType_DEFINITION"
-msgstr "bSI Documentatie"
-
-#:IFC.xml:38745
-msgid "IfcVibrationDamperType_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcVibrationDamperType_PredefinedType_DEFINITION"
-msgstr "VoorgedefineerdType"
-
-#:IFC.xml:38757
-msgid "IfcVibrationDamperTypeEnum"
-msgstr "IfcVibrationDamperTypeEnum"
-
-msgid "IfcVibrationDamperTypeEnum_DEFINITION"
-msgstr "Deze container definieert de verschillende vooraf gedefinieerde trillingdempers die een [[IfcImpactProtectionDevice]] of [[IfcImpactProtectionDeviceType]] kunnen opgeven. bSI Documentatie"
-
-#:IFC.xml:38767
-msgid "IfcVibrationDamperTypeEnum_FRICTION"
-msgstr "FRICTIE"
-
-msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
-msgstr "Het wrijving type is een demper bij het gebruik van wrijving op het contactoppervlak van een materiaal."
-
-#:IFC.xml:38766
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
-msgstr "GELD WORDEN"
-
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
-msgstr "Een verplaatsingsafhankelijke typegoedsdemper waarin de gegenereerde weerstandskracht wordt bepaald door de kunststof bandbreedte waarbij de kunststof vervorming van het stalen materiaal wordt gebruikt. Het buigende rendement is een damper, die staal produceert door te buigen."
-
-#:IFC.xml:38768
-msgid "IfcVibrationDamperTypeEnum_RUBBER"
-msgstr "RUBBER"
-
-msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
-msgstr "De rubbermold is een demper dat energie opneemt door vervorming van gelamineerd rubber te gebruiken. Het verschil tussen de seismische isolatie met de rubberen type demper is het al dan niet draagvlak van de bovenliggende structuren. De rubberdemper zendt het gewicht van de bovenste constructies niet naar de sub constructie."
-
-#:IFC.xml:38769
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
-msgstr "SCHERM JELD"
-
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
-msgstr "Een verplaatsingsafhankelijke typegoedsdemper waarin de gegenereerde weerstandskracht wordt bepaald door de kunststof bandbreedte waarbij de kunststof vervorming van het stalen materiaal wordt gebruikt. Het schoeiselrendement is een damper, waardoor het staalmateriaal vervormd wordt in de richting van de leer."
-
-#:IFC.xml:38770
-msgid "IfcVibrationDamperTypeEnum_VISCOUS"
-msgstr "VISCOUS"
-
-msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
-msgstr "Het dunne type is een demper dat energie absorbeert door de weerstand van een toffe stof te gebruiken."
-
-#:IFC.xml:38765
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
-msgstr "AXIAL GELD"
-
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
-msgstr "Een verplaatsingsafhankelijke typegoedsdemper waarin de gegenereerde weerstandskracht wordt bepaald door de kunststof bandbreedte waarbij de kunststof vervorming van het stalen materiaal wordt gebruikt. Het axiale rendementtype is een demper dat energie oplevert door het staalmateriaal te absorberen tegen vervorming in de axiale richting. dat is in de richting van uitbreiding en inkrimping."
-
-#:IFC.xml:38786
-msgid "Pset_DiscreteAccessoryColumnShoe"
-msgstr "Pset DiscreteAccessoryColumnShoe"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
-msgstr "Vorm eigenschappen die gebruikelijk zijn voor kolomschoten. bSI-documentatie"
-
-#:IFC.xml:38787
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth"
-msgstr "ColumnShoeBasePlateDepth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth_DEFINITION"
-msgstr "De diepte van de kolomschoten basisplaat."
-
-#:IFC.xml:38792
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness"
-msgstr "ColumnShoeBasePlateThickness"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness_DEFINITION"
-msgstr "De dikte van de kolomschoten basis plaat."
-
-#:IFC.xml:38797
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth"
-msgstr "ColumnShoeBaseBreedte"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth_DEFINITION"
-msgstr "De breedte van de kolomschoten basis plaat."
-
-#:IFC.xml:38802
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth"
-msgstr "ColumnShoeCasingDiepte"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth_DEFINITION"
-msgstr "De diepte van de kolomschoenen."
-
-#:IFC.xml:38807
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight"
-msgstr "Hoogte"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight_DEFINITION"
-msgstr "De hoogte van de kolomschoenen."
-
-#:IFC.xml:38812
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth"
-msgstr "Kolom ShoeCasingBreedte"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth_DEFINITION"
-msgstr "De breedte van de kolomschoenen."
-
-#:IFC.xml:38996
-msgid "Pset_ElementComponentCommon"
-msgstr "Pset ElementComponentCommon"
-
-msgid "Pset_ElementComponentCommon_DEFINITION"
-msgstr "Set van algemene eigenschappen van componentelementen, in het bijzonder discrete accessoires, maar ook bevestigingsen, versterkende elementen of andere soorten onderdelen. BSI documentatie"
-
-#:IFC.xml:38997
-msgid "Pset_ElementComponentCommon_CorrosionTreatment"
-msgstr "CorrosionBehandeling"
-
-msgid "Pset_ElementComponentCommon_CorrosionTreatment_DEFINITION"
-msgstr "Bepaalt corrosiebehandeling voor metalen componenten. Deze eigenschap wordt verstrekt als de vereiste moet worden uitgedrukt onafhankelijk van een materiaalspecificatie en b als een eenvoudig vereiste statement in plaats van een workshop ontwerp te ontwerpen."
-
-#:IFC.xml:39002
-msgid "Pset_ElementComponentCommon_DeliveryType"
-msgstr "Levertype"
-
-msgid "Pset_ElementComponentCommon_DeliveryType_DEFINITION"
-msgstr "Bepaalt hoe de accessoire wordt afgeleverd op de site."
-
-#:IFC.xml:39007
-msgid "Pset_ElementComponentCommon_Reference"
-msgstr "Referentie"
-
-msgid "Pset_ElementComponentCommon_Reference_DEFINITION"
-msgstr "Referentie ID voor dit opgegeven type in dit project, b.v. type A 1, ook verwezen naar constructietype . Het moet worden aangeboden als een alternatief voor de naam van het objecttype , als de software geen object types ondersteunt."
-
-#:IFC.xml:39012
-msgid "Pset_ElementComponentCommon_Status"
-msgstr "status"
-
-msgid "Pset_ElementComponentCommon_Status_DEFINITION"
-msgstr "De status van het element, hoofdzakelijk gebruikt voor renovatie of retrofiting-projecten. De status kan worden toegewezen als nieuw element ontworpen als nieuwe aanvulling. bestaand element bestaat en blijft, Het vernietigingselement bestond al, maar moet worden vernietigd. Tijdelijk element bestaat slechts tijdelijk zoals een tijdelijke ondersteuningsstructuur."
-
-#:IFC.xml:39018
-msgid "Pset_FastenerWeld"
-msgstr "Pset FastenerWeld"
-
-msgid "Pset_FastenerWeld_DEFINITION"
-msgstr "Eigenschappen gerelateerd aan gelaste verbindingen. bSI documentatie"
-
-#:IFC.xml:39019
-msgid "Pset_FastenerWeld_a"
-msgstr "een"
-
-msgid "Pset_FastenerWeld_a_DEFINITION"
-msgstr "Een volgens ISO 2553 meten"
-
-#:IFC.xml:39024
-msgid "Pset_FastenerWeld_c"
-msgstr "c"
-
-msgid "Pset_FastenerWeld_c_DEFINITION"
-msgstr "c meten volgens ISO 2553"
-
-#:IFC.xml:39029
-msgid "Pset_FastenerWeld_d"
-msgstr "D"
-
-msgid "Pset_FastenerWeld_d_DEFINITION"
-msgstr "Meet volgens ISO 2553"
-
-#:IFC.xml:39034
-msgid "Pset_FastenerWeld_e"
-msgstr "e"
-
-msgid "Pset_FastenerWeld_e_DEFINITION"
-msgstr "Meet e volgens ISO 2553"
-
-#:IFC.xml:39039
-msgid "Pset_FastenerWeld_Intermittent"
-msgstr "Intermitterende"
-
-msgid "Pset_FastenerWeld_Intermittent_DEFINITION"
-msgstr "Als de vulpas, intermittent of niet"
-
-#:IFC.xml:39044
-msgid "Pset_FastenerWeld_l"
-msgstr "l"
-
-msgid "Pset_FastenerWeld_l_DEFINITION"
-msgstr "Meet l volgens ISO 2553"
-
-#:IFC.xml:39049
-msgid "Pset_FastenerWeld_n"
-msgstr "n"
-
-msgid "Pset_FastenerWeld_n_DEFINITION"
-msgstr "Tel n volgens ISO 2553"
-
-#:IFC.xml:39054
-msgid "Pset_FastenerWeld_Process"
-msgstr "Verwerk"
-
-msgid "Pset_FastenerWeld_Process_DEFINITION"
-msgstr "Referentienummer van het koppelingsproces volgens ISO 4063, een tot drie cijfers lange code"
-
-#:IFC.xml:39059
-msgid "Pset_FastenerWeld_ProcessName"
-msgstr "Proces"
-
-msgid "Pset_FastenerWeld_ProcessName_DEFINITION"
-msgstr "Naam van het selectieproces. Alternatief voor de numerieke proces-eigenschap."
-
-#:IFC.xml:39064
-msgid "Pset_FastenerWeld_s"
-msgstr "s"
-
-msgid "Pset_FastenerWeld_s_DEFINITION"
-msgstr "Meet volgens ISO 2553"
-
-#:IFC.xml:39069
-msgid "Pset_FastenerWeld_Staggered"
-msgstr "Gepantserd"
-
-msgid "Pset_FastenerWeld_Staggered_DEFINITION"
-msgstr "Indien intermittent pas, gegleed of niet"
-
-#:IFC.xml:39074
-msgid "Pset_FastenerWeld_Surface1"
-msgstr "Surface1"
-
-msgid "Pset_FastenerWeld_Surface1_DEFINITION"
-msgstr "Aspect van het vlak van de paspelnaad, d.w.z. vlak , gebogen of hol . Gecombineerde paspels worden gegeven door twee overeenkomstige symbolen analoog aan Type1 en Type2."
-
-#:IFC.xml:39079
-msgid "Pset_FastenerWeld_Surface2"
-msgstr "Surface2"
-
-msgid "Pset_FastenerWeld_Surface2_DEFINITION"
-msgstr "Zie Surface1."
-
-#:IFC.xml:39084
-msgid "Pset_FastenerWeld_Type1"
-msgstr "Type1"
-
-msgid "Pset_FastenerWeld_Type1_DEFINITION"
-msgstr "Type paspoortnaad volgens ISO 2553. Let op, gecombineerde paspels worden gegeven door twee overeenkomstige symbolen in de richting van de normale as van het coördinaatsysteem. Bijvoorbeeld, een X-paspel is gespecificeerd door Type1 V en Type2 V ."
-
-#:IFC.xml:39089
-msgid "Pset_FastenerWeld_Type2"
-msgstr "Type2"
-
-msgid "Pset_FastenerWeld_Type2_DEFINITION"
-msgstr "Zie Type1."
-
-#:IFC.xml:39094
-msgid "Pset_FastenerWeld_z"
-msgstr "z"
-
-msgid "Pset_FastenerWeld_z_DEFINITION"
-msgstr "Meet z volgens ISO 2553"
-
-#:IFC.xml:39100
-msgid "Pset_MechanicalFastenerAnchorBolt"
-msgstr "Pset MechanicalFastenerAnchorBolt"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
-msgstr "Eigenschappen die gemeenschappelijk zijn aan verschillende soorten ankerbouten. bSI-documentatie"
-
-#:IFC.xml:39101
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter"
-msgstr "AnchorBoltDiameter"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter_DEFINITION"
-msgstr "De nominale diameter van de ankerblaadjes s."
-
-#:IFC.xml:39106
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength"
-msgstr "AnkerBoltLengte"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength_DEFINITION"
-msgstr "De lengte van de ankerschip."
-
-#:IFC.xml:39111
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength"
-msgstr "AnchorBoltProtrusionLengte"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength_DEFINITION"
-msgstr "De lengte van het trekkende deel van de ankerschicht."
-
-#:IFC.xml:39116
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength"
-msgstr "AnchorBoltThreadLengte"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength_DEFINITION"
-msgstr "De lengte van het driehoekige deel van de ankerschip."
-
-#:IFC.xml:39122
-msgid "Pset_MechanicalFastenerBolt"
-msgstr "Pset MechanicalFastenerBolt"
-
-msgid "Pset_MechanicalFastenerBolt_DEFINITION"
-msgstr "Eigenschappen die gerelateerd zijn aan het type bevestiging. De eigenschappen van een hele set met bout, wasgerechten en noten kunnen worden geleverd. Let op, het is meestal niet nodig om deze eigenschappen te versturen in het geval van gestandaardiseerde bouten. In plaats daarvan wordt de standaard verwezen. bSI-documentatie"
-
-#:IFC.xml:39123
-msgid "Pset_MechanicalFastenerBolt_HeadShape"
-msgstr "Hoofdvorm"
-
-msgid "Pset_MechanicalFastenerBolt_HeadShape_DEFINITION"
-msgstr "Vorm van de bout van het hoofd, bijv. Zeshoek , Tegenzonk , Kaas"
-
-#:IFC.xml:39128
-msgid "Pset_MechanicalFastenerBolt_KeyShape"
-msgstr "Vorm"
-
-msgid "Pset_MechanicalFastenerBolt_KeyShape_DEFINITION"
-msgstr "Indien van toepassing, vorm van het hoofdvak, b.v. sleuf, Allen"
-
-#:IFC.xml:39133
-msgid "Pset_MechanicalFastenerBolt_NutsCount"
-msgstr "NutsCount"
-
-msgid "Pset_MechanicalFastenerBolt_NutsCount_DEFINITION"
-msgstr "Aantal noten die op één bout gemonteerd moeten worden"
-
-#:IFC.xml:39138
-msgid "Pset_MechanicalFastenerBolt_NutShape"
-msgstr "Vorm"
-
-msgid "Pset_MechanicalFastenerBolt_NutShape_DEFINITION"
-msgstr "Vorm van de not, bijvoorbeeld zeshoek , Cap , Kasteel , Vleugel"
-
-#:IFC.xml:39143
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter"
-msgstr "ThreadDiameter"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter_DEFINITION"
-msgstr "Nominale diameter van de thread, indien anders dan de nominale diameter van de bolt"
-
-#:IFC.xml:39148
-msgid "Pset_MechanicalFastenerBolt_ThreadLength"
-msgstr "DreadLengte"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadLength_DEFINITION"
-msgstr "Nominale lengte van de thread"
-
-#:IFC.xml:39153
-msgid "Pset_MechanicalFastenerBolt_WashersCount"
-msgstr "Teller"
-
-msgid "Pset_MechanicalFastenerBolt_WashersCount_DEFINITION"
-msgstr "Aantal sluitringen die gemonteerd moeten worden op één bout"
-
-#:IFC.xml:39158
-msgid "Pset_MechanicalFastenerBolt_WasherShape"
-msgstr "WasherVorm"
-
-msgid "Pset_MechanicalFastenerBolt_WasherShape_DEFINITION"
-msgstr "Vorm van de wassers, bijv. Standaard , Vierkant"
-
-#:IFC.xml:39196
-msgid "IfcImpactProtectionDevice"
-msgstr "IfcImpactProtectionApparaat"
-
-msgid "IfcImpactProtectionDevice_DEFINITION"
-msgstr "Een impact protection device is een component die gebruikt wordt om andere gebouwde elementen te beschermen tegen kinetische schade. impact op beveiligingsapparaten zijn momenteel in 3 verschillende variëteiten. Een trillingsklep die wordt gebruikt om de effecten van trillingen in een structuur te minimaliseren door kinetische energie te verspillen. De demper kan passief elastisch, frictioneel, inertie of actief zijn in een systeem met behulp van sensoren en actuatoren. Een trillingsisolator is een apparaat dat wordt gebruikt om de effecten van trillingen in een structuur te minimaliseren. Impact apparaten die kinetische energie verspillen door elementen als voertuigen te beïnvloeden door vervorming of elastische mechanismen."
-
-#:IFC.xml:39197
-msgid "IfcImpactProtectionDevice_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcImpactProtectionDevice_PredefinedType_DEFINITION"
-msgstr "Identificeert het vooraf gedefinieerde type van een impact apparaat van waaruit het type gemodelleerd kan worden. Dit type kan extra specifieke property sets koppelen. Opmerking: het voorgedefinieerde type mag alleen worden gebruikt, als er geen [[IfcImpactProtectionDeviceType]] is toegewezen, verstrekt het zijn eigen [[IfcImpactProtectionDeviceType]] .PredefinedType."
-
-#:IFC.xml:39216
-msgid "IfcImpactProtectionDeviceType"
-msgstr "IfcImpactProtectionDeviceType"
-
-msgid "IfcImpactProtectionDeviceType_DEFINITION"
-msgstr "De [[IfcImpactProtectionDeviceType]] biedt het type informatie voor [[IfcImpactProtectionDevice]] gebeurtenissen. Een impact protection device is een component die gebruikt wordt om andere gebouwde elementen te beschermen tegen kinetische schade."
-
-#:IFC.xml:39217
-msgid "IfcImpactProtectionDeviceType_PredefinedType"
-msgstr "VoorgedefineerdType"
-
-msgid "IfcImpactProtectionDeviceType_PredefinedType_DEFINITION"
-msgstr "Identificeert het vooraf gedefinieerde type van een impact apparaat van waaruit het type model kan worden ingesteld."
-
-#:IFC.xml:39236
-msgid "IfcImpactProtectionDeviceTypeEnum"
-msgstr "IfcImpactProtectionDeviceTypeEnum"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DEFINITION"
-msgstr "Deze container definieert de verschillende vooraf gedefinieerde soorten kinetische effectenbeschermers die een [[IfcImpactProtectionDevice]] of [[IfcImpactProtectionDeviceType] ] kunnen specificeren."
-
-#:IFC.xml:40823
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION"
-msgstr "CRASHCUSHIO"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION_DEFINITION"
-msgstr "NOT. Definitie van EN1317 1 2010 van het wegabsorberen van voertuigen voor een of meer risico's om de ernst van de impact NOTE Definitie van ISO6707 1 energieopnameapparaat te verminderen dat is geïnstalleerd voor een star object om de ernst van de impact van een voertuig te verminderen. Invloed belemmering, VS"
-
-#:IFC.xml:40365
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM"
-msgstr "DAMPINGSYSTEM"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM_DEFINITION"
-msgstr "Een elastisch element geplaatst tussen de bovenstructurele track en de plaat op het aansluitspoor of het balbed met ballast ingevoegd en de tunnelvloer. Sommige van de elastische elementen hebben een gedeeltelijk ontkoppelingseffect tussen de superstructuur en de ondergrond als gevolg van trillingen. Zowel helische veren als elastomerblokken of elastomerstrips kunnen worden gebruikt als ophangsystemen."
-
-#:IFC.xml:38606
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER"
-msgstr "FENDER"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER_DEFINITION"
-msgstr "Een passief of actief apparaat is gevormd door een demper- en impact-paneel dat op de kade is gemonteerd om te beschermen tegen gevolgen voor schepen."
-
-#:IFC.xml:40364
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER"
-msgstr "BUMPER"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER_DEFINITION"
-msgstr "Een bumper is een bufferobject aan het einde van het nummer dat het over rijden. Het kan gerepareerd worden op rails of op het spoorpaneel, of het kan ook een natuurlijk element zijn, bv. steen, zand ."
-
-#:IFC.xml:39242
-msgid "Pset_DiscreteAccessoryOccurenceCableArranger"
-msgstr "Pset DiscreteAccessoryOccurenceCableArranger"
-
-#:IFC.xml:39243
-msgid "Pset_BalanceWeightTensioner"
-msgstr "Pset BalanceWeightTensioner"
-
-msgid "Pset_BalanceWeightTensioner_DEFINITION"
-msgstr "Automatische tensieer wordt vaak aan een kolom bevestigd om constante spanning in geleiders te garanderen door middel van evenwichtsgewichten."
-
-#:IFC.xml:39245
-msgid "Pset_HydraulicTensioner"
-msgstr "Pset HydraulicTensioner"
-
-msgid "Pset_HydraulicTensioner_DEFINITION"
-msgstr "Automatische spanningen worden vaak aan een kolom bevestigd om constante spanning in geleiders te garanderen door middel van hydraulices."
-
-#:IFC.xml:39247
-msgid "Pset_RailJoint"
-msgstr "Pset SpoorJoint"
-
-msgid "Pset_RailJoint_DEFINITION"
-msgstr "Eigenschappen worden gebruikt om onderscheid te maken tussen de verschillende soorten spoorwegverbindingen."
-
-#:IFC.xml:39248
-msgid "Pset_RailJoint_IsInsulated"
-msgstr "Geïsoleerd"
-
-msgid "Pset_RailJoint_IsInsulated_DEFINITION"
-msgstr "Geïsoleerd"
-
-#:IFC.xml:39253
-msgid "Pset_RailJoint_IsTemporary"
-msgstr "IsTijdelijk"
-
-msgid "Pset_RailJoint_IsTemporary_DEFINITION"
-msgstr "IsTijdelijk"
-
-#:IFC.xml:39259
-msgid "Pset_RailJoint_Welded"
-msgstr "Pset SailJoint Welted"
-
-msgid "Pset_RailJoint_Welded_DEFINITION"
-msgstr "De bestemmingsset wordt gebruikt om een onderscheid te maken tussen de verschillende soorten pasgeborenen voor spoorwegverbindingen."
-
-#:IFC.xml:39260
-msgid "Pset_RailJoint_Welded_IsInsulated"
-msgstr "Geïsoleerd"
-
-msgid "Pset_RailJoint_Welded_IsInsulated_DEFINITION"
-msgstr "Geïsoleerd"
-
-#:IFC.xml:39265
-msgid "Pset_RailJoint_Welded_IsTemporary"
-msgstr "IsTijdelijk"
-
-msgid "Pset_RailJoint_Welded_IsTemporary_DEFINITION"
-msgstr "IsTijdelijk"
-
-#:IFC.xml:39271
-msgid "Pset_SpringTensioner"
-msgstr "Pset SpringTensioner"
-
-msgid "Pset_SpringTensioner_DEFINITION"
-msgstr "Automatische tensioner wordt vaak aan een kolom bevestigd om te zorgen voor constante spanning in geleiders of in kruisspanentabels door middel van veerdiensten."
-
-#:IFC.xml:39273
-msgid "Pset_Railpad"
-msgstr "Pset Spoorpad"
-
-#:IFC.xml:39275
-msgid "Pset_RailFasteningGeneral"
-msgstr "Pset SpoorSnelSnelheidGeneraal"
-
-#:IFC.xml:39276
-msgid "Pset_MechanicalFastener"
-msgstr "Pset MechanicalFastener"
-
-#:IFC.xml:39277
-msgid "Pset_MechanicalFastener_IsInsulated"
-msgstr "Geïsoleerd"
-
-msgid "Pset_MechanicalFastener_IsInsulated_DEFINITION"
-msgstr "Geïsoleerd"
-
-#:IFC.xml:39285
-msgid "IfcImpactProtectionDeviceTypeSelect"
-msgstr "IfcImpactProtectionDeviceTypeSelect"
-
-msgid "IfcImpactProtectionDeviceTypeSelect_DEFINITION"
-msgstr "Dit is een selectie van opsommingen om de optie te voorzien van groepen van vooraf gedefinieerde types voor een [[IfcImpactProtectionDevice]] of [[IfcImpactProtectionDeviceType]]."
+msgid "IfcShell_DEFINITION"
+msgstr "Een type bestaande uit verschillende soorten shell. xtDef NOTE Definitie volgens ISO CD 10303 42 1992 verzamelt dit type samen voor referentie bij het bouwen van complexere modellen, de subtypes die de kenmerken van een shell hebben. Een granaat is een verbonden object met een vaste dimensionaliteit d 0 1 of 2, meestal gebruikt om een regio te koppelen. Het domein van een shell, indien aanwezig, bevat zijn grenzen. Een schilderij van dimensionaliteit 0 wordt weergegeven door een grafiek bestaande uit een enkele hoekper. De top zal geen gekoppelde randen hebben. Een schilderij van dimensionaliteit 1 wordt vertegenwoordigd door een gekoppelde grafiek van dimensionaliteit 1. Een granaat van dimensionaliteit 2 is een topologische entiteit die wordt gebouwd door samen te voegen langs de randen. Het domein, indien aanwezig, is een verbonden, oriënteerbare tweevoudig met grens, dat wil zeggen een verbonden, georiënteerd, finite, niet zelf snijdend oppervlak, dat mogelijk gesloten of open is. NOTE type aangepast van shell defined in ISO 10303 42. HISTORY Nieuw type in IFC2x."
 
