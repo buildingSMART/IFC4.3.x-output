@@ -6801,7 +6801,7 @@ ENTITY IfcFeatureElementAddition
 	(IfcProjectionElement))
  SUBTYPE OF (IfcFeatureElement);
  INVERSE
-	ProjectsElements : SET [1:1] OF IfcRelProjectsElement FOR RelatedFeatureElement;
+	ProjectsElements : IfcRelProjectsElement FOR RelatedFeatureElement;
 END_ENTITY;
 
 ENTITY IfcFeatureElementSubtraction
@@ -6811,7 +6811,7 @@ ENTITY IfcFeatureElementSubtraction
 	,IfcVoidingFeature))
  SUBTYPE OF (IfcFeatureElement);
  INVERSE
-	VoidsElements : SET [1:1] OF IfcRelVoidsElement FOR RelatedOpeningElement;
+	VoidsElements : IfcRelVoidsElement FOR RelatedOpeningElement;
  WHERE
 	HasNoSubtraction : SIZEOF(SELF\IfcElement.HasOpenings) = 0;
 	IsNotFilling : SIZEOF(SELF\IfcElement.FillsVoids) = 0;
@@ -7826,7 +7826,7 @@ ENTITY IfcMaterialConstituent
 	Fraction : OPTIONAL IfcNormalisedRatioMeasure;
 	Category : OPTIONAL IfcLabel;
  INVERSE
-	ToMaterialConstituentSet : SET [1:1] OF IfcMaterialConstituentSet FOR MaterialConstituents;
+	ToMaterialConstituentSet : IfcMaterialConstituentSet FOR MaterialConstituents;
 END_ENTITY;
 
 ENTITY IfcMaterialConstituentSet
@@ -7872,7 +7872,7 @@ ENTITY IfcMaterialLayer
 	Category : OPTIONAL IfcLabel;
 	Priority : OPTIONAL IfcInteger;
  INVERSE
-	ToMaterialLayerSet : SET [1:1] OF IfcMaterialLayerSet FOR MaterialLayers;
+	ToMaterialLayerSet : IfcMaterialLayerSet FOR MaterialLayers;
  WHERE
 	NormalizedPriority : NOT(EXISTS(Priority)) OR {0 <= Priority <= 100};
 END_ENTITY;
@@ -7916,7 +7916,7 @@ ENTITY IfcMaterialProfile
 	Priority : OPTIONAL IfcInteger;
 	Category : OPTIONAL IfcLabel;
  INVERSE
-	ToMaterialProfileSet : SET [1:1] OF IfcMaterialProfileSet FOR MaterialProfiles;
+	ToMaterialProfileSet : IfcMaterialProfileSet FOR MaterialProfiles;
  WHERE
 	NormalizedPriority : NOT(EXISTS(Priority)) OR {0 <= Priority <= 100};
 END_ENTITY;

@@ -1,19 +1,14 @@
 # Express schema differences
 
-36 items
+31 items
 
 ### Entity
 
-19 items
+14 items
 
 | Name                                               | IFC4x3_RC3.exp                                                                                    | IFC.exp                                                                                           |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| IfcFeatureElementAddition.ProjectsElements         | ProjectsElements : IfcRelProjectsElement FOR RelatedFeatureElement                                | ProjectsElements : SET OF [1:1] IfcRelProjectsElement FOR RelatedFeatureElement                   |
-| IfcFeatureElementSubtraction.VoidsElements         | VoidsElements : IfcRelVoidsElement FOR RelatedOpeningElement                                      | VoidsElements : SET OF [1:1] IfcRelVoidsElement FOR RelatedOpeningElement                         |
 | IfcGradientCurve.EndPoint                          | EndPoint : optional IfcPlacement                                                                  | EndPoint : optional IfcCartesianPoint                                                             |
-| IfcMaterialConstituent.ToMaterialConstituentSet    | ToMaterialConstituentSet : IfcMaterialConstituentSet FOR MaterialConstituents                     | ToMaterialConstituentSet : SET OF [1:1] IfcMaterialConstituentSet FOR MaterialConstituents        |
-| IfcMaterialLayer.ToMaterialLayerSet                | ToMaterialLayerSet : IfcMaterialLayerSet FOR MaterialLayers                                       | ToMaterialLayerSet : SET OF [1:1] IfcMaterialLayerSet FOR MaterialLayers                          |
-| IfcMaterialProfile.ToMaterialProfileSet            | ToMaterialProfileSet : IfcMaterialProfileSet FOR MaterialProfiles                                 | ToMaterialProfileSet : SET OF [1:1] IfcMaterialProfileSet FOR MaterialProfiles                    |
 | IfcPolynomialCurve attributes                      | ['Position', 'CoefficientsX', 'CoefficientsY', 'CoefficientsZ']                                   | ['Position', 'CoefficientsX', 'CoefficientsY', 'CoefficentsZ']                                    |
 | IfcProduct.Representation                          | Representation : optional IfcProductRepresentation                                                | Representation : IfcProductDefinitionShape                                                        |
 | IfcPropertyEnumeration.EnumerationValues           | EnumerationValues : list[1:?] of unique IfcValue                                                  | EnumerationValues : list[1:?] of IfcValue                                                         |
