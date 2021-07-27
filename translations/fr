@@ -9,457 +9,1546 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcPortsAndWaterways.pot\n"
+"X-Crowdin-File-ID: 58\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: fr_FR\n"
 "PO-Revision-Date: 2021-07-27 16:48\n"
 
-#:IFC.xml:658
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:24427
+msgid "IfcMarineFacility"
+msgstr "IfcmarineFacilité"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the S LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcMarineFacility_DEFINITION"
+msgstr "Une installation marine représente toute structure ou entité majeure spécifique au domaine des ports et des voies navigables. Parmi ces exemples, citons les quais, les ponts, les chantiers navals, les brisements etc."
 
-#:IFC.xml:741
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "Style d'aspect de forme"
+#:IFC.xml:24428
+msgid "IfcMarineFacility_PredefinedType"
+msgstr "TypePredefini"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Style d'aspect de forme"
+msgid "IfcMarineFacility_PredefinedType_DEFINITION"
+msgstr "TypePredefini"
 
-#:IFC.xml:679
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "Profondeur linéaire"
+#:IFC.xml:24449
+msgid "IfcMarineFacilityTypeEnum"
+msgstr "IfcMarineFacilityTypeEnum"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profondeur du revêtement de porte, mesurée perpendiculaire au plan de la doublure de porte. S'il est omis et avec une valeur donnée à l'épaisseur de la paroi il indique une profondeur réglable i. , une profondeur qui s'ajuste à l'épaisseur du mur dans lequel l'apparition de ce style de porte est insérée."
+msgid "IfcMarineFacilityTypeEnum_DEFINITION"
+msgstr "Le conteneur de type prédéfini qui rassemble tous les types d'installations maritimes possibles dans l'énumération implémentée."
 
-#:IFC.xml:684
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "Épaisseur de doublure"
+#:IFC.xml:24476
+msgid "IfcMarineFacilityTypeEnum_CANAL"
+msgstr "CANAL"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Épaisseur de la paroi de la porte comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de ligne est 0. zéro il indique une porte sans une doublure tous les autres paramètres de doublure doivent être réglés à NIL dans ce cas . Si LiningThickness est NIL il indique que la valeur n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarineFacilityTypeEnum_CANAL_DEFINITION"
+msgstr "Un homme a fait des cours d'eau construits habituellement, pour rejoindre des rivières, des lacs ou des mers et souvent d'une taille adaptée à la navigation. NOTE : définition du canal ISO 6707 construit pour transporter l'eau, généralement pour la navigation, mais qui peut également être utilisé pour l'alimentation en eau, l'irrigation, la collecte des eaux de pluie , ou le drainage des eaux de surface."
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "Profondeur du seuil"
+#:IFC.xml:24517
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT"
+msgstr "EAU-SHIPLIFT"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Dimension de profondeur dans le plan perpendiculaire à la feuille de porte du seuil de la porte. Seulement étant donné que la paroi de la porte comprend un seuil. S'il est omis et avec une valeur donnée à l'épaisseur de seuil, il indique une profondeur réglable i.e. une profondeur qui s'ajuste à l'épaisseur du mur dans laquelle l'apparition de ce style de porte est insérée."
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT_DEFINITION"
+msgstr "Une installation utilisée pour élever et abaisser les bateaux, navires et autres motomarines entre des étendues d'eau de différents niveaux sur les cours d'eau des rivières et des canaux ou entre les bassins à bassins. Cela se fait grâce à une épingle d'eau qui est mécaniquement relevée de haut en bas."
 
-#:IFC.xml:694
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "Seuil d'épaisseur"
+#:IFC.xml:24500
+msgid "IfcMarineFacilityTypeEnum_REVETMENT"
+msgstr "RÉVENTATION"
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Épaisseur du seuil de porte comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de seuil est 0. zéro il indique une porte sans seuil de profondeur de seuil doit être fixé à NIL dans ce cas . Si le seuil d'épaisseur est NIL, il indique que l'information sur un seuil n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarineFacilityTypeEnum_REVETMENT_DEFINITION"
+msgstr "Une structure marine défensive faite à partir d'ouvrages de terre, de maçonnerie ou d'activités, construite de manière à absorber l'énergie de l'eau entrante."
 
-#:IFC.xml:699
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "TransomEpaisseur"
+#:IFC.xml:24491
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY"
+msgstr "RÉCUPÉRATION DE LA LONGUEUR"
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Largeur d'épaisseur en plan parallèle à la feuille de porte du transom si elle est fournie, si l'attribut TransomOffset est défini , qui divise la feuille de porte d'un vitrage ou d'une fenêtre ci-dessus. X 0D Si la TransomEpaisseur est définie à zéro et que le TransomOffset est à une longueur positive , puis la porte est divisée verticalement en une surface de feuille et de fenêtre sans cadre physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY_DEFINITION"
+msgstr "Sous-ensemble d'installations pour la fonction de lancement ou de récupération des navires."
 
-#:IFC.xml:704
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+#:IFC.xml:24492
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE"
+msgstr "MARINEDEFENCE"
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Décalage de la transe si donné qui divise la feuille de porte d'un vitrage ou d'une fenêtre ci-dessus. Le décalage est donné à partir du bas de l'ouverture de la porte."
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE_DEFINITION"
+msgstr "Un sous-ensemble d'installations ayant la fonction principale de protection ou de défense d'une zone côtière ou inondable."
 
-#:IFC.xml:709
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:24485
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT"
+msgstr "format@@0 HYDROLIFT"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Dimension décalée dans le plan perpendiculaire à la feuille de porte de la doublure de porte. Le décalage est donné comme distance à l'axe x du positionnement local."
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT_DEFINITION"
+msgstr "Un type d'installations de récupération de lancement de navire, également connue sous le nom de quai de levage hydraulique, où les navires sont levés verticalement par des systèmes de saisie de l'eau. puis flottait latéralement à travers la terre à des amarrages qui par la suite deviennent secs."
 
-#:IFC.xml:714
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "Décalage du seuil"
+#:IFC.xml:24511
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD"
+msgstr "SHIPYARD"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Dimension de décalage en plan perpendiculaire à la feuille de porte du seuil de porte. Le décalage est donné comme distance à l'axe x du positionnement local. Seulement donné si la doublure de la porte comprend un seuil et le paramètre est connu."
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD_DEFINITION"
+msgstr "Une installation côtière où les navires sont construits et réparés."
 
-#:IFC.xml:719
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "Épaisseur du boîtier"
+#:IFC.xml:24504
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT"
+msgstr "LIVRE SHIPLIFT"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Épaisseur de la dimension du boîtier en plan de la feuille de porte . Si donné, il est appliqué de la même façon aux quatre côtés du mur adjacent."
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT_DEFINITION"
+msgstr "Un type d'installations de récupération de lancement, où les navires sont sortis verticalement de l'eau sur des plates-formes connectées aux treuils, puis transférés horizontalement vers des ponts terrestres sur des systèmes ferroviaires."
 
-#:IFC.xml:724
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "Profondeur de carrosserie"
+#:IFC.xml:24496
+msgid "IfcMarineFacilityTypeEnum_PORT"
+msgstr "PORTER"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Profondeur de la dimension du boîtier en perpendiculaire plane à la feuille de porte. Si donné, il est appliqué de la même façon aux quatre côtés du mur adjacent."
+msgid "IfcMarineFacilityTypeEnum_PORT_DEFINITION"
+msgstr "Une installation complexe pour la navigation et les activités maritimes, y compris les cargaisons, les personnes et le stockage des ports de la marinas ."
 
-#:IFC.xml:729
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "Lignage au décalage du panneau unnamed@@0"
+#:IFC.xml:24497
+msgid "IfcMarineFacilityTypeEnum_QUAY"
+msgstr "QUAYÉ"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Décalage entre la doublure et le panneau de fenêtre mesuré selon l'axe x du positionnement local. X 0D .change ifc2x4 X 0D IFC4 Nouvel attribut CHANGE ajouté à la fin de la définition de l'entité."
+msgid "IfcMarineFacilityTypeEnum_QUAY_DEFINITION"
+msgstr "une installation pour l'amarrage des navires accompagnée du chargement et du déchargement de la cargaison ou des passagers ou de l'entretien des navires."
 
-#:IFC.xml:734
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "Lining au décalage du panneau à partir de Y"
+#:IFC.xml:24482
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK"
+msgstr "FLOATINGDOCK"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Décalage entre la doublure et le panneau de porte mesuré selon l'axe y du positionnement local. X 0D .change ifc2x4 X 0D IFC4 Nouvel attribut CHANGE ajouté à la fin de la définition de l'entité."
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK_DEFINITION"
+msgstr "Élément spatial qui englobe un quai sec flottant et qui supporte les annexes latérales du quai."
 
-#:IFC.xml:753
-msgid "IfcDoorPanelOperationEnum"
-msgstr "Enium de fonctionnement de la porte Ifc"
+#:IFC.xml:24493
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL"
+msgstr "Chaîne NAVIGATIONALE"
 
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "Cette énumération définit les méthodes de base de fonctionnement des panneaux de porte individuels, comme indiqué dans la figure 1. Enumerator Illustration Swinging DoubleActing Sliding Folding Revolving Rollingup FixedPanel UserDefined NotDefined Figure 1 Door operations The opening direction of the door panel is given by the local placement of the [[IfcDoor]] . L'axe y positif détermine la direction comme indiqué dans la figure 2. panel direction .. .. .. .. .. .. .. chiffres ifcdoorpaneloperationenum fig10. si les opérations du panneau de porte Figure 2 NOTE La représentation symbolique des figures dépendent du code national du bâtiment. Ces chiffres ne sont affichés que sous forme d'illustrations HISTORY New énumération dans IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL ajouté."
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL_DEFINITION"
+msgstr "Un cours d'eau naturel navigable comme la rivière qui doit être géré ou qui a des améliorations appliquées. Ceci inclut également des zones de navigation définies en haute mer et en baies. NOTE définition dans ISO 6707 de passage ouvert pour le transport ou le contenant de l'eau"
 
-#:IFC.xml:764
-msgid "IfcDoorPanelPositionEnum"
-msgstr "format@@0 IfcDoorPanelPosition Enum"
+#:IFC.xml:24472
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER"
+msgstr "BREAKWATER"
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "Cette énumération définit les méthodes de base pour décrire l'emplacement d'un panneau de porte dans une ligne de porte. La nouvelle énumération HISTORY dans la figure 1 IFC2x montre la désignation d'un panneau de porte avec Panneau de position GAUCHE et d'un panneau de porte avec DROIT PanelPosition dans un style de porte avec un DOUBLE DOOR SINGLE SWING. La position est donnée comme indiqué dans le plan XZ du placement local, en regardant dans la direction de l'axe Y positif. .. .. .. .. .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Position du panneau de la porte BSI Documentation"
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER_DEFINITION"
+msgstr "Structure longitudinale qui protège une zone côtière, le port, le bassin ou l'estuaire des vagues. NOTA Calcul de la structure ISO 21650 protégeant une zone côtière, le port, ancrage et ou bassin à partir des vagues NOTE Définition dans la structure longue ISO 6707 dans un plan d'eau conçu pour protéger un bassin ou le rivage des vagues"
 
-#:IFC.xml:770
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPanelProprities"
+#:IFC.xml:24479
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK"
+msgstr "DRYDOCK"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "Un panneau de porte est normalement une feuille de porte qui s'ouvre pour permettre aux personnes ou aux marchandises de passer. Les paramètres du panneau de porte définissent le paramètre géométriquement pertinent du panneau, Les [[IfcDoorPanelProperties]] sont utilisés pour décrire paramétriquement la forme et le fonctionnement des panneaux de porte. La définition paramétrique peut être ajoutée uniquement ou en plus à la représentation explicite de la porte. Les [[IfcDoorType]] peuvent définir des portes comprenant plus d'un panneau. Dans ce cas, une instance de [[IfcDoorPanelProperties]] doit être incluse pour chaque panneau de porte. L'attribut PanelPosition en conjonction avec l'attribut [[IfcDoorStyle]].OperationType détermine à quel panneau le [[IfcDoorPanelProperties]] s'applique. Les [[IfcDoorPanelProperties]] sont inclus dans la liste des propriétés , donnée par l'attribut HasPropertySets du [[IfcDoorType]] . Plus d'informations sur le panneau de porte peuvent être incluses dans la même liste de [[IfcDoorStyle]] en utilisant le [[IfcPropertySet]] pour les extensions dynamiques. Le [[IfcDoorPanelProperties]] ne contient pas de représentation géométrique. Cependant il définit des paramètres qui peuvent être utilisés pour créer la forme du type de porte qui est insérée par le [[IfcDoor]] dans le contexte spatial du projet, comme le montre la figure 1. Les paramètres de [[IfcDoorPanelProperties]] définissent un panneau de porte standard, y compris si vous avez une largeur proportionnelle pour définir non uniforme double swing ou coulissant, ou des portes pliantes. La limite extérieure du panneau est déterminée par la représentation de forme de profil assignée à la [[IfcDoor]] , qui insère le [[IfcDoorType]] . Il doit également tenir compte du paramètre de doublage. La profondeur du balancement du panneau, des panneaux à double action et des panneaux coulissants est définie par le paramètre de profondeur du panneau. Profondeur de panneau Pour les types de portes qui comprennent plus d'un panneau, la largeur d'au moins un panneau est donnée par une mesure normalisée de ratio . Il détermine la largeur de ce panneau, qui est défini comme un rapport de la largeur globale de l'ouverture de la porte. Propriétés du panneau de la figure 1 : HISTORIE Nouvelle entité dans IFC2.0. .change ifc2x4 IFC4 CHANGE Supertype changé en nouveau [[IfcPreDefinedPropertySet]] . Documentation bSI"
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK_DEFINITION"
+msgstr "un quai sec est une chambre fermée par porte qui permet d'égoutter l'eau pour la construction ou la réparation de navires maritimes. NOTE : définition du quai ISO 6707 avec des portes à partir desquelles l'eau peut être drainée ou pompée, en le laissant sec pour permettre la construction ou la réparation d'un vaisseau"
 
-#:IFC.xml:797
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "Style d'aspect de forme"
+#:IFC.xml:24488
+msgid "IfcMarineFacilityTypeEnum_JETTY"
+msgstr "JETTY"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Style d'aspect de forme"
+msgid "IfcMarineFacilityTypeEnum_JETTY_DEFINITION"
+msgstr "Une structure d'amarrage qui s'étend dans la mer généralement perpendiculaire au littoral, principalement pour le transfert de matières liquides en vrac. NOTE : Définition dans la structure du tablier ISO 21650 supportée par des pieux verticaux et éventuellement inclinés s'étendant dans la mer, souvent dans une direction normale à la côte. NOTE : Définition de l'usine ISO 28640 qui se compose d'une structure similaire ou d'un trébuchement les installations d'amarrage y compris le garnissage et l'équipement de dessus pour permettre le transfert du GNL entre le navire et le rivage."
 
-#:IFC.xml:775
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "Profondeur du panneau"
+#:IFC.xml:24507
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK"
+msgstr "VERROUILLAGE DE VENTE"
 
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Profondeur du panneau de porte, mesurée perpendiculaire au plan de la feuille de porte."
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK_DEFINITION"
+msgstr "Une installation utilisée pour élever et abaisser les bateaux, navires et autres motomarines entre des étendues d'eau de différents niveaux sur les cours d'eau des rivières et des canaux ou entre les bassins à bassins. Ceci est réalisé par une chambre à puce d'eau qui est remplie et vidée."
 
-#:IFC.xml:780
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "Opération Panelformat@@0"
+#:IFC.xml:24469
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH"
+msgstr "BARRIERBEACH"
 
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "Le Groupe d'étude définit le mode de fonctionnement de ce panneau. Le Panneau d'opération du panneau de porte doit correspondre avec le Type d'opération du [[IfcDoorStyle]] par lequel il est référencé."
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH_DEFINITION"
+msgstr "une crête de sable qui monte légèrement au-dessus de la surface de la mer et court à peu près parallèlement au rivage, dont il est séparé par une lagune."
 
-#:IFC.xml:785
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "Largeur du panneau"
+#:IFC.xml:24513
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY"
+msgstr "SORTIE"
 
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Largeur de ce panneau, par rapport à la largeur d'ouverture totale de la porte. Si elle est omise, elle est par défaut 1. Une valeur doit être fournie pour toutes les portes avec OperationType à [[IfcDoorStyle]] définissant une porte avec plus d'un panneau."
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY_DEFINITION"
+msgstr "Une installation pour le lancement ou la récupération dynamique d'un navire utilisant une rampe inclinée et des systèmes de transport gravitationnel ou mécanique."
 
-#:IFC.xml:790
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "Position du panneau"
+#:IFC.xml:24516
+msgid "IfcMarineFacilityTypeEnum_WATERWAY"
+msgstr "EAU"
 
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position de ce panneau dans la porte. La position du panneau de la porte doit correspondre au type opérationnel de [[IfcDoorStyle]] par lequel elle est référencée."
+msgid "IfcMarineFacilityTypeEnum_WATERWAY_DEFINITION"
+msgstr "Un sous-ensemble d'installations qui ont la fonction principale de fournir une zone navigable d'eau."
 
-#:IFC.xml:809
-msgid "IfcDoorStyle"
-msgstr "IfcDoorStyle"
+#:IFC.xml:24518
+msgid "IfcMarinePartTypeEnum"
+msgstr "format@@0 IfcMarinePartTypeEnum"
 
-msgid "IfcDoorStyle_DEFINITION"
-msgstr "Définition Le style de porte, [[IfcDoorStyle]] , définit un style particulier de porte, qui peuvent être inclus dans le contexte spatial du modèle de construction à travers des instances de [[IfcDoor]] . Un style de porte définit le paramètre global du style de porte et fait référence au paramètre particulier de la doublure et à un ou plusieurs panneaux à travers les [[IfcDoorLiningProperties]] et le [[IfcDoorPanelProperties]] . L'entité de la porte, [[IfcDoor]] définit une occurrence particulière d'une porte insérée dans le contexte spatial d'un projet. Le paramètre réel de la porte et de sa forme est défini à la [[IfcDoorStyle]] , à laquelle la [[IfcDoor]] est liée par la relation inverse IsDefinedBy pointant sur IfcRelDefinedByType . Le [[IfcDoorStyle]] définit aussi les attributs particuliers pour la ligne , [[IfcDoorLiningProperties]] et les panneaux, [[IfcDoorPanelProperties]] . La [[IfcDoorStyle]] définit la géométrie de la ligne de base, ou la carte de représentation, pour toutes les occurrences du style de porte, données par le [[IfcDoor]] , pointant vers ce style. La représentation du style de la porte peut être donnée par l'ensemble de paramètres minimum, défini pour la doublure de la porte et les panneaux de porte , ou il peut être donné par une représentation géométrique utilisée par la [[IfcRepresentationMap]] . L'attribut ParameterTakesPrecedence décide, si l'ensemble de paramètres peut être utilisé pour représenter exactement la forme du style de la porte TRUE , ou si la pièce jointe [[IfcRepresentationMap]] contient la représentation exacte FALSE . L'IfcDoorStyleOperationTypeEnum définit la disposition générale du style de porte. Selon l'énumérateur, les instances appropriées de [[IfcDoorLiningProperties]] et [[IfcDoorPanelProperties]] sont jointes dans la liste des HasPropertySets . L'IfcDoorStyleOperationTypeEnum détermine principalement le côté gauche accroché à la charnière, ou suspendu à droite , le glissement de l'opération, le pliage, etc. S et le nombre de panneaux. Voir les définitions d'utilisation de la géométrie à IfcDoorStyleOperationTypeEnum pour l'utilisation correcte des symboles d'ouverture pour différents types d'opérations. HISTORY S New entity dans IFC2x. .deprecated DEPRECATION L'entité est obsolète et ne doit pas être utilisée. La nouvelle entité [[IfcDoorType]] doit être utilisée à la place. La documentation bSI"
+msgid "IfcMarinePartTypeEnum_DEFINITION"
+msgstr "Le conteneur de type prédéfini qui rassemble tous les types de pièces d'installations marines possibles dans l'énumération implémentée."
 
-#:IFC.xml:810
-msgid "IfcDoorStyle_OperationType"
-msgstr "Type d'opération"
+#:IFC.xml:24554
+msgid "IfcMarinePartTypeEnum_CREST"
+msgstr "ÉQUIPEMENT"
 
-msgid "IfcDoorStyle_OperationType_DEFINITION"
-msgstr "Type définissant la disposition générale et le fonctionnement du style de la porte."
+msgid "IfcMarinePartTypeEnum_CREST_DEFINITION"
+msgstr "Une partie spatiale latérale qui forme la crête de l'eau brisée ou de la remblai où des structures supplémentaires sont placées, telles que des objets d'accès ou des routes."
 
-#:IFC.xml:815
-msgid "IfcDoorStyle_ConstructionType"
-msgstr "Type de construction"
+#:IFC.xml:24562
+msgid "IfcMarinePartTypeEnum_MANUFACTURING"
+msgstr "MANUFACTURE"
 
-msgid "IfcDoorStyle_ConstructionType_DEFINITION"
-msgstr "Type définissant le type de construction et de matériau de base de la porte."
+msgid "IfcMarinePartTypeEnum_MANUFACTURING_DEFINITION"
+msgstr "Une partie spatiale de la région qui forme une sous-division d'une installation à des fins de fabrication. ses zones couvertes qui sont en plein air et ne constituent pas un bâtiment ou le bâtiment n'est qu'une petite partie de la zone entière dans ce cas un enfant de type bâtiment peut être utilisé ."
 
-#:IFC.xml:820
-msgid "IfcDoorStyle_ParameterTakesPrecedence"
-msgstr "Paramètre de préséance"
+#:IFC.xml:24561
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE"
+msgstr "LIGNE LOWWATERLINE"
 
-msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "La valeur booléenne réfléchit, si le paramètre donné dans la ligne attachée et les propriétés du panneau définissent exactement la géométrie TRUE , ou si la forme de style attachée a la priorité FALSE . Dans le dernier cas, le paramètre n'a qu'une valeur informative."
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente l'élévation de la ligne basse peut être utilisée pour représenter les différents types de marée basse."
 
-#:IFC.xml:825
-msgid "IfcDoorStyle_Sizeable"
-msgstr "Taillé"
+#:IFC.xml:24553
+msgid "IfcMarinePartTypeEnum_CORE"
+msgstr "CORE"
 
-msgid "IfcDoorStyle_Sizeable_DEFINITION"
-msgstr "Le booléen indique si la représentation IfcappedRepresentation si donnée peut être dimensionnée en utilisant le facteur d'échelle de transformation , ou pas FALSE . Dans le cas contraire, la IfcMappedRepresentation devrait être [[IfcShapeRepresentation]] de la [[IfcDoor]] en utilisant [[IfcMappedItem]] comme élément avec le facteur d'échelle 1."
+msgid "IfcMarinePartTypeEnum_CORE_DEFINITION"
+msgstr "Une partie spatiale latérale qui divise la structure centrale d'une installation comme une eau brisée ou un remblai"
 
-#:IFC.xml:832
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
+#:IFC.xml:24568
+msgid "IfcMarinePartTypeEnum_WATERFIELD"
+msgstr "Champ EAU"
 
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "Cette énumération définit les types de base de construction des portes. Le type de construction se rapporte à la combinaison principale de matériaux ou de matériaux utilisés pour la fabrication de la porte. HISTOIRE Nouvelle énumération dans la IFC2x documentation bSI"
+msgid "IfcMarinePartTypeEnum_WATERFIELD_DEFINITION"
+msgstr "Une partie de la région ou de l'installation latérale qui couvre le champ d'eau d'une installation du bord de l'eau, comme un quai."
 
-#:IFC.xml:843
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+#:IFC.xml:24551
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL"
+msgstr "NIVEAU DE CILL"
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. bSI Documentation"
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente l'élévation du niveau de l'encolure et du plancher d'une installation enfoncée comme une serrure de navire ou une serrure sèche."
 
-#:IFC.xml:863
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "Numéros d\\'opération de couverture possibles"
+#:IFC.xml:24548
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE"
+msgstr "STRUCTURE BERTHINGSTRUCTURE"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "Cette énumération définit les types valides de couvertures perméables. HISTOIRE Nouvelle énumération dans la documentation IFC2.0. bSI"
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE_DEFINITION"
+msgstr "Partie spatiale longitudinale d'une voie d'eau ou d'une installation portuaire qui fournit des installations pour l'accostage des navires en attendant que l'installation de la voie navigable devienne disponible. Par exemple, en attendant que le cycle de verrouillage se termine et que les portes de verrou s'ouvrent."
 
-#:IFC.xml:870
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+#:IFC.xml:24552
+msgid "IfcMarinePartTypeEnum_COPELEVEL"
+msgstr "COPELEVER"
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "Cette entité est une description d'un panneau dans une porte ou une fenêtre en tant que remplisseurs à ouvrir qui permet le flux d'air. Il est donné par ses propriétés [[IfcPermeableCoveringProperties]] . Un revêtement perméable est un boîtier, comme un composant, fixe ou ouvert, composé essentiellement d'un cadre et de l'entrée. La saisie est normalement un gril, un bruit ou un écran. La façon d'opération est définie dans le type d'opération. Les [[IfcPermeableCoveringProperties]] sont inclus dans la liste des propriétés HasPropertySets des [[IfcWindowStyle]] ou de la [[IfcDoorStyle]] . Plus d'informations sur le revêtement perméable peuvent être incluses dans la même liste du style de fenêtre ou de porte en utilisant le [[IfcPropertySet]] pour les extensions dynamiques. Ceci s'applique en particulier aux propriétés additionnelles pour les différents types d'opération Le [[IfcPermeableCoveringProperties]] ne contient pas de représentation géométrique. Cependant il définit des paramètres qui peuvent être utilisés pour créer la forme de [[IfcWindowStyle]] qui est insérée par le [[IfcWindow]] dans le contexte spatial du projet , ou du [[IfcDoorStyle]] qui est inséré par le [[IfcDoor]] . Les paramètres du [[IfcPermeableCoveringProperties]] définissent une couverture perméable standard. La limite extérieure du panneau est déterminée par le paramètre d'occurrence assigné à [[IfcWindow]] ou [[IfcDoor]] . Il doit également tenir compte du paramètre de doublage. La position du revêtement perméable dans la fenêtre ou la porte globale est déterminée par l'attribut PanelPosition. La figure 1 illustre le panneau appliqué à la position dans la rangée, tel que défini par l'attribut de position du panneau. Les paramètres suivants s'appliquent à ce panel FrameDepth , FrameThickness . chiffres ifcpermeablecoveringproperties.gif Figure 1 Perméable couvrant les propriétés HISTORY Nouvelle entité dans IFC2. , il avait été renommé de IfcPermeableCovering dans IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changé en nouveau [[IfcPreDefinedPropertySet]] ."
+msgid "IfcMarinePartTypeEnum_COPELEVEL_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente la surface de travail en élévation du quai pour le placement de meubles et de plantes de quai."
 
-#:IFC.xml:893
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "Style d'aspect de forme"
+#:IFC.xml:24549
+msgid "IfcMarinePartTypeEnum_CHAMBER"
+msgstr "CHAMBRE"
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Style d'aspect de forme"
+msgid "IfcMarinePartTypeEnum_CHAMBER_DEFINITION"
+msgstr "Partie spatiale longitudinale d'une voie d'eau ou d'une installation portuaire qui forme la chambre à souches d'une installation, comme un verrou de navire, un quai sec ou un hydrolift"
 
-#:IFC.xml:871
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "Type d'opération"
+#:IFC.xml:24566
+msgid "IfcMarinePartTypeEnum_STORAGE"
+msgstr "STOCKAGE"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Les types de couvertures perméables sont également utilisés pour attribuer des présentations symboliques normalisées selon les normes nationales du bâtiment."
+msgid "IfcMarinePartTypeEnum_STORAGE_DEFINITION"
+msgstr "Une partie spatiale de la région qui forme une sous-division d'une installation dans le but de stocker du fret. par exemple des piles de conteneurs, des chantiers de stockage en vrac secs, des chantiers de stockage de matériaux."
 
-#:IFC.xml:876
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "Position du panneau"
+#:IFC.xml:24546
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL"
+msgstr "APPROACHCHANNEL"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Position de ce panneau perméable à l'intérieur de la fenêtre ou du type de porte."
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL_DEFINITION"
+msgstr "Une partie spatiale longitudinale d'une voie d'eau ou d'une installation portuaire qui couvre l'approche de l'installation primaire."
 
-#:IFC.xml:881
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "Profondeur du cadre"
+#:IFC.xml:24567
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING"
+msgstr "VÉHICLESVICING"
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Profondeur du cadre du panneau utilisé pour inclure le revêtement perméable , mesuré horizontalement de la face avant à la face arrière à la face horizontale. . perpendiculaire au plan d’élévation de la fenêtre ou de la porte."
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING_DEFINITION"
+msgstr "Une partie spatiale de la région qui représente une division fonctionnelle conçue pour l'entretien et ou l'entreposage des véhicules utilisés pour l'exploitation des installations."
 
-#:IFC.xml:886
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "Épaisseur du cadre"
+#:IFC.xml:24565
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER"
+msgstr "TRANSFERT DE VÉRIFICATION"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Largeur du cadre du panneau utilisé pour inclure le revêtement perméable , mesuré de l'intérieur du panneau à la couverture perméable à l'extérieur du panneau à la doublure , i. . parallèle au plan d’élévation de la fenêtre ou de la porte."
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER_DEFINITION"
+msgstr "Une partie spatiale de la région qui représente une zone claire utilisée pour le transfert et le déplacement des navires de cette zone pourrait inclure des voies ferroviaires complexes et des exigences supplémentaires de chargement."
 
-#:IFC.xml:905
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowLiningPropriétés"
+#:IFC.xml:24555
+msgid "IfcMarinePartTypeEnum_GATEHEAD"
+msgstr "GATEHEAD"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcMarinePartTypeEnum_GATEHEAD_DEFINITION"
+msgstr "Partie spatiale longitudinale d'une voie navigable ou d'une installation portuaire qui forme la porte, la structure de soutien d'une installation enrobée telle que le verrouillage du navire, le quai sec ou l'hydrolift."
 
-#:IFC.xml:979
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "Style d'aspect de forme"
+#:IFC.xml:24557
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE"
+msgstr "STRUCTURE DE GUDING"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Style d'aspect de forme"
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE_DEFINITION"
+msgstr "Une partie spatiale longitudinale d'une voie d'eau ou d'une installation portuaire qui forme les structures de guidage et d'assistance à l'entrée d'une installation enroulée."
 
-#:IFC.xml:922
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "Profondeur linéaire"
+#:IFC.xml:24547
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE"
+msgstr "LIGNE CI-DESSUS"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profondeur de la dimension de la fenêtre mesurée perpendiculaire au plan d'élévation de la fenêtre ."
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente la partie au-dessous de la ligne de navigation moyenne définie dans la zone du site."
 
-#:IFC.xml:927
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "Épaisseur de doublure"
+#:IFC.xml:24569
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE"
+msgstr "MÉTÉÉE"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Épaisseur de la ligne de fenêtre comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de ligne est 0. zéro, il indique une fenêtre sans une ligne, tous les autres paramètres de ligne doivent être réglés à NIL dans ce cas . Si LiningThickness est NIL il indique que la valeur n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE_DEFINITION"
+msgstr "Une partie spatiale latérale qui couvre le côté des structures protectrices qui est conçue pour protéger et être affectée par les effets météorologiques ou d'onde. comme le côté extérieur des brise-eau ou le côté de la rivière des remblais d'inondation."
 
-#:IFC.xml:932
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "TransomEpaisseur"
+#:IFC.xml:24559
+msgid "IfcMarinePartTypeEnum_LANDFIELD"
+msgstr "FICHIER"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Épaisseur du séparateur horizontal de transom des panneaux de fenêtres dans une fenêtre , mesurée parallèlement au plan d'élévation de la fenêtre. Le transom fait partie de la doublure et la profondeur du transom est supposée être identique à la profondeur de la doublure. X 0D Si la TransomEpaisseur est définie à zéro et que le TransomOffset est à une longueur positive , puis la fenêtre est divisée verticalement sans diviseur physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarinePartTypeEnum_LANDFIELD_DEFINITION"
+msgstr "Une partie de la région ou de l'installation latérale qui couvre le champ terrestre d'une installation du bord de l'eau, comme un quai."
 
-#:IFC.xml:937
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "MullionEpaisseur"
+#:IFC.xml:24564
+msgid "IfcMarinePartTypeEnum_PROTECTION"
+msgstr "PROTECTION"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Épaisseur du séparateur vertical mullion des panneaux de fenêtres dans une fenêtre , mesurée parallèlement au plan d'élévation de la fenêtre. Le mullion fait partie de la doublure et la profondeur du mullion est supposée être identique à la profondeur de la doublon. X 0D Si la MullionEpaisseur est réglée à zéro et que le MullionOffset a une longueur positive , alors la fenêtre est divisée horizontalement sans séparation physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMarinePartTypeEnum_PROTECTION_DEFINITION"
+msgstr "Une partie spatiale latérale ou régionale qui forme la zone qui contient des mesures de protection pour l'éraflure et l'érosion d'une installation."
 
-#:IFC.xml:942
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "Décalage de la première transom."
+#:IFC.xml:24560
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE"
+msgstr "SIDE DE LEECONDAIRE"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Décalage de la ligne centrale du transom, mesuré selon l'axe z du système de positionnement de fenêtres. Une valeur de décalage 0,5 indique que le transo est positionné au milieu de la fenêtre."
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE_DEFINITION"
+msgstr "Partie spatiale latérale qui couvre le côté des structures protectrices qui ne subissent pas d'effets météorologiques ou d'ondes."
 
-#:IFC.xml:947
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+#:IFC.xml:24544
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE"
+msgstr "LIGNE D'EAU-ABOVEWATERLINE"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente la partie au-dessus de la ligne de navigation moyenne définie dans la zone du site."
 
-#:IFC.xml:952
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:24545
+msgid "IfcMarinePartTypeEnum_ANCHORAGE"
+msgstr "ANCHORAGE"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "IfcMarinePartTypeEnum_ANCHORAGE_DEFINITION"
+msgstr "Une partie spatiale de la région qui représente une zone gérée pour l'ancrage des navires en attente d'espace et de conditions pour entrer dans un port."
 
-#:IFC.xml:957
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:24563
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA"
+msgstr "NAVIGATIONALAREA"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA_DEFINITION"
+msgstr "Une partie spatiale de la région qui couvre une zone de navigation gérée qui est maintenue pour une raison opérationnelle, Il pourrait s'agir d'un cercle de tournage dragué ou d'une zone d'attente."
 
-#:IFC.xml:962
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:24558
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE"
+msgstr "LIGNE HAUTE"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE_DEFINITION"
+msgstr "Une partie spatiale verticale qui représente l'élévation de la ligne haute de navigation, de multiples lignes de haute qualité peuvent être utilisées pour représenter les différents types de marées hautes."
 
-#:IFC.xml:967
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "Lignage au décalage du panneau unnamed@@0"
+#:IFC.xml:24570
+msgid "IfcMooringDevice"
+msgstr "IfcMooringDevice"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMooringDevice_DEFINITION"
+msgstr "Un dispositif d'amarrage est un élément construit actif ou passif qui a pour fonction principale de participer au amarrage d'un navire, ceci peut être sous la forme d'un bollard utilisé comme point d'attachement pour les lignes ou l'équipement actif comme les crochets de libération rapide."
 
-#:IFC.xml:972
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "Lining au décalage du panneau à partir de Y"
+#:IFC.xml:24571
+msgid "IfcMooringDevice_PredefinedType"
+msgstr "TypePredefini"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMooringDevice_PredefinedType_DEFINITION"
+msgstr "Identifie le type prédéfini d'un dispositif d'amarrage à partir duquel le type modélisé peut être défini. Ce type peut associer des ensembles de propriétés spécifiques supplémentaires. NOTE Le PredefinedType ne doit être utilisé que si aucun [[IfcMooringDeviceType]] n'est attribué, fournissant son propre [[IfcMooringDeviceType]].PredefinedType."
 
-#:IFC.xml:991
-msgid "IfcWindowPanelOperationEnum"
-msgstr "format@@0 IfcWindowPanel OpérationEnum"
+#:IFC.xml:24591
+msgid "IfcMooringDeviceType"
+msgstr "Type de périphérique IfcMooring"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure X 09 X 09 X 09 X 09 SideHungRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SideHungLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TopHung X 09 X 09 panel is top hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 BottomHung X 09 X 09 panel is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotHorizontal X 09 X 09 panel is swinging X 09 X 09 X 09 horizontally hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotVertical X 09 X 09 panel is swinging vertically X 09 X 09 X 09 hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingHorizontal X 09 X 09 panel is sliding horizontally X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingVertical X 09 X 09 panel is sliding X 09 X 09 X 09 vertically X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 RemovableCasement X 09 X 09 panel is removable X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 FixedCasement X 09 X 09 panel is fixed X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 OtherOperation X 09 X 09 user defined operation type X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 NotDefined X 09 X 09 X 09 X 09 X 09 X 09 X 09 Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. bSI Documentation"
+msgid "IfcMooringDeviceType_DEFINITION"
+msgstr "Le [[IfcMooringDeviceType]] fournit les informations de type pour les occurrences [[IfcMooringDevice]]. Un dispositif d'amarrage est un élément construit actif ou passif qui a pour fonction principale de participer au amarrage d'un navire, ceci peut être sous la forme d'un bollard utilisé comme point d'attachement pour les lignes ou l'équipement actif, comme les crochets de libération rapide."
 
-#:IFC.xml:1007
-msgid "IfcWindowPanelPositionEnum"
-msgstr "format@@0 IfcWindowPanelPosition Enum"
+#:IFC.xml:24592
+msgid "IfcMooringDeviceType_PredefinedType"
+msgstr "TypePredefini"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . X 09 X 09 Enumerator from [[IfcWindowStyleOperationEnum]] X 09 Use of enumerators from [[IfcWindowPanelPositionEnum]] X 09 Figure X 09 X 09 X 09 DoublePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 DoublePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelBottom X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelTop X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelLeft X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelRight X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. bSI Documentation"
+msgid "IfcMooringDeviceType_PredefinedType_DEFINITION"
+msgstr "Identifie le type prédéfini d'un dispositif d'amarrage à partir duquel le type modélisé peut être défini."
 
-#:IFC.xml:1015
-msgid "IfcWindowPanelProperties"
-msgstr "Propriétés du panneau IfcWindow"
+#:IFC.xml:24612
+msgid "IfcMooringDeviceTypeEnum"
+msgstr "N° de type IfcMooringDeviceTypeEnum"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcMooringDeviceTypeEnum_DEFINITION"
+msgstr "Ce conteneur définit les différents types prédéfinis d'éléments d'amarrage qui peuvent spécifier un [[IfcMooringDevice]] ou [[IfcMooringDeviceType]]."
 
-#:IFC.xml:1042
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "Style d'aspect de forme"
+#:IFC.xml:24619
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER"
+msgstr "LIETENSIONNEUR"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Style d'aspect de forme"
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER_DEFINITION"
+msgstr "Dispositif mécanique utilisé pour appliquer une charge de tension sur les lignes d'amarrage afin d'améliorer la stabilité du navire pour les opérations portuaires."
 
-#:IFC.xml:1020
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "Type d'opération"
+#:IFC.xml:24620
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE"
+msgstr "MAGNETICDEVICE"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE_DEFINITION"
+msgstr "Un dispositif de mouillage qui utilise des aimants comme méthode principale de sécurisation du navire."
 
-#:IFC.xml:1025
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "Position du panneau"
+#:IFC.xml:24621
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS"
+msgstr "HOOKS DE MOORING"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS_DEFINITION"
+msgstr "Des crochets à enclenchement rapide permettent de sécuriser un navire et de libérer automatiquement les navires."
 
-#:IFC.xml:1030
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "Profondeur du cadre"
+#:IFC.xml:24622
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE"
+msgstr "VACUUMDEVICE"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE_DEFINITION"
+msgstr "Un dispositif d'amarrage qui utilise l'aspiration sous vide comme méthode principale de fixation du vaisseau."
 
-#:IFC.xml:1035
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "Épaisseur du cadre"
+#:IFC.xml:24618
+msgid "IfcMooringDeviceTypeEnum_BOLLARD"
+msgstr "BOLLARD"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+msgid "IfcMooringDeviceTypeEnum_BOLLARD_DEFINITION"
+msgstr "un poteau court et épais sur le pont d'un navire ou d'un côté d'un quai, sur lequel la corde du navire peut être sécurisée. à ne pas confondre avec les bornes de trafic."
 
-#:IFC.xml:1054
-msgid "IfcWindowStyle"
-msgstr "Style IfcWindow"
+#:IFC.xml:24623
+msgid "IfcNavigationElement"
+msgstr "Elément de navigation"
 
-msgid "IfcWindowStyle_DEFINITION"
-msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead. bSI Documentation"
+msgid "IfcNavigationElement_DEFINITION"
+msgstr "Un élément de navigation est un élément construit actif ou passif qui est la fonction principale de fournir des instructions de navigation et des avertissements aux vaisseaux, Cela pourrait être sous la forme d'une bouée flottante, d'une balise fixe. Les éléments de navigation peuvent agréger d'autres composants et éléments pour former la structure entière. ceci peut inclure la structure du cadre pour former le corps, instances de [[IfcSign]] pour signalisation ou instances de [[IfcSignal]] pour des éclairages supplémentaires un ou des signaux sonores."
 
-#:IFC.xml:1055
-msgid "IfcWindowStyle_ConstructionType"
-msgstr "Type de construction"
+#:IFC.xml:24624
+msgid "IfcNavigationElement_PredefinedType"
+msgstr "TypePredefini"
 
-msgid "IfcWindowStyle_ConstructionType_DEFINITION"
-msgstr "Type defining the basic construction and material type of the window."
+msgid "IfcNavigationElement_PredefinedType_DEFINITION"
+msgstr "Identifie le type prédéfini d'un élément de navigation à partir duquel le type modélisé peut être défini. Ce type peut associer des ensembles de propriétés spécifiques supplémentaires. NOTE Le PredefinedType ne doit être utilisé que si aucun [[IfcNavigationElementType]] n'est attribué, fournissant son propre [[IfcNavigationElementType]].PredefinedType."
 
-#:IFC.xml:1060
-msgid "IfcWindowStyle_OperationType"
-msgstr "Type d'opération"
+#:IFC.xml:24643
+msgid "IfcNavigationElementType"
+msgstr "IfcNavigationElementType"
 
-msgid "IfcWindowStyle_OperationType_DEFINITION"
-msgstr "Type defining the general layout and operation of the window style."
+msgid "IfcNavigationElementType_DEFINITION"
+msgstr "Le [[IfcNavigationElementType]] fournit les informations de type pour les occurrences [[IfcNavigationElement]]. Un élément de navigation est un élément construit actif ou passif qui est la fonction principale de fournir des instructions de navigation et des avertissements aux vaisseaux, ceci peut être sous la forme d'une bouée flottante, d'une balise fixe ou d'un signal sonore."
 
-#:IFC.xml:1065
-msgid "IfcWindowStyle_ParameterTakesPrecedence"
-msgstr "Paramètre de préséance"
+#:IFC.xml:24644
+msgid "IfcNavigationElementType_PredefinedType"
+msgstr "TypePredefini"
 
-msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "La valeur booléenne réfléchit, si le paramètre donné dans la ligne attachée et les propriétés du panneau définissent exactement la géométrie TRUE , ou si la forme de style attachée a la priorité FALSE . Dans le dernier cas, le paramètre n'a qu'une valeur informative."
+msgid "IfcNavigationElementType_PredefinedType_DEFINITION"
+msgstr "Identifie le type prédéfini d'un élément de navigation à partir duquel le type modélisé peut être défini."
 
-#:IFC.xml:1070
-msgid "IfcWindowStyle_Sizeable"
-msgstr "Taillé"
+#:IFC.xml:24663
+msgid "IfcNavigationElementTypeEnum"
+msgstr "IfcNavigationElementTypeEnum"
 
-msgid "IfcWindowStyle_Sizeable_DEFINITION"
-msgstr "The Boolean indicates, whether the attached ShapeStyle can be sized using scale factor of transformation , or not FALSE . If not, the ShapeStyle should be inserted by the [[IfcWindow]] using [[IfcMappedItem]] with the scale factor 1."
+msgid "IfcNavigationElementTypeEnum_DEFINITION"
+msgstr "Ce conteneur définit les différents types prédéfinis d'éléments de navigation qui peuvent spécifier un [[IfcNavigationElement]] ou [[IfcNavigationElementType]]."
 
-#:IFC.xml:1077
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "format@@0 IfcWindowStyleConstructionEnum"
+#:IFC.xml:24666
+msgid "IfcNavigationElementTypeEnum_BEACON"
+msgstr "BEACON"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. bSI Documentation"
+msgid "IfcNavigationElementTypeEnum_BEACON_DEFINITION"
+msgstr "une structure verticale fixe servant de marque de navigation, pour montrer des récifs ou d'autres dangers, ou pour fournir des indications de navigation."
 
-#:IFC.xml:1087
-msgid "IfcWindowStyleOperationEnum"
-msgstr "format@@0 IfcWindowStyleOperationEnum"
+#:IFC.xml:24667
+msgid "IfcNavigationElementTypeEnum_BUOY"
+msgstr "ACHETER"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations bSI Documentation"
+msgid "IfcNavigationElementTypeEnum_BUOY_DEFINITION"
+msgstr "une structure flottante ancrée servant de marque de navigation, pour montrer les récifs ou d'autres dangers, ou pour fournir des indications de navigation."
+
+#:IFC.xml:24668
+msgid "Pset_BerthCommon"
+msgstr "Pset BerthCommon"
+
+#:IFC.xml:24669
+msgid "Pset_BerthCommon_BerthApproach"
+msgstr "BerthApproach"
+
+msgid "Pset_BerthCommon_BerthApproach_DEFINITION"
+msgstr "BerthApproach"
+
+#:IFC.xml:24674
+msgid "Pset_BerthCommon_BerthMode"
+msgstr "BerthMode"
+
+msgid "Pset_BerthCommon_BerthMode_DEFINITION"
+msgstr "BerthMode"
+
+#:IFC.xml:24679
+msgid "Pset_BerthCommon_BerthingVelocity"
+msgstr "BerthingVelocity"
+
+msgid "Pset_BerthCommon_BerthingVelocity_DEFINITION"
+msgstr "BerthingVelocity"
+
+#:IFC.xml:24684
+msgid "Pset_BerthCommon_AbnormalBerthingFactor"
+msgstr "AbnormalBerthingFactor"
+
+msgid "Pset_BerthCommon_AbnormalBerthingFactor_DEFINITION"
+msgstr "AbnormalBerthingFactor"
+
+#:IFC.xml:24690
+msgid "Pset_BreakwaterCommon"
+msgstr "Pset BreakwaterCommon"
+
+#:IFC.xml:24691
+msgid "Pset_BreakwaterCommon_Structural_Style"
+msgstr "Style structurel"
+
+msgid "Pset_BreakwaterCommon_Structural_Style_DEFINITION"
+msgstr "Style structurel"
+
+#:IFC.xml:24696
+msgid "Pset_BreakwaterCommon_Elevation"
+msgstr "Altitude"
+
+msgid "Pset_BreakwaterCommon_Elevation_DEFINITION"
+msgstr "Altitude"
+
+#:IFC.xml:24702
+msgid "Pset_FacilityPartChamber"
+msgstr "Pset FacilityPartChamber"
+
+#:IFC.xml:24703
+msgid "Pset_FacilityPartChamber_EffectiveChamberSize"
+msgstr "Taille de la chambre effective"
+
+msgid "Pset_FacilityPartChamber_EffectiveChamberSize_DEFINITION"
+msgstr "Taille de la chambre effective"
+
+#:IFC.xml:24708
+msgid "Pset_FacilityPartChamber_ChamberStructuralType"
+msgstr "Type de structure de la chambre"
+
+msgid "Pset_FacilityPartChamber_ChamberStructuralType_DEFINITION"
+msgstr "Type de structure de la chambre"
+
+#:IFC.xml:24714
+msgid "Pset_FacilityPartGateHead"
+msgstr "Pset FacilityPartGateHead"
+
+#:IFC.xml:24715
+msgid "Pset_FacilityPartGateHead_HeadStructuralType"
+msgstr "format@@0 HeadStructuralType"
+
+msgid "Pset_FacilityPartGateHead_HeadStructuralType_DEFINITION"
+msgstr "format@@0 HeadStructuralType"
+
+#:IFC.xml:24721
+msgid "Pset_FenderCommon"
+msgstr "Pset FenderCommon"
+
+#:IFC.xml:24722
+msgid "Pset_FenderCommon_FenderType"
+msgstr "FenderType"
+
+msgid "Pset_FenderCommon_FenderType_DEFINITION"
+msgstr "FenderType"
+
+#:IFC.xml:24727
+msgid "Pset_FenderCommon_CoefficientOfFriction"
+msgstr "CoefficientOfFriction"
+
+msgid "Pset_FenderCommon_CoefficientOfFriction_DEFINITION"
+msgstr "CoefficientOfFriction"
+
+#:IFC.xml:24732
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance"
+msgstr "Tolérance d'Energie"
+
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Tolérance d'Energie"
+
+#:IFC.xml:24737
+msgid "Pset_FenderCommon_MaxReactionTolerance"
+msgstr "format@@0 MaxReactionTolerance"
+
+msgid "Pset_FenderCommon_MaxReactionTolerance_DEFINITION"
+msgstr "format@@0 MaxReactionTolerance"
+
+#:IFC.xml:24742
+msgid "Pset_FenderCommon_MaximumTemperatureFactor"
+msgstr "Facteur de température maximum"
+
+msgid "Pset_FenderCommon_MaximumTemperatureFactor_DEFINITION"
+msgstr "Facteur de température maximum"
+
+#:IFC.xml:24747
+msgid "Pset_FenderCommon_MinimumTemperatureFactor"
+msgstr "Facteur de température minimum"
+
+msgid "Pset_FenderCommon_MinimumTemperatureFactor_DEFINITION"
+msgstr "Facteur de température minimum"
+
+#:IFC.xml:24752
+msgid "Pset_FenderCommon_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderCommon_VelocityFactorEnergy_DEFINITION"
+msgstr "VelocityFactorEnergy"
+
+#:IFC.xml:24757
+msgid "Pset_FenderCommon_VelocityFactorReaction"
+msgstr "Facteur de vitesse de réaction"
+
+msgid "Pset_FenderCommon_VelocityFactorReaction_DEFINITION"
+msgstr "Facteur de vitesse de réaction"
+
+#:IFC.xml:24762
+msgid "Pset_FenderCommon_EnergyAbsorption"
+msgstr "Absorption d'énergie"
+
+msgid "Pset_FenderCommon_EnergyAbsorption_DEFINITION"
+msgstr "Absorption d'énergie"
+
+#:IFC.xml:24767
+msgid "Pset_FenderCommon_MaxReaction"
+msgstr "Réaction maximale"
+
+msgid "Pset_FenderCommon_MaxReaction_DEFINITION"
+msgstr "Réaction maximale"
+
+#:IFC.xml:24773
+msgid "Pset_FenderDesignCriteria"
+msgstr "Critères de conception du jeu de caractères"
+
+#:IFC.xml:24774
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction"
+msgstr "CoefficientOfFriction"
+
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction_DEFINITION"
+msgstr "CoefficientOfFriction"
+
+#:IFC.xml:24779
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance"
+msgstr "Tolérance d'Energie"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Tolérance d'Energie"
+
+#:IFC.xml:24784
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance"
+msgstr "format@@0 MaxReactionTolerance"
+
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance_DEFINITION"
+msgstr "format@@0 MaxReactionTolerance"
+
+#:IFC.xml:24789
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor"
+msgstr "Facteur de température maximum"
+
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor_DEFINITION"
+msgstr "Facteur de température maximum"
+
+#:IFC.xml:24794
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor"
+msgstr "Facteur de température minimum"
+
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor_DEFINITION"
+msgstr "Facteur de température minimum"
+
+#:IFC.xml:24799
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy_DEFINITION"
+msgstr "VelocityFactorEnergy"
+
+#:IFC.xml:24804
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction"
+msgstr "Facteur de vitesse de réaction"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction_DEFINITION"
+msgstr "Facteur de vitesse de réaction"
+
+#:IFC.xml:24809
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption"
+msgstr "Absorption d'énergie"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption_DEFINITION"
+msgstr "Absorption d'énergie"
+
+#:IFC.xml:24814
+msgid "Pset_FenderDesignCriteria_MaxReaction"
+msgstr "Réaction maximale"
+
+msgid "Pset_FenderDesignCriteria_MaxReaction_DEFINITION"
+msgstr "Réaction maximale"
+
+#:IFC.xml:24819
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight"
+msgstr "Hauteur de fenderFenderFenderHight"
+
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight_DEFINITION"
+msgstr "Hauteur de fenderFenderFenderHight"
+
+#:IFC.xml:24824
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod"
+msgstr "Méthode de coefficient de Massage ajoutée"
+
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod_DEFINITION"
+msgstr "Méthode de coefficient de Massage ajoutée"
+
+#:IFC.xml:24830
+msgid "Pset_JettyCommon"
+msgstr "Pset JettyCommon"
+
+#:IFC.xml:24831
+msgid "Pset_JettyCommon_StructuralType"
+msgstr "Type de structure"
+
+msgid "Pset_JettyCommon_StructuralType_DEFINITION"
+msgstr "Type de structure"
+
+#:IFC.xml:24836
+msgid "Pset_JettyCommon_Elevation"
+msgstr "Altitude"
+
+msgid "Pset_JettyCommon_Elevation_DEFINITION"
+msgstr "Altitude"
+
+#:IFC.xml:24841
+msgid "Pset_JettyCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_JettyCommon_BentSpacing_DEFINITION"
+msgstr "BentSpacing"
+
+#:IFC.xml:24846
+msgid "Pset_JettyCommon_PierSectionType"
+msgstr "Type de section"
+
+msgid "Pset_JettyCommon_PierSectionType_DEFINITION"
+msgstr "Type de section"
+
+#:IFC.xml:24852
+msgid "Pset_JettyDesignCriteria"
+msgstr "Pset JettyDesignCriteria"
+
+#:IFC.xml:24853
+msgid "Pset_JettyDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "LowWaterLevel"
+
+#:IFC.xml:24858
+msgid "Pset_JettyDesignCriteria_HighWaterLevel"
+msgstr "Niveau d'eau élevé"
+
+msgid "Pset_JettyDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "Niveau d'eau élevé"
+
+#:IFC.xml:24863
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel"
+msgstr "format@@0 ExtremeHighwaterLevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "format@@0 ExtremeHighwaterLevel"
+
+#:IFC.xml:24868
+msgid "Pset_JettyDesignCriteria_ShipLoading"
+msgstr "Chargement de l'expédition"
+
+msgid "Pset_JettyDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Chargement de l'expédition"
+
+#:IFC.xml:24873
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel"
+msgstr "Niveau d'eau bas extrême"
+
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Niveau d'eau bas extrême"
+
+#:IFC.xml:24878
+msgid "Pset_JettyDesignCriteria_WaveLoading"
+msgstr "Chargement des vagues"
+
+msgid "Pset_JettyDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Chargement des vagues"
+
+#:IFC.xml:24883
+msgid "Pset_JettyDesignCriteria_FlowLoading"
+msgstr "FlowChargement en cours"
+
+msgid "Pset_JettyDesignCriteria_FlowLoading_DEFINITION"
+msgstr "FlowChargement en cours"
+
+#:IFC.xml:24888
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "UniformlyDistributedLoad"
+
+#:IFC.xml:24893
+msgid "Pset_JettyDesignCriteria_EquipmentLoading"
+msgstr "Chargement de l'équipement"
+
+msgid "Pset_JettyDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Chargement de l'équipement"
+
+#:IFC.xml:24899
+msgid "Pset_MarineVehicleCommon"
+msgstr "Pset MarineVehicleCommon"
+
+#:IFC.xml:24900
+msgid "Pset_MarineVehicleCommon_VesselDraft"
+msgstr "VesselDraft"
+
+msgid "Pset_MarineVehicleCommon_VesselDraft_DEFINITION"
+msgstr "VesselDraft"
+
+#:IFC.xml:24905
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendicular"
+msgstr "Longueur de l'intervalle perpendiculaire"
+
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendicular_DEFINITION"
+msgstr "Longueur de l'intervalle perpendiculaire"
+
+#:IFC.xml:24910
+msgid "Pset_MarineVehicleCommon_VesselDepth"
+msgstr "Profondeur de vessel"
+
+msgid "Pset_MarineVehicleCommon_VesselDepth_DEFINITION"
+msgstr "Profondeur de vessel"
+
+#:IFC.xml:24915
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd"
+msgstr "Au-dessus du deck projeté WindEnd"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd_DEFINITION"
+msgstr "Au-dessus du deck projeté WindEnd"
+
+#:IFC.xml:24920
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide"
+msgstr "Au-dessus du pont projeté côté Vent"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide_DEFINITION"
+msgstr "Au-dessus du pont projeté côté Vent"
+
+#:IFC.xml:24925
+msgid "Pset_MarineVehicleCommon_Displacement"
+msgstr "Déplacement"
+
+msgid "Pset_MarineVehicleCommon_Displacement_DEFINITION"
+msgstr "Déplacement"
+
+#:IFC.xml:24930
+msgid "Pset_MarineVehicleCommon_DeadWeightTonnage"
+msgstr "Tonnage de poids mort"
+
+msgid "Pset_MarineVehicleCommon_DeadWeightTonnage_DEFINITION"
+msgstr "Tonnage de poids mort"
+
+#:IFC.xml:24935
+msgid "Pset_MarineVehicleCommon_LaneMeters"
+msgstr "LaneMeters"
+
+msgid "Pset_MarineVehicleCommon_LaneMeters_DEFINITION"
+msgstr "LaneMeters"
+
+#:IFC.xml:24941
+msgid "Pset_MarineVehicleDesignCriteria"
+msgstr "Pset MarineVehicleDesignCritères"
+
+#:IFC.xml:24942
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure"
+msgstr "Pression de coque autorisée"
+
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure_DEFINITION"
+msgstr "Pression de coque autorisée"
+
+#:IFC.xml:24947
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient"
+msgstr "Coefficient de douceur"
+
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient_DEFINITION"
+msgstr "Coefficient de douceur"
+
+#:IFC.xml:24953
+msgid "Pset_MooringDeviceCommon"
+msgstr "Pset MooringDeviceCommon"
+
+#:IFC.xml:24954
+msgid "Pset_MooringDeviceCommon_DeviceType"
+msgstr "Type de périphérique"
+
+msgid "Pset_MooringDeviceCommon_DeviceType_DEFINITION"
+msgstr "Type de périphérique"
+
+#:IFC.xml:24959
+msgid "Pset_MooringDeviceCommon_DeviceCapacity"
+msgstr "Capacité de l'appareil"
+
+msgid "Pset_MooringDeviceCommon_DeviceCapacity_DEFINITION"
+msgstr "Capacité de l'appareil"
+
+#:IFC.xml:24964
+msgid "Pset_MooringDeviceCommon_AnchorageType"
+msgstr "Type d'ancrage"
+
+msgid "Pset_MooringDeviceCommon_AnchorageType_DEFINITION"
+msgstr "Type d'ancrage"
+
+#:IFC.xml:24969
+msgid "Pset_MooringDeviceCommon_MinimumLineSlope"
+msgstr "MinimumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MinimumLineSlope_DEFINITION"
+msgstr "MinimumLineSlope"
+
+#:IFC.xml:24974
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope"
+msgstr "MaximumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope_DEFINITION"
+msgstr "MaximumLineSlope"
+
+#:IFC.xml:24979
+msgid "Pset_MooringDeviceCommon_MaximumLineCount"
+msgstr "Nombre maximum de lignes"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineCount_DEFINITION"
+msgstr "Nombre maximum de lignes"
+
+#:IFC.xml:24985
+msgid "PSet_QuayCommon"
+msgstr "Quai de la PSet commun"
+
+#:IFC.xml:24986
+msgid "PSet_QuayCommon_StructuralType"
+msgstr "Type de structure"
+
+msgid "PSet_QuayCommon_StructuralType_DEFINITION"
+msgstr "Type de structure"
+
+#:IFC.xml:24991
+msgid "PSet_QuayCommon_Elevation"
+msgstr "Altitude"
+
+msgid "PSet_QuayCommon_Elevation_DEFINITION"
+msgstr "Altitude"
+
+#:IFC.xml:24996
+msgid "PSet_QuayCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "PSet_QuayCommon_BentSpacing_DEFINITION"
+msgstr "BentSpacing"
+
+#:IFC.xml:25001
+msgid "PSet_QuayCommon_QuaySectionType"
+msgstr "Type de section du Quai"
+
+msgid "PSet_QuayCommon_QuaySectionType_DEFINITION"
+msgstr "Type de section du Quai"
+
+#:IFC.xml:25007
+msgid "Pset_QuayDesignCriteria"
+msgstr "Pset QuayDesignCriteria"
+
+#:IFC.xml:25008
+msgid "Pset_QuayDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "LowWaterLevel"
+
+#:IFC.xml:25013
+msgid "Pset_QuayDesignCriteria_HighWaterLevel"
+msgstr "Niveau d'eau élevé"
+
+msgid "Pset_QuayDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "Niveau d'eau élevé"
+
+#:IFC.xml:25018
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel"
+msgstr "format@@0 ExtremeHighwaterLevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "format@@0 ExtremeHighwaterLevel"
+
+#:IFC.xml:25023
+msgid "Pset_QuayDesignCriteria_ShipLoading"
+msgstr "Chargement de l'expédition"
+
+msgid "Pset_QuayDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Chargement de l'expédition"
+
+#:IFC.xml:25028
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel"
+msgstr "Niveau d'eau bas extrême"
+
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Niveau d'eau bas extrême"
+
+#:IFC.xml:25033
+msgid "Pset_QuayDesignCriteria_WaveLoading"
+msgstr "Chargement des vagues"
+
+msgid "Pset_QuayDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Chargement des vagues"
+
+#:IFC.xml:25038
+msgid "Pset_QuayDesignCriteria_FlowLoading"
+msgstr "FlowChargement en cours"
+
+msgid "Pset_QuayDesignCriteria_FlowLoading_DEFINITION"
+msgstr "FlowChargement en cours"
+
+#:IFC.xml:25043
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "UniformlyDistributedLoad"
+
+#:IFC.xml:25048
+msgid "Pset_QuayDesignCriteria_EquipmentLoading"
+msgstr "Chargement de l'équipement"
+
+msgid "Pset_QuayDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Chargement de l'équipement"
+
+#:IFC.xml:25054
+msgid "PSet_RevetmentCommon"
+msgstr "format@@0 PSet RevetmentCommon"
+
+#:IFC.xml:25055
+msgid "PSet_RevetmentCommon_StructuralType"
+msgstr "Type de structure"
+
+msgid "PSet_RevetmentCommon_StructuralType_DEFINITION"
+msgstr "Type de structure"
+
+#:IFC.xml:25060
+msgid "PSet_RevetmentCommon_Elevation"
+msgstr "Altitude"
+
+msgid "PSet_RevetmentCommon_Elevation_DEFINITION"
+msgstr "Altitude"
+
+#:IFC.xml:25066
+msgid "PSet_ShiplockCommon"
+msgstr "format@@0 PSet ShiplockCommon"
+
+#:IFC.xml:25067
+msgid "PSet_ShiplockCommon_WaterDeliverySystemType"
+msgstr "Type de système de distribution d'eau"
+
+msgid "PSet_ShiplockCommon_WaterDeliverySystemType_DEFINITION"
+msgstr "Type de système de distribution d'eau"
+
+#:IFC.xml:25072
+msgid "PSet_ShiplockCommon_CillLevelLowerHead"
+msgstr "CillLevelLowerHead"
+
+msgid "PSet_ShiplockCommon_CillLevelLowerHead_DEFINITION"
+msgstr "CillLevelLowerHead"
+
+#:IFC.xml:25077
+msgid "PSet_ShiplockCommon_CillLevelUpperHead"
+msgstr "format@@0 CillLevelUpperHead"
+
+msgid "PSet_ShiplockCommon_CillLevelUpperHead_DEFINITION"
+msgstr "format@@0 CillLevelUpperHead"
+
+#:IFC.xml:25082
+msgid "PSet_ShiplockCommon_WaterDeliveryValveType"
+msgstr "format@@0 WaterDeliveryValveType"
+
+msgid "PSet_ShiplockCommon_WaterDeliveryValveType_DEFINITION"
+msgstr "format@@0 WaterDeliveryValveType"
+
+#:IFC.xml:25088
+msgid "PSet_ShiplockComplex"
+msgstr "Complexe de la PSet Shiplock"
+
+#:IFC.xml:25089
+msgid "PSet_ShiplockComplex_LockMode"
+msgstr "Mode de verrouillage"
+
+msgid "PSet_ShiplockComplex_LockMode_DEFINITION"
+msgstr "Mode de verrouillage"
+
+#:IFC.xml:25094
+msgid "PSet_ShiplockComplex_LockLines"
+msgstr "LockLines"
+
+msgid "PSet_ShiplockComplex_LockLines_DEFINITION"
+msgstr "LockLines"
+
+#:IFC.xml:25099
+msgid "PSet_ShiplockComplex_LockGrade"
+msgstr "Verrouiller la note"
+
+msgid "PSet_ShiplockComplex_LockGrade_DEFINITION"
+msgstr "Verrouiller la note"
+
+#:IFC.xml:25104
+msgid "PSet_ShiplockComplex_LockChamberLevels"
+msgstr "Verrouiller les niveaux de la chambre"
+
+msgid "PSet_ShiplockComplex_LockChamberLevels_DEFINITION"
+msgstr "Verrouiller les niveaux de la chambre"
+
+#:IFC.xml:25110
+msgid "PSet_ShiplockDesignCriteria"
+msgstr "Critères de conception de la PSet Shiplock"
+
+#:IFC.xml:25111
+msgid "PSet_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel"
+msgstr "Niveau d'eau maximum navigable en amont"
+
+msgid "PSet_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Niveau d'eau maximum navigable en amont"
+
+#:IFC.xml:25116
+msgid "PSet_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel"
+msgstr "Niveau maximum de navigation en aval"
+
+msgid "PSet_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Niveau maximum de navigation en aval"
+
+#:IFC.xml:25121
+msgid "PSet_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel"
+msgstr "Niveau d'eau minimum de navigation en amont"
+
+msgid "PSet_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Niveau d'eau minimum de navigation en amont"
+
+#:IFC.xml:25126
+msgid "PSet_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel"
+msgstr "Minimum du niveau de navigation en aval"
+
+msgid "PSet_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Minimum du niveau de navigation en aval"
+
+#:IFC.xml:25131
+msgid "PSet_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel"
+msgstr "format@@0 DownstreamMaintenanceWaterLevel"
+
+msgid "PSet_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "format@@0 DownstreamMaintenanceWaterLevel"
+
+#:IFC.xml:25136
+msgid "PSet_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel"
+msgstr "format@@0 UpstreamMaintenanceWaterLevel"
+
+msgid "PSet_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "format@@0 UpstreamMaintenanceWaterLevel"
+
+#:IFC.xml:25141
+msgid "PSet_ShiplockDesignCriteria_UpstreamFloodWaterLevel"
+msgstr "Niveau d'Eau Inondation en amont"
+
+msgid "PSet_ShiplockDesignCriteria_UpstreamFloodWaterLevel_DEFINITION"
+msgstr "Niveau d'Eau Inondation en amont"
+
+#:IFC.xml:25146
+msgid "PSet_ShiplockDesignCriteria_DownstreamFloodWaterLevel"
+msgstr "En aval du niveau des eaux"
+
+msgid "PSet_ShiplockDesignCriteria_DownstreamFloodWaterLevel_DEFINITION"
+msgstr "En aval du niveau des eaux"
+
+#:IFC.xml:25152
+msgid "PSet_ShipyardCommon"
+msgstr "format@@0 PSet ShipyardCommon"
+
+#:IFC.xml:25153
+msgid "PSet_ShipyardCommon_PrimaryProductionType"
+msgstr "Type de production primaire"
+
+msgid "PSet_ShipyardCommon_PrimaryProductionType_DEFINITION"
+msgstr "Type de production primaire"
+
+#:IFC.xml:25159
+msgid "PSet_VesselLineCommon"
+msgstr "Nom de la famille VesselCommon"
+
+#:IFC.xml:25160
+msgid "PSet_VesselLineCommon_LineIdentifier"
+msgstr "LineIdentifier"
+
+msgid "PSet_VesselLineCommon_LineIdentifier_DEFINITION"
+msgstr "LineIdentifier"
+
+#:IFC.xml:25165
+msgid "PSet_VesselLineCommon_MidShipToFairLead"
+msgstr "format@@0 MidShipToFairLead"
+
+msgid "PSet_VesselLineCommon_MidShipToFairLead_DEFINITION"
+msgstr "format@@0 MidShipToFairLead"
+
+#:IFC.xml:25170
+msgid "PSet_VesselLineCommon_CentreLineToFairLead"
+msgstr "format@@0 CentreLineLineLineLineMN"
+
+msgid "PSet_VesselLineCommon_CentreLineToFairLead_DEFINITION"
+msgstr "format@@0 CentreLineLineLineLineMN"
+
+#:IFC.xml:25175
+msgid "PSet_VesselLineCommon_HeightAboveMainDeck"
+msgstr "Hauteur du pont principal"
+
+msgid "PSet_VesselLineCommon_HeightAboveMainDeck_DEFINITION"
+msgstr "Hauteur du pont principal"
+
+#:IFC.xml:25180
+msgid "PSet_VesselLineCommon_FairleadToTermination"
+msgstr "FairleadTo Termination"
+
+msgid "PSet_VesselLineCommon_FairleadToTermination_DEFINITION"
+msgstr "FairleadTo Termination"
+
+#:IFC.xml:25185
+msgid "PSet_VesselLineCommon_WinchBreakLimit"
+msgstr "format@@0 WinchBreakLimit"
+
+msgid "PSet_VesselLineCommon_WinchBreakLimit_DEFINITION"
+msgstr "format@@0 WinchBreakLimit"
+
+#:IFC.xml:25190
+msgid "PSet_VesselLineCommon_PreTensionAim"
+msgstr "format@@0 PreTensionAim"
+
+msgid "PSet_VesselLineCommon_PreTensionAim_DEFINITION"
+msgstr "format@@0 PreTensionAim"
+
+#:IFC.xml:25195
+msgid "PSet_VesselLineCommon_LineType"
+msgstr "Type de ligne"
+
+msgid "PSet_VesselLineCommon_LineType_DEFINITION"
+msgstr "Type de ligne"
+
+#:IFC.xml:25200
+msgid "PSet_VesselLineCommon_LineStrength"
+msgstr "Puissance de la ligne"
+
+msgid "PSet_VesselLineCommon_LineStrength_DEFINITION"
+msgstr "Puissance de la ligne"
+
+#:IFC.xml:25205
+msgid "PSet_VesselLineCommon_TailLength"
+msgstr "Longueur de la queue"
+
+msgid "PSet_VesselLineCommon_TailLength_DEFINITION"
+msgstr "Longueur de la queue"
+
+#:IFC.xml:25210
+msgid "PSet_VesselLineCommon_TailDiameter"
+msgstr "TailDiameter"
+
+msgid "PSet_VesselLineCommon_TailDiameter_DEFINITION"
+msgstr "TailDiameter"
+
+#:IFC.xml:25215
+msgid "PSet_VesselLineCommon_TailType"
+msgstr "Type de queue"
+
+msgid "PSet_VesselLineCommon_TailType_DEFINITION"
+msgstr "Type de queue"
+
+#:IFC.xml:25220
+msgid "PSet_VesselLineCommon_TailStrength"
+msgstr "Force de queue"
+
+msgid "PSet_VesselLineCommon_TailStrength_DEFINITION"
+msgstr "Force de queue"
+
+#:IFC.xml:25226
+msgid "Qto_MarineFacilityBaseQuantities"
+msgstr "Qto Marine FacilityBaseQuantités"
+
+#:IFC.xml:25227
+msgid "Qto_MarineFacilityBaseQuantities_Length"
+msgstr "Longueur"
+
+msgid "Qto_MarineFacilityBaseQuantities_Length_DEFINITION"
+msgstr "Longueur"
+
+#:IFC.xml:25232
+msgid "Qto_MarineFacilityBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_MarineFacilityBaseQuantities_Width_DEFINITION"
+msgstr "Width"
+
+#:IFC.xml:25237
+msgid "Qto_MarineFacilityBaseQuantities_Height"
+msgstr "Hauteur"
+
+msgid "Qto_MarineFacilityBaseQuantities_Height_DEFINITION"
+msgstr "Hauteur"
+
+#:IFC.xml:25242
+msgid "Qto_MarineFacilityBaseQuantities_Area"
+msgstr "Zone de stockage"
+
+msgid "Qto_MarineFacilityBaseQuantities_Area_DEFINITION"
+msgstr "Zone de stockage"
+
+#:IFC.xml:25247
+msgid "Qto_MarineFacilityBaseQuantities_Volume"
+msgstr "Volume"
+
+msgid "Qto_MarineFacilityBaseQuantities_Volume_DEFINITION"
+msgstr "Volume"
+
+#:IFC.xml:25253
+msgid "Qto_MarineFacilityTransportationQuantities"
+msgstr "Qto FacilityTransportationQuantités"
+
+#:IFC.xml:25254
+msgid "Qto_MarineFacilityTransportationQuantities_BerthGrade"
+msgstr "Grade Berth"
+
+msgid "Qto_MarineFacilityTransportationQuantities_BerthGrade_DEFINITION"
+msgstr "Grade Berth"
+
+#:IFC.xml:25259
+msgid "Qto_MarineFacilityTransportationQuantities_Berth"
+msgstr "Berthe"
+
+msgid "Qto_MarineFacilityTransportationQuantities_Berth_DEFINITION"
+msgstr "Berthe"
+
+#:IFC.xml:25264
+msgid "Qto_MarineFacilityTransportationQuantities_BerthTonnage"
+msgstr "BerthTonnage"
+
+msgid "Qto_MarineFacilityTransportationQuantities_BerthTonnage_DEFINITION"
+msgstr "BerthTonnage"
+
+#:IFC.xml:25270
+msgid "PEnum_AddedMassCoefficientMethod"
+msgstr "PEnum ajouté à la méthode de coefficient de Massage"
+
+#:IFC.xml:25271
+msgid "PEnum_AddedMassCoefficientMethod_PIANC"
+msgstr "PIANC"
+
+msgid "PEnum_AddedMassCoefficientMethod_PIANC_DEFINITION"
+msgstr "PIANC"
+
+#:IFC.xml:25272
+msgid "PEnum_AddedMassCoefficientMethod_SHIGERU_UEDA"
+msgstr "SHIGERU UEDA"
+
+msgid "PEnum_AddedMassCoefficientMethod_SHIGERU_UEDA_DEFINITION"
+msgstr "SHIGERU UEDA"
+
+#:IFC.xml:25273
+msgid "PEnum_AddedMassCoefficientMethod_VASCO_COSTA"
+msgstr "COSTA VASCO"
+
+msgid "PEnum_AddedMassCoefficientMethod_VASCO_COSTA_DEFINITION"
+msgstr "COSTA VASCO"
+
+#:IFC.xml:25275
+msgid "PEnum_AnchorageType"
+msgstr "Type d'ancrage PEnum"
+
+#:IFC.xml:25276
+msgid "PEnum_AnchorageType_CASTIN"
+msgstr "CASTIN"
+
+msgid "PEnum_AnchorageType_CASTIN_DEFINITION"
+msgstr "CASTIN"
+
+#:IFC.xml:25277
+msgid "PEnum_AnchorageType_DRILLEDANDFIXED"
+msgstr "DRILLEDANDFIXÉ"
+
+msgid "PEnum_AnchorageType_DRILLEDANDFIXED_DEFINITION"
+msgstr "DRILLEDANDFIXÉ"
+
+#:IFC.xml:25278
+msgid "PEnum_AnchorageType_THROUGHBOLTED"
+msgstr "DÉCOULÉ"
+
+msgid "PEnum_AnchorageType_THROUGHBOLTED_DEFINITION"
+msgstr "DÉCOULÉ"
+
+#:IFC.xml:25280
+msgid "PEnum_BerthApproach"
+msgstr "PEnum BerthApproach"
+
+#:IFC.xml:25281
+msgid "PEnum_BerthApproach_SIDE"
+msgstr "COURS"
+
+msgid "PEnum_BerthApproach_SIDE_DEFINITION"
+msgstr "COURS"
+
+#:IFC.xml:25282
+msgid "PEnum_BerthApproach_END"
+msgstr "FIN"
+
+msgid "PEnum_BerthApproach_END_DEFINITION"
+msgstr "FIN"
+
+#:IFC.xml:25284
+msgid "PEnum_BerthMode"
+msgstr "PEnum BerthMode"
+
+#:IFC.xml:25285
+msgid "PEnum_BerthMode_BOW"
+msgstr "BOU"
+
+msgid "PEnum_BerthMode_BOW_DEFINITION"
+msgstr "BOU"
+
+#:IFC.xml:25286
+msgid "PEnum_BerthMode_STERN"
+msgstr "NOMBRE"
+
+msgid "PEnum_BerthMode_STERN_DEFINITION"
+msgstr "NOMBRE"
+
+#:IFC.xml:25288
+msgid "PEnum_FenderType"
+msgstr "PEnum FenderType"
+
+#:IFC.xml:25289
+msgid "PEnum_FenderType_ARCH"
+msgstr "ARCHE"
+
+msgid "PEnum_FenderType_ARCH_DEFINITION"
+msgstr "ARCHE"
+
+#:IFC.xml:25290
+msgid "PEnum_FenderType_CELL"
+msgstr "CELLE"
+
+msgid "PEnum_FenderType_CELL_DEFINITION"
+msgstr "CELLE"
+
+#:IFC.xml:25291
+msgid "PEnum_FenderType_CONE"
+msgstr "Cône"
+
+msgid "PEnum_FenderType_CONE_DEFINITION"
+msgstr "Cône"
+
+#:IFC.xml:25292
+msgid "PEnum_FenderType_CYLINDER"
+msgstr "Cylinder"
+
+msgid "PEnum_FenderType_CYLINDER_DEFINITION"
+msgstr "Cylinder"
+
+#:IFC.xml:25293
+msgid "PEnum_FenderType_PNEUMATIC"
+msgstr "PNEUMATIQUE"
+
+msgid "PEnum_FenderType_PNEUMATIC_DEFINITION"
+msgstr "PNEUMATIQUE"
+
+#:IFC.xml:25295
+msgid "PEnum_MooringDeviceType"
+msgstr "PEnum MooringDeviceType"
+
+#:IFC.xml:25296
+msgid "PEnum_MooringDeviceType_T_HEAD"
+msgstr "TÉLÉCHARGER"
+
+msgid "PEnum_MooringDeviceType_T_HEAD_DEFINITION"
+msgstr "TÉLÉCHARGER"
+
+#:IFC.xml:25297
+msgid "PEnum_MooringDeviceType_SINGLEBUTT"
+msgstr "SINGLEBUTT"
+
+msgid "PEnum_MooringDeviceType_SINGLEBUTT_DEFINITION"
+msgstr "SINGLEBUTT"
+
+#:IFC.xml:25298
+msgid "PEnum_MooringDeviceType_DOUBLEBUTT"
+msgstr "DOUBLEBUTTE"
+
+msgid "PEnum_MooringDeviceType_DOUBLEBUTT_DEFINITION"
+msgstr "DOUBLEBUTTE"
+
+#:IFC.xml:25299
+msgid "PEnum_MooringDeviceType_HORN"
+msgstr "COMMENTAIRES"
+
+msgid "PEnum_MooringDeviceType_HORN_DEFINITION"
+msgstr "COMMENTAIRES"
+
+#:IFC.xml:25300
+msgid "PEnum_MooringDeviceType_KIDNEY"
+msgstr "ENFANTÉ"
+
+msgid "PEnum_MooringDeviceType_KIDNEY_DEFINITION"
+msgstr "ENFANTÉ"
+
+#:IFC.xml:25301
+msgid "PEnum_MooringDeviceType_PILLAR"
+msgstr "PILLAIRE"
+
+msgid "PEnum_MooringDeviceType_PILLAR_DEFINITION"
+msgstr "PILLAIRE"
+
+#:IFC.xml:25302
+msgid "PEnum_MooringDeviceType_CLEAT"
+msgstr "SUPPRIMER"
+
+msgid "PEnum_MooringDeviceType_CLEAT_DEFINITION"
+msgstr "SUPPRIMER"
+
+#:IFC.xml:25303
+msgid "PEnum_MooringDeviceType_RING"
+msgstr "Sonnerie"
+
+msgid "PEnum_MooringDeviceType_RING_DEFINITION"
+msgstr "Sonnerie"
+
+#:IFC.xml:25305
+msgid "PEnum_QuaySectionType"
+msgstr "PEnum QuaySectionType"
+
+#:IFC.xml:25306
+msgid "PEnum_QuaySectionType_OPEN"
+msgstr "OUVRIR"
+
+msgid "PEnum_QuaySectionType_OPEN_DEFINITION"
+msgstr "OUVRIR"
+
+#:IFC.xml:25307
+msgid "PEnum_QuaySectionType_CLOSED"
+msgstr "FERMÉ"
+
+msgid "PEnum_QuaySectionType_CLOSED_DEFINITION"
+msgstr "FERMÉ"
+
+#:IFC.xml:25309
+msgid "PEnum_SectionType"
+msgstr "Type de section PEnum"
+
+#:IFC.xml:25310
+msgid "PEnum_SectionType_OPEN"
+msgstr "OUVRIR"
+
+msgid "PEnum_SectionType_OPEN_DEFINITION"
+msgstr "OUVRIR"
+
+#:IFC.xml:25311
+msgid "PEnum_SectionType_CLOSED"
+msgstr "FERMÉ"
+
+msgid "PEnum_SectionType_CLOSED_DEFINITION"
+msgstr "FERMÉ"
 
