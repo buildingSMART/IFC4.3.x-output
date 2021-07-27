@@ -9,1019 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
-"X-Crowdin-File-ID: 86\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2021-07-27 16:53\n"
 
-#:IFC.xml:38406
-msgid "IfcBuildingElementPart"
-msgstr "IfcBuildingElementPart"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBuildingElementPart_DEFINITION"
-msgstr "[[IfcBuildingElementPart]] represents major components as subordinate parts of a building element. Typical usage examples include precast concrete sandwich walls, where the layers may have different geometry representations. In this case the layered material representation does not sufficiently describe the element. Each layer is represented by an own instance of the [[IfcBuildingElementPart]] with its own geometry description. The kind of building element part is further specified by a corresponding instance of [[IfcBuildingElementPartType]], referred to by [[IfcRelDefinesByType]]. HISTORY New entity in IFC2x2. bSI Documentation"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 bSI Documentation"
 
-#:IFC.xml:38415
-msgid "IfcBuildingElementPart_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "true の場合、最初の選択肢を返します。そうでない場合は、2 番目の選択肢を返します。 xtDef NOTEのISO CD 10303による定義 42 1992 ブール型入力引数の値に応じて、2つの選択肢のうちの1つを返します。 2つの選択肢は入力引数でもあります。NOTE関数はISO10303で定義されているbooleanchooseから採用されています。HISTORYIFC2.0の新しい関数"
 
-#:IFC.xml:38434
-msgid "IfcBuildingElementPartType"
-msgstr "IfcBuildingElementPartType"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcBuildingElementPartType_DEFINITION"
-msgstr "Building 要素の部品タイプは、一般的に共有されるプロパティセット定義とビルディング要素の部品の表示マップのリストを定義します。 HISTORY IFC4内の新しいエンティティ。bSI Documentation"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:38439
-msgid "IfcBuildingElementPartType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 接続された面セットは、面の境界エッジと頂点が接続されているような面セットです。 注記エンティティは、ISO 10303で定義されている接続されたフェイスセットから適応されます。 面と境界ループの領域の組合せは、アークワイズで接続する必要があります。bSI ドキュメント"
 
-#:IFC.xml:38458
-msgid "IfcBuildingElementPartTypeEnum"
-msgstr "IfcBuildingElementPartTypeEnum"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
-msgstr "この列挙では、さまざまな種類のビルディング要素部品が定義されています。HISTORYIFC4の新しい列挙。"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "CfsFaces"
 
-#:IFC.xml:38468
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
-msgstr "SAFETYCAGE"
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
-msgstr "安全ケージは、固定されたはしごのスタイルに固定され、はしごを登るときに労働者のパスを囲むように配置されている円形の棒と垂直の棒のアセンブリです。 そのように囲まれたはしごは、ケージまたはフープはしごとしても知られています。"
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero. bSI Documentation"
 
-#:IFC.xml:38466
-msgid "IfcBuildingElementPartTypeEnum_INSULATION"
-msgstr "お問い合わせ"
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
-msgstr "お問い合わせ"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:38467
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
-msgstr "PRECASTPANEL"
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
-msgstr "パーツはプリキャストパネルで、通常はサンドイッチウォールパネルの内部または外部レイヤーとして使用されます。"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:38465
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
-msgstr "ARMOURUNIT"
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
-msgstr "斜面などの斜面の浸食防止に使用される大型採石場石またはコンクリート型ユニット。 これらの単位はコースレイヤーにまとめられます。 ISO 21650 では、指定された幾何学的特性と密度に合うように選択された比較的大きな採石場の石またはコンクリートの形状の単位で定義されています。"
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry. bSI Documentation"
 
-#:IFC.xml:38464
-msgid "IfcBuildingElementPartTypeEnum_APRON"
-msgstr "APRON"
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "EdgeGeometry"
 
-msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
-msgstr "伐採を防ぐために、木材、コンクリート、リプラップ、舗装またはその他の建設からなるスカウトの保護の形。"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "EdgeGeometry"
 
-#:IFC.xml:38469
-msgid "IfcDiscreteAccessory"
-msgstr "IfcDiscreteAccessory"
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessory_DEFINITION"
-msgstr "離散アクセサリは、要素に含まれる、または追加されるさまざまな種類のアクセサリの表示です。 HISTORY IFC2x2に新しいエンティティが追加されました。.change ifc2x4 IFC4 変更属性 PredefinedType を追加しました。"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "この論理フラグは、TRUE を、エッジジオメトリを定義する曲線とエッジの感覚が同じかどうかを示します。 エッジの感覚は、エッジ開始頂点からエッジ終点までであり、カーブの感覚はパラメータを増やす方向にあります。"
 
-#:IFC.xml:38480
-msgid "IfcDiscreteAccessory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE. bSI Documentation"
 
-#:IFC.xml:38492
-msgid "IfcDiscreteAccessoryType"
-msgstr "IfcDiscreteAccessoryType"
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcDiscreteAccessoryType_DEFINITION"
-msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted. bSI Documentation"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "EdgeList"
 
-#:IFC.xml:38499
-msgid "IfcDiscreteAccessoryType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "該当なし"
 
-msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "エッジリスト内の要素数。"
 
-#:IFC.xml:38511
-msgid "IfcDiscreteAccessoryTypeEnum"
-msgstr "IfcDiscreteAccessoryTypeEnum"
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "IfcFace"
 
-msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
-msgstr "この列挙は、離散アクセサリのさまざまなタイプを定義します。"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:39190
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
-msgstr "パンネルの強さ"
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
-msgstr "サブ構造のポンプ効果を最小限に抑えるコンポーネント。"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:39187
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
-msgstr "レイパー"
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "バウンド数"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
-msgstr "レールとベースプレートまたはレールとベッド、ベアラーまたはスラブの間に配置された非金属パッド。"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "バウンド数"
 
-#:IFC.xml:39189
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
-msgstr "スライディング"
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
-msgstr "ストックレールとスイッチレールの足元がスライドする平坦な表面をサポートし、保持するコンポーネント。"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 フェースバインドは、面をバウンディングするために使用されるループです。 注記エンティティは、ISO 10303で定義された面バインドから適応されています 42. HISTORY IFC1.0 bSI ドキュメンテーション内の新しいエンティティ"
 
-#:IFC.xml:39180
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
-msgstr "点検装置"
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "バインドされています"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
-msgstr "分割払いに使用されるデバイスは、分割払いコンポーネントにポイントマシンを接続します。"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "バインドされています"
 
-#:IFC.xml:39192
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
-msgstr "ELASTIC Cushion"
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "方向"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
-msgstr "トラック弾性クッションは、コンクリートベースの溝付き側面に一種のレイヤーをセットしたものです。 縦方向と横方向の荷重が軌道構造に及ぼす影響を軽減するために使用されます トラック弾性クッションはバラストレストラック構造にのみ現れます。"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "これは、「TRUE」か「FALSE」かを示しています。ループが最初に定義された場合と同じ意味を持ちます。 sense が FALSE の場合、コンポーネント指向のすべてのエッジのセンサーは顔に使用されると暗黙的に反転されます。"
 
-#:IFC.xml:38534
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
-msgstr "BRACKET"
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
-msgstr "L字型または同様の形状の付属品は、要素間のコーナーに取り付けられており、それらを一緒に保持したり、二次的な要素を運ぶために使用されます。"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 面外側バインドは、顔に外側の境界を定義するための追加の意味を持つバインドされた特殊なサブタイプです。 このタイプの顔の境界線は複数ありません。 注記エンティティは、ISO 10303で定義された外側にバインドされた面から適応されています。HISTORY IFC1.0 bSIドキュメンテーション内の新しいエンティティ"
 
-#:IFC.xml:39176
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
-msgstr "ポイント機械ロックデバイス"
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
-msgstr "外部から特定の位置にポイントマシンをロックする機械装置。"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] では、表面に関連する表面の基礎となる形状を定義します。 注 トポロジは、サーフェスのジオメトリをトリミングするために使用されます。 トポロジーに合わせて表面を幾何学的にトリミングする必要はありません。 xtDef NOTE ISO CD 10303による定義 42 1992 面面は、ジオメトリが関連するサーフェスによって定義されるサブタイプの面です。 顔によって使用される表面の部分は、おそらく穴のあるオープンディスクとして平面に埋め込むことができます。 ただし、境界ループの端と頂点を持つ面の組合せは平面に埋め込む必要はありません。 それは、例えば、球体やトーラス全体をカバーすることができます。 面と幾何学面の両方が正常な方向を定義しているように、 BOOLEAN フラグは、サーフェスの通常が TRUE と一致するか、またはフェイスの通常方向を FALSE することに反対することを示すために使用されます。 顔のループのいずれかのコンポーネントに関連付けられた形状は、表面形状と一致する必要があります。 すべての頂点点とエッジ曲線の領域が面形状面に含まれているという意味です 複数の面サーフェスでサーフェスを参照することができます。 注意 ISO 10303に定義された顔面から適応したエンティティ 42. 履歴 IFC2x .spec ヘッド 非公式の提案 1. フェイスサーフェスのドメインは、ループによってトリミングされると、フェイスジオメトリのドメインとして正式に定義されます。 このドメインには境界ループは含まれていません 2. 面は有限範囲がゼロでない 3. 面はマニホールドであり 4. 面はアークワイズで接続されている。 5. フェイス表面には表面属性がある 6. ループはフェイスドメインの一部ではありません。 7. ループ幾何学は面幾何学と一致します。 これは、面表面を境界するループを定義する際に使用されるエッジ曲線または頂点点が面形状上にあることを意味します。 8. 顔のループは交差してはなりません。 bSI Documentation"
 
-#:IFC.xml:39191
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
-msgstr "RAILBRACE"
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "FaceSurf"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
-msgstr "レールの傾きやねじれを防ぐレールコンポーネント。"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "FaceSurf"
 
-#:IFC.xml:38541
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
-msgstr "INSULATOR"
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
-msgstr "導電素子をサポートし、絶縁するように設計されたデバイス IEC 151 15 39の定義。"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "このフラグは、正常な表面の感覚が TRUE と一致するかどうかを示します。 または、顔に対するトポロジカル正常の感覚「FALSE」に対抗します。"
 
-#:IFC.xml:38536
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
-msgstr "CABLEARRANGER"
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
-msgstr "ケーブル アレンジャーは、ケーブルの周りに配置された部品の柔軟性のあるアクセサリまたは部品で、配置されている箇所での屈曲を最小限に抑えます。"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 ループは単一の頂点から構築されたトポロジカル実体です。 接続された方向のエッジまたは線形のセグメントを同じ頂点で始まったり終わったりすることです 通常、表面に横たわって顔を結合するために使用されます。 ループは 0 または 1 の次元を持ちます。0 次元ループの領域は 1 つの点です。 1次元ループの領域は、接続された方向曲線ですが、マニホールドである必要はありません。 ループが円であるため、始点の位置は任意です。 ループのドメインには、0 <unk> が含まれます。 ループは単一の頂点、または指向エッジの順序付きコレクション、または点の順序付きコレクションで表されます。 ループはグラフであるため、MとGのグラフ属性はグラフトラバーサルアルゴリズムによって決まります。 M 1以来、オイラー式1は、この場合にはイメージに.. .. .. .. .. .. .. .. .. V と E X 7El X 7E が一意の頂点の数であり、ループ内の方向のエッジの数であり、G l がループの属である場合。 注 ISO 10303 42 で定義されているループから適応されたエンティティ。 歴史 IFC2xの新しい実体。.spec head 非公式提案 1. ループの範囲は有限です。 ループは、一致する開始点と終了点を持つ閉じたトポロジカル曲線を記述します。bSI Documentation"
 
-#:IFC.xml:39194
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
-msgstr "レイル<unk>"
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadTail ALoop"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
-msgstr "車輪のフランジを通してレールの着用を防ぐ装置で、ノイズ発生を低減します。 外側レールの内側のカーブや近くのターンアウトは、装着機能やノイズ低減に依存することが多い。"
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "この関数は、入力エッジループのエッジに対して、各エッジの終端頂点が後継の開始頂点と同じ場合に TRUE を返します。 HISTORY IFC2x2の新機能"
 
-#:IFC.xml:39193
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
-msgstr "SOUNDABSORPION"
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
-msgstr "音を吸収し、振動を吸収するためのトラック内のコンポーネント。スラブトラックと組み合わせて使用されることがよくあります。"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303による定義 42 1992 オープンシェルは寸法のシェルである 2. そのドメインが存在する場合、有限であり、接続されていて、指向性があり、境界を持つ2多様体であるが、閉じた表面ではない。 1つ以上の穴を開けた閉じた殻と考えられる。 オープンシェルのドメインは 0 <unk> 1 を満たします。 オープンシェルは、ドメインがハンドルを持つことができるため、顔よりも機能的に一般的です。 シェルは、指向性のある面の集合によって定義されます。 指向を考慮した後、各顔の感覚は、以下に定義されたように通常のシェルと一致しなければならない。 オリエンテーションは、指向面の BOOLEAN 属性として直接提供できます。 またはシェルメンバーが orientation 属性を持たない面の場合は TRUE をデフォルトにしてください。 オープンシェルに対する以下の組み合わせ制約と、ドメインに対する幾何学的制約が設計されています。 非公式の提案と共にオープンシェルに関連するあらゆる領域が 指向性多様体であることを保証するために 各フェイスの参照は一意でなければなりません。開いたシェルは少なくとも1つの面を持つものとします。 特定の顔は複数の開いた殻に存在する可能性があります。 開いているシェルの境界は、その面の面境界ループによって一度だけ参照されるエッジで構成されます。 全ての頂点と一緒になっています オープンシェルのドメインが存在する場合、面のすべてのエッジと頂点が含まれます。 注 これは、その限界のどれも含まれていないフェイスドメインの定義とは若干異なることに注意してください。 例えば、フェイスドメインは、絶縁された点またはラインセグメントを除外することができます。オープンなシェルドメインはそうでない可能性があります。以下の計算のためのアルゴリズムを参照してください。 注記エンティティは、ISO 10303 42で定義された開いているシェルから適応されています。 HISTORYIFC2x.spec ヘッド 非公式提案 1. すべてのエッジは、顔の顔の境界によって正確に2回参照されなければなりません。 各指向エッジは一意でなければならない 3. エッジは2つ以上の面で参照してはならない。 4. シェルの個別面は交差しませんが、エッジや頂点を共有することがあります。 5. エッジは交差しませんが頂点を共有することができます 6. 7. シェルのループはポリループとその他のループタイプの混合物ではない。 ポリループのみが面結合定義として定義されるため、これは与えられることに注意してください。 8. 閉じたシェルは、2つのマニホールドに接続された方向のアークワイズでなければなりません。9. オイラー方程式を満たすものとします。bSI Documentation"
 
-#:IFC.xml:38545
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
-msgstr "シューズ"
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
-msgstr "エレメントをサポートまたは固定するために使用されるコラムシューズまたはビームシューズビームハンガー。"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added. bSI Documentation"
 
-#:IFC.xml:38531
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
-msgstr "ANCHORPLATE"
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "EdgeElement"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
-msgstr "鋼板の付属品。 他の要素を溶接またはボルトで固定するために、コンクリート要素の表面に埋め込まれている、せん断スタッドコネクタまたは鉄筋に溶接されています。"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "EdgeElement"
 
-#:IFC.xml:38540
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
-msgstr "爆発的な接続デバイス"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "方向"
 
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
-msgstr "熱的な差動展開を可能にする建設要素間のアセンブリ接続要素。"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN (BOOLEAN) 使用されているトポロジカル方向が format@@0 の場合、エッジ要素の始点から終点までの方向と一致します。format@@1"
 
-#:IFC.xml:39173
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
-msgstr "ロック"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
-msgstr "ロックは、物理的なオブジェクトによって解放される機械的または電子的な固定装置です。例えば、 キー、指紋認証、RFIDカード、セキュリティトークンなど、秘密の情報を提供することにより、例えば、番号の変異、パスワード、またはそれらの組み合わせによって。"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:39182
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
-msgstr "TENSIONINGQUIPMENT"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
-msgstr "導体やケーブルの張力を維持するために使用される装置。"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:39195
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
-msgstr "レイル機器の装備"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
-msgstr "レール機械装置は、ブロック装置、速度レギュレータ、バイアスロードされた検査器、トラックスケールまたは制御可能な遅延器など、鉄道側に設置されたメカニカル装置です。"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 パスは、指向エッジの順序付けられたコレクションからなるトポロジカルエンティティです。 それぞれのエッジの始点が前のエッジの終点と一致するようにします パスは、最初の方向のエッジの始点から最後のエッジの終点まで順序付けられます。 指向エッジの BOOLEAN 値センスは、エッジ方向がパスの TRUE の方向と一致するか、または FALSE の逆方向であるかを示します。 個々のエッジは、個々のパスによって一度だけ参照することができます エッジは、複数のパスによって参照することができます。 エッジはパスとは独立して存在することができます。ISO 10303 42に定義されているパスから適応された注記エンティティは、IFC2に新しいエンティティです。 .spec ヘッド 非公式提案 1. パスは次元性を持っている 1. パスはアークワイズ接続されている 3. パスのエッジは、共通の頂点を除いて交差しません。4. パスには有限、ゼロではない範囲があります。"
 
-#:IFC.xml:38532
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
-msgstr "鳥の保護"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
-msgstr "鳥が電気的に臨界点に座っているのを防ぐ装置で、鳥は電気ショックや短絡による障害から保護されています。"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "EdgeList"
 
-#:IFC.xml:38547
-msgid "IfcElementComponent"
-msgstr "IfcElementComponent"
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadTail APath"
 
-msgid "IfcElementComponent_DEFINITION"
-msgstr "An element component is a representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples of IfcElementComponents include different kinds of fasteners and various accessories. One or several instances of subtypes of [[IfcElementComponent]] should always be accompanied by a defining instance of a respective subtype of [[IfcElementComponentType]]. The type object holds shape and material information. HISTORY New entity in IFC2x2 It is often desirable to model a number of same shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below. To express the multiplicity of element components also on a higher semantic level, a Qto ElementComponentPatternQuantities should be provided via [[IfcRelDefinesByProperties]] and contain the number of pieces which are placed by a single [[IfcElementComponent]] instance. Symbolic Representation A symbolic representation is defined for a row of components or several rows of components within a single instance of [[IfcElementComponent]]. Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an [[IfcShapeRepresentation]] with the attribute values RepresentationIdentifier Row RepresentationType GeometricCurveSet and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components bolts, nails, staples, straight reinforcement bars, or similar , the local placement of the [[IfcElementComponent]] shall be located and oriented such that the local z axis is parallel with the axes of the components. A Qto ElementComponentPatternQuantities should denote the count of pieces in the row or array and their spacing. bSI Documentation"
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "入力パスのすべてのエッジが連続している場合、この関数は TRUE を返します。 xtDef NOTEのISO CD 10303による定義 42 1992 この関数は、入力パスのエッジに対して各エッジの終点がその後継の開始頂点と同じ場合に TRUE を返します。 注 ISO10303で定義されているパスヘッドからテールに適応した機能 HISTORYIFC2.0における新機能"
 
-#:IFC.xml:38551
-msgid "IfcElementComponentType"
-msgstr "IfcElementComponentType"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcElementComponentType_DEFINITION"
-msgstr "The element type [[IfcElementComponentType]] defines commonly shared information for occurrences of element components. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a element component type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcElementComponentType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcElementComponentType]] are represented by instances of [[IfcElementComponent]]. HISTORY New entity in IFC2x2. bSI Documentation"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value. bSI Documentation"
 
-#:IFC.xml:38554
-msgid "IfcFastener"
-msgstr "IfcFastener"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "多角形（多角形）"
 
-msgid "IfcFastener_DEFINITION"
-msgstr "他の要素との接続や結合にファスナーとして使用される固定部品の表現。 除外されるのは、別のエンティティ[[IfcMechanicalFastener]]によってモデル化された機械式ファスナーです。 HISTORY IFC2x2 .change ifc2x4 IFC4 変更属性の事前定義型の追加。bSI Documentation"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "多角形（多角形）"
 
-#:IFC.xml:38565
-msgid "IfcFastener_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "IFcSubedge"
 
-msgid "IfcFastener_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 サブエッジは、既存のエッジのドメインの接続部分であるエッジです。 サブエッジ上のトポロジカル制約は、エッジ上のトポロジカル制約と同じです。 注 ISO 10303 42に定義されているサブエッジから適応したエンティティ HISTORY IFC2x2の新しいエンティティ。 ペックヘッド 非公式な提案 1. サブエッジのドメインは、親エッジのドメインとして正式に定義されます。 で指定します。 2 開始頂点と終了頂点は、親エッジの頂点の領域と親エッジの領域の結合の範囲内でなければならない . bSI ドキュメント"
 
-#:IFC.xml:38577
-msgid "IfcFastenerType"
-msgstr "IfcFastenerType"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "ParentEdge"
 
-msgid "IfcFastenerType_DEFINITION"
-msgstr "The element component type [[IfcFastenerType]] defines commonly shared information for occurrences of fasteners. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a fastener type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFastenerType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFastenerType]] are represented by instances of [[IfcFastener]] . HISTORY New entity in IFC2x2. bSI Documentation"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "ParentEdge"
 
-#:IFC.xml:38584
-msgid "IfcFastenerType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcFastenerType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 トポロジ表示アイテムはジオメトリリソース内のすべてのトポロジ表示アイテムのスーパータイプです。 注記エンティティは ISO 10303 42に定義されているトポロジカル表現アイテムから適応されています。履歴 IFC1.5 bSI Documentation"
 
-#:IFC.xml:38596
-msgid "IfcFastenerTypeEnum"
-msgstr "IfcFastenerTypeEnum"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcFastenerTypeEnum_DEFINITION"
-msgstr "この列挙は、機械式ファスナーを除き、さまざまなタイプのファスナーを定義します。HISTORYIFC4の新しい列挙。"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点に対応するトポロジカル構造です。 それは次元0と次元0を持っています。 頂点の領域が存在する場合、m寸法実空間R Mの点であり、頂点のサブタイプによって表されます。 注記エンティティは、ISO 10303に定義されている頂点から適応しました 42. 履歴 IFC2.0の新しいエンティティ .spec ヘッド 非公式の提案 1. 頂点の寸法は 0 です。これは頂点の基本的な性質です。 2. 頂点の範囲はゼロと定義されます。bSIドキュメント"
 
-#:IFC.xml:38600
-msgid "IfcFastenerTypeEnum_GLUE"
-msgstr "Glue"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
-msgstr "接着剤が要素を結合するために使用される固定接続。"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点ループは、1 つの頂点からなるゼロ属のループです。 頂点は、頂点ループとは独立して存在することができます. トポロジデータは、次の制約画像を満たすもの. .. .. .. .. .. .. 図: ifcvertexloop math1.gif NOTE ISO 10303で定義された頂点ループから適応された実体。HISTORY IFC2x2に新しい実体。 ペックヘッド 非公式の提案 1. 頂点ループは、0の範囲と寸法性を持っています。2. 頂点ループは属性を持っています。bSI Documentation"
 
-#:IFC.xml:38602
-msgid "IfcFastenerTypeEnum_WELD"
-msgstr "ようこそ！"
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
-msgstr "金属材料またはその他の適切な材料の部品間の溶接縫い目。"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-#:IFC.xml:38601
-msgid "IfcFastenerTypeEnum_MORTAR"
-msgstr "MORTAR"
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
-msgstr "結合隙間を埋めるために使用される鉱物や他の材料の組成、おそらく負荷を運ぶ役割を果たす。"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点として定義されているジオメトリを持つ頂点です。 注記エンティティは、ISO 10303 42 で定義されている頂点から適応しています。 歴史 IFC2x.spec ヘッド 非公式提案 1. 頂点のドメインは、その頂点点のドメインとして正式に定義されます。bSI Documentation"
 
-#:IFC.xml:38608
-msgid "IfcMechanicalFastener"
-msgstr "IfcMechanicalFastener"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "頂点ジオメトリー"
 
-msgid "IfcMechanicalFastener_DEFINITION"
-msgstr "建物の構成要素または部品を機械的に接続する機械式ファスナー。 このクラスの単一のインスタンスは、実際の機械式ファスナーの1つまたは多数を表すことができます。 例えばボルトの配列や釘の列などです。 HISTORY IFC2x2 IFC4の新しいエンティティが[[IfcFastener]] から [[IfcElementComponent]] に変更されました。 属性PredefinedTypeが追加されました。属性NominalDiameter と NominalLength 廃止予定です。bSI Documentation"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "頂点ジオメトリー"
 
-#:IFC.xml:38617
-msgid "IfcMechanicalFastener_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
-msgstr "ファスナータイプの断面積サイズを記述する公称直径。X 0D X 0D . hangeのifc2x4 X 0D IFC4の変更 代わりに[[IfcMechanicalFastenerType]]のそれぞれの属性を非推奨にします。"
-
-#:IFC.xml:38622
-msgid "IfcMechanicalFastener_NominalLength"
-msgstr "公称長さ"
-
-msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
-msgstr "ファスナータイプの縦方向寸法を記述する公称長さ。X 0D X 0D。 hangeのifc2x4 X 0D IFC4の変更 代わりに[[IfcMechanicalFastenerType]]のそれぞれの属性を非推奨にします。"
-
-#:IFC.xml:38627
-msgid "IfcMechanicalFastener_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38647
-msgid "IfcMechanicalFastenerType"
-msgstr "IfcMechanicalFastenerType"
-
-msgid "IfcMechanicalFastenerType_DEFINITION"
-msgstr "The element component type [[IfcMechanicalFastenerType]] defines commonly shared information for occurrences of mechanical fasteners. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a mechanical fastener type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcMechanicalFastenerType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcMechanicalFastenerType]] are represented by instances of [[IfcMechanicalFastener]]. HISTORY New entity in IFC2x2 IFC4 CHANGE Supertype changed from [[IfcFastenerType]] to [[IfcElementComponentType]]. Attributes PredefinedType , NominalDiameter, NominalLength added. Classification Use Definition Mechanical fasteners, especially bolts, are often standardized. To refer to a formal fastener designation according to a standard a product norm , [[IfcRelAssociatesClassification]] together with [[IfcClassificationReference]] should be used. [[IfcClassificationReference]].Identification contains a machine readable form of the formal fastener designation from the norm. Example M16X80 10.9 HV for a high strength structural bolting assembly for preloading with hexagon bolt and nut. On the other hand, [[IfcMechanicalFastenerType]].Name contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the fastener norm. Example EN 14399 4 as the respective European standard for high strength hexagon bolts. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource , including information like publisher and date of issue of the norm. Furthermore, [[IfcRelAssociatesLibrary]] together with [[IfcLibraryReference]] may be used to refer to a library which contains fastener definitions. bSI Documentation"
-
-#:IFC.xml:38652
-msgid "IfcMechanicalFastenerType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38657
-msgid "IfcMechanicalFastenerType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
-msgstr "ファスナータイプの断面積サイズを記述する公称直径。"
-
-#:IFC.xml:38662
-msgid "IfcMechanicalFastenerType_NominalLength"
-msgstr "公称長さ"
-
-msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
-msgstr "ファスナータイプの縦方向寸法を示す公称長さ。"
-
-#:IFC.xml:38681
-msgid "IfcMechanicalFastenerTypeEnum"
-msgstr "IfcMechanicalFastenerTypeEnum"
-
-msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
-msgstr "この列挙は、さまざまなタイプのメカニカルファスナーを定義します。 HISTORYIFC4の新しい列挙。"
-
-#:IFC.xml:38704
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
-msgstr "COUPLER"
-
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
-msgstr "COUPLER"
-
-#:IFC.xml:38701
-msgid "IfcMechanicalFastenerTypeEnum_BOLT"
-msgstr "BOLT"
-
-msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
-msgstr "ねじ込み式円筒型の棒は、同じようにナットやその他の部分に糸状の穴を開け、ファスナーを形成します。 機械式ファスナーには、多くの場合、1つ以上の洗濯機と1つ以上のナッツが含まれています。"
-
-#:IFC.xml:38709
-msgid "IfcMechanicalFastenerTypeEnum_ROPE"
-msgstr "ROPE"
-
-msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
-msgstr "主に船舶の係留に使われる麻、シサル、ナイロン、または同様の材料の鎖をひねり合わせて作られた太い強い紐の長さ。"
-
-#:IFC.xml:39164
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
-msgstr "RAILJOINT"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
-msgstr "例えば、2つのレールを結合する魚皿を持つ機械的なアセンブリは、オプションの機能絶縁または拡張容量で終了します。"
-
-#:IFC.xml:38703
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
-msgstr "チェーン"
-
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
-msgstr "一連のリンクされた金属のリングは何かの固定や固定や荷重の為に使われます"
-
-#:IFC.xml:38712
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
-msgstr "ShearConnector"
-
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
-msgstr "接続された部品の中のリングキーウェイまたは接続された部品に押し込まれた歯型の円形または正方形のコネクタによって受け入れられるリングコネクタ。"
-
-#:IFC.xml:38706
-msgid "IfcMechanicalFastenerTypeEnum_NAIL"
-msgstr "ネイール型"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
-msgstr "ファスナーとして材料に打ち込まれた、尖った薄い金属片。"
-
-#:IFC.xml:38697
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
-msgstr "アンカーボタン"
-
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
-msgstr "コンクリート、石、またはレンガに固定されている特別なボルト。"
-
-#:IFC.xml:38714
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
-msgstr "スタッドシェアーコネクター："
-
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
-msgstr "スタッドせん断コネクタは、片側にヘッドを備えた円筒状の固定部品です。 反対側では、彼らは複合鋼とコンクリート構造で使用するために鋼部材に溶接されています。"
-
-#:IFC.xml:38705
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
-msgstr "DOWEL"
-
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
-msgstr "接続された部分の穴に駆動される円筒状の棒。"
-
-#:IFC.xml:38708
-msgid "IfcMechanicalFastenerTypeEnum_RIVET"
-msgstr "RIVET"
-
-msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
-msgstr "片方の端に頭を持つ固定部と、片方の端が一緒に固定されている部分に穴を通過した後、平らに打たれる。"
-
-#:IFC.xml:38711
-msgid "IfcMechanicalFastenerTypeEnum_SCREW"
-msgstr "SCREW"
-
-msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
-msgstr "テーパー付きの糸くずと切り取られた頭を備えた留め具。"
-
-#:IFC.xml:38707
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
-msgstr "<unk>"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
-msgstr "接続された部品と重なり、その材料に押し込まれるパンチポイント付きの板金。"
-
-#:IFC.xml:38713
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
-msgstr "スタイル"
-
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
-msgstr "ファスナーとして材料に打ち込まれた、二重に尖った金属片。"
-
-#:IFC.xml:39178
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
-msgstr "RAILFASTENING"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
-msgstr "支持構造にレールを固定し、必要な垂直方向に任意の位置を保持する部品のアセンブリ。 横方向と縦方向の動きです EN 13481 のノート定義 1."
-
-#:IFC.xml:38715
-msgid "IfcVibrationDamper"
-msgstr "IfcVibrationDamper"
-
-msgid "IfcVibrationDamper_DEFINITION"
-msgstr "振動ダンパーは、運動エネルギーを放散することにより、構造物の振動の影響を最小限に抑えるために使用される装置です。 ダンパーは、センサとアクチュエータを使用したシステムでは、受動的な弾性、摩擦、慣性、またはアクティブである可能性があります。bSI Documentation"
-
-#:IFC.xml:38726
-msgid "IfcVibrationDamper_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVibrationDamper_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38738
-msgid "IfcVibrationDamperType"
-msgstr "IfcVibrationDamperType"
-
-msgid "IfcVibrationDamperType_DEFINITION"
-msgstr "bSI ドキュメント"
-
-#:IFC.xml:38745
-msgid "IfcVibrationDamperType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVibrationDamperType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:38757
-msgid "IfcVibrationDamperTypeEnum"
-msgstr "IfcVibrationDamperTypeEnum"
-
-msgid "IfcVibrationDamperTypeEnum_DEFINITION"
-msgstr "このコンテナは、[[IfcImpactProtectionDevice]] または [[IfcImpactProtectionDeviceType]] を指定できる振動ダンパーを定義します。bSI Documentation"
-
-#:IFC.xml:38767
-msgid "IfcVibrationDamperTypeEnum_FRICTION"
-msgstr "フリクション"
-
-msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
-msgstr "摩擦タイプは、材料の接触面に作用する摩擦を利用したダンパーです。"
-
-#:IFC.xml:38766
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
-msgstr "曲げているYIELD"
-
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
-msgstr "鋼材のプラスチック変形を利用して、生成される抵抗力をプラスチックひずみ量で決める変位依存型ダンパー。 曲げ歩留まりタイプはダンパーで、曲げによって鋼材を生産します。"
-
-#:IFC.xml:38768
-msgid "IfcVibrationDamperTypeEnum_RUBBER"
-msgstr "RUBER"
-
-msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
-msgstr "ゴム型は、積層ゴムの変形を利用してエネルギーを吸収するダンパーです。 免震軸受とゴム式ダンパーの違いは、上部構造物の重量を支えるかどうかである。 ゴムダンパーは、上部構造の重量をサブ構造に送信しません。"
-
-#:IFC.xml:38769
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
-msgstr "シェアールYIELD"
-
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
-msgstr "鋼材のプラスチック変形を利用して、生成される抵抗力をプラスチックひずみ量で決める変位依存型ダンパー。 せん断収率タイプは、鋼材がメンバーに垂直方向に変形するために生じるダンパーです。"
-
-#:IFC.xml:38770
-msgid "IfcVibrationDamperTypeEnum_VISCOUS"
-msgstr "VISCOUS"
-
-msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
-msgstr "粘性タイプは粘性体の抵抗を利用してエネルギーを吸収するダンパーです。"
-
-#:IFC.xml:38765
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
-msgstr "軸 YIELD"
-
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
-msgstr "鋼材のプラスチック変形を利用して、生成される抵抗力をプラスチックひずみ量で決める変位依存型ダンパー。 軸降伏タイプは、鋼材を軸方向の変形に対して吸収することによってエネルギーを得るダンパーです。 拡大縮小の方向です"
-
-#:IFC.xml:38786
-msgid "Pset_DiscreteAccessoryColumnShoe"
-msgstr "Pset DiscreteAccessoryColumnShoe"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
-msgstr "列シューズに共通する形状プロパティ。bSI Documentation"
-
-#:IFC.xml:38787
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth"
-msgstr "ColumnShoeBasePlateDepth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateDepth_DEFINITION"
-msgstr "列の靴のベースプレートの深さ。"
-
-#:IFC.xml:38792
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness"
-msgstr "ColumnShoeBasePlateThickness"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateThickness_DEFINITION"
-msgstr "列の靴のベースプレートの厚さ。"
-
-#:IFC.xml:38797
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth"
-msgstr "ColumnSheeBasePlateWidth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeBasePlateWidth_DEFINITION"
-msgstr "列の靴のベースプレートの幅。"
-
-#:IFC.xml:38802
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth"
-msgstr "ColumnShoeCasingDepth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingDepth_DEFINITION"
-msgstr "列の靴の深さ。"
-
-#:IFC.xml:38807
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight"
-msgstr "ColumnShoeCasingHeight"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingHeight_DEFINITION"
-msgstr "列の靴の高さ。"
-
-#:IFC.xml:38812
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth"
-msgstr "ColumnShoeCasingWidth"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_ColumnShoeCasingWidth_DEFINITION"
-msgstr "列の靴ケースの幅。"
-
-#:IFC.xml:38996
-msgid "Pset_ElementComponentCommon"
-msgstr "Pset ElementComponentCommon"
-
-msgid "Pset_ElementComponentCommon_DEFINITION"
-msgstr "コンポーネント要素、特にディスクリートアクセサリの一般的な特性のセットだけでなく、ファスナー、補強要素、またはその他のタイプのコンポーネント . bSI Documentation"
-
-#:IFC.xml:38997
-msgid "Pset_ElementComponentCommon_CorrosionTreatment"
-msgstr "腐食治療"
-
-msgid "Pset_ElementComponentCommon_CorrosionTreatment_DEFINITION"
-msgstr "金属部品の腐食処理を決定します。 この特性は、ワークショップの設計処理機能ではなく、材料仕様とbと単なる要求声明として要件を表明する必要がある場合に提供されます。"
-
-#:IFC.xml:39002
-msgid "Pset_ElementComponentCommon_DeliveryType"
-msgstr "配送タイプ"
-
-msgid "Pset_ElementComponentCommon_DeliveryType_DEFINITION"
-msgstr "アクセサリをサイトにどのように配信するかを決定します。"
-
-#:IFC.xml:39007
-msgid "Pset_ElementComponentCommon_Reference"
-msgstr "参照"
-
-msgid "Pset_ElementComponentCommon_Reference_DEFINITION"
-msgstr "このプロジェクトで指定されたタイプの参照ID。例えば、タイプ A 1 、または建設タイプとも呼ばれます。 ソフトウェアがオブジェクト型をサポートしていない場合は、オブジェクト型の名前の代替として提供する必要があります。"
-
-#:IFC.xml:39012
-msgid "Pset_ElementComponentCommon_Status"
-msgstr "ステータス"
-
-msgid "Pset_ElementComponentCommon_Status_DEFINITION"
-msgstr "要素の状態, 主にリノベーションや改造プロジェクトで使用されます. ステータスは、新しい追加として設計された新規要素として割り当てることができます。既存の要素が存在し、残ります。 解体要素は存在しましたが、解体される予定です。一時的な要素は一時的な支持構造のようにしか存在しません。"
-
-#:IFC.xml:39018
-msgid "Pset_FastenerWeld"
-msgstr "Pset FastenerWeld"
-
-msgid "Pset_FastenerWeld_DEFINITION"
-msgstr "溶接接接続に関連するプロパティ。bSI Documentation"
-
-#:IFC.xml:39019
-msgid "Pset_FastenerWeld_a"
-msgstr "a"
-
-msgid "Pset_FastenerWeld_a_DEFINITION"
-msgstr "ISO 2553に準拠して測定してください"
-
-#:IFC.xml:39024
-msgid "Pset_FastenerWeld_c"
-msgstr "c"
-
-msgid "Pset_FastenerWeld_c_DEFINITION"
-msgstr "ISO 2553に準拠したcの測定"
-
-#:IFC.xml:39029
-msgid "Pset_FastenerWeld_d"
-msgstr "d"
-
-msgid "Pset_FastenerWeld_d_DEFINITION"
-msgstr "ISO 2553に準拠したdの測定"
-
-#:IFC.xml:39034
-msgid "Pset_FastenerWeld_e"
-msgstr "e"
-
-msgid "Pset_FastenerWeld_e_DEFINITION"
-msgstr "ISO 2553に準拠した測定"
-
-#:IFC.xml:39039
-msgid "Pset_FastenerWeld_Intermittent"
-msgstr "間欠的な"
-
-msgid "Pset_FastenerWeld_Intermittent_DEFINITION"
-msgstr "フィレットを溶接した場合、断続的かどうか"
-
-#:IFC.xml:39044
-msgid "Pset_FastenerWeld_l"
-msgstr "l"
-
-msgid "Pset_FastenerWeld_l_DEFINITION"
-msgstr "ISO 2553に準拠した測定l"
-
-#:IFC.xml:39049
-msgid "Pset_FastenerWeld_n"
-msgstr "n"
-
-msgid "Pset_FastenerWeld_n_DEFINITION"
-msgstr "ISO 2553に準拠した n をカウント"
-
-#:IFC.xml:39054
-msgid "Pset_FastenerWeld_Process"
-msgstr "プロセス"
-
-msgid "Pset_FastenerWeld_Process_DEFINITION"
-msgstr "ISO 4063に準拠した溶接プロセスの参照番号、最大3桁のロングコード"
-
-#:IFC.xml:39059
-msgid "Pset_FastenerWeld_ProcessName"
-msgstr "プロセス名"
-
-msgid "Pset_FastenerWeld_ProcessName_DEFINITION"
-msgstr "溶接プロセスの名前。数値のformat@@0プロパティに代替します。"
-
-#:IFC.xml:39064
-msgid "Pset_FastenerWeld_s"
-msgstr "s"
-
-msgid "Pset_FastenerWeld_s_DEFINITION"
-msgstr "ISO 2553に準拠した測定"
-
-#:IFC.xml:39069
-msgid "Pset_FastenerWeld_Staggered"
-msgstr "気絶中"
-
-msgid "Pset_FastenerWeld_Staggered_DEFINITION"
-msgstr "断続的に溶接された場合、ずれているかどうか"
-
-#:IFC.xml:39074
-msgid "Pset_FastenerWeld_Surface1"
-msgstr "Surface1"
-
-msgid "Pset_FastenerWeld_Surface1_DEFINITION"
-msgstr "溶接シーム表面のアスペクト、すなわち平面、曲線または中空。 組み合わせ溶接は、Type1とType2に類似した2つの対応するシンボルによって与えられます。"
-
-#:IFC.xml:39079
-msgid "Pset_FastenerWeld_Surface2"
-msgstr "Surface2"
-
-msgid "Pset_FastenerWeld_Surface2_DEFINITION"
-msgstr "Surface1を参照してください。"
-
-#:IFC.xml:39084
-msgid "Pset_FastenerWeld_Type1"
-msgstr "Type1"
-
-msgid "Pset_FastenerWeld_Type1_DEFINITION"
-msgstr "ISO 2553に従った溶接継ぎの種類。 結合された溶接は、座標系の通常軸の方向に2つの対応するシンボルによって与えられます。 例えば、X溶接はType1 VとType2 Vで指定されます。"
-
-#:IFC.xml:39089
-msgid "Pset_FastenerWeld_Type2"
-msgstr "Type2"
-
-msgid "Pset_FastenerWeld_Type2_DEFINITION"
-msgstr "Type1を参照のこと。"
-
-#:IFC.xml:39094
-msgid "Pset_FastenerWeld_z"
-msgstr "z"
-
-msgid "Pset_FastenerWeld_z_DEFINITION"
-msgstr "ISO 2553に準拠したz を測定"
-
-#:IFC.xml:39100
-msgid "Pset_MechanicalFastenerAnchorBolt"
-msgstr "Pset MechanicalFastenerAnchorBolt"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
-msgstr "異なる種類のアンカーボルトに共通するプロパティ bSI Documentation"
-
-#:IFC.xml:39101
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter"
-msgstr "AnchorBoltDiameter"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltDiameter_DEFINITION"
-msgstr "アンカーボルト棒s の公称直径。"
-
-#:IFC.xml:39106
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength"
-msgstr "アンカーBoltLength"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltLength_DEFINITION"
-msgstr "アンカーボルトの長さ。"
-
-#:IFC.xml:39111
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength"
-msgstr "AnchorBoltProtrusionLength"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltProtrusionLength_DEFINITION"
-msgstr "アンカーボルトの突出部の長さ。"
-
-#:IFC.xml:39116
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength"
-msgstr "アンカーBoltThreadLength"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_AnchorBoltThreadLength_DEFINITION"
-msgstr "アンカーボルトのねじ部分の長さ。"
-
-#:IFC.xml:39122
-msgid "Pset_MechanicalFastenerBolt"
-msgstr "Pset MechanicalFastenerBolt"
-
-msgid "Pset_MechanicalFastenerBolt_DEFINITION"
-msgstr "ボルト型の留め具に関連するプロパティ ボルト、ワッシャー、ナットを備えたセット全体の特性を提供することができます。 通常、標準化されたボルトの場合、これらのプロパティを送信する必要はありません。代わりに、標準は参照されます。bSI Documentation"
-
-#:IFC.xml:39123
-msgid "Pset_MechanicalFastenerBolt_HeadShape"
-msgstr "ヘッド形状"
-
-msgid "Pset_MechanicalFastenerBolt_HeadShape_DEFINITION"
-msgstr "Hexagon, Countersunk, Cheese"
-
-#:IFC.xml:39128
-msgid "Pset_MechanicalFastenerBolt_KeyShape"
-msgstr "キー形状"
-
-msgid "Pset_MechanicalFastenerBolt_KeyShape_DEFINITION"
-msgstr "該当する場合は、ヘッドsスロットの形状（スロット、アレンなど）"
-
-#:IFC.xml:39133
-msgid "Pset_MechanicalFastenerBolt_NutsCount"
-msgstr "NutsCount"
-
-msgid "Pset_MechanicalFastenerBolt_NutsCount_DEFINITION"
-msgstr "ボルトに取り付けるナット数"
-
-#:IFC.xml:39138
-msgid "Pset_MechanicalFastenerBolt_NutShape"
-msgstr "NutShape"
-
-msgid "Pset_MechanicalFastenerBolt_NutShape_DEFINITION"
-msgstr "ナットの形、例えばヘキサゴン、キャップ 、城"
-
-#:IFC.xml:39143
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter"
-msgstr "ThreadDiameter"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadDiameter_DEFINITION"
-msgstr "ねじの公称直径 (ボルトs s 全体公称径と異なる場合)"
-
-#:IFC.xml:39148
-msgid "Pset_MechanicalFastenerBolt_ThreadLength"
-msgstr "スレッドの長さ"
-
-msgid "Pset_MechanicalFastenerBolt_ThreadLength_DEFINITION"
-msgstr "スレッドの公称長さ"
-
-#:IFC.xml:39153
-msgid "Pset_MechanicalFastenerBolt_WashersCount"
-msgstr "WashersCount"
-
-msgid "Pset_MechanicalFastenerBolt_WashersCount_DEFINITION"
-msgstr "1つのボルトに取り付けるワッシャー数"
-
-#:IFC.xml:39158
-msgid "Pset_MechanicalFastenerBolt_WasherShape"
-msgstr "ワッシャー形状"
-
-msgid "Pset_MechanicalFastenerBolt_WasherShape_DEFINITION"
-msgstr "洗濯機の形状、例: Standard , Square"
-
-#:IFC.xml:39196
-msgid "IfcImpactProtectionDevice"
-msgstr "IfcImpactProtectionDevice"
-
-msgid "IfcImpactProtectionDevice_DEFINITION"
-msgstr "衝撃保護装置は、運動損傷から他の構築された要素を保護するために使用されるコンポーネントです。 衝撃保護装置は現在3種類あります 運動エネルギーを散逸させることで構造物の振動の影響を最小化するために使用される振動ダンパー。 ダンパーは、センサおよびアクチュエータを使用してシステム内で受動弾性、摩擦、慣性またはアクティブである可能性があります。 振動アイソレータは、構造内の振動変換の影響を最小限に抑えるために使用されるデバイスです。 変形または弾性力学によって車両などの影響要素から運動エネルギーを放散する衝撃装置。"
-
-#:IFC.xml:39197
-msgid "IfcImpactProtectionDevice_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcImpactProtectionDevice_PredefinedType_DEFINITION"
-msgstr "モデリングされているインパクトデバイスの定義済みタイプを特定します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 注 PredefinedType は、[[IfcImpactProtectionDeviceType]] が割り当てられていない場合にのみ使用されるものとし、独自の [[IfcImpactProtectionDeviceType]] .PredefinedType を提供する。"
-
-#:IFC.xml:39216
-msgid "IfcImpactProtectionDeviceType"
-msgstr "IfcImpactProtectionDeviceType"
-
-msgid "IfcImpactProtectionDeviceType_DEFINITION"
-msgstr "[[IfcImpactProtectionDeviceType]] は、[[IfcImpactProtectionDevice]] 発生の型情報を提供します。 衝撃保護装置は、運動損傷から他の構築された要素を保護するために使用されるコンポーネントです。"
-
-#:IFC.xml:39217
-msgid "IfcImpactProtectionDeviceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcImpactProtectionDeviceType_PredefinedType_DEFINITION"
-msgstr "モデリングされた衝撃装置の事前定義された種類を識別します。"
-
-#:IFC.xml:39236
-msgid "IfcImpactProtectionDeviceTypeEnum"
-msgstr "IfcImpactProtectionDeviceTypeEnum"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DEFINITION"
-msgstr "このコンテナは、[[IfcImpactProtectionDevice]] または [[IfcImpactProtectionDeviceType] ] を指定することができるさまざまな定義済みの動的衝撃プロテクターを定義します。"
-
-#:IFC.xml:40823
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION"
-msgstr "クラッシュシオン"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_CRASHCUSHION_DEFINITION"
-msgstr "注 EN1317 1 2010年道路車両のエネルギー吸収装置の前に設置された1つ以上のハザードの影響の重症度を低減するために 注 剛体の前に設置されたISO6707 1のエネルギー吸収装置の定義は、車両の影響の重症度を低減するために。 衝撃バリア、米国"
-
-#:IFC.xml:40365
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM"
-msgstr "DAMPINGSYSTEM"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_DAMPINGSYSTEM_DEFINITION"
-msgstr "スラブトラックまたはバラストベッド内に挿入されたバラストとトンネル構造のトンネルフロアの上層構造トラックとプレートの間に挿入された弾性要素。 弾性要素の一部には、振動による上層構造と地下構造の間で部分的なデカップリング効果があります。 ヘリカルスプリングとエラストマーブロックまたはエラストマーストリップはどちらもサスペンションシステムとして使用できます。"
-
-#:IFC.xml:38606
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER"
-msgstr "フェンダー"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_FENDER_DEFINITION"
-msgstr "容器の衝撃から保護するために、岸壁に取り付けられたダンパーおよび衝撃パネルで形成された受動的またはアクティブ装置。"
-
-#:IFC.xml:40364
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER"
-msgstr "BUMPER"
-
-msgid "IfcImpactProtectionDeviceTypeEnum_BUMPER_DEFINITION"
-msgstr "バンパーは、トラックの終わりのバッファオブジェクトであり、オーバードライブを防ぎます。 レールやトラックパネルに固定することも、岩、砂などの自然な要素にすることもできます。"
-
-#:IFC.xml:39242
-msgid "Pset_DiscreteAccessoryOccurenceCableArranger"
-msgstr "Pset DiscreteAccessoryOccurenceCableArranger"
-
-#:IFC.xml:39243
-msgid "Pset_BalanceWeightTensioner"
-msgstr "Pset BalanceWeightTensioner"
-
-msgid "Pset_BalanceWeightTensioner_DEFINITION"
-msgstr "自動テンショナーは、バランスウェイトによって導体の一定の張力を確保するために列に取り付けられることが多い。"
-
-#:IFC.xml:39245
-msgid "Pset_HydraulicTensioner"
-msgstr "Pset HydraulicTensioner"
-
-msgid "Pset_HydraulicTensioner_DEFINITION"
-msgstr "自動テンショナーは、油圧によって導体の一定の張力を確保するために列に取り付けられることがよくあります。"
-
-#:IFC.xml:39247
-msgid "Pset_RailJoint"
-msgstr "Pset RailJoint"
-
-msgid "Pset_RailJoint_DEFINITION"
-msgstr "鉄道車両の異なる種類を区別するために使用されるプロパティセット。"
-
-#:IFC.xml:39248
-msgid "Pset_RailJoint_IsInsulated"
-msgstr "絶縁された"
-
-msgid "Pset_RailJoint_IsInsulated_DEFINITION"
-msgstr "絶縁された"
-
-#:IFC.xml:39253
-msgid "Pset_RailJoint_IsTemporary"
-msgstr "IsTemporary"
-
-msgid "Pset_RailJoint_IsTemporary_DEFINITION"
-msgstr "IsTemporary"
-
-#:IFC.xml:39259
-msgid "Pset_RailJoint_Welded"
-msgstr "Pset RailJoint Welded"
-
-msgid "Pset_RailJoint_Welded_DEFINITION"
-msgstr "溶接された鉄道継手の異なる種類を区別するために使用されるプロパティセット。"
-
-#:IFC.xml:39260
-msgid "Pset_RailJoint_Welded_IsInsulated"
-msgstr "絶縁された"
-
-msgid "Pset_RailJoint_Welded_IsInsulated_DEFINITION"
-msgstr "絶縁された"
-
-#:IFC.xml:39265
-msgid "Pset_RailJoint_Welded_IsTemporary"
-msgstr "IsTemporary"
-
-msgid "Pset_RailJoint_Welded_IsTemporary_DEFINITION"
-msgstr "IsTemporary"
-
-#:IFC.xml:39271
-msgid "Pset_SpringTensioner"
-msgstr "Pset SpringTensioner"
-
-msgid "Pset_SpringTensioner_DEFINITION"
-msgstr "自動テンショナーは、バネによって導体やクロススパン登録ケーブルで一定の張力を確保するために列に取り付けられることが多い。"
-
-#:IFC.xml:39273
-msgid "Pset_Railpad"
-msgstr "Pset Railpad"
-
-#:IFC.xml:39275
-msgid "Pset_RailFasteningGeneral"
-msgstr "RailFasteningGeneral"
-
-#:IFC.xml:39276
-msgid "Pset_MechanicalFastener"
-msgstr "Pset MechanicalFastener"
-
-#:IFC.xml:39277
-msgid "Pset_MechanicalFastener_IsInsulated"
-msgstr "絶縁された"
-
-msgid "Pset_MechanicalFastener_IsInsulated_DEFINITION"
-msgstr "絶縁された"
-
-#:IFC.xml:39285
-msgid "IfcImpactProtectionDeviceTypeSelect"
-msgstr "IfcImpactProtectionDeviceTypeSelect"
-
-msgid "IfcImpactProtectionDeviceTypeSelect_DEFINITION"
-msgstr "[[IfcImpactProtectionDevice]] または [[IfcImpactProtectionDeviceType] ] の定義済み型グループのオプションを提供する列挙の選択です。"
+msgid "IfcShell_DEFINITION"
+msgstr "異なる種類のシェルを構成するタイプ。 。 xtDef NOTEの定義 ISO CD 10303 42 1992 このタイプは一緒に収集します。 より複雑なモデルを構築する場合、シェルの特性を持つサブタイプを参照します。 シェルは、領域をバインドするために一般的に使用される固定次元性d 0 1 または 2 の接続されたオブジェクトです。 シェルのドメイン (存在する場合) 範囲を含み、0 <unk> 0 のシェルは単一の頂点からなるグラフで表されます。 頂点には関連するエッジはありません。次元性1のシェルは、次元性1の接続されたグラフで表されます。 次元性のシェル2は、エッジに沿って面を結合することによって構築されたトポロジカル図形です。 そのドメインが存在する場合、接続された方向性のある境界を持つ2マニホールドです。 接続された方向性があり 有限であり 自己が交差していない表面で 閉じられたり開いたりする可能性があります 注記の種類は、ISO 10303 42に定義されているシェルから適応されています。"
 
