@@ -9,852 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcRoad.pot\n"
-"X-Crowdin-File-ID: 80\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
 "PO-Revision-Date: 2021-07-27 16:51\n"
 
-#:IFC.xml:32923
-msgid "IfcKerbType"
-msgstr "IfcKerbType"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcKerbType_DEFINITION"
-msgstr "O [[IfcKerbType]] fornece o tipo de informatação para o elemento [[IfcKerb]]. Uma [[IfcKerb]] é uma fronteira de pedra, concreto ou outro material rígido formado na beirada da carruagem ou pé."
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Uma face avançada é uma especialização de uma superfície de rosto que tem que atender aos requisitos sobre o uso de itens de representação topológica e geométrica específicos para a definição dos rostos, bordas e vértices. Um [[IfcAdvancedFace]] é restrito para ter uma geometria de superfície de tipo [[IfcElementarySurface]], [[IfcSweptSurface]] ou [[IfcBSplineSurface]] , ter uma [[IfcFaceOuterBound]] como o limite da face, com exceção de superfícies fechadas, ter todos os rostos vinculados por [[IfcEdgeLoop]] ou [[IfcVertexLoop]], ter todas as bordas para ter uma geometria da curva de aresta, ter a geometria da curva de aresta restrita a [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]], , ou [[IfcBSplineCurve]] No caso de faces fechadas com superfícies periódicas, como superfícies cilíndricas ou esféricas, as seguintes se aplicam as bordas da superfície fechada, em caso de uma superfície cilíndrica a superfície superior e inferior, consulte a mesma instância de [[IfcVertexPoint]] duas vezes, nenhum [[IfcFaceOuterBound]] é fornecido, ou a [[IfcFaceOuterBound]] é construída usando um [[IfcSeamCurve]] no final periódico da superfície fechada subjacente. no caso de uma superfície cilíndrica em 0. 360. grau. superfície cilíndrica .. .. .. .. .. figura ifcadvancedface 01. Uso de Figura 1 de [[IfcCylindricalSurface]] como superfície subjacente de uma [[IfcAdvancedFace]] Entidade de NOTE adaptada de uma face avançada definida no ISO 10303 511. HISTÓRIA Nova entidade na documentação IFC4 bSI"
 
-#:IFC.xml:32924
-msgid "IfcKerbType_Mountable"
-msgstr "Montável"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "Escolha IfcBooleanB"
 
-msgid "IfcKerbType_Mountable_DEFINITION"
-msgstr "Especifica se o kerb pode ou não ser escalado prontamente por um veículo."
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Retorna a primeira escolha, se for TRUE, caso contrário a segunda escolha. xtDef NOTA de acordo com o ISO CD 10303 42 1992 Esta função retorna uma das duas escolhas, dependendo do valor de um argumento de entrada booleano. As duas opções também são argumentos de entrada. NOTE Função adaptada da escolha booleana definida no ISO10303 42. HISTORY Nova função na IFC2.0"
 
-#:IFC.xml:32936
-msgid "IfcRoad"
-msgstr "Estrada"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcRoad_DEFINITION"
-msgstr "Uma rota construída em terra para permitir viagens de um local para outro, incluindo caminhos de auto-estradas, ruas, ciclo e pés, mas excluindo os caminhos-de-ferro. Como um tipo de instituição, a Estrada fornece o elemento básico na hierarquia da estrutura do projeto para os componentes de um projeto rodoviário, ou seja, qualquer empresa, como design, construção ou manutenção. NOTA: Definição a partir da ISO 6707 1 Caminho principalmente para veículos. NOTA: Definição da Linha PIARC de Comunicação via caminho usando uma base estabilizada que não seja trilhos ou tiras de ar, primordialmente para a utilização de veículos a motor que circulam à sua roda."
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:32939
-msgid "IfcRoad_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "Conjunto IfcConectado"
 
-msgid "IfcRoad_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr "Configuração de NOTA .extDef de acordo com CD ISO 10303 42 1992 A conjunto de face conectado é um conjunto de rostos, de tal forma que o domínio das faces juntamente com suas bordas e vértices limitantes está ligado. NOTE Entidade adaptada da face conectada definida em ISO 10303 42. HISTORY Nova entidade em IFC1.0 .spec head Informal Propositions 1. A união dos domínios das faces e dos seus laços delimitadores deve ser conectada com arte. Documentação bSI"
 
-#:IFC.xml:32951
-msgid "IfcRoadPartTypeEnum"
-msgstr "IfcRoadPartTypeEnum"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "Rostos"
 
-#:IFC.xml:33055
-msgid "IfcRoadPartTypeEnum_ROADSIDEPART"
-msgstr "RODADEPARTO"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "Rostos"
 
-msgid "IfcRoadPartTypeEnum_ROADSIDEPART_DEFINITION"
-msgstr "Um conceito geral para várias partes da estrada, tais como, por exemplo, partes da estrada, podem ser encostas laterais, vales da estrada, declive das costas, matizes das costas, etc."
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-#:IFC.xml:33004
-msgid "IfcRoadPartTypeEnum_BUS_STOP"
-msgstr "PARAR BUS"
+msgid "IfcEdge_DEFINITION"
+msgstr "Um [[IfcEdge]] define dois vértices estando conectados topologicamente. A representação geométrica da conexão entre os dois vértices padrão é uma reta se nenhuma geometria da curva é atribuída usando o subtipo [[IfcEdgeCurve]]. A [[IfcEdge]] pode, portanto, ser usada para trocar arestas retas sem uma geometria associada fornecida por [[IfcLine]] ou por [[IfcPolyline]] pensamento [[IfcEdgeCurve]]. Geometria . A Figura EXAMPLE 1 ilustra um exemplo em que os limites do [[IfcEdge]] são dados pelo EdgeStart e EdgeEnd isso também determina a direção da borda. A localização dentro de um espaço coordenado é determinada pelo tipo [[IfcVertexPoint]] para EdgeStart e EdgeEnd. Como nenhuma geometria vetorial é atribuída, o padrão é uma linha reta que concorda com o sentido da direção. Representação figura 1 da borda. *xtDef NOTE Definição de acordo com CD ISO 10303 42 1992 Uma aresta é a construção topológica correspondente à conexão de dois vértices. Mais resumidamente, poderá significar uma relação lógica entre dois vértices. O domínio de uma aresta, se presente, é um finito, que não se intersecta automaticamente na curva aberta de R M, ou seja, uma multiplicidade de dimensão conectada 1. Os limites de uma borda são dois vértices, que não precisam ser distintos. A borda é orientada escolhendo sua direção transversal para correr do primeiro para o segundo vértice. Se os dois vértices são os mesmos, a aresta é um laço próprio. O domínio da aresta não inclui seus limites, e 0 bônus. Associado a uma aresta pode ser uma curva geométrica para localizar a borda em um espaço de coordenadas, isto é representado pelo subtipo da curva de aresta. A curva deve ser finita e não se cruzando sozinho dentro do domínio da periferia. Uma aresta é um gráfico, então seu gênero multiplicidade M e gráfico G podem ser determinados pelo algoritmo de transversalidade do gráfico. Desde que M E 1, a equação 1 de Euler reduz no caso à imagem. .. .. .. .. .. figura ifcedge math1.gif onde V 1 ou 2, e G e 1 ou 0. Especificamente, a borda topológica que define dados deve satisfazer uma borda com dois vértices da imagem. .. .. .. .. .. figura ifcedge matemática 2.gif os vértices não precisam ser uma imagem distinta.. .. .. .. figura ifcedge matemática. se a equação deve conter a imagem.. .. .. .. .. figura ifcedge matemática 4. se a entidade NOTE for adaptada da aresta definida no ISO 10303 42. HISTÓRIA nova entidade na IFC2. Proposições Informais de cabeça .spec de cabeça 1. A borda tem a dimensão 1. 2. A extensão de uma borda deve ser finita e não zero. Documentação bSI"
 
-msgid "IfcRoadPartTypeEnum_BUS_STOP_DEFINITION"
-msgstr "Parte ateral da estrada para interromper autocarros que lhes permite sair das rotas de trânsito e esperar por períodos curtos."
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-#:IFC.xml:33047
-msgid "IfcRoadPartTypeEnum_HARDSHOULDER"
-msgstr "HARDSHOULDER"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-msgid "IfcRoadPartTypeEnum_HARDSHOULDER_DEFINITION"
-msgstr "Um tipo de Ombro que é superado, que prevê uma utilização segura dos veículos em perigo. NOTE Definição da faixa superfície à ISO 6707 1, adjacente a e anulação de uma transportadora, Destinado a ser utilizado por veículos em caso de dificuldade ou durante a obstrução do carro, rota de emergência, faixa de serviço, EUA ."
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-#:IFC.xml:33007
-msgid "IfcRoadPartTypeEnum_INTERSECTION"
-msgstr "INTERSECÇÃO"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-msgid "IfcRoadPartTypeEnum_INTERSECTION_DEFINITION"
-msgstr "No ponto de série, onde duas ou mais estradas se encontram ou cruzam. As intersecções podem continuar a ser classificadas pelo número de segmentos de estrada, controlos de tráfego e design de triagem."
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-#:IFC.xml:33001
-msgid "IfcRoadPartTypeEnum_PASSINGBAY"
-msgstr "INGBAY"
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Um [[IfcEdgeCurve]] define dois vértices sendo conectados topologicamente, incluindo a representação geométrica da conexão. NOTE A topologia é usada para aparar a geometria da aresta. Não há necessidade de geometricamente aparar a aresta para combinar a topologia. A Figura EXAMPLE 1 ilustra um exemplo em que a geometria de aresta é dada por uma curva ilimitada, aqui [[IfcCircle]]. Os limites são fornecidos pelo EdgeStart e EdgeEnd a direção topológica da [[IfcEdgeCurve]] se opõe à direção da [[IfcCircle]] por SameSense FALSE. Figura 1 Curva da Borda. xtA definição de NOTA de acordo com o CD ISO 10303 42 1992 Uma curva de borda é um subtipo especial de aresta que tem sua geometria totalmente definida. A geometria é definida associando a borda a uma curva que pode ser desvinculada. Como as direções topológicas e geométricas podem ser combatidas, um indicador do mesmo senso é usado para identificar se a borda e as direções de curva concordam ou são opostas. O valor booleano indica se a direção da curva concorda com TRUE ou está na direção oposta ao lado da direção da margem. Qualquer geometria associada aos vértices da borda deve ser consistente com a geometria da aresta. Várias bordas podem fazer referência à mesma curva. NOTE Entidade adaptada da curva de aresta definida em ISO 10303 42. Nova entidade de HISTÓRIA em IFC2x. Especificação de cabeça Proposições Informais 1. O domínio da curva da borda é formalmente definido como sendo o domínio de sua geometria da aresta conforme cortado pelos vértices. Este domínio não inclui os vértices. 2. Uma curva de borda tem uma extensão não finita zero. 3. Uma curva de borda é uma múltipla. 4. Uma curva de aresta está conectada. 5. O início da aresta não é uma parte do domínio de aresta. 6. O limite não é uma parte do domínio edge . 7. Vértice geometria deve ser consistente com geometria vetorial. bSI Documentação"
 
-msgid "IfcRoadPartTypeEnum_PASSINGBAY_DEFINITION"
-msgstr "Uma parte lateral da Estrada que é o alargamento de uma estrada única, de outra forma, onde um veículo pode circular para permitir que outro veículo passe."
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Esquiva Geometria"
 
-#:IFC.xml:32985
-msgid "IfcRoadPartTypeEnum_ROADWAYPLATEAU"
-msgstr "ROADWAYPLATEAU"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Esquiva Geometria"
 
-msgid "IfcRoadPartTypeEnum_ROADWAYPLATEAU_DEFINITION"
-msgstr "Parte ateral da estrada compreendendo as carruagens , ombros e medianos."
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:33054
-msgid "IfcRoadPartTypeEnum_ROADSIDE"
-msgstr "RODADES"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Esta bandeira lógica indica se TRUE ou não FALSE os sentidos da aresta e a curva que define a geometria da borda são os mesmos. O senso de uma aresta é do vértice inicial da borda até o vértice final da aresta do senso de uma curva está na direção de aumentar o parâmetro."
 
-msgid "IfcRoadPartTypeEnum_ROADSIDE_DEFINITION"
-msgstr "Um Roteiro lateral localizado ao longo da Estrada ao lado das bordas externas dos ombros. Um conceito geral que englobe as áreas fora do Roteiro para a Paz não se destinavam a veículos."
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-#:IFC.xml:33040
-msgid "IfcRoadPartTypeEnum_REFUGEISLAND"
-msgstr "REFÚLTIMA"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr "Definição de NOTA .extDef de acordo com CD ISO 10303 42 1992 Um loop de aresta é um loop com extensão não-zero. É um caminho em que os vértices inicial e final são os mesmos. Seu domínio, se presente, é uma curva fechada. Um laço de borda pode se sobrepor a si mesmo. NOTE Entidade adaptada do loop de aresta definido em ISO 10303 42. HISTÓRIA Nova entidade em IFC2x2. Especc head Informal Propositions 1. O gênero da [[IfcEdgeLoop]] deve ser 1 ou maior. 2. A fórmula do Euler deve ser um número satisfatório de vértices número de bordas 1 3. Nenhuma aresta pode ser referenciada mais de uma vez pelo mesmo [[IfcEdgeLoop]] com o mesmo sentido. Para este efeito, uma aresta que não é uma aresta orientada é considerada como sendo referenciada com o sentido da documentação TRUE. bSI"
 
-msgid "IfcRoadPartTypeEnum_REFUGEISLAND_DEFINITION"
-msgstr "Uma plataforma elevada ou uma área protegida tão localizada na forma de transporte que divida os fluxos de tráfego e proporcione uma área de segurança para os peões."
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Lista"
 
-#:IFC.xml:32977
-msgid "IfcRoadPartTypeEnum_TOLLPLAZA"
-msgstr "TOLLPLAZA"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Lista"
 
-msgid "IfcRoadPartTypeEnum_TOLLPLAZA_DEFINITION"
-msgstr "Uma parte das instalações rodoviárias onde as portagens são cobradas para utilização de portagens, túneis ou ponte."
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "Não"
 
-#:IFC.xml:33026
-msgid "IfcRoadPartTypeEnum_CENTRALRESERVE"
-msgstr "CENTRALRESERVE"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "O número de elementos na lista de arestas."
 
-msgid "IfcRoadPartTypeEnum_CENTRALRESERVE_DEFINITION"
-msgstr "Estrada Lateral Partida separando duas carruagens da mesma estrada ou separando trilhas de trânsito e calçada. NOTA: Definição da área ISO 6707 1 que separa as carruagens de uma estrada com vias de transporte duplas, a reserva central dos EUA e do Reino Unido."
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "IfcFace"
 
-#:IFC.xml:33053
-msgid "IfcRoadPartTypeEnum_SIDEWALK"
-msgstr "SIDEWALK"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-msgid "IfcRoadPartTypeEnum_SIDEWALK_DEFINITION"
-msgstr "Um caminho ao lado de uma estrada. Pode acomodar mudanças moderadas na elevação de grau e normalmente é separado da seção do veículo por uma kerb. Pode haver uma reserva central ou um limite de estrada entre as faixas de passagem e de trânsito. NOTE Definição a partir da ISO 6707 1 porção de uma estrada reservada exclusivamente para peões, Sidewalk, Walkway, US footway ."
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:33010
-msgid "IfcRoadPartTypeEnum_PARKINGBAY"
-msgstr "PARKINGBAY"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-msgid "IfcRoadPartTypeEnum_PARKINGBAY_DEFINITION"
-msgstr "Parte ateral da estrada para veículos de estacionamento. NOTA Definição da Área ISO 6707 1 e geralmente designada e marcada para o estacionamento de um veículo."
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "Limites"
 
-#:IFC.xml:33034
-msgid "IfcRoadPartTypeEnum_RAILWAYCROSSING"
-msgstr "REIVINDICANDO"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Limites"
 
-msgid "IfcRoadPartTypeEnum_RAILWAYCROSSING_DEFINITION"
-msgstr "No grau de cruzamento entre a estrada e a ferrovia."
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "Libra IfcFaceBound"
 
-#:IFC.xml:33043
-msgid "IfcRoadPartTypeEnum_PEDESTRIAN_CROSSING"
-msgstr "FERRAMENTO PEDESTRIANAL"
+msgid "IfcFaceBound_DEFINITION"
+msgstr "Configuração de NOTA .extDef de acordo com CD ISO 10303 42 1992 A vinculado à face é um laço que se destina a ser usado para delimitar uma face. NOTE Entidade adaptada da face vinculada no ISO 10303 42. HISTÓRIA Nova entidade na Documentação IFC1.0 bSI"
 
-msgid "IfcRoadPartTypeEnum_PEDESTRIAN_CROSSING_DEFINITION"
-msgstr "Nível designado para atravessar uma estrada para peões."
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "Vinculado"
 
-#:IFC.xml:33050
-msgid "IfcRoadPartTypeEnum_SOFTSHOULDER"
-msgstr "SOFTSHOULDADE"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Vinculado"
 
-msgid "IfcRoadPartTypeEnum_SOFTSHOULDER_DEFINITION"
-msgstr "Um tipo de Shoulder que não é superado. NOTE Definição de uma faixa ISO 6707 1 ao lado de uma carrinho não destinada a apoiar o tráfego de veículos. NOTE Definição de ombros PIARC não destinada a apoiar o tráfego de veículos."
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "Orientação"
 
-#:IFC.xml:33037
-msgid "IfcRoadPartTypeEnum_BICYCLECROSSING"
-msgstr "BICCLECROSÃO"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Isto indica se TRUE ou não FALAR, o laço tem a mesma sensação quando usado para vincular a face como quando definido primeiro. Se o sentido for FALSE, os sentidos de todas as arestas orientadas para componentes são implicitamente invertidos quando usados na face."
 
-msgid "IfcRoadPartTypeEnum_BICYCLECROSSING_DEFINITION"
-msgstr "Nível designado para atravessar uma estrada para ciclistas."
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-#:IFC.xml:33031
-msgid "IfcRoadPartTypeEnum_CENTRALISLAND"
-msgstr "CENTRALÍSTICA"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr "A definição de NOTE .extDef de acordo com o CD ISO 10303 42 1992 A com rosto exterior vinculado é um subtipo especial de face vinculado que traz a semântica adicional de definir um limite externo na face. Não mais do que um limite de rosto deve ser deste tipo. NOTE Entidade adaptada da face exterior definida no ISO 10303 42. HISTORIA Nova entidade na Documentação IFC1.0 bSI"
 
-msgid "IfcRoadPartTypeEnum_CENTRALISLAND_DEFINITION"
-msgstr "O centro de uma rotatória não planejada para o tráfego, pode ser pintado ou aumentado."
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-#:IFC.xml:33046
-msgid "IfcRoadPartTypeEnum_SHOULDER"
-msgstr "SUPERRO"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "A [[IfcFaceSurface]] define a geometria subjacente da superfície associada ao rosto. NOTE A topologia é usada para aparar a geometria da superfície. Não há necessidade de cortar geometricamente a superfície para corresponder à topologia. xtDef NOTE Definição de acordo com CD ISO 10303 42 1992 A superfície de rosto é um subtipo de face em que a geometria é definida por uma superfície associada. A porção da superfície usada pelo rosto será incorporável no avião como um disco aberto, possivelmente com buracos. No entanto, a união da face com as bordas e vértices dos seus laços delimitantes não precisa ser incorporável no avião. Pode abranger, por exemplo, toda uma esfera ou tormento. Como um rosto e uma superfície geométrica definiram direções normais, um sinalizador BOOLEAN no atributo de orientação é usado para indicar se o normal de superfície concorda com a TRUE ou se se opõe ao FALSE na direção normal. A geometria associada a qualquer componente dos laços do rosto deve ser consistente com a geometria de superfície, no sentido de que os domínios de todos os vértices e curvas de aresta estão contidos na superfície de geometria do rosto. Uma superfície pode ser referenciada por mais de uma superfície facial. NOTE Entidade adaptada da superfície de rosto definida em ISO 10303 42. HISTÓRIA Nova entidade em IFC2x .spec head Informal Propositions 1. O domínio da superfície da face está formalmente definido como o domínio de sua geometria do rosto conforme cortado pelos laços, Este domínio não inclui os laços limitados. 2. Uma superfície de rosto não tem extensão zero finito. 3. Uma superfície de rosto é um múltiplo. 4. Uma superfície de rosto é conectada. 5. Uma superfície de rosto tem gênero de superfície 0. 6. Os laços não fazem parte do domínio de rosto. 7. A geometria do laço deve ser consistente com a geometria do rosto. Isto implica que qualquer curva ou vértice utilizado na definição dos laços que detêm a superfície do rosto deve estar na geometria do rosto. 8. Os laços da face não devem se cruzar. Documentação bSI"
 
-msgid "IfcRoadPartTypeEnum_SHOULDER_DEFINITION"
-msgstr "Uma parte lateral da Estrada adjacente a, e geralmente ao mesmo nível que o Carrilheiro não se destina ao tráfego de veículos, mas pode ser utilizado em caso de emergência. NOTA: Definição da parte ISO 6707 1 de uma auto-estrada ao lado de uma carruagem e aproximadamente no mesmo nível, exclusivo de embankment ou corte slops, Shoulder, US . NOTA: Definição a partir da parte PIARC da estrada entre o carrinho e a vala ou inclinação de corte ou embanamento, que dá apoio lateral à viagem."
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Superfície"
 
-#:IFC.xml:32986
-msgid "IfcRoadPartTypeEnum_TRAFFICLANE"
-msgstr "TRAFFICLANE"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Superfície"
 
-msgid "IfcRoadPartTypeEnum_TRAFFICLANE_DEFINITION"
-msgstr "Parte ateral da viagem de carro designada para o tráfego de veículos com um determinado objectivo. NOTE Definição da faixa de transporte ISO 6707 1 destinada a acomodar uma única linha de veículos em movimento, frequentemente definida por marcas rodoviárias."
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:32982
-msgid "IfcRoadPartTypeEnum_ROADSEGMENT"
-msgstr "ROSGMENTO"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Esta bandeira indica se o sentido da normalidade superficial concorda com TRUE , ou se opõe ao FALSE, o sentido da normalidade topológica até ao rosto."
 
-msgid "IfcRoadPartTypeEnum_ROADSEGMENT_DEFINITION"
-msgstr "Segmento longo e linear de uma estrada, definida por características uniformes, ou como um segmento de transição, por exemplo, o número de faixas que mudam de ."
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-#:IFC.xml:33027
-msgid "IfcRoadPartTypeEnum_ROUNDABOUT"
-msgstr "ROUNDABOUT"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 A loop é uma entidade topológica construída a partir de um único vértice, ou agrupando arestas orientadas para a conexão conectada, ou segmentos lineares começando e terminando no mesmo vértice. Normalmente é usado para ligar uma face deitada em uma superfície. Um laço tem dimensão de 0 ou 1. O domínio de um laço 0 de dimensão é um único ponto. O domínio de um laço de dimensão 1 é uma curva conectada e orientada, mas não precisa ser múltipla. Como o laço é um círculo, a localização de seu ponto de partida é arbitrária. O domínio do loop inclui seus limites, um 0 cesto. Um laço é representado por um vértice único, ou por uma coleção ordenada de arestas orientadas, ou por uma coleção ordenada de pontos. Um laço é um gráfico, então o gênero M e o gráfico G podem ser determinados pelo algoritmo de transversalidade gráfico gráfico. Desde M 1, a equação 1 de Euler reduz neste caso a imagem .. .. .. .. figuras ifcloop matemática.1. se V e E X 7El X 7E forem o número de vértices únicos e bordas orientadas no loop e G l for o gênero do laço. NOTE Entidade adaptada do laço definido no ISO 10303 42. Nova entidade de HISTÓRIA em IFC2x. Especificações de cabeça Proposições Informais 1. Um laço de repetição tem uma extensão finita. 2. Um loop descreve uma curva topológica fechada com vértices de início e fim coincidentes. BSI Documentação"
 
-msgid "IfcRoadPartTypeEnum_ROUNDABOUT_DEFINITION"
-msgstr "Tipo de junção no ano em que os fluxos de tráfego são direcionados em torno de um círculo. NOTE Definição de uma porção de estrada ISO 6707 1 normalmente num conjunto, na qual o tráfego se move numa direção em torno de um elemento central."
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-#:IFC.xml:33000
-msgid "IfcRoadPartTypeEnum_LAYBY"
-msgstr "LAYBY"
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Esta função retorna VERDADEIRA se para as bordas do loop da borda de entrada, o vértice de extremidade de cada aresta é o mesmo que o vértice de início de seu sucessor. Nova função de HISTÓRIA em IFC2x2"
 
-msgid "IfcRoadPartTypeEnum_LAYBY_DEFINITION"
-msgstr "Uma parte lateral da estrada onde os veículos podem desviar-se do fluxo normal de tráfego."
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-#:IFC.xml:32981
-msgid "IfcRoadPartTypeEnum_CARRIAGEWAY"
-msgstr "CARREGAMENTO"
+msgid "IfcOpenShell_DEFINITION"
+msgstr "Configuração de NOTA .extDef de acordo com o CD ISO 10303 42 de 1992 Um shell aberto é uma casca da dimensão 2. Seu domínio, se presente, é um finito, conectado, orientado, 2 variados com limite, mas não é uma superfície fechada. Pode ser considerado um cartucho fechado com um ou mais buracos golpeados nele. O domínio de um cartucho aberto satisfaz 0 l&t1. Um shell aberto é funcionalmente mais geral do que um rosto, porque seu domínio pode ter manipuladores. A concha é definida por uma coleção de rostos, que podem ser rostos orientados. O sentido de cada rosto, depois de ter em conta a orientação, concordará com o normal de concha conforme definido abaixo. A orientação pode ser fornecida diretamente como um atributo BOOLEAN de um rosto orientado. ou ser incumbido de aceitar o TRUE se o membro da concha for um rosto sem o atributo de orientação. As seguintes restrições combinatorial sobre conchas abertas e restrições geométricas sobre seus domínios são concebidas, juntamente com as proposições informais, para garantir que qualquer domínio associado a um casco aberto seja um múltiplo orientável. Cada referência facial deve ser única. Uma concha aberta terá pelo menos uma cara. Uma determinada face pode existir em mais de uma concha aberta. O limite de um casco aberto consiste das bordas referenciadas apenas uma vez pelos laços de rosto de seus rostos, juntamente com todos os seus vértices. O domínio de um shell aberto, se houver, contém todas as bordas e vértices de seus rostos. NOTE Note que isto é ligeiramente diferente da definição de um domínio de face, o que não inclui nenhum de seus limites. Por exemplo, um domínio facial pode excluir um ponto isolado ou segmento de linha. Um domínio open shell pode não ver. Veja o algoritmo para computação abaixo. NOTE Entidade adaptada do shell aberto definido no ISO 10303 42. HISTORY Nova entidade no IFC2x. .spec head Informal Propositions 1. Toda borda deve ser referenciada exatamente duas vezes pelos limites faciais do rosto. 2. Cada aresta orientada deve ser única. 3. Nenhuma aresta deve ser referenciada por mais de dois rostos. 4. faces distintas da concha não se cruzam, mas podem compartilhar bordas ou vértices. 5. Bordas distintas não se cruzam, mas podem compartilhar vértices. 6. Cada referência facial será única. 7. Os laços da concha não devem ser uma mistura de laço poly e outros tipos de laços. Observe que isto é dado, uma vez que apenas o laço de poly é definido como definição de limite de face. 8. O casco fechado deve ser um sábio orientado conectado a 2 variadíssimos códicos. 9. A equação de Euler deve ser satisfeita. Documentação bSI"
 
-msgid "IfcRoadPartTypeEnum_CARRIAGEWAY_DEFINITION"
-msgstr "Parte lateral solitária da estrada construída para tráfego. A transportadora pode conter vários tipos de rotas de trânsito e ficar de lado, bem como ilhas de trânsito, e no caso da via de transporte dual, são separados pela reserva central. NOTA: Definição de parte da estrada ISO 6707 1 ou estrada construída para uso pelo tráfego de veículos, incluindo rotas de tráfego auxiliar, lugares de passagem e botação de Caminho Americano."
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-#:IFC.xml:33030
-msgid "IfcRoadPartTypeEnum_TRAFFICISLAND"
-msgstr "LARGURA"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "A [[IfcOrientedEdge]] representa uma [[IfcEdge]] com uma bandeira de orientação aplicada. Ele permite reutilizar o mesmo [[IfcEdge]] quando percorrido exatamente duas vezes, uma vez para frente e uma vez para trás. NOTA: O sentido normal para [[IfcFace]] é determinado exclusivamente pelas bordas. Se todas as bordas do rosto estiverem conectadas no sentido anti-horário, seguindo as direções de arestas, o normal apontará para fora. O normal para o [[IfcFaceSurface]] que representa a geometria desse rosto não tem relevância para isso. A finalidade do [[IfcFaceSurface]]. O atributo ameSense é fornecer informações adicionais para fins de verificação. SameSense TRUE significa que a superfície normal é a mesma, SameSense FALSE significa que estão em direcção oposta. A borda reutilizada com uma representação geométrica como [[IfcEdgeCurve]] define a borda no espaço de coordenadas 3D. Em alguns casos, particularmente ao usar superfícies elementares ou varredas, há o risco de mapeamento impreciso do 3D x, y, z [[IfcEdgeCurve]] nas superfícies adjacentes para determinar os limites dessas superfícies. A CurveOnSuperface opcional define a margem 2D u, v dentro do espaço paramétrico da superfície. Ele pode ser usado para determinar a exatidão do mapeamento do 3D [[IfcEdgeCurve]] nesta superfície. A Figura EXAMPLE 1 ilustra um exemplo em que a CurveOnSurface é fornecida, além da geometria da curva da [[IfcEdgeCurve]]. Figura 1 Curva na representação de uma superfície de uma [[IfcOrientedEdge]]. xtDescobrir NOTA de acordo com CD ISO 10303 42 1992 Uma aresta orientada é uma aresta construída a partir de outra aresta e contém uma bandeira de direção BOOLEAN para indicar se a orientação da aresta construída concorda ou não com a orientação da aresta original. Exceto para talvez a orientação, a borda orientada é equivalente à borda original. Uma prática comum é sistemas de modelagem sólidos é ter uma entidade que represente o uso ou a passagem de uma borda. Esta entidade de uso explicitamente representa o requisito em um múltiplo sólido de que cada borda deve ser atravessada exatamente duas vezes, uma vez em cada direção. A funcionalidade de uso é fornecida pela aresta orientada para subtipo. NOTA: Entidade adaptada à aresta definida no ISO 10303 42. Nova entidade de HISTORY em IFC2.0. .change ifc2x4 IFC4 CHANGE O atributo CurveOnSuperface foi adicionado. bSI Documentação"
 
-msgid "IfcRoadPartTypeEnum_TRAFFICISLAND_DEFINITION"
-msgstr "Uma área central ou subsidiária erguida ou marcada na transportadora, geralmente em um cruzamento de estrada ou cruzamento de nível moldado e colocado de modo a direccionar o movimento do tráfego e a providenciar refúgio para os peões."
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Elemento do Acabamento"
 
-#:IFC.xml:32980
-msgid "IfcRoadTypeEnum"
-msgstr "IfcRoadTypeEnum"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Elemento do Acabamento"
 
-#:IFC.xml:32987
-msgid "IfcRelAssociatesProfileDef"
-msgstr "IfcRelAssociatesProfileDef"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Orientação"
 
-msgid "IfcRelAssociatesProfileDef_DEFINITION"
-msgstr "Associa objetos com um perfil. Em particular, pode ser usado para indicar qual SuperelevationEvent ou WidthEvent foi usado como base para dimensionar um OpenCrossProfile específico."
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, se TRUE a orientação topológica como usada coincide com a orientação do vértice inicial até o vértice final do elemento de areia. Se FALSE, caso contrário."
 
-#:IFC.xml:32988
-msgid "IfcRelAssociatesProfileDef_RelatingProfileDef"
-msgstr "Def"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-msgid "IfcRelAssociatesProfileDef_RelatingProfileDef_DEFINITION"
-msgstr "Def"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "VENDA [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:33013
-msgid "IfcKerb"
-msgstr "IfcKerb"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "EdgeEnd da SELF"
 
-msgid "IfcKerb_DEFINITION"
-msgstr "Uma fronteira de pedra, concreto ou outro material rígido formado à beira da carruagem ou do pé. NOTA: Definição da fronteira ISO 6707 1, geralmente de elevação, na beira de um modo de carro, disco rígido, ombro duro ou pérola, Curb, EUA. NOTE Definição da Unidade PIARC destinada a separar superfícies de diferentes superfícies e fornecer delineamento físico ou CEN de contenção."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "VENDA [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:33014
-msgid "IfcKerb_Mountable"
-msgstr "Montável"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "Caminho"
 
-msgid "IfcKerb_Mountable_DEFINITION"
-msgstr "Especifica se o kerb pode ou não ser escalado prontamente por um veículo."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 A caminho é uma entidade topológica que consiste de uma coleção ordenada de arestas orientadas, que a aresta comece vértice de cada aresta coincida com a extremidade final de seu antecessor. O caminho é ordenado do início da borda inicial da primeira borda orientada para a extremidade da última aresta. O sentido do valor BOOLEAN na borda orientada indica se a direção da borda concorda com a direção do VERDADEIRO ou é a direção oposta ao FALSE. Uma aresta individual só pode ser referenciada uma vez por um caminho individual. Uma aresta pode ser referenciada por vários caminhos. Uma aresta pode existir independentemente de um caminho. NOTE Entidade adaptada ao caminho definido no ISO 10303 42. HISTORY Nova entidade na IFC2. .spec head Propositions Informal 1. Um caminho tem dimensionalidade 1. 2. Um caminho é arcaico conectado. 3. As bordas do caminho não se interceptam exceto em vértices comuns. 4. Um caminho tem uma extensão finita, não nula. BSI Documentação"
 
-#:IFC.xml:33056
-msgid "Pset_BoundedCourseCommon"
-msgstr "Pset rejeitadoCursoComum"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "Lista"
 
-#:IFC.xml:33057
-msgid "Pset_BoundedCourseCommon_SpreadingRate"
-msgstr "Taxa de espingarda"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Lista"
 
-msgid "Pset_BoundedCourseCommon_SpreadingRate_DEFINITION"
-msgstr "A massa global nominal de material por área coberta pelo curso."
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-#:IFC.xml:33063
-msgid "Pset_CourseApplicationConditions"
-msgstr "Condições de Curso Pset"
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Essa função retorna TRUE se todas as arestas do caminho de entrada forem consecutivas. xtObservação de NOTA de acordo com o CD ISO 10303 42 1992 Esta função retorna TRUE se para as bordas do caminho de entrada, o vértice de fim de cada aresta é o mesmo que o vértice de início de seu sucessor. NOTE Função adaptada do caminho para a cauda definida em ISO10303 42. Nova função de HISTÓRIA na IFC2.0"
 
-#:IFC.xml:33064
-msgid "Pset_CourseApplicationConditions_ApplicationTemperature"
-msgstr "Temperatura Aplicativa"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "Pset_CourseApplicationConditions_ApplicationTemperature_DEFINITION"
-msgstr "Indica a temperatura ambiente na qual o curso está aplicado"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr "Definição de NOTA .extDef de acordo com CD ISO 10303 42 1992 Um laço poly é um laço com arestas retas que limitam uma região planar no espaço. Um laço de pola é um laço de gênero 1 onde o laço é representado por uma coleção de coplanares ordenada de pontos que formam os vértices do laço. O laço é composto por segmentos de linha reta, juntando a um ponto na coleção até o ponto de sucesso na coleção. O segmento de fechamento é do último ao primeiro ponto da coleção. A direção do laço está na direção dos segmentos de linha. Um laço poly deve obedecer às seguintes restrições topológicas que o laço tem o gênero de um. a seguinte equação deve ser uma imagem satisfeita... .. .. .. .. figuras ifcpolyloop matemática.1. se a [[IfcPolyLoop]] está sempre fechada e o último segmento é do último [[IfcCartesianPoint]] da lista de polígonos até o primeiro [[IfcCartesianPoint]]. Por conseguinte, o primeiro ponto não será repetido no final da lista, nem fazendo referência ao mesmo caso. nem usando uma instância adicional de [[IfcCartesianPoint]] tendo as coordenadas como primeiro ponto. NOTA: Esta entidade existe principalmente para facilitar a comunicação eficiente de modelos facturados de representação B. NOTE Entidade adaptada do loop poly definido no ISO 10303 42. HISTÓRIA nova entidade no IFC1.0 . [IfcPolyLoop] pec head Propositions Informal 1. All points in the polygon setting the poly loop should be coplanar. 2. O primeiro e último Polígono será diferente por valor."
 
-#:IFC.xml:33069
-msgid "Pset_CourseApplicationConditions_WeatherConditions"
-msgstr "Condições"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polígono"
 
-msgid "Pset_CourseApplicationConditions_WeatherConditions_DEFINITION"
-msgstr "Indica as condições meteorológicas durante a aplicação do curso"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polígono"
 
-#:IFC.xml:33075
-msgid "Pset_CourseCommon"
-msgstr "Pset CursoComum"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "Pset_CourseCommon_DEFINITION"
-msgstr "Propriedades comuns para cursos."
+msgid "IfcSubedge_DEFINITION"
+msgstr "Definição de NOTA .extDef de acordo com o CD ISO 10303 42 1992 A é uma aresta cujo domínio é uma parte conectada do domínio de uma aresta existente. As restrições topológicas em uma borda são as mesmas que em uma borda. NOTE Entidade adaptada da sub-borda definida no ISO 10303 42. HISTÓRIA nova entidade no IFC2x2. Proposições informais de cabeça de pec 1. O domínio da sub-aresta é formalmente definido como o domínio da borda pai, conforme cortado pelo vértice inicial da subborda e do vértice final da submargem. 2. O vértice inicial e o vértice do final estarão dentro da união dos domínios dos vértices da borda pai e do domínio da borda dos pais. Documentação bSI"
 
-#:IFC.xml:33076
-msgid "Pset_CourseCommon_Thickness"
-msgstr "Espessura"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "Parentânea"
 
-msgid "Pset_CourseCommon_Thickness_DEFINITION"
-msgstr "A espessura geral nominal do curso. A informação de tamanho é fornecida em adição à representação da forma e aos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e o tamanho..."
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Parentânea"
 
-#:IFC.xml:33081
-msgid "Pset_CourseCommon_Width"
-msgstr "Width"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "Pset_CourseCommon_Width_DEFINITION"
-msgstr "A largura geral nominal do curso. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e o tamanho..."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 O item de representação topológica é o supertipo para todos os itens topológicos do recurso geométrico. NOTE Entidade adaptada do item de representação topológica definido na ISO 10303 42. HISTÓRIA nova entidade na Documentação IFC1.5 bSI"
 
-#:IFC.xml:33086
-msgid "Pset_CourseCommon_Length"
-msgstr "Comprimento"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "Pset_CourseCommon_Length_DEFINITION"
-msgstr "Comprimento geral nominal do curso. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e o tamanho..."
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 A vertex é a construção topológica correspondente a um ponto. Tem dimensão 0 e extensão 0. O domínio de um vértice, se presente, é um ponto no espaço m dimensional real de R M que é representado pelo subtipo de ponto vrtice . NOTE Entidade adaptada do vértice definido em ISO 10303 42. HISTÓRIA Nova entidade em Proposições informais de cabeça IFC2.0 1. O vértice tem a dimensão 0. Esta é uma propriedade fundamental do vértice. 2. A extensão de um vértice é definida para ser zero. Documentação bSI"
 
-#:IFC.xml:33092
-msgid "Pset_KerbCommon"
-msgstr "Pset KerbCommon"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-#:IFC.xml:33093
-msgid "Pset_KerbCommon_Upstand"
-msgstr "Subir"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 Um loop de vértice é um loop de gênero zero que consiste de um único vértice. Um vértice pode existir independentemente de um vértice de laço. Os dados topológicos devem satisfazer a seguinte restrição imagem.. .. .. .. .. figura ifcvertexloop math1.gif NOTE Entity adaptado a partir do loop vértice definido no ISO 10303 42. HISTORY Nova entidade no IFC2x2. Proposições informais de cabeça de cabeça 1. Um laço de vértice tem dimensão zero e dimensionalidade. 2. O vértice tem gênero 0. Documentação bSI"
 
-msgid "Pset_KerbCommon_Upstand_DEFINITION"
-msgstr "A diferença de altura entre as duas superfícies separadas."
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-#:IFC.xml:33098
-msgid "Pset_KerbCommon_CombinedKerbGutter"
-msgstr "CombinedKerbGutter"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-msgid "Pset_KerbCommon_CombinedKerbGutter_DEFINITION"
-msgstr "Indicar o uso de uma \"kerb\" combinada e uma \"guter\"."
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-#:IFC.xml:33104
-msgid "Pset_KerbStone"
-msgstr "format@@0 Pset KerbStone"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definição de acordo com CD ISO 10303 42 1992 Um ponto do vértice é um vértice que tem sua geometria definida como um ponto. NOTE Entidade adaptada do ponto vértice definido em ISO 10303 42. Nova entidade de HISTÓRIA em IFC2x. Especificação de cabeça Proposições Informais 1. O domínio do vértice é formalmente definido como o domínio de seu vértice. Documentação bSI"
 
-#:IFC.xml:33105
-msgid "Pset_KerbStone_TypeDesignation"
-msgstr "DesignaçãoTipo"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "Vértice-geometria"
 
-msgid "Pset_KerbStone_TypeDesignation_DEFINITION"
-msgstr "Tipo de designador para o elemento. O conteúdo depende dos padrões locais. Ex.: Nariz de tour, Metade de bateria, Dropper , Chamfer etc"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Vértice-geometria"
 
-#:IFC.xml:33110
-msgid "Pset_KerbStone_StoneFinishes"
-msgstr "PedraFinos"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "Pset_KerbStone_StoneFinishes_DEFINITION"
-msgstr "Ex.: Polished , Bush Hammered , Split , Serra , Flamejante"
-
-#:IFC.xml:33115
-msgid "Pset_KerbStone_Height"
-msgstr "Altura"
-
-msgid "Pset_KerbStone_Height_DEFINITION"
-msgstr "A altura do objeto. A informação de tamanho é fornecida em adição à representação da forma e aos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33120
-msgid "Pset_KerbStone_Width"
-msgstr "Width"
-
-msgid "Pset_KerbStone_Width_DEFINITION"
-msgstr "A largura nominal do objeto. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33125
-msgid "Pset_KerbStone_Length"
-msgstr "Comprimento"
-
-msgid "Pset_KerbStone_Length_DEFINITION"
-msgstr "O comprimento do objeto. A informação de tamanho é fornecida juntamente com a representação da forma e os parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33131
-msgid "Pset_MarkingLinesCommon"
-msgstr "Pset MarkingLinesComum"
-
-#:IFC.xml:33132
-msgid "Pset_MarkingLinesCommon_DashedLine"
-msgstr "DashedLine"
-
-msgid "Pset_MarkingLinesCommon_DashedLine_DEFINITION"
-msgstr "Estado se a linha é tracejada ou contínua"
-
-#:IFC.xml:33137
-msgid "Pset_MarkingLinesCommon_DashedLinePattern"
-msgstr "DashedLinePattern"
-
-msgid "Pset_MarkingLinesCommon_DashedLinePattern_DEFINITION"
-msgstr "Indica o padrão para os tipos de linha tracejada, por exemplo, 3"
-
-#:IFC.xml:33142
-msgid "Pset_MarkingLinesCommon_Width"
-msgstr "Width"
-
-msgid "Pset_MarkingLinesCommon_Width_DEFINITION"
-msgstr "A largura nominal para cada linha"
-
-#:IFC.xml:33148
-msgid "Pset_OnSiteCastKerb"
-msgstr "Pset OnSiteCastKerb"
-
-#:IFC.xml:33149
-msgid "Pset_OnSiteCastKerb_Height"
-msgstr "Altura"
-
-msgid "Pset_OnSiteCastKerb_Height_DEFINITION"
-msgstr "A altura do objeto. A informação de tamanho é fornecida em adição à representação da forma e aos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33154
-msgid "Pset_OnSiteCastKerb_Width"
-msgstr "Width"
-
-msgid "Pset_OnSiteCastKerb_Width_DEFINITION"
-msgstr "A largura do objeto. A informação de tamanho é fornecida juntamente com a representação da forma e os parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33160
-msgid "Pset_PavementMillingCommon"
-msgstr "Pset PavementMillingCommon"
-
-#:IFC.xml:33161
-msgid "Pset_PavementMillingCommon_Width"
-msgstr "Width"
-
-msgid "Pset_PavementMillingCommon_Width_DEFINITION"
-msgstr "A largura nominal do moto. A informação de tamanho é fornecida além da representação de forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33166
-msgid "Pset_PavementMillingCommon_Depth"
-msgstr "Profundidade"
-
-msgid "Pset_PavementMillingCommon_Depth_DEFINITION"
-msgstr "A profundidade nominal de turbilhão. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33172
-msgid "Pset_PavementSurfaceCommon"
-msgstr "Pset PavementSurfaceCommon"
-
-#:IFC.xml:33173
-msgid "Pset_PavementSurfaceCommon_PavementRoughness"
-msgstr "Lentidão"
-
-msgid "Pset_PavementSurfaceCommon_PavementRoughness_DEFINITION"
-msgstr "Uma avaliação da condição funcional da superfície de pavimento indicou como um índice de acordo com o IRI do Índice Internacional de Roughness."
-
-#:IFC.xml:33178
-msgid "Pset_PavementSurfaceCommon_PavementTexture"
-msgstr "TexturaPavementTextura"
-
-msgid "Pset_PavementSurfaceCommon_PavementTexture_DEFINITION"
-msgstr "Características da textura da pavimentação média da profundidade do perfil ISO 13473 1 2019"
-
-#:IFC.xml:33184
-msgid "Pset_PlantCommon"
-msgstr "Pset PlantCommon"
-
-#:IFC.xml:33185
-msgid "Pset_PlantCommon_BotanicalName"
-msgstr "BotanicalName"
-
-msgid "Pset_PlantCommon_BotanicalName_DEFINITION"
-msgstr "Nome científico formal em conformidade com o Código Internacional da Nomenclatura para as algas, fungos e plantas ICN"
-
-#:IFC.xml:33190
-msgid "Pset_PlantCommon_LocalName"
-msgstr "Nome"
-
-msgid "Pset_PlantCommon_LocalName_DEFINITION"
-msgstr "O nome local que a planta é conhecida."
-
-#:IFC.xml:33195
-msgid "Pset_PlantCommon_Description"
-msgstr "Descrição:"
-
-msgid "Pset_PlantCommon_Description_DEFINITION"
-msgstr "Descrição:"
-
-#:IFC.xml:33201
-msgid "Pset_PrecastKerbStone"
-msgstr "Pset PrecastKerbStone"
-
-#:IFC.xml:33202
-msgid "Pset_PrecastKerbStone_TypeDesignation"
-msgstr "DesignaçãoTipo"
-
-msgid "Pset_PrecastKerbStone_TypeDesignation_DEFINITION"
-msgstr "Tipo de designador para o elemento. O conteúdo depende dos padrões locais. Ex.: Nariz de tour, Metade de bateria, Dropper , Chamfer etc"
-
-#:IFC.xml:33207
-msgid "Pset_PrecastKerbStone_Height"
-msgstr "Altura"
-
-msgid "Pset_PrecastKerbStone_Height_DEFINITION"
-msgstr "A altura do objeto. A informação de tamanho é fornecida em adição à representação da forma e aos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33212
-msgid "Pset_PrecastKerbStone_Width"
-msgstr "Width"
-
-msgid "Pset_PrecastKerbStone_Width_DEFINITION"
-msgstr "A largura do objeto. A informação de tamanho é fornecida juntamente com a representação da forma e os parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33217
-msgid "Pset_PrecastKerbStone_Length"
-msgstr "Comprimento"
-
-msgid "Pset_PrecastKerbStone_Length_DEFINITION"
-msgstr "O comprimento do objeto. A informação de tamanho é fornecida juntamente com a representação da forma e os parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33223
-msgid "Pset_RadiiKerbStone"
-msgstr "Pset RadiiKerbStone"
-
-#:IFC.xml:33224
-msgid "Pset_RadiiKerbStone_CurveShape"
-msgstr "CurveShape"
-
-msgid "Pset_RadiiKerbStone_CurveShape_DEFINITION"
-msgstr "Forma de acordo com CurveShapeEnum"
-
-#:IFC.xml:33229
-msgid "Pset_RadiiKerbStone_Radius"
-msgstr "Radius"
-
-msgid "Pset_RadiiKerbStone_Radius_DEFINITION"
-msgstr "O raio do objeto. A informação de tamanho é fornecida juntamente com a representação da forma e os parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33235
-msgid "Pset_RoadDesignCriteriaCommon"
-msgstr "Pset RoadDesignCteriaComum"
-
-msgid "Pset_RoadDesignCriteriaCommon_DEFINITION"
-msgstr "Critérios de design de estradas que podem estar ligados às partes do caminho."
-
-#:IFC.xml:33236
-msgid "Pset_RoadDesignCriteriaCommon_RoadDesignClass"
-msgstr "Classe"
-
-msgid "Pset_RoadDesignCriteriaCommon_RoadDesignClass_DEFINITION"
-msgstr "Um designador de classe de design de estradas com conteúdo de acordo com normas locais."
-
-#:IFC.xml:33241
-msgid "Pset_RoadDesignCriteriaCommon_DesignSpeed"
-msgstr "DesignVelocidade"
-
-msgid "Pset_RoadDesignCriteriaCommon_DesignSpeed_DEFINITION"
-msgstr "NOTA definição a partir da Velocidade PIARC selecionada no desenho de uma nova estrada ou na modernização, reforço ou reabilitação de uma seção de estrada existente, para determinar as várias características de design geométrico da forma de carro que permitem que um carro viaje em segurança a essa velocidade, sob condições meteorológicas e de superfície de estrada normais. Note que a velocidade do projeto não é constante, mas pode variar de acordo com as condições da planície de socorro, montanha."
-
-#:IFC.xml:33246
-msgid "Pset_RoadDesignCriteriaCommon_DesignVehicleClass"
-msgstr "Classe de DesignVehicles"
-
-msgid "Pset_RoadDesignCriteriaCommon_DesignVehicleClass_DEFINITION"
-msgstr "Um criador de veículos com conteúdo de acordo com os padrões locais."
-
-#:IFC.xml:33251
-msgid "Pset_RoadDesignCriteriaCommon_DesignTrafficVolume"
-msgstr "Volume"
-
-msgid "Pset_RoadDesignCriteriaCommon_DesignTrafficVolume_DEFINITION"
-msgstr "O volume de tráfego utilizado para fins de planeamento e concepção especifica o número de veículos por dia. Normalmente dado como Tráfego Diário AADT Médio"
-
-#:IFC.xml:33256
-msgid "Pset_RoadDesignCriteriaCommon_NumberOfThroughLanes"
-msgstr "TrilhasNúmeroDeatravés"
-
-msgid "Pset_RoadDesignCriteriaCommon_NumberOfThroughLanes_DEFINITION"
-msgstr "O número total de entre trilhas no segmento. Isso exclui trilhas auxiliares, estacionamento e rotas de giração, rotas de desaceleração de aceleração, faixas de coleta de portagem, ombros etc."
-
-#:IFC.xml:33261
-msgid "Pset_RoadDesignCriteriaCommon_LaneWidth"
-msgstr "LaneWidth"
-
-msgid "Pset_RoadDesignCriteriaCommon_LaneWidth_DEFINITION"
-msgstr "Largura nominal padrão de uma faixa de distância."
-
-#:IFC.xml:33266
-msgid "Pset_RoadDesignCriteriaCommon_Crossfall"
-msgstr "Mira"
-
-msgid "Pset_RoadDesignCriteriaCommon_Crossfall_DEFINITION"
-msgstr "Especifica a cruz nominal como uma medida de proporção inclinada no local do evento."
-
-#:IFC.xml:33272
-msgid "Pset_RoadGuardElement"
-msgstr "Pset RoadGuardElemento"
-
-msgid "Pset_RoadGuardElement_DEFINITION"
-msgstr "Propriedades atribuídas a [[IfcWall]] PARAPET ou [[IfcRailing]] GUARDRAIL."
-
-#:IFC.xml:33273
-msgid "Pset_RoadGuardElement_IsMoveable"
-msgstr "Imovível"
-
-msgid "Pset_RoadGuardElement_IsMoveable_DEFINITION"
-msgstr "Verdadeiro se o elemento é movido."
-
-#:IFC.xml:33278
-msgid "Pset_RoadGuardElement_IsTransition"
-msgstr "Transição"
-
-msgid "Pset_RoadGuardElement_IsTransition_DEFINITION"
-msgstr "Verdadeiro se o elemento é uma transição. Veja a transição de classe."
-
-#:IFC.xml:33283
-msgid "Pset_RoadGuardElement_IsTerminal"
-msgstr "IsTerminal"
-
-msgid "Pset_RoadGuardElement_IsTerminal_DEFINITION"
-msgstr "Verdadeiro se o elemento é um terminal. Veja Terminal de classe."
-
-#:IFC.xml:33288
-msgid "Pset_RoadGuardElement_TerminalType"
-msgstr "Tipo"
-
-msgid "Pset_RoadGuardElement_TerminalType_DEFINITION"
-msgstr "Especifica o tipo de terminal se o IsTerminal é verdadeiro."
-
-#:IFC.xml:33294
-msgid "Pset_RoadMarkingCommon"
-msgstr "Pset RoadMarkingCommon"
-
-#:IFC.xml:33295
-msgid "Pset_RoadMarkingCommon_MaterialColour"
-msgstr "MaterialColour"
-
-msgid "Pset_RoadMarkingCommon_MaterialColour_DEFINITION"
-msgstr "Cor real do material de marcação de estrada"
-
-#:IFC.xml:33299
-msgid "Pset_RoadMarkingCommon_MaterialType"
-msgstr "Tipo"
-
-msgid "Pset_RoadMarkingCommon_MaterialType_DEFINITION"
-msgstr "Tipo de material usado... ex.: tinta, fita, termoplástico, pedra"
-
-#:IFC.xml:33304
-msgid "Pset_RoadMarkingCommon_Structure"
-msgstr "Estrutura"
-
-msgid "Pset_RoadMarkingCommon_Structure_DEFINITION"
-msgstr "Estado se a marcação é estruturada ou não, e qual tipo... por exemplo, Kamflex, Longflex, Dropflex"
-
-#:IFC.xml:33309
-msgid "Pset_RoadMarkingCommon_ApplicationMethod"
-msgstr "Método de Aplicação"
-
-msgid "Pset_RoadMarkingCommon_ApplicationMethod_DEFINITION"
-msgstr "Informe o método de aplicação usado... por exemplo, spray, extruded"
-
-#:IFC.xml:33314
-msgid "Pset_RoadMarkingCommon_DiagramNumber"
-msgstr "Diagrama"
-
-msgid "Pset_RoadMarkingCommon_DiagramNumber_DEFINITION"
-msgstr "Um designador com conteúdo de acordo com padrões locais, por exemplo, M25."
-
-#:IFC.xml:33319
-msgid "Pset_RoadMarkingCommon_MaterialThickness"
-msgstr "Espessura"
-
-msgid "Pset_RoadMarkingCommon_MaterialThickness_DEFINITION"
-msgstr "Espessura nominal do material aplicado"
-
-#:IFC.xml:33325
-msgid "Pset_RoadSymbolsCommon"
-msgstr "Pset RoadSymbolsCommon"
-
-#:IFC.xml:33326
-msgid "Pset_RoadSymbolsCommon_Text"
-msgstr "texto"
-
-msgid "Pset_RoadSymbolsCommon_Text_DEFINITION"
-msgstr "Conteúdo do texto"
-
-#:IFC.xml:33331
-msgid "Pset_RoadSymbolsCommon_Type"
-msgstr "tipo"
-
-msgid "Pset_RoadSymbolsCommon_Type_DEFINITION"
-msgstr "Um designador de símbolo com conteúdo de acordo com padrões locais, por exemplo, BycycleCrossing, RoadStuds , SpeedBump , TransverseBar , BusStop , Chevron , Hatched , KeepClear , BoxJunction , EmergencyExit, Interseção , Junção"
-
-#:IFC.xml:33337
-msgid "Pset_SumpBusterCommon"
-msgstr "Pset SumpBusterCommon"
-
-#:IFC.xml:33338
-msgid "Pset_SumpBusterCommon_Type"
-msgstr "tipo"
-
-msgid "Pset_SumpBusterCommon_Type_DEFINITION"
-msgstr "Designador de sucata de acordo com os padrões locais"
-
-#:IFC.xml:33344
-msgid "Pset_Superelevation"
-msgstr "Pset Superep"
-
-msgid "Pset_Superelevation_DEFINITION"
-msgstr "Especifica as propriedades gerais para um evento da Superelevation."
-
-#:IFC.xml:33345
-msgid "Pset_Superelevation_Superelevation"
-msgstr "Supervisão"
-
-msgid "Pset_Superelevation_Superelevation_DEFINITION"
-msgstr "Especifica a sub-relevância como uma medida de proporção na localização do evento."
-
-#:IFC.xml:33350
-msgid "Pset_Superelevation_Side"
-msgstr "Lado"
-
-msgid "Pset_Superelevation_Side_DEFINITION"
-msgstr "Especifica se a sub-relevância é medida em função da DIREITA ou da ESQUERDA da curva referenciada pela colocação, ou se o mesmo valor for aplicado aos lados do BOTH."
-
-#:IFC.xml:33355
-msgid "Pset_Superelevation_Transition"
-msgstr "Transição"
-
-msgid "Pset_Superelevation_Transition_DEFINITION"
-msgstr "O tipo de transição de superelato do evento anterior para este."
-
-#:IFC.xml:33361
-msgid "Pset_TrafficCalmingDeviceCommon"
-msgstr "Pset TráfegoCalmingDeviceComum"
-
-#:IFC.xml:33362
-msgid "Pset_TrafficCalmingDeviceCommon_Type"
-msgstr "tipo"
-
-msgid "Pset_TrafficCalmingDeviceCommon_Type_DEFINITION"
-msgstr "Designador de dispositivo apaziguador de tráfego de acordo com os padrões locais"
-
-#:IFC.xml:33368
-msgid "Pset_TransitionSectionCommon"
-msgstr "Pset TransitionSeçãoComum"
-
-#:IFC.xml:33369
-msgid "Pset_TransitionSectionCommon_Length"
-msgstr "Comprimento"
-
-msgid "Pset_TransitionSectionCommon_Length_DEFINITION"
-msgstr "O comprimento nominal da seção de transição. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33375
-msgid "Pset_TrenchExcavationCommon"
-msgstr "Pset TrenchExcavationComum"
-
-#:IFC.xml:33376
-msgid "Pset_TrenchExcavationCommon_Width"
-msgstr "Width"
-
-msgid "Pset_TrenchExcavationCommon_Width_DEFINITION"
-msgstr "A largura nominal da escavação de trincha. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33381
-msgid "Pset_TrenchExcavationCommon_Depth"
-msgstr "Profundidade"
-
-msgid "Pset_TrenchExcavationCommon_Depth_DEFINITION"
-msgstr "A profundidade nominal da escavação de trincha. A informação de tamanho é fornecida em adição à representação da forma e aos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
-
-#:IFC.xml:33387
-msgid "Pset_Width"
-msgstr "Pset Width"
-
-msgid "Pset_Width_DEFINITION"
-msgstr "Especifica as propriedades gerais de um evento de largura."
-
-#:IFC.xml:33388
-msgid "Pset_Width_Width"
-msgstr "Width"
-
-msgid "Pset_Width_Width_DEFINITION"
-msgstr "A medida de largura neste local."
-
-#:IFC.xml:33393
-msgid "Pset_Width_Side"
-msgstr "Lado"
-
-msgid "Pset_Width_Side_DEFINITION"
-msgstr "Especifica se a largura é medida para DIREITA ou para a ESQUERDA da curva referenciada pela colocação, ou se o mesmo valor for aplicado aos lados do BOTH."
-
-#:IFC.xml:33398
-msgid "Pset_Width_Transition"
-msgstr "Transição"
-
-msgid "Pset_Width_Transition_DEFINITION"
-msgstr "O tipo de transição de largura usada entre o evento anterior e este evento."
-
-#:IFC.xml:33404
-msgid "PEnum_CurveShapeEnum"
-msgstr "CurveShapeEnum PEnum"
-
-#:IFC.xml:33405
-msgid "PEnum_CurveShapeEnum_INTERNAL"
-msgstr "INTERNO"
-
-msgid "PEnum_CurveShapeEnum_INTERNAL_DEFINITION"
-msgstr "um kerb que está curvando para dentro, quando você fica em frente à kerba. Concave."
-
-#:IFC.xml:33406
-msgid "PEnum_CurveShapeEnum_EXTERNAL"
-msgstr "EXTERNO"
-
-msgid "PEnum_CurveShapeEnum_EXTERNAL_DEFINITION"
-msgstr "Uma barraca que está curvando para fora quando você fica em frente à torba. Convex ."
-
-#:IFC.xml:33408
-msgid "PEnum_SideType"
-msgstr "PEnum SideType"
-
-msgid "PEnum_SideType_DEFINITION"
-msgstr "Especifica um lado em relação a algum objeto de referência, por exemplo, um Alinhamento considerando uma direção positiva explícita ou implícita."
-
-#:IFC.xml:33409
-msgid "PEnum_SideType_LEFT"
-msgstr "ESQUERDA"
-
-msgid "PEnum_SideType_LEFT_DEFINITION"
-msgstr "Lado esquerdo"
-
-#:IFC.xml:33410
-msgid "PEnum_SideType_RIGHT"
-msgstr "DIREITA"
-
-msgid "PEnum_SideType_RIGHT_DEFINITION"
-msgstr "Lado direito"
-
-#:IFC.xml:33411
-msgid "PEnum_SideType_BOTH"
-msgstr "CAIXA"
-
-msgid "PEnum_SideType_BOTH_DEFINITION"
-msgstr "Ambos os lados"
-
-#:IFC.xml:33413
-msgid "PEnum_TransitionSuperelevationType"
-msgstr "PEnum TransitionSuperelevationType"
-
-msgid "PEnum_TransitionSuperelevationType_DEFINITION"
-msgstr "Especifica como a transição deve ocorrer entre o evento anterior e este evento."
-
-#:IFC.xml:33414
-msgid "PEnum_TransitionSuperelevationType_LINEAR"
-msgstr "VINCULAR"
-
-msgid "PEnum_TransitionSuperelevationType_LINEAR_DEFINITION"
-msgstr "Especifica que a transição da sub-relevância entre o evento de sub-relevância anterior e este evento será interpolado linearmente."
-
-#:IFC.xml:33416
-msgid "PEnum_TransitionWidthType"
-msgstr "Tipo de Transição PEnum"
-
-msgid "PEnum_TransitionWidthType_DEFINITION"
-msgstr "Especifica como a transição deve ocorrer entre o evento anterior e este evento."
-
-#:IFC.xml:33417
-msgid "PEnum_TransitionWidthType_CONST"
-msgstr "CONSUMO"
-
-msgid "PEnum_TransitionWidthType_CONST_DEFINITION"
-msgstr "Especifica que a transição da largura entre o evento de largura anterior e este evento será constante e igual à largura previamente especificada, o que significa que a alteração na largura ocorrerá instantaneamente na localização deste evento."
-
-#:IFC.xml:33418
-msgid "PEnum_TransitionWidthType_LINEAR"
-msgstr "VINCULAR"
-
-msgid "PEnum_TransitionWidthType_LINEAR_DEFINITION"
-msgstr "Especifica que a transição da largura entre o evento de largura anterior e este evento será interpolado linearmente, proporcionando uma mudança de largura gradual."
+msgid "IfcShell_DEFINITION"
+msgstr "Um tipo que compreende diferentes tipos de concha. . xtDef NOTE Definição de acordo com CD ISO 10303 42 1992 este tipo coleta juntos, para referência quando construir modelos mais complexos, os subtipos que têm as características de uma concha. Um shell é um objeto conectado de dimensionalidade fixa d 0 1 ou 2, normalmente utilizado para vincular uma região. O domínio de um shell, se estiver presente, inclui os seus limites e 0 de dimensionalidade 0 é representada por um gráfico que consiste de um único vértice. O vértice não terá arestas associadas. Uma casca de dimensionalidade 1 é representada por um gráfico de dimensionalidade conectado 1. Uma concha de dimensionalidade 2 é uma entidade topológica construída juntando faces ao longo das bordas. O seu domínio, se presente, é um domínio interligado, orientável 2 variadíssimos com limites, ou seja, uma superfície conectada, orientada, finita, não auto-cruzada, que pode ser fechada ou aberta. Tipo de NOTA adaptado do shell definido no ISO 10303 42. HISTÓRIO novo tipo no IFC2x."
 
