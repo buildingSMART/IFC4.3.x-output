@@ -9,331 +9,604 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
+"X-Crowdin-File-ID: 98\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2021-07-27 17:47\n"
 
-#:IFC.xml:44118
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:43713
+msgid "IfcBoundaryCondition"
+msgstr "离子边界条件"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 bSI Documentation"
+msgid "IfcBoundaryCondition_DEFINITION"
+msgstr "抽象实体 [[IfcBoundaryCondition]] 是可以应用于结构连接定义的所有边界条件的超级类型。 要么直接用于连接。 - 联合或结构成员之间的关系和联系。 注意到边界条件在其他地方使用， 主要由定义支持的实例[[IfcStructuralConnection]]和定义结构成员与结构连接的实例[[IfcRelConnectsStructuralMember]]。 IFC2x2中的HISTORY 新实体 bSI 文档"
 
-#:IFC.xml:44133
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBoolean选择 B"
+#:IFC.xml:43714
+msgid "IfcBoundaryCondition_Name"
+msgstr "名称"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "返回第一个选择，如果TRUE，则返回第二个选择。 xtDef NotE Definition according to ISO CD 10303 42 1992 This function 返回两个选项之一, 取决于布尔输入参数的值。 这两个选项也是输入参数。IOC2.0 中定义的 ISO10303 42中的布尔值中的注功能。"
+msgid "IfcBoundaryCondition_Name_DEFINITION"
+msgstr "可选定义此边界条件的名称。"
 
-#:IFC.xml:44141
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:43720
+msgid "IfcBoundaryEdgeCondition"
+msgstr "IfcBoundary EdgeCondition"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcBoundaryEdgeCondition_DEFINITION"
+msgstr "描述线性弹性支持条件或连接条件。应用曲线支持和连接。IFC2x2中的新实体。 IFC 2x4 更改属性LinearStiffnessX Y Z 重命名为 TranslationalStiffnessX Y Z 。 hange ifc2x4 IFC4 更改所有属性数据类型从数字转换为在布尔值和数字之间的SELECT。 现在的办法也可能是消极的，例如在边界条件下捕捉破坏稳定的影响。 代表无限僵硬的状态不再有效，不能被使用。无限僵硬，i。 。固定支持现在以布尔值TRUE. bSI 文档为模型"
 
-#:IFC.xml:44146
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+#:IFC.xml:43721
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
+msgstr "TranslationalStiffnessByLengthX"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef Note Definition according in the ISO CD 10303 42 1992. A connected face set a set of face is set that the domain with their bounding edges and vertices is connected. 从ISO10303 42中定义的连接面组改装的注实体，在IFC1.spec头非正式提案1中的HISTORY 新实体。 面部域及其边界循环的结合必须连接。bSI 文档"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 x 方向翻译坚硬值。"
 
-#:IFC.xml:44149
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "切片面"
+#:IFC.xml:43726
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
+msgstr "翻译 StiffnessyLengthY"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "切片面"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 y 方向翻译严格值。"
 
-#:IFC.xml:44161
-msgid "IfcEdge"
-msgstr "切边线"
+#:IFC.xml:43731
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
+msgstr "TranslationalStiffnessByLengthZ"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "一个 [[IfcEdge]] 定义了在顶部连接的两个顶点。 如果没有使用子类型 [[IfcEdgeCurve]] 分配曲线几何形状，则两个顶点之间的连接的几何表示默认为一条直线。 因此，[[IfcEdge]] 可以用来交换直径边缘，而不需要相关的几何形状，由[[IfcLine]] 或 [[IfcPolyline]] 考虑[[IfcEdgeCurve]]。 dgeometry EXAMPLE 图1展示了一个由边缘开始给出[[IfcEdge]]边界的示例，而边缘末端也决定了边缘的方向。 坐标空间内的位置由EdgeStart 和 EdgeEnd 的 [[IfcVertexPoint]] 类型决定。 由于没有分配边缘几何形状，它默认为一条直线同意方向含义。 图1 边缘分布情况 按照ISO CD 10303 42 1992，xtDef 注明定义 边缘是与两个顶点的连接对应的地形构造。 更抽象地说，它可以成为两个顶点之间的逻辑关系。 边缘域（如果存在的话）是一个有限的域， 在 R M 中非自连开打开的曲线，即一个连接的 1 维管。 边缘的界限是两个顶端，无需区分。 通过选择从第一个到第二个顶点运行的横向方向来定向边缘。 如果两个顶点是相同的，边缘是一个自身循环。 边缘域不包括其边界，也不包括0个x。 与边缘相关联的可能是几何曲线，以便在坐标空间中定位边缘，这是由边缘曲线子类型表示的。 曲线必须是有限的，在边缘域内不能自连。 边缘是一个图形，所以其多重性M和图基因G e可能由图横向算法确定。 自M E 1以来，欧勒方程式1减少到图像。 ... ... figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. 具体地说，地缘边缘定义数据必须满足边缘的两个顶端图像。 ... ... ... figures ifcedge math2.g，如果顶点不需要是不同的图像... ... ... ... ... ... ... ... .... figures ifcedge moth3。 如果方程式将保持图像 ... ... ... ... ... .. 数字进化数 如果从ISO 10303 42中定义的边缘改装了注实体，在IFC2中的新实体中。 .spec Head Informal Propositions 1. 边缘具有维度1. 边缘范围必须是有限和非零。bSI 文档"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统的 z方向翻译硬度值。"
 
-#:IFC.xml:44164
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:43736
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
+msgstr "旋转StiffnessByLengthX"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统x轴的旋转硬度值。"
 
-#:IFC.xml:44176
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:43741
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
+msgstr "RotationalStiffnessBylengthY"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统的 y轴旋转硬度值。"
 
-#:IFC.xml:44212
-msgid "IfcEdgeCurve"
-msgstr "IfcEdge曲线"
+#:IFC.xml:43746
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
+msgstr "RotationalStiffnessByLengthZ"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "一个 [[IfcEdgeCurve]] 定义了正在连接的两个顶点地形，包括连接的几何形状。 注意到地形用于修剪边缘的几何形状。没有必要用几何形状来修剪边缘。 EXAMPLE 图1说明了一个由无边界曲线给出边缘几何形状的示例，在这里[[IfcCircle]]。 边界由EdgeStart 和 Edgeend提供， [[IfcEdgeCurve]] 的地形方向反对SameSense FALSE的 [[IfcCircle]] 的方向。 图1 边缘曲线 按照ISO CD 10303 42 1992，xtDef 注解定义。边缘曲线是一种特殊的边缘子类型，它具有完全定义的几何形状。 几何形状的定义是将边缘与可能被解冻的曲线联系起来。 由于地形和几何方向可能受到反对， 一个指示器用同样的意思来确定边缘和曲线方向是一致还是对立。 布尔值表示曲线方向是否与 TRUE 一致或朝着相反方向FALSE 到边缘方向。 与边缘顶点相关联的任何几何形状必须与边缘几何形状保持一致。 多个边可以引用相同的曲线。注意实体是从ISO 10303 42定义的边缘曲线中调整的。 IFC2x.spec首长非正式提议1中的新实体。 边缘曲线的域被正式定义为其边缘几何形状的域。 此域不包括顶点。2. 边缘曲线的无限制程度非零。3. 边缘曲线是多倍的。 4. 一条边缘曲线是顺时针连接的。5. 边缘起点不是边缘域的一部分。 边缘端不是边缘域的一部分。7顶点几何形状应与边缘几何形状一致。bSI 文档"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统z轴的旋转硬度值。"
 
-#:IFC.xml:12010
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometry"
+#:IFC.xml:43753
+msgid "IfcBoundaryFaceCondition"
+msgstr "IfcBoundaryFacebook条件"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "EdgeGeometry"
+msgid "IfcBoundaryFaceCondition_DEFINITION"
+msgstr "描述线性弹性支持条件或连接条件。适用表面支持和连接。IFC2x2中的新实体。 IFC 2x4 更改属性LinearStiffnessX Y Z 重命名为 TranslationalStiffnessX Y Z 。 hange ifc2x4 IFC4 更改所有属性数据类型从数字转换为在布尔值和数字之间的SELECT。 现在的办法也可能是消极的，例如在边界条件下捕捉破坏稳定的影响。 代表无限僵硬的状态不再有效，不能被使用。无限僵硬，i。 。固定支持现在以布尔值TRUE. bSI 文档为模型"
 
-#:IFC.xml:44213
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:43754
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
+msgstr "TranslationalStiffnessByAreaX"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "这个逻辑标志表示边缘和边缘几何曲线是否相同。 边缘的感觉是从边缘起点到边缘终点的顶点，曲线的感觉是朝增加参数的方向发展的。"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 x 方向翻译坚硬值。"
 
-#:IFC.xml:44221
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:43759
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
+msgstr "TranslationalStiffnessByAreaY"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义。边缘循环是一个非零范围的循环。 这是一个起点和终点相同的路径。 它的域名如果存在，是一个封闭的曲线。边缘循环可能会重叠本身。 从 ISO 10303 42中定义的边缘循环中修改的注实体，在IFC2x2..spec头非正式提议1。 [[IfcEdgeLoop]] 的基因必须大于或等于1。 Euler 公式必须满足顶点基因数值1边3。 相同意义上的相同的 [[IfcEdgeLoop]]可能不会多次引用边缘。 为此目的，一个并非导向边缘的边缘被认为是使用 TRUE. bSI 文档来引用。"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 y 方向翻译严格值。"
 
-#:IFC.xml:44237
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "边缘列表"
+#:IFC.xml:43764
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
+msgstr "TranslationalStiffnessByAreaZ"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "边缘列表"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统的 z方向翻译硬度值。"
 
-#:IFC.xml:44230
-msgid "IfcEdgeLoop_Ne"
-msgstr "无"
+#:IFC.xml:43771
+msgid "IfcBoundaryNodeCondition"
+msgstr "Ifc边界节点条件"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "边缘列表中元素的数量。"
+msgid "IfcBoundaryNodeCondition_DEFINITION"
+msgstr "描述线性弹性支持条件或连接条件。适用点支持和连接。IFC2x2中的新实体。 IFC 2x4 更改属性LinearStiffnessX Y Z 重命名为 TranslationalStiffnessX Y Z 。 挂载ifc2x4 IFC4 变异所有属性数据类型都在布尔值和数字之间从数字变异到SELECT。 现在的办法也可能是消极的，例如在边界条件下捕捉破坏稳定的影响。 代表无限僵硬的状态不再有效，不能被使用。无限僵硬，i。 。固定支持现在以布尔值TRUE. bSI 文档为模型"
 
-#:IFC.xml:44249
-msgid "IfcFace"
-msgstr "伊夫克面"
+#:IFC.xml:43772
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
+msgstr "翻译 StiffnessX"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 x 方向翻译坚硬值。"
 
-#:IFC.xml:26129
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:43777
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
+msgstr "TranslationalStiffnessY"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 y 方向翻译严格值。"
 
-#:IFC.xml:44256
-msgid "IfcFace_Bounds"
-msgstr "边框"
+#:IFC.xml:43782
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
+msgstr "TranslationalStiffnessZ"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "边框"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统的 z方向翻译硬度值。"
 
-#:IFC.xml:44268
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:43787
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
+msgstr "旋转状态X"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef Note Definition accordance with ISO CD 10303 42 1992. A face bound is a roop, which is intended to be used to bounding a face. 从 ISO 10303 42中定义的面绑定变换的注实体在 IFC1.0 bSI 文档中的 HISTORY 新实体"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统x轴的旋转硬度值。"
 
-#:IFC.xml:44276
-msgid "IfcFaceBound_Bound"
-msgstr "绑定"
+#:IFC.xml:43792
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
+msgstr "RotationalStiffnessY"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "绑定"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统的 y轴旋转硬度值。"
 
-#:IFC.xml:44269
-msgid "IfcFaceBound_Orientation"
-msgstr "方向"
+#:IFC.xml:43797
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
+msgstr "RotationalStiffnessZ"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "这表示循环是否像第一个定义时一样绑定面部时具有相同的含义。 如果感觉是FALSE，其所有面向组件的边缘的感应在面部使用时会被隐含地逆转。"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
+msgstr "使用此资源对象的实例所定义的坐标系统z轴的旋转硬度值。"
 
-#:IFC.xml:44288
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOterBound"
+#:IFC.xml:43804
+msgid "IfcBoundaryNodeConditionWarping"
+msgstr "IfcBoundaryNodeConditionWarping"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义的注解. 脸部外部绑定是一种特殊的面绑子类型，带有界定面上外部边界的额外语义。 这类面的边界不得超过一种。 从 ISO 10303 42中定义的脸部外部绑定的注实体在 IFC1.0 bSI 文档中定义的 HISTORY 新实体"
+msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
+msgstr "说明线性弹性支持条件或连接条件，包括线性弹性弹着约束。适用点支持和连接。 IFC2x2. 更改ifc2x4 IFC4 变异中的新实体 现在的办法也可能是消极的，例如在边界条件下捕捉破坏稳定的影响。 代表无限僵硬的状态不再有效，不能被使用。无限僵硬，i。 。固定支持现在以布尔值TRUE. bSI 文档为模型"
 
-#:IFC.xml:44291
-msgid "IfcFaceSurface"
-msgstr "IfcFacebook面"
+#:IFC.xml:43805
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
+msgstr "穿甲灵敏度"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "[[IfcFaceSurface]] 定义了相关表面对面的基本几何形状。 注： 地形是用来修剪表面的几何形状的。 没有必要对表面进行几何划分以匹配地形。 按照ISO CD 10303 42 1992，xtDef 注明定义 面表面是一种由相关表面定义的一种亚类表面。 面部使用的部分应可作为一个开放的盘片嵌入平面，可能有孔。 然而，面与其边界线边缘和顶端的结合不一定要植入飞机。 例如，它可能涵盖整个领域或侵权行为。 作为表面和几何表面都确定了正常方向， a BOLEN 标志着方向属性用于表示表面正常同意TRUE或反对FALSE面的正常方向。 与面环任何部件相关联的几何形状应与表面几何形状一致， 即所有顶点和边缘曲线的域名都包含在面部几何表面。 表面可以有一个以上面部作为参照。 IOC2x .pechead Informal Propositions 1中定义的从面表面改装的注实体。 表面的域被正式定义为由循环修剪的其面几何形状的域， 此域不包括边界循环。 2. 表面的范围非零。3. 表面是一个多层。4. 表面是顺角相连的。 5. 表面有表面基因0。 6. 循环不是表面域的一部分。 循环几何体必须与面几何相符合。 这意味着任何边缘曲线或顶点用于确定横穿面表面的循环的顶点都应位于正面几何形状上。 8. 脸部的循环不会交替使用 bSI 文档"
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
+msgstr "定义刻度值。"
 
-#:IFC.xml:13088
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "脸面"
+#:IFC.xml:43812
+msgid "IfcFailureConnectionCondition"
+msgstr "IfcFailureConnectionCondition"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "脸面"
+msgid "IfcFailureConnectionCondition_DEFINITION"
+msgstr "定义支持或连接失败的力量。适用点支持和连接。IFC2x2中的新实体。bSI 文档"
 
-#:IFC.xml:44292
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:43813
+msgid "IfcFailureConnectionCondition_TensionFailureX"
+msgstr "紧张关系失败"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "这个标志表明表面正常的感觉是否同意TRUE , 或反对FALSE , 即表面正常的感觉。"
+msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
+msgstr "X方向的紧张力导致连接失败。"
 
-#:IFC.xml:44300
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:43818
+msgid "IfcFailureConnectionCondition_TensionFailureY"
+msgstr "紧张关系失败"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义。循环是一个用单个顶点构造的地形实体， 或者通过绑定连接的方向边缘，或者从同一顶点开始和结束的线性部分。 它通常被用来捆绑表面上的面部。 循环的维度为0或1。0维循环的域是一个单点。 1维循环的域是一个连接的、面向的曲线，但不需要多倍。 由于循环是一个循环，其起始端点的位置是任意的。 循环的域名包括其边界，一个0x。 循环的代表是一个单一的顶点，或是有序的方向边缘集合，或是有序的积分集合。 一个循环是一个图形，所以M和图基因G l可以由图横向算法决定。 自M1以来，Euler方程式1在这种情况下减少到图像... ... ... .... figures ifcloop math1。 如果五和六×7El 7E是循环中独特顶点和定向边缘的数目，则Gl是循环的基因。 从ISO 10303 42中定义的循环中修改的注实体。 在 IFC2x.spechead Informal Propositions 1. 循环范围有限。2. 循环描述一个封闭的地形曲线，带有相同的起始和终结顶点。bSI 文档"
+msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
+msgstr "Y方向的紧张力量导致连接失败。"
 
-#:IFC.xml:44303
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToail ALoop"
+#:IFC.xml:43823
+msgid "IfcFailureConnectionCondition_TensionFailureZ"
+msgstr "紧张关系失败"
 
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "此函数返回 TRUE，如果输入边循环的边缘，每个边缘的最终顶点与其继承者的起始顶点相同。 IFC2x2 新功能"
+msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
+msgstr "z方向的紧张力量导致连接失败。"
 
-#:IFC.xml:44311
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:43828
+msgid "IfcFailureConnectionCondition_CompressionFailureX"
+msgstr "压缩失败"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义。开放式外壳是尺寸2的外壳。 它的域如果有，是一个有限的、连接的、方向性的、有边界的两个多倍，但不是一个封闭的表面。 它可以被认为是一个封闭的炮弹，内有一个或多个孔弹着。 打开的 shell 域满足了0个零1。 打开的 shell 功能比面更一般，因为它的域可以有句柄。 外壳由一系列面包定义，这些面包可能是定向面。 每个面部的感受，在考虑到方向之后，应同意下面定义的外壳正常。 方向可以直接作为面向面的北非博托属性提供。 或如果shell成员是一个没有方向属性的脸，则默认为TRUE。 设计了以下开放炮弹的组合限制和对其域的几何限制， 与非正式主张一道，确保与开放式外壳相关的任何领域都是一个导向的多方面问题。 每个面参引必须是唯一的。打开的外壳必须至少有一个面。 某面可能存在于一个以上的空壳中。 开口外壳的边界由边缘组成，只能通过面部边界循环引用一次， 这两者的所有字眼。 开口外壳的域，如果存在，则包含其面孔的所有边缘和顶点。 注意到这与表面域的定义略有不同，表面域没有任何界限。 例如，正面域可能排除一个孤立的点或线段。打开的 shell 域可能不能。请参阅下面的计算算法。 从ISO 10303 42中定义的开放式外壳中改装的注实体，在IFC2x.spec首长非正式提议1中的新实体。 每个边缘都必须在面部的边框中被精确地引用两次。 每个面向边缘必须是唯一的，3. 任何边缘不得被超过两个面所引用。 4. 外壳的不同面不能相互交错，但可以共享边缘或顶点。 5. 区分边缘不交叉，但可能共享顶点。 7. 每个面部参考值都必须是唯一的；7. 外壳的循环不应是政治循环和其他循环类型的混合物。 请注意，这是给定的，因为只有Poly循环被定义为面部绑定的定义。 8. 封闭的 shell 必须是一个面向方向的 arcwise 连接 2 manifold. 9. 必须满足Euler 方程式的 bSI 文档"
+msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
+msgstr "x方向的压缩力导致连接失败。"
 
-#:IFC.xml:44315
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:43833
+msgid "IfcFailureConnectionCondition_CompressionFailureY"
+msgstr "压缩失败"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "[[IfcOrientedEdge]] 代表了一个带有方向标志的[[IfcEdge]] 。 它允许在经过两次时重用相同的 [[IfcEdge]] ，一次转发和一次后退。 注意对于[[IfcFace]] 的正常感觉完全是由边缘决定的。 如果面部的所有边缘都按照边缘方向以逆时针的方式连接起来，正常的面部就会向外移动。 代表该面部几何形状的底部[[IfcFaceSurface]]的正常情况与此无关。 [[IfcFaceSurface]]的目的。 ameSense属性是为验证目的提供额外信息。 SameSense TRUE意味着表面正常，面对正常。SameSense FALSE表示他们的方向相反。 以几何表示重新使用的边缘为 [[IfcEdgeCurve]] 定义了3D 坐标空间中的边缘。 在有些情况下，尤其是在使用基本的或横扫的表面时，3Dx有可能绘制不精确的地图。 y，z [[IfcEdgeCurve]]进入邻近表面，以确定这些表面的边界。 可选的 CurveOnSurface 定义了表面参数范围内的 2D u, v 边缘。 它可以用来确定这个表面上3D [[IfcEdgeCurve]]制图的正确性。 EXAMPLE 图1说明了除了[[IfcEdgeCurve]]曲线几何形状之外提供曲线表面的例子。 图1 [[IfcOrientedEdge]] 表面显示曲线. 按照ISO CD 10303 42 1992，xtDef 注解定义 一个面向的边缘是从另一边构造出来的边缘，它包含一个BOOLEA 方向标志，以表明构建边的方向是否同意原边方向的方向。 除了方向也许以外，面向方向的边缘等于原来的边缘。 一种常见的做法是建立一个代表使用或横向边缘的实体的实力建模系统。 这个使用实体明确代表了一个多层固体中的要求，即每个边缘必须经过两次，一次是在每个方向。 使用功能由边缘子类型的边缘提供。注意实体从ISO 10303 42中定义的方向边缘调整。 IFC2.0 中的HISTORY 新实体。.change ifc2x4 IFC4 Add2 Change The attribute CurveOnSurface 已添加。"
+msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
+msgstr "在y方向的压缩力导致连接失败。"
 
-#:IFC.xml:44200
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "边缘元素"
+#:IFC.xml:43838
+msgid "IfcFailureConnectionCondition_CompressionFailureZ"
+msgstr "CompressionFailureZ"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "边缘元素"
+msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
+msgstr "z方向的压缩力导致连接失败。"
 
-#:IFC.xml:44320
-msgid "IfcOrientedEdge_Orientation"
-msgstr "方向"
+#:IFC.xml:43845
+msgid "IfcSlippageConnectionCondition"
+msgstr "IfcSlipageConnectionConnection Condition"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, 如果使用的地形方向与从起始顶点到结束边缘元素的顶点的方向相吻合。否则FALSE"
+msgid "IfcSlippageConnectionCondition_DEFINITION"
+msgstr "描述支持条件或连接条件中的滑块。 Shlipage意味着在支持或连接出现之前可能会发生相对迁移。 应用点支持和连接，曲线支持和连接，表面支持和连接。IFC2x2中的新实体。bSI 文档"
 
-#:IFC.xml:44325
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:43846
+msgid "IfcSlippageConnectionCondition_SlippageX"
+msgstr "幻灯片X"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 x 方向翻转。"
 
-#:IFC.xml:44329
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge 边缘结束"
+#:IFC.xml:43851
+msgid "IfcSlippageConnectionCondition_SlippageY"
+msgstr "SlippageY"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统方向翻转."
 
-#:IFC.xml:44347
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:43856
+msgid "IfcSlippageConnectionCondition_SlippageZ"
+msgstr "SlippageZ"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extdef 按照ISO CD10303 42 1992年说明定义 一条路径是一个由有序排序的边缘组合组成的地形实体， 这样每个边缘的边缘起始顶端正值其前端的边缘端口。 路径是从第一个面向边缘的边缘的边缘开始排序到最后边缘的边缘。 面向边缘中的BOLEA 值表示边缘方向是否同意路径TRUE的方向，或者是FALSE的相反方向。 个别的边缘只能通过单独的路径被引用一次。一个边缘可以被多个路径引用。 边缘可以独立于路径。注意实体可以从ISO1030342中定义的路径中变换。IOC2中的新实体可以存在。 .spec head Informal Propositions 1. A path have dimensionality 1. 2. A path is arcwise connected. 3. 路径的边缘除非在通用的版本，否则不会交错。路径有一个有限的、非零的范围。bSI 文档"
+msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
+msgstr "使用此资源对象的实例定义的坐标系统的 z方向翻转."
 
-#:IFC.xml:44335
-msgid "IfcPath_EdgeList"
-msgstr "边缘列表"
+#:IFC.xml:43863
+msgid "IfcStructuralConnectionCondition"
+msgstr "IfcStructuralConnectionConstance"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "边缘列表"
+msgid "IfcStructuralConnectionCondition_DEFINITION"
+msgstr "描述更少需要的连接属性。IFC2x2中的新实体。bSI 文档"
 
-#:IFC.xml:44354
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+#:IFC.xml:43864
+msgid "IfcStructuralConnectionCondition_Name"
+msgstr "名称"
 
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "如果输入路径的所有边缘都是连续的，此函数返回 TRUE。 xtDef NotE Definition according to ISO CD 10303 42 1992 This function 返回 TRUE ，如果输入路径的边缘每个边缘的终极值与其继承者的起始顶点相同。 IOC2.0 中的 ISO10303 42定义的从路径头到尾的注功能。"
+msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
+msgstr "可选定义此连接条件的名称。"
 
-#:IFC.xml:44362
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:43870
+msgid "IfcStructuralLoad"
+msgstr "IfcStructuralLoad"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义的注解 聚光循环是一种基因1循环，循环由一个有序的铜集构成循环顶点。 循环由直线段组成，将集合中的一个点连接到集合的下一个点。 闭幕部分是从会议集的最后一点到第一点。 循环的方向是线段的方向。 环状循环应符合以下地形制约因素，这一环状循环具有一根基。 以下方程必须满足图像... ... ... ... ... ... facties ifcpolyloop math1。 如果[[IfcPolyLoop]] 始终关闭，最后一个段是从多边形列表中的最后一个 [[IfcCartesianPoint]] 到第一个 [[IfcCartesianPoint]] 。 因此，第一点不应在清单末尾重复，也不应在同一案件中援引。 或者使用额外实例[[IfcCartesianPoint]] 以坐标作为第一点。 注意到这个实体的存在主要是为了促进约束面Brep 模型的有效交流。 从 ISO 10303 42中定义的Poly 循环中修改的注实体, IFC1.0 中的HISTORY 新实体. pec heads Informal Propositions 1. 所有用于确定poly循环的多边形点都必须是铜。 2. 第一个和最后一个多边形应以数值为不同的 bSI 文档"
+msgid "IfcStructuralLoad_DEFINITION"
+msgstr "这个抽象实体是结构分析产生的所有负载动作或反应或某些要求的超级类型。 或影响结构分析的某些规定。 IFC2x2中的HISTORY 新实体 bSI 文档"
 
-#:IFC.xml:11495
-msgid "IfcPolyLoop_Polygon"
-msgstr "多边形"
+#:IFC.xml:43871
+msgid "IfcStructuralLoad_Name"
+msgstr "名称"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "多边形"
+msgid "IfcStructuralLoad_Name_DEFINITION"
+msgstr "可选的定义此负载的名称。"
 
-#:IFC.xml:44369
-msgid "IfcSubedge"
-msgstr "伊夫克苏贝德"
+#:IFC.xml:43877
+msgid "IfcStructuralLoadConfiguration"
+msgstr "IfcStructuralLoad配置"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef Note Definition according to ISO CD 10303 42 1992 对套接物的地形限制与边缘的限制相同。 从 ISO 10303 42中定义的套装中改装的注实体, IFC2x2 中的新实体. pec head Informal Propositions 1。 Subedge域被正式定义为父边缘的域。 被苏贝格弹头和苏贝格末尾顶点修剪。 2. 起始顶点和终点顶点应在父边缘顶点和父边缘域的连结范围内。 bSI 文档"
+msgid "IfcStructuralLoadConfiguration_DEFINITION"
+msgstr "此类组合了一个或多个负载或结果值在1或2维配置。 IFC4. Spechead Informal Propositions 1. All itemes in values shall be the same type. 2. 如果负载或结果构成曲线活动，必须给定一个尺寸的位置，沿曲线在当地测定。 位置不应超过行为曲线的界限。 负载样品和相应位置必须按地点的升序排列。 如果负载或结果构成表面活动，则必须给出两个尺寸的位置。 测量表面活性s 局部x和y方向 该位置不得超过地面活动的界限。 注： 2维大小写中没有订购要求，但1维大小写为简单易用的空间排序。"
 
-#:IFC.xml:44188
-msgid "IfcSubedge_ParentEdge"
-msgstr "父母边缘"
+#:IFC.xml:43889
+msgid "IfcStructuralLoadConfiguration_Values"
+msgstr "值"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "父母边缘"
+msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
+msgstr "值"
 
-#:IFC.xml:44372
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:43882
+msgid "IfcStructuralLoadConfiguration_Locations"
+msgstr "地点"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extdef 根据ISO CD10303 42 1992年说明定义 地形代表项是几何资源中所有地形代表项的超级类型。 从ISO 10303 42中定义的地形代表性项目改编的注实体，在IFC1.5bSI文件中定义的新实体"
+msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
+msgstr "负载样品或结果样品的位置，在使用此资源对象的实例定义的本地坐标系统内给出。 位置列表中的每个项目都与同一列表索引中的值列表项有关。 此属性是可选的，用于从更高级别定义中隐含地知悉位置的配置。"
 
-#:IFC.xml:44375
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:43901
+msgid "IfcStructuralLoadLinearForce"
+msgstr "IfcStructuralLoadLinearForce"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义. 顶点是与点对应的地形构造。 它具有维度0和范围0。 顶点域，如果有，则是m维真实空间RM 中的一个点，以顶点点子类型表示。 从 ISO 10303 42中定义的顶点改装的注实体，在IFC2.0 .pechead 非正式提议1中的HISTORY 新实体。 顶点具有维度0。这是顶点的基本属性。 2. 顶点的范围定义为零。bSI 文档"
+msgid "IfcStructuralLoadLinearForce_DEFINITION"
+msgstr "实体的实例 [[IfcStructuralLoadLinearForce]] 必须用于定义曲线上的动作。在 IFC2x2 中的新实体。bSI 文档"
 
-#:IFC.xml:44390
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:43902
+msgid "IfcStructuralLoadLinearForce_LinearForceX"
+msgstr "线性ForceX"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD10303 42 1992定义。顶点循环是一个由单个顶点组成的零基因循环。 顶点可以独立于顶点循环存在。地形数据应满足下列约束图像... ... ... ... 数字 ifcvertextloop math1.gif Note Entity 从ISO 10303 42中定义的顶点循环变异。IFC2x2中的HISTORY 新实体。 pec head Informal Propositions 1. vertex 循环的范围和维度为零。2. 顶点循环有基因0.bSI 文档"
+msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
+msgstr "线性力值方向为 x 。"
 
-#:IFC.xml:44378
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "循环脊椎骨"
+#:IFC.xml:43907
+msgid "IfcStructuralLoadLinearForce_LinearForceY"
+msgstr "直线力"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "循环脊椎骨"
+msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
+msgstr "线性力值方向为 y。"
 
-#:IFC.xml:44393
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:43912
+msgid "IfcStructuralLoadLinearForce_LinearForceZ"
+msgstr "LineerForceZ"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义的注解. 顶点是一个顶点, 其几何定义为一个点。 从ISO 10303 42中定义的顶点修改的注实体。 IFC2x.spec首长非正式提议1中的新实体。 顶点域被正式定义为顶点域，BSI 文档"
+msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
+msgstr "线性力值在 z 方向。"
 
-#:IFC.xml:12625
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "垂直几何体"
+#:IFC.xml:43917
+msgid "IfcStructuralLoadLinearForce_LinearMomentX"
+msgstr "线性模式"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "垂直几何体"
+msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
+msgstr "x轴线的线性时刻。"
 
-#:IFC.xml:44397
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:43922
+msgid "IfcStructuralLoadLinearForce_LinearMomentY"
+msgstr "LinearMomentY"
 
-msgid "IfcShell_DEFINITION"
-msgstr "由不同类型的炮弹构成的类型。 按照ISO CD 10303 42 1992，xtDef 注明定义 这种类型一起收集。 在构建更复杂的模型时，具有炮弹特性的子型。 炮弹是一个固定维度d为0或2的关联对象，通常用来绑定一个区域。 炮弹域名，如果存在， 包括其边界和0个二维度 0的A外壳用一个由单个顶点组成的图形表示. 顶点不应有任何相关的边缘。尺寸1的外壳由一个相关的尺寸图形表示. 维度2的外壳是一个通过沿边缘连接面构建的地形实体。 如果有，它的领域是一个相互联系、面向的第2个多方面边界，即： 一种连接、方向精密、非相互交错的表面，这种表面可能是封闭的或是开放的。 从 ISO 10303 42中定义的shell定义的注类型，IFC2x中的HISTORY 新类型。"
+msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
+msgstr "y轴线的线性时刻。"
+
+#:IFC.xml:43927
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
+msgstr "LinearMomentZ"
+
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
+msgstr "z轴线的线性时刻。"
+
+#:IFC.xml:43934
+msgid "IfcStructuralLoadOrResult"
+msgstr "IfcStructuralLoadOrResult"
+
+msgid "IfcStructuralLoadOrResult_DEFINITION"
+msgstr "摘要简单加载或结果类的超级类。IFC4中新的抽象实体，所有子类的上兼容性都被保留。BSI 文档"
+
+#:IFC.xml:43937
+msgid "IfcStructuralLoadPlanarForce"
+msgstr "IfcStructuralLoadPlanarForce"
+
+msgid "IfcStructuralLoadPlanarForce_DEFINITION"
+msgstr "实体的实例 [[IfcStructuralLoadPlanarForce]] 必须用于定义脸上的动作。IFC2x2 中的HISTORY 新实体 bSI 文档"
+
+#:IFC.xml:43938
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
+msgstr "PlanarForceX"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
+msgstr "行星力值向x方向移动。"
+
+#:IFC.xml:43943
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
+msgstr "PlanarForceY"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
+msgstr "Planar力在y方向的值。"
+
+#:IFC.xml:43948
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
+msgstr "PlanarForceZ"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
+msgstr "Planar力值向z方向移动。"
+
+#:IFC.xml:43955
+msgid "IfcStructuralLoadSingleDisplacement"
+msgstr "IfcStructuralLoadSingleDisplacement"
+
+msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
+msgstr "实体 [[IfcStructuralLoadSingleDisplacement]] 的实例必须用于定义迁移。IFC2x2中的新实体。bSI 文档"
+
+#:IFC.xml:43956
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
+msgstr "移除X"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
+msgstr "向x方向迁移。"
+
+#:IFC.xml:43961
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
+msgstr "位移Y"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
+msgstr "朝着y 方向迁移。"
+
+#:IFC.xml:43966
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
+msgstr "移位Z"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
+msgstr "向z方向迁移。"
+
+#:IFC.xml:43971
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
+msgstr "RotationalDisplacementRX"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
+msgstr "x轴旋转."
+
+#:IFC.xml:43976
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
+msgstr "旋转位移"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
+msgstr "y轴旋转."
+
+#:IFC.xml:43981
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
+msgstr "RotationalDisplacementRZ"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
+msgstr "z轴旋转."
+
+#:IFC.xml:43988
+msgid "IfcStructuralLoadSingleDisplacementDistortion"
+msgstr "IfcStructuralLoadSingleDisplacementDistortion"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
+msgstr "在 IFC2x2 中定义一个带有战争的迁移。bSI 文档中 HISTORY 新实体"
+
+#:IFC.xml:43989
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
+msgstr "错乱度"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
+msgstr "扭曲曲线转向，即对搬迁负荷进行跨部门移植。"
+
+#:IFC.xml:43996
+msgid "IfcStructuralLoadSingleForce"
+msgstr "IfcStructuralLoadSingleForce"
+
+msgid "IfcStructuralLoadSingleForce_DEFINITION"
+msgstr "必须使用实体[[IfcStructuralLoadSingleForce]] 的实例来确定在某一地点行动的部队和时间。 IFC2x2中的HISTORY 新实体 bSI 文档"
+
+#:IFC.xml:43997
+msgid "IfcStructuralLoadSingleForce_ForceX"
+msgstr "强制模式"
+
+msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
+msgstr "以x方向强制值。"
+
+#:IFC.xml:44002
+msgid "IfcStructuralLoadSingleForce_ForceY"
+msgstr "力力"
+
+msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
+msgstr "在y方向强制值。"
+
+#:IFC.xml:44007
+msgid "IfcStructuralLoadSingleForce_ForceZ"
+msgstr "ForceZ"
+
+msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
+msgstr "在 z 方向强制值。"
+
+#:IFC.xml:44012
+msgid "IfcStructuralLoadSingleForce_MomentX"
+msgstr "模式"
+
+msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
+msgstr "关于x轴的时刻。"
+
+#:IFC.xml:44017
+msgid "IfcStructuralLoadSingleForce_MomentY"
+msgstr "MomentY"
+
+msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
+msgstr "关于y轴的时刻。"
+
+#:IFC.xml:44022
+msgid "IfcStructuralLoadSingleForce_MomentZ"
+msgstr "MomentZ"
+
+msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
+msgstr "有关z轴的时刻。"
+
+#:IFC.xml:44029
+msgid "IfcStructuralLoadSingleForceWarping"
+msgstr "IfcStructuralLoadSingleForceWarping"
+
+msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
+msgstr "实体 [[IfcStructuralLoadSingleForceWarping]] 的子类型 [[IfcStructuralLoadSingleForce]] 的实例 必须用来界定一个单点的行动操作。 除了超级类型定义的力量和时刻之外，还可以定义一个扭曲时刻。IFC2x2中的新实体。bSI 文档。"
+
+#:IFC.xml:44030
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
+msgstr "温度增益"
+
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
+msgstr "正在旋转的路点负载时间。"
+
+#:IFC.xml:44037
+msgid "IfcStructuralLoadStatic"
+msgstr "IfcStructuralLoadStatic"
+
+msgid "IfcStructuralLoadStatic_DEFINITION"
+msgstr "抽象实体 [[IfcStructuralLoadStatic]] 是可以定义的所有静态负载动作或反应的超级类型。 在范围内是单一的，即集中力量和时间，线性的，即： 一个尺寸分布的力量和时刻。平面即两个尺寸分布的力量。更多的迁移和温度负荷。IOC2x2中的新实体。bSI 文档"
+
+#:IFC.xml:44040
+msgid "IfcStructuralLoadTemperature"
+msgstr "IfcStructuralLoadTemperature"
+
+msgid "IfcStructuralLoadTemperature_DEFINITION"
+msgstr "实体的实例 [[IfcStructuralLoadTemperature]] 必须用于定义温度变化引起的动作。 如图1所示， 温度的变化给出的是一个常数值，适用于整个部分和该节外纤维之间温度差异的值。 在 IFC2x2 中新建实体... ... ... ... ... . . . . 数字结构加载温度.gif 图1 结构加载温度 bSI 文档"
+
+#:IFC.xml:44041
+msgid "IfcStructuralLoadTemperature_DeltaTConstant"
+msgstr "DeltaTConstant"
+
+msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
+msgstr "温度变化影响结构成员的完整部分，或影响非统一温度变化的统一部分。 X 0D X 0D 注，一个正值表示温度增加。 一.e. 持续温度的积极变化会造成成员的疏散，如果存在着各自的限制，则会造成成员的压缩。"
+
+#:IFC.xml:44046
+msgid "IfcStructuralLoadTemperature_DeltaTY"
+msgstr "DeltatY"
+
+msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
+msgstr "非统一温度变化 指定为正y方向外纤维温度变化的差减分析成员负y方向外部纤维温度变化的差额。 X 0D X 0D noteE A non non-uncenture change in y encourage a non z, involution of the member about z, 或者如果存在着各自的约束，则对z的正时钟。 y和z是本地成员轴。"
+
+#:IFC.xml:44051
+msgid "IfcStructuralLoadTemperature_DeltaTZ"
+msgstr "DeltaTZ"
+
+msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
+msgstr "非统一温度变化 指定为正z方向外部纤维温度变化的差减分析成员负z方向外部纤维的温度变化。 X 0D X 0D 注： z中的非统一温度变化会引发成员对y的正曲线， 或者如果存在着各自的制约，则对y有一个消极的束缚时刻。 y和z是本地成员轴。"
+
+#:IFC.xml:44058
+msgid "IfcSurfaceReinforcementArea"
+msgstr "IfcSurfaceReinforcementArea"
+
+msgid "IfcSurfaceReinforcementArea_DEFINITION"
+msgstr "描述表面成员所需或提供的加固区域。 注成员设计参数，如混凝土封面、有效深度、网格方向或回扣两、可选三个方向等。 IfcStructuralLoadResource schema没有指定。它们必须在结构成员级别上指定。"
+
+#:IFC.xml:44075
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
+msgstr "正面增援1"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
+msgstr "在地表成员正方Z方向旁边的成员面前加固。 指定为每个长度的区域，e。 因此，每米平方米的长度，例如。可以为增援条的两个或三个方向指定增援区。"
+
+#:IFC.xml:44080
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
+msgstr "正面增援2"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
+msgstr "2. 在地表成员当地z消极方向一侧的成员面前加固。 指定为每个长度的区域，e。 因此，每米平方米的长度，例如。可以为增援条的两个或三个方向指定增援区。"
+
+#:IFC.xml:44085
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
+msgstr "击晕之力"
+
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
+msgstr "裁剪增援。指定为每个区域的面积，例如每平方米的平方米，因此测量比率，即无单位。"
+
+#:IFC.xml:44092
+msgid "IfcModulusOfRotationalSubgradeReactionSelect"
+msgstr "IfcModulusOfRotationSubgradeReaction选择"
+
+msgid "IfcModulusOfRotationalSubgradeReactionSelect_DEFINITION"
+msgstr "一种表示每长度结构曲线项目的旋转床位的旋转亚级反应模块计量。 TRUE 表示无限僵化。FALSE 表示没有严格的释放。 数字值是指有限线性弹性强度。IFC4中的新类型。"
+
+#:IFC.xml:44093
+msgid "IfcModulusOfSubgradeReactionSelect"
+msgstr "IfcModulusOfSubgradeReaction选择"
+
+msgid "IfcModulusOfSubgradeReactionSelect_DEFINITION"
+msgstr "Bedding measures which express the betting destination of a structural fact item. TRUE indicates infinite striffisity FALSE 表示没有严格发布。数字值表示有限线性弹性窒息。IFC4中的新类型。"
+
+#:IFC.xml:44094
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
+msgstr "IfcModulusOfTranslaterSubgradeReaction选择"
+
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect_DEFINITION"
+msgstr "一个表示每个长度结构曲线项目的翻译性床的笔译次级反应模块。 TRUE 表示无限僵化。FALSE 表示没有严格的释放。 数字值是指有限线性弹性强度。IFC4中的新类型。"
+
+#:IFC.xml:44095
+msgid "IfcRotationalStiffnessSelect"
+msgstr "IfcRotationalStiffness选择"
+
+msgid "IfcRotationalStiffnessSelect_DEFINITION"
+msgstr "旋转坚硬度. TRUE 表示无限僵化. FALSE 表示没有硬性释放. 数字值是指有限线性弹性强度。IFC4中的新类型。"
+
+#:IFC.xml:44096
+msgid "IfcTranslationalStiffnessSelect"
+msgstr "IfcTranslationalStiffnessSelect"
+
+msgid "IfcTranslationalStiffnessSelect_DEFINITION"
+msgstr "线性强度. TRUE 表示无限严格性. FALSE 表示无硬性释放. 数字值是指有限线性弹性强度。IFC4中的新类型。"
+
+#:IFC.xml:44097
+msgid "IfcWarpingStiffnessSelect"
+msgstr "IfcWarpingStiffness选择"
+
+msgid "IfcWarpingStiffnessSelect_DEFINITION"
+msgstr "刻度计。TRUE 表示无限的僵化状态。FALSE 表示无硬的释放。 数字值是指有限线性弹性强度。IFC4中的新类型。"
 
