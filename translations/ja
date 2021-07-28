@@ -9,331 +9,1003 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcMaterialResource.pot\n"
+"X-Crowdin-File-ID: 52\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2021-07-28 08:47\n"
 
-#:IFC.xml:44118
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:21233
+msgid "IfcDirectionSenseEnum"
+msgstr "IfcDirectionSenseEnum"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 bSI Documentation"
+msgid "IfcDirectionSenseEnum_DEFINITION"
+msgstr "[[IfcDirectionSenseEnum]]は、指定された軸に沿って方向の感覚が正か負かを示す列挙です。 HISTORY IFC2xの新しいタイプ bSIドキュメント"
 
-#:IFC.xml:44133
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:21237
+msgid "IfcLayerSetDirectionEnum"
+msgstr "IfcLayerSetDirectionEnum"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "true の場合、最初の選択肢を返します。そうでない場合は、2 番目の選択肢を返します。 xtDef NOTEのISO CD 10303による定義 42 1992 ブール型入力引数の値に応じて、2つの選択肢のうちの1つを返します。 2つの選択肢は入力引数でもあります。NOTE関数はISO10303で定義されているbooleanchooseから採用されています。HISTORYIFC2.0の新しい関数"
+msgid "IfcLayerSetDirectionEnum_DEFINITION"
+msgstr "[[IfcLayerSetDirectionEnum]] では、要素形状の軸を同定し、層セットの厚さ方向、または層オフセットの方向を示します。 HISTORY IFC2xの新しいタイプ bSIドキュメント"
 
-#:IFC.xml:44141
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:21242
+msgid "IfcMaterial"
+msgstr "IfcMaterial"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcMaterial_DEFINITION"
+msgstr "[[IfcMaterial]] is a homogeneous or inhomogeneous substance that can be used to form elements physical products or their components . [[IfcMaterial]] is the basic entity for material designation and definition this includes identification by name and classification via reference to an external classification , as well as association of material properties isotropic or anisotropic defined by subtypes of [[IfcMaterialProperties]] . An instance of [[IfcMaterial]] may be associated to an element or element type using the [[IfcRelAssociatesMaterial]] relationship. The assignment might either be direct as a single material information, or via a material layer set a material profile set a material constituent set An [[IfcMaterial]] may also have presentation information associated. Such presentation information is provided by [[IfcMaterialDefinitionRepresentation]] , associating curve styles, hatching definitions or surface colouring rendering information to a material. HISTORY S New entity in IFC4 .change ifc2x4 IFC4 CHANGE S The attributes Description and Category have been added. bSI Documentation"
 
-#:IFC.xml:44146
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+#:IFC.xml:21269
+msgid "IfcMaterial_HasRepresentation"
+msgstr "HasRepresentation"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 接続された面セットは、面の境界エッジと頂点が接続されているような面セットです。 注記エンティティは、ISO 10303で定義されている接続されたフェイスセットから適応されます。 面と境界ループの領域の組合せは、アークワイズで接続する必要があります。bSI ドキュメント"
+msgid "IfcMaterial_HasRepresentation_DEFINITION"
+msgstr "HasRepresentation"
 
-#:IFC.xml:44149
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+#:IFC.xml:21307
+msgid "IfcMaterial_IsRelatedWith"
+msgstr "IsRelatedWith"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "CfsFaces"
+msgid "IfcMaterial_IsRelatedWith_DEFINITION"
+msgstr "IsRelatedWith"
 
-#:IFC.xml:44161
-msgid "IfcEdge"
-msgstr "IfcEdge"
+#:IFC.xml:21357
+msgid "IfcMaterial_RelatesTo"
+msgstr "RelatesTo"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero. bSI Documentation"
+msgid "IfcMaterial_RelatesTo_DEFINITION"
+msgstr "RelatesTo"
 
-#:IFC.xml:44164
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:21243
+msgid "IfcMaterial_Name"
+msgstr "名前"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcMaterial_Name_DEFINITION"
+msgstr "X 0D EXAMPLEビュー定義にはマテリアルが必要な場合があります。 ame to unially specified e.g. concrete or steel grade, in case the attribute material. カテゴリは、コンクリートまたはスチールの値を取ることができます . X 0D X 0D NOTE材料グレードは、異なるビュー定義で異なる意味を持っている可能性があります, e. を選択します。 構造設計と解析の強度グレード、建築アプリケーションの外観グレード。 また、より精巧な材料グレードの定義は逆属性HasExternalReferencesを介して分類として関連付けられることがあります。"
 
-#:IFC.xml:44176
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:21248
+msgid "IfcMaterial_Description"
+msgstr "説明"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcMaterial_Description_DEFINITION"
+msgstr "属性名またはカテゴリ によって与えられるよりも、より記述的な用語のマテリアルの定義 . X 0D .change ifc2x4 X 0D IFC4 CHANGE 属性が属性リストの最後に追加されました。"
 
-#:IFC.xml:44212
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+#:IFC.xml:21253
+msgid "IfcMaterial_Category"
+msgstr "カテゴリ"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry. bSI Documentation"
+msgid "IfcMaterial_Category_DEFINITION"
+msgstr "属性名よりも、より一般的な用語で、カテゴリグループまたは材料の種類の定義。 X 0D 例 ビュー定義では、各 Material.Name が一意である必要があります。例えば、 プロジェクトで使用される各コンクリートまたは鋼のグレードについて、その場合Material.Category値を取ることができます コンクリートまたは鋼。 X 0D X 0D .change ifc2x4 X 0D IFC4の変更 属性は属性リストの最後に追加されました。"
 
-#:IFC.xml:12010
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometry"
+#:IFC.xml:21371
+msgid "IfcMaterialClassificationRelationship"
+msgstr "IfcMaterialClassificationRelationship"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "EdgeGeometry"
+msgid "IfcMaterialClassificationRelationship_DEFINITION"
+msgstr "[[IfcMaterialClassificationRelationship]] is a relationship assigning classifications to materials. HISTORY S New entity in IFC2x. .change ifc2x4 IFC4 CHANGE S The entity [[IfcMaterialClassificationRelationship]] is deprecated since IFC4 and shall no longer be used. Use [[IfcExternalReferenceRelationship]] instead. bSI Documentation"
 
-#:IFC.xml:44213
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:21283
+msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial"
+msgstr "分類材料"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "この論理フラグは、TRUE を、エッジジオメトリを定義する曲線とエッジの感覚が同じかどうかを示します。 エッジの感覚は、エッジ開始頂点からエッジ終点までであり、カーブの感覚はパラメータを増やす方向にあります。"
+msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial_DEFINITION"
+msgstr "分類材料"
 
-#:IFC.xml:44221
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:21372
+msgid "IfcMaterialClassificationRelationship_MaterialClassifications"
+msgstr "MaterialClassification"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE. bSI Documentation"
+msgid "IfcMaterialClassificationRelationship_MaterialClassifications_DEFINITION"
+msgstr "材料の種類を識別する材料分類。"
 
-#:IFC.xml:44237
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:21378
+msgid "IfcMaterialConstituent"
+msgstr "IfcMaterialConstituent"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "EdgeList"
+msgid "IfcMaterialConstituent_DEFINITION"
+msgstr "[[IfcMaterialConstituent]] is a single and identifiable part of an element which is constructed of a number of part one or more each having an individual material. The association of the material constituent to the part is provided by a keyword as value of the Name attribute. In order to identify and distinguish the part of the shape representation to which the material constituent applies the [[IfcProductDefinitionShape]] of the element has to include instances of [[IfcShapeAspect]] , using the same keyword for their Name attribute. NOTE See the Material Use Definition at the individual element to which an [[IfcMaterialConstituentSet]] may apply for a required or recommended definition of such keywords as value for [[IfcMaterialConstituent]].Name . HISTORY S New entity in IFC4 bSI Documentation"
 
-#:IFC.xml:44230
-msgid "IfcEdgeLoop_Ne"
-msgstr "該当なし"
+#:IFC.xml:21345
+msgid "IfcMaterialConstituent_Material"
+msgstr "材料"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "エッジリスト内の要素数。"
+msgid "IfcMaterialConstituent_Material_DEFINITION"
+msgstr "材料"
 
-#:IFC.xml:44249
-msgid "IfcFace"
-msgstr "IfcFace"
+#:IFC.xml:21401
+msgid "IfcMaterialConstituent_ToMaterialConstituentSet"
+msgstr "ToMaterialConstituentSet"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcMaterialConstituent_ToMaterialConstituentSet_DEFINITION"
+msgstr "ToMaterialConstituentSet"
 
-#:IFC.xml:26129
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:21379
+msgid "IfcMaterialConstituent_Name"
+msgstr "名前"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcMaterialConstituent_Name_DEFINITION"
+msgstr "材料成分が知られている名前。"
 
-#:IFC.xml:44256
-msgid "IfcFace_Bounds"
-msgstr "バウンド数"
+#:IFC.xml:21384
+msgid "IfcMaterialConstituent_Description"
+msgstr "説明"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "バウンド数"
+msgid "IfcMaterialConstituent_Description_DEFINITION"
+msgstr "記述用語で構成される材料の定義。"
 
-#:IFC.xml:44268
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:21389
+msgid "IfcMaterialConstituent_Fraction"
+msgstr "分数"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 フェースバインドは、面をバウンディングするために使用されるループです。 注記エンティティは、ISO 10303で定義された面バインドから適応されています 42. HISTORY IFC1.0 bSI ドキュメンテーション内の新しいエンティティ"
+msgid "IfcMaterialConstituent_Fraction_DEFINITION"
+msgstr "この[[IfcMaterialConstituentSet]]によって貢献される[[IfcMaterialConstituent]]に適用される総量または重量の割合のオプションの提供。"
 
-#:IFC.xml:44276
-msgid "IfcFaceBound_Bound"
-msgstr "バインドされています"
+#:IFC.xml:21394
+msgid "IfcMaterialConstituent_Category"
+msgstr "カテゴリ"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "バインドされています"
+msgid "IfcMaterialConstituent_Category_DEFINITION"
+msgstr "材料構成要素のカテゴリ、例えば、それが属する構成要素セットで持っているロール。"
 
-#:IFC.xml:44269
-msgid "IfcFaceBound_Orientation"
-msgstr "方向"
+#:IFC.xml:21415
+msgid "IfcMaterialConstituentSet"
+msgstr "IfcMaterialConstatentSet"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "これは、「TRUE」か「FALSE」かを示しています。ループが最初に定義された場合と同じ意味を持ちます。 sense が FALSE の場合、コンポーネント指向のすべてのエッジのセンサーは顔に使用されると暗黙的に反転されます。"
+msgid "IfcMaterialConstituentSet_DEFINITION"
+msgstr "[[IfcMaterialConstituentSet]] is a collection of individual material constituents, each assigning a material to a part of an element. The parts are only identified by a keyword as opposed to an [[IfcMaterialLayerSet]] or [[IfcMaterialProfileSet]] where each part has an individual shape parameter layer thickness or layer profile . EXAMPLE The different materials of a window construction shall be provided for the window lining and the window glazing. An [[IfcMaterialConstituentSet]] is assigned to the window with two [[IfcMaterialConstituent]] s, one with the Name Lining , one with the Name Glazing . NOTE See the Material Use Definition at the individual element to which an [[IfcMaterialConstituentSet]] may apply for a required or recommended definition of such keywords. HISTORY S New entity in IFC4. bSI Documentation"
 
-#:IFC.xml:44288
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+#:IFC.xml:21401
+msgid "IfcMaterialConstituentSet_MaterialConstituents"
+msgstr "資材構成"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 面外側バインドは、顔に外側の境界を定義するための追加の意味を持つバインドされた特殊なサブタイプです。 このタイプの顔の境界線は複数ありません。 注記エンティティは、ISO 10303で定義された外側にバインドされた面から適応されています。HISTORY IFC1.0 bSIドキュメンテーション内の新しいエンティティ"
+msgid "IfcMaterialConstituentSet_MaterialConstituents_DEFINITION"
+msgstr "資材構成"
 
-#:IFC.xml:44291
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+#:IFC.xml:21416
+msgid "IfcMaterialConstituentSet_Name"
+msgstr "名前"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "[[IfcFaceSurface]] では、表面に関連する表面の基礎となる形状を定義します。 注 トポロジは、サーフェスのジオメトリをトリミングするために使用されます。 トポロジーに合わせて表面を幾何学的にトリミングする必要はありません。 xtDef NOTE ISO CD 10303による定義 42 1992 面面は、ジオメトリが関連するサーフェスによって定義されるサブタイプの面です。 顔によって使用される表面の部分は、おそらく穴のあるオープンディスクとして平面に埋め込むことができます。 ただし、境界ループの端と頂点を持つ面の組合せは平面に埋め込む必要はありません。 それは、例えば、球体やトーラス全体をカバーすることができます。 面と幾何学面の両方が正常な方向を定義しているように、 BOOLEAN フラグは、サーフェスの通常が TRUE と一致するか、またはフェイスの通常方向を FALSE することに反対することを示すために使用されます。 顔のループのいずれかのコンポーネントに関連付けられた形状は、表面形状と一致する必要があります。 すべての頂点点とエッジ曲線の領域が面形状面に含まれているという意味です 複数の面サーフェスでサーフェスを参照することができます。 注意 ISO 10303に定義された顔面から適応したエンティティ 42. 履歴 IFC2x .spec ヘッド 非公式の提案 1. フェイスサーフェスのドメインは、ループによってトリミングされると、フェイスジオメトリのドメインとして正式に定義されます。 このドメインには境界ループは含まれていません 2. 面は有限範囲がゼロでない 3. 面はマニホールドであり 4. 面はアークワイズで接続されている。 5. フェイス表面には表面属性がある 6. ループはフェイスドメインの一部ではありません。 7. ループ幾何学は面幾何学と一致します。 これは、面表面を境界するループを定義する際に使用されるエッジ曲線または頂点点が面形状上にあることを意味します。 8. 顔のループは交差してはなりません。 bSI Documentation"
+msgid "IfcMaterialConstituentSet_Name_DEFINITION"
+msgstr "構成セットの名前が知られています。"
 
-#:IFC.xml:13088
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "FaceSurf"
+#:IFC.xml:21421
+msgid "IfcMaterialConstituentSet_Description"
+msgstr "説明"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "FaceSurf"
+msgid "IfcMaterialConstituentSet_Description_DEFINITION"
+msgstr "記述用語で設定された材料構成要素の定義。"
 
-#:IFC.xml:44292
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:21428
+msgid "IfcMaterialDefinition"
+msgstr "IfcMaterialDefinition"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "このフラグは、正常な表面の感覚が TRUE と一致するかどうかを示します。 または、顔に対するトポロジカル正常の感覚「FALSE」に対抗します。"
+msgid "IfcMaterialDefinition_DEFINITION"
+msgstr "[[IfcMaterialDefinition]] is a general supertype for all material related information items in IFC that have common material related properties that may include association of material with some shape parameters or assignments to identified parts of a component. There are three ways of assigning materials to a single component or multiple components they are characterized as by layer assigning a material to a layer with constant thickness by profile assigning a material to a profile with a constant of varying shape along an extrusion by constituents assigning a material to an identified part of a component shape the identification is by a keyword rather than by a shape parameter Each instantiable subtype of [[IfcMaterialDefinition]] may have material properties assigned, or have an external classification of its definition. It can be assigned to either a subtype of [[IfcElement]] , or a subtype of [[IfcElementType]] by using the objectified relationship [[IfcRelAssociatesMaterial]] . HISTORY S New entity in IFC4 bSI Documentation"
 
-#:IFC.xml:44300
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:9000
+msgid "IfcMaterialDefinition_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 ループは単一の頂点から構築されたトポロジカル実体です。 接続された方向のエッジまたは線形のセグメントを同じ頂点で始まったり終わったりすることです 通常、表面に横たわって顔を結合するために使用されます。 ループは 0 または 1 の次元を持ちます。0 次元ループの領域は 1 つの点です。 1次元ループの領域は、接続された方向曲線ですが、マニホールドである必要はありません。 ループが円であるため、始点の位置は任意です。 ループのドメインには、0 <unk> が含まれます。 ループは単一の頂点、または指向エッジの順序付きコレクション、または点の順序付きコレクションで表されます。 ループはグラフであるため、MとGのグラフ属性はグラフトラバーサルアルゴリズムによって決まります。 M 1以来、オイラー式1は、この場合にはイメージに.. .. .. .. .. .. .. .. .. V と E X 7El X 7E が一意の頂点の数であり、ループ内の方向のエッジの数であり、G l がループの属である場合。 注 ISO 10303 42 で定義されているループから適応されたエンティティ。 歴史 IFC2xの新しい実体。.spec head 非公式提案 1. ループの範囲は有限です。 ループは、一致する開始点と終了点を持つ閉じたトポロジカル曲線を記述します。bSI Documentation"
+msgid "IfcMaterialDefinition_HasExternalReferences_DEFINITION"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:44303
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadTail ALoop"
+#:IFC.xml:21432
+msgid "IfcMaterialDefinition_HasProperties"
+msgstr "HasProperties"
 
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "この関数は、入力エッジループのエッジに対して、各エッジの終端頂点が後継の開始頂点と同じ場合に TRUE を返します。 HISTORY IFC2x2の新機能"
+msgid "IfcMaterialDefinition_HasProperties_DEFINITION"
+msgstr "HasProperties"
 
-#:IFC.xml:44311
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:21446
+msgid "IfcMaterialDefinition_AssociatedTo"
+msgstr "関連付け先"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303による定義 42 1992 オープンシェルは寸法のシェルである 2. そのドメインが存在する場合、有限であり、接続されていて、指向性があり、境界を持つ2多様体であるが、閉じた表面ではない。 1つ以上の穴を開けた閉じた殻と考えられる。 オープンシェルのドメインは 0 <unk> 1 を満たします。 オープンシェルは、ドメインがハンドルを持つことができるため、顔よりも機能的に一般的です。 シェルは、指向性のある面の集合によって定義されます。 指向を考慮した後、各顔の感覚は、以下に定義されたように通常のシェルと一致しなければならない。 オリエンテーションは、指向面の BOOLEAN 属性として直接提供できます。 またはシェルメンバーが orientation 属性を持たない面の場合は TRUE をデフォルトにしてください。 オープンシェルに対する以下の組み合わせ制約と、ドメインに対する幾何学的制約が設計されています。 非公式の提案と共にオープンシェルに関連するあらゆる領域が 指向性多様体であることを保証するために 各フェイスの参照は一意でなければなりません。開いたシェルは少なくとも1つの面を持つものとします。 特定の顔は複数の開いた殻に存在する可能性があります。 開いているシェルの境界は、その面の面境界ループによって一度だけ参照されるエッジで構成されます。 全ての頂点と一緒になっています オープンシェルのドメインが存在する場合、面のすべてのエッジと頂点が含まれます。 注 これは、その限界のどれも含まれていないフェイスドメインの定義とは若干異なることに注意してください。 例えば、フェイスドメインは、絶縁された点またはラインセグメントを除外することができます。オープンなシェルドメインはそうでない可能性があります。以下の計算のためのアルゴリズムを参照してください。 注記エンティティは、ISO 10303 42で定義された開いているシェルから適応されています。 HISTORYIFC2x.spec ヘッド 非公式提案 1. すべてのエッジは、顔の顔の境界によって正確に2回参照されなければなりません。 各指向エッジは一意でなければならない 3. エッジは2つ以上の面で参照してはならない。 4. シェルの個別面は交差しませんが、エッジや頂点を共有することがあります。 5. エッジは交差しませんが頂点を共有することができます 6. 7. シェルのループはポリループとその他のループタイプの混合物ではない。 ポリループのみが面結合定義として定義されるため、これは与えられることに注意してください。 8. 閉じたシェルは、2つのマニホールドに接続された方向のアークワイズでなければなりません。9. オイラー方程式を満たすものとします。bSI Documentation"
+msgid "IfcMaterialDefinition_AssociatedTo_DEFINITION"
+msgstr "関連付け先"
 
-#:IFC.xml:44315
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:21458
+msgid "IfcMaterialLayer"
+msgstr "IfcMaterialLayer"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added. bSI Documentation"
+msgid "IfcMaterialLayer_DEFINITION"
+msgstr "[[IfcMaterialLayer]] is a single and identifiable part of an element which is constructed of a number of layers one or more . Each [[IfcMaterialLayer]] has a constant thickness and is located relative to the referencing [[IfcMaterialLayerSet]] along the material layer set base MlsBase . Air gaps within a material layer set are represented as an [[IfcMaterialLayer]] with the attribute IsVentilated having the value TRUE or UNKNOWN. Such air gaps shall be interpreted as voids not having a material . EXAMPLE A cavity wall with brick masonry used with an air gap in between would be modeled using three [[IfcMaterialLayer]] s 1 Brick, 2 Air gap, 3 Brick. The inner layer Brick would have a Name Brick , an individual LayerThickness , and potentially a Category indicating it as load bearing , and a Priority that controls how this material layer interacts with other material layers in wall connections. The [[IfcMaterialLayer]] may have a material layer name which may differ from the [[IfcMaterial]] name referenced. EXAMPLE The [[IfcMaterialLayer]] name of an insulation layer can be Insulation , whereas the [[IfcMaterial]] name is polystyrene insulating boards . HISTORY New entity in IFC1.5 .change ifc2x4 IFC4 CHANGE The attributes Name , Description , Category , Priority have been added at the end of attribute list. Data type of LayerThickness relaxed to [[IfcNonNegativeLengthMeasure]] . bSI Documentation"
 
-#:IFC.xml:44200
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "EdgeElement"
+#:IFC.xml:21295
+msgid "IfcMaterialLayer_Material"
+msgstr "材料"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "EdgeElement"
+msgid "IfcMaterialLayer_Material_DEFINITION"
+msgstr "材料"
 
-#:IFC.xml:44320
-msgid "IfcOrientedEdge_Orientation"
-msgstr "方向"
+#:IFC.xml:21495
+msgid "IfcMaterialLayer_ToMaterialLayerSet"
+msgstr "ToMaterialLayerSet"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN (BOOLEAN) 使用されているトポロジカル方向が format@@0 の場合、エッジ要素の始点から終点までの方向と一致します。format@@1"
+msgid "IfcMaterialLayer_ToMaterialLayerSet_DEFINITION"
+msgstr "ToMaterialLayerSet"
 
-#:IFC.xml:44325
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:21463
+msgid "IfcMaterialLayer_LayerThickness"
+msgstr "LayerThickness"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcMaterialLayer_LayerThickness_DEFINITION"
+msgstr "The thickness of the material layer. The meaning of thickness depends on its usage. In case of building elements elements utilizing [[IfcMaterialLayerSetUsage]] , the dimension is measured along the positive LayerSetDirection as specified in [[IfcMaterialLayerSetUsage]] . X 0D X 0D NOTE The attribute value can be 0. for material thicknesses very close to zero, such as for a membrane. Material layers with thickess 0. may not be rendered in the geometric representation. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE The attribute datatype has been changed to [[IfcNonNegativeLengthMeasure]] allowing for 0. as thickness."
 
-#:IFC.xml:44329
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:21468
+msgid "IfcMaterialLayer_IsVentilated"
+msgstr "IsVentilated"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcMaterialLayer_IsVentilated_DEFINITION"
+msgstr "材料層が空気の層または空洞を表すかどうかの表示。 物質層が空隙である場合、X 0DはTRUEに設定され、層から外部の空気に空気交換を提供します。 物質層がエアギャップであり、空気交換を提供していない場合、または空隙間の空気交換に関するこの情報が利用できない場合、X 0DはUNKNOWNに設定されています。 マテリアルレイヤーが既定のソリッドマテリアルレイヤーの場合は、X 0DがFALSEに設定されます。"
 
-#:IFC.xml:44347
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:21473
+msgid "IfcMaterialLayer_Name"
+msgstr "名前"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 パスは、指向エッジの順序付けられたコレクションからなるトポロジカルエンティティです。 それぞれのエッジの始点が前のエッジの終点と一致するようにします パスは、最初の方向のエッジの始点から最後のエッジの終点まで順序付けられます。 指向エッジの BOOLEAN 値センスは、エッジ方向がパスの TRUE の方向と一致するか、または FALSE の逆方向であるかを示します。 個々のエッジは、個々のパスによって一度だけ参照することができます エッジは、複数のパスによって参照することができます。 エッジはパスとは独立して存在することができます。ISO 10303 42に定義されているパスから適応された注記エンティティは、IFC2に新しいエンティティです。 .spec ヘッド 非公式提案 1. パスは次元性を持っている 1. パスはアークワイズ接続されている 3. パスのエッジは、共通の頂点を除いて交差しません。4. パスには有限、ゼロではない範囲があります。"
+msgid "IfcMaterialLayer_Name_DEFINITION"
+msgstr "材料層が知られている名前。"
 
-#:IFC.xml:44335
-msgid "IfcPath_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:21478
+msgid "IfcMaterialLayer_Description"
+msgstr "説明"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "EdgeList"
+msgid "IfcMaterialLayer_Description_DEFINITION"
+msgstr "属性によって与えられるよりも、より詳細な用語のマテリアルレイヤーの定義 名前またはカテゴリ。"
 
-#:IFC.xml:44354
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadTail APath"
+#:IFC.xml:21483
+msgid "IfcMaterialLayer_Category"
+msgstr "カテゴリ"
 
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "入力パスのすべてのエッジが連続している場合、この関数は TRUE を返します。 xtDef NOTEのISO CD 10303による定義 42 1992 この関数は、入力パスのエッジに対して各エッジの終点がその後継の開始頂点と同じ場合に TRUE を返します。 注 ISO10303で定義されているパスヘッドからテールに適応した機能 HISTORYIFC2.0における新機能"
+msgid "IfcMaterialLayer_Category_DEFINITION"
+msgstr "材料レイヤーのカテゴリ、例: レイヤーセットに含まれる役割は負荷軸受や断熱など キーワードのリストは、モデルビュー定義によって拡張される可能性があります。 ただし、以下のキーワードは、負荷ベアリング機能を持つすべての材料層について、一般的にX 0Dロードベアリングに適用されます。 絶縁機能を持つすべての材料層のX0D断熱。 X 0D マテリアルレイヤーの内側仕上げ。X 0D マテリアルレイヤーの外側仕上げ。"
 
-#:IFC.xml:44362
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:21488
+msgid "IfcMaterialLayer_Priority"
+msgstr "優先度"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value. bSI Documentation"
+msgid "IfcMaterialLayer_Priority_DEFINITION"
+msgstr "レイヤーの相対優先度。正規化された整数範囲 0..100 で表されます。 要素を構築する際にレイヤーがどのように交差するかを制御します。 を選択します。前の要素の s 層が後者よりも優先度が高い場合、これらの要素の結合の別の要素から層を置き換えます。 要素内の材料層の優先度は、接続された要素内の材料層に関連してソフトウェアアプリケーションによって設定され、維持される必要があります。 X 0D X 0D NOTE 接続におけるレイヤーの優先度は、レイヤー構造を持つ2つのビルディング要素間の論理的な接続を確立するために、[[IfcRelConnectsPathElements]] の priority 属性によって上書きされる可能性があります。"
 
-#:IFC.xml:11495
-msgid "IfcPolyLoop_Polygon"
-msgstr "多角形（多角形）"
+#:IFC.xml:21509
+msgid "IfcMaterialLayerSet"
+msgstr "IfcMaterialLayerSet"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "多角形（多角形）"
+msgid "IfcMaterialLayerSet_DEFINITION"
+msgstr "The [[IfcMaterialLayerSet]] is a designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed. The Material Layer Set Base MlsBase describes the imaginary axis along which the material layers are positioned. In case of assigning the [[IfcMaterialLayerSet]] directly to an element or element type, the individual layers are stacked according to their position within the list of MaterialLayers without providing information on how to spatially relate the material layer information to the shape representation of the element or element type. In case of assigning the [[IfcMaterialLayerSet]] through an [[IfcMaterialLayerSetUsage]] to an element, the MlsBase is positioned along the reference axis or reference plane of the element. An offset from the reference axis or plane to MlsBase is supported by [[IfcMaterialLayerSetUsage]] which combines layers and an offset. Offsets from element edges are supported by the subtype [[IfcMaterialLayerWithOffsets]] . The positive LayerSetDirection MlsDirection describes the direction by which the individual material layers are stacked. The [[IfcMaterialLayer]] s are stacked with no gap. Gaps within a material layer set are expressed as layers by themselves. EXAMPLE A cavity brick wall would be modeled as [[IfcMaterialLayerSet]] consisting of three [[IfcMaterialLayer]] s brick, air cavity and brick. The air gap is identified by the IsVentilated flag at [[IfcMaterialLayer]] . HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcMaterialDefinition]] , the attribute Description has been added at the end of attribute list. .use head Attribute use definition As shown in Figure 1, each [[IfcMaterialLayerSet]] implicitly defines a material layer set base line MlsBase , to which the start of the first [[IfcMaterialLayer]] is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous no gaps or overlaps . material layer set .. .. .. .. .. .. figures ifcmateriallayerset 01.png Figure 1 Material layer set bSI Documentation"
 
-#:IFC.xml:44369
-msgid "IfcSubedge"
-msgstr "IFcSubedge"
+#:IFC.xml:21495
+msgid "IfcMaterialLayerSet_MaterialLayers"
+msgstr "マテリアルレイヤー"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 サブエッジは、既存のエッジのドメインの接続部分であるエッジです。 サブエッジ上のトポロジカル制約は、エッジ上のトポロジカル制約と同じです。 注 ISO 10303 42に定義されているサブエッジから適応したエンティティ HISTORY IFC2x2の新しいエンティティ。 ペックヘッド 非公式な提案 1. サブエッジのドメインは、親エッジのドメインとして正式に定義されます。 で指定します。 2 開始頂点と終了頂点は、親エッジの頂点の領域と親エッジの領域の結合の範囲内でなければならない . bSI ドキュメント"
+msgid "IfcMaterialLayerSet_MaterialLayers_DEFINITION"
+msgstr "マテリアルレイヤー"
 
-#:IFC.xml:44188
-msgid "IfcSubedge_ParentEdge"
-msgstr "ParentEdge"
+#:IFC.xml:21510
+msgid "IfcMaterialLayerSet_LayerSetName"
+msgstr "レイヤーセット名"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "ParentEdge"
+msgid "IfcMaterialLayerSet_LayerSetName_DEFINITION"
+msgstr "[[IfcMaterialLayerSet]] が知られている名前。"
 
-#:IFC.xml:44372
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:21515
+msgid "IfcMaterialLayerSet_Description"
+msgstr "説明"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 トポロジ表示アイテムはジオメトリリソース内のすべてのトポロジ表示アイテムのスーパータイプです。 注記エンティティは ISO 10303 42に定義されているトポロジカル表現アイテムから適応されています。履歴 IFC1.5 bSI Documentation"
+msgid "IfcMaterialLayerSet_Description_DEFINITION"
+msgstr "[[IfcMaterialLayerSet]] の説明用語で定義します。X 0D . hangeのifc2x4 X 0D IFC4の変更 属性は属性リストの最後に追加されました。"
 
-#:IFC.xml:44375
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:21520
+msgid "IfcMaterialLayerSet_TotalThickness"
+msgstr "TotalThickness"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点に対応するトポロジカル構造です。 それは次元0と次元0を持っています。 頂点の領域が存在する場合、m寸法実空間R Mの点であり、頂点のサブタイプによって表されます。 注記エンティティは、ISO 10303に定義されている頂点から適応しました 42. 履歴 IFC2.0の新しいエンティティ .spec ヘッド 非公式の提案 1. 頂点の寸法は 0 です。これは頂点の基本的な性質です。 2. 頂点の範囲はゼロと定義されます。bSIドキュメント"
+msgid "IfcMaterialLayerSet_TotalThickness_DEFINITION"
+msgstr "材料層セットの全体の厚さは、機能IfcMlsTotalThicknessに由来します。"
 
-#:IFC.xml:44390
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:21539
+msgid "IfcMaterialLayerSetUsage"
+msgstr "IfcMaterialLayerSetUsage"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点ループは、1 つの頂点からなるゼロ属のループです。 頂点は、頂点ループとは独立して存在することができます. トポロジデータは、次の制約画像を満たすもの. .. .. .. .. .. .. 図: ifcvertexloop math1.gif NOTE ISO 10303で定義された頂点ループから適応された実体。HISTORY IFC2x2に新しい実体。 ペックヘッド 非公式の提案 1. 頂点ループは、0の範囲と寸法性を持っています。2. 頂点ループは属性を持っています。bSI Documentation"
+msgid "IfcMaterialLayerSetUsage_DEFINITION"
+msgstr "The [[IfcMaterialLayerSetUsage]] determines the usage of [[IfcMaterialLayerSet]] in terms of its location and orientation relative to the associated element geometry. The location of material layer set shall be compatible with the building element geometry that is, material layers shall fit inside the element geometry . The rules to ensure the compatibility depend on the type of the building element. EXAMPLE S For a cavity brick wall with shape representation SweptSolid, the [[IfcMaterialLayerSet]].TotalThickness shall be equal to the wall thickness. Also the OffsetFromReferenceLine shall match the exact positions between the two shape representations of [[IfcWallStandardCase]] , that is the [[IfcShapeRepresentation]] s with RepresentationIdentifier Axis and RepresentationIdentifier Body . NOTE S Model view definitions or implementer agreements may provide more instructions on matching between building element geometry and material layer set usage. The [[IfcMaterialLayerSetUsage]] is always assigned to an individual occurrence object and only to relevant subtypes of [[IfcElement]] . The [[IfcMaterialLayerSet]] , referenced by ForLayerSet , can however be shared among several occurrence objects. If the element type is available in other words, an instance of the relevant subtype of [[IfcElementType]] exists , then the [[IfcMaterialLayerSet]] can be assigned to the element type. The assignment between a S subtype of [[IfcElement]] and the [[IfcMaterialLayerSetUsage]] is handled by [[IfcRelAssociatesMaterial]] . .use head Attribute use definition The [[IfcMaterialLayerSetUsage]] is primarily intended to be associated with planar building elements having a constant thickness. With further agreements on the interpretation of LayerSetDirection , the usage can be extended also to other cases, for example to curved building elements, provided that the material layer thicknesses are constant. Generally, an element may be layered in any of its primary directions, denoted by its x, y or z axis. The geometry use definitions at each S specific type of building element will determine the applicable S LayerSetDirection . The following examples illustrate how the [[IfcMaterialLayerSetUsage]] attributes LayerSetDirection , DirectionSense , OffsetFromReferenceLine can be used in different cases. Normative material use definitions are documented at each element how these shall be used . Figure 1 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to the axis of a wall. EXAMPLE For a standard wall with extruded geometric representation vertical extrusion , the layer set direction will be perpendicular to extrusion direction, and S can be derived from the direction of the wall axis. With the DirectionSense positive in this example the individual IfcMaterialLayers are assigned consecutively right to left or left to right. For a curved wall, direction denoting the wall thickness can be derived from the direction of the wall axis, and it will remain perpendicular to the wall path. The DirectionSense applies as well. NOTE According to the [[IfcWallStandardCase]] material use definition the LayerSetDirection for [[IfcWallStandardCase]] is always AXIS2 that is, along the y axis , as shown in this example. Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage wall 01.png Figure 1 Material layer set usage for wall Figure 2 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a slab. EXAMPLE S For a slab with perpendicular extruded geometric representation, the LayerSetDirection will coincide with the extrusion direction in positive or negative sense . In this example, the material layer set base is the extruded profile and consistent with the [[IfcExtrudedAreaSolid]].Position , S with the DirectionSense being positive, the individual IfcMaterialLayers are built up from the base towards the positive z direction in this case. NOTE S According to the [[IfcSlabStandardCase]] material use definition the LayerSetDirection for [[IfcSlabStandardCase]] is always AXIS3 that is, along the z axis . Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage slab 01.png Figure 2 Material layer set usage for slab Figure 3 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a roof slab with non perpendicular extrusion. EXAMPLE S For a slab with non perpendicular extruded geometric representation, the guidelines above apply as well. The material layer thickness and the OffsetFromReferenceLine are always measured perpendicularly, even if the extrusion direction is not perpendicular. Therefore the total material layer thickness is not equal to the extrusion depth of the geometry. Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage roofslab 01.png Figure 3 Material layer set usage for roof slab bSI Documentation"
 
-#:IFC.xml:44378
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:21527
+msgid "IfcMaterialLayerSetUsage_ForLayerSet"
+msgstr "ForLayerSet"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "LoopVertex"
+msgid "IfcMaterialLayerSetUsage_ForLayerSet_DEFINITION"
+msgstr "ForLayerSet"
 
-#:IFC.xml:44393
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:21540
+msgid "IfcMaterialLayerSetUsage_LayerSetDirection"
+msgstr "LayerSetDirection"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点として定義されているジオメトリを持つ頂点です。 注記エンティティは、ISO 10303 42 で定義されている頂点から適応しています。 歴史 IFC2x.spec ヘッド 非公式提案 1. 頂点のドメインは、その頂点点のドメインとして正式に定義されます。bSI Documentation"
+msgid "IfcMaterialLayerSetUsage_LayerSetDirection_DEFINITION"
+msgstr "Orientation of the material layer set relative to element reference geometry. The meaning of the value of this attribute shall be specified in the geometry use section for each element. For extruded shape representation, direction can be given along the extrusion path e.g. for slabs or perpendicular to it e.g. for walls . X 0D X 0D NOTE The LayerSetDirection for [[IfcWallStandardCase]] shall be AXIS2 i.e. the y axis and for [[IfcSlabStandardCase]] and [[IfcPlateStandardCase]] it shall be AXIS3 i.e. the z axis . X 0D X 0D NOTE Whether the material layers of the set being used shall grow into the positive or negative direction of the given axis, shall be defined by DirectionSense attribute."
 
-#:IFC.xml:12625
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "頂点ジオメトリー"
+#:IFC.xml:21545
+msgid "IfcMaterialLayerSetUsage_DirectionSense"
+msgstr "DirectionSense"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "頂点ジオメトリー"
+msgid "IfcMaterialLayerSetUsage_DirectionSense_DEFINITION"
+msgstr "マテリアルレイヤセットが、LayerSetDirectionによって定義された指定された軸に沿って正または負の方向になるかどうかを示します。 正の値は、連続したレイヤーが [[IfcMaterialLayer]] のリスト内の [[IfcMaterialLayerSet]] インスタンスであることを意味します。 aterialLayersは、LayerSetDirectionによって確立されたように、正の軸の方向に面単位で配置されます。 AXIS3の場合はzになります。 負とは、レイヤーが負のLayerSetDirectionの方向に面ごとに配置されることを意味します。 どちらの場合も、マテリアルレイヤーからベースラインを設定します。 X 0D NOTE 材料層セットベースライン MlsBase は、OffsetFromReferenceLineによって配置されています。 そして、要素の参照線または平面の正または負の側面にある場合があります。MlsBase の配置は、DirectionSense 属性に依存しません。 関連する要素の軸上に置かれています"
 
-#:IFC.xml:44397
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:21550
+msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine"
+msgstr "OffsetFromReferenceLine"
 
-msgid "IfcShell_DEFINITION"
-msgstr "異なる種類のシェルを構成するタイプ。 。 xtDef NOTEの定義 ISO CD 10303 42 1992 このタイプは一緒に収集します。 より複雑なモデルを構築する場合、シェルの特性を持つサブタイプを参照します。 シェルは、領域をバインドするために一般的に使用される固定次元性d 0 1 または 2 の接続されたオブジェクトです。 シェルのドメイン (存在する場合) 範囲を含み、0 <unk> 0 のシェルは単一の頂点からなるグラフで表されます。 頂点には関連するエッジはありません。次元性1のシェルは、次元性1の接続されたグラフで表されます。 次元性のシェル2は、エッジに沿って面を結合することによって構築されたトポロジカル図形です。 そのドメインが存在する場合、接続された方向性のある境界を持つ2マニホールドです。 接続された方向性があり 有限であり 自己が交差していない表面で 閉じられたり開いたりする可能性があります 注記の種類は、ISO 10303 42に定義されているシェルから適応されています。"
+msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine_DEFINITION"
+msgstr "材料層のオフセットは、要素の参照ジオメトリラインまたは平面からベースラインMlsBaseを設定します。 オフセットは、使用定義または実装者契約で特定のビルディング要素の型に制限されない限り、正または負にすることができます。 正の値は、基準線または平面の正の側にMlsBaseを配置することを意味します。 軸上に LayerSetDirectionによってY方向にAXIS2の場合に設置された軸に または、AXIS2の場合はzの方向に。 負の値は、MlsBase が負の側に置かれることを意味します。 として、AXIS2の場合はLayerSetDirectionによってyの方向に確立されます。 X 0D NOTE オフセット内の正または負の記号は、MlsBase 配置にのみ影響します。 材料層の向きに対するDirectionSenseの適用に影響はありません。また、DirectionSenseはMlsBaseの配置を変更しません。"
+
+#:IFC.xml:21555
+msgid "IfcMaterialLayerSetUsage_ReferenceExtent"
+msgstr "ReferenceExtent"
+
+msgid "IfcMaterialLayerSetUsage_ReferenceExtent_DEFINITION"
+msgstr "Extent of the extrusion of the elements body shape representation to which the [[IfcMaterialLayerSetUsage]] applies. It is used as the reference value for the upper OffsetValues 2 provided by the IfcMaterialLayerSetWithOffsets subtype for included material layers. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added to the end of attribute list. X 0D X 0D NOTE The attribute ReferenceExtent shall be asserted, if an IfcMaterialLayerSetWithOffsets is included in the ForLayerSet.MaterialLayers list of material layers. X 0D X 0D NOTE The ReferenceExtent for [[IfcWallStandardCase]] is the reference height starting at z 0 being the XY plane of the object coordinate system."
+
+#:IFC.xml:21562
+msgid "IfcMaterialLayerWithOffsets"
+msgstr "IfcMaterialLayerWithOffsets"
+
+msgid "IfcMaterialLayerWithOffsets_DEFINITION"
+msgstr "[[IfcMaterialLayerWithOffsets]] is a specialization of [[IfcMaterialLayer]] enabling definition of offset values along edges within the material layer set usage in parent layer set . It defines the assignment of two offset values for a material layer in its intended use within a material layer set. Offsets are applied to the edges of layered elements that is, in directions perpendicular to the layer set direction . Offsets shall not be used in layer set direction, that is, for modelling gaps or overlaps between layers gaps shall be modeled as layers with appropriate material assignment for the void. EXAMPLE At the top of a standard wall, with shape representation SweptSolid , offset of a given layer can be specified in the direction of the extrusion positive Z axis , applied at the start or end extruded from bottom to top , and with a positive extending above extrusion or negative ending below extrusion . Take a standard wall with the outer material layer for the external isolation extending above extrusion by 100mm, but starting at the same base height. In this case the following values are set OffsetDirection .AXIS3. OffsetValues 1 0.0 OffsetValues 2 100.0 default unit assumed to be mm NOTE The Body shape representation of an [[IfcWall]] or an [[IfcWallStandardCase]] may have multiple Items each being an [[IfcExtrudedAreaSolid]] corresponding to the [[IfcMaterialLayer]] and [[IfcMaterialLayerWithOffsets]] . HISTORY New entity in IFC4. .spec head Informal Propositions 1. The OffsetDirection shall not be identical to the LayerSetDirection of the corresponding [[IfcMaterialLayerSetUsage]] . 2. The attribute ReferenceExtent shall be asserted at the corresponding [[IfcMaterialLayerSetUsage]] . .use head Attribute use definition The OffsetValues and OffsetDirection correspond to the definitions ReferenceExtent and LayerSetDirection at the [[IfcMaterialLayerSetUsage]] . Figure 1 shows an example of applying the OffsetValues to the material layers of a standard wall. [[IfcMaterialLayerWithOffsets]] fig 1 .. .. .. .. .. .. figures ifcmateriallayerwithoffsets fig 1.png Figure 1 Material layer with offsets bSI Documentation"
+
+#:IFC.xml:21563
+msgid "IfcMaterialLayerWithOffsets_OffsetDirection"
+msgstr "オフセット方向"
+
+msgid "IfcMaterialLayerWithOffsets_OffsetDirection_DEFINITION"
+msgstr "オフセットの方向は、親レイヤーが設定した方向に対して垂直になります。"
+
+#:IFC.xml:21568
+msgid "IfcMaterialLayerWithOffsets_OffsetValues"
+msgstr "オフセット値"
+
+msgid "IfcMaterialLayerWithOffsets_OffsetValues_DEFINITION"
+msgstr "[OffsetDirection] 属性によって割り当てられた軸方向のレイヤーオフセットの数値。 オフセット値 1 は、通常は標準押し出しの開始軸方向に沿って下の位置からのオフセットを識別します。 オフセット値 2 は、通常は標準押し出しの終わりである軸方向に沿った上部位置からのオフセットを識別します。"
+
+#:IFC.xml:21575
+msgid "IfcMaterialList"
+msgstr "IfcMaterialList"
+
+msgid "IfcMaterialList_DEFINITION"
+msgstr "[[IfcMaterialList]] is a list of the different materials that are used in an element. NOTE The class [[IfcMaterialList]] will normally be used where an element is described at a more abstract level. For example, for an architectural specification writer, the only information that may be needed about a concrete column is that it contains concrete, reinforcing steel and mild steel ligatures. It shall not be used for elements consisting of material layers when the different layers can be defined and the class [[IfcMaterialLayerSet]] can be used. Also, [[IfcMaterialList]] shall not be used for elements consisting of a single identifiable material for example, to represent anisotropic material . .change ifc2x4 IFC4 CHANGE S The entity [[IfcMaterialList]] is deprecated and shall no longer be used. Use [[IfcMaterialConstituentSet]] instead. bSI Documentation"
+
+#:IFC.xml:21333
+msgid "IfcMaterialList_Materials"
+msgstr "材料"
+
+msgid "IfcMaterialList_Materials_DEFINITION"
+msgstr "材料"
+
+#:IFC.xml:21577
+msgid "IfcMaterialProfile"
+msgstr "IfcMaterialProfile"
+
+msgid "IfcMaterialProfile_DEFINITION"
+msgstr "[[IfcMaterialProfile]] is a single and identifiable cross section of an element which is constructed of a number of profiles one or more . NOTE In case of multiple MaterialProfiles , the relative positioning of individual profiles in [[IfcMaterialProfileSet]] are defined using the concept of [[IfcCompositeProfileDef]] in IfcProfileResource schema otherwise, only one MaterialProfile is given and defined by an individual [[IfcProfileDef]] subtype . HISTORY S New entity in IFC4 bSI Documentation"
+
+#:IFC.xml:21321
+msgid "IfcMaterialProfile_Material"
+msgstr "材料"
+
+msgid "IfcMaterialProfile_Material_DEFINITION"
+msgstr "材料"
+
+#:IFC.xml:21604
+msgid "IfcMaterialProfile_Profile"
+msgstr "プロフィール"
+
+msgid "IfcMaterialProfile_Profile_DEFINITION"
+msgstr "プロフィール"
+
+#:IFC.xml:21616
+msgid "IfcMaterialProfile_ToMaterialProfileSet"
+msgstr "ToMaterialProfileSet"
+
+msgid "IfcMaterialProfile_ToMaterialProfileSet_DEFINITION"
+msgstr "ToMaterialProfileSet"
+
+#:IFC.xml:21582
+msgid "IfcMaterialProfile_Name"
+msgstr "名前"
+
+msgid "IfcMaterialProfile_Name_DEFINITION"
+msgstr "材料プロファイルが知られている名前。"
+
+#:IFC.xml:21587
+msgid "IfcMaterialProfile_Description"
+msgstr "説明"
+
+msgid "IfcMaterialProfile_Description_DEFINITION"
+msgstr "説明用語での材料プロファイルの定義。"
+
+#:IFC.xml:21592
+msgid "IfcMaterialProfile_Priority"
+msgstr "優先度"
+
+msgid "IfcMaterialProfile_Priority_DEFINITION"
+msgstr "プロファイルの相対的な優先順位は、正規化された整数範囲 0..100 で表されます。 構成要素の接続とコーナーでプロファイルが交差する方法を制御します 1つの要素からプロファイルが突出する、すなわち。 前の要素sのプロファイルが後者よりも優先度が高い場合、これらの要素のジョイントの別の要素からプロファイルを置き換えます。 要素内の材料プロファイルの優先順位は、接続された要素内の材料プロファイルに関連してソフトウェアアプリケーションによって設定され、維持されなければなりません。"
+
+#:IFC.xml:21597
+msgid "IfcMaterialProfile_Category"
+msgstr "カテゴリ"
+
+msgid "IfcMaterialProfile_Category_DEFINITION"
+msgstr "マテリアルプロファイルのカテゴリ。例えば、それが属するプロファイルセットでのロールなど。 キーワードのリストは、モデルビュー定義によって拡張される可能性があります。 ただし、以下のキーワードは一般的にX-0Dロードベアリング機能を持つ材料プロファイルに適用されます。 X 0D 絶縁関数を持つ材料プロファイルを断熱します。X 0D 材料プロファイルが終了します。"
+
+#:IFC.xml:21630
+msgid "IfcMaterialProfileSet"
+msgstr "IfcMaterialProfileSet"
+
+msgid "IfcMaterialProfileSet_DEFINITION"
+msgstr "The [[IfcMaterialProfileSet]] is a designation by which individual material s of a prismatic element for example, beam or column constructed of a single or multiple material profiles is known. NOTE In case of multiple MaterialProfiles , the relative positioning of individual profiles in [[IfcMaterialProfileSet]] are defined using the concept of [[IfcCompositeProfileDef]] in IfcProfileResource schema otherwise, only one MaterialProfile is given and defined by an individual [[IfcProfileDef]] subtype . HISTORY S New entity in IFC4. bSI Documentation"
+
+#:IFC.xml:21616
+msgid "IfcMaterialProfileSet_MaterialProfiles"
+msgstr "Materialプロフィール"
+
+msgid "IfcMaterialProfileSet_MaterialProfiles_DEFINITION"
+msgstr "Materialプロフィール"
+
+#:IFC.xml:21643
+msgid "IfcMaterialProfileSet_CompositeProfile"
+msgstr "CompositeProfile"
+
+msgid "IfcMaterialProfileSet_CompositeProfile_DEFINITION"
+msgstr "CompositeProfile"
+
+#:IFC.xml:21631
+msgid "IfcMaterialProfileSet_Name"
+msgstr "名前"
+
+msgid "IfcMaterialProfileSet_Name_DEFINITION"
+msgstr "材料プロファイルセットが知られている名前。"
+
+#:IFC.xml:21636
+msgid "IfcMaterialProfileSet_Description"
+msgstr "説明"
+
+msgid "IfcMaterialProfileSet_Description_DEFINITION"
+msgstr "説明用語で設定された材料プロファイルの定義。"
+
+#:IFC.xml:21679
+msgid "IfcMaterialProfileSetUsage"
+msgstr "IfcMaterialProfileSetUsage"
+
+msgid "IfcMaterialProfileSetUsage_DEFINITION"
+msgstr "[[IfcMaterialProfileSetUsage]] determines the usage of [[IfcMaterialProfileSet]] in terms of its location relative to the associated element geometry. The location of a material profile set shall be compatible with the building element geometry that is, material profiles shall fit inside the element geometry . The rules to ensure the compatibility depend on the type of the building element. For building elements with shape representations which are based on extruded solids, this is accomplished by referring to the identical profile definition in the shape model as in the material profile set. NOTE Model view definitions or implementer agreements may provide more instructions on matching between building element geometry and material profile set usage. NOTE The referenced [[IfcMaterialProfileSet]] may represent a single material profile, or a composite profile with two or more material profiles. HISTORY S New entity in IFC4. bSI Documentation"
+
+#:IFC.xml:21655
+msgid "IfcMaterialProfileSetUsage_ForProfileSet"
+msgstr "ForProfileSet"
+
+msgid "IfcMaterialProfileSetUsage_ForProfileSet_DEFINITION"
+msgstr "ForProfileSet"
+
+#:IFC.xml:21680
+msgid "IfcMaterialProfileSetUsage_CardinalPoint"
+msgstr "CardinalPoint"
+
+msgid "IfcMaterialProfileSetUsage_CardinalPoint_DEFINITION"
+msgstr "セクションプロファイルの重要な点を参照します。 セクションがどのように関連付けられているメンバーの縦方向軸に対して相対的に位置合わせされるかを説明します。 プロファイルアライメントのこのパラメトリック仕様は、ForProfileSet.MaterialProfiles .Profileで定義された明示的なアライメントに冗長で提供することができます。"
+
+#:IFC.xml:21685
+msgid "IfcMaterialProfileSetUsage_ReferenceExtent"
+msgstr "ReferenceExtent"
+
+msgid "IfcMaterialProfileSetUsage_ReferenceExtent_DEFINITION"
+msgstr "Extent of the extrusion of the elements body shape representation to which the [[IfcMaterialProfileSetUsage]] applies. It is used as the reference value for the upper OffsetValues 2 provided by the IfcMaterialProfileSetWithOffsets subtype for included material profiles. X 0D X 0D NOTE The attribute ReferenceExtent shall be asserted if an IfcMaterialProfileSetWithOffsets is included in the ForProfileSet.MaterialProfiles list of material layers. X 0D X 0D NOTE The ReferenceExtent for [[IfcBeamStandardCase]] , [[IfcColumnStandardCase]] , and [[IfcMemberStandardCase]] is the reference length starting at z 0 being the XY plane of the object coordinate system."
+
+#:IFC.xml:21692
+msgid "IfcMaterialProfileSetUsageTapering"
+msgstr "IfcMaterialProfileSetUsageTapering"
+
+msgid "IfcMaterialProfileSetUsageTapering_DEFINITION"
+msgstr "[[IfcMaterialProfileSetUsageTapering]] specifies dual material profile sets in association with tapered prismatic beam or column like elements. HISTORY S New entity in IFC4 .use head Usage with tapered building elements The inherited attribute ForProfileSet specifies the profile and material at the start of the member, ForProfileEndSet at its end. Start and end correspond to the extrusion direction in the shape model of the shape representation of the element or element type. Both material profile sets should refer to the same material, that is, only differ with respect to their profiles. .use head Usage with structural analysis curve members [[IfcMaterialProfileSetUsageTapering]] may be used with the structural analysis idealization [[IfcStructuralCurveMember]] of uniform members as well as of tapered members. In case of uniform members, ForProfileSet and ForProfileEndSet refer to the same material profile set. In case of tapered members, ForProfileSet specifies the profile and material at the start of the member, ForProfileEndSet at its end. Start and end correspond to the edge direction in the topological representation of the curve member. bSI Documentation"
+
+#:IFC.xml:21667
+msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet"
+msgstr "ForProfileEndSet"
+
+msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet_DEFINITION"
+msgstr "ForProfileEndSet"
+
+#:IFC.xml:21693
+msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint"
+msgstr "CardinalEndPoint"
+
+msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint_DEFINITION"
+msgstr "2 番目のセクションプロファイルで重要な点を参照します。 このセクションが、それに関連付けられているメンバーの軸に対してどのように位置合わせされるかを説明します。 プロファイルアライメントのこのパラメトリック仕様は、ForProfileSet.MaterialProfiles .Profileで定義された明示的なアライメントに冗長で提供することができます。"
+
+#:IFC.xml:21700
+msgid "IfcMaterialProfileWithOffsets"
+msgstr "IfcMaterialProfileWithOffsets"
+
+msgid "IfcMaterialProfileWithOffsets_DEFINITION"
+msgstr "[[IfcMaterialProfileWithOffsets]] is a specialization of [[IfcMaterialProfile]] with additional longitudinal offsets . Relative positions of [[IfcMaterialProfileWithOffsets]] in the longitudinal direction of an element can be defined giving offsets at the start at the end, or at start and end. This shall not be used for relative positions of individual profiles in the plane of profile definition, which is given in composite profile definition itself. Also, care should be taken especially when used with [[IfcMaterialProfileSetUsageTapering]] for correct start and end offset assignment. HISTORY S New entity in IFC4. bSI Documentation"
+
+#:IFC.xml:21701
+msgid "IfcMaterialProfileWithOffsets_OffsetValues"
+msgstr "オフセット値"
+
+msgid "IfcMaterialProfileWithOffsets_OffsetValues_DEFINITION"
+msgstr "プロファイルオフセットの数値は、常に軸方向の方向である AXIS1 であり、押し出しパスに沿った軸です。 オフセット値 1 は、通常は標準押し出しの開始軸方向に沿って下の位置からのオフセットを識別します。 オフセット値 2 は、通常は標準押し出しの終わりである軸方向に沿った上部位置からのオフセットを識別します。"
+
+#:IFC.xml:21708
+msgid "IfcMaterialProperties"
+msgstr "IfcMaterialProperties"
+
+msgid "IfcMaterialProperties_DEFINITION"
+msgstr "The [[IfcMaterialProperties]] assigns a set of material properties to associated material definitions. The set may be identified by a Name and a Description . The [[IfcProperty]] instantiable subtypes is used to express the individual material properties by name, description, value and unit. NOTE The set of material properties can be assigned to an individual [[IfcMaterial]] , a set or composite of materials [[IfcMaterialConstituent]] , [[IfcMaterialConstituentSet]] , or set or individual material layer [[IfcMaterialLayer]] , [[IfcMaterialLayerSet]] , or a set or individual material profile [[IfcMaterialProfile]] , [[IfcMaterialProfileSet]] HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Entity made non abstract. The subtypes IfcMechanicalMaterialProperties, IfcThermalMaterialProperties, IfcHygroscopicMaterialProperties, IfcGeneralMaterialProperties, IfcOpticalMaterialProperties, IfcWaterProperties, IfcFuelProperties, IfcProductsOfCombustionProperties, IfcExtendedMaterialProperties have been deleted, use [[IfcMaterialProperties]] instead. bSI Documentation"
+
+#:IFC.xml:21432
+msgid "IfcMaterialProperties_Material"
+msgstr "材料"
+
+msgid "IfcMaterialProperties_Material_DEFINITION"
+msgstr "材料"
+
+#:IFC.xml:21711
+msgid "IfcMaterialRelationship"
+msgstr "IfcMaterialRelationship"
+
+msgid "IfcMaterialRelationship_DEFINITION"
+msgstr "[[IfcMaterialRelationship]] は、複合材料と同様に材料定義の部品と全体の関係を定義します。 RelatedMaterialsのセットで表される部分は、単一の材料集約が構成されている材料成分です。 HISTORY S IFC4 bSI ドキュメンテーション内の新しいエンティティ"
+
+#:IFC.xml:21307
+msgid "IfcMaterialRelationship_RelatedMaterials"
+msgstr "関連材料"
+
+msgid "IfcMaterialRelationship_RelatedMaterials_DEFINITION"
+msgstr "関連材料"
+
+#:IFC.xml:21357
+msgid "IfcMaterialRelationship_RelatingMaterial"
+msgstr "RelatingMaterial"
+
+msgid "IfcMaterialRelationship_RelatingMaterial_DEFINITION"
+msgstr "RelatingMaterial"
+
+#:IFC.xml:21712
+msgid "IfcMaterialRelationship_Expression"
+msgstr "式"
+
+msgid "IfcMaterialRelationship_Expression_DEFINITION"
+msgstr "複合材料内の関連する材料の量などを参照する材料関係に関する情報。 X 0D NOTE 式文字列値の形式的な意味は、モデルビュー定義または実装者契約で確立する必要があります。 この仕様の一部として、そのような正式な言語は提供されていません。"
+
+#:IFC.xml:21719
+msgid "IfcMaterialUsageDefinition"
+msgstr "IfcMaterialUsageDefinition"
+
+msgid "IfcMaterialUsageDefinition_DEFINITION"
+msgstr "[[IfcMaterialUsageDefinition]] is a general supertype for all material related information items in IFC that have occurrence specific assignment parameters to assign a set of materials with shape parameters to a reference geometry item of that component. There are two ways of assigning a set of materials with shape parameters a layer set to a reference curve assigning a material layer set with material layers having a sequence and thickness parameter to a reference curve of an element represented by the Axis shape representation of that element a profile set to a cardinal point assigning a material profile set with assigned profile geometry and insertion points to a reference curve by an offset, called cardinal point the reference curve is represented by the Axis shape representation of that element Each instantiable subtype of [[IfcMaterialUsageDefinition]] has to be assigned to a subtype of [[IfcElement]] by using the objectified relationship [[IfcRelAssociatesMaterial]] it is only valid in conjunction with an element occurrence. HISTORY S New entity in IFC4 .spec head Informal Propositions 1. It is illegal to assign a subtype of [[IfcMaterialUsageDefinition]] to a subtype of [[IfcElementType]] , it shall only be assigned to an element occurrence. bSI Documentation"
+
+#:IFC.xml:21721
+msgid "IfcMaterialUsageDefinition_AssociatedTo"
+msgstr "関連付け先"
+
+msgid "IfcMaterialUsageDefinition_AssociatedTo_DEFINITION"
+msgstr "関連付け先"
+
+#:IFC.xml:21733
+msgid "IfcMlsTotalThickness__LayerSet"
+msgstr "IfcMlsTotalThickness LayerSet"
+
+msgid "IfcMlsTotalThickness__LayerSet_DEFINITION"
+msgstr "機能 セマンティック定義 マテリアルレイヤーセットの総厚さを計算します。"
+
+#:IFC.xml:21741
+msgid "Pset_MaterialCombustion"
+msgstr "Pset MaterialCombustion"
+
+msgid "Pset_MaterialCombustion_DEFINITION"
+msgstr "一般的に、サービスやフロー分布システムの構築のコンテキストで使用される要素によって生成される燃焼製品の拡張材料のセット。 bSI ドキュメント"
+
+#:IFC.xml:21742
+msgid "Pset_MaterialCombustion_CO2Content"
+msgstr "CO2Content"
+
+msgid "Pset_MaterialCombustion_CO2Content_DEFINITION"
+msgstr "燃焼成物の二酸化炭素含有量. これは、単位重量あたりのCO2の重量で測定され、したがって単位ではありません."
+
+#:IFC.xml:21747
+msgid "Pset_MaterialCombustion_COContent"
+msgstr "COContent"
+
+msgid "Pset_MaterialCombustion_COContent_DEFINITION"
+msgstr "燃焼生成物の一酸化炭素含有量は、単位重量あたりのCO重量で測定されるため、単位ではありません。"
+
+#:IFC.xml:21752
+msgid "Pset_MaterialCombustion_N20Content"
+msgstr "N20Content"
+
+msgid "Pset_MaterialCombustion_N20Content_DEFINITION"
+msgstr "燃焼製品の一酸化窒素N2O含有量. これは、単位重量あたりN2Oの重量で測定され、したがって、単位ではありません."
+
+#:IFC.xml:21757
+msgid "Pset_MaterialCombustion_SpecificHeatCapacity"
+msgstr "SpecificHeatCapacity"
+
+msgid "Pset_MaterialCombustion_SpecificHeatCapacity_DEFINITION"
+msgstr "温度単位あたりに吸収される燃焼熱エネルギーの製品の特定の熱。"
+
+#:IFC.xml:21763
+msgid "Pset_MaterialCommon"
+msgstr "Pset MaterialCommon"
+
+msgid "Pset_MaterialCommon_DEFINITION"
+msgstr "一般的なマテリアルプロパティのセット。bSI Documentation"
+
+#:IFC.xml:21764
+msgid "Pset_MaterialCommon_MassDensity"
+msgstr "MassDensity"
+
+msgid "Pset_MaterialCommon_MassDensity_DEFINITION"
+msgstr "材料質量密度。"
+
+#:IFC.xml:21769
+msgid "Pset_MaterialCommon_MolecularWeight"
+msgstr "分子の重量"
+
+msgid "Pset_MaterialCommon_MolecularWeight_DEFINITION"
+msgstr "材料の分子重量は、典型的にはガス。"
+
+#:IFC.xml:21774
+msgid "Pset_MaterialCommon_Porosity"
+msgstr "<unk>"
+
+msgid "Pset_MaterialCommon_Porosity_DEFINITION"
+msgstr "材料Vbr Vnet Vbrによって占有される総体積の無効な割合。"
+
+#:IFC.xml:21812
+msgid "Pset_MaterialEnergy"
+msgstr "Pset MaterialEnergy"
+
+msgid "Pset_MaterialEnergy_DEFINITION"
+msgstr "エネルギー計算のための拡張材料プロパティのセット。bSI Documentation"
+
+#:IFC.xml:21813
+msgid "Pset_MaterialEnergy_GasPressure"
+msgstr "ガス<unk>"
+
+msgid "Pset_MaterialEnergy_GasPressure_DEFINITION"
+msgstr "ペインガス間の充填圧力などは、一定の容量に閉じ込められたガスの質量によって発生する圧力を満たします。"
+
+#:IFC.xml:21818
+msgid "Pset_MaterialEnergy_MoistureCapacityThermalGradient"
+msgstr "MoistureCapacityThermalGradient"
+
+msgid "Pset_MaterialEnergy_MoistureCapacityThermalGradient_DEFINITION"
+msgstr "水分量のための熱勾配係数. 水蒸気密度に基づいて."
+
+#:IFC.xml:21823
+msgid "Pset_MaterialEnergy_SolarRefractionIndex"
+msgstr "SolarRefractionIndex"
+
+msgid "Pset_MaterialEnergy_SolarRefractionIndex_DEFINITION"
+msgstr "屈折率太陽は、ある媒体から別の媒体へと通過する際の太陽線の屈曲を定義します。"
+
+#:IFC.xml:21828
+msgid "Pset_MaterialEnergy_SpecificHeatTemperatureDerivative"
+msgstr "特定温度導出性"
+
+msgid "Pset_MaterialEnergy_SpecificHeatTemperatureDerivative_DEFINITION"
+msgstr "特定の熱温度誘導体。"
+
+#:IFC.xml:21833
+msgid "Pset_MaterialEnergy_ThermalConductivityTemperatureDerivative"
+msgstr "ThermalConductivityTemperatureDerivative"
+
+msgid "Pset_MaterialEnergy_ThermalConductivityTemperatureDerivative_DEFINITION"
+msgstr "熱伝導性温度誘導体。"
+
+#:IFC.xml:21838
+msgid "Pset_MaterialEnergy_ViscosityTemperatureDerivative"
+msgstr "粘度温度導出率"
+
+msgid "Pset_MaterialEnergy_ViscosityTemperatureDerivative_DEFINITION"
+msgstr "粘度温度誘導体."
+
+#:IFC.xml:21843
+msgid "Pset_MaterialEnergy_VisibleRefractionIndex"
+msgstr "可視RefractionIndex"
+
+msgid "Pset_MaterialEnergy_VisibleRefractionIndex_DEFINITION"
+msgstr "屈折率表示は、あるメディアから別のメディアに渡されたときに可視スペクトル内のソルラr光線の曲げを定義します。"
+
+#:IFC.xml:21849
+msgid "Pset_MaterialFuel"
+msgstr "Pset MaterialFuel"
+
+msgid "Pset_MaterialFuel_DEFINITION"
+msgstr "一般的に、サービスとフロー分配システムの構築に関連して使用される燃料エネルギーの拡張材料特性のセット。bSI Documentation"
+
+#:IFC.xml:21850
+msgid "Pset_MaterialFuel_CarbonContent"
+msgstr "CarbonContent"
+
+msgid "Pset_MaterialFuel_CarbonContent_DEFINITION"
+msgstr "燃料中の炭素含有量. これは燃料の単位重量あたりの炭素の重量で測定され、したがって単位ではありません."
+
+#:IFC.xml:21855
+msgid "Pset_MaterialFuel_CombustionTemperature"
+msgstr "燃焼温度"
+
+msgid "Pset_MaterialFuel_CombustionTemperature_DEFINITION"
+msgstr "空気が298 Kと100 kPaであるときの材料の燃焼温度。"
+
+#:IFC.xml:21860
+msgid "Pset_MaterialFuel_HigherHeatingValue"
+msgstr "HigherHeatingValue"
+
+msgid "Pset_MaterialFuel_HigherHeatingValue_DEFINITION"
+msgstr "高加熱値は、燃料を完全に燃焼させた時に放出されるMJkgの量と定義されます。 H2Oは燃焼製品の液体状態です。"
+
+#:IFC.xml:21865
+msgid "Pset_MaterialFuel_LowerHeatingValue"
+msgstr "低加熱値"
+
+msgid "Pset_MaterialFuel_LowerHeatingValue_DEFINITION"
+msgstr "低加熱量は、燃料を完全に燃焼させた時に放出されるMJkgの量と定義されます。 そしてH2Oは燃焼製品の蒸気です。"
+
+#:IFC.xml:21871
+msgid "Pset_MaterialHygroscopic"
+msgstr "Pset MaterialHygroscopic"
+
+msgid "Pset_MaterialHygroscopic_DEFINITION"
+msgstr "材料の吸湿性特性のセット。bSI Documentation"
+
+#:IFC.xml:21872
+msgid "Pset_MaterialHygroscopic_IsothermalMoistureCapacity"
+msgstr "IsothermalMoistureCapacity"
+
+msgid "Pset_MaterialHygroscopic_IsothermalMoistureCapacity_DEFINITION"
+msgstr "水蒸気密度に基づいています。"
+
+#:IFC.xml:21877
+msgid "Pset_MaterialHygroscopic_LowerVaporResistanceFactor"
+msgstr "LowerVaporResistanceFactor"
+
+msgid "Pset_MaterialHygroscopic_LowerVaporResistanceFactor_DEFINITION"
+msgstr "空気材料の蒸気透過性の関係は、通常、0 50 RHの低相対湿度で測定された値1 。"
+
+#:IFC.xml:21882
+msgid "Pset_MaterialHygroscopic_MoistureDiffusivity"
+msgstr "湿度拡散率"
+
+msgid "Pset_MaterialHygroscopic_MoistureDiffusivity_DEFINITION"
+msgstr "水分拡散率は、エンベロープ成分を構築する際に頻繁に使用されるトランスポート特性です。"
+
+#:IFC.xml:21887
+msgid "Pset_MaterialHygroscopic_UpperVaporResistanceFactor"
+msgstr "UpperVaporResistanceFactor"
+
+msgid "Pset_MaterialHygroscopic_UpperVaporResistanceFactor_DEFINITION"
+msgstr "空気材料の蒸気透過性関係は、典型的には、95の50 RHで高相対湿度で測定された値1、。"
+
+#:IFC.xml:21892
+msgid "Pset_MaterialHygroscopic_VaporPermeability"
+msgstr "VaporPermeability"
+
+msgid "Pset_MaterialHygroscopic_VaporPermeability_DEFINITION"
+msgstr "試験条件下における蒸気圧差の単位面積あたりの水蒸気伝送速度。"
+
+#:IFC.xml:21898
+msgid "Pset_MaterialMechanical"
+msgstr "Pset MaterialMechanical"
+
+msgid "Pset_MaterialMechanical_DEFINITION"
+msgstr "構造解析の目的に通常使用される一連の機械的な材料特性。 実際のマテリアルタイプとは独立したすべてのプロパティが含まれています。bSI Documentation"
+
+#:IFC.xml:21899
+msgid "Pset_MaterialMechanical_DynamicViscosity"
+msgstr "ダイナミクス粘度"
+
+msgid "Pset_MaterialMechanical_DynamicViscosity_DEFINITION"
+msgstr "材料の粘性抵抗の測定。"
+
+#:IFC.xml:21904
+msgid "Pset_MaterialMechanical_PoissonRatio"
+msgstr "PoissonRatio"
+
+msgid "Pset_MaterialMechanical_PoissonRatio_DEFINITION"
+msgstr "弾性範囲における側面変形の測定値。"
+
+#:IFC.xml:21909
+msgid "Pset_MaterialMechanical_ShearModulus"
+msgstr "ShearModulus"
+
+msgid "Pset_MaterialMechanical_ShearModulus_DEFINITION"
+msgstr "材料のせん断弾性係数の測定。"
+
+#:IFC.xml:21914
+msgid "Pset_MaterialMechanical_ThermalExpansionCoefficient"
+msgstr "ThermalExpansionCofficient"
+
+msgid "Pset_MaterialMechanical_ThermalExpansionCoefficient_DEFINITION"
+msgstr "1ケルビン程度の材料を温めるための膨張係数の測定値。"
+
+#:IFC.xml:21919
+msgid "Pset_MaterialMechanical_YoungModulus"
+msgstr "YoungModulus"
+
+msgid "Pset_MaterialMechanical_YoungModulus_DEFINITION"
+msgstr "材料の弾力性の若いs弾性係数の測定。"
+
+#:IFC.xml:21925
+msgid "Pset_MaterialOptical"
+msgstr "Pset MaterialOptical"
+
+msgid "Pset_MaterialOptical_DEFINITION"
+msgstr "マテリアルの一連の光学特性。bSI Documentation"
+
+#:IFC.xml:21926
+msgid "Pset_MaterialOptical_SolarReflectanceBack"
+msgstr "SolarReflectanceBack"
+
+msgid "Pset_MaterialOptical_SolarReflectanceBack_DEFINITION"
+msgstr "正常な発生時の反射太陽背中側。 光線がある媒体から別の媒体に通過したときに反射され、伝達されない太陽線の割合を定義します。 表面に垂直に反応しているのです 材料と表面特性に依存します。"
+
+#:IFC.xml:21931
+msgid "Pset_MaterialOptical_SolarReflectanceFront"
+msgstr "SolarReflectanceFront"
+
+msgid "Pset_MaterialOptical_SolarReflectanceFront_DEFINITION"
+msgstr "正常な発生時の反射太陽前面側。 光線がある媒体から別の媒体に通過したときに反射され、伝達されない太陽線の割合を定義します。 表面に垂直に反応していることがわかります 材料と表面特性に依存します。"
+
+#:IFC.xml:21936
+msgid "Pset_MaterialOptical_SolarTransmittance"
+msgstr "SolarTransmitance"
+
+msgid "Pset_MaterialOptical_SolarTransmittance_DEFINITION"
+msgstr "正常な発生太陽における透過性 単位面積あたりを通過する太陽放射の割合を定義し、表面に垂直である。"
+
+#:IFC.xml:21941
+msgid "Pset_MaterialOptical_ThermalIrEmissivityBack"
+msgstr "ThermalIrEmisivityBack"
+
+msgid "Pset_MaterialOptical_ThermalIrEmissivityBack_DEFINITION"
+msgstr "熱赤外線放射率裏面。 同じ温度で黒体に単位面積あたりに放出される熱エネルギーの割合を定義します。"
+
+#:IFC.xml:21946
+msgid "Pset_MaterialOptical_ThermalIrEmissivityFront"
+msgstr "サーマルIrEmisivityFront"
+
+msgid "Pset_MaterialOptical_ThermalIrEmissivityFront_DEFINITION"
+msgstr "熱赤外線放射率正面側。 同じ温度で黒体に単位面積あたりに放出される熱エネルギーの割合を定義します。"
+
+#:IFC.xml:21951
+msgid "Pset_MaterialOptical_ThermalIrTransmittance"
+msgstr "ThermalIrtransmitance"
+
+msgid "Pset_MaterialOptical_ThermalIrTransmittance_DEFINITION"
+msgstr "通常発生時の熱赤外線透過率。単位面積あたりを通過する熱エネルギーの割合を、表面に垂直に定義します。"
+
+#:IFC.xml:21956
+msgid "Pset_MaterialOptical_VisibleReflectanceBack"
+msgstr "VisibleReflectanceBack"
+
+msgid "Pset_MaterialOptical_VisibleReflectanceBack_DEFINITION"
+msgstr "正常な発生時の反射率は、背中側に見えます. 光線がある媒体から別の媒体に通過したときに反射され、伝播されない可視スペクトル中の太陽線の割合を定義します。 表面に垂直に反応しているのです 材料と表面特性に依存します。"
+
+#:IFC.xml:21961
+msgid "Pset_MaterialOptical_VisibleReflectanceFront"
+msgstr "VisibleReflectanceFront"
+
+msgid "Pset_MaterialOptical_VisibleReflectanceFront_DEFINITION"
+msgstr "正常な発生時の反射表示正面側. 光線がある媒体から別の媒体に通過したときに反射され、伝播されない可視スペクトル中の太陽線の割合を定義します。 表面に垂直に反応していることがわかります 材料と表面特性に依存します。"
+
+#:IFC.xml:21966
+msgid "Pset_MaterialOptical_VisibleTransmittance"
+msgstr "透過性の表示"
+
+msgid "Pset_MaterialOptical_VisibleTransmittance_DEFINITION"
+msgstr "正常な発生時の透過率が目に見えます . 単位面積あたりを通過する太陽放射の可視スペクトルの割合を定義します。"
+
+#:IFC.xml:22009
+msgid "Pset_MaterialThermal"
+msgstr "Pset MaterialThermal"
+
+msgid "Pset_MaterialThermal_DEFINITION"
+msgstr "熱材料の特性のセット。bSI Documentation"
+
+#:IFC.xml:22010
+msgid "Pset_MaterialThermal_BoilingPoint"
+msgstr "BoilingPoint"
+
+msgid "Pset_MaterialThermal_BoilingPoint_DEFINITION"
+msgstr "材料液の沸点。"
+
+#:IFC.xml:22015
+msgid "Pset_MaterialThermal_FreezingPoint"
+msgstr "凍結ポイント"
+
+msgid "Pset_MaterialThermal_FreezingPoint_DEFINITION"
+msgstr "材料流体の凍結点。"
+
+#:IFC.xml:22020
+msgid "Pset_MaterialThermal_SpecificHeatCapacity"
+msgstr "SpecificHeatCapacity"
+
+msgid "Pset_MaterialThermal_SpecificHeatCapacity_DEFINITION"
+msgstr "温度単位あたりに吸収される材料熱エネルギーの特定の熱を定義します。"
+
+#:IFC.xml:22025
+msgid "Pset_MaterialThermal_ThermalConductivity"
+msgstr "熱伝導率"
+
+msgid "Pset_MaterialThermal_ThermalConductivity_DEFINITION"
+msgstr "熱エネルギーが材料を通して伝達される速度。"
+
+#:IFC.xml:22031
+msgid "Pset_MaterialWater"
+msgstr "Pset MaterialWater"
+
+msgid "Pset_MaterialWater_DEFINITION"
+msgstr "一般的に、サービスとフロー分布システムの構築の文脈で使用される水の拡張材料特性のセット。bSI Documentation"
+
+#:IFC.xml:22032
+msgid "Pset_MaterialWater_AcidityConcentration"
+msgstr "酸度濃度："
+
+msgid "Pset_MaterialWater_AcidityConcentration_DEFINITION"
+msgstr "酸を中和する最大CaCO3相当。"
+
+#:IFC.xml:22037
+msgid "Pset_MaterialWater_AlkalinityConcentration"
+msgstr "アルカリ濃縮率"
+
+msgid "Pset_MaterialWater_AlkalinityConcentration_DEFINITION"
+msgstr "最大アルカリ濃度CaCO3として測定された各負イオン物質の濃度の最大和。"
+
+#:IFC.xml:22042
+msgid "Pset_MaterialWater_DissolvedSolidsContent"
+msgstr "DissolvedSolidsContent"
+
+msgid "Pset_MaterialWater_DissolvedSolidsContent_DEFINITION"
+msgstr "水の合計量に溶存固形分の分数。 これは、水の重量あたりの溶存固形分の重量で測定され、したがって単位ではありません。"
+
+#:IFC.xml:22047
+msgid "Pset_MaterialWater_Hardness"
+msgstr "硬さ"
+
+msgid "Pset_MaterialWater_Hardness_DEFINITION"
+msgstr "正のような水の硬度, 炭酸カルシウムの面でカルシウムとマグネシウムイオンの通常濃度内の多価イオン濃度."
+
+#:IFC.xml:22052
+msgid "Pset_MaterialWater_ImpuritiesContent"
+msgstr "不純物コンテンツ"
+
+msgid "Pset_MaterialWater_ImpuritiesContent_DEFINITION"
+msgstr "水の総量にほこりなどの不純物の割合。 これは、水の重量当たりの不純物の重量で測定され、したがって単位ではありません。"
+
+#:IFC.xml:22057
+msgid "Pset_MaterialWater_IsPotable"
+msgstr "イスポット可能"
+
+msgid "Pset_MaterialWater_IsPotable_DEFINITION"
+msgstr "真実なら、水は効力があると考えられます。"
+
+#:IFC.xml:22062
+msgid "Pset_MaterialWater_PHLevel"
+msgstr "PHLevel"
+
+msgid "Pset_MaterialWater_PHLevel_DEFINITION"
+msgstr "0からの範囲内の最大水 14."
+
+#:IFC.xml:22153
+msgid "IfcMaterialSelect"
+msgstr "IfcMaterialSelect"
+
+msgid "IfcMaterialSelect_DEFINITION"
+msgstr "[[IfcMaterialSelect]] provides selection of either a material definition or a material usage definition that can be assigned to an element, a resource or another entity within this specification. [[IfcMaterialDefinition]] [[IfcMaterial]] [[IfcMaterialLayer]] [[IfcMaterialLayerSet]] [[IfcMaterialProfile]] [[IfcMaterialProfileSet]] [[IfcMaterialConstituent]] [[IfcMaterialConstituentSet]] [[IfcMaterialUsageDefinition]] [[IfcMaterialLayerSetUsage]] [[IfcMaterialProfileSetUsage]] [[IfcMaterialList]] HISTORY New select in IFC1.0 .change ifc2x4 IFC4 CHANGE The select now includes two new abstract entities [[IfcMaterialDefinition]] and [[IfcMaterialUsageDefinition]] with upward compatibility. The use of [[IfcMaterialList]] is deprecated from IFC4 onwards."
+
+#:IFC.xml:22154
+msgid "IfcCardinalPointReference"
+msgstr "IfcCardinalPointReference"
+
+msgid "IfcCardinalPointReference_DEFINITION"
+msgstr "An [[IfcCardinalPointReference]] is an index reference to significant points of a section profile. This index is used to describe the spatial relationship between the section of a member and a reference axis of the same member. HISTORY S New Type in IFC4. Indexes 1...9 refer to points at the bounding box of a profile. Indexes 10...19 refer to points defined by geometric centroid usually centre of gravity and shear centre, and their combinations with bounding box coordinates. In particular, the following index values are specified in this specification 1. bottom left 2. bottom centre 3. bottom right 4. mid depth left 5. mid depth centre 6. mid depth right 7. top left 8. top centre 9. top right 10. geometric centroid 11. bottom in line with the geometric centroid 12. left in line with the geometric centroid 13. right in line with the geometric centroid 14. top in line with the geometric centroid 15. shear centre 16. bottom in line with the shear centre 17. left in line with the shear centre 18. right in line with the shear centre 19. top in line with the shear centre Other index values are possible but outside the scope of this specification. Figure 1 illustrates cardinal point values. arbitrary profile with cardinal points .. .. .. .. .. .. figures ifccardinalpointreference 01.png Figure 1 Cardinal point values Figure 2 illustrates an example extrusion shape with arbitrary profile [[IfcArbitraryClosedProfileDef]] , aligned mid depth right on the member axis. The line of sight follows the extrusion direction Z which points into the drawing plane of above illustration. Hence, left is in the positive X direction of the [[IfcProfileDef]] . Top is in the positive Y direction of the [[IfcProfileDef]] . extrusion shape with arbitrary profile and alignment .. .. .. .. .. .. figures ifccardinalpointreference 02.png Figure 2 Cardinal point extrusion bSI Documentation"
 
