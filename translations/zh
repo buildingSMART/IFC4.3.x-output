@@ -9,702 +9,457 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcConstructionMgmtDomain.pot\n"
-"X-Crowdin-File-ID: 30\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2021-07-28 08:50\n"
 
-#:IFC.xml:2794
-msgid "IfcConstructionEquipmentResource"
-msgstr "IfcConstruction装备资源"
+#:IFC.xml:658
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-msgid "IfcConstructionEquipmentResource_DEFINITION"
-msgstr "[[IfcConstructionEquipmentResource]] 是使用建筑设备协助施工的。 建筑设备资源全部或部分消耗或占用在国际化学品安全论坛第二号新实体的施工中。 有[[IfcConstructionEquipmentResource]] 的产品被用作协助施工过程的资源。 更具体地说，这些产品是为了达到某一特定目的而提交项目的独立物品。 这方面的例子可能是塔式起重机或其他移动起重机、螺旋机或起重热器。 任何子类型[[IfcProduct]] 的实例可以使用[[IfcRelAssignsToResource]]分配到设备资源，以便进一步描述设备 在超级类型 [[IfcResource]] 中描述。 相关子类型的实例 [[IfcProduct]] 是 [[IfcTransportElement]] 、 [[IfcDiscreteAccessory]] ， 或 [[IfcProxy]] 对于无法获取更精确使用详细信息的 bSI 文档的特殊情况"
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the S LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:2802
-msgid "IfcConstructionEquipmentResource_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:741
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcConstructionEquipmentResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:2814
-msgid "IfcConstructionEquipmentResourceType"
-msgstr "IfcConstruction装备资源类型"
+#:IFC.xml:679
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "线程深度"
 
-msgid "IfcConstructionEquipmentResourceType_DEFINITION"
-msgstr "The resource type IfcConstructionEquipmentType defines commonly shared information for occurrences of construction equipment resources. The set of shared information may include common productivities common cost rates common properties within shared property sets It is used to define a construction equipment resource specification the specific resource information that is common to all occurrences of that resource . Resource types may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcConstructionEquipmentResourceType]] are represented by instances of [[IfcConstructionEquipmentResource]] . HISTORY New entity in IFC4. .use head Assignment use definition In addition to assignments specified at the base class [[IfcConstructionResourceType]] , a construction equipment resource type may have assignments of its own using [[IfcRelAssignsToResource]] where RelatingResource refers to the [[IfcConstructionEquipmentResourceType]] and RelatedObjects contains one or more [[IfcTypeProduct]] subtypes. Such relationship indicates the type of equipment to be used as input, which is instantiated as an occurrence assigned for each resource occurrence. There may be multiple chains of production where such product type may have its own task and resource types assigned indicating how to assemble such equipment. bSI Documentation"
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "门框深度，垂直于门框平面上。 如果遗漏并给定了线条厚度，则表示可调整的深度。 。一个根据墙壁厚度调整的深度，插入此门风格。"
 
-#:IFC.xml:2821
-msgid "IfcConstructionEquipmentResourceType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:684
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "线条厚度"
 
-msgid "IfcConstructionEquipmentResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "如上图所述的门线厚度。如果线索值为0。 零表示一个门，没有一线，在这种情况下，所有其他线照参数都应设置为NIL。 如果线条厚度为 NIL ，则表示值不可用。 X 0D .change ifc2x4 X 0D IFC4 变异数据类型已修改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:2833
-msgid "IfcConstructionEquipmentResourceTypeEnum"
-msgstr "IfcConstructionEquipmentResourceTypeEnum"
+#:IFC.xml:689
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "阈值深度"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEFINITION"
-msgstr "这一列举用来确定建筑设备资源的主要目的。 它仅限于建造过程中使用的最常见的设备，IOC4号文件中的新枚举："
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "平面深度垂直于门槛门槛的门叶。只有当门框包括门槛值时才能给出。 如果忽略，给定的阈值厚度则表示可调整的深度，例如： 一种深度，可根据插入此门风格的墙壁厚度进行调整。"
 
-#:IFC.xml:2848
-msgid "IfcConstructionEquipmentResourceTypeEnum_PUMPING"
-msgstr "正在推送"
+#:IFC.xml:694
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "阈值厚度"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_PUMPING_DEFINITION"
-msgstr "通过水泵安装材料。"
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "门槛值的厚度如上图所解释。如果门槛值为0。 零表示门槛阈值深度在此情况下必须设置为 NIL。 如果阈值为 NIL ，则表示有关阈值的信息不可用。 X 0D .change ifc2x4 X 0D IFC4 变异数据类型已修改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:2842
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEMOLISHING"
-msgstr "删除"
+#:IFC.xml:699
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "反射厚度"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEMOLISHING_DEFINITION"
-msgstr "5. 拆除或销毁建筑物。"
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "平面厚度与转发器门叶平行，但条件是： 如果设置了 TransomOffset 属性，它会将门叶与上面的玻璃或窗口分开。 X 0D 如果变压厚度设置为零，而变压器设置为正长度 , 然后将门垂直分割成叶子和无物理框架的转窗区域。 X 0D .change ifc2x4 X 0D IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:2846
-msgid "IfcConstructionEquipmentResourceTypeEnum_LIGHTING"
-msgstr "闪光"
+#:IFC.xml:704
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_LIGHTING_DEFINITION"
-msgstr "闪光"
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "如果给定的转化器将门叶与上面的玻璃或窗口分开，则偏移。 抵消额从门口底部提供。"
 
-#:IFC.xml:2845
-msgid "IfcConstructionEquipmentResourceTypeEnum_HEATING"
-msgstr "正在闪电"
+#:IFC.xml:709
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_HEATING_DEFINITION"
-msgstr "正在闪电"
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "平面垂直于门框门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。"
 
-#:IFC.xml:2843
-msgid "IfcConstructionEquipmentResourceTypeEnum_EARTHMOVING"
-msgstr "警告中"
+#:IFC.xml:714
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "阈值偏移"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_EARTHMOVING_DEFINITION"
-msgstr "提取、填充或等离地球。"
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "平面垂直于门阈值门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。 仅在门框包含阈值且参数已知的情况下给出。"
 
-#:IFC.xml:2847
-msgid "IfcConstructionEquipmentResourceTypeEnum_PAVING"
-msgstr "绘制中"
+#:IFC.xml:719
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "铸造厚度"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_PAVING_DEFINITION"
-msgstr "绘制中"
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "门叶平面外壳尺寸的厚度 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-#:IFC.xml:2849
-msgid "IfcConstructionEquipmentResourceTypeEnum_TRANSPORTING"
-msgstr "传输中"
+#:IFC.xml:724
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "连铸深度："
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_TRANSPORTING_DEFINITION"
-msgstr "运输产品或材料。"
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "垂直于门叶的平面外壳尺寸深度。 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-#:IFC.xml:2844
-msgid "IfcConstructionEquipmentResourceTypeEnum_ERECTING"
-msgstr "正在错误"
+#:IFC.xml:729
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_ERECTING_DEFINITION"
-msgstr "3. 清除、定位和放置元件。"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "沿本地位置的x轴测量的衬线和窗口面板之间的偏移。 X 0D .change ifc2x4 X 0D IFC4 变异新属性添加在实体定义末尾。"
 
-#:IFC.xml:2850
-msgid "IfcConstructionMaterialResource"
-msgstr "IfcConstructionMaterialResource"
+#:IFC.xml:734
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
 
-msgid "IfcConstructionMaterialResource_DEFINITION"
-msgstr "[[IfcConstructionMaterialResource]] identifies a material resource type in a construction project. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE The attribute Suppliers has been deleted use [[IfcRelAssignsToResource]] to assign an [[IfcActor]] to fulfill the role as a supplier. The attribute UsageRatio has been deleted use BaseQuantityConsumed and BaseQuantityProduced to indicate material usage. Occurrences of [[IfcConstructionMaterialResource]] are consumed wholly or partially , or occupied during a construction work task [[IfcTask]] . Similar to [[IfcConstructionProductResource]] , sometimes things such as 5000kg of gravel are already instantiated as an instance of an [[IfcProduct]] subtype because it is a result of a work task for example, transporting gravel . In this case, the instance of [[IfcConstructionMaterialResource]] can be associated with the product instance 5000kg of gravel to provide more information for resource uses. Nevertheless, [[IfcConstructionMaterialResource]] should only be used to represent resource usage, but not product substances. NOTE This entity is not the same as [[IfcMaterial]] . One one hand, [[IfcConstructionMaterialResource]] represents usage of bulk materials such as sand, gravels, nails and so on. Physical manifestations can be instantiated from [[IfcProduct]] as well, depending on their uses in the system, and such an [[IfcProduct]] object can be assigned to the [[IfcConstructionMaterialResource]] object via [[IfcRelAssignsToResource]] . On the other hand, [[IfcMaterial]] is about physical materials that a physical building element consists of, possibly with detailed material layering information. bSI Documentation"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "沿当地位置的y轴测量的衬线和门板之间的偏移。 X 0D .change ifc2x4 X 0D IFC4 变异新属性添加在实体定义末尾。"
 
-#:IFC.xml:2858
-msgid "IfcConstructionMaterialResource_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:753
+msgid "IfcDoorPanelOperationEnum"
+msgstr "IfcDoorPanelOperationEnum"
 
-msgid "IfcConstructionMaterialResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "这一列举界定了各门板运作的基本方式，如图1所示。 数字计数器滑动倾斜折叠循环滚动固定板用户定义的数字计数器操作 图1 门运算由[[IfcDoor]] 的本地位置给出门板的开头方向。 正极轴决定图2所示的方向。 面板方向..............focoum面板操作数图10。 如果图2 门面板运算符号表述方式取决于国家建筑编码。 这些数字只显示在IF2.0中作为示例显示。更改ifc2x4 IFC4 变异分子FIXEDPANEL 添加了bSI 文档"
 
-#:IFC.xml:2870
-msgid "IfcConstructionMaterialResourceType"
-msgstr "IfcConstructionMaterialResourceType"
+#:IFC.xml:764
+msgid "IfcDoorPanelPositionEnum"
+msgstr "IfcDoorPanelPositionEnum"
 
-msgid "IfcConstructionMaterialResourceType_DEFINITION"
-msgstr "The resource type IfcConstructionMaterialType defines commonly shared information for occurrences of construction material resources. The set of shared information may include common productivities common cost rates common properties within shared property sets It is used to define a construction material resource specification the specific resource information that is common to all occurrences of that resource . Resource types may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcConstructionMaterialResourceType]] are represented by instances of [[IfcConstructionMaterialResource]] . HISTORY New entity in IFC4. .use head Assignment Use Definition In addition to assignments specified at the base class [[IfcConstructionResourceType]] , a construction material resource type may have assignments of its own using [[IfcRelAssignsToResource]] where RelatingResource refers to the [[IfcConstructionMaterialResourceType]] and RelatedObjects contains one or more [[IfcTypeProduct]] subtypes. Such relationship indicates material specifications to be used as input, which is instantiated as an occurrence assigned for each resource occurrence. The [[IfcGeographicElementType]] product type may be used to hold the material representation via [[IfcRelAssociatesMaterial]] . There may be multiple chains of production where such product type may have its own task and resource types assigned indicating how to transport or extract such material. bSI Documentation"
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "此列举界定了描述门面板在门框内位置的基本方法。 IFC2x 中的新枚举图1显示了一个带有面板的门面板和带有面板RIGHT的门面板，一个带有面板的 OUBLE DOOR SINGN 的门风格。 位置显示在本地位置的XZ平面上，即显示正Y轴的方向。 ...............如果数据面板中的数字为 fig01.gif 图1 门面板位置 bSI 文档"
 
-#:IFC.xml:2877
-msgid "IfcConstructionMaterialResourceType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:770
+msgid "IfcDoorPanelProperties"
+msgstr "IfcDoorPanel属性"
 
-msgid "IfcConstructionMaterialResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "门板通常是一种门叶，可以让人或货物通过。 门面板的参数界定了面板的几何相关参数。 [[IfcDoorPanelProperties]] 用于参数描述门面板的形状和运转。 参数定义可以单独或补充到门的明确形状外面。 [[IfcDoorType]] 可以定义由多个面板组成的门。 在这种情况下，每个门面板必须包含一个 [[IfcDoorPanelProperties]] 的实例。 PanelPosition 属性，结合[[IfcDoorStyle]].OperationType 属性，决定适用哪个面板 [[IfcDoorPanelProperties]] 。 [[IfcDoorPanelProperties]] 包含在属性列表中，它是由 [[IfcDoorType]] 属性HasPropertySets 给定的。 关于门面板的更多信息可以包含在同一列表中 [[IfcDoorStyle]] 使用[[IfcPropertySet]] 进行动态扩展。 [[IfcDoorPanelProperties]] 没有几何表示。 然而，它界定了可以用来创建由[[IfcDoor]]插入项目空间范围的门类形状的参数，如图1所示。 [[IfcDoorPanelProperties]] 的参数定义标准门面板， 包括给定比例宽度以定义不统一的双向回转或滑动或折叠门。 面板的外部边界由分配给[[IfcDoor]] 的剖面形状表示来确定 插入[[IfcDoorType]] 。 它还必须考虑到线条参数。 面板旋转、双动和滑动面板的深度，由面板深度参数确定。 对于包括一个以上面板在内的门操作类型，至少一个面板的宽度是通过正常化比率衡量的。 它决定了该面板的宽度，其定义是门窗总宽度的比率。 面板宽度图 1 IFC2.0 中的门面属性。更改ifc2x4 IFC4 更改超级类型更改为新 [[IfcPreDefinedPropertySet]] . bSI 文档"
 
-#:IFC.xml:2889
-msgid "IfcConstructionMaterialResourceTypeEnum"
-msgstr "IfcConstructionMaterialResourceTypeEnum"
+#:IFC.xml:797
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_DEFINITION"
-msgstr "这一列举用来确定建筑材料资源的主要目的。 它仅限于建筑中使用的最常见的原材料，不包括通常作为制成品出售的材料。 IFC4. bSI 文档中新的枚举数"
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:2899
-msgid "IfcConstructionMaterialResourceTypeEnum_AGGREGATES"
-msgstr "AGREGAS"
+#:IFC.xml:775
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "面板深度"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_AGGREGATES_DEFINITION"
-msgstr "建筑合计包括沙、碎石和碎石。"
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "门板的深度，与门叶平面垂直。"
 
-#:IFC.xml:2904
-msgid "IfcConstructionMaterialResourceTypeEnum_MASONRY"
-msgstr "量"
+#:IFC.xml:780
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "面板操作"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_MASONRY_DEFINITION"
-msgstr "量"
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "该小组确定了该小组的运作方式。 门面板的面板必须与它所引用的 [[IfcDoorStyle]] 操作类型相对应。"
 
-#:IFC.xml:2905
-msgid "IfcConstructionMaterialResourceTypeEnum_METAL"
-msgstr "铁水"
+#:IFC.xml:785
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "面板宽度"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_METAL_DEFINITION"
-msgstr "铁水"
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "此面板的宽度，作为相对门的总清开宽度的比率。如果是空的，它默认为1。 必须为所有使用 OperationType s 的 [[IfcDoorStyle]] 的门提供一个值，并且多于一个面板。"
 
-#:IFC.xml:2901
-msgid "IfcConstructionMaterialResourceTypeEnum_DRYWALL"
-msgstr "德瓦尔"
+#:IFC.xml:790
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_DRYWALL_DEFINITION"
-msgstr "德瓦尔"
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "此面板在门内的位置。 门面板的面板必须与它所引用的 [[IfcDoorStyle]] 操作类型相对应。"
 
-#:IFC.xml:2903
-msgid "IfcConstructionMaterialResourceTypeEnum_GYPSUM"
-msgstr "GYPSUM"
+#:IFC.xml:809
+msgid "IfcDoorStyle"
+msgstr "IfcDoorStyle"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_GYPSUM_DEFINITION"
-msgstr "吉普赛人的任何材料。"
+msgid "IfcDoorStyle_DEFINITION"
+msgstr "定义门风格，[[IfcDoorStyle]] , 定义了特殊的门风格， 可以通过实例 [[IfcDoor]] 纳入建筑模型的空间背景。 门风格定义了门风格的总体参数，并且通过[[IfcDoorLiningProperties]] 和 [[IfcDoorPanelProperties]] 指线和一个或多个面板的特定参数。 The door entity, [[IfcDoor]] , define a particular occurrence of a door placed in the spatial context of a project. 门或其形状的实际参数定义在[[IfcDoorStyle]] ， IsDefinedBy 指向IfcReledByType 的，[[IfcDoor]] 与IfcReledByType 的反向关系 [[IfcDoorStyle]] 也定义了衬里、[[IfcDoorLiningProperties]] 和面板[[IfcDoorPanelProperties]] 的特定属性。 [[IfcDoorStyle]] 定义了基线几何形状或表示图。 指向此样式的门风格由[[IfcDoor]] 给出，指向此样式。 大门风格的表示可以由商定的一组最低参数来表示， 为门衬和门窗定义， 或者它可以由[[IfcRepresentationMap]] 使用的几何表示方式给出。 属性参数须优先决定，是否可以将一组参数用于确切代表门风格TRUE 的形状， 或者所附[[IfcRepresentationMap]] 是否持有FALSE 的确切代表 IfcDoorStyleOperationTypeEnum定义门风格的一般布局。 视枚举者而定，恰当的实例[[IfcDoorLiningProperties]] 和 [[IfcDoorPanelProperties]] 附在HasPropertySets列表中。 IfcDoorStyleOperationTypeEnum主要决定了左边或右边的饥饿、 操作挥发、滑动、折叠等以及面板数量。 见IfcDoorStyleOperationTypeEnum上使用的几何定义来正确使用不同操作类型的开口符号。IFC2x上的HISTORY S 新实体。 .已弃用的 DEPRECATION 该实体已被弃用，不应被使用。新的实体 [[IfcDoorType]] 将被使用。bSI 文档"
 
-#:IFC.xml:2900
-msgid "IfcConstructionMaterialResourceTypeEnum_CONCRETE"
-msgstr "连接"
+#:IFC.xml:810
+msgid "IfcDoorStyle_OperationType"
+msgstr "操作类型"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_CONCRETE_DEFINITION"
-msgstr "连接"
+msgid "IfcDoorStyle_OperationType_DEFINITION"
+msgstr "键入定义门风格的一般布局和操作。"
 
-#:IFC.xml:2906
-msgid "IfcConstructionMaterialResourceTypeEnum_PLASTIC"
-msgstr "游戏"
+#:IFC.xml:815
+msgid "IfcDoorStyle_ConstructionType"
+msgstr "构造类型"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_PLASTIC_DEFINITION"
-msgstr "游戏"
+msgid "IfcDoorStyle_ConstructionType_DEFINITION"
+msgstr "确定门的基本构造和材料类型的类型。"
 
-#:IFC.xml:2902
-msgid "IfcConstructionMaterialResourceTypeEnum_FUEL"
-msgstr "发光"
+#:IFC.xml:820
+msgid "IfcDoorStyle_ParameterTakesPrecedence"
+msgstr "参数优先顺序"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_FUEL_DEFINITION"
-msgstr "发光"
+msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "布尔值反映了在附加的衬线和面板属性中给出的参数是否确切定义了几何形状, 或者附加样式形状是否优先于 FALSE 。 在最后一种情况下，参数仅有信息值。"
 
-#:IFC.xml:2907
-msgid "IfcConstructionMaterialResourceTypeEnum_WOOD"
-msgstr "WOD"
+#:IFC.xml:825
+msgid "IfcDoorStyle_Sizeable"
+msgstr "可大小"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_WOOD_DEFINITION"
-msgstr "WOD"
+msgid "IfcDoorStyle_Sizeable_DEFINITION"
+msgstr "布尔表示所附IfcMappedRepresentation（如果给定的话）是否可以使用比例转换系数大小，或者不是 FALSE 。 如果没有， IfcMappedRepresentation应该是 [[IfcShapeRepresentation]] 的 [[IfcDoor]] ，使用[[IfcMappedItem]] 作为比额系数1。"
 
-#:IFC.xml:2908
-msgid "IfcConstructionProductResource"
-msgstr "IfcConstructionProductResource"
+#:IFC.xml:832
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
 
-msgid "IfcConstructionProductResource_DEFINITION"
-msgstr "[[IfcConstructionProductResource]] 界定了全部或部分消费或在施工中占用的产品的作用。 IFC2中的新实体。 从 IFC2 中的 IfcProductResource 重命名。有[[IfcConstructionProductResource]] 是使用产品来帮助建造过程。 更具体地说，它们是使用某些建筑工序产生的产品，然后用作促进进一步建设的资源。 例如，形式工程可以实例化为构建表格过程产生的产品。 然而，它们被用作项目稍后阶段具体化过程中的资源。"
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "这一列举界定了建造大门的基本类型。 施工类型涉及用来制造门的主要材料或材料组合。"
 
-#:IFC.xml:2915
-msgid "IfcConstructionProductResource_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:843
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
 
-msgid "IfcConstructionProductResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. bSI Documentation"
 
-#:IFC.xml:2927
-msgid "IfcConstructionProductResourceType"
-msgstr "IfcConstructionProduction ResourceType"
+#:IFC.xml:863
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "IfcPermeableCoveringOperationEnum"
 
-msgid "IfcConstructionProductResourceType_DEFINITION"
-msgstr "The resource type IfcConstructionProductType defines commonly shared information for occurrences of construction product resources. The set of shared information may include common productivities common cost rates common properties within shared property sets It is used to define a construction product resource specification i.e. the specific resource information that is common to all occurrences of that resource . Resource types may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcConstructionProductResourceType]] are represented by instances of [[IfcConstructionProductResource]] . HISTORY New entity in IFC4. .use head Assignment use definition In addition to assignments specified at the base class [[IfcConstructionResourceType]] , a construction product resource type may have assignments of its own using [[IfcRelAssignsToResource]] where RelatingResource refers to the [[IfcConstructionProductResourceType]] and RelatedObjects contains one or more [[IfcTypeProduct]] subtypes. Such relationship indicates the type of product to be used as input, which is instantiated as an occurrence assigned for each resource occurrence. There may be multiple chains of production where such product type may have its own task and resource types assigned. bSI Documentation"
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "此枚举定义了有效的渗透覆盖类型。IF2.0中的新枚举。bSI 文档"
 
-#:IFC.xml:2934
-msgid "IfcConstructionProductResourceType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:870
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
 
-msgid "IfcConstructionProductResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "该实体是一个门或窗口内的面板的描述，它是打开容许空气流的填充器。 它是由它的属性 [[IfcPermeableCoveringProperties]] 提供的。 可穿透的掩体是一种外壳，例如一个固定或开口的外壳，基本上是由一种外壳和一种内脏组成。 这种步兵通常是一个大型、大型或屏幕。行动方式是按照行动类型定义的。 [[IfcPermeableCoveringProperties]] 包含在 [[IfcWindowStyle]] 或 [[IfcDoorStyle]] 属性列表中的 HasPropertySet 中。 关于渗透覆盖的更多信息可以包含在相同的窗口或门风格列表中，使用动态扩展的 [[IfcPropertySet]]。 这尤其适用于各种操作类型的额外属性。[[IfcPermeableCoveringProperties]] 不具有几何形状。 然而，它定义了可以用来创建由[[IfcWindow]]插入项目空间环境中的 [[IfcWindowStyle]]形状的参数。 或由[[IfcDoor]] 插入的 [[IfcDoorStyle]] 。 在 [[IfcPermeableCoveringProperties]] 上的参数定义了标准渗透覆盖面。 面板的外部边界由分配给[[IfcWindow]] 或 [[IfcDoor]] 的发生参数确定。 它还必须考虑到线条参数。 在整个窗口或门内的渗透覆盖位置由小组定位属性决定。 图1显示适用于直线内位置的小组，如小组位置属性所界定的那样。 以下参数应用于面板框架深度，帧厚度正在覆盖... ... ... fccermeeblecoveringproperties.gif 图1 涵盖IFC2中新实体属性的性能。 ，它已从 IFC2x 中的 IfcPermeableCovery改名。ifc2x4 IFC4 变换超级类型更改为新 [[IfcPreDefinedPropertySet]] 。bSI 文档"
 
-#:IFC.xml:2946
-msgid "IfcConstructionProductResourceTypeEnum"
-msgstr "IfcConstructionProductResourceTypeEnum"
+#:IFC.xml:893
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcConstructionProductResourceTypeEnum_DEFINITION"
-msgstr "本列举用来确定建筑产品资源的主要目的。 它描述了为建造而创建的产品的使用情况，并排除了已完成的建筑模型的产品。"
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:2950
-msgid "IfcConstructionProductResourceTypeEnum_FORMWORK"
-msgstr "工作表"
+#:IFC.xml:871
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "操作类型"
 
-msgid "IfcConstructionProductResourceTypeEnum_FORMWORK_DEFINITION"
-msgstr "建造或放置放置混凝土等材料的表格。"
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "还用来按照国家建筑标准分配标准象征性演示。"
 
-#:IFC.xml:2949
-msgid "IfcConstructionProductResourceTypeEnum_ASSEMBLY"
-msgstr "求解"
+#:IFC.xml:876
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcConstructionProductResourceTypeEnum_ASSEMBLY_DEFINITION"
-msgstr "1. 建造用于为建筑模型或其他组件提供投入的组件."
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "这个渗透面板在整个窗口或门类型中的位置。"
 
-#:IFC.xml:2951
-msgid "IfcConstructionResource"
-msgstr "IfcConstructionResource"
+#:IFC.xml:881
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "框架深度"
 
-msgid "IfcConstructionResource_DEFINITION"
-msgstr "[[IfcConstructionResource]] is an abstract generalization of the different resources used in construction projects, mainly labour, material, equipment and product resources, plus subcontracted resources and aggregations such as a crew resource. A resource represents use of something and does not necessarily correspond to a single item such as a person or vehicle, but represents a pool of items having limited availability such as general labor or an equipment fleet. A resource can represent either a generic resource pool not having any task assignment or a task specific resource allocation having an [[IfcTask]] assignment . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Modified in to promote ResourceIdentifer and ResourceGroup renamed to LongDescription to supertype [[IfcResource]] and add attributes as described. .use head Declaration use definition A root level resource specifically [[IfcCrewResource]] or [[IfcSubContractResource]] is declared within the project by [[IfcRelDeclares]] where RelatingContext refers to the single [[IfcProject]] and RelatedObjects refers to one or more [[IfcConstructionResource]] , and other root level objects within the project. .use head Assignment use definition A resource may be assigned to an actor by [[IfcRelAssignsToActor]] where RelatingActor refers to an [[IfcActor]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Such relationship indicates the actor responsible for allocating the resource such as partitioning into task specific allocations, delegating to other actors, and or scheduling over time. Note that this assignment does not indicate the person or organization performing the work that is indicated by [[IfcRelAssignsToResource]] . The actor responsible for the resource may or may not be the same as any actor s performing work. A resource may be assigned to a control by [[IfcRelAssignsToControl]] where RelatingProduct refers to an [[IfcControl]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcWorkCalendar]] is assigned indicating availability of the resource, where such calendar is nested within a base calendar or an [[IfcWorkPlan]] which in turn is assigned to the [[IfcProject]] . A resource may be assigned to a group by [[IfcRelAssignsToGroup]] where RelatingGroup refers to an [[IfcGroup]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcAsset]] is assigned indicating the asset to be tracked, where such asset is nested within an [[IfcInventory]] which in turn is assigned to the [[IfcProject]] . A resource may be assigned to a product by [[IfcRelAssignsToProduct]] where RelatingProduct refers to an [[IfcProduct]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcElement]] subtype is assigned indicating the product to be constructed, where such product is connected to a spatial structure which in turn is aggregated within the [[IfcProject]] . A resource may be assigned to a process by [[IfcRelAssignsToProcess]] where RelatingProcess refers to an [[IfcProcess]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcTask]] is assigned indicating the task to be performed by the resource, where such task is nested within a summary task which in turn is assigned to the [[IfcProject]] . A resource may have assignments of other objects using [[IfcRelAssignsToResource]] where RelatingResource refers to the [[IfcConstructionResource]] and RelatedObjects refers to one or more objects such as [[IfcActor]] or [[IfcProduct]] subtypes. This relationship indicates specific objects assigned to fulfill resource usage. Figure 1 illustrates resource assignment. Assignment Use Definition .. .. .. .. .. .. figures ifcconstructionresource assignment.png Figure 1 Construction resource assignment use .use head Baseline use definition A resource may have any number of baselines defined using the relationship [[IfcRelDefinesByObject]] where RelatingObject is the current resource and RelatedObjects consists of multiple baseline resources, each representing a copy of the resource as it existed at an earlier point in time as shown in Figure 185. Each baseline [[IfcConstructionResource]] is identified by its nested [[IfcRelAssignsToControl]] relationship to an [[IfcWorkSchedule]] having PredefinedType BASELINE , [[IfcWorkSchedule]].CreationDate indicating the date of the baseline, and [[IfcWorkSchedule]].Name indicating the name of the baseline. Baseline Use Definition .. .. .. .. .. .. figures ifcconstructionresource baseline.png Figure 2 Construction resource baseline use bSI Documentation"
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "面板框架的深度，用来包括横向横向从前面到后面的孔。 c. 垂直于窗户或门高程平面上。"
 
-#:IFC.xml:2955
-msgid "IfcConstructionResource_BaseCosts"
-msgstr "基本成本"
+#:IFC.xml:886
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "帧厚度"
 
-msgid "IfcConstructionResource_BaseCosts_DEFINITION"
-msgstr "基本成本"
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "用于包括渗透覆盖面的面板边框宽度 ， 从面板内穿透面包裹到面板外的一层，在……，i。 。与窗户或门高程平行的。"
 
-#:IFC.xml:2967
-msgid "IfcConstructionResource_Usage"
-msgstr "用法"
+#:IFC.xml:905
+msgid "IfcWindowLiningProperties"
+msgstr "IfcWindowlining属性"
 
-msgid "IfcConstructionResource_Usage_DEFINITION"
-msgstr "用法"
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:2979
-msgid "IfcConstructionResource_BaseQuantity"
-msgstr "BaseQuantity"
+#:IFC.xml:979
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcConstructionResource_BaseQuantity_DEFINITION"
-msgstr "BaseQuantity"
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:2991
-msgid "IfcConstructionResourceType"
-msgstr "IfcConstructionResourceType"
+#:IFC.xml:922
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "线程深度"
 
-msgid "IfcConstructionResourceType_DEFINITION"
-msgstr "[[IfcConstructionResourceType]] is an abstract generalization of the different resource types used in construction projects, mainly labor, material, equipment and product resource types, plus subcontracted resource types and aggregations such as a crew resource type. A resource type represents a model of use of something and does not necessarily correspond to a specific type of object such as a person or vehicle, but represents possible usages of such objects such as general labor or an equipment fleet. A resource type can either represent usage in general consumption attributes defined but no task type assignment or a task specific resource type production attributes defined and having an [[IfcTask]] assignment . A construction resource type captures common productivities and cost rates for applying resources to particular task types. HISTORY New entity in IFC4. .use head Composition use definition Resource types may be decomposed into nested resource types indicating productivities when applying the resource to specific task types using the [[IfcRelNests]] relationship where [[IfcRelNests]].RelatingObject refers to the general resource type and [[IfcRelNests]].RelatedObjects refers to one or more task specific productivities. For example, an [[IfcLaborResourceType]] may be defined for Carpenter which may have a nested [[IfcLaborResourceType]] for Carpenter Wall Framing and another nested [[IfcLaborResourceType]] for Carpenter Drywall , each of which may have productivities based according to specific task types [[IfcTaskType]] . .use head Assignment use definition Resource types may be assigned to process types [[IfcTypeProcess]] subtypes using the [[IfcRelAssignsToProcess]] relationship as shown in Figure 1. Such relationship indicates that the resource type applies to the process type for the use indicated e.g. [[IfcTaskType]].PredefinedType . Such relationship enables a scenario of placing an [[IfcProduct]] of a particular [[IfcTypeProduct]] , querying for a set of [[IfcTypeProcess]] process types for constructing such product e.g. [[IfcTaskTypeEnum]].CONSTRUCTION , querying each [[IfcTypeProcess]] for a set of [[IfcTypeResource]] resource types for carrying out the process, and finally choosing an [[IfcTypeProcess]] and [[IfcTypeResource]] combination resulting in the shortest time for instantiated [[IfcTask]] occurrence s and or lowest cost for instantiated [[IfcConstructionResource]] occurrence s . Assignment Use Definition .. .. .. .. .. .. figures ifcconstructionresourcetype assignment.png Figure 1 Construction resource type assignment bSI Documentation"
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "垂直于窗口海拔平面的窗框深度。"
 
-#:IFC.xml:2994
-msgid "IfcConstructionResourceType_BaseQuantity"
-msgstr "BaseQuantity"
+#:IFC.xml:927
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "线条厚度"
 
-msgid "IfcConstructionResourceType_BaseQuantity_DEFINITION"
-msgstr "BaseQuantity"
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "如上图所解释的，窗口线条厚度。如果线条厚度值为0。 零表示一个窗口，在此情况下，所有其他线条参数均应设置为 NIL。 如果线条厚度为 NIL ，则表示值不可用。 X 0D .change ifc2x4 X 0D IFC4 变异数据类型已修改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:3006
-msgid "IfcConstructionResourceType_BaseCosts"
-msgstr "基本成本"
+#:IFC.xml:932
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "反射厚度"
 
-msgid "IfcConstructionResourceType_BaseCosts_DEFINITION"
-msgstr "基本成本"
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "窗口面板横向切换器的厚度，与窗口高程平行测量。 这种变压器是衬线的一部分，变压器的深度假定与衬线深度相同。 X 0D 如果变压厚度设置为零，而变压器设置为正长度 , 然后窗口在无物理分界线的情况下垂直分割。 X 0D .change ifc2x4 X 0D IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:3018
-msgid "IfcCrewResource"
-msgstr "IfcCrewResource"
+#:IFC.xml:937
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "多重厚度"
 
-msgid "IfcCrewResource_DEFINITION"
-msgstr "[[IfcCrewResource]] 是建筑过程中使用的内部资源集合，IFC2.0中的新实体。 机组人员的身份和装备是通过其在部件一级的规格来确定的。 因此， 通过查明在[[IfcCrewResource]]内指派给每个[[IfcLaborResource]]的人，了解船员中的哪些人。 与此相类似， 通过将恰当的实例[[IfcElementComponent]] 与[[IfcConstructionEquipmentResource]] 连接形成[[IfcCrewResource]] 元素的方式，确定管道安装的螺丝机构成机组人员的一部分。 bSI 文档"
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "窗口面板多层垂直分隔器的厚度，与窗口高程平行测量。 多狮子是衬底的一部分，多狮子的深度假定与衬底深度相同。 X 0D 如果MullionThickness 设置为零，而MullionOffset 设置为正长度 , 然后窗口被横向分割而无物理分界器。 X 0D .change ifc2x4 X 0D IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:3025
-msgid "IfcCrewResource_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:942
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "首次反转偏移量"
 
-msgid "IfcCrewResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "沿窗口放置协调系统z轴测量的转换中心线偏移。 偏移值0.5表示变压器放置在窗口中间。"
 
-#:IFC.xml:3037
-msgid "IfcCrewResourceType"
-msgstr "IfcCrewResourceType"
+#:IFC.xml:947
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "SecondTransomOffset"
 
-msgid "IfcCrewResourceType_DEFINITION"
-msgstr "资源类型 [[IfcCrewResourceType]] 定义了船员资源发生的常见共享信息。 这套共享信息可包括共同生产率共同成本率在共有属性组别中的共同属性。 它用于确定组员资源规格，具体资源信息是该资源所有情况下共有的。 资源类型可以交换而无需已分配给事件处理。 [[IfcCrewResourceType]] 的出现由[[IfcCrewResource]] 实例代表。IFC4 中的新实体 bSI 文档"
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
 
-#:IFC.xml:3044
-msgid "IfcCrewResourceType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:952
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
 
-msgid "IfcCrewResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
 
-#:IFC.xml:3056
-msgid "IfcCrewResourceTypeEnum"
-msgstr "IfcCrewResourceTypeEnum"
+#:IFC.xml:957
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
 
-msgid "IfcCrewResourceTypeEnum_DEFINITION"
-msgstr "此枚举用来确定船员资源的主要目的。IFC4 bSI 文档中的HISTORY 新枚举："
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
 
-#:IFC.xml:3060
-msgid "IfcCrewResourceTypeEnum_SITE"
-msgstr "站点"
+#:IFC.xml:962
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcCrewResourceTypeEnum_SITE_DEFINITION"
-msgstr "站点"
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:3059
-msgid "IfcCrewResourceTypeEnum_OFFICE"
-msgstr "关闭"
+#:IFC.xml:967
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
 
-msgid "IfcCrewResourceTypeEnum_OFFICE_DEFINITION"
-msgstr "关闭"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:3061
-msgid "IfcLaborResource"
-msgstr "IfcLaboral 资源"
+#:IFC.xml:972
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
 
-msgid "IfcLaborResource_DEFINITION"
-msgstr "一个[[IfcLaborResource]] 被用于具有从事某些类型的建筑或管理相关工作所需的特定技能或手工艺的建筑。 在 IFC2.0 中添加新实体。 hange ifc2x4 IFC4 变异. 属性技能集已被删除. 使用Long描述来描述技能集. [[IfcLaborResource]] 的目的是确定一套可能需要或使用的技能。 所确定的技能组合可能是收费手、工匠、管道工等，并规定了特定水平的技能。 它可以用来确定某一目的所需的一般性劳工资源类型，而不必具体说明提供资源的行为者或组织。 它在为一个进程或进程制定一个全面计划时可能特别有用。 例如， 在保养或工作规划中，可能有一项已知的任务需要完成，这项任务计划需要一个充电管。 可能有几种这类人力资源，因此在规划阶段没有必要确定将使用哪些资源。 在稍后阶段，可以为劳动力资源确定个别行为者，具体做法是通过[[IfcActor]] 指定行为者来实现。 然后通过[[IfcRelAssignsToResource]]相关资源属性将行为者确定为劳动力资源出现。 [[IfcLaborResource]] 提供了[[IfcRelAssignsToResource]] 。相关资源属性。bSI 文档"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:3069
-msgid "IfcLaborResource_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:991
+msgid "IfcWindowPanelOperationEnum"
+msgstr "IfcWindowPanelOperationEnum"
 
-msgid "IfcLaborResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure X 09 X 09 X 09 X 09 SideHungRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SideHungLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TopHung X 09 X 09 panel is top hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 BottomHung X 09 X 09 panel is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotHorizontal X 09 X 09 panel is swinging X 09 X 09 X 09 horizontally hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotVertical X 09 X 09 panel is swinging vertically X 09 X 09 X 09 hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingHorizontal X 09 X 09 panel is sliding horizontally X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingVertical X 09 X 09 panel is sliding X 09 X 09 X 09 vertically X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 RemovableCasement X 09 X 09 panel is removable X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 FixedCasement X 09 X 09 panel is fixed X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 OtherOperation X 09 X 09 user defined operation type X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 NotDefined X 09 X 09 X 09 X 09 X 09 X 09 X 09 Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. bSI Documentation"
 
-#:IFC.xml:3081
-msgid "IfcLaborResourceType"
-msgstr "IfcLaborResource类型"
+#:IFC.xml:1007
+msgid "IfcWindowPanelPositionEnum"
+msgstr "IfcWindowPanelPositionEnum"
 
-msgid "IfcLaborResourceType_DEFINITION"
-msgstr "资源类型 [[IfcLaborResourceType]] 定义了劳动力资源发生的常见共享信息。 这套共享信息可包括共同生产率共同成本率在共有财产组中的共同属性。 它被用来界定一个具体的劳动力资源规格，这种具体的资源信息对于该资源的所有发生都是共同的。 资源类型可以交换而无需已分配给事件处理。 [[IfcLaborResourceType]] 的出现由[[IfcLaborResource]] 实例代表。IFC4 中的新实体 bSI 文档"
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . X 09 X 09 Enumerator from [[IfcWindowStyleOperationEnum]] X 09 Use of enumerators from [[IfcWindowPanelPositionEnum]] X 09 Figure X 09 X 09 X 09 DoublePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 DoublePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelBottom X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelTop X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelLeft X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelRight X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. bSI Documentation"
 
-#:IFC.xml:3088
-msgid "IfcLaborResourceType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:1015
+msgid "IfcWindowPanelProperties"
+msgstr "IfcWindowPanel属性"
 
-msgid "IfcLaborResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:3100
-msgid "IfcLaborResourceTypeEnum"
-msgstr "IfcLaboral ResourceTypeEnum"
+#:IFC.xml:1042
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcLaborResourceTypeEnum_DEFINITION"
-msgstr "这一列举被用来确定劳动力资源的主要目的，仅限于根据共同技能组合确定的高层类别。 IFC4. bSI 文档中新的枚举数"
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:3122
-msgid "IfcLaborResourceTypeEnum_CLEANING"
-msgstr "正在解析中"
+#:IFC.xml:1020
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "操作类型"
 
-msgid "IfcLaborResourceTypeEnum_CLEANING_DEFINITION"
-msgstr "5. 去除灰尘和碎片。"
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
 
-#:IFC.xml:3128
-msgid "IfcLaborResourceTypeEnum_GENERAL"
-msgstr "常规的"
+#:IFC.xml:1025
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcLaborResourceTypeEnum_GENERAL_DEFINITION"
-msgstr "不需要具体技能的一般劳动力。"
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
 
-#:IFC.xml:3124
-msgid "IfcLaborResourceTypeEnum_DRYWALL"
-msgstr "德瓦尔"
+#:IFC.xml:1030
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "框架深度"
 
-msgid "IfcLaborResourceTypeEnum_DRYWALL_DEFINITION"
-msgstr "德瓦尔"
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
 
-#:IFC.xml:3125
-msgid "IfcLaborResourceTypeEnum_ELECTRIC"
-msgstr "ELECTRIC"
+#:IFC.xml:1035
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "帧厚度"
 
-msgid "IfcLaborResourceTypeEnum_ELECTRIC_DEFINITION"
-msgstr "电器装置、设备和电缆。"
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
 
-#:IFC.xml:3132
-msgid "IfcLaborResourceTypeEnum_PAINTING"
-msgstr "绘图中"
+#:IFC.xml:1054
+msgid "IfcWindowStyle"
+msgstr "IfcWindowStyle"
 
-msgid "IfcLaborResourceTypeEnum_PAINTING_DEFINITION"
-msgstr "应用装饰涂料或涂料。"
+msgid "IfcWindowStyle_DEFINITION"
+msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead. bSI Documentation"
 
-#:IFC.xml:3123
-msgid "IfcLaborResourceTypeEnum_CONCRETE"
-msgstr "连接"
+#:IFC.xml:1055
+msgid "IfcWindowStyle_ConstructionType"
+msgstr "构造类型"
 
-msgid "IfcLaborResourceTypeEnum_CONCRETE_DEFINITION"
-msgstr "连接"
+msgid "IfcWindowStyle_ConstructionType_DEFINITION"
+msgstr "Type defining the basic construction and material type of the window."
 
-#:IFC.xml:3133
-msgid "IfcLaborResourceTypeEnum_PAVING"
-msgstr "绘制中"
+#:IFC.xml:1060
+msgid "IfcWindowStyle_OperationType"
+msgstr "操作类型"
 
-msgid "IfcLaborResourceTypeEnum_PAVING_DEFINITION"
-msgstr "绘制中"
+msgid "IfcWindowStyle_OperationType_DEFINITION"
+msgstr "Type defining the general layout and operation of the window style."
 
-#:IFC.xml:3137
-msgid "IfcLaborResourceTypeEnum_STEELWORK"
-msgstr "标准工作区"
+#:IFC.xml:1065
+msgid "IfcWindowStyle_ParameterTakesPrecedence"
+msgstr "参数优先顺序"
 
-msgid "IfcLaborResourceTypeEnum_STEELWORK_DEFINITION"
-msgstr "熔炼和附加钢元素。"
+msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "布尔值反映了在附加的衬线和面板属性中给出的参数是否确切定义了几何形状, 或者附加样式形状是否优先于 FALSE 。 在最后一种情况下，参数仅有信息值。"
 
-#:IFC.xml:3136
-msgid "IfcLaborResourceTypeEnum_SITEGRADING"
-msgstr "网站设置"
+#:IFC.xml:1070
+msgid "IfcWindowStyle_Sizeable"
+msgstr "可大小"
 
-msgid "IfcLaborResourceTypeEnum_SITEGRADING_DEFINITION"
-msgstr "提取、填充或等离地球。"
+msgid "IfcWindowStyle_Sizeable_DEFINITION"
+msgstr "The Boolean indicates, whether the attached ShapeStyle can be sized using scale factor of transformation , or not FALSE . If not, the ShapeStyle should be inserted by the [[IfcWindow]] using [[IfcMappedItem]] with the scale factor 1."
 
-#:IFC.xml:3131
-msgid "IfcLaborResourceTypeEnum_MASONRY"
-msgstr "量"
+#:IFC.xml:1077
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "IfcWindowStyConstructionEnum"
 
-msgid "IfcLaborResourceTypeEnum_MASONRY_DEFINITION"
-msgstr "量"
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. bSI Documentation"
 
-#:IFC.xml:3126
-msgid "IfcLaborResourceTypeEnum_FINISHING"
-msgstr "精致的"
+#:IFC.xml:1087
+msgid "IfcWindowStyleOperationEnum"
+msgstr "IfcWindowStyOperationEnum"
 
-msgid "IfcLaborResourceTypeEnum_FINISHING_DEFINITION"
-msgstr "完成木工，包括自定义柜。"
-
-#:IFC.xml:3130
-msgid "IfcLaborResourceTypeEnum_LANDSCAPING"
-msgstr "局域网"
-
-msgid "IfcLaborResourceTypeEnum_LANDSCAPING_DEFINITION"
-msgstr "草、植物、树木或灌溉。"
-
-#:IFC.xml:3127
-msgid "IfcLaborResourceTypeEnum_FLOORING"
-msgstr "正在刷新"
-
-msgid "IfcLaborResourceTypeEnum_FLOORING_DEFINITION"
-msgstr "正在刷新"
-
-#:IFC.xml:3134
-msgid "IfcLaborResourceTypeEnum_PLUMBING"
-msgstr "正在休眠"
-
-msgid "IfcLaborResourceTypeEnum_PLUMBING_DEFINITION"
-msgstr "管道装置、设备和管道。"
-
-#:IFC.xml:3135
-msgid "IfcLaborResourceTypeEnum_ROOFING"
-msgstr "正在旋转"
-
-msgid "IfcLaborResourceTypeEnum_ROOFING_DEFINITION"
-msgstr "正在旋转"
-
-#:IFC.xml:3138
-msgid "IfcLaborResourceTypeEnum_SURVEYING"
-msgstr "生存中"
-
-msgid "IfcLaborResourceTypeEnum_SURVEYING_DEFINITION"
-msgstr "确定位置、距离和角度。"
-
-#:IFC.xml:3129
-msgid "IfcLaborResourceTypeEnum_HVAC"
-msgstr "HVAC"
-
-msgid "IfcLaborResourceTypeEnum_HVAC_DEFINITION"
-msgstr "供暖和通风装置、设备和管道。"
-
-#:IFC.xml:3120
-msgid "IfcLaborResourceTypeEnum_ADMINISTRATION"
-msgstr "管理"
-
-msgid "IfcLaborResourceTypeEnum_ADMINISTRATION_DEFINITION"
-msgstr "6. 工作协调。"
-
-#:IFC.xml:3121
-msgid "IfcLaborResourceTypeEnum_CARPENTRY"
-msgstr "宝箱"
-
-msgid "IfcLaborResourceTypeEnum_CARPENTRY_DEFINITION"
-msgstr "粗制木工，包括帧。"
-
-#:IFC.xml:3139
-msgid "IfcSubContractResource"
-msgstr "IfcSubContracting Resource"
-
-msgid "IfcSubContractResource_DEFINITION"
-msgstr "[[IfcSubContractResource]] 是代表分包承包商的施工过程所需要的施工资源。 挂机ifc2x4 IFC4 变换. 属性分包商已被删除, 使用 [[IfcRelAssignsToResource]] 来分配一个 [[IfcActor]] 来履行分包商的角色。 属性作业描述已被删除，使用长度描述来描述作业。 不论是否具体指明分包商和合同协议，均可使用[[IfcSubContractResource]]进行成本估算和工作规划。 [[IfcSubContractResource]]的目的是指通过使用次级合同而从事的某一特定类型的工作。 其目的是确定所需分包合同工作的说明。 它可以用来确定某一目的所需的一般性次级合同资源类型，而不必具体说明提供资源的行为者或组织。 它在为一个进程或进程制定一个全面计划时可能特别有用。 例如， 在维修或工作规划中，可能有一项已知的任务需要完成，计划需要一名隔热专家。 可通过其转让在不同阶段和详细程度上说明分包资源的情况 为特定任务指定的分包资源 被确定要求投标的行为者 费用明细表 从行为者收到的项目订单工作单 更改顺序等 已执行 bSI 文档"
-
-#:IFC.xml:3146
-msgid "IfcSubContractResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSubContractResource_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:3158
-msgid "IfcSubContractResourceType"
-msgstr "IfcSubContractResourceType"
-
-msgid "IfcSubContractResourceType_DEFINITION"
-msgstr "资源类型 [[IfcSubContractResourceType]] 定义了发生分包资源的常见共享信息。 这套共享信息可包括共同生产率共同成本率在共有财产集合中的共同属性。 它被用来界定一个分包合同资源规格，具体资源信息是该资源所有情况的共同点。 资源类型可以交换而无需已分配给事件处理。 [[IfcSubContractResourceType]] 的出现由[[IfcSubContractResource]] 实例代表。IFC4 中的新实体 bSI 文档"
-
-#:IFC.xml:3165
-msgid "IfcSubContractResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSubContractResourceType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:3177
-msgid "IfcSubContractResourceTypeEnum"
-msgstr "IfcSubContractResourceTypeEnum"
-
-msgid "IfcSubContractResourceTypeEnum_DEFINITION"
-msgstr "此枚举用来确定分包合同资源的主要目的。IFC4 bSI 文档中的HISTORY 新枚举："
-
-#:IFC.xml:3181
-msgid "IfcSubContractResourceTypeEnum_WORK"
-msgstr "工作区"
-
-msgid "IfcSubContractResourceTypeEnum_WORK_DEFINITION"
-msgstr "工作区"
-
-#:IFC.xml:3180
-msgid "IfcSubContractResourceTypeEnum_PURCHASE"
-msgstr "好的"
-
-msgid "IfcSubContractResourceTypeEnum_PURCHASE_DEFINITION"
-msgstr "• 制造或供应产品。"
-
-#:IFC.xml:3182
-msgid "Pset_ConstructionResource"
-msgstr "Pset 构造资源"
-
-msgid "Pset_ConstructionResource_DEFINITION"
-msgstr "跟踪资源使用情况的属性 bSI 文档"
-
-#:IFC.xml:3183
-msgid "Pset_ConstructionResource_ActualCompletion"
-msgstr "实际补全"
-
-msgid "Pset_ConstructionResource_ActualCompletion_DEFINITION"
-msgstr "拨款的实际完成百分比。"
-
-#:IFC.xml:3188
-msgid "Pset_ConstructionResource_ActualCost"
-msgstr "ActualCost"
-
-msgid "Pset_ConstructionResource_ActualCost_DEFINITION"
-msgstr "资源分配的实际费用。"
-
-#:IFC.xml:3193
-msgid "Pset_ConstructionResource_ActualWork"
-msgstr "实际工作"
-
-msgid "Pset_ConstructionResource_ActualWork_DEFINITION"
-msgstr "资源分配方面的实际工作。"
-
-#:IFC.xml:3198
-msgid "Pset_ConstructionResource_RemainingCost"
-msgstr "剩余成本"
-
-msgid "Pset_ConstructionResource_RemainingCost_DEFINITION"
-msgstr "剩余的资源分配费用。"
-
-#:IFC.xml:3203
-msgid "Pset_ConstructionResource_RemainingWork"
-msgstr "剩余工作"
-
-msgid "Pset_ConstructionResource_RemainingWork_DEFINITION"
-msgstr "剩余的资源分配工作。"
-
-#:IFC.xml:3208
-msgid "Pset_ConstructionResource_ScheduleCompletion"
-msgstr "调度完成"
-
-msgid "Pset_ConstructionResource_ScheduleCompletion_DEFINITION"
-msgstr "拨款的预定完成百分比。"
-
-#:IFC.xml:3213
-msgid "Pset_ConstructionResource_ScheduleCost"
-msgstr "调度成本"
-
-msgid "Pset_ConstructionResource_ScheduleCost_DEFINITION"
-msgstr "预算费用代表资源分配。"
-
-#:IFC.xml:3218
-msgid "Pset_ConstructionResource_ScheduleWork"
-msgstr "调度工作"
-
-msgid "Pset_ConstructionResource_ScheduleWork_DEFINITION"
-msgstr "资源分配方面的预定工作。"
-
-#:IFC.xml:3224
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities"
-msgstr "Qto BuildtionEquipmentResourceBaseQuantities"
-
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_DEFINITION"
-msgstr "基本数量与所有建筑设备资源的定义相同。"
-
-#:IFC.xml:3225
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_OperatingTime"
-msgstr "操作时间"
-
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_OperatingTime_DEFINITION"
-msgstr "使用设备的生产时间，包括操作时间和闲置时间。"
-
-#:IFC.xml:3230
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_UsageTime"
-msgstr "使用时间"
-
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_UsageTime_DEFINITION"
-msgstr "使用设备的总时间，包括操作时间和空闲时间。"
-
-#:IFC.xml:3236
-msgid "Qto_ConstructionMaterialResourceBaseQuantities"
-msgstr "Qto ConstructionMaterialResourceBaseQuantities"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_DEFINITION"
-msgstr "基本数量与所有建筑材料资源发生率的定义相同。"
-
-#:IFC.xml:3237
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_GrossVolume"
-msgstr "GrossVolume"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_GrossVolume_DEFINITION"
-msgstr "材料总量，包括装有材料和浪费材料的总量。"
-
-#:IFC.xml:3242
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_GrossWeight"
-msgstr "Grossheight"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_GrossWeight_DEFINITION"
-msgstr "材料总重量，包括所装材料和所废弃材料总重量。"
-
-#:IFC.xml:3247
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_NetVolume_DEFINITION"
-msgstr "材料的净总量，包括放置的材料，但不包括浪费的材料。"
-
-#:IFC.xml:3252
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_NetWeight"
-msgstr "网络权重"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_NetWeight_DEFINITION"
-msgstr "材料的总净重，包括放置的材料，但不包括被浪费的材料。"
-
-#:IFC.xml:3258
-msgid "Qto_LaborResourceBaseQuantities"
-msgstr "Qto Labour ResourceBaseQuantities"
-
-msgid "Qto_LaborResourceBaseQuantities_DEFINITION"
-msgstr "BSI 文档中定义所有劳动力资源发生情况时共同的基本数量"
-
-#:IFC.xml:3259
-msgid "Qto_LaborResourceBaseQuantities_OvertimeWork"
-msgstr "加班费"
-
-msgid "Qto_LaborResourceBaseQuantities_OvertimeWork_DEFINITION"
-msgstr "在超过某一特定限度之后从事的工作，如每天的小时数或每周的小时。 在哪个公司或市政政策要求采用不同的费率。 说明何时加班的政策是用户的责任，也不是以国际金融公司为模式的应用程序。"
-
-#:IFC.xml:3264
-msgid "Qto_LaborResourceBaseQuantities_StandardWork"
-msgstr "标准工作"
-
-msgid "Qto_LaborResourceBaseQuantities_StandardWork_DEFINITION"
-msgstr "在正常时间完成的工作，最多不超过一定的限度，然后可适用加班费。"
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations bSI Documentation"
 
