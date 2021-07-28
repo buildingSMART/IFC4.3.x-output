@@ -9,636 +9,457 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /master/IfcProcessExtension.pot\n"
-"X-Crowdin-File-ID: 66\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2021-07-27 16:48\n"
+"PO-Revision-Date: 2021-07-28 07:33\n"
 
-#:IFC.xml:26660
-msgid "IfcEvent"
-msgstr "SifcEvent"
+#:IFC.xml:658
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-msgid "IfcEvent_DEFINITION"
-msgstr "Un [[IfcEvent]] est quelque chose qui se produit qui déclenche une action ou une réponse. HISTOIRE Nouvelle entité dans l'IFC4. se head Use definitions [[IfcEvent]] est utilisé pour capturer des informations sur des choses particulières qui se produisent ou qui peuvent se produire. Particulièrement utilisés dans les plans de travail ou les cartes de processus qu’ils identifient, p. ex. un point à partir duquel un message contenant des informations peut être émis ou à partir duquel une règle ou une contrainte est appelée. Documentation bSI"
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the S LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:3594
-msgid "IfcEvent_EventOccurenceTime"
-msgstr "Temps d'Occurence de l'événement"
+#:IFC.xml:741
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "Style d'aspect de forme"
 
-msgid "IfcEvent_EventOccurenceTime_DEFINITION"
-msgstr "Temps d'Occurence de l'événement"
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Style d'aspect de forme"
 
-#:IFC.xml:26681
-msgid "IfcEvent_PredefinedType"
-msgstr "TypePredefini"
+#:IFC.xml:679
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "Profondeur linéaire"
 
-msgid "IfcEvent_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "Profondeur du revêtement de porte, mesurée perpendiculaire au plan de la doublure de porte. S'il est omis et avec une valeur donnée à l'épaisseur de la paroi il indique une profondeur réglable i. , une profondeur qui s'ajuste à l'épaisseur du mur dans lequel l'apparition de ce style de porte est insérée."
 
-#:IFC.xml:26669
-msgid "IfcEvent_EventTriggerType"
-msgstr "format@@0 EventTriggerType"
+#:IFC.xml:684
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "Épaisseur de doublure"
 
-msgid "IfcEvent_EventTriggerType_DEFINITION"
-msgstr "Identifie les types prédéfinis de déclencheur d'événement à partir duquel X 0D le type requis peut être défini."
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "Épaisseur de la paroi de la porte comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de ligne est 0. zéro il indique une porte sans une doublure tous les autres paramètres de doublure doivent être réglés à NIL dans ce cas . Si LiningThickness est NIL il indique que la valeur n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:26674
-msgid "IfcEvent_UserDefinedEventTriggerType"
-msgstr "UserDefinedEventTriggerType"
+#:IFC.xml:689
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "Profondeur du seuil"
 
-msgid "IfcEvent_UserDefinedEventTriggerType_DEFINITION"
-msgstr "Un type de déclencheur d'événement défini par l'utilisateur dont la valeur est X 0D asserted lorsque la valeur d'un type de trigger d'événement est déclarée X 0D comme USERDEFINED."
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "Dimension de profondeur dans le plan perpendiculaire à la feuille de porte du seuil de la porte. Seulement étant donné que la paroi de la porte comprend un seuil. S'il est omis et avec une valeur donnée à l'épaisseur de seuil, il indique une profondeur réglable i.e. une profondeur qui s'ajuste à l'épaisseur du mur dans laquelle l'apparition de ce style de porte est insérée."
 
-#:IFC.xml:26693
-msgid "IfcEventTriggerTypeEnum"
-msgstr "IfcEventTriggerTypeEnum"
+#:IFC.xml:694
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "Seuil d'épaisseur"
 
-msgid "IfcEventTriggerTypeEnum_DEFINITION"
-msgstr "Le [[IfcEventTriggerTypeEnum]] définit la plage de différents types de déclencheur d'événements qui peuvent être spécifiés. La définition des types de déclencheurs d'événements a été adoptée à partir de la Notation BPMN de modélisation de processus métiers , qui est également utilisé dans le manuel de la livraison de l'information IDM pour définir les processus métier. Des informations plus détaillées sur l'utilisation des types de déclencheurs d'événements peuvent être trouvées dans ces spécifications. Nouveau type d'HISTOIRE dans la documentation IFC4 bSI"
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "Épaisseur du seuil de porte comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de seuil est 0. zéro il indique une porte sans seuil de profondeur de seuil doit être fixé à NIL dans ce cas . Si le seuil d'épaisseur est NIL, il indique que l'information sur un seuil n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:26701
-msgid "IfcEventType"
-msgstr "Type d\\'événement Ifc"
+#:IFC.xml:699
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "TransomEpaisseur"
 
-msgid "IfcEventType_DEFINITION"
-msgstr "Un [[IfcEventType]] définit un type d'événement particulier qui peut être spécifié. HISTOIRE Nouvelle entité dans l'IFC4 An [[IfcEventType]] fournit toutes les formes d'événement qui peuvent être spécifiées. L'utilisation de [[IfcEventType]] définit les paramètres pour une ou plusieurs occurrences de [[IfcEvent]] . Les paramètres peuvent être spécifiés par le biais de jeux de propriétés qui peuvent être énumérés dans le type de données [[IfcEventTypeEnum]] ou par l'intermédiaire d'attributs explicites de [[IfcEvent]] . Les occurrences d'événement [[IfcEvent]] les entités sont liées au type d'événement via la relation [[IfcRelDefinesByType]]. Documentation bSI"
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "Largeur d'épaisseur en plan parallèle à la feuille de porte du transom si elle est fournie, si l'attribut TransomOffset est défini , qui divise la feuille de porte d'un vitrage ou d'une fenêtre ci-dessus. X 0D Si la TransomEpaisseur est définie à zéro et que le TransomOffset est à une longueur positive , puis la porte est divisée verticalement en une surface de feuille et de fenêtre sans cadre physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:26722
-msgid "IfcEventType_PredefinedType"
-msgstr "TypePredefini"
+#:IFC.xml:704
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-msgid "IfcEventType_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "Décalage de la transe si donné qui divise la feuille de porte d'un vitrage ou d'une fenêtre ci-dessus. Le décalage est donné à partir du bas de l'ouverture de la porte."
 
-#:IFC.xml:26710
-msgid "IfcEventType_EventTriggerType"
-msgstr "format@@0 EventTriggerType"
+#:IFC.xml:709
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcEventType_EventTriggerType_DEFINITION"
-msgstr "Identifie les types prédéfinis de déclencheur d'événement à partir duquel X 0D le type requis peut être défini."
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "Dimension décalée dans le plan perpendiculaire à la feuille de porte de la doublure de porte. Le décalage est donné comme distance à l'axe x du positionnement local."
 
-#:IFC.xml:26715
-msgid "IfcEventType_UserDefinedEventTriggerType"
-msgstr "UserDefinedEventTriggerType"
+#:IFC.xml:714
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "Décalage du seuil"
 
-msgid "IfcEventType_UserDefinedEventTriggerType_DEFINITION"
-msgstr "Un type de déclencheur d'événement défini par l'utilisateur la valeur dont X 0D est asserté lorsque la valeur d'un type de trigger d'événement est X 0D déclaré USERDEFINED."
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "Dimension de décalage en plan perpendiculaire à la feuille de porte du seuil de porte. Le décalage est donné comme distance à l'axe x du positionnement local. Seulement donné si la doublure de la porte comprend un seuil et le paramètre est connu."
 
-#:IFC.xml:26734
-msgid "IfcEventTypeEnum"
-msgstr "IfcEventTypeEnum"
+#:IFC.xml:719
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "Épaisseur du boîtier"
 
-msgid "IfcEventTypeEnum_DEFINITION"
-msgstr "Le [[IfcEventTypeEnum]] définit la plage de différents types d'événements qui peuvent être spécifiés. HISTOIRE Nouveau type dans la documentation IFC4 bSI"
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "Épaisseur de la dimension du boîtier en plan de la feuille de porte . Si donné, il est appliqué de la même façon aux quatre côtés du mur adjacent."
 
-#:IFC.xml:26740
-msgid "IfcEventTypeEnum_STARTEVENT"
-msgstr "DÉMARRER"
+#:IFC.xml:724
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "Profondeur de carrosserie"
 
-msgid "IfcEventTypeEnum_STARTEVENT_DEFINITION"
-msgstr "Un événement d'initiation d'un processus."
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "Profondeur de la dimension du boîtier en perpendiculaire plane à la feuille de porte. Si donné, il est appliqué de la même façon aux quatre côtés du mur adjacent."
 
-#:IFC.xml:26738
-msgid "IfcEventTypeEnum_ENDEVENT"
-msgstr "ENDEVANT"
+#:IFC.xml:729
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "Lignage au décalage du panneau unnamed@@0"
 
-msgid "IfcEventTypeEnum_ENDEVENT_DEFINITION"
-msgstr "Un événement terminant d'un processus."
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Décalage entre la doublure et le panneau de fenêtre mesuré selon l'axe x du positionnement local. X 0D .change ifc2x4 X 0D IFC4 Nouvel attribut CHANGE ajouté à la fin de la définition de l'entité."
 
-#:IFC.xml:26739
-msgid "IfcEventTypeEnum_INTERMEDIATEEVENT"
-msgstr "ÉVÉNEMENT INTERMÉDIATÉE"
+#:IFC.xml:734
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "Lining au décalage du panneau à partir de Y"
 
-msgid "IfcEventTypeEnum_INTERMEDIATEEVENT_DEFINITION"
-msgstr "Un événement qui se produit à un stade intermédiaire d'un processus."
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Décalage entre la doublure et le panneau de porte mesuré selon l'axe y du positionnement local. X 0D .change ifc2x4 X 0D IFC4 Nouvel attribut CHANGE ajouté à la fin de la définition de l'entité."
 
-#:IFC.xml:26741
-msgid "IfcProcedure"
-msgstr "En cas d'accident"
+#:IFC.xml:753
+msgid "IfcDoorPanelOperationEnum"
+msgstr "Enium de fonctionnement de la porte Ifc"
 
-msgid "IfcProcedure_DEFINITION"
-msgstr "Un [[IfcProcedure]] est un ensemble logique d'actions à prendre en réponse à un événement ou à provoquer un événement. HISTOIRE Nouvelle entité dans IFC2x2 . hange ifc2x4 IFC4 CHANGE ProcedureType renommé en PredefinedType et rendu optionnel compatible vers le haut. Où les règles WR1 et WR2 ont été supprimées. les définitions d'utilisation de se head [[IfcProcedure]] sont utilisées pour saisir des informations sur les processus pas à pas tels que l'étalonnage, démarrer les procédures d'arrêt pour les articles d'équipement, les actions désignées à prendre en cas d'urgence, etc. Une procédure n'est pas une tâche, mais peut décrire un ensemble de tâches et leur ordre d'occurrence en réponse ou pour provoquer un événement. Comme le montre la figure 11, [[IfcProcedure]] ne restreint rien mais décrit des étapes spécifiques de la façon dont quelque chose devrait se produire. Tandis qu'une procédure contrôle restreint dans le sens d'indiquer comment la tâche doit être accomplie par nature de décrire les détails intérieurs, ceci n'est pas différent des parties d'un produit indiquant comment les pièces doivent être assemblées . Par conséquent, il ne restreint pas l'élément extérieur dans son ensemble mais fournit des détails internes sur le point. Exemple de procédure . .. .. .. .. .. .. .. figures ifcprocedure exemple.png Figure 1 Procédure relations BSI Documentation"
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "Cette énumération définit les méthodes de base de fonctionnement des panneaux de porte individuels, comme indiqué dans la figure 1. Enumerator Illustration Swinging DoubleActing Sliding Folding Revolving Rollingup FixedPanel UserDefined NotDefined Figure 1 Door operations The opening direction of the door panel is given by the local placement of the [[IfcDoor]] . L'axe y positif détermine la direction comme indiqué dans la figure 2. panel direction .. .. .. .. .. .. .. chiffres ifcdoorpaneloperationenum fig10. si les opérations du panneau de porte Figure 2 NOTE La représentation symbolique des figures dépendent du code national du bâtiment. Ces chiffres ne sont affichés que sous forme d'illustrations HISTORY New énumération dans IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL ajouté."
 
-#:IFC.xml:26752
-msgid "IfcProcedure_PredefinedType"
-msgstr "TypePredefini"
+#:IFC.xml:764
+msgid "IfcDoorPanelPositionEnum"
+msgstr "format@@0 IfcDoorPanelPosition Enum"
 
-msgid "IfcProcedure_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "Cette énumération définit les méthodes de base pour décrire l'emplacement d'un panneau de porte dans une ligne de porte. La nouvelle énumération HISTORY dans la figure 1 IFC2x montre la désignation d'un panneau de porte avec Panneau de position GAUCHE et d'un panneau de porte avec DROIT PanelPosition dans un style de porte avec un DOUBLE DOOR SINGLE SWING. La position est donnée comme indiqué dans le plan XZ du placement local, en regardant dans la direction de l'axe Y positif. .. .. .. .. .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Position du panneau de la porte BSI Documentation"
 
-#:IFC.xml:26764
-msgid "IfcProcedureType"
-msgstr "Type de procédure"
+#:IFC.xml:770
+msgid "IfcDoorPanelProperties"
+msgstr "IfcDoorPanelProprities"
 
-msgid "IfcProcedureType_DEFINITION"
-msgstr "Un [[IfcProcedureType]] définit un type particulier de procédure qui peut être spécifié. HISTOIRE Nouvelle entité dans l'IFC4 Une [[IfcProcedureType]] prévoit toutes les formes de procédure qui peuvent être spécifiées. L'utilisation de [[IfcProcedureType]] définit les paramètres pour une ou plusieurs occurrences de [[IfcProcedure]] . Les paramètres peuvent être spécifiés par le biais de jeux de propriétés qui peuvent être énumérés dans le type de données [[IfcProcedureTypeEnum]] ou par l'intermédiaire d'attributs explicites de [[IfcProcedure]] . Les occurrences d'actes [[IfcProcedure]] sont liées au type d'acte via la relation [[IfcRelDefinesByType]]. La documentation bSI"
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "Un panneau de porte est normalement une feuille de porte qui s'ouvre pour permettre aux personnes ou aux marchandises de passer. Les paramètres du panneau de porte définissent le paramètre géométriquement pertinent du panneau, Les [[IfcDoorPanelProperties]] sont utilisés pour décrire paramétriquement la forme et le fonctionnement des panneaux de porte. La définition paramétrique peut être ajoutée uniquement ou en plus à la représentation explicite de la porte. Les [[IfcDoorType]] peuvent définir des portes comprenant plus d'un panneau. Dans ce cas, une instance de [[IfcDoorPanelProperties]] doit être incluse pour chaque panneau de porte. L'attribut PanelPosition en conjonction avec l'attribut [[IfcDoorStyle]].OperationType détermine à quel panneau le [[IfcDoorPanelProperties]] s'applique. Les [[IfcDoorPanelProperties]] sont inclus dans la liste des propriétés , donnée par l'attribut HasPropertySets du [[IfcDoorType]] . Plus d'informations sur le panneau de porte peuvent être incluses dans la même liste de [[IfcDoorStyle]] en utilisant le [[IfcPropertySet]] pour les extensions dynamiques. Le [[IfcDoorPanelProperties]] ne contient pas de représentation géométrique. Cependant il définit des paramètres qui peuvent être utilisés pour créer la forme du type de porte qui est insérée par le [[IfcDoor]] dans le contexte spatial du projet, comme le montre la figure 1. Les paramètres de [[IfcDoorPanelProperties]] définissent un panneau de porte standard, y compris si vous avez une largeur proportionnelle pour définir non uniforme double swing ou coulissant, ou des portes pliantes. La limite extérieure du panneau est déterminée par la représentation de forme de profil assignée à la [[IfcDoor]] , qui insère le [[IfcDoorType]] . Il doit également tenir compte du paramètre de doublage. La profondeur du balancement du panneau, des panneaux à double action et des panneaux coulissants est définie par le paramètre de profondeur du panneau. Profondeur de panneau Pour les types de portes qui comprennent plus d'un panneau, la largeur d'au moins un panneau est donnée par une mesure normalisée de ratio . Il détermine la largeur de ce panneau, qui est défini comme un rapport de la largeur globale de l'ouverture de la porte. Propriétés du panneau de la figure 1 : HISTORIE Nouvelle entité dans IFC2.0. .change ifc2x4 IFC4 CHANGE Supertype changé en nouveau [[IfcPreDefinedPropertySet]] . Documentation bSI"
 
-#:IFC.xml:26771
-msgid "IfcProcedureType_PredefinedType"
-msgstr "TypePredefini"
+#:IFC.xml:797
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "Style d'aspect de forme"
 
-msgid "IfcProcedureType_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Style d'aspect de forme"
 
-#:IFC.xml:26783
-msgid "IfcProcedureTypeEnum"
-msgstr "format@@0 IfcProcereTypeEnum"
+#:IFC.xml:775
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "Profondeur du panneau"
 
-msgid "IfcProcedureTypeEnum_DEFINITION"
-msgstr "Le [[IfcProcedureTypeEnum]] définit la plage de différents types de procédure qui peuvent être spécifiés. HISTOIRE Nouveau type dans la documentation IFC2x2 bSI"
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "Profondeur du panneau de porte, mesurée perpendiculaire au plan de la feuille de porte."
 
-#:IFC.xml:26792
-msgid "IfcProcedureTypeEnum_ADVICE_NOTE"
-msgstr "NOTE D'INFORMATION"
+#:IFC.xml:780
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "Opération Panelformat@@0"
 
-msgid "IfcProcedureTypeEnum_ADVICE_NOTE_DEFINITION"
-msgstr "Renseignements supplémentaires ou conseils qui devraient être pris en considération comme une procédure ou lors de la mise en œuvre d'une procédure."
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "Le Groupe d'étude définit le mode de fonctionnement de ce panneau. Le Panneau d'opération du panneau de porte doit correspondre avec le Type d'opération du [[IfcDoorStyle]] par lequel il est référencé."
 
-#:IFC.xml:26791
-msgid "IfcProcedureTypeEnum_ADVICE_CAUTION"
-msgstr "ATTENTION DE CONFIDENTIALITÉ"
+#:IFC.xml:785
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "Largeur du panneau"
 
-msgid "IfcProcedureTypeEnum_ADVICE_CAUTION_DEFINITION"
-msgstr "Une mise en garde qui devrait être prise en considération comme une procédure ou lors de la mise en œuvre d'une procédure."
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "Largeur de ce panneau, par rapport à la largeur d'ouverture totale de la porte. Si elle est omise, elle est par défaut 1. Une valeur doit être fournie pour toutes les portes avec OperationType à [[IfcDoorStyle]] définissant une porte avec plus d'un panneau."
 
-#:IFC.xml:26793
-msgid "IfcProcedureTypeEnum_ADVICE_WARNING"
-msgstr "AVERTISSEMENT D'AVISSEMENT"
+#:IFC.xml:790
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "Position du panneau"
 
-msgid "IfcProcedureTypeEnum_ADVICE_WARNING_DEFINITION"
-msgstr "Un avertissement de danger potentiel qui devrait être pris en considération comme une procédure ou lors de la mise en œuvre d'une procédure."
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position de ce panneau dans la porte. La position du panneau de la porte doit correspondre au type opérationnel de [[IfcDoorStyle]] par lequel elle est référencée."
 
-#:IFC.xml:26795
-msgid "IfcProcedureTypeEnum_DIAGNOSTIC"
-msgstr "DIAGNOSTIQUE"
+#:IFC.xml:809
+msgid "IfcDoorStyle"
+msgstr "IfcDoorStyle"
 
-#:IFC.xml:26794
-msgid "IfcProcedureTypeEnum_CALIBRATION"
-msgstr "CALIBRATION"
+msgid "IfcDoorStyle_DEFINITION"
+msgstr "Définition Le style de porte, [[IfcDoorStyle]] , définit un style particulier de porte, qui peuvent être inclus dans le contexte spatial du modèle de construction à travers des instances de [[IfcDoor]] . Un style de porte définit le paramètre global du style de porte et fait référence au paramètre particulier de la doublure et à un ou plusieurs panneaux à travers les [[IfcDoorLiningProperties]] et le [[IfcDoorPanelProperties]] . L'entité de la porte, [[IfcDoor]] définit une occurrence particulière d'une porte insérée dans le contexte spatial d'un projet. Le paramètre réel de la porte et de sa forme est défini à la [[IfcDoorStyle]] , à laquelle la [[IfcDoor]] est liée par la relation inverse IsDefinedBy pointant sur IfcRelDefinedByType . Le [[IfcDoorStyle]] définit aussi les attributs particuliers pour la ligne , [[IfcDoorLiningProperties]] et les panneaux, [[IfcDoorPanelProperties]] . La [[IfcDoorStyle]] définit la géométrie de la ligne de base, ou la carte de représentation, pour toutes les occurrences du style de porte, données par le [[IfcDoor]] , pointant vers ce style. La représentation du style de la porte peut être donnée par l'ensemble de paramètres minimum, défini pour la doublure de la porte et les panneaux de porte , ou il peut être donné par une représentation géométrique utilisée par la [[IfcRepresentationMap]] . L'attribut ParameterTakesPrecedence décide, si l'ensemble de paramètres peut être utilisé pour représenter exactement la forme du style de la porte TRUE , ou si la pièce jointe [[IfcRepresentationMap]] contient la représentation exacte FALSE . L'IfcDoorStyleOperationTypeEnum définit la disposition générale du style de porte. Selon l'énumérateur, les instances appropriées de [[IfcDoorLiningProperties]] et [[IfcDoorPanelProperties]] sont jointes dans la liste des HasPropertySets . L'IfcDoorStyleOperationTypeEnum détermine principalement le côté gauche accroché à la charnière, ou suspendu à droite , le glissement de l'opération, le pliage, etc. S et le nombre de panneaux. Voir les définitions d'utilisation de la géométrie à IfcDoorStyleOperationTypeEnum pour l'utilisation correcte des symboles d'ouverture pour différents types d'opérations. HISTORY S New entity dans IFC2x. .deprecated DEPRECATION L'entité est obsolète et ne doit pas être utilisée. La nouvelle entité [[IfcDoorType]] doit être utilisée à la place. La documentation bSI"
 
-msgid "IfcProcedureTypeEnum_CALIBRATION_DEFINITION"
-msgstr "Une procédure entreprise pour calibrer un artefact."
+#:IFC.xml:810
+msgid "IfcDoorStyle_OperationType"
+msgstr "Type d'opération"
 
-#:IFC.xml:26796
-msgid "IfcProcedureTypeEnum_SHUTDOWN"
-msgstr "SHUTDOWN"
+msgid "IfcDoorStyle_OperationType_DEFINITION"
+msgstr "Type définissant la disposition générale et le fonctionnement du style de la porte."
 
-msgid "IfcProcedureTypeEnum_SHUTDOWN_DEFINITION"
-msgstr "Une procédure entreprise pour arrêter l'opération un artefact."
+#:IFC.xml:815
+msgid "IfcDoorStyle_ConstructionType"
+msgstr "Type de construction"
 
-#:IFC.xml:26797
-msgid "IfcProcedureTypeEnum_STARTUP"
-msgstr "STARTUP"
+msgid "IfcDoorStyle_ConstructionType_DEFINITION"
+msgstr "Type définissant le type de construction et de matériau de base de la porte."
 
-msgid "IfcProcedureTypeEnum_STARTUP_DEFINITION"
-msgstr "Une procédure entreprise pour démarrer l'opération un artefact."
+#:IFC.xml:820
+msgid "IfcDoorStyle_ParameterTakesPrecedence"
+msgstr "Paramètre de préséance"
 
-#:IFC.xml:26798
-msgid "IfcRelSequence"
-msgstr "format@@0 IfcRelSequence"
+msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "La valeur booléenne réfléchit, si le paramètre donné dans la ligne attachée et les propriétés du panneau définissent exactement la géométrie TRUE , ou si la forme de style attachée a la priorité FALSE . Dans le dernier cas, le paramètre n'a qu'une valeur informative."
 
-msgid "IfcRelSequence_DEFINITION"
-msgstr "[[IfcRelSequence]] is a sequential relationship between processes where one process must occur before the other in time and where the timing of the relationship may be described as a type of sequence. The relating process [[IfcRelSequence]].RelatingProcess is considered to be the predecessor in the relationship has precedence whilst the related process [[IfcRelSequence]].RelatedProcess is the successor. [[IfcRelSequence]] is defined as one to one relationship therefore it assigns one predecessor to one successor. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE Relocated to IfcProcessExtension schema. TimeLag and SequenceType made optional. USERDEFINED added to the IfcSequenceType enumeration. UserDefinedSequenceType attribute added. WHERE rule controlling use of the USERDEFINED enumeration added. .use head Use definitions [[IfcRelSequence]] is used to describe the logical sequence relationship that exists between two processes. This logical relationship identifies that there is a predecessor or relating process and a successor or related process. In IFC, there may be one predecessor and one successor in the relationship. Many occurrences of [[IfcRelSequence]] may exist to describe the sequence relationships of a predecessor task with many successor tasks or of many predecessor tasks with one successor task, thus enabling a m n sequence relationship between tasks. Please note that sequence relationships can be used to define dependencies between process occurrences but also between process types for further information see [[IfcRelDefinesByObject]] and [[IfcTaskType]] . In case of defining dependencies between process occurrences sequence relationships should stay within the limits of a directed, non cyclic graph. A sequence type may be set for a sequence. For tasks assigned to a work schedule, it is expected that the sequence type will be asserted. For a process map, where the sequence relationship between processes is simply a logical flow, it need not be asserted. A time lag may be assigned to a sequence, and the sequence type defines the way in which the time lag applies to the sequence either as a ratio or percentage of time duration e.g. start successor task when predecessor is 50 complete or as a time measure e.g. start successor task 1 week after commencement of the predecessor task . Care should be used when assigning a time lag to a sequence depending on the setting of the sequence type since there is no checking that the time lag value is in keeping with the sequence type set. bSI Documentation"
+#:IFC.xml:825
+msgid "IfcDoorStyle_Sizeable"
+msgstr "Taillé"
 
-#:IFC.xml:3646
-msgid "IfcRelSequence_TimeLag"
-msgstr "Délai"
+msgid "IfcDoorStyle_Sizeable_DEFINITION"
+msgstr "Le booléen indique si la représentation IfcappedRepresentation si donnée peut être dimensionnée en utilisant le facteur d'échelle de transformation , ou pas FALSE . Dans le cas contraire, la IfcMappedRepresentation devrait être [[IfcShapeRepresentation]] de la [[IfcDoor]] en utilisant [[IfcMappedItem]] comme élément avec le facteur d'échelle 1."
 
-msgid "IfcRelSequence_TimeLag_DEFINITION"
-msgstr "Délai"
+#:IFC.xml:832
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
 
-#:IFC.xml:20293
-msgid "IfcRelSequence_RelatedProcess"
-msgstr "Processus connexe"
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "Cette énumération définit les types de base de construction des portes. Le type de construction se rapporte à la combinaison principale de matériaux ou de matériaux utilisés pour la fabrication de la porte. HISTOIRE Nouvelle énumération dans la IFC2x documentation bSI"
 
-msgid "IfcRelSequence_RelatedProcess_DEFINITION"
-msgstr "Processus connexe"
+#:IFC.xml:843
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
 
-#:IFC.xml:20319
-msgid "IfcRelSequence_RelatingProcess"
-msgstr "RelatingProcess"
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. bSI Documentation"
 
-msgid "IfcRelSequence_RelatingProcess_DEFINITION"
-msgstr "RelatingProcess"
+#:IFC.xml:863
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "Numéros d\\'opération de couverture possibles"
 
-#:IFC.xml:26807
-msgid "IfcRelSequence_SequenceType"
-msgstr "Type de séquence"
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "Cette énumération définit les types valides de couvertures perméables. HISTOIRE Nouvelle énumération dans la documentation IFC2.0. bSI"
 
-msgid "IfcRelSequence_SequenceType_DEFINITION"
-msgstr "La façon dont le décalage horaire s'applique à la séquence."
+#:IFC.xml:870
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
 
-#:IFC.xml:26812
-msgid "IfcRelSequence_UserDefinedSequenceType"
-msgstr "Type de séquence défini par l'utilisateur"
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "Cette entité est une description d'un panneau dans une porte ou une fenêtre en tant que remplisseurs à ouvrir qui permet le flux d'air. Il est donné par ses propriétés [[IfcPermeableCoveringProperties]] . Un revêtement perméable est un boîtier, comme un composant, fixe ou ouvert, composé essentiellement d'un cadre et de l'entrée. La saisie est normalement un gril, un bruit ou un écran. La façon d'opération est définie dans le type d'opération. Les [[IfcPermeableCoveringProperties]] sont inclus dans la liste des propriétés HasPropertySets des [[IfcWindowStyle]] ou de la [[IfcDoorStyle]] . Plus d'informations sur le revêtement perméable peuvent être incluses dans la même liste du style de fenêtre ou de porte en utilisant le [[IfcPropertySet]] pour les extensions dynamiques. Ceci s'applique en particulier aux propriétés additionnelles pour les différents types d'opération Le [[IfcPermeableCoveringProperties]] ne contient pas de représentation géométrique. Cependant il définit des paramètres qui peuvent être utilisés pour créer la forme de [[IfcWindowStyle]] qui est insérée par le [[IfcWindow]] dans le contexte spatial du projet , ou du [[IfcDoorStyle]] qui est inséré par le [[IfcDoor]] . Les paramètres du [[IfcPermeableCoveringProperties]] définissent une couverture perméable standard. La limite extérieure du panneau est déterminée par le paramètre d'occurrence assigné à [[IfcWindow]] ou [[IfcDoor]] . Il doit également tenir compte du paramètre de doublage. La position du revêtement perméable dans la fenêtre ou la porte globale est déterminée par l'attribut PanelPosition. La figure 1 illustre le panneau appliqué à la position dans la rangée, tel que défini par l'attribut de position du panneau. Les paramètres suivants s'appliquent à ce panel FrameDepth , FrameThickness . chiffres ifcpermeablecoveringproperties.gif Figure 1 Perméable couvrant les propriétés HISTORY Nouvelle entité dans IFC2. , il avait été renommé de IfcPermeableCovering dans IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changé en nouveau [[IfcPreDefinedPropertySet]] ."
 
-msgid "IfcRelSequence_UserDefinedSequenceType_DEFINITION"
-msgstr "Permet la spécification du type utilisateur défini de la séquence X 0D au-delà des valeurs d'énumération START START, START FINISH, X 0D FINISH START, FINISH fournie par l'attribut de type SequenceType X 0D [[IfcSequenceEnum]] . Lorsqu'une valeur est X 0D fournie pour l'attribut UserDefinedSequenceType dans X 0D parallèle l'attribut SequenceType doit avoir une valeur d'énumération X 0D USERDEFINED. X 0D X 0D .change ifc2x4 X 0D IFC4 Attribut de CHANGE ajouté"
+#:IFC.xml:893
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "Style d'aspect de forme"
 
-#:IFC.xml:26819
-msgid "IfcSequenceEnum"
-msgstr "IfcSequenceEnum"
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Style d'aspect de forme"
 
-msgid "IfcSequenceEnum_DEFINITION"
-msgstr "[[IfcSequenceEnum]] est une énumération qui définit les différentes façons d'appliquer un décalage horaire à une séquence entre deux processus. HISTOIRE Nouvelle entité dans la documentation IFC1.0 bSI"
+#:IFC.xml:871
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "Type d'opération"
 
-#:IFC.xml:26827
-msgid "IfcTask"
-msgstr "IfcTask"
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "Les types de couvertures perméables sont également utilisés pour attribuer des présentations symboliques normalisées selon les normes nationales du bâtiment."
 
-msgid "IfcTask_DEFINITION"
-msgstr "An [[IfcTask]] is an identifiable unit of work to be carried out in a construction project. A task is typically used to describe an activity for the construction or installation of products, but is not limited to these types. For example it might be used to describe design processes, move operations and other design, construction and operation related activities as well. Quantities of resources consumed by the task are dealt with by defining the [[IfcElementQuantity]] for the resource and not at the instance of [[IfcTask]] . HISTORY New entity in IFC1.0. Renamed from IfcWorkTask in IFC2x. .change ifc2x4 IFC4 CHANGE Attributes TaskTime and PredefinedType added. IfcMove and IfcOrderRequest has been removed in IFC4 and are now represented by [[IfcTask]] . IfcRelAssignsTasks relationship has been removed as well. .use head Attribute use definition Each occurrence of [[IfcTask]] is given a name that is indicative of its content [[IfcRoot]].Name . A textual description of the task may be provided and this may be further elaborated by a narrative long description [[IfcProcess]].LongDescription . A work method may be declared for the method of work used in carrying out a task. A task is identified as being either a milestone task or not. A milestone task is defined by the marker IsMilestone . and has no duration. A status and priority for each task may also be set. .use head Time and duration use definition Compared to previous IFC releases, basic task time information scheduled start time, scheduled finish time, duration is now directly attached to [[IfcTask]] through the TaskTime attribute. Regular tasks are defined through [[IfcTaskTime]] . Recurring tasks are defined through [[IfcTaskTimeRecurring]] . In case a regular task is derived from a recurring task both tasks should be linked together through a [[IfcRelNests]] relationship, where [[IfcRelNests]].IsNestedBy points to the recurring task and [[IfcRelNests]].Nests points to all regular tasks that have been derived from the recurring task. .use head Representation of other activities The use definitions for [[IfcTask]] have been generalised to represent other activities as well, including activities that had been defined by own entities in previous IFC releases. This includes Order actions Move operations [[IfcTask]] represents an order that might be carried out by a Helpdesk acting the role of interface for the organization between the facility user and the functional requirement of fulfilling their needs. The actual task represented by the [[IfcTask]] entity is turning a request into an order and initiating the action that will enable the order to be completed. The [[IfcProjectOrder]] or one of its subtypes including maintenance work order, is related to the [[IfcTask]] using [[IfcRelAssignsToControl]] . [[IfcTask]] can also be used to describe an activity that moves people, groups within an organization or complete organizations together with their associated furniture and equipment from one place to another. It thus replaces the previous IFC entity IfcMove. The functionality is represented in [[IfcTask]] as follows Move from The place from which actors and their associated equipment are moving. Use [[IfcRelAssignsToProcess]] where RelatingProcess points to the task and RelatedObjects holds the location s from which to move. Move to The place to which actors and their associated equipment are moving. Use [[IfcRelAssignsToProduct]] where RelatedObjects points to the task s and RelatingProduct points to the location to which to move. Punch list A list of points concerning a move that require attention. Use LongDescription or else identify sub tasks to track punch list items individually via [[IfcRelNests]] . bSI Documentation"
+#:IFC.xml:876
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "Position du panneau"
 
-#:IFC.xml:3949
-msgid "IfcTask_TaskTime"
-msgstr "Heure de la tâche"
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "Position de ce panneau perméable à l'intérieur de la fenêtre ou du type de porte."
 
-msgid "IfcTask_TaskTime_DEFINITION"
-msgstr "Heure de la tâche"
+#:IFC.xml:881
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "Profondeur du cadre"
 
-#:IFC.xml:26858
-msgid "IfcTask_PredefinedType"
-msgstr "TypePredefini"
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "Profondeur du cadre du panneau utilisé pour inclure le revêtement perméable , mesuré horizontalement de la face avant à la face arrière à la face horizontale. . perpendiculaire au plan d’élévation de la fenêtre ou de la porte."
 
-msgid "IfcTask_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+#:IFC.xml:886
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "Épaisseur du cadre"
 
-#:IFC.xml:26836
-msgid "IfcTask_Status"
-msgstr "Statut"
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "Largeur du cadre du panneau utilisé pour inclure le revêtement perméable , mesuré de l'intérieur du panneau à la couverture perméable à l'extérieur du panneau à la doublure , i. . parallèle au plan d’élévation de la fenêtre ou de la porte."
 
-msgid "IfcTask_Status_DEFINITION"
-msgstr "Statut actuel de la tâche. X 0D X 0D NOTE Les valeurs particulières pour le statut ne sont pas spécifiées, elles doivent être déterminées et acceptées par l'utilisation locale. Des exemples de valeurs de statut possibles incluent Not Yet Started , Started , Completed ."
+#:IFC.xml:905
+msgid "IfcWindowLiningProperties"
+msgstr "IfcWindowLiningPropriétés"
 
-#:IFC.xml:26841
-msgid "IfcTask_WorkMethod"
-msgstr "Méthode de travail"
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-msgid "IfcTask_WorkMethod_DEFINITION"
-msgstr "La méthode de travail utilisée pour accomplir une tâche. NOTE X 0D X 0D Cet attribut ne doit pas être utilisé si la méthode de travail est spécifiée pour le [[IfcTaskType]]"
+#:IFC.xml:979
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "Style d'aspect de forme"
 
-#:IFC.xml:26846
-msgid "IfcTask_IsMilestone"
-msgstr "Étape de l'Isle"
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Style d'aspect de forme"
 
-msgid "IfcTask_IsMilestone_DEFINITION"
-msgstr "Identifie si une tâche est une tâche de jalon TRUE ou non X 0D FALSE . NOTE X 0D X 0D Dans les applications de planification de petits projets, une tâche importante peut être comprise comme une tâche sans durée. En tant que telle, il représente un point singulier dans le temps."
+#:IFC.xml:922
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "Profondeur linéaire"
 
-#:IFC.xml:26851
-msgid "IfcTask_Priority"
-msgstr "Priorité"
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "Profondeur de la dimension de la fenêtre mesurée perpendiculaire au plan d'élévation de la fenêtre ."
 
-msgid "IfcTask_Priority_DEFINITION"
-msgstr "Une valeur qui indique la priorité relative de la tâche dans la comparaison de X 0D aux priorités des autres tâches ."
+#:IFC.xml:927
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "Épaisseur de doublure"
 
-#:IFC.xml:26870
-msgid "IfcTaskType"
-msgstr "IfcTaskType"
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "Épaisseur de la ligne de fenêtre comme expliqué dans la figure ci-dessus. Si la valeur d'épaisseur de ligne est 0. zéro, il indique une fenêtre sans une ligne, tous les autres paramètres de ligne doivent être réglés à NIL dans ce cas . Si LiningThickness est NIL il indique que la valeur n'est pas disponible. X 0D .change ifc2x4 X 0D IFC4 Type de données CHANGE modifié pour être [[IfcNonNegativeLengthMeasure]] ."
 
-msgid "IfcTaskType_DEFINITION"
-msgstr "Un [[IfcTaskType]] définit un type particulier de tâche qui peut être spécifié pour être utilisé dans un contrôle de travail. L'HISTOIRE Nouvelle entité dans IFC4 Une [[IfcTaskType]] fournit toutes les formes de tâches qui peuvent être spécifiées. C'est une définition de référence pour une unité de travail qui peut être divisée en une séquence de sous-tâches. Veuillez noter qu'une définition de référence ne peut faire partie d'une définition de flux de travail, c.-à-d. [[IfcTaskType]] les instances définissent le niveau le plus abstrait d'un processus de référence sans dépendance à d'autres processus de référence. L'utilisation de [[IfcTaskType]] définit les paramètres pour une ou plusieurs occurrences de [[IfcTask]] . Les paramètres peuvent être spécifiés par le biais de jeux de propriétés qui peuvent être énumérés dans le type de données [[IfcTaskTypeEnum]] ou par l'intermédiaire d'attributs explicites de [[IfcTaskType]] . Les occurrences de tâches [[IfcTask]] sont liées au type de tâche par la relation [[IfcRelDefinesByType]]. La figure 1 montre la définition d'un type de tâche qui fait partie d'une bibliothèque de modèles de tâches. Veuillez noter que dans cet exemple le type de tâche est plus subdivisé en tâches qui définissent les temps de tâche par exemple, durée et ou une séquence de tâches. type de tâche instantiation diagramme .. .. .. .. .. .. figures ifctasktype instantiation diagram.png Figure 1 Task type relationship bSI Documentation"
+#:IFC.xml:932
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "TransomEpaisseur"
 
-#:IFC.xml:26882
-msgid "IfcTaskType_PredefinedType"
-msgstr "TypePredefini"
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "Épaisseur du séparateur horizontal de transom des panneaux de fenêtres dans une fenêtre , mesurée parallèlement au plan d'élévation de la fenêtre. Le transom fait partie de la doublure et la profondeur du transom est supposée être identique à la profondeur de la doublure. X 0D Si la TransomEpaisseur est définie à zéro et que le TransomOffset est à une longueur positive , puis la fenêtre est divisée verticalement sans diviseur physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
 
-msgid "IfcTaskType_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+#:IFC.xml:937
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "MullionEpaisseur"
 
-#:IFC.xml:26875
-msgid "IfcTaskType_WorkMethod"
-msgstr "Méthode de travail"
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "Épaisseur du séparateur vertical mullion des panneaux de fenêtres dans une fenêtre , mesurée parallèlement au plan d'élévation de la fenêtre. Le mullion fait partie de la doublure et la profondeur du mullion est supposée être identique à la profondeur de la doublon. X 0D Si la MullionEpaisseur est réglée à zéro et que le MullionOffset a une longueur positive , alors la fenêtre est divisée horizontalement sans séparation physique. X 0D .change ifc2x4 X 0D IFC4 Changement de type de données a changé en [[IfcNonNegativeLengthMeasure]] ."
 
-msgid "IfcTaskType_WorkMethod_DEFINITION"
-msgstr "La méthode de travail utilisée pour accomplir une tâche."
+#:IFC.xml:942
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "Décalage de la première transom."
 
-#:IFC.xml:26894
-msgid "IfcTaskTypeEnum"
-msgstr "IfcTaskTypeEnum"
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "Décalage de la ligne centrale du transom, mesuré selon l'axe z du système de positionnement de fenêtres. Une valeur de décalage 0,5 indique que le transo est positionné au milieu de la fenêtre."
 
-msgid "IfcTaskTypeEnum_DEFINITION"
-msgstr "Le [[IfcTaskTypeEnum]] définit la plage de différents types de tâche qui peuvent être spécifiés. Nouveau type d'HISTOIRE dans la documentation IFC4 bSI"
+#:IFC.xml:947
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "Décalage de la seconde transomation"
 
-#:IFC.xml:26918
-msgid "IfcTaskTypeEnum_REMOVAL"
-msgstr "SUPPRIMER"
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Décalage de la ligne centrale du transom pour le deuxième transom, mesuré le long de l'axe x du système de placement de fenêtre co ordonnée. Une valeur de décalage 0.666 indique que la seconde transe est positionnée à deux tiers de la fenêtre."
 
-msgid "IfcTaskTypeEnum_REMOVAL_DEFINITION"
-msgstr "Retirer un objet de son utilisation et le retirer de son lieu d'utilisation."
+#:IFC.xml:952
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
 
-#:IFC.xml:26914
-msgid "IfcTaskTypeEnum_MAINTENANCE"
-msgstr "MAINTENANCE"
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
 
-msgid "IfcTaskTypeEnum_MAINTENANCE_DEFINITION"
-msgstr "Garder quelque chose en bon état de fonctionnement."
+#:IFC.xml:957
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
 
-#:IFC.xml:26913
-msgid "IfcTaskTypeEnum_LOGISTIC"
-msgstr "LOGISTIQUE"
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
 
-msgid "IfcTaskTypeEnum_LOGISTIC_DEFINITION"
-msgstr "Transport ou livraison de quelque chose."
+#:IFC.xml:962
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-#:IFC.xml:26917
-msgid "IfcTaskTypeEnum_OPERATION"
-msgstr "OPÉRATION"
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-msgid "IfcTaskTypeEnum_OPERATION_DEFINITION"
-msgstr "Une procédure entreprise pour démarrer l'opération un artefact."
+#:IFC.xml:967
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "Lignage au décalage du panneau unnamed@@0"
 
-#:IFC.xml:26911
-msgid "IfcTaskTypeEnum_DISPOSAL"
-msgstr "DISPOSITIF"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-msgid "IfcTaskTypeEnum_DISPOSAL_DEFINITION"
-msgstr "DISPOSITIF"
+#:IFC.xml:972
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "Lining au décalage du panneau à partir de Y"
 
-#:IFC.xml:26909
-msgid "IfcTaskTypeEnum_DEMOLITION"
-msgstr "DÉMOLITION"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-msgid "IfcTaskTypeEnum_DEMOLITION_DEFINITION"
-msgstr "Démolir ou décomposer quelque chose."
+#:IFC.xml:991
+msgid "IfcWindowPanelOperationEnum"
+msgstr "format@@0 IfcWindowPanel OpérationEnum"
 
-#:IFC.xml:26910
-msgid "IfcTaskTypeEnum_DISMANTLE"
-msgstr "DÉMANTEZ"
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure X 09 X 09 X 09 X 09 SideHungRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SideHungLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TopHung X 09 X 09 panel is top hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 BottomHung X 09 X 09 panel is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotHorizontal X 09 X 09 panel is swinging X 09 X 09 X 09 horizontally hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotVertical X 09 X 09 panel is swinging vertically X 09 X 09 X 09 hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingHorizontal X 09 X 09 panel is sliding horizontally X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingVertical X 09 X 09 panel is sliding X 09 X 09 X 09 vertically X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 RemovableCasement X 09 X 09 panel is removable X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 FixedCasement X 09 X 09 panel is fixed X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 OtherOperation X 09 X 09 user defined operation type X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 NotDefined X 09 X 09 X 09 X 09 X 09 X 09 X 09 Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. bSI Documentation"
 
-msgid "IfcTaskTypeEnum_DISMANTLE_DEFINITION"
-msgstr "Démonter soigneusement quelque chose afin de le recycler ou de le réutiliser."
+#:IFC.xml:1007
+msgid "IfcWindowPanelPositionEnum"
+msgstr "format@@0 IfcWindowPanelPosition Enum"
 
-#:IFC.xml:26915
-msgid "IfcTaskTypeEnum_MOVE"
-msgstr "SUPPRIMER"
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . X 09 X 09 Enumerator from [[IfcWindowStyleOperationEnum]] X 09 Use of enumerators from [[IfcWindowPanelPositionEnum]] X 09 Figure X 09 X 09 X 09 DoublePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 DoublePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelBottom X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelTop X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelLeft X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelRight X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. bSI Documentation"
 
-msgid "IfcTaskTypeEnum_MOVE_DEFINITION"
-msgstr "Déplacer les choses d'un endroit à un autre."
+#:IFC.xml:1015
+msgid "IfcWindowPanelProperties"
+msgstr "Propriétés du panneau IfcWindow"
 
-#:IFC.xml:26912
-msgid "IfcTaskTypeEnum_INSTALLATION"
-msgstr "INSTALLATION"
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-msgid "IfcTaskTypeEnum_INSTALLATION_DEFINITION"
-msgstr "Installer quelque chose d'équivalent à la construction mais plus couramment utilisé pour des tâches d'ingénierie ."
+#:IFC.xml:1042
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "Style d'aspect de forme"
 
-#:IFC.xml:26908
-msgid "IfcTaskTypeEnum_CONSTRUCTION"
-msgstr "CONSTRUCTION"
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Style d'aspect de forme"
 
-msgid "IfcTaskTypeEnum_CONSTRUCTION_DEFINITION"
-msgstr "CONSTRUCTION"
+#:IFC.xml:1020
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "Type d'opération"
 
-#:IFC.xml:26907
-msgid "IfcTaskTypeEnum_ATTENDANCE"
-msgstr "ATTENDANCE"
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
 
-msgid "IfcTaskTypeEnum_ATTENDANCE_DEFINITION"
-msgstr "Participation ou attente sur d'autres choses qui se produisent."
+#:IFC.xml:1025
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "Position du panneau"
 
-#:IFC.xml:26919
-msgid "IfcTaskTypeEnum_RENOVATION"
-msgstr "RENOVATION"
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
 
-msgid "IfcTaskTypeEnum_RENOVATION_DEFINITION"
-msgstr "Apporter quelque chose à un nouvel état."
+#:IFC.xml:1030
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "Profondeur du cadre"
 
-#:IFC.xml:26920
-msgid "IfcWorkCalendar"
-msgstr "Calendrier de travail"
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
 
-msgid "IfcWorkCalendar_DEFINITION"
-msgstr "Un [[IfcWorkCalendar]] définit des périodes de travail et de temps de travail pour les tâches et les ressources. Il permet de définir à la fois des périodes spécifiques, telles que de 7 00 à 12 00 le 25 août 2009, ainsi que des périodes de temps répétitives basées sur des modèles de récurrence fréquemment utilisés, comme chaque lundi de 7h00 à 12h00 entre le 1er mars 2009 et le 31 décembre 2009. HISTOIRE Nouvelle entité dans l'IFC4. Un calendrier de travail est un sous-type de [[IfcControl]] et hérite donc de la fonctionnalité pour contrôler d'autres objets via [[IfcRelAssignsToControl]] , qui est utilisé pour définir un calendrier de travail pour les tâches [[IfcTask]] et les ressources [[IfcResource]] . Il hérite également d'un attribut nom et description, alors qu'un nom doit être donné et une description peut être donnée comme une indication de son contenu et de son utilisation. La définition des périodes de temps peut être obtenue à partir d'un calendrier de base et ou modifiée par un ensemble de temps de travail et de temps d'exception non professionnels. Toutes les périodes de temps définies par [[IfcWorkCalendar]]. xceptionTimes remplace les périodes de temps héritées du calendrier de base de base est défini comme le calendrier applicable suivant pour la tâche ou la ressource . Ainsi, les temps d’exception remplacent les heures de travail du calendrier de base. La figure 1 montre la définition d'un calendrier de travail, qui est défini par un ensemble de temps de travail et d'heures d'exception. Les temps de travail sont définis comme des modèles récurrents avec des limites facultatives s'appliquant de et à une date spécifique . L'exemple montré définit un calendrier de travail simple avec des temps de travail du lundi au jeudi de 8 00 à 12 00 et 13 00 à 17 00, Vendredi de 8 00 à 14 00 et à titre d'exception chaque 1er lundi dans un mois, le travail commence une heure plus tard. Le temps de travail de chaque 1er lundi en un mois est dépassé de 9 00 à 12 00 et de 13 00 à 17 00. Le temps de travail et le temps d'exception sont valables pour la période allant du 01.09.2010 au 30.08.2011. .. .. .. .. .. .. .. figures ifcworkcalendar instantiation diagram.png Figure 1 Workcalendar instantiation bSI Documentation"
+#:IFC.xml:1035
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "Épaisseur du cadre"
 
-#:IFC.xml:4062
-msgid "IfcWorkCalendar_ExceptionTimes"
-msgstr "ExceptionTimes"
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
 
-msgid "IfcWorkCalendar_ExceptionTimes_DEFINITION"
-msgstr "ExceptionTimes"
+#:IFC.xml:1054
+msgid "IfcWindowStyle"
+msgstr "Style IfcWindow"
 
-#:IFC.xml:4074
-msgid "IfcWorkCalendar_WorkingTimes"
-msgstr "Temps de travail"
+msgid "IfcWindowStyle_DEFINITION"
+msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead. bSI Documentation"
 
-msgid "IfcWorkCalendar_WorkingTimes_DEFINITION"
-msgstr "Temps de travail"
+#:IFC.xml:1055
+msgid "IfcWindowStyle_ConstructionType"
+msgstr "Type de construction"
 
-#:IFC.xml:26927
-msgid "IfcWorkCalendar_PredefinedType"
-msgstr "TypePredefini"
+msgid "IfcWindowStyle_ConstructionType_DEFINITION"
+msgstr "Type defining the basic construction and material type of the window."
 
-msgid "IfcWorkCalendar_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
+#:IFC.xml:1060
+msgid "IfcWindowStyle_OperationType"
+msgstr "Type d'opération"
 
-#:IFC.xml:26939
-msgid "IfcWorkCalendarTypeEnum"
-msgstr "Enime du calendrier de travail"
+msgid "IfcWindowStyle_OperationType_DEFINITION"
+msgstr "Type defining the general layout and operation of the window style."
 
-msgid "IfcWorkCalendarTypeEnum_DEFINITION"
-msgstr "Un [[IfcWorkCalendarTypeEnum]] est un type de données d'énumération qui spécifie les types de calendrier de travail à partir desquels le contrôle pertinent peut être sélectionné. Si donné, il devrait aider à identifier les calendriers de base. HISTORY Introduit dans IFC4. Documentation bSI"
+#:IFC.xml:1065
+msgid "IfcWindowStyle_ParameterTakesPrecedence"
+msgstr "Paramètre de préséance"
 
-#:IFC.xml:26945
-msgid "IfcWorkCalendarTypeEnum_THIRDSHIFT"
-msgstr "THIRDSHIFT"
+msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "La valeur booléenne réfléchit, si le paramètre donné dans la ligne attachée et les propriétés du panneau définissent exactement la géométrie TRUE , ou si la forme de style attachée a la priorité FALSE . Dans le dernier cas, le paramètre n'a qu'une valeur informative."
 
-msgid "IfcWorkCalendarTypeEnum_THIRDSHIFT_DEFINITION"
-msgstr "Appartient à la troisième rotation."
+#:IFC.xml:1070
+msgid "IfcWindowStyle_Sizeable"
+msgstr "Taillé"
 
-#:IFC.xml:26943
-msgid "IfcWorkCalendarTypeEnum_FIRSTSHIFT"
-msgstr "PREMIER SHIFT"
+msgid "IfcWindowStyle_Sizeable_DEFINITION"
+msgstr "The Boolean indicates, whether the attached ShapeStyle can be sized using scale factor of transformation , or not FALSE . If not, the ShapeStyle should be inserted by the [[IfcWindow]] using [[IfcMappedItem]] with the scale factor 1."
 
-msgid "IfcWorkCalendarTypeEnum_FIRSTSHIFT_DEFINITION"
-msgstr "Appartient au premier changement."
+#:IFC.xml:1077
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "format@@0 IfcWindowStyleConstructionEnum"
 
-#:IFC.xml:26944
-msgid "IfcWorkCalendarTypeEnum_SECONDSHIFT"
-msgstr "HIFT SECONDAIRE"
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. bSI Documentation"
 
-msgid "IfcWorkCalendarTypeEnum_SECONDSHIFT_DEFINITION"
-msgstr "Appartient à la seconde fonction."
+#:IFC.xml:1087
+msgid "IfcWindowStyleOperationEnum"
+msgstr "format@@0 IfcWindowStyleOperationEnum"
 
-#:IFC.xml:26946
-msgid "IfcWorkControl"
-msgstr "Contrôles de travail"
-
-msgid "IfcWorkControl_DEFINITION"
-msgstr "Un [[IfcWorkControl]] est un super-type abstrait qui capture des informations communes à [[IfcWorkPlan]] et [[IfcWorkSchedule]] . HISTOIRE Nouvelle entité dans IFC2x .change ifc2x4 CHANGE IFC4 Affectation corrigée des ressources pour travailler le contrôle dans la documentation. Affectation de tâches de contrôle de travail mises à jour en fonction des changements des définitions de temps des tâches et de l'introduction d'une tâche récapitulative. L'identifiant a été renommé maintenant Identification et promu en supertype [[IfcControl]] Un contrôle de travail peut avoir des ressources qui lui sont assignées. Ceci est géré par la relation [[IfcRelAssignsToControl]]. Un contrôle de travail devrait également définir un contexte qui donne plus d'informations sur son utilisation. Si aucune information particulière n'est requise, alors l'instance [[IfcProject]] en tant que contexte global devrait être utilisée à la place. Un lien explicite entre le contrôle du travail et le [[IfcProject]] via [[IfcRelDeclares]] doit alors être fourni. L'attribut [[IfcWorkControl]].But est utilisé pour définir le but d'un calendrier de travail ou d'un plan de travail. Dans le cas de [[IfcWorkPlan]] , l'attribut objet peut être utilisé pour déterminer si le plan de travail est à estimer, planification de tâches ou tout autre objectif défini. Documentation bSI"
-
-#:IFC.xml:301
-msgid "IfcWorkControl_Creators"
-msgstr "Créateurs"
-
-msgid "IfcWorkControl_Creators_DEFINITION"
-msgstr "Créateurs"
-
-#:IFC.xml:26947
-msgid "IfcWorkControl_CreationDate"
-msgstr "Date de création"
-
-msgid "IfcWorkControl_CreationDate_DEFINITION"
-msgstr "La date de création du forfait."
-
-#:IFC.xml:26952
-msgid "IfcWorkControl_Purpose"
-msgstr "Objectif"
-
-msgid "IfcWorkControl_Purpose_DEFINITION"
-msgstr "Une description du but de l'horaire de travail."
-
-#:IFC.xml:26957
-msgid "IfcWorkControl_Duration"
-msgstr "Durée"
-
-msgid "IfcWorkControl_Duration_DEFINITION"
-msgstr "La durée totale de l'horaire de travail."
-
-#:IFC.xml:26962
-msgid "IfcWorkControl_TotalFloat"
-msgstr "Total des floats"
-
-msgid "IfcWorkControl_TotalFloat_DEFINITION"
-msgstr "Le temps total flottant de la totalité du calendrier de travail."
-
-#:IFC.xml:26967
-msgid "IfcWorkControl_StartTime"
-msgstr "StartTime"
-
-msgid "IfcWorkControl_StartTime_DEFINITION"
-msgstr "L'heure de début de l'horaire."
-
-#:IFC.xml:26972
-msgid "IfcWorkControl_FinishTime"
-msgstr "Heure de fin"
-
-msgid "IfcWorkControl_FinishTime_DEFINITION"
-msgstr "L'heure de fin de l'horaire."
-
-#:IFC.xml:26980
-msgid "IfcWorkPlan"
-msgstr "Plan de travail"
-
-msgid "IfcWorkPlan_DEFINITION"
-msgstr "Un [[IfcWorkPlan]] représente les plans de travail dans un projet de construction ou de gestion d'installations. HISTORIE Nouvelle entité dans la IFC2. Un plan de travail contient un ensemble de plans de travail pour différents usages, y compris la gestion de la construction et des installations . Les horaires de travail contenus sont définis par la relation [[IfcRelAggregates]]. Par héritage de [[IfcWorkControl]] il est également possible de définir des références à des activités par exemple, [[IfcTask]] et les ressources utilisées dans le plan de travail. Un plan de travail contient des informations telles que la date de départ, la date de finition, le nombre total de flotteurs gratuits et ainsi de suite. [[IfcWorkPlan]] peut également se référer au projet de construction représenté par l'instance unique [[IfcProject]] veuillez également vérifier la définition de [[IfcWorkControl]] . La figure 1 montre la structure de base d'un plan de travail qui définit 1 horaire de travail contenu à travers [[IfcRelAggregates]] et 2 , si elle n'est pas assignée autrement à des horaires de travail, tâches assignées et ressources par [[IfcRelAssignsToControl]] . Si une tâche assignée [[IfcTask]] est une tâche de niveau racine, une telle tâche doit être déclarée sur la [[IfcProject]] en utilisant la relation [[IfcRelDeclares]]. plan de travail instanciation diagramme .. .. .. .. .. .. figures ifcworkplan instantiation diagram.png Figure 1 Relations plan de travail BSI Documentation"
-
-#:IFC.xml:26987
-msgid "IfcWorkPlan_PredefinedType"
-msgstr "TypePredefini"
-
-msgid "IfcWorkPlan_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
-
-#:IFC.xml:26999
-msgid "IfcWorkPlanTypeEnum"
-msgstr "format@@0 IfcWorkPlanTypeEnum"
-
-msgid "IfcWorkPlanTypeEnum_DEFINITION"
-msgstr "Un [[IfcWorkPlanTypeEnum]] est un type de données d'énumération qui spécifie les types de plan de travail à partir desquels le contrôle pertinent peut être sélectionné. HISTORY introduit dans IFC4. Dérivé de IfcWorkControlTypeEnum qui a été introduit dans la documentation IFC2.0."
-
-#:IFC.xml:27004
-msgid "IfcWorkPlanTypeEnum_BASELINE"
-msgstr "BASELINE"
-
-msgid "IfcWorkPlanTypeEnum_BASELINE_DEFINITION"
-msgstr "BASELINE"
-
-#:IFC.xml:27003
-msgid "IfcWorkPlanTypeEnum_ACTUAL"
-msgstr "ACTUELLE"
-
-msgid "IfcWorkPlanTypeEnum_ACTUAL_DEFINITION"
-msgstr "ACTUELLE"
-
-#:IFC.xml:27005
-msgid "IfcWorkPlanTypeEnum_PLANNED"
-msgstr "PLANNÉE"
-
-msgid "IfcWorkPlanTypeEnum_PLANNED_DEFINITION"
-msgstr "PLANNÉE"
-
-#:IFC.xml:27006
-msgid "IfcWorkSchedule"
-msgstr "Plan de travail"
-
-msgid "IfcWorkSchedule_DEFINITION"
-msgstr "Un [[IfcWorkSchedule]] représente un calendrier de tâches d'un plan de travail qui peut à son tour contenir un ensemble de plannings à des fins différentes. HISTOIRE Nouvelle entité dans l'IFC2. . .use head Declaration Use Definition [[IfcWorkSchedule]] peut référencer un projet sur une seule instance [[IfcProject]] via [[IfcRelDeclares]] . La figure 1 montre la structure de base d'un calendrier de travail qui définit 1 contexte à travers [[IfcRelDeclares]] pas nécessairement le projet et 2 tâches de contrôle généralement la tâche récapitulative planifiée et les ressources. Veuillez noter qu'un calendrier de travail doit être affecté à la tâche résumée et non à l'horaire de travail. Si une tâche assignée [[IfcTask]] est une tâche de niveau racine, une telle tâche doit être déclarée sur la [[IfcProject]] en utilisant la relation [[IfcRelDeclares]]. diagramme d'instanciation du calendrier de travail .. .. .. .. .. .. figures ifcworkschedule instantiation diagram.png Figure 1 Relations du calendrier de travail BSI Documentation"
-
-#:IFC.xml:27013
-msgid "IfcWorkSchedule_PredefinedType"
-msgstr "TypePredefini"
-
-msgid "IfcWorkSchedule_PredefinedType_DEFINITION"
-msgstr "TypePredefini"
-
-#:IFC.xml:27025
-msgid "IfcWorkScheduleTypeEnum"
-msgstr "IfcWorkScheduleTypeEnum"
-
-msgid "IfcWorkScheduleTypeEnum_DEFINITION"
-msgstr "Un [[IfcWorkScheduleTypeEnum]] est un type de données d'énumération qui spécifie les types de planification de travail à partir desquels le contrôle approprié peut être sélectionné. HISTORY introduit dans IFC4. Dérivé de IfcWorkControlTypeEnum qui a été introduit dans la documentation IFC2.0."
-
-#:IFC.xml:27029
-msgid "IfcWorkScheduleTypeEnum_ACTUAL"
-msgstr "ACTUELLE"
-
-msgid "IfcWorkScheduleTypeEnum_ACTUAL_DEFINITION"
-msgstr "ACTUELLE"
-
-#:IFC.xml:27031
-msgid "IfcWorkScheduleTypeEnum_PLANNED"
-msgstr "PLANNÉE"
-
-msgid "IfcWorkScheduleTypeEnum_PLANNED_DEFINITION"
-msgstr "PLANNÉE"
-
-#:IFC.xml:27030
-msgid "IfcWorkScheduleTypeEnum_BASELINE"
-msgstr "BASELINE"
-
-msgid "IfcWorkScheduleTypeEnum_BASELINE_DEFINITION"
-msgstr "BASELINE"
-
-#:IFC.xml:27032
-msgid "Pset_WorkControlCommon"
-msgstr "Pset WorkControlCommon"
-
-msgid "Pset_WorkControlCommon_DEFINITION"
-msgstr "Propriétés communes à la définition de toutes les occurrences de [[IfcWorkPlan]] et [[IfcWorkSchedule]] sous-types de [[IfcWorkControl]] . Documentation bSI"
-
-#:IFC.xml:27033
-msgid "Pset_WorkControlCommon_WorkDayDuration"
-msgstr "Durée du jour de travail"
-
-msgid "Pset_WorkControlCommon_WorkDayDuration_DEFINITION"
-msgstr "Le temps écoulé dans un jour basé sur le temps de travail. À des fins de présentation, les applications peuvent choisir d'afficher [[IfcTask]] durées dans les jours de travail où [[IfcTaskTime]]. urationType WORKTIME. Cette valeur doit être inférieure ou égale à 24 heures un jour écoulé si omis alors 8 heures sont utilisées."
-
-#:IFC.xml:27038
-msgid "Pset_WorkControlCommon_WorkFinishTime"
-msgstr "Heure de fin du travail"
-
-msgid "Pset_WorkControlCommon_WorkFinishTime_DEFINITION"
-msgstr "L'heure par défaut d'une tâche est programmée pour se terminer. À des fins de présentation, si l'heure de fin d'une tâche correspond à l'heure de fin de travail, alors les applications peuvent choisir d'afficher la date uniquement. Inversement, lorsque vous entrez des dates sans spécifier l'heure, les applications peuvent ajouter automatiquement le WorkFinishTime."
-
-#:IFC.xml:27043
-msgid "Pset_WorkControlCommon_WorkMonthDuration"
-msgstr "Durée du mois de travail"
-
-msgid "Pset_WorkControlCommon_WorkMonthDuration_DEFINITION"
-msgstr "Le temps écoulé dans un mois basé sur le temps de travail. À des fins de présentation, les applications peuvent choisir d'afficher [[IfcTask]] durées dans les mois de travail où [[IfcTaskTime]]. URationType WORKTIME. Cette valeur doit être inférieure ou égale à 744 heures par mois écoulé de 31 jours si elle est omise alors 160 heures sont supposées."
-
-#:IFC.xml:27048
-msgid "Pset_WorkControlCommon_WorkStartTime"
-msgstr "Heure de début du travail"
-
-msgid "Pset_WorkControlCommon_WorkStartTime_DEFINITION"
-msgstr "L'heure par défaut d'une tâche est programmée pour commencer. À des fins de présentation, si l'heure de début d'une tâche correspond au WorkStartTime, alors les applications peuvent choisir d'afficher la date uniquement. Inversement, lorsque vous saisissez des dates sans spécifier l'heure, les applications peuvent ajouter automatiquement le WorkStartTime."
-
-#:IFC.xml:27053
-msgid "Pset_WorkControlCommon_WorkWeekDuration"
-msgstr "Durée de la semaine de travail"
-
-msgid "Pset_WorkControlCommon_WorkWeekDuration_DEFINITION"
-msgstr "Le temps écoulé dans une semaine de travail basée sur le temps de travail. À des fins de présentation, les applications peuvent choisir d'afficher [[IfcTask]] durées dans les semaines de travail où [[IfcTaskTime]]. urationType WORKTIME. Cette valeur doit être inférieure ou égale à 168 heures une semaine écoulée si elle est omise alors 40 heures sont utilisées."
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations bSI Documentation"
 
