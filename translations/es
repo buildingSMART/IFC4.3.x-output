@@ -9,604 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
-"X-Crowdin-File-ID: 98\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
 "PO-Revision-Date: 2021-08-05 20:06\n"
 
-#:IFC.xml:43713
-msgid "IfcBoundaryCondition"
-msgstr "Condición límite IfcIfc"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBoundaryCondition_DEFINITION"
-msgstr "La entidad abstracta [[IfcBoundaryCondition]] es el supertipo de todas las condiciones límite que se pueden aplicar a las definiciones de conexión estructural, o directamente para la conexión e. La relación entre un miembro estructural y la conexión. NOTA Las condiciones límite se utilizan en otras partes, principalmente por instancias de [[IfcStructuralConnection]] para la definición de soportes e instancias de [[IfcRelConnectsStructuralMember]] para la definición de conexiones entre miembros estructurales y conexiones estructurales . Nueva entidad HISTORY en IFC2x2. Documentación bSI"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Una cara avanzada es una especialización de una superficie de la cara que tiene que cumplir con los requisitos de uso de elementos de representación topológica y geométrica particulares para la definición de las caras, bordes y vértices. Un [[IfcAdvancedFace]] está restringido a tener una geometría de superficie de tipo [[IfcElementarySurface]] , [[IfcSweptSurface]] o [[IfcBSplineSurface]] , tener uno [[IfcFaceOuterBound]] como el borde de la cara, con la excepción de superficies cerradas, tienen todas las caras a vincular por [[IfcEdgeLoop]] o [[IfcVertexLoop]] , tienen todos los bordes para tener una curva de curva de borde, restringir la geometría de la curva de borde a [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , o [[IfcBSplineCurve]] En caso de caras cerradas con superficies periódicas, como superficies cilíndricas o esféricas, los siguientes aplican los bordes de la superficie cerrada, en caso de una superficie cilíndrica la tapa superior e inferior, refiérase a la misma instancia de [[IfcVertexPoint]] dos veces, no se proporciona [[IfcFaceOuterBound]], o el [[IfcFaceOuterBound]] se construye utilizando un [[IfcSeamCurve]] en el extremo periódico de la superficie cerrada subyacente, en caso de superficie cilíndrica a 0. .. .. .. figuras ifcavanzado 01. ng Figura 1 Uso de [[IfcCylindricalSurface]] como superficie subyacente de un [[IfcAdvancedFace]] NOTA Entidad adaptada de cara avanzada definida en ISO 10303 511. HISTORY Nueva entidad en IFC4 bSI Documentation"
 
-#:IFC.xml:43714
-msgid "IfcBoundaryCondition_Name"
-msgstr "Nombre"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBoundaryCondition_Name_DEFINITION"
-msgstr "Opcionalmente define un nombre para esta condición límite."
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Devuelve la primera opción, si TRUE, de lo contrario la segunda opción. Definición de NOTE xtDef según ISO CD 10303 42 1992 Esta función devuelve una de dos opciones dependiendo del valor de un argumento de entrada booleana. Las dos opciones son también argumentos de entrada. NOTA función adaptada de selección booleana definida en ISO10303 42. HISTORY Nueva función en IFC2.0"
 
-#:IFC.xml:43720
-msgid "IfcBoundaryEdgeCondition"
-msgstr "Condición límite IfcBorde"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcBoundaryEdgeCondition_DEFINITION"
-msgstr "Describe condiciones de soporte elástico lineal o condiciones de conexión. La aplicación Curve soporta y conexiones. HISTORY nueva entidad en IFC2x2. IFC 2x4 cambia el nombre de Atributos LinearStiffnessX Y Z a TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 cambiar todos los tipos de datos de atributos cambiados de numérico a SELECT entre booleano y numérico. Las rigideces ahora también pueden ser negativas, por ejemplo, para capturar efectos desestabilizadores en las condiciones límite: la Convención IFC2x3 de 1. representando la rigidez infinita ya no es válida y no debe ser utilizada. Rigidez infinita, i. . soportes corregidos, ahora están modelados por el valor booleano TRUE. documentación bSI"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:43721
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
-msgstr "TranslationalStiffnessByLengthX"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConexión Conexión"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un conjunto de caras conectadas es un conjunto de caras tal que el dominio de caras junto con sus bordes delimitadores y vértices está conectado. NOTA Entidad adaptada de cara conectada definida en ISO 10303 42. HISTORY Nueva entidad en IFC1.0 .spec head Informal Propositions 1. La unión de los dominios de las caras y sus bucles delimitadores estarán conectados en sentido arco. BSI Documentation"
 
-#:IFC.xml:43726
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
-msgstr "Rigidez de la traducción por longitud"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
-msgstr "Valor de rigidez traduccional en dirección y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "CfsFaces"
 
-#:IFC.xml:43731
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
-msgstr "TranslationalStiffnessByLengthZ"
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "Borde Ifc"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdge_DEFINITION"
+msgstr "Un [[IfcEdge]] define dos vértices conectados topológicamente. La representación geométrica de la conexión entre los dos vértices por defecto a una línea recta si no se asigna una geometría de curva usando el subtipo [[IfcEdgeCurve]] . Por lo tanto, el [[IfcEdge]] puede utilizarse para intercambiar bordes rectos sin una geometría asociada proporcionada por [[IfcLine]] o [[IfcPolyline]] pensamiento [[IfcEdgeCurve]]. dgeometry . EXAMPLE Figura 1 ilustra un ejemplo donde los límites del [[IfcEdge]] son dados por el EdgeStart y EdgeEnd esto también determina la dirección del borde. La ubicación dentro de un espacio de coordenadas está determinada por el tipo [[IfcVertexPoint]] para EdgeStart y EdgeEnd. Dado que no se asigna geometría de borde, el valor por defecto es una línea recta que acepta el sentido de dirección. Representación de la figura 1 Borde . xtDef NOTE Definición según ISO CD 10303 42 1992 Un borde es la construcción topológica correspondiente a la conexión de dos vértices. Más abstracto, puede significar una relación lógica entre dos vértices. El dominio de un borde, si está presente, es un finito, curva abierta no autointerseccionante en R M , es decir, un múltiplo unidimensional conectado. Los límites de un borde son dos vértices, que no tienen por qué ser distintivos. El borde está orientado eligiendo su dirección transversal para correr del primer al segundo vértice. Si los dos vértices son los mismos, el borde es un circuito propio. El dominio del borde no incluye sus límites, y 0 . Asociado con un borde puede ser una curva geométrica para localizar el borde en un espacio de coordenadas que está representado por el subtipo de curva de borde. La curva será finita y no autointerseccionada dentro del dominio del borde. Un borde es una gráfica, por lo que su multiplicidad M y el género gráfico G e puede estar determinado por el algoritmo transversal de la gráfica. Desde M E 1, la ecuación Euler 1 reduce en el caso a Imagen . .. .. .. .. cifras ifcedge math1.gif donde V 1 o 2, y G e 1 o 0. Específicamente, los datos topológicos que definen el borde satisfarán un borde tiene dos vértices Imagen . .. .. .. .. figuras ifcedge math2.gif los vértices no necesitan ser diferentes Imagen .. .. .. .. cifras ifcedge math3. si ecuación debe contener Imagen .. .. .. .. .. cifras ifcedge math4. si NOTA Entidad adaptada desde el borde definido en ISO 10303 42, entidad HISTORY New en IFC2. .spec head Informal Propositions 1. El borde tiene dimensión 1. 2. El alcance de un borde será finito y nonzero. BSI Documentation"
 
-#:IFC.xml:43736
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
-msgstr "Resistencia rotacional por longitud %s"
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:43741
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
-msgstr "Restricción de rotación por longitud"
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:43746
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
-msgstr "Resistencia rotacional por longitud"
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "Curva IfcEdge"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Un [[IfcEdgeCurve]] define dos vértices conectados topológicamente, incluyendo la representación geométrica de la conexión. NOTA La topología se utiliza para recortar la geometría del borde. No hay necesidad de recortar geométricamente el borde para que coincida con la topología. La Figura 1 EXAMPLE ilustra un ejemplo en el que la geometría del borde es dada por una curva sin límites, aquí [[IfcCircle]]. Los límites son proporcionados por EdgeStart y EdgeEnd, la dirección topológica del [[IfcEdgeCurve]] se opone a la dirección de la [[IfcCircle]] por SameSense FALSE. Figura 1 Borde curva . xtDef NOTE Definición según ISO CD 10303 42 1992 Una curva de borde es un subtipo especial de borde que tiene su geometría completamente definida. La geometría se define asociando el borde con una curva que puede ser sin límites. A medida que se pueden oponer las direcciones topológicas y geométricas, un indicador del mismo sentido se utiliza para identificar si el borde y las direcciones de la curva están de acuerdo o están opuestas. El valor booleano indica si la dirección de la curva está de acuerdo con TRUE o está en la dirección opuesta FALSE a la dirección del borde. Cualquier geometría asociada a los vértices del borde será coherente con la geometría del borde. Múltiples bordes pueden hacer referencia a la misma curva. NOTA Entidad adaptada de la curva de bordes definida en ISO 10303 42. HISTORY Nueva entidad en IFC2x. .spec head informal Propositions 1. El dominio de la curva del borde se define formalmente como el dominio de su arista geometría como trillado por los vértices. Este dominio no incluye los vértices. 2. Una curva de bordes tiene una extensión no limitada a cero. 3. Una curva de borde es múltiple. 4. Una curva de borde está conectada en sentido armónico. 5. El inicio de la arista no es parte del dominio de borde. 6. El extremo del borde no es parte del dominio del borde. 7. La geometría de vértices será coherente con la geometría del borde."
 
-#:IFC.xml:43753
-msgid "IfcBoundaryFaceCondition"
-msgstr "Condición límite de IfcBoundaryFacecondition"
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Geometría del borde"
 
-msgid "IfcBoundaryFaceCondition_DEFINITION"
-msgstr "Describe condiciones de soporte elástico lineal o condiciones de conexión. La superficie de aplicación soporta y conexiones. HISTORY nueva entidad en IFC2x2. IFC 2x4 cambia el nombre de Atributos LinearStiffnessX Y Z a TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 cambiar todos los tipos de datos de atributos cambiados de numérico a SELECT entre booleano y numérico. Las rigideces ahora también pueden ser negativas, por ejemplo, para capturar efectos desestabilizadores en las condiciones límite: la Convención IFC2x3 de 1. representando la rigidez infinita ya no es válida y no debe ser utilizada. Rigidez infinita, i. . soportes corregidos, ahora están modelados por el valor booleano TRUE. documentación bSI"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Geometría del borde"
 
-#:IFC.xml:43754
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
-msgstr "TranslationalStiffnessByAreaX"
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Esta bandera lógica indica si TRUE , o no FALSE los sentidos del borde y la curva que define la geometría del borde son los mismos. El sentido de un borde es desde el vértice de inicio del borde hasta el vértice final del borde, el sentido de una curva está en la dirección de aumentar el parámetro."
 
-#:IFC.xml:43759
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
-msgstr "TranslationalStiffnessByAreaY"
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
-msgstr "Valor de rigidez traduccional en dirección y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with non-zero extent (). Es un camino en el que los vértices de inicio y final son los mismos. Su dominio, si está presente, es una curva cerrada. Un bucle de borde puede superponerse a sí mismo. NOTA Entidad adaptada del ciclo de bordes definida en ISO 10303 42. El género del [[IfcEdgeLoop]] debe ser 1 o mayor. 2. La fórmula Euler estará satisfecha con el número de vértices del género de los bordes 1 3. Ningún borde puede ser referenciado más de una vez por el mismo [[IfcEdgeLoop]] con el mismo sentido. Para ello, se considera que un borde que no es un borde orientado se hace referencia con el sentido TRUE."
 
-#:IFC.xml:43764
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
-msgstr "TranslationalStiffnessByAreaZ"
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Lista de bordes"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Lista de bordes"
 
-#:IFC.xml:43771
-msgid "IfcBoundaryNodeCondition"
-msgstr "Nodecondición límite IfcIfc"
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-msgid "IfcBoundaryNodeCondition_DEFINITION"
-msgstr "Describe condiciones de soporte elástico lineal o condiciones de conexión. El punto de aplicación soporta y conexiones. HISTORY nueva entidad en IFC2x2. IFC 2x4 cambia el nombre de Atributos LinearStiffnessX Y Z a TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 CHANGE Todos los tipos de datos de atributos cambiaron de numérico a SELECT entre booleano y numérico. Las rigideces ahora también pueden ser negativas, por ejemplo, para capturar efectos desestabilizadores en las condiciones límite: la Convención IFC2x3 de 1. representando la rigidez infinita ya no es válida y no debe ser utilizada. Rigidez infinita, i. . soportes corregidos, ahora están modelados por el valor booleano TRUE. documentación bSI"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "El número de elementos en la lista de bordes."
 
-#:IFC.xml:43772
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
-msgstr "Restricción de la traducción %s"
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "Cara IfcIfc"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:43777
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
-msgstr "TranslationalStiffnessY"
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
-msgstr "Valor de rigidez traduccional en dirección y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:43782
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
-msgstr "TranslationalStiffnessZ"
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "Límites"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
-msgstr "Valor de rigidez traduccional en la dirección z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Límites"
 
-#:IFC.xml:43787
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
-msgstr "Restricción rotativa %s"
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 A face bound is a loop which is intended to be used for bounding a face. NOTA Entidad adaptada de cara atada definida en ISO 10303 42. HISTORY Nueva entidad en IFC1.0 bSI Documentation"
 
-#:IFC.xml:43792
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
-msgstr "RotationalStiffnessY"
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "Vincular"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Vincular"
 
-#:IFC.xml:43797
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
-msgstr "RotationalStiffnessZ"
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "Orientación"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
-msgstr "Valor de rigidez rotacional sobre el eje z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Esto indica si TRUE o no FALSE el bucle tiene el mismo sentido cuando se utiliza para enlazar la cara como cuando se definió por primera vez. Si el sentido es FALSE los sentidos de todos los bordes orientados a sus componentes se invierten implícitamente cuando se utilizan en la cara."
 
-#:IFC.xml:43804
-msgid "IfcBoundaryNodeConditionWarping"
-msgstr "Deformación límite no condicional"
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "Límite de IfcCara"
 
-msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
-msgstr "Describe condiciones de soporte elástico lineal o condiciones de conexión, incluyendo restricciones de deformación elástica lineal. ALTORIA Nueva entidad en IFC2x2. .change ifc2x4 IFC4 CHANGE Todos los tipos de datos de atributo cambiaron de numérico a SELECT entre booleano y numérico. Las rigideces ahora también pueden ser negativas, por ejemplo, para capturar efectos desestabilizadores en las condiciones límite: la Convención IFC2x3 de 1. representando la rigidez infinita ya no es válida y no debe ser utilizada. Rigidez infinita, i. . soportes corregidos, ahora están modelados por el valor booleano TRUE. documentación bSI"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 A face outside bound is a special subtype of face bound which carries the additional semantics of defining an external limit on the face. No más de un límite de rostro será de este tipo. NOTA: Entidad adaptada de cara con enlace externo definida en ISO 10303 42. HISTORY Nueva entidad en IFC1.0 bSI Documentation"
 
-#:IFC.xml:43805
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
-msgstr "Rigidez de deformación"
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "Superficie IfcFaceSurface"
 
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
-msgstr "Define el valor de rigidez de deformación."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "El [[IfcFaceSurface]] define la geometría subyacente de la superficie asociada a la cara. NOTA La topología se utiliza para recortar la geometría de la superficie. No hay necesidad de recortar geométricamente la superficie para que coincida con la topología. xtDef NOTE Definición según ISO CD 10303 42 1992 La superficie de la cara es un subtipo de cara en la que la geometría está definida por una superficie asociada. La porción de la superficie utilizada por la cara será incrustable en el plano como disco abierto, posiblemente con agujeros. Sin embargo, la unión de la cara con los bordes y vértices de sus bucles de límite no tiene por qué ser incrustable en el avión. Puede abarcar, por ejemplo, una esfera o un toro enteros. Como la cara y la superficie geométrica han definido las direcciones normales, una bandera BOOLEAN que el atributo de orientación se utiliza para indicar si la superficie normal está de acuerdo con TRUE o se opone a FALSE la dirección normal de la cara. La geometría asociada con cualquier componente de los bucles de la cara será consistente con la geometría de la superficie, en el sentido de que los dominios de todos los puntos de vértices y curvas de bordes están contenidos en la superficie geométrica de la cara. Una superficie puede ser referenciada por más de una superficie de cara. NOTA Entidad adaptada a la superficie de la cara definida en ISO 10303 42. El dominio de la superficie de la cara está definido formalmente como el dominio de su geometría cara como recortado por los bucles, este dominio no incluye los bucles límite. 2. La superficie de la cara no tiene una extensión finita nula. 3. La superficie de la cara es múltiple. 4. La superficie de la cara está conectada en sentido arquero. 5. Una superficie de la cara tiene el género 0 de la superficie. Los bucles no forman parte del dominio de la cara. 7. La geometría del bucle debe ser coherente con la geometría de la cara. Esto implica que cualquier curva de borde o puntos de vértice utilizados para definir los bucles que delimitan la superficie de la cara se situará en la geometría de la cara. 8. Los bucles de la cara no se intersecarán. Documentación bSI"
 
-#:IFC.xml:43812
-msgid "IfcFailureConnectionCondition"
-msgstr "IfcFailureConnectioncondition"
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Superficie facial"
 
-msgid "IfcFailureConnectionCondition_DEFINITION"
-msgstr "Define las fuerzas en las que falle un soporte o conexión. Soporte de puntos de aplicación y conexiones. HISTORY nueva entidad en IFC2x2. BSI Documentation"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Superficie facial"
 
-#:IFC.xml:43813
-msgid "IfcFailureConnectionCondition_TensionFailureX"
-msgstr "Fallo de tensión%s"
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
-msgstr "Fuerza de tensión en la dirección x que lleva al fracaso de la conexión."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Esta bandera indica si el sentido de la superficie normal está de acuerdo con TRUE , o se opone a FALSE , el sentido de lo normal topológico a la cara."
 
-#:IFC.xml:43818
-msgid "IfcFailureConnectionCondition_TensionFailureY"
-msgstr "Fallo de tensión Y"
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
-msgstr "La fuerza de tensión en dirección y conduce al fracaso de la conexión."
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un bucle es una entidad topológica construida a partir de un solo vértice, o a través de la cuerda de los bordes orientados conectados, o segmentos lineales que comienzan y terminan en el mismo vértice. Se utiliza típicamente para enlazar una cara tumbada sobre una superficie. Un bucle tiene una dimensión de 0 o 1. El dominio de un bucle dimensional es un único punto. El dominio de un ciclo de 1 dimensiones es una curva conectada y orientada, pero no tiene por qué ser múltiple. Como el ciclo es un círculo, la ubicación de su punto final inicial es arbitraria. El dominio del bucle incluye sus límites, un 0 . Un bucle es representado por un solo vértice, o por una colección ordenada de bordes orientados, o por una colección ordenada de puntos. Un bucle es una gráfica, por lo que M y el gen G l gráfico pueden estar determinados por el algoritmo transversal de la gráfica. Desde M 1, la ecuación Euler 1 reduce en este caso a la Imagen .. .. .. cifras ifcloop math1. si donde V y E X 7El X 7E son el número de vértices y bordes orientados únicos en el bucle y G l es el género del bucle. NOTA Entidad adaptada del bucle definida en ISO 10303 42. HISTORY Nueva entidad en IFC2x. .spec head Informal Propositions 1. Un bucle tiene una extensión finita. 2. Un bucle describe una curva topológica cerrada con vértices coincidentes de inicio y fin. Documentación bSI"
 
-#:IFC.xml:43823
-msgid "IfcFailureConnectionCondition_TensionFailureZ"
-msgstr "Fallo en la tensión"
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
-msgstr "La fuerza de tensión en la dirección z conduce al fracaso de la conexión."
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Esta función devuelve TRUE si para los bordes del bucle de entrada el vértice final de cada borde es el mismo que el vértice inicial de su sucesor. Nueva función HISTORY en IFC2x2"
 
-#:IFC.xml:43828
-msgid "IfcFailureConnectionCondition_CompressionFailureX"
-msgstr "Error de compresión %s"
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
-msgstr "La fuerza de compresión en la dirección x conduce al fracaso de la conexión."
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Una shell abierta es un shell de la dimensionalidad 2. Su dominio, si está presente, es un finito, conectado, orientado, 2 múltiples con límites, pero no es una superficie cerrada. Se puede pensar como una concha cerrada con uno o más agujeros en ella. El dominio de un intérprete de órdenes abierto satisface 0 -1. Una shell abierta es funcionalmente más general que una cara porque su dominio puede tener asas. El caparazón se define por una colección de caras, que pueden ser caras orientadas. El sentido de cada cara, después de tener en cuenta la orientación, estará de acuerdo con la normal de la concha tal como se define a continuación. La orientación se puede suministrar directamente como un atributo BOOLEAN de una cara orientada o ser predeterminado a TRUE si el miembro del shell es una cara sin el atributo de orientación. Se diseñan las siguientes restricciones combinatorias sobre los proyectiles abiertos y las restricciones geométricas en sus dominios, junto con las propuestas informales, para asegurar que cualquier dominio asociado con una shell abierta sea un múltiplo orientable. Cada referencia del rostro será única; una cáscara abierta tendrá al menos una cara. Una cara dada puede existir en más de una concha abierta. El límite de una concha abierta consiste en los bordes que son referenciados una sola vez por los límites de la cara de sus caras, junto con todos sus vértices. El dominio de una concha abierta, si está presente, contiene todos los bordes y vértices de sus caras. NOTA Tenga en cuenta que esto es ligeramente diferente de la definición de un dominio facial, que no incluye ninguno de sus límites. Por ejemplo, un dominio facial puede excluir un punto aislado o segmento de línea. Un dominio de shell abierto no puede. Consulte el algoritmo para calcular a continuación. NOTA Entidad adaptada de la shell abierta definida en ISO 10303 42. HISTORY Nueva entidad en IFC2x. Cada borde será referenciado exactamente dos veces por los límites de la cara 2. Cada borde orientado debe ser único. 3. No hay bordes referenciados por más de dos caras. 4. Distintas caras del caparazón no se intersecan, pero pueden compartir bordes o vértices. 5. Los bordes distintos no se intersecan pero pueden compartir vértices. 6. Los bucles de la cáscara no serán una mezcla de bucle polar y otros tipos de bucles. Tenga en cuenta que esto es dado, ya que sólo el bucle poly se define como definición de enlazado facial. 8. La concha cerrada será un eje orientado conectado 2 múltiplos. 9. La ecuación Euler será satisfecha. BSI Documentation"
 
-#:IFC.xml:43833
-msgid "IfcFailureConnectionCondition_CompressionFailureY"
-msgstr "Fallo de compresión Y"
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "Filo IfcOrientado"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
-msgstr "La fuerza de compresión en dirección y conduce al fracaso de la conexión."
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "El [[IfcOrientedEdge]] representa un [[IfcEdge]] con una bandera de orientación aplicada. Permite reutilizar el mismo [[IfcEdge]] cuando se atraviesa exactamente dos veces, una vez hacia adelante y una vez hacia atrás. NOTA El sentido de lo normal para el [[IfcFace]] se determina únicamente a partir de los bordes. Si todos los bordes de la cara están conectados en sentido contrario a las agujas del reloj siguiendo las orientaciones del borde, la cara normal apuntará hacia afuera. La normal del subyacente [[IfcFaceSurface]] que representa la geometría de esa cara no tiene relevancia para esto. El propósito del [[IfcFaceSurface]]. El atributo ameSense es dar información adicional para fines de verificación. SameSense TRUE significa normales de superficie y normales rostros son los mismos, SameSense FALSE significa que están en direcciones opuestas. El borde reutilizado con una representación geométrica como [[IfcEdgeCurve]] define el borde en el espacio de coordenadas 3D. En algunos casos, sobre todo cuando se utilizan superficies elementales o barridas, existe el riesgo de mapeo impreciso del 3D x, y, z [[IfcEdgeCurve]] en las superficies adyacentes para determinar los límites de estas superficies. La curveOnSurface opcional define el borde 2D u, v dentro del espacio paramétrico de la superficie. Podría utilizarse para determinar la exactitud del mapeo del 3D [[IfcEdgeCurve]] sobre esta superficie. EXAMPLE Figura 1 ilustra un ejemplo donde se proporciona la CurveOnSurface además de la geometría de la curva [[IfcEdgeCurve]]. Figura 1 Curva sobre la representación superficial de un [[IfcOrientedEdge]] . Definición de xtDef NOTE según ISO CD 10303 42 1992 Un borde orientado es un borde construido de otro borde y contiene una bandera de dirección BOOLEAN para indicar si la orientación del borde construido concuerda o no con la orientación del borde original. Excepto por tal vez orientación, el borde orientado es equivalente al borde original. Una práctica común es sistemas de modelado sólidos es tener una entidad que represente el uso o travesía de un borde. Esta entidad de uso representa explícitamente el requisito en un múltiple sólido de que cada borde debe ser atravesado exactamente dos veces, una en cada dirección. La funcionalidad de uso es proporcionada por el borde orientado a subtipos. NOTA Entidad adaptada desde el borde orientado definido en ISO 10303 42. HISTORY Nueva entidad en IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE El atributo CurveOnSurface ha sido añadido. bSI Documentation"
 
-#:IFC.xml:43838
-msgid "IfcFailureConnectionCondition_CompressionFailureZ"
-msgstr "CompressionFailureZ"
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Elemento del borde"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
-msgstr "La fuerza de compresión en la dirección z conduce al fracaso de la conexión."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Elemento del borde"
 
-#:IFC.xml:43845
-msgid "IfcSlippageConnectionCondition"
-msgstr "IfcSlippageConnectionCondition"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Orientación"
 
-msgid "IfcSlippageConnectionCondition_DEFINITION"
-msgstr "Describe el deslizamiento en condiciones de soporte o condiciones de conexión. Slippage significa que puede ocurrir un desplazamiento relativo en un soporte o conexión antes de que se produzcan reacciones de soporte o conexión. Soporte de puntos de aplicación y conexiones, soporte de curvas y conexiones, soporte de superficie y conexiones. HISTORY nueva entidad en IFC2x2. BSI Documentation"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, Si TRUE la orientación topológica como se utiliza coincide con la orientación del vértice inicial al final del vértice del elemento de borde. Si FALA de otro modo."
 
-#:IFC.xml:43846
-msgid "IfcSlippageConnectionCondition_SlippageX"
-msgstr "SlippageX"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge Edge EdgeStart"
 
-msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
-msgstr "Deslizar en la dirección x del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:43851
-msgid "IfcSlippageConnectionCondition_SlippageY"
-msgstr "SlippageY"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
-msgstr "Deslizar en dirección y del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:43856
-msgid "IfcSlippageConnectionCondition_SlippageZ"
-msgstr "SlippageZ"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "Ruta Ifc"
 
-msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
-msgstr "Deslizar en la dirección z del sistema de coordenadas definido por la instancia que utiliza este objeto de recurso."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un camino es una entidad topológica que consiste en una colección ordenada de bordes orientados, para que el vértice de inicio de arista de cada borde coincida con el final del borde de su predecesor. El camino está ordenado desde el principio del borde del primer borde orientado hasta el extremo del borde anterior. El sentido del valor BOOLEAN en el borde orientado indica si la dirección del borde está de acuerdo con la dirección del camino TRUE o es la dirección opuesta FALSE . Un borde individual sólo puede ser referenciado una vez por una ruta individual. Un borde puede ser referenciado por varias rutas. Un borde puede existir independientemente de una ruta. NOTA Entidad adaptada de la ruta definida en ISO 10303 42. HISTORY Nueva entidad en IFC2. .spec head Informal Propositions 1. Una ruta tiene dimensión 1. 2. Una ruta está conectada en sentido opuesto. 3. Los bordes de la ruta no se intersecan excepto en vértices comunes. 4. Una ruta tiene una extensión finita y no cero. Documentación bSI"
 
-#:IFC.xml:43863
-msgid "IfcStructuralConnectionCondition"
-msgstr "Conexión estructural Ifccondición"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "Lista de bordes"
 
-msgid "IfcStructuralConnectionCondition_DEFINITION"
-msgstr "Describa las propiedades de conexión más raramente necesarias. HISTORY Nueva entidad en IFC2x2. BSI Documentation"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Lista de bordes"
 
-#:IFC.xml:43864
-msgid "IfcStructuralConnectionCondition_Name"
-msgstr "Nombre"
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail"
 
-msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
-msgstr "Opcionalmente define un nombre para esta condición de conexión."
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Esta función devuelve TRUE si todos los bordes de la ruta de entrada son consecutivos. Definición de NOTE xtDef según ISO CD 10303 42 1992 Esta función devuelve TRUE si para los bordes de la ruta de entrada el vértice final de cada borde es el mismo que el vértice de inicio de su sucesor. NOTA Función adaptada de camino de cabecera a cola definida en ISO10303 42. HISTORY Nueva función en IFC2.0"
 
-#:IFC.xml:43870
-msgid "IfcStructuralLoad"
-msgstr "IfcStructuralLoad"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcStructuralLoad_DEFINITION"
-msgstr "Esta entidad abstracta es el supertipo de todas las acciones o reacciones de carga o de ciertos requerimientos resultantes del análisis estructural. o ciertas disposiciones que influyen en el análisis estructural. Nueva entidad HISTORY en IFC2x2. Documentación bSI"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un bucle poly es un bucle con bordes rectos que delimitan una región plana en el espacio. Un bucle poly es un bucle del género 1 en el que el bucle está representado por una colección coplano ordenada de puntos que forman los vértices del bucle. El bucle se compone de segmentos de línea recta, uniendo un punto en la colección al punto sucesor de la colección. El segmento de cierre es del último al primer punto de la colección. La dirección del bucle está en la dirección de los segmentos de línea. Un bucle poly se ajustará a las siguientes restricciones topológicas que el bucle tiene el género de uno. la siguiente ecuación debe ser satisfecho Imagen .. .. .. .. cifras ifcpolyloop math1. si el [[IfcPolyLoop]] siempre está cerrado y el último segmento es del último [[IfcCartesianPoint]] en la lista de Polígono s al primero [[IfcCartesianPoint]] . Por lo tanto, el primer punto no se repetirá al final de la lista, ni haciendo referencia al mismo caso, ni usando una instancia adicional de [[IfcCartesianPoint]] teniendo las coordenadas como primer punto. NOTA Esta entidad existe principalmente para facilitar la comunicación eficiente de los modelos faceted B Rep. NOTA Entidad adaptada desde polibucle definido en ISO 10303 42. Pc head Informal Propositions 1. Todos los puntos del polígono que definan el ciclo poligonal serán coplanos. 2. El primero y el último Polygon serán diferentes por valor."
 
-#:IFC.xml:43871
-msgid "IfcStructuralLoad_Name"
-msgstr "Nombre"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polígono"
 
-msgid "IfcStructuralLoad_Name_DEFINITION"
-msgstr "Opcionalmente define un nombre para esta carga."
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polígono"
 
-#:IFC.xml:43877
-msgid "IfcStructuralLoadConfiguration"
-msgstr "Configuración IfcEstructuralLoad"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "Subbordes Ifc"
 
-msgid "IfcStructuralLoadConfiguration_DEFINITION"
-msgstr "Esta clase combina uno o más valores de carga o resultado en una configuración de 1 o 2 dimensiones. HISTORIA Nueva entidad en IFC4. .spec head Informal Propositions 1. Todos los elementos en valores serán del mismo tipo. 2. Si las cargas o resultados comprenden una actividad de curva, se indicará una posición dimensional, medida localmente a lo largo de la curva. La ubicación no debe exceder los límites de la acción de la curva. Las muestras de carga y las ubicaciones correspondientes se darán en orden ascendente de ubicaciones. Si las cargas o resultados comprenden una actividad superficial, se darán 2 ubicaciones dimensionales, medido en la actividad superficial s direcciones x e y locales. La ubicación no debe exceder los límites de la actividad superficial. NOTA No hay requisitos de pedido en el caso de 2 dimensiones, pero el caso de 1 caso dimensional debe ser ordenado espacialmente para su simplicidad."
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definición de acuerdo con ISO CD 10303 42 1992 Un subborde es un borde cuyo dominio es una porción conectada del dominio de un borde existente. Las restricciones topológicas en un suburbio son las mismas que las de un borde. NOTA Entidad adaptada desde subbordes definidos en ISO 10303 42, entidad nueva en IFC2x2. Pec head Informal Propositions 1. El dominio del subborde está definido formalmente para ser el dominio del borde padre, como recortado por el vértice de subbordes de inicio y vértice de subbordes del extremo. 2. El vértice inicial y final estará dentro de la unión de los dominios de los vértices del borde padre y del dominio del borde padre . documentación bSI"
 
-#:IFC.xml:43889
-msgid "IfcStructuralLoadConfiguration_Values"
-msgstr "Valores"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "Borde padre"
 
-msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
-msgstr "Valores"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Borde padre"
 
-#:IFC.xml:43882
-msgid "IfcStructuralLoadConfiguration_Locations"
-msgstr "Ubicaciones"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
-msgstr "Ubicaciones de las muestras de carga o muestras de resultados, indicadas dentro del sistema de coordenadas locales definido por la instancia que utiliza este objeto de recurso. Cada elemento en la lista de ubicaciones pertenece al elemento de lista de valores en el mismo índice de lista. Este atributo es opcional para configuraciones en las que las ubicaciones se conocen implícitamente desde definiciones de alto nivel."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 El elemento de representación topológica es el supertipo para todos los elementos topológicos de representación en el recurso geométrico. NOTA Entidad adaptada del elemento de representación topológica definido en ISO 10303 42. HISTORY Nueva entidad en IFC1.5 bSI Documentation"
 
-#:IFC.xml:43901
-msgid "IfcStructuralLoadLinearForce"
-msgstr "IfcEstructuralLoadLinearForce"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcStructuralLoadLinearForce_DEFINITION"
-msgstr "Una instancia de la entidad [[IfcStructuralLoadLinearForce]] debe ser usada para definir acciones en curvas. Nueva entidad HISTORY en IFC2x2. Documentación bSI"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un vértice es la construcción topológica correspondiente a un punto. Tiene dimensión 0 y grado 0. El dominio de un vértice, si está presente, es un punto en el espacio real m M dimensional que se representa por el subtipo de punto de vértice. NOTA Entidad adaptada del vértice definido en ISO 10303 42. HISTORY Nueva entidad en IFC2.0 .spec head Informal Propositions 1. El vértice tiene una dimensión 0. Esta es una propiedad fundamental del vértice. 2. La extensión de un vértice se define como cero. Documentación bSI"
 
-#:IFC.xml:43902
-msgid "IfcStructuralLoadLinearForce_LinearForceX"
-msgstr "Forzar %s"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
-msgstr "Valor lineal de fuerza en dirección x."
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un bucle de vértices es un bucle de género cero que consiste en un solo vértice. Un vértice puede existir independientemente de un bucle de vértices. Figura ifcvertexloop math1.gif NOTE Entity adaptada del bucle de vértices definido en ISO 10303 42. Pc head Informal Proposiciones 1. Un bucle de vértices tiene una dimensión y extensión cero. 2. El bucle de vértices tiene género 0. BSI Documentación"
 
-#:IFC.xml:43907
-msgid "IfcStructuralLoadLinearForce_LinearForceY"
-msgstr "Forzar Y"
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "Vértice de bucle"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
-msgstr "Valor lineal de fuerza en dirección y."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "Vértice de bucle"
 
-#:IFC.xml:43912
-msgid "IfcStructuralLoadLinearForce_LinearForceZ"
-msgstr "Forzar Z"
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
-msgstr "Valor lineal de fuerza en la dirección z."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definición según ISO CD 10303 42 1992 Un punto de vértice es un vértice que tiene su geometría definida como un punto. NOTA Entidad adaptada desde punto de vértice definido en ISO 10303 42. HISTORY Nueva entidad en IFC2x. .spec head informal Propositions 1. El dominio del vértice se define formalmente como el dominio de su punto de vértice. Documentación bSI"
 
-#:IFC.xml:43917
-msgid "IfcStructuralLoadLinearForce_LinearMomentX"
-msgstr "Momento %s"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "Geometría de vértices"
 
-msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
-msgstr "Momento lineal sobre el eje x."
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Geometría de vértices"
 
-#:IFC.xml:43922
-msgid "IfcStructuralLoadLinearForce_LinearMomentY"
-msgstr "LinearMomentY"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
-msgstr "Momento lineal sobre el eje y."
-
-#:IFC.xml:43927
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
-msgstr "LinearMomentZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
-msgstr "Momento lineal sobre el eje z."
-
-#:IFC.xml:43934
-msgid "IfcStructuralLoadOrResult"
-msgstr "IfcStructuralLoadOrResult"
-
-msgid "IfcStructuralLoadOrResult_DEFINITION"
-msgstr "Superclase abstracta de clases simples de carga o resultado. Nueva entidad abstracta HISTORY en IFC4, se conserva la compatibilidad ascendente de todos los subtipos. Documentación bSI"
-
-#:IFC.xml:43937
-msgid "IfcStructuralLoadPlanarForce"
-msgstr "Carga estructural IfcFuerza"
-
-msgid "IfcStructuralLoadPlanarForce_DEFINITION"
-msgstr "Se debe utilizar una instancia de la entidad [[IfcStructuralLoadPlanarForce]] para definir acciones en caras. Nueva entidad HISTORIA en IFC2x2. Documentación bSI"
-
-#:IFC.xml:43938
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
-msgstr "Forzar Planar %s"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
-msgstr "Valor de fuerza planar en dirección x."
-
-#:IFC.xml:43943
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
-msgstr "Forzar Planar"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
-msgstr "Valor de la fuerza planar en la dirección y."
-
-#:IFC.xml:43948
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
-msgstr "PlanarForzar Z"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
-msgstr "Valor de fuerza planar en la dirección z."
-
-#:IFC.xml:43955
-msgid "IfcStructuralLoadSingleDisplacement"
-msgstr "IfcStructuralLoadSingleDisplacement"
-
-msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
-msgstr "Las instancias de la entidad [[IfcStructuralLoadSingleDisplacement]] se utilizarán para definir desplazamientos. Nueva entidad HISTORIA en IFC2x2. Documentación bSI"
-
-#:IFC.xml:43956
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
-msgstr "Desplazamiento X"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
-msgstr "Desplazamiento en x dirección."
-
-#:IFC.xml:43961
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
-msgstr "Desplazamiento Y"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
-msgstr "Desplazamiento en dirección y"
-
-#:IFC.xml:43966
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
-msgstr "Desplazamiento Z"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
-msgstr "Desplazamiento en la dirección z."
-
-#:IFC.xml:43971
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
-msgstr "RotationalDisplacementRX"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
-msgstr "Rotación sobre el eje x."
-
-#:IFC.xml:43976
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
-msgstr "Desplazamiento rotativo RY"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
-msgstr "Rotación sobre el eje y."
-
-#:IFC.xml:43981
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
-msgstr "RotationalDisplacementRZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
-msgstr "Rotación sobre el eje z."
-
-#:IFC.xml:43988
-msgid "IfcStructuralLoadSingleDisplacementDistortion"
-msgstr "IfcDesplazamiento único de carga estructural"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
-msgstr "Define un desplazamiento con warping. HISTORY Nueva entidad en IFC2x2. BSI Documentation"
-
-#:IFC.xml:43989
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
-msgstr "Distoración"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
-msgstr "La degradación de la curvatura de la distorsión, es decir, una deplicación transversal dada a la carga de desplazamiento."
-
-#:IFC.xml:43996
-msgid "IfcStructuralLoadSingleForce"
-msgstr "IfcEstructuralLoadsingForce"
-
-msgid "IfcStructuralLoadSingleForce_DEFINITION"
-msgstr "Las instancias de la entidad [[IfcStructuralLoadSingleForce]] se utilizarán para definir las fuerzas y los momentos de una acción que opere en un solo punto. Nueva entidad HISTORY en IFC2x2. Documentación bSI"
-
-#:IFC.xml:43997
-msgid "IfcStructuralLoadSingleForce_ForceX"
-msgstr "Fuerza X"
-
-msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
-msgstr "Forzar valor en la dirección x."
-
-#:IFC.xml:44002
-msgid "IfcStructuralLoadSingleForce_ForceY"
-msgstr "Fuerza Y"
-
-msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
-msgstr "Forzar valor en la dirección y."
-
-#:IFC.xml:44007
-msgid "IfcStructuralLoadSingleForce_ForceZ"
-msgstr "ForceZ"
-
-msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
-msgstr "Forzar valor en la dirección z."
-
-#:IFC.xml:44012
-msgid "IfcStructuralLoadSingleForce_MomentX"
-msgstr "Momento X"
-
-msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
-msgstr "Momento sobre el eje x."
-
-#:IFC.xml:44017
-msgid "IfcStructuralLoadSingleForce_MomentY"
-msgstr "MomentY"
-
-msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
-msgstr "Momento sobre el eje y."
-
-#:IFC.xml:44022
-msgid "IfcStructuralLoadSingleForce_MomentZ"
-msgstr "MomentZ"
-
-msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
-msgstr "Momento sobre el eje z."
-
-#:IFC.xml:44029
-msgid "IfcStructuralLoadSingleForceWarping"
-msgstr "IfcStructuralLoadSingleForceWarping"
-
-msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
-msgstr "Instancias de la entidad [[IfcStructuralLoadSingleForceWarping]] , como un subtipo de [[IfcStructuralLoadSingleForce]] , se utilizará para definir una operación de acción en un único punto. Además de fuerzas y momentos definidos por su supertipo, se puede definir un momento de deformación. HISTORY nueva entidad en IFC2x2. BSI Documentation"
-
-#:IFC.xml:44030
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
-msgstr "WarpingMoment"
-
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
-msgstr "El momento de deformación en el punto de carga."
-
-#:IFC.xml:44037
-msgid "IfcStructuralLoadStatic"
-msgstr "IfcStructuralLoadStatic"
-
-msgid "IfcStructuralLoadStatic_DEFINITION"
-msgstr "La entidad abstracta [[IfcStructuralLoadStatic]] es el supertipo de todas las acciones o reacciones estáticas de carga que se pueden definir. Dentro del ámbito son las fuerzas unitarias, es decir, las fuerzas concentradas y los momentos, lineales i.e. una fuerza y momentos distribuidos dimensionalmente, plano, es decir, dos fuerzas distribuidas dimensionalmente, además desplazamientos y cargas de temperatura. Nueva entidad HISTORY en IFC2x2. Documentación bSI"
-
-#:IFC.xml:44040
-msgid "IfcStructuralLoadTemperature"
-msgstr "Temperatura de carga estructural"
-
-msgid "IfcStructuralLoadTemperature_DEFINITION"
-msgstr "Una instancia de la entidad [[IfcStructuralLoadTemperature]] debe utilizarse para definir acciones causadas por un cambio de temperatura. Como se muestra en la Figura 1, el cambio de temperatura se da con un valor constante que se aplica a la sección completa y a los valores de las diferencias de temperatura entre las fibras externas de la sección. HISTORY Nueva entidad en IFC2x2. .. .. .. .. .. figuras structuralloadtemperature.gif Figura 1 Temperatura de carga estructural bSI Documentación"
-
-#:IFC.xml:44041
-msgid "IfcStructuralLoadTemperature_DeltaTConstant"
-msgstr "DeltaTConstant"
-
-msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
-msgstr "Cambio de temperatura que afecta a la sección completa del miembro estructural, o la porción uniforme de un cambio de temperatura no uniforme. X 0D X 0D NOTE Un valor positivo describe un aumento de la temperatura. Es decir, un cambio positivo de temperatura constante provoca la alargación de un miembro, o la compresión en el miembro si hay restricciones respectivas."
-
-#:IFC.xml:44046
-msgid "IfcStructuralLoadTemperature_DeltaTY"
-msgstr "DeltaA"
-
-msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
-msgstr "Cambio de temperatura no uniforme especificada como la diferencia de la temperatura en la fibra externa de la dirección positiva y menos el cambio de temperatura en la fibra exterior de la dirección negativa del miembro de análisis. X 0D X 0D NOTE Un cambio positivo de temperatura no uniforme en y induce una curvatura negativa del miembro alrededor de z, o un momento positivo de plegado sobre z si hay restricciones respectivas. y z son ejes miembros locales."
-
-#:IFC.xml:44051
-msgid "IfcStructuralLoadTemperature_DeltaTZ"
-msgstr "Delta Z"
-
-msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
-msgstr "Cambio de temperatura no uniforme especificada como la diferencia de la temperatura en la fibra externa de la dirección positiva z menos el cambio de temperatura en la fibra exterior de la dirección z negativa del miembro de análisis. X 0D X 0D NOTE Un cambio positivo de temperatura no uniforme en z induce una curvatura positiva del miembro acerca de y, o un momento negativo de doblado sobre y si hay restricciones respectivas. y z son ejes miembros locales."
-
-#:IFC.xml:44058
-msgid "IfcSurfaceReinforcementArea"
-msgstr "IfcSurfaceReinforcementArea"
-
-msgid "IfcSurfaceReinforcementArea_DEFINITION"
-msgstr "Describe el área de refuerzo requerida o provista de los miembros de superficie. NOTA Los parámetros de diseño de miembros como cubierta de hormigón, profundidad efectiva, orientación de mallas o rebarras dos, opcionalmente tres direcciones, etc. no se especifican en IfcStructural LoadResource schema. Se especificarán a nivel de miembros estructurales. HISTORY nueva entidad en IFC4. BSI Documentation"
-
-#:IFC.xml:44075
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
-msgstr "Refuerzo de la superficie 1"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
-msgstr "Refuerzos en la cara del miembro que se encuentra al lado de la dirección z local positiva del miembro de superficie. Especificado como área por longitud, e. El área de refuerzo puede ser especificada para dos o tres direcciones de barras de reforzamiento."
-
-#:IFC.xml:44080
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
-msgstr "Refuerzo de superficie2"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
-msgstr "Refuerzos en la cara del miembro que se encuentra al lado de la dirección z local negativa del miembro de superficie. Especificado como área por longitud, e. El área de refuerzo puede ser especificada para dos o tres direcciones de barras de reforzamiento."
-
-#:IFC.xml:44085
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
-msgstr "Refuerzos de la Pila"
-
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
-msgstr "Refuerzo de corte. Especificado como área por área, por ejemplo, metro cuadrado por metro cuadrado, por lo tanto la proporción de medida, es decir, sin unidad ."
-
-#:IFC.xml:44092
-msgid "IfcModulusOfRotationalSubgradeReactionSelect"
-msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
-
-msgid "IfcModulusOfRotationalSubgradeReactionSelect_DEFINITION"
-msgstr "Una medida para el módulo de reacción de subgrado rotacional que expresa la ropa de rotación de un elemento de curva estructural por longitud. TRUE denota rigidez infinita . Un valor numérico denota una rigidez elástica lineal finita, HISTORY Nuevo tipo en IFC4."
-
-#:IFC.xml:44093
-msgid "IfcModulusOfSubgradeReactionSelect"
-msgstr "IfcModulusOfSubgradeReacción"
-
-msgid "IfcModulusOfSubgradeReactionSelect_DEFINITION"
-msgstr "TRUE denota rigidez infinita . FALSE denota no rigidez a la versión, un valor numérico denota una rigidez elástica lineal finita."
-
-#:IFC.xml:44094
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
-msgstr "IfcModulusOfTranslationalSubgradeReactionSelect"
-
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect_DEFINITION"
-msgstr "Una medida para el módulo de reacción de subgrado traslacional que expresa la ropa de cama traslacional de un elemento de curva estructural por longitud. TRUE denota rigidez infinita . Un valor numérico denota una rigidez elástica lineal finita, HISTORY Nuevo tipo en IFC4."
-
-#:IFC.xml:44095
-msgid "IfcRotationalStiffnessSelect"
-msgstr "Selección de rotación rígida"
-
-msgid "IfcRotationalStiffnessSelect_DEFINITION"
-msgstr "Una medida de rigidez rotacional. TRUE denota rigidez infinita . Un valor numérico denota una rigidez elástica lineal finita, HISTORY Nuevo tipo en IFC4."
-
-#:IFC.xml:44096
-msgid "IfcTranslationalStiffnessSelect"
-msgstr "IfcTranslationalStiffnessSelect"
-
-msgid "IfcTranslationalStiffnessSelect_DEFINITION"
-msgstr "Una medida de rigidez lineal. TRUE denota rigidez infinita . Un valor numérico denota una rigidez elástica lineal finita, HISTORY Nuevo tipo en IFC4."
-
-#:IFC.xml:44097
-msgid "IfcWarpingStiffnessSelect"
-msgstr "Seleccionar IfcWarpingStiffnessSelect"
-
-msgid "IfcWarpingStiffnessSelect_DEFINITION"
-msgstr "Una medida de rigidez de deformación. TRUE denota rigidez infinita . FALSE denota no rigidez a la liberación . Un valor numérico denota una rigidez elástica lineal finita, HISTORY Nuevo tipo en IFC4."
+msgid "IfcShell_DEFINITION"
+msgstr "Un tipo que contiene diferentes tipos de shell. Definición de xtDef NOTE según ISO CD 10303 42 1992 Este tipo recolecta juntos, para la referencia a la hora de construir modelos más complejos, los subtipos que tienen las características de un shell. Un shell es un objeto conectado de dimensión fija d 0 1 o 2, típicamente usado para enlazar una región. El dominio de un shell, si está presente, incluye sus límites y 0 . Un shell de la dimensionalidad 0 es representado por un gráfico que consiste en un único vértice. El vértice no debe tener bordes asociados. Una concha de dimensionalidad 1 está representada por una gráfica de dimensión conectada 1. Una concha de dimensión 2 es una entidad topológica construida uniendo caras a lo largo de los bordes. Su dominio, si está presente, es un 2 múltiple conectado y orientable con límites, es decir, una superficie conectada, orientada, finita y no autointerseccionante, que puede ser cerrada o abierta. NOTA Tipo adaptado a la shell definida en ISO 10303 42."
 
