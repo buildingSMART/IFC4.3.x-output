@@ -9,331 +9,2017 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcSharedInfrastructureElements.pot\n"
+"X-Crowdin-File-ID: 90\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: no_NO\n"
-"PO-Revision-Date: 2021-08-05 20:09\n"
+"PO-Revision-Date: 2021-08-05 20:11\n"
 
-#:IFC.xml:44118
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:40283
+msgid "IfcConveyorSegment"
+msgstr "Håkon Gjørrelse"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "En avansert flate er en spesialisering av en flate som må oppfylle krav om bruk av bestemte topologiske og geometriske framstillingselementer for å definere flatene sine, kanter og vertikaler. En [[IfcAdvancedFace]] er begrenset til å ha en overflategeometri av type i ansiktet [[IfcElementarySurface]] [[IfcSweptSurface]] eller [[IfcBSplineSurface]] , ha én [[IfcFaceOuterBound]] som randen av ansiktet, med unntak av lukkede overflater, ha alle flatene som skal bindes med [[IfcEdgeLoop]] eller [[IfcVertexLoop]], ha alle kantenes geometri, har kantkurvens geometri begrenset til [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , eller [[IfcBSplineCurve]] I tilfeller med lukkede flater med periodiske overflater, for eksempel sylindriske eller sfæriske overflater, i det følgende gjelder kantene på den lukkede overflaten, når det gjelder en sylindrisk overflate den øvre og nedre hetten, referer til samme forekomst av [[IfcVertexPoint]] to ganger, ikke [[IfcFaceOuterBound]] er gitt, eller [[IfcFaceOuterBound]] er konstruert ved hjelp av en [[IfcSeamCurve]] i den periodiske enden av den underliggende lukkede overflaten, for en sylindrisk overflate ved 0. 360. grader sylindrisk flate ... .. .. .. .. ... ... figurer ifcadvedface 01. ng Figur 1 Bruk av [[IfcCylindricalSurface]] som underliggende overflate for en [[IfcAdvancedFace]] MERKNAD Entisitet tilpasset fra avansert flate definert i NS-EN ISO 10303 511. HISTORY Ny enhet i IFC4 bSI dokumentasjon"
+msgid "IfcConveyorSegment_DEFINITION"
+msgstr "Et transportbåndsegment definerer en forekomst av en gjennomstrømningssegmentets kontinuerlig streng i et transportbåndsystem som forbinder to deler av systemet. disse kan benytte seg av forskjellige metoder som belt, tau, kjetting, skruing osv. MERKNAD Definisjon etter ISO6707 1 maskin som transporterer materiale eller gjenstander i en skånsom helning ved bruk av et uendelig belte, tau eller kjetting, eller ruller."
 
-#:IFC.xml:44133
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:40284
+msgid "IfcConveyorSegment_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "Returnerer det første valget, hvis SANN ellers det andre valget. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne funksjonen returnerer ett av to valg, avhengig av verdien av et boolsk inngangsargument. De to valgene er også input argumenter. MERKNAD Funksjon tilpasset fra boolsk velge definert i ISO10303 42. HISTORY Ny funksjon i IFC2.0"
+msgid "IfcConveyorSegment_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av et transportbåndsegment som den modellerte typen, kan settes. Denne typen kan knytte ytterligere spesifikke egenskapssett. MERKNAD Forhåndsdefinert type skal bare brukes hvis ingen [[IfcConveyorSegmentType]] er tildelt, som gir sin egen [[IfcConveyorSegmentType]].PredefinedType."
 
-#:IFC.xml:44141
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:40303
+msgid "IfcConveyorSegmentType"
+msgstr "IfcConveyorSegmentType"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcConveyorSegmentType_DEFINITION"
+msgstr "ConveyorSegmentType gir typeinformasjon for ConveyorSegment forekomster. Et transportbåndsegment definerer en forekomst av en gjennomstrømningssegmentets kontinuerlig streng i et transportbåndsystem som forbinder to deler av systemet. disse kan benytte seg av forskjellige metoder som belt, tau, kjetting, skruing osv."
 
-#:IFC.xml:44146
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+#:IFC.xml:40304
+msgid "IfcConveyorSegmentType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En tilkoblet flate er et sett med flater, slik at området til flatene sammen med deres avgrensede kanter og vertikalser kobles til. MERKNAD Enhet tilpasset fra tilkoblede flatesett definert i ISO 10303 42. HISTORY Ny enhet i IFC1.0 .spec head uformelle Proposisjon 1. Unionen over de flatene og deres grenselåser skal være søkte. bSI-dokumentasjon er ikke forbundet med hverandre"
+msgid "IfcConveyorSegmentType_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av en transportbåndsegmentet som den modelleres fra, kan fastsettes fra."
 
-#:IFC.xml:44149
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "FifsFlater"
+#:IFC.xml:40323
+msgid "IfcConveyorSegmentTypeEnum"
+msgstr "IfcConveyorSegmentTypeEnum"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "FifsFlater"
+msgid "IfcConveyorSegmentTypeEnum_DEFINITION"
+msgstr "Denne beholderen definerer de forskjellige forhåndsdefinerte typene transportbåndsegmenter som kan ytterligere angi en ConveyorSegment eller ConveyorSegmentType."
 
-#:IFC.xml:44161
-msgid "IfcEdge"
-msgstr "Slovenija"
+#:IFC.xml:40275
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR"
+msgstr "CHUTEKONVEYOR"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "En [[IfcEdge]] definerer to punkter som er tilknyttet emner. Den geometriske framstillingen av forbindelsen mellom de to versjonene settes til en rett linje hvis ingen kurvgeometri tildeles med undertypen [[IfcEdgeCurve]] . [[IfcEdge]] kan derfor brukes til å utveksle rette kanter uten tilhørende geometri gitt av [[IfcLine]] eller [[IfcPolyline]] antatt [[IfcEdgeCurve]]. dgeometri . EKSEMPEL Figur 1 illustrerer et eksempel der grensene for [[IfcEdge]] er angitt ved EdgeStart og EdgeEnd som også bestemmer kantens retning. Plasseringen i et koordinatområde bestemmes av [[IfcVertexPoint]] typen for EdgeStart og EdgeEnd. Siden det ikke er tilordnet kantgeometri, settes den som standard en rett linje som sier ja til retningen for den. Figur 1 Framstilling av kant. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kant er den topologiske konstruksjonen som tilsvarer forbindelsen til to vertikaler. En mer abstrakt kan stå for et logisk forhold mellom to vertikaler. Området for en kant, hvis det finnes, er en slutt; ikke-selvkryssende åpen kurve i R M , det vil si en sammenkoplet 1-dimensjonal manifold. Grensene for en kant er to punkter som ikke trenger å være forskjellige. Kanten orienteres ved å velge tilbaketraktretning som skal gå fra første til andre vertspunkt. Hvis de to versjonene er de samme, er kanten en egen løkke. Kantens domene innbefatter ikke sine grenser, og 0 ε. Tilknytt en kant kan være en geometrisk kurve for å lokalisere kanten i et koordinatområde, representert ved kantkurveundertypen. Kurven skal være ensartet og ikke krysser seg selv innenfor kantens område. En kant er en graf, så multiplikasjon M og graf genus G kan bestemmes av kurvkurvkurvens algoritme. Siden M E 1 reduseres Euler likningen 1 i tilfellet til bilde . .. .. .. .. .. .. figurer hvis kantens mat1.gif hvor V 1 eller 2, og G e 1 eller 0. Spesifikt skal topologisk kant som definerer data, tilfredsstille en kant har to punkter bilder . .. .. .. .. .. .. figurer ved kile math2.gif må ikke være forskjellig bilde .. .. .. .. .. .. .. tall hviskedmath3. Hvis likning skal inneholde bilde .. .. .. .. .. .. .. figurer hvis kile math4. MERKNAD Entity tilpasset fra kanten definert i ISO 10303 42. HISTORY Ny enhet i IFC2. spec head uformelle posisjoner 1. Kanten har dimensjonalitet 1. 2. Omfanget av en kant skal være ordentlig og ikke null. bSI dokumentasjon"
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR_DEFINITION"
+msgstr "Tyngdekraftdrevet transportør der medier synker ned gjennom en bunnverdi eller en chute."
 
-#:IFC.xml:44164
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:40273
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR"
+msgstr "BELTKOVEYOR"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR_DEFINITION"
+msgstr "Et uendelig belte for bærende materiale uten strekk."
 
-#:IFC.xml:44176
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:40276
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR"
+msgstr "SKJERBEHOLD"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR_DEFINITION"
+msgstr "sammensatt av et langsgående skrue på et bunn eller et rør som roterer til kraftmediet gjennom segmentet"
 
-#:IFC.xml:44212
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+#:IFC.xml:40274
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR"
+msgstr "BOKSENDELSER AV MARKEDSFØRINGSTILLATELSEN"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "En [[IfcEdgeCurve]] definerer to punkter som forbindes med den geometriske representasjonen av forbindelsen. MERKNAD Topologien brukes til å trimme geometrien til kanten. Det er ikke nødvendig å gi geometrisk trim til kanten for å passe til topologien. EKSEMPEL Figur 1 illustrerer et eksempel der kantgeometrien angis med en ubegrenset kurve, her [[IfcCircle]]. Grensene leveres av EdgeStart og EdgeEnd, den topologiske retningen til [[IfcEdgeCurve]] motsetter retningen til [[IfcCircle]] med SameSense FALSE. Figur 1 Edge kurve. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantkurve er en spesiell kanttype som har sin geometri fullstendig definert. Geometrien defineres ved å knytte kanten til en kurve som kan avgrenses. Etter hvert som de topologiske og geometriske retningene er motsatt. en indikator brukes samme mening for å identifisere om kanten og kurven er enig eller mottatt. Den Boolske verdien angir om kurveretningen samsvarer med TRUE eller er i motsatt retning FALSE til kantretningen. Eventuell geometri knyttet til kantens vertikaler skal stemme overens med kantgeometrien. Flere kanter kan referere til samme kurve. MERKNAD Entity tilpasset fra kantkurve definert i NS-EN ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for kantkurven er formelt definert som det aktuelle området for kantgeometrien som beskåret av vertikalene. Dette domenet omfatter ikke vertikalene. 2. En kantkurve har ikke null finfordelt utstrekning 3. En kantkurve er et manifold. 4. En kantkurve er underordnet tilkoblet. 5. Ansiden starter ikke er en del av kantdomenet. 6. Kantenden er ikke en del av kanten domene. 7. Vertex geometri skal samsvare med kantgeometri. bSI-dokumentasjon"
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR_DEFINITION"
+msgstr "En transportør i form av tilkoblede bøtter eller segmenter som beveger seg i en kontinuerlig sløyfe"
 
-#:IFC.xml:12010
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometri"
+#:IFC.xml:40328
+msgid "IfcFacilityPartCommonTypeEnum"
+msgstr "IfcFacilityPartCommonTypeEnum"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "EdgeGeometri"
+#:IFC.xml:27240
+msgid "IfcFacilityPartCommonTypeEnum_SUBSTRUCTURE"
+msgstr "SUBSTRUCTURE"
 
-#:IFC.xml:44213
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:40346
+msgid "IfcFacilityPartCommonTypeEnum_SEGMENT"
+msgstr "SEGMENT"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Dette logiske flagget angir hvorvidt TRUE , eller ikke USANT sansene på kanten og kurven som definerer kantgeometrien, er de samme. Følelsen av en kant er fra kantens start vertex til kantens ende ende vertex er i retning av økende parameter."
+msgid "IfcFacilityPartCommonTypeEnum_SEGMENT_DEFINITION"
+msgstr "En langsgående fasilitetsdel som omfatter en lineær del av anlegget, definert av noen ensartede egenskaper, eller en overgang mellom segmenter av ensartede egenskaper."
 
-#:IFC.xml:44221
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:40340
+msgid "IfcFacilityPartCommonTypeEnum_ABOVEGROUND"
+msgstr "OVEGROUND"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantsløyfe er en sløyfe med ikke null. Det er en sti der start- og slutt-vertikalene er de samme. Dette domenet er en lukket kurve. En kantløkke kan overlappe seg selv. MERKNAD Enhet tilpasset fra kantsløyfe definert i ISO 10303 42. HISTORY Ny enhet i IFC2x2. .spec head Informal Proposisjon 1. I artsgruppen til [[IfcEdgeLoop]] skal være 1 eller høyere. 2. Eulerformelen skal være tilfredsstilt antall skjærende slektning på 1 3. Ingen kant kan refereres mer enn én gang til det samme [[IfcEdgeLoop]] med samme mening. For dette formålet regnes en kant som ikke er orientert kant som refereres til TRUE som bSI-dokumentasjonen."
+msgid "IfcFacilityPartCommonTypeEnum_ABOVEGROUND_DEFINITION"
+msgstr "En vertikal fasilitetsdel for bygningsdeler som tilhører rommet over den ferdige bakken."
 
-#:IFC.xml:44237
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Redigeringsliste"
+#:IFC.xml:40342
+msgid "IfcFacilityPartCommonTypeEnum_JUNCTION"
+msgstr "JUNKSJON"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "Redigeringsliste"
+msgid "IfcFacilityPartCommonTypeEnum_JUNCTION_DEFINITION"
+msgstr "En langsgående innretning som er en del av den samme typen for sammenkobling av klasse mellom to eller flere deler i langsgående anlegg."
 
-#:IFC.xml:44230
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ni"
+#:IFC.xml:40344
+msgid "IfcFacilityPartCommonTypeEnum_LEVELCROSSING"
+msgstr "LEVELCROSSING"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "Antall elementer i kantlisten."
+msgid "IfcFacilityPartCommonTypeEnum_LEVELCROSSING_DEFINITION"
+msgstr "Langtidsanlegg som skal til for å passere klasse mellom to eller flere forskjellige transportformer, for eksempel vei og bane eller vei og fotgjenger."
 
-#:IFC.xml:44249
-msgid "IfcFace"
-msgstr "IfcFace"
+#:IFC.xml:40341
+msgid "IfcFacilityPartCommonTypeEnum_BELOWGROUND"
+msgstr "NEDGRUNN"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcFacilityPartCommonTypeEnum_BELOWGROUND_DEFINITION"
+msgstr "En vertikal del som holder bygningsdeler under det ferdige underlaget. Dette kan for eksempel omfatte jordarbeidselementer og elementer i en vegkonstruksjon."
 
-#:IFC.xml:26129
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:27241
+msgid "IfcFacilityPartCommonTypeEnum_SUPERSTRUCTURE"
+msgstr "SUPERSTRUKSJON"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+#:IFC.xml:40349
+msgid "IfcFacilityPartCommonTypeEnum_TERMINAL"
+msgstr "TERMÅLT"
 
-#:IFC.xml:44256
-msgid "IfcFace_Bounds"
-msgstr "Lyder"
+msgid "IfcFacilityPartCommonTypeEnum_TERMINAL_DEFINITION"
+msgstr "En langsgående innretning som representerer et terminalsegment i en langsgående innretning, for eksempel slutten på et bruddvann, vei eller jernbaneseksjon."
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Lyder"
+#:IFC.xml:40350
+msgid "IfcFacilityUsageEnum"
+msgstr "IfcFacilityUsageEnum"
 
-#:IFC.xml:44268
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:40355
+msgid "IfcFacilityUsageEnum_LATERAL"
+msgstr "LATERAL"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate som er bundet er en løkke som er ment å skulle brukes for å begrense et fly. MERKNAD Enhet tilpasset fra ansiktsbundet, definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 bSI dokumentasjon"
+msgid "IfcFacilityUsageEnum_LATERAL_DEFINITION"
+msgstr "LATERAL"
 
-#:IFC.xml:44276
-msgid "IfcFaceBound_Bound"
-msgstr "Bundet"
+#:IFC.xml:40357
+msgid "IfcFacilityUsageEnum_REGION"
+msgstr "REGION"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Bundet"
+msgid "IfcFacilityUsageEnum_REGION_DEFINITION"
+msgstr "REGION"
 
-#:IFC.xml:44269
-msgid "IfcFaceBound_Orientation"
-msgstr "Retning"
+#:IFC.xml:40358
+msgid "IfcFacilityUsageEnum_VERTICAL"
+msgstr "VERTISKE"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dette indikerer om SANN eller ikke FALSE løkken har samme sann når den brukes til å binde ansiktet som når den først defineres. Hvis fornuft er FALSE, blir sansene på alle de komponentorienterte kantene implisitt reversert når de brukes i ansiktet."
+msgid "IfcFacilityUsageEnum_VERTICAL_DEFINITION"
+msgstr "VERTISKE"
 
-#:IFC.xml:44288
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+#:IFC.xml:40356
+msgid "IfcFacilityUsageEnum_LONGITUDINAL"
+msgstr "LENGITUDINALE"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En ytterflate er en spesiell undertype flate som bærer den ekstra halvdelen av overflaten med å definere en ytre grense på flaten. Ikke mer enn én grense for en flate skal være av denne typen. MERKNAD Enhet tilpasset fra et yttergrense definert i ISO 10303 42. HISTORY en ny enhet i IFC1.0 bSI dokumentasjon"
+msgid "IfcFacilityUsageEnum_LONGITUDINAL_DEFINITION"
+msgstr "LENGITUDINALE"
 
-#:IFC.xml:44291
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+#:IFC.xml:40359
+msgid "IfcGeotechnicalElement"
+msgstr "IfcGeoteknisk Element"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "[[IfcFaceSurface]] definerer den underliggende geometrien til den tilknyttede overflaten til ansiktet. MERKNAD Topologien brukes til å trimme geometrien til overflaten. Det er ikke nødvendig å gi overflaten en geometrisk trim som passer med topologien. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate er en underflate der geometrien er definert av en tilhørende overflate. Den delen av overflaten som overflaten brukte på, skal være innstøpt i planet som en åpen skive, eventuelt med hull. Unionen på overflaten med kantene og vertikalene av låsene trenger imidlertid ikke kunne støpes inn i planet. Det kan for eksempel dekke et helt sfære eller torus. Siden både flaten og den geometriske overflaten har definert normale retninger et BOOLEAN flagg orienteringsattributtet brukes til å indikere om overflatenormale samtykker i SAN, eller er i motsetning til USANT ansiktet normal retning. Geometrien knyttet til en av delene av løkkene i overflaten skal være forenlig med overflategeometrien. i den forstand at alle virvlpunktene og kantkurvene ligger i overflaten av ansiktet, mot geometri. En overflate kan refereres til med mer enn én overflate. MERKNAD Enhet tilpasset fra flateoverflaten, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for overflaten er formelt definert som det området for ansiktsgeometrien som kuttet i løkkene, dette domenet inneholder ikke noen løkker. 2. En ansiktsflate har ikke endelig utstrekning. 3. En flateflate er en manifold. 4. En flate er liten, liten. 5. En overflate har en genus 0. 6. Løkkene er ikke en del av domenet i ansiktet. 7. Løkkegeometri skal stemme overens med overflatens geometri. Dette innebærer at eventuelle kantkurver eller vertex-punkter som brukes ved fastsetting av løkkeflaten, skal ligge i ansiktsgeometrien. 8. Løkkene på overflaten skal ikke krysses. bSI-dokumentasjon"
+msgid "IfcGeotechnicalElement_DEFINITION"
+msgstr "Abstrakt supertype for geotekniske enheter."
 
-#:IFC.xml:13088
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Overflate"
+#:IFC.xml:40366
+msgid "IfcSign"
+msgstr "IfcSign"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "Overflate"
+msgid "IfcSign_DEFINITION"
+msgstr "Et skilt er et varsel om visning som gir informasjon eller instruksjoner i en skriftlig, symbolsk eller annen form. Skilt er passivt med den vanligste formen av et billedpanel. Et eksempel på [[IfcSign]] refererer til forekomsten av et enkelt panel som kan anvendes på en overflate, f.eks. en vegg eller aggregeres i en skiltmontasje som kan inneholde flere skilttilfeller og de tilhørende bærende konstruksjonselementene, se Signalmontasjen for eksempel ."
 
-#:IFC.xml:44292
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:40367
+msgid "IfcSign_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Dette flagget angir om følelsen av overflaten normal er enig med SAN, eller er motstander av FALSE, den topologiske normalen til ansiktet."
+msgid "IfcSign_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen med skilter som den typemodellerte typen, kan settes. Denne typen kan knytte ytterligere spesifikke egenskapssett. MERKNAD Forhåndsdefinert type skal bare brukes hvis ingen [[IfcSignType]] er tildelt, som gir sin egen [[IfcSignType].PredefinedType."
 
-#:IFC.xml:44300
-msgid "IfcLoop"
-msgstr "Smykke"
+#:IFC.xml:40388
+msgid "IfcSignal"
+msgstr "IfcSignal"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En løkke er en topologisk enhet laget av en enkelt verteks. eller ved å strengere sammen bearbeidede kanter eller lineære segmenter som begynner og slutter i samme vertspunkt. Den brukes vanligvis til å binde en flate som ligger på en overflate. En løkke har dimensjonalitet på 0 eller 1. Domenet for en 0-dimensjonal løkke er et enkelt punkt. Domenet i en dimensjonal løkke er en koblet, orientert kurve, men trenger ikke å manifesteres. Ettersom løkka er en sirkel, er avslutningspunktet for begynnelsen vilkårlig. Domenet for gjennomløpet inneholder grensene, en 0 ε. En løkke representeres av en enkelt verteks, en samling orienterte kanter eller av en bestilt samling av punkter. En løkke er en graf, så M og diagrammet G l kan bestemmes av kurvens kurvkurvalgoritme. Siden M 1, reduseres Euler likning 1 i denne saken til bilde .. .. .. .. ... figurer kappe math1. Hvis V og E X 7El X 7E er antall unike punkter og orienterte kanter i løkka og G l er slekten av løkken. MERKNAD Enhet tilpasset fra løkke, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformelle Proposi- sjoner 1. En løkke står nært. En løkke beskriver en lukket topologisk kurve med sammenfallende start og sluttversjon. bSI-dokumentasjon"
+msgid "IfcSignal_DEFINITION"
+msgstr "Et signal er en aktiv enhet som formidler informasjon eller instruksjoner til brukere, ved hjelp av en lyd, et visuelt signal eller en kombinasjon av disse. Det primære skillet fra en [[IfcSign]] er at et signal er aktivt og derfor en undertype på [[IfcFlowTerminal]] krever vanligvis kraft- og datatilkoblinger for operasjonen. En forekomst av [[IfcSignal]] representerer en ensidig signalinnretning i en større sammensatt enhet eller et tilkoblet system, f.eks. en individuell ramme innenfor et jernbanesignal, én enkelt lysenhet i et trafikklyssystem eller et lydsignal eller et lys montert på en taubane. Signaler kan splittes fysisk sammen i en sammensetting, som kan omfatte flere signaltilfeller og også skiltes bort fra de tilhørende bærende konstruksjonsdelene, for eksempel en enkel stang eller en stiv startprøve i en stiv ramme, se f.eks. Signalmontering for eksempel. Signaler kan grupperes logisk funksjonsmessig sammen i et signalsystem en type distribusjonssystem som representerer en tilkoblet gruppe med signaler, for eksempel en gruppe trafikklys som styrer et veitransport."
 
-#:IFC.xml:44303
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToail ALoop"
+#:IFC.xml:40389
+msgid "IfcSignal_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "Denne funksjonen returnerer SANN hvis du vil skrive en inngang i en loop enden vertex i hver kant er den samme som startviseren i sin suksess. HISTORY Ny funksjon i IFC2x2"
+msgid "IfcSignal_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av et signal som typen modelleres fra, kan settes. Denne typen kan knytte ytterligere spesifikke egenskapssett. MERKNAD Forhåndsdefinert type skal bare brukes hvis ingen [[IfcSignalType]] er tildelt, som gir sin egen [[IfcSignType].PredefinedType."
 
-#:IFC.xml:44311
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:40411
+msgid "IfcSignalType"
+msgstr "IfcSignalType"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et åpent skall er et skall av dimensjonen 2. Den dommere, om den finnes, er en endelig, forbundet med hverandre, orientert to manifestert med grense, men ikke en lukket overflate. Man mener at det er et lukket skall med ett eller flere hull slått på. Domenet til et åpent skall tilfredsstiller 0 ° 1. Et åpent skall er mer generelt enn en flate fordi domenet kan håndteres. Skallet er definert av en samling av ansikter, som kan være orientert ansikt. Etter at det er tatt hensyn til orienteringen, skal den avtale skallet normalt, som definert nedenfor. Retningen kan leveres direkte som et BOOLEAN-attributt for et orientert ansikt, eller være standard til TRUE hvis skallelementet er et ansikt uten retteattributtet. Følgende helt kombinerte restriksjoner på åpne skall og geometriske restriksjoner på deres domener er utformet, sammen med de uformelle proposi- sjonene, for å sørge for at alle domener som er knyttet til et åpent skall, er et rettmessig manifold. Hver side skal være unik. Et åpent skall skal ha minst én flate. Det kan finnes en gitt flate i mer enn ett åpent skall. Grensen for et åpent skall består av kantene som refereres til bare én gang av flatens grensetilstander, sammen med alle sine verter. Domenet til et åpent helvete, hvis det finnes, inneholder alle kanter og overflater av overflatene. MERKNAD Merk at dette avviker noe fra definisjonen av et ansiktsdomene som omfatter ingen av dets grenser. For eksempel kan et ansiktsdomene utelukke et isolert punkt eller en linjesegment. Et åpent skalldomene kan ikke vises. Se algoritmen for databehandling nedenfor. MERKNAD Enhet tilpasset fra åpne skall definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformell posisjon 1. Hver kant skal refereres til nøyaktig to ganger gjennom ansiktsgrensen. Hver orienterte kant skal være unikt. 3. Ingen kant skal henvises til mer enn to ansikter. 4. Distinke flater på skallet krysser ikke, men kan dele kanter og vertikaler. 5. Ulike kanter krysser ikke, men kan dele vertikaler. 6. Hver ansiktsreferanse skal være unik. 7. Løkkene på skallet skal ikke være en blanding av poly-sløyfe og andre løkketyper. Merk dette gitt, siden bare høflig sløyfe defineres som definisjonen for ansiktsgrensen. 8. Det lukkede skallet skal være orientert lita koblet 2 manifold. 9. The Euler formel er fornøyd. SI-dokumentasjon."
+msgid "IfcSignalType_DEFINITION"
+msgstr "[[IfcSignalType]] gir typen informasjon for [[IfcSignal]] forekomster. Et signal er en aktiv enhet som formidler informasjon eller instruksjoner til brukere, ved hjelp av et lyd, et visuelt signal eller en kombinasjon av 2."
 
-#:IFC.xml:44315
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:40412
+msgid "IfcSignalType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "[[IfcOrientedEdge]] representerer en [[IfcEdge]med en Orientasjonsflagg i bruk. Det kan bruke det samme [[IfcEdge]] ved omvendt nøyaktig to ganger, én gang fremover og én gang bakover. MERKNAD Det normale til [[IfcFace]] er bare bestemt fra kantene. Hvis alle kantene på ansiktet er festet på en måte som følger med kantorienteringen, vil ansiktet peke utover hverandre. Vanlig til det underliggende [[IfcFaceSurface]] som representerer geometrien i dette inntrykket ikke har betydning for dette. Formålet med [[IfcFaceSurface]]. ameSense attributten er å gi ytterligere informasjon for verifiseringsformål. SameSense TRUE betyr overflatevariant og ansikt normalt er de sameSense FALSE betyr at de er i motsatt retning. Den gjenbrukte kanten med en geometrisk framstilling som [[IfcEdgeCurve]] definerer kanten i 3D-koordinatrom. I enkelte tilfeller, særlig ved bruk av elementære eller sveipete overflater, er det en risiko for unøyaktig kartlegging av 3D-x, y, z [[IfcEdgeCurve]] på de tilstøtende flatene for å bestemme grensene for disse overflatene. Den valgfrie CurveOnSurface definerer 2D u, v kanten innenfor parametrisk område på overflaten. Den kan brukes til å bestemme hvor korrekt kartleggingen av 3D-en [[IfcEdgeCurve]] er på denne overflaten. EKSEMPEL Figur 1 illustrerer et eksempel der CurveOnSurface er brukt, i tillegg til kurvegeometrien til [[IfcEdgeCurve]Figur 1 Kurve på overflateframstilling av en [[IfcOrientedEdge]] . xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En orientert kant er bygd fra en annen kant og inneholder et BOOLEAN-retningsflagg som skal angi om orienteringen av den konstruerte kanten er enig med orienteringen av den opprinnelige kanten. Bortsett fra kanskje orientering tilsvarer den orienterte kanten den opprinnelige kanten. En vanlig praksis er solide modelleringssystemer er å ha en enhet som representerer bruken eller traversiteten av en kant. Enheten som bruker uttrykkelig angir kravet i en manifold fast at hver kant skal ha en omvendt nøyaktig to ganger, én gang i hver retning. Bruksfunksjonaliteten er gitt av kantens undertype-orienterte mot. MERKNAD Entidigt tilpasset fra orientert kant definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Attributtet CurveOnSurface har blitt lagt til. bSI dokumentasjon"
+msgid "IfcSignalType_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av et signal som den modelleres fra, kan settes."
 
-#:IFC.xml:44200
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Redigerelement"
+#:IFC.xml:40432
+msgid "IfcSignalTypeEnum"
+msgstr "IfcSignalTypeEnum"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Redigerelement"
+msgid "IfcSignalTypeEnum_DEFINITION"
+msgstr "Denne beholderen definerer de ulike forhåndsdefinerte typene av signaler som kan angi en [[IfcSignal]] eller [[IfcSignalType]]."
 
-#:IFC.xml:44320
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Retning"
+#:IFC.xml:40439
+msgid "IfcSignalTypeEnum_VISUAL"
+msgstr "FORSLAG"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "Hvis denne er topologisk orientering som brukt sammenfaller med orienteringen fra start vertex til slutten av kantelementet. Hvis tilbakekallingen skjer."
+msgid "IfcSignalTypeEnum_VISUAL_DEFINITION"
+msgstr "En signaltype som er dannet av en aktiv enhet, som omfatter informasjon på en visuell måte, som for eksempel et lys, klynge av lys eller mekaniske bevegelige former."
 
-#:IFC.xml:44325
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:40436
+msgid "IfcSignalTypeEnum_AUDIO"
+msgstr "LYD"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcSignalTypeEnum_AUDIO_DEFINITION"
+msgstr "En signaltype som er dannet av en aktiv enhet som overgir informasjon ved å avgi et lydsignal, for eksempel en befi, ring, horn eller eksplosiv lyd."
 
-#:IFC.xml:44329
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:40438
+msgid "IfcSignalTypeEnum_MIXED"
+msgstr "MIKKT"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcSignalTypeEnum_MIXED_DEFINITION"
+msgstr "En signaltype som er dannet av en aktiv enhet som viser informasjon både synlig og lyd."
 
-#:IFC.xml:44347
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:40442
+msgid "IfcSignType"
+msgstr "IfcSignType"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 En bane er en topologisk enhet bestående av en bestilt samling av orienterte kanter, slik at kantstammen starter vertex over hver kant samtidig med kanten på slutten av sin forgjenger. Banen er bestilt fra kantens start på den første orienterte kanten til kanten av den siste kanten. BOOLEAN-verdien i den orienterte kanten viser om kantretningen samsvarer med retningen til stien TRUE eller er motsatt retning FALSE . En enkelt kant kan bare refereres til én gang med en enkelt sti. En kant kan refereres til med flere veier. En kant kan finnes uavhengig av bane. MERKNAD Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2. .spec head uformelle Proposis 1. En bane har dimensjonalitet 1. 2. En vei er arktisk knyttet sammen. 3. Kantene av veien krysser ikke unntatt i felles verdier 4. Veien har en rettvisende, ikke noe dekkende vei. bSI-dokumentasjon er lik null."
+msgid "IfcSignType_DEFINITION"
+msgstr "[[IfcSignType]] gir typen informasjon for [[IfcSign]] forekomster. Et skilt er et varsel om visning som gir informasjon eller instruksjoner i en skriftlig, symbolsk eller annen form. Skilt er passivt med den vanligste formen av et billedpanel."
 
-#:IFC.xml:44335
-msgid "IfcPath_EdgeList"
-msgstr "Redigeringsliste"
+#:IFC.xml:40443
+msgid "IfcSignType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "Redigeringsliste"
+msgid "IfcSignType_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen med et skilt som typen modelleres fra, kan settes."
 
-#:IFC.xml:44354
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail-APat"
+#:IFC.xml:40463
+msgid "IfcSignTypeEnum"
+msgstr "IfcSignTypeEnum"
 
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "Denne funksjonen returnerer SANN hvis alle kantene i inntastingsbanen er konsekvent. xtDef MERKNAD Definisjon i henhold til ISO CD 10303 42 1992 Denne funksjonen returnerer TRUE hvis for kantene av inngangsbanen er enden med hver kant det samme som startvertex i sin etterfølger. MERKNAD Funksjon tilpasset fra veihode til hale, definert i ISO10303 42. Ny funksjon HISTORY i IFC2.0"
+msgid "IfcSignTypeEnum_DEFINITION"
+msgstr "Denne beholderen definerer de ulike forhåndsdefinerte typene av tegn som kan angi en [[IfcSign]] eller [[IfcSignType]]."
 
-#:IFC.xml:44362
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:40467
+msgid "IfcSignTypeEnum_MARKER"
+msgstr "MARKØR"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En poly løkke er en løkke med rette kanter som avgrenser et plan område i rommet. En poly-løkke er en løkke med genet 1 der løkken representeres av en bestilt kobbersamling med punkter som utgjør løkkens vertikal. Utløkka består av rette linje-segmenter som forbinder et punkt i samlingen med det suksesspunktet i samlingen. Det avsluttende segmentet er fra det siste til det første punktet i samlingen. Utløkkens retning er i linjesegmentenes retning. En pol-løkke skal samsvare med følgende topologiske begrensninger i løkken har slekten av en. følgende likning skal være tilfredsstilt bilde .. .. .. .. .. figurer ihcpolylooplakk1. hvis [[IfcPolyLoop]] alltid er lukket og det siste segmentet er fra den siste [[IfcCartesianPoint]] i listen over Polygon s til den første [[IfcCartesianPoint]] . Det første punktet skal derfor ikke gjentas ved slutten av listen, eller ved å referere til samme forekomst. eller ved å bruke en ekstra forekomst på [[IfcCartesianPoint]] med koordinatene som det første punktet. MERKNAD Denne enheten finnes primært for å legge til rette for effektiv kommunikasjon av anerkjente B-representerende modeller. MERKNAD Enhet tilpasset fra høfsløyfe definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 . Uformell pec head-posisjon 1. Alle punktene i mangekanten som definerer poly-løkken, skal være koplare. 2. Den første og den siste Polygon skal være forskjellig etter verdi. bSI-dokumentasjon"
+msgid "IfcSignTypeEnum_MARKER_DEFINITION"
+msgstr "En skilttype formet av en vertikal post, muligens med noen bokstaver eller symboler, brukes vanligvis til å avgrense avstanden til eller lokasjonen til en viss utstyr."
 
-#:IFC.xml:11495
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+#:IFC.xml:40472
+msgid "IfcSignTypeEnum_PICTORAL"
+msgstr "PICTORAL"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Polygon"
+msgid "IfcSignTypeEnum_PICTORAL_DEFINITION"
+msgstr "En skilttype dannet av en flatt plate, med skriftlige eller symbolske bilder på den."
 
-#:IFC.xml:44369
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+#:IFC.xml:40470
+msgid "IfcSignTypeEnum_MIRROR"
+msgstr "Farmakodynamisk"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definisjon etter ISO CD 10303 42 1992 En underkant er en kant med domene som er en forbundet del av domenet til en eksisterende kant. De topologiske begrensningene på en kile er de samme som på en kant. MERKNAD Enhet tilpasset fra underkant definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. topp-hode uformelle posisjoner 1. Domenet til kanten er formelt definert som det overordnede domenet for den overordnede kanten, som trimmes av subkantens start vertex og innleder slutt på verten. 2. Start vertex og ende vertex skal ligge under unionen av de vertices domener fra overordnet kant og domenet til overordnet kant . bSI dokumentasjon"
+msgid "IfcSignTypeEnum_MIRROR_DEFINITION"
+msgstr "En tegntype som gir informasjon via et speilunderlag i speiloverflaten."
 
-#:IFC.xml:44188
-msgid "IfcSubedge_ParentEdge"
-msgstr "Fornavn"
+#:IFC.xml:40476
+msgid "IfcTransportElementNonFixedTypeEnum"
+msgstr "IfcTransportElementNonFixedTypeEnum"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "Fornavn"
+msgid "IfcTransportElementNonFixedTypeEnum_DEFINITION"
+msgstr "Denne nummereringen brukes til å identifisere typer ikke-faste eller mobile transportelementer."
 
-#:IFC.xml:44372
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:40490
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLE"
+msgstr "KJØPT"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr "extDef NOTE Definisjon etter ISO CD 10303 42 1992 Det topologiske representasjonselementet er supertypen for alle de topologiske representasjonsgjenstandene i geometriressursen. MERKNAD Enhet tilpasset fra topologisk fremføringselement definert i ISO 10303 42. HISTORY ny enhet i IFC1.5 bSI dokumentasjon"
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLE_DEFINITION"
+msgstr "en generalisering av et kjøretøy som samhandler med en fasilitet, for eksempel som brukerkunde eller som et angitt driftsenhet i anlegget."
 
-#:IFC.xml:44375
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:40504
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLETRACKED"
+msgstr "GYLDIG"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex er den topologiske konstruksjonen som tilsvarer et punkt. Den har dimensjonalitet 0 og utstrekning 0. Domenet til et verteks, hvis tilstede, er et punkt i m dimensjons virkelige rom R , representert ved vertex punkt undertype. MERKNAD Enhet tilpasset fra vertex definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0 .spec head Informal Propositions 1. vertex har en dimensjonalitet 0. Dette er en grunnleggende egenskap ved verten. 2. Omfanget av vertex er definert som null. bSI-dokumentasjon"
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLETRACKED_DEFINITION"
+msgstr "En spesialisering av et kjøretøy som opererer på landsporet tunnelbanebil."
 
-#:IFC.xml:44390
-msgid "IfcVertexLoop"
-msgstr "IfcVertexloop"
+#:IFC.xml:40487
+msgid "IfcTransportElementNonFixedTypeEnum_ROLLINGSTOCK"
+msgstr "ROLLINGSTOCK"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex løkke er en løkke med null genus som består av en enkelt vertex. En vertex kan finnes uavhengig av vertex løkke. The topological data skal tilfredsstille følgende begrensningsbilde .. .. .. .. .. figurer ifcvertexloop math1.gif NOTE Entity adapted from vertex loop definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. pec head informal Propositions 1. En vertex løkke har null omfang og dimensjonalitet. 2. vertex loop har genus 0. bSI dokumentasjon"
+msgid "IfcTransportElementNonFixedTypeEnum_ROLLINGSTOCK_DEFINITION"
+msgstr "Henviser til jernbanekjøretøy, innbefattet både drevne og umodne kjøretøyer, for eksempel lokomotiver, jernbanekjøretøy, brakter, private jernbanekjøretøy og vogner."
 
-#:IFC.xml:44378
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:40507
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEWHEELED"
+msgstr "INNKJØTTE"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "LoopVertex"
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEWHEELED_DEFINITION"
+msgstr "En spesialisering av et kjøretøy som opererer på land som et flerhjulsbefordringsmiddel som for eksempel bil, lastebil, gaffeltruck osv."
 
-#:IFC.xml:44393
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:40494
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEAIR"
+msgstr "INNHOLD"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 A vertex point er en vertex som har dens geometri definert som et punkt. MERKNAD Enhetstilpasset fra vertex punkt definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Domenet til vertex er formelt definert som det samme området som vertex punktet. bSI Dokumentasjon"
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEAIR_DEFINITION"
+msgstr "En spesialisering av et kjøretøy som representerer drevet og ikke-drevet flygende kjøretøy, som luftplan, helikoptre, glidere osv."
 
-#:IFC.xml:12625
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometri"
+#:IFC.xml:40485
+msgid "IfcTransportElementNonFixedTypeEnum_CARGO"
+msgstr "CARGO"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "VertexGeometri"
+msgid "IfcTransportElementNonFixedTypeEnum_CARGO_DEFINITION"
+msgstr "Et bevegelig transportelement som representerer en avgrenset enhet last som forvaltes av et anlegg."
 
-#:IFC.xml:44397
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:40497
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEMARINE"
+msgstr "VEHICLEMARINE"
 
-msgid "IfcShell_DEFINITION"
-msgstr "En type som består av ulike skall. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne typen samler sammen, referanse for ved konstruksjon av mer komplekse modeller, undertyper som har egenskaper ved et skall. Et skall er et forbundet objekt med en fast dimensjon d 0 1 eller 2, som vanligvis brukes til å binde en region. Domenet til et helvete, hvis mulig, inneholder sine grenser og 0 A dimensjonalskall 0 representeres av en graf som består av et enkelt vertspunkt. vertex skal ikke ha noen tilknyttede kanter. Et dimensjonal 1 er representert med et tilkoblet graf med dimensjonal 1. En dimensjonalitetskall 2 er en topologisk enhet laget av flater langs skråninger. Bestandens domene, dersom det finnes, er et koblet, orientert 2 manifold med grenseverdi, det vil si, koplet, orientert overflate, ikke-kryssende overflate, som kan lukkes eller åpnes. MERKNAD Type tilpasset fra skall definert i NS-EN ISO 10303 42. Ny type HISTORY i IFC2x."
+msgid "IfcTransportElementNonFixedTypeEnum_VEHICLEMARINE_DEFINITION"
+msgstr "En spesialisering av et fartøy som opererer på vann som fartøy."
+
+#:IFC.xml:40512
+msgid "IfcAnnotationTypeEnum"
+msgstr "IfcAnnotationTypeEnum"
+
+msgid "IfcAnnotationTypeEnum_DEFINITION"
+msgstr "Dette nummereringen definerer de forskjellige typene merknadselementer en [[IfcAnnotation]] objekt kan representere."
+
+#:IFC.xml:40729
+msgid "IfcAnnotationTypeEnum_ASSUMEDPOINT"
+msgstr "ASSUMEDPOINT"
+
+msgid "IfcAnnotationTypeEnum_ASSUMEDPOINT_DEFINITION"
+msgstr "En enkelt ekstra punktforutsetning eller fortolkning, brukt til å supplere undersøkelsesdata ved innledende tilstandsmodellering."
+
+#:IFC.xml:40782
+msgid "IfcAnnotationTypeEnum_ASBUILTAREA"
+msgstr "ASBUILTAREA"
+
+msgid "IfcAnnotationTypeEnum_ASBUILTAREA_DEFINITION"
+msgstr "Et sett med utbygde spørreundersøkelser på en overflate."
+
+#:IFC.xml:40779
+msgid "IfcAnnotationTypeEnum_ASBUILTLINE"
+msgstr "ASBUILTLINN"
+
+msgid "IfcAnnotationTypeEnum_ASBUILTLINE_DEFINITION"
+msgstr "Et sett av som utbygde oppmålingspunkter på en linje, f.eks. bruddlinje."
+
+#:IFC.xml:40538
+msgid "IfcAnnotationTypeEnum_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+msgid "IfcAnnotationTypeEnum_USERDEFINED_DEFINITION"
+msgstr "BRUKERDEFINERT"
+
+#:IFC.xml:40527
+msgid "IfcAnnotationTypeEnum_NON_PHYSICAL_SIGNAL"
+msgstr "IKKE TENSKALE SIGNAL"
+
+msgid "IfcAnnotationTypeEnum_NON_PHYSICAL_SIGNAL_DEFINITION"
+msgstr "Et virtuelt eller fiktivt signal. I motsetning til det fysiske signalet trenger ikke det ikke-fysiske signalet å sende informasjon til toget. et fiktivt signal på signaleren vises som er nødvendig for å definere rutens utgang mot åpen linje der det ikke finnes noen reelt signaler. Et virtuelt ERTMS L2 signal er også et ikke-fysisk signal, men kan ha en fysisk tilstedeværelse, dvs. et stoppmarkørbord langs sporet."
+
+#:IFC.xml:40742
+msgid "IfcAnnotationTypeEnum_ASSUMEDLINE"
+msgstr "ASSUMEDLINE"
+
+msgid "IfcAnnotationTypeEnum_ASSUMEDLINE_DEFINITION"
+msgstr "Et sett med ekstra punkter med en linjeskifte som en forutsetning eller fortolkning, brukt til å supplere data fra undersøkelsen ved innledende modellering av tilstanden."
+
+#:IFC.xml:40545
+msgid "IfcAnnotationTypeEnum_WIDTHEVENT"
+msgstr "VEDLEGG"
+
+msgid "IfcAnnotationTypeEnum_WIDTHEVENT_DEFINITION"
+msgstr "En type hendelse som angir bredden på et bestemt sted langs en veiinnretning, og type overgang fra forrige plassering. Stasjonene angis ved hjelp av en [[IfcLinearPlacement]] målt langs justeringsaksens kurve. De delene som berøres av en breddehendelse foreslås i dag å spesifiseres ved å angi hendelsen i en bestemt sideveis nedbrytningselement for vegens romlige konstruksjon e. . en større eller mindre del av hele vognen"
+
+#:IFC.xml:40765
+msgid "IfcAnnotationTypeEnum_ASSUMEDAREA"
+msgstr "ASSUMEDAREA"
+
+msgid "IfcAnnotationTypeEnum_ASSUMEDAREA_DEFINITION"
+msgstr "Et sett med ekstra punkter på en overflate som en forutsetning eller fortolkning, brukt til å supplere data fra den innledende tilstandsmodellen."
+
+#:IFC.xml:40532
+msgid "IfcAnnotationTypeEnum_SUPERELEVATIONEVENT"
+msgstr "SUPERELEVATIONENT"
+
+msgid "IfcAnnotationTypeEnum_SUPERELEVATIONEVENT_DEFINITION"
+msgstr "En type hendelse som angir superhøydehøyden på et bestemt sted langs en veginnretning, og typen overgang fra forrige plassering. Stasjonene angis ved hjelp av en [[IfcLinearPlacement]] målt langs justeringsaksens kurve. De delene som påvirkes av superhøydehendelsen, er i dag foreslått å spesifiseres ved en bestemt sideveis brytningselement av vegens romlige konstruksjon som benyttes. . en Lane ."
+
+#:IFC.xml:40776
+msgid "IfcAnnotationTypeEnum_ASBUILTPOINT"
+msgstr "ASBUILTPOINT"
+
+msgid "IfcAnnotationTypeEnum_ASBUILTPOINT_DEFINITION"
+msgstr "En enkelt som bygget undersøkelsespunkt."
+
+#:IFC.xml:40523
+msgid "IfcBorehole"
+msgstr "IfcBorehull"
+
+msgid "IfcBorehole_DEFINITION"
+msgstr "Presentasjon av begrepet lineær geologisk og geoteknisk modell, vanligvis en tolkning, men av og til laget direkte fra måling av inntrenging i grunnen Anlegget kan inneholde ett av flere lag og ett av de andre elementene, som fastklemming og fôring. De angitte undertypene av [[IfcGeotechnicalStratum]] vil ha formpresentasjoner fra rette eller bøyde rør som gjenspeiler diameteren, eller skall hvis en toppmodell for Yabuki er brukt."
+
+#:IFC.xml:40529
+msgid "IfcGeoslice"
+msgstr "IfcGeoslice"
+
+msgid "IfcGeoslice_DEFINITION"
+msgstr "Begrepet om tverrsnittsgeologisk og geoteknisk modell, er vanligvis en fortolkning, men noen ganger beregnet direkte fra måling under bakken. Anlegget kan inneholde ett av flere lag og antropiske elementer. De inneholdt undertypene av [[IfcGeotechnicalStratum]] vil ha formframstillinger av polygoner som gjenspeiler den synlige seksjonen eller politi hvis en Yabuki toppmodell med en Yabuki er brukt."
+
+#:IFC.xml:40535
+msgid "IfcGeomodel"
+msgstr "IfcGeomodel"
+
+msgid "IfcGeomodel_DEFINITION"
+msgstr "Begrepet volumetrisk geologisk og geoteknisk modell, vanligvis en fortolkning, men noen ganger skapt direkte fra måling av grunnen. Et av flere lag og andre antropiske elementer kan monteres. De inneholder undergrupper av [[IfcGeotechnicalStratum]] vil ha formframstillinger av polyhedra eller overflater hvis en toppmodell med Yabuki er brukt."
+
+#:IFC.xml:40540
+msgid "IfcSolidStratum"
+msgstr "IfcSolidStratum"
+
+msgid "IfcSolidStratum_DEFINITION"
+msgstr "Presentasjon av begrepet med en identifisert diskret, nesten homogent, solid geologisk eller overflatetilstand, inklusive diskontinuiteter, f.eks. feil, brudd, grenser og grenseflater som ikke er eksplisitt modellert."
+
+#:IFC.xml:40548
+msgid "IfcGeotechnicalAssembly"
+msgstr "IfcGeotechnicalAssembly"
+
+msgid "IfcGeotechnicalAssembly_DEFINITION"
+msgstr "Representasjon av det abstrakte begrepet om en geologisk og geoteknisk modell, vanligvis en fortolkning, men noen ganger skapt direkte fra måling av grunnen. Bruk av en forsamling er valgfritt, men kan bære metodologien og usikkerhetsinformasjonen. Slike anlegg vil omfatte [[IfcGeotechnicalStratum]entitetstyper og kan omfatte andre enhetstyper som [[IfcPile]], [[IfcSlab]] eller [[IfcSensor]] for å representere kabelen, fôringen eller loggeutstyret som er til stede. [[IfcBorehole]] eller IfcGeoSlice kan ha en fysisk realitet som byggefasning ved siden av operatøren for det tolkede resultatet. Geologiske farer kan være knyttet til alle [[IfcGeotechnicalAssembly]] eller [[IfcGeotechnicalStratum]"
+
+#:IFC.xml:40553
+msgid "IfcBuiltSystem"
+msgstr "IfcBuiltSystem"
+
+msgid "IfcBuiltSystem_DEFINITION"
+msgstr "Et bygd anlegg er et gruppeformet anlegg der bygningsdeler grupperes etter en felles funksjon på anlegget. Gruppen [[IfcBuiltSystem]] definerer forekomsten av et spesialisert system for bruk innenfor konteksten av et fysisk eller sluttstoff. Viktige funksjoner for beskrivelsen av et bygd system er utledet fra supertyper Fra [[IfcSystem]] det arver muligheten til å ha et par av det bygde systemet via [[IfcRelReferencedInSpatialStructure]] til én eller flere [[IfcSpatialElement]undertyper etter behov. Fra [[IfcGroup]] arver det omvendte attributtet IsGroupedBy, som peker til relasjonsklasse [[IfcRelAssignsToGroup]] . Dette gjør det mulig å gruppere forekomster av bygningsdeler av [[IfcBuiltElement]] undertyper, [[IfcFurnishingElement]] undertyper, [[IfcElementAssembly]] og [[IfcTransportElement]] . Fra [[IfcObjectDefinition]] arver det inverse attributtet IsDecomposedBy å peke til relasjonsklasse [[IfcRelAggregates]]. Den har et hierarki mellom de separate bygningssystemene."
+
+#:IFC.xml:40554
+msgid "IfcBuiltSystem_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcBuiltSystem_PredefinedType_DEFINITION"
+msgstr "Forhåndsdefinerte typer bygde systemer."
+
+#:IFC.xml:40559
+msgid "IfcBuiltSystem_LongName"
+msgstr "Lengdenavn"
+
+msgid "IfcBuiltSystem_LongName_DEFINITION"
+msgstr "Langt navn på et bygd system, brukes for uformelle formål. Den skal brukes hvis tilgjengelig, i forbindelse med det arvede navneattributtet. MERKNAD I mange scenarier refererer navneattributtet til kortnavnet eller antallet til et bygd system, og LongName refererer til et beskrivende navn."
+
+#:IFC.xml:40583
+msgid "IfcGeotechnicalStratum"
+msgstr "IfcGeoteknisk Stratum"
+
+msgid "IfcGeotechnicalStratum_DEFINITION"
+msgstr "Representasjon av begrepet med en identifisert diskret nesten homogent geologisk funksjon med enten en uregelmessig solid eller Yabuki toppoverflate eller en vanlig vokselkuleform. Et lag framstilles som en separat enhet, spesialisert underenhet skrevet av [[IfcElement]]. Et lag kan deles ned i mindre enheter hvis egenskapene varierer på tvers av laget, eller alternativt, kan beskrives med grenser til numeriske grenser. Et stratum kan ha informasjon om den fysiske formen og tolkningen av den som en geologisk post GML . Formrepresentasjonene som er brukt, bør tilsvare deltypen av [[IfcGeotechnicalAssembly]], der det oppstår"
+
+#:IFC.xml:40591
+msgid "IfcBuiltSystemTypeEnum"
+msgstr "IfcBuiltSystemTypeEnum"
+
+msgid "IfcBuiltSystemTypeEnum_DEFINITION"
+msgstr "Dette oppslaget identifiserer ulike typer bygningssystemer."
+
+#:IFC.xml:40607
+msgid "IfcBuiltSystemTypeEnum_FENESTRATION"
+msgstr "FENESTRASJON"
+
+msgid "IfcBuiltSystemTypeEnum_FENESTRATION_DEFINITION"
+msgstr "System for dører, vinduer og andre fyllinger som åpnes i en bygningskropp, og som er utformet for å kunne passere luft eller lys."
+
+#:IFC.xml:40614
+msgid "IfcBuiltSystemTypeEnum_MOORING"
+msgstr "MOORING"
+
+msgid "IfcBuiltSystemTypeEnum_MOORING_DEFINITION"
+msgstr "System av komponenter og elementer som er ansvarlige for å holde eller holde et element et fartøy, en plattform eller et sett av catenariinjer i en ønsket posisjon."
+
+#:IFC.xml:40281
+msgid "IfcBuiltSystemTypeEnum_TRACKCIRCUIT"
+msgstr "TRACKCIRCUIT"
+
+msgid "IfcBuiltSystemTypeEnum_TRACKCIRCUIT_DEFINITION"
+msgstr "En sporkrets er en elektrisk krets der skinnene i en sporseksjon utgjør en del. med vanligvis en kilde til strøm som er koblet til i den ene enden og en detekteringsinnretning i den andre enden for å oppdage om denne delen er klar eller i bruk av et kjøretøy. I et kontinuerlig signalsystem kan sporkretsen brukes til å overføre informasjon mellom bakken og toget. Merk definisjon fra IEC 60050 82."
+
+#:IFC.xml:40620
+msgid "IfcBuiltSystemTypeEnum_EROSIONPREVENTION"
+msgstr "FEILSØKELSE"
+
+msgid "IfcBuiltSystemTypeEnum_EROSIONPREVENTION_DEFINITION"
+msgstr "En gruppering av elementer inn i et bebygd system for å hindre uønsket flytting av materialpartikler i jordarbeidenes helning eller bergflater. Typiske typer erosjonsforebygging omfatter Planting Solid Framework Anchored framework Shotcrete Screening Geosynthetics geotextiler"
+
+#:IFC.xml:40617
+msgid "IfcBuiltSystemTypeEnum_REINFORCING"
+msgstr "REINFORCING"
+
+msgid "IfcBuiltSystemTypeEnum_REINFORCING_DEFINITION"
+msgstr "System for elementer som gir forsterkning til konstruksjonen."
+
+#:IFC.xml:40613
+msgid "IfcBuiltSystemTypeEnum_LOADBEARING"
+msgstr "LASTER"
+
+msgid "IfcBuiltSystemTypeEnum_LOADBEARING_DEFINITION"
+msgstr "Bygningssystem for bygningsdeler som overfører krefter og avstivning av konstruksjonen."
+
+#:IFC.xml:40616
+msgid "IfcBuiltSystemTypeEnum_PRESTRESSING"
+msgstr "FORSVARER"
+
+msgid "IfcBuiltSystemTypeEnum_PRESTRESSING_DEFINITION"
+msgstr "System for elementer som gir forspenning til konstruksjonen, innbefattet typiske framstilte produkter som stag, forankringer aktivert hhv, kopling, kanaler, vener og avvik, og in situ-segmenter, blottrom, blemmer og tilleggsarmeringer."
+
+#:IFC.xml:40612
+msgid "IfcBuiltSystemTypeEnum_FOUNDATION"
+msgstr "FORSKNING"
+
+msgid "IfcBuiltSystemTypeEnum_FOUNDATION_DEFINITION"
+msgstr "System for grunt og dypt fundamentelement som overfører krefter til understøttekonstruksjonen."
+
+#:IFC.xml:40619
+msgid "IfcBuiltSystemTypeEnum_TRANSPORT"
+msgstr "TRANSPORTER"
+
+msgid "IfcBuiltSystemTypeEnum_TRANSPORT_DEFINITION"
+msgstr "System for alle transportelementer på et anlegg som gjør det mulig å transportere mennesker eller varer."
+
+#:IFC.xml:40615
+msgid "IfcBuiltSystemTypeEnum_OUTERSHELL"
+msgstr "UTENDRER"
+
+msgid "IfcBuiltSystemTypeEnum_OUTERSHELL_DEFINITION"
+msgstr "System for innebygde elementer som gir ytterhud til å beskytte konstruksjonen, for eksempel fasaden ."
+
+#:IFC.xml:40279
+msgid "IfcBuiltSystemTypeEnum_MOORINGSYSTEM"
+msgstr "MOORINGSYSTEM"
+
+msgid "IfcBuiltSystemTypeEnum_MOORINGSYSTEM_DEFINITION"
+msgstr "Et ankersystem for overhodehøyde er et sett med elementer som gir funksjonalitet for forankring og spenning av kontaktledningen for å ha konstant strekk i kablene."
+
+#:IFC.xml:40618
+msgid "IfcBuiltSystemTypeEnum_SHADING"
+msgstr "DELING"
+
+msgid "IfcBuiltSystemTypeEnum_SHADING_DEFINITION"
+msgstr "System for skyggeelementer utvendig eller innvendig som gjør det mulig å begrense eller kontrollere virkningen av naturlig sollys."
+
+#:IFC.xml:40604
+msgid "IfcVoidStratum"
+msgstr "IfcVoidStratum"
+
+msgid "IfcVoidStratum_DEFINITION"
+msgstr "Representasjon av begrepet for en identifisert atskilte luftfylte geologiske egenskaper, inkludert huler og andre hulrom"
+
+#:IFC.xml:40608
+msgid "IfcWaterStratum"
+msgstr "IfcWaterStratum"
+
+msgid "IfcWaterStratum_DEFINITION"
+msgstr "Begrepet for en identifisert atskilt vannfylt geologisk eller overflateorientert framstilling medregnet innsjøer, elver og sjø."
+
+#:IFC.xml:40621
+msgid "IfcCourse"
+msgstr "IfcKurs"
+
+msgid "IfcCourse_DEFINITION"
+msgstr "Et bygd element med en lengde som i stor grad overskrider tykkelsen og ofte også bredden, vanligvis av ett enkelt materiale som er lagt på byggeplassen på toppen av et annet, horisontalt eller nesten horisontalt bygd element. Et kurs skiller seg fra et jordarbeidselement ved at et kurs er et gradert granulært materiale som kan bindes eller ubundet materiale som vanligvis behandles på en eller annen måte, der jordarbeidselementer er jordjordas ørebaserte konstruksjon som kan formes ved å fjerne og transportere det generelle grunnmaterialet. Konstruksjonelt sett har kurset ikke kapasitet til å overføre last over åpent spenn eller til å fjernes eller skiftes ut som en enkelt enhet. Eksempler på fag omfatter gradede tilslagslag i kornlag av sandlag som er begrenset til materiale CBM asfaltlag"
+
+#:IFC.xml:40622
+msgid "IfcCourse_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcCourse_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av et fagelement som typen modelleres fra, kan settes. Denne typen kan knytte ytterligere spesifikke egenskapssett. MERKNAD Forhåndsdefinert type skal bare brukes hvis ingen [[IfcCourseType]] er tildelt, som gir sin egen [[IfcCourseType]].PredefinedType."
+
+#:IFC.xml:40645
+msgid "IfcCourseType"
+msgstr "IfcCourseType"
+
+msgid "IfcCourseType_DEFINITION"
+msgstr "[[IfcCourseType]] gir typen informasjon for [[IfcCourse]] forekomster. Et kurs er et bygd element med en lengde som er større enn tykkelsen og ofte også bredden, vanligvis av ett enkelt materiale som er lagt på byggeplassen på toppen av et annet, horisontalt eller nesten horisontalt bygd element. Et kurs skiller seg fra et jordarbeidselement ved at et kurs er et gradert granulært materiale som kan bindes eller ubundet materiale som vanligvis behandles på en eller annen måte, der jordarbeidselementer er jordjordas ørebaserte konstruksjon som kan formes ved å fjerne og transportere det generelle grunnmaterialet. Konstruksjonelt sett har kurset ikke kapasitet til å overføre last over åpent spenn eller til å fjernes eller skiftes ut som en enkelt enhet."
+
+#:IFC.xml:40646
+msgid "IfcCourseType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcCourseType_PredefinedType_DEFINITION"
+msgstr "Identifiserer de forhåndsdefinerte typene av et fagelement som typen modelleres fra, kan fastsettes fra."
+
+#:IFC.xml:40669
+msgid "IfcPlant"
+msgstr "IfcPlant"
+
+msgid "IfcPlant_DEFINITION"
+msgstr "Tær, busker, urter, gress, ferjer og moser. MERKNAD Det foreslås å utdype PredefinertType attributt for eksisterende IFC-klasse [[IfcGeographicElement]]."
+
+#:IFC.xml:40673
+msgid "IfcCourseTypeEnum"
+msgstr "IfcCourseTypeEnum"
+
+msgid "IfcCourseTypeEnum_DEFINITION"
+msgstr "Denne beholderen definerer de ulike forhåndsdefinerte typene av fag som kan spesifisere ytterligere en [[IfcCourse]] eller [[IfcCourseType]]."
+
+#:IFC.xml:40277
+msgid "IfcCourseTypeEnum_ARMOUR"
+msgstr "ARMOUR"
+
+msgid "IfcCourseTypeEnum_ARMOUR_DEFINITION"
+msgstr "Et tilslag med hovedfunksjon som beskytter mot erosjon av det underliggende materialet gjennom vann, f.eks. riprap. MERKNAD Definisjon av ISO 21650 beskyttelsessjikt på et bruddvann, sjøtrekk eller andre rubbale rørkonstruksjoner bestående av rustningsenheter"
+
+#:IFC.xml:40683
+msgid "IfcCourseTypeEnum_FILTER"
+msgstr "Filter"
+
+msgid "IfcCourseTypeEnum_FILTER_DEFINITION"
+msgstr "Et mellomliggende lag med hovedfunksjon for å hindre vasking gjennom finmaterialer."
+
+#:IFC.xml:40680
+msgid "IfcCourseTypeEnum_BALLASTBED"
+msgstr "BiNaturTBED"
+
+msgid "IfcCourseTypeEnum_BALLASTBED_DEFINITION"
+msgstr "Lag sammensatt av knekte steiner under de svingende steinene."
+
+#:IFC.xml:40682
+msgid "IfcCourseTypeEnum_CORE"
+msgstr "KJØP"
+
+msgid "IfcCourseTypeEnum_CORE_DEFINITION"
+msgstr "Et kjerneområde er den største indre strukturen i tilslagskonstruksjoner."
+
+#:IFC.xml:40684
+msgid "IfcCourseTypeEnum_PAVEMENT"
+msgstr "AVSLUTT"
+
+msgid "IfcCourseTypeEnum_PAVEMENT_DEFINITION"
+msgstr "Et lag inne i en vegvegkonstruksjon som danner et asfaltområde eller en vei."
+
+#:IFC.xml:40685
+msgid "IfcCourseTypeEnum_PROTECTION"
+msgstr "BESKYTTET"
+
+msgid "IfcCourseTypeEnum_PROTECTION_DEFINITION"
+msgstr "Lag med hovedoppgave å beskytte mot erosjon og utvasking."
+
+#:IFC.xml:40686
+msgid "IfcEarthworksCutTypeEnum"
+msgstr "IfcEarthworksCutTypeEnum"
+
+msgid "IfcEarthworksCutTypeEnum_DEFINITION"
+msgstr "I denne beholderen defineres de ulike forhåndsdefinerte typene jordarbeider skjæreelementer som kan angi en [[IfcEarthworksCut]]."
+
+#:IFC.xml:40787
+msgid "IfcEarthworksCutTypeEnum_TRENCH"
+msgstr "Populært"
+
+msgid "IfcEarthworksCutTypeEnum_TRENCH_DEFINITION"
+msgstr "Utgraving med en lengde som i stor grad overskrider dybden og bredden. En utgraving er typisk for stripefundamenter eller for nedgravde tjenester som drenasje eller kabler."
+
+#:IFC.xml:40767
+msgid "IfcEarthworksCutTypeEnum_DREDGING"
+msgstr "DREDGING"
+
+msgid "IfcEarthworksCutTypeEnum_DREDGING_DEFINITION"
+msgstr "Utgraving under vann for å gjenvinne materiale eller for å skape en større vanndyp."
+
+#:IFC.xml:40744
+msgid "IfcEarthworksCutTypeEnum_EXCAVATION"
+msgstr "EXCAVASJON"
+
+msgid "IfcEarthworksCutTypeEnum_EXCAVATION_DEFINITION"
+msgstr "Generell type utgraving hvis det ikke er angitt en mer nøyaktig type."
+
+#:IFC.xml:40780
+msgid "IfcEarthworksCutTypeEnum_OVEREXCAVATION"
+msgstr "OVEREXCAVASJON"
+
+msgid "IfcEarthworksCutTypeEnum_OVEREXCAVATION_DEFINITION"
+msgstr "Utgraving som går utenfor byggedybden, for å erstatte uegnet materiale."
+
+#:IFC.xml:40777
+msgid "IfcEarthworksCutTypeEnum_TOPSOILREMOVAL"
+msgstr "TOPSOILREMOVALE"
+
+msgid "IfcEarthworksCutTypeEnum_TOPSOILREMOVAL_DEFINITION"
+msgstr "Utgraving der det øverste laget av jord som inneholder organisk materiale, skjæres eller slipes. Jordskorpen kan brukes som jordfylling element, for eksempel der planting er planlagt."
+
+#:IFC.xml:40708
+msgid "IfcEarthworksCutTypeEnum_STEPEXCAVATION"
+msgstr "STEPEXCAVASJON"
+
+msgid "IfcEarthworksCutTypeEnum_STEPEXCAVATION_DEFINITION"
+msgstr "Fjerning av myke deler av den eksisterende veiskråningen, der det graves i trinn, ved utvidelse av en vei."
+
+#:IFC.xml:40784
+msgid "IfcEarthworksCutTypeEnum_PAVEMENTMILLING"
+msgstr "AVEMENTMILLING"
+
+msgid "IfcEarthworksCutTypeEnum_PAVEMENTMILLING_DEFINITION"
+msgstr "Fjerning av utgått materiale fra toppen av asfaltet som skal erstattes av nytt materiale."
+
+#:IFC.xml:40783
+msgid "IfcEarthworksCutTypeEnum_CUT"
+msgstr "CUT"
+
+msgid "IfcEarthworksCutTypeEnum_CUT_DEFINITION"
+msgstr "Utgraving der jord eller berg under terrenget skjæres til den dybden som kreves for bygging av innretninger som veier og jernbaner. Det fjernede materialet kan brukes som fylling av jordarbeider. Elementet for fyllinger eller for å danne en nivåoverflate for å bygge."
+
+#:IFC.xml:40790
+msgid "IfcEarthworksCutTypeEnum_BASE_EXCAVATION"
+msgstr "BEHANDLING OM"
+
+msgid "IfcEarthworksCutTypeEnum_BASE_EXCAVATION_DEFINITION"
+msgstr "Utgraving av bygninger, grenser til bruer eller lignende konstruksjoner delvis eller helt under bakkenivå."
+
+#:IFC.xml:40709
+msgid "IfcPavement"
+msgstr "Håravfall"
+
+msgid "IfcPavement_DEFINITION"
+msgstr "Type bebygde bygningsdeler i et vegområde eller annet vegdekkende område, som gir en jevn bærelast på overflaten fra kjøretøyer eller fotgjengere, som regel består av flere kurser. MERKNAD Definisjon fra ISO 6707 1 vei, rullebane eller lignende konstruksjon over undergraden."
+
+#:IFC.xml:40710
+msgid "IfcPavement_Flexible"
+msgstr "Fleksibel"
+
+msgid "IfcPavement_Flexible_DEFINITION"
+msgstr "Boolsk for å identifisere dekkelaget som en fleksibel eller fast struktur."
+
+#:IFC.xml:40719
+msgid "IfcPavementType"
+msgstr "IfcPavementType"
+
+msgid "IfcPavementType_DEFINITION"
+msgstr "[[IfcPavementType]] gir typen informasjon for [[IfcPavement]] forekomster. En belegning er en type bygd element i en vei eller et annet belagt område, som gir en jevn overflatelast fra kjøretøyer eller fotgjengere, som regel består av flere kurser."
+
+#:IFC.xml:40720
+msgid "IfcPavementType_Flexible"
+msgstr "Fleksibel"
+
+msgid "IfcPavementType_Flexible_DEFINITION"
+msgstr "Boolsk for å identifisere dekkelaget som en fleksibel eller fast struktur."
+
+#:IFC.xml:40731
+msgid "IfcEarthworksCut"
+msgstr "IfcEarthworksCut"
+
+msgid "IfcEarthworksCut_DEFINITION"
+msgstr "Det har oppstått et hulrom som følge av endring i eksisterende terreng- eller vegstruktur ved utgraving eller ved andre metoder for å fjerne materiale. MERKNAD Definisjon fra ISO 6707 1 tomrom som er oppnådd fra utgraving av materiale i bulk. MERKNAD Materialet som er utgravd, og som enten brukes som fylling eller kastes da avfallet ikke er modellert som km, men kan håndteres som en annen begrepsressurs i framtiden."
+
+#:IFC.xml:40732
+msgid "IfcEarthworksCut_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcEarthworksCut_PredefinedType_DEFINITION"
+msgstr "Identifiserer de forhåndsdefinerte typene jordarbeider kuttelementer som typemodellerte fra typen, kan settes. Denne typen kan knytte spesifikke tilleggsgrupper til bestemte egenskaper."
+
+#:IFC.xml:40739
+msgid "IfcEarthworksElement"
+msgstr "IfcEarthworksElement"
+
+msgid "IfcEarthworksElement_DEFINITION"
+msgstr "En type bygd element som er skapt av aktiviteter i jordarbeidene for å bygge en undergrad; – å heve grunnnivået generelt eller forsterke jorden eller stabiliserende jord med en mekanisk eller kjemisk metode."
+
+#:IFC.xml:40745
+msgid "IfcEarthworksFill"
+msgstr "IfcEarthworksFill"
+
+msgid "IfcEarthworksFill_DEFINITION"
+msgstr "En type jordarbeidselement som er skapt av aktiviteter i jordarbeidene for å bygge underklasse eller heve grunnens nivå generelt."
+
+#:IFC.xml:40746
+msgid "IfcEarthworksFill_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcEarthworksFill_PredefinedType_DEFINITION"
+msgstr "Identifiserer de forhåndsdefinerte typene jordarbeider, som fyller elementer som typemodellene ut fra, kan settes. Denne typen kan knytte spesifikke tilleggsgrupper til bestemte egenskaper."
+
+#:IFC.xml:40768
+msgid "IfcEarthworksFillTypeEnum"
+msgstr "IfcEarthworksFillTypeEnum"
+
+msgid "IfcEarthworksFillTypeEnum_DEFINITION"
+msgstr "I denne beholderen defineres de ulike forhåndsdefinerte typene jordarbeider fyllingselementer som kan angi en [[IfcEarthworksFill]]."
+
+#:IFC.xml:40793
+msgid "IfcEarthworksFillTypeEnum_BACKFILL"
+msgstr "BAKFIL"
+
+msgid "IfcEarthworksFillTypeEnum_BACKFILL_DEFINITION"
+msgstr "Fyll bak støttevegger eller andre strukturer, for eksempel kaier, bak landkar og broer."
+
+#:IFC.xml:40786
+msgid "IfcEarthworksFillTypeEnum_COUNTERWEIGHT"
+msgstr "KONTROLL"
+
+msgid "IfcEarthworksFillTypeEnum_COUNTERWEIGHT_DEFINITION"
+msgstr "Fyllingen som er bygget på siden av hovedvegkonstruksjonen for å redusere bosettingen på veien."
+
+#:IFC.xml:40781
+msgid "IfcEarthworksFillTypeEnum_SUBGRADE"
+msgstr "UNDERGRADER"
+
+msgid "IfcEarthworksFillTypeEnum_SUBGRADE_DEFINITION"
+msgstr "Type jordarbeidselement som danner konstruksjonen under vegdekker og over naturlig jord. MERKNAD Definisjon fra ISO 6707 1 øvre del av grunnen, naturlig eller konstruksjon, – som støtter lastene som overføres gjennom en overliggende konstruksjon på en veg, rullebane eller lignende hard overflate. MERKNAD Definisjon fra PIARC det øvre sjiktet av det naturlige grunnen som vegdekket er bygget på."
+
+#:IFC.xml:40794
+msgid "IfcEarthworksFillTypeEnum_EMBANKMENT"
+msgstr "EMBANKMENT"
+
+msgid "IfcEarthworksFillTypeEnum_EMBANKMENT_DEFINITION"
+msgstr "En dominant longitudinal type jordarbeidselement uten annen bestemt type i henhold til dens rolle i Pavement eller undergrad. MERKNAD Definisjon av en del av jordarbeider, som ofte dannes ved skjæring eller fylling, der det ferdige bakkenivået ligger over eller under opprinnelige bakkenivå, og hvis lengden vanligvis er større enn bredden."
+
+#:IFC.xml:40791
+msgid "IfcEarthworksFillTypeEnum_TRANSITIONSECTION"
+msgstr "OVERFØRING"
+
+msgid "IfcEarthworksFillTypeEnum_TRANSITIONSECTION_DEFINITION"
+msgstr "Underklasse i for å sikre konsistens av stivhet og hindre ujevn setning. Overgangsseksjonen kan forekomme. mellom fylling og fylling av bruer og skjæring på tvers av hverandre og tunnelfylling og nedskjæring."
+
+#:IFC.xml:40778
+msgid "IfcEarthworksFillTypeEnum_SUBGRADEBED"
+msgstr "UNDERTEKSTENDE"
+
+msgid "IfcEarthworksFillTypeEnum_SUBGRADEBED_DEFINITION"
+msgstr "Øvre del av jorden eller den naturlige eller konstruerte, som støtter lastene som overføres gjennom den overliggende konstruksjonen på en veg, rullebane eller lignende hard overflate."
+
+#:IFC.xml:40789
+msgid "IfcEarthworksFillTypeEnum_SLOPEFILL"
+msgstr "SLOPEFILL"
+
+msgid "IfcEarthworksFillTypeEnum_SLOPEFILL_DEFINITION"
+msgstr "Sideveis skråningsstag fyller konstruksjonen på vei eller skråningen på baksiden."
+
+#:IFC.xml:40796
+msgid "IfcReinforcedSoil"
+msgstr "IfcReinforcedSoil"
+
+msgid "IfcReinforcedSoil_DEFINITION"
+msgstr "olje som er forsterket eller stabilisert ved hjelp av mekanisk eller kjemisk metode."
+
+#:IFC.xml:40797
+msgid "IfcReinforcedSoil_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcReinforcedSoil_PredefinedType_DEFINITION"
+msgstr "Identifiserer den forhåndsdefinerte typen av en forsterket jordbygningsdel som den modelleres fra, kan settes. Denne typen kan knytte spesifikke tilleggsgrupper til bestemte egenskaper."
+
+#:IFC.xml:40816
+msgid "IfcReinforcedSoilTypeEnum"
+msgstr "IfcReinforcedSoilTypeEnum"
+
+msgid "IfcReinforcedSoilTypeEnum_DEFINITION"
+msgstr "Denne beholderen definerer de forskjellige forhåndsdefinerte typene jordarmering som kan angi en [[IfcReinforcedSoil]]."
+
+#:IFC.xml:40828
+msgid "IfcReinforcedSoilTypeEnum_SURCHARGEPRELOADED"
+msgstr "SIKKERHETSKOPI"
+
+msgid "IfcReinforcedSoilTypeEnum_SURCHARGEPRELOADED_DEFINITION"
+msgstr "En metode som gjelder belastning på fundamentet ved utslipp av porevann, og fundamentet er samlet for å bedre fundamentstyrken. Lossing når bæreevnen når nødvendig nivå."
+
+#:IFC.xml:40829
+msgid "IfcReinforcedSoilTypeEnum_VERTICALLYDRAINED"
+msgstr "KLISTREKRAFTIG"
+
+msgid "IfcReinforcedSoilTypeEnum_VERTICALLYDRAINED_DEFINITION"
+msgstr "En metode for å fastsette vertikale dreneringstiltak i fundamentet slik at porevann i jorden slippes ut, og fundamentfastheten forbedres."
+
+#:IFC.xml:40824
+msgid "IfcReinforcedSoilTypeEnum_DYNAMICALLYCOMPACTED"
+msgstr "DYNAMIKALLYKTET"
+
+msgid "IfcReinforcedSoilTypeEnum_DYNAMICALLYCOMPACTED_DEFINITION"
+msgstr "Metoden for å bruke dynamisk herdingsmaskin til å falle den tunge hammeren fritt fra det høye, – å komprimere jorden og raskt forbedre fundamentets bæreevne."
+
+#:IFC.xml:40826
+msgid "IfcReinforcedSoilTypeEnum_REPLACED"
+msgstr "ERSTATT"
+
+msgid "IfcReinforcedSoilTypeEnum_REPLACED_DEFINITION"
+msgstr "Grav ut den myke jorda i et bestemt område under fundamentet, og fyll deretter området tilbake med høy styrke, lavkompressibilitet og ingen korroderende materialer."
+
+#:IFC.xml:40827
+msgid "IfcReinforcedSoilTypeEnum_ROLLERCOMPACTED"
+msgstr "ROLLERKOMPACTET"
+
+msgid "IfcReinforcedSoilTypeEnum_ROLLERCOMPACTED_DEFINITION"
+msgstr "En type komprimeringsmetode som tar i bruk rullende maskiner, gjentatt rulling og vibrasjon, slik at fundamentet komprimeres, styrkene øker og kompressibiliteten reduseres."
+
+#:IFC.xml:40825
+msgid "IfcReinforcedSoilTypeEnum_GROUTED"
+msgstr "GRUPPER"
+
+msgid "IfcReinforcedSoilTypeEnum_GROUTED_DEFINITION"
+msgstr "En metode for å injisere en viss krumningsslam i riss eller deler av et geoteknisk fundament for å forbedre dets fysiske og mekaniske egenskaper."
+
+#:IFC.xml:40830
+msgid "IfcFacilityPartTypeSelect"
+msgstr "IfcFacilityPartTypeVelg"
+
+msgid "IfcFacilityPartTypeSelect_DEFINITION"
+msgstr "Dette er et valg av nummereringer som skal gi muligheter for grupper av forhåndsdefinerte typer for en [[IfcFacilityPart]."
+
+#:IFC.xml:40831
+msgid "IfcInterferenceSelect"
+msgstr "IfcInterferenceVelg"
+
+msgid "IfcInterferenceSelect_DEFINITION"
+msgstr "En type som sammen utgjør grupper av fysiske og romlige elementer for å definere forstyrrelser mellom disse elementene."
+
+#:IFC.xml:40832
+msgid "IfcSpatialReferenceSelect"
+msgstr "IfcSpatialReferenceVelg"
+
+#:IFC.xml:40833
+msgid "IfcTransportElementTypeSelect"
+msgstr "IfcTransportElementTypeVelg"
+
+msgid "IfcTransportElementTypeSelect_DEFINITION"
+msgstr "Dette er et valg av nummereringer som skal gi muligheter for grupper av forhåndsdefinerte typer for en [[IfcTransportElement]eller [[IfcTransportElementType]]."
+
+#:IFC.xml:40834
+msgid "PSet_ElementKinematics"
+msgstr "Velg ElementKinematikk"
+
+msgid "PSet_ElementKinematics_DEFINITION"
+msgstr "Definisjon av IAI Information bekrefter at elementet har syklisk og eller patert kinematisk atferd. Den resulterende konvolutten kan være en naturlig form som en klaringsfase."
+
+#:IFC.xml:40835
+msgid "PSet_ElementKinematics_CyclicRange"
+msgstr "Konjunkturområde"
+
+msgid "PSet_ElementKinematics_CyclicRange_DEFINITION"
+msgstr "Identifiserer vinklet område i kinematisk atferd"
+
+#:IFC.xml:40840
+msgid "PSet_ElementKinematics_LinearRange"
+msgstr "LinearRange"
+
+msgid "PSet_ElementKinematics_LinearRange_DEFINITION"
+msgstr "Identifiserer det lineære området til kinematisk atferd."
+
+#:IFC.xml:40845
+msgid "PSet_ElementKinematics_MinimumTime"
+msgstr "MinimumTime"
+
+msgid "PSet_ElementKinematics_MinimumTime_DEFINITION"
+msgstr "Identifiserer minimumstiden for kinematisk atferd."
+
+#:IFC.xml:40850
+msgid "PSet_ElementKinematics_MaximumConstantSpeed"
+msgstr "MaksimumKonstantSpeed"
+
+msgid "PSet_ElementKinematics_MaximumConstantSpeed_DEFINITION"
+msgstr "Identifiserer maksimal konstant hastighet over kinematisk bane."
+
+#:IFC.xml:40855
+msgid "PSet_ElementKinematics_MaximumAngularVelocity"
+msgstr "Maksimer Angularvelitet"
+
+msgid "PSet_ElementKinematics_MaximumAngularVelocity_DEFINITION"
+msgstr "Identifiserer maksimal vinkelhastighet for kinematisk atferd."
+
+#:IFC.xml:40860
+msgid "PSet_ElementKinematics_CyclicPath"
+msgstr "CyclicPath"
+
+msgid "PSet_ElementKinematics_CyclicPath_DEFINITION"
+msgstr "Representerer tidsvinkelen i det kinematiske atferden."
+
+#:IFC.xml:40865
+msgid "PSet_ElementKinematics_LinearPath"
+msgstr "LinjearBane"
+
+msgid "PSet_ElementKinematics_LinearPath_DEFINITION"
+msgstr "Representerer tidsavstandsbordet til den kinematiske atferden."
+
+#:IFC.xml:40871
+msgid "PSet_ProcessCapacity"
+msgstr "PSet ProcessCapacity"
+
+#:IFC.xml:40872
+msgid "PSet_ProcessCapacity_ProcessItem"
+msgstr "ProsessGjenstand"
+
+msgid "PSet_ProcessCapacity_ProcessItem_DEFINITION"
+msgstr "ProsessGjenstand"
+
+#:IFC.xml:40877
+msgid "PSet_ProcessCapacity_ProcessCapacity"
+msgstr "Prosesskapasitet"
+
+msgid "PSet_ProcessCapacity_ProcessCapacity_DEFINITION"
+msgstr "Prosesskapasitet"
+
+#:IFC.xml:40882
+msgid "PSet_ProcessCapacity_ProcessPerformance"
+msgstr "Prosessytelse"
+
+msgid "PSet_ProcessCapacity_ProcessPerformance_DEFINITION"
+msgstr "Prosessytelse"
+
+#:IFC.xml:40887
+msgid "PSet_ProcessCapacity_DownstreamConnections"
+msgstr "Nedstrømstilkoblinger"
+
+msgid "PSet_ProcessCapacity_DownstreamConnections_DEFINITION"
+msgstr "Nedstrømstilkoblinger"
+
+#:IFC.xml:40892
+msgid "PSet_ProcessCapacity_UpstreamConnections"
+msgstr "Oppgraderinger tilkoblinger"
+
+msgid "PSet_ProcessCapacity_UpstreamConnections_DEFINITION"
+msgstr "Oppgraderinger tilkoblinger"
+
+#:IFC.xml:40898
+msgid "Pset_RailwaySignalGeneral"
+msgstr "Pset RailwaySignalGeneral"
+
+#:IFC.xml:40899
+msgid "Pset_RailwaySignalGeneral_SignalType"
+msgstr "SignalType"
+
+msgid "Pset_RailwaySignalGeneral_SignalType_DEFINITION"
+msgstr "SignalType"
+
+#:IFC.xml:40904
+msgid "Pset_RailwaySignalGeneral_SignalAspect"
+msgstr "SignalAspect"
+
+msgid "Pset_RailwaySignalGeneral_SignalAspect_DEFINITION"
+msgstr "SignalAspect"
+
+#:IFC.xml:40911
+msgid "Pset_RailwaySignGeneral"
+msgstr "Pset jernbaneskilt"
+
+#:IFC.xml:40912
+msgid "Pset_RailwaySignGeneral_SignType"
+msgstr "SignType"
+
+msgid "Pset_RailwaySignGeneral_SignType_DEFINITION"
+msgstr "SignType"
+
+#:IFC.xml:40917
+msgid "Pset_RailwaySignGeneral_SignAspect"
+msgstr "SignAspect"
+
+msgid "Pset_RailwaySignGeneral_SignAspect_DEFINITION"
+msgstr "SignAspect"
+
+#:IFC.xml:40924
+msgid "PSet_VehicleAvailability"
+msgstr "Sette kjøretøy"
+
+#:IFC.xml:40925
+msgid "PSet_VehicleAvailability_MaintenanceDowntime"
+msgstr "Nedetid for vedlikehold"
+
+msgid "PSet_VehicleAvailability_MaintenanceDowntime_DEFINITION"
+msgstr "Nedetid for vedlikehold"
+
+#:IFC.xml:40930
+msgid "PSet_VehicleAvailability_WeatherDowntime"
+msgstr "Værnedetid"
+
+msgid "PSet_VehicleAvailability_WeatherDowntime_DEFINITION"
+msgstr "Værnedetid"
+
+#:IFC.xml:40935
+msgid "PSet_VehicleAvailability_VehicleAvailability"
+msgstr "Kjøretøyets tilgjengelighet"
+
+msgid "PSet_VehicleAvailability_VehicleAvailability_DEFINITION"
+msgstr "Kjøretøyets tilgjengelighet"
+
+#:IFC.xml:40941
+msgid "Qto_ArealStratumBaseQuantities"
+msgstr "Qto ArealStratumBaseQuantities"
+
+msgid "Qto_ArealStratumBaseQuantities_DEFINITION"
+msgstr "Mengdetiltak knyttet til areal som for eksempel i et geoteknisk utsnitt. Usikkerhet dokumenteres i Pset Untainty."
+
+#:IFC.xml:40942
+msgid "Qto_ArealStratumBaseQuantities_Area"
+msgstr "Område"
+
+msgid "Qto_ArealStratumBaseQuantities_Area_DEFINITION"
+msgstr "Området er representert, hvis nedre del av laget er kjent."
+
+#:IFC.xml:40947
+msgid "Qto_ArealStratumBaseQuantities_Length"
+msgstr "Lengde"
+
+msgid "Qto_ArealStratumBaseQuantities_Length_DEFINITION"
+msgstr "Den faktiske lengden på den øvre kanten av skiven."
+
+#:IFC.xml:40952
+msgid "Qto_ArealStratumBaseQuantities_PlanLength"
+msgstr "Planlengde"
+
+msgid "Qto_ArealStratumBaseQuantities_PlanLength_DEFINITION"
+msgstr "Projisert planlengde på øvre kant av skiven."
+
+#:IFC.xml:40958
+msgid "Qto_LinearStratumBaseQuantities"
+msgstr "Qto LinearStratumBaseQuantities"
+
+msgid "Qto_LinearStratumBaseQuantities_DEFINITION"
+msgstr "Mengdetiltak knyttet til et lineært lag som i et borehull. Usikkerhet dokumenteres i Pset Untainty."
+
+#:IFC.xml:40959
+msgid "Qto_LinearStratumBaseQuantities_Length"
+msgstr "Lengde"
+
+msgid "Qto_LinearStratumBaseQuantities_Length_DEFINITION"
+msgstr "Effektiv lengde – hvis den nedre enden av et segment er kjent"
+
+#:IFC.xml:40964
+msgid "Qto_LinearStratumBaseQuantities_Diameter"
+msgstr "Diameter"
+
+msgid "Qto_LinearStratumBaseQuantities_Diameter_DEFINITION"
+msgstr "Faktisk diameter på prøven eller segmentet."
+
+#:IFC.xml:40970
+msgid "Qto_VolumetricStratumBaseQuantities"
+msgstr "Qto VolumetricStratumBaseQuantities"
+
+msgid "Qto_VolumetricStratumBaseQuantities_DEFINITION"
+msgstr "Mengdetiltak knyttet til volumetrisk stratum, for eksempel i en geoteknisk modell. Usikkerhet dokumenteres i Pset Untainty."
+
+#:IFC.xml:40971
+msgid "Qto_VolumetricStratumBaseQuantities_Mass"
+msgstr "Masse"
+
+msgid "Qto_VolumetricStratumBaseQuantities_Mass_DEFINITION"
+msgstr "Masse representert, hvis nedre flate av lag er kjent."
+
+#:IFC.xml:40976
+msgid "Qto_VolumetricStratumBaseQuantities_Volume"
+msgstr "Volum"
+
+msgid "Qto_VolumetricStratumBaseQuantities_Volume_DEFINITION"
+msgstr "Volum gjengis hvis nedre flate av laget er kjent."
+
+#:IFC.xml:40981
+msgid "Qto_VolumetricStratumBaseQuantities_Area"
+msgstr "Område"
+
+msgid "Qto_VolumetricStratumBaseQuantities_Area_DEFINITION"
+msgstr "Faktisk formareal på overflaten."
+
+#:IFC.xml:40986
+msgid "Qto_VolumetricStratumBaseQuantities_PlanArea"
+msgstr "PlanArea"
+
+msgid "Qto_VolumetricStratumBaseQuantities_PlanArea_DEFINITION"
+msgstr "Projisert planareal på modellens øvre overflate."
+
+#:IFC.xml:40992
+msgid "Pset_BoreholeCommon"
+msgstr "Pset BoreholeCommon"
+
+msgid "Pset_BoreholeCommon_DEFINITION"
+msgstr "Egenskaper som beskriver kjennetegn ved et borehull hvis det ikke er modellert separat."
+
+#:IFC.xml:40993
+msgid "Pset_BoreholeCommon_FillingMaterial"
+msgstr "FillingMaterial"
+
+msgid "Pset_BoreholeCommon_FillingMaterial_DEFINITION"
+msgstr "Fyllingsmateriale eller IKKE FILTTE eller UNKNOWN boreholeML ."
+
+#:IFC.xml:40998
+msgid "Pset_BoreholeCommon_CapMaterial"
+msgstr "CapMaterial"
+
+msgid "Pset_BoreholeCommon_CapMaterial_DEFINITION"
+msgstr "Spapmateriale eller IKKE KAPPED eller UNKNOWN boreholeML ."
+
+#:IFC.xml:41003
+msgid "Pset_BoreholeCommon_LiningMaterial"
+msgstr "LiningMaterial"
+
+msgid "Pset_BoreholeCommon_LiningMaterial_DEFINITION"
+msgstr "Sett sammen materiale eller IKKE LINNET eller UNKNOWN boreholeML ."
+
+#:IFC.xml:41008
+msgid "Pset_BoreholeCommon_FillingDepth"
+msgstr "FilingDybde"
+
+msgid "Pset_BoreholeCommon_FillingDepth_DEFINITION"
+msgstr "Dybde av boreholeML ."
+
+#:IFC.xml:41013
+msgid "Pset_BoreholeCommon_CapDepth"
+msgstr "CapDepth"
+
+msgid "Pset_BoreholeCommon_CapDepth_DEFINITION"
+msgstr "Dybde på toppen av boreholeML ."
+
+#:IFC.xml:41018
+msgid "Pset_BoreholeCommon_LiningThickness"
+msgstr "LiningTykkelse"
+
+msgid "Pset_BoreholeCommon_LiningThickness_DEFINITION"
+msgstr "Kobling tykkelse boreholeML ."
+
+#:IFC.xml:41023
+msgid "Pset_BoreholeCommon_GroundwaterDepth"
+msgstr "Grunnvann Dybde"
+
+msgid "Pset_BoreholeCommon_GroundwaterDepth_DEFINITION"
+msgstr "Dybde grunnvann påtraff boreholeML ."
+
+#:IFC.xml:41028
+msgid "Pset_BoreholeCommon_BoreholeState"
+msgstr "BoreholeState"
+
+msgid "Pset_BoreholeCommon_BoreholeState_DEFINITION"
+msgstr "Statusen borehullet eller forsøksbrønnen har blitt liggende i. boreholeML ."
+
+#:IFC.xml:41034
+msgid "Pset_SolidStratumCapacity"
+msgstr "Pset SolidStratumkapasitet"
+
+msgid "Pset_SolidStratumCapacity_DEFINITION"
+msgstr "Egenskaper som uttrykker kapasiteten til et lag ved hjelp av fysiske tiltak, regionale og nasjonale konvensjoner, skal fanges opp gjennom klassifisering og bestemte eiendomssett."
+
+#:IFC.xml:41035
+msgid "Pset_SolidStratumCapacity_LoadbearingCapacity"
+msgstr "Lasterkapasitet"
+
+msgid "Pset_SolidStratumCapacity_LoadbearingCapacity_DEFINITION"
+msgstr "Anslå lagets bæreevne."
+
+#:IFC.xml:41040
+msgid "Pset_SolidStratumCapacity_SettlementBehaviour"
+msgstr "OppgjørsAtferd"
+
+msgid "Pset_SolidStratumCapacity_SettlementBehaviour_DEFINITION"
+msgstr "Anslå oppførselen for komprimering av setninger til laget."
+
+#:IFC.xml:41045
+msgid "Pset_SolidStratumCapacity_PermeabilityBehaviour"
+msgstr "Oppførselsevne"
+
+msgid "Pset_SolidStratumCapacity_PermeabilityBehaviour_DEFINITION"
+msgstr "Proporsjonalitetskonstant i Darcy lover, som vedrører strømningshastighet og viskositet til en trykkgradient som anvendes på porøse medier."
+
+#:IFC.xml:41050
+msgid "Pset_SolidStratumCapacity_CohesionBehaviour"
+msgstr "Kohesjons atferd"
+
+msgid "Pset_SolidStratumCapacity_CohesionBehaviour_DEFINITION"
+msgstr "Kohesjonsskjærfasthet av en berg eller en grunn som er uavhengig av mellomliggende friksjon."
+
+#:IFC.xml:41055
+msgid "Pset_SolidStratumCapacity_FrictionBehaviour"
+msgstr "Friksjons oppførsel"
+
+msgid "Pset_SolidStratumCapacity_FrictionBehaviour_DEFINITION"
+msgstr "Friksjonens skjærfasthet av en berg eller en grunn som er avhengig av en partikkelfriksjon."
+
+#:IFC.xml:41060
+msgid "Pset_SolidStratumCapacity_HydraulicConductivity"
+msgstr "Hydraulisk aktivitet"
+
+msgid "Pset_SolidStratumCapacity_HydraulicConductivity_DEFINITION"
+msgstr "Hydraulikkpermeabilitet for jord til vann, gitt med K- eller Kf-verdien i m s"
+
+#:IFC.xml:41065
+msgid "Pset_SolidStratumCapacity_FrictionAngle"
+msgstr "Friksjonsvinkel"
+
+msgid "Pset_SolidStratumCapacity_FrictionAngle_DEFINITION"
+msgstr "Friksjonsvinkelen er den prøvde hellingsvinkelen ut fra horisontalen."
+
+#:IFC.xml:41070
+msgid "Pset_SolidStratumCapacity_GrainSize"
+msgstr "Kornstørrelse"
+
+msgid "Pset_SolidStratumCapacity_GrainSize_DEFINITION"
+msgstr "Kornens diameter."
+
+#:IFC.xml:41075
+msgid "Pset_SolidStratumCapacity_PwaveVelocity"
+msgstr "PwaveHastighet"
+
+msgid "Pset_SolidStratumCapacity_PwaveVelocity_DEFINITION"
+msgstr "P bølgehastighet i en berg eller en jord."
+
+#:IFC.xml:41080
+msgid "Pset_SolidStratumCapacity_SwaveVelocity"
+msgstr "SwaveHastighet"
+
+msgid "Pset_SolidStratumCapacity_SwaveVelocity_DEFINITION"
+msgstr "S bølgehastighet av en berg eller en jord."
+
+#:IFC.xml:41085
+msgid "Pset_SolidStratumCapacity_PoisonsRatio"
+msgstr "PoisonsRatio"
+
+msgid "Pset_SolidStratumCapacity_PoisonsRatio_DEFINITION"
+msgstr "Forhold for tverrkontraksjonstøyning til langsgående forlengelsestøyning i strekkraftens retning."
+
+#:IFC.xml:41090
+msgid "Pset_SolidStratumCapacity_NValue"
+msgstr "NVerdi"
+
+msgid "Pset_SolidStratumCapacity_NValue_DEFINITION"
+msgstr "Tall fra standard penetrasjonsprøving, til ISO 22476 3, ASTM D1586 1 og Australske standarder AS 1289. .3.1 som korrelerer med andre ingeniøregenskaper for jord."
+
+#:IFC.xml:41095
+msgid "Pset_SolidStratumCapacity_Resistivity"
+msgstr "Resistivitet"
+
+msgid "Pset_SolidStratumCapacity_Resistivity_DEFINITION"
+msgstr "Elektrisk resistivitet i berggrunn eller jordorm ."
+
+#:IFC.xml:41101
+msgid "Pset_SolidStratumComposition"
+msgstr "Pset SolidStratumkomposisjon"
+
+msgid "Pset_SolidStratumComposition_DEFINITION"
+msgstr "Egenskaper som uttrykker sammensetningen av et lag ved hjelp av volumtiltak, implementering av ISO14688 Del 2 Tabell 1, primære fraksjoner og sammensatte fraksjoner. Regionale og nasjonale konvensjoner bør fanges opp gjennom klassifiserings- og spesifikke sett. Zero-verdier kan utelates."
+
+#:IFC.xml:41102
+msgid "Pset_SolidStratumComposition_OrganicVolume"
+msgstr "OrganiskVolum"
+
+msgid "Pset_SolidStratumComposition_OrganicVolume_DEFINITION"
+msgstr "Relativt volum av organiske torvdeler, særlig jord."
+
+#:IFC.xml:41107
+msgid "Pset_SolidStratumComposition_FillVolume"
+msgstr "Fillvolum"
+
+msgid "Pset_SolidStratumComposition_FillVolume_DEFINITION"
+msgstr "Relativt volum av fyllingskontrollert utlegging av menneskeskapte jordlag"
+
+#:IFC.xml:41112
+msgid "Pset_SolidStratumComposition_ClayVolume"
+msgstr "LukkVolum"
+
+msgid "Pset_SolidStratumComposition_ClayVolume_DEFINITION"
+msgstr "Relativt volum av leire er vanligvis mindre enn 0,002 mm lagdelte bestanddeler."
+
+#:IFC.xml:41117
+msgid "Pset_SolidStratumComposition_SiltVolume"
+msgstr "SiltVolume"
+
+msgid "Pset_SolidStratumComposition_SiltVolume_DEFINITION"
+msgstr "Relativt volum av silt vanligvis mindre enn tverrsnittsmaterialer 0,063mm."
+
+#:IFC.xml:41122
+msgid "Pset_SolidStratumComposition_SandVolume"
+msgstr "SandVolume"
+
+msgid "Pset_SolidStratumComposition_SandVolume_DEFINITION"
+msgstr "Relativt volum av sand er vanligvis mindre enn 2 mm lagdeler."
+
+#:IFC.xml:41127
+msgid "Pset_SolidStratumComposition_GravelVolume"
+msgstr "GravelVolume"
+
+msgid "Pset_SolidStratumComposition_GravelVolume_DEFINITION"
+msgstr "Relativt volum av grus er vanligvis større enn 2 mm lagdelte bestanddeler."
+
+#:IFC.xml:41132
+msgid "Pset_SolidStratumComposition_CobblesVolume"
+msgstr "CobblesVolume"
+
+msgid "Pset_SolidStratumComposition_CobblesVolume_DEFINITION"
+msgstr "Relativt volum av stein vanligvis større enn 63 mm lagdeler."
+
+#:IFC.xml:41137
+msgid "Pset_SolidStratumComposition_BouldersVolume"
+msgstr "BouldersVolume"
+
+msgid "Pset_SolidStratumComposition_BouldersVolume_DEFINITION"
+msgstr "Relativt volum av steinblokker er vanligvis større enn 200 mm lag."
+
+#:IFC.xml:41142
+msgid "Pset_SolidStratumComposition_RockVolume"
+msgstr "RockVolume"
+
+msgid "Pset_SolidStratumComposition_RockVolume_DEFINITION"
+msgstr "Relativt volum av steinfabeløp."
+
+#:IFC.xml:41147
+msgid "Pset_SolidStratumComposition_WaterVolume"
+msgstr "WaterVolume"
+
+msgid "Pset_SolidStratumComposition_WaterVolume_DEFINITION"
+msgstr "Relativt volum av vannlagets bestanddeler."
+
+#:IFC.xml:41152
+msgid "Pset_SolidStratumComposition_AirVolume"
+msgstr "AirVolume"
+
+msgid "Pset_SolidStratumComposition_AirVolume_DEFINITION"
+msgstr "Relativt volum av luftlagets bestanddeler."
+
+#:IFC.xml:41157
+msgid "Pset_SolidStratumComposition_ContaminantVolume"
+msgstr "Kontaminantvolum"
+
+msgid "Pset_SolidStratumComposition_ContaminantVolume_DEFINITION"
+msgstr "Relativt volum av urenheter"
+
+#:IFC.xml:41162
+msgid "Pset_SolidStratumComposition_CompositeFractions"
+msgstr "Sammensatte fraksjoner"
+
+msgid "Pset_SolidStratumComposition_CompositeFractions_DEFINITION"
+msgstr "Betegnelse i grunngrupper ved sammensatte fraksjoner."
+
+#:IFC.xml:41168
+msgid "Pset_GeotechnicalAssemblyCommon"
+msgstr "Pset GeotechnicalAssemblyCommon"
+
+msgid "Pset_GeotechnicalAssemblyCommon_DEFINITION"
+msgstr "Egenskaper som beskriver kjennetegn ved en geoteknisk modell. En ny status bør ikke knyttes til en [[IfcGeotechnicalAssembly]] eller [[IfcGeotechnicalStratum]], som andre foretak brukes på jordskjelv og i kurs."
+
+#:IFC.xml:41169
+msgid "Pset_GeotechnicalAssemblyCommon_Status"
+msgstr "Status:"
+
+msgid "Pset_GeotechnicalAssemblyCommon_Status_DEFINITION"
+msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
+
+#:IFC.xml:41174
+msgid "Pset_GeotechnicalAssemblyCommon_Methodology"
+msgstr "Metodologi"
+
+msgid "Pset_GeotechnicalAssemblyCommon_Methodology_DEFINITION"
+msgstr "Metodikk brukt til å tilberede innholdet i den geotekniske sammenstillingen."
+
+#:IFC.xml:41179
+msgid "Pset_GeotechnicalAssemblyCommon_Limitations"
+msgstr "Begrensninger"
+
+msgid "Pset_GeotechnicalAssemblyCommon_Limitations_DEFINITION"
+msgstr "Limitations on usage."
+
+#:IFC.xml:41184
+msgid "Pset_GeotechnicalAssemblyCommon_Purpose"
+msgstr "Formål"
+
+msgid "Pset_GeotechnicalAssemblyCommon_Purpose_DEFINITION"
+msgstr "Formål med borehullet, seksjon eller volumetrisk modell som skapte EU Inspire, boreholeML"
+
+#:IFC.xml:41190
+msgid "Pset_GeotechnicalStratumCommon"
+msgstr "Perifer Geoteknisk StratumVanlige"
+
+msgid "Pset_GeotechnicalStratumCommon_DEFINITION"
+msgstr "Egenskaper som beskriver egenskaper ved ethvert fast lag, vann eller hulrom. En status for ny bør ikke knyttes til en [[IfcGeotechnicalAssembly]] eller [[IfcSolidStratum]] som andre foretak brukes på jordskjelv og i kurs."
+
+#:IFC.xml:41191
+msgid "Pset_GeotechnicalStratumCommon_Status"
+msgstr "Status:"
+
+msgid "Pset_GeotechnicalStratumCommon_Status_DEFINITION"
+msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
+
+#:IFC.xml:41196
+msgid "Pset_GeotechnicalStratumCommon_IsTopographic"
+msgstr "IsTopografisk"
+
+msgid "Pset_GeotechnicalStratumCommon_IsTopographic_DEFINITION"
+msgstr "Er stratum noensinne, og er en synlig topografisk egenskap"
+
+#:IFC.xml:41201
+msgid "Pset_GeotechnicalStratumCommon_Colour"
+msgstr "Farge"
+
+msgid "Pset_GeotechnicalStratumCommon_Colour_DEFINITION"
+msgstr "Stratum farge"
+
+#:IFC.xml:41206
+msgid "Pset_GeotechnicalStratumCommon_Texture"
+msgstr "Tekstur"
+
+msgid "Pset_GeotechnicalStratumCommon_Texture_DEFINITION"
+msgstr "Stratum texture"
+
+#:IFC.xml:41211
+msgid "Pset_GeotechnicalStratumCommon_PiezometricPressure"
+msgstr "PiezometricPressure"
+
+msgid "Pset_GeotechnicalStratumCommon_PiezometricPressure_DEFINITION"
+msgstr "Trykk på vanninnhold."
+
+#:IFC.xml:41216
+msgid "Pset_GeotechnicalStratumCommon_PiezometricHead"
+msgstr "PiezometricHead"
+
+msgid "Pset_GeotechnicalStratumCommon_PiezometricHead_DEFINITION"
+msgstr "Trykkhode på vanninnhold."
+
+#:IFC.xml:41222
+msgid "Pset_Uncertainty"
+msgstr "Velg usikkerhet"
+
+msgid "Pset_Uncertainty_DEFINITION"
+msgstr "Eiendommen har fanget opp geometrisk usikkerhet ved målinger, blant annet hvordan usikkerheten er blitt vurdert."
+
+#:IFC.xml:41223
+msgid "Pset_Uncertainty_Description"
+msgstr "Beskrivelse"
+
+msgid "Pset_Uncertainty_Description_DEFINITION"
+msgstr "Generell beskrivelse av usikkerheten knyttet til elementet eller egenskapen, kilden og implikasjonene."
+
+#:IFC.xml:41228
+msgid "Pset_Uncertainty_Basis"
+msgstr "Grunnlag"
+
+msgid "Pset_Uncertainty_Basis_DEFINITION"
+msgstr "Angivelse av grunnlaget for usikkerheten"
+
+#:IFC.xml:41233
+msgid "Pset_Uncertainty_LinearUncertainty"
+msgstr "LinearUntainty"
+
+msgid "Pset_Uncertainty_LinearUncertainty_DEFINITION"
+msgstr "Veiledende diameter på 95 100 grader i forbindelse med generell form og plassering i XYZ."
+
+#:IFC.xml:41238
+msgid "Pset_Uncertainty_HorizontalUncertainty"
+msgstr "HorisontalUsikkerhet"
+
+msgid "Pset_Uncertainty_HorizontalUncertainty_DEFINITION"
+msgstr "Indikativ diameter på 95 100 rekkevidde knyttet til vertikal form og plassering i X, hvis annet er den lineære usikkerheten."
+
+#:IFC.xml:41243
+msgid "Pset_Uncertainty_OrthogonalUncertainty"
+msgstr "OrthogonalUntainty"
+
+msgid "Pset_Uncertainty_OrthogonalUncertainty_DEFINITION"
+msgstr "Visende diameter på 95 100 grenrør forbundet med horisontal form og plassering i Y, hvis annet enn den horisontale usikkerheten."
+
+#:IFC.xml:41248
+msgid "Pset_Uncertainty_VerticalUncertainty"
+msgstr "VerticalUncertainty"
+
+msgid "Pset_Uncertainty_VerticalUncertainty_DEFINITION"
+msgstr "Indikativ diameter på 95 100 rekkevidde knyttet til vertikal form og posisjon i Z, hvis annet er den lineære usikkerheten."
+
+#:IFC.xml:41254
+msgid "Pset_WaterStratumCommon"
+msgstr "Pset WaterStratumVanlige"
+
+msgid "Pset_WaterStratumCommon_DEFINITION"
+msgstr "Egenskaper som uttrykker sammensetningen og enhver variasjon i vannets høyde. Områder er ikke negative som beskriver en spredning."
+
+#:IFC.xml:41255
+msgid "Pset_WaterStratumCommon_WaveRange"
+msgstr "Bølgeutbredelse"
+
+msgid "Pset_WaterStratumCommon_WaveRange_DEFINITION"
+msgstr "Indikativt 95 100 spenn mellom topper og slag av bølger"
+
+#:IFC.xml:41260
+msgid "Pset_WaterStratumCommon_SeicheRange"
+msgstr "SeicheRange"
+
+msgid "Pset_WaterStratumCommon_SeicheRange_DEFINITION"
+msgstr "Indikativt 95 100 spenn mellom topper og bunnslag av sjøis resonante bølger."
+
+#:IFC.xml:41265
+msgid "Pset_WaterStratumCommon_TidalRange"
+msgstr "TidalRange"
+
+msgid "Pset_WaterStratumCommon_TidalRange_DEFINITION"
+msgstr "Indikative 95 100 verdier mellom høye og lave tideer."
+
+#:IFC.xml:41270
+msgid "Pset_WaterStratumCommon_AnnualRange"
+msgstr "Årlig"
+
+msgid "Pset_WaterStratumCommon_AnnualRange_DEFINITION"
+msgstr "Veiledende 95 100 årsintervall på nivåer."
+
+#:IFC.xml:41275
+msgid "Pset_WaterStratumCommon_AnnualTrend"
+msgstr "AnnualTrend"
+
+msgid "Pset_WaterStratumCommon_AnnualTrend_DEFINITION"
+msgstr "Veiledende 95 100 årlige stigning i nivå."
+
+#:IFC.xml:41280
+msgid "Pset_WaterStratumCommon_IsFreshwater"
+msgstr "IsFreshvann"
+
+msgid "Pset_WaterStratumCommon_IsFreshwater_DEFINITION"
+msgstr "Angivelse av ferskvannssann, falsk eller ukjent"
+
+#:IFC.xml:41286
+msgid "PEnum_SoilCompositeFractions"
+msgstr "PEnum OljekompositeFraksjoner"
+
+#:IFC.xml:41287
+msgid "PEnum_SoilCompositeFractions_BOULDERS"
+msgstr "BOULDERE"
+
+msgid "PEnum_SoilCompositeFractions_BOULDERS_DEFINITION"
+msgstr "BOULDERE"
+
+#:IFC.xml:41288
+msgid "PEnum_SoilCompositeFractions_BOULDERS_WITH_COBBLES"
+msgstr "BOULDERS MED COBBLES"
+
+msgid "PEnum_SoilCompositeFractions_BOULDERS_WITH_COBBLES_DEFINITION"
+msgstr "BOULDERS MED COBBLES"
+
+#:IFC.xml:41289
+msgid "PEnum_SoilCompositeFractions_BOULDERS_WITH_FINER_SOILS"
+msgstr "BOULDERE MED FINERSOILTER"
+
+msgid "PEnum_SoilCompositeFractions_BOULDERS_WITH_FINER_SOILS_DEFINITION"
+msgstr "BOULDERE MED FINERSOILTER"
+
+#:IFC.xml:41290
+msgid "PEnum_SoilCompositeFractions_GRAVEL_WITH_COBBLES"
+msgstr "GRAVEL MED KODLER"
+
+msgid "PEnum_SoilCompositeFractions_GRAVEL_WITH_COBBLES_DEFINITION"
+msgstr "GRAVEL MED KODLER"
+
+#:IFC.xml:41291
+msgid "PEnum_SoilCompositeFractions_GRAVEL"
+msgstr "GRAVEL"
+
+msgid "PEnum_SoilCompositeFractions_GRAVEL_DEFINITION"
+msgstr "GRAVEL"
+
+#:IFC.xml:41292
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVEL_WITH_COBBLES"
+msgstr "REGISTRER DEG GRAVEL MED KODLER"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVEL_WITH_COBBLES_DEFINITION"
+msgstr "REGISTRER DEG GRAVEL MED KODLER"
+
+#:IFC.xml:41293
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVEL"
+msgstr "SANDY GRAVEL"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVEL_DEFINITION"
+msgstr "SANDY GRAVEL"
+
+#:IFC.xml:41294
+msgid "PEnum_SoilCompositeFractions_GRAVEL_WITH_CLAY_OR_SILT"
+msgstr "GRAVEL MED KLIKK ELLER SILT"
+
+msgid "PEnum_SoilCompositeFractions_GRAVEL_WITH_CLAY_OR_SILT_DEFINITION"
+msgstr "GRAVEL MED KLIKK ELLER SILT"
+
+#:IFC.xml:41295
+msgid "PEnum_SoilCompositeFractions_GRAVELLY_SAND"
+msgstr "GRAVLIGE SOG"
+
+msgid "PEnum_SoilCompositeFractions_GRAVELLY_SAND_DEFINITION"
+msgstr "GRAVLIGE SOG"
+
+#:IFC.xml:41296
+msgid "PEnum_SoilCompositeFractions_SAND"
+msgstr "SAND"
+
+msgid "PEnum_SoilCompositeFractions_SAND_DEFINITION"
+msgstr "SAND"
+
+#:IFC.xml:41297
+msgid "PEnum_SoilCompositeFractions_SAND_WITH_CLAY_AND_SILT"
+msgstr "SAND MED KJØP OG SILT"
+
+msgid "PEnum_SoilCompositeFractions_SAND_WITH_CLAY_AND_SILT_DEFINITION"
+msgstr "SAND MED KJØP OG SILT"
+
+#:IFC.xml:41298
+msgid "PEnum_SoilCompositeFractions_SANDY_SILT"
+msgstr "SILT SILT"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_SILT_DEFINITION"
+msgstr "SILT SILT"
+
+#:IFC.xml:41299
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVELLY_SILT"
+msgstr "HELT GRAVELLY SILT"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVELLY_SILT_DEFINITION"
+msgstr "HELT GRAVELLY SILT"
+
+#:IFC.xml:41300
+msgid "PEnum_SoilCompositeFractions_SANDY_CLAYEY_SILT"
+msgstr "SANDY CLAYEY SILT"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_CLAYEY_SILT_DEFINITION"
+msgstr "SANDY CLAYEY SILT"
+
+#:IFC.xml:41301
+msgid "PEnum_SoilCompositeFractions_CLAYEY_SILT"
+msgstr "CLAYEY SILT"
+
+msgid "PEnum_SoilCompositeFractions_CLAYEY_SILT_DEFINITION"
+msgstr "CLAYEY SILT"
+
+#:IFC.xml:41302
+msgid "PEnum_SoilCompositeFractions_SILTY_CLAY"
+msgstr "SILTY KLAY"
+
+msgid "PEnum_SoilCompositeFractions_SILTY_CLAY_DEFINITION"
+msgstr "SILTY KLAY"
+
+#:IFC.xml:41303
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVELLY_CLAY"
+msgstr "SJØM GRAVELLY KLAY"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_GRAVELLY_CLAY_DEFINITION"
+msgstr "SJØM GRAVELLY KLAY"
+
+#:IFC.xml:41304
+msgid "PEnum_SoilCompositeFractions_SILT"
+msgstr "SILT"
+
+msgid "PEnum_SoilCompositeFractions_SILT_DEFINITION"
+msgstr "SILT"
+
+#:IFC.xml:41305
+msgid "PEnum_SoilCompositeFractions_CLAY"
+msgstr "CLAY"
+
+msgid "PEnum_SoilCompositeFractions_CLAY_DEFINITION"
+msgstr "CLAY"
+
+#:IFC.xml:41306
+msgid "PEnum_SoilCompositeFractions_ORGANIC_SILT"
+msgstr "ORGANKisk SILT"
+
+msgid "PEnum_SoilCompositeFractions_ORGANIC_SILT_DEFINITION"
+msgstr "ORGANKisk SILT"
+
+#:IFC.xml:41307
+msgid "PEnum_SoilCompositeFractions_ORGANIC_CLAY"
+msgstr "ORGANKisk KLIKK"
+
+msgid "PEnum_SoilCompositeFractions_ORGANIC_CLAY_DEFINITION"
+msgstr "ORGANKisk KLIKK"
+
+#:IFC.xml:41308
+msgid "PEnum_SoilCompositeFractions_SANDY_PEAT"
+msgstr "SKJØR PEAT"
+
+msgid "PEnum_SoilCompositeFractions_SANDY_PEAT_DEFINITION"
+msgstr "SKJØR PEAT"
+
+#:IFC.xml:41309
+msgid "PEnum_SoilCompositeFractions_FILL"
+msgstr "FIL"
+
+msgid "PEnum_SoilCompositeFractions_FILL_DEFINITION"
+msgstr "FIL"
+
+#:IFC.xml:41310
+msgid "PEnum_SoilCompositeFractions_COBBLES"
+msgstr "KBBLER"
+
+msgid "PEnum_SoilCompositeFractions_COBBLES_DEFINITION"
+msgstr "KBBLER"
+
+#:IFC.xml:41311
+msgid "PEnum_SoilCompositeFractions_COBBLES_WITH_BOULDERS"
+msgstr "KBBLER MED BOULDERE"
+
+msgid "PEnum_SoilCompositeFractions_COBBLES_WITH_BOULDERS_DEFINITION"
+msgstr "KBBLER MED BOULDERE"
+
+#:IFC.xml:41312
+msgid "PEnum_SoilCompositeFractions_COBBLES_WITH_FINER_SOILS"
+msgstr "KBBLER MED FINERSOILTER"
+
+msgid "PEnum_SoilCompositeFractions_COBBLES_WITH_FINER_SOILS_DEFINITION"
+msgstr "KBBLER MED FINERSOILTER"
+
+#:IFC.xml:41313
+msgid "PEnum_SoilCompositeFractions_OTHER"
+msgstr "ANNET"
+
+msgid "PEnum_SoilCompositeFractions_OTHER_DEFINITION"
+msgstr "ANNET"
+
+#:IFC.xml:41314
+msgid "PEnum_SoilCompositeFractions_NOTKNOWN"
+msgstr "NOTKNOWN"
+
+msgid "PEnum_SoilCompositeFractions_NOTKNOWN_DEFINITION"
+msgstr "NOTKNOWN"
+
+#:IFC.xml:41315
+msgid "PEnum_SoilCompositeFractions_UNSET"
+msgstr "FJERN"
+
+msgid "PEnum_SoilCompositeFractions_UNSET_DEFINITION"
+msgstr "FJERN"
+
+#:IFC.xml:41317
+msgid "PEnum_ElementStatus"
+msgstr "PEnum ElementStatus"
+
+#:IFC.xml:41318
+msgid "PEnum_ElementStatus_NEW"
+msgstr "NY"
+
+#:IFC.xml:41319
+msgid "PEnum_ElementStatus_EXISTING"
+msgstr "AVSLUTTER"
+
+#:IFC.xml:41320
+msgid "PEnum_ElementStatus_DEMOLISH"
+msgstr "DEMOLISKE"
+
+#:IFC.xml:41321
+msgid "PEnum_ElementStatus_TEMPORARY"
+msgstr "TEMPORARIKK"
+
+#:IFC.xml:41322
+msgid "PEnum_ElementStatus_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+#:IFC.xml:41323
+msgid "PEnum_ElementStatus_NOTKNOWN"
+msgstr "NOTKNOWN"
+
+#:IFC.xml:41325
+msgid "PEnum_BoreholeState"
+msgstr "PEnum BoreholeState"
+
+msgid "PEnum_BoreholeState_DEFINITION"
+msgstr "Opplistingen som beskriver strømtilstanden til et borehull"
+
+#:IFC.xml:41326
+msgid "PEnum_BoreholeState_CAP_REPLACED"
+msgstr "PLANLAGT MED CAP"
+
+#:IFC.xml:41327
+msgid "PEnum_BoreholeState_CASING_REPLACED"
+msgstr "KONTAKT ERNØKKEL"
+
+#:IFC.xml:41328
+msgid "PEnum_BoreholeState_CASING_PARTIALLY_REPLACED"
+msgstr "AVTALERING AV DELTAR"
+
+#:IFC.xml:41329
+msgid "PEnum_BoreholeState_CASING_INSTALLED"
+msgstr "KASTER INSTALLERT"
+
+#:IFC.xml:41330
+msgid "PEnum_BoreholeState_INSTALLED"
+msgstr "INSTALLERT"
+
+#:IFC.xml:41331
+msgid "PEnum_BoreholeState_RECONDITIONED"
+msgstr "GODKJENNELSE"
+
+#:IFC.xml:41332
+msgid "PEnum_BoreholeState_CHAMBER_RECONDITIONED"
+msgstr "SJEKTET AV KAMME"
+
+#:IFC.xml:41333
+msgid "PEnum_BoreholeState_DECONSTRUCTED"
+msgstr "UTGIFTET"
+
+#:IFC.xml:41334
+msgid "PEnum_BoreholeState_PARTIALLY_DECONSTRUCTED"
+msgstr "DEKLARGJENNOMFØRT"
+
+#:IFC.xml:41335
+msgid "PEnum_BoreholeState_REFILLED"
+msgstr "FEIL"
+
+#:IFC.xml:41336
+msgid "PEnum_BoreholeState_PARTIALLY_REFILLED"
+msgstr "DEKLARGJENNOMFØRT LEVER"
+
+#:IFC.xml:41337
+msgid "PEnum_BoreholeState_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+#:IFC.xml:41338
+msgid "PEnum_BoreholeState_NOTKNOWN"
+msgstr "NOTKNOWN"
+
+#:IFC.xml:41339
+msgid "PEnum_BoreholeState_NOTDEFINED"
+msgstr "IKKERFINERT"
+
+#:IFC.xml:41341
+msgid "PEnum_StrataAssemblyPurpose"
+msgstr "PEnum StrataAssemblyPurpose"
+
+msgid "PEnum_StrataAssemblyPurpose_DEFINITION"
+msgstr "Nummerering som beskriver formålet med en geoteknisk sammenstilling"
+
+#:IFC.xml:41342
+msgid "PEnum_StrataAssemblyPurpose_SITE_INVESTIGATION"
+msgstr "REGISTRERING AV SIKKERHET"
+
+#:IFC.xml:41343
+msgid "PEnum_StrataAssemblyPurpose_HYDROCARBON"
+msgstr "HYDROKARBON"
+
+#:IFC.xml:41344
+msgid "PEnum_StrataAssemblyPurpose_FEEDSTOCK"
+msgstr "TILBAKEMELDING"
+
+#:IFC.xml:41345
+msgid "PEnum_StrataAssemblyPurpose_MINERAL"
+msgstr "Mineral"
+
+#:IFC.xml:41346
+msgid "PEnum_StrataAssemblyPurpose_GEOLOGICAL"
+msgstr "GEOLOGISK"
+
+#:IFC.xml:41347
+msgid "PEnum_StrataAssemblyPurpose_HYDROGEOLOGICAL"
+msgstr "HYDROGEOLOGISK"
+
+#:IFC.xml:41348
+msgid "PEnum_StrataAssemblyPurpose_DEPOSIT"
+msgstr "AVSLUTT"
+
+#:IFC.xml:41349
+msgid "PEnum_StrataAssemblyPurpose_STORAGE"
+msgstr "OPPBEVARING"
+
+#:IFC.xml:41350
+msgid "PEnum_StrataAssemblyPurpose_ENVIRONMENTAL"
+msgstr "VIRONMENTAL"
+
+#:IFC.xml:41351
+msgid "PEnum_StrataAssemblyPurpose_PEDOLOGICAL"
+msgstr "PEDOLOGISK"
+
+#:IFC.xml:41352
+msgid "PEnum_StrataAssemblyPurpose_GEOTHERMAL"
+msgstr "GJENNOMAL"
+
+#:IFC.xml:41353
+msgid "PEnum_StrataAssemblyPurpose_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+#:IFC.xml:41354
+msgid "PEnum_StrataAssemblyPurpose_NOTKNOWN"
+msgstr "NOTKNOWN"
+
+#:IFC.xml:41355
+msgid "PEnum_StrataAssemblyPurpose_NOTDEFINED"
+msgstr "IKKERFINERT"
+
+#:IFC.xml:41357
+msgid "PEnum_UncertaintyBasis"
+msgstr "PEnum UntaintyBasis"
+
+#:IFC.xml:41358
+msgid "PEnum_UncertaintyBasis_MEASUREMENT"
+msgstr "TILTAK"
+
+#:IFC.xml:41359
+msgid "PEnum_UncertaintyBasis_OBSERVATION"
+msgstr "OBSERVASJON"
+
+#:IFC.xml:41360
+msgid "PEnum_UncertaintyBasis_ASSESSMENT"
+msgstr "VURDERING"
+
+#:IFC.xml:41361
+msgid "PEnum_UncertaintyBasis_INTERPRITATION"
+msgstr "INTERNHOLD"
+
+#:IFC.xml:41362
+msgid "PEnum_UncertaintyBasis_ESTIMATE"
+msgstr "OPPDATERING"
+
+#:IFC.xml:41363
+msgid "PEnum_UncertaintyBasis_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+#:IFC.xml:41364
+msgid "PEnum_UncertaintyBasis_NOTKNOWN"
+msgstr "NOTKNOWN"
+
+#:IFC.xml:41365
+msgid "PEnum_UncertaintyBasis_NOTDEFINED"
+msgstr "IKKERFINERT"
 
