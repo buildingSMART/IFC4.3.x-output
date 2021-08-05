@@ -9,1091 +9,156 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcMeasureResource.pot\n"
-"X-Crowdin-File-ID: 54\n"
+"X-Crowdin-File: /master/IfcCostResource.pot\n"
+"X-Crowdin-File-ID: 34\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2021-08-05 20:07\n"
 
-#:IFC.xml:22191
-msgid "IfcContextDependentUnit"
-msgstr "IfcContextDependentUnit"
+#:IFC.xml:3319
+msgid "IfcAppliedValue"
+msgstr "IfcAppliedValue"
 
-msgid "IfcContextDependentUnit_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 文脈依存の単位は、SI システムには関連しない単位である。 注 アセンブリ内の部品の数は、部品と呼ばれるかもしれないが、SI単位に関連することはできない単位で測定される物理量です。 注意 ISO 10303の名前コンテキスト依存ユニットに対応しています。 正式規格の最終定義については、ISO IS 10303 41を参照してください。 HISTORY IFC1.5.1内の新しいエンティティ。"
+msgid "IfcAppliedValue_DEFINITION"
+msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking. bSI Documentation"
 
-#:IFC.xml:8964
-msgid "IfcContextDependentUnit_HasExternalReference"
+#:IFC.xml:3362
+msgid "IfcAppliedValue_UnitBasis"
+msgstr "UnitBasis"
+
+msgid "IfcAppliedValue_UnitBasis_DEFINITION"
+msgstr "UnitBasis"
+
+#:IFC.xml:3376
+msgid "IfcAppliedValue_Components"
+msgstr "コンポーネント"
+
+msgid "IfcAppliedValue_Components_DEFINITION"
+msgstr "コンポーネント"
+
+#:IFC.xml:3388
+msgid "IfcAppliedValue_HasExternalReference"
 msgstr "HasExternalReference"
 
-msgid "IfcContextDependentUnit_HasExternalReference_DEFINITION"
+msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
 msgstr "HasExternalReference"
 
-#:IFC.xml:22192
-msgid "IfcContextDependentUnit_Name"
+#:IFC.xml:3320
+msgid "IfcAppliedValue_Name"
 msgstr "名前"
 
-msgid "IfcContextDependentUnit_Name_DEFINITION"
-msgstr "コンテキスト依存の単位が参照される単語、または単語のグループ。"
+msgid "IfcAppliedValue_Name_DEFINITION"
+msgstr "コスト値に与えられた名前または追加の明確化。"
 
-#:IFC.xml:22200
-msgid "IfcConversionBasedUnit"
-msgstr "IfcConversionBasedUnit"
+#:IFC.xml:3325
+msgid "IfcAppliedValue_Description"
+msgstr "説明"
 
-msgid "IfcConversionBasedUnit_DEFINITION"
-msgstr "An [[IfcConversionBasedUnit]] is used to define a unit that has a conversion rate to a base unit. To identify some commonly used conversion based units, the standard designations case insensitive for the Name attribute are indicated in Table 1. X 09Name X 09Description X 09 inch X 09 X 09Length measure equal to 25.4 mm X 09 foot X 09 X 09Length measure equal to 304.8 mm X 09 yard X 09 X 09Length measure equal to 914 mm X 09 mile X 09 X 09Length measure equal to 1609 m X 09 square inch X 09Area measure equal to 0.0006452 square meters X 09 square foot X 09Area measure equal to 0.09290 square meters X 09 square yard X 09Area measure equal to 0.83612736 square meters X 09 acre X 09 X 09Area measure equal to 4046.86 square meters X 09 square mile X 09Area measure equal to 2 588 881 square meters X 09 cubic inch X 09Volume measure equal to 0.00001639 cubic meters X 09 cubic foot X 09Volume measure equal to 0.02832 cubic meters X 09 cubic yard X 09Volume measure equal to 0.7636 cubic meters X 09 litre X 09 X 09Volume measure equal to 0.001 cubic meters X 09 fluid ounce UK X 09Volume measure equal to 0.0000284130625 cubic meters X 09 fluid ounce US X 09Volume measure equal to 0.00002957353 cubic meters X 09 pint UK X 09 X 09Volume measure equal to 0.000568 cubic meters X 09 pint US X 09 X 09Volume measure equal to 0.000473 cubic meters X 09 gallon UK X 09Volume measure equal to 0.004546 cubic meters X 09 gallon US X 09Volume measure equal to 0.003785 cubic meters X 09 degree X 09 X 09Angle measure equal to π 180 rad X 09 ounce X 09 X 09Mass measure equal to 28.35 g X 09 pound X 09 X 09Mass measure equal to 0.454 kg X 09 ton UK X 09 X 09Mass measure equal to 1016.0469088 kg, also known as long ton, gross ton, shipper s ton X 09 ton US X 09 X 09Mass measure equal to 907.18474 kg, also known as short ton, net ton X 09 lbf X 09 X 09Force measure equal to 4.4482216153 N, pound force X 09 kip X 09 X 09Force measure equal to 4448.2216153 N, kilopound force X 09 psi X 09 X 09Pressure measure equal to 6894.7572932 Pa, pound force per square inch X 09 ksi X 09 X 09Pressure measure equal to 6894757.2932 Pa, kilopound force per square inch X 09 minute X 09 X 09Time measure equal to 60 s X 09 hour X 09 X 09Time measure equal to 3600 s X 09 day X 09 X 09Time measure equal to 86400 s X 09 btu X 09 X 09Energy measure equal to 1055.056 J, British Thermal Unit Table 1 Standard unit names EXAMPLE An inch is a converted unit. It is from the Imperial system, its name is inch and it can be related to the SI unit, millimetre, through a measure with unit whose value is 25.4 millimetre. A foot is also a converted unit. It is from the Imperial system, its name is foot and it can be related to an [[IfcSIUnit]] , millimetre, either directly or through the unit called inch . Note that several US customary units differ from Imperial units nonmetric English units of the same name. .extDef NOTE Definition according to ISO CD 10303 41 1992 A conversion based unit is a unit that is defined based on a measure with unit. NOTE Entity adapted from conversion based unit defined in ISO 10303 41. HISTORY New entity in IFC1.5.1. .change ifc2x3 IFC2x3 CHANGE Standard names of typical units added. .change ifc2x4 IFC4 CHANGE Further names added square inch, square foot, square mile, square yard, cubic inch, cubic foot, cubic yard, fluid ounce UK US, ton UK US, degree. bSI Documentation"
+msgid "IfcAppliedValue_Description_DEFINITION"
+msgstr "コスト値に関する追加情報を適用する場合の説明。"
 
-#:IFC.xml:8976
-msgid "IfcConversionBasedUnit_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:3330
+msgid "IfcAppliedValue_AppliedValue"
+msgstr "AppliedValue"
 
-msgid "IfcConversionBasedUnit_HasExternalReference_DEFINITION"
-msgstr "HasExternalReference"
+msgid "IfcAppliedValue_AppliedValue_DEFINITION"
+msgstr "適用された値の範囲または数量または量。"
 
-#:IFC.xml:22208
-msgid "IfcConversionBasedUnit_ConversionFactor"
-msgstr "ConversionFactor"
+#:IFC.xml:3335
+msgid "IfcAppliedValue_ApplicableDate"
+msgstr "適用日"
 
-msgid "IfcConversionBasedUnit_ConversionFactor_DEFINITION"
-msgstr "ConversionFactor"
+msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
+msgstr "適用された値が適用される日付。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
 
-#:IFC.xml:22201
-msgid "IfcConversionBasedUnit_Name"
-msgstr "名前"
+#:IFC.xml:3340
+msgid "IfcAppliedValue_FixedUntilDate"
+msgstr "FixedUntilDate"
 
-msgid "IfcConversionBasedUnit_Name_DEFINITION"
-msgstr "変換ベースの単位を参照する単語、または単語のグループ。"
+msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
+msgstr "適用される値までの日付。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
 
-#:IFC.xml:22221
-msgid "IfcConversionBasedUnitWithOffset"
-msgstr "IfcConversionBasedUnitWithOffset"
+#:IFC.xml:3345
+msgid "IfcAppliedValue_Category"
+msgstr "カテゴリ"
 
-msgid "IfcConversionBasedUnitWithOffset_DEFINITION"
-msgstr "[[IfcConversionBasedUnitWithOffset]] is a unit which is converted from another unit by applying a conversion factor and an offset. HISTORY New entity in IFC4. Example The temperature unit Fahrenheit is based on the temperature unit Kelvin as follows f k 1.8 459.67 wherein k is an absolute temperature expressed in Kelvin and f is the same temperature in Fahrenheit. The following entity instances provide Fahrenheit as a unit [[IfcConversionBasedUnitWithOffset]] [[IfcDimensionalExponents]] 0, 0, 0, 0, 1, 0, 0 , THERMODYNAMICTEMPERATUREUNIT, Fahrenheit , [[IfcMeasureWithUnit]] [[IfcThermodynamicTemperatureMeasure]] 1.8 , IfcSiUnit THERMODYNAMICTEMPERATUREUNIT, , KELVIN , 459.67 bSI Documentation"
+msgid "IfcAppliedValue_Category_DEFINITION"
+msgstr "使用されるコストの種類の仕様 X 0D X 0D 注意 特定できるコスト値には多くの種類があります。 異なる種類のコストに割り当てられる名前の意味については、広範な理解があります。 一般的にコスト型の命名基準はなく広く定義された分類もありません 任意のタイプのコスト値を可能にするために、[[IfcLabel]] データ型が割り当てられます。 X 0D X 0D X 0D X 0D X 0D プロジェクトまたは地域内で許容され理解できるコスト価値の種類を定義するために、ローカル契約を行うことが推奨されます。"
 
-#:IFC.xml:22222
-msgid "IfcConversionBasedUnitWithOffset_ConversionOffset"
-msgstr "ConversionOffset"
+#:IFC.xml:3350
+msgid "IfcAppliedValue_Condition"
+msgstr "条件"
 
-msgid "IfcConversionBasedUnitWithOffset_ConversionOffset_DEFINITION"
-msgstr "継承されたConversionFactorが適用された後に追加する正または負のオフセット。"
+msgid "IfcAppliedValue_Condition_DEFINITION"
+msgstr "コスト値が適用される条件。 X 0D X 0D 入札のコンテキスト内で、例えば、入札のコンテキスト内で。 これは選ばれるかもしれないし選ばれないかもしれない選択肢を指すかもしれません"
 
-#:IFC.xml:22229
-msgid "IfcCorrectDimensions__m"
-msgstr "IfcCorrectDimensions m"
+#:IFC.xml:3355
+msgid "IfcAppliedValue_ArithmeticOperator"
+msgstr "算術演算子"
 
-msgid "IfcCorrectDimensions__m_DEFINITION"
-msgstr "この関数は与えられた単位の次元指数を返します。 引数定義m は次元指数がテストされる単位型の名前を入力します。 Dim は、対応する単位タイプ名に対してテストされる寸法指数を入力します。"
+msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
+msgstr "算術演算子は、コンポーネントの値に適用されます。"
 
-#:IFC.xml:22237
-msgid "IfcCorrectUnitAssignment"
-msgstr "IfcCorrectUnitAssignment"
+#:IFC.xml:3400
+msgid "IfcArithmeticOperatorEnum"
+msgstr "IfcArithmeticOperatorEnum"
 
-msgid "IfcCorrectUnitAssignment_DEFINITION"
-msgstr "The function returns true, if the set of Units within an [[IfcUnitAssignment]] only include units with different UnitType s for [[IfcNamedUnit]] and [[IfcDerivedUnit]] , and a maximum of one [[IfcMonetaryUnit]] . Argument definitions Units input the set of [[IfcUnit]] s."
+msgid "IfcArithmeticOperatorEnum_DEFINITION"
+msgstr "[[IfcArithmeticOperatorEnum]] は関係によって暗示される算術演算の形式を指定します。HISTORYIFC2x2の新しい列挙。bSI Documentation"
 
-#:IFC.xml:22245
-msgid "IfcDeriveDimensionalExponents"
-msgstr "IfcDeriveDimensionalExponents"
+#:IFC.xml:3406
+msgid "IfcCostValue"
+msgstr "IfcCostValue"
 
-msgid "IfcDeriveDimensionalExponents_DEFINITION"
-msgstr "ISO CDからの定義 10303 41 1992 ユニットの寸法指数を決定する機能。 名前付きユニットの場合、dimensions 属性が返され、派生ユニットの場合、次元指数は要素から計算されます。 引数定義 X は次元指数が導出されている単位を入力します。"
+msgid "IfcCostValue_DEFINITION"
+msgstr "[[IfcCostValue]] is an amount of money or a value that affects an amount of money. Each instance of [[IfcCostValue]] may also have a category. There are many possible types of cost value that may be identified. While there is a broad understanding of the meaning of names that may be assigned to different types of costs, there is no general standard for naming cost types nor are there any broadly defined classifications. The following defines some cost categories that might be applied to the Category attribute Annual rate of return Bonus Bulk purchase rebate Contract Consultancy Delivery Estimated cost Hire Installation Interest rate Labor Lease List price Maintenance Material Overhead Postage and packing Profit Purchase Rental Repair Replacement Sale Small quantity surcharge Spares Storage Sub Contract Trade discount Transportation Waste allowance Whole life NOTE In the absence of any well defined standard, it is recommended that local agreements should be made to define allowable and understandable cost value types within a project or region. HISTORY New entity in IFC1.0 bSI Documentation"
 
-#:IFC.xml:22253
-msgid "IfcDerivedUnit"
-msgstr "IfcDerivedUnit"
+#:IFC.xml:3493
+msgid "IfcCurrencyRelationship"
+msgstr "IfcCurrencyRelationship"
 
-msgid "IfcDerivedUnit_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 派生単位は単位の表現である。 例 ニュートン/平方ミリ単位は導出ユニットです。 注意 ISO 10303の名称派生ユニットに対応しています。 正式規格の最終定義については、ISO IS 10303の41を参照してください。 HISTORY IFC1.5.1内の新しいエンティティ。"
+msgid "IfcCurrencyRelationship_DEFINITION"
+msgstr "[[IfcCurrencyRelationship]] defines the rate of exchange that applies between two designated currencies at a particular time and as published by a particular source. An [[IfcCurrencyRelationship]] is used where there may be a need to reference an [[IfcCostValue]] in one currency to an [[IfcCostValue]] in another currency. It takes account of fact that currency exchange rates may vary by requiring the recording the date and time of the currency exchange rate used and the source that publishes the rate. There may be many sources and there are different strategies for currency conversion spot rate, forward buying of currency at a fixed rate . The source for the currency exchange is defined as an instance of [[IfcLibraryInformation]] that includes a name and a URL. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcResourceLevelRelationship]] , attribute order changed. bSI Documentation"
 
-#:IFC.xml:22278
-msgid "IfcDerivedUnit_Elements"
-msgstr "要素"
+#:IFC.xml:3506
+msgid "IfcCurrencyRelationship_RateSource"
+msgstr "RateSource"
 
-msgid "IfcDerivedUnit_Elements_DEFINITION"
-msgstr "要素"
+msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
+msgstr "RateSource"
 
-#:IFC.xml:22262
-msgid "IfcDerivedUnit_UnitType"
-msgstr "UnitType"
+#:IFC.xml:3518
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
+msgstr "関連MonetaryUnit"
 
-msgid "IfcDerivedUnit_UnitType_DEFINITION"
-msgstr "IFCモデルで使用する派生ユニットタイプの列挙から選択された派生ユニットの名前。"
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
+msgstr "関連MonetaryUnit"
 
-#:IFC.xml:22267
-msgid "IfcDerivedUnit_UserDefinedType"
-msgstr "UserDefinedType"
+#:IFC.xml:3530
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
+msgstr "RelatingMonetaryUnit"
 
-#:IFC.xml:22272
-msgid "IfcDerivedUnit_Dimensions"
-msgstr "寸法"
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
+msgstr "RelatingMonetaryUnit"
 
-msgid "IfcDerivedUnit_Dimensions_DEFINITION"
-msgstr "関数IfcDerivedDimensionalExponents を使用して派生した寸法指数。入力値は SELF を使用します。"
+#:IFC.xml:3494
+msgid "IfcCurrencyRelationship_ExchangeRate"
+msgstr "為替レート："
 
-#:IFC.xml:22290
-msgid "IfcDerivedUnitElement"
-msgstr "IfcDerivedUnitElement"
+msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
+msgstr "現在合意されている通貨単位の金額の比率は、通貨関係における通貨単位の単位量に相当します。 例えば、GBPからUSDへの換算の場合、為替レートは1.486USD1GBPとなります。"
 
-msgid "IfcDerivedUnitElement_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 派生ユニット要素は、派生ユニットを構成するユニット数量の1つです。 例 平方ミリメートルあたりのニュートンは、誘導ユニットです。 指数値が1ミリメートル、指数値が2ミリメートルのニュートンの2つの要素があります。 ご注意 ISO 10303の名前由来ユニット要素に対応しています。正式規格の最終定義については、ISO IS 10303の41をご参照ください。 HISTORY IFC1.5.1内の新しいエンティティ。"
+#:IFC.xml:3499
+msgid "IfcCurrencyRelationship_RateDateTime"
+msgstr "RateDateTime"
 
-#:IFC.xml:22297
-msgid "IfcDerivedUnitElement_Unit"
-msgstr "単位"
+msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
+msgstr "為替レートが適用される日付と時刻。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
 
-msgid "IfcDerivedUnitElement_Unit_DEFINITION"
-msgstr "単位"
+#:IFC.xml:3542
+msgid "IfcAppliedValueSelect"
+msgstr "IfcAppliedValueSelect"
 
-#:IFC.xml:22291
-msgid "IfcDerivedUnitElement_Exponent"
-msgstr "Exponent"
-
-msgid "IfcDerivedUnitElement_Exponent_DEFINITION"
-msgstr "ユニット属性に適用されるパワー。"
-
-#:IFC.xml:22309
-msgid "IfcDerivedUnitEnum"
-msgstr "IfcDerivedUnitEnum"
-
-msgid "IfcDerivedUnitEnum_DEFINITION"
-msgstr "[[IfcDerivedUnitEnum]] は、許容される派生単位の列挙型です。 hrange ifc2x4 IFC 2x4 change added AREADENSITYUNIT, SOUNDPOWERLEVELUNIT, SOUNDPRESSURELEVELUNIT and TEMPERATURATERATERATERATEUNIT. bSI Documentation"
-
-#:IFC.xml:22364
-msgid "IfcDimensionalExponents"
-msgstr "IfcDimensionalExponents"
-
-msgid "IfcDimensionalExponents_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 任意の量の寸法は、基本量の寸法の力の積として表現することができます。 次元指数図形は、基本数量の次元の力を定義します。 すべての物理的な量は、7 つの基本量ISO 31 第 2 節に基づいています。 注 長さ、質量、時間、電流、熱力学的温度、物質量、発光強度は7つの基本量です。 例 2 ミリメートルの長さは、長さ指数が 1 です。残りの指数は 0 になります。 例 毎秒2ミリメートルの速度は、長さ指数が1、時間指数が1です。 残りの指数は 0 に等しいです。 注意 対応するSTEP名次元指数は、正式規格の最終的な定義については、ISO IS 10303 41を参照してください。 HISTORY IFC1.5.1内の新しいエンティティ。"
-
-#:IFC.xml:22365
-msgid "IfcDimensionalExponents_LengthExponent"
-msgstr "LengthExponent"
-
-msgid "IfcDimensionalExponents_LengthExponent_DEFINITION"
-msgstr "長さベース数量のパワー。"
-
-#:IFC.xml:22370
-msgid "IfcDimensionalExponents_MassExponent"
-msgstr "MassExponent"
-
-msgid "IfcDimensionalExponents_MassExponent_DEFINITION"
-msgstr "質量ベース量の力"
-
-#:IFC.xml:22375
-msgid "IfcDimensionalExponents_TimeExponent"
-msgstr "TimeExponent"
-
-msgid "IfcDimensionalExponents_TimeExponent_DEFINITION"
-msgstr "タイムベース数量のパワー。"
-
-#:IFC.xml:22380
-msgid "IfcDimensionalExponents_ElectricCurrentExponent"
-msgstr "ElectricCurrentExponent"
-
-msgid "IfcDimensionalExponents_ElectricCurrentExponent_DEFINITION"
-msgstr "電力電流の基本量。"
-
-#:IFC.xml:22385
-msgid "IfcDimensionalExponents_ThermodynamicTemperatureExponent"
-msgstr "熱力学温度指数（Exponent）"
-
-msgid "IfcDimensionalExponents_ThermodynamicTemperatureExponent_DEFINITION"
-msgstr "熱力学的温度ベース量の力。"
-
-#:IFC.xml:22390
-msgid "IfcDimensionalExponents_AmountOfSubstanceExponent"
-msgstr "AmountOfSubstanceExponent"
-
-msgid "IfcDimensionalExponents_AmountOfSubstanceExponent_DEFINITION"
-msgstr "物質ベース量の量"
-
-#:IFC.xml:22395
-msgid "IfcDimensionalExponents_LuminousIntensityExponent"
-msgstr "輝度強度指数(LuminousIntensityExponent)"
-
-msgid "IfcDimensionalExponents_LuminousIntensityExponent_DEFINITION"
-msgstr "発光強度ベース量のパワー。"
-
-#:IFC.xml:22413
-msgid "IfcDimensionsForSiUnit__n"
-msgstr "IfcDimensionsForSiUnit n"
-
-msgid "IfcDimensionsForSiUnit__n_DEFINITION"
-msgstr "ISO CD 10303 41 1992 の定義 この関数は、与えられた SI ユニットの寸法指数を返します。 引数 definition N は次元指数が返される単位の名前を入力します。"
-
-#:IFC.xml:22421
-msgid "IfcMeasureWithUnit"
-msgstr "IfcMeasureWithUnit"
-
-msgid "IfcMeasureWithUnit_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 ISO 31 第 2 節に定義されている物理量の指定は、単位との測定である。 [[IfcMeasureWithUnit]] には2つの使い方があります 1. このように、IFCモデルのグローバルユニット割り当てをオーバーライドするために、エンティティタイプ属性レベルのユニットとともに測定値を表すために、そのユニットがエンティティタイプの属性レベルで表されます。 2. コンバージョン率とベースを与える変換ベースの単位の場合. 注 単位でのISO 10303名称測定に対応しておりますので、正式規格の最終定義についてはISO 10303-41をご参照ください。 HISTORY IFC1.5.1内の新しいエンティティ。"
-
-#:IFC.xml:22422
-msgid "IfcMeasureWithUnit_ValueComponent"
-msgstr "ValueComponent"
-
-msgid "IfcMeasureWithUnit_ValueComponent_DEFINITION"
-msgstr "指定された単位で表される物理量の値。"
-
-#:IFC.xml:22427
-msgid "IfcMeasureWithUnit_UnitComponent"
-msgstr "UnitComponent"
-
-msgid "IfcMeasureWithUnit_UnitComponent_DEFINITION"
-msgstr "物理量を表す単位。"
-
-#:IFC.xml:22435
-msgid "IfcMonetaryUnit"
-msgstr "IfcMonetaryUnit"
-
-msgid "IfcMonetaryUnit_DEFINITION"
-msgstr "[[IfcMonetaryUnit]] はお金の通貨を定義する単位です。 hrange ifc2x4 IFC4 変更属性の種類が変更された. bSI Documentation"
-
-#:IFC.xml:22436
-msgid "IfcMonetaryUnit_Currency"
-msgstr "通貨"
-
-msgid "IfcMonetaryUnit_Currency_DEFINITION"
-msgstr "コードまたは通貨の名前。許可される値は、ISO 4217 http www.isoに従ってアルファベット3文字の通貨コードです。 rg iso support faqs faqs 広く使用されている標準標準は広く使用されている他の通貨コードリスト 1. tmターゲットトップ, 例えばCNY, EUR, GBP, JPY, USD."
-
-#:IFC.xml:22443
-msgid "IfcNamedUnit"
-msgstr "IfcNamedUnit"
-
-msgid "IfcNamedUnit_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 命名された単位は、単語に関連付けられた単位数です。 あるいは単語の集合体が識別されています 注意 ISO 10303の名称ユニットに対応しています。 正式規格の最終定義については、ISO IS 10303の41を参照してください。 HISTORY IFC1.5.1の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22401
-msgid "IfcNamedUnit_Dimensions"
-msgstr "寸法"
-
-msgid "IfcNamedUnit_Dimensions_DEFINITION"
-msgstr "寸法"
-
-#:IFC.xml:22448
-msgid "IfcNamedUnit_UnitType"
-msgstr "UnitType"
-
-msgid "IfcNamedUnit_UnitType_DEFINITION"
-msgstr "単位のタイプ。"
-
-#:IFC.xml:22479
-msgid "IfcSIPrefix"
-msgstr "IfcSIPrefix"
-
-msgid "IfcSIPrefix_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 41 1992 SIプレフィックスは、SI単位に関連付けられる可能性があるプレフィックスの名前です。 SI プレフィックスの定義は、ISO 1000 第 3 節で規定されています。 注 接頭辞はSI単位の倍数と副倍数を定義します。 注記の種類は ISO 10303 41 に定義されている si プレフィックスから変更されました。 HISTORY IFC1.5.1に新しいエンティティがあります。"
-
-#:IFC.xml:22497
-msgid "IfcSIUnit"
-msgstr "IfcSIUnit"
-
-msgid "IfcSIUnit_DEFINITION"
-msgstr "[[IfcSIUnit]]はメーターと2番目の標準的なベースSIユニットの両方をカバーしています。 およびパスカル、平方メートル、立方メートルなどの派生SI単位。 xtDef NOTEの定義 ISO CD10303に準拠した定義 41 1992 SI単位は、ISO 1000節2に定義された項目を測定する基準として使用される固定数です。 注意 ISO 10303の名称siユニットに対応しています。 正式規格の最終的な定義については、ISO IS 10303の41を参照してください。 HISTORY IFC1.5.1内の新しいエンティティ。"
-
-#:IFC.xml:22498
-msgid "IfcSIUnit_Prefix"
-msgstr "プレフィックス"
-
-msgid "IfcSIUnit_Prefix_DEFINITION"
-msgstr "単位の小数と副倍数を定義するためのSIプレフィックス。"
-
-#:IFC.xml:22503
-msgid "IfcSIUnit_Name"
-msgstr "名前"
-
-msgid "IfcSIUnit_Name_DEFINITION"
-msgstr "SI単位が参照される単語、または単語のグループ。 X 0D X 0D 注 SIシステムsの質量ベース単位はキログラムですが。 プレフィックスがアサートされていない場合は質量の[[IfcSIUnit]]がグラムです。"
-
-#:IFC.xml:22508
-msgid "IfcSIUnit_SELF_IfcNamedUnit_Dimensions"
-msgstr "単位のサイズ"
-
-msgid "IfcSIUnit_SELF_IfcNamedUnit_Dimensions_DEFINITION"
-msgstr "SELF [[IfcNamedUnit]].Dimensions"
-
-#:IFC.xml:22514
-msgid "IfcSIUnitName"
-msgstr "IfcSIUnitName"
-
-msgid "IfcSIUnitName_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 An SI unit name is the name of an SI unit. The definitions of the names of SI units are specified in ISO 1000 clause 2 . NOTE Type adapted from si unit name defined in ISO 10303 41. HISTORY New entity in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22546
-msgid "IfcUnitAssignment"
-msgstr "IfcUnitAssignment"
-
-msgid "IfcUnitAssignment_DEFINITION"
-msgstr "[[IfcUnitAssignment]] indicates a set of units which may be assigned. Within an IfcUnitAssigment each unit definition shall be unique that is, there shall be no redundant unit definitions for the same unit type such as length unit or area unit. For currencies, there shall be only a single [[IfcMonetaryUnit]] within an [[IfcUnitAssignment]] . NOTE A [[IfcProject]] has a unit assignment which establishes a set of units which will be used globally within the project, if not otherwise defined. Other objects may have local unit assignments if there is a requirement for them to make use of units which do not fall within the project unit assignment. HISTORY New entity in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22551
-msgid "IfcUnitAssignment_Units"
-msgstr "Units"
-
-msgid "IfcUnitAssignment_Units_DEFINITION"
-msgstr "Units to be included within a unit assignment."
-
-#:IFC.xml:22557
-msgid "IfcUnitEnum"
-msgstr "IfcUnitEnum"
-
-msgid "IfcUnitEnum_DEFINITION"
-msgstr "[[IfcUnitEnum]] is an enumeration type for allowed unit types of [[IfcNamedUnit]] . HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22589
-msgid "IfcDerivedMeasureValue"
-msgstr "IfcDerivedMeasureValue"
-
-msgid "IfcDerivedMeasureValue_DEFINITION"
-msgstr "[[IfcDerivedMeasureValue]] is a select type for selecting between derived measure types. SELECT [[IfcAbsorbedDoseMeasure]] [[IfcAccelerationMeasure]] [[IfcAngularVelocityMeasure]] [[IfcAreaDensityMeasure]] [[IfcCompoundPlaneAngleMeasure]] [[IfcCurvatureMeasure]] [[IfcDoseEquivalentMeasure]] [[IfcDynamicViscosityMeasure]] [[IfcElectricCapacitanceMeasure]] [[IfcElectricChargeMeasure]] [[IfcElectricConductanceMeasure]] [[IfcElectricResistanceMeasure]] [[IfcElectricVoltageMeasure]] [[IfcEnergyMeasure]] [[IfcForceMeasure]] [[IfcFrequencyMeasure]] [[IfcHeatFluxDensityMeasure]] [[IfcHeatingValueMeasure]] [[IfcIlluminanceMeasure]] [[IfcInductanceMeasure]] [[IfcIntegerCountRateMeasure]] [[IfcIonConcentrationMeasure]] [[IfcIsothermalMoistureCapacityMeasure]] [[IfcKinematicViscosityMeasure]] [[IfcLinearForceMeasure]] [[IfcLinearMomentMeasure]] [[IfcLinearStiffnessMeasure]] [[IfcLinearVelocityMeasure]] [[IfcLuminousFluxMeasure]] [[IfcLuminousIntensityDistributionMeasure]] [[IfcMagneticFluxDensityMeasure]] [[IfcMagneticFluxMeasure]] [[IfcMassDensityMeasure]] [[IfcMassFlowRateMeasure]] [[IfcMassPerLengthMeasure]] [[IfcModulusOfElasticityMeasure]] [[IfcModulusOfLinearSubgradeReactionMeasure]] [[IfcModulusOfRotationalSubgradeReactionMeasure]] [[IfcModulusOfSubgradeReactionMeasure]] [[IfcMoistureDiffusivityMeasure]] [[IfcMolecularWeightMeasure]] [[IfcMomentOfInertiaMeasure]] [[IfcMonetaryMeasure]] [[IfcPHMeasure]] [[IfcPlanarForceMeasure]] [[IfcPowerMeasure]] [[IfcPressureMeasure]] [[IfcRadioActivityMeasure]] [[IfcRotationalFrequencyMeasure]] [[IfcRotationalMassMeasure]] [[IfcRotationalStiffnessMeasure]] [[IfcSectionModulusMeasure]] [[IfcSectionalAreaIntegralMeasure]] [[IfcShearModulusMeasure]] [[IfcSoundPowerLevelMeasure]] [[IfcSoundPowerMeasure]] [[IfcSoundPressureLevelMeasure]] [[IfcSoundPressureMeasure]] [[IfcSpecificHeatCapacityMeasure]] [[IfcTemperatureGradientMeasure]] [[IfcTemperatureRateOfChangeMeasure]] [[IfcThermalAdmittanceMeasure]] [[IfcThermalConductivityMeasure]] [[IfcThermalExpansionCoefficientMeasure]] [[IfcThermalResistanceMeasure]] [[IfcThermalTransmittanceMeasure]] [[IfcTorqueMeasure]] [[IfcVaporPermeabilityMeasure]] [[IfcVolumetricFlowRateMeasure]] [[IfcWarpingConstantMeasure]] [[IfcWarpingMomentMeasure]] HISTORY New type in IFC2x. .change ifc2x4 IFC4 CHANGE added [[IfcAreaDensityMeasure]] , [[IfcSoundPowerLevelMeasure]] , [[IfcSoundPressureLevelMeasure]] , [[IfcTemperatureRateOfChangeMeasure]] , removed [[IfcTimeStamp]] ."
-
-#:IFC.xml:22591
-msgid "IfcMeasureValue"
-msgstr "IfcMeasureValue"
-
-msgid "IfcMeasureValue_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A measure value is a value as defined in ISO 31 0 clause 2 . NOTE [[IfcMeasureValue]] is a select data type for most basic measure types coming from ISO 10303 41. Select item [[IfcNonNegativeLengthMeasure]] is in addition to ISO 10303 41. NOTE Corresponding ISO 10303 name measure value, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New type in IFC1.5.1. .change ifc2x4 IFC 2x4 CHANGE [[IfcNonNegativeLengthMeasure]] added."
-
-#:IFC.xml:22593
-msgid "IfcSimpleValue"
-msgstr "IfcSimpleValue"
-
-msgid "IfcSimpleValue_DEFINITION"
-msgstr "[[IfcSimpleValue]] is a select type for selecting between simple value types. SELECT [[IfcInteger]] Defined type of simple type INTEGER. [[IfcReal]] Defined type of simple type REAL. [[IfcBoolean]] Defined type of simple type BOOLEAN. [[IfcLogical]] Defined type of simple type LOGICAL. [[IfcIdentifier]] Defined type of simple type STRING for identification purposes. [[IfcLabel]] Defined type of simple type STRING for naming purposes. [[IfcText]] Defined type of simple type STRING for descriptive purposes. [[IfcDateTime]] Defined type of simple type STRING to represent a date and time. [[IfcDate]] Defined type of simple type STRING to represent a date. [[IfcTime]] Defined type of simple type STRING to represent a time. [[IfcDuration]] Defined type of simple type STRING to represent a duration. [[IfcTimeStamp]] Defined type of simple type INTEGER to represent a point in time by seconds elapsed since 1970. HISTORY New type in IFC2x. .change ifc2x4 IFC4 CHANGE Items [[IfcDateTime]] , [[IfcDate]] , [[IfcTime]] , [[IfcDuration]] , [[IfcTimeStamp]] added."
-
-#:IFC.xml:22595
-msgid "IfcUnit"
-msgstr "IfcUnit"
-
-msgid "IfcUnit_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A unit is a physical quantity, with a value of one, which is used as a standard in terms of which other quantities are expressed. NOTE Select item [[IfcMonetaryUnit]] is an addition to ISO 10303 41. NOTE Corresponding ISO 10303 name unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. SELECT [[IfcNamedUnit]] A unit which is identified by a name. [[IfcDerivedUnit]] A unit which is derived from an expression of units. [[IfcMonetaryUnit]] A unit for defining currencies. HISTORY New type in IFC1.5.1."
-
-#:IFC.xml:22596
-msgid "IfcValue"
-msgstr "IfcValue"
-
-msgid "IfcValue_DEFINITION"
-msgstr "[[IfcValue]] is a select type for selecting between more specialised select types [[IfcSimpleValue]] , [[IfcMeasureValue]] and [[IfcDerivedMeasureValue]] . SELECT [[IfcSimpleValue]] A select type for basic defined types of simple data type. [[IfcMeasureValue]] A select type for basic measure types of ISO 10303 41. [[IfcDerivedMeasureValue]] A select type for derived measure types. HISTORY New type in IFC2x."
-
-#:IFC.xml:22599
-msgid "IfcAbsorbedDoseMeasure"
-msgstr "IfcAbsorbedDoseMeasure"
-
-msgid "IfcAbsorbedDoseMeasure_DEFINITION"
-msgstr "[[IfcAbsorbedDoseMeasure]] is a measure of the absorbed radioactivity dose. Usually measured in Gray Gy, J kg . Type REAL HISTORY New type in IFC2x. bSI Documentation"
-
-#:IFC.xml:22603
-msgid "IfcAccelerationMeasure"
-msgstr "IfcAccelerationMeasure"
-
-msgid "IfcAccelerationMeasure_DEFINITION"
-msgstr "[[IfcAccelerationMeasure]] is a measure of acceleration. Usually measured in m s2. Type REAL HISTORY New type in IFC2x. bSI Documentation"
-
-#:IFC.xml:22607
-msgid "IfcAmountOfSubstanceMeasure"
-msgstr "IfcAmountOfSubstanceMeasure"
-
-msgid "IfcAmountOfSubstanceMeasure_DEFINITION"
-msgstr "An amount of substance measure is the value for the quantity of a substance when compared with the number of atoms in 0.012 kg of carbon 12. Usually measure in mole mol . Type REAL NOTE Type adapted from amount of substance measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22611
-msgid "IfcAngularVelocityMeasure"
-msgstr "IfcAngularVelocityMeasure"
-
-msgid "IfcAngularVelocityMeasure_DEFINITION"
-msgstr "[[IfcAngularVelocityMeasure]] is a measure of the velocity of a body measured in terms of angle subtended per unit time. Usually measured in radians s. Type REAL HISTORY New type in IFC2.0. bSI Documentation"
-
-#:IFC.xml:22615
-msgid "IfcAreaDensityMeasure"
-msgstr "IfcAreaDensityMeasure"
-
-msgid "IfcAreaDensityMeasure_DEFINITION"
-msgstr "[[IfcAreaDensityMeasure]] is a measure of the density of a two dimensional object and is calculated as the mass per unit area. Usually measured in kg m2. Type REAL HISTORY New type in IFC4. bSI Documentation"
-
-#:IFC.xml:22619
-msgid "IfcAreaMeasure"
-msgstr "IfcAreaMeasure"
-
-msgid "IfcAreaMeasure_DEFINITION"
-msgstr "An area measure is the value of the extent of a surface. Usually measured in square metre m2 . Type REAL NOTE Type adapted from area measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22623
-msgid "IfcBinary"
-msgstr "IfcBinary"
-
-msgid "IfcBinary_DEFINITION"
-msgstr "[[IfcBinary]] is a defined type of simple data type BINARY which may be used to encode binary data such as embedded textures. . note NOTE This type was introduced to maintain consistency with all native types. A future IFC release may support this data type within [[IfcSimpleValue]] to enable use at property sets.Type BINARY HISTORY New type in IFC4 ADD1 modification does not impact file compatibility . bSI Documentation"
-
-#:IFC.xml:22627
-msgid "IfcBoolean"
-msgstr "IfcBoolean"
-
-msgid "IfcBoolean_DEFINITION"
-msgstr "[[IfcBoolean]] is a defined data type of simple data type Boolean. It is required since a select type [[IfcSimpleValue]] cannot directly include simple types in its select list. A Boolean type can have value TRUE or FALSE. Type BOOLEAN HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22637
-msgid "IfcComplexNumber"
-msgstr "IfcComplexNumber"
-
-msgid "IfcComplexNumber_DEFINITION"
-msgstr "[[IfcComplexNumber]] is a representation of a complex number expressed as an array with two elements. The first element index 1 denotes the real component which is the numerical component of a complex number whose square roots can be calculated explicitly. The second element index 2 denotes the imaginary component which is the numerical component of a complex number whose square roots cannot be determined other than through the provision of the square of the imaginary number j where j 2 1. Note that the imaginary component may be referred to as i in certain references. Type ARRAY 1 2 OF REAL HISTORY New type in IFC2x2. bSI Documentation"
-
-#:IFC.xml:22641
-msgid "IfcCompoundPlaneAngleMeasure"
-msgstr "IfcCompoundPlaneAngleMeasure"
-
-msgid "IfcCompoundPlaneAngleMeasure_DEFINITION"
-msgstr "[[IfcCompoundPlaneAngleMeasure]] is a compound measure of plane angle in degrees, minutes, seconds, and optionally millionth seconds of arc. NOTE [[IfcCompoundPlaneAngleMeasure]] is used where angles need to be described to an accuracy as fine as one millionth of a degree and expressed as parts of an arc. It may be used for angular measurement by surveyors or for other angular measurements where precision is required. Another usage is exact or approximate global positioning against a geographic coordinate systems using longitude and latitude. NOTE While the unit of measurement of the type [[IfcPlaneAngleMeasure]] depends on unit assignment radian or degree or other derived units globally at the IfcPoject or locally at an [[IfcMeasureWithUnit]] , the units of [[IfcCompoundPlaneAngleMeasure]] are always degrees, minutes, seconds, and millionth seconds irrespective of unit assignments. HISTORY New type in IFC1.5.1. Type LIST 3 4 OF INTEGER .use head Value restrictions The first integer measure is the number of degrees and is generally not range restricted. However, when [[IfcCompoundPlaneAngleMeasure]] is used to express geographic coordinates, only latitudes of 90, 90 and longitudes of 180, 180 are used in practice. The second integer measure is the number of minutes and shall be in the range 60, 60 . The third integer measure is the number of seconds and shall be in the range 60, 60 . The optional fourth integer measure is the number of millionth seconds and shall be in the range 1 000 000, 1 000 000 . .use head Signedness All measure components have the same sign positive or negative . It is therefore trivial to convert between floating point representation decimal degrees and compound representation regardless whether the angle is greater or smaller than zero. Example LOCAL a [[IfcPlaneAngleMeasure]] 50.975864 decimal degrees, 50 58 33 110400 b [[IfcPlaneAngleMeasure]] c [[IfcCompoundPlaneAngleMeasure]] s [[IfcText]] END LOCAL convert from float to compound c 1 a 50 c 2 a c 1 60 58 c 3 a c 1 60 c 2 60 33 c 4 a c 1 60 c 2 60 c 3 1.e6 110400 convert from compound to float b c 1 c 2 60. c 3 3600. c 4 3600.e6 50.975864 .use head Use in string representations When a compound plane angle measure is formatted for display or printout, the signs of the fractional components will usually be discarded because, to a human reader, the sign of the first component alone already indicates the sense of the angle convert from compound to human readable string s FORMAT c 1 , 000000B0 FORMAT ABS c 2 , FORMAT ABS c 3 , FORMAT ABS c 4 , 50 58 33 110400 Another often encountered display format of latitudes and longitudes is to omit the signs and print N, S, E, W indicators instead, for example, 50 58 33 S . When stored as [[IfcCompoundPlaneAngleMeasure]] however, a compound plane angle measure is always signed, with same sign of all components. bSI Documentation"
-
-#:IFC.xml:22661
-msgid "IfcContextDependentMeasure"
-msgstr "IfcContextDependentMeasure"
-
-msgid "IfcContextDependentMeasure_DEFINITION"
-msgstr "The value of a physical quantity as defined within the exchange context. Type REAL NOTE Type adapted from context dependent measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22665
-msgid "IfcCountMeasure"
-msgstr "IfcCountmeasure"
-
-msgid "IfcCountMeasure_DEFINITION"
-msgstr "A count measure is the value of a count of items. Type NUMBER NOTE Type adapted from count measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22669
-msgid "IfcCurvatureMeasure"
-msgstr "IfcCurvatureMeasure"
-
-msgid "IfcCurvatureMeasure_DEFINITION"
-msgstr "[[IfcCurvatureMeasure]] is a measure for curvature, which is defined as the change of slope per length. This is typically a computed value in structural analysis. It is usually measured in rad m. Type REAL HISTORY New type in IFC2x2. bSI Documentation"
-
-#:IFC.xml:22673
-msgid "IfcDescriptiveMeasure"
-msgstr "IfcDescriptiveMease"
-
-msgid "IfcDescriptiveMeasure_DEFINITION"
-msgstr "A descriptive measure is a human interpretable definition of a quantifiable value. The mode of interpretation has to be established for the exchange context. Type STRING NOTE Type adapted from descriptive measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22678
-msgid "IfcDoseEquivalentMeasure"
-msgstr "IfcDoseEquivalentMeasure"
-
-msgid "IfcDoseEquivalentMeasure_DEFINITION"
-msgstr "[[IfcDoseEquivalentMeasure]] is a measure of the radioactive dose equivalent. Usually measured in Sievert Sv, J kg . Type REAL HISTORY New type in IFC2x. bSI Documentation"
-
-#:IFC.xml:22682
-msgid "IfcDynamicViscosityMeasure"
-msgstr "IfcDynamicViscosityMeasure"
-
-msgid "IfcDynamicViscosityMeasure_DEFINITION"
-msgstr "[[IfcDynamicViscosityMeasure]] is a measure of the viscous resistance of a medium. Usually measured in Pascal second Pa s . Type REAL HISTORY New type in IFC2.0. bSI Documentation"
-
-#:IFC.xml:22686
-msgid "IfcElectricCapacitanceMeasure"
-msgstr "IfcElectricCapacitanceMeasure"
-
-msgid "IfcElectricCapacitanceMeasure_DEFINITION"
-msgstr "[[IfcElectricCapacitanceMeasure]] is a measure of the electric capacitance. Usually measured in Farad F, C V A s V . Type REAL HISTORY New type in IFC2x. bSI Documentation"
-
-#:IFC.xml:22690
-msgid "IfcElectricChargeMeasure"
-msgstr "IfcElectricChargeMeasure"
-
-msgid "IfcElectricChargeMeasure_DEFINITION"
-msgstr "[[IfcElectricChargeMeasure]] is a measure of the electric charge. Usually measured in Coulomb C, A s . Type REAL HISTORY New type in IFC2x. bSI Documentation"
-
-#:IFC.xml:22694
-msgid "IfcElectricConductanceMeasure"
-msgstr "IfcElectricConductanceMeasure"
-
-msgid "IfcElectricConductanceMeasure_DEFINITION"
-msgstr "[[IfcElectricConductanceMeasure]] は、電気伝導の測定値です。通常はシーメンスS、1 オームA V で測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22698
-msgid "IfcElectricCurrentMeasure"
-msgstr "IfcElectricCurrentMeasure"
-
-msgid "IfcElectricCurrentMeasure_DEFINITION"
-msgstr "電荷を帯びた粒子の移動の値。通常はアンペアAで測定される。 ISO 10303に定義されている電流測定に適合したタイプREAL NOTEタイプ 41. 履歴 IFC1.5.1の新タイプ。 bSIドキュメント"
-
-#:IFC.xml:22702
-msgid "IfcElectricResistanceMeasure"
-msgstr "IfcElectricResistanceMeasure"
-
-msgid "IfcElectricResistanceMeasure_DEFINITION"
-msgstr "[[IfcElectricResistanceMeasure]] は電気抵抗の尺度です。通常はオームVAで測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22706
-msgid "IfcElectricVoltageMeasure"
-msgstr "IfcElectricVoltageMeasure"
-
-msgid "IfcElectricVoltageMeasure_DEFINITION"
-msgstr "[[IfcElectricVoltageMeasure]] は起電力の測定値で、通常はボルトV、W A で測定されます。 タイプ REAL HISTORY IFC2.0の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22710
-msgid "IfcEnergyMeasure"
-msgstr "IfcEnergyMeasure"
-
-msgid "IfcEnergyMeasure_DEFINITION"
-msgstr "[[IfcEnergyMeasure]] は、必要または使用されるエネルギーの尺度です。通常、ジュール、J、Nm で測定されます。 タイプ REAL HISTORY IFC2.0の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22714
-msgid "IfcForceMeasure"
-msgstr "Ifc強制測定"
-
-msgid "IfcForceMeasure_DEFINITION"
-msgstr "[[IfcForceMeasure]] は力の尺度であり、通常はニュートンN, kgms2で測定される。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22718
-msgid "IfcFrequencyMeasure"
-msgstr "IfcFrequencyMeasure"
-
-msgid "IfcFrequencyMeasure_DEFINITION"
-msgstr "[[IfcFrequencyMeasure]] は、単位時間内に項目が振動する回数を表します。 通常、サイクルsまたはヘルツHzで測定されます。タイプREAL HISTORYIFC2.0の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22722
-msgid "IfcHeatFluxDensityMeasure"
-msgstr "IfcHeatFluxDensityMeasure"
-
-msgid "IfcHeatFluxDensityMeasure_DEFINITION"
-msgstr "[[IfcHeatFluxDensityMeasure]] は、体内の熱流束の密度の測定値です。 通常はW m2 J s m2 で測定されます. タイプREAL HISTORY IFC2.0の新しいタイプです. bSI Documentation"
-
-#:IFC.xml:22726
-msgid "IfcHeatingValueMeasure"
-msgstr "IfcHeatingValueMeasure"
-
-msgid "IfcHeatingValueMeasure_DEFINITION"
-msgstr "[[IfcHeatingValueMeasure]] は、燃料が燃やされたときに通常MJキロで放出されるエネルギー量を定義します。 HISTORY これはIFC2x2の新しいタイプです。 bSI Documentation"
-
-#:IFC.xml:22734
-msgid "IfcIdentifier"
-msgstr "IfcIdentifier"
-
-msgid "IfcIdentifier_DEFINITION"
-msgstr "An identifier is an alphanumeric string which allows an individual thing to be identified. It may not provide natural language meaning. Type STRING of up to 255 characters NOTE Type adapted from identifier defined in ISO 10303 41. HISTORY New type in IFC2x. .change ifc2x4 IFC 2x4 CHANGE Previously recommended size restriction of 255 characters is now mandatory. .use head Value restrictions As a merely machine readable string for identification purposes, an identifier is usually machine generated and locale independent in contrast to human readable labels, [[IfcLabel]] . NOTE The set of characters that may appear in STRINGs exchanged in the exchange structure as defined in ISO 10303.21 is provided in ISO 10646. The encoding of characters in case of file based exchange is defined in ISO 10303 21 and ISO 10303 28. Among else, these specifications define the encoding of 8 bit characters from ISO 8859 1... 16 and of 2 byte and 4 byte Unicode characters from ISO 10646. NOTE While [[IfcIdentifier]] is restricted to 255 characters, the size in exchange files after encoding may be considerably larger than 255 octets, depending on the particular encoding and on the contents of the identifier. bSI Documentation"
-
-#:IFC.xml:22738
-msgid "IfcIlluminanceMeasure"
-msgstr "IfcIlluminanceMeasure"
-
-msgid "IfcIlluminanceMeasure_DEFINITION"
-msgstr "[[IfcIlluminanceMeasure]] は照度の測定値です。通常はLux lx, Lumen m2 で測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22742
-msgid "IfcInductanceMeasure"
-msgstr "IfcInductanceMeasure"
-
-msgid "IfcInductanceMeasure_DEFINITION"
-msgstr "[[IfcInductanceMeasure]] はインダクタンスの尺度で、通常はヘンリーH、ウェーバーA V s Aで測定します。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22746
-msgid "IfcInteger"
-msgstr "IfcInteger"
-
-msgid "IfcInteger_DEFINITION"
-msgstr "[[IfcInteger]] is a defined type of simple data type Integer. It is required since a select type [[IfcSimpleValue]] cannot include directly simple types in its select list. In principle, the domain of [[IfcInteger]] being an Integer is all integer numbers. Here the number of bits used for the [[IfcInteger]] representation is unconstrained, but in practice it is implementation specific. Type INTEGER HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22750
-msgid "IfcIntegerCountRateMeasure"
-msgstr "IfcIntegerCountRateMeasure"
-
-msgid "IfcIntegerCountRateMeasure_DEFINITION"
-msgstr "[[IfcIntegerCountRateMeasure]] は、単位時間あたりの単位数の整数です。 例 この測定は、毎秒または1時間あたりの整数単位の測定に使用することができます。 たとえば、機械的な書籍の取り扱いシステムの一部を通過する1時間あたりの書籍数を測定するために使用することができます。 移動する歩道に沿って1時間あたりの人数か道路の区間を移動する車両の数です INTEGER HISTORYを入力 IFC2.0の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22754
-msgid "IfcIonConcentrationMeasure"
-msgstr "IfcIonConcentrationMeasure"
-
-msgid "IfcIonConcentrationMeasure_DEFINITION"
-msgstr "[[IfcIonConcentrationMeasure]] は、液体中の特定のイオン濃度の測定値で、mg L. HISTORY IFC2x2の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22758
-msgid "IfcIsothermalMoistureCapacityMeasure"
-msgstr "IfcIsothermalMoistureCapacityMeasure"
-
-msgid "IfcIsothermalMoistureCapacityMeasure_DEFINITION"
-msgstr "[[IfcIsothermalMoistureCapacityMeasure]] は等熱水分量の測定値です。通常はm3 kgで測定されます。タイプはREAL HISTORY IFC2xの新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22762
-msgid "IfcKinematicViscosityMeasure"
-msgstr "Ifcキネマティック粘度測定"
-
-msgid "IfcKinematicViscosityMeasure_DEFINITION"
-msgstr "[[IfcKinematicViscosityMeasure]]は、媒体の粘性抵抗を移動体に与える尺度です。 通常はm2で測定されます. タイプREAL HISTORYIFC2.0で新しいタイプ. bSI Documentation"
-
-#:IFC.xml:22766
-msgid "IfcLabel"
-msgstr "IfcLabel"
-
-msgid "IfcLabel_DEFINITION"
-msgstr "A label is the term by which something may be referred to. It is a string which represents the human interpretable name of something and shall have a natural language meaning. Type STRING of up to 255 characters NOTE Type adapted from label defined in ISO 10303 41. HISTORY New type in IFC2x. .change ifc2x4 IFC4 CHANGE Previously recommended size restriction of 255 characters is now mandatory. .use head Value restrictions As a human readable string for naming purposes, a label is usually human specified and locale dependent in contrast to purely machine readable identifiers, [[IfcIdentifier]] . NOTE The set of characters that may appear in STRINGs exchanged in the exchange structure as defined in ISO 10303.21 is provided in ISO 10646. The encoding of characters in case of file based exchange is defined in ISO 10303 21 and ISO 10303 28. Among else, these specifications define the encoding of 8 bit characters from ISO 8859 1... 16 and of 2 byte and 4 byte Unicode characters from ISO 10646. NOTE While [[IfcIdentifier]] is restricted to 255 characters, the size in exchange files after encoding may be considerably larger than 255 octets, depending on the particular encoding and on the contents of the identifier. bSI Documentation"
-
-#:IFC.xml:22770
-msgid "IfcLengthMeasure"
-msgstr "IfcLengthMeasure"
-
-msgid "IfcLengthMeasure_DEFINITION"
-msgstr "[[IfcLengthMeasure]]は距離の値です。通常はミリメートル単位で測定されます。 タイプ REAL NOTEタイプは、ISO 10303 41に定義されている長さ基準に適合しています。履歴 IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:22776
-msgid "IfcLinearForceMeasure"
-msgstr "IfcLinearForceMeasure"
-
-msgid "IfcLinearForceMeasure_DEFINITION"
-msgstr "[[IfcLinearForceMeasure]] は線形力の尺度です。通常はN mで測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22780
-msgid "IfcLinearMomentMeasure"
-msgstr "IfcLinearMomentMeasure"
-
-msgid "IfcLinearMomentMeasure_DEFINITION"
-msgstr "[[IfcLinearMomentMeasure]] は直線的な瞬間の尺度です。通常はNm mで測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22784
-msgid "IfcLinearStiffnessMeasure"
-msgstr "IfcLinearStiffnessMeasure"
-
-msgid "IfcLinearStiffnessMeasure_DEFINITION"
-msgstr "[[IfcLinearStiffnessMeasure]] は線形剛性の尺度です。通常はN mで測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22789
-msgid "IfcLinearVelocityMeasure"
-msgstr "IfcLinearVelocityMeasure"
-
-msgid "IfcLinearVelocityMeasure_DEFINITION"
-msgstr "[[IfcLinearVelocityMeasure]]は、単位時間あたりの移動距離の面で測定される体の速度の尺度です。 通常はmで測定されます。タイプREAL HISTORYIFC2.0の新しいタイプです。bSIドキュメント"
-
-#:IFC.xml:22793
-msgid "IfcLogical"
-msgstr "IfcLogical"
-
-msgid "IfcLogical_DEFINITION"
-msgstr "[[IfcLogical]] [[IfcSimpleValue]] は単純型を選択リストに直接含めることはできません。 論理データ型は、TRUE、FALSE または UNKNOWN の値を持つことができます。タイプ LOGICAL HISTORY IFC2xの新しいタイプ bSI ドキュメント"
-
-#:IFC.xml:22797
-msgid "IfcLuminousFluxMeasure"
-msgstr "IfcLuminousFluxMeasure"
-
-msgid "IfcLuminousFluxMeasure_DEFINITION"
-msgstr "[[IfcLuminousFluxMeasure]] は光束の尺度です。通常はルーメンLM、カンデラステラディアンで測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22801
-msgid "IfcLuminousIntensityDistributionMeasure"
-msgstr "IfcLuminousIntensityDistributionMeasure"
-
-msgid "IfcLuminousIntensityDistributionMeasure_DEFINITION"
-msgstr "[[IfcLuminousIntensityDistributionMeasure]]は、光源の光強度を光線の方向に応じて変化させる指標です。 これは通常、いくつかの標準化された分布曲線に基づいています。 通常はCandela Lumen cd lmまたはcd klmで測定されます。タイプはREAL HISTORY IFC2x2の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22805
-msgid "IfcLuminousIntensityMeasure"
-msgstr "IfcLuminousIntensityMeasure"
-
-msgid "IfcLuminousIntensityMeasure_DEFINITION"
-msgstr "[[IfcLuminousIntensityMeasure]] は体の明るさの値です。通常カンデラcd で測定します。 タイプ REAL NOTE ISO 10303 41に定義されている発光強度測定から適応されたタイプ HISTORY IFC1.5.1の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22809
-msgid "IfcMagneticFluxDensityMeasure"
-msgstr "IfcMagneticFluxDensityMeasure"
-
-msgid "IfcMagneticFluxDensityMeasure_DEFINITION"
-msgstr "[[IfcMagneticFluxDensityMeasure]] は磁束密度の測定値で、通常テスラT、ウェーバーm2 V s m2で測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22813
-msgid "IfcMagneticFluxMeasure"
-msgstr "IfcMagneticFluxMeasure"
-
-msgid "IfcMagneticFluxMeasure_DEFINITION"
-msgstr "[[IfcMagneticFluxMeasure]] は磁束の測定値です。通常はウェーバーWb, V s で測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22817
-msgid "IfcMassDensityMeasure"
-msgstr "IfcMassDensityMeasure"
-
-msgid "IfcMassDensityMeasure_DEFINITION"
-msgstr "[[IfcMassDensityMeasure]] は媒体の密度の測定で、通常はkgm3で測定されます。 タイプ REAL HISTORY IFC2.0の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22821
-msgid "IfcMassFlowRateMeasure"
-msgstr "IfcMassFlowRateMeasure"
-
-msgid "IfcMassFlowRateMeasure_DEFINITION"
-msgstr "[[IfcMassFlowRateMeasure]] は、単位時間あたりの中流量の質量の尺度です。 通常はkg単位で測定されます。タイプREAL HISTORY IFC2.0の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22825
-msgid "IfcMassMeasure"
-msgstr "IfcMassMeasure"
-
-msgid "IfcMassMeasure_DEFINITION"
-msgstr "[[IfcMassMeasure]]は、体に含まれる物質量の値です。通常はキログラムまたはグラムグラムグラムで測定されます。 タイプ REAL NOTEタイプはISO 10303 41に定義されている質量測定から適応されたものです。履歴 IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:22829
-msgid "IfcMassPerLengthMeasure"
-msgstr "IfcMassPerlengthMeasure"
-
-msgid "IfcMassPerLengthMeasure_DEFINITION"
-msgstr "[[IfcMassPerLengthMeasure]]は、質量/長さに対する尺度です。 例えば、圧延鋼のプロファイルの場合、架空ビームの重量は通常kgmの長さで表され、コスト計算と構造解析を目的としています。 タイプ REAL HISTORY IFC2x2 の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22833
-msgid "IfcModulusOfElasticityMeasure"
-msgstr "IfcModulusOfElasticityMeasure"
-
-msgid "IfcModulusOfElasticityMeasure_DEFINITION"
-msgstr "[[IfcModulusOfElasticityMeasure]] は弾性率の係数です。通常はN m2で測定されます。タイプ REAL HISTORY IFC2xの新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22837
-msgid "IfcModulusOfLinearSubgradeReactionMeasure"
-msgstr "IfcModulusOfLinearSubgradeReactionMeasure"
-
-msgid "IfcModulusOfLinearSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfLinearSubgradeReactionMeasure]] は、線形サブグレード反応の弾性係数の測定値です。 弾性のある寝具を表現します例えばビームなどの長さごとの線形構造要素です 典型的には、N m 2で測定されます。Type REAL HISTORY IFC2x2の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22842
-msgid "IfcModulusOfRotationalSubgradeReactionMeasure"
-msgstr "IfcModulusOfRotationalSubgradeReactionMease"
-
-msgid "IfcModulusOfRotationalSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfRotationalSubgradeReactionMeasure]] は、回転サブグレード反応の弾性係数を示す指標です。 ビームなどの長さごとの線形構造要素の回転弾性寝具を表現します 通常は Nm m rad で測定されます。タイプ REAL HISTORY IFC2x2 の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22847
-msgid "IfcModulusOfSubgradeReactionMeasure"
-msgstr "IfcModulusOfSubgradeReactionMeasure"
-
-msgid "IfcModulusOfSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfSubgradeReactionMeasure]] は基礎構造と土壌との相互作用を記述した地質工学的尺度です。 通常、N m3で測定されます. タイプ REAL HISTORY IFC2xの新しいタイプ. 図1は、平面のメンバーの弾性サポートを示しています。 .. .. .. .. .. .. .. ifcmodulusofsubgradereactionmeasure.gif 図1 サブグレード反応のモジュラス測定 bSIドキュメント"
-
-#:IFC.xml:22852
-msgid "IfcMoistureDiffusivityMeasure"
-msgstr "IfcMoistureDiffusivityMeasure"
-
-msgid "IfcMoistureDiffusivityMeasure_DEFINITION"
-msgstr "[[IfcMoistureDiffusivityMeasure]] は水分拡散度の尺度です。通常はm3 sで測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22856
-msgid "IfcMolecularWeightMeasure"
-msgstr "IfcMolecularWeightMeasure"
-
-msgid "IfcMolecularWeightMeasure_DEFINITION"
-msgstr "[[IfcMolecularWeightMeasure]]は材料の分子量の尺度であり、典型的にはガスです。 通常、gモグラで測定されます。タイプREAL HISTORYIFC2xの新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22860
-msgid "IfcMomentOfInertiaMeasure"
-msgstr "IfcMomentOfInertiaMease"
-
-msgid "IfcMomentOfInertiaMeasure_DEFINITION"
-msgstr "[[IfcMomentOfInertiaMeasure]] は慣性モーメントの測定値です。通常はm4で測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22864
-msgid "IfcMonetaryMeasure"
-msgstr "IfcMonetaryMeasure"
-
-msgid "IfcMonetaryMeasure_DEFINITION"
-msgstr "通貨に関係なく、金額の金額を表します。タイプ 本当の履歴 IFC2.0の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:22868
-msgid "IfcNonNegativeLengthMeasure"
-msgstr "IfcNonnegativeLengthMeasure"
-
-msgid "IfcNonNegativeLengthMeasure_DEFINITION"
-msgstr "非負の長さの尺度は、ゼロ以上の長さの尺度です。 タイプ [[IfcLengthMeasure]] HISTORY IFC4の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22877
-msgid "IfcNormalisedRatioMeasure"
-msgstr "IfcNormalisedRatioMeasure"
-
-msgid "IfcNormalisedRatioMeasure_DEFINITION"
-msgstr "[[IfcNormalisedRatioMeasure]] は、0.0 から 1.0 の範囲の比率を表現する寸法なし尺度です。タイプ REAL HISTORY IFC2x の新しいタイプ bSI ドキュメント"
-
-#:IFC.xml:22887
-msgid "IfcNumericMeasure"
-msgstr "IfcNumericMeasure"
-
-msgid "IfcNumericMeasure_DEFINITION"
-msgstr "[[IfcNumericMeasure]] は、物理量の数値です。 タイプ NUMBER NOTEタイプ ISO 10303 41に定義されている数値基準に適合したタイプ HISTORY IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:22891
-msgid "IfcParameterValue"
-msgstr "IfcParameterValue"
-
-msgid "IfcParameterValue_DEFINITION"
-msgstr "[[IfcParameterValue]]は、パラメータ空間におけるパラメータの量を指定する値です。 タイプ REAL NOTEタイプは、ISO 10303 41に定義されたパラメータ値から変更されたものです。履歴 IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:22897
-msgid "IfcPHMeasure"
-msgstr "IfcPHMeasure"
-
-msgid "IfcPHMeasure_DEFINITION"
-msgstr "[[IfcPHMeasure]]は、通常、0から14の範囲の酸性度の測定として定義される液体中の臼歯水素イオン濃度の測定値です。 HISTORY IFC2x2の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22905
-msgid "IfcPlanarForceMeasure"
-msgstr "IfcPlanarForceMeasure"
-
-msgid "IfcPlanarForceMeasure_DEFINITION"
-msgstr "[[IfcPlanarForceMeasure]] は、面積の力の尺度です。通常はN m2で測定されます。タイプ REAL HISTORY IFC2xで新しいタイプ bSI Documentation"
-
-#:IFC.xml:22909
-msgid "IfcPlaneAngleMeasure"
-msgstr "IfcPlaneAngleMeasure"
-
-msgid "IfcPlaneAngleMeasure_DEFINITION"
-msgstr "An [[IfcPlaneAngleMeasure]] is the value of an angle in a plane. Usually measured in radian rad, m m 1 , but also grads may be used. The grad unit has to be declared as a conversion based unit based on radian unit. NOTE [[IfcPlaneAngleMeasure]] is used where angles need to be described to an accuracy of less than one degree and expressed as decimal parts of an angle. It is widely used for angular measurement except for situations where accuracy needs to be defined using arc measurement for which purpose the [[IfcCompoundPlaneAngleMeasure]] is provided. Type REAL NOTE Type adapted from plane angle measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22914
-msgid "IfcPositiveInteger"
-msgstr "IfcPositiveInteger"
-
-msgid "IfcPositiveInteger_DEFINITION"
-msgstr "[[IfcPositiveInteger]] is a defined type based on simple data type Integer with the additional restriction to positive integers excluding zero . In principle, the domain of [[IfcInteger]] is all integer numbers larger than zero. Here the number of bits used for the [[IfcInteger]] representation is unconstrained, but in practice it is implementation specific. Type INTEGER HISTORY New type in IFC4 ADD1 bSI Documentation"
-
-#:IFC.xml:22922
-msgid "IfcPositiveLengthMeasure"
-msgstr "IfcPositiveLengthMeasure"
-
-msgid "IfcPositiveLengthMeasure_DEFINITION"
-msgstr "An [[IfcPositiveLengthMeasure]] is a length measure that is greater than zero. Type [[IfcLengthMeasure]] NOTE Type adapted from positive length measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22932
-msgid "IfcPositivePlaneAngleMeasure"
-msgstr "IfcPositivePlaneAngleMeasure"
-
-msgid "IfcPositivePlaneAngleMeasure_DEFINITION"
-msgstr "An [[IfcPositivePlaneAngleMeasure]] is a plane angle measure that is greater than zero. Type [[IfcPlaneAngleMeasure]] NOTE Type adapted from positive plane angle measure defined in ISO10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22940
-msgid "IfcPositiveRatioMeasure"
-msgstr "IfcPositiveRatioMeasure"
-
-msgid "IfcPositiveRatioMeasure_DEFINITION"
-msgstr "An [[IfcPositiveRatioMeasure]] is a ratio measure that is greater than zero. Type [[IfcRatioMeasure]] NOTE Type adapted from positive ratio measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22949
-msgid "IfcPowerMeasure"
-msgstr "IfcPowerMeasure"
-
-msgid "IfcPowerMeasure_DEFINITION"
-msgstr "[[IfcPowerMeasure]] は必要とされる、または使用される電力の尺度です。通常はワットW、J s で測定されます。 タイプ REAL HISTORY IFC2.0の新しいタイプ bSI Documentation"
-
-#:IFC.xml:22953
-msgid "IfcPressureMeasure"
-msgstr "IfcPressureMeasure"
-
-msgid "IfcPressureMeasure_DEFINITION"
-msgstr "[[IfcPressureMeasure]] は、単位面積に作用する媒体の量の尺度です。 通常は Pascals Pa, N m2 で測定されます. タイプREAL HISTORY IFC2.0の新しいタイプ. bSI Documentation"
-
-#:IFC.xml:22957
-msgid "IfcRadioActivityMeasure"
-msgstr "IfcRadioActivityMeasure"
-
-msgid "IfcRadioActivityMeasure_DEFINITION"
-msgstr "[[IfcRadioActivityMeasure]] は放射性核種の活性を測定します。通常ベクレルBq, 1 s で測定されます。 タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22961
-msgid "IfcRatioMeasure"
-msgstr "IfcRatioMeasure"
-
-msgid "IfcRatioMeasure_DEFINITION"
-msgstr "An [[IfcRatioMeasure]] is the value of the relation between two physical quantities that are of the same kind. NOTE Input given in percent is to be divided by 100 when stored as an [[IfcRatioMeasure]] . For example, 25 becomes 0.25. Type REAL NOTE Type adapted from ratio measure defined in ISO 10303 41. HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22967
-msgid "IfcReal"
-msgstr "IfcReal"
-
-msgid "IfcReal_DEFINITION"
-msgstr "[[IfcReal]] is a defined type of simple data type REAL. It is required since a select type [[IfcSimpleValue]] , cannot directly include simple types in its select list. In principle, the domain of [[IfcReal]] being a Real is all rational, irrational and scientific real numbers. Here the precision is unconstrained, but in practice it is implementation specific. Type REAL HISTORY New type in IFC1.5.1. bSI Documentation"
-
-#:IFC.xml:22971
-msgid "IfcRotationalFrequencyMeasure"
-msgstr "IfcRotationalFrequencyMeasure"
-
-msgid "IfcRotationalFrequencyMeasure_DEFINITION"
-msgstr "[[IfcRotationalFrequencyMeasure]] は、アイテムが単位時間で回転する周期数を表します。 通常、サイクル数で測定されます。タイプ REAL HISTORY IFC2xの新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22975
-msgid "IfcRotationalMassMeasure"
-msgstr "IfcRotationalMassMeasure"
-
-msgid "IfcRotationalMassMeasure_DEFINITION"
-msgstr "回転質量計は、角加速度に対する身体の慣性を表します。 通常はkgmで測定されます。タイプ REAL HISTORY IFC2x2の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:22979
-msgid "IfcRotationalStiffnessMeasure"
-msgstr "IfcRotationalStiffnessMeasure"
-
-msgid "IfcRotationalStiffnessMeasure_DEFINITION"
-msgstr "[[IfcRotationalStiffnessMeasure]] は回転剛性の尺度です。通常はNm radで測定されます。Type REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22984
-msgid "IfcSectionalAreaIntegralMeasure"
-msgstr "IfcSectionalAreaIntegralMeasure"
-
-msgid "IfcSectionalAreaIntegralMeasure_DEFINITION"
-msgstr "断面積積積分測定は、通常、ねじり分析に使用されます。 通常はmで測定されます。Type REAL HISTORY IFC2x2の新しいタイプです。"
-
-#:IFC.xml:22988
-msgid "IfcSectionModulusMeasure"
-msgstr "IfcSectionModulusMeasure"
-
-msgid "IfcSectionModulusMeasure_DEFINITION"
-msgstr "[[IfcSectionModulusMeasure]] は、曲げまたはねじりの瞬間に対する断面の抵抗の尺度です。 通常は、m 3 で測定されます。Type REAL HISTORY IFC2x2の新しいタイプ。"
-
-#:IFC.xml:22992
-msgid "IfcShearModulusMeasure"
-msgstr "IfcShearModulusMeasure"
-
-msgid "IfcShearModulusMeasure_DEFINITION"
-msgstr "[[IfcShearModulusMeasure]] はせん断係数の尺度です。通常はN m2で測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:22996
-msgid "IfcSolidAngleMeasure"
-msgstr "IfcSolidAngleMeasure"
-
-msgid "IfcSolidAngleMeasure_DEFINITION"
-msgstr "[[IfcSolidAngleMeasure]] は固体中の角度の値です。通常はSteradians, sr, m2 で測定されます。 タイプ REAL NOTEタイプ ISO 10303 41に定義されている実角度測定から適応されたタイプ。HISTORY IFC1.5.1に新たなタイプ。"
-
-#:IFC.xml:23000
-msgid "IfcSoundPowerLevelMeasure"
-msgstr "IfcSoundPowerLevelMeasure"
-
-msgid "IfcSoundPowerLevelMeasure_DEFINITION"
-msgstr "サウンドパワーレベルの測定は、ピコワットの基準値を持つデシベル単位を持つ総放射ノイズの測定です。 タイプ REAL HISTORY IFC4で改名されたのは [[IfcSoundPowerMeasure]] . bSI Documentation"
-
-#:IFC.xml:23004
-msgid "IfcSoundPowerMeasure"
-msgstr "IfcSoundPowerMeasure"
-
-msgid "IfcSoundPowerMeasure_DEFINITION"
-msgstr "音響電力測定は、単位あたりのワット音のエネルギー単位を持つ総放射ノイズの測定です。 REAL HISTORY IFC2x2の新しい型をIFC4で変更しました。単位デシベルを使用する場合は[[IfcSoundPowerLevelMeasure]]も参照してください。"
-
-#:IFC.xml:23008
-msgid "IfcSoundPressureLevelMeasure"
-msgstr "IfcSoundPressureLevelMeasure"
-
-msgid "IfcSoundPressureLevelMeasure_DEFINITION"
-msgstr "音圧レベル測定は、マイクロパスカルの基準値を持つデシベル単位で周囲圧力レベルに重ね合わせた圧力変動の測定です。 タイプ REAL HISTORY IFC4で改名されたのは [[IfcSoundPressureMeasure]] . bSI Documentation"
-
-#:IFC.xml:23012
-msgid "IfcSoundPressureMeasure"
-msgstr "IfcSoundPressureMeasure"
-
-msgid "IfcSoundPressureMeasure_DEFINITION"
-msgstr "音圧測定とは、周囲の圧力レベルと通行量単位を重ね合わせた圧力変動の測定です。 REAL HISTORY IFC2x2に新しいタイプを入力し、IFC4で変更。 単位デシベルを使用する場合は[[IfcSoundPressureLevelMeasure]]も参照してください。bSI Documentation"
-
-#:IFC.xml:23016
-msgid "IfcSpecificHeatCapacityMeasure"
-msgstr "IfcSpecificatHeatCapacityMeasure"
-
-msgid "IfcSpecificHeatCapacityMeasure_DEFINITION"
-msgstr "[[IfcSpecificHeatCapacityMeasure]] は材料の特定の熱を定義します 温度単位あたりに吸収される熱エネルギー。 通常はJkgケルビンで測定されます。タイプREAL HISTORYIFC2xの新しいタイプです。bSIドキュメント"
-
-#:IFC.xml:23020
-msgid "IfcTemperatureGradientMeasure"
-msgstr "IfcTemperatureGradientMeasure"
-
-msgid "IfcTemperatureGradientMeasure_DEFINITION"
-msgstr "温度勾配は、たとえば外部壁またはその層で使用されるように、長さあたりの温度差を測定します。 通常はKmで測定されます。タイプREAL HISTORYIFC2x2の新しいタイプです。bSI Documentation"
-
-#:IFC.xml:23024
-msgid "IfcTemperatureRateOfChangeMeasure"
-msgstr "IfcTemperatureRateOfChangeMeasure"
-
-msgid "IfcTemperatureRateOfChangeMeasure_DEFINITION"
-msgstr "変化の温度速度は、例えば、熱センサで使用されるように、時間の正の上昇、マイナスの落下あたりの温度の差を測定します。 例えば、Ks ケルビン/秒で測定されます。タイプREAL HISTORYIFC4の新しいタイプです。bSIドキュメント"
-
-#:IFC.xml:23028
-msgid "IfcText"
-msgstr "IfcText"
-
-msgid "IfcText_DEFINITION"
-msgstr "An [[IfcText]] is an alphanumeric string of characters which is intended to be read and understood by a human being. It is for information purposes only. Type STRING NOTE Type adapted from text defined in ISO 10303 41. HISTORY New type in IFC2x. NOTE The set of characters that may appear in STRINGs exchanged in the exchange structure as defined in ISO 10303.21 is provided in ISO 10646. The encoding of characters in case of file based exchange is defined in ISO 10303 21 and ISO 10303 28. Among else, these specifications define the encoding of 8 bit characters from ISO 8859 1... 16 and of 2 byte and 4 byte Unicode characters from ISO 10646. Note that while [[IfcText]] is not formally restricted in length, the size of a string in ISO 10303 21 conforming exchange files must not exceed 32767 octets after encoding and escaping. bSI Documentation"
-
-#:IFC.xml:23032
-msgid "IfcThermalAdmittanceMeasure"
-msgstr "IfcThermalAdmittanceMeasure"
-
-msgid "IfcThermalAdmittanceMeasure_DEFINITION"
-msgstr "[[IfcThermalAdmittanceMeasure]] は、温度変化を滑らかにする表面の能力の尺度です。 通常はワットm2ケルビンで測定されます。タイプREAL HISTORYIFC2.0の新しいタイプです。bSIドキュメント"
-
-#:IFC.xml:23036
-msgid "IfcThermalConductivityMeasure"
-msgstr "Ifc熱伝導度測定"
-
-msgid "IfcThermalConductivityMeasure_DEFINITION"
-msgstr "[[IfcThermalConductivityMeasure]] は熱伝導度の尺度です。通常はワットmケルビンで測定されます。タイプはREAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:23040
-msgid "IfcThermalExpansionCoefficientMeasure"
-msgstr "IfcThermalExpansion係数測定"
-
-msgid "IfcThermalExpansionCoefficientMeasure_DEFINITION"
-msgstr "IfcThermalExpansionCoeffientMeasureは、材料の熱膨張係数の測定値で、温度差の比としてその伸びを表します。 これは通常、1 Kで測定されます。正の温度上昇あたりの正の伸びは正の値で表されます。 タイプ REAL HISTORY IFC2x2 の新しいタイプ bSI Documentation"
-
-#:IFC.xml:23044
-msgid "IfcThermalResistanceMeasure"
-msgstr "IfcThermalResistanceMeasure"
-
-msgid "IfcThermalResistanceMeasure_DEFINITION"
-msgstr "[[IfcThermalResistanceMeasure]] は、体がエネルギーの流れに与える抵抗の尺度です。 通常はm2ケルビンワットで測定されます。履歴 IFC2.0の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:23048
-msgid "IfcThermalTransmittanceMeasure"
-msgstr "Ifcサーマル透過測定"
-
-msgid "IfcThermalTransmittanceMeasure_DEFINITION"
-msgstr "[[IfcThermalTransmittanceMeasure]]は、体を通してエネルギーが伝わる速度の尺度です。 通常はワットm2ケルビンで測定されます。タイプREAL HISTORYIFC2.0の新しいタイプです。bSIドキュメント"
-
-#:IFC.xml:23052
-msgid "IfcThermodynamicTemperatureMeasure"
-msgstr "Ifc熱力学温度測定"
-
-msgid "IfcThermodynamicTemperatureMeasure_DEFINITION"
-msgstr "ISO CDからの定義 10303 41 1992 熱力学的温度測定とは、体の熱の度合いの値です。 通常度ケルビンKで測定されます。 タイプREAL NOTE 規格の最終定義については、ISO 10303名の熱力学的温度測定に対応しています。 HISTORY IFC1.5.1の新しいタイプ bSI Documentation"
-
-#:IFC.xml:23056
-msgid "IfcTimeMeasure"
-msgstr "IfcTimeMeasure"
-
-msgid "IfcTimeMeasure_DEFINITION"
-msgstr "[[IfcTimeMeasure]]は期間の長さの値です。秒または日数、または他の時間単位で測定します。 タイプ REAL NOTEタイプは、ISO 10303 41に定義されている時間尺度から適応されたものです。履歴 IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:23060
-msgid "IfcTorqueMeasure"
-msgstr "IfcTorqueMeasure"
-
-msgid "IfcTorqueMeasure_DEFINITION"
-msgstr "[[IfcTorqueMeasure]] は、カップルのトルクまたはモーメントの測定値です。 通常、N m で測定されます。タイプ REAL HISTORY IFC2xの新しいタイプです。bSI Documentation"
-
-#:IFC.xml:23064
-msgid "IfcVaporPermeabilityMeasure"
-msgstr "IfcVaporPermeabilityMeasure"
-
-msgid "IfcVaporPermeabilityMeasure_DEFINITION"
-msgstr "[[IfcVaporPermeabilityMeasure]] は蒸気透過率の尺度です。通常はキログラムのパスカルで測定されます。タイプ REAL HISTORY IFC2xの新しいタイプ bSI Documentation"
-
-#:IFC.xml:23068
-msgid "IfcVolumeMeasure"
-msgstr "IfcVolumeMeasure"
-
-msgid "IfcVolumeMeasure_DEFINITION"
-msgstr "[[IfcVolumeMeasure]] は体の固体含有量の値です。通常は立方メートルm3で測定されます。 タイプ REAL NOTEタイプはISO 10303 41に定義されているボリューム基準に適合しています。履歴 IFC1.5.1の新しいタイプ bSIドキュメント"
-
-#:IFC.xml:23072
-msgid "IfcVolumetricFlowRateMeasure"
-msgstr "IfcVolumetricFlowRateMeasure"
-
-msgid "IfcVolumetricFlowRateMeasure_DEFINITION"
-msgstr "[[IfcVolumetricFlowRateMeasure]]は単位時間あたりの流量の尺度です。 通常はm3で測定されます. タイプREAL HISTORYIFC2.0で新しいタイプ. bSI Documentation"
-
-#:IFC.xml:23076
-msgid "IfcWarpingConstantMeasure"
-msgstr "IfcWarpingConstantMeasure"
-
-msgid "IfcWarpingConstantMeasure_DEFINITION"
-msgstr "[[IfcWarpingConstantMeasure]]は、ねじり負荷下での断面積の歪み定数または歪み抵抗に対する尺度です。 通常は、m 6 で測定されます。Type REAL HISTORY IFC2x2の新しいタイプ。"
-
-#:IFC.xml:23080
-msgid "IfcWarpingMomentMeasure"
-msgstr "IfcWarpingMomentMeasure"
-
-msgid "IfcWarpingMomentMeasure_DEFINITION"
-msgstr "ワーピングモーメント測定は、ねじり分析で発生するワーピングモーメントの測定値です。 通常は kN m 2 で測定されます。タイプ REAL HISTORY IFC2x2 の新しいタイプです。bSI Documentation"
+msgid "IfcAppliedValueSelect_DEFINITION"
+msgstr "[[IfcAppliedValueSelect]] defines a value to be calculated within a formula. Types are used as follows [[IfcValue]] A constant value using project default units. [[IfcMeasureWithUnit]] A constant value using specified units. [[IfcReference]] A value referenced on an object attribute. For cost values, the following guidance applies [[IfcMeasureWithUnit]] allows the specification of both the actual figure for the value together with the currency in which the value is represented. Selecting [[IfcMonetaryMeasure]] allows the specification only of the value, the currency being as set by the global context. Selecting [[IfcRatioMeasure]] assumes that the amount is a percentage or other REAL number. Note that if the amount is normally specified as 20 , then this figure will need to be converted to a multiplier of 0.8 HISTORY New select type in IFC2x2."
 
