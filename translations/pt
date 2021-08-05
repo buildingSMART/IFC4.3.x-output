@@ -9,394 +9,457 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcActorResource.pot\n"
-"X-Crowdin-File-ID: 20\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
 "PO-Revision-Date: 2021-08-05 20:09\n"
 
-#:IFC.xml:16
-msgid "IfcActorRole"
-msgstr "IfcActorRole"
+#:IFC.xml:658
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-msgid "IfcActorRole_DEFINITION"
-msgstr "Esta entidade indica um papel que é executado por um ator ou por uma pessoa relacionada a uma organização. NOTA: A lista de funções dos valores de enumeração do atributo Função nunca pode ser concluída. Portanto, usando o valor de enumeração USERDEFINIDO, o usuário pode fornecer qualquer função como um valor do atributo UserDefinedRole . NOTE Entidade adaptada do papel da organização e do papel de pessoa definido no ISO 10303 41. HISTÓRIA nova entidade na documentação IFC1.5.1. bSI"
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the S LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:86
-msgid "IfcActorRole_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:741
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcActorRole_HasExternalReference_DEFINITION"
-msgstr "HasExternalReference"
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspectStyle"
 
-#:IFC.xml:21
-msgid "IfcActorRole_Role"
-msgstr "Funções"
+#:IFC.xml:679
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "Profundidade"
 
-msgid "IfcActorRole_Role_DEFINITION"
-msgstr "O nome do papel desempenhado por um ator. Se a função tem o valor USUÁRIO e, em seguida, X 0D a função definida pelo usuário será fornecida como um valor do atributo UserDefinedRole."
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "Profundidade do cerco da porta, medida perpendicular ao avião do fechamento da porta. Se omitido e com um determinado valor para forro de espessura, ele indica uma profundidade ajustável i. . uma profundidade que se ajusta à espessura da parede na qual a ocorrência desta porta é inserida."
 
-#:IFC.xml:26
-msgid "IfcActorRole_UserDefinedRole"
-msgstr "Papel"
+#:IFC.xml:684
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "LingThickness"
 
-msgid "IfcActorRole_UserDefinedRole_DEFINITION"
-msgstr "Permite a especificação de funções definidas pelo usuário além dos valores de enumeração X 0D fornecidos pelo Papel atributo do tipo [[IfcRoleEnum]]. X 0D Quando um valor é fornecido para atributo UserDefinedRole em paralelo X 0D, a função de atributo deve ter o valor de enumeração USERDEFINADO."
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "Espessura do forro da porta, conforme explicado na figura acima. Se o valor da LingThickness for 0. zero, indica uma porta sem um forro de todos os outros parâmetros de forro devem ser definidos como NIL neste caso. Se a LingThickness é NIL, ela indica que o valor não está disponível. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados modificado para ser [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:31
-msgid "IfcActorRole_Description"
-msgstr "Descrição:"
+#:IFC.xml:689
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "Profundidade máxima"
 
-msgid "IfcActorRole_Description_DEFINITION"
-msgstr "Uma descrição textual relacionada com a natureza do papel desempenhado por um ator."
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "Dimensão da profundidade do avião perpendicular à folha de porta do limite da porta. Apenas dado se o forro da porta incluir um limiar. Se omitido e com um determinado valor para a espessura do limite, indica uma profundidade ajustável, ou seja, uma profundidade que se ajusta à espessura da parede na qual a ocorrência desta porta está inserida."
 
-#:IFC.xml:98
-msgid "IfcAddress"
-msgstr "IfcEndereço"
+#:IFC.xml:694
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "Espessura"
 
-msgid "IfcAddress_DEFINITION"
-msgstr "Esta entidade abstrata representa vários tipos de endereços postais e de telecomunicações. NOTE Entidade adaptada do endereço definido no ISO 10303 41. HISTÓRIA Nova entidade na documentação IFC1.5.1. bSI"
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "Espessura do limite da porta, conforme explicado na figura acima. Se o valor de Espessura for 0. zero indica uma porta sem um limite de profundidade de ThresholdDepth será definida como NIL neste caso. Se o ThresholdThickness é NIL, ele indica que a informação sobre um limite não está disponível. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados modificado para ser [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:120
-msgid "IfcAddress_OfPerson"
-msgstr "Soldado"
+#:IFC.xml:699
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "TransomThickness"
 
-msgid "IfcAddress_OfPerson_DEFINITION"
-msgstr "Soldado"
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "Largura de espessura em um avião paralelo à folha de porta do transom se for fornecido se o atributo TransomOffset estiver definido, o que divide a porta de um glaciar ou janela acima. X 0D Se a TransomThickness está definida como zero e o TransomOffset como tamanho positivo, então a porta é dividida verticalmente em uma área de janela de folha e de transom sem uma moldura física. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados mudou para [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:134
-msgid "IfcAddress_OfOrganization"
-msgstr "Oferta"
+#:IFC.xml:704
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-msgid "IfcAddress_OfOrganization_DEFINITION"
-msgstr "Oferta"
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "Deslocamento do transom se determinado que divide a porta de um glazeiro ou janela acima. O deslocamento é dado a partir da base da abertura da porta."
 
-#:IFC.xml:103
-msgid "IfcAddress_Purpose"
-msgstr "Objetivo"
+#:IFC.xml:709
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcAddress_Purpose_DEFINITION"
-msgstr "Identifica a localização lógica do endereço."
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "Dimensão de deslocamento no avião perpendicular à folha de porta do cerco da porta. O deslocamento é dado como distância ao eixo x da localização local."
 
-#:IFC.xml:108
-msgid "IfcAddress_Description"
-msgstr "Descrição:"
+#:IFC.xml:714
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "Deslocamento"
 
-msgid "IfcAddress_Description_DEFINITION"
-msgstr "Texto que relaciona a natureza do endereço."
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "Dimensão de compensação no avião perpendicular à folha de porta do limite de porta. O deslocamento é dado como distância ao eixo x da localização local. Só quando o forro da porta tiver um limiar, e o parâmetro for conhecido."
 
-#:IFC.xml:113
-msgid "IfcAddress_UserDefinedPurpose"
-msgstr "Propósito"
+#:IFC.xml:719
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "Espessura"
 
-msgid "IfcAddress_UserDefinedPurpose_DEFINITION"
-msgstr "Permite a especificação da finalidade do usuário específica do endereço além dos valores de enumeração X 0D fornecidos por Finalidade do atributo do tipo [[IfcAddressTypeEnum]]. X 0D quando um valor é fornecido para o atributo UserDefinedPurpose, em paralelo o propósito do atributo X 0D deve ter o valor de enumeração USERDEFINIDO."
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "Espessura da dimensão do revestimento no avião da folha de porta. Se for dada a sua aplicação igual aos quatro lados da parede adjacente."
 
-#:IFC.xml:148
-msgid "IfcAddressTypeEnum"
-msgstr "IfcAddressTypeEnum"
+#:IFC.xml:724
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "Profundidade Casada"
 
-msgid "IfcAddressTypeEnum_DEFINITION"
-msgstr "Esta enumeração identifica a localização lógica do endereço. HISTORY Nova enumeração na documentação IFC2x. bSI"
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "Profundidade da dimensão revestida no avião perpendicular à folha de porta. Se for dada a sua aplicação igual aos quatro lados da parede adjacente."
 
-#:IFC.xml:155
-msgid "IfcOrganization"
-msgstr "Organização"
+#:IFC.xml:729
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanelOffsetX"
 
-msgid "IfcOrganization_DEFINITION"
-msgstr "Um agrupamento nomeado e estruturado com uma identidade corporativa. NOTA: As relações entre [[IfcOrganization]], como entre o departamento dentro de uma empresa, podem ser expressas usando o relacionamento objetivo [[IfcOrganizationRelationship]]. NOTE Entidade adaptada da organização definida no ISO 10303 41. HISTÓRIA nova entidade no IFC1. .1. .change ifc2x4 IFC4 ID do Atributo CHANGE renomeado para identificação . Documentação bSI"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Deslocamento entre o forro e o painel da janela medido ao longo do eixo x do posicionamento local. X 0D .change ifc2x4 X 0D IFC4 ALTERAR Novo atributo adicionado no final da definição da entidade."
 
-#:IFC.xml:74
-msgid "IfcOrganization_Roles"
-msgstr "Papéis"
+#:IFC.xml:734
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanelOffsetY"
 
-msgid "IfcOrganization_Roles_DEFINITION"
-msgstr "Papéis"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Deslocamento entre o forro e o painel da porta medido ao longo do eixo y do posicionamento local. X 0D .change ifc2x4 X 0D IFC4 ALTERAR Novo atributo adicionado no final da definição da entidade."
 
-#:IFC.xml:134
-msgid "IfcOrganization_Addresses"
-msgstr "Endereços"
+#:IFC.xml:753
+msgid "IfcDoorPanelOperationEnum"
+msgstr "IfcDoorPanelOperationEnum"
 
-msgid "IfcOrganization_Addresses_DEFINITION"
-msgstr "Endereços"
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "Esta enumeração define as formas básicas de funcionamento dos painéis de porta individuais, conforme mostrado na Figura 1. Enumerator Illustração Girando DoubleActing Sliding Revolding Rollingup (Rollingup FixedPanel - Operações de Figura 1 não Definidas - A direção de abertura dos painéis da porta é dada pelo posicionamento local da [[IfcDoor]]. O eixo y positivo determina a direção conforme mostrado na figura 2. direção do painel .. .. .. .. .. figura ifcdoorpaneloperationenum fig10. se as operações dos painéis de Figura 2 NOTA: a representação simbólica depende do código de construção nacional. Estes números são mostrados apenas como ilustrações de uma nova enumeração da HISTORY no IFC2.0. .Altere ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL adicionado."
 
-#:IFC.xml:175
-msgid "IfcOrganization_Engages"
-msgstr "Envolamentos"
+#:IFC.xml:764
+msgid "IfcDoorPanelPositionEnum"
+msgstr "IfcDoorPanelPositionEnum"
 
-msgid "IfcOrganization_Engages_DEFINITION"
-msgstr "Envolamentos"
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "Esta enumeração define as formas básicas de descrever a localização de um painel de portas dentro de um fechamento de porta. HISTÓRIA Nova Enumeração na Figura IFC2x 1 mostra a designação de um painel de portas com uma Posição das portas LEFT do painel e um painel de portas com RIGHT do tipo PanelPosition dentro de um estilo de porta com OperationType DOUBLE DOOU SINGEL. A posição é dada como mostrado no plano XZ da localização local, analisando a direção do eixo Y positivo. .. .. .. .. .. .. .. figura ifcdoorpanelpositionenum fig01.gif Figure 1 painéis de posição bSI Documentação"
 
-#:IFC.xml:201
-msgid "IfcOrganization_IsRelatedBy"
-msgstr "Relacionado"
+#:IFC.xml:770
+msgid "IfcDoorPanelProperties"
+msgstr "Propriedades"
 
-msgid "IfcOrganization_IsRelatedBy_DEFINITION"
-msgstr "Relacionado"
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "Um painel de portas é normalmente uma folha de porta que se abre para permitir que pessoas ou bens passem. Os parâmetros do painel da porta definem o parâmetro geométrico relevante do painel, A [[IfcDoorPanelProperties]] é usada para descrever paramétrica a forma e a operação dos painéis de porta. A definição paramétrica pode ser acrescentada única ou exclusivamente à representação explícita da porta. A [[IfcDoorType]] pode definir portas compostas por mais de um painel. Nesse caso, uma instância de [[IfcDoorPanelProperties]] deve ser incluída para cada painel de porta. O atributo PanelPosition , em conjunto com o atributo [[IfcDoorStyle]].OperationType, determina para qual painel o [[IfcDoorPanelProperties]] se aplica. A [[IfcDoorPanelProperties]] está incluída na lista de propriedades, dada pelo atributo HasPropertySet do [[IfcDoorType]]. Mais informações sobre o painel de portas podem ser incluídas na mesma lista de [[IfcDoorStyle]] usando o [[IfcPropertySet]] para extensões dinâmicas. A [[IfcDoorPanelProperties]] não possui uma representação geométrica. No entanto, ele define parâmetros que podem ser usados para criar a forma do tipo de porta que é inserido pelo [[IfcDoor]] no contexto espacial do projeto, conforme mostrado na Figura 1. Os parâmetros do [[IfcDoorPanelProperties]] definem um painel de porta padrão, incluindo se for dada uma largura proporcional para definir duplo balanço não uniforme ou portas de slide, ou dobramento. O limite externo do painel é determinado pela representação de forma de perfil atribuída ao [[IfcDoor]], o que insere a [[IfcDoorType]]. Tem de ter também em conta o parâmetro de referência. A profundidade do painel de balanço, ato duplo e painéis deslizantes é definida pelo parâmetro de profundidade do painel. Profundidade de porta para tipos de operação de porta que incluem mais de um painel, a largura de pelo menos um painel é dada por uma medida de proporção normalizada. Determina a largura desse painel, que é definido como uma proporção da largura total da abertura da porta. Figura de PanelWidth 1 painel de propriedades de painel de porta HISTORY Nova entidade na IFC2.0. .Alterar ifc2x4 IFC4 CHANGE Supertipo alterado para novo [[IfcPreDefinedPropertySet]] . bSI Documentação"
 
-#:IFC.xml:215
-msgid "IfcOrganization_Relates"
-msgstr "Relações"
+#:IFC.xml:797
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcOrganization_Relates_DEFINITION"
-msgstr "Relações"
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspectStyle"
 
-#:IFC.xml:156
-msgid "IfcOrganization_Identification"
-msgstr "Identificação"
+#:IFC.xml:775
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "Profundidade do painel"
 
-msgid "IfcOrganization_Identification_DEFINITION"
-msgstr "Identificação da organização."
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "Profundidade do painel de porta, medida perpendicular ao avião da folha de porta."
 
-#:IFC.xml:161
-msgid "IfcOrganization_Name"
-msgstr "Nome:"
+#:IFC.xml:780
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "Operação"
 
-msgid "IfcOrganization_Name_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, a que se refere a organização."
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "A Operação de painel define a forma de operação desse painel. A Operação do painel tem que corresponder ao Tipo de Operação do [[IfcDoorStyle]] pela qual é referenciado."
 
-#:IFC.xml:166
-msgid "IfcOrganization_Description"
-msgstr "Descrição:"
+#:IFC.xml:785
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "Largura do painel"
 
-msgid "IfcOrganization_Description_DEFINITION"
-msgstr "Texto que diz respeito à natureza da organização."
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "Largura deste painel, dada como proporção em relação à largura total de abertura da porta. Se omitido, o padrão é 1. Um valor deve ser fornecido para todas as portas com OperationType s em [[IfcDoorStyle]] definindo uma porta com mais do que um painel."
 
-#:IFC.xml:229
-msgid "IfcOrganizationRelationship"
-msgstr "Relacionamento"
+#:IFC.xml:790
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "Posição"
 
-msgid "IfcOrganizationRelationship_DEFINITION"
-msgstr "A [[IfcOrganizationRelationship]] estabelece uma associação entre uma organização relacionada e uma ou mais organizações relacionadas. NOTE Entidade adaptada da relação da organização definida no ISO 10303 41. HISTORY Nova entidade em IFC2x .change ifc2x4 IFC4 CHANGE Nome e Descrição promovida para novo supertipo [[IfcResourceLevelRelationship]] . bSI Documentação"
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "Posição deste painel dentro da porta. A Posição do painel porta deve corresponder ao Tipo de Operação do [[IfcDoorStyle]] pelo qual é referenciado."
 
-#:IFC.xml:201
-msgid "IfcOrganizationRelationship_RelatedOrganizations"
-msgstr "Organizações Relacionadas"
+#:IFC.xml:809
+msgid "IfcDoorStyle"
+msgstr "IfcDoorStyle"
 
-msgid "IfcOrganizationRelationship_RelatedOrganizations_DEFINITION"
-msgstr "Organizações Relacionadas"
+msgid "IfcDoorStyle_DEFINITION"
+msgstr "Definição do estilo das portas, [[IfcDoorStyle]] , define um estilo específico de portas, que pode ser incluído no contexto espacial do modelo de construção através de instâncias de [[IfcDoor]]. Um estilo de porta define o parâmetro geral do estilo da porta e refere-se ao parâmetro específico do forro e um ou vários painéis através da [[IfcDoorLiningProperties]] e da [[IfcDoorPanelProperties]]. A entidade da porta, [[IfcDoor]] define uma ocorrência particular de uma porta inserida no contexto espacial de um projeto. O parâmetro real da porta e sua forma é definido no [[IfcDoorStyle]] , para o qual o [[IfcDoor]] está relacionado pela inversa relação IsDefinedBy apontando para IfcRelDefinedByType . O [[IfcDoorStyle]] também define os atributos específicos para o forro , [[IfcDoorLiningProperties]] , e painéis, [[IfcDoorPanelProperties]]. A [[IfcDoorStyle]] define a geometria de base, ou o mapa de representação, para todas as ocorrências do estilo da porta, dadas por [[IfcDoor]], apontando para este estilo. A representação do estilo da porta pode ser dada pelo conjunto acordado de parâmetros mínimos, definido para o forro da porta e os painéis de porta , ou pode ser dada por uma representação geométrica usada pelo [[IfcRepresentationMap]]. O parâmetro de atributo TakesPrecedence decide, se o conjunto de parâmetros pode ser usado para representar exatamente a forma do estilo da porta TRUE , ou se o anexo [[IfcRepresentationMap]] contém a representação exata FALSA. O IfcDoorStyleOperationTypeEnum define o layout geral do estilo de porta. Dependendo do enumerador, as instâncias apropriadas de [[IfcDoorLiningProperties]] e [[IfcDoorPanelProperties]] estão anexadas na lista de HasPropertySets . O IfcDoorStyleOperationTypeEnum determina principalmente a dobradiça do lado esquerdo ou cantada à direita, a operação balançando, deslizando, dobrando, etc. S e o número de painéis. Veja as definições de uso geométrico no IfcDoorStyleOperationTypeEnum para o uso correto dos símbolos de abertura para os diferentes tipos de operações. HISTÓRIO S Nova entidade em IFC2x. .deprecated DEPRECATION A entidade está obsoleta e não deve ser usada. A nova entidade [[IfcDoorType]] será usada em vez disso. BSI Documentação"
 
-#:IFC.xml:215
-msgid "IfcOrganizationRelationship_RelatingOrganization"
-msgstr "Organização"
+#:IFC.xml:810
+msgid "IfcDoorStyle_OperationType"
+msgstr "Tipo"
 
-msgid "IfcOrganizationRelationship_RelatingOrganization_DEFINITION"
-msgstr "Organização"
+msgid "IfcDoorStyle_OperationType_DEFINITION"
+msgstr "Digite a definição do layout geral e a operação do estilo de porta."
 
-#:IFC.xml:232
-msgid "IfcPerson"
-msgstr "IfcPerson"
+#:IFC.xml:815
+msgid "IfcDoorStyle_ConstructionType"
+msgstr "Tipo"
 
-msgid "IfcPerson_DEFINITION"
-msgstr "Esta entidade representa um ser humano individual; note-se que, em muitos países, existe legislação relativa à identificação de pessoas individuais nas bases de dados. Embora a intenção do modelo IFC seja agir como uma especificação para troca de dados e compartilhamento, em algumas situações, um arquivo IFC poderá ser considerado uma base de dados que permita a identificação de uma determinada pessoa nos termos dessa legislação. Os utilizadores devem estar cientes das restrições da legislação que podem ser aplicadas nos locais onde são utilizados os ficheiros IFC. NOTE Entidade adaptada de pessoa definida em ISO 10303 41. HISTÓRIA Nova entidade em IFC1.5.1. Alterar ifc2x4 IFC4 CHANGE Id do atributo renomeado para Identificação. Regra de WHERE relaxada para permitir omissão de nomes se a identificação for fornecida. Documentação bSI"
+msgid "IfcDoorStyle_ConstructionType_DEFINITION"
+msgstr "Digite a definição da construção básica e do tipo material da porta."
 
-#:IFC.xml:50
-msgid "IfcPerson_Roles"
-msgstr "Papéis"
+#:IFC.xml:820
+msgid "IfcDoorStyle_ParameterTakesPrecedence"
+msgstr "Parâmetro Precedência"
 
-msgid "IfcPerson_Roles_DEFINITION"
-msgstr "Papéis"
+msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "O valor booleano reflete, se o parâmetro dado nos fornos e propriedades do painel anexados define exatamente o TRUE geometria, ou se a forma de estilo anexado tem prioridade FALSA. No último caso, o parâmetro só tem valor informativo."
 
-#:IFC.xml:120
-msgid "IfcPerson_Addresses"
-msgstr "Endereços"
+#:IFC.xml:825
+msgid "IfcDoorStyle_Sizeable"
+msgstr "Dimensionável"
 
-msgid "IfcPerson_Addresses_DEFINITION"
-msgstr "Endereços"
+msgid "IfcDoorStyle_Sizeable_DEFINITION"
+msgstr "O valor booleano indica se o IfcMappedRepresentation anexado pode ser dimensionado usando fator de escala da transformação ou não FALSE. se não, IfcMappedRepresentação deve ser [[IfcShapeRepresentation]] do [[IfcDoor]] usando [[IfcMappedItem]como o Item com o fator de escala 1."
 
-#:IFC.xml:287
-msgid "IfcPerson_EngagedIn"
-msgstr "Envolvido"
+#:IFC.xml:832
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
 
-msgid "IfcPerson_EngagedIn_DEFINITION"
-msgstr "Envolvido"
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "Esta enumeração define os tipos básicos de construção de portas. O tipo de construção diz respeito à combinação principal do material ou material utilizado para fazer a porta. HISTORY Nova enumeração na documentação IFC2x. bSI"
 
-#:IFC.xml:241
-msgid "IfcPerson_Identification"
-msgstr "Identificação"
+#:IFC.xml:843
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
 
-msgid "IfcPerson_Identification_DEFINITION"
-msgstr "Identificação da pessoa."
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. bSI Documentation"
 
-#:IFC.xml:246
-msgid "IfcPerson_FamilyName"
-msgstr "FamilyName"
+#:IFC.xml:863
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "IfcPermeableCoveringOperationEnum"
 
-msgid "IfcPerson_FamilyName_DEFINITION"
-msgstr "O nome pelo qual a identidade familiar da pessoa pode ser reconhecida. X 0D NOTE dependendo da localização geográfica e cultura, o nome de família pode aparecer como o primeiro ou último componente de um nome."
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "Esta enumeração define os tipos válidos de coberturas permeáveis. HISTORY Nova enumeração na documentação IFC2.0. bSI"
 
-#:IFC.xml:251
-msgid "IfcPerson_GivenName"
-msgstr "GivenName"
+#:IFC.xml:870
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
 
-msgid "IfcPerson_GivenName_DEFINITION"
-msgstr "O nome pelo qual uma pessoa é conhecida no seio de uma família e pelo qual pode ser familiarmente reconhecida. X 0D NOTE dependendo da localização geográfica e da cultura, esse nome pode aparecer como o primeiro ou último componente de um nome."
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "Esta entidade é uma descrição de um painel dentro de uma porta ou janela como filtros de abertura que permitem o fluxo de ar. É dado por suas propriedades [[IfcPermeableCoveringProperties]]. Uma cobertura permeável é um caso, como um componente, fixo ou aberto, consistindo essencialmente de uma estrutura e de uma infiltração. Normalmente, o inflacionamento é uma grade, um barulho ou uma tela. A forma de operação é definida no tipo de operação. A [[IfcPermeableCoveringProperties]] está incluída na lista de propriedades HasPropertySets dos [[IfcWindowStyle]] ou [[IfcDoorStyle]. Mais informações sobre as coberturas permeáveis podem ser incluídas na mesma lista da janela ou estilo de porta usando o [[IfcPropertySet]] para extensões dinâmicas. Isto se aplica especialmente para propriedades adicionais para os vários tipos de operações. O [[IfcPermeableCoveringProperties]] não possui uma representação geométrica. No entanto, ele define parâmetros que podem ser usados para criar a forma do [[IfcWindowStyle]] que é inserido pelo [[IfcWindow]] no contexto espacial do projeto , ou do [[IfcDoorStyle]] que é inserido por [[IfcDoor]]. Os parâmetros na [[IfcPermeableCoveringProperties]] definem uma cobertura padrão permeável. O limite externo do painel é determinado pelo parâmetro de ocorrência atribuído ao [[IfcWindow]] ou [[IfcDoor]]. Tem de ter também em conta o parâmetro de referência. A posição da cobertura permeável dentro da janela ou porta global é determinada pelo atributo PanelPosition A figura 1 ilustra o painel aplicado à posição dentro do link, conforme definido pelo atributo da posição do painel. Os seguintes parâmetros se aplicam ao painel FrameDepth , FrameThickness . cobrir.. .. .. .. .. .. figura ifcpermeablecoveringproperties.gif Figura 1 permeável cobrindo propriedades HISTORY Nova entidade na IFC2. , tinha sido renomeado de IfcPermeableCovering na IFC2x. .change ifc2x4 IFC4 CHANGE Supertype alterado para nova [[IfcPreDefinedPropertySet]] . bSI Documentação"
 
-#:IFC.xml:256
-msgid "IfcPerson_MiddleNames"
-msgstr "MeioNomes"
+#:IFC.xml:893
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcPerson_MiddleNames_DEFINITION"
-msgstr "Nomes adicionais dados a uma pessoa que ative sua identificação, além de outras pessoas que possam ter a mesma ou semelhante família e que tenham os mesmos nomes. X 0D NOTE Middle names normalmente não são usados em comunicação familiar, mas pode ser afirmado para fornecer identificação adicional de uma pessoa em particular, se necessário. Podem ser particularmente úteis em situações em que a pessoa em causa tem um nome de família que ocorre normalmente na região geográfica."
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspectStyle"
 
-#:IFC.xml:261
-msgid "IfcPerson_PrefixTitles"
-msgstr "Prefixos"
+#:IFC.xml:871
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "Tipo"
 
-msgid "IfcPerson_PrefixTitles_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, que especifica a pessoa em posição social ou profissional e aparece diante dos seus nomes."
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "Tipos de operações permeáveis de cobertura. Também usado para atribuir apresentações simbólicas padrão de acordo com as normas nacionais de construção."
 
-#:IFC.xml:266
-msgid "IfcPerson_SuffixTitles"
-msgstr "Sufixos"
+#:IFC.xml:876
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "Posição"
 
-msgid "IfcPerson_SuffixTitles_DEFINITION"
-msgstr "A palavra, ou grupo de palavras, que especifica a pessoa em posição social ou profissional e aparece depois de seus nomes."
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "Posição desse painel de cobertura permeável dentro da janela geral ou do tipo de porta."
 
-#:IFC.xml:325
-msgid "IfcPersonAndOrganization"
-msgstr "Organização"
+#:IFC.xml:881
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "Profundidade"
 
-msgid "IfcPersonAndOrganization_DEFINITION"
-msgstr "Essa entidade representa uma pessoa agindo em nome de uma organização. NOTE Entidade adaptada de pessoa e organização definida no ISO 10303 41. HISTÓRIA Nova entidade na documentação IFC1.5.1. bSI"
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "Profundidade do quadro do painel usado para incluir a cobertura permeável, medida da face frontal para a face traseira horizontalmente. . perpendicular ao avião de elevação da janela ou porta."
 
-#:IFC.xml:38
-msgid "IfcPersonAndOrganization_Roles"
-msgstr "Papéis"
+#:IFC.xml:886
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "Espessura"
 
-msgid "IfcPersonAndOrganization_Roles_DEFINITION"
-msgstr "Papéis"
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "Largura do quadro do painel usado para incluir a cobertura permeável, medida a partir de dentro de um painel de cobertura permeável, cobrindo até o exterior do painel no forro de , i. . Paralelamente ao plano de elevação da janela ou porta."
 
-#:IFC.xml:175
-msgid "IfcPersonAndOrganization_TheOrganization"
-msgstr "Organização"
+#:IFC.xml:905
+msgid "IfcWindowLiningProperties"
+msgstr "Propriedades"
 
-msgid "IfcPersonAndOrganization_TheOrganization_DEFINITION"
-msgstr "Organização"
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:287
-msgid "IfcPersonAndOrganization_ThePerson"
-msgstr "ThePerson"
+#:IFC.xml:979
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcPersonAndOrganization_ThePerson_DEFINITION"
-msgstr "ThePerson"
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspectStyle"
 
-#:IFC.xml:353
-msgid "IfcPostalAddress"
-msgstr "IfcPostalAddress"
+#:IFC.xml:922
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "Profundidade"
 
-msgid "IfcPostalAddress_DEFINITION"
-msgstr "Esta entidade representa um endereço para entrega de correio com base em papel e outras entregas. HISTORY nova entidade na documentação IFC2x. bSI"
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "Profundidade da dimensão de forro da janela medida perpendicular ao plano de elevação da janela."
 
-#:IFC.xml:358
-msgid "IfcPostalAddress_InternalLocation"
-msgstr "Localização"
+#:IFC.xml:927
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "LingThickness"
 
-msgid "IfcPostalAddress_InternalLocation_DEFINITION"
-msgstr "Um endereço definido pela organização para a entrega de correio interno."
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "Espessura do forro da janela, conforme explicado na figura acima. Se o valor de LingThickness for 0. zero indica uma janela sem um forro de todos os outros parâmetros de forro configurados para NIL neste caso . Se a LingThickness é NIL, ela indica que o valor não está disponível. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados modificado para ser [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:363
-msgid "IfcPostalAddress_AddressLines"
-msgstr "Linhas"
+#:IFC.xml:932
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "TransomThickness"
 
-msgid "IfcPostalAddress_AddressLines_DEFINITION"
-msgstr "O endereço postal. X 0D NOTE Um endereço postal pode ocupar várias linhas ou elementos quando gravado. Espera-se que o uso normal incorpore elementos relevantes dos seguintes conceitos de endereço A local em um edifício. Nome de construção do Floor - Ex.: Número da Casa de Interoperabilidade - Rua, por exemplo 6400 ruas. . Boulevard da Aliança. O conteúdo típico das linhas de endereços pode variar em diferentes países."
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "Espessura do separador horizontal do transsom de painéis de janelas dentro de uma janela, medida paralela ao plano de elevação da janela. O transom faz parte do foro e a profundidade do transcurso é assumida como idêntica à profundidade do foro. X 0D Se a TransomThickness está definida como zero e o TransomOffset como tamanho positivo, então a janela é dividida verticalmente sem um divisor físico. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados mudou para [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:368
-msgid "IfcPostalAddress_PostalBox"
-msgstr "Caixa"
+#:IFC.xml:937
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "Espessura MullionThness"
 
-msgid "IfcPostalAddress_PostalBox_DEFINITION"
-msgstr "Um endereço que é implícito por um drop de e-mail identificável."
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "Espessura do mulão separador vertical de painéis de janela dentro de uma janela, medida paralela ao plano de elevação da janela. O mulão é parte do forro e a profundidade do mulão é assumida como idêntica à profundidade do foro. X 0D Se a Floresta MullionThickness estiver definida como zero e o MullionOffset estiver definido como um comprimento positivo, então a janela é dividida horizontalmente sem um divisor físico. X 0D .change ifc2x4 X 0D IFC4 ALTERAR tipo de dados mudou para [[IfcNonNegativeLengthMeasure]]."
 
-#:IFC.xml:373
-msgid "IfcPostalAddress_Town"
-msgstr "Cidade"
+#:IFC.xml:942
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "FirstTransomOffset"
 
-msgid "IfcPostalAddress_Town_DEFINITION"
-msgstr "O nome de uma cidade."
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "Deslocamento do centro do transor, medido ao longo do eixo z do sistema ordinado de colocação da janela. Um valor de deslocamento 0,5 indica que o transom está posicionado no meio da janela."
 
-#:IFC.xml:378
-msgid "IfcPostalAddress_Region"
-msgstr "Região"
+#:IFC.xml:947
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "SecondTransomOffset"
 
-msgid "IfcPostalAddress_Region_DEFINITION"
-msgstr "O nome de uma região. X 0D NOTE Os países do Reino Unido e os estados da América do Norte são exemplos de regiões."
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
 
-#:IFC.xml:383
-msgid "IfcPostalAddress_PostalCode"
-msgstr "PostalCode"
+#:IFC.xml:952
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
 
-msgid "IfcPostalAddress_PostalCode_DEFINITION"
-msgstr "O código utilizado pelo país é o correio."
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
 
-#:IFC.xml:388
-msgid "IfcPostalAddress_Country"
-msgstr "País/região"
+#:IFC.xml:957
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
 
-msgid "IfcPostalAddress_Country_DEFINITION"
-msgstr "O nome de um país."
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
 
-#:IFC.xml:419
-msgid "IfcRoleEnum"
-msgstr "IfcRoleEnum"
+#:IFC.xml:962
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcRoleEnum_DEFINITION"
-msgstr "Esta enumeração define funções que podem ser tocadas por um ator. HISTORY Novo tipo em IFC1.5. .change ifc2x4 IFC4 CHANGE de COMMISSIONINGENGINEER corrigido."
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:444
-msgid "IfcTelecomAddress"
-msgstr "IfcTelecomAddress"
+#:IFC.xml:967
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanelOffsetX"
 
-msgid "IfcTelecomAddress_DEFINITION"
-msgstr "Esta entidade representa um endereço ao qual o telefone, o correio electrónico e outras formas de telecomunicações devem ser dirigidos: a nova entidade na IFC2x. hange ifc2x4 IFC4 CHANGE Adicionado atributo MessagingIDs . Tipo do atributo WWWHomePageURL compatível de [[IfcLabel]] para [[IfcURIReference]] . bSI Documentação"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:449
-msgid "IfcTelecomAddress_TelephoneNumbers"
-msgstr "Números de Telefone"
+#:IFC.xml:972
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanelOffsetY"
 
-msgid "IfcTelecomAddress_TelephoneNumbers_DEFINITION"
-msgstr "Lista de números de telefone em que as mensagens telefônicas podem ser recebidas."
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:454
-msgid "IfcTelecomAddress_FacsimileNumbers"
-msgstr "FacsimileNumbers"
+#:IFC.xml:991
+msgid "IfcWindowPanelOperationEnum"
+msgstr "IfcWindowPanelOperationEnum"
 
-msgid "IfcTelecomAddress_FacsimileNumbers_DEFINITION"
-msgstr "Lista de números de fax em que as mensagens de fax podem ser recebidas."
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure X 09 X 09 X 09 X 09 SideHungRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SideHungLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TopHung X 09 X 09 panel is top hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 BottomHung X 09 X 09 panel is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotHorizontal X 09 X 09 panel is swinging X 09 X 09 X 09 horizontally hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotVertical X 09 X 09 panel is swinging vertically X 09 X 09 X 09 hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingHorizontal X 09 X 09 panel is sliding horizontally X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingVertical X 09 X 09 panel is sliding X 09 X 09 X 09 vertically X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 RemovableCasement X 09 X 09 panel is removable X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 FixedCasement X 09 X 09 panel is fixed X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 OtherOperation X 09 X 09 user defined operation type X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 NotDefined X 09 X 09 X 09 X 09 X 09 X 09 X 09 Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. bSI Documentation"
 
-#:IFC.xml:459
-msgid "IfcTelecomAddress_PagerNumber"
-msgstr "Número"
+#:IFC.xml:1007
+msgid "IfcWindowPanelPositionEnum"
+msgstr "IfcWindowPanelPositionEnum"
 
-msgid "IfcTelecomAddress_PagerNumber_DEFINITION"
-msgstr "Número do pager em que a paginação de mensagens pode ser recebida."
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . X 09 X 09 Enumerator from [[IfcWindowStyleOperationEnum]] X 09 Use of enumerators from [[IfcWindowPanelPositionEnum]] X 09 Figure X 09 X 09 X 09 DoublePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 DoublePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelBottom X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelTop X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelLeft X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelRight X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. bSI Documentation"
 
-#:IFC.xml:464
-msgid "IfcTelecomAddress_ElectronicMailAddresses"
-msgstr "Endereços ElectronicMails"
+#:IFC.xml:1015
+msgid "IfcWindowPanelProperties"
+msgstr "Propriedades"
 
-msgid "IfcTelecomAddress_ElectronicMailAddresses_DEFINITION"
-msgstr "Lista de endereços de e-mail em que as mensagens de email podem ser recebidas."
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
 
-#:IFC.xml:469
-msgid "IfcTelecomAddress_WWWHomePageURL"
-msgstr "URL WWWWHomePageURL"
+#:IFC.xml:1042
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcTelecomAddress_WWWHomePageURL_DEFINITION"
-msgstr "O endereço web mundial onde se encontra a página preliminar da informação para a pessoa ou organização. X 0D NOTE que as informações sobre a rede mundial para uma pessoa ou organização podem ser separadas em várias páginas e em vários sites de host. tudo isso pode estar interligado. Presume-se que todas essas informações podem ser referenciadas a partir de uma única página que é apelidada de home page para essa pessoa ou organização."
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "ShapeAspectStyle"
 
-#:IFC.xml:474
-msgid "IfcTelecomAddress_MessagingIDs"
-msgstr "IDs Mensagens"
+#:IFC.xml:1020
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "Tipo"
 
-msgid "IfcTelecomAddress_MessagingIDs_DEFINITION"
-msgstr "IDs ou endereços para qualquer outro meio de telecomunicação, por exemplo, mensagens instantâneas, voz sobre IP ou protocolos de transferência de arquivos. O protocolo de comunicação é indicado pelo valor do URI com designações de esquema como irc , sip ou ftp ."
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
 
-#:IFC.xml:481
-msgid "IfcActorSelect"
-msgstr "Selecionar"
+#:IFC.xml:1025
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "Posição"
 
-msgid "IfcActorSelect_DEFINITION"
-msgstr "O tipo de seleção do ator permite que uma pessoa, ou uma organização ou uma pessoa associada a uma organização seja referenciada. NOTA Tipo adaptado de organização de pessoas seleciona no ISO 10303 41. HISTÓRIA Nova entidade no IFC1.5.1"
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
+
+#:IFC.xml:1030
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "Profundidade"
+
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+
+#:IFC.xml:1035
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "Espessura"
+
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Largura do quadro do painel, medida de dentro do painel no glazing para fora do painel em forro de painel, ou seja, paralelo ao plano de elevação da janela."
+
+#:IFC.xml:1054
+msgid "IfcWindowStyle"
+msgstr "Estilo IfcWindowStyle"
+
+msgid "IfcWindowStyle_DEFINITION"
+msgstr "O estilo de janela define um estilo específico de janelas, que pode ser incluído no contexto espacial do modelo de construção através de instâncias de [[IfcWindow]]. Um estilo de janela define o parâmetro geral do estilo de janela e refere-se ao parâmetro específico do forro e um ou vários painéis através de [[IfcWindowLiningProperties]] e [[IfcWindowPanelProperties]]. A entidade da janela [[IfcWindow]] define uma ocorrência em particular de uma janela inserida no contexto espacial de um projeto. O parâmetro real da janela e sua forma é definido no [[IfcWindowStyle]] , para o qual a [[IfcWindow]] relacionada pela relação inversa IsDefinedBy apontando para [[IfcRelDefinesByType]]. O [[IfcWindowStyle]] também define os atributos específicos para o forro de [[IfcWindowLiningProperties]] e painéis [[IfcWindowPanelProperties]]. A [[IfcWindowStyle]] define a geometria de base, ou o mapa de representação, para todas as ocorrências do estilo de janela, dadas pelo [[IfcWindow]], apontando para este estilo. A representação do estilo de janela pode ser dada pelo conjunto acordado de parâmetros mínimos, definido para o forro da janela e os painéis da janela , ou pode ser dada por uma representação geométrica usada pelo [[IfcRepresentationMap]]. O atributo ParâmeterTakesPrecedence decide, se o conjunto de parâmetros pode ser usado para representar exatamente a forma do estilo da janela VERUE, ou se o anexo [[IfcRepresentationMap]] contém a representação exata FALSA. O IfcWindowStyleOperationTypeEnum define o layout geral do estilo da janela. Dependendo do enumerador, as instâncias apropriadas de [[IfcWindowLiningProperties]] e [[IfcWindowPanelProperties]] estão anexadas na lista de HasPropertySets . Veja a geometria usar as definições lá. HISTÓRIA Nova entidade em IFC2x. .deprecated IFC4 CHANGE A entidade foi descontinuada e não deve ser usada. A nova entidade [[IfcWindowType]] será usada em vez disso. Documentação bSI"
+
+#:IFC.xml:1055
+msgid "IfcWindowStyle_ConstructionType"
+msgstr "Tipo"
+
+msgid "IfcWindowStyle_ConstructionType_DEFINITION"
+msgstr "Tipo que define a construção básica e o tipo material da janela."
+
+#:IFC.xml:1060
+msgid "IfcWindowStyle_OperationType"
+msgstr "Tipo"
+
+msgid "IfcWindowStyle_OperationType_DEFINITION"
+msgstr "Digite definindo o layout geral e a operação do estilo da janela."
+
+#:IFC.xml:1065
+msgid "IfcWindowStyle_ParameterTakesPrecedence"
+msgstr "Parâmetro Precedência"
+
+msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "O valor booleano reflete, se o parâmetro dado nos fornos e propriedades do painel anexados define exatamente o TRUE geometria, ou se a forma de estilo anexado tem prioridade FALSA. No último caso, o parâmetro só tem valor informativo."
+
+#:IFC.xml:1070
+msgid "IfcWindowStyle_Sizeable"
+msgstr "Dimensionável"
+
+msgid "IfcWindowStyle_Sizeable_DEFINITION"
+msgstr "O booleano indica se o ShapeStyle anexado pode ser dimensionado usando fator de escala de transformação ou não FALSE. Se não, o ShapeStyle deve ser inserido pelo [[IfcWindow]] usando [[IfcMappedItem]] com o fator de escala 1."
+
+#:IFC.xml:1077
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "IfcWindowStyleConstructionEnum"
+
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "Esta enumeração define os tipos básicos de construção de janelas. O tipo de construção está relacionado com a combinação principal do material ou material utilizado para fazer a janela. HISTORY Nova enumeração na documentação IFC2x. bSI"
+
+#:IFC.xml:1087
+msgid "IfcWindowStyleOperationEnum"
+msgstr "IfcWindowStyleOperationEnum"
+
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "Essa enumeração define a configuração básica do tipo de janela em termos do número de painéis de janela e da subdivisão da janela total. As configurações de janela são dadas para janelas com um, dois ou três painéis, incluindo painéis fixos, como mostrado na Figura 1. Janelas que são subdivididas em mais de três painéis devem ser definidas apenas pela geometria. O tipo de tal janela é USERDEFINIDO. Descrição do Enumerator Figure Panel Window com um painel. Janela DoublePanelVertical com dois painéis. A configuração dos painéis é verticalmente. Janela DoublePanelHorizontal com dois painéis. A configuração dos painéis é horizontalmente. Janela Tripla PanelVertical com três painéis. A configuração dos painéis é vertical. Janela Tripla PanelHorizontal com três painéis. A configuração dos painéis é horizontalmente. TriplePanelBottom Window com três painéis. A configuração de dois painéis é verticalmente e o terceiro está horizontalmente na parte inferior. TriplePanelTop Window com três painéis. A configuração de dois painéis é verticalmente e o terceiro está horizontalmente no topo. TriplePanelLeft Window com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente no lado esquerdo. TriplePanelRight Janela com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente no lado direito. Operações definidas pelo usuário com tipo de figura não definida no estilo de Janela NOTÓRIA 1 operações HISTÓRIA Nova Enumeração no IFC2. . NOTA 1. A forma como cada painel funciona é definida no [[IfcWindowPanelProperties]].OperationType . 2. A referência do painel de janela à localização desse painel na configuração de estilo da janela é tratada pelo [[IfcWindowPanelProperties]]. posiçãoAnela . 3. As figuras são mostradas como elevações no plano XZ da posição local da janela, Olhando para a direção do eixo Y positivo. 4. Estes números são mostrados apenas como ilustrações da documentação bSI"
 
