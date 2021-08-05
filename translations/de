@@ -9,1003 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcMaterialResource.pot\n"
-"X-Crowdin-File-ID: 52\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2021-08-05 20:06\n"
+"PO-Revision-Date: 2021-08-05 20:07\n"
 
-#:IFC.xml:21233
-msgid "IfcDirectionSenseEnum"
-msgstr "IfcDirectionSenseEnum"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcDirectionSenseEnum_DEFINITION"
-msgstr "[[IfcDirectionSenseEnum]] ist eine Aufzählung, die angibt, ob der Richtungssinn entlang der angegebenen Achse positiv oder negativ ist. HISTORY Neuer Typ in IFC2x bSI-Dokumentation"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Ein fortgeschrittenes Gesicht ist eine Spezialisierung einer Gesichteroberfläche, die die Anforderungen an die Verwendung bestimmter topologischer und geometrischer Darstellungselemente für die Definition der Gesichter erfüllen muss. Kanten und Ecken. Eine [[IfcAdvancedFace]] ist beschränkt auf eine Oberflächengeometrie des Typs [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] , haben eine [[IfcFaceOuterBound]] als Gesichtsbindung, mit Ausnahme von geschlossenen Oberflächen, haben alle Flächen, die an [[IfcEdgeLoop]] oder [[IfcVertexLoop]] gebunden werden müssen, alle Kanten für eine Kantengeometrie haben die Kantenkurvengeometrie auf [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] Bei geschlossenen Flächen mit periodischen Oberflächen, wie zylindrische oder kugelförmige Oberflächen, im folgenden die Kanten der geschlossenen oberfläche, im Falle einer zylindrischen Oberfläche die obere und untere kappe, auf die gleiche Instanz von [[IfcVertexPoint]] zweimal verweisen, wird kein [[IfcFaceOuterBound]] zur Verfügung gestellt, oder das [[IfcFaceOuterBound]] wird mit einem [[IfcSeamCurve]] am periodischen Ende der geschlossenen Oberfläche erstellt im Falle einer zylindrischen Oberfläche bei 0. 360. Grad zylindrische Oberfläche .. .. .. .. .. Zahlen ifcadvancedface 01. ng Abbildung 1 Verwendung von [[IfcCylindricalSurface]] als Grundfläche eines [[IfcAdvancedFace]] HINWEISE Entität, angepasst von fortgeschrittenen Gesichtern, definiert in ISO 10303 511. HISTORY Neue Entität in IFC4 bSI-Dokumentation"
 
-#:IFC.xml:21237
-msgid "IfcLayerSetDirectionEnum"
-msgstr "IfcLayerSetDirectionEnum"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcLayerSetDirectionEnum_DEFINITION"
-msgstr "[[IfcLayerSetDirectionEnum]] gibt die Identifizierung der Achse der Elementgeometrie, die Angabe der Dickenrichtung der Schicht oder der Richtung der Ebenenoffsets. HISTORY Neuer Typ in IFC2x bSI-Dokumentation"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Gibt die erste Wahl, wenn TRUE, sonst die zweite Wahl. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Diese Funktion gibt eine von zwei Optionen zurück, abhängig vom Wert eines booleschen Eingabearguments. Die beiden Optionen sind auch Eingabeargumente. HISTORY Neue Funktion in IFC2.0"
 
-#:IFC.xml:21242
-msgid "IfcMaterial"
-msgstr "IfcMaterial"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcMaterial_DEFINITION"
-msgstr "[[IfcMaterial]] ist ein homogener oder inhomogener Stoff, der verwendet werden kann, um physikalische Produkte oder deren Bestandteile zu bilden. [[IfcMaterial]] ist die grundlegende Entität für die Materialbezeichnung und -definition einschließlich der Identifizierung nach Namen und Klassifizierung mittels Verweis auf eine externe Klassifizierung , sowie Verbindung von Materialeigenschaften isotropisch oder anisotropisch, definiert durch Subtypen von [[IfcMaterialProperties]] . Eine Instanz von [[IfcMaterial]] kann mit einem Element oder Elementtyp in der [[IfcRelAssociatesMaterial]] Beziehung verknüpft werden. Die Zuordnung kann entweder direkt als einzelne Materialinformation erfolgen oder über eine Materialschicht ein Materialprofil setzen ein Materialbestandsset an [[IfcMaterial]] kann auch Präsentationsinformationen zugeordnet werden. Solche Präsentationsinformationen werden von [[IfcMaterialDefinitionRepresentation]] zur Verfügung gestellt, die Kurvenstile, Schraffurendefinitionen oder Oberflächenfarben-Rendering-Informationen einem Material zuordnen. HISTORY S Neue Entität in IFC4 .change ifc2x4 IFC4 CHANGE S Die Attribute Beschreibung und Kategorie wurden hinzugefügt."
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:21269
-msgid "IfcMaterial_HasRepresentation"
-msgstr "HasRepresentation"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-msgid "IfcMaterial_HasRepresentation_DEFINITION"
-msgstr "HasRepresentation"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein angeschlossenes Gesichtersatz ist eine Gesichtermenge so dass die Domäne der Gesichter mit ihren Randkanten und Eckpunkten verbunden ist. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Der Zusammenschluss der Gesichter und ihrer Randschleifen soll auf arktischer Ebene verbunden sein."
 
-#:IFC.xml:21307
-msgid "IfcMaterial_IsRelatedWith"
-msgstr "IsRelatedWith"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcMaterial_IsRelatedWith_DEFINITION"
-msgstr "IsRelatedWith"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "CfsFaces"
 
-#:IFC.xml:21357
-msgid "IfcMaterial_RelatesTo"
-msgstr "Verwandte"
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-msgid "IfcMaterial_RelatesTo_DEFINITION"
-msgstr "Verwandte"
+msgid "IfcEdge_DEFINITION"
+msgstr "Ein [[IfcEdge]] definiert zwei Punkte, die topologisch verbunden sind. Die geometrische Darstellung der Verbindung zwischen den beiden Knoten erfolgt standardmäßig auf eine gerade Linie, wenn keine Kurvengeometrie mit dem Untertyp [[IfcEdgeCurve]] zugewiesen wird. Das [[IfcEdge]] kann daher zum Austausch von geraden Kanten ohne zugehörige Geometrie verwendet werden, die von [[IfcLine]] oder [[IfcPolyline]] Gedanke [[IfcEdgeCurve]] bereitgestellt wird. dgeGeometry . EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die Grenzen des [[IfcEdge]] von den EdgeStart und EdgeEnd angegeben werden, die auch die Richtung der Kante bestimmen. Der Ort innerhalb eines Koordinatenraums wird durch den [[IfcVertexPoint]] Typ für EdgeStart und EdgeEnd bestimmt. Da keine Kantengeometrie zugewiesen ist, wird standardmäßig eine geradlinige Linie verwendet, die dem Richtungssinn zustimmt. Abbildung 1 Kantendarstellung . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kante ist die topologische Konstruktion, die der Verbindung von zwei Knoten entspricht. abstrakter kann es für eine logische Beziehung zwischen zwei Punkten stehen. Die Domäne einer Kante, falls vorhanden, ist eine endliche, nicht selbstständig die offene Kurve in R M durchschneiden, das heißt, ein angeschlossener 1 dimensionaler Krümmer. Die Grenzen einer Kante sind zwei Eckpunkte, die nicht unterschieden werden müssen. Die Kante orientiert sich an der Auswahl ihrer Querrichtung und läuft von der ersten zum zweiten Scheitelpunkt. Wenn die beiden Punkte gleich sind, ist der Rand eine Selbstschleife. Die Domäne der Kante enthält keine Grenzen und 0 <unk> . Mit einer Kante verknüpft, kann eine geometrische Kurve sein, um den Rand in einem Koordinatenraum zu lokalisieren, der durch den Untertyp der Kantenkurve dargestellt wird. Die Kurve soll endlos und nicht selbstständig innerhalb des Bereichs der Kante kreuzen. Eine Kante ist ein Diagramm, so seine Vielfältigkeit M und Graphen Gen G e kann durch den Graph Traversal Algorithmus bestimmt werden. Seit M E 1 reduziert sich die Euler Gleichung 1 auf Bild . .. .. .. .. Zahlen ifcedge math1.gif, wo V 1 oder 2, und G e 1 oder 0. Konkret soll der topologische Rand die Daten definieren, eine Kante zu befriedigen hat zwei Punkte Bild . .. .. .. .. Zahlen ifcedge math2.gif die Eckpunkte müssen nicht klar sein Bild .. .. .. .. .. .. Zahlen ifcedge math3. wenn Gleichung soll Bild .. .. .. .. .. .. .. Zahlen ifcedge math4. Wenn NOTE Entity vom Rand in ISO 10303 42 angepasst wird, HISTORY New entity in IFC2. .spec Kopf Informelle Vorschläge 1. Der Rand hat Dimensionalität 1. 2. Der Umfang einer Kante soll endlos und nicht null sein."
 
-#:IFC.xml:21243
-msgid "IfcMaterial_Name"
-msgstr "Name"
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcMaterial_Name_DEFINITION"
-msgstr "Name des Materials. X 0D EXAMPLE A Definition kann Material erfordern. B. Beton- oder Stahlgüte eindeutig angeben, in diesem Fall das Attribut Material. Die Kategorie kann den Wert Beton oder Stahl nehmen . . Stärke für strukturelle Gestaltung und Analyse oder sichtbare Aussehensgrade in der architektonischen Anwendung. Auch kann als Klassifikation über das Inverse-Attribut HasExternalReferences eine differenziertere Definition der Materialklasse zugeordnet werden."
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:21248
-msgid "IfcMaterial_Description"
-msgstr "Beschreibung"
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcMaterial_Description_DEFINITION"
-msgstr "Definition des Materials in mehr beschreibenden Begriffen als durch Attributname oder Kategorie angegeben. X 0D .change ifc2x4 X 0D IFC4 CHANGE Das Attribut wurde am Ende der Attributliste hinzugefügt."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:21253
-msgid "IfcMaterial_Category"
-msgstr "Kategorie"
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgekurve"
 
-msgid "IfcMaterial_Category_DEFINITION"
-msgstr "Definition der Kategoriegruppe oder des Materialtyps in allgemeineren Begriffen als Attributname . X 0D EXAMPLE Eine Ansichtsdefinition kann dazu führen, dass jede Material.Name einzigartig ist, z. für jede in einem Projekt verwendete Beton- oder Stahlsorte, in welchem Fall Material.Kategorie die Werte Beton oder Stahl nehmen kann. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Das Attribut wurde am Ende der Attributliste hinzugefügt."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Ein [[IfcEdgeCurve]] definiert zwei Punkte, die topologisch verbunden sind, einschließlich der geometrischen Darstellung der Verbindung. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Kante zu schneiden. Es besteht keine Notwendigkeit, den Rand geometrisch zu schneiden, um mit der Topologie übereinzustimmen. EXAMPLE Abbildung 1 illustriert ein Beispiel, in dem die Kantengeometrie durch eine unbegrenzte Kurve gegeben wird, hier [[IfcCircle]]. Die Grenzen werden von EdgeStart und EdgeEnd bereitgestellt, die topologische Richtung des [[IfcEdgeCurve]] wendet sich gegen die Richtung des [[IfcCircle]] von SameSense FALSE. Abbildung 1 Kantenkurve . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenkurve ist ein spezieller Subtyp der Kante, der seine Geometrie vollständig definiert hat. Die Geometrie wird durch die Verknüpfung der Kante mit einer Kurve definiert, die unbegrenzt sein kann. Da die topologischen und geometrischen Richtungen abgelehnt werden können, mit einem Indikator identifiziert wird, ob Kanten- und Kurvenrichtung übereinstimmen oder dagegen sind. Der boolesche Wert gibt an, ob die Kurvenrichtung mit TRUE übereinstimmt oder in der entgegengesetzten Richtung FALSE zur Kantenrichtung ist. Jede Geometrie, die mit den Eckpunkten der Kante verbunden ist, entspricht der Kantengeometrie. Mehrere Kanten können die gleiche Kurve referenzieren. HINWEISE Entität, angepasst von Kantenkurve in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne der Kantenkurve ist formell als Domäne ihrer Kantengeometrie definiert, wie sie von den Eckpunkten beschnitten wird. Diese Domäne enthält die Eckpunkte nicht. 2. Eine Kantenkurve hat nicht Null endlichen Ausmaß. 3. Eine Kantenkurve ist ein Vielfach. 4. Eine Kantenkurve ist arktisch verbunden. 5. Der Kantenstart ist kein Teil der Kantendomäne. 6. Das Kantenende ist kein Teil der Kantendomäne. 7. Wirbelgeometrie soll der Kantengeometrie entsprechen. bSI-Dokumentation"
 
-#:IFC.xml:21371
-msgid "IfcMaterialClassificationRelationship"
-msgstr "IfcMaterialClassificationship Beziehung"
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Kantengeometrie"
 
-msgid "IfcMaterialClassificationRelationship_DEFINITION"
-msgstr "[[IfcMaterialClassificationRelationship]] ist eine Beziehung, die Materialien Klassifizierungen zuweist. HISTORY S Neue Entität in IFC2x. hange ifc2x4 IFC4 CHANGE S Die Entität [[IfcMaterialClassificationRelationship]] ist seit IFC4 veraltet und darf nicht mehr verwendet werden. [[IfcExternalReferenceRelationship]] stattdessen verwenden. BSI-Dokumentation"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Kantengeometrie"
 
-#:IFC.xml:21283
-msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial"
-msgstr "Kleines Material"
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial_DEFINITION"
-msgstr "Kleines Material"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Dieses logische Flag gibt an, ob TRUE oder nicht FALSE die Sinne der Kante und die Kurve der Kantengeometrie gleich sind. Der Sinn für eine Kante ist vom Kantenstartpunkt bis zum Kantenpunkt der Sinn für eine Kurve in Richtung der Erhöhung des Parameters."
 
-#:IFC.xml:21372
-msgid "IfcMaterialClassificationRelationship_MaterialClassifications"
-msgstr "Materialklassifikationen"
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcMaterialClassificationRelationship_MaterialClassifications_DEFINITION"
-msgstr "Die Materialklassifikationen, die die Art des Materials bestimmen."
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenschleife ist eine Schleife mit einem nicht null-weiten Ausmaß. Es ist ein Pfad, in dem die Anfangs- und Endpunkte gleich sind. Ihre Domäne, falls vorhanden, ist eine geschlossene Kurve. Eine Kantenschleife kann sich überlappen. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. Die Gattung des [[IfcEdgeLoop]] soll 1 oder größer sein. 2. Die Euler-Formel soll eine befriedigende Anzahl der Genen der Ränder 1 3 sein. Es darf kein Rand mehr als einmal von demselben [[IfcEdgeLoop]] mit demselben Sinn referenziert werden. Zu diesem Zweck wird eine Kante, die keine Orientierungskante ist, mit dem Sinn TRUE verwiesen. bSI Dokumentation"
 
-#:IFC.xml:21378
-msgid "IfcMaterialConstituent"
-msgstr "IfcMaterialConstituent"
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Kantenliste"
 
-msgid "IfcMaterialConstituent_DEFINITION"
-msgstr "[[IfcMaterialConstituent]] ist ein einziger und identifizierbarer Teil eines Elements, das aus einer Reihe von Teil eins oder mehr mit einem individuellen Material aufgebaut ist. Die Zuordnung des Materials, das dem Teil zugeordnet ist, wird durch ein Schlüsselwort als Wert des Attributs Name bereitgestellt. Um den Teil der Formdarstellung zu identifizieren und zu unterscheiden, auf den der Materialbestandteil angewendet wird, muss der [[IfcProductDefinitionShape]] des Elements Instanzen von [[IfcShapeAspect]] enthalten das gleiche Schlüsselwort für ihr Namens-Attribut verwenden. HINWEIS Siehe die Materialgebrauchsdefinition des einzelnen Elements, auf das ein [[IfcMaterialConstituentSet]] eine erforderliche oder empfohlene Definition solcher Schlüsselwörter als Wert für [[IfcMaterialConstituent]]. ame . HISTORY S Neue Entität in IFC4 bSI-Dokumentation"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Kantenliste"
 
-#:IFC.xml:21345
-msgid "IfcMaterialConstituent_Material"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-msgid "IfcMaterialConstituent_Material_DEFINITION"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Die Anzahl der Elemente in der Kantenliste."
 
-#:IFC.xml:21401
-msgid "IfcMaterialConstituent_ToMaterialConstituentSet"
-msgstr "ToMaterialConstituentSet"
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "IfcFace"
 
-msgid "IfcMaterialConstituent_ToMaterialConstituentSet_DEFINITION"
-msgstr "ToMaterialConstituentSet"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:21379
-msgid "IfcMaterialConstituent_Name"
-msgstr "Name"
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcMaterialConstituent_Name_DEFINITION"
-msgstr "Der Name, unter dem der Materialbestandteil bekannt ist."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:21384
-msgid "IfcMaterialConstituent_Description"
-msgstr "Beschreibung"
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "Grenzen"
 
-msgid "IfcMaterialConstituent_Description_DEFINITION"
-msgstr "Definition des materiellen Bestandteils in beschreibenden Begriffen."
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Grenzen"
 
-#:IFC.xml:21389
-msgid "IfcMaterialConstituent_Fraction"
-msgstr "Bruch"
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcMaterialConstituent_Fraction_DEFINITION"
-msgstr "Optionale Bereitstellung eines Bruchteils des Gesamtvolumens oder -gewichts, der für das [[IfcMaterialConstituentSet]] gilt, das von dieser [[IfcMaterialConstituent]] beigesteuert wird."
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face bound ist eine Schleife, die zum Bewegen eines Gesichts verwendet werden soll. HINWEISE Entität, angepasst an Gesichtsbindung definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.0 bSI-Dokumentation"
 
-#:IFC.xml:21394
-msgid "IfcMaterialConstituent_Category"
-msgstr "Kategorie"
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "Verbunden"
 
-msgid "IfcMaterialConstituent_Category_DEFINITION"
-msgstr "Kategorie des materiellen Bestandteils, z.B. die Rolle, die es in dem konstituierenden Satz hat, zu dem es gehört."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Verbunden"
 
-#:IFC.xml:21415
-msgid "IfcMaterialConstituentSet"
-msgstr "IfcMaterialConstituentSet"
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "Ausrichtung"
 
-msgid "IfcMaterialConstituentSet_DEFINITION"
-msgstr "[[IfcMaterialConstituentSet]] ist eine Sammlung von einzelnen Materialbestandteilen, die jeweils einem Teil eines Elements ein Material zuordnen. Die Bauteile werden nur mit einem Schlüsselwort im Gegensatz zu einem [[IfcMaterialLayerSet]] oder [[IfcMaterialProfileSet]] identifiziert, bei dem jedes Bauteil ein individuelles Layerdickenprofil oder Lagenprofil besitzt. EXAMPLE Die verschiedenen Materialien einer Fensterkonstruktion werden für die Fensterverkleidung und die Fensterverglasung zur Verfügung gestellt. Ein [[IfcMaterialConstituentSet]] wird dem Fenster mit zwei [[IfcMaterialConstituent]] s zugewiesen Eine mit dem Namen Lining , eine mit dem Namen Glazing . HINWEIS Lesen Sie die Definition der Materialnutzung unter dem einzelnen Element, auf das ein [[IfcMaterialConstituentSet]] für eine erforderliche oder empfohlene Definition solcher Keywords gelten kann. HISTORY S Neue Entität in IFC4. bSI-Dokumentation"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Dies zeigt an, ob TRUE oder nicht FALSE die Schleife den gleichen Sinn hat, wenn sie verwendet wird, um das Gesicht zu binden wie bei der ersten Definition. Wenn Sinn FALSE ist, werden die Sinne aller Komponentenkanten implizit umkehrt, wenn sie im Gesicht verwendet werden."
 
-#:IFC.xml:21401
-msgid "IfcMaterialConstituentSet_MaterialConstituents"
-msgstr "Materialverfasser"
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcMaterialConstituentSet_MaterialConstituents_DEFINITION"
-msgstr "Materialverfasser"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carry the additional semantics of defining a outer boundary on the face. Es darf nicht mehr als eine Grenze eines Gesichts dieser Art sein. HISTORY New entity in IFC1.0 bSI-Dokumentation"
 
-#:IFC.xml:21416
-msgid "IfcMaterialConstituentSet_Name"
-msgstr "Name"
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "IfcFaceOberfläche"
 
-msgid "IfcMaterialConstituentSet_Name_DEFINITION"
-msgstr "Der Name, unter dem der konstituierende Satz bekannt ist."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "Die [[IfcFaceSurface]] definiert die zugrunde liegende Geometrie der zugehörigen Oberfläche auf dem Gesicht. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Oberfläche zu schneiden. Es besteht keine Notwendigkeit, die Oberfläche geometrisch an die Topologie anzupassen. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Oberflächenoberfläche ist ein Untertyp von Gesicht, in dem die Geometrie durch eine zugehörige Oberfläche definiert wird. Der Teil der Oberfläche, der vom Gesicht verwendet wird, soll als offene Scheibe einbettbar sein, eventuell mit Löchern. Allerdings muss die Vereinigung des Gesichts mit den Kanten und den Eckpunkten seiner Randschleifen nicht in die Ebene eingebettet sein. Es kann zum Beispiel eine ganze Sphäre oder einen ganzen Torus umfassen. Da sowohl eine Fläche als auch eine geometrische Oberfläche normale Richtungen definiert haben, ein BOOLEAN Flag wird verwendet, um anzugeben, ob die Oberfläche normal mit TRUE übereinstimmt oder ob FALSE die normale Richtung des Gesichts ablehnt. Die Geometrie, die mit jeder Komponente der Schleifen des Gesichts verbunden ist, soll mit der Oberflächengeometrie übereinstimmen. in dem Sinne, dass die Domänen aller Scheitelpunkte und Kantenkurven in der Gesichtsgeometrie enthalten sind. Eine Oberfläche kann von mehreren Flächen referenziert werden. HISTORY New entity in IFC2x .spec head Informal Propositions 1. Die Domäne der Oberfläche ist formell als Domäne ihrer Gesichtsgeometrie definiert, wie sie von den Schleifen beschnitten wird, diese Domain enthält nicht die Grenzschleifen. 2. Eine Oberfläche hat nicht null Finite Ausmaß. 3. Eine Oberfläche ist ein Krümmer. 4. Eine Flächenoberfläche ist in arktischer Hinsicht verbunden. 5. Eine Oberflächenoberfläche hat die Gattung 0. 6. Die Schleifen sind nicht Teil der Gesichtsdomäne 7. Die Schleifengeometrie soll mit der Gesichtsgeometrie übereinstimmen. Dies bedeutet, dass alle Kantenkurven oder Scheitelpunkte, die bei der Definition der Schleifen an der Oberfläche verwendet werden, auf der Gesichtsgeometrie liegen sollen. 8. Die Schleifen des Gesichts werden sich nicht durchschneiden, bSI-Dokumentation"
 
-#:IFC.xml:21421
-msgid "IfcMaterialConstituentSet_Description"
-msgstr "Beschreibung"
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Gesichtsfläche"
 
-msgid "IfcMaterialConstituentSet_Description_DEFINITION"
-msgstr "Definition des materiellen Bestandteils in beschreibenden Begriffen."
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Gesichtsfläche"
 
-#:IFC.xml:21428
-msgid "IfcMaterialDefinition"
-msgstr "Materialdefintion"
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcMaterialDefinition_DEFINITION"
-msgstr "p_referenzwert: IfcMaterialDefinition ist ein allgemeiner Supertyp für alle materialbezogenen Informationselemente in IFC, die gemeinsame materialbezogene Eigenschaften aufweisen, die die Zuordnung von Material zu einigen Formparametern oder die Zuordnung zu identifizierten Teilen einer Komponente beinhalten können."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Diese Flagge zeigt an, ob der Sinn der normalen Oberfläche mit TRUE übereinstimmt, oder ist gegen FALSE , den Sinn der topologischen normal auf das Gesicht."
 
-#:IFC.xml:9000
-msgid "IfcMaterialDefinition_HasExternalReferences"
-msgstr "HasExternalReferences"
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcMaterialDefinition_HasExternalReferences_DEFINITION"
-msgstr "HasExternalReferences"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Schleife ist ein topologisches Gebilde, das aus einem einzigen Scheitel gebaut wurde, oder durch die Verbindung von verbundenen Kanten oder linearen Segmenten, die am selben Scheitelpunkt beginnen und enden. Es wird in der Regel verwendet, um ein Gesicht auf einer Oberfläche zu binden. Eine Schleife hat eine Dimensionalität von 0 oder 1. Die Domäne einer 0 dimensionalen Schleife ist ein einzelner Punkt. Die Domäne einer 1-dimensionalen Schleife ist eine verbundene, orientierte Kurve, muss aber nicht vielfältig sein. Da die Schleife ein Kreis ist, ist die Position des Anfangspunktes willkürlich. Die Domäne der Schleife enthält ihre Grenzen, ein 0 <unk> . Eine Schleife wird durch einen einzelnen Scheitel oder durch eine geordnete Sammlung von orientierten Kanten oder durch eine geordnete Punktesammlung repräsentiert. Eine Schleife ist ein Diagramm, so M und die Graphen G l können durch den Graph Traversal Algorithmus bestimmt werden. Seit M 1, die Euler Gleichung 1 reduziert in diesem Fall auf Bild .. .. .. .. .. Zahlen ifcloop math1. wenn V und E X 7El 7E sind die Anzahl der einzigartigen Knoten und orientiert Kanten in der Schleife und G l ist die Gattung der Schleife. HINWEISE Entität, angepasst von Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Eine Schleife hat einen endlichen Umfang. Eine Schleife beschreibt eine geschlossene topologische Kurve mit zufälligen Start- und Endpunkten. BSI-Dokumentation"
 
-#:IFC.xml:21432
-msgid "IfcMaterialDefinition_HasProperties"
-msgstr "Haseneigenschaften"
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-msgid "IfcMaterialDefinition_HasProperties_DEFINITION"
-msgstr "Haseneigenschaften"
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Diese Funktion gibt TRUE zurück, wenn für die Kanten der Eingangskante der Endpunkt jeder Kante der gleiche ist wie der Startpunkt des Nachfolgers. HISTORY Neue Funktion in IFC2x2"
 
-#:IFC.xml:21446
-msgid "IfcMaterialDefinition_AssociatedTo"
-msgstr "Zugeordnet zu"
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcMaterialDefinition_AssociatedTo_DEFINITION"
-msgstr "Zugeordnet zu"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Seine Domäne ist, wenn auch gegenwärtig, eine endliche, verbundene, zweimalige mit Grenze, aber nicht eine geschlossene Oberfläche. Man kann sie als geschlossene Schale mit einem oder mehreren Löchern in der Schale betrachten. Die Domäne einer offenen Shell erfüllt 0 <unk> 1. Eine offene Shell ist funktionell allgemeiner als ein Gesicht, da ihre Domäne Griffe haben kann. Die Shell wird durch eine Sammlung von Gesichtern definiert, die orientiert sein können. Der Gesichtssinn nach Berücksichtigung der Orientierung stimmt mit der unten definierten Shell überein. Die Orientierung kann direkt als BOOLEAN-Attribut eines orientierten Gesichts geliefert werden oder TRUE standardmäßig sein, wenn das Shell-Mitglied ein Gesicht ohne Orientierungsmerkmal ist. Die folgenden kombinatorischen Beschränkungen für offene Shells und geometrische Einschränkungen ihrer Domänen sind entworfen, zusammen mit den informellen Anträgen, um sicherzustellen, dass jede Domäne, die mit einer offenen Shell verbunden sind, ein Orientierungsmanöver ist. Jede Gesichtsreferenz soll einmalig sein, eine offene Shell soll mindestens ein Gesicht haben. Ein bestimmtes Gesicht kann in mehr als einer offenen Shell existieren. Die Grenze einer offenen Shell besteht aus den Kanten, auf die nur einmal die Gesichtsgrenzschleifen ihrer Gesichter verweisen, zusammen mit allen ihren Ecken. Die Domäne einer offenen Muschel, wenn vorhanden, enthält alle Kanten und Eckpunkte ihrer Gesichter. HINWEIS: Dies unterscheidet sich leicht von der Definition einer Gesichterdomäne, die keine ihrer Grenzen enthält. Zum Beispiel kann eine Gesichts-Domain ein isoliertes Punkt- oder Liniensegment ausschließen. Eine offene Shell-Domain darf dies nicht tun. Siehe den Algorithmus für die Berechnung unten. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Jede Kante soll genau zweimal von den Gesichtsgrenzen des Gesichts referenziert werden. Jede orientierte Kante soll einzigartig sein. 3. Kein Rand soll von mehr als zwei Gesichtern referenziert werden. 4. Unterschiedliche Gesichter der Shell kreuzen sich nicht, sondern können Kanten oder Knoten teilen. 5. Unterschiedliche Kanten schneiden sich nicht ab, sondern können die Eckpunkte teilen. 6. Die Schleifen der Schale sind keine Mischung aus Poly-Schleifen und anderen Schleifentypen. Beachten Sie, dass dies angegeben ist, da nur Poly-Schleife als Gesichtsbegrenzung definiert ist. 8. Die geschlossene Schale soll ein orientierter Bogengang sein, der 2 Krümmer verbunden ist. 9. Die Euler-Gleichung ist zufrieden."
 
-#:IFC.xml:21458
-msgid "IfcMaterialLayer"
-msgstr "IfcMaterialLayer"
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedRand"
 
-msgid "IfcMaterialLayer_DEFINITION"
-msgstr "[[IfcMaterialLayer]] ist ein einziger und identifizierbarer Teil eines Elements, das aus einer oder mehreren Ebenen besteht. Jedes [[IfcMaterialLayer]] hat eine konstante Dicke und befindet sich relativ zur Referenzierung [[IfcMaterialLayerSet]] entlang der Werkstofflagerbasis MlsBase . Luftlücken innerhalb einer Materialschicht werden als [[IfcMaterialLayer]] dargestellt, wobei das Attribut IsVentilated den Wert TRUE oder UNKNOWN hat. Diese Luftlücken sollen als Leerzeichen ohne Material interpretiert werden. EXAMPLE Eine Hohlwand mit Ziegelmauerwerk mit einem Luftspalt dazwischen wird anhand von drei [[IfcMaterialLayer]] s 1 Ziegel modelliert, 2 Luftklappe, 3 Ziegel. Der innere Schichtziegel hätte einen Namensziegel , eine individuelle Schichtdicke und möglicherweise eine Kategorie, die ihn als Lastlager anzeigt , und eine Priorität, die bestimmt, wie diese Materialschicht mit anderen Materialschichten in Wandverbindungen interagiert. Der [[IfcMaterialLayer]] kann einen Materialschichtnamen haben, der sich vom Namen [[IfcMaterial]] unterscheiden kann. EXAMPLE Der [[IfcMaterialLayer]] Name einer Isolierschicht kann Isolierungsschicht sein, während der [[IfcMaterial]] Name Polystyrol Isolierplatten ist. GESCHICHTE Neue Entität in IFC1.5 . hange ifc2x4 IFC4 CHANGE Die Attribute Name , Beschreibung , Kategorie , Priorität wurden am Ende der Attributliste hinzugefügt. Datentyp der LayerThickness entspannt in [[IfcNonNegativeLengthMeasure]] . bSI-Dokumentation"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "Die [[IfcOrientedEdge]] repräsentiert ein [[IfcEdge]] mit einem angewendeten Orientierungszeichen. Es erlaubt die Wiederverwendung des gleichen [[IfcEdge]], wenn es genau zweimal durchquert wird, einmal vorwärts und einmal rückwärts. HINWEIS: Der Sinn des normalen [[IfcFace]] wird ausschließlich von den Kanten bestimmt. Wenn alle Kanten des Gesichts entgegen dem Uhrzeigersinn nach den Kantenausrichtungen verbunden sind, zeigt das Gesicht normal nach außen. Die Normale der zugrunde liegenden [[IfcFaceSurface]] repräsentiert die Geometrie des Gesichts hierfür, hat keine Relevanz. Der Zweck des [[IfcFaceSurface]]. ameSense Attribut ist es, zusätzliche Informationen zu Überprüfungszwecken zu geben. SameSense TRUE bedeutet, dass die Oberfläche normal und das Gesicht normal sind die gleichen, SameSense FALSE bedeutet, dass sie in entgegengesetzter Richtung sind. Der wiederverwendete Rand mit einer geometrischen Darstellung als [[IfcEdgeCurve]] definiert die Kante im 3D-Koordinatenraum. In einigen Fällen, insbesondere bei der Verwendung von elementaren oder gefegten Oberflächen, besteht die Gefahr einer ungenauen Kartierung des 3D-x, y, z [[IfcEdgeCurve]] auf die angrenzenden Oberflächen, um die Grenzen dieser Oberflächen zu bestimmen. Die optionale CurveOnSurface definiert den 2D u, v Rand innerhalb des parametrischen Raumes der Oberfläche. Es könnte verwendet werden, um die Richtigkeit der Zuordnung des 3D [[IfcEdgeCurve]] auf dieser Oberfläche zu ermitteln. EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die KurveOnSurface zusätzlich zur Kurvengeometrie der [[IfcEdgeCurve]] zur Verfügung gestellt wird. Abbildung 1 Kurve auf Oberflächendarstellung eines [[IfcOrientedEdge]] . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine orientierte Kante ist ein Rand aus einer anderen Kante konstruiert und enthält ein BOOLEAN-Richtungsflagge, um anzugeben, ob die Ausrichtung der konstruierten Kante mit der Ausrichtung der ursprünglichen Kante übereinstimmt. Außer vielleicht Orientierung, entspricht die Ausrichtung der Kante der ursprünglichen Kante. Eine gängige Praxis ist solide Modellierungssysteme ist eine Entität, die die Verwendung oder Durchquerung einer Kante darstellt. Diese Benutzungseinheit repräsentiert ausdrücklich die Anforderung in einem vielseitigen Festkörper, dass jede Kante genau zweimal durchquert werden muss, einmal in jede Richtung. Die Einsatzfunktionalität wird durch die kantenorientierte Subtyp-Kante zur Verfügung gestellt: NOTE Entity angepasst an die Ausrichtung von ISO 10303 42. HISTORY Neue Entität in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Das Attribut CurveOnSurface wurde hinzugefügt. bSI-Dokumentation"
 
-#:IFC.xml:21295
-msgid "IfcMaterialLayer_Material"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Kantenelement"
 
-msgid "IfcMaterialLayer_Material_DEFINITION"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Kantenelement"
 
-#:IFC.xml:21495
-msgid "IfcMaterialLayer_ToMaterialLayerSet"
-msgstr "ToMaterialLayerset"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Ausrichtung"
 
-msgid "IfcMaterialLayer_ToMaterialLayerSet_DEFINITION"
-msgstr "ToMaterialLayerset"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, Wenn TRUE die verwendete topologische Ausrichtung mit der Orientierung vom Startpunkt bis zum Endpunkt des Kantenelementes übereinstimmt. Falls FALSE andernfalls der Fall ist."
 
-#:IFC.xml:21463
-msgid "IfcMaterialLayer_LayerThickness"
-msgstr "Schichtdicke"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdgeStart"
 
-msgid "IfcMaterialLayer_LayerThickness_DEFINITION"
-msgstr "Die Dicke der Werkstoffschicht hängt von der Dicke ab. Bei Bauelementen unter Verwendung von [[IfcMaterialLayerSetUsage]] , die Dimension wird entlang der positiven LayerSetDirection gemessen, wie in [[IfcMaterialLayerSetUsage]] angegeben. X 0D X 0D 0D NOTE Der Attributwert kann 0 sein. Für Materialdicken in der Nähe von Null, z.B. für eine Membran, dürfen Materialschichten mit Dicke 0 nicht in der geometrischen Darstellung gerendert werden. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Der Attribut-Datentyp wurde in [[IfcNonNegativeLengthMeasure]] geändert und erlaubt 0 als Dicke."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:21468
-msgid "IfcMaterialLayer_IsVentilated"
-msgstr "Entlüftet"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdgeEnd"
 
-msgid "IfcMaterialLayer_IsVentilated_DEFINITION"
-msgstr "Gibt an, ob die Werkstoffschicht eine Luftschicht oder einen Hohlraum darstellt. X 0D auf TRUE gesetzt, wenn die Materialschicht ein Luftspalt ist und Luftaustausch von der Schicht nach außen ermöglicht. X 0D auf UNKNOWN gesetzt, wenn die Materialschicht ist eine Luftlücke und nicht zur Bereitstellung von Luftaustausch oder wenn diese Informationen über den Luftaustausch der Luftlücke ist nicht verfügbar . X 0D auf FALSE gesetzt, wenn die Materialschicht eine solide Materialschicht ist, die Standardeinstellung ."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:21473
-msgid "IfcMaterialLayer_Name"
-msgstr "Name"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcMaterialLayer_Name_DEFINITION"
-msgstr "Der Name, unter dem die Materialschicht bekannt ist."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Ein Pfad ist ein topologisches Gebilde, das aus einer bestellten Sammlung von orientierten Kanten besteht. so dass der Kantenpunkt jeder Kante mit dem Kantenende seines Vorgängers übereinstimmt. Der Pfad wird vom Kantenstart der ersten Kante bis zum Kantenende der letzten Kante sortiert. Der BOOLEAN-Wertesinn in der Ausrichtung zeigt an, ob die Kantenrichtung mit der Richtung des Pfades TRUE übereinstimmt oder die entgegengesetzte Richtung FALSE ist. Eine einzelne Kante kann nur einmal durch einen individuellen Pfad referenziert werden. Eine Kante kann unabhängig von einem Pfad existieren. HISTORY New Entity adaptiert nach dem Pfad in ISO 10303 42. .spec Kopf Informelle Vorschläge 1. Ein Pfad hat Dimensionalität 1. 2. Ein Pfad ist arktisch verbunden. 3. Die Kanten des Pfades überschneiden, außer bei gängigen Vertiken. 4. Ein Pfad hat einen endlichen, nicht null-weiten Umfang. bSI-Dokumentation"
 
-#:IFC.xml:21478
-msgid "IfcMaterialLayer_Description"
-msgstr "Beschreibung"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "Kantenliste"
 
-msgid "IfcMaterialLayer_Description_DEFINITION"
-msgstr "Definition der Materialschicht in mehr beschreibenden Begriffen als durch Attributname oder Kategorie."
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Kantenliste"
 
-#:IFC.xml:21483
-msgid "IfcMaterialLayer_Category"
-msgstr "Kategorie"
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-msgid "IfcMaterialLayer_Category_DEFINITION"
-msgstr "Kategorie der Materialschicht, z. die Rolle, die es in der Schicht hat, gehört es zu wie Lastlager , Wärmedämmung etc. . Die Liste der Schlüsselwörter kann um Modellansichten Definitionen erweitert werden, für alle Materialschichten mit Lastlagerfunktion gelten die folgenden Stichworte. X 0D Isolierung für alle Werkstoffschichten mit einer Einlösefunktion. X 0D Innenbelag für die Materialschicht ist die innere Oberfläche."
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Diese Funktion gibt TRUE zurück, wenn alle Kanten des Eingabepfades aufeinander abgestimmt sind. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Diese Funktion gibt TRUE zurück, wenn für die Kanten des Eingabepfades der Endpunkt jeder Kante der gleiche ist wie der Startpunkt des Nachfolgers. HINWEIS-Funktion, angepasst von Pfadkopf auf Schwanz definiert in ISO10303 42. HISTORY Neue Funktion in IFC2.0"
 
-#:IFC.xml:21488
-msgid "IfcMaterialLayer_Priority"
-msgstr "Priorität"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcMaterialLayer_Priority_DEFINITION"
-msgstr "Die relative Priorität der Ebene, ausgedrückt als normalisierter Integerbereich 0..100 . Legt fest, wie sich Lagen in Anschlüssen und Ecken von Bauelementen einer Schicht aus einem Element in i überschneiden. Die Schicht wird aus einem anderen Element in einem Gelenk von diesen Elementen verdrängt, wenn die vorherige Schicht s eine höhere Priorität als die letztere hat. Der Vorrangwert einer Werkstoffschicht in einem Element muss von Software-Anwendungen in Bezug auf die Materialschichten in verbundenen Elementen festgelegt und gepflegt werden. X 0D X 0D 0D NOTE Die Ebenenpriorität einer Verbindung kann durch die Prioritätsattribute von [[IfcRelConnectsPathElements]] überschrieben werden, wenn diese Beziehung benutzt wird, um eine logische Verbindung zwischen zwei Bauelementen mit einer Ebenenstruktur herzustellen."
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Poly-Schleife ist eine Schleife mit geraden Kanten, die eine planare Region im Weltraum begrenzen. Eine Poly-Schleife ist eine Schleife der Gattung 1, bei der die Schleife durch eine geordnete koplanare Sammlung von Punkten repräsentiert wird, die die Eckpunkte der Schleife bilden. Die Schleife besteht aus geraden Liniensegmenten, die einen Punkt in der Sammlung zum erfolgreichen Punkt der Sammlung verbinden. Das Schlussteil ist vom letzten bis zum ersten Punkt der Sammlung. Die Richtung der Schleife ist in die Richtung der Liniensegmente. Eine Poly-Schleife soll den folgenden topologischen Zwängen entsprechen, die die Schleife hat die Gattung eins. die folgende Gleichung soll zufrieden sein Bild .. .. .. .. .. .. Zahlen ifcpolyloop math1. , wenn das [[IfcPolyLoop]] immer geschlossen ist und das letzte Segment aus dem letzten [[IfcCartesianPoint]] in der Liste der Polygon s zum ersten [[IfcCartesianPoint]] stammt. Daher soll der erste Punkt nicht am Ende der Liste wiederholt werden, auch nicht durch Verweis auf die selbe Instanz noch eine zusätzliche Instanz von [[IfcCartesianPoint]] zu verwenden, die die Koordinaten als ersten Punkt hat. HINWEIS Diese Einheit besteht in erster Linie zur Erleichterung der effizienten Kommunikation von facettierten B-Rep-Modellen. HISTORY New Entity in IFC1.0 . pec head Informelle Vorschläge 1. Alle Punkte im Polygon, die die Poly-Schleife definieren, sind Coplanar. 2. Der erste und letzte Polygon soll nach Wert unterschiedlich sein. bSI-Dokumentation"
 
-#:IFC.xml:21509
-msgid "IfcMaterialLayerSet"
-msgstr "IfcMaterialLayerSet"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polygon"
 
-msgid "IfcMaterialLayerSet_DEFINITION"
-msgstr "Das [[IfcMaterialLayerSet]] ist eine Bezeichnung, durch die Materialien eines Elements, das aus einer Reihe von Materialschichten hergestellt wurde und durch die die relative Positionierung einzelner Schichten ausgedrückt werden kann. Die Basis MlsBase beschreibt die imaginäre Achse, entlang der sich die Materialschichten befinden. Falls die [[IfcMaterialLayerSet]direkt einem Element oder Elementtyp zugewiesen wird, die einzelnen Lagen werden entsprechend ihrer Position in der Materialschicht gestapelt, ohne dass es Informationen darüber gibt, wie die Materialschichtinformationen räumlich mit der Formdarstellung des Elements oder des Elementtyps verknüpft werden können. Bei der Zuweisung des [[IfcMaterialLayerSet]] durch ein [[IfcMaterialLayerSetUsage]] an ein Element die MlsBase befindet sich entlang der Referenzachse oder der Referenzebene des Elements. Ein Versatz von der Referenzachse oder Ebene auf MlsBase wird von [[IfcMaterialLayerSetUsage]] unterstützt, der Ebenen und einen Offset kombiniert. Abweichungen von Elementkanten werden vom Untertyp [[IfcMaterialLayerWithOffsets]] unterstützt. Die Positive LayerSetDirection MlsDirection beschreibt die Richtung, in der die einzelnen Materialschichten gestapelt werden. Die [[IfcMaterialLayer]] s werden ohne Lücke gestapelt, Lücken innerhalb einer Materialschicht werden selbst als Schichten ausgedrückt. EXAMPLE Eine Hohlwand würde als [[IfcMaterialLayerSet]] modelliert werden, bestehend aus drei [[IfcMaterialLayer]] s Baustein, Lufthöhle und Baustein. Die Luftlücke wird von der IsVentilated Flagge unter [[IfcMaterialLayer]] identifiziert. hange ifc2x4 IFC4 CHANGE Untertippt von [[IfcMaterialDefinition]] , das Attribut Beschreibung wurde am Ende der Attributliste hinzugefügt. se Kopf Attribut-Definition Wie in Abbildung 1 gezeigt wird, definiert jede [[IfcMaterialLayerSet]] implizit eine Materiallayer-Grundlinie MlsBase , An den Anfang des ersten [[IfcMaterialLayer]] angeschlossen. Die Gesamtdicke eines Ebenensatzes wird aus den einzelnen Ebenendicken berechnet die erste Ebene beginnend mit der MlsBase und den folgenden Ebenen, die oberhalb der vorherigen keine Lücken oder Überlappungen platziert werden. Material Schicht Set .. .. .. .. .. Figuren ifcmateriallayerset 01.png Abbildung 1 Material Schicht Satz bSI Dokumentation"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polygon"
 
-#:IFC.xml:21495
-msgid "IfcMaterialLayerSet_MaterialLayers"
-msgstr "Materialschichten"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "IfcMaterialLayerSet_MaterialLayers_DEFINITION"
-msgstr "Materialschichten"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A subedge ist eine Kante, deren Domain ist ein angeschlossener Teil der Domäne einer bestehenden Kante. Die topologischen Zwänge auf einem Untergrund sind identisch mit denen an einer Kante. HISTORY New Entity in IFC2x2 . pec Kopf Informelle Vorschläge 1. Die Domäne der Unterseite ist formell definiert als die Domäne des übergeordneten Randes, wie durch den subedge getrimmt starten Scheitelpunkt und subbedge End-Scheitelpunkt. (2) Der Startpunkt und der Endpunkt sollen innerhalb der Vereinigung der Domänen der Eckpunkte des Mutterrandes und der Domäne des Mutterrandes liegen. bSI-Dokumentation"
 
-#:IFC.xml:21510
-msgid "IfcMaterialLayerSet_LayerSetName"
-msgstr "Ebenensatzname"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "Elternkante"
 
-msgid "IfcMaterialLayerSet_LayerSetName_DEFINITION"
-msgstr "Der Name, unter dem das [[IfcMaterialLayerSet]] bekannt ist."
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Elternkante"
 
-#:IFC.xml:21515
-msgid "IfcMaterialLayerSet_Description"
-msgstr "Beschreibung"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcMaterialLayerSet_Description_DEFINITION"
-msgstr "Definition des [[IfcMaterialLayerSet]] in beschreibenden Begriffen. X 0D . hange ifc2x4 X 0D IFC4 CHANGE Das Attribut wurde am Ende der Attributliste hinzugefügt."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Die topologische Repräsentation ist der Supertyp für alle topologischen Repräsentation Elemente in der Geometrie. HINWEISE Entität, angepasst von topologischen Repräsentation Element definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.5 bSI-Dokumentation"
 
-#:IFC.xml:21520
-msgid "IfcMaterialLayerSet_TotalThickness"
-msgstr "TotalThickness"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcMaterialLayerSet_TotalThickness_DEFINITION"
-msgstr "Die Gesamtdicke des Materialschichtsets ergibt sich aus der Funktion IfcMlsTotalDicke."
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A vertex ist das topologische Konstrukt entsprechend einem Punkt. Es hat Dimensionalität 0 und Umfang 0. Die Domäne eines Scheitelpunktes ist, wenn vorhanden, ein Punkt in m dimensionalen realen Raum R M. Dies wird durch den Scheitelpunkt Untertyp repräsentiert. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Scheitel hat Dimensionalität 0. Dies ist eine grundlegende Eigenschaft des Scheitelpunkts. 2. Der Umfang eines Scheitelpunkts ist als Null definiert. bSI-Dokumentation"
 
-#:IFC.xml:21539
-msgid "IfcMaterialLayerSetUsage"
-msgstr "IfcMaterialLayerSetNutzung"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexschleife"
 
-msgid "IfcMaterialLayerSetUsage_DEFINITION"
-msgstr "The [[IfcMaterialLayerSetUsage]] determines the usage of [[IfcMaterialLayerSet]] in terms of its location and orientation relative to the associated element geometry. The location of material layer set shall be compatible with the building element geometry that is, material layers shall fit inside the element geometry . The rules to ensure the compatibility depend on the type of the building element. EXAMPLE S For a cavity brick wall with shape representation SweptSolid, the [[IfcMaterialLayerSet]].TotalThickness shall be equal to the wall thickness. Also the OffsetFromReferenceLine shall match the exact positions between the two shape representations of [[IfcWallStandardCase]] , that is the [[IfcShapeRepresentation]] s with RepresentationIdentifier Axis and RepresentationIdentifier Body . NOTE S Model view definitions or implementer agreements may provide more instructions on matching between building element geometry and material layer set usage. The [[IfcMaterialLayerSetUsage]] is always assigned to an individual occurrence object and only to relevant subtypes of [[IfcElement]] . The [[IfcMaterialLayerSet]] , referenced by ForLayerSet , can however be shared among several occurrence objects. If the element type is available in other words, an instance of the relevant subtype of [[IfcElementType]] exists , then the [[IfcMaterialLayerSet]] can be assigned to the element type. The assignment between a S subtype of [[IfcElement]] and the [[IfcMaterialLayerSetUsage]] is handled by [[IfcRelAssociatesMaterial]] . .use head Attribute use definition The [[IfcMaterialLayerSetUsage]] is primarily intended to be associated with planar building elements having a constant thickness. With further agreements on the interpretation of LayerSetDirection , the usage can be extended also to other cases, for example to curved building elements, provided that the material layer thicknesses are constant. Generally, an element may be layered in any of its primary directions, denoted by its x, y or z axis. The geometry use definitions at each S specific type of building element will determine the applicable S LayerSetDirection . The following examples illustrate how the [[IfcMaterialLayerSetUsage]] attributes LayerSetDirection , DirectionSense , OffsetFromReferenceLine can be used in different cases. Normative material use definitions are documented at each element how these shall be used . Figure 1 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to the axis of a wall. EXAMPLE For a standard wall with extruded geometric representation vertical extrusion , the layer set direction will be perpendicular to extrusion direction, and S can be derived from the direction of the wall axis. With the DirectionSense positive in this example the individual IfcMaterialLayers are assigned consecutively right to left or left to right. For a curved wall, direction denoting the wall thickness can be derived from the direction of the wall axis, and it will remain perpendicular to the wall path. The DirectionSense applies as well. NOTE According to the [[IfcWallStandardCase]] material use definition the LayerSetDirection for [[IfcWallStandardCase]] is always AXIS2 that is, along the y axis , as shown in this example. Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage wall 01.png Figure 1 Material layer set usage for wall Figure 2 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a slab. EXAMPLE S For a slab with perpendicular extruded geometric representation, the LayerSetDirection will coincide with the extrusion direction in positive or negative sense . In this example, the material layer set base is the extruded profile and consistent with the [[IfcExtrudedAreaSolid]].Position , S with the DirectionSense being positive, the individual IfcMaterialLayers are built up from the base towards the positive z direction in this case. NOTE S According to the [[IfcSlabStandardCase]] material use definition the LayerSetDirection for [[IfcSlabStandardCase]] is always AXIS3 that is, along the z axis . Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage slab 01.png Figure 2 Material layer set usage for slab Figure 3 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a roof slab with non perpendicular extrusion. EXAMPLE S For a slab with non perpendicular extruded geometric representation, the guidelines above apply as well. The material layer thickness and the OffsetFromReferenceLine are always measured perpendicularly, even if the extrusion direction is not perpendicular. Therefore the total material layer thickness is not equal to the extrusion depth of the geometry. Mls usage .. .. .. .. .. .. figures ifcmateriallayersetusage roofslab 01.png Figure 3 Material layer set usage for roof slab bSI Documentation"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Eine Vertex-Schleife ist eine Schleife aus Null Gattung, die aus einem einzelnen Scheitelpunkt besteht. Ein Scheitelpunkt kann unabhängig von einer Schleife existieren. Die topologischen Daten sollen die folgende Einschränkung Bild .. .. .. .. .. figuren ifcvertexloop math1.gif NOTE Entity adaptiert aus Vertex-Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x2. pec Kopf Informelle Vorschläge 1. Eine Vertex-Schleife hat Null Umfang und Dimensionalität. 2. Die Vertex-Schleife hat die Gattung 0. bSI-Dokumentation"
 
-#:IFC.xml:21527
-msgid "IfcMaterialLayerSetUsage_ForLayerSet"
-msgstr "ForLayerSet"
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "Loop-Vertex"
 
-msgid "IfcMaterialLayerSetUsage_ForLayerSet_DEFINITION"
-msgstr "ForLayerSet"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "Loop-Vertex"
 
-#:IFC.xml:21540
-msgid "IfcMaterialLayerSetUsage_LayerSetDirection"
-msgstr "LayerSetRichtung"
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcMaterialLayerSetUsage_LayerSetDirection_DEFINITION"
-msgstr "Ausrichtung der Materialschicht im Verhältnis zur Referenzgeometrie der Elemente. Die Bedeutung des Wertes dieses Attributs soll im Abschnitt zur Verwendung der Geometrie für jedes Element angegeben werden. Für extrudierte Formdarstellung kann entlang des Extrusionsweges z.B. für Platten oder senkrecht zu ihr z.B. für Wände eine Richtung gegeben werden. X 0D X 0D 0D NOTE Die LayerSetDirection für [[IfcWallStandardCase]] soll AXIS2 sein. die y-Achse und für [[IfcSlabStandardCase]] und [[IfcPlateStandardCase]] soll es AXIS3 sein, d.h. die z-Achse . X 0D X 0D 0D HINWEIS Ob die Materialschichten des verwendeten Satzes in die positive oder negative Richtung der gegebenen Achse wachsen sollen wird durch ein Attribut DirectionSense definiert."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein Scheitelpunkt ist ein Scheitelpunkt, der seine Geometrie als Punkt definiert hat. HINWEISE Entität, angepasst vom Scheitelpunkt nach ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne des Scheitelpunkts ist formell als Domäne seines Scheitelpunktes definiert. bSI-Dokumentation"
 
-#:IFC.xml:21545
-msgid "IfcMaterialLayerSetUsage_DirectionSense"
-msgstr "Richtungssinn"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "VertexGeometrie"
 
-msgid "IfcMaterialLayerSetUsage_DirectionSense_DEFINITION"
-msgstr "Gibt an, ob der Materialschichtsatz positiv oder negativ an der angegebenen Achse orientiert ist, die durch LayerSetDirection definiert ist. Positiv bedeutet, dass die aufeinanderfolgenden Ebenen die [[IfcMaterialLayer]] Instanzen in der Liste [[IfcMaterialLayerSet]] sind. aterialLayers werden seitlich in die Richtung der positiven Achse platziert, wie sie von LayerSetDirection für AXIS2 festgelegt wird, in y für AXIS3 wäre es z. Negativ bedeutet, dass die Ebenen seitlich in Richtung der negativen LayerSetDirection platziert werden. In beiden Fällen, beginnend bei der Werkstoffschicht-Grundlinie. X 0D NOTE die Materialschicht Basislinie MlsBase befindet sich in der OffsetFromReferenceLine, und kann auf der positiven oder negativen Seite der Elementreferenzlinie oder Ebene positiv oder negativ sein für die Platzierung von MlsBase hängt nicht vom Attribut DirectionSense ab, aber auf der relevanten Element-Achse."
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "VertexGeometrie"
 
-#:IFC.xml:21550
-msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine"
-msgstr "OffsetFromReferenceLine"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine_DEFINITION"
-msgstr "Offset der Werkstoffschicht setzt Grundlinie MlsBase aus Referenzgeometrie Linie oder Ebene des Elements. Der Versatz kann positiv oder negativ sein, es sei denn, er beschränkt sich auf einen bestimmten Bauelementtyp in seiner Gebrauchsdefinition oder durch eine Ausführungsvereinbarung. Ein positiver Wert bedeutet, dass die MlsBase auf der positiven Seite der Referenzlinie oder Ebene platziert wird auf der Achse von LayerSetDirection im Fall von AXIS2 in die Richtung von y oder bei AXIS2 in die Richtung z . Ein negativer Wert bedeutet, dass die MlsBase auf die negative Seite gesetzt wird wie von LayerSetDirection im Fall von AXIS2 in die Richtung y festgelegt. X 0D NOTE das positive oder negative Zeichen im Offset wirkt sich nur auf die Platzierung in MlsBase aus, Es hat keine Auswirkung auf die Anwendung von DirectionSense zur Orientierung der Materialschichten, auch DirectionSense ändert nicht die Platzierung von MlsBase."
-
-#:IFC.xml:21555
-msgid "IfcMaterialLayerSetUsage_ReferenceExtent"
-msgstr "Referenz-Umfang"
-
-msgid "IfcMaterialLayerSetUsage_ReferenceExtent_DEFINITION"
-msgstr "Umfang der Extrusion der Elemente Körperform Repräsentation auf die das [[IfcMaterialLayerSetUsage]] zutrifft. Es wird als Referenzwert für die oberen OffsetValues 2 verwendet, die vom Untertyp IfcMaterialLayerSetWithOffsets für eingebundene Materialschichten bereitgestellt werden. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt. X 0D X 0D 0D HINWEIS Das Attribut ReferenzExtent wird geltend gemacht, wenn ein IfcMaterialLayerSetWithOffsets in der ForLayerSet.MaterialLayers Liste der Materiallagen enthalten ist. X 0D X 0D 0D NOTE Der Referenz-Extent für [[IfcWallStandardCase]] ist die Referenzhöhe ab z 0 die XY-Ebene des Objektkoordinatensystems."
-
-#:IFC.xml:21562
-msgid "IfcMaterialLayerWithOffsets"
-msgstr "IfcMaterialLayerWithOffsets"
-
-msgid "IfcMaterialLayerWithOffsets_DEFINITION"
-msgstr "[[IfcMaterialLayerWithOffsets]] ist eine Spezialisierung auf [[IfcMaterialLayer]], die die Definition von Offsetwerten entlang der Kanten innerhalb der Materialschicht im übergeordneten Lagensatz ermöglicht. Es definiert die Zuordnung von zwei Offsetwerten für eine Werkstoffschicht innerhalb eines Werkstofflagersatzes. Versatz werden auf die Kanten von geschichteten Elementen angewendet, d.h. in Richtung senkrecht auf die Richtung der Schicht gesetzt Richtung . Offsets dürfen nicht in Richtung der Ebene verwendet werden, das heißt, für Modellierungslücken oder Überlappungen zwischen Ebenenspalten sollen als Lagen mit geeigneter Materialzuordnung für die Leere modelliert werden. EXAMPLE An der Spitze einer Standard-Wand, mit Form Darstellung SweptSolid , Offset einer gegebenen Schicht kann in Richtung der Extrusionspositive Z-Achse angegeben werden , Es wird am Anfang oder Ende von unten nach oben extrudiert, und mit einer positiven Verlängerung über Extrusion oder negatives Ende unterhalb der Extrusion . Eine Standard-Wand mit der äußeren Werkstoffschicht zur externen Isolation über der Extrusion um 100 mm, aber ab der gleichen Grundhöhe. In diesem Fall sind die folgenden Werte gesetzt OffsetDirection .AXIS3. OffsetValues 1 0.0 OffsetValues 2 100. Standardeinheit als mm HINWEIS Die Körperformdarstellung eines [[IfcWall]] oder eines [[IfcWallStandardCase]] kann mehrere Elemente enthalten, die je ein [[IfcExtrudedAreaSolid]] entsprechen, das den [[IfcMaterialLayer]] und [[IfcMaterialLayerWithOffsets]] entspricht. HISTORY New entity in IFC4. .spec head Informal Propositions 1. Die OffsetRichtung ist nicht identisch mit der LayerSetDirection der entsprechenden [[IfcMaterialLayerSetUsage]] . Das Attribut ReferenceExtent wird unter der entsprechenden [[IfcMaterialLayerSetUsage]] geltend gemacht. se head attribute use definition Die OffsetWerte und OffsetDirection entsprechen den Definitionen Referenzbereich und LayerSetDirection in der [[IfcMaterialLayerSetUsage]] . Abbildung 1 zeigt ein Beispiel für die Anwendung der Offsetwerte auf die Materialschichten einer Standardwand. [[IfcMaterialLayerWithOffsets]] Abbildung 1 . .. .. .. .. Zahlen ifcmateriallayerwithoffsets fig 1.png Abbildung 1 Material Schicht mit Offsets bSI Dokumentation"
-
-#:IFC.xml:21563
-msgid "IfcMaterialLayerWithOffsets_OffsetDirection"
-msgstr "Versatzrichtung"
-
-msgid "IfcMaterialLayerWithOffsets_OffsetDirection_DEFINITION"
-msgstr "Die Ausrichtung des Versatzes ist senkrecht auf die eingestellte Richtung der übergeordneten Ebene zu richten."
-
-#:IFC.xml:21568
-msgid "IfcMaterialLayerWithOffsets_OffsetValues"
-msgstr "Offsetwerte"
-
-msgid "IfcMaterialLayerWithOffsets_OffsetValues_DEFINITION"
-msgstr "Der numerische Wert des Ebenenversatzes, in der Richtung der Achse, die dem Attribut OffsetDirection zugewiesen wird. Die OffsetValues 1 identifiziert den OffsetValues von der unteren Position entlang der Achsenrichtung normalerweise den Beginn der Standardextrusion , die OffsetValues 2 identifiziert den OffsetValues aus der oberen Position entlang der Achsenrichtung normalerweise das Ende der Standardextrusion ."
-
-#:IFC.xml:21575
-msgid "IfcMaterialList"
-msgstr "IfcMaterialliste"
-
-msgid "IfcMaterialList_DEFINITION"
-msgstr "[[IfcMaterialList]] ist eine Liste der verschiedenen Materialien, die in einem Element verwendet werden. HINWEIS: Die Klasse [[IfcMaterialList]] wird normalerweise verwendet, wenn ein Element auf einer abstrakten Ebene beschrieben wird. Zum Beispiel für einen Architektur-Schriftsteller, Die einzige Information, die über eine Betonsäule benötigt werden kann, ist, dass sie Beton, Verstärkungsstahl und milde Stahlbänder enthält. Es wird nicht für Elemente verwendet, die aus Materialschichten bestehen, wenn die verschiedenen Schichten definiert werden können und die Klasse [[IfcMaterialLayerSet]] verwendet werden kann. Außerdem darf [[IfcMaterialList]] nicht für Elemente verwendet werden, die beispielsweise aus einem einzigen identifizierbaren Material bestehen, um anisotropisches Material zu repräsentieren. .change ifc2x4 IFC4 CHANGE S Die Entität [[IfcMaterialList]] ist veraltet und soll nicht mehr verwendet werden. Verwenden Sie stattdessen [[IfcMaterialConstituentSet]] bSI-Dokumentation."
-
-#:IFC.xml:21333
-msgid "IfcMaterialList_Materials"
-msgstr "Materialien"
-
-msgid "IfcMaterialList_Materials_DEFINITION"
-msgstr "Materialien"
-
-#:IFC.xml:21577
-msgid "IfcMaterialProfile"
-msgstr "IfcMaterialProfile"
-
-msgid "IfcMaterialProfile_DEFINITION"
-msgstr "[[IfcMaterialProfile]] ist ein einziger und identifizierbarer Querschnitt eines Elements, das aus einer oder mehreren Profilen besteht. HINWEIS: Bei mehreren Materialprofilen , die relative Positionierung einzelner Profile in [[IfcMaterialProfileSet]] sind andernfalls mit dem Konzept von [[IfcCompositeProfileDef]] im IfcProfileResource Schema definiert nur ein Materialprofil wird von einer Einzelperson [[IfcProfileDef]] Subtyp angegeben und definiert. HISTORY S Neue Entität in IFC4 bSI-Dokumentation"
-
-#:IFC.xml:21321
-msgid "IfcMaterialProfile_Material"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
-
-msgid "IfcMaterialProfile_Material_DEFINITION"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
-
-#:IFC.xml:21604
-msgid "IfcMaterialProfile_Profile"
-msgstr "Profil"
-
-msgid "IfcMaterialProfile_Profile_DEFINITION"
-msgstr "Profil"
-
-#:IFC.xml:21616
-msgid "IfcMaterialProfile_ToMaterialProfileSet"
-msgstr "ToMaterialprofilset"
-
-msgid "IfcMaterialProfile_ToMaterialProfileSet_DEFINITION"
-msgstr "ToMaterialprofilset"
-
-#:IFC.xml:21582
-msgid "IfcMaterialProfile_Name"
-msgstr "Name"
-
-msgid "IfcMaterialProfile_Name_DEFINITION"
-msgstr "Der Name, unter dem das Materialprofil bekannt ist."
-
-#:IFC.xml:21587
-msgid "IfcMaterialProfile_Description"
-msgstr "Beschreibung"
-
-msgid "IfcMaterialProfile_Description_DEFINITION"
-msgstr "Definition des Materialprofils in beschreibenden Begriffen."
-
-#:IFC.xml:21592
-msgid "IfcMaterialProfile_Priority"
-msgstr "Priorität"
-
-msgid "IfcMaterialProfile_Priority_DEFINITION"
-msgstr "Die relative Priorität des Profils, ausgedrückt als normalisierter Integerbereich 0..100 . Steuert, wie Profile sich in Verbindungen und Ecken von Bauelementen kreuzen. Ein Profil von einem Element geht in das z. ersetzt ein Profil aus einem anderen Element in einem Gelenk dieser Elemente, wenn das ehemalige Element s Profil hat höhere Priorität als die letzteren. Der Vorrangwert eines Materialprofils in einem Element muss von Software-Anwendungen in Bezug auf die Materialprofile in verbundenen Elementen festgelegt und gepflegt werden."
-
-#:IFC.xml:21597
-msgid "IfcMaterialProfile_Category"
-msgstr "Kategorie"
-
-msgid "IfcMaterialProfile_Category_DEFINITION"
-msgstr "Kategorie des Materialprofils, z.B. die Rolle, die es in dem Profilsatz hat, zu dem es gehört. Die Liste der Schlüsselwörter kann um Modellansichten Definitionen erweitert werden, jedoch gelten die folgenden Schlüsselwörter im allgemeinen X 0D LoadBearing des Materialprofils mit einer Lastlagerfunktion. X 0D Isolierung, das Materialprofil mit einer Einlösefunktion."
-
-#:IFC.xml:21630
-msgid "IfcMaterialProfileSet"
-msgstr "IfcMaterialprofilset"
-
-msgid "IfcMaterialProfileSet_DEFINITION"
-msgstr "Die [[IfcMaterialProfileSet]] ist eine Bezeichnung für einzelne Materialien eines prismatischen Elements zum Beispiel Balken oder Säulen, die aus einem einzelnen oder mehreren Materialprofilen konstruiert sind, sind bekannt. HINWEIS: Bei mehreren Materialprofilen , die relative Positionierung einzelner Profile in [[IfcMaterialProfileSet]] sind andernfalls mit dem Konzept von [[IfcCompositeProfileDef]] im IfcProfileResource Schema definiert nur ein Materialprofil wird von einer Einzelperson [[IfcProfileDef]] Subtyp angegeben und definiert. HISTORY S Neue Entität in IFC4. bSI-Dokumentation"
-
-#:IFC.xml:21616
-msgid "IfcMaterialProfileSet_MaterialProfiles"
-msgstr "Materialprofile"
-
-msgid "IfcMaterialProfileSet_MaterialProfiles_DEFINITION"
-msgstr "Materialprofile"
-
-#:IFC.xml:21643
-msgid "IfcMaterialProfileSet_CompositeProfile"
-msgstr "CompositeProfil"
-
-msgid "IfcMaterialProfileSet_CompositeProfile_DEFINITION"
-msgstr "CompositeProfil"
-
-#:IFC.xml:21631
-msgid "IfcMaterialProfileSet_Name"
-msgstr "Name"
-
-msgid "IfcMaterialProfileSet_Name_DEFINITION"
-msgstr "Der Name, unter dem das Materialprofil bekannt ist."
-
-#:IFC.xml:21636
-msgid "IfcMaterialProfileSet_Description"
-msgstr "Beschreibung"
-
-msgid "IfcMaterialProfileSet_Description_DEFINITION"
-msgstr "Definition des Materialprofils in beschreibenden Begriffen."
-
-#:IFC.xml:21679
-msgid "IfcMaterialProfileSetUsage"
-msgstr "IfcMaterialProfilSet-Nutzung"
-
-msgid "IfcMaterialProfileSetUsage_DEFINITION"
-msgstr "[[IfcMaterialProfileSetUsage]] bestimmt die Verwendung von [[IfcMaterialProfileSet]] in Bezug auf seinen Standort relativ zur zugehörigen Elementgeometrie. Der Standort eines Materialprofils soll mit der Geometrie des Gebäudeelements kompatibel sein Materialprofile sollen in die Elementgeometrie passen. Die Regeln zur Sicherstellung der Kompatibilität hängen von der Art des Gebäudeelements ab. Für Bauelemente mit Formendarstellungen auf Basis extrudierter Feststoffe, Dies wird durch Bezugnahme auf die identische Profildefinition im Formmodell wie im Materialprofil-Set erreicht. NOTE Modellansicht-Definitionen oder Implementierervereinbarungen können weitere Anweisungen zur Übereinstimmung zwischen Bauteilgeometrie und Materialprofil-Set-Verwendung enthalten. HINWEIS: Das referenzierte [[IfcMaterialProfileSet]] kann ein einzelnes Materialprofil oder ein Composite-Profil mit zwei oder mehr Materialprofilen darstellen. HISTORY S Neue Entität in IFC4. bSI-Dokumentation"
-
-#:IFC.xml:21655
-msgid "IfcMaterialProfileSetUsage_ForProfileSet"
-msgstr "ForProfil Set"
-
-msgid "IfcMaterialProfileSetUsage_ForProfileSet_DEFINITION"
-msgstr "ForProfil Set"
-
-#:IFC.xml:21680
-msgid "IfcMaterialProfileSetUsage_CardinalPoint"
-msgstr "CardinalPoint"
-
-msgid "IfcMaterialProfileSetUsage_CardinalPoint_DEFINITION"
-msgstr "Indexreferenz zu einem wichtigen Punkt im Abschnitt Profil. Beschreibt die Ausrichtung des Abschnitts im Verhältnis zur Längsachse des zugehörigen Mitglieds. Diese parametrische Spezifikation der Profilausrichtung kann redundant an die explizite Ausrichtung von ForProfileSet.MaterialProfiles .Profile."
-
-#:IFC.xml:21685
-msgid "IfcMaterialProfileSetUsage_ReferenceExtent"
-msgstr "Referenz-Umfang"
-
-msgid "IfcMaterialProfileSetUsage_ReferenceExtent_DEFINITION"
-msgstr "Umfang der Extrusion der Elemente Körperform Repräsentation auf die das [[IfcMaterialProfileSetUsage]] zutrifft. Es wird als Referenzwert für die oberen OffsetValues 2 verwendet, die vom Untertyp IfcMaterialProfileSetWithOffsets für eingebundene Materialprofile bereitgestellt werden. X 0D X 0D 0D HINWEIS Das Attribut ReferenzExtent wird geltend gemacht, wenn ein IfcMaterialProfileSetOffsets in der ForProfileSet.MaterialProfile Liste der Materialschichten enthalten ist. X 0D X 0D HINWEIS Der Referenz-Umfang für [[IfcBeamStandardCase]] , [[IfcColumnStandardCase]] , und [[IfcMemberStandardCase]] ist die Referenzlänge ab z 0 die XY-Ebene des Objektkoordinatensystems."
-
-#:IFC.xml:21692
-msgid "IfcMaterialProfileSetUsageTapering"
-msgstr "IfcMaterialProfileSetUsageTapering"
-
-msgid "IfcMaterialProfileSetUsageTapering_DEFINITION"
-msgstr "[[IfcMaterialProfileSetUsageTapering]] spezifiziert Dual-Material-Profil-Sätze in Verbindung mit konischen Prismatischen Balken oder Säulen wie Elementen. se Kopf-Nutzung mit konservierten Bauelementen Das ererbte Attribut ForProfilleSet legt das Profil und Material zu Beginn des Mitglieds fest ForProfileEndSet am Ende. Start und Ende entsprechen der Extrusionsrichtung im Formmodell der Formdarstellung des Elements oder des Elementtyps. Beide Materialprofilsätze sollten sich auf das gleiche Material beziehen, das heißt, sich nur im Hinblick auf ihre Profile unterscheidet. .use Kopfnutzung mit Mitgliedern der Strukturanalyse [[IfcMaterialProfileSetUsageTapering]] kann bei der Idealisierung der Strukturanalyse [[IfcStructuralCurveMember]] sowohl von einheitlichen Mitgliedern als auch von konservierten Mitgliedern verwendet werden. Im Falle von einheitlichen Mitgliedern verweisen ForProfileSet und ForProfileEndSet auf dasselbe Materialprofil. ForProfileSet legt das Profil und das Material am Anfang des Mitglieds fest, ForProfileEndSet am Ende. Start und Ende entsprechen der Kantenrichtung in der topologischen Darstellung des Kurvenmitglieds. bSI Dokumentation"
-
-#:IFC.xml:21667
-msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet"
-msgstr "ForProfil-Endset"
-
-msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet_DEFINITION"
-msgstr "ForProfil-Endset"
-
-#:IFC.xml:21693
-msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint"
-msgstr "CardinalEndPoint"
-
-msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint_DEFINITION"
-msgstr "Indexreferenz zu einem wichtigen Punkt im zweiten Abschnittsprofil. Beschreibt, wie dieser Abschnitt im Verhältnis zur Achse des zugeordneten Mitglieds ausgerichtet ist. Diese parametrische Spezifikation der Profilausrichtung kann redundant an die explizite Ausrichtung von ForProfileSet.MaterialProfiles .Profile."
-
-#:IFC.xml:21700
-msgid "IfcMaterialProfileWithOffsets"
-msgstr "IfcMaterialProfilauszahlungen"
-
-msgid "IfcMaterialProfileWithOffsets_DEFINITION"
-msgstr "[[IfcMaterialProfileWithOffsets]] ist eine Spezialisierung von [[IfcMaterialProfile]] mit zusätzlichen Längsabweichungen . Relative Positionen von [[IfcMaterialProfileWithOffsets]] in der Längsrichtung eines Elements können definiert werden und geben Vergleiche am Anfang am Ende an oder am Start und Ende. Dies soll nicht für relative Positionen einzelner Profile in der Ebene der Profildefinition verwendet werden, die in der Definition des zusammengesetzten Profils selbst angegeben ist. Auch sollte besonders bei Verwendung mit [[IfcMaterialProfileSetUsageTapering]] auf die korrekte Zuweisung von Start- und Endversatz geachtet werden. HISTORY S Neue Entität in IFC4. bSI-Dokumentation"
-
-#:IFC.xml:21701
-msgid "IfcMaterialProfileWithOffsets_OffsetValues"
-msgstr "Offsetwerte"
-
-msgid "IfcMaterialProfileWithOffsets_OffsetValues_DEFINITION"
-msgstr "Der numerische Wert des Profilversatzes, in der Richtung der Achsenrichtung immer AXIS1, das heißt, die Achse entlang des Extrusionsweges. Die OffsetValues 1 identifiziert den OffsetValues von der unteren Position entlang der Achsenrichtung normalerweise den Beginn der Standardextrusion , die OffsetValues 2 identifiziert den OffsetValues aus der oberen Position entlang der Achsenrichtung normalerweise das Ende der Standardextrusion ."
-
-#:IFC.xml:21708
-msgid "IfcMaterialProperties"
-msgstr "IfcMaterialeigenschaften"
-
-msgid "IfcMaterialProperties_DEFINITION"
-msgstr "Die [[IfcMaterialProperties]] weist zugehörigen Materialdefinitionen eine Reihe von Materialeigenschaften zu. Der Satz kann durch einen Namen und eine Beschreibung identifiziert werden. Die [[IfcProperty]] instanziierbaren Untertypen werden verwendet, um die einzelnen Materialeigenschaften nach Name, Beschreibung, Wert und Einheit auszudrücken. HINWEIS Die Menge der Materialeigenschaften kann einer Person zugewiesen werden [[IfcMaterial]] , ein Satz oder Verbundwerkstoff [[IfcMaterialConstituent]] , [[IfcMaterialConstituentSet]] , oder einzelne Materialschicht [[IfcMaterialLayer]] , [[IfcMaterialLayerSet]] , oder ein Set oder ein individuelles Materialprofil [[IfcMaterialProfile]] , [[IfcMaterialProfileSet]] HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Entity made non abstract. Die Untertypen IfcMechanicalMaterialProperties, IfcThermalMaterialProperties, IfcHygroscopicMaterialProperties, IfcGeneralMaterialProperties, IfcOpticalMaterialProperties, IfcWaterProperties, IfcFuelProperties, IfcProductsOfCombustionProperties, IfcExtendedMaterialProperties wurden gelöscht, stattdessen [[IfcMaterialProperties]] bSI Documentation"
-
-#:IFC.xml:21432
-msgid "IfcMaterialProperties_Material"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
-
-msgid "IfcMaterialProperties_Material_DEFINITION"
-msgstr "Pset_CableSegmentTypeConductorSegment_Material"
-
-#:IFC.xml:21711
-msgid "IfcMaterialRelationship"
-msgstr "IfcMaterialbeziehung"
-
-msgid "IfcMaterialRelationship_DEFINITION"
-msgstr "[[IfcMaterialRelationship]] definiert eine Beziehung zwischen Teil und Ganzes in materiellen Definitionen wie in Verbundwerkstoffen . Die Teile, die durch die Menge der verwandten Materialien ausgedrückt werden, sind materielle Bestandteile, aus denen ein einzelnes Material zusammengesetzt ist. HISTORY S Neue Entität in IFC4 bSI-Dokumentation"
-
-#:IFC.xml:21307
-msgid "IfcMaterialRelationship_RelatedMaterials"
-msgstr "Verwandte Materialien"
-
-msgid "IfcMaterialRelationship_RelatedMaterials_DEFINITION"
-msgstr "Verwandte Materialien"
-
-#:IFC.xml:21357
-msgid "IfcMaterialRelationship_RelatingMaterial"
-msgstr "Verwandtes Material"
-
-msgid "IfcMaterialRelationship_RelatingMaterial_DEFINITION"
-msgstr "Verwandtes Material"
-
-#:IFC.xml:21712
-msgid "IfcMaterialRelationship_Expression"
-msgstr "Ausdruck"
-
-msgid "IfcMaterialRelationship_Expression_DEFINITION"
-msgstr "Informationen über das materielle Verhältnis zum Beispiel über die Menge der verwandten Materialien im Verbundmaterial. X 0D NOTE Jede formale Bedeutung des Expressions-String-Wertes muss in Modellansicht-Definitionen oder Ausführungsvereinbarungen festgelegt werden. Eine solche Formsprache wird als Teil dieser Spezifikation nicht zur Verfügung gestellt."
-
-#:IFC.xml:21719
-msgid "IfcMaterialUsageDefinition"
-msgstr "IfcMaterialverbrauchsdefinition"
-
-msgid "IfcMaterialUsageDefinition_DEFINITION"
-msgstr "[[IfcMaterialUsageDefinition]] ist ein allgemeiner Supertyp für alle materialbezogenen Informationselemente in IFC, die ereignisspezifische Zuweisungsparameter haben, um einem Referenzgeometrie-Element dieser Komponente einen Satz von Materialien mit Formparametern zuzuordnen. Es gibt zwei Wege, eine Reihe von Materialien mit Formparametern eine Schicht auf eine Referenzkurve zuzuweisen, die eine Materialschicht mit Materialschichten mit einer Sequenz und Dicke Parameter zu einer Referenzkurve eines Elements mit der Darstellung der Achsenform des Elements ein Profil auf einen Kardinalpunkt setzt und ein Materialprofil mit zugewiesener Profilgeometrie und Einfügen auf eine Referenzkurve durch einen Offset verweist. Kardinalpunkt genannt wird die Referenzkurve durch die Darstellung der Achsenform des Elements dargestellt. Jeder instanziable Subtyp von [[IfcMaterialUsageDefinition]] muss einem Subtyp von [[IfcElement]] zugewiesen werden, indem die objektivierte Beziehung [[IfcRelAssociatesMaterial]] verwendet wird. HISTORY S New entity in IFC4 .spec head Informal Propositions 1. Es ist unzulässig, einen Untertyp von [[IfcMaterialUsageDefinition]] einem Untertyp von [[IfcElementType]] zuzuweisen Es wird nur einem Element-Vorkommen zugewiesen. bSI-Dokumentation"
-
-#:IFC.xml:21721
-msgid "IfcMaterialUsageDefinition_AssociatedTo"
-msgstr "Zugeordnet zu"
-
-msgid "IfcMaterialUsageDefinition_AssociatedTo_DEFINITION"
-msgstr "Zugeordnet zu"
-
-#:IFC.xml:21733
-msgid "IfcMlsTotalThickness__LayerSet"
-msgstr "IfcMlsTotalThickness-Layerset"
-
-msgid "IfcMlsTotalThickness__LayerSet_DEFINITION"
-msgstr "Funktion Semantic Definition berechnet die Gesamtdicke eines Materialschichts."
-
-#:IFC.xml:21741
-msgid "Pset_MaterialCombustion"
-msgstr "Materialverbrennung"
-
-msgid "Pset_MaterialCombustion_DEFINITION"
-msgstr "Eine Reihe erweiterter Materialeigenschaften von Verbrennungsprodukten, die durch Elemente erzeugt werden, die typischerweise im Rahmen von Gebäudedienstleistungen und Strömungsverteilungssystemen verwendet werden. bSI-Dokumentation"
-
-#:IFC.xml:21742
-msgid "Pset_MaterialCombustion_CO2Content"
-msgstr "Pset_MaterialCombustion_CO-Inhalt"
-
-msgid "Pset_MaterialCombustion_CO2Content_DEFINITION"
-msgstr "Kohlendioxid (CO2)-Gehalt der Verbrennungsprodukte, gemessen in Gewichtsprozent CO2 pro Gewichtseinheit und damit einheitslos."
-
-#:IFC.xml:21747
-msgid "Pset_MaterialCombustion_COContent"
-msgstr "Pset_MaterialCombustion_CO-Inhalt"
-
-msgid "Pset_MaterialCombustion_COContent_DEFINITION"
-msgstr "Kohlenmonoxid (CO)-Gehalt der Verbrennungsprodukte, der in Gewichtsprozent CO pro Gewichtseinheit gemessen wird und somit einheitslos ist."
-
-#:IFC.xml:21752
-msgid "Pset_MaterialCombustion_N20Content"
-msgstr "Pset_MaterialCombustion_N20-Inhalt"
-
-msgid "Pset_MaterialCombustion_N20Content_DEFINITION"
-msgstr "Distickstoffmonoxid (N2O) Gehalt der Verbrennungsprodukte, gemessen in Gewichtsprozent N2O pro Gewichtseinheit und damit einheitslos."
-
-#:IFC.xml:21757
-msgid "Pset_MaterialCombustion_SpecificHeatCapacity"
-msgstr "Pset_MaterialCombustion_Spezifische Wärmekapazität"
-
-msgid "Pset_MaterialCombustion_SpecificHeatCapacity_DEFINITION"
-msgstr "Spezifische Wärme der Verbrennungsprodukte: Wärmeenergie, die pro Temperatureinheit aufgenommen wird."
-
-#:IFC.xml:21763
-msgid "Pset_MaterialCommon"
-msgstr "Pset MaterialCommon"
-
-msgid "Pset_MaterialCommon_DEFINITION"
-msgstr "Ein Satz allgemeiner Materialeigenschaften. bSI-Dokumentation"
-
-#:IFC.xml:21764
-msgid "Pset_MaterialCommon_MassDensity"
-msgstr "Pset_MaterialCommon_Massendichte"
-
-msgid "Pset_MaterialCommon_MassDensity_DEFINITION"
-msgstr "Massendichte des Materials."
-
-#:IFC.xml:21769
-msgid "Pset_MaterialCommon_MolecularWeight"
-msgstr "Pset_MaterialCommon_Molekulargewicht"
-
-msgid "Pset_MaterialCommon_MolecularWeight_DEFINITION"
-msgstr "Molekulargewicht des Materials (typischerweise Gas)."
-
-#:IFC.xml:21774
-msgid "Pset_MaterialCommon_Porosity"
-msgstr "Pset_MaterialCommon_Porosität"
-
-msgid "Pset_MaterialCommon_Porosity_DEFINITION"
-msgstr "Der Hohlraumanteil des Gesamtvolumens des Materials (Vbr - Vnet)/Vbr."
-
-#:IFC.xml:21812
-msgid "Pset_MaterialEnergy"
-msgstr "Pset Materialenergie"
-
-msgid "Pset_MaterialEnergy_DEFINITION"
-msgstr "Eine Reihe erweiterter Materialeigenschaften für Energieberechnungszwecke. bSI-Dokumentation"
-
-#:IFC.xml:21813
-msgid "Pset_MaterialEnergy_GasPressure"
-msgstr "Pset_MaterialEnergy_Gasdruck"
-
-msgid "Pset_MaterialEnergy_GasPressure_DEFINITION"
-msgstr "Fülldruck (z.B. für Gasfüllungen zwischen den Scheiben): Der Druck, der von einer Gasmasse ausgeübt wird, die in einem konstanten Volumen eingeschlossen ist."
-
-#:IFC.xml:21818
-msgid "Pset_MaterialEnergy_MoistureCapacityThermalGradient"
-msgstr "Pset_MaterialEnergy_Feuchtekapazität - Temperaturgradient"
-
-msgid "Pset_MaterialEnergy_MoistureCapacityThermalGradient_DEFINITION"
-msgstr "Thermischer Gradientenkoeffizient für die Feuchtekapazität, basierend auf der Wasserdampfdichte."
-
-#:IFC.xml:21823
-msgid "Pset_MaterialEnergy_SolarRefractionIndex"
-msgstr "Pset_MaterialEnergy_Solar-Brechungsindex"
-
-msgid "Pset_MaterialEnergy_SolarRefractionIndex_DEFINITION"
-msgstr "Der Brechungsindex (Solar) definiert die Biegung des Sonnenstrahls, wenn er von einem Medium in ein anderes übergeht."
-
-#:IFC.xml:21828
-msgid "Pset_MaterialEnergy_SpecificHeatTemperatureDerivative"
-msgstr "Pset_MaterialEnergy_Spezifische Wärme - Temperaturableitung"
-
-msgid "Pset_MaterialEnergy_SpecificHeatTemperatureDerivative_DEFINITION"
-msgstr "Ableitung der spezifischen Wärmetemperatur."
-
-#:IFC.xml:21833
-msgid "Pset_MaterialEnergy_ThermalConductivityTemperatureDerivative"
-msgstr "Pset_MaterialEnergy_Wärmeleitfähigkeit - Temperaturableitung"
-
-msgid "Pset_MaterialEnergy_ThermalConductivityTemperatureDerivative_DEFINITION"
-msgstr "Ableitung der Wärmeleitfähigkeitstemperatur."
-
-#:IFC.xml:21838
-msgid "Pset_MaterialEnergy_ViscosityTemperatureDerivative"
-msgstr "Pset_MaterialEnergy_Viskosität - Temperaturableitung"
-
-msgid "Pset_MaterialEnergy_ViscosityTemperatureDerivative_DEFINITION"
-msgstr "Ableitung der Viskositätstemperatur."
-
-#:IFC.xml:21843
-msgid "Pset_MaterialEnergy_VisibleRefractionIndex"
-msgstr "Pset_MaterialEnergy_Sichtbarer Brechungsindex"
-
-msgid "Pset_MaterialEnergy_VisibleRefractionIndex_DEFINITION"
-msgstr "Der Brechungsindex (sichtbar) definiert die Biegung des Sonnenstrahls im sichtbaren Spektrum, wenn er von einem Medium in ein anderes übergeht."
-
-#:IFC.xml:21849
-msgid "Pset_MaterialFuel"
-msgstr "Materialkraftstoff anlegen"
-
-msgid "Pset_MaterialFuel_DEFINITION"
-msgstr "Eine Reihe erweiterter Materialeigenschaften von Treibstoffenergie, die typischerweise im Rahmen von Gebäudedienstleistungen und Strömungsverteilungssystemen eingesetzt werden."
-
-#:IFC.xml:21850
-msgid "Pset_MaterialFuel_CarbonContent"
-msgstr "Pset_MaterialFuel_Kohlenstoffgehalt"
-
-msgid "Pset_MaterialFuel_CarbonContent_DEFINITION"
-msgstr "Der Kohlenstoffgehalt im Kraftstoff, der in Gewicht des Kohlenstoffs pro Einheitsgewicht des Kraftstoffs gemessen wird und somit einheitslos ist."
-
-#:IFC.xml:21855
-msgid "Pset_MaterialFuel_CombustionTemperature"
-msgstr "Pset_BoilerPHistory_Verbrennungstemperatur"
-
-msgid "Pset_MaterialFuel_CombustionTemperature_DEFINITION"
-msgstr "Verbrennungstemperatur des Materials bei einer Lufttemperatur von 298 K und 100 kPa."
-
-#:IFC.xml:21860
-msgid "Pset_MaterialFuel_HigherHeatingValue"
-msgstr "Pset_MaterialFuel_Oberer Heizwert"
-
-msgid "Pset_MaterialFuel_HigherHeatingValue_DEFINITION"
-msgstr "Höherer Heizwert ist definiert als die Menge an Energie, die freigesetzt wird (MJ/kg), wenn ein Brennstoff vollständig verbrannt wird und H2O in flüssiger Form in den Verbrennungsprodukten enthalten ist."
-
-#:IFC.xml:21865
-msgid "Pset_MaterialFuel_LowerHeatingValue"
-msgstr "Pset_MaterialFuel_Unterer Heizwert"
-
-msgid "Pset_MaterialFuel_LowerHeatingValue_DEFINITION"
-msgstr "Der untere Heizwert ist definiert als die Menge an Energie, die freigesetzt wird (MJ/kg), wenn ein Brennstoff vollständig verbrannt wird und H2O in den Verbrennungsprodukten in Dampfform vorliegt."
-
-#:IFC.xml:21871
-msgid "Pset_MaterialHygroscopic"
-msgstr "MaterialHygroskopisch ansetzen"
-
-msgid "Pset_MaterialHygroscopic_DEFINITION"
-msgstr "Ein Satz hygroskopischer Eigenschaften von Materialien. BSI-Dokumentation"
-
-#:IFC.xml:21872
-msgid "Pset_MaterialHygroscopic_IsothermalMoistureCapacity"
-msgstr "Pset_MaterialHygroscopic_Isothermische Feuchtekapazität"
-
-msgid "Pset_MaterialHygroscopic_IsothermalMoistureCapacity_DEFINITION"
-msgstr "Basierend auf der Wasserdampfdichte."
-
-#:IFC.xml:21877
-msgid "Pset_MaterialHygroscopic_LowerVaporResistanceFactor"
-msgstr "Pset_MaterialHygroscopic_Dampfwiderstandswert - hohe Feuchte"
-
-msgid "Pset_MaterialHygroscopic_LowerVaporResistanceFactor_DEFINITION"
-msgstr "Das Dampfdurchlässigkeitsverhältnis von Luft / Material (typischerweise Wert > 1), gemessen bei niedriger relativer Luftfeuchtigkeit (typischerweise in 0/50 % RH)."
-
-#:IFC.xml:21882
-msgid "Pset_MaterialHygroscopic_MoistureDiffusivity"
-msgstr "Pset_MaterialHygroscopic_Feuchte-Diffusionsvermögen"
-
-msgid "Pset_MaterialHygroscopic_MoistureDiffusivity_DEFINITION"
-msgstr "Die Feuchtediffusion ist eine Transporteigenschaft, die häufig bei der hygrothermischen Analyse von Bauteilen der Gebäudehülle eingesetzt wird."
-
-#:IFC.xml:21887
-msgid "Pset_MaterialHygroscopic_UpperVaporResistanceFactor"
-msgstr "Pset_MaterialHygroscopic_Dampfwiderstandswert - hohe Feuchte"
-
-msgid "Pset_MaterialHygroscopic_UpperVaporResistanceFactor_DEFINITION"
-msgstr "Das Dampfdurchlässigkeitsverhältnis von Luft und Material (typischerweise Wert > 1), gemessen bei hoher relativer Luftfeuchtigkeit (typischerweise 95/50 % RH)."
-
-#:IFC.xml:21892
-msgid "Pset_MaterialHygroscopic_VaporPermeability"
-msgstr "Pset_MaterialHygroscopic_Dampfdurchlässigkeit"
-
-msgid "Pset_MaterialHygroscopic_VaporPermeability_DEFINITION"
-msgstr "Die Rate der Wasserdampfdurchlässigkeit pro Flächeneinheit pro Einheit der Dampfdruckdifferenz unter Testbedingungen."
-
-#:IFC.xml:21898
-msgid "Pset_MaterialMechanical"
-msgstr "Pset Materialmechanik"
-
-msgid "Pset_MaterialMechanical_DEFINITION"
-msgstr "Eine Reihe mechanischer Materialeigenschaften, die normalerweise für die Strukturanalyse verwendet werden. Es enthält alle Eigenschaften, die unabhängig vom aktuellen Materialtyp sind."
-
-#:IFC.xml:21899
-msgid "Pset_MaterialMechanical_DynamicViscosity"
-msgstr "Pset_MaterialMechanical_Dynamische Viskosität"
-
-msgid "Pset_MaterialMechanical_DynamicViscosity_DEFINITION"
-msgstr "Ein Maß für die Viskositätsbeständigkeit des Materials."
-
-#:IFC.xml:21904
-msgid "Pset_MaterialMechanical_PoissonRatio"
-msgstr "Pset_MaterialMechanical_Poissonzahl"
-
-msgid "Pset_MaterialMechanical_PoissonRatio_DEFINITION"
-msgstr "Ein Maß für die lateralen Verformungen im elastischen Bereich."
-
-#:IFC.xml:21909
-msgid "Pset_MaterialMechanical_ShearModulus"
-msgstr "Pset_MaterialMechanical_Schubmodul"
-
-msgid "Pset_MaterialMechanical_ShearModulus_DEFINITION"
-msgstr "Ein Maß für den Schubmodul-Elastizitätsmodul des Materials."
-
-#:IFC.xml:21914
-msgid "Pset_MaterialMechanical_ThermalExpansionCoefficient"
-msgstr "Pset_MaterialMechanical_Wärmeausdehnungskoeffizient"
-
-msgid "Pset_MaterialMechanical_ThermalExpansionCoefficient_DEFINITION"
-msgstr "Ein Maß für den Ausdehnungskoeffizienten zur Erwärmung des Materials um ein Kelvin."
-
-#:IFC.xml:21919
-msgid "Pset_MaterialMechanical_YoungModulus"
-msgstr "Pset_MaterialMechanical_E-Modul"
-
-msgid "Pset_MaterialMechanical_YoungModulus_DEFINITION"
-msgstr "Ein Maß für den Elastizitätsmodul des Materials."
-
-#:IFC.xml:21925
-msgid "Pset_MaterialOptical"
-msgstr "Pset Materialoptik"
-
-msgid "Pset_MaterialOptical_DEFINITION"
-msgstr "Eine Reihe optischer Eigenschaften von Materialien. bSI-Dokumentation"
-
-#:IFC.xml:21926
-msgid "Pset_MaterialOptical_SolarReflectanceBack"
-msgstr "Pset_MaterialOptical_Strahlungsreflektionsgrad - Rückseite"
-
-msgid "Pset_MaterialOptical_SolarReflectanceBack_DEFINITION"
-msgstr "Reflexionsgrad bei normalem Einfall (Solar): Rückseite: Definiert den Anteil des Sonnenstrahls, der reflektiert wird und nicht durchgelassen wird, wenn der Strahl von einem Medium in ein anderes, auf der Rückseite des anderen Materials, senkrecht zur Oberfläche, übergeht."
-
-#:IFC.xml:21931
-msgid "Pset_MaterialOptical_SolarReflectanceFront"
-msgstr "Pset_MaterialOptical_Strahlungsreflektionsgrad - Vorderseite"
-
-msgid "Pset_MaterialOptical_SolarReflectanceFront_DEFINITION"
-msgstr "Reflexionsgrad bei normalem Einfall (Solar): Vorderseite: Definiert den Anteil des Sonnenstrahls, der reflektiert und nicht durchgelassen wird, wenn der Strahl von einem Medium in ein anderes, auf der Vorderseite des anderen Materials, senkrecht zur Oberfläche, übergeht."
-
-#:IFC.xml:21936
-msgid "Pset_MaterialOptical_SolarTransmittance"
-msgstr "Pset_MaterialOptical_Strahlungstransmissionsgrad"
-
-msgid "Pset_MaterialOptical_SolarTransmittance_DEFINITION"
-msgstr "Transmissionsgrad bei normalem Einfall (Solar): Definiert den Anteil der Sonnenstrahlung, der pro Flächeneinheit senkrecht zur Oberfläche durchgelassen wird."
-
-#:IFC.xml:21941
-msgid "Pset_MaterialOptical_ThermalIrEmissivityBack"
-msgstr "Pset_MaterialOptical_Emissionsgrad für thermische IR-Strahlung - Rückseite"
-
-msgid "Pset_MaterialOptical_ThermalIrEmissivityBack_DEFINITION"
-msgstr "Thermischer IR-Emissionsgrad: Rückseite: Definiert den Anteil der pro Flächeneinheit emittierten Wärmeenergie, der bei gleicher Temperatur über die Rückseite des Materials an den Schwarzkörper abgegeben wird."
-
-#:IFC.xml:21946
-msgid "Pset_MaterialOptical_ThermalIrEmissivityFront"
-msgstr "Pset_MaterialOptical_Emissionsgrad für thermische IR-Strahlung - Vorderseite"
-
-msgid "Pset_MaterialOptical_ThermalIrEmissivityFront_DEFINITION"
-msgstr "Thermischer IR-Emissionsgrad: Vorderseite: Definiert den Anteil der Wärmeenergie, der pro Flächeneinheit an den Schwarzkörper bei gleicher Temperatur durch die Vorderseite des Materials abgegeben wird."
-
-#:IFC.xml:21951
-msgid "Pset_MaterialOptical_ThermalIrTransmittance"
-msgstr "Pset_MaterialOptical_Transmissionsgrad für thermische IR-Strahlung"
-
-msgid "Pset_MaterialOptical_ThermalIrTransmittance_DEFINITION"
-msgstr "Thermischer IR-Transmissionsgrad bei normalem Einfall: Definiert den Anteil der thermischen Energie, der pro Flächeneinheit senkrecht zur Oberfläche durchgelassen wird."
-
-#:IFC.xml:21956
-msgid "Pset_MaterialOptical_VisibleReflectanceBack"
-msgstr "Pset_MaterialOptical_Reflektionsgrad für sichtbares Licht - Rückseite"
-
-msgid "Pset_MaterialOptical_VisibleReflectanceBack_DEFINITION"
-msgstr "Reflexionsgrad bei normalem Einfall (sichtbar): Rückseite: Definiert den Anteil des Sonnenstrahls im sichtbaren Spektrum, der reflektiert und nicht durchgelassen wird, wenn der Strahl von einem Medium in ein anderes, auf der Rückseite des anderen Materials, senkrecht zur Oberfläche, übergeht."
-
-#:IFC.xml:21961
-msgid "Pset_MaterialOptical_VisibleReflectanceFront"
-msgstr "Pset_MaterialOptical_Reflektionsgrad für sichtbares Licht - Vorderseite"
-
-msgid "Pset_MaterialOptical_VisibleReflectanceFront_DEFINITION"
-msgstr "Reflexionsgrad bei normalem Einfall (sichtbar): Vorderseite: Definiert den Anteil des Sonnenstrahls im sichtbaren Spektrum, der reflektiert wird und nicht durchgelassen wird, wenn der Strahl von einem Medium in ein anderes, auf der Vorderseite des anderen Materials, senkrecht zur Oberfläche, übergeht."
-
-#:IFC.xml:21966
-msgid "Pset_MaterialOptical_VisibleTransmittance"
-msgstr "Pset_MaterialOptical_Transmissionsgrad für sichtbares Licht"
-
-msgid "Pset_MaterialOptical_VisibleTransmittance_DEFINITION"
-msgstr "Transmissionsgrad bei normalem Einfall (sichtbar): Definiert den Anteil des sichtbaren Spektrums der Sonnenstrahlung, der pro Flächeneinheit senkrecht zur Oberfläche durchgelassen wird."
-
-#:IFC.xml:22009
-msgid "Pset_MaterialThermal"
-msgstr "Pset Materialtherme"
-
-msgid "Pset_MaterialThermal_DEFINITION"
-msgstr "Eine Reihe von thermischen Materialeigenschaften. bSI-Dokumentation"
-
-#:IFC.xml:22010
-msgid "Pset_MaterialThermal_BoilingPoint"
-msgstr "Pset_MaterialThermal_Siedepunkt"
-
-msgid "Pset_MaterialThermal_BoilingPoint_DEFINITION"
-msgstr "Der Siedepunkt des Materials (Flüssigkeit)."
-
-#:IFC.xml:22015
-msgid "Pset_MaterialThermal_FreezingPoint"
-msgstr "Pset_MaterialThermal_Gefrierpunkt"
-
-msgid "Pset_MaterialThermal_FreezingPoint_DEFINITION"
-msgstr "Der Gefrierpunkt des Materials (Flüssigkeit)."
-
-#:IFC.xml:22020
-msgid "Pset_MaterialThermal_SpecificHeatCapacity"
-msgstr "Pset_MaterialCombustion_Spezifische Wärmekapazität"
-
-msgid "Pset_MaterialThermal_SpecificHeatCapacity_DEFINITION"
-msgstr "Definiert die spezifische Wärme des Materials: die pro Temperatureinheit aufgenommene Wärmeenergie."
-
-#:IFC.xml:22025
-msgid "Pset_MaterialThermal_ThermalConductivity"
-msgstr "Pset_TubeBundleTypeCommon_Thermische Leitfähigkeit"
-
-msgid "Pset_MaterialThermal_ThermalConductivity_DEFINITION"
-msgstr "Die Geschwindigkeit, mit der Wärmeenergie durch das Material übertragen wird."
-
-#:IFC.xml:22031
-msgid "Pset_MaterialWater"
-msgstr "Material Wasser anlegen"
-
-msgid "Pset_MaterialWater_DEFINITION"
-msgstr "Eine Reihe erweiterter Materialeigenschaften für Wasser, die typischerweise im Rahmen von Gebäudedienstleistungen und Flussverteilungssystemen eingesetzt werden."
-
-#:IFC.xml:22032
-msgid "Pset_MaterialWater_AcidityConcentration"
-msgstr "Pset_MaterialWater_Säurekonzentration"
-
-msgid "Pset_MaterialWater_AcidityConcentration_DEFINITION"
-msgstr "Maximales CaCO3-Äquivalent, das die Säure neutralisieren würde."
-
-#:IFC.xml:22037
-msgid "Pset_MaterialWater_AlkalinityConcentration"
-msgstr "Pset_MaterialWater_Alkalinitätskonzentration"
-
-msgid "Pset_MaterialWater_AlkalinityConcentration_DEFINITION"
-msgstr "Maximale Alkalinitätskonzentration (maximale Summe der Konzentrationen der einzelnen negativen Ionenstoffe, gemessen als CaCO3)."
-
-#:IFC.xml:22042
-msgid "Pset_MaterialWater_DissolvedSolidsContent"
-msgstr "Pset_MaterialWater_Gehalt an gelösten Feststoffen"
-
-msgid "Pset_MaterialWater_DissolvedSolidsContent_DEFINITION"
-msgstr "Anteil der gelösten Feststoffe an der Gesamtwassermenge, gemessen in Gewichtsprozent der gelösten Feststoffe pro Gewichtsprozent Wasser und damit einheitslos."
-
-#:IFC.xml:22047
-msgid "Pset_MaterialWater_Hardness"
-msgstr "Pset_MaterialWater_Härte"
-
-msgid "Pset_MaterialWater_Hardness_DEFINITION"
-msgstr "Wasserhärte als positive, mehrwertige Ionenkonzentration im Wasser (üblicherweise Konzentrationen von Calcium- und Magnesiumionen in Form von Calciumcarbonat)."
-
-#:IFC.xml:22052
-msgid "Pset_MaterialWater_ImpuritiesContent"
-msgstr "Pset_MaterialWater_Gehalt an Verunreinigungen"
-
-msgid "Pset_MaterialWater_ImpuritiesContent_DEFINITION"
-msgstr "Anteil von Verunreinigungen wie z.B. Staub an der Gesamtwassermenge, gemessen in Gewicht der Verunreinigungen pro Gewicht des Wassers und somit einheitslos."
-
-#:IFC.xml:22057
-msgid "Pset_MaterialWater_IsPotable"
-msgstr "Pset_MaterialWater_Trinkbar"
-
-msgid "Pset_MaterialWater_IsPotable_DEFINITION"
-msgstr "Wenn TRUE, dann gilt das Wasser als trinkbar."
-
-#:IFC.xml:22062
-msgid "Pset_MaterialWater_PHLevel"
-msgstr "Pset_MaterialWater_PH-Wert"
-
-msgid "Pset_MaterialWater_PHLevel_DEFINITION"
-msgstr "Maximaler Wasser-PH-Wert im Bereich von 0-14."
-
-#:IFC.xml:22153
-msgid "IfcMaterialSelect"
-msgstr "IfcMaterialauswahl"
-
-msgid "IfcMaterialSelect_DEFINITION"
-msgstr "[[IfcMaterialSelect]] bietet entweder eine Materialdefinition oder eine Materialdefinition an, die einem Element zugewiesen werden kann eine Ressource oder eine andere Entität innerhalb dieser Spezifikation. [[IfcMaterialDefinition]] [[IfcMaterial]] [[IfcMaterialLayer]] [[IfcMaterialLayerSet]] [[IfcMaterialProfile]] [[IfcMaterialProfileSet]] [[IfcMaterialConstituent]] [[IfcMaterialConstituentSet]] [[IfcMaterialUsageDefinition]] [[IfcMaterialLayerSetUsage]] [[IfcMaterialProfileSetUsage]] [[IfcMaterialList]] Neue Auswahl im IFC1. .change ifc2x4 IFC4 CHANGE Die Auswahl enthält nun zwei neue abstrakte Entitäten [[IfcMaterialDefinition]] und [[IfcMaterialUsageDefinition]] mit Aufwärtskompatibilität. Die Verwendung von [[IfcMaterialList]] ist ab IFC4 veraltet."
-
-#:IFC.xml:22154
-msgid "IfcCardinalPointReference"
-msgstr "Bezug auf Einfügepunkte"
-
-msgid "IfcCardinalPointReference_DEFINITION"
-msgstr "Eine IfcCardinalPointReference ist eine Indexreferenz auf signifikante Punkte eines Schnittprofils. Dieser Index wird verwendet, um die räumliche Beziehung zwischen dem Querschnitt eines Elements und einer Referenzachse desselben Elements zu beschreiben."
+msgid "IfcShell_DEFINITION"
+msgstr "Ein Typ, der verschiedene Arten von Muscheln umfasst. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Dieser Typ sammelt zusammen als Referenz bei der Konstruktion komplexerer Modelle, der Subtypen, die die Eigenschaften einer Shell haben. Eine Shell ist ein verbundenes Objekt mit fester Dimensionalität d 0 1 oder 2, das typischerweise zur Bindung einer Region verwendet wird. Die Domäne einer Shell, falls vorhanden, enthält seine Grenzen und 0 <unk> Eine Shell der Dimensionalität 0 wird durch eine Grafik repräsentiert, die aus einem einzelnen Scheitelpunkt besteht. Der Scheitelpunkt darf keine Kanten haben. Eine Schale der Dimensionalität 2 ist ein topologisches Gebilde, das durch die Verbindung von Gesichtern entlang der Kanten konstruiert wurde. Seine Domäne ist, wenn vorhanden, eine verbundene, orientierbare 2 vielfältig mit Grenze, das heißt, eine verbundene, orientierte, endliche, nicht sich selbst schneidende Oberfläche, die geschlossen oder geöffnet werden kann. HISTORY New type in IFC2x."
 
