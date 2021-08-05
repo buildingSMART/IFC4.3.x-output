@@ -9,331 +9,135 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcPresentationDefinitionResource.pot\n"
+"X-Crowdin-File-ID: 62\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2021-08-05 20:11\n"
 
-#:IFC.xml:44118
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:26321
+msgid "IfcAnnotationFillArea"
+msgstr "IfcAnnotationFillarea"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 bSI Documentation"
+msgid "IfcAnnotationFillArea_DEFINITION"
+msgstr "[[IfcAnnotationFillArea]] 通过确定的外部边界来定义一个区域，其中可能包括内界。 内地边界划定的区域不适用填充区域风格。 内界不得与外界相交，也不得在外界之外。 应用于[[IfcAnnotationFillArea]] 的填充区域风格已声明使用 [[IfcFillAreaStyle]] ， 由 [[IfcStyledItem]] 关联到区域。 可适用的填充区域风格是一种固态颜色、一种孵化器、瓷砖或两种风格的组合。 按照ISO 10303 46 ，xtDef 注定义； 注填区域是一组曲线，可填充钩， 彩色或倾斜。 注解填表是用非相互关联、非自连穿封闭曲线的边界来表示的。 这些曲线形成按注解填充区域样式填充的平面区域的边界。 图1显示注解填充区域。 图1 从IOC2x2中ISO10303 46 HISTORY 新实体定义的注解填充区域改编的注解填充实体。 挂机ifc2x3 IFC2x3 变换。 增加两个属性，即超越边界和内界，取代前一个边界。 .spec头部非正式提议1：描述内界的任何曲线不得与界定内界的另一曲线相交，也不得包括确定内界的另一曲线。 界定外部边界的曲线不得与界定内界的任何曲线相交。 它周围也不应有界定内界的曲线。 bSI 文档"
 
-#:IFC.xml:44133
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBoolean选择 B"
+#:IFC.xml:11866
+msgid "IfcAnnotationFillArea_OuterBoundary"
+msgstr "外部边界"
 
-msgid "IfcBooleanChoose__B_DEFINITION"
-msgstr "返回第一个选择，如果TRUE，则返回第二个选择。 xtDef NotE Definition according to ISO CD 10303 42 1992 This function 返回两个选项之一, 取决于布尔输入参数的值。 这两个选项也是输入参数。IOC2.0 中定义的 ISO10303 42中的布尔值中的注功能。"
+msgid "IfcAnnotationFillArea_OuterBoundary_DEFINITION"
+msgstr "外部边界"
 
-#:IFC.xml:44141
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+#:IFC.xml:12022
+msgid "IfcAnnotationFillArea_InnerBoundaries"
+msgstr "内部边界"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
+msgid "IfcAnnotationFillArea_InnerBoundaries_DEFINITION"
+msgstr "内部边界"
 
-#:IFC.xml:44146
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+#:IFC.xml:26324
+msgid "IfcPlanarBox"
+msgstr "IfcPlanarBox"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef Note Definition according in the ISO CD 10303 42 1992. A connected face set a set of face is set that the domain with their bounding edges and vertices is connected. 从ISO10303 42中定义的连接面组改装的注实体，在IFC1.spec头非正式提案1中的HISTORY 新实体。 面部域及其边界循环的结合必须连接。bSI 文档"
+msgid "IfcPlanarBox_DEFINITION"
+msgstr "一个平面箱指定了一个任意的矩形方形盒及其位于一个两维卡泰斯坐标系统。 如果平面盒在三维坐标系统内使用，它将定义XY平面内的矩形盒。 从 ISO10303 46 HISTORY New entity 在 IFC2x2. bSI 文档中定义的planar box中改编的注实体"
 
-#:IFC.xml:44149
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "切片面"
+#:IFC.xml:26325
+msgid "IfcPlanarBox_Placement"
+msgstr "位置"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "切片面"
+msgid "IfcPlanarBox_Placement_DEFINITION"
+msgstr "[[IfcAxis2Placement]] 为矩形的定义定位一个本地坐标系统。 这个本地坐标系统的起源是矩形框左下角。 X 0D X 0D 注解。如果IfcAxisPlacement3D 在3D 的位置，定义坐标系统的xy平面中定义了[[IfcPlanarBox]。"
 
-#:IFC.xml:44161
-msgid "IfcEdge"
-msgstr "切边线"
+#:IFC.xml:26332
+msgid "IfcPlanarExtent"
+msgstr "IfcPlanarExtent"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "一个 [[IfcEdge]] 定义了在顶部连接的两个顶点。 如果没有使用子类型 [[IfcEdgeCurve]] 分配曲线几何形状，则两个顶点之间的连接的几何表示默认为一条直线。 因此，[[IfcEdge]] 可以用来交换直径边缘，而不需要相关的几何形状，由[[IfcLine]] 或 [[IfcPolyline]] 考虑[[IfcEdgeCurve]]。 dgeometry EXAMPLE 图1展示了一个由边缘开始给出[[IfcEdge]]边界的示例，而边缘末端也决定了边缘的方向。 坐标空间内的位置由EdgeStart 和 EdgeEnd 的 [[IfcVertexPoint]] 类型决定。 由于没有分配边缘几何形状，它默认为一条直线同意方向含义。 图1 边缘分布情况 按照ISO CD 10303 42 1992，xtDef 注明定义 边缘是与两个顶点的连接对应的地形构造。 更抽象地说，它可以成为两个顶点之间的逻辑关系。 边缘域（如果存在的话）是一个有限的域， 在 R M 中非自连开打开的曲线，即一个连接的 1 维管。 边缘的界限是两个顶端，无需区分。 通过选择从第一个到第二个顶点运行的横向方向来定向边缘。 如果两个顶点是相同的，边缘是一个自身循环。 边缘域不包括其边界，也不包括0个x。 与边缘相关联的可能是几何曲线，以便在坐标空间中定位边缘，这是由边缘曲线子类型表示的。 曲线必须是有限的，在边缘域内不能自连。 边缘是一个图形，所以其多重性M和图基因G e可能由图横向算法确定。 自M E 1以来，欧勒方程式1减少到图像。 ... ... figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. 具体地说，地缘边缘定义数据必须满足边缘的两个顶端图像。 ... ... ... figures ifcedge math2.g，如果顶点不需要是不同的图像... ... ... ... ... ... ... ... .... figures ifcedge moth3。 如果方程式将保持图像 ... ... ... ... ... .. 数字进化数 如果从ISO 10303 42中定义的边缘改装了注实体，在IFC2中的新实体中。 .spec Head Informal Propositions 1. 边缘具有维度1. 边缘范围必须是有限和非零。bSI 文档"
+msgid "IfcPlanarExtent_DEFINITION"
+msgstr "这个平面范围确定了两个尺寸坐标系统的两个轴线上的范围，不论其位置如何。 如果在三维坐标系内使用平面尺寸，它将界定x轴和y轴的范围。 从 ISO10303 46 HISTORY New entity 在 IFC2x2. bSI 文档中定义的平面范围修改的注实体"
 
-#:IFC.xml:44164
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:26333
+msgid "IfcPlanarExtent_SizeInX"
+msgstr "SizeInX"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "EdgeEnd"
+msgid "IfcPlanarExtent_SizeInX_DEFINITION"
+msgstr "x轴方向的范围。"
 
-#:IFC.xml:44176
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:26338
+msgid "IfcPlanarExtent_SizeInY"
+msgstr "SizeInY"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "EdgeStart"
+msgid "IfcPlanarExtent_SizeInY_DEFINITION"
+msgstr "Y轴方向的范围。"
 
-#:IFC.xml:44212
-msgid "IfcEdgeCurve"
-msgstr "IfcEdge曲线"
+#:IFC.xml:26357
+msgid "IfcPresentationItem"
+msgstr "IfcPresentation项目"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "一个 [[IfcEdgeCurve]] 定义了正在连接的两个顶点地形，包括连接的几何形状。 注意到地形用于修剪边缘的几何形状。没有必要用几何形状来修剪边缘。 EXAMPLE 图1说明了一个由无边界曲线给出边缘几何形状的示例，在这里[[IfcCircle]]。 边界由EdgeStart 和 Edgeend提供， [[IfcEdgeCurve]] 的地形方向反对SameSense FALSE的 [[IfcCircle]] 的方向。 图1 边缘曲线 按照ISO CD 10303 42 1992，xtDef 注解定义。边缘曲线是一种特殊的边缘子类型，它具有完全定义的几何形状。 几何形状的定义是将边缘与可能被解冻的曲线联系起来。 由于地形和几何方向可能受到反对， 一个指示器用同样的意思来确定边缘和曲线方向是一致还是对立。 布尔值表示曲线方向是否与 TRUE 一致或朝着相反方向FALSE 到边缘方向。 与边缘顶点相关联的任何几何形状必须与边缘几何形状保持一致。 多个边可以引用相同的曲线。注意实体是从ISO 10303 42定义的边缘曲线中调整的。 IFC2x.spec首长非正式提议1中的新实体。 边缘曲线的域被正式定义为其边缘几何形状的域。 此域不包括顶点。2. 边缘曲线的无限制程度非零。3. 边缘曲线是多倍的。 4. 一条边缘曲线是顺时针连接的。5. 边缘起点不是边缘域的一部分。 边缘端不是边缘域的一部分。7顶点几何形状应与边缘几何形状一致。bSI 文档"
+msgid "IfcPresentationItem_DEFINITION"
+msgstr "[[IfcPresentationItem]] 是用于展示外观定义的所有实体的抽象超级类型。IFC4中的HISTORY 新实体。bSI 文档"
 
-#:IFC.xml:12010
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometry"
+#:IFC.xml:26358
+msgid "IfcTextLiteral"
+msgstr "IfcTextLiteral"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "EdgeGeometry"
+msgid "IfcTextLiteral_DEFINITION"
+msgstr "The text literal is a geometric representation item which describes a text string using a string literal and additional position and path information. The text size and appearance is determined by the [[IfcTextStyle]] that is associated to the [[IfcTextLiteral]] through an [[IfcStyledItem]] . The text string is placed within the planar extent the box defined within the subtype [[IfcTextLiteralWithExtent]] . NOTE Entity adapted from text literal defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextLiteral]] has been changed by removing Font and Alignment . .deprecated DEPRECATION The use of [[IfcTextLiteral]] is deprecated and it will be made abstract. bSI Documentation"
 
-#:IFC.xml:44213
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:26359
+msgid "IfcTextLiteral_Literal"
+msgstr "纯文本"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "这个逻辑标志表示边缘和边缘几何曲线是否相同。 边缘的感觉是从边缘起点到边缘终点的顶点，曲线的感觉是朝增加参数的方向发展的。"
+msgid "IfcTextLiteral_Literal_DEFINITION"
+msgstr "有待提出的文字。"
 
-#:IFC.xml:44221
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:26364
+msgid "IfcTextLiteral_Placement"
+msgstr "位置"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义。边缘循环是一个非零范围的循环。 这是一个起点和终点相同的路径。 它的域名如果存在，是一个封闭的曲线。边缘循环可能会重叠本身。 从 ISO 10303 42中定义的边缘循环中修改的注实体，在IFC2x2..spec头非正式提议1。 [[IfcEdgeLoop]] 的基因必须大于或等于1。 Euler 公式必须满足顶点基因数值1边3。 相同意义上的相同的 [[IfcEdgeLoop]]可能不会多次引用边缘。 为此目的，一个并非导向边缘的边缘被认为是使用 TRUE. bSI 文档来引用。"
+msgid "IfcTextLiteral_Placement_DEFINITION"
+msgstr "一个 [[IfcAxis2Placement]] 决定所呈现的字符串的位置和方向。"
 
-#:IFC.xml:44237
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "边缘列表"
+#:IFC.xml:26369
+msgid "IfcTextLiteral_Path"
+msgstr "路径"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "边缘列表"
+msgid "IfcTextLiteral_Path_DEFINITION"
+msgstr "文字文字写入方向。"
 
-#:IFC.xml:44230
-msgid "IfcEdgeLoop_Ne"
-msgstr "无"
+#:IFC.xml:26376
+msgid "IfcTextLiteralWithExtent"
+msgstr "IfcTextLiteralWithExtent"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "边缘列表中元素的数量。"
+msgid "IfcTextLiteralWithExtent_DEFINITION"
+msgstr "字面字面的字面是一个字面字面，附有行星范围的补充明确信息。 对齐属性定义了文本框如何与位置对齐，以及如果需要添加更多行文本，它如何扩展。 图1显示了平面范围和方框对齐的用来定位文本字符串 [[IfcTextLiteralWithExtent]] 图1。 ng 8,1 KB ... ... ... ... ... facts ifctextlimitalwithin fig1 ng 图1 带有范围和对齐性的文本 平面宽度界定了文本放置的方框模型。 在文本风格中填充可能会被定义，从方框向内偏移文本。 注实体从文字文字文字中改编，其范围在IFCO10303 46 HISTORY New entity in IFC2x2。 挂机ifc2x3 IFC2x3 变换器 [[IfcTextLiteralWithExtent]] 已经通过添加 Boxalignment 。bSI 文档"
 
-#:IFC.xml:44249
-msgid "IfcFace"
-msgstr "伊夫克面"
+#:IFC.xml:26345
+msgid "IfcTextLiteralWithExtent_Extent"
+msgstr "范围"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
+msgid "IfcTextLiteralWithExtent_Extent_DEFINITION"
+msgstr "范围"
 
-#:IFC.xml:26129
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:26381
+msgid "IfcTextLiteralWithExtent_BoxAlignment"
+msgstr "框对齐"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcTextLiteralWithExtent_BoxAlignment_DEFINITION"
+msgstr "案文与其地位相对应。"
 
-#:IFC.xml:44256
-msgid "IfcFace_Bounds"
-msgstr "边框"
+#:IFC.xml:26388
+msgid "IfcTextPath"
+msgstr "IfcTextPath"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "边框"
+msgid "IfcTextPath_DEFINITION"
+msgstr "文本路径决定文本字符之间的方向。 注意到 [[IfcTextPath]] 是一个从ISO 10303中通过的实体。 工业自动化系统和一体化 产品数据表述和交换，第46部分综合通用资源视觉列报。 注相应的 ISO 10303 名称文本路径。正式标准的最后定义请参阅ISO IS 10303 46 1994。 IFC2x2中的HISTORY 新实体 bSI 文档"
 
-#:IFC.xml:44268
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:26394
+msgid "IfcBoxAlignment"
+msgstr "IfcBoxAlignment"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef Note Definition accordance with ISO CD 10303 42 1992. A face bound is a roop, which is intended to be used to bounding a face. 从 ISO 10303 42中定义的面绑定变换的注实体在 IFC1.0 bSI 文档中的 HISTORY 新实体"
-
-#:IFC.xml:44276
-msgid "IfcFaceBound_Bound"
-msgstr "绑定"
-
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "绑定"
-
-#:IFC.xml:44269
-msgid "IfcFaceBound_Orientation"
-msgstr "方向"
-
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "这表示循环是否像第一个定义时一样绑定面部时具有相同的含义。 如果感觉是FALSE，其所有面向组件的边缘的感应在面部使用时会被隐含地逆转。"
-
-#:IFC.xml:44288
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOterBound"
-
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义的注解. 脸部外部绑定是一种特殊的面绑子类型，带有界定面上外部边界的额外语义。 这类面的边界不得超过一种。 从 ISO 10303 42中定义的脸部外部绑定的注实体在 IFC1.0 bSI 文档中定义的 HISTORY 新实体"
-
-#:IFC.xml:44291
-msgid "IfcFaceSurface"
-msgstr "IfcFacebook面"
-
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "[[IfcFaceSurface]] 定义了相关表面对面的基本几何形状。 注： 地形是用来修剪表面的几何形状的。 没有必要对表面进行几何划分以匹配地形。 按照ISO CD 10303 42 1992，xtDef 注明定义 面表面是一种由相关表面定义的一种亚类表面。 面部使用的部分应可作为一个开放的盘片嵌入平面，可能有孔。 然而，面与其边界线边缘和顶端的结合不一定要植入飞机。 例如，它可能涵盖整个领域或侵权行为。 作为表面和几何表面都确定了正常方向， a BOLEN 标志着方向属性用于表示表面正常同意TRUE或反对FALSE面的正常方向。 与面环任何部件相关联的几何形状应与表面几何形状一致， 即所有顶点和边缘曲线的域名都包含在面部几何表面。 表面可以有一个以上面部作为参照。 IOC2x .pechead Informal Propositions 1中定义的从面表面改装的注实体。 表面的域被正式定义为由循环修剪的其面几何形状的域， 此域不包括边界循环。 2. 表面的范围非零。3. 表面是一个多层。4. 表面是顺角相连的。 5. 表面有表面基因0。 6. 循环不是表面域的一部分。 循环几何体必须与面几何相符合。 这意味着任何边缘曲线或顶点用于确定横穿面表面的循环的顶点都应位于正面几何形状上。 8. 脸部的循环不会交替使用 bSI 文档"
-
-#:IFC.xml:13088
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "脸面"
-
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "脸面"
-
-#:IFC.xml:44292
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
-
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "这个标志表明表面正常的感觉是否同意TRUE , 或反对FALSE , 即表面正常的感觉。"
-
-#:IFC.xml:44300
-msgid "IfcLoop"
-msgstr "IfcLoop"
-
-msgid "IfcLoop_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义。循环是一个用单个顶点构造的地形实体， 或者通过绑定连接的方向边缘，或者从同一顶点开始和结束的线性部分。 它通常被用来捆绑表面上的面部。 循环的维度为0或1。0维循环的域是一个单点。 1维循环的域是一个连接的、面向的曲线，但不需要多倍。 由于循环是一个循环，其起始端点的位置是任意的。 循环的域名包括其边界，一个0x。 循环的代表是一个单一的顶点，或是有序的方向边缘集合，或是有序的积分集合。 一个循环是一个图形，所以M和图基因G l可以由图横向算法决定。 自M1以来，Euler方程式1在这种情况下减少到图像... ... ... .... figures ifcloop math1。 如果五和六×7El 7E是循环中独特顶点和定向边缘的数目，则Gl是循环的基因。 从ISO 10303 42中定义的循环中修改的注实体。 在 IFC2x.spechead Informal Propositions 1. 循环范围有限。2. 循环描述一个封闭的地形曲线，带有相同的起始和终结顶点。bSI 文档"
-
-#:IFC.xml:44303
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToail ALoop"
-
-msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
-msgstr "此函数返回 TRUE，如果输入边循环的边缘，每个边缘的最终顶点与其继承者的起始顶点相同。 IFC2x2 新功能"
-
-#:IFC.xml:44311
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
-
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义。开放式外壳是尺寸2的外壳。 它的域如果有，是一个有限的、连接的、方向性的、有边界的两个多倍，但不是一个封闭的表面。 它可以被认为是一个封闭的炮弹，内有一个或多个孔弹着。 打开的 shell 域满足了0个零1。 打开的 shell 功能比面更一般，因为它的域可以有句柄。 外壳由一系列面包定义，这些面包可能是定向面。 每个面部的感受，在考虑到方向之后，应同意下面定义的外壳正常。 方向可以直接作为面向面的北非博托属性提供。 或如果shell成员是一个没有方向属性的脸，则默认为TRUE。 设计了以下开放炮弹的组合限制和对其域的几何限制， 与非正式主张一道，确保与开放式外壳相关的任何领域都是一个导向的多方面问题。 每个面参引必须是唯一的。打开的外壳必须至少有一个面。 某面可能存在于一个以上的空壳中。 开口外壳的边界由边缘组成，只能通过面部边界循环引用一次， 这两者的所有字眼。 开口外壳的域，如果存在，则包含其面孔的所有边缘和顶点。 注意到这与表面域的定义略有不同，表面域没有任何界限。 例如，正面域可能排除一个孤立的点或线段。打开的 shell 域可能不能。请参阅下面的计算算法。 从ISO 10303 42中定义的开放式外壳中改装的注实体，在IFC2x.spec首长非正式提议1中的新实体。 每个边缘都必须在面部的边框中被精确地引用两次。 每个面向边缘必须是唯一的，3. 任何边缘不得被超过两个面所引用。 4. 外壳的不同面不能相互交错，但可以共享边缘或顶点。 5. 区分边缘不交叉，但可能共享顶点。 7. 每个面部参考值都必须是唯一的；7. 外壳的循环不应是政治循环和其他循环类型的混合物。 请注意，这是给定的，因为只有Poly循环被定义为面部绑定的定义。 8. 封闭的 shell 必须是一个面向方向的 arcwise 连接 2 manifold. 9. 必须满足Euler 方程式的 bSI 文档"
-
-#:IFC.xml:44315
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
-
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "[[IfcOrientedEdge]] 代表了一个带有方向标志的[[IfcEdge]] 。 它允许在经过两次时重用相同的 [[IfcEdge]] ，一次转发和一次后退。 注意对于[[IfcFace]] 的正常感觉完全是由边缘决定的。 如果面部的所有边缘都按照边缘方向以逆时针的方式连接起来，正常的面部就会向外移动。 代表该面部几何形状的底部[[IfcFaceSurface]]的正常情况与此无关。 [[IfcFaceSurface]]的目的。 ameSense属性是为验证目的提供额外信息。 SameSense TRUE意味着表面正常，面对正常。SameSense FALSE表示他们的方向相反。 以几何表示重新使用的边缘为 [[IfcEdgeCurve]] 定义了3D 坐标空间中的边缘。 在有些情况下，尤其是在使用基本的或横扫的表面时，3Dx有可能绘制不精确的地图。 y，z [[IfcEdgeCurve]]进入邻近表面，以确定这些表面的边界。 可选的 CurveOnSurface 定义了表面参数范围内的 2D u, v 边缘。 它可以用来确定这个表面上3D [[IfcEdgeCurve]]制图的正确性。 EXAMPLE 图1说明了除了[[IfcEdgeCurve]]曲线几何形状之外提供曲线表面的例子。 图1 [[IfcOrientedEdge]] 表面显示曲线. 按照ISO CD 10303 42 1992，xtDef 注解定义 一个面向的边缘是从另一边构造出来的边缘，它包含一个BOOLEA 方向标志，以表明构建边的方向是否同意原边方向的方向。 除了方向也许以外，面向方向的边缘等于原来的边缘。 一种常见的做法是建立一个代表使用或横向边缘的实体的实力建模系统。 这个使用实体明确代表了一个多层固体中的要求，即每个边缘必须经过两次，一次是在每个方向。 使用功能由边缘子类型的边缘提供。注意实体从ISO 10303 42中定义的方向边缘调整。 IFC2.0 中的HISTORY 新实体。.change ifc2x4 IFC4 Add2 Change The attribute CurveOnSurface 已添加。"
-
-#:IFC.xml:44200
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "边缘元素"
-
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "边缘元素"
-
-#:IFC.xml:44320
-msgid "IfcOrientedEdge_Orientation"
-msgstr "方向"
-
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, 如果使用的地形方向与从起始顶点到结束边缘元素的顶点的方向相吻合。否则FALSE"
-
-#:IFC.xml:44325
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
-
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
-
-#:IFC.xml:44329
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge 边缘结束"
-
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
-
-#:IFC.xml:44347
-msgid "IfcPath"
-msgstr "IfcPath"
-
-msgid "IfcPath_DEFINITION"
-msgstr ".extdef 按照ISO CD10303 42 1992年说明定义 一条路径是一个由有序排序的边缘组合组成的地形实体， 这样每个边缘的边缘起始顶端正值其前端的边缘端口。 路径是从第一个面向边缘的边缘的边缘开始排序到最后边缘的边缘。 面向边缘中的BOLEA 值表示边缘方向是否同意路径TRUE的方向，或者是FALSE的相反方向。 个别的边缘只能通过单独的路径被引用一次。一个边缘可以被多个路径引用。 边缘可以独立于路径。注意实体可以从ISO1030342中定义的路径中变换。IOC2中的新实体可以存在。 .spec head Informal Propositions 1. A path have dimensionality 1. 2. A path is arcwise connected. 3. 路径的边缘除非在通用的版本，否则不会交错。路径有一个有限的、非零的范围。bSI 文档"
-
-#:IFC.xml:44335
-msgid "IfcPath_EdgeList"
-msgstr "边缘列表"
-
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "边缘列表"
-
-#:IFC.xml:44354
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
-
-msgid "IfcPathHeadToTail__APath_DEFINITION"
-msgstr "如果输入路径的所有边缘都是连续的，此函数返回 TRUE。 xtDef NotE Definition according to ISO CD 10303 42 1992 This function 返回 TRUE ，如果输入路径的边缘每个边缘的终极值与其继承者的起始顶点相同。 IOC2.0 中的 ISO10303 42定义的从路径头到尾的注功能。"
-
-#:IFC.xml:44362
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
-
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 42 1992定义的注解 聚光循环是一种基因1循环，循环由一个有序的铜集构成循环顶点。 循环由直线段组成，将集合中的一个点连接到集合的下一个点。 闭幕部分是从会议集的最后一点到第一点。 循环的方向是线段的方向。 环状循环应符合以下地形制约因素，这一环状循环具有一根基。 以下方程必须满足图像... ... ... ... ... ... facties ifcpolyloop math1。 如果[[IfcPolyLoop]] 始终关闭，最后一个段是从多边形列表中的最后一个 [[IfcCartesianPoint]] 到第一个 [[IfcCartesianPoint]] 。 因此，第一点不应在清单末尾重复，也不应在同一案件中援引。 或者使用额外实例[[IfcCartesianPoint]] 以坐标作为第一点。 注意到这个实体的存在主要是为了促进约束面Brep 模型的有效交流。 从 ISO 10303 42中定义的Poly 循环中修改的注实体, IFC1.0 中的HISTORY 新实体. pec heads Informal Propositions 1. 所有用于确定poly循环的多边形点都必须是铜。 2. 第一个和最后一个多边形应以数值为不同的 bSI 文档"
-
-#:IFC.xml:11495
-msgid "IfcPolyLoop_Polygon"
-msgstr "多边形"
-
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "多边形"
-
-#:IFC.xml:44369
-msgid "IfcSubedge"
-msgstr "伊夫克苏贝德"
-
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef Note Definition according to ISO CD 10303 42 1992 对套接物的地形限制与边缘的限制相同。 从 ISO 10303 42中定义的套装中改装的注实体, IFC2x2 中的新实体. pec head Informal Propositions 1。 Subedge域被正式定义为父边缘的域。 被苏贝格弹头和苏贝格末尾顶点修剪。 2. 起始顶点和终点顶点应在父边缘顶点和父边缘域的连结范围内。 bSI 文档"
-
-#:IFC.xml:44188
-msgid "IfcSubedge_ParentEdge"
-msgstr "父母边缘"
-
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "父母边缘"
-
-#:IFC.xml:44372
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
-
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extdef 根据ISO CD10303 42 1992年说明定义 地形代表项是几何资源中所有地形代表项的超级类型。 从ISO 10303 42中定义的地形代表性项目改编的注实体，在IFC1.5bSI文件中定义的新实体"
-
-#:IFC.xml:44375
-msgid "IfcVertex"
-msgstr "IfcVertex"
-
-msgid "IfcVertex_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义. 顶点是与点对应的地形构造。 它具有维度0和范围0。 顶点域，如果有，则是m维真实空间RM 中的一个点，以顶点点子类型表示。 从 ISO 10303 42中定义的顶点改装的注实体，在IFC2.0 .pechead 非正式提议1中的HISTORY 新实体。 顶点具有维度0。这是顶点的基本属性。 2. 顶点的范围定义为零。bSI 文档"
-
-#:IFC.xml:44390
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
-
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef 根据ISO CD10303 42 1992定义。顶点循环是一个由单个顶点组成的零基因循环。 顶点可以独立于顶点循环存在。地形数据应满足下列约束图像... ... ... ... 数字 ifcvertextloop math1.gif Note Entity 从ISO 10303 42中定义的顶点循环变异。IFC2x2中的HISTORY 新实体。 pec head Informal Propositions 1. vertex 循环的范围和维度为零。2. 顶点循环有基因0.bSI 文档"
-
-#:IFC.xml:44378
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "循环脊椎骨"
-
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "循环脊椎骨"
-
-#:IFC.xml:44393
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
-
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extdef 根据ISO CD 10303 42 1992定义的注解. 顶点是一个顶点, 其几何定义为一个点。 从ISO 10303 42中定义的顶点修改的注实体。 IFC2x.spec首长非正式提议1中的新实体。 顶点域被正式定义为顶点域，BSI 文档"
-
-#:IFC.xml:12625
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "垂直几何体"
-
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "垂直几何体"
-
-#:IFC.xml:44397
-msgid "IfcShell"
-msgstr "IfcShell"
-
-msgid "IfcShell_DEFINITION"
-msgstr "由不同类型的炮弹构成的类型。 按照ISO CD 10303 42 1992，xtDef 注明定义 这种类型一起收集。 在构建更复杂的模型时，具有炮弹特性的子型。 炮弹是一个固定维度d为0或2的关联对象，通常用来绑定一个区域。 炮弹域名，如果存在， 包括其边界和0个二维度 0的A外壳用一个由单个顶点组成的图形表示. 顶点不应有任何相关的边缘。尺寸1的外壳由一个相关的尺寸图形表示. 维度2的外壳是一个通过沿边缘连接面构建的地形实体。 如果有，它的领域是一个相互联系、面向的第2个多方面边界，即： 一种连接、方向精密、非相互交错的表面，这种表面可能是封闭的或是开放的。 从 ISO 10303 42中定义的shell定义的注类型，IFC2x中的HISTORY 新类型。"
+msgid "IfcBoxAlignment_DEFINITION"
+msgstr "方框对齐指定文本框与其位置的对齐。 下面的字符串值必须使用右上中上方的左上方的右下方的右下方的右下方的右下方的符号。左上方的是默认的值。 图1显示对齐数值. 9对齐数... ... 如果图1 方框对齐数值 图2 显示了对齐数值的使用情况以及位置和平面程度。 与平面尺寸... ... ... ... fixcboxcoordination 图2.gif 图2 Box coordination examples HISTORY New Type in IFC2x2 Addendum2。 .change ifc2x3 IFC2x3 变异已添加 [[IfcBoxAlignment]] 。"
 
