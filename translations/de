@@ -9,457 +9,576 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcExternalReferenceResource.pot\n"
+"X-Crowdin-File-ID: 40\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2021-08-05 20:06\n"
 
-#:IFC.xml:658
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:8617
+msgid "IfcClassification"
+msgstr "IfcKlassifikation"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the S LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcClassification_DEFINITION"
+msgstr "Ein [[IfcClassification]] wird für die Anordnung von Objekten in eine Klasse oder Kategorie nach einem gemeinsamen Zweck oder ihrem Besitz gemeinsamer Merkmale verwendet. Eine Klassifizierung im Sinne von [[IfcClassification]] ist Taxonomie oder taxonomisches Schema, das in einer hierarchischen Struktur angeordnet ist. Eine Objektkategorie bezieht sich auf andere Kategorien in einer Verallgemeinerungsspezialisierungsbeziehung. Daher werden die Klassifikationselemente in einer Baumstruktur organisiert. Das [[IfcClassification]] identifiziert das Klassifikationssystem oder die Quelle, auf die sich eine Klassifikationsreferenz bezieht. Jede Klassifikationsreferenz kann eine Instanz von [[IfcClassification]] referenzieren. Ein deklariertes Klassifikationssystem kann entweder formell veröffentlicht werden oder es kann sich um eine lokal definierte Methode zur Klassifizierung von Informationen handeln. NOTE Beispiele für solche formell veröffentlichten Klassifikationen sind Omniclass, Uniclass, Masterformat oder DIN277. Es gibt zwei Methoden, um ein Klassifikationssystem 1 zu definieren und zu referenzieren. Einschließlich der Klassifikationssystemstruktur im Datensatz Hier ist ein hierarchischer Baum von [[IfcClassificationReference]] s enthalten, der das Klassifikationssystem einschließlich der Beziehung zwischen den Klassifikationselementen definiert. Das ReferenzSource-Attribut von [[IfcClassificationReference]] verbindet das Klassifizierungselement mit dem übergeordneten Element, und das übergeordnete Element schließlich an die [[IfcClassification]] . Die Referenzierung des Klassifikationssystems durch einen Klassifikationsschlüssel oder eine Id Hier wird die [[IfcClassificationReference]] verwendet, um eine Klassifikations-Id oder einen Schlüssel als Identifikations-Attribut zuzuweisen und sie kann durch ReferenzSource-Attribut direkt auf die [[IfcClassification]] verlinken. HISTORY Neue Entität in IFC1.5 .change ifc2x4 IFC 2x4 CHANGE Attribute Edition optional gemacht. Attribute Beschreibung , Ort , und Referenz-Tokens und Inverse-Attribut HasReferences hinzugefügt. bSI-Dokumentation"
 
-#:IFC.xml:741
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:8657
+msgid "IfcClassification_ClassificationForObjects"
+msgstr "ClassificationForObjects"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "ShapeAspectStyle"
+msgid "IfcClassification_ClassificationForObjects_DEFINITION"
+msgstr "ClassificationForObjects"
 
-#:IFC.xml:679
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:8669
+msgid "IfcClassification_HasReferences"
+msgstr "Hasreferenzen"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the door lining, measured perpendicular to the plane of the door lining. If omitted and with a given value to lining thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
+msgid "IfcClassification_HasReferences_DEFINITION"
+msgstr "Hasreferenzen"
 
-#:IFC.xml:684
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:8618
+msgid "IfcClassification_Source"
+msgstr "Quelle"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the door lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a door without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcClassification_Source_DEFINITION"
+msgstr "Quelle oder Verlag für diese Klassifizierung. X 0D HINWEIS, dass die Quelle der Klassifizierung die Person oder Organisation, die der ursprüngliche Autor oder die Person oder Organisation war, die derzeit als der Herausgeber agiert."
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "ThresholdDepth"
+#:IFC.xml:8623
+msgid "IfcClassification_Edition"
+msgstr "Edition"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Depth dimension in plane perpendicular to door leaf of the door threshold. Only given if the door lining includes a threshold. If omitted and with a given value to threshold thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
+msgid "IfcClassification_Edition_DEFINITION"
+msgstr "Die Ausgabe oder Version des Klassifikationssystems, aus dem die Klassifikationsnotation abgeleitet ist. X 0D NOTE das Versionsbeschriftungssystem ist spezifisch für das Klassifizierungssystem. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Das Attribut wurde als optional geändert."
 
-#:IFC.xml:694
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "ThresholdThickness"
+#:IFC.xml:8628
+msgid "IfcClassification_EditionDate"
+msgstr "Editiondatum"
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. zero it denotes a door without a threshold ThresholdDepth shall be set to NIL in this case . If the ThresholdThickness is NIL it denotes that the information about a threshold is not available. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcClassification_EditionDate_DEFINITION"
+msgstr "Das Datum, an dem die Ausgabe der Klassifikation verwendet wurde, wurde gültig. X 0D NOTE Die Angabe der Ausgabe kann ausreichen, um die Klassifikationsquelle einzigartig zu identifizieren, aber das Ausgabedatum wird als optionales Attribut zur Verfügung gestellt, um gegebenenfalls eine genauere Identifizierung zu ermöglichen. X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDate]] geändert, dem Datumsstring gemäß ISO8601."
 
-#:IFC.xml:699
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:8633
+msgid "IfcClassification_Name"
+msgstr "Name"
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness width in plane parallel to door leaf of the transom if provided that is, if the TransomOffset attribute is set , which divides the door leaf from a glazing or window above. X 0D If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the door is divided vertically into a leaf and transom window area without a physical frame. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcClassification_Name_DEFINITION"
+msgstr "Der Name oder das Label, unter dem die Klassifikation verwendet wird, ist normalerweise bekannt. X 0D NOTE Beispiele für Namen sind CI SfB, Masterformat, BSAB, Uniclass, STABU, DIN276, DIN277 etc."
 
-#:IFC.xml:704
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+#:IFC.xml:8638
+msgid "IfcClassification_Description"
+msgstr "Beschreibung"
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Offset of the transom if given which divides the door leaf from a glazing or window above. The offset is given from the bottom of the door opening."
+msgid "IfcClassification_Description_DEFINITION"
+msgstr "Weitere Beschreibung für die Klassifikation: X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut, das am Ende der Attributliste hinzugefügt wurde."
 
-#:IFC.xml:709
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:8643
+msgid "IfcClassification_Location"
+msgstr "Standort"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door lining. The offset is given as distance to the x axis of the local placement."
+msgid "IfcClassification_Location_DEFINITION"
+msgstr "Ressourcen-Identifikator oder als URI, URN oder URL, der Klassifikation X 0D . hange ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
 
-#:IFC.xml:714
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "ThresholdOffset"
+#:IFC.xml:8648
+msgid "IfcClassification_ReferenceTokens"
+msgstr "Referenz-Token"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known."
+msgid "IfcClassification_ReferenceTokens_DEFINITION"
+msgstr "Die Trennzeichen, die verwendet werden, um die Grenzen einzelner Facetten in einer Klassifikationsreferenz zu markieren. X 0D X 0D X 0D X 0D Dies gilt typischerweise dann für die [[IfcClassification]] in der X 0D Konjuktion mit [[IfcClassificationReference]] s. Wenn nur ein Referenz-Token angegeben wird, gilt es für alle Grenzen einzelner Facetten, wenn mehr als ein Referenz-Token angegeben wird das erste Token gilt für die erste Grenze, das zweite Token zur zweiten Grenze, und das n th Token auf die n th und jede zusätzliche Grenze. X 0D X 0D NOTE Token werden typischerweise innerhalb der Klassifikation selbst empfohlen und jedes Token wird eine bestimmte Rolle spielen. X 0D X 0D EXAMPLE 1 Um anzugeben, dass der Facetten-Trenner für DIN277 2 Referenzschlüssel 2 verwendet wird. Die Office-Zimmer sind mit einem einzigen Referenz-Token ausgestattet. Um anzugeben, dass der für Omniclass Table 13 Leerzeichen durch Funktionstaste 13 Leerzeichen als Referenzschlüssel 13 15 11 11 Office verwendet werden und , zwei Referenz-Token werden zur Verfügung gestellt. X 0D X 0D EXAMPLE 2 Die Verwendung von Referenz-Token kann auch um Masken erweitert werden. Die Verwendung muss im Hinblick auf Definitionen oder Durchführungsverträge vereinbart werden, die eine zu verwendende Maskensyntax vorschreiben. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
 
-#:IFC.xml:719
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "CasingThickness"
+#:IFC.xml:8681
+msgid "IfcClassificationReference"
+msgstr "IfcClassificationReferenz"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Thickness of the casing dimension in plane of the door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcClassificationReference_DEFINITION"
+msgstr "Ein [[IfcClassificationReference]] ist eine Referenz in ein Klassifizierungssystem oder -quelle siehe [[IfcClassification]] für einen bestimmten Schlüssel oder eine bestimmte Notation . Die geerbten Attribute haben die folgende Bedeutung Identifikation enthält den Schlüssel für eine spezifische Verweise auf Klassifikationselemente oder Tabellen . Der Name erlaubt eine menschlich interpretierbare Bezeichnung einer Klassifikationsnotierung. Der Standort enthält optional einen direkten URI-Link in das Klassifizierungssystem oder die Quelle, um den Klassifizierungsschlüssel zu verlinken. Das [[IfcClassificationReference]] kann entweder direkt dem [[IfcClassification]] zugewiesen werden, z.B. wenn keine Klassifikationshierarchie einbezogen werden muss. oder es referenziert die übergeordnete Klassifikationsnotierung, wenn die vollständige Hierarchie im Datensatz enthalten ist. Die erste wird als Leichtgewichtsklassifikation bezeichnet und die zweite als vollständige Klassifikation . Das Attribut referencedSource enthält dann die folgende Informationswahl unter [[IfcClassificationReferenceSelect]] 1. des Typs [[IfcClassification]] Direkter Verweis auf das Klassifizierungssystem mit Meta-Informationen zur Verfügung gestellt 2. des Typs [[IfcClassificationReference]] Verweis auf die übergeordnete Klassifikationsnotation innerhalb der Klassifikationshierarchie. EXAMPLE Die [[IfcClassificationReference]] kann als Form der Leichtgewichtsklassifikation durch das von der abstrakten [[IfcExternalReference]] Klasse geerbte Attribut verwendet werden. In diesem Fall könnte die Identifikation zum Beispiel die Uniclass Notation L6814, die wenn die Klassifizierung von allen Parteien gut verstanden wurde und bekannt war, dass sie von einer bestimmten Klassifikationsquelle stammen, wäre ausreichend. Das Namensattribut könnte der Titel Tanking sein. Dies würde die Notwendigkeit für den Overhead der umfassenderen Klassifikationsstruktur des Modells beseitigen. hange ifc2x4 IFC4 CHANGE Die Attributbeschreibung und das inverse Attribut HasReferences werden hinzugefügt. Die Attribut-Identifikation wurde von ItemReference umbenannt. bSI-Dokumentation"
 
-#:IFC.xml:724
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "CasingDepth"
+#:IFC.xml:8701
+msgid "IfcClassificationReference_HasReferences"
+msgstr "Hasreferenzen"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Depth of the casing dimension in plane perpendicular to door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcClassificationReference_HasReferences_DEFINITION"
+msgstr "Hasreferenzen"
 
-#:IFC.xml:729
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:8713
+msgid "IfcClassificationReference_ClassificationRefForObjects"
+msgstr "KlassifikationRefForObjects"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcClassificationReference_ClassificationRefForObjects_DEFINITION"
+msgstr "KlassifikationRefForObjects"
 
-#:IFC.xml:734
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:8682
+msgid "IfcClassificationReference_ReferencedSource"
+msgstr "Referenzquelle"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Offset between the lining and the door panel measured along the y axis of the local placement. X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcClassificationReference_ReferencedSource_DEFINITION"
+msgstr "Das betreffende Klassifizierungssystem oder -quelle. X 0D .change ifc2x4 X 0D IFC4 CHANGE Datentyp wurde geändert in [[IfcClassificationReferenceSelect]] ."
 
-#:IFC.xml:753
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
+#:IFC.xml:8687
+msgid "IfcClassificationReference_Description"
+msgstr "Beschreibung"
 
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways how individual door panels operate as shown in Figure 1. Enumerator Illustration Swinging DoubleActing Sliding Folding Revolving Rollingup FixedPanel UserDefined NotDefined Figure 1 Door operations The opening direction of the door panels is given by the local placement of the [[IfcDoor]] . The positive y axis determines the direction as shown in Figure 2. panel direction .. .. .. .. .. .. figures ifcdoorpaneloperationenum fig10.gif Figure 2 Door panel operations NOTE Figures symbolic representation depend on the national building code. These figures are only shown as illustrations HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL added. bSI Documentation"
+msgid "IfcClassificationReference_Description_DEFINITION"
+msgstr "Beschreibung der Klassifikationsreferenz für informative Zwecke. hange ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
 
-#:IFC.xml:764
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+#:IFC.xml:8692
+msgid "IfcClassificationReference_Sort"
+msgstr "Sortieren"
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe the location of a door panel within a door lining. HISTORY New Enumeration in IFC2x Figure 1 shows the designation of a door panel with PanelPosition LEFT and a door panel with PanelPosition RIGHT within a door style with OperationType DOUBLE DOOR SINGLE SWING. The position is given as shown in the XZ plane of the local placement, looking into the direction of the positive Y axis. .. .. .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Door panel positions bSI Documentation"
+msgid "IfcClassificationReference_Sort_DEFINITION"
+msgstr "Optionaler Bezeichner zum Sortieren der Klassifikationsreferenzen innerhalb der referenzierten Quelle entweder eine Einstufungsfacette von höherem Niveau, oder das Klassifikationssystem selbst . X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
 
-#:IFC.xml:770
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPaneleigenschaften"
+#:IFC.xml:8725
+msgid "IfcDocumentConfidentialityEnum"
+msgstr "IfcDocumentConfidentialityEnum"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "A door panel is normally a door leaf that opens to allow people or goods to pass. The parameters of the door panel define the geometrically relevant parameter of the panel, The [[IfcDoorPanelProperties]] are used to parametrically describe the shape and operation of door panels. The parametric definition can be added solely or additionally to the explicit shape representation of the door. The [[IfcDoorType]] can define doors consisting of more then one panel. In this case, one instance of [[IfcDoorPanelProperties]] has to be included for each door panel. The PanelPosition attribute, in conjunction with the [[IfcDoorStyle]].OperationType attribute, determines to which panel the [[IfcDoorPanelProperties]] apply. The [[IfcDoorPanelProperties]] are included in the list of properties , given by attribute HasPropertySets of the [[IfcDoorType]] . More information about the door panel can be included in the same list of the [[IfcDoorStyle]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorPanelProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorPanelProperties]] define a standard door panel, including if given a proportional width to define non uniform double swing or sliding, or folding doors. The outer boundary of the panel is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . It has to take the lining parameter into account as well. The depth of the panel swinging, double acting, and sliding panels is defined by the PanelDepth parameter. PanelDepth For door operation types that include more than one panel, the width of at least one panel is given by a normalised ratio measure. It determines the width of that panel, which is defined as a ratio of the overall width of the door opening. PanelWidth Figure 1 Door panel properties HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcDocumentConfidentialityEnum_DEFINITION"
+msgstr "[[IfcDocumentConfidentialityEnum]] ermöglicht die Auswahl des Niveaus der Vertraulichkeit von Dokumentinformationen aus einer Liste von Wahlen. HISTORY New enumeration in IFC2x. bSI-Dokumentation."
 
-#:IFC.xml:797
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:8733
+msgid "IfcDocumentInformation"
+msgstr "IfcDocumentInformation"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "ShapeAspectStyle"
+msgid "IfcDocumentInformation_DEFINITION"
+msgstr "[[IfcDocumentInformation]] erfasst Metadaten eines externen Dokuments. Der eigentliche Inhalt des Dokuments ist nicht in dieser Spezifikation definiert, sondern kann anhand des Standortattributes gefunden werden. Dasselbe [[IfcDocumentInformation]] kann von der Börsenstruktur insgesamt oder in Teilen e referenziert werden. , indem Sie auf bestimmte Kapitel oder Absätze verweisen, die die [[IfcDocumentReference]] verwenden. Alle [[IfcDocumentReference]] s, die die [[IfcDocumentInformation]] nutzen, sind über die inverse Beziehung HasDocumentReferences zugänglich. hange ifc2x4 IFC4 CHANGE Attribute HasDocumentReferences geändert in umgekehrt, Attribut Standort hinzugefügt und Attribut ElectronicFormat modifiziert."
 
-#:IFC.xml:775
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "PanelDepth"
+#:IFC.xml:8822
+msgid "IfcDocumentInformation_IsPointedTo"
+msgstr "IsPointedTo"
 
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Depth of the door panel, measured perpendicular to the plane of the door leaf."
+msgid "IfcDocumentInformation_IsPointedTo_DEFINITION"
+msgstr "IsPointedTo"
 
-#:IFC.xml:780
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "PanelOperation"
+#:IFC.xml:8836
+msgid "IfcDocumentInformation_IsPointer"
+msgstr "IsPointer"
 
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "The PanelOperation defines the way of operation of that panel. The PanelOperation of the door panel has to correspond with the OperationType of the [[IfcDoorStyle]] by which it is referenced."
+msgid "IfcDocumentInformation_IsPointer_DEFINITION"
+msgstr "IsPointer"
 
-#:IFC.xml:785
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "PanelWidth"
+#:IFC.xml:8850
+msgid "IfcDocumentInformation_DocumentInfoForObjects"
+msgstr "DocumentInfoForObjects"
 
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Width of this panel, given as ratio relative to the total clear opening width of the door. If omited, it defaults to 1. A value has to be provided for all doors with OperationType s at [[IfcDoorStyle]] defining a door with more then one panel."
+msgid "IfcDocumentInformation_DocumentInfoForObjects_DEFINITION"
+msgstr "DocumentInfoForObjects"
 
-#:IFC.xml:790
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:8862
+msgid "IfcDocumentInformation_HasDocumentReferences"
+msgstr "HasDocument-Referenzen"
 
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the door. The PanelPosition of the door panel has to correspond with the OperationType of the [[IfcDoorStyle]] by which it is referenced."
+msgid "IfcDocumentInformation_HasDocumentReferences_DEFINITION"
+msgstr "HasDocument-Referenzen"
 
-#:IFC.xml:809
-msgid "IfcDoorStyle"
-msgstr "IfcDoorStyle"
+#:IFC.xml:8734
+msgid "IfcDocumentInformation_Identification"
+msgstr "Identifikation"
 
-msgid "IfcDoorStyle_DEFINITION"
-msgstr "Definition The door style, [[IfcDoorStyle]] , defines a particular style of doors, which may be included into the spatial context of the building model through instances of [[IfcDoor]] . A door style defines the overall parameter of the door style and refers to the particular parameter of the lining and one or several panels through the [[IfcDoorLiningProperties]] and the [[IfcDoorPanelProperties]] . The door entity, [[IfcDoor]] , defines a particular occurrence of a door inserted in the spatial context of a project. The actual parameter of the door and or its shape is defined at the [[IfcDoorStyle]] , to which the [[IfcDoor]] is related by the inverse relationship IsDefinedBy pointing to IfcRelDefinedByType . The [[IfcDoorStyle]] also defines the particular attributes for the lining , [[IfcDoorLiningProperties]] , and panels, [[IfcDoorPanelProperties]] . The [[IfcDoorStyle]] defines the baseline geometry, or the representation map, for all occurrences of the door style, given by the [[IfcDoor]] , pointing to this style. The representation of the door style may be given by the agreed set of minimal parameters, defined for the door lining and the door panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the door style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcDoorStyleOperationTypeEnum defines the general layout of the door style. Depending on the enumerator, the appropriate instances of [[IfcDoorLiningProperties]] and [[IfcDoorPanelProperties]] are attached in the list of HasPropertySets . The IfcDoorStyleOperationTypeEnum mainly determines the hinge side left hung, or right hung , the operation swinging, sliding, folding, etc. S and the number of panels. See geometry use definitions at IfcDoorStyleOperationTypeEnum for the correct usage of opening symbols for different operation types. HISTORY S New entity in IFC2x. .deprecated DEPRECATION The entity is deprecated and shall not be used. The new entity [[IfcDoorType]] shall be used instead. bSI Documentation"
+msgid "IfcDocumentInformation_Identification_DEFINITION"
+msgstr "Kennung, der ein Dokument eindeutig identifiziert: X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribut umbenannt von DocumentId ."
 
-#:IFC.xml:810
-msgid "IfcDoorStyle_OperationType"
-msgstr "OperationType"
+#:IFC.xml:8739
+msgid "IfcDocumentInformation_Name"
+msgstr "Name"
 
-msgid "IfcDoorStyle_OperationType_DEFINITION"
-msgstr "Type defining the general layout and operation of the door style."
+msgid "IfcDocumentInformation_Name_DEFINITION"
+msgstr "Dateiname oder Dokumentenname des Eigentümers."
 
-#:IFC.xml:815
-msgid "IfcDoorStyle_ConstructionType"
-msgstr "ConstructionType"
+#:IFC.xml:8744
+msgid "IfcDocumentInformation_Description"
+msgstr "Beschreibung"
 
-msgid "IfcDoorStyle_ConstructionType_DEFINITION"
-msgstr "Type defining the basic construction and material type of the door."
+msgid "IfcDocumentInformation_Description_DEFINITION"
+msgstr "Beschreibung des Dokuments und seines Inhalts."
 
-#:IFC.xml:820
-msgid "IfcDoorStyle_ParameterTakesPrecedence"
-msgstr "ParameterTakesPrecedence"
+#:IFC.xml:8749
+msgid "IfcDocumentInformation_Location"
+msgstr "Standort"
 
-msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "The Boolean value reflects, whether the parameter given in the attached lining and panel properties exactly define the geometry TRUE , or whether the attached style shape take precedence FALSE . In the last case the parameter have only informative value."
+msgid "IfcDocumentInformation_Location_DEFINITION"
+msgstr "Ressourcenbezeichner oder -sucher, als URI, URN oder URL, der Dokumentinformation für Online-Referenzen. X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut hinzugefügt an der Stelle des entfernten Attributs DocumentReferences ."
 
-#:IFC.xml:825
-msgid "IfcDoorStyle_Sizeable"
-msgstr "Sizeable"
+#:IFC.xml:8754
+msgid "IfcDocumentInformation_Purpose"
+msgstr "Zweck"
 
-msgid "IfcDoorStyle_Sizeable_DEFINITION"
-msgstr "The Boolean indicates, whether the attached IfcMappedRepresentation if given can be sized using scale factor of transformation , or not FALSE . If not, the IfcMappedRepresentation should be [[IfcShapeRepresentation]] of the [[IfcDoor]] using [[IfcMappedItem]] as the Item with the scale factor 1."
+msgid "IfcDocumentInformation_Purpose_DEFINITION"
+msgstr "Zweck für dieses Dokument."
 
-#:IFC.xml:832
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
+#:IFC.xml:8759
+msgid "IfcDocumentInformation_IntendedUse"
+msgstr "IntendedUse"
 
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "This enumeration defines the basic types of construction of doors. The construction type relates to the main material or material combination used for making the door. HISTORY New enumeration in IFC2x. bSI Documentation"
+msgid "IfcDocumentInformation_IntendedUse_DEFINITION"
+msgstr "Verwendungszweck für dieses Dokument."
 
-#:IFC.xml:843
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+#:IFC.xml:8764
+msgid "IfcDocumentInformation_Scope"
+msgstr "Bereich"
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. bSI Documentation"
+msgid "IfcDocumentInformation_Scope_DEFINITION"
+msgstr "Scope für dieses Dokument."
 
-#:IFC.xml:863
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableCoveringOperationEnum"
+#:IFC.xml:8769
+msgid "IfcDocumentInformation_Revision"
+msgstr "Revision"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "This enumeration defines the valid types of permeable coverings. HISTORY New enumeration in IFC2.0. bSI Documentation"
+msgid "IfcDocumentInformation_Revision_DEFINITION"
+msgstr "Bezeichnung für Dokumentenänderung."
 
-#:IFC.xml:870
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+#:IFC.xml:8774
+msgid "IfcDocumentInformation_DocumentOwner"
+msgstr "Dokumentenbesitzer"
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "This entity is a description of a panel within a door or window as fillers for opening which allows for air flow. It is given by its properties [[IfcPermeableCoveringProperties]] . A permeable covering is a casement, such as a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling is normally a grill, a louver or a screen. The way of operation is defined in the operation type. The [[IfcPermeableCoveringProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] or the [[IfcDoorStyle]] . More information about the permeable covering can be included in the same list of the window or door style using the [[IfcPropertySet]] for dynamic extensions. This particularly applies for additional properties for the various operation types The [[IfcPermeableCoveringProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the [[IfcWindowStyle]] which is inserted by the [[IfcWindow]] into the spatial context of the project , or of the [[IfcDoorStyle]] which is inserted by the [[IfcDoor]] . The parameters at the [[IfcPermeableCoveringProperties]] define a standard permeable covering. The outer boundary of the panel is determined by the occurrence parameter assigned to the [[IfcWindow]] or [[IfcDoor]] . It has to take the lining parameter into account as well. The position of the permeable covering within the overall window or door is determined by the PanelPosition attribute. Figure 1 illustrates the panel applied to the position within the lining, as defined by the panel position attribute. The following parameters apply to that panel FrameDepth , FrameThickness . covering .. .. .. .. .. .. figures ifcpermeablecoveringproperties.gif Figure 1 Permeable covering properties HISTORY New entity in IFC2.0, it had been renamed from IfcPermeableCovering in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcDocumentInformation_DocumentOwner_DEFINITION"
+msgstr "Informationen über die Person und Organisation, die als Eigentümer dieses Dokuments anerkannt sind. In einigen Zusammenhängen bestimmt der Dokumentenbesitzer, wer Zugriff auf oder Bearbeitung des Dokuments hat."
 
-#:IFC.xml:893
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:8779
+msgid "IfcDocumentInformation_Editors"
+msgstr "Redakteure"
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "ShapeAspectStyle"
+msgid "IfcDocumentInformation_Editors_DEFINITION"
+msgstr "Die Personen und Organisationen, die dieses Dokument erstellt oder dazu beigetragen haben."
 
-#:IFC.xml:871
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "OperationType"
+#:IFC.xml:8784
+msgid "IfcDocumentInformation_CreationTime"
+msgstr "Erstellungszeit"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Types of permeable covering operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "IfcDocumentInformation_CreationTime_DEFINITION"
+msgstr "Datums- und Zeitstempel als das Dokument ursprünglich erstellt wurde. hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDateTime]] geändert, die Datumszeit gemäß ISO8601."
 
-#:IFC.xml:876
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:8789
+msgid "IfcDocumentInformation_LastRevisionTime"
+msgstr "LastRevisionTime"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Position of this permeable covering panel within the overall window or door type."
+msgid "IfcDocumentInformation_LastRevisionTime_DEFINITION"
+msgstr "Datums- und Zeitstempel wenn diese Dokumentversion erstellt wurde. hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDateTime]] geändert, die Datumszeit gemäß ISO8601."
 
-#:IFC.xml:881
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:8794
+msgid "IfcDocumentInformation_ElectronicFormat"
+msgstr "ElectronicFormat"
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame used to include the permeable covering , measured from front face to back face horizontally i.e. perpendicular to the window or door elevation plane."
+msgid "IfcDocumentInformation_ElectronicFormat_DEFINITION"
+msgstr "Beschreibt den Medientyp, der in verschiedenen Internet-Protokollen verwendet wird, auch als Content-Typ bezeichnet wird oder MIME Typ Multipurpose Internet Mail Extension , des referenzierten Dokuments. Es besteht aus mindestens zwei Teilen, einem Typ und einem Untertyp. X 0D NOTE Die iana Internet Assigned Numbers Authority veröffentlichte die Medientypen. X 0D X 0D EXAMPLE Bild png bezeichnet einen Bildtyp von png Portable Network Graphics Subtype, application pdf bezeichnet einen applikationsspezifischen Typ von pdf Portable Document Format Subtyp X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde vom Entitätstyp auf [[IfcIdentifier]] geändert."
 
-#:IFC.xml:886
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:8799
+msgid "IfcDocumentInformation_ValidFrom"
+msgstr "Gültig von"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame used to include the permeable covering , measured from inside of panel at permeable covering to outside of panel at lining , i.e. parallel to the window or door elevation plane."
+msgid "IfcDocumentInformation_ValidFrom_DEFINITION"
+msgstr "Datum an dem das Dokument gültig wird. X 0D . hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDate]] geändert, dem Datumsstring gemäß ISO8601."
 
-#:IFC.xml:905
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowLiningeigenschaften"
+#:IFC.xml:8804
+msgid "IfcDocumentInformation_ValidUntil"
+msgstr "ValidUntil"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcDocumentInformation_ValidUntil_DEFINITION"
+msgstr "Datum bis zu dem das Dokument gültig bleibt. X 0D . hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDate]] geändert, dem Datumsstring gemäß ISO8601."
 
-#:IFC.xml:979
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:8809
+msgid "IfcDocumentInformation_Confidentiality"
+msgstr "Vertraulichkeit"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "ShapeAspectStyle"
+msgid "IfcDocumentInformation_Confidentiality_DEFINITION"
+msgstr "Der Grad der Vertraulichkeit des Dokuments."
 
-#:IFC.xml:922
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:8814
+msgid "IfcDocumentInformation_Status"
+msgstr "Status"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the window lining dimension measured perpendicular to window elevation plane ."
+msgid "IfcDocumentInformation_Status_DEFINITION"
+msgstr "Der aktuelle Status des Dokuments. Beispiele für Statuswerte, die für einen Dokumenteninformationsstatus verwendet werden können, sind X 0D DRAFT X 0D FINAL DRAFT X 0D FINAL X 0D REVISION"
 
-#:IFC.xml:927
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:8876
+msgid "IfcDocumentInformationRelationship"
+msgstr "IfcDocumentInformation-Beziehung"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcDocumentInformationRelationship_DEFINITION"
+msgstr "Ein [[IfcDocumentInformationRelationship]] ist eine Beziehungsform, die es einem Dokument ermöglicht, andere Dokumente zu referenzieren. Es wird verwendet, um Beziehungen zu beschreiben, in denen ein Dokument auf ein oder mehrere Unterdokumente verweisen kann oder wenn ein Dokument als Ersatz für ein anderes Dokument verwendet wird, aber sowohl das Originaldokument als auch das ersetzende Dokument beibehalten werden müssen. HISTORY Neue Entität in IFC2x. .change ifc2x4 IFC4 CHANGE Untertippt von [[IfcResourceLevelRelationship]] , Reihenfolge der Attribute geändert. bSI-Dokumentation"
 
-#:IFC.xml:932
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:8822
+msgid "IfcDocumentInformationRelationship_RelatedDocuments"
+msgstr "Zugehörige Dokumente"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. X 0D If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcDocumentInformationRelationship_RelatedDocuments_DEFINITION"
+msgstr "Zugehörige Dokumente"
 
-#:IFC.xml:937
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "MullionThickness"
+#:IFC.xml:8836
+msgid "IfcDocumentInformationRelationship_RelatingDocument"
+msgstr "Verknüpftes Dokument"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. X 0D If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. X 0D .change ifc2x4 X 0D IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcDocumentInformationRelationship_RelatingDocument_DEFINITION"
+msgstr "Verknüpftes Dokument"
 
-#:IFC.xml:942
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "FirstTransomOffset"
+#:IFC.xml:8877
+msgid "IfcDocumentInformationRelationship_RelationshipType"
+msgstr "Beziehungstyp"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline, measured along the z axis of the window placement co ordinate system. An offset value 0.5 indicates that the transom is positioned in the middle of the window."
+msgid "IfcDocumentInformationRelationship_RelationshipType_DEFINITION"
+msgstr "Beschreibt die Art der Beziehung zwischen Dokumenten. Dies kann Unterdokument, Ersatz usw. Die Interpretation muss in einem Bewerbungskontext erfolgen."
 
-#:IFC.xml:947
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+#:IFC.xml:8884
+msgid "IfcDocumentReference"
+msgstr "IfcDocumentReferenz"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+msgid "IfcDocumentReference_DEFINITION"
+msgstr "Ein [[IfcDocumentReference]] ist eine Referenz auf den Standort eines Dokuments. Die Referenz wird durch ein System interpretierbares Standort-Attribut eine URL-Zeichenkette gegeben, in der das Dokument gefunden werden kann, und eine optionale vererbte interne Referenz-Identifikation , die sich auf eine systemrelevante Position innerhalb des Dokuments bezieht. Das optionale Erb-Namens-Attribut soll Bedeutung für menschliche Leser haben. Optionale Dokumentmetadaten können auch durch Verweis auf [[IfcDocumentInformation]] erfasst werden. HISTORY New entity in IFC2.0 bSI-Dokumentation"
 
-#:IFC.xml:952
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:8862
+msgid "IfcDocumentReference_ReferencedDocument"
+msgstr "Referenzdokument"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "IfcDocumentReference_ReferencedDocument_DEFINITION"
+msgstr "Referenzdokument"
 
-#:IFC.xml:957
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:8897
+msgid "IfcDocumentReference_DocumentRefForObjects"
+msgstr "DocumentRefForObjects"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "IfcDocumentReference_DocumentRefForObjects_DEFINITION"
+msgstr "DocumentRefForObjects"
 
-#:IFC.xml:962
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:8889
+msgid "IfcDocumentReference_Description"
+msgstr "Beschreibung"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcDocumentReference_Description_DEFINITION"
+msgstr "Beschreibung der Dokumentenreferenz zu Informationszwecken X 0D . hange ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
 
-#:IFC.xml:967
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:8909
+msgid "IfcDocumentStatusEnum"
+msgstr "IfcDocumentStatusEnum"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcDocumentStatusEnum_DEFINITION"
+msgstr "[[IfcDocumentStatusEnum]] ermöglicht die Auswahl des Status von Dokumentinformationen aus einer Liste von Wahlen. HISTORY Neue Auflistung in IFC2x. bSI-Dokumentation."
 
-#:IFC.xml:972
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:8916
+msgid "IfcExternalInformation"
+msgstr "IfcExternalinformation"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . X 0D .change ifc2x4 X 0D IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcExternalInformation_DEFINITION"
+msgstr "Ein [[IfcExternalInformation]] ist die Identifizierung einer Informationsquelle, die nicht explizit im aktuellen Modell oder in der Projektdatenbank als Implementierung des aktuellen Modells dargestellt wird. Die [[IfcExternalInformation]] identifiziert die externe Quellenklassifizierung, Dokument oder Bibliothek , aber nicht die speziellen Elemente wie z.B. einen Wörterbucheintrag, eine Klassifikationsnotierung oder eine Dokumentenreferenz innerhalb der externen Quelle Die [[IfcExternalInformation]] ist ein abstrakter Supertyp aller externen Informationseinheiten. GESCHICHTE Neue Entität in IFC4. bSI-Dokumentation"
 
-#:IFC.xml:991
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
+#:IFC.xml:8918
+msgid "IfcExternalReference"
+msgstr "Externe Referenz"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure X 09 X 09 X 09 X 09 SideHungRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SideHungLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 when viewed from the outside X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnRightHand X 09 X 09 panel that opens to the right X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TiltAndTurnLeftHand X 09 X 09 panel that opens to the left X 09 X 09 X 09 and is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 TopHung X 09 X 09 panel is top hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 BottomHung X 09 X 09 panel is bottom hung X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotHorizontal X 09 X 09 panel is swinging X 09 X 09 X 09 horizontally hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 PivotVertical X 09 X 09 panel is swinging vertically X 09 X 09 X 09 hinges are in the middle X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingHorizontal X 09 X 09 panel is sliding horizontally X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 SlidingVertical X 09 X 09 panel is sliding X 09 X 09 X 09 vertically X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 RemovableCasement X 09 X 09 panel is removable X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 FixedCasement X 09 X 09 panel is fixed X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 OtherOperation X 09 X 09 user defined operation type X 09 X 09 X 09 X 09 X 09 X 09 X 09 X 09 NotDefined X 09 X 09 X 09 X 09 X 09 X 09 X 09 Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. bSI Documentation"
+msgid "IfcExternalReference_DEFINITION"
+msgstr "p_referenzwert: Eine IfcExternalReference ist die Identifizierung von Informationen, die nicht explizit im aktuellen Modell oder in der Projektdatenbank (als Implementierung des aktuellen Modells) dargestellt werden. Diese Informationen können in Klassifikationen, Dokumenten oder Bibliotheken enthalten sein. Die IfcExternalReference identifiziert ein bestimmtes Element, wie beispielsweise einen Dictionary-Eintrag, eine Klassifizierungsnotation oder eine Dokumentenreferenz innerhalb der externen Quelle."
 
-#:IFC.xml:1007
-msgid "IfcWindowPanelPositionEnum"
-msgstr "IfcWindowPanelPositionEnum"
+#:IFC.xml:8942
+msgid "IfcExternalReference_ExternalReferenceForResources"
+msgstr "Externe Referenz-ForResources"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . X 09 X 09 Enumerator from [[IfcWindowStyleOperationEnum]] X 09 Use of enumerators from [[IfcWindowPanelPositionEnum]] X 09 Figure X 09 X 09 X 09 DoublePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 DoublePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelVertical X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelHorizontal X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelBottom X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelTop X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 X 09 X 09 TriplePanelLeft X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOM X 09 X 09 X 09 X 09 TriplePanelRight X 09 first X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition TOPsecond X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird X 09 X 09 [[IfcWindowPanelProperties]] with PanelPosition RIGHT X 09 X 09 Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. bSI Documentation"
+msgid "IfcExternalReference_ExternalReferenceForResources_DEFINITION"
+msgstr "Externe Referenz-ForResources"
 
-#:IFC.xml:1015
-msgid "IfcWindowPanelProperties"
-msgstr "IfcWindowPaneleigenschaften"
+#:IFC.xml:8923
+msgid "IfcExternalReference_Location"
+msgstr "Standort"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] . bSI Documentation"
+msgid "IfcExternalReference_Location_DEFINITION"
+msgstr "Standort, an dem die externe Quellenklassifizierung, das Dokument oder die Bibliothek elektronisch abgerufen werden können. Die elektronische Position wird als URI angegeben und wird normalerweise als URI-Adresse angegeben. X 0D .change ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde von [[IfcLabel]] auf [[IfcURIReference]] X 0D geändert."
 
-#:IFC.xml:1042
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:8928
+msgid "IfcExternalReference_Identification"
+msgstr "Identifikation"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "ShapeAspectStyle"
+msgid "IfcExternalReference_Identification_DEFINITION"
+msgstr "Die Identifikation stellt einen eindeutigen Identifikator des referenzierten Elements innerhalb der externen Quellenklassifizierung, Dokument oder Bibliothek zur Verfügung. Es kann als X 0D ein Schlüssel angegeben werden, z.B. eine Klassifikations-Notation wie NF2. X 0D ein Handle X 0D ein Uuid oder Guid X 0D X 0D X 0D 0D Es kann menschlich lesbar sein, wie ein Schlüssel oder nicht wie ein Griff oder uuid abhängig vom Kontext seiner Nutzung, die durch lokale Vereinbarung festgelegt werden . X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribut umbenannt aus ItemReference für Konsistenz. X 0D"
 
-#:IFC.xml:1020
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "OperationType"
+#:IFC.xml:8933
+msgid "IfcExternalReference_Name"
+msgstr "Name"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "IfcExternalReference_Name_DEFINITION"
+msgstr "Optionaler Name für die Angabe der Referenz. Es kann einen lesbaren Bezeichner liefern, der nicht unbedingt ein Gegenstück in der internen Struktur des Dokuments haben muss."
 
-#:IFC.xml:1025
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:8956
+msgid "IfcExternalReferenceRelationship"
+msgstr "IfcExternalReferenceRelationship"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "IfcExternalReferenceRelationship_DEFINITION"
+msgstr "[[IfcExternalReferenceRelationship]] ist eine Beziehungs-Entität, die es Objekten der [[IfcResourceObjectSelect]] ermöglicht, durch externe Referenzen markiert zu werden. HINWEIS Diese Beziehung wird verwendet, um Entitäten, die nicht von [[IfcRoot]] erben, Klassifizierung, Bibliothek oder Dokumentinformationen zuzuweisen. Es hat eine ähnliche Funktionalität wie die Untertypen von [[IfcRelAssociates]] . HISTORY New entity in IFC4. bSI-Dokumentation"
 
-#:IFC.xml:1030
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:8942
+msgid "IfcExternalReferenceRelationship_RelatingReference"
+msgstr "RelatingReferenz"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "IfcExternalReferenceRelationship_RelatingReference_DEFINITION"
+msgstr "RelatingReferenz"
 
-#:IFC.xml:1035
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:8957
+msgid "IfcExternalReferenceRelationship_RelatedResourceObjects"
+msgstr "Zugehörige Ressourcenobjekte"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+msgid "IfcExternalReferenceRelationship_RelatedResourceObjects_DEFINITION"
+msgstr "Objekte in der Liste von [[IfcResourceObjectSelect]], die durch einen externen Verweis auf ein Wörterbuch, Bibliothek, Katalog, Klassifizierung oder Dokumentation gekennzeichnet werden können."
 
-#:IFC.xml:1054
-msgid "IfcWindowStyle"
-msgstr "IfcWindowStyle"
+#:IFC.xml:9048
+msgid "IfcLibraryInformation"
+msgstr "IfcLibraryinformation"
 
-msgid "IfcWindowStyle_DEFINITION"
-msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead. bSI Documentation"
+msgid "IfcLibraryInformation_DEFINITION"
+msgstr "Ein [[IfcLibraryInformation]] beschreibt eine Bibliothek, in der eine Bibliothek ein strukturierter Informationsspeicher ist normalerweise so organisiert, dass die Informationssuche über einen Index oder Referenzwert möglich ist. [[IfcLibraryInformation]] enthält die Attribute der Bibliothek Name und optionale Beschreibung , Version , VersionDate und Publisher. Für den elektronischen Zugriff auf die Bibliothek kann ein Speicherort hinzugefügt werden. Im Sinne eines Broders [[IfcLibraryInformation]] enthält die Metadaten zur Erfassung der Revisionsinformationen bei der Überprüfung der Bibliothek und anderer Daten in einem Revisionskontrollsystem. GESCHICHTE Neue Einheit in IFC2x. hange ifc2x4 IFC4 CHANGE Location and Description Attributes added Publisher and VersionDate data type changed HasLibraryReferences inverse attribute added previous LibraryReference changed to inverse . bSI-Dokumentation"
 
-#:IFC.xml:1055
-msgid "IfcWindowStyle_ConstructionType"
-msgstr "ConstructionType"
+#:IFC.xml:9082
+msgid "IfcLibraryInformation_HasLibraryReferences"
+msgstr "HasLibraryreferenzen"
 
-msgid "IfcWindowStyle_ConstructionType_DEFINITION"
-msgstr "Type defining the basic construction and material type of the window."
+msgid "IfcLibraryInformation_HasLibraryReferences_DEFINITION"
+msgstr "HasLibraryreferenzen"
 
-#:IFC.xml:1060
-msgid "IfcWindowStyle_OperationType"
-msgstr "OperationType"
+#:IFC.xml:9096
+msgid "IfcLibraryInformation_LibraryInfoForObjects"
+msgstr "LibraryInfoForObjects"
 
-msgid "IfcWindowStyle_OperationType_DEFINITION"
-msgstr "Type defining the general layout and operation of the window style."
+msgid "IfcLibraryInformation_LibraryInfoForObjects_DEFINITION"
+msgstr "LibraryInfoForObjects"
 
-#:IFC.xml:1065
-msgid "IfcWindowStyle_ParameterTakesPrecedence"
-msgstr "ParameterTakesPrecedence"
+#:IFC.xml:9049
+msgid "IfcLibraryInformation_Name"
+msgstr "Name"
 
-msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "The Boolean value reflects, whether the parameter given in the attached lining and panel properties exactly define the geometry TRUE , or whether the attached style shape take precedence FALSE . In the last case the parameter have only informative value."
+msgid "IfcLibraryInformation_Name_DEFINITION"
+msgstr "Der Name, der zur Identifizierung der Bibliothek verwendet wird."
 
-#:IFC.xml:1070
-msgid "IfcWindowStyle_Sizeable"
-msgstr "Sizeable"
+#:IFC.xml:9054
+msgid "IfcLibraryInformation_Version"
+msgstr "Version"
 
-msgid "IfcWindowStyle_Sizeable_DEFINITION"
-msgstr "The Boolean indicates, whether the attached ShapeStyle can be sized using scale factor of transformation , or not FALSE . If not, the ShapeStyle should be inserted by the [[IfcWindow]] using [[IfcMappedItem]] with the scale factor 1."
+msgid "IfcLibraryInformation_Version_DEFINITION"
+msgstr "Bezeichner für die Bibliotheksversion, die als Referenz verwendet wird."
 
-#:IFC.xml:1077
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcWindowStyleConstructionEnum"
+#:IFC.xml:9059
+msgid "IfcLibraryInformation_Publisher"
+msgstr "Herausgeber"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. bSI Documentation"
+msgid "IfcLibraryInformation_Publisher_DEFINITION"
+msgstr "Informationen zur Organisation, die als Bibliotheks-Publisher fungiert. hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcActorSelect]] geändert."
 
-#:IFC.xml:1087
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyleOperationEnum"
+#:IFC.xml:9064
+msgid "IfcLibraryInformation_VersionDate"
+msgstr "VersionDate"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations bSI Documentation"
+msgid "IfcLibraryInformation_VersionDate_DEFINITION"
+msgstr "Datum der referenzierten Version der Bibliothek. hange ifc2x4 X 0D IFC4 CHANGE Der Datentyp wurde in [[IfcDateTime]] geändert, das Datum und die Uhrzeit gemäß ISO8601."
+
+#:IFC.xml:9069
+msgid "IfcLibraryInformation_Location"
+msgstr "Standort"
+
+msgid "IfcLibraryInformation_Location_DEFINITION"
+msgstr "Ressourcenbezeichner oder -sucher, als URI, URN oder URL, der Bibliotheksinformationen für Online-Referenzen. X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
+
+#:IFC.xml:9074
+msgid "IfcLibraryInformation_Description"
+msgstr "Beschreibung"
+
+msgid "IfcLibraryInformation_Description_DEFINITION"
+msgstr "Eine weitere Beschreibung für die Revisionsinformationen der Bibliothek: X 0D . hange ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
+
+#:IFC.xml:9108
+msgid "IfcLibraryReference"
+msgstr "IfcLibraryReferenz"
+
+msgid "IfcLibraryReference_DEFINITION"
+msgstr "Ein [[IfcLibraryReference]] ist eine Referenz in eine Informationsbibliothek durch den Ort , der als URI bereitgestellt wird. Es stellt auch einen optionalen Schlüssel zur Identifikation bereit, um spezifischere Verweise auf Bibliotheksabschnitte oder Tabellen zu ermöglichen. Das ererbte Attribut Name erlaubt eine menschlich interpretierbare Identifizierung des Bibliothekselements. Auch allgemeine Informationen über die Bibliothek, aus der die Referenz stammt, wird von der Relation Referenzbibliothek angegeben, die das relevante Vorkommnis von [[IfcLibraryInformation]] identifiziert. Die ifcLibraryReferenz bietet zusätzlich die Möglichkeit, mehrsprachige Bibliothekseinträge zu verwalten. Das Sprachattribut enthält dann das Sprach-Tag für die Sprache, die von den Zeichenketten im Namen und im Beschreibung-Attribut verwendet wird. .change ifc2x4 IFC4 CHANGE Description and Language Attribut added ReferencedLibrary attribute added reversing previous ReferenceIntoLibrary inverse relationship ."
+
+#:IFC.xml:9082
+msgid "IfcLibraryReference_ReferencedLibrary"
+msgstr "Referenzbibliothek"
+
+msgid "IfcLibraryReference_ReferencedLibrary_DEFINITION"
+msgstr "Referenzbibliothek"
+
+#:IFC.xml:9122
+msgid "IfcLibraryReference_LibraryRefForObjects"
+msgstr "LibraryRefForObjects"
+
+msgid "IfcLibraryReference_LibraryRefForObjects_DEFINITION"
+msgstr "LibraryRefForObjects"
+
+#:IFC.xml:9109
+msgid "IfcLibraryReference_Description"
+msgstr "Beschreibung"
+
+msgid "IfcLibraryReference_Description_DEFINITION"
+msgstr "Eine weitere Beschreibung für die Bibliotheksreferenz: X 0D .change ifc2x4 X 0D IFC4 CHANGE Neues Attribut, das am Ende der Attributliste hinzugefügt wurde."
+
+#:IFC.xml:9114
+msgid "IfcLibraryReference_Language"
+msgstr "Sprache"
+
+msgid "IfcLibraryReference_Language_DEFINITION"
+msgstr "Die Sprache, in der eine Bibliotheksreferenz ausgedrückt wird. hange ifc2x4 X 0D IFC4 CHANGE Neues Attribut am Ende der Attributliste hinzugefügt."
+
+#:IFC.xml:9134
+msgid "IfcResourceLevelRelationship"
+msgstr "IfcResourceLevelRelationship"
+
+msgid "IfcResourceLevelRelationship_DEFINITION"
+msgstr "[[IfcResourceLevelRelationship]] ist eine abstrakte Basis für Beziehungen zwischen Ressourcenebenen Entitäten. HISTORY Neue Entität in IFC4. bSI-Dokumentation"
+
+#:IFC.xml:9135
+msgid "IfcResourceLevelRelationship_Name"
+msgstr "Name"
+
+msgid "IfcResourceLevelRelationship_Name_DEFINITION"
+msgstr "Ein Name, der verwendet wird, um die Beziehung zu identifizieren oder zu qualifizieren."
+
+#:IFC.xml:9140
+msgid "IfcResourceLevelRelationship_Description"
+msgstr "Beschreibung"
+
+msgid "IfcResourceLevelRelationship_Description_DEFINITION"
+msgstr "Eine Beschreibung, die zusätzliche Informationen über die Beziehung anwenden kann."
+
+#:IFC.xml:9146
+msgid "IfcClassificationReferenceSelect"
+msgstr "IfcClassificationReferenceSelect"
+
+msgid "IfcClassificationReferenceSelect_DEFINITION"
+msgstr "Das [[IfcClassificationReferenceSelect]] ermöglicht die Auswahl der Frage, ob eine Klassifikationsreferenz eine Teilmenge einer anderen Klassifikationsreferenz ist oder ob sie ein Top-Level-Eintrag einer Klassifikationsquelle ist. HISTORY Neuer Selektionstyp in IFC2x"
+
+#:IFC.xml:9147
+msgid "IfcClassificationSelect"
+msgstr "IfcClassificationSelect"
+
+msgid "IfcClassificationSelect_DEFINITION"
+msgstr "Das [[IfcClassificationSelect]] ermöglicht die Auswahl der Referenzen für Klassifikationen aus einer externen Quelle, oder ob eine Klassifikation als solche referenziert wird. HINWEIS: Generell wird erwartet, dass die Auswahl von [[IfcClassificationReference]] sein wird, um eine individuelle Klassifikationsnotation zu identifizieren, die ein Element im Bauinformationsmodell klassifiziert. Zum Beispiel ein Element wie [[IfcTank]] , kann durch Zuweisung eines [[IfcClassificationReference]] mit Identifikation L6814 und einer ClassificationSource klassifiziert werden, die die entsprechende Version von Uniclass identifiziert. [[IfcClassification]] sollte nur dann ausgewählt werden, wenn es notwendig sein könnte, das zu verwendende Klassifizierungssystem anzugeben, ohne eine Notation oder einen Verweis auf ein einzelnes Objekt zu verknüpfen. Dies kann bei höherstufigen Objekten wie [[IfcProject]] , [[IfcSystem]] oder ähnlichem vorkommen. Zum Beispiel könnte ein [[IfcStructuralAnalysisModel]] als anwendbar für eine bestimmte Version von EuroCode eingestuft werden. HISTORY Neuer Auswahltyp in IFC2x .change ifc2x4 IFC4 CHANGE Select umbenannt von IfcClassificationNotationSelect."
+
+#:IFC.xml:9148
+msgid "IfcDocumentSelect"
+msgstr "Dokumentenauswahl"
+
+msgid "IfcDocumentSelect_DEFINITION"
+msgstr "http://www.buildingsmart-tech.org/ifc/IFC4/Add2/html/link/ifcdocumentselect.htm"
+
+#:IFC.xml:9149
+msgid "IfcLibrarySelect"
+msgstr "IfcLibrarySelect"
+
+msgid "IfcLibrarySelect_DEFINITION"
+msgstr "Das [[IfcLibrarySelect]] erlaubt die Auswahl ob Bibliotheksinformationen innerhalb eines IFC-Modells enthalten oder von einer externen Quelle referenziert werden sollen. .note Es wird erwartet, dass die Auswahl [[IfcLibraryReference]] und nur selten [[IfcLibraryInformation]] sein wird. [[IfcLibraryInformation]] sollte nur dann ausgewählt werden, wenn die verwendeten Bibliotheken ohne individuelle Referenzen angegeben werden müssen. Dies kann bei höherstufigen Objekten wie einem [[IfcProject]] oder [[IfcBuilding]] passieren. HISTORY Neuer Auswahltyp in IFC2x"
+
+#:IFC.xml:9150
+msgid "IfcResourceObjectSelect"
+msgstr "IfcResourceObjectSelect"
+
+msgid "IfcResourceObjectSelect_DEFINITION"
+msgstr "Die [[IfcResourceObjectSelect]] aktiviert die Auswahl von Objekten auf Ressourcenebene, die mit einem relationalen Objekt auf Ressourcenebene verknüpft sein sollen. Die Verwendung von [[IfcResourceObjectSelect]] beinhaltet die Möglichkeit, eine externe Referenz-Entitätsbibliothek zuzuweisen Klassifizierung oder Dokumentationsreferenz auf Entitäten innerhalb der Ressourcenebene. HISTORY Neuer Auswahltyp in IFC4."
+
+#:IFC.xml:9151
+msgid "IfcLanguageId"
+msgstr "Sprach-ID"
+
+msgid "IfcLanguageId_DEFINITION"
+msgstr "Die IfcLanguageId identifiziert die Sprache, in der ein Text in natürlicher Sprache ausgedrückt wird. Es verwendet ein Sprachkennzeichen, um die Sprache zu identifizieren."
+
+#:IFC.xml:9154
+msgid "IfcURIReference"
+msgstr "URI Referenz"
+
+msgid "IfcURIReference_DEFINITION"
+msgstr "Die IfcURIReference ermöglicht die Identifizierung eines Uniform Resource Identifier (URI). Eine URI kann als Locator oder Name oder beides klassifiziert werden, d.h. sie kann einen Uniform Resource Locator (URL) und/oder einen Uniform Resource Name (URN) umfassen. Ein Uniform Resource Locator, URL, ist eine Zeichenkette, die einem standardisierten Format entspricht, das sich durch seinen Standort auf eine Ressource im Internet (z.B. ein Dokument oder ein Bild) bezieht. Ein Uniform Resource Name, URN, soll als persistenter, ortsunabhängiger Ressourcenbezeichner dienen und soll es einfach machen, andere Namensräume (die die Eigenschaften von URNs teilen) im URN-Raum abzubilden."
 
