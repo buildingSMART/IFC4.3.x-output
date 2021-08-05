@@ -9,1882 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /master/IfcStructuralElementsDomain.pot\n"
-"X-Crowdin-File-ID: 96\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: no_NO\n"
 "PO-Revision-Date: 2021-08-05 20:09\n"
 
-#:IFC.xml:42386
-msgid "IfcFooting"
-msgstr "Fotografi"
+#:IFC.xml:44118
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcFooting_DEFINITION"
-msgstr "Et fundament er en del av fundamentet til en konstruksjon som sprer seg og overfører lasten til grunnen. Et fundament karakteriseres også som grunt fundament, der lastene overføres til bakken nær overflaten. Ekstrakt MERKNAD Definisjon i henhold til ISO 6707 1 stegvis konstruksjon som sprer lasten til foten av en vegg eller søyle. HISTORY Ny enhet i IFC2x2. MERKNAD Slab-fundamenter, også kalt helle eller plate, er ikke instantisert som [[IfcFooting]], men som [[IfcSlab]] eller som undertype [[IfcSlabStandardCase]] [[IfcSlabElementedCase]] med en forhåndsdefinert type [[IfcSlabTypeEnum]] . ETIKETT. Dyp fundamenter, som overfører lastene til lagene i undergrunnen, er representert ved [[IfcDeepFoundation]] og undertypene [[IfcCaissonFoundation]] og [[IfcPile]] . bSI dokumentasjon"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "En avansert flate er en spesialisering av en flate som må oppfylle krav om bruk av bestemte topologiske og geometriske framstillingselementer for å definere flatene sine, kanter og vertikaler. En [[IfcAdvancedFace]] er begrenset til å ha en overflategeometri av type i ansiktet [[IfcElementarySurface]] [[IfcSweptSurface]] eller [[IfcBSplineSurface]] , ha én [[IfcFaceOuterBound]] som randen av ansiktet, med unntak av lukkede overflater, ha alle flatene som skal bindes med [[IfcEdgeLoop]] eller [[IfcVertexLoop]], ha alle kantenes geometri, har kantkurvens geometri begrenset til [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , eller [[IfcBSplineCurve]] I tilfeller med lukkede flater med periodiske overflater, for eksempel sylindriske eller sfæriske overflater, i det følgende gjelder kantene på den lukkede overflaten, når det gjelder en sylindrisk overflate den øvre og nedre hetten, referer til samme forekomst av [[IfcVertexPoint]] to ganger, ikke [[IfcFaceOuterBound]] er gitt, eller [[IfcFaceOuterBound]] er konstruert ved hjelp av en [[IfcSeamCurve]] i den periodiske enden av den underliggende lukkede overflaten, for en sylindrisk overflate ved 0. 360. grader sylindrisk flate ... .. .. .. .. ... ... figurer ifcadvedface 01. ng Figur 1 Bruk av [[IfcCylindricalSurface]] som underliggende overflate for en [[IfcAdvancedFace]] MERKNAD Entisitet tilpasset fra avansert flate definert i NS-EN ISO 10303 511. HISTORY Ny enhet i IFC4 bSI dokumentasjon"
 
-#:IFC.xml:42401
-msgid "IfcFooting_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44133
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcFooting_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Returnerer det første valget, hvis SANN ellers det andre valget. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne funksjonen returnerer ett av to valg, avhengig av verdien av et boolsk inngangsargument. De to valgene er også input argumenter. MERKNAD Funksjon tilpasset fra boolsk velge definert i ISO10303 42. HISTORY Ny funksjon i IFC2.0"
 
-#:IFC.xml:42416
-msgid "IfcFootingType"
-msgstr "IfcFootingType"
+#:IFC.xml:44141
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcFootingType_DEFINITION"
-msgstr "Type bygningsdeler [[IfcFootingType]] definerer vanlig delt informasjon for forekomst av fundamenter. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap og angir felles framstillinger av bygningsdeler felles materialer felles sammensetning, og det brukes til å definere et fundamenttypespesifikasjon som indikerer den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcFootingType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcFootingType]] er representert ved forekomster av [[IfcFooting]] Se dokumentasjonen til [[IfcFooting]] for støttede eiendomssett, materialer og sammensetning. HISTORY Ny enhet i IFC4. bSI Dokumentasjon"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation. bSI Documentation"
 
-#:IFC.xml:42423
-msgid "IfcFootingType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44146
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-msgid "IfcFootingType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En tilkoblet flate er et sett med flater, slik at området til flatene sammen med deres avgrensede kanter og vertikalser kobles til. MERKNAD Enhet tilpasset fra tilkoblede flatesett definert i ISO 10303 42. HISTORY Ny enhet i IFC1.0 .spec head uformelle Proposisjon 1. Unionen over de flatene og deres grenselåser skal være søkte. bSI-dokumentasjon er ikke forbundet med hverandre"
 
-#:IFC.xml:42435
-msgid "IfcFootingTypeEnum"
-msgstr "IfcFootingTypeEnum"
+#:IFC.xml:44149
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "FifsFlater"
 
-msgid "IfcFootingTypeEnum_DEFINITION"
-msgstr "Oppsummering definerer den generiske fotslagstypen. HISTORY ny type i IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Item CAISSON FOUNDATION tilføyde bSI Dokumentasjon"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "FifsFlater"
 
-#:IFC.xml:42441
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION"
-msgstr "KARISSON FORUNDASJON"
+#:IFC.xml:44161
+msgid "IfcEdge"
+msgstr "Slovenija"
 
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION_DEFINITION"
-msgstr "En fundamentkonstruksjonstype brukt i undervannskonstruksjon. X 0D X 0D . hange ifc4x2 X 0D IFC4x2 CHANGE Enum made optional and deprecated. Bruk den dedikerte klassen [[IfcCaissonFoundation]] i stedet."
+msgid "IfcEdge_DEFINITION"
+msgstr "En [[IfcEdge]] definerer to punkter som er tilknyttet emner. Den geometriske framstillingen av forbindelsen mellom de to versjonene settes til en rett linje hvis ingen kurvgeometri tildeles med undertypen [[IfcEdgeCurve]] . [[IfcEdge]] kan derfor brukes til å utveksle rette kanter uten tilhørende geometri gitt av [[IfcLine]] eller [[IfcPolyline]] antatt [[IfcEdgeCurve]]. dgeometri . EKSEMPEL Figur 1 illustrerer et eksempel der grensene for [[IfcEdge]] er angitt ved EdgeStart og EdgeEnd som også bestemmer kantens retning. Plasseringen i et koordinatområde bestemmes av [[IfcVertexPoint]] typen for EdgeStart og EdgeEnd. Siden det ikke er tilordnet kantgeometri, settes den som standard en rett linje som sier ja til retningen for den. Figur 1 Framstilling av kant. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kant er den topologiske konstruksjonen som tilsvarer forbindelsen til to vertikaler. En mer abstrakt kan stå for et logisk forhold mellom to vertikaler. Området for en kant, hvis det finnes, er en slutt; ikke-selvkryssende åpen kurve i R M , det vil si en sammenkoplet 1-dimensjonal manifold. Grensene for en kant er to punkter som ikke trenger å være forskjellige. Kanten orienteres ved å velge tilbaketraktretning som skal gå fra første til andre vertspunkt. Hvis de to versjonene er de samme, er kanten en egen løkke. Kantens domene innbefatter ikke sine grenser, og 0 ε. Tilknytt en kant kan være en geometrisk kurve for å lokalisere kanten i et koordinatområde, representert ved kantkurveundertypen. Kurven skal være ensartet og ikke krysser seg selv innenfor kantens område. En kant er en graf, så multiplikasjon M og graf genus G kan bestemmes av kurvkurvkurvens algoritme. Siden M E 1 reduseres Euler likningen 1 i tilfellet til bilde . .. .. .. .. .. .. figurer hvis kantens mat1.gif hvor V 1 eller 2, og G e 1 eller 0. Spesifikt skal topologisk kant som definerer data, tilfredsstille en kant har to punkter bilder . .. .. .. .. .. .. figurer ved kile math2.gif må ikke være forskjellig bilde .. .. .. .. .. .. .. tall hviskedmath3. Hvis likning skal inneholde bilde .. .. .. .. .. .. .. figurer hvis kile math4. MERKNAD Entity tilpasset fra kanten definert i ISO 10303 42. HISTORY Ny enhet i IFC2. spec head uformelle posisjoner 1. Kanten har dimensjonalitet 1. 2. Omfanget av en kant skal være ordentlig og ikke null. bSI dokumentasjon"
 
-#:IFC.xml:42446
-msgid "IfcFootingTypeEnum_STRIP_FOOTING"
-msgstr "STRIP MFOTING"
+#:IFC.xml:44164
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcFootingTypeEnum_STRIP_FOOTING_DEFINITION"
-msgstr "Et lineært element som overfører laster til grunnen fra enten et kontinuerlig element, slik som en vegg, eller fra en serie med elementer, som for eksempel kolonner."
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:42443
-msgid "IfcFootingTypeEnum_PAD_FOOTING"
-msgstr "PAD FØRING"
+#:IFC.xml:44176
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcFootingTypeEnum_PAD_FOOTING_DEFINITION"
-msgstr "Et element som overfører lasten i en enkelt søyle, muligens to til bakken."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:42445
-msgid "IfcFootingTypeEnum_PILE_CAP"
-msgstr "PILE CAP"
+#:IFC.xml:44212
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-msgid "IfcFootingTypeEnum_PILE_CAP_DEFINITION"
-msgstr "Et element som overfører lasten fra en søyle eller gruppe søyler til et pilar eller en gruppe pilarer eller peler."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "En [[IfcEdgeCurve]] definerer to punkter som forbindes med den geometriske representasjonen av forbindelsen. MERKNAD Topologien brukes til å trimme geometrien til kanten. Det er ikke nødvendig å gi geometrisk trim til kanten for å passe til topologien. EKSEMPEL Figur 1 illustrerer et eksempel der kantgeometrien angis med en ubegrenset kurve, her [[IfcCircle]]. Grensene leveres av EdgeStart og EdgeEnd, den topologiske retningen til [[IfcEdgeCurve]] motsetter retningen til [[IfcCircle]] med SameSense FALSE. Figur 1 Edge kurve. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantkurve er en spesiell kanttype som har sin geometri fullstendig definert. Geometrien defineres ved å knytte kanten til en kurve som kan avgrenses. Etter hvert som de topologiske og geometriske retningene er motsatt. en indikator brukes samme mening for å identifisere om kanten og kurven er enig eller mottatt. Den Boolske verdien angir om kurveretningen samsvarer med TRUE eller er i motsatt retning FALSE til kantretningen. Eventuell geometri knyttet til kantens vertikaler skal stemme overens med kantgeometrien. Flere kanter kan referere til samme kurve. MERKNAD Entity tilpasset fra kantkurve definert i NS-EN ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for kantkurven er formelt definert som det aktuelle området for kantgeometrien som beskåret av vertikalene. Dette domenet omfatter ikke vertikalene. 2. En kantkurve har ikke null finfordelt utstrekning 3. En kantkurve er et manifold. 4. En kantkurve er underordnet tilkoblet. 5. Ansiden starter ikke er en del av kantdomenet. 6. Kantenden er ikke en del av kanten domene. 7. Vertex geometri skal samsvare med kantgeometri. bSI-dokumentasjon"
 
-#:IFC.xml:42442
-msgid "IfcFootingTypeEnum_FOOTING_BEAM"
-msgstr "FOREDE BEAM"
+#:IFC.xml:12010
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "EdgeGeometri"
 
-msgid "IfcFootingTypeEnum_FOOTING_BEAM_DEFINITION"
-msgstr "Fotdeler som er bøyd og er forankret i den frie grunnen. De vil vanligvis spenne mellom pilarer, peler eller pelehoder. Det skilles fra bjelker i superstrukturen fordi de vanligvis vil kreve en lavere grad av overflate. Det skiller seg fra «STRIP» FOTAE» siden de er klare for grunnoverflaten og krever derfor støtte mot den nederste flaten mens betongen herdes."
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "EdgeGeometri"
 
-#:IFC.xml:42447
-msgid "IfcPile"
-msgstr "IfcPile"
+#:IFC.xml:44213
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcPile_DEFINITION"
-msgstr "En pel er en slank trevirke, betong eller en konstruksjonsdel av stål, drevet, kjørt eller på annen måte forankret i grunnen med sikte på å tåle en last. En pel karakteriseres også som dyp fundament, der lasten overføres til dypere lager. xtDef MERKNAD Definisjon i henhold til ISO 6707 1 slender konstruksjonselement i det vesentlige undergrunn. forutsatt at kraften overføres til lastbærende lag under grunnens overflate MERKNAD Grunne fundamenter, som overfører lastene til bakken nær overflaten, er representert ved [[IfcFooting]. HISTORY Ny enhet i IFC2x2. bSI dokumentasjon"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Dette logiske flagget angir hvorvidt TRUE , eller ikke USANT sansene på kanten og kurven som definerer kantgeometrien, er de samme. Følelsen av en kant er fra kantens start vertex til kantens ende ende vertex er i retning av økende parameter."
 
-#:IFC.xml:42466
-msgid "IfcPile_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44221
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcPile_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En kantsløyfe er en sløyfe med ikke null. Det er en sti der start- og slutt-vertikalene er de samme. Dette domenet er en lukket kurve. En kantløkke kan overlappe seg selv. MERKNAD Enhet tilpasset fra kantsløyfe definert i ISO 10303 42. HISTORY Ny enhet i IFC2x2. .spec head Informal Proposisjon 1. I artsgruppen til [[IfcEdgeLoop]] skal være 1 eller høyere. 2. Eulerformelen skal være tilfredsstilt antall skjærende slektning på 1 3. Ingen kant kan refereres mer enn én gang til det samme [[IfcEdgeLoop]] med samme mening. For dette formålet regnes en kant som ikke er orientert kant som refereres til TRUE som bSI-dokumentasjonen."
 
-#:IFC.xml:42456
-msgid "IfcPile_ConstructionType"
-msgstr "Konstruksjonstype"
+#:IFC.xml:44237
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Redigeringsliste"
 
-msgid "IfcPile_ConstructionType_DEFINITION"
-msgstr "Utdatert X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Material profile association ability by means of [[IfcRelAssociatesMaterial]] er lagt til. Attributtet Konstruksjonstype bør ikke brukes når opplysningene kan oppgis av et materialprofilsett. enten knyttet til [[IfcPile]] objektet eller, hvis det finnes, med en tilsvarende forekomst på [[IfcPileType]] ."
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Redigeringsliste"
 
-#:IFC.xml:42480
-msgid "IfcPileConstructionEnum"
-msgstr "IfcPileConstructionEnum"
+#:IFC.xml:44230
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ni"
 
-msgid "IfcPileConstructionEnum_DEFINITION"
-msgstr "Opplistingen som definerer byggetypen for peler. Typen er hovedsakelig basert på hvordan pelene brukes og produseres. Informasjon om materialer blandes fordi dette påvirker måten pelene brukes på. HISTORY Ny type i IFC2x2. bSI Dokumentasjon"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Antall elementer i kantlisten."
 
-#:IFC.xml:42488
-msgid "IfcPileType"
-msgstr "IfcPileType"
+#:IFC.xml:44249
+msgid "IfcFace"
+msgstr "IfcFace"
 
-msgid "IfcPileType_DEFINITION"
-msgstr "Type bygningsdeler [[IfcPileType]] definerer vanlig delt informasjon for pelehendelser. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap angir felles framstillinger av materialer felles sammensetning av bygningsdeler Det brukes til å definere en spesifikasjon av peletype som indikerer den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcPileType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcPileType]] er representert ved forekomster av [[IfcPile]] Se dokumentasjonen til [[IfcPile]] for støttede eiendomssett, materialer og sammensetning. HISTORY Ny enhet i IFC4. bSI Dokumentasjon"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. .. .. figures ifcface math1.gif where G l X 7Ei X 7E is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0. bSI Documentation"
 
-#:IFC.xml:42495
-msgid "IfcPileType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:26129
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcPileType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:42507
-msgid "IfcPileTypeEnum"
-msgstr "IfcPileTypeEnum"
+#:IFC.xml:44256
+msgid "IfcFace_Bounds"
+msgstr "Lyder"
 
-msgid "IfcPileTypeEnum_DEFINITION"
-msgstr "Nummerering som definerer peletypen. HISTORY Ny type i IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Items BORED, DRIVEN, JETGROUTING lagt til. bSI dokumentasjon"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Lyder"
 
-#:IFC.xml:42517
-msgid "IfcPileTypeEnum_FRICTION"
-msgstr "FRIKSJON"
+#:IFC.xml:44268
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcPileTypeEnum_FRICTION_DEFINITION"
-msgstr "FRIKSJON"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate som er bundet er en løkke som er ment å skulle brukes for å begrense et fly. MERKNAD Enhet tilpasset fra ansiktsbundet, definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 bSI dokumentasjon"
 
-#:IFC.xml:42514
-msgid "IfcPileTypeEnum_BORED"
-msgstr "BOKS"
+#:IFC.xml:44276
+msgid "IfcFaceBound_Bound"
+msgstr "Bundet"
 
-msgid "IfcPileTypeEnum_BORED_DEFINITION"
-msgstr "En boresjel."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Bundet"
 
-#:IFC.xml:42516
-msgid "IfcPileTypeEnum_DRIVEN"
-msgstr "KJØP"
+#:IFC.xml:44269
+msgid "IfcFaceBound_Orientation"
+msgstr "Retning"
 
-msgid "IfcPileTypeEnum_DRIVEN_DEFINITION"
-msgstr "Rammet, vibrert eller drevet av pel på annen måte."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Dette indikerer om SANN eller ikke FALSE løkken har samme sann når den brukes til å binde ansiktet som når den først defineres. Hvis fornuft er FALSE, blir sansene på alle de komponentorienterte kantene implisitt reversert når de brukes i ansiktet."
 
-#:IFC.xml:42515
-msgid "IfcPileTypeEnum_COHESION"
-msgstr "KJØP"
+#:IFC.xml:44288
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcPileTypeEnum_COHESION_DEFINITION"
-msgstr "En kohesjonspile."
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En ytterflate er en spesiell undertype flate som bærer den ekstra halvdelen av overflaten med å definere en ytre grense på flaten. Ikke mer enn én grense for en flate skal være av denne typen. MERKNAD Enhet tilpasset fra et yttergrense definert i ISO 10303 42. HISTORY en ny enhet i IFC1.0 bSI dokumentasjon"
 
-#:IFC.xml:42519
-msgid "IfcPileTypeEnum_SUPPORT"
-msgstr "STØTTE"
+#:IFC.xml:44291
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-msgid "IfcPileTypeEnum_SUPPORT_DEFINITION"
-msgstr "En støttepel."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] definerer den underliggende geometrien til den tilknyttede overflaten til ansiktet. MERKNAD Topologien brukes til å trimme geometrien til overflaten. Det er ikke nødvendig å gi overflaten en geometrisk trim som passer med topologien. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En flate er en underflate der geometrien er definert av en tilhørende overflate. Den delen av overflaten som overflaten brukte på, skal være innstøpt i planet som en åpen skive, eventuelt med hull. Unionen på overflaten med kantene og vertikalene av låsene trenger imidlertid ikke kunne støpes inn i planet. Det kan for eksempel dekke et helt sfære eller torus. Siden både flaten og den geometriske overflaten har definert normale retninger et BOOLEAN flagg orienteringsattributtet brukes til å indikere om overflatenormale samtykker i SAN, eller er i motsetning til USANT ansiktet normal retning. Geometrien knyttet til en av delene av løkkene i overflaten skal være forenlig med overflategeometrien. i den forstand at alle virvlpunktene og kantkurvene ligger i overflaten av ansiktet, mot geometri. En overflate kan refereres til med mer enn én overflate. MERKNAD Enhet tilpasset fra flateoverflaten, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Området for overflaten er formelt definert som det området for ansiktsgeometrien som kuttet i løkkene, dette domenet inneholder ikke noen løkker. 2. En ansiktsflate har ikke endelig utstrekning. 3. En flateflate er en manifold. 4. En flate er liten, liten. 5. En overflate har en genus 0. 6. Løkkene er ikke en del av domenet i ansiktet. 7. Løkkegeometri skal stemme overens med overflatens geometri. Dette innebærer at eventuelle kantkurver eller vertex-punkter som brukes ved fastsetting av løkkeflaten, skal ligge i ansiktsgeometrien. 8. Løkkene på overflaten skal ikke krysses. bSI-dokumentasjon"
 
-#:IFC.xml:42518
-msgid "IfcPileTypeEnum_JETGROUTING"
-msgstr "JETGROUTING"
+#:IFC.xml:13088
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Overflate"
 
-msgid "IfcPileTypeEnum_JETGROUTING_DEFINITION"
-msgstr "En injisert pel som konstruksjon."
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Overflate"
 
-#:IFC.xml:42520
-msgid "IfcReinforcementDefinitionProperties"
-msgstr "IfcReinforcementDefinitionEgenskaper"
+#:IFC.xml:44292
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcReinforcementDefinitionProperties_DEFINITION"
-msgstr "[[IfcReinforcementDefinitionProperties]] definerer armeringens tverrsnittsegenskaper i armerte betongbygningsdeler. Definisjonen av egenskapen kan brukes, både sammen med insitu og prefabrikkerte konstruksjoner. Denne undertypen [[IfcPropertySetDefinition]] brukes til å definere armeringsegenskapene i tidlige prosjekteringstrinn, som i kravdefinisjonen eller ordningens utforming. I senere dimensjoneringsfaser brukes eksplisitte tilfeller av undertyper av [[IfcReinforcingElement]]. Den tiltenkte bruken kan indikeres ved å bruke verdien DefinitionType attributtet som en utformende eller anbefalte verdier er kravet til forsterkningsområde eller konfigurasjonskravet for Forsterkninger. Andre verdier kan brukes i henhold til lokale standarder. Bare én egenskapsdefinisjon av denne typen brukes for hvert betongbygningselement i hver tiltenkte bruk angitt med egenskapstypeverdien. Dette settet definerer deretter en liste over tverrsnittsegenskaper i et avgrenset antall langsgående seksjoner som forekomster av [[IfcSectionReinforcementProperties]] en for hver stangrolle for konstruksjonsstangen, den som igjen har en tverrsnittsegenskap definert som profil og en rekke armeringsegenskaper, én for hver type stålstang. HISTORY Ny enhet i IFC2x2 .change ifc2x4 IFC4 CHANGE Supertype endret fra [[IfcPropertySetDefinition]] til [[IfcPreDefinedPropertySet]] bSI dokumentasjon"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Dette flagget angir om følelsen av overflaten normal er enig med SAN, eller er motstander av FALSE, den topologiske normalen til ansiktet."
 
-#:IFC.xml:30890
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions"
-msgstr "Forsterknings seksjonsdefinisjoner"
+#:IFC.xml:44300
+msgid "IfcLoop"
+msgstr "Smykke"
 
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions_DEFINITION"
-msgstr "Forsterknings seksjonsdefinisjoner"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En løkke er en topologisk enhet laget av en enkelt verteks. eller ved å strengere sammen bearbeidede kanter eller lineære segmenter som begynner og slutter i samme vertspunkt. Den brukes vanligvis til å binde en flate som ligger på en overflate. En løkke har dimensjonalitet på 0 eller 1. Domenet for en 0-dimensjonal løkke er et enkelt punkt. Domenet i en dimensjonal løkke er en koblet, orientert kurve, men trenger ikke å manifesteres. Ettersom løkka er en sirkel, er avslutningspunktet for begynnelsen vilkårlig. Domenet for gjennomløpet inneholder grensene, en 0 ε. En løkke representeres av en enkelt verteks, en samling orienterte kanter eller av en bestilt samling av punkter. En løkke er en graf, så M og diagrammet G l kan bestemmes av kurvens kurvkurvalgoritme. Siden M 1, reduseres Euler likning 1 i denne saken til bilde .. .. .. .. ... figurer kappe math1. Hvis V og E X 7El X 7E er antall unike punkter og orienterte kanter i løkka og G l er slekten av løkken. MERKNAD Enhet tilpasset fra løkke, definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformelle Proposi- sjoner 1. En løkke står nært. En løkke beskriver en lukket topologisk kurve med sammenfallende start og sluttversjon. bSI-dokumentasjon"
 
-#:IFC.xml:42521
-msgid "IfcReinforcementDefinitionProperties_DefinitionType"
-msgstr "Definisjonstype"
+#:IFC.xml:44303
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToail ALoop"
 
-msgid "IfcReinforcementDefinitionProperties_DefinitionType_DEFINITION"
-msgstr "Beskrivende typenavn påført armeringsdefinisjonens egenskaper."
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Denne funksjonen returnerer SANN hvis du vil skrive en inngang i en loop enden vertex i hver kant er den samme som startviseren i sin suksess. HISTORY Ny funksjon i IFC2x2"
 
-#:IFC.xml:42528
-msgid "IfcReinforcingBar"
-msgstr "Forsterkningslinje"
+#:IFC.xml:44311
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcReinforcingBar_DEFINITION"
-msgstr "En armeringsstang er vanligvis laget av stål med produserte deformasjoner i overflaten, og brukes i betong- og murkonstruksjoner for å gi ytterligere fasthet. Et enkelt tilfelle av denne klassen kan representere én eller mange faktiske rebarer, for eksempel en rebarrekk. HISTORY Ny enhet i IFC2x2 .change ifc2x4 IFC 2x4 CHANGE alle attributter er valgfrie nå. Flere attributter er nå utdatert sin informasjon gitt av [[IfcReinforcingBarType]] . Attributtbarn døpt om til Forhåndsdefinert Type. .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]. Representasjonskartet for en kartlagt kroppsrepresentasjon bør inneholde en framstilling av type AdvancedSweptSolid med en [[IfcSweptDiskSolid]] inkludert undertype [[IfcSweptDiskSolidPolygonal]] . bSI dokumentasjon"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et åpent skall er et skall av dimensjonen 2. Den dommere, om den finnes, er en endelig, forbundet med hverandre, orientert to manifestert med grense, men ikke en lukket overflate. Man mener at det er et lukket skall med ett eller flere hull slått på. Domenet til et åpent skall tilfredsstiller 0 ° 1. Et åpent skall er mer generelt enn en flate fordi domenet kan håndteres. Skallet er definert av en samling av ansikter, som kan være orientert ansikt. Etter at det er tatt hensyn til orienteringen, skal den avtale skallet normalt, som definert nedenfor. Retningen kan leveres direkte som et BOOLEAN-attributt for et orientert ansikt, eller være standard til TRUE hvis skallelementet er et ansikt uten retteattributtet. Følgende helt kombinerte restriksjoner på åpne skall og geometriske restriksjoner på deres domener er utformet, sammen med de uformelle proposi- sjonene, for å sørge for at alle domener som er knyttet til et åpent skall, er et rettmessig manifold. Hver side skal være unik. Et åpent skall skal ha minst én flate. Det kan finnes en gitt flate i mer enn ett åpent skall. Grensen for et åpent skall består av kantene som refereres til bare én gang av flatens grensetilstander, sammen med alle sine verter. Domenet til et åpent helvete, hvis det finnes, inneholder alle kanter og overflater av overflatene. MERKNAD Merk at dette avviker noe fra definisjonen av et ansiktsdomene som omfatter ingen av dets grenser. For eksempel kan et ansiktsdomene utelukke et isolert punkt eller en linjesegment. Et åpent skalldomene kan ikke vises. Se algoritmen for databehandling nedenfor. MERKNAD Enhet tilpasset fra åpne skall definert i ISO 10303 42. HISTORY Ny enhet i IFC2x. .spec head uformell posisjon 1. Hver kant skal refereres til nøyaktig to ganger gjennom ansiktsgrensen. Hver orienterte kant skal være unikt. 3. Ingen kant skal henvises til mer enn to ansikter. 4. Distinke flater på skallet krysser ikke, men kan dele kanter og vertikaler. 5. Ulike kanter krysser ikke, men kan dele vertikaler. 6. Hver ansiktsreferanse skal være unik. 7. Løkkene på skallet skal ikke være en blanding av poly-sløyfe og andre løkketyper. Merk dette gitt, siden bare høflig sløyfe defineres som definisjonen for ansiktsgrensen. 8. Det lukkede skallet skal være orientert lita koblet 2 manifold. 9. The Euler formel er fornøyd. SI-dokumentasjon."
 
-#:IFC.xml:42559
-msgid "IfcReinforcingBar_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44315
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcReinforcingBar_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "[[IfcOrientedEdge]] representerer en [[IfcEdge]med en Orientasjonsflagg i bruk. Det kan bruke det samme [[IfcEdge]] ved omvendt nøyaktig to ganger, én gang fremover og én gang bakover. MERKNAD Det normale til [[IfcFace]] er bare bestemt fra kantene. Hvis alle kantene på ansiktet er festet på en måte som følger med kantorienteringen, vil ansiktet peke utover hverandre. Vanlig til det underliggende [[IfcFaceSurface]] som representerer geometrien i dette inntrykket ikke har betydning for dette. Formålet med [[IfcFaceSurface]]. ameSense attributten er å gi ytterligere informasjon for verifiseringsformål. SameSense TRUE betyr overflatevariant og ansikt normalt er de sameSense FALSE betyr at de er i motsatt retning. Den gjenbrukte kanten med en geometrisk framstilling som [[IfcEdgeCurve]] definerer kanten i 3D-koordinatrom. I enkelte tilfeller, særlig ved bruk av elementære eller sveipete overflater, er det en risiko for unøyaktig kartlegging av 3D-x, y, z [[IfcEdgeCurve]] på de tilstøtende flatene for å bestemme grensene for disse overflatene. Den valgfrie CurveOnSurface definerer 2D u, v kanten innenfor parametrisk område på overflaten. Den kan brukes til å bestemme hvor korrekt kartleggingen av 3D-en [[IfcEdgeCurve]] er på denne overflaten. EKSEMPEL Figur 1 illustrerer et eksempel der CurveOnSurface er brukt, i tillegg til kurvegeometrien til [[IfcEdgeCurve]Figur 1 Kurve på overflateframstilling av en [[IfcOrientedEdge]] . xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En orientert kant er bygd fra en annen kant og inneholder et BOOLEAN-retningsflagg som skal angi om orienteringen av den konstruerte kanten er enig med orienteringen av den opprinnelige kanten. Bortsett fra kanskje orientering tilsvarer den orienterte kanten den opprinnelige kanten. En vanlig praksis er solide modelleringssystemer er å ha en enhet som representerer bruken eller traversiteten av en kant. Enheten som bruker uttrykkelig angir kravet i en manifold fast at hver kant skal ha en omvendt nøyaktig to ganger, én gang i hver retning. Bruksfunksjonaliteten er gitt av kantens undertype-orienterte mot. MERKNAD Entidigt tilpasset fra orientert kant definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Attributtet CurveOnSurface har blitt lagt til. bSI dokumentasjon"
 
-#:IFC.xml:42537
-msgid "IfcReinforcingBar_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:44200
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Redigerelement"
 
-msgid "IfcReinforcingBar_NominalDiameter_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingBarType]] i stedet."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Redigerelement"
 
-#:IFC.xml:42542
-msgid "IfcReinforcingBar_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
+#:IFC.xml:44320
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Retning"
 
-msgid "IfcReinforcingBar_CrossSectionArea_DEFINITION"
-msgstr "Effektiv tverrsnittsareal på armeringsstangen eller gruppen av stenger. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional."
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "Hvis denne er topologisk orientering som brukt sammenfaller med orienteringen fra start vertex til slutten av kantelementet. Hvis tilbakekallingen skjer."
 
-#:IFC.xml:42547
-msgid "IfcReinforcingBar_BarLength"
-msgstr "BarLengde"
+#:IFC.xml:44325
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-msgid "IfcReinforcingBar_BarLength_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute deprecated. Bruk respektive attributt fra [[IfcReinforcingBarType]] i stedet."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:42552
-msgid "IfcReinforcingBar_BarSurface"
-msgstr "Strekkverk"
+#:IFC.xml:44329
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcReinforcingBar_BarSurface_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingBarType]] i stedet."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:42571
-msgid "IfcReinforcingBarType"
-msgstr "IfcForsterkningBarType"
+#:IFC.xml:44347
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcReinforcingBarType_DEFINITION"
-msgstr "Forsterkende elementtype [[IfcReinforcingBarType]] definerer vanligvis delt informasjon for forekomst av armeringsstenger. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap og angir felles framstillinger av bygningsdeler felles materialer, og det brukes til å definere en spesifikasjon av armeringsstangens type, som angir den spesifikke produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcReinforcingBarType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcReinforcingBarType]] er representert ved forekomster av [[IfcReinforcingBar]] HISTORY Ny enhet i IFC4. bSI Dokumentasjon av"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 En bane er en topologisk enhet bestående av en bestilt samling av orienterte kanter, slik at kantstammen starter vertex over hver kant samtidig med kanten på slutten av sin forgjenger. Banen er bestilt fra kantens start på den første orienterte kanten til kanten av den siste kanten. BOOLEAN-verdien i den orienterte kanten viser om kantretningen samsvarer med retningen til stien TRUE eller er motsatt retning FALSE . En enkelt kant kan bare refereres til én gang med en enkelt sti. En kant kan refereres til med flere veier. En kant kan finnes uavhengig av bane. MERKNAD Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2. .spec head uformelle Proposis 1. En bane har dimensjonalitet 1. 2. En vei er arktisk knyttet sammen. 3. Kantene av veien krysser ikke unntatt i felles verdier 4. Veien har en rettvisende, ikke noe dekkende vei. bSI-dokumentasjon er lik null."
 
-#:IFC.xml:42612
-msgid "IfcReinforcingBarType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44335
+msgid "IfcPath_EdgeList"
+msgstr "Redigeringsliste"
 
-msgid "IfcReinforcingBarType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Redigeringsliste"
 
-#:IFC.xml:42580
-msgid "IfcReinforcingBarType_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:44354
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail-APat"
 
-msgid "IfcReinforcingBarType_NominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som definerer tverrsnittets størrelse på armeringsstangen."
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Denne funksjonen returnerer SANN hvis alle kantene i inntastingsbanen er konsekvent. xtDef MERKNAD Definisjon i henhold til ISO CD 10303 42 1992 Denne funksjonen returnerer TRUE hvis for kantene av inngangsbanen er enden med hver kant det samme som startvertex i sin etterfølger. MERKNAD Funksjon tilpasset fra veihode til hale, definert i ISO10303 42. Ny funksjon HISTORY i IFC2.0"
 
-#:IFC.xml:42585
-msgid "IfcReinforcingBarType_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
+#:IFC.xml:44362
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcReinforcingBarType_CrossSectionArea_DEFINITION"
-msgstr "Effektivt tverrsnittsareal til armeringsstangen."
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En poly løkke er en løkke med rette kanter som avgrenser et plan område i rommet. En poly-løkke er en løkke med genet 1 der løkken representeres av en bestilt kobbersamling med punkter som utgjør løkkens vertikal. Utløkka består av rette linje-segmenter som forbinder et punkt i samlingen med det suksesspunktet i samlingen. Det avsluttende segmentet er fra det siste til det første punktet i samlingen. Utløkkens retning er i linjesegmentenes retning. En pol-løkke skal samsvare med følgende topologiske begrensninger i løkken har slekten av en. følgende likning skal være tilfredsstilt bilde .. .. .. .. .. figurer ihcpolylooplakk1. hvis [[IfcPolyLoop]] alltid er lukket og det siste segmentet er fra den siste [[IfcCartesianPoint]] i listen over Polygon s til den første [[IfcCartesianPoint]] . Det første punktet skal derfor ikke gjentas ved slutten av listen, eller ved å referere til samme forekomst. eller ved å bruke en ekstra forekomst på [[IfcCartesianPoint]] med koordinatene som det første punktet. MERKNAD Denne enheten finnes primært for å legge til rette for effektiv kommunikasjon av anerkjente B-representerende modeller. MERKNAD Enhet tilpasset fra høfsløyfe definert i ISO 10303 42. HISTORY ny enhet i IFC1.0 . Uformell pec head-posisjon 1. Alle punktene i mangekanten som definerer poly-løkken, skal være koplare. 2. Den første og den siste Polygon skal være forskjellig etter verdi. bSI-dokumentasjon"
 
-#:IFC.xml:42590
-msgid "IfcReinforcingBarType_BarLength"
-msgstr "BarLengde"
+#:IFC.xml:11495
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polygon"
 
-msgid "IfcReinforcingBarType_BarLength_DEFINITION"
-msgstr "Den totale lengden på armeringsstangen. Den totale lengden til bøyde stenger beregnes i samsvar med lokale standarder med korreksjoner for bøyene."
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polygon"
 
-#:IFC.xml:42595
-msgid "IfcReinforcingBarType_BarSurface"
-msgstr "Strekkverk"
+#:IFC.xml:44369
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "IfcReinforcingBarType_BarSurface_DEFINITION"
-msgstr "Indikator for hvorvidt stolpeflaten er ren eller strukturert."
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definisjon etter ISO CD 10303 42 1992 En underkant er en kant med domene som er en forbundet del av domenet til en eksisterende kant. De topologiske begrensningene på en kile er de samme som på en kant. MERKNAD Enhet tilpasset fra underkant definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. topp-hode uformelle posisjoner 1. Domenet til kanten er formelt definert som det overordnede domenet for den overordnede kanten, som trimmes av subkantens start vertex og innleder slutt på verten. 2. Start vertex og ende vertex skal ligge under unionen av de vertices domener fra overordnet kant og domenet til overordnet kant . bSI dokumentasjon"
 
-#:IFC.xml:42600
-msgid "IfcReinforcingBarType_BendingShapeCode"
-msgstr "BendingFormKode"
+#:IFC.xml:44188
+msgid "IfcSubedge_ParentEdge"
+msgstr "Fornavn"
 
-msgid "IfcReinforcingBarType_BendingShapeCode_DEFINITION"
-msgstr "Formkode i henhold til en standard, som ACI 315, ISO 3766 eller en liknende standard. Det antas at en enkelt standard for å definere stavbøyingen brukes gjennom hele prosjektet, og at denne standarden refereres fra [[IfcProject]] objektet gjennom [[IfcDocumentReference]] mekanismen."
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Fornavn"
 
-#:IFC.xml:42605
-msgid "IfcReinforcingBarType_BendingParameters"
-msgstr "BendingParametere"
+#:IFC.xml:44372
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcReinforcingBarType_BendingParameters_DEFINITION"
-msgstr "Bøyefasparametre. Deres betydning er definert ved bøyningsformen og den respektive standarden."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr "extDef NOTE Definisjon etter ISO CD 10303 42 1992 Det topologiske representasjonselementet er supertypen for alle de topologiske representasjonsgjenstandene i geometriressursen. MERKNAD Enhet tilpasset fra topologisk fremføringselement definert i ISO 10303 42. HISTORY ny enhet i IFC1.5 bSI dokumentasjon"
 
-#:IFC.xml:42624
-msgid "IfcReinforcingBarTypeEnum"
-msgstr "IfcReinforcingBarTypeEnum"
+#:IFC.xml:44375
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcReinforcingBarTypeEnum_DEFINITION"
-msgstr "Opplistingen som definerer standardtyper for stangen, formålet eller bruken av stangen, dvs. – typer laster og spenninger de er ment å bære. HISTORY ny type i IFC2x2 . hange ifc2x4 IFC4 BEHANDLING laget element. Liste endre navn i IFC4 fra [[IfcReinforcingBarRoleEnum]uten endringer i spekteret av nummereringselementer. bSI dokumentasjon"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex er den topologiske konstruksjonen som tilsvarer et punkt. Den har dimensjonalitet 0 og utstrekning 0. Domenet til et verteks, hvis tilstede, er et punkt i m dimensjons virkelige rom R , representert ved vertex punkt undertype. MERKNAD Enhet tilpasset fra vertex definert i ISO 10303 42. HISTORY Ny enhet i IFC2.0 .spec head Informal Propositions 1. vertex har en dimensjonalitet 0. Dette er en grunnleggende egenskap ved verten. 2. Omfanget av vertex er definert som null. bSI-dokumentasjon"
 
-#:IFC.xml:42639
-msgid "IfcReinforcingBarTypeEnum_PUNCHING"
-msgstr "KJØP"
+#:IFC.xml:44390
+msgid "IfcVertexLoop"
+msgstr "IfcVertexloop"
 
-msgid "IfcReinforcingBarTypeEnum_PUNCHING_DEFINITION"
-msgstr "KJØP"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definition i henhold til ISO CD 10303 42 1992 En vertex løkke er en løkke med null genus som består av en enkelt vertex. En vertex kan finnes uavhengig av vertex løkke. The topological data skal tilfredsstille følgende begrensningsbilde .. .. .. .. .. figurer ifcvertexloop math1.gif NOTE Entity adapted from vertex loop definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. pec head informal Propositions 1. En vertex løkke har null omfang og dimensjonalitet. 2. vertex loop har genus 0. bSI dokumentasjon"
 
-#:IFC.xml:42642
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR"
-msgstr "SPACEBAR"
+#:IFC.xml:44378
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR_DEFINITION"
-msgstr "En omrøring i et pre stresssystem til å plassere TendonConduit."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-#:IFC.xml:42635
-msgid "IfcReinforcingBarTypeEnum_ANCHORING"
-msgstr "KJØRER"
+#:IFC.xml:44393
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcReinforcingBarTypeEnum_ANCHORING_DEFINITION"
-msgstr "KJØRER"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definition etter ISO CD 10303 42 1992 A vertex point er en vertex som har dens geometri definert som et punkt. MERKNAD Enhetstilpasset fra vertex punkt definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformelle Proposisjon 1. Domenet til vertex er formelt definert som det samme området som vertex punktet. bSI Dokumentasjon"
 
-#:IFC.xml:42638
-msgid "IfcReinforcingBarTypeEnum_MAIN"
-msgstr "HOVED"
+#:IFC.xml:12625
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "VertexGeometri"
 
-msgid "IfcReinforcingBarTypeEnum_MAIN_DEFINITION"
-msgstr "HOVED"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "VertexGeometri"
 
-#:IFC.xml:42636
-msgid "IfcReinforcingBarTypeEnum_EDGE"
-msgstr "REDIGER"
+#:IFC.xml:44397
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcReinforcingBarTypeEnum_EDGE_DEFINITION"
-msgstr "REDIGER"
-
-#:IFC.xml:42644
-msgid "IfcReinforcingBarTypeEnum_STUD"
-msgstr "STUD"
-
-msgid "IfcReinforcingBarTypeEnum_STUD_DEFINITION"
-msgstr "STUD"
-
-#:IFC.xml:42637
-msgid "IfcReinforcingBarTypeEnum_LIGATURE"
-msgstr "STØRRELSE"
-
-msgid "IfcReinforcingBarTypeEnum_LIGATURE_DEFINITION"
-msgstr "STØRRELSE"
-
-#:IFC.xml:42640
-msgid "IfcReinforcingBarTypeEnum_RING"
-msgstr "RING"
-
-msgid "IfcReinforcingBarTypeEnum_RING_DEFINITION"
-msgstr "RING"
-
-#:IFC.xml:42641
-msgid "IfcReinforcingBarTypeEnum_SHEAR"
-msgstr "DOSEPOSE"
-
-msgid "IfcReinforcingBarTypeEnum_SHEAR_DEFINITION"
-msgstr "DOSEPOSE"
-
-#:IFC.xml:42645
-msgid "IfcReinforcingElement"
-msgstr "Angripende element"
-
-msgid "IfcReinforcingElement_DEFINITION"
-msgstr "Et armeringselement representerer stenger, tråder, tråder, nett, stag, sener andre komponenter innstøpt i betong på en slik måte at armeringen og betongen virker sammen i motstandskrefter. Ekstrakt MERKNAD Definisjon i henhold til ISO 6707 1 stav s, stang, stoff, fiber, ledninger og kabler tilsatt for å gi ytterligere fasthet eller støtte til et materiale eller en komponent. Ett eller flere tilfeller av undertyper av [[IfcReinforcingElement]] bør alltid være ledsaget av et definert eksempel på en bestemt undertype på [[IfcReinforcingElementType]. Typeobjektet inneholder form- og materialinformasjon. HISTORY Ny enhet i IFC2x2 .change ifc2x4 IFC4 CHANGE-attributt SteelGrade avskrevet. bSI dokumentasjon"
-
-#:IFC.xml:42646
-msgid "IfcReinforcingElement_SteelGrade"
-msgstr "Stålgrad"
-
-msgid "IfcReinforcingElement_SteelGrade_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute deprecated. Use material association at [[IfcReinforcingElementType]] istedet."
-
-#:IFC.xml:42654
-msgid "IfcReinforcingElementType"
-msgstr "IfcReinforcingElementType"
-
-msgid "IfcReinforcingElementType_DEFINITION"
-msgstr "Elementkomponenttypen [[IfcReinforcingElementType]] definerer vanlig delt informasjon for forekomst av armeringselementer. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskap og angir felles framstillinger av bygningsdeler felles materialer, felles sammensetning, og det brukes til å definere en spesifikasjon av forsterkningselementet type, som angir den spesifikke produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcReinforcingElementType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcReinforcingElementType]] er representert ved forekomster av [[IfcReinforcingElement]] HISTORY Ny enhet i IFC2x2. Bruk hodemateriale Bruk Definisjon En tilknyttet materiale betegner stålkvaliteten, foretrukket ved bruk av materialklassifisering. bSI Dokumentasjon"
-
-#:IFC.xml:42657
-msgid "IfcReinforcingMesh"
-msgstr "IfcReinforcingMesh"
-
-msgid "IfcReinforcingMesh_DEFINITION"
-msgstr "Et armeringsnett er en rekke langsgående og tverrgående tråder eller stenger på ulike målere, ordnet vinkelrett på hverandre og sveist på alle punktene i skjæringspunktet som vanligvis brukes for armeringen i betongen. Den kalles også for sveiste tråder. I virkeligheten er meshes, samt bøyde meshes. HISTORY Ny enhet i IFC2x2 .change ifc2x4 IFC4 CHANGE alle attributter er valgfrie nå. Flere attributter er foreldet sin informasjon nå gitt av [[IfcReinforcingMeshType]] . Attributtet forhåndsdefinert type lagt til. .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . Representasjonskartet for en mappet Outline-representasjon bør inneholde en representasjon av typen Curve3D som har en [[IfcPolyline]. Representasjonskartet for en kartlagt kroppsrepresentasjon bør inneholde en framstilling av type AdvancedSweptSolid med flere [[IfcSweptDiskSolid]] inkludert undertype [[IfcSweptDiskSolidPolygonal]] . bSI dokumentasjon"
-
-#:IFC.xml:42708
-msgid "IfcReinforcingMesh_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMesh_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42666
-msgid "IfcReinforcingMesh_MeshLength"
-msgstr "Lengde"
-
-msgid "IfcReinforcingMesh_MeshLength_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute deprecated. Bruk respektive attributt fra [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42671
-msgid "IfcReinforcingMesh_MeshWidth"
-msgstr "MeshBredde"
-
-msgid "IfcReinforcingMesh_MeshWidth_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute deprecated. Bruk respektive attributt fra [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42676
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42681
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42686
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea"
-msgstr "Langsgående tverrsnittsområde"
-
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42691
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42696
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing"
-msgstr "LangitudinalMellomrom"
-
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42701
-msgid "IfcReinforcingMesh_TransverseBarSpacing"
-msgstr "TransverseBarSpacing"
-
-msgid "IfcReinforcingMesh_TransverseBarSpacing_DEFINITION"
-msgstr "Utdatert. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributter ved [[IfcReinforcingMeshType]] i stedet."
-
-#:IFC.xml:42720
-msgid "IfcReinforcingMeshType"
-msgstr "IfcReinforcingMeshType"
-
-msgid "IfcReinforcingMeshType_DEFINITION"
-msgstr "Forsterkende elementtype [[IfcReinforcingMeshType]] definerer vanligvis delt informasjon for forekomst av armeringsnett. Settet med delt informasjon kan omfatte felles egenskaper med felles egenskap og angir felles framstillinger av bygningsdeler felles materialer, felles sammensetning, og det brukes til å definere spesifikasjonen av armeringsnett type, som angir den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcReinforcingMeshType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcReinforcingMeshType]] er representert ved forekomster av [[IfcReinforcingMesh]] . HISTORY Ny enhet i IFC4. se head Geometry Use Definition The [[IfcReinforcingMeshType]] kan angi den delte geometriske representasjonen for mange mesh forekomster. Representasjonskart refererer til en liste over [[IfcRepresentationMap]] s, som tillater flere geometriske fremstillinger. bSI-dokumentasjon."
-
-#:IFC.xml:42781
-msgid "IfcReinforcingMeshType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMeshType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42729
-msgid "IfcReinforcingMeshType_MeshLength"
-msgstr "Lengde"
-
-msgid "IfcReinforcingMeshType_MeshLength_DEFINITION"
-msgstr "Den totale lengden på maskenett målt i lengderetningen."
-
-#:IFC.xml:42734
-msgid "IfcReinforcingMeshType_MeshWidth"
-msgstr "MeshBredde"
-
-msgid "IfcReinforcingMeshType_MeshWidth_DEFINITION"
-msgstr "Den totale bredden på nett målt i tverrretningen."
-
-#:IFC.xml:42739
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som angir tverrsnittsstørrelsen av lengdearmeringsstengene."
-
-#:IFC.xml:42744
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som angir tverrsnittets størrelse på tverrgående stenger."
-
-#:IFC.xml:42749
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea"
-msgstr "Langsgående tverrsnittsområde"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Det effektive tverrsnittsarealet av lengderetningen på nettet."
-
-#:IFC.xml:42754
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Det effektive tverrsnittsarealet til tverrgående stenger på nettet."
-
-#:IFC.xml:42759
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing"
-msgstr "LangitudinalMellomrom"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing_DEFINITION"
-msgstr "Avstanden mellom langsgående stenger. Merk at en jevn fordeling av stenger antas i andre tilfeller håndteres av klassifisering eller eiendom."
-
-#:IFC.xml:42764
-msgid "IfcReinforcingMeshType_TransverseBarSpacing"
-msgstr "TransverseBarSpacing"
-
-msgid "IfcReinforcingMeshType_TransverseBarSpacing_DEFINITION"
-msgstr "Avstanden mellom tverrstengene. Merk at en jevn fordeling av stenger antas å andre tilfeller håndteres av klassifiserings- eller eiendomssett."
-
-#:IFC.xml:42769
-msgid "IfcReinforcingMeshType_BendingShapeCode"
-msgstr "BendingFormKode"
-
-msgid "IfcReinforcingMeshType_BendingShapeCode_DEFINITION"
-msgstr "Hvis denne nett er bøyd i stedet for plan, dette attributtet gir en formkode i henhold til en standard som ACI 315, ISO 3766 eller en lignende standard. Det antas at en enkelt standard for å definere den mesbrede bøyen brukes gjennom hele prosjektet, og at denne standarden refereres fra [[IfcProject]] objektet gjennom [[IfcDocumentReference]] mekanismen."
-
-#:IFC.xml:42774
-msgid "IfcReinforcingMeshType_BendingParameters"
-msgstr "BendingParametere"
-
-msgid "IfcReinforcingMeshType_BendingParameters_DEFINITION"
-msgstr "Hvis masketypen er bøyd i stedet for plan, gir denne egenskapen bøyningsformparametere. Deres betydning er definert ved bøyespissen og den respektive standarden."
-
-#:IFC.xml:42793
-msgid "IfcReinforcingMeshTypeEnum"
-msgstr "IfcReinforcingMeshTypeEnum"
-
-msgid "IfcReinforcingMeshTypeEnum_DEFINITION"
-msgstr "Opptelling definerer forsterkningmesmesetypen. HISTORY ny type i IFC4 bSI dokumentasjon"
-
-#:IFC.xml:42795
-msgid "IfcSurfaceFeature"
-msgstr "IKKUFORFuktighetsegenskap"
-
-msgid "IfcSurfaceFeature_DEFINITION"
-msgstr "Et overflateelement er en modifikasjon på eller inn i overflaten til en bygningsdel. Deler av overflaten på hele overflaten kan påvirkes. Bygningsdelens volum og masse kan øke, forbli uendret, eller reduseres ved hjelp av overflateegenskapen, avhengig av produksjonsteknologi. Enhver økning eller reduksjon av volumet er imidlertid lite sammenlignet med det totale volumet på elementet. Standarden bruk av forekomster av [[IfcSurfaceFeature]] er en del av instanser av element-typen av undertyper [[IfcElementType]] . Delen hele relasjonen er bestemt ved et aggregeringsforhold. som uttrykker nedbrytning av en elementtype i én eller flere tilsetningskonstruksjonsdeler og null eller flere funksjonselementer. HISTORY Ny enhet i IFC4. Containment Use Definition Surface features must have no spacatial containment relationship to the spatial structure since they are avhengig av elementtyper uten romlige containningsforhold eller av et element som inntreffer med et eget romatisk containerforhold. SELF [[IfcElement]].Forholdet mellom kontainedStructure skal være NIL. Geometribruksdefinisjonen Den geometriske representasjonen av IfcSurfaceFeatureElement er gitt med [[IfcProductDefinitionShape]] og gjør det mulig å representere flere geometriske former. Lokal plassering lokal plassering av IfcSurfaceFeatureElement er definert i supertypen [[IfcProduct]] . Den er definert av [[IfcLocalPlacement]], som definerer det lokale koordinatsystemet som refereres til av alle geometriske representasjoner. Hvis det er egenskaper som er en del av en elementtype, skal absolutt plassering i typeobjektet som er underforstått koordinatsystem, brukes. Når det gjelder egenskaper som hindrer et elementforekomst, Plasseringsrelasjonen av [[IfcLocalPlacement]] skal peke på den lokale plasseringen av den aktuelle bygningsdelen. Formpresentasjoner med ulik form kan brukes. avhengig av typen funksjon og informasjonskrav symboler framstilling, for eksempel den to avgrensningsboksen for en tagg Et geometrisk sett som representerer de geometriske opplysningene til et merke. Overflateframstilling av behandlede deler av konstruksjonsoverflaten ved hjelp av [[IfcShellBasedSurfaceModel]] Overflatene inne i overflatemodellen kan tas med i en B Rep modell innenfor et representasjonskart av overordnet elementtype. Høyere parametere geometriske og ikke-geometriske parametere kan oppgis ved eiendomssett basert på lokale avtaler. HovedHoveddokumentasjon (baser)"
-
-#:IFC.xml:42802
-msgid "IfcSurfaceFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSurfaceFeature_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42814
-msgid "IfcSurfaceFeatureTypeEnum"
-msgstr "IfcSurfaceFeatureType Enum"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFINITION"
-msgstr "Dette nummereringen angir typen overflatefrikk. HISTORY ny type i IFC4. bSI dokumentasjon"
-
-#:IFC.xml:42832
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP_DEFINITION"
-msgstr "Type rummelist går over kjørefeltet s ."
-
-#:IFC.xml:42372
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING"
-msgstr "LINEMARKING"
-
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING_DEFINITION"
-msgstr "D linjer malt på vegdekker og danner grenser, senterlinjer og kantringsmerker."
-
-#:IFC.xml:42826
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT"
-msgstr "UTFØRT"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT_DEFINITION"
-msgstr "Påvisning av feil på overflaten til et element, slik som korroderende eller erodert område."
-
-#:IFC.xml:42831
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP"
-msgstr "RUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP_DEFINITION"
-msgstr "Hevede og ofte strukturerte striper på veinettet eller på skulder, eller på tvers av kjørebanene for å varsle sjåfører ved vibrasjon og støy. Også Jeiggle barer. MERKNAD Definisjon av PIARC med heving av pil og ofte spesialstrukturerte striper på tvers eller siden av kjøretøyet, generering av støy og vibrasjoner for kjøretøyer med sikte på å varsle sjåfører og oppmuntre dem til å bremse opp for bestemte farer."
-
-#:IFC.xml:42368
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING"
-msgstr "HATCHMARKER"
-
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING_DEFINITION"
-msgstr "overflatemerking definert ved innelukket 2d form med definerte lukfyllinger."
-
-#:IFC.xml:42380
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING"
-msgstr "SYMBOLMARKERT"
-
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING_DEFINITION"
-msgstr "Overflatemerking som formidler informasjon i form av symboler og figurer som piler, tekst eller billedsymboler."
-
-#:IFC.xml:42828
-msgid "IfcSurfaceFeatureTypeEnum_TAG"
-msgstr "Tagg"
-
-msgid "IfcSurfaceFeatureTypeEnum_TAG_DEFINITION"
-msgstr "Et navn merke som gjør det mulig å identifisere et element under produksjon, levering og montering. Kan produseres på ulike måter. . ved å skrive ut eller avslutte sporingskoden på elementet, eller ved å feste en faktisk tagg."
-
-#:IFC.xml:42830
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING"
-msgstr "MANNSKIDSURFRAKING"
-
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING_DEFINITION"
-msgstr "Maling eller underlag for å hindre skliing eller skliing."
-
-#:IFC.xml:42378
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING"
-msgstr "VENDELSESSUARKING"
-
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING_DEFINITION"
-msgstr "Malte eller kjemiske ledninger eller symboler på overflaten av vegdekker et eller belagt område"
-
-#:IFC.xml:42829
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT"
-msgstr "BEHANDLING"
-
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT_DEFINITION"
-msgstr "En subtraktiv overflate, for eksempel sliping eller en additiv overflate, for eksempel belegg, eller en impregneringsbehandling, eller en serie av slike behandlinger."
-
-#:IFC.xml:42827
-msgid "IfcSurfaceFeatureTypeEnum_MARK"
-msgstr "MORK"
-
-msgid "IfcSurfaceFeatureTypeEnum_MARK_DEFINITION"
-msgstr "Et punkt, linje, kryss eller annet merke, brukt for eksempel for enklere justering av elementer under montering."
-
-#:IFC.xml:42835
-msgid "IfcTendon"
-msgstr "IfcTendon"
-
-msgid "IfcTendon_DEFINITION"
-msgstr "Et stagverk er et stålelement, for eksempel et tråd, stang, stang eller kordeler som brukes for å hindre forspenning til betong når elementet er strekket. xtDef MERKNAD Definisjon i henhold til ISO 6707 1 stålstang eller grupper av stenger, kordeler eller tråder gitt en strekkspenning som gir en trykkspenning i spennarmert betong eller murverk. Ekstrakt MERKNAD For å være virkningsfull, kabelen følger dekksfluktingen og beveger seg vertikalt opp på toppen av pilarene og ned midt på spennet. Derfor er kabelaksen bestemt relativt mot dekksjusteringen. Formrepresentasjonen bør være AdvancedSweptSolid geometri basert på SectionedSolidHorisontal beskrivelse inkludert DistanceExpression, CircleProfileDef og AlignmentCurve, som fører til en pollin som beskriver kabeldirektivet. MERKNAD Ekstrudering MERKNAD Når det gjelder beregningsmodellen for konstruksjonsanalyse, skal kabelen omformes til laster anvendt på hvert kartongpunkt som definerer polylinet. HISTORY Ny enhet i IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute PredefinedType laget valgfritt. NominalDiameter og Tverrsnitt lagd valgfritt og utdypet denne informasjonen nå kan gis med [[IfcTendonType]] . Beskrivelse av FrictionCoeffektivt korrigert. bSI Dokumentasjon"
-
-#:IFC.xml:42881
-msgid "IfcTendon_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendon_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42844
-msgid "IfcTendon_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendon_NominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som definerer tverrsnittets størrelse på staget. X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributt ved [[IfcTendonType]] i stedet."
-
-#:IFC.xml:42849
-msgid "IfcTendon_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
-
-msgid "IfcTendon_CrossSectionArea_DEFINITION"
-msgstr "Det effektive tverrsnittsarealet til staget X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Attribute made optional and deprecated. Bruk respektive attributt ved [[IfcTendonType]] i stedet."
-
-#:IFC.xml:42854
-msgid "IfcTendon_TensionForce"
-msgstr "SpenningForce"
-
-msgid "IfcTendon_TensionForce_DEFINITION"
-msgstr "Den største tillatte strekkraften som kan anvendes på staget."
-
-#:IFC.xml:42859
-msgid "IfcTendon_PreStress"
-msgstr "PreStress"
-
-msgid "IfcTendon_PreStress_DEFINITION"
-msgstr "Den forspenningen som skal brukes på staget."
-
-#:IFC.xml:42864
-msgid "IfcTendon_FrictionCoefficient"
-msgstr "Frissjonskoeffisient"
-
-msgid "IfcTendon_FrictionCoefficient_DEFINITION"
-msgstr "Friksjonskoeffisienten mellom stag- og stagplater mens staget ikke er bundet sammen."
-
-#:IFC.xml:42869
-msgid "IfcTendon_AnchorageSlip"
-msgstr "Ankerslip"
-
-msgid "IfcTendon_AnchorageSlip_DEFINITION"
-msgstr "Deformasjonen av et forankring eller glidning av stagene når forspenningsinnretningen frigjøres."
-
-#:IFC.xml:42874
-msgid "IfcTendon_MinCurvatureRadius"
-msgstr "MinCurvatureRadius"
-
-msgid "IfcTendon_MinCurvatureRadius_DEFINITION"
-msgstr "Den minste krumningsradius beregnet på hele den effektive lengden av staget der strekkegenskapene fortsatt er gyldige."
-
-#:IFC.xml:42893
-msgid "IfcTendonAnchor"
-msgstr "IfcTendonAnchor"
-
-msgid "IfcTendonAnchor_DEFINITION"
-msgstr "Et stagforankring er endeforbindelsen for stagene i spennarmert eller spent betong. HISTORY Ny enhet i IFC2x2. .history IFC4 CHANGE Attribute PredefinedType lagt til. bSI dokumentasjon"
-
-#:IFC.xml:42904
-msgid "IfcTendonAnchor_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchor_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42916
-msgid "IfcTendonAnchorType"
-msgstr "IfcTendonAnchorType"
-
-msgid "IfcTendonAnchorType_DEFINITION"
-msgstr "Forsterkende elementtype [[IfcTendonAnchorType]] definerer vanligvis delt informasjon for forekomst av forankringer i stag. Sett med delt informasjon kan omfatte felles egenskaper med felles egenskaper og felles egenskaper for de felles materialene felles sammensetningen av konstruksjonsdelene Den brukes til å definere en forankringsspesifikasjon av stagene som angir den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcTendonAnchorType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcTendonAnchorType]] er representert ved forekomster av [[IfcTendonAnchor]] . HISTORY Ny enhet i IFC4. Bruk hodemateriale ved bruk av definisjoner av materialer eller materialbestanddel kan tilknyttes. se head Geometry Bruk Definition The [[IfcTendonAnchorType]] kan angi den delte geometriske representasjonen for mange ankerforekomster. Representasjonskart refererer til en liste over [[IfcRepresentationMap]] s, som tillater flere geometriske fremstillinger. bSI-dokumentasjon."
-
-#:IFC.xml:42923
-msgid "IfcTendonAnchorType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchorType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42935
-msgid "IfcTendonAnchorTypeEnum"
-msgstr "IfcTendonAnchorTypeEnum"
-
-msgid "IfcTendonAnchorTypeEnum_DEFINITION"
-msgstr "Liste over hvilke typer toppledere. HISTORY ny type i IFC4. bSI-dokumentasjon"
-
-#:IFC.xml:42939
-msgid "IfcTendonAnchorTypeEnum_COUPLER"
-msgstr "KUPLER"
-
-msgid "IfcTendonAnchorTypeEnum_COUPLER_DEFINITION"
-msgstr "KUPLER"
-
-#:IFC.xml:42940
-msgid "IfcTendonAnchorTypeEnum_FIXED_END"
-msgstr "FIXERT SLUTT"
-
-msgid "IfcTendonAnchorTypeEnum_FIXED_END_DEFINITION"
-msgstr "ankeret fester enden av en stag."
-
-#:IFC.xml:42941
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END"
-msgstr "LAGER SLUTT"
-
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END_DEFINITION"
-msgstr "ankeret brukes eller kan brukes til å forspenning av staget."
-
-#:IFC.xml:42942
-msgid "IfcTendonConduit"
-msgstr "IfcTendonConduit"
-
-msgid "IfcTendonConduit_DEFINITION"
-msgstr "En TendonConduit representerer komponentene i kabelens system for stager innstøpt i betongkonstruksjon. bSI-dokumentasjon"
-
-#:IFC.xml:42953
-msgid "IfcTendonConduit_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduit_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42965
-msgid "IfcTendonConduitType"
-msgstr "IfcTendonConduitType"
-
-msgid "IfcTendonConduitType_DEFINITION"
-msgstr "bSI dokumentasjon"
-
-#:IFC.xml:42972
-msgid "IfcTendonConduitType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduitType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:42984
-msgid "IfcTendonConduitTypeEnum"
-msgstr "IfcTendonConduitTypeEnum"
-
-msgid "IfcTendonConduitTypeEnum_DEFINITION"
-msgstr "bSI dokumentasjon"
-
-#:IFC.xml:42993
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT"
-msgstr "FØR DUCT"
-
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT_DEFINITION"
-msgstr "En ekstra liten kabinett koblet til hovedledningen for å tillate injisering i tilfelle heftende etterspenning, Som Grout inlet, Grout outlet og Grout vent."
-
-#:IFC.xml:42994
-msgid "IfcTendonConduitTypeEnum_TRUMPET"
-msgstr "TRUMPET"
-
-msgid "IfcTendonConduitTypeEnum_TRUMPET_DEFINITION"
-msgstr "En bestemt del av ledningen som må utvides ved oppsprekking av stagforankringen, fordi kordelene er forbundet enkeltvis på forankringen."
-
-#:IFC.xml:42992
-msgid "IfcTendonConduitTypeEnum_DUCT"
-msgstr "DUCT"
-
-msgid "IfcTendonConduitTypeEnum_DUCT_DEFINITION"
-msgstr "DUCT"
-
-#:IFC.xml:42990
-msgid "IfcTendonConduitTypeEnum_COUPLER"
-msgstr "KUPLER"
-
-msgid "IfcTendonConduitTypeEnum_COUPLER_DEFINITION"
-msgstr "KUPLER"
-
-#:IFC.xml:42991
-msgid "IfcTendonConduitTypeEnum_DIABOLO"
-msgstr "DIABOLO"
-
-msgid "IfcTendonConduitTypeEnum_DIABOLO_DEFINITION"
-msgstr "En del av stagledningen knyttet til avvik."
-
-#:IFC.xml:42995
-msgid "IfcTendonType"
-msgstr "IfcTendonType"
-
-msgid "IfcTendonType_DEFINITION"
-msgstr "Forsterkende elementtype [[IfcTendonType]] definerer vanligvis delt informasjon for forekomst av stag. Et sett med delt informasjon kan omfatte felles egenskaper med felles egenskaper og gruppering av felles framstillinger av bygningsdeler felles materialer som er felles sammensetning, og det brukes til å definere en stivhetstypespesifikasjon som indikerer den bestemte produktinformasjonen som er felles for alle forekomster av denne produkttypen. [[IfcTendonType]] kan deklareres innenfor [[IfcProject]] eller [[IfcProjectLibrary]] ved bruk av [[IfcRelDeclares]] og kan utveksles med eller uten forekomster av typen. Forekomster av [[IfcTendonType]] er representert ved forekomster av [[IfcTendon]] HISTORY Ny enhet i IFC4. Bruk hodemateriale Bruk Definisjon En tilknyttet materiale betegner stålkvaliteten, foretrukket via klassifisering av materialer. En bestanddel eller et sett av materialprofiler kan være forbundet med hvis kabelen, limmørtel eller korrosjonsbeskyttelse, og plater av stagstål skal beskrives sammen av materialets tilknytning. .use head Geometry Use Definition The [[IfcTendonType]] kan definere den delte geometriske representasjonen for mange tendon-forekomster. Representasjonskart refererer til en liste over [[IfcRepresentationMap]] s, som tillater flere geometriske fremstillinger. bSI-dokumentasjon."
-
-#:IFC.xml:43017
-msgid "IfcTendonType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonType_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:43000
-msgid "IfcTendonType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendonType_NominalDiameter_DEFINITION"
-msgstr "Den nominelle diameteren som definerer tverrsnittsstørrelsen på den forspente delen av staget."
-
-#:IFC.xml:43005
-msgid "IfcTendonType_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
-
-msgid "IfcTendonType_CrossSectionArea_DEFINITION"
-msgstr "Effektivt tverrsnittsareal til den forspente delen av staget."
-
-#:IFC.xml:43010
-msgid "IfcTendonType_SheathDiameter"
-msgstr "SheathDiameter"
-
-msgid "IfcTendonType_SheathDiameter_DEFINITION"
-msgstr "Diameteren på platene rundt staget, hvis det er én med denne typen stag."
-
-#:IFC.xml:43029
-msgid "IfcTendonTypeEnum"
-msgstr "IfcTendonTypeEnum"
-
-msgid "IfcTendonTypeEnum_DEFINITION"
-msgstr "Oppmåling av typen stag. HISTORY ny type i IFC2x2. bSI-dokumentasjon"
-
-#:IFC.xml:43035
-msgid "IfcTendonTypeEnum_COATED"
-msgstr "FORTSETT"
-
-msgid "IfcTendonTypeEnum_COATED_DEFINITION"
-msgstr "Siden er belagt."
-
-#:IFC.xml:43037
-msgid "IfcTendonTypeEnum_WIRE"
-msgstr "TIDLIGERE"
-
-msgid "IfcTendonTypeEnum_WIRE_DEFINITION"
-msgstr "Tonen er en ledning."
-
-#:IFC.xml:43034
-msgid "IfcTendonTypeEnum_BAR"
-msgstr "BÆR"
-
-msgid "IfcTendonTypeEnum_BAR_DEFINITION"
-msgstr "Temonen er konfigurert som en linje."
-
-#:IFC.xml:43036
-msgid "IfcTendonTypeEnum_STRAND"
-msgstr "STRAND"
-
-msgid "IfcTendonTypeEnum_STRAND_DEFINITION"
-msgstr "Tendensen er en kordel."
-
-#:IFC.xml:43039
-msgid "IfcVoidingFeature"
-msgstr "IfcVoidingfunksjon"
-
-msgid "IfcVoidingFeature_DEFINITION"
-msgstr "Et tømmer-element er en modifikasjon av et element som reduserer volumet. En slik egenskap kan produseres på ulike måter, for eksempel ved skjæring, boring, eller fresing av bygningsdeler laget av forskjellige materialer, eller som legges inn i forskalingen til støpeelementer av materialer, for eksempel betong. Standarden bruk av forekomster av [[IfcVoidingFeature]] er en del av instanser av element-typen av undertyper [[IfcElementType]] . Delen hele relasjonen er bestemt ved et aggregeringsforhold. som uttrykker nedbrytning av en elementtype i én eller flere tilsetningskonstruksjonsdeler og null eller flere funksjonselementer. HISTORY Ny enhet i IFC4. se hodet Containment Use Definition Voiding features skal ikke ha et romlig forhold til den romlige konstruksjonen siden de er avhengig av elementtyper uten at det forekommer romlige relasjoner eller av et element som forekommer med et eget rom rom i rommet. SELF [[IfcElement]].Forholdet ContainedInStructure skal være NIL. bSI Dokumentasjon"
-
-#:IFC.xml:43046
-msgid "IfcVoidingFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVoidingFeature_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
-
-#:IFC.xml:43058
-msgid "IfcVoidingFeatureTypeEnum"
-msgstr "IfcVoidingFeatureTypeEnum"
-
-msgid "IfcVoidingFeatureTypeEnum_DEFINITION"
-msgstr "Dette nummereringen kvalifiserer et tømmefunksjon når det gjelder dens form og konfigurasjon i forhold til det ugyldiggjorte elementet. HISTORY ny type i IFC4. bSI Dokumentasjon"
-
-#:IFC.xml:43068
-msgid "IfcVoidingFeatureTypeEnum_HOLE"
-msgstr "Hei,"
-
-msgid "IfcVoidingFeatureTypeEnum_HOLE_DEFINITION"
-msgstr "Et sirkelhull eller avlange eller gjengede hull, vanligvis men ikke nødvendigvis av mindre mål enn det som kan betraktes som en skjæring."
-
-#:IFC.xml:43069
-msgid "IfcVoidingFeatureTypeEnum_MITER"
-msgstr "MITER"
-
-msgid "IfcVoidingFeatureTypeEnum_MITER_DEFINITION"
-msgstr "En skjær i planet og fjerning av materiale over hele profilen til det tømte elementet."
-
-#:IFC.xml:43070
-msgid "IfcVoidingFeatureTypeEnum_NOTCH"
-msgstr "NOTCH"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTCH_DEFINITION"
-msgstr "En utvendige skjær av med en mest rektangulær skjæringsprofil. Kantene mellom skjæreplanene kan være overlappende eller understreket, dvs. avrundet."
-
-#:IFC.xml:43065
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER"
-msgstr "KAMFER"
-
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER_DEFINITION"
-msgstr "Et skjær i planet og fjerning av materiale bare over en del av profilen til det tømte elementet."
-
-#:IFC.xml:43067
-msgid "IfcVoidingFeatureTypeEnum_EDGE"
-msgstr "REDIGER"
-
-msgid "IfcVoidingFeatureTypeEnum_EDGE_DEFINITION"
-msgstr "REDIGER"
-
-#:IFC.xml:43066
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT"
-msgstr "UTGIFT"
-
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT_DEFINITION"
-msgstr "En intern utskjæring som skaper en åpning eller en utvendig cutout som skaper en såkalt vilkårlig form. Kantene mellom skjæreplanene kan være overdimensjonert eller underkant, dvs. avrundet."
-
-#:IFC.xml:43082
-msgid "Pset_ConcreteElementGeneral"
-msgstr "Pset ConcreteElementGeneral"
-
-msgid "Pset_ConcreteElementGeneral_DEFINITION"
-msgstr "Generelle egenskaper som er felles for ulike typer betongelementer, medregnet armerte betongdeler. Eiendommen kan brukes av en rekke undertyper av IfcBuildingElement, angitt at et slikt element er prosjektert eller konstruert ved hjelp av en betongbyggemetode. bSI dokumentasjon"
-
-#:IFC.xml:43083
-msgid "Pset_ConcreteElementGeneral_ConcreteCover"
-msgstr "ConcreteCover"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCover_DEFINITION"
-msgstr "Beskyttelsesbetongen dekker ved armeringsstengene i henhold til lokale byggeforskrifter."
-
-#:IFC.xml:43088
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks"
-msgstr "ConreteCoverLinks"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks_DEFINITION"
-msgstr "Beskyttelsesbetongen på armeringens forbindelser i henhold til lokale byggeforskrifter."
-
-#:IFC.xml:43093
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars"
-msgstr "ConcreteCoverAtMainBars"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars_DEFINITION"
-msgstr "Beskyttelsesbetongen dekker ved de viktigste armeringsstengene i henhold til lokale byggeforskrifter."
-
-#:IFC.xml:43098
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod"
-msgstr "Konstruksjons metode"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod_DEFINITION"
-msgstr "Designator med hensyn til om betongelementet er konstruert på byggeplassen eller prefabrikkert. Tillatte verdier er i situ kontra nylig ."
-
-#:IFC.xml:43103
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass"
-msgstr "Konstruksjontoleranseklasse"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass_DEFINITION"
-msgstr "Klassifisering av konstruksjonstoleranser på byggeplassen i samsvar med lokale standarder."
-
-#:IFC.xml:43108
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass"
-msgstr "DimensjonalNøyaktigKlasse"
-
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass_DEFINITION"
-msgstr "Klassifisering av målnøyaktighetskravet i samsvar med lokale standarder."
-
-#:IFC.xml:43113
-msgid "Pset_ConcreteElementGeneral_ExposureClass"
-msgstr "Eksponeringsklasse"
-
-msgid "Pset_ConcreteElementGeneral_ExposureClass_DEFINITION"
-msgstr "Klassifisering av eksponering for miljøforhold, vanligvis spesifisert i samsvar med prosjekteringsreglene for betong som anvendes i prosjektet."
-
-#:IFC.xml:43118
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio"
-msgstr "Forsterkningsområde"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio_DEFINITION"
-msgstr "forholdet mellom det effektive arealet av armeringen og betongens effektive areal Ved enhver del av en armert betongkonstruksjon"
-
-#:IFC.xml:43123
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass"
-msgstr "Forsterkningsklasse"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass_DEFINITION"
-msgstr "Klassifisering av armeringsfastheten i samsvar med prosjekteringsreglene for betong som anvendes i prosjektet. Styrkeklassen kombinerer ofte styrke og duktilitet."
-
-#:IFC.xml:43128
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio"
-msgstr "ForsterkningVolumeForhold"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio_DEFINITION"
-msgstr "Det nødvendige forholdet mellom den effektive massen av armeringen og det effektive volumet til betongen for et armerte betongkonstruksjonselementet."
-
-#:IFC.xml:43133
-msgid "Pset_ConcreteElementGeneral_StrengthClass"
-msgstr "Styrkeklasse"
-
-msgid "Pset_ConcreteElementGeneral_StrengthClass_DEFINITION"
-msgstr "Klassifisering av betongfasthet i samsvar med prosjektert betong som anvendes i prosjektet."
-
-#:IFC.xml:43138
-msgid "Pset_ConcreteElementGeneral_StructuralClass"
-msgstr "StructuralClass"
-
-msgid "Pset_ConcreteElementGeneral_StructuralClass_DEFINITION"
-msgstr "Konstruksjonsklassen definert for betongkonstruksjonen, f.eks. 1 ."
-
-#:IFC.xml:43144
-msgid "Pset_FootingCommon"
-msgstr "Presset fotfesting Vanlige"
-
-msgid "Pset_FootingCommon_DEFINITION"
-msgstr "Egenskaper felles for definisjonen av alle forekomster av [[IfcFooting]]. bSI dokumentasjon"
-
-#:IFC.xml:43145
-msgid "Pset_FootingCommon_LoadBearing"
-msgstr "Belastning"
-
-msgid "Pset_FootingCommon_LoadBearing_DEFINITION"
-msgstr "Indikerer om objektet er ment å bære last TRUE eller ikke FALSE"
-
-#:IFC.xml:43150
-msgid "Pset_FootingCommon_Reference"
-msgstr "Referanse"
-
-msgid "Pset_FootingCommon_Reference_DEFINITION"
-msgstr "Referanse-ID for denne angitte typen i dette prosjektet, f.eks. type A 1 ."
-
-#:IFC.xml:43155
-msgid "Pset_FootingCommon_Status"
-msgstr "Status:"
-
-msgid "Pset_FootingCommon_Status_DEFINITION"
-msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
-
-#:IFC.xml:43161
-msgid "Pset_PileCommon"
-msgstr "Pset ileCommon"
-
-msgid "Pset_PileCommon_DEFINITION"
-msgstr "Egenskaper felles for definisjonen av alle forekomster av [[IfcPile]]. bSI dokumentasjon"
-
-#:IFC.xml:43162
-msgid "Pset_PileCommon_LoadBearing"
-msgstr "Belastning"
-
-#:IFC.xml:43167
-msgid "Pset_PileCommon_Reference"
-msgstr "Referanse"
-
-msgid "Pset_PileCommon_Reference_DEFINITION"
-msgstr "Referanse-ID for denne angitte typen i dette prosjektet, f.eks. type A 1 ."
-
-#:IFC.xml:43172
-msgid "Pset_PileCommon_Status"
-msgstr "Status:"
-
-msgid "Pset_PileCommon_Status_DEFINITION"
-msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
-
-#:IFC.xml:43178
-msgid "Pset_PrecastConcreteElementFabrication"
-msgstr "Pset PresastConcreteElementFabrication"
-
-msgid "Pset_PrecastConcreteElementFabrication_DEFINITION"
-msgstr "Produksjons- og produksjonsrelaterte egenskaper som er felles for ulike typer prefabrikkerte betongelementer. Settet gjelder for tilvirkede brikker. Det kan brukes av en rekke undertyper av IfcBuildingElement. Hvis den prefabrikkerte betongelaen bSI Dokumentasjon"
-
-#:IFC.xml:43179
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate"
-msgstr "ActualErectionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate_DEFINITION"
-msgstr "Dato slettet."
-
-#:IFC.xml:43184
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate"
-msgstr "ActualProductionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate_DEFINITION"
-msgstr "Produksjonsdato fjernet fra skjema ."
-
-#:IFC.xml:43189
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber"
-msgstr "AsBuiltLocationNumber"
-
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber_DEFINITION"
-msgstr "Definerer en unik plassering i en struktur, X2 2018 X0 slissen X2 2019 X0 som stykket ble installert i. Når stykker deler samme stykkmerke, kan de skiftes sammen. Verdien er bare kjent etter montering."
-
-#:IFC.xml:43194
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark"
-msgstr "Brikkesmerke"
-
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark_DEFINITION"
-msgstr "Definerer et unikt stykke for produksjonsformål. Alle stykker med samme stykkmerke verdi er identiske og byttbare. Stikkmerket kan bestå av underdeler som har spesifikt lokalt definert mening, f.eks. B 1A kan betegne en bjelke, av generisk type X2 2018 X0 1 X2 2019 X0 og spesifikk figur X2 2018 X0 A X2 2019 X0 ."
-
-#:IFC.xml:43199
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId"
-msgstr "ProduksjonLotId"
-
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId_DEFINITION"
-msgstr "Produsenten er produsent produsent produsent produsent produsent identifikator."
-
-#:IFC.xml:43204
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber"
-msgstr "Serienummer"
-
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber_DEFINITION"
-msgstr "Produsenten har serienummer for det prefabrikkerte betongelementet."
-
-#:IFC.xml:43209
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignator"
-msgstr "TypeUtseende"
-
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignator_DEFINITION"
-msgstr "Dimensjonering av det prefabrikkerte betongelementet. Innholdet avhenger av lokale standarder. I Finland skjer det vanligvis med ett acronym, f.eks. med P Column, K forsterket betongbjelke osv."
-
-#:IFC.xml:43215
-msgid "Pset_PrecastConcreteElementGeneral"
-msgstr "Pset PrecastConcreteElementGeneral"
-
-msgid "Pset_PrecastConcreteElementGeneral_DEFINITION"
-msgstr "Produksjons- og produksjonsrelaterte egenskaper som er felles for ulike typer prefabrikkerte betongelementer. Stilen kan brukes av en rekke undertyper av IfcBuildingElement. Hvis den prefabrikkerte betongbygningsdelen er et sandwichpanel kan hvert enkelt konstruksjonsjikt eller skall representert med en [[IfcBuildingElementPart]] festes til et eget Psett av denne typen, hvis nødvendig. Noen av egenskapene gjelder bare for bestemte typer prefabrikkerte betongelementer. bSI-dokumentasjon"
-
-#:IFC.xml:43216
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd"
-msgstr "Batteri"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd_DEFINITION"
-msgstr "Vinkelen, i radianer, der forskalingen på sluttsiden på et stykke skal roteres fra vertikalen for å kompensere for rotasjonen i den flaten som vil oppstå når stykket er fjernet fra formen, induserer overhøyde på grunn av eksentrisk forspenning."
-
-#:IFC.xml:43221
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart"
-msgstr "Batteri Start"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart_DEFINITION"
-msgstr "Vinkelen, i radianer, der forskalingen på startsiden av et stykke skal roteres fra vertikalen for å kompensere for rotasjonen i den flaten som oppstår når stykket er fjernet fra formen, induserer overhøyde på grunn av eksentrisk forspenning."
-
-#:IFC.xml:43226
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan"
-msgstr "CamberAtMidspan"
-
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan_DEFINITION"
-msgstr "Overhøyde nedbøyning, målt fra det midterste punktet på et kambeflate til det midterste punktet til gurten som forbinder enden av samme flate som vist på figuren nedenfor, dividert med den opprinnelige nominelle rette lengden på stykkets overflate."
-
-#:IFC.xml:43231
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer"
-msgstr "HjørneChamfer"
-
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer_DEFINITION"
-msgstr "Faser i hjørnene av det prefabrikkerte elementet. Fasen er antatt å være lik i begge retninger."
-
-#:IFC.xml:43236
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber"
-msgstr "Betegnelseslokasjonsnummer"
-
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber_DEFINITION"
-msgstr "Definerer en unik plassering i en struktur, X2 2018 X0 slissen X2 2019 X0 som stykket ble designet for."
-
-#:IFC.xml:43241
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength"
-msgstr "FormStriptstrenghet"
-
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength_DEFINITION"
-msgstr "Minste påkrevde trykkfasthet for betongen på et ferdig prøvetidspunkt."
-
-#:IFC.xml:43246
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging"
-msgstr "HollowCorePlugging"
-
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging_DEFINITION"
-msgstr "Ein beskrivende merkelapp for korleis hule kjerne behandles, kan bli ståande åpne, lukket med en plugg, eller forseglet med støpebetong. Verdier vil for eksempel være uten plugg, Plugged , SealedWithConcrete . Denne egenskapen gjelder bare bare bare for hule kjernelapper."
-
-#:IFC.xml:43251
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension"
-msgstr "Initialtensjon"
-
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension_DEFINITION"
-msgstr "Den opprinnelige spenningen til staget. Denne egenskapen gjelder bare for spennede betongelementer."
-
-#:IFC.xml:43256
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength"
-msgstr "Livsstyrke"
-
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength_DEFINITION"
-msgstr "Minste påkrevde trykkfasthet for betongen ved oppheving av betongelementet."
-
-#:IFC.xml:43261
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass"
-msgstr "Produsenttoleranseklasse"
-
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass_DEFINITION"
-msgstr "Klassifisering av tilvirkingstoleranser i samsvar med lokale standarder."
-
-#:IFC.xml:43266
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength"
-msgstr "MinimumTillatt SupportLengde"
-
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength_DEFINITION"
-msgstr "Minste tillatte oppleggslengde"
-
-#:IFC.xml:43271
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark"
-msgstr "Brikkesmerke"
-
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark_DEFINITION"
-msgstr "Definerer et unikt stykke for produksjonsformål. Alle stykker med samme stykkmerke verdi er identiske og byttbare. Stikkmerket kan bestå av underdeler som har spesifikt lokalt definert mening, f.eks. B 1A kan betegne en bjelke, av generisk type X2 2018 X0 1 X2 2019 X0 og spesifikk figur X2 2018 X0 A X2 2019 X0 ."
-
-#:IFC.xml:43276
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength"
-msgstr "Frigivelsesstyrke"
-
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength_DEFINITION"
-msgstr "Minste påkrevde trykkfasthet for betongen når stagspenningen frigjøres. Denne egenskapen gjelder bare for spennbetongbygningsdeler."
-
-#:IFC.xml:43281
-msgid "Pset_PrecastConcreteElementGeneral_Shortening"
-msgstr "Forkortelse"
-
-msgid "Pset_PrecastConcreteElementGeneral_Shortening_DEFINITION"
-msgstr "Forholdet mellom avstanden et prefabrikkert stykke er forkortet etter frigivelse fra trykkformen på grunn av trykk framkalt av en forspenning til den opprinnelige nominelle lengden."
-
-#:IFC.xml:43286
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription"
-msgstr "SupportDuringTransportBeskrivelse"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription_DEFINITION"
-msgstr "Tekstlig beskrivelse av hvordan betongelementet støttes under transport."
-
-#:IFC.xml:43291
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference"
-msgstr "SupportDuringTransportDocReference"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference_DEFINITION"
-msgstr "Referanse til et eksternt dokument som definerer hvordan betongelementet støttes under transport."
-
-#:IFC.xml:43295
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation"
-msgstr "TendonRelaksasjon"
-
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation_DEFINITION"
-msgstr "Den største tillatte relaksasjonen for staget er vanligvis uttrykt som 1000 h .Denne egenskapen gjelder bare for forspente betongelementer."
-
-#:IFC.xml:43300
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength"
-msgstr "Transportstyrke:"
-
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength_DEFINITION"
-msgstr "Minste påkrevde trykkfasthet for betongen som kreves for transport."
-
-#:IFC.xml:43305
-msgid "Pset_PrecastConcreteElementGeneral_Twisting"
-msgstr "Vridning"
-
-msgid "Pset_PrecastConcreteElementGeneral_Twisting_DEFINITION"
-msgstr "Vinkelen, på radianer, der enden på et prefabrikkeringsflater roteres med hensyn til dens startflate, langs dens lengdeakse, som et resultat av oppheng som ikke er justert Dette tiltaket kalles også X2 2018 X0 warping X2 2019 X0 vinkelen."
-
-#:IFC.xml:43310
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignator"
-msgstr "TypeUtseende"
-
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignator_DEFINITION"
-msgstr "Dimensjonering av det prefabrikkerte betongelementet. Innholdet avhenger av lokale standarder. I Finland skjer det vanligvis med ett acronym, f.eks. med P Column, K forsterket betongbjelke osv."
-
-#:IFC.xml:43316
-msgid "Pset_PrecastSlab"
-msgstr "Pset PrecastSlab"
-
-msgid "Pset_PrecastSlab_DEFINITION"
-msgstr "Utforming og komponentinformasjon som definerer hvordan forspente platekomponenter legges i en prefabrikkert platemontering. Verdiene er globale standardverdier for platen som helhet, men kan overstyres ved lokale plasseringer i den enkelte com bSI-dokumentasjon."
-
-#:IFC.xml:43317
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes"
-msgstr "AngleBetweenComponentAxes"
-
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes_DEFINITION"
-msgstr "Vinkelen mellom aksene til hvert par av komponentene."
-
-#:IFC.xml:43322
-msgid "Pset_PrecastSlab_AngleToFirstAxis"
-msgstr "AngleToFirstAxis"
-
-msgid "Pset_PrecastSlab_AngleToFirstAxis_DEFINITION"
-msgstr "Rotasjonsvinkelen til aksen for den første komponenten i forhold til X2 2018 X0 West X2 2019 X0 kanten av platen."
-
-#:IFC.xml:43327
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes"
-msgstr "DistanceBetenComponentAxes"
-
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes_DEFINITION"
-msgstr "Avstanden mellom aksene til komponentene, målt langs X2 2018 X0 Sør X2 2019 X0 kanten av platen."
-
-#:IFC.xml:43332
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis"
-msgstr "EdgeDistanceToFirstAxis"
-
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis_DEFINITION"
-msgstr "Avstanden fra venstre X2 2018 X0 West X2 2019 X0-kanten av platen i spennretningen til komponentenes akse for den første komponenten."
-
-#:IFC.xml:43337
-msgid "Pset_PrecastSlab_NominalThickness"
-msgstr "NominellTykkelse"
-
-msgid "Pset_PrecastSlab_NominalThickness_DEFINITION"
-msgstr "Den nominelle totale tykkelsen på platen."
-
-#:IFC.xml:43342
-msgid "Pset_PrecastSlab_NominalToppingThickness"
-msgstr "NominalToppingTykkelse"
-
-msgid "Pset_PrecastSlab_NominalToppingThickness_DEFINITION"
-msgstr "Den nominelle tykkelsen på topprammen."
-
-#:IFC.xml:43347
-msgid "Pset_PrecastSlab_ToppingType"
-msgstr "ToppingType"
-
-msgid "Pset_PrecastSlab_ToppingType_DEFINITION"
-msgstr "Angir om toppteksten skal brukes og hva som er sort. Verdier er X2 201C X0 Full topping X2 201D X0 , X2 201C X0 Perimeter Wash X2 201D X0 , X2 201C X0 Ingen X2 201D X0"
-
-#:IFC.xml:43352
-msgid "Pset_PrecastSlab_TypeDesignator"
-msgstr "TypeUtseende"
-
-msgid "Pset_PrecastSlab_TypeDesignator_DEFINITION"
-msgstr "Prosjekterende typeberegning for den prefabrikkerte betongplaten, som hovedsakelig uttrykker typen komponent. Mulige verdier er X2 201C X0 Hollow core X2 201D X0 , X2 201C X0 Dobbel tee X2 201D X0 , X2 201C X0 Flat plank X2 201D X0 , osv."
-
-#:IFC.xml:43358
-msgid "Pset_ReinforcementBarCountOfIndependentFooting"
-msgstr "Pset armbåndBarCountOfSelvstendig fotfesting"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_DEFINITION"
-msgstr "Armering Betongparameter ST 2 Størrelsen på antallet opplysninger på armeringsstangen med det uavhengige legget. X-og Y-retningen baseres på den lokale koordinatmetoden for å bygge bygningen. Armeringsstangens X og Y retning er parallell med X og Y aksen til [[IfcBuildingStorey]] er det lokale koordinatsystemet, respektivt. bSI dokumentasjon"
-
-#:IFC.xml:43359
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43364
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43369
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount"
-msgstr "XDirectionLowerBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount_DEFINITION"
-msgstr "Antall stenger med X retning nedre stolper."
-
-#:IFC.xml:43374
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount"
-msgstr "XDirectionUpperBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount_DEFINITION"
-msgstr "Antall stenger med X retning øvre stolpe."
-
-#:IFC.xml:43379
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount"
-msgstr "YDirectionLowerBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount_DEFINITION"
-msgstr "Antall stenger med Y-retning nedre stolper."
-
-#:IFC.xml:43384
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount"
-msgstr "YDirectionUpperBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount_DEFINITION"
-msgstr "Antall stenger med Y retning øvre linje."
-
-#:IFC.xml:43390
-msgid "Pset_ReinforcementBarPitchOfBeam"
-msgstr "Pset forsterkningBarerPitchOfbeam"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_DEFINITION"
-msgstr "Delestrekets lengde for armeringsstang med bjelkens dokumentasjon."
-
-#:IFC.xml:43391
-msgid "Pset_ReinforcementBarPitchOfBeam_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43396
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43401
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch"
-msgstr "RommetaberPitch"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch_DEFINITION"
-msgstr "Skalaen for lengden på avstandstangen."
-
-#:IFC.xml:43406
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch"
-msgstr "StirrupBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch_DEFINITION"
-msgstr "pitch lengde på omrøringslinjen."
-
-#:IFC.xml:43412
-msgid "Pset_ReinforcementBarPitchOfColumn"
-msgstr "Sette forsterkningsprekken OfKolonne"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_DEFINITION"
-msgstr "Akselengden til armeringsstangen med kolonnen. X-og Y-retningen er basert på det lokale koordinatsystemet for bygningshistorie. Armeringsstangens X og Y retning er parallell med X og Y aksen til [[IfcBuildingStorey]] er det lokale koordinatsystemet, respektivt. bSI dokumentasjon"
-
-#:IFC.xml:43413
-msgid "Pset_ReinforcementBarPitchOfColumn_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43418
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch"
-msgstr "HoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch_DEFINITION"
-msgstr "Skalpe lengden på hoop bar."
-
-#:IFC.xml:43423
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43428
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType"
-msgstr "ForsterkningBarType"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType_DEFINITION"
-msgstr "Definerer typen av armeringsstangen."
-
-#:IFC.xml:43433
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch"
-msgstr "XDirectionTieHoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Den X retningen retningen lengde på tiekroppen."
-
-#:IFC.xml:43438
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount"
-msgstr "XDirectionTieHoopCount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount_DEFINITION"
-msgstr "Antall stolper med X anhytteretninger (tie-hope)."
-
-#:IFC.xml:43443
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch"
-msgstr "YDirectionTieHoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Den Y retningen lengde på tiekroppen."
-
-#:IFC.xml:43448
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount"
-msgstr "YDirectionTieHoopCount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount_DEFINITION"
-msgstr "Antall stenger med Y-retningen for hettegasser."
-
-#:IFC.xml:43454
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting"
-msgstr "Pset forsterkningBarPitchOfContinuousFoting"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_DEFINITION"
-msgstr "Armering Betongparameter ST 2 Delelengden til armeringsstangen med kontinuerlig forankring. bSI-dokumentasjon"
-
-#:IFC.xml:43455
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch"
-msgstr "KrysserLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch_DEFINITION"
-msgstr "Skallens lengde på den nederste linjen."
-
-#:IFC.xml:43460
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch"
-msgstr "CrossingUpperBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch_DEFINITION"
-msgstr "Skallens lengde på den øvre linjen."
-
-#:IFC.xml:43465
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43470
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43476
-msgid "Pset_ReinforcementBarPitchOfSlab"
-msgstr "Pset armbåndBarPitchOfSlab"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_DEFINITION"
-msgstr "Delelengden på armeringsstangen med platen, bSI-dokumentasjonen"
-
-#:IFC.xml:43477
-msgid "Pset_ReinforcementBarPitchOfSlab_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43482
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch"
-msgstr "LangtidsSenterLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch_DEFINITION"
-msgstr "Sonens lengde på den lange inne i nedre punkt."
-
-#:IFC.xml:43487
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch"
-msgstr "LongInsideCenterTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch_DEFINITION"
-msgstr "Sonens lengde på den lange inne i øverste stolpe."
-
-#:IFC.xml:43492
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch"
-msgstr "Langvarig LavBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch_DEFINITION"
-msgstr "Lengden på den lange linjen, den nedre linjen i enden."
-
-#:IFC.xml:43497
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch"
-msgstr "Langtid siden TopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch_DEFINITION"
-msgstr "Lengden på den lange hodesamlingen på den øverste linjen i enden."
-
-#:IFC.xml:43502
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch"
-msgstr "LangutsidenLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch_DEFINITION"
-msgstr "Lengden på den lange linjen ved siden av nedre linje."
-
-#:IFC.xml:43507
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch"
-msgstr "LongOutOutsideTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch_DEFINITION"
-msgstr "Lengden på den lange linjen utenfor."
-
-#:IFC.xml:43512
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43517
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch"
-msgstr "ShortInsideCenterLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch_DEFINITION"
-msgstr "Skallens lengde på den korte inne i nedre linjen."
-
-#:IFC.xml:43522
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch"
-msgstr "ShortInsideCenterTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch_DEFINITION"
-msgstr "Skallens lengde på den korte inne i øverste stolpe."
-
-#:IFC.xml:43527
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch"
-msgstr "KortInsideEndLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch_DEFINITION"
-msgstr "Lengden på den korte delelinjen i den nedre linjen."
-
-#:IFC.xml:43532
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch"
-msgstr "KortInsideEndTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch_DEFINITION"
-msgstr "Skallens lengde på den korte innsiden av den øverste linjen."
-
-#:IFC.xml:43537
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch"
-msgstr "KortUtsideLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch_DEFINITION"
-msgstr "Skalaen på den korte linjen ved siden av linjen."
-
-#:IFC.xml:43542
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch"
-msgstr "KortUtsideTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch_DEFINITION"
-msgstr "Skallens lengde på den korte utsiden av topplinjen."
-
-#:IFC.xml:43548
-msgid "Pset_ReinforcementBarPitchOfWall"
-msgstr "Pset armbåndBarPitchOfWall"
-
-msgid "Pset_ReinforcementBarPitchOfWall_DEFINITION"
-msgstr "Delelengden til armeringsstangen med veggen. bSI-dokumentasjonen"
-
-#:IFC.xml:43549
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType"
-msgstr "BarAllokasjonstype"
-
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType_DEFINITION"
-msgstr "Definerer typen forsterkningsstang."
-
-#:IFC.xml:43554
-msgid "Pset_ReinforcementBarPitchOfWall_Description"
-msgstr "Beskrivelse"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Description_DEFINITION"
-msgstr "Beskrivelse av armeringen."
-
-#:IFC.xml:43559
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch"
-msgstr "HorisontalBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch_DEFINITION"
-msgstr "Skala lengden på den horisontale stangen."
-
-#:IFC.xml:43564
-msgid "Pset_ReinforcementBarPitchOfWall_Reference"
-msgstr "Referanse"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Reference_DEFINITION"
-msgstr "En beskrivende etikett for den generelle armeringstypen."
-
-#:IFC.xml:43569
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch"
-msgstr "RommetaberPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch_DEFINITION"
-msgstr "Skalaen for lengden på avstandstangen."
-
-#:IFC.xml:43574
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch"
-msgstr "VertikalBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch_DEFINITION"
-msgstr "Lengden på den vertikale linjen."
-
-#:IFC.xml:43580
-msgid "Qto_FootingBaseQuantities"
-msgstr "Qto FootingBaseQuantities"
-
-msgid "Qto_FootingBaseQuantities_DEFINITION"
-msgstr "Basemengder som er felles for definisjonen av alle forekomster av fundamenter. bSI dokumentasjon"
-
-#:IFC.xml:43581
-msgid "Qto_FootingBaseQuantities_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
-
-msgid "Qto_FootingBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Det totale tverrsnittsarealet eller profilet til fundamentet."
-
-#:IFC.xml:43586
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "Det totale arealet av fundament, vanligvis framkalt som tverrsnittsareal med omkretslengde 2. Det er summen av OuterSurfaceArea 2 x CrossSectionArea og skal bare gis hvis OuterSurfaceArea og CrosssectionArea ikke kan opprettes separat."
-
-#:IFC.xml:43591
-msgid "Qto_FootingBaseQuantities_GrossVolume"
-msgstr "Grossvolum"
-
-msgid "Qto_FootingBaseQuantities_GrossVolume_DEFINITION"
-msgstr "Totalvolumet på fotfeste som ikke er tatt i betraktning, mulige prosesseringsfunksjoner utskåret osv., eller åpninger og fordypninger."
-
-#:IFC.xml:43596
-msgid "Qto_FootingBaseQuantities_GrossWeight"
-msgstr "Kroppsvekt"
-
-msgid "Qto_FootingBaseQuantities_GrossWeight_DEFINITION"
-msgstr "Den totale bruttovekten av fotfeste uten tillegg i deler tatt i betraktning mulige prosesseringsfunksjoner som kutter ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43601
-msgid "Qto_FootingBaseQuantities_Height"
-msgstr "Høyde"
-
-msgid "Qto_FootingBaseQuantities_Height_DEFINITION"
-msgstr "Den totale nominelle høyden av fotfesten. Den bør bare oppgis hvis den er konstant."
-
-#:IFC.xml:43606
-msgid "Qto_FootingBaseQuantities_Length"
-msgstr "Lengde"
-
-msgid "Qto_FootingBaseQuantities_Length_DEFINITION"
-msgstr "Fartøyslengde ved ikke å ta hensyn til utkappet s eller andre prosesserings egenskaper. For bånd måles den langs veien, for andre fundamenter er den en av horisontaldimensjonene. Det bør bare angis hvis den er konstant."
-
-#:IFC.xml:43611
-msgid "Qto_FootingBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_FootingBaseQuantities_NetVolume_DEFINITION"
-msgstr "Det totale netto volumet av fotfeste tar hensyn til mulige prosesserings egenskaper kuttet ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43616
-msgid "Qto_FootingBaseQuantities_NetWeight"
-msgstr "NetVekt"
-
-msgid "Qto_FootingBaseQuantities_NetWeight_DEFINITION"
-msgstr "Total nettovekt for fotfeste uten tillegg i deler tatt i betraktning mulige prosesseringsfunksjoner som kutter ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43621
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea"
-msgstr "Område"
-
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "Det totale arealet av de ekstruderte flatene på fundamentet der det ikke tas hensyn til arealene for endefanger, vanligvis generert som ytterlengde."
-
-#:IFC.xml:43626
-msgid "Qto_FootingBaseQuantities_Width"
-msgstr "Width"
-
-msgid "Qto_FootingBaseQuantities_Width_DEFINITION"
-msgstr "Total nominell bredde eller tykkelse på fotstykket. For bånd måles det vinkelrett på fotbanen eller den langsgående aksen. For andre fundamenter er det ett av de horisontale målene. Den bør bare brukes hvis den er konstant."
-
-#:IFC.xml:43632
-msgid "Qto_PileBaseQuantities"
-msgstr "Qto PileBaseQuantities"
-
-msgid "Qto_PileBaseQuantities_DEFINITION"
-msgstr "Basemengder som er felles for definisjonen av alle peler. bSI dokumentasjon"
-
-#:IFC.xml:43633
-msgid "Qto_PileBaseQuantities_CrossSectionArea"
-msgstr "Kryssseksjonsområde"
-
-msgid "Qto_PileBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Det totale tverrsnittsarealet eller profilet til pelen."
-
-#:IFC.xml:43638
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "Det totale arealet av pelen, vanligvis generert som tverrsnittsareal omkretslengde 2. Det er summen av OuterSurfaceArea 2 x CrossSectionArea og skal bare gis hvis OuterSurfaceArea og CrosssectionArea ikke kan opprettes separat."
-
-#:IFC.xml:43643
-msgid "Qto_PileBaseQuantities_GrossVolume"
-msgstr "Grossvolum"
-
-msgid "Qto_PileBaseQuantities_GrossVolume_DEFINITION"
-msgstr "Stålpelen totalt uten å ta hensyn til mulige prosesseringsfunksjoner utskåret osv., eller åpninger og fordypninger."
-
-#:IFC.xml:43648
-msgid "Qto_PileBaseQuantities_GrossWeight"
-msgstr "Kroppsvekt"
-
-msgid "Qto_PileBaseQuantities_GrossWeight_DEFINITION"
-msgstr "pelens totale bruttovekt uten tillegg til deler som ikke tar hensyn til mulige prosesseringsfunksjoner som kutter ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43653
-msgid "Qto_PileBaseQuantities_Length"
-msgstr "Lengde"
-
-msgid "Qto_PileBaseQuantities_Length_DEFINITION"
-msgstr "Lengden av pelen som ikke er tatt i betraktning utskårne eller andre prosesserings egenskaper."
-
-#:IFC.xml:43658
-msgid "Qto_PileBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_PileBaseQuantities_NetVolume_DEFINITION"
-msgstr "Pelen totalt netto volum, tatt i betraktning mulige prosesserings egenskaper kuttet ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43663
-msgid "Qto_PileBaseQuantities_NetWeight"
-msgstr "NetVekt"
-
-msgid "Qto_PileBaseQuantities_NetWeight_DEFINITION"
-msgstr "pelens totale netto vekt uten tillegg i deler der det tas hensyn til mulige prosesseringsfunksjoner som kutter ut osv. eller åpninger og fordypninger."
-
-#:IFC.xml:43668
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea"
-msgstr "Område"
-
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "Det totale arealet av de ekstruderte flatene på pelen som ikke tar hensyn til arealene for endebeskyttelse, generert vanligvis som en ytre lengde."
-
-#:IFC.xml:43674
-msgid "Qto_ReinforcingElementBaseQuantities"
-msgstr "Qto ReforcingElementBaseStørrelser"
-
-msgid "Qto_ReinforcingElementBaseQuantities_DEFINITION"
-msgstr "Basemengder som er felles for definisjonen av alle forekomster av armering. bSI-dokumentasjon"
-
-#:IFC.xml:43675
-msgid "Qto_ReinforcingElementBaseQuantities_Count"
-msgstr "Antall"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Count_DEFINITION"
-msgstr "Totalt antall forsterkninger."
-
-#:IFC.xml:43680
-msgid "Qto_ReinforcingElementBaseQuantities_Length"
-msgstr "Lengde"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Length_DEFINITION"
-msgstr "Total lengde på armering."
-
-#:IFC.xml:43685
-msgid "Qto_ReinforcingElementBaseQuantities_Weight"
-msgstr "Vekt"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Weight_DEFINITION"
-msgstr "Total vekt av armering."
-
-#:IFC.xml:43691
-msgid "IfcBendingParameterSelect"
-msgstr "IfcBendingParameterVelg"
-
-msgid "IfcBendingParameterSelect_DEFINITION"
-msgstr "En valgt type for å velge mellom enkle måletyper for armeringsparametere. HISTORY Ny type i IFC4."
+msgid "IfcShell_DEFINITION"
+msgstr "En type som består av ulike skall. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne typen samler sammen, referanse for ved konstruksjon av mer komplekse modeller, undertyper som har egenskaper ved et skall. Et skall er et forbundet objekt med en fast dimensjon d 0 1 eller 2, som vanligvis brukes til å binde en region. Domenet til et helvete, hvis mulig, inneholder sine grenser og 0 A dimensjonalskall 0 representeres av en graf som består av et enkelt vertspunkt. vertex skal ikke ha noen tilknyttede kanter. Et dimensjonal 1 er representert med et tilkoblet graf med dimensjonal 1. En dimensjonalitetskall 2 er en topologisk enhet laget av flater langs skråninger. Bestandens domene, dersom det finnes, er et koblet, orientert 2 manifold med grenseverdi, det vil si, koplet, orientert overflate, ikke-kryssende overflate, som kan lukkes eller åpnes. MERKNAD Type tilpasset fra skall definert i NS-EN ISO 10303 42. Ny type HISTORY i IFC2x."
 
