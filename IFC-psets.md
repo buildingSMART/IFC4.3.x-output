@@ -1,149 +1,381 @@
 
 Missing in output
 =================
-* Pset_DiscreteAccessoryWireLoop.xml
-* Pset_MaterialWood.xml
-* Pset_MaterialWoodBasedBeam.xml
-* Pset_SensorTypeLevelSensor.xml
-* Pset_DiscreteAccessoryLadderTrussConnector.xml
-* Pset_BuildingSystemCommon.xml
-* Pset_DiscreteAccessoryCornerFixingPlate.xml
+* Pset_TankTypePreformed.xml
 * Pset_AnnotationContourLine.xml
+* Pset_DiscreteAccessoryCornerFixingPlate.xml
 * Pset_MaterialWoodBasedPanel.xml
-* Pset_TankTypeSectional.xml
-* Pset_DiscreteAccessoryDiagonalTrussConnector.xml
-* Pset_MaterialConcrete.xml
-* Pset_SpatialZoneCommon.xml
 * Pset_CivilElementCommon.xml
+* Pset_BuildingSystemCommon.xml
+* Pset_DiscreteAccessoryLadderTrussConnector.xml
 * Pset_AnnotationLineOfSight.xml
+* Pset_TankTypeSectional.xml
 * Pset_ElementAssemblyCommon.xml
 * Pset_DiscreteAccessoryStandardFixingPlate.xml
-* Pset_TankTypePreformed.xml
+* Pset_MaterialConcrete.xml
+* Pset_MaterialWoodBasedBeam.xml
 * Pset_DiscreteAccessoryFixingSocket.xml
+* Pset_DiscreteAccessoryDiagonalTrussConnector.xml
+* Pset_SensorTypeLevelSensor.xml
+* Pset_DiscreteAccessoryWireLoop.xml
+* Pset_MaterialWood.xml
 * Pset_MaterialSteel.xml
 * Pset_DiscreteAccessoryEdgeFixingPlate.xml
+* Pset_SpatialZoneCommon.xml
 
 Missing in reference
 =================
-* Pset_EnvironmentalEmissions.xml
-* Pset_OpticalCableFittingGeneral.xml
-* Qto_VehicleBaseQuantities.xml
-* Pset_SensorTypeForeignObjectDetectionSensor.xml
-* Pset_OutletTypePower.xml
-* Pset_MaintenanceTriggerDuration.xml
-* Pset_DiscreteAccessoryOccurenceCableArranger.xml
-* Qto_MarineFacilityBaseQuantities.xml
-* Pset_MarineVehicleDesignCriteria.xml
-* Pset_OpticalNetworkUnit.xml
-* Qto_MarineFacilityTransportationQuantities.xml
-* Pset_SlidingChair.xml
-* Pset_RailwaySubstationSecondaryZone.xml
-* Pset_IpNetworkEquipment.xml
-* Pset_RailFasteningGeneral.xml
-* Pset_MaintenanceTriggerCondition.xml
-* Pset_QuayDesignCriteria.xml
-* Pset_SensorTypeSnowDepth.xml
-* Pset_CableFittingTypeJunction.xml
-* Pset_MooringDeviceCommon.xml
-* Pset_CommunicationsApplianceTypeComputer.xml
-* Pset_CableSegmentTypeWirePair.xml
-* PSet_RevetmentCommon.xml
-* Pset_CopperCableFittingGeneral.xml
-* Pset_FacilityPartChamber.xml
-* Pset_SensorTypeEarthquake.xml
-* PSet_ShipyardCommon.xml
-* PSet_QuayCommon.xml
-* Pset_BalanceWeightTensioner.xml
-* Pset_SensorTypeRainGauge.xml
-* Pset_TransportElementCargo.xml
-* Pset_Railpad.xml
-* Pset_ControlPanelDC.xml
-* Pset_SectionInsulator.xml
-* Pset_MarineVehicleCommon.xml
-* Pset_CableSegmentOccuranceFiberSegment.xml
-* Pset_DataTransmissionUnit.xml
-* PSet_ShiplockCommon.xml
-* Pset_WirelessCommunicationsApplianceGeneral.xml
-* Pset_JettyCommon.xml
-* PSet_ShiplockComplex.xml
-* Pset_RailwayPart.xml
-* Pset_CableSegmentTypeFiberSegment.xml
-* Pset_HydraulicTensioner.xml
-* Pset_RailwaySubstationPrimaryZone.xml
-* Pset_BreakwaterCommon.xml
-* Pset_MobileTelecommunicationsApplianceTypeMasterUnit.xml
-* PSet_ProcessCapacity.xml
-* Pset_MaintenanceStrategy.xml
-* Pset_OpticalFiberFittingGeneral.xml
-* Pset_StockRail.xml
-* PSet_ShiplockDesignCriteria.xml
-* PSet_VesselLineCommon.xml
-* Pset_BuiltSystemCommon.xml
-* Pset_CommunicationsApplianceTypeAntenna.xml
-* Pset_RailwayFacility.xml
-* Pset_DistributionBoardTypeDistributionFrame.xml
-* Pset_Blade.xml
-* Pset_CopperCableGeneral.xml
-* Pset_SuspensionAssemblyCantilever.xml
-* Pset_RailwayEnergyFacility.xml
-* PSet_VehicleAvailability.xml
-* Pset_ControlPanelAC.xml
-* Pset_CommunicationsApplianceTypeTelephonyExchange.xml
-* Pset_NaturalSectionInsulator.xml
-* Pset_ElectricApplianceTypeVendingMachine.xml
-* Pset_FenderDesignCriteria.xml
-* Pset_OnSiteControlUnit.xml
-* Pset_MaintenanceTriggerPerformance.xml
-* Pset_TelecomTower.xml
-* Pset_FenderCommon.xml
-* Pset_CommunicationsApplianceOccuranceTransportEquipment.xml
-* Pset_PatchCordCableGeneral.xml
-* Pset_CommunicationsApplianceTypeTransportEquipment.xml
-* Pset_FacilityPartGateHead.xml
-* Pset_BuiltElementCommon.xml
-* Pset_TelecomActiveEquipmentGeneral.xml
-* Pset_CableSegmentTypeOpticalCableSegment.xml
-* Pset_PostProtectionAndSafety.xml
-* Pset_SensorTypeWind.xml
-* Pset_SpringTensioner.xml
-* Pset_JettyDesignCriteria.xml
-* Pset_CommunicationsApplianceTypeModem.xml
 * Pset_CoxialCableGeneral.xml
-* Qto_FacilityPartBaseQuantities.xml
-* Pset_CableFittingTypeTransition.xml
-* Pset_SimpleSuspensionAssembly.xml
-* Pset_BerthCommon.xml
+* Pset_OpticalCableFittingGeneral.xml
+* Pset_MaintenanceTriggerCondition.xml
+* Pset_RailwaySubstationSecondaryZone.xml
+* Pset_CableSegmentTypeOpticalCableSegment.xml
+* Qto_VehicleBaseQuantities.xml
+* Pset_MobileTelecommunicationsApplianceTypeMasterUnit.xml
+* Pset_CommunicationsApplianceTypeTransportEquipment.xml
+* Pset_SensorTypeRainGauge.xml
+* Pset_CommunicationsApplianceTypeAntenna.xml
+* Pset_Blade.xml
+* Pset_NaturalSectionInsulator.xml
+* Pset_PatchCordCableGeneral.xml
+* Pset_TelecomTower.xml
+* Pset_BreakwaterCommon.xml
+* Pset_CableSegmentTypeWirePair.xml
 * Pset_EnergyRequirements.xml
+* Pset_SensorTypeEarthquake.xml
+* PSet_VesselLineCommon.xml
+* PSet_ProcessCapacity.xml
+* Pset_RailwaySubstationPrimaryZone.xml
+* Pset_EnvironmentalEmissions.xml
+* Pset_Railpad.xml
+* Pset_SimpleSuspensionAssembly.xml
+* Pset_MaintenanceTriggerDuration.xml
+* Pset_MaintenanceStrategy.xml
+* PSet_VehicleAvailability.xml
+* Pset_CopperCableGeneral.xml
+* Pset_CableFittingTypeJunction.xml
+* Pset_RailwayPart.xml
+* PSet_RevetmentCommon.xml
+* Pset_TelecomActiveEquipmentGeneral.xml
+* Pset_CableSegmentOccuranceFiberSegment.xml
+* Pset_BuiltElementCommon.xml
+* PSet_ShiplockComplex.xml
+* Pset_TransportElementCargo.xml
+* Qto_FacilityPartBaseQuantities.xml
+* Pset_DiscreteAccessoryOccurenceCableArranger.xml
+* Pset_MaintenanceTriggerPerformance.xml
+* Pset_SensorTypeWind.xml
+* Pset_OutletTypePower.xml
+* Pset_JettyDesignCriteria.xml
+* Pset_OnSiteControlUnit.xml
+* Pset_FacilityPartChamber.xml
+* Pset_RailwayFacility.xml
+* Pset_CopperCableFittingGeneral.xml
+* Qto_MarineFacilityBaseQuantities.xml
+* Pset_SlidingChair.xml
+* Pset_SpringTensioner.xml
+* Pset_BuiltSystemCommon.xml
+* Pset_MarineVehicleCommon.xml
+* Pset_HydraulicTensioner.xml
+* Pset_ElectricApplianceTypeVendingMachine.xml
+* Pset_RailwayEnergyFacility.xml
+* Pset_SuspensionAssemblyCantilever.xml
+* PSet_ShiplockDesignCriteria.xml
+* Pset_SectionInsulator.xml
+* Pset_OpticalFiberFittingGeneral.xml
+* Pset_CommunicationsApplianceTypeModem.xml
+* PSet_ShiplockCommon.xml
+* Pset_BerthCommon.xml
+* Pset_PostProtectionAndSafety.xml
+* Pset_CommunicationsApplianceTypeComputer.xml
+* Pset_SensorTypeSnowDepth.xml
+* Pset_CableSegmentTypeFiberSegment.xml
+* Pset_ControlPanelAC.xml
+* Pset_MooringDeviceCommon.xml
+* PSet_ShipyardCommon.xml
+* Pset_FenderDesignCriteria.xml
+* PSet_QuayCommon.xml
+* Pset_FenderCommon.xml
+* Pset_CableFittingTypeTransition.xml
+* Pset_SensorTypeForeignObjectDetectionSensor.xml
+* Pset_MarineVehicleDesignCriteria.xml
+* Pset_BalanceWeightTensioner.xml
+* Pset_QuayDesignCriteria.xml
+* Pset_ControlPanelDC.xml
+* Pset_DistributionBoardTypeDistributionFrame.xml
+* Pset_RailFasteningGeneral.xml
+* Pset_OpticalNetworkUnit.xml
+* Pset_DataTransmissionUnit.xml
+* Pset_CommunicationsApplianceOccuranceTransportEquipment.xml
+* Pset_IpNetworkEquipment.xml
+* Pset_CommunicationsApplianceTypeTelephonyExchange.xml
+* Qto_MarineFacilityTransportationQuantities.xml
+* Pset_StockRail.xml
+* Pset_FacilityPartGateHead.xml
+* Pset_JettyCommon.xml
+* Pset_WirelessCommunicationsApplianceGeneral.xml
 
-Pset_EvaporatorPHistory.xml
+Qto_TankBaseQuantities.xml
+==========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_BridgeCommon.xml
+=====================
+
+additions
+---------
+* PropertyDefs
+
+modifications
+-------------
+* PropertyDefs
+  ~~PropertyDefs~~ Definition
+
+
+Pset_AirTerminalTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CoreType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DischargeDirection"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FaceType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FinishType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FlowControlType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FlowPattern"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="DischargeDirection"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="CoreType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="FlowPattern"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="FinishType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="FaceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="FlowControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_Asset.xml
+==============
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="Owner"]
+* PropertyDefs > PropertyDef [Name="Operator"]
+* PropertyDefs > PropertyDef [Name="ResponsiblePerson"]
+* PropertyDefs > PropertyDef [Name="OriginalValue"]
+* PropertyDefs > PropertyDef [Name="CurrentValue"]
+* PropertyDefs > PropertyDef [Name="DepreciatedValue"]
+
+
+Pset_SanitaryTerminalTypeCistern.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FlushRate"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FlushType"] > Definition "The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
+
+Lever: 	Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Pull: 	Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Push: 	Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Sensor: Flush is activated through an automatic sensing mechanism."
+  ~~The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
+
+Lever: 	Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Pull: 	Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Push: 	Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Sensor: Flush is activated through an automatic sensing mechanism.~~ The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
+
+Lever: \X\09Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Pull: \X\09Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Push: \X\09Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
+Sensor: Flush is activated through an automatic sensing mechanism.
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CisternHeight"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
+
+
+Pset_ActuatorTypeCommon.xml
 ===========================
 
 modifications
 -------------
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SensorTypeMoistureSensor.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointMoisture"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+
+
+Qto_WallBaseQuantities.xml
+==========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossSideArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossFootprintArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetFootprintArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSideArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_SoundAttenuation.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SoundFrequency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SoundScale"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SoundPressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ProtectiveDeviceOccurrence.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ShortTimei2tFunction"] > Definition "Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function &#160;is explicitly selected for the device."
+  ~~Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function &#160;is explicitly selected for the device.~~ Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function \S\ is explicitly selected for the device.
 * 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="EvaporatorMeanVoidFraction"]
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_VoltageAndCurrentTransformer.xml
+=====================================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcTran/COMBINED"
+  ~~IfcTran/COMBINED~~ IfcTransformer/COMBINED
+* ApplicableTypeValue "IfcTran/COMBINED"
+  ~~IfcTran/COMBINED~~ IfcTransformer/COMBINED
+
+
+Pset_SwitchingDeviceTypeEmergencyStop.xml
+=========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SwitchOperation"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SwitchOperation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_PrecastSlab.xml
+====================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="TypeDesignator"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalThickness"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LogarithmicMeanTemperatureDifference"]
+* PropertyDefs > PropertyDef [Name="AngleToFirstAxis"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InteriorHeatTransferCoefficient"]
+* PropertyDefs > PropertyDef [Name="EdgeDistanceToFirstAxis"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EvaporatingTemperature"]
+* PropertyDefs > PropertyDef [Name="DistanceBetweenComponentAxes"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatRejectionRate"]
+* PropertyDefs > PropertyDef [Name="ToppingType"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorEvaporatorHeatGain"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UAcurves"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RefrigerantFoulingResistance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorEvaporatorPressureDrop"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WaterFoulingResistance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExteriorHeatTransferCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="TypeDesignation"]
 
 
 Pset_HumidifierPHistory.xml
@@ -159,65 +391,87 @@ modifications
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Qto_CableCarrierFittingBaseQuantities.xml
-=========================================
+Pset_ConcreteElementGeneral.xml
+===============================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
+  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcSlab
+
+
+Qto_LinearStratumBaseQuantities.xml
+===================================
+
+modifications
+-------------
+* Definition "Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in _Pset_Uncertainty_."
+  ~~Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in _Pset_Uncertainty_.~~ Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in Pset_Uncertainty.
+* QtoDefs > QtoDef [Name="Diameter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
 ---------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
 * QtoDefinitionAliases
 
 
-Pset_FireSuppressionTerminalTypeBreechingInlet.xml
-==================================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET"
+Pset_ActuatorPHistory.xml
+=========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
-  ~~NOTDEFINED~~ NOTKNOWN
-* PropertyDefs > PropertyDef [Name="CouplingType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="CouplingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Status"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Quality"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Position"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_EnvironmentalImpactIndicators.xml
-======================================
+Pset_TransitionSectionCommon.xml
+================================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="ExpectedServiceLife"] > PropertyType > TypePropertySingleValue > DataType
-* PropertyDefs > PropertyDef [Name="ExpectedServiceLife"] > PropertyType > TypePropertySingleValue > DataType
+* ApplicableTypeValue "IfcEarthworksFill/TRANSITIONSECTION"
 
 modifications
 -------------
-* Definition "Environmental impact indicators are related to a given &#8220;functional unit&#8221; (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product&#8221;.
-Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
-There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level."
-  ~~Environmental impact indicators are related to a given &#8220;functional unit&#8221; (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product&#8221;.
-Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
-There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.~~ Environmental impact indicators are related to a given \X2\201C\X0\functional unit\X2\201D\X0\ (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product\X2\201D\X0\.
-Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
-There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.
-* PropertyDefs > PropertyDef [Name="LifeCyclePhase"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
-  ~~NOTDEFINED~~ OTHER
+* PropertyDefs
+  ~~PropertyDefs~~ Definition
+* ApplicableClasses > ClassName "IfcEarthworksFill/(.TRANSITIONSECTION.)"
+  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
+* ApplicableTypeValue "IfcEarthworksFill/(.TRANSITIONSECTION.)"
+  ~~ApplicableTypeValue~~ PropertyDefs
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="LifeCyclePhase"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+* Definition "Properties for a transition section."
 
 
-Pset_RailingCommon.xml
-======================
+Qto_ReinforcingElementBaseQuantities.xml
+========================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Count"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Weight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_CommunicationsApplianceTypeCommon.xml
+==========================================
 
 modifications
 -------------
@@ -225,155 +479,77 @@ modifications
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ElectricAppliancePHistory.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PowerState"] > PropertyType > TypePropertyReferenceValue
+  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_MarkingLinesCommon.xml
+===========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
+* ApplicableTypeValue "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Name "NominalWidth"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+
+
+Pset_SlabCommon.xml
+===================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ShadingDevicePHistory.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Azimuth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TiltAngle"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Qto_ConstructionEquipmentResourceBaseQuantities.xml
+===================================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="UsageTime"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OperatingTime"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
 
 
 Qto_CondenserBaseQuantities.xml
 ===============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_ElectricMotorTypeCommon.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_BoundedCourseCommon.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCourseType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCourse"
-  ~~IfcCourse~~ IfcCourseType
-
-
-Pset_DiscretizedPointListCommon.xml
-===================================
-
-additions
----------
-* Definition
-
-
-
-Pset_SpaceHeaterTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="HeatTransferDimension"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureClassification"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="HeatTransferDimension"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="TemperatureClassification"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_ActuatorBaseQuantities.xml
-==============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Qto_FootingBaseQuantities.xml
-=============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_ProtectiveDeviceTrippingCurve.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-Qto_SpaceHeaterBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_FanBaseQuantities.xml
-=========================
 
 deletions
 ---------
@@ -397,66 +573,86 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_ProtectiveDeviceTrippingUnitTypeCommon.xml
-===============================================
+Pset_BuildingUse.xml
+====================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableNow"]
+* PropertyDefs > PropertyDef [Name="TenureModesAvailableFuture"]
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_AudioVisualApplianceTypeTuner.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="TunerFrequency"]
+* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableFuture"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableFuture"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
+* PropertyDefs > PropertyDef [Name="RentalRatesInCategoryFuture"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RentalRatesInCategoryNow"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TenureModesAvailableFuture"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TunerMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TunerType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TunerChannel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_PlateBaseQuantities.xml
-===========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Perimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
 ---------
+* PropertyDefs > PropertyDef [Name="TenureModesAvailableNow"]
+* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableNow"]
+
+
+Qto_ElectricFlowStorageDeviceBaseQuantities.xml
+===============================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
 * QtoDefinitionAliases
 
 
-Pset_SensorTypePressureSensor.xml
-=================================
+Pset_CourseApplicationConditions.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="SetPointPressure"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* ApplicableTypeValue "IfcCourse"
+  ~~IfcCourse~~ IfcCourseType
+
+
+Qto_VibrationIsolatorBaseQuantities.xml
+=======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_CompressorBaseQuantities.xml
+================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Pset_CommunicationsAppliancePHistory.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PowerState"] > PropertyType > TypePropertyReferenceValue
+  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
 
 
 Pset_SanitaryTerminalTypeSanitaryFountain.xml
@@ -501,20 +697,603 @@ WallHung: \X\09A sanitary terminal cantilevered clear of the floor.
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-
-Pset_ControllerTypeMultiPosition.xml
-====================================
+Pset_EvaporativeCoolerPHistory.xml
+==================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Range"]
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="SensibleHeatTransferRate"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Labels"]
+* PropertyDefs > PropertyDef [Name="LatentHeatTransferRate"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ControlType"]
+* PropertyDefs > PropertyDef [Name="TotalHeatTransferRate"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Value"]
+* PropertyDefs > PropertyDef [Name="WaterSumpTemperature"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Effectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Qto_MotorConnectionBaseQuantities.xml
+=====================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_DistributionSystemTypeElectrical.xml
+=========================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcDistributionSystem/ELECTRICAL"
+  ~~IfcDistributionSystem/ELECTRICAL~~ IfcDistributionPort/ELECTRICAL
+* ApplicableTypeValue "IfcDistributionSystem/ELECTRICAL"
+  ~~IfcDistributionSystem/ELECTRICAL~~ IfcDistributionPort/ELECTRICAL
+* PropertyDefs > PropertyDef [Name="ElectricalSystemCategory"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > Definition "For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
+
+&#8226;TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
+&#8226;TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
+&#8226;TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
+&#8226;TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
+&#8226;TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
+&#8226;IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed."
+  ~~For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
+
+&#8226;TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
+&#8226;TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
+&#8226;TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
+&#8226;TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
+&#8226;TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
+&#8226;IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.~~ For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
+
+\X2\2022\X0\TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
+\X2\2022\X0\TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
+\X2\2022\X0\TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
+\X2\2022\X0\TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
+\X2\2022\X0\TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
+\X2\2022\X0\IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.
+* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ElectricalSystemCategory"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_PipeSegmentOccurrence.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_WasteTerminalTypeWasteDisposalUnit.xml
+===========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
+  ~~Nominal Depth of the object~~ Nominal or quoted depth of the object measured from the inlet drain connection to the base of the unit.
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+Pset_WasteTerminalTypeGullyTrap.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_PavementMillingCommon.xml
+==============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcEarthworksCut/(.PAVEMENTMILLING.)"
+  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
+* ApplicableTypeValue "IfcEarthworksCut/(.PAVEMENTMILLING.)"
+  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
+* PropertyDefs > PropertyDef [Name="NominalDepth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_PrecastConcreteElementFabrication.xml
+==========================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
+  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcSlab
+* PropertyDefs > PropertyDef [Name="AsBuiltLocationNumber"] > Definition "Defines a unique location within a structure, the &#8216;slot&#8217; into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection."
+  ~~Defines a unique location within a structure, the &#8216;slot&#8217; into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection.~~ Defines a unique location within a structure, the \X2\2018\X0\slot\X2\2019\X0\ into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection.
+* PropertyDefs > PropertyDef [Name="PieceMark"] > Definition "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;)."
+  ~~Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;).~~ Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type \X2\2018\X0\1\X2\2019\X0\ and specific shape \X2\2018\X0\A\X2\2019\X0\).
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
+  ~~TypeDesignation~~ TypeDesignator
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
+  ~~Type designator according to local standards~~ Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one-letter acronym, e.g. P=Column, K=reinforced concrete beam,etc.
+
+
+
+Qto_CableFittingBaseQuantities.xml
+==================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_AirTerminalPHistory.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="NeckAirVelocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PressureDrop"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SupplyAirTemperatureHeating"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InductionRatio"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SupplyAirTemperatureCooling"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CenterlineAirVelocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Qto_SensorBaseQuantities.xml
+============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Pset_AlarmTypeCommon.xml
+========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_KerbStone.xml
+==================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+* PropertyDefs > PropertyDef [Name="Height"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TypeDesignation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="NominalLength"]
+
+
+Pset_PumpTypeCommon.xml
+=======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FlowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FlowResistanceRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_RadiiKerbStone.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="CurveShape"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CurveShape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ValvePHistory.xml
+======================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="MeasuredPressureDrop"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PercentageOpen"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MeasuredFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_TrafficCalmingDeviceCommon.xml
+===================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
+  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE
+* ApplicableTypeValue "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
+  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
+  ~~TypeDesignation~~ Type
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
+  ~~Type designator according to local standards~~ Traffic Calming Device designator according to local standards
+
+
+Pset_SensorTypeCommon.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_AirToAirHeatRecoveryPHistory.xml
+=====================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="TotalHeatTransferRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SensibleEffectivenessTable"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LatentHeatTransferRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalEffectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TemperatureEffectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DefrostTemperatureEffectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurves"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SensibleHeatTransferRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HumidityEffectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalEffectivenessTable"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SensibleEffectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_DamperTypeControlDamper.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="TorqueRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_ElectricTimeControlTypeCommon.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_RoofCommon.xml
+===================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
+  ~~PropertyType~~ Definition
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_UnitaryControlElementBaseQuantities.xml
+===========================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_BeamBaseQuantities.xml
+==========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Qto_AudioVisualApplianceBaseQuantities.xml
+==========================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_CooledBeamPHistory.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="CorrectionFactorForCooling"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CoolingWaterFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="BeamCoolingCapacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="BeamHeatingCapacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalCoolingCapacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SupplyWaterTemperatureCooling"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ReturnWaterTemperatureHeating"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CorrectionFactorForHeating"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SupplyWaterTemperatureHeating"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ReturnWaterTemperatureCooling"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatingWaterFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalHeatingCapacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressureDropCurves"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ControllerTypeProgrammable.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.xml
+======================================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
+* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_FilterBaseQuantities.xml
+============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_RailwayAlignmentCommon.xml
+===============================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="CantRotationAxis"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VerticalReferenceAxis"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ValveTypeCommon.xml
+========================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="FlowCoefficient"] > Definition "Flow coefficient (the quantity of fluid that passes through a fully open valve at unit pressure drop), typically expressed as the Kv or Cv value for the valve."
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DistributionPortTypeCable.xml
+==================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="ConnectionGender"]
+* PropertyDefs > PropertyDef [Name="Current"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Protocols"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ConnectionType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ConductorFunction"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Voltage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Power"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="ConnectionGender"]
+* PropertyDefs > PropertyDef [Name="Current"]
+
+
+Pset_DuctFittingPHistory.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="LossCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirFlowLeakage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ProtectiveDeviceTypeCircuitBreaker.xml
+===========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PerformanceClasses"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PerformanceClasses"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_FlowInstrumentTypeCommon.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SensorTypePHSensor.xml
+===========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointPH"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
 Pset_AirTerminalOccurrence.xml
@@ -534,10 +1313,23 @@ deletions
 * PropertyDefs > PropertyDef [Name="AirflowType"] > PropertyType
 
 
+Qto_JunctionBoxBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NumberOfGangs"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
 
 
-Qto_LampBaseQuantities.xml
-==========================
+Qto_TransformerBaseQuantities.xml
+=================================
 
 deletions
 ---------
@@ -546,31 +1338,73 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_JunctionBoxTypeCommon.xml
+Qto_ElectricGeneratorBaseQuantities.xml
+=======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_TrenchExcavationCommon.xml
+===============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcEarthworksCut/(.TRENCH.)"
+  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
+* ApplicableTypeValue "IfcEarthworksCut/(.TRENCH.)"
+  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
+* PropertyDefs > PropertyDef [Name="NominalDepth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Qto_ActuatorBaseQuantities.xml
 ==============================
 
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_CoilTypeCommon.xml
+=======================
+
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlacingType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ShapeType"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PlacingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ShapeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_FlowInstrumentTypeCommon.xml
-=================================
+Qto_FireSuppressionTerminalBaseQuantities.xml
+=============================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Pset_DoorCommon.xml
+===================
 
 modifications
 -------------
@@ -580,16 +1414,69 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_DistributionChamberElementBaseQuantities.xml
-================================================
+Qto_CableCarrierFittingBaseQuantities.xml
+=========================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_AudioVisualApplianceTypeDisplay.xml
+========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"]
+* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="GrossVolume"]
+* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TouchScreen"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="TouchScreen"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"]
+
+
+Qto_MemberBaseQuantities.xml
+============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="GrossSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="NetSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="NetVolume"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
@@ -598,119 +1485,6 @@ deletions
 ---------
 * QtoDefinitionAliases
 
-
-
-
-Qto_SolarDeviceBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-Pset_SoundGeneration.xml
-========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SoundCurve"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="SoundCurve"] > Definition "Table of sound frequencies and sound power measured in decibels at a reference power of 1 picowatt(10\^(-12) watt) for the referenced octave band frequency."
-  ~~Definition~~ PropertyType
-
-
-Pset_AnnotationSurveyArea.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AcquisitionMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
-  ~~USERDEFINED~~ OTHER
-
-
-Pset_PileCommon.xml
-===================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="Status"] > Definition "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure)."
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_OutsideDesignCriteria.xml
-==============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="PrevailingWindVelocity"] > PropertyType > TypePropertySingleValue > DataType
-
-
-
-Qto_OutletBaseQuantities.xml
-============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_RampCommon.xml
-===================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ThermalTransmittance"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-
-Pset_AudioVisualApplianceTypeCommon.xml
-=======================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="MediaSource"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > DefinedValue
-* PropertyDefs > PropertyDef [Name="MediaSource"]
 
 
 Pset_SanitaryTerminalTypeBidet.xml
@@ -753,124 +1527,95 @@ Note that BackToWall, Pedestal and WallHung are allowable values for a bidet.
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_ProtectiveDeviceTypeFuseDisconnector.xml
-=============================================
+Pset_PropertyAgreement.xml
+==========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="AgreementType"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="AgreementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
+Qto_ElectricTimeControlBaseQuantities.xml
+=========================================
 
-Pset_Width.xml
-==============
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Pset_ProtectiveDeviceBreakerUnitI2TFuseCurve.xml
+================================================
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcAnnotation/(.WIDTHEVENT.)"
-  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcAnnotation/WIDTHEVENT
-* ApplicableTypeValue "IfcAnnotation/(.WIDTHEVENT.)"
-  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcAnnotation/WIDTHEVENT
-* PropertyDefs > PropertyDef [Name="TransitionWidth"]
+* PropertyDefs > PropertyDef [Name="BreakerUnitFuseMeltingCurve"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Side"]
+* PropertyDefs > PropertyDef [Name="VoltageLevel"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
+* PropertyDefs > PropertyDef [Name="BreakerUnitFuseBreakingingCurve"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-
-Pset_Condition.xml
+Pset_RailJoint.xml
 ==================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElement,IfcSystem,IfcAsset"
-  ~~IfcElement,IfcSystem,IfcAsset~~ IfcAsset
-* PropertyDefs > PropertyDef [Name="AssessmentMethod"] > PropertyType > TypePropertyReferenceValue
-  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
+* ApplicableClasses > ClassName "IfcMech/RAILJOINT"
+  ~~IfcMech/RAILJOINT~~ IfcMechanicalFastener/RAILJOINT
+* ApplicableTypeValue "IfcMech/RAILJOINT"
+  ~~IfcMech/RAILJOINT~~ IfcMechanicalFastener/RAILJOINT
 
 
-Pset_ProtectiveDeviceBreakerUnitTypeMCB.xml
-===========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_ControllerTypeProportional.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Range"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Value"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-Pset_DistributionPortTypeCable.xml
-==================================
+Pset_OnSiteCastKerb.xml
+=======================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="ConnectionGender"]
-* PropertyDefs > PropertyDef [Name="Current"]
+* ApplicableClasses > ClassName "IfcKerbType"
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Voltage"]
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerbType
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ConductorFunction"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ConnectionType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Protocols"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Power"]
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
-deletions
----------
-* PropertyDefs > PropertyDef [Name="ConnectionGender"]
-* PropertyDefs > PropertyDef [Name="Current"]
 
 
+Pset_AudioVisualApplianceTypeReceiver.xml
+=========================================
 
-Pset_MechanicalFastener.xml
-===========================
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AudioMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AudioAmplification"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ReceiverType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
-additions
----------
-* Definition
+
+Pset_SwitchingDeviceTypeDimmerSwitch.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="DimmerType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DimmerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_HeatExchangerBaseQuantities.xml
+Qto_StackTerminalBaseQuantities.xml
 ===================================
 
 deletions
@@ -878,6 +1623,207 @@ deletions
 * QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
 * QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
 * QtoDefinitionAliases
+
+
+Qto_CableSegmentBaseQuantities.xml
+==================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_OutsideDesignCriteria.xml
+==============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="PrevailingWindVelocity"] > PropertyType > TypePropertySingleValue > DataType
+
+
+Pset_ConstructionResource.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ActualCompletion"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RemainingCost"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RemainingWork"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ActualCost"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ScheduleWork"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ActualWork"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ScheduleCompletion"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ScheduleCost"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_HeatExchangerTypeCommon.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Arrangement"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Arrangement"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ServiceLife.xml
+====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ServiceLifeDuration"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Qto_DuctSilencerBaseQuantities.xml
+==================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_AirToAirHeatRecoveryTypeCommon.xml
+=======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="HeatTransferTypeEnum"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PrimaryAirflowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SecondaryAirflowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="HeatTransferTypeEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DuctSilencerTypeCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WorkingPressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DiscretizedPointListCommon.xml
+===================================
+
+additions
+---------
+* Definition
+
+
+Pset_DuctSegmentPHistory.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="FluidFlowLeakage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LeakageCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LossCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ChillerPHistory.xml
+========================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="CoefficientOfPerformance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EnergyEfficiencyRatio"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Capacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_FireSuppressionTerminalTypeBreechingInlet.xml
+==================================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
+  ~~NOTDEFINED~~ NOTKNOWN
+* PropertyDefs > PropertyDef [Name="CouplingType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CouplingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="BreechingInletType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+
+
+Pset_PackingInstructions.xml
+============================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="ContainerMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="WrappingMaterial"] > PropertyType
+
+
+Pset_SensorTypeSoundSensor.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointSound"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
 Pset_DamperTypeCommon.xml
@@ -904,24 +1850,24 @@ modifications
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BladeAction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="BladeShape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="RegeneratedSoundCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 * PropertyDefs > PropertyDef [Name="RegeneratedSoundCurve"] > Name "RegeneratedSoundCurve"
   ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="BladeShape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="RegeneratedSoundCurve"] > Definition "Regenerated sound versus air flow rate."
   ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="BladeAction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="BladeEdge"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Orientation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="BladeEdge"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Operation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="RegeneratedSoundCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 
 deletions
 ---------
@@ -929,125 +1875,79 @@ deletions
 * PropertyDefs > PropertyDef [Name="LeakageCurve"]
 
 
-Qto_DistributionBoardBaseQuantities.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionBoard"
+Pset_ProtectiveDeviceTrippingUnitTypeCommon.xml
+===============================================
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="NumberOfCircuits"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SpaceFireSafetyRequirements.xml
+====================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
 
 deletions
 ---------
-* QtoDefinitionAliases
+* ApplicableClasses > ClassName "IfcSpatialZone"
+* ApplicableClasses > ClassName "IfcZone"
 
 
-
-Pset_TransportElementElevator.xml
-=================================
+Pset_CooledBeamTypeActive.xml
+=============================
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcTransportElement/ELEVATOR"
-  ~~IfcTransportElement/ELEVATOR~~ ELEVATOR
-* ApplicableTypeValue "IfcTransportElement/ELEVATOR"
-  ~~IfcTransportElement/ELEVATOR~~ ELEVATOR
+* PropertyDefs > PropertyDef [Name="AirFlowConfiguration"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SupplyAirConnectionType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AirFlowConfiguration"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SupplyAirConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_PrecastKerbStone.xml
+
+Pset_FilterTypeCommon.xml
 =========================
 
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
 modifications
 -------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerbType
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalLength"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TypeDesignation"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FlowRateRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_PrecastSlab.xml
-====================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="TypeDesignator"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="EdgeDistanceToFirstAxis"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AngleToFirstAxis"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DistanceBetweenComponentAxes"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ToppingType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalThickness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="TypeDesignation"]
-
-
-
-Pset_AirToAirHeatRecoveryPHistory.xml
+Pset_AudioVisualAppliancePHistory.xml
 =====================================
 
 modifications
 -------------
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="TotalHeatTransferRate"]
+* PropertyDefs > PropertyDef [Name="MediaSource"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HumidityEffectiveness"]
+* PropertyDefs > PropertyDef [Name="MediaContent"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TemperatureEffectiveness"]
+* PropertyDefs > PropertyDef [Name="PowerState"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SensibleEffectiveness"]
+* PropertyDefs > PropertyDef [Name="AudioVolume"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LatentHeatTransferRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SensibleHeatTransferRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DefrostTemperatureEffectiveness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurves"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalEffectiveness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SensibleEffectivenessTable"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalEffectivenessTable"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SensorTypeCO2Sensor.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-
 
 
 Pset_RailwayEnergyReservation.xml
@@ -1065,50 +1965,113 @@ modifications
   ~~IfcSpat/RESERVATION~~ IfcSpatialZone/RESERVATION
 
 
-Qto_SpaceBaseQuantities.xml
-===========================
+Pset_DamperOccurrence.xml
+=========================
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetCeilingArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossCeilingArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWallArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWallArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossPerimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="FinishCeilingHeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetPerimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="FinishFloorHeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* PropertyDefs > PropertyDef [Name="SizingMethod"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="SizingMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CableCarrierSegmentTypeConduitSegment.xml
+==============================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="IsUnderground"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ The nominal width of the segment.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+Pset_StairFlightCommon.xml
+==========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_FurnitureTypeCommon.xml
+============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="IsBuiltIn"] > PropertyType
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
+  ~~Nominal Depth of the object~~ The nominal depth of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="NominalLength"] > Definition "Nominal length of the object"
+  ~~Nominal length of the object~~ The nominal length of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+* PropertyDefs > PropertyDef [Name="NominalLength"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="Reference"] > Name "Reference"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > Name "Status"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="Reference"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;Definition&gt;
+
+
+Pset_CableCarrierFittingTypeCommon.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_FlowMeterTypeWaterMeter.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Type"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Type"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 deletions
 ---------
-* QtoDefinitionAliases
+* PropertyDefs > PropertyDef [Name="BackflowPreventerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
 
 
-Pset_GeotechnicalStratumCommon.xml
-==================================
+
+Pset_RailwayPowerSupplyFacility.xml
+===================================
+
+additions
+---------
+* Definition
+
+
+Pset_RailingCommon.xml
+======================
 
 modifications
 -------------
-* Definition "Properties describing the characteristics of any solid, water or void stratum. A status of "New" should not be associated to a _IfcGeotechnicalAssembly_  or _IfcSolidStratum_, as other entities are used for earthworks and courses."
-  ~~Properties describing the characteristics of any solid, water or void stratum. A status of "New" should not be associated to a _IfcGeotechnicalAssembly_  or _IfcSolidStratum_, as other entities are used for earthworks and courses.~~ Properties describing the characteristics of any solid, water or void stratum. A status of &#8216;New&#8217; should not be associated to a IfcGeotechnicalAssembly  or IfcSolidStratum , as other entities are used for earthworks and courses.
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
@@ -1124,16 +2087,321 @@ modifications
   ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
 
 
-Qto_TankBaseQuantities.xml
-==========================
+
+Pset_PileCommon.xml
+===================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="Status"] > Definition "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure)."
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="NetWeight"]
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_SystemFurnitureElementTypePanel.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FurniturePanelType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="NominalThickness"] > Definition "The nominal  thickness of the entity."
+  ~~The nominal  thickness of the entity.~~ The nominal thickness of the panel.
+* PropertyDefs > PropertyDef [Name="NominalThickness"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="FurniturePanelType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+
+Qto_BuildingElementProxyQuantities.xml
+======================================
+
+modifications
+-------------
+* QtoDefinitionAliases
+  ~~QtoDefinitionAliases~~ Definition
+* QtoDefs > QtoDef [Name="NetSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
+* QtoDefs > QtoDef [Name="NetVolume"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
+
+
+Pset_FireSuppressionTerminalTypeSprinkler.xml
+=============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Activation"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Response"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Activation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Response"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CoilPHistory.xml
+=====================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FaceVelocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SoundCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Qto_EvaporativeCoolerBaseQuantities.xml
+=======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_ElectricApplianceTypeElectricCooker.xml
+============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ElectricCookerType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ElectricCookerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SanitaryTerminalTypeWashHandBasin.xml
+==========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Mounting"] > Definition "Selection of the form of mounting from the enumerated list of mountings where:-
+
+BackToWall: 	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
+Pedestal: 	A floor mounted sanitary terminal that has an integral base
+CounterTop: 	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is &#8216;vanity&#8217;. See also Wash Hand Basin Type specification.
+WallHung: 	A sanitary terminal cantilevered clear of the floor."
+  ~~Selection of the form of mounting from the enumerated list of mountings where:-
+
+BackToWall: 	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
+Pedestal: 	A floor mounted sanitary terminal that has an integral base
+CounterTop: 	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is &#8216;vanity&#8217;. See also Wash Hand Basin Type specification.
+WallHung: 	A sanitary terminal cantilevered clear of the floor.~~ Selection of the form of mounting from the enumerated list of mountings where:-
+
+BackToWall: \X\09A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
+Pedestal: \X\09A floor mounted sanitary terminal that has an integral base
+CounterTop: \X\09A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is \X2\2018\X0\vanity\X2\2019\X0\. See also Wash Hand Basin Type specification.
+WallHung: \X\09A sanitary terminal cantilevered clear of the floor.
+* PropertyDefs > PropertyDef [Name="Mounting"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Mounting"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+PSet_ElementKinematics.xml
+==========================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="LinearPath"]
+
+modifications
+-------------
+* Name "Pset_ElementKinematics"
+  ~~Pset_ElementKinematics~~ PSet_ElementKinematics
+* Definition "Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation."
+  ~~Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation.~~ Definition from IAI: Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation.
+* ApplicableTypeValue "IfcElement,IfcElementType"
+  ~~IfcElement,IfcElementType~~ IfcTransportElementType
+* PropertyDefs > PropertyDef [Name="CyclicRange"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcPlaneAngleMeasure~~ IfcPlanarAngleMeasure
+* ApplicableClasses > ClassName "IfcElement"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* PropertyDefs > PropertyDef [Name="LinearPath"] > Definition "Represents the time:distance table of the kinematic behaviour."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="LinearPath"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="LinearPath"] > Name "LinearPath"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* ApplicableClasses > ClassName "IfcElementType"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CyclicPath"]
+
+
+Pset_AudioVisualApplianceTypeSpeaker.xml
+========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="SpeakerType"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SpeakerDriverSize"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SpeakerType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FrequencyResponse"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SpeakerMounting"]
+
+
+Qto_HeatExchangerBaseQuantities.xml
+===================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_DuctSegmentTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_RailwaySignalGeneral.xml
+=============================
+
+additions
+---------
+* Definition
+* Applicability
+
+
+
+Pset_SensorTypeContactSensor.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointContact"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_SensorTypeHeatSensor.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointTemperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_KerbCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+
+Qto_ChimneyBaseQuantities.xml
+=============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="Length"] > NameAliases
+* QtoDefs > QtoDef [Name="Length"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_BeamCommon.xml
+===================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+
+Pset_DoorTypeTurnstile.xml
+==========================
+
+additions
+---------
+* Definition
+
+
+Pset_OutletTypeCommon.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_MechanicalFastener.xml
+===========================
+
+additions
+---------
+* Definition
+
+
+Qto_VolumetricStratumBaseQuantities.xml
+=======================================
+
+modifications
+-------------
+* Definition "Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in _Pset_Uncertainty_."
+  ~~Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in _Pset_Uncertainty_.~~ Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in Pset_Uncertainty.
+* QtoDefs > QtoDef [Name="PlanArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Mass"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Volume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Area"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
@@ -1141,21 +2409,1151 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_PipeSegmentPHistory.xml
+Pset_ShadingDeviceCommon.xml
 ============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ShadingDeviceType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SolarReflectance"] > Definition "(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1"
+  ~~(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named \X2\03C1\X0\e). Note the following equation Asol + Rsol + Tsol = 1
+* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > Definition "(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1"
+  ~~(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named \X2\03C4\X0\e). Note the following equation Asol + Rsol + Tsol = 1
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ShadingDeviceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_FootingCommon.xml
+======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_RailingBaseQuantities.xml
+=============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="Length"] > NameAliases
+* QtoDefs > QtoDef [Name="Length"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+
+
+Pset_TubeBundleTypeCommon.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DistributionChamberElementTypeMeterChamber.xml
+===================================================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
+
+
+
+Pset_SensorPHistory.xml
+=======================
 
 modifications
 -------------
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="FluidFlowLeakage"]
+* PropertyDefs > PropertyDef [Name="Quality"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LeakageCurve"]
+* PropertyDefs > PropertyDef [Name="Direction"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Status"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Value"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_ProtectiveDeviceTypeCircuitBreaker.xml
-===========================================
+Pset_AudioVisualApplianceTypeCommon.xml
+=======================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="MediaSource"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="AudioVolume"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="MediaSource"]
+
+
+Pset_DamperTypeFireSmokeDamper.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CableCarrierSegmentTypeCableLadderSegment.xml
+==================================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ The nominal width of the segment.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+
+Qto_SpaceHeaterBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_WasteTerminalTypeFloorTrap.xml
+===================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="NominalBodyLength"] > PropertyType > TypePropertySingleValue > DataType
+* PropertyDefs > PropertyDef [Name="NominalBodyLength"] > PropertyType > TypePropertySingleValue > DataType
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="InletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
+  ~~NONE~~ OTHER
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CoverMaterial"] > PropertyType
+
+
+Pset_SystemFurnitureElementTypeWorkSurface.xml
+==============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalThickness"] > Definition "The nominal  thickness of the entity."
+  ~~The nominal  thickness of the entity.~~ The nominal thickness of the work surface.
+* PropertyDefs > PropertyDef [Name="NominalThickness"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="SupportType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SupportType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_ChimneyCommon.xml
+======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_LightFixtureTypeCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SpaceHeaterTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="HeatTransferDimension"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureClassification"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureClassification"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="HeatTransferDimension"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_MedicalDeviceTypeCommon.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_SensorTypeCO2Sensor.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_WasteTerminalTypeGullySump.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_Condition.xml
+==================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement,IfcSystem,IfcAsset"
+  ~~IfcElement,IfcSystem,IfcAsset~~ IfcAsset
+* PropertyDefs > PropertyDef [Name="AssessmentMethod"] > PropertyType > TypePropertyReferenceValue
+  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
+
+
+Pset_SensorTypeLightSensor.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointIlluminance"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+
+Pset_SensorTypeIdentifierSensor.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointIdentifier"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_ProtectiveDeviceTypeCommon.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_WasteTerminalTypeCommon.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_PlateBaseQuantities.xml
+===========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Perimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_WindowCommon.xml
+=====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CondenserPHistory.xml
+==========================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="CondenserMeanVoidFraction"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RefrigerantFoulingResistance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LogarithmicMeanTemperatureDifference"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorCondenserPressureDrop"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="UAcurves"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InteriorHeatTransferCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatRejectionRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExteriorHeatTransferCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WaterFoulingResistance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorCondenserHeatGain"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CondensingTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_DistributionBoardOccurrence.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionBoard"
+
+modifications
+-------------
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_RoadGuardElement.xml
+=========================
+
+modifications
+-------------
+* Definition "Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL when assigned as road guard elements."
+  ~~Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL when assigned as road guard elements.~~ Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL.
+* ApplicableTypeValue "IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)"
+  ~~IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)~~ IfcRailing/GUARDRAIL
+* ApplicableClasses > ClassName "IfcWall/(.PARAPET.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcRailing/(.GUARDRAIL.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_PumpPHistory.xml
+=====================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="RotationSpeed"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Power"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PressureRise"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Flowrate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MechanicalEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="OverallEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_SwitchingDeviceTypeSelectorSwitch.xml
+==========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SwitchActivation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SelectorType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SwitchUsage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_TransformerTypeCommon.xml
+==============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="SecondaryCurrent"] > PropertyType > TypePropertySingleValue > DataType
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+
+Qto_AirTerminalBoxTypeBaseQuantities.xml
+========================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_LightFixtureBaseQuantities.xml
+==================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_PumpBaseQuantities.xml
+==========================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_RoadDesignCriteriaCommon.xml
+=================================
+
+additions
+---------
+* ApplicableTypeValue "IfcAnnotation/USERDEFINED"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="DesignSpeed"] > Definition "Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. 
+
+>NOTE&nbsp; Definition according to PIARC. 
+>
+>NOTE&nbsp; The design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain)."
+  ~~Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. 
+
+>NOTE&nbsp; Definition according to PIARC. 
+>
+>NOTE&nbsp; The design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain).~~ NOTE Definition from PIARC: Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. Note: the design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain).
+
+
+Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal.xml
+=============================================================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudi/RAILWAY_COMMUNICATION_TERMINAL, IfcAudi/TELEPHONE"
+  ~~IfcAudi/RAILWAY_COMMUNICATION_TERMINAL, IfcAudi/TELEPHONE~~ IfcAudioVisualAppliance/TELEPHONE
+* ApplicableClasses > ClassName "IfcAudi/TELEPHONE"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcAudi/RAILWAY_COMMUNICATION_TERMINAL"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Qto_SolarDeviceBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_AirSideSystemInformation.xml
+=================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace,IfcZone,IfcSpatialZone"
+  ~~IfcSpace,IfcZone,IfcSpatialZone~~ IfcZone
+
+
+
+Qto_TubeBundleBaseQuantities.xml
+================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_AudioVisualApplianceTypeTuner.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="TunerType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TunerChannel"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TunerMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TunerFrequency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_JunctionBoxTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PlacingType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ShapeType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ShapeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PlacingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_DistributionChamberElementBaseQuantities.xml
+================================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Qto_EvaporatorBaseQuantities.xml
+================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_ServiceLifeFactors.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="QualityOfComponents"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InUseConditions"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MaintenanceLevel"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DesignLevel"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WorkExecutionLevel"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="IndoorEnvironment"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="OutdoorEnvironment"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_AudioVisualApplianceTypeAmplifier.xml
+==========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AudioAmplification"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AudioMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AmplifierType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_PumpOccurrence.xml
+=======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BaseType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DriveConnectionType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="DriveConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="BaseType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_GeotechnicalStratumCommon.xml
+==================================
+
+modifications
+-------------
+* Definition "Properties describing the characteristics of any solid, water or void stratum. A status of "New" should not be associated to a _IfcGeotechnicalAssembly_  or _IfcSolidStratum_, as other entities are used for earthworks and courses."
+  ~~Properties describing the characteristics of any solid, water or void stratum. A status of "New" should not be associated to a _IfcGeotechnicalAssembly_  or _IfcSolidStratum_, as other entities are used for earthworks and courses.~~ Properties describing the characteristics of any solid, water or void stratum. A status of &#8216;New&#8217; should not be associated to a IfcGeotechnicalAssembly  or IfcSolidStratum , as other entities are used for earthworks and courses.
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CableSegmentTypeCableSegment.xml
+=====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="RatedTemperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_FilterTypeCompressedAirFilter.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+
+Pset_VibrationIsolatorTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcVibrationIsolator/COMPRESSION"
+* ApplicableClasses > ClassName "IfcVibrationIsolator/SPRING"
+* PropertyDefs > PropertyDef [Name="IsolatorStaticDeflection"] > Definition "Static deflection of the vibration isolator."
+
+modifications
+-------------
+* ApplicableTypeValue "IfcVibrationIsolator"
+  ~~IfcVibrationIsolator~~ IfcVibrationIsolator/SPRING
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* ApplicableClasses > ClassName "IfcVibrationIsolator"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+
+Pset_TransportElementCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_AirToAirHeatRecoveryBaseQuantities.xml
+==========================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_RoadMarkingCommon.xml
+==========================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.HATCHMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="MaterialColour"] > PropertyType
+
+
+Pset_ProtectiveDeviceTypeFuseDisconnector.xml
+=============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CompressorPHistory.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="IsentropicEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MechanicalEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorTotalEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorTotalHeatGain"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorCapacity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VolumetricEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LubricantPumpHeatGain"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FrictionHeatGain"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InputPower"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EnergyEfficiencyRatio"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CoefficientOfPerformance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressionEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ShaftPower"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FullLoadRatio"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_StackTerminalTypeCommon.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_SwitchingDeviceBaseQuantities.xml
+=====================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_PipeFittingTypeJunction.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="JunctionType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="JunctionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SolidStratumCapacity.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FrictionAngle"] > Definition "Friction angle is the tested inclination angle from horizontal."
+  ~~Friction angle is the tested inclination angle from horizontal.~~ Friction Angle is the tested inclination angle from horizontal.
+
+
+Qto_StairFlightBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Pset_SpaceThermalPHistory.xml
+=============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="SpaceTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExhaustAirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SpaceRelativeHumidity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatingAirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CoolingAirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationAirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+
+Qto_ProtectiveDeviceTrippingUnitBaseQuantities.xml
+==================================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_DamperPHistory.xml
+=======================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Leakage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="BladePositionAngle"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PressureLossCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DamperPosition"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PressureDrop"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_SpaceThermalLoadPHistory.xml
+=================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="People"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExhaustAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Lighting"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_SwitchingDeviceTypeCommon.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SwitchFunction"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SwitchFunction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_ProtectiveDeviceBreakerUnitIPICurve.xml
+============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BreakerUnitIPICurve"] > PropertyType
+  ~~PropertyType~~ Definition
+* PropertyDefs > PropertyDef [Name="BreakerUnitIPICurve"] > Definition "A curve that establishes the let through peak current of a breaker unit when a particular prospective current is applied.  Note that the breaker unit IPI curve is defined within a Cartesian coordinate system and this fact must be asserted within the property set:
+
+(1) Defining value: A list of minimum 2 and maximum 16 numbers providing the currents in [A] for points in the I/&#206; log/log coordinate space. The curve is drawn as a straight line between two consecutive points.
+(2) Defined value: A list of minimum 2 and maximum 16 numbers providing the let-through peak currents, &#206;, in [A] for points in the I/&#206; log/log coordinate space. The curve is drawn as a straight line between two consecutive points."
+  ~~Definition~~ PropertyType
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_AlarmPHistory.xml
+======================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Condition"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Enabled"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="User"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Severity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Acknowledge"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_FilterTypeAirParticleFilter.xml
+====================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirParticleFilterType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SeparationType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > Name "WeightedEfficiencyCurve"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="SeparationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="AirParticleFilterType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PressureDropCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > Definition "Weighted efficiency curve as a function of dust holding weight, efficiency = f (dust holding weight)."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="FrameMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="CountedEfficiencyCurve"]
+
+
+Pset_DistributionPortPHistoryCable.xml
+======================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="RealPower"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DataTransmitted"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DataReceived"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ApparentPower"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ReactivePower"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Voltage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Current"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PowerFactor"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_SpaceHeaterTypeConvector.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConvectorType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ConvectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ProtectiveDeviceBreakerUnitTypeMotorProtection.xml
+=======================================================
 
 modifications
 -------------
@@ -1169,311 +3567,20 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_CommunicationsApplianceTypeCommon.xml
-==========================================
+Pset_SwitchingDeviceTypePHistory.xml
+====================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_RoofCommon.xml
-===================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_StairFlightBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_ValveTypeMixing.xml
-========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MixerControl"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MixerControl"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_FanOccurrence.xml
-======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ApplicationOfFan"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="CoilPosition"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DischargeType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MotorPosition"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="MotorPosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="DischargeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ApplicationOfFan"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="CoilPosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_FireSuppressionTerminalTypeCommon.xml
-==========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_UnitaryEquipmentTypeCommon.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_AirTerminalBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Perimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-
-Pset_SpaceHeaterPHistory.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="FractionConvectiveHeatTransfer"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirResistanceCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AuxiliaryEnergySourceConsumption"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SpaceMeanRadiantTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SpaceAirTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Effectiveness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SurfaceTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FractionRadiantHeatTransfer"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Exponent"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatOutputRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="OutputCapacityCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UACurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_AudioVisualApplianceTypeCamera.xml
-=======================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="PanHorizontal"]
-* PropertyDefs > PropertyDef [Name="PanTiltZoomPreset"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="CameraType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TiltHorizontal"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PanTiltZoomPreset"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Zoom"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PanHorizontal"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VideoCaptureInterval"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="PanVertical"]
-* PropertyDefs > PropertyDef [Name="TiltVertical"]
-
-
-Pset_CableSegmentTypeConductorSegment.xml
-=========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="Construction"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Material"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Construction"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Shape"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Function"]
-
-
-Pset_ActionRequest.xml
-======================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="RequestSourceName"] > PropertyType
-
-
-Pset_CommunicationsAppliancePHistory.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PowerState"] > PropertyType > TypePropertyReferenceValue
+* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyReferenceValue
   ~~TypePropertyReferenceValue~~ TypePropertySingleValue
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
 
 
-Pset_AirTerminalBoxPHistory.xml
-===============================
 
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="DamperPosition"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Sound"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirflowCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_ProtectiveDeviceTrippingUnitTypeElectronic.xml
-===================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-
-
-
-Pset_PumpTypeCommon.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FlowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FlowResistanceRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_AudioVisualApplianceTypeReceiver.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AudioAmplification"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ReceiverType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AudioMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_AirToAirHeatRecoveryTypeCommon.xml
-=======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="HeatTransferTypeEnum"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PrimaryAirflowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SecondaryAirflowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="HeatTransferTypeEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Qto_UnitaryEquipmentBaseQuantities.xml
-======================================
+Qto_FlowInstrumentBaseQuantities.xml
+====================================
 
 deletions
 ---------
@@ -1482,81 +3589,23 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_FireSuppressionTerminalTypeFireHydrant.xml
-===============================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FireHydrantType"] > Definition "Defines the range of hydrant types from which the required type can be selected where.
-
-DryBarrel:	 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
-WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing."
-  ~~Defines the range of hydrant types from which the required type can be selected where.
-
-DryBarrel:	 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
-WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.~~ Defines the range of hydrant types from which the required type can be selected where.
-
-DryBarrel:\X\09 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
-WetBarrel:\X\09 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.
-
-
-Qto_CoilBaseQuantities.xml
+Qto_DoorBaseQuantities.xml
 ==========================
 
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Perimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Area"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
 deletions
 ---------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
 * QtoDefinitionAliases
-
-
-Pset_ControllerTypeCommon.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SwitchingDeviceTypeKeypad.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="KeypadType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="KeypadType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_AirTerminalBoxTypeCommon.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AirPressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ArrangementType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ReheatType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ReturnAirFractionRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ArrangementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ReheatType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
 Pset_FanTypeCommon.xml
@@ -1580,11 +3629,11 @@ modifications
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="EfficiencyCurve"] > PropertyType > TypePropertyTableValue > Expression
   ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="MotorDriveType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="CapacityControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="MotorDriveType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 deletions
@@ -1595,1695 +3644,8 @@ deletions
 
 
 
-Qto_EvaporatorBaseQuantities.xml
+Pset_OutletTypeCommunication.xml
 ================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_CourseCommon.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCourseType"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalLength"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalThickness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SpaceThermalRequirements.xml
-=================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcSpatialZone"
-* ApplicableClasses > ClassName "IfcZone"
-
-
-Pset_TrafficCalmingDeviceCommon.xml
-===================================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
-  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE
-* ApplicableTypeValue "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
-  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
-  ~~TypeDesignation~~ Type
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
-  ~~Type designator according to local standards~~ Traffic Calming Device designator according to local standards
-
-
-Pset_CableCarrierSegmentTypeCableLadderSegment.xml
-==================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ The nominal width of the segment.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Pset_FootingCommon.xml
-======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ReinforcementBarPitchOfWall.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BarAllocationType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BarAllocationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_FireSuppressionTerminalTypeSprinkler.xml
-=============================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Activation"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Response"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Activation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Response"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_LightFixtureTypeSecurityLighting.xml
-=========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="BackupSupplySystem"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SecurityLightingType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BackupSupplySystem"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Addressablility"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PictogramEscapeDirection"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SelfTestFunction"]
-
-
-Qto_BuildingBaseQuantities.xml
-==============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="FootprintArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="EavesHeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_UnitaryControlElementTypeIndicatorPanel.xml
-================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_SlabBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Perimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Depth"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_SystemFurnitureElementTypeCommon.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ The nominal width of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Qto_SanitaryTerminalBaseQuantities.xml
-======================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_DamperTypeControlDamper.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="TorqueRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_ProjectOrderMaintenanceWorkOrder.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FaultPriorityType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="LocationPriorityType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MaintenaceType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MaintenaceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="LocationPriorityType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FaultPriorityType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_BridgeCommon.xml
-=====================
-
-additions
----------
-* PropertyDefs
-
-modifications
--------------
-* PropertyDefs
-  ~~PropertyDefs~~ Definition
-
-
-Pset_SensorTypeSoundSensor.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointSound"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_SensorTypeFlowSensor.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointFlow"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-
-Pset_ColumnCommon.xml
-=====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ChillerPHistory.xml
-========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="EnergyEfficiencyRatio"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Capacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CoefficientOfPerformance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_TransportElementCommon.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SolidStratumComposition.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="CompositeFractions"] > Definition "Denomination into soil groups by composite fractions"
-  ~~Denomination into soil groups by composite fractions~~ Denomination into soil groups by composite fractions.
-* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionChamberElementTypeManhole.xml
-==============================================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
-
-
-
-Qto_RoofBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="ProjectedArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-
-
-Qto_ProjectionElementBaseQuantities.xml
-=======================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Area"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Volume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_DoorBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Area"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Perimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_ElectricGeneratorBaseQuantities.xml
-=======================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Qto_WasteTerminalBaseQuantities.xml
-===================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_ValvePHistory.xml
-======================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="PercentageOpen"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MeasuredFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MeasuredPressureDrop"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_CableSegmentBaseQuantities.xml
-==================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_OnSiteCastKerb.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerbType
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_MotorConnectionBaseQuantities.xml
-=====================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_AudioVisualApplianceTypePlayer.xml
-=======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-
-Qto_RampFlightBaseQuantities.xml
-================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_BoilerTypeWater.xml
-========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatOutput"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_CoilOccurrence.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-Pset_SensorTypeSmokeSensor.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-
-Qto_BuildingStoreyBaseQuantities.xml
-====================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetHeigtht"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossHeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetFloorArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossPerimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-Qto_OpeningElementBaseQuantities.xml
-====================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Volume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Depth"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Area"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_LightFixtureTypeCommon.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_DuctSilencerTypeCommon.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WorkingPressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Qto_EvaporativeCoolerBaseQuantities.xml
-=======================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_ChillerTypeCommon.xml
-==========================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > Name "FullLoadRatioCurve"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="CapacityCurve"] > Name "CapacityCurve"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > Definition "Ratio of actual power to full load power as a quadratic function of part load, at certain condensing and evaporating temperature, FracFullLoadPower = f ( PartLoadRatio)."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="CapacityCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="CapacityCurve"] > Definition "Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1\*Tei+c1\*Tei\^2+d1\*Tci+e1\*Tci\^2+f1\*Tei\*Tci. 
-This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
-1.IfcPowerMeasure:Capacity
-2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
-3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature"
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CoefficientOfPerformanceCurve"]
-
-
-Pset_DistributionChamberElementTypeMeterChamber.xml
-===================================================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
-
-
-Qto_AlarmBaseQuantities.xml
-===========================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_BearingCommon.xml
-======================
-
-additions
----------
-* Definition "$"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="RotationAccomodated"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DisplacementAccomodated"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_InterceptorTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_BurnerTypeCommon.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SensorTypeGasSensor.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_ManufacturerTypeInformation.xml
-====================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="PerformanceCertificate"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationalDocument"] > Name "OperationalDocument"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > Definition "Manufacturer's performance certificate"
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="OperationalDocument"] > Definition "Manufacturer's operational document"
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="OperationalDocument"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > Name "PerformanceCertificate"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SafetyDocument"]
-
-
-Pset_DoorWindowGlazingType.xml
-==============================
-
-modifications
--------------
-* ApplicableTypeValue "IfcDoor, IfcWindow"
-  ~~IfcDoor, IfcWindow~~ IfcDoor
-* PropertyDefs > PropertyDef [Name="SolarHeatGainTransmittance"] > Definition "(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or &#964;e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = &#964;e + qi)."
-  ~~(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or &#964;e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = &#964;e + qi).~~ (SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or \X2\03C4\X0\e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = \X2\03C4\X0\e + qi).
-* PropertyDefs > PropertyDef [Name="SolarReflectance"] > Definition "(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1"
-  ~~(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named \X2\03C1\X0\e). Note the following equation Asol + Rsol + Tsol = 1
-* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > Definition "(Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1"
-  ~~(Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named \X2\03C4\X0\e). Note the following equation Asol + Rsol + Tsol = 1
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcWindow"
-
-
-Qto_BeamBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_SiteBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossPerimeter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-Pset_ProfileMechanical.xml
-==========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MaximumSectionModulusY"] > Definition "Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm&#179;."
-  ~~Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm&#179;.~~ Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm\S\3.
-* PropertyDefs > PropertyDef [Name="MaximumSectionModulusZ"] > Definition "Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm&#179;."
-  ~~Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm&#179;.~~ Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm\S\3.
-* PropertyDefs > PropertyDef [Name="MinimumSectionModulusY"] > Definition "Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm&#179;."
-  ~~Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm&#179;.~~ Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm\S\3.
-* PropertyDefs > PropertyDef [Name="MinimumSectionModulusZ"] > Definition "Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm&#179;."
-  ~~Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm&#179;.~~ Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm\S\3.
-* PropertyDefs > PropertyDef [Name="ShearAreaY"] > Definition "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm&#178;. If given, the shear area ys shall be non-negative."
-  ~~Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm&#178;. If given, the shear area ys shall be non-negative.~~ Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm\S\2. If given, the shear area ys shall be non-negative.
-* PropertyDefs > PropertyDef [Name="ShearAreaZ"] > Definition "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm&#178;. If given, the shear area zs shall be non-negative."
-  ~~Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm&#178;. If given, the shear area zs shall be non-negative.~~ Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm\S\2. If given, the shear area zs shall be non-negative.
-* PropertyDefs > PropertyDef [Name="ShearDeformationAreaY"] > Definition "Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm&#178;. If given, the shear deformation area ys shall be non-negative."
-  ~~Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm&#178;. If given, the shear deformation area ys shall be non-negative.~~ Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm\S\2. If given, the shear deformation area ys shall be non-negative.
-* PropertyDefs > PropertyDef [Name="ShearDeformationAreaZ"] > Definition "Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm&#178;. If given, the shear deformation area zs shall be non-negative."
-  ~~Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm&#178;. If given, the shear deformation area zs shall be non-negative.~~ Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm\S\2. If given, the shear deformation area zs shall be non-negative.
-* PropertyDefs > PropertyDef [Name="TorsionalSectionModulus"] > Definition "Torsional resistance (about xs). For example measured in mm&#179;."
-  ~~Torsional resistance (about xs). For example measured in mm&#179;.~~ Torsional resistance (about xs). For example measured in mm\S\3.
-
-
-Pset_PrecastConcreteElementFabrication.xml
-==========================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
-  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcSlab
-* PropertyDefs > PropertyDef [Name="AsBuiltLocationNumber"] > Definition "Defines a unique location within a structure, the &#8216;slot&#8217; into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection."
-  ~~Defines a unique location within a structure, the &#8216;slot&#8217; into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection.~~ Defines a unique location within a structure, the \X2\2018\X0\slot\X2\2019\X0\ into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection.
-* PropertyDefs > PropertyDef [Name="PieceMark"] > Definition "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;)."
-  ~~Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;).~~ Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type \X2\2018\X0\1\X2\2019\X0\ and specific shape \X2\2018\X0\A\X2\2019\X0\).
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
-  ~~TypeDesignation~~ TypeDesignator
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
-  ~~Type designator according to local standards~~ Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one-letter acronym, e.g. P=Column, K=reinforced concrete beam,etc.
-
-
-Pset_RailwaySignGeneral.xml
-===========================
-
-additions
----------
-* Definition
-* Applicability
-
-modifications
--------------
-* ApplicableTypeValue "IfcSign"
-  ~~IfcSign~~ IfcSignType
-
-
-Qto_RailingBaseQuantities.xml
-=============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="Length"] > NameAliases
-* QtoDefs > QtoDef [Name="Length"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_SensorTypeFrostSensor.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointFrost"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_ElectricTimeControlTypeCommon.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_WallBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSideArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossSideArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossFootprintArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetFootprintArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_FilterTypeWaterFilter.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="WaterFilterType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WaterFilterType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_UnitaryControlElementBaseQuantities.xml
-===========================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_DistributionPortTypeDuct.xml
-=================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="ConnectionType"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalThickness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Velocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Pressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="ConnectionType"]
-
-
-Pset_ServiceLifeFactors.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="QualityOfComponents"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="IndoorEnvironment"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DesignLevel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InUseConditions"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="OutdoorEnvironment"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MaintenanceLevel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WorkExecutionLevel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SoundAttenuation.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SoundScale"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SoundFrequency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SoundPressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_UnitaryControlElementPHistory.xml
-======================================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="SetPoint"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Temperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Fan"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Mode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_CableCarrierFittingTypeCommon.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_ControllerTypeProgrammable.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_ConstructionEquipmentResourceBaseQuantities.xml
-===================================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="UsageTime"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OperatingTime"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_SwitchingDeviceTypeDimmerSwitch.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="DimmerType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DimmerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_CoveringBaseQuantities.xml
-==============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_SensorTypeMovementSensor.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointMovement"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_RoadMarkingCommon.xml
-==========================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.HATCHMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="MaterialColour"] > PropertyType
-
-
-Qto_VolumetricStratumBaseQuantities.xml
-=======================================
-
-modifications
--------------
-* Definition "Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917})."
-  ~~Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917}).~~ Quantity measures associated to volumetric stratum such as in a geotechnical model. Uncertainty is documented in Pset_Uncertainty.
-* QtoDefs > QtoDef [Name="Area"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="PlanArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Volume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Mass"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_AirTerminalTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="CoreType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DischargeDirection"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FaceType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FinishType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FlowControlType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FlowPattern"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MountingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FlowPattern"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FaceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="CoreType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FinishType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="DischargeDirection"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="FlowControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="AirFlowrateVersusFlowControlElement"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-
-
-Pset_FlowInstrumentPHistory.xml
-===============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Value"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Quality"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Status"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_SwitchingDeviceTypePHistory.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyReferenceValue
-  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-Qto_AirToAirHeatRecoveryBaseQuantities.xml
-==========================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_CableSegmentTypeCableSegment.xml
-=====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="RatedTemperature"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Qto_TubeBundleBaseQuantities.xml
-================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_FilterTypeCompressedAirFilter.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="ParticleAbsorptionCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-
-
-Qto_ChimneyBaseQuantities.xml
-=============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="Length"] > NameAliases
-* QtoDefs > QtoDef [Name="Length"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Qto_ConstructionMaterialResourceBaseQuantities.xml
-==================================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_CableFittingBaseQuantities.xml
-==================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_FurnitureTypeCommon.xml
-============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="IsBuiltIn"] > PropertyType
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
-  ~~Nominal Depth of the object~~ The nominal depth of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="NominalLength"] > Definition "Nominal length of the object"
-  ~~Nominal length of the object~~ The nominal length of the furniture of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
-* PropertyDefs > PropertyDef [Name="NominalLength"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="Status"] > Name "Status"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="Reference"] > Name "Reference"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="Reference"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;Definition&gt;
-
-
-Pset_AirTerminalPHistory.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="NeckAirVelocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InductionRatio"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PressureDrop"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SupplyAirTemperatureCooling"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SupplyAirTemperatureHeating"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CenterlineAirVelocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_TransformerTypeCommon.xml
-==============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="SecondaryCurrent"] > PropertyType > TypePropertySingleValue > DataType
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionSystemTypeElectrical.xml
-=========================================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcDistributionSystem/ELECTRICAL"
-  ~~IfcDistributionSystem/ELECTRICAL~~ IfcDistributionPort/ELECTRICAL
-* ApplicableTypeValue "IfcDistributionSystem/ELECTRICAL"
-  ~~IfcDistributionSystem/ELECTRICAL~~ IfcDistributionPort/ELECTRICAL
-* PropertyDefs > PropertyDef [Name="ElectricalSystemCategory"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > Definition "For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
-
-&#8226;TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
-&#8226;TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
-&#8226;TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
-&#8226;TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
-&#8226;TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
-&#8226;IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed."
-  ~~For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
-
-&#8226;TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
-&#8226;TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
-&#8226;TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
-&#8226;TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
-&#8226;TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
-&#8226;IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.~~ For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are: 
-
-\X2\2022\X0\TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, 
-\X2\2022\X0\TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, 
-\X2\2022\X0\TN S type system, a TN type system having separate neutral and protective conductors throughout the system, 
-\X2\2022\X0\TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, 
-\X2\2022\X0\TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, 
-\X2\2022\X0\IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.
-* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ElectricalSystemType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ElectricalSystemCategory"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_MemberBaseQuantities.xml
-============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_ProtectiveDeviceBreakerUnitI2TCurve.xml
-============================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-
-Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.xml
-===================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="I2TApplicability"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="I2TApplicability"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionSystemTypeVentilation.xml
-==========================================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcDistributionSystem/VENTILATION"
-  ~~IfcDistributionSystem/VENTILATION~~ IfcDistributionPort/VENTILATION
-* ApplicableTypeValue "IfcDistributionSystem/VENTILATION"
-  ~~IfcDistributionSystem/VENTILATION~~ IfcDistributionPort/VENTILATION
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="DuctSealant"] > PropertyType
-
-
-Pset_StructuralSurfaceMemberVaryingThickness.xml
-================================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="Location2Local"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Location2Local"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Location1Global"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Location3Global"] > Name "Location3Global"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="Location3Global"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="Location1Local"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Location3Global"] > Definition "Global X,Y,Z coordinates of the point in which Thickness3 is given"
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="Location2Global"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Location3Local"]
-
-
-Pset_ProtectiveDeviceBreakerUnitTypeMotorProtection.xml
-=======================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PerformanceClasses"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PerformanceClasses"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ManufacturerOccurrence.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_RailwayPowerSupplyFacility.xml
-===================================
-
-additions
----------
-* Definition
-
-
-Pset_BuildingElementProxyCommon.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionChamberElementTypeInspectionChamber.xml
-========================================================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
-
-
-Qto_LightFixtureBaseQuantities.xml
-==================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_CooledBeamPHistory.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="CorrectionFactorForHeating"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BeamHeatingCapacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ReturnWaterTemperatureCooling"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalHeatingCapacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CoolingWaterFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CorrectionFactorForCooling"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressureDropCurves"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ReturnWaterTemperatureHeating"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SupplyWaterTemperatureHeating"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatingWaterFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SupplyWaterTemperatureCooling"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalCoolingCapacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BeamCoolingCapacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_RailwayReservation.xml
-===========================
 
 additions
 ---------
@@ -3291,11 +3653,43 @@ additions
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcSpat/RESERVATION"
-  ~~IfcSpat/RESERVATION~~ IfcSpatialZone/RESERVATION
-* ApplicableTypeValue "IfcSpat/RESERVATION"
-  ~~IfcSpat/RESERVATION~~ IfcSpatialZone/RESERVATION
+* ApplicableClasses > ClassName "IfcOutl/COMMUNICATIONSOUTLET"
+  ~~IfcOutl/COMMUNICATIONSOUTLET~~ IfcOutlet/COMMUNICATIONSOUTLET
+* ApplicableTypeValue "IfcOutl/COMMUNICATIONSOUTLET"
+  ~~IfcOutl/COMMUNICATIONSOUTLET~~ IfcOutlet/COMMUNICATIONSOUTLET
 
+
+
+Pset_FireSuppressionTerminalTypeCommon.xml
+==========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_ElectricMotorBaseQuantities.xml
+===================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Qto_HumidifierBaseQuantities.xml
+================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
 
 
 Pset_ValveTypeFaucet.xml
@@ -3390,28 +3784,113 @@ Spray:\X\09 Faucet with a spray outlet
 SprayMixing:\X\09 Spray faucet connected to hot and cold water supplies that delivers water at a temperature determined during use.
 
 
-Pset_AlarmTypeCommon.xml
+
+Pset_SensorTypePressureSensor.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointPressure"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_SensorTypeRadioactivitySensor.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointRadioactivity"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_BoilerTypeWater.xml
 ========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue
+* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatOutput"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_BearingCommon.xml
+======================
+
+additions
+---------
+* Definition "$"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="RotationAccomodated"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DisplacementAccomodated"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_BoilerTypeSteam.xml
+========================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue
   ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > Expression
+* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > Expression
   ~~&lt;Expression&gt;~~ &lt;DataType&gt;
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="Condition"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
 
 
-Pset_SensorTypeCommon.xml
-=========================
+Qto_CurtainWallQuantities.xml
+=============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossSideArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSideArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Pset_PavementSurfaceCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPavementType"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PavementTexture"] > Definition "Characterization of pavement texture by mean profile depth
+
+>NOTE&nbsp; Definition according to ISO 13473-1:2019"
+  ~~Characterization of pavement texture by mean profile depth
+
+>NOTE&nbsp; Definition according to ISO 13473-1:2019~~ Characterization of pavement texture by mean profile depth (ISO 13473-1:2019)
+
+
+Pset_ColumnCommon.xml
+=====================
 
 modifications
 -------------
@@ -3421,168 +3900,30 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_WasteTerminalTypeWasteTrap.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="WasteTrapType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WasteTrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionChamberElementTypeValveChamber.xml
-===================================================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
-
-
-Qto_DamperBaseQuantities.xml
-============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-
-Pset_FanCentrifugal.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="DischargePosition"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DirectionOfRotation"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Arrangement"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_DistributionPortTypePipe.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ConnectionType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FlowCondition"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MassFlowRate"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Pressure"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Temperature"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Velocity"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ConstructionResource.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ScheduleCompletion"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ScheduleWork"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ActualCompletion"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RemainingWork"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ScheduleCost"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RemainingCost"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ActualWork"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ActualCost"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_PropertyAgreement.xml
+Qto_SiteBaseQuantities.xml
 ==========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="AgreementType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AgreementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* QtoDefs > QtoDef [Name="GrossPerimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
 
 
-Pset_WasteTerminalTypeGullySump.xml
-===================================
 
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_ProtectiveDeviceBaseQuantities.xml
-======================================
+Qto_ChillerBaseQuantities.xml
+=============================
 
 deletions
 ---------
 * QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
 * QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
 * QtoDefinitionAliases
-
-
-Qto_ControllerBaseQuantities.xml
-================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_RoadDesignCriteriaCommon.xml
-=================================
-
-additions
----------
-* ApplicableTypeValue "IfcAnnotation/USERDEFINED"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="DesignSpeed"] > Definition "Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. 
-
->NOTE&nbsp; Definition according to PIARC. 
->
->NOTE&nbsp; The design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain)."
-  ~~Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. 
-
->NOTE&nbsp; Definition according to PIARC. 
->
->NOTE&nbsp; The design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain).~~ NOTE Definition from PIARC: Speed selected in designing a new road or in modernizing, strengthening or rehabilitating an existing road section, to determine the various geometric design features of the carriageway that allow a car to travel safely at that speed, under normal road surface and weather conditions. Note: the design speed is not constant, but may vary depending on the conditions of relief (plain, hill, mountain).
-
 
 
 Qto_LaborResourceBaseQuantities.xml
@@ -3590,139 +3931,9 @@ Qto_LaborResourceBaseQuantities.xml
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="StandardWork"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="OvertimeWork"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_CooledBeamBaseQuantities.xml
-================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_SensorTypeMoistureSensor.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointMoisture"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_SanitaryTerminalTypeWashHandBasin.xml
-==========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Mounting"] > Definition "Selection of the form of mounting from the enumerated list of mountings where:-
-
-BackToWall: 	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
-Pedestal: 	A floor mounted sanitary terminal that has an integral base
-CounterTop: 	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is &#8216;vanity&#8217;. See also Wash Hand Basin Type specification.
-WallHung: 	A sanitary terminal cantilevered clear of the floor."
-  ~~Selection of the form of mounting from the enumerated list of mountings where:-
-
-BackToWall: 	A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
-Pedestal: 	A floor mounted sanitary terminal that has an integral base
-CounterTop: 	A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is &#8216;vanity&#8217;. See also Wash Hand Basin Type specification.
-WallHung: 	A sanitary terminal cantilevered clear of the floor.~~ Selection of the form of mounting from the enumerated list of mountings where:-
-
-BackToWall: \X\09A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.
-Pedestal: \X\09A floor mounted sanitary terminal that has an integral base
-CounterTop: \X\09A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is \X2\2018\X0\vanity\X2\2019\X0\. See also Wash Hand Basin Type specification.
-WallHung: \X\09A sanitary terminal cantilevered clear of the floor.
-* PropertyDefs > PropertyDef [Name="Mounting"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Mounting"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_UnitaryControlElementTypeThermostat.xml
-============================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="TemperatureSetPoint"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_RoadSymbolsCommon.xml
-==========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
-* ApplicableTypeValue "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
-  ~~TypeDesignation~~ Type
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
-  ~~Type designator according to local standards~~ A symbol designator with content according to local standards, e.g.  'BycycleCrossing', 'RoadStuds', 'SpeedBump', 'TransverseBar', 'BusStop', 'Chevron', 'Hatched', 'KeepClear', 'BoxJunction', 'EmergencyExit', 'Intersection', 'Junction'
-
-
-
-Pset_TrenchExcavationCommon.xml
-===============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcEarthworksCut/(.TRENCH.)"
-  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
-* ApplicableTypeValue "IfcEarthworksCut/(.TRENCH.)"
-  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
-* PropertyDefs > PropertyDef [Name="NominalDepth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_ElectricMotorBaseQuantities.xml
-===================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_PlateCommon.xml
-====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_DuctFittingBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
+* QtoDefs > QtoDef [Name="StandardWork"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
@@ -3730,115 +3941,24 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_CompressorTypeCommon.xml
-=============================
+
+Pset_DuctSegmentOccurrence.xml
+==============================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="PowerSource"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PowerSource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_ControllerPHistory.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Value"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Status"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Quality"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_WasteTerminalTypeGullyTrap.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="BackInletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="GullyType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_ShadingDeviceCommon.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ShadingDeviceType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SolarReflectance"] > Definition "(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1"
-  ~~(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named \X2\03C1\X0\e). Note the following equation Asol + Rsol + Tsol = 1
-* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > Definition "(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1"
-  ~~(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named \X2\03C4\X0\e). Note the following equation Asol + Rsol + Tsol = 1
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ShadingDeviceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_PumpOccurrence.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BaseType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DriveConnectionType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * 
   ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="DriveConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="BaseType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_ColumnBaseQuantities.xml
-============================
+Qto_CableCarrierSegmentBaseQuantities.xml
+=========================================
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="GrossWeight"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="OuterSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
@@ -3849,6 +3969,15 @@ deletions
 ---------
 * QtoDefinitionAliases
 
+
+
+Pset_SensorTypeFrostSensor.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointFrost"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
 Pset_ElectricFlowStorageDeviceTypeCommon.xml
@@ -3868,27 +3997,98 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_PipeSegmentOccurrence.xml
-==============================
+
+Pset_EvaporatorPHistory.xml
+===========================
 
 modifications
 -------------
 * 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="EvaporatorMeanVoidFraction"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InteriorHeatTransferCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExteriorHeatTransferCoefficient"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EvaporatingTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="LogarithmicMeanTemperatureDifference"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WaterFoulingResistance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatRejectionRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorEvaporatorHeatGain"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RefrigerantFoulingResistance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CompressorEvaporatorPressureDrop"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="UAcurves"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Qto_CableCarrierSegmentBaseQuantities.xml
-=========================================
+Pset_SensorTypeConductanceSensor.xml
+====================================
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* PropertyDefs > PropertyDef [Name="SetPointConductance"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+
+
+Pset_HumidifierTypeCommon.xml
+=============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="SaturationEfficiencyCurve"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="InternalControl"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="InternalControl"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="SaturationEfficiencyCurve"]
+
+
+Qto_PipeSegmentBaseQuantities.xml
+=================================
+
+modifications
+-------------
 * QtoDefs > QtoDef [Name="OuterSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
@@ -3896,54 +4096,126 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_CableFittingTypeCommon.xml
-===============================
+Pset_DistributionSystemTypeVentilation.xml
+==========================================
 
 modifications
 -------------
+* ApplicableClasses > ClassName "IfcDistributionSystem/VENTILATION"
+  ~~IfcDistributionSystem/VENTILATION~~ IfcDistributionPort/VENTILATION
+* ApplicableTypeValue "IfcDistributionSystem/VENTILATION"
+  ~~IfcDistributionSystem/VENTILATION~~ IfcDistributionPort/VENTILATION
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="DuctSealant"] > PropertyType
+
+
+Pset_SanitaryTerminalTypeCommon.xml
+===================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal or quoted depth of the object."
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
+  ~~Nominal Depth of the object~~ Nominal or quoted depth of the object.
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="NominalLength"] > Definition "Nominal length of the object"
+  ~~Nominal length of the object~~ Nominal or quoted length of the object.
+* PropertyDefs > PropertyDef [Name="NominalLength"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ Nominal or quoted width of the object.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_WasteTerminalTypeFloorTrap.xml
-===================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="NominalBodyLength"] > PropertyType > TypePropertySingleValue > DataType
-* PropertyDefs > PropertyDef [Name="NominalBodyLength"] > PropertyType > TypePropertySingleValue > DataType
+Pset_TankTypeCommon.xml
+=======================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="InletPatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
-  ~~NONE~~ OTHER
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="AccessType"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="EndShapeType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
+  ~~Nominal Depth of the object~~ The nominal depth of the tank.
+
+Note: Not required for a horizontal cylindrical tank.
+* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+* PropertyDefs > PropertyDef [Name="PatternType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="StorageType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="EndShapeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="StorageType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="AccessType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CoverMaterial"] > PropertyType
 
-
-Pset_ReinforcementBarPitchOfColumn.xml
-======================================
+Pset_RailwaySignGeneral.xml
+===========================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="Reference"] > PropertyType > TypePropertySingleValue > DataType
+* Definition
+* Applicability
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="ReinforcementBarType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
-  ~~NOTDEFINED~~ NOTKNOWN
+* ApplicableTypeValue "IfcSign"
+  ~~IfcSign~~ IfcSignType
 
-deletions
----------
-* PropertyDefs > PropertyDef [Name="ReinforcementBarType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+
+Pset_SpaceHeaterPHistory.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="SpaceMeanRadiantTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AuxiliaryEnergySourceConsumption"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="HeatOutputRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Effectiveness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="UACurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FractionConvectiveHeatTransfer"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SurfaceTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="OutputCapacityCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FractionRadiantHeatTransfer"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirResistanceCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Exponent"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SpaceAirTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
 Pset_SanitaryTerminalTypeToiletPan.xml
@@ -4011,8 +4283,98 @@ SlopHopper: \X\09Hopper shaped soil appliance with a flushing rim and outlet sim
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_ElectricGeneratorTypeCommon.xml
-====================================
+Qto_DamperBaseQuantities.xml
+============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_DistributionPortTypeDuct.xml
+=================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="ConnectionType"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Velocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalThickness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Pressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="ConnectionType"]
+
+
+Pset_CoilTypeHydronic.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FluidPressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TotalUACurves"] > Name "TotalUACurves"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="TotalUACurves"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > Definition "Water pressure drop curve, pressure drop &#8211; flow rate curve, WaterPressureDrop = f(WaterflowRate)."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="TotalUACurves"] > Definition "Total UA curves, UA - air and water velocities, UA = [(C1 \* AirFlowRate\^0.8)\^-1 + (C2 \* WaterFlowRate\^0.8)\^-1]\^-1.  Note: as two variables are used, DefiningValues and DefinedValues are null, and values are stored in IfcTable in the following order: AirFlowRate,WaterFlowRate,UA.  The IfcTable is related to IfcPropertyTableValue using IfcMetric and IfcPropertyConstraintRelationship."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > Name "WaterPressureDropCurve"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+
+
+Pset_ElementComponentCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="CorrosionTreatment"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DeliveryType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CorrosionTreatment"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="DeliveryType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Qto_ControllerBaseQuantities.xml
+================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_CableSegmentTypeCommon.xml
+===============================
 
 modifications
 -------------
@@ -4022,63 +4384,114 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-PSet_ElementKinematics.xml
-==========================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="LinearPath"]
-
-modifications
--------------
-* Name "Pset_ElementKinematics"
-  ~~Pset_ElementKinematics~~ PSet_ElementKinematics
-* Definition "Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation."
-  ~~Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation.~~ Definition from IAI: Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation.
-* ApplicableTypeValue "IfcElement,IfcElementType"
-  ~~IfcElement,IfcElementType~~ IfcTransportElementType
-* PropertyDefs > PropertyDef [Name="CyclicRange"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcPlaneAngleMeasure~~ IfcPlanarAngleMeasure
-* PropertyDefs > PropertyDef [Name="LinearPath"] > Name "LinearPath"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="LinearPath"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* ApplicableClasses > ClassName "IfcElement"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* PropertyDefs > PropertyDef [Name="LinearPath"] > Definition "Represents the time:distance table of the kinematic behaviour."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* ApplicableClasses > ClassName "IfcElementType"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CyclicPath"]
-
-
-Pset_DistributionBoardOccurrence.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionBoard"
+Pset_DistributionPortPHistoryDuct.xml
+=====================================
 
 modifications
 -------------
 * 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Temperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FlowCondition"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Velocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Pressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MassFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Qto_BuildingElementProxyQuantities.xml
-======================================
+Qto_FootingBaseQuantities.xml
+=============================
 
 modifications
 -------------
-* QtoDefinitionAliases
-  ~~QtoDefinitionAliases~~ Definition
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="NetVolume"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSurfaceArea"]
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_CableSegmentOccurrence.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="DesignAmbientTemperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MountingMethod"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="MountingMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_OpeningElementCommon.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_BoundedCourseCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCourse"
+  ~~IfcCourse~~ IfcCourseType
+
+
+Pset_BurnerTypeCommon.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
 Pset_PipeFittingPHistory.xml
@@ -4094,54 +4507,8 @@ modifications
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_SolarDeviceTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Qto_DuctSegmentBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_SwitchingDeviceTypeSelectorSwitch.xml
-==========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SelectorType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SwitchUsage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SwitchActivation"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_ControllerTypeFloating.xml
-===============================
+Pset_ControllerTypeProportional.xml
+===================================
 
 modifications
 -------------
@@ -4153,10 +4520,10 @@ modifications
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Value"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > Expression
   ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 deletions
 ---------
@@ -4164,789 +4531,36 @@ deletions
 * PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefinedValue
 
 
-Pset_PavementMillingCommon.xml
-==============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcEarthworksCut/(.PAVEMENTMILLING.)"
-  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
-* ApplicableTypeValue "IfcEarthworksCut/(.PAVEMENTMILLING.)"
-  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
-* PropertyDefs > PropertyDef [Name="NominalDepth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-
-
-Pset_UtilityConsumptionPHistory.xml
-===================================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Heat"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Water"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Electricity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Fuel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Steam"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_FlowMeterTypeCommon.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ReadOutType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ReadOutType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_CoilTypeCommon.xml
+Pset_FanCentrifugal.xml
 =======================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PlacementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="DischargePosition"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DirectionOfRotation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Arrangement"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.xml
-======================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_FilterBaseQuantities.xml
+Qto_BoilerBaseQuantities.xml
 ============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_UnitaryControlElementTypeCommon.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-Pset_SpaceFireSafetyRequirements.xml
-====================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcSpatialZone"
-* ApplicableClasses > ClassName "IfcZone"
-
-
-Pset_CompressorPHistory.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="InputPower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ShaftPower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorTotalEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CoefficientOfPerformance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="IsentropicEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorCapacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FullLoadRatio"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EnergyEfficiencyRatio"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FrictionHeatGain"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MechanicalEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LubricantPumpHeatGain"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressionEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorTotalHeatGain"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VolumetricEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SensorTypeRadiationSensor.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointRadiation"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-
-Pset_MotorConnectionTypeCommon.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SensorPHistory.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Status"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Value"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Direction"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Quality"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_PrecastConcreteElementGeneral.xml
-======================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
-  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcColumn
-* PropertyDefs > PropertyDef [Name="DesignLocationNumber"] > Definition "Defines a unique location within a structure, the &#8216;slot&#8217; for which the piece was designed."
-  ~~Defines a unique location within a structure, the &#8216;slot&#8217; for which the piece was designed.~~ Defines a unique location within a structure, the \X2\2018\X0\slot\X2\2019\X0\ for which the piece was designed.
-* PropertyDefs > PropertyDef [Name="PieceMark"] > Definition "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;)."
-  ~~Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;).~~ Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type \X2\2018\X0\1\X2\2019\X0\ and specific shape \X2\2018\X0\A\X2\2019\X0\).
-* PropertyDefs > PropertyDef [Name="Twisting"] > Definition "The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the &#8216;warping&#8217; angle."
-  ~~The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the &#8216;warping&#8217; angle.~~ The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the \X2\2018\X0\warping\X2\2019\X0\ angle.
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
-  ~~TypeDesignation~~ TypeDesignator
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
-  ~~Type designator according to local standards~~ Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one-letter acronym, e.g. P=Column, K=reinforced concrete beam,etc.
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SupportDuringTransportDocReference"] > PropertyType
-
-
-Pset_DamperTypeFireDamper.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_WasteTerminalTypeCommon.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_ChillerBaseQuantities.xml
-=============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_CurtainWallCommon.xml
-==========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_OutletTypeCommunication.xml
-================================
-
-additions
----------
-* Definition
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcOutl/COMMUNICATIONSOUTLET"
-  ~~IfcOutl/COMMUNICATIONSOUTLET~~ IfcOutlet/COMMUNICATIONSOUTLET
-* ApplicableTypeValue "IfcOutl/COMMUNICATIONSOUTLET"
-  ~~IfcOutl/COMMUNICATIONSOUTLET~~ IfcOutlet/COMMUNICATIONSOUTLET
-
-
-Qto_PileBaseQuantities.xml
-==========================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="CrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_FilterTypeAirParticleFilter.xml
-====================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirParticleFilterType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SeparationType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SeparationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > Name "WeightedEfficiencyCurve"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="AirParticleFilterType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="WeightedEfficiencyCurve"] > Definition "Weighted efficiency curve as a function of dust holding weight, efficiency = f (dust holding weight)."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="PressureDropCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="FrameMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="CountedEfficiencyCurve"]
-
-
-Pset_WasteTerminalTypeWasteDisposalUnit.xml
-===========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
-  ~~Nominal Depth of the object~~ Nominal or quoted depth of the object measured from the inlet drain connection to the base of the unit.
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Pset_OutletTypeCommon.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_CooledBeamTypeCommon.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="IntegratedLightingType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PipeConnection"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WaterFlowControlSystemType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WaterPressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PipeConnection"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="WaterFlowControlSystemType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="IntegratedLightingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DistributionBoardTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionBoard"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SwitchingDeviceTypeEmergencyStop.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SwitchOperation"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SwitchOperation"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_SumpBusterCommon.xml
-=========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcElementAssembly/(.SUMPBUSTER.)"
-  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER
-* ApplicableTypeValue "IfcElementAssembly/(.SUMPBUSTER.)"
-  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
-  ~~TypeDesignation~~ Type
-* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
-  ~~Type designator according to local standards~~ Sump buster designator according to local standards
-
-
-Qto_SwitchingDeviceBaseQuantities.xml
-=====================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_SanitaryTerminalTypeCommon.xml
-===================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal or quoted depth of the object."
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
-  ~~Nominal Depth of the object~~ Nominal or quoted depth of the object.
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="NominalLength"] > Definition "Nominal length of the object"
-  ~~Nominal length of the object~~ Nominal or quoted length of the object.
-* PropertyDefs > PropertyDef [Name="NominalLength"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ Nominal or quoted width of the object.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SensorTypePHSensor.xml
-===========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointPH"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_ElectricApplianceTypeDishwasher.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="DishwasherType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DishwasherType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SensorTypeRadioactivitySensor.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointRadioactivity"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_CooledBeamTypeActive.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirFlowConfiguration"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SupplyAirConnectionType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AirFlowConfiguration"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="SupplyAirConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_StackTerminalTypeCommon.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_TransformerBaseQuantities.xml
-=================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_DuctFittingOccurrence.xml
-==============================
-
-modifications
--------------
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-Pset_RailJoint.xml
-==================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcMech/RAILJOINT"
-  ~~IfcMech/RAILJOINT~~ IfcMechanicalFastener/RAILJOINT
-* ApplicableTypeValue "IfcMech/RAILJOINT"
-  ~~IfcMech/RAILJOINT~~ IfcMechanicalFastener/RAILJOINT
-
-
-Qto_ProtectiveDeviceTrippingUnitBaseQuantities.xml
-==================================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_TransponderGeneral.xml
-===========================
-
-additions
----------
-* Definition
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcComm/TRANSPONDER"
-  ~~IfcComm/TRANSPONDER~~ IfcCommunicationsAppliance/TRANSPONDER
-* ApplicableTypeValue "IfcComm/TRANSPONDER"
-  ~~IfcComm/TRANSPONDER~~ IfcCommunicationsAppliance/TRANSPONDER
-
-
-Qto_PipeFittingBaseQuantities.xml
-=================================
 
 modifications
 -------------
 * QtoDefs > QtoDef [Name="GrossWeight"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 * QtoDefs > QtoDef [Name="NetWeight"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
+* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
 ---------
 * QtoDefinitionAliases
-
-
-Pset_ShadingDevicePHistory.xml
-==============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="TiltAngle"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Azimuth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-
-Pset_ProtectiveDeviceOccurrence.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ShortTimei2tFunction"] > Definition "Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function &#160;is explicitly selected for the device."
-  ~~Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function &#160;is explicitly selected for the device.~~ Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function \S\ is explicitly selected for the device.
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-
-Qto_ElectricFlowStorageDeviceBaseQuantities.xml
-===============================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_KerbStone.xml
-==================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-* PropertyDefs > PropertyDef [Name="Height"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TypeDesignation"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="NominalLength"]
-
-
-
-Pset_SensorTypeHumiditySensor.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointHumidity"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_CoveringCommon.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SpaceOccupancyRequirements.xml
-===================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcSpatialZone"
-* ApplicableClasses > ClassName "IfcZone"
-
-
-Qto_AudioVisualApplianceBaseQuantities.xml
-==========================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_StairFlightCommon.xml
-==========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_PumpBaseQuantities.xml
-==========================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_CableCarrierSegmentTypeConduitSegment.xml
-==============================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="IsUnderground"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ The nominal width of the segment.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Pset_AudioVisualApplianceTypeAmplifier.xml
-==========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AmplifierType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AudioAmplification"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AudioMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_PumpPHistory.xml
-=====================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="OverallEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PressureRise"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MechanicalEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Flowrate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Power"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RotationSpeed"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
 Pset_DistributionChamberElementCommon.xml
@@ -4960,131 +4574,92 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_DuctSegmentOccurrence.xml
+
+Pset_RoadSymbolsCommon.xml
+==========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
+* ApplicableTypeValue "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
+  ~~TypeDesignation~~ Type
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
+  ~~Type designator according to local standards~~ A symbol designator with content according to local standards, e.g.  'BycycleCrossing', 'RoadStuds', 'SpeedBump', 'TransverseBar', 'BusStop', 'Chevron', 'Hatched', 'KeepClear', 'BoxJunction', 'EmergencyExit', 'Intersection', 'Junction'
+
+
+Pset_DoorWindowGlazingType.xml
 ==============================
 
 modifications
 -------------
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-Pset_DuctSegmentPHistory.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="LossCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FluidFlowLeakage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LeakageCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_BoilerTypeCommon.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="NominalPartLoadRatio"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperatingMode"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OutletTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="WaterInletTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="OperatingMode"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* ApplicableTypeValue "IfcDoor, IfcWindow"
+  ~~IfcDoor, IfcWindow~~ IfcDoor
+* PropertyDefs > PropertyDef [Name="SolarHeatGainTransmittance"] > Definition "(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or &#964;e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = &#964;e + qi)."
+  ~~(SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or &#964;e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = &#964;e + qi).~~ (SHGC): The ratio of incident solar radiation that contributes to the heat gain of the interior, it is the solar radiation that directly passes (Tsol or \X2\03C4\X0\e) plus the part of the absorbed radiation that is distributed to the interior (qi). The SHGC is refered to also as g-value (g = \X2\03C4\X0\e + qi).
+* PropertyDefs > PropertyDef [Name="SolarReflectance"] > Definition "(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1"
+  ~~(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named &#961;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named \X2\03C1\X0\e). Note the following equation Asol + Rsol + Tsol = 1
+* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > Definition "(Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1"
+  ~~(Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named &#964;e). Note the following equation Asol + Rsol + Tsol = 1~~ (Tsol): The ratio of incident solar radiation that directly passes through a glazing system (also named \X2\03C4\X0\e). Note the following equation Asol + Rsol + Tsol = 1
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > DefinedValue
+* ApplicableClasses > ClassName "IfcWindow"
 
 
-Pset_ServiceLife.xml
-====================
+Pset_AirTerminalBoxTypeCommon.xml
+=================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="ServiceLifeDuration"] > PropertyType > TypePropertyBoundedValue
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_RadiiKerbStone.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="CurveShape"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="AirPressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ArrangementType"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="CurveShape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Qto_FlowInstrumentBaseQuantities.xml
-====================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_RampFlightCommon.xml
-=========================
-
-modifications
--------------
+* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ReheatType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ReturnAirFractionRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ArrangementType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ReheatType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_CompressorBaseQuantities.xml
-================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_PipeFittingTypeJunction.xml
-================================
+Pset_SensorTypeSmokeSensor.xml
+==============================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="JunctionType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="JunctionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Qto_ProjectionElementBaseQuantities.xml
+=======================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Area"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Volume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
 
 
 
@@ -5097,202 +4672,96 @@ modifications
   ~~Properties describing the features of a borehole (If not modelled separately).~~ Properties describing the features of a borehole (if not modelled separately).
 
 
-Pset_ElectricalDeviceCommon.xml
-===============================
+Pset_CableCarrierSegmentTypeCableTrunkingSegment.xml
+====================================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="ConductorFunction"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="IK_Code"] > Definition "IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
-> NOTE&nbsp; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection."
-  ~~IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
-> NOTE&nbsp; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.~~ IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
-> NOTE&#160; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.
-* PropertyDefs > PropertyDef [Name="NominalFrequencyRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RatedCurrent"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ConductorFunction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="IK_Code"] > PropertyType
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ The nominal width of the segment.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
 
 
-
-Pset_TransitionSectionCommon.xml
-================================
-
-additions
----------
-* ApplicableTypeValue "IfcEarthworksFill/TRANSITIONSECTION"
+Pset_AnnotationSurveyArea.xml
+=============================
 
 modifications
 -------------
-* PropertyDefs
-  ~~PropertyDefs~~ Definition
-* ApplicableClasses > ClassName "IfcEarthworksFill/(.TRANSITIONSECTION.)"
-  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
-* ApplicableTypeValue "IfcEarthworksFill/(.TRANSITIONSECTION.)"
-  ~~ApplicableTypeValue~~ PropertyDefs
-
-deletions
----------
-* Definition "Properties for a transition section."
+* PropertyDefs > PropertyDef [Name="AcquisitionMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+  ~~USERDEFINED~~ OTHER
 
 
-Pset_CondenserTypeCommon.xml
-============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="InternalRefrigerantVolume"] > Definition "Internal volume of condenser (refrigerant side)."
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_BuildingUse.xml
-====================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableNow"]
-* PropertyDefs > PropertyDef [Name="TenureModesAvailableFuture"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableFuture"] > PropertyType > TypePropertyListValue
-  ~~TypePropertyListValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableFuture"] > PropertyType > TypePropertyListValue > ListValue
-  ~~ListValue~~ DataType
-* PropertyDefs > PropertyDef [Name="RentalRatesInCategoryFuture"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RentalRatesInCategoryNow"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TenureModesAvailableFuture"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="TenureModesAvailableNow"]
-* PropertyDefs > PropertyDef [Name="MarketSubCategoriesAvailableNow"]
-
-
-Pset_SensorTypeTemperatureSensor.xml
+Qto_BuildingStoreyBaseQuantities.xml
 ====================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="SetPointTemperature"] > PropertyType > TypePropertyBoundedValue
+* QtoDefs > QtoDef [Name="NetFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossHeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetHeigtht"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossPerimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_ValveTypeMixing.xml
+========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="MixerControl"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MixerControl"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DistributionChamberElementTypeManhole.xml
+==============================================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
+
+
+Pset_SensorTypeFlowSensor.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointFlow"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
-Pset_SpaceThermalLoadPHistory.xml
+
+Qto_DuctFittingBaseQuantities.xml
 =================================
 
 modifications
 -------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="People"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Lighting"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExhaustAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_DistributionPortPHistoryPipe.xml
-=====================================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Flowrate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Pressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Temperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_Superelevation.xml
-=======================
-
-additions
----------
-* ApplicableClasses
-* ApplicableClasses
-
-modifications
--------------
-* PropertyDefs
-  ~~PropertyDefs~~ ApplicableClasses
-* ApplicableTypeValue "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
-  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcAnnotation/SUPERELEVATIONEVENT
-* ApplicableClasses
-  ~~ApplicableClasses~~ PropertyDefs
-* PropertyDefs > PropertyDef [Name="Side"]
-  ~~&lt;PropertyDef&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
-  ~~&lt;ClassName&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Superelevation"]
-* PropertyDefs > PropertyDef [Name="TransitionSuperelevation"]
-
-
-Qto_WindowBaseQuantities.xml
-============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Width"]
+* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Area"]
+* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Perimeter"]
+* QtoDefs > QtoDef [Name="GrossWeight"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Height"]
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
   ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
@@ -5300,49 +4769,80 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_MarkingLinesCommon.xml
-===========================
+Pset_RampCommon.xml
+===================
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
-* ApplicableTypeValue "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Name "NominalWidth"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-
-
-Pset_CableCarrierSegmentTypeCommon.xml
-======================================
-
-modifications
--------------
+* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
+  ~~PropertyType~~ Definition
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ThermalTransmittance"] > PropertyType
+  ~~PropertyType~~ Definition
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_ReinforcingElementBaseQuantities.xml
-========================================
+Pset_SwitchingDeviceTypeKeypad.xml
+==================================
 
 modifications
 -------------
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Weight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Count"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* PropertyDefs > PropertyDef [Name="KeypadType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="KeypadType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_FilterPHistory.xml
+=======================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="CountedEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ParticleMassHolding"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WeightedEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ControllerPHistory.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Value"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Status"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Quality"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ControllerTypeTwoPosition.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
 
 deletions
 ---------
-* QtoDefinitionAliases
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefinedValue
 
 
 Pset_SanitaryTerminalTypeUrinal.xml
@@ -5382,187 +4882,33 @@ Note that BackToWall, Pedestal and WallHung are allowable values for a urinal.
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-
-Pset_SwitchingDeviceTypeCommon.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SwitchFunction"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="SwitchFunction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="SetPoint"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-Pset_SolidStratumCapacity.xml
-=============================
+Pset_ProfileMechanical.xml
+==========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="FrictionAngle"] > Definition "Friction angle is the tested inclination angle from horizontal."
-  ~~Friction angle is the tested inclination angle from horizontal.~~ Friction Angle is the tested inclination angle from horizontal.
+* PropertyDefs > PropertyDef [Name="MaximumSectionModulusY"] > Definition "Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm&#179;."
+  ~~Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm&#179;.~~ Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm\S\3.
+* PropertyDefs > PropertyDef [Name="MaximumSectionModulusZ"] > Definition "Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm&#179;."
+  ~~Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm&#179;.~~ Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm\S\3.
+* PropertyDefs > PropertyDef [Name="MinimumSectionModulusY"] > Definition "Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm&#179;."
+  ~~Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm&#179;.~~ Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm\S\3.
+* PropertyDefs > PropertyDef [Name="MinimumSectionModulusZ"] > Definition "Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm&#179;."
+  ~~Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm&#179;.~~ Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm\S\3.
+* PropertyDefs > PropertyDef [Name="ShearAreaY"] > Definition "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm&#178;. If given, the shear area ys shall be non-negative."
+  ~~Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm&#178;. If given, the shear area ys shall be non-negative.~~ Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm\S\2. If given, the shear area ys shall be non-negative.
+* PropertyDefs > PropertyDef [Name="ShearAreaZ"] > Definition "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm&#178;. If given, the shear area zs shall be non-negative."
+  ~~Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm&#178;. If given, the shear area zs shall be non-negative.~~ Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm\S\2. If given, the shear area zs shall be non-negative.
+* PropertyDefs > PropertyDef [Name="ShearDeformationAreaY"] > Definition "Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm&#178;. If given, the shear deformation area ys shall be non-negative."
+  ~~Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm&#178;. If given, the shear deformation area ys shall be non-negative.~~ Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm\S\2. If given, the shear deformation area ys shall be non-negative.
+* PropertyDefs > PropertyDef [Name="ShearDeformationAreaZ"] > Definition "Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm&#178;. If given, the shear deformation area zs shall be non-negative."
+  ~~Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm&#178;. If given, the shear deformation area zs shall be non-negative.~~ Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm\S\2. If given, the shear deformation area zs shall be non-negative.
+* PropertyDefs > PropertyDef [Name="TorsionalSectionModulus"] > Definition "Torsional resistance (about xs). For example measured in mm&#179;."
+  ~~Torsional resistance (about xs). For example measured in mm&#179;.~~ Torsional resistance (about xs). For example measured in mm\S\3.
 
 
-
-Pset_KerbCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-
-Pset_DistributionPortPHistoryDuct.xml
-=====================================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="FlowCondition"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Velocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Pressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Temperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MassFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_ChimneyCommon.xml
-======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Pset_ActuatorTypeCommon.xml
-===========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-Qto_BoilerBaseQuantities.xml
-============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_AudioVisualApplianceTypeSpeaker.xml
-========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="SpeakerType"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SpeakerType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SpeakerDriverSize"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FrequencyResponse"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SpeakerMounting"]
-
-
-Pset_CableCarrierSegmentTypeCableTrunkingSegment.xml
-====================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ The nominal width of the segment.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Pset_SpaceThermalLoad.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="People"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExhaustAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Lighting"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_FireSuppressionTerminalBaseQuantities.xml
-=============================================
+Qto_LampBaseQuantities.xml
+==========================
 
 deletions
 ---------
@@ -5571,124 +4917,84 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_SwitchingDeviceTypeToggleSwitch.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SwitchUsage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ToggleSwitchType"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SwitchActivation"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_CondenserPHistory.xml
-==========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="CompressorCondenserHeatGain"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RefrigerantFoulingResistance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatRejectionRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InteriorHeatTransferCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CondenserMeanVoidFraction"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExteriorHeatTransferCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WaterFoulingResistance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LogarithmicMeanTemperatureDifference"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CompressorCondenserPressureDrop"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UAcurves"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CondensingTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_CourseApplicationConditions.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCourseType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCourse"
-  ~~IfcCourse~~ IfcCourseType
-
-
-Pset_DuctSegmentTypeCommon.xml
+Pset_DuctFittingTypeCommon.xml
 ==============================
 
 modifications
 -------------
 * PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Shape"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
+Pset_EnvironmentalImpactIndicators.xml
+======================================
 
-Qto_VibrationIsolatorBaseQuantities.xml
-=======================================
-
-deletions
+additions
 ---------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Qto_SensorBaseQuantities.xml
-============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-
-Pset_GeotechnicalAssemblyCommon.xml
-===================================
+* PropertyDefs > PropertyDef [Name="ExpectedServiceLife"] > PropertyType > TypePropertySingleValue > DataType
+* PropertyDefs > PropertyDef [Name="ExpectedServiceLife"] > PropertyType > TypePropertySingleValue > DataType
 
 modifications
 -------------
-* Definition "Properties describing the characteristics of any geotechnical model. A Status of "New" should not be associated to a _IfcGeotechnicalAssembly_ or _IfcGeotechnicalStratum_, as other entities are used for earthworks and courses."
-  ~~Properties describing the characteristics of any geotechnical model. A Status of "New" should not be associated to a _IfcGeotechnicalAssembly_ or _IfcGeotechnicalStratum_, as other entities are used for earthworks and courses.~~ Properties describing the characteristics of any geotechnical model. A Status of &#8216;New&#8217; should not be associated to a IfcGeotechnicalAssembly or IfcGeotechnicalStratum, as other entities are used for earthworks and courses.
+* Definition "Environmental impact indicators are related to a given &#8220;functional unit&#8221; (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product&#8221;.
+Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
+There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level."
+  ~~Environmental impact indicators are related to a given &#8220;functional unit&#8221; (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product&#8221;.
+Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
+There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.~~ Environmental impact indicators are related to a given \X2\201C\X0\functional unit\X2\201D\X0\ (ISO 14040 concept). An example of functional unit is a "Double glazing window with PVC frame" and the unit to consider is "one square meter of opening elements filled by this product\X2\201D\X0\.
+Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.
+There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.
+* PropertyDefs > PropertyDef [Name="LifeCyclePhase"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
+  ~~NOTDEFINED~~ OTHER
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="LifeCyclePhase"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
+
+
+Pset_ControllerTypeMultiPosition.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ControlType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Range"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Labels"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Value"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_DuctFittingOccurrence.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_InterceptorTypeCommon.xml
+==============================
+
+modifications
+-------------
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_PipeFittingOccurrence.xml
-==============================
+Pset_CoilOccurrence.xml
+=======================
 
 modifications
 -------------
@@ -5706,24 +5012,493 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_DamperPHistory.xml
-=======================
+Pset_AudioVisualApplianceTypeCamera.xml
+=======================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="PanHorizontal"]
+* PropertyDefs > PropertyDef [Name="PanTiltZoomPreset"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PanHorizontal"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Zoom"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TiltHorizontal"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="CameraType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PanTiltZoomPreset"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VideoCaptureInterval"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="PanVertical"]
+* PropertyDefs > PropertyDef [Name="TiltVertical"]
+
+
+Qto_CooledBeamBaseQuantities.xml
+================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+
+
+Pset_FlowMeterOccurrence.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_AirTerminalBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="TotalSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Perimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Pset_CourseCommon.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalLength"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalThickness"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_SpaceThermalRequirements.xml
+=================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
+
+deletions
+---------
+* ApplicableClasses > ClassName "IfcSpatialZone"
+* ApplicableClasses > ClassName "IfcZone"
+
+
+Pset_CableSegmentTypeConductorSegment.xml
+=========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="Construction"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Construction"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Shape"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Material"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Function"]
+
+
+Pset_TransponderGeneral.xml
+===========================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcComm/TRANSPONDER"
+  ~~IfcComm/TRANSPONDER~~ IfcCommunicationsAppliance/TRANSPONDER
+* ApplicableTypeValue "IfcComm/TRANSPONDER"
+  ~~IfcComm/TRANSPONDER~~ IfcCommunicationsAppliance/TRANSPONDER
+
+
+Pset_MemberCommon.xml
+=====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_UnitaryEquipmentBaseQuantities.xml
+======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_PipeSegmentTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ElectricApplianceTypeDishwasher.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="DishwasherType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DishwasherType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ReinforcementBarPitchOfWall.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BarAllocationType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="BarAllocationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CompressorTypeCommon.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PowerSource"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PowerSource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ProjectOrderMaintenanceWorkOrder.xml
+=========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FaultPriorityType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="LocationPriorityType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MaintenaceType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FaultPriorityType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="LocationPriorityType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="MaintenaceType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_BuildingElementProxyCommon.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_SanitaryTerminalBaseQuantities.xml
+======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_ManufacturerOccurrence.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ChillerTypeCommon.xml
+==========================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > Definition "Ratio of actual power to full load power as a quadratic function of part load, at certain condensing and evaporating temperature, FracFullLoadPower = f ( PartLoadRatio)."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="CapacityCurve"] > Definition "Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1\*Tei+c1\*Tei\^2+d1\*Tci+e1\*Tci\^2+f1\*Tei\*Tci. 
+This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
+1.IfcPowerMeasure:Capacity
+2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
+3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature"
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="CapacityCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="CapacityCurve"] > Name "CapacityCurve"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="FullLoadRatioCurve"] > Name "FullLoadRatioCurve"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CoefficientOfPerformanceCurve"]
+
+
+
+
+Pset_SensorTypeMovementSensor.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointMovement"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_UnitaryControlElementTypeCommon.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="Mode"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+
+Pset_CoolingTowerPHistory.xml
+=============================
 
 modifications
 -------------
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Leakage"]
+* PropertyDefs > PropertyDef [Name="SumpHeaterPower"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirFlowRate"]
+* PropertyDefs > PropertyDef [Name="Capacity"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DamperPosition"]
+* PropertyDefs > PropertyDef [Name="HeatTransferCoefficient"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PressureLossCoefficient"]
+* PropertyDefs > PropertyDef [Name="Performance"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PressureDrop"]
+* PropertyDefs > PropertyDef [Name="UACurve"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BladePositionAngle"]
+
+
+Pset_ControllerTypeFloating.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Range"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Value"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_EvaporativeCoolerTypeCommon.xml
+====================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="EffectivenessTable"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FlowArrangement"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > Name "WaterPressDropCurve"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > Definition "Water pressure drop as function of water flow rate."
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="FlowArrangement"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="EffectivenessTable"]
+
+
+Pset_ProtectiveDeviceBreakerUnitI2TCurve.xml
+============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="BreakerUnitCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+
+
+Pset_RailJoint_Welded.xml
+=========================
+
+additions
+---------
+* ApplicableTypeValue "IfcFastener/WELD"
+
+
+Qto_PileBaseQuantities.xml
+==========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_Width.xml
+==============
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/(.WIDTHEVENT.)"
+  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcAnnotation/WIDTHEVENT
+* ApplicableTypeValue "IfcAnnotation/(.WIDTHEVENT.)"
+  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcAnnotation/WIDTHEVENT
+* PropertyDefs > PropertyDef [Name="TransitionWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Side"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
@@ -5736,71 +5511,48 @@ additions
 * ApplicableTypeValue "IfcTrackElement/SLEEPER"
 
 
-Pset_CableSegmentTypeCommon.xml
-===============================
+Pset_SensorTypeIonConcentrationSensor.xml
+=========================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
 
-
-Pset_FilterPHistory.xml
-=======================
+Qto_ArealStratumBaseQuantities.xml
+==================================
 
 modifications
 -------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="WeightedEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CountedEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ParticleMassHolding"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_AudioVisualApplianceTypeDisplay.xml
-========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"]
-* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TouchScreen"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="TouchScreen"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* Definition "Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in _Pset_Uncertainty_."
+  ~~Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in _Pset_Uncertainty_.~~ Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in Pset_Uncertainty.
+* QtoDefs > QtoDef [Name="PlanLength"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Area"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="AudioMode"] > PropertyType > TypePropertyTableValue > DefinedValue
-* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"]
+* QtoDefinitionAliases
 
 
+Pset_FilterTypeWaterFilter.xml
+==============================
 
-Qto_CoolingTowerBaseQuantities.xml
-==================================
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="WaterFilterType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WaterFilterType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_ProtectiveDeviceBaseQuantities.xml
+======================================
 
 deletions
 ---------
@@ -5809,52 +5561,315 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_HumidifierTypeCommon.xml
-=============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="SaturationEfficiencyCurve"]
+Qto_RoofBaseQuantities.xml
+==========================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="InternalControl"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="InternalControl"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="ProjectedArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
-* PropertyDefs > PropertyDef [Name="SaturationEfficiencyCurve"]
+* QtoDefinitionAliases
 
 
-Pset_FilterTypeCommon.xml
-=========================
+
+Qto_BuildingBaseQuantities.xml
+==============================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="FlowRateRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="EavesHeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="FootprintArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_FanPHistory.xml
+====================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="DischargePressureLoss"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ShaftPowerRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WheelTipSpeed"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FanRotationSpeed"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FanEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DrivePowerLoss"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FanPowerRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DischargeVelocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="OverallEfficiency"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_CableConduitGeneral.xml
+============================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcCabl/CONDUITSEGMENT"
+  ~~IfcCabl/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT
+* ApplicableTypeValue "IfcCabl/CONDUITSEGMENT"
+  ~~IfcCabl/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT
+
+
+
+Qto_ColumnBaseQuantities.xml
+============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="CrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_PrecastKerbStone.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerbType
+* PropertyDefs > PropertyDef [Name="TypeDesignation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="NominalLength"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_UnitaryEquipmentTypeCommon.xml
+===================================
+
+modifications
+-------------
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_PipeFittingOccurrence.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+
+
+Pset_UtilityConsumptionPHistory.xml
+===================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Fuel"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Electricity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Water"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Heat"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Steam"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_UnitaryControlElementTypeIndicatorPanel.xml
+================================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Application"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_OutletBaseQuantities.xml
+============================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Qto_ElectricApplianceBaseQuantities.xml
+=======================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_WallCommon.xml
+===================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_PipeSegmentPHistory.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="LeakageCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FluidFlowLeakage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_SensorTypeTemperatureSensor.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointTemperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_ElectricGeneratorTypeCommon.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_FlowInstrumentPHistory.xml
+===============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Quality"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Value"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Status"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_ProtectiveDeviceTrippingCurve.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="TrippingCurve"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_Superelevation.xml
+=======================
+
+additions
+---------
+* ApplicableClasses
+* ApplicableClasses
+
+modifications
+-------------
+* PropertyDefs
+  ~~PropertyDefs~~ ApplicableClasses
+* ApplicableTypeValue "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
+  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcAnnotation/SUPERELEVATIONEVENT
+* ApplicableClasses
+  ~~ApplicableClasses~~ PropertyDefs
+* PropertyDefs > PropertyDef [Name="Side"]
+  ~~&lt;PropertyDef&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
+  ~~&lt;ClassName&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Superelevation"]
+* PropertyDefs > PropertyDef [Name="TransitionSuperelevation"]
 
 
 Pset_Risk.xml
@@ -5882,33 +5897,33 @@ Specification of this property set incorporates the values of the Incom risk ana
   ~~IfcProcess,IfcTypeProcess,IfcProduct,IfcTypeProduct,IfcGroup~~ IfcProcess
 * PropertyDefs > PropertyDef [Name="NatureOfRisk"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AssociatedProduct"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="MitigatedRiskSignificance"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MitigationPlanned"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RiskAssessmentMethodology"]
+* PropertyDefs > PropertyDef [Name="AssociatedProduct"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="MitigatedRiskConsequence"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MitigationProposed"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="RiskType"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AssociatedActivity"]
+* PropertyDefs > PropertyDef [Name="UnmitigatedRiskLikelihood"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="RiskName"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UnmitigatedRiskSignificance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MitigationProposed"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="UnmitigatedRiskConsequence"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AssociatedLocation"]
+* PropertyDefs > PropertyDef [Name="RiskAssessmentMethodology"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="UnmitigatedRiskSignificance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MitigationPlanned"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 * PropertyDefs > PropertyDef [Name="MitigatedRiskLikelihood"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UnmitigatedRiskLikelihood"]
+* PropertyDefs > PropertyDef [Name="AssociatedLocation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AssociatedActivity"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 deletions
@@ -5917,101 +5932,8 @@ deletions
 * ApplicableClasses > ClassName "IfcTypeProduct"
 
 
-Qto_StackTerminalBaseQuantities.xml
-===================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_SensorTypeConductanceSensor.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointConductance"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_RailJoint_Welded.xml
-=========================
-
-additions
----------
-* ApplicableTypeValue "IfcFastener/WELD"
-
-
-
-Pset_AlarmPHistory.xml
-======================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Condition"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Acknowledge"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="User"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Severity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Enabled"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_CoilTypeHydronic.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FluidPressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TotalUACurves"] > Definition "Total UA curves, UA - air and water velocities, UA = [(C1 \* AirFlowRate\^0.8)\^-1 + (C2 \* WaterFlowRate\^0.8)\^-1]\^-1.  Note: as two variables are used, DefiningValues and DefinedValues are null, and values are stored in IfcTable in the following order: AirFlowRate,WaterFlowRate,UA.  The IfcTable is related to IfcPropertyTableValue using IfcMetric and IfcPropertyConstraintRelationship."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="TotalUACurves"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > Definition "Water pressure drop curve, pressure drop &#8211; flow rate curve, WaterPressureDrop = f(WaterflowRate)."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > Name "WaterPressureDropCurve"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="TotalUACurves"] > Name "TotalUACurves"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressureDropCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-
-
-Pset_DistributionPortPHistoryCable.xml
-======================================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="ApparentPower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ReactivePower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PowerFactor"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RealPower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Current"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DataReceived"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DataTransmitted"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Voltage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_OpeningElementCommon.xml
-=============================
+Pset_CoveringCommon.xml
+=======================
 
 modifications
 -------------
@@ -6021,234 +5943,560 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_SpaceLightingRequirements.xml
-==================================
+
+Pset_ProtectiveDeviceTrippingUnitTypeElectronic.xml
+===================================================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcSpatialZone"
-* ApplicableClasses > ClassName "IfcZone"
+* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
 
 
-Pset_PackingInstructions.xml
-============================
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="ContainerMaterial"] > PropertyType
-* PropertyDefs > PropertyDef [Name="WrappingMaterial"] > PropertyType
-
-
-Pset_SanitaryTerminalTypeShower.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ShowerType"] > Definition "Selection of the type of shower from the enumerated list of types where:-
-
-Drench:  	Shower that rapidly gives a thorough soaking in an emergency.
-Individual: 	Shower unit that is typically enclosed and is for the use of one person at a time.
-Tunnel: 	Shower that has a succession of shower heads or spreaders that operate simultaneously along its length."
-  ~~Selection of the type of shower from the enumerated list of types where:-
-
-Drench:  	Shower that rapidly gives a thorough soaking in an emergency.
-Individual: 	Shower unit that is typically enclosed and is for the use of one person at a time.
-Tunnel: 	Shower that has a succession of shower heads or spreaders that operate simultaneously along its length.~~ Selection of the type of shower from the enumerated list of types where:-
-
-Drench:  \X\09Shower that rapidly gives a thorough soaking in an emergency.
-Individual: \X\09Shower unit that is typically enclosed and is for the use of one person at a time.
-Tunnel: \X\09Shower that has a succession of shower heads or spreaders that operate simultaneously along its length.
-
-
-Qto_FlowMeterBaseQuantities.xml
-===============================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_ControllerTypeTwoPosition.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ControlType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="Labels"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal.xml
-=============================================================
-
-additions
----------
-* Definition
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudi/RAILWAY_COMMUNICATION_TERMINAL, IfcAudi/TELEPHONE"
-  ~~IfcAudi/RAILWAY_COMMUNICATION_TERMINAL, IfcAudi/TELEPHONE~~ IfcAudioVisualAppliance/TELEPHONE
-* ApplicableClasses > ClassName "IfcAudi/TELEPHONE"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcAudi/RAILWAY_COMMUNICATION_TERMINAL"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_PavementSurfaceCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPavementType"
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PavementTexture"] > Definition "Characterization of pavement texture by mean profile depth
-
->NOTE&nbsp; Definition according to ISO 13473-1:2019"
-  ~~Characterization of pavement texture by mean profile depth
-
->NOTE&nbsp; Definition according to ISO 13473-1:2019~~ Characterization of pavement texture by mean profile depth (ISO 13473-1:2019)
-
-
-Qto_InterceptorBaseQuantities.xml
-=================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Qto_LinearStratumBaseQuantities.xml
-===================================
-
-modifications
--------------
-* Definition "Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917})."
-  ~~Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917}).~~ Quantity measures associated to a linear stratum such as in a borehole. Uncertainty is documented in Pset_Uncertainty.
-* QtoDefs > QtoDef [Name="Diameter"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_EvaporativeCoolerTypeCommon.xml
-====================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="EffectivenessTable"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FlowArrangement"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="OperationTemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="FlowArrangement"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > Name "WaterPressDropCurve"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="WaterPressDropCurve"] > Definition "Water pressure drop as function of water flow rate."
-  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="EffectivenessTable"]
-
-
-Pset_AudioVisualApplianceTypeProjector.xml
-==========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > DefinedValue
-* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
-
-
-
-
-Pset_PipeSegmentTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ProtectiveDeviceBreakerUnitIPICurve.xml
+Pset_UnitaryControlElementTypeThermostat.xml
 ============================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="BreakerUnitIPICurve"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="BreakerUnitIPICurve"] > Definition "A curve that establishes the let through peak current of a breaker unit when a particular prospective current is applied.  Note that the breaker unit IPI curve is defined within a Cartesian coordinate system and this fact must be asserted within the property set:
+* PropertyDefs > PropertyDef [Name="TemperatureSetPoint"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
-(1) Defining value: A list of minimum 2 and maximum 16 numbers providing the currents in [A] for points in the I/&#206; log/log coordinate space. The curve is drawn as a straight line between two consecutive points.
-(2) Defined value: A list of minimum 2 and maximum 16 numbers providing the let-through peak currents, &#206;, in [A] for points in the I/&#206; log/log coordinate space. The curve is drawn as a straight line between two consecutive points."
-  ~~Definition~~ PropertyType
+
+Pset_CoveringFlooring.xml
+=========================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCovering/FLOORING,"
+  ~~IfcCovering/FLOORING,~~ IfcCovering/FLOORING
+
+deletions
+---------
+* ApplicableClasses > ClassName
+
+
+Pset_LampTypeCommon.xml
+=======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_RampFlightCommon.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_LightFixtureTypeSecurityLighting.xml
+=========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="BackupSupplySystem"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Addressablility"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PictogramEscapeDirection"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SecurityLightingType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="BackupSupplySystem"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SelfTestFunction"]
+
+
+Qto_WasteTerminalBaseQuantities.xml
+===================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_WindowBaseQuantities.xml
+============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Area"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Perimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Qto_SlabBaseQuantities.xml
+==========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Depth"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Perimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_DistributionPortPHistoryPipe.xml
+=====================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Flowrate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Temperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Pressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_DistributionChamberElementTypeValveChamber.xml
+===================================================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
+
+
+Pset_DistributionBoardTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionBoard"
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_ManufacturerTypeInformation.xml
+====================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="PerformanceCertificate"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > Name "PerformanceCertificate"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="OperationalDocument"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="PerformanceCertificate"] > Definition "Manufacturer's performance certificate"
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="OperationalDocument"] > Definition "Manufacturer's operational document"
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="AssemblyPlace"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="OperationalDocument"] > Name "OperationalDocument"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SafetyDocument"]
+
+
+
+Qto_OpeningElementBaseQuantities.xml
+====================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Depth"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Area"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Volume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_CableFittingTypeCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CableSegmentTypeCoreSegment.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="RatedTemperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ProtectiveDeviceBreakerUnitTypeMCB.xml
+===========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="NominalCurrents"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
 * PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="VoltageLevel"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_FanBaseQuantities.xml
+=========================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Pset_ActionRequest.xml
+======================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="RequestSourceName"] > PropertyType
+
+
+
+Pset_ElectricMotorTypeCommon.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_MotorConnectionTypeCommon.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_SpaceBaseQuantities.xml
+===========================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossPerimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossCeilingArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWallArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Height"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="FinishFloorHeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWallArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetPerimeter"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetCeilingArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="FinishCeilingHeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossFloorArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_CableCarrierSegmentTypeCableTraySegment.xml
+================================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ The nominal width of the segment.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+Pset_SumpBusterCommon.xml
+=========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcElementAssembly/(.SUMPBUSTER.)"
+  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER
+* ApplicableTypeValue "IfcElementAssembly/(.SUMPBUSTER.)"
+  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
+  ~~TypeDesignation~~ Type
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
+  ~~Type designator according to local standards~~ Sump buster designator according to local standards
+
+
+Pset_SpaceHeaterTypeRadiator.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="RadiatorType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RadiatorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_SolidStratumComposition.xml
+================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="CompositeFractions"] > Definition "Denomination into soil groups by composite fractions"
+  ~~Denomination into soil groups by composite fractions~~ Denomination into soil groups by composite fractions.
+* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DuctSilencerPHistory.xml
+=============================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_PlateCommon.xml
+====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_ConstructionMaterialResourceBaseQuantities.xml
+==================================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Qto_CoolingTowerBaseQuantities.xml
+==================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+Qto_RampFlightBaseQuantities.xml
+================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+Pset_FanOccurrence.xml
+======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ApplicationOfFan"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="CoilPosition"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="DischargeType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MotorPosition"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* 
+  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="CoilPosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ApplicationOfFan"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="DischargeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="MotorPosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SwitchingDeviceTypeMomentarySwitch.xml
+===========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="MomentaryType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MomentaryType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_SolarDeviceTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ReinforcementBarPitchOfColumn.xml
+======================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="Reference"] > PropertyType > TypePropertySingleValue > DataType
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ReinforcementBarType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NOTDEFINED"
+  ~~NOTDEFINED~~ NOTKNOWN
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="ReinforcementBarType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "USERDEFINED"
 
 
 Pset_CoolingTowerTypeCommon.xml
@@ -6268,67 +6516,470 @@ modifications
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="SprayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="CircuitType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="ControlStrategy"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="CircuitType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="FlowArrangement"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="CapacityControl"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="SprayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_CoilPHistory.xml
-=====================
+
+Pset_SwitchingDeviceTypeToggleSwitch.xml
+========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SwitchActivation"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SwitchUsage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ToggleSwitchType"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_DistributionChamberElementTypeInspectionChamber.xml
+========================================================
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AccessCoverMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="BaseMaterial"] > PropertyType
+* PropertyDefs > PropertyDef [Name="WallMaterial"] > PropertyType
+
+
+
+Qto_CoveringBaseQuantities.xml
+==============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="Width"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+
+Pset_SpaceLightingRequirements.xml
+==================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
+
+deletions
+---------
+* ApplicableClasses > ClassName "IfcSpatialZone"
+* ApplicableClasses > ClassName "IfcZone"
+
+
+Pset_SensorTypeRadiationSensor.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointRadiation"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+Pset_Uncertainty.xml
+====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAnnotation/ASSUMEDAREA"
+* ApplicableClasses > ClassName "IfcGeotechnicalElement"
+* ApplicableClasses > ClassName "IfcGeotechnicalAssembly"
+* ApplicableClasses > ClassName "IfcAnnotation/ASSUMEDLINE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProduct,IfcTypeProduct"
+  ~~IfcProduct,IfcTypeProduct~~ IfcAnnotation/ASSUMEDLINE
+* PropertyDefs > PropertyDef [Name="UncertaintyDescription"] > Name "UncertaintyDescription"
+  ~~UncertaintyDescription~~ Description
+* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > Name "UncertaintyBasis"
+  ~~UncertaintyBasis~~ Basis
+* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* ApplicableClasses > ClassName "IfcTypeProduct"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcProduct"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Qto_DuctSegmentBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Pset_BoilerPHistory.xml
+=======================
 
 modifications
 -------------
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
+* PropertyDefs > PropertyDef [Name="CombustionEfficiency"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SoundCurve"]
+* PropertyDefs > PropertyDef [Name="OperationalEfficiency"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
+* PropertyDefs > PropertyDef [Name="Load"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FaceVelocity"]
+* PropertyDefs > PropertyDef [Name="CombustionTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PrimaryEnergyConsumption"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WorkingPressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EnergySourceConsumption"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AuxiliaryEnergyConsumption"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="PartLoadRatio"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_ElectricApplianceTypeElectricCooker.xml
-============================================
+Pset_StairCommon.xml
+====================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="ElectricCookerType"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
+  ~~PropertyType~~ Definition
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ElectricCookerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="ThermalTransmittance"] > PropertyType
+  ~~PropertyType~~ Definition
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_BoilerTypeSteam.xml
-========================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
+Pset_ElectricApplianceTypeCommon.xml
+====================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_SpaceOccupancyRequirements.xml
+===================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpace
 
 deletions
 ---------
-* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="HeatOutput"] > PropertyType > TypePropertyTableValue > DefinedValue
-* PropertyDefs > PropertyDef [Name="NominalEfficiency"]
+* ApplicableClasses > ClassName "IfcSpatialZone"
+* ApplicableClasses > ClassName "IfcZone"
+
+
+Pset_SystemFurnitureElementTypeCommon.xml
+=========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
+  ~~The nominal width of the object.~~ The nominal width of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.
+* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+Qto_InterceptorBaseQuantities.xml
+=================================
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
+
+
+
+Pset_CooledBeamTypeCommon.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="IntegratedLightingType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PipeConnection"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WaterFlowControlSystemType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WaterPressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PipeConnection"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="IntegratedLightingType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="WaterFlowControlSystemType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DamperTypeFireDamper.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Qto_PipeFittingBaseQuantities.xml
+=================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="Length"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
+
+
+
+Pset_AudioVisualApplianceTypePlayer.xml
+=======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="PlayerMediaFormat"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_FireSuppressionTerminalTypeFireHydrant.xml
+===============================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="FireHydrantType"] > Definition "Defines the range of hydrant types from which the required type can be selected where.
+
+DryBarrel:	 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
+WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing."
+  ~~Defines the range of hydrant types from which the required type can be selected where.
+
+DryBarrel:	 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
+WetBarrel:	 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.~~ Defines the range of hydrant types from which the required type can be selected where.
+
+DryBarrel:\X\09 A hydrant that has isolating valves fitted below ground and that may be used where the possibility of water freezing is a consideration.
+WetBarrel:\X\09 A hydrant that has isolating valves fitted above ground and that may be used where there is no possibility of water freezing.
+
+
+Pset_WasteTerminalTypeWasteTrap.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="WasteTrapType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WasteTrapType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_RailwayReservation.xml
+===========================
+
+additions
+---------
+* Definition
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSpat/RESERVATION"
+  ~~IfcSpat/RESERVATION~~ IfcSpatialZone/RESERVATION
+* ApplicableTypeValue "IfcSpat/RESERVATION"
+  ~~IfcSpat/RESERVATION~~ IfcSpatialZone/RESERVATION
+
+
+Pset_PipeFittingTypeCommon.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ControllerTypeCommon.xml
+=============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+
+Pset_SensorTypeHumiditySensor.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPointHumidity"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+
+
+
+
+Pset_UnitaryControlElementPHistory.xml
+======================================
+
+modifications
+-------------
+* 
+  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
+* PropertyDefs > PropertyDef [Name="Temperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Fan"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Mode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SetPoint"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_GeotechnicalAssemblyCommon.xml
+===================================
+
+modifications
+-------------
+* Definition "Properties describing the characteristics of any geotechnical model. A Status of "New" should not be associated to a _IfcGeotechnicalAssembly_ or _IfcGeotechnicalStratum_, as other entities are used for earthworks and courses."
+  ~~Properties describing the characteristics of any geotechnical model. A Status of "New" should not be associated to a _IfcGeotechnicalAssembly_ or _IfcGeotechnicalStratum_, as other entities are used for earthworks and courses.~~ Properties describing the characteristics of any geotechnical model. A Status of &#8216;New&#8217; should not be associated to a IfcGeotechnicalAssembly or IfcGeotechnicalStratum, as other entities are used for earthworks and courses.
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_ElectricalDeviceCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConductorFunction"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="IK_Code"] > Definition "IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
+> NOTE&nbsp; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection."
+  ~~IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
+> NOTE&nbsp; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.~~ IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.
+> NOTE&#160; In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.
+* PropertyDefs > PropertyDef [Name="NominalFrequencyRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RatedCurrent"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ConductorFunction"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="IK_Code"] > PropertyType
+
+
+Qto_DistributionBoardBaseQuantities.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionBoard"
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="NumberOfCircuits"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="GrossWeight"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+deletions
+---------
+* QtoDefinitionAliases
 
 
 Pset_SanitaryTerminalTypeSink.xml
@@ -6442,112 +7093,75 @@ VegetablePreparation: \X\09Large metal sink, with a standing waste, for washing 
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_DuctSilencerPHistory.xml
+
+Pset_SpaceThermalLoad.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Lighting"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="People"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExhaustAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_TransportElementElevator.xml
+=================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcTransportElement/ELEVATOR"
+  ~~IfcTransportElement/ELEVATOR~~ ELEVATOR
+* ApplicableTypeValue "IfcTransportElement/ELEVATOR"
+  ~~IfcTransportElement/ELEVATOR~~ ELEVATOR
+
+
+
+Pset_EvaporatorTypeCommon.xml
 =============================
 
 modifications
 -------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="AirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SensorTypeIonConcentrationSensor.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_SystemFurnitureElementTypeWorkSurface.xml
-==============================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalThickness"] > Definition "The nominal  thickness of the entity."
-  ~~The nominal  thickness of the entity.~~ The nominal thickness of the work surface.
-* PropertyDefs > PropertyDef [Name="NominalThickness"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="SupportType"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SupportType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DoorTypeTurnstile.xml
-==========================
-
-additions
----------
-* Definition
-
-
-
-Pset_DamperTypeFireSmokeDamper.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ActuationType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="ClosureRatingEnum"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DuctFittingTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_FlowMeterOccurrence.xml
+Pset_SensorTypeGasSensor.xml
 ============================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Purpose"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DoorCommon.xml
-===================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SensorTypeContactSensor.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointContact"] > PropertyType > TypePropertyBoundedValue
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
 
 
@@ -6561,28 +7175,104 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_EvaporativeCoolerPHistory.xml
-==================================
+Pset_PrecastConcreteElementGeneral.xml
+======================================
 
 modifications
 -------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="WaterSumpTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SensibleHeatTransferRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Effectiveness"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalHeatTransferRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LatentHeatTransferRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
+  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcColumn
+* PropertyDefs > PropertyDef [Name="DesignLocationNumber"] > Definition "Defines a unique location within a structure, the &#8216;slot&#8217; for which the piece was designed."
+  ~~Defines a unique location within a structure, the &#8216;slot&#8217; for which the piece was designed.~~ Defines a unique location within a structure, the \X2\2018\X0\slot\X2\2019\X0\ for which the piece was designed.
+* PropertyDefs > PropertyDef [Name="PieceMark"] > Definition "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;)."
+  ~~Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type &#8216;1&#8217; and specific shape &#8216;A&#8217;).~~ Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type \X2\2018\X0\1\X2\2019\X0\ and specific shape \X2\2018\X0\A\X2\2019\X0\).
+* PropertyDefs > PropertyDef [Name="Twisting"] > Definition "The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the &#8216;warping&#8217; angle."
+  ~~The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the &#8216;warping&#8217; angle.~~ The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the \X2\2018\X0\warping\X2\2019\X0\ angle.
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Name "TypeDesignation"
+  ~~TypeDesignation~~ TypeDesignator
+* PropertyDefs > PropertyDef [Name="TypeDesignation"] > Definition "Type designator according to local standards"
+  ~~Type designator according to local standards~~ Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one-letter acronym, e.g. P=Column, K=reinforced concrete beam,etc.
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SupportDuringTransportDocReference"] > PropertyType
 
 
 
-Pset_WallCommon.xml
-===================
+Pset_BoilerTypeCommon.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="NominalPartLoadRatio"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OperatingMode"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="OutletTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="WaterInletTemperatureRange"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="OperatingMode"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="EnergySource"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="PartialLoadEfficiencyCurves"] > PropertyType > TypePropertyTableValue > DefinedValue
+
+
+Pset_FlowMeterTypeCommon.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ReadOutType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ReadOutType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_DistributionPortTypePipe.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConnectionType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="FlowCondition"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="MassFlowRate"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Pressure"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Temperature"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="Velocity"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"] > PropertyType > TypePropertyBoundedValue
+  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ConnectionType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+
+
+Pset_CableCarrierSegmentTypeCommon.xml
+======================================
 
 modifications
 -------------
@@ -6592,17 +7282,35 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_SensorTypeHeatSensor.xml
-=============================
+Pset_AudioVisualApplianceTypeProjector.xml
+==========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="SetPointTemperature"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue
+  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue
+  ~~TypePropertyTableValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > Expression
+  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
+* PropertyDefs > PropertyDef [Name="VideoResolutionMode"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > DefiningValue
+* PropertyDefs > PropertyDef [Name="VideoCaptionMode"] > PropertyType > TypePropertyTableValue > DefinedValue
+* PropertyDefs > PropertyDef [Name="VideoScaleMode"]
 
 
-Qto_AirTerminalBoxTypeBaseQuantities.xml
-========================================
+Qto_FlowMeterBaseQuantities.xml
+===============================
 
 deletions
 ---------
@@ -6611,46 +7319,7 @@ deletions
 * QtoDefinitionAliases
 
 
-
-Pset_SensorTypeLightSensor.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointIlluminance"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-
-
-Pset_FanPHistory.xml
-====================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="FanRotationSpeed"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DrivePowerLoss"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="OverallEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WheelTipSpeed"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DischargeVelocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ShaftPowerRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DischargePressureLoss"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FanEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FanPowerRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_ValveBaseQuantities.xml
+Qto_AlarmBaseQuantities.xml
 ===========================
 
 deletions
@@ -6660,331 +7329,25 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_LampTypeCommon.xml
-=======================
+Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.xml
+===================================================
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue
-  ~~TypePropertyTableValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > Expression
-  ~~&lt;Expression&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > DefiningValue
-* PropertyDefs > PropertyDef [Name="Spectrum"] > PropertyType > TypePropertyTableValue > DefinedValue
-
-
-
-Qto_CurtainWallQuantities.xml
-=============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossSideArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSideArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Width"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Height"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_CoolingTowerPHistory.xml
-=============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Performance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatTransferCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="UACurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SumpHeaterPower"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Capacity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_VoltageAndCurrentTransformer.xml
-=====================================
-
-additions
----------
-* Definition
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcTran/COMBINED"
-  ~~IfcTran/COMBINED~~ IfcTransformer/COMBINED
-* ApplicableTypeValue "IfcTran/COMBINED"
-  ~~IfcTran/COMBINED~~ IfcTransformer/COMBINED
-
-
-Pset_SensorTypeIdentifierSensor.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPointIdentifier"] > PropertyType > TypePropertyBoundedValue
+* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > PropertyType > TypePropertyBoundedValue
   ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-
-
-Pset_SlabCommon.xml
-===================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue
+  ~~TypePropertyListValue~~ TypePropertySingleValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > PropertyType > TypePropertyListValue > ListValue
+  ~~ListValue~~ DataType
+* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_RoadGuardElement.xml
-=========================
-
-modifications
--------------
-* Definition "Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL when assigned as road guard elements."
-  ~~Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL when assigned as road guard elements.~~ Properties assigned to IfcWall/PARAPET or IfcRailing/GUARDRAIL.
-* ApplicableTypeValue "IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)"
-  ~~IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)~~ IfcRailing/GUARDRAIL
-* ApplicableClasses > ClassName "IfcWall/(.PARAPET.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcRailing/(.GUARDRAIL.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_TubeBundleTypeCommon.xml
-=============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="I2TApplicability"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="I2TApplicability"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_CoveringFlooring.xml
-=========================
-
-modifications
--------------
-* ApplicableTypeValue "IfcCovering/FLOORING,"
-  ~~IfcCovering/FLOORING,~~ IfcCovering/FLOORING
-
-deletions
----------
-* ApplicableClasses > ClassName
-
-
-Pset_CableSegmentOccurrence.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="DesignAmbientTemperature"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MountingMethod"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="MountingMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+* PropertyDefs > PropertyDef [Name="AdjustmentValueType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_RailwayAlignmentCommon.xml
-===============================
-
-additions
----------
-* Definition
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="VerticalReferenceAxis"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CantRotationAxis"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SpaceHeaterTypeRadiator.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="RadiatorType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RadiatorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_ProtectiveDeviceTypeCommon.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_BoilerPHistory.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="PrimaryEnergyConsumption"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AuxiliaryEnergyConsumption"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CombustionTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WorkingPressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="OperationalEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="CombustionEfficiency"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EnergySourceConsumption"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Load"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PartLoadRatio"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_SanitaryTerminalTypeCistern.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FlushRate"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="FlushType"] > Definition "The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
-
-Lever: 	Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Pull: 	Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Push: 	Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Sensor: Flush is activated through an automatic sensing mechanism."
-  ~~The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
-
-Lever: 	Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Pull: 	Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Push: 	Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Sensor: Flush is activated through an automatic sensing mechanism.~~ The property enumeration Pset_FlushTypeEnum defines the types of flushing mechanism that may be specified for cisterns and sanitary terminals where:-
-
-Lever: \X\09Flushing is achieved by twisting a lever that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Pull: \X\09Flushing is achieved by pulling a handle or knob vertically upwards that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Push: \X\09Flushing is achieved by pushing a button or plate that causes a predetermined flow of water to be passed from a cistern to the sanitary terminal.
-Sensor: Flush is activated through an automatic sensing mechanism.
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CisternHeight"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
-
-
-Pset_FlowMeterTypeWaterMeter.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Type"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Type"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="BackflowPreventerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "NONE"
-
-
-Pset_DamperOccurrence.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SizingMethod"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* 
-  ~~PSET_OCCURRENCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="SizingMethod"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_VibrationIsolatorTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcVibrationIsolator/COMPRESSION"
-* ApplicableClasses > ClassName "IfcVibrationIsolator/SPRING"
-* PropertyDefs > PropertyDef [Name="IsolatorStaticDeflection"] > Definition "Static deflection of the vibration isolator."
-
-modifications
--------------
-* ApplicableTypeValue "IfcVibrationIsolator"
-  ~~IfcVibrationIsolator~~ IfcVibrationIsolator/SPRING
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* ApplicableClasses > ClassName "IfcVibrationIsolator"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_SpaceThermalPHistory.xml
-=============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="CoolingAirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SpaceRelativeHumidity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="HeatingAirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExhaustAirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SpaceTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationAirFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_WindowCommon.xml
-=====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
 
 
 Pset_CooledBeamPHistoryActive.xml
@@ -7003,27 +7366,58 @@ modifications
 
 
 
-Pset_ActuatorPHistory.xml
-=========================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="Status"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Quality"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Position"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_ValveTypeCommon.xml
-========================
+Pset_StructuralSurfaceMemberVaryingThickness.xml
+================================================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="FlowCoefficient"] > Definition "Flow coefficient (the quantity of fluid that passes through a fully open valve at unit pressure drop), typically expressed as the Kv or Cv value for the valve."
+* PropertyDefs > PropertyDef [Name="Location2Local"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Location3Global"] > Definition "Global X,Y,Z coordinates of the point in which Thickness3 is given"
+  ~~&lt;Definition&gt;~~ &lt;Definition&gt;
+* PropertyDefs > PropertyDef [Name="Location1Global"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Location3Global"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="Location2Global"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Location3Global"] > Name "Location3Global"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="Location2Local"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Location1Local"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="Location3Local"]
+
+
+Pset_SanitaryTerminalTypeShower.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ShowerType"] > Definition "Selection of the type of shower from the enumerated list of types where:-
+
+Drench:  	Shower that rapidly gives a thorough soaking in an emergency.
+Individual: 	Shower unit that is typically enclosed and is for the use of one person at a time.
+Tunnel: 	Shower that has a succession of shower heads or spreaders that operate simultaneously along its length."
+  ~~Selection of the type of shower from the enumerated list of types where:-
+
+Drench:  	Shower that rapidly gives a thorough soaking in an emergency.
+Individual: 	Shower unit that is typically enclosed and is for the use of one person at a time.
+Tunnel: 	Shower that has a succession of shower heads or spreaders that operate simultaneously along its length.~~ Selection of the type of shower from the enumerated list of types where:-
+
+Drench:  \X\09Shower that rapidly gives a thorough soaking in an emergency.
+Individual: \X\09Shower unit that is typically enclosed and is for the use of one person at a time.
+Tunnel: \X\09Shower that has a succession of shower heads or spreaders that operate simultaneously along its length.
+
+
+Pset_CurtainWallCommon.xml
+==========================
 
 modifications
 -------------
@@ -7033,371 +7427,22 @@ modifications
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Pset_SwitchingDeviceTypeMomentarySwitch.xml
-===========================================
+Qto_ValveBaseQuantities.xml
+===========================
 
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MomentaryType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="MomentaryType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
+deletions
+---------
+* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
+* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
+* QtoDefinitionAliases
 
 
-Pset_CableConduitGeneral.xml
+Pset_CondenserTypeCommon.xml
 ============================
 
 additions
 ---------
-* Definition
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcCabl/CONDUITSEGMENT"
-  ~~IfcCabl/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT
-* ApplicableTypeValue "IfcCabl/CONDUITSEGMENT"
-  ~~IfcCabl/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT
-
-
-
-Pset_ElectricAppliancePHistory.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PowerState"] > PropertyType > TypePropertyReferenceValue
-  ~~TypePropertyReferenceValue~~ TypePropertySingleValue
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-
-
-Qto_ElectricTimeControlBaseQuantities.xml
-=========================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_ProtectiveDeviceBreakerUnitI2TFuseCurve.xml
-================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="VoltageLevel"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BreakerUnitFuseBreakingingCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="BreakerUnitFuseMeltingCurve"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_MemberCommon.xml
-=====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SpaceHeaterTypeConvector.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ConvectorType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ConvectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_TankTypeCommon.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AccessType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="EndShapeType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > Definition "Nominal Depth of the object"
-  ~~Nominal Depth of the object~~ The nominal depth of the tank.
-
-Note: Not required for a horizontal cylindrical tank.
-* PropertyDefs > PropertyDef [Name="NominalDepth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="PatternType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="StorageType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="EndShapeType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="PatternType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="AccessType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="StorageType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_JunctionBoxBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NumberOfGangs"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-
-Pset_RailwaySignalGeneral.xml
-=============================
-
-additions
----------
-* Definition
-* Applicability
-
-
-Pset_AirSideSystemInformation.xml
-=================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace,IfcZone,IfcSpatialZone"
-  ~~IfcSpace,IfcZone,IfcSpatialZone~~ IfcZone
-
-
-Pset_ConcreteElementGeneral.xml
-===============================
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
-  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcSlab
-
-
-Pset_ElementComponentCommon.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="CorrosionTreatment"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="DeliveryType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="CorrosionTreatment"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* PropertyDefs > PropertyDef [Name="DeliveryType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_SystemFurnitureElementTypePanel.xml
-========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="FurniturePanelType"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="NominalThickness"] > Definition "The nominal  thickness of the entity."
-  ~~The nominal  thickness of the entity.~~ The nominal thickness of the panel.
-* PropertyDefs > PropertyDef [Name="NominalThickness"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-* PropertyDefs > PropertyDef [Name="FurniturePanelType"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_StairCommon.xml
-====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="LoadBearing"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="ThermalTransmittance"] > PropertyType
-  ~~PropertyType~~ Definition
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_DuctFittingPHistory.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="AirFlowLeakage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="LossCoefficient"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_MedicalDeviceTypeCommon.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_Uncertainty.xml
-====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAnnotation/ASSUMEDAREA"
-* ApplicableClasses > ClassName "IfcGeotechnicalElement"
-* ApplicableClasses > ClassName "IfcGeotechnicalAssembly"
-* ApplicableClasses > ClassName "IfcAnnotation/ASSUMEDLINE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProduct,IfcTypeProduct"
-  ~~IfcProduct,IfcTypeProduct~~ IfcAnnotation/ASSUMEDLINE
-* PropertyDefs > PropertyDef [Name="UncertaintyDescription"] > Name "UncertaintyDescription"
-  ~~UncertaintyDescription~~ Description
-* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > Name "UncertaintyBasis"
-  ~~UncertaintyBasis~~ Basis
-* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-* ApplicableClasses > ClassName "IfcTypeProduct"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcProduct"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-
-Qto_HumidifierBaseQuantities.xml
-================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_CableCarrierSegmentTypeCableTraySegment.xml
-================================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > Definition "The nominal width of the object."
-  ~~The nominal width of the object.~~ The nominal width of the segment.
-* PropertyDefs > PropertyDef [Name="NominalWidth"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcNonNegativeLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Qto_PipeSegmentBaseQuantities.xml
-=================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="OuterSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetWeight"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="GrossCrossSectionArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Qto_DuctSilencerBaseQuantities.xml
-==================================
-
-deletions
----------
-* QtoDefs > QtoDef [Name="GrossWeight"] > NameAliases
-* QtoDefs > QtoDef [Name="GrossWeight"] > DefinitionAliases
-* QtoDefinitionAliases
-
-
-Pset_BeamCommon.xml
-===================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_PipeFittingTypeCommon.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="PressureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="TemperatureRange"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Qto_ArealStratumBaseQuantities.xml
-==================================
-
-modifications
--------------
-* Definition "Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917})."
-  ~~Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in [<font color="#0000ff"><u>Pset_Uncertainty</u></font>]($element://{EB7C91FE-A348-4889-BDFA-65CC36C81917}).~~ Quantity measures associated to areal stratum such as in a geotechnical slice. Uncertainty is documented in Pset_Uncertainty.
-* QtoDefs > QtoDef [Name="Area"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="Length"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="PlanLength"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-deletions
----------
-* QtoDefinitionAliases
-
-
-Pset_EvaporatorTypeCommon.xml
-=============================
+* PropertyDefs > PropertyDef [Name="InternalRefrigerantVolume"] > Definition "Internal volume of condenser (refrigerant side)."
 
 modifications
 -------------
@@ -7405,60 +7450,14 @@ modifications
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
   ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="RefrigerantClass"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-
-
-Pset_Asset.xml
-==============
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="Owner"]
-* PropertyDefs > PropertyDef [Name="Operator"]
-* PropertyDefs > PropertyDef [Name="ResponsiblePerson"]
-* PropertyDefs > PropertyDef [Name="OriginalValue"]
-* PropertyDefs > PropertyDef [Name="CurrentValue"]
-* PropertyDefs > PropertyDef [Name="DepreciatedValue"]
-
-
-
-Pset_CableSegmentTypeCoreSegment.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="RatedTemperature"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="RatedVoltage"] > PropertyType > TypePropertyBoundedValue
-  ~~TypePropertyBoundedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
-
-
-Pset_HeatExchangerTypeCommon.xml
-================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Arrangement"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Arrangement"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 * PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
   ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
 
-Qto_ElectricApplianceBaseQuantities.xml
-=======================================
+Qto_CoilBaseQuantities.xml
+==========================
 
 deletions
 ---------
@@ -7467,30 +7466,31 @@ deletions
 * QtoDefinitionAliases
 
 
-Pset_AudioVisualAppliancePHistory.xml
-=====================================
+
+Pset_SoundGeneration.xml
+========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SoundCurve"] > PropertyType
+  ~~PropertyType~~ Definition
+* PropertyDefs > PropertyDef [Name="SoundCurve"] > Definition "Table of sound frequencies and sound power measured in decibels at a reference power of 1 picowatt(10\^(-12) watt) for the referenced octave band frequency."
+  ~~Definition~~ PropertyType
+
+
+Pset_AirTerminalBoxPHistory.xml
+===============================
 
 modifications
 -------------
 * 
   ~~PSET_PERFORMANCEDRIVEN~~ PSET_TYPEDRIVENOVERRIDE
-* PropertyDefs > PropertyDef [Name="AudioVolume"]
+* PropertyDefs > PropertyDef [Name="Sound"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MediaSource"]
+* PropertyDefs > PropertyDef [Name="AtmosphericPressure"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="PowerState"]
+* PropertyDefs > PropertyDef [Name="DamperPosition"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MediaContent"]
+* PropertyDefs > PropertyDef [Name="AirflowCurve"]
   ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_ElectricApplianceTypeCommon.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue
-  ~~TypePropertyEnumeratedValue~~ TypePropertySingleValue
-* PropertyDefs > PropertyDef [Name="Status"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~&lt;EnumList&gt;~~ &lt;DataType&gt;
 
