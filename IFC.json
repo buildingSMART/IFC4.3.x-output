@@ -5180,13 +5180,13 @@
         "Psets": {
           "Attributes": {
             "Properties": {
-              "ObjectType": {
-                "type": "string",
-                "Description": "The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. \\X\\0D\n> NOTE&nbsp; Subtypes of _IfcContext_ do not introduce a _PredefinedType_ attribute, therefore the usage of _ObjectType_ is not bound to the selection of USERDEFINED within the _PredefinedType_ enumaration."
-              },
               "LongName": {
                 "type": "string",
                 "Description": "Long name for the context as used for reference purposes."
+              },
+              "ObjectType": {
+                "type": "string",
+                "Description": "The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. \\X\\0D\n> NOTE&nbsp; Subtypes of _IfcContext_ do not introduce a _PredefinedType_ attribute, therefore the usage of _ObjectType_ is not bound to the selection of USERDEFINED within the _PredefinedType_ enumaration."
               },
               "Phase": {
                 "type": "string",
@@ -5603,6 +5603,10 @@
         "Psets": {
           "Attributes": {
             "Properties": {
+              "Description": {
+                "type": "string",
+                "Description": "Optional description, provided for exchanging informative comments."
+              },
               "GlobalId": {
                 "type": "string",
                 "Description": "Assignment of a globally unique identifier within the entire software world."
@@ -5610,10 +5614,6 @@
               "Name": {
                 "type": "string",
                 "Description": "Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule."
-              },
-              "Description": {
-                "type": "string",
-                "Description": "Optional description, provided for exchanging informative comments."
               }
             }
           }
@@ -6111,17 +6111,17 @@
           },
           "Attributes": {
             "Properties": {
-              "Name": {
+              "Category": {
                 "type": "string",
-                "Description": "Name of the material. \\X\\0D\n> EXAMPLE A view definition may require _Material.Name_ to uniquely specify e.g. concrete or steel grade, in which case the attribute Material.Category could take the value ''Concrete'' or ''Steel''.\\X\\0D\n\\X\\0D\n> NOTE&nbsp; Material grade may have different meaning in different view definitions, e.g. strength grade for structural design and analysis, or visible appearance grade in architectural application. Also, more elaborate material grade definition may be associated as classification via inverse attribute _HasExternalReferences_."
+                "Description": "Definition of the category (group or type) of material, in more general terms than given by attribute _Name_.  \\X\\0D\n> EXAMPLE A view definition may require each _Material.Name_ to be unique, e.g. for each concrete or steel grade used in a project, in which case _Material.Category_ could take the values ''Concrete'' or ''Steel''.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE&nbsp; The attribute has been added at the end of attribute list."
               },
               "Description": {
                 "type": "string",
                 "Description": "Definition of the material in more descriptive terms than given by attributes _Name_ or _Category_.\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE&nbsp; The attribute has been added at the end of attribute list."
               },
-              "Category": {
+              "Name": {
                 "type": "string",
-                "Description": "Definition of the category (group or type) of material, in more general terms than given by attribute _Name_.  \\X\\0D\n> EXAMPLE A view definition may require each _Material.Name_ to be unique, e.g. for each concrete or steel grade used in a project, in which case _Material.Category_ could take the values ''Concrete'' or ''Steel''.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE&nbsp; The attribute has been added at the end of attribute list."
+                "Description": "Name of the material. \\X\\0D\n> EXAMPLE A view definition may require _Material.Name_ to uniquely specify e.g. concrete or steel grade, in which case the attribute Material.Category could take the value ''Concrete'' or ''Steel''.\\X\\0D\n\\X\\0D\n> NOTE&nbsp; Material grade may have different meaning in different view definitions, e.g. strength grade for structural design and analysis, or visible appearance grade in architectural application. Also, more elaborate material grade definition may be associated as classification via inverse attribute _HasExternalReferences_."
               }
             }
           }
@@ -6418,25 +6418,25 @@
                 "type": "string",
                 "Description": "The date that the plan is created."
               },
-              "Purpose": {
-                "type": "string",
-                "Description": "A description of the purpose of the work schedule."
-              },
               "Duration": {
                 "type": "string",
                 "Description": "The total duration of the entire work schedule."
               },
-              "TotalFloat": {
+              "FinishTime": {
                 "type": "string",
-                "Description": "The total time float of the entire work schedule."
+                "Description": "The finish time of the schedule."
+              },
+              "Purpose": {
+                "type": "string",
+                "Description": "A description of the purpose of the work schedule."
               },
               "StartTime": {
                 "type": "string",
                 "Description": "The start time of the schedule."
               },
-              "FinishTime": {
+              "TotalFloat": {
                 "type": "string",
-                "Description": "The finish time of the schedule."
+                "Description": "The total time float of the entire work schedule."
               }
             }
           }
@@ -7919,13 +7919,13 @@
           },
           "Attributes": {
             "Properties": {
-              "RefElevation": {
-                "type": "real",
-                "Description": "Datum elevation relative to sea level."
-              },
               "LandTitleNumber": {
                 "type": "string",
                 "Description": "The land title number (designation of the site within a regional system)."
+              },
+              "RefElevation": {
+                "type": "real",
+                "Description": "Datum elevation relative to sea level."
               }
             }
           }
@@ -9567,6 +9567,10 @@
           },
           "Attributes": {
             "Properties": {
+              "ProfileName": {
+                "type": "string",
+                "Description": "Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in _IfcExternalReference.ItemReference_."
+              },
               "ProfileType": {
                 "values": [
                   "CURVE",
@@ -9574,10 +9578,6 @@
                 ],
                 "type": "IfcProfileTypeEnum",
                 "Description": "Defines the type of geometry into which this profile definition shall be resolved, either a curve or a surface area. In case of curve the profile should be referenced by a swept surface, in case of area the profile should be referenced by a swept area solid."
-              },
-              "ProfileName": {
-                "type": "string",
-                "Description": "Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in _IfcExternalReference.ItemReference_."
               }
             }
           }
@@ -11109,14 +11109,6 @@
           },
           "Attributes": {
             "Properties": {
-              "OverallHeight": {
-                "type": "real",
-                "Description": "Overall measure of the height, it reflects the Z Dimension of a bounding box, enclosing the body of the door opening. If omitted, the _OverallHeight_ should be taken from the geometric representation of the _IfcOpening_ in which the door is inserted.\\X\\0D\n NOTE The body of the door might be taller then the door opening (e.g. in cases where the door lining includes a casing). In these cases the _OverallHeight_ shall still be given as the door opening height, and not as the total height of the door lining."
-              },
-              "OverallWidth": {
-                "type": "real",
-                "Description": "Overall measure of the width, it reflects the X Dimension of a bounding box, enclosing the body of theE door opening. If omitted, the _OverallWidth_ should be taken from the geometric representation of the _IfcOpening_ in which the door is inserted.\\X\\0D\n NOTE The body of the door might be wider then the door opening (e.g. in cases where the door lining includes a casing). In these cases the _OverallWidth_ shall still be given as the door opening width, and not as the total width of the door lining."
-              },
               "OperationType": {
                 "values": [
                   "SINGLE_SWING_LEFT",
@@ -11147,6 +11139,14 @@
                 ],
                 "type": "IfcDoorTypeOperationEnum",
                 "Description": "Type defining the general layout and operation of the door type in terms of the partitioning of panels and panel operations."
+              },
+              "OverallHeight": {
+                "type": "real",
+                "Description": "Overall measure of the height, it reflects the Z Dimension of a bounding box, enclosing the body of the door opening. If omitted, the _OverallHeight_ should be taken from the geometric representation of the _IfcOpening_ in which the door is inserted.\\X\\0D\n NOTE The body of the door might be taller then the door opening (e.g. in cases where the door lining includes a casing). In these cases the _OverallHeight_ shall still be given as the door opening height, and not as the total height of the door lining."
+              },
+              "OverallWidth": {
+                "type": "real",
+                "Description": "Overall measure of the width, it reflects the X Dimension of a bounding box, enclosing the body of theE door opening. If omitted, the _OverallWidth_ should be taken from the geometric representation of the _IfcOpening_ in which the door is inserted.\\X\\0D\n NOTE The body of the door might be wider then the door opening (e.g. in cases where the door lining includes a casing). In these cases the _OverallWidth_ shall still be given as the door opening width, and not as the total width of the door lining."
               },
               "UserDefinedOperationType": {
                 "type": "string",
@@ -14479,13 +14479,13 @@
           },
           "Attributes": {
             "Properties": {
-              "Status": {
-                "type": "string",
-                "Description": "The status currently assigned to the request.  Possible values include:  \\X\\0D\nHold: wait to see if further requests are received before deciding on action  \\X\\0D\nNoAction: no action is required on this request  \\X\\0D\nSchedule: plan action to take place as part of maintenance or other task planning/scheduling  \\X\\0D\nUrgent: take action immediately  \\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
-              },
               "LongDescription": {
                 "type": "string",
                 "Description": "Detailed description of the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
+              },
+              "Status": {
+                "type": "string",
+                "Description": "The status currently assigned to the request.  Possible values include:  \\X\\0D\nHold: wait to see if further requests are received before deciding on action  \\X\\0D\nNoAction: no action is required on this request  \\X\\0D\nSchedule: plan action to take place as part of maintenance or other task planning/scheduling  \\X\\0D\nUrgent: take action immediately  \\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
               }
             }
           }
@@ -14521,13 +14521,13 @@
           },
           "Attributes": {
             "Properties": {
-              "Status": {
-                "type": "string",
-                "Description": "The status currently assigned to the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
-              },
               "LongDescription": {
                 "type": "string",
                 "Description": "Detailed description of the request.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
+              },
+              "Status": {
+                "type": "string",
+                "Description": "The status currently assigned to the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
               }
             }
           }
@@ -15239,14 +15239,6 @@
         "Psets": {
           "Attributes": {
             "Properties": {
-              "NominalDiameter": {
-                "type": "real",
-                "Description": "The nominal diameter defining the cross-section size of the reinforcing bar."
-              },
-              "CrossSectionArea": {
-                "type": "real",
-                "Description": "The effective cross-section area of the reinforcing bar."
-              },
               "BarLength": {
                 "type": "real",
                 "Description": "The total length of the reinforcing bar. The total length of bended bars are calculated according to local standards with corrections for the bends."
@@ -15258,6 +15250,14 @@
                 ],
                 "type": "IfcReinforcingBarSurfaceEnum",
                 "Description": "Indicator for whether the bar surface is plain or textured."
+              },
+              "CrossSectionArea": {
+                "type": "real",
+                "Description": "The effective cross-section area of the reinforcing bar."
+              },
+              "NominalDiameter": {
+                "type": "real",
+                "Description": "The nominal diameter defining the cross-section size of the reinforcing bar."
               },
               "BendingShapeCode": {
                 "type": "string",
@@ -15299,6 +15299,18 @@
         "Psets": {
           "Attributes": {
             "Properties": {
+              "LongitudinalBarCrossSectionArea": {
+                "type": "real",
+                "Description": "The effective cross-section area of the longitudinal bars of the mesh."
+              },
+              "LongitudinalBarNominalDiameter": {
+                "type": "real",
+                "Description": "The nominal diameter denoting the cross-section size of the longitudinal bars."
+              },
+              "LongitudinalBarSpacing": {
+                "type": "real",
+                "Description": "The spacing between the longitudinal bars.  Note: an even distribution of bars is presumed; other cases are handled by classification or property sets."
+              },
               "MeshLength": {
                 "type": "real",
                 "Description": "The overall length of the mesh measured in its longitudinal direction."
@@ -15307,25 +15319,13 @@
                 "type": "real",
                 "Description": "The overall width of the mesh measured in its transversal direction."
               },
-              "LongitudinalBarNominalDiameter": {
-                "type": "real",
-                "Description": "The nominal diameter denoting the cross-section size of the longitudinal bars."
-              },
-              "TransverseBarNominalDiameter": {
-                "type": "real",
-                "Description": "The nominal diameter denoting the cross-section size of the transverse bars."
-              },
-              "LongitudinalBarCrossSectionArea": {
-                "type": "real",
-                "Description": "The effective cross-section area of the longitudinal bars of the mesh."
-              },
               "TransverseBarCrossSectionArea": {
                 "type": "real",
                 "Description": "The effective cross-section area of the transverse bars of the mesh."
               },
-              "LongitudinalBarSpacing": {
+              "TransverseBarNominalDiameter": {
                 "type": "real",
-                "Description": "The spacing between the longitudinal bars.  Note: an even distribution of bars is presumed; other cases are handled by classification or property sets."
+                "Description": "The nominal diameter denoting the cross-section size of the transverse bars."
               },
               "TransverseBarSpacing": {
                 "type": "real",
@@ -15349,33 +15349,33 @@
         "Psets": {
           "Attributes": {
             "Properties": {
-              "NominalDiameter": {
+              "AnchorageSlip": {
                 "type": "real",
-                "Description": "The nominal diameter defining the cross-section size of the prestressed part of the tendon."
+                "Description": "The deformation of an anchor or slippage of tendons when the prestressing device is released."
               },
               "CrossSectionArea": {
                 "type": "real",
                 "Description": "The effective cross-section area of the prestressed part of the tendon."
               },
-              "TensionForce": {
+              "FrictionCoefficient": {
                 "type": "real",
-                "Description": "The maximum allowed tension force that can be applied on the tendon."
+                "Description": "The friction coefficient between tendon and tendon sheet while the tendon is unbonded."
+              },
+              "MinCurvatureRadius": {
+                "type": "real",
+                "Description": "The smallest curvature radius calculated on the whole effective length of the tendon where the tension properties are still valid."
+              },
+              "NominalDiameter": {
+                "type": "real",
+                "Description": "The nominal diameter defining the cross-section size of the prestressed part of the tendon."
               },
               "PreStress": {
                 "type": "real",
                 "Description": "The prestress to be applied on the tendon."
               },
-              "FrictionCoefficient": {
+              "TensionForce": {
                 "type": "real",
-                "Description": "The friction coefficient between tendon and tendon sheet while the tendon is unbonded."
-              },
-              "AnchorageSlip": {
-                "type": "real",
-                "Description": "The deformation of an anchor or slippage of tendons when the prestressing device is released."
-              },
-              "MinCurvatureRadius": {
-                "type": "real",
-                "Description": "The smallest curvature radius calculated on the whole effective length of the tendon where the tension properties are still valid."
+                "Description": "The maximum allowed tension force that can be applied on the tendon."
               },
               "SheathDiameter": {
                 "type": "real",
