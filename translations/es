@@ -9,674 +9,576 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcStructuralAnalysisDomain.pot\n"
-"X-Crowdin-File-ID: 94\n"
+"X-Crowdin-File: /master/IfcRepresentationResource.pot\n"
+"X-Crowdin-File-ID: 78\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-11-15 21:02\n"
+"PO-Revision-Date: 2021-11-15 21:03\n"
 
-#:IFC.xml:36465
-msgid "IfcActionSourceTypeEnum"
-msgstr "IfcActionSourceTypeEnum"
+#:IFC.xml:28896
+msgid "IfcConvertDirectionInto2D"
+msgstr "IfcConvertDirectionInfo to2D"
 
-msgid "IfcActionSourceTypeEnum_DEFINITION"
-msgstr "This enumeration type contains possible action sources. X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
+msgid "IfcConvertDirectionInto2D_DEFINITION"
+msgstr "The function returns a two dimensional direction, using the x y ratios of a two or three dimensional direction as input. X 0D X 0D NOTE This functions is currently solely used to determine the TrueNorth direction in [[IfcGeometricRepresentationSubContext]] . X 0D X 0D HISTORY New function in IFC2x4."
 
-#:IFC.xml:36494
-msgid "IfcActionTypeEnum"
-msgstr "IfcActionTypeEnum"
+#:IFC.xml:28904
+msgid "IfcCoordinateOperation"
+msgstr "IfcCoordinateOperation"
 
-msgid "IfcActionTypeEnum_DEFINITION"
-msgstr "This enumeration type is used to distinguish between possible action types at a high level. It can be used for an automated definition of load combinations and for dimensioning. The contained items and their acronyms are adopted from the Eurocode standard. X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
+msgid "IfcCoordinateOperation_DEFINITION"
+msgstr "The coordinate operation is an abstract supertype to handle any operation transformation or conversion between two coordinate reference systems. It is meant to provide expandability for future versions, since currently only the conversion of a local engineering coordinate system into a map coordinate reference system is dealt with by the subtype [[IfcMapConversion]] . X 0D X 0D By convention, a coordinate operation is given between the SourceCRS being the more local, or child coordinate reference system, and the TargetCRS being the more remote or parent coordinate reference system, in the S special case the coordinate operation between the local engineering coordinate system of the construction project and any map or other coordinate reference system. X 0D X 0D .extDef X 0D NOTE Definition from OpenGIS Abstract Specification, Topic 2 X 0D If the relationship between any two coordinate reference systems is known, coordinates can be transformed or converted to another coordinate reference system. Coordinate operations are divided into two subtypes .note X 0D Coordinate conversion mathematical operation on coordinates that does not include any change of datum. The best known example of a coordinate conversion is a map projection. The parameters describing coordinate conversions are defined rather than empirically derived. Note that some conversions have no parameters. X 0D Coordinate transformation mathematical operation on coordinates that usually includes a change of datum. The parameters of a coordinate transformation are empirically derived from data containing the coordinates of a series of points in both coordinate reference systems. This computational process is usually over determined , allowing derivation of error or accuracy estimates for the transformation. Also, the stochastic nature of the parameters may result in multiple different versions of the same coordinate transformation. Because of this several transformations may exist for a given pair of coordinate reference systems, differing in their transformation method, parameter values and accuracy characteristics. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
 
-#:IFC.xml:36501
-msgid "IfcAnalysisModelTypeEnum"
-msgstr "IfcAnalysisModelTypeEnum"
+#:IFC.xml:28911
+msgid "IfcCoordinateOperation_TargetCRS"
+msgstr "TargetCRS"
 
-msgid "IfcAnalysisModelTypeEnum_DEFINITION"
-msgstr "This type definition is used to distinguish between different types of structural analysis models. The analysis models are differentiated by their dimensionality. X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
+msgid "IfcCoordinateOperation_TargetCRS_DEFINITION"
+msgstr "TargetCRS"
 
-#:IFC.xml:36511
-msgid "IfcAnalysisTheoryTypeEnum"
-msgstr "IfcAnalysisTheoryTypeEnum"
+#:IFC.xml:28905
+msgid "IfcCoordinateOperation_SourceCRS"
+msgstr "Fuente CRS"
 
-msgid "IfcAnalysisTheoryTypeEnum_DEFINITION"
-msgstr "This enumeration is used to distinguish between different types of structural analysis methods, including first order theory, second order theory small deformations , third order theory large deformations and the full nonlinear theory geometric nonlinearity together with other nonlinearities such as plasticity . X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
+msgid "IfcCoordinateOperation_SourceCRS_DEFINITION"
+msgstr "Sistema de referencia de coordenadas fuente para la operación."
 
-#:IFC.xml:36519
-msgid "IfcLoadGroupTypeEnum"
-msgstr "IfcLoadGroupTypeEnum"
+#:IFC.xml:28947
+msgid "IfcCoordinateReferenceSystem"
+msgstr "IfcCoordinateReferenceSystem"
 
-msgid "IfcLoadGroupTypeEnum_DEFINITION"
-msgstr "This enumeration is used to distinguish between different levels of load grouping. It allows to differentiate between load groups, load cases, and load combinations. X 0D X 0D HISTORY New enumeration in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE LOAD COMBINATION GROUP deprecated. Load cases are directly assigned to load combinations with different factors for each load case load combination pair by means of [[IfcRelAssignsToGroupByFactor]] .bSI Documentation"
+msgid "IfcCoordinateReferenceSystem_DEFINITION"
+msgstr "The [[IfcCoordinateReferenceSystem]] is a definition of a coordinate reference system by means of qualified identifiers only. The interpretation of the identifier is expected to be well known to the receiving software. X 0D X 0D .extDef X 0D NOTE Definition from OpenGIS Abstract Specification, Topic 2 X 0D A coordinate reference system is a coordinate system which is related to the real world by a datum. The coordinate system is composed of a set of coordinate axes with specified units of measure. The datum specifies the relationship of a coordinate system to the earth. The resulting combination of coordinate system and datum is a coordinate reference system. X 0D X 0D The unambiguous identifier by which the coordinate reference system is know, is stored in the Name attribute. Well defined identifiers include the geodetic and often also the vertical datum. In these cases the GeodeticDatum and the VerticalDatum can be omitted. X 0D X 0D EXAMPLE The identifier EPSG 25832 defines the geodetic datum ETRS89 in additon to the projection and the zone. EPSG 5555 defined the geodetic datum ETRS89 and the vertical datum DHHN92 . X 0D X 0D NOTE One widely used, publicly available authority is the European Petroleum Survey Group EPSG , and use of this authority is currently specified in several OGC Implementation Specifications. Software used to transport IFC engineering models into GIS applications and vice versa is expected to have knowledge about the OGC Implementation Specifications. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
 
-#:IFC.xml:36529
-msgid "IfcProjectedOrTrueLengthEnum"
-msgstr "IfcProjectedOrTrueLengthEnum"
+#:IFC.xml:28923
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
+msgstr "Operación de Coordenadas"
 
-msgid "IfcProjectedOrTrueLengthEnum_DEFINITION"
-msgstr "This enumeration type is needed for load definition and is only considered if the load values are given as global actions and if they define linear or planar loads that is, one or two dimensionally distributed loads . X 0D X 0D Figure 1 illustrates the interpretation of a load definition depending on the enumeration types [[IfcGlobalOrLocalEnum]] and [[IfcProjectedOrTrueLengthEnum]] . X 0D X 0D HISTORY New enumeration in IFC2x2. X 0D X 0D projected or true length .. .. .. .. .. .. figures ifcprojectedortruelengthenum fig1.gif Figure 1 Projected or true length bSI Documentation"
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
+msgstr "Operación de Coordenadas"
 
-#:IFC.xml:36533
-msgid "IfcRelConnectsStructuralActivity"
-msgstr "IfcRelConectsStructural Activity"
+#:IFC.xml:28948
+msgid "IfcCoordinateReferenceSystem_Description"
+msgstr "Descripción"
 
-msgid "IfcRelConnectsStructuralActivity_DEFINITION"
-msgstr "The [[IfcRelConnectsStructuralActivity]] relationship connects a structural activity either an action or reaction to a structural member, structural connection, or element. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
+msgstr "Informal description of this coordinate reference system X 0D X 0D .extDef X 0D NOTE In case Name equals WKT the Description is well known text that corresponds to ISO 19162 definition specifying the necessary parameters for the coordinate reference system. X 0D X 0D Example for ellipsoid X 0D ELLIPSOID ,,,"
 
-#:IFC.xml:36541
-msgid "IfcRelConnectsStructuralActivity_RelatedStructuralActivity"
-msgstr "Actividad estructural relacionada"
+#:IFC.xml:28953
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
+msgstr "GeodeticDatum"
 
-msgid "IfcRelConnectsStructuralActivity_RelatedStructuralActivity_DEFINITION"
-msgstr "Actividad estructural relacionada"
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
+msgstr "Nombre por el cual se identifica este datum. El datum geodésico se asocia con el sistema de referencia de coordenadas e indica la forma y el tamaño del ellipsoide de rotación y la conexión y orientación de este ellipsoide a la tierra real del globo. Es necesario proporcionarlo, si el identificador de nombre no define el datum geodésico sin ambigüedades también. X 0D X 0D .examples X 0D EXAMPLE datos geodésicos incluyen .note X 0D ED50 X 0D EUREF89 X 0D WSG84"
 
-#:IFC.xml:36534
-msgid "IfcRelConnectsStructuralActivity_RelatingElement"
-msgstr "Elemento Relacionado"
+#:IFC.xml:28958
+msgid "IfcCoordinateReferenceSystem_Name"
+msgstr "Nombre"
 
-msgid "IfcRelConnectsStructuralActivity_RelatingElement_DEFINITION"
-msgstr "Referencia a un elemento estructural o al que se aplica la actividad especificada."
+msgid "IfcCoordinateReferenceSystem_Name_DEFINITION"
+msgstr "Name by which the coordinate reference system is identified. X 0D NOTE 1 The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as EPSG 5555 . X 0D .extDef X 0D NOTE 2 The name shall be WKT if an EPSG code does not exist for the CRS."
 
-#:IFC.xml:36567
-msgid "IfcRelConnectsStructuralMember"
-msgstr "IfcRelConnectsStructuralMember"
+#:IFC.xml:28963
+msgid "IfcCoordinateReferenceSystem_VerticalDatum"
+msgstr "VerticalDatum"
 
-msgid "IfcRelConnectsStructuralMember_DEFINITION"
-msgstr "The entity [[IfcRelConnectsStructuralMember]] defines all needed properties describing the connection between structural members and structural connection objects nodes or supports . X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D Use Definition X 0D X 0D Point Connection X 0D Instances of the entity [[IfcRelConnectsStructuralMember]] shall be used to describe a connection between an instance of [[IfcStructuralPointConnection]] and either an instance of [[IfcStructuralCurveMember]] or [[IfcStructuralSurfaceMember]] . The RelatedStructuralConnection for point connections has to be of type [[IfcStructuralPointConnection]] . X 0D X 0D Curve Connection X 0D Instances of the entity [[IfcRelConnectsStructuralMember]] shall be used to describe a connection between an instance of [[IfcStructuralCurveConnection]] and an instance of either [[IfcStructuralCurveMember]] or [[IfcStructuralSurfaceMember]] . The RelatedStructuralConnection for curve connections has to be of type [[IfcStructuralCurveConnection]] . X 0D X 0D Surface Connection X 0D Instances of the entity [[IfcRelConnectsStructuralMember]] shall be used to describe a connection between an instance of [[IfcStructuralSurfaceConnection]] and an instance of [[IfcStructuralSurfaceMember]] . The RelatedStructuralConnection for curve connections has to be of type [[IfcStructuralSurfaceConnection]] . X 0D X 0D Coordinate System for Applied Conditions X 0D All values defined by AppliedCondition or AdditionalConditions are given within the coordinate system provided by ConditionCoordinateSystem , which is defined relative to the local coordinate system of the structural member. If the ConditionCoordinateSystem is not defined, the local coordinate system of the structural member is used instead. X 0D X 0D Supported Length X 0D Optionally a supported length can be given, which specifies the length or width of the physical connection along a curve connection. X 0D X 0D Figure 1 illustrates the appropriate definition of support lengths. X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D Figure 1 Structural member support lengths X 0D X 0D X 0D bSI Documentation"
+msgid "IfcCoordinateReferenceSystem_VerticalDatum_DEFINITION"
+msgstr "Nombre por el cual se identifica el datum vertical. El datum vertical está asociado al eje de altura del sistema de referencia de coordenadas e indica el plano de referencia y el punto fundamental que define el origen de un sistema de altura. Es necesario proporcionarla, si el identificador de nombre no define también de forma inequívoca el datum vertical y si el sistema de referencia de coordenadas es un sistema de referencia 3D. X 0D X 0D .examples X 0D EXAMPLE datos verticales incluyen . ote X 0D DHHN92 el Hauptho alemán Hennetz X 0D EVRS2007 el Sistema Europeo de Referencia Vertical"
 
-#:IFC.xml:9910
-msgid "IfcRelConnectsStructuralMember_ConditionCoordinateSystem"
-msgstr "Sistema Coordenado"
+#:IFC.xml:28970
+msgid "IfcCoordinateReferenceSystemSelect"
+msgstr "IfcCoordinateReferenceSystemSelect"
 
-msgid "IfcRelConnectsStructuralMember_ConditionCoordinateSystem_DEFINITION"
-msgstr "Sistema Coordenado"
+msgid "IfcCoordinateReferenceSystemSelect_DEFINITION"
+msgstr "[[IfcCoordinateReferenceSystemSelect]] is a select between either the local engineering coordinate system, represented by the [[IfcGeometricRepresentationContext]] , or another coordinate reference system, represented by [[IfcCoordinateReferenceSystem]] , to be the source of a coordinate operation. X 0D X 0D HISTORY New select type in IFC4."
 
-#:IFC.xml:36575
-msgid "IfcRelConnectsStructuralMember_RelatingStructuralMember"
-msgstr "Relacionando a un miembro estructural"
+#:IFC.xml:28971
+msgid "IfcGeometricProjectionEnum"
+msgstr "IfcGeometric-ProyectionEnum"
 
-msgid "IfcRelConnectsStructuralMember_RelatingStructuralMember_DEFINITION"
-msgstr "Relacionando a un miembro estructural"
+msgid "IfcGeometricProjectionEnum_DEFINITION"
+msgstr "[[IfcGeometricProjectionEnum]] defines the various representation types that can be semantically distinguished. Often different levels of detail of the shape representation are controlled by the representation type. X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
 
-#:IFC.xml:36589
-msgid "IfcRelConnectsStructuralMember_RelatedStructuralConnection"
-msgstr "Conexión estructural relacionada"
+#:IFC.xml:28982
+msgid "IfcGeometricRepresentationContext"
+msgstr "Contexto de representación geométrica Ifc"
 
-msgid "IfcRelConnectsStructuralMember_RelatedStructuralConnection_DEFINITION"
-msgstr "Conexión estructural relacionada"
+msgid "IfcGeometricRepresentationContext_DEFINITION"
+msgstr "The [[IfcGeometricRepresentationContext]] defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the WorldCoordinateSystem attribute. The main representation context may also provide the true north direction, see Figure 1. X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D The TrueNorth attribute should be provided, if the y axis of the WorldCoordinateSystem does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute WorldCoordinateSystem. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not resent, it defaults to 0.,1. i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction. X 0D X 0D The true North as seen in CAD within the figure on the left shows the correct interpretation of the TrueNorth direction X 0D X 0D X 0D If a conversion to a geographic coordinate system is included by virtue of the HasCoordinateOperation attribute, then the TrueNorth attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an [[IfcCoordinateOperation]]. X 0D X 0D X 0D X 0D Figure 1 Definition of the true north direction X 0D X 0D X 0D X 0D X 0D X 0D The use of one instance of [[IfcGeometricRepresentationContext]] to represent the model 3D view is mandatory, the use of a second instance of [[IfcGeometricRepresentationContext]] to represent the plan 2D view is optional but needs to be given, if there are scale dependent plan views , the additional scale or view dependent contexts need to be handled by using the subtype [[IfcGeometricRepresentationSubContext]] pointing to the model view or the plan view as the ParentContext . See Figure 2 for an example using geometric representation contexts for 3D and 2D with assigned sub contexts. X 0D X 0D NOTE The inherited attribute ContextType shall have one of the following recognized values Model , Plan , NotDefined . X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D Use of representation contexts defined at [[IfcProject]] for 3D model and 2D plan context, X 0D including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space. X 0D X 0D X 0D X 0D Figure 2 Example of using geometric representation contexts X 0D X 0D X 0D X 0D X 0D X 0D .extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D A geometric representation context is a representation context in which the geometric representation items are geometrically founded. X 0D X 0D NOTE Entity adapted from geometric representation context defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0. X 0D X 0D .change ifc2x3 X 0D IFC2x3 CHANGE Applicable values for ContextType are only Model , Plan , and NotDefined . All other contexts are now handled by [[IfcGeometricRepresentationSubContext]] . X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Mapping to Geographic coordinate system added by inverse attribute HasCoordinateOperation .bSI Documentation"
 
-#:IFC.xml:36603
-msgid "IfcRelConnectsStructuralMember_AppliedCondition"
-msgstr "Condición Aplicada"
+#:IFC.xml:10911
+msgid "IfcGeometricRepresentationContext_TrueNorth"
+msgstr "Verdadero Norte"
 
-msgid "IfcRelConnectsStructuralMember_AppliedCondition_DEFINITION"
-msgstr "Condición Aplicada"
+msgid "IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "Verdadero Norte"
 
-#:IFC.xml:36615
-msgid "IfcRelConnectsStructuralMember_AdditionalConditions"
-msgstr "Condiciones adicionales"
+#:IFC.xml:28935
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation"
+msgstr "Operación de Coordenadas"
 
-msgid "IfcRelConnectsStructuralMember_AdditionalConditions_DEFINITION"
-msgstr "Condiciones adicionales"
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation_DEFINITION"
+msgstr "Operación de Coordenadas"
 
-#:IFC.xml:36568
-msgid "IfcRelConnectsStructuralMember_SupportedLength"
-msgstr "Longitud soportada"
+#:IFC.xml:29001
+msgid "IfcGeometricRepresentationContext_HasSubContexts"
+msgstr "HasSubContextos"
 
-msgid "IfcRelConnectsStructuralMember_SupportedLength_DEFINITION"
-msgstr "Define la longitud soportada de esta conexión estructural. Ver Fig. para más detalles."
+msgid "IfcGeometricRepresentationContext_HasSubContexts_DEFINITION"
+msgstr "HasSubContextos"
 
-#:IFC.xml:36627
-msgid "IfcRelConnectsWithEccentricity"
-msgstr "IfcRelConnectsWithEccentricidad"
+#:IFC.xml:28983
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "Dimensión del espacio coordenado"
 
-msgid "IfcRelConnectsWithEccentricity_DEFINITION"
-msgstr "The entity [[IfcRelConnectsWithEccentricity]] adds the definition of eccentricity to the connection between a structural member and a structural connection representing either a node or support . X 0D X 0D NOTE Another eccentricity model is available independently of eccentric connection specification The section profile of a curve member may be inserted eccentrically with respect to the member s reference curve, see definitions at [[IfcStructuralCurveMember]] . Whether one or the other or both eccentricity models may be used is subject to information requirements and local agreements. X 0D X 0D HISTORY New entity in IFC2x3. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definitions changed to always require two topology items. X 0D X 0D Use Definition X 0D X 0D Point Connection X 0D ConnectionConstraint shall be of type [[IfcConnectionPointGeometry]] and shall refer to two instances of [[IfcVertexPoint]] . X 0D X 0D Curve Connection X 0D ConnectionConstraint shall be of type [[IfcConnectionCurveGeometry]] and shall refer to two instances of [[IfcEdge]] or subtypes. X 0D X 0D Surface Connection X 0D ConnectionConstraint shall be of type [[IfcConnectionSurfaceGeometry]] and shall refer to two instances of [[IfcFaceSurface]] .bSI Documentation"
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "El recuento de dimensiones enteras del espacio de coordenadas modelado en un contexto de representación geométrica."
 
-#:IFC.xml:8514
-msgid "IfcRelConnectsWithEccentricity_ConnectionConstraint"
-msgstr "Restricción de conexión"
+#:IFC.xml:28988
+msgid "IfcGeometricRepresentationContext_Precision"
+msgstr "Precisión"
 
-msgid "IfcRelConnectsWithEccentricity_ConnectionConstraint_DEFINITION"
-msgstr "Restricción de conexión"
+msgid "IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "Valor de la precisión del modelo para los modelos geométricos. Es un doble valor REAL , típicamente en rango 1E 5 a 1E 8, que indica que la tolerancia bajo la cual se siguen asumiendo dos puntos dados es idéntica. El valor puede ser utilizado, por ejemplo, para fijar la distancia máxima de una curva de borde a la superficie de la cara subyacente en modelos de brep."
 
-#:IFC.xml:36630
-msgid "IfcStructuralAction"
-msgstr "Acción estructural IfcEstructural"
+#:IFC.xml:28993
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "Sistema Coordenado mundial"
 
-msgid "IfcStructuralAction_DEFINITION"
-msgstr "A structural action is a structural activity that acts upon a structural item or building element. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute DestabilizingLoad made optional. Attribute CausedBy deleted use [[IfcRelAssignsToProduct]] via ReferencedBy instead. X 0D X 0D .use head X 0D Relationship use definition X 0D X 0D Structural actions are grouped into either an [[IfcStructuralLoadGroup]] of predefined type LOAD GROUP or, more often, an [[IfcStructuralLoadCase]] . This is accomplished via the inverse relationship HasAssignments and an [[IfcRelAssignsToGroup]] relationship object. [[IfcStructuralLoadGroup]].LoadGroupFor or [[IfcStructuralLoadCase]].LoadGroupFor respectively refers to the structural analysis model s in which the loads are used. X 0D X 0D It is furthermore possible to establish relationships between actions in one analysis model and reactions in another analysis model which cause the actions. For example, a support reaction from one structural system may be taken over as a load onto another supporting structural system. This is expressed by means of the inverse relationship ReferencedBy of the action and an [[IfcRelAssignsToProduct]] relationship object. [[IfcRelAssignsToProduct]].Name is set to Causes and [[IfcRelAssignsToProduct]].RelatedObjects refers to an instance of a subtype of [[IfcStructuralReaction]] .bSI Documentation"
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "Estabilización del sistema de coordenadas de ingeniería a menudo llamado sistema de coordenadas mundiales en CAD para todos los contextos de representación utilizados por el proyecto. X 0D X 0D NOTE Se puede utilizar para proporcionar una mayor estabilidad numérica si la colocación del edificio está lejos del origen. En la mayoría de los casos, sin embargo, se ajustaría al origen 0.,0.,0. y las direcciones x 1.,0.,0. X 0D X 0D X 0D X 0D X 0D Si se proporciona una ubicación geográfica usando [[IfcMapConversion]] entonces el atttibute WorldCoordinateSystem se utiliza para definir el offset entre el punto cero del sistema de coordenadas de ingeniería local y el punto de referencia geográfico al que se relaciona el desplazamiento [[IfcMapConversion]]. En la práctica preferida ambos puntos también llamados el punto base del proyecto y el punto de encuesta debe ser coincidente. Sin embargo, es posible compensar el punto de referencia geográfico del punto local cero."
 
-#:IFC.xml:36631
-msgid "IfcStructuralAction_DestabilizingLoad"
-msgstr "Desestabilizar carga"
+#:IFC.xml:29015
+msgid "IfcGeometricRepresentationSubContext"
+msgstr "Ifcrepresentación geométrica subcontexto"
 
-msgid "IfcStructuralAction_DestabilizingLoad_DEFINITION"
-msgstr "Indica si esta acción puede causar un problema de estabilidad."
+msgid "IfcGeometricRepresentationSubContext_DEFINITION"
+msgstr "[[IfcGeometricRepresentationSubContext]] defines the context that applies to several shape representations of a product being a sub context, sharing the WorldCoordinateSystem , CoordinateSpaceDimension , Precision and TrueNorth attributes with the parent [[IfcGeometricRepresentationContext]] . X 0D X 0D The [[IfcGeometricRepresentationSubContext]] is used to define semantically distinguished representation types for different information content, dependent on the representation view and the target scale. It can be used to control the level of detail of the shape representation that is most applicable to this geometric representation context. In addition the sub context is used to control the later appearance of the [[IfcShapeRepresentation]] within a plot view. X 0D X 0D NOTE If the [[IfcShapeRepresentation]] using this sub context has [[IfcStyledItem]] s assigned to the Items , the presentation style information e.g. [[IfcCurveStyle]] , [[IfcTextStyle]] associated with the [[IfcStyledItem]] is given in target plot dimensions. For example, a line thickness [[IfcCurveStyle]].CurveWidth is given by a thickness measure relating to the thickness for a plot within the range of target scale. X 0D X 0D Each [[IfcProduct]] can then have several instances of subtypes of [[IfcRepresentation]] , each being assigned to a different [[IfcGeometricRepresentationSubContext]] . The applicable values for the inherited ContextIdentifier attribute shall be identical to the RepresentationIdentifier attrubute defined at [[IfcShapeRepresentation]] . X 0D X 0D NOTE The provision of a model view [[IfcGeometricRepresentationContext]].ContextType Model is mandatory. Instances of [[IfcGeometricRepresentationSubContext]] relate to it as its ParentContext . X 0D X 0D EXAMPLE Instances of [[IfcGeometricRepresentationSubContext]] can be used to handle the multi view blocks or macros, which are used in CAD programs to store several scale and or view dependent geometric representations of the same object. The application can then choose the most appropriate representation for showing the geometric shape of the product, depending on the target view and scale. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
 
-#:IFC.xml:36638
-msgid "IfcStructuralActivity"
-msgstr "Actividad estructural IfcEstructural"
+#:IFC.xml:29001
+msgid "IfcGeometricRepresentationSubContext_ParentContext"
+msgstr "Contexto padre"
 
-msgid "IfcStructuralActivity_DEFINITION"
-msgstr "The abstract entity [[IfcStructuralActivity]] combines the definition of actions such as forces, displacements, etc. and reactions support reactions, internal forces, deflections, etc. which are specified by using the basic load definitions from the IfcStructuralLoadResource . X 0D X 0D The differentiation between actions and reactions is realized by instantiating objects either from subclasses of [[IfcStructuralAction]] or [[IfcStructuralReaction]] respectively. They inherit commonly needed attributes from the abstract superclass [[IfcStructuralActivity]] , notably the relationship which connects actions or reactions with connections, analysis members, or elements subtypes of [[IfcStructuralItem]] or [[IfcElement]] . X 0D X 0D NOTE Instances of [[IfcStructuralActivity]] which are connected with an [[IfcElement]] are subject to agreements outside the scope of this specification. X 0D X 0D NOTE The semantics of [[IfcStructuralActivity]] are only fully defined if an activity instance is connected with exactly one structural item. The inverse attribute AssignedToStructuralItem can only be empty in incomplete models or in conceptual models which are not yet ready for analysis. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Cardinality of attribute AssignedToStructuralItem relaxed from 1 to 0..1 in order to allow for schema compliant incomplete models as well as conceptual models without load item relationships. X 0D X 0D Coordinate Systems X 0D X 0D The following coordinate systems are distinguished X 0D X 0D The so called global coordinate system is the coordinate system shared by all items and activities which are grouped in a common [[IfcStructuralAnalysisModel]] . This coordinate system is established by an ObjectPlacement . This coordinate system is not necessarily the same as the [[IfcProject]] s world coordinate system. X 0D The so called local coordinate system is a coordinate system local to a structural item connection or member . This coordinate system is established by a Representation in conjunction with further use definitions and attributes of subtypes of [[IfcStructuralItem]] . X 0D X 0D Representation items in topology representations are always given within the ObjectPlacement , i.e. in so called global coordinates global with respect to the [[IfcStructuralAnalysisModel]] to which this activity belongs . X 0D X 0D Locations of the load objects in the AppliedLoad attribute if of type [[IfcStructuralLoadConfiguration]] are always given in local coordinates. X 0D X 0D Directions of the load objects in the AppliedLoad attribute refer to global or local coordinates according to the GlobalOrLocal attribute. X 0D X 0D The ObjectPlacement and Representation are sometimes not explicitly instantiated instead they may be implied as described below. Global and local coordinate systems are then determined in the same way as with explicit placement and representation. X 0D X 0D Topology Use Definitions X 0D X 0D Instances of [[IfcStructuralActivity]] which are connected with a structural item of same dimensionality, i.e. X 0D X 0D a point action or reaction connected with a point item [[IfcStructuralPointConnection]] , X 0D a curve action or reaction connected with a curve item [[IfcStructuralCurveConnection]] , [[IfcStructuralCurveMember]] , or X 0D a surface action or reaction connected with a surface item [[IfcStructuralSurfaceConnection]] , [[IfcStructuralSurfaceMember]] and which acts on the entire surface of the item and is not specified by isocontours X 0D X 0D shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the [[IfcStructuralActivity]] is the same as the ones of the [[IfcStructuralItem]] . X 0D X 0D Instances of [[IfcStructuralActivity]] which are connected with X 0D X 0D a curve item [[IfcStructuralCurveConnection]] , [[IfcStructuralCurveMember]] and act on a point of the item X 0D a surface item [[IfcStructuralSurfaceConnection]] , [[IfcStructuralSurfaceMember]] and act on a point or on a curve or on a part of the surface of the item X 0D X 0D shall have a topology representation as specified below. It includes a placement and a product representation. The [[IfcProductRepresentation]] shall be given by an item in a Representation of type [[IfcTopologyRepresentation]] . X 0D X 0D Instances of [[IfcStructuralActivity]] which are connected with X 0D X 0D a surface item [[IfcStructuralSurfaceConnection]] , [[IfcStructuralSurfaceMember]] and are specified by isocontours X 0D X 0D shall have a shape representation as specified below. It includes a placement and a product representation. The [[IfcProductRepresentation]] shall be given by items in a Representation of type [[IfcShapeRepresentation]] . Shape representation and topology representation may be combined. X 0D X 0D Local Placement X 0D X 0D The local placement for [[IfcStructuralActivity]] is defined in its supertype [[IfcProduct]] . It is defined by the [[IfcLocalPlacement]] , which establishes a global coordinate system which shall be common to all items and activities in an [[IfcStructuralAnalysisModel]] . X 0D X 0D Topology Representation X 0D X 0D Instances of [[IfcStructuralActivity]] which act on parts of a surface item shall have a topology representation given by a face with underlying surface geometry, [[IfcFaceSurface]] , which should be the single item of [[IfcTopologyRepresentation]].Items . The surface establishes a local coordinate system of the activity X 0D X 0D The origin of surface parameters u,v is the origin of the local coordinate system. X 0D The local x and y directions follow the tangents on the surface and are in parallel with and directed like u and v respectively. X 0D The local z direction is in parallel with and directed like the surface normal. X 0D X 0D RepresentationIdentifier Reference X 0D RepresentationType Face X 0D X 0D Instances of [[IfcStructuralActivity]] which act on a curve on a surface item shall have a topology representation given by an edge [[IfcEdge]] or subtype , which should be the single item of [[IfcTopologyRepresentation]].Items . The curve geometry shall be compatible with the surface geometry of the connected item. In conjunction with this surface, the curve establishes a local coordinate system of the activity X 0D X 0D The origin of the curve parameter u is the origin of the local coordinate system. X 0D The local x direction follows the tangent on the curve and is directed like u. X 0D The local z direction is in parallel with and directed like the surface normal of the connected surface item. X 0D The local x,y,z directions form a right handed Cartesian coordinate system. X 0D X 0D RepresentationIdentifier Reference X 0D RepresentationType Edge X 0D X 0D NOTE While an [[IfcEdge]] or [[IfcOrientedEdge]] with underlying [[IfcEdge]] does not provide an explicit underlying curve geometry, it may be used to imply an underlying straight line as reference curve with the origin of the curve parameter at the start vertex point. X 0D X 0D Instances of [[IfcStructuralActivity]] which act on a single point on a curve or surface item shall have a topology representation given by an [[IfcVertexPoint]] , which should be the single item of [[IfcTopologyRepresentation]].Items . The point geometry shall be compatible with the curve or surface geometry of the connected item. The local coordinate system of the activity is oriented by the curve or surface geometry of the connected item as described above for activities with edge or face topology. X 0D X 0D RepresentationIdentifier Reference X 0D RepresentationType Vertex X 0D X 0D Shape Representation X 0D X 0D Instances of [[IfcStructuralActivity]] which act on a surface item and are specified by isocontours level sets shall have a shape representation given by a set of curves on a surface, IfcPCurve . The basis surface shall comply with or preferably be identical with the surface of the structural item to which the activity is connected. The representation identifier and type of this geometric representation is X 0D X 0D RepresentationIdentifier Level set X 0D RepresentationType GeometricCurveSet ,bSI Documentation"
+msgid "IfcGeometricRepresentationSubContext_ParentContext_DEFINITION"
+msgstr "Contexto padre"
 
-#:IFC.xml:36541
-msgid "IfcStructuralActivity_AssignedToStructuralItem"
-msgstr "Asignado al elemento estructural"
+#:IFC.xml:29016
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "SELF IfcGeometricRepresentationContext CoordinateSpaceDimension"
 
-msgid "IfcStructuralActivity_AssignedToStructuralItem_DEFINITION"
-msgstr "Asignado al elemento estructural"
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].CoordinateSpaceDimension"
 
-#:IFC.xml:36646
-msgid "IfcStructuralActivity_AppliedLoad"
-msgstr "Carga aplicada"
+#:IFC.xml:29021
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision"
+msgstr "SELF IfcGeometricRepresentationContext Precisión"
 
-msgid "IfcStructuralActivity_AppliedLoad_DEFINITION"
-msgstr "Carga aplicada"
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].Precision"
 
-#:IFC.xml:36639
-msgid "IfcStructuralActivity_GlobalOrLocal"
-msgstr "Global o local"
+#:IFC.xml:29026
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth"
+msgstr "SELF IfcGeometricRepresentationContext TrueNorth"
 
-msgid "IfcStructuralActivity_GlobalOrLocal_DEFINITION"
-msgstr "Indicates whether the load directions refer to the global coordinate system global to X 0D the analysis model, i.e. as established by [[IfcStructuralAnalysisModel]].SharedPlacement X 0D or to the local coordinate system local to the activity or connected item, as established by X 0D an explicit or implied representation and its parameter space . X 0D X 0D NOTE , the informal definition of IfcRepresentationResource.[[IfcGlobalOrLocalEnum]] doe s not distinguish between global coordinate system and world coordinate system . On the other hand, this distinction is necessary in the IfcStructuralAnalysisDomain where the shared global coordinate system of an analysis model may very well not be the same as the project wide world coordinate system. X 0D X 0D NOTE In the scope of [[IfcStructuralActivity]].GlobalOrLocal , the meaning of GLOBAL COORDS is therefore not to be taken as world coordinate system but as the analysis model specific shared coordinate system. In contrast, LOCAL COORDS is to be taken as coordinates which are local to individual structural items and activities, as established by subclass specific geometry use definitions."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].TrueNorth"
 
-#:IFC.xml:36658
-msgid "IfcStructuralActivityAssignmentSelect"
-msgstr "Actividad estructural Ifcselección"
+#:IFC.xml:29030
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "SELF IfcGeometricRepresentationContext WorldCoordinateSystem"
 
-msgid "IfcStructuralActivityAssignmentSelect_DEFINITION"
-msgstr "This type definition shall be used to distinguish between a reference to an instance either of [[IfcStructuralItem]] or [[IfcElement]] . The [[IfcStructuralActivityAssignmentSelect]] type is referenced by the entity [[IfcRelConnectsStructuralActivity]] which defines the connection between activities [[IfcStructuralActivity]] and the loaded element. X 0D X 0D HISTORY New type in IFC2x2."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].WorldCoordinateSystem"
 
-#:IFC.xml:36659
-msgid "IfcStructuralAnalysisModel"
-msgstr "IfcStructuralAnalysisModel"
+#:IFC.xml:29035
+msgid "IfcGeometricRepresentationSubContext_TargetScale"
+msgstr "Escala de objetivo"
 
-msgid "IfcStructuralAnalysisModel_DEFINITION"
-msgstr "The [[IfcStructuralAnalysisModel]] is used to assemble all information needed to represent a structural analysis model. It encompasses certain general properties such as analysis type , references to all contained structural members, structural supports or connections, as well as loads and the respective load results. X 0D X 0D Important functionalities for the description of an analysis model are derived from existing IFC entities X 0D X 0D From [[IfcSystem]] it inherits the ability to couple the built system via [[IfcRelReferencedInSpatialStructure]] to one or more [[IfcSpatialElement]] subtypes as necessary. X 0D X 0D From [[IfcGroup]] it inherits the inverse attribute IsGroupedBy, pointing to the relationship class [[IfcRelAssignsToGroup]] . This allows the grouping of structural members instances of [[IfcStructuralMember]] , and supports instances of [[IfcStructuralConnection]] which belong to a specific analysis model. X 0D X 0D NOTE Loads as instances of [[IfcStructuralAction]] are not included through IsGroupedBy. Loads are assigned through the LoadedBy attribute relationship, using load groups as a grouping mechanism. Only top level load groups should be referenced via LoadedBy, i.e. load combinations if any load combinations exist, or load cases if no load combinations exist in this analysis model. X 0D X 0D NOTE Results as instances of [[IfcStructuralReaction]] are not included through IsGroupedBy. Results are assigned through the HasResults attribute relationship, using result groups as a grouping mechanism. X 0D X 0D From [[IfcObjectDefinition]] it inherits the inverse attribute IsDecomposedBy pointing to the relationship class [[IfcRelAggregates]] . It provides the hierarchy between the separate partial analysis models. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute SharedPlacement and informal propositions added, allowing for easy retrieval of the common object placement and for specification of the analysis model s coordiante system before any structural item is instantiated. WHERE rule added. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If one or more structural item instance of a subtype of [[IfcStructuralItem]] is grouped into an [[IfcStructuralAnalysisModel]] , the attribute SharedPlacement shall be provided with a value. X 0D 2. The ObjectPlacement of all structural items which are grouped into the same instance of [[IfcStructuralAnalysisModel]] shall refer to the same instance of [[IfcObjectPlacement]] as [[IfcStructuralAnalysisModel]] .SharedPlacement. X 0D X 0D X 0D NOTE This rule is necessary to achieve consistent topology representations. The topology representations of structural items in an analysis model are meant to share vertices and edges und must therefore have the same object placement. X 0D X 0D NOTE A structural item may be grouped into more than one analysis model. In this case, all these models must use the same instance of [[IfcObjectPlacement]] .bSI Documentation"
+msgid "IfcGeometricRepresentationSubContext_TargetScale_DEFINITION"
+msgstr "La escala de la gráfica de destino de la representación X 0D a la que se aplica este contexto de representación. La escala X 0D NOTA indica la escala de la gráfica de destino para el contexto de representación sub. todos los estilos de anotación se dan en dimensiones de parcela de acuerdo a esta escala de parcela objetivo. X 0D Si se dan múltiples instancias de [[IfcGeometricRepresentationSubContext]] que tienen el mismo valor de TargetView, la escala de la parcela de destino se aplica hasta la siguiente escala más pequeña, o hasta una escala pequeña ilimitada. X 0D X 0D NOTE Escala 1 100 dada como 0.01 dentro de TargetScale es más grande que 1 200 dado como 0.005 en TargetScale ."
 
-#:IFC.xml:8779
-msgid "IfcStructuralAnalysisModel_SharedPlacement"
-msgstr "SharedPlacement"
+#:IFC.xml:29040
+msgid "IfcGeometricRepresentationSubContext_TargetView"
+msgstr "Vista objetivo"
 
-msgid "IfcStructuralAnalysisModel_SharedPlacement_DEFINITION"
-msgstr "SharedPlacement"
+msgid "IfcGeometricRepresentationSubContext_TargetView_DEFINITION"
+msgstr "Vista de destino de la representación a la que se aplica este contexto de representación."
 
-#:IFC.xml:9922
-msgid "IfcStructuralAnalysisModel_OrientationOf2DPlane"
-msgstr "Orientación del plan 2"
+#:IFC.xml:29045
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView"
+msgstr "Vista definida por usuario"
 
-msgid "IfcStructuralAnalysisModel_OrientationOf2DPlane_DEFINITION"
-msgstr "Orientación del plan 2"
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView_DEFINITION"
+msgstr "Vista de destino definida por el usuario, este valor de atributo será dado, si el atributo TargetView está establecido en USERDEFINED."
 
-#:IFC.xml:36667
-msgid "IfcStructuralAnalysisModel_LoadedBy"
-msgstr "Cargado por"
+#:IFC.xml:29052
+msgid "IfcGlobalOrLocalEnum"
+msgstr "IfcGlobalOrLocalEnum"
 
-msgid "IfcStructuralAnalysisModel_LoadedBy_DEFINITION"
-msgstr "Cargado por"
+msgid "IfcGlobalOrLocalEnum_DEFINITION"
+msgstr "This enumeration type defines if the local object coordinate system or the global world coordinate system for the project is used to describe the measure values of entities which have a reference to this type. X 0D X 0D NOTE The world coordinate system is given by the [[IfcGeometricRepresentationContext]].WorldCoordinateSystem and is unique within the project. The local or object coordinate system is given by [[IfcProduct]].ObjectPlacement and is used by all [[IfcRepresentation]] s within the [[IfcProduct]].Representation . X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
 
-#:IFC.xml:36681
-msgid "IfcStructuralAnalysisModel_HasResults"
-msgstr "Resultados"
+#:IFC.xml:29056
+msgid "IfcMapConversion"
+msgstr "IfcMapversión"
 
-msgid "IfcStructuralAnalysisModel_HasResults_DEFINITION"
-msgstr "Resultados"
+msgid "IfcMapConversion_DEFINITION"
+msgstr "The map conversion deals with transforming the local engineering coordinate system, often called world coordinate system, into the coordinate reference system of the underlying map. X 0D X 0D NOTE The [[IfcMapConversion]] does not handle the projection of a map from the geodetic coordinate reference system. X 0D X 0D The map conversion allows to convert the local origin of the local engineering coordinate system to its place within a map easting, northing, orthogonal height and to rotate the x axis of the local engineering coordinate system within the horizontal easting westing plane of the map. X 0D X 0D NOTE The z axis of the local engineering coordinate system is always parallel to the z axis of the map coordinate system. X 0D X 0D The scale factor can be used when the length unit for the 3 axes of the map coordinate system are not identical with the length unit established for this project see S [[IfcProject]].UnitsInContext , if omitted, the scale factor 1.0 is assumed. X 0D X 0D HISTORY New entity in IFC4bSI Documentation"
 
-#:IFC.xml:36660
-msgid "IfcStructuralAnalysisModel_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29057
+msgid "IfcMapConversion_Eastings"
+msgstr "Estes"
 
-msgid "IfcStructuralAnalysisModel_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcMapConversion_Eastings_DEFINITION"
+msgstr "Especifica la ubicación a lo largo de la relajación del sistema de coordenadas del sistema de referencia de coordenadas del mapa de destino. X 0D NOTE para sistemas de coordenadas cartesianas a mano derecha, esto establecería la ubicación a lo largo del eje x."
 
-#:IFC.xml:36695
-msgid "IfcStructuralConnection"
-msgstr "Conexión estructural Ifc"
+#:IFC.xml:29062
+msgid "IfcMapConversion_Northings"
+msgstr "Nórdicos"
 
-msgid "IfcStructuralConnection_DEFINITION"
-msgstr "An [[IfcStructuralConnection]] represents a structural connection object node connection, edge connection, or surface connection or supports. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+msgid "IfcMapConversion_Northings_DEFINITION"
+msgstr "Especifica la ubicación a lo largo del sistema de coordenadas del sistema de referencia de coordenadas del mapa de destino. X 0D NOTA para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje y"
 
-#:IFC.xml:36589
-msgid "IfcStructuralConnection_ConnectsStructuralMembers"
-msgstr "Conectar miembros estructurales"
+#:IFC.xml:29067
+msgid "IfcMapConversion_OrthogonalHeight"
+msgstr "Altura ortogonal"
 
-msgid "IfcStructuralConnection_ConnectsStructuralMembers_DEFINITION"
-msgstr "Conectar miembros estructurales"
+msgid "IfcMapConversion_OrthogonalHeight_DEFINITION"
+msgstr "Altura ortogonal relativa al datum vertical especificado. X 0D NOTA para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje z"
 
-#:IFC.xml:36698
-msgid "IfcStructuralConnection_AppliedCondition"
-msgstr "Condición Aplicada"
+#:IFC.xml:29072
+msgid "IfcMapConversion_Scale"
+msgstr "Escala"
 
-msgid "IfcStructuralConnection_AppliedCondition_DEFINITION"
-msgstr "Condición Aplicada"
+msgid "IfcMapConversion_Scale_DEFINITION"
+msgstr "Escala a utilizar, cuando las unidades del SIR no son idénticas a las unidades del sistema de coordenadas de ingeniería. Si se omite, se asume el valor de 1.0."
 
-#:IFC.xml:36710
-msgid "IfcStructuralCurveAction"
-msgstr "IfcStructuralCurveAction"
+#:IFC.xml:29077
+msgid "IfcMapConversion_ScaleY"
+msgstr "Escala"
 
-msgid "IfcStructuralCurveAction_DEFINITION"
-msgstr "A structural curve action defines an action which is distributed over a curve. A curve action may be connected with a curve member or curve connection, or surface member or surface connection. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Former entity IfcStructuralLinearActionVarying from IFC2x2 has been removed and are replaced by this entity. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D Standard Case X 0D If connected with a curve item, instances of [[IfcStructuralCurveAction]] shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the [[IfcStructuralActivity]] is the same as the ones of the member or connection. X 0D X 0D Special Case 1 X 0D If connected with a surface item, instances of [[IfcStructuralCurveAction]] shall have an ObjectPlacement and Representation , containing an [[IfcEdgeCurve]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D Special Case 2 X 0D If not connected with a structural item which may happen in an incomplete or conceptual model , a curve action should have an ObjectPlacement and Representation , containing an [[IfcEdgeCurve]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If the curve action is of the predefined type CONST, SINUS, or PARABOLA, SELF [[IfcStructuralActivity]].AppliedLoad must not be of type [[IfcStructuralLoadConfiguration]] . In case of SINUS and PARABOLA, the load item defines the maximum of the load at the centre of the load distribution. X 0D 2. If the curve action is of the predefined type LINEAR, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two items. X 0D 3. If the curve action is of the predefined type POLYGONAL, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain three or more items. X 0D 4. If the curve action is of the predefined type DISCRETE, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two or more items. X 0D 5. In case of types LINEAR, POLYGONAL, and DISCRETE, the load items shall have one dimensional [[IfcStructuralLoadConfiguration]].Locations , defining the location of the load samples in local coordinates of the curve action. The load items shall be provided in ascending order according to their locations. The first and the last load item define the extent of the load distribution. X 0D 6. Point actions must be of type DISCRETE, thus contain two or more load points. Single point loads are modeled by [[IfcStructuralPointAction]] . X 0D 7. All items in SELF [[IfcStructuralActivity]].AppliedLoad [[IfcStructuralLoadConfiguration]].Values shall be of the same entity type.bSI Documentation"
+msgid "IfcMapConversion_ScaleY_DEFINITION"
+msgstr "Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates"
 
-#:IFC.xml:36711
-msgid "IfcStructuralCurveAction_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29082
+msgid "IfcMapConversion_ScaleZ"
+msgstr "Escala Z"
 
-msgid "IfcStructuralCurveAction_PredefinedType_DEFINITION"
-msgstr "Type of action according to its distribution of load values."
+msgid "IfcMapConversion_ScaleZ_DEFINITION"
+msgstr "Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates"
 
-#:IFC.xml:36716
-msgid "IfcStructuralCurveAction_ProjectedOrTrue"
-msgstr "ProjectedOrTrue"
+#:IFC.xml:29087
+msgid "IfcMapConversion_XAxisAbscissa"
+msgstr "XAxisAbscissa"
 
-msgid "IfcStructuralCurveAction_ProjectedOrTrue_DEFINITION"
-msgstr "Define si los valores de carga son dados por longitud real de la curva en la que actúan, o por longitud de la proyección de la curva en dirección de carga. Este último sólo es aplicable a las cargas que actúan en direcciones de coordenadas globales."
+msgid "IfcMapConversion_XAxisAbscissa_DEFINITION"
+msgstr "Especifica el valor a lo largo del eje de relajación del punto final de un vector indicando la posición del eje x local del sistema de referencia de coordenadas de ingeniería. X 0D NOTA 1 para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje x X 0D X 0D NOTE 2 junto con el XAxisOrdinate proporciona la dirección del eje x local dentro del plano horizontal del sistema de coordenadas de mapa"
 
-#:IFC.xml:36723
-msgid "IfcStructuralCurveActivityTypeEnum"
-msgstr "IfcStructuralCurveActivityTypeEnum"
+#:IFC.xml:29092
+msgid "IfcMapConversion_XAxisOrdinate"
+msgstr "%s ordenados"
 
-msgid "IfcStructuralCurveActivityTypeEnum_DEFINITION"
-msgstr "This enumeration defines the distribution of load values in a curve action or reaction. X 0D X 0D HISTORY New enumeration in IFC4bSI Documentation"
+msgid "IfcMapConversion_XAxisOrdinate_DEFINITION"
+msgstr "Especifica el valor a lo largo del eje norteño del punto final de un vector indicando la posición del eje x local del sistema de referencia de coordenadas de ingeniería. X 0D NOTA 1 para sistemas de coordenadas cartesianas a mano derecha, esto establecería la ubicación a lo largo del eje y X 0D X 0D . ote X 0D X 0D X 0D XAxisAbscissa proporciona la dirección del eje x local dentro del plano horizontal del sistema de coordenadas del mapa."
 
-#:IFC.xml:36741
-msgid "IfcStructuralCurveConnection"
-msgstr "Conexión IfcestructuralCurva"
+#:IFC.xml:29099
+msgid "IfcMaterialDefinitionRepresentation"
+msgstr "Definición de material IfcMaterial"
 
-msgid "IfcStructuralCurveConnection_DEFINITION"
-msgstr "Instances of [[IfcStructuralCurveConnection]] describe edge nodes , i.e. edges where two or more surface members are joined, or edge supports. Edge curves may be straight or curved. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute Axis added, allowing for skewed supports. Use definitions added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] . The local coordinate system is established by the reference curve given by topology representation and by the attribute Axis . The local x axis is parallel with the tangent on the reference curve. The local z axis is located in the surface which is created by sweeping Axis along the reference curve and is directed according to Axis . The local y axis is directed such that x,y,z form a right handed Cartesian coordinate system.bSI Documentation"
+msgid "IfcMaterialDefinitionRepresentation_DEFINITION"
+msgstr "[[IfcMaterialDefinitionRepresentation]] defines presentation information relating to [[IfcMaterial]] . It allows for multiple presentations of the same material for different geometric representation contexts. X 0D X 0D NOTE The [[IfcMaterialDefinitionRepresentation]] is currently only used to define presentation information to material used at element occurrences, defined as subtypes of [[IfcElement]] , or at element types, defined as subtypes of [[IfcElementType]] . The [[IfcMaterial]] is assigned to the subtype of [[IfcElement]] , or [[IfcElementType]] using the [[IfcRelAssociatesMaterial]] relationship eventually via other material related entities [[IfcMaterialLayerSetUsage]] , [[IfcMaterialLayerSet]] , [[IfcMaterialLayer]] , or [[IfcMaterialProfileSetUsage]] , [[IfcMaterialProfileSet]] , [[IfcMaterialProfile]] . X 0D X 0D The [[IfcMaterialDefinitionRepresentation]] can apply X 0D X 0D different presentation styles for different representation contexts, for example, a different style for sketch view, model view or plan view, or for different target scales, X 0D for each representation context is can apply curve style, fill area style hatching , symbol, text and surface style. X 0D X 0D HISTORY New entity in IFC2x3. X 0D X 0D .change ifc2x3 X 0D IFC2x3 CHANGE The entity [[IfcMaterialDefinitionRepresentation]] has been added. Upward compatibility for file based exchange is guaranteed. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE The assignment of curve, surface and other styles to an [[IfcStyledItem]] has been simplified by IfcStyleAssignmentSelect . The use of intermediate IfcPresentationStyleAssignment is deprecated. X 0D X 0D X 0D X 0D .use head X 0D Use definition X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 09As shown in Figure 1, the presentation assignment can be X 0D specific to a representation context by adding one and more X 0D [[IfcStyledRepresentation]] s. Each of them includes a X 0D single [[IfcStyledItem]] with exactly zero or one style X 0D for either curve, fill area, surface, text or symbol style X 0D that is applicable. X 0D X 0D X 0D X 0D Figure 1 Material definition representation X 0D X 0D X 09 X 0D X 0D bSI Documentation"
 
-#:IFC.xml:10959
-msgid "IfcStructuralCurveConnection_Axis"
-msgstr "Eje"
+#:IFC.xml:19286
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial"
+msgstr "Material representado"
 
-msgid "IfcStructuralCurveConnection_Axis_DEFINITION"
-msgstr "Eje"
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial_DEFINITION"
+msgstr "Material representado"
 
-#:IFC.xml:36744
-msgid "IfcStructuralCurveMember"
-msgstr "IfcCurva estructural"
+#:IFC.xml:29102
+msgid "IfcProductDefinitionShape"
+msgstr "IfcDefinición del producto"
 
-msgid "IfcStructuralCurveMember_DEFINITION"
-msgstr "Instances of [[IfcStructuralCurveMember]] describe edge members, i.e. structural analysis idealizations of beams, columns, rods etc.. Curve members may be straight or curved. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute Axis and WHERE rule added. Use definitions changed. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] . The local coordinate system is established by the reference curve given by topology representation and by the attribute Axis . The local x axis is parallel with the tangent on the reference curve. The local z axis is located in the surface which is created by sweeping Axis along the reference curve and is directed according to Axis . The local y axis is directed such that x,y,z form a right handed Cartesian coordinate system.bSI Documentation"
+msgid "IfcProductDefinitionShape_DEFINITION"
+msgstr "The [[IfcProductDefinitionShape]] defines all shape relevant information about an [[IfcProduct]] . It allows for multiple geometric shape representations of the same product. The shape relevant information includes X 0D X 0D the shape representation including geometric representation items for 3D solids, 2D annotations, etc. and X 0D associated presentation information line color, line type, surface rendering properties X 0D assignment to presentation layers CAD layers for visibility control X 0D or the topological representation items for connectivity systems vertex, edge, face representations that may include geometric representation items vertex points, edge curves, face surfaces X 0D X 0D NOTE The definition of this entity relates to the ISO 10303 entity product definition shape. Please refer to ISO IS 10303 41 1994 for the final definition of the formal standard. X 0D X 0D HISTORY New entity in IFC1.5bSI Documentation"
 
-#:IFC.xml:10971
-msgid "IfcStructuralCurveMember_Axis"
-msgstr "Eje"
+#:IFC.xml:18428
+msgid "IfcProductDefinitionShape_ShapeOfProduct"
+msgstr "Forma del producto"
 
-msgid "IfcStructuralCurveMember_Axis_DEFINITION"
-msgstr "Eje"
+msgid "IfcProductDefinitionShape_ShapeOfProduct_DEFINITION"
+msgstr "Forma del producto"
 
-#:IFC.xml:36745
-msgid "IfcStructuralCurveMember_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29106
+msgid "IfcProductDefinitionShape_HasShapeAspects"
+msgstr "HasShapeAspects"
 
-msgid "IfcStructuralCurveMember_PredefinedType_DEFINITION"
-msgstr "Type of member with respect to its load carrying behavior in this analysis idealization."
+msgid "IfcProductDefinitionShape_HasShapeAspects_DEFINITION"
+msgstr "HasShapeAspects"
 
-#:IFC.xml:36752
-msgid "IfcStructuralCurveMemberTypeEnum"
-msgstr "Tipo de miembro de curva estructural"
+#:IFC.xml:29118
+msgid "IfcProductRepresentation"
+msgstr "Representación de productos Ifc"
 
-msgid "IfcStructuralCurveMemberTypeEnum_DEFINITION"
-msgstr "This enumeration distinguishes between different types of structural curve members, such as cables. X 0D X 0D HISTORY New enumeration in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Renamed from IfcStructuralCurveTypeEnum .bSI Documentation"
+msgid "IfcProductRepresentation_DEFINITION"
+msgstr "[[IfcProductRepresentation]] defines a representation of a product, including its geometric or topological representation. A product can have zero, one or many geometric representations, and a single geometric representation can be shared among various products using mapped representations. X 0D X 0D NOTE The definition of this entity relates to the ISO 10303 entity property definition. The use of the term property was avoided since it conflicts with the property, property type, and property set definitions elsewhere in the IFC model. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .change ifc2x3 X 0D IFC2x3 NOTE S Users should not instantiate the entity from IFC2x3 onwards. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Entity made abstract.bSI Documentation"
 
-#:IFC.xml:36766
-msgid "IfcStructuralCurveMemberVarying"
-msgstr "Variando la curva estructural"
+#:IFC.xml:29130
+msgid "IfcProductRepresentation_Representations"
+msgstr "Representaciones"
 
-msgid "IfcStructuralCurveMemberVarying_DEFINITION"
-msgstr "This entity describes edge members with varying profile properties. Each instance of [[IfcStructuralCurveMemberVarying]] is composed of two or more instances of [[IfcStructuralCurveMember]] with differing profile properties. These subordinate members relate to the instance of [[IfcStructuralCurveMemberVarying]] by [[IfcRelAggregates]] . X 0D X 0D NOTE A curve member whose variation of profile properties can be sufficiently described by a start profile and an end profile e.g. tapers shall be modeled as a single direct instance of the supertype [[IfcStructuralCurveMember]] . X 0D X 0D NOTE It is recommended that structural activities actions or reactions are not connected with aggregated [[IfcStructuralCurveMemberVarying]] but only with the [[IfcStructuralCurveMember]] s in the aggregation. That way, difficulties in interpretation of local coordinates are avoided. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definition changed. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] and [[IfcStructuralCurveMember]] . The local coordinates of the aggregate are derived from those of its parts. Length measures in local x direction of the aggregate depend on continuity and lengths of the parts. The Axis of the aggregate shal be the same as the Axis of the part at the start of the aggregate. X 0D X 0D Material Use Definition X 0D X 0D Only the individual parts direct instances of [[IfcStructuralCurveMember]] carry material and profile information.bSI Documentation"
+msgid "IfcProductRepresentation_Representations_DEFINITION"
+msgstr "Representaciones"
 
-#:IFC.xml:36769
-msgid "IfcStructuralCurveReaction"
-msgstr "IfcStructuralCurveReaction"
+#:IFC.xml:29119
+msgid "IfcProductRepresentation_Description"
+msgstr "Descripción"
 
-msgid "IfcStructuralCurveReaction_DEFINITION"
-msgstr "This entity defines a reaction which occurs distributed over a curve. A curve reaction may be connected with a curve member or curve connection, or surface member or surface connection. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D Standard Case X 0D If connected with a curve item, instances of IfcStructuralCurveRection shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the [[IfcStructuralActivity]] is the same as the ones of the member or connection. X 0D X 0D Special Case X 0D If connected with a surface item, instances of [[IfcStructuralCurveReaction]] shall have an ObjectPlacement and Representation , containing an [[IfcEdgeCurve]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If the curve reaction is of the predefined type CONST, SELF [[IfcStructuralActivity]].AppliedLoad must not be of type [[IfcStructuralLoadConfiguration]] . X 0D 2. If the curve reaction is of the predefined type LINEAR, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two items. X 0D 3. If the curve reaction is of the predefined type POLYGONAL, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain three or more items. X 0D 4. If the curve action is of the predefined type DISCRETE, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two or more items. X 0D 5. In case of types LINEAR, POLYGONAL, and DISCRETE, the load items shall have one dimensional [[IfcStructuralLoadConfiguration]].Locations , defining the location of the result samples in local coordinates of the curve reaction. The load items shall be provided in ascending order according to their locations. The first and the last load item define the extent of the result distribution. X 0D 6. If the curve reaction is of the predefined type EQUIDISTANT, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two or more items. [[IfcStructuralLoadConfiguration]].Locations shall be omitted as it is implicit. The load items shall be provided in ascending order. The first and the last load item are located at the beginning and end of the result distribution, respectively. X 0D 7. All items in SELF [[IfcStructuralActivity]].AppliedLoad [[IfcStructuralLoadConfiguration]].Values shall be of the same entity type.bSI Documentation"
+msgid "IfcProductRepresentation_Description_DEFINITION"
+msgstr "La palabra o grupo de palabras que caracterizan la representación del producto. Se puede utilizar para añadir significado adicional al nombre de la representación del producto."
 
-#:IFC.xml:36770
-msgid "IfcStructuralCurveReaction_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29124
+msgid "IfcProductRepresentation_Name"
+msgstr "Nombre"
 
-msgid "IfcStructuralCurveReaction_PredefinedType_DEFINITION"
-msgstr "Type of reaction according to its distribution of load values."
+msgid "IfcProductRepresentation_Name_DEFINITION"
+msgstr "La palabra o grupo de palabras por las cuales se conoce la representación del producto."
 
-#:IFC.xml:36777
-msgid "IfcStructuralItem"
-msgstr "IfcStructuralItem"
+#:IFC.xml:29144
+msgid "IfcProductRepresentationSelect"
+msgstr "Selección de representación de producto"
 
-msgid "IfcStructuralItem_DEFINITION"
-msgstr "The abstract entity [[IfcStructuralItem]] is the generalization of structural members and structural connections, that is, analysis idealizations of elements in the building model. It defines the relation between structural members and connections with structural activities actions and reactions . X 0D X 0D Relationships between elements in the building model and structural items as their idealizations can be expressed by instances of [[IfcRelAssignsToProduct]] . X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definitions and informal proposition added. X 0D X 0D Coordinate Systems X 0D X 0D The following coordinate systems are distinguished X 0D X 0D The so called global coordinate system is the coordinate system shared by all items and activities which are grouped in a common [[IfcStructuralAnalysisModel]] . This coordinate system is established by SELF [[IfcProduct]].ObjectPlacement . This coordinate system is not necessarily the same as the [[IfcProject]] s world coordinate system. X 0D The so called local coordinate system is a coordinate system local to a structural item connection or member . This coordinate system is established by a Representation attribute inherited from [[IfcProduct]] in conjunction with further use definitions and attributes of subtypes of [[IfcStructuralItem]] . X 0D X 0D Representation items in topology representations are always given within the ObjectPlacement , i.e. in so called global coordinates global with respect to the [[IfcStructuralAnalysisModel]] to which this item belongs . X 0D X 0D The usage of local coordinate systems is further defined in subtypes. X 0D X 0D Topology Use Definitions X 0D X 0D Instances of [[IfcStructuralItem]] shall have a topology representation. It includes a placement and a product representation. The [[IfcProductRepresentation]] shall be given by an item in a Representation of type [[IfcTopologyRepresentation]] . X 0D X 0D Local Placement X 0D X 0D The local placement for [[IfcStructuralItem]] is defined in its supertype [[IfcProduct]] . It is defined by the [[IfcLocalPlacement]] , which establishes a global coordinate system which shall be common to all items and activities in an [[IfcStructuralAnalysisModel]] . X 0D X 0D Topology Representation X 0D X 0D Instances of [[IfcStructuralItem]] shall have a topology representation given by an instance of a subtype of [[IfcTopologicalRepresentationItem]] , which should be the single item of [[IfcTopologyRepresentation]].Items . Depending on the dimensionality of the structural item, one of the following types of toplogical representation items shall be used X 0D X 0D Point connections shall be represented by an [[IfcVertexPoint]] with an underlying [[IfcCartesianPoint]] . The Cartesian point is the reference point of the connection in the so called global coordinate system. The following labels are used in the [[IfcTopologyRepresentation]] X 0D RepresentationIdentifier Reference X 0D RepresentationType Vertex X 0D Curve members and curve connections shall either be represented by an [[IfcOrientedEdge]] , [[IfcEdgeCurve]] , or [[IfcEdge]] . The curve to which the [[IfcEdgeCurve]] or an [[IfcOrientedEdge]] s underlying [[IfcEdgeCurve]] refers to is the reference curve of the structural item in the global coordinate system. Start and end vertex of the edge shall be [[IfcVertexPoint]] s with underlying [[IfcCartesianPoint]] s. The following labels are used in the [[IfcTopologyRepresentation]] X 0D RepresentationIdentifier Reference X 0D RepresentationType Edge X 0D NOTE While an [[IfcEdge]] or [[IfcOrientedEdge]] with underlying [[IfcEdge]] does not provide an explicit underlying curve geometry, it may be used to imply an underlying straight line as reference curve with the origin of the curve parameter at the start vertex point. X 0D Surface members and surface connections shall be represented by an [[IfcFaceSurface]] . The underlying surface defines the reference surface of the structural surface item in the global coordiante system. All edges in the bounds of the face shall conform to the rules for edge representations of structural curve item. The following labels are used in the [[IfcTopologyRepresentation]] X 0D RepresentationIdentifier Reference X 0D RepresentationType Face X 0D X 0D The reference point, reference curve, or reference surface partially or completely defines the local coordinate system of the represented structural item according to the following rules. In all cases, The local x,y,z directions form a right handed Cartesian coordinate system. X 0D X 0D Structural point items X 0D X 0D The reference point in the representation is the origin of the local coordinate system of the structural item. X 0D The axes of the local coordiante system are either parallel with and directed like the so called global coordinate axes, or are oriented according to definitions at the respective subtype of [[IfcStructuralItem]] . X 0D X 0D Structural curve items X 0D X 0D The u parameter origin of the reference curve in the representation is the origin of the local coordinate system of the structural item. X 0D The local x axis is parallel with the tangent on the curve and directed like the u parameter direction. X 0D The local y and z axes are oriented according to definitions at the respective subtypes of [[IfcStructuralItem]] . X 0D X 0D Structural surface items X 0D X 0D The u,v parameter origin of the reference surface in the representation is the origin of the local coordinate system of the structural item. X 0D The local x and y directions follow the tangents on the surface and are in parallel with and directed like u and v respectively. X 0D The local z direction is in parallel with and directed like the surface normal. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. The ObjectPlacement s of all structural items which are grouped into the same instance of [[IfcStructuralAnalysisModel]] shall refer to the same instance of [[IfcObjectPlacement]] . X 0D X 0D NOTE This rule is necessary to achieve consistent topology representations. The topology representations of structural items in an analysis model are meant to share vertices and edges und must therefore have the same object placement. X 0D X 0D NOTE A structural item may be grouped into more than one analysis model. In this case, all these models must use the same instance of [[IfcObjectPlacement]] .bSI Documentation"
+msgid "IfcProductRepresentationSelect_DEFINITION"
+msgstr "The [[IfcProductRepresentationSelect]] selects an [[IfcProductDefinitionShape]] and an [[IfcRepresentationMap]] to be targets of [[IfcShapeAspect]] definitions, i.e. both product representations may be further defined using shape aspects.. X 0D X 0D HISTORY New select type in IFC4."
 
-#:IFC.xml:36555
-msgid "IfcStructuralItem_AssignedStructuralActivity"
-msgstr "Actividad estructural asignada"
+#:IFC.xml:29145
+msgid "IfcProjectedCRS"
+msgstr "IfcProyectedCRS"
 
-msgid "IfcStructuralItem_AssignedStructuralActivity_DEFINITION"
-msgstr "Actividad estructural asignada"
+msgid "IfcProjectedCRS_DEFINITION"
+msgstr "[[IfcProjectedCRS]] is a coordinate reference system of the map to which the map translation of the local engineering coordinate system of the construction or facility engineering project relates. The MapProjection and MapZone attributes uniquely identify the projection to the underlying geographic coordinate reference system, provided that they are well known in the receiving application. The projected coordinate reference system is assumed to be a 2D or 3D right handed Cartesian coordinate system, the optional MapUnit attribute can be used determine the length unit used by the map. X 0D X 0D .extDef X 0D NOTE Definition from OpenGIS Abstract Specification, Topic 2 X 0D A 2D or with vertical coordinate axis 3D coordinate reference system used to approximate the shape of the earth on a planar surface, but in such a way that the distortion that is inherent to the approximation is carefully controlled and known. Distortion correction is commonly applied to calculated bearings and distances to produce values that are a close match to actual field values. X 0D X 0D The unambiguous identifier by which the coordinate reference system is know, is stored in the inherited Name attribute. Well defined identifiers include the map projection and also the map zone information. In these cases the MapProjection and the MapZone attributes can be omitted. X 0D X 0D EXAMPLE The identifier EPSG 25832 defines the map projection UTM and the zone 32N in additon to the geodetic and vertical datum. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
 
-#:IFC.xml:36781
-msgid "IfcStructuralLinearAction"
-msgstr "IfcAcción lineal estructural"
+#:IFC.xml:20435
+msgid "IfcProjectedCRS_MapUnit"
+msgstr "Mapunidad"
 
-msgid "IfcStructuralLinearAction_DEFINITION"
-msgstr "This entity defines an action with constant value which is distributed over a curve. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Intermediate supertype [[IfcStructuralCurveAction]] inserted. X 0D X 0D NOTE Like its supertype [[IfcStructuralCurveAction]] , this action type may also act on curved edges.bSI Documentation"
+msgid "IfcProjectedCRS_MapUnit_DEFINITION"
+msgstr "Mapunidad"
 
-#:IFC.xml:36784
-msgid "IfcStructuralLoadCase"
-msgstr "IfcStructuralLoadCase"
+#:IFC.xml:29146
+msgid "IfcProjectedCRS_MapProjection"
+msgstr "MapProyección"
 
-msgid "IfcStructuralLoadCase_DEFINITION"
-msgstr "A load case is a load group, commonly used to group loads from the same action source. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+msgid "IfcProjectedCRS_MapProjection_DEFINITION"
+msgstr "Nombre por el cual se identifica la proyección del mapa, X 0D X 0D . xamples X 0D EXAMPLE proyectos de mapa incluyen .note X 0D UTM X 0D Gaus Krueger"
 
-#:IFC.xml:36785
-msgid "IfcStructuralLoadCase_SelfWeightCoefficients"
-msgstr "Coeficientes de autopeso"
+#:IFC.xml:29151
+msgid "IfcProjectedCRS_MapZone"
+msgstr "MapZone"
 
-msgid "IfcStructuralLoadCase_SelfWeightCoefficients_DEFINITION"
-msgstr "Los coeficientes de peso propio especifican los coeficientes en los que se incluirán las cargas debidas al peso de los miembros en el caso de carga. Estas cargas no están explícitamente modeladas como instancias de [[IfcStructuralAction]] . En su lugar, se calcularán de acuerdo con la geometería, la sección y el material de cada miembro. X 0D X 0D Los tres componentes del vector de peso propio corresponden a las direcciones x,y,z de las llamadas coordenadas globales, i. . las direcciones del ObjectPlacement compartido de todos los elementos en un [[IfcStructuralAnalysisModel]] . Por ejemplo, si la posición del objeto define un eje z que es vertical como el sistema de coordenadas del mundo [[IfcProject]] entonces los coeficientes de peso propio normalmente serían 0. 0., 1. en un caso de carga de cargas muertas con peso propio. X 0D X 0D El coeficiente total en el Coeficiente de atributo heredado no se aplicará a AutoPeso de la misma instancia de [[IfcStructuralLoadCase]] . Sólo se aplica a acciones y grupos de carga que se agrupan por debajo del caso de carga, no al caso de carga calculado de peso propio."
+msgid "IfcProjectedCRS_MapZone_DEFINITION"
+msgstr "Nombre por el cual se identifica la zona del mapa, relativa a la proyección , X 0D X 0D .examples X 0D EXAMPLE . ote X 0D para UTM, el número de zona, como 32 para UTM32 X 0D para Gaus Krueger, las zonas de ancho longitudinal, como 3 ,"
 
-#:IFC.xml:36792
-msgid "IfcStructuralLoadGroup"
-msgstr "Grupo IfcEstructuralLoadGroup"
+#:IFC.xml:29158
+msgid "IfcRepresentation"
+msgstr "Representación de IfcS"
 
-msgid "IfcStructuralLoadGroup_DEFINITION"
-msgstr "The entity [[IfcStructuralLoadGroup]] is used to structure the physical impacts. By using the grouping features inherited from [[IfcGroup]] , instances of [[IfcStructuralAction]] or its subclasses and of [[IfcStructuralLoadGroup]] can be used to define load groups, load cases and load combinations. See also [[IfcLoadGroupTypeEnum]] . X 0D X 0D NOTE Important functionality for the description of a load bearing system is derived from the existing IFC entity [[IfcGroup]] . This class provides, via the relationship class [[IfcRelAssignsToGroup]] , the needed grouping mechanism. In this way, instances of [[IfcStructuralAction]] belonging to a specific load group can be unambiguously determined. X 0D X 0D NOTE The relationship class [[IfcRelAssignsToGroupByFactor]] is used to group load cases into load combinations. The factor provided in this assignment relationship is to applied together with the optional [[IfcStructuralLoadGroup]].Coefficient . Unlike this coefficient which always affects the load group, the [[IfcRelAssignsToGroupByFactor]].Factor is specific for a load case load combination pair. As many instances of [[IfcRelAssignsToGroupByFactor]] are used within one load combination as there are different Factor s to be applied to load cases in the load combination. On the other hand, a load case may appear in more than one load combination and can have a different Factor in each assignment by [[IfcRelAssignsToGroupByFactor]] . X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Subtype [[IfcStructuralLoadCase]] added. Informal propositions and WHERE rule added. Predefined type LOAD COMBINATION GROUP made obsolete and removed. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. Load groups of type LOAD GROUP shall only contain instances of [[IfcStructuralAction]] . X 0D 2. Load groups of type LOAD CASE shall always be instantiated from the subtype [[IfcStructuralLoadCase]] , not directly from the generic type [[IfcStructuralLoadGroup]] itself. X 0D 3. Instances of [[IfcStructuralLoadCase]] shall only contain instances of [[IfcStructuralAction]] or and instances of [[IfcStructuralLoadGroup]] of type LOAD GROUP. X 0D 4. Load groups of type LOAD COMBINATION shall only contain instances of [[IfcStructuralLoadCase]] .bSI Documentation"
+msgid "IfcRepresentation_DEFINITION"
+msgstr "The [[IfcRepresentation]] defines the general concept of representing product properties and in particular the product shape. X 0D X 0D .extDef X 0D NOTE Definition from ISO 10303 43 X 0D A representation is a collection of one or more representation items that are related in a specified representation context. The relationship of representation item to representation context is the basis for distinguishing which representation item entities are related. X 0D X 0D A representation item can be related to a representation context directly, when it occurs as an element is a representation, or indirectly, when it is referenced through any number of intervening entities, each of type representation item. X 0D X 0D NOTE Entity adapted from representation defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .change ifc2x3 X 0D IFC2x3 CHANGE The inverse attributes LayerAssignments and RepresentationMap have been added with upward compatibility. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Entity [[IfcRepresentation]] has been changed into an ABSTRACT supertype. X 0D X 0D .use head X 0D Representation Use Definition X 0D X 0D Each representation, either [[IfcShapeRepresentation]] , or [[IfcTopologyRepresentation]] shall have a well defined X 0D X 0D ContextOfItems Reference to an [[IfcGeometricRepresentationContext]] as agreed for this representation. X 0D RepresentationIdentifier Name of the representation, for example, Body for 3D shape, FootPrint for 2D ground view, Axis for reference axis. X 0D RepresentationType Name for the geometric, or topological representation type, for example, SweptSolid for 3D swept solids, Brep for boundary representation. X 0D X 0D NOTE Guidelines for applying correct values to those attributes are provided in the geometry use definition section at each subtype of [[IfcElement]] . These guidelines can be further refined in view definitions or implementer agreements.bSI Documentation"
 
-#:IFC.xml:36667
-msgid "IfcStructuralLoadGroup_LoadGroupFor"
-msgstr "Grupo de Carga"
+#:IFC.xml:11497
+msgid "IfcRepresentation_Items"
+msgstr "Elementos"
 
-msgid "IfcStructuralLoadGroup_LoadGroupFor_DEFINITION"
-msgstr "Grupo de Carga"
+msgid "IfcRepresentation_Items_DEFINITION"
+msgstr "Elementos"
 
-#:IFC.xml:36820
-msgid "IfcStructuralLoadGroup_SourceOfResultGroup"
-msgstr "Fuente del grupo de resultados"
+#:IFC.xml:11543
+msgid "IfcRepresentation_RepresentationMap"
+msgstr "Mapa de representación"
 
-msgid "IfcStructuralLoadGroup_SourceOfResultGroup_DEFINITION"
-msgstr "Fuente del grupo de resultados"
+msgid "IfcRepresentation_RepresentationMap_DEFINITION"
+msgstr "Mapa de representación"
 
-#:IFC.xml:36793
-msgid "IfcStructuralLoadGroup_ActionSource"
-msgstr "Fuente de acción"
+#:IFC.xml:24110
+msgid "IfcRepresentation_LayerAssignments"
+msgstr "Asignaciones de capas"
 
-msgid "IfcStructuralLoadGroup_ActionSource_DEFINITION"
-msgstr "Fuente de acciones en el grupo. Normalmente necesario si PredefinedType especifica una CASE DE LOAD."
+msgid "IfcRepresentation_LayerAssignments_DEFINITION"
+msgstr "Asignaciones de capas"
 
-#:IFC.xml:36798
-msgid "IfcStructuralLoadGroup_ActionType"
-msgstr "Tipo de acción"
+#:IFC.xml:29130
+msgid "IfcRepresentation_OfProductRepresentation"
+msgstr "Representación del producto"
 
-msgid "IfcStructuralLoadGroup_ActionType_DEFINITION"
-msgstr "Tipo de acciones en el grupo. Normalmente necesario si PredefinedType especifica una CASE DE LOAD."
+msgid "IfcRepresentation_OfProductRepresentation_DEFINITION"
+msgstr "Representación del producto"
 
-#:IFC.xml:36803
-msgid "IfcStructuralLoadGroup_Coefficient"
-msgstr "Coeficiente"
+#:IFC.xml:29171
+msgid "IfcRepresentation_ContextOfItems"
+msgstr "ContextoOfArtículos"
 
-msgid "IfcStructuralLoadGroup_Coefficient_DEFINITION"
-msgstr "Factor de carga. Si se omite, un factor aún no se conoce o no se especifica. Un factor de carga de 1.0 se exportará explícitamente como Coeficiente 1.0."
+msgid "IfcRepresentation_ContextOfItems_DEFINITION"
+msgstr "ContextoOfArtículos"
 
-#:IFC.xml:36808
-msgid "IfcStructuralLoadGroup_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29159
+msgid "IfcRepresentation_RepresentationIdentifier"
+msgstr "Identificador de representación"
 
-msgid "IfcStructuralLoadGroup_PredefinedType_DEFINITION"
-msgstr "Selects a predefined type for the load group. It can be differentiated between load groups, load cases, load combinations, or userdefined grouping levels."
+msgid "IfcRepresentation_RepresentationIdentifier_DEFINITION"
+msgstr "El identificador opcional de la representación como se utiliza dentro de un proyecto."
 
-#:IFC.xml:36813
-msgid "IfcStructuralLoadGroup_Purpose"
-msgstr "Propósito"
+#:IFC.xml:29164
+msgid "IfcRepresentation_RepresentationType"
+msgstr "Tipo de representación"
 
-msgid "IfcStructuralLoadGroup_Purpose_DEFINITION"
-msgstr "Descripción del propósito de esta instancia. Entre otras cosas, los valores posibles del Propósito de las combinaciones de carga son SLS , ULS , ALS para indicar el estado límite de servicio, final o accidental."
+msgid "IfcRepresentation_RepresentationType_DEFINITION"
+msgstr "La descripción del tipo de un contexto de representación. El tipo de representación define el tipo de geometría o topología utilizada para representar la representación del producto. Se proporciona más información en los subtipos [[IfcShapeRepresentation]] y [[IfcTopologyRepresentation]] . X 0D Los valores soportados para el tipo de contexto deben ser especificados por acuerdos de implementadores."
 
-#:IFC.xml:36834
-msgid "IfcStructuralMember"
-msgstr "IfcStructuralMember"
+#:IFC.xml:29185
+msgid "IfcRepresentationContext"
+msgstr "IfcRepresentaciónContexto"
 
-msgid "IfcStructuralMember_DEFINITION"
-msgstr "The abstract entity [[IfcStructuralMember]] is the superclass of all structural items which represent the idealized structural behavior of building elements. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definitions moved to supertype and subtypes.bSI Documentation"
+msgid "IfcRepresentationContext_DEFINITION"
+msgstr "The [[IfcRepresentationContext]] defines the context to which the [[IfcRepresentation]] of a product is related. X 0D X 0D .extDef X 0D NOTE Definition from ISO 10303 42 X 0D A representation context is a context in which a set of representation items are related. X 0D X 0D NOTE Entity adapted from representation context defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.5. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Entity made abstract, had been deprecated from instantiation since IFC2x2.bSI Documentation"
 
-#:IFC.xml:36575
-msgid "IfcStructuralMember_ConnectedBy"
-msgstr "Conectado por"
+#:IFC.xml:29171
+msgid "IfcRepresentationContext_RepresentationsInContext"
+msgstr "Representaciones en el contexto"
 
-msgid "IfcStructuralMember_ConnectedBy_DEFINITION"
-msgstr "Conectado por"
+msgid "IfcRepresentationContext_RepresentationsInContext_DEFINITION"
+msgstr "Representaciones en el contexto"
 
-#:IFC.xml:36837
-msgid "IfcStructuralPlanarAction"
-msgstr "Acción IfcPlanar estructural"
+#:IFC.xml:29186
+msgid "IfcRepresentationContext_ContextIdentifier"
+msgstr "ContextIdentifier"
 
-msgid "IfcStructuralPlanarAction_DEFINITION"
-msgstr "This entity defines an action with constant value which is distributed over a surface. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Intermediate supertype [[IfcStructuralSurfaceAction]] inserted. X 0D X 0D NOTE Like its supertype [[IfcStructuralSurfaceAction]] , this action type may also act on curved faces.bSI Documentation"
+msgid "IfcRepresentationContext_ContextIdentifier_DEFINITION"
+msgstr "El identificador opcional del contexto de representación utilizado dentro de un proyecto."
 
-#:IFC.xml:36840
-msgid "IfcStructuralPointAction"
-msgstr "Puntos estructurales IfcAcciones"
+#:IFC.xml:29191
+msgid "IfcRepresentationContext_ContextType"
+msgstr "Tipo de contexto"
 
-msgid "IfcStructuralPointAction_DEFINITION"
-msgstr "This entity defines an action which acts on a point. A point action is typically connected with a point connection. It may also be connected with a curve member or curve connection, or surface member or surface connection. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attributes in the supertypes [[IfcStructuralActivity]] and [[IfcStructuralAction]] changed. Use definitions changed, informal propositions added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D Standard Case X 0D If connected with a point item, instances of [[IfcStructuralPointAction]] shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the action is the same as the structural item. X 0D X 0D Special Case 1 X 0D If connected with a curve item or surface item, instances of [[IfcStructuralPointAction]] shall have an ObjectPlacement and Representation , containing an [[IfcVertexPoint]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D NOTE In order to model concentrated actions on a curve or surface item, [[IfcStructuralCurveAction]] or [[IfcStructuralSurfaceAction]] of type DISCRETE is preferable since they do not require an extra topology representation in this case. An [[IfcStructuralPointAction]] should be used for a concentrated action on a curve or surface item only when an explicit vertex point representation is actually desired. X 0D X 0D Special Case 2 X 0D If not connected with a structural item which may happen in an incomplete or conceptual model , a point action should have an ObjectPlacement and Representation , containing an [[IfcVertexPoint]] . See [[IfcStructuralActivity]] for further definitions.bSI Documentation"
+msgid "IfcRepresentationContext_ContextType_DEFINITION"
+msgstr "La descripción del tipo de un contexto de representación. Los valores soportados para el tipo de contexto deben ser especificados por acuerdos de implementadores."
 
-#:IFC.xml:36843
-msgid "IfcStructuralPointConnection"
-msgstr "Conexión de punto estructural IfcIfc"
+#:IFC.xml:29197
+msgid "IfcRepresentationContextSameWCS"
+msgstr "IfcRepresentationContextSameWCS"
 
-msgid "IfcStructuralPointConnection_DEFINITION"
-msgstr "Instances of [[IfcStructuralPointConnection]] describe structural nodes or point supports. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute ConditionCoordinateSystem added, allowing for skewed supports. Use definitions added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] . The local coordinate system is established by the reference point given by topology representation and by the attribute ConditionCoordinateSystem .bSI Documentation"
+msgid "IfcRepresentationContextSameWCS_DEFINITION"
+msgstr "If there are several instances of [[IfcGeometricRepresentationContext]] within one project file, the XY plane of all WorldCoordinateSystem s shall be coplanar and identical. X 0D X 0D NOTE S The instances of X 0D [[IfcGeometricRepresentationSubContext]] do not define their X 0D own world coordinate system, they refer to the world coordinate X 0D system of the ParentContext. X 0D X 0D HISTORY S New global rule X 0D in Release IFC2x"
 
-#:IFC.xml:9934
-msgid "IfcStructuralPointConnection_ConditionCoordinateSystem"
-msgstr "Sistema Coordenado"
+#:IFC.xml:29205
+msgid "IfcSameValidPrecision"
+msgstr "IfcSameValidPrecision"
 
-msgid "IfcStructuralPointConnection_ConditionCoordinateSystem_DEFINITION"
-msgstr "Sistema Coordenado"
+msgid "IfcSameValidPrecision_DEFINITION"
+msgstr "The function compares the epsilon values given as Precision at [[IfcGeometricRepresentationContext]] and ensures that they are the same with a derivation tolerance and within reasonable min and max values. X 0D X 0D NOTE In the above function the following three questionable ad hoc values are used X 0D X 0D 0.000001 for the default precision 1E 6 X 0D 1.001 for the allowable deviation of the X 0D precision values and X 0D 0.1 for setting the upper limit of the X 0D accepted precision values to about 0.1. X 0D X 0D X 0D X 0D X 0D HISTORY New function in IFC2x2"
 
-#:IFC.xml:36846
-msgid "IfcStructuralPointReaction"
-msgstr "Reacción de puntos estructurales IfcEstructural"
+#:IFC.xml:29213
+msgid "IfcShapeAspect"
+msgstr "IfcShapeAspect"
 
-msgid "IfcStructuralPointReaction_DEFINITION"
-msgstr "This entity defines a reaction which occurs at a point. A point reaction is typically connected with a point connection. It may also be connected with a curve member or curve connection, or surface member or surface connection. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attributes in the supertypes [[IfcStructuralActivity]] and [[IfcStructuralReaction]] changed. Use definitions changed, informal propositions added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D Standard Case X 0D If connected with a point item, instances of [[IfcStructuralPointReaction]] shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the reaction is the same as the structural item. X 0D X 0D Special Case 1 X 0D If connected with a curve item or surface item, instances of [[IfcStructuralPointReaction]] shall have an ObjectPlacement and Representation , containing an [[IfcVertexPoint]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D NOTE In order to model concentrated reactions on a curve or surface item, [[IfcStructuralCurveReaction]] or [[IfcStructuralSurfaceAction]] of type DISCRETE is preferable since they do not require an extra topology representation in this case. An [[IfcStructuralPointReaction]] should be used for a concentrated reaction on a curve or surface item only when an explicit vertex point representation is actually desired. X 0D X 0D Special Case 2 X 0D If not connected with a structural item which may happen in an incomplete or conceptual model , a point action should have an ObjectPlacement and Representation , containing an [[IfcVertexPoint]] . See [[IfcStructuralActivity]] for further definitions.bSI Documentation"
+msgid "IfcShapeAspect_DEFINITION"
+msgstr "[[IfcShapeAspect]] allows for grouping of shape representation items that represent aspects or components of the shape of a product. Thereby shape representations of components of the product shape represent a distinctive part to a product that can be explicitly addressed. X 0D X 0D The [[IfcShapeAspect]] s may have distinct material information or other distict characteristics that differs from other parts of the product shape representation. X 0D X 0D NOTE The [[IfcShapeAspect]] together with the [[IfcMaterialConstituent]] can be used to associate distict material information to parts of the product shape representation. X 0D X 0D Figure 1 indicates the association of material characteristics to shape aspects. X 0D X 0D shape .. .. .. .. .. .. figures ifcshapeaspect fig1.png Figure 1 shape aspects for associating material X 0D X 0D .extDef X 0D NOTE Definition from ISO 10303 41 X 0D A shape aspect is an identifiable element of the shape of an object. X 0D X 0D NOTE Entity adapted from shape aspect defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute PartOfProductDefinitionShape declared OPTIONAL and extended to type [[IfcProductRepresentationSelect]] with upward compatibility for file based exchange. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If ShapeRepresentations points to shape representations that are part of an [[IfcProductDefinitionShape]] , PartOfProductDefinitionShape must refer to this instance of [[IfcProductDefinitionShape]] . X 0D 2. If ShapeRepresentations points to shape representations that are part of an [[IfcRepresentationMap]] , PartOfProductDefinitionShape must refer to this instance of [[IfcRepresentationMap]] .bSI Documentation"
 
-#:IFC.xml:36849
-msgid "IfcStructuralReaction"
-msgstr "Reacción estructural Ifc"
+#:IFC.xml:8126
+msgid "IfcShapeAspect_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-msgid "IfcStructuralReaction_DEFINITION"
-msgstr "A structural reaction is a structural activity that results from a structural action imposed to a structural item or building element. Examples are support reactions, internal forces, and deflections. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Inverse attribute Causes deleted use [[IfcRelAssignsToProduct]] via HasAssignments instead. X 0D X 0D Structural reactions are grouped into [[IfcStructuralResultGroup]] s via the inverse relationship HasAssignments and an [[IfcRelAssignsToGroup]] relationship object. [[IfcStructuralResultGroup]].ResultGroupFor finally refers to the structural analysis model in which the results occur. X 0D X 0D It is furthermore possible to establish relationships between reactions in one analysis model and actions which they cause in another analysis model. For example, a support reaction from one structural system may be taken over as a load onto another supporting structural system. This is expressed by means of the inverse relationship HasAssignments of the reaction and an [[IfcRelAssignsToProduct]] relationship object. [[IfcRelAssignsToProduct]].Name is set to Causes and [[IfcRelAssignsToProduct]].RelatingProduct refers to an instance of a subtype of [[IfcStructuralAction]] .bSI Documentation"
+msgid "IfcShapeAspect_HasExternalReferences_DEFINITION"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:36852
-msgid "IfcStructuralResultGroup"
-msgstr "Grupo de resultados estructurales IfcEstructurales"
+#:IFC.xml:29236
+msgid "IfcShapeAspect_ShapeRepresentations"
+msgstr "Representaciones de forma"
 
-msgid "IfcStructuralResultGroup_DEFINITION"
-msgstr "Instances of the entity [[IfcStructuralResultGroup]] are used to group results of structural analysis calculations and to capture the connection to the underlying basic load group. The basic functionality for grouping inherited from [[IfcGroup]] is used to collect instances from [[IfcStructuralReaction]] or its respective subclasses. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE WHERE rule added.bSI Documentation"
+msgid "IfcShapeAspect_ShapeRepresentations_DEFINITION"
+msgstr "Representaciones de forma"
 
-#:IFC.xml:36681
-msgid "IfcStructuralResultGroup_ResultGroupFor"
-msgstr "ResultGroupFor"
+#:IFC.xml:29214
+msgid "IfcShapeAspect_Description"
+msgstr "Descripción"
 
-msgid "IfcStructuralResultGroup_ResultGroupFor_DEFINITION"
-msgstr "ResultGroupFor"
+msgid "IfcShapeAspect_Description_DEFINITION"
+msgstr "La palabra o grupo de palabras que caracterizan el aspecto de la forma. Se puede utilizar para añadir significado adicional al nombre del aspecto."
 
-#:IFC.xml:36820
-msgid "IfcStructuralResultGroup_ResultForLoadGroup"
-msgstr "Resultado para cargar grupo"
+#:IFC.xml:29219
+msgid "IfcShapeAspect_Name"
+msgstr "Nombre"
 
-msgid "IfcStructuralResultGroup_ResultForLoadGroup_DEFINITION"
-msgstr "Resultado para cargar grupo"
+msgid "IfcShapeAspect_Name_DEFINITION"
+msgstr "La palabra o grupo de palabras por las cuales se conoce el aspecto de la forma. Es una etiqueta para indicar la semántica particular de un componente dentro de la forma de definición del producto, utilizada para proporcionar significado. Ejemplo utiliza la etiqueta de acristalamiento para definir qué componente de una forma de ventana define el área de acristalamiento."
 
-#:IFC.xml:36853
-msgid "IfcStructuralResultGroup_IsLinear"
-msgstr "Islinear"
+#:IFC.xml:29224
+msgid "IfcShapeAspect_PartOfProductDefinitionShape"
+msgstr "Definición del producto"
 
-msgid "IfcStructuralResultGroup_IsLinear_DEFINITION"
-msgstr "Este valor permite reconocer fácilmente si se ha aplicado un análisis lineal permitiendo la superposición de resultados de análisis ."
+msgid "IfcShapeAspect_PartOfProductDefinitionShape_DEFINITION"
+msgstr "Referencia al [[IfcProductDefinitionShape]] o al [[IfcRepresentationMap]] del cual esta forma es un aspecto. X 0D . hange ifc2x4 X 0D IFC4 CHANGE Data type modified to be [[IfcProductRepresentationSelect]] allowing the assignment also to [[IfcRepresentationMap]] ."
 
-#:IFC.xml:36858
-msgid "IfcStructuralResultGroup_TheoryType"
-msgstr "TheoryType"
+#:IFC.xml:29229
+msgid "IfcShapeAspect_ProductDefinitional"
+msgstr "Definición del producto"
 
-msgid "IfcStructuralResultGroup_TheoryType_DEFINITION"
-msgstr "Especifica la teoría de análisis utilizada para obtener los resultados respectivos."
+msgid "IfcShapeAspect_ProductDefinitional_DEFINITION"
+msgstr "Una indicación de que el aspecto de la forma está en el límite físico de la forma de la definición del producto. Si el valor de este atributo es TRUE, se comprobará que el aspecto de la forma que se identifique se encuentra en tal límite. Si el valor es FALSE, se comprobará que el aspecto de la forma que se identifique no se encuentra en tal límite. Si el valor es desconocido, se comprobará que no se sabe si el aspecto de la forma que se ha identificado se encuentra o no en tal límite. X 0D X 0D EXAMPLE sería FALSE para una línea central, identificado como aspecto de forma sería TRUE para un cantilever. X 0D"
 
-#:IFC.xml:36865
-msgid "IfcStructuralSurfaceAction"
-msgstr "IfcSuperficie estructural"
+#:IFC.xml:29250
+msgid "IfcShapeModel"
+msgstr "IfcShapeModelo"
 
-msgid "IfcStructuralSurfaceAction_DEFINITION"
-msgstr "This entity defines an action which is distributed over a surface. A surface action may be connected with a surface member or surface connection. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Former entity IfcStructuralPlanarActionVarying from IFC2x2 has been removed and are replaced by this entity. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D Standard Case X 0D If connected with a surface item and acting on its entirety, instances of [[IfcStructuralCurveAction]] shall not have an ObjectPlacement nor a Representation . It is implied that the placement and representation of the [[IfcStructuralActivity]] is the same as the ones of the member or connection. X 0D X 0D Special Case 1 X 0D If connected with a surface item but acting only on a part of it, instances of [[IfcStructuralSurfaceAction]] shall have an ObjectPlacement and Representation , containing an [[IfcFaceSurface]] which topologically defines the loaded part of the surface. See [[IfcStructuralActivity]] for further definitions. X 0D X 0D Special Case 2 X 0D If not connected with a structural item which may happen in an incomplete or conceptual model , a surface action should have an ObjectPlacement and Representation , containing an [[IfcFaceSurface]] . See [[IfcStructuralActivity]] for further definitions. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If the surface action is of the predefined type CONST, SELF [[IfcStructuralActivity]].AppliedLoad must not be of type [[IfcStructuralLoadConfiguration]] . X 0D 2. If the surface action is of the predefined type BILINEAR, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain three items with two dimensional [[IfcStructuralLoadConfiguration]].Locations , defining the location of the load samples in local coordinates of the surface action. X 0D 3. If the surface action is of the predefined type DISCRETE, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two or more items with two dimensional locations. X 0D 4. Point loads must be of type DISCRETE, thus contain two or more load points. Single point loads are modeled by IfcStructuralPointLoad . X 0D 5. All items in SELF [[IfcStructuralActivity]].AppliedLoad [[IfcStructuralLoadConfiguration]].Values shall be of the same entity type.bSI Documentation"
+msgid "IfcShapeModel_DEFINITION"
+msgstr "[[IfcShapeModel]] represents the concept of a particular geometric and or topological representation of a product s shape or a product component s shape within a representation context. This representation context has to be a geometric representation context with the exception of topology representations without associated geometry . The two subtypes are [[IfcShapeRepresentation]] to cover geometric models that represent a shape, and [[IfcTopologyRepresentation]] to cover the conectivity of a product or product component. The topology may or may not have geometry associated. X 0D X 0D The [[IfcShapeModel]] can be a shape representation geometric and or topologogical of a product via [[IfcProductDefinitionShape]] , or a shape representation geometric and or topologogical of a component of a product shape via [[IfcShapeAspect]] . X 0D X 0D HISTORY New entity in IFC2x3.bSI Documentation"
 
-#:IFC.xml:36866
-msgid "IfcStructuralSurfaceAction_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29236
+msgid "IfcShapeModel_OfShapeAspect"
+msgstr "Aspecto de forma"
 
-msgid "IfcStructuralSurfaceAction_PredefinedType_DEFINITION"
-msgstr "Type of action according to its distribution of load values."
+msgid "IfcShapeModel_OfShapeAspect_DEFINITION"
+msgstr "Aspecto de forma"
 
-#:IFC.xml:36871
-msgid "IfcStructuralSurfaceAction_ProjectedOrTrue"
-msgstr "ProjectedOrTrue"
+#:IFC.xml:29253
+msgid "IfcShapeRepresentation"
+msgstr "IfcShapeRepresentación"
 
-msgid "IfcStructuralSurfaceAction_ProjectedOrTrue_DEFINITION"
-msgstr "Define si los valores de carga son dados por longitudes reales de la superficie en la que actúan, o por longitud de la proyección de la superficie en dirección de carga. Este último sólo es aplicable a las cargas que actúan en direcciones de coordenadas globales."
+msgid "IfcShapeRepresentation_DEFINITION"
+msgstr "The [[IfcShapeRepresentation]] represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute RepresentationType is used to define the geometric model used for the shape representation e.g. SweptSolid , or Brep , the inherited attribute RepresentationIdentifier is used to denote the kind of the representation captured by the [[IfcShapeRepresentation]] e.g. Axis , Body , etc. . X 0D X 0D Several representation identifiers for shape representation are included as predefined values for RepresentationIdentifier . Table 1 indicates the defined list of values for RepresentationIdentifier . X 0D X 0D X 0D X 0D X 0D X 0D X 0D Identifier X 0D X 0D X 0D X 0D CoG X 0D Point to identify the center of gravity of an element. This value can be used for validation purposes. X 0D X 0D X 0D Box X 0D Bounding box as simplified 3D box geometry of an element X 0D X 0D X 0D Annotation X 0D 3D annotations not representing elements X 0D X 0D X 0D Axis X 0D 2D or 3D Axis, or single line, representation of an element X 0D X 0D X 0D FootPrint X 0D 2D Foot print, or double line, representation of an element, projected to ground view X 0D X 0D X 0D Profile X 0D 3D line representation of a profile being planar, e.g. used for door and window outlines X 0D X 0D X 0D Surface X 0D 3D Surface representation, e.g. of an analytical surface, of an elementplane X 0D X 0D X 0D Reference X 0D 3D representation that is not part of the Body representation. This is used, e.g., for opening geometries, if there are to be excluded from an implicit Boolean operation. X 0D X 0D X 0D Body X 0D 3D Body representation, e.g. as wireframe, surface, or solid model, of an element X 0D X 0D X 0D Body FallBack X 0D 3D Body representation, e.g. as tessellation, or other surface, or boundary representation, added in addition to the solid model potentially involving Boolean operations of an element X 0D X 0D X 0D Clearance X 0D 3D clearance volume of the element. Such clearance region indicates space that should not intersect with the Body representation of other elements, though may intersect with the Clearance representation of other elements. X 0D X 0D X 0D Lighting X 0D Representation of emitting light as a light source within a shape representation X 0D X 0D X 0D X 0D X 0D X 0D X 0D Table 1 Representation identifiers X 0D X 0D X 0D X 0D X 0D Several representation types for shape representation are included as predefined values for RepresentationType . Table 2 indicates the defined list of values for RepresentationType . X 0D X 0D X 0D X 0D X 0D X 0D X 0D Type X 0D X 0D X 0D X 0D Point X 0D 2 or 3 dimensional point s X 0D X 0D X 0D PointCloud X 0D 3 dimensional points prepresented by a point list X 0D X 0D X 0D Curve X 0D 2 or 3 dimensional curve s X 0D X 0D X 0D Curve2D X 0D 2 dimensional curve s X 0D X 0D X 0D Curve3D X 0D 3 dimensional curve s X 0D X 0D X 0D Surface X 0D 2 or 3 dimensional surface s X 0D X 0D X 0D Surface2D X 0D 2 dimensional surface s a region on ground view X 0D X 0D X 0D Surface3D X 0D 3 dimensional surface s X 0D X 0D X 0D FillArea X 0D 2D region s represented as a filled area hatching X 0D X 0D X 0D Text X 0D text defined as text literals X 0D X 0D X 0D X 0D AdvancedSurface X 0D 3 dimensional b spline surface s X 0D X 0D X 0D GeometricSet X 0D points, curves, surfaces 2 or 3 X 0D dimensional X 0D X 0D X 0D X 0D GeometricCurveSet X 0D points, curves 2 or 3 dimensional X 0D X 0D X 0D X 0D Annotation2D X 0D points, curves 2 or 3 dimensional , hatches and text 2 dimensional X 0D X 0D X 0D SurfaceModel X 0D face based and shell based surface model s , or tessellated surface model s X 0D X 0D X 0D X 0D Tessellation X 0D tessellated surface representation s only X 0D X 0D X 0D SolidModel X 0D including swept solid, Boolean results and Brep bodies more specific types are X 0D X 0D X 0D X 0D SweptSolid X 0D swept area solids, by extrusion and revolution, excluding tapered sweeps X 0D X 0D X 0D X 0D AdvancedSweptSolid X 0D swept area solids created by sweeping a profile along a directrix, and tapered sweeps X 0D X 0D X 0D X 0D Brep X 0D faceted Brep s with and without voids X 0D X 0D X 0D X 0D AdvancedBrep X 0D Brep s based on advanced faces, with b spline surface geometry, with and without voids X 0D X 0D X 0D X 0D CSG X 0D Boolean results of operations between solid models, half spaces and Boolean results X 0D X 0D X 0D X 0D Clipping X 0D Boolean differences between swept area solids, half spaces and Boolean results X 0D X 0D X 0D X 0D additional types X 0D X 0D some additional representation types are provided X 0D X 0D X 0D X 0D BoundingBox X 0D simplistic 3D representation by a bounding box X 0D X 0D X 0D X 0D SectionedSpine X 0D cross section based representation of a spine curve and planar cross sections. It can represent a surface or a solid and the interpolations of the between the cross sections is not defined X 0D X 0D X 0D X 0D LightSource X 0D light source with depending on type position, orientation, light colour, intensity and attenuation X 0D X 0D X 0D X 0D MappedRepresentation X 0D representation based on mapped item s , referring to a representation map. Note it can be seen as an inserted block reference. The shape representation of the mapped item has a representation type declaring the type of its representation items. X 0D X 0D X 0D X 0D X 0D X 0D X 0D Table 2 Representation types X 0D X 0D X 0D X 0D X 0D .extDef X 0D NOTE The definition relates to shape representation defined in ISO 10303 41. X 0D X 0D HISTORY New entity in IFC1.5. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE The RepresentationType s Point , PointCloud , Curve , Curve3D , Surface , Surface2D , Surface3D , FillArea , Text , Tessellation , AdvancedBrep , LightSource , and the RepresentationIdentifier Body FallBack , Profile , Clearance , Lighting have been added.bSI Documentation"
 
-#:IFC.xml:36878
-msgid "IfcStructuralSurfaceActivityTypeEnum"
-msgstr "IfcStructuralSurfaceActivityTypeEnum"
+#:IFC.xml:29256
+msgid "IfcShapeRepresentationTypes__RepType"
+msgstr "Tipo de repositorio IfcShapeRepresentation"
 
-msgid "IfcStructuralSurfaceActivityTypeEnum_DEFINITION"
-msgstr "This enumeration defines the distribution of load values in a surface action or reaction. X 0D X 0D HISTORY New enumeration in IFC4bSI Documentation"
+msgid "IfcShapeRepresentationTypes__RepType_DEFINITION"
+msgstr "The function gets the representation type and the assigned set of representation items as input and verifies whether the correct items are assigned according to the representation type given. X 0D X 0D HISTORY New function in IFC2x. X 0D X 0D .change ifc2x3 X 0D IFC2x3 CHANGE The check for MappedRepresentation has been changed to allow multiple mapped items, and the Annotation2D has been added. X 0D X 0D .change ifc2x4 X 0D IFC2x4 CHANGE The check for Curve3D , Surface2D , Surface3D , Tesselation , AdvancedBrep , and AdvancedSweptSolid has been added and CSG enhanced."
 
-#:IFC.xml:36890
-msgid "IfcStructuralSurfaceConnection"
-msgstr "Conexión estructural estructural"
+#:IFC.xml:29264
+msgid "IfcStyledRepresentation"
+msgstr "IfcStyledRepresentation"
 
-msgid "IfcStructuralSurfaceConnection_DEFINITION"
-msgstr "Instances of [[IfcStructuralSurfaceConnection]] describe face nodes , i.e. faces where two or more surface members are joined, or face supports. Face surfaces may be planar or curved. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definitions added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] . The local coordinate system is established by the reference surface given by topology representation. X 0D X 0D Topology Use Definitions X 0D X 0D Instances of [[IfcStructuralSurfaceConnection]] shall have a topology representation which consists of one [[IfcFaceSurface]] , representing the reference surface of the surface connection. See definitions at [[IfcStructuralItem]] for further specifications.bSI Documentation"
+msgid "IfcStyledRepresentation_DEFINITION"
+msgstr "The [[IfcStyledRepresentation]] represents the concept of a styled presentation being a representation of a product or a product component, like material. within a representation context. This representation context does not need to be but may be a geometric representation context. X 0D X 0D NOTE Current usage of [[IfcStyledRepresentation]] is restricted to the assignment of presentation information to an material. The [[IfcStyledRepresentation]] includes only presentation styles [[IfcCurveStyle]] , FillAreaStyle , [[IfcSurfaceStyle]] that define how a material should be presented within a particular eventually view and scale dependent representation context. All instances of [[IfcStyledRepresentation]] are referenced by [[IfcMaterialDefinitionRepresentation]] , and assigned to [[IfcMaterial]] by [[IfcMaterialDefinitionRepresentation]].RepresentedMaterial . X 0D X 0D A styled representation has to include one or several styled items with the associated style information curve, symbol, text, fill area, or surface styles . It shall not contain the geometric representation items that are styled. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
 
-#:IFC.xml:36893
-msgid "IfcStructuralSurfaceMember"
-msgstr "Miembro estructural Ifc"
+#:IFC.xml:29267
+msgid "IfcStyleModel"
+msgstr "IfcStyleModel"
 
-msgid "IfcStructuralSurfaceMember_DEFINITION"
-msgstr "Instances of [[IfcStructuralSurfaceMember]] describe face members, that is, structural analysis idealizations of slabs, walls, and shells. Surface members may be planar or curved. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definitions changed, WHERE rule added. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] . The local coordinate system is established by the reference surface given by topology representation. X 0D X 0D Material Use Definition X 0D X 0D The material of direct instances [[IfcStructuralSurfaceMember]] in contrast to instances of the subtype [[IfcStructuralSurfaceMemberVarying]] is defined by [[IfcMaterial]] and attached by the [[IfcRelAssociatesMaterial]].RelatingMaterial . It is accessible by the inverse HasAssociations relationship. X 0D X 0D The material is specified minimally by a name which corresponds with an agreed upon standardized structural material designation. An external reference to the source which specifies the material designation should be provided. Alternatively, structural material properties may be provided by means of IfcMechanicalMaterialProperties and IfcExtendedMaterialProperties . X 0D X 0D Direct instances of [[IfcStructuralSurfaceMember]] are assumed to be located centrically relative to their reference surface. Their depth is provided in the attribute Thickness .bSI Documentation"
+msgid "IfcStyleModel_DEFINITION"
+msgstr "[[IfcStyleModel]] represents the concept of a particular presentation style defined for a material or other characteristic of a product or a product component within a representation context. This representation context may but has not to be a geometric representation context. X 0D X 0D [[IfcStyleModel]] can be a style representation presentation style of a material via [[IfcMaterialDefinitionRepresentation]] , potentially differentiated for different representation contexts for example, different material hatching depending on the scale of the target representation context . X 0D X 0D HISTORY New entity in IFC2x3.bSI Documentation"
 
-#:IFC.xml:36894
-msgid "IfcStructuralSurfaceMember_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:29270
+msgid "IfcTopologyRepresentation"
+msgstr "Representación de IfcTopología"
 
-msgid "IfcStructuralSurfaceMember_PredefinedType_DEFINITION"
-msgstr "Type of member with respect to its load carrying behavior in this analysis idealization."
+msgid "IfcTopologyRepresentation_DEFINITION"
+msgstr "[[IfcTopologyRepresentation]] represents the concept of a particular topological representation of a product or a product component within a representation context. This representation context does not need to be but may be a geometric representation context. Several representation types for shape representation are included as predefined types X 0D X 0D X 0D X 0D X 0D Vertex X 0D topological vertex X 0D representation with or without assigned geometry X 0D X 0D X 0D Edge X 0D topological edge X 0D representation with or without assigned geometry X 0D X 0D X 0D Path X 0D topological path X 0D representation with or without assigned geometry X 0D X 0D X 0D Face X 0D topological face X 0D representation with or without assigned geometry X 0D X 0D X 0D Shell X 0D topological shell X 0D representation with or without assigned geometry X 0D X 0D X 0D Undefined X 0D no constraints imposed X 0D X 0D X 0D X 0D X 0D The representation type is given as a string value at the inherited attribute RepresentationType . X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
 
-#:IFC.xml:36899
-msgid "IfcStructuralSurfaceMember_Thickness"
-msgstr "Grosor"
+#:IFC.xml:29273
+msgid "IfcTopologyRepresentationTypes__RepType"
+msgstr "Tipo de representante de Topología IfcTopología"
 
-msgid "IfcStructuralSurfaceMember_Thickness_DEFINITION"
-msgstr "Define el espesor típicamente entendido del miembro de superficie estructural, medido normal a su superficie de referencia."
-
-#:IFC.xml:36906
-msgid "IfcStructuralSurfaceMemberTypeEnum"
-msgstr "Tipo de miembro de la superficie estructural"
-
-msgid "IfcStructuralSurfaceMemberTypeEnum_DEFINITION"
-msgstr "This enumeration distinguishes between different types of structural surface members, such as the typical mechanical function of walls, slabs and shells. X 0D X 0D HISTORY New enumeration in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Renamed from IfcStructuralSurfaceTypeEnum .bSI Documentation"
-
-#:IFC.xml:36916
-msgid "IfcStructuralSurfaceMemberVarying"
-msgstr "Variando miembro de la superficie estructural"
-
-msgid "IfcStructuralSurfaceMemberVarying_DEFINITION"
-msgstr "This entity describes surface members with varying section properties. The properties are provided by means of Pset StructuralSurfaceMemberVaryingThickness via [[IfcRelDefinesByProperties]] , or by means of aggregation An instance of [[IfcStructuralSurfaceMemberVarying]] may be composed of two or more instances of [[IfcStructuralSurfaceMember]] with differing section properties. These subordinate members relate to the instance of [[IfcStructuralSurfaceMemberVarying]] by [[IfcRelAggregates]] . X 0D X 0D NOTE It is recommended that structural activities actions or reactions are not connected with aggregated [[IfcStructuralSurfaceMemberVarying]] but only with the [[IfcStructuralSurfaceMember]] s in the aggregation. That way, difficulties in interpretation of local coordinates are avoided. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Use definition changed and attributes deleted. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralItem]] and [[IfcStructuralSurfaceMember]] . The local coordinates of an aggregate are generally undefined since continuity of local coordinates of the parts is not ensured. X 0D X 0D Material Use Definition X 0D X 0D In case of aggregation, only the individual parts direct instances of [[IfcStructuralSurfaceMember]] carry material and thickness information. Otherwise, definitions at [[IfcStructuralSurfaceMember]] apply.bSI Documentation"
-
-#:IFC.xml:36920
-msgid "IfcStructuralSurfaceReaction"
-msgstr "Reacción estructural Ifc"
-
-msgid "IfcStructuralSurfaceReaction_DEFINITION"
-msgstr "This entity defines a reaction which occurs distributed over a surface. A surface reaction may be connected with a surface member or surface connection. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D Coordinate Systems X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D Topology Use Definitions X 0D X 0D See definitions at [[IfcStructuralActivity]] . X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D If the surface reaction is of the predefined type CONST, SELF [[IfcStructuralActivity]].AppliedLoad must not be of type [[IfcStructuralLoadConfiguration]]. X 0D If the surface reaction is of the predefined type BILINEAR, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain three items with two dimensional [[IfcStructuralLoadConfiguration]].Locations, defining the location of the result samples in local coordinates of the surface reaction. X 0D If the surface reaction is of the predefined type DISCRETE, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain two or more items with two dimensional locations. X 0D If the surface reaction is of the predefined type ISOCONTOUR, SELF [[IfcStructuralActivity]].AppliedLoad shall be of type [[IfcStructuralLoadConfiguration]] and shall contain the same number of items as the set SELF.[[IfcProduct]].Representation.Representations .Items. Each item in the load configuration shall have a two dimensional location, defining the location of the result samples in local coordinates of the surface reaction. Each item in SELF [[IfcStructuralActivity]].AppliedLoad shall be located at exactly one of the isocontours. X 0D NOTE The set of representation items is unordered, hence result locations are required to correlate result values and isocontours. X 0D NOTE Isocontours are represented as IfcPCurves which are defined in terms of surface parameters u,v, while result locations are given in local surface item coordinates x,y. It is strongly recommended that the surface parameterization u,v is scaled 1 1 in order to avoid different scales of u,v versus x,y. If u,v are scaled 1 1 and the IfcPCurve s base surface is identical with the surface item s base surface, u,v and local x,y are identical. X 0D X 0D All items in SELF [[IfcStructuralActivity]].AppliedLoad [[IfcStructuralLoadConfiguration]].Values shall be of the same entity type. X 0D bSI Documentation"
-
-#:IFC.xml:36921
-msgid "IfcStructuralSurfaceReaction_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcStructuralSurfaceReaction_PredefinedType_DEFINITION"
-msgstr "Type of reaction according to its distribution of load values."
-
-#:IFC.xml:36928
-msgid "Pset_StructuralSurfaceMemberVaryingThickness"
-msgstr "Mascota de superficie estructuralMemberVaryingThickness"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_DEFINITION"
-msgstr "Thickness parameters of a surface member structural analysis item with varying thickness, particularly with linearly varying thickness. The thickness is interpolated extrapolated from three points. The locations of these points are given either in local x,y coordinates of the surface member or in global X,Y,Z coordinates. Either way, these points are required to be located within the face or at the bounds of the face of the surface member, and they must not be located on a common line. Local and global coordinates shall not be mixed within the same property set instance.bSI Documentation"
-
-#:IFC.xml:36929
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location1Global"
-msgstr "Ubicación1Global"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location1Global_DEFINITION"
-msgstr "Coordenadas globales, Y,Z del punto en el que se da el espesor 1"
-
-#:IFC.xml:36934
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location1Local"
-msgstr "Ubicación1Local"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location1Local_DEFINITION"
-msgstr "Coordenadas x,y locales del punto en el que se da el espesor 1"
-
-#:IFC.xml:36939
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location2Global"
-msgstr "Ubicación2Global"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location2Global_DEFINITION"
-msgstr "Coordenadas globales X,Y,Z del punto en el que se da el espesor 2"
-
-#:IFC.xml:36944
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location2Local"
-msgstr "Ubicación2Local"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location2Local_DEFINITION"
-msgstr "Coordenadas x,y locales del punto en el que se da el espesor 2"
-
-#:IFC.xml:36949
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location3Global"
-msgstr "Ubicación3Global"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location3Global_DEFINITION"
-msgstr "Coordenadas globales X,Y,Z del punto en el que se da el espesor 3"
-
-#:IFC.xml:36954
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location3Local"
-msgstr "Ubicación3Local"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Location3Local_DEFINITION"
-msgstr "Coordenadas x,y locales del punto en el que se da el espesor 3"
-
-#:IFC.xml:36959
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness1"
-msgstr "Grosor 1"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness1_DEFINITION"
-msgstr "Primer parámetro de grosor de un miembro de la superficie con diferente grosor"
-
-#:IFC.xml:36964
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness2"
-msgstr "Grosor 2"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness2_DEFINITION"
-msgstr "Segundo parámetro de grosor de un miembro de la superficie con diferente grosor"
-
-#:IFC.xml:36969
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness3"
-msgstr "Grosor 3"
-
-msgid "Pset_StructuralSurfaceMemberVaryingThickness_Thickness3_DEFINITION"
-msgstr "Parámetro del tercer grosor de un miembro de la superficie con diferente grosor"
+msgid "IfcTopologyRepresentationTypes__RepType_DEFINITION"
+msgstr "The function gets the topology representation type and the assigned set of representation items as input and verifies whether the correct items are assigned according to the representation type given. X 0D X 0D HISTORY S New function in IFC2x3"
 
