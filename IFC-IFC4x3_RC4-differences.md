@@ -1,6 +1,6 @@
 # Express schema differences
 
-5 items
+11 items
 
 
 ### Missing data
@@ -10,13 +10,23 @@
 
 ### Type definitions
 
-:tada: No issues :tada:
+1 items
 
+| Name                   | IFC4x3_RC4.exp                                                                                                                                                                                  | IFC.exp                                                                                                                                                                                          |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcRailwayPartTypeEnum | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED |
 
 ### Entity definitions
 
-:tada: No issues :tada:
+5 items
 
+| Name                                      | IFC4x3_RC4.exp                                                               | IFC.exp                                                                                                         |
+|-------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| IfcOpenCrossProfileDef attributes         | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                             | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
+| IfcSectionedSolidHorizontal attributes    | ['CrossSectionPositions', 'FixedAxisVertical']                               | ['CrossSectionPositions']                                                                                       |
+| IfcSectionedSurface attributes            | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical'] | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
+| IfcSectionedSurface.CrossSectionPositions | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression            | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
+| IfcSpatialElement inverses                | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']              | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
 
 ### Constraints
 
