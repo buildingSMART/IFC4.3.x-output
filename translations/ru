@@ -9,604 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
-"X-Crowdin-File-ID: 98\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2021-12-08 20:43\n"
 
-#:IFC.xml:38531
-msgid "IfcBoundaryCondition"
-msgstr "Граница пролива"
+#:IFC.xml:38916
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBoundaryCondition_DEFINITION"
-msgstr "The abstract entity [[IfcBoundaryCondition]] is the supertype of all boundary conditions that can be applied to structural connection definitions, either directly for the connection e.g. the joint or for the relation between a structural member and the connection. X 0D X 0D NOTE The boundary conditions are used within other parts, mainly by instances of [[IfcStructuralConnection]] for the definition of supports and instances of [[IfcRelConnectsStructuralMember]] for the definition of connections between structural members and structural connections . X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Улучшенное лицо - это специализация поверхности лица, которая должна отвечать требованиям в отношении использования конкретных топологических и геометрических элементов для определения лица, края и вершины. X 0D X 0D An [[IfcAdvancedFace]] ограничено X 0D X 0D X 0D геометрией поверхности лица [[IfcElementarySurface]] , [[IfcSweptSurface]] или [[IfcBSplineSurface]] , у X 0D есть одна [[IfcFaceOuterBound]] как граница лица, за исключением закрытых поверхностей, X 0D имеет все грани которые будут связаны [[IfcEdgeLoop]] или [[IfcVertexLoop]] , X 0D имеют все края, чтобы иметь геометрию кривой края, X 0D имеют геометрию кривой только [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , или [[IfcBSplineCurve]] X 0D X 0D 0D В случае закрытых поверхностей с периодическими поверхностями, такими как цилиндрические или сферические поверхности, нижеследующая величина накладывает X 0D X 0D на края закрытой поверхности, в случае цилиндрической поверхности верхняя и нижняя крышки, см. ту же экземпляр [[IfcVertexPoint]] дважды, X 0D нет [[IfcFaceOuterBound]], или [[IfcFaceOuterBound]] сконструировано с использованием [[IfcSeamCurve]] в периодическом конце лежащей в основе закрытой поверхности, в случае цилиндрической поверхности при значении 0. 360. градусов X 0D X 0D цилиндрическая поверхность .. .. .. .. .. цифры ifcadvancedface 01. ng Рисунок 1 Использование [[IfcCylindricalSurface]] в качестве лежащей поверхности [[IfcAdvancedFace]] X 0D X 0D NOTE Entity на расширенной поверхности, определенной в ISO 10303 511. X 0D X 0D HISTORY Новая сущность в документации IFC4bSI"
 
-#:IFC.xml:38532
-msgid "IfcBoundaryCondition_Name"
-msgstr "Наименование"
+#:IFC.xml:38919
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBoundaryCondition_Name_DEFINITION"
-msgstr "При необходимости определяет имя для этого пограничного условия."
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Возвращает первый вариант, если TRUE, в противном случае второй вариант - X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Эта функция возвращает один из двух вариантов в зависимости от значения входного аргумента Boolean. Два варианта также являются входными аргументами. X 0D X 0D NOTE Функция адаптирована из булевого выбора, определенного в ISO10303 42. X 0D X 0D ИСТОРИЯ Новая функция в IFC2.0"
 
-#:IFC.xml:38538
-msgid "IfcBoundaryEdgeCondition"
-msgstr "Погрешность границы"
+#:IFC.xml:38927
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcBoundaryEdgeCondition_DEFINITION"
-msgstr "Describes linearly elastic support conditions or connection X 0D X 0D X 0D X 0D Кривая поддерживает и соединяет // X 0D X 0D HISTORY Новая сущность в IFC2x2. X 0D IFC 2x4 изменение атрибутов LinearStiffnessX Y Z переименована на TranslationalStiffnessX Y Z . X 0D X 0D X 0D . hange ifc2x4 X 0D IFC4 изменяет все типы данных атрибутов с числового на SELECT между логическим и числом. В настоящее время мотивы могут также быть отрицательными, например для выявления дестабилизирующих последствий в пограничных условиях. бесконечная жесткость, т.е. бесконечная жесткость. . исправления поддержки теперь моделируются логическим значением документации TRUE.bSI"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. X 0D X 0D The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. X 0D X 0D The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. X 0D X 0D The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following X 0D Image .. .. .. .. .. .. figures ifcopenshell math1.gif X 0D X 0D X 0D X 0D NOTE Entity adapted from closed shell defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. Every edge shall be referenced exactly twice by the loops of the face. X 0D 2. Each oriented edge shall be unique. X 0D 3. No edge shall be referenced by more than two faces. X 0D 4. Distinct faces of the shell do not intersect, but may share edges or vertices. X 0D 5. Distinct edges do not intersect but may share vertices. X 0D 6. Each face reference shall be unique. X 0D 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. X 0D 8. The closed shell shall be an oriented arcwise connected 2 manifold. X 0D 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation.bSI Documentation"
 
-#:IFC.xml:38539
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
-msgstr "Поворот наклонности по длине X"
+#:IFC.xml:38932
+msgid "IfcConnectedFaceSet"
+msgstr "Подключено к FaceSet"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
-msgstr "Значение точности вращения по отношению к оси x системы координат, определенной экземпляром, который использует объект ресурса."
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A подсоединенного лица представляет собой набор граней таким образом, что домен граней вместе с их границами и вершинами соединяется. X 0D X 0D ПРИМЕЧАНИЕ - сущность, адаптированная к соединенному массиву поверхности, определенному в ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Объединение доменов лиц и их границы должны быть arcwise связаны с документацией bSI"
 
-#:IFC.xml:38544
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
-msgstr "Поворотная склонность по длине"
+#:IFC.xml:38935
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
-msgstr "Значение точности вращения по оси y системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "CfsFaces"
 
-#:IFC.xml:38549
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
-msgstr "Поворот наклонности ByLengthZ"
+#:IFC.xml:38947
+msgid "IfcEdge"
+msgstr "Ледяной Край"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
-msgstr "Значение точности вращения по отношению к оси z системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . X 0D X 0D X 0D X 0D X 0D X 0D EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. X 0D X 0D Figure 1 Edge representation X 0D X 0D X 0D X 0D X 0D .extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to X 0D Image .. .. .. .. .. .. figures ifcedge math1.gif X 0D where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. .. .. figures ifcedge math2.gif X 0D the vertices need not be distinct Image .. .. .. .. .. .. figures ifcedge math3.gif X 0D Equation shall hold Image .. .. .. .. .. .. figures ifcedge math4.gif X 0D X 0D NOTE Entity adapted from edge defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. The edge has dimensionality 1. X 0D 2. The extent of an edge shall be finite and nonzero.bSI Documentation"
 
-#:IFC.xml:38554
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
-msgstr "TranslationalStiffnessByLengthX"
+#:IFC.xml:38950
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
-msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:38559
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
-msgstr "TranslationalStiffnessByLengthY"
+#:IFC.xml:38962
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:38564
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
-msgstr "TranslationalStiffnessByLengthZ"
+#:IFC.xml:38998
+msgid "IfcEdgeCurve"
+msgstr "Кривая Излучения"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "[[IfcEdgeCurve]] определяет две вертикали, соединяемые топологически, включая геометрическое представление соединения. X 0D X 0D NOTE Топология используется для обрезания геометрии края. Нет необходимости в геометрическом обрезании края, чтобы соответствовать топологии. X 0D X 0D X 0D X 0D X 0D X 0D X 0D EXAMPLE Рисунок 1 иллюстрирует пример где геометрия края задана без границы, здесь [[IfcCircle]]. Границы предоставлены EdgeStart и EdgeEnd, направление [[IfcEdgeCurve]] противостоит направлению [[IfcCircle]на SameSense FALSE. X 0D X 0D Рисунок 1 Кривая Edge X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Кривая края представляет собой специальный подтип края, который имеет полную геометрию. Геометрия определяется привязкой края к кривой, которая может быть удалена. Поскольку топологические и геометрические направления могут выступать против этого, То же значение индикатора используется для определения того, согласны ли направления края и кривой или против нее. Булевое значение указывает, согласуется ли направление кривой с TRUE или находится в противоположном направлении FALSE в направлении края. Любая геометрия, связанная с вершинами края, должна соответствовать геометрии края. Множественные края могут ссылаться на одну и ту же кривую. X 0D X 0D NOTE Entity адаптирована на основе кривой, определенной в ISO 10303 42. X 0D X 0D 0D HISTORY New entity in IFC2x X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Домен краевой кривой формально определен как домен края геометрии, обрезанный вершинами. Этот домен не включает в себя вершины. X 0D 2. Кривая края не имеет нулевого предела. X 0D 3. Кривая края многократна. X 0D 4. Кривая кривой arcwise подключена. X 0D 5. Край запуска не является краем домена. X 0D 6. Краевый конец не является краеугольным доменом. X 0D 7. Vertex геометрия должна соответствовать краям geometry.bSI Документация"
 
-#:IFC.xml:38571
-msgid "IfcBoundaryFaceCondition"
-msgstr "Граница пролива"
+#:IFC.xml:11007
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Геометрия кромки"
 
-msgid "IfcBoundaryFaceCondition_DEFINITION"
-msgstr "Describes linearly elastic support conditions or connection X 0D X 0D X 0D X 0D Поверхность поддерживает и соединяет // X 0D X 0D HISTORY Новая сущность в IFC2x2. X 0D IFC 2x4 изменение атрибутов LinearStiffnessX Y Z переименована на TranslationalStiffnessX Y Z . X 0D X 0D X 0D . hange ifc2x4 X 0D IFC4 изменяет все типы данных атрибутов с числового на SELECT между логическим и числом. В настоящее время мотивы могут также быть отрицательными, например для выявления дестабилизирующих последствий в пограничных условиях. бесконечная жесткость, т.е. бесконечная жесткость. . исправления поддержки теперь моделируются логическим значением документации TRUE.bSI"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Геометрия кромки"
 
-#:IFC.xml:38572
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
-msgstr "TranslationalStiffnessByAreaX"
+#:IFC.xml:38999
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
-msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Этот логический флаг указывает, что TRUE , или нет FALSE чувства края и кривая, определяющая геометрию края одинаковы. Смысл края - от края стартовой вершины до края конца вершины - смысл кривой в направлении увеличения параметра."
 
-#:IFC.xml:38577
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
-msgstr "TranslationalStiffnessByAreaY"
+#:IFC.xml:39007
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Граница цикла является циклом с нулевой степенью. Это путь, по которому вершина начала и конца одинаковы. Его область, если присутствует, является закрытой кривой. Цикл края может перекрыться. X 0D X 0D NOTE Сущность адаптирована из края цикла определена в ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D X 0D . pec голова X 0D неофициальных предложений X 0D X 0D 1. Род [[IfcEdgeLoop]] должен быть 1 или выше. Формула Euler должна быть удовлетворена числом разновидностей вертикали 1 X 0D 3. Ни один край не может ссылаться более одного раза на один и тот же [[IfcEdgeLoop]] с тем же смыслом. С этой целью край, не являющийся ориентированным краем, считается ссылающимся на смысл документация TRUE.bSI Documentation"
 
-#:IFC.xml:38582
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
-msgstr "TranslationalStiffnessByAreaZ"
+#:IFC.xml:39015
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Список EdgeList"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Список EdgeList"
 
-#:IFC.xml:38589
-msgid "IfcBoundaryNodeCondition"
-msgstr "Зависимость границы"
+#:IFC.xml:39008
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-msgid "IfcBoundaryNodeCondition_DEFINITION"
-msgstr "Describes linearly elastic support conditions or connection X 0D X 0D X 0D X 0D 0D Point поддерживает и соединяет с X 0D X 0D 0D HISTORY Новая сущность в IFC2x2. X 0D IFC 2x4 изменение атрибутов LinearStiffnessX Y Z переименована на TranslationalStiffnessX Y Z . X 0D X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Все типы данных атрибутов изменены с числового на SELECT между логическим и числом. В настоящее время мотивы могут также быть отрицательными, например для выявления дестабилизирующих последствий в пограничных условиях. бесконечная жесткость, т.е. бесконечная жесткость. . исправления поддержки теперь моделируются логическим значением документации TRUE.bSI"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Ne"
 
-#:IFC.xml:38590
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
-msgstr "Поворот наследственности X"
+#:IFC.xml:39027
+msgid "IfcFace"
+msgstr "Лицо"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
-msgstr "Значение точности вращения по отношению к оси x системы координат, определенной экземпляром, который использует объект ресурса."
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. X 0D X 0D NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. X 0D X 0D .extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . X 0D X 0D A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . X 0D X 0D A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. X 0D X 0D The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes X 0D Image .. .. .. .. .. .. figures ifcface math1.gif X 0D where G l X 7Ei X 7E is the graph genus of the i th loop. X 0D X 0D NOTE Entity adapted from face defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. No edge shall be referenced by the face more than twice. X 0D 2. Distinct face bounds of the face shall have no common vertices. X 0D 3. If geometry is present, distinct loops of the same face shall not intersect. X 0D 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0.bSI Documentation"
 
-#:IFC.xml:38595
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
-msgstr "RotationalStiffnessY"
+#:IFC.xml:24201
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
-msgstr "Значение точности вращения по оси y системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:38600
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
-msgstr "RotationalStiffnessZ"
+#:IFC.xml:39030
+msgid "IfcFace_Bounds"
+msgstr "Границы"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
-msgstr "Значение точности вращения по отношению к оси z системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Границы"
 
-#:IFC.xml:38605
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
-msgstr "TranslationalStiffnessX"
+#:IFC.xml:39042
+msgid "IfcFaceBound"
+msgstr "Лифтовая граница"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
-msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A лицевая граница представляет собой цикл, который предназначен для обводки лица. X 0D X 0D ПРИМЕЧАНИЕ Сущность адаптирована из границы, определена в ISO 10303 42. X 0D X 0D HISTORY Новая сущность в документации IFC1.0bSI"
 
-#:IFC.xml:38610
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
-msgstr "TranslationalStiffnessY"
+#:IFC.xml:39050
+msgid "IfcFaceBound_Bound"
+msgstr "Привязка"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Привязка"
 
-#:IFC.xml:38615
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
-msgstr "TranslationalStiffnessZ"
+#:IFC.xml:39043
+msgid "IfcFaceBound_Orientation"
+msgstr "Направление"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
-msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Это показало, что ТРЕЙД или не ЛЕГЕТ цикл имеет то же значение, когда используется для привязки лица к первому определению. Если смысл FALSE, то ощущения всех его концов ориентируются на края неявно перевернуты при использовании в лицо."
 
-#:IFC.xml:38622
-msgid "IfcBoundaryNodeConditionWarping"
-msgstr "Размыкание границыNodeWarping"
+#:IFC.xml:39062
+msgid "IfcFaceOuterBound"
+msgstr "Физическая граница"
 
-msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
-msgstr "Describes linearly elastic support conditions or connection conditions, including linearly elastic warping restrains. X 0D X 0D применимость X 0D X 0D X 0D Point поддерживает и соединения. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D X 0D . hange ifc2x4 X 0D IFC4 CHANGE Все типы данных атрибутов изменены с числового на SELECT между логическим и числом. В настоящее время мотивы могут также быть отрицательными, например для выявления дестабилизирующих последствий в пограничных условиях. бесконечная жесткость, т.е. бесконечная жесткость. . исправления поддержки теперь моделируются логическим значением документации TRUE.bSI"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef X 0D ПРИМЕЧАНИЕ Определение в соответствии с ISO CD 10303 42 1992 X 0D A лицо наружной границы представляет собой специальный подтип границы, которая несет дополнительную семантику определения внешней границы на лице. Этому типу не должно быть более одной границы поверхности. X 0D X 0D ПРИМЕЧАНИЕ сущности, адаптированной к наружной поверхности лица, определенной в ISO 10303 42. X 0D X 0D ИСТОРИЯ Новая сущность в документации по IFC1.0bSI"
 
-#:IFC.xml:38623
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
-msgstr "Тяжелость"
+#:IFC.xml:39065
+msgid "IfcFaceSurface"
+msgstr "Ледяная поверхность"
 
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
-msgstr "Определяет значение жесткости предупреждения."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] определяет лежащую в основе геометрию ассоциированной поверхности на лицо. X 0D X 0D NOTE Топология используется для обрезания геометрии поверхности. Не нужно геометрически обрезать поверхность, чтобы соответствовать топологии. X 0D X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A поверхность лица представляет собой подтип лица, на котором геометрия определяется соответствующей поверхностью. Часть поверхности, используемая поверхностью, должна быть встроена в плоскость в качестве открытого диска, возможно с отверстиями. Тем не менее, объединение лица с краями и вертикали его закругления петли не должны быть встроены в плоскость. Например, она может охватывать всю сферу или туш. Поскольку как поверхность, так и геометрическая поверхность определяют нормальные направления, атрибут ориентации BOOLEAN используется для указания того, согласна ли поверхность с TRUE или против УДАЛЕНИЯ нормального направления лица. Геометрия, связанная с любым элементом лицевого цикла должна соответствовать геометрии поверхности, в том смысле, что области всех точек вершины и краевых кривых содержатся в поверхности лица. На поверхность можно ссылаться более чем на одну поверхность. X 0D X 0D NOTE Entity from face surface defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Область поверхности лица формально определяется как область ее геометрии лица, обрезанная петлями, этот домен не включает границы циклов. X 0D 2. Поверхность лица не имеет нулевого предела. X 0D 3. Лицевая поверхность многослойная. X 0D 4. Лицевая поверхность переплетена. X 0D 5. Поверхность лица имеет вид 0. X 0D 6. Циклы не являются частью области лица. X 0D 7. Геометрия цикла должна соответствовать геометрии лица. Это означает, что любая кривая края или вертикальные точки, используемые для определения контуров поверхности линии, должна лежать на геометрии поверхности. X 0D 8. Циклы лица не должны пересекаться с документацией"
 
-#:IFC.xml:38630
-msgid "IfcFailureConnectionCondition"
-msgstr "Условие подключения к серверу"
+#:IFC.xml:12035
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Лицевой поверхности"
 
-msgid "IfcFailureConnectionCondition_DEFINITION"
-msgstr "Определяет усилия, при которых поддержка или соединение не работает. X 0D X 0D Applicability X 0D X 0D X 0D Point поддерживает и соединение. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Лицевой поверхности"
 
-#:IFC.xml:38631
-msgid "IfcFailureConnectionCondition_CompressionFailureX"
-msgstr "Сжатие Неисправности"
+#:IFC.xml:39066
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
-msgstr "Сила сжатия в направлении x, приводящая к сбою соединения."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Этот флаг указывает, согласен ли смысл поверхности с TRUE , или выступает против ПОЖАЛУЙСТВ , чувства топологической нормальной к лицу."
 
-#:IFC.xml:38636
-msgid "IfcFailureConnectionCondition_CompressionFailureY"
-msgstr "Сбой сжатия"
+#:IFC.xml:39074
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
-msgstr "Сила сжатия в направлении y приводит к отказу соединения."
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A петля представляет собой топологическую сущность, построенную на одной вершине, или путем втягивания соединенных друг с другом краев, или линейных звеньев, начинающихся и заканчивающихся на той же вершине. Обычно он используется для привязки лица, лежащего на поверхности. Цикл имеет размерность 0 или 1. Доменное значение 0 измерений является одной точкой. Область 1 гравийной петли - это связующая, ориентированная кривая, но не должна быть многократной. Поскольку цикл - это круг, расположение его начальной конечной точки является произвольным. Домен петли включает ее границы, 0 <unk> . Цикл представлен одной вершиной, или упорядоченной коллекцией ориентирующихся граней или упорядоченной коллекцией точек. Цикл - это график, поэтому M и граф рода G l могут определяться алгоритмом обхода графа. Начиная с M 1, уравнение Euler 1 уменьшает в этом случае до X 0D Изображение .. .. .. .. .. фигуры ifcloop math1. если X 0D где V и E X 7El X 7E - количество уникальных вершин и ориентированных краев в цикле и G l является родом цикла. X 0D X 0D NOTE Entity адаптирована из цикла определенного в ISO 10303 42. X 0D X 0D 0D HISTORY New entity in IFC2x X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Цикл имеет конечную степень. X 0D 2. Цикл описывает закрытую топологическую кривую с коинцидентом старт и конец vertices.bSI Документация"
 
-#:IFC.xml:38641
-msgid "IfcFailureConnectionCondition_CompressionFailureZ"
-msgstr "CompressionFailureZ"
+#:IFC.xml:39077
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
-msgstr "Сила сжатия в направлении z приводит к сбою соединения."
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Эта функция возвращает TRUE, если для краев входного края цикла конца каждого края то же самое, что и стартовая вершина его преемника. X 0D X 0D ИСТОРИЯ Новая функция в IFC2x2"
 
-#:IFC.xml:38646
-msgid "IfcFailureConnectionCondition_TensionFailureX"
-msgstr "Сбой напряжения"
+#:IFC.xml:39085
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
-msgstr "Сила растяжения в направлении x, приводящая к отказу соединения."
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. X 0D X 0D The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. X 0D X 0D The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. X 0D An open shell shall have at least one face. X 0D A given face may exist in more than one open shell. X 0D X 0D X 0D The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. X 0D X 0D NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. X 0D X 0D NOTE Entity adapted from open shell defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. Every edge shall be referenced exactly twice by the face bounds of the face. X 0D 2. Each oriented edge shall be unique. X 0D 3. No edge shall be referenced by more than two faces. X 0D 4. Distinct faces of the shell do not intersect, but may share edges or vertices. X 0D 5. Distinct edges do not intersect but may share vertices. X 0D 6. Each face reference shall be unique. X 0D 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. X 0D 8. The closed shell shall be an oriented arcwise connected 2 manifold. X 0D 9. The Euler equation shall be satisfied.bSI Documentation"
 
-#:IFC.xml:38651
-msgid "IfcFailureConnectionCondition_TensionFailureY"
-msgstr "Сбой напряжения"
+#:IFC.xml:39089
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
-msgstr "Усиление силы в направлении y приводит к отказу соединения."
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "[[IfcOrientedEdge]] представляет собой [[IfcEdge]] с примененным флагом ориентации. Он позволяет повторять то же самое [[IfcEdge]] при проходе ровно два раза, один раз вперед и один раз назад. X 0D X 0D NOTE Понятие нормального к [[IfcFace]] определяется исключительно по краям. Если все края лица подсоединены счетчиком по часовой стрелке, следуя направлениям края, то нормальное лицо указывает наружу. Нормальный к лежащему в его основе [[IfcFaceSurface]], представляющий геометрию лица не имеет отношения к этому. Цель [[IfcFaceSurface]]. ameSense атрибут дает дополнительную информацию для целей проверки. SameSense TRUE означает нормальную поверхность и нормальное лицо одинаково, SameSense FALSE означает, что они находятся в противоположных направлениях. X 0D X 0D Край с геометрическим представлением [[IfcEdgeCurve]] определяет край в 3D координатном пространстве. В некоторых случаях, особенно при использовании простейших или простейших поверхностей, существует риск неточного отображения 3D x, y, z [[IfcEdgeCurve]] на прилегающие поверхности для определения границ этих поверхностей. Необязательный CurveOnSurface определяет 2D u, v край в пределах параметрического пространства поверхности. Может использоваться для определения правильности отображения 3D [[IfcEdgeCurve]] на эту поверхность. X 0D X 0D X 0D X 0D EXAMPLE 1 иллюстрирует пример предоставления CurveOnSurface в дополнение к геометрии кривой [[IfcEdgeCurve]]. X 0D X 0D Рисунок 1 Кривая представления поверхности [[IfcOrientedEdge]] X 0D X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Конструктивный край - край, построенный с другого края, и содержит флаг направления BOOLEAN для указания или нет ориентации сконструированного края согласуется с ориентацией исходного края. Кроме ориентации, ориентация на край эквивалентна исходному краю. Обычная практика X 0D X Твердые системы моделирования заключается в том, чтобы иметь сущность, представляющую собой использование или обход края. Эта используемая сущность явно представляет требование в нескольких твердых частиц, что каждый край должен проходить ровно два раза в каждом направлении. Функциональность использования обеспечивается краем субтитра. X 0D X 0D NOTE Entity адаптирована с ориентационного края, определенного в ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0. X 0D X 0D X 0D . hange ifc2x4 X 0D IFC4 Add2 CHANGE Атрибут CurveOnSurface был добавлен.bSI документация"
 
-#:IFC.xml:38656
-msgid "IfcFailureConnectionCondition_TensionFailureZ"
-msgstr "TensionFailureZ"
+#:IFC.xml:38974
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Элемент кромки"
 
-msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
-msgstr "Сила растяжения в направлении z приводит к отказу соединения."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Элемент кромки"
 
-#:IFC.xml:38663
-msgid "IfcModulusOfRotationalSubgradeReactionSelect"
-msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
+#:IFC.xml:39090
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF кромка Ifcdge"
 
-msgid "IfcModulusOfRotationalSubgradeReactionSelect_DEFINITION"
-msgstr "Измерение в модуле вращательной подградительной реакции, которая выражает вращающуюся подложку элемента структурной кривой по длине. TRUE обозначает бесконечную жесткость . FALSE не обозначает жесткость релиза, числовое значение обозначает конечную линейную эластичность. X 0D X 0D HISTORY New type in IFC4."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:38664
-msgid "IfcModulusOfSubgradeReactionSelect"
-msgstr "IfcModulusOfSubgradeReactionSelect"
+#:IFC.xml:39094
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdgeStart"
 
-msgid "IfcModulusOfSubgradeReactionSelect_DEFINITION"
-msgstr "Постельное белье представляет собой постельное белье структурной части лица на каждую область. FALSE не обозначает жесткость релиза, числовое значение обозначает конечную линейную эластичность. X 0D X 0D HISTORY New type in IFC4."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:38665
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
-msgstr "Выбор субверсии IfcModulusOfTranslationalSubgradeReactionSelect"
+#:IFC.xml:39098
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Направление"
 
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect_DEFINITION"
-msgstr "Измерение для модуля переводимой подградительной реакции, которая выражает переводную подложку элемента структурной кривой по длине. TRUE обозначает бесконечную жесткость . Цифровое значение обозначает конечную линейную эластичную жесткость. X 0D X 0D HISTORY Новый тип в IFC4."
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, If TRUE the topological orientation as used coincide with the orientation from start vertex to end vertex of the edge element."
 
-#:IFC.xml:38666
-msgid "IfcRotationalStiffnessSelect"
-msgstr "Поворот ифка"
+#:IFC.xml:39117
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcRotationalStiffnessSelect_DEFINITION"
-msgstr "Измерение жесткости вращения. TRUE обозначает бесконечную жесткость жесткости . FALSE не обозначает жесткости релиза. Цифровое значение обозначает конечную линейную эластичную жесткость. X 0D X 0D HISTORY Новый тип в IFC4."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A траекторией является топологическая структура, состоящая из заказанной коллекции сфокусированных краев, таким образом, что край запускается вершина каждого края совпадает с краем его предшественника. Путь отсортирован от края начала первого ориентированного края до края последнего края. Значения BOOLEAN в ориентируемом крае указывают, согласуются ли края с направлением пути TRUE или противоположным направлением FALSE . X 0D X 0D X Индивидуальный край может ссылаться только один раз на отдельный путь. Край может быть использован несколькими путями. Край может существовать независимо от пути. X 0D X 0D NOTE Entity адаптирована из пути, определенного в ISO 10303 42. X 0D X 0D HISTORY Новая сущность в IFC2. X 0D X 0D .spec головка X 0D Неформальные предложения X 0D X 0D X 0D 1. Путь имеет размерность 1. X 0D 2. Путь по дуге соединен. X 0D 3. Края пути не пересекаются, кроме обычных вершин. X 0D 4. Документация не нулевого extent.bSI"
 
-#:IFC.xml:38667
-msgid "IfcSlippageConnectionCondition"
-msgstr "IfcSlippageConnectionCondition"
+#:IFC.xml:39105
+msgid "IfcPath_EdgeList"
+msgstr "Список EdgeList"
 
-msgid "IfcSlippageConnectionCondition_DEFINITION"
-msgstr "Описывает проскальзывание в поддержку условий или условий подключения. Проскальзывание означает, что относительное перемещение может произойти в поддержке или соединении до того, как реакция на соединение будет отключена. Применимость X 0D X 0D X 0D X 0D Point поддерживает и подключает, поддерживает и соединяет X 0D кривую, поддерживает поверхность X 0D и соединения. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Список EdgeList"
 
-#:IFC.xml:38668
-msgid "IfcSlippageConnectionCondition_SlippageX"
-msgstr "SlippageX"
+#:IFC.xml:39120
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
-msgstr "Проскальзывание в x направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Эта функция возвращает TRUE, если все края входного пути последовательны, X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Эта функция возвращает TRUE, если для краев входного пути конечная вершина каждого края такая же, как стартовая вершина ее преемника. X 0D X 0D NOTE Функция адаптирована из заголовка пути к хвосту, определенная в ISO10303 42. X 0D X 0D ИСТОРИЯ Новая функция в IFC2.0"
 
-#:IFC.xml:38673
-msgid "IfcSlippageConnectionCondition_SlippageY"
-msgstr "SlippageY"
+#:IFC.xml:39128
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
-msgstr "Проскальзывание по y в направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A poly цикл является циклом с прямыми краями окружения планарной области в пространстве. Полярный цикл - это петля рода 1, где петля представлена упорядоченным копланаром коллекцию точек, образующих вершины цикла. Цикл состоит из прямых звеньев, соединяющих точку в коллекции с удачной точкой в коллекции. Заключительный сегмент от последнего до первой точки в коллекции. Направление петли находится в направлении звеньев линии. X 0D X 0D Полярный цикл должен соответствовать следующим топологическим ограничениям, который имеет вид одного. X 0D следующее уравнение должно быть удовлетворено Изображение .. .. .. .. .. .. цифры ifcpolyloop math1. если X 0D X 0D [[IfcPolyLoop]] всегда закрыт, а последний отрезок с последнего [[IfcCartesianPoint]] в списке полигонов к первому [[IfcCartesianPoint]] . Поэтому первая точка не должна повторяться в конце списка и не должна ссылаться на ту же инстанцию, или с помощью дополнительного экземпляра [[IfcCartesianPoint]], имеющего первые координаты. X 0D X 0D ПРИМЕЧАНИЕ Эта сущность существует в первую очередь для содействия эффективному общению фасадных моделей B rep. X 0D X 0D X 0D X 0D 0D NOTE Entity адаптирована из поли-циклов, определенных в ISO 10303 42. X 0D X 0D HISTORY Новая сущность в IFC1. X 0D X 0D .spec головка X 0D Неформальные предложения X 0D X 0D X 0D 1. Все точки полигона, определяющие цикл полигона, должны быть копланом. X 0D 2. Первая и последняя Полигоны должны отличаться по значение.bSI Документация"
 
-#:IFC.xml:38678
-msgid "IfcSlippageConnectionCondition_SlippageZ"
-msgstr "SlippageZ"
+#:IFC.xml:10624
+msgid "IfcPolyLoop_Polygon"
+msgstr "Полигон"
 
-msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
-msgstr "Проскальзывание по оси z в направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Полигон"
 
-#:IFC.xml:38685
-msgid "IfcStructuralConnectionCondition"
-msgstr "Условие IfcStructuralConnect"
+#:IFC.xml:39131
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcStructuralConnectionCondition_DEFINITION"
-msgstr "Опишите более редко необходимые свойства соединения. X 0D X 0D HISTORY Новая сущность в документации IFC2x2.bSI"
+msgid "IfcShell_DEFINITION"
+msgstr "Тип оболочки с различными типами оболочки X 0D X 0D . xtDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D Этот тип собирается вместе, для эталонных при построении более сложных моделей, подтипов, имеющих характеристики корпуса. Оболочка - это подключенный объект фиксированной размерности d 0 1 или 2, обычно используемый для привязки региона. Область оболочки, если имеется, включает ее границы и 0 <unk> A оболочка размерности 0 представлена графиком, состоящим из одной вершины. Вершина не должна иметь никаких связанных краев. X 0D A оболочка размером 1 представлена подключенным графом размерности 1. X 0D Оборудование размером 2 представляет собой топологическую сущность, построенную стыковочными поверхностями вдоль краев. Его домен, если имеется, является соединенным, ориентируемым 2 множеством с границей, то есть подключенная, ориентированная, конечная, не самопересекающаяся поверхность, которая может быть закрыта или открыта. X 0D X 0D NOTE Тип адаптируется из оболочки, определенной в ISO 10303 42. X 0D X 0D HISTORY Новый тип в IFC2x."
 
-#:IFC.xml:38686
-msgid "IfcStructuralConnectionCondition_Name"
-msgstr "Наименование"
+#:IFC.xml:39132
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
-msgstr "При необходимости определяет имя для этого условия подключения."
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A под-край - это край, домен которого является частью домена существующего края. Топологические ограничения на вырезании те же самые ограничения на краях. X 0D X 0D NOTE Entity адаптирована из подкройки, определенной в ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D X 0D . pec головка X 0D неофициальных предложений X 0D X 0D X 0D 1. Домен subedge формально определен как домен родительского края, как это было обрезано subedge start vertex и subedge end vertex. X 0D 2. Вертикальная часть старта и конец вершины должны находиться в пределах объединения областей вершин родительского края и области области родительского края . Документация SI"
 
-#:IFC.xml:38692
-msgid "IfcStructuralLoad"
-msgstr "IfcStructuralLoad"
+#:IFC.xml:38986
+msgid "IfcSubedge_ParentEdge"
+msgstr "Родительский край"
 
-msgid "IfcStructuralLoad_DEFINITION"
-msgstr "Эта абстрактная сущность является сверхтипом всех нагрузок или реакций или определенных требований, вытекающих из структурного анализа, или некоторых положений, влияющих на структурный анализ. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Родительский край"
 
-#:IFC.xml:38693
-msgid "IfcStructuralLoad_Name"
-msgstr "Наименование"
+#:IFC.xml:39135
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcStructuralLoad_Name_DEFINITION"
-msgstr "При необходимости определяет имя для этой нагрузки."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef X 0D ПРИМЕЧАНИЕ Определение в соответствии с ISO CD 10303 42 1992 X 0D Элемент топологического представления является супертипом для всех топологических элементов в ресурсе геометрии. X 0D X 0D ПРИМЕЧАНИЕ сущности, адаптированной из элемента топологического представительства, определенного в ISO 10303 42. X 0D X 0D HISTORY Новая сущность в документации по IFC1.5bSI"
 
-#:IFC.xml:38699
-msgid "IfcStructuralLoadConfiguration"
-msgstr "Настройка нагрузки IfcStructuralLoadConfiguration"
+#:IFC.xml:39138
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcStructuralLoadConfiguration_DEFINITION"
-msgstr "Этот класс сочетает одну или несколько значений в конфигурации 1 или 2 размера. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. 0D 2. Если нагрузка или результаты представляют собой кривую активность, то должно быть указано одно измеренное место. Местоположение не должно превышать границы кривой активности. Образцы нагрузки и соответствующие места должны указываться в порядке возрастания координат X 0D 3. Если в результате нагрузок или нагрузок образуется поверхностная активность, то должны быть указаны два размера, измеряется в поверхностных действиях с местными координатами x и y. Местонахождение не должно превышать границ поверхности. X 0D X 0D ПРИМЕЧАНИЕ В 2-мерном случае нет требований к порядку, но для простоты должны быть в пространственном порядке упорядочены 1 размерность. Документация SI"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A vertex является топологической структурой, соответствующей точке. Она имеет измерение 0 и масштаб 0. Домен вершины, если присутствует, является точкой в m измерение реальное пространство R M это представляет вершина подтипа. X 0D X 0D NOTE Entity from vertex defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Вершина имеет размерность 0. Это основополагающее свойство вершины. X 0D 2. Степень вершины определяется как документация zero.bSI"
 
-#:IFC.xml:38707
-msgid "IfcStructuralLoadConfiguration_Values"
-msgstr "Значения"
+#:IFC.xml:39153
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
-msgstr "Значения"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A vertex - цикл нулевого рода, состоящий из одной вершины. Вершина может существовать независимо от вершины цикла. Топологические данные должны удовлетворить следующее ограничение X 0D Изображение .. .. .. .. .. .. цифр ifcvertexloop math1. если X 0D X 0D X 0D X 0D X 0D NOTE Entity адаптирована из вершины цикла, определенного в ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D X 0D . pec головка X 0D Informal Propositions X 0D X 0D 1. Вертикальный цикл имеет нулевое значение и размерность. X 0D 2. Вертикальный цикл имеет род 0.bSI документация"
 
-#:IFC.xml:38700
-msgid "IfcStructuralLoadConfiguration_Locations"
-msgstr "Места"
+#:IFC.xml:39141
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
-msgstr "Расположение нагрузочных образцов или результирующих образцов в рамках локальной системы координат, определенной экземпляром, использующим данный объект ресурса. Каждый элемент в списке локаций относится к элементу списка значений по одному и тому же индексу списка. Этот атрибут является необязательным для конфигураций, в которых местоположение неявно известно из определений более высокого уровня."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "LoopVertex"
 
-#:IFC.xml:38719
-msgid "IfcStructuralLoadLinearForce"
-msgstr "IfcStructuralLoadLinearForce"
+#:IFC.xml:39156
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcStructuralLoadLinearForce_DEFINITION"
-msgstr "Для определения действий на кривых используется экземпляр сущности [[IfcStructuralLoadLinearForce]]. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef X 0D NOTE Определение в соответствии с ISO CD 10303 42 1992 X 0D A vertex это вершина, которая имеет свою геометрию в точке. X 0D X 0D NOTE Entity from vertex point defined in ISO 10303 42. X 0D X 0D 0D HISTORY New entity in IFC2x X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Домен вершины формально определен как домен vertex point.bSI Документация"
 
-#:IFC.xml:38720
-msgid "IfcStructuralLoadLinearForce_LinearForceX"
-msgstr "LinearForceX"
+#:IFC.xml:11595
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "Геометрия текста"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
-msgstr "Линейное значение силы в направлении x."
-
-#:IFC.xml:38725
-msgid "IfcStructuralLoadLinearForce_LinearForceY"
-msgstr "LinearForceY"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
-msgstr "Линейное значение силы в направлении y ."
-
-#:IFC.xml:38730
-msgid "IfcStructuralLoadLinearForce_LinearForceZ"
-msgstr "LinearForceZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
-msgstr "Линейное значение силы в направлении Z."
-
-#:IFC.xml:38735
-msgid "IfcStructuralLoadLinearForce_LinearMomentX"
-msgstr "Линейная МоментаX"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
-msgstr "Линейный момент вокруг оси x."
-
-#:IFC.xml:38740
-msgid "IfcStructuralLoadLinearForce_LinearMomentY"
-msgstr "LinearMomentY"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
-msgstr "Линейный момент вокруг оси y."
-
-#:IFC.xml:38745
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
-msgstr "LinearMomentZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
-msgstr "Линейный момент вокруг оси z."
-
-#:IFC.xml:38752
-msgid "IfcStructuralLoadOrResult"
-msgstr "IfcStructuralLoadOrResult"
-
-msgid "IfcStructuralLoadOrResult_DEFINITION"
-msgstr "Абстрактный суперкласс простой нагрузки или результирующих классов. Новая абстрактная сущность в IFC4, совместимость всех подтипов сохраняется.bSI документации"
-
-#:IFC.xml:38755
-msgid "IfcStructuralLoadPlanarForce"
-msgstr "IfcStructuralLoadPlanarForce"
-
-msgid "IfcStructuralLoadPlanarForce_DEFINITION"
-msgstr "Экземпляр сущности [[IfcStructuralLoadPlanarForce]] используется для определения действий на лицах. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
-
-#:IFC.xml:38756
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
-msgstr "PlanarForceX"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
-msgstr "Значение силы планарного усилия в направлении x."
-
-#:IFC.xml:38761
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
-msgstr "PlanarForceY"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
-msgstr "Значение силы планеры в направлении оси y."
-
-#:IFC.xml:38766
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
-msgstr "PlanarForceZ"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
-msgstr "Значение силы планера в направлении z ."
-
-#:IFC.xml:38773
-msgid "IfcStructuralLoadSingleDisplacement"
-msgstr "IfcStructuralLoadSingleDisplacement"
-
-msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
-msgstr "Экземпляры сущности [[IfcStructuralLoadSingleDisplacement]] используются для определения перемещений. X 0D X 0D HISTORY Новая сущность в документации IFC2x2.bSI"
-
-#:IFC.xml:38774
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
-msgstr "DisplacementX"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
-msgstr "Перемещение в направлении оси x."
-
-#:IFC.xml:38779
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
-msgstr "Перемещение Y"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
-msgstr "Перемещение в направлении оси y."
-
-#:IFC.xml:38784
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
-msgstr "Размещение Z"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
-msgstr "Перемещение в направлении Z."
-
-#:IFC.xml:38789
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
-msgstr "RotationalDisplacementRX"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
-msgstr "Поворот вокруг оси x."
-
-#:IFC.xml:38794
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
-msgstr "Поворот перемещений"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
-msgstr "Поворот вокруг оси y."
-
-#:IFC.xml:38799
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
-msgstr "RotationalDisplacementRZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
-msgstr "Поворот вокруг оси z."
-
-#:IFC.xml:38806
-msgid "IfcStructuralLoadSingleDisplacementDistortion"
-msgstr "IfcStructuralLoadSingleDisplacementDistortion"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
-msgstr "Определяет смещение с варпингом. X 0D X 0D HISTORY Новая сущность в документации IFC2x2.bSI"
-
-#:IFC.xml:38807
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
-msgstr "Искажение"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
-msgstr "Искривление деформации, то есть деплантация перекрестного сечения при смещающей нагрузке."
-
-#:IFC.xml:38814
-msgid "IfcStructuralLoadSingleForce"
-msgstr "Сингл нагрузки IfcStructuralнагрузки"
-
-msgid "IfcStructuralLoadSingleForce_DEFINITION"
-msgstr "Экземпляры сущности [[IfcStructuralLoadSingleForce]] используются для определения сил и моментов действия в одной точке. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
-
-#:IFC.xml:38815
-msgid "IfcStructuralLoadSingleForce_ForceX"
-msgstr "СилаX"
-
-msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
-msgstr "Принудительное значение по оси x."
-
-#:IFC.xml:38820
-msgid "IfcStructuralLoadSingleForce_ForceY"
-msgstr "Сила"
-
-msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
-msgstr "Значение силы в направлении y."
-
-#:IFC.xml:38825
-msgid "IfcStructuralLoadSingleForce_ForceZ"
-msgstr "ForceZ"
-
-msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
-msgstr "Принудительное значение по z направлению."
-
-#:IFC.xml:38830
-msgid "IfcStructuralLoadSingleForce_MomentX"
-msgstr "МоментX"
-
-msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
-msgstr "Момент вокруг оси x."
-
-#:IFC.xml:38835
-msgid "IfcStructuralLoadSingleForce_MomentY"
-msgstr "MomentY"
-
-msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
-msgstr "Момент относительно оси y."
-
-#:IFC.xml:38840
-msgid "IfcStructuralLoadSingleForce_MomentZ"
-msgstr "MomentZ"
-
-msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
-msgstr "Момент относительно оси z."
-
-#:IFC.xml:38847
-msgid "IfcStructuralLoadSingleForceWarping"
-msgstr "IfcStructuralLoadSingleForceWarping"
-
-msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
-msgstr "Экземпляры сущности [[IfcStructuralLoadSingleForceWarping]] , как подтип [[IfcStructuralLoadSingleForce]] , используется для определения операции по одной точке. В дополнение к силам и моментам определяемым их супертипом может быть определен боевой момент. X 0D X 0D HISTORY Новая сущность в документации по IFC2x2.bSI"
-
-#:IFC.xml:38848
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
-msgstr "Модификация Варпенга"
-
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
-msgstr "Двойной момент в точке загрузки."
-
-#:IFC.xml:38855
-msgid "IfcStructuralLoadStatic"
-msgstr "IfcStructuralLoadStatic"
-
-msgid "IfcStructuralLoadStatic_DEFINITION"
-msgstr "Абстрактная сущность [[IfcStructuralLoadStatic]] — это супертип всех статических действий или реакций, которые могут быть определены. Концентрированные силы и моменты внутри области являются единственными, линейными, т.е. Одно измерение распределенных сил и моментов, планарный т.е. 2 измеренных распределенных сил, кроме того, перемещений и температурных нагрузок. X 0D X 0D HISTORY Новая сущность в документации IFC2x2.bSI"
-
-#:IFC.xml:38858
-msgid "IfcStructuralLoadTemperature"
-msgstr "Температура нагрузки"
-
-msgid "IfcStructuralLoadTemperature_DEFINITION"
-msgstr "Для определения действий, вызванных изменением температуры, используется пример сущности [[IfcStructuralLoadTemperature]]. Как показано на рисунке 1, Изменение температуры дается с постоянным значением, которое применяется к полному сечению и значениям температурных различий между наружными волокнами секции. X 0D X 0D ИСТОРИЯ Новая сущность в IFC2x2, X 0D X 0D Конструктивная нагрузка .. .. .. .. цифры structuralload-temperature.gif Рисунок 1 Документация о температуре bSI Структурной нагрузки"
-
-#:IFC.xml:38859
-msgid "IfcStructuralLoadTemperature_DeltaTConstant"
-msgstr "DeltaTConstant"
-
-msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
-msgstr "Изменение температуры, которое влияет на полный сегмент конструкционного элемента или на однородную часть неравномерного изменения температуры. Положительное значение X 0D 0D ПРИМЕЧАНИЕ описывает повышение температуры. То есть позитивное постоянное изменение температуры приводит к удлинению члена или сжатию в члене при наличии соответствующих удерживающих устройств."
-
-#:IFC.xml:38864
-msgid "IfcStructuralLoadTemperature_DeltaTY"
-msgstr "Дельтати"
-
-msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
-msgstr "Неравномерное изменение температуры указанная как разница температурного изменения внешнего волокна положительного направления Y минус изменение температуры наружного волокна отрицательного направления участника анализа. X 0D X 0D ПРИМЕЧАНИЕ Положительное неравномерное изменение температуры y приводит к отрицательной кривизне члена о z, или положительный момент изгиба по отношению к z при наличии соответствующих ограничений. y и z - локальные оси члена."
-
-#:IFC.xml:38869
-msgid "IfcStructuralLoadTemperature_DeltaTZ"
-msgstr "ДельтаTZ"
-
-msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
-msgstr "Неравномерное изменение температуры указанная как разница температурного изменения внешнего волокна положительного z направления минус изменение температуры наружного волокна отрицательного z направления участника анализа. X 0D X 0D ПРИМЕЧАНИЕ Положительное неравномерное изменение температуры z приводит к положительной кривизне члена о y, или отрицательный момент изгиба по отношению к у, если имеются соответствующие ограничения. y и z - локальные оси члена."
-
-#:IFC.xml:38876
-msgid "IfcSurfaceReinforcementArea"
-msgstr "IfcSurfaceReinforcementArea"
-
-msgid "IfcSurfaceReinforcementArea_DEFINITION"
-msgstr "Описывает требуемую или обеспечиваемую поверхность для армирования. X 0D X 0D ПРИМЕЧАНИЕ: параметры дизайна бетонной крышки, эффективной глубины, ориентации ячеек или барабанов два, по возможности три направления и т.д. не указаны в схеме IfcStructuralLoadResource и указываются на уровне структурных участников. X 0D X 0D ИСТОРИЯ Новая сущность в документации IFC4.bSI"
-
-#:IFC.xml:38877
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
-msgstr "Подкрепление Ножей"
-
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
-msgstr "Усиление стрижки. Указывается как площадь площади, например, квадратный метр на квадратный метр, то есть единица без."
-
-#:IFC.xml:38882
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
-msgstr "Поверхностное подкрепление1"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
-msgstr "Усиление на лицевой стороне члена, расположенного на грани позитивного локального z направления поверхностного члена. Указывается как площадь по длине, e. ) — единица измерения длины арматуры , обозначающая расстояние между двумя и тремя направлениями арматуры."
-
-#:IFC.xml:38887
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
-msgstr "Поверхностное подкрепление2"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
-msgstr "Усиление на лицевой стороне члена, расположенного в отрицательном локальном направлении Z поверхностного члена. Указывается как площадь по длине, e. ) — единица измерения длины арматуры , обозначающая расстояние между двумя и тремя направлениями арматуры."
-
-#:IFC.xml:38894
-msgid "IfcTranslationalStiffnessSelect"
-msgstr "IfcTranslationalStiffnessSelect"
-
-msgid "IfcTranslationalStiffnessSelect_DEFINITION"
-msgstr "Измерение линейной жесткости. TRUE обозначает бесконечную жесткость жесткости . FALSE не обозначает жесткости . Цифровое значение обозначает конечную линейную эластичную жесткость. X 0D X 0D HISTORY Новый тип в IFC4."
-
-#:IFC.xml:38895
-msgid "IfcWarpingStiffnessSelect"
-msgstr "IfcWarpingStiffnessSelect"
-
-msgid "IfcWarpingStiffnessSelect_DEFINITION"
-msgstr "Измерение жесткости детекторов. Плюс обозначает бесконечную жесткость . Плюс не имеет жёсткости . Цифровое значение обозначает конечную линейную эластичную жесткость. X 0D X 0D HISTORY Новый тип в IFC4."
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Геометрия текста"
 
