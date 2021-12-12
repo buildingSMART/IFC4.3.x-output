@@ -1,37 +1,57 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypeReceiver</Name>
-  <Definition>An audio-visual receiver is a device that switches audio and/or video from multiple sources, including external sources connected from ports and internal aggregated sources.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/RECEIVER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/RECEIVER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AudioAmplification</Name>
-      <Definition>Indicates audio amplification frequency ranges.</Definition>
+      <Name>ReceiverType</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcRatioMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualReceiverType">
+            <EnumItem>AUDIO</EnumItem>
+            <EnumItem>AUDIOVIDEO</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>AudioAmplification</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcFrequencyMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcRatioMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>AudioMode</Name>
-      <Definition>Indicates audio sound modes and corresponding labels, if applicable.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ReceiverType</Name>
-      <Definition>Indicates the type of receiver.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

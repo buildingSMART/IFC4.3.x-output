@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_PumpTypeCommon</Name>
-  <Definition>Common attributes of a pump type.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcPump</ClassName>
@@ -10,53 +10,8 @@
   <ApplicableTypeValue>IfcPump</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ConnectionSize</Name>
-      <Definition>The connection size of the to and from the pump.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>FlowRateRange</Name>
-      <Definition>Allowable range of volume of fluid being pumped against the resistance specified.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassFlowRateMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>FlowResistanceRange</Name>
-      <Definition>Allowable range of frictional resistance against which the fluid is being pumped.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NetPositiveSuctionHead</Name>
-      <Definition>Minimum liquid pressure at the pump inlet to prevent cavitation.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalRotationSpeed</Name>
-      <Definition>Pump rotational speed under nominal conditions.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcRotationalFrequencyMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -65,19 +20,72 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FlowRateRange</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcMassFlowRateMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FlowResistanceRange</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ConnectionSize</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcPositiveLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TemperatureRange</Name>
-      <Definition>Allowable operational range of the fluid temperature.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NetPositiveSuctionHead</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalRotationSpeed</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRotationalFrequencyMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

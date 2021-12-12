@@ -1,9 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_BoilerTypeCommon</Name>
-  <Definition>Boiler type common attributes.\X\0D
-SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. PrimaryEnergySource and AuxiliaryEnergySource attributes deleted in IFC2x2 Pset Addendum: Use IfcEnergyProperties, IfcFuelProperties, etc. instead.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcBoiler</ClassName>
@@ -11,89 +10,8 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
   <ApplicableTypeValue>IfcBoiler</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>EnergySource</Name>
-      <Definition>Enumeration defining the energy source or fuel cumbusted to generate heat.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HeatTransferSurfaceArea</Name>
-      <Definition>Total heat transfer area of the vessel.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcAreaMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>IsWaterStorageHeater</Name>
-      <Definition>This is used to identify if the boiler has storage capacity (TRUE). If FALSE, then there is no storage capacity built into the boiler, such as an instantaneous hot water heater.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcBoolean"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalEnergyConsumption</Name>
-      <Definition>Nominal fuel consumption rate required to produce the total boiler heat output.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalPartLoadRatio</Name>
-      <Definition>Allowable part load ratio range.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OperatingMode</Name>
-      <Definition>Identifies the operating mode of the boiler.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OutletTemperatureRange</Name>
-      <Definition>Allowable outlet temperature of either the water or the steam.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PartialLoadEfficiencyCurves</Name>
-      <Definition>Boiler efficiency as a function of the partial load factor; E = f (partialLaodfactor).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PressureRating</Name>
-      <Definition>Nominal pressure rating of the boiler as rated by the agency having jurisdiction.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -102,29 +20,145 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PressureRating</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcPressureMeasure"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OperatingMode</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BoilerOperatingMode">
+            <EnumItem>FIXED</EnumItem>
+            <EnumItem>MODULATING</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TWOSTEP</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HeatTransferSurfaceArea</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcAreaMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalPartLoadRatio</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcReal"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>WaterInletTemperatureRange</Name>
-      <Definition>Allowable water inlet temperature range.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>WaterStorageCapacity</Name>
-      <Definition>Water storage capacity.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>IsWaterStorageHeater</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PartialLoadEfficiencyCurves</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcPositiveRatioMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcNormalisedRatioMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OutletTemperatureRange</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalEnergyConsumption</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EnergySource</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EnergySource">
+            <EnumItem>COAL</EnumItem>
+            <EnumItem>COAL_PULVERIZED</EnumItem>
+            <EnumItem>ELECTRICITY</EnumItem>
+            <EnumItem>GAS</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OIL</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PROPANE</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WOOD</EnumItem>
+            <EnumItem>WOOD_CHIP</EnumItem>
+            <EnumItem>WOOD_PELLET</EnumItem>
+            <EnumItem>WOOD_PULVERIZED</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

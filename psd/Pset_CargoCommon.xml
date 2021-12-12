@@ -1,36 +1,50 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_CargoCommon</Name>
-  <Definition>Properties common to the definition of all occurrences of _IfcTransportElement_ and types of _IfcTransportElementType_ with the predefined type set to CARGO.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
-    <ClassName>IfcCableSegment</ClassName>
-    <ClassName>IfcCableSegment</ClassName>
+    <ClassName>IfcTransportElement/CARGO</ClassName>
+    <ClassName>IfcTransportElement/CARGO</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcCableSegment</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcTransportElement/CARGO,IfcTransportElement/CARGO</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AdditionalProcessing</Name>
-      <Definition>Any additional or special processing requirements on the associated cargo.</Definition>
+      <Name>ProcessItem</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="UNKNOWN"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>AdditionalProcessing</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AdditionalProcessing">
+            <EnumItem>INSPECTION</EnumItem>
+            <EnumItem>ISOLATION</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>TARIFFS</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>ProcessDirection</Name>
-      <Definition>The direction of flow of the cargo within the process.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ProcessDirection">
+            <EnumItem>EXPORT</EnumItem>
+            <EnumItem>IMPORT</EnumItem>
+            <EnumItem>TRANSFER</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ProcessItem</Name>
-      <Definition>The type of cargo (and its measurement method) being modelled within a process.</Definition>
     </PropertyDef>
   </PropertyDefs>
 </PropertySetDef>

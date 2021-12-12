@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_EvaporatorTypeCommon</Name>
-  <Definition>Evaporator type common attributes.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcEvaporator</ClassName>
@@ -10,27 +10,94 @@
   <ApplicableTypeValue>IfcEvaporator</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>EvaporatorCoolant</Name>
-      <Definition>The fluid used for the coolant in the evaporator.</Definition>
+      <Name>Reference</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcIdentifier"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Status</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>EvaporatorMediumType</Name>
-      <Definition>ColdLiquid: Evaporator is using liquid type of fluid to exchange heat with refrigerant.\X\0D
-ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EvaporatorMediumType">
+            <EnumItem>COLDAIR</EnumItem>
+            <EnumItem>COLDLIQUID</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EvaporatorCoolant</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EvaporatorCoolant">
+            <EnumItem>BRINE</EnumItem>
+            <EnumItem>GLYCOL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WATER</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RefrigerantClass</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RefrigerantClass">
+            <EnumItem>AMMONIA</EnumItem>
+            <EnumItem>CFC</EnumItem>
+            <EnumItem>CO2</EnumItem>
+            <EnumItem>H2O</EnumItem>
+            <EnumItem>HCFC</EnumItem>
+            <EnumItem>HFC</EnumItem>
+            <EnumItem>HYDROCARBONS</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>ExternalSurfaceArea</Name>
-      <Definition>External surface area (both primary and secondary area).</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcAreaMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>InternalSurfaceArea</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -39,7 +106,7 @@ ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>InternalRefrigerantVolume</Name>
-      <Definition>Internal volume of evaporator (refrigerant side).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure"/>
@@ -47,17 +114,8 @@ ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>InternalSurfaceArea</Name>
-      <Definition>Internal surface area.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcAreaMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>InternalWaterVolume</Name>
-      <Definition>Internal volume of evaporator (water side).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure"/>
@@ -66,7 +124,7 @@ ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>NominalHeatTransferArea</Name>
-      <Definition>Nominal heat transfer surface area associated with nominal overall heat transfer coefficient.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -75,40 +133,10 @@ ColdAir: Evaporator is using air to exchange heat with refrigerant.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>NominalHeatTransferCoefficient</Name>
-      <Definition>Nominal overall heat transfer coefficient associated with nominal heat transfer area.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RefrigerantClass</Name>
-      <Definition>Refrigerant class used by the compressor.\X\0D
-CFC: Chlorofluorocarbons.\X\0D
-HCFC: Hydrochlorofluorocarbons.\X\0D
-HFC: Hydrofluorocarbons.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

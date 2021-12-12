@@ -1,58 +1,42 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_DistributionSystemTypeVentilation</Name>
-  <Definition>This property set is used to define the general characteristics of the duct design parameters within a system.\X\0D
-HISTORY: New property set in IFC Release 2.0.  Renamed from Pset_DuctDesignCriteria in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
-    <ClassName>IfcDistributionSystem</ClassName>
+    <ClassName>IfcDistributionSystem/VENTILATION</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcDistributionSystem</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcDistributionSystem/VENTILATION</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AspectRatio</Name>
-      <Definition>The default aspect ratio.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>DesignName</Name>
-      <Definition>A name for the design values.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>DuctSealant</Name>
-      <Definition>Type of sealant used on the duct and fittings.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>DuctSizingMethod</Name>
-      <Definition>Enumeration that identifies the methodology to be used to size system components.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DuctSizingMethod">
+            <EnumItem>CONSTANTFRICTION</EnumItem>
+            <EnumItem>CONSTANTPRESSURE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>STATICREGAIN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>FrictionLoss</Name>
-      <Definition>The pressure loss due to friction per unit length. (Data type = PressureMeasure/LengthMeasure)</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>LeakageClass</Name>
-      <Definition>Nominal leakage rating for the system components.</Definition>
+      <Name>PressureClass</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure"/>
@@ -60,8 +44,42 @@ HISTORY: New property set in IFC Release 2.0.  Renamed from Pset_DuctDesignCrite
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
+      <Name>LeakageClass</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FrictionLoss</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ScrapFactor</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>DuctSealant</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcMaterialDefinition"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>MaximumVelocity</Name>
-      <Definition>The maximum design velocity of the air in the duct or fitting.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLinearVelocityMeasure"/>
@@ -69,8 +87,17 @@ HISTORY: New property set in IFC Release 2.0.  Renamed from Pset_DuctDesignCrite
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
+      <Name>AspectRatio</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>MinimumHeight</Name>
-      <Definition>The minimum duct height for rectangular, oval or round duct.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -79,28 +106,10 @@ HISTORY: New property set in IFC Release 2.0.  Renamed from Pset_DuctDesignCrite
     </PropertyDef>
     <PropertyDef>
       <Name>MinimumWidth</Name>
-      <Definition>The minimum duct width for oval or rectangular duct.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PressureClass</Name>
-      <Definition>Nominal pressure rating of the system components. (Data type = PressureMeasure)</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ScrapFactor</Name>
-      <Definition>Sheet metal scrap factor.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

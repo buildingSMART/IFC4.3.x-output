@@ -1,54 +1,85 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypeSpeaker</Name>
-  <Definition>An audio-visual speaker is a device that converts amplified audio signals into sound waves.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/SPEAKER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/SPEAKER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>FrequencyResponse</Name>
-      <Definition>Indicates the output over a specified range of frequencies.</Definition>
+      <Name>SpeakerType</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcSoundPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Impedence</Name>
-      <Definition>Indicates the speaker impedence.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcFrequencyMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>SpeakerDriverSize</Name>
-      <Definition>Indicates the number of drivers and their sizes.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualSpeakerType">
+            <EnumItem>COAXIAL</EnumItem>
+            <EnumItem>FULLRANGE</EnumItem>
+            <EnumItem>MIDRANGE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TWEETER</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>WOOFER</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SpeakerMounting</Name>
-      <Definition>Indicates how the speaker is designed to be mounted.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualSpeakerMounting">
+            <EnumItem>CEILING</EnumItem>
+            <EnumItem>FREESTANDING</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>OUTDOOR</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>WALL</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>SpeakerType</Name>
-      <Definition>Indicates the type of speaker.</Definition>
+      <Name>SpeakerDriverSize</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPositiveLengthMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FrequencyResponse</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcFrequencyMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcSoundPowerMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Impedence</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcFrequencyMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

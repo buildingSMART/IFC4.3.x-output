@@ -1,15 +1,61 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_SanitaryTerminalTypeSink</Name>
-  <Definition>Waste water appliance for receiving, retaining or disposing of domestic, culinary, laboratory or industrial process liquids. HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialsResource schema. Datatype of color changed to IfcLabel (still a string value). SinkMounting changed to Mounting.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcSanitaryTerminal/SINK</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSanitaryTerminal/SINK</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
+      <Name>SinkType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SinkType">
+            <EnumItem>BELFAST</EnumItem>
+            <EnumItem>BUCKET</EnumItem>
+            <EnumItem>CLEANERS</EnumItem>
+            <EnumItem>COMBINATION_DOUBLE</EnumItem>
+            <EnumItem>COMBINATION_LEFT</EnumItem>
+            <EnumItem>COMBINATION_RIGHT</EnumItem>
+            <EnumItem>DRIP</EnumItem>
+            <EnumItem>LABORATORY</EnumItem>
+            <EnumItem>LONDON</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PLASTER</EnumItem>
+            <EnumItem>POT</EnumItem>
+            <EnumItem>RINSING</EnumItem>
+            <EnumItem>SHELF</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>VEGETABLEPREPARATION</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Mounting</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SanitaryMounting">
+            <EnumItem>BACKTOWALL</EnumItem>
+            <EnumItem>COUNTERTOP</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PEDESTAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WALLHUNG</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>Color</Name>
-      <Definition>Color selection for this object.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -18,7 +64,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>DrainSize</Name>
-      <Definition>The size of the drain outlet connection from the object.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -26,61 +72,11 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Mounting</Name>
-      <Definition>Selection of the form of mounting of the sink from the enumerated list of mountings where:-\X\0D
-\X\0D
-BackToWall: A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections.\X\0D
-Pedestal: \X\09A floor mounted sanitary terminal that has an integral base.\X\0D
-CounterTop: \X\09A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is \X2\2018\X0\vanity\X2\2019\X0\. See also Wash Hand Basin Type specification.\X\0D
-WallHung: \X\09A sanitary terminal cantilevered clear of the floor.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>MountingOffset</Name>
-      <Definition>For cunter top maounted sinks, the vertical offset between the top of the sink and the counter top.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>SinkType</Name>
-      <Definition>Selection of the type of sink from the enumerated list of types where:-\X\0D
-\X\0D
-Belfast: \X\09Deep sink that has a plain edge and a weir overflow\X\0D
-.\X\0D
-Bucket: \X\09Sink at low level, with protected front edge, that facilitates filling and emptying buckets, usually with a hinged grid on which to stand them.\X\0D
-Cleaners:\X\09 Sink, usually fixed at normal height (900mm), with protected front edge.\X\0D
-Combination_Left:\X\09 Sink with integral drainer on left hand side\X\0D
-.\X\0D
-Combination_Right: Sink with integral drainer on right hand side\X\0D
-.\X\0D
-Combination_Double: \X\09Sink with integral drainer on both sides\X\0D
-.\X\0D
-Drip: Small sink that catches drips or flow from a faucet\X\0D
-.\X\0D
-Laboratory: Sink, of acid resisting material, with a top edge shaped to facilitate fixing to the underside of a desktop\X\0D
-.\X\0D
-London: Deep sink that has a plain edge and no overflow\X\0D
-.\X\0D
-Plaster: Sink with sediment receiver to prevent waste plaster passing into drains\X\0D
-.\X\0D
-Pot: Large metal sink, with a standing waste, for washing cooking utensils\X\0D
-.\X\0D
-Rinsing: Metal sink in which water can be heated and culinary utensils and tableware immersed at high temperature that destroys most harmful bacteria and allows subsequent self drying.\X\0D
-.\X\0D
-Shelf: Ceramic sink with an integral back shelf through which water fittings are mounted\X\0D
-.\X\0D
-VegetablePreparation: \X\09Large metal sink, with a standing waste, for washing and preparing vegetables\X\0D
-.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

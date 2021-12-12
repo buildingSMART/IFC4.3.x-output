@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_SwitchingDeviceTypeCommon</Name>
-  <Definition>A switching device is a device designed to make or break the current in one or more electric circuits.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcSwitchingDevice</ClassName>
@@ -10,8 +10,59 @@
   <ApplicableTypeValue>IfcSwitchingDevice</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
+      <Name>Reference</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Status</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NumberOfGangs</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>SwitchFunction</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SwitchFunctionType">
+            <EnumItem>DOUBLETHROWSWITCH</EnumItem>
+            <EnumItem>INTERMEDIATESWITCH</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>ONOFFSWITCH</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>HasLock</Name>
-      <Definition>Indication of whether a switching device has a key operated lock (=TRUE) or not (= FALSE).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -20,7 +71,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsIlluminated</Name>
-      <Definition>An indication of whether there is an illuminated indicator to show that the switch is on (=TRUE) or not (= FALSE).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -29,61 +80,26 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Legend</Name>
-      <Definition>A text inscribed or applied to the switch as a legend to indicate purpose or function.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NumberOfGangs</Name>
-      <Definition>Number of gangs/buttons on this switch.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SetPoint</Name>
-      <Definition>Indicates the setpoint and label.  For toggle switches, there are two positions, 0 for off and 1 for on.  For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated.   For selector switches, the range indicates the available positions.  \X\0D
-An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types:\X\0D
-'Position' (IfcInteger): The discrete setpoint level.\X\0D
-'Sink' (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK).\X\0D
-'Source' (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE).\X\0D
-'Ratio' (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>SwitchFunction</Name>
-      <Definition>Indicates types of switches which differs in functionality.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcInteger"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

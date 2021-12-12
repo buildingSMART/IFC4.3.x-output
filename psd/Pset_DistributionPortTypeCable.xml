@@ -1,15 +1,46 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_DistributionPortTypeCable</Name>
-  <Definition>Cable port occurrence attributes attached to an instance of IfcDistributionPort.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcDistributionPort/CABLE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDistributionPort/CABLE</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ConductorFunction</Name>
-      <Definition>For ports distributing power, indicates function of the conductors to which the load is connected.</Definition>
+      <Name>ConnectionType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DistributionPortElectricalType">
+            <EnumItem>ACPLUG</EnumItem>
+            <EnumItem>COAXIAL</EnumItem>
+            <EnumItem>CRIMP</EnumItem>
+            <EnumItem>DCPLUG</EnumItem>
+            <EnumItem>DIN</EnumItem>
+            <EnumItem>DSUB</EnumItem>
+            <EnumItem>DVI</EnumItem>
+            <EnumItem>EIAJ</EnumItem>
+            <EnumItem>HDMI</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>RADIO</EnumItem>
+            <EnumItem>RCA</EnumItem>
+            <EnumItem>RJ</EnumItem>
+            <EnumItem>SOCKET</EnumItem>
+            <EnumItem>TRS</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>USB</EnumItem>
+            <EnumItem>XLR</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ConnectionSubtype</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -18,57 +49,41 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ConnectionGender</Name>
-      <Definition>The physical connection gender.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DistributionPortGender">
+            <EnumItem>FEMALE</EnumItem>
+            <EnumItem>MALE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ConnectionSubtype</Name>
-      <Definition>The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:\X\0D
-\X\0D
-* ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M\X\0D
-* DIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P\X\0D
-* DSub: DA15, DB25, DC37, DD50, DE9, DE15\X\0D
-* EIAJ: RC5720\X\0D
-* HDMI: A, B, C\X\0D
-* RADIO: IEEE802.11g, IEEE802.11n \X\0D
-* RJ: 4P4C, 6P2C, 8P8C\X\0D
-* SOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40\X\0D
-* TRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini</Definition>
+      <Name>ConductorFunction</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ConnectionType</Name>
-      <Definition>The physical port connection:\X\0D
-\X\0D
-ACPLUG: AC plug\X\0D
-DCPLUG: DC plug\X\0D
-CRIMP: bare wire</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Current</Name>
-      <Definition>The actual current and operable range.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ConductorFunctionEnum">
+            <EnumItem>NEUTRAL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PHASE_L1</EnumItem>
+            <EnumItem>PHASE_L2</EnumItem>
+            <EnumItem>PHASE_L3</EnumItem>
+            <EnumItem>PROTECTIVEEARTH</EnumItem>
+            <EnumItem>PROTECTIVEEARTHNEUTRAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>CurrentContent3rdHarmonic</Name>
-      <Definition>The ratio between the third harmonic current and the phase current.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -76,30 +91,41 @@ CRIMP: bare wire</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Power</Name>
-      <Definition>The actual power and operable range.</Definition>
+      <Name>Current</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Protocols</Name>
-      <Definition>For data ports, identifies the protocols used as defined by the Open System Interconnection (OSI) Basic Reference Model (ISO 7498).  Layers include: 1. Physical; 2. DataLink; 3. Network; 4. Transport; 5. Session; 6. Presentation; 7. Application.  Example: 3:IP, 4:TCP, 5:HTTP</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Voltage</Name>
-      <Definition>The actual voltage and operable range.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcElectricVoltageMeasure"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Power</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Protocols</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcIdentifier"/>
+          </ListValue>
+        </TypePropertyListValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_StairFlightCommon</Name>
-  <Definition>Properties common to the definition of all occurrences of IfcStairFlight.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcStairFlight</ClassName>
@@ -10,27 +10,34 @@
   <ApplicableTypeValue>IfcStairFlight</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Headroom</Name>
-      <Definition>Actual headroom clearance for the passageway according to the current design. \X\0D
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
+      <Name>Reference</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
+          <DataType type="IfcIdentifier"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>NosingLength</Name>
-      <Definition>Horizontal distance from the front of the tread to the riser underneath. It is the overhang of the tread.</Definition>
+      <Name>Status</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfRiser</Name>
-      <Definition>Total number of the risers included in the stair flight.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcCountMeasure"/>
@@ -39,7 +46,7 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfTreads</Name>
-      <Definition>Total number of treads included in the stair flight.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcCountMeasure"/>
@@ -47,37 +54,17 @@ The shape information is provided in addition to the shape representation and th
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>RiserHeight</Name>
-      <Definition>Vertical distance from tread to tread. \X\0D
-The riser height is supposed to be equal for all steps of a stair or stair flight.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TreadLength</Name>
-      <Definition>Horizontal distance from the front of the thread to the front of the next tread. \X\0D
-The tread length is supposed to be equal for all steps of the stair or stair flight at the walking line.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -85,9 +72,17 @@ The tread length is supposed to be equal for all steps of the stair or stair fli
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TreadLengthAtInnerSide</Name>
-      <Definition>Minimum length of treads at the inner side of the winder. \X\0D
-Only relevant in case of winding flights, for straight flights it is identical with IfcStairFlight.TreadLength. It is a pre-calculated value, in case of inconsistencies, the value derived from the shape representation shall take precedence.</Definition>
+      <Name>NosingLength</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>WalkingLineOffset</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -96,8 +91,25 @@ Only relevant in case of winding flights, for straight flights it is identical w
     </PropertyDef>
     <PropertyDef>
       <Name>TreadLengthAtOffset</Name>
-      <Definition>Length of treads at a given offset.\X\0D
-Walking line position is given by the 'WalkingLineOffset'. The resulting value should normally be identical with TreadLength, it may be given in addition, if the walking line offset for building code calculations is different from that used in design.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TreadLengthAtInnerSide</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Headroom</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -106,17 +118,7 @@ Walking line position is given by the 'WalkingLineOffset'. The resulting value s
     </PropertyDef>
     <PropertyDef>
       <Name>WaistThickness</Name>
-      <Definition>Minimum thickness of the stair flight, measured perpendicular to the slope of the flight to the inner corner of riser and tread. It is a pre-calculated value, in case of inconsistencies, the value derived from the shape representation shall take precedence.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>WalkingLineOffset</Name>
-      <Definition>Offset of the walking line from the inner side of the flight. \X\0D
-Note: the walking line may have a own shape representation (in case of inconsistencies, the value derived from the shape representation shall take precedence).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>

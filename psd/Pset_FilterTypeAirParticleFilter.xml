@@ -1,49 +1,65 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_FilterTypeAirParticleFilter</Name>
-  <Definition>Air particle filter type attributes.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcFilter/AIRPARTICLEFILTER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFilter/AIRPARTICLEFILTER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
       <Name>AirParticleFilterType</Name>
-      <Definition>A panel dry type extended surface filter is a dry-type air filter with random fiber mats or blankets in the forms of pockets, V-shaped or radial pleats, and include the following:\X\0D
-\X\0D
-CoarseFilter: Filter with a efficiency lower than 30% for atmosphere dust-spot.\X\0D
-CoarseMetalScreen: Filter made of metal screen.\X\0D
-CoarseCellFoams: Filter made of cell foams.\X\0D
-CoarseSpunGlass: Filter made of spun glass.\X\0D
-MediumFilter: Filter with an efficiency between 30-98% for atmosphere dust-spot.\X\0D
-MediumElectretFilter: Filter with fine electret synthetic fibers.\X\0D
-MediumNaturalFiberFilter: Filter with natural fibers.\X\0D
-HEPAFilter: High efficiency particulate air filter.\X\0D
-ULPAFilter: Ultra low penetration air filter.\X\0D
-MembraneFilters: Filter made of membrane for certain pore diameters in flat sheet and pleated form.\X\0D
-A renewable media with a moving curtain viscous filter are random-fiber media coated with viscous substance in roll form or curtain where fresh media is fed across the face of the filter and the dirty media is rewound onto a roll at the bottom or to into a reservoir:\X\0D
-RollForm: Viscous filter used in roll form.\X\0D
-AdhesiveReservoir: Viscous filter used in moving curtain form.\X\0D
-A renewable moving curtain dry media filter is a random-fiber dry media of relatively high porosity used in moving-curtain(roll) filters.\X\0D
-An electrical filter uses electrostatic precipitation to remove and collect particulate contaminants.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FilterAirParticleFilterType">
+            <EnumItem>ADHESIVERESERVOIR</EnumItem>
+            <EnumItem>COARSECELLFOAMS</EnumItem>
+            <EnumItem>COARSEMETALSCREEN</EnumItem>
+            <EnumItem>COARSESPUNGLASS</EnumItem>
+            <EnumItem>ELECTRICALFILTER</EnumItem>
+            <EnumItem>HEPAFILTER</EnumItem>
+            <EnumItem>MEDIUMELECTRETFILTER</EnumItem>
+            <EnumItem>MEDIUMNATURALFIBERFILTER</EnumItem>
+            <EnumItem>MEMBRANEFILTERS</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>RENEWABLEMOVINGCURTIANDRYMEDIAFILTER</EnumItem>
+            <EnumItem>ROLLFORM</EnumItem>
+            <EnumItem>ULPAFILTER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>CountedEfficiencyCurve</Name>
-      <Definition>Counted efficiency curve as a function of dust holding weight, efficiency = f (dust holding weight).</Definition>
+      <Name>FrameMaterial</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcMaterialDefinition"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>SeparationType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FilterAirParticleFilterSeparationType">
+            <EnumItem>BAG</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PLEAT</EnumItem>
+            <EnumItem>TREADSEPARATION</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>DustHoldingCapacity</Name>
-      <Definition>Maximum filter dust holding capacity.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -52,7 +68,7 @@ An electrical filter uses electrostatic precipitation to remove and collect part
     </PropertyDef>
     <PropertyDef>
       <Name>FaceSurfaceArea</Name>
-      <Definition>Face area of filter frame.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -60,12 +76,8 @@ An electrical filter uses electrostatic precipitation to remove and collect part
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>FrameMaterial</Name>
-      <Definition>Filter frame material.</Definition>
-    </PropertyDef>
-    <PropertyDef>
       <Name>MediaExtendedArea</Name>
-      <Definition>Total extended media area.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -74,7 +86,7 @@ An electrical filter uses electrostatic precipitation to remove and collect part
     </PropertyDef>
     <PropertyDef>
       <Name>NominalCountedEfficiency</Name>
-      <Definition>Nominal filter efficiency based the particle count concentration before and after the filter against particles with a certain size distribution.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal"/>
@@ -83,7 +95,7 @@ An electrical filter uses electrostatic precipitation to remove and collect part
     </PropertyDef>
     <PropertyDef>
       <Name>NominalWeightedEfficiency</Name>
-      <Definition>Nominal filter efficiency based the particle weight concentration before and after the filter against particles with a certain size distribution.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal"/>
@@ -92,29 +104,47 @@ An electrical filter uses electrostatic precipitation to remove and collect part
     </PropertyDef>
     <PropertyDef>
       <Name>PressureDropCurve</Name>
-      <Definition>Under certain dust holding weight, DelPressure = f (fluidflowRate)</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>SeparationType</Name>
-      <Definition>Air particulate filter media separation type.</Definition>
+      <Name>CountedEfficiencyCurve</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcMassMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcReal"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>WeightedEfficiencyCurve</Name>
-      <Definition>Weighted efficiency curve as a function of dust holding weight, efficiency = f (dust holding weight).</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcMassMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcReal"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

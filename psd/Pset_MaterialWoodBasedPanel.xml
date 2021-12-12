@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_MaterialWoodBasedPanel</Name>
-  <Definition>This is a collection of mechanical properties related to wood-based materials for panel-like products like plywood or OSB. The propositions given above for wood-based beam materials with respect to anisotropy, strength graduation according to element sizes (especially panel thickness) apply accordingly.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcMaterial</ClassName>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>ApplicableStructuralDesignMethod</Name>
-      <Definition>Determines whether mechanical material properties are applicable to 'ASD' = allowable stress design (working stress design), 'LSD' = limit state design, or 'LRFD' = load and resistance factor design.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -20,15 +20,450 @@
     </PropertyDef>
     <PropertyDef>
       <Name>InPlane</Name>
-      <Definition>Mechanical properties with respect to in-plane load, i.e. for function as a membrane.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalPanel">
+          <PropertyDef>
+            <Name>YoungModulusBending</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusTension</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusCompression</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BearingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>OutOfPlane</Name>
-      <Definition>Mechanical properties with respect to out-of-plane load, i.e. for function as a plate; tension zone of unbalanced layups is stressed in tension.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalPanel">
+          <PropertyDef>
+            <Name>YoungModulusBending</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusTension</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusCompression</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BearingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>OutOfPlaneNegative</Name>
-      <Definition>Mechanical properties with respect to out-of-plane load i.e. for function as a plate; compression zone of unbalanced layups is stressed in tension.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalPanel">
+          <PropertyDef>
+            <Name>YoungModulusBending</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusTension</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcModulusOfElasticityMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusCompression</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BearingStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositivePlaneAngleMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPressureMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompressiveStrength</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <QtoType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </QtoType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
     </PropertyDef>
   </PropertyDefs>
 </PropertySetDef>

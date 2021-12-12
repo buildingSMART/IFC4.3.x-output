@@ -1,18 +1,27 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_VesselLineCommon</Name>
-  <Definition>Properties for vessel lines and anchoring</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
-    <ClassName>IfcMechanicalFastener</ClassName>
-    <ClassName>IfcMechanicalFastenerType</ClassName>
+    <ClassName>IfcMechanicalFastener/ROPE</ClassName>
+    <ClassName>IfcMechanicalFastener/ROPE</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcMechanicalFastenerType</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcMechanicalFastener/ROPE,IfcMechanicalFastener/ROPE</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>CentreLineToFairlead</Name>
-      <Definition>Distance from the vessel centreline to the fairlead for the line</Definition>
+      <Name>LineIdentifier</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>MidshipToFairLead</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLengthMeasure"/>
@@ -20,8 +29,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>FairleadToTermination</Name>
-      <Definition>Distance from the fairlead to the bitt or winch on the vessel where the line terminates</Definition>
+      <Name>CentreLineToFairlead</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLengthMeasure"/>
@@ -30,7 +39,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HeightAboveMainDeck</Name>
-      <Definition>Height of the fairlead above the main deck of the vessel</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLengthMeasure"/>
@@ -38,17 +47,26 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>LineIdentifier</Name>
-      <Definition>Reference ID relative to a design vessel in the project</Definition>
+      <Name>FairleadToTermination</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
+          <DataType type="IfcLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>LineStrength</Name>
-      <Definition>Breaking load of the line (note that ultimate stress is not part of any of the material Psets)</Definition>
+      <Name>WinchBreakLimit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcForceMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PreTensionAim</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure"/>
@@ -57,7 +75,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>LineType</Name>
-      <Definition>Mooring line type</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -65,35 +83,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>MidshipToFairLead</Name>
-      <Definition>Distance from the vessel midship to the fairlead for the line</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PreTensionAim</Name>
-      <Definition>Line force that the winch is set to maintain (minimum load)</Definition>
+      <Name>LineStrength</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>TailDiameter</Name>
-      <Definition>Diameter of the tail</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TailLength</Name>
-      <Definition>Length of the tail</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -101,17 +101,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TailStrength</Name>
-      <Definition>Breaking load of the tail (note that ultimate stress is not part of any of the material Psets)</Definition>
+      <Name>TailDiameter</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcForceMeasure"/>
+          <DataType type="IfcPositiveLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TailType</Name>
-      <Definition>Mooring tail type</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -119,8 +119,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>WinchBreakLimit</Name>
-      <Definition>Line force at which the winch starts to release the line (maximum load)</Definition>
+      <Name>TailStrength</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcForceMeasure"/>

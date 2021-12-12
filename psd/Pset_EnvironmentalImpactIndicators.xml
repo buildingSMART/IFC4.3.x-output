@@ -1,10 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_EnvironmentalImpactIndicators</Name>
-  <Definition>Environmental impact indicators are related to a given \X2\201C\X0\functional unit\X2\201D\X0\ (ISO 14040 concept). An example of functional unit is a &quot;Double glazing window with PVC frame&quot; and the unit to consider is &quot;one square meter of opening elements filled by this product\X2\201D\X0\.\X\0D
-Indicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.\X\0D
-There is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcElement</ClassName>
@@ -12,8 +10,105 @@ There is a consensus agreement international for the five one. Last ones are not
   <ApplicableTypeValue>IfcElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AtmosphericAcidificationPerUnit</Name>
-      <Definition>Quantity of gases responsible for the atmospheric acidification calculated in equivalent SO2</Definition>
+      <Name>Reference</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FunctionalUnitReference</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Unit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>LifeCyclePhase</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_LifeCyclePhase">
+            <EnumItem>ACQUISITION</EnumItem>
+            <EnumItem>CRADLETOSITE</EnumItem>
+            <EnumItem>DECONSTRUCTION</EnumItem>
+            <EnumItem>DISPOSAL</EnumItem>
+            <EnumItem>DISPOSALTRANSPORT</EnumItem>
+            <EnumItem>GROWTH</EnumItem>
+            <EnumItem>INSTALLATION</EnumItem>
+            <EnumItem>MAINTENANCE</EnumItem>
+            <EnumItem>MANUFACTURE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+            <EnumItem>OCCUPANCY</EnumItem>
+            <EnumItem>OPERATION</EnumItem>
+            <EnumItem>PROCUREMENT</EnumItem>
+            <EnumItem>PRODUCTION</EnumItem>
+            <EnumItem>PRODUCTIONTRANSPORT</EnumItem>
+            <EnumItem>RECOVERY</EnumItem>
+            <EnumItem>REFURBISHMENT</EnumItem>
+            <EnumItem>REPAIR</EnumItem>
+            <EnumItem>REPLACEMENT</EnumItem>
+            <EnumItem>TRANSPORT</EnumItem>
+            <EnumItem>USAGE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>WASTE</EnumItem>
+            <EnumItem>WHOLELIFECYCLE</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ExpectedServiceLife</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TotalPrimaryEnergyConsumptionPerUnit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcEnergyMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>WaterConsumptionPerUnit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumeMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HazardousWastePerUnit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NonHazardousWastePerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -22,7 +117,7 @@ There is a consensus agreement international for the five one. Last ones are not
     </PropertyDef>
     <PropertyDef>
       <Name>ClimateChangePerUnit</Name>
-      <Definition>Quantity of greenhouse gases emitted calculated in equivalent CO2</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -30,8 +125,8 @@ There is a consensus agreement international for the five one. Last ones are not
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>EutrophicationPerUnit</Name>
-      <Definition>Quantity of eutrophicating compounds calculated in equivalent PO4</Definition>
+      <Name>AtmosphericAcidificationPerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -39,62 +134,8 @@ There is a consensus agreement international for the five one. Last ones are not
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ExpectedServiceLife</Name>
-      <Definition>Expected service life in years.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcTimeMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>FunctionalUnitReference</Name>
-      <Definition>Reference to a database or a classification</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HazardousWastePerUnit</Name>
-      <Definition>Quantity of hazardous waste generated</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>InertWastePerUnit</Name>
-      <Definition>Quantity of inert waste generated</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>LifeCyclePhase</Name>
-      <Definition>The whole life cycle or only a given phase  from which environmental data are valid.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NonHazardousWastePerUnit</Name>
-      <Definition>Quantity of non hazardous waste generated</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NonRenewableEnergyConsumptionPerUnit</Name>
-      <Definition>Quantity of non-renewable energy used as defined in ISO21930:2007</Definition>
+      <Name>RenewableEnergyConsumptionPerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcEnergyMeasure"/>
@@ -102,35 +143,8 @@ There is a consensus agreement international for the five one. Last ones are not
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PhotochemicalOzoneFormationPerUnit</Name>
-      <Definition>Quantity of gases creating the photochemical ozone calculated in equivalent ethylene</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RadioactiveWastePerUnit</Name>
-      <Definition>Quantity of radioactive waste generated</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RenewableEnergyConsumptionPerUnit</Name>
-      <Definition>Quantity of renewable energy used as defined in ISO21930:2007</Definition>
+      <Name>NonRenewableEnergyConsumptionPerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcEnergyMeasure"/>
@@ -139,7 +153,25 @@ There is a consensus agreement international for the five one. Last ones are not
     </PropertyDef>
     <PropertyDef>
       <Name>ResourceDepletionPerUnit</Name>
-      <Definition>Quantity of resources used calculated in equivalent antimony</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>InertWastePerUnit</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RadioactiveWastePerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -148,7 +180,7 @@ There is a consensus agreement international for the five one. Last ones are not
     </PropertyDef>
     <PropertyDef>
       <Name>StratosphericOzoneLayerDestructionPerUnit</Name>
-      <Definition>Quantity of gases destroying the stratospheric ozone layer calculated in equivalent CFC-R11</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -156,29 +188,20 @@ There is a consensus agreement international for the five one. Last ones are not
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TotalPrimaryEnergyConsumptionPerUnit</Name>
-      <Definition>Quantity of energy used as defined in ISO21930:2007.</Definition>
+      <Name>PhotochemicalOzoneFormationPerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcEnergyMeasure"/>
+          <DataType type="IfcMassMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Unit</Name>
-      <Definition>The unit of the quantity the environmental indicators values are related with.</Definition>
+      <Name>EutrophicationPerUnit</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcText"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>WaterConsumptionPerUnit</Name>
-      <Definition>Quantity of water used.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcVolumeMeasure"/>
+          <DataType type="IfcMassMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

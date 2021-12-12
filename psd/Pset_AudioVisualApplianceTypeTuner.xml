@@ -1,46 +1,66 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypeTuner</Name>
-  <Definition>An audio-visual tuner is a device that demodulates a signal into a stream of audio and/or video.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/TUNER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/TUNER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>TunerChannel</Name>
-      <Definition>Indicates the tuner channels, if applicable.</Definition>
+      <Name>TunerType</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>TunerFrequency</Name>
-      <Definition>Indicates the tuner frequencies, if applicable.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcFrequencyMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualTunerType">
+            <EnumItem>AUDIO</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>VIDEO</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TunerMode</Name>
-      <Definition>Indicates the tuner modes (or bands).  For example, 'AnalogCable', 'DigitalAir', 'AM', 'FM'.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TunerType</Name>
-      <Definition>Indicates the tuner type.</Definition>
+      <Name>TunerChannel</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TunerFrequency</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcFrequencyMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

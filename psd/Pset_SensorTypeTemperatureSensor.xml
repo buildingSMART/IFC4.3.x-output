@@ -1,28 +1,39 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_SensorTypeTemperatureSensor</Name>
-  <Definition>A device that senses or detects temperature. HISTORY: TemperatureSensorSensorSetPoint changed to SetPointTemperature. Range, accuracy and time constant deleted.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcSensor/TEMPERATURESENSOR</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSensor/TEMPERATURESENSOR</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>SetPointTemperature</Name>
-      <Definition>The temperature value to be sensed. Use IfcPropertyBoundedValue.SetPointValue to set the set point value.</Definition>
+      <Name>TemperatureSensorType</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_TemperatureSensorType">
+            <EnumItem>HIGHLIMIT</EnumItem>
+            <EnumItem>LOWLIMIT</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OPERATINGTEMPERATURE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>OUTSIDETEMPERATURE</EnumItem>
+            <EnumItem>ROOMTEMPERATURE</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TemperatureSensorType</Name>
-      <Definition>Enumeration that Identifies the types of temperature sensor that can be specified.</Definition>
+      <Name>SetPointTemperature</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

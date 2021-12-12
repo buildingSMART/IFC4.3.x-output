@@ -1,15 +1,32 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypePlayer</Name>
-  <Definition>An audio-visual player is a device that plays stored media into a stream of audio and/or video, such as camera footage in security systems, background audio in retail areas, or media presentations in conference rooms or theatres.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/PLAYER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/PLAYER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
+      <Name>PlayerType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualPlayerType">
+            <EnumItem>AUDIO</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>VIDEO</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>PlayerMediaEject</Name>
-      <Definition>Indicates whether the media can be ejected from the player (if physical media).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -18,20 +35,17 @@
     </PropertyDef>
     <PropertyDef>
       <Name>PlayerMediaFormat</Name>
-      <Definition>Indicates supported media formats.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PlayerType</Name>
-      <Definition>Indicates the type of player.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

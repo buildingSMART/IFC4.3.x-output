@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_FanTypeCommon</Name>
-  <Definition>Fan type common attributes.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcFan</ClassName>
@@ -10,116 +10,8 @@
   <ApplicableTypeValue>IfcFan</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>CapacityControlType</Name>
-      <Definition>InletVane: Control by adjusting inlet vane.\X\0D
-VariableSpeedDrive: Control by variable speed drive. \X\0D
-BladePitchAngle: Control by adjusting blade pitch angle.\X\0D
-TwoSpeed: Control by switch between high and low speed.\X\0D
-DischargeDamper: Control by modulating discharge damper.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EfficiencyCurve</Name>
-      <Definition>Fan efficiency =f (flow rate).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>MotorDriveType</Name>
-      <Definition>Motor drive type:\X\0D
-DIRECTDRIVE: Direct drive. \X\0D
-BELTDRIVE: Belt drive. \X\0D
-COUPLING: Coupling. \X\0D
-OTHER: Other type of motor drive. \X\0D
-UNKNOWN: Unknown motor drive type.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalAirFlowRate</Name>
-      <Definition>Nominal air flow rate.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcVolumetricFlowRateMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalPowerRate</Name>
-      <Definition>Nominal fan power rate.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalRotationSpeed</Name>
-      <Definition>Nominal fan wheel speed.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcRotationalFrequencyMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalStaticPressure</Name>
-      <Definition>The static pressure within the air stream that the fan must overcome to insure designed circulation of air.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalTotalPressure</Name>
-      <Definition>Nominal total pressure rise across the fan.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OperationalCriteria</Name>
-      <Definition>Time of operation at maximum operational ambient air temperature.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcTimeMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OperationTemperatureRange</Name>
-      <Definition>Allowable operation ambient air temperature range.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PressureCurve</Name>
-      <Definition>Pressure rise = f (flow rate).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -128,11 +20,146 @@ UNKNOWN: Unknown motor drive type.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>MotorDriveType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanMotorConnectionType">
+            <EnumItem>BELTDRIVE</EnumItem>
+            <EnumItem>COUPLING</EnumItem>
+            <EnumItem>DIRECTDRIVE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CapacityControlType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanCapacityControlType">
+            <EnumItem>BLADEPITCHANGLE</EnumItem>
+            <EnumItem>DISCHARGEDAMPER</EnumItem>
+            <EnumItem>INLETVANE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TWOSPEED</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>VARIABLESPEEDDRIVE</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OperationTemperatureRange</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalAirFlowRate</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcVolumetricFlowRateMeasure"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalTotalPressure</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalStaticPressure</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalRotationSpeed</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRotationalFrequencyMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalPowerRate</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OperationalCriteria</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PressureCurve</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EfficiencyCurve</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcNormalisedRatioMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

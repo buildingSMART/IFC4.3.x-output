@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_BuildingUse</Name>
-  <Definition>Provides information on on the real estate context of the building of interest both current and anticipated.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcBuilding</ClassName>
@@ -11,25 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>MarketCategory</Name>
-      <Definition>Category of use e.g. residential, commercial, recreation etc.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>MarketSubCategoriesAvailableFuture</Name>
-      <Definition>A list of the sub categories of property that are expected to be available in the future expressed in terms of IfcLabel.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>MarketSubCategoriesAvailableNow</Name>
-      <Definition>A list of the sub categories of property that are currently available expressed in terms of IfcLabel.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -38,7 +20,16 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MarketSubCategory</Name>
-      <Definition>Subset of category of use e.g. multi-family, 2 bedroom, low rise.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PlanningControlStatus</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -47,7 +38,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NarrativeText</Name>
-      <Definition>Added information relating to the adjacent building use that is not appropriate to the general descriptive text associated with an entity through the inherited IfcRoot.Description.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
@@ -55,53 +46,48 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PlanningControlStatus</Name>
-      <Definition>Label of zoning category or class, or planning control category for the site or facility.</Definition>
+      <Name>VacancyRateInCategoryNow</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RentalRatesInCategoryFuture</Name>
-      <Definition>Range of the cost rates for property expected to be available in the future in the required category.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMonetaryMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RentalRatesInCategoryNow</Name>
-      <Definition>Range of the cost rates for property currently available in the required category.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMonetaryMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>TenureModesAvailableFuture</Name>
-      <Definition>A list of the tenure modes that are expected to be available in the future expressed in terms of IfcLabel.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TenureModesAvailableNow</Name>
-      <Definition>A list of the tenure modes that are currently available expressed in terms of IfcLabel.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel"/>
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>MarketSubCategoriesAvailableNow</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel"/>
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RentalRatesInCategoryNow</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcMonetaryMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>VacancyRateInCategoryFuture</Name>
-      <Definition>Percentage of vacancy found in the particular category expected in the future.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -109,12 +95,34 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>VacancyRateInCategoryNow</Name>
-      <Definition>Percentage of vacancy found in the particular category currently.</Definition>
+      <Name>TenureModesAvailableFuture</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel"/>
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>MarketSubCategoriesAvailableFuture</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcLabel"/>
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RentalRatesInCategoryFuture</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcMonetaryMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

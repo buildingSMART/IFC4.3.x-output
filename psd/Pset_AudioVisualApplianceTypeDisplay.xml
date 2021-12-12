@@ -1,24 +1,62 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypeDisplay</Name>
-  <Definition>An audio-visual display is a device that renders video from a screen.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/DISPLAY</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/DISPLAY</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AudioMode</Name>
-      <Definition>Indicates audio sound modes and corresponding labels, if applicable.</Definition>
+      <Name>DisplayType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualDisplayType">
+            <EnumItem>CRT</EnumItem>
+            <EnumItem>DLP</EnumItem>
+            <EnumItem>LCD</EnumItem>
+            <EnumItem>LED</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PLASMA</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalSize</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>DisplayWidth</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>DisplayHeight</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Brightness</Name>
-      <Definition>Indicates the display brightness.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIlluminanceMeasure"/>
@@ -27,7 +65,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ContrastRatio</Name>
-      <Definition>Indicates the display contrast ratio.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -35,44 +73,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>DisplayHeight</Name>
-      <Definition>Indicates the physical height of the screen (only the display surface).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>DisplayType</Name>
-      <Definition>Indicates the type of display.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>DisplayWidth</Name>
-      <Definition>Indicates the physical width of the screen (only the display surface).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalSize</Name>
-      <Definition>Indicates the diagonal screen size.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>RefreshRate</Name>
-      <Definition>Indicates the display refresh frequency.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcFrequencyMeasure"/>
@@ -81,25 +83,32 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TouchScreen</Name>
-      <Definition>Indicates touchscreen support.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualDisplayTouchScreen">
+            <EnumItem>MULTITOUCH</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SINGLETOUCH</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>VideoCaptionMode</Name>
-      <Definition>Indicates video closed captioning modes.</Definition>
+      <Name>VideoResolutionWidth</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcInteger"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>VideoResolutionHeight</Name>
-      <Definition>Indicates the number of vertical pixels, e.g. 1080.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
@@ -108,29 +117,62 @@
     </PropertyDef>
     <PropertyDef>
       <Name>VideoResolutionMode</Name>
-      <Definition>Indicates video resolution modes.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>VideoResolutionWidth</Name>
-      <Definition>Indicates the number of horizontal pixels, e.g. 1920.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>VideoScaleMode</Name>
-      <Definition>Indicates video scaling modes.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>VideoCaptionMode</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>AudioMode</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

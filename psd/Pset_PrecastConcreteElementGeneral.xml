@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_PrecastConcreteElementGeneral</Name>
-  <Definition>Production and manufacturing related properties common to different types of precast concrete elements. The Pset can be used by a number of subtypes of IfcBuildingElement. If the precast concrete element is a sandwich wall panel each structural layer or shell represented by an IfcBuildingElementPart may be attached to a separate Pset of this type, if needed. Some of the properties apply only for specific types of precast concrete elements.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcBeam</ClassName>
@@ -22,38 +22,20 @@
     <ClassName>IfcWall</ClassName>
     <ClassName>IfcCivilElement</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcCivilElement</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>BatterAtEnd</Name>
-      <Definition>The angle, in radians, by which the formwork at the ending face of a piece is to be rotated from the vertical in order to compensate for the rotation of the face that will occur once the piece is stripped from its form, inducing camber due to eccentric prestressing.</Definition>
+      <Name>TypeDesignation</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>BatterAtStart</Name>
-      <Definition>The angle, in radians, by which the formwork at the starting face of a piece is to be rotated from the vertical in order to compensate for the rotation of the face that will occur once the piece is stripped from its form, inducing camber due to eccentric prestressing.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CamberAtMidspan</Name>
-      <Definition>The camber deflection, measured from the midpoint of a cambered face of a piece to the midpoint of the chord joining the ends of the same face, as shown in the figure below, divided by the original (nominal) straight length of the face of the piece.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcRatioMeasure"/>
+          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>CornerChamfer</Name>
-      <Definition>The chamfer in the corners of the precast element. The chamfer is presumed to be equal in both directions.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -61,8 +43,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>DesignLocationNumber</Name>
-      <Definition>Defines a unique location within a structure, the \X2\2018\X0\slot\X2\2019\X0\ for which the piece was designed.</Definition>
+      <Name>ManufacturingToleranceClass</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -71,25 +53,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FormStrippingStrength</Name>
-      <Definition>The minimum required compressive strength of the concrete at form stripping time.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HollowCorePlugging</Name>
-      <Definition>A descriptive label for how the hollow core ends are treated: they may be left open, closed with a plug, or sealed with cast concrete. Values would be, for example: 'Unplugged', 'Plugged', 'SealedWithConcrete'. This property applies to  hollow core slabs only.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>InitialTension</Name>
-      <Definition>The initial stress of the tendon. This property applies to prestressed concrete elements only.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure"/>
@@ -98,7 +62,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>LiftingStrength</Name>
-      <Definition>The minimum required compressive strength of the concrete when the concrete element is lifted.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure"/>
@@ -106,17 +70,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ManufacturingToleranceClass</Name>
-      <Definition>Classification designation of the manufacturing tolerances according to local standards.</Definition>
+      <Name>ReleaseStrength</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcPressureMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>MinimumAllowableSupportLength</Name>
-      <Definition>The minimum allowable support length.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -124,17 +88,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PieceMark</Name>
-      <Definition>Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type \X2\2018\X0\1\X2\2019\X0\ and specific shape \X2\2018\X0\A\X2\2019\X0\).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ReleaseStrength</Name>
-      <Definition>The minimum required compressive strength of the concrete when the tendon stress is released. This property applies to prestressed concrete elements only.</Definition>
+      <Name>InitialTension</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure"/>
@@ -142,30 +97,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Shortening</Name>
-      <Definition>The ratio of the distance by which a precast piece is shortened after release from its form (due to compression induced by prestressing) to its original (nominal) length.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcRatioMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>SupportDuringTransportDescription</Name>
-      <Definition>Textual description of how the concrete element is supported during transportation.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcText"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>SupportDuringTransportDocReference</Name>
-      <Definition>Reference to an external document defining how the concrete element is supported during transportation.</Definition>
-    </PropertyDef>
-    <PropertyDef>
       <Name>TendonRelaxation</Name>
-      <Definition>The maximum allowable relaxation of the tendon (usually expressed as %/1000 h).This property applies to prestressed concrete elements only.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -174,7 +107,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TransportationStrength</Name>
-      <Definition>The minimum required compressive strength of the concrete required for transportation.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPressureMeasure"/>
@@ -182,11 +115,90 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Twisting</Name>
-      <Definition>The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non-aligned supports. This measure is also termed the \X2\2018\X0\warping\X2\2019\X0\ angle.</Definition>
+      <Name>SupportDuringTransportDescription</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>SupportDuringTransportDocReference</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcExternalReference"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HollowCorePlugging</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CamberAtMidspan</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>BatterAtStart</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>BatterAtEnd</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Twisting</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Shortening</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PieceMark</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>DesignLocationNumber</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

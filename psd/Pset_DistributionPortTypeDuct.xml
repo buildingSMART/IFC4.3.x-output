@@ -1,40 +1,44 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_DistributionPortTypeDuct</Name>
-  <Definition>Duct port occurrence attributes attached to an instance of IfcDistributionPort.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcDistributionPort/DUCT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDistributionPort/DUCT</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ConnectionSubType</Name>
-      <Definition>The physical port connection subtype that further qualifies the ConnectionType.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>ConnectionType</Name>
-      <Definition>The end-style treatment of the duct port:\X\0D
-\X\0D
-BEADEDSLEEVE: Beaded Sleeve. \X\0D
-COMPRESSION: Compression. \X\0D
-CRIMP: Crimp. \X\0D
-DRAWBAND: Drawband. \X\0D
-DRIVESLIP: Drive slip. \X\0D
-FLANGED: Flanged. \X\0D
-OUTSIDESLEEVE: Outside Sleeve. \X\0D
-SLIPON: Slipon. \X\0D
-SOLDERED: Soldered. \X\0D
-SSLIP: S-Slip. \X\0D
-STANDINGSEAM: Standing seam. \X\0D
-SWEDGE: Swedge. \X\0D
-WELDED: Welded. \X\0D
-OTHER: Another type of end-style has been applied.\X\0D
-NONE: No end-style has been applied.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DuctConnectionType">
+            <EnumItem>BEADEDSLEEVE</EnumItem>
+            <EnumItem>COMPRESSION</EnumItem>
+            <EnumItem>CRIMP</EnumItem>
+            <EnumItem>DRAWBAND</EnumItem>
+            <EnumItem>DRIVESLIP</EnumItem>
+            <EnumItem>FLANGED</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>OUTSIDESLEEVE</EnumItem>
+            <EnumItem>SLIPON</EnumItem>
+            <EnumItem>SOLDERED</EnumItem>
+            <EnumItem>SSLIP</EnumItem>
+            <EnumItem>STANDINGSEAM</EnumItem>
+            <EnumItem>SWEDGE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>WELDED</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ConnectionSubType</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -42,17 +46,17 @@ NONE: No end-style has been applied.</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>DryBulbTemperature</Name>
-      <Definition>Dry bulb temperature of the air.</Definition>
+      <Name>NominalWidth</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+          <DataType type="IfcNonNegativeLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>NominalHeight</Name>
-      <Definition>The nominal height of the duct connection. Only provided for rectangular shaped ducts.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -60,39 +64,57 @@ NONE: No end-style has been applied.</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Pressure</Name>
-      <Definition>The pressure of the fluid.</Definition>
+      <Name>NominalThickness</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
+          <DataType type="IfcNonNegativeLengthMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Velocity</Name>
-      <Definition>The velocity of the fluid.</Definition>
+      <Name>DryBulbTemperature</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLinearVelocityMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>VolumetricFlowRate</Name>
-      <Definition>The volumetric flow rate of the fluid.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcVolumetricFlowRateMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>WetBulbTemperature</Name>
-      <Definition>Wet bulb temperature of the air.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>VolumetricFlowRate</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcVolumetricFlowRateMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Velocity</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcLinearVelocityMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Pressure</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

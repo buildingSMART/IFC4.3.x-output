@@ -1,15 +1,53 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_CableSegmentTypeCoreSegment</Name>
-  <Definition>An assembly comprising a conductor with its own insulation (and screens if any)</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcCableSegment/CORESEGMENT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCableSegment/CORESEGMENT</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
+      <Name>OverallDiameter</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RatedVoltage</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcElectricVoltageMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RatedTemperature</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ScreenDiameter</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>CoreIdentifier</Name>
-      <Definition>The core identification used  Identifiers may be used such as by color (Black, Brown, Grey) or by number (1, 2, 3) or by IEC phase reference (L1, L2, L3) etc.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -17,62 +55,45 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>FunctionReliable</Name>
-      <Definition>Core maintain given properties/functions over a given (tested) time and conditions. According to (IEC) standard.</Definition>
+      <Name>SheathColors</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcBoolean"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoreColorsEnum">
+            <EnumItem>BLACK</EnumItem>
+            <EnumItem>BLUE</EnumItem>
+            <EnumItem>BROWN</EnumItem>
+            <EnumItem>GOLD</EnumItem>
+            <EnumItem>GREEN</EnumItem>
+            <EnumItem>GREENANDYELLOW</EnumItem>
+            <EnumItem>GREY</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>ORANGE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PINK</EnumItem>
+            <EnumItem>RED</EnumItem>
+            <EnumItem>SILVER</EnumItem>
+            <EnumItem>TURQUOISE</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>VIOLET</EnumItem>
+            <EnumItem>WHITE</EnumItem>
+            <EnumItem>YELLOW</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>HalogenProof</Name>
-      <Definition>Produces small amount of smoke and irritating deaerator/gas.</Definition>
+      <Name>Weight</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcBoolean"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OverallDiameter</Name>
-      <Definition>The overall diameter of a core (maximun space used).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RatedTemperature</Name>
-      <Definition>The range of allowed temerature that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>RatedVoltage</Name>
-      <Definition>The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricVoltageMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ScreenDiameter</Name>
-      <Definition>The diameter of the screen around a core segment (if present).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveLengthMeasure"/>
+          <DataType type="IfcMassMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SelfExtinguishing60332_1</Name>
-      <Definition>Self Extinguishing cable/core according to IEC 60332.1.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -81,7 +102,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SelfExtinguishing60332_3</Name>
-      <Definition>Self Extinguishing cable/core according to IEC 60332.3.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -89,29 +110,29 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>SheathColors</Name>
-      <Definition>Colour of the core (derived from IEC 60757). Note that the combined color 'GreenAndYellow' shall be used only as Protective Earth (PE) conductors according to the requirements of IEC 60446.</Definition>
+      <Name>HalogenProof</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcBoolean"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FunctionReliable</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Standard</Name>
-      <Definition>The designation of the standard applicable for the definition of the core used.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Weight</Name>
-      <Definition>Weight of core kg/km.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

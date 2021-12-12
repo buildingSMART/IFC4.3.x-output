@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_CoilTypeHydronic</Name>
-  <Definition>Hydronic coil type attributes.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcCoil</ClassName>
@@ -10,35 +10,64 @@
   <ApplicableTypeValue>IfcCoil</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>BypassFactor</Name>
-      <Definition>Fraction of air that is bypassed by the coil (0-1).</Definition>
+      <Name>FluidPressureRange</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoilConnectionDirection</Name>
-      <Definition>Coil connection direction (facing into the air stream).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPressureMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>CoilCoolant</Name>
-      <Definition>The fluid used for heating or cooling used by the hydronic coil.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoilCoolant">
+            <EnumItem>BRINE</EnumItem>
+            <EnumItem>GLYCOL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WATER</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CoilConnectionDirection</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoilConnectionDirection">
+            <EnumItem>LEFT</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>RIGHT</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CoilFluidArrangement</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoilFluidArrangement">
+            <EnumItem>CROSSCOUNTERFLOW</EnumItem>
+            <EnumItem>CROSSFLOW</EnumItem>
+            <EnumItem>CROSSPARALLELFLOW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>CoilFaceArea</Name>
-      <Definition>Coil face area in the direction against air the flow.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -46,30 +75,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>CoilFluidArrangement</Name>
-      <Definition>Fluid flow arrangement of the coil.\X\0D
-\X\0D
-CrossCounterFlow: Air and water flow enter in different directions.\X\0D
-CrossFlow: Air and water flow are perpendicular.\X\0D
-CrossParallelFlow: Air and water flow enter in same directions.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>FluidPressureRange</Name>
-      <Definition>Allowable water working pressure range inside the tube.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>HeatExchangeSurfaceArea</Name>
-      <Definition>Heat exchange surface area associated with U-value.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -78,7 +85,7 @@ CrossParallelFlow: Air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>PrimarySurfaceArea</Name>
-      <Definition>Primary heat transfer surface area of the tubes and headers.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -87,7 +94,7 @@ CrossParallelFlow: Air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>SecondarySurfaceArea</Name>
-      <Definition>Secondary heat transfer surface area created by fins.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -95,8 +102,38 @@ CrossParallelFlow: Air and water flow enter in same directions.</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>SensibleHeatRatio</Name>
-      <Definition>Air-side sensible heat ratio, or fraction of sensible heat transfer to the total heat transfer.</Definition>
+      <Name>TotalUACurves</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcReal"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcVolumetricFlowRateMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>WaterPressureDropCurve</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>BypassFactor</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>
@@ -104,26 +141,17 @@ CrossParallelFlow: Air and water flow enter in same directions.</Definition>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TotalUACurves</Name>
-      <Definition>Total UA curves, UA - air and water velocities, UA = [(C1 \\* AirFlowRate\\^0.8)\\^-1 + (C2 \\* WaterFlowRate\\^0.8)\\^-1]\\^-1.  Note: as two variables are used, DefiningValues and DefinedValues are null, and values are stored in IfcTable in the following order: AirFlowRate,WaterFlowRate,UA.  The IfcTable is related to IfcPropertyTableValue using IfcMetric and IfcPropertyConstraintRelationship.</Definition>
+      <Name>SensibleHeatRatio</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVolumetricFlowRateMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>WaterPressureDropCurve</Name>
-      <Definition>Water pressure drop curve, pressure drop \X2\2013\X0\ flow rate curve, WaterPressureDrop = f(WaterflowRate).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPressureMeasure"/>
+          <DataType type="IfcNormalisedRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>WetCoilFraction</Name>
-      <Definition>Fraction of coil surface area that is wet (0-1).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>

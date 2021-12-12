@@ -1,50 +1,61 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_ControllerTypeMultiPosition</Name>
-  <Definition>Properties for discrete inputs, outputs, and values within a programmable logic controller. HISTORY: New in IFC4, replaces Pset_MultiStateInput and Pset_MultiStateOutput.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcController/MULTIPOSITION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcController/MULTIPOSITION</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
       <Name>ControlType</Name>
-      <Definition>The type of signal modification effected and applicable ports:\X\0D
-\X\0D
-INPUT: Controller element is a dedicated input.\X\0D
-OUTPUT: Controller element is a dedicated output.\X\0D
-VARIABLE: Controller element is an in-memory variable.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ControllerMultiPositionType">
+            <EnumItem>INPUT</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>OUTPUT</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>VARIABLE</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Labels</Name>
-      <Definition>Table mapping values to labels, where each entry corresponds to an integer within the ValueRange.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcInteger"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Range</Name>
-      <Definition>The physical range of values supported by the device.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Value</Name>
-      <Definition>The expected range and default value.  The LowerLimitValue and UpperLimitValue must fall within the physical Range.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

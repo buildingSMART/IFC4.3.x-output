@@ -1,40 +1,51 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_PackingInstructions</Name>
-  <Definition>Packing instructions are specific instructions relating to the packing that is required for an artifact in the event of a move (or transport).</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcTask/MOVE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcTask/MOVE</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ContainerMaterial</Name>
-      <Definition>Special requirements for material used to contain an artefact.</Definition>
+      <Name>PackingCareType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PackingCareType">
+            <EnumItem>FRAGILE</EnumItem>
+            <EnumItem>HANDLEWITHCARE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PackingCareType</Name>
-      <Definition>Identifies the predefined types of care that may be required when handling the artefact during a move where:\X\0D
-\X\0D
-Fragile: artefact may be broken during a move through careless handling.\X\0D
-HandleWithCare: artefact may be damaged during a move through careless handling.</Definition>
+      <Name>WrappingMaterial</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcMaterialDefinition"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ContainerMaterial</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcMaterialDefinition"/>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SpecialInstructions</Name>
-      <Definition>Special instructions for packing.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
         </TypePropertySingleValue>
       </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>WrappingMaterial</Name>
-      <Definition>Special requirements for material used to wrap an artefact.</Definition>
     </PropertyDef>
   </PropertyDefs>
 </PropertySetDef>

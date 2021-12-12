@@ -1,49 +1,54 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_SanitaryTerminalTypeUrinal</Name>
-  <Definition>Soil appliance that receives urine and directs it to a waste outlet (BS6100). HISTORY: In IFC4, Material property removed. Use materials capabilities from IfcMaterialsResource schema. Prefix for color property removed. Datatype of color changed to IfcLabel (still a string value).  Mounting property added.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcSanitaryTerminal/URINAL</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSanitaryTerminal/URINAL</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Mounting</Name>
-      <Definition>Selection of the form of mounting from the enumerated list of mountings where:-\X\0D
-\X\0D
-BackToWall =\X\09A pedestal mounted sanitary terminal that fits flush to the wall at the rear to cover its service connections\X\0D
-Pedestal =\X\09A floor mounted sanitary terminal that has an integral base\X\0D
-CounterTop =\X\09A sanitary terminal that is installed into a horizontal surface that is installed into a horizontal surface. Note: When applied to a wash hand basin, the term more normally used is \X2\2018\X0\vanity\X2\2019\X0\. See also Wash Hand Basin Type specification.\X\0D
-WallHung =\X\09A sanitary terminal cantilevered clear of the floor\X\0D
-.\X\0D
-\X\0D
-Note that BackToWall, Pedestal and WallHung are allowable values for a urinal.</Definition>
+      <Name>UrinalType</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_UrinalType">
+            <EnumItem>BOWL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SLAB</EnumItem>
+            <EnumItem>STALL</EnumItem>
+            <EnumItem>TROUGH</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Mounting</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SanitaryMounting">
+            <EnumItem>BACKTOWALL</EnumItem>
+            <EnumItem>COUNTERTOP</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PEDESTAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WALLHUNG</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SpilloverLevel</Name>
-      <Definition>The level at which water spills out of the object.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>UrinalType</Name>
-      <Definition>Selection of the type of urinal from the enumerated list of types where:-\X\0D
-\X\0D
-Bowl: Individual wall mounted urinal.\X\0D
-Slab: Urinal that consists of a slab or sheet fixed to a wall and down which urinal flows into a floor channel.\X\0D
-Stall: Floor mounted urinal that consists of an elliptically shaped sanitary stall fixed to a wall and down which urine flows into a floor channel.\X\0D
-Trough: Wall mounted urinal of elongated rectangular shape on plan, that can be used by more than one person at a time.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

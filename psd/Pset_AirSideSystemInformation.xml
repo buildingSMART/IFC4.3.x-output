@@ -1,28 +1,28 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AirSideSystemInformation</Name>
-  <Definition>Attributes that apply to an air side HVAC system. HISTORY: New property set in IFC Release 1.0.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcSpace</ClassName>
     <ClassName>IfcZone</ClassName>
     <ClassName>IfcSpatialZone</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpatialZone</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpace,IfcZone,IfcSpatialZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>AirflowSensible</Name>
-      <Definition>The air flowrate required to satisfy the sensible peak loads.</Definition>
+      <Name>Name</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVolumetricFlowRateMeasure"/>
+          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>AirSideSystemDistributionType</Name>
-      <Definition>This enumeration defines the basic types of air side systems (e.g., SingleDuct, DualDuct, Multizone, etc.).</Definition>
+      <Name>Description</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -31,43 +31,56 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AirSideSystemType</Name>
-      <Definition>This enumeration specifies the basic types of possible air side systems (e.g., Constant Volume, Variable Volume, etc.).</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AirSideSystemType">
+            <EnumItem>CONSTANTVOLUME</EnumItem>
+            <EnumItem>CONSTANTVOLUMEBYPASS</EnumItem>
+            <EnumItem>CONSTANTVOLUMEMULTIPLEZONEREHEAT</EnumItem>
+            <EnumItem>CONSTANTVOLUMESINGLEZONE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUME</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEDUALCONDUIT</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEFANPOWERED</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEINDUCTION</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEREHEAT</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEVARIABLEDIFFUSERS</EnumItem>
+            <EnumItem>VARIABLEAIRVOLUMEVARIABLETEMPERATURE</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>AirSideSystemDistributionType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AirSideSystemDistributionType">
+            <EnumItem>DUALDUCT</EnumItem>
+            <EnumItem>MULTIZONE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SINGLEDUCT</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TotalAirflow</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcVolumetricFlowRateMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ApplianceDiversity</Name>
-      <Definition>Diversity of appliance load.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoolingTemperatureDelta</Name>
-      <Definition>Cooling temperature difference for calculating space air flow rates.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Description</Name>
-      <Definition>The description of the air side system.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EnergyGainSensible</Name>
-      <Definition>The sum of total energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level sensible energy gains.</Definition>
+      <Name>EnergyGainTotal</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -75,8 +88,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>EnergyGainTotal</Name>
-      <Definition>The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains.</Definition>
+      <Name>AirflowSensible</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EnergyGainSensible</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -85,7 +107,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>EnergyLoss</Name>
-      <Definition>The sum of energy losses for the spaces served by the system during the peak heating conditions.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -93,26 +115,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>FanPower</Name>
-      <Definition>Fan motor loads contributing to the cooling load.</Definition>
+      <Name>LightingDiversity</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HeatingTemperatureDelta</Name>
-      <Definition>Heating temperature difference for calculating space air flow rates.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>InfiltrationDiversitySummer</Name>
-      <Definition>Diversity factor for Summer infiltration.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -121,7 +134,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>InfiltrationDiversityWinter</Name>
-      <Definition>Diversity factor for Winter infiltration.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -129,8 +142,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>LightingDiversity</Name>
-      <Definition>Lighting diversity.</Definition>
+      <Name>ApplianceDiversity</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -139,7 +152,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>LoadSafetyFactor</Name>
-      <Definition>Load safety factor.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -147,29 +160,38 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Name</Name>
-      <Definition>The name of the air side system.</Definition>
+      <Name>HeatingTemperatureDelta</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TotalAirflow</Name>
-      <Definition>The total design supply air flowrate required for the system for either heating or cooling conditions, whichever is greater.</Definition>
+      <Name>CoolingTemperatureDelta</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcVolumetricFlowRateMeasure"/>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Ventilation</Name>
-      <Definition>Required outside air ventilation.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>FanPower</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

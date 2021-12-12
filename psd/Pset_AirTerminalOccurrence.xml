@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AirTerminalOccurrence</Name>
-  <Definition>Air terminal occurrence attributes attached to an instance of IfcAirTerminal.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcAirTerminal</ClassName>
@@ -10,8 +10,24 @@
   <ApplicableTypeValue>IfcAirTerminal</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
+      <Name>AirflowType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AirTerminalAirflowType">
+            <EnumItem>EXHAUSTAIR</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>RETURNAIR</EnumItem>
+            <EnumItem>SUPPLYAIR</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>AirFlowRate</Name>
-      <Definition>The actual airflow rate as designed.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -19,16 +35,22 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>AirflowType</Name>
-      <Definition>Enumeration defining the functional type of air flow through the terminal.</Definition>
-    </PropertyDef>
-    <PropertyDef>
       <Name>Location</Name>
-      <Definition>Location  (a single type of diffuser can be used for multiple locations); high means close to ceiling.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AirTerminalLocation">
+            <EnumItem>CEILINGINTERIOR</EnumItem>
+            <EnumItem>CEILINGPERIMETER</EnumItem>
+            <EnumItem>FLOOR</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SIDEWALLHIGH</EnumItem>
+            <EnumItem>SIDEWALLLOW</EnumItem>
+            <EnumItem>SILL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_ElectricFlowStorageDeviceTypeCommon</Name>
-  <Definition>The characteristics of the supply associated with an electrical device occurrence acting as a source of supply to an electrical distribution system NOTE: Properties within this property set should ONLY be used in circumstances when an electrical supply is applied. The property set, the properties contained and their values are not applicable to a circumstance where the sypply  is not being applied to the eletrical system or is temporarily disconnected. All properties within this property set are considered to represent a steady state situation.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcElectricFlowStorageDevice</ClassName>
@@ -10,62 +10,34 @@
   <ApplicableTypeValue>IfcElectricFlowStorageDevice</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ConnectedConductorFunction</Name>
-      <Definition>Function of the conductors to which the load is connected.</Definition>
+      <Name>Reference</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcIdentifier"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>EarthFault1PoleMaximumState</Name>
-      <Definition>Maximum 1 pole earth fault current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
+      <Name>Status</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EarthFault1PoleMinimumState</Name>
-      <Definition>Minimum 1 pole earth fault current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EarthFault1PolePowerFactorMaximumState</Name>
-      <Definition>Power factor of the maximum 1 pole earth fault  current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EarthFault1PolePowerFactorMinimumState</Name>
-      <Definition>Power factor of the minimum 1 pole earth fault current provided at the point of supply i.e. the fault between 1 phase and PE/PEN.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NominalFrequency</Name>
-      <Definition>The nominal frequency of the supply.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcFrequencyMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>NominalSupplyVoltage</Name>
-      <Definition>The nominal voltage of the supply.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricVoltageMeasure"/>
@@ -74,79 +46,44 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalSupplyVoltageOffset</Name>
-      <Definition>The maximum and minimum allowed voltage of the supply e.g. boundaries of 380V/440V may be applied for a nominal voltage of 400V.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcElectricVoltageMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalFrequency</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcFrequencyMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <Name>ConnectedConductorFunction</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit1PoleMaximumState</Name>
-      <Definition>Maximum 1 pole short circuit current provided at the point of supply i.e. the fault between 1 phase and N.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit1PoleMinimumState</Name>
-      <Definition>Minimum 1 pole short circuit current provided at the point of supply i.e. the fault between 1 phase and N.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit1PolePowerFactorMaximumState</Name>
-      <Definition>Power factor of the maximum 1 pole short circuit current provided at the point of supply i.e. the fault between 1 phase and N.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit1PolePowerFactorMinimumState</Name>
-      <Definition>Power factor of the minimum 1 pole short circuit current provided at the point of supply i.e. the fault between 1 phase and N.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit2PoleMinimumState</Name>
-      <Definition>Minimum 2 pole short circuit current provided at the point of supply.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcElectricCurrentMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>ShortCircuit2PolePowerFactorMinimumState</Name>
-      <Definition>Power factor of the minimum 2 pole short circuit current provided at the point of supply.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ConductorFunctionEnum">
+            <EnumItem>NEUTRAL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PHASE_L1</EnumItem>
+            <EnumItem>PHASE_L2</EnumItem>
+            <EnumItem>PHASE_L3</EnumItem>
+            <EnumItem>PROTECTIVEEARTH</EnumItem>
+            <EnumItem>PROTECTIVEEARTHNEUTRAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>ShortCircuit3PoleMaximumState</Name>
-      <Definition>Maximum 3 pole short circuit current provided at the point of supply.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure"/>
@@ -155,7 +92,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ShortCircuit3PolePowerFactorMaximumState</Name>
-      <Definition>Power factor of the maximum 3 pole short circuit current provided at the point of supply.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal"/>
@@ -163,11 +100,92 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
+      <Name>ShortCircuit2PoleMinimumState</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ShortCircuit2PolePowerFactorMinimumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ShortCircuit1PoleMaximumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ShortCircuit1PolePowerFactorMaximumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ShortCircuit1PoleMinimumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ShortCircuit1PolePowerFactorMinimumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EarthFault1PoleMaximumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EarthFault1PolePowerFactorMaximumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EarthFault1PoleMinimumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EarthFault1PolePowerFactorMinimumState</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

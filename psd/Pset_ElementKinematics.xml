@@ -1,27 +1,33 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_ElementKinematics</Name>
-  <Definition>Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be availabe as a 'clearance' shape representation.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcElement</ClassName>
     <ClassName>IfcElementType</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcElementType</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcElement,IfcElementType</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
       <Name>CyclicPath</Name>
-      <Definition>Represents the time:angle table of the kinematic behaviour.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcTimeMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPlaneAngleMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>CyclicRange</Name>
-      <Definition>Identifies the angular range of the kinematic behaviour</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure"/>
@@ -30,16 +36,22 @@
     </PropertyDef>
     <PropertyDef>
       <Name>LinearPath</Name>
-      <Definition>Represents the time:distance table of the kinematic behaviour.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcTimeMeasure"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLengthMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>LinearRange</Name>
-      <Definition>Identifies the linear range of the kinematic behaviour.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -48,7 +60,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MaximumAngularVelocity</Name>
-      <Definition>Identifies the maximum angular velocity of the kinematic behaviour.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAngularVelocityMeasure"/>
@@ -57,11 +69,16 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MaximumConstantSpeed</Name>
-      <Definition>Identifies the maximum constant speed over the kinematic path.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="UNKNOWN"/>
+        </TypePropertySingleValue>
+      </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>MinimumTime</Name>
-      <Definition>Identifies the minimum time for the kinematic behaviour.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure"/>

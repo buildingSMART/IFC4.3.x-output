@@ -1,29 +1,36 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_DamperTypeControlDamper</Name>
-  <Definition>Control damper type attributes.\X\0D
-Pset renamed from Pset_DamperTypeControl to Pset_DamperTypeControlDamper in IFC2x2 Pset Addendum.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcDamper/CONTROLDAMPER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDamper/CONTROLDAMPER</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ControlDamperOperation</Name>
-      <Definition>The inherent characteristic of the control damper operation.</Definition>
+      <Name>TorqueRange</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcTorqueMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>TorqueRange</Name>
-      <Definition>Torque range: minimum operational torque to maximum allowable torque.</Definition>
+      <Name>ControlDamperOperation</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcTorqueMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ControlDamperOperation">
+            <EnumItem>EXPONENTIAL</EnumItem>
+            <EnumItem>LINEAR</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

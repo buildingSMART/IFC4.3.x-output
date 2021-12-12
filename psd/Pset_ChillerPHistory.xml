@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_ChillerPHistory</Name>
-  <Definition>Chiller performance history attributes.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcChiller</ClassName>
@@ -11,33 +11,23 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Capacity</Name>
-      <Definition>The product of the  ideal capacity and the overall volumetric efficiency of the compressor.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoefficientOfPerformance</Name>
-      <Definition>The Coefficient of performance (COP) is the ratio of heat removed to energy input. \X\0D
-The energy input may be obtained by multiplying \X\0D
-Pset_DistributionPortPHistoryGas.FlowRate on the 'Fuel' port of the IfcChiller by Pset_MaterialFuel.LowerHeatingValue.  \X\0D
-The IfcDistributionPort for fuel has an associated IfcMaterial with fuel properties and is assigned to an IfcPerformanceHistory object nested within this IfcPerformanceHistory object.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPositiveRatioMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>EnergyEfficiencyRatio</Name>
-      <Definition>The Energy efficiency ratio (EER) is the ratio of net cooling capacity to the total input rate of electric power applied.  By definition, the units are BTU/hour per Watt.\X\0D
-The input electric power may be obtained from Pset_DistributionPortPHistoryElectrical.RealPower on the 'Power' port of the IfcChiller.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CoefficientOfPerformance</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

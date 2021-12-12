@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_UnitaryControlElementPHistory</Name>
-  <Definition>Properties for history and operating schedules of thermostats.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcUnitaryControlElement</ClassName>
@@ -10,39 +10,31 @@
   <ApplicableTypeValue>IfcUnitaryControlElement</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Fan</Name>
-      <Definition>Indicates fan operation where True is on, False is off, and Unknown is automatic.</Definition>
+      <Name>Temperature</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLogical"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Mode</Name>
-      <Definition>Indicates operation mode corresponding to Pset_UnitaryControlTypeCommon.Mode.  For example, 'HEAT', 'COOL', 'AUTO'.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Fan</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SetPoint</Name>
-      <Definition>Indicates the temperature setpoint.  For thermostats with setbacks or separate high and low setpoints, then the time series may contain a pair of values at each entry where the first value is the heating setpoint (low) and the second value is the cooling setpoint (high).</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcIdentifier"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Temperature</Name>
-      <Definition>Indicates the current measured temperature.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

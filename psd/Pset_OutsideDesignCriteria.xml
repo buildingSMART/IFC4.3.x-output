@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_OutsideDesignCriteria</Name>
-  <Definition>Outside air conditions used as the basis for calculating thermal loads at peak conditions, as well as the weather data location from which these conditions were obtained. HISTORY: New property set in IFC Release 1.0.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcBuilding</ClassName>
@@ -10,53 +10,8 @@
   <ApplicableTypeValue>IfcBuilding</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>BuildingThermalExposure</Name>
-      <Definition>The thermal exposure expected by the building based on surrounding site conditions.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoolingDesignDay</Name>
-      <Definition>The month, day  and time that has been selected for the cooling design calculations.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcDateTime"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoolingDryBulb</Name>
-      <Definition>Outside dry bulb temperature for cooling design.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>CoolingWetBulb</Name>
-      <Definition>Outside wet bulb temperature for cooling design.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcThermodynamicTemperatureMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HeatingDesignDay</Name>
-      <Definition>The month, day and time that has been selected for the heating design calculations.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcDateTime"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>HeatingDryBulb</Name>
-      <Definition>Outside dry bulb temperature for heating design.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
@@ -65,7 +20,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HeatingWetBulb</Name>
-      <Definition>Outside wet bulb temperature for heating design.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
@@ -73,26 +28,35 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PrevailingWindDirection</Name>
-      <Definition>The prevailing wind angle direction measured from True North (0 degrees) in a clockwise direction.</Definition>
+      <Name>HeatingDesignDay</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
+          <DataType type="IfcDateTime"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PrevailingWindVelocity</Name>
-      <Definition>The design wind velocity coming from the direction specified by the PrevailingWindDirection attribute.</Definition>
+      <Name>CoolingDryBulb</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLinearVelocityMeasure"/>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>WeatherDataDate</Name>
-      <Definition>The date for which the weather data was gathered.</Definition>
+      <Name>CoolingWetBulb</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>CoolingDesignDay</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcDateTime"/>
@@ -101,10 +65,52 @@
     </PropertyDef>
     <PropertyDef>
       <Name>WeatherDataStation</Name>
-      <Definition>The site weather data station description or reference to the data source from which weather data was obtained for use in calculations.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>WeatherDataDate</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>BuildingThermalExposure</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BuildingThermalExposure">
+            <EnumItem>HEAVY</EnumItem>
+            <EnumItem>LIGHT</EnumItem>
+            <EnumItem>MEDIUM</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PrevailingWindDirection</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PrevailingWindVelocity</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLinearVelocityMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

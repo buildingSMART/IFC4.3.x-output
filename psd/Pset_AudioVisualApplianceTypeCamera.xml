@@ -1,24 +1,33 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_AudioVisualApplianceTypeCamera</Name>
-  <Definition>An audio-visual camera is a device that captures video, such as for security.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcAudioVisualAppliance/CAMERA</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcAudioVisualAppliance/CAMERA</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
       <Name>CameraType</Name>
-      <Definition>Indicates the type of camera.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AudioVisualCameraType">
+            <EnumItem>AUDIOVIDEO</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PHOTO</EnumItem>
+            <EnumItem>UNSET.</EnumItem>
+            <EnumItem>VIDEO</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>IsOutdoors</Name>
-      <Definition>Indicates if camera is designed to be used outdoors.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -26,62 +35,17 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>PanHorizontal</Name>
-      <Definition>Indicates horizontal range for panning.</Definition>
+      <Name>VideoResolutionWidth</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PanTiltZoomPreset</Name>
-      <Definition>Indicates pan/tilt/zoom position presets.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PanVertical</Name>
-      <Definition>Indicates vertical range for panning.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLengthMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>TiltHorizontal</Name>
-      <Definition>Indicates horizontal range for pivoting, where positive values indicate the camera rotating clockwise,</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>TiltVertical</Name>
-      <Definition>Indicates vertical range for pivoting, where 0.0 is level, +90 degrees is looking up, -90 degrees is looking down.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPlaneAngleMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>VideoCaptureInterval</Name>
-      <Definition>Indicates video frame capture time intervals.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcTimeMeasure"/>
+          <DataType type="IfcInteger"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>VideoResolutionHeight</Name>
-      <Definition>Indicates the number of vertical pixels (the largest native video resolution height).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
@@ -90,29 +54,92 @@
     </PropertyDef>
     <PropertyDef>
       <Name>VideoResolutionMode</Name>
-      <Definition>Indicates video resolution modes.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>VideoResolutionWidth</Name>
-      <Definition>Indicates the number of horizontal pixels (the largest native video resolution width).</Definition>
+      <Name>VideoCaptureInterval</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcTimeMeasure"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PanTiltZoomPreset</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcIdentifier"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PanHorizontal</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcLengthMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PanVertical</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcLengthMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TiltHorizontal</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>TiltVertical</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPlaneAngleMeasure"/>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Zoom</Name>
-      <Definition>Indicates the zoom range.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
+        <TypePropertyBoundedValue>
           <DataType type="IfcPositiveLengthMeasure"/>
-        </TypePropertySingleValue>
+        </TypePropertyBoundedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

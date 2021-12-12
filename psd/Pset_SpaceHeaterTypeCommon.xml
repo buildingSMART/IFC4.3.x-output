@@ -1,9 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_SpaceHeaterTypeCommon</Name>
-  <Definition>Space heater type common attributes.\X\0D
-SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcSpaceHeater</ClassName>
@@ -11,80 +10,8 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
   <ApplicableTypeValue>IfcSpaceHeater</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>BodyMass</Name>
-      <Definition>Overall body mass of the heater.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcMassMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>EnergySource</Name>
-      <Definition>Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HeatTransferDimension</Name>
-      <Definition>Indicates how heat is transmitted according to the shape of the space heater.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HeatTransferMedium</Name>
-      <Definition>Enumeration defining the heat transfer medium if applicable.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NumberOfPanels</Name>
-      <Definition>Number of panels.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>NumberOfSections</Name>
-      <Definition>Number of vertical sections, measured in the direction of flow.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>OutputCapacity</Name>
-      <Definition>Total nominal heat output as listed by the manufacturer.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcPowerMeasure"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>PlacementType</Name>
-      <Definition>Indicates how the space heater is designed to be placed.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -93,27 +20,137 @@ SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties ins
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>PlacementType</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SpaceHeaterPlacementType">
+            <EnumItem>BASEBOARD</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SUSPENDED</EnumItem>
+            <EnumItem>TOWELWARMER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WALL</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>TemperatureClassification</Name>
-      <Definition>Enumeration defining the temperature classification of the space heater surface temperature.\X\0D
-low temperature - surface temperature is relatively low, usually heated by hot water or electricity.\X\0D
-high temperature - surface temperature is relatively high, usually heated by gas or steam.</Definition>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SpaceHeaterTemperatureClassification">
+            <EnumItem>HIGHTEMPERATURE</EnumItem>
+            <EnumItem>LOWTEMPERATURE</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HeatTransferDimension</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SpaceHeaterHeatTransferDimension">
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PATH</EnumItem>
+            <EnumItem>POINT</EnumItem>
+            <EnumItem>SURFACE</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HeatTransferMedium</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_HeatTransferMedium">
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>STEAM</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WATER</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EnergySource</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EnergySource">
+            <EnumItem>COAL</EnumItem>
+            <EnumItem>COAL_PULVERIZED</EnumItem>
+            <EnumItem>ELECTRICITY</EnumItem>
+            <EnumItem>GAS</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OIL</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PROPANE</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>WOOD</EnumItem>
+            <EnumItem>WOOD_CHIP</EnumItem>
+            <EnumItem>WOOD_PELLET</EnumItem>
+            <EnumItem>WOOD_PULVERIZED</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>BodyMass</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
+          <DataType type="IfcMassMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ThermalMassHeatCapacity</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OutputCapacity</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalEfficiency</Name>
-      <Definition>Overall Thermal Efficiency is defined as gross energy output of the heat transfer device divided by the energy input.</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>
@@ -121,11 +158,20 @@ high temperature - surface temperature is relatively high, usually heated by gas
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ThermalMassHeatCapacity</Name>
-      <Definition>Product of component mass and specific heat.</Definition>
+      <Name>NumberOfPanels</Name>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
+          <DataType type="IfcInteger"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NumberOfSections</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

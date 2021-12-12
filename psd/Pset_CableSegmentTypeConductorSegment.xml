@@ -1,24 +1,17 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_CableSegmentTypeConductorSegment</Name>
-  <Definition>An electrical conductor is a single linear element with the specific purpose to lead electric current. The core of one lead is normally single wired or multiwired which are intertwined. According to IEC 60050: IEV 195-01-07, a conductor is a conductive part intended to carry a specified electric current.</Definition>
+  <Definition/>
   <Applicability/>
-  <ApplicableClasses/>
-  <ApplicableTypeValue/>
+  <ApplicableClasses>
+    <ClassName>IfcCableSegment/CONDUCTORSEGMENT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCableSegment/CONDUCTORSEGMENT</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Construction</Name>
-      <Definition>Purpose of informing on how the vonductor is constucted (interwined or solid). I.e. Solid (IEV 461-01-06), stranded (IEV 461-01-07), solid-/finestranded(IEV 461-01-11) (not flexible/flexible).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
       <Name>CrossSectionalArea</Name>
-      <Definition>Cross section area of the phase(s) lead(s).</Definition>
+      <Definition/>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -27,29 +20,67 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Function</Name>
-      <Definition>Type of function for which the conductor is intended.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FunctionEnum">
+            <EnumItem>LINE</EnumItem>
+            <EnumItem>NEUTRAL</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>PROTECTIVEEARTH</EnumItem>
+            <EnumItem>PROTECTIVEEARTHNEUTRAL</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Material</Name>
-      <Definition>Type of material from which the conductor is constructed.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_MaterialEnum">
+            <EnumItem>ALUMINIUM</EnumItem>
+            <EnumItem>COPPER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Construction</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ConstructionEnum">
+            <EnumItem>FLEXIBLESTRANDEDCONDUCTOR</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>SOLIDCONDUCTOR</EnumItem>
+            <EnumItem>STRANDEDCONDUCTOR</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Shape</Name>
-      <Definition>Indication of the shape of the conductor.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ShapeEnum">
+            <EnumItem>CIRCULARCONDUCTOR</EnumItem>
+            <EnumItem>HELICALCONDUCTOR</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>RECTANGULARCONDUCTOR</EnumItem>
+            <EnumItem>SECTORCONDUCTOR</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

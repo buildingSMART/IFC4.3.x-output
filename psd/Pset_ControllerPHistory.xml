@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_874146a"/>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X3_DEV_3e9ced5"/>
   <Name>Pset_ControllerPHistory</Name>
-  <Definition>Properties for history of controller values.  HISTORY: Added in IFC4.</Definition>
+  <Definition/>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcController</ClassName>
@@ -10,30 +10,24 @@
   <ApplicableTypeValue>IfcController</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Quality</Name>
-      <Definition>Indicates the quality of measurement or failure condition, which may be further qualified by the Status.  True: measured values are considered reliable; False: measured values are considered not reliable (i.e. a fault has been detected); Unknown: reliability of values is uncertain.</Definition>
+      <Name>Value</Name>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLogical"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Quality</Name>
+      <Definition/>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition>Indicates an error code or identifier, whose meaning is specific to the particular automation system.  Example values include: 'ConfigurationError', 'NotConnected', 'DeviceFailure', 'SensorFailure', 'LastKnown, 'CommunicationsFailure', 'OutOfService'.</Definition>
+      <Definition/>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcLabel"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>Value</Name>
-      <Definition>Indicates values over time which may be recorded continuously or only when changed beyond a particular deadband.  The range of possible values is defined by the Value property on the corresponding occurrence property set (Pset_ControllerTypeFloating, Pset_ControllerTypeProportional, Pset_ControllerTypeMultiPosition, or Pset_ControllerTypeTwoPosition).</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcReal"/>
-        </TypePropertySingleValue>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>
