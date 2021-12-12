@@ -9,307 +9,1692 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
-"X-Crowdin-File-ID: 102\n"
+"X-Crowdin-File: /master/IfcPortsAndWaterwaysDomain.pot\n"
+"X-Crowdin-File-ID: 103\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2021-12-12 21:55\n"
 
-#:IFC.xml:42140
-msgid "IfcApplication"
-msgstr "IfcApplication"
+#:IFC.xml:23489
+msgid "IfcConveyorSegment"
+msgstr "IfcConveyorSegment"
 
-msgid "IfcApplication_DEFINITION"
-msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. X 0D X 0D HISTORY New entity in IFC1.5.bSI Documentation"
+msgid "IfcConveyorSegment_DEFINITION"
+msgstr "コンベアセグメントは、システムの2つのセクションを結合するコンベアシステム内で連続的に実行されるフローセグメントの発生を定義します。 これらはベルト、ロープ、チェーン、ネジなどの異なる運搬方法を利用できます X 0D ノート 無限ベルトを使用して緩やかな傾斜に沿って材料や物体を連続的に輸送するISO6707 1マシンに準拠した定義 ロープか鎖かローラーか SI ドキュメント"
 
-#:IFC.xml:170
-msgid "IfcApplication_ApplicationDeveloper"
-msgstr "アプリケーション開発者"
+#:IFC.xml:23490
+msgid "IfcConveyorSegment_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
-msgstr "アプリケーション開発者"
+msgid "IfcConveyorSegment_PredefinedType_DEFINITION"
+msgstr "コンベアセグメントの定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 X 0D NOTE PredefinedType は、[[IfcConveyorSegmentType]] が割り当てられていない場合にのみ使用され、独自の [[IfcConveyorSegmentType]] .PredefinedType を指定します。"
 
-#:IFC.xml:42141
-msgid "IfcApplication_ApplicationFullName"
-msgstr "ApplicationFullName"
+#:IFC.xml:23497
+msgid "IfcConveyorSegmentType"
+msgstr "IfcConveyorSegmentType"
 
-msgid "IfcApplication_ApplicationFullName_DEFINITION"
-msgstr "アプリケーション開発者によって指定されたアプリケーションの完全な名前。"
+msgid "IfcConveyorSegmentType_DEFINITION"
+msgstr "[[IfcConveyorSegmentType]] は、[[IfcConveyorSegment]] 発生の型情報を提供します。 X 0D コンベアセグメントは、システムの2つのセクションを結合するコンベアシステム内で連続的に実行されるフローセグメントの発生を定義します。 これらは、ベルト、ロープ、チェーン、ネジなど、さまざまな運搬方法を利用できます。bSIドキュメント"
 
-#:IFC.xml:42146
-msgid "IfcApplication_ApplicationIdentifier"
-msgstr "ApplicationID"
+#:IFC.xml:23498
+msgid "IfcConveyorSegmentType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
-msgstr "アプリケーションの短い識別名。"
+msgid "IfcConveyorSegmentType_PredefinedType_DEFINITION"
+msgstr "事前に定義されたコンベアセグメントのタイプを識別します。"
 
-#:IFC.xml:42151
-msgid "IfcApplication_Version"
-msgstr "バージョン"
+#:IFC.xml:23505
+msgid "IfcConveyorSegmentTypeEnum"
+msgstr "IfcConveyorSegmentTypeEnum"
 
-msgid "IfcApplication_Version_DEFINITION"
-msgstr "アプリケーションの開発者によって指定されたこのソフトウェアのバージョン番号。"
+msgid "IfcConveyorSegmentTypeEnum_DEFINITION"
+msgstr "このコンテナは、[[IfcConveyorSegment]] または [[IfcConveyorSegmentType]] をさらに指定できる、異なる事前定義されたコンベアセグメントを定義します。.bSI Documentation"
 
-#:IFC.xml:42181
-msgid "IfcChangeActionEnum"
-msgstr "IfcChangeActionEnum"
+#:IFC.xml:23513
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR"
+msgstr "BELTCONVEYOR"
 
-msgid "IfcChangeActionEnum_DEFINITION"
-msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are X 0D X 0D Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. X 0D X 0D HISTORY New enumeration in IFC2.0. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removedbSI Documentation"
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR_DEFINITION"
+msgstr "BELTCONVEYOR"
 
-#:IFC.xml:42182
-msgid "IfcChangeActionEnum_ADDED"
-msgstr "ADDED"
+#:IFC.xml:23514
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR"
+msgstr "BUCKETCONVEYOR"
 
-msgid "IfcChangeActionEnum_ADDED_DEFINITION"
-msgstr "ADDED"
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR_DEFINITION"
+msgstr "BUCKETCONVEYOR"
 
-#:IFC.xml:42183
-msgid "IfcChangeActionEnum_DELETED"
-msgstr "DELETED"
+#:IFC.xml:23515
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR"
+msgstr "CHUTECONVEYOR"
 
-msgid "IfcChangeActionEnum_DELETED_DEFINITION"
-msgstr "DELETED"
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR_DEFINITION"
+msgstr "CHUTECONVEYOR"
 
-#:IFC.xml:42184
-msgid "IfcChangeActionEnum_MODIFIED"
-msgstr "MODIFIED"
-
-msgid "IfcChangeActionEnum_MODIFIED_DEFINITION"
-msgstr "MODIFIED"
-
-#:IFC.xml:42185
-msgid "IfcChangeActionEnum_NOCHANGE"
-msgstr "NOCHANGE"
-
-msgid "IfcChangeActionEnum_NOCHANGE_DEFINITION"
-msgstr "NOCHANGE"
-
-#:IFC.xml:42186
-msgid "IfcChangeActionEnum_NOTDEFINED"
+#:IFC.xml:23516
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED"
 msgstr "注記されました"
 
-msgid "IfcChangeActionEnum_NOTDEFINED_DEFINITION"
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED_DEFINITION"
 msgstr "注記されました"
 
-#:IFC.xml:42188
-msgid "IfcOwnerHistory"
-msgstr "IfcOwnerHistory"
+#:IFC.xml:23517
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR"
+msgstr "SCREWCONVEYOR"
 
-msgid "IfcOwnerHistory_DEFINITION"
-msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. X 0D X 0D [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. X 0D X 0D HISTORY New entity in IFC1.0. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. X 0D 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate.bSI Documentation"
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR_DEFINITION"
+msgstr "SCREWCONVEYOR"
 
-#:IFC.xml:316
-msgid "IfcOwnerHistory_OwningUser"
-msgstr "所有しているユーザー"
+#:IFC.xml:23518
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcOwnerHistory_OwningUser_DEFINITION"
-msgstr "所有しているユーザー"
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:328
-msgid "IfcOwnerHistory_LastModifyingUser"
-msgstr "LastModifyingUser"
+#:IFC.xml:23519
+msgid "IfcLiquidTerminal"
+msgstr "IfcLiquidTerminal"
 
-msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
-msgstr "LastModifyingUser"
+msgid "IfcLiquidTerminal_DEFINITION"
+msgstr "液体端子とは、分配システムs 間の液体の移動のための終点または起点である。 液体分配システムが外部環境と相互作用する点です この例として、ドッキングされた容器から液体を転送するローディングアームがあります。.bSI Documentation"
 
-#:IFC.xml:42157
-msgid "IfcOwnerHistory_OwningApplication"
-msgstr "所有しているアプリケーション"
+#:IFC.xml:23520
+msgid "IfcLiquidTerminal_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
-msgstr "所有しているアプリケーション"
+msgid "IfcLiquidTerminal_PredefinedType_DEFINITION"
+msgstr "液体端子の定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 X 0D NOTE PredefinedType は、[[IfcLiquidTerminalType]] が割り当てられていない場合にのみ使用され、独自の [[IfcLiquidTerminalType]].PredefinedType を指定します。"
 
-#:IFC.xml:42169
-msgid "IfcOwnerHistory_LastModifyingApplication"
-msgstr "LastModifyingApplication"
+#:IFC.xml:23527
+msgid "IfcLiquidTerminalType"
+msgstr "IfcLiquidTerminalType"
 
-msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
-msgstr "LastModifyingApplication"
+msgid "IfcLiquidTerminalType_DEFINITION"
+msgstr "LiquidTerminalType は LiquidTerminal 発生の型情報を提供します。 X 0D 液体端子とは、分布系s 間で液体を移動させるための終点または起点である。 液体分配システムが外部環境と相互作用する点です この例として、ドッキングされた容器から液体を転送するローディングアームがあります。.bSI Documentation"
 
-#:IFC.xml:42189
-msgid "IfcOwnerHistory_ChangeAction"
-msgstr "ChangeAction"
+#:IFC.xml:23528
+msgid "IfcLiquidTerminalType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
-msgstr "オブジェクトに対する変更に関連付けられたアクションを定義する列挙。"
+msgid "IfcLiquidTerminalType_PredefinedType_DEFINITION"
+msgstr "液体端子の定義済みタイプを識別します。"
 
-#:IFC.xml:42194
-msgid "IfcOwnerHistory_CreationDate"
-msgstr "作成日"
+#:IFC.xml:23535
+msgid "IfcLiquidTerminalTypeEnum"
+msgstr "IfcLiquidTerminalTypeEnum"
 
-msgid "IfcOwnerHistory_CreationDate_DEFINITION"
-msgstr "UTCユニバーサルタイムコーディネート(UTC)で表される日付と時刻、元の所有アプリケーションによって最初に作成されたときに、グリニッジ標準時またはGMTで表される日付。 一度定義されると、この値はエンティティの存続期間を通じて変更されません。"
+msgid "IfcLiquidTerminalTypeEnum_DEFINITION"
+msgstr "このコンテナは、[[IfcLiquidTerminal]] または [[IfcLiquidTerminalType]] をさらに指定できる、事前に定義された液体端子の種類を定義します。.bSI Documentation"
 
-#:IFC.xml:42199
-msgid "IfcOwnerHistory_LastModifiedDate"
-msgstr "LastModifiedDate"
+#:IFC.xml:23541
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL"
+msgstr "HOSEREEL"
 
-msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
-msgstr "UTCユニバーサルタイムコーディネートで表される日付と時刻 最後の変更が LastModifyingUser と LastModifyingApplicationによって行われた前のGreenwich Mean TimeまたはGMT。"
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL_DEFINITION"
+msgstr "HOSEREEL"
 
-#:IFC.xml:42204
-msgid "IfcOwnerHistory_State"
-msgstr "都道府県："
+#:IFC.xml:23542
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM"
+msgstr "LOADINGARM"
 
-msgid "IfcOwnerHistory_State_DEFINITION"
-msgstr "オブジェクトの現在のアクセス状態を定義する列挙。"
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM_DEFINITION"
+msgstr "LOADINGARM"
 
-#:IFC.xml:42210
-msgid "IfcStateEnum"
-msgstr "IfcStateEnum"
+#:IFC.xml:23543
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcStateEnum_DEFINITION"
-msgstr "[[IfcStateEnum]] 列挙は、例えば、読み込み、ロックされた などのオブジェクトの状態やアクセシビリティを識別します。 X 0D X 0D 有効な列挙は、X 0D X 0D HISTORY IFC2.0の新しい列挙です。 hage ifc2x3 X 0D IFC2x3 CHANGE このコンセプトはIFC2で紹介されました。 as IfcModifiedFlag of type BINARY 3 FIXED として、R2x3 で列挙に変更されました。 これは、当初、部分的なモデル交換のための機能を提供するための最初のステップとして導入され、アプリケーションがオブジェクトの状態を識別できるように、主にモデルサーバーによって使用されることを意図しています。 SI ドキュメント"
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:42211
-msgid "IfcStateEnum_LOCKED"
-msgstr "LOCKED"
+#:IFC.xml:23544
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcStateEnum_LOCKED_DEFINITION"
-msgstr "LOCKED"
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:42212
-msgid "IfcStateEnum_READONLY"
-msgstr "READONLY"
+#:IFC.xml:23545
+msgid "IfcMarineFacility"
+msgstr "IfcMarineFacility"
 
-msgid "IfcStateEnum_READONLY_DEFINITION"
-msgstr "READONLY"
+msgid "IfcMarineFacility_DEFINITION"
+msgstr "海洋施設は、港や水路領域に固有の主要な構造またはエンティティを表します。 この例には、quay、jetties、shipyards、breakwaterなどがあります。bSIドキュメント"
 
-#:IFC.xml:42213
-msgid "IfcStateEnum_READONLYLOCKED"
-msgstr "READONLYLOCKED"
+#:IFC.xml:23546
+msgid "IfcMarineFacility_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcStateEnum_READONLYLOCKED_DEFINITION"
-msgstr "READONLYLOCKED"
+msgid "IfcMarineFacility_PredefinedType_DEFINITION"
+msgstr "海洋施設の定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。"
 
-#:IFC.xml:42214
-msgid "IfcStateEnum_READWRITE"
-msgstr "READWRITE"
+#:IFC.xml:23553
+msgid "IfcMarineFacilityTypeEnum"
+msgstr "IfcMarineFacilityTypeEnum"
 
-msgid "IfcStateEnum_READWRITE_DEFINITION"
-msgstr "READWRITE"
+msgid "IfcMarineFacilityTypeEnum_DEFINITION"
+msgstr "可能なすべての海洋施設タイプをまとめて実装されたenumeration.bSI Documentation"
 
-#:IFC.xml:42215
-msgid "IfcStateEnum_READWRITELOCKED"
-msgstr "READWRITELOCKED"
+#:IFC.xml:23576
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH"
+msgstr "BARRIERBEACH"
 
-msgid "IfcStateEnum_READWRITELOCKED_DEFINITION"
-msgstr "READWRITELOCKED"
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH_DEFINITION"
+msgstr "BARRIERBEACH"
 
-#:IFC.xml:42217
-msgid "IfcTable"
-msgstr "IfcTable"
+#:IFC.xml:23577
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER"
+msgstr "BREAKWATER"
 
-msgid "IfcTable_DEFINITION"
-msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. X 0D X 0D Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. X 0D X 0D Figure 1 illustrates table use. X 0D X 0D Table use .. .. .. .. .. .. figures ifctable image1.gif Figure 1 Table use X 0D X 0D Figure 2 depicts how tables were structured prior to IFC4. X 0D X 0D Table use alternative .. .. .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative X 0D X 0D HISTORY New entity in IFC1.5. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Columns attribute added.bSI Documentation"
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER_DEFINITION"
+msgstr "BREAKWATER"
 
-#:IFC.xml:42241
-msgid "IfcTable_Rows"
-msgstr "行"
+#:IFC.xml:23578
+msgid "IfcMarineFacilityTypeEnum_CANAL"
+msgstr "CANAL"
 
-msgid "IfcTable_Rows_DEFINITION"
-msgstr "行"
+msgid "IfcMarineFacilityTypeEnum_CANAL_DEFINITION"
+msgstr "CANAL"
 
-#:IFC.xml:42253
-msgid "IfcTable_Columns"
-msgstr "列"
+#:IFC.xml:23579
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK"
+msgstr "DRYDOCK"
 
-msgid "IfcTable_Columns_DEFINITION"
-msgstr "列"
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK_DEFINITION"
+msgstr "DRYDOCK"
 
-#:IFC.xml:42218
-msgid "IfcTable_NumberOfCellsInRow"
-msgstr "NumberOfCellsInRow"
+#:IFC.xml:23580
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK"
+msgstr "FLOATING DOCK"
 
-msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
-msgstr "NumberOfCellsInRow"
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK_DEFINITION"
+msgstr "FLOATING DOCK"
 
-#:IFC.xml:42223
-msgid "IfcTable_NumberOfDataRows"
-msgstr "NumberOfData行"
+#:IFC.xml:23581
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT"
+msgstr "HYDROLIFT"
 
-msgid "IfcTable_NumberOfDataRows_DEFINITION"
-msgstr "NumberOfData行"
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT_DEFINITION"
+msgstr "HYDROLIFT"
 
-#:IFC.xml:42228
-msgid "IfcTable_NumberOfHeadings"
-msgstr "NumberOfHeadings"
+#:IFC.xml:23582
+msgid "IfcMarineFacilityTypeEnum_JETTY"
+msgstr "JETTY"
 
-msgid "IfcTable_NumberOfHeadings_DEFINITION"
-msgstr "NumberOfHeadings"
+msgid "IfcMarineFacilityTypeEnum_JETTY_DEFINITION"
+msgstr "JETTY"
 
-#:IFC.xml:42233
-msgid "IfcTable_Name"
-msgstr "名前"
+#:IFC.xml:23583
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY"
+msgstr "ローンチ時:"
 
-#:IFC.xml:42265
-msgid "IfcTableColumn"
-msgstr "IfcTableColumn"
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY_DEFINITION"
+msgstr "ローンチ時:"
 
-msgid "IfcTableColumn_DEFINITION"
-msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. X 0D X 0D The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+#:IFC.xml:23584
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE"
+msgstr "射撃場"
 
-#:IFC.xml:2652
-msgid "IfcTableColumn_ReferencePath"
-msgstr "ReferencePath"
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE_DEFINITION"
+msgstr "射撃場"
 
-msgid "IfcTableColumn_ReferencePath_DEFINITION"
-msgstr "ReferencePath"
+#:IFC.xml:23585
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL"
+msgstr "ナビゲーションのチャンネル"
 
-#:IFC.xml:42266
-msgid "IfcTableColumn_Description"
-msgstr "説明"
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL_DEFINITION"
+msgstr "ナビゲーションのチャンネル"
 
-msgid "IfcTableColumn_Description_DEFINITION"
-msgstr "説明は、表の列を説明する人が読めるテキストを提供します。"
+#:IFC.xml:23586
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-#:IFC.xml:42271
-msgid "IfcTableColumn_Identifier"
-msgstr "Identifier"
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-msgid "IfcTableColumn_Identifier_DEFINITION"
-msgstr "識別子は、テーブル内の列を識別します。指定された場合は、テーブル内で一意である必要があります。 列は、同じ列識別子を共有することによって、複数のテーブル間で相互参照することができます。"
+#:IFC.xml:23587
+msgid "IfcMarineFacilityTypeEnum_PORT"
+msgstr "ポート"
 
-#:IFC.xml:42276
-msgid "IfcTableColumn_Name"
-msgstr "名前"
+msgid "IfcMarineFacilityTypeEnum_PORT_DEFINITION"
+msgstr "ポート"
 
-msgid "IfcTableColumn_Name_DEFINITION"
-msgstr "名前はテーブルカラムの人間が読めるキャプションです。必ずしも一意ではありません。"
+#:IFC.xml:23588
+msgid "IfcMarineFacilityTypeEnum_QUAY"
+msgstr "月"
 
-#:IFC.xml:42281
-msgid "IfcTableColumn_Unit"
-msgstr "単位"
+msgid "IfcMarineFacilityTypeEnum_QUAY_DEFINITION"
+msgstr "月"
 
-msgid "IfcTableColumn_Unit_DEFINITION"
-msgstr "単位は、この列のデータに使用される基準単位を示します。指定されていない場合は、プロジェクトのデフォルト単位が仮定されます。 ReferencePath が指定されている場合、ユニットは参照された属性と同じメジャーである必要があります。"
+#:IFC.xml:23589
+msgid "IfcMarineFacilityTypeEnum_REVETMENT"
+msgstr "返信"
 
-#:IFC.xml:42287
-msgid "IfcTableRow"
-msgstr "IfcTableRow"
+msgid "IfcMarineFacilityTypeEnum_REVETMENT_DEFINITION"
+msgstr "返信"
 
-msgid "IfcTableRow_DEFINITION"
-msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . X 0D X 0D Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . X 0D X 0D NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D Figure 337 illustrates table row use. X 0D X 0D X 0D X 0D X 0D X 0D Figure 337 Table row use X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D Figure 338 depicts how table rows were structured prior X 0D to IFC4 with the use of the IsHeading flag. Note X 0D that the use of the [[IfcTableColumn]] constructs X 0D should be used instead of the IsHeading flag X 0D which remains for backward compatibility only . X 0D X 0D X 0D X 0D X 0D X 0D Figure 338 Table row use alternative X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D X 0D HISTORY New entity in IFC1.5.bSI Documentation"
+#:IFC.xml:23590
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT"
+msgstr "船舶へ移動"
 
-#:IFC.xml:42288
-msgid "IfcTableRow_IsHeading"
-msgstr "IsHeading"
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT_DEFINITION"
+msgstr "船舶へ移動"
 
-msgid "IfcTableRow_IsHeading_DEFINITION"
-msgstr "フラグは、行が見出し行または行値を含む行であるかどうかを識別します。 X 0D NOTE 行が見出しの場合、フラグは TRUE を返します。"
+#:IFC.xml:23591
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK"
+msgstr "シップロック"
 
-#:IFC.xml:42293
-msgid "IfcTableRow_RowCells"
-msgstr "RowCell"
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK_DEFINITION"
+msgstr "シップロック"
 
-msgid "IfcTableRow_RowCells_DEFINITION"
-msgstr "テーブルセルのデータ値.."
+#:IFC.xml:23592
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD"
+msgstr "シップヤード"
 
-#:IFC.xml:42299
-msgid "IfcGloballyUniqueId"
-msgstr "IfcGloballyUniqueId"
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD_DEFINITION"
+msgstr "シップヤード"
 
-msgid "IfcGloballyUniqueId_DEFINITION"
-msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below X 0D X 0D 1 2 3 4 5 6 X 0D X 0D X 09 X 09 0123456789012345678901234567890123456789012345678901234567890123 X 0D X 0D X 09 X 09 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz X 0D X 0D X 0D X 0D X 0D X 0D The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. X 0D X 0D NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. X 0D X 0D HISTORY New type in IFC1.5.1.bSI Documentation"
+#:IFC.xml:23593
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY"
+msgstr "スリップウェイ"
+
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY_DEFINITION"
+msgstr "スリップウェイ"
+
+#:IFC.xml:23594
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:23595
+msgid "IfcMarineFacilityTypeEnum_WATERWAY"
+msgstr "水"
+
+msgid "IfcMarineFacilityTypeEnum_WATERWAY_DEFINITION"
+msgstr "水"
+
+#:IFC.xml:23596
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT"
+msgstr "水上移動"
+
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT_DEFINITION"
+msgstr "水上移動"
+
+#:IFC.xml:23597
+msgid "IfcMarinePartTypeEnum"
+msgstr "IfcMarinePartTypeEnum"
+
+msgid "IfcMarinePartTypeEnum_DEFINITION"
+msgstr "可能なすべての海洋施設の部品タイプをまとめて実装されたenumeration.bSI Documentation"
+
+#:IFC.xml:23626
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE"
+msgstr "AboveWaterLINE"
+
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE_DEFINITION"
+msgstr "AboveWaterLINE"
+
+#:IFC.xml:23627
+msgid "IfcMarinePartTypeEnum_ANCHORAGE"
+msgstr "ANCHORAGE"
+
+msgid "IfcMarinePartTypeEnum_ANCHORAGE_DEFINITION"
+msgstr "ANCHORAGE"
+
+#:IFC.xml:23628
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL"
+msgstr "APPROACHCHANNEL"
+
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL_DEFINITION"
+msgstr "APPROACHCHANNEL"
+
+#:IFC.xml:23629
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE"
+msgstr "BELOWWATERLINE"
+
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE_DEFINITION"
+msgstr "BELOWWATERLINE"
+
+#:IFC.xml:23630
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE"
+msgstr "バウンス構造"
+
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE_DEFINITION"
+msgstr "バウンス構造"
+
+#:IFC.xml:23631
+msgid "IfcMarinePartTypeEnum_CHAMBER"
+msgstr "チャンバー"
+
+msgid "IfcMarinePartTypeEnum_CHAMBER_DEFINITION"
+msgstr "チャンバー"
+
+#:IFC.xml:23632
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL"
+msgstr "CILL レベル"
+
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL_DEFINITION"
+msgstr "CILL レベル"
+
+#:IFC.xml:23633
+msgid "IfcMarinePartTypeEnum_COPELEVEL"
+msgstr "オブジェクトの移動"
+
+msgid "IfcMarinePartTypeEnum_COPELEVEL_DEFINITION"
+msgstr "オブジェクトの移動"
+
+#:IFC.xml:23634
+msgid "IfcMarinePartTypeEnum_CORE"
+msgstr "CORE"
+
+msgid "IfcMarinePartTypeEnum_CORE_DEFINITION"
+msgstr "CORE"
+
+#:IFC.xml:23635
+msgid "IfcMarinePartTypeEnum_CREST"
+msgstr "CREST"
+
+msgid "IfcMarinePartTypeEnum_CREST_DEFINITION"
+msgstr "CREST"
+
+#:IFC.xml:23636
+msgid "IfcMarinePartTypeEnum_GATEHEAD"
+msgstr "GATEHEAD"
+
+msgid "IfcMarinePartTypeEnum_GATEHEAD_DEFINITION"
+msgstr "GATEHEAD"
+
+#:IFC.xml:23637
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE"
+msgstr "GudingStructure"
+
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE_DEFINITION"
+msgstr "GudingStructure"
+
+#:IFC.xml:23638
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE"
+msgstr "ハイライトライン"
+
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE_DEFINITION"
+msgstr "ハイライトライン"
+
+#:IFC.xml:23639
+msgid "IfcMarinePartTypeEnum_LANDFIELD"
+msgstr "LANDFIELD"
+
+msgid "IfcMarinePartTypeEnum_LANDFIELD_DEFINITION"
+msgstr "LANDFIELD"
+
+#:IFC.xml:23640
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE"
+msgstr "LEWARDSIDE"
+
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE_DEFINITION"
+msgstr "LEWARDSIDE"
+
+#:IFC.xml:23641
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE"
+msgstr "LOWWATERLINE"
+
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE_DEFINITION"
+msgstr "LOWWATERLINE"
+
+#:IFC.xml:23642
+msgid "IfcMarinePartTypeEnum_MANUFACTURING"
+msgstr "操作"
+
+msgid "IfcMarinePartTypeEnum_MANUFACTURING_DEFINITION"
+msgstr "操作"
+
+#:IFC.xml:23643
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA"
+msgstr "NAVIGATIONALAREA"
+
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA_DEFINITION"
+msgstr "NAVIGATIONALAREA"
+
+#:IFC.xml:23644
+msgid "IfcMarinePartTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcMarinePartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:23645
+msgid "IfcMarinePartTypeEnum_PROTECTION"
+msgstr "保護"
+
+msgid "IfcMarinePartTypeEnum_PROTECTION_DEFINITION"
+msgstr "保護"
+
+#:IFC.xml:23646
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER"
+msgstr "出荷者"
+
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER_DEFINITION"
+msgstr "出荷者"
+
+#:IFC.xml:23647
+msgid "IfcMarinePartTypeEnum_STORAGEAREA"
+msgstr "STORAGEAREA"
+
+msgid "IfcMarinePartTypeEnum_STORAGEAREA_DEFINITION"
+msgstr "STORAGEAREA"
+
+#:IFC.xml:23648
+msgid "IfcMarinePartTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMarinePartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:23649
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING"
+msgstr "VEHICLESERVICING"
+
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING_DEFINITION"
+msgstr "VEHICLESERVICING"
+
+#:IFC.xml:23650
+msgid "IfcMarinePartTypeEnum_WATERFIELD"
+msgstr "WATERFIELD"
+
+msgid "IfcMarinePartTypeEnum_WATERFIELD_DEFINITION"
+msgstr "WATERFIELD"
+
+#:IFC.xml:23651
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE"
+msgstr "WEATHERSIDE"
+
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE_DEFINITION"
+msgstr "WEATHERSIDE"
+
+#:IFC.xml:23652
+msgid "IfcMooringDevice"
+msgstr "IfcMooringDevice"
+
+msgid "IfcMooringDevice_DEFINITION"
+msgstr "係留装置は、主な機能は容器の係留に参加することであるアクティブまたは受動的に構築された要素です。 線の付着点として使われるボルラードかクイックリリースフックのようなアクティブな装置か SI ドキュメント"
+
+#:IFC.xml:23653
+msgid "IfcMooringDevice_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDevice_PredefinedType_DEFINITION"
+msgstr "係留デバイスの定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 X 0D NOTE PredefinedType は、[[IfcMooringDeviceType]] が割り当てられていない場合にのみ使用され、独自の [[IfcMooringDeviceType]].PredefinedType を指定します。"
+
+#:IFC.xml:23660
+msgid "IfcMooringDeviceType"
+msgstr "IfcMooringDeviceType"
+
+msgid "IfcMooringDeviceType_DEFINITION"
+msgstr "[[IfcMooringDeviceType]] は、[[IfcMooringDevice]] 発生の型情報を提供します。 X 0D 係留装置とは、主要な機能が容器の係留に参加する能動的または受動的な組み込み要素のことです。 線の付着点として使われるボルラードかクイックリリースフックのようなアクティブな装置か SI ドキュメント"
+
+#:IFC.xml:23661
+msgid "IfcMooringDeviceType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDeviceType_PredefinedType_DEFINITION"
+msgstr "係留デバイスの定義済みタイプを識別します。"
+
+#:IFC.xml:23668
+msgid "IfcMooringDeviceTypeEnum"
+msgstr "IfcMooringDeviceTypeEnum"
+
+msgid "IfcMooringDeviceTypeEnum_DEFINITION"
+msgstr "このコンテナは、[[IfcMooringDevice]] または [[IfcMooringDeviceType]] をさらに指定できる異なる定義済みの係留要素を定義します。.bSI Documentation"
+
+#:IFC.xml:23677
+msgid "IfcMooringDeviceTypeEnum_BOLLARD"
+msgstr "BOLLARD"
+
+msgid "IfcMooringDeviceTypeEnum_BOLLARD_DEFINITION"
+msgstr "BOLLARD"
+
+#:IFC.xml:23678
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER"
+msgstr "ライン"
+
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER_DEFINITION"
+msgstr "ライン"
+
+#:IFC.xml:23679
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE"
+msgstr "MAGNETICDEVICE"
+
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE_DEFINITION"
+msgstr "MAGNETICDEVICE"
+
+#:IFC.xml:23680
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS"
+msgstr "ムーア時間"
+
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS_DEFINITION"
+msgstr "ムーア時間"
+
+#:IFC.xml:23681
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:23682
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:23683
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE"
+msgstr "VACUMDEVICE"
+
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE_DEFINITION"
+msgstr "VACUMDEVICE"
+
+#:IFC.xml:23684
+msgid "IfcNavigationElement"
+msgstr "IfcNavigationElement"
+
+msgid "IfcNavigationElement_DEFINITION"
+msgstr "navigation 要素は、アクティブまたはパッシブに構築された要素で、主な機能は、船舶にナビゲーション命令や警告を提供することです。 これは浮遊ブイの形である可能性があります固定のビーコンです X 0D ナビゲーション要素は、他のコンポーネントと要素を集約して構造全体を形成することができます。 これは身体を形成するフレーム構造を含むかもしれません サイネージや補足信号を照らす場合は[[IfcSign]]、または[[IfcSignal]]のインスタンス。 SI ドキュメント"
+
+#:IFC.xml:23685
+msgid "IfcNavigationElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElement_PredefinedType_DEFINITION"
+msgstr "ナビゲーション要素の定義済み型を識別します。この型は追加の特定のプロパティセットを関連付けることができます。 X 0D NOTE PredefinedType は、[[IfcNavigationElementType]] が割り当てられていない場合にのみ使用され、独自の [[IfcNavigationElementType]].PredefinedType を指定します。"
+
+#:IFC.xml:23692
+msgid "IfcNavigationElementType"
+msgstr "IfcNavigationElementType"
+
+msgid "IfcNavigationElementType_DEFINITION"
+msgstr "[[IfcNavigationElementType]] は、[[IfcNavigationElement]] 発生の型情報を提供します。 X 0D ナビゲーション要素は、アクティブまたはパッシブに構築された要素で、主な機能は、船舶にナビゲーション命令や警告を提供することです。 これは浮遊式ブイの形でしょうビーコンや信号を固定しています SI ドキュメント"
+
+#:IFC.xml:23693
+msgid "IfcNavigationElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElementType_PredefinedType_DEFINITION"
+msgstr "ナビゲーション要素の定義済み型を識別します。"
+
+#:IFC.xml:23700
+msgid "IfcNavigationElementTypeEnum"
+msgstr "IfcNavigationElementTypeEnum"
+
+msgid "IfcNavigationElementTypeEnum_DEFINITION"
+msgstr "このコンテナは、[[IfcNavigationElement]] または [[IfcNavigationElementType]] をさらに指定できるさまざまな定義済みナビゲーション要素を定義します。.bSI Documentation"
+
+#:IFC.xml:23706
+msgid "IfcNavigationElementTypeEnum_BEACON"
+msgstr "BEACON"
+
+msgid "IfcNavigationElementTypeEnum_BEACON_DEFINITION"
+msgstr "BEACON"
+
+#:IFC.xml:23707
+msgid "IfcNavigationElementTypeEnum_BUOY"
+msgstr "BUOY"
+
+msgid "IfcNavigationElementTypeEnum_BUOY_DEFINITION"
+msgstr "BUOY"
+
+#:IFC.xml:23708
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:23709
+msgid "IfcNavigationElementTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcNavigationElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:23756
+msgid "Pset_BerthCommon"
+msgstr "Pset BerthCommon"
+
+#:IFC.xml:23757
+msgid "Pset_BerthCommon_AbnormalBerthingFactor"
+msgstr "AbnormalBerthingFactor"
+
+msgid "Pset_BerthCommon_AbnormalBerthingFactor_DEFINITION"
+msgstr "AbnormalBerthingFactor"
+
+#:IFC.xml:23762
+msgid "Pset_BerthCommon_BerthApproach"
+msgstr "BerthApproach"
+
+msgid "Pset_BerthCommon_BerthApproach_DEFINITION"
+msgstr "BerthApproach"
+
+#:IFC.xml:23767
+msgid "Pset_BerthCommon_BerthingAngle"
+msgstr "BerthingAngle"
+
+msgid "Pset_BerthCommon_BerthingAngle_DEFINITION"
+msgstr "BerthingAngle"
+
+#:IFC.xml:23772
+msgid "Pset_BerthCommon_BerthingVelocity"
+msgstr "BerthingVelocity"
+
+msgid "Pset_BerthCommon_BerthingVelocity_DEFINITION"
+msgstr "BerthingVelocity"
+
+#:IFC.xml:23777
+msgid "Pset_BerthCommon_BerthMode"
+msgstr "BerthMode"
+
+msgid "Pset_BerthCommon_BerthMode_DEFINITION"
+msgstr "BerthMode"
+
+#:IFC.xml:23783
+msgid "Pset_BreakwaterCommon"
+msgstr "Pset BreakwaterCommon"
+
+#:IFC.xml:23784
+msgid "Pset_BreakwaterCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_BreakwaterCommon_Elevation_DEFINITION"
+msgstr "標高上昇"
+
+#:IFC.xml:23789
+msgid "Pset_BreakwaterCommon_StructuralStyle"
+msgstr "StructuralStyle"
+
+msgid "Pset_BreakwaterCommon_StructuralStyle_DEFINITION"
+msgstr "StructuralStyle"
+
+#:IFC.xml:23795
+msgid "Pset_CargoCommon"
+msgstr "Pset CargoCommon"
+
+#:IFC.xml:23796
+msgid "Pset_CargoCommon_AdditionalProcessing"
+msgstr "加算処理"
+
+msgid "Pset_CargoCommon_AdditionalProcessing_DEFINITION"
+msgstr "加算処理"
+
+#:IFC.xml:23801
+msgid "Pset_CargoCommon_ProcessDirection"
+msgstr "処理方向"
+
+msgid "Pset_CargoCommon_ProcessDirection_DEFINITION"
+msgstr "処理方向"
+
+#:IFC.xml:23806
+msgid "Pset_CargoCommon_ProcessItem"
+msgstr "プロセス項目"
+
+msgid "Pset_CargoCommon_ProcessItem_DEFINITION"
+msgstr "プロセス項目"
+
+#:IFC.xml:23812
+msgid "Pset_ChamberCommon"
+msgstr "Pset ChamberCommon"
+
+#:IFC.xml:23813
+msgid "Pset_ChamberCommon_EffectiveChamberSize"
+msgstr "有効チャンバーサイズ"
+
+msgid "Pset_ChamberCommon_EffectiveChamberSize_DEFINITION"
+msgstr "有効チャンバーサイズ"
+
+#:IFC.xml:23818
+msgid "Pset_ChamberCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_ChamberCommon_StructuralType_DEFINITION"
+msgstr "構造体タイプ"
+
+#:IFC.xml:23824
+msgid "Pset_EnergyRequirements"
+msgstr "Pset Energy要件"
+
+#:IFC.xml:23825
+msgid "Pset_EnergyRequirements_EnergyConsumption"
+msgstr "体力消費"
+
+msgid "Pset_EnergyRequirements_EnergyConsumption_DEFINITION"
+msgstr "体力消費"
+
+#:IFC.xml:23830
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency"
+msgstr "EnergyConversionEfficiency"
+
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency_DEFINITION"
+msgstr "EnergyConversionEfficiency"
+
+#:IFC.xml:23835
+msgid "Pset_EnergyRequirements_EnergySource"
+msgstr "EnergySource"
+
+msgid "Pset_EnergyRequirements_EnergySource_DEFINITION"
+msgstr "EnergySource"
+
+#:IFC.xml:23840
+msgid "Pset_EnergyRequirements_PowerDemand"
+msgstr "パワーデマンド"
+
+msgid "Pset_EnergyRequirements_PowerDemand_DEFINITION"
+msgstr "パワーデマンド"
+
+#:IFC.xml:23846
+msgid "Pset_FenderCommon"
+msgstr "Pset FenderCommon"
+
+#:IFC.xml:23847
+msgid "Pset_FenderCommon_CoefficientOfFriction"
+msgstr "摩擦係数（係数）"
+
+msgid "Pset_FenderCommon_CoefficientOfFriction_DEFINITION"
+msgstr "摩擦係数（係数）"
+
+#:IFC.xml:23852
+msgid "Pset_FenderCommon_EnergyAbsorption"
+msgstr "エネルギー吸収量"
+
+msgid "Pset_FenderCommon_EnergyAbsorption_DEFINITION"
+msgstr "エネルギー吸収量"
+
+#:IFC.xml:23857
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance"
+msgstr "エネルギー吸収耐性値"
+
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "エネルギー吸収耐性値"
+
+#:IFC.xml:23862
+msgid "Pset_FenderCommon_FenderType"
+msgstr "FenderType"
+
+msgid "Pset_FenderCommon_FenderType_DEFINITION"
+msgstr "FenderType"
+
+#:IFC.xml:23867
+msgid "Pset_FenderCommon_MaximumTemperatureFactor"
+msgstr "最大温度係数"
+
+msgid "Pset_FenderCommon_MaximumTemperatureFactor_DEFINITION"
+msgstr "最大温度係数"
+
+#:IFC.xml:23872
+msgid "Pset_FenderCommon_MaxReaction"
+msgstr "最大の反応"
+
+msgid "Pset_FenderCommon_MaxReaction_DEFINITION"
+msgstr "最大の反応"
+
+#:IFC.xml:23877
+msgid "Pset_FenderCommon_MaxReactionTolerance"
+msgstr "最大反応許容差"
+
+msgid "Pset_FenderCommon_MaxReactionTolerance_DEFINITION"
+msgstr "最大反応許容差"
+
+#:IFC.xml:23882
+msgid "Pset_FenderCommon_MinimumTemperatureFactor"
+msgstr "最小温度係数"
+
+msgid "Pset_FenderCommon_MinimumTemperatureFactor_DEFINITION"
+msgstr "最小温度係数"
+
+#:IFC.xml:23887
+msgid "Pset_FenderCommon_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderCommon_VelocityFactorEnergy_DEFINITION"
+msgstr "VelocityFactorEnergy"
+
+#:IFC.xml:23892
+msgid "Pset_FenderCommon_VelocityFactorReaction"
+msgstr "VelocityFactorReaction"
+
+msgid "Pset_FenderCommon_VelocityFactorReaction_DEFINITION"
+msgstr "VelocityFactorReaction"
+
+#:IFC.xml:23898
+msgid "Pset_FenderDesignCriteria"
+msgstr "Pset FenderDesignCriteria"
+
+#:IFC.xml:23899
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod"
+msgstr "AddedMassCoefficientMethod"
+
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod_DEFINITION"
+msgstr "AddedMassCoefficientMethod"
+
+#:IFC.xml:23904
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction"
+msgstr "摩擦係数（係数）"
+
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction_DEFINITION"
+msgstr "摩擦係数（係数）"
+
+#:IFC.xml:23909
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption"
+msgstr "エネルギー吸収量"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption_DEFINITION"
+msgstr "エネルギー吸収量"
+
+#:IFC.xml:23914
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance"
+msgstr "エネルギー吸収耐性値"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "エネルギー吸収耐性値"
+
+#:IFC.xml:23919
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor"
+msgstr "最大温度係数"
+
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor_DEFINITION"
+msgstr "最大温度係数"
+
+#:IFC.xml:23924
+msgid "Pset_FenderDesignCriteria_MaxReaction"
+msgstr "最大の反応"
+
+msgid "Pset_FenderDesignCriteria_MaxReaction_DEFINITION"
+msgstr "最大の反応"
+
+#:IFC.xml:23929
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance"
+msgstr "最大反応許容差"
+
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance_DEFINITION"
+msgstr "最大反応許容差"
+
+#:IFC.xml:23934
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight"
+msgstr "MinCompressedFenderHeight"
+
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight_DEFINITION"
+msgstr "MinCompressedFenderHeight"
+
+#:IFC.xml:23939
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor"
+msgstr "最小温度係数"
+
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor_DEFINITION"
+msgstr "最小温度係数"
+
+#:IFC.xml:23944
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy_DEFINITION"
+msgstr "VelocityFactorEnergy"
+
+#:IFC.xml:23949
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction"
+msgstr "VelocityFactorReaction"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction_DEFINITION"
+msgstr "VelocityFactorReaction"
+
+#:IFC.xml:23955
+msgid "Pset_GateHeadCommon"
+msgstr "Pset GateHeadCommon"
+
+#:IFC.xml:23956
+msgid "Pset_GateHeadCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_GateHeadCommon_StructuralType_DEFINITION"
+msgstr "構造体タイプ"
+
+#:IFC.xml:23962
+msgid "Pset_JettyCommon"
+msgstr "Pset JettyCommon"
+
+#:IFC.xml:23963
+msgid "Pset_JettyCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_JettyCommon_BentSpacing_DEFINITION"
+msgstr "BentSpacing"
+
+#:IFC.xml:23968
+msgid "Pset_JettyCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_JettyCommon_Elevation_DEFINITION"
+msgstr "標高上昇"
+
+#:IFC.xml:23973
+msgid "Pset_JettyCommon_PierSectionType"
+msgstr "PierSectionType"
+
+msgid "Pset_JettyCommon_PierSectionType_DEFINITION"
+msgstr "PierSectionType"
+
+#:IFC.xml:23978
+msgid "Pset_JettyCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_JettyCommon_StructuralType_DEFINITION"
+msgstr "構造体タイプ"
+
+#:IFC.xml:23984
+msgid "Pset_JettyDesignCriteria"
+msgstr "Pset JettyDesignCriteria"
+
+#:IFC.xml:23985
+msgid "Pset_JettyDesignCriteria_EquipmentLoading"
+msgstr "装備の読み込み"
+
+msgid "Pset_JettyDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "装備の読み込み"
+
+#:IFC.xml:23990
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel"
+msgstr "ExtremeHighWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "ExtremeHighWaterLevel"
+
+#:IFC.xml:23995
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel"
+msgstr "ExtremeLowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "ExtremeLowWaterLevel"
+
+#:IFC.xml:24000
+msgid "Pset_JettyDesignCriteria_FlowLoading"
+msgstr "FlowLoading"
+
+msgid "Pset_JettyDesignCriteria_FlowLoading_DEFINITION"
+msgstr "FlowLoading"
+
+#:IFC.xml:24005
+msgid "Pset_JettyDesignCriteria_HighWaterLevel"
+msgstr "ハイウォーターレベル"
+
+msgid "Pset_JettyDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "ハイウォーターレベル"
+
+#:IFC.xml:24010
+msgid "Pset_JettyDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "LowWaterLevel"
+
+#:IFC.xml:24015
+msgid "Pset_JettyDesignCriteria_ShipLoading"
+msgstr "ShipLoading"
+
+msgid "Pset_JettyDesignCriteria_ShipLoading_DEFINITION"
+msgstr "ShipLoading"
+
+#:IFC.xml:24020
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "UniformlyDistributedLoad"
+
+#:IFC.xml:24025
+msgid "Pset_JettyDesignCriteria_WaveLoading"
+msgstr "WaveLoading"
+
+msgid "Pset_JettyDesignCriteria_WaveLoading_DEFINITION"
+msgstr "WaveLoading"
+
+#:IFC.xml:24031
+msgid "Pset_MarineFacilityTransportation"
+msgstr "Pset MarineFacilityTransportation"
+
+#:IFC.xml:24032
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight"
+msgstr "BerthCargoWeight"
+
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight_DEFINITION"
+msgstr "BerthCargoWeight"
+
+#:IFC.xml:24037
+msgid "Pset_MarineFacilityTransportation_BerthGrade"
+msgstr "BerthGrade"
+
+msgid "Pset_MarineFacilityTransportation_BerthGrade_DEFINITION"
+msgstr "BerthGrade"
+
+#:IFC.xml:24042
+msgid "Pset_MarineFacilityTransportation_Berths"
+msgstr "Berths"
+
+msgid "Pset_MarineFacilityTransportation_Berths_DEFINITION"
+msgstr "Berths"
+
+#:IFC.xml:24048
+msgid "Pset_MarineVehicleCommon"
+msgstr "Pset MarineVehicleCommon"
+
+#:IFC.xml:24049
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd"
+msgstr "AboveDeckProjectedWindEnd"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd_DEFINITION"
+msgstr "AboveDeckProjectedWindEnd"
+
+#:IFC.xml:24054
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide"
+msgstr "AboveDeckProjectedWindSide"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide_DEFINITION"
+msgstr "AboveDeckProjectedWindSide"
+
+#:IFC.xml:24059
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight"
+msgstr "CargoDeadWeight"
+
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight_DEFINITION"
+msgstr "CargoDeadWeight"
+
+#:IFC.xml:24064
+msgid "Pset_MarineVehicleCommon_Displacement"
+msgstr "変位する"
+
+msgid "Pset_MarineVehicleCommon_Displacement_DEFINITION"
+msgstr "変位する"
+
+#:IFC.xml:24069
+msgid "Pset_MarineVehicleCommon_LaneMeters"
+msgstr "レーンメーター"
+
+msgid "Pset_MarineVehicleCommon_LaneMeters_DEFINITION"
+msgstr "レーンメーター"
+
+#:IFC.xml:24074
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars"
+msgstr "LengthBetweenPerpendicular"
+
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars_DEFINITION"
+msgstr "LengthBetweenPerpendicular"
+
+#:IFC.xml:24079
+msgid "Pset_MarineVehicleCommon_VesselDepth"
+msgstr "VesselDepth"
+
+msgid "Pset_MarineVehicleCommon_VesselDepth_DEFINITION"
+msgstr "VesselDepth"
+
+#:IFC.xml:24084
+msgid "Pset_MarineVehicleCommon_VesselDraft"
+msgstr "VesselDraft"
+
+msgid "Pset_MarineVehicleCommon_VesselDraft_DEFINITION"
+msgstr "VesselDraft"
+
+#:IFC.xml:24090
+msgid "Pset_MarineVehicleDesignCriteria"
+msgstr "Pset MarineVehicle DesignCriteria"
+
+#:IFC.xml:24091
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure"
+msgstr "AllowEnableHullPressure"
+
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure_DEFINITION"
+msgstr "AllowEnableHullPressure"
+
+#:IFC.xml:24096
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient"
+msgstr "ソフトネス係数"
+
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient_DEFINITION"
+msgstr "ソフトネス係数"
+
+#:IFC.xml:24102
+msgid "Pset_MooringDeviceCommon"
+msgstr "Pset MooringDeviceCommon"
+
+#:IFC.xml:24103
+msgid "Pset_MooringDeviceCommon_AnchorageType"
+msgstr "アンカレッジタイプ"
+
+msgid "Pset_MooringDeviceCommon_AnchorageType_DEFINITION"
+msgstr "アンカレッジタイプ"
+
+#:IFC.xml:24108
+msgid "Pset_MooringDeviceCommon_DeviceCapacity"
+msgstr "デバイス容量"
+
+msgid "Pset_MooringDeviceCommon_DeviceCapacity_DEFINITION"
+msgstr "デバイス容量"
+
+#:IFC.xml:24113
+msgid "Pset_MooringDeviceCommon_DeviceType"
+msgstr "デバイスタイプ"
+
+msgid "Pset_MooringDeviceCommon_DeviceType_DEFINITION"
+msgstr "デバイスタイプ"
+
+#:IFC.xml:24118
+msgid "Pset_MooringDeviceCommon_MaximumLineCount"
+msgstr "MaximumLineCount"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineCount_DEFINITION"
+msgstr "MaximumLineCount"
+
+#:IFC.xml:24123
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope"
+msgstr "MaximumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope_DEFINITION"
+msgstr "MaximumLineSlope"
+
+#:IFC.xml:24128
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope"
+msgstr "MinumumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope_DEFINITION"
+msgstr "MinumumLineSlope"
+
+#:IFC.xml:24134
+msgid "Pset_QuayCommon"
+msgstr "Pset QuayCommon"
+
+#:IFC.xml:24135
+msgid "Pset_QuayCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_QuayCommon_BentSpacing_DEFINITION"
+msgstr "BentSpacing"
+
+#:IFC.xml:24140
+msgid "Pset_QuayCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_QuayCommon_Elevation_DEFINITION"
+msgstr "標高上昇"
+
+#:IFC.xml:24145
+msgid "Pset_QuayCommon_QuaySectionType"
+msgstr "QuaySectionType"
+
+msgid "Pset_QuayCommon_QuaySectionType_DEFINITION"
+msgstr "QuaySectionType"
+
+#:IFC.xml:24150
+msgid "Pset_QuayCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_QuayCommon_StructuralType_DEFINITION"
+msgstr "構造体タイプ"
+
+#:IFC.xml:24156
+msgid "Pset_QuayDesignCriteria"
+msgstr "Pset QuayDesignCriteria"
+
+#:IFC.xml:24157
+msgid "Pset_QuayDesignCriteria_EquipmentLoading"
+msgstr "装備の読み込み"
+
+msgid "Pset_QuayDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "装備の読み込み"
+
+#:IFC.xml:24162
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel"
+msgstr "ExtremeHighWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "ExtremeHighWaterLevel"
+
+#:IFC.xml:24167
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel"
+msgstr "ExtremeLowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "ExtremeLowWaterLevel"
+
+#:IFC.xml:24172
+msgid "Pset_QuayDesignCriteria_FlowLoading"
+msgstr "FlowLoading"
+
+msgid "Pset_QuayDesignCriteria_FlowLoading_DEFINITION"
+msgstr "FlowLoading"
+
+#:IFC.xml:24177
+msgid "Pset_QuayDesignCriteria_HighWaterLevel"
+msgstr "ハイウォーターレベル"
+
+msgid "Pset_QuayDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "ハイウォーターレベル"
+
+#:IFC.xml:24182
+msgid "Pset_QuayDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "LowWaterLevel"
+
+#:IFC.xml:24187
+msgid "Pset_QuayDesignCriteria_ShipLoading"
+msgstr "ShipLoading"
+
+msgid "Pset_QuayDesignCriteria_ShipLoading_DEFINITION"
+msgstr "ShipLoading"
+
+#:IFC.xml:24192
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "UniformlyDistributedLoad"
+
+#:IFC.xml:24197
+msgid "Pset_QuayDesignCriteria_WaveLoading"
+msgstr "WaveLoading"
+
+msgid "Pset_QuayDesignCriteria_WaveLoading_DEFINITION"
+msgstr "WaveLoading"
+
+#:IFC.xml:24203
+msgid "Pset_RevetmentCommon"
+msgstr "Pset RevetmentCommon"
+
+#:IFC.xml:24204
+msgid "Pset_RevetmentCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_RevetmentCommon_Elevation_DEFINITION"
+msgstr "標高上昇"
+
+#:IFC.xml:24209
+msgid "Pset_RevetmentCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_RevetmentCommon_StructuralType_DEFINITION"
+msgstr "構造体タイプ"
+
+#:IFC.xml:24215
+msgid "Pset_ShipLockCommon"
+msgstr "Pset ShipLockCommon"
+
+#:IFC.xml:24216
+msgid "Pset_ShipLockCommon_CillLevelLowerHead"
+msgstr "CillLevelLowerHead"
+
+msgid "Pset_ShipLockCommon_CillLevelLowerHead_DEFINITION"
+msgstr "CillLevelLowerHead"
+
+#:IFC.xml:24221
+msgid "Pset_ShipLockCommon_CillLevelUpperHead"
+msgstr "CillLevelUpperHead"
+
+msgid "Pset_ShipLockCommon_CillLevelUpperHead_DEFINITION"
+msgstr "CillLevelUpperHead"
+
+#:IFC.xml:24226
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType"
+msgstr "WaterDeliverySystemType"
+
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType_DEFINITION"
+msgstr "WaterDeliverySystemType"
+
+#:IFC.xml:24231
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType"
+msgstr "ウォーターデリバリーバルブタイプ"
+
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType_DEFINITION"
+msgstr "ウォーターデリバリーバルブタイプ"
+
+#:IFC.xml:24237
+msgid "Pset_ShiplockComplex"
+msgstr "Pset ShiplockComplex"
+
+#:IFC.xml:24238
+msgid "Pset_ShiplockComplex_LockChamberLevels"
+msgstr "LockChamberLevel"
+
+msgid "Pset_ShiplockComplex_LockChamberLevels_DEFINITION"
+msgstr "LockChamberLevel"
+
+#:IFC.xml:24243
+msgid "Pset_ShiplockComplex_LockGrade"
+msgstr "LockGrade"
+
+msgid "Pset_ShiplockComplex_LockGrade_DEFINITION"
+msgstr "LockGrade"
+
+#:IFC.xml:24248
+msgid "Pset_ShiplockComplex_LockLines"
+msgstr "LockLines"
+
+msgid "Pset_ShiplockComplex_LockLines_DEFINITION"
+msgstr "LockLines"
+
+#:IFC.xml:24253
+msgid "Pset_ShiplockComplex_LockMode"
+msgstr "ロックモード"
+
+msgid "Pset_ShiplockComplex_LockMode_DEFINITION"
+msgstr "ロックモード"
+
+#:IFC.xml:24259
+msgid "Pset_ShiplockDesignCriteria"
+msgstr "Pset ShiplockDesignCriteria"
+
+#:IFC.xml:24260
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel"
+msgstr "下流の洪水の水レベル"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel_DEFINITION"
+msgstr "下流の洪水の水レベル"
+
+#:IFC.xml:24265
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel"
+msgstr "下流メンテナンスウォーターレベル"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "下流メンテナンスウォーターレベル"
+
+#:IFC.xml:24270
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel"
+msgstr "MaximumDownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "MaximumDownstreamNavigableWaterLevel"
+
+#:IFC.xml:24275
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel"
+msgstr "MaximumUpstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "MaximumUpstreamNavigableWaterLevel"
+
+#:IFC.xml:24280
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel"
+msgstr "MinimumDownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "MinimumDownstreamNavigableWaterLevel"
+
+#:IFC.xml:24285
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel"
+msgstr "MinimumUpstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "MinimumUpstreamNavigableWaterLevel"
+
+#:IFC.xml:24290
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel"
+msgstr "UpstreamFloodWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel_DEFINITION"
+msgstr "UpstreamFloodWaterLevel"
+
+#:IFC.xml:24295
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel"
+msgstr "上流メンテナンス水レベル"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "上流メンテナンス水レベル"
+
+#:IFC.xml:24301
+msgid "Pset_ShipyardCommon"
+msgstr "Pset ShipyardCommon"
+
+#:IFC.xml:24302
+msgid "Pset_ShipyardCommon_PrimaryProductionType"
+msgstr "プライマリプロダクションタイプ"
+
+msgid "Pset_ShipyardCommon_PrimaryProductionType_DEFINITION"
+msgstr "プライマリプロダクションタイプ"
+
+#:IFC.xml:24308
+msgid "Pset_SiteWeather"
+msgstr "Pset SiteWeather"
+
+#:IFC.xml:24309
+msgid "Pset_SiteWeather_MaxAmbientTemp"
+msgstr "MaxAmbientTemp"
+
+msgid "Pset_SiteWeather_MaxAmbientTemp_DEFINITION"
+msgstr "MaxAmbientTemp"
+
+#:IFC.xml:24314
+msgid "Pset_SiteWeather_MinAmbientTemp"
+msgstr "MinAmbientTemp"
+
+msgid "Pset_SiteWeather_MinAmbientTemp_DEFINITION"
+msgstr "MinAmbientTemp"
+
+#:IFC.xml:24320
+msgid "Pset_VehicleAvailability"
+msgstr "Pset VehicleAvailability"
+
+#:IFC.xml:24321
+msgid "Pset_VehicleAvailability_MaintenanceDowntime"
+msgstr "メンテナンスダウンタイム"
+
+msgid "Pset_VehicleAvailability_MaintenanceDowntime_DEFINITION"
+msgstr "メンテナンスダウンタイム"
+
+#:IFC.xml:24326
+msgid "Pset_VehicleAvailability_VehicleAvailability"
+msgstr "車両の在庫状況"
+
+msgid "Pset_VehicleAvailability_VehicleAvailability_DEFINITION"
+msgstr "車両の在庫状況"
+
+#:IFC.xml:24331
+msgid "Pset_VehicleAvailability_WeatherDowntime"
+msgstr "ウェザーダウンタイム"
+
+msgid "Pset_VehicleAvailability_WeatherDowntime_DEFINITION"
+msgstr "ウェザーダウンタイム"
+
+#:IFC.xml:24337
+msgid "Pset_VesselLineCommon"
+msgstr "Pset VesselLineCommon"
+
+#:IFC.xml:24338
+msgid "Pset_VesselLineCommon_CentreLineToFairlead"
+msgstr "CentreLineToFairlead"
+
+msgid "Pset_VesselLineCommon_CentreLineToFairlead_DEFINITION"
+msgstr "CentreLineToFairlead"
+
+#:IFC.xml:24343
+msgid "Pset_VesselLineCommon_FairleadToTermination"
+msgstr "FairleadToTermination"
+
+msgid "Pset_VesselLineCommon_FairleadToTermination_DEFINITION"
+msgstr "FairleadToTermination"
+
+#:IFC.xml:24348
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck"
+msgstr "HeightAboveMainDeck"
+
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck_DEFINITION"
+msgstr "HeightAboveMainDeck"
+
+#:IFC.xml:24353
+msgid "Pset_VesselLineCommon_LineIdentifier"
+msgstr "LineIdentifier"
+
+msgid "Pset_VesselLineCommon_LineIdentifier_DEFINITION"
+msgstr "LineIdentifier"
+
+#:IFC.xml:24358
+msgid "Pset_VesselLineCommon_LineStrength"
+msgstr "線形強度"
+
+msgid "Pset_VesselLineCommon_LineStrength_DEFINITION"
+msgstr "線形強度"
+
+#:IFC.xml:24363
+msgid "Pset_VesselLineCommon_LineType"
+msgstr "LineType"
+
+msgid "Pset_VesselLineCommon_LineType_DEFINITION"
+msgstr "LineType"
+
+#:IFC.xml:24368
+msgid "Pset_VesselLineCommon_MidshipToFairLead"
+msgstr "MidshipToFairLead"
+
+msgid "Pset_VesselLineCommon_MidshipToFairLead_DEFINITION"
+msgstr "MidshipToFairLead"
+
+#:IFC.xml:24373
+msgid "Pset_VesselLineCommon_PreTensionAim"
+msgstr "PreTensionAim"
+
+msgid "Pset_VesselLineCommon_PreTensionAim_DEFINITION"
+msgstr "PreTensionAim"
+
+#:IFC.xml:24378
+msgid "Pset_VesselLineCommon_TailDiameter"
+msgstr "TailDiameter"
+
+msgid "Pset_VesselLineCommon_TailDiameter_DEFINITION"
+msgstr "TailDiameter"
+
+#:IFC.xml:24383
+msgid "Pset_VesselLineCommon_TailLength"
+msgstr "TailLength"
+
+msgid "Pset_VesselLineCommon_TailLength_DEFINITION"
+msgstr "TailLength"
+
+#:IFC.xml:24388
+msgid "Pset_VesselLineCommon_TailStrength"
+msgstr "TailStrength"
+
+msgid "Pset_VesselLineCommon_TailStrength_DEFINITION"
+msgstr "TailStrength"
+
+#:IFC.xml:24393
+msgid "Pset_VesselLineCommon_TailType"
+msgstr "テールタイプ"
+
+msgid "Pset_VesselLineCommon_TailType_DEFINITION"
+msgstr "テールタイプ"
+
+#:IFC.xml:24398
+msgid "Pset_VesselLineCommon_WinchBreakLimit"
+msgstr "WinchBreakLimit"
+
+msgid "Pset_VesselLineCommon_WinchBreakLimit_DEFINITION"
+msgstr "WinchBreakLimit"
+
+#:IFC.xml:24404
+msgid "Qto_FacilityPartBaseQuantities"
+msgstr "Qto FacilityPartBaseQuantities"
+
+#:IFC.xml:24405
+msgid "Qto_FacilityPartBaseQuantities_Area"
+msgstr "エリア"
+
+msgid "Qto_FacilityPartBaseQuantities_Area_DEFINITION"
+msgstr "エリア"
+
+#:IFC.xml:24410
+msgid "Qto_FacilityPartBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_FacilityPartBaseQuantities_Height_DEFINITION"
+msgstr "高さ"
+
+#:IFC.xml:24415
+msgid "Qto_FacilityPartBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_FacilityPartBaseQuantities_Length_DEFINITION"
+msgstr "長さ"
+
+#:IFC.xml:24420
+msgid "Qto_FacilityPartBaseQuantities_Volume"
+msgstr "音量"
+
+msgid "Qto_FacilityPartBaseQuantities_Volume_DEFINITION"
+msgstr "音量"
+
+#:IFC.xml:24425
+msgid "Qto_FacilityPartBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_FacilityPartBaseQuantities_Width_DEFINITION"
+msgstr "Width"
+
+#:IFC.xml:24431
+msgid "Qto_MarineFacilityBaseQuantities"
+msgstr "Qto MarineFacilityBaseQuantities"
+
+#:IFC.xml:24432
+msgid "Qto_MarineFacilityBaseQuantities_Area"
+msgstr "エリア"
+
+msgid "Qto_MarineFacilityBaseQuantities_Area_DEFINITION"
+msgstr "エリア"
+
+#:IFC.xml:24437
+msgid "Qto_MarineFacilityBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_MarineFacilityBaseQuantities_Height_DEFINITION"
+msgstr "高さ"
+
+#:IFC.xml:24442
+msgid "Qto_MarineFacilityBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_MarineFacilityBaseQuantities_Length_DEFINITION"
+msgstr "長さ"
+
+#:IFC.xml:24447
+msgid "Qto_MarineFacilityBaseQuantities_Volume"
+msgstr "音量"
+
+msgid "Qto_MarineFacilityBaseQuantities_Volume_DEFINITION"
+msgstr "音量"
+
+#:IFC.xml:24452
+msgid "Qto_MarineFacilityBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_MarineFacilityBaseQuantities_Width_DEFINITION"
+msgstr "Width"
+
+#:IFC.xml:24458
+msgid "Qto_VehicleBaseQuantities"
+msgstr "Qto車両ベース数量"
+
+#:IFC.xml:24459
+msgid "Qto_VehicleBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_VehicleBaseQuantities_Height_DEFINITION"
+msgstr "高さ"
+
+#:IFC.xml:24464
+msgid "Qto_VehicleBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_VehicleBaseQuantities_Length_DEFINITION"
+msgstr "長さ"
+
+#:IFC.xml:24469
+msgid "Qto_VehicleBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_VehicleBaseQuantities_Width_DEFINITION"
+msgstr "Width"
 
