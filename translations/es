@@ -9,2015 +9,331 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcStructuralElementsDomain.pot\n"
-"X-Crowdin-File-ID: 96\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-12-12 22:53\n"
+"PO-Revision-Date: 2021-12-12 21:53\n"
 
-#:IFC.xml:40325
-msgid "IfcBendingParameterSelect"
-msgstr "IfcBendingParámetro seleccionado"
+#:IFC.xml:41870
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBendingParameterSelect_DEFINITION"
-msgstr "A select type for selecting between simple measure types for reinforcement bending parameters. X 0D X 0D HISTORY New type in IFC4."
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Una cara avanzada es una especialización de una superficie de la cara que tiene que cumplir con los requisitos de uso de elementos de representación topológica y geométrica particulares para la definición de las caras, bordes y vértices. X 0D X 0D Un [[IfcAdvancedFace]] está restringido a X 0D X 0D tienen una geometría de superficie de tipo [[IfcElementarySurface]] , [[IfcSweptSurface]] o [[IfcBSplineSurface]] , X 0D tienen uno [[IfcFaceOuterBound]] como el borde de la cara, con la excepción de superficies cerradas, X 0D tienen todas las caras a vincular por [[IfcEdgeLoop]] o [[IfcVertexLoop]] , X 0D tiene todos los bordes para tener una geometría de curva de borde, X 0D tiene la geometría de la curva de borde restringida a [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , o [[IfcBSplineCurve]] X 0D X 0D En caso de caras cerradas con superficies periódicas, como superficies cilíndricas o esféricas, a continuación aplica X 0D X 0D los bordes de la superficie cerrada, en caso de una superficie cilíndrica, la tapa superior e inferior, referirse a la misma instancia de [[IfcVertexPoint]] dos veces, X 0D no [[IfcFaceOuterBound]] se proporciona, o el [[IfcFaceOuterBound]] se construye utilizando un [[IfcSeamCurve]] en el extremo periódico de la superficie cerrada subyacente, en caso de superficie cilíndrica a 0. .. .. figuras ifcadvancedface 01. ng Figura 1 Uso de [[IfcCylindricalSurface]] como superficie subyacente de un [[IfcAdvancedFace]] X 0D X NOTA Entidad adaptada de cara avanzada definida en ISO 10303 511. X 0D X 0D 0D HISTORY Nueva entidad en IFC4bSI Documentation"
 
-#:IFC.xml:40326
-msgid "IfcFooting"
-msgstr "IfcFoto"
+#:IFC.xml:41873
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcFooting_DEFINITION"
-msgstr "A footing is a part of the foundation of a structure that spreads and transmits the load to the soil. A footing is also characterized as shallow foundation, where the loads are transfered to the ground near the surface. X 0D X 0D .extDef X 0D NOTE Definition according to ISO 6707 1 stepped construction that spreads the load at the foot of a wall or column. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D NOTE Slab foundations, also called slab on grade, are not instantiated as [[IfcFooting]] but as [[IfcSlab]] or as its subtype [[IfcSlabStandardCase]] , [[IfcSlabElementedCase]] with a predefined type of [[IfcSlabTypeEnum]] .BASESLAB. Deep foundations, which transfer the loads to subsurface layers, are represented by [[IfcDeepFoundation]] and its subtypes [[IfcCaissonFoundation]] and [[IfcPile]] .bSI Documentation"
+msgid "IfcBooleanChoose__B_DEFINITION"
+msgstr "Devuelve la primera elección, si TRUE, de lo contrario la segunda opción, X 0D X 0D . xtDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Esta función devuelve una de dos opciones dependiendo del valor de un argumento de entrada booleana. Las dos opciones son también argumentos de entrada, X 0D X 0D NOTE Función adaptada de selección booleana definida en ISO10303 42. X 0D X 0D X 0D HISTORY Nueva función en IFC2.0"
 
-#:IFC.xml:40327
-msgid "IfcFooting_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:41881
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcFooting_PredefinedType_DEFINITION"
-msgstr "The generic type of the footing. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional. Type information can be provided by [[IfcRelDefinesByType]] and [[IfcFootingType]] ."
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. X 0D X 0D The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. X 0D X 0D The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. X 0D X 0D The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following X 0D Image .. .. .. .. .. .. figures ifcopenshell math1.gif X 0D X 0D X 0D X 0D NOTE Entity adapted from closed shell defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. Every edge shall be referenced exactly twice by the loops of the face. X 0D 2. Each oriented edge shall be unique. X 0D 3. No edge shall be referenced by more than two faces. X 0D 4. Distinct faces of the shell do not intersect, but may share edges or vertices. X 0D 5. Distinct edges do not intersect but may share vertices. X 0D 6. Each face reference shall be unique. X 0D 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. X 0D 8. The closed shell shall be an oriented arcwise connected 2 manifold. X 0D 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation.bSI Documentation"
 
-#:IFC.xml:40334
-msgid "IfcFootingType"
-msgstr "IfcFootingType"
+#:IFC.xml:41886
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConexión Conexión"
 
-msgid "IfcFootingType_DEFINITION"
-msgstr "The building element type [[IfcFootingType]] defines commonly shared information for occurrences of footings. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a footing type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFootingType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFootingType]] are represented by instances of [[IfcFooting]] . Refer to the documentation at [[IfcFooting]] for supported property sets, materials, and composition. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un conjunto de caras conectadas es un conjunto de caras tal que el dominio de caras junto con sus bordes delimitadores y vértices está conectado. X 0D X 0D NOTE Entidad adaptada de la cara conectada definido en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. La unión de los dominios de las caras y sus bucles delimitadores serán conectados.bSI documentación"
 
-#:IFC.xml:40335
-msgid "IfcFootingType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:41889
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcFootingType_PredefinedType_DEFINITION"
-msgstr "Subtype of footing."
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "CfsFaces"
 
-#:IFC.xml:40342
-msgid "IfcFootingTypeEnum"
-msgstr "IfcFootingTypeEnum"
+#:IFC.xml:41901
+msgid "IfcEdge"
+msgstr "Borde Ifc"
 
-msgid "IfcFootingTypeEnum_DEFINITION"
-msgstr "Enumeration defining the generic footing type. X 0D X 0D HISTORY New type in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC 2x4 CHANGE Item CAISSON FOUNDATION added.bSI Documentation"
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . X 0D X 0D X 0D X 0D X 0D X 0D EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. X 0D X 0D Figure 1 Edge representation X 0D X 0D X 0D X 0D X 0D .extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to X 0D Image .. .. .. .. .. .. figures ifcedge math1.gif X 0D where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. .. .. figures ifcedge math2.gif X 0D the vertices need not be distinct Image .. .. .. .. .. .. figures ifcedge math3.gif X 0D Equation shall hold Image .. .. .. .. .. .. figures ifcedge math4.gif X 0D X 0D NOTE Entity adapted from edge defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. The edge has dimensionality 1. X 0D 2. The extent of an edge shall be finite and nonzero.bSI Documentation"
 
-#:IFC.xml:40351
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION"
-msgstr "FOUNDACIÓN DE CAISSON"
+#:IFC.xml:41904
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION_DEFINITION"
-msgstr "FOUNDACIÓN DE CAISSON"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "EdgeStart"
 
-#:IFC.xml:40352
-msgid "IfcFootingTypeEnum_FOOTING_BEAM"
-msgstr "FOOTANDO EL EQUIPO"
+#:IFC.xml:41916
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcFootingTypeEnum_FOOTING_BEAM_DEFINITION"
-msgstr "FOOTANDO EL EQUIPO"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "EdgeEnd"
 
-#:IFC.xml:40353
-msgid "IfcFootingTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:41952
+msgid "IfcEdgeCurve"
+msgstr "Curva IfcEdge"
 
-msgid "IfcFootingTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Un [[IfcEdgeCurve]] define dos vértices conectados topológicamente, incluyendo la representación geométrica de la conexión. X 0D X 0D NOTA La topología se utiliza para recortar la geometría del borde. No hay necesidad de recortar geométricamente el borde para que coincida con la topología. X 0D X 0D X 0D X 0D X 0D X 0D X 0D EXAMPLE Figura 1 ilustra un ejemplo donde la geometría del borde es dada por una curva sin límites, aquí [[IfcCircle]]. Los límites son proporcionados por EdgeStart y EdgeEnd, la dirección topológica del [[IfcEdgeCurve]] se opone a la dirección de la [[IfcCircle]] por SameSense FALSE. X 0D X 0D Figura 1 Borde curva X 0D X 0D X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Una curva de borde es un subtipo especial de borde que tiene su geometría completamente definida. La geometría se define asociando el borde con una curva que puede ser sin límites. A medida que se pueden oponer las direcciones topológicas y geométricas, un indicador del mismo sentido se utiliza para identificar si el borde y las direcciones de la curva están de acuerdo o están opuestas. El valor booleano indica si la dirección de la curva está de acuerdo con TRUE o está en la dirección opuesta FALSE a la dirección del borde. Cualquier geometría asociada a los vértices del borde será coherente con la geometría del borde. Múltiples bordes pueden hacer referencia a la misma curva: X 0D X 0D NOTE Entidad adaptada de la curva del borde definida en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC2x X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. El dominio de la curva del borde se define formalmente como el dominio de su arista geometría como trillado por los vértices. Este dominio no incluye los vértices. X 0D 2. Una curva de borde no tiene un tamaño finito cero. X 0D 3. Una curva de borde es múltiple. X 0D 4. Una curva de borde está conectada. X 0D 5. El inicio de la arista no es parte del dominio del borde. X 0D 6. El extremo del borde no es parte del dominio del borde. X 0D 7. La geometría de vértices será consistente con la geometría.bSI Documentación"
 
-#:IFC.xml:40354
-msgid "IfcFootingTypeEnum_PAD_FOOTING"
-msgstr "PAD FOOTING"
+#:IFC.xml:11304
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Geometría del borde"
 
-msgid "IfcFootingTypeEnum_PAD_FOOTING_DEFINITION"
-msgstr "PAD FOOTING"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Geometría del borde"
 
-#:IFC.xml:40355
-msgid "IfcFootingTypeEnum_PILE_CAP"
-msgstr "PILE CAP"
+#:IFC.xml:41953
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcFootingTypeEnum_PILE_CAP_DEFINITION"
-msgstr "PILE CAP"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Esta bandera lógica indica si TRUE , o no FALSE los sentidos del borde y la curva que define la geometría del borde son los mismos. El sentido de un borde es desde el vértice de inicio del borde hasta el vértice final del borde, el sentido de una curva está en la dirección de aumentar el parámetro."
 
-#:IFC.xml:40356
-msgid "IfcFootingTypeEnum_STRIP_FOOTING"
-msgstr "STRIP FOOTANDO"
+#:IFC.xml:41961
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcFootingTypeEnum_STRIP_FOOTING_DEFINITION"
-msgstr "STRIP FOOTANDO"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición de acuerdo con ISO CD 10303 42 1992 X 0D Un bucle de borde es un bucle de tamaño no cero. Es un camino en el que los vértices de inicio y final son los mismos. Su dominio, si está presente, es una curva cerrada. Un bucle de borde puede superponerse a sí mismo. X 0D X 0D NOTE Entidad adaptada del ciclo de bordes definida en ISO 10303 42. X 0D X 0D HISTORY Nueva entidad en IFC2x2 X 0D . cabeza de pec X 0D Proposiciones informales X 0D X 0D 1. El género del [[IfcEdgeLoop]] debe ser 1 o mayor. La fórmula Euler estará satisfecha con el número de vértices de los géneros de los bordes 1 X 0D 3. Ningún borde puede ser referenciado más de una vez por el mismo [[IfcEdgeLoop]] con el mismo sentido. Para este propósito, un borde que no es un borde orientado se considera referenciado con el sentido de la documentación TRUE.bSI"
 
-#:IFC.xml:40357
-msgid "IfcFootingTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+#:IFC.xml:41969
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Lista de bordes"
 
-msgid "IfcFootingTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Lista de bordes"
 
-#:IFC.xml:40358
-msgid "IfcPile"
-msgstr "IfcPile"
+#:IFC.xml:41962
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-msgid "IfcPile_DEFINITION"
-msgstr "A pile is a slender timber, concrete, or steel structural element, driven, jetted, or otherwise embedded on end in the ground for the purpose of supporting a load. A pile is also characterized as deep foundation, where the loads are transfered to deeper subsurface layers. X 0D X 0D .extDef X 0D NOTE Definition according to ISO 6707 1 slender structural member, substantially underground, intended to transmit force s into loadbearing strata below the surface of the ground. X 0D X 0D NOTE Shallow foundations, which transfer the loads to the ground near its surface, are represented by [[IfcFooting]] . X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Ne"
 
-#:IFC.xml:40359
-msgid "IfcPile_ConstructionType"
-msgstr "Tipo de Construcción"
+#:IFC.xml:41981
+msgid "IfcFace"
+msgstr "Cara IfcIfc"
 
-msgid "IfcPile_ConstructionType_DEFINITION"
-msgstr "Obsoleto. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE capacidad de asociación de perfil de material mediante [[IfcRelAssociatesMaterial]] ha sido añadido. El atributo ConstructionType no debe utilizarse siempre que su información pueda ser proporcionada por un perfil material establecido, bien asociado con el objeto [[IfcPile]] o, si está presente, con una instancia correspondiente de [[IfcPileType]] ."
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. X 0D X 0D NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. X 0D X 0D .extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . X 0D X 0D A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . X 0D X 0D A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. X 0D X 0D The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes X 0D Image .. .. .. .. .. .. figures ifcface math1.gif X 0D where G l X 7Ei X 7E is the graph genus of the i th loop. X 0D X 0D NOTE Entity adapted from face defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC1.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. No edge shall be referenced by the face more than twice. X 0D 2. Distinct face bounds of the face shall have no common vertices. X 0D 3. If geometry is present, distinct loops of the same face shall not intersect. X 0D 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0.bSI Documentation"
 
-#:IFC.xml:40364
-msgid "IfcPile_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:25229
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcPile_PredefinedType_DEFINITION"
-msgstr "The predefined generic type of the pile according to function. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional. Type information can be provided by [[IfcRelDefinesByType]] and [[IfcPileType]] ."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:40371
-msgid "IfcPileConstructionEnum"
-msgstr "IfcPileConstructionEnum"
+#:IFC.xml:41984
+msgid "IfcFace_Bounds"
+msgstr "Límites"
 
-msgid "IfcPileConstructionEnum_DEFINITION"
-msgstr "Enumeration defining the construction type for piles. The type is mainly based on how the piles are used and manufactured. Some material information is mixed in because this affects the way the piles are used. X 0D X 0D HISTORY New type in IFC2x2.bSI Documentation"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Límites"
 
-#:IFC.xml:40372
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE"
-msgstr "PASAR EN PLAYA"
+#:IFC.xml:41996
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE_DEFINITION"
-msgstr "PASAR EN PLAYA"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A face bound es un bucle que está destinado a ser utilizado para limitar una cara. X 0D X 0D NOTA Entidad adaptada de cara atada definida en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC1.0bSI Documentation"
 
-#:IFC.xml:40373
-msgid "IfcPileConstructionEnum_COMPOSITE"
-msgstr "COMPOSITE"
+#:IFC.xml:42004
+msgid "IfcFaceBound_Bound"
+msgstr "Vincular"
 
-msgid "IfcPileConstructionEnum_COMPOSITE_DEFINITION"
-msgstr "COMPOSITE"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Vincular"
 
-#:IFC.xml:40374
-msgid "IfcPileConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:41997
+msgid "IfcFaceBound_Orientation"
+msgstr "Orientación"
 
-msgid "IfcPileConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Esto indica si TRUE o no FALSE el bucle tiene el mismo sentido cuando se utiliza para enlazar la cara como cuando se definió por primera vez. Si el sentido es FALSE los sentidos de todos los bordes orientados a sus componentes se invierten implícitamente cuando se utilizan en la cara."
 
-#:IFC.xml:40375
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE"
-msgstr "PRECASAR CONCRETO"
+#:IFC.xml:42016
+msgid "IfcFaceOuterBound"
+msgstr "Límite de IfcCara"
 
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE_DEFINITION"
-msgstr "PRECASAR CONCRETO"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A face outter bound is a special subtype of face bound which carries the additional semantics of defining an external limit on the face. No más de un límite de rostro será de este tipo. X 0D X 0D NOTE Entidad adaptada de cara externa definida en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC1.0bSI Documentation"
 
-#:IFC.xml:40376
-msgid "IfcPileConstructionEnum_PREFAB_STEEL"
-msgstr "PREFAB SEEL"
+#:IFC.xml:42019
+msgid "IfcFaceSurface"
+msgstr "Superficie IfcFaceSurface"
 
-msgid "IfcPileConstructionEnum_PREFAB_STEEL_DEFINITION"
-msgstr "PREFAB SEEL"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "El [[IfcFaceSurface]] define la geometría subyacente de la superficie asociada a la cara. X 0D X 0D NOTA La topología se utiliza para recortar la geometría de la superficie. No hay necesidad de recortar geométricamente la superficie para que coincida con la topología. X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A face surface es un subtipo de cara en la que la geometría está definida por una superficie asociada. La porción de la superficie utilizada por la cara será incrustable en el plano como disco abierto, posiblemente con agujeros. Sin embargo, la unión de la cara con los bordes y vértices de sus bucles de límite no tiene por qué ser incrustable en el avión. Puede abarcar, por ejemplo, una esfera o un toro enteros. Como la cara y la superficie geométrica han definido las direcciones normales, una bandera BOOLEAN que el atributo de orientación se utiliza para indicar si la superficie normal está de acuerdo con TRUE o se opone a FALSE la dirección normal de la cara. La geometría asociada con cualquier componente de los bucles de la cara será consistente con la geometría de la superficie, en el sentido de que los dominios de todos los puntos de vértices y curvas de bordes están contenidos en la superficie geométrica de la cara. Una superficie puede ser referenciada por más de una superficie de cara. X 0D X 0D NOTA Entidad adaptada de superficie definida en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC2x X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. El dominio de la superficie de la cara está definido formalmente como el dominio de su geometría cara como recortado por los bucles, este dominio no incluye los bucles límite. X 0D 2. Una superficie de la cara no tiene un tamaño finito nulo. X 0D 3. Una superficie de la cara es múltiple. X 0D 4. Una superficie de la cara está conectada en sentido arco. X 0D 5. A face surface has surface genus 0. X 0D 6. The loops are not part of the face domain. X 0D 7. La geometría del bucle debe ser coherente con la geometría de la cara. Esto implica que cualquier curva de borde o puntos de vértice utilizados para definir los bucles que delimitan la superficie de la cara se situará en la geometría de la cara. X 0D 8. Los bucles de la cara no deben intersect.bSI Documentación"
 
-#:IFC.xml:40377
-msgid "IfcPileConstructionEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+#:IFC.xml:12332
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Superficie facial"
 
-msgid "IfcPileConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Superficie facial"
 
-#:IFC.xml:40379
-msgid "IfcPileType"
-msgstr "Tipo de pila Ifc"
+#:IFC.xml:42020
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcPileType_DEFINITION"
-msgstr "The building element type [[IfcPileType]] defines commonly shared information for occurrences of piles. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a pile type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcPileType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcPileType]] are represented by instances of [[IfcPile]] . Refer to the documentation at [[IfcPile]] for supported property sets, materials, and composition. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Esta bandera indica si el sentido de la superficie normal está de acuerdo con TRUE , o se opone a FALSE , el sentido de lo normal topológico a la cara."
 
-#:IFC.xml:40380
-msgid "IfcPileType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:42028
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcPileType_PredefinedType_DEFINITION"
-msgstr "Subtype of pile."
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A loop es una entidad topológica construida a partir de un solo vértice, o a través de la cuerda de los bordes orientados conectados, o segmentos lineales que comienzan y terminan en el mismo vértice. Se utiliza típicamente para enlazar una cara tumbada sobre una superficie. Un bucle tiene una dimensión de 0 o 1. El dominio de un bucle dimensional es un único punto. El dominio de un ciclo de 1 dimensiones es una curva conectada y orientada, pero no tiene por qué ser múltiple. Como el ciclo es un círculo, la ubicación de su punto final inicial es arbitraria. El dominio del bucle incluye sus límites, un 0 . Un bucle es representado por un solo vértice, o por una colección ordenada de bordes orientados, o por una colección ordenada de puntos. Un bucle es una gráfica, por lo que M y el gen G l gráfico pueden estar determinados por el algoritmo transversal de la gráfica. Desde M 1, la ecuación Euler 1 reduce en este caso a X 0D Imagen .. .. .. .. .. cifras math1 ifcloop. si X 0D donde V y E X 7El X 7E son el número de vértices únicos y bordes orientados en el bucle y G l es el género del bucle. X 0D X 0D NOTE Entidad adaptada desde bucle definido en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC2x X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. Un bucle tiene una extensión finita. X 0D 2. Un bucle describe una curva topológica cerrada con vértices coincidentes de inicio y final.bSI Documentación"
 
-#:IFC.xml:40387
-msgid "IfcPileTypeEnum"
-msgstr "IfcPileTypeEnum"
+#:IFC.xml:42031
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-msgid "IfcPileTypeEnum_DEFINITION"
-msgstr "Enumeration defining the pile type. X 0D X 0D HISTORY New type in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC 2x4 CHANGE Items BORED, DRIVEN, JETGROUTING added.bSI Documentation"
+msgid "IfcLoopHeadToTail__ALoop_DEFINITION"
+msgstr "Esta función devuelve TRUE si para los bordes del bucle de entrada el vértice final de cada borde es el mismo que el vértice inicial de su sucesor. X 0D X 0D X 0D HISTORY Nueva función en IFC2x2"
 
-#:IFC.xml:40397
-msgid "IfcPileTypeEnum_BORED"
-msgstr "BORRADO"
+#:IFC.xml:42039
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcPileTypeEnum_BORED_DEFINITION"
-msgstr "BORRADO"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef X 0D NOTE Definition according to ISO CD 10303 42 1992 X 0D An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. X 0D X 0D The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. X 0D X 0D The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. X 0D An open shell shall have at least one face. X 0D A given face may exist in more than one open shell. X 0D X 0D X 0D The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. X 0D X 0D NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. X 0D X 0D NOTE Entity adapted from open shell defined in ISO 10303 42. X 0D X 0D HISTORY New entity in IFC2x. X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. Every edge shall be referenced exactly twice by the face bounds of the face. X 0D 2. Each oriented edge shall be unique. X 0D 3. No edge shall be referenced by more than two faces. X 0D 4. Distinct faces of the shell do not intersect, but may share edges or vertices. X 0D 5. Distinct edges do not intersect but may share vertices. X 0D 6. Each face reference shall be unique. X 0D 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. X 0D 8. The closed shell shall be an oriented arcwise connected 2 manifold. X 0D 9. The Euler equation shall be satisfied.bSI Documentation"
 
-#:IFC.xml:40398
-msgid "IfcPileTypeEnum_COHESION"
-msgstr "COHESIÓN"
+#:IFC.xml:42043
+msgid "IfcOrientedEdge"
+msgstr "Filo IfcOrientado"
 
-msgid "IfcPileTypeEnum_COHESION_DEFINITION"
-msgstr "COHESIÓN"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "El [[IfcOrientedEdge]] representa un [[IfcEdge]] con una bandera de orientación aplicada. Permite reutilizar el mismo [[IfcEdge]] cuando se atraviesa exactamente dos veces, una vez hacia adelante y una vez hacia atrás. X 0D X 0D NOTA El sentido de lo normal al [[IfcFace]] se determina únicamente a partir de los bordes. Si todos los bordes de la cara están conectados en sentido contrario a las agujas del reloj siguiendo las orientaciones del borde, la cara normal apuntará hacia afuera. La normal del subyacente [[IfcFaceSurface]] que representa la geometría de esa cara no tiene relevancia para esto. El propósito del [[IfcFaceSurface]]. El atributo ameSense es dar información adicional para fines de verificación. SameSense TRUE significa normales de superficie y normales rostros son los mismos, SameSense FALSE significa que están en direcciones opuestas. X 0D X 0D El borde reutilizado con una representación geométrica como [[IfcEdgeCurve]] define el borde en el espacio de coordenadas 3D. En algunos casos, sobre todo cuando se utilizan superficies elementales o barridas, existe el riesgo de mapeo impreciso del 3D x, y, z [[IfcEdgeCurve]] en las superficies adyacentes para determinar los límites de estas superficies. La curveOnSurface opcional define el borde 2D u, v dentro del espacio paramétrico de la superficie. Podría utilizarse para determinar la exactitud del mapeo del 3D [[IfcEdgeCurve]] sobre esta superficie. X 0D X 0D X 0D X 0D X 0D EXAMPLE Figura 1 ilustra un ejemplo donde se proporciona la CurveOnSurface además de la geometría de la curva [[IfcEdgeCurve]]. X 0D X 0D Figura 1 Curva sobre la representación superficial de un [[IfcOrientedEdge]] X 0D X 0D X 0D X 0D . xtDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un borde orientado es un borde construido de otro borde y contiene una bandera de dirección BOOLEAN para indicar si la orientación del borde construido concuerda o no con la orientación del borde original. Excepto por tal vez orientación, el borde orientado es equivalente al borde original. X 0D X 0D Una práctica común es un sistema de modelado sólido es tener una entidad que represente el uso o travesía de un borde. Esta entidad de uso representa explícitamente el requisito en un múltiple sólido de que cada borde debe ser atravesado exactamente dos veces, una en cada dirección. La funcionalidad de uso es proporcionada por el borde orientado al subtipo. X 0D X 0D NOTE Entidad adaptada a partir del borde orientado definido en ISO 10303 42. X 0D X 0D HISTORY Nueva entidad en IFC2.0. X 0D X 0D . hange ifc2x4 X 0D IFC4 Add2 CHANGE El atributo CurveOnSurface ha sido añadido.bSI Documentación"
 
-#:IFC.xml:40399
-msgid "IfcPileTypeEnum_DRIVEN"
-msgstr "INGRESAR"
+#:IFC.xml:41928
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Elemento del borde"
 
-msgid "IfcPileTypeEnum_DRIVEN_DEFINITION"
-msgstr "INGRESAR"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Elemento del borde"
 
-#:IFC.xml:40400
-msgid "IfcPileTypeEnum_FRICTION"
-msgstr "PRIMERA"
+#:IFC.xml:42044
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcPileTypeEnum_FRICTION_DEFINITION"
-msgstr "PRIMERA"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:40401
-msgid "IfcPileTypeEnum_JETGROUTING"
-msgstr "JETGRUTING"
+#:IFC.xml:42048
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge Edge EdgeStart"
 
-msgid "IfcPileTypeEnum_JETGROUTING_DEFINITION"
-msgstr "JETGRUTING"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:40402
-msgid "IfcPileTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:42052
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Orientación"
 
-msgid "IfcPileTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, Si TRUE la orientación topológica como se utiliza coincide con la orientación del vértice inicial al final del vértice del elemento de borde. Si FALA de otro modo."
 
-#:IFC.xml:40403
-msgid "IfcPileTypeEnum_SUPPORT"
-msgstr "APARECER"
+#:IFC.xml:42071
+msgid "IfcPath"
+msgstr "Ruta Ifc"
 
-msgid "IfcPileTypeEnum_SUPPORT_DEFINITION"
-msgstr "APARECER"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un camino es una entidad topológica que consiste en una colección ordenada de bordes orientados, para que el vértice de inicio de arista de cada borde coincida con el final del borde de su predecesor. El camino está ordenado desde el principio del borde del primer borde orientado hasta el extremo del borde anterior. El sentido del valor BOOLEAN en el borde orientado indica si la dirección del borde está de acuerdo con la dirección del camino TRUE o es la dirección opuesta FALSE . X 0D X 0D Un borde individual sólo puede ser referenciado una vez por una ruta individual. Un borde puede ser referenciado por varias rutas. Un borde puede existir independientemente de un camino. X 0D X 0D NOTE Entidad adaptada de la ruta definida en ISO 10303 42. X 0D X 0D .spec cabeza X 0D Proposiciones Informales X 0D X 0D X 0D 1. Una ruta tiene dimensión 1. X 0D 2. Una ruta está conectada. X 0D 3. Los bordes de la ruta no se intersecan excepto en vértices comunes. X 0D 4. Una ruta tiene una documentación finita no cero extent.bSI"
 
-#:IFC.xml:40404
-msgid "IfcPileTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+#:IFC.xml:42059
+msgid "IfcPath_EdgeList"
+msgstr "Lista de bordes"
 
-msgid "IfcPileTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Lista de bordes"
 
-#:IFC.xml:40405
-msgid "IfcReinforcementDefinitionProperties"
-msgstr "IfcReinforcementDefinitionProperties"
+#:IFC.xml:42074
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail"
 
-msgid "IfcReinforcementDefinitionProperties_DEFINITION"
-msgstr "[[IfcReinforcementDefinitionProperties]] defines the cross section properties of reinforcement included in reinforced concrete building elements. The property set definition may be used both in conjunction with insitu and precast structures. X 0D X 0D This subtype of [[IfcPropertySetDefinition]] is used to define the reinforcement properties in early design stages, such as in requirement definition or scheme design. In later design stages explicit instances of subtypes of [[IfcReinforcingElement]] are used. The intended usage may be indicated using the DefinitionType attribute value as a designator recommended values are Reinforcement area requirement or Reinforcement configuration requirement . Other values may be used according to local standards. X 0D X 0D Only one property set definition of this kind is used for each concrete building element in each intended usage indicated by the DefinitionType attribute value. This set then defines a list of cross section properties in a discrete number of longitudinal sections as instances of [[IfcSectionReinforcementProperties]] one for each structural reinforcement bar role , which in turn have a section cross section property defined as a profile and a number of reinforcement properties, one for each steel grade bar type. X 0D X 0D HISTORY New entity in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Supertype changed from [[IfcPropertySetDefinition]] to [[IfcPreDefinedPropertySet]] bSI Documentation"
+msgid "IfcPathHeadToTail__APath_DEFINITION"
+msgstr "Esta función devuelve TRUE si todos los bordes de la ruta de entrada son consecutivos X 0D . xtDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Esta función devuelve TRUE si para los bordes de la ruta de entrada el vértice final de cada borde es el mismo que el vértice de inicio de su sucesor. X 0D X 0D NOTA Función adaptada de camino cabecera a cola definida en ISO10303 42."
 
-#:IFC.xml:29607
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions"
-msgstr "Definiciones de la sección de refuerzos"
+#:IFC.xml:42082
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions_DEFINITION"
-msgstr "Definiciones de la sección de refuerzos"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un bucle poly es un bucle con bordes rectos que limitan una región plana en el espacio. Un bucle poly es un bucle del género 1 en el que el bucle está representado por una colección coplano ordenada de puntos que forman los vértices del bucle. El bucle se compone de segmentos de línea recta, uniendo un punto en la colección al punto sucesor de la colección. El segmento de cierre es del último al primer punto de la colección. La dirección del bucle está en la dirección de los segmentos de línea. X 0D X 0D Un bucle poly se ajustará a las siguientes restricciones topológicas que el bucle tiene el género de uno. X 0D la siguiente ecuación debe ser satisfecha Imagen .. .. .. .. cifras ifcpolyloop math1. si X 0D X 0D El [[IfcPolyLoop]] siempre está cerrado y el último segmento es del último [[IfcCartesianPoint]] en la lista de Polígono s al primero [[IfcCartesianPoint]] . Por lo tanto, el primer punto no se repetirá al final de la lista, ni haciendo referencia al mismo caso, ni usando una instancia adicional de [[IfcCartesianPoint]] teniendo las coordenadas como primer punto. X 0D X 0D NOTE Esta entidad existe principalmente para facilitar la comunicación eficiente de modelos faceted B Rep. X 0D X 0D X 0D X 0D NOTA Entidad adaptada del polibucle definido en ISO 10303 42. X 0D X 0D HISTORY Nueva entidad en IFC1. X 0D X 0D .spec cabeza X 0D Proposiciones Informales X 0D X 0D X 0D 1. Todos los puntos del polígono que definan el polígono serán coplanos. X 0D 2. El primero y el último Polígono serán diferentes según la documentación value.bSI"
 
-#:IFC.xml:40406
-msgid "IfcReinforcementDefinitionProperties_DefinitionType"
-msgstr "Tipo de Definición"
+#:IFC.xml:10921
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polígono"
 
-msgid "IfcReinforcementDefinitionProperties_DefinitionType_DEFINITION"
-msgstr "Nombre descriptivo de tipo aplicado a las propiedades de definición de refuerzos."
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Polígono"
 
-#:IFC.xml:40413
-msgid "IfcReinforcingBar"
-msgstr "Barra de refuerzo Ifc"
+#:IFC.xml:42085
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcReinforcingBar_DEFINITION"
-msgstr "A reinforcing bar is usually made of steel with manufactured deformations in the surface, and used in concrete and masonry construction to provide additional strength. A single instance of this class may represent one or many of actual rebars, for example a row of rebars. X 0D X 0D HISTORY New entity in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC 2x4 CHANGE All attributes are optional now. Several attributes are deprecated their information now provided by [[IfcReinforcingBarType]] . Attribute BarRole renamed to PredefinedType . X 0D X 0D .use head X 0D Geometry Use Definition X 0D X 0D Placement and representation are defined at the supertype [[IfcElementComponent]] . X 0D X 0D The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds an [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] .bSI Documentation"
+msgid "IfcShell_DEFINITION"
+msgstr "Un tipo que incluye diferentes tipos de shell. xtDef X 0D NOTE Definición de acuerdo con ISO CD 10303 42 1992 X 0D Este tipo recolecta juntos, para la referencia a la hora de construir modelos más complejos, los subtipos que tienen las características de un shell. Un shell es un objeto conectado de dimensión fija d 0 1 o 2, típicamente usado para enlazar una región. El dominio de un shell, si está presente, incluye sus límites y 0 . Un shell de la dimensionalidad 0 es representado por un gráfico que consiste en un único vértice. El vértice no debe tener bordes asociados. X 0D A shell of dimensionality 1 está representada por una gráfica conectada de dimensionalidad 1. X 0D Una concha de dimensión 2 es una entidad topológica construida uniendo caras a lo largo de los bordes. Su dominio, si está presente, es un 2 múltiple conectado y orientable con límites, es decir, una superficie conectada, orientada, finita y no autointerseccionante, que puede ser cerrada o abierta. X 0D X 0D NOTE Tipo adaptado a partir de la shell definida en ISO 10303 42."
 
-#:IFC.xml:40414
-msgid "IfcReinforcingBar_BarLength"
-msgstr "Longitud de la barra"
+#:IFC.xml:42086
+msgid "IfcSubedge"
+msgstr "Subbordes Ifc"
 
-msgid "IfcReinforcingBar_BarLength_DEFINITION"
-msgstr "Obsoleto. X 0D X 0D .change ifc2x4 X 0D IFC4 Atributo CHANGE desaprobado. Utilice el atributo respectivo en [[IfcReinforcingBarType]] en su lugar."
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A subedge es un borde cuyo dominio es una porción conectada del dominio de un borde existente. Las restricciones topológicas en un suburbio son las mismas que las de un borde. X 0D X 0D NOTE Entidad adaptada desde subbordes definidos en ISO 10303 42. X 0D X 0D HISTORY Nueva entidad en IFC2x2 X 0D . pec head X 0D Informal Propositions X 0D X 0D 1. El dominio del subborde está definido formalmente para ser el dominio del borde padre, como recortado por el vértice de subbordes de inicio y vértice de subbordes del extremo. X 0D 2. El vértice inicial y final estarán dentro de la unión de los dominios de los vértices del borde padre y del dominio del borde padre . Documentación de SI"
 
-#:IFC.xml:40419
-msgid "IfcReinforcingBar_BarSurface"
-msgstr "Superficie"
+#:IFC.xml:41940
+msgid "IfcSubedge_ParentEdge"
+msgstr "Borde padre"
 
-msgid "IfcReinforcingBar_BarSurface_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingBarType]] en su lugar."
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Borde padre"
 
-#:IFC.xml:40424
-msgid "IfcReinforcingBar_CrossSectionArea"
-msgstr "Área de secciones"
+#:IFC.xml:42089
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcReinforcingBar_CrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva de la barra de refuerzo o grupo de barras. X 0D X 0D .change ifc2x4 X 0D IFC4 atributo CHANGE hecho opcional."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D El elemento de representación topológica es el supertipo para todos los elementos de representación topológica en el recurso geométrico. X 0D X 0D NOTA Entidad adaptada del elemento de representación topológica definido en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC1.5bSI Documentation"
 
-#:IFC.xml:40429
-msgid "IfcReinforcingBar_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:42092
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcReinforcingBar_NominalDiameter_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingBarType]] en su lugar."
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D A vértice es la construcción topológica correspondiente a un punto. Tiene dimensión 0 y grado 0. El dominio de un vértice, si está presente, es un punto en el espacio real m M dimensional que se representa por el subtipo de punto de vértice. X 0D X 0D NOTE Entidad adaptada del vértice definido en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC2.0 X 0D X 0D .spec head X 0D Informal Propositions X 0D X 0D 1. El vértice tiene una dimensión 0. Esta es una propiedad fundamental del vértice. X 0D 2. La extensión de un vértice se define como documentación de zero.bSI"
 
-#:IFC.xml:40434
-msgid "IfcReinforcingBar_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:42107
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcReinforcingBar_PredefinedType_DEFINITION"
-msgstr "The role, purpose or usage of the bar, i.e. the kind of loads and stresses it is intended to carry. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute renamed from BarRole to PredefinedType and made optional. Type changed from [[IfcReinforcingBarRoleEnum]] without changes to the range of enumeration items."
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un bucle de vértices es un bucle de género cero que consiste en un solo vértice. Un vértice puede existir independientemente de un bucle de vértices. Los datos topológicos deben satisfacer la siguiente restricción X 0D Imagen .. .. .. figuras ifcvertexloop math1. si X 0D X 0D X 0D X 0D X 0D NOTE Entidad adaptada desde el bucle de vértices definido en ISO 10303 42. X 0D X 0D HISTORY Nueva entidad en IFC2x2 X 0D . pec head X 0D Informal Propositions X 0D X 0D 1. Un ciclo de vértices tiene un alcance cero y dimensionalidad. X 0D 2. El bucle de vértices tiene género 0.bSI Documentación"
 
-#:IFC.xml:40441
-msgid "IfcReinforcingBarType"
-msgstr "Tipo de barra de refuerzo Ifc"
+#:IFC.xml:42095
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "Vértice de bucle"
 
-msgid "IfcReinforcingBarType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingBarType]] defines commonly shared information for occurrences of reinforcing bars. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a reinforcing bar type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingBarType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingBarType]] are represented by instances of [[IfcReinforcingBar]] . X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "Vértice de bucle"
 
-#:IFC.xml:40442
-msgid "IfcReinforcingBarType_BarLength"
-msgstr "Longitud de la barra"
+#:IFC.xml:42110
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcReinforcingBarType_BarLength_DEFINITION"
-msgstr "La longitud total de la barra de refuerzo, la longitud total de las barras dobladas se calcula según las normas locales con correcciones para las curvas."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef X 0D NOTE Definición según ISO CD 10303 42 1992 X 0D Un punto de vértice es un vértice que tiene su geometría definida como un punto. X 0D X 0D NOTA Entidad adaptada desde punto de vértice definido en ISO 10303 42. X 0D X 0D X 0D HISTORY Nueva entidad en IFC2x X 0D .spec head X 0D Informal Propositions X 0D X 0D X 0D 1. El dominio del vértice está definido formalmente para ser el dominio de su documento de vértices point.bSI"
 
-#:IFC.xml:40447
-msgid "IfcReinforcingBarType_BarSurface"
-msgstr "Superficie"
+#:IFC.xml:11892
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "Geometría de vértices"
 
-msgid "IfcReinforcingBarType_BarSurface_DEFINITION"
-msgstr "Indicador para si la superficie de la barra está lisa o textuada."
-
-#:IFC.xml:40452
-msgid "IfcReinforcingBarType_BendingParameters"
-msgstr "Parámetros de plegado"
-
-msgid "IfcReinforcingBarType_BendingParameters_DEFINITION"
-msgstr "Parámetros de la forma de flexión. Su significado se define por el código de la forma de plegado y el estándar correspondiente."
-
-#:IFC.xml:40457
-msgid "IfcReinforcingBarType_BendingShapeCode"
-msgstr "Código de la forma de plegado"
-
-msgid "IfcReinforcingBarType_BendingShapeCode_DEFINITION"
-msgstr "Código de forma para un estándar como ACI 315, ISO 3766, o un estándar similar. Se presupone que se utilice un único estándar para definir el plegado de barras en todo el proyecto y que este estándar sea referenciado desde el objeto [[IfcProject]] a través del mecanismo [[IfcDocumentReference]]."
-
-#:IFC.xml:40462
-msgid "IfcReinforcingBarType_CrossSectionArea"
-msgstr "Área de secciones"
-
-msgid "IfcReinforcingBarType_CrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva de la barra de refuerzo."
-
-#:IFC.xml:40467
-msgid "IfcReinforcingBarType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcReinforcingBarType_NominalDiameter_DEFINITION"
-msgstr "El diámetro nominal que define el tamaño de la sección transversal de la barra de refuerzo."
-
-#:IFC.xml:40472
-msgid "IfcReinforcingBarType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingBarType_PredefinedType_DEFINITION"
-msgstr "Subtype of reinforcing bar."
-
-#:IFC.xml:40479
-msgid "IfcReinforcingBarTypeEnum"
-msgstr "IfcReinforcingBarTypeEnum"
-
-msgid "IfcReinforcingBarTypeEnum_DEFINITION"
-msgstr "Enumeration defining standard types for the role, purpose or usage of the bar, i.e. the kind of loads and stresses they are intended to carry. X 0D X 0D HISTORY New type in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Item ANCHORING added. Enumeration renamed in IFC4 from [[IfcReinforcingBarRoleEnum]] without changes to the range of enumeration items.bSI Documentation"
-
-#:IFC.xml:40492
-msgid "IfcReinforcingBarTypeEnum_ANCHORING"
-msgstr "ANQUILANDO"
-
-msgid "IfcReinforcingBarTypeEnum_ANCHORING_DEFINITION"
-msgstr "ANQUILANDO"
-
-#:IFC.xml:40493
-msgid "IfcReinforcingBarTypeEnum_EDGE"
-msgstr "EDIGO"
-
-msgid "IfcReinforcingBarTypeEnum_EDGE_DEFINITION"
-msgstr "EDIGO"
-
-#:IFC.xml:40494
-msgid "IfcReinforcingBarTypeEnum_LIGATURE"
-msgstr "LIGADURA"
-
-msgid "IfcReinforcingBarTypeEnum_LIGATURE_DEFINITION"
-msgstr "LIGADURA"
-
-#:IFC.xml:40495
-msgid "IfcReinforcingBarTypeEnum_MAIN"
-msgstr "MAIN"
-
-msgid "IfcReinforcingBarTypeEnum_MAIN_DEFINITION"
-msgstr "MAIN"
-
-#:IFC.xml:40496
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40497
-msgid "IfcReinforcingBarTypeEnum_PUNCHING"
-msgstr "PUNTO"
-
-msgid "IfcReinforcingBarTypeEnum_PUNCHING_DEFINITION"
-msgstr "PUNTO"
-
-#:IFC.xml:40498
-msgid "IfcReinforcingBarTypeEnum_RING"
-msgstr "Anillo"
-
-msgid "IfcReinforcingBarTypeEnum_RING_DEFINITION"
-msgstr "Anillo"
-
-#:IFC.xml:40499
-msgid "IfcReinforcingBarTypeEnum_SHEAR"
-msgstr "CABAJO"
-
-msgid "IfcReinforcingBarTypeEnum_SHEAR_DEFINITION"
-msgstr "CABAJO"
-
-#:IFC.xml:40500
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR"
-msgstr "ESPACEBAR"
-
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR_DEFINITION"
-msgstr "ESPACEBAR"
-
-#:IFC.xml:40501
-msgid "IfcReinforcingBarTypeEnum_STUD"
-msgstr "STUD"
-
-msgid "IfcReinforcingBarTypeEnum_STUD_DEFINITION"
-msgstr "STUD"
-
-#:IFC.xml:40502
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40503
-msgid "IfcReinforcingElement"
-msgstr "Elemento de refuerzo IfcRefuerzo"
-
-msgid "IfcReinforcingElement_DEFINITION"
-msgstr "A reinforcing element represents bars, wires, strands, meshes, tendons, and other components embedded in concrete in such a manner that the reinforcement and the concrete act together in resisting forces. X 0D X 0D .extDef X 0D NOTE Definition according to ISO 6707 1 rod s , bar s , fabric, fibres, wires and cable s added to give additional strength or support to a material or component. X 0D X 0D One or several instances of subtypes of [[IfcReinforcingElement]] should always be accompanied by a defining instance of a respective subtype of [[IfcReinforcingElementType]] . The type object holds shape and material information. X 0D X 0D HISTORY New entity in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute SteelGrade deprecated.bSI Documentation"
-
-#:IFC.xml:40504
-msgid "IfcReinforcingElement_SteelGrade"
-msgstr "Grado de acero"
-
-msgid "IfcReinforcingElement_SteelGrade_DEFINITION"
-msgstr "Obsoleto. X 0D X 0D .change ifc2x4 X 0D IFC4 Atributo CHANGE desaprobado. Utilice asociación de material en [[IfcReinforcingElementType]] en su lugar."
-
-#:IFC.xml:40511
-msgid "IfcReinforcingElementType"
-msgstr "IfcReinforcingElementType"
-
-msgid "IfcReinforcingElementType_DEFINITION"
-msgstr "The element component type [[IfcReinforcingElementType]] defines commonly shared information for occurrences of reinforcing elements. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a reinforcing element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingElementType]] are represented by instances of [[IfcReinforcingElement]] . X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .use head X 0D Material Use Definition X 0D X 0D An associated material denotes the steel grade, preferrably using material classification.bSI Documentation"
-
-#:IFC.xml:40514
-msgid "IfcReinforcingMesh"
-msgstr "IfcReinforcingMesh"
-
-msgid "IfcReinforcingMesh_DEFINITION"
-msgstr "A reinforcing mesh is a series of longitudinal and transverse wires or bars of various gauges, arranged at right angles to each other and welded at all points of intersection usually used for concrete slab reinforcement. It is also known as welded wire fabric. In scope are plane meshes as well as bent meshes. X 0D X 0D HISTORY New entity in IFC2x2 X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE All attributes are optional now. Several attributes are deprecated their information is now provided by [[IfcReinforcingMeshType]] . Attribute PredefinedType added. X 0D X 0D .use head X 0D Geometry Use Definition X 0D X 0D Placement and representation are defined at the supertype [[IfcElementComponent]] . X 0D X 0D The representation map of a mapped Outline representation should contain a representation of type Curve3D which holds an [[IfcPolyline]] . X 0D X 0D The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds multiple [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] .bSI Documentation"
-
-#:IFC.xml:40515
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea"
-msgstr "Área de sección larga de barras"
-
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40520
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40525
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing"
-msgstr "Espaciado largo"
-
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40530
-msgid "IfcReinforcingMesh_MeshLength"
-msgstr "MeshLength"
-
-msgid "IfcReinforcingMesh_MeshLength_DEFINITION"
-msgstr "Obsoleto. X 0D X 0D .change ifc2x4 X 0D IFC4 Atributo CHANGE desaprobado. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40535
-msgid "IfcReinforcingMesh_MeshWidth"
-msgstr "MeshWidth"
-
-msgid "IfcReinforcingMesh_MeshWidth_DEFINITION"
-msgstr "Obsoleto. X 0D X 0D .change ifc2x4 X 0D IFC4 Atributo CHANGE desaprobado. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40540
-msgid "IfcReinforcingMesh_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMesh_PredefinedType_DEFINITION"
-msgstr "Kind of mesh."
-
-#:IFC.xml:40545
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40550
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40555
-msgid "IfcReinforcingMesh_TransverseBarSpacing"
-msgstr "TransverseBarSpacing"
-
-msgid "IfcReinforcingMesh_TransverseBarSpacing_DEFINITION"
-msgstr "Desaprobado. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Atributo hecho opcional y obsoleto. Utilice el atributo respectivo en [[IfcReinforcingMeshType]] en su lugar."
-
-#:IFC.xml:40562
-msgid "IfcReinforcingMeshType"
-msgstr "Tipo de Mesh de Refuerzo Ifc"
-
-msgid "IfcReinforcingMeshType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingMeshType]] defines commonly shared information for occurrences of reinforcing meshs. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a reinforcing mesh type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingMeshType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingMeshType]] are represented by instances of [[IfcReinforcingMesh]] . X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D .use head X 0D Geometry Use Definition X 0D X 0D The [[IfcReinforcingMeshType]] may define the shared geometric representation for many mesh occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations.bSI Documentation"
-
-#:IFC.xml:40563
-msgid "IfcReinforcingMeshType_BendingParameters"
-msgstr "Parámetros de plegado"
-
-msgid "IfcReinforcingMeshType_BendingParameters_DEFINITION"
-msgstr "Si este tipo de malla está doblado en lugar de planar, este atributo proporciona parámetros de la forma de plegado. Su significado se define por el código de la forma de plegado y el estándar correspondiente."
-
-#:IFC.xml:40568
-msgid "IfcReinforcingMeshType_BendingShapeCode"
-msgstr "Código de la forma de plegado"
-
-msgid "IfcReinforcingMeshType_BendingShapeCode_DEFINITION"
-msgstr "Si este tipo de malla es doblado en lugar de planar, este atributo proporciona un código de forma para un estándar como ACI 315, ISO 3766, o un estándar similar. Se presupone que se utilice un único estándar para definir la plegación de la malla a lo largo del proyecto y que este estándar sea referenciado desde el objeto [[IfcProject]] a través del mecanismo [[IfcDocumentReference]]."
-
-#:IFC.xml:40573
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea"
-msgstr "Área de sección larga de barras"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva de las barras longitudinales de la malla."
-
-#:IFC.xml:40578
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Diámetro nominal que denota el tamaño de la sección transversal de las barras longitudinales."
-
-#:IFC.xml:40583
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing"
-msgstr "Espaciado largo"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing_DEFINITION"
-msgstr "La separación entre las barras longitudinales. Nota que una distribución uniforme de barras es presumida otros casos se manejan mediante la clasificación o conjuntos de propiedades."
-
-#:IFC.xml:40588
-msgid "IfcReinforcingMeshType_MeshLength"
-msgstr "MeshLength"
-
-msgid "IfcReinforcingMeshType_MeshLength_DEFINITION"
-msgstr "La longitud total de la malla medida en su dirección longitudinal."
-
-#:IFC.xml:40593
-msgid "IfcReinforcingMeshType_MeshWidth"
-msgstr "MeshWidth"
-
-msgid "IfcReinforcingMeshType_MeshWidth_DEFINITION"
-msgstr "La anchura total de la malla medida en su dirección transversal."
-
-#:IFC.xml:40598
-msgid "IfcReinforcingMeshType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMeshType_PredefinedType_DEFINITION"
-msgstr "Subtype of reinforcing mesh."
-
-#:IFC.xml:40603
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva de las barras transversales de la malla."
-
-#:IFC.xml:40608
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Diámetro nominal que indica el tamaño de la sección transversal de las barras transversales."
-
-#:IFC.xml:40613
-msgid "IfcReinforcingMeshType_TransverseBarSpacing"
-msgstr "TransverseBarSpacing"
-
-msgid "IfcReinforcingMeshType_TransverseBarSpacing_DEFINITION"
-msgstr "El espaciado entre las barras transversales. Tenga en cuenta que una distribución uniforme de barras se presumina otros casos se manejan mediante la clasificación o conjuntos de propiedades."
-
-#:IFC.xml:40620
-msgid "IfcReinforcingMeshTypeEnum"
-msgstr "Refuerzo IfcMeshTypeEnum"
-
-msgid "IfcReinforcingMeshTypeEnum_DEFINITION"
-msgstr "Enumeration defining the reinforcing mesh type. X 0D X 0D HISTORY New type in IFC4bSI Documentation"
-
-#:IFC.xml:40624
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40625
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40626
-msgid "IfcSurfaceFeature"
-msgstr "Característica de IfcSurfaceature"
-
-msgid "IfcSurfaceFeature_DEFINITION"
-msgstr "A surface feature is a modification at onto, or into of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element. X 0D X 0D The part whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements element parts and zero or more feature elements. X 0D X 0D HISTORY New entity in IFC4. X 0D X 0D Containment Use Definition X 0D X 0D Surface features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship. X 0D X 0D The SELF [[IfcElement]].ContainedInStructure relationship shall be NIL. X 0D X 0D Geometry use definition X 0D X 0D The geometric representation of IfcSurfaceFeatureElement is given by the [[IfcProductDefinitionShape]] , allowing multiple geometric representation. X 0D X 0D Local Placement X 0D X 0D The local placement for IfcSurfaceFeatureElement is defined in its supertype [[IfcProduct]] . It is defined by the [[IfcLocalPlacement]] , which defines the local coordinate system that is referenced by all geometric representations. X 0D X 0D In case of features which are part of an element type, absolute placement into the type object s implied coordinate system shall be used. X 0D In case of features which are voiding an element occurrence, the PlacementRelTo relationship of [[IfcLocalPlacement]] shall point to the local placement of the respective element. X 0D X 0D Shape representation X 0D X 0D Different shape representations may be used, depending on the nature of the feature and information requirements X 0D X 0D Symbolic representation, such as the two dimensional bounding box of a tag. X 0D A geometric set representing the geometric items of a mark. X 0D Surface representations of treated parts of the lement surface by means of [[IfcShellBasedSurfaceModel]] . The faces within the surface model may be included into a B Rep model within a representation map of the parent element type. X 0D X 0D Higher level parameters geometric and non geometric may be provided by property sets based on local agreements.bSI Documentation"
-
-#:IFC.xml:27034
-msgid "IfcSurfaceFeature_AdheresToElement"
-msgstr "AdheresToElement"
-
-msgid "IfcSurfaceFeature_AdheresToElement_DEFINITION"
-msgstr "AdheresToElement"
-
-#:IFC.xml:40627
-msgid "IfcSurfaceFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSurfaceFeature_PredefinedType_DEFINITION"
-msgstr "Indicates the kind of surface feature."
-
-#:IFC.xml:40634
-msgid "IfcSurfaceFeatureTypeEnum"
-msgstr "IfcSurfaceFeatureTypeEnum"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFINITION"
-msgstr "This enumeration indicates the type of a surface feature. X 0D X 0D HISTORY New type in IFC4.bSI Documentation"
-
-#:IFC.xml:40649
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT"
-msgstr "DEFECTO"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT_DEFINITION"
-msgstr "DEFECTO"
-
-#:IFC.xml:40650
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING"
-msgstr "COLECCIÓN"
-
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING_DEFINITION"
-msgstr "COLECCIÓN"
-
-#:IFC.xml:40651
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING"
-msgstr "LINEMARKING"
-
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING_DEFINITION"
-msgstr "LINEMARKING"
-
-#:IFC.xml:40652
-msgid "IfcSurfaceFeatureTypeEnum_MARK"
-msgstr "MÁS"
-
-msgid "IfcSurfaceFeatureTypeEnum_MARK_DEFINITION"
-msgstr "MÁS"
-
-#:IFC.xml:40653
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING"
-msgstr "NO CONFIGURACIÓN"
-
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING_DEFINITION"
-msgstr "NO CONFIGURACIÓN"
-
-#:IFC.xml:40654
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40655
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING"
-msgstr "PAVEMENTSURFACEMARK"
-
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING_DEFINITION"
-msgstr "PAVEMENTSURFACEMARK"
-
-#:IFC.xml:40656
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP"
-msgstr "RUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP_DEFINITION"
-msgstr "RUMBLESTRIP"
-
-#:IFC.xml:40657
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING"
-msgstr "SIMBOLMARK"
-
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING_DEFINITION"
-msgstr "SIMBOLMARK"
-
-#:IFC.xml:40658
-msgid "IfcSurfaceFeatureTypeEnum_TAG"
-msgstr "TAG"
-
-msgid "IfcSurfaceFeatureTypeEnum_TAG_DEFINITION"
-msgstr "TAG"
-
-#:IFC.xml:40659
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP_DEFINITION"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-#:IFC.xml:40660
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT"
-msgstr "TARJETO"
-
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT_DEFINITION"
-msgstr "TARJETO"
-
-#:IFC.xml:40661
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40662
-msgid "IfcTendon"
-msgstr "IfcTendon"
-
-msgid "IfcTendon_DEFINITION"
-msgstr "A tendon is a steel element such as a wire, cable, bar, rod, or strand used to impart prestress to concrete when the element is tensioned. X 0D X 0D .extDef X 0D NOTE Definition according to ISO 6707 1 steel bar s or groups of bars, strands or wires given a tensile stress that produces a compressive stress in prestressed concrete or masonry. X 0D X 0D .extDef X 0D NOTE To be efficient, the cable follows the deck alignment and moves vertically up on the top of the piers and down in the middle of the span. Therefore the cable axis is defined relatively towards the deck alignment. The ShapeRepresentation should be AdvancedSweptSolid geometry based on SectionedSolidHorizontal description including DistanceExpression, CircleProfileDef and AlignmentCurve, leading to a polyline describing the cable directrix. X 0D X 0D .extDef X 0D NOTE Regarding the Structural Analysis model, the cable has to be transformed into loads applied at each CartesianPoint defining the polyline. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute PredefinedType made optional. NominalDiameter and CrossSectionArea made optional and deprecated this information can now be provided by [[IfcTendonType]] . Description of FrictionCoefficient corrected.bSI Documentation"
-
-#:IFC.xml:40663
-msgid "IfcTendon_AnchorageSlip"
-msgstr "Anclaje"
-
-msgid "IfcTendon_AnchorageSlip_DEFINITION"
-msgstr "La deformación de un ancla o deslizamiento de los tendons cuando se libera el dispositivo de presión."
-
-#:IFC.xml:40668
-msgid "IfcTendon_CrossSectionArea"
-msgstr "Área de secciones"
-
-msgid "IfcTendon_CrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva del tendon X 0D X 0D . hange ifc2x4 X 0D IFC4 atributo CHANGE hecho opcional y desaprobado. Utilice el atributo respectivo en [[IfcTendonType]] en su lugar."
-
-#:IFC.xml:40673
-msgid "IfcTendon_FrictionCoefficient"
-msgstr "Coeficiente de fricción"
-
-msgid "IfcTendon_FrictionCoefficient_DEFINITION"
-msgstr "El coeficiente de fricción entre la hoja de tendón y tendón mientras el tendón no está vinculado."
-
-#:IFC.xml:40678
-msgid "IfcTendon_MinCurvatureRadius"
-msgstr "MinCurvatureRadius"
-
-msgid "IfcTendon_MinCurvatureRadius_DEFINITION"
-msgstr "El radio de curvatura más pequeño calculado sobre toda la longitud efectiva del tendón donde las propiedades de tensión siguen siendo válidas."
-
-#:IFC.xml:40683
-msgid "IfcTendon_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendon_NominalDiameter_DEFINITION"
-msgstr "El diámetro nominal que define el tamaño de la sección transversal del tendon. hange ifc2x4 X 0D IFC4 atributo CHANGE hecho opcional y desaprobado. Utilice el atributo respectivo en [[IfcTendonType]] en su lugar."
-
-#:IFC.xml:40688
-msgid "IfcTendon_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendon_PredefinedType_DEFINITION"
-msgstr "Predefined generic types for a tendon. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Attribute made optional."
-
-#:IFC.xml:40693
-msgid "IfcTendon_PreStress"
-msgstr "Preestrés"
-
-msgid "IfcTendon_PreStress_DEFINITION"
-msgstr "La prescripción que se aplicará en el tensión."
-
-#:IFC.xml:40698
-msgid "IfcTendon_TensionForce"
-msgstr "Fuerza de tensión"
-
-msgid "IfcTendon_TensionForce_DEFINITION"
-msgstr "La fuerza de tensión máxima permitida que se puede aplicar en el tensión."
-
-#:IFC.xml:40705
-msgid "IfcTendonAnchor"
-msgstr "IfcTendonAnchor"
-
-msgid "IfcTendonAnchor_DEFINITION"
-msgstr "A tendon anchor is the end connection for tendons in prestressed or posttensioned concrete. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .history X 0D IFC4 CHANGE Attribute PredefinedType added.bSI Documentation"
-
-#:IFC.xml:40706
-msgid "IfcTendonAnchor_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchor_PredefinedType_DEFINITION"
-msgstr "Ancla de tendón."
-
-#:IFC.xml:40713
-msgid "IfcTendonAnchorType"
-msgstr "IfcTendonAnchorType"
-
-msgid "IfcTendonAnchorType_DEFINITION"
-msgstr "El tipo de elemento que refuerza [[IfcTendonAnchorType]] define información comúnmente compartida para las ocurrencias de anclas de tendón. The set of shared information may include X 0D X 0D common properties with shared property sets X 0D common representations X 0D common materials X 0D common composition of elements X 0D X 0D It is used to define a tendon anchor type specification indicating the specific product information that is common to all occurrences of that product type. El [[IfcTendonAnchorType]] puede declararse dentro de [[IfcProject]] o [[IfcProjectLibrary]] usando [[IfcRelDeclares]] y puede ser intercambiado con o sin ocurrencias del tipo. Ocurrencias de [[IfcTendonAnchorType]] son representadas por instancias de [[IfcTendonAnchor]] . X 0D X 0D HISTORY Nueva entidad en IFC4. se head X 0D Material Use Definición X 0D X 0D A material o conjunto de materiales constituyentes pueden ser asociados. se head X 0D Geometry Use Definition X 0D X 0D The [[IfcTendonAnchorType]] may define the shared geometric representation for many tendon anchor occurrences. El atributo RepresentationMaps se refiere a una lista de [[IfcRepresentationMap]] s, que permiten múltiples representaciones geométricas.bSI Documentación"
-
-#:IFC.xml:40714
-msgid "IfcTendonAnchorType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchorType_PredefinedType_DEFINITION"
-msgstr "Subtipo de ancla de tendón."
-
-#:IFC.xml:40721
-msgid "IfcTendonAnchorTypeEnum"
-msgstr "IfcTendonAnchorTypeEnum"
-
-msgid "IfcTendonAnchorTypeEnum_DEFINITION"
-msgstr "Enumeración que define los tipos de anclas de tendón. Nuevo tipo de X 0D X 0D en documentación IFC4.bSI"
-
-#:IFC.xml:40728
-msgid "IfcTendonAnchorTypeEnum_COUPLER"
-msgstr "COUPLAR"
-
-msgid "IfcTendonAnchorTypeEnum_COUPLER_DEFINITION"
-msgstr "COUPLAR"
-
-#:IFC.xml:40729
-msgid "IfcTendonAnchorTypeEnum_FIXED_END"
-msgstr "FIN FIXADO"
-
-msgid "IfcTendonAnchorTypeEnum_FIXED_END_DEFINITION"
-msgstr "FIN FIXADO"
-
-#:IFC.xml:40730
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40731
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END"
-msgstr "FINAL DE TENSIÓN"
-
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END_DEFINITION"
-msgstr "FINAL DE TENSIÓN"
-
-#:IFC.xml:40732
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40733
-msgid "IfcTendonConduit"
-msgstr "Conducto IfcTendonConducto"
-
-msgid "IfcTendonConduit_DEFINITION"
-msgstr "Un TendonConduit representa los componentes del sistema de conductos para tendones incrustados en estructura de hormigón.bSI Documentación"
-
-#:IFC.xml:40734
-msgid "IfcTendonConduit_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduit_PredefinedType_DEFINITION"
-msgstr "El tipo genérico predefinido del conducto tendón."
-
-#:IFC.xml:40741
-msgid "IfcTendonConduitType"
-msgstr "Tipo de conducto IfcTendonConducto"
-
-msgid "IfcTendonConduitType_DEFINITION"
-msgstr "documentación bSI"
-
-#:IFC.xml:40742
-msgid "IfcTendonConduitType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduitType_PredefinedType_DEFINITION"
-msgstr "Subtipo de conducto tendón."
-
-#:IFC.xml:40749
-msgid "IfcTendonConduitTypeEnum"
-msgstr "IfcTendonConduitTypeEnum"
-
-msgid "IfcTendonConduitTypeEnum_DEFINITION"
-msgstr "documentación bSI"
-
-#:IFC.xml:40758
-msgid "IfcTendonConduitTypeEnum_COUPLER"
-msgstr "COUPLAR"
-
-msgid "IfcTendonConduitTypeEnum_COUPLER_DEFINITION"
-msgstr "COUPLAR"
-
-#:IFC.xml:40759
-msgid "IfcTendonConduitTypeEnum_DIABOLO"
-msgstr "DIABOLO"
-
-msgid "IfcTendonConduitTypeEnum_DIABOLO_DEFINITION"
-msgstr "DIABOLO"
-
-#:IFC.xml:40760
-msgid "IfcTendonConduitTypeEnum_DUCT"
-msgstr "DUCT"
-
-msgid "IfcTendonConduitTypeEnum_DUCT_DEFINITION"
-msgstr "DUCT"
-
-#:IFC.xml:40761
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT"
-msgstr "DUCT DE GRUPO"
-
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT_DEFINITION"
-msgstr "DUCT DE GRUPO"
-
-#:IFC.xml:40762
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40763
-msgid "IfcTendonConduitTypeEnum_TRUMPET"
-msgstr "TRUMPET"
-
-msgid "IfcTendonConduitTypeEnum_TRUMPET_DEFINITION"
-msgstr "TRUMPET"
-
-#:IFC.xml:40764
-msgid "IfcTendonConduitTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcTendonConduitTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40765
-msgid "IfcTendonType"
-msgstr "IfcTendonType"
-
-msgid "IfcTendonType_DEFINITION"
-msgstr "El tipo de elemento que refuerza [[IfcTendonType]] define información comúnmente compartida para las ocurrencias de tendons. El conjunto de información compartida puede incluir X 0D X 0D propiedades comunes con propiedades compartidas X 0D representaciones comunes X 0D materiales comunes X 0D composición común X 0D de los elementos X 0D X 0D Se utiliza para definir una especificación de tipo tendón que indica la información específica del producto que es común a todas las ocurrencias de ese tipo de producto. El [[IfcTendonType]] puede declararse dentro de [[IfcProject]] o [[IfcProjectLibrary]] usando [[IfcRelDeclares]] y puede ser intercambiado con o sin ocurrencias del tipo. Ocurrencias de [[IfcTendonType]] son representadas por instancias de [[IfcTendon]] . X 0D X 0D HISTORY Nueva entidad en IFC4. se head X 0D Material Use Definición X 0D X 0D Un material asociado denota el grado de acero, preferiblemente a través de la clasificación de material. Un conjunto constituyente de material o conjunto de perfil material puede estar asociado si el cable, el mortero o la protección de la corrosión y la capa de tendón deben ser descritas conjuntamente por la asociación de materiales. X 0D X 0D . se head X 0D Geometry Use Definition X 0D X 0D The [[IfcTendonType]] may define the shared geometric representation for many tendon occurrences. El atributo RepresentationMaps se refiere a una lista de [[IfcRepresentationMap]] s, que permiten múltiples representaciones geométricas.bSI Documentación"
-
-#:IFC.xml:40766
-msgid "IfcTendonType_CrossSectionArea"
-msgstr "Área de secciones"
-
-msgid "IfcTendonType_CrossSectionArea_DEFINITION"
-msgstr "La sección transversal efectiva de la parte prestrizada del tendon."
-
-#:IFC.xml:40771
-msgid "IfcTendonType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendonType_NominalDiameter_DEFINITION"
-msgstr "El diámetro nominal que define el tamaño de la sección transversal de la parte prescrita del tendon."
-
-#:IFC.xml:40776
-msgid "IfcTendonType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonType_PredefinedType_DEFINITION"
-msgstr "Subtipo de tensión."
-
-#:IFC.xml:40781
-msgid "IfcTendonType_SheathDiameter"
-msgstr "Diámetro"
-
-msgid "IfcTendonType_SheathDiameter_DEFINITION"
-msgstr "Diámetro de la tubería alrededor del tenso, si hay uno con este tipo de tensión."
-
-#:IFC.xml:40788
-msgid "IfcTendonTypeEnum"
-msgstr "IfcTendonTypeEnum"
-
-msgid "IfcTendonTypeEnum_DEFINITION"
-msgstr "Enumeración que define los tipos de tendons. X 0D X 0D HISTORY Nuevo tipo en IFC2x2.bSI Documentación"
-
-#:IFC.xml:40796
-msgid "IfcTendonTypeEnum_BAR"
-msgstr "BARRO"
-
-msgid "IfcTendonTypeEnum_BAR_DEFINITION"
-msgstr "BARRO"
-
-#:IFC.xml:40797
-msgid "IfcTendonTypeEnum_COATED"
-msgstr "COATADO"
-
-msgid "IfcTendonTypeEnum_COATED_DEFINITION"
-msgstr "COATADO"
-
-#:IFC.xml:40798
-msgid "IfcTendonTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcTendonTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40799
-msgid "IfcTendonTypeEnum_STRAND"
-msgstr "STRAND"
-
-msgid "IfcTendonTypeEnum_STRAND_DEFINITION"
-msgstr "STRAND"
-
-#:IFC.xml:40800
-msgid "IfcTendonTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcTendonTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40801
-msgid "IfcTendonTypeEnum_WIRE"
-msgstr "WIRE"
-
-msgid "IfcTendonTypeEnum_WIRE_DEFINITION"
-msgstr "WIRE"
-
-#:IFC.xml:40802
-msgid "IfcVoidingFeature"
-msgstr "Característica IfcVacío"
-
-msgid "IfcVoidingFeature_DEFINITION"
-msgstr "Una característica de voto es una modificación de un elemento que reduce su volumen. Tal característica puede fabricarse de diferentes maneras, por ejemplo cortando y perforando, o fresado de miembros hechos de varios materiales, o por incrustaciones en la forma de los miembros fundidos hechos de materiales como el hormigón. X 0D X 0D El uso estándar de instancias de [[IfcVoidingFeature]] es parte de instancias de tipo de elemento de subtipos de [[IfcElementType]] . La relación entera de la parte es establecida por un objeto de relación de agregación, expresando la descomposición de un tipo de elemento en uno o más elementos aditivos y cero o más elementos característicos. X 0D X 0D HISTORY Nueva entidad en IFC4. se head X 0D Convre Use Definition X 0D X 0D X 0D Voidfeatures shall not have spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relations or on an element occurrence with own spatial containment relationship. X 0D X 0D El SELF [[IfcElement]].La relación ContainedInstructure debe ser NIL.bSI Documentación"
-
-#:IFC.xml:40803
-msgid "IfcVoidingFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVoidingFeature_PredefinedType_DEFINITION"
-msgstr "Califica la característica con respecto a su forma y configuración relativa al elemento anulado."
-
-#:IFC.xml:40810
-msgid "IfcVoidingFeatureTypeEnum"
-msgstr "IfcVoidingFeatureTypeEnum"
-
-msgid "IfcVoidingFeatureTypeEnum_DEFINITION"
-msgstr "Esta enumeración califica una característica de voting en relación a su forma y configuración relativa al elemento vacío. X 0D X 0D X 0D HISTORY nuevo tipo en IFC4.bSI Documentation"
-
-#:IFC.xml:40820
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER"
-msgstr "CHAMFER"
-
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER_DEFINITION"
-msgstr "CHAMFER"
-
-#:IFC.xml:40821
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT"
-msgstr "ACTUALIZAR"
-
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT_DEFINITION"
-msgstr "ACTUALIZAR"
-
-#:IFC.xml:40822
-msgid "IfcVoidingFeatureTypeEnum_EDGE"
-msgstr "EDIGO"
-
-msgid "IfcVoidingFeatureTypeEnum_EDGE_DEFINITION"
-msgstr "EDIGO"
-
-#:IFC.xml:40823
-msgid "IfcVoidingFeatureTypeEnum_HOLE"
-msgstr "MUY"
-
-msgid "IfcVoidingFeatureTypeEnum_HOLE_DEFINITION"
-msgstr "MUY"
-
-#:IFC.xml:40824
-msgid "IfcVoidingFeatureTypeEnum_MITER"
-msgstr "MITER"
-
-msgid "IfcVoidingFeatureTypeEnum_MITER_DEFINITION"
-msgstr "MITER"
-
-#:IFC.xml:40825
-msgid "IfcVoidingFeatureTypeEnum_NOTCH"
-msgstr "NOTEL"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTCH_DEFINITION"
-msgstr "NOTEL"
-
-#:IFC.xml:40826
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:40827
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
-
-#:IFC.xml:40843
-msgid "Pset_ConcreteElementGeneral"
-msgstr "Pset ConcreteElementGeneral"
-
-#:IFC.xml:40844
-msgid "Pset_ConcreteElementGeneral_ConcreteCover"
-msgstr "ConcreteCover"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCover_DEFINITION"
-msgstr "ConcreteCover"
-
-#:IFC.xml:40849
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks"
-msgstr "Enlaces de hormigón"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks_DEFINITION"
-msgstr "Enlaces de hormigón"
-
-#:IFC.xml:40854
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars"
-msgstr "Cubiertas de hormigón"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars_DEFINITION"
-msgstr "Cubiertas de hormigón"
-
-#:IFC.xml:40859
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod"
-msgstr "Método de Construcción"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod_DEFINITION"
-msgstr "Método de Construcción"
-
-#:IFC.xml:40864
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass"
-msgstr "Clase de tolerancia"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass_DEFINITION"
-msgstr "Clase de tolerancia"
-
-#:IFC.xml:40869
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass"
-msgstr "Clase de precisión dimensional"
-
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass_DEFINITION"
-msgstr "Clase de precisión dimensional"
-
-#:IFC.xml:40874
-msgid "Pset_ConcreteElementGeneral_ExposureClass"
-msgstr "Clase de exposición"
-
-msgid "Pset_ConcreteElementGeneral_ExposureClass_DEFINITION"
-msgstr "Clase de exposición"
-
-#:IFC.xml:40879
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio"
-msgstr "Relación de Refuerzo"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio_DEFINITION"
-msgstr "Relación de Refuerzo"
-
-#:IFC.xml:40884
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass"
-msgstr "Refuerzo de clase de fuerza"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass_DEFINITION"
-msgstr "Refuerzo de clase de fuerza"
-
-#:IFC.xml:40889
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio"
-msgstr "Refuerzo de relación de volumen"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio_DEFINITION"
-msgstr "Refuerzo de relación de volumen"
-
-#:IFC.xml:40894
-msgid "Pset_ConcreteElementGeneral_StrengthClass"
-msgstr "Clase de Fuerza"
-
-msgid "Pset_ConcreteElementGeneral_StrengthClass_DEFINITION"
-msgstr "Clase de Fuerza"
-
-#:IFC.xml:40899
-msgid "Pset_ConcreteElementGeneral_StructuralClass"
-msgstr "StructuralClass"
-
-msgid "Pset_ConcreteElementGeneral_StructuralClass_DEFINITION"
-msgstr "StructuralClass"
-
-#:IFC.xml:40905
-msgid "Pset_FootingCommon"
-msgstr "Pset Pie Común"
-
-#:IFC.xml:40906
-msgid "Pset_FootingCommon_LoadBearing"
-msgstr "Bearing de carga"
-
-msgid "Pset_FootingCommon_LoadBearing_DEFINITION"
-msgstr "Bearing de carga"
-
-#:IFC.xml:40911
-msgid "Pset_FootingCommon_Reference"
-msgstr "Referencia"
-
-msgid "Pset_FootingCommon_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:40916
-msgid "Pset_FootingCommon_Status"
-msgstr "Estado"
-
-msgid "Pset_FootingCommon_Status_DEFINITION"
-msgstr "Estado"
-
-#:IFC.xml:40922
-msgid "Pset_PileCommon"
-msgstr "Pilar de mascota común"
-
-#:IFC.xml:40923
-msgid "Pset_PileCommon_LoadBearing"
-msgstr "Bearing de carga"
-
-msgid "Pset_PileCommon_LoadBearing_DEFINITION"
-msgstr "Bearing de carga"
-
-#:IFC.xml:40928
-msgid "Pset_PileCommon_Reference"
-msgstr "Referencia"
-
-msgid "Pset_PileCommon_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:40933
-msgid "Pset_PileCommon_Status"
-msgstr "Estado"
-
-msgid "Pset_PileCommon_Status_DEFINITION"
-msgstr "Estado"
-
-#:IFC.xml:40939
-msgid "Pset_PrecastConcreteElementFabrication"
-msgstr "Pset PrecastConcreteElementFabricación"
-
-#:IFC.xml:40940
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate"
-msgstr "ActualErectionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate_DEFINITION"
-msgstr "ActualErectionDate"
-
-#:IFC.xml:40945
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate"
-msgstr "ActualProductionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate_DEFINITION"
-msgstr "ActualProductionDate"
-
-#:IFC.xml:40950
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber"
-msgstr "Número de ubicación"
-
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber_DEFINITION"
-msgstr "Número de ubicación"
-
-#:IFC.xml:40955
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark"
-msgstr "Marcar parte"
-
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark_DEFINITION"
-msgstr "Marcar parte"
-
-#:IFC.xml:40960
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId"
-msgstr "LotId de producción"
-
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId_DEFINITION"
-msgstr "LotId de producción"
-
-#:IFC.xml:40965
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber"
-msgstr "Número de serie"
-
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber_DEFINITION"
-msgstr "Número de serie"
-
-#:IFC.xml:40970
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignation"
-msgstr "Tipo de diseño"
-
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignation_DEFINITION"
-msgstr "Tipo de diseño"
-
-#:IFC.xml:40976
-msgid "Pset_PrecastConcreteElementGeneral"
-msgstr "Pset PrecastConcreteElementGeneral"
-
-#:IFC.xml:40977
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd"
-msgstr "Batería final"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd_DEFINITION"
-msgstr "Batería final"
-
-#:IFC.xml:40982
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart"
-msgstr "Inicio de la batería"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart_DEFINITION"
-msgstr "Inicio de la batería"
-
-#:IFC.xml:40987
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan"
-msgstr "CamberAtMidspan"
-
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan_DEFINITION"
-msgstr "CamberAtMidspan"
-
-#:IFC.xml:40992
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer"
-msgstr "Champiñón de esquina"
-
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer_DEFINITION"
-msgstr "Champiñón de esquina"
-
-#:IFC.xml:40997
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber"
-msgstr "Número de ubicación"
-
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber_DEFINITION"
-msgstr "Número de ubicación"
-
-#:IFC.xml:41002
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength"
-msgstr "FormStripingIntensidad"
-
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength_DEFINITION"
-msgstr "FormStripingIntensidad"
-
-#:IFC.xml:41007
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging"
-msgstr "Enchufe hueco"
-
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging_DEFINITION"
-msgstr "Enchufe hueco"
-
-#:IFC.xml:41012
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension"
-msgstr "Tensión inicial"
-
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension_DEFINITION"
-msgstr "Tensión inicial"
-
-#:IFC.xml:41017
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength"
-msgstr "Fuerza de elevación"
-
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength_DEFINITION"
-msgstr "Fuerza de elevación"
-
-#:IFC.xml:41022
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass"
-msgstr "Tipo de tolerancia"
-
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass_DEFINITION"
-msgstr "Tipo de tolerancia"
-
-#:IFC.xml:41027
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength"
-msgstr "Longitud mínima permitible de soporte"
-
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength_DEFINITION"
-msgstr "Longitud mínima permitible de soporte"
-
-#:IFC.xml:41032
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark"
-msgstr "Marcar parte"
-
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark_DEFINITION"
-msgstr "Marcar parte"
-
-#:IFC.xml:41037
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength"
-msgstr "Fuerza de lanzamiento"
-
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength_DEFINITION"
-msgstr "Fuerza de lanzamiento"
-
-#:IFC.xml:41042
-msgid "Pset_PrecastConcreteElementGeneral_Shortening"
-msgstr "Acortamiento"
-
-msgid "Pset_PrecastConcreteElementGeneral_Shortening_DEFINITION"
-msgstr "Acortamiento"
-
-#:IFC.xml:41047
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription"
-msgstr "Soportar la descripción de Transporte"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription_DEFINITION"
-msgstr "Soportar la descripción de Transporte"
-
-#:IFC.xml:41052
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference"
-msgstr "Soportar la referencia de TransportDocs"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference_DEFINITION"
-msgstr "Soportar la referencia de TransportDocs"
-
-#:IFC.xml:41057
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation"
-msgstr "Relajación con Tendón"
-
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation_DEFINITION"
-msgstr "Relajación con Tendón"
-
-#:IFC.xml:41062
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength"
-msgstr "Fuerza de transporte"
-
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength_DEFINITION"
-msgstr "Fuerza de transporte"
-
-#:IFC.xml:41067
-msgid "Pset_PrecastConcreteElementGeneral_Twisting"
-msgstr "Retorcimiento"
-
-msgid "Pset_PrecastConcreteElementGeneral_Twisting_DEFINITION"
-msgstr "Retorcimiento"
-
-#:IFC.xml:41072
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignation"
-msgstr "Tipo de diseño"
-
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignation_DEFINITION"
-msgstr "Tipo de diseño"
-
-#:IFC.xml:41078
-msgid "Pset_PrecastSlab"
-msgstr "Pset PrecastSlab"
-
-#:IFC.xml:41079
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes"
-msgstr "Ejes entre componentes"
-
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes_DEFINITION"
-msgstr "Ejes entre componentes"
-
-#:IFC.xml:41084
-msgid "Pset_PrecastSlab_AngleToFirstAxis"
-msgstr "AngleToFirstAxis"
-
-msgid "Pset_PrecastSlab_AngleToFirstAxis_DEFINITION"
-msgstr "AngleToFirstAxis"
-
-#:IFC.xml:41089
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes"
-msgstr "DistanciaAxes entre componentes"
-
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes_DEFINITION"
-msgstr "DistanciaAxes entre componentes"
-
-#:IFC.xml:41094
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis"
-msgstr "EdgeDistanceToFirstAxis"
-
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis_DEFINITION"
-msgstr "EdgeDistanceToFirstAxis"
-
-#:IFC.xml:41099
-msgid "Pset_PrecastSlab_NominalThickness"
-msgstr "Grosor nominal"
-
-msgid "Pset_PrecastSlab_NominalThickness_DEFINITION"
-msgstr "Grosor nominal"
-
-#:IFC.xml:41104
-msgid "Pset_PrecastSlab_NominalToppingThickness"
-msgstr "Grosor nominalTopping"
-
-msgid "Pset_PrecastSlab_NominalToppingThickness_DEFINITION"
-msgstr "Grosor nominalTopping"
-
-#:IFC.xml:41109
-msgid "Pset_PrecastSlab_ToppingType"
-msgstr "ToppingType"
-
-msgid "Pset_PrecastSlab_ToppingType_DEFINITION"
-msgstr "ToppingType"
-
-#:IFC.xml:41114
-msgid "Pset_PrecastSlab_TypeDesignation"
-msgstr "Tipo de diseño"
-
-msgid "Pset_PrecastSlab_TypeDesignation_DEFINITION"
-msgstr "Tipo de diseño"
-
-#:IFC.xml:41120
-msgid "Pset_ReinforcementBarCountOfIndependentFooting"
-msgstr "Refuerzo de la barra de refuerzos de pies independientes"
-
-#:IFC.xml:41121
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41126
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41131
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount"
-msgstr "X Dirección bajo cuenta de barras"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount_DEFINITION"
-msgstr "X Dirección bajo cuenta de barras"
-
-#:IFC.xml:41136
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount"
-msgstr "X DirecciónSuperior de la barra"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount_DEFINITION"
-msgstr "X DirecciónSuperior de la barra"
-
-#:IFC.xml:41141
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount"
-msgstr "Dirección bajo cuenta de barras"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount_DEFINITION"
-msgstr "Dirección bajo cuenta de barras"
-
-#:IFC.xml:41146
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount"
-msgstr "Cuenta superior de direcciones"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount_DEFINITION"
-msgstr "Cuenta superior de direcciones"
-
-#:IFC.xml:41152
-msgid "Pset_ReinforcementBarPitchOfBeam"
-msgstr "Pset Refuerzo BarPitchO-Beam"
-
-#:IFC.xml:41153
-msgid "Pset_ReinforcementBarPitchOfBeam_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41158
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41163
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch"
-msgstr "Espaciando la barrita"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch_DEFINITION"
-msgstr "Espaciando la barrita"
-
-#:IFC.xml:41168
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch"
-msgstr "Pitch de Stirrupa"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch_DEFINITION"
-msgstr "Pitch de Stirrupa"
-
-#:IFC.xml:41174
-msgid "Pset_ReinforcementBarPitchOfColumn"
-msgstr "Refuerzo Pset BarPitchOfColumn"
-
-#:IFC.xml:41175
-msgid "Pset_ReinforcementBarPitchOfColumn_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41180
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch"
-msgstr "HoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch_DEFINITION"
-msgstr "HoopBarPitch"
-
-#:IFC.xml:41185
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41190
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType"
-msgstr "Tipo de barra de refuerzo"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType_DEFINITION"
-msgstr "Tipo de barra de refuerzo"
-
-#:IFC.xml:41195
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch"
-msgstr "Dirección de %s"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Dirección de %s"
-
-#:IFC.xml:41200
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount"
-msgstr "XDirectionTieHoopCount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount_DEFINITION"
-msgstr "XDirectionTieHoopCount"
-
-#:IFC.xml:41205
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch"
-msgstr "Dirección de HoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Dirección de HoopBarPitch"
-
-#:IFC.xml:41210
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount"
-msgstr "Dirección Y: Hoopcount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount_DEFINITION"
-msgstr "Dirección Y: Hoopcount"
-
-#:IFC.xml:41216
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting"
-msgstr "Pset ReinforcementBarPitchOfContinuing"
-
-#:IFC.xml:41217
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch"
-msgstr "Pitch bajista cruzado"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch_DEFINITION"
-msgstr "Pitch bajista cruzado"
-
-#:IFC.xml:41222
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch"
-msgstr "CrossingUpperBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch_DEFINITION"
-msgstr "CrossingUpperBarPitch"
-
-#:IFC.xml:41227
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41232
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41238
-msgid "Pset_ReinforcementBarPitchOfSlab"
-msgstr "Refuerzo de mascota BarPitchOflab"
-
-#:IFC.xml:41239
-msgid "Pset_ReinforcementBarPitchOfSlab_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41244
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch"
-msgstr "LongInsideCenterLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch_DEFINITION"
-msgstr "LongInsideCenterLowerBarPitch"
-
-#:IFC.xml:41249
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch"
-msgstr "LongInsideCenterTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch_DEFINITION"
-msgstr "LongInsideCenterTopBarPitch"
-
-#:IFC.xml:41254
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch"
-msgstr "LonginsideEndBarra"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch_DEFINITION"
-msgstr "LonginsideEndBarra"
-
-#:IFC.xml:41259
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch"
-msgstr "Largo dentro de la barra de tareas"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch_DEFINITION"
-msgstr "Largo dentro de la barra de tareas"
-
-#:IFC.xml:41264
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch"
-msgstr "LongOutsideLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch_DEFINITION"
-msgstr "LongOutsideLowerBarPitch"
-
-#:IFC.xml:41269
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch"
-msgstr "LongoOutsideTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch_DEFINITION"
-msgstr "LongoOutsideTopBarPitch"
-
-#:IFC.xml:41274
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41279
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch"
-msgstr "Pitch de barras inferior en el centro corto"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch_DEFINITION"
-msgstr "Pitch de barras inferior en el centro corto"
-
-#:IFC.xml:41284
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch"
-msgstr "Pitch de barras corto en el centro"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch_DEFINITION"
-msgstr "Pitch de barras corto en el centro"
-
-#:IFC.xml:41289
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch"
-msgstr "Pitch corto dentro de la barra inferior"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch_DEFINITION"
-msgstr "Pitch corto dentro de la barra inferior"
-
-#:IFC.xml:41294
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch"
-msgstr "Pitch corto dentro de la barra final"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch_DEFINITION"
-msgstr "Pitch corto dentro de la barra final"
-
-#:IFC.xml:41299
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch"
-msgstr "OutsideBarPitch corto"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch_DEFINITION"
-msgstr "OutsideBarPitch corto"
-
-#:IFC.xml:41304
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch"
-msgstr "TopBarPitch corto"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch_DEFINITION"
-msgstr "TopBarPitch corto"
-
-#:IFC.xml:41310
-msgid "Pset_ReinforcementBarPitchOfWall"
-msgstr "Refuerzo de refuerzos de la pared"
-
-#:IFC.xml:41311
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType"
-msgstr "Tipo de asignación de barras"
-
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType_DEFINITION"
-msgstr "Tipo de asignación de barras"
-
-#:IFC.xml:41316
-msgid "Pset_ReinforcementBarPitchOfWall_Description"
-msgstr "Descripción"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Description_DEFINITION"
-msgstr "Descripción"
-
-#:IFC.xml:41321
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch"
-msgstr "Pitch horizontal"
-
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch_DEFINITION"
-msgstr "Pitch horizontal"
-
-#:IFC.xml:41326
-msgid "Pset_ReinforcementBarPitchOfWall_Reference"
-msgstr "Referencia"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Reference_DEFINITION"
-msgstr "Referencia"
-
-#:IFC.xml:41331
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch"
-msgstr "Espaciando la barrita"
-
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch_DEFINITION"
-msgstr "Espaciando la barrita"
-
-#:IFC.xml:41336
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch"
-msgstr "Pitch vertical"
-
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch_DEFINITION"
-msgstr "Pitch vertical"
-
-#:IFC.xml:41342
-msgid "Qto_FootingBaseQuantities"
-msgstr "Cantidad base de pies"
-
-#:IFC.xml:41343
-msgid "Qto_FootingBaseQuantities_CrossSectionArea"
-msgstr "Área de secciones"
-
-msgid "Qto_FootingBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Área de secciones"
-
-#:IFC.xml:41348
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "GrossSurfaceArea"
-
-#:IFC.xml:41353
-msgid "Qto_FootingBaseQuantities_GrossVolume"
-msgstr "GrosVolume"
-
-msgid "Qto_FootingBaseQuantities_GrossVolume_DEFINITION"
-msgstr "GrosVolume"
-
-#:IFC.xml:41358
-msgid "Qto_FootingBaseQuantities_GrossWeight"
-msgstr "Influencia"
-
-msgid "Qto_FootingBaseQuantities_GrossWeight_DEFINITION"
-msgstr "Influencia"
-
-#:IFC.xml:41363
-msgid "Qto_FootingBaseQuantities_Height"
-msgstr "Altura"
-
-msgid "Qto_FootingBaseQuantities_Height_DEFINITION"
-msgstr "Altura"
-
-#:IFC.xml:41368
-msgid "Qto_FootingBaseQuantities_Length"
-msgstr "Longitud"
-
-msgid "Qto_FootingBaseQuantities_Length_DEFINITION"
-msgstr "Longitud"
-
-#:IFC.xml:41373
-msgid "Qto_FootingBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_FootingBaseQuantities_NetVolume_DEFINITION"
-msgstr "NetVolume"
-
-#:IFC.xml:41378
-msgid "Qto_FootingBaseQuantities_NetWeight"
-msgstr "Peso de red"
-
-msgid "Qto_FootingBaseQuantities_NetWeight_DEFINITION"
-msgstr "Peso de red"
-
-#:IFC.xml:41383
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea"
-msgstr "área de superficie"
-
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "área de superficie"
-
-#:IFC.xml:41388
-msgid "Qto_FootingBaseQuantities_Width"
-msgstr "Width"
-
-msgid "Qto_FootingBaseQuantities_Width_DEFINITION"
-msgstr "Width"
-
-#:IFC.xml:41394
-msgid "Qto_PileBaseQuantities"
-msgstr "Qto PileBaseQuantities"
-
-#:IFC.xml:41395
-msgid "Qto_PileBaseQuantities_CrossSectionArea"
-msgstr "Área de secciones"
-
-msgid "Qto_PileBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Área de secciones"
-
-#:IFC.xml:41400
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "GrossSurfaceArea"
-
-#:IFC.xml:41405
-msgid "Qto_PileBaseQuantities_GrossVolume"
-msgstr "GrosVolume"
-
-msgid "Qto_PileBaseQuantities_GrossVolume_DEFINITION"
-msgstr "GrosVolume"
-
-#:IFC.xml:41410
-msgid "Qto_PileBaseQuantities_GrossWeight"
-msgstr "Influencia"
-
-msgid "Qto_PileBaseQuantities_GrossWeight_DEFINITION"
-msgstr "Influencia"
-
-#:IFC.xml:41415
-msgid "Qto_PileBaseQuantities_Length"
-msgstr "Longitud"
-
-msgid "Qto_PileBaseQuantities_Length_DEFINITION"
-msgstr "Longitud"
-
-#:IFC.xml:41420
-msgid "Qto_PileBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_PileBaseQuantities_NetVolume_DEFINITION"
-msgstr "NetVolume"
-
-#:IFC.xml:41425
-msgid "Qto_PileBaseQuantities_NetWeight"
-msgstr "Peso de red"
-
-msgid "Qto_PileBaseQuantities_NetWeight_DEFINITION"
-msgstr "Peso de red"
-
-#:IFC.xml:41430
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea"
-msgstr "área de superficie"
-
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "área de superficie"
-
-#:IFC.xml:41436
-msgid "Qto_ReinforcingElementBaseQuantities"
-msgstr "Qto Reforzar la cantidad básica de elementos"
-
-#:IFC.xml:41437
-msgid "Qto_ReinforcingElementBaseQuantities_Count"
-msgstr "Contador"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Count_DEFINITION"
-msgstr "Contador"
-
-#:IFC.xml:41442
-msgid "Qto_ReinforcingElementBaseQuantities_Length"
-msgstr "Longitud"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Length_DEFINITION"
-msgstr "Longitud"
-
-#:IFC.xml:41447
-msgid "Qto_ReinforcingElementBaseQuantities_Weight"
-msgstr "Peso"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Weight_DEFINITION"
-msgstr "Peso"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Geometría de vértices"
 
