@@ -9,184 +9,846 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcCostResource.pot\n"
-"X-Crowdin-File-ID: 34\n"
+"X-Crowdin-File: /master/IfcDateTimeResource.pot\n"
+"X-Crowdin-File-ID: 36\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2021-12-12 21:54\n"
 
-#:IFC.xml:3139
-msgid "IfcAppliedValue"
-msgstr "IfcAppliedValue"
+#:IFC.xml:3383
+msgid "IfcDataOriginEnum"
+msgstr "IfcDataOriginEnum"
 
-msgid "IfcAppliedValue_DEFINITION"
-msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. X 0D X 0D The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. X 0D X 0D Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. X 0D X 0D An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. X 0D X 0D Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking.bSI Documentation"
+msgid "IfcDataOriginEnum_DEFINITION"
+msgstr "[[IfcDataOriginEnum]] は、時間データの原点を識別します。X 0D X 0D HISTORY IFC2x2の新しい列挙。X 0D bSI Documentation"
 
-#:IFC.xml:3184
-msgid "IfcAppliedValue_UnitBasis"
-msgstr "UnitBasis"
+#:IFC.xml:3384
+msgid "IfcDataOriginEnum_MEASURED"
+msgstr "測定"
 
-msgid "IfcAppliedValue_UnitBasis_DEFINITION"
-msgstr "UnitBasis"
+msgid "IfcDataOriginEnum_MEASURED_DEFINITION"
+msgstr "測定"
 
-#:IFC.xml:3196
-msgid "IfcAppliedValue_Components"
-msgstr "コンポーネント"
+#:IFC.xml:3385
+msgid "IfcDataOriginEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcAppliedValue_Components_DEFINITION"
-msgstr "コンポーネント"
+msgid "IfcDataOriginEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:3208
-msgid "IfcAppliedValue_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:3386
+msgid "IfcDataOriginEnum_PREDICTED"
+msgstr "Predicted"
 
-msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
-msgstr "HasExternalReference"
+msgid "IfcDataOriginEnum_PREDICTED_DEFINITION"
+msgstr "Predicted"
 
-#:IFC.xml:3140
-msgid "IfcAppliedValue_ApplicableDate"
-msgstr "適用日"
+#:IFC.xml:3387
+msgid "IfcDataOriginEnum_SIMULATED"
+msgstr "SIMULATED"
 
-msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
-msgstr "適用された値が適用される日付。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
+msgid "IfcDataOriginEnum_SIMULATED_DEFINITION"
+msgstr "SIMULATED"
 
-#:IFC.xml:3145
-msgid "IfcAppliedValue_AppliedValue"
-msgstr "AppliedValue"
+#:IFC.xml:3388
+msgid "IfcDataOriginEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcAppliedValue_AppliedValue_DEFINITION"
-msgstr "適用された値の範囲または数量または量。"
+msgid "IfcDataOriginEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:3150
-msgid "IfcAppliedValue_ArithmeticOperator"
-msgstr "算術演算子"
+#:IFC.xml:3390
+msgid "IfcEventTime"
+msgstr "IfcEventTime"
 
-msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
-msgstr "算術演算子は、コンポーネントの値に適用されます。"
+msgid "IfcEventTime_DEFINITION"
+msgstr "[[IfcEventTime]] captures the time related information about an event including the different types of event dates i.e. actual, scheduled, early, and late . X 0D X 0D All given values should be provided by the application, that is, the IFC schema does not deal with dependencies between process time values. At this stage there is also no consistency check through where rules that guarantee a meaningful population of date values. Thus, an application is responsible to provide reasonable values and, if an application receives event dates, has to make consistency checks by their own. X 0D X 0D [[IfcEventTime]] furthermore provides a generic mechanism to differentiate between user given time values and time values derived from user given time values and other constraints such as work calendars and assigned resources derived from the process graph . The data origin flag is provided as a single attribute applying to all date time related attributes of [[IfcEventTime]] . X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
 
-#:IFC.xml:3155
-msgid "IfcAppliedValue_Category"
-msgstr "カテゴリ"
+#:IFC.xml:3391
+msgid "IfcEventTime_ActualDate"
+msgstr "ActualDate"
 
-msgid "IfcAppliedValue_Category_DEFINITION"
-msgstr "使用されるコストの種類の仕様 X 0D X 0D 注意 特定できるコスト値には多くの種類があります。 異なる種類のコストに割り当てられる名前の意味については、広範な理解があります。 一般的にコスト型の命名基準はなく広く定義された分類もありません 任意のタイプのコスト値を可能にするために、[[IfcLabel]] データ型が割り当てられます。 X 0D X 0D X 0D X 0D X 0D プロジェクトまたは地域内で許容され理解できるコスト価値の種類を定義するために、ローカル契約を行うことが推奨されます。"
+msgid "IfcEventTime_ActualDate_DEFINITION"
+msgstr "イベントが実際に発生した日付。これは測定値です。"
 
-#:IFC.xml:3160
-msgid "IfcAppliedValue_Condition"
-msgstr "条件"
+#:IFC.xml:3396
+msgid "IfcEventTime_EarlyDate"
+msgstr "早期日付"
 
-msgid "IfcAppliedValue_Condition_DEFINITION"
-msgstr "コスト値が適用される条件。 X 0D X 0D 入札のコンテキスト内で、例えば、入札のコンテキスト内で。 これは選ばれるかもしれないし選ばれないかもしれない選択肢を指すかもしれません"
+msgid "IfcEventTime_EarlyDate_DEFINITION"
+msgstr "イベントが発生する最も古い日付です。これは計算された値です。"
 
-#:IFC.xml:3165
-msgid "IfcAppliedValue_Description"
-msgstr "説明"
+#:IFC.xml:3401
+msgid "IfcEventTime_LateDate"
+msgstr "LateDate"
 
-msgid "IfcAppliedValue_Description_DEFINITION"
-msgstr "コスト値に関する追加情報を適用する場合の説明。"
+msgid "IfcEventTime_LateDate_DEFINITION"
+msgstr "イベントが発生する可能性がある最新の日付です。これは計算値です。"
 
-#:IFC.xml:3170
-msgid "IfcAppliedValue_FixedUntilDate"
-msgstr "FixedUntilDate"
+#:IFC.xml:3406
+msgid "IfcEventTime_ScheduleDate"
+msgstr "スケジュール日時"
 
-msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
-msgstr "適用される値までの日付。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
+msgid "IfcEventTime_ScheduleDate_DEFINITION"
+msgstr "イベントが発生する予定の日付。 X 0D X 0D ScheduleDataOrigin で定義された値を測定したり、何らかの形で計算したりすることができます。"
 
-#:IFC.xml:3175
-msgid "IfcAppliedValue_Name"
+#:IFC.xml:3425
+msgid "IfcIrregularTimeSeries"
+msgstr "IfcIrregularTimeSeries"
+
+msgid "IfcIrregularTimeSeries_DEFINITION"
+msgstr "In an irregular time series, unpredictable bursts of data arrive at unspecified points in time, or most time stamps cannot be characterized by a repeating pattern. X 0D X 0D EXAMPLE A circulating pump cycles on and off at unpredictable times as dictated by the demands on the piping system the amount of light in a classroom varies depending on when the lights are manually switched on and off and how many lamps are controlled by each switch. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3428
+msgid "IfcIrregularTimeSeries_Values"
+msgstr "値"
+
+msgid "IfcIrregularTimeSeries_Values_DEFINITION"
+msgstr "値"
+
+#:IFC.xml:3440
+msgid "IfcIrregularTimeSeriesValue"
+msgstr "IfcIrregularTimeSeriesValue"
+
+msgid "IfcIrregularTimeSeriesValue_DEFINITION"
+msgstr "The [[IfcIrregularTimeSeriesValue]] describes a value or set of values at a particular time point. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3441
+msgid "IfcIrregularTimeSeriesValue_ListValues"
+msgstr "リスト値"
+
+msgid "IfcIrregularTimeSeriesValue_ListValues_DEFINITION"
+msgstr "時系列の値のリスト。少なくとも1つの値が必要です。"
+
+#:IFC.xml:3446
+msgid "IfcIrregularTimeSeriesValue_TimeStamp"
+msgstr "TimeStamp"
+
+msgid "IfcIrregularTimeSeriesValue_TimeStamp_DEFINITION"
+msgstr "時間点の仕様。"
+
+#:IFC.xml:3452
+msgid "IfcLagTime"
+msgstr "IfcLagTime"
+
+msgid "IfcLagTime_DEFINITION"
+msgstr "[[IfcLagTime]] describes the time parameters that may exist within a sequence relationship between two processes. X 0D X 0D An [[IfcLagTime]] provides information about the time lag that exists between the predecessor and successor process in a sequence. The assertion of the time lag is optional for a sequence but for work schedules that specifically deal with processes occurring at particular times, it should be asserted. X 0D X 0D A lag time has a duration type. This allows the identification of whether elapsed time or work time is being measured where work time is the estimate of the time required to complete the process and elapsed time being the amount of time actually allocated to the process X 0D X 0D The form of measurement of the duration can be captured. Allowed values for this are MEASURED, PREDICTED or SIMULATED. The selection of this value depends on the use of the schedule. A NOTDEFINED value is also allowed. X 0D X 0D The value of the time lag may be selected as being either a percentage ratio or an actual time measure. If selected as a ratio, the percentage should apply to the duration of the predecessor process relating process such that e.g. a value of 0.5 50 would indicate that the successor task should start when the predecessor task is 50 complete if a START START sequence type is used or should wait for 50 of the duration of the predecessor process to have elapsed after the finish of the predecessor process in case of a FINISH START sequence type. X 0D X 0D The time unit for the task duration may also be set and this may be set to any allowed unit of time measure. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3453
+msgid "IfcLagTime_DurationType"
+msgstr "DurationType"
+
+msgid "IfcLagTime_DurationType_DEFINITION"
+msgstr "遅延時間X 0D測定作業時間または経過時間を指定する、許可されたタスク期間のタイプ。"
+
+#:IFC.xml:3458
+msgid "IfcLagTime_LagValue"
+msgstr "LagValue"
+
+msgid "IfcLagTime_LagValue_DEFINITION"
+msgstr "比率またはX0Dの時間測定として選択されたタイムラグの値。"
+
+#:IFC.xml:3477
+msgid "IfcRecurrencePattern"
+msgstr "IfcRecurrencePattern"
+
+msgid "IfcRecurrencePattern_DEFINITION"
+msgstr "[[IfcRecurrencePattern]] defines repetitive time periods on the basis of regular recurrences such as each Monday in a week, or every third Tuesday in a month. The population of the remaining attributes such as DayComponent , Position , and Interval depend on the specified recurrence type. X 0D X 0D [[IfcRecurrencePattern]] supports various recurrence patterns that are differentiated by a type definition [[IfcRecurrencePattern]].RecurrenceType , which is required to provide the meaning of the given values. It can be further constrained by applicable times through specified [[IfcTimePeriod]] instances, thus enabling time periods such as between 7 00 and 12 00 and between 13 00 and 17 00 for each of the applicable days, weeks or months. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3514
+msgid "IfcRecurrencePattern_TimePeriods"
+msgstr "TimePeriods"
+
+msgid "IfcRecurrencePattern_TimePeriods_DEFINITION"
+msgstr "TimePeriods"
+
+#:IFC.xml:3478
+msgid "IfcRecurrencePattern_DayComponent"
+msgstr "DayComponent"
+
+msgid "IfcRecurrencePattern_DayComponent_DEFINITION"
+msgstr "月の指定日の位置"
+
+#:IFC.xml:3483
+msgid "IfcRecurrencePattern_Interval"
+msgstr "間隔"
+
+msgid "IfcRecurrencePattern_Interval_DEFINITION"
+msgstr "パターンタイプに応じて間隔を与えることができます。 例えば、2日、週、X、0D、年ごとに、Xの0D間隔値2は、できます。 間隔が空の値は 1 とみなされます。 X 0D で使用される間隔値は、妥当な範囲でなければなりません。例えば、X 0D では 0 または 0 ではありません。"
+
+#:IFC.xml:3488
+msgid "IfcRecurrencePattern_MonthComponent"
+msgstr "MonthComponent"
+
+msgid "IfcRecurrencePattern_MonthComponent_DEFINITION"
+msgstr "指定された月の 1 年の位置。"
+
+#:IFC.xml:3493
+msgid "IfcRecurrencePattern_Occurrences"
+msgstr "Occurrences"
+
+msgid "IfcRecurrencePattern_Occurrences_DEFINITION"
+msgstr "このパターンの発生回数を定義します。例えば、毎週のX 0Dイベントが停止する前に5回発生する可能性があります。"
+
+#:IFC.xml:3498
+msgid "IfcRecurrencePattern_Position"
+msgstr "位置"
+
+msgid "IfcRecurrencePattern_Position_DEFINITION"
+msgstr "指定されたコンポーネントの位置、例えば、月に第 3 X 0D ポジション 3 火曜日の平日コンポーネント。 コンポーネント1の最後の位置 X 0Dを定義するには、X 0D負の位置値を使用します。 次は最後のポジション2など"
+
+#:IFC.xml:3503
+msgid "IfcRecurrencePattern_RecurrenceType"
+msgstr "RecurrenceType"
+
+msgid "IfcRecurrencePattern_RecurrenceType_DEFINITION"
+msgstr "使用するX0D属性に意味を与える再帰型を定義し、可能な属性X0Dの組み合わせを決定する。 をクリックします。X-0Dがパターンタイプを記述するために必要な属性。"
+
+#:IFC.xml:3508
+msgid "IfcRecurrencePattern_WeekdayComponent"
+msgstr "WeekdayComponent"
+
+msgid "IfcRecurrencePattern_WeekdayComponent_DEFINITION"
+msgstr "週の指定日の平日名"
+
+#:IFC.xml:3550
+msgid "IfcRecurrenceTypeEnum"
+msgstr "IfcRecurrenceTypeEnum"
+
+msgid "IfcRecurrenceTypeEnum_DEFINITION"
+msgstr "[[IfcRecurrenceTypeEnum]] enumerates the recurring pattern type, with valid combinations as indicated. X 0D X 0D HISTORY New enumeration in IFC4.bSI Documentation"
+
+#:IFC.xml:3551
+msgid "IfcRecurrenceTypeEnum_BY_DAY_COUNT"
+msgstr "日数順"
+
+msgid "IfcRecurrenceTypeEnum_BY_DAY_COUNT_DEFINITION"
+msgstr "日数順"
+
+#:IFC.xml:3552
+msgid "IfcRecurrenceTypeEnum_BY_WEEKDAY_COUNT"
+msgstr "週末のカウントで"
+
+msgid "IfcRecurrenceTypeEnum_BY_WEEKDAY_COUNT_DEFINITION"
+msgstr "週末のカウントで"
+
+#:IFC.xml:3553
+msgid "IfcRecurrenceTypeEnum_DAILY"
+msgstr "日"
+
+msgid "IfcRecurrenceTypeEnum_DAILY_DEFINITION"
+msgstr "日"
+
+#:IFC.xml:3554
+msgid "IfcRecurrenceTypeEnum_MONTHLY_BY_DAY_OF_MONTH"
+msgstr "月曜日毎に"
+
+msgid "IfcRecurrenceTypeEnum_MONTHLY_BY_DAY_OF_MONTH_DEFINITION"
+msgstr "月曜日毎に"
+
+#:IFC.xml:3555
+msgid "IfcRecurrenceTypeEnum_MONTHLY_BY_POSITION"
+msgstr "ポジション毎月表示"
+
+msgid "IfcRecurrenceTypeEnum_MONTHLY_BY_POSITION_DEFINITION"
+msgstr "ポジション毎月表示"
+
+#:IFC.xml:3556
+msgid "IfcRecurrenceTypeEnum_WEEKLY"
+msgstr "WEEKLY"
+
+msgid "IfcRecurrenceTypeEnum_WEEKLY_DEFINITION"
+msgstr "WEEKLY"
+
+#:IFC.xml:3557
+msgid "IfcRecurrenceTypeEnum_YEARLY_BY_DAY_OF_MONTH"
+msgstr "月曜日までに年"
+
+msgid "IfcRecurrenceTypeEnum_YEARLY_BY_DAY_OF_MONTH_DEFINITION"
+msgstr "月曜日までに年"
+
+#:IFC.xml:3558
+msgid "IfcRecurrenceTypeEnum_YEARLY_BY_POSITION"
+msgstr "ポジションごとの年"
+
+msgid "IfcRecurrenceTypeEnum_YEARLY_BY_POSITION_DEFINITION"
+msgstr "ポジションごとの年"
+
+#:IFC.xml:3560
+msgid "IfcRegularTimeSeries"
+msgstr "IfcRegularTimeSeries"
+
+msgid "IfcRegularTimeSeries_DEFINITION"
+msgstr "In a regular time series, the data arrives predictably at predefined intervals. In a regular time series there is no need to store multiple time stamps and the algorithms for analyzing the time series are therefore significantly simpler. Using the start time provided in the supertype, the time step is used to identify the frequency of the occurrences of the list of values. X 0D X 0D EXAMPLE A smoke detector samples the concentration of particulates in a space at a fixed rate for example, every six seconds a control system measures the outside air temperature every hour. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3568
+msgid "IfcRegularTimeSeries_Values"
+msgstr "値"
+
+msgid "IfcRegularTimeSeries_Values_DEFINITION"
+msgstr "値"
+
+#:IFC.xml:3561
+msgid "IfcRegularTimeSeries_TimeStep"
+msgstr "TimeStep"
+
+msgid "IfcRegularTimeSeries_TimeStep_DEFINITION"
+msgstr "値の間隔の長さ。"
+
+#:IFC.xml:3580
+msgid "IfcResourceTime"
+msgstr "IfcResourceTime"
+
+msgid "IfcResourceTime_DEFINITION"
+msgstr "[[IfcResourceTime]] captures the time related information about a construction resource. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3581
+msgid "IfcResourceTime_ActualFinish"
+msgstr "ActualFinish"
+
+msgid "IfcResourceTime_ActualFinish_DEFINITION"
+msgstr "リソースが実際に作業を終了した時刻を示します。"
+
+#:IFC.xml:3586
+msgid "IfcResourceTime_ActualStart"
+msgstr "ActualStart"
+
+msgid "IfcResourceTime_ActualStart_DEFINITION"
+msgstr "リソースが実際に作業を開始した時刻を示します。"
+
+#:IFC.xml:3591
+msgid "IfcResourceTime_ActualUsage"
+msgstr "実際の使い方"
+
+msgid "IfcResourceTime_ActualUsage_DEFINITION"
+msgstr "同時に使用されるリソースの実際の量を示します。"
+
+#:IFC.xml:3596
+msgid "IfcResourceTime_ActualWork"
+msgstr "ActualWork"
+
+msgid "IfcResourceTime_ActualWork_DEFINITION"
+msgstr "StatusTime のリソースによって実行された実際の作業を示します。"
+
+#:IFC.xml:3601
+msgid "IfcResourceTime_Completion"
+msgstr "完了"
+
+msgid "IfcResourceTime_Completion_DEFINITION"
+msgstr "リソースの完了率を示します。 リソースがタスクに割り当てられている場合。 次に、リソースがサブ割り当てに分割されている場合、リソースの代わりにタスクが完了することを示します。 次にサブ割り当ての全体的な完了を示しています"
+
+#:IFC.xml:3606
+msgid "IfcResourceTime_IsOverAllocated"
+msgstr "IsOverallocated"
+
+msgid "IfcResourceTime_IsOverAllocated_DEFINITION"
+msgstr "リソースが容量を超えてスケジュールされていることを示します。"
+
+#:IFC.xml:3611
+msgid "IfcResourceTime_LevelingDelay"
+msgstr "LevelingDelay"
+
+msgid "IfcResourceTime_LevelingDelay_DEFINITION"
+msgstr "階層化によるスケジュール開始の遅延を示します。"
+
+#:IFC.xml:3616
+msgid "IfcResourceTime_RemainingUsage"
+msgstr "残りの使用率"
+
+#:IFC.xml:3621
+msgid "IfcResourceTime_RemainingWork"
+msgstr "残りの作業"
+
+msgid "IfcResourceTime_RemainingWork_DEFINITION"
+msgstr "リソースが完了する残りの作業を示します。"
+
+#:IFC.xml:3626
+msgid "IfcResourceTime_ScheduleContour"
+msgstr "ScheduleContour"
+
+msgid "IfcResourceTime_ScheduleContour_DEFINITION"
+msgstr "指定された曲線に従ってリソース使用量を調整することによって、リソースを時間の経過とともに平準化する方法を示します。 標準値には、フラット、バックロード、FrontLoaded、DoublePeak、EarlyPeak、LatePeak、ベル、およびタートルが含まれます。 カスタム値は、カスタム名または数式を指定できます。"
+
+#:IFC.xml:3631
+msgid "IfcResourceTime_ScheduleFinish"
+msgstr "スケジュール終了"
+
+msgid "IfcResourceTime_ScheduleFinish_DEFINITION"
+msgstr "リソースが作業を終了するようにスケジュールされている時間を示します。"
+
+#:IFC.xml:3636
+msgid "IfcResourceTime_ScheduleStart"
+msgstr "スケジュールスタート"
+
+msgid "IfcResourceTime_ScheduleStart_DEFINITION"
+msgstr "リソースが作業を開始するようにスケジュールされている時間を示します。"
+
+#:IFC.xml:3641
+msgid "IfcResourceTime_ScheduleUsage"
+msgstr "スケジュール使用率"
+
+msgid "IfcResourceTime_ScheduleUsage_DEFINITION"
+msgstr "同時に使用されるリソースの量を示します。 例えば、100は1人の労働者、300は3人の労働者、50はマルチタスクが可能なシナリオで1人の労働者の半分の時間を意味します。 提供されていない場合は、使用率は100と見なされます。"
+
+#:IFC.xml:3646
+msgid "IfcResourceTime_ScheduleWork"
+msgstr "スケジュールワーク"
+
+msgid "IfcResourceTime_ScheduleWork_DEFINITION"
+msgstr "リソースの代わりにタスクに割り当てられた時間の合計を示します。 X 0D タスクの継続時間[[IfcTaskTime]]と必ずしも同じではないことに注意してください。 cheduleDurationは、リソース使用率やタスクに割り当てられたその他のリソースによって異なる場合があります。"
+
+#:IFC.xml:3651
+msgid "IfcResourceTime_StatusTime"
+msgstr "StatusTime"
+
+msgid "IfcResourceTime_StatusTime_DEFINITION"
+msgstr "ステータス値が適用可能な日時、特に完了値、実際値、残り値を示します。 値がタイムフェーズ化されている場合、参照する [[IfcConstructionResource]] は属性の時系列値を関連付けています そして、ステータス値は、StatusTime のような段階的なデータから決定されます。"
+
+#:IFC.xml:3658
+msgid "IfcSchedulingTime"
+msgstr "IfcSchedulingTime"
+
+msgid "IfcSchedulingTime_DEFINITION"
+msgstr "[[IfcSchedulingTime]] is the abstract supertype of entities that capture time related information of processes. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3659
+msgid "IfcSchedulingTime_DataOrigin"
+msgstr "生成元"
+
+msgid "IfcSchedulingTime_DataOrigin_DEFINITION"
+msgstr "スケジューリング・タイム・エンティティの原点を指定します。現在、X-0Dは、予測値、シミュレーション値、測定値、およびユーザー定義値を区別します。"
+
+#:IFC.xml:3664
+msgid "IfcSchedulingTime_Name"
 msgstr "名前"
 
-msgid "IfcAppliedValue_Name_DEFINITION"
-msgstr "コスト値に与えられた名前または追加の明確化。"
+msgid "IfcSchedulingTime_Name_DEFINITION"
+msgstr "時間定義の任意の名前。"
 
-#:IFC.xml:3220
-msgid "IfcAppliedValueSelect"
-msgstr "IfcAppliedValueSelect"
+#:IFC.xml:3669
+msgid "IfcSchedulingTime_UserDefinedDataOrigin"
+msgstr "UserDefinedDataOrigin"
 
-msgid "IfcAppliedValueSelect_DEFINITION"
-msgstr "[[IfcAppliedValueSelect]] defines a value to be calculated within a formula. X 0D X 0D Types are used as follows X 0D X 0D [[IfcValue]] A constant value using project default units. X 0D [[IfcMeasureWithUnit]] A constant value using specified units. X 0D [[IfcReference]] A value referenced on an object attribute. X 0D X 0D For cost values, the following guidance applies X 0D X 0D [[IfcMeasureWithUnit]] allows the specification of both the actual figure for the value together with the currency in which the value is represented. X 0D Selecting [[IfcMonetaryMeasure]] allows the specification only of the value, the currency being as set by the global context. X 0D Selecting [[IfcRatioMeasure]] assumes that the amount is a percentage or other REAL number. Note that if the amount is normally specified as 20 , then this figure will need to be converted to a multiplier of 0.8 X 0D X 0D HISTORY New select type in IFC2x2."
+msgid "IfcSchedulingTime_UserDefinedDataOrigin_DEFINITION"
+msgstr "DataOrigin 属性が USERDEFINED の場合のデータ原点の値。"
 
-#:IFC.xml:3221
-msgid "IfcArithmeticOperatorEnum"
-msgstr "IfcArithmeticOperatorEnum"
+#:IFC.xml:3675
+msgid "IfcTaskDurationEnum"
+msgstr "IfcTaskDurationEnum"
 
-msgid "IfcArithmeticOperatorEnum_DEFINITION"
-msgstr "[[IfcArithmeticOperatorEnum]] は関係によって暗示される算術演算の形式を指定する。X 0D X 0D HISTORY IFC2x2.bSI ドキュメント"
+msgid "IfcTaskDurationEnum_DEFINITION"
+msgstr "[[IfcTaskDurationEnum]] identifies how a time duration is measured. X 0D X 0D HISTORY New enumeration in IFC4.bSI Documentation"
 
-#:IFC.xml:3222
-msgid "IfcArithmeticOperatorEnum_ADD"
-msgstr "追加"
+#:IFC.xml:3676
+msgid "IfcTaskDurationEnum_ELAPSEDTIME"
+msgstr "最終時間"
 
-msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
-msgstr "追加"
+msgid "IfcTaskDurationEnum_ELAPSEDTIME_DEFINITION"
+msgstr "最終時間"
 
-#:IFC.xml:3223
-msgid "IfcArithmeticOperatorEnum_DIVIDE"
-msgstr "Divide"
+#:IFC.xml:3677
+msgid "IfcTaskDurationEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
-msgstr "Divide"
+msgid "IfcTaskDurationEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:3224
-msgid "IfcArithmeticOperatorEnum_MULTIPLY"
-msgstr "倍率表示"
+#:IFC.xml:3678
+msgid "IfcTaskDurationEnum_WORKTIME"
+msgstr "ワークタイム"
 
-msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
-msgstr "倍率表示"
+msgid "IfcTaskDurationEnum_WORKTIME_DEFINITION"
+msgstr "ワークタイム"
 
-#:IFC.xml:3225
-msgid "IfcArithmeticOperatorEnum_SUBTRACT"
-msgstr "サブトラック"
+#:IFC.xml:3680
+msgid "IfcTaskTime"
+msgstr "IfcTaskTime"
 
-msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
-msgstr "サブトラック"
+msgid "IfcTaskTime_DEFINITION"
+msgstr "[[IfcTaskTime]] captures the time related information about a task including the different types actual or scheduled of starting and ending times. X 0D X 0D All given values should be provided by the application the IFC schema does not deal with dependencies between task time values. There is also no consistency check through where rules that guarantee a meaningful population of time values. Thus, an application is responsible to provide reasonable values and, if an application receives task times, has to make consistency checks by their own. X 0D X 0D [[IfcTaskTime]] furthermore provides a generic mechanism to differentiate between user given time values and time values derived from user given time values and other constraints such as work calendars and assigned resources. X 0D X 0D HISTORY New entity in IFC4, adapted from IfcScheduleTimeControl . Differently to IfcScheduleTimeControl it is also possible to differentiate duration time measures between the two possible types 1 work time and 2 elapsed time.bSI Documentation"
 
-#:IFC.xml:3227
-msgid "IfcCostValue"
-msgstr "IfcCostValue"
+#:IFC.xml:3681
+msgid "IfcTaskTime_ActualDuration"
+msgstr "実際の期間"
 
-msgid "IfcCostValue_DEFINITION"
-msgstr "[[IfcCostValue]] is an amount of money or a value that affects an amount of money. X 0D X 0D Each instance of [[IfcCostValue]] may also have a category. There are many possible types of cost value that may be identified. While there is a broad understanding of the meaning of names that may be assigned to different types of costs, there is no general standard for naming cost types nor are there any broadly defined classifications. X 0D X 0D The following defines some cost categories that might be applied to the Category attribute X 0D X 0D Annual rate of return X 0D Bonus X 0D Bulk purchase rebate X 0D Contract X 0D Consultancy X 0D Delivery X 0D Estimated cost X 0D Hire X 0D Installation X 0D Interest rate X 0D Labor X 0D Lease X 0D List price X 0D Maintenance X 0D Material X 0D Overhead X 0D Postage and packing X 0D Profit X 0D Purchase X 0D Rental X 0D Repair X 0D Replacement X 0D Sale X 0D Small quantity surcharge X 0D Spares X 0D Storage X 0D Sub Contract X 0D Trade discount X 0D Transportation X 0D Waste allowance X 0D Whole life X 0D X 0D NOTE In the absence of any well defined standard, it is recommended that local agreements should be made to define allowable and understandable cost value types within a project or region. X 0D X 0D HISTORY New entity in IFC1.0bSI Documentation"
+msgid "IfcTaskTime_ActualDuration_DEFINITION"
+msgstr "タスクの実際の期間。それは測定値です。 この値は、経過時間または作業時間として与えられ、DurationType によって定義されます。"
 
-#:IFC.xml:3314
-msgid "IfcCurrencyRelationship"
-msgstr "IfcCurrencyRelationship"
+#:IFC.xml:3686
+msgid "IfcTaskTime_ActualFinish"
+msgstr "ActualFinish"
 
-msgid "IfcCurrencyRelationship_DEFINITION"
-msgstr "[[IfcCurrencyRelationship]] defines the rate of exchange that applies between two designated currencies at a particular time and as published by a particular source. X 0D X 0D An [[IfcCurrencyRelationship]] is used where there may be a need to reference an [[IfcCostValue]] in one currency to an [[IfcCostValue]] in another currency. It takes account of fact that currency exchange rates may vary by requiring the recording the date and time of the currency exchange rate used and the source that publishes the rate. There may be many sources and there are different strategies for currency conversion spot rate, forward buying of currency at a fixed rate . X 0D X 0D The source for the currency exchange is defined as an instance of [[IfcLibraryInformation]] that includes a name and a URL. X 0D X 0D HISTORY New entity in IFC2x2. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Subtyped from [[IfcResourceLevelRelationship]] , attribute order changed.bSI Documentation"
+msgid "IfcTaskTime_ActualFinish_DEFINITION"
+msgstr "タスクが実際に終了する日付。"
 
-#:IFC.xml:3327
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
-msgstr "RelatingMonetaryUnit"
+#:IFC.xml:3691
+msgid "IfcTaskTime_ActualStart"
+msgstr "ActualStart"
 
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
-msgstr "RelatingMonetaryUnit"
+msgid "IfcTaskTime_ActualStart_DEFINITION"
+msgstr "タスクが実際に開始された日付。これは測定値です。 X 0D 注意 スケジュールされた開始日は、最も古い開始日以上でなければなりません。 タスクが以前に開始される可能性があるため、スケジュールされた開始日について実際の開始日時に制約は適用されません。"
 
-#:IFC.xml:3339
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
-msgstr "関連MonetaryUnit"
+#:IFC.xml:3696
+msgid "IfcTaskTime_Completion"
+msgstr "完了"
 
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
-msgstr "関連MonetaryUnit"
+msgid "IfcTaskTime_Completion_DEFINITION"
+msgstr "比率またはパーセンテージで表される完成度の大きさは、測定値です。"
 
-#:IFC.xml:3351
-msgid "IfcCurrencyRelationship_RateSource"
-msgstr "RateSource"
+#:IFC.xml:3701
+msgid "IfcTaskTime_DurationType"
+msgstr "DurationType"
 
-msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
-msgstr "RateSource"
+msgid "IfcTaskTime_DurationType_DEFINITION"
+msgstr "format@@0、format@@1、format@@2の期間値のタイプを指定できます。期間タイプは作業時間または経過時間です。"
 
-#:IFC.xml:3315
-msgid "IfcCurrencyRelationship_ExchangeRate"
-msgstr "為替レート："
+#:IFC.xml:3706
+msgid "IfcTaskTime_EarlyFinish"
+msgstr "EarlyFinish"
 
-msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
-msgstr "現在合意されている通貨単位の金額の比率は、通貨関係における通貨単位の単位量に相当します。 例えば、GBPからUSDへの換算の場合、為替レートは1.486USD1GBPとなります。"
+msgid "IfcTaskTime_EarlyFinish_DEFINITION"
+msgstr "タスクが完了できる最も古い日付。これは計算された値です。"
 
-#:IFC.xml:3320
-msgid "IfcCurrencyRelationship_RateDateTime"
-msgstr "RateDateTime"
+#:IFC.xml:3711
+msgid "IfcTaskTime_EarlyStart"
+msgstr "EarlyStart"
 
-msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
-msgstr "為替レートが適用される日付と時刻。X 0D .change ifc2x4 X 0D IFC4はIfcDateTimeSelectから変更されます。"
+msgid "IfcTaskTime_EarlyStart_DEFINITION"
+msgstr "タスクを開始できる最も古い日付です。これは計算された値です。"
+
+#:IFC.xml:3716
+msgid "IfcTaskTime_FreeFloat"
+msgstr "FreeFloat"
+
+msgid "IfcTaskTime_FreeFloat_DEFINITION"
+msgstr "タスクの開始または終了期間は、作業の全体的なプログラムに影響を与えることなく変更することができます. これは経過時間の計算値です。"
+
+#:IFC.xml:3721
+msgid "IfcTaskTime_IsCritical"
+msgstr "IsCritical"
+
+msgid "IfcTaskTime_IsCritical_DEFINITION"
+msgstr "スケジュールされたタスクがプログラム内の重要項目であるかどうかを識別するフラグ。 X 0D NOTE フロート時間がゼロまたは負になるとタスクが重要になります。"
+
+#:IFC.xml:3726
+msgid "IfcTaskTime_LateFinish"
+msgstr "LateFinish"
+
+msgid "IfcTaskTime_LateFinish_DEFINITION"
+msgstr "タスクが完了できる最新の日付。これは計算値です。"
+
+#:IFC.xml:3731
+msgid "IfcTaskTime_LateStart"
+msgstr "LateStart"
+
+msgid "IfcTaskTime_LateStart_DEFINITION"
+msgstr "タスクを開始できる最新の日付です。これは計算された値です。"
+
+#:IFC.xml:3736
+msgid "IfcTaskTime_RemainingTime"
+msgstr "残り時間"
+
+msgid "IfcTaskTime_RemainingTime_DEFINITION"
+msgstr "タスクを完了するまでの残り時間。予測値です。 この値は、経過時間または作業時間として与えられ、DurationType によって定義されます。 X 0D NOTE タスクを完了するための残り時間は、まだ開始していないタスクと持っているタスクの両方で決定される可能性があります。 まだ開始されていないタスクの残り時間は、スケジュールされた期間と同じ値になります。 タスクがすでに開始されている場合、残りの時間はスケジュールされた仕上げと分析ポイントの差として計算されます。"
+
+#:IFC.xml:3741
+msgid "IfcTaskTime_ScheduleDuration"
+msgstr "スケジュール期間"
+
+msgid "IfcTaskTime_ScheduleDuration_DEFINITION"
+msgstr "タスクの完了を予定している時間。 X0DスケジュールDataOriginで定義されている値を測定したり計算したりすることができます。 この値は、経過時間または作業時間として与えられ、DurationType によって定義されます。 X 0D X 0D NOTEスケジュールされた期間は、スケジュールされた開始日からスケジュールされた終了日までの時間として計算することができます。"
+
+#:IFC.xml:3746
+msgid "IfcTaskTime_ScheduleFinish"
+msgstr "スケジュール終了"
+
+msgid "IfcTaskTime_ScheduleFinish_DEFINITION"
+msgstr "タスクが完了する予定の日付。値は、ScheduleDataOrigin で定義されている、測定されたり計算されたりする可能性があります。 X 0D NOTE スケジュールされた終了日は、最も古い終了日以上でなければなりません。"
+
+#:IFC.xml:3751
+msgid "IfcTaskTime_ScheduleStart"
+msgstr "スケジュールスタート"
+
+msgid "IfcTaskTime_ScheduleStart_DEFINITION"
+msgstr "タスクを開始する予定の日時 X0DスケジュールDataOriginで定義されている値を測定したり計算したりすることができます。 X 0D 注意 スケジュールされた開始日は、最も古い開始日以上でなければなりません。"
+
+#:IFC.xml:3756
+msgid "IfcTaskTime_StatusTime"
+msgstr "StatusTime"
+
+msgid "IfcTaskTime_StatusTime_DEFINITION"
+msgstr "スケジュール内のタスクの状況が分析される日付または時刻。"
+
+#:IFC.xml:3761
+msgid "IfcTaskTime_TotalFloat"
+msgstr "トータルFloat"
+
+msgid "IfcTaskTime_TotalFloat_DEFINITION"
+msgstr "タスクを実行するために利用可能な期間とタスクのスケジュールされた期間の違い。これは計算された経過時間値です。 X 0D NOTE 合計フローティング時間は、タスクのスケジュールされた期間と、最も早い開始から最新の終了までの利用可能な期間の差として計算されます。 浮動小数点数は、正、ゼロ、負のいずれかになります。ゼロまたは負の場合、タスクは重要になります。"
+
+#:IFC.xml:3780
+msgid "IfcTaskTimeRecurring"
+msgstr "IfcTaskTimeRecurring"
+
+msgid "IfcTaskTimeRecurring_DEFINITION"
+msgstr "[[IfcTaskTimeRecurring]] is a recurring instance of [[IfcTaskTime]] for handling regularly scheduled or repetitive tasks. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3526
+msgid "IfcTaskTimeRecurring_Recurrence"
+msgstr "繰り返し"
+
+msgid "IfcTaskTimeRecurring_Recurrence_DEFINITION"
+msgstr "繰り返し"
+
+#:IFC.xml:3783
+msgid "IfcTimeOrRatioSelect"
+msgstr "IfcTimeOrratioSelect"
+
+msgid "IfcTimeOrRatioSelect_DEFINITION"
+msgstr "[[IfcTimeOrRatioSelect]] allows a value to be selected as being either a ratio or a time measure. X 0D X 0D HISTORY New select type in IFC4"
+
+#:IFC.xml:3784
+msgid "IfcTimePeriod"
+msgstr "IfcTimePeriod"
+
+msgid "IfcTimePeriod_DEFINITION"
+msgstr "[[IfcTimePeriod]] defines a time period given by a start and end time. Both time definitions consider the time zone and allow for the daylight savings offset. X 0D X 0D A time period is defined by a start and an end time, which is defined by [[IfcTime]] . The given time period should be within reasonable values for example, the start time must be before the end time . It is furthermore expected that both time definitions use the same time zone and, if given, the same daylight saving offset. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3785
+msgid "IfcTimePeriod_EndTime"
+msgstr "EndTime"
+
+msgid "IfcTimePeriod_EndTime_DEFINITION"
+msgstr "期間の終了時刻。"
+
+#:IFC.xml:3790
+msgid "IfcTimePeriod_StartTime"
+msgstr "StartTime"
+
+msgid "IfcTimePeriod_StartTime_DEFINITION"
+msgstr "期間の開始時刻。"
+
+#:IFC.xml:3796
+msgid "IfcTimeSeries"
+msgstr "IfcTimeSeries"
+
+msgid "IfcTimeSeries_DEFINITION"
+msgstr "A time series is a set of a time stamped data entries. It allows a natural association of data collected over intervals of time. Time series can be regular or irregular. In regular time series data arrive predictably at predefined intervals. In irregular time series some or all time stamps do not follow a repetitive pattern and unpredictable bursts of data may arrive at unspecified points in time. X 0D X 0D The modeling of buildings and their performance involves data that are generated and recorded over a period of time. Such data cover a large spectrum, from weather data to schedules of all kinds to status measurements to reporting to everything else that has a time related aspect. Their correct placement in time is essential for their proper understanding and use, and the [[IfcTimeSeries]] subtypes provide the appropriate data structures to accommodate these types of data. X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3841
+msgid "IfcTimeSeries_HasExternalReference"
+msgstr "HasExternalReference"
+
+msgid "IfcTimeSeries_HasExternalReference_DEFINITION"
+msgstr "HasExternalReference"
+
+#:IFC.xml:3797
+msgid "IfcTimeSeries_DataOrigin"
+msgstr "生成元"
+
+msgid "IfcTimeSeries_DataOrigin_DEFINITION"
+msgstr "時系列データの原点。"
+
+#:IFC.xml:3802
+msgid "IfcTimeSeries_Description"
+msgstr "説明"
+
+msgid "IfcTimeSeries_Description_DEFINITION"
+msgstr "系列が表すデータのテキスト説明。"
+
+#:IFC.xml:3807
+msgid "IfcTimeSeries_EndTime"
+msgstr "EndTime"
+
+msgid "IfcTimeSeries_EndTime_DEFINITION"
+msgstr "時系列の終了時刻。"
+
+#:IFC.xml:3812
+msgid "IfcTimeSeries_Name"
+msgstr "名前"
+
+msgid "IfcTimeSeries_Name_DEFINITION"
+msgstr "時系列の固有の名前。"
+
+#:IFC.xml:3817
+msgid "IfcTimeSeries_StartTime"
+msgstr "StartTime"
+
+msgid "IfcTimeSeries_StartTime_DEFINITION"
+msgstr "時系列の開始時刻。"
+
+#:IFC.xml:3822
+msgid "IfcTimeSeries_TimeSeriesDataType"
+msgstr "TimeSeriesDataType"
+
+msgid "IfcTimeSeries_TimeSeriesDataType_DEFINITION"
+msgstr "時系列データ型。"
+
+#:IFC.xml:3827
+msgid "IfcTimeSeries_Unit"
+msgstr "単位"
+
+msgid "IfcTimeSeries_Unit_DEFINITION"
+msgstr "時間系列内のすべての値に割り当てる単位。ミキシング単位は許可されません。 値が指定されていない場合は、[[IfcValue]] の型のグローバル単位が使用されます。これは、[[IfcProject]].UnitsInContext で定義されています。"
+
+#:IFC.xml:3832
+msgid "IfcTimeSeries_UserDefinedDataOrigin"
+msgstr "UserDefinedDataOrigin"
+
+msgid "IfcTimeSeries_UserDefinedDataOrigin_DEFINITION"
+msgstr "DataOrigin 属性が USERDEFINED の場合のデータ原点の値。"
+
+#:IFC.xml:3853
+msgid "IfcTimeSeriesDataTypeEnum"
+msgstr "IfcTimeSeriesDataTypeEnum"
+
+msgid "IfcTimeSeriesDataTypeEnum_DEFINITION"
+msgstr "[[IfcTimeSeriesDataTypeEnum]] describes a type of time series data and is used to determine a value during the time series which is not explicitly specified. X 0D X 0D HISTORY New enumeration in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3854
+msgid "IfcTimeSeriesDataTypeEnum_CONTINUOUS"
+msgstr "続ける"
+
+msgid "IfcTimeSeriesDataTypeEnum_CONTINUOUS_DEFINITION"
+msgstr "続ける"
+
+#:IFC.xml:3855
+msgid "IfcTimeSeriesDataTypeEnum_DISCRETE"
+msgstr "Discrete"
+
+msgid "IfcTimeSeriesDataTypeEnum_DISCRETE_DEFINITION"
+msgstr "Discrete"
+
+#:IFC.xml:3856
+msgid "IfcTimeSeriesDataTypeEnum_DISCRETEBINARY"
+msgstr "Discretebinary"
+
+msgid "IfcTimeSeriesDataTypeEnum_DISCRETEBINARY_DEFINITION"
+msgstr "Discretebinary"
+
+#:IFC.xml:3857
+msgid "IfcTimeSeriesDataTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcTimeSeriesDataTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:3858
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISEBINARY"
+msgstr "パイセワイズビナリー"
+
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISEBINARY_DEFINITION"
+msgstr "パイセワイズビナリー"
+
+#:IFC.xml:3859
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISECONSTANT"
+msgstr "パイコンスタント"
+
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISECONSTANT_DEFINITION"
+msgstr "パイコンスタント"
+
+#:IFC.xml:3860
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISECONTINUOUS"
+msgstr "パイセコンティヌウス"
+
+msgid "IfcTimeSeriesDataTypeEnum_PIECEWISECONTINUOUS_DEFINITION"
+msgstr "パイセコンティヌウス"
+
+#:IFC.xml:3862
+msgid "IfcTimeSeriesValue"
+msgstr "IfcTimeSeriesValue"
+
+msgid "IfcTimeSeriesValue_DEFINITION"
+msgstr "A time series value is a list of values that comprise the time series. At least one value must be supplied. Applications are expected to normalize values by applying the following three rules X 0D X 0D All time universal, local, daylight savings, and solar is normalized against the ISO 8601 standard GMT UTC Universal Coordinated Time . X 0D Any rollover is handled by the application providing the data. Rollover occurs, for example, when the measurement device resets itself while measuring and the recording data do not include the data measured before the reset. X 0D The normalized data refer to the preceding time unit. The time series example shown in Figure 1 below contains four time points Time a indicates the beginning of the time series and the associated datum has no relevance. Data at time points b, c and d are associated with values 1, 2 and 3, respectively. X 0D X 0D time series values .. .. .. .. .. .. figures ifctimeseries timeseriesvalue.gif Figure 1 Time series value X 0D X 0D HISTORY New entity in IFC2x2.bSI Documentation"
+
+#:IFC.xml:3863
+msgid "IfcTimeSeriesValue_ListValues"
+msgstr "リスト値"
+
+msgid "IfcTimeSeriesValue_ListValues_DEFINITION"
+msgstr "時系列の値のリスト。少なくとも1つの値が必要です。"
+
+#:IFC.xml:3869
+msgid "IfcWorkTime"
+msgstr "IfcWorkTime"
+
+msgid "IfcWorkTime_DEFINITION"
+msgstr "[[IfcWorkTime]] defines time periods that are used by [[IfcWorkCalendar]] for either describing working times or non working exception times. Besides start and finish dates, a set of time periods can be given by various types of recurrence patterns. X 0D X 0D A work time should have a meaningful name that describes the time periods for example, working week, holiday name . Non recurring time periods should have a start date [[IfcWorkTime]].Start and a finish date [[IfcWorkTime]].Finish . In that case it is assumed that the time period begins at 0 00 on the start date and ends at 24 00 on the finish date. X 0D X 0D The start and finish date is optional if a recurrence pattern is given [[IfcWorkTime]].RecurrencePattern . They then restrict never ending recurrence patterns. X 0D X 0D HISTORY New entity in IFC4.bSI Documentation"
+
+#:IFC.xml:3538
+msgid "IfcWorkTime_RecurrencePattern"
+msgstr "RecurrencePattern"
+
+msgid "IfcWorkTime_RecurrencePattern_DEFINITION"
+msgstr "RecurrencePattern"
+
+#:IFC.xml:3870
+msgid "IfcWorkTime_Finish"
+msgstr "完了"
+
+msgid "IfcWorkTime_Finish_DEFINITION"
+msgstr "作業終了日 24 00 , 再発パターンによって制限されるさらにX 0Dかもしれません."
+
+#:IFC.xml:3875
+msgid "IfcWorkTime_Start"
+msgstr "開始"
+
+msgid "IfcWorkTime_Start_DEFINITION"
+msgstr "作業時間 0 00 の開始日時、繰り返しパターンによってさらにX 0Dに制限される可能性があります。"
+
+#:IFC.xml:3906
+msgid "IfcDate"
+msgstr "IfcDate"
+
+msgid "IfcDate_DEFINITION"
+msgstr "The IfcData identifies a particular calender day, expressed by year, calender month and day in month. It is expressed by a string value following a particular lexical representation. X 0D X 0D The lexical representation for [[IfcDate]] is the YYYY MM DD, where YYYY represents the calendar year, MM the ordinal number of the calendar month, and DD the ordinal number of the day within the calendar month. No left truncation is allowed. An optional following time zone qualifier is allowed. To accommodate year values outside the range from 0001 to 9999, additional digits can be added to the left of this representation and a preceding sign is allowed. X 0D X 0D NOTE See extended format representation of date as defined in ISO 8601. The restrictions defined in XML Schema Part 2 apply. X 0D X 0D HISTORY New type in IFC4.bSI Documentation"
+
+#:IFC.xml:3910
+msgid "IfcDateTime"
+msgstr "IfcDateTime"
+
+msgid "IfcDateTime_DEFINITION"
+msgstr "The IfcDataTime identifies a particular point in time, expressed by hours, minutes and optional seconds elapsed within a calender day, expressed by year, calender month and day in month. It is expressed by a string value following a particular lexical representation. X 0D X 0D This lexical representation for IfcDataTime is YYYY MM DDThh mm ss where YYYY represent the year, MM the month and DD the day, preceded by an optional leading sign to indicate a negative year number. If the sign is omitted, is assumed. The letter T is the date time separator and hh , mm , ss represent hour, minute and second respectively. Additional digits can be used to increase the precision of fractional seconds if desired i.e the format ss.ss... with any number of digits after the decimal point is supported. The fractional seconds part is optional other parts of the lexical form are not optional. To accommodate year values greater than 9999 additional digits can be added to the left of this representation. Leading zeros are required if the year value would otherwise have fewer than four digits otherwise they are forbidden. The year 0000 is prohibited. X 0D X 0D NOTE See extended format representation of dateTime as defined in ISO 8601. The restrictions defined in XML Schema Part 2 apply. X 0D X 0D HISTORY New type in IFC4.bSI Documentation"
+
+#:IFC.xml:3914
+msgid "IfcDayInMonthNumber"
+msgstr "IfcDayInMonthNumber"
+
+msgid "IfcDayInMonthNumber_DEFINITION"
+msgstr "[[IfcDayInMonthNumber]] is an integer that defines the position of the specified day in a month. X 0D X 0D Type INTEGER X 0D X 0D HISTORY New type in IFC1.5.1. X 0D X 0D .change ifc2x4 X 0D IFC4 CHANGE Where rule ValidRange added.bSI Documentation"
+
+#:IFC.xml:3917
+msgid "IfcDayInWeekNumber"
+msgstr "IfcDayInWeekNumber"
+
+msgid "IfcDayInWeekNumber_DEFINITION"
+msgstr "The [[IfcDayInWeekNumber]] is an integer that defines the position of the specified day in a week. The positions have the following meaning that assigns the ordinal day number in the week to the Calendar day name. X 0D X 0D Ordinal day numbers map to calendar days as follows X 0D X 0D 1 Monday X 0D 2 Tuesday X 0D 3 Wednesday X 0D 4 Thursday X 0D 5 Friday X 0D 6 Saturday X 0D 7 SundaybSI Documentation"
+
+#:IFC.xml:3920
+msgid "IfcDuration"
+msgstr "IfcDuration"
+
+msgid "IfcDuration_DEFINITION"
+msgstr "The [[IfcDuration]] identifies a quantity of time or a lenght of an event occurring in time . X 0D X 0D This lexical representation for IfcDataTime is PnYnMnDTnHnMnS, where nY represents the number of years, nM the number of months, nD the number of days, T is the date time separator, nH the number of hours, nM the number of minutes and nS the number of seconds. The number of seconds can include decimal digits to arbitrary precision. X 0D X 0D EXAMPLE P2Y10M15DT10H30M20S duration of two years, 10 months, 15 days, 10 hours, 30 minutes and 20 seconds . X 0D X 0D NOTE See extended format representation of duration as defined in ISO 8601. The restrictions defined in XML Schema Part 2 apply. X 0D X 0D HISTORY New type in IFC4bSI Documentation"
+
+#:IFC.xml:3925
+msgid "IfcMonthInYearNumber"
+msgstr "IfcMonthInYearNumber"
+
+msgid "IfcMonthInYearNumber_DEFINITION"
+msgstr "[[IfcMonthInYearNumber]] is an integer that defines the position of the specified month in a year. X 0D X 0D Calendar month numbers map to calendar month names as follows X 0D X 0D 1 January X 0D 2 February X 0D 3 March X 0D 4 April X 0D 5 May X 0D 6 June X 0D 7 July X 0D 8 August X 0D 9 September X 0D 10 October X 0D 11 November X 0D 12 December X 0D X 0D Type INTEGER X 0D X 0D NOTE See definition of calendar month as defined in ISO 8601. X 0D X 0D .note X 0D HISTORY New type in IFC1.5.1.bSI Documentation"
+
+#:IFC.xml:3928
+msgid "IfcTime"
+msgstr "IfcTime"
+
+msgid "IfcTime_DEFINITION"
+msgstr "The [[IfcTime]] identifies a time within a day, expressed by hours, minutes and second. It is expressed by a string value following a particular lexical representation. X 0D X 0D The lexical representation for [[IfcTime]] is hh mm ss where where hh represents hours, mm minutes and ss seconds. Additional digits can be used to increase the precision of fractional seconds if desired i.e the format ss.ss... A time zone indicator may be provided by a representation of the different to the Coordinated Universal Time. It is appended with a sign followed by hh and optionally mm. X 0D X 0D EXAMPLE 13 20 00 05 00 represents 1 20 pm for a time zone which is 5 hours behind Coordinated Universal Time such as Eastern Standard Time X 0D X 0D NOTE See extended format representation of time as defined in ISO 8601. The restrictions defined in XML Schema Part 2 apply. X 0D X 0D HISTORY New type in IFC4.bSI Documentation"
+
+#:IFC.xml:3932
+msgid "IfcTimeStamp"
+msgstr "IfcTimeStamp"
+
+msgid "IfcTimeStamp_DEFINITION"
+msgstr "[[IfcTimeStamp]] is an indication of date and time by measuring the number of seconds which have elapsed since 1 January 1970, 00 00 00 UTC. X 0D X 0D Type INTEGER X 0D X 0D NOTE Defined in IEEE Std 1003.1. X 0D X 0D HISTORY New type in IFC1.5.1.bSI Documentation"
 
