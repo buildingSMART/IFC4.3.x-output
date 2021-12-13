@@ -9,319 +9,1388 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcSharedFacilitiesElements.pot\n"
+"X-Crowdin-File-ID: 88\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: no_NO\n"
 "PO-Revision-Date: 2021-12-13 09:00\n"
 
-#:IFC.xml:41870
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:37506
+msgid "IfcAsset"
+msgstr "IfcAsset"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
+msgid "IfcAsset_DEFINITION"
+msgstr "An asset is a uniquely identifiable grouping of elements acting as a single entity that has a financial value or that can be operated on as a single unit. An asset is generally the level of granularity at which maintenance operations are undertaken. An asset is a group that can contain one or more elements. Whilst the financial value of a component or element can be defined, financial value is also defined for accounting purposes at the level of the asset. There are a number of actors that can be associated with an asset, each actor having a role. Actors within the scope of the project are indicated using the [[IfcRelAssignsToActor]] .. .. ifckernel lexical ifcrelassignstoactor.htm relationship in which case roles should be defined through the [[IfcActorRole]] .. .. ifcactorresource lexical ifcactorrole.htm class otherwise principal actors are identified as attributes of the class. In the existence of both, direct attributes take precedence. There are a number of costs that can be associated with an asset, each cost having a role. These are specified through the OriginalValue , CurrentValue , TotalReplacementCost and DepreciatedValue attributes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE All attributes made optional and date values changed to use [[IfcDate]] ."
 
-#:IFC.xml:41873
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:262
+msgid "IfcAsset_ResponsiblePerson"
+msgstr "ResponsiblePerson"
 
-#:IFC.xml:41881
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcAsset_ResponsiblePerson_DEFINITION"
+msgstr "The person designated to be responsible for the asset. NOTE In some regulations for example, UK Health and Safety at Work Act, Electricity at Work Regulations , management of assets must have a person identified as being responsible and to whom regulatory, insurance and other organizations communicate. In places where there is not a legal requirement, the responsible person would be the asset manager but would not have a legal status."
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:3230
+msgid "IfcAsset_OriginalValue"
+msgstr "Orginalverdi"
 
-#:IFC.xml:41886
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+msgid "IfcAsset_OriginalValue_DEFINITION"
+msgstr "The cost value of the asset at the time of purchase."
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A connected face set is a set of faces such that the domain of faces together with their bounding edges and vertices is connected. NOTE Entity adapted from connected face set defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. The union of the domains of the faces and their bounding loops shall be arcwise connected."
+#:IFC.xml:3242
+msgid "IfcAsset_CurrentValue"
+msgstr "Strømverdi"
 
-#:IFC.xml:41889
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "FifsFlater"
+msgid "IfcAsset_CurrentValue_DEFINITION"
+msgstr "The current cost value of the asset."
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "The set of faces arcwise connected along common edges or vertices."
+#:IFC.xml:3254
+msgid "IfcAsset_TotalReplacementCost"
+msgstr "Totalutskiftingskostnad"
 
-#:IFC.xml:41901
-msgid "IfcEdge"
-msgstr "Slovenija"
+msgid "IfcAsset_TotalReplacementCost_DEFINITION"
+msgstr "The total cost of replacement of the asset."
 
-msgid "IfcEdge_DEFINITION"
-msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
+#:IFC.xml:3266
+msgid "IfcAsset_DepreciatedValue"
+msgstr "Avskrevet verdi"
 
-#:IFC.xml:41904
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+msgid "IfcAsset_DepreciatedValue_DEFINITION"
+msgstr "The current value of an asset within the accounting rules and procedures of an organization."
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "Start point vertex of the edge."
+#:IFC.xml:37507
+msgid "IfcAsset_Identification"
+msgstr "Identifikasjon"
 
-#:IFC.xml:41916
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+msgid "IfcAsset_Identification_DEFINITION"
+msgstr "A unique identification assigned to an asset that enables its differentiation from other assets. NOTE The asset identifier is unique within the asset register. It differs from the globally unique id assigned to the instance of an entity populating a database."
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "End point vertex of the edge. The same vertex can be used for both EdgeStart and EdgeEnd."
+#:IFC.xml:37512
+msgid "IfcAsset_IncorporationDate"
+msgstr "Innlemmelsesdato"
 
-#:IFC.xml:41952
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+msgid "IfcAsset_IncorporationDate_DEFINITION"
+msgstr "The date on which an asset was incorporated into the works, installed, constructed, erected or completed. NOTE This is the date on which an asset is considered to start depreciating. .history IFC4 CHANGE Type changed from IfcDateTimeSelect."
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
+#:IFC.xml:37517
+msgid "IfcAsset_Owner"
+msgstr "Eier"
 
-#:IFC.xml:11304
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometri"
+msgid "IfcAsset_Owner_DEFINITION"
+msgstr "Navnet på personen eller organisasjonen som eier eiendelen."
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "The curve which defines the shape and spatial location of the edge. This curve may be unbounded and is implicitly trimmed by the vertices of the edge this defines the edge domain. Multiple edges can reference the same curve."
+#:IFC.xml:37522
+msgid "IfcAsset_User"
+msgstr "Bruker"
 
-#:IFC.xml:41953
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+msgid "IfcAsset_User_DEFINITION"
+msgstr "Navnet på personen eller organisasjonen som bruker eiendelen."
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Dette logiske flagget angir hvorvidt TRUE , eller ikke USANT sansene på kanten og kurven som definerer kantgeometrien, er de samme. Følelsen av en kant er fra kantens start vertex til kantens ende ende vertex er i retning av økende parameter."
+#:IFC.xml:37529
+msgid "IfcFurniture"
+msgstr "Ifcmøbler"
 
-#:IFC.xml:41961
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+msgid "IfcFurniture_DEFINITION"
+msgstr "Furniture defines complete furnishings such as a table, desk, chair, or cabinet, which may or may not be permanently attached to a building structure. Occurrences of furniture that are built in where the property Pset FurnitureTypeCommon.IsBuiltIn is asserted to be TRUE should have their connection relationship with a building element occurrence defined through the [[IfcRelConnectsElements]] relationship. HISTORY New entity in IFC2x2."
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
+#:IFC.xml:37530
+msgid "IfcFurniture_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:41969
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Redigeringsliste"
+msgid "IfcFurniture_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "A list of oriented edge entities which are concatenated together to form this path."
+#:IFC.xml:37537
+msgid "IfcFurnitureType"
+msgstr "IfcFurnitureType"
 
-#:IFC.xml:41962
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ni"
+msgid "IfcFurnitureType_DEFINITION"
+msgstr "The furnishing element type [[IfcFurnitureType]] defines commonly shared information for occurrences of furnitures. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a furniture type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFurnitureType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFurnitureType]] are represented by instances of [[IfcFurniture]] . Refer to the documentation at [[IfcFurniture]] for supported property sets, materials, and composition. HISTORY New entity in IFC2x2 .note"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "The number of elements in the edge list."
+#:IFC.xml:37538
+msgid "IfcFurnitureType_AssemblyPlace"
+msgstr "Sammenstilling"
 
-#:IFC.xml:41981
-msgid "IfcFace"
-msgstr "IfcFace"
+msgid "IfcFurnitureType_AssemblyPlace_DEFINITION"
+msgstr "En betegnelse på der konstruksjonen er beregnet på å finne sted. Et utvalg av alternativer angitt på en nummerert liste."
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+#:IFC.xml:37543
+msgid "IfcFurnitureType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:25229
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+msgid "IfcFurnitureType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+#:IFC.xml:37550
+msgid "IfcFurnitureTypeEnum"
+msgstr "IfcFurnitureTypeEnum"
 
-#:IFC.xml:41984
-msgid "IfcFace_Bounds"
-msgstr "Lyder"
+msgid "IfcFurnitureTypeEnum_DEFINITION"
+msgstr "[[IfcFurnitureTypeEnum]] defines the types of furniture from which the type required can be selected. HISTORY New enumeration in IFC4. Items CHAIR Furniture for seating a single person. TABLE Furniture with a countertop for multiple people. DESK Furniture with a countertop and optional drawers for a single person. BED FILECABINET SHELF SOFA TECHNICALCABINET USERDEFINED User defined type. NOTDEFINED"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Boundaries of the face."
+#:IFC.xml:37562
+msgid "IfcFurnitureTypeEnum_BED"
+msgstr "FØR"
 
-#:IFC.xml:41996
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+msgid "IfcFurnitureTypeEnum_BED_DEFINITION"
+msgstr "FØR"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face bound is a loop which is intended to be used for bounding a face. NOTE Entity adapted from face bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
+#:IFC.xml:37563
+msgid "IfcFurnitureTypeEnum_CHAIR"
+msgstr "CHAIR"
 
-#:IFC.xml:42004
-msgid "IfcFaceBound_Bound"
-msgstr "Bundet"
+msgid "IfcFurnitureTypeEnum_CHAIR_DEFINITION"
+msgstr "Furniture for seating a single person."
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "The loop which will be used as a face boundary."
+#:IFC.xml:37564
+msgid "IfcFurnitureTypeEnum_DESK"
+msgstr "BESK"
 
-#:IFC.xml:41997
-msgid "IfcFaceBound_Orientation"
-msgstr "Retning"
+msgid "IfcFurnitureTypeEnum_DESK_DEFINITION"
+msgstr "Furniture with a countertop and optional drawers for a single person."
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dette indikerer om SANN eller ikke FALSE løkken har samme sann når den brukes til å binde ansiktet som når den først defineres. Hvis fornuft er FALSE, blir sansene på alle de komponentorienterte kantene implisitt reversert når de brukes i ansiktet."
+#:IFC.xml:37565
+msgid "IfcFurnitureTypeEnum_FILECABINET"
+msgstr "FILMESKJØP"
 
-#:IFC.xml:42016
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+msgid "IfcFurnitureTypeEnum_FILECABINET_DEFINITION"
+msgstr "FILMESKJØP"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carries the additional semantics of defining an outer boundary on the face. No more than one boundary of a face shall be of this type. NOTE Entity adapted from face outer bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
+#:IFC.xml:37566
+msgid "IfcFurnitureTypeEnum_NOTDEFINED"
+msgstr "IKKERFINERT"
 
-#:IFC.xml:42019
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+msgid "IfcFurnitureTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "IKKERFINERT"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "The [[IfcFaceSurface]] defines the underlying geometry of the associated surface to the face. NOTE The topology is used to trim the geometry of the surface. There is no need to geometrically trim the surface to match the topology. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face surface is a subtype of face in which the geometry is defined by an associated surface. The portion of the surface used by the face shall be embeddable in the plane as an open disk, possibly with holes. However, the union of the face with the edges and vertices of its bounding loops need not be embeddable in the plane. It may, for example, cover an entire sphere or torus. As both a face and a geometric surface have defined normal directions, a BOOLEAN flag the orientation attribute is used to indicate whether the surface normal agrees with TRUE or is opposed to FALSE the face normal direction. The geometry associated with any component of the loops of the face shall be consistent with the surface geometry, in the sense that the domains of all the vertex points and edge curves are contained in the face geometry surface. A surface may be referenced by more than one face surface. NOTE Entity adapted from face surface defined in ISO 10303 42. HISTORY New entity in IFC2x .spec head Informal Propositions 1. The domain of the face surface is formally defined to be the domain of its face geometry as trimmed by the loops, this domain does not include the bounding loops. 2. A face surface has non zero finite extent. 3. A face surface is a manifold. 4. A face surface is arcwise connected. 5. A face surface has surface genus 0. 6. The loops are not part of the face domain. 7. Loop geometry shall be consistent with face geometry. This implies that any edge curves or vertex points used in defining the loops bounding the face surface shall lie on the face geometry. 8. The loops of the face shall not intersect."
+#:IFC.xml:37567
+msgid "IfcFurnitureTypeEnum_SHELF"
+msgstr "SHELF"
 
-#:IFC.xml:12332
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Overflate"
+msgid "IfcFurnitureTypeEnum_SHELF_DEFINITION"
+msgstr "SHELF"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF FaceBounds."
+#:IFC.xml:37568
+msgid "IfcFurnitureTypeEnum_SOFA"
+msgstr "SOFA"
 
-#:IFC.xml:42020
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+msgid "IfcFurnitureTypeEnum_SOFA_DEFINITION"
+msgstr "SOFA"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Dette flagget angir om følelsen av overflaten normal er enig med SAN, eller er motstander av FALSE, den topologiske normalen til ansiktet."
+#:IFC.xml:37569
+msgid "IfcFurnitureTypeEnum_TABLE"
+msgstr "TABELL"
 
-#:IFC.xml:42028
-msgid "IfcLoop"
-msgstr "Smykke"
+msgid "IfcFurnitureTypeEnum_TABLE_DEFINITION"
+msgstr "Furniture with a countertop for multiple people."
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A loop is a topological entity constructed from a single vertex, or by stringing together connected oriented edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0 dimensional loop is a single point. The domain of a 1 dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning ending point is arbitrary. The domain of the loop includes its bounds, an 0 Ξ . A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so M and the graph genus G l may be determined by the graph traversal algorithm. Since M 1, the Euler equation 1 reduces in this case to Image .. .. .. .. figures ifcloop math1.gif where V and E l are the number of unique vertices and oriented edges in the loop and G l is the genus of the loop. NOTE Entity adapted from loop defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. A loop has a finite extent. 2. A loop describes a closed topological curve with coincident start and end vertices."
+#:IFC.xml:37570
+msgid "IfcFurnitureTypeEnum_TECHNICALCABINET"
+msgstr "TEKNIKALKABINET"
 
-#:IFC.xml:42031
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToail ALoop"
+msgid "IfcFurnitureTypeEnum_TECHNICALCABINET_DEFINITION"
+msgstr "TEKNIKALKABINET"
 
-#:IFC.xml:42039
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:37571
+msgid "IfcFurnitureTypeEnum_USERDEFINED"
+msgstr "BRUKERDEFINERT"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. An open shell shall have at least one face. A given face may exist in more than one open shell. The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. NOTE Entity adapted from open shell defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the face bounds of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied."
+msgid "IfcFurnitureTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Bruker definert type."
 
-#:IFC.xml:42043
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:37572
+msgid "IfcInventory"
+msgstr "IfcInventar"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
+msgid "IfcInventory_DEFINITION"
+msgstr "An inventory is a list of items within an enterprise. Various types of inventory can be included. These are identified by the range of values within the inventory type enumeration which includes space, asset, and furniture. User defined inventories can also be defined for lists of particular types of element such as may be required in operating and maintenance instructions. Such inventories should be constrained to contain a list of elements of a restricted type. There are a number of actors that can be associated with an inventory, each actor having a role. Actors within the scope of the project are indicated using the [[IfcRelAssignsToActor]] .. .. ifckernel lexical ifcrelassignstoactor.htm relationship in which case roles should be defined through the [[IfcActorRole]] .. .. ifcactorresource lexical ifcactorrole.htm class otherwise principal actors are identified as attributes of the class. In the existence of both, direct attributes take precedence. There are a number of costs that can be associated with an inventory, each cost having a role. These are specified through the CurrentValue and OriginalValue attributes. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE All attributes optional, Where Rule removed."
 
-#:IFC.xml:41928
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Redigerelement"
+#:IFC.xml:274
+msgid "IfcInventory_ResponsiblePersons"
+msgstr "ResponsiblePersoner"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Edge entity used to construct this oriented edge."
+msgid "IfcInventory_ResponsiblePersons_DEFINITION"
+msgstr "Persons who are responsible for the inventory."
 
-#:IFC.xml:42044
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:3290
+msgid "IfcInventory_CurrentValue"
+msgstr "Strømverdi"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcInventory_CurrentValue_DEFINITION"
+msgstr "An estimate of the current cost value of the inventory."
 
-#:IFC.xml:42048
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:3302
+msgid "IfcInventory_OriginalValue"
+msgstr "Orginalverdi"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcInventory_OriginalValue_DEFINITION"
+msgstr "An estimate of the original cost value of the inventory."
 
-#:IFC.xml:42052
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Retning"
+#:IFC.xml:37573
+msgid "IfcInventory_Jurisdiction"
+msgstr "juryens"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "Hvis denne er topologisk orientering som brukt sammenfaller med orienteringen fra start vertex til slutten av kantelementet. Hvis tilbakekallingen skjer."
+msgid "IfcInventory_Jurisdiction_DEFINITION"
+msgstr "Den organisasjonsenheten som oversikten gjelder for."
 
-#:IFC.xml:42071
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:37578
+msgid "IfcInventory_LastUpdateDate"
+msgstr "LastUpdateDate"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path TRUE or is the opposite direction FALSE . An individual edge can only be referenced once by an individual path. An edge can be referenced by multiple paths. An edge can exist independently of a path. NOTE Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. A path has dimensionality 1. 2. A path is arcwise connected. 3. The edges of the path do not intersect except at common vertices. 4. A path has a finite, non zero extent."
+msgid "IfcInventory_LastUpdateDate_DEFINITION"
+msgstr "The date on which the last update of the inventory was carried out. .change ifc2x4 IFC4 CHANGE Type changed from IfcDateTimeSelect."
 
-#:IFC.xml:42059
-msgid "IfcPath_EdgeList"
-msgstr "Redigeringsliste"
+#:IFC.xml:37583
+msgid "IfcInventory_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "The list of oriented edges which are concatenated together to form this path."
+msgid "IfcInventory_PredefinedType_DEFINITION"
+msgstr "A list of the types of inventories from which that required may be selected. .change ifc2x4 IFC4 CHANGE Attribute made optional."
 
-#:IFC.xml:42074
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail-APat"
+#:IFC.xml:37590
+msgid "IfcInventoryTypeEnum"
+msgstr "IfcInventoryTypeEnum"
 
-#:IFC.xml:42082
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+msgid "IfcInventoryTypeEnum_DEFINITION"
+msgstr "[[IfcInventoryTypeEnum]] defines the types of inventory that can be defined. HISTORY New enumeration in IFC2.0. Items ASSETINVENTORY A collection of asset instances of type [[IfcAsset]]. SPACEINVENTORY A collection of space instances of type [[IfcSpace]]. FURNITUREINVENTORY A collection of furniture instances of type [[IfcFurnishingElement]]. USERDEFINED User defined type. NOTDEFINED"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
+#:IFC.xml:37597
+msgid "IfcInventoryTypeEnum_ASSETINVENTORY"
+msgstr "ASSETINVENTORY"
 
-#:IFC.xml:10921
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+msgid "IfcInventoryTypeEnum_ASSETINVENTORY_DEFINITION"
+msgstr "A collection of asset instances of type [[IfcAsset]]."
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "List of points defining the loop. There are no repeated points in the list."
+#:IFC.xml:37598
+msgid "IfcInventoryTypeEnum_FURNITUREINVENTORY"
+msgstr "FJERNITYGGHET"
 
-#:IFC.xml:42085
-msgid "IfcShell"
-msgstr "IfcShell"
+msgid "IfcInventoryTypeEnum_FURNITUREINVENTORY_DEFINITION"
+msgstr "A collection of furniture instances of type [[IfcFurnishingElement]]."
 
-#:IFC.xml:42086
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+#:IFC.xml:37599
+msgid "IfcInventoryTypeEnum_NOTDEFINED"
+msgstr "IKKERFINERT"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A subedge is an edge whose domain is a connected portion of the domain of an existing edge. The topological constraints on a subedge are the same as those on an edge. NOTE Entity adapted from subedge defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The domain of the subedge is formally defined to be the domain of the parent edge, as trimmed by the subedge start vertex and subedge end vertex. 2. The start vertex and end vertex shall be within the union of the domains of the vertices of the parent edge and the domain of the parent edge ."
+msgid "IfcInventoryTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "IKKERFINERT"
 
-#:IFC.xml:41940
-msgid "IfcSubedge_ParentEdge"
-msgstr "Fornavn"
+#:IFC.xml:37600
+msgid "IfcInventoryTypeEnum_SPACEINVENTORY"
+msgstr "SPACEINVENTORIE"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "The Edge, or Subedge, which contains the Subedge."
+msgid "IfcInventoryTypeEnum_SPACEINVENTORY_DEFINITION"
+msgstr "A collection of space instances of type [[IfcSpace]]."
 
-#:IFC.xml:42089
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:37601
+msgid "IfcInventoryTypeEnum_USERDEFINED"
+msgstr "BRUKERDEFINERT"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 The topological representation item is the supertype for all the topological representation items in the geometry resource. NOTE Entity adapted from topological representation item defined in ISO 10303 42. HISTORY New entity in IFC1.5"
+msgid "IfcInventoryTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Bruker definert type."
 
-#:IFC.xml:42092
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:37602
+msgid "IfcOccupant"
+msgstr "IfcOccupant"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex is the topological construct corresponding to a point. It has dimensionality 0 and extent 0. The domain of a vertex, if present, is a point in m dimensional real space R M this is represented by the vertex point subtype. NOTE Entity adapted from vertex defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The vertex has dimensionality 0. This is a fundamental property of the vertex. 2. The extent of a vertex is defined to be zero."
+msgid "IfcOccupant_DEFINITION"
+msgstr "An occupant is a type of actor that defines the form of occupancy of a property. The principal purpose of [[IfcOccupant]] is to determine the nature of occupancy of a property for a particular actor. All characteristics relating to the actor name and organization details are inherited from the [[IfcActor]] entity. HISTORY New entity in IFC2x"
 
-#:IFC.xml:42107
-msgid "IfcVertexLoop"
-msgstr "IfcVertexloop"
+#:IFC.xml:37603
+msgid "IfcOccupant_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex loop is a loop of zero genus consisting of a single vertex. A vertex can exist independently of a vertex loop. The topological data shall satisfy the following constraint Image .. .. .. .. figures ifcvertexloop math1.gif NOTE Entity adapted from vertex loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. A vertex loop has zero extent and dimensionality. 2. The vertex loop has genus 0."
+msgid "IfcOccupant_PredefinedType_DEFINITION"
+msgstr "Predefined occupant types from which that required may be set. .change ifc2x4 IFC4 CHANGE Attribute made optional."
 
-#:IFC.xml:42095
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:37610
+msgid "IfcOccupantTypeEnum"
+msgstr "IfcOccupantTypeEnum"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "The vertex which defines the entire loop."
+msgid "IfcOccupantTypeEnum_DEFINITION"
+msgstr "[[IfcOccupantTypeEnum]] defines the types of occupant from which the type required can be selected. HISTORY New enumeration in IFC2.0. Items ASSIGNEE Actor receiving the assignment of a property agreement from an assignor. ASSIGNOR Actor assigning a property agreement to an assignor. LESSEE Actor receiving the lease of a property from a lessor. LESSOR Actor leasing a property to a lessee. LETTINGAGENT Actor participating in a property agreement on behalf of an owner, lessor or assignor. OWNER Actor that owns a property. TENANT Actor renting the use of a property fro a period of time. USERDEFINED User defined type. NOTDEFINED"
 
-#:IFC.xml:42110
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:37621
+msgid "IfcOccupantTypeEnum_ASSIGNEE"
+msgstr "ASSIGNEE"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex point is a vertex which has its geometry defined as a point. NOTE Entity adapted from vertex point defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the vertex is formally defined to be the domain of its vertex point."
+msgid "IfcOccupantTypeEnum_ASSIGNEE_DEFINITION"
+msgstr "Actor receiving the assignment of a property agreement from an assignor."
 
-#:IFC.xml:11892
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometri"
+#:IFC.xml:37622
+msgid "IfcOccupantTypeEnum_ASSIGNOR"
+msgstr "ASSIGNOR"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "The geometric point, which defines the position in geometric space of the vertex."
+msgid "IfcOccupantTypeEnum_ASSIGNOR_DEFINITION"
+msgstr "Actor assigning a property agreement to an assignor."
+
+#:IFC.xml:37623
+msgid "IfcOccupantTypeEnum_LESSEE"
+msgstr "FORSK"
+
+msgid "IfcOccupantTypeEnum_LESSEE_DEFINITION"
+msgstr "Actor receiving the lease of a property from a lessor."
+
+#:IFC.xml:37624
+msgid "IfcOccupantTypeEnum_LESSOR"
+msgstr "LESSOR"
+
+msgid "IfcOccupantTypeEnum_LESSOR_DEFINITION"
+msgstr "Actor leasing a property to a lessee."
+
+#:IFC.xml:37625
+msgid "IfcOccupantTypeEnum_LETTINGAGENT"
+msgstr "INNSTILLING"
+
+msgid "IfcOccupantTypeEnum_LETTINGAGENT_DEFINITION"
+msgstr "Actor participating in a property agreement on behalf of an owner, lessor or assignor."
+
+#:IFC.xml:37626
+msgid "IfcOccupantTypeEnum_NOTDEFINED"
+msgstr "IKKERFINERT"
+
+msgid "IfcOccupantTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "IKKERFINERT"
+
+#:IFC.xml:37627
+msgid "IfcOccupantTypeEnum_OWNER"
+msgstr "EIER"
+
+msgid "IfcOccupantTypeEnum_OWNER_DEFINITION"
+msgstr "Actor that owns a property."
+
+#:IFC.xml:37628
+msgid "IfcOccupantTypeEnum_TENANT"
+msgstr "KJØP"
+
+msgid "IfcOccupantTypeEnum_TENANT_DEFINITION"
+msgstr "Actor renting the use of a property fro a period of time."
+
+#:IFC.xml:37629
+msgid "IfcOccupantTypeEnum_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+msgid "IfcOccupantTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Bruker definert type."
+
+#:IFC.xml:37630
+msgid "IfcSystemFurnitureElement"
+msgstr "IfcSystemFurnitureElement"
+
+msgid "IfcSystemFurnitureElement_DEFINITION"
+msgstr "A system furniture element defines components of modular furniture which are not directly placed in a building structure but aggregated inside furniture. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:37631
+msgid "IfcSystemFurnitureElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcSystemFurnitureElement_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:37638
+msgid "IfcSystemFurnitureElementType"
+msgstr "IfcSystemFurnitureElementType"
+
+msgid "IfcSystemFurnitureElementType_DEFINITION"
+msgstr "The furnishing element type [[IfcSystemFurnitureElementType]] defines commonly shared information for occurrences of system furniture elements. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a system furniture element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcSystemFurnitureElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcSystemFurnitureElementType]] are represented by instances of [[IfcSystemFurnitureElement]] . Refer to the documentation at [[IfcSystemFurnitureElement]] for supported property sets, materials, and composition. HISTORY New entity in IFC2x2 .note"
+
+#:IFC.xml:37639
+msgid "IfcSystemFurnitureElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcSystemFurnitureElementType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:37646
+msgid "IfcSystemFurnitureElementTypeEnum"
+msgstr "IfcSystemFurnitureElementTypeEnum"
+
+msgid "IfcSystemFurnitureElementTypeEnum_DEFINITION"
+msgstr "IfcSystemFurnitureTypeEnum defines the types of system furniture from which the type required can be selected. HISTORY New enumeration in IFC4. Items PANEL Vertical panel used to divide work spaces. WORKSURFACE Workstation countertop. SUBRACK A subrack is a part of technical cabinet which is used to store and mount pluggable electric subunits. USERDEFINED User defined type. NOTDEFINED"
+
+#:IFC.xml:37653
+msgid "IfcSystemFurnitureElementTypeEnum_NOTDEFINED"
+msgstr "IKKERFINERT"
+
+msgid "IfcSystemFurnitureElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "IKKERFINERT"
+
+#:IFC.xml:37654
+msgid "IfcSystemFurnitureElementTypeEnum_PANEL"
+msgstr "PANEL"
+
+msgid "IfcSystemFurnitureElementTypeEnum_PANEL_DEFINITION"
+msgstr "Vertical panel used to divide work spaces."
+
+#:IFC.xml:37655
+msgid "IfcSystemFurnitureElementTypeEnum_SUBRACK"
+msgstr "BRAKSJER"
+
+msgid "IfcSystemFurnitureElementTypeEnum_SUBRACK_DEFINITION"
+msgstr "A subrack is a part of technical cabinet which is used to store and mount pluggable electric subunits."
+
+#:IFC.xml:37656
+msgid "IfcSystemFurnitureElementTypeEnum_USERDEFINED"
+msgstr "BRUKERDEFINERT"
+
+msgid "IfcSystemFurnitureElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Bruker definert type."
+
+#:IFC.xml:37657
+msgid "IfcSystemFurnitureElementTypeEnum_WORKSURFACE"
+msgstr "ARBEIDSURFACE"
+
+msgid "IfcSystemFurnitureElementTypeEnum_WORKSURFACE_DEFINITION"
+msgstr "Workstation countertop."
+
+#:IFC.xml:37757
+msgid "Pset_Asset"
+msgstr "Pset Asset"
+
+msgid "Pset_Asset_DEFINITION"
+msgstr "An asset is a uniquely identifiable element which has a financial value and against which maintenance actions are recorded."
+
+#:IFC.xml:37758
+msgid "Pset_Asset_AssetAccountingType"
+msgstr "AssetAccountingType"
+
+msgid "Pset_Asset_AssetAccountingType_DEFINITION"
+msgstr "Identifies the predefined types of risk from which the type required may be set."
+
+#:IFC.xml:37763
+msgid "Pset_Asset_AssetInsuranceType"
+msgstr "Forsikringstype"
+
+msgid "Pset_Asset_AssetInsuranceType_DEFINITION"
+msgstr "Identifies the predefined types of insurance rating from which the type required may be set."
+
+#:IFC.xml:37768
+msgid "Pset_Asset_AssetStatus"
+msgstr "AssetStatus"
+
+msgid "Pset_Asset_AssetStatus_DEFINITION"
+msgstr "Current status or stage in life cycle."
+
+#:IFC.xml:37773
+msgid "Pset_Asset_AssetTaxType"
+msgstr "AssetTaxType"
+
+msgid "Pset_Asset_AssetTaxType_DEFINITION"
+msgstr "Identifies the predefined types of taxation group from which the type required may be set."
+
+#:IFC.xml:37778
+msgid "Pset_Asset_AssetUse"
+msgstr "AssetUse"
+
+msgid "Pset_Asset_AssetUse_DEFINITION"
+msgstr "General use category of the asset"
+
+#:IFC.xml:37784
+msgid "Pset_Condition"
+msgstr "Pset tilstand"
+
+msgid "Pset_Condition_DEFINITION"
+msgstr "Determines the state or condition of an element at a particular point in time."
+
+#:IFC.xml:37785
+msgid "Pset_Condition_AssessmentCondition"
+msgstr "Vurderingsbetingelse"
+
+msgid "Pset_Condition_AssessmentCondition_DEFINITION"
+msgstr "The overall condition of a product based on an assessment of the contributions to the overall condition made by the various criteria considered. The meanings given to the values of assessed condition should be agreed and documented by local agreements. For instance, is overall condition measured on a scale of 1 10 or by assigning names such as Good, OK, Poor."
+
+#:IFC.xml:37790
+msgid "Pset_Condition_AssessmentDate"
+msgstr "Vurderingsdato"
+
+msgid "Pset_Condition_AssessmentDate_DEFINITION"
+msgstr "Date on which the overall condition is assessed"
+
+#:IFC.xml:37795
+msgid "Pset_Condition_AssessmentDescription"
+msgstr "Beskrivelse av vurdering"
+
+msgid "Pset_Condition_AssessmentDescription_DEFINITION"
+msgstr "Qualitative description of the condition."
+
+#:IFC.xml:37800
+msgid "Pset_Condition_AssessmentMethod"
+msgstr "Vurderingsmetode"
+
+msgid "Pset_Condition_AssessmentMethod_DEFINITION"
+msgstr "External reference to assessment method or application used to perform the assessment."
+
+#:IFC.xml:37805
+msgid "Pset_Condition_AssessmentType"
+msgstr "VurderingType"
+
+msgid "Pset_Condition_AssessmentType_DEFINITION"
+msgstr "Category of latest condition assessment report of the asset."
+
+#:IFC.xml:37810
+msgid "Pset_Condition_LastAssessmentReport"
+msgstr "LastVurderings Rapport"
+
+msgid "Pset_Condition_LastAssessmentReport_DEFINITION"
+msgstr "Reference to latest condition state of health report."
+
+#:IFC.xml:37815
+msgid "Pset_Condition_NextAssessmentDate"
+msgstr "NextAssessmentDato"
+
+msgid "Pset_Condition_NextAssessmentDate_DEFINITION"
+msgstr "Date of next condition inspection"
+
+#:IFC.xml:37821
+msgid "Pset_FurnitureTypeChair"
+msgstr "Pset FurnitureTypeChair"
+
+msgid "Pset_FurnitureTypeChair_DEFINITION"
+msgstr "A set of specific properties for furniture type chair. HISTORY First issued in IFC Release R1.5. Renamed from Pset Chair"
+
+#:IFC.xml:37822
+msgid "Pset_FurnitureTypeChair_HighestSeatingHeight"
+msgstr "Høyestfrøhøyde"
+
+msgid "Pset_FurnitureTypeChair_HighestSeatingHeight_DEFINITION"
+msgstr "The value of seating height of high level if the chair height is adjustable."
+
+#:IFC.xml:37827
+msgid "Pset_FurnitureTypeChair_LowestSeatingHeight"
+msgstr "LavestangerHøyde"
+
+msgid "Pset_FurnitureTypeChair_LowestSeatingHeight_DEFINITION"
+msgstr "The value of seating height of low level if the chair height is adjustable."
+
+#:IFC.xml:37832
+msgid "Pset_FurnitureTypeChair_SeatingHeight"
+msgstr "SeatingHøyde"
+
+msgid "Pset_FurnitureTypeChair_SeatingHeight_DEFINITION"
+msgstr "The value of seating height if the chair height is not adjustable."
+
+#:IFC.xml:37838
+msgid "Pset_FurnitureTypeCommon"
+msgstr "Pset møbeltypeVanlige"
+
+msgid "Pset_FurnitureTypeCommon_DEFINITION"
+msgstr "Common properties for all types of furniture such as chair, desk, table, and file cabinet. HISTORY First issued in IFC Release R1.5. Renamed from Pset FurnitureCommon. IFC 2x4 IsBuiltIn property added"
+
+#:IFC.xml:37839
+msgid "Pset_FurnitureTypeCommon_IsBuiltIn"
+msgstr "IsBuiltIn"
+
+msgid "Pset_FurnitureTypeCommon_IsBuiltIn_DEFINITION"
+msgstr "Indicates whether the furniture type is intended to be built in i.e. physically attached to a building or facility TRUE or not i.e. Loose and movable FALSE ."
+
+#:IFC.xml:37844
+msgid "Pset_FurnitureTypeCommon_MainColor"
+msgstr "Hovedfarge"
+
+msgid "Pset_FurnitureTypeCommon_MainColor_DEFINITION"
+msgstr "The main color of the furniture of this type."
+
+#:IFC.xml:37849
+msgid "Pset_FurnitureTypeCommon_NominalDepth"
+msgstr "Nominell"
+
+msgid "Pset_FurnitureTypeCommon_NominalDepth_DEFINITION"
+msgstr "Nominal or quoted depth of the object measured from the inlet drain connection to the base of the unit."
+
+#:IFC.xml:37854
+msgid "Pset_FurnitureTypeCommon_NominalHeight"
+msgstr "Nominell høyde"
+
+msgid "Pset_FurnitureTypeCommon_NominalHeight_DEFINITION"
+msgstr "The nominal height of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:37859
+msgid "Pset_FurnitureTypeCommon_NominalLength"
+msgstr "Nominell lengde"
+
+msgid "Pset_FurnitureTypeCommon_NominalLength_DEFINITION"
+msgstr "The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:37864
+msgid "Pset_FurnitureTypeCommon_Status"
+msgstr "Status:"
+
+msgid "Pset_FurnitureTypeCommon_Status_DEFINITION"
+msgstr "Status for elementet, hovedsakelig brukt til oppussing eller tilbakeføring av prosjekter. Statusen kan tilordnes som nytt element utformet som nytt tillegg Eksisterende elementer og fremdeles Riv elementet eksisterer, men skal rives av, midlertidig element vil bare være midlertidig lik en midlertidig støttestruktur ."
+
+#:IFC.xml:37869
+msgid "Pset_FurnitureTypeCommon_Style"
+msgstr "Stil"
+
+msgid "Pset_FurnitureTypeCommon_Style_DEFINITION"
+msgstr "Description of the furniture style."
+
+#:IFC.xml:37875
+msgid "Pset_FurnitureTypeDesk"
+msgstr "Pset møbelTypeDesk"
+
+msgid "Pset_FurnitureTypeDesk_DEFINITION"
+msgstr "A set of specific properties for furniture type desk. HISTORY First issued in IFC Release R1.5. Renamed from Pset Desk"
+
+#:IFC.xml:37876
+msgid "Pset_FurnitureTypeDesk_WorksurfaceArea"
+msgstr "Bevegelsesområde"
+
+msgid "Pset_FurnitureTypeDesk_WorksurfaceArea_DEFINITION"
+msgstr "The value of the work surface area of the desk.."
+
+#:IFC.xml:37882
+msgid "Pset_FurnitureTypeFileCabinet"
+msgstr "Pset møbelTypeFileKabinett"
+
+msgid "Pset_FurnitureTypeFileCabinet_DEFINITION"
+msgstr "A set of specific properties for furniture type file cabinet HISTORY First issued in IFC Release R1.5. Renamed from Pset FileCabinet"
+
+#:IFC.xml:37883
+msgid "Pset_FurnitureTypeFileCabinet_WithLock"
+msgstr "Fjern"
+
+msgid "Pset_FurnitureTypeFileCabinet_WithLock_DEFINITION"
+msgstr "Indicates whether the file cabinet is lockable TRUE or not FALSE ."
+
+#:IFC.xml:37889
+msgid "Pset_FurnitureTypeTable"
+msgstr "Velg møbeltypeBord"
+
+msgid "Pset_FurnitureTypeTable_DEFINITION"
+msgstr "HISTORY First issued in IFC Release R1.5. Renamed from Pset Table"
+
+#:IFC.xml:37890
+msgid "Pset_FurnitureTypeTable_NumberOfChairs"
+msgstr "NummerOfChairs"
+
+msgid "Pset_FurnitureTypeTable_NumberOfChairs_DEFINITION"
+msgstr "Maximum number of chairs that can fit with the table for normal use."
+
+#:IFC.xml:37895
+msgid "Pset_FurnitureTypeTable_WorksurfaceArea"
+msgstr "Bevegelsesområde"
+
+msgid "Pset_FurnitureTypeTable_WorksurfaceArea_DEFINITION"
+msgstr "The value of the work surface area of the desk.."
+
+#:IFC.xml:37901
+msgid "Pset_MaintenanceStrategy"
+msgstr "Fastsatt Vedlikeholdstrategi"
+
+msgid "Pset_MaintenanceStrategy_DEFINITION"
+msgstr "Property set for the association of a maintenance strategy to an element, asset of system."
+
+#:IFC.xml:37902
+msgid "Pset_MaintenanceStrategy_AccidentResponse"
+msgstr "Ulykkesrespons"
+
+msgid "Pset_MaintenanceStrategy_AccidentResponse_DEFINITION"
+msgstr "Accident response chosen for the asset"
+
+#:IFC.xml:37907
+msgid "Pset_MaintenanceStrategy_AssetCriticality"
+msgstr "Aktivitetskritisk"
+
+msgid "Pset_MaintenanceStrategy_AssetCriticality_DEFINITION"
+msgstr "Rating of the asset s criticality to the operation of the facility"
+
+#:IFC.xml:37912
+msgid "Pset_MaintenanceStrategy_AssetFrailty"
+msgstr "Aktivitetstrek"
+
+msgid "Pset_MaintenanceStrategy_AssetFrailty_DEFINITION"
+msgstr "Rating of the asset s frailty to breakage or deterioration"
+
+#:IFC.xml:37917
+msgid "Pset_MaintenanceStrategy_AssetPriority"
+msgstr "Aktivitet"
+
+msgid "Pset_MaintenanceStrategy_AssetPriority_DEFINITION"
+msgstr "Combined criticality and frailty rating indicating the operational and maintenance priority of the asset"
+
+#:IFC.xml:37922
+msgid "Pset_MaintenanceStrategy_MonitoringType"
+msgstr "Overvåkingstype"
+
+msgid "Pset_MaintenanceStrategy_MonitoringType_DEFINITION"
+msgstr "Monitoring strategy chosen for the asset"
+
+#:IFC.xml:37928
+msgid "Pset_MaintenanceTriggerCondition"
+msgstr "Fastsett VedlikeholdTriggerTilstand"
+
+msgid "Pset_MaintenanceTriggerCondition_DEFINITION"
+msgstr "Trigger levels for an asset that has an inspection based maintenance strategy"
+
+#:IFC.xml:37929
+msgid "Pset_MaintenanceTriggerCondition_ConditionDisposalLevel"
+msgstr "ForsiktigDisponalnivå"
+
+msgid "Pset_MaintenanceTriggerCondition_ConditionDisposalLevel_DEFINITION"
+msgstr "Condition that will trigger a disposal process"
+
+#:IFC.xml:37934
+msgid "Pset_MaintenanceTriggerCondition_ConditionMaintenanceLevel"
+msgstr "Vedlikeholdsnivå ved tilstand"
+
+msgid "Pset_MaintenanceTriggerCondition_ConditionMaintenanceLevel_DEFINITION"
+msgstr "Condition that will trigger maintenance"
+
+#:IFC.xml:37939
+msgid "Pset_MaintenanceTriggerCondition_ConditionReplacementLevel"
+msgstr "Fordelingsnivå"
+
+msgid "Pset_MaintenanceTriggerCondition_ConditionReplacementLevel_DEFINITION"
+msgstr "Condition that will trigger a replacement process"
+
+#:IFC.xml:37944
+msgid "Pset_MaintenanceTriggerCondition_ConditionTargetPerformance"
+msgstr "Betingelsesmål ytelse"
+
+msgid "Pset_MaintenanceTriggerCondition_ConditionTargetPerformance_DEFINITION"
+msgstr "Target condition of the asset"
+
+#:IFC.xml:37950
+msgid "Pset_MaintenanceTriggerDuration"
+msgstr "Innstill Vedlikehold- TriggerVarighet"
+
+msgid "Pset_MaintenanceTriggerDuration_DEFINITION"
+msgstr "Trigger levels for an asset that has an PPM based maintenance strategy."
+
+#:IFC.xml:37951
+msgid "Pset_MaintenanceTriggerDuration_DurationDisposalLevel"
+msgstr "VarighetDisponeringsnivå"
+
+msgid "Pset_MaintenanceTriggerDuration_DurationDisposalLevel_DEFINITION"
+msgstr "Duration interval at which disposal is performed"
+
+#:IFC.xml:37956
+msgid "Pset_MaintenanceTriggerDuration_DurationMaintenanceLevel"
+msgstr "Varighetsnivåer"
+
+msgid "Pset_MaintenanceTriggerDuration_DurationMaintenanceLevel_DEFINITION"
+msgstr "Duration interval at which maintenance is performed"
+
+#:IFC.xml:37961
+msgid "Pset_MaintenanceTriggerDuration_DurationReplacementLevel"
+msgstr "Varighetserstatningsnivå"
+
+msgid "Pset_MaintenanceTriggerDuration_DurationReplacementLevel_DEFINITION"
+msgstr "Duration interval at which replacement is performed"
+
+#:IFC.xml:37966
+msgid "Pset_MaintenanceTriggerDuration_DurationTargetPerformance"
+msgstr "Varighet mål ytelse"
+
+msgid "Pset_MaintenanceTriggerDuration_DurationTargetPerformance_DEFINITION"
+msgstr "Target time to failure of the asset"
+
+#:IFC.xml:37972
+msgid "Pset_MaintenanceTriggerPerformance"
+msgstr "Fastsett VedlikeholdTriggerPerformance"
+
+msgid "Pset_MaintenanceTriggerPerformance_DEFINITION"
+msgstr "Properties for performance based maintenance policies"
+
+#:IFC.xml:37973
+msgid "Pset_MaintenanceTriggerPerformance_DisposalLevel"
+msgstr "Avfallsnivå"
+
+msgid "Pset_MaintenanceTriggerPerformance_DisposalLevel_DEFINITION"
+msgstr "Performance level at which disposal takes place"
+
+#:IFC.xml:37978
+msgid "Pset_MaintenanceTriggerPerformance_MaintenanceLevel"
+msgstr "Vedlikeholdsnivå"
+
+msgid "Pset_MaintenanceTriggerPerformance_MaintenanceLevel_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents."
+
+#:IFC.xml:37983
+msgid "Pset_MaintenanceTriggerPerformance_ReplacementLevel"
+msgstr "Erstatningsnivå"
+
+msgid "Pset_MaintenanceTriggerPerformance_ReplacementLevel_DEFINITION"
+msgstr "Performance level at which replacement takes place"
+
+#:IFC.xml:37988
+msgid "Pset_MaintenanceTriggerPerformance_TargetPerformance"
+msgstr "Måloppnåelse"
+
+msgid "Pset_MaintenanceTriggerPerformance_TargetPerformance_DEFINITION"
+msgstr "Target capacity or performance of the asset. Units of the performance value are specified through the propertyValue units attribute."
+
+#:IFC.xml:37994
+msgid "Pset_ManufacturerOccurrence"
+msgstr "Pset ManufacturerOcence"
+
+msgid "Pset_ManufacturerOccurrence_DEFINITION"
+msgstr "Defines properties of individual instances of manufactured products that may be given by the manufacturer. HISTORY IFC 2x4 AssemblyPlace property added. This property does not need to be asserted if Pset ManufacturerTypeInformation is allocated to the type and the AssemblyPlace property is asserted there."
+
+#:IFC.xml:37995
+msgid "Pset_ManufacturerOccurrence_AcquisitionDate"
+msgstr "Anskaffelsesdato"
+
+msgid "Pset_ManufacturerOccurrence_AcquisitionDate_DEFINITION"
+msgstr "The date that the manufactured item was purchased."
+
+#:IFC.xml:38000
+msgid "Pset_ManufacturerOccurrence_AssemblyPlace"
+msgstr "Sammenstilling"
+
+msgid "Pset_ManufacturerOccurrence_AssemblyPlace_DEFINITION"
+msgstr "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site."
+
+#:IFC.xml:38005
+msgid "Pset_ManufacturerOccurrence_BarCode"
+msgstr "BarCode"
+
+msgid "Pset_ManufacturerOccurrence_BarCode_DEFINITION"
+msgstr "The identity of the bar code given to an occurrence of the product."
+
+#:IFC.xml:38010
+msgid "Pset_ManufacturerOccurrence_BatchReference"
+msgstr "BatchReference"
+
+msgid "Pset_ManufacturerOccurrence_BatchReference_DEFINITION"
+msgstr "The identity of the batch reference from which an occurrence of a product is taken."
+
+#:IFC.xml:38015
+msgid "Pset_ManufacturerOccurrence_SerialNumber"
+msgstr "Serienummer"
+
+msgid "Pset_ManufacturerOccurrence_SerialNumber_DEFINITION"
+msgstr "The manufacturer s serial number for the precast concrete element."
+
+#:IFC.xml:38021
+msgid "Pset_ManufacturerTypeInformation"
+msgstr "Pset ManufacturerTypeInformation"
+
+msgid "Pset_ManufacturerTypeInformation_DEFINITION"
+msgstr "Defines characteristics of types ranges of manufactured products that may be given by the manufacturer. Note that the term manufactured may also be used to refer to products that are supplied and identified by the supplier or that are assembled off site by a third party provider. HISTORY This property set replaces the entity IfcManufacturerInformation from previous IFC releases. IFC 2x4 AssemblyPlace property added."
+
+#:IFC.xml:38022
+msgid "Pset_ManufacturerTypeInformation_ArticleNumber"
+msgstr "Artikkelnummer"
+
+msgid "Pset_ManufacturerTypeInformation_ArticleNumber_DEFINITION"
+msgstr "Article number or reference that is be applied to a configured product according to a standard scheme for article number definition as defined by the manufacturer. It is often used as the purchasing number."
+
+#:IFC.xml:38027
+msgid "Pset_ManufacturerTypeInformation_AssemblyPlace"
+msgstr "Sammenstilling"
+
+msgid "Pset_ManufacturerTypeInformation_AssemblyPlace_DEFINITION"
+msgstr "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site."
+
+#:IFC.xml:38032
+msgid "Pset_ManufacturerTypeInformation_GlobalTradeItemNumber"
+msgstr "GlobalTradeItemNumber"
+
+msgid "Pset_ManufacturerTypeInformation_GlobalTradeItemNumber_DEFINITION"
+msgstr "The Global Trade Item Number GTIN is an identifier for trade items developed by GS1 www.gs1.org ."
+
+#:IFC.xml:38037
+msgid "Pset_ManufacturerTypeInformation_Manufacturer"
+msgstr "Produsent"
+
+msgid "Pset_ManufacturerTypeInformation_Manufacturer_DEFINITION"
+msgstr "The organization that manufactured and or assembled the item."
+
+#:IFC.xml:38042
+msgid "Pset_ManufacturerTypeInformation_ModelLabel"
+msgstr "ModellEtikett"
+
+msgid "Pset_ManufacturerTypeInformation_ModelLabel_DEFINITION"
+msgstr "The descriptive model name of the product model or product line as assigned by the manufacturer of the manufactured item."
+
+#:IFC.xml:38047
+msgid "Pset_ManufacturerTypeInformation_ModelReference"
+msgstr "ModelReference"
+
+msgid "Pset_ManufacturerTypeInformation_ModelReference_DEFINITION"
+msgstr "The model number or designator of the product model or product line as assigned by the manufacturer of the manufactured item."
+
+#:IFC.xml:38052
+msgid "Pset_ManufacturerTypeInformation_OperationalDocument"
+msgstr "Operasjonaldokument"
+
+msgid "Pset_ManufacturerTypeInformation_OperationalDocument_DEFINITION"
+msgstr "Manufacturer s operational document"
+
+#:IFC.xml:38057
+msgid "Pset_ManufacturerTypeInformation_PerformanceCertificate"
+msgstr "Ytelsessertifikat"
+
+msgid "Pset_ManufacturerTypeInformation_PerformanceCertificate_DEFINITION"
+msgstr "Manufacturer s performance certificate"
+
+#:IFC.xml:38062
+msgid "Pset_ManufacturerTypeInformation_ProductionYear"
+msgstr "ProduksjonÅr"
+
+msgid "Pset_ManufacturerTypeInformation_ProductionYear_DEFINITION"
+msgstr "The year of production of the manufactured item."
+
+#:IFC.xml:38067
+msgid "Pset_ManufacturerTypeInformation_SafetyDocument"
+msgstr "SafetyDocument"
+
+msgid "Pset_ManufacturerTypeInformation_SafetyDocument_DEFINITION"
+msgstr "Manufacturer s safety document"
+
+#:IFC.xml:38073
+msgid "Pset_PropertyAgreement"
+msgstr "Fastsatt eiendomsavtale"
+
+msgid "Pset_PropertyAgreement_DEFINITION"
+msgstr "A property agreement is an agreement that enables the occupation of a property for a period of time. The objective is to capture the information within an agreement that is relevant to a facilities manager. Design and construction information associated with the property is not considered. A property agreement may be applied to an instance of [[IfcSpatialStructureElement]] including to compositions defined through the [[IfcSpatialStructureElement]].Element.CompositionEnum. Note that the associated actors are captured by the [[IfcOccupant]] class."
+
+#:IFC.xml:38074
+msgid "Pset_PropertyAgreement_AgreementType"
+msgstr "Avtaletype"
+
+msgid "Pset_PropertyAgreement_AgreementType_DEFINITION"
+msgstr "Identifies the predefined types of property agreement from which the type required may be set."
+
+#:IFC.xml:38079
+msgid "Pset_PropertyAgreement_CommencementDate"
+msgstr "Kommandodato"
+
+msgid "Pset_PropertyAgreement_CommencementDate_DEFINITION"
+msgstr "Date on which the agreement commences."
+
+#:IFC.xml:38084
+msgid "Pset_PropertyAgreement_ConditionCommencement"
+msgstr "Betingelse"
+
+msgid "Pset_PropertyAgreement_ConditionCommencement_DEFINITION"
+msgstr "Condition of property provided on commencement of the agreement e.g. cold shell, warm lit shell, broom clean, turn key."
+
+#:IFC.xml:38089
+msgid "Pset_PropertyAgreement_ConditionTermination"
+msgstr "Oppsigelse av betingelser"
+
+msgid "Pset_PropertyAgreement_ConditionTermination_DEFINITION"
+msgstr "Condition of property required on termination of the agreement e.g. cold shell, warm lit shell, broom clean, turn key."
+
+#:IFC.xml:38094
+msgid "Pset_PropertyAgreement_Duration"
+msgstr "Varighet"
+
+msgid "Pset_PropertyAgreement_Duration_DEFINITION"
+msgstr "The period of time for the lease."
+
+#:IFC.xml:38099
+msgid "Pset_PropertyAgreement_Identifier"
+msgstr "Identifier"
+
+msgid "Pset_PropertyAgreement_Identifier_DEFINITION"
+msgstr "The identifier assigned to the agreement for the purposes of tracking."
+
+#:IFC.xml:38104
+msgid "Pset_PropertyAgreement_Options"
+msgstr "Alternativer"
+
+msgid "Pset_PropertyAgreement_Options_DEFINITION"
+msgstr "A statement of the options available in the agreement."
+
+#:IFC.xml:38109
+msgid "Pset_PropertyAgreement_PropertyName"
+msgstr "PropertyName"
+
+msgid "Pset_PropertyAgreement_PropertyName_DEFINITION"
+msgstr "Addressing details of the property as stated within the agreement."
+
+#:IFC.xml:38114
+msgid "Pset_PropertyAgreement_Restrictions"
+msgstr "Restriksjoner"
+
+msgid "Pset_PropertyAgreement_Restrictions_DEFINITION"
+msgstr "Restrictions that may be placed by a competent authority."
+
+#:IFC.xml:38119
+msgid "Pset_PropertyAgreement_TerminationDate"
+msgstr "Avslutningsdato"
+
+msgid "Pset_PropertyAgreement_TerminationDate_DEFINITION"
+msgstr "Date on which the agreement terminates."
+
+#:IFC.xml:38124
+msgid "Pset_PropertyAgreement_Version"
+msgstr "Versjon"
+
+msgid "Pset_PropertyAgreement_Version_DEFINITION"
+msgstr "The version number of the agreement that is identified."
+
+#:IFC.xml:38129
+msgid "Pset_PropertyAgreement_VersionDate"
+msgstr "VersionDate"
+
+msgid "Pset_PropertyAgreement_VersionDate_DEFINITION"
+msgstr "The date on which the version of the agreement became applicable."
+
+#:IFC.xml:38135
+msgid "Pset_Risk"
+msgstr "Pset Risiko"
+
+msgid "Pset_Risk_DEFINITION"
+msgstr "An indication of exposure to mischance, peril, menace, hazard or loss. Documentation of a potential hazard, likilihood and consequence aligned with AS NZS 4360 and BS PAS 1192 6 2017, which can be assigned to or associated with a product, activity and or location. Alternatively it may be assigned to an ISO 3864 annotation symbol. HISTORY Extended in IFC2x3, Revised IFC4x3 There are various types of risk that may be encountered and there may be several instances of Pset Risk associated to an instance or type."
+
+#:IFC.xml:38136
+msgid "Pset_Risk_AssociatedActivity"
+msgstr "TilknyttAktivitet"
+
+msgid "Pset_Risk_AssociatedActivity_DEFINITION"
+msgstr "An indication or link to any associated activity or process that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template"
+
+#:IFC.xml:38141
+msgid "Pset_Risk_AssociatedLocation"
+msgstr "TilknyttPlassering"
+
+msgid "Pset_Risk_AssociatedLocation_DEFINITION"
+msgstr "An indication or link to any associated location or space that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template"
+
+#:IFC.xml:38146
+msgid "Pset_Risk_AssociatedProduct"
+msgstr "TilknyttProdukt"
+
+msgid "Pset_Risk_AssociatedProduct_DEFINITION"
+msgstr "An indication or link to any associated product or material that may trigger the hazard. If used directly on an annotation or semantic object. for an alternative see group use encording template"
+
+#:IFC.xml:38151
+msgid "Pset_Risk_MitigatedRiskConsequence"
+msgstr "Avbøtende Konsekvens"
+
+msgid "Pset_Risk_MitigatedRiskConsequence_DEFINITION"
+msgstr "Identifies the consequence of the hazard given the planned mitigation."
+
+#:IFC.xml:38156
+msgid "Pset_Risk_MitigatedRiskLikelihood"
+msgstr "MitigatedRiskSannsynligheten"
+
+msgid "Pset_Risk_MitigatedRiskLikelihood_DEFINITION"
+msgstr "Identifies the likelihood of the hazard given the planned mitigation."
+
+#:IFC.xml:38161
+msgid "Pset_Risk_MitigatedRiskSignificance"
+msgstr "MitigatedRiskSignificance"
+
+msgid "Pset_Risk_MitigatedRiskSignificance_DEFINITION"
+msgstr "Identifies the signifiance of the risk given the mitigation of likelihood and consequence."
+
+#:IFC.xml:38166
+msgid "Pset_Risk_MitigationPlanned"
+msgstr "Avbøtende Planlagt"
+
+msgid "Pset_Risk_MitigationPlanned_DEFINITION"
+msgstr "The planned agreed and irrevocable mitigation of the likelhood and consequences of the hazard."
+
+#:IFC.xml:38171
+msgid "Pset_Risk_MitigationProposed"
+msgstr "Avbøtende Forslag"
+
+msgid "Pset_Risk_MitigationProposed_DEFINITION"
+msgstr "Any proposed, but not yet agreed and irrevocable, mitigation of the likelhood and consequences of the hazard."
+
+#:IFC.xml:38176
+msgid "Pset_Risk_NatureOfRisk"
+msgstr "NatureOfRisk"
+
+msgid "Pset_Risk_NatureOfRisk_DEFINITION"
+msgstr "A description of the generic nature of the context or hazard that might be encountered."
+
+#:IFC.xml:38181
+msgid "Pset_Risk_RiskAssessmentMethodology"
+msgstr "RisikoVurderingsMetodologi"
+
+msgid "Pset_Risk_RiskAssessmentMethodology_DEFINITION"
+msgstr "An indication or link to the chosen risk assessment methodology, for example PAS1192 6 or a chosen ISO13100 annex."
+
+#:IFC.xml:38186
+msgid "Pset_Risk_RiskName"
+msgstr "RiskName"
+
+msgid "Pset_Risk_RiskName_DEFINITION"
+msgstr "A locally unique identifier for the risk entry that can be used to track the development and mitiagtion of the risk throughout the project life cycle"
+
+#:IFC.xml:38191
+msgid "Pset_Risk_RiskType"
+msgstr "Risikotype"
+
+msgid "Pset_Risk_RiskType_DEFINITION"
+msgstr "Identifies the predefined types of risk from which the type required may be set."
+
+#:IFC.xml:38196
+msgid "Pset_Risk_UnmitigatedRiskConsequence"
+msgstr "UbegrensetRiskKonsekvens"
+
+msgid "Pset_Risk_UnmitigatedRiskConsequence_DEFINITION"
+msgstr "Identifies the consequence of the hazard prior to any specific mitigation."
+
+#:IFC.xml:38201
+msgid "Pset_Risk_UnmitigatedRiskLikelihood"
+msgstr "UbegrensedRiskSannsynligheten"
+
+msgid "Pset_Risk_UnmitigatedRiskLikelihood_DEFINITION"
+msgstr "Identifies the likelihood of the hazard prior to any specific mitigation."
+
+#:IFC.xml:38206
+msgid "Pset_Risk_UnmitigatedRiskSignificance"
+msgstr "UnmitigatedRiskSignificance"
+
+msgid "Pset_Risk_UnmitigatedRiskSignificance_DEFINITION"
+msgstr "Identifies the signifiance of the risk given the likelihood and consequence prior to any specific mitigation."
+
+#:IFC.xml:38212
+msgid "Pset_ServiceLife"
+msgstr "Pset ServiceLife"
+
+msgid "Pset_ServiceLife_DEFINITION"
+msgstr "Captures the period of time that an artifact will last. HISTORY Introduced in IFC2X4 as replacement for IfcServiceLife."
+
+#:IFC.xml:38213
+msgid "Pset_ServiceLife_MeanTimeBetweenFailure"
+msgstr "MeanTimeBetweenFailure"
+
+msgid "Pset_ServiceLife_MeanTimeBetweenFailure_DEFINITION"
+msgstr "The average time duration between instances of failure of a product."
+
+#:IFC.xml:38218
+msgid "Pset_ServiceLife_ServiceLifeDuration"
+msgstr "Levetid for bruk"
+
+msgid "Pset_ServiceLife_ServiceLifeDuration_DEFINITION"
+msgstr "The length or duration of a service life. The lower bound indicates pessimistic service life, the upper bound indicates optimistic service life, and the setpoint indicates the typical service life."
+
+#:IFC.xml:38224
+msgid "Pset_ServiceLifeFactors"
+msgstr "Pset ServiceLifeFactors"
+
+msgid "Pset_ServiceLifeFactors_DEFINITION"
+msgstr "Captures various factors that impact the expected service life of elements within the system or zone."
+
+#:IFC.xml:38225
+msgid "Pset_ServiceLifeFactors_DesignLevel"
+msgstr "Betegnelse"
+
+msgid "Pset_ServiceLifeFactors_DesignLevel_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of design level employed."
+
+#:IFC.xml:38230
+msgid "Pset_ServiceLifeFactors_IndoorEnvironment"
+msgstr "IndoorEnvironment"
+
+msgid "Pset_ServiceLifeFactors_IndoorEnvironment_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the indoor environment where appropriate ."
+
+#:IFC.xml:38235
+msgid "Pset_ServiceLifeFactors_InUseConditions"
+msgstr "Ubruksvilkår"
+
+msgid "Pset_ServiceLifeFactors_InUseConditions_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the conditions in which components are operating."
+
+#:IFC.xml:38240
+msgid "Pset_ServiceLifeFactors_MaintenanceLevel"
+msgstr "Vedlikeholdsnivå"
+
+msgid "Pset_ServiceLifeFactors_MaintenanceLevel_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents."
+
+#:IFC.xml:38245
+msgid "Pset_ServiceLifeFactors_OutdoorEnvironment"
+msgstr "Utendørs miljø"
+
+msgid "Pset_ServiceLifeFactors_OutdoorEnvironment_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the outdoor environment where appropriate"
+
+#:IFC.xml:38250
+msgid "Pset_ServiceLifeFactors_QualityOfComponents"
+msgstr "KvalitetOfComponents"
+
+msgid "Pset_ServiceLifeFactors_QualityOfComponents_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the quality of components used."
+
+#:IFC.xml:38255
+msgid "Pset_ServiceLifeFactors_WorkExecutionLevel"
+msgstr "Utførelsesnivå"
+
+msgid "Pset_ServiceLifeFactors_WorkExecutionLevel_DEFINITION"
+msgstr "Adjustment of the service life resulting from the effect of the quality of work executed."
+
+#:IFC.xml:38261
+msgid "Pset_SystemFurnitureElementTypeCommon"
+msgstr "Perset systemmøbelElementTypeVanlige"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_DEFINITION"
+msgstr "Common properties for all systems furniture I.e. modular furniture element types e.g. vertical panels, work surfaces, and storage . HISTORY First issued in IFC Release R1.5. Renamed from Pset FurnitureElementCommon"
+
+#:IFC.xml:38262
+msgid "Pset_SystemFurnitureElementTypeCommon_Finishing"
+msgstr "Ferdigstiller"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_Finishing_DEFINITION"
+msgstr "The finishing applied to system furniture elements of this type e.g. walnut, fabric."
+
+#:IFC.xml:38267
+msgid "Pset_SystemFurnitureElementTypeCommon_GroupCode"
+msgstr "Grupperekode"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_GroupCode_DEFINITION"
+msgstr "e.g. panels, worksurfaces, storage, etc."
+
+#:IFC.xml:38272
+msgid "Pset_SystemFurnitureElementTypeCommon_IsUsed"
+msgstr "Isbrukket"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_IsUsed_DEFINITION"
+msgstr "Indicates whether the element is being used in a workstation TRUE or not. FALSE ."
+
+#:IFC.xml:38277
+msgid "Pset_SystemFurnitureElementTypeCommon_NominalHeight"
+msgstr "Nominell høyde"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_NominalHeight_DEFINITION"
+msgstr "The nominal height of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:38282
+msgid "Pset_SystemFurnitureElementTypeCommon_NominalWidth"
+msgstr "Nominell bredde"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_NominalWidth_DEFINITION"
+msgstr "The nominal width of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:38288
+msgid "Pset_SystemFurnitureElementTypePanel"
+msgstr "Pset SystemFurnitureElementTypePanel"
+
+msgid "Pset_SystemFurnitureElementTypePanel_DEFINITION"
+msgstr "A set of specific properties for vertical panels that assembly workstations.. HISTORY First issued in IFC Release R1.5. Renamed from Pset Panel"
+
+#:IFC.xml:38289
+msgid "Pset_SystemFurnitureElementTypePanel_FurniturePanelType"
+msgstr "FurniturePanelType"
+
+msgid "Pset_SystemFurnitureElementTypePanel_FurniturePanelType_DEFINITION"
+msgstr "Available panel types from which that required may be selected."
+
+#:IFC.xml:38294
+msgid "Pset_SystemFurnitureElementTypePanel_HasOpening"
+msgstr "HasOpening"
+
+msgid "Pset_SystemFurnitureElementTypePanel_HasOpening_DEFINITION"
+msgstr "indicates whether the panel has an opening TRUE or not FALSE ."
+
+#:IFC.xml:38299
+msgid "Pset_SystemFurnitureElementTypePanel_NominalThickness"
+msgstr "NominellTykkelse"
+
+msgid "Pset_SystemFurnitureElementTypePanel_NominalThickness_DEFINITION"
+msgstr "The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:38305
+msgid "Pset_SystemFurnitureElementTypeWorkSurface"
+msgstr "Perset systemmøbelElementTypeWorkface"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_DEFINITION"
+msgstr "A set of specific properties for work surfaces used in workstations. HISTORY First issued in IFC Release R1.5. Renamed from Pset Worksurface"
+
+#:IFC.xml:38306
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_HangingHeight"
+msgstr "Hengehøyde"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_HangingHeight_DEFINITION"
+msgstr "The hanging height of the worksurface."
+
+#:IFC.xml:38311
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_NominalThickness"
+msgstr "NominellTykkelse"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_NominalThickness_DEFINITION"
+msgstr "The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:38316
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_ShapeDescription"
+msgstr "Formbeskrivelse"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_ShapeDescription_DEFINITION"
+msgstr "A description of the shape of the work surface e.g. corner square, rectangle, etc."
+
+#:IFC.xml:38321
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_SupportType"
+msgstr "Støttetype"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_SupportType_DEFINITION"
+msgstr "Available support types from which that required may be selected."
+
+#:IFC.xml:38326
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_UsePurpose"
+msgstr "Formål"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_UsePurpose_DEFINITION"
+msgstr "The principal purpose for which the work surface is intended to be used e.g. writing reading, computer, meeting, printer, reference files, etc."
+
+#:IFC.xml:38332
+msgid "Pset_Warranty"
+msgstr "Pset garanti"
+
+msgid "Pset_Warranty_DEFINITION"
+msgstr "An assurance given by the seller or provider of an artefact that the artefact is without defects and will operate as described for a defined period of time without failure and that if a defect does arise during that time, that it will be corrected by the seller or provider."
+
+#:IFC.xml:38333
+msgid "Pset_Warranty_Exclusions"
+msgstr "Utelatelser"
+
+msgid "Pset_Warranty_Exclusions_DEFINITION"
+msgstr "Items, conditions or actions that may be excluded from the warranty or that may cause the warranty to become void."
+
+#:IFC.xml:38338
+msgid "Pset_Warranty_IsExtendedWarranty"
+msgstr "IsExtendedWarranty"
+
+msgid "Pset_Warranty_IsExtendedWarranty_DEFINITION"
+msgstr "Indication of whether this is an extended warranty whose duration is greater than that normally assigned to an artefact TRUE or not FALSE ."
+
+#:IFC.xml:38343
+msgid "Pset_Warranty_PointOfContact"
+msgstr "PointOfKontakter"
+
+msgid "Pset_Warranty_PointOfContact_DEFINITION"
+msgstr "The organization that should be contacted for action under the terms of the warranty. Note that the role of the organization manufacturer, supplier, installer etc. is determined by the [[IfcActorRole]] attribute of [[IfcOrganization]]."
+
+#:IFC.xml:38348
+msgid "Pset_Warranty_WarrantyContent"
+msgstr "WarrantyContent"
+
+msgid "Pset_Warranty_WarrantyContent_DEFINITION"
+msgstr "The content of the warranty."
+
+#:IFC.xml:38353
+msgid "Pset_Warranty_WarrantyEndDate"
+msgstr "WarrantyEndDate"
+
+msgid "Pset_Warranty_WarrantyEndDate_DEFINITION"
+msgstr "The date on which the warranty expires."
+
+#:IFC.xml:38358
+msgid "Pset_Warranty_WarrantyIdentifier"
+msgstr "WarrantyIdentifier"
+
+msgid "Pset_Warranty_WarrantyIdentifier_DEFINITION"
+msgstr "The identifier assigned to a warranty."
+
+#:IFC.xml:38363
+msgid "Pset_Warranty_WarrantyPeriod"
+msgstr "WarrantyPeriode"
+
+msgid "Pset_Warranty_WarrantyPeriod_DEFINITION"
+msgstr "The time duration during which a manufacturer or supplier guarantees or warrants the performance of an artefact."
+
+#:IFC.xml:38368
+msgid "Pset_Warranty_WarrantyStartDate"
+msgstr "WarrantyStartDate"
+
+msgid "Pset_Warranty_WarrantyStartDate_DEFINITION"
+msgstr "The date on which the warranty commences."
 
