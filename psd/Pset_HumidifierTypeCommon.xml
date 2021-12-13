@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_HumidifierTypeCommon</Name>
-  <Definition/>
+  <Definition>Humidifier type common attributes.
+WaterProperties attribute renamed to WaterRequirement and unit type modified in IFC2x2 Pset Addendum.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcHumidifier</ClassName>
@@ -11,7 +12,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +21,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +38,10 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Application</Name>
-      <Definition/>
+      <Definition>Humidifier application.
+
+Fixed: Humidifier installed in a ducted flow distribution system.
+Portable: Humidifier is not installed in a ducted flow distribution system.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_HumidifierApplication">
@@ -52,7 +56,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Weight</Name>
-      <Definition/>
+      <Definition>The weight of the humidifier.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -61,7 +65,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalMoistureGain</Name>
-      <Definition/>
+      <Definition>Nominal rate of water vapor added into the airstream.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassFlowRateMeasure"/>
@@ -70,7 +74,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalAirFlowRate</Name>
-      <Definition/>
+      <Definition>Nominal rate of air flow into which water vapor is added.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -79,7 +83,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>InternalControl</Name>
-      <Definition/>
+      <Definition>Internal modulation control.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_HumidifierInternalControl">
@@ -96,7 +100,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>WaterRequirement</Name>
-      <Definition/>
+      <Definition>Make-up water requirements.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -105,7 +109,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SaturationEfficiencyCurve</Name>
-      <Definition/>
+      <Definition>Saturation efficiency as a function of the air flow rate.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression/>
@@ -120,7 +124,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AirPressureDropCurve</Name>
-      <Definition/>
+      <Definition>Air pressure drop curve, pressure drop – flow rate curve, AirPressureDrop = f (AirflowRate).</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression/>

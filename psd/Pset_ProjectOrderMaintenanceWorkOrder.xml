@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_ProjectOrderMaintenanceWorkOrder</Name>
-  <Definition/>
+  <Definition>A MaintenanceWorkOrder is a detailed description of maintenance work that is to be performed. Note that the Scheduled Frequency property of the maintenance work order is used when the order is required as an instance of a scheduled work order.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcProjectOrder/MAINTENANCEWORKORDER</ClassName>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>ProductDescription</Name>
-      <Definition/>
+      <Definition>A textual description of the products that require the work.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
@@ -20,7 +20,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>WorkTypeRequested</Name>
-      <Definition/>
+      <Definition>Work type requested in circumstances where there are categorizations of types of work task. It could be used to identify a remedial task, minor work task, electrical task etc.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
@@ -29,7 +29,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ContractualType</Name>
-      <Definition/>
+      <Definition>The contractual type of the work.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
@@ -38,7 +38,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IfNotAccomplished</Name>
-      <Definition/>
+      <Definition>Comments if the job is not accomplished.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcText"/>
@@ -47,7 +47,12 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MaintenaceType</Name>
-      <Definition/>
+      <Definition>Identifies the predefined types of maintenance that can be done from which the type that generates the maintenance work order may be set where:
+
+ConditionBased: generated as a result of the condition of an asset or artefact being less than a determined value.
+Corrective: generated as a result of an immediate and urgent need for maintenance action.
+PlannedCorrective: generated as a result of immediate corrective action being needed but with sufficient time available for the work order to be included in maintenance planning.
+Scheduled: generated as a result of a fixed, periodic maintenance requirement.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_MaintenanceType">
@@ -64,7 +69,11 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FaultPriorityType</Name>
-      <Definition/>
+      <Definition>Identifies the predefined types of priority that can be assigned from which the type may be set where:
+
+High: action is required urgently.
+Medium: action can occur within a reasonable period of time.
+Low: action can occur when convenient.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_PriorityType">
@@ -80,7 +89,11 @@
     </PropertyDef>
     <PropertyDef>
       <Name>LocationPriorityType</Name>
-      <Definition/>
+      <Definition>Identifies the predefined types of priority that can be assigned from which the type may be set where:
+
+High: action is required urgently.
+Medium: action can occur within a reasonable period of time.
+Low: action can occur when convenient.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_PriorityType">
@@ -96,7 +109,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ScheduledFrequency</Name>
-      <Definition/>
+      <Definition>The period of time between expected instantiations of a work order that may have been predefined.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure"/>

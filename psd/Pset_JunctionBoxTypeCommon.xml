@@ -1,8 +1,10 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_JunctionBoxTypeCommon</Name>
-  <Definition/>
+  <Definition>A junction box is an enclosure within which cables are connected.
+
+History: New in IFC4</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcJunctionBox</ClassName>
@@ -11,7 +13,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +22,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +39,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfGangs</Name>
-      <Definition/>
+      <Definition>Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
@@ -46,7 +48,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ClearDepth</Name>
-      <Definition/>
+      <Definition>Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. 
+The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -55,7 +58,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ShapeType</Name>
-      <Definition/>
+      <Definition>Shape of the junction box.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_JunctionBoxShapeType">
@@ -71,7 +74,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>PlacingType</Name>
-      <Definition/>
+      <Definition>Location at which the type of junction box can be located.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_JunctionBoxPlacingType">
@@ -87,7 +90,11 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MountingType</Name>
-      <Definition/>
+      <Definition>The way the air terminal is mounted to the ceiling, wall, etc.
+
+Surface: mounted to the surface of something (e.g., wall, duct, etc.).
+Flat flush: mounted flat and flush with a surface.
+Lay-in: mounted in a lay-in type ceiling (e.g., a dropped ceiling grid).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_JunctionBoxMountingType">
@@ -103,7 +110,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsExternal</Name>
-      <Definition/>
+      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>

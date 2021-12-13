@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_WindowCommon</Name>
-  <Definition/>
+  <Definition>Properties common to the definition of all occurrences of Window.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcWindow</ClassName>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +20,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +37,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AcousticRating</Name>
-      <Definition/>
+      <Definition>Acoustic rating for this object.
+It is provided according to the national building code. It indicates the sound transmission resistance of this object by an index ratio (instead of providing full sound absorbtion values).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -46,7 +47,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FireRating</Name>
-      <Definition/>
+      <Definition>Fire rating for this object. It is given according to the national fire safety code or regulation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -55,7 +56,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SecurityRating</Name>
-      <Definition/>
+      <Definition>Index based rating system indicating security level.
+It is giving according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -64,7 +66,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsExternal</Name>
-      <Definition/>
+      <Definition>Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -73,7 +75,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Infiltration</Name>
-      <Definition/>
+      <Definition>Infiltration flowrate of outside air for the filler object based on the area of the filler object at a pressure level of 50 Pascals. It shall be used, if the length of all joints is unknown.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -82,7 +84,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalTransmittance</Name>
-      <Definition/>
+      <Definition>Thermal transmittance coefficient (U-Value) of the element. It is the total thermal transmittance coefficient through the building element proxy within the direction of the thermal flow (including all materials).
+
+Note: new property in IFC4</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure"/>
@@ -91,7 +95,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>GlazingAreaFraction</Name>
-      <Definition/>
+      <Definition>Fraction of the glazing area relative to the total area of the filling element. 
+It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -100,7 +105,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasSillExternal</Name>
-      <Definition/>
+      <Definition>Indication whether the window opening has an external sill (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -109,7 +114,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasSillInternal</Name>
-      <Definition/>
+      <Definition>Indication whether the window opening has an internal sill (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -118,7 +123,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasDrive</Name>
-      <Definition/>
+      <Definition>Indication whether this object has an automatic drive to operate it (TRUE) or no drive (FALSE)</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -127,7 +132,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SmokeStop</Name>
-      <Definition/>
+      <Definition>Indication whether the object is designed to provide a smoke stop (TRUE) or not (FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -136,7 +141,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FireExit</Name>
-      <Definition/>
+      <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+Here whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -145,7 +151,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>WaterTightnessRating</Name>
-      <Definition/>
+      <Definition>Water tightness rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -154,7 +161,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MechanicalLoadRating</Name>
-      <Definition/>
+      <Definition>Mechanical load rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -163,7 +171,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>WindLoadRating</Name>
-      <Definition/>
+      <Definition>Wind load resistance rating for this object.
+It is provided according to the national building code.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>

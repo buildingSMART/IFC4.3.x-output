@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_FanOccurrence</Name>
-  <Definition/>
+  <Definition>Fan occurrence attributes attached to an instance of IfcFan.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcFan</ClassName>
@@ -11,7 +11,12 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>DischargeType</Name>
-      <Definition/>
+      <Definition>Defines the type of connection at the fan discharge.
+
+Duct: Discharge into ductwork.
+Screen: Discharge into screen outlet.
+Louver: Discharge into a louver.
+Damper: Discharge into a damper.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FanDischargeType">
@@ -28,7 +33,12 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ApplicationOfFan</Name>
-      <Definition/>
+      <Definition>The functional application of the fan.
+
+SupplyAir: Supply air fan. 
+ReturnAir: Return air fan. 
+ExhaustAir: Exhaust air fan. 
+Other: Other type of application not defined above.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FanApplicationType">
@@ -45,7 +55,10 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CoilPosition</Name>
-      <Definition/>
+      <Definition>Defines the relationship between a fan and a coil.
+
+DrawThrough: Fan located downstream of the coil.
+BlowThrough: Fan located upstream of the coil.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FanCoilPosition">
@@ -60,7 +73,10 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MotorPosition</Name>
-      <Definition/>
+      <Definition>Defines the location of the motor relative to the air stream.
+
+InAirStream: Fan motor is in the air stream.
+OutOfAirStream: Fan motor is out of the air stream.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FanMotorPosition">
@@ -75,7 +91,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FanMountingType</Name>
-      <Definition/>
+      <Definition>Defines the method of mounting the fan in the building.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_FanMountingType">
@@ -94,7 +110,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FractionOfMotorHeatToAirStream</Name>
-      <Definition/>
+      <Definition>Fraction of the motor heat released into the fluid flow.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>
@@ -103,7 +119,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ImpellerDiameter</Name>
-      <Definition/>
+      <Definition>Diameter of compressor impeller - used to scale performance of geometrically similar compressors.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>

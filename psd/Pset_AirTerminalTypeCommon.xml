@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_AirTerminalTypeCommon</Name>
-  <Definition/>
+  <Definition>Air terminal type common attributes.
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcAirTerminal</ClassName>
@@ -11,7 +12,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +21,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +38,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Shape</Name>
-      <Definition/>
+      <Definition>Cross sectional shape. Note that this shape is uniform throughout the length of the segment. For nonuniform shapes, a transition fitting should be used instead.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalShape">
@@ -54,7 +55,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FaceType</Name>
-      <Definition/>
+      <Definition>Identifies how the terminal face of an AirTerminal is constructed.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalFaceType">
@@ -74,7 +75,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SlotWidth</Name>
-      <Definition/>
+      <Definition>Slot width.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -83,7 +84,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SlotLength</Name>
-      <Definition/>
+      <Definition>Slot length.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -92,7 +93,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfSlots</Name>
-      <Definition/>
+      <Definition>Number of slots.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
@@ -101,7 +102,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FlowPattern</Name>
-      <Definition/>
+      <Definition>Flow pattern.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalFlowPattern">
@@ -130,7 +131,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TemperatureRange</Name>
-      <Definition/>
+      <Definition>Temperature range within which the air terminal is designed to operate.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
@@ -139,7 +140,11 @@
     </PropertyDef>
     <PropertyDef>
       <Name>DischargeDirection</Name>
-      <Definition/>
+      <Definition>Discharge direction of the air terminal.
+
+Parallel: discharges parallel to mounting surface designed so that flow attaches to the surface.
+Perpendicular:  discharges away from mounting surface.
+Adjustable: both parallel and perpendicular discharge.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalDischargeDirection">
@@ -155,7 +160,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ThrowLength</Name>
-      <Definition/>
+      <Definition>The horizontal or vertical axial distance an airstream travels after leaving an AirTerminal before the maximum stream velocity is reduced to a specified terminal velocity under isothermal conditions at the upper value of the AirFlowrateRange.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLengthMeasure"/>
@@ -164,7 +169,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AirDiffusionPerformanceIndex</Name>
-      <Definition/>
+      <Definition>The Air Diffusion Performance Index (ADPI) is used for cooling mode conditions. If several measurements of air velocity and air temperature are made throughout the occupied zone of a space, the ADPI is the percentage of locations where measurements were taken that meet the specifications for effective draft temperature and air velocity.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal"/>
@@ -173,7 +178,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FinishType</Name>
-      <Definition/>
+      <Definition>The type of finish for the air terminal.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalFinishType">
@@ -189,7 +194,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FinishColor</Name>
-      <Definition/>
+      <Definition>The finish color for the air terminal.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -198,7 +203,11 @@
     </PropertyDef>
     <PropertyDef>
       <Name>MountingType</Name>
-      <Definition/>
+      <Definition>The way the air terminal is mounted to the ceiling, wall, etc.
+
+Surface: mounted to the surface of something (e.g., wall, duct, etc.).
+Flat flush: mounted flat and flush with a surface.
+Lay-in: mounted in a lay-in type ceiling (e.g., a dropped ceiling grid).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalMountingType">
@@ -214,7 +223,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CoreType</Name>
-      <Definition/>
+      <Definition>Identifies the way the core of the AirTerminal is constructed.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalCoreType">
@@ -232,7 +241,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CoreSetHorizontal</Name>
-      <Definition/>
+      <Definition>Degree of horizontal (in the X-axis of the LocalPlacement) blade set from the centerline.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure"/>
@@ -241,7 +250,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CoreSetVertical</Name>
-      <Definition/>
+      <Definition>Degree of vertical (in the Y-axis of the LocalPlacement) blade set from the centerline.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPlaneAngleMeasure"/>
@@ -250,7 +259,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasIntegralControl</Name>
-      <Definition/>
+      <Definition>If TRUE, a self powered temperature control is included in the AirTerminal.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -259,7 +268,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FlowControlType</Name>
-      <Definition/>
+      <Definition>Type of flow control element that may be included as a part of the construction of the air terminal.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_AirTerminalFlowControlType">
@@ -275,7 +284,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasSoundAttenuator</Name>
-      <Definition/>
+      <Definition>If TRUE, the air terminal has sound attenuation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -284,7 +293,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HasThermalInsulation</Name>
-      <Definition/>
+      <Definition>If TRUE, the air terminal has thermal insulation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -293,7 +302,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NeckArea</Name>
-      <Definition/>
+      <Definition>Neck area of the air terminal.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -302,7 +311,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>EffectiveArea</Name>
-      <Definition/>
+      <Definition>Effective discharge area of the air terminal.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcAreaMeasure"/>
@@ -311,7 +320,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AirFlowrateVersusFlowControlElement</Name>
-      <Definition/>
+      <Definition>Air flowrate versus flow control element position at nominal pressure drop.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression/>

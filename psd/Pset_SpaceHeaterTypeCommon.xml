@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_SpaceHeaterTypeCommon</Name>
-  <Definition/>
+  <Definition>Space heater type common attributes.
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.  Properties added in IFC4.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcSpaceHeater</ClassName>
@@ -11,7 +12,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +21,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +38,10 @@
     </PropertyDef>
     <PropertyDef>
       <Name>PlacementType</Name>
-      <Definition/>
+      <Definition>Indicates the placement of the coil.  
+FLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL); 
+CEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL);
+UNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SpaceHeaterPlacementType">
@@ -54,7 +58,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TemperatureClassification</Name>
-      <Definition/>
+      <Definition>Enumeration defining the temperature classification of the space heater surface temperature.
+low temperature - surface temperature is relatively low, usually heated by hot water or electricity.
+high temperature - surface temperature is relatively high, usually heated by gas or steam.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SpaceHeaterTemperatureClassification">
@@ -69,7 +75,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HeatTransferDimension</Name>
-      <Definition/>
+      <Definition>Indicates how heat is transmitted according to the shape of the space heater.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SpaceHeaterHeatTransferDimension">
@@ -85,7 +91,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>HeatTransferMedium</Name>
-      <Definition/>
+      <Definition>Enumeration defining the heat transfer medium if applicable.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_HeatTransferMedium">
@@ -100,7 +106,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>EnergySource</Name>
-      <Definition/>
+      <Definition>Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EnergySource">
@@ -123,7 +129,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>BodyMass</Name>
-      <Definition/>
+      <Definition>Overall body mass of the heater.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -132,7 +138,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalMassHeatCapacity</Name>
-      <Definition/>
+      <Definition>Product of component mass and specific heat.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcReal"/>
@@ -141,7 +147,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>OutputCapacity</Name>
-      <Definition/>
+      <Definition>Total nominal heat output as listed by the manufacturer.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -150,7 +156,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalEfficiency</Name>
-      <Definition/>
+      <Definition>Overall Thermal Efficiency is defined as gross energy output of the heat transfer device divided by the energy input.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>
@@ -159,7 +165,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfPanels</Name>
-      <Definition/>
+      <Definition>Number of panels.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
@@ -168,7 +174,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfSections</Name>
-      <Definition/>
+      <Definition>Number of sections used in the construction of the tank. Default is 1.
+
+Note: All sections assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>

@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_ProtectiveDeviceTrippingFunctionICurve</Name>
-  <Definition/>
+  <Definition>Tripping functions are applied to electronic tripping units (i.e. tripping units having type property sets for electronic tripping defined). They are not applied to thermal, thermal magnetic or RCD tripping units.
+This property set represent the instantaneous time protection (I-curve) of an electronic protection device.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcProtectiveDeviceTrippingUnit</ClassName>
@@ -11,7 +12,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>IsSelectable</Name>
-      <Definition/>
+      <Definition>Indication whether the L-function can be switched off or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -20,7 +21,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalCurrentAdjusted</Name>
-      <Definition/>
+      <Definition>An indication if the tripping currents of the short time protection is related to the nominal current multiplied with the actual setting of the current adjustment, if any, of the long time protection part of the protective device, or not.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -29,7 +30,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ReleaseCurrent</Name>
-      <Definition/>
+      <Definition>The release current in [x In] for the initial tripping of the S-function.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure"/>
@@ -38,7 +39,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ReleaseTime</Name>
-      <Definition/>
+      <Definition>The release time in [s] for the initial tripping of the relevant part. This time indicates that for current lower than the indicated release current, the tripping time will be longer than the indicated release time. The value is given as a mean value.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure"/>
@@ -47,7 +48,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CurrentTolerance1</Name>
-      <Definition/>
+      <Definition>The tolerance for the current of time/current-curve in [%].</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -56,7 +57,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CurrentToleranceLimit1</Name>
-      <Definition/>
+      <Definition>The time limit in [s] limiting the application of CurrentTolerance1, if any. If the value is set to 0, the value of the CurrentTolerance1 is valid for the whole time/current-curve.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcTimeMeasure"/>
@@ -65,7 +66,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CurrentTolerance2</Name>
-      <Definition/>
+      <Definition>The tolerance for the current of time/current-curve in [%] valid for times above CurrentTolereanceLimit1.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -74,7 +75,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsCurrentTolerancePositiveOnly</Name>
-      <Definition/>
+      <Definition>Indication whether the value of  CurrentTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -83,7 +84,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TimeTolerance1</Name>
-      <Definition/>
+      <Definition>The tolerance for the time of time/current-curve in [%].</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -92,7 +93,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TimeToleranceLimit1</Name>
-      <Definition/>
+      <Definition>The current limit in [x In] limiting the application of TimeTolerance1, if any. If the value is set to 0, the value of the TimeTolerance1 is valid for the whole time/current-curve.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcElectricCurrentMeasure"/>
@@ -101,7 +102,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TimeTolerance2</Name>
-      <Definition/>
+      <Definition>The tolerance for the time of the time/current-curve in [%] valid for currents above TimeToleranceLimit1.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -110,7 +111,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsTimeTolerancePositiveOnly</Name>
-      <Definition/>
+      <Definition>Indication whether the value of  TimeTolerance1 is provided as a positive tolereance only  or not. If not, the value is proved as a pluss/minus tolerance.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -128,7 +129,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IsOffWhenSFunctionOn</Name>
-      <Definition/>
+      <Definition>Indication whether the I-function is automatically switched off when the S-function is switched on.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>

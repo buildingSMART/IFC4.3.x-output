@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b6cce61"/>
+  <IfcVersion version="IFC4X3_DEV_95b6b1d"/>
   <Name>Pset_TankTypeCommon</Name>
-  <Definition/>
+  <Definition>Common attributes of a tank type.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcTank</ClassName>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition/>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -20,7 +20,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>Status</Name>
-      <Definition/>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as &quot;New&quot; - element designed as new addition, &quot;Existing&quot; - element exists and remains, &quot;Demolish&quot; - element existed but is to be demolished,  &quot;Temporary&quot; - element will exists only temporary (like a temporary support structure).</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ElementStatus">
@@ -37,7 +37,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>AccessType</Name>
-      <Definition/>
+      <Definition>Defines the types of access (or cover) to a tank that may be specified.
+
+Note that covers are generally specified for rectangular tanks. For cylindrical tanks, access will normally be via a manhole.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_TankAccessType">
@@ -55,7 +57,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>StorageType</Name>
-      <Definition/>
+      <Definition>Defines the general material category intended to be stored.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_TankStorageType">
@@ -75,7 +77,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalLengthOrDiameter</Name>
-      <Definition/>
+      <Definition>The nominal length or, in the case of a vertical cylindrical tank, the nominal diameter of the tank.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -84,7 +86,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalWidthOrDiameter</Name>
-      <Definition/>
+      <Definition>The nominal width or, in the case of a horizontal cylindrical tank, the nominal diameter of the tank.
+
+Note: Not required for a vertical cylindrical tank.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -93,7 +97,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalDepth</Name>
-      <Definition/>
+      <Definition>Nominal or quoted depth of the object measured from the inlet drain connection to the base of the unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure"/>
@@ -102,7 +106,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalCapacity</Name>
-      <Definition/>
+      <Definition>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure"/>
@@ -111,7 +115,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>EffectiveCapacity</Name>
-      <Definition/>
+      <Definition>The total effective or actual volumetric capacity of the tank.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumeMeasure"/>
@@ -120,7 +124,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>OperatingWeight</Name>
-      <Definition/>
+      <Definition>Operating weight of the tank including all of its contents.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -129,7 +133,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>PatternType</Name>
-      <Definition/>
+      <Definition>Defines the types of pattern (or shape of a tank that may be specified.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_TankPatternType">
@@ -145,7 +149,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>EndShapeType</Name>
-      <Definition/>
+      <Definition>Defines the types of end shapes that can be used for preformed tanks. The convention for reading these enumerated values is that for a vertical cylinder, the first value is the base and the second is the top; for a horizontal cylinder, the order of reading should be left to right. For a speherical tank, the value UNSET should be used.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EndShapeType">
@@ -163,7 +167,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>FirstCurvatureRadius</Name>
-      <Definition/>
+      <Definition>FirstCurvatureRadius should be defined as the base or left side radius of curvature value.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -172,7 +176,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SecondCurvatureRadius</Name>
-      <Definition/>
+      <Definition>SecondCurvatureRadius should be defined as the top or right side radius of curvature value.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -181,7 +185,9 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfSections</Name>
-      <Definition/>
+      <Definition>Number of sections used in the construction of the tank. Default is 1.
+
+Note: All sections assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcInteger"/>
