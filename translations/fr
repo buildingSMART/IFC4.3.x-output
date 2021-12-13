@@ -9,638 +9,163 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /master/IfcExternalReferenceResource.pot\n"
-"X-Crowdin-File-ID: 40\n"
+"X-Crowdin-File: /master/IfcPresentationDefinitionResource.pot\n"
+"X-Crowdin-File-ID: 62\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: fr_FR\n"
 "PO-Revision-Date: 2021-12-13 08:55\n"
 
-#:IFC.xml:8273
-msgid "IfcClassification"
-msgstr "IfcClassification"
+#:IFC.xml:25363
+msgid "IfcAnnotationFillArea"
+msgstr "format@@0 IfcAnnotationFillArea"
 
-msgid "IfcClassification_DEFINITION"
-msgstr "An [[IfcClassification]] is used for the arrangement of objects into a class or category according to a common purpose or their possession of common characteristics. A classification in the sense of [[IfcClassification]] is taxonomy, or taxonomic scheme, arranged in a hierarchical structure. A category of objects relates to other categories in a generalization specialization relationship. Therefore the classification items in an classification are organized in a tree structure. The [[IfcClassification]] identifies the classification system or source to which a classification reference refers to. Each classification reference may reference an instance of [[IfcClassification]] . A classification system declared may be either formally published, or it may be a locally defined method of classifiying information. NOTE Examples for such formally published classifications are Omniclass, Uniclass, Masterformat, or DIN277. There are two methods to define and reference a classification system 1. Including the classification system structure within the dataset Here a hierarchical tree of [[IfcClassificationReference]] s is included that defines the classification system including the relationship between the classification items. The ReferencedSource attribute of [[IfcClassificationReference]] links the classification item to the parent item, and the parent item finally to the [[IfcClassification]] . 2. Referencing the classification system by a classification key or id Here the [[IfcClassificationReference]] is used to assign a classification id or key as Identification attribute and it may link by ReferencedSource attribute directly to the [[IfcClassification]] . HISTORY New entity in IFC1.5 .change ifc2x4 IFC 2x4 CHANGE Attribute Edition made optional. Attributes Description , Location , and ReferenceTokens and inverse attribute HasReferences added."
+msgid "IfcAnnotationFillArea_DEFINITION"
+msgstr "The [[IfcAnnotationFillArea]] defines an area by a definite OuterBoundary , that might include InnerBoundaries . The areas defined by the InnerBoundaries are excluded from applying the fill area style. The InnerBoundaries shall not intersect with the OuterBoundary nor being outside of the OuterBoundary . The fill area style that is applied to the [[IfcAnnotationFillArea]] is declared using the [[IfcFillAreaStyle]] , associated to the area by an [[IfcStyledItem]] . Applicable fill area styles are a solid color, a hatching, tiles, or a combination of those styles. .extDef NOTE Definition according to ISO 10303 46 An annotation fill area is a set of curves that may be filled with hatching, colour or tiling. The annotation fill are is described by boundaries which consist of non intersecting, non self intersecting closed curves. These curves form the boundary of planar areas to be filled according to the style for the annotation fill area. Figure 1 illustrates annotation fill area. Figure 1 Annotation fill area NOTE Entity adapted from annotation fill area defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The two attributes OuterBoundary and InnerBoundaries are added and replace the previous single boundary. .spec head Informal Propositions 1. Any curve that describes an inner boundary shall not intersect with, nor include, another curve defining an inner boundary. 2. The curve defining the outer boundary shall not intersect with any curve defining an inner boundary, nor shall it be surrounded by a curve defining an inner boundary."
 
-#:IFC.xml:8313
-msgid "IfcClassification_ClassificationForObjects"
-msgstr "Classification des objets"
+#:IFC.xml:11208
+msgid "IfcAnnotationFillArea_OuterBoundary"
+msgstr "Frontière extérieure"
 
-msgid "IfcClassification_ClassificationForObjects_DEFINITION"
-msgstr "The classification with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgid "IfcAnnotationFillArea_OuterBoundary_DEFINITION"
+msgstr "A closed curve that defines the outer boundary of the fill area. The areas defined by the outer boundary minus potentially defined inner boundaries is filled by the fill area style. .change ifc2x3 IFC2x3 CHANGE The two new attributes OuterBoundary and InnerBoundaries replace the old single attribute Boundaries."
 
-#:IFC.xml:8325
-msgid "IfcClassification_HasReferences"
-msgstr "Vous avez des références"
+#:IFC.xml:11220
+msgid "IfcAnnotationFillArea_InnerBoundaries"
+msgstr "Frontières intérieures"
 
-msgid "IfcClassification_HasReferences_DEFINITION"
-msgstr "The classification references to which the classification applies. It can either be the final classification notation, or an intermediate classification item."
+msgid "IfcAnnotationFillArea_InnerBoundaries_DEFINITION"
+msgstr "A set of inner curves that define the inner boundaries of the fill area. The areas defined by the inner boundaries are excluded from applying the fill area style. .note IFC2x3 CHANGE The two new attributes OuterBoundary and InnerBoundaries replace the old single attribute Boundaries."
 
-#:IFC.xml:8274
-msgid "IfcClassification_Description"
-msgstr "Libellé"
+#:IFC.xml:25366
+msgid "IfcPlanarBox"
+msgstr "IfcPlanarBox"
 
-msgid "IfcClassification_Description_DEFINITION"
-msgstr "Additional description provided for the classification. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcPlanarBox_DEFINITION"
+msgstr "A planar box specifies an arbitrary rectangular box and its location in a two dimensional Cartesian coordinate system. If the planar box is used within a three dimensional coordinate system, it defines the rectangular box within the XY plane. NOTE Entity adapted from planar box defined in ISO10303 46 HISTORY New entity in IFC2x2."
 
-#:IFC.xml:8279
-msgid "IfcClassification_Edition"
-msgstr "Édition"
+#:IFC.xml:25367
+msgid "IfcPlanarBox_Placement"
+msgstr "Placement"
 
-msgid "IfcClassification_Edition_DEFINITION"
-msgstr "The edition or version of the classification system from which the classification notation is derived. NOTE the version labeling system is specific to the classification system. .change ifc2x4 IFC4 CHANGE The attribute has been changed to be optional."
+msgid "IfcPlanarBox_Placement_DEFINITION"
+msgstr "The [[IfcAxis2Placement]] positions a local coordinate system for the definition of the rectangle. The origin of this local coordinate system serves as the lower left corner of the rectangular box. NOTE In case of a 3D placement by IfcAxisPlacement3D the [[IfcPlanarBox]] is defined within the xy plane of the definition coordinate system."
 
-#:IFC.xml:8284
-msgid "IfcClassification_EditionDate"
-msgstr "Date d'édition"
+#:IFC.xml:25374
+msgid "IfcPlanarExtent"
+msgstr "IfcPlanarExtent"
 
-msgid "IfcClassification_EditionDate_DEFINITION"
-msgstr "The date on which the edition of the classification used became valid. NOTE The indication of edition may be sufficient to identify the classification source uniquely but the edition date is provided as an optional attribute to enable more precise identification where required. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDate]] , the date string according to ISO8601."
+msgid "IfcPlanarExtent_DEFINITION"
+msgstr "The planar extent defines the extent along the two axes of the two dimensional coordinate system, independently of its position. If the planar extent is used within a three dimensional coordinate system, it defines the extent along the x and y axes. NOTE Entity adapted from planar extent defined in ISO10303 46 HISTORY New entity in IFC2x2."
 
-#:IFC.xml:8289
-msgid "IfcClassification_Location"
-msgstr "Localisation"
+#:IFC.xml:25375
+msgid "IfcPlanarExtent_SizeInX"
+msgstr "SizeInX"
 
-msgid "IfcClassification_Location_DEFINITION"
-msgstr "Resource identifier or locator, provided as URI, URN or URL, of the classification. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcPlanarExtent_SizeInX_DEFINITION"
+msgstr "L'étendue dans la direction de l'axe x."
 
-#:IFC.xml:8294
-msgid "IfcClassification_Name"
-msgstr "Nom"
+#:IFC.xml:25380
+msgid "IfcPlanarExtent_SizeInY"
+msgstr "SizeInY"
 
-msgid "IfcClassification_Name_DEFINITION"
-msgstr "The name or label by which the classification used is normally known. NOTE Examples of names include CI SfB, Masterformat, BSAB, Uniclass, STABU, DIN276, DIN277 etc."
+msgid "IfcPlanarExtent_SizeInY_DEFINITION"
+msgstr "L'étendue dans la direction de l'axe y."
 
-#:IFC.xml:8299
-msgid "IfcClassification_ReferenceTokens"
-msgstr "Jetons de référence"
+#:IFC.xml:25399
+msgid "IfcPresentationItem"
+msgstr "IfcPresentationItem"
 
-msgid "IfcClassification_ReferenceTokens_DEFINITION"
-msgstr "The delimiter tokens that are used to mark the boundaries of individual facets substrings in a classification reference. This typically applies then the [[IfcClassification]] is used in conjuction with [[IfcClassificationReference]] s. If only one ReferenceToken is provided, it applies to all boundaries of individual facets, if more than one ReferenceToken are provided, the first token applies to the first boundary, the second token to the second boundary, and the n th token to the n th and any additional boundary. NOTE Tokens are typically recommended within the classification itself and each token will have a particular role. EXAMPLE 1 To indicate that the facet delimiter used for DIN277 2 reference key 2.1 Office rooms is . , a single ReferenceToken . is provided. To indicate that the facet delimiter used for Omniclass Table 13 space by function reference key 13 15 11 34 11 Office are and , two ReferenceToken s , are provided. EXAMPLE 2 The use of ReferenceTokens can also be extended to include masks. The use need to be agreed in view definitions or implementer agreements that stipulates a mask syntax that should be used. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcPresentationItem_DEFINITION"
+msgstr "The [[IfcPresentationItem]] is the abstract supertype of all entities used for presentation appearance definitions. HISTORY New entity in IFC4."
 
-#:IFC.xml:8304
-msgid "IfcClassification_Source"
-msgstr "Source"
+#:IFC.xml:25400
+msgid "IfcTextLiteral"
+msgstr "IfcTextLiteral"
 
-msgid "IfcClassification_Source_DEFINITION"
-msgstr "Source or publisher for this classification. NOTE that the source of the classification means the person or organization that was the original author or the person or organization currently acting as the publisher."
+msgid "IfcTextLiteral_DEFINITION"
+msgstr "The text literal is a geometric representation item which describes a text string using a string literal and additional position and path information. The text size and appearance is determined by the [[IfcTextStyle]] that is associated to the [[IfcTextLiteral]] through an [[IfcStyledItem]] . The text string is placed within the planar extent the box defined within the subtype [[IfcTextLiteralWithExtent]] . NOTE Entity adapted from text literal defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextLiteral]] has been changed by removing Font and Alignment . .deprecated DEPRECATION The use of [[IfcTextLiteral]] is deprecated and it will be made abstract."
 
-#:IFC.xml:8337
-msgid "IfcClassificationReference"
-msgstr "Référence de classification inconnue"
+#:IFC.xml:25401
+msgid "IfcTextLiteral_Literal"
+msgstr "Litérale"
 
-msgid "IfcClassificationReference_DEFINITION"
-msgstr "An [[IfcClassificationReference]] is a reference into a classification system or source see [[IfcClassification]] for a specific classification key or notation . The inherited attributes have the following meaning Identification holds the key provided for a specific references to classification items or tables . Name allows for a human interpretable designation of a classification notation. Location optionally holds a direct URI link into the classification system or source to hyperlink the classification key. The [[IfcClassificationReference]] can either be assigned directly to the [[IfcClassification]] , such as if no classification hierarchy has to be included, or it references the parent classification notation, if the fully classification hierarchy is included in the data set. The first is refered to as lightweight classification , and the second as full classification . The attribute ReferencedSource then holds the following information choice by [[IfcClassificationReferenceSelect]] 1. being of type [[IfcClassification]] direct reference to the classification system with meta information provided 2. being of type [[IfcClassificationReference]] reference to the parent classification notation within the classification hierarchy. EXAMPLE The [[IfcClassificationReference]] can be used as a form of lightweight classification through the Identification attribute inherited from the abstract [[IfcExternalReference]] class. In this case, the Identification could take for instance the Uniclass notation L6814 which, if the classification was well understood by all parties and was known to be taken from a particular classification source, would be sufficient. The Name attribute could be the title Tanking . This would remove the need for the overhead of the more complete classification structure of the model. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The attribute Description and inverse attribute HasReferences are added. The attribute Identification has been renamed from ItemReference."
+msgid "IfcTextLiteral_Literal_DEFINITION"
+msgstr "Le texte littéral à présenter."
 
-#:IFC.xml:8357
-msgid "IfcClassificationReference_HasReferences"
-msgstr "Vous avez des références"
+#:IFC.xml:25406
+msgid "IfcTextLiteral_Path"
+msgstr "Chemin d'accès"
 
-msgid "IfcClassificationReference_HasReferences_DEFINITION"
-msgstr "The parent classification references to which this child classification reference applies. It can either be the final classification item leaf node, or an intermediate classification item. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgid "IfcTextLiteral_Path_DEFINITION"
+msgstr "La direction d'écriture du texte littéral."
 
-#:IFC.xml:8369
-msgid "IfcClassificationReference_ClassificationRefForObjects"
-msgstr "Refus de classification pour les objets"
+#:IFC.xml:25411
+msgid "IfcTextLiteral_Placement"
+msgstr "Placement"
 
-msgid "IfcClassificationReference_ClassificationRefForObjects_DEFINITION"
-msgstr "The classification reference with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgid "IfcTextLiteral_Placement_DEFINITION"
+msgstr "Un [[IfcAxis2Placement]] qui détermine le placement et l'orientation de la chaîne présentée."
 
-#:IFC.xml:8338
-msgid "IfcClassificationReference_Description"
-msgstr "Libellé"
+#:IFC.xml:25418
+msgid "IfcTextLiteralWithExtent"
+msgstr "IfcTextLiteralWithExtent"
 
-msgid "IfcClassificationReference_Description_DEFINITION"
-msgstr "Description of the classification reference for informational purposes. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcTextLiteralWithExtent_DEFINITION"
+msgstr "The text literal with extent is a text literal with the additional explicit information of the planar extent. An alignment attribute defines how the text box is aligned to the placement and how it may expand if additional lines of text need to be added. Figure 1 shows the use of planar extent and box alignment to position the text string [[IfcTextLiteralWithExtent]] Fig1.png 8,1 KB .. .. .. .. figures ifctextliteralwithextent fig1.png Figure 1 Text literal with extent and alignment The planar extent defines the box model within which the text is placed. Padding maybe defined in the text style that offsets the text from the box to its inside. NOTE Entity adapted from text literal with extent defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextLiteralWithExtent]] has been changed by adding BoxAlignment ."
 
-#:IFC.xml:8343
-msgid "IfcClassificationReference_ReferencedSource"
-msgstr "Source référencée"
+#:IFC.xml:25387
+msgid "IfcTextLiteralWithExtent_Extent"
+msgstr "Etendue"
 
-msgid "IfcClassificationReference_ReferencedSource_DEFINITION"
-msgstr "The classification system or source that is referenced. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcClassificationReferenceSelect]] ."
+msgid "IfcTextLiteralWithExtent_Extent_DEFINITION"
+msgstr "The extent in the x and y direction of the text literal."
 
-#:IFC.xml:8348
-msgid "IfcClassificationReference_Sort"
-msgstr "Trier"
+#:IFC.xml:25419
+msgid "IfcTextLiteralWithExtent_BoxAlignment"
+msgstr "Alignement de la boite"
 
-msgid "IfcClassificationReference_Sort_DEFINITION"
-msgstr "Optional identifier to sort the set of classification references within the referenced source either a classification facet of higher level, or the classification system itself . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcTextLiteralWithExtent_BoxAlignment_DEFINITION"
+msgstr "L'alignement du texte littéral par rapport à sa position."
 
-#:IFC.xml:8381
-msgid "IfcClassificationReferenceSelect"
-msgstr "Sélectionnez une référence de classification"
+#:IFC.xml:25426
+msgid "IfcTextPath"
+msgstr "IfcTextPath"
 
-#:IFC.xml:8382
-msgid "IfcClassificationSelect"
-msgstr "format@@0 IfcClassification Select"
+msgid "IfcTextPath_DEFINITION"
+msgstr "The text path determines the direction of the text characters in respect to each other. NOTE The [[IfcTextPath]] is an entity that had been adopted from ISO 10303, Industrial automation systems and integration Product data representation and exchange, Part 46 Integrated generic resources Visual presentation. NOTE Corresponding ISO 10303 name text path . Please refer to ISO IS 10303 46 1994 for the final definition of the formal standard. HISTORY New entity in IFC2x2. Items LEFT RIGHT UP DOWN"
 
-#:IFC.xml:8383
-msgid "IfcDocumentConfidentialityEnum"
-msgstr "IfcDocumentConfidentialité Enium"
+#:IFC.xml:25427
+msgid "IfcTextPath_DOWN"
+msgstr "BOUTIQUE"
 
-msgid "IfcDocumentConfidentialityEnum_DEFINITION"
-msgstr "[[IfcDocumentConfidentialityEnum]] enables selection of the level of confidentiality of document information from a list of choices. HISTORY New enumeration in IFC2x. Items PUBLIC Document is publicly available. RESTRICTED Document availability is restricted. CONFIDENTIAL PERSONAL Document is personal to the author. USERDEFINED NOTDEFINED"
+msgid "IfcTextPath_DOWN_DEFINITION"
+msgstr "BOUTIQUE"
 
-#:IFC.xml:8384
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL"
-msgstr "CONFIDENTIEL"
+#:IFC.xml:25428
+msgid "IfcTextPath_LEFT"
+msgstr "GAUCHE"
 
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL_DEFINITION"
-msgstr "CONFIDENTIEL"
+msgid "IfcTextPath_LEFT_DEFINITION"
+msgstr "GAUCHE"
 
-#:IFC.xml:8385
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED"
-msgstr "NON DÉFINI"
+#:IFC.xml:25429
+msgid "IfcTextPath_RIGHT"
+msgstr "DROITE"
 
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED_DEFINITION"
-msgstr "NON DÉFINI"
+msgid "IfcTextPath_RIGHT_DEFINITION"
+msgstr "DROITE"
 
-#:IFC.xml:8386
-msgid "IfcDocumentConfidentialityEnum_PERSONAL"
-msgstr "PERSONNEL"
+#:IFC.xml:25430
+msgid "IfcTextPath_UP"
+msgstr "HAUT"
 
-msgid "IfcDocumentConfidentialityEnum_PERSONAL_DEFINITION"
-msgstr "Document is personal to the author."
+msgid "IfcTextPath_UP_DEFINITION"
+msgstr "HAUT"
 
-#:IFC.xml:8387
-msgid "IfcDocumentConfidentialityEnum_PUBLIC"
-msgstr "PUBLIQUE"
+#:IFC.xml:25432
+msgid "IfcBoxAlignment"
+msgstr "IfcBoxAlignment"
 
-msgid "IfcDocumentConfidentialityEnum_PUBLIC_DEFINITION"
-msgstr "Document is publicly available."
-
-#:IFC.xml:8388
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED"
-msgstr "RESTRICTÉ"
-
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED_DEFINITION"
-msgstr "Document availability is restricted."
-
-#:IFC.xml:8389
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED"
-msgstr "UTILISATEUR DÉFINI"
-
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED_DEFINITION"
-msgstr "UTILISATEUR DÉFINI"
-
-#:IFC.xml:8391
-msgid "IfcDocumentInformation"
-msgstr "Information sur le document"
-
-msgid "IfcDocumentInformation_DEFINITION"
-msgstr "[[IfcDocumentInformation]] captures metadata of an external document. The actual content of the document is not defined in this specification instead, it can be found following the Location attribute. The same [[IfcDocumentInformation]] can be referenced from the exchange structure in total or in parts e.g. by refering to particular chapters or paragraphs using the [[IfcDocumentReference]] . All [[IfcDocumentReference]] s that utilize the [[IfcDocumentInformation]] are accessible by the inverse relationship HasDocumentReferences . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute HasDocumentReferences changed to be inverse, attribute Location added, and attribute ElectronicFormat modified."
-
-#:IFC.xml:8480
-msgid "IfcDocumentInformation_IsPointer"
-msgstr "Vous êtes pointeur"
-
-msgid "IfcDocumentInformation_IsPointer_DEFINITION"
-msgstr "An inverse relationship from the [[IfcDocumentInformationRelationship]] to the relating document."
-
-#:IFC.xml:8494
-msgid "IfcDocumentInformation_IsPointedTo"
-msgstr "IsPointedTo"
-
-msgid "IfcDocumentInformation_IsPointedTo_DEFINITION"
-msgstr "An inverse relationship from the [[IfcDocumentInformationRelationship]] to the related documents. EPM HTML"
-
-#:IFC.xml:8508
-msgid "IfcDocumentInformation_HasDocumentReferences"
-msgstr "Ce document contient des références"
-
-msgid "IfcDocumentInformation_HasDocumentReferences_DEFINITION"
-msgstr "The document references to which the document applies"
-
-#:IFC.xml:8522
-msgid "IfcDocumentInformation_DocumentInfoForObjects"
-msgstr "Informations sur le document pour les objets"
-
-msgid "IfcDocumentInformation_DocumentInfoForObjects_DEFINITION"
-msgstr "The document information with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
-
-#:IFC.xml:8392
-msgid "IfcDocumentInformation_Confidentiality"
-msgstr "Confidentialité"
-
-msgid "IfcDocumentInformation_Confidentiality_DEFINITION"
-msgstr "Le niveau de confidentialité du document."
-
-#:IFC.xml:8397
-msgid "IfcDocumentInformation_CreationTime"
-msgstr "Date de création"
-
-msgid "IfcDocumentInformation_CreationTime_DEFINITION"
-msgstr "Date and time stamp when the document was originally created. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDateTime]] , the date time string according to ISO8601."
-
-#:IFC.xml:8402
-msgid "IfcDocumentInformation_Description"
-msgstr "Libellé"
-
-msgid "IfcDocumentInformation_Description_DEFINITION"
-msgstr "Description du document et de son contenu."
-
-#:IFC.xml:8407
-msgid "IfcDocumentInformation_DocumentOwner"
-msgstr "Propriétaire du document"
-
-msgid "IfcDocumentInformation_DocumentOwner_DEFINITION"
-msgstr "Renseignements sur la personne ou l'organisation reconnue comme propriétaire de ce document. Dans certains contextes, le propriétaire du document détermine qui a accès au document ou l'édition des droits d'accès au document."
-
-#:IFC.xml:8412
-msgid "IfcDocumentInformation_Editors"
-msgstr "Éditeurs"
-
-msgid "IfcDocumentInformation_Editors_DEFINITION"
-msgstr "Les personnes et les organisations qui ont créé ce document ou y ont contribué."
-
-#:IFC.xml:8417
-msgid "IfcDocumentInformation_ElectronicFormat"
-msgstr "ElectronicFormat"
-
-msgid "IfcDocumentInformation_ElectronicFormat_DEFINITION"
-msgstr "Describes the media type used in various internet protocols, also referred to as Content type , or MIME type Multipurpose Internet Mail Extension , of the document being referenced. It is composed of at least two parts, a type and a subtype. NOTE The iana Internet Assigned Numbers Authority published the media types. EXAMPLE image png denotes an image type of png Portable Network Graphics subtype, application pdf denotes an application specific type of pdf Portable Document Format subtype .change ifc2x4 IFC4 CHANGE The data type has been changed from entity data type to [[IfcIdentifier]] ."
-
-#:IFC.xml:8422
-msgid "IfcDocumentInformation_Identification"
-msgstr "Identification"
-
-msgid "IfcDocumentInformation_Identification_DEFINITION"
-msgstr "Identifier that uniquely identifies a document. .change ifc2x4 IFC4 CHANGE Attribute renamed from DocumentId ."
-
-#:IFC.xml:8427
-msgid "IfcDocumentInformation_IntendedUse"
-msgstr "IntendedUse"
-
-msgid "IfcDocumentInformation_IntendedUse_DEFINITION"
-msgstr "Utilisation prévue pour ce document."
-
-#:IFC.xml:8432
-msgid "IfcDocumentInformation_LastRevisionTime"
-msgstr "LastRevisionTime"
-
-msgid "IfcDocumentInformation_LastRevisionTime_DEFINITION"
-msgstr "Date and time stamp when this document version was created. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDateTime]] , the date time string according to ISO8601."
-
-#:IFC.xml:8437
-msgid "IfcDocumentInformation_Location"
-msgstr "Localisation"
-
-msgid "IfcDocumentInformation_Location_DEFINITION"
-msgstr "Resource identifier or locator, provided as URI, URN or URL, of the document information for online references. .change ifc2x4 IFC4 CHANGE New attribute added at the place of the removed attribute DocumentReferences ."
-
-#:IFC.xml:8442
-msgid "IfcDocumentInformation_Name"
-msgstr "Nom"
-
-msgid "IfcDocumentInformation_Name_DEFINITION"
-msgstr "Nom du fichier ou du document assigné par le propriétaire."
-
-#:IFC.xml:8447
-msgid "IfcDocumentInformation_Purpose"
-msgstr "Objectif"
-
-msgid "IfcDocumentInformation_Purpose_DEFINITION"
-msgstr "Objectif de ce document."
-
-#:IFC.xml:8452
-msgid "IfcDocumentInformation_Revision"
-msgstr "Révision"
-
-msgid "IfcDocumentInformation_Revision_DEFINITION"
-msgstr "Désignation de la révision du document."
-
-#:IFC.xml:8457
-msgid "IfcDocumentInformation_Scope"
-msgstr "Périmètre d'application"
-
-msgid "IfcDocumentInformation_Scope_DEFINITION"
-msgstr "Portée de ce document."
-
-#:IFC.xml:8462
-msgid "IfcDocumentInformation_Status"
-msgstr "Statut"
-
-msgid "IfcDocumentInformation_Status_DEFINITION"
-msgstr "The current status of the document. Examples of status values that might be used for a document information status include DRAFT FINAL DRAFT FINAL REVISION"
-
-#:IFC.xml:8467
-msgid "IfcDocumentInformation_ValidFrom"
-msgstr "Valable à partir de"
-
-msgid "IfcDocumentInformation_ValidFrom_DEFINITION"
-msgstr "Date when the document becomes valid. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDate]] , the date string according to ISO8601."
-
-#:IFC.xml:8472
-msgid "IfcDocumentInformation_ValidUntil"
-msgstr "ValidUntil"
-
-msgid "IfcDocumentInformation_ValidUntil_DEFINITION"
-msgstr "Date until which the document remains valid. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDate]] , the date string according to ISO8601."
-
-#:IFC.xml:8534
-msgid "IfcDocumentInformationRelationship"
-msgstr "Si vous avez une relation de documentation, merci de nous contacter."
-
-msgid "IfcDocumentInformationRelationship_DEFINITION"
-msgstr "An [[IfcDocumentInformationRelationship]] is a relationship entity that enables a document to have the ability to reference other documents. It is used to describe relationships in which one document may reference one or more other sub documents or where a document is used as a replacement for another document but where both the original and the replacing document need to be retained . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcResourceLevelRelationship]] , order of attributes changed."
-
-#:IFC.xml:8480
-msgid "IfcDocumentInformationRelationship_RelatingDocument"
-msgstr "Lier un document"
-
-msgid "IfcDocumentInformationRelationship_RelatingDocument_DEFINITION"
-msgstr "The document that acts as the parent, referencing or original document in a relationship."
-
-#:IFC.xml:8494
-msgid "IfcDocumentInformationRelationship_RelatedDocuments"
-msgstr "Documents connexes"
-
-msgid "IfcDocumentInformationRelationship_RelatedDocuments_DEFINITION"
-msgstr "The document that acts as the child, referenced or replacing document in a relationship."
-
-#:IFC.xml:8535
-msgid "IfcDocumentInformationRelationship_RelationshipType"
-msgstr "Type de relation"
-
-msgid "IfcDocumentInformationRelationship_RelationshipType_DEFINITION"
-msgstr "Décrit le type de relation entre les documents. Ceci peut être un sous-document, un remplacement, etc. L'interprétation doit être établie dans un contexte d'application."
-
-#:IFC.xml:8542
-msgid "IfcDocumentReference"
-msgstr "Référence de document Ifc"
-
-msgid "IfcDocumentReference_DEFINITION"
-msgstr "An [[IfcDocumentReference]] is a reference to the location of a document. The reference is given by a system interpretable Location attribute a URL string where the document can be found, and an optional inherited internal reference Identification , which refers to a system interpretable position within the document. The optional inherited Name attribute is meant to have meaning for human readers. Optional document metadata can also be captured through reference to [[IfcDocumentInformation]] . HISTORY New entity in IFC2.0"
-
-#:IFC.xml:8508
-msgid "IfcDocumentReference_ReferencedDocument"
-msgstr "Document référencé"
-
-msgid "IfcDocumentReference_ReferencedDocument_DEFINITION"
-msgstr "The document that is referenced."
-
-#:IFC.xml:8551
-msgid "IfcDocumentReference_DocumentRefForObjects"
-msgstr "Refuser les objets du document"
-
-msgid "IfcDocumentReference_DocumentRefForObjects_DEFINITION"
-msgstr "The document reference with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
-
-#:IFC.xml:8543
-msgid "IfcDocumentReference_Description"
-msgstr "Libellé"
-
-msgid "IfcDocumentReference_Description_DEFINITION"
-msgstr "Description of the document reference for informational purposes. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
-
-#:IFC.xml:8563
-msgid "IfcDocumentSelect"
-msgstr "Sélectionnez un document"
-
-#:IFC.xml:8564
-msgid "IfcDocumentStatusEnum"
-msgstr "IfcDocumentStatusEnum"
-
-msgid "IfcDocumentStatusEnum_DEFINITION"
-msgstr "[[IfcDocumentStatusEnum]] enables selection of the status of document information from a list of choices. HISTORY New enumeration in IFC2x. Items DRAFT FINALDRAFT Document is a final draft. FINAL Document is final. REVISION Document has undergone revision. NOTDEFINED"
-
-#:IFC.xml:8565
-msgid "IfcDocumentStatusEnum_DRAFT"
-msgstr "DRAFT"
-
-msgid "IfcDocumentStatusEnum_DRAFT_DEFINITION"
-msgstr "DRAFT"
-
-#:IFC.xml:8566
-msgid "IfcDocumentStatusEnum_FINAL"
-msgstr "FINAL"
-
-msgid "IfcDocumentStatusEnum_FINAL_DEFINITION"
-msgstr "Document is final."
-
-#:IFC.xml:8567
-msgid "IfcDocumentStatusEnum_FINALDRAFT"
-msgstr "FINALDRAFT"
-
-msgid "IfcDocumentStatusEnum_FINALDRAFT_DEFINITION"
-msgstr "Document is a final draft."
-
-#:IFC.xml:8568
-msgid "IfcDocumentStatusEnum_NOTDEFINED"
-msgstr "NON DÉFINI"
-
-msgid "IfcDocumentStatusEnum_NOTDEFINED_DEFINITION"
-msgstr "NON DÉFINI"
-
-#:IFC.xml:8569
-msgid "IfcDocumentStatusEnum_REVISION"
-msgstr "RÉVISION"
-
-msgid "IfcDocumentStatusEnum_REVISION_DEFINITION"
-msgstr "Document has undergone revision."
-
-#:IFC.xml:8571
-msgid "IfcExternalInformation"
-msgstr "Si vous avez des informations externes"
-
-msgid "IfcExternalInformation_DEFINITION"
-msgstr "An [[IfcExternalInformation]] is the identification of an information source that is not explicitly represented in the current model or in the project database as an implementation of the current model . The [[IfcExternalInformation]] identifies the external source classification, document, or library , but not the particular items such as a dictionary entry, a classification notation, or a document reference within the external source The [[IfcExternalInformation]] is an abstract supertype of all external information entities. HISTORY New entity in IFC4."
-
-#:IFC.xml:8573
-msgid "IfcExternalReference"
-msgstr "IfcExternalReference"
-
-msgid "IfcExternalReference_DEFINITION"
-msgstr "An [[IfcExternalReference]] is the identification of information that is not explicitly represented in the current model or in the project database as an implementation of the current model . Such information may be contained in classifications, documents or libraries. The [[IfcExternalReference]] identifies a particular item, such as a dictionary entry, a classification notation, or a document reference within the external source. Only the Location as a URL is given to describe the place where the information can be found. Also an optional Identification as a key to allow more specific references as to sections or tables is provided. The Identification defines a system interpretable method to identify the relevant part of information at the source. In addition a human interpretable Name can be assigned to identify the information subject, such as a classification code. [[IfcExternalReference]] is an abstract supertype of all external reference entities. HISTORY New entity in IFC2x. .change ifc2x4 IFC 2x4 CHANGE Attribute Identification renamed from ItemReference, attribute Location datatype changed, and inverse attribute ExternalReferenceForResources added."
-
-#:IFC.xml:8593
-msgid "IfcExternalReference_ExternalReferenceForResources"
-msgstr "Référence externe pour les ressources"
-
-msgid "IfcExternalReference_ExternalReferenceForResources_DEFINITION"
-msgstr "Reference to all associations between this external reference and objects within the [[IfcResourceObjectSelect]] that are tagged by the external reference. .change ifc2x4 IFC4 CHANGE New inverse attribute added with upward compatibility."
-
-#:IFC.xml:8574
-msgid "IfcExternalReference_Identification"
-msgstr "Identification"
-
-msgid "IfcExternalReference_Identification_DEFINITION"
-msgstr "The Identification provides a unique identifier of the referenced item within the external source classification, document or library . It may be provided as a key, e.g. a classification notation, like NF2.3 a handle a uuid or guid It may be human readable such as a key or not such as a handle or uuid depending on the context of its usage which has to be determined by local agreement . .change ifc2x4 IFC4 CHANGE Attribute renamed from ItemReference for consistency."
-
-#:IFC.xml:8579
-msgid "IfcExternalReference_Location"
-msgstr "Localisation"
-
-msgid "IfcExternalReference_Location_DEFINITION"
-msgstr "Location, where the external source classification, document or library can be accessed by electronic means. The electronic location is provided as an URI, and would normally be given as an URL location string. .change ifc2x4 IFC4 CHANGE The data type has been changed from [[IfcLabel]] to [[IfcURIReference]] ."
-
-#:IFC.xml:8584
-msgid "IfcExternalReference_Name"
-msgstr "Nom"
-
-msgid "IfcExternalReference_Name_DEFINITION"
-msgstr "Nom facultatif pour spécifier la référence. Il peut fournir un identifiant lisible par un humain qui n'a pas nécessairement besoin d'avoir un homologue dans la structure interne du document ."
-
-#:IFC.xml:8607
-msgid "IfcExternalReferenceRelationship"
-msgstr "IfcExternalReferenceRelationship"
-
-msgid "IfcExternalReferenceRelationship_DEFINITION"
-msgstr "[[IfcExternalReferenceRelationship]] is a relationship entity that enables objects from the [[IfcResourceObjectSelect]] to have the ability to be tagged by external references. NOTE This relationship is used to assign classification, library or document information to entities that do not inherit from [[IfcRoot]] . It has a similar functionality as the subtypes of [[IfcRelAssociates]] . HISTORY New entity in IFC4."
-
-#:IFC.xml:8593
-msgid "IfcExternalReferenceRelationship_RelatingReference"
-msgstr "Référence connexe"
-
-msgid "IfcExternalReferenceRelationship_RelatingReference_DEFINITION"
-msgstr "An external reference that can be used to tag an object within the range of [[IfcResourceObjectSelect]] . NOTE External references can be a library reference for example a dictionary or a catalogue reference , a classification reference, or a documentation reference."
-
-#:IFC.xml:8608
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects"
-msgstr "Objets de ressources connexes"
-
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects_DEFINITION"
-msgstr "Objets dans la liste de [[IfcResourceObjectSelect]] qui peuvent être tagués par une référence externe à un dictionnaire, une bibliothèque, un catalogue, une classification ou une documentation."
-
-#:IFC.xml:8699
-msgid "IfcLibraryInformation"
-msgstr "Information sur la bibliothèque Ifc"
-
-msgid "IfcLibraryInformation_DEFINITION"
-msgstr "An [[IfcLibraryInformation]] describes a library where a library is a structured store of information, normally organized in a manner which allows information lookup through an index or reference value. [[IfcLibraryInformation]] provides the library Name and optional Description , Version , VersionDate and Publisher attributes. A Location may be added for electronic access to the library. In a broder sense, [[IfcLibraryInformation]] includes the meta data for capture the revision information when checking in library and other data into a revision control system. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Location and Description attributes added Publisher and VersionDate data type changed HasLibraryReferences inverse attribute added previous LibraryReference changed to inverse ."
-
-#:IFC.xml:8733
-msgid "IfcLibraryInformation_HasLibraryReferences"
-msgstr "Vous avez des références à la bibliothèque"
-
-msgid "IfcLibraryInformation_HasLibraryReferences_DEFINITION"
-msgstr "The library references to which the library information applies."
-
-#:IFC.xml:8747
-msgid "IfcLibraryInformation_LibraryInfoForObjects"
-msgstr "Infos librairie pour les objets"
-
-msgid "IfcLibraryInformation_LibraryInfoForObjects_DEFINITION"
-msgstr "The library information with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
-
-#:IFC.xml:8700
-msgid "IfcLibraryInformation_Description"
-msgstr "Libellé"
-
-msgid "IfcLibraryInformation_Description_DEFINITION"
-msgstr "Additional description provided for the library revision information. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
-
-#:IFC.xml:8705
-msgid "IfcLibraryInformation_Location"
-msgstr "Localisation"
-
-msgid "IfcLibraryInformation_Location_DEFINITION"
-msgstr "Resource identifier or locator, provided as URI, URN or URL, of the library information for online references. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
-
-#:IFC.xml:8710
-msgid "IfcLibraryInformation_Name"
-msgstr "Nom"
-
-msgid "IfcLibraryInformation_Name_DEFINITION"
-msgstr "Le nom utilisé pour identifier la bibliothèque."
-
-#:IFC.xml:8715
-msgid "IfcLibraryInformation_Publisher"
-msgstr "Éditeur"
-
-msgid "IfcLibraryInformation_Publisher_DEFINITION"
-msgstr "Information of the organization that acts as the library publisher. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcActorSelect]] ."
-
-#:IFC.xml:8720
-msgid "IfcLibraryInformation_Version"
-msgstr "Version"
-
-msgid "IfcLibraryInformation_Version_DEFINITION"
-msgstr "Identifiant pour la version de la bibliothèque utilisée pour référence."
-
-#:IFC.xml:8725
-msgid "IfcLibraryInformation_VersionDate"
-msgstr "VersionDate"
-
-msgid "IfcLibraryInformation_VersionDate_DEFINITION"
-msgstr "Date of the referenced version of the library. .change ifc2x4 IFC4 CHANGE The data type has been changed to [[IfcDateTime]] , the date and time string according to ISO8601."
-
-#:IFC.xml:8759
-msgid "IfcLibraryReference"
-msgstr "Référence de la librairie Ifc"
-
-msgid "IfcLibraryReference_DEFINITION"
-msgstr "An [[IfcLibraryReference]] is a reference into a library of information by Location provided as a URI . It also provides an optional inherited Identification key to allow more specific references to library sections or tables. The inherited Name attribute allows for a human interpretable identification of the library item. Also, general information on the library from which the reference is taken, is given by the ReferencedLibrary relation which identifies the relevant occurrence of [[IfcLibraryInformation]] . The ifcLibraryReference additionally provides the capability to handle multilingual library entries. The Language attribute then holds the language tag for the language used by the strings kept in the Name and the Description attribute. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Description and Language attribute added ReferencedLibrary attribute added reversing previous ReferenceIntoLibrary inverse relationship ."
-
-#:IFC.xml:8733
-msgid "IfcLibraryReference_ReferencedLibrary"
-msgstr "Bibliothèque référencée"
-
-msgid "IfcLibraryReference_ReferencedLibrary_DEFINITION"
-msgstr "The library information that is being referenced."
-
-#:IFC.xml:8773
-msgid "IfcLibraryReference_LibraryRefForObjects"
-msgstr "Objets RefFormer de la bibliothèque"
-
-msgid "IfcLibraryReference_LibraryRefForObjects_DEFINITION"
-msgstr "The library reference with which objects are associated. .change ifc2x4 IFC4 CHANGE New inverse attribute."
-
-#:IFC.xml:8760
-msgid "IfcLibraryReference_Description"
-msgstr "Libellé"
-
-msgid "IfcLibraryReference_Description_DEFINITION"
-msgstr "Additional description provided for the library reference. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
-
-#:IFC.xml:8765
-msgid "IfcLibraryReference_Language"
-msgstr "Langue"
-
-msgid "IfcLibraryReference_Language_DEFINITION"
-msgstr "The language in which a library reference is expressed. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
-
-#:IFC.xml:8785
-msgid "IfcLibrarySelect"
-msgstr "Sélectionnez une librairie"
-
-#:IFC.xml:8786
-msgid "IfcResourceLevelRelationship"
-msgstr "Niveau de ressources Ifc"
-
-msgid "IfcResourceLevelRelationship_DEFINITION"
-msgstr "[[IfcResourceLevelRelationship]] is an abstract base entity for relationships between resource level entities. HISTORY New entity in IFC4."
-
-#:IFC.xml:8787
-msgid "IfcResourceLevelRelationship_Description"
-msgstr "Libellé"
-
-msgid "IfcResourceLevelRelationship_Description_DEFINITION"
-msgstr "Une description qui peut appliquer des informations supplémentaires sur la relation."
-
-#:IFC.xml:8792
-msgid "IfcResourceLevelRelationship_Name"
-msgstr "Nom"
-
-msgid "IfcResourceLevelRelationship_Name_DEFINITION"
-msgstr "Un nom utilisé pour identifier ou qualifier la relation."
-
-#:IFC.xml:8798
-msgid "IfcResourceObjectSelect"
-msgstr "Sélectionner un objet de ressource"
-
-#:IFC.xml:8839
-msgid "IfcLanguageId"
-msgstr "Id de la langue Ifc"
-
-msgid "IfcLanguageId_DEFINITION"
-msgstr "The [[IfcLanguageId]] identifies the language in which a natural language text is expressed. It uses a language tag to identify the language. NOTE The tag shall comply to the Internet Engineering Task Force IETF language tag as expressed in RFC 5646. A conforming program shall support the simple language subtag and the language region tag format. EXAMPLE for simple language tags en English , de German , fr France , or ja Japanese , and for language region tags en US English as used in United States , de CH German as used in German speaking part of Switzerland . Type [[IfcIdentifier]] NOTE See RFC 5646 .. .. .. bibliography.htm RFC 5646 for definition of language tag. HISTORY New defined datatype in IFC4."
-
-#:IFC.xml:8842
-msgid "IfcURIReference"
-msgstr "Référence IfcURI"
-
-msgid "IfcURIReference_DEFINITION"
-msgstr "The [[IfcURIReference]] provides for identifying a Uniform Resource Identifier URI . A URI can be classified as a locator or a name or both, that is it may comprise a Uniform Resource Locator URL and or a Uniform Resource Name URN . A Uniform Resource Locator, URL, is a string conforming to a standardized format, which refers to a resource on the internet such as a document or an image by its location. A Uniform Resource Name, URN, is intended to serve as persistent, location independent resource identifier and is designed to make it easy to map other namespaces that share the properties of URNs into URN space. NOTE See RFC 3986 .. .. .. bibliography.htm RFC 3986 for definition of Uniform Resource Identifier. HISTORY New defined datatype in IFC4."
+msgid "IfcBoxAlignment_DEFINITION"
+msgstr "The box alignment specifies the alignment of the text box relative to its position. The following string values shall be used top left top middle top right middle left center middle right bottom left bottom middle bottom right NOTE The top left is the default value. Figure 1 illustrates alignment values. 9 alignment values .. .. .. .. figures ifcboxalignment fig1.gif Figure 1 Box alignment values Figure 2 illustrates use of alignment values together with the placement and planar extent. use with planar extent .. .. .. .. figures ifcboxalignment fig2.gif Figure 2 Box alignment examples HISTORY New type in IFC2x2 Addendum2. .change ifc2x3 IFC2x3 CHANGE The [[IfcBoxAlignment]] has been added. Formal Propositions WR1"
 
