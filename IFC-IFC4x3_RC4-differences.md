@@ -1,12 +1,16 @@
 # Express schema differences
 
-11 items
+13 items
 
 
 ### Missing data
 
-:tada: No issues :tada:
+2 items
 
+| Name          | IFC4x3_RC4.exp          | IFC.exp          |
+|---------------|-------------------------|------------------|
+| IfcPlant      |                         | not in 'IFC.exp' |
+| IfcVegetation | not in 'IFC4x3_RC4.exp' |                  |
 
 ### Type definitions
 
