@@ -1,6 +1,6 @@
 # Express schema differences
 
-10 items
+11 items
 
 
 ### Missing data
@@ -23,8 +23,11 @@
 
 ### Entity definitions
 
-:tada: No issues :tada:
+1 items
 
+| Name                   | IFC4x3_RC4_43c3555.exp   | IFC.exp                   |
+|------------------------|--------------------------|---------------------------|
+| IfcProperty attributes | ['Name', 'Description']  | ['Name', 'Specification'] |
 
 ### Constraints
 

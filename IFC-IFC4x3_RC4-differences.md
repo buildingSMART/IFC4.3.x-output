@@ -1,6 +1,6 @@
 # Express schema differences
 
-13 items
+14 items
 
 
 ### Missing data
@@ -22,11 +22,12 @@
 
 ### Entity definitions
 
-5 items
+6 items
 
 | Name                                      | IFC4x3_RC4.exp                                                               | IFC.exp                                                                                                         |
 |-------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | IfcOpenCrossProfileDef attributes         | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                             | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
+| IfcProperty attributes                    | ['Name', 'Description']                                                      | ['Name', 'Specification']                                                                                       |
 | IfcSectionedSolidHorizontal attributes    | ['CrossSectionPositions', 'FixedAxisVertical']                               | ['CrossSectionPositions']                                                                                       |
 | IfcSectionedSurface attributes            | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical'] | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
 | IfcSectionedSurface.CrossSectionPositions | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression            | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
