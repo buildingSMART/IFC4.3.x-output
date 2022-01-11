@@ -9,638 +9,86 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcExternalReferenceResource.pot\n"
-"X-Crowdin-File-ID: 40\n"
+"X-Crowdin-File: /master/IfcControlExtension.pot\n"
+"X-Crowdin-File-ID: 32\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-01-11 12:50\n"
 
-#:IFC.xml:8707
-msgid "IfcClassification"
-msgstr "IfcClassification"
+#:IFC.xml:3205
+msgid "IfcPerformanceHistory"
+msgstr "IfcPerformanceHistory"
 
-msgid "IfcClassification_DEFINITION"
-msgstr "An [[IfcClassification]] is used for the arrangement of objects into a class or category according to a common purpose or their possession of common characteristics. A classification in the sense of [[IfcClassification]] is taxonomy, or taxonomic scheme, arranged in a hierarchical structure. A category of objects relates to other categories in a generalization specialization relationship. Therefore the classification items in an classification are organized in a tree structure. The [[IfcClassification]] identifies the classification system or source to which a classification reference refers to. Each classification reference may reference an instance of [[IfcClassification]] . A classification system declared may be either formally published, or it may be a locally defined method of classifiying information. NOTE Examples for such formally published classifications are Omniclass, Uniclass, Masterformat, or DIN277. There are two methods to define and reference a classification system 1. Including the classification system structure within the dataset Here a hierarchical tree of [[IfcClassificationReference]] s is included that defines the classification system including the relationship between the classification items. The ReferencedSource attribute of [[IfcClassificationReference]] links the classification item to the parent item, and the parent item finally to the [[IfcClassification]] . 2. Referencing the classification system by a classification key or id Here the [[IfcClassificationReference]] is used to assign a classification id or key as Identification attribute and it may link by ReferencedSource attribute directly to the [[IfcClassification]] . HISTORY New entity in IFC1.5 .change ifc2x4 IFC 2x4 CHANGE Attribute Edition made optional. Attributes Description , Location , and ReferenceTokens and inverse attribute HasReferences added."
+msgid "IfcPerformanceHistory_DEFINITION"
+msgstr "[[IfcPerformanceHistory]] is used to document the actual performance of an occurrence instance over time. It includes machine measured data from building automation systems and human specified data such as task and resource usage. The data may represent actual conditions, predictions, or simulations. The realtime data tracked by performance history takes the form of property sets where all properties are based on time series. Unlike design based data at occurrences and types, performance driven data is time sensitive and may change in realtime by some measurement device. Data may be captured at irregular intervals such as when values change beyond established thresholds, or at regular intervals of specified duration. Declaration use definition [[IfcPerformanceHistory]] may be declared within a project using [[IfcRelDeclares]] where RelatingContext refers to the [[IfcProject]] and RelatedDefinitions includes the [[IfcPerformanceHistory]] . Default units used for property sets are indicated by the declaring project. Only top level objects are declared nested performance history objects through [[IfcRelNests]] do not participate in such relationship. HISTORY New entity in IFC2x2."
 
-#:IFC.xml:8747
-msgid "IfcClassification_ClassificationForObjects"
-msgstr "ClassificationForObjects"
+#:IFC.xml:3206
+msgid "IfcPerformanceHistory_LifeCyclePhase"
+msgstr "LifeCyclePhase"
 
-msgid "IfcClassification_ClassificationForObjects_DEFINITION"
-msgstr ".change ifc2x4 IFC4が新しい逆属性を変更します。"
+msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
+msgstr "適用可能な建物のライフサイクルフェーズについて説明します。代表的な値は、DESIGNDEVELOPMENT、SCHEMATICDEVELOPMENT、CONSTRUCTION、ASBUILT、COMMISSIONING、OPERATIONなどです。"
 
-#:IFC.xml:8759
-msgid "IfcClassification_HasReferences"
-msgstr "HasReference"
+#:IFC.xml:3211
+msgid "IfcPerformanceHistory_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcClassification_HasReferences_DEFINITION"
-msgstr "分類が適用される分類参照。最終分類表記または中間分類項目のいずれかになります。"
+msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
+msgstr "列挙で指定されているパフォーマンス履歴の定義済み汎用型。 hrange ifc2x4 IFC4 変更点 エンティティ定義の最後に属性が追加されました。"
 
-#:IFC.xml:8708
-msgid "IfcClassification_Description"
-msgstr "説明"
+#:IFC.xml:3230
+msgid "IfcPerformanceHistoryTypeEnum"
+msgstr "IfcPerformanceHistoryTypeEnum"
 
-msgid "IfcClassification_Description_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更点 属性リストの末尾に新しい属性が追加されました。"
+msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
+msgstr "この列挙は、パフォーマンス履歴の主な目的を特定するために使用されます。[[IfcPerformanceHistoryTypeEnum]] には、以下の USERDEFINED ユーザーが定義されています。 NOTFINED Undefined HISTORY IFC4アイテムに新しい列挙が追加されました"
 
-#:IFC.xml:8713
-msgid "IfcClassification_Edition"
-msgstr "版"
-
-msgid "IfcClassification_Edition_DEFINITION"
-msgstr "分類表記が派生した分類体系の版または版。 注意: バージョンラベリングシステムは、分類システムに固有のものです。.change ifc2x4 IFC4 変更点 属性はオプションとして変更されました。"
-
-#:IFC.xml:8718
-msgid "IfcClassification_EditionDate"
-msgstr "EditionDate"
-
-msgid "IfcClassification_EditionDate_DEFINITION"
-msgstr "用いられた分類版の日付が有効となった。 注 エディションの表示は、分類元を一意に識別するのに十分であるかもしれませんが、エディションの日付は、必要に応じてより正確な識別を可能にするためのオプションの属性として提供されています。 .change ifc2x4 IFC4 変更点 データ型を [[IfcDate]] に変更しました。"
-
-#:IFC.xml:8723
-msgid "IfcClassification_Location"
-msgstr "場所"
-
-msgid "IfcClassification_Location_DEFINITION"
-msgstr "分類のURI、URN、URLとして提供されるリソース識別子またはロケータ。 .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:8728
-msgid "IfcClassification_Name"
-msgstr "名前"
-
-msgid "IfcClassification_Name_DEFINITION"
-msgstr "通常使用される分類の名前またはラベルが知られている。 注 名前にはCI SfB、Masterformat、BSAB、Uniclass、STABU、DIN276、DIN277などがあります。"
-
-#:IFC.xml:8733
-msgid "IfcClassification_ReferenceTokens"
-msgstr "Referenceトークン"
-
-msgid "IfcClassification_ReferenceTokens_DEFINITION"
-msgstr "個々のファセットサブストリングの境界を分類リファレンスでマークするために使用される区切り文字トークン。 これは典型的には、[[IfcClassification]]が[[IfcClassificationReference]]sとの連結で使用されます。 ReferenceTokenが1つだけ指定された場合、複数のReferenceTokenが指定されている場合は、個々のファセットのすべての境界に適用されます。 最初のトークンは1番目の境界、2番目のトークンは2番目の境界に適用されます n番目のトークンとn番目のどんな境界でもね 注 トークンは通常、分類自体で推奨され、各トークンには特定の役割があります。 例1 DIN277 2リファレンスキーに用いられるファセット区切り文字があることを示す。 オフィスルームは、単一のReferenceTokenが提供されています。 Omniclass に使われるファセット区切り文字が関数参照キー13 15 11 11 Office と であることを示す. 2つの ReferenceToken s が提供されます。 例2 ReferenceTokensの使用は、マスクを含むように拡張することもできます。 使用は、使用すべきマスク構文を規定した定義または実装者契約で合意する必要があります。 .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:8738
-msgid "IfcClassification_Source"
-msgstr "ソース"
-
-msgid "IfcClassification_Source_DEFINITION"
-msgstr "この分類のソースまたはパブリッシャー。 注意:分類のソースは、原作者または現在出版社として活動している人または組織を意味します。"
-
-#:IFC.xml:8771
-msgid "IfcClassificationReference"
-msgstr "IfcClassificationReference"
-
-msgid "IfcClassificationReference_DEFINITION"
-msgstr "An [[IfcClassificationReference]] is a reference into a classification system or source see [[IfcClassification]] for a specific classification key or notation . The inherited attributes have the following meaning Identification holds the key provided for a specific references to classification items or tables . Name allows for a human interpretable designation of a classification notation. Location optionally holds a direct URI link into the classification system or source to hyperlink the classification key. The [[IfcClassificationReference]] can either be assigned directly to the [[IfcClassification]] , such as if no classification hierarchy has to be included, or it references the parent classification notation, if the fully classification hierarchy is included in the data set. The first is refered to as lightweight classification , and the second as full classification . The attribute ReferencedSource then holds the following information choice by [[IfcClassificationReferenceSelect]] 1. being of type [[IfcClassification]] direct reference to the classification system with meta information provided 2. being of type [[IfcClassificationReference]] reference to the parent classification notation within the classification hierarchy. EXAMPLE The [[IfcClassificationReference]] can be used as a form of lightweight classification through the Identification attribute inherited from the abstract [[IfcExternalReference]] class. In this case, the Identification could take for instance the Uniclass notation L6814 which, if the classification was well understood by all parties and was known to be taken from a particular classification source, would be sufficient. The Name attribute could be the title Tanking . This would remove the need for the overhead of the more complete classification structure of the model. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The attribute Description and inverse attribute HasReferences are added. The attribute Identification has been renamed from ItemReference."
-
-#:IFC.xml:8791
-msgid "IfcClassificationReference_HasReferences"
-msgstr "HasReference"
-
-msgid "IfcClassificationReference_HasReferences_DEFINITION"
-msgstr "この子分類参照が適用される親分類参照。 これは、最終分類項目のリーフノード、または中間分類項目のいずれかになります。.change ifc2x4 IFC4 変更する新しい逆属性。"
-
-#:IFC.xml:8803
-msgid "IfcClassificationReference_ClassificationRefForObjects"
-msgstr "ClassificationRefForObjects"
-
-msgid "IfcClassificationReference_ClassificationRefForObjects_DEFINITION"
-msgstr ".change ifc2x4 IFC4が新しい逆属性を変更します。"
-
-#:IFC.xml:8772
-msgid "IfcClassificationReference_Description"
-msgstr "説明"
-
-msgid "IfcClassificationReference_Description_DEFINITION"
-msgstr ".change ifc2x4 IFC4 属性の変更 属性リストの末尾に新しい属性を追加しました。"
-
-#:IFC.xml:8777
-msgid "IfcClassificationReference_ReferencedSource"
-msgstr "ReferencedSource"
-
-msgid "IfcClassificationReference_ReferencedSource_DEFINITION"
-msgstr "参照される分類システムまたはソース。.change ifc2x4 IFC4 データ型を[[IfcClassificationReferenceSelect]] に変更。"
-
-#:IFC.xml:8782
-msgid "IfcClassificationReference_Sort"
-msgstr "並べ替え"
-
-msgid "IfcClassificationReference_Sort_DEFINITION"
-msgstr "参照元内の分類参照のセットを上位の分類ファセットのいずれかで並べ替えるための任意の識別子 あるいは分類システムそのものです .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:8815
-msgid "IfcClassificationReferenceSelect"
-msgstr "IfcClassificationReferenceSelect"
-
-#:IFC.xml:8816
-msgid "IfcClassificationSelect"
-msgstr "IfcClassificationSelect"
-
-#:IFC.xml:8817
-msgid "IfcDocumentConfidentialityEnum"
-msgstr "IfcDocumentConfidentialityEnum"
-
-msgid "IfcDocumentConfidentialityEnum_DEFINITION"
-msgstr "[[IfcDocumentConfidentialityEnum]] では、選択肢のリストから文書情報の機密性のレベルを選択できます。HISTORY IFC2xの新しい列挙。 公開されている項目 PUBLICドキュメントは公開されています。制限されたドキュメントの可用性は制限されています。文書は著者の個人的なものです。ユーザー定義が通知されました"
-
-#:IFC.xml:8818
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL"
-msgstr "CONFIDENTIAL"
-
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL_DEFINITION"
-msgstr "CONFIDENTIAL"
-
-#:IFC.xml:8819
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED"
+#:IFC.xml:3234
+msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
 msgstr "注記されました"
 
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED_DEFINITION"
+msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
 msgstr "注記されました"
 
-#:IFC.xml:8820
-msgid "IfcDocumentConfidentialityEnum_PERSONAL"
-msgstr "個人"
-
-msgid "IfcDocumentConfidentialityEnum_PERSONAL_DEFINITION"
-msgstr "文書は著者の個人的なものです。"
-
-#:IFC.xml:8821
-msgid "IfcDocumentConfidentialityEnum_PUBLIC"
-msgstr "公開"
-
-msgid "IfcDocumentConfidentialityEnum_PUBLIC_DEFINITION"
-msgstr "ドキュメントは公開されています。"
-
-#:IFC.xml:8822
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED"
-msgstr "制限済み"
-
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED_DEFINITION"
-msgstr "ドキュメントの可用性が制限されています。"
-
-#:IFC.xml:8823
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED"
+#:IFC.xml:3235
+msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
 msgstr "ユーザー定義済み"
 
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED_DEFINITION"
+msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
 msgstr "ユーザー定義済み"
 
-#:IFC.xml:8825
-msgid "IfcDocumentInformation"
-msgstr "IfcDocumentInformation"
+#:IFC.xml:3236
+msgid "IfcRelAssociatesApproval"
+msgstr "IfcRelAssociatesApproval"
 
-msgid "IfcDocumentInformation_DEFINITION"
-msgstr "[[IfcDocumentInformation]] captures metadata of an external document. The actual content of the document is not defined in this specification instead, it can be found following the Location attribute. The same [[IfcDocumentInformation]] can be referenced from the exchange structure in total or in parts e.g. by refering to particular chapters or paragraphs using the [[IfcDocumentReference]] . All [[IfcDocumentReference]] s that utilize the [[IfcDocumentInformation]] are accessible by the inverse relationship HasDocumentReferences . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute HasDocumentReferences changed to be inverse, attribute Location added, and attribute ElectronicFormat modified."
+msgid "IfcRelAssociatesApproval_DEFINITION"
+msgstr "The entity [[IfcRelAssociatesApproval]] is used to apply approval information defined by [[IfcApproval]] , in IfcApprovalResource schema, to subtypes of [[IfcRoot]] . HISTORY New entity in IFC2x2."
 
-#:IFC.xml:8914
-msgid "IfcDocumentInformation_IsPointer"
-msgstr "IsPointer"
+#:IFC.xml:550
+msgid "IfcRelAssociatesApproval_RelatingApproval"
+msgstr "RelatingApproval"
 
-msgid "IfcDocumentInformation_IsPointer_DEFINITION"
-msgstr "[[IfcDocumentInformationRelationship]]から関連する文書への逆の関係。"
+msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
+msgstr "この関係を使用して適用されている承認を参照してください。"
 
-#:IFC.xml:8928
-msgid "IfcDocumentInformation_IsPointedTo"
-msgstr "IsPointedTo"
+#:IFC.xml:3239
+msgid "IfcRelAssociatesConstraint"
+msgstr "IfcRelatesConstraint"
 
-msgid "IfcDocumentInformation_IsPointedTo_DEFINITION"
-msgstr "[[IfcDocumentInformationRelationship]]から関連ドキュメントへの逆の関係。 EPM HTML"
+msgid "IfcRelAssociatesConstraint_DEFINITION"
+msgstr "The entity [[IfcRelAssociatesConstraint]] is used to apply constraint information defined by [[IfcConstraint]] , in the IfcConstraintResource schema, to subtypes of [[IfcRoot]] . HISTORY New entity in IFC2x2."
 
-#:IFC.xml:8942
-msgid "IfcDocumentInformation_HasDocumentReferences"
-msgstr "HasDocumentReference"
+#:IFC.xml:2588
+msgid "IfcRelAssociatesConstraint_RelatingConstraint"
+msgstr "関連制約"
 
-msgid "IfcDocumentInformation_HasDocumentReferences_DEFINITION"
-msgstr "ドキュメントが適用されるドキュメント参照"
+msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
+msgstr "この関係を使用して適用されている制約への参照。"
 
-#:IFC.xml:8956
-msgid "IfcDocumentInformation_DocumentInfoForObjects"
-msgstr "DocumentInfoForObjects"
+#:IFC.xml:3240
+msgid "IfcRelAssociatesConstraint_Intent"
+msgstr "Intent"
 
-msgid "IfcDocumentInformation_DocumentInfoForObjects_DEFINITION"
-msgstr "オブジェクトが関連付けられているドキュメント情報。.change ifc2x4 IFC4 変更点 新しい逆属性。"
-
-#:IFC.xml:8826
-msgid "IfcDocumentInformation_Confidentiality"
-msgstr "守秘性"
-
-msgid "IfcDocumentInformation_Confidentiality_DEFINITION"
-msgstr "文書の機密性のレベル。"
-
-#:IFC.xml:8831
-msgid "IfcDocumentInformation_CreationTime"
-msgstr "CreationTime"
-
-msgid "IfcDocumentInformation_CreationTime_DEFINITION"
-msgstr "ドキュメントが最初に作成された日付とタイムスタンプ。 hangeのifc2x4 IFC4の変更 データ型は、ISO8601に準拠した日付時刻文字列である[[IfcDateTime]]に変更されました。"
-
-#:IFC.xml:8836
-msgid "IfcDocumentInformation_Description"
-msgstr "説明"
-
-msgid "IfcDocumentInformation_Description_DEFINITION"
-msgstr "文書とその内容の説明。"
-
-#:IFC.xml:8841
-msgid "IfcDocumentInformation_DocumentOwner"
-msgstr "ドキュメントの所有者"
-
-msgid "IfcDocumentInformation_DocumentOwner_DEFINITION"
-msgstr "この文書の所有者として認められている人物または組織に関する情報。 文脈によっては、ドキュメントの所有者が誰にアクセスできるか、または誰がドキュメントに直接編集できるかを決定します。"
-
-#:IFC.xml:8846
-msgid "IfcDocumentInformation_Editors"
-msgstr "エディター"
-
-msgid "IfcDocumentInformation_Editors_DEFINITION"
-msgstr "この文書を作成または貢献した個人および団体。"
-
-#:IFC.xml:8851
-msgid "IfcDocumentInformation_ElectronicFormat"
-msgstr "ElectronicFormat"
-
-msgid "IfcDocumentInformation_ElectronicFormat_DEFINITION"
-msgstr "コンテンツ型とも呼ばれる様々なインターネットプロトコルで使用されるメディアタイプを説明します または MIME タイプ Multipurpose Internet Mail Extension , 参照されているドキュメントの。 少なくとも2つの部分で構成されています, タイプとサブタイプ. ノート メディアタイプを公開iana Internet Assigned Numbers Authority. EXAMPLEイメージ png は、Png Portable Network Graphics サブタイプの画像を表します。 アプリケーションPDFは、アプリケーション固有の種類のPDFポータブルドキュメントフォーマットサブタイプを示します。 hrange ifc2x4 IFC4 変更点 データ型がエンティティデータ型から [[IfcIdentifier]] に変更されました。"
-
-#:IFC.xml:8856
-msgid "IfcDocumentInformation_Identification"
-msgstr "識別"
-
-msgid "IfcDocumentInformation_Identification_DEFINITION"
-msgstr "ドキュメントを一意に識別する識別子 .change ifc2x4 IFC4 DocumentId から名前を変更する属性。"
-
-#:IFC.xml:8861
-msgid "IfcDocumentInformation_IntendedUse"
-msgstr "IntendedUse"
-
-msgid "IfcDocumentInformation_IntendedUse_DEFINITION"
-msgstr "このドキュメントの使用を目的としています。"
-
-#:IFC.xml:8866
-msgid "IfcDocumentInformation_LastRevisionTime"
-msgstr "LastRevisionTime"
-
-msgid "IfcDocumentInformation_LastRevisionTime_DEFINITION"
-msgstr "このドキュメントバージョンが作成された日付とタイムスタンプ。 hangeのifc2x4 IFC4の変更 データ型は、ISO8601に準拠した日付時刻文字列である[[IfcDateTime]]に変更されました。"
-
-#:IFC.xml:8871
-msgid "IfcDocumentInformation_Location"
-msgstr "場所"
-
-msgid "IfcDocumentInformation_Location_DEFINITION"
-msgstr "オンライン参照のドキュメント情報のURI、URN、URLとして提供されるリソース識別子またはロケータ。 .change ifc2x4 IFC4 変更点 削除された属性の場所に新しい属性が追加されました。"
-
-#:IFC.xml:8876
-msgid "IfcDocumentInformation_Name"
-msgstr "名前"
-
-msgid "IfcDocumentInformation_Name_DEFINITION"
-msgstr "所有者によって割り当てられたファイル名またはドキュメント名。"
-
-#:IFC.xml:8881
-msgid "IfcDocumentInformation_Purpose"
-msgstr "目的"
-
-msgid "IfcDocumentInformation_Purpose_DEFINITION"
-msgstr "このドキュメントの目的。"
-
-#:IFC.xml:8886
-msgid "IfcDocumentInformation_Revision"
-msgstr "リビジョン"
-
-msgid "IfcDocumentInformation_Revision_DEFINITION"
-msgstr "ドキュメントのリビジョン名称。"
-
-#:IFC.xml:8891
-msgid "IfcDocumentInformation_Scope"
-msgstr "スコープ"
-
-msgid "IfcDocumentInformation_Scope_DEFINITION"
-msgstr "このドキュメントのスコープ。"
-
-#:IFC.xml:8896
-msgid "IfcDocumentInformation_Status"
-msgstr "ステータス"
-
-msgid "IfcDocumentInformation_Status_DEFINITION"
-msgstr "ドキュメントの現在のステータス ドキュメント情報のステータスに使用される可能性のあるステータス値の例には、DRAFT FINAL DRAFT FINAL REVISION"
-
-#:IFC.xml:8901
-msgid "IfcDocumentInformation_ValidFrom"
-msgstr "ValidFrom"
-
-msgid "IfcDocumentInformation_ValidFrom_DEFINITION"
-msgstr "ドキュメントが有効になった日付。 hangeのifc2x4 IFC4の変更 データ型は、ISO8601の日付文字列である[[IfcDate]]に変更されました。"
-
-#:IFC.xml:8906
-msgid "IfcDocumentInformation_ValidUntil"
-msgstr "ValidUntil"
-
-msgid "IfcDocumentInformation_ValidUntil_DEFINITION"
-msgstr "ドキュメントが有効なまでの日付。 hangeのifc2x4 IFC4の変更 データ型は、ISO8601の日付文字列である[[IfcDate]]に変更されました。"
-
-#:IFC.xml:8968
-msgid "IfcDocumentInformationRelationship"
-msgstr "IfcDocumentInformationRelationship"
-
-msgid "IfcDocumentInformationRelationship_DEFINITION"
-msgstr "An [[IfcDocumentInformationRelationship]] is a relationship entity that enables a document to have the ability to reference other documents. It is used to describe relationships in which one document may reference one or more other sub documents or where a document is used as a replacement for another document but where both the original and the replacing document need to be retained . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcResourceLevelRelationship]] , order of attributes changed."
-
-#:IFC.xml:8914
-msgid "IfcDocumentInformationRelationship_RelatingDocument"
-msgstr "RelatingDocument"
-
-msgid "IfcDocumentInformationRelationship_RelatingDocument_DEFINITION"
-msgstr "親文書、参照文書、または元の文書としての関係で機能するドキュメント。"
-
-#:IFC.xml:8928
-msgid "IfcDocumentInformationRelationship_RelatedDocuments"
-msgstr "関連ドキュメント"
-
-msgid "IfcDocumentInformationRelationship_RelatedDocuments_DEFINITION"
-msgstr "リレーションでドキュメントを参照または置き換える子として機能するドキュメント。"
-
-#:IFC.xml:8969
-msgid "IfcDocumentInformationRelationship_RelationshipType"
-msgstr "リレーションシップタイプ"
-
-msgid "IfcDocumentInformationRelationship_RelationshipType_DEFINITION"
-msgstr "ドキュメント間の関係のタイプを記述します。これはサブドキュメント、置換などの可能性があります。解釈はアプリケーションコンテキストで確立されなければなりません。"
-
-#:IFC.xml:8976
-msgid "IfcDocumentReference"
-msgstr "IfcDocumentReference"
-
-msgid "IfcDocumentReference_DEFINITION"
-msgstr "An [[IfcDocumentReference]] is a reference to the location of a document. The reference is given by a system interpretable Location attribute a URL string where the document can be found, and an optional inherited internal reference Identification , which refers to a system interpretable position within the document. The optional inherited Name attribute is meant to have meaning for human readers. Optional document metadata can also be captured through reference to [[IfcDocumentInformation]] . HISTORY New entity in IFC2.0"
-
-#:IFC.xml:8942
-msgid "IfcDocumentReference_ReferencedDocument"
-msgstr "ReferencedDocument"
-
-msgid "IfcDocumentReference_ReferencedDocument_DEFINITION"
-msgstr "参照されるドキュメント。"
-
-#:IFC.xml:8985
-msgid "IfcDocumentReference_DocumentRefForObjects"
-msgstr "DocumentRefForObjects"
-
-msgid "IfcDocumentReference_DocumentRefForObjects_DEFINITION"
-msgstr "オブジェクトが関連付けられているドキュメント参照。.change ifc2x4 IFC4 新しい逆属性を変更する。"
-
-#:IFC.xml:8977
-msgid "IfcDocumentReference_Description"
-msgstr "説明"
-
-msgid "IfcDocumentReference_Description_DEFINITION"
-msgstr ".change ifc2x4 IFC4 属性の変更 属性リストの末尾に新しい属性を追加しました。"
-
-#:IFC.xml:8997
-msgid "IfcDocumentSelect"
-msgstr "IfcDocumentSelect"
-
-#:IFC.xml:8998
-msgid "IfcDocumentStatusEnum"
-msgstr "IfcDocumentStatusEnum"
-
-msgid "IfcDocumentStatusEnum_DEFINITION"
-msgstr "[[IfcDocumentStatusEnum]] では、選択したリストからドキュメント情報の状態を選択できます。 HISTORY IFC2xの新しい列挙。 アイテムDRAFT FINALDRAFT Document is a final draft. FINAL Document is final. Revision document has ended revised revised revised"
-
-#:IFC.xml:8999
-msgid "IfcDocumentStatusEnum_DRAFT"
-msgstr "Draft"
-
-msgid "IfcDocumentStatusEnum_DRAFT_DEFINITION"
-msgstr "Draft"
-
-#:IFC.xml:9000
-msgid "IfcDocumentStatusEnum_FINAL"
-msgstr "FINAL"
-
-msgid "IfcDocumentStatusEnum_FINAL_DEFINITION"
-msgstr "ドキュメントが終了しました。"
-
-#:IFC.xml:9001
-msgid "IfcDocumentStatusEnum_FINALDRAFT"
-msgstr "FINALDRAFT"
-
-msgid "IfcDocumentStatusEnum_FINALDRAFT_DEFINITION"
-msgstr "ドキュメントは最終ドラフトです。"
-
-#:IFC.xml:9002
-msgid "IfcDocumentStatusEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcDocumentStatusEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
-
-#:IFC.xml:9003
-msgid "IfcDocumentStatusEnum_REVISION"
-msgstr "リビジョン"
-
-msgid "IfcDocumentStatusEnum_REVISION_DEFINITION"
-msgstr "ドキュメントのリビジョンが完了しました。"
-
-#:IFC.xml:9005
-msgid "IfcExternalInformation"
-msgstr "IfcExternalInformation"
-
-msgid "IfcExternalInformation_DEFINITION"
-msgstr "An [[IfcExternalInformation]] is the identification of an information source that is not explicitly represented in the current model or in the project database as an implementation of the current model . The [[IfcExternalInformation]] identifies the external source classification, document, or library , but not the particular items such as a dictionary entry, a classification notation, or a document reference within the external source The [[IfcExternalInformation]] is an abstract supertype of all external information entities. HISTORY New entity in IFC4."
-
-#:IFC.xml:9007
-msgid "IfcExternalReference"
-msgstr "IfcExternalReference"
-
-msgid "IfcExternalReference_DEFINITION"
-msgstr "An [[IfcExternalReference]] is the identification of information that is not explicitly represented in the current model or in the project database as an implementation of the current model . Such information may be contained in classifications, documents or libraries. The [[IfcExternalReference]] identifies a particular item, such as a dictionary entry, a classification notation, or a document reference within the external source. Only the Location as a URL is given to describe the place where the information can be found. Also an optional Identification as a key to allow more specific references as to sections or tables is provided. The Identification defines a system interpretable method to identify the relevant part of information at the source. In addition a human interpretable Name can be assigned to identify the information subject, such as a classification code. [[IfcExternalReference]] is an abstract supertype of all external reference entities. HISTORY New entity in IFC2x. .change ifc2x4 IFC 2x4 CHANGE Attribute Identification renamed from ItemReference, attribute Location datatype changed, and inverse attribute ExternalReferenceForResources added."
-
-#:IFC.xml:9027
-msgid "IfcExternalReference_ExternalReferenceForResources"
-msgstr "外部リファレンスForResources"
-
-msgid "IfcExternalReference_ExternalReferenceForResources_DEFINITION"
-msgstr "外部参照によってタグ付けされた [[IfcResourceObjectSelect]] 内のこの外部参照とオブジェクトの間のすべての関連付けを参照します。 .change ifc2x4 IFC4 変更点 新しい逆属性が上方互換性を持つようになりました。"
-
-#:IFC.xml:9008
-msgid "IfcExternalReference_Identification"
-msgstr "識別"
-
-msgid "IfcExternalReference_Identification_DEFINITION"
-msgstr "識別は、外部ソース分類、ドキュメント、またはライブラリ内で参照されているアイテムの一意の識別子を提供します。 これはキーとして提供される場合があります。例えば、NF2 のような分類表記です。 uuid またはguid の取扱いは、ローカルな合意によって決定されなければならないその使用のコンテキストに応じて、ハンドルや uuid のようなキーとして人間が読むことができるかもしれません。 .change ifc2x4 IFC4 一貫性のための ItemReference から変更された属性。"
-
-#:IFC.xml:9013
-msgid "IfcExternalReference_Location"
-msgstr "場所"
-
-msgid "IfcExternalReference_Location_DEFINITION"
-msgstr "外部のソース分類、ドキュメントまたはライブラリに電子的手段でアクセスできる場所。 電子位置はURLとして提供され、通常はURL位置文字列として与えられます。 .change ifc2x4 IFC4 変更点 データ型が [[IfcLabel]] から [[IfcURIReference]] に変更されました。"
-
-#:IFC.xml:9018
-msgid "IfcExternalReference_Name"
-msgstr "名前"
-
-msgid "IfcExternalReference_Name_DEFINITION"
-msgstr "さらに参照を指定する任意の名前。 これは、必ずしもドキュメントの内部構造における対応を持つ必要がない、人が読める識別子を提供することができます。"
-
-#:IFC.xml:9041
-msgid "IfcExternalReferenceRelationship"
-msgstr "IfcExternalReferenceRelationship"
-
-msgid "IfcExternalReferenceRelationship_DEFINITION"
-msgstr "[[IfcExternalReferenceRelationship]] is a relationship entity that enables objects from the [[IfcResourceObjectSelect]] to have the ability to be tagged by external references. NOTE This relationship is used to assign classification, library or document information to entities that do not inherit from [[IfcRoot]] . It has a similar functionality as the subtypes of [[IfcRelAssociates]] . HISTORY New entity in IFC4."
-
-#:IFC.xml:9027
-msgid "IfcExternalReferenceRelationship_RelatingReference"
-msgstr "関連する参照"
-
-msgid "IfcExternalReferenceRelationship_RelatingReference_DEFINITION"
-msgstr "[[IfcResourceObjectSelect]] の範囲内のオブジェクトにタグを付けるために使用できる外部参照。 注 外部参照は、辞書またはカタログ参照、分類参照、またはドキュメント参照などのライブラリ参照になります。"
-
-#:IFC.xml:9042
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects"
-msgstr "RelatedResourceオブジェクト"
-
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects_DEFINITION"
-msgstr "[[IfcResourceObjectSelect]] のリスト内のオブジェクトは、辞書、ライブラリ、カタログ、分類、またはドキュメントへの外部参照でタグ付けできます。"
-
-#:IFC.xml:9133
-msgid "IfcLibraryInformation"
-msgstr "IfcLibraryInformation"
-
-msgid "IfcLibraryInformation_DEFINITION"
-msgstr "An [[IfcLibraryInformation]] describes a library where a library is a structured store of information, normally organized in a manner which allows information lookup through an index or reference value. [[IfcLibraryInformation]] provides the library Name and optional Description , Version , VersionDate and Publisher attributes. A Location may be added for electronic access to the library. In a broder sense, [[IfcLibraryInformation]] includes the meta data for capture the revision information when checking in library and other data into a revision control system. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Location and Description attributes added Publisher and VersionDate data type changed HasLibraryReferences inverse attribute added previous LibraryReference changed to inverse ."
-
-#:IFC.xml:9167
-msgid "IfcLibraryInformation_HasLibraryReferences"
-msgstr "HasLibraryReference"
-
-msgid "IfcLibraryInformation_HasLibraryReferences_DEFINITION"
-msgstr "ライブラリ情報が適用されるライブラリ参照。"
-
-#:IFC.xml:9181
-msgid "IfcLibraryInformation_LibraryInfoForObjects"
-msgstr "LibraryInfoForObject"
-
-msgid "IfcLibraryInformation_LibraryInfoForObjects_DEFINITION"
-msgstr "オブジェクトが関連付けられているライブラリ情報。.change ifc2x4 IFC4 変更点 新しい逆属性。"
-
-#:IFC.xml:9134
-msgid "IfcLibraryInformation_Description"
-msgstr "説明"
-
-msgid "IfcLibraryInformation_Description_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:9139
-msgid "IfcLibraryInformation_Location"
-msgstr "場所"
-
-msgid "IfcLibraryInformation_Location_DEFINITION"
-msgstr "オンライン参照のライブラリ情報のURI、URNまたはURLとして提供されるリソース識別子またはロケータ。 .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:9144
-msgid "IfcLibraryInformation_Name"
-msgstr "名前"
-
-msgid "IfcLibraryInformation_Name_DEFINITION"
-msgstr "ライブラリを識別するために使用される名前"
-
-#:IFC.xml:9149
-msgid "IfcLibraryInformation_Publisher"
-msgstr "発行者"
-
-msgid "IfcLibraryInformation_Publisher_DEFINITION"
-msgstr ".change ifc2x4 IFC4 の変更データ型が [[IfcActorSelect]] に変更されました。"
-
-#:IFC.xml:9154
-msgid "IfcLibraryInformation_Version"
-msgstr "バージョン"
-
-msgid "IfcLibraryInformation_Version_DEFINITION"
-msgstr "参照に使用されるライブラリバージョンの識別子。"
-
-#:IFC.xml:9159
-msgid "IfcLibraryInformation_VersionDate"
-msgstr "VersionDate"
-
-msgid "IfcLibraryInformation_VersionDate_DEFINITION"
-msgstr "ライブラリの参照バージョンの日付。 hangeのifc2x4 IFC4の変更 データ型は、ISO8601の日付と時刻の文字列である[[IfcDateTime]]に変更されました。"
-
-#:IFC.xml:9193
-msgid "IfcLibraryReference"
-msgstr "IfcLibraryリファレンス"
-
-msgid "IfcLibraryReference_DEFINITION"
-msgstr "An [[IfcLibraryReference]] is a reference into a library of information by Location provided as a URI . It also provides an optional inherited Identification key to allow more specific references to library sections or tables. The inherited Name attribute allows for a human interpretable identification of the library item. Also, general information on the library from which the reference is taken, is given by the ReferencedLibrary relation which identifies the relevant occurrence of [[IfcLibraryInformation]] . The ifcLibraryReference additionally provides the capability to handle multilingual library entries. The Language attribute then holds the language tag for the language used by the strings kept in the Name and the Description attribute. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Description and Language attribute added ReferencedLibrary attribute added reversing previous ReferenceIntoLibrary inverse relationship ."
-
-#:IFC.xml:9167
-msgid "IfcLibraryReference_ReferencedLibrary"
-msgstr "ReferencedLibrary"
-
-msgid "IfcLibraryReference_ReferencedLibrary_DEFINITION"
-msgstr "参照されているライブラリ情報。"
-
-#:IFC.xml:9207
-msgid "IfcLibraryReference_LibraryRefForObjects"
-msgstr "Library RefForObjects"
-
-msgid "IfcLibraryReference_LibraryRefForObjects_DEFINITION"
-msgstr "オブジェクトが関連付けられているライブラリ参照。.change ifc2x4 IFC4 変更点 新しい逆属性。"
-
-#:IFC.xml:9194
-msgid "IfcLibraryReference_Description"
-msgstr "説明"
-
-msgid "IfcLibraryReference_Description_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:9199
-msgid "IfcLibraryReference_Language"
-msgstr "言語"
-
-msgid "IfcLibraryReference_Language_DEFINITION"
-msgstr "ライブラリ参照が表示される言語。.change ifc2x4 IFC4 変更点 属性リストの最後に追加された新しい属性。"
-
-#:IFC.xml:9219
-msgid "IfcLibrarySelect"
-msgstr "IfcLibrarySelect"
-
-#:IFC.xml:9220
-msgid "IfcResourceLevelRelationship"
-msgstr "IfcResourceLevelRelationship"
-
-msgid "IfcResourceLevelRelationship_DEFINITION"
-msgstr "[[IfcResourceLevelRelationship]] は、リソースレベルエンティティ間のリレーションシップのための抽象的なベースエンティティです。"
-
-#:IFC.xml:9221
-msgid "IfcResourceLevelRelationship_Description"
-msgstr "説明"
-
-msgid "IfcResourceLevelRelationship_Description_DEFINITION"
-msgstr "関係に関する追加情報を適用することができる説明。"
-
-#:IFC.xml:9226
-msgid "IfcResourceLevelRelationship_Name"
-msgstr "名前"
-
-msgid "IfcResourceLevelRelationship_Name_DEFINITION"
-msgstr "関係を識別または修飾するために使用される名前。"
-
-#:IFC.xml:9232
-msgid "IfcResourceObjectSelect"
-msgstr "IfcResourceObjectSelect"
-
-#:IFC.xml:9273
-msgid "IfcLanguageId"
-msgstr "IfcLanguageId"
-
-msgid "IfcLanguageId_DEFINITION"
-msgstr "The [[IfcLanguageId]] identifies the language in which a natural language text is expressed. It uses a language tag to identify the language. NOTE The tag shall comply to the Internet Engineering Task Force IETF language tag as expressed in RFC 5646. A conforming program shall support the simple language subtag and the language region tag format. EXAMPLE for simple language tags en English , de German , fr France , or ja Japanese , and for language region tags en US English as used in United States , de CH German as used in German speaking part of Switzerland . Type [[IfcIdentifier]] NOTE See RFC 5646 .. .. .. bibliography.htm RFC 5646 for definition of language tag. HISTORY New defined datatype in IFC4."
-
-#:IFC.xml:9276
-msgid "IfcURIReference"
-msgstr "IfcURIReference"
-
-msgid "IfcURIReference_DEFINITION"
-msgstr "[[IfcURIReference]] は、Uniform Resource Identifier URI を識別するために提供します。 URI はロケータまたは名前またはその両方として分類できます。 これは、Uniform Resource Locator URLとUniform Resource Name URNで構成されている可能性があります。 Uniform Resource Locator, URLは標準化されたフォーマットに準拠した文字列です。 ドキュメントや画像などのインターネット上のリソースをその場所で参照します Uniform Resource Name(ユニフォームリソース名、URN)は永続的な役割を果たすことを意図しています。 location dependent resource identifierとURNのプロパティを共有する他の名前空間を簡単にマップできるように設計されています。 注意 RFC 3986 .. bibliography.htm RFC 3986 のUniform Resource Identifierの定義については、RFC 3986 を参照してください。"
+msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
+msgstr "関連する[[IfcConstraint]]とIfcObjects、IfcPropertyDefinitions、IfcRelationshipsに関する制約の使用の目的。 代表的な値は、例えばRATIONALEやEXPECTED PerFORMANCEなどです。"
 
