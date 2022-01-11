@@ -5486,61 +5486,6 @@
           }
         }
       },
-      "IfcVibrationIsolator": {
-        "Parent": "IfcImpactProtectionDevice",
-        "Description": "",
-        "Psets": {
-          "Pset_VibrationIsolatorTypeCommon": {
-            "Properties": {
-              "IsolatorCompressibility": {
-                "type": "real",
-                "Description": "The compressibility of the vibration isolator."
-              },
-              "IsolatorStaticDeflection": {
-                "type": "real",
-                "Description": "Static deflection of the vibration isolator."
-              },
-              "MaximumSupportedWeight": {
-                "type": "real",
-                "Description": "The maximum weight that can be carried by the vibration isolator."
-              },
-              "NominalHeight": {
-                "type": "real",
-                "Description": "The nominal height of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
-              },
-              "Status": {
-                "type": "PEnum_ElementStatus",
-                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
-                "values": [
-                  "DEMOLISH",
-                  "EXISTING",
-                  "NEW",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "TEMPORARY",
-                  "UNSET"
-                ]
-              },
-              "VibrationTransmissibility": {
-                "type": "real",
-                "Description": "The vibration transmissibility percentage."
-              }
-            }
-          },
-          "Qto_VibrationIsolatorBaseQuantities": {
-            "Properties": {
-              "GrossWeight": {
-                "type": "real",
-                "Description": "Total gross weight of the footing without add-on parts, not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
-              }
-            }
-          }
-        }
-      },
       "IfcActor": {
         "Parent": "IfcObject",
         "Description": "The _IfcActor_ defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model. This includes name, address, telecommunication addresses, and roles.\n\n> HISTORY&nbsp; New entity in IFC2.0\n",
@@ -8065,6 +8010,53 @@
         "Parent": "IfcFacility",
         "Description": "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).\n\n{ .extDef}\n> NOTE&nbsp; Definition from ISO 6707-1:  \n> Construction work that has the provision of shelter for its occupants or contents as one of its main purpose and is normally designed to stand permanently in one place.\n\nA building is (if specified) associated to a site. A building may span over several connected or disconnected buildings. Therefore building complex provides for a collection of buildings included in a site. A building can also be decomposed in (vertical) parts, where each part defines a building section. This is defined by the composition type attribute of the supertype _IfcSpatialStructureElements_ which is interpreted as follow:\n\n* **COMPLEX**: building complex\n* **ELEMENT**: building\n* **PARTIAL**: building section\n\nThe _IfcBuilding_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship _IfcRelAggregates_. Figure 1 shows the _IfcBuilding_ as part of the spatial structure. It also serves as the spatial container for building and other elements.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"IfcBuildingStorey as part of a spatial structure\"](../../../../figures/ifcbuilding-spatialstructure.png \"Figure 1 &mdash; Building composition\")\n\nSystems, such as building service or electrical distribution systems, zonal systems, or structural analysis systems, relate to _IfcBuilding_ by using the objectified relationship _IfcRelServicesBuildings_.\n\nFigure 2 describes the heights and elevations of the _IfcBuilding_. It is used to provide the height above sea level of the project height datum for this building, that is, the internal height 0.00. The height 0.00 is often used as a building internal reference height and equal to the floor finish level of the ground floor.\n\n* base elevation of building provided by: _IfcBuilding.ElevationOfRefHeight_, it is usually the top of construction slab \n* base elevation of terrain at the perimeter of the building provided by: _IfcBuilding.ElevationOfTerrain_, it is usually the minimum elevation is sloped terrain \n* total height of building, also referred to as ridge height (top of roof structure, e.g the ridge against terrain): provided by BaseQuantity with Name=\"TotalHeight\" \n* eaves height of building (base of roof structure, e.g the eaves against terrain): provided by BaseQuantity with Name=\"EavesHeight\" \n\n<table border=\"0\" cellpadding=\"2\" cellspacing=\"2\">\n      <tbody>\n        <tr valign=\"top\">\n          <td align=\"left\" valign=\"top\">\n            <img src=\"../../../../figures/ifcbuilding_heights.png\" alt=\"building heights\" border=\"0\" height=\"420\" width=\"800\">&nbsp;\n          </td>\n        </tr>\n        <tr>\n          <td>\n            <p class=\"figure\">Figure 2 &mdash; Building elevations\n            </p>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n\n> HISTORY&nbsp; New entity in IFC1.0.\n",
         "Psets": {
+          "Pset_Address": {
+            "Properties": {
+              "Country": {
+                "type": "string",
+                "Description": ""
+              },
+              "Description": {
+                "type": "string",
+                "Description": "The description of the air side system."
+              },
+              "InternalLocation": {
+                "type": "string",
+                "Description": ""
+              },
+              "PostalBox": {
+                "type": "string",
+                "Description": ""
+              },
+              "PostalCode": {
+                "type": "string",
+                "Description": ""
+              },
+              "Purpose": {
+                "type": "IfcAddressTypeEnum",
+                "Description": "Purpose for which the borehole, section or volumetric model was created. (EU Inspire, boreholeML)",
+                "values": [
+                  "DISTRIBUTIONPOINT",
+                  "HOME",
+                  "OFFICE",
+                  "SITE",
+                  "USERDEFINED"
+                ]
+              },
+              "Region": {
+                "type": "string",
+                "Description": ""
+              },
+              "Town": {
+                "type": "string",
+                "Description": ""
+              },
+              "UserDefinedPurpose": {
+                "type": "string",
+                "Description": ""
+              }
+            }
+          },
           "Pset_BuildingCommon": {
             "Properties": {
               "BuildingID": {
@@ -9556,6 +9548,53 @@
         "Parent": "IfcSpatialStructureElement",
         "Description": "A site is a defined area of land, possibly covered with water, on which the project construction is to be completed. A site may be used to erect, retrofit or turn down building(s), or for other construction related developments.\n\n> NOTE&nbsp; Term according to ISO6707-1 vocabulary \"area of land or water where construction work or other development is undertaken\".\n\nA site may include a definition of the single geographic reference point for this site (global position using WGS84 with _Longitude_, _Latitude_ and _Elevation_). The precision is provided up to millionth of a second and it provides an absolute placement in relation to the real world as used in exchange with geospational information systems. If asserted, the _Longitude_, _Latitude_ and _Elevation_ establish the point in WGS84 where the point 0.,0.,0. of the _LocalPlacement_ of _IfcSite_ is situated.\n\nThe geometrical placement of the site, defined by the _IfcLocalPlacement_, shall be always relative to the spatial structure element, in which this site is included, or absolute, i.e. to the world coordinate system, as established by the geometric representation context of the project. The world coordinate system, established at the _IfcProject.RepresentationContexts_, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at _IfcGeometricRepresentationContext.TrueNorth_.\n\nA project may span over several connected or disconnected sites. Therefore site complex provides for a collection of sites included in a project. A site can also be decomposed in parts, where each part defines a site section. This is defined by the composition type attribute of the supertype _IfcSpatialStructureElements_ which is interpreted as follow:\n\n* COMPLEX = site complex\n* ELEMENT = site\n* PARTIAL = site section\n\nThe _IfcSite_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical).\n\nFigure 1 shows the _IfcSite_ as part of the spatial structure. In addition to the logical spatial structure, also the placement hierarchy is shown. In this example the spatial structure hierarchy and the placement hierarchy are identical.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"IfcSite as part of a spatial structure\"](../../../../figures/ifcsite-spatialstructure.png \"Figure 1 &mdash; Site composition\")\n\nFigure 2 describes the heights and elevations of the _IfcSite_. It is used to provide the geographic longitude, latitude, and height above sea level for the origin of the site. The origin of the site is the local placement.\n\nThe provision of longitude, latitude, height at the _IfcSite_ for georeferencing is provided for upward compatibility reasons. It requires a single instance of _IfcSite_ and WGS84 as coordinate reference system.\n\nFor exact georeferencing (or referencing to any other geographic coordinate system other than WSG84) the entities _IfcCoordinateReferenceSystem_ and _IfcMapConversion_ have to be used to define an exact mapping of the project engineering coordinate system to the geographic (or map) coordinate system.\n\n* <small>reference height of site is provided by: <em>IfcSite.RefElevation</em>, it is given according to the height datum used at this location.</small>\n* <small>the reference height of each building situated at the site is given againt the same height datum used at this location.</small>\n* <small>the elevations of each storey belonging to each building are given as local height relative to the reference height of the building.</small>\n\n<table border=\"0\" cellpadding=\"2\" cellspacing=\"2\" summary=\"attribute use\">\n<tbody>\n<tr valign=\"top\">\n<td align=\"left\" valign=\"top\"><img src=\"../../../../figures/ifcsite_heights.png\" alt=\"building heights\" border=\"0\" height=\"400\" width=\"500\">&nbsp;</td>\n</tr>\n<tr>\n<td>\n<p class=\"figure\">Figure 2 &mdash; Site elevations</p>\n</td>\n</tr>\n</tbody>\n</table>\n\n> HISTORY &nbsp;New entity in IFC1.0.\n",
         "Psets": {
+          "Pset_Address": {
+            "Properties": {
+              "Country": {
+                "type": "string",
+                "Description": ""
+              },
+              "Description": {
+                "type": "string",
+                "Description": "The description of the air side system."
+              },
+              "InternalLocation": {
+                "type": "string",
+                "Description": ""
+              },
+              "PostalBox": {
+                "type": "string",
+                "Description": ""
+              },
+              "PostalCode": {
+                "type": "string",
+                "Description": ""
+              },
+              "Purpose": {
+                "type": "IfcAddressTypeEnum",
+                "Description": "Purpose for which the borehole, section or volumetric model was created. (EU Inspire, boreholeML)",
+                "values": [
+                  "DISTRIBUTIONPOINT",
+                  "HOME",
+                  "OFFICE",
+                  "SITE",
+                  "USERDEFINED"
+                ]
+              },
+              "Region": {
+                "type": "string",
+                "Description": ""
+              },
+              "Town": {
+                "type": "string",
+                "Description": ""
+              },
+              "UserDefinedPurpose": {
+                "type": "string",
+                "Description": ""
+              }
+            }
+          },
           "Pset_SiteWeather": {
             "Properties": {
               "MaxAmbientTemp": {
@@ -11060,8 +11099,12 @@
         "Description": ""
       },
       "IfcVibrationDamper": {
-        "Parent": "IfcElementComponent",
-        "Description": "A vibration damper is a device used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive (elastic, frictional, inertia) or active (in a system using sensors and actuators).\n"
+        "Parent": "IfcImpactProtectionDevice",
+        "Description": ""
+      },
+      "IfcVibrationIsolator": {
+        "Parent": "IfcImpactProtectionDevice",
+        "Description": ""
       },
       "IfcVirtualElement": {
         "Parent": "IfcElement",
@@ -12185,11 +12228,33 @@
         "Parent": "IfcBuiltElement",
         "Description": "Type of building element that is usually used to transmit loads from superstructure to substructure, and usually allowing movement (displacement or rotation) in one or more degrees of freedom. It is typically a mechanical component procured as a whole and installed on site, but in simple cases it may be built on site (composed of other building elements, element components, etc.).\n\n> NOTE&nbsp; The sliding and roller materials are to be assigned to the bearing with the _Material Constituent Set_ concept.\n\n> NOTE&nbsp; The displacements and rotations accommodated can be defined in the _Pset_BearingCommon_ property set.\n"
       },
-      "IfcBuildingElementProxy": {
-        "Parent": "IfcBuiltElement",
-        "Description": "The _IfcBuildingElementProxy_ is a proxy definition that provides the same functionality as subtypes of _IfcBuildingElement_, but without having a predefined meaning of the special type of building element, it represents.\n\nProxies can also be used as spatial place holders or provisions, that are later replaced by special types of elements.\n\nOne use of the proxy object is a provision for voids, i.e. where a particular volume of space is requested by an engineering function that might later be accepted or rejected. If accepted it is transformed into a void within a building element, like a wall opening, or a slab opening. The provision for voids is exchanged as an _IfcBuildingElementProxy_ with the _PredefinedType_ = ProvisionForVoid. Such proxy shall have a swept solid geometry, where the profile of the swept solid lies on/near the surface of the referred building element and the extrusion depths is equal to or bigger then (in case of round or otherwise irregular element shape) the thickness of the building element. The appropriate property set should be attached.\n\nIn addition to the provision for voids, the building element proxy can also represent a provision for space, often the necessary space allocation for mechanical equipment that will be determined in a later design phase. The provision for space is exchanged as an _IfcBuildingElementProxy_ with the _PredefinedType_ = ProvisionForSpace.\n\nOther usages of _IfcBuildingElementProxy_ include:\n\n* The _IfcBuildingElementProxy_ can be used to exchange special types of building elements for which the current specification does not yet provide a semantic definition.\n* The _IfcBuildingElementProxy_ can also be used to represent building elements for which the participating applications can not provide a semantic definition.\n\n> HISTORY&nbsp; New entity in IFC2x.\n",
+      "IfcBuildingSystem": {
+        "Parent": "IfcSystem",
+        "Description": "A building system is a group by which building elements are grouped according to a common function within the facility.\n\nThe group _IfcBuildingSystem_ defines the occurrence of a specialized system for use within the context of a building and finishing fabric. Important functionalities for the description of a building system are derived from supertypes:\n\n* From _IfcSystem_ it inherits the ability to couple the building system via _IfcRelServicesBuildings_ to one or more _IfcSpatialElement_ subtypes as necessary.\n* From _IfcGroup_ it inherits the inverse attribute _IsGroupedBy_, pointing to the relationship class _IfcRelAssignsToGroup_. This allows to group building elements (instances of _IfcBuildingElement_ subtypes, _IfcFurnishingElement_ subtype, _IfcElementAssembly_ and _IfcTransportElement_).\n* From _IfcObjectDefinition_ it inherits the inverse attribute _IsDecomposedBy_ pointing to the relationship class _IfcRelAggregates_. It provides the hierarchy between the separate (partial) building systems.\n\n> HISTORY&nbsp; New entity in IFC4.\n",
         "Psets": {
-          "Pset_BuildingElementProxyCommon": {
+          "Pset_BuildingSystemCommon": {
+            "Properties": {
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              }
+            }
+          },
+          "Attributes": {
+            "Properties": {
+              "LongName": {
+                "type": "string",
+                "Description": "Long name for a building system, used for informal purposes. It should be used, if available, in conjunction with the inherited _Name_ attribute.\\X\\0D\n> NOTE&nbsp; In many scenarios the _Name_ attribute refers to the short name or number of a building system, and the _LongName_ refers to a descriptive name."
+              }
+            }
+          }
+        }
+      },
+      "IfcBuiltElementProxy": {
+        "Parent": "IfcBuiltElement",
+        "Description": "The _IfcBuiltElementProxy_ is a proxy definition that provides the same functionality as subtypes of _IfcBuildingElement_, but without having a predefined meaning of the special type of building element, it represents.\n\nProxies can also be used as spatial place holders or provisions, that are later replaced by special types of elements.\n\nOne use of the proxy object is a provision for voids, i.e. where a particular volume of space is requested by an engineering function that might later be accepted or rejected. If accepted it is transformed into a void within a building element, like a wall opening, or a slab opening. The provision for voids is exchanged as an _IfcBuiltElementProxy_ with the _PredefinedType_ = ProvisionForVoid. Such proxy shall have a swept solid geometry, where the profile of the swept solid lies on/near the surface of the referred building element and the extrusion depths is equal to or bigger then (in case of round or otherwise irregular element shape) the thickness of the building element. The appropriate property set should be attached.\n\nIn addition to the provision for voids, the building element proxy can also represent a provision for space, often the necessary space allocation for mechanical equipment that will be determined in a later design phase. The provision for space is exchanged as an _IfcBuiltElementProxy_ with the _PredefinedType_ = ProvisionForSpace.\n\nOther usages of _IfcBuiltElementProxy_ include:\n\n* The _IfcBuiltElementProxy_ can be used to exchange special types of building elements for which the current specification does not yet provide a semantic definition.\n* The _IfcBuiltElementProxy_ can also be used to represent building elements for which the participating applications can not provide a semantic definition.\n\n> HISTORY&nbsp; New entity in IFC2x.\n",
+        "Psets": {
+          "Pset_BuiltElementProxyCommon": {
             "Properties": {
               "FireRating": {
                 "type": "string",
@@ -12407,28 +12472,6 @@
               "TypeDesignation": {
                 "type": "string",
                 "Description": "Type designator for the element. The content depends on local standards. Eg. 'Bull nose', 'Half batter', 'Dropper', 'Chamfer' etc"
-              }
-            }
-          }
-        }
-      },
-      "IfcBuildingSystem": {
-        "Parent": "IfcSystem",
-        "Description": "A building system is a group by which building elements are grouped according to a common function within the facility.\n\nThe group _IfcBuildingSystem_ defines the occurrence of a specialized system for use within the context of a building and finishing fabric. Important functionalities for the description of a building system are derived from supertypes:\n\n* From _IfcSystem_ it inherits the ability to couple the building system via _IfcRelServicesBuildings_ to one or more _IfcSpatialElement_ subtypes as necessary.\n* From _IfcGroup_ it inherits the inverse attribute _IsGroupedBy_, pointing to the relationship class _IfcRelAssignsToGroup_. This allows to group building elements (instances of _IfcBuildingElement_ subtypes, _IfcFurnishingElement_ subtype, _IfcElementAssembly_ and _IfcTransportElement_).\n* From _IfcObjectDefinition_ it inherits the inverse attribute _IsDecomposedBy_ pointing to the relationship class _IfcRelAggregates_. It provides the hierarchy between the separate (partial) building systems.\n\n> HISTORY&nbsp; New entity in IFC4.\n",
-        "Psets": {
-          "Pset_BuildingSystemCommon": {
-            "Properties": {
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
-              }
-            }
-          },
-          "Attributes": {
-            "Properties": {
-              "LongName": {
-                "type": "string",
-                "Description": "Long name for a building system, used for informal purposes. It should be used, if available, in conjunction with the inherited _Name_ attribute.\\X\\0D\n> NOTE&nbsp; In many scenarios the _Name_ attribute refers to the short name or number of a building system, and the _LongName_ refers to a descriptive name."
               }
             }
           }
@@ -15274,7 +15317,7 @@
       },
       "IfcSlabElementedCase": {
         "Parent": "IfcSlab",
-        "Description": "The _IfcSlabElementedCase_ defines a slab with certain constraints for the provision of its components. The _IfcSlabElementedCase_ handles all cases of slabs, that are decomposed into parts:\n\n* having components being assigned to the _IfcSlabElementedCase_ using the _IfcRelAggregates_ relationship accessible by the inverse relationship _IsDecomposedBy_.\n* applying the constraint that the parts within the decomposition shall be of type _IfcElementAssembly_, _IfcBeam_, _IfcMember_, _IfcPlate_, _IfcBuildingElementPart_ or _IfcBuildingElementProxy_.\n\n> HISTORY&nbsp; New entity in IFC4.\n\n{ .use-head}\nVoiding Use Definition:\n\nAs shown in Figure 1, openings within the composite slab are directly assigned to _IfcSlabElementedCase_ using _IfcRelVoidsElement_ pointing to _IfcOpeningElement_ and apply to all aggregated parts. If individual parts have cutting and other voiding features, then the decomposed parts have a separate voiding relationship _IfcRelVoidsElement_ pointing to _IfcVoidingFeature_.\n\n![\"voiding\"](../../../../figures/ifcslabelementedcase_fig01.png \"Figure 1 &mdash; Slab elemented voiding\")\n\n## Formal Propositions\n\n### HasDecomposition\nA valid instance of _IfcSlabElementedCase_ has to have parts in a decomposition hierarchy.\n\n## Concepts\n\n### Aggregation\n\nThe following guidance is provided for the components of the\nIfcSlabElementedCase. The following component entity types\nshould be used:\n\n\n* Precast hollow core slabs\n\t+ double tee or plank components : IfcBeam\n\t+ topping : IfcBuildingElementPart\n\t+ others : IfcBuildingElementPart\n\n\n\n### Placement\n\nThe use of local placement is defined at the supertype\nIfcSlab. The local placement of the\nIfcSlabElementedCase defines the parent coordinate systems\nfor the parts within the decomposition. All parts shall be\npositioned relative to the IfcSlabElementedCase.\n\n\n\n### Surface Geometry\n\nA three-dimensional surface being a subtype\nof IfcBoundedSurface defining the reference surface for\nthe elemented slab. It maybe used as a simplified representation\ndirectly at the elemented slab.\n\n\n\n> NOTE\u00a0 It is invalid to exhange a 'Body' shape \n> representation of an IfcSlabElementedCase. The body\n> geometry is defined by the parts within the \n> decomposition.\n\n\n\n> NOTE\u00a0 The 'Surface' can be used to define a\n> surfacic model of the building (e.g. for analytical purposes, or\n> for reduced Level of Detail representation). It should suppress\n> the geometric details of the parts in the\n> decomposition."
+        "Description": "The _IfcSlabElementedCase_ defines a slab with certain constraints for the provision of its components. The _IfcSlabElementedCase_ handles all cases of slabs, that are decomposed into parts:\n\n* having components being assigned to the _IfcSlabElementedCase_ using the _IfcRelAggregates_ relationship accessible by the inverse relationship _IsDecomposedBy_.\n* applying the constraint that the parts within the decomposition shall be of type _IfcElementAssembly_, _IfcBeam_, _IfcMember_, _IfcPlate_, _IfcBuildingElementPart_ or _IfcBuiltElementProxy_.\n\n> HISTORY&nbsp; New entity in IFC4.\n\n{ .use-head}\nVoiding Use Definition:\n\nAs shown in Figure 1, openings within the composite slab are directly assigned to _IfcSlabElementedCase_ using _IfcRelVoidsElement_ pointing to _IfcOpeningElement_ and apply to all aggregated parts. If individual parts have cutting and other voiding features, then the decomposed parts have a separate voiding relationship _IfcRelVoidsElement_ pointing to _IfcVoidingFeature_.\n\n![\"voiding\"](../../../../figures/ifcslabelementedcase_fig01.png \"Figure 1 &mdash; Slab elemented voiding\")\n\n## Formal Propositions\n\n### HasDecomposition\nA valid instance of _IfcSlabElementedCase_ has to have parts in a decomposition hierarchy.\n\n## Concepts\n\n### Aggregation\n\nThe following guidance is provided for the components of the\nIfcSlabElementedCase. The following component entity types\nshould be used:\n\n\n* Precast hollow core slabs\n\t+ double tee or plank components : IfcBeam\n\t+ topping : IfcBuildingElementPart\n\t+ others : IfcBuildingElementPart\n\n\n\n### Placement\n\nThe use of local placement is defined at the supertype\nIfcSlab. The local placement of the\nIfcSlabElementedCase defines the parent coordinate systems\nfor the parts within the decomposition. All parts shall be\npositioned relative to the IfcSlabElementedCase.\n\n\n\n### Surface Geometry\n\nA three-dimensional surface being a subtype\nof IfcBoundedSurface defining the reference surface for\nthe elemented slab. It maybe used as a simplified representation\ndirectly at the elemented slab.\n\n\n\n> NOTE\u00a0 It is invalid to exhange a 'Body' shape \n> representation of an IfcSlabElementedCase. The body\n> geometry is defined by the parts within the \n> decomposition.\n\n\n\n> NOTE\u00a0 The 'Surface' can be used to define a\n> surfacic model of the building (e.g. for analytical purposes, or\n> for reduced Level of Detail representation). It should suppress\n> the geometric details of the parts in the\n> decomposition."
       },
       "IfcSlabStandardCase": {
         "Parent": "IfcSlab",
@@ -16147,7 +16190,7 @@
       },
       "IfcWallElementedCase": {
         "Parent": "IfcWall",
-        "Description": "The _IfcWallElementedCase_ defines a wall with certain constraints for the provision of its components. The _IfcWallElementedCase_ handles all cases of walls, that are decomposed into parts:\n\n* having components being assigned to the _IfcWallElementedCase_ using the _IfcRelAggregates_ relationship accessible by the inverse relationship _IsDecomposedBy_.\n\nParts within the decomposition are usually be of type:\n\n* _IfcBuildingElementPart_ for wall layer, insolation layers and similar\n* _IfcMember_ for studs, posts and similar elements,\n* _IfcElementAssembly_ for other aggregates, or\n* _IfcBuildingElementProxy_.\n\n> EXAMPLE&nbsp;Elemented walls may extend the concepts of standard walls with the following features, as shown in Figure 1, including the _IfcRelConnectsWithRealizingElements_ relationship to define fasteners and accessories.\n\n![\"voiding\"](../../../../figures/ifcwallelementedcase-partitioning.png \"Figure 1 &mdash; Wall elemented case\")\n\n> HISTORY&nbsp; New entity in IFC4.\n\n## Formal Propositions\n\n### HasDecomposition\nA valid instance of _IfcWallElementedCase_ has to have parts in a decomposition hierarchy.\n\n## Concepts\n\n### Element Decomposition\n\nAn elemented wall is decomposed into parts for particular components such as framing and panels on each side. There must be an object corresponding to each type of part, however there may be single object instance indicating multiple placements (via mapping geometry) for each part, or multiple instances corresponding to each placement. For minimizing file size, it is recommended to use a single object with multiple placement unless there are specific connectivity relationships indicated (e.g. a junction box connected to a specific stud).\n\n\n\n\n### Element Voiding\n\nAs shown in Figure 285, openings within the composite wall are directly assigned to IfcWallElementedCase using IfcRelVoidsElement pointing to IfcOpeningElement and apply to all aggregated parts. If individual parts have cutting and other voiding features, then the decomposed parts have a separate voiding relationship IfcRelVoidsElement pointing to IfcVoidingFeature.\n\n\n![voiding](../../../../figuresifcwallelementedcase_fig01.png)\nFigure 285 \u2014 Wall elemented voiding\n\n\n\n### Product Local Placement\n\nThe use of local placement is defined at the supertype\nIfcWall. The local placement of the\nIfcWallElementedCase defines the parent coordinate systems\nfor the parts within the decomposition. All parts shall be\npositioned relative to the IfcWallElementedCase.\n\n\n\n### Surface Geometry\n\nThe 'Surface Geometry' shape representation can be used to define a\n surfacic model of the building (e.g. for analytical purposes, or \nfor reduced Level of Detail representation). It could suppress \nthe geometric details of the parts in the\n decomposition.\n\n\n\n> NOTE\u00a0 It is invalid to exchange a 'Body' shape representation of an IfcWallElementedCase. The body geometry is defined by the parts within the decomposition."
+        "Description": "The _IfcWallElementedCase_ defines a wall with certain constraints for the provision of its components. The _IfcWallElementedCase_ handles all cases of walls, that are decomposed into parts:\n\n* having components being assigned to the _IfcWallElementedCase_ using the _IfcRelAggregates_ relationship accessible by the inverse relationship _IsDecomposedBy_.\n\nParts within the decomposition are usually be of type:\n\n* _IfcBuildingElementPart_ for wall layer, insolation layers and similar\n* _IfcMember_ for studs, posts and similar elements,\n* _IfcElementAssembly_ for other aggregates, or\n* _IfcBuiltElementProxy_.\n\n> EXAMPLE&nbsp;Elemented walls may extend the concepts of standard walls with the following features, as shown in Figure 1, including the _IfcRelConnectsWithRealizingElements_ relationship to define fasteners and accessories.\n\n![\"voiding\"](../../../../figures/ifcwallelementedcase-partitioning.png \"Figure 1 &mdash; Wall elemented case\")\n\n> HISTORY&nbsp; New entity in IFC4.\n\n## Formal Propositions\n\n### HasDecomposition\nA valid instance of _IfcWallElementedCase_ has to have parts in a decomposition hierarchy.\n\n## Concepts\n\n### Element Decomposition\n\nAn elemented wall is decomposed into parts for particular components such as framing and panels on each side. There must be an object corresponding to each type of part, however there may be single object instance indicating multiple placements (via mapping geometry) for each part, or multiple instances corresponding to each placement. For minimizing file size, it is recommended to use a single object with multiple placement unless there are specific connectivity relationships indicated (e.g. a junction box connected to a specific stud).\n\n\n\n\n### Element Voiding\n\nAs shown in Figure 285, openings within the composite wall are directly assigned to IfcWallElementedCase using IfcRelVoidsElement pointing to IfcOpeningElement and apply to all aggregated parts. If individual parts have cutting and other voiding features, then the decomposed parts have a separate voiding relationship IfcRelVoidsElement pointing to IfcVoidingFeature.\n\n\n![voiding](../../../../figuresifcwallelementedcase_fig01.png)\nFigure 285 \u2014 Wall elemented voiding\n\n\n\n### Product Local Placement\n\nThe use of local placement is defined at the supertype\nIfcWall. The local placement of the\nIfcWallElementedCase defines the parent coordinate systems\nfor the parts within the decomposition. All parts shall be\npositioned relative to the IfcWallElementedCase.\n\n\n\n### Surface Geometry\n\nThe 'Surface Geometry' shape representation can be used to define a\n surfacic model of the building (e.g. for analytical purposes, or \nfor reduced Level of Detail representation). It could suppress \nthe geometric details of the parts in the\n decomposition.\n\n\n\n> NOTE\u00a0 It is invalid to exchange a 'Body' shape representation of an IfcWallElementedCase. The body geometry is defined by the parts within the decomposition."
       },
       "IfcWallStandardCase": {
         "Parent": "IfcWall",
@@ -17558,7 +17601,37 @@
       },
       "IfcSign": {
         "Parent": "IfcElementComponent",
-        "Description": "A sign is a notice on display that gives information or instructions in a written, symbolic or other form. Signs are passive with the most common form of a pictorial panel. An instance of _IfcSign_ refers to the occurrence of an individual panel which can be applied to a surface such as a wall or be aggregated within a Signal Assembly which can include multiple sign occurrences and the associated supporting structural elements (see Signal Assembly for examples).\n"
+        "Description": "A sign is a notice on display that gives information or instructions in a written, symbolic or other form. Signs are passive with the most common form of a pictorial panel. An instance of _IfcSign_ refers to the occurrence of an individual panel which can be applied to a surface such as a wall or be aggregated within a Signal Assembly which can include multiple sign occurrences and the associated supporting structural elements (see Signal Assembly for examples).\n",
+        "Psets": {
+          "Pset_SignCommon": {
+            "Properties": {
+              "Category": {
+                "type": "string",
+                "Description": "Designation of the category into which the actors in the population belong."
+              },
+              "IsExternal": {
+                "type": "boolean",
+                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
+              "TactileMarking": {
+                "type": "boolean",
+                "Description": "",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              }
+            }
+          }
+        }
       },
       "IfcSignal": {
         "Parent": "IfcFlowTerminal",

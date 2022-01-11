@@ -1,17 +1,24 @@
 # Express schema differences
 
-42 items
+55 items
 
 
 ### Missing data
 
-15 items
+22 items
 
 | Name                                | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |-------------------------------------|---------------------------------|------------------|
+| IfcBuildingElementProxy             |                                 | not in 'IFC.exp' |
+| IfcBuildingElementProxyType         |                                 | not in 'IFC.exp' |
+| IfcBuildingElementProxyTypeEnum     |                                 | not in 'IFC.exp' |
 | IfcPlant                            |                                 | not in 'IFC.exp' |
+| IfcPostalAddress                    |                                 | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum |                                 | not in 'IFC.exp' |
 | IfcBridgePart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcBuiltElementProxy                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcBuiltElementProxyType            | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcBuiltElementProxyTypeEnum        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcImpactProtectionDeviceCommon     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcImpactProtectionDeviceCommonType | not in 'IFC4x3_RC4_43c3555.exp' |                  |
@@ -37,38 +44,44 @@
 
 ### Entity definitions
 
-15 items
+20 items
 
-| Name                                     | IFC4x3_RC4_43c3555.exp                               | IFC.exp                                     |
-|------------------------------------------|------------------------------------------------------|---------------------------------------------|
-| IfcFacilityPart                          | not abstract                                         | abstract                                    |
-| IfcFacilityPart attributes               | ['PredefinedType', 'UsageType']                      | ['UsageType']                               |
-| IfcImpactProtectionDevice                | not abstract                                         | abstract                                    |
-| IfcImpactProtectionDevice attributes     | ['PredefinedType']                                   | []                                          |
-| IfcImpactProtectionDeviceType            | not abstract                                         | abstract                                    |
-| IfcImpactProtectionDeviceType attributes | ['PredefinedType']                                   | []                                          |
-| IfcProperty attributes                   | ['Name', 'Description']                              | ['Name', 'Specification']                   |
-| IfcTransportElement                      | not abstract                                         | abstract                                    |
-| IfcTransportElement attributes           | ['PredefinedType']                                   | []                                          |
-| IfcTransportElementType                  | not abstract                                         | abstract                                    |
-| IfcTransportElementType attributes       | ['PredefinedType']                                   | []                                          |
-| IfcVibrationDamper supertype             | ['IfcElementComponent']                              | ['IfcImpactProtectionDevice']               |
-| IfcVibrationDamper.PredefinedType        | PredefinedType : optional IfcVibrationDamperTypeEnum | PredefinedType : IfcDamperTypeEnum          |
-| IfcVibrationDamperType supertype         | ['IfcElementComponentType']                          | ['IfcImpactProtectionDeviceType']           |
-| IfcVibrationDamperType.PredefinedType    | PredefinedType : optional IfcVibrationDamperTypeEnum | PredefinedType : IfcVibrationDamperTypeEnum |
+| Name                                     | IFC4x3_RC4_43c3555.exp                                                            | IFC.exp                                                            |
+|------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| IfcBuilding attributes                   | ['ElevationOfRefHeight', 'ElevationOfTerrain', 'BuildingAddress']                 | ['ElevationOfRefHeight', 'ElevationOfTerrain']                     |
+| IfcFacilityPart                          | not abstract                                                                      | abstract                                                           |
+| IfcFacilityPart attributes               | ['PredefinedType', 'UsageType']                                                   | ['UsageType']                                                      |
+| IfcImpactProtectionDevice                | not abstract                                                                      | abstract                                                           |
+| IfcImpactProtectionDevice attributes     | ['PredefinedType']                                                                | []                                                                 |
+| IfcImpactProtectionDeviceType            | not abstract                                                                      | abstract                                                           |
+| IfcImpactProtectionDeviceType attributes | ['PredefinedType']                                                                | []                                                                 |
+| IfcProperty attributes                   | ['Name', 'Description']                                                           | ['Name', 'Specification']                                          |
+| IfcSite attributes                       | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress'] | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber'] |
+| IfcTransportElement                      | not abstract                                                                      | abstract                                                           |
+| IfcTransportElement attributes           | ['PredefinedType']                                                                | []                                                                 |
+| IfcTransportElementType                  | not abstract                                                                      | abstract                                                           |
+| IfcTransportElementType attributes       | ['PredefinedType']                                                                | []                                                                 |
+| IfcVibrationDamper supertype             | ['IfcElementComponent']                                                           | ['IfcImpactProtectionDevice']                                      |
+| IfcVibrationDamper.PredefinedType        | PredefinedType : optional IfcVibrationDamperTypeEnum                              | PredefinedType : IfcDamperTypeEnum                                 |
+| IfcVibrationDamperType supertype         | ['IfcElementComponentType']                                                       | ['IfcImpactProtectionDeviceType']                                  |
+| IfcVibrationDamperType.PredefinedType    | PredefinedType : optional IfcVibrationDamperTypeEnum                              | PredefinedType : IfcVibrationDamperTypeEnum                        |
+| IfcVibrationIsolator supertype           | ['IfcElementComponent']                                                           | ['IfcImpactProtectionDevice']                                      |
+| IfcVibrationIsolator.PredefinedType      | PredefinedType : optional IfcVibrationIsolatorTypeEnum                            | PredefinedType : IfcVibrationIsolatorTypeEnum                      |
+| IfcVibrationIsolatorType supertype       | ['IfcElementComponentType']                                                       | ['IfcImpactProtectionDeviceType']                                  |
 
 ### Constraints
 
-9 items
+10 items
 
-| Name                               | IFC4x3_RC4_43c3555.exp                                                                                  | IFC.exp                                                                 |
-|------------------------------------|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| IfcBuildingSystem where rules      | []                                                                                                      | ['CorrectPredefinedType']                                               |
-| IfcRailway where rules             | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType']                              |
-| IfcRoad where rules                | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType']                              |
-| IfcSectionedSurface where rules    | ['DirectrixIs3D', 'AreaProfileTypes', 'SectionsSameType', 'CorrespondingSectionPositions', 'NoOffsets'] | []                                                                      |
-| IfcSurfaceFeature where rules      | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType']                              |
-| IfcVibrationDamper where rules     | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                        | []                                                                      |
-| IfcVibrationDamperType where rules | ['CorrectPredefinedType']                                                                               | []                                                                      |
-| IfcVibrationIsolator where rules   | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                        | ['CorrectPredefinedType', 'CorrectTypeAssigned', 'CorrectTypeAssigned'] |
-| IfcVoidingFeature where rules      | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType']                              |
+| Name                                 | IFC4x3_RC4_43c3555.exp                                                                                  | IFC.exp                                    |
+|--------------------------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| IfcBuildingSystem where rules        | []                                                                                                      | ['CorrectPredefinedType']                  |
+| IfcRailway where rules               | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType'] |
+| IfcRoad where rules                  | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType'] |
+| IfcSectionedSurface where rules      | ['DirectrixIs3D', 'AreaProfileTypes', 'SectionsSameType', 'CorrespondingSectionPositions', 'NoOffsets'] | []                                         |
+| IfcSurfaceFeature where rules        | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType'] |
+| IfcVibrationDamper where rules       | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                        | ['CorrectTypeAssigned']                    |
+| IfcVibrationDamperType where rules   | ['CorrectPredefinedType']                                                                               | []                                         |
+| IfcVibrationIsolator where rules     | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                        | ['CorrectTypeAssigned']                    |
+| IfcVibrationIsolatorType where rules | ['CorrectPredefinedType']                                                                               | []                                         |
+| IfcVoidingFeature where rules        | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType'] |
