@@ -5487,8 +5487,8 @@
         }
       },
       "IfcVibrationIsolator": {
-        "Parent": "IfcElementComponent",
-        "Description": "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure.\n\n> HISTORY&nbsp; New entity in IFC4\n\n{ .note}\n>\n",
+        "Parent": "IfcImpactProtectionDevice",
+        "Description": "",
         "Psets": {
           "Pset_VibrationIsolatorTypeCommon": {
             "Properties": {
@@ -7699,6 +7699,10 @@
           }
         }
       },
+      "IfcMarinePart": {
+        "Parent": "IfcFacilityPart",
+        "Description": ""
+      },
       "IfcMooringDevice": {
         "Parent": "IfcBuiltElement",
         "Description": "A mooring device is an active or passive built element who's primary function is to participate in the mooring of a vessel, this could be in the form of a bollard used as an attachment point for lines or active equipment such as quick release hooks.\n",
@@ -8052,6 +8056,10 @@
             }
           }
         }
+      },
+      "IfcBridgePart": {
+        "Parent": "IfcFacilityPart",
+        "Description": ""
       },
       "IfcBuilding": {
         "Parent": "IfcFacility",
@@ -9369,6 +9377,10 @@
           }
         }
       },
+      "IfcFacilityPartCommon": {
+        "Parent": "IfcFacilityPart",
+        "Description": ""
+      },
       "IfcFeatureElement": {
         "Parent": "IfcElement",
         "Description": "A feature element is a generalization of all existence dependent elements which modify the shape and appearance of the associated master element. The _IfcFeatureElement_ offers the ability to handle shape modifiers as semantic objects within the IFC object model.\n\n> NOTE&nbsp; The term \"feature\" has a predefined meaning in a context of \"feature-based modeling\" and within steel construction work. It is introduced here in a broader sense to cover all existence dependent, but semantically described, modifiers of an element's shape and appearance. It is envisioned that future releases enhance the feature-based capabilities of the IFC model.\n\nIn contrary to the aggregation, as used in _IfcElementAssembly_, that defines the aggregate as a container element, that has equally treated parts, the feature concept introduced by _IfcFeatureElement_ defines the master element with subordinate parts as additions, or with voids or cut-outs as subtractions.\n\n> HISTORY&nbsp; New entity in IFC2x2.\n\n{ .change-ifc2x2}\n> IFC2x2 CHANGE&nbsp; The entity is introduced as an upward compatible extension of the IFC2x platform. It is an intermediate abstract supertype without defining its own explicit attributes.\n\n## Formal Propositions\n\n### NotContained\nElement is not contained in spatial structure.\n\n## Concepts\n\n### Spatial Containment\n\nAs a subordinate part being fully dependent on the master\nelement the IfcFeatureElement shall have no independent\ncontainment relationship to the spatial structure.\n\n\n* The SELF\\IfcElement.ContainedInStructure relationship\nshall be NIL."
@@ -9392,6 +9404,10 @@
       "IfcGrid": {
         "Parent": "IfcPositioningElement",
         "Description": "_IfcGrid_ ia a planar design grid defined in 3D space used as an aid in locating structural and design elements. The position of the grid (_ObjectPlacement_) is defined by a 3D coordinate system (and thereby the design grid can be used in plan, section or in any position relative to the world coordinate system). The position can be relative to the object placement of other products or grids. The XY plane of the 3D coordinate system is used to place the grid axes, which are 2D curves (for example, line, circle, arc, polyline).\n\nThe inherited attributes _Name_ and _Description_ can be used to define a descriptive name of the grid and to indicate the grid's purpose. A grid is defined by (normally) two, or (in case of a triangular grid) three lists of grid axes. The following figures shows some examples.\n\nA grid may support a rectangular layout as shown in Figure 1, a radial layout as shown in Figure 2, or a triangular layout as shown in Figure 3.\n\n> NOTE&nbsp; The _PredefinedType_ denotes the type of grid that is represented by _IfcGrid_. The instantiation of _IfcGridAxis_'s has to agree to the _PredefinedType_, if provided.\n\n> NOTE&nbsp; The grid axes, defined within the design grid, are those elements to which project objects will be placed relatively using the _IfcGridPlacement_.\n\n<table cellpadding=\"2\" cellspacing=\"2\">\n      <tbody>\n        <tr>\n          <td width=\"320\">\n            <img src=\"../../../../figures/ifcdesigngrid-type1.gif\" alt=\"1\" border=\"0\" height=\"211\" width=\"306\">\n          </td>\n          <td width=\"320\">\n            <img src=\"../../../../figures/ifcdesigngrid-type2.gif\" alt=\"2\" border=\"0\" height=\"211\" width=\"306\">\n          </td>\n          <td width=\"320\">\n            <img src=\"../../../../figures/ifcdesigngrid-type3.gif\" alt=\"3\" border=\"0\" height=\"211\" width=\"306\">\n          </td>\n        </tr>\n        <tr>\n          <td width=\"320\">\n            <p class=\"figure\">Figure 1 &mdash; Grid rectangular layout</p>\n          </td>\n          <td width=\"320\">\n            <p class=\"figure\">Figure 2 &mdash; Grid radial layout</p>\n          </td>\n          <td width=\"320\">\n            <p class=\"figure\">Figure 3 &mdash; Grid triangular layout</p>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n\n> HISTORY&nbsp; New entity in IFC1.0.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The attribute _PredefinedType_ has been added at the end of the attribute list.\n\n&nbsp;\n\n{ .spec-head}\nInformal Propositions:\n\n<table summary=\"IP\">\n      <tr>\n        <td width=\"640\">\n          <ol>\n            <li>Grid axes, which are referenced in different lists\n            of axes (UAxes, VAxes, WAxes) shall not be parallel.\n            </li>\n            <li>Grid axes should be defined such as there are no\n            two grid axes which intersect twice (see Figure 189).\n            </li>\n          </ol>\n          <blockquote class=\"note\">\n            NOTE&nbsp; Left side: ambiguous intersections A1 and\n            A2, a grid containing such grid axes is not a valid\n            design grid;&nbsp; Right side: the conflict can be\n            resolved by splitting one grid axis in a way, such as\n            no ambiguous intersections exist.\n          </blockquote>\n        </td>\n        <td align=\"right\" valign=\"top\" width=\"320\">\n          <img src=\"../../../../figures/ifcdesigngrid-ip2.gif\" alt=\"IP2\" border=\"0\" height=\"97\" width=\"306\">\n          <p class=\"figure\">Figure 4 &mdash; Grid intersections</p>\n        </td>\n      </tr>\n    </table>\n"
+      },
+      "IfcImpactProtectionDeviceCommon": {
+        "Parent": "IfcImpactProtectionDevice",
+        "Description": ""
       },
       "IfcLinearElement": {
         "Parent": "IfcProduct",
@@ -10969,6 +10985,10 @@
           }
         }
       },
+      "IfcTransportElementFixed": {
+        "Parent": "IfcTransportElement",
+        "Description": ""
+      },
       "IfcTransportElementType": {
         "Parent": "IfcElementType",
         "Description": "The element type _IfcTransportElementType_ defines commonly shared information for occurrences of transport elements. The set of shared information may include: \n \n* common properties within shared property sets\n* common material information\n* common shape representations\n\n  \nIt is used to define a transport element specification (i.e. the specific product information that is common to all occurrences of that beam type). Transport element types (or the instantiable subtypes) may be exchanged without being already assigned to occurrences.  \nThe occurrences of the _IfcTransportElementType_ are represented by instances of _IfcTransportElement_  (or its subtypes).\n\n> HISTORY&nbsp; New entity in IFC2x2.\n",
@@ -11034,6 +11054,14 @@
             }
           }
         }
+      },
+      "IfcVehicle": {
+        "Parent": "IfcTransportElement",
+        "Description": ""
+      },
+      "IfcVibrationDamper": {
+        "Parent": "IfcElementComponent",
+        "Description": "A vibration damper is a device used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive (elastic, frictional, inertia) or active (in a system using sensors and actuators).\n"
       },
       "IfcVirtualElement": {
         "Parent": "IfcElement",
@@ -11706,6 +11734,10 @@
         "Parent": "IfcFacility",
         "Description": "An IfcRailway is a spatial structure element as a route from one location to another for guided passage of wheeled vehicles on rails. An IfcRailway acts as a basic spatial structure element that supports to break down a railway project into manageable parts.\nNote: Definition according to ISO 6706: 2017: national or regional transport system for guided passage of wheeled vehicles on rails.\n"
       },
+      "IfcRailwayPart": {
+        "Parent": "IfcFacilityPart",
+        "Description": ""
+      },
       "IfcTrackElement": {
         "Parent": "IfcBuiltElement",
         "Description": "A track element is a built element used specifically in the track domain in railway.\n"
@@ -11853,6 +11885,10 @@
             }
           }
         }
+      },
+      "IfcRoadPart": {
+        "Parent": "IfcFacilityPart",
+        "Description": ""
       },
       "IfcBeam": {
         "Parent": "IfcBuiltElement",
@@ -16841,10 +16877,6 @@
             }
           }
         }
-      },
-      "IfcVibrationDamper": {
-        "Parent": "IfcElementComponent",
-        "Description": "A vibration damper is a device used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive (elastic, frictional, inertia) or active (in a system using sensors and actuators).\n"
       },
       "IfcAsset": {
         "Parent": "IfcGroup",
