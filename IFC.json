@@ -6363,34 +6363,6 @@
           }
         }
       },
-      "IfcProxy": {
-        "Parent": "IfcProduct",
-        "Description": "_IfcProxy_ is intended to be a kind of a container for wrapping objects which are defined by associated properties, which may or may not have a geometric representation and placement in space. A proxy may have a semantic meaning, defined by the _Name_ attribute, and property definitions, attached through the property assignment relationship, which definition may be outside of the definitions given by the current release of IFC.\n\nThe _ProxyType_ may give an indication to which high level semantic breakdown of object the semantic definition of the proxy relates to. the _Tag_ attribute may be used to assign a human or system interpretable identifier (such as a serial number or bar code).\n\n> NOTE&nbsp; Given that only a limited number of semantic constructs can be formally defined within IFC (and it will never be possible to define all), there has to be a mechanism for capturing those constructs that are not (yet) defined by IFC.\n\n> NOTE&nbsp; Product proxies are a mechanism that allows to exchange data that is part of the project but not necessarily part of the IFC model. Those proxies may have geometric representations assigned.\n\n> HISTORY&nbsp; New entity in IFC1.5.\n\n{ .deprecated}\n> DEPRECATION&nbsp; The entity is deprecated and shall not be used.\n",
-        "Psets": {
-          "Attributes": {
-            "Properties": {
-              "ProxyType": {
-                "values": [
-                  "ACTOR",
-                  "CONTROL",
-                  "GROUP",
-                  "NOTDEFINED",
-                  "PROCESS",
-                  "PRODUCT",
-                  "PROJECT",
-                  "RESOURCE"
-                ],
-                "type": "IfcObjectTypeEnum",
-                "Description": "High level (and only) semantic meaning attached to the IfcProxy, defining the basic construct type behind the Proxy, e.g. Product or Process."
-              },
-              "Tag": {
-                "type": "string",
-                "Description": "The tag (or label) identifier at the particular instance of a product, e.g. the serial number, or the position number. It is the identifier at the occurrence level."
-              }
-            }
-          }
-        }
-      },
       "IfcResource": {
         "Parent": "IfcObject",
         "Description": "_IfcResource_ contains the information needed to represent the costs, schedule, and other impacts from the use of a thing in a process. It is not intended to use _IfcResource_ to model the general properties of the things themselves, while an optional linkage from _IfcResource_ to the things to be used can be specified (specifically, the relationship from subtypes of _IfcResource_ to _IfcProduct_ through the _IfcRelAssignsToResource_ relationship).\n\nThere are two basic intended uses of _IfcResource_. First, if the attributes of the thing are not needed for the purpose of the use of _IfcResource_, or the types of things are not explicitly modeled in IFC yet, then the linkage between the resource and the thing doesn't have to be instantiated in the system. That is, the attributes of _IfcResource_ (or its subtypes) alone are sufficient to represent the use of the thing as a resource for the purpose of the project.\n\n> EXAMPLE&nbsp; construction equipment such as earth-moving vehicles or tools are not currently modeled within the IFC. For the purpose of estimating and scheduling, these can be represented using subtypes of _IfcResource_ alone.\n\nSecond, if the attributes of the thing are needed for the use of _IfcResource_ objects, and they are modeled explicitly as objects, then the _IfcResource_ instances can be linked to the instances of the type of the things being referenced. Things that might be used as resources and that are already modeled in the IFC include physical products, people and organizations, and materials. The relationship object _IfcRelAssignsToResource_ is provided for this approach.\n\nThe inherited attribute _ObjectType_ is used as a textual code that identifies the resource type.\n\n> HISTORY&nbsp; New entity in IFC1.0\n\n{ .change-ifc2x}\n> IFC2x CHANGE&nbsp; The attributes BaseUnit and ResourceConsumption have been removed from the abstract entity; they are reintroduced at a lower level in the hierarchy.\n",
