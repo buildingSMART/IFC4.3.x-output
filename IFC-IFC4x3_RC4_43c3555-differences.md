@@ -1,11 +1,11 @@
 # Express schema differences
 
-56 items
+59 items
 
 
 ### Missing data
 
-23 items
+24 items
 
 | Name                                | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |-------------------------------------|---------------------------------|------------------|
@@ -32,6 +32,7 @@
 | IfcVehicle                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicleType                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicleTypeEnum                  | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcVirtualElementTypeEnum           | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 
 ### Type definitions
 
@@ -45,7 +46,7 @@
 
 ### Entity definitions
 
-20 items
+21 items
 
 | Name                                     | IFC4x3_RC4_43c3555.exp                                                            | IFC.exp                                                            |
 |------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -69,10 +70,11 @@
 | IfcVibrationIsolator supertype           | ['IfcElementComponent']                                                           | ['IfcImpactProtectionDevice']                                      |
 | IfcVibrationIsolator.PredefinedType      | PredefinedType : optional IfcVibrationIsolatorTypeEnum                            | PredefinedType : IfcVibrationIsolatorTypeEnum                      |
 | IfcVibrationIsolatorType supertype       | ['IfcElementComponentType']                                                       | ['IfcImpactProtectionDeviceType']                                  |
+| IfcVirtualElement attributes             | []                                                                                | ['PredefinedType']                                                 |
 
 ### Constraints
 
-10 items
+11 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp                                                                                  | IFC.exp                                    |
 |--------------------------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------------|
@@ -85,4 +87,5 @@
 | IfcVibrationDamperType where rules   | ['CorrectPredefinedType']                                                                               | []                                         |
 | IfcVibrationIsolator where rules     | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                        | ['CorrectTypeAssigned']                    |
 | IfcVibrationIsolatorType where rules | ['CorrectPredefinedType']                                                                               | []                                         |
+| IfcVirtualElement where rules        | []                                                                                                      | ['CorrectPredefinedType']                  |
 | IfcVoidingFeature where rules        | ['HasObjectType']                                                                                       | ['HasObjectType', 'CorrectPredefinedType'] |
