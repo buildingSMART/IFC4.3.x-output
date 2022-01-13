@@ -1,6 +1,6 @@
 # Express schema differences
 
-62 items
+63 items
 
 
 ### Missing data
@@ -45,7 +45,7 @@
 
 ### Entity definitions
 
-26 items
+27 items
 
 | Name                                      | IFC4x3_RC4.exp                                                                    | IFC.exp                                                                                                         |
 |-------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -56,6 +56,7 @@
 | IfcImpactProtectionDevice attributes      | ['PredefinedType']                                                                | []                                                                                                              |
 | IfcImpactProtectionDeviceType             | not abstract                                                                      | abstract                                                                                                        |
 | IfcImpactProtectionDeviceType attributes  | ['PredefinedType']                                                                | []                                                                                                              |
+| IfcObjectPlacement inverses               | ['PlacesObject']                                                                  | ['PlacesObject', 'ReferencedByPlacements']                                                                      |
 | IfcOpenCrossProfileDef attributes         | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                                  | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
 | IfcProperty attributes                    | ['Name', 'Description']                                                           | ['Name', 'Specification']                                                                                       |
 | IfcSectionedSolidHorizontal attributes    | ['CrossSectionPositions', 'FixedAxisVertical']                                    | ['CrossSectionPositions']                                                                                       |

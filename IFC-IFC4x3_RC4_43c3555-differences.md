@@ -1,6 +1,6 @@
 # Express schema differences
 
-59 items
+60 items
 
 
 ### Missing data
@@ -46,7 +46,7 @@
 
 ### Entity definitions
 
-21 items
+22 items
 
 | Name                                     | IFC4x3_RC4_43c3555.exp                                                            | IFC.exp                                                            |
 |------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -57,6 +57,7 @@
 | IfcImpactProtectionDevice attributes     | ['PredefinedType']                                                                | []                                                                 |
 | IfcImpactProtectionDeviceType            | not abstract                                                                      | abstract                                                           |
 | IfcImpactProtectionDeviceType attributes | ['PredefinedType']                                                                | []                                                                 |
+| IfcObjectPlacement inverses              | ['PlacesObject']                                                                  | ['PlacesObject', 'ReferencedByPlacements']                         |
 | IfcProperty attributes                   | ['Name', 'Description']                                                           | ['Name', 'Specification']                                          |
 | IfcSite attributes                       | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress'] | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber'] |
 | IfcTransportElement                      | not abstract                                                                      | abstract                                                           |
