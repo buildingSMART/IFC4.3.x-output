@@ -9,319 +9,2543 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcSharedBldgServiceElements.pot\n"
+"X-Crowdin-File-ID: 84\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-01-18 13:19\n"
 
-#:IFC.xml:43625
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:36577
+msgid "IfcDistributionChamberElement"
+msgstr "IfcDistributionChamberElement"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "Ein fortgeschrittenes Gesicht ist eine Spezialisierung einer Gesichteroberfläche, die die Anforderungen an die Verwendung bestimmter topologischer und geometrischer Darstellungselemente für die Definition der Gesichter erfüllen muss. Kanten und Ecken. Eine [[IfcAdvancedFace]] ist beschränkt auf eine Oberflächengeometrie des Typs [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] , haben eine [[IfcFaceOuterBound]] als Gesichtsbindung, mit Ausnahme von geschlossenen Oberflächen, haben alle Flächen, die an [[IfcEdgeLoop]] oder [[IfcVertexLoop]] gebunden werden müssen, alle Kanten für eine Kantengeometrie haben die Kantenkurvengeometrie auf [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] Bei geschlossenen Flächen mit periodischen Oberflächen, wie zylindrische oder kugelförmige Oberflächen, im folgenden die Kanten der geschlossenen oberfläche, im Falle einer zylindrischen Oberfläche die obere und untere kappe, auf die gleiche Instanz von [[IfcVertexPoint]] zweimal verweisen, wird kein [[IfcFaceOuterBound]] zur Verfügung gestellt, oder das [[IfcFaceOuterBound]] wird mit einem [[IfcSeamCurve]] am periodischen Ende der geschlossenen Oberfläche erstellt im Falle einer zylindrischen Oberfläche bei 0. 360. Grad zylindrische Oberfläche .. .. .. Zahlen ifcadvancedface 01. ng Abbildung 1 Verwendung von [[IfcCylindricalSurface]] als Grundfläche eines [[IfcAdvancedFace]] HINWEISE Entität, angepasst von fortgeschrittenen Gesichtern, definiert in ISO 10303 511. GESCHICHTE Neue Entität in IFC4 Formale Angebote Anwendbare Oberfläche Die Geometrie verwendet in der Definition des Gesichts soll eingeschränkt werden. Die Gesichtsgeometrie soll ein [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] sein. RequiresEdgeCurve Die Geometrie aller Begrenzungskanten des Gesichts soll vollständig als [[IfcEdgeCurve]] s definiert werden. ApplicableEdgeCurves Die Kurvenarten zur Definition der Kantengeometrie sollen auf [[IfcLine]] beschränkt sein [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] ."
+msgid "IfcDistributionChamberElement_DEFINITION"
+msgstr "Ein Verteilerkammerelement definiert den Ort, an dem Verteilungssysteme und deren Bestandteile kontrolliert werden können oder durch den sie reisen können. Ein [[IfcDistributionChamberElement]] ist ein Formvolumen, das in einem Verteilungssystem verwendet wird, wie zum Beispiel in einem Sumpf, Graben oder Manloch. Instanzen von [[IfcDistributionSystem]] . .. ifcsharedbldgserviceelements lexical ifcdistributionsystem.htm oder [[IfcDistributionFlowElement]] .. ifcsharedbldgserviceelements lexical ifcdistributionflowelement. tm kann mit dem [[IfcDistributionChamberElement]] verwandt sein, so dass ihr Standort in oder in der Kammer bestimmt werden kann."
 
-#:IFC.xml:43628
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:36578
+msgid "IfcDistributionChamberElement_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43636
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcDistributionChamberElement_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:36585
+msgid "IfcDistributionChamberElementType"
+msgstr "IfcDistributionChamberElementtyp"
 
-#:IFC.xml:43641
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+msgid "IfcDistributionChamberElementType_DEFINITION"
+msgstr "Der Verteilungsfluss-Elementtyp [[IfcDistributionChamberElementType]] definiert allgemein geteilte Informationen für Vorkommen von Verteilungskammerelementen. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Vertriebskammerelement Spezifikation zu definieren, die die spezifischen Produktinformationen angibt, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcDistributionChamberElementType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcDistributionChamberElementType]] werden durch Instanzen von [[IfcDistributionChamberElement]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcDistributionChamberElement]] für unterstützte Objektsätze, Materialien, Komposition und Ports. HISTORY New entity in IFC2x2."
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein angeschlossenes Gesichtersatz ist eine Gesichtermenge so dass die Domäne der Gesichter mit ihren Randkanten und Eckpunkten verbunden ist. HISTORY New Entity in IFC1.0 . Pec head Informelle Vorschläge 1. Die Vereinigung der Gesichter und ihrer Randschleifen soll arcweise verbunden sein."
+#:IFC.xml:36586
+msgid "IfcDistributionChamberElementType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43644
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+msgid "IfcDistributionChamberElementType_PredefinedType_DEFINITION"
+msgstr "Predefined types of distribution chambers."
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "Der Satz der Gesichter im arktischen Sinne, der an gemeinsamen Kanten oder Eckpunkten verbunden ist."
+#:IFC.xml:36593
+msgid "IfcDistributionChamberElementTypeEnum"
+msgstr "IfcDistributionChamberElementTypeEnum"
 
-#:IFC.xml:43656
-msgid "IfcEdge"
-msgstr "IfcEdge"
+msgid "IfcDistributionChamberElementTypeEnum_DEFINITION"
+msgstr "Diese Aufzählung identifiziert verschiedene Arten von Verteilerkammern, HISTORY Neue Aufzählung in IFC2x2. Artikel FORMEDUKT INSPECTIONCHAMBER INSPECTIONPIT Recess oder Kammer gebildet, um den Zugriff auf Unterstruktur und Dienstleistungen zu ermöglichen. MANHOLE Hamber gebaut auf einer Abflussleitung, Kanalisation oder Pipeline mit einer abnehmbaren Abdeckung, die den Eintritt einer Person erlaubt. Die METERCHAMBER Kammer beherbergt einen Meter . SUMP TRENCH Ausgrabungskammer, deren Länge typischerweise die Breite überschreitet. VALVECHAMBER Kammer, die ein Ventil s beherbergt."
 
-msgid "IfcEdge_DEFINITION"
-msgstr "Ein [[IfcEdge]] definiert zwei Punkte, die topologisch verbunden sind. Die geometrische Darstellung der Verbindung zwischen den beiden Knoten erfolgt standardmäßig auf eine gerade Linie, wenn keine Kurvengeometrie mit dem Untertyp [[IfcEdgeCurve]] zugewiesen wird. Das [[IfcEdge]] kann daher zum Austausch von geraden Kanten ohne zugehörige Geometrie verwendet werden, die von [[IfcLine]] oder [[IfcPolyline]] Gedanke [[IfcEdgeCurve]] bereitgestellt wird. dgeGeometry . EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die Grenzen des [[IfcEdge]] von den EdgeStart und EdgeEnd angegeben werden, die auch die Richtung der Kante bestimmen. Der Ort innerhalb eines Koordinatenraums wird durch den [[IfcVertexPoint]] Typ für EdgeStart und EdgeEnd bestimmt. Da keine Kantengeometrie zugewiesen ist, wird standardmäßig eine geradlinige Linie verwendet, die dem Richtungssinn entspricht. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kante ist die topologische Konstruktion, die der Verbindung von zwei Knoten entspricht. abstrakter kann es für eine logische Beziehung zwischen zwei Punkten stehen. Die Domäne einer Kante, falls vorhanden, ist eine endliche, nicht selbstständig die offene Kurve in R M durchschneiden, das heißt, ein angeschlossener 1 dimensionaler Krümmer. Die Grenzen einer Kante sind zwei Eckpunkte, die nicht unterschieden werden müssen. Die Kante orientiert sich an der Auswahl ihrer Querrichtung und läuft von der ersten zum zweiten Scheitelpunkt. Wenn die beiden Punkte gleich sind, ist der Rand eine Selbstschleife. Die Domäne der Kante enthält keine Grenzen und 0 <unk> . Mit einer Kante verknüpft, kann eine geometrische Kurve sein, um den Rand in einem Koordinatenraum zu lokalisieren, der durch den Untertyp der Kantenkurve dargestellt wird. Die Kurve soll endlos und nicht selbstständig innerhalb des Bereichs der Kante kreuzen. Eine Kante ist ein Diagramm, so seine Vielfältigkeit M und Graphen Gen G e kann durch den Graph Traversal Algorithmus bestimmt werden. Seit M E 1 reduziert sich die Euler Gleichung 1 im Fall auf Bild .. . .. Zahlen ifcedge math1.gif wo V 1 oder 2, und G e 1 oder 0. Konkret soll der topologische Rand die Daten definieren, eine Kante zu befriedigen hat zwei Punkte Bild . .. .. Zahlen ifcedge math2.gif die Eckpunkte müssen nicht klar sein Bild . .. .. Zahlen ifcedge math3.gif Gleichung soll Bild .. .. .. .. Figuren ifcedge math4.gif NOTE Entity angepasst von Kante in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Rand hat Dimensionalität 1. 2. Der Umfang einer Kante soll endlich und nicht null sein."
+#:IFC.xml:36615
+msgid "IfcDistributionChamberElementTypeEnum_FORMEDDUCT"
+msgstr "FORMEDUKT"
 
-#:IFC.xml:43659
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+msgid "IfcDistributionChamberElementTypeEnum_FORMEDDUCT_DEFINITION"
+msgstr "FORMEDUKT"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "Startpunkt Scheitelpunkt der Kante."
+#:IFC.xml:36616
+msgid "IfcDistributionChamberElementTypeEnum_INSPECTIONCHAMBER"
+msgstr "INSPEZTIONCHAMMER"
 
-#:IFC.xml:43671
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+msgid "IfcDistributionChamberElementTypeEnum_INSPECTIONCHAMBER_DEFINITION"
+msgstr "INSPEZTIONCHAMMER"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "Endpunkt des Kantenpunktes. Der gleiche Scheitelpunkt kann sowohl für EdgeStart als auch für EdgeEnd verwendet werden."
+#:IFC.xml:36617
+msgid "IfcDistributionChamberElementTypeEnum_INSPECTIONPIT"
+msgstr "INSPEKTIONPIT"
 
-#:IFC.xml:43707
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgekurve"
+msgid "IfcDistributionChamberElementTypeEnum_INSPECTIONPIT_DEFINITION"
+msgstr "Aufzug oder Kammer gebildet, um den Zugriff auf die Prüfung von Unterstrukturen und Dienstleistungen zu ermöglichen."
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "Ein [[IfcEdgeCurve]] definiert zwei Punkte, die topologisch verbunden sind, einschließlich der geometrischen Darstellung der Verbindung. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Kante zu schneiden. Es besteht keine Notwendigkeit, den Rand geometrisch zu schneiden, um mit der Topologie übereinzustimmen. EXAMPLE Abbildung 1 illustriert ein Beispiel, in dem die Kantengeometrie durch eine unbegrenzte Kurve gegeben wird, hier [[IfcCircle]]. Die Grenzen werden von EdgeStart und EdgeEnd bereitgestellt, die topologische Richtung des [[IfcEdgeCurve]] wendet sich gegen die Richtung des [[IfcCircle]] von SameSense FALSE. Abbildung 1 Kantenkurve . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenkurve ist ein spezieller Subtyp der Kante, der seine Geometrie vollständig definiert hat. Die Geometrie wird durch die Verknüpfung der Kante mit einer Kurve definiert, die unbegrenzt sein kann. Da die topologischen und geometrischen Richtungen abgelehnt werden können, mit einem Indikator identifiziert wird, ob Kanten- und Kurvenrichtung übereinstimmen oder dagegen sind. Der boolesche Wert gibt an, ob die Kurvenrichtung mit TRUE übereinstimmt oder in der entgegengesetzten Richtung FALSE zur Kantenrichtung ist. Jede Geometrie, die mit den Eckpunkten der Kante verbunden ist, entspricht der Kantengeometrie. Mehrere Kanten können die gleiche Kurve referenzieren. HINWEISE Entität, angepasst von Kantenkurve in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne der Kantenkurve ist formell als Domäne ihrer Kantengeometrie definiert, wie sie von den Eckpunkten beschnitten wird. Diese Domäne enthält nicht die Eckpunkte. 2. Eine Kantenkurve hat nicht Null endlichen Umfang. 3. Eine Kantenkurve ist ein Krümmer. 4. Eine Kantenkurve ist arktisch verbunden. 5. Der Kantenstart ist kein Teil der Kantendomäne. 6. Das Kantenende ist kein Teil der Kantendomäne. 7. Wirbelgeometrie soll mit der Kantengeometrie übereinstimmen."
+#:IFC.xml:36618
+msgid "IfcDistributionChamberElementTypeEnum_MANHOLE"
+msgstr "MANHOLE"
 
-#:IFC.xml:11692
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "Kantengeometrie"
+msgid "IfcDistributionChamberElementTypeEnum_MANHOLE_DEFINITION"
+msgstr "Hamber konstruiert auf einem Abfluss, Kanalisation oder Pipeline mit einer abnehmbaren Deckel, die den Eintritt einer Person erlaubt."
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "Die Kurve, die die Form und räumliche Position der Kante definiert. Diese Kurve kann unbegrenzt sein und wird implizit durch die Eckpunkte der Kante, die die Randdomäne definiert, getrimmt. Mehrere Kanten können die gleiche Kurve referenzieren."
+#:IFC.xml:36619
+msgid "IfcDistributionChamberElementTypeEnum_METERCHAMBER"
+msgstr "METERCHAMMER"
 
-#:IFC.xml:43708
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+msgid "IfcDistributionChamberElementTypeEnum_METERCHAMBER_DEFINITION"
+msgstr "Kammer, die einen Meter beherbergt."
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Dieses logische Flag gibt an, ob TRUE oder nicht FALSE die Sinne der Kante und die Kurve der Kantengeometrie gleich sind. Der Sinn für eine Kante ist vom Kantenstartpunkt bis zum Kantenpunkt der Sinn für eine Kurve in Richtung der Erhöhung des Parameters."
+#:IFC.xml:36620
+msgid "IfcDistributionChamberElementTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
 
-#:IFC.xml:43716
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+msgid "IfcDistributionChamberElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenschleife ist eine Schleife mit einem nicht null-weiten Ausmaß. Es ist ein Pfad, in dem die Anfangs- und Endpunkte gleich sind. Ihre Domäne, falls vorhanden, ist eine geschlossene Kurve. Eine Kantenschleife kann sich überlappen. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. Die Gattung des [[IfcEdgeLoop]] soll 1 oder größer sein. 2. Die Euler-Formel soll eine befriedigende Anzahl der Genen der Ränder 1 3 sein. Es darf kein Rand mehr als einmal von demselben [[IfcEdgeLoop]] mit demselben Sinn referenziert werden. Zu diesem Zweck wird eine Kante, die keine Orientierung ist, mit dem Sinn TRUE als referenziert."
+#:IFC.xml:36621
+msgid "IfcDistributionChamberElementTypeEnum_SUMP"
+msgstr "SUMP"
 
-#:IFC.xml:43724
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Kantenliste"
+msgid "IfcDistributionChamberElementTypeEnum_SUMP_DEFINITION"
+msgstr "SUMP"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "Eine Liste von orientierten Randeinheiten, die zu diesem Pfad zusammengefasst werden."
+#:IFC.xml:36622
+msgid "IfcDistributionChamberElementTypeEnum_TRENCH"
+msgstr "TRENCH"
 
-#:IFC.xml:43717
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ne"
+msgid "IfcDistributionChamberElementTypeEnum_TRENCH_DEFINITION"
+msgstr "Ausgegrabene Kammer, deren Länge typischerweise die Breite überschreitet."
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "Die Anzahl der Elemente in der Kantenliste."
+#:IFC.xml:36623
+msgid "IfcDistributionChamberElementTypeEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
 
-#:IFC.xml:43736
-msgid "IfcFace"
-msgstr "IfcFace"
+msgid "IfcDistributionChamberElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Kammertyp."
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+#:IFC.xml:36624
+msgid "IfcDistributionChamberElementTypeEnum_VALVECHAMBER"
+msgstr "VALVECHAMBER"
 
-#:IFC.xml:26110
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+msgid "IfcDistributionChamberElementTypeEnum_VALVECHAMBER_DEFINITION"
+msgstr "Kammer, die ein Ventil s beherbergt."
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+#:IFC.xml:36625
+msgid "IfcDistributionCircuit"
+msgstr "IfcDistributionCircuit"
 
-#:IFC.xml:43739
-msgid "IfcFace_Bounds"
-msgstr "Grenzen"
+msgid "IfcDistributionCircuit_DEFINITION"
+msgstr "Eine Verteilungsschaltung ist eine Teilung eines Verteilersystems , das konditionell umgeschaltet wird, wie zum Beispiel eine elektrische Schaltung. hange ifc2x4 IFC4 CHANGE Für elektrische Stromsysteme IfcElectricalCircuit wurde für Niederspannung 12 1000 V Stromkreise verwendet und wurde durch [[IfcDistributionCircuit]] in IFC4 [[IfcDistributionSystem]] mit vordefiniertem Typ ELECTRICAL für Gesamtsysteme ersetzt und [[IfcDistributionCircuit]] mit vordefiniertem Typ ELECTRICAL sollten für jeden Schaltkreis verwendet werden. Komposition Benutzungsdefinition An [[IfcDistributionCircuit]] kann eine [[IfcDistributionSystem]] unter Verwendung der [[IfcRelAggregates]] Beziehung zusammenfassen, in der RelatingObject sich auf die [[IfcDistributionSystem]] bezieht und verwandte Objekte eine oder mehrere [[IfcDistributionCircuit]] Gruppen enthalten. Ein [[IfcDistributionCircuit]] kann unter Verwendung der [[IfcRelAggregates]] Beziehung zu Unterkreisen zusammengefasst werden, bei der RelatingObject auf das übergeordnete [[IfcDistributionCircuit]] und RelatedObjects auf einen oder mehrere [[IfcDistributionCircuit]] Unterkreise verweist. Zuweisungsnutzung Definition A [[IfcDistributionCircuit]] sollte einem [[IfcDistributionPort]] in einem [[IfcFlowController]] Element zugewiesen werden, das den Host oder die Herkunft des Systems mit der [[IfcRelAssignsToProduct]] Beziehung angibt. Jedes Gerät, dessen Betrieb abhängig vom Zustand der Schaltung ist, wird der [[IfcDistributionCircuit]] über die [[IfcRelAssignsToGroup]] Verbindung zugeordnet. Ein [[IfcDistributionElement]] kann zu mehreren Systemen oder Schaltkreisen gehören, jedoch nur ein [[IfcDistributionSystem]] oder [[IfcDistributionCircuit]] eines bestimmten vordefinierten Typs ."
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Grenzen des Gesichts."
+#:IFC.xml:36628
+msgid "IfcDistributionControlElement"
+msgstr "IfcDistributionControlElement"
 
-#:IFC.xml:43751
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+msgid "IfcDistributionControlElement_DEFINITION"
+msgstr "The distribution element [[IfcDistributionControlElement]] defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system. [[IfcDistributionControlElement]] defines elements of a building automation control system. These are typically used to control distribution system elements to maintain variables such as temperature, humidity, pressure, flow, power, or lighting levels, through the modulation, staging or sequencing of mechanical or electrical devices. The three general functional categories of control elements are as follows Impart control over flow control elements [[IfcFlowController]] in a distribution system such as dampers, valves, or relays, typically through the use of actuation [[IfcActuator]] . Sensing elements [[IfcSensor]] that measure changes in the controlled variable such as temperature, humidity, pressure, or flow. Controllers [[IfcController]] typically classified according to the control action they seek to perform and generally responsible for making decisions about the elements under control. Since [[IfcDistributionControlElement]] and its subtypes typically relate to many different distribution flow elements [[IfcDistributionFlowElement]] , the objectified relationship [[IfcRelFlowControlElements]] has been provided to relate control and flow elements as required. The key distinction between [[IfcDistributionFlowElement]] and [[IfcDistributionControlElement]] is whether it is internal or external to the flow system, respectively. For example, the distinction between [[IfcFlowMeter]] subtype of [[IfcDistributionFlowElement]] measuring a flow quantity and [[IfcFlowInstrument]] subtype of [[IfcDistributionControlElement]] measuring a flow quality , is based on this principal. A physical device that connects within the flow system in which it measures having inlet outlet pipes for the measured substance follows the [[IfcDistributionFlowElement]] hierarchy and therefore [[IfcFlowMeter]] which measures the flow internally . Otherwise, if it monitors controls but does not connect inline within the flow system it is external or is a component of another device , then it follows the [[IfcDistributionControlElement]] hierarchy and therefore [[IfcFlowInstrument]] which may display various attributes through connected sensors . HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Attribute ControlElementId attribute deleted replaced by classification usage. Ports are now primarily defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported, however is now specific to dynamically connected ports."
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face bound ist eine Schleife, die zum Bewegen eines Gesichts verwendet werden soll. HINWEISE Entität, angepasst an Gesichtsbindung definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+#:IFC.xml:36640
+msgid "IfcDistributionControlElement_AssignedToFlowElement"
+msgstr "Zugewiesenes FlowElement"
 
-#:IFC.xml:43759
-msgid "IfcFaceBound_Bound"
-msgstr "Verbunden"
+msgid "IfcDistributionControlElement_AssignedToFlowElement_DEFINITION"
+msgstr "Referenz durch das Beziehungsobjekt auf verwandte Verteilungsflusselemente."
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Die Schleife, die als Gesichtsgrenze verwendet wird."
+#:IFC.xml:36654
+msgid "IfcDistributionControlElementType"
+msgstr "IfcDistributionControlElementtyp"
 
-#:IFC.xml:43752
-msgid "IfcFaceBound_Orientation"
-msgstr "Ausrichtung"
+msgid "IfcDistributionControlElementType_DEFINITION"
+msgstr "Der Elementtyp [[IfcDistributionControlElementType]] definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Elements und eine optionale Reihe von Produktdarstellungen. Es wird verwendet, um ein Element Spezifikation die spezifischen Produktinformationen zu definieren, die für alle Vorkommnisse dieses Produkts gemeinsam sind. Elementtypen der Verteilungssteuerung oder der instanziierbaren Untertypen können ausgetauscht werden, ohne dass sie bereits den Vorkommnissen zugeordnet sind. Die Vorkommnisse des [[IfcDistributionControlElementType]] werden durch Instanzen von [[IfcDistributionControlElement]] oder deren Untertypen repräsentiert. GESCHICHTE Neue Einheit in IFC2x2. hange ifc2x4 IFC4 CHANGE Ports können nun mit [[IfcRelNests]] definiert werden, um die Definition von Ports bei Typdefinitionen sowohl vorwärts als auch rückwärtskompatibel zu ermöglichen , liefern eine logische Reihenfolge und reduzieren die Anzahl der benötigten Beziehungsobjekte. Die Beziehung [[IfcRelConnectsPortToElement]] wird immer noch bei Vorkommnisobjekten unterstützt, ist nun jedoch spezifisch für dynamisch verbundene Ports. Konzeption Produkttyp Zuordnung"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dies zeigt an, ob TRUE oder nicht FALSE die Schleife den gleichen Sinn hat, wenn sie verwendet wird, um das Gesicht zu binden wie bei der ersten Definition. Wenn Sinn FALSE ist, werden die Sinne aller Komponentenkanten implizit umkehrt, wenn sie im Gesicht verwendet werden."
+#:IFC.xml:36666
+msgid "IfcDistributionFlowElement"
+msgstr "IfcDistributionFlowElement"
 
-#:IFC.xml:43771
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+msgid "IfcDistributionFlowElement_DEFINITION"
+msgstr "Das Verteilungselement [[IfcDistributionFlowElement]] definiert Vorkommen Elemente eines Verteilungssystems, die die Verteilung von Energie oder Materie erleichtern B. Luft, Wasser oder Strom. EXAMPLE Beispiele für Verteilungsflusselemente sind Leitungen, Rohre, Drähte, Beschläge und Ausrüstung. hange ifc2x4 IFC4 CHANGE Ports werden nun primär mit [[IfcRelNests]] definiert, um die Definition von Ports bei Typdefinitionen sowohl vorwärts als auch rückwärtskompatibel zu ermöglichen , liefern eine logische Reihenfolge und reduzieren die Anzahl der benötigten Beziehungsobjekte. Die Beziehung [[IfcRelConnectsPortToElement]] wird weiterhin unterstützt, ist nun jedoch spezifisch für dynamisch verbundene Portierungen."
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carry the additional semantics of defining a outer boundary on the face. Es darf nicht mehr als eine Grenze eines Gesichts dieser Art sein. HINWEISE Entität, angepasst an die Oberfläche nach ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+#:IFC.xml:36669
+msgid "IfcDistributionFlowElement_HasControlElements"
+msgstr "HasControlElemente"
 
-#:IFC.xml:43774
-msgid "IfcFaceSurface"
-msgstr "IfcFaceOberfläche"
+msgid "IfcDistributionFlowElement_HasControlElements_DEFINITION"
+msgstr "Verweis auf das Beziehungsobjekt, das Kontrollelemente betrifft."
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "Die [[IfcFaceSurface]] definiert die zugrunde liegende Geometrie der zugehörigen Oberfläche auf dem Gesicht. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Oberfläche zu schneiden. Es besteht keine Notwendigkeit, die Oberfläche geometrisch an die Topologie anzupassen. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Oberflächenoberfläche ist ein Untertyp von Gesicht, in dem die Geometrie durch eine zugehörige Oberfläche definiert wird. Der Teil der Oberfläche, der vom Gesicht verwendet wird, soll als offene Scheibe einbettbar sein, eventuell mit Löchern. Allerdings muss die Vereinigung des Gesichts mit den Kanten und den Eckpunkten seiner Randschleifen nicht in die Ebene eingebettet sein. Es kann zum Beispiel eine ganze Sphäre oder einen ganzen Torus umfassen. Da sowohl eine Fläche als auch eine geometrische Oberfläche normale Richtungen definiert haben, ein BOOLEAN Flag wird verwendet, um anzugeben, ob die Oberfläche normal mit TRUE übereinstimmt oder ob FALSE die normale Richtung des Gesichts ablehnt. Die Geometrie, die mit jeder Komponente der Schleifen des Gesichts verbunden ist, soll mit der Oberflächengeometrie übereinstimmen. in dem Sinne, dass die Domänen aller Scheitelpunkte und Kantenkurven in der Gesichtsgeometrie enthalten sind. Eine Oberfläche kann von mehreren Flächen referenziert werden. HISTORY New entity in IFC2x .spec head Informal Propositions 1. Die Domäne der Oberfläche ist formell als Domäne ihrer Gesichtsgeometrie definiert, wie sie von den Schleifen beschnitten wird, diese Domain enthält nicht die Grenzschleifen. 2. Eine Oberfläche hat nicht null Finite Ausmaß. 3. Eine Oberfläche ist ein Krümmer. 4. Eine Flächenoberfläche ist in arktischer Hinsicht verbunden. 5. Eine Oberflächenoberfläche hat die Gattung 0. 6. Die Schleifen sind nicht Teil der Gesichtsdomäne 7. Die Schleifengeometrie soll mit der Gesichtsgeometrie übereinstimmen. Dies bedeutet, dass alle Kantenkurven oder Scheitelpunkte, die bei der Definition der Schleifen an der Oberfläche verwendet werden, auf der Gesichtsgeometrie liegen sollen. 8. Die Schleifen des Gesichts werden nicht durchschneiden."
+#:IFC.xml:36683
+msgid "IfcDistributionFlowElementType"
+msgstr "IfcDistributionFlowElementtyp"
 
-#:IFC.xml:12720
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Gesichtsfläche"
+msgid "IfcDistributionFlowElementType_DEFINITION"
+msgstr "The element type [[IfcDistributionFlowElementType]] defines a list of commonly shared property set definitions of an element and an optional set of product representations. It is used to define an element specification the specific product information that is common to all occurrences of that product type . Distribution flow element types orthe instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcDistributionFlowElementType]] are represented by instances of [[IfcDistributionFlowElement]] or its subtypes. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Ports may now be defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported on occurrence objects, however is now specific to dynamically connected ports. Concepts Axis Geometry This represents the 3D flow path of the item having [[IfcShapeRepresentation]].RepresentationType of Curve3D and containing a single [[IfcBoundedCurve]] subtype such as [[IfcPolyline]], [[IfcTrimmedCurve]], or [[IfcCompositeCurve]]. For elements containing directional ports [[IfcDistributionPort]] with FlowDirection of SOURCE or SINK , the direction of the curve indicates direction of flow where a SINK port is positioned at the start of the curve and a SOURCE port is positioned at the end of the curve. This representation is most applicable to flow segment types pipes, ducts, cables , however may be used at other elements to define a primary flow path if applicable. If an element type is defined parametrically such as a flow segment type defining common material profile but no particular length or path , then no representations shall be asserted at the type. NOTE The product representations are defined as representation maps at the level of the supertype [[IfcTypeProduct]], which get assigned by an element occurrence instance through the [[IfcShapeRepresentation]].Item 1 being an [[IfcMappedItem]]. Clearance Geometry This represents the 3D clearance volume of the item having RepresentationType of Surface3D . Such clearance region indicates space that should not intersect with the Body representation between element occurrences, though may intersect with the Clearance representation of other element occurrences. The particular use of clearance space may be for safety, maintenance, or other purposes. Lighting Geometry This represents the light emission of the item having [[IfcShapeRepresentation]].RepresentationType of LightSource and containing one or more [[IfcLightSource]] subtypes. This representation is most applicable to lamps and light fixtures, however may be used at other elements that emit light."
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "Die Oberfläche, die die innere Form des Gesichts definiert. Die Domäne des Gesichts wird durch diese Oberfläche und die Begrenzungsschleifen in dem geerbten Attribut SELF FaceBounds definiert."
+#:IFC.xml:36686
+msgid "IfcDistributionPort"
+msgstr "Anschluss-Port"
 
-#:IFC.xml:43775
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+msgid "IfcDistributionPort_DEFINITION"
+msgstr "Ein Verteilerhafen ist ein Ein- oder Auslass eines Produkts, durch den ein bestimmter Stoff fließen kann. Die Verteilerhäfen werden für die Durchleitung von Feststoffen, Flüssigkeiten oder Gassubstanzen sowie für Strom oder Kommunikation genutzt. Strömungssegmente Rohrleitungen, Leitungen und Kabel können verwendet werden, um Ports über Produkte hinweg zu verbinden. Distributions-Ports werden durch Systemtyp und Strömungsrichtung definiert, so dass zwei Ports angeschlossen werden können, Sie müssen den gleichen Systemtyp teilen und die entgegengesetzte Strömungsrichtung haben, eine Seite ist eine SOURCE und die andere ein SINK . Ports ähneln den Öffnungen, da sie keine sichtbare Geometrie besitzen. Eine solche Geometrie wird bei der Darstellung des umschließenden Elements oder Elementtyps erfasst. Häfen können Platzierungen haben, die die Position und Ausrichtung der Verbindung angeben. Ports werden den Distributionssystemen zugewiesen, um ihre Rolle in einem bestimmten System anzugeben, z. Die neue Einheit in IFC2x2 . hange ifc2x4 IFC4 CHANGE Ports beziehen sich jetzt auf Produkte und Produkttypen, die die [[IfcRelNests]] Beziehungsnutzung von [[IfcRelConnectsPortToElement]] verwenden, ist nun für dynamisch angelegte Ports reserviert, wie zum Beispiel das Bohren eines Loch in einem Panzer ."
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Diese Flagge zeigt an, ob der Sinn der normalen Oberfläche mit TRUE übereinstimmt, oder ist gegen FALSE , den Sinn der topologischen normal auf das Gesicht."
+#:IFC.xml:36687
+msgid "IfcDistributionPort_FlowDirection"
+msgstr "FlowRichtung"
 
-#:IFC.xml:43783
-msgid "IfcLoop"
-msgstr "IfcLoop"
+msgid "IfcDistributionPort_FlowDirection_DEFINITION"
+msgstr "Aufzählung, die bestimmt, ob dieser Port ein Sink Inlet , ein Quellausgang oder eine SinkAndSource ist."
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Schleife ist ein topologisches Gebilde, das aus einem einzigen Scheitel gebaut wurde, oder durch die Verbindung von verbundenen Kanten oder linearen Segmenten, die am selben Scheitelpunkt beginnen und enden. Es wird in der Regel verwendet, um ein Gesicht auf einer Oberfläche zu binden. Eine Schleife hat eine Dimensionalität von 0 oder 1. Die Domäne einer 0 dimensionalen Schleife ist ein einzelner Punkt. Die Domäne einer 1-dimensionalen Schleife ist eine verbundene, orientierte Kurve, muss aber nicht vielfältig sein. Da die Schleife ein Kreis ist, ist die Position des Anfangspunktes willkürlich. Die Domäne der Schleife enthält ihre Grenzen, ein 0 <unk> . Eine Schleife wird durch einen einzelnen Scheitel oder durch eine geordnete Sammlung von orientierten Kanten oder durch eine geordnete Punktesammlung repräsentiert. Eine Schleife ist ein Diagramm, so M und die Graphen G l können durch den Graph Traversal Algorithmus bestimmt werden. Seit M 1, die Euler Gleichung 1 reduziert in diesem Fall auf Bild .. .. .. Zahlen ifcloop math1. wenn V und E l sind die Anzahl der eindeutigen Knoten und orientiert Kanten in der Schleife und G l ist die Gattung der Schleife. HINWEISE Entität, angepasst von Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Eine Schleife hat einen endlichen Umfang. 2. Eine Schleife beschreibt eine geschlossene topologische Kurve mit zufälligen Anfangs- und Endpunkten."
+#:IFC.xml:36692
+msgid "IfcDistributionPort_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43786
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail ALoop"
+msgid "IfcDistributionPort_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:43794
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:36697
+msgid "IfcDistributionPort_SystemType"
+msgstr "Systemtyp"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Seine Domäne ist, wenn auch gegenwärtig, eine endliche, verbundene, zweimalige mit Grenze, aber nicht eine geschlossene Oberfläche. Man kann sie als geschlossene Schale mit einem oder mehreren Löchern in der Schale betrachten. Die Domäne einer offenen Shell erfüllt 0 <unk> 1. Eine offene Shell ist funktionell allgemeiner als ein Gesicht, da ihre Domäne Griffe haben kann. Die Shell wird durch eine Sammlung von Gesichtern definiert, die orientiert sein können. Der Gesichtssinn nach Berücksichtigung der Orientierung stimmt mit der unten definierten Shell überein. Die Orientierung kann direkt als BOOLEAN-Attribut eines orientierten Gesichts geliefert werden oder TRUE standardmäßig sein, wenn das Shell-Mitglied ein Gesicht ohne Orientierungsmerkmal ist. Die folgenden kombinatorischen Beschränkungen für offene Shells und geometrische Einschränkungen ihrer Domänen sind entworfen, zusammen mit den informellen Anträgen, um sicherzustellen, dass jede Domäne, die mit einer offenen Shell verbunden sind, ein Orientierungsmanöver ist. Jede Gesichtsreferenz soll einmalig sein, eine offene Shell soll mindestens ein Gesicht haben. Ein bestimmtes Gesicht kann in mehr als einer offenen Shell existieren. Die Grenze einer offenen Shell besteht aus den Kanten, auf die nur einmal die Gesichtsgrenzschleifen ihrer Gesichter verweisen, zusammen mit allen ihren Ecken. Die Domäne einer offenen Muschel, wenn vorhanden, enthält alle Kanten und Eckpunkte ihrer Gesichter. HINWEIS: Dies unterscheidet sich leicht von der Definition einer Gesichterdomäne, die keine ihrer Grenzen enthält. Zum Beispiel kann eine Gesichts-Domain ein isoliertes Punkt- oder Liniensegment ausschließen. Eine offene Shell-Domain darf dies nicht tun. Siehe den Algorithmus für die Berechnung unten. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Jede Kante soll genau zweimal von den Gesichtsgrenzen des Gesichts referenziert werden. Jede orientierte Kante soll einzigartig sein. 3. Kein Rand soll von mehr als zwei Gesichtern referenziert werden. 4. Unterschiedliche Gesichter der Shell kreuzen sich nicht, sondern können Kanten oder Knoten teilen. 5. Unterschiedliche Kanten schneiden sich nicht ab, sondern können die Eckpunkte teilen. 6. Die Schleifen der Schale sind keine Mischung aus Poly-Schleifen und anderen Schleifentypen. Beachten Sie, dass dies angegeben ist, da nur Poly-Schleife als Gesichterkennung definiert ist. Die geschlossene Schale soll ein in arktischer Richtung angeordneter 2 Krümmer sein."
+msgid "IfcDistributionPort_SystemType_DEFINITION"
+msgstr "Enumeration that identifies the system type. If a system type is defined, the port may only be connected to other ports having the same system type."
 
-#:IFC.xml:43798
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedRand"
+#:IFC.xml:36710
+msgid "IfcDistributionPortTypeEnum"
+msgstr "IfcDistributionPortTypeEnum"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "Die [[IfcOrientedEdge]] repräsentiert ein [[IfcEdge]] mit einem angewendeten Orientierungszeichen. Es erlaubt die Wiederverwendung des gleichen [[IfcEdge]], wenn es genau zweimal durchquert wird, einmal vorwärts und einmal rückwärts. HINWEIS: Der Sinn des normalen [[IfcFace]] wird ausschließlich von den Kanten bestimmt. Wenn alle Kanten des Gesichts entgegen dem Uhrzeigersinn nach den Kantenausrichtungen verbunden sind, zeigt das Gesicht normal nach außen. Die Normale der zugrunde liegenden [[IfcFaceSurface]] repräsentiert die Geometrie des Gesichts hierfür, hat keine Relevanz. Der Zweck des [[IfcFaceSurface]]. ameSense Attribut ist es, zusätzliche Informationen zu Überprüfungszwecken zu geben. SameSense TRUE bedeutet, dass die Oberfläche normal und das Gesicht normal sind die gleichen, SameSense FALSE bedeutet, dass sie in entgegengesetzter Richtung sind. Der wiederverwendete Rand mit einer geometrischen Darstellung als [[IfcEdgeCurve]] definiert die Kante im 3D-Koordinatenraum. In einigen Fällen, insbesondere bei der Verwendung von elementaren oder gefegten Oberflächen, besteht die Gefahr einer ungenauen Kartierung des 3D-x, y, z [[IfcEdgeCurve]] auf die angrenzenden Oberflächen, um die Grenzen dieser Oberflächen zu bestimmen. Die optionale CurveOnSurface definiert den 2D u, v Rand innerhalb des parametrischen Raumes der Oberfläche. Es könnte verwendet werden, um die Richtigkeit der Zuordnung des 3D [[IfcEdgeCurve]] auf dieser Oberfläche zu ermitteln. EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die KurveOnSurface zusätzlich zur Kurvengeometrie der [[IfcEdgeCurve]] zur Verfügung gestellt wird. Abbildung 1 Kurve auf Oberflächendarstellung eines [[IfcOrientedEdge]] . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine orientierte Kante ist ein Rand aus einer anderen Kante konstruiert und enthält ein BOOLEAN-Richtungsflagge, um anzugeben, ob die Ausrichtung der konstruierten Kante mit der Ausrichtung der ursprünglichen Kante übereinstimmt. Außer vielleicht Orientierung, entspricht die Ausrichtung der Kante der ursprünglichen Kante. Eine gängige Praxis ist solide Modellierungssysteme ist eine Entität, die die Verwendung oder Durchquerung einer Kante darstellt. Diese Benutzungseinheit repräsentiert ausdrücklich die Anforderung in einem vielseitigen Festkörper, dass jede Kante genau zweimal durchquert werden muss, einmal in jede Richtung. Die Einsatzfunktionalität wird durch die kantenorientierte Subtyp-Kante zur Verfügung gestellt: NOTE Entity angepasst an die Ausrichtung von ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Das Attribut CurveOnSurface wurde hinzugefügt."
+msgid "IfcDistributionPortTypeEnum_DEFINITION"
+msgstr "Diese Aufzählung identifiziert verschiedene Arten von Distributions-Ports. Es wird verwendet, um Häfen nach ihrer allgemeinen Funktion zu benennen, die anwendbare Eigenschaftsmengen und kompatible Systeme festlegt. GESCHICHTE Neue Auflistung in IFC4. CABLECARRIER Connection to cable carrier segment or fitting for enclosed cables - DUCT Connection to duct segment or fitting of air. PIPE Verbindung zum Rohrsegment oder zur Verteilung von Feststoff, Flüssigkeit oder Gas. WIRELESS BENUTZERDEFINED Benutzerdefinierter Porttyp. NOTDEFINED"
 
-#:IFC.xml:43683
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Kantenelement"
+#:IFC.xml:36719
+msgid "IfcDistributionPortTypeEnum_CABLE"
+msgstr "KABELL"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Kantenentität verwendet, um diesen orientierten Rand zu konstruieren."
+msgid "IfcDistributionPortTypeEnum_CABLE_DEFINITION"
+msgstr "Verbindung zum Kabelsegment oder Montage zur Stromverteilung."
 
-#:IFC.xml:43799
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdgeEnd"
+#:IFC.xml:36720
+msgid "IfcDistributionPortTypeEnum_CABLECARRIER"
+msgstr "KABLECARRIER"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcDistributionPortTypeEnum_CABLECARRIER_DEFINITION"
+msgstr "Verbindung zum Segment der Kabelträger oder Anbringung von Kabeln."
 
-#:IFC.xml:43803
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdgeStart"
+#:IFC.xml:36721
+msgid "IfcDistributionPortTypeEnum_DUCT"
+msgstr "DUKT"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcDistributionPortTypeEnum_DUCT_DEFINITION"
+msgstr "Verbindung zum Leitungssegment oder Montage zur Luftverteilung."
 
-#:IFC.xml:43807
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Ausrichtung"
+#:IFC.xml:36722
+msgid "IfcDistributionPortTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, Wenn TRUE die verwendete topologische Ausrichtung mit der Orientierung vom Startpunkt bis zum Endpunkt des Kantenelementes übereinstimmt. Falls FALSE andernfalls der Fall ist."
+msgid "IfcDistributionPortTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
 
-#:IFC.xml:43826
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:36723
+msgid "IfcDistributionPortTypeEnum_PIPE"
+msgstr "PIPE"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Ein Pfad ist ein topologisches Gebilde, das aus einer bestellten Sammlung von orientierten Kanten besteht. so dass der Kantenpunkt jeder Kante mit dem Kantenende seines Vorgängers übereinstimmt. Der Pfad wird vom Kantenstart der ersten Kante bis zum Kantenende der letzten Kante sortiert. Der BOOLEAN-Wertesinn in der Ausrichtung zeigt an, ob die Kantenrichtung mit der Richtung des Pfades TRUE übereinstimmt oder die entgegengesetzte Richtung FALSE ist. Eine einzelne Kante kann nur einmal durch einen individuellen Pfad referenziert werden. Eine Kante kann unabhängig von einem Pfad existieren, NOTE Entität, angepasst an den Pfad ISO 10303 42. HISTORY Neue Entität in IFC2.0 .spec Kopf Informelle Vorschläge 1. Ein Pfad hat Dimensionalität 1. 2. Ein Pfad ist arktisch verbunden. 3. Die Kanten des Pfades überschneiden, außer bei den gängigen Ecken. 4. Ein Pfad hat einen endlichen, nicht null-weiten Umfang."
+msgid "IfcDistributionPortTypeEnum_PIPE_DEFINITION"
+msgstr "Verbindung zu Rohrsegmenten oder Montage zur Verteilung von Feststoff, Flüssigkeit oder Gas."
 
-#:IFC.xml:43814
-msgid "IfcPath_EdgeList"
-msgstr "Kantenliste"
+#:IFC.xml:36724
+msgid "IfcDistributionPortTypeEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "Die Liste der Orientierungskanten, die zu diesem Pfad verkettet werden."
+msgid "IfcDistributionPortTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Port-Typ."
 
-#:IFC.xml:43829
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+#:IFC.xml:36725
+msgid "IfcDistributionPortTypeEnum_WIRELESS"
+msgstr "WIREL"
 
-#:IFC.xml:43837
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+msgid "IfcDistributionPortTypeEnum_WIRELESS_DEFINITION"
+msgstr "WIREL"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Poly-Schleife ist eine Schleife mit geraden Kanten, die eine planare Region im Weltraum begrenzen. Eine Poly-Schleife ist eine Schleife der Gattung 1, bei der die Schleife durch eine geordnete koplanare Sammlung von Punkten repräsentiert wird, die die Eckpunkte der Schleife bilden. Die Schleife besteht aus geraden Liniensegmenten, die einen Punkt in der Sammlung zum erfolgreichen Punkt der Sammlung verbinden. Das Schlussteil ist vom letzten bis zum ersten Punkt der Sammlung. Die Richtung der Schleife ist in die Richtung der Liniensegmente. Eine Poly-Schleife soll den folgenden topologischen Zwängen entsprechen, die die Schleife hat die Gattung eins. die folgende Gleichung soll zufrieden sein Bild .. .. .. .. Zahlen ifcpolyloop math1. , wenn das [[IfcPolyLoop]] immer geschlossen ist und das letzte Segment aus dem letzten [[IfcCartesianPoint]] in der Liste der Polygon s zum ersten [[IfcCartesianPoint]] stammt. Daher soll der erste Punkt nicht am Ende der Liste wiederholt werden, auch nicht durch Verweis auf die selbe Instanz noch eine zusätzliche Instanz von [[IfcCartesianPoint]] zu verwenden, die die Koordinaten als ersten Punkt hat. HINWEIS Diese Einheit besteht in erster Linie zur Erleichterung der effizienten Kommunikation von facettierten B-Rep-Modellen. HINWEISE Entität, angepasst aus Poly-Schleife definiert in ISO 10303 42. HISTORY New Entity in IFC1. .spec Kopf Informelle Vorschläge 1. Alle Punkte im Polygon, die die Poly-Schleife definieren, sind Coplanar. 2. Der erste und letzte Polygon soll sich nach Wert unterscheiden."
+#:IFC.xml:36726
+msgid "IfcDistributionSystem"
+msgstr "haustechnische Anlage"
 
-#:IFC.xml:11309
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+msgid "IfcDistributionSystem_DEFINITION"
+msgstr "Ein Distributionssystem ist ein Netzwerk, das entwickelt wurde, um den Fluss eines Distributionsmediums zu empfangen, zu speichern, zu pflegen, zu verteilen oder zu steuern. Ein häufiges Beispiel ist ein Heißwassersystem, das aus einer Pumpe, einem Tank, besteht und ein vernetztes Rohrleitungssystem zur Verteilung von Warmwasser an Terminals. Die Gruppe [[IfcDistributionSystem]] definiert das Auftreten eines spezialisierten Systems für die Nutzung im Rahmen von Baudienstleistungen oder Werkzeugen für gebaute Anlagen. Wichtige Funktionalitäten für die Beschreibung eines Distributionssystems stammen von bestehenden IFC-Entitäten. Von [[IfcSystem]] erbt es die Möglichkeit, das gebaute System gegebenenfalls über [[IfcRelReferencedInSpatialStructure]] auf einen oder mehrere [[IfcSpatialElement]] Untertypen zu verbinden. Von [[IfcGroup]] erbt er das inverse Attribut IsGroupedBy, das auf die Beziehungsklasse [[IfcRelAssignsToGroup]] zeigt. Dies erlaubt die Gruppierung von Distributionselementinstanzen von [[IfcDistributionElement]] Subtypen . Von [[IfcObjectDefinition]] erbt es das inverse Attribut IsDecomposedBy verweist auf die Beziehungsklasse [[IfcRelAggregates]] . Es stellt die Hierarchie zwischen den einzelnen Teilverteilungssystemen zur Verfügung, zum Beispiel kann ein elektrischer Hauptkreislauf zu Zweigkreisen zusammengefasst werden. GESCHICHTE Neue Entität in IFC4. hange ifc2x4 IFC4 CHANGE Für elektrische Stromsysteme IfcElectricalCircuit wurde für Niederspannungen 12 1000 V Stromkreise verwendet und wurde durch [[IfcDistributionCircuit]] in IFC4 [[IfcDistributionSystem]] mit vordefiniertem Typ ELECTRICAL für Gesamtsysteme ersetzt und [[IfcDistributionCircuit]] mit vordefiniertem Typ ELECTRICAL sollten für jeden Schaltkreis verwendet werden."
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Liste der Punkte, die die Schleife definieren. Es gibt keine wiederholten Punkte in der Liste."
+#:IFC.xml:36727
+msgid "IfcDistributionSystem_LongName"
+msgstr "Lange"
 
-#:IFC.xml:43840
-msgid "IfcShell"
-msgstr "IfcShell"
+msgid "IfcDistributionSystem_LongName_DEFINITION"
+msgstr "Ein Netzwerk zur Aufnahme, Speicherung, Wartung, Verteilung oder Steuerung des Durchflusses eines Verteilermediums, z.B. ein Heizwarmwassersystem, das aus einer Pumpe, einem Tank und einem zusammenhängenden Rohrleitungssystem zur Verteilung von Warmwasser an Terminals besteht."
 
-#:IFC.xml:43841
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+#:IFC.xml:36732
+msgid "IfcDistributionSystem_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A subedge ist eine Kante, deren Domain ist ein angeschlossener Teil der Domäne einer bestehenden Kante. Die topologischen Zwänge auf einem Untergrund sind identisch mit denen an einer Kante. HISTORY New Entity in IFC2x2 . pec Kopf Informelle Vorschläge 1. Die Domäne der Unterseite ist formell definiert als die Domäne des übergeordneten Randes, wie durch den subedge getrimmt starten Scheitelpunkt und subbedge End-Scheitelpunkt. (2) Der Startpunkt und der Endpunkt sollen innerhalb der Vereinigung der Domänen der Eckpunkte des Mutterrandes und der Domäne des Mutterrandes liegen."
+msgid "IfcDistributionSystem_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:43695
-msgid "IfcSubedge_ParentEdge"
-msgstr "Elternkante"
+#:IFC.xml:36739
+msgid "IfcDistributionSystemEnum"
+msgstr "IfcDistributionSystemEnum"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "Die Kante oder das Subedge, die das Subed enthält."
+msgid "IfcDistributionSystemEnum_DEFINITION"
+msgstr "This enumeration identifies different types of distribution systems. It is used to designate systems by their function as well as ports of devices within such systems to restrict connectivity to compatible connections. HISTORY New enumeration in IFC4. Ports for cable carriers may be connected using [[IfcCableCarrierSegment]] and [[IfcCableCarrierFitting]] . Type objects for cable carrier segments and fittings [[IfcCableCarrierSegmentType]] and [[IfcCableCarrierFittingType]] that are not specific to a particular system type may have ports with PredefinedType of NOTDEFINED which indicates that occurrences of such objects may connect to ports of any other cable carrier based port. Valid enumerations for cable carriers are the same as that for cables, and may be asserted if ports of the contained cables are all of the same type. Items AIRCONDITIONING AUDIOVISUAL CHEMICAL Arbitrary chemical further qualified by property set, such as for medical or industrial use. CHILLEDWATER COMMUNICATION COMPRESSEDAIR Compressed air system. CONDENSERWATER CONTROL A transport or network dedicated to control system usage. CONVEYING Arbitrary supply of substances. DATA DISPOSAL Arbitrary disposal of substances. DOMESTICCOLDWATER Unheated potable water distribution system. DOMESTICHOTWATER Heated potable water distribution system. DRAINAGE EARTHING A path for equipotential bonding, conducting current to the ground. ELECTRICAL A circuit for delivering electrical power. ELECTROACOUSTIC EXHAUST Exhaust air collection system for removing stale or noxious air from one or more spaces. FIREPROTECTION Fire protection sprinkler system. FUEL Arbitrary supply of fuel. GAS HAZARDOUS HEATING Water or steam heated from a boiler and circulated through radiators. LIGHTING A circuit dedicated for lighting, such as a fixture having sockets for lamps. LIGHTNINGPROTECTION MUNICIPALSOLIDWASTE Items consumed and discarded, commonly known as trash or garbage. OIL Oil distribution system. OPERATIONAL POWERGENERATION A path for power generation. RAINWATER Rainwater resulting from precipitation which directly falls on a parcel. REFRIGERATION Refrigerant distribution system for purposes of fulfilling all or parts of a refrigeration cycle. SECURITY A transport or network dedicated to security system usage. SEWAGE Sewage collection system. SIGNAL A raw analog signal, such as modulated data or measurements from sensors. STORMWATER Stormwater resulting from precipitation which runs off or travels over the ground surface. TELEPHONE A transport or network dedicated to telephone system usage. TV A transport of multiple media sources such as analog cable TV, satellite TV, or over the air TV. VACUUM Vacuum distribution system. VENT VENTILATION Ventilation air distribution system involved in either the exchange of air to the outside as well as circulation of air within a building. WASTEWATER Water adversely affected in quality by anthropogenic influence, possibly originating from sewage, drainage, or other source. WATERSUPPLY Arbitrary water supply. CATENARY SYSTEM A longitudinal distribution system that supports contact wires, including catenary wire droppers and stich wires. OVERHEAD CONTACTLINE SYSTEM An overhead contact line system above the upper limit of the train using an overhead contact line and a catenary system to supply current to traction units. RETURN CIRCUIT A distribution system which forms the intended path for the traction return current and the current under fault conditions. FIXEDTRANSMISSIONNETWORK Represents all wired networks that provide a data transmission channel using optical fiber cables, copper cables or both. It aggregates many technologies that are based on the multiplexing method. OPERATIONALTELEPHONYSYSTEM A system that allows communications between operators e.g. switchtender, traffic regulator, operational agents, etc. in operational centers and on the infrastructure site e.g. railway, tunnel or road . MOBILENETWORK Mobile network insures wireless communication by providing a secure platform for voice and data communication between infrastructure operators, including drivers, dispatchers, shunting team members and station controllers. MONITORINGSYSTEM USERDEFINED NOTDEFINED"
 
-#:IFC.xml:43844
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:36843
+msgid "IfcDistributionSystemEnum_AIRCONDITIONING"
+msgstr "AIRKONDITIONING"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Die topologische Repräsentation ist der Supertyp für alle topologischen Repräsentation Elemente in der Geometrie. HINWEISE Entität, angepasst von topologischen Repräsentation Element definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.5"
+msgid "IfcDistributionSystemEnum_AIRCONDITIONING_DEFINITION"
+msgstr "AIRKONDITIONING"
 
-#:IFC.xml:43847
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:36844
+msgid "IfcDistributionSystemEnum_AUDIOVISUAL"
+msgstr "AUDIOVISUAL"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A vertex ist das topologische Konstrukt entsprechend einem Punkt. Es hat Dimensionalität 0 und Umfang 0. Die Domäne eines Scheitelpunktes ist, wenn vorhanden, ein Punkt in m dimensionalen realen Raum R M. Dies wird durch den Scheitelpunkt Untertyp repräsentiert. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Scheitel hat Dimensionalität 0. Dies ist eine grundlegende Eigenschaft des Scheitelpunkts. 2. Der Umfang eines Scheitelpunkts ist auf Null definiert."
+msgid "IfcDistributionSystemEnum_AUDIOVISUAL_DEFINITION"
+msgstr "AUDIOVISUAL"
 
-#:IFC.xml:43862
-msgid "IfcVertexLoop"
-msgstr "IfcVertexschleife"
+#:IFC.xml:36845
+msgid "IfcDistributionSystemEnum_CATENARY_SYSTEM"
+msgstr "KATENARYSYSTEM"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Eine Vertex-Schleife ist eine Schleife aus Null Gattung, die aus einem einzelnen Scheitelpunkt besteht. Ein Scheitelpunkt kann unabhängig von einer Vertex-Schleife existieren. Die topologischen Daten sollen die folgende Einschränkung Bild .. .. .. Figuren ifcvertexloop math1.gif NOTE Entity adaptiert aus Vertex Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x2. .spec Kopf Informelle Vorschläge 1. Eine Kegelschleife hat Null Umfang und Dimensionalität. 2. Die Kegelschleife hat die Gattung 0."
+msgid "IfcDistributionSystemEnum_CATENARY_SYSTEM_DEFINITION"
+msgstr "Ein Längsverteilungssystem, das Kontaktleitungen unterstützt, einschließlich Kabel und Stapeldraht."
 
-#:IFC.xml:43850
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "Loop-Vertex"
+#:IFC.xml:36846
+msgid "IfcDistributionSystemEnum_CHEMICAL"
+msgstr "CHEMISCH"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "Der Vertex, der die gesamte Schleife definiert."
+msgid "IfcDistributionSystemEnum_CHEMICAL_DEFINITION"
+msgstr "Beliebige Chemikalien, die durch eine Eigenschaftsmenge weiter qualifiziert sind, wie zum Beispiel für den medizinischen oder industriellen Gebrauch."
 
-#:IFC.xml:43865
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:36847
+msgid "IfcDistributionSystemEnum_CHILLEDWATER"
+msgstr "KILLEDWATER"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein Scheitelpunkt ist ein Scheitelpunkt, der seine Geometrie als Punkt definiert hat. HINWEISE Entität, angepasst vom Scheitelpunkt nach ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne des Scheitelpunkts ist formell als Domäne seines Scheitelpunktes definiert."
+msgid "IfcDistributionSystemEnum_CHILLEDWATER_DEFINITION"
+msgstr "KILLEDWATER"
 
-#:IFC.xml:12280
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometrie"
+#:IFC.xml:36848
+msgid "IfcDistributionSystemEnum_COMMUNICATION"
+msgstr "KOMMUNIKATION"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "Der geometrische Punkt, der die Position im geometrischen Raum des Scheitelpunkts definiert."
+msgid "IfcDistributionSystemEnum_COMMUNICATION_DEFINITION"
+msgstr "KOMMUNIKATION"
+
+#:IFC.xml:36849
+msgid "IfcDistributionSystemEnum_COMPRESSEDAIR"
+msgstr "COMPRESSEDAIR"
+
+msgid "IfcDistributionSystemEnum_COMPRESSEDAIR_DEFINITION"
+msgstr "Druckluft-System."
+
+#:IFC.xml:36850
+msgid "IfcDistributionSystemEnum_CONDENSERWATER"
+msgstr "CONDENSERWATER"
+
+msgid "IfcDistributionSystemEnum_CONDENSERWATER_DEFINITION"
+msgstr "CONDENSERWATER"
+
+#:IFC.xml:36851
+msgid "IfcDistributionSystemEnum_CONTROL"
+msgstr "KONTROL"
+
+msgid "IfcDistributionSystemEnum_CONTROL_DEFINITION"
+msgstr "Ein Transport, oder ein Netzwerk, das der Steuerung des Systems gewidmet ist."
+
+#:IFC.xml:36852
+msgid "IfcDistributionSystemEnum_CONVEYING"
+msgstr "VERBINDUNG"
+
+msgid "IfcDistributionSystemEnum_CONVEYING_DEFINITION"
+msgstr "Willkürliche Versorgung mit Substanzen."
+
+#:IFC.xml:36853
+msgid "IfcDistributionSystemEnum_DATA"
+msgstr "DATEN"
+
+msgid "IfcDistributionSystemEnum_DATA_DEFINITION"
+msgstr "DATEN"
+
+#:IFC.xml:36854
+msgid "IfcDistributionSystemEnum_DISPOSAL"
+msgstr "DISPOSAL"
+
+msgid "IfcDistributionSystemEnum_DISPOSAL_DEFINITION"
+msgstr "Willkürliche Entsorgung von Substanzen."
+
+#:IFC.xml:36855
+msgid "IfcDistributionSystemEnum_DOMESTICCOLDWATER"
+msgstr "DOMESTICKCOLDWATER"
+
+msgid "IfcDistributionSystemEnum_DOMESTICCOLDWATER_DEFINITION"
+msgstr "Unerhitztes Trinkwasserverteilungssystem."
+
+#:IFC.xml:36856
+msgid "IfcDistributionSystemEnum_DOMESTICHOTWATER"
+msgstr "DOMESTICHOTWATER"
+
+msgid "IfcDistributionSystemEnum_DOMESTICHOTWATER_DEFINITION"
+msgstr "Beheiztes Trinkwasserverteilungssystem."
+
+#:IFC.xml:36857
+msgid "IfcDistributionSystemEnum_DRAINAGE"
+msgstr "RABATT"
+
+msgid "IfcDistributionSystemEnum_DRAINAGE_DEFINITION"
+msgstr "RABATT"
+
+#:IFC.xml:36858
+msgid "IfcDistributionSystemEnum_EARTHING"
+msgstr "ÖFFENTLICH"
+
+msgid "IfcDistributionSystemEnum_EARTHING_DEFINITION"
+msgstr "Ein Weg für Äquipotenzial-Klebewesen, die Strömung zum Boden führt."
+
+#:IFC.xml:36859
+msgid "IfcDistributionSystemEnum_ELECTRICAL"
+msgstr "ELECTRICAL"
+
+msgid "IfcDistributionSystemEnum_ELECTRICAL_DEFINITION"
+msgstr "Ein Schaltkreis für die Stromversorgung."
+
+#:IFC.xml:36860
+msgid "IfcDistributionSystemEnum_ELECTROACOUSTIC"
+msgstr "ELECTROACOUSTIC"
+
+msgid "IfcDistributionSystemEnum_ELECTROACOUSTIC_DEFINITION"
+msgstr "ELECTROACOUSTIC"
+
+#:IFC.xml:36861
+msgid "IfcDistributionSystemEnum_EXHAUST"
+msgstr "EXHAUST"
+
+msgid "IfcDistributionSystemEnum_EXHAUST_DEFINITION"
+msgstr "Abluftabsaugsystem zum Entfernen von veralteter oder schädlicher Luft aus einem oder mehreren Räumen."
+
+#:IFC.xml:36862
+msgid "IfcDistributionSystemEnum_FIREPROTECTION"
+msgstr "FIREPROTECTION"
+
+msgid "IfcDistributionSystemEnum_FIREPROTECTION_DEFINITION"
+msgstr "Brandschutz Sprinklersystem."
+
+#:IFC.xml:36863
+msgid "IfcDistributionSystemEnum_FIXEDTRANSMISSIONNETWORK"
+msgstr "FIXEDTRANSMISSIONNETWORK"
+
+msgid "IfcDistributionSystemEnum_FIXEDTRANSMISSIONNETWORK_DEFINITION"
+msgstr "Stellt alle kabelgebundenen Netzwerke dar, die einen Datenübertragungskanal mit optischen Faserkabeln, Kupferkabeln oder beidem zur Verfügung stellen. Es aggregiert viele Technologien, die auf der Multiplexing-Methode basieren."
+
+#:IFC.xml:36864
+msgid "IfcDistributionSystemEnum_FUEL"
+msgstr "FUEL"
+
+msgid "IfcDistributionSystemEnum_FUEL_DEFINITION"
+msgstr "Willkürliche Versorgung mit Brennstoff."
+
+#:IFC.xml:36865
+msgid "IfcDistributionSystemEnum_GAS"
+msgstr "GAS"
+
+msgid "IfcDistributionSystemEnum_GAS_DEFINITION"
+msgstr "GAS"
+
+#:IFC.xml:36866
+msgid "IfcDistributionSystemEnum_HAZARDOUS"
+msgstr "HAZARDOUS"
+
+msgid "IfcDistributionSystemEnum_HAZARDOUS_DEFINITION"
+msgstr "HAZARDOUS"
+
+#:IFC.xml:36867
+msgid "IfcDistributionSystemEnum_HEATING"
+msgstr "HEATING"
+
+msgid "IfcDistributionSystemEnum_HEATING_DEFINITION"
+msgstr "Wasser oder Dampf von einem Kessel erhitzt und durch Heizkörper zirkuliert."
+
+#:IFC.xml:36868
+msgid "IfcDistributionSystemEnum_LIGHTING"
+msgstr "LÄNGER"
+
+msgid "IfcDistributionSystemEnum_LIGHTING_DEFINITION"
+msgstr "Eine Schaltung, die für die Beleuchtung bestimmt ist, wie eine Lichtquelle mit Steckdosen für Lampen."
+
+#:IFC.xml:36869
+msgid "IfcDistributionSystemEnum_LIGHTNINGPROTECTION"
+msgstr "LIGHTNINGPROTECTION"
+
+msgid "IfcDistributionSystemEnum_LIGHTNINGPROTECTION_DEFINITION"
+msgstr "LIGHTNINGPROTECTION"
+
+#:IFC.xml:36870
+msgid "IfcDistributionSystemEnum_MOBILENETWORK"
+msgstr "MOBILENETWORK"
+
+msgid "IfcDistributionSystemEnum_MOBILENETWORK_DEFINITION"
+msgstr "Mobilfunknetze versichern drahtlose Kommunikation durch die Bereitstellung einer sicheren Plattform für Sprach- und Datenkommunikation zwischen Infrastrukturbetreibern, einschließlich Treibern, Dispatchern, Shunting Team-Mitgliedern und Stations-Controllern."
+
+#:IFC.xml:36871
+msgid "IfcDistributionSystemEnum_MONITORINGSYSTEM"
+msgstr "MONITORINGSYSTEM"
+
+msgid "IfcDistributionSystemEnum_MONITORINGSYSTEM_DEFINITION"
+msgstr "MONITORINGSYSTEM"
+
+#:IFC.xml:36872
+msgid "IfcDistributionSystemEnum_MUNICIPALSOLIDWASTE"
+msgstr "MUNICIPALSOLIDWASTE"
+
+msgid "IfcDistributionSystemEnum_MUNICIPALSOLIDWASTE_DEFINITION"
+msgstr "Verzehrte und verworfene Gegenstände, allgemein bekannt als Müll oder Müll."
+
+#:IFC.xml:36873
+msgid "IfcDistributionSystemEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcDistributionSystemEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:36874
+msgid "IfcDistributionSystemEnum_OIL"
+msgstr "ÖL"
+
+msgid "IfcDistributionSystemEnum_OIL_DEFINITION"
+msgstr "Ölverteilungssystem."
+
+#:IFC.xml:36875
+msgid "IfcDistributionSystemEnum_OPERATIONAL"
+msgstr "OPERATIONAL"
+
+msgid "IfcDistributionSystemEnum_OPERATIONAL_DEFINITION"
+msgstr "OPERATIONAL"
+
+#:IFC.xml:36876
+msgid "IfcDistributionSystemEnum_OPERATIONALTELEPHONYSYSTEM"
+msgstr "OPERATIONALTELEPHONYSYSTEM"
+
+msgid "IfcDistributionSystemEnum_OPERATIONALTELEPHONYSYSTEM_DEFINITION"
+msgstr "Ein System, das die Kommunikation zwischen Betreibern wie Schalter, Verkehrsregulierung, Betriebsmittel usw. ermöglicht. in Operationszentren und auf der Infrastruktur z.B. Bahn-, Tunnel- oder Straße ."
+
+#:IFC.xml:36877
+msgid "IfcDistributionSystemEnum_OVERHEAD_CONTACTLINE_SYSTEM"
+msgstr "VERHEAD KONTLINE-SYSTEM"
+
+msgid "IfcDistributionSystemEnum_OVERHEAD_CONTACTLINE_SYSTEM_DEFINITION"
+msgstr "Über der Obergrenze des Zuges befindet sich ein Überkopfkontakt und ein Leitungssystem für die Stromversorgung der Zugeinheiten."
+
+#:IFC.xml:36878
+msgid "IfcDistributionSystemEnum_POWERGENERATION"
+msgstr "POWERGENERATION"
+
+msgid "IfcDistributionSystemEnum_POWERGENERATION_DEFINITION"
+msgstr "Ein Weg zur Energieerzeugung."
+
+#:IFC.xml:36879
+msgid "IfcDistributionSystemEnum_RAINWATER"
+msgstr "RAINWATER"
+
+msgid "IfcDistributionSystemEnum_RAINWATER_DEFINITION"
+msgstr "Regenwasser aus Niederschlägen, das direkt auf ein Paket fällt."
+
+#:IFC.xml:36880
+msgid "IfcDistributionSystemEnum_REFRIGERATION"
+msgstr "REFRIGERATION"
+
+msgid "IfcDistributionSystemEnum_REFRIGERATION_DEFINITION"
+msgstr "Kühlmittelverteilungssystem zur Erfüllung aller oder Teile eines Kältezyklus."
+
+#:IFC.xml:36881
+msgid "IfcDistributionSystemEnum_RETURN_CIRCUIT"
+msgstr "RETURN CIRCUIT"
+
+msgid "IfcDistributionSystemEnum_RETURN_CIRCUIT_DEFINITION"
+msgstr "Ein Verteilungssystem, das den vorgesehenen Weg für den Zugrückstrom und den Strom unter Störbedingungen bildet."
+
+#:IFC.xml:36882
+msgid "IfcDistributionSystemEnum_SECURITY"
+msgstr "SICHERHEIT"
+
+msgid "IfcDistributionSystemEnum_SECURITY_DEFINITION"
+msgstr "Ein Transport oder Netzwerk, das sich der Nutzung von Sicherheitssystemen widmet."
+
+#:IFC.xml:36883
+msgid "IfcDistributionSystemEnum_SEWAGE"
+msgstr "Nähen"
+
+msgid "IfcDistributionSystemEnum_SEWAGE_DEFINITION"
+msgstr "Abwasserentnahmesystem."
+
+#:IFC.xml:36884
+msgid "IfcDistributionSystemEnum_SIGNAL"
+msgstr "SIGNAL"
+
+msgid "IfcDistributionSystemEnum_SIGNAL_DEFINITION"
+msgstr "Ein robustes analoges Signal, wie modulierte Daten oder Messungen von Sensoren."
+
+#:IFC.xml:36885
+msgid "IfcDistributionSystemEnum_STORMWATER"
+msgstr "STORMWATER"
+
+msgid "IfcDistributionSystemEnum_STORMWATER_DEFINITION"
+msgstr "Sturmwasser, das aus Niederschlägen entsteht, die über die Erdoberfläche abfließen."
+
+#:IFC.xml:36886
+msgid "IfcDistributionSystemEnum_TELEPHONE"
+msgstr "TELEPHONE"
+
+msgid "IfcDistributionSystemEnum_TELEPHONE_DEFINITION"
+msgstr "Ein Transport oder ein Netzwerk, das der Nutzung von Telefonanlagen gewidmet ist."
+
+#:IFC.xml:36887
+msgid "IfcDistributionSystemEnum_TV"
+msgstr "TM"
+
+msgid "IfcDistributionSystemEnum_TV_DEFINITION"
+msgstr "Ein Transport mehrerer Medienquellen wie analoger Kabelfernsehen, Satellitenfernsehen oder über das Luftfernsehen."
+
+#:IFC.xml:36888
+msgid "IfcDistributionSystemEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcDistributionSystemEnum_USERDEFINED_DEFINITION"
+msgstr "BENUTZERDEFINIERT"
+
+#:IFC.xml:36889
+msgid "IfcDistributionSystemEnum_VACUUM"
+msgstr "VACUUM"
+
+msgid "IfcDistributionSystemEnum_VACUUM_DEFINITION"
+msgstr "Vakuum-Verteilungssystem."
+
+#:IFC.xml:36890
+msgid "IfcDistributionSystemEnum_VENT"
+msgstr "VENT"
+
+msgid "IfcDistributionSystemEnum_VENT_DEFINITION"
+msgstr "VENT"
+
+#:IFC.xml:36891
+msgid "IfcDistributionSystemEnum_VENTILATION"
+msgstr "VENTILATION"
+
+msgid "IfcDistributionSystemEnum_VENTILATION_DEFINITION"
+msgstr "Lüftungsluftverteilungssystem sowohl im Luftaustausch nach außen als auch im Luftzirkulation innerhalb eines Gebäudes."
+
+#:IFC.xml:36892
+msgid "IfcDistributionSystemEnum_WASTEWATER"
+msgstr "WASTEWATER"
+
+msgid "IfcDistributionSystemEnum_WASTEWATER_DEFINITION"
+msgstr "Wasser wirkt sich nachteilig auf die Qualität durch anthropogene Einflüsse aus, die möglicherweise aus Abwasser, Abwasser oder anderen Quellen stammen."
+
+#:IFC.xml:36893
+msgid "IfcDistributionSystemEnum_WATERSUPPLY"
+msgstr "WATERSUPPLY"
+
+msgid "IfcDistributionSystemEnum_WATERSUPPLY_DEFINITION"
+msgstr "Willkürliche Wasserversorgung."
+
+#:IFC.xml:36894
+msgid "IfcEnergyConversionDevice"
+msgstr "IfcEnergyConversionDevice"
+
+msgid "IfcEnergyConversionDevice_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcEnergyConversionDevice]] definiert das Vorkommen eines Geräts, das zur Energieumwandlung oder Wärmeübertragung verwendet wird, und beteiligt sich typischerweise an einem Durchflussverteilungssystem. Sein Typ wird durch [[IfcEnergyConversionDeviceType]] oder seine Untertypen definiert. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36897
+msgid "IfcEnergyConversionDeviceType"
+msgstr "IfcEnergyConversionDeviceType"
+
+msgid "IfcEnergyConversionDeviceType_DEFINITION"
+msgstr "Der Elementtyp IfcEnergyConversionType definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Energieumwandlungsgeräts und eine optionale Reihe von Produktdarstellungen. Es wird verwendet, um eine Energieumwandlungsgerätespezifikation die spezifischen Produktinformationen zu definieren, die bei allen Vorkommnissen dieses Produkts üblich sind. Eine Umrechnungsart wird verwendet, um die gemeinsamen Eigenschaften eines Umrechnungsgerätes zu definieren, das auf viele Vorkommnisse dieses Typs angewendet werden kann. Ein Energieumwandlungsgerät ist ein Gebäudesystem, das Energie von einer Form in eine andere umwandelt, wie zum Beispiel ein Kessel mit Gas zu Wärme , Kühler mit einem Kühlzyklus zur Kühlung einer Flüssigkeit , oder eine Kühlspule unter Verwendung der Phasenwechseleigenschaften eines Kältemittels zur Kühlung der Luft . Umrechnungsarten oder die instanziierbaren Subtypen können ausgetauscht werden, ohne dass bereits Vorkommnisse zugewiesen werden. Vorkommen des IfcEnergyConversion-Typs werden durch Instanzen von [[IfcEnergyConversionDevice]] oder dessen Untertypen repräsentiert. HISTORY New Entity in IFC2x2."
+
+#:IFC.xml:36900
+msgid "IfcFlowController"
+msgstr "IfcFlowController"
+
+msgid "IfcFlowController_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowController]] definiert das Auftreten von Elementen eines Verteilungssystems, die zur Regulierung von Strömen durch ein Verteilungssystem verwendet werden. Beispiele dafür sind Dämpfer, Ventile, Schalter und Relais. Der Typ wird durch [[IfcFlowControllerType]] oder Untertypen definiert. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36903
+msgid "IfcFlowControllerType"
+msgstr "IfcFlowControllertyp"
+
+msgid "IfcFlowControllerType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowControllerType]] definiert eine Liste von gemeinsam genutzten Eigenschaftsdefinitionen eines Strömungscontrollers und einer optionalen Reihe von Produktdarstellungen. Es wird verwendet, um eine Flusssteuerungsspezifikation zu definieren, d.h. die spezifischen Produktinformationen, die bei allen Vorkommnissen dieses Produkttyps üblich sind. Ein Strömungscontroller-Typ wird verwendet, um die gemeinsamen Eigenschaften eines Flusscontrollers zu definieren, der auf viele Vorkommnisse dieses Typs angewendet werden kann. Ein Strömungsregler ist ein Gerät, das den Fluss innerhalb eines Verteilungssystems regelt, wie z. B. ein Ventil in einem Rohrleitungssystem Modulationsdämpfer in einem Luftverteilungssystem oder elektrischer Schalter in einem elektrischen Verteilungssystem. Strömungskontrolltypen oder instanziierbare Untertypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen der [[IfcFlowControllerType]] werden durch Instanzen von [[IfcFlowController]] oder deren Untertypen repräsentiert. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:36906
+msgid "IfcFlowDirectionEnum"
+msgstr "IfcFlowDirectionEnum"
+
+msgid "IfcFlowDirectionEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die Strömungsrichtung an einem Verteilerhaft. Für Rohranschlüsse ist die Richtung die physikalische Strömungsrichtung. Für Leitungsbasierte Ports ist die Richtung die physikalische Strömungsrichtung. SINK A fließt ab, wo ein Stoff in die Verbindung fließt. SOURCEANDSINK Sowohl eine Quelle als auch eine Sink, wo eine Substanz gleichzeitig in und aus der Verbindung fließt."
+
+#:IFC.xml:36916
+msgid "IfcFlowDirectionEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcFlowDirectionEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierte Fließrichtung."
+
+#:IFC.xml:36917
+msgid "IfcFlowDirectionEnum_SINK"
+msgstr "SINK"
+
+msgid "IfcFlowDirectionEnum_SINK_DEFINITION"
+msgstr "Ein Strömungssink, in dem ein Stoff in die Verbindung fließt."
+
+#:IFC.xml:36918
+msgid "IfcFlowDirectionEnum_SOURCE"
+msgstr "SOURZ"
+
+msgid "IfcFlowDirectionEnum_SOURCE_DEFINITION"
+msgstr "Eine Strömungsquelle, wo ein Stoff aus der Verbindung fließt."
+
+#:IFC.xml:36919
+msgid "IfcFlowDirectionEnum_SOURCEANDSINK"
+msgstr "SOURZEICHNISCHE"
+
+msgid "IfcFlowDirectionEnum_SOURCEANDSINK_DEFINITION"
+msgstr "Sowohl eine Quelle als auch eine Sink, in der gleichzeitig eine Substanz in die und aus der Verbindung fließt."
+
+#:IFC.xml:36920
+msgid "IfcFlowFitting"
+msgstr "IfcFlowFitting"
+
+msgid "IfcFlowFitting_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowFitting]] definiert das Auftreten einer Verbindung oder eines Übergangs in einem Flussverteilungssystem wie ein Ellenbogen oder Tee. Sein Typ wird durch [[IfcFlowFittingType]] oder seine Untertypen definiert. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36923
+msgid "IfcFlowFittingType"
+msgstr "IfcFlowFittingType"
+
+msgid "IfcFlowFittingType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowFittingType]] definiert eine Liste von gemeinsamen Eigenschaftsdefinitionen für eine Strömungsanpassung und eine optionale Reihe von Produktdarstellungen. Es wird zur Definition einer Flow Fitting Spezifikation verwendet, d.h. die spezifischen Produktinformationen, die bei allen Vorkommnissen dieses Produkttyps üblich sind. Eine Strömungsanpassung wird verwendet, um die gemeinsamen Eigenschaften einer Strömungsanpassung zu definieren, die auf viele Vorkommnisse dieses Typs angewendet werden kann. Eine Strömungsanpassung ist ein Gerät, das zur Verbindung von Strömungssegmenten oder anderen Armaturen innerhalb eines Verteilungssystems verwendet wird B. ein Abschlag in einem eingeleiteten System, das Zweige in zwei Richtungen fließen oder eine Anschlussbox in einem elektrischen Verteilungssystem. Typen der Fließpassung oder der instanziierbaren Subtypen können ausgetauscht werden, ohne dass bereits Vorkommnisse zugewiesen werden. Vorkommen der [[IfcFlowFittingType]] werden durch Instanzen von [[IfcFlowFitting]] oder deren Untertypen repräsentiert. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:36926
+msgid "IfcFlowMovingDevice"
+msgstr "IfcFlowMovingDevice"
+
+msgid "IfcFlowMovingDevice_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowMovingDevice]] definiert das Auftreten eines Geräts zur Verteilung, Umleitung oder Beförderung von Flüssigkeiten, B. Flüssigkeiten und Gase wie eine Pumpe oder Ventilator und beteiligt sich in der Regel an einem Flussverteilungssystem. Der Typ wird durch [[IfcFlowMovingDeviceType]] oder seine Untertypen definiert. HISTORY New entity in IFC2x. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36929
+msgid "IfcFlowMovingDeviceType"
+msgstr "IfcFlowMovingDeviceType"
+
+msgid "IfcFlowMovingDeviceType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowMovingDeviceType]] definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Strömungsbewegungsgeräts und einer optionalen Reihe von Produktdarstellungen. Es wird verwendet, um eine Strömungsbewegungsgeräte-Spezifikation zu definieren. die spezifischen Produktinformationen, die bei allen Vorkommnissen dieses Produkttyps üblich sind. Ein Strömungsbewegungstyp wird verwendet, um die gemeinsamen Eigenschaften eines Strömungsbewegungsgerätes zu definieren, das auf viele Vorkommnisse dieses Typs angewendet werden kann. Ein Strömungsgerät ist ein Gerät, das zur Erzeugung eines Druckdifferenzials in einem Verteilungssystem verwendet wird B. eine Pump, Ventilator oder Kompressor. Strömungsbewegungen oder instanziierbare Untertypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Die Vorkommnisse des [[IfcFlowMovingDeviceType]] werden durch Instanzen von [[IfcFlowMovingDevice]] oder dessen Untertypen repräsentiert."
+
+#:IFC.xml:36932
+msgid "IfcFlowSegment"
+msgstr "IfcFlowSegment"
+
+msgid "IfcFlowSegment_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowSegment]] definiert das Auftreten eines Segments eines Flussverteilungssystems. Die [[IfcFlowSegment]] definiert ein bestimmtes Auftreten eines Segments, das in den räumlichen Kontext eines Projekts eingefügt wird. Die Parameter, die den Typ des Segments oder seine Form definieren, werden von der [[IfcFlowSegmentType]] definiert , die durch die inverse Beziehung von IsDefinedBy mit dem Verweis auf [[IfcRelDefinesByType]] verbunden ist. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet. Concepts Axis Geometry Standard Darstellungen werden beim Supertyp [[IfcDistributionFlowElement]] definiert. Für parametrische Strömungssegmente, in denen [[IfcMaterialProfileSetUsage]] definiert ist und eine Achsenrepräsentation definiert ist, dann kann die Darstellung des Körpers mittels der SweptSolid oder AdvancedSweptSolid Repräsentation erzeugt werden, indem das Profil s entlang der Achse gedreht wird. Material Profilsatz Das Material der [[IfcFlowSegment]] wird mit einem der folgenden Entitäten [[IfcMaterialProfileSetUsage]] für parametrische Segmente definiert Dies definiert den Querschnitt und die Ausrichtung auf die Achsendarstellung, aus der die Körperdarstellung generiert werden kann. [[IfcMaterialProfileSet]] für nicht-parametrische Segmente mit fester Länge oder Pfad , Dies kann den Querschnitt für Analysezwecke definieren, aber die Körperdarstellung wird unabhängig voneinander erzeugt. [[IfcMaterialConstituentSet]] für Elemente, die mehrere Materialien enthalten, deren Profile nicht anwendbar sind, zeigt dies Materialien an benannten Teilen an. [[IfcMaterial]] für Elemente, die aus einem einzelnen Material bestehen, bei denen Profile nicht anwendbar sind, zeigt dies das Material an. Das Material wird durch das Attribut RelatingMaterial an der Beziehung [[IfcRelAssociatesMaterial]] befestigt. Es ist zugänglich durch das inverse Attribut HasAssociations. Materialinformationen können auch in der [[IfcFlowSegmentType]] angegeben werden, die die gemeinsamen Attributdaten für alle Vorkommnisse desselben Typs definieren. Standardnamen und Materialtypen werden bei Unterarten definiert."
+
+#:IFC.xml:36935
+msgid "IfcFlowSegmentType"
+msgstr "IfcFlowSegmenttyp"
+
+msgid "IfcFlowSegmentType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowSegmentType]] definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Fließsegments und eine optionale Reihe von Produktdarstellungen. Es wird verwendet, um eine Fließsegmentspezifikation zu definieren, welche Produktinformationen für alle Vorkommnisse dieses Produkttyps gemeinsam sind. Ein Strömungssegmenttyp wird verwendet, um die gemeinsamen Eigenschaften eines Fließsegments zu definieren, das auf viele Vorkommnisse dieses Typs angewendet werden kann. Ein Strömungssegment ist ein Teil eines Verteilungssystems, wie z. B. eine Leitung, Rohrleitung oder Rohrleitung, die typischerweise nur zwei Ports hat. Strömungssegmenttypen oder instanziierbare Untertypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen der [[IfcFlowSegmentType]] werden durch Instanzen von [[IfcFlowSegment]] oder deren Untertypen repräsentiert. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:36938
+msgid "IfcFlowStorageDevice"
+msgstr "IfcFlowStorageDevice"
+
+msgid "IfcFlowStorageDevice_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowStorageDevice]] definiert das Auftreten eines Geräts, das an einem Verteilungssystem beteiligt ist und für temporäre Speicherung wie einen Tank verwendet wird. Sein Typ wird durch [[IfcFlowStorageDeviceType]] oder seine Untertypen definiert. GESCHICHTE Neue Einheit in IFC2x. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36941
+msgid "IfcFlowStorageDeviceType"
+msgstr "IfcFlowStorageDeviceType"
+
+msgid "IfcFlowStorageDeviceType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowStorageDeviceType]] definiert eine Liste von gemeinsam genutzten Eigenschaftsdefinitionen für ein Fließspeichergerät und eine optionale Reihe von Produktdarstellungen. Es wird verwendet, um eine Fließspeichergerätespezifikation für die spezifischen Produktinformationen zu definieren, die für alle Vorkommnisse dieses Produkttyps gemeinsam sind. Ein Strömungsspeichergerät ist ein Gerät zur temporären Speicherung von Flüssigkeiten wie z. B. Tank oder Spannungspotential, das durch den induzierten Elektron-Strom wie eine Batterie induziert wird. Flow-Speichertypen oder die instanziierbaren Subtypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Die Vorkommnisse des [[IfcFlowStorageDeviceType]] werden durch Instanzen von [[IfcFlowStorageDevice]] oder dessen Untertypen repräsentiert."
+
+#:IFC.xml:36944
+msgid "IfcFlowTerminal"
+msgstr "IfcFlowTerminal"
+
+msgid "IfcFlowTerminal_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowTerminal]] definiert das Auftreten eines dauerhaft angeschlossenen Elements, das als Terminus oder Anfang eines Verteilungssystems wie z.B. einer Luftabschaltung fungiert Abfluss, Wasserschrank oder Waschbecken . Ein Terminal ist typischerweise ein Punkt, an dem ein System mit einer externen Umgebung interagiert. Der Typ wird durch [[IfcFlowTerminalType]] oder seine Untertypen definiert. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36947
+msgid "IfcFlowTerminalType"
+msgstr "IfcFlowTerminaltyp"
+
+msgid "IfcFlowTerminalType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowTerminalType]] definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Strömungsterminals und einer optionalen Reihe von Produktdarstellungen. Es wird verwendet, um eine Fließterminalspezifikation für die spezifischen Produktinformationen zu definieren, die für alle Vorkommnisse dieses Produkts gemeinsam sind. Ein Strömungsterminaltyp wird verwendet, um die gemeinsamen Eigenschaften eines Strömungsterminals zu definieren, die auf viele Vorkommnisse dieses Typs angewendet werden können. Ein Strömungsterminal fungiert als Terminus oder Anfangselement in einem Verteilungssystem wie z. B. einem Deckenregister in einem abgelenkten Luftverteilungssystem Ein Untergang in einem Abwassersystem oder eine Lichtquelle in einem elektrischen Beleuchtungssystem. Flow-Terminaltypen oder instanziable Subtypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Die Vorkommnisse des [[IfcFlowTerminalType]] werden durch Instanzen von [[IfcFlowTerminal]] oder dessen Untertypen repräsentiert."
+
+#:IFC.xml:36950
+msgid "IfcFlowTreatmentDevice"
+msgstr "IfcFlowTreatmentDevice"
+
+msgid "IfcFlowTreatmentDevice_DEFINITION"
+msgstr "Das Verteilungsflusselement [[IfcFlowTreatmentDevice]] definiert das Auftreten eines Geräts, das normalerweise zum Entfernen unerwünschter Materie aus einer Flüssigkeit verwendet wird entweder flüssig oder gasförmig und beteiligt sich typischerweise an einem Flussverteilungssystem. Der Typ wird durch [[IfcFlowTreatmentDeviceType]] oder seine Untertypen definiert. HISTORY New entity in IFC2x. hange ifc2x4 IFC4 CHANGE Diese Entität wurde zur Instanziation veraltet und wird in einer zukünftigen Version zu ABSTRACT werden stattdessen neue Subtypen verwendet."
+
+#:IFC.xml:36953
+msgid "IfcFlowTreatmentDeviceType"
+msgstr "IfcFlowTreatmentDeviceType"
+
+msgid "IfcFlowTreatmentDeviceType_DEFINITION"
+msgstr "Der Elementtyp [[IfcFlowTreatmentDeviceType]] definiert eine Liste der gemeinsamen Eigenschaftsdefinitionen eines Fließbehandlungsgerätes und einer optionalen Reihe von Produktdarstellungen. Es wird verwendet, um eine Fließbehandlungsgerätespezifikation für die spezifischen Produktinformationen zu definieren, die bei allen Vorkommnissen dieses Produkts üblich sind. Ein Strömungsbehandlungsgerät ist ein Gerät, mit dem die physikalischen Eigenschaften des Mediums, wie z. B. eine Luft, geändert werden können B. Öl- oder Wasserfilter, um Partikel aus der Flüssigkeit zu entfernen, oder ein Schalldämpfer, der zur Dämpfung des Geräuschpegels verwendet wird. Fließbehandlungstypen oder instanziierbare Subtypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Die Vorkommnisse des [[IfcFlowTreatmentDeviceType]] werden durch Instanzen von [[IfcFlowTreatmentDevice]] oder dessen Untertypen repräsentiert."
+
+#:IFC.xml:36956
+msgid "IfcRelFlowControlElements"
+msgstr "IfcRelFlowControlelemente"
+
+msgid "IfcRelFlowControlElements_DEFINITION"
+msgstr "Diese objektifizierte Beziehung zwischen einem Verteilungsflusselement und einem zu vielen Elementen deutet darauf hin, dass das Steuerelement s Sinn oder Kontrolle eines Aspekts des Strömungselementes ist. Sie wird auf [[IfcDistributionFlowElement]] und [[IfcDistributionControlElement]] angewendet. Diese Beziehung kann verwendet werden, um eine operative Beziehung wie z. B. einen Aktor, der Ventil, Dämpfer oder Schalter betreibt. Es kann auch verwendet werden, um eine Sensorverbindung zu zeigen, wie z. B. ein Sensor, der die Bedingungen des Flüssigkeitsflusses erkennt. Diese Beziehung impliziert eine Sensations- oder Kontrollbeziehung, wenn Elemente nur ohne Kontrollverhältnisse verbunden sind, dann [[IfcRelConnectsElements]] verwendet werden. GESCHICHTE Neue Einheit in IFC2x."
+
+#:IFC.xml:36640
+msgid "IfcRelFlowControlElements_RelatedControlElements"
+msgstr "Zugehörige Steuerelemente"
+
+msgid "IfcRelFlowControlElements_RelatedControlElements_DEFINITION"
+msgstr "Referenzen Kontrollelemente, die verwendet werden können, um die Kontrolle über das Distributionselement zu übertragen."
+
+#:IFC.xml:36669
+msgid "IfcRelFlowControlElements_RelatingFlowElement"
+msgstr "RelatingFlowElement"
+
+msgid "IfcRelFlowControlElements_RelatingFlowElement_DEFINITION"
+msgstr "Beziehung zu einem Verteilungsflusselement"
+
+#:IFC.xml:37095
+msgid "Pset_AirSideSystemInformation"
+msgstr "AirSideSysteminformation festlegen"
+
+msgid "Pset_AirSideSystemInformation_DEFINITION"
+msgstr "Attribute die auf ein HVAC System angewendet werden. HISTORY Neue Eigenschaft im IFC Release 1.0 gesetzt."
+
+#:IFC.xml:37096
+msgid "Pset_AirSideSystemInformation_AirflowSensible"
+msgstr "Pset_AirSideSystemInformation_Luftfluss - sensibel"
+
+msgid "Pset_AirSideSystemInformation_AirflowSensible_DEFINITION"
+msgstr "Der Luftdurchsatz, der erforderlich ist, um den empfindlichen Spitzenbelastungen gerecht zu werden."
+
+#:IFC.xml:37101
+msgid "Pset_AirSideSystemInformation_AirSideSystemDistributionType"
+msgstr "Pset_AirSideSystemInformation_Luftseite - Systemverteilung"
+
+msgid "Pset_AirSideSystemInformation_AirSideSystemDistributionType_DEFINITION"
+msgstr "Diese Aufzählung definiert die Grundtypen von luftseitigen Systemen (z.B. SingleDuct, DualDuct, DualDuct, Multizone, etc.)."
+
+#:IFC.xml:37106
+msgid "Pset_AirSideSystemInformation_AirSideSystemType"
+msgstr "Pset_AirSideSystemInformation_Luftseite - Systemtyp"
+
+msgid "Pset_AirSideSystemInformation_AirSideSystemType_DEFINITION"
+msgstr "Diese Aufzählung spezifiziert die Grundtypen möglicher luftseitiger Systeme (z.B. Constant Volume, Variable Volume, etc.)."
+
+#:IFC.xml:37111
+msgid "Pset_AirSideSystemInformation_ApplianceDiversity"
+msgstr "Pset_AirSideSystemInformation_ApplianceVielfalt"
+
+msgid "Pset_AirSideSystemInformation_ApplianceDiversity_DEFINITION"
+msgstr "Unterschiedliche Geräteauslastung."
+
+#:IFC.xml:37116
+msgid "Pset_AirSideSystemInformation_CoolingTemperatureDelta"
+msgstr "Pset_AirSideSystemInformation_Delta der Kühltemperatur"
+
+msgid "Pset_AirSideSystemInformation_CoolingTemperatureDelta_DEFINITION"
+msgstr "Kühltemperaturdifferenz zur Berechnung von Raumluftvolumenströmen."
+
+#:IFC.xml:37121
+msgid "Pset_AirSideSystemInformation_Description"
+msgstr "Beschreibung"
+
+msgid "Pset_AirSideSystemInformation_Description_DEFINITION"
+msgstr "Die Beschreibung des luftseitigen Systems."
+
+#:IFC.xml:37126
+msgid "Pset_AirSideSystemInformation_EnergyGainSensible"
+msgstr "Pset_AirSideSystemInformation_Energiegewinn - sensibel"
+
+msgid "Pset_AirSideSystemInformation_EnergyGainSensible_DEFINITION"
+msgstr "Die Summe der Gesamtenergiegewinne für die Räume, die das System während der Spitzenkühlbedingungen versorgt, zuzüglich aller sinnvollen Energiegewinne auf Systemebene."
+
+#:IFC.xml:37131
+msgid "Pset_AirSideSystemInformation_EnergyGainTotal"
+msgstr "Pset_AirSideSystemInformation_Gesamt-Energiegewinn"
+
+msgid "Pset_AirSideSystemInformation_EnergyGainTotal_DEFINITION"
+msgstr "Die Summe der Energiegewinne für die Räume, die das System während der Spitzenkühlbedingungen versorgt, zuzüglich der gesamten Energiegewinne auf Systemebene."
+
+#:IFC.xml:37136
+msgid "Pset_AirSideSystemInformation_EnergyLoss"
+msgstr "Pset_AirSideSystemInformation_Energieverlust"
+
+msgid "Pset_AirSideSystemInformation_EnergyLoss_DEFINITION"
+msgstr "Die Summe der Energieverluste für die vom System bedienten Räume während der Spitzenheizbedingungen."
+
+#:IFC.xml:37141
+msgid "Pset_AirSideSystemInformation_FanPower"
+msgstr "Pset_AirSideSystemInformation_Lüfterleistung"
+
+msgid "Pset_AirSideSystemInformation_FanPower_DEFINITION"
+msgstr "Lüftermotorlasten, die zur Kühllast beitragen."
+
+#:IFC.xml:37146
+msgid "Pset_AirSideSystemInformation_HeatingTemperatureDelta"
+msgstr "Pset_AirSideSystemInformation_Delta der Heiztemperatur"
+
+msgid "Pset_AirSideSystemInformation_HeatingTemperatureDelta_DEFINITION"
+msgstr "Heiztemperaturdifferenz zur Berechnung der Raumluftvolumenströme."
+
+#:IFC.xml:37151
+msgid "Pset_AirSideSystemInformation_InfiltrationDiversitySummer"
+msgstr "Pset_AirSideSystemInformation_InfiltrationVielfaltSommer"
+
+msgid "Pset_AirSideSystemInformation_InfiltrationDiversitySummer_DEFINITION"
+msgstr "Gleichzeitigkeitsfaktor für die Sommerinfiltration."
+
+#:IFC.xml:37156
+msgid "Pset_AirSideSystemInformation_InfiltrationDiversityWinter"
+msgstr "Pset_AirSideSystemInformation_InfiltrationVielfaltWinter"
+
+msgid "Pset_AirSideSystemInformation_InfiltrationDiversityWinter_DEFINITION"
+msgstr "Gleichzeitigkeitsfaktor für die Winterversickerung."
+
+#:IFC.xml:37161
+msgid "Pset_AirSideSystemInformation_LightingDiversity"
+msgstr "Pset_AirSideSystemInformation_LichtVielfalt"
+
+msgid "Pset_AirSideSystemInformation_LightingDiversity_DEFINITION"
+msgstr "Lichtvielfalt."
+
+#:IFC.xml:37166
+msgid "Pset_AirSideSystemInformation_LoadSafetyFactor"
+msgstr "Pset_AirSideSystemInformation_LastSicherheitFaktor"
+
+msgid "Pset_AirSideSystemInformation_LoadSafetyFactor_DEFINITION"
+msgstr "Ladungssicherungsfaktor."
+
+#:IFC.xml:37171
+msgid "Pset_AirSideSystemInformation_TotalAirflow"
+msgstr "Pset_AirSideSystemInformation_Gesamt-Luftfluss"
+
+msgid "Pset_AirSideSystemInformation_TotalAirflow_DEFINITION"
+msgstr "Der für das System erforderliche Gesamtzuluftvolumenstrom für Heiz- oder Kühlbedingungen, je nachdem, welcher Wert größer ist."
+
+#:IFC.xml:37176
+msgid "Pset_AirSideSystemInformation_Ventilation"
+msgstr "Pset_AirSideSystemInformation_Lüftung"
+
+msgid "Pset_AirSideSystemInformation_Ventilation_DEFINITION"
+msgstr "Erforderliche Außenbelüftung."
+
+#:IFC.xml:37182
+msgid "Pset_DistributionChamberElementCommon"
+msgstr "Pset DistributionChamberElementCommon"
+
+msgid "Pset_DistributionChamberElementCommon_DEFINITION"
+msgstr "Häufige Eigenschaften aller Vorkommnisse von [[IfcDistributionChamberElement]]."
+
+#:IFC.xml:37183
+msgid "Pset_DistributionChamberElementCommon_Reference"
+msgstr "Pset_ActuatorTypeCommon_Referenz"
+
+msgid "Pset_DistributionChamberElementCommon_Reference_DEFINITION"
+msgstr "Referenz-ID für diesen spezifizierten Typ in diesem Projekt z.B. Typ A 1 , auch als Bauart bezeichnet. Es sollte als Alternative zum Namen des Objekttyps bereitgestellt werden, wenn die Software keine Objekttypen unterstützt."
+
+#:IFC.xml:37188
+msgid "Pset_DistributionChamberElementCommon_Status"
+msgstr "Status"
+
+msgid "Pset_DistributionChamberElementCommon_Status_DEFINITION"
+msgstr "Status des Elementes, das vorwiegend in Renovierungs- oder Nachrüstungsprojekten verwendet wird: Der Status kann alsNeu-Element zugewiesen werden, das als Neuzugang entworfen wurde,Vorhandenes - Element existiert und bleibt,Abbruch-Element existiert, aber abgerissen werden soll,Temporär-Element existiert nur temporär (wie eine temporäre Stützkonstruktion)."
+
+#:IFC.xml:37194
+msgid "Pset_DistributionChamberElementTypeFormedDuct"
+msgstr "Pset DistributionChamberElementTypeFormedDuct"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_DEFINITION"
+msgstr "Raum im Boden für den Durchgang von Rohren, Kabeln, Leitungen gebildet."
+
+#:IFC.xml:37195
+msgid "Pset_DistributionChamberElementTypeFormedDuct_AccessCoverLoadRating"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Belastungsklasse der Abdeckung"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_AccessCoverLoadRating_DEFINITION"
+msgstr "Die Tragfähigkeit der Abdeckung (dies kann ein Wert oder eine alphanumerisch definierte Klasseneinteilung sein)."
+
+#:IFC.xml:37200
+msgid "Pset_DistributionChamberElementTypeFormedDuct_BaseThickness"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Basiskonstruktionsdicke"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_BaseThickness_DEFINITION"
+msgstr "Die Dicke des Schachtbodens.NOTE: Es wird davon ausgegangen, dass der Schachtboden in konstanter Dicke hergestellt wird."
+
+#:IFC.xml:37205
+msgid "Pset_DistributionChamberElementTypeFormedDuct_ClearDepth"
+msgstr "Pset_JunctionBoxTypeCommon_Einbautiefe"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_ClearDepth_DEFINITION"
+msgstr "Die Forminformation wird zusätzlich zur Formabbildung und den darin verwendeten geometrischen Parametern zur Verfügung gestellt. Bei Inkonsistenzen zwischen den geometrischen Parametern und den Formeigenschaften, die in der beigefügten Eigenschaft angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37210
+msgid "Pset_DistributionChamberElementTypeFormedDuct_ClearWidth"
+msgstr "Pset_TransportElementElevator_Lichte Breite"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_ClearWidth_DEFINITION"
+msgstr "Tatsächliche lichte Weite gemessen als freier Raum für Zugänglichkeit und Austritt; es handelt sich um eine gemessene Distanz zwischen den beiden Handläufen oder der Wand und einem Handlauf auf einer Rampe. The Neben der Formdarstellung und den darin verwendeten geometrischen Parametern werden Forminformationen bereitgestellt."
+
+#:IFC.xml:37215
+msgid "Pset_DistributionChamberElementTypeFormedDuct_WallThickness"
+msgstr "Walldicke"
+
+msgid "Pset_DistributionChamberElementTypeFormedDuct_WallThickness_DEFINITION"
+msgstr "Die Dicke der Kammerwand.NOTE: Es wird davon ausgegangen, dass die Kammerwände in konstanter Dicke ausgeführt werden."
+
+#:IFC.xml:37221
+msgid "Pset_DistributionChamberElementTypeInspectionChamber"
+msgstr "Pset DistributionChamberElementTypeInspectionChamber"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_DEFINITION"
+msgstr "Die Kammer wurde auf einer Abwasserkanalisation oder Pipeline gebaut und mit einer abnehmbaren Deckel, die eine sichtbare Inspektion ermöglicht."
+
+#:IFC.xml:37222
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessCoverLoadRating"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Belastungsklasse der Abdeckung"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessCoverLoadRating_DEFINITION"
+msgstr "Die Tragfähigkeit der Abdeckung (dies kann ein Wert oder eine alphanumerisch definierte Klasseneinteilung sein)."
+
+#:IFC.xml:37227
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessCoverMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Abdeckungsmaterial"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessCoverMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Zugangsabdeckung zur Kammer besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37232
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessLengthOrRadius"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Länge oder Radius"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessLengthOrRadius_DEFINITION"
+msgstr "Die Länge der Kammerabdeckung oder, wenn die Planform der Abdeckung kreisförmig ist, der Radius."
+
+#:IFC.xml:37237
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessWidth"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Breite"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_AccessWidth_DEFINITION"
+msgstr "Die Breite der Kammerabdeckung, falls die Grundrissform der Abdeckung nicht kreisförmig ist."
+
+#:IFC.xml:37242
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_BaseMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Basismaterial"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_BaseMaterial_DEFINITION"
+msgstr "Das Material, aus dem der Boden der Kammer besteht.NOTE: Es wird davon ausgegangen, dass der Boden der Kammer aus einem einzigen Material besteht."
+
+#:IFC.xml:37247
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_BaseThickness"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Basiskonstruktionsdicke"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_BaseThickness_DEFINITION"
+msgstr "Die Dicke des Schachtbodens.NOTE: Es wird davon ausgegangen, dass der Schachtboden in konstanter Dicke hergestellt wird."
+
+#:IFC.xml:37252
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_ChamberLengthOrRadius"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerlänge oder -radius"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_ChamberLengthOrRadius_DEFINITION"
+msgstr "Länge oder, falls die Form im Grundriss kreisförmig ist, der Radius der Kammer."
+
+#:IFC.xml:37257
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_ChamberWidth"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerbreite"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_ChamberWidth_DEFINITION"
+msgstr "Breite, falls die Form im Grundriss nicht kreisförmig ist."
+
+#:IFC.xml:37262
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_InvertLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Bodenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_InvertLevel_DEFINITION"
+msgstr "Höhe des untersten Teils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37267
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_SoffitLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Deckenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_SoffitLevel_DEFINITION"
+msgstr "Höhe des höchsten Innenteils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37272
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WallMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Wandmaterial"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WallMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Kammerwand besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37277
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WallThickness"
+msgstr "Walldicke"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WallThickness_DEFINITION"
+msgstr "Die Dicke der Kammerwand.NOTE: Es wird davon ausgegangen, dass die Kammerwände in konstanter Dicke ausgeführt werden."
+
+#:IFC.xml:37282
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WithBackdrop"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Mit Fallschacht"
+
+msgid "Pset_DistributionChamberElementTypeInspectionChamber_WithBackdrop_DEFINITION"
+msgstr "Zeigt an, ob die Kammer einen Fallschacht oder eine Taumelbucht hat (TRUE) oder nicht (FALSE)."
+
+#:IFC.xml:37288
+msgid "Pset_DistributionChamberElementTypeInspectionPit"
+msgstr "Pset DistributionChamberElementTypeInspectionPit"
+
+msgid "Pset_DistributionChamberElementTypeInspectionPit_DEFINITION"
+msgstr "Blockierung oder Kammer gebildet, um den Zugriff auf die Prüfung der Unterstruktur- und Dienstleistungsdefinition zu ermöglichen, geändert von BS6100 221 4128 ."
+
+#:IFC.xml:37289
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Depth"
+msgstr "Tiefe"
+
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Depth_DEFINITION"
+msgstr "Die Nenntiefe der Grabgrabung, die neben der Formendarstellung und den darin verwendeten geometrischen Parametern angegeben wird. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37294
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Length"
+msgstr "Pset_DuctSilencerTypeCommon_Länge"
+
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Length_DEFINITION"
+msgstr "Die Nennlänge des Übergangsbereichs, die Größeninformation wird neben der Formendarstellung und den geometrischen Parametern zur Verfügung gestellt. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37299
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Width"
+msgstr "Width"
+
+msgid "Pset_DistributionChamberElementTypeInspectionPit_Width_DEFINITION"
+msgstr "Die Nennbreite der Grabgrabung, die neben der Formendarstellung und den darin verwendeten geometrischen Parametern angegeben wird. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37305
+msgid "Pset_DistributionChamberElementTypeManhole"
+msgstr "Pset DistributionChamberElementTypeManhole"
+
+msgid "Pset_DistributionChamberElementTypeManhole_DEFINITION"
+msgstr "Die Kammer wurde auf einem Abfluss, Kanalisation oder Pipeline gebaut und mit einer abnehmbaren Deckel, die den Eintritt einer Person erlaubt."
+
+#:IFC.xml:37306
+msgid "Pset_DistributionChamberElementTypeManhole_AccessCoverLoadRating"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Belastungsklasse der Abdeckung"
+
+msgid "Pset_DistributionChamberElementTypeManhole_AccessCoverLoadRating_DEFINITION"
+msgstr "Die Tragfähigkeit der Abdeckung (dies kann ein Wert oder eine alphanumerisch definierte Klasseneinteilung sein)."
+
+#:IFC.xml:37311
+msgid "Pset_DistributionChamberElementTypeManhole_AccessCoverMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Abdeckungsmaterial"
+
+msgid "Pset_DistributionChamberElementTypeManhole_AccessCoverMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Zugangsabdeckung zur Kammer besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37316
+msgid "Pset_DistributionChamberElementTypeManhole_AccessLengthOrRadius"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Länge oder Radius"
+
+msgid "Pset_DistributionChamberElementTypeManhole_AccessLengthOrRadius_DEFINITION"
+msgstr "Die Länge der Kammerabdeckung oder, wenn die Planform der Abdeckung kreisförmig ist, der Radius."
+
+#:IFC.xml:37321
+msgid "Pset_DistributionChamberElementTypeManhole_AccessWidth"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Breite"
+
+msgid "Pset_DistributionChamberElementTypeManhole_AccessWidth_DEFINITION"
+msgstr "Die Breite der Kammerabdeckung, falls die Grundrissform der Abdeckung nicht kreisförmig ist."
+
+#:IFC.xml:37326
+msgid "Pset_DistributionChamberElementTypeManhole_BaseMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Basismaterial"
+
+msgid "Pset_DistributionChamberElementTypeManhole_BaseMaterial_DEFINITION"
+msgstr "Das Material, aus dem der Boden der Kammer besteht.NOTE: Es wird davon ausgegangen, dass der Boden der Kammer aus einem einzigen Material besteht."
+
+#:IFC.xml:37331
+msgid "Pset_DistributionChamberElementTypeManhole_BaseThickness"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Basiskonstruktionsdicke"
+
+msgid "Pset_DistributionChamberElementTypeManhole_BaseThickness_DEFINITION"
+msgstr "Die Dicke des Schachtbodens.NOTE: Es wird davon ausgegangen, dass der Schachtboden in konstanter Dicke hergestellt wird."
+
+#:IFC.xml:37336
+msgid "Pset_DistributionChamberElementTypeManhole_HasSteps"
+msgstr "Pset_DistributionChamberElementTypeManhole_Mit Stufen"
+
+msgid "Pset_DistributionChamberElementTypeManhole_HasSteps_DEFINITION"
+msgstr "Gibt an, ob die Kammer Stufen hat (TRUE) oder nicht (FALSE)."
+
+#:IFC.xml:37341
+msgid "Pset_DistributionChamberElementTypeManhole_InvertLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Bodenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeManhole_InvertLevel_DEFINITION"
+msgstr "Höhe des untersten Teils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37346
+msgid "Pset_DistributionChamberElementTypeManhole_IsShallow"
+msgstr "Pset_DistributionChamberElementTypeManhole_Ist Flach"
+
+msgid "Pset_DistributionChamberElementTypeManhole_IsShallow_DEFINITION"
+msgstr "Zeigt an, ob die Kammer als flach (TRUE) oder tief (FALSE) ausgelegt ist."
+
+#:IFC.xml:37351
+msgid "Pset_DistributionChamberElementTypeManhole_SoffitLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Deckenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeManhole_SoffitLevel_DEFINITION"
+msgstr "Höhe des höchsten Innenteils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37356
+msgid "Pset_DistributionChamberElementTypeManhole_WallMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Wandmaterial"
+
+msgid "Pset_DistributionChamberElementTypeManhole_WallMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Kammerwand besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37361
+msgid "Pset_DistributionChamberElementTypeManhole_WallThickness"
+msgstr "Walldicke"
+
+msgid "Pset_DistributionChamberElementTypeManhole_WallThickness_DEFINITION"
+msgstr "Die Dicke der Kammerwand.NOTE: Es wird davon ausgegangen, dass die Kammerwände in konstanter Dicke ausgeführt werden."
+
+#:IFC.xml:37366
+msgid "Pset_DistributionChamberElementTypeManhole_WithBackdrop"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Mit Fallschacht"
+
+msgid "Pset_DistributionChamberElementTypeManhole_WithBackdrop_DEFINITION"
+msgstr "Zeigt an, ob die Kammer einen Fallschacht oder eine Taumelbucht hat (TRUE) oder nicht (FALSE)."
+
+#:IFC.xml:37372
+msgid "Pset_DistributionChamberElementTypeMeterChamber"
+msgstr "Pset DistributionChamberElementTypeMeterChamber"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_DEFINITION"
+msgstr "Kammer, die eine Zähler s Definition geändert von BS6100 250 6224 ."
+
+#:IFC.xml:37373
+msgid "Pset_DistributionChamberElementTypeMeterChamber_AccessCoverMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Abdeckungsmaterial"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_AccessCoverMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Zugangsabdeckung zur Kammer besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37378
+msgid "Pset_DistributionChamberElementTypeMeterChamber_BaseMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Basismaterial"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_BaseMaterial_DEFINITION"
+msgstr "Das Material, aus dem der Boden der Kammer besteht.NOTE: Es wird davon ausgegangen, dass der Boden der Kammer aus einem einzigen Material besteht."
+
+#:IFC.xml:37383
+msgid "Pset_DistributionChamberElementTypeMeterChamber_BaseThickness"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Basiskonstruktionsdicke"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_BaseThickness_DEFINITION"
+msgstr "Die Dicke des Schachtbodens.NOTE: Es wird davon ausgegangen, dass der Schachtboden in konstanter Dicke hergestellt wird."
+
+#:IFC.xml:37388
+msgid "Pset_DistributionChamberElementTypeMeterChamber_ChamberLengthOrRadius"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerlänge oder -radius"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_ChamberLengthOrRadius_DEFINITION"
+msgstr "Länge oder, falls die Form im Grundriss kreisförmig ist, der Radius der Kammer."
+
+#:IFC.xml:37393
+msgid "Pset_DistributionChamberElementTypeMeterChamber_ChamberWidth"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerbreite"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_ChamberWidth_DEFINITION"
+msgstr "Breite, falls die Form im Grundriss nicht kreisförmig ist."
+
+#:IFC.xml:37398
+msgid "Pset_DistributionChamberElementTypeMeterChamber_WallMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Wandmaterial"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_WallMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Kammerwand besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37403
+msgid "Pset_DistributionChamberElementTypeMeterChamber_WallThickness"
+msgstr "Walldicke"
+
+msgid "Pset_DistributionChamberElementTypeMeterChamber_WallThickness_DEFINITION"
+msgstr "Die Dicke der Kammerwand.NOTE: Es wird davon ausgegangen, dass die Kammerwände in konstanter Dicke ausgeführt werden."
+
+#:IFC.xml:37409
+msgid "Pset_DistributionChamberElementTypeSump"
+msgstr "Pset DistributionChamberElementTypeSump"
+
+msgid "Pset_DistributionChamberElementTypeSump_DEFINITION"
+msgstr "Raffinesse oder kleine Kammer, in die Flüssigkeit entwässert wird, um seine Entfernung zu erleichtern."
+
+#:IFC.xml:37410
+msgid "Pset_DistributionChamberElementTypeSump_InvertLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Bodenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeSump_InvertLevel_DEFINITION"
+msgstr "Höhe des untersten Teils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37415
+msgid "Pset_DistributionChamberElementTypeSump_Length"
+msgstr "Pset_DuctSilencerTypeCommon_Länge"
+
+msgid "Pset_DistributionChamberElementTypeSump_Length_DEFINITION"
+msgstr "Die Nennlänge des Übergangsbereichs, die Größeninformation wird neben der Formendarstellung und den geometrischen Parametern zur Verfügung gestellt. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37420
+msgid "Pset_DistributionChamberElementTypeSump_Width"
+msgstr "Width"
+
+msgid "Pset_DistributionChamberElementTypeSump_Width_DEFINITION"
+msgstr "Die Nennbreite der Grabgrabung, die neben der Formendarstellung und den darin verwendeten geometrischen Parametern angegeben wird. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37426
+msgid "Pset_DistributionChamberElementTypeTrench"
+msgstr "Pset DistributionChamberElementTypeTrench"
+
+msgid "Pset_DistributionChamberElementTypeTrench_DEFINITION"
+msgstr "Ausgrabung, deren Länge die Breite erheblich übersteigt."
+
+#:IFC.xml:37427
+msgid "Pset_DistributionChamberElementTypeTrench_Depth"
+msgstr "Tiefe"
+
+msgid "Pset_DistributionChamberElementTypeTrench_Depth_DEFINITION"
+msgstr "Die Nenntiefe der Grabgrabung, die neben der Formendarstellung und den darin verwendeten geometrischen Parametern angegeben wird. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37432
+msgid "Pset_DistributionChamberElementTypeTrench_InvertLevel"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Innere Bodenhöhe"
+
+msgid "Pset_DistributionChamberElementTypeTrench_InvertLevel_DEFINITION"
+msgstr "Höhe des untersten Teils des Querschnitts, gemessen vom Planum."
+
+#:IFC.xml:37437
+msgid "Pset_DistributionChamberElementTypeTrench_Width"
+msgstr "Width"
+
+msgid "Pset_DistributionChamberElementTypeTrench_Width_DEFINITION"
+msgstr "Die Nennbreite der Grabgrabung, die neben der Formendarstellung und den darin verwendeten geometrischen Parametern angegeben wird. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37443
+msgid "Pset_DistributionChamberElementTypeValveChamber"
+msgstr "Pset DistributionChamberElementTypeValveChamber"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_DEFINITION"
+msgstr "Kammer, die ein Ventil s beherbergt."
+
+#:IFC.xml:37444
+msgid "Pset_DistributionChamberElementTypeValveChamber_AccessCoverMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Zugang - Abdeckungsmaterial"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_AccessCoverMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Zugangsabdeckung zur Kammer besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37449
+msgid "Pset_DistributionChamberElementTypeValveChamber_BaseMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Basismaterial"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_BaseMaterial_DEFINITION"
+msgstr "Das Material, aus dem der Boden der Kammer besteht.NOTE: Es wird davon ausgegangen, dass der Boden der Kammer aus einem einzigen Material besteht."
+
+#:IFC.xml:37454
+msgid "Pset_DistributionChamberElementTypeValveChamber_BaseThickness"
+msgstr "Pset_DistributionChamberElementTypeFormedDuct_Basiskonstruktionsdicke"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_BaseThickness_DEFINITION"
+msgstr "Die Dicke des Schachtbodens.NOTE: Es wird davon ausgegangen, dass der Schachtboden in konstanter Dicke hergestellt wird."
+
+#:IFC.xml:37459
+msgid "Pset_DistributionChamberElementTypeValveChamber_ChamberLengthOrRadius"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerlänge oder -radius"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_ChamberLengthOrRadius_DEFINITION"
+msgstr "Länge oder, falls die Form im Grundriss kreisförmig ist, der Radius der Kammer."
+
+#:IFC.xml:37464
+msgid "Pset_DistributionChamberElementTypeValveChamber_ChamberWidth"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Kammerbreite"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_ChamberWidth_DEFINITION"
+msgstr "Breite, falls die Form im Grundriss nicht kreisförmig ist."
+
+#:IFC.xml:37469
+msgid "Pset_DistributionChamberElementTypeValveChamber_WallMaterial"
+msgstr "Pset_DistributionChamberElementTypeInspectionChamber_Wandmaterial"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_WallMaterial_DEFINITION"
+msgstr "Das Material, aus dem die Kammerwand besteht.NOTE: Es wird davon ausgegangen, dass die Kammerwände aus einem einzigen Material bestehen."
+
+#:IFC.xml:37474
+msgid "Pset_DistributionChamberElementTypeValveChamber_WallThickness"
+msgstr "Walldicke"
+
+msgid "Pset_DistributionChamberElementTypeValveChamber_WallThickness_DEFINITION"
+msgstr "Die Dicke der Kammerwand.NOTE: Es wird davon ausgegangen, dass die Kammerwände in konstanter Dicke ausgeführt werden."
+
+#:IFC.xml:37480
+msgid "Pset_DistributionPortCommon"
+msgstr "Pset DistributionPortCommon"
+
+msgid "Pset_DistributionPortCommon_DEFINITION"
+msgstr "Häufige Attribute, die an eine Instanz von [[IfcDistributionPort] angehängt werden."
+
+#:IFC.xml:37481
+msgid "Pset_DistributionPortCommon_ColorCode"
+msgstr "Pset_DistributionPortCommon_Farbcode"
+
+msgid "Pset_DistributionPortCommon_ColorCode_DEFINITION"
+msgstr "Name einer Farbe zur Identifizierung des Steckverbinders, falls zutreffend."
+
+#:IFC.xml:37486
+msgid "Pset_DistributionPortCommon_PortNumber"
+msgstr "Pset_DistributionPortCommon_Anschluss-/Port-Nummer"
+
+msgid "Pset_DistributionPortCommon_PortNumber_DEFINITION"
+msgstr "Der Port-Index zur logischen Anordnung des Ports innerhalb des enthaltenen Elements oder Elementtyps."
+
+#:IFC.xml:37492
+msgid "Pset_DistributionPortPHistoryCable"
+msgstr "Pset DistributionPortPHistoryCable"
+
+msgid "Pset_DistributionPortPHistoryCable_DEFINITION"
+msgstr "Protokoll der elektrischen Aktivität, die an eine Instanz von [[IfcPerformanceHistory]] angeschlossen ist, die eine [[IfcDistributionPort]] des Typs CABLE zugewiesen hat."
+
+#:IFC.xml:37493
+msgid "Pset_DistributionPortPHistoryCable_ApparentPower"
+msgstr "Scheinkraft"
+
+msgid "Pset_DistributionPortPHistoryCable_ApparentPower_DEFINITION"
+msgstr "Übergeordnete Kraft."
+
+#:IFC.xml:37498
+msgid "Pset_DistributionPortPHistoryCable_Current"
+msgstr "Aktuell"
+
+msgid "Pset_DistributionPortPHistoryCable_Current_DEFINITION"
+msgstr "Der aktuelle Strom- und Bedienungsbereich."
+
+#:IFC.xml:37503
+msgid "Pset_DistributionPortPHistoryCable_DataReceived"
+msgstr "Daten empfangen"
+
+msgid "Pset_DistributionPortPHistoryCable_DataReceived_DEFINITION"
+msgstr "Für Datenportale erfasst Protokoll der empfangenen Daten. Die LIST unter [[IfcTimeSeriesValue]].Werte können Daten gemäß Pset DistributionPortTypeCable.Protocols aufteilen."
+
+#:IFC.xml:37508
+msgid "Pset_DistributionPortPHistoryCable_DataTransmitted"
+msgstr "Datenübertragung"
+
+msgid "Pset_DistributionPortPHistoryCable_DataTransmitted_DEFINITION"
+msgstr "Für Datenportale erfasst Datenprotokoll übertragene Daten. Die LIST unter [[IfcTimeSeriesValue]].Werte können Daten gemäß Pset DistributionPortTypeCable.Protocols aufteilen."
+
+#:IFC.xml:37513
+msgid "Pset_DistributionPortPHistoryCable_PowerFactor"
+msgstr "Pset_ElectricalDeviceCommon_Leistungsfaktor"
+
+msgid "Pset_DistributionPortPHistoryCable_PowerFactor_DEFINITION"
+msgstr "Das Verhältnis zwischen der elektrischen Nennleistung und dem Produkt aus Nennstrom und Nennspannung."
+
+#:IFC.xml:37518
+msgid "Pset_DistributionPortPHistoryCable_ReactivePower"
+msgstr "ReactivePower"
+
+msgid "Pset_DistributionPortPHistoryCable_ReactivePower_DEFINITION"
+msgstr "Reaktive Macht."
+
+#:IFC.xml:37523
+msgid "Pset_DistributionPortPHistoryCable_RealPower"
+msgstr "Realkraft"
+
+msgid "Pset_DistributionPortPHistoryCable_RealPower_DEFINITION"
+msgstr "Wirkliche Macht."
+
+#:IFC.xml:37528
+msgid "Pset_DistributionPortPHistoryCable_Voltage"
+msgstr "Spannung"
+
+msgid "Pset_DistributionPortPHistoryCable_Voltage_DEFINITION"
+msgstr "Die aktuelle Spannung und der bedienerbare Bereich."
+
+#:IFC.xml:37534
+msgid "Pset_DistributionPortPHistoryDuct"
+msgstr "Pset DistributionPortPHistoryDuct"
+
+msgid "Pset_DistributionPortPHistoryDuct_DEFINITION"
+msgstr "Fluidfluss-Performance-Historie angehängt an eine Instanz von [[IfcPerformanceHistory]], die [[IfcDistributionPort]] zugeordnet ist. Dies ersetzt die veralteten IfcFluidFlowProperties für Leistungswerte."
+
+#:IFC.xml:37535
+msgid "Pset_DistributionPortPHistoryDuct_FlowCondition"
+msgstr "Flow-Bedingung"
+
+msgid "Pset_DistributionPortPHistoryDuct_FlowCondition_DEFINITION"
+msgstr "Definiert den Strömungszustand als Prozentsatz des Querschnittsbereichs."
+
+#:IFC.xml:37540
+msgid "Pset_DistributionPortPHistoryDuct_MassFlowRate"
+msgstr "Massflussrate"
+
+msgid "Pset_DistributionPortPHistoryDuct_MassFlowRate_DEFINITION"
+msgstr "Die Massenflussrate der Flüssigkeit."
+
+#:IFC.xml:37545
+msgid "Pset_DistributionPortPHistoryDuct_Pressure"
+msgstr "Druck"
+
+msgid "Pset_DistributionPortPHistoryDuct_Pressure_DEFINITION"
+msgstr "Der Druck der Flüssigkeit."
+
+#:IFC.xml:37550
+msgid "Pset_DistributionPortPHistoryDuct_Temperature"
+msgstr "Pset_UnitaryControlElementPHistory_Temperatur"
+
+msgid "Pset_DistributionPortPHistoryDuct_Temperature_DEFINITION"
+msgstr "Temperatur der Flüssigkeit. Für Luft entspricht dieser Wert der trockenen Glühbirnentemperatur."
+
+#:IFC.xml:37555
+msgid "Pset_DistributionPortPHistoryDuct_Velocity"
+msgstr "Geschwindigkeit"
+
+msgid "Pset_DistributionPortPHistoryDuct_Velocity_DEFINITION"
+msgstr "Die Geschwindigkeit der Flüssigkeit."
+
+#:IFC.xml:37560
+msgid "Pset_DistributionPortPHistoryDuct_VolumetricFlowRate"
+msgstr "VolumetricFlowRate"
+
+msgid "Pset_DistributionPortPHistoryDuct_VolumetricFlowRate_DEFINITION"
+msgstr "Die volumetrische Durchflussrate der Flüssigkeit."
+
+#:IFC.xml:37565
+msgid "Pset_DistributionPortPHistoryDuct_WetBulbTemperature"
+msgstr "WetBulbtemperatur"
+
+msgid "Pset_DistributionPortPHistoryDuct_WetBulbTemperature_DEFINITION"
+msgstr "Nasszwiebeltemperatur der Flüssigkeit ist nur anwendbar, wenn die Flüssigkeit Luft ist."
+
+#:IFC.xml:37571
+msgid "Pset_DistributionPortPHistoryPipe"
+msgstr "Pset DistributionPortPHistoryPipe"
+
+msgid "Pset_DistributionPortPHistoryPipe_DEFINITION"
+msgstr "Protokoll der Verwendung von Substanzen, die an eine Instanz von [[IfcPerformanceHistory]] angeschlossen sind, die eine [[IfcDistributionPort]] des Typs PIPE zugewiesen hat."
+
+#:IFC.xml:37572
+msgid "Pset_DistributionPortPHistoryPipe_Flowrate"
+msgstr "Pset_PumpPHistory_Durchflussmenge"
+
+msgid "Pset_DistributionPortPHistoryPipe_Flowrate_DEFINITION"
+msgstr "Der aktuelle Betriebsmitteldurchfluss."
+
+#:IFC.xml:37577
+msgid "Pset_DistributionPortPHistoryPipe_Pressure"
+msgstr "Druck"
+
+msgid "Pset_DistributionPortPHistoryPipe_Pressure_DEFINITION"
+msgstr "Der Druck der Flüssigkeit."
+
+#:IFC.xml:37582
+msgid "Pset_DistributionPortPHistoryPipe_Temperature"
+msgstr "Pset_UnitaryControlElementPHistory_Temperatur"
+
+msgid "Pset_DistributionPortPHistoryPipe_Temperature_DEFINITION"
+msgstr "Temperatur der Flüssigkeit. Für Luft entspricht dieser Wert der trockenen Glühbirnentemperatur."
+
+#:IFC.xml:37588
+msgid "Pset_DistributionPortTypeCable"
+msgstr "Pset DistributionPortTypeCable"
+
+msgid "Pset_DistributionPortTypeCable_DEFINITION"
+msgstr "Vorkommen von Kabelport-Attributen an eine Instanz von [[IfcDistributionPort]]."
+
+#:IFC.xml:37589
+msgid "Pset_DistributionPortTypeCable_ConductorFunction"
+msgstr "Pset_ElectricalDeviceCommon_Leiterfunktion"
+
+msgid "Pset_DistributionPortTypeCable_ConductorFunction_DEFINITION"
+msgstr "Funktion eines Linienleiters, an den ein Gerät  angeschlossen werden soll, wobei L1, L2 und L3 die Phasenlinien nach der IEC 60446-Notation darstellen (manchmal können Phasenlinien durch die Farbe[Rot, Blau, Gelb] oder durch die Nummer[1, 2, 3] usw. referenziert werden)."
+
+#:IFC.xml:37594
+msgid "Pset_DistributionPortTypeCable_ConnectionGender"
+msgstr "Verbindung Geschlecht"
+
+msgid "Pset_DistributionPortTypeCable_ConnectionGender_DEFINITION"
+msgstr "Das Geschlecht der physischen Verbindung."
+
+#:IFC.xml:37599
+msgid "Pset_DistributionPortTypeCable_ConnectionSubtype"
+msgstr "Verbindung-Untertyp"
+
+msgid "Pset_DistributionPortTypeCable_ConnectionSubtype_DEFINITION"
+msgstr "Verbindung-Untertyp"
+
+#:IFC.xml:37604
+msgid "Pset_DistributionPortTypeCable_ConnectionType"
+msgstr "Verbindungstyp"
+
+msgid "Pset_DistributionPortTypeCable_ConnectionType_DEFINITION"
+msgstr "Die End-Stil-Behandlung des Schlingport BEADEDSLEEVE Beaded Sleeve. COMPRESSION Kompression. CRIMP Crimp. DRAWBAND Drawband. DRIVESLIP Laufwerk Flangiert. OUTSIDESLEEVE Außenschlund. SLIPON Slipon. SOLDERED Soldered. SSLIP S Slip. STANDINGSEAM Stehende Naht. SWEDGE Swedge. WILLSCHWEIZ geschweißt. Ein anderer Endstil wurde angewendet. Es wurde kein Endstil angewendet."
+
+#:IFC.xml:37609
+msgid "Pset_DistributionPortTypeCable_Current"
+msgstr "Aktuell"
+
+msgid "Pset_DistributionPortTypeCable_Current_DEFINITION"
+msgstr "Der aktuelle Strom- und Bedienungsbereich."
+
+#:IFC.xml:37614
+msgid "Pset_DistributionPortTypeCable_CurrentContent3rdHarmonic"
+msgstr "Aktuelle Inhalte3rdHarmonic"
+
+msgid "Pset_DistributionPortTypeCable_CurrentContent3rdHarmonic_DEFINITION"
+msgstr "Das Verhältnis zwischen dem dritten Harmonischen Strom und dem Phasenstrom."
+
+#:IFC.xml:37619
+msgid "Pset_DistributionPortTypeCable_Power"
+msgstr "Pset_PumpPHistory_Leistung"
+
+msgid "Pset_DistributionPortTypeCable_Power_DEFINITION"
+msgstr "Die tatsächliche Leistungsaufnahme der Pumpe."
+
+#:IFC.xml:37624
+msgid "Pset_DistributionPortTypeCable_Protocols"
+msgstr "Protocols"
+
+msgid "Pset_DistributionPortTypeCable_Protocols_DEFINITION"
+msgstr "Für Daten-Ports werden die Protokolle identifiziert, die gemäß dem Open System Interconnection OSI Basic Reference Model ISO 7498 verwendet werden. Layers include 1. Physical 2. DataLink 3. Network 4. Transport 5. Sitzung 6. Präsentation 7. Anwendung. Beispiel 3 IP, 4 TCP, 5 HTTP HTTP"
+
+#:IFC.xml:37629
+msgid "Pset_DistributionPortTypeCable_Voltage"
+msgstr "Spannung"
+
+msgid "Pset_DistributionPortTypeCable_Voltage_DEFINITION"
+msgstr "Die aktuelle Spannung und der bedienerbare Bereich."
+
+#:IFC.xml:37635
+msgid "Pset_DistributionPortTypeDuct"
+msgstr "Pset DistributionPortTypeDuct"
+
+msgid "Pset_DistributionPortTypeDuct_DEFINITION"
+msgstr "Vorkommen eines Duck-Ports Attribute angehängt an eine Instanz von [[IfcDistributionPort]]."
+
+#:IFC.xml:37636
+msgid "Pset_DistributionPortTypeDuct_ConnectionSubType"
+msgstr "Verbindung-Untertyp"
+
+msgid "Pset_DistributionPortTypeDuct_ConnectionSubType_DEFINITION"
+msgstr "Der physikalische Port Verbindung, der den Verbindungstyp weiter qualifiziert. Die folgenden Werte werden empfohlen ACPLUG A, B, C, D, E, F, EF, G, H, I, J, K, L, M DIN Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P DSub DA15, DB25, DC37, DD50, DE9, DE15 EIAJ RC5720 HDMI A, B, C RADIO IEEE802. 1g, IEEE802. 1n RJ 4P4C, 6P2C, 8P8C SOCKET E 11, E 12, E 14, E 17, E 26, G 27, E 39, E 40 TRS TS Mini, TS SubMini, TRS Mini, TRS SubMini"
+
+#:IFC.xml:37641
+msgid "Pset_DistributionPortTypeDuct_ConnectionType"
+msgstr "Verbindungstyp"
+
+msgid "Pset_DistributionPortTypeDuct_ConnectionType_DEFINITION"
+msgstr "Die End-Stil-Behandlung des Schlingport BEADEDSLEEVE Beaded Sleeve. COMPRESSION Kompression. CRIMP Crimp. DRAWBAND Drawband. DRIVESLIP Laufwerk Flangiert. OUTSIDESLEEVE Außenschlund. SLIPON Slipon. SOLDERED Soldered. SSLIP S Slip. STANDINGSEAM Stehende Naht. SWEDGE Swedge. WILLSCHWEIZ geschweißt. Ein anderer Endstil wurde angewendet. Es wurde kein Endstil angewendet."
+
+#:IFC.xml:37646
+msgid "Pset_DistributionPortTypeDuct_DryBulbTemperature"
+msgstr "DryBulbtemperatur"
+
+msgid "Pset_DistributionPortTypeDuct_DryBulbTemperature_DEFINITION"
+msgstr "Belastung durch die Temperatur der Trockenkugel."
+
+#:IFC.xml:37651
+msgid "Pset_DistributionPortTypeDuct_NominalHeight"
+msgstr "Pset_CableCarrierSegmentTypeCableLadderSegment_Nennhöhe"
+
+msgid "Pset_DistributionPortTypeDuct_NominalHeight_DEFINITION"
+msgstr "Bei Inkonsistenzen zwischen den geometrischen Parametern und den Größeneigenschaften, die im beigefügten Property-Set angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37656
+msgid "Pset_DistributionPortTypeDuct_NominalThickness"
+msgstr "Nominaldicke"
+
+msgid "Pset_DistributionPortTypeDuct_NominalThickness_DEFINITION"
+msgstr "Die Nenndicke des Objekts. Bei Inkonsistenz zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37661
+msgid "Pset_DistributionPortTypeDuct_NominalWidth"
+msgstr "Pset_CableCarrierSegmentTypeCableLadderSegment_Nennbreite"
+
+msgid "Pset_DistributionPortTypeDuct_NominalWidth_DEFINITION"
+msgstr "Bei Inkonsistenzen zwischen den geometrischen Parametern und den Größeneigenschaften, die im beigefügten Property-Set angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:37666
+msgid "Pset_DistributionPortTypeDuct_Pressure"
+msgstr "Druck"
+
+msgid "Pset_DistributionPortTypeDuct_Pressure_DEFINITION"
+msgstr "Der Druck der Flüssigkeit."
+
+#:IFC.xml:37671
+msgid "Pset_DistributionPortTypeDuct_Velocity"
+msgstr "Geschwindigkeit"
+
+msgid "Pset_DistributionPortTypeDuct_Velocity_DEFINITION"
+msgstr "Die Geschwindigkeit der Flüssigkeit."
+
+#:IFC.xml:37676
+msgid "Pset_DistributionPortTypeDuct_VolumetricFlowRate"
+msgstr "VolumetricFlowRate"
+
+msgid "Pset_DistributionPortTypeDuct_VolumetricFlowRate_DEFINITION"
+msgstr "Die volumetrische Durchflussrate der Flüssigkeit."
+
+#:IFC.xml:37681
+msgid "Pset_DistributionPortTypeDuct_WetBulbTemperature"
+msgstr "WetBulbtemperatur"
+
+msgid "Pset_DistributionPortTypeDuct_WetBulbTemperature_DEFINITION"
+msgstr "Nasszwiebeltemperatur der Flüssigkeit ist nur anwendbar, wenn die Flüssigkeit Luft ist."
+
+#:IFC.xml:37687
+msgid "Pset_DistributionPortTypePipe"
+msgstr "Pset DistributionPortTypePipe"
+
+msgid "Pset_DistributionPortTypePipe_DEFINITION"
+msgstr "Vorkommen von Pipe-Port-Attributen an eine Instanz von [[IfcDistributionPort]]."
+
+#:IFC.xml:37688
+msgid "Pset_DistributionPortTypePipe_ConnectionSubType"
+msgstr "Verbindung-Untertyp"
+
+msgid "Pset_DistributionPortTypePipe_ConnectionSubType_DEFINITION"
+msgstr "Der physikalische Port Verbindung, der den Verbindungstyp weiter qualifiziert. Die folgenden Werte werden empfohlen ACPLUG A, B, C, D, E, F, EF, G, H, I, J, K, L, M DIN Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P DSub DA15, DB25, DC37, DD50, DE9, DE15 EIAJ RC5720 HDMI A, B, C RADIO IEEE802. 1g, IEEE802. 1n RJ 4P4C, 6P2C, 8P8C SOCKET E 11, E 12, E 14, E 17, E 26, G 27, E 39, E 40 TRS TS Mini, TS SubMini, TRS Mini, TRS SubMini"
+
+#:IFC.xml:37693
+msgid "Pset_DistributionPortTypePipe_ConnectionType"
+msgstr "Verbindungstyp"
+
+msgid "Pset_DistributionPortTypePipe_ConnectionType_DEFINITION"
+msgstr "Die End-Stil-Behandlung des Schlingport BEADEDSLEEVE Beaded Sleeve. COMPRESSION Kompression. CRIMP Crimp. DRAWBAND Drawband. DRIVESLIP Laufwerk Flangiert. OUTSIDESLEEVE Außenschlund. SLIPON Slipon. SOLDERED Soldered. SSLIP S Slip. STANDINGSEAM Stehende Naht. SWEDGE Swedge. WILLSCHWEIZ geschweißt. Ein anderer Endstil wurde angewendet. Es wurde kein Endstil angewendet."
+
+#:IFC.xml:37698
+msgid "Pset_DistributionPortTypePipe_FlowCondition"
+msgstr "Flow-Bedingung"
+
+msgid "Pset_DistributionPortTypePipe_FlowCondition_DEFINITION"
+msgstr "Definiert den Strömungszustand als Prozentsatz des Querschnittsbereichs."
+
+#:IFC.xml:37703
+msgid "Pset_DistributionPortTypePipe_InnerDiameter"
+msgstr "Pset_PipeSegmentTypeCommon_Innendurchmesser"
+
+msgid "Pset_DistributionPortTypePipe_InnerDiameter_DEFINITION"
+msgstr "Der tatsächliche Innendurchmesser des Rohres."
+
+#:IFC.xml:37708
+msgid "Pset_DistributionPortTypePipe_MassFlowRate"
+msgstr "Massflussrate"
+
+msgid "Pset_DistributionPortTypePipe_MassFlowRate_DEFINITION"
+msgstr "Die Massenflussrate der Flüssigkeit."
+
+#:IFC.xml:37713
+msgid "Pset_DistributionPortTypePipe_NominalDiameter"
+msgstr "Pset_PipeSegmentTypeCommon_Nenndurchmesser"
+
+msgid "Pset_DistributionPortTypePipe_NominalDiameter_DEFINITION"
+msgstr "Nenndurchmesser oder -breite der Rohre im Rohrbündel."
+
+#:IFC.xml:37718
+msgid "Pset_DistributionPortTypePipe_OuterDiameter"
+msgstr "Pset_PipeSegmentTypeCommon_Außendurchmesser"
+
+msgid "Pset_DistributionPortTypePipe_OuterDiameter_DEFINITION"
+msgstr "Der tatsächliche Außendurchmesser des Rohres."
+
+#:IFC.xml:37723
+msgid "Pset_DistributionPortTypePipe_Pressure"
+msgstr "Druck"
+
+msgid "Pset_DistributionPortTypePipe_Pressure_DEFINITION"
+msgstr "Der Druck der Flüssigkeit."
+
+#:IFC.xml:37728
+msgid "Pset_DistributionPortTypePipe_Temperature"
+msgstr "Pset_UnitaryControlElementPHistory_Temperatur"
+
+msgid "Pset_DistributionPortTypePipe_Temperature_DEFINITION"
+msgstr "Temperatur der Flüssigkeit. Für Luft entspricht dieser Wert der trockenen Glühbirnentemperatur."
+
+#:IFC.xml:37733
+msgid "Pset_DistributionPortTypePipe_Velocity"
+msgstr "Geschwindigkeit"
+
+msgid "Pset_DistributionPortTypePipe_Velocity_DEFINITION"
+msgstr "Die Geschwindigkeit der Flüssigkeit."
+
+#:IFC.xml:37738
+msgid "Pset_DistributionPortTypePipe_VolumetricFlowRate"
+msgstr "VolumetricFlowRate"
+
+msgid "Pset_DistributionPortTypePipe_VolumetricFlowRate_DEFINITION"
+msgstr "Die volumetrische Durchflussrate der Flüssigkeit."
+
+#:IFC.xml:37744
+msgid "Pset_DistributionSystemCommon"
+msgstr "Pset DistributionSystemCommon"
+
+msgid "Pset_DistributionSystemCommon_DEFINITION"
+msgstr "Vorkommnisse des Verteilungssystems sind an eine Instanz von [[IfcDistributionSystem] angehängt."
+
+#:IFC.xml:37745
+msgid "Pset_DistributionSystemCommon_Reference"
+msgstr "Pset_ActuatorTypeCommon_Referenz"
+
+msgid "Pset_DistributionSystemCommon_Reference_DEFINITION"
+msgstr "Referenz-ID für diesen spezifizierten Typ in diesem Projekt z.B. Typ A 1 , auch als Bauart bezeichnet. Es sollte als Alternative zum Namen des Objekttyps bereitgestellt werden, wenn die Software keine Objekttypen unterstützt."
+
+#:IFC.xml:37751
+msgid "Pset_DistributionSystemTypeElectrical"
+msgstr "Pset DistributionSystemTypeElectrical"
+
+msgid "Pset_DistributionSystemTypeElectrical_DEFINITION"
+msgstr "Eigenschaften von Stromkreisen."
+
+#:IFC.xml:37752
+msgid "Pset_DistributionSystemTypeElectrical_Diversity"
+msgstr "Pset_DistributionSystemTypeElectrical_Ungleichzeitigkeit der Stromverbrauchsspitzen"
+
+msgid "Pset_DistributionSystemTypeElectrical_Diversity_DEFINITION"
+msgstr "Das Verhältnis, ausgedrückt als numerical value oder als Prozentsatz, von the simultaneous maximale Nachfrage of a Gruppe von Elektrogeräten or consumers innerhalb eines bestimmten Zeitraums,  to die Summe ihrer einzelnen maximum demands innerhalb der same period. Die Gruppe von Elektrogeräten ist in diesem Fall mit diesem Stromkreis verbunden."
+
+#:IFC.xml:37757
+msgid "Pset_DistributionSystemTypeElectrical_ElectricalSystemCategory"
+msgstr "Pset_DistributionSystemTypeElectrical_Elektroanlagenkategorie"
+
+msgid "Pset_DistributionSystemTypeElectrical_ElectricalSystemCategory_DEFINITION"
+msgstr "Bezeichnet den Spannungsbereich des Stromkreises, gemäß IEC.  HIGHVOLTAGE bedeutet >1000V AC oder >1500V DV; LOWVOLTAGE bedeutet 50-1000V AC oder 120-1500V DC; EXTRALOWVOLTAGE bedeutet <50V AC oder <120V DC."
+
+#:IFC.xml:37762
+msgid "Pset_DistributionSystemTypeElectrical_ElectricalSystemType"
+msgstr "Pset_DistributionSystemTypeElectrical_Elektroanlagentyp"
+
+msgid "Pset_DistributionSystemTypeElectrical_ElectricalSystemType_DEFINITION"
+msgstr "Für bestimmte Zwecke von elektrischen Vorschriften definiert IEC 60364 Systemtypen mit Typbezeichen. Die Zuordnung von Identifikatoren hängt vom Verhältnis der Quelle und der exponierten leitenden Teile der Installation zur Erde ab. Identifikatoren, die durch IEC 60364 zugewiesen werden können sind TN-Typsystem, ein System, das einen oder mehrere Punkte der Energiequelle direkt Erden hat die belichteten leitenden Teile der Installation, die durch Schutzleiter, an diesen Punkt angeschlossen werden TN C Typsystem, ein TN Typsystem, in dem neutrale und schützende Funktionen im gesamten System in einem einzigen Leiter kombiniert werden Typ TN S System, ein TN System mit separaten Neutral- und Schutzleitern im gesamten System, TN C S System ein TN-System, in dem neutrale und schützende Funktionen in einem einzigen Leiter in einem Teil des Systems kombiniert werden TT-System, ein System mit einem Punkt der Energiequelle direkt Erde, die exponierten leitenden Teile der Installation, die an Erdelektroden angeschlossen sind, elektrisch unabhängig von den Erdelektroden der Quelle, IT-Typsystem, ein System ohne direkte Verbindung zwischen lebenden Teilen und Erde, die belichteten leitenden Teile der elektrischen Installation."
+
+#:IFC.xml:37767
+msgid "Pset_DistributionSystemTypeElectrical_MaximumAllowedVoltageDrop"
+msgstr "Pset_DistributionSystemTypeElectrical_Maximal zulässiger Spannungsabfall"
+
+msgid "Pset_DistributionSystemTypeElectrical_MaximumAllowedVoltageDrop_DEFINITION"
+msgstr "Der maximale Spannungsabfall über den Stromkreis darf nicht überschritten werden. There sind zwei einstellbare Grenzwerte für den Spannungsabfall, eine für die Unterhauptstromkreise und eine für die Endstromkreise in jedem Verteilerkreis und eine für die Endstromkreise, die mit dieser Platine verbunden sind, wobei die Einstellungen den gesamten Spannungsabfall auf den erforderlichen Wert begrenzen sollen. 1,5 % für die Unterhauptstromkreise und 2,5 % für die Endstromkreise, was eine Gesamtgrenze von 4 % ergibt, können verwendet werden. NOTE: Dieser Wert kann ebenfalls angegeben werden."
+
+#:IFC.xml:37772
+msgid "Pset_DistributionSystemTypeElectrical_NetImpedance"
+msgstr "Pset_DistributionSystemTypeElectrical_Netzimpedanz"
+
+msgid "Pset_DistributionSystemTypeElectrical_NetImpedance_DEFINITION"
+msgstr "Die maximale Erdschleifenimpedanz vor einem Stromkreis (typischerweise angegeben als Variable Zs), die bei 55o C (130oF) Celsius verwendet wird."
+
+#:IFC.xml:37777
+msgid "Pset_DistributionSystemTypeElectrical_NumberOfLiveConductors"
+msgstr "Pset_DistributionSystemTypeElectrical_Anzahl stromführender Leiter"
+
+msgid "Pset_DistributionSystemTypeElectrical_NumberOfLiveConductors_DEFINITION"
+msgstr "Anzahl der spannungsführenden Leiter innerhalb dieses Stromkreises, wobei entweder diese Eigenschaft oder die Eigenschaft ConductorFunction (falls nur einer vorhanden ist) geltend gemacht werden kann."
+
+#:IFC.xml:37783
+msgid "Pset_DistributionSystemTypeVentilation"
+msgstr "Pset DistributionSystemTypeVentilation"
+
+msgid "Pset_DistributionSystemTypeVentilation_DEFINITION"
+msgstr "Dieser Eigenschaftssatz wird verwendet, um die allgemeinen Eigenschaften der Lenkungsparameter innerhalb eines Systems zu definieren. HISTORY Neue Eigenschaft in IFC Release 2.0. Umbenannt aus Pset DuctDesignCriteria in IFC4."
+
+#:IFC.xml:37784
+msgid "Pset_DistributionSystemTypeVentilation_AspectRatio"
+msgstr "Pset_DistributionSystemTypeVentilation_Seitenverhältnis"
+
+msgid "Pset_DistributionSystemTypeVentilation_AspectRatio_DEFINITION"
+msgstr "Das Standardseitenverhältnis."
+
+#:IFC.xml:37789
+msgid "Pset_DistributionSystemTypeVentilation_DesignName"
+msgstr "Pset_DistributionSystemTypeVentilation_Entwurf - Name"
+
+msgid "Pset_DistributionSystemTypeVentilation_DesignName_DEFINITION"
+msgstr "Ein Name für die Bemessungswerte."
+
+#:IFC.xml:37794
+msgid "Pset_DistributionSystemTypeVentilation_DuctSealant"
+msgstr "Pset_DistributionSystemTypeVentilation_Kanaldichtmittel"
+
+msgid "Pset_DistributionSystemTypeVentilation_DuctSealant_DEFINITION"
+msgstr "Art der Dichtungsmasse, die für den Kanal und die Armaturen verwendet wird."
+
+#:IFC.xml:37799
+msgid "Pset_DistributionSystemTypeVentilation_DuctSizingMethod"
+msgstr "Pset_DistributionSystemTypeVentilation_Methode der Kanaldimensionierung"
+
+msgid "Pset_DistributionSystemTypeVentilation_DuctSizingMethod_DEFINITION"
+msgstr "Aufzählung, die die zu verwendende Methodik zur Dimensionierung von Systemkomponenten identifiziert."
+
+#:IFC.xml:37804
+msgid "Pset_DistributionSystemTypeVentilation_FrictionLoss"
+msgstr "Pset_DistributionSystemTypeVentilation_Reibungsverlust"
+
+msgid "Pset_DistributionSystemTypeVentilation_FrictionLoss_DEFINITION"
+msgstr "Der Druckverlust durch Reibung pro Längeneinheit (Datentyp = PressureMeasure/LengthMeasure)."
+
+#:IFC.xml:37809
+msgid "Pset_DistributionSystemTypeVentilation_LeakageClass"
+msgstr "Pset_DistributionSystemTypeVentilation_Leckageklasse"
+
+msgid "Pset_DistributionSystemTypeVentilation_LeakageClass_DEFINITION"
+msgstr "Nominale Leckrate für die Systemkomponenten."
+
+#:IFC.xml:37814
+msgid "Pset_DistributionSystemTypeVentilation_MaximumVelocity"
+msgstr "Pset_DistributionSystemTypeVentilation_Maximalgeschwindigkeit"
+
+msgid "Pset_DistributionSystemTypeVentilation_MaximumVelocity_DEFINITION"
+msgstr "Die maximale Auslegungsgeschwindigkeit der Luft im Kanal oder Fitting."
+
+#:IFC.xml:37819
+msgid "Pset_DistributionSystemTypeVentilation_MinimumHeight"
+msgstr "Pset_DistributionSystemTypeVentilation_Mindesthöhe"
+
+msgid "Pset_DistributionSystemTypeVentilation_MinimumHeight_DEFINITION"
+msgstr "Die minimale Kanalhöhe für rechteckige, ovale oder runde Kanäle."
+
+#:IFC.xml:37824
+msgid "Pset_DistributionSystemTypeVentilation_MinimumWidth"
+msgstr "Pset_DistributionSystemTypeVentilation_Mindestbreite"
+
+msgid "Pset_DistributionSystemTypeVentilation_MinimumWidth_DEFINITION"
+msgstr "Die minimale Kanalbreite für ovale oder rechteckige Kanäle."
+
+#:IFC.xml:37829
+msgid "Pset_DistributionSystemTypeVentilation_PressureClass"
+msgstr "Pset_DuctFittingTypeCommon_Druckklasse"
+
+msgid "Pset_DistributionSystemTypeVentilation_PressureClass_DEFINITION"
+msgstr "Druckklassifizierung gemäß der Definition der zuständigen Behörde (z.B. SMACNA, etc.)."
+
+#:IFC.xml:37834
+msgid "Pset_DistributionSystemTypeVentilation_ScrapFactor"
+msgstr "Pset_DistributionSystemTypeVentilation_Ausschussfaktor"
+
+msgid "Pset_DistributionSystemTypeVentilation_ScrapFactor_DEFINITION"
+msgstr "Blechschrottfaktor."
+
+#:IFC.xml:37840
+msgid "Pset_OutsideDesignCriteria"
+msgstr "Pset OutsideDesignKriterien"
+
+msgid "Pset_OutsideDesignCriteria_DEFINITION"
+msgstr "Außenluftbedingungen, die als Basis für die Berechnung der thermischen Lasten bei Spitzenbedingungen verwendet werden sowie die Wetterdatensatz, von der aus diese Bedingungen bezogen wurden. HISTORY Neue Eigenschaft in IFC Release 1.0."
+
+#:IFC.xml:37841
+msgid "Pset_OutsideDesignCriteria_BuildingThermalExposure"
+msgstr "Pset_OutsideDesignCriteria_Gebäude - thermische Exposition"
+
+msgid "Pset_OutsideDesignCriteria_BuildingThermalExposure_DEFINITION"
+msgstr "Die vom Gebäude erwartete thermische Belastung aufgrund der Umgebungsbedingungen."
+
+#:IFC.xml:37846
+msgid "Pset_OutsideDesignCriteria_CoolingDesignDay"
+msgstr "Pset_OutsideDesignCriteria_Kühlung - Entwurfsdatum"
+
+msgid "Pset_OutsideDesignCriteria_CoolingDesignDay_DEFINITION"
+msgstr "Der Monat, der Tag und die Uhrzeit, die für die Berechnungen des Kühlungsdesigns ausgewählt wurden."
+
+#:IFC.xml:37851
+msgid "Pset_OutsideDesignCriteria_CoolingDryBulb"
+msgstr "Pset_OutsideDesignCriteria_Kühlung - Trockentemperatur"
+
+msgid "Pset_OutsideDesignCriteria_CoolingDryBulb_DEFINITION"
+msgstr "Außentemperatur der trockenen Glühbirne zur Kühlung."
+
+#:IFC.xml:37856
+msgid "Pset_OutsideDesignCriteria_CoolingWetBulb"
+msgstr "Pset_OutsideDesignCriteria_Kühlung - Nasstemperatur"
+
+msgid "Pset_OutsideDesignCriteria_CoolingWetBulb_DEFINITION"
+msgstr "Außentemperatur der Feuchtkugel zur Kühlung."
+
+#:IFC.xml:37861
+msgid "Pset_OutsideDesignCriteria_HeatingDesignDay"
+msgstr "Pset_OutsideDesignCriteria_Heizung - Entwurfsdatum"
+
+msgid "Pset_OutsideDesignCriteria_HeatingDesignDay_DEFINITION"
+msgstr "Monat, Tag und Uhrzeit, die für die Berechnungen der Heizungsauslegung ausgewählt wurden."
+
+#:IFC.xml:37866
+msgid "Pset_OutsideDesignCriteria_HeatingDryBulb"
+msgstr "Pset_OutsideDesignCriteria_Heizung - Trockentemperatur"
+
+msgid "Pset_OutsideDesignCriteria_HeatingDryBulb_DEFINITION"
+msgstr "Außentemperatur der trockenen Glühlampe für die Auslegung der Heizung."
+
+#:IFC.xml:37871
+msgid "Pset_OutsideDesignCriteria_HeatingWetBulb"
+msgstr "Pset_OutsideDesignCriteria_Heizung - Nasstemperatur"
+
+msgid "Pset_OutsideDesignCriteria_HeatingWetBulb_DEFINITION"
+msgstr "Außentemperatur der Feuchtkugel für die Auslegung der Heizung."
+
+#:IFC.xml:37876
+msgid "Pset_OutsideDesignCriteria_PrevailingWindDirection"
+msgstr "Pset_OutsideDesignCriteria_Hauptwindrichtung"
+
+msgid "Pset_OutsideDesignCriteria_PrevailingWindDirection_DEFINITION"
+msgstr "Die vorherrschende Windwinkelrichtung, gemessen von True North (0 Grad) im Uhrzeigersinn."
+
+#:IFC.xml:37881
+msgid "Pset_OutsideDesignCriteria_PrevailingWindVelocity"
+msgstr "Pset_OutsideDesignCriteria_Hauptwindgeschwindigkeit"
+
+msgid "Pset_OutsideDesignCriteria_PrevailingWindVelocity_DEFINITION"
+msgstr "Die Bemessungswindgeschwindigkeit aus der Richtung, die durch das Attribut PrevailingWindDirection vorgegeben ist."
+
+#:IFC.xml:37886
+msgid "Pset_OutsideDesignCriteria_WeatherDataDate"
+msgstr "Pset_OutsideDesignCriteria_Wetterdaten - Datum"
+
+msgid "Pset_OutsideDesignCriteria_WeatherDataDate_DEFINITION"
+msgstr "Das Datum, zu dem die Wetterdaten erfasst wurden."
+
+#:IFC.xml:37891
+msgid "Pset_OutsideDesignCriteria_WeatherDataStation"
+msgstr "Pset_OutsideDesignCriteria_Wetterdatenstation"
+
+msgid "Pset_OutsideDesignCriteria_WeatherDataStation_DEFINITION"
+msgstr "Die Beschreibung der Standortwetterstation oder Verweis auf die Datenquelle, aus der die Wetterdaten für Berechnungen gewonnen wurden."
+
+#:IFC.xml:37897
+msgid "Pset_SoundAttenuation"
+msgstr "TonAttenuation angeben"
+
+msgid "Pset_SoundAttenuation_DEFINITION"
+msgstr "Gemeinsame Definition zur Erfassung von Schalldruck an einem Punkt im Auftrag eines Geräts, das typischerweise im Kontext von Gebäudediensten und Flussverteilungssystemen verwendet wird. Tonwerte von einer Instanz von [[IfcDistributionFlowElement]] an einem bestimmten Ort angeben [[IfcAnnotation]] Instanz s sollte der [[IfcDistributionFlowElement]] durch die [[IfcRelAssignsToProduct]] Beziehung zugewiesen werden. Das [[IfcAnnotation]] sollte ObjectType of Sound und geometrische Darstellung von Annotation Point angeben, der aus einem einzigen [[IfcPoint]] Subtyp besteht, wie unter [[IfcAnnotation]]. Diese Eigenschaftsmenge wird mehrfach auf einem Objekt für jedes Frequenzband instanziiert. HISTORY Neue Eigenschaft gesetzt in IFC Release 2x4."
+
+#:IFC.xml:37898
+msgid "Pset_SoundAttenuation_SoundFrequency"
+msgstr "Pset_SoundAttenuation_Schallfrequenz"
+
+msgid "Pset_SoundAttenuation_SoundFrequency_DEFINITION"
+msgstr "Liste der nominalen Schallfrequenzen, korreliert mit den Werten der SoundPressure-Zeitreihen (IfcTimeSeries.ListValues)"
+
+#:IFC.xml:37903
+msgid "Pset_SoundAttenuation_SoundPressure"
+msgstr "Pset_SoundAttenuation_Schalldruck"
+
+msgid "Pset_SoundAttenuation_SoundPressure_DEFINITION"
+msgstr "Eine Zeitreihe von Schalldruckwerten, die in Dezibel bei einem Bezugsdruck von 20 microPascal für die referenzierte Oktavbandfrequenz gemessen werden.  Jeder Wert in IfcTimeSeries.ListValues wird mit der Schallfrequenz an der gleichen Stelle innerhalb von SoundFrequencies korreliert."
+
+#:IFC.xml:37908
+msgid "Pset_SoundAttenuation_SoundScale"
+msgstr "Pset_SoundAttenuation_Lautstärkeskala"
+
+msgid "Pset_SoundAttenuation_SoundScale_DEFINITION"
+msgstr "Die Referenz-Tonskala.DBA: Dezibel in einem A-bewerteten scale DBB: Dezibel in einem B-bewerteten scale DBC: Dezibel in einem C-bewerteten scale NC: Rauschen criteriaNR: Rauschbewertung"
+
+#:IFC.xml:37914
+msgid "Pset_SoundGeneration"
+msgstr "Pset Soundgenerierung"
+
+msgid "Pset_SoundGeneration_DEFINITION"
+msgstr "Gemeinsame Definition zur Erfassung der Eigenschaften von Klang, die typischerweise im Kontext von Gebäudediensten und Flussverteilungssystemen verwendet werden. Diese Eigenschaftsmenge wird mehrfach auf einem Objekt für jedes Frequenzband instanziiert. HISTORY Neue Eigenschaft gesetzt in IFC Release 2x4."
+
+#:IFC.xml:37915
+msgid "Pset_SoundGeneration_SoundCurve"
+msgstr "Pset_CoilPHistory_SoundCurve"
+
+msgid "Pset_SoundGeneration_SoundCurve_DEFINITION"
+msgstr "Tabelle der in Dezibel gemessenen Schallfrequenzen und Schallstärke bei einer Referenzleistung von 1 Picowatt 10 Watt für die referenzierte Oktavenbandfrequenz."
+
+#:IFC.xml:37921
+msgid "Pset_SpaceThermalDesign"
+msgstr "Raum-Thermal-Design festlegen"
+
+msgid "Pset_SpaceThermalDesign_DEFINITION"
+msgstr "HISTORY New property set in IFC Release 1.0 Pset SpaceHvacInformation wurde in Pset SpaceThermalDesign umbenannt und in IFC2x2 überarbeitet."
+
+#:IFC.xml:37922
+msgid "Pset_SpaceThermalDesign_BoundaryAreaHeatLoss"
+msgstr "Pset_SpaceThermalDesign_Wärmeverlust Grenzfläche"
+
+msgid "Pset_SpaceThermalDesign_BoundaryAreaHeatLoss_DEFINITION"
+msgstr "Wärmeverlust pro Flächeneinheit für das Randobjekt, d.h. ein Bemessungseingabewert für den Einsatz in Abwesenheit von berechneten Belastungsdaten."
+
+#:IFC.xml:37927
+msgid "Pset_SpaceThermalDesign_CeilingRAPlenum"
+msgstr "Pset_SpaceThermalDesign_Rückluft-Plenum Decke"
+
+msgid "Pset_SpaceThermalDesign_CeilingRAPlenum_DEFINITION"
+msgstr "Deckenplenum für Abluft oder nicht, TRUE = Ja, FALSE = Nein."
+
+#:IFC.xml:37932
+msgid "Pset_SpaceThermalDesign_CoolingDesignAirflow"
+msgstr "Pset_SpaceThermalDesign_Design Kühlungsluftstrom"
+
+msgid "Pset_SpaceThermalDesign_CoolingDesignAirflow_DEFINITION"
+msgstr "Der Luftdurchsatz, der während der Spitzenkühlbedingungen benötigt wird."
+
+#:IFC.xml:37937
+msgid "Pset_SpaceThermalDesign_CoolingDryBulb"
+msgstr "Pset_OutsideDesignCriteria_Kühlung - Trockentemperatur"
+
+msgid "Pset_SpaceThermalDesign_CoolingDryBulb_DEFINITION"
+msgstr "Außentemperatur der trockenen Glühbirne zur Kühlung."
+
+#:IFC.xml:37942
+msgid "Pset_SpaceThermalDesign_CoolingRelativeHumidity"
+msgstr "Pset_SpaceThermalDesign_Kühlung - relative Feuchtigkeit"
+
+msgid "Pset_SpaceThermalDesign_CoolingRelativeHumidity_DEFINITION"
+msgstr "Innere relative Luftfeuchtigkeit für Kühlungsdesign."
+
+#:IFC.xml:37947
+msgid "Pset_SpaceThermalDesign_ExhaustAirFlowrate"
+msgstr "Pset_SpaceThermalDesign_Abluft - Luftdurchflussmenge"
+
+msgid "Pset_SpaceThermalDesign_ExhaustAirFlowrate_DEFINITION"
+msgstr "Pset_SpaceThermalDesign_Abluft - Luftdurchflussmenge"
+
+#:IFC.xml:37952
+msgid "Pset_SpaceThermalDesign_HeatingDesignAirflow"
+msgstr "Pset_SpaceThermalDesign_Design Heizungsluftstrom"
+
+msgid "Pset_SpaceThermalDesign_HeatingDesignAirflow_DEFINITION"
+msgstr "Der Luftdurchsatz, der während der Spitzenheizbedingungen benötigt wird, kann aber auch durch Mindestlüftungsbedarf oder Mindestluftwechselanforderungen bestimmt werden."
+
+#:IFC.xml:37957
+msgid "Pset_SpaceThermalDesign_HeatingDryBulb"
+msgstr "Pset_OutsideDesignCriteria_Heizung - Trockentemperatur"
+
+msgid "Pset_SpaceThermalDesign_HeatingDryBulb_DEFINITION"
+msgstr "Außentemperatur der trockenen Glühlampe für die Auslegung der Heizung."
+
+#:IFC.xml:37962
+msgid "Pset_SpaceThermalDesign_HeatingRelativeHumidity"
+msgstr "Pset_SpaceThermalDesign_Heizung - relative Feuchtigkeit"
+
+msgid "Pset_SpaceThermalDesign_HeatingRelativeHumidity_DEFINITION"
+msgstr "Innere relative Luftfeuchtigkeit für die Heizungsplanung."
+
+#:IFC.xml:37967
+msgid "Pset_SpaceThermalDesign_TotalHeatGain"
+msgstr "Pset_SpaceThermalDesign_Gesamt-Wärmegewinn"
+
+msgid "Pset_SpaceThermalDesign_TotalHeatGain_DEFINITION"
+msgstr "Die Gesamtmenge an Wärme oder Energie, die der Raum zum Zeitpunkt der Spitzenkühlbedingungen des Raumes gewonnen hat."
+
+#:IFC.xml:37972
+msgid "Pset_SpaceThermalDesign_TotalHeatLoss"
+msgstr "Pset_SpaceThermalDesign_Gesamt-Wärmeverlust"
+
+msgid "Pset_SpaceThermalDesign_TotalHeatLoss_DEFINITION"
+msgstr "Die Gesamtmenge an Wärme oder Energie, die der Raum zum Zeitpunkt der Spitzenheizbedingungen des Raumes verliert."
+
+#:IFC.xml:37977
+msgid "Pset_SpaceThermalDesign_TotalSensibleHeatGain"
+msgstr "Pset_SpaceThermalDesign_Sensibler Gesamt-Wärmegewinn"
+
+msgid "Pset_SpaceThermalDesign_TotalSensibleHeatGain_DEFINITION"
+msgstr "Die gesamte empfindliche Wärme oder Energie, die der Raum während der Spitzenkühlbedingungen gewinnt."
+
+#:IFC.xml:37982
+msgid "Pset_SpaceThermalDesign_VentilationAirFlowrate"
+msgstr "Pset_SpaceThermalDesign_Lüftung - Luftdurchflussmenge"
+
+msgid "Pset_SpaceThermalDesign_VentilationAirFlowrate_DEFINITION"
+msgstr "Pset_SpaceThermalDesign_Lüftung - Luftdurchflussmenge"
+
+#:IFC.xml:37988
+msgid "Pset_SpaceThermalLoad"
+msgstr "Leerzeichen laden"
+
+msgid "Pset_SpaceThermalLoad_DEFINITION"
+msgstr "Die thermische Raumlast definiert alle thermischen Verluste und Gewinne innerhalb eines Raumes oder einer Zone. Das Attribut zur thermischen Lastquelle definiert eine Auflistung möglicher Quellen der thermischen Belastung. Maximal, Minimum, Zeitreihe und App"
+
+#:IFC.xml:37989
+msgid "Pset_SpaceThermalLoad_AirExchangeRate"
+msgstr "Pset_SpaceThermalLoad_Luftaustauschrate"
+
+msgid "Pset_SpaceThermalLoad_AirExchangeRate_DEFINITION"
+msgstr "Lasten aus der Luftwechselrate."
+
+#:IFC.xml:37994
+msgid "Pset_SpaceThermalLoad_DryBulbTemperature"
+msgstr "DryBulbtemperatur"
+
+msgid "Pset_SpaceThermalLoad_DryBulbTemperature_DEFINITION"
+msgstr "Belastung durch die Temperatur der Trockenkugel."
+
+#:IFC.xml:37999
+msgid "Pset_SpaceThermalLoad_EquipmentSensible"
+msgstr "Pset_SpaceThermalLoad_Geräte - sensibel"
+
+msgid "Pset_SpaceThermalLoad_EquipmentSensible_DEFINITION"
+msgstr "Wärmegewinne und -verluste von Geräten."
+
+#:IFC.xml:38004
+msgid "Pset_SpaceThermalLoad_ExhaustAir"
+msgstr "Pset_SpaceThermalLoad_Abluft"
+
+msgid "Pset_SpaceThermalLoad_ExhaustAir_DEFINITION"
+msgstr "Lasten aus der Abluft."
+
+#:IFC.xml:38009
+msgid "Pset_SpaceThermalLoad_InfiltrationSensible"
+msgstr "Pset_SpaceThermalLoad_Sensible Infiltration"
+
+msgid "Pset_SpaceThermalLoad_InfiltrationSensible_DEFINITION"
+msgstr "Wärmegewinne und -verluste durch Infiltration."
+
+#:IFC.xml:38014
+msgid "Pset_SpaceThermalLoad_Lighting"
+msgstr "Pset_SpaceThermalLoad_Beleuchtung"
+
+msgid "Pset_SpaceThermalLoad_Lighting_DEFINITION"
+msgstr "Lasten beleuchten."
+
+#:IFC.xml:38019
+msgid "Pset_SpaceThermalLoad_People"
+msgstr "Pset_SpaceThermalLoad_Menschen"
+
+msgid "Pset_SpaceThermalLoad_People_DEFINITION"
+msgstr "Wärmegewinne und -verluste von Menschen."
+
+#:IFC.xml:38024
+msgid "Pset_SpaceThermalLoad_RecirculatedAir"
+msgstr "Pset_SpaceThermalLoad_Umgewälzte Luft"
+
+msgid "Pset_SpaceThermalLoad_RecirculatedAir_DEFINITION"
+msgstr "Lasten aus der Umluft."
+
+#:IFC.xml:38029
+msgid "Pset_SpaceThermalLoad_RelativeHumidity"
+msgstr "Pset_SpaceThermalLoad_Relative Feuchtigkeit"
+
+msgid "Pset_SpaceThermalLoad_RelativeHumidity_DEFINITION"
+msgstr "Belastung durch die relative Luftfeuchtigkeit."
+
+#:IFC.xml:38034
+msgid "Pset_SpaceThermalLoad_TotalLatentLoad"
+msgstr "Pset_SpaceThermalLoad_Latente Gesamtlast"
+
+msgid "Pset_SpaceThermalLoad_TotalLatentLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38039
+msgid "Pset_SpaceThermalLoad_TotalRadiantLoad"
+msgstr "Pset_SpaceThermalLoad_Gesamt-Strahlungslast"
+
+msgid "Pset_SpaceThermalLoad_TotalRadiantLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38044
+msgid "Pset_SpaceThermalLoad_TotalSensibleLoad"
+msgstr "Pset_SpaceThermalLoad_Sensible Gesamtlast"
+
+msgid "Pset_SpaceThermalLoad_TotalSensibleLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38049
+msgid "Pset_SpaceThermalLoad_VentilationIndoorAir"
+msgstr "Pset_SpaceThermalLoad_Belüftung Innenluft"
+
+msgid "Pset_SpaceThermalLoad_VentilationIndoorAir_DEFINITION"
+msgstr "Lüftungslasten aus der Raumluft."
+
+#:IFC.xml:38054
+msgid "Pset_SpaceThermalLoad_VentilationOutdoorAir"
+msgstr "Pset_SpaceThermalLoad_Belüftung Außenluft"
+
+msgid "Pset_SpaceThermalLoad_VentilationOutdoorAir_DEFINITION"
+msgstr "Lüftungslasten aus der Außenluft."
+
+#:IFC.xml:38060
+msgid "Pset_SpaceThermalLoadPHistory"
+msgstr "Pset SpaceThermal-LoadPHistorie"
+
+msgid "Pset_SpaceThermalLoadPHistory_DEFINITION"
+msgstr "Die Raum-thermische Last IfcSpaceThermalLoadProperties definiert die tatsächlich gemessenen thermischen Verluste und Gewinne innerhalb eines Raumes oder einer Zone. Das Attribut der thermischen Lastquelle definiert eine Auflistung möglicher thermischer Lastquellen."
+
+#:IFC.xml:38061
+msgid "Pset_SpaceThermalLoadPHistory_AirExchangeRate"
+msgstr "Pset_SpaceThermalLoad_Luftaustauschrate"
+
+msgid "Pset_SpaceThermalLoadPHistory_AirExchangeRate_DEFINITION"
+msgstr "Lasten aus der Luftwechselrate."
+
+#:IFC.xml:38066
+msgid "Pset_SpaceThermalLoadPHistory_DryBulbTemperature"
+msgstr "DryBulbtemperatur"
+
+msgid "Pset_SpaceThermalLoadPHistory_DryBulbTemperature_DEFINITION"
+msgstr "Belastung durch die Temperatur der Trockenkugel."
+
+#:IFC.xml:38071
+msgid "Pset_SpaceThermalLoadPHistory_EquipmentSensible"
+msgstr "Pset_SpaceThermalLoad_Geräte - sensibel"
+
+msgid "Pset_SpaceThermalLoadPHistory_EquipmentSensible_DEFINITION"
+msgstr "Wärmegewinne und -verluste von Geräten."
+
+#:IFC.xml:38076
+msgid "Pset_SpaceThermalLoadPHistory_ExhaustAir"
+msgstr "Pset_SpaceThermalLoad_Abluft"
+
+msgid "Pset_SpaceThermalLoadPHistory_ExhaustAir_DEFINITION"
+msgstr "Lasten aus der Abluft."
+
+#:IFC.xml:38081
+msgid "Pset_SpaceThermalLoadPHistory_InfiltrationSensible"
+msgstr "Pset_SpaceThermalLoad_Sensible Infiltration"
+
+msgid "Pset_SpaceThermalLoadPHistory_InfiltrationSensible_DEFINITION"
+msgstr "Wärmegewinne und -verluste durch Infiltration."
+
+#:IFC.xml:38086
+msgid "Pset_SpaceThermalLoadPHistory_Lighting"
+msgstr "Pset_SpaceThermalLoad_Beleuchtung"
+
+msgid "Pset_SpaceThermalLoadPHistory_Lighting_DEFINITION"
+msgstr "Lasten beleuchten."
+
+#:IFC.xml:38091
+msgid "Pset_SpaceThermalLoadPHistory_People"
+msgstr "Pset_SpaceThermalLoad_Menschen"
+
+msgid "Pset_SpaceThermalLoadPHistory_People_DEFINITION"
+msgstr "Wärmegewinne und -verluste von Menschen."
+
+#:IFC.xml:38096
+msgid "Pset_SpaceThermalLoadPHistory_RecirculatedAir"
+msgstr "Pset_SpaceThermalLoad_Umgewälzte Luft"
+
+msgid "Pset_SpaceThermalLoadPHistory_RecirculatedAir_DEFINITION"
+msgstr "Lasten aus der Umluft."
+
+#:IFC.xml:38101
+msgid "Pset_SpaceThermalLoadPHistory_RelativeHumidity"
+msgstr "Pset_SpaceThermalLoad_Relative Feuchtigkeit"
+
+msgid "Pset_SpaceThermalLoadPHistory_RelativeHumidity_DEFINITION"
+msgstr "Belastung durch die relative Luftfeuchtigkeit."
+
+#:IFC.xml:38106
+msgid "Pset_SpaceThermalLoadPHistory_TotalLatentLoad"
+msgstr "Pset_SpaceThermalLoad_Latente Gesamtlast"
+
+msgid "Pset_SpaceThermalLoadPHistory_TotalLatentLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38111
+msgid "Pset_SpaceThermalLoadPHistory_TotalRadiantLoad"
+msgstr "Pset_SpaceThermalLoad_Gesamt-Strahlungslast"
+
+msgid "Pset_SpaceThermalLoadPHistory_TotalRadiantLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38116
+msgid "Pset_SpaceThermalLoadPHistory_TotalSensibleLoad"
+msgstr "Pset_SpaceThermalLoad_Sensible Gesamtlast"
+
+msgid "Pset_SpaceThermalLoadPHistory_TotalSensibleLoad_DEFINITION"
+msgstr "Wenn ein Wert kleiner als Null (negativ) ist, dann geht die thermische Belastung aus dem Raum verloren, wenn ein Wert größer als Null (positiv) ist, dann ist die thermische Belastung ein Gewinn für den Raum."
+
+#:IFC.xml:38121
+msgid "Pset_SpaceThermalLoadPHistory_VentilationIndoorAir"
+msgstr "Pset_SpaceThermalLoad_Belüftung Innenluft"
+
+msgid "Pset_SpaceThermalLoadPHistory_VentilationIndoorAir_DEFINITION"
+msgstr "Lüftungslasten aus der Raumluft."
+
+#:IFC.xml:38126
+msgid "Pset_SpaceThermalLoadPHistory_VentilationOutdoorAir"
+msgstr "Pset_SpaceThermalLoad_Belüftung Außenluft"
+
+msgid "Pset_SpaceThermalLoadPHistory_VentilationOutdoorAir_DEFINITION"
+msgstr "Lüftungslasten aus der Außenluft."
+
+#:IFC.xml:38132
+msgid "Pset_ThermalLoadAggregate"
+msgstr "Pset ThermalbeladAggregate"
+
+msgid "Pset_ThermalLoadAggregate_DEFINITION"
+msgstr "Die aggregierte thermische Belastung durch einen oder mehrere Räume, Zonen oder Gebäude. Diese thermischen Belastungsinformationen werden typischerweise von einem System oder einer Anlage angesprochen. HISTORY Neue Eigenschaft in IFC Release 1.0 Pset AggregateLoadInformation umbenannt in Pset ThermalLoadAggregate in IFC2x2."
+
+#:IFC.xml:38133
+msgid "Pset_ThermalLoadAggregate_ApplianceDiversity"
+msgstr "Pset_AirSideSystemInformation_ApplianceVielfalt"
+
+msgid "Pset_ThermalLoadAggregate_ApplianceDiversity_DEFINITION"
+msgstr "Unterschiedliche Geräteauslastung."
+
+#:IFC.xml:38138
+msgid "Pset_ThermalLoadAggregate_InfiltrationDiversitySummer"
+msgstr "Pset_AirSideSystemInformation_InfiltrationVielfaltSommer"
+
+msgid "Pset_ThermalLoadAggregate_InfiltrationDiversitySummer_DEFINITION"
+msgstr "Gleichzeitigkeitsfaktor für die Sommerinfiltration."
+
+#:IFC.xml:38143
+msgid "Pset_ThermalLoadAggregate_InfiltrationDiversityWinter"
+msgstr "Pset_AirSideSystemInformation_InfiltrationVielfaltWinter"
+
+msgid "Pset_ThermalLoadAggregate_InfiltrationDiversityWinter_DEFINITION"
+msgstr "Gleichzeitigkeitsfaktor für die Winterversickerung."
+
+#:IFC.xml:38148
+msgid "Pset_ThermalLoadAggregate_LightingDiversity"
+msgstr "Pset_AirSideSystemInformation_LichtVielfalt"
+
+msgid "Pset_ThermalLoadAggregate_LightingDiversity_DEFINITION"
+msgstr "Lichtvielfalt."
+
+#:IFC.xml:38153
+msgid "Pset_ThermalLoadAggregate_LoadSafetyFactor"
+msgstr "Pset_AirSideSystemInformation_LastSicherheitFaktor"
+
+msgid "Pset_ThermalLoadAggregate_LoadSafetyFactor_DEFINITION"
+msgstr "Ladungssicherungsfaktor."
+
+#:IFC.xml:38158
+msgid "Pset_ThermalLoadAggregate_TotalCoolingLoad"
+msgstr "Pset_ThermalLoadAggregate_Gesamt-Kühllast"
+
+msgid "Pset_ThermalLoadAggregate_TotalCoolingLoad_DEFINITION"
+msgstr "Die maximale Gesamtkühlleistung für das Gebäude, die Zone oder den Raum."
+
+#:IFC.xml:38163
+msgid "Pset_ThermalLoadAggregate_TotalHeatingLoad"
+msgstr "Pset_ThermalLoadAggregate_Gesamt-Heizlast"
+
+msgid "Pset_ThermalLoadAggregate_TotalHeatingLoad_DEFINITION"
+msgstr "Die maximale Gesamtwärmebelastung für das Gebäude, die Zone oder den Raum."
+
+#:IFC.xml:38169
+msgid "Pset_ThermalLoadDesignCriteria"
+msgstr "Pset ThermalloadDesignKriterien"
+
+msgid "Pset_ThermalLoadDesignCriteria_DEFINITION"
+msgstr "Bau von thermischen Belastungsdaten, die für die Berechnung von thermischen Belastungen in einem Raum oder Gebäude verwendet werden. HISTORY Neue Eigenschaft in IFC Release 1.0 Pset LoadDesignCriteria umbenannt in Pset ThermalLoadDesignCriteria in IFC2x2."
+
+#:IFC.xml:38170
+msgid "Pset_ThermalLoadDesignCriteria_AppliancePercentLoadToRadiant"
+msgstr "Pset_ThermalLoadDesignCriteria_Geräte - prozentuales Verhältnis Last zu Strahlung"
+
+msgid "Pset_ThermalLoadDesignCriteria_AppliancePercentLoadToRadiant_DEFINITION"
+msgstr "Prozentualer Anteil der sensiblen Last an der Strahlungswärme."
+
+#:IFC.xml:38175
+msgid "Pset_ThermalLoadDesignCriteria_LightingLoadIntensity"
+msgstr "Pset_ThermalLoadDesignCriteria_Beleuchtungs-Lastintensität"
+
+msgid "Pset_ThermalLoadDesignCriteria_LightingLoadIntensity_DEFINITION"
+msgstr "Durchschnittliche Beleuchtungsintensität im Raum pro Flächeneinheit (PowerMeasure/IfcAreaMeasure)."
+
+#:IFC.xml:38180
+msgid "Pset_ThermalLoadDesignCriteria_LightingPercentLoadToReturnAir"
+msgstr "Pset_ThermalLoadDesignCriteria_Beleuchtung - prozentuales Verhältnis Last zu Rückluft"
+
+msgid "Pset_ThermalLoadDesignCriteria_LightingPercentLoadToReturnAir_DEFINITION"
+msgstr "Prozentualer Anteil der Beleuchtungslast am Abluftkasten."
+
+#:IFC.xml:38185
+msgid "Pset_ThermalLoadDesignCriteria_OccupancyDiversity"
+msgstr "Pset_ThermalLoadDesignCriteria_Belegungsdiversität"
+
+msgid "Pset_ThermalLoadDesignCriteria_OccupancyDiversity_DEFINITION"
+msgstr "Diversity-Faktor, der auf die Anzahl der Personen im Raum angewendet werden kann."
+
+#:IFC.xml:38190
+msgid "Pset_ThermalLoadDesignCriteria_OutsideAirPerPerson"
+msgstr "Pset_ThermalLoadDesignCriteria_Außenluft pro Person"
+
+msgid "Pset_ThermalLoadDesignCriteria_OutsideAirPerPerson_DEFINITION"
+msgstr "Bemessungsmenge der Außenluft, die pro Person im Raum zur Verfügung gestellt werden muss."
+
+#:IFC.xml:38195
+msgid "Pset_ThermalLoadDesignCriteria_ReceptacleLoadIntensity"
+msgstr "Pset_ThermalLoadDesignCriteria_Behältnis-Lastintensität"
+
+msgid "Pset_ThermalLoadDesignCriteria_ReceptacleLoadIntensity_DEFINITION"
+msgstr "Durchschnittliche Stromverbrauchsintensität von Geräten und anderen Nicht-HVAC-Geräten im Raum pro Flächeneinheit (PowerMeasure/IfcAreaMeasure)."
+
+#:IFC.xml:38201
+msgid "Pset_UtilityConsumptionPHistory"
+msgstr "Pset UtilityConsumptionPHistory"
+
+msgid "Pset_UtilityConsumptionPHistory_DEFINITION"
+msgstr "Verbrauch von Utility-Ressourcen, die üblicherweise auf die [[IfcBuilding]] Instanz angewendet werden, um zu ermitteln, wie viel auf I.d. monatlicher Basis verbraucht wurde."
+
+#:IFC.xml:38202
+msgid "Pset_UtilityConsumptionPHistory_Electricity"
+msgstr "Pset_UtilityConsumptionPHistory_Elektrizität"
+
+msgid "Pset_UtilityConsumptionPHistory_Electricity_DEFINITION"
+msgstr "Die Menge an Elektrizität, die während des in der Zeitreihe angegebenen Zeitraums verbraucht wurde."
+
+#:IFC.xml:38207
+msgid "Pset_UtilityConsumptionPHistory_Fuel"
+msgstr "Pset_UtilityConsumptionPHistory_Kraftstoff"
+
+msgid "Pset_UtilityConsumptionPHistory_Fuel_DEFINITION"
+msgstr "Die Menge an Kraftstoff, die während des in der Zeitreihe angegebenen Zeitraums verbraucht wurde."
+
+#:IFC.xml:38212
+msgid "Pset_UtilityConsumptionPHistory_Heat"
+msgstr "Pset_UtilityConsumptionPHistory_Wärme"
+
+msgid "Pset_UtilityConsumptionPHistory_Heat_DEFINITION"
+msgstr "Die Menge an Wärmeenergie, die während des in der Zeitreihe angegebenen Zeitraums verbraucht wurde."
+
+#:IFC.xml:38217
+msgid "Pset_UtilityConsumptionPHistory_Steam"
+msgstr "Pset_UtilityConsumptionPHistory_Dampf"
+
+msgid "Pset_UtilityConsumptionPHistory_Steam_DEFINITION"
+msgstr "Die Menge an Dampf, die während des in der Zeitreihe angegebenen Zeitraums verbraucht wurde."
+
+#:IFC.xml:38222
+msgid "Pset_UtilityConsumptionPHistory_Water"
+msgstr "Pset_UtilityConsumptionPHistory_Wasser"
+
+msgid "Pset_UtilityConsumptionPHistory_Water_DEFINITION"
+msgstr "Die Wassermenge, die während des in der Zeitreihe angegebenen Zeitraums verbraucht wurde."
+
+#:IFC.xml:38228
+msgid "Qto_DistributionChamberElementBaseQuantities"
+msgstr "Qto DistributionChamberElementBaseQuantities"
+
+msgid "Qto_DistributionChamberElementBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Vorkommnisse von Verteilungskammerelementen üblich sind."
+
+#:IFC.xml:38229
+msgid "Qto_DistributionChamberElementBaseQuantities_GrossSurfaceArea"
+msgstr "GrossSurfaceArea"
+
+msgid "Qto_DistributionChamberElementBaseQuantities_GrossSurfaceArea_DEFINITION"
+msgstr "Gesamtfläche der Fußsohle, die normalerweise als Länge 2 Querschnittsfläche erzeugt wird. Es handelt sich um die Summe von AuterSurfaceArea 2 x CrossSectionArea und wird nur dann gegeben, wenn die AuterSurfaceArea und CrossSectionArea nicht getrennt eingerichtet werden können."
+
+#:IFC.xml:38234
+msgid "Qto_DistributionChamberElementBaseQuantities_GrossVolume"
+msgstr "Großvolumen"
+
+msgid "Qto_DistributionChamberElementBaseQuantities_GrossVolume_DEFINITION"
+msgstr "Summe aller Brutto-Volumen der vom Baugeschoss umschlossenen Flächen mit den Volumen der Bauelemente im Baugeschoss. Kann zusätzlich zu den Mengen der Räume und die Bauelemente assimiliert dem Store. Bei Ungereimtheiten haben die einzelnen Mengen an Räumen und Bauelementen Vorrang."
+
+#:IFC.xml:38239
+msgid "Qto_DistributionChamberElementBaseQuantities_NetSurfaceArea"
+msgstr "NetSurfaceArea"
+
+msgid "Qto_DistributionChamberElementBaseQuantities_NetSurfaceArea_DEFINITION"
+msgstr "Die Nettouberfläche der Säulen, die normalerweise als Querschnittsfläche 2 erzeugt wird, berücksichtigt mögliche Verarbeitungsmerkmale, die durch den Querschnitt des Querschnitts , usw. entstehen. oder Öffnungen und Pausen."
+
+#:IFC.xml:38244
+msgid "Qto_DistributionChamberElementBaseQuantities_NetVolume"
+msgstr "NetVolume"
+
+msgid "Qto_DistributionChamberElementBaseQuantities_NetVolume_DEFINITION"
+msgstr "Summe aller im Baugeschoss eingeschlossenen Nettovolumina und schließt die Volumen der Bauelemente im Baugeschoss aus. Kann zusätzlich zu den Mengen der Räumlichkeiten zur Verfügung gestellt werden, die dem Speicher zugeordnet sind. Bei Ungereimtheiten haben die einzelnen Mengen von Räumen Vorrang."
 
