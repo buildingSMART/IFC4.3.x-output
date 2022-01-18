@@ -9901,114 +9901,6 @@
         "Parent": "IfcSpatialStructureElement",
         "Description": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.\n\nA space is associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. This is defined by the _CompositionType_ attribute of the supertype _IfcSpatialStructureElement_ which is interpreted as follow:\n\n* COMPLEX = space group\n* ELEMENT = space\n* PARTIAL = partial space\n\n> NOTE&nbsp; View definitions and implementation agreements may restrict spaces with _CompositionType_=ELEMENT to be non-overlapping.\n\nThe _IfcSpace_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship _IfcRelAggregates_.\n\nFigure 1 shows the _IfcSpace_ as part of the spatial structure. It also serves as the spatial container for space related elements.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"spatial structure\"](../../../../figures/ifcspace-spatialstructure.png \"Figure 1 &mdash; Space composition\")\n\nThe following guidelines should apply for using the _Name_, _Description_, _LongName_ and _ObjectType_ attributes.\n\n* _Name_ holds the unique name (or space number) from the plan.\n* _Description_ holds any additional information field the user may have specified, there are no further recommendations.\n* _LongName_ holds the full name of the space, it is often used in addition to the _Name_, if a number is assigned to the room, then the descriptive name is exchanged as _LongName_.\n* _ObjectType_ holds the space type, i.e. usually the functional category of the space .\n\n> NOTE&nbsp; In cases of inconsistency between the geometric representation of the _IfcSpace_ and the combined geometric representations of the surrounding _IfcRelSpaceBoundary_, the geometric representation of the space should take priority over the geometric representation of the surrounding space boundaries.\n\nFigure 2 describes the heights and elevations of the _IfcSpace_.\n\n* elevation of the space (top of construction slab) equals elevation of storey: provided by _IfcBuildingStorey.Elevation_ relative to em>IfcBuilding.ElevationOfRefHeight\n* elevation of the space flooring (top of flooring on top of slab): provided by _IfcSpace.ElevationWithFlooring_ relative to _IfcBuilding.ElevationOfRefHeight_\n* height of space (top of slab below to bottom of slab above): provided by BaseQuantity with Name=\"Height\"\n* floor height of space (top of slab below to top of flooring): provided by BaseQuantity with Name=\"FinishFloorHeight\"\n* net height of space (top of flooring to bottom of suspended ceiling): provided by BaseQuantity with Name=\"FinishCeilingHeight\"\n\n![\"space heights\"](../../../../figures/ifcspace_heights.png \"Figure 2 &mdash; Space elevations\")\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
-          "Pset_SpaceCommon": {
-            "Properties": {
-              "GrossPlannedArea": {
-                "type": "real",
-                "Description": "Total planned area for the building storey. Used for programming the building storey."
-              },
-              "HandicapAccessible": {
-                "type": "boolean",
-                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as an accessible space for handicapped people, e.g., for a public toilet (TRUE) or not (FALSE). This information is often used to declare the need for access for the disabled and for special design requirements of this space.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "IsExternal": {
-                "type": "boolean",
-                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "NetPlannedArea": {
-                "type": "real",
-                "Description": "Total planned net area for the building storey. Used for programming the building storey."
-              },
-              "PubliclyAccessible": {
-                "type": "boolean",
-                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
-              }
-            }
-          },
-          "Pset_SpaceCoveringRequirements": {
-            "Properties": {
-              "CeilingCovering": {
-                "type": "string",
-                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=CEILING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
-              },
-              "CeilingCoveringThickness": {
-                "type": "real",
-                "Description": "Thickness of the material layer(s) for the space ceiling.  \n\nThe thickness information is provided in absence of an IfcCovering (type=CEILING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
-              },
-              "ConcealedCeiling": {
-                "type": "boolean",
-                "Description": "Indication whether this space is designed to have a concealed flooring space (TRUE) or not (FALSE). A concealed ceiling space is normally meant to be the space between a slab and a ceiling.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "ConcealedCeilingOffset": {
-                "type": "real",
-                "Description": "Distance between the upper floor slab and the suspended ceiling, often used for distribution systems. Often referred to as plenum."
-              },
-              "ConcealedFlooring": {
-                "type": "boolean",
-                "Description": "Indication whether this space is designed to have a concealed flooring space (TRUE) or not (FALSE). A concealed flooring space is normally meant to be the space beneath a raised floor.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "ConcealedFlooringOffset": {
-                "type": "real",
-                "Description": "Distance between the floor slab and the floor covering, often used for cables and other installations. Often referred to as raised flooring."
-              },
-              "FloorCovering": {
-                "type": "string",
-                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=FLOORING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
-              },
-              "FloorCoveringThickness": {
-                "type": "real",
-                "Description": "Thickness of the material layer(s) for the space flooring.  \n\nThe thickness information is provided in absence of an IfcCovering (type=FLOORING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
-              },
-              "Molding": {
-                "type": "string",
-                "Description": "Label to indicate the material or construction of the molding around the space ceiling. The label is used for room book information.\n\nThe material information is provided in absence of an IfcCovering (type=MOLDING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
-              },
-              "MoldingHeight": {
-                "type": "real",
-                "Description": "Height of the molding.\n\nThe height information is provided in absence of an IfcCovering (type=MOLDING) object with own shape representation and material assignment. In case of inconsistency the height assigned to IfcCovering elements takes precedence."
-              },
-              "SkirtingBoard": {
-                "type": "string",
-                "Description": "Label to indicate the material or construction of the skirting board around the space flooring. The label is used for room book information.\n\nThe material information is provided in absence of an IfcCovering (type=SKIRTINGBOARD) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
-              },
-              "SkirtingBoardHeight": {
-                "type": "real",
-                "Description": "Height of the skirting board.\n\nThe height information is provided in absence of an IfcCovering (type=SKIRTINGBOARD) object with own shape representation and material assignment. In case of inconsistency the height assigned to IfcCovering elements takes precedence."
-              },
-              "WallCovering": {
-                "type": "string",
-                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=CLADDING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
-              },
-              "WallCoveringThickness": {
-                "type": "real",
-                "Description": "Thickness of the material layer(s) for the space cladding.  \n\nThe thickness information is provided in absence of an IfcCovering (type=CLADDING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
-              }
-            }
-          },
           "Pset_SpaceFireSafetyRequirements": {
             "Properties": {
               "AirPressurization": {
@@ -10054,150 +9946,6 @@
                   "TRUE",
                   "FALSE"
                 ]
-              }
-            }
-          },
-          "Pset_SpaceLightingRequirements": {
-            "Properties": {
-              "ArtificialLighting": {
-                "type": "boolean",
-                "Description": "Indication whether this space  requires artificial lighting (as natural lighting would be not sufficient). (TRUE) indicates yes (FALSE) otherwise.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "Illuminance": {
-                "type": "real",
-                "Description": "Required average illuminance value for this space."
-              }
-            }
-          },
-          "Pset_SpaceOccupancyRequirements": {
-            "Properties": {
-              "AreaPerOccupant": {
-                "type": "real",
-                "Description": "Design occupancy loading for this type of usage assigned to this space."
-              },
-              "IsOutlookDesirable": {
-                "type": "boolean",
-                "Description": "An indication of whether the outlook is desirable (set TRUE) or not (set FALSE)",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "MinimumHeadroom": {
-                "type": "real",
-                "Description": "Headroom required for the activity assigned to this space."
-              },
-              "OccupancyNumber": {
-                "type": "number",
-                "Description": "Number of people required for the activity assigned to this space."
-              },
-              "OccupancyNumberPeak": {
-                "type": "number",
-                "Description": "Maximal number of people required for the activity assigned to this space in peak time."
-              },
-              "OccupancyTimePerDay": {
-                "type": "real",
-                "Description": "The amount of time during the day that the activity is required within this space."
-              },
-              "OccupancyType": {
-                "type": "string",
-                "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
-              }
-            }
-          },
-          "Pset_SpaceThermalRequirements": {
-            "Properties": {
-              "AirConditioning": {
-                "type": "boolean",
-                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "AirConditioningCentral": {
-                "type": "boolean",
-                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "DiscontinuedHeating": {
-                "type": "boolean",
-                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "MechanicalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
-              },
-              "NaturalVentilation": {
-                "type": "boolean",
-                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "NaturalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
-              },
-              "SpaceHumidity": {
-                "type": "real",
-                "Description": "Humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period. Provide this property, if no humidity range (Min-Max) is available."
-              },
-              "SpaceHumidityMax": {
-                "type": "real",
-                "Description": "Maximal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumidityMin": {
-                "type": "real",
-                "Description": "Minimal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumiditySummer": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceHumidityWinter": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the cold (winter) period that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperature": {
-                "type": "real",
-                "Description": "Temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period. Provide this value, if no temperatur range (Min-Max) is available."
-              },
-              "SpaceTemperatureMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureSummerMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureSummerMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureWinterMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperatureWinterMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
               }
             }
           },
@@ -10343,10 +10091,6 @@
                 "type": "real",
                 "Description": "Load safety factor."
               },
-              "Name": {
-                "type": "string",
-                "Description": "The name of the air side system."
-              },
               "TotalAirflow": {
                 "type": "real",
                 "Description": "The total design supply air flowrate required for the system for either heating or cooling conditions, whichever is greater."
@@ -10448,6 +10192,270 @@
               "ProcessPerformance": {
                 "type": "unknown",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
+              }
+            }
+          },
+          "Pset_SpaceCoveringRequirements": {
+            "Properties": {
+              "CeilingCovering": {
+                "type": "string",
+                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=CEILING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
+              },
+              "CeilingCoveringThickness": {
+                "type": "real",
+                "Description": "Thickness of the material layer(s) for the space ceiling.  \n\nThe thickness information is provided in absence of an IfcCovering (type=CEILING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
+              },
+              "ConcealedCeiling": {
+                "type": "boolean",
+                "Description": "Indication whether this space is designed to have a concealed flooring space (TRUE) or not (FALSE). A concealed ceiling space is normally meant to be the space between a slab and a ceiling.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "ConcealedCeilingOffset": {
+                "type": "real",
+                "Description": "Distance between the upper floor slab and the suspended ceiling, often used for distribution systems. Often referred to as plenum."
+              },
+              "ConcealedFlooring": {
+                "type": "boolean",
+                "Description": "Indication whether this space is designed to have a concealed flooring space (TRUE) or not (FALSE). A concealed flooring space is normally meant to be the space beneath a raised floor.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "ConcealedFlooringOffset": {
+                "type": "real",
+                "Description": "Distance between the floor slab and the floor covering, often used for cables and other installations. Often referred to as raised flooring."
+              },
+              "FloorCovering": {
+                "type": "string",
+                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=FLOORING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
+              },
+              "FloorCoveringThickness": {
+                "type": "real",
+                "Description": "Thickness of the material layer(s) for the space flooring.  \n\nThe thickness information is provided in absence of an IfcCovering (type=FLOORING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
+              },
+              "Molding": {
+                "type": "string",
+                "Description": "Label to indicate the material or construction of the molding around the space ceiling. The label is used for room book information.\n\nThe material information is provided in absence of an IfcCovering (type=MOLDING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
+              },
+              "MoldingHeight": {
+                "type": "real",
+                "Description": "Height of the molding.\n\nThe height information is provided in absence of an IfcCovering (type=MOLDING) object with own shape representation and material assignment. In case of inconsistency the height assigned to IfcCovering elements takes precedence."
+              },
+              "SkirtingBoard": {
+                "type": "string",
+                "Description": "Label to indicate the material or construction of the skirting board around the space flooring. The label is used for room book information.\n\nThe material information is provided in absence of an IfcCovering (type=SKIRTINGBOARD) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
+              },
+              "SkirtingBoardHeight": {
+                "type": "real",
+                "Description": "Height of the skirting board.\n\nThe height information is provided in absence of an IfcCovering (type=SKIRTINGBOARD) object with own shape representation and material assignment. In case of inconsistency the height assigned to IfcCovering elements takes precedence."
+              },
+              "WallCovering": {
+                "type": "string",
+                "Description": "Label to indicate the material or finish of the space flooring. The label is used for room book information and often displayed in room stamp.\n\nThe material information is provided in absence of an IfcCovering (type=CLADDING) object with own shape representation and material assignment. In case of inconsistency the material assigned to IfcCovering elements takes precedence."
+              },
+              "WallCoveringThickness": {
+                "type": "real",
+                "Description": "Thickness of the material layer(s) for the space cladding.  \n\nThe thickness information is provided in absence of an IfcCovering (type=CLADDING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
+              }
+            }
+          },
+          "Pset_SpaceHVACDesign": {
+            "Properties": {
+              "AirConditioning": {
+                "type": "boolean",
+                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirConditioningCentral": {
+                "type": "boolean",
+                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirHandlingName": {
+                "type": "string",
+                "Description": ""
+              },
+              "DiscontinuedHeating": {
+                "type": "boolean",
+                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "HumidityMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySetPoint": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySummer": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityWinter": {
+                "type": "real",
+                "Description": ""
+              },
+              "MechanicalVentilation": {
+                "type": "boolean",
+                "Description": "",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "MechanicalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
+              },
+              "NaturalVentilation": {
+                "type": "boolean",
+                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "NaturalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
+              },
+              "TemperatureMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSetPoint": {
+                "type": "real",
+                "Description": "The temperature setpoint range and default setpoint."
+              },
+              "TemperatureSummerMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSummerMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMin": {
+                "type": "real",
+                "Description": ""
+              }
+            }
+          },
+          "Pset_SpaceLightingDesign": {
+            "Properties": {
+              "ArtificialLighting": {
+                "type": "boolean",
+                "Description": "Indication whether this space  requires artificial lighting (as natural lighting would be not sufficient). (TRUE) indicates yes (FALSE) otherwise.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "Illuminance": {
+                "type": "real",
+                "Description": "Required average illuminance value for this space."
+              }
+            }
+          },
+          "Pset_SpaceOccupancyRequirements": {
+            "Properties": {
+              "AreaPerOccupant": {
+                "type": "real",
+                "Description": "Design occupancy loading for this type of usage assigned to this space."
+              },
+              "IsOutlookDesirable": {
+                "type": "boolean",
+                "Description": "An indication of whether the outlook is desirable (set TRUE) or not (set FALSE)",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "MinimumHeadroom": {
+                "type": "real",
+                "Description": "Headroom required for the activity assigned to this space."
+              },
+              "OccupancyNumber": {
+                "type": "number",
+                "Description": "Number of people required for the activity assigned to this space."
+              },
+              "OccupancyNumberPeak": {
+                "type": "number",
+                "Description": "Maximal number of people required for the activity assigned to this space in peak time."
+              },
+              "OccupancyTimePerDay": {
+                "type": "real",
+                "Description": "The amount of time during the day that the activity is required within this space."
+              },
+              "OccupancyType": {
+                "type": "string",
+                "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
+              }
+            }
+          },
+          "Pset_SpatialElementCommon": {
+            "Properties": {
+              "GrossPlannedArea": {
+                "type": "real",
+                "Description": "Total planned area for the building storey. Used for programming the building storey."
+              },
+              "HandicapAccessible": {
+                "type": "boolean",
+                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as an accessible space for handicapped people, e.g., for a public toilet (TRUE) or not (FALSE). This information is often used to declare the need for access for the disabled and for special design requirements of this space.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "IsExternal": {
+                "type": "boolean",
+                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "NetPlannedArea": {
+                "type": "real",
+                "Description": "Total planned net area for the building storey. Used for programming the building storey."
+              },
+              "PubliclyAccessible": {
+                "type": "boolean",
+                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
               }
             }
           },
@@ -10678,7 +10686,111 @@
               }
             }
           },
-          "Pset_SpaceLightingRequirements": {
+          "Pset_SpaceHVACDesign": {
+            "Properties": {
+              "AirConditioning": {
+                "type": "boolean",
+                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirConditioningCentral": {
+                "type": "boolean",
+                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirHandlingName": {
+                "type": "string",
+                "Description": ""
+              },
+              "DiscontinuedHeating": {
+                "type": "boolean",
+                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "HumidityMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySetPoint": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySummer": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityWinter": {
+                "type": "real",
+                "Description": ""
+              },
+              "MechanicalVentilation": {
+                "type": "boolean",
+                "Description": "",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "MechanicalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
+              },
+              "NaturalVentilation": {
+                "type": "boolean",
+                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "NaturalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
+              },
+              "TemperatureMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSetPoint": {
+                "type": "real",
+                "Description": "The temperature setpoint range and default setpoint."
+              },
+              "TemperatureSummerMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSummerMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMin": {
+                "type": "real",
+                "Description": ""
+              }
+            }
+          },
+          "Pset_SpaceLightingDesign": {
             "Properties": {
               "ArtificialLighting": {
                 "type": "boolean",
@@ -10727,98 +10839,6 @@
               "OccupancyType": {
                 "type": "string",
                 "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
-              }
-            }
-          },
-          "Pset_SpaceThermalRequirements": {
-            "Properties": {
-              "AirConditioning": {
-                "type": "boolean",
-                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "AirConditioningCentral": {
-                "type": "boolean",
-                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "DiscontinuedHeating": {
-                "type": "boolean",
-                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "MechanicalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
-              },
-              "NaturalVentilation": {
-                "type": "boolean",
-                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "NaturalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
-              },
-              "SpaceHumidity": {
-                "type": "real",
-                "Description": "Humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period. Provide this property, if no humidity range (Min-Max) is available."
-              },
-              "SpaceHumidityMax": {
-                "type": "real",
-                "Description": "Maximal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumidityMin": {
-                "type": "real",
-                "Description": "Minimal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumiditySummer": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceHumidityWinter": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the cold (winter) period that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperature": {
-                "type": "real",
-                "Description": "Temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period. Provide this value, if no temperatur range (Min-Max) is available."
-              },
-              "SpaceTemperatureMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureSummerMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureSummerMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureWinterMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperatureWinterMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
               }
             }
           },
@@ -10907,10 +10927,6 @@
               "LoadSafetyFactor": {
                 "type": "real",
                 "Description": "Load safety factor."
-              },
-              "Name": {
-                "type": "string",
-                "Description": "The name of the air side system."
               },
               "TotalAirflow": {
                 "type": "real",
@@ -11394,7 +11410,111 @@
               }
             }
           },
-          "Pset_SpaceLightingRequirements": {
+          "Pset_SpaceHVACDesign": {
+            "Properties": {
+              "AirConditioning": {
+                "type": "boolean",
+                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirConditioningCentral": {
+                "type": "boolean",
+                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "AirHandlingName": {
+                "type": "string",
+                "Description": ""
+              },
+              "DiscontinuedHeating": {
+                "type": "boolean",
+                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "HumidityMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySetPoint": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumiditySummer": {
+                "type": "real",
+                "Description": ""
+              },
+              "HumidityWinter": {
+                "type": "real",
+                "Description": ""
+              },
+              "MechanicalVentilation": {
+                "type": "boolean",
+                "Description": "",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "MechanicalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
+              },
+              "NaturalVentilation": {
+                "type": "boolean",
+                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "NaturalVentilationRate": {
+                "type": "number",
+                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
+              },
+              "TemperatureMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSetPoint": {
+                "type": "real",
+                "Description": "The temperature setpoint range and default setpoint."
+              },
+              "TemperatureSummerMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureSummerMin": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMax": {
+                "type": "real",
+                "Description": ""
+              },
+              "TemperatureWinterMin": {
+                "type": "real",
+                "Description": ""
+              }
+            }
+          },
+          "Pset_SpaceLightingDesign": {
             "Properties": {
               "ArtificialLighting": {
                 "type": "boolean",
@@ -11443,98 +11563,6 @@
               "OccupancyType": {
                 "type": "string",
                 "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
-              }
-            }
-          },
-          "Pset_SpaceThermalRequirements": {
-            "Properties": {
-              "AirConditioning": {
-                "type": "boolean",
-                "Description": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "AirConditioningCentral": {
-                "type": "boolean",
-                "Description": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "DiscontinuedHeating": {
-                "type": "boolean",
-                "Description": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "MechanicalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour."
-              },
-              "NaturalVentilation": {
-                "type": "boolean",
-                "Description": "Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "NaturalVentilationRate": {
-                "type": "number",
-                "Description": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour."
-              },
-              "SpaceHumidity": {
-                "type": "real",
-                "Description": "Humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period. Provide this property, if no humidity range (Min-Max) is available."
-              },
-              "SpaceHumidityMax": {
-                "type": "real",
-                "Description": "Maximal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumidityMin": {
-                "type": "real",
-                "Description": "Minimal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceHumiditySummer": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceHumidityWinter": {
-                "type": "real",
-                "Description": "Humidity of the space or zone for the cold (winter) period that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperature": {
-                "type": "real",
-                "Description": "Temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period. Provide this value, if no temperatur range (Min-Max) is available."
-              },
-              "SpaceTemperatureMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period."
-              },
-              "SpaceTemperatureSummerMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureSummerMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling."
-              },
-              "SpaceTemperatureWinterMax": {
-                "type": "real",
-                "Description": "Maximal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
-              },
-              "SpaceTemperatureWinterMin": {
-                "type": "real",
-                "Description": "Minimal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating."
               }
             }
           },
@@ -11663,10 +11691,6 @@
               "LoadSafetyFactor": {
                 "type": "real",
                 "Description": "Load safety factor."
-              },
-              "Name": {
-                "type": "string",
-                "Description": "The name of the air side system."
               },
               "TotalAirflow": {
                 "type": "real",
