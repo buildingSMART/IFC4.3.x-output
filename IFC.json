@@ -7834,6 +7834,22 @@
         "Parent": "IfcFacility",
         "Description": "A marine facility represents any major structure or entity that is specific to the ports and waterways domain. examples of this include quays, jetties, shipyards, breakwaters etc.\n",
         "Psets": {
+          "Pset_MarineFacilityTransportation": {
+            "Properties": {
+              "BerthCargoWeight": {
+                "type": "real",
+                "Description": "Total cargo weight of berths within the facility"
+              },
+              "BerthGrade": {
+                "type": "string",
+                "Description": "Berth grade"
+              },
+              "Berths": {
+                "type": "number",
+                "Description": "Number of standard berths within the facility"
+              }
+            }
+          },
           "Qto_MarineFacilityBaseQuantities": {
             "Properties": {
               "Area": {
@@ -8640,6 +8656,23 @@
         "Parent": "IfcElement",
         "Description": "An _IfcCivilElement_ is a generalization of all elements within a civil engineering works that cannot be represented as BuildingElements, DistributionElements or GeographicElements. Depending on the context of the construction project, included building work, such as buildings or factories, are represented as a collection of _IfcBuildingElement_'s, distribution systems, such as piping or drainage, are represented as a collection of _IfcDistributionElement_'s, and other geographic elements, such as trees, light posts, traffic signs etc. are represented as _IfcGeographicElement_'s.\n\n> NOTE&nbsp; The _IfcCivilElement_ has been intruduced as a stub for future extensions of this specification to include an object model for civil engineering works.\n\nCivil elements are typically horizontally organized using a spatial structure expressed by spatial zones, therefore _IfcCivilElement_ is spatially contained by default within an _IfcSpatialZone_.\n\n> HISTORY &nbsp;New entity in IFC4.\n\n## Concepts\n\n### Classification\n\n\n### Object Typing\n\n\n### Property Sets\n\n\n### Spatial Containment",
         "Psets": {
+          "Pset_CivilElementCommon": {
+            "Properties": {
+              "Status": {
+                "type": "PEnum_ElementStatus",
+                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
+                ]
+              }
+            }
+          },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
               "ConcreteCover": {
@@ -9482,6 +9515,23 @@
         "Parent": "IfcElement",
         "Description": "The _IfcElementAssembly_ represents complex element assemblies aggregated from several elements, such as discrete elements, building elements, or other elements.  \n\n> EXAMPLE Steel construction assemblies, such as trusses and different kinds of frames, can be represented by the _IfcElementAssembly_ entity. Premanufactured or precast elements are examples of the general _IfcElementAssembly_ entity \n\n> NOTE&nbsp; The _IfcElementAssembly_ is a general purpose entity that is required to be decomposed. Also other subtypes of _IfcElement_ can be decomposed.    \nThe assembly structure can be nested, i.e. an _IfcElementAssembly_ could be an aggregated part within another _IfcElementAssembly_.  \n\n> NOTE&nbsp; View definitions and/or implementer agreements may restrict the number of allowed levels of nesting.  \n\nThe geometry of an _IfcElementAssembly_ is generally formed from its components, in which case it does not need to have an explicit geometric representation. In some cases it may be useful to also expose an own explicit representation of the aggregate.  \n\n> NOTE&nbsp; View definitions or implementer agreements may further constrain the applicability of certain shape representations at the _IfcElementAssembly_ in respect of the shape representations of its parts.  \n\n> HISTORY&nbsp; New entity in IFC2x2.  \n\n{ .spec-head}\nInformal Propositions:\n\n1. The _IfcElementAssembly_ shall have an aggregation relationship to the contained parts, i.e. the (INV) _IsDecomposedBy_ relationship shall be utilized.\n",
         "Psets": {
+          "Pset_ElementAssemblyCommon": {
+            "Properties": {
+              "Status": {
+                "type": "PEnum_ElementStatus",
+                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
+                ]
+              }
+            }
+          },
           "Attributes": {
             "Properties": {
               "AssemblyPlace": {
@@ -10195,6 +10245,46 @@
               }
             }
           },
+          "Pset_SpaceCommon": {
+            "Properties": {
+              "GrossPlannedArea": {
+                "type": "real",
+                "Description": "Total planned area for the building storey. Used for programming the building storey."
+              },
+              "HandicapAccessible": {
+                "type": "boolean",
+                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as an accessible space for handicapped people, e.g., for a public toilet (TRUE) or not (FALSE). This information is often used to declare the need for access for the disabled and for special design requirements of this space.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "IsExternal": {
+                "type": "boolean",
+                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "NetPlannedArea": {
+                "type": "real",
+                "Description": "Total planned net area for the building storey. Used for programming the building storey."
+              },
+              "PubliclyAccessible": {
+                "type": "boolean",
+                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              }
+            }
+          },
           "Pset_SpaceCoveringRequirements": {
             "Properties": {
               "CeilingCovering": {
@@ -10416,46 +10506,6 @@
               "OccupancyType": {
                 "type": "string",
                 "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
-              }
-            }
-          },
-          "Pset_SpatialElementCommon": {
-            "Properties": {
-              "GrossPlannedArea": {
-                "type": "real",
-                "Description": "Total planned area for the building storey. Used for programming the building storey."
-              },
-              "HandicapAccessible": {
-                "type": "boolean",
-                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as an accessible space for handicapped people, e.g., for a public toilet (TRUE) or not (FALSE). This information is often used to declare the need for access for the disabled and for special design requirements of this space.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "IsExternal": {
-                "type": "boolean",
-                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "NetPlannedArea": {
-                "type": "real",
-                "Description": "Total planned net area for the building storey. Used for programming the building storey."
-              },
-              "PubliclyAccessible": {
-                "type": "boolean",
-                "Description": "Indication whether this space (in case of e.g., a toilet) is designed to serve as a publicly accessible space, e.g., for a public toilet (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
               }
             }
           },
@@ -10839,6 +10889,18 @@
               "OccupancyType": {
                 "type": "string",
                 "Description": "Occupancy type for this object.\nIt is defined according to the presiding national building code."
+              }
+            }
+          },
+          "Pset_SpatialZoneCommon": {
+            "Properties": {
+              "IsExternal": {
+                "type": "boolean",
+                "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
               }
             }
           },
@@ -11336,7 +11398,50 @@
       },
       "IfcVibrationIsolator": {
         "Parent": "IfcImpactProtectionDevice",
-        "Description": ""
+        "Description": "",
+        "Psets": {
+          "Pset_VibrationIsolatorTypeCommon": {
+            "Properties": {
+              "IsolatorCompressibility": {
+                "type": "real",
+                "Description": "The compressibility of the vibration isolator."
+              },
+              "IsolatorStaticDeflection": {
+                "type": "real",
+                "Description": "Static deflection of the vibration isolator."
+              },
+              "MaximumSupportedWeight": {
+                "type": "real",
+                "Description": "The maximum weight that can be carried by the vibration isolator."
+              },
+              "NominalHeight": {
+                "type": "real",
+                "Description": "The nominal height of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
+              "Status": {
+                "type": "PEnum_ElementStatus",
+                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
+                ]
+              },
+              "VibrationTransmissibility": {
+                "type": "real",
+                "Description": "The vibration transmissibility percentage."
+              }
+            }
+          }
+        }
       },
       "IfcVirtualElement": {
         "Parent": "IfcElement",
