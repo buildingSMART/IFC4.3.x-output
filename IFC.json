@@ -9951,51 +9951,19 @@
         "Parent": "IfcSpatialStructureElement",
         "Description": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.\n\nA space is associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. This is defined by the _CompositionType_ attribute of the supertype _IfcSpatialStructureElement_ which is interpreted as follow:\n\n* COMPLEX = space group\n* ELEMENT = space\n* PARTIAL = partial space\n\n> NOTE&nbsp; View definitions and implementation agreements may restrict spaces with _CompositionType_=ELEMENT to be non-overlapping.\n\nThe _IfcSpace_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship _IfcRelAggregates_.\n\nFigure 1 shows the _IfcSpace_ as part of the spatial structure. It also serves as the spatial container for space related elements.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"spatial structure\"](../../../../figures/ifcspace-spatialstructure.png \"Figure 1 &mdash; Space composition\")\n\nThe following guidelines should apply for using the _Name_, _Description_, _LongName_ and _ObjectType_ attributes.\n\n* _Name_ holds the unique name (or space number) from the plan.\n* _Description_ holds any additional information field the user may have specified, there are no further recommendations.\n* _LongName_ holds the full name of the space, it is often used in addition to the _Name_, if a number is assigned to the room, then the descriptive name is exchanged as _LongName_.\n* _ObjectType_ holds the space type, i.e. usually the functional category of the space .\n\n> NOTE&nbsp; In cases of inconsistency between the geometric representation of the _IfcSpace_ and the combined geometric representations of the surrounding _IfcRelSpaceBoundary_, the geometric representation of the space should take priority over the geometric representation of the surrounding space boundaries.\n\nFigure 2 describes the heights and elevations of the _IfcSpace_.\n\n* elevation of the space (top of construction slab) equals elevation of storey: provided by _IfcBuildingStorey.Elevation_ relative to em>IfcBuilding.ElevationOfRefHeight\n* elevation of the space flooring (top of flooring on top of slab): provided by _IfcSpace.ElevationWithFlooring_ relative to _IfcBuilding.ElevationOfRefHeight_\n* height of space (top of slab below to bottom of slab above): provided by BaseQuantity with Name=\"Height\"\n* floor height of space (top of slab below to top of flooring): provided by BaseQuantity with Name=\"FinishFloorHeight\"\n* net height of space (top of flooring to bottom of suspended ceiling): provided by BaseQuantity with Name=\"FinishCeilingHeight\"\n\n![\"space heights\"](../../../../figures/ifcspace_heights.png \"Figure 2 &mdash; Space elevations\")\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
-          "Pset_SpaceFireSafetyRequirements": {
+          "Pset_ProcessCapacity": {
             "Properties": {
-              "AirPressurization": {
-                "type": "boolean",
-                "Description": "Indication whether the space is required to have pressurized air (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
+              "ProcessCapacity": {
+                "type": "number",
+                "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
-              "FireExit": {
-                "type": "boolean",
-                "Description": "Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).\nHere whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
+              "ProcessItem": {
+                "type": "unknown",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
               },
-              "FireRiskFactor": {
-                "type": "string",
-                "Description": "Fire Risk factor assigned to the space according to local building regulations. It defines the fire risk of the space at several levels of fire hazard."
-              },
-              "FlammableStorage": {
-                "type": "boolean",
-                "Description": "Indication whether the space is intended to serve as a storage of flammable material (which is regarded as such by the presiding building code. (TRUE) indicates yes, (FALSE) otherwise.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "SprinklerProtection": {
-                "type": "boolean",
-                "Description": "Indication whether this object is sprinkler protected (TRUE) or not (FALSE).",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "SprinklerProtectionAutomatic": {
-                "type": "boolean",
-                "Description": "Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).\nIt should only be given, if the property \"SprinklerProtection\" is set to TRUE.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
+              "ProcessPerformance": {
+                "type": "unknown",
+                "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
           },
@@ -10055,162 +10023,6 @@
               }
             }
           },
-          "Pset_AirSideSystemInformation": {
-            "Properties": {
-              "AirflowSensible": {
-                "type": "real",
-                "Description": "The air flowrate required to satisfy the sensible peak loads."
-              },
-              "AirSideSystemDistributionType": {
-                "type": "PEnum_AirSideSystemDistributionType",
-                "Description": "This enumeration defines the basic types of air side systems (e.g., SingleDuct, DualDuct, Multizone, etc.).",
-                "values": [
-                  "DUALDUCT",
-                  "MULTIZONE",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "SINGLEDUCT",
-                  "UNSET"
-                ]
-              },
-              "AirSideSystemType": {
-                "type": "PEnum_AirSideSystemType",
-                "Description": "This enumeration specifies the basic types of possible air side systems (e.g., Constant Volume, Variable Volume, etc.).",
-                "values": [
-                  "CONSTANTVOLUME",
-                  "CONSTANTVOLUMEBYPASS",
-                  "CONSTANTVOLUMEMULTIPLEZONEREHEAT",
-                  "CONSTANTVOLUMESINGLEZONE",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNSET",
-                  "VARIABLEAIRVOLUME",
-                  "VARIABLEAIRVOLUMEDUALCONDUIT",
-                  "VARIABLEAIRVOLUMEFANPOWERED",
-                  "VARIABLEAIRVOLUMEINDUCTION",
-                  "VARIABLEAIRVOLUMEREHEAT",
-                  "VARIABLEAIRVOLUMEVARIABLEDIFFUSERS",
-                  "VARIABLEAIRVOLUMEVARIABLETEMPERATURE"
-                ]
-              },
-              "ApplianceDiversity": {
-                "type": "real",
-                "Description": "Diversity of appliance load."
-              },
-              "CoolingTemperatureDelta": {
-                "type": "real",
-                "Description": "Cooling temperature difference for calculating space air flow rates."
-              },
-              "Description": {
-                "type": "string",
-                "Description": "The description of the air side system."
-              },
-              "EnergyGainSensible": {
-                "type": "real",
-                "Description": "The sum of total energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level sensible energy gains."
-              },
-              "EnergyGainTotal": {
-                "type": "real",
-                "Description": "The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains."
-              },
-              "EnergyLoss": {
-                "type": "real",
-                "Description": "The sum of energy losses for the spaces served by the system during the peak heating conditions."
-              },
-              "FanPower": {
-                "type": "real",
-                "Description": "Fan motor loads contributing to the cooling load."
-              },
-              "HeatingTemperatureDelta": {
-                "type": "real",
-                "Description": "Heating temperature difference for calculating space air flow rates."
-              },
-              "InfiltrationDiversitySummer": {
-                "type": "real",
-                "Description": "Diversity factor for Summer infiltration."
-              },
-              "InfiltrationDiversityWinter": {
-                "type": "real",
-                "Description": "Diversity factor for Winter infiltration."
-              },
-              "LightingDiversity": {
-                "type": "real",
-                "Description": "Lighting diversity."
-              },
-              "LoadSafetyFactor": {
-                "type": "real",
-                "Description": "Load safety factor."
-              },
-              "TotalAirflow": {
-                "type": "real",
-                "Description": "The total design supply air flowrate required for the system for either heating or cooling conditions, whichever is greater."
-              },
-              "Ventilation": {
-                "type": "real",
-                "Description": "Required outside air ventilation."
-              }
-            }
-          },
-          "Pset_SpaceThermalDesign": {
-            "Properties": {
-              "BoundaryAreaHeatLoss": {
-                "type": "real",
-                "Description": "Heat loss per unit area for the boundary object. This is a design input value for use in the absence of calculated load data."
-              },
-              "CeilingRAPlenum": {
-                "type": "boolean",
-                "Description": "Ceiling plenum used for return air or not. TRUE = Yes, FALSE = No.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
-                ]
-              },
-              "CoolingDesignAirflow": {
-                "type": "real",
-                "Description": "The air flowrate required during the peak cooling conditions."
-              },
-              "CoolingDryBulb": {
-                "type": "real",
-                "Description": "Outside dry bulb temperature for cooling design."
-              },
-              "CoolingRelativeHumidity": {
-                "type": "real",
-                "Description": "Inside relative humidity for cooling design."
-              },
-              "ExhaustAirFlowrate": {
-                "type": "real",
-                "Description": ""
-              },
-              "HeatingDesignAirflow": {
-                "type": "real",
-                "Description": "The air flowrate required during the peak heating conditions, but could also be determined by minimum ventilation requirement or minimum air change requirements."
-              },
-              "HeatingDryBulb": {
-                "type": "real",
-                "Description": "Outside dry bulb temperature for heating design."
-              },
-              "HeatingRelativeHumidity": {
-                "type": "real",
-                "Description": "Inside relative humidity for heating design."
-              },
-              "TotalHeatGain": {
-                "type": "real",
-                "Description": "The total amount of heat or energy gained by the space at the time of the space's peak cooling conditions."
-              },
-              "TotalHeatLoss": {
-                "type": "real",
-                "Description": "The total amount of heat or energy lost by the space at the time of the space's peak heating conditions."
-              },
-              "TotalSensibleHeatGain": {
-                "type": "real",
-                "Description": "The total sensible heat or energy gained by the space during the peak cooling conditions."
-              },
-              "VentilationAirFlowrate": {
-                "type": "real",
-                "Description": ""
-              }
-            }
-          },
           "Attributes": {
             "Properties": {
               "ElevationWithFlooring": {
@@ -10229,22 +10041,6 @@
         "Parent": "IfcProduct",
         "Description": "A spatial element is the generalization of all spatial elements that might be used to define a spatial structure or to define spatial zones.\n\n* a hierarchical spatial structure element as _IfcSpatialStructureElement_ \n    * a spatial structure is a hiearchical decomposition of the project. That spatial structure is often used to provide a project structure to organize a building project.\n    * A spatial project structure might define as many levels of decomposition as necessary for the building project. Elements within the spatial project structure are site, building, storey, and space or alternatively, site, bridge and bridge part \n* a spatial zone as _IfcSpatialZone_ \n    * a spatial zone is a non-hierarchical and potentially overlapping decomposition of the project under some functional consideration.\n    * a spatial zone might be used to represent a thermal zone, a lighting zone, a usable area zone.\n    * a spatial zone might be used to represent a horizontal spatial structure as used in civil works.\n    * a spatial zone might have its independent placement and shape representation. \n\n> HISTORY&nbsp; New entity in IFC4.\n",
         "Psets": {
-          "Pset_ProcessCapacity": {
-            "Properties": {
-              "ProcessCapacity": {
-                "type": "number",
-                "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
-              },
-              "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
-              },
-              "ProcessPerformance": {
-                "type": "unknown",
-                "Description": "Minimum time to accept or dispatch the entire item capacity."
-              }
-            }
-          },
           "Pset_SpaceCommon": {
             "Properties": {
               "GrossPlannedArea": {
@@ -10350,6 +10146,54 @@
               "WallCoveringThickness": {
                 "type": "real",
                 "Description": "Thickness of the material layer(s) for the space cladding.  \n\nThe thickness information is provided in absence of an IfcCovering (type=CLADDING) object with own shape representation. In cases of inconsistency between the geometric parameters of an assigned IfcCovering and this attached property, the geometric parameters take precedence."
+              }
+            }
+          },
+          "Pset_SpaceFireSafetyRequirements": {
+            "Properties": {
+              "AirPressurization": {
+                "type": "boolean",
+                "Description": "Indication whether the space is required to have pressurized air (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "FireExit": {
+                "type": "boolean",
+                "Description": "Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).\nHere whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "FireRiskFactor": {
+                "type": "string",
+                "Description": "Fire Risk factor assigned to the space according to local building regulations. It defines the fire risk of the space at several levels of fire hazard."
+              },
+              "FlammableStorage": {
+                "type": "boolean",
+                "Description": "Indication whether the space is intended to serve as a storage of flammable material (which is regarded as such by the presiding building code. (TRUE) indicates yes, (FALSE) otherwise.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "SprinklerProtection": {
+                "type": "boolean",
+                "Description": "Indication whether this object is sprinkler protected (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "SprinklerProtectionAutomatic": {
+                "type": "boolean",
+                "Description": "Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).\nIt should only be given, if the property \"SprinklerProtection\" is set to TRUE.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
               }
             }
           },
@@ -10509,11 +10353,163 @@
               }
             }
           },
-          "Pset_ThermalLoadAggregate": {
+          "Pset_AirSideSystemInformation": {
+            "Properties": {
+              "AirflowSensible": {
+                "type": "real",
+                "Description": "The air flowrate required to satisfy the sensible peak loads."
+              },
+              "AirSideSystemDistributionType": {
+                "type": "PEnum_AirSideSystemDistributionType",
+                "Description": "This enumeration defines the basic types of air side systems (e.g., SingleDuct, DualDuct, Multizone, etc.).",
+                "values": [
+                  "DUALDUCT",
+                  "MULTIZONE",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "SINGLEDUCT",
+                  "UNSET"
+                ]
+              },
+              "AirSideSystemType": {
+                "type": "PEnum_AirSideSystemType",
+                "Description": "This enumeration specifies the basic types of possible air side systems (e.g., Constant Volume, Variable Volume, etc.).",
+                "values": [
+                  "CONSTANTVOLUME",
+                  "CONSTANTVOLUMEBYPASS",
+                  "CONSTANTVOLUMEMULTIPLEZONEREHEAT",
+                  "CONSTANTVOLUMESINGLEZONE",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "UNSET",
+                  "VARIABLEAIRVOLUME",
+                  "VARIABLEAIRVOLUMEDUALCONDUIT",
+                  "VARIABLEAIRVOLUMEFANPOWERED",
+                  "VARIABLEAIRVOLUMEINDUCTION",
+                  "VARIABLEAIRVOLUMEREHEAT",
+                  "VARIABLEAIRVOLUMEVARIABLEDIFFUSERS",
+                  "VARIABLEAIRVOLUMEVARIABLETEMPERATURE"
+                ]
+              },
+              "ApplianceDiversity": {
+                "type": "real",
+                "Description": "Diversity of appliance load."
+              },
+              "CoolingTemperatureDelta": {
+                "type": "real",
+                "Description": "Cooling temperature difference for calculating space air flow rates."
+              },
+              "Description": {
+                "type": "string",
+                "Description": "The description of the air side system."
+              },
+              "EnergyGainSensible": {
+                "type": "real",
+                "Description": "The sum of total energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level sensible energy gains."
+              },
+              "EnergyGainTotal": {
+                "type": "real",
+                "Description": "The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains."
+              },
+              "EnergyLoss": {
+                "type": "real",
+                "Description": "The sum of energy losses for the spaces served by the system during the peak heating conditions."
+              },
+              "FanPower": {
+                "type": "real",
+                "Description": "Fan motor loads contributing to the cooling load."
+              },
+              "HeatingTemperatureDelta": {
+                "type": "real",
+                "Description": "Heating temperature difference for calculating space air flow rates."
+              },
+              "InfiltrationDiversitySummer": {
+                "type": "real",
+                "Description": "Diversity factor for Summer infiltration."
+              },
+              "InfiltrationDiversityWinter": {
+                "type": "real",
+                "Description": "Diversity factor for Winter infiltration."
+              },
+              "TotalAirflow": {
+                "type": "real",
+                "Description": "The total design supply air flowrate required for the system for either heating or cooling conditions, whichever is greater."
+              },
+              "Ventilation": {
+                "type": "real",
+                "Description": "Required outside air ventilation."
+              }
+            }
+          },
+          "Pset_SpaceAirHandlingDimensioning": {
+            "Properties": {
+              "BoundaryAreaHeatLoss": {
+                "type": "real",
+                "Description": "Heat loss per unit area for the boundary object. This is a design input value for use in the absence of calculated load data."
+              },
+              "CeilingRAPlenum": {
+                "type": "boolean",
+                "Description": "Ceiling plenum used for return air or not. TRUE = Yes, FALSE = No.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "CoolingDesignAirFlow": {
+                "type": "real",
+                "Description": ""
+              },
+              "CoolingDryBulb": {
+                "type": "real",
+                "Description": "Outside dry bulb temperature for cooling design."
+              },
+              "CoolingRelativeHumidity": {
+                "type": "real",
+                "Description": "Inside relative humidity for cooling design."
+              },
+              "DesignAirFlow": {
+                "type": "real",
+                "Description": ""
+              },
+              "HeatingDesignAirFlow": {
+                "type": "real",
+                "Description": ""
+              },
+              "HeatingDryBulb": {
+                "type": "real",
+                "Description": "Outside dry bulb temperature for heating design."
+              },
+              "HeatingRelativeHumidity": {
+                "type": "real",
+                "Description": "Inside relative humidity for heating design."
+              },
+              "SensibleHeatGain": {
+                "type": "real",
+                "Description": ""
+              },
+              "TotalHeatGain": {
+                "type": "real",
+                "Description": "The total amount of heat or energy gained by the space at the time of the space's peak cooling conditions."
+              },
+              "TotalHeatLoss": {
+                "type": "real",
+                "Description": "The total amount of heat or energy lost by the space at the time of the space's peak heating conditions."
+              },
+              "VentilationDesignAirFlow": {
+                "type": "real",
+                "Description": ""
+              }
+            }
+          },
+          "Pset_ThermalLoad": {
             "Properties": {
               "ApplianceDiversity": {
                 "type": "real",
                 "Description": "Diversity of appliance load."
+              },
+              "AppliancePercentLoadToRadiant": {
+                "type": "real",
+                "Description": "Percent of sensible load to radiant heat."
               },
               "InfiltrationDiversitySummer": {
                 "type": "real",
@@ -10527,26 +10523,6 @@
                 "type": "real",
                 "Description": "Lighting diversity."
               },
-              "LoadSafetyFactor": {
-                "type": "real",
-                "Description": "Load safety factor."
-              },
-              "TotalCoolingLoad": {
-                "type": "real",
-                "Description": "The peak total cooling load for the building, zone or space."
-              },
-              "TotalHeatingLoad": {
-                "type": "real",
-                "Description": "The peak total heating load for the building, zone or space."
-              }
-            }
-          },
-          "Pset_ThermalLoadDesignCriteria": {
-            "Properties": {
-              "AppliancePercentLoadToRadiant": {
-                "type": "real",
-                "Description": "Percent of sensible load to radiant heat."
-              },
               "LightingLoadIntensity": {
                 "type": "real",
                 "Description": "Average lighting load intensity in the space per unit area (PowerMeasure/IfcAreaMeasure)."
@@ -10554,6 +10530,10 @@
               "LightingPercentLoadToReturnAir": {
                 "type": "real",
                 "Description": "Percent of lighting load to the return air plenum."
+              },
+              "LoadSafetyFactor": {
+                "type": "real",
+                "Description": "Load safety factor."
               },
               "OccupancyDiversity": {
                 "type": "real",
@@ -10566,6 +10546,14 @@
               "ReceptacleLoadIntensity": {
                 "type": "real",
                 "Description": "Average power use intensity of appliances and other non-HVAC equipment in the space per unit area.(PowerMeasure/IfcAreaMeasure)."
+              },
+              "TotalCoolingLoad": {
+                "type": "real",
+                "Description": "The peak total cooling load for the building, zone or space."
+              },
+              "TotalHeatingLoad": {
+                "type": "real",
+                "Description": "The peak total heating load for the building, zone or space."
               }
             }
           },
@@ -10981,14 +10969,6 @@
               "InfiltrationDiversityWinter": {
                 "type": "real",
                 "Description": "Diversity factor for Winter infiltration."
-              },
-              "LightingDiversity": {
-                "type": "real",
-                "Description": "Lighting diversity."
-              },
-              "LoadSafetyFactor": {
-                "type": "real",
-                "Description": "Load safety factor."
               },
               "TotalAirflow": {
                 "type": "real",
@@ -11788,14 +11768,6 @@
               "InfiltrationDiversityWinter": {
                 "type": "real",
                 "Description": "Diversity factor for Winter infiltration."
-              },
-              "LightingDiversity": {
-                "type": "real",
-                "Description": "Lighting diversity."
-              },
-              "LoadSafetyFactor": {
-                "type": "real",
-                "Description": "Load safety factor."
               },
               "TotalAirflow": {
                 "type": "real",
