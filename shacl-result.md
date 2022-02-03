@@ -1,5 +1,11 @@
 ## DefinitionForProperty
 
+* The Property 'Pset_ActorCommon.ActorCategory' has no definition
+* The Property 'Pset_ActuatorPHistory.PositionHistory' has no definition
+* The Property 'Pset_ActuatorPHistory.QualityHistory' has no definition
+* The Property 'Pset_ActuatorPHistory.StatusHistory' has no definition
+* The Property 'Pset_ActuatorTypeCommon.ActuatorApplication' has no definition
+* The Property 'Pset_ActuatorTypeCommon.ActuatorStatus' has no definition
 * The Property 'Pset_Address.AddressLines' has no definition
 * The Property 'Pset_Address.Country' has no definition
 * The Property 'Pset_Address.InternalLocation' has no definition
@@ -9,34 +15,81 @@
 * The Property 'Pset_Address.Town' has no definition
 * The Property 'Pset_Address.UserDefinedPurpose' has no definition
 * The Property 'Pset_AirTerminalBoxTypeCommon.AirflowRateRange' has no definition
+* The Property 'Pset_AirTerminalOccurrence.AirTerminalLocation' has no definition
+* The Property 'Pset_AirTerminalPHistory.AirFlowRateHistory' has no definition
+* The Property 'Pset_AirTerminalTypeCommon.AirTerminalMountingType' has no definition
+* The Property 'Pset_AirTerminalTypeCommon.AirTerminalShape' has no definition
+* The Property 'Pset_AlarmPHistory.ConditionHistory' has no definition
+* The Property 'Pset_AlarmPHistory.UserHistory' has no definition
+* The Property 'Pset_AlarmTypeCommon.AlarmCondition' has no definition
+* The Property 'Pset_AudioVisualAppliancePHistory.AudioVolumeHistory' has no definition
+* The Property 'Pset_AudioVisualAppliancePHistory.MediaSourceHistory' has no definition
+* The Property 'Pset_BoilerPHistory.CombustionChamberTemperature' has no definition
+* The Property 'Pset_BoilerPHistory.WorkingPressureHistory' has no definition
+* The Property 'Pset_BoilerTypeSteam.NominalEfficiencyTable' has no definition
 * The Property 'Pset_BridgeCommon.StructureIndicator' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_3' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.ConductorMaterial' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.ConductorShape' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_3' has no definition
 * The Property 'Pset_CessBetweenRails.CheckRailType' has no definition
 * The Property 'Pset_CessBetweenRails.JointRelativePosition' has no definition
 * The Property 'Pset_CessBetweenRails.LoadCapacity' has no definition
 * The Property 'Pset_CessBetweenRails.UsagePurpose' has no definition
+* The Property 'Pset_ChillerTypeCommon.ChillerCapacity' has no definition
+* The Property 'Pset_CoilPHistory.AirPressureDropCurveHistory' has no definition
+* The Property 'Pset_CoilPHistory.SoundCurveHistory' has no definition
 * The Property 'Pset_CoilTypeCommon.AirflowRateRange' has no definition
+* The Property 'Pset_CoilTypeCommon.CoilPlacement' has no definition
+* The Property 'Pset_ConstructionResource.ActualWorkTime' has no definition
+* The Property 'Pset_ConstructionResource.RemainingWorkProgression' has no definition
+* The Property 'Pset_ConstructionResource.ScheduleWorkProgression' has no definition
+* The Property 'Pset_ControllerPHistory.ValueHistory' has no definition
+* The Property 'Pset_ControllerTypeMultiPosition.IntegerRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirflowRateRange' has no definition
 * The Property 'Pset_CoveringTypeMembrane.NominalInstallationDepth' has no definition
 * The Property 'Pset_CoveringTypeMembrane.NominalTransverseInclination' has no definition
+* The Property 'Pset_DamperTypeFireSmokeDamper.DamperControlType' has no definition
+* The Property 'Pset_DistributionChamberElementTypeInspectionChamber.InspectionChamberInvertLevel' has no definition
+* The Property 'Pset_DistributionChamberElementTypeSump.SumpInvertLevel' has no definition
+* The Property 'Pset_DistributionPortPHistoryCable.CurrentHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryCable.PowerFactorHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryCable.VoltageHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.FlowConditionHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.MassFlowRateHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.PressureHisotry' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.TemperatureHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.VelocityHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.VolumetricFlowRateHistory' has no definition
+* The Property 'Pset_DistributionPortPHistoryDuct.WetBulbTemperatureHistory' has no definition
 * The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
 * The Property 'Pset_DistributionPortTypePipe.ConnectionSubType' has no definition
 * The Property 'Pset_DoorTypeTurnstile.IsBidirectional' has no definition
 * The Property 'Pset_DoorTypeTurnstile.NarrowChannelWidth' has no definition
 * The Property 'Pset_DoorTypeTurnstile.TurnstileType' has no definition
 * The Property 'Pset_DoorTypeTurnstile.WideChannelWidth' has no definition
+* The Property 'Pset_DuctSegmentPHistory.LeakageCurveHistory' has no definition
+* The Property 'Pset_DuctSegmentTypeCommon.CrossSectionShape' has no definition
 * The Property 'Pset_ElectricalDeviceCommon.IK_Code' has no definition
 * The Property 'Pset_ElectricalDeviceCommon.IP_Code' has no definition
 * The Property 'Pset_EmbeddedTrack.HasDrainage' has no definition
 * The Property 'Pset_EmbeddedTrack.IsAccessibleByVehicle' has no definition
 * The Property 'Pset_EmbeddedTrack.PermissibleRoadLoad' has no definition
+* The Property 'Pset_EnergyRequirements.EnergySourceLabel' has no definition
+* The Property 'Pset_EnvironmentalImpactIndicators.IndicatorsUnit' has no definition
+* The Property 'Pset_FanCentrifugal.FanArrangement' has no definition
 * The Property 'Pset_FastenerWeld.n' has no definition
 * The Property 'Pset_FittingTransition.EccentricityInY' has no definition
 * The Property 'Pset_FittingTransition.EccentricityInZ' has no definition
+* The Property 'Pset_FlowMeterOccurrence.FlowMeterOurpose' has no definition
+* The Property 'Pset_GeotechnicalAssemblyCommon.BoreHolePurpose' has no definition
+* The Property 'Pset_GeotechnicalStratumCommon.StratumColour' has no definition
+* The Property 'Pset_HumidifierTypeCommon.HumidifierApplication' has no definition
 * The Property 'Pset_JunctionBoxTypeCommon.IP_Code' has no definition
+* The Property 'Pset_JunctionBoxTypeCommon.JunctionBoxMountingType' has no definition
+* The Property 'Pset_MaintenanceTriggerPerformance.PerformanceMaintenanceLevel' has no definition
 * The Property 'Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit.AntennaType' has no definition
 * The Property 'Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit.DownlinkRadioBand' has no definition
 * The Property 'Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit.NumberOfCarriers' has no definition
@@ -85,11 +138,24 @@
 * The Property 'Pset_MobileTelecommunicationsApplianceTypeRemoteUnit.NumberOfAntennas' has no definition
 * The Property 'Pset_MobileTelecommunicationsApplianceTypeRemoteUnit.NumberOfInterfaces' has no definition
 * The Property 'Pset_MobileTelecommunicationsApplianceTypeRemoteUnit.RUConnectionType' has no definition
+* The Property 'Pset_PropertyAgreement.AgreementDate' has no definition
+* The Property 'Pset_PropertyAgreement.AgreementVersion' has no definition
+* The Property 'Pset_PropertyAgreement.TrackingIdentifier' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingFunctionICurve.MaxAdjustmentX_ICS' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentRange' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentRangeStepValue' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentValues' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentRange' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentRangeStepValue' has no definition
+* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentValues' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_100' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_50' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_Select' has no definition
+* The Property 'Pset_ProvisionForVoid.VoidShape' has no definition
+* The Property 'Pset_PumpPHistory.PowerHistory' has no definition
+* The Property 'Pset_SensorTypeCO2Sensor.SetPointCO2Concentration' has no definition
+* The Property 'Pset_SensorTypeIonConcentrationSensor.SetPointIonConcentration' has no definition
 * The Property 'Pset_SignCommon.TactileMarking' has no definition
 * The Property 'Pset_SlabTypeTrackSlab.TechnicalStandard' has no definition
 * The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has no definition
@@ -111,8 +177,27 @@
 * The Property 'Pset_SpaceHVACDesign.TemperatureSummerMin' has no definition
 * The Property 'Pset_SpaceHVACDesign.TemperatureWinterMax' has no definition
 * The Property 'Pset_SpaceHVACDesign.TemperatureWinterMin' has no definition
+* The Property 'Pset_SpaceHeaterPHistory.CharacteristicExponent' has no definition
+* The Property 'Pset_SpaceHeaterTypeCommon.SpaceHeaterPlacement' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.AirExchangeRateTimeHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.DryBulbTemperatureHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.EquipmentSensibleHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.ExhaustAirHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.InfiltrationSensibleHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.LightingHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.PeopleHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.RecirculatedAirHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.RelativeHumidityHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.TotalLatentLoadHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.TotalRadiantLoadHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.TotalSensibleLoadHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.VentilationIndoorAirHistory' has no definition
+* The Property 'Pset_SpaceThermalLoadPHistory.VentilationOutdoorAirHistory' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
-* The Property 'Pset_SpaceThermalPHistory.VentilationAirFlowRate' has no definition
+* The Property 'Pset_SpaceThermalPHistory.SpaceTemperatureHistory' has no definition
+* The Property 'Pset_SpaceThermalPHistory.VentilationAirFlowRateHistory' has no definition
+* The Property 'Pset_SwitchingDeviceTypePHistory.SetPointHistory' has no definition
+* The Property 'Pset_TankTypeCommon.TankNominalCapacity' has no definition
 * The Property 'Pset_TicketProcessing.TicketProcessingTime' has no definition
 * The Property 'Pset_TicketProcessing.TicketStuckRate' has no definition
 * The Property 'Pset_TrackBase.IsSurfaceGalling' has no definition
@@ -120,12 +205,19 @@
 * The Property 'Pset_UnitaryControlElementBaseStationController.NumberOfInterfaces' has no definition
 * The Property 'Pset_UnitaryControlElementBaseStationController.NumberOfManagedBTSs' has no definition
 * The Property 'Pset_UnitaryControlElementBaseStationController.NumberOfManagedCarriers' has no definition
+* The Property 'Pset_UnitaryControlElementPHistory.OperationModeHistory' has no definition
+* The Property 'Pset_UnitaryControlElementTypeCommon.OperationMode' has no definition
 * The Property 'Pset_UnitaryControlElementTypeControlPanel.NominalPower' has no definition
 * The Property 'Pset_UnitaryControlElementTypeControlPanel.ReferenceAirRelativeHumidity' has no definition
 * The Property 'Pset_UnitaryControlElementTypeControlPanel.ReferenceEnvironmentTemperature' has no definition
+* The Property 'Pset_UnitaryControlElementTypeIndicatorPanel.UnitaryApplication' has no definition
 ## PropertyForDefinition
 
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Actor Assignment.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/ActualWork.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/AdjustmentRange.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/AdjustmentRangeStepValue.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/AdjustmentValues.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/AffectsSurroundings.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Aggregation.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Alignment Attributes.md' a property cannot be found
@@ -135,6 +227,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Approval Association.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Arbitrary Profile Definition.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Area.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Arrangement.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/AssessmentOfRisk.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Assignment to Group.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/a/Axis 2D Geometry.md' a property cannot be found
@@ -163,9 +256,11 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Clearance Geometry.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Clothoid Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/CoG Geometry.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Colour.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/CompactedVolume.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Component to Distribution System.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/CompositeCurve Profile Definition.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Condition.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Constraint Association.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Control Assignment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Control Flow.md' a property cannot be found
@@ -190,6 +285,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/e/Element Type Predefined Type.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/e/Element Voiding.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/e/ExhaustAirFlowRate.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/e/Exponent.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/f/FinishCeilingHeight.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/f/FinishFloorHeight.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/f/FootPrint Annotation Geometry.md' a property cannot be found
@@ -219,9 +315,11 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/h/Helmert Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/i/IK.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/i/IP.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/i/Identifier.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/l/Layer.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/l/Library Association.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/l/Lighting Geometry.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/l/Location.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/l/LooseVolume.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mapped Geometry.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mass.md' a property cannot be found
@@ -233,9 +331,12 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Profile Set.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Properties.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Single.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaterialColour.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaxAdjustmentX.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mechanical Fastener Type Attributes.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mode.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MountingType.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Name.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Nesting.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/NetArea.md' a property cannot be found
@@ -272,6 +373,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Partial Templates.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Path Connectivity.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PerformanceUnit.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PlacementType.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PlanArea.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PlanLength.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PolyCurve Profile Definition.md' a property cannot be found
@@ -279,6 +381,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Port Connectivity.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Port Nesting.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Port to Distribution System.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Position.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/PreventiveMeasures.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Process Assignment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/p/Process Type Assignment.md' a property cannot be found
@@ -326,6 +429,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Reference View.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Reinforcing Bar Type Attributes.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Reinforcing Mesh Type Attributes.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/RemainingWork.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Resource Assignment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Resource Cost.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Resource Limits.md' a property cannot be found
@@ -336,9 +440,11 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/Risk Name.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/RiskConsequence.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/r/RiskRating.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/ScheduleWork.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Scope.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SelfExtinguishing60332.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sequential Connectivity.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shape.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shared element data schemas.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sine Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Site Attributes.md' a property cannot be found
@@ -350,6 +456,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceHumidityMin.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceHumiditySummer.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceHumidityWinter.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceTemperature.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceTemperatureMax.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceTemperatureMin.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SpaceTemperatureSummerMax.md' a property cannot be found
@@ -385,9 +492,13 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/t/Type Lighting Geometry.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/t/Type Port Nesting.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/t/TypeDesignator.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/u/Unit.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/u/UsageTime.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/u/User.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/v/Values.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/v/VentilationAirFlowRate.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/v/Version.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/v/VersionDate.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/v/Viennese Bend Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/w/Window Attributes.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/w/Window Type Attributes.md' a property cannot be found
@@ -405,6 +516,5 @@
 * The Property 'Pset_ProcessCapacity.ProcessItem' has an incorrect type
 * The Property 'Pset_ProcessCapacity.ProcessPerformance' has an incorrect type
 * The Property 'Pset_SolidStratumCapacity.HydraulicConductivity' has an incorrect type
-* The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has an incorrect type
 * The Property 'Pset_SolidStratumCapacity.PwaveVelocity' has an incorrect type
 * The Property 'Pset_SolidStratumCapacity.SwaveVelocity' has an incorrect type

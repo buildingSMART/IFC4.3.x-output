@@ -9,9 +9,9 @@
         "Psets": {
           "Pset_ActuatorTypeCommon": {
             "Properties": {
-              "Application": {
+              "ActuatorApplication": {
                 "type": "PEnum_ActuatorApplication",
-                "Description": "Humidifier application.\n\nFixed: Humidifier installed in a ducted flow distribution system.\nPortable: Humidifier is not installed in a ducted flow distribution system.",
+                "Description": "",
                 "values": [
                   "DAMPERACTUATOR",
                   "ENTRYEXITDEVICE",
@@ -22,6 +22,19 @@
                   "SUNBLINDACTUATOR",
                   "UNSET",
                   "VALVEPOSITIONER"
+                ]
+              },
+              "ActuatorStatus": {
+                "type": "PEnum_ElementStatus",
+                "Description": "",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
                 ]
               },
               "FailPosition": {
@@ -46,19 +59,6 @@
               "Reference": {
                 "type": "string",
                 "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
-              },
-              "Status": {
-                "type": "PEnum_ElementStatus",
-                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
-                "values": [
-                  "DEMOLISH",
-                  "EXISTING",
-                  "NEW",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "TEMPORARY",
-                  "UNSET"
-                ]
               }
             }
           },
@@ -1055,9 +1055,9 @@
                   "FALSE"
                 ]
               },
-              "MountingType": {
+              "JunctionBoxMountingType": {
                 "type": "PEnum_JunctionBoxMountingType",
-                "Description": "The way the air terminal is mounted to the ceiling, wall, etc.\n\nSurface: mounted to the surface of something (e.g., wall, duct, etc.).\nFlat flush: mounted flat and flush with a surface.\nLay-in: mounted in a lay-in type ceiling (e.g., a dropped ceiling grid).",
+                "Description": "",
                 "values": [
                   "CUT_IN",
                   "FACENAIL",
@@ -1068,7 +1068,7 @@
                 ]
               },
               "NumberOfGangs": {
-                "type": "integer",
+                "type": "number",
                 "Description": "Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4)."
               },
               "PlacingType": {
@@ -1970,10 +1970,6 @@
                 "type": "string",
                 "Description": "The desgnation on the device for the adjustment."
               },
-              "AdjustmentRangeStepValue": {
-                "type": "real",
-                "Description": "Step value of current adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST."
-              },
               "AdjustmentValueType": {
                 "type": "PEnum_AdjustmentValueType",
                 "Description": "The type of adjustment value that is applied through the property set. This determines the properties that should be asserted (see below).",
@@ -1981,6 +1977,10 @@
                   "LIST",
                   "RANGE"
                 ]
+              },
+              "CurrentAdjustmentRangeStepValue": {
+                "type": "real",
+                "Description": ""
               }
             }
           },
@@ -1989,10 +1989,6 @@
               "AdjustmentDesignation": {
                 "type": "string",
                 "Description": "The desgnation on the device for the adjustment."
-              },
-              "AdjustmentRangeStepValue": {
-                "type": "real",
-                "Description": "Step value of current adjustment for an AdjustmentValueType = RANGE. Note that this property should not have a value for an  AdjustmentValueType = LIST."
               },
               "AdjustmentValueType": {
                 "type": "PEnum_AdjustmentValueType",
@@ -2013,6 +2009,10 @@
                   "LIST",
                   "RANGE"
                 ]
+              },
+              "TimeAdjustmentRangeStepValue": {
+                "type": "real",
+                "Description": ""
               }
             }
           },
@@ -2341,9 +2341,9 @@
                   "UNSET"
                 ]
               },
-              "Location": {
+              "AirTerminalLocation": {
                 "type": "PEnum_AirTerminalLocation",
-                "Description": "Location  (a single type of diffuser can be used for multiple locations); high means close to ceiling.",
+                "Description": "",
                 "values": [
                   "CEILINGINTERIOR",
                   "CEILINGPERIMETER",
@@ -2363,6 +2363,31 @@
               "AirDiffusionPerformanceIndex": {
                 "type": "real",
                 "Description": "The Air Diffusion Performance Index (ADPI) is used for cooling mode conditions. If several measurements of air velocity and air temperature are made throughout the occupied zone of a space, the ADPI is the percentage of locations where measurements were taken that meet the specifications for effective draft temperature and air velocity."
+              },
+              "AirTerminalMountingType": {
+                "type": "PEnum_AirTerminalMountingType",
+                "Description": "",
+                "values": [
+                  "FLATFLUSH",
+                  "LAYIN",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "SURFACE",
+                  "UNSET"
+                ]
+              },
+              "AirTerminalShape": {
+                "type": "PEnum_AirTerminalShape",
+                "Description": "",
+                "values": [
+                  "NOTKNOWN",
+                  "OTHER",
+                  "RECTANGULAR",
+                  "ROUND",
+                  "SLOT",
+                  "SQUARE",
+                  "UNSET"
+                ]
               },
               "CoreSetHorizontal": {
                 "type": "real",
@@ -2486,18 +2511,6 @@
                   "FALSE"
                 ]
               },
-              "MountingType": {
-                "type": "PEnum_AirTerminalMountingType",
-                "Description": "The way the air terminal is mounted to the ceiling, wall, etc.\n\nSurface: mounted to the surface of something (e.g., wall, duct, etc.).\nFlat flush: mounted flat and flush with a surface.\nLay-in: mounted in a lay-in type ceiling (e.g., a dropped ceiling grid).",
-                "values": [
-                  "FLATFLUSH",
-                  "LAYIN",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "SURFACE",
-                  "UNSET"
-                ]
-              },
               "NeckArea": {
                 "type": "real",
                 "Description": "Neck area of the air terminal."
@@ -2509,19 +2522,6 @@
               "Reference": {
                 "type": "string",
                 "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
-              },
-              "Shape": {
-                "type": "PEnum_AirTerminalShape",
-                "Description": "Cross sectional shape. Note that this shape is uniform throughout the length of the segment. For nonuniform shapes, a transition fitting should be used instead.",
-                "values": [
-                  "NOTKNOWN",
-                  "OTHER",
-                  "RECTANGULAR",
-                  "ROUND",
-                  "SLOT",
-                  "SQUARE",
-                  "UNSET"
-                ]
               },
               "SlotLength": {
                 "type": "real",
@@ -2880,9 +2880,9 @@
         "Psets": {
           "Pset_ChillerTypeCommon": {
             "Properties": {
-              "NominalCapacity": {
+              "ChillerCapacity": {
                 "type": "real",
-                "Description": "Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions."
+                "Description": ""
               },
               "NominalCondensingTemperature": {
                 "type": "real",
@@ -2951,6 +2951,18 @@
           },
           "Pset_CoilTypeCommon": {
             "Properties": {
+              "CoilPlacement": {
+                "type": "PEnum_CoilPlacementType",
+                "Description": "",
+                "values": [
+                  "CEILING",
+                  "FLOOR",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "UNIT",
+                  "UNSET"
+                ]
+              },
               "NominalLatentCapacity": {
                 "type": "real",
                 "Description": "Nominal latent capacity."
@@ -2962,18 +2974,6 @@
               "NominalUA": {
                 "type": "real",
                 "Description": "Nominal UA value."
-              },
-              "PlacementType": {
-                "type": "PEnum_CoilPlacementType",
-                "Description": "Indicates the placement of the coil.  \nFLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL); \nCEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL);\nUNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.",
-                "values": [
-                  "CEILING",
-                  "FLOOR",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNIT",
-                  "UNSET"
-                ]
               },
               "Reference": {
                 "type": "string",
@@ -3776,6 +3776,18 @@
           },
           "Pset_DuctSegmentTypeCommon": {
             "Properties": {
+              "CrossSectionShape": {
+                "type": "PEnum_DuctSegmentShape",
+                "Description": "",
+                "values": [
+                  "FLATOVAL",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "RECTANGULAR",
+                  "ROUND",
+                  "UNSET"
+                ]
+              },
               "LongitudinalSeam": {
                 "type": "string",
                 "Description": "The type of seam to be used along the longitudinal axis of the duct segment."
@@ -3799,18 +3811,6 @@
               "ReinforcementSpacing": {
                 "type": "real",
                 "Description": "The spacing between reinforcing elements."
-              },
-              "Shape": {
-                "type": "PEnum_DuctSegmentShape",
-                "Description": "Cross sectional shape. Note that this shape is uniform throughout the length of the segment. For nonuniform shapes, a transition fitting should be used instead.",
-                "values": [
-                  "FLATOVAL",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "RECTANGULAR",
-                  "ROUND",
-                  "UNSET"
-                ]
               },
               "Status": {
                 "type": "PEnum_ElementStatus",
@@ -4115,23 +4115,6 @@
         "Psets": {
           "Pset_FanCentrifugal": {
             "Properties": {
-              "Arrangement": {
-                "type": "PEnum_CentrifugalFanArrangement",
-                "Description": "Defines the fan and motor drive arrangement as defined by AMCA.\n\nARRANGEMENT1: Arrangement 1. \nARRANGEMENT2: Arrangement 2. \nARRANGEMENT3: Arrangement 3. \nARRANGEMENT4: Arrangement 4. \nARRANGEMENT7: Arrangement 7. \nARRANGEMENT8: Arrangement 8. \nARRANGEMENT9: Arrangement 9. \nARRANGEMENT10: Arrangement 10. \nOTHER: Other type of fan drive arrangement.",
-                "values": [
-                  "ARRANGEMENT1",
-                  "ARRANGEMENT10",
-                  "ARRANGEMENT2",
-                  "ARRANGEMENT3",
-                  "ARRANGEMENT4",
-                  "ARRANGEMENT7",
-                  "ARRANGEMENT8",
-                  "ARRANGEMENT9",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNSET"
-                ]
-              },
               "DirectionOfRotation": {
                 "type": "PEnum_CentrifugalFanRotation",
                 "Description": "The direction of the centrifugal fan wheel rotation when viewed from the drive side of the fan.\n\nCLOCKWISE: Clockwise. \nCOUNTERCLOCKWISE: Counter-clockwise. \nOTHER: Other type of fan rotation.",
@@ -4158,6 +4141,23 @@
                   "TOPHORIZONTAL",
                   "UNSET",
                   "UPBLAST"
+                ]
+              },
+              "FanArrangement": {
+                "type": "PEnum_CentrifugalFanArrangement",
+                "Description": "",
+                "values": [
+                  "ARRANGEMENT1",
+                  "ARRANGEMENT10",
+                  "ARRANGEMENT2",
+                  "ARRANGEMENT3",
+                  "ARRANGEMENT4",
+                  "ARRANGEMENT7",
+                  "ARRANGEMENT8",
+                  "ARRANGEMENT9",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "UNSET"
                 ]
               }
             }
@@ -4395,9 +4395,9 @@
         "Psets": {
           "Pset_FlowMeterOccurrence": {
             "Properties": {
-              "Purpose": {
+              "FlowMeterOurpose": {
                 "type": "PEnum_FlowMeterPurpose",
-                "Description": "Purpose for which the borehole, section or volumetric model was created. (EU Inspire, boreholeML)",
+                "Description": "",
                 "values": [
                   "MASTER",
                   "NOTKNOWN",
@@ -4465,9 +4465,9 @@
         "Psets": {
           "Pset_HeatExchangerTypeCommon": {
             "Properties": {
-              "Arrangement": {
+              "FlowArrangement": {
                 "type": "PEnum_HeatExchangerArrangement",
-                "Description": "Defines the fan and motor drive arrangement as defined by AMCA.\n\nARRANGEMENT1: Arrangement 1. \nARRANGEMENT2: Arrangement 2. \nARRANGEMENT3: Arrangement 3. \nARRANGEMENT4: Arrangement 4. \nARRANGEMENT7: Arrangement 7. \nARRANGEMENT8: Arrangement 8. \nARRANGEMENT9: Arrangement 9. \nARRANGEMENT10: Arrangement 10. \nOTHER: Other type of fan drive arrangement.",
+                "Description": "CounterFlow: Air and water flow enter in different directions.\n\nCrossFlow: Air and water flow are perpendicular.\nParallelFlow: Air and water flow enter in same directions.",
                 "values": [
                   "COUNTERFLOW",
                   "CROSSFLOW",
@@ -4513,9 +4513,9 @@
         "Psets": {
           "Pset_HumidifierTypeCommon": {
             "Properties": {
-              "Application": {
+              "HumidifierApplication": {
                 "type": "PEnum_HumidifierApplication",
-                "Description": "Humidifier application.\n\nFixed: Humidifier installed in a ducted flow distribution system.\nPortable: Humidifier is not installed in a ducted flow distribution system.",
+                "Description": "",
                 "values": [
                   "FIXED",
                   "NOTKNOWN",
@@ -4954,9 +4954,13 @@
                 "type": "real",
                 "Description": "Total nominal heat output as listed by the manufacturer."
               },
-              "PlacementType": {
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
+              "SpaceHeaterPlacement": {
                 "type": "PEnum_SpaceHeaterPlacementType",
-                "Description": "Indicates the placement of the coil.  \nFLOOR indicates an under floor heater (if coil type is WATERHEATINGCOIL or ELECTRICHEATINGCOIL); \nCEILING indicates a cooling ceiling (if coil type is WATERCOOLINGCOIL);\nUNIT indicates that the coil is part of a cooling or heating unit, like cooled beam, etc.",
+                "Description": "",
                 "values": [
                   "BASEBOARD",
                   "NOTKNOWN",
@@ -4966,10 +4970,6 @@
                   "UNSET",
                   "WALL"
                 ]
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
               },
               "Status": {
                 "type": "PEnum_ElementStatus",
@@ -5097,10 +5097,6 @@
                 "type": "real",
                 "Description": "FirstCurvatureRadius should be defined as the base or left side radius of curvature value."
               },
-              "NominalCapacity": {
-                "type": "real",
-                "Description": "Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions."
-              },
               "NominalDepth": {
                 "type": "real",
                 "Description": "Nominal or quoted depth of the object measured from the inlet drain connection to the base of the unit."
@@ -5169,6 +5165,10 @@
                   "WASTEWATER",
                   "WATER"
                 ]
+              },
+              "TankNominalCapacity": {
+                "type": "real",
+                "Description": ""
               }
             }
           },
@@ -5283,11 +5283,11 @@
                 "Description": "Nominal diameter or width of the tubes in the tube bundle."
               },
               "NumberOfCircuits": {
-                "type": "integer",
+                "type": "number",
                 "Description": "Number of parallel fluid tube circuits."
               },
               "NumberOfRows": {
-                "type": "integer",
+                "type": "number",
                 "Description": "Number of tube rows in the tube bundle assembly."
               },
               "OutsideDiameter": {
@@ -5492,9 +5492,9 @@
         "Psets": {
           "Pset_ActorCommon": {
             "Properties": {
-              "Category": {
+              "ActorCategory": {
                 "type": "string",
-                "Description": "Designation of the category into which the actors in the population belong."
+                "Description": ""
               },
               "NumberOfActors": {
                 "type": "number",
@@ -8910,9 +8910,9 @@
                 "type": "real",
                 "Description": "Measure of the efficiency of conversion of fuel energy to mechanical energy"
               },
-              "EnergySource": {
+              "EnergySourceLabel": {
                 "type": "string",
-                "Description": "Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY."
+                "Description": ""
               },
               "PowerDemand": {
                 "type": "real",
@@ -8960,9 +8960,9 @@
                 "type": "real",
                 "Description": "Measure of the efficiency of conversion of fuel energy to mechanical energy"
               },
-              "EnergySource": {
+              "EnergySourceLabel": {
                 "type": "string",
-                "Description": "Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY."
+                "Description": ""
               },
               "PowerDemand": {
                 "type": "real",
@@ -9025,6 +9025,10 @@
               "HazardousWastePerUnit": {
                 "type": "real",
                 "Description": "Quantity of hazardous waste generated"
+              },
+              "IndicatorsUnit": {
+                "type": "string",
+                "Description": ""
               },
               "InertWastePerUnit": {
                 "type": "real",
@@ -9095,10 +9099,6 @@
               "TotalPrimaryEnergyConsumptionPerUnit": {
                 "type": "real",
                 "Description": "Quantity of energy used as defined in ISO21930:2007."
-              },
-              "Unit": {
-                "type": "string",
-                "Description": "The unit of the quantity the environmental indicators values are related with."
               },
               "WaterConsumptionPerUnit": {
                 "type": "real",
@@ -9339,9 +9339,9 @@
                 "type": "real",
                 "Description": "Performance level at which disposal takes place"
               },
-              "MaintenanceLevel": {
+              "PerformanceMaintenanceLevel": {
                 "type": "real",
-                "Description": "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents."
+                "Description": ""
               },
               "ReplacementLevel": {
                 "type": "real",
@@ -10599,6 +10599,10 @@
         "Psets": {
           "Pset_PropertyAgreement": {
             "Properties": {
+              "AgreementDate": {
+                "type": "string",
+                "Description": ""
+              },
               "AgreementType": {
                 "type": "PEnum_PropertyAgreementType",
                 "Description": "Identifies the predefined types of property agreement from which the type required may be set.",
@@ -10610,6 +10614,10 @@
                   "TENANT",
                   "UNSET"
                 ]
+              },
+              "AgreementVersion": {
+                "type": "string",
+                "Description": ""
               },
               "CommencementDate": {
                 "type": "string",
@@ -10627,10 +10635,6 @@
                 "type": "string",
                 "Description": "The period of time for the lease."
               },
-              "Identifier": {
-                "type": "string",
-                "Description": "The identifier assigned to the agreement for the purposes of tracking."
-              },
               "Options": {
                 "type": "string",
                 "Description": "A statement of the options available in the agreement."
@@ -10647,13 +10651,9 @@
                 "type": "string",
                 "Description": "Date on which the agreement terminates."
               },
-              "Version": {
+              "TrackingIdentifier": {
                 "type": "string",
-                "Description": "The version number of the agreement that is identified."
-              },
-              "VersionDate": {
-                "type": "string",
-                "Description": "The date on which the version of the agreement became applicable."
+                "Description": ""
               }
             }
           },
@@ -11155,9 +11155,9 @@
                 "type": "real",
                 "Description": "Performance level at which disposal takes place"
               },
-              "MaintenanceLevel": {
+              "PerformanceMaintenanceLevel": {
                 "type": "real",
-                "Description": "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents."
+                "Description": ""
               },
               "ReplacementLevel": {
                 "type": "real",
@@ -11185,9 +11185,9 @@
                 "type": "real",
                 "Description": "Measure of the efficiency of conversion of fuel energy to mechanical energy"
               },
-              "EnergySource": {
+              "EnergySourceLabel": {
                 "type": "string",
-                "Description": "Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY."
+                "Description": ""
               },
               "PowerDemand": {
                 "type": "real",
@@ -11316,9 +11316,9 @@
                 "type": "real",
                 "Description": "Measure of the efficiency of conversion of fuel energy to mechanical energy"
               },
-              "EnergySource": {
+              "EnergySourceLabel": {
                 "type": "string",
-                "Description": "Enumeration defining the energy source or fuel combusted to generate heat if applicable.  Note: hydronic heaters shall use UNSET; dual-use hydronic/electric heaters shall use ELECTRICITY."
+                "Description": ""
               },
               "PowerDemand": {
                 "type": "real",
@@ -17572,9 +17572,9 @@
                 "type": "real",
                 "Description": "Performance level at which disposal takes place"
               },
-              "MaintenanceLevel": {
+              "PerformanceMaintenanceLevel": {
                 "type": "real",
-                "Description": "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents."
+                "Description": ""
               },
               "ReplacementLevel": {
                 "type": "real",
@@ -17808,17 +17808,9 @@
         "Psets": {
           "Pset_GeotechnicalAssemblyCommon": {
             "Properties": {
-              "Limitations": {
-                "type": "string",
-                "Description": "Limitations on usage."
-              },
-              "Methodology": {
-                "type": "string",
-                "Description": "Methodology used to prepare the contents of the geotechnical assembly."
-              },
-              "Purpose": {
+              "BoreHolePurpose": {
                 "type": "PEnum_StrataAssemblyPurpose",
-                "Description": "Purpose for which the borehole, section or volumetric model was created. (EU Inspire, boreholeML)",
+                "Description": "",
                 "values": [
                   "DEPOSIT",
                   "ENVIRONMENTAL",
@@ -17835,6 +17827,14 @@
                   "STORAGE",
                   "USERDEFINED"
                 ]
+              },
+              "Limitations": {
+                "type": "string",
+                "Description": "Limitations on usage."
+              },
+              "Methodology": {
+                "type": "string",
+                "Description": "Methodology used to prepare the contents of the geotechnical assembly."
               },
               "Status": {
                 "type": "PEnum_ElementStatus",
@@ -17863,10 +17863,6 @@
         "Psets": {
           "Pset_GeotechnicalStratumCommon": {
             "Properties": {
-              "Colour": {
-                "type": "string",
-                "Description": "Stratum colour"
-              },
               "IsTopographic": {
                 "type": "logical",
                 "Description": "Is the stratum ever topmost and so a visible topographic feature",
@@ -17896,6 +17892,10 @@
                   "TEMPORARY",
                   "UNSET"
                 ]
+              },
+              "StratumColour": {
+                "type": "string",
+                "Description": ""
               },
               "Texture": {
                 "type": "string",
@@ -18101,7 +18101,7 @@
                 "Description": "Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s"
               },
               "LoadbearingCapacity": {
-                "type": "unknown",
+                "type": "real",
                 "Description": ""
               },
               "NValue": {

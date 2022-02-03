@@ -1,6 +1,6 @@
 # Express schema differences
 
-56 items
+63 items
 
 
 ### Missing data
@@ -44,30 +44,37 @@
 
 ### Entity definitions
 
-20 items
+27 items
 
-| Name                                         | IFC4x3_RC4.exp                                                                    | IFC.exp                                                                                                         |
-|----------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| IfcBuilding attributes                       | ['ElevationOfRefHeight', 'ElevationOfTerrain', 'BuildingAddress']                 | ['ElevationOfRefHeight', 'ElevationOfTerrain']                                                                  |
-| IfcFacilityPart                              | not abstract                                                                      | abstract                                                                                                        |
-| IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                   | ['UsageType']                                                                                                   |
-| IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                     | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                     |
-| IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                              |
-| IfcObjectPlacement inverses                  | ['PlacesObject']                                                                  | ['PlacesObject', 'ReferencedByPlacements']                                                                      |
-| IfcOpenCrossProfileDef attributes            | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                                  | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
-| IfcProperty attributes                       | ['Name', 'Description']                                                           | ['Name', 'Specification']                                                                                       |
-| IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                    | ['CrossSectionPositions']                                                                                       |
-| IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']      | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
-| IfcSectionedSurface.CrossSectionPositions    | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression                 | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
-| IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress'] | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                                              |
-| IfcSpatialElement inverses                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
-| IfcTransportElement supertype                | ['IfcElement']                                                                    | ['IfcTransportationDevice']                                                                                     |
-| IfcTransportElement.PredefinedType           | PredefinedType : optional IfcTransportElementTypeSelect                           | PredefinedType : optional IfcTransportElementTypeEnum                                                           |
-| IfcTransportElementType supertype            | ['IfcElementType']                                                                | ['IfcTransportElementType']                                                                                     |
-| IfcTransportElementType.PredefinedType       | PredefinedType : IfcTransportElementTypeSelect                                    | PredefinedType : IfcTransportElementTypeEnum                                                                    |
-| IfcVibrationDamper.PredefinedType            | PredefinedType : optional IfcVibrationDamperTypeEnum                              | PredefinedType : optional IfcDamperTypeEnum                                                                     |
-| IfcVibrationDamperType.PredefinedType        | PredefinedType : optional IfcVibrationDamperTypeEnum                              | PredefinedType : IfcVibrationDamperTypeEnum                                                                     |
-| IfcVirtualElement attributes                 | []                                                                                | ['PredefinedType']                                                                                              |
+| Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
+|----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| IfcBuilding attributes                       | ['ElevationOfRefHeight', 'ElevationOfTerrain', 'BuildingAddress']                          | ['ElevationOfRefHeight', 'ElevationOfTerrain']                                                                  |
+| IfcClassification attributes                 | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Location', 'ReferenceTokens'] | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Specification', 'ReferenceTokens']                 |
+| IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                                  |
+| IfcFacilityPart                              | not abstract                                                                               | abstract                                                                                                        |
+| IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                            | ['UsageType']                                                                                                   |
+| IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                     |
+| IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                       | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                              |
+| IfcIndexedPolyCurve.SelfIntersect            | SelfIntersect : optional IfcBoolean                                                        | SelfIntersect : IfcLogical                                                                                      |
+| IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                     | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                                  |
+| IfcObjectPlacement inverses                  | ['PlacesObject']                                                                           | ['PlacesObject', 'ReferencedByPlacements']                                                                      |
+| IfcOpenCrossProfileDef attributes            | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                                           | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
+| IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                                       |
+| IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                             | ['CrossSectionPositions']                                                                                       |
+| IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']               | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
+| IfcSectionedSurface.CrossSectionPositions    | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression                          | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
+| IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                                              |
+| IfcSpatialElement inverses                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']                            | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
+| IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                                               |
+| IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                                             |
+| IfcTransportElement supertype                | ['IfcElement']                                                                             | ['IfcTransportationDevice']                                                                                     |
+| IfcTransportElement.PredefinedType           | PredefinedType : optional IfcTransportElementTypeSelect                                    | PredefinedType : optional IfcTransportElementTypeEnum                                                           |
+| IfcTransportElementType supertype            | ['IfcElementType']                                                                         | ['IfcTransportElementType']                                                                                     |
+| IfcTransportElementType.PredefinedType       | PredefinedType : IfcTransportElementTypeSelect                                             | PredefinedType : IfcTransportElementTypeEnum                                                                    |
+| IfcVibrationDamper.PredefinedType            | PredefinedType : optional IfcVibrationDamperTypeEnum                                       | PredefinedType : optional IfcDamperTypeEnum                                                                     |
+| IfcVibrationDamperType.PredefinedType        | PredefinedType : optional IfcVibrationDamperTypeEnum                                       | PredefinedType : IfcVibrationDamperTypeEnum                                                                     |
+| IfcVirtualElement attributes                 | []                                                                                         | ['PredefinedType']                                                                                              |
+| IfcWorkTime attributes                       | ['RecurrencePattern', 'Start', 'Finish']                                                   | ['RecurrencePattern', 'StartDate', 'FinishDate']                                                                |
 
 ### Constraints
 
