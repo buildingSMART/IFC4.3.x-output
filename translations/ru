@@ -9,618 +9,310 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcSharedMgmtElements.pot\n"
-"X-Crowdin-File-ID: 92\n"
+"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
+"X-Crowdin-File-ID: 102\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-05 12:48\n"
 
-#:IFC.xml:41015
-msgid "IfcActionRequest"
-msgstr "Запрос IfcДействия"
+#:IFC.xml:43880
+msgid "IfcApplication"
+msgstr "Приложение IfcApplication"
 
-msgid "IfcActionRequest_DEFINITION"
-msgstr "Запрос - это действие или пример запроса чего-либо, например, запрос на информацию, представление заявки или выполнение работы. Запросы могут принимать много форм в зависимости от потребности, включая отчеты об ошибках для содержания, запросы на мелкие работы и запросы на покупку, которые должны быть сделаны через службу поддержки или функцию покупки . HISTORY New entity in IFC2x2. hange ifc2x4 IFC4 CHANGE Atribute RequestID переименован в Identification и повышен до супертипа [[IfcControl]] , атрибуты PredefinedType , Status , и LongDescription добавлены."
+msgid "IfcApplication_DEFINITION"
+msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5."
 
-#:IFC.xml:41016
-msgid "IfcActionRequest_LongDescription"
-msgstr "Долгое описание"
+#:IFC.xml:175
+msgid "IfcApplication_ApplicationDeveloper"
+msgstr "Разработчик приложений"
 
-msgid "IfcActionRequest_LongDescription_DEFINITION"
-msgstr "Подробное описание разрешения. .change ifc2x4 IFC4 CHANGE Добавлен атрибут. Концепции"
+msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
+msgstr "Name of the application developer."
 
-#:IFC.xml:41021
-msgid "IfcActionRequest_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:43881
+msgid "IfcApplication_ApplicationFullName"
+msgstr "Полное имя приложения"
 
-msgid "IfcActionRequest_PredefinedType_DEFINITION"
-msgstr "Определяет тип источников, через которые может быть сделан запрос, .change ifc2x4 IFC4 CHANGE."
+msgid "IfcApplication_ApplicationFullName_DEFINITION"
+msgstr "Полное имя приложения, указанного разработчиком приложения."
 
-#:IFC.xml:41026
-msgid "IfcActionRequest_Status"
-msgstr "Статус"
+#:IFC.xml:43886
+msgid "IfcApplication_ApplicationIdentifier"
+msgstr "Идентификатор приложения"
 
-msgid "IfcActionRequest_Status_DEFINITION"
-msgstr "Статус, присвоенный запросу. Возможные значения включают в себя Hold wait чтобы увидеть, получены ли дальнейшие запросы перед принятием решения по действию NoAction не требуется никаких действий по данному запросу плана действий по составлению плана в рамках технического обслуживания или другого планирования задач срочное принятие мер немедленно . hange ifc2x4 IFC4 CHANGE Добавлен атрибут."
+msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
+msgstr "Короткое имя приложения. Уникальные правила"
 
-#:IFC.xml:41036
-msgid "IfcActionRequestTypeEnum"
-msgstr "IfcActionRequestTypeEnum"
+#:IFC.xml:43891
+msgid "IfcApplication_Version"
+msgstr "Версии"
 
-msgid "IfcActionRequestTypeEnum_DEFINITION"
-msgstr "[[IfcActionRequestTypeEnum]] определяет типы источников, через которые может быть сделан запрос. HISTORY Новый список в IFC4, пункт EMAIL Request был сделан по электронной почте. Факсимильный запрос факсимильной связи был сделан устно по телефону. POST запрос был сделан по почте. VERBAL USERDEFINED пользовательский тип НЕ ИЗМЕНИН"
+msgid "IfcApplication_Version_DEFINITION"
+msgstr "Номер версии этого программного обеспечения, указанный разработчиком приложения."
 
-#:IFC.xml:41045
-msgid "IfcActionRequestTypeEnum_EMAIL"
-msgstr "EMAIL"
+#:IFC.xml:43921
+msgid "IfcChangeActionEnum"
+msgstr "IfcChangeActionEnum"
 
-msgid "IfcActionRequestTypeEnum_EMAIL_DEFINITION"
-msgstr "Запрос был сделан по электронной почте."
+msgid "IfcChangeActionEnum_DEFINITION"
+msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed Items NOCHANGE Object has not been modified. MODIFIED A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. ADDED The object has been created by the user and application defined by the OwningUser and OwningApplication respectively. DELETED The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. NOTDEFINED The change action is not known or has not been defined."
 
-#:IFC.xml:41046
-msgid "IfcActionRequestTypeEnum_FAX"
-msgstr "Факс"
+#:IFC.xml:43922
+msgid "IfcChangeActionEnum_ADDED"
+msgstr "ДОБАВЛЕНО"
 
-msgid "IfcActionRequestTypeEnum_FAX_DEFINITION"
-msgstr "Запрос был сделан через факсимил."
+msgid "IfcChangeActionEnum_ADDED_DEFINITION"
+msgstr "The object has been created by the user and application defined by the OwningUser and OwningApplication respectively."
 
-#:IFC.xml:41047
-msgid "IfcActionRequestTypeEnum_NOTDEFINED"
+#:IFC.xml:43923
+msgid "IfcChangeActionEnum_DELETED"
+msgstr "УДАЛЕНИЕ"
+
+msgid "IfcChangeActionEnum_DELETED_DEFINITION"
+msgstr "The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
+
+#:IFC.xml:43924
+msgid "IfcChangeActionEnum_MODIFIED"
+msgstr "МОДИФИЦИРОВАН"
+
+msgid "IfcChangeActionEnum_MODIFIED_DEFINITION"
+msgstr "A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
+
+#:IFC.xml:43925
+msgid "IfcChangeActionEnum_NOCHANGE"
+msgstr "УВЕДОМЛЕНИЕ"
+
+msgid "IfcChangeActionEnum_NOCHANGE_DEFINITION"
+msgstr "Object has not been modified."
+
+#:IFC.xml:43926
+msgid "IfcChangeActionEnum_NOTDEFINED"
 msgstr "ОТВЕТСТВЕННО"
 
-msgid "IfcActionRequestTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcChangeActionEnum_NOTDEFINED_DEFINITION"
+msgstr "The change action is not known or has not been defined."
 
-#:IFC.xml:41048
-msgid "IfcActionRequestTypeEnum_PHONE"
-msgstr "Телефон"
+#:IFC.xml:43928
+msgid "IfcOwnerHistory"
+msgstr "IfcOwnerHistory"
 
-msgid "IfcActionRequestTypeEnum_PHONE_DEFINITION"
-msgstr "Запрос был сделан устно по телефону."
+msgid "IfcOwnerHistory_DEFINITION"
+msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate."
 
-#:IFC.xml:41049
-msgid "IfcActionRequestTypeEnum_POST"
-msgstr "ПОСТ"
+#:IFC.xml:321
+msgid "IfcOwnerHistory_OwningUser"
+msgstr "Владелец"
 
-msgid "IfcActionRequestTypeEnum_POST_DEFINITION"
-msgstr "Запрос был сделан по почте."
+msgid "IfcOwnerHistory_OwningUser_DEFINITION"
+msgstr "Direct reference to the end user who currently owns this object. Note that IFC includes the concept of ownership transfer from one user to another and therefore distinguishes between the Owning User and Creating User."
 
-#:IFC.xml:41050
-msgid "IfcActionRequestTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:333
+msgid "IfcOwnerHistory_LastModifyingUser"
+msgstr "LastModifyingUser"
 
-msgid "IfcActionRequestTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип."
+msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
+msgstr "User who carried out the last modification using LastModifyingApplication."
 
-#:IFC.xml:41051
-msgid "IfcActionRequestTypeEnum_VERBAL"
-msgstr "ВЕРБАЛ"
+#:IFC.xml:43897
+msgid "IfcOwnerHistory_OwningApplication"
+msgstr "Приложения"
 
-msgid "IfcActionRequestTypeEnum_VERBAL_DEFINITION"
-msgstr "ВЕРБАЛ"
+msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
+msgstr "Direct reference to the application which currently owns this object on behalf of the owning user of the application. Note that IFC includes the concept of ownership transfer from one application to another and therefore distinguishes between the Owning Application and Creating Application."
 
-#:IFC.xml:41052
-msgid "IfcCostItem"
-msgstr "IfcCostПредмет"
+#:IFC.xml:43909
+msgid "IfcOwnerHistory_LastModifyingApplication"
+msgstr "Последнее изменение приложения"
 
-msgid "IfcCostItem_DEFINITION"
-msgstr "[[IfcCostItem]] описывает стоимость или финансовую ценность вместе с описательной информацией, описывающей ее контекст в форме, которая позволяет использовать ее в рамках сметы расходов. [[IfcCostItem]] может использоваться для представления стоимости товаров и услуг, выполнение работ по процессу, жизненной циклу и др. Каждый экземпляр [[IfcCostItem]] может иметь имя и описание. В зависимости от использования предполагаемой стоимости эти ценности должны утверждаться на основе договоренности. Например, атрибут Имя может использоваться для предоставления общего значения, которое позволяет собирать отдельные экземпляры в вложенной последовательности, см. ниже в то время как атрибут описания может использоваться для представления текста, используемого для описания элемента в расчетном графике. [[IfcCostItem]] может связать одно или много [[IfcCostValue]] с представляющим стоимость единицы, суммарная стоимость или стоимость единицы с одним или несколькими количествами, используемыми для генерации общей стоимости. Количество может быть указано в виде отдельных количеств, или эти количества указываются в качестве количества элементов по одному или нескольким строительным элементам. Атрибут [[IfcCostValue]].CostType указывает категорию стоимости, которая может быть использована для представления значения в определенном столбце. Для элементов вложенной стоимости, имеющих отношение [[IfcRelNests]] , [[IfcCostValue]].CostType имеет важное значение для [[IfcCostValue]]. ppliedValue рассчитывается как сумма всех вложенных затрат, имеющих одинаковые [[IfcCostValue]]. ostType или если установлен в звёздочку , то сумма всех вложенных затрат всех типов. [[IfcCostValue]] может представлять оригинальное значение или значение, полученное из формул с помощью IfcAppliedValueRelationship . Например, налоги могут рассчитываться в процентах от общей суммы. ИСТОРИЯ Новая сущность в IFC2. .change ifc2x4 IFC4 CHANGE Attribute PredefinedType , CostValues , and CostQuantities добавлен."
+msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
+msgstr "Application used to make the last modification."
 
-#:IFC.xml:3389
-msgid "IfcCostItem_CostValues"
-msgstr "Значения стоимости"
+#:IFC.xml:43929
+msgid "IfcOwnerHistory_ChangeAction"
+msgstr "Изменить действие"
 
-msgid "IfcCostItem_CostValues_DEFINITION"
-msgstr "Компонентные расходы, по которым рассчитывается общая стоимость позиции себестоимости, а затем умножаются на общую сумму затрат, если это предусмотрено. Если предоставлены стоимости, то значения указывают на единичные расходы, в противном случае значения указывают на общие расходы. Для целей расчета стоимостные значения могут быть добавлены напрямую, если они не имеют квалификации. Оценки стоимости с квалификацией, например [[IfcCostValue]]. pplicableDate , [[IfcCostValue]].FixedUntilDate должна быть исключена из такого расчета, если они не применяются. .change ifc2x4 IFC4 CHANGE Добавлен атрибут."
+msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
+msgstr "Вычисление, которое определяет действия, связанные с изменениями, сделанными в объекте."
 
-#:IFC.xml:31581
-msgid "IfcCostItem_CostQuantities"
-msgstr "Количества затрат"
+#:IFC.xml:43934
+msgid "IfcOwnerHistory_CreationDate"
+msgstr "Дата создания"
 
-msgid "IfcCostItem_CostQuantities_DEFINITION"
-msgstr "Количество компонентов того же типа, для которого общее количество для элемента стоимости рассчитывается как сумма. .change ifc2x4 IFC4 CHANGE Добавлен атрибут. Концепции"
+msgid "IfcOwnerHistory_CreationDate_DEFINITION"
+msgstr "Дата и время, выраженные в UTC Universal Time Coordinated, ранее Greenwich Mean Time или GMT, когда впервые был создан оригинальным OwningApplication. Однажды определенное значение остается неизменным на протяжении жизни сущности. Формальные предложения"
 
-#:IFC.xml:41053
-msgid "IfcCostItem_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:43939
+msgid "IfcOwnerHistory_LastModifiedDate"
+msgstr "Дата последнего изменения"
 
-msgid "IfcCostItem_PredefinedType_DEFINITION"
-msgstr "Предопределенный общий тип для предмета стоимости, указанного в перечислении. Для предопределенных типов может быть задано свойство. .change ifc2x4 IFC4 CHANGE Добавлен атрибут."
+msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
+msgstr "Дата и время выражаются в UTC Universal Time Coordined, ранее Greenwich Mean Time или GMT, при которых последнее изменение было сделано LastModifyingUser и LastModifyingApplication."
 
-#:IFC.xml:41081
-msgid "IfcCostItemTypeEnum"
-msgstr "IfcCostItemTypeEnum"
+#:IFC.xml:43944
+msgid "IfcOwnerHistory_State"
+msgstr "Область"
 
-msgid "IfcCostItemTypeEnum_DEFINITION"
-msgstr "[[IfcCostItemTypeEnum]] - список доступных типов элементов стоимости. ИСТОРИЯ Новое перечисление в IFC4. Предметы ПОЛУЧЕННОГО пользователя. ЗАМЕН"
+msgid "IfcOwnerHistory_State_DEFINITION"
+msgstr "Вычисление, определяющее текущее состояние доступа объекта."
 
-#:IFC.xml:41085
-msgid "IfcCostItemTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:43950
+msgid "IfcStateEnum"
+msgstr "IfcStateEnum"
 
-msgid "IfcCostItemTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcStateEnum_DEFINITION"
+msgstr "The [[IfcStateEnum]] enumeration identifies the state or accessibility of the object for example, read write, locked . Valid enumerations are HISTORY New enumeration in IFC2.0. .change ifc2x3 IFC2x3 CHANGE This concept was initially introduced in IFC2.0 as IfcModifiedFlag of type BINARY 3 FIXED and has been modified in R2x3 to an enumeration. It was initially introduced as a first step towards providing facilities for partial model exchange and is intended for use primarily by a model server so that an application can identify the state of the object. Items READWRITE READONLY Object is in a Read Only state. It may be viewed but not modified by an application. LOCKED Object is in a Locked state. It may not be accessed by an application. READWRITELOCKED Object is in a Read Write Locked state. It may not be accessed by an application. READONLYLOCKED Object is in a Read Only Locked state. It may not be accessed by an application."
 
-#:IFC.xml:41086
-msgid "IfcCostItemTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:43951
+msgid "IfcStateEnum_LOCKED"
+msgstr "ЗАКРЫТО"
 
-msgid "IfcCostItemTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип."
+msgid "IfcStateEnum_LOCKED_DEFINITION"
+msgstr "Object is in a Locked state. It may not be accessed by an application."
 
-#:IFC.xml:41087
-msgid "IfcCostSchedule"
-msgstr "IfcCostSchedule"
+#:IFC.xml:43952
+msgid "IfcStateEnum_READONLY"
+msgstr "ЧТОБЫ"
 
-msgid "IfcCostSchedule_DEFINITION"
-msgstr "[[IfcCostSchedule]] объединяет примеры [[IfcCostItem]] либо для выявления чисто стоимостной информации, как в оценке стоимости конструкций, либо для включения стоимостной информации в другую форму представления, такую как рабочий порядок. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE ID атрибута переименован в идентификатор и повышен до супертипа [[IfcControl]] , PredefinedType сделан необязательно, атрибуты PreparedBy , SubmittedBy , целевые пользователи удалены."
+msgid "IfcStateEnum_READONLY_DEFINITION"
+msgstr "Object is in a Read Only state. It may be viewed but not modified by an application."
 
-#:IFC.xml:41088
-msgid "IfcCostSchedule_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:43953
+msgid "IfcStateEnum_READONLYLOCKED"
+msgstr "ЧТО ПРИЛОЖЕНО"
 
-msgid "IfcCostSchedule_PredefinedType_DEFINITION"
-msgstr "Предопределенный общий тип для графика затрат, который указан в перечислении. Для предопределенных типов может быть задан набор свойств. .change ifc2x4 IFC4 CHANGE атрибут был сделан необязательно."
+msgid "IfcStateEnum_READONLYLOCKED_DEFINITION"
+msgstr "Object is in a Read Only Locked state. It may not be accessed by an application."
 
-#:IFC.xml:41093
-msgid "IfcCostSchedule_Status"
-msgstr "Статус"
+#:IFC.xml:43954
+msgid "IfcStateEnum_READWRITE"
+msgstr "ПРОЧИТЬ"
 
-msgid "IfcCostSchedule_Status_DEFINITION"
-msgstr "Текущий статус графика расходов. Примеры значений статуса, которые могут быть использованы для составления сметы, включают в себя ПЛАНИРОВАННОЕ УГЛЕННОЕ УГЛЕННОЕ УГЛЕННОЕ РАЗВИТИЕ"
+msgid "IfcStateEnum_READWRITE_DEFINITION"
+msgstr "ПРОЧИТЬ"
 
-#:IFC.xml:41098
-msgid "IfcCostSchedule_SubmittedOn"
-msgstr "Отправлено"
+#:IFC.xml:43955
+msgid "IfcStateEnum_READWRITELOCKED"
+msgstr "РАЗРЕШЕНО"
 
-msgid "IfcCostSchedule_SubmittedOn_DEFINITION"
-msgstr "Дата и время представления графика себестоимости изменились с IfcDateTimeSelect."
+msgid "IfcStateEnum_READWRITELOCKED_DEFINITION"
+msgstr "Object is in a Read Write Locked state. It may not be accessed by an application."
 
-#:IFC.xml:41103
-msgid "IfcCostSchedule_UpdateDate"
-msgstr "Дата обновления"
+#:IFC.xml:43957
+msgid "IfcTable"
+msgstr "Таблица IfcTable"
 
-msgid "IfcCostSchedule_UpdateDate_DEFINITION"
-msgstr "Дата и время обновления графика позволяют отслеживать историю расписания. Изменение типа ifc2x4 IFC4 изменено с IfcDateTimeSelect. Концепции"
+msgid "IfcTable_DEFINITION"
+msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. Table use .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. Table use alternative .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added."
 
-#:IFC.xml:41110
-msgid "IfcCostScheduleTypeEnum"
-msgstr "IfcCostScheduleTypeEnum"
+#:IFC.xml:43981
+msgid "IfcTable_Rows"
+msgstr "Строки"
 
-msgid "IfcCostScheduleTypeEnum_DEFINITION"
-msgstr "[[IfcCostScheduleTypeEnum]] — это список доступных типов ценового графика, из которого может быть выбран требуемый тип. ИСТОРИЯ Новое перечисление в документе IFC2x2. Пункты BUDGET COSTPLAN Оценка суммы денег, которые необходимо потратить для определенной цели на основе неполной информации о товарах и услугах, необходимых для строительства или установки. ESTIMATE Оценка суммы денег, которую необходимо потратить для определенных целей на основе фактической информации о товарах и услугах, необходимых для строительства или установки. ТЕНДЕР предложение о предоставлении товаров и услуг. PRICEDBILLOFQUANTITIES Полный список всех работ по строительству или монтажу изделий, в которых были выделены расходы на выполнение работ. UNPRICEDBILLOFQUANTITIES Полное перечисление всех работ по строительству или монтажу изделий, которые еще не были выделены на выполнение работ. SCHEDULEOFRATES Перечень каждого вида товаров формирующих строительство или инсталляционных работ с стоимостью покупки, монтаж конструкций, накладные расходы и получение прибыли, что позволит обойтись без дополнительных расходов. Определенный тип пользователя ПОЛЬЗОВАТЕЛЯ НЕ ЗАВЕРШЕНО"
+msgid "IfcTable_Rows_DEFINITION"
+msgstr "Reference to information content of rows."
 
-#:IFC.xml:41121
-msgid "IfcCostScheduleTypeEnum_BUDGET"
-msgstr "БЮДЖЕТ"
+#:IFC.xml:43993
+msgid "IfcTable_Columns"
+msgstr "Столбцы"
 
-msgid "IfcCostScheduleTypeEnum_BUDGET_DEFINITION"
-msgstr "БЮДЖЕТ"
+msgid "IfcTable_Columns_DEFINITION"
+msgstr "The column information associated with this table."
 
-#:IFC.xml:41122
-msgid "IfcCostScheduleTypeEnum_COSTPLAN"
-msgstr "ЗАТРАТЫ"
+#:IFC.xml:43958
+msgid "IfcTable_NumberOfCellsInRow"
+msgstr "Количество ячеек в строке"
 
-msgid "IfcCostScheduleTypeEnum_COSTPLAN_DEFINITION"
-msgstr "Оценка суммы денежных средств, которые необходимы для определенной цели на основе неполной информации о товарах и услугах, необходимых для строительства или установки."
+msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
+msgstr "The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list."
 
-#:IFC.xml:41123
-msgid "IfcCostScheduleTypeEnum_ESTIMATE"
-msgstr "НАСТРОЙКИ"
+#:IFC.xml:43963
+msgid "IfcTable_NumberOfDataRows"
+msgstr "Количество строк данных"
 
-msgid "IfcCostScheduleTypeEnum_ESTIMATE_DEFINITION"
-msgstr "Оценка суммы денежных средств, которые необходимы для определенной цели на основе фактической информации о товарах и услугах, необходимых для строительства или установки."
+msgid "IfcTable_NumberOfDataRows_DEFINITION"
+msgstr "Количество строк в таблице, содержащих данные, т.е. общее количество строк минус количество заголовков в таблице. Формальные предложения"
 
-#:IFC.xml:41124
-msgid "IfcCostScheduleTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:43968
+msgid "IfcTable_NumberOfHeadings"
+msgstr "Количество заголовков"
 
-msgid "IfcCostScheduleTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcTable_NumberOfHeadings_DEFINITION"
+msgstr "The number of headings in a table. This is restricted by WR3 to max. one."
 
-#:IFC.xml:41125
-msgid "IfcCostScheduleTypeEnum_PRICEDBILLOFQUANTITIES"
-msgstr "ЦЕНЫ"
+#:IFC.xml:43973
+msgid "IfcTable_Name"
+msgstr "Наименование"
 
-msgid "IfcCostScheduleTypeEnum_PRICEDBILLOFQUANTITIES_DEFINITION"
-msgstr "Полный перечень всех работ по строительству или монтажу работ, в которых были выделены расходы на выполнение работ."
+msgid "IfcTable_Name_DEFINITION"
+msgstr "Наименование"
 
-#:IFC.xml:41126
-msgid "IfcCostScheduleTypeEnum_SCHEDULEOFRATES"
-msgstr "SCHEDULEOFRATES"
+#:IFC.xml:44005
+msgid "IfcTableColumn"
+msgstr "Столбец IfcTableColumn"
 
-msgid "IfcCostScheduleTypeEnum_SCHEDULEOFRATES_DEFINITION"
-msgstr "Перечень каждого типа товаров, формирующих строительство или инсталляции, работает с стоимостью покупки, монтаж конструкций, накладные расходы и получение прибыли, что позволит обойтись без дополнительных расходов."
+msgid "IfcTableColumn_DEFINITION"
+msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4."
 
-#:IFC.xml:41127
-msgid "IfcCostScheduleTypeEnum_TENDER"
-msgstr "ТЕНДЕНЦИЯ"
+#:IFC.xml:2734
+msgid "IfcTableColumn_ReferencePath"
+msgstr "Путь ссылки"
 
-msgid "IfcCostScheduleTypeEnum_TENDER_DEFINITION"
-msgstr "Предложение о предоставлении товаров и услуг."
+msgid "IfcTableColumn_ReferencePath_DEFINITION"
+msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied. For constraints, such path is relative to the [[IfcObjectDefinition]] associated by [[IfcRelAssociatesConstraint]] .RelatedObjects. For a constraint to be satisified, exactly one row of the table must match the referenced object for all columns where the ReferencePath attribute is set."
 
-#:IFC.xml:41128
-msgid "IfcCostScheduleTypeEnum_UNPRICEDBILLOFQUANTITIES"
-msgstr "НЕПРАВИТЕЛЬНОСТЬ"
+#:IFC.xml:44006
+msgid "IfcTableColumn_Description"
+msgstr "Описание"
 
-msgid "IfcCostScheduleTypeEnum_UNPRICEDBILLOFQUANTITIES_DEFINITION"
-msgstr "Полный перечень всех работ по строительству или монтажу работ, в которых еще не были выделены расходы на выполнение работ."
+msgid "IfcTableColumn_Description_DEFINITION"
+msgstr "Описание предоставляет человеку читаемый текст, описывающий колонку таблицы."
 
-#:IFC.xml:41129
-msgid "IfcCostScheduleTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:44011
+msgid "IfcTableColumn_Identifier"
+msgstr "Identifier"
 
-msgid "IfcCostScheduleTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип."
+msgid "IfcTableColumn_Identifier_DEFINITION"
+msgstr "Идентификатор идентифицирует столбец в таблице. Если указано, он должен быть уникален в таблице. Столбцы могут быть перекрестными по нескольким таблицам, используя один и тот же идентификатор столбца."
 
-#:IFC.xml:41130
-msgid "IfcPermit"
-msgstr "IfcPermit"
+#:IFC.xml:44016
+msgid "IfcTableColumn_Name"
+msgstr "Наименование"
 
-msgid "IfcPermit_DEFINITION"
-msgstr "Разрешение - это разрешение на выполнение работ в местах и на артефактах, где применяются регуляторные ограничения, безопасность или другие ограничения доступа. HISTORY New entity in IFC2x2. hange ifc2x4 IFC4 CHANGE Атрибут PermitID переименован в Идентификацию и повышен до супертипа [[IfcControl]], атрибутов PredefinedType , Status , и LongDescription добавлено."
+msgid "IfcTableColumn_Name_DEFINITION"
+msgstr "Имя - это надпись, читаемая человеком для колонки таблицы. Это не обязательно уникально."
 
-#:IFC.xml:41131
-msgid "IfcPermit_LongDescription"
-msgstr "Долгое описание"
+#:IFC.xml:44021
+msgid "IfcTableColumn_Unit"
+msgstr "Единица измерения"
 
-msgid "IfcPermit_LongDescription_DEFINITION"
-msgstr "Подробное описание запроса. .change ifc2x4 IFC4 CHANGE Добавлен атрибут. Концепции"
+msgid "IfcTableColumn_Unit_DEFINITION"
+msgstr "Единица измерения обозначает единицу измерения, которая будет использоваться для данных в этой колонке. Если она не предусмотрена, то предполагаются единицы проекта по умолчанию. Если указан путь ссылки, единица должна быть той же меры, что и приведенный атрибут."
 
-#:IFC.xml:41136
-msgid "IfcPermit_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:44027
+msgid "IfcTableRow"
+msgstr "IfcTableRow"
 
-msgid "IfcPermit_PredefinedType_DEFINITION"
-msgstr "Определяет предопределенные типы разрешений, которые могут быть предоставлены. .change ifc2x4 IFC4 CHANGE Добавлен атрибут."
+msgid "IfcTableRow_DEFINITION"
+msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. Figure 337 illustrates table row use. Figure 337 Table row use Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . Figure 338 Table row use alternative HISTORY New entity in IFC1.5."
 
-#:IFC.xml:41141
-msgid "IfcPermit_Status"
-msgstr "Статус"
+#:IFC.xml:44028
+msgid "IfcTableRow_IsHeading"
+msgstr "IsHeading"
 
-msgid "IfcPermit_Status_DEFINITION"
-msgstr "Статус, присвоенный разрешению. .change ifc2x4 IFC4 CHANGE Добавлен атрибут."
+msgid "IfcTableRow_IsHeading_DEFINITION"
+msgstr "Flag which identifies if the row is a heading row or a row which contains row values. NOTE If the row is a heading, the flag takes the value TRUE."
 
-#:IFC.xml:41151
-msgid "IfcPermitTypeEnum"
-msgstr "IfcPermitTypeEnum"
+#:IFC.xml:44033
+msgid "IfcTableRow_RowCells"
+msgstr "Гены RowCs"
 
-msgid "IfcPermitTypeEnum_DEFINITION"
-msgstr "[[IfcPermitTypeEnum]] определяет типы разрешений, которые могут быть предоставлены. ИСТОРИЯ Новое перечисление в IFC4. Пункты ДОСТУП Разрешает доступ к определенной области. BUILDING позволяет выполнять работу по получению разрешений. WORK позволяет работать в определенной области. ПОЛЬЗОВАТЕЛЬ определенного типа пользователя НЕ УДАЛЕН."
+msgid "IfcTableRow_RowCells_DEFINITION"
+msgstr "Значение данных в таблице ячейки.."
 
-#:IFC.xml:41158
-msgid "IfcPermitTypeEnum_ACCESS"
-msgstr "ДОСТУП"
+#:IFC.xml:44039
+msgid "IfcGloballyUniqueId"
+msgstr "IfcGloballyUniqueId"
 
-msgid "IfcPermitTypeEnum_ACCESS_DEFINITION"
-msgstr "Включает доступ к идентифицированной области."
-
-#:IFC.xml:41159
-msgid "IfcPermitTypeEnum_BUILDING"
-msgstr "ОБЪЯВЛЕНИЕ"
-
-msgid "IfcPermitTypeEnum_BUILDING_DEFINITION"
-msgstr "Позволяет работать для продолжения получения регуляторных разрешений."
-
-#:IFC.xml:41160
-msgid "IfcPermitTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcPermitTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
-
-#:IFC.xml:41161
-msgid "IfcPermitTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcPermitTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип."
-
-#:IFC.xml:41162
-msgid "IfcPermitTypeEnum_WORK"
-msgstr "МИР"
-
-msgid "IfcPermitTypeEnum_WORK_DEFINITION"
-msgstr "Позволяет проводить работу в определенной области."
-
-#:IFC.xml:41163
-msgid "IfcProjectOrder"
-msgstr "IfcProjectOrder"
-
-msgid "IfcProjectOrder_DEFINITION"
-msgstr "Заказ на проект – это директива для приобретения товаров и выполнения работ, таких как управление строительством или объектами. Заказы на проект обычно являются формальными контрактами между двумя организациями, где информация о затратах и времени может быть жесткой или гибкой в соответствии с содержащимися в ней типами графиков и ограничениями. HISTORY New entity in IFC2.0 .change ifc2x4 IFC4 CHANGE Attribute ID переименован в Identification and promoted to supertype [[IfcControl]. Атрибут LongDescription добавлен."
-
-#:IFC.xml:41164
-msgid "IfcProjectOrder_LongDescription"
-msgstr "Долгое описание"
-
-msgid "IfcProjectOrder_LongDescription_DEFINITION"
-msgstr "Подробное описание заказа проекта с описанием предстоящей работы. Концепции"
-
-#:IFC.xml:41169
-msgid "IfcProjectOrder_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcProjectOrder_PredefinedType_DEFINITION"
-msgstr "Предопределенный общий тип для порядка проекта, который указан в перечислении. Для предопределенных типов может быть установлено свойство. .change ifc2x4 IFC4 CHANGE атрибут был сделан необязательно."
-
-#:IFC.xml:41174
-msgid "IfcProjectOrder_Status"
-msgstr "Статус"
-
-msgid "IfcProjectOrder_Status_DEFINITION"
-msgstr "Текущий статус заказа проекта. xamples значений, которые могут быть использованы для статуса заказа проекта, включают в себя ЗАПРЕЩЕННУЮ ЗАПРЕЩЕННУЮ ПРЕДОСТАВЛЕННУЮ ПРЕДОСТАВЛЕННУЮ ДЕЙСТВУЮЮ"
-
-#:IFC.xml:41184
-msgid "IfcProjectOrderTypeEnum"
-msgstr "IfcProjectOrderTypeEnum"
-
-msgid "IfcProjectOrderTypeEnum_DEFINITION"
-msgstr "[[IfcProjectOrderTypeEnum]] — это список типов порядка проектов, которые могут быть идентифицированы. ИСТОРИЯ Новое перечисление в IFC2x2. Пункты CHANGEORDER Инструкция по внесению изменений в выполняемый продукт или выполняемую работу и описание выполняемой работы. MAINTENANCEWORKORDER Инструкция по проведению технического обслуживания и описание подлежащих выполнению работ. МОРДЕР Инструкция по перемещению лиц и объектов и описание перемещаемых объектов, перемещаемых и т.д. PURCHASEORDER Инструкция по покупке товаров или услуг и описание товаров или услуг, которые должны быть приобретены. WORKORDER A general instruction to carry the work and a description of the work to be done. Обратите внимание на разницу между порядком работы и заказом работ по обслуживанию. ПОЛЬЗОВАТЕЛЬНЫЙ пользователь. ЗАМЕЧАНИЕ"
-
-#:IFC.xml:41193
-msgid "IfcProjectOrderTypeEnum_CHANGEORDER"
-msgstr "ИЗМЕНИТЬ"
-
-msgid "IfcProjectOrderTypeEnum_CHANGEORDER_DEFINITION"
-msgstr "Инструкция по внесению изменений в выполняемый продукт или работу и описание выполняемой работы."
-
-#:IFC.xml:41194
-msgid "IfcProjectOrderTypeEnum_MAINTENANCEWORKORDER"
-msgstr "MAINTENANCEWORKORDER"
-
-msgid "IfcProjectOrderTypeEnum_MAINTENANCEWORKORDER_DEFINITION"
-msgstr "Инструкция по выполнению работ по техническому обслуживанию и описание работ, которые должны быть выполнены."
-
-#:IFC.xml:41195
-msgid "IfcProjectOrderTypeEnum_MOVEORDER"
-msgstr "MOVEORDER"
-
-msgid "IfcProjectOrderTypeEnum_MOVEORDER_DEFINITION"
-msgstr "Инструкция по перемещению лиц и артефактов, описание перемещаемых мест, объектов, подлежащих перемещению и т.д."
-
-#:IFC.xml:41196
-msgid "IfcProjectOrderTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcProjectOrderTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
-
-#:IFC.xml:41197
-msgid "IfcProjectOrderTypeEnum_PURCHASEORDER"
-msgstr "ПОКУПКА"
-
-msgid "IfcProjectOrderTypeEnum_PURCHASEORDER_DEFINITION"
-msgstr "Инструкция по покупке товаров или услуг и описание приобретаемых товаров или услуг."
-
-#:IFC.xml:41198
-msgid "IfcProjectOrderTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcProjectOrderTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип."
-
-#:IFC.xml:41199
-msgid "IfcProjectOrderTypeEnum_WORKORDER"
-msgstr "МИР"
-
-msgid "IfcProjectOrderTypeEnum_WORKORDER_DEFINITION"
-msgstr "Общая инструкция по выполнению работ и описание предстоящей работы. Обратите внимание на разницу между порядком работы и порядком работы по обслуживанию."
-
-#:IFC.xml:41216
-msgid "Pset_ActionRequest"
-msgstr "Запрос Pset Действия"
-
-msgid "Pset_ActionRequest_DEFINITION"
-msgstr "Запрос на действие - это запрос для выполнения нужного действия. ИСТОРИЯ IFC4 удаленный тип запроса, Описание запроса, Статус"
-
-#:IFC.xml:41217
-msgid "RequestComments"
-msgstr "RequestComments"
-
-msgid "RequestComments_DEFINITION"
-msgstr "Comments that may be made on the request."
-
-#:IFC.xml:41222
-msgid "RequestSourceLabel"
-msgstr "RequestSourceLabel"
-
-msgid "RequestSourceLabel_DEFINITION"
-msgstr "A specific name or label that further qualifies the identity of a request source. In the event of an email, this may be the email address."
-
-#:IFC.xml:41227
-msgid "RequestSourceName"
-msgstr "RequestSourceName"
-
-msgid "RequestSourceName_DEFINITION"
-msgstr "The person making the request, where known."
-
-#:IFC.xml:41233
-msgid "Pset_PackingInstructions"
-msgstr "Инструкции по упаковке Pset"
-
-msgid "Pset_PackingInstructions_DEFINITION"
-msgstr "Инструкции по упаковке представляют собой конкретные инструкции, касающиеся упаковки, требуемой для артефакта в случае перемещения или транспортировки ."
-
-#:IFC.xml:41234
-msgid "ContainerMaterial"
-msgstr "ContainerMaterial"
-
-msgid "ContainerMaterial_DEFINITION"
-msgstr "Special requirements for material used to contain an artefact."
-
-#:IFC.xml:41239
-msgid "PackingCareType"
-msgstr "PackingCareType"
-
-msgid "PackingCareType_DEFINITION"
-msgstr "Identifies the predefined types of care that may be required when handling the artefact during a move where Fragile artefact may be broken during a move through careless handling. HandleWithCare artefact may be damaged during a move through careless handling."
-
-#:IFC.xml:41244
-msgid "SpecialInstructions"
-msgstr "SpecialInstructions"
-
-msgid "SpecialInstructions_DEFINITION"
-msgstr "Special instructions that affect the move."
-
-#:IFC.xml:41249
-msgid "WrappingMaterial"
-msgstr "WrappingMaterial"
-
-msgid "WrappingMaterial_DEFINITION"
-msgstr "Special requirements for material used to wrap an artefact."
-
-#:IFC.xml:41255
-msgid "Pset_Permit"
-msgstr "Pset Permit"
-
-msgid "Pset_Permit_DEFINITION"
-msgstr "Разрешение - это документ, позволяющий получить доступ к месту проживания или выполнять работу в ситуациях, когда применяются ограничения безопасности или другие ограничения. Добавлен ХИСТОРИЙ IFC4 Дата окончания. ДатаТип,Допустимость Продолжительность, Время начала и Время окончания удаляются."
-
-#:IFC.xml:41256
-msgid "EndDate"
-msgstr "EndDate"
-
-msgid "EndDate_DEFINITION"
-msgstr "Date and time at which the permit ceases to be valid."
-
-#:IFC.xml:41261
-msgid "EscortRequirement"
-msgstr "EscortRequirement"
-
-msgid "EscortRequirement_DEFINITION"
-msgstr "Indicates whether or not an escort is required to accompany persons carrying out a work order at or to from the place of work TRUE or not FALSE . NOTE There are many instances where escorting is required, particularly in a facility that has a high security rating. Escorting may require that persons are escorted to and from the place of work. Alternatively, it may involve the escort remaining at the place of work at all times."
-
-#:IFC.xml:41266
-msgid "SpecialRequirements"
-msgstr "SpecialRequirements"
-
-msgid "SpecialRequirements_DEFINITION"
-msgstr "Any additional special requirements that need to be included in the permit to work. NOTE Additional permit requirements may be imposed according to the nature of the facility at which the work is carried out. For instance, in clean areas, special clothing may be required whilst in corrective institutions, it may be necessary to check in and check out tools that will be used for work as a safety precaution."
-
-#:IFC.xml:41271
-msgid "StartDate"
-msgstr "StartDate"
-
-msgid "StartDate_DEFINITION"
-msgstr "Date and time from which the permit becomes valid."
-
-#:IFC.xml:41277
-msgid "Pset_ProjectOrderChangeOrder"
-msgstr "Pset ProjectOrderChangeOrder"
-
-msgid "Pset_ProjectOrderChangeOrder_DEFINITION"
-msgstr "Порядок изменений - это инструкция внести изменения в готовый продукт или выполняемую работу. Обратите внимание, что статус изменения порядка определяется таким же образом, как статус заказа работы, поскольку изменение заказа подразумевает требование к работе."
-
-#:IFC.xml:41278
-msgid "BudgetSource"
-msgstr "BudgetSource"
-
-msgid "BudgetSource_DEFINITION"
-msgstr "The budget source requested."
-
-#:IFC.xml:41283
-msgid "ReasonForChange"
-msgstr "ReasonForChange"
-
-msgid "ReasonForChange_DEFINITION"
-msgstr "A description of the problem for why a change is needed."
-
-#:IFC.xml:41289
-msgid "Pset_ProjectOrderMaintenanceWorkOrder"
-msgstr "Порядок работ Pset"
-
-msgid "Pset_ProjectOrderMaintenanceWorkOrder_DEFINITION"
-msgstr "Техническое обслуживание – это подробное описание выполняемой работы по техническому обслуживанию. Обратите внимание, что свойство запланированной частоты работы используется в том случае, когда заказ требуется в качестве экземпляра запланированного заказа работы."
-
-#:IFC.xml:41290
-msgid "ContractualType"
-msgstr "ContractualType"
-
-msgid "ContractualType_DEFINITION"
-msgstr "The contractual type of the work."
-
-#:IFC.xml:41295
-msgid "FaultPriorityType"
-msgstr "FaultPriorityType"
-
-msgid "FaultPriorityType_DEFINITION"
-msgstr "Identifies the predefined types of priority that can be assigned from which the type may be set where High action is required urgently. Medium action can occur within a reasonable period of time. Low action can occur when convenient."
-
-#:IFC.xml:41300
-msgid "IfNotAccomplished"
-msgstr "IfNotAccomplished"
-
-msgid "IfNotAccomplished_DEFINITION"
-msgstr "Comments if the job is not accomplished."
-
-#:IFC.xml:41305
-msgid "LocationPriorityType"
-msgstr "LocationPriorityType"
-
-msgid "LocationPriorityType_DEFINITION"
-msgstr "Identifies the predefined types of priority that can be assigned from which the type may be set where High action is required urgently. Medium action can occur within a reasonable period of time. Low action can occur when convenient."
-
-#:IFC.xml:41310
-msgid "MaintenaceType"
-msgstr "MaintenaceType"
-
-msgid "MaintenaceType_DEFINITION"
-msgstr "Identifies the predefined types of maintenance that can be done from which the type that generates the maintenance work order may be set where ConditionBased generated as a result of the condition of an asset or artefact being less than a determined value. Corrective generated as a result of an immediate and urgent need for maintenance action. PlannedCorrective generated as a result of immediate corrective action being needed but with sufficient time available for the work order to be included in maintenance planning. Scheduled generated as a result of a fixed, periodic maintenance requirement."
-
-#:IFC.xml:41315
-msgid "ProductDescription"
-msgstr "ProductDescription"
-
-msgid "ProductDescription_DEFINITION"
-msgstr "A textual description of the products that require the work."
-
-#:IFC.xml:41320
-msgid "ScheduledFrequency"
-msgstr "ScheduledFrequency"
-
-msgid "ScheduledFrequency_DEFINITION"
-msgstr "The period of time between expected instantiations of a work order that may have been predefined."
-
-#:IFC.xml:41325
-msgid "WorkTypeRequested"
-msgstr "WorkTypeRequested"
-
-msgid "WorkTypeRequested_DEFINITION"
-msgstr "Work type requested in circumstances where there are categorizations of types of work task. It could be used to identify a remedial task, minor work task, electrical task etc."
-
-#:IFC.xml:41331
-msgid "Pset_ProjectOrderMoveOrder"
-msgstr "Pset ProjectOrderMoveOrder"
-
-msgid "Pset_ProjectOrderMoveOrder_DEFINITION"
-msgstr "Определяет требования к ордерам на перемещение. Заметим, что статус заказа движения определяется таким же образом, как статус заказа работы, поскольку заказ перемещения подразумевает требование к работе."
-
-#:IFC.xml:41338
-msgid "Pset_ProjectOrderPurchaseOrder"
-msgstr "Порядок покупки проектов Pset"
-
-msgid "Pset_ProjectOrderPurchaseOrder_DEFINITION"
-msgstr "Определяет требования к заказам на покупку в проекте."
-
-#:IFC.xml:41339
-msgid "IsFOB"
-msgstr "IsFOB"
-
-msgid "IsFOB_DEFINITION"
-msgstr "Indication of whether contents of the purchase order are delivered Free on Board True or not False . FOB is a shipping term which indicates that the supplier pays the shipping costs and usually also the insurance costs from the point of manufacture to a specified destination, at which point the buyer takes responsibility."
-
-#:IFC.xml:41344
-msgid "ShipMethod"
-msgstr "ShipMethod"
-
-msgid "ShipMethod_DEFINITION"
-msgstr "Method of shipping that will be used for goods or services."
-
-#:IFC.xml:41350
-msgid "Pset_ProjectOrderWorkOrder"
-msgstr "Порядок работ Pset"
-
-msgid "Pset_ProjectOrderWorkOrder_DEFINITION"
-msgstr "Определяет требования к заказам на покупку в проекте."
+msgid "IfcGloballyUniqueId_DEFINITION"
+msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 0123456789012345678901234567890123456789012345678901234567890123 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1."
 
