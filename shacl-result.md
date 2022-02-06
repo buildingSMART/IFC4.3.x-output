@@ -6,6 +6,7 @@
 * The Property 'Pset_ActuatorPHistory.StatusHistory' has no definition
 * The Property 'Pset_ActuatorTypeCommon.ActuatorApplication' has no definition
 * The Property 'Pset_ActuatorTypeCommon.ActuatorStatus' has no definition
+* The Property 'Pset_ActuatorTypeElectricActuator.ControlPulseCurrent' has no definition
 * The Property 'Pset_Address.AddressLines' has no definition
 * The Property 'Pset_Address.Country' has no definition
 * The Property 'Pset_Address.InternalLocation' has no definition
@@ -73,15 +74,38 @@
 * The Property 'Pset_CableSegmentConnector.ConnectorBGender' has no definition
 * The Property 'Pset_CableSegmentConnector.ConnectorBType' has no definition
 * The Property 'Pset_CableSegmentOccurenceFiberSegment.InUse' has no definition
+* The Property 'Pset_CableSegmentOccurrence.CurrentCarryingCapacity' has no definition
+* The Property 'Pset_CableSegmentOccurrence.SequentialCode' has no definition
+* The Property 'Pset_CableSegmentTypeBusBarSegment.ACResistance' has no definition
+* The Property 'Pset_CableSegmentTypeBusBarSegment.CurrentCarryingCapacity' has no definition
+* The Property 'Pset_CableSegmentTypeBusBarSegment.DCResistance' has no definition
+* The Property 'Pset_CableSegmentTypeBusBarSegment.InsulationMethod' has no definition
+* The Property 'Pset_CableSegmentTypeBusBarSegment.UltimateTensileStrength' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.ACResistance' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.CurrentCarryingCapacity' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.DCResistance' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.InsulationVoltage' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.MaximumBendingRadius' has no definition
+* The Property 'Pset_CableSegmentTypeCableSegment.NumberOfWires' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_3' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.ACResistance' has no definition
 * The Property 'Pset_CableSegmentTypeConductorSegment.ConductorMaterial' has no definition
 * The Property 'Pset_CableSegmentTypeConductorSegment.ConductorShape' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.CurrentCarryingCapacity' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.DCResistance' has no definition
+* The Property 'Pset_CableSegmentTypeConductorSegment.UltimateTensileStrength' has no definition
 * The Property 'Pset_CableSegmentTypeContactWire.ACResistance' has no definition
 * The Property 'Pset_CableSegmentTypeContactWire.CurrentCarryingCapacity' has no definition
 * The Property 'Pset_CableSegmentTypeContactWire.DCResistance' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.ACResistance' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.CurrentCarryingCapacity' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.DCResistance' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.LayRatio' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_3' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.StrandingMethod' has no definition
+* The Property 'Pset_CableSegmentTypeCoreSegment.UltimateTensileStrength' has no definition
 * The Property 'Pset_CableSegmentTypeEarthingConductor.ResistanceToGround' has no definition
 * The Property 'Pset_CableSegmentTypeFiberSegment.FiberColour' has no definition
 * The Property 'Pset_CableSegmentTypeFiberSegment.FiberType' has no definition
@@ -148,6 +172,7 @@
 * The Property 'Pset_CommunicationsApplianceTypeTransportEquipment.IsUpgradable' has no definition
 * The Property 'Pset_CommunicationsApplianceTypeTransportEquipment.TransportEquipmentAssemblyType' has no definition
 * The Property 'Pset_CommunicationsApplianceTypeTransportEquipment.TransportEquipmentType' has no definition
+* The Property 'Pset_Condition.AssessmentFrequency' has no definition
 * The Property 'Pset_ConstructionResource.ActualWorkTime' has no definition
 * The Property 'Pset_ConstructionResource.RemainingWorkProgression' has no definition
 * The Property 'Pset_ConstructionResource.ScheduleWorkProgression' has no definition
@@ -190,7 +215,13 @@
 * The Property 'Pset_DistributionBoardTypeDispatchingBoard.DispatchingBoardType' has no definition
 * The Property 'Pset_DistributionBoardTypeDispatchingBoard.NumberOfInterfaces' has no definition
 * The Property 'Pset_DistributionBoardTypeDistributionFrame.PortCapacity' has no definition
+* The Property 'Pset_DistributionChamberElementTypeFormedDuct.CableDuctOccupancyRatio' has no definition
 * The Property 'Pset_DistributionChamberElementTypeInspectionChamber.InspectionChamberInvertLevel' has no definition
+* The Property 'Pset_DistributionChamberElementTypeManhole.IsAccessibleOnFoot' has no definition
+* The Property 'Pset_DistributionChamberElementTypeManhole.IsLocked' has no definition
+* The Property 'Pset_DistributionChamberElementTypeManhole.NumberOfCableEntries' has no definition
+* The Property 'Pset_DistributionChamberElementTypeManhole.NumberOfManholeCovers' has no definition
+* The Property 'Pset_DistributionChamberElementTypeManhole.TypeOfShaft' has no definition
 * The Property 'Pset_DistributionChamberElementTypeSump.SumpInvertLevel' has no definition
 * The Property 'Pset_DistributionPortPHistoryCable.CurrentHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryCable.PowerFactorHistory' has no definition
@@ -202,8 +233,11 @@
 * The Property 'Pset_DistributionPortPHistoryDuct.VelocityHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryDuct.VolumetricFlowRateHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryDuct.WetBulbTemperatureHistory' has no definition
+* The Property 'Pset_DistributionPortTypeCable.HasConnector' has no definition
+* The Property 'Pset_DistributionPortTypeCable.IsWelded' has no definition
 * The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
 * The Property 'Pset_DistributionPortTypePipe.ConnectionSubType' has no definition
+* The Property 'Pset_DistributionSystemTypeElectrical.RatedVoltageRange' has no definition
 * The Property 'Pset_DistributionSystemTypeOverheadContactlineSystem.ContactWireNominalDrop' has no definition
 * The Property 'Pset_DistributionSystemTypeOverheadContactlineSystem.ContactWireNominalHeight' has no definition
 * The Property 'Pset_DistributionSystemTypeOverheadContactlineSystem.ContactWireStagger' has no definition
@@ -228,6 +262,9 @@
 * The Property 'Pset_ElectricFlowStorageDeviceTypeBattery.OpenCircuitVoltage' has no definition
 * The Property 'Pset_ElectricFlowStorageDeviceTypeBattery.VoltageRegulationRate' has no definition
 * The Property 'Pset_ElectricFlowStorageDeviceTypeCapacitor.NumberOfPhases' has no definition
+* The Property 'Pset_ElectricFlowStorageDeviceTypeCommon.MaximumInsulatedVoltage' has no definition
+* The Property 'Pset_ElectricFlowStorageDeviceTypeCommon.PowerCapacity' has no definition
+* The Property 'Pset_ElectricFlowStorageDeviceTypeCommon.RatedCapacitance' has no definition
 * The Property 'Pset_ElectricFlowStorageDeviceTypeInductor.Inductance' has no definition
 * The Property 'Pset_ElectricFlowStorageDeviceTypeInductor.NumberOfPhases' has no definition
 * The Property 'Pset_ElectricFlowStorageDeviceTypeRecharger.NominalSupplyCurrent' has no definition
@@ -237,8 +274,11 @@
 * The Property 'Pset_ElectricFlowStorageDeviceTypeUPS.VoltageRegulationRate' has no definition
 * The Property 'Pset_ElectricFlowTreatmentDeviceTypeElectronicFilter.ElectronicFilterType' has no definition
 * The Property 'Pset_ElectricFlowTreatmentDeviceTypeElectronicFilter.NominalPower' has no definition
+* The Property 'Pset_ElectricalDeviceCommon.EarthingStyle' has no definition
+* The Property 'Pset_ElectricalDeviceCommon.HeatDissipation' has no definition
 * The Property 'Pset_ElectricalDeviceCommon.IK_Code' has no definition
 * The Property 'Pset_ElectricalDeviceCommon.IP_Code' has no definition
+* The Property 'Pset_ElectricalDeviceCommon.NumberOfPowerSupplyPorts' has no definition
 * The Property 'Pset_ElectricalDeviceCompliance.ElectroMagneticStandardsCompliance' has no definition
 * The Property 'Pset_ElectricalDeviceCompliance.ExplosiveAtmosphereStandardsCompliance' has no definition
 * The Property 'Pset_ElectricalDeviceCompliance.FireProofingStandardsCompliance' has no definition
@@ -329,6 +369,7 @@
 * The Property 'Pset_JunctionBoxTypeCommon.JunctionBoxMountingType' has no definition
 * The Property 'Pset_JunctionBoxTypeData.DataConnectionType' has no definition
 * The Property 'Pset_MaintenanceTriggerPerformance.PerformanceMaintenanceLevel' has no definition
+* The Property 'Pset_ManufacturerOccurrence.ManufacturingDate' has no definition
 * The Property 'Pset_MarkerGeneral.ApproachSpeed' has no definition
 * The Property 'Pset_MarkerGeneral.MarkerType' has no definition
 * The Property 'Pset_MarkerGeneral.Symbol' has no definition
@@ -416,6 +457,10 @@
 * The Property 'Pset_OpticalSplitter.NumberOfInterfaces' has no definition
 * The Property 'Pset_OpticalSplitter.OpticalSplitterType' has no definition
 * The Property 'Pset_PatchCordCable.JacketColour' has no definition
+* The Property 'Pset_PipeSegmentTypeGutter.Complementaryfunction' has no definition
+* The Property 'Pset_PipeSegmentTypeGutter.IsCovered' has no definition
+* The Property 'Pset_PipeSegmentTypeGutter.IsMonitored' has no definition
+* The Property 'Pset_PipeSegmentTypeGutter.OrthometricHeight' has no definition
 * The Property 'Pset_PointMachine.ActionBarMovementLength' has no definition
 * The Property 'Pset_PointMachine.ConversionTime' has no definition
 * The Property 'Pset_PointMachine.HasLockInside' has no definition
@@ -440,11 +485,17 @@
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_50' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_Select' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeAntiArcingDevice.GroundingType' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeFuseDisconnector.ArcExtinctionType' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeFuseDisconnector.BreakingCapacity' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeFuseDisconnector.NumberOfPhases' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeFuseDisconnector.ReferenceEnvironmentTemperature' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeFuseDisconnector.TransformationRatio' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeSparkGap.BreakdownVoltageTolerance' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeSparkGap.Capacitance' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeSparkGap.CurrentRMS' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeSparkGap.PowerDissipation' has no definition
 * The Property 'Pset_ProtectiveDeviceTypeSparkGap.SparkGapType' has no definition
+* The Property 'Pset_ProtectiveDeviceTypeVaristor.CharacteristicFunction' has no definition
 * The Property 'Pset_ProvisionForVoid.VoidShape' has no definition
 * The Property 'Pset_PumpPHistory.PowerHistory' has no definition
 * The Property 'Pset_RailTypeBlade.BladeRadius' has no definition
@@ -563,6 +614,16 @@
 * The Property 'Pset_SensorTypeSnowSensor.SnowSensorType' has no definition
 * The Property 'Pset_SensorTypeTurnoutClosureSensor.DetectionRange' has no definition
 * The Property 'Pset_SensorTypeTurnoutClosureSensor.IndicationRodMovementRange' has no definition
+* The Property 'Pset_SensorTypeWindSensor.DampingRatio' has no definition
+* The Property 'Pset_SensorTypeWindSensor.DataCollectionType' has no definition
+* The Property 'Pset_SensorTypeWindSensor.LinearVelocityResolution' has no definition
+* The Property 'Pset_SensorTypeWindSensor.MarginOfError' has no definition
+* The Property 'Pset_SensorTypeWindSensor.SamplingFrequency' has no definition
+* The Property 'Pset_SensorTypeWindSensor.SerialInterfaceType' has no definition
+* The Property 'Pset_SensorTypeWindSensor.StartingWindSpeed' has no definition
+* The Property 'Pset_SensorTypeWindSensor.WindAngleRange' has no definition
+* The Property 'Pset_SensorTypeWindSensor.WindSpeedRange' has no definition
+* The Property 'Pset_SensorTypeWindSensor.WorkingState' has no definition
 * The Property 'Pset_SignCommon.TactileMarking' has no definition
 * The Property 'Pset_SignalFrame.BackboardType' has no definition
 * The Property 'Pset_SignalFrame.SignalFrameBackboardDiameter' has no definition
@@ -610,11 +671,25 @@
 * The Property 'Pset_SpaceThermalPHistory.VentilationAirFlowRateHistory' has no definition
 * The Property 'Pset_SpringTensioner.NominalWeight' has no definition
 * The Property 'Pset_SpringTensioner.TensioningWorkingRange' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.BreakingCapacity' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfAffectedPoles' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfEarthFaultRelays' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfEmergencyButtons' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfOverCurrentRelays' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfPhases' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.NumberOfRelays' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.RatedFrequency' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.ReferenceEnvironmentTemperature' has no definition
+* The Property 'Pset_SwitchingDeviceTypeEmergencyStop.TransformationRatio' has no definition
 * The Property 'Pset_SwitchingDeviceTypePHistory.SetPointHistory' has no definition
 * The Property 'Pset_SwitchingDeviceTypeRelay.ContactResistance' has no definition
 * The Property 'Pset_SwitchingDeviceTypeRelay.InsulationResistance' has no definition
 * The Property 'Pset_SwitchingDeviceTypeRelay.PullInVoltage' has no definition
 * The Property 'Pset_SwitchingDeviceTypeRelay.ReleaseVoltage' has no definition
+* The Property 'Pset_SwitchingDeviceTypeSelectorSwitch.NominalPower' has no definition
+* The Property 'Pset_SwitchingDeviceTypeSelectorSwitch.NumberOfPhases' has no definition
+* The Property 'Pset_SwitchingDeviceTypeSelectorSwitch.RatedFrequency' has no definition
+* The Property 'Pset_SwitchingDeviceTypeSelectorSwitch.ReferenceEnvironmentTemperature' has no definition
 * The Property 'Pset_SymmetricPairCable.NumberOfTwistedPairs' has no definition
 * The Property 'Pset_SymmetricPairCable.NumberOfUntwistedPairs' has no definition
 * The Property 'Pset_SystemFurnitureElementTypeSubrack.NumberOfOccupiedUnits' has no definition
@@ -798,12 +873,10 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Profile Set.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Properties.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Single.md' a property cannot be found
-* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaterialColour.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaxAdjustmentX.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mechanical Fastener Type Attributes.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mode.md' a property cannot be found
-* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MountingType.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Name.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Nesting.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/NetArea.md' a property cannot be found
@@ -911,7 +984,6 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Scope.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SelfExtinguishing60332.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sequential Connectivity.md' a property cannot be found
-* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shape.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shared element data schemas.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sine Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Site Attributes.md' a property cannot be found
