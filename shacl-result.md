@@ -811,6 +811,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Cosine Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Count.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/Cubic Transition Segment.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/c/CurrentCarryingCapasity.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/d/Design Transfer View.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/d/Document Association.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/d/Domain specific data schemas.md' a property cannot be found
@@ -877,6 +878,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaxAdjustmentX.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mechanical Fastener Type Attributes.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mode.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MountingType.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Name.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/Nesting.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/n/NetArea.md' a property cannot be found
@@ -984,6 +986,7 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Scope.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/SelfExtinguishing60332.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sequential Connectivity.md' a property cannot be found
+* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shape.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Shared element data schemas.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Sine Transition Segment.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/s/Site Attributes.md' a property cannot be found
