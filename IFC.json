@@ -4376,55 +4376,6 @@
         "Parent": "IfcFlowMovingDevice",
         "Description": "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system.\n\n> HISTORY&nbsp; New entity in IFC4\n\n{ .note}\n>\n",
         "Psets": {
-          "Pset_FanCentrifugal": {
-            "Properties": {
-              "DirectionOfRotation": {
-                "type": "PEnum_CentrifugalFanRotation",
-                "Description": "The direction of the centrifugal fan wheel rotation when viewed from the drive side of the fan.\n\nCLOCKWISE: Clockwise. \nCOUNTERCLOCKWISE: Counter-clockwise. \nOTHER: Other type of fan rotation.",
-                "values": [
-                  "CLOCKWISE",
-                  "COUNTERCLOCKWISE",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNSET"
-                ]
-              },
-              "DischargePosition": {
-                "type": "PEnum_CentrifugalFanDischargePosition",
-                "Description": "Centrifugal fan discharge position.\n\nTOPHORIZONTAL: Top horizontal discharge. \nTOPANGULARDOWN: Top angular down discharge. \nDOWNBLAST: Downblast discharge. \nBOTTOMANGULARDOWN: Bottom angular down discharge. \nBOTTOMHORIZONTAL: Bottom horizontal discharge. \nBOTTOMANGULARUP: Bottom angular up discharge. \nUPBLAST: Upblast discharge. \nTOPANGULARUP: Top angular up discharge. \nOTHER: Other type of fan arrangement.",
-                "values": [
-                  "BOTTOMANGULARDOWN",
-                  "BOTTOMANGULARUP",
-                  "BOTTOMHORIZONTAL",
-                  "DOWNBLAST",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "TOPANGULARDOWN",
-                  "TOPANGULARUP",
-                  "TOPHORIZONTAL",
-                  "UNSET",
-                  "UPBLAST"
-                ]
-              },
-              "FanArrangement": {
-                "type": "PEnum_CentrifugalFanArrangement",
-                "Description": "",
-                "values": [
-                  "ARRANGEMENT1",
-                  "ARRANGEMENT10",
-                  "ARRANGEMENT2",
-                  "ARRANGEMENT3",
-                  "ARRANGEMENT4",
-                  "ARRANGEMENT7",
-                  "ARRANGEMENT8",
-                  "ARRANGEMENT9",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNSET"
-                ]
-              }
-            }
-          },
           "Pset_FanOccurrence": {
             "Properties": {
               "ApplicationOfFan": {
@@ -8904,11 +8855,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -8929,6 +8891,10 @@
         "Psets": {
           "Pset_CivilElementCommon": {
             "Properties": {
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
               "Status": {
                 "type": "PEnum_ElementStatus",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
@@ -9843,7 +9809,7 @@
                 "Description": "Identifies the maximum angular velocity of the kinematic behaviour."
               },
               "MaximumConstantSpeed": {
-                "type": "unknown",
+                "type": "real",
                 "Description": "Identifies the maximum constant speed over the kinematic path."
               },
               "MinimumTime": {
@@ -9872,6 +9838,10 @@
         "Psets": {
           "Pset_ElementAssemblyCommon": {
             "Properties": {
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
               "Status": {
                 "type": "PEnum_ElementStatus",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
@@ -9921,7 +9891,7 @@
                 "Description": "Identifies the maximum angular velocity of the kinematic behaviour."
               },
               "MaximumConstantSpeed": {
-                "type": "unknown",
+                "type": "real",
                 "Description": "Identifies the maximum constant speed over the kinematic path."
               },
               "MinimumTime": {
@@ -10313,11 +10283,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -10937,11 +10918,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -11244,6 +11236,10 @@
                   "TRUE",
                   "FALSE"
                 ]
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
               }
             }
           },
@@ -11617,11 +11613,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -11744,11 +11751,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -11829,11 +11847,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -13945,11 +13974,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -14919,6 +14959,14 @@
                   "FALSE"
                 ]
               },
+              "LoadBearing": {
+                "type": "boolean",
+                "Description": "Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
               "Reference": {
                 "type": "string",
                 "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
@@ -14943,6 +14991,10 @@
                   "TEMPORARY",
                   "UNSET"
                 ]
+              },
+              "ThermalTransmittance": {
+                "type": "real",
+                "Description": "Thermal transmittance coefficient (U-Value) of the element. It is the total thermal transmittance coefficient through the building element proxy within the direction of the thermal flow (including all materials).\n\nNote: new property in IFC4"
               }
             }
           },
@@ -15364,6 +15416,14 @@
               "IsExternal": {
                 "type": "boolean",
                 "Description": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
+              "LoadBearing": {
+                "type": "boolean",
+                "Description": "Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).",
                 "values": [
                   "TRUE",
                   "FALSE"
@@ -16091,6 +16151,14 @@
                   "FALSE"
                 ]
               },
+              "LoadBearing": {
+                "type": "boolean",
+                "Description": "Indicates whether the object is intended to carry loads (TRUE) or not (FALSE).",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              },
               "NosingLength": {
                 "type": "real",
                 "Description": "Horizontal distance from the front of the tread to the riser underneath. It is the overhang of the tread."
@@ -16127,6 +16195,10 @@
                   "TEMPORARY",
                   "UNSET"
                 ]
+              },
+              "ThermalTransmittance": {
+                "type": "real",
+                "Description": "Thermal transmittance coefficient (U-Value) of the element. It is the total thermal transmittance coefficient through the building element proxy within the direction of the thermal flow (including all materials).\n\nNote: new property in IFC4"
               },
               "TreadLength": {
                 "type": "real",
@@ -17369,11 +17441,22 @@
                 "Description": "The number of units that can be processed in the time defined in ProcessPerformance"
               },
               "ProcessItem": {
-                "type": "unknown",
-                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+                "type": "PEnum_ProcessItem",
+                "Description": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+                "values": [
+                  "BARREL",
+                  "CGT",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PASSENGER",
+                  "TEU",
+                  "TONNE",
+                  "UNSET",
+                  "VEHICLE"
+                ]
               },
               "ProcessPerformance": {
-                "type": "unknown",
+                "type": "string",
                 "Description": "Minimum time to accept or dispatch the entire item capacity."
               }
             }
@@ -18079,6 +18162,10 @@
                 "type": "real",
                 "Description": "The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
               },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types."
+              },
               "Status": {
                 "type": "PEnum_ElementStatus",
                 "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
@@ -18154,8 +18241,24 @@
           "Pset_BoreholeCommon": {
             "Properties": {
               "BoreholeState": {
-                "type": "unknown",
-                "Description": "The state the borehole or trial pit has been left in. (boreholeML)."
+                "type": "PEnum_BoreholeState",
+                "Description": "The state the borehole or trial pit has been left in. (boreholeML).",
+                "values": [
+                  "CAP_REPLACED",
+                  "CASING_INSTALLED",
+                  "CASING_PARTIALLY_REPLACED",
+                  "CASING_REPLACED",
+                  "CHAMBER_RECONDITIONED",
+                  "DECONSTRUCTED",
+                  "INSTALLED",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "PARTIALLY_DECONSTRUCTED",
+                  "PARTIALLY_REFILLED",
+                  "RECONDITIONED",
+                  "REFILLED",
+                  "UNSET"
+                ]
               },
               "CapDepth": {
                 "type": "real",
@@ -18858,7 +18961,7 @@
                 "Description": "Grain size diameter."
               },
               "HydraulicConductivity": {
-                "type": "unknown",
+                "type": "real",
                 "Description": "Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s"
               },
               "LoadbearingCapacity": {
@@ -18878,7 +18981,7 @@
                 "Description": "Ratio of transverse contraction strain to longitudinal extension strain in the direction of stretching force."
               },
               "PwaveVelocity": {
-                "type": "unknown",
+                "type": "real",
                 "Description": "P-wave velocity of a rock or soil."
               },
               "Resistivity": {
@@ -18890,7 +18993,7 @@
                 "Description": "Estimate of the settlement/compaction behaviour of the stratum."
               },
               "SwaveVelocity": {
-                "type": "unknown",
+                "type": "real",
                 "Description": "S-wave velocity of a rock or soil."
               }
             }

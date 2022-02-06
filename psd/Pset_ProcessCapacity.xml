@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_b453146"/>
+  <IfcVersion version="IFC4X3_DEV_5e0411d"/>
   <Name>Pset_ProcessCapacity</Name>
   <Definition>Property set for the application of process data to spatial elements and transport assets</Definition>
   <Applicability/>
@@ -20,9 +20,19 @@
       <Name>ProcessItem</Name>
       <Definition>The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.</Definition>
       <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="UNKNOWN"/>
-        </TypePropertySingleValue>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ProcessItem">
+            <EnumItem>TEU</EnumItem>
+            <EnumItem>CGT</EnumItem>
+            <EnumItem>BARREL</EnumItem>
+            <EnumItem>TONNE</EnumItem>
+            <EnumItem>PASSENGER</EnumItem>
+            <EnumItem>VEHICLE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+          </EnumList>
+        </TypePropertyEnumeratedValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
@@ -39,7 +49,7 @@
       <Definition>Minimum time to accept or dispatch the entire item capacity.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="UNKNOWN"/>
+          <DataType type="IfcDuration"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>

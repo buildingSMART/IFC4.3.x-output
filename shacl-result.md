@@ -874,7 +874,6 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Profile Set.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Properties.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Material Single.md' a property cannot be found
-* For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaterialColour.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/MaxAdjustmentX.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mechanical Fastener Type Attributes.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/m/Mode.md' a property cannot be found
@@ -1050,13 +1049,3 @@
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/z/zzOutOfPlaneNegative.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/z/zzPerformanceUnit.md' a property cannot be found
 * For document 'me/travis/build/buildingSMART/IFC4.3.x-development/docs/properties/z/zzTargetPerformance.md' a property cannot be found
-## PropertyType
-
-* The Property 'Pset_BoreholeCommon.BoreholeState' has an incorrect type
-* The Property 'Pset_CargoCommon.ProcessItem' has an incorrect type
-* The Property 'Pset_ElementKinematics.MaximumConstantSpeed' has an incorrect type
-* The Property 'Pset_ProcessCapacity.ProcessItem' has an incorrect type
-* The Property 'Pset_ProcessCapacity.ProcessPerformance' has an incorrect type
-* The Property 'Pset_SolidStratumCapacity.HydraulicConductivity' has an incorrect type
-* The Property 'Pset_SolidStratumCapacity.PwaveVelocity' has an incorrect type
-* The Property 'Pset_SolidStratumCapacity.SwaveVelocity' has an incorrect type
