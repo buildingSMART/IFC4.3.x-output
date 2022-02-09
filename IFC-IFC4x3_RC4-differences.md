@@ -1,6 +1,6 @@
 # Express schema differences
 
-74 items
+75 items
 
 
 ### Missing data
@@ -39,12 +39,13 @@
 
 ### Type definitions
 
-2 items
+3 items
 
-| Name                           | IFC4x3_RC4.exp                                                                                                                                                            | IFC.exp                                         |
-|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| IfcTransportElementTypeSelect  | IfcTransportElementFixedTypeEnum, IfcTransportElementNonFixedTypeEnum                                                                                                     | IfcTransportElementTypeEnum, IfcVehicleTypeEnum |
-| IfcPropertySetTemplateTypeEnum | NOTDEFINED, PSET_OCCURRENCEDRIVEN, PSET_PERFORMANCEDRIVEN, PSET_TYPEDRIVENONLY, PSET_TYPEDRIVENOVERRIDE, QTO_OCCURRENCEDRIVEN, QTO_TYPEDRIVENONLY, QTO_TYPEDRIVENOVERRIDE | NOTDEFINED                                      |
+| Name                           | IFC4x3_RC4.exp                                                                                                                                                            | IFC.exp                                                                                                                                                                                                                                                                         |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcTransportElementTypeSelect  | IfcTransportElementFixedTypeEnum, IfcTransportElementNonFixedTypeEnum                                                                                                     | IfcTransportElementTypeEnum, IfcVehicleTypeEnum                                                                                                                                                                                                                                 |
+| IfcPropertySetTemplateTypeEnum | NOTDEFINED, PSET_OCCURRENCEDRIVEN, PSET_PERFORMANCEDRIVEN, PSET_TYPEDRIVENONLY, PSET_TYPEDRIVENOVERRIDE, QTO_OCCURRENCEDRIVEN, QTO_TYPEDRIVENONLY, QTO_TYPEDRIVENOVERRIDE | NOTDEFINED                                                                                                                                                                                                                                                                      |
+| IfcTaskTypeEnum                | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED             | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
 ### Entity definitions
 
