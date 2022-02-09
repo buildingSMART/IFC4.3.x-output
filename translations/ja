@@ -9,1171 +9,163 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
-"X-Crowdin-File-ID: 86\n"
+"X-Crowdin-File: /master/IfcPresentationDefinitionResource.pot\n"
+"X-Crowdin-File-ID: 62\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-09 20:09\n"
 
-#:IFC.xml:43287
-msgid "IfcBuildingElementPart"
-msgstr "IfcBuildingElementPart"
+#:IFC.xml:26857
+msgid "IfcAnnotationFillArea"
+msgstr "IfcAnnotationFillArea"
 
-msgid "IfcBuildingElementPart_DEFINITION"
-msgstr "[[IfcBuildingElementPart]] represents major components as subordinate parts of a building element. Typical usage examples include precast concrete sandwich walls, where the layers may have different geometry representations. In this case the layered material representation does not sufficiently describe the element. Each layer is represented by an own instance of the [[IfcBuildingElementPart]] with its own geometry description. The kind of building element part is further specified by a corresponding instance of [[IfcBuildingElementPartType]] , referred to by [[IfcRelDefinesByType]] . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Moved from IfcStructuralElementsDomain schema to IfcSharedComponentElements schema, compatible change of supertype, attribute PredefinedType added."
+msgid "IfcAnnotationFillArea_DEFINITION"
+msgstr "The [[IfcAnnotationFillArea]] defines an area by a definite OuterBoundary , that might include InnerBoundaries . The areas defined by the InnerBoundaries are excluded from applying the fill area style. The InnerBoundaries shall not intersect with the OuterBoundary nor being outside of the OuterBoundary . The fill area style that is applied to the [[IfcAnnotationFillArea]] is declared using the [[IfcFillAreaStyle]] , associated to the area by an [[IfcStyledItem]] . Applicable fill area styles are a solid color, a hatching, tiles, or a combination of those styles. .extDef NOTE Definition according to ISO 10303 46 An annotation fill area is a set of curves that may be filled with hatching, colour or tiling. The annotation fill are is described by boundaries which consist of non intersecting, non self intersecting closed curves. These curves form the boundary of planar areas to be filled according to the style for the annotation fill area. Figure 1 illustrates annotation fill area. Figure 1 Annotation fill area NOTE Entity adapted from annotation fill area defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The two attributes OuterBoundary and InnerBoundaries are added and replace the previous single boundary. .spec head Informal Propositions 1. Any curve that describes an inner boundary shall not intersect with, nor include, another curve defining an inner boundary. 2. The curve defining the outer boundary shall not intersect with any curve defining an inner boundary, nor shall it be surrounded by a curve defining an inner boundary."
 
-#:IFC.xml:43288
-msgid "IfcBuildingElementPart_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:12151
+msgid "IfcAnnotationFillArea_OuterBoundary"
+msgstr "OuterBoundary"
 
-msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
-msgstr "建築要素部品のサブタイプ Formal Propositions"
+msgid "IfcAnnotationFillArea_OuterBoundary_DEFINITION"
+msgstr "塗りつぶしの領域の外側の境界を定義する閉じた曲線。 外側の境界マイナスによって定義された領域は、塗りつぶし領域のスタイルで埋められます。 .change ifc2x3 IFC2x3 変更 2つの新しい属性 OuterBoundary と InnerBoundaries は、古い単一属性境界を置き換えます。"
 
-#:IFC.xml:43295
-msgid "IfcBuildingElementPartType"
-msgstr "IfcBuildingElementPartType"
+#:IFC.xml:12163
+msgid "IfcAnnotationFillArea_InnerBoundaries"
+msgstr "内側の境界線"
 
-msgid "IfcBuildingElementPartType_DEFINITION"
-msgstr "Building 要素の部品タイプは、一般的に共有されるプロパティセット定義とビルディング要素の部品の表示マップのリストを定義します。 歴史 IFC4に新しいエンティティがあります。"
+msgid "IfcAnnotationFillArea_InnerBoundaries_DEFINITION"
+msgstr "塗りつぶし領域の内側の境界を定義する一連の内側の曲線。 内側の境界によって定義された領域は、塗りつぶし領域のスタイルの適用から除外されます。 .note IFC2x3の変更 OuterBoundary と InnerBoundaries の2つの新しい属性は、古い単一属性の境界を置き換えます。"
 
-#:IFC.xml:43296
-msgid "IfcBuildingElementPartType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:26860
+msgid "IfcPlanarBox"
+msgstr "IfcPlanarBox"
 
-msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
-msgstr "建築要素部品のサブタイプ Formal Propositions"
+msgid "IfcPlanarBox_DEFINITION"
+msgstr "平面ボックスは任意の長方形のボックスとその位置を2次元の直方体座標系で指定します。 平面ボックスが3次元座標系内で使用される場合、XY平面内の矩形ボックスを定義します。 注 ISO10303 46 HISTORYに定義されている平面ボックスから適応したエンティティ IFC2x2に新しいエンティティがあります。"
 
-#:IFC.xml:43303
-msgid "IfcBuildingElementPartTypeEnum"
-msgstr "IfcBuildingElementPartTypeEnum"
+#:IFC.xml:26861
+msgid "IfcPlanarBox_Placement"
+msgstr "配置"
 
-msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
-msgstr "この列挙は、ビルディング要素部品の異なるタイプを定義します。 HISTORY IFC4の新しい列挙。 項目について この部品は、例えば、サンドイッチ壁の壁パネル間の断熱層やスタッド壁に埋め込むような断熱材を提供します。 PRECASTPANEL 部分は、通常はサンドイッチウォールパネルの内部または外部レイヤーとしてプリキャストパネルです。 APRON 損傷を防ぐために、木材、コンクリート、リプラップ、舗装またはその他の建設からなるスカウト保護の形態。 ARMOURUNIT 森林伐採や破壊水などの斜面の浸食防止に使用される大型採石場石またはコンクリート型ユニット。 これらの単位は、コースレイヤーにまとめられます。 ISO 21650 では、指定された幾何学的特性と密度に合うように選択された比較的大きな採石場の石またはコンクリートの形状の単位で定義されています。 SAFETYCAGE USERDEFINED User defined accessory."
+msgid "IfcPlanarBox_Placement_DEFINITION"
+msgstr "The [[IfcAxis2Placement]] positions a local coordinate system for the definition of the rectangle. The origin of this local coordinate system serves as the lower left corner of the rectangular box. NOTE In case of a 3D placement by IfcAxisPlacement3D the [[IfcPlanarBox]] is defined within the xy plane of the definition coordinate system."
 
-#:IFC.xml:43319
-msgid "IfcBuildingElementPartTypeEnum_APRON"
-msgstr "APRON"
+#:IFC.xml:26868
+msgid "IfcPlanarExtent"
+msgstr "IfcPlanarExtent"
 
-msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
-msgstr "伐採を防ぐために、木材、コンクリート、リプラップ、舗装またはその他の建設からなるスカウトの保護の形。"
+msgid "IfcPlanarExtent_DEFINITION"
+msgstr "平面の範囲は、2次元座標系の2つの軸に沿った範囲を定義します。 平面の範囲が3次元座標系内で使用される場合、x軸とy軸に沿った範囲を定義します。 注 ISO10303 46 HISTORYに定義された平面範囲から適応したエンティティ IFC2x2に新たなエンティティがあります。"
 
-#:IFC.xml:43320
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
-msgstr "ARMOURUNIT"
+#:IFC.xml:26869
+msgid "IfcPlanarExtent_SizeInX"
+msgstr "SizeInX"
 
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
-msgstr "斜面などの斜面の浸食防止に使用される大型採石場石またはコンクリート型ユニット。 これらの単位は、コースレイヤーにまとめられます。 ISO 21650 では、指定された幾何学的特性と密度に合うように選択された比較的大きな採石場の石またはコンクリートの形状の単位で定義されています。"
+msgid "IfcPlanarExtent_SizeInX_DEFINITION"
+msgstr "X 軸の方向の範囲。"
 
-#:IFC.xml:43321
-msgid "IfcBuildingElementPartTypeEnum_INSULATION"
-msgstr "お問い合わせ"
+#:IFC.xml:26874
+msgid "IfcPlanarExtent_SizeInY"
+msgstr "SizeInY"
 
-msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
-msgstr "この部品は、例えば、サンドイッチ壁の壁パネル間の断熱層やスタッド壁に埋め込むような断熱材を提供します。"
+msgid "IfcPlanarExtent_SizeInY_DEFINITION"
+msgstr "Y 軸の方向の範囲。"
 
-#:IFC.xml:43322
-msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED"
-msgstr "注記されました"
+#:IFC.xml:26893
+msgid "IfcPresentationItem"
+msgstr "IfcPresentationItem"
 
-msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
+msgid "IfcPresentationItem_DEFINITION"
+msgstr "[[IfcPresentationItem]] は、プレゼンテーションの定義に使用されるすべてのエンティティの抽象的なスーパータイプです。"
 
-#:IFC.xml:43323
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
-msgstr "PRECASTPANEL"
+#:IFC.xml:26894
+msgid "IfcTextLiteral"
+msgstr "IfcTextLiteral"
 
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
-msgstr "パーツはプリキャストパネルで、通常はサンドイッチウォールパネルの内部または外部レイヤーとして使用されます。"
+msgid "IfcTextLiteral_DEFINITION"
+msgstr "The text literal is a geometric representation item which describes a text string using a string literal and additional position and path information. The text size and appearance is determined by the [[IfcTextStyle]] that is associated to the [[IfcTextLiteral]] through an [[IfcStyledItem]] . The text string is placed within the planar extent the box defined within the subtype [[IfcTextLiteralWithExtent]] . NOTE Entity adapted from text literal defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextLiteral]] has been changed by removing Font and Alignment . .deprecated DEPRECATION The use of [[IfcTextLiteral]] is deprecated and it will be made abstract."
 
-#:IFC.xml:43324
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
-msgstr "SAFETYCAGE"
+#:IFC.xml:26895
+msgid "IfcTextLiteral_Literal"
+msgstr "リテラル"
 
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
-msgstr "SAFETYCAGE"
+msgid "IfcTextLiteral_Literal_DEFINITION"
+msgstr "提示されるテキストリテラル。"
 
-#:IFC.xml:43325
-msgid "IfcBuildingElementPartTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
+#:IFC.xml:26900
+msgid "IfcTextLiteral_Path"
+msgstr "パス"
 
-msgid "IfcBuildingElementPartTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義のアクセサリ。"
+msgid "IfcTextLiteral_Path_DEFINITION"
+msgstr "テキストリテラルの書き込み方向。"
 
-#:IFC.xml:43326
-msgid "IfcDiscreteAccessory"
-msgstr "IfcDiscreteAccessory"
+#:IFC.xml:26905
+msgid "IfcTextLiteral_Placement"
+msgstr "配置"
 
-msgid "IfcDiscreteAccessory_DEFINITION"
-msgstr "離散アクセサリは、要素に含まれる、または追加されるさまざまな種類のアクセサリの表示です。 履歴 IFC2x2に新しいエンティティが追加されました。 .change ifc2x4 IFC4 変更属性 PredefinedType を追加。"
+msgid "IfcTextLiteral_Placement_DEFINITION"
+msgstr "提示された文字列の配置と方向を決定する [[IfcAxis2Placement]] 。"
 
-#:IFC.xml:43327
-msgid "IfcDiscreteAccessory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:26912
+msgid "IfcTextLiteralWithExtent"
+msgstr "IfcTextLiteralWithExtent"
 
-msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
-msgstr "離散アクセサリのサブタイプ。USERDEFINED の場合、型は継承された属性 ObjectType を使用してさらに修飾されます。 [[IfcDiscreteAccessoryType]] にも適用可能なユーザー定義型名称の非排他的なリストについては[[IfcDiscreteAccessory]]を参照してください。"
+msgid "IfcTextLiteralWithExtent_DEFINITION"
+msgstr "The text literal with extent is a text literal with the additional explicit information of the planar extent. An alignment attribute defines how the text box is aligned to the placement and how it may expand if additional lines of text need to be added. Figure 1 shows the use of planar extent and box alignment to position the text string [[IfcTextLiteralWithExtent]] Fig1.png 8,1 KB .. .. .. .. figures ifctextliteralwithextent fig1.png Figure 1 Text literal with extent and alignment The planar extent defines the box model within which the text is placed. Padding maybe defined in the text style that offsets the text from the box to its inside. NOTE Entity adapted from text literal with extent defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextLiteralWithExtent]] has been changed by adding BoxAlignment ."
 
-#:IFC.xml:43334
-msgid "IfcDiscreteAccessoryType"
-msgstr "IfcDiscreteAccessoryType"
+#:IFC.xml:26881
+msgid "IfcTextLiteralWithExtent_Extent"
+msgstr "Extent"
 
-msgid "IfcDiscreteAccessoryType_DEFINITION"
-msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessorys. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted."
+msgid "IfcTextLiteralWithExtent_Extent_DEFINITION"
+msgstr "テキストリテラルの x と y 方向の範囲。"
 
-#:IFC.xml:43335
-msgid "IfcDiscreteAccessoryType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:26913
+msgid "IfcTextLiteralWithExtent_BoxAlignment"
+msgstr "箱の配置"
 
-msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
-msgstr "ディスクリートアクセサリのサブタイプ Formal Proposition"
+msgid "IfcTextLiteralWithExtent_BoxAlignment_DEFINITION"
+msgstr "テキストリテラルの位置に対する相対位置の配置"
 
-#:IFC.xml:43342
-msgid "IfcDiscreteAccessoryTypeEnum"
-msgstr "IfcDiscreteAccessoryTypeEnum"
+#:IFC.xml:26920
+msgid "IfcTextPath"
+msgstr "IfcTextPath"
 
-msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
-msgstr "この列挙は、離散アクセサリのさまざまなタイプを定義します。 アイテム ANCHORPLATE スチール板から成るアクセサリー。 他の要素を溶接またはボルトで固定するために、コンクリート要素の表面に埋め込まれている、せん断スタッドコネクタまたは鉄筋に溶接されています。 BRACKE L字型または同様の形状のアクセサリーは、要素間のコーナーに取り付けられ、それらを一緒に保持したり、二次的な要素を運ぶために。 靴拡張機能付与ロックロックロックは、物理的なオブジェクトeのいずれかによって放出される機械的または電子的な固定デバイスです。 、キー、指紋、RFID カード、セキュリティ トークンなど。 、秘密の情報を提供することによって、例えば、番号の変異、パスワード 、またはそれらの組み合わせによって。 TENSIONINGEQUIPMENT 導体やケーブルの張力を維持するために使用される装置。 RAILPAD SLIDINGCHAIR ストックレールとスイッチレールの足がスライドする平らな表面をサポートし、保持するコンポーネント。 RAIL PANEL RAILBRACEエラスティックSOUNDABSORPTION サウンド吸収のためのトラック内のコンポーネントであり、振動を吸収する可能性があります。 スラブトラックと組み合わせて使用されることが多い。 POINTMACHINEMOUNTDEVICE POINTPOINT機器ロック機器RAIL MECHANICAL QUIPMENT レール機器はレールサイドに設置されているメカニカル機器です。 ブロッキング装置、速度レギュレーター、バイアス検査装置、トラックスケール、制御可能なリターダーなど。 鳥の保護 鳥が電気的に重要なポイントで座っているのを防ぐ装置で、鳥は電気ショックや短絡による障害から保護されています。 USERDEFINED User defined accessory. NOTDEFINED Undefined accessory."
+msgid "IfcTextPath_DEFINITION"
+msgstr "テキストパスは、テキスト文字の方向を互いに指定します。 注意 [[IfcTextPath]] は、ISO 10303から採用されたエンティティです。 産業用オートメーションシステムと統合 製品データの表示と交換、パート46 統合された汎用リソース ビジュアルプレゼンテーション。 ご注意ください ISO 10303名テキストパス 正式規格の最終的な定義については、ISO 10303461994をご参照ください。 歴史 IFC2x2に新しいエンティティが追加されました。"
 
-#:IFC.xml:43386
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
-msgstr "ANCHORPLATE"
+#:IFC.xml:26921
+msgid "IfcTextPath_DOWN"
+msgstr "下へ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
-msgstr "鋼板の付属品。 他の要素を溶接またはボルトで固定するために、コンクリート要素の表面に埋め込まれている、せん断スタッドコネクタまたは鉄筋に溶接されています。"
+msgid "IfcTextPath_DOWN_DEFINITION"
+msgstr "下へ"
 
-#:IFC.xml:43387
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
-msgstr "鳥の保護"
+#:IFC.xml:26922
+msgid "IfcTextPath_LEFT"
+msgstr "左"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
-msgstr "鳥が電気的に臨界点に座っているのを防ぐ装置で、鳥は電気ショックや短絡による障害から保護されています。"
+msgid "IfcTextPath_LEFT_DEFINITION"
+msgstr "左"
 
-#:IFC.xml:43388
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
-msgstr "BRACKET"
+#:IFC.xml:26923
+msgid "IfcTextPath_RIGHT"
+msgstr "右"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
-msgstr "L字型または同様の形状の付属品は、要素間のコーナーに取り付けられており、それらを一緒に保持したり、二次的な要素を運ぶために使用されます。"
+msgid "IfcTextPath_RIGHT_DEFINITION"
+msgstr "右"
 
-#:IFC.xml:43389
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
-msgstr "CABLEARRANGER"
+#:IFC.xml:26924
+msgid "IfcTextPath_UP"
+msgstr "上へ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
-msgstr "CABLEARRANGER"
+msgid "IfcTextPath_UP_DEFINITION"
+msgstr "上へ"
 
-#:IFC.xml:43390
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
-msgstr "ELASTIC Cushion"
+#:IFC.xml:26926
+msgid "IfcBoxAlignment"
+msgstr "IfcBoxAlignment"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
-msgstr "ELASTIC Cushion"
-
-#:IFC.xml:43391
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
-msgstr "爆発的な接続デバイス"
-
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
-msgstr "爆発的な接続デバイス"
-
-#:IFC.xml:43392
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
-msgstr "INSULATOR"
-
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
-msgstr "INSULATOR"
-
-#:IFC.xml:43393
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
-msgstr "ロック"
-
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
-msgstr "ロックは、物理的なオブジェクトによって解放される機械的または電子的な固定装置です。例えば、 キー、指紋認証、RFIDカード、セキュリティトークンなど、秘密の情報を提供することにより、例えば、番号の変異、パスワード、またはそれらの組み合わせによって。"
-
-#:IFC.xml:43394
-msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "未定義の付属品。"
-
-#:IFC.xml:43395
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
-msgstr "パンネルの強さ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
-msgstr "パンネルの強さ"
-
-#:IFC.xml:43396
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
-msgstr "ポイント機械ロックデバイス"
-
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
-msgstr "ポイント機械ロックデバイス"
-
-#:IFC.xml:43397
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
-msgstr "点検装置"
-
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
-msgstr "点検装置"
-
-#:IFC.xml:43398
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
-msgstr "レイル<unk>"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
-msgstr "レイル<unk>"
-
-#:IFC.xml:43399
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
-msgstr "レイル機器の装備"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
-msgstr "レール機械装置は、ブロック装置、速度レギュレータ、バイアスロードされた検査器、トラックスケールまたは制御可能な遅延器など、鉄道側に設置されたメカニカル装置です。"
-
-#:IFC.xml:43400
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
-msgstr "RAILBRACE"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
-msgstr "RAILBRACE"
-
-#:IFC.xml:43401
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
-msgstr "レイパー"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
-msgstr "レイパー"
-
-#:IFC.xml:43402
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
-msgstr "シューズ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
-msgstr "シューズ"
-
-#:IFC.xml:43403
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
-msgstr "スライディング"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
-msgstr "ストックレールとスイッチレールの足元がスライドする平坦な表面をサポートし、保持するコンポーネント。"
-
-#:IFC.xml:43404
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
-msgstr "SOUNDABSORPION"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
-msgstr "音を吸収し、振動を吸収するためのトラック内のコンポーネント。スラブトラックと組み合わせて使用されることがよくあります。"
-
-#:IFC.xml:43405
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
-msgstr "TENSIONINGQUIPMENT"
-
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
-msgstr "導体やケーブルの張力を維持するために使用される装置。"
-
-#:IFC.xml:43406
-msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義のアクセサリ。"
-
-#:IFC.xml:43407
-msgid "IfcElementComponent"
-msgstr "IfcElementComponent"
-
-msgid "IfcElementComponent_DEFINITION"
-msgstr "An element component is a representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples of [[IfcElementComponent]] s include different kinds of fasteners and various accessories. One or several instances of subtypes of [[IfcElementComponent]] should always be accompanied by a defining instance of a respective subtype of [[IfcElementComponentType]] . The type object holds shape and material information. HISTORY New entity in IFC2x2 It is often desirable to model a number of same shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below. To express the multiplicity of element components also on a higher semantic level, a Qto ElementComponentPatternQuantities should be provided via [[IfcRelDefinesByProperties]] and contain the number of pieces which are placed by a single [[IfcElementComponent]] instance. .use head Symbolic Representation A symbolic representation is defined for a row of components or several rows of components within a single instance of [[IfcElementComponent]] . Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an [[IfcShapeRepresentation]] with the attribute values RepresentationIdentifier Row RepresentationType GeometricCurveSet and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components bolts, nails, staples, straight reinforcement bars, or similar , the local placement of the [[IfcElementComponent]] shall be located and oriented such that the local z axis is parallel with the axes of the components. A Qto ElementComponentPatternQuantities should denote the count of pieces in the row or array and their spacing. Concepts Mapped Geometry The mapped item, [[IfcMappedItem]], should be used if appropriate as it allows for reusing the geometry definition of a type at all occurrences of the same type. A single instance of a subtype of [[IfcElementComponent]] can stand for several actual element components at once. In this case, the [[IfcShapeRepresentation]] contains as many mapped items as there are element components combined within this occurrence object. .. .. .. .. figuresifcelementcomponent multiple.png EXAMPLE Figure 304 illustrates multiple components modeled as a single occurrence object here [[IfcFastener]] Figure 304 Element component mapped representation Representation identifier and type are the same as in single mapped representation. The number of mapped items in the representation corresponds with the count of element components in the [[IfcElementQuantity]]. Property Sets for Objects"
-
-#:IFC.xml:43410
-msgid "IfcElementComponentType"
-msgstr "IfcElementComponentType"
-
-msgid "IfcElementComponentType_DEFINITION"
-msgstr "The element type [[IfcElementComponentType]] defines commonly shared information for occurrences of element components. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a element component type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcElementComponentType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcElementComponentType]] are represented by instances of [[IfcElementComponent]] . HISTORY New entity in IFC2x2."
-
-#:IFC.xml:43413
-msgid "IfcFastener"
-msgstr "IfcFastener"
-
-msgid "IfcFastener_DEFINITION"
-msgstr "他の要素との接続や結合にファスナーとして使用される固定部品の表現。 除外されるのは、別のエンティティ[[IfcMechanicalFastener]]によってモデル化された機械式ファスナーです。 HISTORY IFC2x2 .change ifc2x4 IFC4 変更属性の PredefinedType を追加。"
-
-#:IFC.xml:43414
-msgid "IfcFastener_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcFastener_PredefinedType_DEFINITION"
-msgstr "ファスナーのサブタイプの正式な提案"
-
-#:IFC.xml:43421
-msgid "IfcFastenerType"
-msgstr "IfcFastenerType"
-
-msgid "IfcFastenerType_DEFINITION"
-msgstr "The element component type [[IfcFastenerType]] defines commonly shared information for occurrences of fasteners. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a fastener type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFastenerType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFastenerType]] are represented by instances of [[IfcFastener]] . HISTORY New entity in IFC2x2."
-
-#:IFC.xml:43422
-msgid "IfcFastenerType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcFastenerType_PredefinedType_DEFINITION"
-msgstr "ファスナーのサブタイプの正式な提案"
-
-#:IFC.xml:43429
-msgid "IfcFastenerTypeEnum"
-msgstr "IfcFastenerTypeEnum"
-
-msgid "IfcFastenerTypeEnum_DEFINITION"
-msgstr "この列挙は、機械式ファスナーを除いて、さまざまなタイプのファスナーを定義します。 沿革 IFC4で新たな列挙項目 GLUE 接着剤を使って要素を結合させる接着剤です。 MORTAR(MORTAR) 結合隙間を埋め、負荷を担う役割を果たすために使用される鉱物またはその他の材料の組成。 WELD An weld seam between metric material or other approximate. USERDEFINED NOTDEFINED"
-
-#:IFC.xml:43441
-msgid "IfcFastenerTypeEnum_GLUE"
-msgstr "Glue"
-
-msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
-msgstr "接着剤が要素を結合するために使用される固定接続。"
-
-#:IFC.xml:43442
-msgid "IfcFastenerTypeEnum_MORTAR"
-msgstr "MORTAR"
-
-msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
-msgstr "結合隙間を埋めるために使用される鉱物や他の材料の組成、おそらく負荷を運ぶ役割を果たす。"
-
-#:IFC.xml:43443
-msgid "IfcFastenerTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcFastenerTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
-
-#:IFC.xml:43444
-msgid "IfcFastenerTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcFastenerTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義済み"
-
-#:IFC.xml:43445
-msgid "IfcFastenerTypeEnum_WELD"
-msgstr "ようこそ！"
-
-msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
-msgstr "金属材料またはその他の適切な材料の部品間の溶接縫い目。"
-
-#:IFC.xml:43446
-msgid "IfcMechanicalFastener"
-msgstr "IfcMechanicalFastener"
-
-msgid "IfcMechanicalFastener_DEFINITION"
-msgstr "建物の構成要素または部品を機械的に接続する機械式ファスナー。 このクラスの単一のインスタンスは、実際の機械式ファスナーの1つまたは多数を表すことができます。 例えばボルトの配列や釘の列などです。 HISTORY IFC2x2 .change ifc2x4 IFC4 変更のスーパータイプが [[IfcFastener]] から [[IfcElementComponent]] に変更されました。 属性PredefinedTypeが追加されました。属性NominalDiameter とNominalLengthは非推奨です。"
-
-#:IFC.xml:43447
-msgid "IfcMechanicalFastener_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
-msgstr "ファスナータイプの断面サイズを記述する公称直径。 。 hangeのifc2x4 IFC4の変更 代わりに[[IfcMechanicalFastenerType]]のそれぞれの属性を非推奨にします。"
-
-#:IFC.xml:43452
-msgid "IfcMechanicalFastener_NominalLength"
-msgstr "公称長さ"
-
-msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
-msgstr "ファスナータイプの縦方向寸法を記述する公称長さ。 。 hangeのifc2x4 IFC4の変更 代わりに[[IfcMechanicalFastenerType]]のそれぞれの属性を非推奨にします。"
-
-#:IFC.xml:43457
-msgid "IfcMechanicalFastener_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
-msgstr "機械式ファスナーのサブタイプ 形式的提案"
-
-#:IFC.xml:43464
-msgid "IfcMechanicalFastenerType"
-msgstr "IfcMechanicalFastenerType"
-
-msgid "IfcMechanicalFastenerType_DEFINITION"
-msgstr "The element component type [[IfcMechanicalFastenerType]] defines commonly shared information for occurrences of mechanical fasteners. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a mechanical fastener type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcMechanicalFastenerType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcMechanicalFastenerType]] are represented by instances of [[IfcMechanicalFastener]] . HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcFastenerType]] to [[IfcElementComponentType]] . Attributes PredefinedType , NominalDiameter , NominalLength added. .use head Classification Use Definition Mechanical fasteners, especially bolts, are often standardized. To refer to a formal fastener designation according to a standard a product norm , [[IfcRelAssociatesClassification]] together with [[IfcClassificationReference]] should be used. [[IfcClassificationReference]].Identification contains a machine readable form of the formal fastener designation from the norm. Example M16X80 10.9 HV for a high strength structural bolting assembly for preloading with hexagon bolt and nut. On the other hand, [[IfcMechanicalFastenerType]].Name contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the fastener norm. Example EN 14399 4 as the respective European standard for high strength hexagon bolts. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource , including information like publisher and date of issue of the norm. Furthermore, [[IfcRelAssociatesLibrary]] together with [[IfcLibraryReference]] may be used to refer to a library which contains fastener definitions."
-
-#:IFC.xml:43465
-msgid "IfcMechanicalFastenerType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
-msgstr "ファスナータイプの断面積サイズを記述する公称直径。"
-
-#:IFC.xml:43470
-msgid "IfcMechanicalFastenerType_NominalLength"
-msgstr "公称長さ"
-
-msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
-msgstr "ファスナータイプの長手方向寸法を記述する公称長さ"
-
-#:IFC.xml:43475
-msgid "IfcMechanicalFastenerType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
-msgstr "機械式ファスナーサブタイプ"
-
-#:IFC.xml:43482
-msgid "IfcMechanicalFastenerTypeEnum"
-msgstr "IfcMechanicalFastenerTypeEnum"
-
-msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
-msgstr "この列挙は、さまざまなタイプのメカニカルファスナーを定義します。 アイテム ANCHORBOLT 収納、石、レンガ工事に固定された特別なボルト。 BOLT DOWEL 接続された部分の穴に駆動される円筒型ロッド。 ネイルナイアプレートRIVET(ナイール・ナイルプラート・リベット) 片方の端にヘッドを持つ固定部品と、片方の端が一緒に固定された部品の穴を通過した後に平らにハンマーで打たれます。 SCREW テーパー付きのシャンクとスロット付きのヘッドを備えたファスナー。 SHEARCONNECTOR接続された部品または接続された部品に押し込まれた歯型の円形または正方形のコネクタのリングキーウェイによって受け入れられるリングコネクタ。 スタップルスタッドシェアーコネクタースタッドせん断コネクタは、片側にヘッドを備えた円筒状の固定部品です。 反対側では、彼らは複合鋼とコンクリート構造で使用するために鋼部材に溶接されています。 クープラーA 部品 このような補強棒などの2本のロッドまたは棒を接続します。 RAILJOINT 例えば、機械的なアセンブリ。 2つのレールを結合するためのフィッシュプレートは、オプションの機能絶縁または拡張容量で終了します。 RAILFASTENING レールを支持構造に固定し、必要な垂直方向に許可しながら必要な位置に保持する部品のアセンブリ。 横方向と縦方向の動きです EN 13481からの注記の定義 1. CHAIN何かを固定または固定するために使用されるリンクされた金属リングのシリーズ, または負荷を引くために. ROPEは、大麻、シサル、ナイロン、または同様の材料の鎖をねじることによって作られた厚い強いコードの長さ。 主に船舶係留に使用される USERDEFINED User defined mechanical fusener. NOTDEFINED"
-
-#:IFC.xml:43518
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
-msgstr "アンカーボタン"
-
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
-msgstr "コンレット、石、レンガ工事に固定されている特別なボルト。"
-
-#:IFC.xml:43519
-msgid "IfcMechanicalFastenerTypeEnum_BOLT"
-msgstr "BOLT"
-
-msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
-msgstr "BOLT"
-
-#:IFC.xml:43520
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
-msgstr "チェーン"
-
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
-msgstr "一連のリンクされた金属のリングは何かの固定や固定や荷重の為に使われます"
-
-#:IFC.xml:43521
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
-msgstr "COUPLER"
-
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
-msgstr "補強棒などの2本の棒または棒を接続する部品。"
-
-#:IFC.xml:43522
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
-msgstr "DOWEL"
-
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
-msgstr "接続された部分の穴に駆動される円筒状の棒。"
-
-#:IFC.xml:43523
-msgid "IfcMechanicalFastenerTypeEnum_NAIL"
-msgstr "ネイール型"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
-msgstr "ネイール型"
-
-#:IFC.xml:43524
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
-msgstr "<unk>"
-
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
-msgstr "<unk>"
-
-#:IFC.xml:43525
-msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
-
-#:IFC.xml:43526
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
-msgstr "RAILFASTENING"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
-msgstr "支持構造にレールを固定し、必要な垂直方向に任意の位置を保持する部品のアセンブリ。 横方向と縦方向の動きです EN 13481 のノート定義 1."
-
-#:IFC.xml:43527
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
-msgstr "RAILJOINT"
-
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
-msgstr "例えば、2つのレールを結合する魚皿を持つ機械的なアセンブリは、オプションの機能絶縁または拡張容量で終了します。"
-
-#:IFC.xml:43528
-msgid "IfcMechanicalFastenerTypeEnum_RIVET"
-msgstr "RIVET"
-
-msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
-msgstr "片方の端に頭を持つ固定部と、片方の端が一緒に固定されている部分に穴を通過した後、平らに打たれる。"
-
-#:IFC.xml:43529
-msgid "IfcMechanicalFastenerTypeEnum_ROPE"
-msgstr "ROPE"
-
-msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
-msgstr "主に船舶の係留に使われる麻、シサル、ナイロン、または同様の材料の鎖をひねり合わせて作られた太い強い紐の長さ。"
-
-#:IFC.xml:43530
-msgid "IfcMechanicalFastenerTypeEnum_SCREW"
-msgstr "SCREW"
-
-msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
-msgstr "テーパー付きの糸くずと切り取られた頭を備えた留め具。"
-
-#:IFC.xml:43531
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
-msgstr "ShearConnector"
-
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
-msgstr "接続された部品の中のリングキーウェイまたは接続された部品に押し込まれた歯型の円形または正方形のコネクタによって受け入れられるリングコネクタ。"
-
-#:IFC.xml:43532
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
-msgstr "スタイル"
-
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
-msgstr "スタイル"
-
-#:IFC.xml:43533
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
-msgstr "スタッドシェアーコネクター："
-
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
-msgstr "スタッドせん断コネクタは、片側にヘッドを備えた円筒状の固定部品です。 反対側では、彼らは複合鋼とコンクリート構造で使用するために鋼部材に溶接されています。"
-
-#:IFC.xml:43534
-msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義の機械式ファスナー。"
-
-#:IFC.xml:43535
-msgid "IfcVibrationDamperTypeEnum"
-msgstr "IfcVibrationDamperTypeEnum"
-
-msgid "IfcVibrationDamperTypeEnum_DEFINITION"
-msgstr "A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The shear yield type is a damper, which causes the steel material to yield for deformation in the direction perpendicular to the member. AXIAL YIELD A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction. FRICTION VISCOUS The viscous type is a damper that absorbs energy by utilizing the resistance of a viscous body. RUBBER The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure. USERDEFINED User defined vibration damper type. NOTDEFINED Items BENDING SHEAR YIELD AXIAL YIELD FRICTION VISCOUS RUBBER USERDEFINED NOTDEFINED Items BENDING SHEAR YIELD A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The shear yield type is a damper, which causes the steel material to yield for deformation in the direction perpendicular to the member. AXIAL YIELD A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction. FRICTION VISCOUS The viscous type is a damper that absorbs energy by utilizing the resistance of a viscous body. RUBBER The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure. USERDEFINED User defined vibration damper type. NOTDEFINED Items BENDING SHEAR YIELD A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The shear yield type is a damper, which causes the steel material to yield for deformation in the direction perpendicular to the member. AXIAL YIELD A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction. FRICTION VISCOUS The viscous type is a damper that absorbs energy by utilizing the resistance of a viscous body. RUBBER The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure. USERDEFINED User defined vibration damper type. NOTDEFINED"
-
-#:IFC.xml:43554
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
-msgstr "軸 YIELD"
-
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
-msgstr "鋼材のプラスチック変形を利用して、生成される抵抗力をプラスチックひずみ量で決める変位依存型ダンパー。 軸降伏タイプは、鋼材を軸方向の変形に対して吸収することによってエネルギーを得るダンパーです。 拡大縮小の方向です"
-
-#:IFC.xml:43555
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
-msgstr "曲げているYIELD"
-
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
-msgstr "曲げているYIELD"
-
-#:IFC.xml:43556
-msgid "IfcVibrationDamperTypeEnum_FRICTION"
-msgstr "フリクション"
-
-msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
-msgstr "フリクション"
-
-#:IFC.xml:43557
-msgid "IfcVibrationDamperTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcVibrationDamperTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
-
-#:IFC.xml:43558
-msgid "IfcVibrationDamperTypeEnum_RUBBER"
-msgstr "RUBER"
-
-msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
-msgstr "ゴム型は、積層ゴムの変形を利用してエネルギーを吸収するダンパーです。 免震軸受とゴム式ダンパーの違いは、上部構造物の重量を支えるかどうかである。 ゴムダンパーは、上部構造の重量をサブ構造に送信しません。"
-
-#:IFC.xml:43559
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
-msgstr "シェアールYIELD"
-
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
-msgstr "鋼材のプラスチック変形を利用して、生成される抵抗力をプラスチックひずみ量で決める変位依存型ダンパー。 せん断収率タイプは、鋼材がメンバーに垂直方向に変形するために生じるダンパーです。"
-
-#:IFC.xml:43560
-msgid "IfcVibrationDamperTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcVibrationDamperTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義の振動ダンパータイプ。"
-
-#:IFC.xml:43561
-msgid "IfcVibrationDamperTypeEnum_VISCOUS"
-msgstr "VISCOUS"
-
-msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
-msgstr "粘性タイプは粘性体の抵抗を利用してエネルギーを吸収するダンパーです。"
-
-#:IFC.xml:43578
-msgid "Pset_DiscreteAccessoryColumnShoe"
-msgstr "Pset DiscreteAccessoryColumnShoe"
-
-msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
-msgstr "列シューズに共通するシェイププロパティ。"
-
-#:IFC.xml:43579
-msgid "ColumnShoeBasePlateDepth"
-msgstr "ColumnShoeBasePlateDepth"
-
-msgid "ColumnShoeBasePlateDepth_DEFINITION"
-msgstr "列の靴のベースプレートの深さ。"
-
-#:IFC.xml:43584
-msgid "ColumnShoeBasePlateThickness"
-msgstr "ColumnShoeBasePlateThickness"
-
-msgid "ColumnShoeBasePlateThickness_DEFINITION"
-msgstr "列の靴のベースプレートの厚さ。"
-
-#:IFC.xml:43589
-msgid "ColumnShoeBasePlateWidth"
-msgstr "ColumnSheeBasePlateWidth"
-
-msgid "ColumnShoeBasePlateWidth_DEFINITION"
-msgstr "列の靴のベースプレートの幅。"
-
-#:IFC.xml:43594
-msgid "ColumnShoeCasingDepth"
-msgstr "ColumnShoeCasingDepth"
-
-msgid "ColumnShoeCasingDepth_DEFINITION"
-msgstr "列の靴の深さ。"
-
-#:IFC.xml:43599
-msgid "ColumnShoeCasingHeight"
-msgstr "ColumnShoeCasingHeight"
-
-msgid "ColumnShoeCasingHeight_DEFINITION"
-msgstr "列の靴の高さ。"
-
-#:IFC.xml:43604
-msgid "ColumnShoeCasingWidth"
-msgstr "ColumnShoeCasingWidth"
-
-msgid "ColumnShoeCasingWidth_DEFINITION"
-msgstr "列の靴ケースの幅。"
-
-#:IFC.xml:43610
-msgid "Pset_DiscreteAccessoryCornerFixingPlate"
-msgstr "Pset DiscreteAccessoryCornerFixingPlate"
-
-msgid "Pset_DiscreteAccessoryCornerFixingPlate_DEFINITION"
-msgstr "コーナー固定プレート固有のプロパティ。"
-
-#:IFC.xml:43611
-msgid "CornerFixingPlateFlangeWidthInPlaneX"
-msgstr "CornerFixingPlateFlangeWidthInPlaneX"
-
-msgid "CornerFixingPlateFlangeWidthInPlaneX_DEFINITION"
-msgstr "X面のL字型コーナープレートのフランジ幅。"
-
-#:IFC.xml:43616
-msgid "CornerFixingPlateFlangeWidthInPlaneZ"
-msgstr "CornerFixingPlateFlangeWidthInPlaneZ"
-
-msgid "CornerFixingPlateFlangeWidthInPlaneZ_DEFINITION"
-msgstr "平面ZのL字型コーナープレートのフランジ幅。"
-
-#:IFC.xml:43621
-msgid "CornerFixingPlateLength"
-msgstr "コーナー固定高原長さ"
-
-msgid "CornerFixingPlateLength_DEFINITION"
-msgstr "L字型のコーナープレートの長さ。"
-
-#:IFC.xml:43626
-msgid "CornerFixingPlateThickness"
-msgstr "CornerFixingPlateThickness"
-
-msgid "CornerFixingPlateThickness_DEFINITION"
-msgstr "L字型コーナープレートの厚さ。"
-
-#:IFC.xml:43632
-msgid "Pset_DiscreteAccessoryDiagonalTrussConnector"
-msgstr "DiscreteAccessoryDiagonalTrussConnector"
-
-msgid "Pset_DiscreteAccessoryDiagonalTrussConnector_DEFINITION"
-msgstr "トラス内の接続アクセサリに固有の形状のプロパティを斜めのクロスバーで形状します。"
-
-#:IFC.xml:43633
-msgid "DiagonalTrussBaseBarDiameter"
-msgstr "DiagonalTrussBaseBarDiameter"
-
-msgid "DiagonalTrussBaseBarDiameter_DEFINITION"
-msgstr "ベースバーの公称直径。"
-
-#:IFC.xml:43638
-msgid "DiagonalTrussCrossBarDiameter"
-msgstr "DiagonalTrussCrossBarDiameter"
-
-msgid "DiagonalTrussCrossBarDiameter_DEFINITION"
-msgstr "対角線バーの公称直径。"
-
-#:IFC.xml:43643
-msgid "DiagonalTrussCrossBarSpacing"
-msgstr "DiagonalTrussCrossBarSpacing"
-
-msgid "DiagonalTrussCrossBarSpacing_DEFINITION"
-msgstr "斜めの断面の間隔。"
-
-#:IFC.xml:43648
-msgid "DiagonalTrussHeight"
-msgstr "DiagonalTrussHeight"
-
-msgid "DiagonalTrussHeight_DEFINITION"
-msgstr "トラスコネクタの全体的な高さ。"
-
-#:IFC.xml:43653
-msgid "DiagonalTrussLength"
-msgstr "DiagonalTrussLength"
-
-msgid "DiagonalTrussLength_DEFINITION"
-msgstr "トラスコネクタの全体的な長さ。"
-
-#:IFC.xml:43658
-msgid "DiagonalTrussSecondaryBarDiameter"
-msgstr "DiagonalTrussSecondaryBarDiameter"
-
-msgid "DiagonalTrussSecondaryBarDiameter_DEFINITION"
-msgstr "2 番目の棒の公称直径。"
-
-#:IFC.xml:43664
-msgid "Pset_DiscreteAccessoryEdgeFixingPlate"
-msgstr "Pset DiscreteAccessoryEdgeFixingPlate"
-
-msgid "Pset_DiscreteAccessoryEdgeFixingPlate_DEFINITION"
-msgstr "エッジ固定プレート固有のプロパティ。"
-
-#:IFC.xml:43665
-msgid "EdgeFixingPlateFlangeWidthInPlaneX"
-msgstr "EdgeFixingPlateFlangeWidthInPlaneX"
-
-msgid "EdgeFixingPlateFlangeWidthInPlaneX_DEFINITION"
-msgstr "X面のL字型エッジプレートのフランジ幅。"
-
-#:IFC.xml:43670
-msgid "EdgeFixingPlateFlangeWidthInPlaneZ"
-msgstr "EdgeFixingPlateFlangeWidthInPlaneZ"
-
-msgid "EdgeFixingPlateFlangeWidthInPlaneZ_DEFINITION"
-msgstr "Z面のL字型エッジプレートのフランジ幅。"
-
-#:IFC.xml:43675
-msgid "EdgeFixingPlateLength"
-msgstr "EdgeFixingPlate長さ"
-
-msgid "EdgeFixingPlateLength_DEFINITION"
-msgstr "L字型エッジプレートの長さ。"
-
-#:IFC.xml:43680
-msgid "EdgeFixingPlateThickness"
-msgstr "EdgeFixingPlateThickness"
-
-msgid "EdgeFixingPlateThickness_DEFINITION"
-msgstr "L字型のエッジプレートの厚さ。"
-
-#:IFC.xml:43686
-msgid "Pset_DiscreteAccessoryFixingSocket"
-msgstr "Pset DiscreteAccessoryFixingSocket"
-
-msgid "Pset_DiscreteAccessoryFixingSocket_DEFINITION"
-msgstr "ソケットの修正に共通するプロパティ。"
-
-#:IFC.xml:43687
-msgid "FixingSocketHeight"
-msgstr "固定SocketHeight"
-
-msgid "FixingSocketHeight_DEFINITION"
-msgstr "固定ソケットの全体的な高さ。"
-
-#:IFC.xml:43692
-msgid "FixingSocketThreadDiameter"
-msgstr "FixingSocketThreadDiameter"
-
-msgid "FixingSocketThreadDiameter_DEFINITION"
-msgstr "スレッドの公称直径。"
-
-#:IFC.xml:43697
-msgid "FixingSocketThreadLength"
-msgstr "固定SocketThreadLength"
-
-msgid "FixingSocketThreadLength_DEFINITION"
-msgstr "固定ソケットのねじ部分の長さ。"
-
-#:IFC.xml:43702
-msgid "FixingSocketTypeReference"
-msgstr "固定SocketTypeReference"
-
-msgid "FixingSocketTypeReference_DEFINITION"
-msgstr "ローカル規格に従った固定ソケットのタイプ参照。"
-
-#:IFC.xml:43708
-msgid "Pset_DiscreteAccessoryLadderTrussConnector"
-msgstr "DiscreteAccessoryLadderTrussConnector"
-
-msgid "Pset_DiscreteAccessoryLadderTrussConnector_DEFINITION"
-msgstr "トラスの接続アクセサリに特有の形状のプロパティは、ラダー形状のストレートクロスバーを備えています。"
-
-#:IFC.xml:43709
-msgid "LadderTrussBaseBarDiameter"
-msgstr "LadderTrussBaseBarDiameter"
-
-msgid "LadderTrussBaseBarDiameter_DEFINITION"
-msgstr "ベースバーの公称直径。"
-
-#:IFC.xml:43714
-msgid "LadderTrussCrossBarDiameter"
-msgstr "LadderTrussCrossBarDiameter"
-
-msgid "LadderTrussCrossBarDiameter_DEFINITION"
-msgstr "直線の十字線の公称直径。"
-
-#:IFC.xml:43719
-msgid "LadderTrussCrossBarSpacing"
-msgstr "LadderTrussCrossBarSpacing"
-
-msgid "LadderTrussCrossBarSpacing_DEFINITION"
-msgstr "直線の十字線の間隔。"
-
-#:IFC.xml:43724
-msgid "LadderTrussHeight"
-msgstr "はしごTrussHeight"
-
-msgid "LadderTrussHeight_DEFINITION"
-msgstr "トラスコネクタの全体的な高さ。"
-
-#:IFC.xml:43729
-msgid "LadderTrussLength"
-msgstr "LadderTrussLength"
-
-msgid "LadderTrussLength_DEFINITION"
-msgstr "トラスコネクタの全体的な長さ。"
-
-#:IFC.xml:43734
-msgid "LadderTrussSecondaryBarDiameter"
-msgstr "LadderTrussSecondaryBarDiameter"
-
-msgid "LadderTrussSecondaryBarDiameter_DEFINITION"
-msgstr "2 番目の棒の公称直径。"
-
-#:IFC.xml:43740
-msgid "Pset_DiscreteAccessoryStandardFixingPlate"
-msgstr "標準付属品固定プレート"
-
-msgid "Pset_DiscreteAccessoryStandardFixingPlate_DEFINITION"
-msgstr "標準の固定プレートに固有のプロパティ。"
-
-#:IFC.xml:43741
-msgid "StandardFixingPlateDepth"
-msgstr "標準修理高所深さ"
-
-msgid "StandardFixingPlateDepth_DEFINITION"
-msgstr "標準的な固定プレートの深さ。"
-
-#:IFC.xml:43746
-msgid "StandardFixingPlateThickness"
-msgstr "標準固定PlateThickness"
-
-msgid "StandardFixingPlateThickness_DEFINITION"
-msgstr "標準固定プレートの厚さ。"
-
-#:IFC.xml:43751
-msgid "StandardFixingPlateWidth"
-msgstr "標準固定高原幅"
-
-msgid "StandardFixingPlateWidth_DEFINITION"
-msgstr "標準固定プレートの幅。"
-
-#:IFC.xml:43757
-msgid "Pset_DiscreteAccessoryWireLoop"
-msgstr "Pset DiscreteAccessoryWireLoop"
-
-msgid "Pset_DiscreteAccessoryWireLoop_DEFINITION"
-msgstr "ワイヤーループジョイントコネクタに共通する形状プロパティ。"
-
-#:IFC.xml:43758
-msgid "WireDiameter"
-msgstr "ワイヤー直径"
-
-msgid "WireDiameter_DEFINITION"
-msgstr "ワイヤの公称直径。"
-
-#:IFC.xml:43763
-msgid "WireEmbeddingLength"
-msgstr "ワイヤー埋め込み長さ"
-
-msgid "WireEmbeddingLength_DEFINITION"
-msgstr "プリキャストコンクリート要素に埋め込まれているワイヤの部分の長さ。"
-
-#:IFC.xml:43768
-msgid "WireLoopBasePlateLength"
-msgstr "WireLoopBasePlateLength"
-
-msgid "WireLoopBasePlateLength_DEFINITION"
-msgstr "ベースプレートの長さ。"
-
-#:IFC.xml:43773
-msgid "WireLoopBasePlateThickness"
-msgstr "WireLoopBasePlateThickness"
-
-msgid "WireLoopBasePlateThickness_DEFINITION"
-msgstr "ベースプレートの厚さ。"
-
-#:IFC.xml:43778
-msgid "WireLoopBasePlateWidth"
-msgstr "WireLoopBasePlateWidth"
-
-msgid "WireLoopBasePlateWidth_DEFINITION"
-msgstr "ベースプレートの幅。"
-
-#:IFC.xml:43783
-msgid "WireLoopLength"
-msgstr "ワイヤーループ長"
-
-msgid "WireLoopLength_DEFINITION"
-msgstr "ワイヤーの固定ループ部分の長さ。"
-
-#:IFC.xml:43789
-msgid "Pset_ElementComponentCommon"
-msgstr "Pset ElementComponentCommon"
-
-msgid "Pset_ElementComponentCommon_DEFINITION"
-msgstr "コンポーネント要素、特に離散アクセサリの共通の特性のセットだけでなく、留め金、補強要素、または他のタイプのコンポーネント。"
-
-#:IFC.xml:43790
-msgid "CorrosionTreatment"
-msgstr "腐食治療"
-
-msgid "CorrosionTreatment_DEFINITION"
-msgstr "金属部品の腐食処理を決定します。 この特性は、ワークショップの設計処理機能ではなく、材料仕様とbと単なる要求声明として要件を表明する必要がある場合に提供されます。"
-
-#:IFC.xml:43795
-msgid "DeliveryType"
-msgstr "配送タイプ"
-
-msgid "DeliveryType_DEFINITION"
-msgstr "アクセサリをサイトにどのように配信するかを決定します。"
-
-#:IFC.xml:43811
-msgid "Pset_FastenerWeld"
-msgstr "Pset FastenerWeld"
-
-msgid "Pset_FastenerWeld_DEFINITION"
-msgstr "溶接接接続に関連するプロパティ。"
-
-#:IFC.xml:43812
-msgid "a"
-msgstr "a"
-
-msgid "a_DEFINITION"
-msgstr "ISO 2553に準拠して測定してください"
-
-#:IFC.xml:43817
-msgid "c"
-msgstr "c"
-
-msgid "c_DEFINITION"
-msgstr "ISO 2553に準拠したcの測定"
-
-#:IFC.xml:43822
-msgid "d"
-msgstr "d"
-
-msgid "d_DEFINITION"
-msgstr "ISO 2553に準拠したdの測定"
-
-#:IFC.xml:43827
-msgid "e"
-msgstr "e"
-
-msgid "e_DEFINITION"
-msgstr "ISO 2553に準拠した測定"
-
-#:IFC.xml:43832
-msgid "Intermittent"
-msgstr "間欠的な"
-
-msgid "Intermittent_DEFINITION"
-msgstr "フィレットを溶接した場合、断続的かどうか"
-
-#:IFC.xml:43837
-msgid "l"
-msgstr "l"
-
-msgid "l_DEFINITION"
-msgstr "ISO 2553に準拠した測定l"
-
-#:IFC.xml:43842
-msgid "n"
-msgstr "n"
-
-msgid "n_DEFINITION"
-msgstr "N保護の使用がユーザーによって選択できるかどうかを示します。 N Protection 50 と N Protection 100 の両方のプロパティが有効になっている場合、N Protection Select プロパティの値は TRUE に設定されます。 プロパティは、プロパティN保護が有効な場合にのみアサートされます。"
-
-#:IFC.xml:43847
-msgid "Process"
-msgstr "プロセス"
-
-msgid "Process_DEFINITION"
-msgstr "ISO 4063に準拠した溶接プロセスの参照番号、最大3桁のロングコード"
-
-#:IFC.xml:43852
-msgid "ProcessName"
-msgstr "プロセス名"
-
-msgid "ProcessName_DEFINITION"
-msgstr "溶接プロセスの名前。数値のformat@@0プロパティに代替します。"
-
-#:IFC.xml:43857
-msgid "s"
-msgstr "s"
-
-msgid "s_DEFINITION"
-msgstr "ISO 2553に準拠した測定"
-
-#:IFC.xml:43862
-msgid "Staggered"
-msgstr "気絶中"
-
-msgid "Staggered_DEFINITION"
-msgstr "断続的に溶接された場合、ずれているかどうか"
-
-#:IFC.xml:43867
-msgid "Surface1"
-msgstr "Surface1"
-
-msgid "Surface1_DEFINITION"
-msgstr "溶接シーム表面のアスペクト、すなわち平面、曲線または中空。 組み合わせ溶接は、Type1とType2に類似した2つの対応するシンボルによって与えられます。"
-
-#:IFC.xml:43872
-msgid "Surface2"
-msgstr "Surface2"
-
-msgid "Surface2_DEFINITION"
-msgstr "Surface1を参照してください。"
-
-#:IFC.xml:43877
-msgid "Type1"
-msgstr "Type1"
-
-msgid "Type1_DEFINITION"
-msgstr "ISO 2553に従った溶接継ぎの種類。 結合された溶接は、座標系の通常軸の方向に2つの対応するシンボルによって与えられます。 例えば、X溶接はType1 VとType2 Vで指定されます。"
-
-#:IFC.xml:43882
-msgid "Type2"
-msgstr "Type2"
-
-msgid "Type2_DEFINITION"
-msgstr "Type1を参照のこと。"
-
-#:IFC.xml:43887
-msgid "z"
-msgstr "z"
-
-msgid "z_DEFINITION"
-msgstr "ISO 2553に準拠したz を測定"
-
-#:IFC.xml:43893
-msgid "Pset_MechanicalFastenerAnchorBolt"
-msgstr "Pset MechanicalFastenerAnchorBolt"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
-msgstr "異なる種類のアンカーボルトに共通するプロパティ。"
-
-#:IFC.xml:43894
-msgid "AnchorBoltDiameter"
-msgstr "AnchorBoltDiameter"
-
-msgid "AnchorBoltDiameter_DEFINITION"
-msgstr "アンカーボルト棒s の公称直径。"
-
-#:IFC.xml:43899
-msgid "AnchorBoltLength"
-msgstr "アンカーBoltLength"
-
-msgid "AnchorBoltLength_DEFINITION"
-msgstr "アンカーボルトの長さ。"
-
-#:IFC.xml:43904
-msgid "AnchorBoltProtrusionLength"
-msgstr "AnchorBoltProtrusionLength"
-
-msgid "AnchorBoltProtrusionLength_DEFINITION"
-msgstr "アンカーボルトの突出部の長さ。"
-
-#:IFC.xml:43909
-msgid "AnchorBoltThreadLength"
-msgstr "アンカーBoltThreadLength"
-
-msgid "AnchorBoltThreadLength_DEFINITION"
-msgstr "アンカーボルトのねじ部分の長さ。"
-
-#:IFC.xml:43915
-msgid "Pset_MechanicalFastenerBolt"
-msgstr "Pset MechanicalFastenerBolt"
-
-msgid "Pset_MechanicalFastenerBolt_DEFINITION"
-msgstr "ボルト型の留め具に関連するプロパティ ボルト、ワッシャー、ナットを備えたセット全体の特性を提供することができます。 通常、標準化されたボルトの場合にこれらの特性を送信する必要はなく、代わりに標準規格を参照します。"
-
-#:IFC.xml:43916
-msgid "HeadShape"
-msgstr "ヘッド形状"
-
-msgid "HeadShape_DEFINITION"
-msgstr "Hexagon, Countersunk, Cheese"
-
-#:IFC.xml:43921
-msgid "KeyShape"
-msgstr "キー形状"
-
-msgid "KeyShape_DEFINITION"
-msgstr "該当する場合は、ヘッドsスロットの形状（スロット、アレンなど）"
-
-#:IFC.xml:43926
-msgid "NutsCount"
-msgstr "NutsCount"
-
-msgid "NutsCount_DEFINITION"
-msgstr "ボルトに取り付けるナット数"
-
-#:IFC.xml:43931
-msgid "NutShape"
-msgstr "NutShape"
-
-msgid "NutShape_DEFINITION"
-msgstr "ナットの形、例えばヘキサゴン、キャップ 、城"
-
-#:IFC.xml:43936
-msgid "ThreadDiameter"
-msgstr "ThreadDiameter"
-
-msgid "ThreadDiameter_DEFINITION"
-msgstr "ねじの公称直径 (ボルトs s 全体公称径と異なる場合)"
-
-#:IFC.xml:43941
-msgid "ThreadLength"
-msgstr "スレッドの長さ"
-
-msgid "ThreadLength_DEFINITION"
-msgstr "スレッドの公称長さ"
-
-#:IFC.xml:43946
-msgid "WashersCount"
-msgstr "WashersCount"
-
-msgid "WashersCount_DEFINITION"
-msgstr "1つのボルトに取り付けるワッシャー数"
-
-#:IFC.xml:43951
-msgid "WasherShape"
-msgstr "ワッシャー形状"
-
-msgid "WasherShape_DEFINITION"
-msgstr "洗濯機の形状、例: Standard , Square"
+msgid "IfcBoxAlignment_DEFINITION"
+msgstr "ボックスの配置は、テキストボックスの位置を基準にした配置を指定します。 以下の文字列値は、上部左上中央左中央中央中央中央右下中央右下中央右下注左上がデフォルト値です。 図1は、アライメント値を示しています。 図1のボックスアライメント値 図2は、配置と平面の範囲とともに、アライメント値の使用を示しています。 平面的な範囲で使用する.. .. 図2のボックス整列の例 HISTORY IFC2x2 Addendum2の新しいタイプ。 hrange ifc2x3 IFC2x3 CHANGE [[IfcBoxAlignment]] が追加されました。"
 
