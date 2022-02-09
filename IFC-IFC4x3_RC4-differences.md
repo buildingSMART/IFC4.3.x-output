@@ -1,38 +1,41 @@
 # Express schema differences
 
-64 items
+74 items
 
 
 ### Missing data
 
-24 items
+27 items
 
-| Name                                | IFC4x3_RC4.exp          | IFC.exp          |
-|-------------------------------------|-------------------------|------------------|
-| IfcBuildingElementProxy             |                         | not in 'IFC.exp' |
-| IfcBuildingElementProxyType         |                         | not in 'IFC.exp' |
-| IfcBuildingElementProxyTypeEnum     |                         | not in 'IFC.exp' |
-| IfcPlant                            |                         | not in 'IFC.exp' |
-| IfcPostalAddress                    |                         | not in 'IFC.exp' |
-| IfcProxy                            |                         | not in 'IFC.exp' |
-| IfcTransportElementFixedTypeEnum    |                         | not in 'IFC.exp' |
-| IfcTransportElementNonFixedTypeEnum |                         | not in 'IFC.exp' |
-| IfcBridgePart                       | not in 'IFC4x3_RC4.exp' |                  |
-| IfcBuiltElementProxy                | not in 'IFC4x3_RC4.exp' |                  |
-| IfcBuiltElementProxyType            | not in 'IFC4x3_RC4.exp' |                  |
-| IfcBuiltElementProxyTypeEnum        | not in 'IFC4x3_RC4.exp' |                  |
-| IfcFacilityPartCommon               | not in 'IFC4x3_RC4.exp' |                  |
-| IfcMarinePart                       | not in 'IFC4x3_RC4.exp' |                  |
-| IfcRailwayPart                      | not in 'IFC4x3_RC4.exp' |                  |
-| IfcRoadPart                         | not in 'IFC4x3_RC4.exp' |                  |
-| IfcTransportElementTypeEnum         | not in 'IFC4x3_RC4.exp' |                  |
-| IfcTransportationDevice             | not in 'IFC4x3_RC4.exp' |                  |
-| IfcTransportationDeviceType         | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVegetation                       | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVehicle                          | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVehicleType                      | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVehicleTypeEnum                  | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVirtualElementTypeEnum           | not in 'IFC4x3_RC4.exp' |                  |
+| Name                                 | IFC4x3_RC4.exp          | IFC.exp          |
+|--------------------------------------|-------------------------|------------------|
+| IfcBuildingElementProxy              |                         | not in 'IFC.exp' |
+| IfcBuildingElementProxyType          |                         | not in 'IFC.exp' |
+| IfcBuildingElementProxyTypeEnum      |                         | not in 'IFC.exp' |
+| IfcPlant                             |                         | not in 'IFC.exp' |
+| IfcPostalAddress                     |                         | not in 'IFC.exp' |
+| IfcProxy                             |                         | not in 'IFC.exp' |
+| IfcTransportElementFixedTypeEnum     |                         | not in 'IFC.exp' |
+| IfcTransportElementNonFixedTypeEnum  |                         | not in 'IFC.exp' |
+| IfcBridgePart                        | not in 'IFC4x3_RC4.exp' |                  |
+| IfcBuiltElementProxy                 | not in 'IFC4x3_RC4.exp' |                  |
+| IfcBuiltElementProxyType             | not in 'IFC4x3_RC4.exp' |                  |
+| IfcBuiltElementProxyTypeEnum         | not in 'IFC4x3_RC4.exp' |                  |
+| IfcFacilityPartCommon                | not in 'IFC4x3_RC4.exp' |                  |
+| IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4.exp' |                  |
+| IfcMarinePart                        | not in 'IFC4x3_RC4.exp' |                  |
+| IfcRailwayPart                       | not in 'IFC4x3_RC4.exp' |                  |
+| IfcRoadPart                          | not in 'IFC4x3_RC4.exp' |                  |
+| IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4.exp' |                  |
+| IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4.exp' |                  |
+| IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4.exp' |                  |
+| IfcTransportationDevice              | not in 'IFC4x3_RC4.exp' |                  |
+| IfcTransportationDeviceType          | not in 'IFC4x3_RC4.exp' |                  |
+| IfcVegetation                        | not in 'IFC4x3_RC4.exp' |                  |
+| IfcVehicle                           | not in 'IFC4x3_RC4.exp' |                  |
+| IfcVehicleType                       | not in 'IFC4x3_RC4.exp' |                  |
+| IfcVehicleTypeEnum                   | not in 'IFC4x3_RC4.exp' |                  |
+| IfcVirtualElementTypeEnum            | not in 'IFC4x3_RC4.exp' |                  |
 
 ### Type definitions
 
@@ -45,7 +48,7 @@
 
 ### Entity definitions
 
-27 items
+34 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -54,12 +57,17 @@
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                                  |
 | IfcFacilityPart                              | not abstract                                                                               | abstract                                                                                                        |
 | IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                            | ['UsageType']                                                                                                   |
+| IfcGroup inverses                            | ['IsGroupedBy']                                                                            | ['IsGroupedBy', 'ReferencedInStructures']                                                                       |
 | IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                     |
 | IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                       | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                              |
 | IfcIndexedPolyCurve.SelfIntersect            | SelfIntersect : optional IfcBoolean                                                        | SelfIntersect : IfcLogical                                                                                      |
+| IfcIndexedPolygonalFace supertype            | ['IfcTessellatedItem']                                                                     | []                                                                                                              |
+| IfcIndexedPolygonalFace inverses             | ['ToFaceSet']                                                                              | ['ToFaceSet', 'HasTexCoords']                                                                                   |
 | IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                     | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                                  |
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                           | ['PlacesObject', 'ReferencedByPlacements']                                                                      |
 | IfcOpenCrossProfileDef attributes            | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                                           | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
+| IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                                            |
+| IfcPolygonalFaceSet.Faces                    | Faces : list[1:?] of IfcIndexedPolygonalFace                                               | Faces : set[1:?] of IfcIndexedPolygonalFace                                                                     |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                                       |
 | IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                             | ['CrossSectionPositions']                                                                                       |
 | IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']               | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
@@ -68,10 +76,12 @@
 | IfcSpatialElement inverses                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']                            | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                                               |
 | IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                                             |
+| IfcTessellatedFaceSet attributes             | ['Coordinates']                                                                            | ['Coordinates', 'Closed']                                                                                       |
 | IfcTransportElement supertype                | ['IfcElement']                                                                             | ['IfcTransportationDevice']                                                                                     |
 | IfcTransportElement.PredefinedType           | PredefinedType : optional IfcTransportElementTypeSelect                                    | PredefinedType : optional IfcTransportElementTypeEnum                                                           |
 | IfcTransportElementType supertype            | ['IfcElementType']                                                                         | ['IfcTransportationDeviceType']                                                                                 |
 | IfcTransportElementType.PredefinedType       | PredefinedType : IfcTransportElementTypeSelect                                             | PredefinedType : IfcTransportElementTypeEnum                                                                    |
+| IfcTriangulatedFaceSet attributes            | ['Normals', 'Closed', 'CoordIndex', 'PnIndex']                                             | ['Normals', 'CoordIndex', 'PnIndex']                                                                            |
 | IfcVibrationDamper.PredefinedType            | PredefinedType : optional IfcVibrationDamperTypeEnum                                       | PredefinedType : optional IfcDamperTypeEnum                                                                     |
 | IfcVibrationDamperType.PredefinedType        | PredefinedType : optional IfcVibrationDamperTypeEnum                                       | PredefinedType : IfcVibrationDamperTypeEnum                                                                     |
 | IfcVirtualElement attributes                 | []                                                                                         | ['PredefinedType']                                                                                              |

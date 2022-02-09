@@ -173,6 +173,13 @@
 * The Property 'Pset_CommunicationsApplianceTypeTransportEquipment.TransportEquipmentAssemblyType' has no definition
 * The Property 'Pset_CommunicationsApplianceTypeTransportEquipment.TransportEquipmentType' has no definition
 * The Property 'Pset_Condition.AssessmentFrequency' has no definition
+* The Property 'Pset_ConstructionAdministration.ProcurementMethod' has no definition
+* The Property 'Pset_ConstructionAdministration.SpecificationSectionNumber' has no definition
+* The Property 'Pset_ConstructionAdministration.SubmittalIdentifer' has no definition
+* The Property 'Pset_ConstructionOccurance.AssetIdentifier' has no definition
+* The Property 'Pset_ConstructionOccurance.InstallationDate' has no definition
+* The Property 'Pset_ConstructionOccurance.ModelNumber' has no definition
+* The Property 'Pset_ConstructionOccurance.TagNumber' has no definition
 * The Property 'Pset_ConstructionResource.ActualWorkTime' has no definition
 * The Property 'Pset_ConstructionResource.RemainingWorkProgression' has no definition
 * The Property 'Pset_ConstructionResource.ScheduleWorkProgression' has no definition
