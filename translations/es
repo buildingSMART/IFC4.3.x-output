@@ -9,1045 +9,632 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcRepresentationResource.pot\n"
+"X-Crowdin-File-ID: 78\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-02-10 19:38\n"
+"PO-Revision-Date: 2022-02-10 19:39\n"
 
-#:IFC.xml:626
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:37261
+msgid "IfcConvertDirectionInto2D"
+msgstr "IfcConvertDirectionInfo to2D"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+#:IFC.xml:37269
+msgid "IfcCoordinateOperation"
+msgstr "IfcCoordinateOperation"
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "Estilo de forma"
+msgid "IfcCoordinateOperation_DEFINITION"
+msgstr "La operación de coordenadas es un supertipo abstracto para manejar cualquier transformación de operación o conversión entre dos sistemas de referencia de coordenadas. Está destinado a proporcionar ampliabilidad para futuras versiones, dado que actualmente solo la conversión de un sistema de coordenadas de ingeniería local en un sistema de referencia de coordenadas de mapa es tratada por el subtipo [[IfcMapConversion]] . Por convención, se da una operación de coordinación entre el SourceCRS siendo el más local, o sistema de referencia de coordenadas hijas, y el TargetCRS es el sistema de referencia de coordenadas más remoto o superior en el caso especial la operación de coordenadas entre el sistema de coordenadas de ingeniería local del proyecto y cualquier mapa u otro sistema de referencia de coordenadas. .extDef NOTE Definición de la especificación Abstracta OpenGIS, Tema 2 Si se conoce la relación entre dos sistemas de referencia de coordenadas, las coordenadas pueden ser transformadas o convertidas en otro sistema de referencia de coordenadas. Las operaciones de coordenadas se dividen en dos subtipos . Operación matemática de conversión de coordenadas que no incluya ningún cambio de datos. El ejemplo más conocido de una conversión de coordenadas es una proyección del mapa. Los parámetros que describen las conversiones de coordenadas se definen en lugar de derivarse empíricamente. Tenga en cuenta que algunas conversiones no tienen parámetros. Operación matemática de transformación de coordenadas que generalmente incluye un cambio de datos. Los parámetros de una transformación de coordenadas se derivan empíricamente de datos que contienen las coordenadas de una serie de puntos en ambos sistemas de referencia. Este proceso computacional se determina generalmente sobre , permitiendo la derivación de errores o estimaciones de precisión para la transformación. Además, la naturaleza estocástica de los parámetros puede resultar en múltiples versiones diferentes de la misma transformación de coordenadas. Debido a esto, pueden existir varias transformaciones para un par dado de sistemas de referencia de coordenadas, que difieren en su método de transformación, valores de parámetros y características de precisión. HISTORY Nueva entidad en IFC4."
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+#:IFC.xml:37276
+msgid "IfcCoordinateOperation_TargetCRS"
+msgstr "TargetCRS"
 
-#:IFC.xml:627
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "Profundidad"
+msgid "IfcCoordinateOperation_TargetCRS_DEFINITION"
+msgstr "Sistema de referencia de coordenadas de destino para la operación."
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Profundidad de la dimensión de la carcasa en la hoja plana perpendicular a la puerta. Si se da se aplica por igual a los cuatro lados de la pared adyacente."
+#:IFC.xml:37270
+msgid "IfcCoordinateOperation_SourceCRS"
+msgstr "Fuente CRS"
 
-#:IFC.xml:632
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "Grosor de carcasa"
+msgid "IfcCoordinateOperation_SourceCRS_DEFINITION"
+msgstr "Sistema de referencia de coordenadas fuente para la operación."
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Espesor de la dimensión de la caja en el plano de la hoja de la puerta . Si se da se aplica por igual a los cuatro lados de la pared adyacente."
+#:IFC.xml:37312
+msgid "IfcCoordinateReferenceSystem"
+msgstr "IfcCoordinateReferenceSystem"
 
-#:IFC.xml:637
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "Profundidad"
+msgid "IfcCoordinateReferenceSystem_DEFINITION"
+msgstr "El [[IfcCoordinateReferenceSystem]] es una definición de un sistema de referencia de coordenadas por medio de identificadores cualificados solamente. Se espera que la interpretación del identificador sea bien conocida por el software receptor. .extDef NOTE Definición de la especificación Abstracta OpenGIS, Tema 2 Un sistema de referencia de coordenadas es un sistema de coordenadas que está relacionado con el mundo real por un dato. El sistema de coordenadas se compone de un conjunto de ejes de coordenadas con unidades de medida especificadas. El datum especifica la relación de un sistema de coordenadas a la tierra. La combinación resultante de sistema de coordenadas y datum es un sistema de referencia de coordenadas. El identificador sin ambigüedades por el cual el sistema de referencia de coordenadas es conocido, se almacena en el atributo Nombre. Los identificadores bien definidos incluyen el geodésico y a menudo también el dato vertical, en estos casos se puede omitir el GeodeticDatum y el VerticalDatum. EXAMPLE El identificador EPSG 25832 define el datum geodésico ETRS89 en adición a la proyección y la zona. EPSG 5555 definió el datum geodésico ETRS89 y el datum vertical DHHN92 . NOTA Una autoridad ampliamente utilizada, disponible públicamente es el Grupo europeo de Encuestas EPSG , y el uso de esta autoridad se especifica actualmente en varias Especificaciones de Implementación de OGC. Se espera que el software utilizado para transportar los modelos de ingeniería IFC a las aplicaciones SIG y viceversa tenga conocimiento de las especificaciones de implementación del OGC. HISTORY Nueva entidad en IFC4."
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profundidad del revestimiento de la puerta, medida perpendicular al plano de la cubierta de la puerta. Si se omite y con un valor dado al espesor del revestimiento indica una profundidad ajustable i. . una profundidad que se ajusta al grosor de la pared en la que se inserta la ocurrencia de este estilo de puerta ."
+#:IFC.xml:37288
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
+msgstr "Operación de Coordenadas"
 
-#:IFC.xml:642
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
+msgstr "Indica la conversión entre sistemas de coordenadas. En particular, se refiere a un [[IfcCoordinateOperation]] entre este sistema de referencia de coordenadas, y otro sistema de referencia de coordenadas."
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Dimensión de desplazamiento en plano perpendicular a la hoja de la puerta del revestimiento. El desplazamiento se da como distancia al eje x de la posición local."
+#:IFC.xml:37313
+msgid "IfcCoordinateReferenceSystem_Description"
+msgstr "Descripción"
 
-#:IFC.xml:647
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "Grosor del recubrimiento"
+msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
+msgstr "Descripción informal de este sistema de referencia de coordenadas . xtDef NOTE En caso de que el nombre sea igual a WKT, la descripción es un texto bien conocido que corresponde a la definición ISO 19162 especificando los parámetros necesarios para el sistema de referencia de coordenadas. Ejemplo para ellipsoid ELIPSOID ,,,"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the door lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a door without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+#:IFC.xml:37318
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
+msgstr "GeodeticDatum"
 
-#:IFC.xml:652
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "Entrada al panel desplazado %s"
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
+msgstr "Nombre por el cual se identifica este datum. El datum geodésico se asocia con el sistema de referencia de coordenadas e indica la forma y el tamaño del ellipsoide de rotación y la conexión y orientación de este ellipsoide a la tierra real del globo. Es necesario proporcionarlo, si el identificador de nombre no define el datum geodésico sin ambigüedades también. .examples EXAMPLE geodetic datums include .note ED50 EUREF89 WSG84"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+#:IFC.xml:37323
+msgid "IfcCoordinateReferenceSystem_Name"
+msgstr "Nombre"
 
-#:IFC.xml:657
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "Ligar al panel desplazado Y"
+msgid "IfcCoordinateReferenceSystem_Name_DEFINITION"
+msgstr "Nombre por el cual se identifica el sistema de referencia de coordenadas. NOTA 1 El nombre se tomará de la lista reconocida por el Grupo Europeo Petroleum Survey EPSG. Entonces debería ser calificado por el espacio de nombre del EPSG, por ejemplo como EPSG 5555 . xtDef NOTE 2 El nombre será WKT si no existe un código EPSG para el CRS."
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Desplazamiento entre el forro y el panel de la puerta medido a lo largo del eje y de la posición local. .change ifc2x4 IFC4 CHANGE Nuevo atributo añadido al final de la definición de entidad."
+#:IFC.xml:37328
+msgid "IfcCoordinateReferenceSystem_VerticalDatum"
+msgstr "VerticalDatum"
 
-#:IFC.xml:662
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "Umbral"
+msgid "IfcCoordinateReferenceSystem_VerticalDatum_DEFINITION"
+msgstr "Nombre por el cual se identifica el datum vertical. El datum vertical está asociado al eje de altura del sistema de referencia de coordenadas e indica el plano de referencia y el punto fundamental que define el origen de un sistema de altura. Es necesario proporcionarla, si el identificador de nombre no define también de forma inequívoca el datum vertical y si el sistema de referencia de coordenadas es un sistema de referencia 3D. .examples EXAMPLE datos verticales incluyen .note DHN92 el Hauptho alemán Hennetz EVRS2007 el sistema europeo de referencia vertical"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Dimensión profunda en plano perpendicular a hoja de puerta del umbral de la puerta. Si se omite y con un valor dado al grosor del umbral, indica una profundidad ajustable i.e. una profundidad que se ajusta al grosor de la pared en la que se inserta la ocurrencia de este estilo de puerta ."
+#:IFC.xml:37335
+msgid "IfcCoordinateReferenceSystemSelect"
+msgstr "IfcCoordinateReferenceSystemSelect"
 
-#:IFC.xml:667
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "Umbral offset"
+#:IFC.xml:37336
+msgid "IfcGeometricProjectionEnum"
+msgstr "IfcGeometric-ProyectionEnum"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Dimensión de desplazamiento en plano perpendicular a la hoja de la puerta de la retaguardia. El desplazamiento se da como distancia al eje x de la posición local. Sólo se indica si el revestimiento de la puerta incluye un umbral y el parámetro es conocido."
+msgid "IfcGeometricProjectionEnum_DEFINITION"
+msgstr "[[IfcGeometricProjectionEnum]] define los distintos tipos de representación que se pueden distinguir semánticamente. A menudo los diferentes niveles de detalle de la representación de la forma son controlados por el tipo de representación. Items GRAPH VIEW Geometric display representation that shows an abstract, often 1D element representation. representando una pared a través de su línea de ejes, representando una representación geométrica SKETCH MODEL VIEW que muestra una representación completa de elementos 3D, e. . representando una pared por su cuerpo volumétrico. PLAN REFLECTADA SECTION ELEVATION USERDEFINED A user defined specification is given by the value of the UserDefinedTargetView attribute. NOTDEFINED No specification given."
 
-#:IFC.xml:672
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "ThresholdGrosor"
+#:IFC.xml:37337
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW"
+msgstr "VER ELEVACIÓN"
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. zero it denotes a door without a threshold ThresholdDepth shall be set to NIL in this case . If the ThresholdThickness is NIL it denotes that the information about a threshold is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW_DEFINITION"
+msgstr "VER ELEVACIÓN"
 
-#:IFC.xml:677
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+#:IFC.xml:37338
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW"
+msgstr "VER GRAPH"
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Desplazamiento del transom si se da que divide la hoja de la puerta de un acristalamiento o ventana arriba. El desplazamiento se da desde la parte inferior de la puerta abierta."
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW_DEFINITION"
+msgstr "Representación geométrica que muestra una representación abstracta, a menudo de elementos 1D, por ejemplo, representando una pared por su línea de ejes."
 
-#:IFC.xml:682
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "Transomespesor"
+#:IFC.xml:37339
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW"
+msgstr "VER MODEL"
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness width in plane parallel to door leaf of the transom if provided that is, if the TransomOffset attribute is set , which divides the door leaf from a glazing or window above. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the door is divided vertically into a leaf and transom window area without a physical frame. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW_DEFINITION"
+msgstr "Representación geométrica que muestra una representación completa del elemento 3D, por ejemplo, representando una pared por su cuerpo volumétrico."
 
-#:IFC.xml:701
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
-
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways how individual door panels operate as shown in Figure 1. Enumerator Illustration Swinging DoubleActing Sliding Folding Revolving Rollingup FixedPanel UserDefined NotDefined Figure 1 Door operations The opening direction of the door panels is given by the local placement of the [[IfcDoor]] . The positive y axis determines the direction as shown in Figure 2. panel direction .. .. .. .. figures ifcdoorpaneloperationenum fig10.gif Figure 2 Door panel operations NOTE Figures symbolic representation depend on the national building code. These figures are only shown as illustrations HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL added. Items SWINGING DOUBLE ACTING SLIDING FOLDING REVOLVING ROLLINGUP FIXEDPANEL USERDEFINED NOTDEFINED"
-
-#:IFC.xml:702
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
-msgstr "ACTURACIÓN DE DOBLE"
-
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
-msgstr "ACTURACIÓN DE DOBLE"
-
-#:IFC.xml:703
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
-msgstr "PANEL DE ARCHIVO"
-
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
-msgstr "PANEL DE ARCHIVO"
-
-#:IFC.xml:704
-msgid "IfcDoorPanelOperationEnum_FOLDING"
-msgstr "SIGUIENDO"
-
-msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
-msgstr "SIGUIENDO"
-
-#:IFC.xml:705
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
+#:IFC.xml:37340
+msgid "IfcGeometricProjectionEnum_NOTDEFINED"
 msgstr "NOTDEFINADO"
 
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcGeometricProjectionEnum_NOTDEFINED_DEFINITION"
+msgstr "No se ha dado ninguna especificación."
 
-#:IFC.xml:706
-msgid "IfcDoorPanelOperationEnum_REVOLVING"
-msgstr "REVOLVING"
+#:IFC.xml:37341
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW"
+msgstr "VER PLAN"
 
-msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
-msgstr "REVOLVING"
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW_DEFINITION"
+msgstr "VER PLAN"
 
-#:IFC.xml:707
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:37342
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW"
+msgstr "VER PLAN REFLECCIONADO"
 
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "ROLLINGUP"
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW_DEFINITION"
+msgstr "VER PLAN REFLECCIONADO"
 
-#:IFC.xml:708
-msgid "IfcDoorPanelOperationEnum_SLIDING"
-msgstr "LIMPIANDO"
+#:IFC.xml:37343
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW"
+msgstr "VER SECCIÓN"
 
-msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
-msgstr "LIMPIANDO"
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW_DEFINITION"
+msgstr "VER SECCIÓN"
 
-#:IFC.xml:709
-msgid "IfcDoorPanelOperationEnum_SWINGING"
-msgstr "SEGURANDO"
+#:IFC.xml:37344
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW"
+msgstr "VER SKETCH"
 
-msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
-msgstr "SEGURANDO"
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW_DEFINITION"
+msgstr "VER SKETCH"
 
-#:IFC.xml:710
-msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+#:IFC.xml:37345
+msgid "IfcGeometricProjectionEnum_USERDEFINED"
 msgstr "USERDEFINADO"
 
-msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
+msgid "IfcGeometricProjectionEnum_USERDEFINED_DEFINITION"
+msgstr "Una especificación definida por el usuario es dada por el valor del atributo UserDefinedTargetView."
 
-#:IFC.xml:712
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+#:IFC.xml:37347
+msgid "IfcGeometricRepresentationContext"
+msgstr "Contexto de representación geométrica Ifc"
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe the location of a door panel within a door lining. HISTORY New Enumeration in IFC2x Figure 1 shows the designation of a door panel with PanelPosition LEFT and a door panel with PanelPosition RIGHT within a door style with OperationType DOUBLE DOOR SINGLE SWING. The position is given as shown in the XZ plane of the local placement, looking into the direction of the positive Y axis. Door panel positions .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Door panel positions Items LEFT MIDDLE RIGHT NOTDEFINED"
+msgid "IfcGeometricRepresentationContext_DEFINITION"
+msgstr "The [[IfcGeometricRepresentationContext]] defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the WorldCoordinateSystem attribute. The main representation context may also provide the true north direction, see Figure 1. The TrueNorth attribute should be provided, if the y axis of the WorldCoordinateSystem does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute WorldCoordinateSystem. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not resent, it defaults to 0.,1. i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction. The true North as seen in CAD within the figure on the left shows the correct interpretation of the TrueNorth direction If a conversion to a geographic coordinate system is included by virtue of the HasCoordinateOperation attribute, then the TrueNorth attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an [[IfcCoordinateOperation]]. Figure 1 Definition of the true north direction The use of one instance of [[IfcGeometricRepresentationContext]] to represent the model 3D view is mandatory, the use of a second instance of [[IfcGeometricRepresentationContext]] to represent the plan 2D view is optional but needs to be given, if there are scale dependent plan views , the additional scale or view dependent contexts need to be handled by using the subtype [[IfcGeometricRepresentationSubContext]] pointing to the model view or the plan view as the ParentContext . See Figure 2 for an example using geometric representation contexts for 3D and 2D with assigned sub contexts. NOTE The inherited attribute ContextType shall have one of the following recognized values Model , Plan , NotDefined . Use of representation contexts defined at [[IfcProject]] for 3D model and 2D plan context, including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space. Figure 2 Example of using geometric representation contexts .extDef NOTE Definition according to ISO CD 10303 42 1992 A geometric representation context is a representation context in which the geometric representation items are geometrically founded. NOTE Entity adapted from geometric representation context defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x3 IFC2x3 CHANGE Applicable values for ContextType are only Model , Plan , and NotDefined . All other contexts are now handled by [[IfcGeometricRepresentationSubContext]] . .change ifc2x4 IFC4 CHANGE Mapping to Geographic coordinate system added by inverse attribute HasCoordinateOperation ."
 
-#:IFC.xml:713
-msgid "IfcDoorPanelPositionEnum_LEFT"
-msgstr "IZQUIERDO"
+#:IFC.xml:12432
+msgid "IfcGeometricRepresentationContext_TrueNorth"
+msgstr "Verdadero Norte"
 
-msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
-msgstr "IZQUIERDO"
+msgid "IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "Dirección del verdadero norte, o dirección geográfica del norte, relativa al sistema de coordenadas del proyecto subyacente. Se da por una dirección de 2 dimensiones dentro del plano xy del sistema de coordenadas del proyecto. Si no está presente, el valor predeterminado es 0. significa que el eje Y positivo del sistema de coordenadas del proyecto equivale a la dirección geográfica del norte. NOTA Si se proporciona una ubicación geográfica usando [[IfcMapConversion]] entonces el norte verdadero es sólo para información. En caso de inconsistencia, el valor proporcionado con [[IfcMapConversion]] tendrá prioridad."
 
-#:IFC.xml:714
-msgid "IfcDoorPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
+#:IFC.xml:37300
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation"
+msgstr "Operación de Coordenadas"
 
-msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation_DEFINITION"
+msgstr "Indica la conversión entre sistemas de coordenadas. En particular, se refiere a un [[IfcCoordinateOperation]] entre un sistema de referencia de coordenadas de mapa geográfico, y el sistema de coordenadas de ingeniería de este proyecto de construcción. Si hay más de uno [[IfcGeometricRepresentationContext]] proporcionado a [[IfcProject]] entonces todos los contextos deberán tener una instancia idéntica de [[IfcCoordinateOperation]] como HasCoordinateOperation referida a la misma instancia de [[IfcCoordinateReferenceSystem]] ."
 
-#:IFC.xml:715
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:37366
+msgid "IfcGeometricRepresentationContext_HasSubContexts"
+msgstr "HasSubContextos"
 
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcGeometricRepresentationContext_HasSubContexts_DEFINITION"
+msgstr "El conjunto de IfcGeometricRepresentationSubContexts que se refieren a este [[IfcGeometricRepresentationContext]] ."
 
-#:IFC.xml:716
-msgid "IfcDoorPanelPositionEnum_RIGHT"
-msgstr "REGISTRO"
+#:IFC.xml:37348
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "Dimensión del espacio coordenado"
 
-msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "REGISTRO"
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "El recuento de dimensiones enteras del espacio de coordenadas modelado en un contexto de representación geométrica."
 
-#:IFC.xml:718
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPanelProperties"
+#:IFC.xml:37353
+msgid "IfcGeometricRepresentationContext_Precision"
+msgstr "Precisión"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "A door panel is normally a door leaf that opens to allow people or goods to pass. The parameters of the door panel define the geometrically relevant parameter of the panel, The [[IfcDoorPanelProperties]] are used to parametrically describe the shape and operation of door panels. The parametric definition can be added solely or additionally to the explicit shape representation of the door. The [[IfcDoorType]] can define doors consisting of more then one panel. In this case, one instance of [[IfcDoorPanelProperties]] has to be included for each door panel. The PanelPosition attribute, in conjunction with the [[IfcDoorStyle]].OperationType attribute, determines to which panel the [[IfcDoorPanelProperties]] apply. The [[IfcDoorPanelProperties]] are included in the list of properties , given by attribute HasPropertySets of the [[IfcDoorType]] . More information about the door panel can be included in the same list of the [[IfcDoorStyle]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorPanelProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorPanelProperties]] define a standard door panel, including if given a proportional width to define non uniform double swing or sliding, or folding doors. The outer boundary of the panel is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . It has to take the lining parameter into account as well. The depth of the panel swinging, double acting, and sliding panels is defined by the PanelDepth parameter. PanelDepth For door operation types that include more than one panel, the width of at least one panel is given by a normalised ratio measure. It determines the width of that panel, which is defined as a ratio of the overall width of the door opening. PanelWidth Figure 1 Door panel properties HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "Valor de la precisión del modelo para los modelos geométricos. Es un doble valor REAL , típicamente en rango 1E 5 a 1E 8, que indica que la tolerancia bajo la cual se siguen asumiendo dos puntos dados es idéntica. El valor puede ser utilizado, por ejemplo, para fijar la distancia máxima de una curva de borde a la superficie de la cara subyacente en modelos de brep."
 
-#:IFC.xml:741
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "Estilo de forma"
+#:IFC.xml:37358
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "Sistema Coordenado mundial"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Puntero al aspecto de la forma, si se da el aspecto de la forma. . DEPRECACIÓN obsoleta. El atributo está obsoleto y ya no se utilizará, es decir, el valor debe ser NIL ."
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "Estabilización del sistema de coordenadas de ingeniería a menudo llamado sistema de coordenadas mundiales en CAD para todos los contextos de representación utilizados por el proyecto. NOTA Se puede utilizar para proporcionar una mayor estabilidad numérica si la colocación de los edificios está lejos del origen. En la mayoría de los casos, sin embargo, se ajustaría al origen 0.,0.,0. y las direcciones x 1.,0.,0. Si se proporciona una ubicación geográfica usando [[IfcMapConversion]] entonces se utiliza el bute de verificación WorldCoordinateSystem para definir el desplazamiento entre el punto cero del sistema de coordenadas de ingeniería local y el punto de referencia geográfico al que se relaciona el desplazamiento [[IfcMapConversion]]. En la práctica preferida ambos puntos también llamados el punto base del proyecto y el punto de encuesta debe ser coincidente. Sin embargo, es posible compensar el punto de referencia geográfico del punto local cero."
 
-#:IFC.xml:719
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "Profundidad del panel"
+#:IFC.xml:37380
+msgid "IfcGeometricRepresentationSubContext"
+msgstr "Ifcrepresentación geométrica subcontexto"
 
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Profundidad del panel de la puerta, medida perpendicular al plano de la hoja de la puerta."
+msgid "IfcGeometricRepresentationSubContext_DEFINITION"
+msgstr "[[IfcGeometricRepresentationSubContext]] define el contexto que aplica a varias representaciones de forma de un producto siendo un subcontexto, compartiendo los atributos WorldCoordinateSystem , CoordinateSpaceDimension , Precision y TrueNorth con los atributos padre [[IfcGeometricRepresentationContext]] . El [[IfcGeometricRepresentationSubContext]] se utiliza para definir tipos de representación semánticamente distinguidos para diferentes contenidos de información, dependiendo de la vista de representación y la escala de destino. Puede utilizarse para controlar el nivel de detalle de la representación de la forma que es más aplicable a este contexto geométrico. Además, el subcontexto se utiliza para controlar la apariencia posterior del [[IfcShapeRepresentation]] dentro de una vista de gráfica. NOTA Si el [[IfcShapeRepresentation]] usando este subcontexto tiene [[IfcStyledItem]] s asignados a los Elementos, la información del estilo de presentación ej. [[IfcCurveStyle]] , [[IfcTextStyle]] asociado con el [[IfcStyledItem]] se indica en las dimensiones de la gráfica de destino. Por ejemplo, un grosor de línea [[IfcCurveStyle]]. urveWidth es dada por una medida de grosor relacionada con el espesor de una parcela dentro del rango de escala objetivo. Cada [[IfcProduct]] puede tener varias instancias de subtipos de [[IfcRepresentation]] , cada uno de ellos asignado a otro [[IfcGeometricRepresentationSubContext]] . Los valores aplicables para el atributo ContextIdentifier heredado deben ser idénticos al attrubute RepresentationIdentifier definido en [[IfcShapeRepresentation]] . NOTA La provisión de una vista de modelo [[IfcGeometricRepresentationContext]].ContextType Model es obligatoria. Las instancias de [[IfcGeometricRepresentationSubContext]] se relacionan con ella como su ParentContext . Las instancias EXAMPLE de [[IfcGeometricRepresentationSubContext]] se pueden utilizar para manejar los bloques de vista múltiple o macros, que se utilizan en programas CAD para almacenar varias escalas y o ver representaciones geométricas dependientes del mismo objeto. La aplicación puede entonces elegir la representación más adecuada para mostrar la forma geométrica del producto, dependiendo de la vista y escala de destino. HISTORY Nueva entidad en IFC2x2."
 
-#:IFC.xml:724
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "PanelOperación"
+#:IFC.xml:37366
+msgid "IfcGeometricRepresentationSubContext_ParentContext"
+msgstr "Contexto padre"
 
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "La PanelOperación define la forma de funcionamiento de dicho panel. La PanelOperación del panel de puerta tiene que corresponder con el OperationType del [[IfcDoorStyle]] por el cual se hace referencia."
+msgid "IfcGeometricRepresentationSubContext_ParentContext_DEFINITION"
+msgstr "Contexto padre del cual el subcontexto deriva su sistema de coordenadas mundiales, precisión, dimensión de coordenadas espaciales y verdadero norte."
 
-#:IFC.xml:729
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "Posición del panel"
+#:IFC.xml:37381
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "SELF IfcGeometricRepresentationContext CoordinateSpaceDimension"
 
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Posición de este panel dentro de la puerta. El PanelPosition del panel de la puerta debe corresponder con el OperationType del [[IfcDoorStyle]] por el cual se hace referencia."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].CoordinateSpaceDimension"
 
-#:IFC.xml:734
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "Ancho de Panel"
+#:IFC.xml:37386
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision"
+msgstr "SELF IfcGeometricRepresentationContext Precisión"
 
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Ancho de este panel, dado en relación con el ancho total de apertura clara de la puerta. Si se omite, el valor predeterminado es 1. Debe proporcionarse un valor para todas las puertas con OperationType s en [[IfcDoorStyle]] definiendo una puerta con más de un panel."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].Precision"
 
-#:IFC.xml:753
-msgid "IfcDoorStyle"
-msgstr "IfcDoorStyle"
+#:IFC.xml:37391
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth"
+msgstr "SELF IfcGeometricRepresentationContext TrueNorth"
 
-msgid "IfcDoorStyle_DEFINITION"
-msgstr "Definition The door style, [[IfcDoorStyle]] , defines a particular style of doors, which may be included into the spatial context of the building model through instances of [[IfcDoor]] . A door style defines the overall parameter of the door style and refers to the particular parameter of the lining and one or several panels through the [[IfcDoorLiningProperties]] and the [[IfcDoorPanelProperties]] . The door entity, [[IfcDoor]] , defines a particular occurrence of a door inserted in the spatial context of a project. The actual parameter of the door and or its shape is defined at the [[IfcDoorStyle]] , to which the [[IfcDoor]] is related by the inverse relationship IsDefinedBy pointing to IfcRelDefinedByType . The [[IfcDoorStyle]] also defines the particular attributes for the lining , [[IfcDoorLiningProperties]] , and panels, [[IfcDoorPanelProperties]] . The [[IfcDoorStyle]] defines the baseline geometry, or the representation map, for all occurrences of the door style, given by the [[IfcDoor]] , pointing to this style. The representation of the door style may be given by the agreed set of minimal parameters, defined for the door lining and the door panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the door style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcDoorStyleOperationTypeEnum defines the general layout of the door style. Depending on the enumerator, the appropriate instances of [[IfcDoorLiningProperties]] and [[IfcDoorPanelProperties]] are attached in the list of HasPropertySets . The IfcDoorStyleOperationTypeEnum mainly determines the hinge side left hung, or right hung , the operation swinging, sliding, folding, etc. and the number of panels. See geometry use definitions at IfcDoorStyleOperationTypeEnum for the correct usage of opening symbols for different operation types. HISTORY New entity in IFC2x. .deprecated DEPRECATION The entity is deprecated and shall not be used. The new entity [[IfcDoorType]] shall be used instead."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].TrueNorth"
 
-#:IFC.xml:754
-msgid "IfcDoorStyle_ConstructionType"
-msgstr "Tipo de Construcción"
+#:IFC.xml:37395
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "SELF IfcGeometricRepresentationContext WorldCoordinateSystem"
 
-msgid "IfcDoorStyle_ConstructionType_DEFINITION"
-msgstr "Tipo que define la construcción básica y el tipo de material de la puerta."
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].WorldCoordinateSystem"
 
-#:IFC.xml:759
-msgid "IfcDoorStyle_OperationType"
-msgstr "Tipo de operación"
+#:IFC.xml:37400
+msgid "IfcGeometricRepresentationSubContext_TargetScale"
+msgstr "Escala de objetivo"
 
-msgid "IfcDoorStyle_OperationType_DEFINITION"
-msgstr "Tipo que define la disposición general y el funcionamiento del estilo de la puerta."
+msgid "IfcGeometricRepresentationSubContext_TargetScale_DEFINITION"
+msgstr "La escala de la gráfica objetivo de la representación a la que se aplica este contexto de representación. La escala de NOTA indica la escala de la gráfica de destino para el contexto de representación sub todos los estilos de anotación se dan en dimensiones de parcela de acuerdo a esta escala de parcela objetivo. Si se dan múltiples instancias de [[IfcGeometricRepresentationSubContext]] con el mismo valor de TargetView, la escala de la parcela de destino se aplica hasta la siguiente escala más pequeña, o hasta una escala pequeña ilimitada. NOTA Escala 1 100 dada como 0.01 dentro de TargetScale es más grande que 1 200 dado como 0.005 en TargetScale ."
 
-#:IFC.xml:764
-msgid "IfcDoorStyle_ParameterTakesPrecedence"
-msgstr "Precedencia de parámetros"
+#:IFC.xml:37405
+msgid "IfcGeometricRepresentationSubContext_TargetView"
+msgstr "Vista objetivo"
 
-msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "El valor booleano refleja, si el parámetro dado en el recubrimiento adjunto y las propiedades del panel define exactamente el TRUE geométrico, o si la forma de estilo adjunta tiene prioridad FALSE . En el último caso el parámetro tiene sólo un valor informativo."
+msgid "IfcGeometricRepresentationSubContext_TargetView_DEFINITION"
+msgstr "Vista de destino de la representación a la que se aplica este contexto de representación."
 
-#:IFC.xml:769
-msgid "IfcDoorStyle_Sizeable"
-msgstr "Tamañable"
+#:IFC.xml:37410
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView"
+msgstr "Vista definida por usuario"
 
-msgid "IfcDoorStyle_Sizeable_DEFINITION"
-msgstr "El booleano indica, si el IfcMappedRepresentation adjunto puede ser de tamaño usando el factor de escala de transformación , o no FALSE . Si no, la IfcMappedRepresentation debe ser [[IfcShapeRepresentation]] del [[IfcDoor]] usando [[IfcMappedItem]] como elemento con el factor de escala 1."
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView_DEFINITION"
+msgstr "Vista de destino definida por el usuario, este valor de atributo será dado, si el atributo TargetView está establecido en USERDEFINED."
 
-#:IFC.xml:776
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
+#:IFC.xml:37417
+msgid "IfcGlobalOrLocalEnum"
+msgstr "IfcGlobalOrLocalEnum"
 
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "This enumeration defines the basic types of construction of doors. The construction type relates to the main material or material combination used for making the door. HISTORY New enumeration in IFC2x. Items ALUMINIUM HIGH GRADE STEEL STEEL WOOD ALUMINIUM ALUMINIUM PLASTIC PLASTIC USERDEFINED NOTDEFINED"
+msgid "IfcGlobalOrLocalEnum_DEFINITION"
+msgstr "Este tipo de enumeración define si el sistema de coordenadas de objetos local o el sistema de coordenadas del mundo global para el proyecto se utiliza para describir los valores de medida de las entidades que tienen una referencia a este tipo. NOTA El sistema de coordenadas mundiales es dado por el [[IfcGeometricRepresentationContext]]. orldCoordinateSystem y es único dentro del proyecto. El sistema de coordenadas local u objeto es dado por [[IfcProduct]]. bjectPlacement y es utilizado por todos [[IfcRepresentation]] s dentro del [[IfcProduct]]. epresentation . HISTORY New enumeration in IFC2x2. Items GLOBAL LOCAL COORDS El sistema local de coordenadas de objetos es usado."
 
-#:IFC.xml:777
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIO"
+#:IFC.xml:37418
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS"
+msgstr "COORDES GLOBALES"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIO"
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS_DEFINITION"
+msgstr "COORDES GLOBALES"
 
-#:IFC.xml:778
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
-msgstr "PLASTIC ALUMINIUM"
+#:IFC.xml:37419
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS"
+msgstr "COORDES LOCAL"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
-msgstr "PLASTIC ALUMINIUM"
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS_DEFINITION"
+msgstr "Se utiliza el sistema de coordenadas de objetos local."
 
-#:IFC.xml:779
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOD"
+#:IFC.xml:37421
+msgid "IfcMapConversion"
+msgstr "IfcMapversión"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOD"
+msgid "IfcMapConversion_DEFINITION"
+msgstr "La conversión del mapa trata de transformar el sistema de coordenadas de ingeniería local, a menudo llamado sistema de coordenadas mundiales, en el sistema de referencia de coordenadas del mapa subyacente. NOTA El [[IfcMapConversion]] no gestiona la proyección de un mapa del sistema de referencia de coordenadas geodeéticas. La conversión del mapa permite convertir el origen local del sistema de coordenadas de ingeniería local a su lugar dentro de una facilitación del mapa, norte, altura ortogonal y rotar el eje x del sistema de coordenadas de ingeniería local dentro del plano de acercamiento horizontal del mapa. NOTA El eje z del sistema de coordenadas de ingeniería local es siempre paralelo al eje z del sistema de coordenadas del mapa. El factor de escala puede utilizarse cuando la unidad de longitud de los 3 ejes del sistema de coordenadas del mapa no son idénticos a la unidad de longitud establecida para este proyecto ver [[IfcProject]]. nitsInContext , si se omite, se asume el factor de escala 1.0. HISTORIA nueva entidad en IFC4"
 
-#:IFC.xml:780
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "GRAVE ALTO SUPERIOR"
+#:IFC.xml:37422
+msgid "IfcMapConversion_Eastings"
+msgstr "Estes"
 
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "GRAVE ALTO SUPERIOR"
+msgid "IfcMapConversion_Eastings_DEFINITION"
+msgstr "Especifica la ubicación a lo largo de la relajación del sistema de coordenadas del sistema de referencia de coordenadas del mapa de destino. NOTA para sistemas de coordenadas cartesianas a mano derecha, esto establecería la ubicación a lo largo del eje x."
 
-#:IFC.xml:781
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:37427
+msgid "IfcMapConversion_Northings"
+msgstr "Nórdicos"
 
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
+msgid "IfcMapConversion_Northings_DEFINITION"
+msgstr "Especifica la ubicación a lo largo del sistema de coordenadas del sistema de referencia de coordenadas del mapa de destino. NOTA para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje y"
 
-#:IFC.xml:782
-msgid "IfcDoorStyleConstructionEnum_PLASTIC"
-msgstr "PULASTICOS"
+#:IFC.xml:37432
+msgid "IfcMapConversion_OrthogonalHeight"
+msgstr "Altura ortogonal"
 
-msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PULASTICOS"
+msgid "IfcMapConversion_OrthogonalHeight_DEFINITION"
+msgstr "Altura ortogonal relativa al datum vertical especificado. NOTA para sistemas de coordenadas cartesianas a mano derecha establecerá la ubicación a lo largo del eje z"
 
-#:IFC.xml:783
-msgid "IfcDoorStyleConstructionEnum_STEEL"
-msgstr "STEEL"
+#:IFC.xml:37437
+msgid "IfcMapConversion_Scale"
+msgstr "Escala"
 
-msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "STEEL"
+msgid "IfcMapConversion_Scale_DEFINITION"
+msgstr "Escala a utilizar, cuando las unidades del SIR no son idénticas a las unidades del sistema de coordenadas de ingeniería. Si se omite, se asume el valor de 1.0."
 
-#:IFC.xml:784
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+#:IFC.xml:37442
+msgid "IfcMapConversion_ScaleY"
+msgstr "Escala"
 
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "USERDEFINADO"
+msgid "IfcMapConversion_ScaleY_DEFINITION"
+msgstr "Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates"
 
-#:IFC.xml:785
-msgid "IfcDoorStyleConstructionEnum_WOOD"
-msgstr "WOOD"
+#:IFC.xml:37447
+msgid "IfcMapConversion_ScaleZ"
+msgstr "Escala Z"
 
-msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOD"
+msgid "IfcMapConversion_ScaleZ_DEFINITION"
+msgstr "Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates"
 
-#:IFC.xml:787
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+#:IFC.xml:37452
+msgid "IfcMapConversion_XAxisAbscissa"
+msgstr "XAxisAbscissa"
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOUBLE SWING RIGHT DOUBLE DOOR DOUBLE SWING SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+msgid "IfcMapConversion_XAxisAbscissa_DEFINITION"
+msgstr "Especifica el valor a lo largo del eje de relajación del punto final de un vector indicando la posición del eje x local del sistema de referencia de coordenadas de ingeniería. NOTA 1 para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje x NOTE 2 junto con el XAxisOrdinate proporciona la dirección del eje x local dentro del plano horizontal del sistema de coordenadas de mapa"
 
-#:IFC.xml:788
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
-msgstr "SWING DE DOBLE DE DOUBLE"
+#:IFC.xml:37457
+msgid "IfcMapConversion_XAxisOrdinate"
+msgstr "%s ordenados"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
-msgstr "SWING DE DOBLE DE DOUBLE"
+msgid "IfcMapConversion_XAxisOrdinate_DEFINITION"
+msgstr "Especifica el valor a lo largo del eje norteño del punto final de un vector indicando la posición del eje x local del sistema de referencia de coordenadas de ingeniería. NOTA 1 para sistemas de coordenadas cartesianas a mano derecha, esto establecerá la ubicación a lo largo del eje y . XAxisAbscissa proporciona la dirección del eje x local dentro del plano horizontal del sistema de coordenadas del mapa."
 
-#:IFC.xml:789
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
-msgstr "DOOR DE DOBLE SUPERIOR"
+#:IFC.xml:37464
+msgid "IfcMaterialDefinitionRepresentation"
+msgstr "Definición de material IfcMaterial"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
-msgstr "DOOR DE DOBLE SUPERIOR"
+msgid "IfcMaterialDefinitionRepresentation_DEFINITION"
+msgstr "[[IfcMaterialDefinitionRepresentation]] define información de presentación relacionada con [[IfcMaterial]] . Permite múltiples presentaciones del mismo material para diferentes contextos de representación geométrica. NOTA El [[IfcMaterialDefinitionRepresentation]] se utiliza actualmente sólo para definir la información de presentación del material utilizado en las ocurrencias de elementos, definido como subtipos de [[IfcElement]] , o en tipos de elementos, definidos como subtipos de [[IfcElementType]] . El [[IfcMaterial]] está asignado al subtipo de [[IfcElement]] , o [[IfcElementType]] usar la relación [[IfcRelAssociatesMaterial]] eventualmente a través de otras entidades relacionadas con material [[IfcMaterialLayerSetUsage]] , [[IfcMaterialLayerSet]] , [[IfcMaterialLayer]] , o [[IfcMaterialProfileSetUsage]] , [[IfcMaterialProfileSet]] , [[IfcMaterialProfile]] . El [[IfcMaterialDefinitionRepresentation]] puede aplicar diferentes estilos de presentación para diferentes contextos de representación, por ejemplo, un estilo diferente para la vista de croquis, vista de modelo o vista de plan, o para diferentes escalas de destino, para cada contexto de representación puede aplicar el estilo de curva, el estilo de relleno de estilo de la zona , jinete, texto y estilo de superficie. HISTORY Nueva entidad en IFC2x3. .change ifc2x3 IFC2x3 CHANGE La entidad [[IfcMaterialDefinitionRepresentation]] ha sido añadida. Compatibilidad con el intercambio basado en archivos está garantizada. hange ifc2x4 IFC4 CHANGE La asignación de curvas, superficies y otros estilos a un [[IfcStyledItem]] ha sido simplificada por IfcStyleAssignmentSelect . El uso de IfcPresentationStyleAssignment intermedio está obsoleto. .use la definición de uso de cabeza como se muestra en la figura 1, la tarea de presentación puede ser específica a un contexto de representación añadiendo uno y más [[IfcStyledRepresentation]] s. Cada uno de ellos incluye un solo [[IfcStyledItem]] con exactamente cero o un estilo para cualquiera de las curvas, llenar área, superficie, texto o estilo de símbolo que sea aplicable. Figura 1 Representación de definición de material"
 
-#:IFC.xml:790
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
-msgstr "SWING DE SINGLE DE DOBLE"
+#:IFC.xml:21798
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial"
+msgstr "Material representado"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
-msgstr "Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction."
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial_DEFINITION"
+msgstr "Referencia al material al que se aplica la representación."
 
-#:IFC.xml:791
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
-msgstr "DOBLE DOOR SINGLE SWING OPPOSITE LEFT"
+#:IFC.xml:37467
+msgid "IfcProductDefinitionShape"
+msgstr "IfcDefinición del producto"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
-msgstr "Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction."
+msgid "IfcProductDefinitionShape_DEFINITION"
+msgstr "El [[IfcProductDefinitionShape]] define toda la información relevante sobre un [[IfcProduct]] . Permite múltiples representaciones geométricas del mismo producto. La información relevante de la forma incluye la representación de la forma incluyendo elementos geométricos de representación para sólidos 3D, anotaciones 2D, etc. y el color de línea de información de presentación, tipo de línea, las propiedades de representación de la superficie asignadas a las capas CAD de presentación para el control de visibilidad o los elementos topológicos de representación para el vértice de los sistemas de conectividad, borde, las representaciones faciales que pueden incluir elementos geométricos de puntos de vértices, curvas de borde, superficie de la cara NOTA La definición de esta entidad se relaciona con la forma de definición de la entidad de la entidad ISO 10303. Por favor, consulte ISO IS 10303 41 1994 para la definición final de la norma formal. HISTORY nueva entidad en IFC1.5"
 
-#:IFC.xml:792
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
-msgstr "DOBLE DOOR SINGLE SWING OPPOSITE RIGHT"
+#:IFC.xml:20937
+msgid "IfcProductDefinitionShape_ShapeOfProduct"
+msgstr "Forma del producto"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
-msgstr "Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction."
+msgid "IfcProductDefinitionShape_ShapeOfProduct_DEFINITION"
+msgstr "El [[IfcProductDefinitionShape]] debe utilizarse para proporcionar una representación para una o más instancias de [[IfcProduct]] . Hange ifc2x3 IFC2x3 CHANGE New inverse attribute. .change ifc2x4 IFC4 CHANGE Cardinality Inverse relationship cardinality relaxed to be 1 N."
 
-#:IFC.xml:793
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
-msgstr "SLIDING DE DOBLE"
+#:IFC.xml:37471
+msgid "IfcProductDefinitionShape_HasShapeAspects"
+msgstr "HasShapeAspects"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
-msgstr "Door with two panels, one is sliding to the left the other is sliding to the right."
+msgid "IfcProductDefinitionShape_HasShapeAspects_DEFINITION"
+msgstr "Referencia al aspecto de la forma que representa parte de la forma o su característica distintivamente."
 
-#:IFC.xml:794
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
-msgstr "DOBLE SWING IFT"
+#:IFC.xml:37483
+msgid "IfcProductRepresentation"
+msgstr "Representación de productos Ifc"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
-msgstr "DOBLE SWING IFT"
+msgid "IfcProductRepresentation_DEFINITION"
+msgstr "[[IfcProductRepresentation]] define una representación de un producto, incluyendo su representación geométrica o topológica. Un producto puede tener una representación geométrica cero, una o muchas representaciones geométricas, y una única representación geométrica puede ser compartida entre varios productos usando representaciones mapeadas. NOTA La definición de esta entidad se refiere a la definición de propiedad de la entidad ISO 10303. El uso del término propiedad fue evitado ya que entra en conflicto con la propiedad, el tipo de propiedad y las definiciones del conjunto de propiedades en otras partes del modelo IFC. HISTORY New entity in IFC2.0 .change ifc2x3 IFC2x3 NOTE Users should not instantiate the entity from IFC2x3 onwards."
 
-#:IFC.xml:795
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
-msgstr "DECLARACIÓN DE SWING DOBLE"
+#:IFC.xml:37495
+msgid "IfcProductRepresentation_Representations"
+msgstr "Representaciones"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
-msgstr "DECLARACIÓN DE SWING DOBLE"
+msgid "IfcProductRepresentation_Representations_DEFINITION"
+msgstr "Cada miembro define una representación válida de un tipo particular dentro de un contexto de representación en particular."
 
-#:IFC.xml:796
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
-msgstr "SIGUIENDO A LIMPIAR"
+#:IFC.xml:37484
+msgid "IfcProductRepresentation_Description"
+msgstr "Descripción"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
-msgstr "Door with one panel that is folding to the left."
+msgid "IfcProductRepresentation_Description_DEFINITION"
+msgstr "La palabra o grupo de palabras que caracterizan la representación del producto. Se puede utilizar para añadir significado adicional al nombre de la representación del producto."
 
-#:IFC.xml:797
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
-msgstr "SIGUIENDO A DERECHO"
+#:IFC.xml:37489
+msgid "IfcProductRepresentation_Name"
+msgstr "Nombre"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
-msgstr "Door with one panel that is folding to the right."
+msgid "IfcProductRepresentation_Name_DEFINITION"
+msgstr "La palabra o grupo de palabras por las cuales se conoce la representación del producto."
 
-#:IFC.xml:798
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+#:IFC.xml:37509
+msgid "IfcProductRepresentationSelect"
+msgstr "Selección de representación de producto"
 
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+#:IFC.xml:37510
+msgid "IfcProjectedCRS"
+msgstr "IfcProyectedCRS"
 
-#:IFC.xml:799
-msgid "IfcDoorStyleOperationEnum_REVOLVING"
-msgstr "REVOLVING"
+msgid "IfcProjectedCRS_DEFINITION"
+msgstr "[[IfcProjectedCRS]] es un sistema de referencia de coordenadas del mapa al que se relaciona la traducción del sistema de coordenadas de ingeniería local del proyecto de construcción o de ingeniería de instalaciones. Los atributos MapProjection y MapZone identifican la proyección al sistema de referencia de coordenadas geográficas subyacente siempre que sean bien conocidos en la solicitud receptora. Se asume que el sistema de referencia de coordenadas proyectado es un sistema de coordenadas 2D o 3D a la derecha del sistema de coordenadas cartesiano, el atributo opcional MapUnit puede ser usado para determinar la unidad de longitud utilizada por el mapa. Definición de xtDef NOTE de la especificación abstracta de OpenGIS, Tema 2 A 2D o con un sistema de referencia de coordenadas 3D del eje vertical usado para aproximar la forma de la tierra en una superficie plana, pero de tal manera que la distorsión inherente a la aproximación sea cuidadosamente controlada y conocida. La corrección de distorsión se aplica comúnmente a cojinetes y distancias calculadas para producir valores que coinciden estrechamente con los valores reales de los campos. El identificador sin ambigüedades por el cual el sistema de referencia de coordenadas es conocido, se almacena en el atributo Nombre heredado. Los identificadores bien definidos incluyen la proyección del mapa y también la información de la zona del mapa. En estos casos se pueden omitir los atributos MapProjection y MapZone. EXAMPLE El identificador EPSG 25832 define la proyección del mapa UTM y la zona 32N en adición al dato geodésico y vertical. HISTORY Nueva entidad en IFC4."
 
-msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
-msgstr "An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property ."
+#:IFC.xml:22972
+msgid "IfcProjectedCRS_MapUnit"
+msgstr "Mapunidad"
 
-#:IFC.xml:800
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+msgid "IfcProjectedCRS_MapUnit_DEFINITION"
+msgstr "Unidad de los ejes de coordenadas que componen el sistema de coordenadas del mapa. NOTA 1 Sólo las medidas de longitud están en el alcance y los dos o tres ejes del sistema de coordenadas del mapa tendrán la misma unidad de longitud. NOTA 2 Si se omite la unidad de mapeo, la unidad para los ejes de coordenadas se toma de las unidades predeterminadas, como se indica en [[IfcProject]].UnitInContext."
 
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "Door that opens by rolling up."
+#:IFC.xml:37511
+msgid "IfcProjectedCRS_MapProjection"
+msgstr "MapProyección"
 
-#:IFC.xml:801
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
-msgstr "SINGLE SWING IFT"
+msgid "IfcProjectedCRS_MapProjection_DEFINITION"
+msgstr "Nombre por el cual se identifica la proyección del mapa. Ejemplos de proyectos de mapa EXAMPLE incluyen .note UTM Gaus Krueger"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
-msgstr "Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis."
+#:IFC.xml:37516
+msgid "IfcProjectedCRS_MapZone"
+msgstr "MapZone"
 
-#:IFC.xml:802
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
-msgstr "DERECHO DE SINGLE"
+msgid "IfcProjectedCRS_MapZone_DEFINITION"
+msgstr "Nombre por el cual se identifica la zona del mapa, relativa a la proyección de mapas . ote para UTM, el número de zonas, como 32 para UTM32 para Gaus Krueger, las zonas de ancho longitudinal, como 3"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
-msgstr "Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door."
+#:IFC.xml:37523
+msgid "IfcRepresentation"
+msgstr "Representación de IfcS"
 
-#:IFC.xml:803
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
-msgstr "LIMPIANDO A LIMPIAR"
+msgid "IfcRepresentation_DEFINITION"
+msgstr "El [[IfcRepresentation]] define el concepto general de representación de las propiedades del producto y, en particular, la forma del producto. xtDef NOTE Definición de la representación ISO 10303 43 Una representación es una colección de uno o más elementos de representación que están relacionados en un contexto de representación especificado. La relación del elemento de representación con el contexto de representación es la base para distinguir qué entidades de elemento de representación están relacionadas. Un elemento de representación puede estar relacionado directamente con un contexto de representación, cuando ocurre como un elemento es una representación, o indirectamente, cuando se hace referencia a través de cualquier número de entidades intervinientes, cada elemento de representación de tipos. NOTA Entidad adaptada de la representación definida en ISO 10303 42. hange ifc2x3 IFC2x3 CHANGE Los atributos inversos asignaciones de capas y representationMap se han añadido con compatibilidad ascendente. .change ifc2x4 IFC4 CHANGE Entity [[IfcRepresentation]] se ha cambiado a un supertipo ABSTRACT. se head Representation Use Definición Cada representación, cualquiera [[IfcShapeRepresentation]] , o [[IfcTopologyRepresentation]] deberá tener una referencia de ContextOfItems bien definida a un [[IfcGeometricRepresentationContext]] como se acordó para esta representación. Nombre de RepresentationIdentifier de la representación, por ejemplo, Cuerpo para forma 3D, FootPrint para vista terreno 2D, eje para eje de referencia. Nombre del tipo de representación para el tipo geométrico, o topológico de representación, por ejemplo, SweptSolid para sólidos barridos 3D, Brep para representación límite. Las Directrices de NOTA para aplicar los valores correctos a esos atributos se proporcionan en la sección de definición de la geometría en cada subtipo de [[IfcElement]] . Estas directrices pueden perfeccionarse aún más en vista de las definiciones o acuerdos de ejecución."
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
-msgstr "Door with one panel that is sliding to the left."
+#:IFC.xml:13018
+msgid "IfcRepresentation_Items"
+msgstr "Elementos"
 
-#:IFC.xml:804
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
-msgstr "LIMPIANDO A DERECHOS"
+msgid "IfcRepresentation_Items_DEFINITION"
+msgstr "Conjunto de elementos de representación geométrica definidos para esta representación."
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
-msgstr "Door with one panel that is sliding to the right."
+#:IFC.xml:13064
+msgid "IfcRepresentation_RepresentationMap"
+msgstr "Mapa de representación"
 
-#:IFC.xml:805
-msgid "IfcDoorStyleOperationEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+msgid "IfcRepresentation_RepresentationMap_DEFINITION"
+msgstr "Uso de la representación dentro de un [[IfcRepresentationMap]] . Si se usa, este [[IfcRepresentation]] puede ser asignado a muchas representaciones como uno de sus elementos usando un [[IfcMappedItem]] . Usar [[IfcRepresentationMap]] es la manera de compartir una representación a menudo de tipo [[IfcShapeRepresentation]] por muchos productos. .change ifc2x3 IFC2x3 CHANGE El atributo inversa LayerAssignments ha sido añadido"
 
-msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined operation type"
+#:IFC.xml:27110
+msgid "IfcRepresentation_LayerAssignments"
+msgstr "Asignaciones de capas"
 
-#:IFC.xml:807
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableOperationEnum"
+msgid "IfcRepresentation_LayerAssignments_DEFINITION"
+msgstr "Asignación de toda la representación a una sola o varias capas s . Las Asignaciones de Capas pueden ser anuladas por Asignaciones de Capas de [[IfcRepresentationItem]] en la lista de Artículos. Los acuerdos de implementación de NOTA pueden restringir el número máximo de asignaciones de capas a 1. .change ifc2x3 IFC2x3 CHANGE El atributo inverso LayerAssignments ha sido añadido"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "This enumeration defines the valid types of permeable coverings. HISTORY New enumeration in IFC2.0. Items GRILL Protective screen of metal bars or wires. LOUVER SCREEN USERDEFINED User defined permeable covering type. NOTDEFINED No information available."
+#:IFC.xml:37495
+msgid "IfcRepresentation_OfProductRepresentation"
+msgstr "Representación del producto"
 
-#:IFC.xml:808
-msgid "IfcPermeableCoveringOperationEnum_GRILL"
-msgstr "GRAN"
+msgid "IfcRepresentation_OfProductRepresentation_DEFINITION"
+msgstr "Referencia a las representaciones de productos a las que se aplica esta representación individual. En la mayoría de los casos es la referencia a una o varias formas de producto, a las que se aplica esta forma representación. .change ifc2x4 IFC4 CHANGE cardinalidad de relación inversa relajada para ser 0 N."
 
-msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
-msgstr "Protective screen of metal bars or wires."
+#:IFC.xml:37536
+msgid "IfcRepresentation_ContextOfItems"
+msgstr "ContextoOfArtículos"
 
-#:IFC.xml:809
-msgid "IfcPermeableCoveringOperationEnum_LOUVER"
-msgstr "LOUVER"
+msgid "IfcRepresentation_ContextOfItems_DEFINITION"
+msgstr "Definición del contexto de representación para el cual los diferentes subtipos de representación son válidos."
 
-msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
-msgstr "LOUVER"
+#:IFC.xml:37524
+msgid "IfcRepresentation_RepresentationIdentifier"
+msgstr "Identificador de representación"
 
-#:IFC.xml:810
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
+msgid "IfcRepresentation_RepresentationIdentifier_DEFINITION"
+msgstr "El identificador opcional de la representación como se utiliza dentro de un proyecto."
 
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "No information available."
+#:IFC.xml:37529
+msgid "IfcRepresentation_RepresentationType"
+msgstr "Tipo de representación"
 
-#:IFC.xml:811
-msgid "IfcPermeableCoveringOperationEnum_SCREEN"
-msgstr "SCREEN"
+msgid "IfcRepresentation_RepresentationType_DEFINITION"
+msgstr "La descripción del tipo de un contexto de representación. El tipo de representación define el tipo de geometría o topología utilizada para representar la representación del producto. Se proporciona más información en los subtipos [[IfcShapeRepresentation]] y [[IfcTopologyRepresentation]] . Los valores soportados para el tipo de contexto deben ser especificados por los acuerdos de los implementadores."
 
-msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
-msgstr "SCREEN"
+#:IFC.xml:37550
+msgid "IfcRepresentationContext"
+msgstr "IfcRepresentaciónContexto"
 
-#:IFC.xml:812
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
-msgstr "USERDEFINADO"
+msgid "IfcRepresentationContext_DEFINITION"
+msgstr "El [[IfcRepresentationContext]] define el contexto al que el [[IfcRepresentation]] de un producto está relacionado. xtDef NOTE Definición de ISO 10303 42 Un contexto de representación es un contexto en el que un conjunto de elementos de representación están relacionados. NOTA Entidad adaptada del contexto de representación definido en ISO 10303 42. .change ifc2x4 IFC4 CHANGE Entity made abstract, had been deprecated from instantiation since IFC2x2."
 
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined permeable covering type."
+#:IFC.xml:37536
+msgid "IfcRepresentationContext_RepresentationsInContext"
+msgstr "Representaciones en el contexto"
 
-#:IFC.xml:814
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+msgid "IfcRepresentationContext_RepresentationsInContext_DEFINITION"
+msgstr "Todas las representaciones de forma que se definen en el mismo contexto de representación."
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "This entity is a description of a panel within a door or window as fillers for opening which allows for air flow. It is given by its properties [[IfcPermeableCoveringProperties]] . A permeable covering is a casement, such as a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling is normally a grill, a louver or a screen. The way of operation is defined in the operation type. The [[IfcPermeableCoveringProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] or the [[IfcDoorStyle]] . More information about the permeable covering can be included in the same list of the window or door style using the [[IfcPropertySet]] for dynamic extensions. This particularly applies for additional properties for the various operation types The [[IfcPermeableCoveringProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the [[IfcWindowStyle]] which is inserted by the [[IfcWindow]] into the spatial context of the project , or of the [[IfcDoorStyle]] which is inserted by the [[IfcDoor]] . The parameters at the [[IfcPermeableCoveringProperties]] define a standard permeable covering. The outer boundary of the panel is determined by the occurrence parameter assigned to the [[IfcWindow]] or [[IfcDoor]] . It has to take the lining parameter into account as well. The position of the permeable covering within the overall window or door is determined by the PanelPosition attribute. Figure 1 illustrates the panel applied to the position within the lining, as defined by the panel position attribute. The following parameters apply to that panel FrameDepth , FrameThickness . covering .. .. .. .. figures ifcpermeablecoveringproperties.gif Figure 1 Permeable covering properties HISTORY New entity in IFC2.0, it had been renamed from IfcPermeableCovering in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+#:IFC.xml:37551
+msgid "IfcRepresentationContext_ContextIdentifier"
+msgstr "ContextIdentifier"
 
-#:IFC.xml:837
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "Estilo de forma"
+msgid "IfcRepresentationContext_ContextIdentifier_DEFINITION"
+msgstr "El identificador opcional del contexto de representación utilizado dentro de un proyecto."
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+#:IFC.xml:37556
+msgid "IfcRepresentationContext_ContextType"
+msgstr "Tipo de contexto"
 
-#:IFC.xml:815
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "FrameProfundidad"
+msgid "IfcRepresentationContext_ContextType_DEFINITION"
+msgstr "La descripción del tipo de un contexto de representación. Los valores soportados para el tipo de contexto deben ser especificados por acuerdos de implementadores."
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Profundidad del marco del panel utilizado para incluir la cubierta permeable , medida de cara frontal a cara trasera horizontalmente i. . perpendicular al plano de elevación de la puerta o ventana."
+#:IFC.xml:37562
+msgid "IfcRepresentationContextSameWCS"
+msgstr "IfcRepresentationContextSameWCS"
 
-#:IFC.xml:820
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "Espesor de estructura"
+#:IFC.xml:37570
+msgid "IfcSameValidPrecision"
+msgstr "IfcSameValidPrecision"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Ancho del marco de panel utilizado para incluir la cubierta permeable , medido desde el interior del panel a permeable cubriendo el exterior del panel en el revestimiento , i. , paralela a la ventana o al plano de elevación de la puerta."
+#:IFC.xml:37578
+msgid "IfcShapeAspect"
+msgstr "IfcShapeAspect"
 
-#:IFC.xml:825
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "Tipo de operación"
+msgid "IfcShapeAspect_DEFINITION"
+msgstr "[[IfcShapeAspect]] permite agrupar elementos de representación de forma que representan aspectos o componentes de la forma de un producto. Por lo tanto, las representaciones de forma de los componentes de la forma del producto representan una parte distintiva de un producto que puede ser abordado explícitamente. Los [[IfcShapeAspect]] s pueden tener información material distinta u otras características distictas que difiere de otras partes de la representación de la forma del producto. NOTA El [[IfcShapeAspect]] junto con el [[IfcMaterialConstituent]] se puede utilizar para asociar información material disticta a partes de la representación de la forma del producto. La Figura 1 indica la asociación de características del material a la forma de los aspectos. .. figuras ifcshapeaspect fig1.png Figura 1 aspectos de forma para asociar material . xtDef NOTE Definición de ISO 10303 41 Un aspecto de forma es un elemento identificable de la forma de un objeto. NOTA Entidad adaptada desde el aspecto de la forma definido en la norma ISO 10303 42. .change ifc2x4 IFC4 CHANGE Atributo PartOfProductDefinitionShape declarado OPCIONAL y extendido al tipo [[IfcProductRepresentationSelect]] con compatibilidad ascendente para el intercambio basado en archivos. Pec head Informal Propositions 1. Si ShapeRepresentations apunta a dar forma a representaciones que son parte de un [[IfcProductDefinitionShape]] , PartOfProductDefinitionShape debe referirse a esta instancia de [[IfcProductDefinitionShape]] . 2. Si ShapeRepresentations apunta a dar forma a representaciones que son parte de un [[IfcRepresentationMap]] , PartOfProductDefinitionShape debe referirse a esta instancia de [[IfcRepresentationMap]] ."
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Tipos de operaciones permeables de cubierta, también utilizados para asignar presentaciones simbólicas estándar de acuerdo con las normas nacionales de construcción."
+#:IFC.xml:9584
+msgid "IfcShapeAspect_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:830
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "Posición del panel"
+msgid "IfcShapeAspect_HasExternalReferences_DEFINITION"
+msgstr "HasExternalReferences"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Posición de este permeable panel de recubrimiento dentro del tipo de ventana o puerta general."
+#:IFC.xml:37601
+msgid "IfcShapeAspect_ShapeRepresentations"
+msgstr "Representaciones de forma"
 
-#:IFC.xml:849
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowLiningProperties"
+msgid "IfcShapeAspect_ShapeRepresentations_DEFINITION"
+msgstr "Lista de representaciones de forma. Cada miembro define una representación válida de un tipo particular dentro de un contexto de representación particular como un aspecto o parte de la definición de un producto. .change ifc2x3 IFC2x3 CHANGE El tipo de datos ha sido cambiado de [[IfcShapeRepresentation]] a [[IfcShapeModel]] con compatibilidad ascendente"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+#:IFC.xml:37579
+msgid "IfcShapeAspect_Description"
+msgstr "Descripción"
 
-#:IFC.xml:907
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "Estilo de forma"
+msgid "IfcShapeAspect_Description_DEFINITION"
+msgstr "La palabra o grupo de palabras que caracterizan el aspecto de la forma. Se puede utilizar para añadir significado adicional al nombre del aspecto."
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+#:IFC.xml:37584
+msgid "IfcShapeAspect_Name"
+msgstr "Nombre"
 
-#:IFC.xml:850
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+msgid "IfcShapeAspect_Name_DEFINITION"
+msgstr "La palabra o grupo de palabras por las cuales se conoce el aspecto de la forma. Es una etiqueta para indicar la semántica particular de un componente dentro de la forma de definición del producto, utilizada para proporcionar significado. Ejemplo utiliza la etiqueta de acristalamiento para definir qué componente de una forma de ventana define el área de acristalamiento."
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+#:IFC.xml:37589
+msgid "IfcShapeAspect_PartOfProductDefinitionShape"
+msgstr "Definición del producto"
 
-#:IFC.xml:855
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "Primer offset"
+msgid "IfcShapeAspect_PartOfProductDefinitionShape_DEFINITION"
+msgstr "Definición del producto"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Desplazamiento de la línea central del transom, medida a lo largo del eje z del sistema de coordenadas de colocación de ventanas. Un valor de desplazamiento 0.5 indica que el transom está situado en el centro de la ventana."
+#:IFC.xml:37594
+msgid "IfcShapeAspect_ProductDefinitional"
+msgstr "Definición del producto"
 
-#:IFC.xml:860
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "Profundidad"
+msgid "IfcShapeAspect_ProductDefinitional_DEFINITION"
+msgstr "Definición del producto"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profundidad de la dimensión de revestimiento de la ventana medida perpendicular al plano de elevación de la ventana ."
+#:IFC.xml:37615
+msgid "IfcShapeModel"
+msgstr "IfcShapeModelo"
 
-#:IFC.xml:865
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+msgid "IfcShapeModel_DEFINITION"
+msgstr "[[IfcShapeModel]] representa el concepto de una representación geométrica particular y o topológica de la forma de un producto o de un componente de un producto en un contexto de representación. Este contexto de representación tiene que ser un contexto de representación geométrica con la excepción de representaciones topológicas sin geometría asociada . Los dos subtipos son [[IfcShapeRepresentation]] para cubrir modelos geométricos que representan una forma, y [[IfcTopologyRepresentation]] cubrir la conectividad de un producto o componente de producto. La topología puede o no estar asociada a la geometría. El [[IfcShapeModel]] puede ser una representación geométrica de forma y o topologogical de un producto a través de [[IfcProductDefinitionShape]] , o una representación de forma geométrica y o topologógica de un componente de una forma de producto a través de [[IfcShapeAspect]] . HISTORY Nueva entidad en IFC2x3."
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+#:IFC.xml:37601
+msgid "IfcShapeModel_OfShapeAspect"
+msgstr "Aspecto de forma"
 
-#:IFC.xml:870
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "Grosor del recubrimiento"
+msgid "IfcShapeModel_OfShapeAspect_DEFINITION"
+msgstr "Referencia al aspecto de la forma, para el cual es la forma de representación."
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+#:IFC.xml:37618
+msgid "IfcShapeRepresentation"
+msgstr "IfcShapeRepresentación"
 
-#:IFC.xml:875
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "Entrada al panel desplazado %s"
+msgid "IfcShapeRepresentation_DEFINITION"
+msgstr "The [[IfcShapeRepresentation]] represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute RepresentationType is used to define the geometric model used for the shape representation e.g. SweptSolid , or Brep , the inherited attribute RepresentationIdentifier is used to denote the kind of the representation captured by the [[IfcShapeRepresentation]] e.g. Axis , Body , etc. . Several representation identifiers for shape representation are included as predefined values for RepresentationIdentifier . Table 1 indicates the defined list of values for RepresentationIdentifier . Identifier CoG Point to identify the center of gravity of an element. This value can be used for validation purposes. Box Bounding box as simplified 3D box geometry of an element Annotation 3D annotations not representing elements Axis 2D or 3D Axis, or single line, representation of an element FootPrint 2D Foot print, or double line, representation of an element, projected to ground view Profile 3D line representation of a profile being planar, e.g. used for door and window outlines Surface 3D Surface representation, e.g. of an analytical surface, of an elementplane Reference 3D representation that is not part of the Body representation. This is used, e.g., for opening geometries, if there are to be excluded from an implicit Boolean operation. Body 3D Body representation, e.g. as wireframe, surface, or solid model, of an element Body FallBack 3D Body representation, e.g. as tessellation, or other surface, or boundary representation, added in addition to the solid model potentially involving Boolean operations of an element Clearance 3D clearance volume of the element. Such clearance region indicates space that should not intersect with the Body representation of other elements, though may intersect with the Clearance representation of other elements. Lighting Representation of emitting light as a light source within a shape representation Table 1 Representation identifiers Several representation types for shape representation are included as predefined values for RepresentationType . Table 2 indicates the defined list of values for RepresentationType . Type Point 2 or 3 dimensional point s PointCloud 3 dimensional points prepresented by a point list Curve 2 or 3 dimensional curve s Curve2D 2 dimensional curve s Curve3D 3 dimensional curve s Surface 2 or 3 dimensional surface s Surface2D 2 dimensional surface s a region on ground view Surface3D 3 dimensional surface s FillArea 2D region s represented as a filled area hatching Text text defined as text literals AdvancedSurface 3 dimensional b spline surface s GeometricSet points, curves, surfaces 2 or 3 dimensional GeometricCurveSet points, curves 2 or 3 dimensional Annotation2D points, curves 2 or 3 dimensional , hatches and text 2 dimensional SurfaceModel face based and shell based surface model s , or tessellated surface model s Tessellation tessellated surface representation s only SolidModel including swept solid, Boolean results and Brep bodies more specific types are SweptSolid swept area solids, by extrusion and revolution, excluding tapered sweeps AdvancedSweptSolid swept area solids created by sweeping a profile along a directrix, and tapered sweeps Brep faceted Brep s with and without voids AdvancedBrep Brep s based on advanced faces, with b spline surface geometry, with and without voids CSG Boolean results of operations between solid models, half spaces and Boolean results Clipping Boolean differences between swept area solids, half spaces and Boolean results additional types some additional representation types are provided BoundingBox simplistic 3D representation by a bounding box SectionedSpine cross section based representation of a spine curve and planar cross sections. It can represent a surface or a solid and the interpolations of the between the cross sections is not defined LightSource light source with depending on type position, orientation, light colour, intensity and attenuation MappedRepresentation representation based on mapped item s , referring to a representation map. Note it can be seen as an inserted block reference. The shape representation of the mapped item has a representation type declaring the type of its representation items. Table 2 Representation types .extDef NOTE The definition relates to shape representation defined in ISO 10303 41. HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE The RepresentationType s Point , PointCloud , Curve , Curve3D , Surface , Surface2D , Surface3D , FillArea , Text , Tessellation , AdvancedBrep , LightSource , and the RepresentationIdentifier Body FallBack , Profile , Clearance , Lighting have been added. Formal Propositions CorrectContext The context to which the [[IfcShapeRepresentation]] is assign, shall be of type [[IfcGeometricRepresentationContext]]. NoTopologicalItem No topological representation item shall be directly used for shape representations, with the exception of [[IfcVertexPoint]], [[IfcEdgeCurve]], [[IfcFaceSurface]]. HasRepresentationType A representation type should be provided for the shape representation. HasRepresentationIdentifier A representation identifier should be provided for the shape representation. CorrectItemsForType Checks the proper use of Items according to the RepresentationType ."
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+#:IFC.xml:37621
+msgid "IfcShapeRepresentationTypes__RepType"
+msgstr "Tipo de repositorio IfcShapeRepresentation"
 
-#:IFC.xml:880
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "Ligar al panel desplazado Y"
+#:IFC.xml:37629
+msgid "IfcStyledRepresentation"
+msgstr "IfcStyledRepresentation"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Desplazamiento entre el revestimiento y el panel de la ventana medido a lo largo del eje y de la posición local. Debe ser menor o igual que el [[IfcWindowPanelProperties]]. AnelThickness .change ifc2x4 IFC4 CHANGE Nuevo atributo añadido al final de la definición de la entidad."
+msgid "IfcStyledRepresentation_DEFINITION"
+msgstr "El [[IfcStyledRepresentation]] representa el concepto de una presentación con estilo siendo una representación de un producto o un componente de producto, como el material. dentro de un contexto de representación. Este contexto de representación no necesita ser pero puede ser un contexto de representación geométrico. NOTA El uso actual de [[IfcStyledRepresentation]] está restringido a la asignación de información de presentación a un material. El [[IfcStyledRepresentation]] incluye solo estilos de presentación [[IfcCurveStyle]] , FillAreaStyle , [[IfcSurfaceStyle]] que definen cómo debe presentarse un material dentro de una vista particular eventualmente y escala el contexto de representación dependiente. Todas las instancias de [[IfcStyledRepresentation]] son referenciadas por [[IfcMaterialDefinitionRepresentation]] , y asignadas a [[IfcMaterial]] por [[IfcMaterialDefinitionRepresentation]].RepresentedMaterial . Una representación con estilo tiene que incluir uno o varios elementos con el estilo de la curva de información asociada, tú, texto, área de relleno o estilos de superficie . No contendrá los elementos de representación geométrica que estén cubiertos. HISTORY Nueva entidad en IFC2x2. Sólo se permiten Proposiciones Formales [[IfcStyledItem]] s o subtipos como miembros en la lista de artículos , heredado de [[IfcRepresentation]] . .change ifc2x3 IFC2x3 CHANGE Nuevo donde regla para asegurar el uso para representaciones de definición de materiales, y otras representaciones no formales"
 
-#:IFC.xml:885
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "Multiespesor"
+#:IFC.xml:37632
+msgid "IfcStyleModel"
+msgstr "IfcStyleModel"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcStyleModel_DEFINITION"
+msgstr "[[IfcStyleModel]] representa el concepto de un estilo de presentación particular definido para un material u otra característica de un producto o un componente de producto dentro de un contexto de representación. Este contexto de representación puede pero no tiene que ser un contexto de representación geométrica. [[IfcStyleModel]] puede ser un estilo de presentación de un material a través de [[IfcMaterialDefinitionRepresentation]] , potencialmente diferenciado para diferentes contextos de representación, por ejemplo, diferentes odio de material dependiendo de la escala del contexto de representación objetivo . HISTORY Nueva entidad en IFC2x3."
 
-#:IFC.xml:890
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:37635
+msgid "IfcTopologyRepresentation"
+msgstr "Representación de IfcTopología"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "IfcTopologyRepresentation_DEFINITION"
+msgstr "[[IfcTopologyRepresentation]] representa el concepto de una representación topológica particular de un producto o componente de un producto dentro de un contexto de representación. Este contexto de representación no necesita ser pero puede ser un contexto de representación geométrico. Varios tipos de representación para la representación de formas se incluyen como tipos predefinidos de representación topológica de vértices de vértices con o sin representación topológica de borde geométrico asignada con o sin representación de trayectoria geométrica con o sin representación de trayectoria geométrica asignada con o sin representación de cara topológica con o sin la geometría asignada Shell topológica con o sin representación geométrica asignada sin definir ninguna restricción impuesta El tipo de representación se da como un valor de cadena en el atributo de representación heredadoType . HISTORIA Nueva entidad en IFC2x2. Proposiciones formales WR21 Sólo elementos topológicos de representación deben ser utilizados. WR22 Un tipo de representación debe ser dado a la representación topología. WR23 Comprueba el uso correcto de los artículos de acuerdo con el tipo de representación."
 
-#:IFC.xml:895
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SegundoTransomOffset"
-
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
-
-#:IFC.xml:900
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "Transomespesor"
-
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
-
-#:IFC.xml:919
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
-
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure SideHungRightHand panel that opens to the right when viewed from the outside SideHungLeftHand panel that opens to the left when viewed from the outside TiltAndTurnRightHand panel that opens to the right and is bottom hung TiltAndTurnLeftHand panel that opens to the left and is bottom hung TopHung panel is top hung BottomHung panel is bottom hung PivotHorizontal panel is swinging horizontally hinges are in the middle PivotVertical panel is swinging vertically hinges are in the middle SlidingHorizontal panel is sliding horizontally SlidingVertical panel is sliding vertically RemovableCasement panel is removable FixedCasement panel is fixed OtherOperation user defined operation type NotDefined Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. Items SIDEHUNGRIGHTHAND SIDEHUNGLEFTHAND TILTANDTURNRIGHTHAND TILTANDTURNLEFTHAND TOPHUNG BOTTOMHUNG PIVOTHORIZONTAL PIVOTVERTICAL SLIDINGHORIZONTAL SLIDINGVERTICAL REMOVABLECASEMENT FIXEDCASEMENT OTHEROPERATION NOTDEFINED"
-
-#:IFC.xml:920
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
-msgstr "BOTTOMHUNG"
-
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
-msgstr "BOTTOMHUNG"
-
-#:IFC.xml:921
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
-msgstr "FIXEDCASEMENT"
-
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
-msgstr "FIXEDCASEMENT"
-
-#:IFC.xml:922
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:923
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
-msgstr "OTEROPERACIÓN"
-
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
-msgstr "OTEROPERACIÓN"
-
-#:IFC.xml:924
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
-msgstr "PIVOTORIZONTAL"
-
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
-msgstr "PIVOTORIZONTAL"
-
-#:IFC.xml:925
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
-msgstr "PIVOTVERTICAL"
-
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
-msgstr "PIVOTVERTICAL"
-
-#:IFC.xml:926
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
-msgstr "REMOVABLECASAMIENTO"
-
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
-msgstr "REMOVABLECASAMIENTO"
-
-#:IFC.xml:927
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
-msgstr "SIDEHUNGLEFTHAND"
-
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
-msgstr "SIDEHUNGLEFTHAND"
-
-#:IFC.xml:928
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
-msgstr "SIDEHUNGRIGHTHAND"
-
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
-msgstr "SIDEHUNGRIGHTHAND"
-
-#:IFC.xml:929
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
-msgstr "SLIDINGHORIZONTAL"
-
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
-msgstr "SLIDINGHORIZONTAL"
-
-#:IFC.xml:930
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
-msgstr "SLIDINGVERTICAL"
-
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
-msgstr "SLIDINGVERTICAL"
-
-#:IFC.xml:931
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
-msgstr "TILTANDTURNLEFTHAND"
-
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
-msgstr "TILTANDTURNLEFTHAND"
-
-#:IFC.xml:932
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
-msgstr "TILTANDTURNRIGHTHAND"
-
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
-msgstr "TILTANDTURNRIGHTHAND"
-
-#:IFC.xml:933
-msgid "IfcWindowPanelOperationEnum_TOPHUNG"
-msgstr "TOPHUNG"
-
-msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
-msgstr "TOPHUNG"
-
-#:IFC.xml:935
-msgid "IfcWindowPanelPositionEnum"
-msgstr "Posición del panel de ventana Ifc"
-
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
-
-#:IFC.xml:936
-msgid "IfcWindowPanelPositionEnum_BOTTOM"
-msgstr "BOTÓN"
-
-msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
-msgstr "BOTÓN"
-
-#:IFC.xml:937
-msgid "IfcWindowPanelPositionEnum_LEFT"
-msgstr "IZQUIERDO"
-
-msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
-msgstr "IZQUIERDO"
-
-#:IFC.xml:938
-msgid "IfcWindowPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
-
-msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
-
-#:IFC.xml:939
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:940
-msgid "IfcWindowPanelPositionEnum_RIGHT"
-msgstr "REGISTRO"
-
-msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "REGISTRO"
-
-#:IFC.xml:941
-msgid "IfcWindowPanelPositionEnum_TOP"
-msgstr "MEJOR"
-
-msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
-msgstr "MEJOR"
-
-#:IFC.xml:943
-msgid "IfcWindowPanelProperties"
-msgstr "Propiedades del panel de la ventana Ifc"
-
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
-
-#:IFC.xml:966
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "Estilo de forma"
-
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Enlace opcional a una definición de aspecto de la forma, que indica la parte de la representación geométrica del estilo de la ventana, que se utiliza para representar el panel. . DEPRECACIÓN obsoleta. El atributo está obsoleto y ya no se utilizará, es decir, el valor debe ser NIL ."
-
-#:IFC.xml:944
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "FrameProfundidad"
-
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
-
-#:IFC.xml:949
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "Espesor de estructura"
-
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Ancho del marco del panel, medido desde el interior del panel en acristalamiento hasta el exterior del panel en el revestimiento , es decir, paralelo al plano de elevación de la ventana."
-
-#:IFC.xml:954
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "Tipo de operación"
-
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
-
-#:IFC.xml:959
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "Posición del panel"
-
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
-
-#:IFC.xml:978
-msgid "IfcWindowStyle"
-msgstr "Estilo de ventana Ifc"
-
-msgid "IfcWindowStyle_DEFINITION"
-msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead."
-
-#:IFC.xml:979
-msgid "IfcWindowStyle_ConstructionType"
-msgstr "Tipo de Construcción"
-
-msgid "IfcWindowStyle_ConstructionType_DEFINITION"
-msgstr "Tipo que define la construcción básica y el tipo de material de la ventana."
-
-#:IFC.xml:984
-msgid "IfcWindowStyle_OperationType"
-msgstr "Tipo de operación"
-
-msgid "IfcWindowStyle_OperationType_DEFINITION"
-msgstr "Tipo que defina el diseño general y el funcionamiento del estilo de la ventana."
-
-#:IFC.xml:989
-msgid "IfcWindowStyle_ParameterTakesPrecedence"
-msgstr "Precedencia de parámetros"
-
-msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
-msgstr "El valor booleano refleja, si el parámetro dado en el recubrimiento adjunto y las propiedades del panel define exactamente el TRUE geométrico, o si la forma de estilo adjunta tiene prioridad FALSE . En el último caso el parámetro tiene sólo un valor informativo."
-
-#:IFC.xml:994
-msgid "IfcWindowStyle_Sizeable"
-msgstr "Tamañable"
-
-msgid "IfcWindowStyle_Sizeable_DEFINITION"
-msgstr "El Booleano indica, si el ShapeStyle adjunto puede ser tamaño usando el factor de escala de transformación , o no FALSE . Si no, el ShapeStyle debe ser insertado por el [[IfcWindow]] usando [[IfcMappedItem]] con el factor de escala 1."
-
-#:IFC.xml:1001
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcEstilo de la ventana ConstrucciónEnum"
-
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. Items ALUMINIUM HIGH STEEL WOOD ALUMINIUM WOOD PLASTIC OTHER CONSTRUCTION NOTDEFINED"
-
-#:IFC.xml:1002
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIO"
-
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIO"
-
-#:IFC.xml:1003
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOD"
-
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOD"
-
-#:IFC.xml:1004
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "GRAVE ALTO SUPERIOR"
-
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "GRAVE ALTO SUPERIOR"
-
-#:IFC.xml:1005
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:1006
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
-msgstr "OTROS CONSTRUCIONES"
-
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
-msgstr "OTROS CONSTRUCIONES"
-
-#:IFC.xml:1007
-msgid "IfcWindowStyleConstructionEnum_PLASTIC"
-msgstr "PULASTICOS"
-
-msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PULASTICOS"
-
-#:IFC.xml:1008
-msgid "IfcWindowStyleConstructionEnum_STEEL"
-msgstr "STEEL"
-
-msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "STEEL"
-
-#:IFC.xml:1009
-msgid "IfcWindowStyleConstructionEnum_WOOD"
-msgstr "WOOD"
-
-msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOD"
-
-#:IFC.xml:1011
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyleOperationEnum"
-
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations Items SINGLE PANEL Window with one panel. DOUBLE DOUBLE TRIPLE PANEL VERTICAL Window with three panels. The configuration of the panels is vertically. TRIPLE TRIPLE PANEL TOP Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TRIPLE TRIPLE PANEL RIGHT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. TRIPLE PANEL HORIZONTAL Window with three panels. The configuration of the panels is horizontally. USERDEFINED user defined operation type NOTDEFINED"
-
-#:IFC.xml:1012
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
-msgstr "HORIZONTAL DE PANEL DOBLE"
-
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "HORIZONTAL DE PANEL DOBLE"
-
-#:IFC.xml:1013
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
-msgstr "VERTICAL DE PANEL DOBLE"
-
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
-msgstr "VERTICAL DE PANEL DOBLE"
-
-#:IFC.xml:1014
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINADO"
-
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINADO"
-
-#:IFC.xml:1015
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
-msgstr "PANEL DE SINGLE"
-
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
-msgstr "Window with one panel."
-
-#:IFC.xml:1016
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
-msgstr "BOTTOMA DE PANEL DE TRIPLE"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
-msgstr "BOTTOMA DE PANEL DE TRIPLE"
-
-#:IFC.xml:1017
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
-msgstr "HORIZONTAL DEL PANEL"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is horizontally."
-
-#:IFC.xml:1018
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
-msgstr "MENSAJE DE PANEL DE PANEL"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
-msgstr "MENSAJE DE PANEL DE PANEL"
-
-#:IFC.xml:1019
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
-msgstr "DERECHO DE PANEL DE TRIPLE"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side."
-
-#:IFC.xml:1020
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
-msgstr "PROPIEDAD DE PANEL"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top."
-
-#:IFC.xml:1021
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
-msgstr "VERTICAL DEL PANEL DE TRIPLE"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is vertically."
-
-#:IFC.xml:1022
-msgid "IfcWindowStyleOperationEnum_USERDEFINED"
-msgstr "USERDEFINADO"
-
-msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "user defined operation type"
+#:IFC.xml:37638
+msgid "IfcTopologyRepresentationTypes__RepType"
+msgstr "Tipo de representante de Topología IfcTopología"
 
