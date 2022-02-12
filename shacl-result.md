@@ -1,4 +1,4 @@
-## http://example.org/ifc43Shapes/DefinitionForProperty
+## DefinitionForProperty
 
 * The Property 'Pset_ActorCommon.ActorCategory' has no definition
 * The Property 'Pset_ActuatorPHistory.PositionHistory' has no definition
@@ -151,7 +151,7 @@
 * The Property 'Pset_UnitaryControlElementTypeCommon.OperationMode' has no definition
 * The Property 'Pset_UnitaryControlElementTypeIndicatorPanel.UnitaryApplication' has no definition
 * The Property 'Pset_VehicleAvailability.MaintenanceDowntime' has no definition
-## http://example.org/ifc43Shapes/DefinitionForPropertySet
+## DefinitionForPropertySet
 
 * The resource 'Pset_Address' has no definition
 * The resource 'Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal' has no definition
@@ -325,7 +325,7 @@
 * The resource 'Pset_UnitaryControlElementTypeControlPanel' has no definition
 * The resource 'Pset_VoltageInstrumentTransformer' has no definition
 * The resource 'Pset_WiredCommunicationPortCommon' has no definition
-## http://example.org/ifc43Shapes/PropertyForDefinition
+## PropertyForDefinition
 
 * For document 'ActualWork.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentRange.md/a/properties/docs' a property cannot be found
