@@ -1,4 +1,4 @@
-## DefinitionForProperty
+## http://example.org/ifc43Shapes/DefinitionForProperty
 
 * The Property 'Pset_ActorCommon.ActorCategory' has no definition
 * The Property 'Pset_ActuatorPHistory.PositionHistory' has no definition
@@ -74,12 +74,15 @@
 * The Property 'Pset_EnvironmentalImpactIndicators.IndicatorsUnit' has no definition
 * The Property 'Pset_FanCentrifugal.FanArrangement' has no definition
 * The Property 'Pset_FastenerWeld.n' has no definition
+* The Property 'Pset_FenderCommon.EnergyAbsorption' has no definition
+* The Property 'Pset_FenderDesignCriteria.EnergyAbsorption' has no definition
 * The Property 'Pset_FittingTransition.EccentricityInY' has no definition
 * The Property 'Pset_FittingTransition.EccentricityInZ' has no definition
 * The Property 'Pset_FlowMeterOccurrence.FlowMeterOurpose' has no definition
 * The Property 'Pset_GeotechnicalAssemblyCommon.BoreHolePurpose' has no definition
 * The Property 'Pset_GeotechnicalStratumCommon.StratumColour' has no definition
 * The Property 'Pset_HumidifierTypeCommon.HumidifierApplication' has no definition
+* The Property 'Pset_ImpactProtectionDeviceTypeBumper.EnergyAbsorption' has no definition
 * The Property 'Pset_JunctionBoxTypeCommon.IP_Code' has no definition
 * The Property 'Pset_JunctionBoxTypeCommon.JunctionBoxMountingType' has no definition
 * The Property 'Pset_MaintenanceTriggerPerformance.PerformanceMaintenanceLevel' has no definition
@@ -147,305 +150,297 @@
 * The Property 'Pset_UnitaryControlElementPHistory.OperationModeHistory' has no definition
 * The Property 'Pset_UnitaryControlElementTypeCommon.OperationMode' has no definition
 * The Property 'Pset_UnitaryControlElementTypeIndicatorPanel.UnitaryApplication' has no definition
-## PropertyForDefinition
+* The Property 'Pset_VehicleAvailability.MaintenanceDowntime' has no definition
+## http://example.org/ifc43Shapes/DefinitionForPropertySet
 
-* For document 'docs/properties/a/Actor Assignment.md' a property cannot be found
-* For document 'docs/properties/a/ActualWork.md' a property cannot be found
-* For document 'docs/properties/a/AdjustmentRange.md' a property cannot be found
-* For document 'docs/properties/a/AdjustmentRangeStepValue.md' a property cannot be found
-* For document 'docs/properties/a/AdjustmentValues.md' a property cannot be found
-* For document 'docs/properties/a/AffectsSurroundings.md' a property cannot be found
-* For document 'docs/properties/a/Aggregation.md' a property cannot be found
-* For document 'docs/properties/a/Alignment Attributes.md' a property cannot be found
-* For document 'docs/properties/a/Annotation 2D Geometry.md' a property cannot be found
-* For document 'docs/properties/a/Annotation 3D Geometry.md' a property cannot be found
-* For document 'docs/properties/a/Annotation Geometry.md' a property cannot be found
-* For document 'docs/properties/a/Approval Association.md' a property cannot be found
-* For document 'docs/properties/a/Arbitrary Profile Definition.md' a property cannot be found
-* For document 'docs/properties/a/Area.md' a property cannot be found
-* For document 'docs/properties/a/Arrangement.md' a property cannot be found
-* For document 'docs/properties/a/AssessmentOfRisk.md' a property cannot be found
-* For document 'docs/properties/a/Assignment to Group.md' a property cannot be found
-* For document 'docs/properties/a/Axis 2D Geometry.md' a property cannot be found
-* For document 'docs/properties/a/Axis 3D Geometry.md' a property cannot be found
-* For document 'docs/properties/a/Axis Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Bloss Transition Segment.md' a property cannot be found
-* For document 'docs/properties/b/Body AdvancedBrep Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body AdvancedSwept DiskSolid PolyCurve Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body AdvancedSweptSolid Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body Brep Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body CSG Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body Clipping Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body SurfaceModel Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body SurfaceOrSolidModel Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body SweptSolid Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body SweptSolid PolyCurve Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Body Tessellation Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Box Geometry.md' a property cannot be found
-* For document 'docs/properties/b/Bridge Alignment Reference View.md' a property cannot be found
-* For document 'docs/properties/b/Bridge Design Transfer View.md' a property cannot be found
-* For document 'docs/properties/b/Bridge Model Views.md' a property cannot be found
-* For document 'docs/properties/b/Bridge Reference View.md' a property cannot be found
-* For document 'docs/properties/b/Building Attributes.md' a property cannot be found
-* For document 'docs/properties/c/Classification Association.md' a property cannot be found
-* For document 'docs/properties/c/Clearance Geometry.md' a property cannot be found
-* For document 'docs/properties/c/Clothoid Transition Segment.md' a property cannot be found
-* For document 'docs/properties/c/CoG Geometry.md' a property cannot be found
-* For document 'docs/properties/c/Colour.md' a property cannot be found
-* For document 'docs/properties/c/CompactedVolume.md' a property cannot be found
-* For document 'docs/properties/c/Component to Distribution System.md' a property cannot be found
-* For document 'docs/properties/c/CompositeCurve Profile Definition.md' a property cannot be found
-* For document 'docs/properties/c/Condition.md' a property cannot be found
-* For document 'docs/properties/c/Constraint Association.md' a property cannot be found
-* For document 'docs/properties/c/Control Assignment.md' a property cannot be found
-* For document 'docs/properties/c/Control Flow.md' a property cannot be found
-* For document 'docs/properties/c/CoolingDesignAirflow.md' a property cannot be found
-* For document 'docs/properties/c/Core data schemas.md' a property cannot be found
-* For document 'docs/properties/c/Cosine Transition Segment.md' a property cannot be found
-* For document 'docs/properties/c/Count.md' a property cannot be found
-* For document 'docs/properties/c/Cubic Transition Segment.md' a property cannot be found
-* For document 'docs/properties/c/CurrentCarryingCapasity.md' a property cannot be found
-* For document 'docs/properties/d/Design Transfer View.md' a property cannot be found
-* For document 'docs/properties/d/Document Association.md' a property cannot be found
-* For document 'docs/properties/d/Domain specific data schemas.md' a property cannot be found
-* For document 'docs/properties/d/Door Attributes.md' a property cannot be found
-* For document 'docs/properties/d/Door Type Attributes.md' a property cannot be found
-* For document 'docs/properties/e/EavesHeight.md' a property cannot be found
-* For document 'docs/properties/e/Element Composition.md' a property cannot be found
-* For document 'docs/properties/e/Element Connectivity.md' a property cannot be found
-* For document 'docs/properties/e/Element Covering.md' a property cannot be found
-* For document 'docs/properties/e/Element Decomposition.md' a property cannot be found
-* For document 'docs/properties/e/Element Filling.md' a property cannot be found
-* For document 'docs/properties/e/Element Nesting.md' a property cannot be found
-* For document 'docs/properties/e/Element Occurrence Attributes.md' a property cannot be found
-* For document 'docs/properties/e/Element Type Predefined Type.md' a property cannot be found
-* For document 'docs/properties/e/Element Voiding.md' a property cannot be found
-* For document 'docs/properties/e/ExhaustAirFlowRate.md' a property cannot be found
-* For document 'docs/properties/e/Exponent.md' a property cannot be found
-* For document 'docs/properties/f/FinishCeilingHeight.md' a property cannot be found
-* For document 'docs/properties/f/FinishFloorHeight.md' a property cannot be found
-* For document 'docs/properties/f/FootPrint Annotation Geometry.md' a property cannot be found
-* For document 'docs/properties/f/FootPrint GeomSet Geometry.md' a property cannot be found
-* For document 'docs/properties/f/FootPrint GeomSet PolyCurve Geometry.md' a property cannot be found
-* For document 'docs/properties/f/FootPrint Geometry.md' a property cannot be found
-* For document 'docs/properties/f/FootprintArea.md' a property cannot be found
-* For document 'docs/properties/f/ForeignObjectDetectionSensorInterface.md' a property cannot be found
-* For document 'docs/properties/f/Fundamental concepts and assumptions.md' a property cannot be found
-* For document 'docs/properties/g/General Usage.md' a property cannot be found
-* For document 'docs/properties/g/General.md' a property cannot be found
-* For document 'docs/properties/g/Geometry.md' a property cannot be found
-* For document 'docs/properties/g/Grid Attributes.md' a property cannot be found
-* For document 'docs/properties/g/GrossArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossCeilingArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossCrossSectionArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossFloorArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossFootprintArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossHeight.md' a property cannot be found
-* For document 'docs/properties/g/GrossPerimeter.md' a property cannot be found
-* For document 'docs/properties/g/GrossSideArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossSurfaceArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossVolume.md' a property cannot be found
-* For document 'docs/properties/g/GrossWallArea.md' a property cannot be found
-* For document 'docs/properties/g/GrossWeight.md' a property cannot be found
-* For document 'docs/properties/g/Group Assignment.md' a property cannot be found
-* For document 'docs/properties/h/HeatingDesignAirflow.md' a property cannot be found
-* For document 'docs/properties/h/Helmert Transition Segment.md' a property cannot be found
-* For document 'docs/properties/i/IK.md' a property cannot be found
-* For document 'docs/properties/i/IP.md' a property cannot be found
-* For document 'docs/properties/i/Identifier.md' a property cannot be found
-* For document 'docs/properties/i/IsSignalFrameMiniature.md' a property cannot be found
-* For document 'docs/properties/l/Layer.md' a property cannot be found
-* For document 'docs/properties/l/Library Association.md' a property cannot be found
-* For document 'docs/properties/l/Lighting Geometry.md' a property cannot be found
-* For document 'docs/properties/l/Location.md' a property cannot be found
-* For document 'docs/properties/l/LooseVolume.md' a property cannot be found
-* For document 'docs/properties/m/MaintenanceType.md' a property cannot be found
-* For document 'docs/properties/m/Mapped Geometry.md' a property cannot be found
-* For document 'docs/properties/m/Mass.md' a property cannot be found
-* For document 'docs/properties/m/Material Association.md' a property cannot be found
-* For document 'docs/properties/m/Material Constituent Set.md' a property cannot be found
-* For document 'docs/properties/m/Material Layer Set Usage.md' a property cannot be found
-* For document 'docs/properties/m/Material Layer Set.md' a property cannot be found
-* For document 'docs/properties/m/Material Profile Set Usage.md' a property cannot be found
-* For document 'docs/properties/m/Material Profile Set.md' a property cannot be found
-* For document 'docs/properties/m/Material Properties.md' a property cannot be found
-* For document 'docs/properties/m/Material Single.md' a property cannot be found
-* For document 'docs/properties/m/Material.md' a property cannot be found
-* For document 'docs/properties/m/MaxAdjustmentX.md' a property cannot be found
-* For document 'docs/properties/m/Mechanical Fastener Type Attributes.md' a property cannot be found
-* For document 'docs/properties/m/Mode.md' a property cannot be found
-* For document 'docs/properties/m/MountingType.md' a property cannot be found
-* For document 'docs/properties/n/Name.md' a property cannot be found
-* For document 'docs/properties/n/Nesting.md' a property cannot be found
-* For document 'docs/properties/n/NetArea.md' a property cannot be found
-* For document 'docs/properties/n/NetCeilingArea.md' a property cannot be found
-* For document 'docs/properties/n/NetCrossSectionArea.md' a property cannot be found
-* For document 'docs/properties/n/NetFloorArea.md' a property cannot be found
-* For document 'docs/properties/n/NetFootprintArea.md' a property cannot be found
-* For document 'docs/properties/n/NetHeigtht.md' a property cannot be found
-* For document 'docs/properties/n/NetPerimeter.md' a property cannot be found
-* For document 'docs/properties/n/NetSideArea.md' a property cannot be found
-* For document 'docs/properties/n/NetSurfaceArea.md' a property cannot be found
-* For document 'docs/properties/n/NetVolume.md' a property cannot be found
-* For document 'docs/properties/n/NetWallArea.md' a property cannot be found
-* For document 'docs/properties/n/NetWeight.md' a property cannot be found
-* For document 'docs/properties/n/Normative references.md' a property cannot be found
-* For document 'docs/properties/n/n.md' a property cannot be found
-* For document 'docs/properties/o/Object Assignment.md' a property cannot be found
-* For document 'docs/properties/o/Object Association.md' a property cannot be found
-* For document 'docs/properties/o/Object Attributes.md' a property cannot be found
-* For document 'docs/properties/o/Object Composition.md' a property cannot be found
-* For document 'docs/properties/o/Object Connectivity.md' a property cannot be found
-* For document 'docs/properties/o/Object Definition.md' a property cannot be found
-* For document 'docs/properties/o/Object Nesting.md' a property cannot be found
-* For document 'docs/properties/o/Object Occurrence Attributes.md' a property cannot be found
-* For document 'docs/properties/o/Object Predefined Type.md' a property cannot be found
-* For document 'docs/properties/o/Object Type Attributes.md' a property cannot be found
-* For document 'docs/properties/o/Object Type Predefined Type.md' a property cannot be found
-* For document 'docs/properties/o/Object Typing.md' a property cannot be found
-* For document 'docs/properties/o/Object User Identity.md' a property cannot be found
-* For document 'docs/properties/o/OperatingTime.md' a property cannot be found
-* For document 'docs/properties/o/OuterSurfaceArea.md' a property cannot be found
-* For document 'docs/properties/o/OvertimeWork.md' a property cannot be found
-* For document 'docs/properties/p/Parabolic Transition Segment.md' a property cannot be found
-* For document 'docs/properties/p/Partial Templates.md' a property cannot be found
-* For document 'docs/properties/p/Path Connectivity.md' a property cannot be found
-* For document 'docs/properties/p/PerformanceUnit.md' a property cannot be found
-* For document 'docs/properties/p/PlacementType.md' a property cannot be found
-* For document 'docs/properties/p/PlanArea.md' a property cannot be found
-* For document 'docs/properties/p/PlanLength.md' a property cannot be found
-* For document 'docs/properties/p/PolyCurve Profile Definition.md' a property cannot be found
-* For document 'docs/properties/p/PolyCurve with Voids Profile Definition.md' a property cannot be found
-* For document 'docs/properties/p/Port Connectivity.md' a property cannot be found
-* For document 'docs/properties/p/Port Nesting.md' a property cannot be found
-* For document 'docs/properties/p/Port to Distribution System.md' a property cannot be found
-* For document 'docs/properties/p/Position.md' a property cannot be found
-* For document 'docs/properties/p/PreventiveMeasures.md' a property cannot be found
-* For document 'docs/properties/p/Process Assignment.md' a property cannot be found
-* For document 'docs/properties/p/Process Type Assignment.md' a property cannot be found
-* For document 'docs/properties/p/Product Assignment.md' a property cannot be found
-* For document 'docs/properties/p/Product Geometric Representation.md' a property cannot be found
-* For document 'docs/properties/p/Product Grid Placement.md' a property cannot be found
-* For document 'docs/properties/p/Product Linear Placement.md' a property cannot be found
-* For document 'docs/properties/p/Product Local Placement.md' a property cannot be found
-* For document 'docs/properties/p/Product Placement.md' a property cannot be found
-* For document 'docs/properties/p/Product Relative Positioning.md' a property cannot be found
-* For document 'docs/properties/p/Product Shape.md' a property cannot be found
-* For document 'docs/properties/p/Product Topology Representation.md' a property cannot be found
-* For document 'docs/properties/p/Product Type Assignment.md' a property cannot be found
-* For document 'docs/properties/p/Product Type Geometric Representation.md' a property cannot be found
-* For document 'docs/properties/p/Product Type Shape.md' a property cannot be found
-* For document 'docs/properties/p/Profile 3D Geometry.md' a property cannot be found
-* For document 'docs/properties/p/Profile Definition.md' a property cannot be found
-* For document 'docs/properties/p/Profile Geometry.md' a property cannot be found
-* For document 'docs/properties/p/Profile Properties.md' a property cannot be found
-* For document 'docs/properties/p/Project Classification Information.md' a property cannot be found
-* For document 'docs/properties/p/Project Context.md' a property cannot be found
-* For document 'docs/properties/p/Project Declaration.md' a property cannot be found
-* For document 'docs/properties/p/Project Document Information.md' a property cannot be found
-* For document 'docs/properties/p/Project Global Positioning.md' a property cannot be found
-* For document 'docs/properties/p/Project Library Information.md' a property cannot be found
-* For document 'docs/properties/p/Project Representation Context 2D.md' a property cannot be found
-* For document 'docs/properties/p/Project Representation Context 3D.md' a property cannot be found
-* For document 'docs/properties/p/Project Representation Context.md' a property cannot be found
-* For document 'docs/properties/p/Project Template Definitions.md' a property cannot be found
-* For document 'docs/properties/p/Project Type Definitions.md' a property cannot be found
-* For document 'docs/properties/p/Project Units.md' a property cannot be found
-* For document 'docs/properties/p/ProjectedArea.md' a property cannot be found
-* For document 'docs/properties/p/Property Sets for Objects.md' a property cannot be found
-* For document 'docs/properties/p/Property Sets for Performance.md' a property cannot be found
-* For document 'docs/properties/p/Property Sets for Types.md' a property cannot be found
-* For document 'docs/properties/p/Property Sets.md' a property cannot be found
-* For document 'docs/properties/p/Pset.md' a property cannot be found
-* For document 'docs/properties/q/Qto.md' a property cannot be found
-* For document 'docs/properties/q/Quantity Sets.md' a property cannot be found
-* For document 'docs/properties/r/Reference Geometry.md' a property cannot be found
-* For document 'docs/properties/r/Reference SweptSolid Geometry.md' a property cannot be found
-* For document 'docs/properties/r/Reference SweptSolid PolyCurve Geometry.md' a property cannot be found
-* For document 'docs/properties/r/Reference Tessellation Geometry.md' a property cannot be found
-* For document 'docs/properties/r/Reference Topology.md' a property cannot be found
-* For document 'docs/properties/r/Reference View.md' a property cannot be found
-* For document 'docs/properties/r/Reinforcing Bar Type Attributes.md' a property cannot be found
-* For document 'docs/properties/r/Reinforcing Mesh Type Attributes.md' a property cannot be found
-* For document 'docs/properties/r/RemainingWork.md' a property cannot be found
-* For document 'docs/properties/r/Resource Assignment.md' a property cannot be found
-* For document 'docs/properties/r/Resource Cost.md' a property cannot be found
-* For document 'docs/properties/r/Resource Limits.md' a property cannot be found
-* For document 'docs/properties/r/Resource Quantity.md' a property cannot be found
-* For document 'docs/properties/r/Resource Type Assignment.md' a property cannot be found
-* For document 'docs/properties/r/Resource definition data schemas.md' a property cannot be found
-* For document 'docs/properties/r/Revision Control.md' a property cannot be found
-* For document 'docs/properties/r/Risk Name.md' a property cannot be found
-* For document 'docs/properties/r/RiskConsequence.md' a property cannot be found
-* For document 'docs/properties/r/RiskRating.md' a property cannot be found
-* For document 'docs/properties/s/ScheduleWork.md' a property cannot be found
-* For document 'docs/properties/s/Scope.md' a property cannot be found
-* For document 'docs/properties/s/SelfExtinguishing60332.md' a property cannot be found
-* For document 'docs/properties/s/Sequential Connectivity.md' a property cannot be found
-* For document 'docs/properties/s/Shape.md' a property cannot be found
-* For document 'docs/properties/s/Shared element data schemas.md' a property cannot be found
-* For document 'docs/properties/s/SignalElevationAngle.md' a property cannot be found
-* For document 'docs/properties/s/Sine Transition Segment.md' a property cannot be found
-* For document 'docs/properties/s/Site Attributes.md' a property cannot be found
-* For document 'docs/properties/s/Software Identity.md' a property cannot be found
-* For document 'docs/properties/s/Space Attributes.md' a property cannot be found
-* For document 'docs/properties/s/Space Boundaries 1st Level.md' a property cannot be found
-* For document 'docs/properties/s/SpaceHumidity.md' a property cannot be found
-* For document 'docs/properties/s/SpaceHumidityMax.md' a property cannot be found
-* For document 'docs/properties/s/SpaceHumidityMin.md' a property cannot be found
-* For document 'docs/properties/s/SpaceHumiditySummer.md' a property cannot be found
-* For document 'docs/properties/s/SpaceHumidityWinter.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperature.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureMax.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureMin.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureSummerMax.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureSummerMin.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureWinterMax.md' a property cannot be found
-* For document 'docs/properties/s/SpaceTemperatureWinterMin.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Composition.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Container.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Containment.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Decomposition.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Element Attributes.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Element Type Predefined Type.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Service Connectivity.md' a property cannot be found
-* For document 'docs/properties/s/Spatial Structure.md' a property cannot be found
-* For document 'docs/properties/s/StandardWork.md' a property cannot be found
-* For document 'docs/properties/s/Storey Attributes.md' a property cannot be found
-* For document 'docs/properties/s/Structural Activity.md' a property cannot be found
-* For document 'docs/properties/s/Structural Connectivity.md' a property cannot be found
-* For document 'docs/properties/s/Surface 3D Geometry.md' a property cannot be found
-* For document 'docs/properties/s/Surface Geometry.md' a property cannot be found
-* For document 'docs/properties/s/Survey Points Geometry.md' a property cannot be found
-* For document 'docs/properties/t/Tendon Type Attributes.md' a property cannot be found
-* For document 'docs/properties/t/Terms, definitions, and abbreviated terms.md' a property cannot be found
-* For document 'docs/properties/t/Topography Geometry.md' a property cannot be found
-* For document 'docs/properties/t/TotalSensibleHeatGain.md' a property cannot be found
-* For document 'docs/properties/t/TotalSurfaceArea.md' a property cannot be found
-* For document 'docs/properties/t/Transition.md' a property cannot be found
-* For document 'docs/properties/t/Type Axis Geometry.md' a property cannot be found
-* For document 'docs/properties/t/Type Body Geometry.md' a property cannot be found
-* For document 'docs/properties/t/Type Clearance Geometry.md' a property cannot be found
-* For document 'docs/properties/t/Type Element Aggregation.md' a property cannot be found
-* For document 'docs/properties/t/Type Element Nesting.md' a property cannot be found
-* For document 'docs/properties/t/Type Lighting Geometry.md' a property cannot be found
-* For document 'docs/properties/t/Type Port Nesting.md' a property cannot be found
-* For document 'docs/properties/t/TypeDesignator.md' a property cannot be found
-* For document 'docs/properties/u/UndersleeperpadStiffness.md' a property cannot be found
-* For document 'docs/properties/u/Unit.md' a property cannot be found
-* For document 'docs/properties/u/UsageTime.md' a property cannot be found
-* For document 'docs/properties/u/User.md' a property cannot be found
-* For document 'docs/properties/v/Values.md' a property cannot be found
-* For document 'docs/properties/v/VentilationAirFlowRate.md' a property cannot be found
-* For document 'docs/properties/v/Version.md' a property cannot be found
-* For document 'docs/properties/v/VersionDate.md' a property cannot be found
-* For document 'docs/properties/v/Viennese Bend Transition Segment.md' a property cannot be found
-* For document 'docs/properties/w/Window Attributes.md' a property cannot be found
-* For document 'docs/properties/w/Window Type Attributes.md' a property cannot be found
-* For document 'docs/properties/z/zzInPlane.md' a property cannot be found
-* For document 'docs/properties/z/zzInPlaneNegative.md' a property cannot be found
-* For document 'docs/properties/z/zzOutOfPlane.md' a property cannot be found
-* For document 'docs/properties/z/zzOutOfPlaneNegative.md' a property cannot be found
-* For document 'docs/properties/z/zzPerformanceUnit.md' a property cannot be found
-* For document 'docs/properties/z/zzTargetPerformance.md' a property cannot be found
+* The resource 'Pset_Address' has no definition
+* The resource 'Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal' has no definition
+* The resource 'Pset_AudioVisualApplianceTypeRecordingEquipment' has no definition
+* The resource 'Pset_AxleCountingEquipment' has no definition
+* The resource 'Pset_BalanceWeightTensionerDesignCriteria' has no definition
+* The resource 'Pset_BearingCommon' has no definition
+* The resource 'Pset_BridgeCommon' has no definition
+* The resource 'Pset_BuiltElementProxyCommon' has no definition
+* The resource 'Pset_BuiltSystemRailwayLine' has no definition
+* The resource 'Pset_BuiltSystemTrack' has no definition
+* The resource 'Pset_CableCarrierSegmentTypeCatenaryWire' has no definition
+* The resource 'Pset_CableCarrierSegmentTypeDropper' has no definition
+* The resource 'Pset_CableFittingTypeExit' has no definition
+* The resource 'Pset_CableFittingTypeFanout' has no definition
+* The resource 'Pset_CableSegmentConnector' has no definition
+* The resource 'Pset_CableSegmentOccurenceFiberSegment' has no definition
+* The resource 'Pset_CableSegmentTypeContactWire' has no definition
+* The resource 'Pset_CableSegmentTypeEarthingConductor' has no definition
+* The resource 'Pset_CableSegmentTypeFiberSegment' has no definition
+* The resource 'Pset_CableSegmentTypeFiberTubeSegment' has no definition
+* The resource 'Pset_CableSegmentTypeOpticalCableSegment' has no definition
+* The resource 'Pset_CableSegmentTypeStitchWire' has no definition
+* The resource 'Pset_CableSegmentTypeWirePairSegment' has no definition
+* The resource 'Pset_CessBetweenRails' has no definition
+* The resource 'Pset_CoaxialCable' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeAntenna' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeAutomaton' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeComputer' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeGateway' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeIntelligentPeripheral' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeIpNetworkEquipment' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeModem' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeOpticalLineTerminal' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeOpticalNetworkUnit' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeTelecommand' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeTelephonyExchange' has no definition
+* The resource 'Pset_CommunicationsApplianceTypeTransportEquipment' has no definition
+* The resource 'Pset_ConstructionAdministration' has no definition
+* The resource 'Pset_ConstructionOccurance' has no definition
+* The resource 'Pset_CoveringTypeMembrane' has no definition
+* The resource 'Pset_CurrentInstrumentTransformer' has no definition
+* The resource 'Pset_DataTransmissionUnit' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeBracket' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeCableArranger' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeInsulator' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeLock' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeRailBrace' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeRailLubrication' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeRailPad' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeSlidingChair' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeSoundAbsorption' has no definition
+* The resource 'Pset_DiscreteAccessoryTypeTensioningEquipment' has no definition
+* The resource 'Pset_DistributionBoardTypeDispatchingBoard' has no definition
+* The resource 'Pset_DistributionBoardTypeDistributionFrame' has no definition
+* The resource 'Pset_DistributionSystemTypeOverheadContactlineSystem' has no definition
+* The resource 'Pset_DoorTypeTurnstile' has no definition
+* The resource 'Pset_ElectricFlowStorageDeviceTypeBattery' has no definition
+* The resource 'Pset_ElectricFlowStorageDeviceTypeCapacitor' has no definition
+* The resource 'Pset_ElectricFlowStorageDeviceTypeInductor' has no definition
+* The resource 'Pset_ElectricFlowStorageDeviceTypeRecharger' has no definition
+* The resource 'Pset_ElectricFlowStorageDeviceTypeUPS' has no definition
+* The resource 'Pset_ElectricFlowTreatmentDeviceTypeElectronicFilter' has no definition
+* The resource 'Pset_ElectricalDeviceCompliance' has no definition
+* The resource 'Pset_ElectricalFeederLine' has no definition
+* The resource 'Pset_ElementAssemblyTypeCantilever' has no definition
+* The resource 'Pset_ElementAssemblyTypeDilatationPanel' has no definition
+* The resource 'Pset_ElementAssemblyTypeHeadSpan' has no definition
+* The resource 'Pset_ElementAssemblyTypeMast' has no definition
+* The resource 'Pset_ElementAssemblyTypeOCSSuspension' has no definition
+* The resource 'Pset_ElementAssemblyTypeRigidFrame' has no definition
+* The resource 'Pset_ElementAssemblyTypeSteadyDevice' has no definition
+* The resource 'Pset_ElementAssemblyTypeSupportingAssembly' has no definition
+* The resource 'Pset_ElementAssemblyTypeTrackPanel' has no definition
+* The resource 'Pset_ElementAssemblyTypeTractionSwitchingAssembly' has no definition
+* The resource 'Pset_ElementAssemblyTypeTurnoutPanel' has no definition
+* The resource 'Pset_ElementSize' has no definition
+* The resource 'Pset_EmbeddedTrack' has no definition
+* The resource 'Pset_EnvironmentalCondition' has no definition
+* The resource 'Pset_FastenerRailWeld' has no definition
+* The resource 'Pset_FittingBend' has no definition
+* The resource 'Pset_FittingJunction' has no definition
+* The resource 'Pset_FittingTransition' has no definition
+* The resource 'Pset_FootingTypePadFooting' has no definition
+* The resource 'Pset_ImpactProtectionDeviceOccurrenceBumper' has no definition
+* The resource 'Pset_ImpactProtectionDeviceTypeBumper' has no definition
+* The resource 'Pset_InstallationOccurrence' has no definition
+* The resource 'Pset_IpNetworkEquipmentPHistory' has no definition
+* The resource 'Pset_JunctionBoxTypeData' has no definition
+* The resource 'Pset_MarkerGeneral' has no definition
+* The resource 'Pset_MaterialWoodBasedStructure' has no definition
+* The resource 'Pset_MechanicalBeamInPlane' has no definition
+* The resource 'Pset_MechanicalBeamInPlaneNegative' has no definition
+* The resource 'Pset_MechanicalBeamOutOfPlane' has no definition
+* The resource 'Pset_MechanicalFastenerOCSFitting' has no definition
+* The resource 'Pset_MechanicalFastenerTypeRailFastening' has no definition
+* The resource 'Pset_MechanicalFastenerTypeRailJoint' has no definition
+* The resource 'Pset_MechanicalPanelInPlane' has no definition
+* The resource 'Pset_MechanicalPanelOutOfPlane' has no definition
+* The resource 'Pset_MechanicalPanelOutOfPlaneNegative' has no definition
+* The resource 'Pset_MemberTypeAnchoringBar' has no definition
+* The resource 'Pset_MemberTypeCatenaryStay' has no definition
+* The resource 'Pset_MemberTypeOCSRigidSupport' has no definition
+* The resource 'Pset_MemberTypePost' has no definition
+* The resource 'Pset_MemberTypeTieBar' has no definition
+* The resource 'Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeAccessPoint' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeBaseTransceiverStation' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeBasebandUnit' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeCommon' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeEUtranNodeB' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeMSCServer' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeMasterUnit' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeMobileSwitchingCenter' has no definition
+* The resource 'Pset_MobileTelecommunicationsApplianceTypeRemoteUnit' has no definition
+* The resource 'Pset_OnSiteTelecomControlUnit' has no definition
+* The resource 'Pset_OpticalAdapter' has no definition
+* The resource 'Pset_OpticalPigtail' has no definition
+* The resource 'Pset_OpticalSplitter' has no definition
+* The resource 'Pset_PatchCordCable' has no definition
+* The resource 'Pset_PointMachine' has no definition
+* The resource 'Pset_PowerControlSystem' has no definition
+* The resource 'Pset_ProtectiveDeviceTypeAntiArcingDevice' has no definition
+* The resource 'Pset_ProtectiveDeviceTypeSparkGap' has no definition
+* The resource 'Pset_ProvisionForVoid' has no definition
+* The resource 'Pset_RailTypeBlade' has no definition
+* The resource 'Pset_RailTypeCheckRail' has no definition
+* The resource 'Pset_RailTypeGuardRail' has no definition
+* The resource 'Pset_RailTypeRail' has no definition
+* The resource 'Pset_RailTypeStockRail' has no definition
+* The resource 'Pset_RailwayBalise' has no definition
+* The resource 'Pset_RailwayCableCarrier' has no definition
+* The resource 'Pset_RailwayLevelCrossing' has no definition
+* The resource 'Pset_RailwaySignalAspect' has no definition
+* The resource 'Pset_RailwaySignalOccurrence' has no definition
+* The resource 'Pset_RailwaySignalSighting' has no definition
+* The resource 'Pset_RailwaySignalType' has no definition
+* The resource 'Pset_RailwayTrackStructurePart' has no definition
+* The resource 'Pset_RepairOccurrence' has no definition
+* The resource 'Pset_SectionInsulator' has no definition
+* The resource 'Pset_SectioningDevice' has no definition
+* The resource 'Pset_SensorTypeEarthquakeSensor' has no definition
+* The resource 'Pset_SensorTypeForeignObjectDetectionSensor' has no definition
+* The resource 'Pset_SensorTypeRainSensor' has no definition
+* The resource 'Pset_SensorTypeSnowSensor' has no definition
+* The resource 'Pset_SensorTypeTurnoutClosureSensor' has no definition
+* The resource 'Pset_SignCommon' has no definition
+* The resource 'Pset_SignalFrame' has no definition
+* The resource 'Pset_SlabTypeTrackSlab' has no definition
+* The resource 'Pset_SpaceAirHandlingDimensioning' has no definition
+* The resource 'Pset_SpaceHVACDesign' has no definition
+* The resource 'Pset_SpaceLightingDesign' has no definition
+* The resource 'Pset_SpatialZoneCommon' has no definition
+* The resource 'Pset_SpringTensioner' has no definition
+* The resource 'Pset_SwitchingDeviceTypeRelay' has no definition
+* The resource 'Pset_SymmetricPairCable' has no definition
+* The resource 'Pset_SystemFurnitureElementTypeSubrack' has no definition
+* The resource 'Pset_TelecomCableGeneral' has no definition
+* The resource 'Pset_ThermalLoad' has no definition
+* The resource 'Pset_TicketProcessing' has no definition
+* The resource 'Pset_TicketVendingMachine' has no definition
+* The resource 'Pset_Tiling' has no definition
+* The resource 'Pset_TrackBase' has no definition
+* The resource 'Pset_TrackElementOccurrenceSleeper' has no definition
+* The resource 'Pset_TrackElementPHistoryDerailer' has no definition
+* The resource 'Pset_TrackElementTypeDerailer' has no definition
+* The resource 'Pset_TrackElementTypeSleeper' has no definition
+* The resource 'Pset_TractionPowerSystem' has no definition
+* The resource 'Pset_TransportEquipmentOTN' has no definition
+* The resource 'Pset_UnitaryControlElementBaseStationController' has no definition
+* The resource 'Pset_UnitaryControlElementTypeControlPanel' has no definition
+* The resource 'Pset_VoltageInstrumentTransformer' has no definition
+* The resource 'Pset_WiredCommunicationPortCommon' has no definition
+## http://example.org/ifc43Shapes/PropertyForDefinition
+
+* For document 'ActualWork.md/a/properties/docs' a property cannot be found
+* For document 'AdjustmentRange.md/a/properties/docs' a property cannot be found
+* For document 'AdjustmentRangeStepValue.md/a/properties/docs' a property cannot be found
+* For document 'AdjustmentValues.md/a/properties/docs' a property cannot be found
+* For document 'AffectsSurroundings.md/a/properties/docs' a property cannot be found
+* For document 'Aggregation.md/a/properties/docs' a property cannot be found
+* For document 'Area.md/a/properties/docs' a property cannot be found
+* For document 'Arrangement.md/a/properties/docs' a property cannot be found
+* For document 'AssessmentOfRisk.md/a/properties/docs' a property cannot be found
+* For document 'Colour.md/c/properties/docs' a property cannot be found
+* For document 'CompactedVolume.md/c/properties/docs' a property cannot be found
+* For document 'Condition.md/c/properties/docs' a property cannot be found
+* For document 'CoolingDesignAirflow.md/c/properties/docs' a property cannot be found
+* For document 'Count.md/c/properties/docs' a property cannot be found
+* For document 'CurrentCarryingCapasity.md/c/properties/docs' a property cannot be found
+* For document 'EavesHeight.md/e/properties/docs' a property cannot be found
+* For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
+* For document 'Exponent.md/e/properties/docs' a property cannot be found
+* For document 'FinishCeilingHeight.md/f/properties/docs' a property cannot be found
+* For document 'FinishFloorHeight.md/f/properties/docs' a property cannot be found
+* For document 'FootprintArea.md/f/properties/docs' a property cannot be found
+* For document 'ForeignObjectDetectionSensorInterface.md/f/properties/docs' a property cannot be found
+* For document 'General.md/g/properties/docs' a property cannot be found
+* For document 'Geometry.md/g/properties/docs' a property cannot be found
+* For document 'GrossArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossCeilingArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossCrossSectionArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossFloorArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossHeight.md/g/properties/docs' a property cannot be found
+* For document 'GrossPerimeter.md/g/properties/docs' a property cannot be found
+* For document 'GrossSideArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossSurfaceArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossVolume.md/g/properties/docs' a property cannot be found
+* For document 'GrossWallArea.md/g/properties/docs' a property cannot be found
+* For document 'GrossWeight.md/g/properties/docs' a property cannot be found
+* For document 'HeatingDesignAirflow.md/h/properties/docs' a property cannot be found
+* For document 'IK.md/i/properties/docs' a property cannot be found
+* For document 'IP.md/i/properties/docs' a property cannot be found
+* For document 'Identifier.md/i/properties/docs' a property cannot be found
+* For document 'IsSignalFrameMiniature.md/i/properties/docs' a property cannot be found
+* For document 'JointRelativePosition.md/j/properties/docs/README.md/domain/schemas' a property cannot be found
+* For document 'Layer.md/l/properties/docs' a property cannot be found
+* For document 'Location.md/l/properties/docs' a property cannot be found
+* For document 'LooseVolume.md/l/properties/docs' a property cannot be found
+* For document 'MaintenanceType.md/m/properties/docs' a property cannot be found
+* For document 'Mass.md/m/properties/docs' a property cannot be found
+* For document 'Material.md/m/properties/docs' a property cannot be found
+* For document 'MaxAdjustmentX.md/m/properties/docs' a property cannot be found
+* For document 'Mode.md/m/properties/docs' a property cannot be found
+* For document 'MountingType.md/m/properties/docs' a property cannot be found
+* For document 'Name.md/n/properties/docs' a property cannot be found
+* For document 'Nesting.md/n/properties/docs' a property cannot be found
+* For document 'NetArea.md/n/properties/docs' a property cannot be found
+* For document 'NetCeilingArea.md/n/properties/docs' a property cannot be found
+* For document 'NetCrossSectionArea.md/n/properties/docs' a property cannot be found
+* For document 'NetFloorArea.md/n/properties/docs' a property cannot be found
+* For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
+* For document 'NetHeigtht.md/n/properties/docs' a property cannot be found
+* For document 'NetPerimeter.md/n/properties/docs' a property cannot be found
+* For document 'NetSideArea.md/n/properties/docs' a property cannot be found
+* For document 'NetSurfaceArea.md/n/properties/docs' a property cannot be found
+* For document 'NetVolume.md/n/properties/docs' a property cannot be found
+* For document 'NetWallArea.md/n/properties/docs' a property cannot be found
+* For document 'NetWeight.md/n/properties/docs' a property cannot be found
+* For document 'OperatingTime.md/o/properties/docs' a property cannot be found
+* For document 'OuterSurfaceArea.md/o/properties/docs' a property cannot be found
+* For document 'OvertimeWork.md/o/properties/docs' a property cannot be found
+* For document 'PerformanceUnit.md/p/properties/docs' a property cannot be found
+* For document 'PlacementType.md/p/properties/docs' a property cannot be found
+* For document 'PlanArea.md/p/properties/docs' a property cannot be found
+* For document 'PlanLength.md/p/properties/docs' a property cannot be found
+* For document 'Position.md/p/properties/docs' a property cannot be found
+* For document 'PreventiveMeasures.md/p/properties/docs' a property cannot be found
+* For document 'ProjectedArea.md/p/properties/docs' a property cannot be found
+* For document 'Pset.md/p/properties/docs' a property cannot be found
+* For document 'Qto.md/q/properties/docs' a property cannot be found
+* For document 'RemainingWork.md/r/properties/docs' a property cannot be found
+* For document 'RiskConsequence.md/r/properties/docs' a property cannot be found
+* For document 'RiskRating.md/r/properties/docs' a property cannot be found
+* For document 'ScheduleWork.md/s/properties/docs' a property cannot be found
+* For document 'Scope.md/s/properties/docs' a property cannot be found
+* For document 'SelfExtinguishing60332.md/s/properties/docs' a property cannot be found
+* For document 'Shape.md/s/properties/docs' a property cannot be found
+* For document 'SignalElevationAngle.md/s/properties/docs' a property cannot be found
+* For document 'SpaceHumidity.md/s/properties/docs' a property cannot be found
+* For document 'SpaceHumidityMax.md/s/properties/docs' a property cannot be found
+* For document 'SpaceHumidityMin.md/s/properties/docs' a property cannot be found
+* For document 'SpaceHumiditySummer.md/s/properties/docs' a property cannot be found
+* For document 'SpaceHumidityWinter.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperature.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureMax.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureMin.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureSummerMax.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureSummerMin.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureWinterMax.md/s/properties/docs' a property cannot be found
+* For document 'SpaceTemperatureWinterMin.md/s/properties/docs' a property cannot be found
+* For document 'StandardWork.md/s/properties/docs' a property cannot be found
+* For document 'TotalSensibleHeatGain.md/t/properties/docs' a property cannot be found
+* For document 'TotalSurfaceArea.md/t/properties/docs' a property cannot be found
+* For document 'Transition.md/t/properties/docs' a property cannot be found
+* For document 'TypeDesignator.md/t/properties/docs' a property cannot be found
+* For document 'UndersleeperpadStiffness.md/u/properties/docs' a property cannot be found
+* For document 'Unit.md/u/properties/docs' a property cannot be found
+* For document 'UsageTime.md/u/properties/docs' a property cannot be found
+* For document 'User.md/u/properties/docs' a property cannot be found
+* For document 'Values.md/v/properties/docs' a property cannot be found
+* For document 'VentilationAirFlowRate.md/v/properties/docs' a property cannot be found
+* For document 'Version.md/v/properties/docs' a property cannot be found
+* For document 'VersionDate.md/v/properties/docs' a property cannot be found
+* For document 'n.md/n/properties/docs' a property cannot be found
+* For document 'zzInPlane.md/z/properties/docs' a property cannot be found
+* For document 'zzInPlaneNegative.md/z/properties/docs' a property cannot be found
+* For document 'zzOutOfPlane.md/z/properties/docs' a property cannot be found
+* For document 'zzOutOfPlaneNegative.md/z/properties/docs' a property cannot be found
+* For document 'zzPerformanceUnit.md/z/properties/docs' a property cannot be found
+* For document 'zzTargetPerformance.md/z/properties/docs' a property cannot be found
