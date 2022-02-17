@@ -370,7 +370,7 @@
             "Properties": {
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -378,7 +378,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -5978,7 +5978,7 @@
       },
       "IfcObject": {
         "Parent": "IfcObjectDefinition",
-        "Description": "An _IfcObject_ is the generalization of any semantically treated thing or process. Objects are things as they appear - i.e. occurrences.\n\n> NOTE&nbsp; Examples of _IfcObject_ include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process.\n\nObjects can be named, using the inherited _Name_ attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited _Description_ attribute. The _ObjectType_ attribute is used:\n\n* to store the user defined value for all subtypes of _IfcObject_, where a _PredefinedType_ attribute is given, and its value is set to USERDEFINED.\n* to provide a type information (could be seen as a very lightweight classifier) of the subtype of _IfcObject_, if no _PredefinedType_ attribute is given. This is often the case, if no comprehensive list of predefined types is available.\n\nObjects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved:\n\n* **Association to external/internal resource information** - an association relationship that refers to external/internal sources of information. See supertype _IfcObjectDefinition_ for more information.\n* **Assignment of other objects** - an assignment relationship that refers to other types of objects. See supertype _IfcObjectDefinition_ for more information.\n* **Aggregation of other objects** - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype _IfcObjectDefinition_ for more information.\n* **Assignment of a type** : _IsTypedBy_ - a definition relationship _IfcRelDefinesByType_ that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).\n* **Assignment of a partial type** : _IsDeclaredBy_, _Declares_ - a definition relationship _IfcRelDefinesByObject_ that uses a component of a type definition (a part of a type, called the \"declaring part\") to define a component of an occurence (part of occurrence, called the \"reflected part\"). This is also refered to as a \"deep copy\". The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).  \n* **Assignment of property sets** : _IsDefinedBy_ - a definition relationship _IfcRelDefinesByProperties_ that assignes property set definitions to the object occurrence.\n\n> NOTE&nbsp; See _IfcRelDefinesByType_ for an explanatory figure. Also see there for how to override type properties by occurrence properties. See _IfcRelDefinesByObject_ for an explanatory figure for the assignment of a partial type.\n\n> HISTORY&nbsp; New entity in IFC1.0\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The inverse relationships _Declares_, _IsDeclaredBy_, and _IsTypedBy_ have been added, types are not longer included in the _IsDefinesBy_ relationship. _IfcProject_ has been promoted to be a subtype of _IfcObjectDefinition_ -&gt; _IfcContext_.\n\n{ .spec-head}\nInformal Propositions:\n\n1. A partial type assignment, i.e. the inverse attribute _IsDeclaredBy_, or _Declares_ shall only be used, if the object is part of a decomposition, i.e. if either _IsDecomposedBy_, or _Decomposes_ is exerted.\n",
+        "Description": "An _IfcObject_ is the generalization of any semantically treated thing or process. Objects are things as they appear - i.e. occurrences.\n\n> NOTE&nbsp; Examples of _IfcObject_ include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process.\n\nObjects can be named, using the inherited _Name_ attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited _Description_ attribute. The _ObjectType_ attribute is used:\n\n* to store the user defined value for all subtypes of _IfcObject_, where a _PredefinedType_ attribute is given, and its value is set to USERDEFINED.\n* to provide a type information (could be seen as a very lightweight classifier) of the subtype of _IfcObject_, if no _PredefinedType_ attribute is given. This is often the case, if no comprehensive list of predefined types is available.\n\nObjects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved:\n\n* **Association to external/internal resource information** - an association relationship that refers to external/internal sources of information. See supertype _IfcObjectDefinition_ for more information.\n* **Assignment of other objects** - an assignment relationship that refers to other types of objects. See supertype _IfcObjectDefinition_ for more information.\n* **Aggregation of other objects** - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype _IfcObjectDefinition_ for more information.\n* **Assignment of a type** : _IsTypedBy_ - a definition relationship _IfcRelDefinesByType_ that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).\n* **Assignment of a partial type** : _IsDeclaredBy_, _Declares_ - a definition relationship _IfcRelDefinesByObject_ that uses a component of a type definition (a part of a type, called the \"declaring part\") to define a component of an occurence (part of occurrence, called the \"reflected part\"). This is also refered to as a \"deep copy\". The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).  \n* **Assignment of property sets** : _IsDefinedBy_ - a definition relationship _IfcRelDefinesByProperties_ that assignes property set definitions to the object occurrence.\n\n> NOTE&nbsp; See _IfcRelDefinesByType_ for an explanatory figure. Also see there for how to override type properties by occurrence properties. See _IfcRelDefinesByObject_ for an explanatory figure for the assignment of a partial type.\n\n> HISTORY&nbsp; New entity in IFC1.0\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The inverse relationships _Declares_, _IsDeclaredBy_, and _IsTypedBy_ have been added, types are not longer included in the _IsDefinesBy_ relationship. _IfcProject_ has been promoted to be a subtype of _IfcObjectDefinition_ -> _IfcContext_.\n\n{ .spec-head}\nInformal Propositions:\n\n1. A partial type assignment, i.e. the inverse attribute _IsDeclaredBy_, or _Declares_ shall only be used, if the object is part of a decomposition, i.e. if either _IsDecomposedBy_, or _Decomposes_ is exerted.\n",
         "Psets": {
           "Attributes": {
             "Properties": {
@@ -8300,7 +8300,7 @@
       },
       "IfcAlignmentCant": {
         "Parent": "IfcLinearElement",
-        "Description": "An _IfcAlignmentCant_ is a lateral inclination profile defined along the horizontal alignment. All points defined in this profile have two coordinate values. The first value is the distance along the horizontal alignment, and the second value is the height relative to the projection of the point along vertical alignment.\n\n\n**Cant as a railway specificity**\n\n![\"Why cant is applied\"](../../figures/ifcalignmentcant_wojtczak_2018.png \"Figure 1 &mdash; Cant - compensation for lateral acceleration.\")\n\n&gt;NOTE figure was first published in (Basics of) Railway Curve Kinematics Presentation, (Wojtczak 2018)\n\nThe diagram in the figure above shows the principle of compensating part of the lateral acceleration by elevating the outer rail relative to the inner rail of a track.\n\nAlmost always the following principles for the placement of horizontal segments and cant segments are implemented:\n* Straight horizontal line: no applied cant\n* Horizontal circular arc: constant applied cant\n* Horizontal transition bend: variation of applied cant according to a defined formula\n\nIn specific difficult topographic environments like mountain lines the extension of a cant transition may differ from the horizontal transition. So far this has only been found for clothoids and is either a so called shortened ramp (can transition is shorter than the corresponding horizontal curvature transition) or a so called \u201cscissor\u201d ramp (overlapping variations of cant on both rails with opposite direction). \n\nApplication of high-performance horizontal transition bends is always combined with a cant transition with identical start and end location.\n\nIn real world designs, such as slow speed sections in railway stations, exceptions to the above principles can be found. It might even happen that the inner rail is elevated relative to the outer rail.\n\nDetailed geometric modelling of the superelevation has a low priority in the existing processes in most rail companies. This will very probably change with the introduction of 3D modelling in rail design. The following list shows some use cases:\n\n* Correct 3D placement of certain assets (e.g. sleepers)\n* Relevant input for calculation of structural gauge space\n* Correct calculation of horizontal coordinate values for the Viennese Bend\u00ae (high performance transition bend)\n\n\n\n![\"Cant and structural gauge space\"](../../figures/ifcalignmentcant_structural_gauge_and_cant.png \"Figure 2 &mdash; Cant and structural gauge space\")\n",
+        "Description": "An _IfcAlignmentCant_ is a lateral inclination profile defined along the horizontal alignment. All points defined in this profile have two coordinate values. The first value is the distance along the horizontal alignment, and the second value is the height relative to the projection of the point along vertical alignment.\n\n\n**Cant as a railway specificity**\n\n![\"Why cant is applied\"](../../../../figures/ifcalignmentcant_wojtczak_2018.png \"Figure 1 &mdash; Cant - compensation for lateral acceleration.\")\n\n> NOTE figure was first published in (Basics of) Railway Curve Kinematics Presentation, (Wojtczak 2018)\n\nThe diagram in the figure above shows the principle of compensating part of the lateral acceleration by elevating the outer rail relative to the inner rail of a track.\n\nAlmost always the following principles for the placement of horizontal segments and cant segments are implemented:\n\n* Straight horizontal line: no applied cant\n* Horizontal circular arc: constant applied cant\n* Horizontal transition bend: variation of applied cant according to a defined formula\n\nIn specific difficult topographic environments like mountain lines the extension of a cant transition may differ from the horizontal transition. So far this has only been found for clothoids and is either a so called shortened ramp (can transition is shorter than the corresponding horizontal curvature transition) or a so called \u201cscissor\u201d ramp (overlapping variations of cant on both rails with opposite direction). \n\nApplication of high-performance horizontal transition bends is always combined with a cant transition with identical start and end location.\n\nIn real world designs, such as slow speed sections in railway stations, exceptions to the above principles can be found. It might even happen that the inner rail is elevated relative to the outer rail.\n\nDetailed geometric modelling of the superelevation has a low priority in the existing processes in most rail companies. This will very probably change with the introduction of 3D modelling in rail design. The following list shows some use cases:\n\n* Correct 3D placement of certain assets (e.g. sleepers)\n* Relevant input for calculation of structural gauge space\n* Correct calculation of horizontal coordinate values for the Viennese Bend\u00ae (high performance transition bend)\n\n\n\n![\"Cant and structural gauge space\"](../../../../figures/ifcalignmentcant_structural_gauge_and_cant.png \"Figure 2 &mdash; Cant and structural gauge space\")\n",
         "Psets": {
           "Attributes": {
             "Properties": {
@@ -8318,7 +8318,7 @@
       },
       "IfcAlignmentSegment": {
         "Parent": "IfcLinearElement",
-        "Description": "An IfcAlignmentSegment is a segment of an IfcAlignment where either the vertical or horizontal direction or cant (in the case of trackdesign) obey a unique mathematical description as a function of the horizontal projection segment length of the alignment.\n\n>NOTE 1 to entry: Unless otherwise stated, for railway, the appertaining track alignment design parameters are defined for the track center line.\n\n>NOTE 2 to entry: For roads, the alignment typically describes the path of the road center line, but in certain situations, e.g. ramps, the alignment may describe the path of other edges of the road body\n\n&gt;NOTE Rail domain definitions according to EN 13803:2017\n",
+        "Description": "An IfcAlignmentSegment is a segment of an IfcAlignment where either the vertical or horizontal direction or cant (in the case of trackdesign) obey a unique mathematical description as a function of the horizontal projection segment length of the alignment.\n\n>NOTE 1 to entry: Unless otherwise stated, for railway, the appertaining track alignment design parameters are defined for the track center line.\n\n>NOTE 2 to entry: For roads, the alignment typically describes the path of the road center line, but in certain situations, e.g. ramps, the alignment may describe the path of other edges of the road body\n\n> NOTE Rail domain definitions according to EN 13803:2017\n",
         "Psets": {
           "Pset_AlignmentCantSegmentCommon": {
             "Properties": {
@@ -8360,7 +8360,7 @@
       },
       "IfcAnnotation": {
         "Parent": "IfcProduct",
-        "Description": "An annotation is an information element within the geometric (and spatial) context of a project, that adds a note or meaning to the objects which constitutes the project model. Annotations include additional points, curves, text, dimensioning, hatching and other forms of graphical notes. It also includes virtual or symbolic representations of additional model components, not representing products or spatial structures, such as event elements, survey points, contour lines or similar.\n\n> NOTE&nbsp; Additional presentation information (often 2D) such as tag number or hatching, that is directly related to a particular product representation is included within the _IfcProductDefinitionShape_ having various _IfcShapeRepresentation_'s of the _IfcElement_ (and its subtypes). Only those presentation information, that cannot be directly related to a single product, have to be wrapped within the _IfcAnnotation_.\n\nIf available, the annotation should be related to the spatial context of the project, by containing the annotation within the appropriate level of the building structure (site, facility, facility part or building, storey, or space). This is handled by the _IfcRelContainedInSpatialStructure_ relationship.\n\nThe _IfcAnnotation_ can provide specific 0D, 1D, and 2D geometric items as representation of the annotation, offering annotation point, curves, and surfaces. In addition to the predefined type values in _IfcAnnotationTypeEnum_, the following values can be used for the _ObjectType_ (with _PredefinedType_ attribute value USERDEFINED).  \n\n*  **'Annotation point'** is an annotation provided by a point that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of point annotation, some suggested values are:  \n    *  **'SurveyPoint'**: A single survey point represented by a Cartesian point. A property set may add the conditions (method, accuracy, etc. to the survey point).\n    *  **'SurveyArea'**: A set of survey points represented by Cartesian point. These coordinates are determined relative to the coordinates of a reference point, which acts as the datum for the survey. Properties attached apply equally to all points. The difference in elevation of the survey points enables terrain to be determined.\n\n*  **'Annotation curve'** is an annotation provided by a curve that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of curve annotation, some suggested values are:   \n    *  **'ContourLine'**: A line of constant elevation typically used on geographic maps where the spacing of lines at constant intervals of elevation may be used as an indication of slope.\n    *  **'IsoBar'**: A line of constant pressure typically used on weather maps or to show pressure gradient in spaces, chambers or externally.\n    *  **'IsoLux'**: A line of constant illumination typically used to show the distribution of illumination levels and/or day lighting in a space or externally.\n    *  **'IsoTherm'**: A line of constant temperature typically used to show the distribution and effect of heating or cooling within a space or to show temperature distribution on a geographic map.\n    \n*  **'Annotation surface'**: is an annotation provided by a surface that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of surface annotation, some suggested values are:   \n     * **'SurveyArea'**: A surface patch based on survey points.\n  \n\n> HISTORY&nbsp; New entity in IFC2x2.\n",
+        "Description": "An annotation is an information element within the geometric (and spatial) context of a project, that adds a note or meaning to the objects which constitutes the project model. Annotations include additional points, curves, text, dimensioning, hatching and other forms of graphical notes. It also includes virtual or symbolic representations of additional model components, not representing products or spatial structures, such as event elements, survey points, contour lines or similar.\n\n> NOTE&nbsp; Additional presentation information (often 2D) such as tag number or hatching, that is directly related to a particular product representation is included within the _IfcProductDefinitionShape_ having various _IfcShapeRepresentation_'s of the _IfcElement_ (and its subtypes). Only those presentation information, that cannot be directly related to a single product, have to be wrapped within the _IfcAnnotation_.\n\nIf available, the annotation should be related to the spatial context of the project, by containing the annotation within the appropriate level of the building structure (site, facility, facility part or building, storey, or space). This is handled by the _IfcRelContainedInSpatialStructure_ relationship.\n\nThe _IfcAnnotation_ can provide specific 0D, 1D, and 2D geometric items as representation of the annotation, offering annotation point, curves, and surfaces. In addition to the predefined type values in _IfcAnnotationTypeEnum_, the following values can be used for the _ObjectType_ (with _PredefinedType_ attribute value USERDEFINED).  \n\n *  **Annotation point** is an annotation provided by a point that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of point annotation, some suggested values are:  \n    *  **SurveyPoint**: A single survey point represented by a Cartesian point. A property set may add the conditions (method, accuracy, etc. to the survey point).\n    *  **SurveyArea**: A set of survey points represented by Cartesian point. These coordinates are determined relative to the coordinates of a reference point, which acts as the datum for the survey. Properties attached apply equally to all points. The difference in elevation of the survey points enables terrain to be determined.\n\n *  **Annotation curve** is an annotation provided by a curve that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of curve annotation, some suggested values are:   \n    *  **ContourLine**: A line of constant elevation typically used on geographic maps where the spacing of lines at constant intervals of elevation may be used as an indication of slope.\n    *  **IsoBar**: A line of constant pressure typically used on weather maps or to show pressure gradient in spaces, chambers or externally.\n    *  **IsoLux**: A line of constant illumination typically used to show the distribution of illumination levels and/or day lighting in a space or externally.\n    *  **IsoTherm**: A line of constant temperature typically used to show the distribution and effect of heating or cooling within a space or to show temperature distribution on a geographic map.\n    \n*  **Annotation surface**: is an annotation provided by a surface that has additional semantic. The inherited attribute _ObjectType_ should be used to capture the type of surface annotation, some suggested values are:   \n     * **SurveyArea**: A surface patch based on survey points.\n  \n\n> HISTORY&nbsp; New entity in IFC2x2.\n",
         "Psets": {
           "Pset_AnnotationContourLine": {
             "Properties": {
@@ -8648,11 +8648,11 @@
               },
               "GrossFloorArea": {
                 "type": "real",
-                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "Height": {
                 "type": "real",
@@ -8660,11 +8660,11 @@
               },
               "NetFloorArea": {
                 "type": "real",
-                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           },
@@ -8739,7 +8739,7 @@
       },
       "IfcBuildingStorey": {
         "Parent": "IfcSpatialStructureElement",
-        "Description": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.\n\nA storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. This is defined by the composition type attribute of the supertype _IfcSpatialStructureElements_ which is interpreted as follow:\n\n* **COMPLEX**: building storey complex\n* **ELEMENT**: building storey\n* **PARTIAL**: partial building storey\n\n> EXAMPLE&nbsp; In split level houses, a storey is split into two or more partial storeys, each with a different elevation. It can be handled by defining a storey, which includes two or more partial storeys with the individual elevations.\n\nThe _IfcBuildingStorey_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship _IfcRelAggregates_.\n\nFigure 1 shows the _IfcBuildingStorey_ as part of the s patial structure. It also serves as the spatial container for building and other elements.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"IfcBuildingStorey as part of a spatial structure\"](../../../../figures/ifcbuildingstorey-spatialstructure.png \"Figure 1 &mdash; Building storey composition\")\n\nFigure 2 describes the heights and elevations of the _IfcBuildingStorey_.\n\n* elevation of storey provided by: _IfcBuildingStorey.Elevation_ as a local height value relative to _IfcBuilding.ElevationOfRefHeight_, it is usually the top of construction slab\n* net height of storey, also referred to as total height or system height (top of construction slab to top of construction slab above): provided by BaseQuantity with Name=\"GrossHeight\"\n* net height of storey (top of construction slab to bottom of construction slab above): provided by BaseQuantity with Name=\"NetHeight\"\n\n![\"space heights\"](../../../../figures/ifcbuildingstorey_heights.png \"Figure 2 &mdash; Building storey elevations\")\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
+        "Description": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.\n\nA storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. This is defined by the composition type attribute of the supertype _IfcSpatialStructureElements_ which is interpreted as follow:\n\n* **COMPLEX**: building storey complex\n* **ELEMENT**: building storey\n* **PARTIAL**: partial building storey\n\n> EXAMPLE&nbsp; In split level houses, a storey is split into two or more partial storeys, each with a different elevation. It can be handled by defining a storey, which includes two or more partial storeys with the individual elevations.\n\nThe _IfcBuildingStorey_ is used to build the spatial structure of a building (that serves as the primary project breakdown and is required to be hierarchical). The spatial structure elements are linked together by using the objectified relationship _IfcRelAggregates_.\n\nFigure 1 shows the _IfcBuildingStorey_ as part of the spatial structure. It also serves as the spatial container for building and other elements.\n\n> NOTE&nbsp; Detailed requirements on mandatory element containment and placement structure relationships are given in view definitions and implementer agreements.\n\n![\"IfcBuildingStorey as part of a spatial structure\"](../../../../figures/ifcbuildingstorey-spatialstructure.png \"Figure 1 &mdash; Building storey composition\")\n\nFigure 2 describes the heights and elevations of the _IfcBuildingStorey_.\n\n* elevation of storey provided by: _IfcBuildingStorey.Elevation_ as a local height value relative to _IfcBuilding.ElevationOfRefHeight_, it is usually the top of construction slab\n* net height of storey, also referred to as total height or system height (top of construction slab to top of construction slab above): provided by BaseQuantity with Name=\"GrossHeight\"\n* net height of storey (top of construction slab to bottom of construction slab above): provided by BaseQuantity with Name=\"NetHeight\"\n\n![\"space heights\"](../../../../figures/ifcbuildingstorey_heights.png \"Figure 2 &mdash; Building storey elevations\")\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
           "Pset_BuildingStoreyCommon": {
             "Properties": {
@@ -8798,7 +8798,7 @@
             "Properties": {
               "GrossFloorArea": {
                 "type": "real",
-                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossHeight": {
                 "type": "real",
@@ -8810,11 +8810,11 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "NetFloorArea": {
                 "type": "real",
-                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetHeigtht": {
                 "type": "real",
@@ -8822,7 +8822,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           },
@@ -8887,7 +8887,7 @@
       },
       "IfcCivilElement": {
         "Parent": "IfcElement",
-        "Description": "An _IfcCivilElement_ is a generalization of all elements within a civil engineering works that cannot be represented as BuildingElements, DistributionElements or GeographicElements. Depending on the context of the construction project, included building work, such as buildings or factories, are represented as a collection of _IfcBuildingElement_'s, distribution systems, such as piping or drainage, are represented as a collection of _IfcDistributionElement_'s, and other geographic elements, such as trees, light posts, traffic signs etc. are represented as _IfcGeographicElement_'s.\n\n> NOTE&nbsp; The _IfcCivilElement_ has been intruduced as a stub for future extensions of this specification to include an object model for civil engineering works.\n\nCivil elements are typically horizontally organized using a spatial structure expressed by spatial zones, therefore _IfcCivilElement_ is spatially contained by default within an _IfcSpatialZone_.\n\n> HISTORY &nbsp;New entity in IFC4.\n\n## Concepts\n\n### Classification\n\n\n### Object Typing\n\n\n### Property Sets\n\n\n### Spatial Containment",
+        "Description": "An _IfcCivilElement_ is a generalization of all elements within a civil engineering works that cannot be represented as BuildingElements, DistributionElements or GeographicElements. Depending on the context of the construction project, included building work, such as buildings or factories, are represented as a collection of _IfcBuildingElement_'s, distribution systems, such as piping or drainage, are represented as a collection of _IfcDistributionElement_'s, and other geographic elements, such as trees, light posts, traffic signs etc. are represented as _IfcGeographicElement_'s.\n\n> NOTE&nbsp; The _IfcCivilElement_ has been introduced as a stub for future extensions of this specification to include an object model for civil engineering works.\n\nCivil elements are typically horizontally organized using a spatial structure expressed by spatial zones, therefore _IfcCivilElement_ is spatially contained by default within an _IfcSpatialZone_.\n\n> HISTORY &nbsp;New entity in IFC4.\n\n## Concepts\n\n### Classification\n\n\n### Object Typing\n\n\n### Property Sets\n\n\n### Spatial Containment",
         "Psets": {
           "Pset_CivilElementCommon": {
             "Properties": {
@@ -8912,6 +8912,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -8923,10 +8935,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -10109,7 +10117,7 @@
       },
       "IfcOpeningStandardCase": {
         "Parent": "IfcOpeningElement",
-        "Description": "The standard opening, _IfcOpeningStandardCase_, defines an opening with certain constraints for the dimension parameters, position within the voided element, and with certain constraints for the geometric representation. The _IfcOpeningStandardCase_ handles all cases of openings, that:\n\n* are true openings where the opening depth is greather than or equal to the thickness of the element, and the _Predefinedtype_ is set correctly to .OPENING.\n* are true recesses where the opening depth is lower than the thickness of the element, and the _Predefinedtype_ is set correctly to .RECESS.\n* are extruded perpendicular to the wall plane in case of openings in a wall\n* are extruded perpendicular to the slab plane in case of openings in a slab\n* have a local placement relative to the local placement of the voided element\n* have a 'Body' shape representation with 'SweptSolid' representation type\n* have only a single extrusion body within the 'Body' shape representation\n\n> HISTORY&nbsp; New entity in IFC4\n\n## Concepts\n\n### Body Geometry\n\nThe geometric representation of IfcOpeningStandardCase\nis defined using the following multiple shape representations for\nits definition:\n\n\n* Body: A SweptSolid representation defining the 3D subtraction\nshape of the standard opening\n\n\nBody Representation\n\n\nThe body representation of IfcOpeningStandardCase is\nrepresented using the representation type 'SweptSolid'.\n\n\nSwept Solid Representation Type with Horizontal\nExtrusion\n\n\nThe standard geometric representation of\nIfcOpeningStandardCase is defined using the 'SweptSolid'\nrepresentation. The following attribute values for the\nIfcShapeRepresentation holding this geometric\nrepresentation shall be used::\n\n\n* RepresentationIdentifier : 'Body'\n* RepresentationType : 'SweptSolid'\n\n\nThe following additional constraints apply to the swept solid\nrepresentation:\n\n\n* Solid: a single IfcExtrudedAreaSolid is\nrequired\n* Profile: IfcRectangleProfileDef,\nIfcCircleProfileDef and\nIfcArbitraryClosedProfileDef shall be supported.\n* Extrusion: The profile shall be extruded horizontally\n(i.e. perpendicular to the extrusion direction of the voided\nelement) for wall openings, or vertically (i.e. in the extrusion\ndirection of the voided element), for slab openings.\n\n\nAs shown in Figure 36, the orientation of the opening profile that is extruded\nfor the opening body shall guarantee the following interpretation\nof dimension parameter for rectangular openings:\n\n\n* IfcRectangleProfileDef.YDim interpreted as\nopening width\n* IfcRectangleProfileDef.XDim interpreted as\nopening height\n\n\n![standard opening](../../../../figures/ifcopeningstandardcase_wall-layout1.png)\nFigure 161 \u2014 Opening standard representation\n\n\n\n### Placement\n\nThe following constraint is mandatory for\nIfcOpeningStandardCase\n\n\n* The PlacementRelTo relationship of\nIfcLocalPlacement should point to the local placement of\nthe same element, which is voided by the opening, i.e. referred\nto by VoidsElement.RelatingBuildingElement."
+        "Description": "The standard opening, _IfcOpeningStandardCase_, defines an opening with certain constraints for the dimension parameters, position within the voided element, and with certain constraints for the geometric representation. The _IfcOpeningStandardCase_ handles all cases of openings, that:\n\n* are true openings where the opening depth is greater than or equal to the thickness of the element, and the _Predefinedtype_ is set correctly to .OPENING.\n* are true recesses where the opening depth is lower than the thickness of the element, and the _Predefinedtype_ is set correctly to .RECESS.\n* are extruded perpendicular to the wall plane in case of openings in a wall\n* are extruded perpendicular to the slab plane in case of openings in a slab\n* have a local placement relative to the local placement of the voided element\n* have a 'Body' shape representation with 'SweptSolid' representation type\n* have only a single extrusion body within the 'Body' shape representation\n\n> HISTORY&nbsp; New entity in IFC4\n\n## Concepts\n\n### Body Geometry\n\nThe geometric representation of IfcOpeningStandardCase\nis defined using the following multiple shape representations for\nits definition:\n\n\n* Body: A SweptSolid representation defining the 3D subtraction\nshape of the standard opening\n\n\nBody Representation\n\n\nThe body representation of IfcOpeningStandardCase is\nrepresented using the representation type 'SweptSolid'.\n\n\nSwept Solid Representation Type with Horizontal\nExtrusion\n\n\nThe standard geometric representation of\nIfcOpeningStandardCase is defined using the 'SweptSolid'\nrepresentation. The following attribute values for the\nIfcShapeRepresentation holding this geometric\nrepresentation shall be used::\n\n\n* RepresentationIdentifier : 'Body'\n* RepresentationType : 'SweptSolid'\n\n\nThe following additional constraints apply to the swept solid\nrepresentation:\n\n\n* Solid: a single IfcExtrudedAreaSolid is\nrequired\n* Profile: IfcRectangleProfileDef,\nIfcCircleProfileDef and\nIfcArbitraryClosedProfileDef shall be supported.\n* Extrusion: The profile shall be extruded horizontally\n(i.e. perpendicular to the extrusion direction of the voided\nelement) for wall openings, or vertically (i.e. in the extrusion\ndirection of the voided element), for slab openings.\n\n\nAs shown in Figure 36, the orientation of the opening profile that is extruded\nfor the opening body shall guarantee the following interpretation\nof dimension parameter for rectangular openings:\n\n\n* IfcRectangleProfileDef.YDim interpreted as\nopening width\n* IfcRectangleProfileDef.XDim interpreted as\nopening height\n\n\n![standard opening](../../../../figures/ifcopeningstandardcase_wall-layout1.png)\nFigure 161 \u2014 Opening standard representation\n\n\n\n### Placement\n\nThe following constraint is mandatory for\nIfcOpeningStandardCase\n\n\n* The PlacementRelTo relationship of\nIfcLocalPlacement should point to the local placement of\nthe same element, which is voided by the opening, i.e. referred\nto by VoidsElement.RelatingBuildingElement."
       },
       "IfcPort": {
         "Parent": "IfcProduct",
@@ -10355,7 +10363,7 @@
               },
               "GrossFloorArea": {
                 "type": "real",
-                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross areas of spaces within the building storey. It includes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossPerimeter": {
                 "type": "real",
@@ -10363,7 +10371,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWallArea": {
                 "type": "real",
@@ -10379,7 +10387,7 @@
               },
               "NetFloorArea": {
                 "type": "real",
-                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net areas of spaces within the building storey. It excludes the area of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetPerimeter": {
                 "type": "real",
@@ -10387,7 +10395,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWallArea": {
                 "type": "real",
@@ -10978,7 +10986,7 @@
       },
       "IfcSpatialStructureElement": {
         "Parent": "IfcSpatialElement",
-        "Description": "A spatial structure element is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project.\n\nA spatial project structure might define as many levels of decomposition as necessary for the building project. Elements within the spatial project structure are:\n\n* site as _IfcSite_\n* facility as _IfcFacility_, or specifically\n    * building as _IfcBuilding_\n    * bridge as _IfcBridge_\n    * marine facility as _IfcMarineFacility_\n    * railway as _IfcRailway_\n    * road as _IfcRoad_\n\n* facility part as _IfcFacilityPart_, or specifically\n    * storey as _IfcBuildingStorey_\n    * facility part as _IfcFacilityPart_\n\n* space as _IfcSpace_\n\nor aggregations or parts thereof. The composition type declares an element to be either an element itself, or an aggregation (complex) or a decomposition (part). The interpretation of these types is given at each subtype of _IfcSpatialStructureElement_.\n\nThe _IfcRelAggregates_ is defined as an 1-to-many relationship and used to establish the relationship between exactly two levels within the spatial project structure. Finally the highest level of the spatial structure is assigned to _IfcProject_ using the _IfcRelAggregates_.\n\nThe subtypes of _IfcSpatialStructureElement_ relate to other elements and systems by establishing the following relationships:\n\n* **Containment of elements** : _IfcRelContainedInSpatialStructure_ by inverse attribute _ContainsElements_, used to assign any element, like building elements, MEP elements, etc. to the spatial structure element in which they are primarily contained.\n* **Reference of elements** : _IfcRelReferencedInSpatialStructure_ by inverse attribute _ReferencesElements_, used to reference any element, like building elements, MEP elements, etc. in spatial structure elements, other then the one, where it is contained.\n* **Reference of systems** : _IfcRelServicesBuildings_ by inverse attribute _ServicedBySystems_, used to reference a sytem, like a building service or electrical distribution system, a zonal system, or a structural analysis system, that is assigned to this spatial structure element.\n\nThe subtypes of _IfcSpatialStructureElement_ relate to each other by using the _IfcRelAggregates_ relationship to build the project spatial structure. Figure 1 shows the use of _IfcRelAggregates_ to establish a spatial structure including site, building, building section and storey. More information is provided at the level of the subtypes.\n\n![\"fig1\"](../../../../figures/ifcspatialstructureelement-spatialstructure.png \"Figure 1 &mdash; Spatial structure element composition\")\n\n> HISTORY&nbsp; New entity in IFC2x.\n\n{ .spec-head}\nInformal Propositions:\n\n1. The spatial project structure, established by the _IfcRelAggregates_, shall be acyclic.\n2. A site should not be (directly or indirectly) associated to a building, storey or space.\n3. A building should not be (directly or indirectly) associated to a storey or space.\n4. A storey should not be (directly or indirectly) associated to a space.\n",
+        "Description": "A spatial structure element is the generalization of all spatial elements that might be used to define a spatial structure. That spatial structure is often used to provide a project structure to organize a building project.\n\nA spatial project structure might define as many levels of decomposition as necessary for the building project. Elements within the spatial project structure are:\n\n* site as _IfcSite_\n* facility as _IfcFacility_, or specifically\n    * building as _IfcBuilding_\n    * bridge as _IfcBridge_\n    * marine facility as _IfcMarineFacility_\n    * railway as _IfcRailway_\n    * road as _IfcRoad_\n\n* facility part as _IfcFacilityPart_, or specifically\n    * storey as _IfcBuildingStorey_\n    * facility part as _IfcFacilityPart_\n\n* space as _IfcSpace_\n\nor aggregations or parts thereof. The composition type declares an element to be either an element itself, or an aggregation (complex) or a decomposition (part). The interpretation of these types is given at each subtype of _IfcSpatialStructureElement_.\n\nThe _IfcRelAggregates_ is defined as an 1-to-many relationship and used to establish the relationship between exactly two levels within the spatial project structure. Finally the highest level of the spatial structure is assigned to _IfcProject_ using the _IfcRelAggregates_.\n\nThe subtypes of _IfcSpatialStructureElement_ relate to other elements and systems by establishing the following relationships:\n\n* **Containment of elements** : _IfcRelContainedInSpatialStructure_ by inverse attribute _ContainsElements_, used to assign any element, like building elements, MEP elements, etc. to the spatial structure element in which they are primarily contained.\n* **Reference of elements** : _IfcRelReferencedInSpatialStructure_ by inverse attribute _ReferencesElements_, used to reference any element, like building elements, MEP elements, etc. in spatial structure elements, other then the one, where it is contained.\n* **Reference of systems** : _IfcRelServicesBuildings_ by inverse attribute _ServicedBySystems_, used to reference a system, like a building service or electrical distribution system, a zonal system, or a structural analysis system, that is assigned to this spatial structure element.\n\nThe subtypes of _IfcSpatialStructureElement_ relate to each other by using the _IfcRelAggregates_ relationship to build the project spatial structure. Figure 1 shows the use of _IfcRelAggregates_ to establish a spatial structure including site, building, building section and storey. More information is provided at the level of the subtypes.\n\n![\"fig1\"](../../../../figures/ifcspatialstructureelement-spatialstructure.png \"Figure 1 &mdash; Spatial structure element composition\")\n\n> HISTORY&nbsp; New entity in IFC2x.\n\n{ .spec-head}\nInformal Propositions:\n\n1. The spatial project structure, established by the _IfcRelAggregates_, shall be acyclic.\n2. A site should not be (directly or indirectly) associated to a building, storey or space.\n3. A building should not be (directly or indirectly) associated to a storey or space.\n4. A storey should not be (directly or indirectly) associated to a space.\n",
         "Psets": {
           "Pset_PropertyAgreement": {
             "Properties": {
@@ -12726,7 +12734,7 @@
       },
       "IfcBeam": {
         "Parent": "IfcBuiltElement",
-        "Description": "An _IfcBeam_ is a horizontal, or nearly horizontal, structural member that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1: structural member for carrying load(s) between or beyond points of support, usually narrow in relation to its length and horizontal or nearly so.\n\n> NOTE&nbsp; The representation of load-bearing beams in a structural analysis model is provided by subtypes of _IfcStructuralMember_ (with _IfcStructuralCurveMember_ being mostly applicable) as part of an _IfcStructuralAnalysisModel_.\n\n> NOTE&nbsp; For any other longitudinal structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity _IfcMember_ should be used.\n\nThe camber of a beam may be defined by assigning a StructuralCurveMember with displacement coordinates. Multiple sets of camber ordinates may be provided that are qualified by the particular load case, where full dead load would typically be used for fabrication, and other scenarios used for other loading conditions such as during construction.\n\nThere are two entities for beam occurrences:\n\n* _IfcBeamStandardCase_ used for all occurrences of beams, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsage_. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialProfileSetUsage_ assigned. \n>> NOTE&nbsp; Model view definitions and implementer agreements may further constrain the applicable geometry types, for example, by excluding tapering from an _IfcBeamStandardCase_ implementation.* _IfcBeam_ used for all other occurrences of beams, particularly for beams with non-uniformly changing profile sizes along the sweep, or beams having only 'AdvancedBrep', 'Brep', 'SurfaceModel', or 'Tessellation' geometry. \n>> NOTE&nbsp; Model view definitions and implementer agreements may impose the use of _IfcBeam_ in all cases by excluding _IfcBeamStandardCase_ from scope of the model view.\n> HISTORY&nbsp; New entity in IFC1.0\n",
+        "Description": "An _IfcBeam_ is a horizontal, or nearly horizontal, structural member that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.\n\n> NOTE&nbsp; Definition according to ISO 6707-1: structural member for carrying load(s) between or beyond points of support, usually narrow in relation to its length and horizontal or nearly so.\n\nThere are two main representations for beam occurrences:\n\n- _IfcBeam_ with _IfcMaterialProfileSetUsage_ is used for all occurrences of beams, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsage_. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned.\n\n- _IfcBeam_ without _IfcMaterialProfileSetUsag_e is used for all other occurrences of beams, particularly for beams with non-uniformly changing profile sizes along the sweep, or beams having only 'AdvancedBrep', 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.\n\n> NOTE  The entity IfcBeamStandardCase has been deprecated, IfcBeam with IfcMaterialProfileSetUsage is used instead.\n\nFor any other longitudinal structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity _IfcMember_ should be used.\n\n> NOTE&nbsp; The representation of load-bearing beams in a structural analysis model is provided by subtypes of _IfcStructuralMember_ (with _IfcStructuralCurveMember_ being mostly applicable) as part of an _IfcStructuralAnalysisModel_. The camber of a beam may be defined by assigning an _IfcStructuralCurveMember_ with displacement coordinates. Multiple sets of camber ordinates may be provided that are qualified by the particular load case, where full dead load would typically be used for fabrication, and other scenarios used for other loading conditions such as during construction.\n\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
           "Pset_BeamCommon": {
             "Properties": {
@@ -12797,7 +12805,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -12813,7 +12821,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -12827,6 +12835,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -12838,10 +12858,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -13098,12 +13114,24 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -13115,10 +13143,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -13335,6 +13359,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -13346,10 +13382,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -13501,7 +13533,7 @@
       },
       "IfcColumn": {
         "Parent": "IfcBuiltElement",
-        "Description": "<An _IfcColumn_ is a vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> structural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.\n\n> NOTE&nbsp; The representation of a column in a structural analysis model is provided by _IfcStructuralCurveMember_ being part of an _IfcStructuralAnalysisModel_.\n\n> NOTE&nbsp; For any longitudial structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity _IfcMember_ exists.\n\nThe IFC specification provides two entities for column occurrences:\n\n* _IfcColumnStandardCase_ used for all occurrences of columns, tthat have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsage_. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialProfileSetUsage_ assigned. \n>> NOTE&nbsp; View definitions and implementer agreements may further constrain the applicable geometry types, for example by excluding tapering from an _IfcColumnStandardCase_ implementation. \n* _IfcColumn_ used for all other occurrences of columns, particularly for columns with changing profile sizes along the extrusion, or columns defined by non-linear extrusion, or columns having only 'Brep', or 'SurfaceModel' geometry.\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
+        "Description": "An _IfcColumn_ is a vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.\n\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> structural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.\n\nThere are two main representations for column occurrences:\n\n- _IfcColumn_ with _IfcMaterialProfileSetUsage_ is used for all occurrences of columns, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsag_e. These columns are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned.\n\n- _IfcColumn_ is used for all other occurrences of columns, particularly for columns with changing profile sizes along the extrusion, or columns defined by non-linear extrusion, or columns having only 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.\n\n> NOTE  The entity IfcColumnStandardCase has been deprecated, IfcColumn with IfcMaterialProfileSetUsage is used instead.\n\nFor any longitudial structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity _IfcMember_ exists.\n\n> NOTE&nbsp; The representation of a column in a structural analysis model is provided by _IfcStructuralCurveMember_ being part of an _IfcStructuralAnalysisModel_.\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
           "Pset_ColumnCommon": {
             "Properties": {
@@ -13568,7 +13600,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -13584,7 +13616,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -13598,6 +13630,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -13609,10 +13653,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -14001,7 +14041,7 @@
       },
       "IfcDoor": {
         "Parent": "IfcBuiltElement",
-        "Description": "The door is a built element that is predominately used to provide controlled access for people, goods, animals and vehicles. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1: construction for closing an opening, intended primarily for access with hinged, pivoted or sliding operation.  \n\nThe _IfcDoor_ defines a particular occurrence of a door inserted in the spatial context of a project. A door can:  \n* be inserted as a filler in an opening using the _IfcRelFillsElement_ relationship, then the _IfcDoor_ has an inverse attribute _FillsVoids_ provided;\n>NOTE&nbsp; View definitions or implementer agreements may restrict the relationship to only include one door into one opening.\n\n* be part of an element assembly, in general an _IfcCurtainWall_, using the _IfcRelAggregates_ relationship, then the _IfcDoor_ has an inverse attribute _Decomposes_ is provided;\n* be a \"free standing\" door, then the _IfcDoor_ has no inverse attributes _FillsVoids_ or _Decomposes_ provided.\n\nThis specification provides two main representations for door occurrences:  \n\n* _IfcDoor_ used for all occurrences of doors, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an _IfcDoorType_ that references one _IfcDoorLiningProperties_ and on to many _IfcDoorPanelProperties_;\n> NOTE&nbsp; The entity _IfcDoorStandardCase_ has been deprecated.\n* _IfcDoor_ used for all other occurrences of doors, particularly for doors having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.\n\n  \nThe actual parameters of the door and/or its shape are defined by the _IfcDoor_ as the occurrence definition (or project instance), or by the _IfcDoorType_ as the specific definition (or project type). The following parameters are given: \n\n* at the _IfcDoor_ or _IfcDoorStandardCase_ for occurrence specific parameters. The _IfcDoor_ specifies:\n    * the door width and height\n    * the door opening direction (by the y-axis of the _ObjectPlacement_)\n* at the _IfcDoorType_, to which the _IfcDoor_ is related by the inverse relationship _IsTypedBy_ pointing to _IfcRelDefinesByType_, for type parameters common to all occurrences of the same type.\n    * the operation type (single swing, double swing, revolving, etc.)\n    * the door hinge side (by using two different styles for right and left opening doors)\n    * the construction material type\n    * the particular attributes for the lining by the _IfcDoorLiningProperties_\n    * the particular attributes for the panels by the _IfcDoorPanelProperties_ \n\n> HISTORY&nbsp; New entity in IFC1.0.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The attributes _PredefinedType_ and _OperationType_ are added, the applicable type object has been changed to _IfcDoorType_.\n  \nThe geometric representation of _IfcDoor_ is given by the _IfcProductDefinitionShape_, allowing multiple geometric representations. The _IfcDoor_ may get its parameter and shape from the _IfcDoorType_. If an _IfcRepresentationMap_ (a block definition) is defined for the _IfcDoorType_, then the _IfcDoor_ inserts it through the _IfcMappedItem_.  \n\nThe geometric representation of _IfcDoor_ is defined using the following (potentially multiple) _IfcShapeRepresentation_'s for its _IfcProductDefinitionShape_:  \n\n* **Profile**: A 'Curve3D' consisting of a single losed curve defining the outer boundary of the door (lining). The door parametric representation uses this profile in order to apply the door lining and panel parameter. If not provided, the profile of the _IfcOpeningElement_ is taken.\n* **FootPrint**: A 'GeometricCurveSet', or 'Annotation2D' representation defining the 2D shape of the door \n* **Body**: A 'SweptSolid', 'SurfaceModel', or 'Brep' representation defining the 3D shape of the door.\n\nIn addition the parametric representation of a (limited) door shape is available by applying the parameters from _IfcDoorType_ referencing _IfcDoorLiningProperties_ and _IfcDoorPanelProperties_. The purpose of the parameter is described at those entities and below (door opening operation by door type).  \nThe overall size of the _IfcDoor_ to be used to apply the lining or panel parameter provided by the _IfcDoorType_ is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'.\n",
+        "Description": "The door is a built element that is predominately used to provide controlled access for people, goods, animals and vehicles. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations.\n\n> NOTE&nbsp; Definition according to ISO 6707-1: construction for closing an opening, intended primarily for access with hinged, pivoted or sliding operation.  \n\nThe _IfcDoor_ defines a particular occurrence of a door inserted in the spatial context of a project. A door can:  \n* be inserted as a filler in an opening using the _IfcRelFillsElement_ relationship, then the _IfcDoor_ has an inverse attribute _FillsVoids_ provided;\n>NOTE&nbsp; View definitions or implementer agreements may restrict the relationship to only include one door into one opening.\n\n* be part of an element assembly, in general an _IfcCurtainWall_, using the _IfcRelAggregates_ relationship, then the _IfcDoor_ has an inverse attribute _Decomposes_ is provided;\n* be a \"free standing\" door, then the _IfcDoor_ has no inverse attributes _FillsVoids_ or _Decomposes_ provided.\n\nThis specification provides two main representations for door occurrences:  \n\n* _IfcDoor_ used for all occurrences of doors, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an _IfcDoorType_ that references one _IfcDoorLiningProperties_ and one to many _IfcDoorPanelProperties_;\n> NOTE&nbsp; The entity _IfcDoorStandardCase_ has been deprecated.\n\n* _IfcDoor_ used for all other occurrences of doors, particularly for doors having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.\n\n\nThe actual parameters of the door and/or its shape are defined by the _IfcDoor_ as the occurrence definition or by the _IfcDoorType_ as the object type definition. The following parameters are provided:\n\n* at the _IfcDoor_ for occurrence specific parameters. The _IfcDoor_ specifies:\n    * the door width and height\n    * the door opening direction (by the y-axis of the _ObjectPlacement_)\n* at the _IfcDoorType_, to which the _IfcDoor_ is related by the inverse relationship _IsTypedBy_ pointing to _IfcRelDefinesByType_, for type parameters common to all occurrences of the same type.\n    * the operation type (single swing, double swing, revolving, etc.)\n    * the door hinge side (by using two different styles for right and left opening doors)\n    * the construction material type\n    * the particular attributes for the lining by the _IfcDoorLiningProperties_\n    * the particular attributes for the panels by the _IfcDoorPanelProperties_\n\n> HISTORY&nbsp; New entity in IFC1.0.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The attributes _PredefinedType_ and _OperationType_ are added, the applicable type object has been changed to _IfcDoorType_.\n\nThe geometric representation of _IfcDoor_ is given by the _IfcProductDefinitionShape_, allowing multiple geometric representations. The _IfcDoor_ may get its parameter and shape from the _IfcDoorType_. If an _IfcRepresentationMap_ (a block definition) is defined for the _IfcDoorType_, then the _IfcDoor_ inserts it through the _IfcMappedItem_.  \n\nThe geometric representation of _IfcDoor_ is defined using the following (potentially multiple) _IfcShapeRepresentation_'s for its _IfcProductDefinitionShape_:  \n\n* **Profile**: A 'Curve3D' consisting of a single losed curve defining the outer boundary of the door (lining). The door parametric representation uses this profile in order to apply the door lining and panel parameter. If not provided, the profile of the _IfcOpeningElement_ is taken.\n* **FootPrint**: A 'GeometricCurveSet', or 'Annotation2D' representation defining the 2D shape of the door\n* **Body**: A 'SweptSolid', 'SurfaceModel', or 'Brep' representation defining the 3D shape of the door.\n\nIn addition the parametric representation of a (limited) door shape is available by applying the parameters from _IfcDoorType_ referencing _IfcDoorLiningProperties_ and _IfcDoorPanelProperties_. The purpose of the parameter is described at those entities and below (door opening operation by door type).  \nThe overall size of the _IfcDoor_ to be used to apply the lining or panel parameter provided by the _IfcDoorType_ is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'.\n",
         "Psets": {
           "Pset_ProcessCapacity": {
             "Properties": {
@@ -14322,7 +14362,7 @@
       },
       "IfcMember": {
         "Parent": "IfcBuiltElement",
-        "Description": "An _IfcMember_ is a structural member designed to carry loads between or beyond points of support. It is not required to be load bearing. The orientation of the member (being horizontal, vertical or sloped) is not relevant to its definition (in contrary to _IfcBeam_ and _IfcColumn_). An _IfcMember_ represents a linear structural element from an architectural or structural modeling point of view and shall be used if it cannot be expressed more specifically as either an _IfcBeam_ or an _IfcColumn_.\n\n> NOTE&nbsp; The representation of a member in a structural analysis model is provided by _IfcStructuralCurveMember_ being part of an _IfcStructuralAnalysisModel_.\n\nThe IFC specification provides two entities for member occurrences:\n\n* _IfcMemberStandardCase_ used for all occurrences of members, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsage_. These beams are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialProfileSetUsage_ assigned. \n>> NOTE&nbsp; View definitions and implementer agreements may further constrain the applicable geometry types, such as by excluding tapering from an _IfcMemberStandardCase_ implementation. \n* _IfcMember_ used for all other occurrences of members, particularly for members with changing profile sizes along the extrusion, or members defined by non-linear extrusion, or members having only 'Brep', or 'SurfaceModel' geometry.\n\n> HISTORY&nbsp; New entity in IFC2x2 Addendum 1.\n",
+        "Description": "An _IfcMember_ is a structural member designed to carry loads between or beyond points of support. It is not required to be load bearing. The orientation of the member (being horizontal, vertical or sloped) is not relevant to its definition (in contrary to _IfcBeam_ and _IfcColumn_). An _IfcMember_ represents a linear structural element from an architectural or structural modeling point of view and shall be used if it cannot be expressed more specifically as either an _IfcBeam_ or an _IfcColumn_.\n\nThere are two main representations for member occurrences:\n\n- _IfcMember_ with _IfcMaterialProfileSetUsage_ is used for all occurrences of members, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsage_. These members are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned.\n\n- _IfcMember_ without _IfcMaterialProfileSetUsage_ is used for all other occurrences of members, particularly for members with changing profile sizes along the extrusion, or members defined by non-linear extrusion, or members having only 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.\n\n\n> NOTE&nbsp; The representation of a member in a structural analysis model is provided by _IfcStructuralCurveMember_ being part of an _IfcStructuralAnalysisModel_.\n\n> HISTORY&nbsp; New entity in IFC2x2 Addendum 1.\n",
         "Psets": {
           "Pset_MemberCommon": {
             "Properties": {
@@ -14393,7 +14433,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -14409,7 +14449,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -14423,6 +14463,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -14434,10 +14486,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -14593,7 +14641,7 @@
       },
       "IfcPlate": {
         "Parent": "IfcBuiltElement",
-        "Description": "An _IfcPlate_ is a planar and often flat part with constant thickness. A plate may carry loads between or beyond points of support, or provide stiffening. The location of the plate (being horizontal, vertical or sloped) is not relevant to its definition (in contrary to _IfcWall_ and _IfcSlab_ (as floor slab)).\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1: thin, rigid, flat, metal product, of a thickness greater than that of a sheet.\n\nPlates are\u00a0normally made of steel, other metallic material, or by glass panels. However the definition of _IfcPlate_ is material independent and specific material information shall be handled by using _IfcAssociatesMaterial_ to assign a material specification to the _IfcPlate_.\n\n> NOTE&nbsp;\u00a0Although not necessarily, plates are often add-on parts. This is represented by the _IfcRelAggregates_ decomposition mechanism used to aggregate parts, such as _IfcPlate_, into a container element such as _IfcElementAssembly_ or _IfcCurtainWall_.\n\n> NOTE&nbsp; The representation of a plate in a structural analysis model is provided by _IfcStructuralSurfaceMember_ being part of an _IfcStructuralAnalysisModel_.\n\nAn instance _IfcPlate_ should preferably get its geometric representation and material assignment through the type definition by _IfcPlateType_ assigned using the _IfcRelDefinesByType_ relationship. This allows identical plates in a construction to be represented by the same instance of _IfcPlateType_.\n\nA plate may have openings, such as voids or recesses. They are defined by an _IfcOpeningElement_ attached to the plate using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_. The position number of a plate as often used in steel construction is assigned through the attribute _IfcElement.Tag_\n\nThe IFC specification provides two entities for plate occurrences:\n\n* _IfcPlateStandardCase_ used for all occurrences of plates, that are prismatic and where the thickness parameter can be fully described by the _IfcMaterialLayerSetUsage_. These plates are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialLayerSetUsage_ assigned.\n* _IfcPlate_ used for all other occurrences of plates, particularly for plates with changing thickness, or plates with non planar surfaces, and plates having only 'SurfaceModel' or 'Brep' geometry.\n\n> HISTORY&nbsp; New entity in IFC2x2\n",
+        "Description": "An _IfcPlate_ is a planar and often flat part with constant thickness. A plate may carry loads between or beyond points of support, or provide stiffening. The location of the plate (being horizontal, vertical or sloped) is not relevant to its definition (in contrary to _IfcWall_ and _IfcSlab_ (as floor slab)).\n\n> NOTE&nbsp; Definition according to ISO 6707-1: thin, rigid, flat, metal product, of a thickness greater than that of a sheet.\n\nPlates are\u00a0normally made of steel, other metallic material, or by glass panels. However the definition of _IfcPlate_ is material independent and specific material information shall be handled by using _IfcAssociatesMaterial_ to assign a material specification to the _IfcPlate_.\n\n> NOTE&nbsp;\u00a0Although not necessarily, plates are often add-on parts. This is represented by the _IfcRelAggregates_ decomposition mechanism used to aggregate parts, such as _IfcPlate_, into a container element such as _IfcElementAssembly_ or _IfcCurtainWall_.\n\nAn instance of _IfcPlate_ should preferably get its geometric representation and material assignment through the type definition by _IfcPlateType_ assigned using the _IfcRelDefinesByType_ relationship. This allows identical plates in a construction to be represented by the same instance of _IfcPlateType_.\n\nA plate may have openings, such as voids or recesses. They are defined by an _IfcOpeningElement_ attached to the plate using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_. The position number of a plate as often used in steel construction is assigned through the attribute _IfcElement.Tag_\n\nThere are two main representations for plate occurrences:\n\n- _IfcPlate_ with _IfcMaterialLayerSetUsage_ is used for all occurrences of plates, that are prismatic and where the thickness parameter can be fully described by the _IfcMaterialLayerSetUsage_. These plates are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned.\n\n- _IfcPlate_ without _IfcMaterialLayerSetUsage_ is used for all other occurrences of plates, particularly for plates with changing thickness, or plates with non planar surfaces, and plates having only 'SurfaceModel' or 'Brep' geometry or if a more parametric representation is not intended.\n\n> NOTE&nbsp; The representation of a plate in a structural analysis model is provided by _IfcStructuralSurfaceMember_ being part of an _IfcStructuralAnalysisModel_.\n\n> HISTORY&nbsp; New entity in IFC2x2\n\n",
         "Psets": {
           "Pset_PlateCommon": {
             "Properties": {
@@ -14652,7 +14700,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -14664,7 +14712,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -14682,6 +14730,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -14693,10 +14753,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -14901,6 +14957,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -14912,10 +14980,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -15036,6 +15100,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -15047,10 +15123,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -15249,7 +15321,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "Length": {
                 "type": "real",
@@ -15261,7 +15333,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "Width": {
                 "type": "real",
@@ -15271,6 +15343,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -15282,10 +15366,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -15506,6 +15586,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -15517,10 +15609,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -15756,7 +15844,7 @@
       },
       "IfcSlab": {
         "Parent": "IfcBuiltElement",
-        "Description": "A slab is a component of the construction that may enclose a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> thick, flat or shaped component, usually larger than 300 mm square, used to form a covering or projecting from a building.\n\nOnly the core or constructional part of this construction is considered to be a slab. The upper finish (flooring, roofing) and the lower finish (ceiling, suspended ceiling) are considered to be coverings. A special type of slab is the landing, described as a floor section to which one or more stair flights or ramp flights connect.\n\n> NOTE&nbsp; There is a representation of slabs for structural analysis provided by a proper subtype of _IfcStructuralMember_ being part of the _IfcStructuralAnalysisModel_.\n\n> NOTE&nbsp;\u00a0An arbitrary planar element to which this semantic information is not applicable or irrelevant shall be modeled as _IfcPlate_.\n\nA slab may have openings, such as floor openings, or recesses. They are defined by an _IfcOpeningElement_ attached to the slab using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_.\n\nThere are three entities for slab occurrences:\n\n* _IfcSlabStandardCase_ used for all occurrences of slabs, that are prismatic and where the thickness parameter can be fully described by the _IfcMaterialLayerSetUsage_. These slabs are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialLayerSetUsage_ assigned.\n* _IfcSlabElementedCase_ used for occurrences of slabs which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of _IfcRelAggregates_ relationship.\n* _IfcSlab_ used for all other occurrences of slabs, particularly for slabs with changing thickness, or slabs with non planar surfaces, and slabs having only 'SweptSolid' or 'Brep' geometry.\n\n> HISTORY&nbsp; New entity in IFC2.0; it is a merger of the two previous entities IfcFloor, IfcRoofSlab, introduced in IFC1.0\n",
+        "Description": "A slab is a component of the construction that may enclose a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building.\n\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> thick, flat or shaped component, usually larger than 300 mm square, used to form a covering or projecting from a building.\n\nOnly the core or constructional part of this construction is considered to be a slab. The upper finish (flooring, roofing) and the lower finish (ceiling, suspended ceiling) are considered to be coverings. A special type of slab is the landing, described as a floor section to which one or more stair flights or ramp flights connect.\n\n> NOTE&nbsp;\u00a0An arbitrary planar element to which this semantic information is not applicable or irrelevant shall be modeled as _IfcPlate_.\n\nA slab may have openings, such as floor openings, or recesses. They are defined by an _IfcOpeningElement_ attached to the slab using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_.\n\n> NOTE&nbsp; Slabs with openings that have already been modeled within the enclosing geometry may use the relationship _IfcRelConnectsElements_ to associate the wall with embedded elements such as trap doors.\n\nThere are two main representations for slab occurrences:\n\n- _IfcSlab_ with _IfcMaterialLayerSetUsage_ is used for all occurrences of slabs, that are prismatic and where the thickness parameter can be fully described by the _IfcMaterialLayerSetUsage_. These slabs are always represented geometrically by a 'SweptSolid' geometry (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned.\n\n- _IfcSlab_ without _IfcMaterialLayerSetUsage_ is used for all other occurrences of slabs, particularly for slabs with changing thickness, or slabs with non planar surfaces, and slabs having only 'SweptSolid' or 'Brep' geometry, or if a more parametric representation is not intended.\n\n> NOTE The entity _IfcSlabStandardCase_ has been deprecated, _IfcSlab_ with _IfcMaterialLayerSetUsage_ is used instead. The entity _IfcSlabElementedCase_ has been deprecated, _IfcSlab_ with _IfcRelAggregates_ is used to describe occurrences of slabs which are aggregated from subordinate elements.\n\n> NOTE There is a representation of slabs for structural analysis provided by a proper subtype of _IfcStructuralMember_ being part of the _IfcStructuralAnalysisModel_.\n\n> HISTORY&nbsp; New entity in IFC2.0; it is a merger of the two previous entities IfcFloor, IfcRoofSlab, introduced in IFC1.0\n",
         "Psets": {
           "Pset_SlabCommon": {
             "Properties": {
@@ -15843,7 +15931,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -15859,7 +15947,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -15877,6 +15965,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -15888,10 +15988,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -16260,6 +16356,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -16271,10 +16379,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -16493,7 +16597,7 @@
             "Properties": {
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "Length": {
                 "type": "real",
@@ -16501,12 +16605,24 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -16518,10 +16634,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -16693,7 +16805,7 @@
       },
       "IfcWall": {
         "Parent": "IfcBuiltElement",
-        "Description": "The wall represents a vertical construction that may bound or subdivide spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however\u00a0not required to be load bearing.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1: vertical construction usually in masonry or in concrete which bounds or subdivides a construction works and fulfils a load bearing or retaining function.\n\n> NOTE&nbsp; There is a representation of walls for structural analysis provided by a proper subtype of _IfcStructuralMember_ being part of the _IfcStructuralAnalysisModel_.\n\n> NOTE&nbsp; An arbitrary planar element to which this semantic information is not applicable (is not predominantly vertical), shall be modeled as _IfcPlate_.\n\nA wall may have openings, such as wall openings, openings used for windows or doors, or niches and recesses. They are defined by an _IfcOpeningElement_ attached to the wall using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_.\n\n> NOTE&nbsp; Walls with openings that have already been modeled within the enclosing geometry may use the relationship _IfcRelConnectsElements_ to associate the wall with embedded elements such as doors and windows.\n\nThere are three entities for wall occurrences:\n\n* _IfcWallStandardCase_ \u00a0used for all occurrences of walls, that have a non-changing thickness along the wall path and where the thickness parameter can be fully described by a material layer set. These walls are always represented geometrically by an 'Axis' and a 'SweptSolid' shape representation (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned. In addition they have to have a corresponding _IfcMaterialProfileSetUsage_ assigned.\n* _IfcWallElementedCase_ used for occurrences of walls which are aggregated from subordinate elements, following specific decomposition rules expressed by the mandatory use of _IfcRelAggregates_ relationship.\n* _IfcWall_ \u00a0used for all other occurrences of wall, particularly for walls with changing thickness along the wall path (e.g. polygonal walls), or walls with a non-rectangular cross sections (e.g. L-shaped retaining walls), and walls having an extrusion axis that is unequal to the global Z axis of the project (i.e. non-vertical walls), or walls having only 'Brep', or 'SurfaceModel' geometry.\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
+        "Description": "The wall represents a vertical construction that may bound or subdivide spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however\u00a0not required to be load bearing.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1: vertical construction usually in masonry or in concrete which bounds or subdivides a construction works and fulfils a load bearing or retaining function.\n\n> NOTE&nbsp; An arbitrary planar element to which this semantic information is not applicable (is not predominantly vertical), shall be modeled as _IfcPlate_.\n\nA wall may have openings, such as wall openings, openings used for windows or doors, or niches and recesses. They are defined by an _IfcOpeningElement_ attached to the wall using the inverse relationship _HasOpenings_ pointing to _IfcRelVoidsElement_.\n\n> NOTE&nbsp; Walls with openings that have already been modeled within the enclosing geometry may use the relationship _IfcRelConnectsElements_ to associate the wall with embedded elements such as doors and windows.\n\nThere are two main representations for all occurrences:\n\n- _IfcWall_ with _IfcMaterialLayerSetUsage_ is used for all occurrences of walls, that have a non-changing thickness along the wall path and where the thickness parameter can be fully described by a material layer set. These walls are always represented geometrically by an 'Axis' and a 'SweptSolid' shape representation (or by a 'Clipping' geometry based on 'SweptSolid'), if a 3D geometric representation is assigned.\n\n- _IfcWall_ without _IfcMaterialLayerSetUsage_ is used for all other occurrences of wall, particularly for walls with changing thickness along the wall path (e.g. polygonal walls), or walls with a non-rectangular cross sections (e.g. L-shaped retaining walls), and walls having an extrusion axis that is unequal to the global Z axis of the project (i.e. non-vertical walls), or walls having only 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.\n\n> NOTE  The entity _IfcWallStandardCase_ has been deprecated, _IfcWall_ with _IfcMaterialLayerSetUsage_ is used instead. The entity _IfcWallbElementedCase_ has been deprecated, _IfcWall_ with _IfcRelAggregates_ is used to describe occurrences of wall which are aggregated from subordinate elements, such as wall panels.\n\n> NOTE&nbsp; There is a representation of walls for structural analysis provided by a proper subtype of _IfcStructuralMember_ being part of the _IfcStructuralAnalysisModel_.\n\n> HISTORY&nbsp; New entity in IFC1.0\n",
         "Psets": {
           "Pset_WallCommon": {
             "Properties": {
@@ -16784,7 +16896,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -16808,7 +16920,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -16822,6 +16934,18 @@
           },
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -16833,10 +16957,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -17032,7 +17152,7 @@
       },
       "IfcWindow": {
         "Parent": "IfcBuiltElement",
-        "Description": "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.\n\nThe _IfcWindow_ defines a particular occurrence of a window inserted in the spatial context of a project. A window can:\n\n* be inserted into an _IfcOpeningElement_ using the _IfcRelFillsElement_ relationship, then the _IfcWindow_ has an inverse attribute _FillsVoids_ provided,\n* be part of an element assembly, often an _IfcCurtainWall_, using the _IfcRelAggregates_ relationship, then the inverse attribute _Decomposes_ is provided.\n* or be a \"free standing\" window, then the _IfcWindow_ has no inverse attributes _FillsVoids_ or _Decomposes_ provided.\n\n> NOTE&nbsp; View definitions or implementer agreements may restrict the relationship to only include one window (or door) into one opening.\n\nThere are two entities for window occurrences:\n\n* _IfcWindowStandardCase_ used for all occurrences of windows, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an _IfcWindowType_ that references one _IfcWindowLiningProperties_ and on to many _IfcWindowPanelProperties_. \n* _IfcWindow_ used for all other occurrences of windows, particularly for windows having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.\n\nThe actual parameter of the window and/or its shape is defined at the _IfcWindow_ as the occurrence definition (or project instance), or by the _IfcWindowType_ as the specific definition (or project type). The following parameters are given:\n\n* at the _IfcWindow_ or _IfcWindowStandardCase_ for occurrence specific parameters. The _IfcWindow_ specifies:\n*  \n    * the window width and height\n    * the window opening direction (by the y-axis of the _ObjectPlacement_) \n* at the _IfcWindowType_ to which the _IfcWindow_ is related by the inverse relationship _IsDefinedBy_ pointing to _IfcRelDefinesByType_, for type parameters common to all occurrences of the same type.\n*  \n    * the partitioning type (single panel, double panel, tripel panel, more panels)\n    * the operation type (swing, tilt and turn, pivot revolve, fixed case ment, etc.)\n    * the window panel hinge side (by using two different styles for right and left opening windows)\n    * the construction material type\n    * the particular attributes for the lining by the _IfcWindowLiningProperties_\n    * the particular attributes for the panels by the\u00a0 _IfcWindowPanelProperties_ \n\n> HISTORY&nbsp; New entity in IFC1.0.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The attributes _PredefinedType_ and _OperationType_ are added, the applicable type object has been changed to _IfcDoorType_.\n\n{ .use-head}\nParameteric Representation using parameters at _IfcWindowType_\n\nThe parameters, which define the shape of the _IfcWindow_, are given at the _IfcWindowType_ and the property sets, which are included in the _IfcWindowType_. The _IfcWindow_ only defines the local placement. The overall size of the _IfcWindow_ to be used to apply the lining or panel parameter provided by the _IfcWindowType_ is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'. Only in case of an _IfcWindow_ inserted into an _IfcOpeningElement_ using the _IfcRelFillsElement_ relatioship, having a horizontal extrusion (along the y-axis of the _IfcDoor_), the overall size is determined by the extrusion profile of the _IfcOpeningElement_.\n\nFigure 1 illustrates the insertion of a window into the _IfcOpeningElement_ by creating an instance of _IfcWindow_ with _PartitioningType = DoublePanelHorizontal_. The parameters _OverallHeight_ and _OverallWidth_ show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.\n\n![\"window 1\"](../../../../figures/ifcwindow-layout1.gif \"Figure 1 &mdash; Window placement\")\n\nFigure 2 illustrates the final window (DoublePanelHorizontal) with first panel having _PanelPosition = TOP_, _OperationType = BOTTOMHUNG_ and second panel having _PanelPosition = BOTTOM_ and _OperationType = TILTANDTURNLEFTHAND_.\n\n![\"window 2\"](../../../../figures/ifcwindow-layout2.gif \"Figure 2 &mdash; Window planes\")\n\n{ .use-head}\nWindow opening operation by window type\n\nThe parameters that defines the shape of the _IfcWindow_, are given at the _IfcWindowType_ and the property sets, which are included in the _IfcWindowType_. The _IfcWindow_ only defines the local placement which determines the opening direction of the window. The overall layout of the _IfcWindow_ is determined by its\u00a0_IfcWindowType.PartitioningType_. Each window panel has its own operation type, provided by _IfcWindowPanelProperties.OperationType_. All window panels are assumed to open into the same direction (if relevant for the particular window panel operation. The hindge side (whether a window opens to the left or to the right) is determined by the _IfcWindowPanelProperties_._OperationType_.\n\n> NOTE&nbsp; \u00a0There are different conventions in different countries on how to show the symbolic presentation of the window panel operation (the \"triangles\"). Either as seen from the exterior, or from the interior side. The following figures/ show the symbolics from the exterior side (the convention as used predominately in Europe).\n\nFigure 3 illustrates window operation types.\n\n<table><tr><td><table border=\"1\" cellpadding=\"2\" cellspacing=\"2\">\n<tbody>\n<tr valign=\"top\">\n<td align=\"left\" valign=\"top\"><small><img alt=\"fig 1\" src=\"../../../../figures/ifcwindow-fig01.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td align=\"left\" valign=\"top\">\n<p><small>The window panel (for side hung windows) opens always\ninto the direction of the positive Y axis of the local placement.\nThe determination of whether the window opens to the left or to\nthe right is done at\n<em>IfcWindowPanelProperties.OperationType</em>. Here it is a left\nside opening window given by\u00a0<em>OperationType</em> =\nSideHungLeftHand.</small></p>\n</td>\n</tr>\n<tr>\n<td><small><img alt=\"fig 2\" src=\"../../../../figures/ifcwindow-fig02.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td valign=\"top\">\n<p><small>If the window should open to the other side, then the\nlocal placement has to be changed. It is still a left hung\nwindow, given by <em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0SideHungLeftHand.</small></p>\n</td>\n</tr>\n<tr>\n<td><img alt=\"fig 3\" src=\"../../../../figures/ifcwindow-fig03.gif\" height=\"121\" width=\"301\"></td>\n<td valign=\"top\">\n<p><small>If the window panel (for side hung windows) opens to\nthe right, a separate window panel style needs to be used (here\n<em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0SideHungRightHand) and it always opens into the direction of\nthe positive Y axis of the local placement.\u00a0</small></p>\n</td>\n</tr>\n<tr valign=\"top\">\n<td align=\"left\" valign=\"top\"><small><img alt=\"fig 4\" src=\"../../../../figures/ifcwindow-fig04.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td align=\"left\" valign=\"top\">\n<p><small>If the window should open to the other side, then the\nlocal placement has to be changed. It is still a right hung\nwindow, given by <em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0</small><small>SideHungRightHand.</small></p>\n<small>.</small></td>\n</tr>\n</tbody>\n</table>\n\n</td></tr>\n<tr><td><p class=\"figure\">Figure 3 &mdash; Window operations</p></td></tr>\n</table>\n",
+        "Description": "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.\n\n{ .extDef}\n> NOTE&nbsp; Definition according to ISO 6707-1  \n> Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.\n\nThe _IfcWindow_ defines a particular occurrence of a window inserted in the spatial context of a project. A window can:\n\n* be inserted into an _IfcOpeningElement_ using the _IfcRelFillsElement_ relationship, then the _IfcWindow_ has an inverse attribute _FillsVoids_ provided,\n* be part of an element assembly, often an _IfcCurtainWall_, using the _IfcRelAggregates_ relationship, then the inverse attribute _Decomposes_ is provided.\n* or be a \"free standing\" window, then the _IfcWindow_ has no inverse attributes _FillsVoids_ or _Decomposes_ provided.\n\n> NOTE&nbsp; View definitions or implementer agreements may restrict the relationship to only include one window (or door) into one opening.\n\nThere are two main representations for window occurrences:\n\n- _IfcWindow_ with a shape representation having RepresentationIdenfifier='Profile' is used for all occurrences of windows, that have a 'Profile' shape representation defined to which a set of shape parameters for lining and framing properties apply. Additionally it requires the provision of an _IfcWindowType_ that references one _IfcWindowLiningProperties_ and on to many _IfcWindowPanelProperties_.\n\n- _IfcWindow_ used for all other occurrences of windows, particularly for windows having only 'Brep', or 'SurfaceModel' geometry without applying shape parameters.\n\n> NOTE  The entity _IfcWindowStandardCase_ has been deprecated.\n\nThe actual parameter of the window and/or its shape is defined at the _IfcWindow_ as the occurrence definition (or project instance), or by the _IfcWindowType_ as the specific definition (or project type). The following parameters are given:\n\n* at the _IfcWindow_ or _IfcWindowStandardCase_ for occurrence specific parameters. The _IfcWindow_ specifies:\n    * the window width and height\n    * the window opening direction (by the y-axis of the _ObjectPlacement_)\n* at the _IfcWindowType_ to which the _IfcWindow_ is related by the inverse relationship _IsDefinedBy_ pointing to _IfcRelDefinesByType_, for type parameters common to all occurrences of the same type.\n    * the partitioning type (single panel, double panel, tripel panel, more panels)\n    * the operation type (swing, tilt and turn, pivot revolve, fixed case ment, etc.)\n    * the window panel hinge side (by using two different styles for right and left opening windows)\n    * the construction material type\n    * the particular attributes for the lining by the _IfcWindowLiningProperties_\n    * the particular attributes for the panels by the\u00a0 _IfcWindowPanelProperties_\n\n> HISTORY&nbsp; New entity in IFC1.0.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; The attributes _PredefinedType_ and _OperationType_ are added, the applicable type object has been changed to _IfcDoorType_.\n\n{ .use-head}\nParameteric Representation using parameters at _IfcWindowType_\n\nThe parameters, which define the shape of the _IfcWindow_, are given at the _IfcWindowType_ and the property sets, which are included in the _IfcWindowType_. The _IfcWindow_ only defines the local placement. The overall size of the _IfcWindow_ to be used to apply the lining or panel parameter provided by the _IfcWindowType_ is determined by the IfcShapeRepresentation with the RepresentationIdentifier = 'Profile'. Only in case of an _IfcWindow_ inserted into an _IfcOpeningElement_ using the _IfcRelFillsElement_ relatioship, having a horizontal extrusion (along the y-axis of the _IfcWindow_), the overall size is determined by the extrusion profile of the _IfcOpeningElement_.\n\nFigure 1 illustrates the insertion of a window into the _IfcOpeningElement_ by creating an instance of _IfcWindow_ with _PartitioningType = DoublePanelHorizontal_. The parameters _OverallHeight_ and _OverallWidth_ show the extent of the window in the positive Z and X axis of the local placement of the window. The lining and the transom are created by the given parameters.\n\n![\"window 1\"](../../../../figures/ifcwindow-layout1.gif \"Figure 1 &mdash; Window placement\")\n\nFigure 2 illustrates the final window (DoublePanelHorizontal) with first panel having _PanelPosition = TOP_, _OperationType = BOTTOMHUNG_ and second panel having _PanelPosition = BOTTOM_ and _OperationType = TILTANDTURNLEFTHAND_.\n\n![\"window 2\"](../../../../figures/ifcwindow-layout2.gif \"Figure 2 &mdash; Window planes\")\n\n{ .use-head}\nWindow opening operation by window type\n\nThe parameters that defines the shape of the _IfcWindow_, are given at the _IfcWindowType_ and the property sets, which are included in the _IfcWindowType_. The _IfcWindow_ only defines the local placement which determines the opening direction of the window. The overall layout of the _IfcWindow_ is determined by its\u00a0_IfcWindowType.PartitioningType_. Each window panel has its own operation type, provided by _IfcWindowPanelProperties.OperationType_. All window panels are assumed to open into the same direction (if relevant for the particular window panel operation. The hindge side (whether a window opens to the left or to the right) is determined by the _IfcWindowPanelProperties_._OperationType_.\n\n> NOTE&nbsp; \u00a0There are different conventions in different countries on how to show the symbolic presentation of the window panel operation (the \"triangles\"). Either as seen from the exterior, or from the interior side. The following figures/ show the symbolics from the exterior side (the convention as used predominately in Europe).\n\nFigure 3 illustrates window operation types.\n\n<table><tr><td><table border=\"1\" cellpadding=\"2\" cellspacing=\"2\">\n<tbody>\n<tr valign=\"top\">\n<td align=\"left\" valign=\"top\"><small><img alt=\"fig 1\" src=\"../../../../figures/ifcwindow-fig01.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td align=\"left\" valign=\"top\">\n<p><small>The window panel (for side hung windows) opens always\ninto the direction of the positive Y axis of the local placement.\nThe determination of whether the window opens to the left or to\nthe right is done at\n<em>IfcWindowPanelProperties.OperationType</em>. Here it is a left\nside opening window given by\u00a0<em>OperationType</em> =\nSideHungLeftHand.</small></p>\n</td>\n</tr>\n<tr>\n<td><small><img alt=\"fig 2\" src=\"../../../../figures/ifcwindow-fig02.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td valign=\"top\">\n<p><small>If the window should open to the other side, then the\nlocal placement has to be changed. It is still a left hung\nwindow, given by <em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0SideHungLeftHand.</small></p>\n</td>\n</tr>\n<tr>\n<td><img alt=\"fig 3\" src=\"../../../../figures/ifcwindow-fig03.gif\" height=\"121\" width=\"301\"></td>\n<td valign=\"top\">\n<p><small>If the window panel (for side hung windows) opens to\nthe right, a separate window panel style needs to be used (here\n<em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0SideHungRightHand) and it always opens into the direction of\nthe positive Y axis of the local placement.\u00a0</small></p>\n</td>\n</tr>\n<tr valign=\"top\">\n<td align=\"left\" valign=\"top\"><small><img alt=\"fig 4\" src=\"../../../../figures/ifcwindow-fig04.gif\" height=\"121\" width=\"301\"><br></small></td>\n<td align=\"left\" valign=\"top\">\n<p><small>If the window should open to the other side, then the\nlocal placement has to be changed. It is still a right hung\nwindow, given by <em>IfcWindowPanelProperties.OperationType</em>\n=\u00a0</small><small>SideHungRightHand.</small></p>\n<small>.</small></td>\n</tr>\n</tbody>\n</table>\n\n</td></tr>\n<tr><td><p class=\"figure\">Figure 3 &mdash; Window operations</p></td></tr>\n</table>\n",
         "Psets": {
           "Pset_DoorWindowGlazingType": {
             "Properties": {
@@ -17355,7 +17475,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "NetSurfaceArea": {
                 "type": "real",
@@ -17363,7 +17483,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               }
             }
           }
@@ -19184,36 +19304,6 @@
           }
         }
       },
-      "IfcActionRequest": {
-        "Parent": "IfcControl",
-        "Description": "A request is the act or instance of asking for something, such as a request for information, bid submission, or performance of work.\n\nRequests may take many forms depending on the need including fault reports for maintenance, requests for small works, and purchase requests (where these are to be made through a help desk or buying function).\n\n> HISTORY&nbsp; New entity in IFC2x2.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; Atribute _RequestID_ renamed to _Identification_ and promoted to supertype _IfcControl_, attributes _PredefinedType_, _Status_, and _LongDescription_ added.\n",
-        "Psets": {
-          "Pset_ActionRequest": {
-            "Properties": {
-              "RequestComments": {
-                "type": "string",
-                "Description": "Comments that may be made on the request."
-              },
-              "RequestSourceLabel": {
-                "type": "string",
-                "Description": "A specific name or label that further qualifies the identity of a request source. In the event of an email, this may be the email address."
-              }
-            }
-          },
-          "Attributes": {
-            "Properties": {
-              "LongDescription": {
-                "type": "string",
-                "Description": "Detailed description of the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
-              },
-              "Status": {
-                "type": "string",
-                "Description": "The status currently assigned to the request.  Possible values include:  \\X\\0D\nHold: wait to see if further requests are received before deciding on action  \\X\\0D\nNoAction: no action is required on this request  \\X\\0D\nSchedule: plan action to take place as part of maintenance or other task planning/scheduling  \\X\\0D\nUrgent: take action immediately  \\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
-              }
-            }
-          }
-        }
-      },
       "IfcPermit": {
         "Parent": "IfcControl",
         "Description": "A permit is a permission to perform work in places and on artifacts where regulatory, security or other access restrictions apply.\n\n> HISTORY&nbsp; New entity in IFC2x2.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; Attribute _PermitID_ renamed to _Identification_ and promoted to supertype _IfcControl_, attributes _PredefinedType_, _Status_, and _LongDescription_ added.\n",
@@ -19251,6 +19341,36 @@
               "Status": {
                 "type": "string",
                 "Description": "The status currently assigned to the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
+              }
+            }
+          }
+        }
+      },
+      "IfcActionRequest": {
+        "Parent": "IfcControl",
+        "Description": "A request is the act or instance of asking for something, such as a request for information, bid submission, or performance of work.\n\nRequests may take many forms depending on the need including fault reports for maintenance, requests for small works, and purchase requests (where these are to be made through a help desk or buying function).\n\n> HISTORY&nbsp; New entity in IFC2x2.\n\n{ .change-ifc2x4}\n> IFC4 CHANGE&nbsp; Atribute _RequestID_ renamed to _Identification_ and promoted to supertype _IfcControl_, attributes _PredefinedType_, _Status_, and _LongDescription_ added.\n",
+        "Psets": {
+          "Pset_ActionRequest": {
+            "Properties": {
+              "RequestComments": {
+                "type": "string",
+                "Description": "Comments that may be made on the request."
+              },
+              "RequestSourceLabel": {
+                "type": "string",
+                "Description": "A specific name or label that further qualifies the identity of a request source. In the event of an email, this may be the email address."
+              }
+            }
+          },
+          "Attributes": {
+            "Properties": {
+              "LongDescription": {
+                "type": "string",
+                "Description": "Detailed description of the permit.\\X\\0D\n\\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
+              },
+              "Status": {
+                "type": "string",
+                "Description": "The status currently assigned to the request.  Possible values include:  \\X\\0D\nHold: wait to see if further requests are received before deciding on action  \\X\\0D\nNoAction: no action is required on this request  \\X\\0D\nSchedule: plan action to take place as part of maintenance or other task planning/scheduling  \\X\\0D\nUrgent: take action immediately  \\X\\0D\n{ .change-ifc2x4}\\X\\0D\n> IFC4 CHANGE The attribute has been added."
               }
             }
           }
@@ -19430,6 +19550,18 @@
         "Psets": {
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -19441,10 +19573,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -19681,7 +19809,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -19697,7 +19825,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
@@ -19721,6 +19849,18 @@
         "Psets": {
           "Pset_ConcreteElementGeneral": {
             "Properties": {
+              "AssemblyPlace": {
+                "type": "PEnum_AssemblyPlace",
+                "Description": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+                "values": [
+                  "FACTORY",
+                  "NOTKNOWN",
+                  "OFFSITE",
+                  "OTHER",
+                  "SITE",
+                  "UNSET"
+                ]
+              },
               "ConcreteCover": {
                 "type": "real",
                 "Description": "The protective concrete cover at the reinforcing bars according to local building regulations."
@@ -19732,10 +19872,6 @@
               "ConcreteCoverAtMainBars": {
                 "type": "real",
                 "Description": "The protective concrete cover at the main reinforcing bars according to local building regulations."
-              },
-              "ConstructionMethod": {
-                "type": "string",
-                "Description": "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are: 'In-Situ' vs 'Precast'."
               },
               "ConstructionToleranceClass": {
                 "type": "string",
@@ -19924,7 +20060,7 @@
               },
               "GrossVolume": {
                 "type": "real",
-                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigend to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
+                "Description": "Sum of all gross volumes of spaces enclosed by the building storey. It includes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces and the construction elements assigned to the storey. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence."
               },
               "GrossWeight": {
                 "type": "real",
@@ -19936,7 +20072,7 @@
               },
               "NetVolume": {
                 "type": "real",
-                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigend to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
+                "Description": "Sum of all net volumes of spaces enclosed by the building storey. It iexcludes the volumes of construction elements within the building storey. May be provided in addition to the quantities of the spaces assigned to the storey. In case of inconsistencies, the individual quantities of spaces take precedence."
               },
               "NetWeight": {
                 "type": "real",
