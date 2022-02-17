@@ -9,1194 +9,632 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcPresentationAppearanceResource.pot\n"
-"X-Crowdin-File-ID: 60\n"
+"X-Crowdin-File: /master/IfcRepresentationResource.pot\n"
+"X-Crowdin-File-ID: 78\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-17 21:07\n"
 
-#:IFC.xml:26402
-msgid "IfcBlobTexture"
-msgstr "IfcBlobTexture"
+#:IFC.xml:37687
+msgid "IfcConvertDirectionInto2D"
+msgstr "IfcConvertDirectionInto2D"
 
-msgid "IfcBlobTexture_DEFINITION"
-msgstr "An [[IfcBlobTexture]] provides a 2 dimensional distribution of the lighting parameters of a surface onto which it is mapped. The texture itself is given as a single binary blob, representing the content of a pixel format file. The file format of the pixel file is given by the RasterFormat attribute and allowable formats are guided by where rule SupportedRasterFormat . NOTE Toolbox specific implementations of the binary datatype may restrict the maximum length of the binary blob to capture the raster file content. For interpretation of the texture nodes see [[IfcImageTexture]] definition. HISTORY New entity in IFC2x3. .change ifc2x4 IFC4 CHANGE Data type of RasterCode has been corrected to BINARY."
+#:IFC.xml:37695
+msgid "IfcCoordinateOperation"
+msgstr "IfcCoordinateOperation"
 
-#:IFC.xml:26403
-msgid "IfcBlobTexture_RasterCode"
-msgstr "RasterCode"
+msgid "IfcCoordinateOperation_DEFINITION"
+msgstr "座標演算は、2つの座標参照システム間の任意の操作変換や変換を処理するための抽象的なスーパータイプです。 将来のバージョンに拡張性を提供することを目的としています。 現在、局所工学座標系の地図座標参照系への変換のみがサブタイプ[[IfcMapConversion]]によって処理されます。 規則により、SourceCRSがよりローカルである間の座標演算が与えられます。 または子座標参照システム、TargetCRSはよりリモートまたは親座標参照システムです。 特殊なケースでは、建設プロジェクトのローカルエンジニアリング座標系とマップやその他の座標系との間の座標操作。 .extDef NOTE定義をOpenGISから定義する 抽象仕様, トピック 2 2つの座標参照システム間の関係が既知の場合。 座標は別の座標参照システムに変換することができます。 座標演算は、2つのサブタイプに分かれています。 ote座標変換数学演算では、データの変更を含まない座標に対して行います。 座標変換の最もよく知られている例は、地図投影です。 座標変換を記述するパラメータは、経験的に導出するのではなく定義されています。一部の変換にはパラメータがないことに注意してください。 座標変換の数学演算は、通常、データの変更を含んでいます。 座標変換のパラメータは、両方の座標参照系における一連の座標を含むデータから得られます。 この計算プロセスは、通常、決定された上にあり、変換のための誤差または精度推定の導出を可能にします。 また、パラメータの確率的な性質は、同じ座標変換の複数の異なるバージョンをもたらす可能性があります。 座標参照システムでは、このような変換が複数存在する可能性があるため、変換方法、パラメータ値、精度特性が異なります。 歴史 IFC4に新しいエンティティがあります。"
 
-msgid "IfcBlobTexture_RasterCode_DEFINITION"
-msgstr "Blobは、一般的なファイル圧縮形式でテクスチャをキャプチャするために、単一のバイナリとして与えられます。ファイル形式は RasterFormat 属性によって提供されます。"
+#:IFC.xml:37702
+msgid "IfcCoordinateOperation_TargetCRS"
+msgstr "TargetCRS"
 
-#:IFC.xml:26408
-msgid "IfcBlobTexture_RasterFormat"
-msgstr "ラスタフォーマット"
+msgid "IfcCoordinateOperation_TargetCRS_DEFINITION"
+msgstr "操作のターゲット座標参照システム。"
 
-msgid "IfcBlobTexture_RasterFormat_DEFINITION"
-msgstr "RasterCodeのフォーマットは、しばしば圧縮を使用します。"
+#:IFC.xml:37696
+msgid "IfcCoordinateOperation_SourceCRS"
+msgstr "SourceCRS"
 
-#:IFC.xml:26415
-msgid "IfcColour"
-msgstr "IfcColor"
+msgid "IfcCoordinateOperation_SourceCRS_DEFINITION"
+msgstr "操作のソース座標参照システム。"
 
-#:IFC.xml:26417
-msgid "IfcColourOrFactor"
-msgstr "IfcColourOrFactor"
+#:IFC.xml:37738
+msgid "IfcCoordinateReferenceSystem"
+msgstr "IfcCoordinateReferenceSystem"
 
-#:IFC.xml:26418
-msgid "IfcColourRgb"
-msgstr "IfcColourRgb"
+msgid "IfcCoordinateReferenceSystem_DEFINITION"
+msgstr "[[IfcCoordinateReferenceSystem]] は、修飾された識別子による座標参照システムの定義です。 識別子の解釈は、受信ソフトウェアによく知られていることが期待されます。 .extDef NOTE 定義は OpenGIS 抽象仕様からのものです。 トピック2 座標参照システムとは、データによって現実世界に関係する座標系です。 座標系は、指定された単位を持つ座標軸の集合で構成されます。 座標系と地球との関係を指定します。 座標系とデータムの組み合わせは、座標参照系です。 座標参照システムが知っている明確な識別子は [IfcCoordinateReferenceSystem] 属性に格納されます。 よく定義された識別子には、測地データと、しばしば垂直データも含まれます。これらの場合、GeodeticDatumとVerticalDatumは省略できます。 例 識別子EPSG 25832 は、プロジェクションとゾーンに加えて測地データムETRS89を定義します。 EPSG 5555 は、測地データムETRS89と垂直データムDHHN92を定義しました。 メモ 広く使用されている1つ、公に利用可能な機関は、欧州石油調査グループEPSGです , この権限の使用は、現在、いくつかのOGC実装仕様で規定されています。 IFCエンジニアリングモデルをGISアプリケーションに移送するためのソフトウェアと、OGC実装仕様についての知識が期待されます。 歴史 IFC4に新しいエンティティがあります。"
 
-msgid "IfcColourRgb_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 46 1992 カラー仕様のサブタイプとしての色 rgb は赤の 3 つのカラーコンポーネント値で定義されています。 RGBカラーモデルでは緑、青。 注 通常の値の範囲のカラーコンポーネントは0から整数であるのに対して。 55, ISO10303 46 の定義では、カラーコンポーネントは 0.0 ... 1.0 から実数として定義されています。 アプリケーションは、カラーRGB値を入力する前にこの変換を実行する必要があります。 name 属性は省略されました。regのデータ型です。 緑と青の部分はIfcNormalizedRatioMeasureで、すでに値の範囲制限が含まれています。 正式な規格の最終的な定義については、ISO IS 10303 46 1994、p.138を参照してください。"
+#:IFC.xml:37714
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
+msgstr "HasCoordinateOperation"
 
-#:IFC.xml:26419
-msgid "IfcColourRgb_Blue"
-msgstr "青"
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
+msgstr "座標系間の変換を示します。特に、この座標参照系と別の地理座標参照系の間の[[IfcCoordinateOperation]]を参照します。"
 
-msgid "IfcColourRgb_Blue_DEFINITION"
-msgstr "青色成分の強度。注意 色成分値は0の範囲内で与えられます。 1、そうでなければ通常通り0..255の範囲内ではありません。"
+#:IFC.xml:37739
+msgid "IfcCoordinateReferenceSystem_Description"
+msgstr "説明"
 
-#:IFC.xml:26424
-msgid "IfcColourRgb_Green"
-msgstr "緑"
+msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
+msgstr "この座標参照システムの非公式な説明。 xtDef NOTE 名前が WKT に等しい場合、説明は ISO 19162 定義に対応するよく知られているテキストで、座標参照システムに必要なパラメータを指定します。 ellipsoid ELLIPSOID ,, の例"
 
-msgid "IfcColourRgb_Green_DEFINITION"
-msgstr "緑色コンポーネントの強度。注意 色コンポーネントの値は 0 の範囲内で与えられます。 1、そうでなければ通常通り0..255の範囲内ではありません。"
+#:IFC.xml:37744
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
+msgstr "GeodeticDatum"
 
-#:IFC.xml:26429
-msgid "IfcColourRgb_Red"
-msgstr "赤"
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
+msgstr "このデータムが識別される名前です。 測地系データは座標参照系に関連付けられており、回転楕円体の形状と大きさ、この楕円形の接続と実際の地球に対する方向を示しています。 名前識別子が同様にgeodetic データを明確に定義していない場合は、それを提供する必要があります。 .examples 測地データには、.note ED50 EUREF89 WSG84 が含まれます"
 
-msgid "IfcColourRgb_Red_DEFINITION"
-msgstr "赤色成分の強度。注意 色成分値は0の範囲内で与えられます。 1、そうでなければ通常通り0..255の範囲内ではありません。"
-
-#:IFC.xml:26521
-msgid "IfcColourRgbList"
-msgstr "IfcColourRgbList"
-
-msgid "IfcColourRgbList_DEFINITION"
-msgstr "The [[IfcColourRgbList]] defines an ordered collection of RGB colour values. Each colour value is a fixed list of three colour components red, green, blue . The attribute ColourList is a two dimensional list, where first dimension is an unbounded list representing each colour value second dimension is a fixed list of three list members, where 1 is the red component, 2 the green component, and 3 the blue component. NOTE The [[IfcColourRgbList]] is introduced to provide a compact representation of an indexable representation of colours for tessellated items. HISTORY New entity in IFC4."
-
-#:IFC.xml:26522
-msgid "IfcColourRgbList_ColourList"
-msgstr "ColorList"
-
-msgid "IfcColourRgbList_ColourList_DEFINITION"
-msgstr "赤、緑、青のコンポーネントによって定義された色のリスト。すべての値は 0.0 の値の比率で提供されます。 カラーチャンネルごとに8bitを使用する場合、0.0は0、値は1.0は255、間の値は補間されます。"
-
-#:IFC.xml:26541
-msgid "IfcColourSpecification"
-msgstr "IfcColourSpecification"
-
-msgid "IfcColourSpecification_DEFINITION"
-msgstr ".extDef NOTEの定義 ISO CD 10303 46 1992 カラー仕様エンティティには直接色定義が含まれています。 カラーコンポーネントの値は、特定の色空間を直接参照します。 注意 ISO 10303の色仕様に対応しています。IFCの抽象エンティティになりました。 正式な規格の最終的な定義については、ISO IS 10303 46 1994、p.138を参照してください。"
-
-#:IFC.xml:26542
-msgid "IfcColourSpecification_Name"
+#:IFC.xml:37749
+msgid "IfcCoordinateReferenceSystem_Name"
 msgstr "名前"
 
-msgid "IfcColourSpecification_Name_DEFINITION"
-msgstr "RGB値のようなカラーコンポーネントに加えて、特定のカラー仕様に与えられる任意の名前。 RAL.change ifc2x3 IFC2x3 変更属性などの業界色分類の例名が追加されました。"
+msgid "IfcCoordinateReferenceSystem_Name_DEFINITION"
+msgstr "座標参照システムが識別される名前。 注 1 この名前は、欧州石油調査グループEPSGが認めたリストから取るものとします。 それは、例えば、EPSG 5555として、EPSGの名前空間によって修飾されるべきです。 xtDef NOTE 2 EPSGコードがCRSに存在しない場合、名前はWKTになります。"
 
-#:IFC.xml:26550
-msgid "IfcCorrectFillAreaStyle"
-msgstr "IfcCorrectFillAreaStyle"
+#:IFC.xml:37754
+msgid "IfcCoordinateReferenceSystem_VerticalDatum"
+msgstr "VerticalDatum"
 
-#:IFC.xml:26558
-msgid "IfcCurveFontOrScaledCurveFontSelect"
-msgstr "IfcCurveFontOrScaledCurveFontSelect"
+msgid "IfcCoordinateReferenceSystem_VerticalDatum_DEFINITION"
+msgstr "垂直データが識別される名前。 垂直データは座標参照系の高さ軸に関連付けられ、高さ系の原点を定義する基準平面と基本的な点を示します。 提供する必要があります format@@0識別子が垂直データムを明確に定義していない場合、および座標参照システムが3D参照システムである場合。 .example 垂直データには、.note DHHN92 ドイツの Huptho<unk> hennetz EVRS2007 ヨーロッパの垂直参照システムが含まれます"
 
-#:IFC.xml:26559
-msgid "IfcCurveStyle"
-msgstr "IfcCurveStyle"
+#:IFC.xml:37761
+msgid "IfcCoordinateReferenceSystemSelect"
+msgstr "IfcCoordinateReferenceSystemSelect"
 
-msgid "IfcCurveStyle_DEFINITION"
-msgstr "An [[IfcCurveStyle]] provides the style table for presentation information assigned to geometric curves. The style is defined by a color, a font and a width. The [[IfcCurveStyle]] defines curve patterns as model patterns, that is, the distance between visible and invisible segments of curve patterns are given in model space dimensions that have to be scaled using the target plot scale . Styles are intended to be shared by multiple [[IfcStyledItem]] s, assigning the style to occurrences of subtypes of [[IfcGeometricRepresentationItem]] s. Measures given to a font pattern or a curve width are given in global drawing length units. NOTE global units are defined at the single [[IfcProject]] instance, given by UnitsInContext [[IfcUnitAssignment]] , the same units are used for the geometric representation items and for the style definitions. The measure values for font pattern and curve width apply to the model space with a target plot scale provided for the correct appearance in the default plot scale.. For different scale and projection dependent curve styles a different instance of [[IfcCurveStyle]] needs to be used by IfcPresentationStyleAssignment for different [[IfcGeometricRepresentationSubContext]] dependent representations. NOTE the target plot scale is given by [[IfcGeometricRepresentationSubContext]].TargetScale . An [[IfcCurveStyle]] can be assigned to [[IfcGeometricRepresentationItem]] s via the IfcPresentationStyleAssignment through an intermediate [[IfcStyledItem]] or IfcAnnotationCurveOccurrence . .extDef NOTE Definition according to ISO CD 10303 46 1992 A curve style specifies the visual appearance of curves. NOTE Corresponding ISO 10303 name curve style. Please refer to ISO IS 10303 46 1994 for the final definition of the formal standard. HISTORY New entity in IFC2x2."
+#:IFC.xml:37762
+msgid "IfcGeometricProjectionEnum"
+msgstr "IfcGeometricProjectionEnum"
 
-#:IFC.xml:26560
-msgid "IfcCurveStyle_CurveColour"
-msgstr "CurveColor"
+msgid "IfcGeometricProjectionEnum_DEFINITION"
+msgstr "[[IfcGeometricProjectionEnum]] は、意味的に区別できるさまざまな表示タイプを定義します。 多くの場合、形状表現の詳細レベルは表示タイプによって制御されます。 HISTORY IFC2x2の新しい列挙。 項目 GRAPH VIEW 抽象的な、多くの場合、1次元要素表現を示す幾何学的表示表現。 軸線で壁を表します。スケッチビュー 抽象的で、多くの場合2次元要素表現を表します。 2フィートの印刷エッジで壁を表しどんな内層の表現も押し上げます MODEL VIEW 体積による壁の表示など、完全な3D要素表現を表示する幾何学的表示表示。 計画ビュー 完全な2D要素表現を示す幾何学的表示、詳細のレベルは、多くの場合、ターゲットスケールに依存します。 をクリックします。 上から見ると、投影は地上で見られます。 計画を削除します。 完全な2D要素表現を示す幾何学的表示、詳細のレベルは、多くの場合、ターゲットスケールに依存します。 をクリックします。 プロジェクションは、下から見るように地上に表示されます。 セクションビュー 完全な 2D 要素表現を表示する幾何学的表示、詳細レベルはターゲットスケールによって異なります。例: 2つの内側のエッジと内側のレイヤーのエッジで壁を表します。要素が断面線で切断されている場合。 ELEVATION VIEW 完全な 2D 要素表現を示す幾何学的表示、詳細レベルは、多くの場合、ターゲットスケールに依存します。 をクリックします。要素が標高ビュー内にある場合、境界エッジで壁を表します。 USERDEFINED ユーザー定義の仕様は、UserDefinedTargetView 属性の値によって与えられます。"
 
-msgid "IfcCurveStyle_CurveColour_DEFINITION"
-msgstr "カーブの表示部分の色。 指定されていない場合は、スタイル付きのレイヤー割り当てから色を取る必要があります。 それが与えられていない場合、デフォルトの色が適用されます。"
+#:IFC.xml:37763
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW"
+msgstr "要素ビュー"
 
-#:IFC.xml:26565
-msgid "IfcCurveStyle_CurveFont"
-msgstr "CurveFont"
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW_DEFINITION"
+msgstr "完全な 2D 要素表現を示す幾何学的表示、詳細のレベルは、多くの場合、ターゲットスケールに依存します。 をクリックします。要素が標高ビュー内にある場合、境界エッジで壁を表します。"
 
-msgid "IfcCurveStyle_CurveFont_DEFINITION"
-msgstr "カーブスタイルフォント。カーブを表示するために使用されます。 あらかじめ定義された曲線フォント、または明示的に定義された曲線フォントのいずれかを指定できます。 指定されていない場合、曲線フォントはスタイル付きのレイヤー割り当てから取得する必要があります。 それが与えられていない場合は、デフォルトの曲線フォントが適用されます。"
+#:IFC.xml:37764
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW"
+msgstr "グラフ表示"
 
-#:IFC.xml:26570
-msgid "IfcCurveStyle_CurveWidth"
-msgstr "曲線の幅"
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW_DEFINITION"
+msgstr "抽象的な、多くの場合、1次元の要素表現を示す幾何学的な表示表現、例えば、その軸線によって壁を表す。"
 
-msgid "IfcCurveStyle_CurveWidth_DEFINITION"
-msgstr "提示された曲線の幅に対するプレゼンテーション領域の単位で正の長さの尺度。 指定されていない場合は、スタイル付きのレイヤー割り当てからスタイルを選択します。 それが与えられていない場合はデフォルトのスタイルが適用されます"
+#:IFC.xml:37765
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW"
+msgstr "モード表示"
 
-#:IFC.xml:26575
-msgid "IfcCurveStyle_ModelOrDraughting"
-msgstr "ModelOrDraughting"
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW_DEFINITION"
+msgstr "例えば、体積による壁の表示など、完全な3D要素表現を示す幾何学的表示表現。"
 
-msgid "IfcCurveStyle_ModelOrDraughting_DEFINITION"
-msgstr "プレゼンテーションスタイルに提供される長さの尺度がモデルベースか、ドラフティングベースかを表示します。.change ifc2x4 IFC4 変更する新しい属性。"
-
-#:IFC.xml:26594
-msgid "IfcCurveStyleFont"
-msgstr "IfcCurveStyleFont"
-
-msgid "IfcCurveStyleFont_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 46 1992 曲線スタイルフォントは、複数の曲線スタイルのフォントパターンエンティティをより複雑なパターンに結合します。 得られたパターンは、カーブに沿って繰り返されます。 注意 ISO 10303の名前カーブスタイルフォントに対応しています。 正式な規格の最終的な定義については、ISO 10303-46 1994 を参照してください。"
-
-#:IFC.xml:26603
-msgid "IfcCurveStyleFont_PatternList"
-msgstr "パターンリスト"
-
-msgid "IfcCurveStyleFont_PatternList_DEFINITION"
-msgstr "曲線のフォントパターン図形のリスト。曲線の描画に使用される単純なパターンが含まれています。 パターンはリスト内で発生する順序で適用されます。"
-
-#:IFC.xml:26595
-msgid "IfcCurveStyleFont_Name"
-msgstr "名前"
-
-msgid "IfcCurveStyleFont_Name_DEFINITION"
-msgstr "カーブフォントで割り当てられる名前。"
-
-#:IFC.xml:26615
-msgid "IfcCurveStyleFontAndScaling"
-msgstr "IfcCurveStyleFontAndScaling"
-
-msgid "IfcCurveStyleFontAndScaling_DEFINITION"
-msgstr "The [[IfcCurveStyleFontAndScaling]] allows for the reuse of the same curve style definition in several sizes. The definition of the CurveFontScale is the scaling of a base curve style pattern to be used as a new or derived curve style pattern. NOTE The CurveFontScale should not be mixed up with the target plot scale. An example for [[IfcCurveStyleFontAndScaling]] is the sizing of a basic curve style dash pattern dash visible 0.01m, invisible 0.005m into dash large with CurveFontScale 2 resulting in visible 0.02m, invisible 0.01m , and into dash small with CurveFontScale 0.5 resulting in visible 0.005m, invisible 0.0025m . .extDef NOTE Definition according to ISO CD 10303 46 1992 A curve style font and scaling is a curve style font and a scalar factor for that font, so that a given curve style font may be applied at various scales. NOTE Corresponding ISO 10303 name curve style font and scaling. Please refer to ISO IS 10303 46 1994 for the final definition of the formal standard. HISTORY New entity in IFC2x2."
-
-#:IFC.xml:26616
-msgid "IfcCurveStyleFontAndScaling_CurveFontScaling"
-msgstr "CurveFontScaling"
-
-msgid "IfcCurveStyleFontAndScaling_CurveFontScaling_DEFINITION"
-msgstr "拡大率（縮小）"
-
-#:IFC.xml:26621
-msgid "IfcCurveStyleFontAndScaling_CurveStyleFont"
-msgstr "CurveStyleFont"
-
-msgid "IfcCurveStyleFontAndScaling_CurveStyleFont_DEFINITION"
-msgstr "CurveStyleFont"
-
-#:IFC.xml:26626
-msgid "IfcCurveStyleFontAndScaling_Name"
-msgstr "名前"
-
-msgid "IfcCurveStyleFontAndScaling_Name_DEFINITION"
-msgstr "カーブフォントのスケーリングで割り当てられる名前。"
-
-#:IFC.xml:26634
-msgid "IfcCurveStyleFontPattern"
-msgstr "IfcCurveStyleFontPattern"
-
-msgid "IfcCurveStyleFontPattern_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 46 1992 曲線スタイルのフォントパターンは、表示領域単位で表示される目に見えない曲線セグメントの長さを測定します。 注意 ISO 10303名曲線スタイルのフォントパターンに対応しています。 正式な規格の最終的な定義については、ISO 10303-46 1994 を参照してください。"
-
-#:IFC.xml:26635
-msgid "IfcCurveStyleFontPattern_InvisibleSegmentLength"
-msgstr "見えないセグメント長"
-
-msgid "IfcCurveStyleFontPattern_InvisibleSegmentLength_DEFINITION"
-msgstr "パターン定義における不可視セグメントの長さ。"
-
-#:IFC.xml:26640
-msgid "IfcCurveStyleFontPattern_VisibleSegmentLength"
-msgstr "可視セグメント長さ"
-
-msgid "IfcCurveStyleFontPattern_VisibleSegmentLength_DEFINITION"
-msgstr "パターン定義における表示セグメントの長さ (注記) 点を表す可視セグメントの場合、値 0 が割り当てられます。 .change ifc2x3 IFC2x3 CHANGE ファイルベースの取引所で上向きの互換性を持つデータ型が [[IfcLengthMeasure]] に変更されました。"
-
-#:IFC.xml:26647
-msgid "IfcCurveStyleFontSelect"
-msgstr "IfcCurveStyleFontSelect"
-
-#:IFC.xml:26649
-msgid "IfcDraughtingPreDefinedColour"
-msgstr "IfcDraughtingPreDefinedColour"
-
-msgid "IfcDraughtingPreDefinedColour_DEFINITION"
-msgstr "The draughting pre defined colour is a pre defined colour for the purpose to identify a colour by name. Allowable names are black , red , green , blue , yellow , magenta , cyan , white , by layer NOTE The [[IfcDraughtingPreDefinedColour]] is an entity that had been adopted from ISO 10303 202, Industrial automation systems and integration Product data representation and exchange, Part 202 Application protocol Associative draughting. The following table states the RGB values associated with the names given by the [[IfcDraughtingPreDefinedColour]]. Colour name Red Green Blue black 0 0 0 red 1.0 0 0 green 0 1.0 0 blue 0 0 1.0 yellow 1.0 1.0 0 magenta 1.0 0 1.0 cyan 0 1.0 1.0 white 1.0 1.0 1.0 by layer colour values obtained from [[IfcPresentationLayerWithStyle]]. NOTE Corresponding ISO 10303 name draughting pre defined colour. Please refer to ISO IS 10303 202 1994 page 194 for the final definition of the formal standard. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The value by layer shall only be inserted, if the geometric representation item using the colour definition has an association to [[IfcPresentationLayerWithStyle]] , and if that instance of [[IfcPresentationLayerWithStyle]] has a valid colour definition for [[IfcCurveStyle]] , IfcSymbolStyle , or [[IfcSurfaceStyle]] depending on what is applicable . Formal Propositions PreDefinedColourNames The inherited name for pre defined items shall only have the value of one of the following words."
-
-#:IFC.xml:26652
-msgid "IfcDraughtingPreDefinedCurveFont"
-msgstr "IfcDraughtingPreDefinedCurveFont"
-
-msgid "IfcDraughtingPreDefinedCurveFont_DEFINITION"
-msgstr "The draughting predefined curve font type defines a selection of widely used curve fonts for draughting purposes by name. NOTE The [[IfcDraughtingPreDefinedCurveFont]] is an entity that had been adopted from ISO 10303, Industrial automation systems and integration Product data representation and exchange, Part 46 Technical Corrigendum 2 Integrated generic resources Visual presentation. Figure 1 illustrates predefined curve fonts. predefined fonts .. .. .. .. figures ifcdraughtingpredefinedcurvefont fig1.gif Figure 1 Draughting predefined curve font NOTE If the [[IfcDraughtingPreDefinedCurveFont]] is used within an [[IfcCurveStyleFontAndScaling]] then the segment and space lengths that are given in the table are as such for the scale factor 1.0 NOTE Corresponding ISO 10303 name pre defined curve font. Please refer to ISO IS 10303 46 1994 TC2, page 12 for the final definition of the formal standard. HISTORY New entity in IFC2x2. Formal Propositions PreDefinedCurveFontNames The name of the [[IfcDraughtingPreDefinedCurveFont]] shall be continuous , chain , chain double dash , dashed , dotted or by layer ."
-
-#:IFC.xml:26655
-msgid "IfcExternallyDefinedHatchStyle"
-msgstr "IfcExternallyDefinedHatchStyle"
-
-msgid "IfcExternallyDefinedHatchStyle_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 46 1992 外部に定義されたハッチングスタイルは、ハッチングスタイルへの外部参照を行うエンティティです。 注 名前のソースとアイテムの参照に許可される値 外部で定義されたハッチングスタイルを識別するには、実装者契約によって決定される必要があります。 注 ISO 10303名の塗りつぶしスタイルを選択します。 正式な規格の最終的な定義については、ISO 10303-46 1994 を参照してください。"
-
-#:IFC.xml:26659
-msgid "IfcExternallyDefinedSurfaceStyle"
-msgstr "IfcExternallyDefinedSurfaceStyle"
-
-msgid "IfcExternallyDefinedSurfaceStyle_DEFINITION"
-msgstr "[[IfcExternallyDefinedSurfaceStyle]] は、情報をレンダリングするための材料ライブラリなど、外部ソースを参照することによってサーフェススタイルの定義です。 注 期待される結果を達成するために、外部で定義されたサーフェススタイルは、通常、明示的に定義されたサーフェススタイルに加えて与えられるべきです。 履歴 IFC2x2の新しいエンティティ。.change ifc2x3 IFC2x3 変更スペルは上向きの互換性を持たないIfcExternallyDefinedSufueStyleから修正されました。"
-
-#:IFC.xml:26663
-msgid "IfcExternallyDefinedTextFont"
-msgstr "IfcExternallyDefinedTextFont"
-
-msgid "IfcExternallyDefinedTextFont_DEFINITION"
-msgstr ".extDef NOTEの定義 ISO CDに準拠した定義 10303-46 1992 外部で定義されたテキストフォントはテキストフォントへの外部参照です。注 使用されるフォントソースおよびフォント名の制限は、実装のガイドラインによって公開される場合があります。 注意 ISO 10303の名前は外部で定義されたテキストフォントです。ISO 10303を参照してください。 公式標準の最終的な定義のための137. ヒストリーIFC2x2の新しい実体."
-
-#:IFC.xml:26667
-msgid "IfcFillAreaStyle"
-msgstr "IfcFillAreaStyle"
-
-msgid "IfcFillAreaStyle_DEFINITION"
-msgstr "An [[IfcFillAreaStyle]] provides the style table for presentation information assigned to annotation fill areas or surfaces for hatching and tiling. The [[IfcFillAreaStyle]] defines hatches as model hatches, that is, the distance between hatch lines, or the curve patterns of hatch lines are given in model space dimensions that have to be scaled using the target plot scale . The [[IfcFillAreaStyle]] allows for the following combinations of defining the style of hatching and tiling Solid fill for areas and surfaces by only assigning [[IfcColour]] to the set of FillStyles . It then provides the background colour for the filled area or surface. NOTE Color information of surfaces for rendering is assigned by using [[IfcSurfaceStyle]] , not by using [[IfcFillAreaStyle]] . Vector based hatching for areas and surfaces based on a single row of hatch lines by assigning a single instance of [[IfcFillAreaStyleHatching]] to the set of FillStyles . If an instance of [[IfcColour]] is assigned in addition to the set of FillStyles , it provides the background colour for the hatching. Vector based hatching for areas and surfaces based on two potentially crossing rows of hatch lines by assigning two instances of [[IfcFillAreaStyleHatching]] to the set of FillStyles. If an instance of [[IfcColour]] is assigned in addition to the set of FillStyles , it provides the background colour for the hatching. NOTE Assigning more then two instances of [[IfcFillAreaStyleHatching]] to define three or more rows of hatch lines is not encouraged. Tiling for areas and surfaces by assigning a single instance of [[IfcFillAreaStyleTiles]] to the set of FillStyles . If an instance of [[IfcColour]] is assigned in addition to the set of FillStyles , it provides the background colour for the tiling. Externally defined hatch style by assigning a single instance of [[IfcExternallyDefinedHatchStyle]] to the set of FillStyles . If an instance of [[IfcColour]] is assigned in addition to the set of FillStyles , it provides the background colour for the hatching. Measures given to a hatch or tile pattern are given in global drawing length units. NOTE Global units are defined at the single [[IfcProject]] instance, given by UnitsInContext [[IfcUnitAssignment]] , the same units are used for the geometric representation items and for the style definitions. The measure values for hatch or tile pattern apply to the model space with a target plot scale provided for the correct appearance in the default plot scale. For different scale and projection dependent fill area styles a different instance of [[IfcFillAreaStyle]] needs to be used by IfcPresentationStyleAssignment for different [[IfcGeometricRepresentationSubContext]] dependent representations. NOTE the target plot scale is given by [[IfcGeometricRepresentationSubContext]].TargetScale . An [[IfcFillAreaStyle]] can be assigned to IfcFillArea via the IfcPresentationStyleAssignment through an intermediate [[IfcStyledItem]] or subtype IfcAnnotationFillAreaOccurrence . .extDef NOTE Definition according to ISO CD 10303 46 1992 The style for filling visible curve segments, annotation fill areas or surfaces with tiles or hatches. NOTE Corresponding ISO 10303 name fill area style. Please refer to ISO IS 10303 46 1994 for the final definition of the formal standard. HISTORY New entity in IFC2x2. .deprecated DEPRECATION The use of [[IfcFillAreaStyleTiles]] is deprecated, as its definition might change is future releases."
-
-#:IFC.xml:26668
-msgid "IfcFillAreaStyle_FillStyles"
-msgstr "塗りつぶしスタイル"
-
-msgid "IfcFillAreaStyle_FillStyles_DEFINITION"
-msgstr "表示される曲線セグメント、注釈塗り領域またはサーフェスの表示に使用する塗り領域スタイルのセット。"
-
-#:IFC.xml:26673
-msgid "IfcFillAreaStyle_ModelOrDraughting"
-msgstr "ModelOrDraughting"
-
-msgid "IfcFillAreaStyle_ModelOrDraughting_DEFINITION"
-msgstr "プレゼンテーションスタイルに提供される長さの尺度がモデルベースか、ドラフティングベースかを表示します。.change ifc2x4 IFC4 変更する新しい属性。"
-
-#:IFC.xml:26680
-msgid "IfcFillAreaStyleHatching"
-msgstr "IfcFillAreaStyleHatching"
-
-msgid "IfcFillAreaStyleHatching_DEFINITION"
-msgstr "The [[IfcFillAreaStyleHatching]] is used to define simple, vector based hatching patterns, based on styled straight lines. The curve font, color and thickness is given by the HatchLineAppearance , the angle by the HatchLineAngle and the distance to the next hatch line by StartOfNextHatchLine , being either an offset distance or a vector. .extDef NOTE Definition according to ISO 10303 46 The fill area style hatching defines a styled pattern of curves for hatching an annotation fill area or a surface. NOTE If the hatch pattern involves two potentially crossing rows of hatch lines, then two instances of [[IfcFillAreaStyleHatching]] should be assigned to the [[IfcFillAreaStyle]] . Both share the same virtual point of origin of the hatching that is used by the reference hatch line or the PointOfReferenceHatchLine if there is an offset . For better control of the hatching appearance, when using hatch lines with other fonts then continuous, the PatternStart allows to offset the start of the curve font pattern along the reference hatch line if not given, the PatternStart is at zero distance from the virtual point of origin . If the reference hatch line does not go through the origin of the virtual hatching coordinate system , it can be offset by using the PatternStart . NOTE The coordinates of the PatternStart are given relative to the origin of the object coordinate of [[IfcAnnotationFillArea]] , or if present, the FillAreaTarget attribute of [[IfcAnnotationFillArea]] . The measure values are given in global drawing length units, representing a model hatching, and can be translated into drawing units by the TargetScale for a scale depended IfcGeometricRepresentationSubcontext , if provided. .deprecated DEPRECATION The use of PointOfReferenceHatchLine is deprecated. Figure 1 illustrates hatch attributes. Example 1 This example shows simple hatching given by using a curve font continuous at HatchLineAppearance. The distance of hatch lines is given by a positive length measure. The angle here 45 if measures in degree is provided by HatchLineAngle. The PatternStart is set to NIL in this example. Example 2 This shows hatching from example 1 with using a different curve font at HatchLineAppearance. The distance of hatch lines is given by a positive length measure, therefore the font pattern start is at a point at the next hatch line given by a vector being perpendicular to the point of origin at the reference hatch line. The PatternStart is set to NIL in this example. Example 3 This example uses hatching from example 2 with a vector to determine the pattern start of the next hatch lines. The pattern start is the beginning of the first visual curve font pattern segment at IfcCurveFont.CurveFont. The PatternStart is set to NIL in this example. Example 4 This example uses hatching from example 3 where the pattern start is offset from the point of origin at the reference hatch line. That is, the first visible curve font pattern segment now does not start at the point of origin at the reference hatch line. Example 5 This example uses hatching from example 4 where the hatch pattern is shifted against the underlying coordinate system. The point that is mapped to the insertion point of the IfcAnnotationFillAreaOccurrence now has an X and Y offset from the start of the reference hatch line. That is, the reference hatch line now does not go through the insertion point of the hatching. Example 6 This example shows use of [[IfcFillAreaStyleHatching]] attributes for two [[IfcFillAreaStyleHatching]] s within one [[IfcFillAreaStyle]]. Note that the PatternStart now displaces both the reference hatch line from the point of origin and the start of the curve pattern. This can be used in cases when more than one [[IfcFillAreaStyleHatching]] is used in an [[IfcFillAreaStyle]] in order to place rows of hatch lines with an offset from each other. Figure 1 Fill area style hatching NOTE Entity adapted from fill area style hatching defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcFillAreaStyleHatching]] has been changed by making the attributes PatternStart and PointOfReferenceHatchLine OPTIONAL. The attribute StartOfNextHatchLine has changed to a SELECT with the additional choice of [[IfcPositiveLengthMeasure]] . Upward compatibility for file based exchange is guaranteed. .change ifc2x4 IFC4 CHANGE The attribute data type for StartOfNextHatchLine has been changed to be a select of [[IfcPositiveLengthMeasure]] and [[IfcVector]] ."
-
-#:IFC.xml:11799
-msgid "IfcFillAreaStyleHatching_PointOfReferenceHatchLine"
-msgstr "PointOfReferenceHatchLine"
-
-msgid "IfcFillAreaStyleHatching_PointOfReferenceHatchLine_DEFINITION"
-msgstr "仮想ハッチング座標系の原点からの参照ハッチング線のオフセットを定義するデカルト点。 原点は、注釈の塗りつぶしエリアまたはサーフェスに塗りつぶしエリアスタイルのハッチングをマッピングするために使用されます。 次に、参照ハッチングラインが、塗りつぶしスタイルのターゲット ポイントからこのオフセットとともに表示されます。 参照ハッチングラインが指定されていない場合は、仮想ハッチング座標系の原点を通過します。 hrange ifc2x3 IFC2x3 変更点 PointOfReferenceHatchLine 属性の使用は、マッピングの原点である Cartesian ポイントを提供しないように変更されました。 マッピングの原点にオフセットを与えるためです 属性はオプションにされています。"
-
-#:IFC.xml:11811
-msgid "IfcFillAreaStyleHatching_PatternStart"
-msgstr "パターンスタート"
-
-msgid "IfcFillAreaStyleHatching_PatternStart_DEFINITION"
-msgstr "参照ハッチの線の曲線スタイルのフォントパターンの開始点である参照ハッチの線に沿った距離。 指定されていない場合、曲線スタイルのフォントパターンの開始点は仮想ハッチング座標系になります。 .change ifc2x2 IFC2x2 Add2 変更属性 PatternStart がオプションになりました。"
-
-#:IFC.xml:26582
-msgid "IfcFillAreaStyleHatching_HatchLineAppearance"
-msgstr "ハッチラインの外観"
-
-msgid "IfcFillAreaStyleHatching_HatchLineAppearance_DEFINITION"
-msgstr "ハッチング線の曲線スタイル 曲線のパターンは、各ハッチング線の原点から始まります。"
-
-#:IFC.xml:26681
-msgid "IfcFillAreaStyleHatching_HatchLineAngle"
-msgstr "HatchLineAngle"
-
-msgid "IfcFillAreaStyleHatching_HatchLineAngle_DEFINITION"
-msgstr "平面角度は、平行ハッチングラインの方向を測定します。"
-
-#:IFC.xml:26686
-msgid "IfcFillAreaStyleHatching_StartOfNextHatchLine"
-msgstr "StartOfNextHatchLine"
-
-msgid "IfcFillAreaStyleHatching_StartOfNextHatchLine_DEFINITION"
-msgstr "A repetition factor that determines the distance between adjacent hatch lines. The factor can either be defined by a parallel offset, or by a repeat factor provided by [[IfcVector]] . .change ifc2x3 IFC2x3 CHANGE The attribute type of StartOfNextHatchLine has changed to a SELECT of [[IfcPositiveLengthMeasure]] new and IfcOneDirectionRepeatFactor . .change ifc2x4 IFC4 CHANGE The attribute type of StartOfNextHatchLine has changed to a SELECT of [[IfcPositiveLengthMeasure]] new and [[IfcVector]] ."
-
-#:IFC.xml:26694
-msgid "IfcFillAreaStyleTiles"
-msgstr "IfcFillAreaStyleTiles"
-
-msgid "IfcFillAreaStyleTiles_DEFINITION"
-msgstr "The [[IfcFillAreaStyleTiles]] defines the filling of an [[IfcAnnotationFillArea]] by recurring patterns of styled two dimensional geometry, called a tile. The recurrence pattern is determined by two vectors, that multiply the tile in regular form. The two vectors act as a two dimensional repeat factor that determins eight new positions for the tiles. .extDef NOTE Definition according to ISO 10303 46 The fill area style tiles defines a two dimensional tile to be used for the filling of annotation fill areas or other closed regions. The content of a tile is defined by the tile set, and the placement of each tile determined by the filling pattern which indicates how to place tiles next to each other. Tiles or parts of tiles outside of the annotation fill area or closed region shall be clipped at the of the area or region. .extDef I k 1 R 1 k 2 R 2 k 1 ,k 2 1,0,1 , formula .. .. .. .. figures ifcfillareastyletilesymbolwithstyle fig1.gif Figure 1 shows the use of a vector for hatch line distances [[IfcFillAreaStyleTiles]] Fig1.gif 12,9 KB .. .. .. .. figures ifcfillareastyletiles fig1.gif Figure 1 two vectors as two direction repeat factor NOTE Entity adapted from fill area style tiles defined in ISO10303 46 HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE TilingPattern changed to list of two [[IfcVector]] , Tiles refer directly to [[IfcStyledItem]] ."
-
-#:IFC.xml:13423
-msgid "IfcFillAreaStyleTiles_TilingPattern"
-msgstr "TilingPattern"
-
-msgid "IfcFillAreaStyleTiles_TilingPattern_DEFINITION"
-msgstr "タイルの形状と相対位置を定義する2つの方向繰り返し係数。 hangeのifc2x4 IFC4の変更 属性の型は直接参照2つの[[IfcVector]] sに変更されました。"
-
-#:IFC.xml:26703
-msgid "IfcFillAreaStyleTiles_Tiles"
-msgstr "タイル"
-
-msgid "IfcFillAreaStyleTiles_Tiles_DEFINITION"
-msgstr "タイルの構成要素のセットは、記入された領域をタイルに並べるための注釈記号として使用されます。 .change ifc2x4 IFC4 変更点 データ型が [[IfcStyledItem]] に変更されました。 注意 互換性のある幾何表現アイテムとプレゼンテーションスタイルを参照する IfcStyleItem のみが使用されます。"
-
-#:IFC.xml:26695
-msgid "IfcFillAreaStyleTiles_TilingScale"
-msgstr "TilingScale"
-
-msgid "IfcFillAreaStyleTiles_TilingScale_DEFINITION"
-msgstr "注釈の塗りつぶし領域に配置される各タイルに適用されるスケール係数。"
-
-#:IFC.xml:26715
-msgid "IfcFillStyleSelect"
-msgstr "IfcFillStyleSelect"
-
-#:IFC.xml:26716
-msgid "IfcHatchLineDistanceSelect"
-msgstr "IfcHatchLineDistanceSelect"
-
-#:IFC.xml:26717
-msgid "IfcImageTexture"
-msgstr "IfcImageテクスチャ"
-
-msgid "IfcImageTexture_DEFINITION"
-msgstr "An [[IfcImageTexture]] provides a 2 dimensional texture that can be applied to a surface of an geometric item and that provides lighting parameters of a surface onto which it is mapped. The texture is provided as an image file at an external location for which an URL is provided. The following definitions from ISO IEC 19775 1 X3D Architecture and base components X3D Specification http www.web3d.org x3d specifications apply Greyscale pixels without alpha or simple transparency are treated as intensity textures. Greyscale pixels with alpha or simple transparency are treated as intensity plus alpha textures. RGB pixels without alpha channel or simple transparency are treated as full RGB textures. RGB pixels with alpha channel or simple transparency are treated as full RGB plus alpha textures. If the image specifies colours as indexed colour that is, palettes or colourmaps , the following semantics should be used note that greyscale refers to a palette entry with equal red, green, and blue values 1. If all the colours in the palette are greyscale and there is no transparency chunk, it is treated as an intensity texture. 2. If all the colours in the palette are greyscale and there is a transparency chunk, it is treated as an intensity plus opacity texture. 3. If any colour in the palette is not grey and there is no transparency chunk, it is treated as a full RGB texture. 4. If any colour in the palette is not grey and there is a transparency chunk, it is treated as a full RGB plus alpha texture. Texture nodes that require support for JPEG files shall interpret JPEG files as follows 1. Greyscale files number of components equals 1 are treated as intensity textures. 2. YCbCr files are treated as full RGB textures. 3. No other JPEG file types are required. It is recommended that other JPEG files are treated as a full RGB textures. Texture nodes that recommend support for GIF files shall follow the applicable semantics described above for the PNG format. The Uniform Resource Locator URL is a form of an URI and specified in RFC1738 http www.ietf.org rfc rfc1738.txt number 1738 by IETF. It supports resources located on a particular server being accessed by a particular protocol usually http , and resources located at a local machine. NOTE Exchange files following the ifcZIP convention may include a sub directory structure for image resources to be stored together with the product data set. NOTE The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO IEC 19775 1.2 2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard. HISTORY New entity in IFC2x2."
-
-#:IFC.xml:26718
-msgid "IfcImageTexture_URLReference"
-msgstr "URLReference"
-
-msgid "IfcImageTexture_URLReference_DEFINITION"
-msgstr "画像テクスチャが電子的に公開されているURIとして提供される場所。"
-
-#:IFC.xml:26725
-msgid "IfcIndexedColourMap"
-msgstr "IfcIndexedColourMap"
-
-msgid "IfcIndexedColourMap_DEFINITION"
-msgstr "The [[IfcIndexedColourMap]] provides the assignment of colour information to individual faces. It is used for colouring faces of tessellated face sets. The [[IfcIndexedColourMap]] defines an index into an indexed list of colour information. The Colours are a two dimensional list of colours provided by three RGB values. The ColourIndex attribute corresponds to the CoordIndex of the [[IfcTessellatedFaceSet]] defining the corresponding index list of faces. The Opacity attribute provides the alpha channel for all faces of the tessellated face set. Figure 1 shows a diagram of [[IfcTriangulatedFaceSet]] with a colour per face. [[IfcIndexedColourMap]] 01 .. .. .. .. figures ifcindexedcolourmap triangulated.png Figure 1 Indexed colour map for triangulated face sets Figure 2 shows a diagram of [[IfcPolygonalFaceSet]] with a colour per face. [[IfcIndexedColourMap]] 02 .. .. .. .. figures ifcindexedcolourmap polygonal.png Figure 2 Indexed colour map for polygonal face sets Figure 3 illustrates an instance of [[IfcTriangulatedFaceSet]] figure example values [[IfcIndexedColourMap]] 03 .. .. .. .. figures ifcindexedcolourmap example 01.png Figure 2 Indexed colour map for triangulated face set [[IfcTriangulatedFaceSet]].CoordIndex 1,6,5 , 1,2,6 , 6,2,7 , 7,2,3 , 7,8,6 , 6,8,5 , 5,8,1 , 1,8,4 , 4,2,1 , 2,4,3 , 4,8,7 , 7,3,4 [[IfcCartesianPointList]].CoordList 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. [[IfcIndexedColourMap]].ColourIndex 1, 1, 2, 2, 3, 3, 1, 1, 1, 1, 1, 1, [[IfcColourRgbList]].ColourList 1.,0.,0. , 0.,1.,0. , 1.,1.,0. HISTORY New entity in IFC4."
-
-#:IFC.xml:11148
-msgid "IfcIndexedColourMap_MappedTo"
-msgstr "MappedTo"
-
-msgid "IfcIndexedColourMap_MappedTo_DEFINITION"
-msgstr "色とアルファチャンネルを適用する[[IfcTessellatedFaceSet]]を参照してください。"
-
-#:IFC.xml:26529
-msgid "IfcIndexedColourMap_Colours"
-msgstr "色"
-
-msgid "IfcIndexedColourMap_Colours_DEFINITION"
-msgstr "トリプルのリストのインデックサブルなリストで、RGBの色を表します。"
-
-#:IFC.xml:26726
-msgid "IfcIndexedColourMap_ColourIndex"
-msgstr "ColorIndex"
-
-msgid "IfcIndexedColourMap_ColourIndex_DEFINITION"
-msgstr "[[IfcColourRgbList]] の各面の[[IfcTriangulatedFaceSet]]へのインデックス。インデックスされた面に色が均一に適用されます。"
-
-#:IFC.xml:26731
-msgid "IfcIndexedColourMap_Opacity"
-msgstr "透明度"
-
-msgid "IfcIndexedColourMap_Opacity_DEFINITION"
-msgstr "不透明度の値は、テッセラートされた顔セットのすべての面に等しく適用されます。 は、不透明、0.0 は完全に透明です。指定されていない場合、1.0 はすべての色が不透明であると仮定されます。 注 不透明度のためのアルファチャンネルコンポーネントの定義は、画像処理の新しい定義に従います。 は完全な透明性を意味し、1.0または2ビットの深さ1は完全に不透明を意味します。 これは、[[IfcSurfaceStyleShading]] の透明性の定義に反しています。"
-
-#:IFC.xml:26738
-msgid "IfcIndexedTextureMap"
-msgstr "IfcIndexedTextureMap"
-
-msgid "IfcIndexedTextureMap_DEFINITION"
-msgstr "The [[IfcIndexedTextureMap]] provides the mapping of the 2 dimensional texture coordinates to the surface onto which it is mapped. It is used for mapping the texture to faces of tessellated face sets. The [[IfcIndexedTextureMap]] defines an index into an indexed list of texture coordinates. The TexCoords are a two dimensional list of texture coordinates provided by two parameter values. Subtypes of [[IfcIndexedTextureMap]] establish the index attribute corresponding to subtypes of [[IfcTessellatedFaceSet]] defining the corresponding index lists of vertices. HISTORY New entity in IFC4."
-
-#:IFC.xml:11162
-msgid "IfcIndexedTextureMap_MappedTo"
-msgstr "MappedTo"
-
-msgid "IfcIndexedTextureMap_MappedTo_DEFINITION"
-msgstr "テクスチャマップを適用する[[IfcTessellatedFaceSet]]を参照してください。"
-
-#:IFC.xml:26741
-msgid "IfcIndexedTextureMap_TexCoords"
-msgstr "TexCoords"
-
-msgid "IfcIndexedTextureMap_TexCoords_DEFINITION"
-msgstr "テクスチャの頂点のインデックス可能なリスト。"
-
-#:IFC.xml:26753
-msgid "IfcIndexedTriangleTextureMap"
-msgstr "IfcIndexedTriangleTextureMap"
-
-msgid "IfcIndexedTriangleTextureMap_DEFINITION"
-msgstr "The [[IfcIndexedTriangleTextureMap]] provides the mapping of the 2 dimensional texture coordinates to the surface onto which it is mapped. It is used for mapping the texture to triangles of the [[IfcTriangulatedFaceSet]] . The [[IfcIndexedTriangleTextureMap]] defines an index into an indexed list of texture coordinates. The TexCoordIndex is a two dimensional list, where first dimension is the unbounded list of faces corresponding to the list of triangles defined by CoordIndex at [[IfcTriangulatedFaceSet]] second dimension is the fixed list of three indices to texture vertices cooresponding to the fixed list of indices to vertices at [[IfcTriangulatedFaceSet]] The TexCoords defined at supertype [[IfcIndexedTextureMap]] are a two dimensional list of texture coordinates provided by two parameter values. Each index of the second dimension list of TexCoordIndex points to a texture vertex in TexCoords . Figure 1 shows the use of [[IfcTriangulatedFaceSet]] with textures. Figure 1 Indexed triangle texture map Figure 2 illustrates an [[IfcTriangulatedFaceSet]] represented by [[IfcTriangulatedFaceSet]].CoordIndex 1,6,5 , 1,2,6 , 6,2,7 , 7,2,3 , 7,8,6 , 6,8,5 , 5,8,1 , 1,8,4 , 4,2,1 , 2,4,3 , 4,8,7 , 7,3,4 [[IfcCartesianPointList]].CoordList 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. [[IfcIndexedTriangleTextureMap]].TexCoordsIndex 1 4 3 , 1 2 4 , 3 1 4 , 4 1 2 , 8 7 6 , 6 7 5 , 4 3 2 , 2 3 1 , 5 8 7 , 8 5 6 , 2 4 3 , 3 1 2 [[IfcTextureVertexList]].TexCoordsList 0. 0.5 , 1. 0.5 , 0. 1.5 , 1. 1.5 , 0. 0. , 0. 1. , 1. 0. , 1. 1. Figure 2 Indexed triangle texture map geometry HISTORY New entity in IFC4."
-
-#:IFC.xml:26754
-msgid "IfcIndexedTriangleTextureMap_TexCoordIndex"
-msgstr "TexCoordIndex"
-
-msgid "IfcIndexedTriangleTextureMap_TexCoordIndex_DEFINITION"
-msgstr "[[IfcTextureVertexList]] を表す三角形の各頂点に対して、[[IfcTriangulatedFaceSet]] にインデックスを付けます。"
-
-#:IFC.xml:26761
-msgid "IfcPixelTexture"
-msgstr "IfcPixelテクスチャ"
-
-msgid "IfcPixelTexture_DEFINITION"
-msgstr "An [[IfcPixelTexture]] provides a 2D image based texture map as an explicit array of pixel values list of Pixel binary attributes . In contrary to the [[IfcImageTexture]] the [[IfcPixelTexture]] holds a 2 dimensional list of pixel color and opacity directly, instead of referencing to an URL. The following definitions from ISO IEC 19775 1 X3D Architecture and base components X3D Specification http www.web3d.org x3d specifications apply The PixelTexture node defines a 2D image based texture map as an explicit array of pixel values image field and parameters controlling tiling repetition of the texture onto geometry. Texture maps are defined in a 2D coordinate system s, t that ranges from 0.0 to 1.0 in both directions. The bottom edge of the pixel image corresponds to the S axis of the texture map, and left edge of the pixel image corresponds to the T axis of the texture map. The lower left pixel of the pixel image corresponds to s 0.0, t 0.0, and the top right pixel of the image corresponds to s 1.0, t 1.0. The Image field specifies a single uncompressed 2 dimensional pixel image. Image fields contain three integers representing the width, height and number of components in the image, followed by width height hexadecimal values representing the pixels in the image. Pixel values are limited to 256 levels of intensity that is, 0x00 0xFF hexadecimal . 1. A one component image specifies one byte hexadecimal value representing the intensity of the image. For example, 0xFF is full intensity in hexadecimal 255 in decimal , 0x00 is no intensity 0 in decimal . 2. A two component image specifies the intensity in the first high byte and the alpha opacity in the second low byte. 3. Pixels in a three component image specify the red component in the first high byte, followed by the green and blue components for example, 0xFF0000 is red, 0x00FF00 is green, 0x0000FF is blue . 4. Four component images specify the alpha opacity byte after red green blue e.g., 0x0000FF80 is semi transparent blue . A value of 00 is completely transparent, FF is completely opaque, 80 is semi transparent. Note that alpha equals 1.0 transparency , if alpha and transparency each range from 0.0 to 1.0. HISTORY New entity in IFC2x2."
-
-#:IFC.xml:26762
-msgid "IfcPixelTexture_ColourComponents"
-msgstr "ColorComponents"
-
-msgid "IfcPixelTexture_ColourComponents_DEFINITION"
-msgstr "ピクセル値に1、2、3、または4色成分が含まれているかどうかを示します。"
-
-#:IFC.xml:26767
-msgid "IfcPixelTexture_Height"
-msgstr "高さ"
-
-msgid "IfcPixelTexture_Height_DEFINITION"
-msgstr "高さT方向のピクセル数。"
-
-#:IFC.xml:26772
-msgid "IfcPixelTexture_Pixel"
-msgstr "ピクセル"
-
-msgid "IfcPixelTexture_Pixel_DEFINITION"
-msgstr "16進数のフラットなリストは、それぞれ1ピクセルを1、2、3、または4つのコンポーネントで表しています。 .change ifc2x3 IFC2x3 変更 データ型は STRING から BINARY に変更されました。"
-
-#:IFC.xml:26777
-msgid "IfcPixelTexture_Width"
-msgstr "Width"
-
-msgid "IfcPixelTexture_Width_DEFINITION"
-msgstr "幅S方向のピクセル数。"
-
-#:IFC.xml:26784
-msgid "IfcPreDefinedColour"
-msgstr "IfcPreDefinedColour"
-
-msgid "IfcPreDefinedColour_DEFINITION"
-msgstr "事前定義された色は、カラーコンポーネントによって直接色を定義する色仕様に反して、現在のデータ交換仕様のスコープにある色を識別するために使用できる修飾名を決定します。 注 ISO 10303の名前の前に定義された色に対応します。IFCの抽象的なエンティティにしました。 正式な規格の最終定義については、ISO IS 10303 46 1994, p.141 を参照してください。"
-
-#:IFC.xml:26788
-msgid "IfcPreDefinedCurveFont"
-msgstr "IfcPreDefinedCurveFont"
-
-msgid "IfcPreDefinedCurveFont_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 46 1992 The predefined curve font type is an abstract supertype provided to define an application specific curve font. The name label shall be constrained in the application protocol to values that are given specific meaning for curve fonts in that application protocol. NOTE The [[IfcPreDefinedCurveFont]] is an abstract entity, subtypes of it provide the predefined curve font by agreement of the values of the inherited Name attribute. Currently the only subtype provided is [[IfcDraughtingPreDefinedCurveFont]] . NOTE Corresponding ISO 10303 name pre defined curve font. Please refer to ISO IS 10303 46 1994, p. 103 for the final definition of the formal standard. HISTORY New entity in IFC2x2."
-
-#:IFC.xml:26792
-msgid "IfcPreDefinedItem"
-msgstr "IfcPreDefinedItem"
-
-msgid "IfcPreDefinedItem_DEFINITION"
-msgstr "pre 定義されたアイテムは、外部で定義されたアイテムとは対照的に Name 属性値を使用する規則により、データ交換仕様内で決定されるスタイルまたはフォントに与えられる修飾された名前です。 外部の情報源で合意されています 注 Name値を使用する規則は[[IfcPreDefinedItem]]のサブタイプで定義されており、仕様の一部です。 注意 対応するISO 10303名の前に定義された項目です。 正式な規格の最終的な定義については、ISO IS 10303 41 1994、page 137を参照してください。"
-
-#:IFC.xml:26793
-msgid "IfcPreDefinedItem_Name"
-msgstr "名前"
-
-msgid "IfcPreDefinedItem_Name_DEFINITION"
-msgstr "pre定義されたアイテムが識別される文字列。Allowable 値はサブタイプのレベルで宣言されます。"
-
-#:IFC.xml:26800
-msgid "IfcPreDefinedTextFont"
-msgstr "IfcPreDefinedTextFont"
-
-msgid "IfcPreDefinedTextFont_DEFINITION"
-msgstr "The pre defined text font determines those qualified names which can be used for fonts that are in scope of the current data exchange specification in contrary to externally defined text fonts . There are two choices IfcDraughtingPreDefinedTextFont for definitions from ISO IS 10303 46 1994 for old vector based and monospace text. [[IfcTextStyleFontModel]] for definitions from Cascading Style Sheets, level 1 http www.w3.org TR REC CSS1 target blank , W3C Recommendation 17 Dec 1996, revised 11 Jan 1999, CSS1, for all true type text. The use of the CSS1 definitions is the preferred way to represent text fonts. NOTE Corresponding ISO 10303 name pre defined text font. Please refer to ISO IS 10303 46 1994, p. 138 for the final definition of the formal standard. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextStyleFontModel]] has been added as new subtype."
-
-#:IFC.xml:26804
-msgid "IfcPresentationStyle"
-msgstr "IfcPresentationStyle"
-
-msgid "IfcPresentationStyle_DEFINITION"
-msgstr "The [[IfcPresentationStyle]] is an abstract generalization of style table for presentation information assigned to geometric representation items. It includes styles for curves, areas, surfaces, and text. Style information may include colour, hatching, rendering, and text fonts. The different styles may include length measures directly as a length measure with infered unit, or indirectly as a ratio in relation to another length measure . They may apply to curve pattern, hatch line distances, text spacing and font sizes. The attribute ModelOrDraughting determines whether those length measures are provided as model or draughting measures. Model measures, also called scale dependent measures, define the distance, size or other length measures as being always the same in model space and the distance size or other length measures on paper depend on the plotting scale. Draughting measures, also called scale independent measures, define the distance , size or other length measures as being always the same, when plotted on paper, independent of the plot scale. Each subtype of [[IfcPresentationStyle]] is assigned to the [[IfcGeometricRepresentationItem]] s through an intermediate [[IfcStyledItem]] . HISTORY New entity in IFC2x3."
-
-#:IFC.xml:26805
-msgid "IfcPresentationStyle_Name"
-msgstr "名前"
-
-msgid "IfcPresentationStyle_Name_DEFINITION"
-msgstr "プレゼンテーションスタイルの名前。"
-
-#:IFC.xml:26835
-msgid "IfcReflectanceMethodEnum"
-msgstr "IfcReflectanceMethodEnum"
-
-msgid "IfcReflectanceMethodEnum_DEFINITION"
-msgstr "[[IfcReflectanceMethodEnum]] は、利用可能なさまざまな反射率メソッドの範囲を定義します。 HISTORY IFC2x2 の新しい列挙型。 Items BLINN 滑らかでわずかに光沢のある外観を提供する反射率モデル。 FLAT 一定の色を与える反射率モデルです。このモデルはすべての光源の影響を無視します。 GLASS:反射特性と透過特性の両方を持つ材料のようなガラスの近似をサポートする反射率モデル。 MATT 鈍いマットな外観を提供する反射率モデル。 METAL 鏡面の金属的な外観を提供する反射率モデル。 MIRROR レイトレースによる二次ミラービューをサポートする反射率モデル。 PHONG 反射率モデルは、反射が表示方向の反対側にある表面の正常な反射方向で最も大きいPhongモデルに準拠しています。 PLASTIC Phongモデルと似た鏡像効果を持つ反射率モデル。 STRAUSS 限られた制御パラメータのセットに基づく金属と非金属の外観のための反射率モデル. NOTDEFINED"
-
-#:IFC.xml:26836
-msgid "IfcReflectanceMethodEnum_BLINN"
-msgstr "Bリン"
-
-msgid "IfcReflectanceMethodEnum_BLINN_DEFINITION"
-msgstr "滑らかでわずかに光沢のある外観を提供する反射率モデル。"
-
-#:IFC.xml:26837
-msgid "IfcReflectanceMethodEnum_FLAT"
-msgstr "FLAT"
-
-msgid "IfcReflectanceMethodEnum_FLAT_DEFINITION"
-msgstr "一定の色を与える反射率モデル。このモデルはすべての光源の影響を無視します。"
-
-#:IFC.xml:26838
-msgid "IfcReflectanceMethodEnum_GLASS"
-msgstr "GLAS"
-
-msgid "IfcReflectanceMethodEnum_GLASS_DEFINITION"
-msgstr "反射特性と透過特性の両方を持つ材料のようなガラスの近似をサポートする反射率モデル。"
-
-#:IFC.xml:26839
-msgid "IfcReflectanceMethodEnum_MATT"
-msgstr "MATT"
-
-msgid "IfcReflectanceMethodEnum_MATT_DEFINITION"
-msgstr "鈍いマットな外観を提供する反射率モデル。"
-
-#:IFC.xml:26840
-msgid "IfcReflectanceMethodEnum_METAL"
-msgstr "METAL"
-
-msgid "IfcReflectanceMethodEnum_METAL_DEFINITION"
-msgstr "鏡面的な金属的な外観を提供する反射率モデル。"
-
-#:IFC.xml:26841
-msgid "IfcReflectanceMethodEnum_MIRROR"
-msgstr "MIRRR"
-
-msgid "IfcReflectanceMethodEnum_MIRROR_DEFINITION"
-msgstr "光線トレースによる二次ミラービューをサポートする反射率モデル。"
-
-#:IFC.xml:26842
-msgid "IfcReflectanceMethodEnum_NOTDEFINED"
+#:IFC.xml:37766
+msgid "IfcGeometricProjectionEnum_NOTDEFINED"
 msgstr "注記されました"
 
-msgid "IfcReflectanceMethodEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
+msgid "IfcGeometricProjectionEnum_NOTDEFINED_DEFINITION"
+msgstr "仕様が指定されていません。"
 
-#:IFC.xml:26843
-msgid "IfcReflectanceMethodEnum_PHONG"
-msgstr "電話"
+#:IFC.xml:37767
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW"
+msgstr "計画表示"
 
-msgid "IfcReflectanceMethodEnum_PHONG_DEFINITION"
-msgstr "反射率モデルは、反射が表示方向の反対側にある表面の正常な反射方向に最も大きいPhongモデルに準拠しています。"
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW_DEFINITION"
+msgstr "完全な 2D 要素表現を表示する幾何学的表示、詳細レベルは、ターゲットスケールによって異なります。例えば、 2フィートの印字エッジと内側のすべての層のエッジで壁を表します 上から見ると、投影は地上で見られます。"
 
-#:IFC.xml:26844
-msgid "IfcReflectanceMethodEnum_PLASTIC"
-msgstr "プラスティック"
+#:IFC.xml:37768
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW"
+msgstr "計画を削除する"
 
-msgid "IfcReflectanceMethodEnum_PLASTIC_DEFINITION"
-msgstr "反射率モデルは、Phongモデルに似た鏡像効果を提供します。"
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW_DEFINITION"
+msgstr "完全な 2D 要素表現を表示する幾何学的表示、詳細レベルは、ターゲットスケールによって異なります。例えば、 2フィートの印字エッジと内側のすべての層のエッジで壁を表します プロジェクションは、下から見るように地上に表示されます。"
 
-#:IFC.xml:26845
-msgid "IfcReflectanceMethodEnum_STRAUSS"
-msgstr "STRAUSS"
+#:IFC.xml:37769
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW"
+msgstr "セクションビュー"
 
-msgid "IfcReflectanceMethodEnum_STRAUSS_DEFINITION"
-msgstr "制御パラメータの限られたセットに基づく金属と非金属の外観のための反射率モデル。"
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW_DEFINITION"
+msgstr "完全な 2D 要素表現を示す幾何学的表示、詳細のレベルは、多くの場合、ターゲットスケールに依存します。 をクリックします。 要素が切断線で切断されている場合。"
 
-#:IFC.xml:26847
-msgid "IfcSizeSelect"
-msgstr "IfcSizeSelect"
+#:IFC.xml:37770
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW"
+msgstr "スケッチビュー"
 
-#:IFC.xml:26848
-msgid "IfcSpecularHighlightSelect"
-msgstr "IfcSpecularHighlightSelect"
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW_DEFINITION"
+msgstr "抽象的な、多くの場合、2D 要素表現を示す幾何学的表示表現 2フィートの印刷エッジで壁を表しどんな内層の表現も押し上げます"
 
-#:IFC.xml:26849
-msgid "IfcStyledItem"
-msgstr "IfcStyledItem"
+#:IFC.xml:37771
+msgid "IfcGeometricProjectionEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcStyledItem_DEFINITION"
-msgstr "The [[IfcStyledItem]] holds presentation style information for products, either explicitly for an [[IfcGeometricRepresentationItem]] being part of an [[IfcShapeRepresentation]] assigned to a product, or by assigning presentation information to [[IfcMaterial]] being assigned as other representation for a product. If the [[IfcStyledItem]] is used within a reference from an [[IfcProductDefinitionShape]] then one Item shall be provided. If the [[IfcStyledItem]] is used within a reference from an [[IfcMaterialDefinitionRepresentation]] then no Item shall be provided. .extDef NOTE Definition according to ISO CD 10303 46 1992 The styled item is an assignment of style for presentation to a geometric representation item as it is used in a representation. NOTE Entity adapted from styled item defined in ISO10303 46. HISTORY New entity in IFC2x2. .change ifc2x2 IFC2x2 Addendum 1 CHANGE The entity [[IfcStyledItem]] has been made non abstract and the attribute Name added. .change ifc2x3 IFC2x3 CHANGE The attribute Item has been made optional, upward compatibility for file based exchange is guaranteed. .change ifc2x4 IFC4 CHANGE The subtype IfcAnnotationOccurrence and its subtypes are deleted. Use [[IfcStyledItem]] for all instantiations. The data type of Styles has been changed to IfcStyleAssignmentSelect .use head Use Definition Figure 1 illustrates use of [[IfcStyledItem]] for the two usage examples As a presentation for a geometric representation item As a presentation for a material definition NOTE The new IfcStyleAssignmentSelect allows the direct assignment styles, such as [[IfcCurveStyle]] , [[IfcSurfaceStyle]] without using the intermediate IfcPresentationStyleAssignment 2x4 example .. .. .. .. figures ifcstyleditem fig 1.png Figure 1 Styled item"
+msgid "IfcGeometricProjectionEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義の仕様は、UserDefinedTargetView 属性の値によって与えられます。"
 
-#:IFC.xml:13030
-msgid "IfcStyledItem_Item"
-msgstr "項目"
+#:IFC.xml:37773
+msgid "IfcGeometricRepresentationContext"
+msgstr "IfcGeometricRepresentationContext"
 
-msgid "IfcStyledItem_Item_DEFINITION"
-msgstr "スタイルが割り当てられている幾何学的表現項目。 hrange ifc2x2 IFC2x2 Add2 CHANGE 属性項目はオプションとして作られており、ファイルベースの交換の上方互換性が保証されています。"
+msgid "IfcGeometricRepresentationContext_DEFINITION"
+msgstr "The [[IfcGeometricRepresentationContext]] defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the WorldCoordinateSystem attribute. The main representation context may also provide the true north direction, see Figure 1. The TrueNorth attribute should be provided, if the y axis of the WorldCoordinateSystem does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute WorldCoordinateSystem. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not resent, it defaults to 0.,1. i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction. The true North as seen in CAD within the figure on the left shows the correct interpretation of the TrueNorth direction If a conversion to a geographic coordinate system is included by virtue of the HasCoordinateOperation attribute, then the TrueNorth attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an [[IfcCoordinateOperation]]. Figure 1 Definition of the true north direction The use of one instance of [[IfcGeometricRepresentationContext]] to represent the model 3D view is mandatory, the use of a second instance of [[IfcGeometricRepresentationContext]] to represent the plan 2D view is optional but needs to be given, if there are scale dependent plan views , the additional scale or view dependent contexts need to be handled by using the subtype [[IfcGeometricRepresentationSubContext]] pointing to the model view or the plan view as the ParentContext . See Figure 2 for an example using geometric representation contexts for 3D and 2D with assigned sub contexts. NOTE The inherited attribute ContextType shall have one of the following recognized values Model , Plan , NotDefined . Use of representation contexts defined at [[IfcProject]] for 3D model and 2D plan context, including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space. Figure 2 Example of using geometric representation contexts .extDef NOTE Definition according to ISO CD 10303 42 1992 A geometric representation context is a representation context in which the geometric representation items are geometrically founded. NOTE Entity adapted from geometric representation context defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x3 IFC2x3 CHANGE Applicable values for ContextType are only Model , Plan , and NotDefined . All other contexts are now handled by [[IfcGeometricRepresentationSubContext]] . .change ifc2x4 IFC4 CHANGE Mapping to Geographic coordinate system added by inverse attribute HasCoordinateOperation ."
 
-#:IFC.xml:26823
-msgid "IfcStyledItem_Styles"
-msgstr "Styles"
+#:IFC.xml:12432
+msgid "IfcGeometricRepresentationContext_TrueNorth"
+msgstr "TrueNorth"
 
-msgid "IfcStyledItem_Styles_DEFINITION"
-msgstr "幾何表現項目、またはマテリアル定義のいずれかに割り当てられている表現スタイル。 hrange ifc2x4 IFC4 変更点 データ型は IfcStyleAssignmentSelect に変更され、ファイルベースの交換では上方互換性があります。 注意 IFC4以降はselect アイテム [[IfcPresentationStyle]] のみが使用され、IfcPresentationStyleAssignment は非推奨となりました。"
+msgid "IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not present, it defaults to 0. 1., meaning that the positive Y axis of the project coordinate system equals the geographic northing direction. NOTE If a geographic placement is provided using [[IfcMapConversion]] then the true north is for information only. In case of inconsistency, the value provided with [[IfcMapConversion]] shall take precedence."
 
-#:IFC.xml:26850
-msgid "IfcStyledItem_Name"
+#:IFC.xml:37726
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation"
+msgstr "HasCoordinateOperation"
+
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation_DEFINITION"
+msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between a Geographic map coordinate reference system, and the engineering coordinate system of this construction project. If there is more then one [[IfcGeometricRepresentationContext]] provided to the [[IfcProject]] then all contexts shall have an identical instance of [[IfcCoordinateOperation]] as HasCoordinateOperation refering to the same instance of [[IfcCoordinateReferenceSystem]] ."
+
+#:IFC.xml:37792
+msgid "IfcGeometricRepresentationContext_HasSubContexts"
+msgstr "HasSubContexts"
+
+msgid "IfcGeometricRepresentationContext_HasSubContexts_DEFINITION"
+msgstr "この[[IfcGeometricRepresentationContext]]を参照するIfcGeometricRepresentationSubContextsのセット。"
+
+#:IFC.xml:37774
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "座標空間寸法"
+
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "幾何表現コンテキストでモデル化された座標空間の整数寸法カウント。"
+
+#:IFC.xml:37779
+msgid "IfcGeometricRepresentationContext_Precision"
+msgstr "精度"
+
+msgid "IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "幾何モデルのモデル精度の値。 これは、ダブル値REALであり、通常は1E 5〜1E 8範囲である。 これは2つの点が同一であると仮定される許容差を示しています この値は、例えば、Brep モデルでエッジ曲線から基になる面表面までの最大距離を設定するために使用できます。"
+
+#:IFC.xml:37784
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "WorldCoordinateSystem"
+
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "プロジェクトで使用されているすべての表示コンテキストのワールド座標系と呼ばれるエンジニアリング座標系の構築。 注 建物sの配置が原点から遠く離れている場合、より良い数値安定性を提供するために使用することができます。 ほとんどの場合、しかし、原点は0.0.0.0に設定されます。 そして方向 x 1.0.0.0。 , y 0.,1.,0. . . [[IfcMapConversion]] を使用して地理的な位置を指定する場合、WorldCoordinateSystem が attit を使用して、ローカルの工学座標系の 0 点と[[IfcMapConversion]] オフセットが関連する地理的参照点の間のオフセットを定義します。 プロジェクトの基点とサーベイポイントとも呼ばれる両方の点は、一致する必要があります。 ただし、ローカルのゼロ点から地理的参照点をオフセットすることは可能です。"
+
+#:IFC.xml:37806
+msgid "IfcGeometricRepresentationSubContext"
+msgstr "IfcGeometricRepresentationSubContext"
+
+msgid "IfcGeometricRepresentationSubContext_DEFINITION"
+msgstr "[[IfcGeometricRepresentationSubContext]] defines the context that applies to several shape representations of a product being a sub context, sharing the WorldCoordinateSystem , CoordinateSpaceDimension , Precision and TrueNorth attributes with the parent [[IfcGeometricRepresentationContext]] . The [[IfcGeometricRepresentationSubContext]] is used to define semantically distinguished representation types for different information content, dependent on the representation view and the target scale. It can be used to control the level of detail of the shape representation that is most applicable to this geometric representation context. In addition the sub context is used to control the later appearance of the [[IfcShapeRepresentation]] within a plot view. NOTE If the [[IfcShapeRepresentation]] using this sub context has [[IfcStyledItem]] s assigned to the Items , the presentation style information e.g. [[IfcCurveStyle]] , [[IfcTextStyle]] associated with the [[IfcStyledItem]] is given in target plot dimensions. For example, a line thickness [[IfcCurveStyle]].CurveWidth is given by a thickness measure relating to the thickness for a plot within the range of target scale. Each [[IfcProduct]] can then have several instances of subtypes of [[IfcRepresentation]] , each being assigned to a different [[IfcGeometricRepresentationSubContext]] . The applicable values for the inherited ContextIdentifier attribute shall be identical to the RepresentationIdentifier attrubute defined at [[IfcShapeRepresentation]] . NOTE The provision of a model view [[IfcGeometricRepresentationContext]].ContextType Model is mandatory. Instances of [[IfcGeometricRepresentationSubContext]] relate to it as its ParentContext . EXAMPLE Instances of [[IfcGeometricRepresentationSubContext]] can be used to handle the multi view blocks or macros, which are used in CAD programs to store several scale and or view dependent geometric representations of the same object. The application can then choose the most appropriate representation for showing the geometric shape of the product, depending on the target view and scale. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:37792
+msgid "IfcGeometricRepresentationSubContext_ParentContext"
+msgstr "ParentContext"
+
+msgid "IfcGeometricRepresentationSubContext_ParentContext_DEFINITION"
+msgstr "サブコンテキストがワールド座標系、精度、空間座標次元、真北を導出する親コンテキスト。"
+
+#:IFC.xml:37807
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "SELF IfcGeometricRepresentationContext CoordinateSpaceDimension"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].座標スペース寸法"
+
+#:IFC.xml:37812
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision"
+msgstr "SELF IfcGeometricRepresentationContext Precision"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].Precision"
+
+#:IFC.xml:37817
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth"
+msgstr "SELF IfcGeometricRepresentationContext TrueNorth"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].TrueNorth"
+
+#:IFC.xml:37821
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "SELF IfcGeometricRepresentationContext WorldCoordinateSystem"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].WorldCoordinateSystem"
+
+#:IFC.xml:37826
+msgid "IfcGeometricRepresentationSubContext_TargetScale"
+msgstr "ターゲットのスケール"
+
+msgid "IfcGeometricRepresentationSubContext_TargetScale_DEFINITION"
+msgstr "この表示コンテキストが適用される表示のターゲットプロットスケール。 注釈スケールは、表示サブコンテキストのターゲットプロットスケールを示します すべての注釈スタイルは、このターゲットプロットスケールに従ってプロット寸法で与えられます。 [[IfcGeometricRepresentationSubContext]] の複数のインスタンスが同じTargetView値を持つ場合。 ターゲットプロットスケールは次の小さいスケールでも無限の小スケールでも適用できます 注記スケール1 100は、TargetScale内で0.01として与えられたものが1より大きく、TargetScale内で0.005として与えられたものが200です。"
+
+#:IFC.xml:37831
+msgid "IfcGeometricRepresentationSubContext_TargetView"
+msgstr "ターゲットビュー"
+
+msgid "IfcGeometricRepresentationSubContext_TargetView_DEFINITION"
+msgstr "この表示コンテキストが適用される表示のターゲットビュー。"
+
+#:IFC.xml:37836
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView"
+msgstr "UserDefinedTargetView"
+
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView_DEFINITION"
+msgstr "ユーザー定義のターゲットビューでは、TargetView 属性が USERDEFINED に設定されている場合、この属性値が与えられます。"
+
+#:IFC.xml:37843
+msgid "IfcGlobalOrLocalEnum"
+msgstr "IfcGlobalOrLocalEnum"
+
+msgid "IfcGlobalOrLocalEnum_DEFINITION"
+msgstr "This enumeration type defines if the local object coordinate system or the global world coordinate system for the project is used to describe the measure values of entities which have a reference to this type. NOTE The world coordinate system is given by the [[IfcGeometricRepresentationContext]].WorldCoordinateSystem and is unique within the project. The local or object coordinate system is given by [[IfcProduct]].ObjectPlacement and is used by all [[IfcRepresentation]] s within the [[IfcProduct]].Representation . HISTORY New enumeration in IFC2x2. Items GLOBAL COORDS The global project coordinate system is used. LOCAL COORDS The local object coordinate system is used."
+
+#:IFC.xml:37844
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS"
+msgstr "グローバル座標"
+
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS_DEFINITION"
+msgstr "グローバルプロジェクト座標系が使用されます。"
+
+#:IFC.xml:37845
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS"
+msgstr "地元の座標"
+
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS_DEFINITION"
+msgstr "ローカルオブジェクト座標系が使用されます。"
+
+#:IFC.xml:37847
+msgid "IfcMapConversion"
+msgstr "IfcMap変換"
+
+msgid "IfcMapConversion_DEFINITION"
+msgstr "The map conversion deals with transforming the local engineering coordinate system, often called world coordinate system, into the coordinate reference system of the underlying map. NOTE The [[IfcMapConversion]] does not handle the projection of a map from the geodetic coordinate reference system. The map conversion allows to convert the local origin of the local engineering coordinate system to its place within a map easting, northing, orthogonal height and to rotate the x axis of the local engineering coordinate system within the horizontal easting westing plane of the map. NOTE The z axis of the local engineering coordinate system is always parallel to the z axis of the map coordinate system. The scale factor can be used when the length unit for the 3 axes of the map coordinate system are not identical with the length unit established for this project see [[IfcProject]].UnitsInContext , if omitted, the scale factor 1.0 is assumed. HISTORY New entity in IFC4"
+
+#:IFC.xml:37848
+msgid "IfcMapConversion_Eastings"
+msgstr "Eastings"
+
+msgid "IfcMapConversion_Eastings_DEFINITION"
+msgstr "ターゲットマップ座標参照システムの座標系のeastingに沿った位置を指定します。 右側の直交直交直交直交直交座標系の場合、これは x 軸に沿って位置を確立します。"
+
+#:IFC.xml:37853
+msgid "IfcMapConversion_Northings"
+msgstr "Northings"
+
+msgid "IfcMapConversion_Northings_DEFINITION"
+msgstr "ターゲットマップ座標参照システムの座標系の北端に沿った位置を指定します。 右利きの直交直交座標系の場合、これは y 軸に沿って位置を確立します"
+
+#:IFC.xml:37858
+msgid "IfcMapConversion_OrthogonalHeight"
+msgstr "直交高さ"
+
+msgid "IfcMapConversion_OrthogonalHeight_DEFINITION"
+msgstr "垂直データに対する直交高度相対値を指定しました。右手直交座標系についての注意 z軸に沿って位置を確立します。"
+
+#:IFC.xml:37863
+msgid "IfcMapConversion_Scale"
+msgstr "拡大縮小"
+
+msgid "IfcMapConversion_Scale_DEFINITION"
+msgstr "CRSの単位がエンジニアリング座標系の単位と同一ではない場合に使用するスケール。 省略された場合、1.0の値が仮定されます。"
+
+#:IFC.xml:37868
+msgid "IfcMapConversion_ScaleY"
+msgstr "スケール"
+
+msgid "IfcMapConversion_ScaleY_DEFINITION"
+msgstr "Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+
+#:IFC.xml:37873
+msgid "IfcMapConversion_ScaleZ"
+msgstr "スケール Z"
+
+msgid "IfcMapConversion_ScaleZ_DEFINITION"
+msgstr "Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+
+#:IFC.xml:37878
+msgid "IfcMapConversion_XAxisAbscissa"
+msgstr "XAxisAbscissa"
+
+msgid "IfcMapConversion_XAxisAbscissa_DEFINITION"
+msgstr "エンジニアリング座標参照システムのローカルx軸の位置を示すベクトルの終点の緩和軸に沿った値を指定します。 注1 右利きのデカルト座標系は、XAxisOrdinateとともにXAxisOrdateに沿って位置を確立します。地図座標系の水平面内のローカルx軸の方向を提供します。"
+
+#:IFC.xml:37883
+msgid "IfcMapConversion_XAxisOrdinate"
+msgstr "XAxisOrdine"
+
+msgid "IfcMapConversion_XAxisOrdinate_DEFINITION"
+msgstr "エンジニアリング座標参照システムのローカルの x 軸の位置を示すベクトルの終点の基準軸に沿った値を指定します。 右利きのデカルト座標系については注1、これはy軸に沿って位置を確立するであろう。 XAxisAbscissaには、地図座標系の水平面内のローカルx軸の方向を提供します。"
+
+#:IFC.xml:37890
+msgid "IfcMaterialDefinitionRepresentation"
+msgstr "IfcMaterialDefinitionRepresentation"
+
+msgid "IfcMaterialDefinitionRepresentation_DEFINITION"
+msgstr "[[IfcMaterialDefinitionRepresentation]] defines presentation information relating to [[IfcMaterial]] . It allows for multiple presentations of the same material for different geometric representation contexts. NOTE The [[IfcMaterialDefinitionRepresentation]] is currently only used to define presentation information to material used at element occurrences, defined as subtypes of [[IfcElement]] , or at element types, defined as subtypes of [[IfcElementType]] . The [[IfcMaterial]] is assigned to the subtype of [[IfcElement]] , or [[IfcElementType]] using the [[IfcRelAssociatesMaterial]] relationship eventually via other material related entities [[IfcMaterialLayerSetUsage]] , [[IfcMaterialLayerSet]] , [[IfcMaterialLayer]] , or [[IfcMaterialProfileSetUsage]] , [[IfcMaterialProfileSet]] , [[IfcMaterialProfile]] . The [[IfcMaterialDefinitionRepresentation]] can apply different presentation styles for different representation contexts, for example, a different style for sketch view, model view or plan view, or for different target scales, for each representation context is can apply curve style, fill area style hatching , symbol, text and surface style. HISTORY New entity in IFC2x3. .change ifc2x3 IFC2x3 CHANGE The entity [[IfcMaterialDefinitionRepresentation]] has been added. Upward compatibility for file based exchange is guaranteed. .change ifc2x4 IFC4 CHANGE The assignment of curve, surface and other styles to an [[IfcStyledItem]] has been simplified by IfcStyleAssignmentSelect . The use of intermediate IfcPresentationStyleAssignment is deprecated. .use head Use definition As shown in Figure 1, the presentation assignment can be specific to a representation context by adding one and more [[IfcStyledRepresentation]] s. Each of them includes a single [[IfcStyledItem]] with exactly zero or one style for either curve, fill area, surface, text or symbol style that is applicable. Figure 1 Material definition representation"
+
+#:IFC.xml:21807
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial"
+msgstr "RepresentedMaterial"
+
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial_DEFINITION"
+msgstr "表示が適用されるマテリアルへの参照。"
+
+#:IFC.xml:37893
+msgid "IfcProductDefinitionShape"
+msgstr "IfcProductDefinitionShape"
+
+msgid "IfcProductDefinitionShape_DEFINITION"
+msgstr "[[IfcProductDefinitionShape]] は、[[IfcProduct]] に関するすべての形状に関連する情報を定義します。 同じ製品の複数の幾何学的形状表現を可能にします。 形状に関連する情報には、3D ソリッドの幾何学的表現アイテム、2D 注釈などが含まれます。 および関連するプレゼンテーション情報の線の色、線の種類、 表示レイヤーへのサーフェスレンダリングプロパティの割り当て 可視性制御のための CAD レイヤーまたは接続システムの頂点のトポロジ表示項目を割り当てます 幾何表現アイテムの頂点ポイント、エッジ曲線を含む可能性があるエッジ、面表現 表面面 注 このエンティティの定義は、ISO 10303エンティティ製品定義の形状に関連しています。 正式規格の最終的な定義については、ISO 10303-41 1994 を参照してください。"
+
+#:IFC.xml:20937
+msgid "IfcProductDefinitionShape_ShapeOfProduct"
+msgstr "ShapeOfProduct"
+
+msgid "IfcProductDefinitionShape_ShapeOfProduct_DEFINITION"
+msgstr "[[IfcProductDefinitionShape]] は、[[IfcProduct]] . の1つ以上のインスタンスの表現を提供するために使用されます。 hrange ifc2x3 IFC2x3 変更点 新しい逆属性。.change ifc2x4 IFC4は逆関係性をリラックスして1 Nにした。"
+
+#:IFC.xml:37897
+msgid "IfcProductDefinitionShape_HasShapeAspects"
+msgstr "HasShapeAspects"
+
+msgid "IfcProductDefinitionShape_HasShapeAspects_DEFINITION"
+msgstr "形状または形状の一部を表す形状の側面を参照します。"
+
+#:IFC.xml:37909
+msgid "IfcProductRepresentation"
+msgstr "IfcProductReptRepresentation"
+
+msgid "IfcProductRepresentation_DEFINITION"
+msgstr "[[IfcProductRepresentation]] は、その幾何学的表現またはトポロジ的表現を含む製品の表現を定義します。 製品には0、1、または多数の幾何学的表現があり、マップされた表現を使用して、単一の幾何学表現をさまざまな製品間で共有することができます。 注 このエンティティの定義は、ISO 10303エンティティプロパティ定義に関連しています。 IFCモデルの他の場所でプロパティ、プロパティタイプ、プロパティセット定義と競合するため、プロパティの使用は避けられました。 歴史 IFC2.0における新しいエンティティ .change ifc2x3 IFC2x3 注意 ユーザは IFC2x3 以降からエンティティをインスタンス化してはいけません。.change ifc2x4 IFC4 抽象化されたエンティティを変更する."
+
+#:IFC.xml:37921
+msgid "IfcProductRepresentation_Representations"
+msgstr "表現"
+
+msgid "IfcProductRepresentation_Representations_DEFINITION"
+msgstr "形状表現を含む表現のリストが含まれています。各メンバーは、特定の表現コンテキスト内で特定のタイプの有効な表現を定義します。"
+
+#:IFC.xml:37910
+msgid "IfcProductRepresentation_Description"
+msgstr "説明"
+
+msgid "IfcProductRepresentation_Description_DEFINITION"
+msgstr "製品表現を特徴付ける単語または単語のグループ。 製品表示の名前に追加の意味を追加するために使用できます。"
+
+#:IFC.xml:37915
+msgid "IfcProductRepresentation_Name"
 msgstr "名前"
 
-msgid "IfcStyledItem_Name_DEFINITION"
-msgstr "スタイル付けされたアイテムが参照される単語、または単語のグループ。"
+msgid "IfcProductRepresentation_Name_DEFINITION"
+msgstr "製品表現が知られている単語または単語のグループ。"
 
-#:IFC.xml:26857
-msgid "IfcSurfaceSide"
-msgstr "IfcSurfaceSide"
+#:IFC.xml:37935
+msgid "IfcProductRepresentationSelect"
+msgstr "IfcProductRepresentationSelect"
 
-msgid "IfcSurfaceSide_DEFINITION"
-msgstr "[[IfcSurfaceSide]]は、サーフェスの負、正、または両辺が参照されているかどうかの表記です。 NOTEタイプは、ISO10303に定義されている表面側から適応しました。 HISTORYIFC2に新しい列挙型があります。 Items POSITVE 数学的定義から得られたサーフェス法線と同じ方向にあるサーフェスの辺。 <unk> 数学的定義から得られた表面法線よりも正反対の方向にある表面の側。 両方の両方, 正と負の側."
+#:IFC.xml:37936
+msgid "IfcProjectedCRS"
+msgstr "IfcProjectedCRS"
 
-#:IFC.xml:26858
-msgid "IfcSurfaceSide_BOTH"
-msgstr "ボット"
+msgid "IfcProjectedCRS_DEFINITION"
+msgstr "[[IfcProjectedCRS]]は、建設または設備工学プロジェクトのローカルエンジニアリング座標系の地図変換を関連づける地図の座標系です。 MapProjection と MapZone 属性は、基礎となる地理座標参照システムへの投影を一意に識別します。 彼らが受け取るアプリケーションでよく知られている場合。 投影された座標参照系は、2次元または3次元の直交直交直列座標系であると想定されます。 オプションの MapUnit 属性を使用して、マップで使用される長さの単位を決定できます。 xtDef NOTEの定義はOpenGIS抽象仕様からです。 トピック2 2次元または垂直座標軸を持つ3D座標基準システム 平面上の地球の形状を近似するために使用されます。 近似に固有の歪みは慎重に制御され知られています 歪み補正は、一般的に計算されたベアリングと距離に適用され、実際のフィールド値に近い値を生成します。 座標参照システムが知っている明確な識別子は、継承された Name 属性に格納されます。 明確に定義された識別子には、マッププロジェクションとマップゾーン情報が含まれます。 これらの場合、MapProjection と MapZone 属性は省略できます。 例 識別子EPSG 25832は、地図投影UTMとゾーン32Nを測地および垂直データに加えて定義します。 歴史 IFC4に新しいエンティティがあります。"
 
-msgid "IfcSurfaceSide_BOTH_DEFINITION"
-msgstr "両方、正と負の側面。"
+#:IFC.xml:23398
+msgid "IfcProjectedCRS_MapUnit"
+msgstr "MapUnit"
 
-#:IFC.xml:26859
-msgid "IfcSurfaceSide_NEGATIVE"
-msgstr "<unk>"
+msgid "IfcProjectedCRS_MapUnit_DEFINITION"
+msgstr "地図座標系を構成する座標軸の単位。 注 1 長さの尺度のみがスコープにあり、地図座標系の2軸または3軸すべてが同じ長さの単位を持つ必要があります。 注 2 MapUnitが省略されている場合、座標軸の単位は[[IfcProject]].UnitContext で述べられているように、デフォルトの単位から取得されます。"
 
-msgid "IfcSurfaceSide_NEGATIVE_DEFINITION"
-msgstr "数学的定義から得られた正常なサーフェスとは逆の方向にあるサーフェスの辺。"
+#:IFC.xml:37937
+msgid "IfcProjectedCRS_MapProjection"
+msgstr "MapProjection"
 
-#:IFC.xml:26860
-msgid "IfcSurfaceSide_POSITIVE"
-msgstr "正の位置"
+msgid "IfcProjectedCRS_MapProjection_DEFINITION"
+msgstr ".examples マッププロジェクトには .note UTM Gaus Krueger が含まれます。"
 
-msgid "IfcSurfaceSide_POSITIVE_DEFINITION"
-msgstr "数学的定義から得られたサーフェス法線と同じ方向にあるサーフェスの辺。"
+#:IFC.xml:37942
+msgid "IfcProjectedCRS_MapZone"
+msgstr "MapZone"
 
-#:IFC.xml:26862
-msgid "IfcSurfaceStyle"
-msgstr "IfcSurfaceStyle"
+msgid "IfcProjectedCRS_MapZone_DEFINITION"
+msgstr "MapProjection に関連するマップゾーンの名前が識別されます。 UTMの場合は、UTM32の場合は32のように、縦方向の幅のゾーンである3のようにゾーン番号を設定します。"
 
-msgid "IfcSurfaceStyle_DEFINITION"
-msgstr "[[IfcSurfaceStyle]] は、1 つまたは複数のサーフェススタイル要素のサーフェスへの割り当てです。 [ [IfcSurfaceStyle] ] , [[IfcSurface]] , [[IfcFaceBasedSurfaceModel]] , [[IfcShellBasedSurfaceModel]] , または [[IfcSolidModel]] のサブタイプで定義します。 正の表面の正の方向は正の側に関係しています。 固体の場合は、固体の外側を肯定的な側面とすることです。 注意 サーフェススタイルは、レンダリングアプリケーションではマテリアル定義と呼ばれることがよくあります。 注意 ISO 10303エンティティサーフェススタイルの使用方法とサーフェスサイドスタイルに対応しています。 正式な規格の最終的な定義については、ISO 10303-46 1994を参照してください。 レンダリングのサポートに関するサーフェススタイルの定義は、ISO 10303の範囲を超えて大幅に拡大されています。 歴史 IFC2xに新しいエンティティが追加されました。"
+#:IFC.xml:37949
+msgid "IfcRepresentation"
+msgstr "IfcRepresentation"
 
-#:IFC.xml:26863
-msgid "IfcSurfaceStyle_Side"
-msgstr "サイド"
+msgid "IfcRepresentation_DEFINITION"
+msgstr "The [[IfcRepresentation]] defines the general concept of representing product properties and in particular the product shape. .extDef NOTE Definition from ISO 10303 43 A representation is a collection of one or more representation items that are related in a specified representation context. The relationship of representation item to representation context is the basis for distinguishing which representation item entities are related. A representation item can be related to a representation context directly, when it occurs as an element is a representation, or indirectly, when it is referenced through any number of intervening entities, each of type representation item. NOTE Entity adapted from representation defined in ISO 10303 42. HISTORY New entity in IFC2.0 .change ifc2x3 IFC2x3 CHANGE The inverse attributes LayerAssignments and RepresentationMap have been added with upward compatibility. .change ifc2x4 IFC4 CHANGE Entity [[IfcRepresentation]] has been changed into an ABSTRACT supertype. .use head Representation Use Definition Each representation, either [[IfcShapeRepresentation]] , or [[IfcTopologyRepresentation]] shall have a well defined ContextOfItems Reference to an [[IfcGeometricRepresentationContext]] as agreed for this representation. RepresentationIdentifier Name of the representation, for example, Body for 3D shape, FootPrint for 2D ground view, Axis for reference axis. RepresentationType Name for the geometric, or topological representation type, for example, SweptSolid for 3D swept solids, Brep for boundary representation. NOTE Guidelines for applying correct values to those attributes are provided in the geometry use definition section at each subtype of [[IfcElement]] . These guidelines can be further refined in view definitions or implementer agreements."
 
-msgid "IfcSurfaceStyle_Side_DEFINITION"
-msgstr "スタイルを適用する表面のどの側面を指定します。"
+#:IFC.xml:13018
+msgid "IfcRepresentation_Items"
+msgstr "アイテム"
 
-#:IFC.xml:26868
-msgid "IfcSurfaceStyle_Styles"
-msgstr "Styles"
+msgid "IfcRepresentation_Items_DEFINITION"
+msgstr "この表現に定義されている幾何表現アイテムのセット。"
 
-msgid "IfcSurfaceStyle_Styles_DEFINITION"
-msgstr "異なる表面スタイルのコレクション。"
+#:IFC.xml:13064
+msgid "IfcRepresentation_RepresentationMap"
+msgstr "RepresentationMap"
 
-#:IFC.xml:26875
-msgid "IfcSurfaceStyleElementSelect"
-msgstr "IfcSurfaceStyleElementSelect"
+msgid "IfcRepresentation_RepresentationMap_DEFINITION"
+msgstr "Use of the representation within an [[IfcRepresentationMap]] . If used, this [[IfcRepresentation]] may be assigned to many representations as one of its Items using an [[IfcMappedItem]] . Using [[IfcRepresentationMap]] is the way to share one representation often of type [[IfcShapeRepresentation]] by many products. .change ifc2x3 IFC2x3 CHANGE The inverse attribute LayerAssignments has been added"
 
-#:IFC.xml:26876
-msgid "IfcSurfaceStyleLighting"
-msgstr "IfcSurfaceStyleLighting"
+#:IFC.xml:27536
+msgid "IfcRepresentation_LayerAssignments"
+msgstr "レイヤー割り当て"
 
-msgid "IfcSurfaceStyleLighting_DEFINITION"
-msgstr "[[IfcSurfaceStyleLighting]]は、特定の表面スタイルに関連する物理的に正確な照度を計算するための特性のコンテナクラスです。 図1は、入射光線による反射・伝送部品を示しています。 反射と伝送の部品の合計は1の値です。 インシデントレイが完全に反射と透過成分に分解されていることを表しています 反射と伝送の各値は、したがって0.0〜1.0の範囲内です。 材料反射コンポーネント.... .. 図ifcsurfacelightingproperties図1。 図1の場合、サーフェススタイルの照明 これらの要因はすべて物理的に測定でき、赤色の比率を示します。 ライトの緑と青の部分です これらのプロパティは IfcColorRGB 型 としてモデルで定義され、各色の因子があります。 例 緑色のガラスは緑色の光のみを伝送するため、その伝送率は0です。 を指定すると、赤は緑は0.0から1.0、青は0.0の間です。 緑色の表面は緑色の光のみを反射するので、反射率は0です。 for red, between 0.0 and 1.0 for green, and 0.0 for blu. HISTORY IFC2x2に新しいエンティティが追加されました。"
+msgid "IfcRepresentation_LayerAssignments_DEFINITION"
+msgstr "単一または複数のレイヤーs への表示全体の割り当て . LayerAssigments は、アイテム のリスト内の [[IfcRepresentationItem]] s の LayerAssigments でオーバーライドできます。 注記実装契約は、レイヤ割り当ての最大数を 1 に制限することができます。.change ifc2x3 IFC2x3 IFC2x3 CHANGE 逆属性の LayerAssignments が追加されました。"
 
-#:IFC.xml:26461
-msgid "IfcSurfaceStyleLighting_DiffuseTransmissionColour"
-msgstr "DiffuseTransmissionColor"
+#:IFC.xml:37921
+msgid "IfcRepresentation_OfProductRepresentation"
+msgstr "OfProductRepresentation"
 
-msgid "IfcSurfaceStyleLighting_DiffuseTransmissionColour_DEFINITION"
-msgstr "透過光の拡散の程度. 完全に透明な材料の場合には拡散がありません. 拡散電力が大きいほど、送信された光の直接成分が小さくなり、拡散光だけが生成されるまで小さくなります。 値が1の場合は、光の色部分が完全に拡散されることを意味します。 注意 要因は物理的に測定でき、光の赤、緑、青の3つの比率があります。"
+msgid "IfcRepresentation_OfProductRepresentation_DEFINITION"
+msgstr "この個々の表示が適用される製品表示への参照。 ほとんどの場合、この形状表現が適用可能な1つまたは多数の製品形状への参照です。 .change ifc2x4 IFC4 変更点 逆関係の二項性は 0 N にリラックスしました。"
 
-#:IFC.xml:26473
-msgid "IfcSurfaceStyleLighting_DiffuseReflectionColour"
-msgstr "DiffuseReflectionColor"
+#:IFC.xml:37962
+msgid "IfcRepresentation_ContextOfItems"
+msgstr "ContextOfIts"
 
-msgid "IfcSurfaceStyleLighting_DiffuseReflectionColour_DEFINITION"
-msgstr "反射光の拡散の程度。鏡面の場合は拡散がありません。 反射面の拡散力が大きいほど、 反射光の鏡像成分が小さければ小さいほど拡散光だけが生成されます 値が1の場合は、光の色部分が完全に拡散されることを意味します。 注意 要因は物理的に測定でき、光の赤、緑、青の3つの比率があります。"
+msgid "IfcRepresentation_ContextOfItems_DEFINITION"
+msgstr "異なる表示サブタイプが有効である表示コンテキストの定義。"
 
-#:IFC.xml:26485
-msgid "IfcSurfaceStyleLighting_TransmissionColour"
-msgstr "透過色"
+#:IFC.xml:37950
+msgid "IfcRepresentation_RepresentationIdentifier"
+msgstr "RepresentationIdentifier"
 
-msgid "IfcSurfaceStyleLighting_TransmissionColour_DEFINITION"
-msgstr "体に降り注ぐ光がどのように完全に、または部分的に伝わるかを説明します。 ote 係数は物理的に測定することができ、光の赤、緑、青の3つの比率があります。"
+msgid "IfcRepresentation_RepresentationIdentifier_DEFINITION"
+msgstr "プロジェクト内で使用される表示のオプション識別子。"
 
-#:IFC.xml:26497
-msgid "IfcSurfaceStyleLighting_ReflectanceColour"
-msgstr "ReflectanceColor"
+#:IFC.xml:37955
+msgid "IfcRepresentation_RepresentationType"
+msgstr "RepresentationType"
 
-msgid "IfcSurfaceStyleLighting_ReflectanceColour_DEFINITION"
-msgstr "表面に落下する光の程度を決定する係数が完全または部分的に反射されます。 注意 要因は物理的に測定でき、光の赤、緑、青の3つの比率があります。"
+msgid "IfcRepresentation_RepresentationType_DEFINITION"
+msgstr "表示コンテキストのタイプの説明。表示タイプは、製品表示を表すために使用されるジオメトリまたはトポロジのタイプを定義します。 詳細については、サブタイプ[[IfcShapeRepresentation]] と [[IfcTopologyRepresentation]] で説明します。 コンテキスト型のサポートされている値は、実装者契約によって指定されます。"
 
-#:IFC.xml:26880
-msgid "IfcSurfaceStyleRefraction"
-msgstr "IfcSurfaceStyle屈折率"
+#:IFC.xml:37976
+msgid "IfcRepresentationContext"
+msgstr "IfcRepresentationContext"
 
-msgid "IfcSurfaceStyleRefraction_DEFINITION"
-msgstr "[[IfcSurfaceStyleRefraction]] extends the surface style lighting, or the surface style rendering definition for properties for calculation of physically exact illuminance by adding seldomly used properties. Currently this includes the refraction index by which the light ray refracts when passing through a prism and the dispersion factor or Abbe constant which takes into account the wavelength dependency of the refraction. NOTE If such refraction properties are used, the [[IfcSurfaceStyle]] should include within its set of Styles depending on whether rendering or lighting is used an instance of [[IfcSurfaceStyleLighting]] and [[IfcSurfaceStyleRefraction]] , or an instance of [[IfcSurfaceStyleRendering]] and [[IfcSurfaceStyleRefraction]] . HISTORY New entity in IFC2x2."
+msgid "IfcRepresentationContext_DEFINITION"
+msgstr "[[IfcRepresentationContext]] は、銘柄の [[IfcRepresentation]] が関連するコンテキストを定義します。 xtDef NOTE定義 ISO 10303からの定義 表示コンテキストとは、表示アイテムのセットが関連付けられているコンテキストです。 注記エンティティは ISO 10303 42 で定義されている表現コンテキストから適応されています。 .change ifc2x4 IFC4 抽象化されたエンティティの変更は、IFC2x2 以降のインスタンス化から廃止されました。"
 
-#:IFC.xml:26881
-msgid "IfcSurfaceStyleRefraction_DispersionFactor"
-msgstr "DispersonFactor"
+#:IFC.xml:37962
+msgid "IfcRepresentationContext_RepresentationsInContext"
+msgstr "RepresentationsInContext"
 
-msgid "IfcSurfaceStyleRefraction_DispersionFactor_DEFINITION"
-msgstr "異なる波長の材料の屈折率との間の固定比として与えられるAbbe定数。 Abbe数が小さい場合、分散力が高いことを意味します。一般的に、これは、創発スペクトルの角度の広がりに変換されます。"
+msgid "IfcRepresentationContext_RepresentationsInContext_DEFINITION"
+msgstr "同じ表現コンテキストで定義されているすべての形状表現。"
 
-#:IFC.xml:26886
-msgid "IfcSurfaceStyleRefraction_RefractionIndex"
-msgstr "屈折インデックス"
+#:IFC.xml:37977
+msgid "IfcRepresentationContext_ContextIdentifier"
+msgstr "ContextIdentifier"
 
-msgid "IfcSurfaceStyleRefraction_RefractionIndex_DEFINITION"
-msgstr "すべての波長の光の屈折率。 屈折率は、真空中の光速と媒体中の光速の比率です。 例えばガラスの屈折率は1.5で、水の指数は1.33である。"
+msgid "IfcRepresentationContext_ContextIdentifier_DEFINITION"
+msgstr "プロジェクト内で使用される表示コンテキストのオプション識別子。"
 
-#:IFC.xml:26894
-msgid "IfcSurfaceStyleRendering"
-msgstr "IfcSurfaceStyleRendering"
+#:IFC.xml:37982
+msgid "IfcRepresentationContext_ContextType"
+msgstr "コンテキストタイプ"
 
-msgid "IfcSurfaceStyleRendering_DEFINITION"
-msgstr "[[IfcSurfaceStyleRendering]] holds the properties for visualization related to a particular surface side style. It allows rendering properties to be defined by a colour component SurfaceColour attribute inherited from [[IfcSurfaceStyleShading]] a transparency component Transparency attribute inherited from [[IfcSurfaceStyleShading]] a reflectance component, given either by applying reflectance factors to the surface colour diffuse component SurfaceColour DiffuseFactor transmission component SurfaceColour TransmissionFactor diffuse transmission component SurfaceColour DiffuseTransmissionFactor reflection component SurfaceColour ReflectionFactor specular component SurfaceColour SpecularFactor attribute together with SpecularHighlight or, by explicitly defining such factors as colours DiffuseColour , TransmissionColour , DiffuseTransmissionColour , ReflectionColour and SpecularColour a displacement component, currently only given by a texture map with the TextureType bump a coverage component, currently only given by the alpha component of the texture map 2 or 4 component colour texture NOTE The inherited attribute SurfaceColour is treated as the ambient colour and specifies how much ambient light from light sources this surface shall reflect. Ambient light is omnidirectional and depends only on the number of light sources, not their positions with respect to the surface. NOTE If the reflectance method, as given by the [[IfcReflectanceMethodEnum]] is GLASS , the transmission factor controls the level of transparency in the glass, In this case the transparency factor is interpreted as transmission factor. NOTE If both Transparency and TransmissionColour or factor are included, the following definitions apply Transparency is the ratio of the transmitted flux in a solid angle of 2 PI sr one hemisphere . It is a simple colour filtration that does not account for refraction. Transmission factor of a material is the ratio of transmitted flux in a given solid angle to the transmitted flux of a completely diffuse material with 100 transmission in the same solid angle. It is the portion of light that goes through the material and may be refracted. NOTE For reflectance equations and further information about the surface style properties and its processing, see ISO IEC 14772 1 1997 The Virtual Reality Modeling Language HISTORY New entity in IFC2x."
+msgid "IfcRepresentationContext_ContextType_DEFINITION"
+msgstr "表現コンテキストの型の説明。コンテキストタイプのサポートされている値は、実装者契約によって指定されます。"
 
-#:IFC.xml:26895
-msgid "IfcSurfaceStyleRendering_DiffuseColour"
-msgstr "DiffuseColor"
+#:IFC.xml:37988
+msgid "IfcRepresentationContextSameWCS"
+msgstr "IfcRepresentationContextSameWCS"
 
-msgid "IfcSurfaceStyleRendering_DiffuseColour_DEFINITION"
-msgstr "反射率方程式の拡散部分は、色またはスカラー因子として与えることができます。 拡散色のフィールドは、光源に対するサーフェスの角度に応じてすべての光源を反映します。 表面が光に直面すればするほど、びまん性の光が反射します。 拡散係数フィールドは、この表面が反射する光源からの光の拡散量を指定します。 拡散光は、光源に対するサーフェスの角度に依存します。 表面が光に直面すればするほど、拡散光が反射します。拡散色は、表面の色の拡散因子によって定義されます。"
+#:IFC.xml:37996
+msgid "IfcSameValidPrecision"
+msgstr "IfcSameValidPrecision"
 
-#:IFC.xml:26900
-msgid "IfcSurfaceStyleRendering_DiffuseTransmissionColour"
-msgstr "DiffuseTransmissionColor"
+#:IFC.xml:38004
+msgid "IfcShapeAspect"
+msgstr "IfcShapeAspect"
 
-msgid "IfcSurfaceStyleRendering_DiffuseTransmissionColour_DEFINITION"
-msgstr "反射率方程式の拡散伝送部分は、色またはスカラー因子のいずれかとして与えることができます。 透明度フィールドがゼロより大きい素材にのみ適用されます。 拡散透過色は、材料表面の反対側にどのくらいの拡散光が反射されるかを指定します。 拡散伝送係数フィールドでは、この表面が物質表面の反対側に反射する光源からの光の拡散量を指定します。 拡散の透過的な色は、その後、表面色の拡散的な伝達因子によって定義されます。"
+msgid "IfcShapeAspect_DEFINITION"
+msgstr "[[IfcShapeAspect]] allows for grouping of shape representation items that represent aspects or components of the shape of a product. Thereby shape representations of components of the product shape represent a distinctive part to a product that can be explicitly addressed. The [[IfcShapeAspect]] s may have distinct material information or other distict characteristics that differs from other parts of the product shape representation. NOTE The [[IfcShapeAspect]] together with the [[IfcMaterialConstituent]] can be used to associate distict material information to parts of the product shape representation. Figure 1 indicates the association of material characteristics to shape aspects. shape .. .. .. .. figures ifcshapeaspect fig1.png Figure 1 shape aspects for associating material .extDef NOTE Definition from ISO 10303 41 A shape aspect is an identifiable element of the shape of an object. NOTE Entity adapted from shape aspect defined in ISO 10303 42. HISTORY New entity in IFC2.0 .change ifc2x4 IFC4 CHANGE Attribute PartOfProductDefinitionShape declared OPTIONAL and extended to type [[IfcProductRepresentationSelect]] with upward compatibility for file based exchange. .spec head Informal Propositions 1. If ShapeRepresentations points to shape representations that are part of an [[IfcProductDefinitionShape]] , PartOfProductDefinitionShape must refer to this instance of [[IfcProductDefinitionShape]] . 2. If ShapeRepresentations points to shape representations that are part of an [[IfcRepresentationMap]] , PartOfProductDefinitionShape must refer to this instance of [[IfcRepresentationMap]] ."
 
-#:IFC.xml:26905
-msgid "IfcSurfaceStyleRendering_ReflectanceMethod"
-msgstr "リフレクタンスメソッド"
+#:IFC.xml:9584
+msgid "IfcShapeAspect_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-msgid "IfcSurfaceStyleRendering_ReflectanceMethod_DEFINITION"
-msgstr "必要なメソッドが設定されている場合、あらかじめ定義された反射率メソッドの種類を特定します。"
+msgid "IfcShapeAspect_HasExternalReferences_DEFINITION"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:26910
-msgid "IfcSurfaceStyleRendering_ReflectionColour"
-msgstr "ReflectionColor"
+#:IFC.xml:38027
+msgid "IfcShapeAspect_ShapeRepresentations"
+msgstr "図形の表現"
 
-msgid "IfcSurfaceStyleRendering_ReflectionColour_DEFINITION"
-msgstr "反射率方程式の反射またはミラー部分は、色またはスカラー因子のいずれかとして与えることができます。 反射色は、鏡の方向からの光による寄与を指定します。 i. をクリックします。鏡面から反射される光の量を指定します。鏡面から反射される光の量を指定します。 そして、反射色は表面色の反射率によって定義されます。"
+msgid "IfcShapeAspect_ShapeRepresentations_DEFINITION"
+msgstr "図形表示のリストです。 各メンバーは、製品定義のアスペクトまたは一部として、特定の表示コンテキスト内の特定のタイプの有効な表現を定義します。 .change ifc2x3 IFC2x3 変更点 データ型が [[IfcShapeRepresentation]] から [[IfcShapeModel]] に変更され、上方互換性があります。"
 
-#:IFC.xml:26915
-msgid "IfcSurfaceStyleRendering_SpecularColour"
-msgstr "SpecularColor"
+#:IFC.xml:38005
+msgid "IfcShapeAspect_Description"
+msgstr "説明"
 
-msgid "IfcSurfaceStyleRendering_SpecularColour_DEFINITION"
-msgstr "反射率方程式の鏡像部分は色またはスカラー因子のいずれかとして与えることができます。 鏡面色は、リンゴの光沢のある斑点などの鏡面ハイライトを決定します。 光からサーフェスへの角度がサーフェスからビューアへの角度に近い場合 拡散色とアンビエント色の計算に鏡像色が追加されます。 鏡面係数は、鏡面部分を定義し、その後、鏡面色の鏡面色因子によって定義されます。"
+msgid "IfcShapeAspect_Description_DEFINITION"
+msgstr "形状側面を特徴付ける単語または単語のグループ。これを使用すると、側面の名前に追加の意味を追加できます。"
 
-#:IFC.xml:26920
-msgid "IfcSurfaceStyleRendering_SpecularHighlight"
-msgstr "SpecularHighlight"
+#:IFC.xml:38010
+msgid "IfcShapeAspect_Name"
+msgstr "名前"
 
-msgid "IfcSurfaceStyleRendering_SpecularHighlight_DEFINITION"
-msgstr "鏡面反射率の指数または粗さの部分。"
+msgid "IfcShapeAspect_Name_DEFINITION"
+msgstr "形の側面が知られている単語または単語のグループ。 これは、製品定義形状内のコンポーネントの特定の意味を示すタグであり、意味を与えるために使用されます。 例では、Glazing タグを使用して、窓形状のどのコンポーネントがグレージング領域を定義するかを定義します。"
 
-#:IFC.xml:26925
-msgid "IfcSurfaceStyleRendering_TransmissionColour"
-msgstr "透過色"
+#:IFC.xml:38015
+msgid "IfcShapeAspect_PartOfProductDefinitionShape"
+msgstr "PartOfProductDefinitionShape"
 
-msgid "IfcSurfaceStyleRendering_TransmissionColour_DEFINITION"
-msgstr "反射率方程式の透過部分は、色またはスカラー因子のいずれかとして与えることができます。 透過性フィールドがゼロより大きいマテリアルにのみ適用されます。 透過的な色のフィールドは、ガラスを通して輝く色のような透過性の材料を通過する色を指定します。 透過係数は、透過的な部分を定義し、透過的な色は、表面色の透過的な因子によって定義されます。"
+msgid "IfcShapeAspect_PartOfProductDefinitionShape_DEFINITION"
+msgstr "PartOfProductDefinitionShape"
 
-#:IFC.xml:26932
-msgid "IfcSurfaceStyleShading"
-msgstr "IfcSurfaceStyleShading"
+#:IFC.xml:38020
+msgid "IfcShapeAspect_ProductDefinitional"
+msgstr "ProductDefinition"
 
-msgid "IfcSurfaceStyleShading_DEFINITION"
-msgstr "[[IfcSurfaceStyleShading]] では、色の情報と、シェーディングやシンプルなレンダリングに使用される透明度を設定できます。 サーフェスの色は、割り当てられたサーフェスの色合いまたは単純なシェーディング、透明度を識別するために使用されます。ここで0。 は完全に不透明で、1.0は完全に透明です。 HISTORY IFC2xに新しいエンティティがあります。"
+msgid "IfcShapeAspect_ProductDefinitional_DEFINITION"
+msgstr "ProductDefinition"
 
-#:IFC.xml:26509
-msgid "IfcSurfaceStyleShading_SurfaceColour"
-msgstr "SurfaceColor"
+#:IFC.xml:38041
+msgid "IfcShapeModel"
+msgstr "IfcShapeModel"
 
-msgid "IfcSurfaceStyleShading_SurfaceColour_DEFINITION"
-msgstr "サーフェスの表示に使用される色。可視化のためのサーフェスの色は、赤、緑、青の強度を指定することによって定義されます。"
+msgid "IfcShapeModel_DEFINITION"
+msgstr "[[IfcShapeModel]] represents the concept of a particular geometric and or topological representation of a product s shape or a product component s shape within a representation context. This representation context has to be a geometric representation context with the exception of topology representations without associated geometry . The two subtypes are [[IfcShapeRepresentation]] to cover geometric models that represent a shape, and [[IfcTopologyRepresentation]] to cover the conectivity of a product or product component. The topology may or may not have geometry associated. The [[IfcShapeModel]] can be a shape representation geometric and or topologogical of a product via [[IfcProductDefinitionShape]] , or a shape representation geometric and or topologogical of a component of a product shape via [[IfcShapeAspect]] . HISTORY New entity in IFC2x3."
 
-#:IFC.xml:26933
-msgid "IfcSurfaceStyleShading_Transparency"
-msgstr "透過性"
+#:IFC.xml:38027
+msgid "IfcShapeModel_OfShapeAspect"
+msgstr "OfShapeアスペクト"
 
-msgid "IfcSurfaceStyleShading_Transparency_DEFINITION"
-msgstr "透過性フィールドは、オブジェクトがどのようにクリアされているかを指定します。1.0 は完全に透過で、0.0 は完全に不透明です。指定されていない場合は、値 0 を指定します。 不透明だと想定されている 注 1 が透明であり、0 が不透明であることの定義は、アルファチャンネルにおける定義とは正反対です。 完全に透明で1.0は完全に不透明です この定義は、[[IfcIndexedColourMap]] の定義とは異なる以前のバージョンのこの規格との上方互換性によるものです。"
+msgid "IfcShapeModel_OfShapeAspect_DEFINITION"
+msgstr "形状の側面を参照します, それは形状表現であるため."
 
-#:IFC.xml:26941
-msgid "IfcSurfaceStyleWithTextures"
-msgstr "IfcSurfaceStyleWithTextures"
+#:IFC.xml:38044
+msgid "IfcShapeRepresentation"
+msgstr "IfcShapeRepresentation"
 
-msgid "IfcSurfaceStyleWithTextures_DEFINITION"
-msgstr "The entity [[IfcSurfaceStyleWithTextures]] allows to include image textures in surface styles. These image textures can be applied repeating across the surface or mapped with a particular scale upon the surface. The entity [[IfcSurfaceStyleWithTextures]] is part of the surface style table for presentation information assigned to surfaces for shading, rendering and lighting with textures. The mapping of the texture onto the surface or the solid is determined by the texture coordinates, in absense of an [[IfcTextureCoordinate]] assigned to each surface texture, a default mapping of the texture to the geometric face or surface applies. Surface textures included in the [[IfcSurfaceStyleWithTextures]] are two dimensional map formats. They define 2D images that contain an array of colour values describing the texture. Depending on the number of IfcSurfaceTextures being included in the list of Textures the [[IfcSurfaceStyleWithTextures]] either describes a single texture, or a multi texture. single texture a single surface texture is applied to the styled geometric item entirely or partly with optional repetition and texture transformation multi texture two or more surface textures are applied to the styled geometric item entirely or partly with optional repetition, texture transformation or texture coordinate mapping being specific for each texture. .spec head Informal Propositions 1. Only one instance of [[IfcSurfaceStyleWithTextures]] shall be referenced by an [[IfcStyledItem]] and be assigned to an [[IfcGeometricRepresentationItem]] NOTE The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO IEC 19775 1.2 2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE inverse attribute HasTextureCoordinates deleted."
+msgid "IfcShapeRepresentation_DEFINITION"
+msgstr "The [[IfcShapeRepresentation]] represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute RepresentationType is used to define the geometric model used for the shape representation e.g. SweptSolid , or Brep , the inherited attribute RepresentationIdentifier is used to denote the kind of the representation captured by the [[IfcShapeRepresentation]] e.g. Axis , Body , etc. . Several representation identifiers for shape representation are included as predefined values for RepresentationIdentifier . Table 1 indicates the defined list of values for RepresentationIdentifier . Identifier CoG Point to identify the center of gravity of an element. This value can be used for validation purposes. Box Bounding box as simplified 3D box geometry of an element Annotation 3D annotations not representing elements Axis 2D or 3D Axis, or single line, representation of an element FootPrint 2D Foot print, or double line, representation of an element, projected to ground view Profile 3D line representation of a profile being planar, e.g. used for door and window outlines Surface 3D Surface representation, e.g. of an analytical surface, of an elementplane Reference 3D representation that is not part of the Body representation. This is used, e.g., for opening geometries, if there are to be excluded from an implicit Boolean operation. Body 3D Body representation, e.g. as wireframe, surface, or solid model, of an element Body FallBack 3D Body representation, e.g. as tessellation, or other surface, or boundary representation, added in addition to the solid model potentially involving Boolean operations of an element Clearance 3D clearance volume of the element. Such clearance region indicates space that should not intersect with the Body representation of other elements, though may intersect with the Clearance representation of other elements. Lighting Representation of emitting light as a light source within a shape representation Table 1 Representation identifiers Several representation types for shape representation are included as predefined values for RepresentationType . Table 2 indicates the defined list of values for RepresentationType . Type Point 2 or 3 dimensional point s PointCloud 3 dimensional points prepresented by a point list Curve 2 or 3 dimensional curve s Curve2D 2 dimensional curve s Curve3D 3 dimensional curve s Surface 2 or 3 dimensional surface s Surface2D 2 dimensional surface s a region on ground view Surface3D 3 dimensional surface s FillArea 2D region s represented as a filled area hatching Text text defined as text literals AdvancedSurface 3 dimensional b spline surface s GeometricSet points, curves, surfaces 2 or 3 dimensional GeometricCurveSet points, curves 2 or 3 dimensional Annotation2D points, curves 2 or 3 dimensional , hatches and text 2 dimensional SurfaceModel face based and shell based surface model s , or tessellated surface model s Tessellation tessellated surface representation s only SolidModel including swept solid, Boolean results and Brep bodies more specific types are SweptSolid swept area solids, by extrusion and revolution, excluding tapered sweeps AdvancedSweptSolid swept area solids created by sweeping a profile along a directrix, and tapered sweeps Brep faceted Brep s with and without voids AdvancedBrep Brep s based on advanced faces, with b spline surface geometry, with and without voids CSG Boolean results of operations between solid models, half spaces and Boolean results Clipping Boolean differences between swept area solids, half spaces and Boolean results additional types some additional representation types are provided BoundingBox simplistic 3D representation by a bounding box SectionedSpine cross section based representation of a spine curve and planar cross sections. It can represent a surface or a solid and the interpolations of the between the cross sections is not defined LightSource light source with depending on type position, orientation, light colour, intensity and attenuation MappedRepresentation representation based on mapped item s , referring to a representation map. Note it can be seen as an inserted block reference. The shape representation of the mapped item has a representation type declaring the type of its representation items. Table 2 Representation types .extDef NOTE The definition relates to shape representation defined in ISO 10303 41. HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE The RepresentationType s Point , PointCloud , Curve , Curve3D , Surface , Surface2D , Surface3D , FillArea , Text , Tessellation , AdvancedBrep , LightSource , and the RepresentationIdentifier Body FallBack , Profile , Clearance , Lighting have been added. Formal Propositions CorrectContext The context to which the [[IfcShapeRepresentation]] is assign, shall be of type [[IfcGeometricRepresentationContext]]. NoTopologicalItem No topological representation item shall be directly used for shape representations, with the exception of [[IfcVertexPoint]], [[IfcEdgeCurve]], [[IfcFaceSurface]]. HasRepresentationType A representation type should be provided for the shape representation. HasRepresentationIdentifier A representation identifier should be provided for the shape representation. CorrectItemsForType Checks the proper use of Items according to the RepresentationType ."
 
-#:IFC.xml:26945
-msgid "IfcSurfaceStyleWithTextures_Textures"
-msgstr "テクスチャ"
+#:IFC.xml:38047
+msgid "IfcShapeRepresentationTypes__RepType"
+msgstr "IfcShapeRepType"
 
-msgid "IfcSurfaceStyleWithTextures_Textures_DEFINITION"
-msgstr "表面に適用されるテクスチャ. 複数の表面テクスチャが含まれている場合, IfcSurfaceStyleWithTexture は、マルチテクスチャを定義します."
+#:IFC.xml:38055
+msgid "IfcStyledRepresentation"
+msgstr "IfcStyledRepresentation"
 
-#:IFC.xml:26959
-msgid "IfcSurfaceTexture"
-msgstr "IfcSurfaceTexture"
+msgid "IfcStyledRepresentation_DEFINITION"
+msgstr "The [[IfcStyledRepresentation]] represents the concept of a styled presentation being a representation of a product or a product component, like material. within a representation context. This representation context does not need to be but may be a geometric representation context. NOTE Current usage of [[IfcStyledRepresentation]] is restricted to the assignment of presentation information to an material. The [[IfcStyledRepresentation]] includes only presentation styles [[IfcCurveStyle]] , FillAreaStyle , [[IfcSurfaceStyle]] that define how a material should be presented within a particular eventually view and scale dependent representation context. All instances of [[IfcStyledRepresentation]] are referenced by [[IfcMaterialDefinitionRepresentation]] , and assigned to [[IfcMaterial]] by [[IfcMaterialDefinitionRepresentation]].RepresentedMaterial . A styled representation has to include one or several styled items with the associated style information curve, symbol, text, fill area, or surface styles . It shall not contain the geometric representation items that are styled. HISTORY New entity in IFC2x2. Formal Propositions OnlyStyledItems Only [[IfcStyledItem]] s or subtypes are allowed as members in the list of Items , inherited from [[IfcRepresentation]] . .change ifc2x3 IFC2x3 CHANGE New where rule to ensure the usage for material definition representations, and other non shape representations"
 
-msgid "IfcSurfaceTexture_DEFINITION"
-msgstr "An [[IfcSurfaceTexture]] provides a 2 dimensional image based texture map. It can either be given by referencing an external image file through an URL reference [[IfcImageTexture]] , including the image file as a blob long binary into the data set [[IfcBlobTexture]] , or by explicitly including an array of pixels [[IfcPixelTexture]] . The following definitions from ISO IEC 19775 1 X3D Architecture and base components X3D Specification http www.web3d.org x3d specifications apply Texture An image used in a texture map to create visual appearance effects when applied to geometry nodes. Texture map A texture plus the general parameters necessary for mapping the texture to geometry. Texture are defined by 2D images that contain an array of colour values describing the texture. The texture values are interpreted differently depending on the number of components in the texture and the specifics of the image format. In general, texture may be described using one of the following forms 1. Intensity textures one component 2. Intensity plus alpha opacity textures two component 3. Full RGB textures three component 4. Full RGB plus alpha opacity textures four component NOTE Image formats specify an alpha opacity, not transparency where alpha 1 transparency . Figure 1 illustrates the texture coordinate system. texture coordinates .. .. .. .. figures ifcsurfacetexture fig 1.png Figure 1 Surface texture coordinates The following definitions from ISO IEC 19775 1 X3D Architecture and base components X3D Specification http www.web3d.org x3d specifications on texture coordinates apply Texture maps are defined in a 2D coordinate system s, t that ranges from 0.0, 1.0 in both directions. The bottom edge of the image corresponds to the S axis of the texture map, and left edge of the image corresponds to the T axis of the texture map. The lower left pixel of the image corresponds to s 0, t 0, and the top right pixel of the image corresponds to s 1, t 1. Texture maps may be viewed as two dimensional colour functions that, given an s, t coordinate, return a colour value colour s, t . If multiple surface textures are included in the [[IfcSurfaceStyleWithTextures]] applying them to a geometric item, a mode and optional parameters can be included that blending operations. The RepeatS and RepeatT Boolean flags control whether the texture map is repeated outside the 0.0, 1.0 texture coordinate range, when applied to a geometric surface, or clamped to lie within the 0.0, 1.0 range. The TextureTransform applies a 2D non uniform transformation to the texture before it is applied to a geometric surface. The following definitions from ISO IEC 19775 1 X3D Architecture and base components X3D Specification http www.web3d.org x3d specifications apply These parameters support changes to the size, orientation, and position of textures on shapes. Note that these operations appear reversed when viewed on the surface of geometry. For example, a scale value of 2 2 will scale the texture coordinates and have the net effect of shrinking the texture size by a factor of 2 texture coordinates are twice as large and thus cause the texture to repeat . A translation of 0.5 0.0 translates the texture coordinates .5 units along the S axis and has the net effect of translating the texture 0.5 along the S axis on the geometry s surface. A rotation of π 2 of the texture coordinates results in a π 2 rotation of the texture on the geometry. The center field specifies a translation offset in texture coordinate space about which the rotation and scale fields are applied. The scale field specifies a scaling factor in S and T of the texture coordinates about the center point. scale values shall be in the range , . The rotation field specifies a rotation in radians of the texture coordinates about the center point after the scale has been applied. A positive rotation value makes the texture coordinates rotate counterclockwise about the centre, thereby rotating the appearance of the texture itself clockwise. The translation field specifies a translation of the texture coordinates. The following conventions apply center TextureTransform.LocalOrigin rotation TextureTransform.Axis1 scale S TextureTransform.Scale scale T TextureTransform.Scale2 NOTE The definitions of texturing within this standard have been developed in dependence on the texture component of X3D. See ISO IEC 19775 1.2 2008 X3D Architecture and base components Edition 2, Part 1, 18 Texturing component for the definitions in the international standard. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute TextureType replaces by Mode , attributes Parameter and MapsTo aded, new inverse attribute UsedInStyle ."
+#:IFC.xml:38058
+msgid "IfcStyleModel"
+msgstr "IfcStyleModel"
 
-#:IFC.xml:11944
-msgid "IfcSurfaceTexture_TextureTransform"
-msgstr "テクスチャ変換"
+msgid "IfcStyleModel_DEFINITION"
+msgstr "[[IfcStyleModel]] represents the concept of a particular presentation style defined for a material or other characteristic of a product or a product component within a representation context. This representation context may but has not to be a geometric representation context. [[IfcStyleModel]] can be a style representation presentation style of a material via [[IfcMaterialDefinitionRepresentation]] , potentially differentiated for different representation contexts for example, different material hatching depending on the scale of the target representation context . HISTORY New entity in IFC2x3."
 
-msgid "IfcSurfaceTexture_TextureTransform_DEFINITION"
-msgstr "TextureTransformは、テクスチャ座標に適用される2D変換を定義します。 これは、幾何表現イテムの表面にテクスチャ座標が適用される方法に影響します。 2D 変換では、シェイプ上のテクスチャのサイズ、方向、および位置の変更がサポートされます。 [[IfcCartesianTransformationOperator] ] でミラーリングを使用することはできません"
+#:IFC.xml:38061
+msgid "IfcTopologyRepresentation"
+msgstr "IfcTopologyRepresentation"
 
-#:IFC.xml:26945
-msgid "IfcSurfaceTexture_UsedInStyles"
-msgstr "UsedInStyles"
+msgid "IfcTopologyRepresentation_DEFINITION"
+msgstr "[[IfcTopologyRepresentation]] は、表示コンテキスト内で製品または製品コンポーネントの特定のトポロジカル表現の概念を表します。 この表現コンテキストは、幾何表現コンテキストである必要はありませんが、可能性があります。 形状表示のいくつかの表示タイプは、定義済みのタイプとして含まれています。頂点トポロジカル頂点表現は、割り当てられたジオメトリの有無にかかわらず割り当てられたジオメトリの有無にかかわらず、割り当てられたジオメトリの有無にかかわらず、割り当てられたジオメトリの有無にかかわらず、割り当てられたジオメトリの有無にかかわらず、割り当てられたジオメトリの有無にかかわらず、割り当てられたジオメトリの有無にかかわらず、頂点トポロジカル頂点表現の頂点表示は、継承された属性の RepresentationType で文字列値として与えられます。 HISTORY IFC2x2 に新たなエンティティが追加されました。正式な提案 WR21 トポロジカル表現アイテムのみを使用してください。 WR22 表示タイプはトポロジ表示に与えられるべきで、WR23 RepresentationTypeに従ってアイテムの適切な使用方法を確認します。"
 
-msgid "IfcSurfaceTexture_UsedInStyles_DEFINITION"
-msgstr "UsedInStyles"
-
-#:IFC.xml:26982
-msgid "IfcSurfaceTexture_IsMappedBy"
-msgstr "IsMappedBy"
-
-msgid "IfcSurfaceTexture_IsMappedBy_DEFINITION"
-msgstr "テクスチャ座標は、頂点ベースの幾何学的アイテムに対応するテクスチャ頂点のリスト、またはテクスチャ座標ジェネレータによって提供されます。 は、幾何学的要素の表面に表面テクスチャを適用します。 .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:26960
-msgid "IfcSurfaceTexture_Mode"
-msgstr "モード"
-
-msgid "IfcSurfaceTexture_Mode_DEFINITION"
-msgstr "Mode属性は、マルチテクスチャの外観を制御するために提供されます。その後、モードはブレンド操作のタイプを制御します。 モードには、点灯外観のためのMODULATE、照らされていない外観のための交換、および2つのバリエーションが含まれています。 注 Mode属性に適用可能な値は、ビュー定義または実装者契約によって決定されます。 ISO IES19775 1.2 2008 X3Dアーキテクチャとベースコンポーネントエディション2、パート1に記載されているモードを使用することが推奨されます。 18.4.3 マルチテクスチャ http www.web3d.org x3d 仕様 ISO IEC 19775 を参照してください。 X3D AbstractSpecification Part01 コンポーネント texturing.html 推奨値のためのマルチテクスチャ。.change ifc2x4 IFC4 変更 従来の TextureType を置き換える新しい属性。"
-
-#:IFC.xml:26965
-msgid "IfcSurfaceTexture_Parameter"
-msgstr "パラメータ"
-
-msgid "IfcSurfaceTexture_Parameter_DEFINITION"
-msgstr "複数のテクスチャの外観を制御するために、Parameter属性を提供します。適用可能なパラメータはMode属性の値によって異なります。 注 Parameter属性のリストに適用可能な値は、ビュー定義または実装者契約によって決定されます。 ISO IES197751で説明されているソースおよび機能フィールドの使用を推奨します。 2008 X3Dアーキテクチャとベースコンポーネントエディション2, 部 1. 参照してください。 マルチテクスチャ http www.web3d.org x3d 仕様 ISO IEC 19775 1.2 X3D Abstract仕様 Part01 コンポーネント texturing.html 推奨値についてのマルチテクスチャ。 規則により、パラメータ1は、関数の値をソース値、パラメータ2を保持します。 選択操作の基となるRGBカラーを「パラメーター 3 (Parameter 3)」、選択操作のアルファ値を「パラメーター 4 (Parameter 4)」とします。 .change ifc2x4 IFC4 変更点 属性リストの最後に新しい属性が追加されました。"
-
-#:IFC.xml:26970
-msgid "IfcSurfaceTexture_RepeatS"
-msgstr "RepeatS"
-
-msgid "IfcSurfaceTexture_RepeatS_DEFINITION"
-msgstr "format@@0フィールドでは、テクスチャがS方向にどのように包まれるかを指定します。 RepeatS がデフォルトの TRUE の場合、テクスチャマップは 0.0、1 の外側で繰り返されます。 S方向のテクスチャ座標範囲は、形状をいっぱいにするようにします。 RepeatSがFALSEの場合、テクスチャ座標はS方向にクランプされ、0.0、1.0の範囲内にあるようになります。"
-
-#:IFC.xml:26975
-msgid "IfcSurfaceTexture_RepeatT"
-msgstr "RepeatT"
-
-msgid "IfcSurfaceTexture_RepeatT_DEFINITION"
-msgstr "リピートTフィールドでは、テクスチャがT方向にどのように包まれるかを指定します。 RepeatT がデフォルトの TRUE の場合、テクスチャマップは 0.0、1 以外で繰り返されます。 T方向のテクスチャ座標範囲は、形状を満たすようにします。 RepeatTがFALSEの場合、テクスチャ座標はT方向にクランプされ、0.0、1.0の範囲内にあります。"
-
-#:IFC.xml:26996
-msgid "IfcTextFontSelect"
-msgstr "IfcTextFontSelect"
-
-#:IFC.xml:26997
-msgid "IfcTextStyle"
-msgstr "IfcTextStyle"
-
-msgid "IfcTextStyle_DEFINITION"
-msgstr "The [[IfcTextStyle]] is a presentation style for annotations that place a text in model space. The [[IfcTextStyle]] provides the text style for presentation information assigned to [[IfcTextLiteral]] s. The style is defined by color, text font characteristics, and text box characteristics. An [[IfcTextStyle]] is instantiated with TextCharacterAppearance [[IfcTextStyleForDefinedFont]] TextStyle [[IfcTextStyleTextModel]] TextFontStyle [[IfcTextStyleFontModel]] An [[IfcTextStyle]] is assigned to [[IfcTextLiteral]] through the [[IfcStyledItem]] entity. NOTE Entity adopted from font properties font family, font style, font variant, font weight, font size , Color and background properties color, background color and text properties word spacing, letter spacing, text decoration, text transform, text align, text indent, line height defined in CSS 1 .. .. .. bibliography.htm CSS1 . HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextStyle]] has been changed by adding TextFontStyle and different data types for TextStyle and IfcTextCharacterAppearance . .change ifc2x4 IFC4 CHANGE The [[IfcTextStyle]] has been simplified by removing old vector based text style definitions."
-
-#:IFC.xml:27010
-msgid "IfcTextStyle_TextCharacterAppearance"
-msgstr "TextCharacterAppear"
-
-msgid "IfcTextStyle_TextCharacterAppearance_DEFINITION"
-msgstr "提示されたテキストに使用される文字スタイル。.change ifc2x4 IFC4 CHANGE 過剰選択タイプ IfcCharacterStyleSelect が削除されました。"
-
-#:IFC.xml:27022
-msgid "IfcTextStyle_TextStyle"
-msgstr "TextStyle"
-
-msgid "IfcTextStyle_TextStyle_DEFINITION"
-msgstr "その視覚的な外観のためにテキストブロックに適用されるスタイル。 。 hrange ifc2x3 IFC2x3 ChangGE TextBlockStyle 属性が SET 1 から非集約オプションに変更され、TextStyles に名前が変更されました。 .change ifc2x4 IFC4 変更点 IfcTextStyleWithBoxCharacteristics と今は余分な選択タイプ IfcTextStyleSelect が削除されました。"
-
-#:IFC.xml:26998
-msgid "IfcTextStyle_ModelOrDraughting"
-msgstr "ModelOrDraughting"
-
-msgid "IfcTextStyle_ModelOrDraughting_DEFINITION"
-msgstr "プレゼンテーションスタイルに提供される長さの尺度がモデルベースか、ドラフティングベースかを表示します。.change ifc2x4 IFC4 変更する新しい属性。"
-
-#:IFC.xml:27003
-msgid "IfcTextStyle_TextFontStyle"
-msgstr "TextFontStyle"
-
-msgid "IfcTextStyle_TextFontStyle_DEFINITION"
-msgstr "外観のためにテキストフォントに適用されるスタイル。フォントファミリー、フォントスタイル、重量、サイズを定義します。 .change ifc2x2 IFC2x2 Add2 CHANGE TextFontStyle は[[IfcTextStyle]] にアタッチされた新しい属性です。"
-
-#:IFC.xml:27034
-msgid "IfcTextStyleFontModel"
-msgstr "IfcTextStyleFontModel"
-
-msgid "IfcTextStyleFontModel_DEFINITION"
-msgstr ".extDef Definition according to W3C for Cascading Style Sheets Setting font properties will be among the most common uses of style sheets. Unfortunately, there exists no well defined and universally accepted taxonomy for classifying fonts, and terms that apply to one font family may not be appropriate for others. For example, italic is commonly used to label slanted text, but slanted text may also be labeled as being Oblique , Slanted , Incline , Cursive or Kursiv . Therefore it is not a simple problem to map typical font selection properties to a specific font. .extDef Font matching Because there is no accepted, universal taxonomy of font properties, matching of properties to font faces must be done carefully. The properties are matched in a well defined order to ensure that the results of this matching process are as consistent as possible across user agents assuming that the same library of font faces is presented to each of them . 1. The user agent makes or accesses a database of relevant CSS1 properties of all the fonts of which the UA is aware. The UA may be aware of a font because it has been installed locally or it has been previously downloaded over the web. If there are two fonts with exactly the same properties, one of them is ignored. 2. At a given element and for each character in that element, the UA assembles the font properties applicable to that element. Using the complete set of properties, the UA uses the font family property to choose a tentative font family. The remaining properties are tested against the family according to the matching criteria described with each property. If there are matches for all the remaining properties, then that is the matching font face for the given element. 3. If there is no matching font face within the font family being processed by step 2, and if there is a next alternative font family in the font set, then repeat step 2 with the next alternative font family . 4. If there is a matching font face, but it doesn t contain a glyph for the current character, and if there is a next alternative font family in the font sets, then repeat step 2 with the next alternative font family . 5. If there is no font within the family selected in 2, then use a UA dependent default font family and repeat step 2, using the best match that can be obtained within the default font. The above algorithm can be optimized to avoid having to revisit the CSS1 properties for each character. The per property matching rules from 2 above are as follows 1. font style is tried first. italic will be satisfied if there is either a face in the UA s font database labeled with the CSS keyword italic preferred or oblique . Otherwise the values must be matched exactly or font style will fail. 2. font variant is tried next. normal matches a font not labeled as small caps small caps matches 1 a font labeled as small caps , 2 a font in which the small caps are synthesized, or 3 a font where all lowercase letters are replaced by upper case letters. A small caps font may be synthesized by electronically scaling uppercase letters from a normal font. 3. font weight is matched next, it will never fail. See font weight below. 4. font size must be matched within a UA dependent margin of tolerance. Typically, sizes for scalable fonts are rounded to the nearest whole pixel, while the tolerance for bitmapped fonts could be as large as 20 . Further computations, are based on the font size value that is used, not the one that is specified. The inherited Name attribute is used to define the font name, particularly in cases, where no list of font families are provided. NOTE Corresponding CSS1 definitions are Font properties font family , font style , font variant , font weight . HISTORY New entity in IFC2x3."
-
-#:IFC.xml:27035
-msgid "IfcTextStyleFontModel_FontFamily"
-msgstr "フォントファミリー"
-
-msgid "IfcTextStyleFontModel_FontFamily_DEFINITION"
-msgstr "この値は、フォントファミリー名と一般的なファミリー名の優先順位付けリストです。 最初のリスト項目は最も優先度が高く、このフォントが失敗した場合、次のリスト項目が使用されます。 .change ifc2x4 IFC4 変更属性は必須であることに変更されました。"
-
-#:IFC.xml:27040
-msgid "IfcTextStyleFontModel_FontSize"
-msgstr "FontSize"
-
-msgid "IfcTextStyleFontModel_FontSize_DEFINITION"
-msgstr "フォントサイズは、テキストフォントのサイズまたは高さを提供します。 注意 以下の値を使用することができます. [[IfcLengthMeasure]] , 正の値を持つ, 長さ単位は, [[IfcUnitAssignment]] で定義されています."
-
-#:IFC.xml:27045
-msgid "IfcTextStyleFontModel_FontStyle"
-msgstr "FontStyle"
-
-msgid "IfcTextStyleFontModel_FontStyle_DEFINITION"
-msgstr "フォント スタイル プロパティは、フォントファミリー内でローマまたは直立、斜体、斜体のいずれかの通常の面と呼ばれるものから選択されます。"
-
-#:IFC.xml:27050
-msgid "IfcTextStyleFontModel_FontVariant"
-msgstr "フォントバリエーション"
-
-msgid "IfcTextStyleFontModel_FontVariant_DEFINITION"
-msgstr "フォントバリアントプロパティは、通常と小文字の間で選択します。注意 後にCSS1の完全なサポートに準拠するために導入されました。"
-
-#:IFC.xml:27055
-msgid "IfcTextStyleFontModel_FontWeight"
-msgstr "フォントの太さ"
-
-msgid "IfcTextStyleFontModel_FontWeight_DEFINITION"
-msgstr "フォント weight プロパティは、フォントの重みを選択します。 注 その他の値、通常値、および太字は、後で完全な CSS1 サポートに準拠するために導入されています。"
-
-#:IFC.xml:27062
-msgid "IfcTextStyleForDefinedFont"
-msgstr "IfcTextStyleForDefinedFont"
-
-msgid "IfcTextStyleForDefinedFont_DEFINITION"
-msgstr "The [[IfcTextStyleForDefinedFont]] combines the text font color with an optional background color, that fills the text box, defined by the planar extent given to the text literal. .extDef Definition according to W3C for Cascading Style Sheets These properties describe the color often called foreground color and background of an element i.e. the surface onto which the content is rendered . One can set a background color. NOTE Corresponding CSS definitions are Color and background properties color, background color . HISTORY New entity in IFC2x3. .change ifc2x3 IFC2x3 CHANGE The [[IfcTextStyleForDefinedFont]] has been added and replaces [[IfcColour]] at the IfcCharacterStyleSelect ."
-
-#:IFC.xml:27063
-msgid "IfcTextStyleForDefinedFont_BackgroundColour"
-msgstr "背景色"
-
-msgid "IfcTextStyleForDefinedFont_BackgroundColour_DEFINITION"
-msgstr "このプロパティは要素の背景色を設定します。"
-
-#:IFC.xml:27068
-msgid "IfcTextStyleForDefinedFont_Colour"
-msgstr "色"
-
-msgid "IfcTextStyleForDefinedFont_Colour_DEFINITION"
-msgstr "このプロパティは、しばしばフォアグラウンドカラーと呼ばれる要素のテキスト色を記述します。"
-
-#:IFC.xml:27075
-msgid "IfcTextStyleTextModel"
-msgstr "IfcTextStyleTextModel"
-
-msgid "IfcTextStyleTextModel_DEFINITION"
-msgstr "[[IfcTextStyleTextModel]] は、ある範囲内でテキストリテラルの表示に影響を与えるすべてのテキストスタイルプロパティを結合します。 文字と単語の間隔、範囲の平面ボックス内のテキストの水平方向と垂直方向の配置を含みます。 下線のような装飾と大文字のようなリテラルの変換 複数行のテキストブロック内の各テキスト行の高さ。 .extDef 定義(W3C for Cascading Style Sheets) テキストモデルで定義されているプロパティは文字の視覚的な表示に影響します。 空間、単語、段落などです 注 対応する CSS1 定義は、文字のプロパティ ワードスペーシング、文字の間隔、テキストの装飾、垂直方向の整列、テキストの整列、テキストの整列、テキストのインデント、行の高さ です。 歴史 IFC2x3に新しいエンティティが追加されました。"
-
-#:IFC.xml:27076
-msgid "IfcTextStyleTextModel_LetterSpacing"
-msgstr "文字間隔"
-
-msgid "IfcTextStyleTextModel_LetterSpacing_DEFINITION"
-msgstr "The length unit indicates an addition to the default space between characters. Values can be negative, but there may be implementation specific limits. The importing application is free to select the exact spacing algorithm. The letter spacing may also be influenced by justification which is a value of the TextAlign attribute . NOTE The following values are allowed, [[IfcDescriptiveMeasure]] with value normal , [[IfcRatioMeasure]] , or [[IfcLengthMeasure]] , where the length unit is globally defined at [[IfcUnitAssignment]] ."
-
-#:IFC.xml:27081
-msgid "IfcTextStyleTextModel_LineHeight"
-msgstr "LineHeight"
-
-msgid "IfcTextStyleTextModel_LineHeight_DEFINITION"
-msgstr "The property sets the distance between two adjacent lines baselines. When a ratio value is specified, the line height is given by the font size of the current element multiplied with the numerical value. A value of normal sets the line height to a reasonable value for the element s font. It is suggested that importing applications set the normal value to be a ratio number in the range of 1.0 to 1.2. NOTE The following values are allowed [[IfcDescriptiveMeasure]] with value normal , or [[IfcLengthMeasure]] , with non negative values, the length unit is globally defined at [[IfcUnitAssignment]] , or [[IfcRatioMeasure]] ."
-
-#:IFC.xml:27086
-msgid "IfcTextStyleTextModel_TextAlign"
-msgstr "TextAlign"
-
-msgid "IfcTextStyleTextModel_TextAlign_DEFINITION"
-msgstr "このプロパティは、要素内でテキストが水平方向にどのように配置されるかを表します。実際に使用される正当化アルゴリズムは、レンダリングアルゴリズムに依存します。"
-
-#:IFC.xml:27091
-msgid "IfcTextStyleTextModel_TextDecoration"
-msgstr "テキスト装飾"
-
-msgid "IfcTextStyleTextModel_TextDecoration_DEFINITION"
-msgstr "このプロパティは要素のテキストに追加された装飾を記述します。"
-
-#:IFC.xml:27096
-msgid "IfcTextStyleTextModel_TextIndent"
-msgstr "TextIndent"
-
-msgid "IfcTextStyleTextModel_TextIndent_DEFINITION"
-msgstr "このプロパティは、最初に書式設定された行の前に表示されるインデントを指定します。"
-
-#:IFC.xml:27101
-msgid "IfcTextStyleTextModel_TextTransform"
-msgstr "TextTransform"
-
-msgid "IfcTextStyleTextModel_TextTransform_DEFINITION"
-msgstr "このプロパティは、テキスト文字が大文字、小文字に変換される方法を説明します。 文字リテラルで使用される文字列とは関係なく、大文字の場合を指定します。 注 後からCSSの完全なサポートに準拠するために導入されました。"
-
-#:IFC.xml:27106
-msgid "IfcTextStyleTextModel_WordSpacing"
-msgstr "単語間隔"
-
-msgid "IfcTextStyleTextModel_WordSpacing_DEFINITION"
-msgstr "長さ単位は単語間のデフォルトの空間に加えられることを示します。値は負になる可能性がありますが、実装固有の制限がある可能性があります。 インポートアプリケーションは、正確な間隔アルゴリズムを自由に選択できます。 単語の間隔は、テキストの align プロパティの値である justification によっても影響を受けることがあります。 注 後からCSSの完全なサポートに準拠するために導入されました。"
-
-#:IFC.xml:27113
-msgid "IfcTextureCoordinate"
-msgstr "IfcTextureCoordinate"
-
-msgid "IfcTextureCoordinate_DEFINITION"
-msgstr "The [[IfcTextureCoordinate]] is an abstract supertype of the different kinds to apply texture coordinates to geometries. For vertex based geometries an explicit assignment of 2D texture vertices to the 3D geometry points is supported by the subtype [[IfcTextureMap]] , in addition there can be a procedural description of how texture coordinates shall be applied to geometric items. If no [[IfcTextureCoordinate]] is provided for the [[IfcSurfaceTexture]] , the default mapping shall be used. NOTE See relevant subtypes of [[IfcGeometricRepresentationItem]] for default texture mapping description. NOTE The definitions of texturing has been adapted from X3D Architecture and base components, section 18 Texturing component as defined in ISO IEC 19775 1.2 HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The attribute Texture is deleted. .change ifc2x4 IFC4 CHANGE The inverse attribute AnnotatedSurface isdeleted, and the attribute Maps is added."
-
-#:IFC.xml:26982
-msgid "IfcTextureCoordinate_Maps"
-msgstr "地図"
-
-msgid "IfcTextureCoordinate_Maps_DEFINITION"
-msgstr "テクスチャ座標変換によって幾何学的な表面にマッピングされる[[IfcSurfaceTexture]]のサブタイプに識別変換を持つ複数のテクスチャの場合、1つまたは多数を参照します。"
-
-#:IFC.xml:27116
-msgid "IfcTextureCoordinateGenerator"
-msgstr "IfcTextureCoordinateGenerator"
-
-msgid "IfcTextureCoordinateGenerator_DEFINITION"
-msgstr "[[IfcTextureCoordinateGenerator]] では、2D テクスチャ座標を 3D ジオメトリ頂点にマッピングするための入力パラメータを用いた手続き的に定義されたマッピング関数を説明します。 許容可能なモード値と入力Parameterは、ビュー定義と実装者契約で合意される必要があります。 注 X3D で定義されているテクスチャ座標生成モードを使用することをお勧めします。 xtDef Note: ISO IEC 19775 1に準拠した定義 TextureCoordinateGeneratorは、幾何学的形状のテクスチャ座標の自動生成をサポートしています。 mode フィールドは、テクスチャ座標を計算するために使用されるアルゴリズムを記述します。 .std SPHERE, CAMERASPACACACEPOSITION, CAMERASPACEREFLECTIONVector, 宇宙の場所 COORD, COORD EYE, NOISE, NOISE EYE, SPHERE REFLECT, この規格内のテクスチャリングの定義は、X3Dのテクスチャ成分に依存して開発されています。 国際規格の定義については、ISO IEC 19775 1.2 2008 X3D アーキテクチャおよびベースコンポーネントエディション2、パート1、18 テクスチャリングコンポーネントを参照してください。 履歴 IFC2x2の新しいエンティティ。 .change ifc2x2 IFC2x2 Add2 変更点 テクスチャ 属性が削除されました。"
-
-#:IFC.xml:27117
-msgid "IfcTextureCoordinateGenerator_Mode"
-msgstr "モード"
-
-msgid "IfcTextureCoordinateGenerator_Mode_DEFINITION"
-msgstr "format@@0 属性は、テクスチャ座標を計算するために使用されるアルゴリズムを記述します。 注 Mode属性に適用可能な値は、ビュー定義または実装者契約によって決定されます。 ISO IES197751に記載されているモードを使用することを推奨します。 2008 X3Dアーキテクチャと基本コンポーネントエディション2, 部 1. 参照してください18.4.8 TextureCoordinateGenerator http www.web3d. rg x3d 仕様 ISO IEC 19775 1.2 X3D Abstract仕様 Part01 コンポーネント texturing.html 推奨値の TextureCoordinateGenerator"
-
-#:IFC.xml:27122
-msgid "IfcTextureCoordinateGenerator_Parameter"
-msgstr "パラメータ"
-
-msgid "IfcTextureCoordinateGenerator_Parameter_DEFINITION"
-msgstr "Modeで指定された関数の引数として使用されるパラメータ .change ifc2x4 IFC4 REALに制限されたデータ型を変更する。"
-
-#:IFC.xml:27129
-msgid "IfcTextureMap"
-msgstr "IfcTextureMap"
-
-msgid "IfcTextureMap_DEFINITION"
-msgstr "An [[IfcTextureMap]] provides the mapping of the 2 dimensional texture coordinates to the surface onto which it is mapped. It is used for mapping the texture to surfaces of vertex based geometry models, such as [[IfcFacetedBrep]] [[IfcFacetedBrepWithVoids]] [[IfcFaceBasedSurfaceModel]] [[IfcShellBasedSurfaceModel]] The [[IfcTextureMap]] has a list of TextureVertex , that corresponds to the points of the outer face bound of the vertex based geometry item. The corresponding pair of lists is 1. the list of Polygon of the [[IfcFaceOuterBound]] of type [[IfcCartesianPoint]] , and 2. the list of Vertices of type [[IfcTextureVertex]] . Each [[IfcTextureVertex]] given as S, T coordinates of the 2 dimension texture coordinate system corresponds to the geometric coordinates of the [[IfcCartesianPoint]] given as 3 dimension X, Y, and Z coordinates within the object coordinate system of the geometric item . .extDef NOTE Definition according to ISO IEC 19775 1 The TextureCoordinate node is a geometry property node that specifies a set of 2D texture coordinates used by vertex based geometry nodes to map textures to vertices. NOTE In contrary to the X3D vertext based geometry, for example IndexedFaceSet and ElevationGrid, the vertext based geometry in IFC may include inner loops. The areas of inner loops have to be cut out from the texture applied to the outer loop. Figure 1 illustrates applying a texture map to a vertex based geometry. Figure 1 Texture map HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE The attribute Texture is deleted, and the attribute TextureMaps is added. .change ifc2x4 IFC4 CHANGE The attribute TextureMap is replaced by Vertices , and the attribute AppliedTo is added. .spec head Informal Propositions 1. The [[IfcFace]] referenced in AppliedTo shall be used by the vertex based geometry, to which this texture map is assigned to by through the [[IfcStyledItem]] ."
-
-#:IFC.xml:27132
-msgid "IfcTextureMap_Vertices"
-msgstr "Vertices"
-
-msgid "IfcTextureMap_Vertices_DEFINITION"
-msgstr "直線を定義するポリループの対応する点に適用されるテクスチャ座標頂点のリスト。"
-
-#:IFC.xml:27144
-msgid "IfcTextureMap_MappedTo"
-msgstr "MappedTo"
-
-msgid "IfcTextureMap_MappedTo_DEFINITION"
-msgstr "面の外側の境界ポリループに沿った点の対応するリストを定義する面。 注意 フェイスには内側のループが追加されている可能性があります。 [[IfcTextureMap]]とその頂点は、外側の境界を表すIfcPolyloopの座標とのみ一致します。"
-
-#:IFC.xml:27158
-msgid "IfcTextureVertex"
-msgstr "IfcTextureVertex"
-
-msgid "IfcTextureVertex_DEFINITION"
-msgstr "[[IfcTextureVertex]]は、2 S、T テクスチャ座標のリストです。 xtDef NOTE ISO IEC 19775 1に準拠した定義 各頂点ベースのジオメトリノードは、テクスチャを頂点にマッピングする2Dテクスチャ座標のセットを使用します。 テクスチャ マップ値 画像テクスチャ、ピクセルテクスチャの範囲は 0 です。 は、S 軸と T 軸に沿って 1.0 ですが、テクスチャ座標値が範囲内にある場合があります。 テクスチャ座標は場所とテクスチャマップの色の値を特定します。 最初に水平座標Sを指定し、次に垂直座標Tを指定します。 テクスチャマップが指定された方向にS軸またはT軸で繰り返された場合 テクスチャ座標C または t は、指定した方向に N ピクセルのテクスチャマップに次のようにマッピングされます。テクスチャマップの場所 C 階 C N . xtDef テクスチャマップが繰り返されない場合、テクスチャ座標は 0 にクランプされます。 to 1.0 range if C 0.0 C 1.0, 0.0, C 0.0, C N, if 0.0 C 1.0. 注 テクスチャの座標は拡大縮小、回転、テクスチャの定義の構成要素としてTextureTransformを提供することによって変換されます。 歴史 IFC2x2に新しいエンティティが追加されました。"
-
-#:IFC.xml:27159
-msgid "IfcTextureVertex_Coordinates"
-msgstr "座標"
-
-msgid "IfcTextureVertex_Coordinates_DEFINITION"
-msgstr "1番目の座標1はS、2番目の座標2はTパラメータ値です。"
-
-#:IFC.xml:27166
-msgid "IfcTextureVertexList"
-msgstr "IfcTextureVertexList"
-
-msgid "IfcTextureVertexList_DEFINITION"
-msgstr "The [[IfcTextureVertexList]] defines an ordered collection of texture vertices. Each texture vertex is a two dimensional vertex provided by a fixed list of two texture coordinates. The attribute TexCoordsList is a two dimensional list, where first dimension is an unbounded list representing each texture vertex second dimension is a fixed list of two list members, where 1 is the S coordinate, and 2 the T coordinate of the texture vertex. NOTE The [[IfcTextureVertexList]] is introduced to provide a compact representation of an indexable representation of texture coordinates for texture maps in tessellated items. HISTORY New entity in IFC4."
-
-#:IFC.xml:27167
-msgid "IfcTextureVertexList_TexCoordsList"
-msgstr "TexCoordsList"
-
-msgid "IfcTextureVertexList_TexCoordsList_DEFINITION"
-msgstr "S座標とT座標で定義されたテクスチャ頂点のリスト。"
-
-#:IFC.xml:27217
-msgid "IfcFontStyle"
-msgstr "IfcFontStyle"
-
-msgid "IfcFontStyle_DEFINITION"
-msgstr "[[IfcFontStyle]] タイプは、フォントファミリー内の通常の斜体または斜体の面を使用するかどうかを定義します。 値は通常の斜め斜体 です。 Cascading Style SheetsによるxtDef NOTE定義 レベル 1 ノーマルの値は、ユーザーエージェントのフォントデータベースでノーマルに分類されるフォントを選択します。 一方、obliqueはobliqueというラベルの付いたフォントを選択します。 italic の値は、斜体とラベル付けされたフォントを選択します。または、使用できない場合は oblique というラベルの付いたフォントを選択します。 ユーザーエージェントのフォントデータベースでobliqueとラベル付けされたフォントは、実際には通常のフォントを電子的に傾斜させることによって生成されている可能性があります。 Obliqueのフォント, SlantedまたはInclineの名前は、通常、ユーザーエージェントのフォントデータベースでobliqueとラベル付けされます。 彼らの名前でイタリア、筆記体やKursivとのフォントは、一般的に斜体とラベル付けされます。 注 CSS 1で定義されているフォントスタイルから採用されています。 .. bibliography.htm CSS1 . HISTORY IFC2x3の新しいタイプ。フォーマルProposition WR1 フォントスタイルに許可される値。"
-
-#:IFC.xml:27220
-msgid "IfcFontVariant"
-msgstr "IfcFontVariant"
-
-msgid "IfcFontVariant_DEFINITION"
-msgstr "[[IfcFontVariant]]タイプは、フォントファミリー内の通常または小文字の面を使用するかどうかを定義します。 値は通常の小文字です。 xtDef NOTE Cascading Style Sheets, level 1 フォントファミリ内のもう一つのバリエーションのタイプは、小さなキャップです。 小さな大文字のフォントでは、小文字は大文字のものに似ていますが、小さいサイズで、わずかに異なる割合で表示されます。 フォント variant プロパティはそのフォントを選択します。 Normal の値は、小型大文字フォントではないフォントを選択し、小型大文字フォントを選択します。 通常のフォントを取得し、小文字を大文字に拡大縮小した文字で置き換えることにより、小さな大文字のフォントが作成された場合は、CSS1 では許容されません。 最後の手段として、小型大文字フォントの代替として大文字が使用されます。 注 CSS 1 .. biliography.htm CSS1 . HISTORY IFC2x3で定義されたフォントバリアントから採用されました。フォーマルプロポジションWR1"
-
-#:IFC.xml:27223
-msgid "IfcFontWeight"
-msgstr "IfcFontWeight"
-
-msgid "IfcFontWeight_DEFINITION"
-msgstr "The [[IfcFontWeight]] type defines the weight of the font. Values are normal bold 100 200 300 400 500 600 700 800 900 .extDef NOTE Definition according to Cascading Style Sheets, level 1 The values 100 to 900 form an ordered sequence, where each number indicates a weight that is at least as dark as its predecessor. The keyword normal is synonymous with 400 , and bold is synonymous with 700 . Keywords other than normal and bold have been shown to be often confused with font names and a numerical scale was therefore chosen for the 9 value list. .extDef Fonts the font data typically have one or more properties whose values are names that are descriptive of the weight of a font. There is no accepted, universal meaning to these weight names. Their primary role is to distinguish faces of differing darkness within a single font family. Usage across font families is quite variant for example a font that you might think of as being bold might be described as being Regular, Roman, Book, Medium, Semi or DemiBold, Bold, or Black, depending on how black the normal face of the font is within the design. Because there is no standard usage of names, the weight property values in CSS1 are given on a numerical scale in which the value 400 or normal corresponds to the normal text face for that family. The weight name associated with that face will typically be Book, Regular, Roman, Normal or sometimes Medium . .extDef The association of other weights within a family to the numerical weight values is intended only to preserve the ordering of darkness within that family. However, the following heuristics tell how the assignment is done in typical cases If the font family already uses a numerical scale with nine values such as with OpenType , the font weights should be mapped directly. If there is both a face labeled Medium and one labeled Book, Regular, Roman or Normal, then the Medium is normally assigned to the 500 . The font labeled Bold will often correspond to the weight value 700 . If there are fewer then 9 weights in the family, the default algorithm for filling the holes is as follows. If 500 is unassigned, it will be assigned the same font as 400 . If any of the values 600 , 700 , 800 or 900 remains unassigned, they are assigned to the same face as the next darker assigned keyword, if any, or the next lighter one otherwise. If any of 300 , 200 or 100 remains unassigned, it is assigned to the next lighter assigned keyword, if any, or the next darker otherwise. .extDef The following two examples illustrate the process. Assume four weights in the Example1 family, from lightest to darkest Regular, Medium, Bold, Heavy. And assume six weights in the Example2 family Book, Medium, Bold, Heavy, Black, ExtraBlack. Note how in the second example it has been decided not to assign Example2 ExtraBlack to anything. Available faces Assignments Filling the holes Example1 Regular 400 100, 200, 300 Example1 Medium 500 Example1 Bold 700 600 Example1 Heavy 800 900Available faces Assignments Filling the holes Example2 Book 400 100, 200, 300 Example2 Medium 500 Example2 Bold 700 600 Example2 Heavy 800 Example2 Black 900 Example2 ExtraBlack none NOTE Type adopted from font weight defined in CSS 1 .. .. .. bibliography.htm CSS1 . HISTORY New type in IFC2x2 Add2. Formal Propositions WR1"
-
-#:IFC.xml:27226
-msgid "IfcPresentableText"
-msgstr "IfcPresentableText"
-
-msgid "IfcPresentableText_DEFINITION"
-msgstr "[[IfcPresentableText]] is a text string used to capture the content of a text literal for the purpose of presentation. The [[IfcPresentableText]] can include multiple lines of text, for which the line feed character LF, 0x0A, should be used to separate lines. NOTE The non printable characters are converted within the standard exchange format ISO 10303 21 STEP physical file format , commonly the X 09 represents the TAB, and X 0A the LF character. NOTE The [[IfcPresentableText]] is an entity that had been adopted from ISO 10303, Industrial automation systems and integration Product data representation and exchange, Part 46 Integrated generic resources Visual presentation. NOTE Entity adapted from presentable text defined in ISO10303 46. HISTORY New type in IFC2x2."
-
-#:IFC.xml:27229
-msgid "IfcSpecularExponent"
-msgstr "IfcSpecularExponent"
-
-msgid "IfcSpecularExponent_DEFINITION"
-msgstr "The [[IfcSpecularExponent]] defines the datatype for exponent determining the sharpness of the reflection . The reflection is made sharper with large values of the exponent, such as 10.0. Small values, such as 1.0, decrease the specular fall off. [[IfcSpecularExponent]] is of type REAL. NOTE The datatype relates to the definition of specular exponent in ISO 10303 46 entity surface style reflectance ambient diffuse specular. HISTORY New type in IFC2x2."
-
-#:IFC.xml:27233
-msgid "IfcSpecularRoughness"
-msgstr "IfcSpecularRoughness"
-
-msgid "IfcSpecularRoughness_DEFINITION"
-msgstr "The [[IfcSpecularRoughness]] defines the datatype for the reflection resulting from the roughness of a surface through the height of surface impurities where the specular highlight is made sharper with small values for the roughness, such as 0.1. Applies to glass , metal , mirror and plastic reflection models. Larger values, close to 1.0 decrease the specular fall off. [[IfcSpecularRoughness]] is of type REAL. It is constraint to values between and including 0 and 1. NOTE The datatype relates to the definition of shiness in ISO IEC 14772 1 .. .. .. bibliography.htm IEC 14772 1 , which is the reciprocate value to the specular roughness. HISTORY New type in IFC2x2. Formal Propositions WR1 Specular roughness shall be given as a non negative value less than or equal to 1.0"
-
-#:IFC.xml:27237
-msgid "IfcTextAlignment"
-msgstr "IfcTextAlignment"
-
-msgid "IfcTextAlignment_DEFINITION"
-msgstr "[[IfcTextAlignment]] では、要素内でテキストがどのように整列されるかを説明します。 xtDef Note: Cascading Style Sheets, level 1 使用される実際の正当化アルゴリズムは、ユーザーエージェントと人間言語に依存します。 justiceがサポートされていない場合、ユーザーエージェントは代替品を提供します。通常、これは西洋言語に残されます。 注 CSS 1 ../bibliography.htm CSS1 で定義されているテキスト整列から採用されているタイプ。 履歴 IFC2x3の新しいタイプ。 フォーマルProposition WR1 テキストのアライメントに許可される値。"
-
-#:IFC.xml:27240
-msgid "IfcTextDecoration"
-msgstr "IfcTextDecoration"
-
-msgid "IfcTextDecoration_DEFINITION"
-msgstr "[[IfcTextDecoration]] では、要素のテキストに追加された装飾について説明します。 値は、CSS 1で定義されたテキストデコレーションから採用されたNOTEタイプを通じて行われるアンダーラインなしです。 .. bibliography.htm CSS1 . HISTORY IFC2x3の新しいタイプ. フォーマルProposition WR1 テキスト装飾のための許容値."
-
-#:IFC.xml:27243
-msgid "IfcTextFontName"
-msgstr "IfcTextFontName"
-
-msgid "IfcTextFontName_DEFINITION"
-msgstr "[[IfcTextFontName]]は、フォントファミリー名と一般的なファミリー名のリストです。 値 選択したフォントファミリーの名前です。 例えば、gillとhelveticaはフォントファミリーです。値 of 上記の例では、最後の値は一般的なファミリー名です。 以下の一般的なファミリーは、定義されています セリフの例 例 タイムズサンセリフの例 Helvetica 筆記の例 Zapf Chancery fantasy 例 西洋のmonospace例 Courier 最後の代替としてジェネリックフォントファミリを提供することをお勧めします。 .extDef NOTE カスケーディングスタイルシートに従った定義、レベル 1 CSS1で定義されたフォントファミリーから採用されたNOTEタイプ。 .. bibliography.htm CSS1 HISTORY IFC2x2 Add2の新しいタイプ。"
-
-#:IFC.xml:27246
-msgid "IfcTextTransformation"
-msgstr "IfcTextTransformations"
-
-msgid "IfcTextTransformation_DEFINITION"
-msgstr "[[IfcTextTransformation]] では、文字の処理方法を説明します。 値は、各単語の大文字の最初の文字を大文字に大文字にし、要素の小文字のすべての文字を小文字に大文字にします。none CSS 1で定義されたテキスト変換から採用されたNOTEタイプ。 .. bibliography.htm CSS1 HISTORY IFC2x3の新しいタイプ。フォーマルProposition WR1 テキスト変換のための許容値。"
+#:IFC.xml:38064
+msgid "IfcTopologyRepresentationTypes__RepType"
+msgstr "IfcTopologyRepType"
 
