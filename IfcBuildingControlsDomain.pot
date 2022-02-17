@@ -862,7 +862,7 @@ msgid "Reference"
 msgstr "Reference"
 
 msgid "Reference_DEFINITION"
-msgstr "Reference ID for this specified type in this project e.g. type A 1 , Also referred to as construction type . It should be provided as an alternative to the name of the object type , if the software does not support object types."
+msgstr "Reference ID for this specified type in this project e.g. type A 1 , Also referred to as construction type . It should be provided as an alternative to the name of the object type , if the software does not support object types and no classification reference to a recognized classification system used."
 
 #:IFC.xml:1746
 msgid "Pset_ActuatorTypeElectricActuator"
@@ -897,21 +897,21 @@ msgid "Pset_ActuatorTypeHydraulicActuator"
 msgstr "Pset ActuatorTypeHydraulicActuator"
 
 msgid "Pset_ActuatorTypeHydraulicActuator_DEFINITION"
-msgstr "A device that hydraulically actuates a control element."
+msgstr "A device that hydraulically actuates a control element. Comments InputFlowrate Hydraulic flowrate. InputPressure Maximum design pressure for the actuator."
 
 #:IFC.xml:1764
 msgid "InputFlowrate"
 msgstr "InputFlowrate"
 
 msgid "InputFlowrate_DEFINITION"
-msgstr "Maximum input control air flowrate requirement."
+msgstr "Maximum input flowrate requirement."
 
 #:IFC.xml:1769
 msgid "InputPressure"
 msgstr "InputPressure"
 
 msgid "InputPressure_DEFINITION"
-msgstr "Maximum input control air pressure requirement."
+msgstr "Maximum input or design pressure for the object."
 
 #:IFC.xml:1775
 msgid "Pset_ActuatorTypeLinearActuation"
@@ -939,7 +939,7 @@ msgid "Pset_ActuatorTypePneumaticActuator"
 msgstr "Pset ActuatorTypePneumaticActuator"
 
 msgid "Pset_ActuatorTypePneumaticActuator_DEFINITION"
-msgstr "A device that pneumatically actuates a control element"
+msgstr "A device that pneumatically actuates a control element Comments InputFlowrate Control air flowrate. InputPressure Control air pressure."
 
 #:IFC.xml:1799
 msgid "Pset_ActuatorTypeRotationalActuation"
@@ -981,7 +981,7 @@ msgid "ConditionHistory"
 msgstr "ConditionHistory"
 
 msgid "ConditionHistory_DEFINITION"
-msgstr "ConditionHistory"
+msgstr "Indicates alarm condition over time. The range of possible values and their meanings is defined by Pset AlarmTypeCommon.Condition. An empty value indicates no present alarm condition."
 
 #:IFC.xml:1822
 msgid "Enabled"
@@ -1030,7 +1030,7 @@ msgid "Pset_ControllerPHistory"
 msgstr "Pset ControllerPHistory"
 
 msgid "Pset_ControllerPHistory_DEFINITION"
-msgstr "Properties for history of controller values. HISTORY Added in IFC4."
+msgstr "Properties for history of controller values. HISTORY Added in IFC4. Comments Status Indicates an error code or identifier, whose meaning is specific to the particular automation system. Example values include ConfigurationError , NotConnected , DeviceFailure , SensorFailure , LastKnown, CommunicationsFailure , OutOfService ."
 
 #:IFC.xml:1856
 msgid "Quality"
@@ -1058,14 +1058,14 @@ msgid "Pset_ControllerTypeFloating"
 msgstr "Pset ControllerTypeFloating"
 
 msgid "Pset_ControllerTypeFloating_DEFINITION"
-msgstr "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued output. HISTORY IFC4 adapted from Pset ControllerTypeCommon and applicable predefined type made specific to FLOATING ACCUMULATOR and PULSECONVERTER types added additional properties added to replace Pset AnalogInput and Pset AnalogOutput."
+msgstr "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued output. HISTORY IFC4 adapted from Pset ControllerTypeCommon and applicable predefined type made specific to FLOATING ACCUMULATOR and PULSECONVERTER types added additional properties added to replace Pset AnalogInput and Pset AnalogOutput. Comments ControlType CONSTANT No inputs SignalOffset is written to the output value. MODIFIER Single analog input is read, added to SignalOffset, multiplied by SignalFactor, and written to the output value. ABSOLUTE Single analog input is read and absolute value is written to the output value. INVERSE Single analog input is read, 1.0 is divided by the input value and written to the output value. HYSTERISIS Single analog input is read, delayed according to SignalTime, and written to the output value. RUNNINGAVERAGE Single analog input is read, averaged over SignalTime, and written to the output value. DERIVATIVE Single analog input is read and the rate of change during the SignalTime is written to the output value. INTEGRAL Single analog input is read and the average value during the SignalTime is written to the output value. BINARY Single binary input is read and SignalOffset is written to the output value if True. ACCUMULATOR Single binary input is read, and for each pulse the SignalOffset is added to the accumulator, and while the accumulator is greater than the SignalFactor, the accumulator is decremented by SignalFactor and the integer result is incremented by one. PULSECONVERTER Single integer input is read, and for each increment the SignalMultiplier is added and written to the output value. SUM Two analog inputs are read, added, and written to the output value. SUBTRACT Two analog inputs are read, subtracted, and written to the output value. PRODUCT Two analog inputs are read, multiplied, and written to the output value. DIVIDE Two analog inputs are read, divided, and written to the output value. AVERAGE Two analog inputs are read and the average is written to the output value. MAXIMUM Two analog inputs are read and the maximum is written to the output value. MINIMUM Two analog inputs are read and the minimum is written to the output value.. INPUT Controller element is a dedicated input. OUTPUT Controller element is a dedicated output. VARIABLE Controller element is an in memory variable. Value The expected range and default value. While the property data type is [[IfcReal]] to support all cases including when the units are unknown , a unit may optionally be provided to indicate the measure and unit. The LowerLimitValue and UpperLimitValue must fall within the physical Range and may be used to determine extents when charting Pset ControllerPHistory.Value."
 
 #:IFC.xml:1885
 msgid "ControlType"
 msgstr "ControlType"
 
 msgid "ControlType_DEFINITION"
-msgstr "The type of signal modification effected and applicable ports CONSTANT No inputs SignalOffset is written to the output value. MODIFIER Single analog input is read, added to SignalOffset, multiplied by SignalFactor, and written to the output value. ABSOLUTE Single analog input is read and absolute value is written to the output value. INVERSE Single analog input is read, 1.0 is divided by the input value and written to the output value. HYSTERISIS Single analog input is read, delayed according to SignalTime, and written to the output value. RUNNINGAVERAGE Single analog input is read, averaged over SignalTime, and written to the output value. DERIVATIVE Single analog input is read and the rate of change during the SignalTime is written to the output value. INTEGRAL Single analog input is read and the average value during the SignalTime is written to the output value. BINARY Single binary input is read and SignalOffset is written to the output value if True. ACCUMULATOR Single binary input is read, and for each pulse the SignalOffset is added to the accumulator, and while the accumulator is greater than the SignalFactor, the accumulator is decremented by SignalFactor and the integer result is incremented by one. PULSECONVERTER Single integer input is read, and for each increment the SignalMultiplier is added and written to the output value. SUM Two analog inputs are read, added, and written to the output value. SUBTRACT Two analog inputs are read, subtracted, and written to the output value. PRODUCT Two analog inputs are read, multiplied, and written to the output value. DIVIDE Two analog inputs are read, divided, and written to the output value. AVERAGE Two analog inputs are read and the average is written to the output value. MAXIMUM Two analog inputs are read and the maximum is written to the output value. MINIMUM Two analog inputs are read and the minimum is written to the output value.. INPUT Controller element is a dedicated input. OUTPUT Controller element is a dedicated output. VARIABLE Controller element is an in memory variable."
+msgstr "The type controller, signal modifcation effected and applicable ports"
 
 #:IFC.xml:1890
 msgid "Labels"
@@ -1107,14 +1107,14 @@ msgid "Value"
 msgstr "Value"
 
 msgid "Value_DEFINITION"
-msgstr "The expected range and default value. While the property data type is [[IfcReal]] to support all cases including when the units are unknown , a unit may optionally be provided to indicate the measure and unit. The LowerLimitValue and UpperLimitValue must fall within the physical Range and may be used to determine extents when charting Pset ControllerPHistory.Value."
+msgstr "The expected range and default value."
 
 #:IFC.xml:1921
 msgid "Pset_ControllerTypeMultiPosition"
 msgstr "Pset ControllerTypeMultiPosition"
 
 msgid "Pset_ControllerTypeMultiPosition_DEFINITION"
-msgstr "Properties for discrete inputs, outputs, and values within a programmable logic controller. HISTORY New in IFC4, replaces Pset MultiStateInput and Pset MultiStateOutput."
+msgstr "Properties for discrete inputs, outputs, and values within a programmable logic controller. HISTORY New in IFC4, replaces Pset MultiStateInput and Pset MultiStateOutput. Comments ControlType INPUT Controller element is a dedicated input. OUTPUT Controller element is a dedicated output. VARIABLE Controller element is an in memory variable. Value The expected range and default value. The LowerLimitValue and UpperLimitValue must fall within the physical Range."
 
 #:IFC.xml:1927
 msgid "IntegerRange"
@@ -1128,7 +1128,7 @@ msgid "Pset_ControllerTypeProgrammable"
 msgstr "Pset ControllerTypeProgrammable"
 
 msgid "Pset_ControllerTypeProgrammable_DEFINITION"
-msgstr "Properties for Discrete Digital Control DDC or programmable logic controllers. HISTORY Added in IFC4."
+msgstr "Properties for Discrete Digital Control DDC or programmable logic controllers. HISTORY Added in IFC4. Comments ControlType PRIMARY Controller has built in communication interface for PC connection, may manage secondary controllers. SECONDARY Controller communicates with primary controller and its own managed devices."
 
 #:IFC.xml:1944
 msgid "Application"
@@ -1156,7 +1156,7 @@ msgid "Pset_ControllerTypeProportional"
 msgstr "Pset ControllerTypeProportional"
 
 msgid "Pset_ControllerTypeProportional_DEFINITION"
-msgstr "Properties for signal handling for an proportional controller taking setpoint and feedback inputs and creating a single valued output. HISTORY In IFC4, SignalFactor1, SignalFactor2 and SignalFactor3 changed to ProportionalConstant, IntegralConstant and DerivativeConstant. SignalTime1 and SignalTime2 changed to SignalTimeIncrease and SignalTimeDecrease."
+msgstr "Properties for signal handling for an proportional controller taking setpoint and feedback inputs and creating a single valued output. HISTORY In IFC4, SignalFactor1, SignalFactor2 and SignalFactor3 changed to ProportionalConstant, IntegralConstant and DerivativeConstant. SignalTime1 and SignalTime2 changed to SignalTimeIncrease and SignalTimeDecrease. Comments ControlType PROPORTIONAL Output is proportional to the control error. The gain of a proportional control Kp will have the effect of reducing the rise time and reducing , but never eliminating, the steady state error of the variable controlled. PROPORTIONALINTEGRAL Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control Ki will have the effect of eliminating the steady state error of the variable controlled, but it may make the transient response worse. PROPORTIONALINTEGRALDERIVATIVE Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control Kd will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled. Value The expected range and default value. While the property data type is [[IfcReal]] to support all cases including when the units are unknown , a unit may optionally be provided to indicate the measure and unit."
 
 #:IFC.xml:1971
 msgid "DerivativeConstant"
@@ -1198,7 +1198,7 @@ msgid "Pset_ControllerTypeTwoPosition"
 msgstr "Pset ControllerTypeTwoPosition"
 
 msgid "Pset_ControllerTypeTwoPosition_DEFINITION"
-msgstr "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued binary output. HISTORY In IFC4, extended properties to replace Pset BinaryInput and Pset BinaryOutput."
+msgstr "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued binary output. HISTORY In IFC4, extended properties to replace Pset BinaryInput and Pset BinaryOutput. Comments ControlType LOWERLIMITSWITCH Single analog input is read and if less than Value.LowerBound then True is written to the output value. UPPERLIMITSWITCH Single analog input is read and if more than Value.UpperBound then True is written to the output value. LOWERBANDSWITCH Single analog input is read and if less than Value.LowerBound BandWidth then True is written to the output value. UPPERBANDSWITCH Single analog input is read and if more than Value.UpperBound BandWidth then True is written to the output value. NOT Single binary input is read and the opposite value is written to the output value. AND Two binary inputs are read and if both are True then True is written to the output value. OR Two binary inputs are read and if either is True then True is written to the output value. XOR Two binary inputs are read and if one is true then True is written to the output value. CALENDAR No inputs the current time is compared with an [[IfcWorkCalendar]] to which the [[IfcController]] is assigned and True is written if active. INPUT Controller element is a dedicated input. OUTPUT Controller element is a dedicated output. VARIABLE Controller element is an in memory variable. Value The default value such as normally closed or normally open."
 
 #:IFC.xml:2023
 msgid "Polarity"
@@ -1212,7 +1212,7 @@ msgid "Pset_FlowInstrumentPHistory"
 msgstr "Pset FlowInstrumentPHistory"
 
 msgid "Pset_FlowInstrumentPHistory_DEFINITION"
-msgstr "Properties for history of flow instrument values. HISTORY Added in IFC4."
+msgstr "Properties for history of flow instrument values. HISTORY Added in IFC4. Comments Status Indicates an error code or identifier, whose meaning is specific to the particular automation system. Example values include ConfigurationError , NotConnected , DeviceFailure , SensorFailure , LastKnown, CommunicationsFailure , OutOfService . Value Indicates measured values over time which may be recorded continuously or only when changed beyond a particular deadband."
 
 #:IFC.xml:2051
 msgid "Pset_FlowInstrumentTypeCommon"
@@ -1226,14 +1226,14 @@ msgid "Pset_FlowInstrumentTypePressureGauge"
 msgstr "Pset FlowInstrumentTypePressureGauge"
 
 msgid "Pset_FlowInstrumentTypePressureGauge_DEFINITION"
-msgstr "A device that reads and displays a pressure value at a point or the pressure difference between two points."
+msgstr "A device that reads and displays a pressure value at a point or the pressure difference between two points. Comments DisplaySize For a dial pressure gauge it will be the diameter of the dial."
 
 #:IFC.xml:2064
 msgid "DisplaySize"
 msgstr "DisplaySize"
 
 msgid "DisplaySize_DEFINITION"
-msgstr "The physical size of the display. In the case of a stem thermometer, this will be the length of the stem. For a dial thermometer, it will be the diameter of the dial."
+msgstr "The physical size of the display."
 
 #:IFC.xml:2069
 msgid "PressureGaugeType"
@@ -1247,7 +1247,7 @@ msgid "Pset_FlowInstrumentTypeThermometer"
 msgstr "Pset FlowInstrumentTypeThermometer"
 
 msgid "Pset_FlowInstrumentTypeThermometer_DEFINITION"
-msgstr "A device that reads and displays a temperature value at a point."
+msgstr "A device that reads and displays a temperature value at a point. Comments DisplaySize In the case of a stem thermometer, this will be the length of the stem. For a dial thermometer, it will be the diameter of the dial."
 
 #:IFC.xml:2081
 msgid "ThermometerType"
@@ -1261,7 +1261,7 @@ msgid "Pset_SensorPHistory"
 msgstr "Pset SensorPHistory"
 
 msgid "Pset_SensorPHistory_DEFINITION"
-msgstr "Properties for history of controller values. HISTORY Added in IFC4."
+msgstr "Properties for history of controller values. HISTORY Added in IFC4. Comments Value Indicates sensed values over time which may be recorded continuously or only when changed beyond a particular deadband. The range of possible values is defined by the SetPoint property of the corresponding sensor type property set."
 
 #:IFC.xml:2088
 msgid "Direction"
@@ -1380,14 +1380,14 @@ msgid "Pset_SensorTypeGasSensor"
 msgstr "Pset SensorTypeGasSensor"
 
 msgid "Pset_SensorTypeGasSensor_DEFINITION"
-msgstr "A device that senses or detects gas. HISTORY Changed in IFC4. Gas detected made into enumeration, set point concentration and coverage area added. Range, accuracy and time constant deleted."
+msgstr "A device that senses or detects gas. HISTORY Changed in IFC4. Gas detected made into enumeration, set point concentration and coverage area added. Range, accuracy and time constant deleted. Comments CoverageArea Floor area typically measured as a circle whose center is at the location of the sensor ."
 
 #:IFC.xml:2174
 msgid "CoverageArea"
 msgstr "CoverageArea"
 
 msgid "CoverageArea_DEFINITION"
-msgstr "The floor area that is covered by the sensor typically measured as a circle whose center is at the location of the sensor ."
+msgstr "The area that is covered by the object."
 
 #:IFC.xml:2179
 msgid "GasDetected"
@@ -1401,14 +1401,14 @@ msgid "SetPointConcentration"
 msgstr "SetPointConcentration"
 
 msgid "SetPointConcentration_DEFINITION"
-msgstr "The carbon dioxide concentration to be sensed. Use [[IfcPropertyBoundedValue]].SetPointValue to set the set point value."
+msgstr "The concentration to be sensed. Use [[IfcPropertyBoundedValue]].SetPointValue to set the set point value."
 
 #:IFC.xml:2190
 msgid "Pset_SensorTypeHeatSensor"
 msgstr "Pset SensorTypeHeatSensor"
 
 msgid "Pset_SensorTypeHeatSensor_DEFINITION"
-msgstr "A device that senses or detects heat. HISTORY In IFC4, incorporates Fire Sensor. HeatSensorSetPoint changed to SetPointTemperature"
+msgstr "A device that senses or detects heat. HISTORY In IFC4, incorporates Fire Sensor. HeatSensorSetPoint changed to SetPointTemperature Comments CoverageArea Floor area typically measured as a circle whose center is at the location of the sensor ."
 
 #:IFC.xml:2196
 msgid "RateOfTemperatureRise"
@@ -1604,7 +1604,7 @@ msgid "Pset_SensorTypeSmokeSensor"
 msgstr "Pset SensorTypeSmokeSensor"
 
 msgid "Pset_SensorTypeSmokeSensor_DEFINITION"
-msgstr "A device that senses or detects smoke. HISTORY PressureSensorSensorSetPoint error in previous release changed to SetPointConcentration. Range, accuracy and time constant deleted."
+msgstr "A device that senses or detects smoke. HISTORY PressureSensorSensorSetPoint error in previous release changed to SetPointConcentration. Range, accuracy and time constant deleted. Comments CoverageArea Floor area typically measured as a circle whose center is at the location of the sensor ."
 
 #:IFC.xml:2305
 msgid "HasBuiltInAlarm"
@@ -1737,7 +1737,7 @@ msgid "Pset_UnitaryControlElementPHistory"
 msgstr "Pset UnitaryControlElementPHistory"
 
 msgid "Pset_UnitaryControlElementPHistory_DEFINITION"
-msgstr "Properties for history and operating schedules of thermostats. HISTORY Added in IFC4."
+msgstr "Properties for history and operating schedules of thermostats. HISTORY Added in IFC4. Comments SetPoint Indicates the temperature setpoint. For thermostats with setbacks or separate high and low setpoints, then the time series may contain a pair of values at each entry where the first value is the heating setpoint low and the second value is the cooling setpoint high . Temperature Indicates the current measured temperature."
 
 #:IFC.xml:2403
 msgid "Fan"
@@ -1751,21 +1751,21 @@ msgid "OperationModeHistory"
 msgstr "OperationModeHistory"
 
 msgid "OperationModeHistory_DEFINITION"
-msgstr "OperationModeHistory"
+msgstr "Indicates operation mode corresponding to Pset UnitaryControlTypeCommon.Mode. For example, HEAT , COOL , AUTO ."
 
 #:IFC.xml:2413
 msgid "SetPoint"
 msgstr "SetPoint"
 
 msgid "SetPoint_DEFINITION"
-msgstr "Indicates the setpoint and label. For toggle switches, there are two positions, 0 for off and 1 for on. For dimmer switches, the values may indicate the fully off and full on positions, where missing integer values in between are interpolated. For selector switches, the range indicates the available positions. An [[IfcTable]] may be attached using [[IfcMetric]] and IfcPropertyConstraintRelationship containing columns of the specified header names and types Position [[IfcInteger]] The discrete setpoint level. Sink [[IfcLabel]] The Name of the switched input port [[IfcDistributionPort]] with FlowDirection SINK . Source [[IfcLabel]] The Name of the switched output port [[IfcDistributionPort]] with FlowDirection SOURCE . Ratio IfcNormalizedRatioMeasure The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on."
+msgstr "Indicates the setpoint and label."
 
 #:IFC.xml:2418
 msgid "Temperature"
 msgstr "Temperature"
 
 msgid "Temperature_DEFINITION"
-msgstr "Temperature of the fluid. For air this value represents the dry bulb temperature."
+msgstr "Temperature of the fluid."
 
 #:IFC.xml:2424
 msgid "Pset_UnitaryControlElementTypeCommon"
@@ -1779,7 +1779,7 @@ msgid "OperationMode"
 msgstr "OperationMode"
 
 msgid "OperationMode_DEFINITION"
-msgstr "OperationMode"
+msgstr "Table mapping operation mode identifiers to descriptive labels, which may be used for interpreting Pset UnitaryControlElementPHistory.Mode."
 
 #:IFC.xml:2441
 msgid "Pset_UnitaryControlElementTypeIndicatorPanel"
@@ -1821,7 +1821,7 @@ msgid "GrossWeight"
 msgstr "GrossWeight"
 
 msgid "GrossWeight_DEFINITION"
-msgstr "Total gross weight of the footing without add on parts, not taking into account possible processing features cut out s, etc. or openings and recesses."
+msgstr "Total Gross Weight of the object without any add on parts and not taking into account possible processing features cut out s, etc. or openings and recesses."
 
 #:IFC.xml:2462
 msgid "Qto_AlarmBaseQuantities"

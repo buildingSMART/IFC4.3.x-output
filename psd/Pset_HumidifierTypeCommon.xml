@@ -1,9 +1,20 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_8a4b656"/>
+  <IfcVersion version="IFC4X3_DEV_bd2538d"/>
   <Name>Pset_HumidifierTypeCommon</Name>
   <Definition>Humidifier type common attributes.
-WaterProperties attribute renamed to WaterRequirement and unit type modified in IFC2x2 Pset Addendum.</Definition>
+WaterProperties attribute renamed to WaterRequirement and unit type modified in IFC2x2 Pset Addendum.
+
+
+## Comments
+
+### AirPressureDropCurve
+
+Air pressure drop versus air-flow rate.
+
+### NominalAirFlowRate
+
+Nominal rate of air flow into which water vapor is added.</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcHumidifier</ClassName>
@@ -12,7 +23,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -53,7 +64,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
     </PropertyDef>
     <PropertyDef>
       <Name>Weight</Name>
-      <Definition>The weight of the humidifier.</Definition>
+      <Definition>Total weight of object</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcMassMeasure"/>
@@ -71,7 +82,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
     </PropertyDef>
     <PropertyDef>
       <Name>NominalAirFlowRate</Name>
-      <Definition>Nominal rate of air flow into which water vapor is added.</Definition>
+      <Definition>Nominal air flow rate.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -97,7 +108,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
     </PropertyDef>
     <PropertyDef>
       <Name>WaterRequirement</Name>
-      <Definition>Make-up water requirements.</Definition>
+      <Definition>Make-up water requirement.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -121,7 +132,7 @@ WaterProperties attribute renamed to WaterRequirement and unit type modified in 
     </PropertyDef>
     <PropertyDef>
       <Name>AirPressureDropCurve</Name>
-      <Definition>Air pressure drop curve, pressure drop – flow rate curve, AirPressureDrop = f (AirflowRate).</Definition>
+      <Definition>Air pressure drop as a function of air flow rate.</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression/>

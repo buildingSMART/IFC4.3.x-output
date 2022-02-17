@@ -14,16 +14,11 @@
 * The Property 'Pset_Address.Region' has no definition
 * The Property 'Pset_Address.Town' has no definition
 * The Property 'Pset_Address.UserDefinedPurpose' has no definition
-* The Property 'Pset_AirTerminalBoxTypeCommon.AirflowRateRange' has no definition
 * The Property 'Pset_AirTerminalOccurrence.AirTerminalLocation' has no definition
 * The Property 'Pset_AirTerminalPHistory.AirFlowRateHistory' has no definition
-* The Property 'Pset_AirTerminalTypeCommon.AirTerminalMountingType' has no definition
-* The Property 'Pset_AirTerminalTypeCommon.AirTerminalShape' has no definition
-* The Property 'Pset_AlarmPHistory.ConditionHistory' has no definition
+* The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
 * The Property 'Pset_AlarmPHistory.UserHistory' has no definition
 * The Property 'Pset_AlarmTypeCommon.AlarmCondition' has no definition
-* The Property 'Pset_AudioVisualAppliancePHistory.AudioVolumeHistory' has no definition
-* The Property 'Pset_AudioVisualAppliancePHistory.MediaSourceHistory' has no definition
 * The Property 'Pset_BoilerPHistory.CombustionChamberTemperature' has no definition
 * The Property 'Pset_BoilerPHistory.WorkingPressureHistory' has no definition
 * The Property 'Pset_BoilerTypeSteam.NominalEfficiencyTable' has no definition
@@ -31,13 +26,11 @@
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_3' has no definition
 * The Property 'Pset_CableSegmentTypeConductorSegment.ConductorMaterial' has no definition
-* The Property 'Pset_CableSegmentTypeConductorSegment.ConductorShape' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_3' has no definition
 * The Property 'Pset_ChillerTypeCommon.ChillerCapacity' has no definition
 * The Property 'Pset_CoilPHistory.AirPressureDropCurveHistory' has no definition
 * The Property 'Pset_CoilPHistory.SoundCurveHistory' has no definition
-* The Property 'Pset_CoilTypeCommon.AirflowRateRange' has no definition
 * The Property 'Pset_CoilTypeCommon.CoilPlacement' has no definition
 * The Property 'Pset_ConstructionAdministration.ProcurementMethod' has no definition
 * The Property 'Pset_ConstructionAdministration.SpecificationSectionNumber' has no definition
@@ -50,11 +43,8 @@
 * The Property 'Pset_ConstructionResource.ScheduleWorkProgression' has no definition
 * The Property 'Pset_ControllerPHistory.ValueHistory' has no definition
 * The Property 'Pset_ControllerTypeMultiPosition.IntegerRange' has no definition
-* The Property 'Pset_CooledBeamTypeActive.AirflowRateRange' has no definition
-* The Property 'Pset_DamperTypeFireSmokeDamper.DamperControlType' has no definition
 * The Property 'Pset_DistributionChamberElementTypeInspectionChamber.InspectionChamberInvertLevel' has no definition
 * The Property 'Pset_DistributionChamberElementTypeSump.SumpInvertLevel' has no definition
-* The Property 'Pset_DistributionPortPHistoryCable.CurrentHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryCable.PowerFactorHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryCable.VoltageHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryDuct.FlowConditionHistory' has no definition
@@ -64,14 +54,10 @@
 * The Property 'Pset_DistributionPortPHistoryDuct.VelocityHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryDuct.VolumetricFlowRateHistory' has no definition
 * The Property 'Pset_DistributionPortPHistoryDuct.WetBulbTemperatureHistory' has no definition
-* The Property 'Pset_DistributionPortTypeCable.ElectricalConnectionType' has no definition
 * The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
 * The Property 'Pset_DistributionPortTypePipe.ConnectionSubType' has no definition
-* The Property 'Pset_DuctSegmentPHistory.LeakageCurveHistory' has no definition
-* The Property 'Pset_DuctSegmentTypeCommon.CrossSectionShape' has no definition
+* The Property 'Pset_DuctSilencerTypeCommon.AirFlowrateRange' has no definition
 * The Property 'Pset_ElectricalDeviceCommon.IK_Code' has no definition
-* The Property 'Pset_ElectricalDeviceCommon.IP_Code' has no definition
-* The Property 'Pset_EnergyRequirements.EnergySourceLabel' has no definition
 * The Property 'Pset_EnvironmentalImpactIndicators.IndicatorsUnit' has no definition
 * The Property 'Pset_FanCentrifugal.FanArrangement' has no definition
 * The Property 'Pset_FastenerWeld.n' has no definition
@@ -84,26 +70,16 @@
 * The Property 'Pset_GeotechnicalStratumCommon.StratumColour' has no definition
 * The Property 'Pset_HumidifierTypeCommon.HumidifierApplication' has no definition
 * The Property 'Pset_ImpactProtectionDeviceTypeBumper.EnergyAbsorption' has no definition
-* The Property 'Pset_JunctionBoxTypeCommon.IP_Code' has no definition
-* The Property 'Pset_JunctionBoxTypeCommon.JunctionBoxMountingType' has no definition
-* The Property 'Pset_MaintenanceTriggerPerformance.PerformanceMaintenanceLevel' has no definition
 * The Property 'Pset_PropertyAgreement.AgreementDate' has no definition
 * The Property 'Pset_PropertyAgreement.AgreementVersion' has no definition
 * The Property 'Pset_PropertyAgreement.TrackingIdentifier' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingFunctionICurve.MaxAdjustmentX_ICS' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentRange' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentRangeStepValue' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.CurrentAdjustmentValues' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentRange' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentRangeStepValue' has no definition
-* The Property 'Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.TimeAdjustmentValues' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_100' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_50' has no definition
 * The Property 'Pset_ProtectiveDeviceTrippingUnitTypeElectronic.N_Protection_Select' has no definition
 * The Property 'Pset_ProvisionForVoid.VoidShape' has no definition
 * The Property 'Pset_PumpPHistory.PowerHistory' has no definition
-* The Property 'Pset_RailwayBalise.IP_Code' has no definition
 * The Property 'Pset_SensorTypeCO2Sensor.SetPointCO2Concentration' has no definition
 * The Property 'Pset_SensorTypeIonConcentrationSensor.SetPointIonConcentration' has no definition
 * The Property 'Pset_SignCommon.TactileMarking' has no definition
@@ -129,7 +105,6 @@
 * The Property 'Pset_SpaceHeaterPHistory.CharacteristicExponent' has no definition
 * The Property 'Pset_SpaceHeaterTypeCommon.SpaceHeaterPlacement' has no definition
 * The Property 'Pset_SpaceThermalLoadPHistory.AirExchangeRateTimeHistory' has no definition
-* The Property 'Pset_SpaceThermalLoadPHistory.DryBulbTemperatureHistory' has no definition
 * The Property 'Pset_SpaceThermalLoadPHistory.EquipmentSensibleHistory' has no definition
 * The Property 'Pset_SpaceThermalLoadPHistory.ExhaustAirHistory' has no definition
 * The Property 'Pset_SpaceThermalLoadPHistory.InfiltrationSensibleHistory' has no definition
@@ -148,8 +123,6 @@
 * The Property 'Pset_SwitchingDeviceTypePHistory.SetPointHistory' has no definition
 * The Property 'Pset_TankTypeCommon.TankNominalCapacity' has no definition
 * The Property 'Pset_TrackElementOccurrenceSleeper.UnderSleeperPadStiffness' has no definition
-* The Property 'Pset_UnitaryControlElementPHistory.OperationModeHistory' has no definition
-* The Property 'Pset_UnitaryControlElementTypeCommon.OperationMode' has no definition
 * The Property 'Pset_UnitaryControlElementTypeIndicatorPanel.UnitaryApplication' has no definition
 * The Property 'Pset_VehicleAvailability.MaintenanceDowntime' has no definition
 ## DefinitionForPropertySet
@@ -413,6 +386,8 @@
 * For document 'AirResistanceCurve.md/a/properties/docs' a property cannot be found
 * For document 'AirSideSystemDistributionType.md/a/properties/docs' a property cannot be found
 * For document 'AirSideSystemType.md/a/properties/docs' a property cannot be found
+* For document 'AirTerminalMountingType.md/a/properties/docs' a property cannot be found
+* For document 'AirTerminalShape.md/a/properties/docs' a property cannot be found
 * For document 'AirVolume.md/a/properties/docs' a property cannot be found
 * For document 'AirflowCurve.md/a/properties/docs' a property cannot be found
 * For document 'AirflowRateRange.md/a/properties/docs' a property cannot be found
@@ -483,6 +458,7 @@
 * For document 'AudioAmplification.md/a/properties/docs' a property cannot be found
 * For document 'AudioMode.md/a/properties/docs' a property cannot be found
 * For document 'AudioVolume.md/a/properties/docs' a property cannot be found
+* For document 'AudioVolumeHistory.md/a/properties/docs' a property cannot be found
 * For document 'AutomaticCondensateDischarge.md/a/properties/docs' a property cannot be found
 * For document 'AuxiliaryEnergyConsumption.md/a/properties/docs' a property cannot be found
 * For document 'AuxiliaryEnergySourceConsumption.md/a/properties/docs' a property cannot be found
@@ -683,12 +659,14 @@
 * For document 'Condition.md/c/properties/docs' a property cannot be found
 * For document 'ConditionCommencement.md/c/properties/docs' a property cannot be found
 * For document 'ConditionDisposalLevel.md/c/properties/docs' a property cannot be found
+* For document 'ConditionHistory.md/c/properties/docs' a property cannot be found
 * For document 'ConditionMaintenanceLevel.md/c/properties/docs' a property cannot be found
 * For document 'ConditionReplacementLevel.md/c/properties/docs' a property cannot be found
 * For document 'ConditionTargetPerformance.md/c/properties/docs' a property cannot be found
 * For document 'ConditionTermination.md/c/properties/docs' a property cannot be found
 * For document 'ConductorDiameter.md/c/properties/docs' a property cannot be found
 * For document 'ConductorFunction.md/c/properties/docs' a property cannot be found
+* For document 'ConductorShape.md/c/properties/docs' a property cannot be found
 * For document 'ConduitShapeType.md/c/properties/docs' a property cannot be found
 * For document 'ConicityRatio.md/c/properties/docs' a property cannot be found
 * For document 'ConnectedConductorFunction.md/c/properties/docs' a property cannot be found
@@ -766,15 +744,20 @@
 * For document 'CoverageArea.md/c/properties/docs' a property cannot be found
 * For document 'CreepageDistance.md/c/properties/docs' a property cannot be found
 * For document 'CrossSectionArea.md/c/properties/docs' a property cannot be found
+* For document 'CrossSectionShape.md/c/properties/docs' a property cannot be found
 * For document 'CrossSectionalArea.md/c/properties/docs' a property cannot be found
 * For document 'Crossfall.md/c/properties/docs' a property cannot be found
 * For document 'CrossingLowerBarPitch.md/c/properties/docs' a property cannot be found
 * For document 'CrossingUpperBarPitch.md/c/properties/docs' a property cannot be found
 * For document 'Current.md/c/properties/docs' a property cannot be found
+* For document 'CurrentAdjustmentRange.md/c/properties/docs' a property cannot be found
+* For document 'CurrentAdjustmentRangeStepValue.md/c/properties/docs' a property cannot be found
+* For document 'CurrentAdjustmentValues.md/c/properties/docs' a property cannot be found
 * For document 'CurrentCarryingCapacity.md/c/properties/docs' a property cannot be found
 * For document 'CurrentCarryingCapasity.md/c/properties/docs' a property cannot be found
 * For document 'CurrentContent3rdHarmonic.md/c/properties/docs' a property cannot be found
 * For document 'CurrentForTimeDelay.md/c/properties/docs' a property cannot be found
+* For document 'CurrentHistory.md/c/properties/docs' a property cannot be found
 * For document 'CurrentRMS.md/c/properties/docs' a property cannot be found
 * For document 'CurrentRegulationRate.md/c/properties/docs' a property cannot be found
 * For document 'CurrentTolerance1.md/c/properties/docs' a property cannot be found
@@ -785,6 +768,7 @@
 * For document 'CyclicPath.md/c/properties/docs' a property cannot be found
 * For document 'CyclicRange.md/c/properties/docs' a property cannot be found
 * For document 'DCResistance.md/d/properties/docs' a property cannot be found
+* For document 'DamperControlType.md/d/properties/docs' a property cannot be found
 * For document 'DamperPosition.md/d/properties/docs' a property cannot be found
 * For document 'DampingRatio.md/d/properties/docs' a property cannot be found
 * For document 'DashedLine.md/d/properties/docs' a property cannot be found
@@ -865,6 +849,7 @@
 * For document 'DriveConnectionType.md/d/properties/docs' a property cannot be found
 * For document 'DrivePowerLoss.md/d/properties/docs' a property cannot be found
 * For document 'DryBulbTemperature.md/d/properties/docs' a property cannot be found
+* For document 'DryBulbTemperatureHistory.md/d/properties/docs' a property cannot be found
 * For document 'DualDeck.md/d/properties/docs' a property cannot be found
 * For document 'DuctSealant.md/d/properties/docs' a property cannot be found
 * For document 'DuctSizingMethod.md/d/properties/docs' a property cannot be found
@@ -904,6 +889,7 @@
 * For document 'ElectricMotorEfficiency.md/e/properties/docs' a property cannot be found
 * For document 'ElectricalClearance.md/e/properties/docs' a property cannot be found
 * For document 'ElectricalClearanceDistance.md/e/properties/docs' a property cannot be found
+* For document 'ElectricalConnectionType.md/e/properties/docs' a property cannot be found
 * For document 'ElectricalCrossCapacity.md/e/properties/docs' a property cannot be found
 * For document 'ElectricalFeederType.md/e/properties/docs' a property cannot be found
 * For document 'ElectricalSystemCategory.md/e/properties/docs' a property cannot be found
@@ -931,6 +917,7 @@
 * For document 'EnergyLoss.md/e/properties/docs' a property cannot be found
 * For document 'EnergySource.md/e/properties/docs' a property cannot be found
 * For document 'EnergySourceConsumption.md/e/properties/docs' a property cannot be found
+* For document 'EnergySourceLabel.md/e/properties/docs' a property cannot be found
 * For document 'EntranceLevel.md/e/properties/docs' a property cannot be found
 * For document 'EquipmentCapacity.md/e/properties/docs' a property cannot be found
 * For document 'EquipmentLoading.md/e/properties/docs' a property cannot be found
@@ -1238,6 +1225,7 @@
 * For document 'ICW60947.md/i/properties/docs' a property cannot be found
 * For document 'IK.md/i/properties/docs' a property cannot be found
 * For document 'IP.md/i/properties/docs' a property cannot be found
+* For document 'IP_Code.md/i/properties/docs' a property cannot be found
 * For document 'IdealCapacity.md/i/properties/docs' a property cannot be found
 * For document 'IdealShaftPower.md/i/properties/docs' a property cannot be found
 * For document 'Identifier.md/i/properties/docs' a property cannot be found
@@ -1251,6 +1239,7 @@
 * For document 'ImpellerDiameter.md/i/properties/docs' a property cannot be found
 * For document 'ImpuritiesContent.md/i/properties/docs' a property cannot be found
 * For document 'InLineRowSpacing.md/i/properties/docs' a property cannot be found
+* For document 'InPlane.md/i/properties/docs' a property cannot be found
 * For document 'InUse.md/i/properties/docs' a property cannot be found
 * For document 'InUseConditions.md/i/properties/docs' a property cannot be found
 * For document 'IncomingStation.md/i/properties/docs' a property cannot be found
@@ -1396,6 +1385,7 @@
 * For document 'IsothermalMoistureCapacity.md/i/properties/docs' a property cannot be found
 * For document 'JacketColour.md/j/properties/docs' a property cannot be found
 * For document 'JointRelativePosition.md/j/properties/docs/README.md/domain/schemas' a property cannot be found
+* For document 'JunctionBoxMountingType.md/j/properties/docs' a property cannot be found
 * For document 'JunctionLeftAngle.md/j/properties/docs' a property cannot be found
 * For document 'JunctionLeftRadius.md/j/properties/docs' a property cannot be found
 * For document 'JunctionRightAngle.md/j/properties/docs' a property cannot be found
@@ -1437,6 +1427,7 @@
 * For document 'Leakage.md/l/properties/docs' a property cannot be found
 * For document 'LeakageClass.md/l/properties/docs' a property cannot be found
 * For document 'LeakageCurve.md/l/properties/docs' a property cannot be found
+* For document 'LeakageCurveHistory.md/l/properties/docs' a property cannot be found
 * For document 'LeakageFullyClosed.md/l/properties/docs' a property cannot be found
 * For document 'LeftFlangeWidth.md/l/properties/docs' a property cannot be found
 * For document 'Legend.md/l/properties/docs' a property cannot be found
@@ -1606,6 +1597,7 @@
 * For document 'MediaContent.md/m/properties/docs' a property cannot be found
 * For document 'MediaExtendedArea.md/m/properties/docs' a property cannot be found
 * For document 'MediaSource.md/m/properties/docs' a property cannot be found
+* For document 'MediaSourceHistory.md/m/properties/docs' a property cannot be found
 * For document 'Methodology.md/m/properties/docs' a property cannot be found
 * For document 'MidshipToFairLead.md/m/properties/docs' a property cannot be found
 * For document 'MinAmbientTemp.md/m/properties/docs' a property cannot be found
@@ -1846,6 +1838,8 @@
 * For document 'OperatingTime.md/o/properties/docs' a property cannot be found
 * For document 'OperatingWeight.md/o/properties/docs' a property cannot be found
 * For document 'Operation.md/o/properties/docs' a property cannot be found
+* For document 'OperationMode.md/o/properties/docs' a property cannot be found
+* For document 'OperationModeHistory.md/o/properties/docs' a property cannot be found
 * For document 'OperationPressureMax.md/o/properties/docs' a property cannot be found
 * For document 'OperationTemperatureRange.md/o/properties/docs' a property cannot be found
 * For document 'OperationalCriteria.md/o/properties/docs' a property cannot be found
@@ -1863,6 +1857,7 @@
 * For document 'OrthogonalTolerance.md/o/properties/docs' a property cannot be found
 * For document 'OrthogonalUncertainty.md/o/properties/docs' a property cannot be found
 * For document 'OrthometricHeight.md/o/properties/docs' a property cannot be found
+* For document 'OutOfPlane.md/o/properties/docs' a property cannot be found
 * For document 'OutdoorEnvironment.md/o/properties/docs' a property cannot be found
 * For document 'OuterDiameter.md/o/properties/docs' a property cannot be found
 * For document 'OuterSurfaceArea.md/o/properties/docs' a property cannot be found
@@ -1908,6 +1903,7 @@
 * For document 'Performance.md/p/properties/docs' a property cannot be found
 * For document 'PerformanceCertificate.md/p/properties/docs' a property cannot be found
 * For document 'PerformanceClasses.md/p/properties/docs' a property cannot be found
+* For document 'PerformanceMaintenanceLevel.md/p/properties/docs' a property cannot be found
 * For document 'PerformanceUnit.md/p/properties/docs' a property cannot be found
 * For document 'Perimeter.md/p/properties/docs' a property cannot be found
 * For document 'Permeability.md/p/properties/docs' a property cannot be found
@@ -1949,6 +1945,7 @@
 * For document 'PortNumber.md/p/properties/docs' a property cannot be found
 * For document 'Position.md/p/properties/docs' a property cannot be found
 * For document 'PositionInTrack.md/p/properties/docs' a property cannot be found
+* For document 'PossibleFlowRateRange.md/p/properties/docs' a property cannot be found
 * For document 'Power.md/p/properties/docs' a property cannot be found
 * For document 'PowerCapacity.md/p/properties/docs' a property cannot be found
 * For document 'PowerDemand.md/p/properties/docs' a property cannot be found
@@ -2472,6 +2469,9 @@
 * For document 'TiltAngle.md/t/properties/docs' a property cannot be found
 * For document 'TiltHorizontal.md/t/properties/docs' a property cannot be found
 * For document 'TiltVertical.md/t/properties/docs' a property cannot be found
+* For document 'TimeAdjustmentRange.md/t/properties/docs' a property cannot be found
+* For document 'TimeAdjustmentRangeStepValue.md/t/properties/docs' a property cannot be found
+* For document 'TimeAdjustmentValues.md/t/properties/docs' a property cannot be found
 * For document 'TimeConstant.md/t/properties/docs' a property cannot be found
 * For document 'TimeTolerance1.md/t/properties/docs' a property cannot be found
 * For document 'TimeTolerance2.md/t/properties/docs' a property cannot be found

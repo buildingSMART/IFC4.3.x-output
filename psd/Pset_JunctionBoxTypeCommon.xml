@@ -1,10 +1,21 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_8a4b656"/>
+  <IfcVersion version="IFC4X3_DEV_bd2538d"/>
   <Name>Pset_JunctionBoxTypeCommon</Name>
   <Definition>A junction box is an enclosure within which cables are connected.
 
-History: New in IFC4</Definition>
+History: New in IFC4
+
+
+## Comments
+
+### ClearDepth
+
+It indiciates the unobstructed depth available for cable inclusion within the junction box.
+
+### NumberOfGangs
+
+Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).</Definition>
   <Applicability/>
   <ApplicableClasses>
     <ClassName>IfcJunctionBox</ClassName>
@@ -13,7 +24,7 @@ History: New in IFC4</Definition>
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -39,7 +50,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfGangs</Name>
-      <Definition>Number of slots available for switches/outlets (most commonly 1, 2, 3, or 4).</Definition>
+      <Definition>Number of gangs in the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcCountMeasure"/>
@@ -48,8 +59,7 @@ History: New in IFC4</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>ClearDepth</Name>
-      <Definition>Clear depth of the object (elevator). It indicates the distance from the inner surface of the elevator door to the opposite surface of the elevator car. 
-The shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence.</Definition>
+      <Definition>The clear depth.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -90,7 +100,7 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef>
       <Name>JunctionBoxMountingType</Name>
-      <Definition/>
+      <Definition>Method of mounting to be adopted for the type of junction box.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_JunctionBoxMountingType">
@@ -115,7 +125,7 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef>
       <Name>IP_Code</Name>
-      <Definition/>
+      <Definition>IP Code, the International Protection Marking, IEC 60529), classifies and rates the degree of protection provided against intrusion.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -142,7 +152,7 @@ The shape information is provided in addition to the shape representation and th
     </PropertyDef>
     <PropertyDef>
       <Name>NominalHeight</Name>
-      <Definition>The nominal height of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.</Definition>
+      <Definition>The nominal height of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNonNegativeLengthMeasure"/>
