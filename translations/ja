@@ -9,1732 +9,319 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcStructuralElementsDomain.pot\n"
-"X-Crowdin-File-ID: 96\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2022-02-17 22:10\n"
+"PO-Revision-Date: 2022-02-17 21:06\n"
 
-#:IFC.xml:47467
-msgid "IfcBendingParameterSelect"
-msgstr "IfcBendingParameterSelect"
+#:IFC.xml:49099
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-#:IFC.xml:47468
-msgid "IfcFooting"
-msgstr "IfcFooting"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
 
-msgid "IfcFooting_DEFINITION"
-msgstr "A footing is a part of the foundation of a structure that spreads and transmits the load to the soil. A footing is also characterized as shallow foundation, where the loads are transfered to the ground near the surface. .extDef NOTE Definition according to ISO 6707 1 stepped construction that spreads the load at the foot of a wall or column. HISTORY New entity in IFC2x2. NOTE Slab foundations, also called slab on grade, are not instantiated as [[IfcFooting]] but as [[IfcSlab]] or as its subtype [[IfcSlabStandardCase]] , [[IfcSlabElementedCase]] with a predefined type of [[IfcSlabTypeEnum]] .BASESLAB. Deep foundations, which transfer the loads to subsurface layers, are represented by [[IfcDeepFoundation]] and its subtypes [[IfcCaissonFoundation]] and [[IfcPile]] ."
+#:IFC.xml:49102
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-#:IFC.xml:47469
-msgid "IfcFooting_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49110
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcFooting_PredefinedType_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更属性はオプションとした。 入力情報は [[IfcRelDefinesByType]] と [[IfcFootingType]] で提供できます。"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
 
-#:IFC.xml:47476
-msgid "IfcFootingType"
-msgstr "IfcFootingType"
+#:IFC.xml:49115
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-msgid "IfcFootingType_DEFINITION"
-msgstr "The building element type [[IfcFootingType]] defines commonly shared information for occurrences of footings. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a footing type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFootingType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFootingType]] are represented by instances of [[IfcFooting]] . Refer to the documentation at [[IfcFooting]] for supported property sets, materials, and composition. HISTORY New entity in IFC4."
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 接続された面セットは、面の境界エッジと頂点が接続されているような面セットです。 注記エンティティは、ISO 10303に定義されている接続面セットから適応されています 42. HISTORY IFC1.0 の新しいエンティティ。 ペックヘッド 非公式な提案 1 顔とその境界ループの領域の結合は、アークワイズ接続されなければならない。"
 
-#:IFC.xml:47477
-msgid "IfcFootingType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49118
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcFootingType_PredefinedType_DEFINITION"
-msgstr "足場のサブタイプ。"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "共通エッジまたは頂点に沿って接続された円弧方向の面セット。"
 
-#:IFC.xml:47484
-msgid "IfcFootingTypeEnum"
-msgstr "IfcFootingTypeEnum"
+#:IFC.xml:49130
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-msgid "IfcFootingTypeEnum_DEFINITION"
-msgstr "一般的な基底型を定義する列挙法 .change ifc2x4 IFC 2x4 IFC 2x4 変更項目 CAISson FOUNDATIONを追加しました。 Items CAISON FOUNDATION 水中建設で使用される基礎工事の種類。.change ifc4x2 IFC4x2 変更Enum made optional and deprecated. 代わりに専用のクラス[[IfcCaissonFoundation]]を使用してください。 FOOTING BEAM 曲げ中で地面からサポートされているフット要素。 彼らは通常、桟橋、杭またはパイルキャップの間を行き来します。 彼らは通常、仕上げのより低いグレードを必要とするので、彼らは建物の上部構造内のビームと区別されます。 彼らは地面から明確であるため、コンクリートが硬化している間、下面へのサポートを必要とするので、彼らはSTRIP FOOTINGと区別されます。 PAD FOOTING 単一列の負荷をおそらく2つの地面に転送する要素。 PALE CAP、列または列のグループから桟橋または杭または杭のグループに荷重を転送する要素。 STRIP FOOTING 連続要素のいずれかから地面に負荷を転送する直線要素。 例えば壁や列などの一連の要素から USERDEFINED 特定のローカル要件を満たす特別な種類の足場。NOTDEFINED 足場のタイプが定義されていません。"
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
 
-#:IFC.xml:47500
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION"
-msgstr "CAISSON財団"
+#:IFC.xml:49133
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION_DEFINITION"
-msgstr "水中建設で使用される基礎建設タイプ。.change ifc4x2 IFC4x2 変更<unk> Enum made optional and deprecated. 代わりに専用クラス [[IfcCaissonFoundation]] を使用してください。"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "端の開始点の頂点。"
 
-#:IFC.xml:47501
-msgid "IfcFootingTypeEnum_FOOTING_BEAM"
-msgstr "ビームを見つけました"
+#:IFC.xml:49145
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcFootingTypeEnum_FOOTING_BEAM_DEFINITION"
-msgstr "曲げ中で、地面から支えられているフット要素。通常、桟橋、杭、杭キャップの間を移動します。 彼らは通常、仕上げのより低いグレードを必要とするので、彼らは建物の上部構造内のビームと区別されます。 彼らは地面から明確であるため、コンクリートが硬化している間、下面へのサポートを必要とするので、彼らはSTRIP FOOTINGと区別されます。"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "エッジの終点頂点。同じ頂点は、EdgeStartとEdgeEndの両方に使用できます。"
 
-#:IFC.xml:47502
-msgid "IfcFootingTypeEnum_NOTDEFINED"
-msgstr "注記されました"
+#:IFC.xml:49181
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-msgid "IfcFootingTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "The type of footing is not defined."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
 
-#:IFC.xml:47503
-msgid "IfcFootingTypeEnum_PAD_FOOTING"
-msgstr "見つかった経路："
+#:IFC.xml:12242
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "EdgeGeometry"
 
-msgid "IfcFootingTypeEnum_PAD_FOOTING_DEFINITION"
-msgstr "単一の列の負荷を、おそらく2つの場合に地面に転送する要素。"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "エッジの形状と空間位置を定義する曲線。 この曲線は境界がなく、エッジドメインを定義するエッジの頂点によって暗黙的にトリミングされます。 複数のエッジが同じ曲線を参照できます。"
 
-#:IFC.xml:47504
-msgid "IfcFootingTypeEnum_PILE_CAP"
-msgstr "PILE CAP"
+#:IFC.xml:49182
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcFootingTypeEnum_PILE_CAP_DEFINITION"
-msgstr "列または列のグループから桟橋または杭または杭のグループに負荷を転送する要素。"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "この論理フラグは、TRUE を、エッジジオメトリを定義する曲線とエッジの感覚が同じかどうかを示します。 エッジの感覚は、エッジ開始頂点からエッジ終点までであり、カーブの感覚はパラメータを増やす方向にあります。"
 
-#:IFC.xml:47505
-msgid "IfcFootingTypeEnum_STRIP_FOOTING"
-msgstr "アイテムを見つけました"
+#:IFC.xml:49190
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcFootingTypeEnum_STRIP_FOOTING_DEFINITION"
-msgstr "連続要素のいずれかから地面に負荷を転送する線形要素 例えば壁や列などの一連の要素から"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
 
-#:IFC.xml:47506
-msgid "IfcFootingTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
+#:IFC.xml:49198
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcFootingTypeEnum_USERDEFINED_DEFINITION"
-msgstr "特定のローカル要件を満たす特別な種類の足場。"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "このパスを形成するために連結される指向エッジエンティティのリスト。"
 
-#:IFC.xml:47507
-msgid "IfcPile"
-msgstr "IfcPile"
+#:IFC.xml:49191
+msgid "IfcEdgeLoop_Ne"
+msgstr "該当なし"
 
-msgid "IfcPile_DEFINITION"
-msgstr "杭は細い木材、コンクリート、または鋼の構造要素であり、駆動され、噴出されます。 負荷を支えるために地面に埋め込まれています パイルはまた、深い土台として特徴付けられ、荷重はより深い地下層に転送されます。 xtDef NOTE 細い構造体ISO 6707 に従った定義, 実質的に地下. 地表下の荷重層に力sを伝達するつもりだった 注 表面近くの地面に負荷を伝達する浅い土台は、[[IfcFooting]] で表されます。"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "エッジリスト内の要素数。"
 
-#:IFC.xml:47508
-msgid "IfcPile_ConstructionType"
-msgstr "コンストラクションタイプ"
+#:IFC.xml:49210
+msgid "IfcFace"
+msgstr "IfcFace"
 
-msgid "IfcPile_ConstructionType_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Material profile association capability by means of [[IfcRelAssociatesMaterial]] has been added. The attribute ConstructionType should not be used whenever its information can be provided by a material profile set, either associated with the [[IfcPile]] object or, if present, with a corresponding instance of [[IfcPileType]] ."
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
 
-#:IFC.xml:47513
-msgid "IfcPile_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:27144
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcPile_PredefinedType_DEFINITION"
-msgstr "関数に応じた定義済みのパイルの汎用型。.change ifc2x4 IFC4 変更属性はオプションとした。 入力情報は [[IfcRelDefinesByType]] と [[IfcPileType]] で提供できます。"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:47520
-msgid "IfcPileConstructionEnum"
-msgstr "IfcPileConstructionEnum"
+#:IFC.xml:49213
+msgid "IfcFace_Bounds"
+msgstr "バウンド数"
 
-msgid "IfcPileConstructionEnum_DEFINITION"
-msgstr "杭の建設タイプを定義する列挙型。このタイプは主に杭の使用方法と製造方法に基づいています。 いくつかの材料情報は、パイルの使用方法に影響を与えるため、混在しています。HISTORY IFC2x2の新しいタイプ。 アイテムは、発掘され、所定の場所に注がれているパイプや桟橋にキャスト。 コンポーネントが混在しているCOMPOSITE iles コンクリートコアを鋳造して地面に突き刺される鋼製の外側のケースのようなものです プリキャストパイロットは、おそらくいくつかの鋼や他の治具とプリキャストコンクリートの完全である。 PREFAB スチール製のプレハブ製の杭。 また、これらが別の建設要素の一部ではない鋼板杭が含まれます。 USERDEFINED 特定のローカル要件を満たす特別なタイプの杭建設。 NOTDEFINED 杭建設のタイプが定義されていません。"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "顔の境界。"
 
-#:IFC.xml:47521
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE"
-msgstr "場所にキャスト"
+#:IFC.xml:49225
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE_DEFINITION"
-msgstr "発掘され、場所に注がれているピラフと桟橋。"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 フェースバインドは、面をバウンディングするために使用されるループです。 注記エンティティは、ISO 10303で定義されている面から適応されています 42. HISTORYIFC1.0 の新しいエンティティ"
 
-#:IFC.xml:47522
-msgid "IfcPileConstructionEnum_COMPOSITE"
-msgstr "COMPOSITE"
+#:IFC.xml:49233
+msgid "IfcFaceBound_Bound"
+msgstr "バインドされています"
 
-msgid "IfcPileConstructionEnum_COMPOSITE_DEFINITION"
-msgstr "構成要素が混ざったものであり コンクリートコアを鋳造して地面に突き刺される鋼製の外側のケースのようなものです"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "面境界として使用されるループ。"
 
-#:IFC.xml:47523
-msgid "IfcPileConstructionEnum_NOTDEFINED"
-msgstr "注記されました"
+#:IFC.xml:49226
+msgid "IfcFaceBound_Orientation"
+msgstr "方向"
 
-msgid "IfcPileConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "杭建設のタイプが定義されていません。"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "これは、「TRUE」か「FALSE」かを示しています。ループが最初に定義された場合と同じ意味を持ちます。 sense が FALSE の場合、コンポーネント指向のすべてのエッジのセンサーは顔に使用されると暗黙的に反転されます。"
 
-#:IFC.xml:47524
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE"
-msgstr "確認済み"
+#:IFC.xml:49245
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE_DEFINITION"
-msgstr "おそらくいくつかの鋼や他の据え付け品と前駆コンクリートの完全であるパイロット。"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 面外側バインドは、顔に外側の境界を定義するための追加の意味を持つバインドされた特殊なサブタイプです。 このタイプの顔の境界線は複数ありません。 注記エンティティは、ISO 10303で定義された面外側から適応されています 42. HISTORY IFC1.0 の新しいエンティティ"
 
-#:IFC.xml:47525
-msgid "IfcPileConstructionEnum_PREFAB_STEEL"
-msgstr "PREFAB 特殊鋼"
+#:IFC.xml:49248
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-msgid "IfcPileConstructionEnum_PREFAB_STEEL_DEFINITION"
-msgstr "鉄鋼で作られたプレハブ杭。これらは別の建設要素の一部ではない鋼板杭も含まれます。"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] では、表面に関連する表面の基礎となる形状を定義します。 注 トポロジは、サーフェスのジオメトリをトリミングするために使用されます。 トポロジーに合わせて表面を幾何学的にトリミングする必要はありません。 xtDef NOTE ISO CD 10303による定義 42 1992 面面は、ジオメトリが関連するサーフェスによって定義されるサブタイプの面です。 顔によって使用される表面の部分は、おそらく穴のあるオープンディスクとして平面に埋め込むことができます。 ただし、境界ループの端と頂点を持つ面の組合せは平面に埋め込む必要はありません。 それは、例えば、球体やトーラス全体をカバーすることができます。 面と幾何学面の両方が正常な方向を定義しているように、 BOOLEAN フラグは、サーフェスの通常が TRUE と一致するか、またはフェイスの通常方向を FALSE することに反対することを示すために使用されます。 顔のループのいずれかのコンポーネントに関連付けられた形状は、表面形状と一致する必要があります。 すべての頂点点とエッジ曲線の領域が面形状面に含まれているという意味です 複数の面サーフェスでサーフェスを参照することができます。 注意 ISO 10303に定義された顔面から適応したエンティティ 42. 履歴 IFC2x .spec ヘッド 非公式の提案 1. フェイスサーフェスのドメインは、ループによってトリミングされると、フェイスジオメトリのドメインとして正式に定義されます。 このドメインには境界ループは含まれていません 2. 面は有限範囲がゼロでない 3. 面はマニホールドであり 4. 面はアークワイズで接続されている。 5. フェイス表面には表面属性がある 6. ループはフェイスドメインの一部ではありません。 7. ループ幾何学は面幾何学と一致します。 これは、面表面を境界するループを定義する際に使用されるエッジ曲線または頂点点が面形状上にあることを意味します。 8 顔の輪は交差してはならない。"
 
-#:IFC.xml:47526
-msgid "IfcPileConstructionEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
+#:IFC.xml:13270
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "FaceSurf"
 
-msgid "IfcPileConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "特定のローカル要件を満たす杭建設の特別なタイプ。"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "面の内部形状を定義するサーフェス。このサーフェスはバインドされていない可能性があります。 面のドメインは、このサーフェスと継承された SELF FaceBounds 属性の境界ループによって定義されます。"
 
-#:IFC.xml:47528
-msgid "IfcPileType"
-msgstr "IfcPileType"
+#:IFC.xml:49249
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcPileType_DEFINITION"
-msgstr "The building element type [[IfcPileType]] defines commonly shared information for occurrences of piles. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a pile type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcPileType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcPileType]] are represented by instances of [[IfcPile]] . Refer to the documentation at [[IfcPile]] for supported property sets, materials, and composition. HISTORY New entity in IFC4."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "このフラグは、正常な表面の感覚が TRUE と一致するかどうかを示します。 または、顔に対するトポロジカル正常の感覚「FALSE」に対抗します。"
 
-#:IFC.xml:47529
-msgid "IfcPileType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49257
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcPileType_PredefinedType_DEFINITION"
-msgstr "パイルのサブタイプ。"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 ループは単一の頂点から構築されたトポロジカル実体です。 接続された方向のエッジまたは線形のセグメントを同じ頂点で始まったり終わったりすることです 通常、表面に横たわって顔を結合するために使用されます。 ループは 0 または 1 の次元を持ちます。0 次元ループの領域は 1 つの点です。 1次元ループの領域は、接続された方向曲線ですが、マニホールドである必要はありません。 ループが円であるため、始点の位置は任意です。 ループのドメインには、0 <unk> が含まれます。 ループは単一の頂点、または指向エッジの順序付きコレクション、または点の順序付きコレクションで表されます。 ループはグラフであるため、MとGのグラフ属性はグラフトラバーサルアルゴリズムによって決まります。 M 1以来、オイラー方程式1は、この場合にはイメージに.. .. .. .. ..の図ifcloop数学1。 V と E l が一意の頂点の数であり、ループ内の方向のエッジの数であり、G l がループの属である場合。 注 ISO 10303 42 で定義されているループから適応されたエンティティ。 歴史 IFC2xの新しいエンティティ。.spec head 非公式提案 1. ループには有限範囲があります。 2. ループは、一致する開始点と終了点を持つ閉じたトポロジカル曲線を記述します。"
 
-#:IFC.xml:47536
-msgid "IfcPileTypeEnum"
-msgstr "IfcPileTypeEnum"
+#:IFC.xml:49260
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadTail ALoop"
 
-msgid "IfcPileTypeEnum_DEFINITION"
-msgstr "パイル型を定義する列挙型 HISTORY IFC2x2 .change ifc2x4 IFC 2x4 変更アイテム BORED, DRIVEN, JETGROUTING の新型が追加されました。 穴を掘る(DRIVEN) ランミングされたり、振動されたり、そうでなければ運転された山。 JETGROUTING 建設のような注入されたパイル。 COHESIONA 凝集パイル。 FRICTION 摩擦パイル。 USERDEFINED パイル関数の型はユーザ定義されています。NOTDEFINED パイル関数の型が定義されていません。"
+#:IFC.xml:49268
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-#:IFC.xml:47554
-msgid "IfcPileTypeEnum_BORED"
-msgstr "ボレード"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303による定義 42 1992 オープンシェルは寸法のシェルである 2. そのドメインが存在する場合、有限であり、接続されていて、指向性があり、境界を持つ2多様体であるが、閉じた表面ではない。 1つ以上の穴を開けた閉じた殻と考えられる。 オープンシェルのドメインは 0 <unk> 1 を満たします。 オープンシェルは、ドメインがハンドルを持つことができるため、顔よりも機能的に一般的です。 シェルは、指向性のある面の集合によって定義されます。 指向を考慮した後、各顔の感覚は、以下に定義されたように通常のシェルと一致しなければならない。 オリエンテーションは、指向面の BOOLEAN 属性として直接提供できます。 またはシェルメンバーが orientation 属性を持たない面の場合は TRUE をデフォルトにしてください。 オープンシェルに対する以下の組み合わせ制約と、ドメインに対する幾何学的制約が設計されています。 非公式の提案と共にオープンシェルに関連するあらゆる領域が 指向性多様体であることを保証するために 各フェイスの参照は一意でなければなりません。開いたシェルは少なくとも1つの面を持つものとします。 特定の顔は複数の開いた殻に存在する可能性があります。 開いているシェルの境界は、その面の面境界ループによって一度だけ参照されるエッジで構成されます。 全ての頂点と一緒になっています オープンシェルのドメインが存在する場合、面のすべてのエッジと頂点が含まれます。 注 これは、その限界のどれも含まれていないフェイスドメインの定義とは若干異なることに注意してください。 例えば、フェイスドメインは、絶縁された点またはラインセグメントを除外することができます。オープンなシェルドメインはそうでない可能性があります。以下の計算のためのアルゴリズムを参照してください。 注記エンティティは、ISO 10303 42で定義された開いているシェルから適応されています。 HISTORYIFC2x.spec ヘッド 非公式提案 1. すべてのエッジは、顔の顔の境界によって正確に2回参照されなければなりません。 各指向エッジは一意でなければならない 3. エッジは2つ以上の面で参照してはならない。 4. シェルの個別面は交差しませんが、エッジや頂点を共有することがあります。 5. エッジは交差しませんが頂点を共有することができます 6. 7. シェルのループはポリループとその他のループタイプの混合物ではない。 ポリループのみが面結合定義として定義されるため、これが与えられることに注意してください。 閉じたシェルは、2マニホールドに接続されたアークワイズアークワイズでなければなりません。"
 
-msgid "IfcPileTypeEnum_BORED_DEFINITION"
-msgstr "ボアパイル。"
+#:IFC.xml:49272
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-#:IFC.xml:47555
-msgid "IfcPileTypeEnum_COHESION"
-msgstr "コーソン"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
 
-msgid "IfcPileTypeEnum_COHESION_DEFINITION"
-msgstr "まとまりの山。"
+#:IFC.xml:49157
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "EdgeElement"
 
-#:IFC.xml:47556
-msgid "IfcPileTypeEnum_DRIVEN"
-msgstr "<unk>"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "この指向エッジを構築するために使用されるエッジエンティティ。"
 
-msgid "IfcPileTypeEnum_DRIVEN_DEFINITION"
-msgstr "rammed、振動、またはそうでなければ駆動されたパイル。"
+#:IFC.xml:49273
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-#:IFC.xml:47557
-msgid "IfcPileTypeEnum_FRICTION"
-msgstr "フリクション"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-msgid "IfcPileTypeEnum_FRICTION_DEFINITION"
-msgstr "摩擦杭。"
+#:IFC.xml:49277
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-#:IFC.xml:47558
-msgid "IfcPileTypeEnum_JETGROUTING"
-msgstr "JETGROUTING"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-msgid "IfcPileTypeEnum_JETGROUTING_DEFINITION"
-msgstr "建設のような注入された杭。"
+#:IFC.xml:49281
+msgid "IfcOrientedEdge_Orientation"
+msgstr "方向"
 
-#:IFC.xml:47559
-msgid "IfcPileTypeEnum_NOTDEFINED"
-msgstr "注記されました"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN (BOOLEAN) 使用されているトポロジカル方向が format@@0 の場合、エッジ要素の始点から終点までの方向と一致します。format@@1"
 
-msgid "IfcPileTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "パイル関数の型が定義されていません。"
+#:IFC.xml:49300
+msgid "IfcPath"
+msgstr "IfcPath"
 
-#:IFC.xml:47560
-msgid "IfcPileTypeEnum_SUPPORT"
-msgstr "サポート"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 パスは、指向エッジの順序付けられたコレクションからなるトポロジカルエンティティです。 それぞれのエッジの始点が前のエッジの終点と一致するようにします パスは、最初の方向のエッジの始点から最後のエッジの終点まで順序付けられます。 指向エッジの BOOLEAN 値センスは、エッジ方向がパスの TRUE の方向と一致するか、または FALSE の逆方向であるかを示します。 個々のエッジは、個々のパスによって一度だけ参照することができます エッジは、複数のパスによって参照することができます。 エッジは、パスとは独立して存在することができます。ISO 10303 42 で定義されているパスから適応された注記エンティティ。 歴史 IFC2.0の新しいエンティティ .spec head 非公式命題1. パスに寸法性がある 1. パスはアークワイズ接続されている。 3. パスのエッジは、共通の頂点を除いて交差しません。 4. パスは有限でゼロではありません。"
 
-msgid "IfcPileTypeEnum_SUPPORT_DEFINITION"
-msgstr "サポートパイル。"
+#:IFC.xml:49288
+msgid "IfcPath_EdgeList"
+msgstr "EdgeList"
 
-#:IFC.xml:47561
-msgid "IfcPileTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "このパスを形成するために連結された指向エッジのリスト。"
 
-msgid "IfcPileTypeEnum_USERDEFINED_DEFINITION"
-msgstr "パイル関数の型はユーザ定義です。"
+#:IFC.xml:49303
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadTail APath"
 
-#:IFC.xml:47562
-msgid "IfcReinforcementDefinitionProperties"
-msgstr "IfcReforcementDefinitionProperties"
+#:IFC.xml:49311
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcReinforcementDefinitionProperties_DEFINITION"
-msgstr "[[IfcReinforcementDefinitionProperties]] defines the cross section properties of reinforcement included in reinforced concrete building elements. The property set definition may be used both in conjunction with insitu and precast structures. This subtype of [[IfcPropertySetDefinition]] is used to define the reinforcement properties in early design stages, such as in requirement definition or scheme design. In later design stages explicit instances of subtypes of [[IfcReinforcingElement]] are used. The intended usage may be indicated using the DefinitionType attribute value as a designator recommended values are Reinforcement area requirement or Reinforcement configuration requirement . Other values may be used according to local standards. Only one property set definition of this kind is used for each concrete building element in each intended usage indicated by the DefinitionType attribute value. This set then defines a list of cross section properties in a discrete number of longitudinal sections as instances of [[IfcSectionReinforcementProperties]] one for each structural reinforcement bar role , which in turn have a section cross section property defined as a profile and a number of reinforcement properties, one for each steel grade bar type. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcPropertySetDefinition]] to [[IfcPreDefinedPropertySet]]"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
 
-#:IFC.xml:31812
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions"
-msgstr "補強セクション定義"
+#:IFC.xml:11859
+msgid "IfcPolyLoop_Polygon"
+msgstr "多角形（多角形）"
 
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions_DEFINITION"
-msgstr "補強定義プロパティに添付されているセクション補強プロパティのリスト。"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "ループを定義する点のリスト リストには繰り返される点はありません。"
 
-#:IFC.xml:47563
-msgid "IfcReinforcementDefinitionProperties_DefinitionType"
-msgstr "定義タイプ"
+#:IFC.xml:49314
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcReinforcementDefinitionProperties_DefinitionType_DEFINITION"
-msgstr "補強材定義プロパティに適用される記述型名。"
+#:IFC.xml:49315
+msgid "IfcSubedge"
+msgstr "IFcSubedge"
 
-#:IFC.xml:47570
-msgid "IfcReinforcingBar"
-msgstr "IfcReinforcingBar"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 サブエッジは、既存のエッジのドメインの接続部分であるエッジです。 サブエッジ上のトポロジカル制約は、エッジ上のトポロジカル制約と同じです。 注 ISO 10303 42に定義されているサブエッジから適応したエンティティ HISTORY IFC2x2の新しいエンティティ。 ペックヘッド 非公式な提案 1. サブエッジのドメインは、親エッジのドメインとして正式に定義されます。 で指定します。 2 開始頂点と終了頂点は、親エッジの頂点の領域と親エッジの領域の結合の範囲内でなければならない ."
 
-msgid "IfcReinforcingBar_DEFINITION"
-msgstr "A reinforcing bar is usually made of steel with manufactured deformations in the surface, and used in concrete and masonry construction to provide additional strength. A single instance of this class may represent one or many of actual rebars, for example a row of rebars. HISTORY New entity in IFC2x2 .change ifc2x4 IFC 2x4 CHANGE All attributes are optional now. Several attributes are deprecated their information now provided by [[IfcReinforcingBarType]] . Attribute BarRole renamed to PredefinedType . .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds an [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] ."
+#:IFC.xml:49169
+msgid "IfcSubedge_ParentEdge"
+msgstr "ParentEdge"
 
-#:IFC.xml:47571
-msgid "IfcReinforcingBar_BarLength"
-msgstr "バーの長さ"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "エッジ、またはサブエッジを含むサブエッジ。"
 
-msgid "IfcReinforcingBar_BarLength_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性は非推奨です。代わりに [[IfcReinforcingBarType]] でそれぞれの属性を使用してください。"
+#:IFC.xml:49318
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-#:IFC.xml:47576
-msgid "IfcReinforcingBar_BarSurface"
-msgstr "BarSurface"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 トポロジ表示アイテムはジオメトリリソース内のすべてのトポロジ表示アイテムのスーパータイプです。 注記エンティティは ISO 10303 42に定義されているトポロジカル表現アイテムから適応されています。"
 
-msgid "IfcReinforcingBar_BarSurface_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingBarType]]でそれぞれの属性を使用してください。"
+#:IFC.xml:49321
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-#:IFC.xml:47581
-msgid "IfcReinforcingBar_CrossSectionArea"
-msgstr "断面積の表示"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点に対応するトポロジカル構造です。 それは次元0と次元0を持っています。 頂点の領域が存在する場合、m寸法実空間R Mの点であり、頂点のサブタイプによって表されます。 注記エンティティは、ISO 10303に定義されている頂点から適応しました 42. 履歴 IFC2.0の新しいエンティティ .spec ヘッド 非公式の提案 1. 頂点は次元性0を持っています. これは頂点の基本的な特性です. 2. 頂点の範囲はゼロであると定義されています."
 
-msgid "IfcReinforcingBar_CrossSectionArea_DEFINITION"
-msgstr "強化棒またはバーのグループの効果的な断面積。 .change ifc2x4 IFC4 変更属性はオプションとなりました。"
+#:IFC.xml:49336
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-#:IFC.xml:47586
-msgid "IfcReinforcingBar_NominalDiameter"
-msgstr "NominalDiameter"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点ループは、1 つの頂点からなるゼロ属のループです。 頂点は頂点ループとは独立して存在することができます. トポロジデータは、次の制約画像を満たすものとします.. .. ifcvertexloop math1.gif NOTE ISO 10303で定義された頂点ループから適応した実体。HISTORY IFC2x2に新しい実体。 .spec ヘッド 非公式の提案 1. 頂点ループは、0の範囲と次元を持ちます。2. 頂点ループは属性0を持ちます。"
 
-msgid "IfcReinforcingBar_NominalDiameter_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingBarType]]でそれぞれの属性を使用してください。"
+#:IFC.xml:49324
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-#:IFC.xml:47591
-msgid "IfcReinforcingBar_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "ループ全体を定義する頂点。"
 
-msgid "IfcReinforcingBar_PredefinedType_DEFINITION"
-msgstr "棒の役割、目的または使用、すなわち負荷の種類とストレスを運ぶことを意図しています。 。 hangeのifc2x4 IFC4属性をBarRoleからPredefinedTypeに変更しオプションに変更しました。 列挙項目の範囲を変更せずに[[IfcReinforcingBarRoleEnum]]から変更しました。"
+#:IFC.xml:49339
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-#:IFC.xml:47618
-msgid "IfcReinforcingBarType"
-msgstr "IfcReinforcingBarType"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点として定義されているジオメトリを持つ頂点です。 注記エンティティは、ISO 10303 42 で定義されている頂点から適応しています。 歴史 IFC2x.spec ヘッド 非公式提案 1. 頂点の領域は正式に頂点の領域として定義されます。"
 
-msgid "IfcReinforcingBarType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingBarType]] defines commonly shared information for occurrences of reinforcing bars. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing bar type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingBarType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingBarType]] are represented by instances of [[IfcReinforcingBar]] . HISTORY New entity in IFC4."
+#:IFC.xml:12830
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "頂点ジオメトリー"
 
-#:IFC.xml:47619
-msgid "IfcReinforcingBarType_BarLength"
-msgstr "バーの長さ"
-
-msgid "IfcReinforcingBarType_BarLength_DEFINITION"
-msgstr "補強棒の合計の長さ. ベンド棒の合計の長さは、ベンドの補正とローカル基準に従って計算されます."
-
-#:IFC.xml:47624
-msgid "IfcReinforcingBarType_BarSurface"
-msgstr "BarSurface"
-
-msgid "IfcReinforcingBarType_BarSurface_DEFINITION"
-msgstr "棒面がプレーンまたはテクスチャであるかどうかのインジケーター。"
-
-#:IFC.xml:47629
-msgid "IfcReinforcingBarType_BendingParameters"
-msgstr "曲げパラメータ"
-
-msgid "IfcReinforcingBarType_BendingParameters_DEFINITION"
-msgstr "曲げ形状パラメータの意味は、曲げ形状コードとそれぞれの標準によって定義されます。"
-
-#:IFC.xml:47634
-msgid "IfcReinforcingBarType_BendingShapeCode"
-msgstr "BendingShapeCode"
-
-msgid "IfcReinforcingBarType_BendingShapeCode_DEFINITION"
-msgstr "ACI 315、ISO 3766、または同様の規格のような規格ごとの形状コード。 プロジェクト全体でバー曲げを定義するための単一の標準が使用されており、この標準は [[IfcProject]] オブジェクトから [[IfcDocumentReference]] メカニズムを介して参照されていると推定されます。"
-
-#:IFC.xml:47639
-msgid "IfcReinforcingBarType_CrossSectionArea"
-msgstr "断面積の表示"
-
-msgid "IfcReinforcingBarType_CrossSectionArea_DEFINITION"
-msgstr "補強バーの効果的な断面積。"
-
-#:IFC.xml:47644
-msgid "IfcReinforcingBarType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcReinforcingBarType_NominalDiameter_DEFINITION"
-msgstr "補強棒の断面積サイズを定義する公称直径。"
-
-#:IFC.xml:47649
-msgid "IfcReinforcingBarType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingBarType_PredefinedType_DEFINITION"
-msgstr "Subtype of reinforcing bar."
-
-#:IFC.xml:47656
-msgid "IfcReinforcingBarTypeEnum"
-msgstr "IfcReinforcingBarTypeEnum"
-
-msgid "IfcReinforcingBarTypeEnum_DEFINITION"
-msgstr "バーの役割、目的、使用方法などの標準型を定義する列数 彼らが運ぶために意図されている負荷とストレスの種類. ヒストリーIFC2x2の新しいタイプ . hangeのifc2x4 IFC4がアイテムのANCHORINGを追加しました。列挙項目の範囲を変更することなく、[[IfcReinforcingBarRoleEnum]]からIFC4で列挙項目の名前を変更しました。 鉄筋強化アイテム。エッジ強化。 LIGATURE 強化バーは合字リンク、あがらせる. メインバーはメインバーです。 PUNCHING パンチング強化。 RING RING Ringの補強。 シート 強化バーはせん断バーです。 STUD 補強バーはスタッドです。スペースバー TendonConduitを配置するための事前応力システムを停止します。 USERDEFINED 補強のタイプがユーザー定義されています。NOTDEFINED 補強のタイプが定義されていません。"
-
-#:IFC.xml:47680
-msgid "IfcReinforcingBarTypeEnum_ANCHORING"
-msgstr "ANCHORING"
-
-msgid "IfcReinforcingBarTypeEnum_ANCHORING_DEFINITION"
-msgstr "増援を傾けている。"
-
-#:IFC.xml:47681
-msgid "IfcReinforcingBarTypeEnum_EDGE"
-msgstr "エッジ"
-
-msgid "IfcReinforcingBarTypeEnum_EDGE_DEFINITION"
-msgstr "エッジ強化"
-
-#:IFC.xml:47682
-msgid "IfcReinforcingBarTypeEnum_LIGATURE"
-msgstr "ライト"
-
-msgid "IfcReinforcingBarTypeEnum_LIGATURE_DEFINITION"
-msgstr "補強バーは、合字リンク、はらむです。"
-
-#:IFC.xml:47683
-msgid "IfcReinforcingBarTypeEnum_MAIN"
-msgstr "メイン"
-
-msgid "IfcReinforcingBarTypeEnum_MAIN_DEFINITION"
-msgstr "補強バーはメインバーです。"
-
-#:IFC.xml:47684
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "補強の種類が定義されていません。"
-
-#:IFC.xml:47685
-msgid "IfcReinforcingBarTypeEnum_PUNCHING"
-msgstr "ポンチ"
-
-msgid "IfcReinforcingBarTypeEnum_PUNCHING_DEFINITION"
-msgstr "パンチング強化。"
-
-#:IFC.xml:47686
-msgid "IfcReinforcingBarTypeEnum_RING"
-msgstr "リング"
-
-msgid "IfcReinforcingBarTypeEnum_RING_DEFINITION"
-msgstr "着信音補強。"
-
-#:IFC.xml:47687
-msgid "IfcReinforcingBarTypeEnum_SHEAR"
-msgstr "SHEAR"
-
-msgid "IfcReinforcingBarTypeEnum_SHEAR_DEFINITION"
-msgstr "補強バーはせん断バーです。"
-
-#:IFC.xml:47688
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR"
-msgstr "スペース"
-
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR_DEFINITION"
-msgstr "TendonConduitを配置するための事前のストレスシステムで動揺。"
-
-#:IFC.xml:47689
-msgid "IfcReinforcingBarTypeEnum_STUD"
-msgstr "STUD"
-
-msgid "IfcReinforcingBarTypeEnum_STUD_DEFINITION"
-msgstr "補強バーはスタッドです。"
-
-#:IFC.xml:47690
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED_DEFINITION"
-msgstr "補強のタイプはユーザー定義です。"
-
-#:IFC.xml:47691
-msgid "IfcReinforcingElement"
-msgstr "IfcReforcingElement"
-
-msgid "IfcReinforcingElement_DEFINITION"
-msgstr "補強要素は棒、ワイヤ、ストランド、メッシュ、腱を表します。 コンクリートに埋め込まれた他の部品は強化とコンクリートが力に抵抗するように作用します .extDef NOTE ISO 6707 1ロッドs に準拠した定義 , バー s , ファブリック, 繊維, 材料やコンポーネントに追加の強度やサポートを与えるためにワイヤとケーブルを追加しました。 [[IfcReinforcingElement]]のサブタイプの1つまたは複数のインスタンスは、常に[[IfcReinforcingElementType]]のそれぞれのサブタイプの定義インスタンスを伴う必要があります。 型オブジェクトは形状と材料情報を保持します。履歴 IFC2x2 .change ifc2x4 IFC4に新しいエンティティが追加されました。"
-
-#:IFC.xml:47692
-msgid "IfcReinforcingElement_SteelGrade"
-msgstr "鋼鉄グレード"
-
-msgid "IfcReinforcingElement_SteelGrade_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性は非推奨です。代わりに [[IfcReinforcingElementType]] でマテリアルの関連付けを使用してください。"
-
-#:IFC.xml:47699
-msgid "IfcReinforcingElementType"
-msgstr "IfcReinforcingElementType"
-
-msgid "IfcReinforcingElementType_DEFINITION"
-msgstr "The element component type [[IfcReinforcingElementType]] defines commonly shared information for occurrences of reinforcing elements. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingElementType]] are represented by instances of [[IfcReinforcingElement]] . HISTORY New entity in IFC2x2. .use head Material Use Definition An associated material denotes the steel grade, preferrably using material classification."
-
-#:IFC.xml:47702
-msgid "IfcReinforcingMesh"
-msgstr "IfcReinforcingMesh"
-
-msgid "IfcReinforcingMesh_DEFINITION"
-msgstr "A reinforcing mesh is a series of longitudinal and transverse wires or bars of various gauges, arranged at right angles to each other and welded at all points of intersection usually used for concrete slab reinforcement. It is also known as welded wire fabric. In scope are plane meshes as well as bent meshes. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE All attributes are optional now. Several attributes are deprecated their information is now provided by [[IfcReinforcingMeshType]] . Attribute PredefinedType added. .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . The representation map of a mapped Outline representation should contain a representation of type Curve3D which holds an [[IfcPolyline]] . The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds multiple [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] ."
-
-#:IFC.xml:47703
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea"
-msgstr "縦方向バークロスセクションエリア"
-
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47708
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47713
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing"
-msgstr "縦棒間隔"
-
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47718
-msgid "IfcReinforcingMesh_MeshLength"
-msgstr "メッシュ長"
-
-msgid "IfcReinforcingMesh_MeshLength_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性は非推奨です。代わりに [[IfcReinforcingMeshType]] でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47723
-msgid "IfcReinforcingMesh_MeshWidth"
-msgstr "メッシュ幅"
-
-msgid "IfcReinforcingMesh_MeshWidth_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性は非推奨です。代わりに [[IfcReinforcingMeshType]] でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47728
-msgid "IfcReinforcingMesh_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMesh_PredefinedType_DEFINITION"
-msgstr "メッシュの種類"
-
-#:IFC.xml:47733
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47738
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47743
-msgid "IfcReinforcingMesh_TransverseBarSpacing"
-msgstr "横断バーの間隔"
-
-msgid "IfcReinforcingMesh_TransverseBarSpacing_DEFINITION"
-msgstr "非推奨です。.change ifc2x4 IFC4 変更属性はオプションで廃止されました。代わりに[[IfcReinforcingMeshType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47750
-msgid "IfcReinforcingMeshType"
-msgstr "IfcReinforcingMeshType"
-
-msgid "IfcReinforcingMeshType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingMeshType]] defines commonly shared information for occurrences of reinforcing meshs. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing mesh type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingMeshType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingMeshType]] are represented by instances of [[IfcReinforcingMesh]] . HISTORY New entity in IFC4. .use head Geometry Use Definition The [[IfcReinforcingMeshType]] may define the shared geometric representation for many mesh occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
-
-#:IFC.xml:47751
-msgid "IfcReinforcingMeshType_BendingParameters"
-msgstr "曲げパラメータ"
-
-msgid "IfcReinforcingMeshType_BendingParameters_DEFINITION"
-msgstr "このメッシュタイプが平面ではなく曲げられている場合、この属性は曲げ形状パラメータを提供します。 その意味は、曲げ形状コードとそれぞれの規格によって定義されます。"
-
-#:IFC.xml:47756
-msgid "IfcReinforcingMeshType_BendingShapeCode"
-msgstr "BendingShapeCode"
-
-msgid "IfcReinforcingMeshType_BendingShapeCode_DEFINITION"
-msgstr "このメッシュタイプが平面ではなく曲げられている場合 この属性は、ACI 315、ISO 3766、または同様の規格のような規格ごとに形状コードを提供します。 プロジェクト全体でメッシュ曲げを定義するための単一の規格が使用されており、この規格は [[IfcProject]] オブジェクトから [[IfcDocumentReference]] メカニズムを介して参照されていると推定されます。"
-
-#:IFC.xml:47761
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea"
-msgstr "縦方向バークロスセクションエリア"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "メッシュの縦棒の効果的な断面積。"
-
-#:IFC.xml:47766
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "縦棒の断面積サイズを示す公称直径。"
-
-#:IFC.xml:47771
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing"
-msgstr "縦棒間隔"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing_DEFINITION"
-msgstr "縦棒間の間隔. バーの均一な分布は、他の場合は、分類またはプロパティセットによって処理されると推定されます."
-
-#:IFC.xml:47776
-msgid "IfcReinforcingMeshType_MeshLength"
-msgstr "メッシュ長"
-
-msgid "IfcReinforcingMeshType_MeshLength_DEFINITION"
-msgstr "メッシュ全体の長さを縦方向に測定します。"
-
-#:IFC.xml:47781
-msgid "IfcReinforcingMeshType_MeshWidth"
-msgstr "メッシュ幅"
-
-msgid "IfcReinforcingMeshType_MeshWidth_DEFINITION"
-msgstr "メッシュの全体の幅は、横断方向に測定されます。"
-
-#:IFC.xml:47786
-msgid "IfcReinforcingMeshType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMeshType_PredefinedType_DEFINITION"
-msgstr "Subtype of reinforcing mesh."
-
-#:IFC.xml:47791
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "メッシュの横棒の効果的な断面積。"
-
-#:IFC.xml:47796
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter_DEFINITION"
-msgstr "横棒の断面積サイズを示す公称直径。"
-
-#:IFC.xml:47801
-msgid "IfcReinforcingMeshType_TransverseBarSpacing"
-msgstr "横断バーの間隔"
-
-msgid "IfcReinforcingMeshType_TransverseBarSpacing_DEFINITION"
-msgstr "横棒間の間隔。棒の均等な分布は、他の場合は分類またはプロパティセットによって処理されると推定されます。"
-
-#:IFC.xml:47808
-msgid "IfcReinforcingMeshTypeEnum"
-msgstr "IfcReinforcingMeshTypeEnum"
-
-msgid "IfcReinforcingMeshTypeEnum_DEFINITION"
-msgstr "補強メッシュタイプを定義する列挙。 歴史 IFC4項目の新しいタイプ USERDEFINED ユーザーが定義したメッシュのタイプ。 NOTDEFINED メッシュのタイプが定義されていません。"
-
-#:IFC.xml:47814
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "メッシュのタイプが定義されていません。"
-
-#:IFC.xml:47815
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED_DEFINITION"
-msgstr "メッシュのタイプはユーザー定義です。"
-
-#:IFC.xml:47816
-msgid "IfcSurfaceFeature"
-msgstr "IfcSurfaceFeature"
-
-msgid "IfcSurfaceFeature_DEFINITION"
-msgstr "A surface feature is a modification at onto, or into of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element. The part whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements element parts and zero or more feature elements. HISTORY New entity in IFC4. Containment Use Definition Surface features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship. The SELF [[IfcElement]].ContainedInStructure relationship shall be NIL. Geometry use definition The geometric representation of IfcSurfaceFeatureElement is given by the [[IfcProductDefinitionShape]] , allowing multiple geometric representation. Local Placement The local placement for IfcSurfaceFeatureElement is defined in its supertype [[IfcProduct]] . It is defined by the [[IfcLocalPlacement]] , which defines the local coordinate system that is referenced by all geometric representations. In case of features which are part of an element type, absolute placement into the type object s implied coordinate system shall be used. In case of features which are voiding an element occurrence, the PlacementRelTo relationship of [[IfcLocalPlacement]] shall point to the local placement of the respective element. Shape representation Different shape representations may be used, depending on the nature of the feature and information requirements Symbolic representation, such as the two dimensional bounding box of a tag. A geometric set representing the geometric items of a mark. Surface representations of treated parts of the lement surface by means of [[IfcShellBasedSurfaceModel]] . The faces within the surface model may be included into a B Rep model within a representation map of the parent element type. Higher level parameters geometric and non geometric may be provided by property sets based on local agreements."
-
-#:IFC.xml:29092
-msgid "IfcSurfaceFeature_AdheresToElement"
-msgstr "AdheresToElement"
-
-msgid "IfcSurfaceFeature_AdheresToElement_DEFINITION"
-msgstr "この[[IfcRelAdheresToElement]]を使用した[[IfcSurfaceFeature]]関係を参照するか、[[IfcRelAdheresToElement]].関連要素の表面を扱います。"
-
-#:IFC.xml:47817
-msgid "IfcSurfaceFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSurfaceFeature_PredefinedType_DEFINITION"
-msgstr "Indicates the kind of surface feature."
-
-#:IFC.xml:47824
-msgid "IfcSurfaceFeatureTypeEnum"
-msgstr "IfcSurfaceFeatureTypeEnum"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFINITION"
-msgstr "この列挙はサーフェスフィーチャーのタイプを示します。 アイテム マーク点、ライン、クロスなどのマークが付いており、組み立て時の要素の調整が容易になります。 タグ 生産、納品、アセンブリ中に要素を識別することができる名前タグ。 トラッキングコードを要素に印刷またはパンチするか、実際のタグを付けるなど、さまざまな方法で製造することができます。 TREATMENT減算面特性、例えば研削、または加算面特性、例えば: コーティングもしくは含浸処理もしくはこれらの一連の治療法です <unk> 腐食領域や侵食領域などの要素の表面に欠陥が検出されました。 HATCHMARKING表面マーキングは、ハッチングフィリングを定義した2d形状で定義されています。 境界線、中心線、エッジマーキングを形成するために舗装面に描かれた2次元線。 舗装面に塗装または化学的な線またはシンボルを舗装面積SYMBOLMARKING 矢印などのシンボルや形状で情報を伝える表面マーキング。 テキストや絵の記号です 非SKIDSURFACING ペイントまたはスライドや滑りを防ぐために表面化。 RUMBLESTRIP 道路の中心線や肩、または車線を横断して、振動や騒音でドライバーに警告するために発生し、しばしばテクスチャのストリップを発生させます。 また、Jiggleバー。 NOTE: PIARCからの定義 細く上げられ、キャリッジウェイ上または横に特別なテクスチャストリップがしばしばあります。 運転者に警告し特定の危険に対してスローダウンさせるために車両を通じて騒音や振動を発生させます TRANSVERSERUMBLESTRIP レーンs で実行されるランブルストリップのタイプ USERDEFINED ユーザーが定義したサーフェスフィーチャーのタイプ。"
-
-#:IFC.xml:47852
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT"
-msgstr "DEFECT"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT_DEFINITION"
-msgstr "腐食領域や侵食領域などの要素の表面に欠陥が検出されました。"
-
-#:IFC.xml:47853
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING"
-msgstr "ハッチマーキング"
-
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING_DEFINITION"
-msgstr "ハッチングフィリングを定義した2次元形状で定義された表面マーキング。"
-
-#:IFC.xml:47854
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING"
-msgstr "ライン"
-
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING_DEFINITION"
-msgstr "境界線、中心線、エッジマーキングを形成するために舗装面上に描かれた2D線。"
-
-#:IFC.xml:47855
-msgid "IfcSurfaceFeatureTypeEnum_MARK"
-msgstr "マーク"
-
-msgid "IfcSurfaceFeatureTypeEnum_MARK_DEFINITION"
-msgstr "点、線、十字またはその他のマーク、例えば組立時の要素の調整が容易なように適用されます。"
-
-#:IFC.xml:47856
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING"
-msgstr "非SKIDSURING"
-
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING_DEFINITION"
-msgstr "滑ったり滑ったりするのを防ぐためにペイントまたは表面に塗装します。"
-
-#:IFC.xml:47857
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "定義されていないサーフェスフィーチャーです。"
-
-#:IFC.xml:47858
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING"
-msgstr "装備されています"
-
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING_DEFINITION"
-msgstr "道路や舗装面積の表面に塗装または化学的な線またはシンボル。"
-
-#:IFC.xml:47859
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP"
-msgstr "RUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP_DEFINITION"
-msgstr "道路の中心線や肩の上、または車線を横切って、振動やノイズによってドライバーに警告するテクスチャのストリップが発生し、しばしばあります。 NOTE: PIARCからの定義 細く上げられ、キャリッジウェイ上または横に特別なテクスチャストリップがしばしばあります。 運転者に警告し特定の危険に対してスローダウンさせるために車両を通じて騒音や振動を発生させます"
-
-#:IFC.xml:47860
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING"
-msgstr "SYMBOLMARKING"
-
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING_DEFINITION"
-msgstr "矢印、テキストまたは絵のシンボルなどのシンボルや形状の情報を伝える表面マーキング。"
-
-#:IFC.xml:47861
-msgid "IfcSurfaceFeatureTypeEnum_TAG"
-msgstr "タグ"
-
-msgid "IfcSurfaceFeatureTypeEnum_TAG_DEFINITION"
-msgstr "生産、納品、アセンブリ中に要素を識別することができる名前タグ。さまざまな方法で製造される可能性があります。e. をクリックします。"
-
-#:IFC.xml:47862
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP_DEFINITION"
-msgstr "ランブルストリップのタイプは、レーンs を介して実行されます。"
-
-#:IFC.xml:47863
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT"
-msgstr "治療"
-
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT_DEFINITION"
-msgstr "減算面機能、例えば研削、または加算面機能、例えば、 コーティングもしくは含浸処理もしくはこれらの一連の治療法です"
-
-#:IFC.xml:47864
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザーが定義したサーフェス機能のタイプ。"
-
-#:IFC.xml:47865
-msgid "IfcTendon"
-msgstr "IfcTendon"
-
-msgid "IfcTendon_DEFINITION"
-msgstr "腱は、ワイヤー、ケーブル、棒、棒などの鋼鉄の要素です。 またはストランドは、要素が張られているときにコンクリートに前触れするために使用されます。 xtDef NOTE: ISO 6707 1スチールバーまたはバーのグループに準拠した定義 引張応力を与えられるストランドやワイヤーは、プレストレスのあるコンクリートや石積みで圧縮応力を生成します。 .extDef NOTE 効率的になるために ケーブルはデッキの配置に沿って垂直に上がってスパンの真ん中に下がっています したがって、ケーブル軸はデッキ配置に向かって比較的定義されます。 ShapeRepresentation は SectionedSolidHorizontal description, Circle ProfileDef と AlignmentCurve を含む記述に基づいて高度なSweptSolid ジオメトリである必要があります。 .extDef NOTE 構造解析モデルでは、ケーブルはポリラインを定義する各CartesianPointに適用される負荷に変換する必要があります。 履歴 IFC2x2に新しいエンティティが追加されました。 .change ifc2x4 IFC4 変更属性 PredefinedType made optional. NominalDiameterとCrossSectionAreaはオプションとして、この情報を非推奨にするようになりました [[IfcTendonType]] . フリクション係数の説明を修正しました。"
-
-#:IFC.xml:47866
-msgid "IfcTendon_AnchorageSlip"
-msgstr "AnchorageSlip"
-
-msgid "IfcTendon_AnchorageSlip_DEFINITION"
-msgstr "予備応力装置が解放されたときの腱のアンカーまたは滑り落ちの変形。"
-
-#:IFC.xml:47871
-msgid "IfcTendon_CrossSectionArea"
-msgstr "断面積の表示"
-
-msgid "IfcTendon_CrossSectionArea_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更属性は任意で非推奨になりました。代わりに [[IfcTendonType]] でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47876
-msgid "IfcTendon_FrictionCoefficient"
-msgstr "摩擦係数"
-
-msgid "IfcTendon_FrictionCoefficient_DEFINITION"
-msgstr "腱が結合されていない間、腱と腱板の間の摩擦係数。"
-
-#:IFC.xml:47881
-msgid "IfcTendon_MinCurvatureRadius"
-msgstr "MinCurvatureRadius"
-
-msgid "IfcTendon_MinCurvatureRadius_DEFINITION"
-msgstr "張力特性が有効である腱全体の有効長で計算された最小曲率半径。"
-
-#:IFC.xml:47886
-msgid "IfcTendon_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendon_NominalDiameter_DEFINITION"
-msgstr "腱の断面サイズを定義する公称直径。 。 hrange ifc2x4 IFC4 変更属性は省略可能で非推奨です。代わりに[[IfcTendonType]]でそれぞれの属性を使用してください。"
-
-#:IFC.xml:47891
-msgid "IfcTendon_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendon_PredefinedType_DEFINITION"
-msgstr ".change ifc2x4 IFC4 変更属性 をオプションとしました。"
-
-#:IFC.xml:47896
-msgid "IfcTendon_PreStress"
-msgstr "プレストレス（プレストレス）"
-
-msgid "IfcTendon_PreStress_DEFINITION"
-msgstr "腱に適用される前提."
-
-#:IFC.xml:47901
-msgid "IfcTendon_TensionForce"
-msgstr "TensionForce"
-
-msgid "IfcTendon_TensionForce_DEFINITION"
-msgstr "腱に適用できる最大許容張力。"
-
-#:IFC.xml:47908
-msgid "IfcTendonAnchor"
-msgstr "IfcTendonAnchor"
-
-msgid "IfcTendonAnchor_DEFINITION"
-msgstr "腱アンカーは、プレストレスまたは延長されたコンクリート中の腱の終端接続です。HISTORY IFC2x2の新しいエンティティ。.history IFC4属性PredefinedTypeを変更しました。"
-
-#:IFC.xml:47909
-msgid "IfcTendonAnchor_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchor_PredefinedType_DEFINITION"
-msgstr "天丼のアンカーの一種。"
-
-#:IFC.xml:47916
-msgid "IfcTendonAnchorType"
-msgstr "IfcTendonAnchorType"
-
-msgid "IfcTendonAnchorType_DEFINITION"
-msgstr "The reinforcing element type [[IfcTendonAnchorType]] defines commonly shared information for occurrences of tendon anchors. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a tendon anchor type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcTendonAnchorType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcTendonAnchorType]] are represented by instances of [[IfcTendonAnchor]] . HISTORY New entity in IFC4. .use head Material Use Definition A material or material constituent set may be associated. .use head Geometry Use Definition The [[IfcTendonAnchorType]] may define the shared geometric representation for many tendon anchor occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
-
-#:IFC.xml:47917
-msgid "IfcTendonAnchorType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchorType_PredefinedType_DEFINITION"
-msgstr "テンドンアンカーのサブタイプ。"
-
-#:IFC.xml:47924
-msgid "IfcTendonAnchorTypeEnum"
-msgstr "IfcTendonAnchorTypeEnum"
-
-msgid "IfcTendonAnchorTypeEnum_DEFINITION"
-msgstr "腱アンカーの種類を定義する列挙法 IFC4の新しい列挙型。 項目 クープラーアンカーは、2つの腱を接続する中間デバイスです. アンカーは、腱の終わりを修正します. TENSIONING END アンカーは腱をプレストレスにするために使用されるか、または使用することができます。 USERDEFINED 腱アンカーのタイプがユーザー定義されています。NOTDEFINED 腱アンカーのタイプが定義されていません。"
-
-#:IFC.xml:47936
-msgid "IfcTendonAnchorTypeEnum_COUPLER"
-msgstr "COUPLER"
-
-msgid "IfcTendonAnchorTypeEnum_COUPLER_DEFINITION"
-msgstr "アンカーは、2つの腱を接続する中間装置です。"
-
-#:IFC.xml:47937
-msgid "IfcTendonAnchorTypeEnum_FIXED_END"
-msgstr "修正済み END"
-
-msgid "IfcTendonAnchorTypeEnum_FIXED_END_DEFINITION"
-msgstr "アンカーは腱の端を固定します。"
-
-#:IFC.xml:47938
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "腱アンカーのタイプが定義されていません。"
-
-#:IFC.xml:47939
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END"
-msgstr "テンション終了"
-
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END_DEFINITION"
-msgstr "アンカーは、腱をプレストレスにするために使用されるか、または使用することができます。"
-
-#:IFC.xml:47940
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED_DEFINITION"
-msgstr "腱アンカーのタイプはユーザー定義です。"
-
-#:IFC.xml:47941
-msgid "IfcTendonConduit"
-msgstr "IfcTendonConduit"
-
-msgid "IfcTendonConduit_DEFINITION"
-msgstr "TendonConduitは、コンクリート構造に埋め込まれた腱用のコンジットシステムの構成要素を表します。"
-
-#:IFC.xml:47942
-msgid "IfcTendonConduit_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduit_PredefinedType_DEFINITION"
-msgstr "腱コンジットの定義済みの汎用タイプ。"
-
-#:IFC.xml:47949
-msgid "IfcTendonConduitType"
-msgstr "IfcTendonConduitType"
-
-#:IFC.xml:47950
-msgid "IfcTendonConduitType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduitType_PredefinedType_DEFINITION"
-msgstr "腱コンジットのサブタイプ."
-
-#:IFC.xml:47957
-msgid "IfcTendonConduitTypeEnum"
-msgstr "IfcTendonConduitTypeEnum"
-
-msgid "IfcTendonConduitTypeEnum_DEFINITION"
-msgstr "袖やダクトは、コンジットに応じてコンジットの厚さに関連します。 コンクリートに投げ込まれるか隣接して配置されます COUPLER 2 つの異なったデッキのセグメントにあるコンジットを接続する部品および同じ腱に関連付けられている。 GroUTING DUCT 接続されたメインコンジットに小さなコンジットを追加し、接合後テンションの場合にグルーティングを可能にします。 グラウトインレット、グラウトアウトレット、グラウトベントなど。 TRUMPET 腱がアンカーに到達するときに拡大されなければならないコンジットの特定の部分は、アンカー上で個別に接続されているためです。 DIABOLO 偏差に関連付けられた腱コンジットの一部。 USERDEFINED 腱コンジットの型はユーザー定義されています。NOTDEFINED 腱コンジットの型が定義されていません。"
-
-#:IFC.xml:47973
-msgid "IfcTendonConduitTypeEnum_COUPLER"
-msgstr "COUPLER"
-
-msgid "IfcTendonConduitTypeEnum_COUPLER_DEFINITION"
-msgstr "2つの異なるデッキセグメントに位置し、同じ腱に関連するコンジットを接続する部品。"
-
-#:IFC.xml:47974
-msgid "IfcTendonConduitTypeEnum_DIABOLO"
-msgstr "DIABOLO"
-
-msgid "IfcTendonConduitTypeEnum_DIABOLO_DEFINITION"
-msgstr "偏差に関連付けられた腱コンジットの一部。"
-
-#:IFC.xml:47975
-msgid "IfcTendonConduitTypeEnum_DUCT"
-msgstr "DUCT"
-
-msgid "IfcTendonConduitTypeEnum_DUCT_DEFINITION"
-msgstr "袖やダクトは、コンジットに応じてコンジットの厚さに関連します。 コンクリートに投げ込まれるか隣接して配置されます"
-
-#:IFC.xml:47976
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT"
-msgstr "Grouting DUCT"
-
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT_DEFINITION"
-msgstr "主コンジットに接続された追加の小さなコンジットにより、接着後テンションニングの場合にグルーティングが可能になります。 グラウトインレット、グラウトアウトレット、グラウトベントなど。"
-
-#:IFC.xml:47977
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "腱コンジットの型は定義されていません。"
-
-#:IFC.xml:47978
-msgid "IfcTendonConduitTypeEnum_TRUMPET"
-msgstr "TRUMPET"
-
-msgid "IfcTendonConduitTypeEnum_TRUMPET_DEFINITION"
-msgstr "ひもがアンカー上で個別に接続されているので、腱アンカーに到達するときに広げられなければならないコンジットの特定の部分。"
-
-#:IFC.xml:47979
-msgid "IfcTendonConduitTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcTendonConduitTypeEnum_USERDEFINED_DEFINITION"
-msgstr "tendon conduit のタイプはユーザ定義です。"
-
-#:IFC.xml:47980
-msgid "IfcTendonType"
-msgstr "IfcTendonType"
-
-msgid "IfcTendonType_DEFINITION"
-msgstr "The reinforcing element type [[IfcTendonType]] defines commonly shared information for occurrences of tendons. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a tendon type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcTendonType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcTendonType]] are represented by instances of [[IfcTendon]] . HISTORY New entity in IFC4. .use head Material Use Definition An associated material denotes the steel grade, preferrably via material classification. A material constituent set or material profile set may be associated if the cable, bonding mortar or corrosion protection, and tendon sheeth are to be described together by the material association. .use head Geometry Use Definition The [[IfcTendonType]] may define the shared geometric representation for many tendon occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
-
-#:IFC.xml:47981
-msgid "IfcTendonType_CrossSectionArea"
-msgstr "断面積の表示"
-
-msgid "IfcTendonType_CrossSectionArea_DEFINITION"
-msgstr "腱のプレストレス部分の効果的な断面積."
-
-#:IFC.xml:47986
-msgid "IfcTendonType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendonType_NominalDiameter_DEFINITION"
-msgstr "腱のプレストレス部分の断面積サイズを定義する公称直径。"
-
-#:IFC.xml:47991
-msgid "IfcTendonType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonType_PredefinedType_DEFINITION"
-msgstr "Subtype of tendon."
-
-#:IFC.xml:47996
-msgid "IfcTendonType_SheathDiameter"
-msgstr "SheathDiameter"
-
-msgid "IfcTendonType_SheathDiameter_DEFINITION"
-msgstr "腱の周りのシーツダクトの直径, 腱のこのタイプを持つものがある場合."
-
-#:IFC.xml:48003
-msgid "IfcTendonTypeEnum"
-msgstr "IfcTendonTypeEnum"
-
-msgid "IfcTendonTypeEnum_DEFINITION"
-msgstr "腱の種類を定義する列挙. ヒストリーIFC2x2の新しいタイプ. アイテムバー 腱はバーとして構成されています. コーテッド 腱はコーティングされています. STRAND 腱は鎖です. ワイア 腱はワイヤーです. USERDEFINED 腱の種類がユーザー定義されています。NOTDEFINED 腱の種類が定義されていません。"
-
-#:IFC.xml:48017
-msgid "IfcTendonTypeEnum_BAR"
-msgstr "バー"
-
-msgid "IfcTendonTypeEnum_BAR_DEFINITION"
-msgstr "腱はバーとして設定されています。"
-
-#:IFC.xml:48018
-msgid "IfcTendonTypeEnum_COATED"
-msgstr "COATED"
-
-msgid "IfcTendonTypeEnum_COATED_DEFINITION"
-msgstr "天丼は塗られている。"
-
-#:IFC.xml:48019
-msgid "IfcTendonTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcTendonTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "腱の型が定義されていません。"
-
-#:IFC.xml:48020
-msgid "IfcTendonTypeEnum_STRAND"
-msgstr "ストランド"
-
-msgid "IfcTendonTypeEnum_STRAND_DEFINITION"
-msgstr "天丼は鎖である。"
-
-#:IFC.xml:48021
-msgid "IfcTendonTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcTendonTypeEnum_USERDEFINED_DEFINITION"
-msgstr "腱の型はユーザー定義です。"
-
-#:IFC.xml:48022
-msgid "IfcTendonTypeEnum_WIRE"
-msgstr "ワイヤ"
-
-msgid "IfcTendonTypeEnum_WIRE_DEFINITION"
-msgstr "天丼はワイヤーである。"
-
-#:IFC.xml:48023
-msgid "IfcVoidingFeature"
-msgstr "IfcVoidingFeature"
-
-msgid "IfcVoidingFeature_DEFINITION"
-msgstr "A voiding feature is a modification of an element which reduces its volume. Such a feature may be manufactured in different ways, for example by cutting, drilling, or milling of members made of various materials, or by inlays into the formwork of cast members made of materials such as concrete. The standard use of instances of [[IfcVoidingFeature]] is as a part of element type objects instances of subtypes of [[IfcElementType]] . The part whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements element parts and zero or more feature elements. HISTORY New entity in IFC4. .use head Containment Use Definition Voiding features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship. The SELF [[IfcElement]].ContainedInStructure relationship shall be NIL."
-
-#:IFC.xml:48024
-msgid "IfcVoidingFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVoidingFeature_PredefinedType_DEFINITION"
-msgstr "voided 要素に対する形状と設定に関する機能を適格にします。"
-
-#:IFC.xml:48031
-msgid "IfcVoidingFeatureTypeEnum"
-msgstr "IfcVoidingFeatureTypeEnum"
-
-msgid "IfcVoidingFeatureTypeEnum_DEFINITION"
-msgstr "この列挙は、voided 要素に対する形状と設定に関する無効化機能を修飾します。 HISTORY IFC4の新しい型。 Items CUTOUT 内部切り抜きにより、開閉または外部切り抜きを作成し、任意の形状の休憩を作成します。 切断面の間のエッジは、オーバーカットまたはアンダーカット、すなわち丸められている可能性があります。 NOTCH 主に長方形のカッティングプロファイルを持つ外部カット。切断面間のエッジはオーバーカットまたはアンダーカット、すなわち丸められている可能性があります。 HOLE 円形または傾斜またはねじ穴は、通常、カットアウトと見なされるものよりも小さい次元の必ずしもではない。 MITER (歪んだ平面の終端カット) は、無効な要素のプロファイル全体にわたってマテリアルを削除します。 CHAMFER 歪んだ平面の端カットで、無効な要素のプロファイルの一部にのみ材料を削除します。 EDGE 機能の主要な寸法としてエッジ長さを持つ要素のエッジに沿って形状を変更します。 フィーチャープロファイルの寸法は、通常、エッジ長さよりもはるかに小さいです。 例えば、寸法のその比率によって面取りから区別される面取りエッジ、したがって、通常は異なる製造することができます , 丸められたエッジ凸エッジの特徴、またはフィレットエッジの凹エッジの特徴。 USERDEFINED ユーザ定義の無効化タイプ。 NOTDEFINED 未定義の無効化タイプ。"
-
-#:IFC.xml:48049
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER"
-msgstr "チャンファー"
-
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER_DEFINITION"
-msgstr "歪んだ平面の終端カットで、無効な要素のプロファイルの一部にのみマテリアルを削除します。"
-
-#:IFC.xml:48050
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT"
-msgstr "CUTOUT"
-
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT_DEFINITION"
-msgstr "任意の形状の休憩を作成し、開口部または外部切断を作成する内部切断。 切断面の間のエッジは、オーバーカットまたはアンダーカット、すなわち丸められている可能性があります。"
-
-#:IFC.xml:48051
-msgid "IfcVoidingFeatureTypeEnum_EDGE"
-msgstr "エッジ"
-
-msgid "IfcVoidingFeatureTypeEnum_EDGE_DEFINITION"
-msgstr "特徴の主要な寸法としてエッジ長さを持つ要素のエッジに沿って形状を変更します。 フィーチャープロファイルの寸法は、通常、エッジ長さよりもはるかに小さいです。 例えば、寸法のその比率によって面取りから区別される面取りエッジ、したがって、通常は異なる製造することができます , 丸められたエッジ凸エッジの特徴、またはフィレットエッジの凹エッジの特徴。"
-
-#:IFC.xml:48052
-msgid "IfcVoidingFeatureTypeEnum_HOLE"
-msgstr "HOLE"
-
-msgid "IfcVoidingFeatureTypeEnum_HOLE_DEFINITION"
-msgstr "円形または傾斜またはねじ穴, 通常、必ずしもカットアウトと考えられるものよりも小さい次元の."
-
-#:IFC.xml:48053
-msgid "IfcVoidingFeatureTypeEnum_MITER"
-msgstr "MITER"
-
-msgid "IfcVoidingFeatureTypeEnum_MITER_DEFINITION"
-msgstr "歪んだ平面の終端カットで、無効な要素のプロファイル全体にわたって材料を削除します。"
-
-#:IFC.xml:48054
-msgid "IfcVoidingFeatureTypeEnum_NOTCH"
-msgstr "通知する"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTCH_DEFINITION"
-msgstr "主に長方形の切断プロファイルを持つ外部切断. 切断面の間の端は、オーバーカットまたはアンダーカット, すなわち丸め."
-
-#:IFC.xml:48055
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED"
-msgstr "注記されました"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "未定義の無効機能です。"
-
-#:IFC.xml:48056
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
-
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザ定義の無効機能のタイプ。"
-
-#:IFC.xml:48072
-msgid "Pset_ConcreteElementGeneral"
-msgstr "Pset ConcreteElementGeneral"
-
-msgid "Pset_ConcreteElementGeneral_DEFINITION"
-msgstr "鉄筋コンクリート要素を含む様々な種類のコンクリート要素に共通する一般的なプロパティ。 プロパティセットは IfcBuildingElement の多くのサブタイプによって使用することができます。 そのような要素がコンクリート建設方法で設計または建設されていることを示します。"
-
-#:IFC.xml:48078
-msgid "ConcreteCover"
-msgstr "ConcreteCover"
-
-msgid "ConcreteCover_DEFINITION"
-msgstr "地元の建築規制に従って補強棒で保護コンクリートカバー。"
-
-#:IFC.xml:48083
-msgid "ConcreteCoverAtLinks"
-msgstr "ConcreteCoverAtLinks"
-
-msgid "ConcreteCoverAtLinks_DEFINITION"
-msgstr "保護コンクリートは、地元の建物の規制に従って補強リンクでカバーします。"
-
-#:IFC.xml:48088
-msgid "ConcreteCoverAtMainBars"
-msgstr "ConcreteCoverAtMainBars"
-
-msgid "ConcreteCoverAtMainBars_DEFINITION"
-msgstr "地元の建築規制に従って、メイン補強棒で保護コンクリートカバー。"
-
-#:IFC.xml:48093
-msgid "ConstructionToleranceClass"
-msgstr "ConstructionToleranceClass"
-
-msgid "ConstructionToleranceClass_DEFINITION"
-msgstr "現地基準に基づく現場建設公差の分類指定。"
-
-#:IFC.xml:48098
-msgid "DimensionalAccuracyClass"
-msgstr "DimensionalAccuracyClass"
-
-msgid "DimensionalAccuracyClass_DEFINITION"
-msgstr "局所規格に基づく寸法精度要件の分類指定。"
-
-#:IFC.xml:48103
-msgid "ExposureClass"
-msgstr "ExposureClass"
-
-msgid "ExposureClass_DEFINITION"
-msgstr "環境条件への暴露の分類 通常、プロジェクトに適用される具体的な設計コードに従って指定されています。"
-
-#:IFC.xml:48108
-msgid "ReinforcementAreaRatio"
-msgstr "増援エリア比"
-
-msgid "ReinforcementAreaRatio_DEFINITION"
-msgstr "コンクリートの有効面積に対する補強の有効面積の必要な比 鉄筋コンクリート構造要素のいずれかのセクションで."
-
-#:IFC.xml:48113
-msgid "ReinforcementStrengthClass"
-msgstr "ReforçementStrengthClass"
-
-msgid "ReinforcementStrengthClass_DEFINITION"
-msgstr "プロジェクトに適用される具体的な設計コードに基づく強度の分類。 強化強度クラスは、しばしば強度と延性を兼ね備えています。"
-
-#:IFC.xml:48118
-msgid "ReinforcementVolumeRatio"
-msgstr "増援ボリューム比"
-
-msgid "ReinforcementVolumeRatio_DEFINITION"
-msgstr "補強材の有効質量と鉄筋コンクリート構造要素の有効容積の比率."
-
-#:IFC.xml:48123
-msgid "StrengthClass"
-msgstr "Fortalecer Class"
-
-msgid "StrengthClass_DEFINITION"
-msgstr "プロジェクトに適用されるコンクリート設計コードに基づくコンクリート強度の分類。"
-
-#:IFC.xml:48128
-msgid "StructuralClass"
-msgstr "StructuralClass"
-
-msgid "StructuralClass_DEFINITION"
-msgstr "具体的な構造のために定義された構造クラス、例えば1。"
-
-#:IFC.xml:48134
-msgid "Pset_FootingCommon"
-msgstr "Pset FootingCommon"
-
-msgid "Pset_FootingCommon_DEFINITION"
-msgstr "[[IfcFooting] ] のすべての出現の定義に共通するプロパティ。"
-
-#:IFC.xml:48151
-msgid "Pset_PileCommon"
-msgstr "Pset PileCommon"
-
-msgid "Pset_PileCommon_DEFINITION"
-msgstr "[[IfcPile] ] のすべての出現の定義に共通するプロパティ。"
-
-#:IFC.xml:48168
-msgid "Pset_PrecastConcreteElementFabrication"
-msgstr "Pset PrecastConcreteElementFabration"
-
-msgid "Pset_PrecastConcreteElementFabrication_DEFINITION"
-msgstr "プリキャストコンクリート要素の異なる種類に共通する生産と製造関連の特性。 Psetは製造された部品に適用されます。それはIfcBuildingElementの多くのサブタイプによって使用することができます。プリキャストコンクリートele"
-
-#:IFC.xml:48169
-msgid "ActualErectionDate"
-msgstr "ActualErectionDate"
-
-msgid "ActualErectionDate_DEFINITION"
-msgstr "作成日時。"
-
-#:IFC.xml:48174
-msgid "ActualProductionDate"
-msgstr "ActualProductionDate"
-
-msgid "ActualProductionDate_DEFINITION"
-msgstr "生産日がフォームから剥奪されました。"
-
-#:IFC.xml:48179
-msgid "AsBuiltLocationNumber"
-msgstr "AsBuiltLocationNumber"
-
-msgid "AsBuiltLocationNumber_DEFINITION"
-msgstr "アイテムがインストールされたスロット内のユニークな場所を定義します。 ピースが同じピースマークを共有する場合、それらは交換することができます。値は勃起後にのみ知られます。"
-
-#:IFC.xml:48184
-msgid "PieceMark"
-msgstr "PieceMark"
-
-msgid "PieceMark_DEFINITION"
-msgstr "制作目的でユニークなピースを定義します。同じピースマーク値を持つすべてのピースは、同一かつ交換可能です。 ピースマークは、特定の局所的に定義された意味を持つサブ部品で構成されている可能性があります。 をクリックします。 B 1A は、一般的な型 1 および特定の形状 A のビームを表すことができます。"
-
-#:IFC.xml:48189
-msgid "ProductionLotId"
-msgstr "ProductionLotId"
-
-msgid "ProductionLotId_DEFINITION"
-msgstr "メーカーの生産ロット識別子。"
-
-#:IFC.xml:48205
-msgid "Pset_PrecastConcreteElementGeneral"
-msgstr "Pset PrecastConcreteElementGeneral"
-
-msgid "Pset_PrecastConcreteElementGeneral_DEFINITION"
-msgstr "異なるタイプのプリキャストコンクリート要素に共通する生産と製造関連のプロパティ Psetは、IfcBuildingElementの多くのサブタイプによって使用することができます。 プリキャストコンクリート要素がサンドイッチ壁パネルの場合、[[IfcBuildingElementPart]] で表される各構造層またはシェルは、このタイプの別々のPセットに取り付けられます。 必要ならね 特性の一部は、特定のタイプのプレキャストコンクリート要素にのみ適用されます。"
-
-#:IFC.xml:48206
-msgid "BatterAtEnd"
-msgstr "BatterAtEnd"
-
-msgid "BatterAtEnd_DEFINITION"
-msgstr "ラジアン単位の角度 作品の端面の形を垂直方向から回転させることで 作品の形を剥がされた後に起こる顔の回転を補正することができます 奇抜な偏心でキャンバーを誘導する"
-
-#:IFC.xml:48211
-msgid "BatterAtStart"
-msgstr "BatterAtStart"
-
-msgid "BatterAtStart_DEFINITION"
-msgstr "ラジアン単位の角度 曲の最初の面の形を垂直方向に回転させることで 曲が形から剥がれた後に起こる顔の回転を補正することができます 奇抜な偏心でキャンバーを誘導する"
-
-#:IFC.xml:48216
-msgid "CamberAtMidspan"
-msgstr "CamberAtMidspan"
-
-msgid "CamberAtMidspan_DEFINITION"
-msgstr "キャンバーデレクション キャンピングカーの顔の中点から同じ顔の端を結ぶコードの中点まで 下の図に示すように、作品の表面の本来の名目直線の長さで割られます。"
-
-#:IFC.xml:48221
-msgid "CornerChamfer"
-msgstr "コーナー面取り"
-
-msgid "CornerChamfer_DEFINITION"
-msgstr "プリキャスト要素のコーナーの面取り。面取りは両方向に等しいと推定される。"
-
-#:IFC.xml:48226
-msgid "DesignLocationNumber"
-msgstr "DesignLocationNumber"
-
-msgid "DesignLocationNumber_DEFINITION"
-msgstr "部品が設計されたスロットの構造内で、固有の位置を定義します。"
-
-#:IFC.xml:48231
-msgid "FormStrippingStrength"
-msgstr "FormStripingStrength"
-
-msgid "FormStrippingStrength_DEFINITION"
-msgstr "最小必要な圧縮強度の形でコンクリートの形状ストリッピング時間。"
-
-#:IFC.xml:48236
-msgid "HollowCorePlugging"
-msgstr "HollowCorePlugging"
-
-msgid "HollowCorePlugging_DEFINITION"
-msgstr "中空コアの端がどのように処理されるかについての記述的なラベルは、オープンのまま、プラグで閉じたり、キャストコンクリートで密封したりすることができます。 値は、例えばアンプラグド、プラグド、SealedWithConcrete になります。このプロパティは中空コアスラブにのみ適用されます。"
-
-#:IFC.xml:48241
-msgid "InitialTension"
-msgstr "初期Tension"
-
-msgid "InitialTension_DEFINITION"
-msgstr "腱の初期応力. このプロパティは、プレストレスのあるコンクリート要素にのみ適用されます."
-
-#:IFC.xml:48246
-msgid "LiftingStrength"
-msgstr "LiftingStrength"
-
-msgid "LiftingStrength_DEFINITION"
-msgstr "コンクリートのエレメントが持ち上がったとき、コンクリートの最小必要な圧縮強度。"
-
-#:IFC.xml:48251
-msgid "ManufacturingToleranceClass"
-msgstr "製造トレランスクラス"
-
-msgid "ManufacturingToleranceClass_DEFINITION"
-msgstr "地域規格に基づく製造公差の分類指定。"
-
-#:IFC.xml:48256
-msgid "MinimumAllowableSupportLength"
-msgstr "最小許容サポート長"
-
-msgid "MinimumAllowableSupportLength_DEFINITION"
-msgstr "最小許容サポート長。"
-
-#:IFC.xml:48266
-msgid "ReleaseStrength"
-msgstr "リリース強度"
-
-msgid "ReleaseStrength_DEFINITION"
-msgstr "腱ストレスが解放されたときにコンクリートの最小必要な圧縮強度. このプロパティは、プレストレスのあるコンクリート要素にのみ適用されます."
-
-#:IFC.xml:48271
-msgid "Shortening"
-msgstr "短縮"
-
-msgid "Shortening_DEFINITION"
-msgstr "プリキャストピースが本来の名称長さに圧迫されることによって形状から解放後に短くなる距離の比率。"
-
-#:IFC.xml:48276
-msgid "SupportDuringTransportDescription"
-msgstr "SupportDuringTransportDescription"
-
-msgid "SupportDuringTransportDescription_DEFINITION"
-msgstr "具体的な要素が輸送中にどのようにサポートされているかのテキスト説明。"
-
-#:IFC.xml:48281
-msgid "SupportDuringTransportDocReference"
-msgstr "SupportDuringTransportDocReference"
-
-msgid "SupportDuringTransportDocReference_DEFINITION"
-msgstr "トランスポート中に具体的な要素がどのようにサポートされるかを定義する外部ドキュメントを参照します。"
-
-#:IFC.xml:48286
-msgid "TendonRelaxation"
-msgstr "TendonRelaxation"
-
-msgid "TendonRelaxation_DEFINITION"
-msgstr "通常1000 hと表される腱の最大許容緩和。 このプロパティはプレストレステッドコンクリート要素にのみ適用されます。"
-
-#:IFC.xml:48291
-msgid "TransportationStrength"
-msgstr "輸送力"
-
-msgid "TransportationStrength_DEFINITION"
-msgstr "輸送に必要なコンクリートの最小圧縮強度。"
-
-#:IFC.xml:48296
-msgid "Twisting"
-msgstr "ねじれている"
-
-msgid "Twisting_DEFINITION"
-msgstr "角度, ラジアンで, プリキャストピースの端面は、その開始面に対して回転されます. その縦軸に沿って配置されていないことが原因です この測定は、ワーピング角度とも呼ばれます。"
-
-#:IFC.xml:48307
-msgid "Pset_PrecastSlab"
-msgstr "Pset PrecastSlab"
-
-msgid "Pset_PrecastSlab_DEFINITION"
-msgstr "プリキャストスラブアセンブリにプレストレスのあるスラブコンポーネントがどのようにレイアウトされるかを定義するレイアウトとコンポーネント情報。 値は全体としてスラブのグローバルデフォルトですが、個々のcomのローカル配置によって上書きすることができます"
-
-#:IFC.xml:48308
-msgid "AngleBetweenComponentAxes"
-msgstr "AngleBetweenComponentAxes"
-
-msgid "AngleBetweenComponentAxes_DEFINITION"
-msgstr "各コンポーネントのペアの軸間の角度。"
-
-#:IFC.xml:48313
-msgid "AngleToFirstAxis"
-msgstr "AngleToFirstAxis"
-
-msgid "AngleToFirstAxis_DEFINITION"
-msgstr "スラブの西端に対する最初のコンポーネントの軸の回転角度。"
-
-#:IFC.xml:48318
-msgid "DistanceBetweenComponentAxes"
-msgstr "DistanceBetweenComponentAxes"
-
-msgid "DistanceBetweenComponentAxes_DEFINITION"
-msgstr "部品の軸間の距離、スラブの南端に沿って測定されます。"
-
-#:IFC.xml:48323
-msgid "EdgeDistanceToFirstAxis"
-msgstr "EdgeDistanceToFirstAxis"
-
-msgid "EdgeDistanceToFirstAxis_DEFINITION"
-msgstr "部品のスパン方向のスラブの左西端から最初のコンポーネントの軸までの距離。"
-
-#:IFC.xml:48333
-msgid "NominalToppingThickness"
-msgstr "NominalToppingThickness"
-
-msgid "NominalToppingThickness_DEFINITION"
-msgstr "トッピングの公称厚。"
-
-#:IFC.xml:48338
-msgid "ToppingType"
-msgstr "ToppingType"
-
-msgid "ToppingType_DEFINITION"
-msgstr "トッピングが適用されるかどうかを定義し、どのような種類の値を指定します。"
-
-#:IFC.xml:48349
-msgid "Pset_ReinforcementBarCountOfIndependentFooting"
-msgstr "Pset ReforcementBarCountOfIndependentFooting"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_DEFINITION"
-msgstr "補強率パラメータST 2 補強棒の数量と独立した足場の情報。 X方向とY方向は、建物階のローカル座標系に基づいています。 補強棒の X 方向と Y 方向は、[[IfcBuildingStorey]] s 局所座標系の X 軸と Y 軸と平行になります。 を選択します。 コメント リファレンス 一般的な補強タイプの説明ラベル。"
-
-#:IFC.xml:48360
-msgid "XDirectionLowerBarCount"
-msgstr "XDirectionLowerBarCount"
-
-msgid "XDirectionLowerBarCount_DEFINITION"
-msgstr "X 方向下方向のバーの数。"
-
-#:IFC.xml:48365
-msgid "XDirectionUpperBarCount"
-msgstr "XDirectionUpperBarCount"
-
-msgid "XDirectionUpperBarCount_DEFINITION"
-msgstr "X 方向の上のバーを持つバーの数。"
-
-#:IFC.xml:48370
-msgid "YDirectionLowerBarCount"
-msgstr "YDirectionLowerBarCount"
-
-msgid "YDirectionLowerBarCount_DEFINITION"
-msgstr "Y方向下方向のバーの数。"
-
-#:IFC.xml:48375
-msgid "YDirectionUpperBarCount"
-msgstr "YDirectionUpperBarCount"
-
-msgid "YDirectionUpperBarCount_DEFINITION"
-msgstr "Y方向上のバーを持つバーの数。"
-
-#:IFC.xml:48381
-msgid "Pset_ReinforcementBarPitchOfBeam"
-msgstr "Pset ReforcementBarPitchOfBeam"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_DEFINITION"
-msgstr "ビームと補強棒のピッチ長さの情報。"
-
-#:IFC.xml:48392
-msgid "SpacingBarPitch"
-msgstr "SpacingBarPitch"
-
-msgid "SpacingBarPitch_DEFINITION"
-msgstr "間隔バーのピッチ長さ。"
-
-#:IFC.xml:48397
-msgid "StirrupBarPitch"
-msgstr "StirrupBarPitch"
-
-msgid "StirrupBarPitch_DEFINITION"
-msgstr "はらむバーのピッチの長さ。"
-
-#:IFC.xml:48403
-msgid "Pset_ReinforcementBarPitchOfColumn"
-msgstr "Pset ReforcementBarPitchOfColumn"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_DEFINITION"
-msgstr "補強棒のピッチ長さと列の長さの情報 X方向とY方向は、建物階のローカル座標系に基づいています。 補強棒の X 方向と Y 方向は、[[IfcBuildingStorey]] s 局所座標系の X 軸と Y 軸と平行になります。 を選択します。"
-
-#:IFC.xml:48409
-msgid "HoopBarPitch"
-msgstr "HoopBarPitch"
-
-msgid "HoopBarPitch_DEFINITION"
-msgstr "フープバーのピッチ長さ。"
-
-#:IFC.xml:48419
-msgid "ReinforcementBarType"
-msgstr "補強バータイプ"
-
-msgid "ReinforcementBarType_DEFINITION"
-msgstr "補強棒のタイプを指定します。"
-
-#:IFC.xml:48424
-msgid "XDirectionTieHoopBarPitch"
-msgstr "XDirectionTieHoopBarPitch"
-
-msgid "XDirectionTieHoopBarPitch_DEFINITION"
-msgstr "タイフープのX方向ピッチ長さ。"
-
-#:IFC.xml:48429
-msgid "XDirectionTieHoopCount"
-msgstr "XDirectionTieHoopCount"
-
-msgid "XDirectionTieHoopCount_DEFINITION"
-msgstr "X方向タイフープバーを持つバーの数。"
-
-#:IFC.xml:48434
-msgid "YDirectionTieHoopBarPitch"
-msgstr "YDirectionTieHoopBarPitch"
-
-msgid "YDirectionTieHoopBarPitch_DEFINITION"
-msgstr "タイフープのY方向ピッチ長。"
-
-#:IFC.xml:48439
-msgid "YDirectionTieHoopCount"
-msgstr "YDirectionTieHoopCount"
-
-msgid "YDirectionTieHoopCount_DEFINITION"
-msgstr "Y方向タイフープバーを持つバーの数。"
-
-#:IFC.xml:48445
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting"
-msgstr "Pset ReforcementBarPitchOfContinuousFooting"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_DEFINITION"
-msgstr "補強コンクリートパラメータ ST 2 補強棒のピッチ長さと連続的な足場の情報。"
-
-#:IFC.xml:48446
-msgid "CrossingLowerBarPitch"
-msgstr "CrossingLowerBarPitch"
-
-msgid "CrossingLowerBarPitch_DEFINITION"
-msgstr "交差する下のバーのピッチの長さ。"
-
-#:IFC.xml:48451
-msgid "CrossingUpperBarPitch"
-msgstr "CrossingUpperBarPitch"
-
-msgid "CrossingUpperBarPitch_DEFINITION"
-msgstr "交差する上部バーのピッチの長さ。"
-
-#:IFC.xml:48467
-msgid "Pset_ReinforcementBarPitchOfSlab"
-msgstr "Pset ReforcementBarPitchOfSlab"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_DEFINITION"
-msgstr "スラブと補強棒のピッチ長さの情報。"
-
-#:IFC.xml:48473
-msgid "LongInsideCenterLowerBarPitch"
-msgstr "LongInsideCenterLowerBarPitch"
-
-msgid "LongInsideCenterLowerBarPitch_DEFINITION"
-msgstr "中央の長さのピッチの長さを下のバーにします。"
-
-#:IFC.xml:48478
-msgid "LongInsideCenterTopBarPitch"
-msgstr "LongInsideCenterTopBarPitch"
-
-msgid "LongInsideCenterTopBarPitch_DEFINITION"
-msgstr "中央中央上部バーの長いピッチ長さ。"
-
-#:IFC.xml:48483
-msgid "LongInsideEndLowerBarPitch"
-msgstr "LongInsideEndLowerBarPitch"
-
-msgid "LongInsideEndLowerBarPitch_DEFINITION"
-msgstr "長い内側のピッチの長さの下部バー。"
-
-#:IFC.xml:48488
-msgid "LongInsideEndTopBarPitch"
-msgstr "LongInsideEndTopBarPitch"
-
-msgid "LongInsideEndTopBarPitch_DEFINITION"
-msgstr "長い内側のピッチ長さ。"
-
-#:IFC.xml:48493
-msgid "LongOutsideLowerBarPitch"
-msgstr "LongOutsideLowerBarPitch"
-
-msgid "LongOutsideLowerBarPitch_DEFINITION"
-msgstr "長い外側の下のバーのピッチの長さ。"
-
-#:IFC.xml:48498
-msgid "LongOutsideTopBarPitch"
-msgstr "LongOutsideTopBarPitch"
-
-msgid "LongOutsideTopBarPitch_DEFINITION"
-msgstr "長い外側の上のバーのピッチの長さ。"
-
-#:IFC.xml:48508
-msgid "ShortInsideCenterLowerBarPitch"
-msgstr "ShortInsideCenterLowerBarPitch"
-
-msgid "ShortInsideCenterLowerBarPitch_DEFINITION"
-msgstr "中央下部バー内の短いピッチの長さ。"
-
-#:IFC.xml:48513
-msgid "ShortInsideCenterTopBarPitch"
-msgstr "ShortInsideCenterTopBarPitch"
-
-msgid "ShortInsideCenterTopBarPitch_DEFINITION"
-msgstr "中央上部バー内の短いピッチ長さ。"
-
-#:IFC.xml:48518
-msgid "ShortInsideEndLowerBarPitch"
-msgstr "ShortInsideEndLowerBarPitch"
-
-msgid "ShortInsideEndLowerBarPitch_DEFINITION"
-msgstr "下端バー内の短いピッチの長さ。"
-
-#:IFC.xml:48523
-msgid "ShortInsideEndTopBarPitch"
-msgstr "ShortInsideEndTopBarPitch"
-
-msgid "ShortInsideEndTopBarPitch_DEFINITION"
-msgstr "終了トップバー内の短いピッチの長さ。"
-
-#:IFC.xml:48528
-msgid "ShortOutsideLowerBarPitch"
-msgstr "ShortOutLowerBarPitch"
-
-msgid "ShortOutsideLowerBarPitch_DEFINITION"
-msgstr "外側の短いバーのピッチの長さ。"
-
-#:IFC.xml:48533
-msgid "ShortOutsideTopBarPitch"
-msgstr "ShortOutsideTopBarPitch"
-
-msgid "ShortOutsideTopBarPitch_DEFINITION"
-msgstr "短い外側のトップバーのピッチ長さ。"
-
-#:IFC.xml:48539
-msgid "Pset_ReinforcementBarPitchOfWall"
-msgstr "Pset ReforcementBarPitchOfWall"
-
-msgid "Pset_ReinforcementBarPitchOfWall_DEFINITION"
-msgstr "壁と補強棒のピッチ長さ情報。"
-
-#:IFC.xml:48540
-msgid "BarAllocationType"
-msgstr "BarAllocationType"
-
-msgid "BarAllocationType_DEFINITION"
-msgstr "補強棒割り当てのタイプを指定します。"
-
-#:IFC.xml:48550
-msgid "HorizontalBarPitch"
-msgstr "水平方向のBarPitch"
-
-msgid "HorizontalBarPitch_DEFINITION"
-msgstr "水平棒のピッチ長さ。"
-
-#:IFC.xml:48565
-msgid "VerticalBarPitch"
-msgstr "VerticalBarPitch"
-
-msgid "VerticalBarPitch_DEFINITION"
-msgstr "縦棒のピッチ長さ。"
-
-#:IFC.xml:48571
-msgid "Qto_FootingBaseQuantities"
-msgstr "Qto FootingBaseQuantities"
-
-msgid "Qto_FootingBaseQuantities_DEFINITION"
-msgstr "足跡のすべての出現の定義に共通する基準数量。 コメントの高さ 足跡の総高さ。 一定の場合のみ提供される必要があります。長さ s などの処理機能を考慮していません。 ストリップ面積の場合、それはパスに沿って測定されます, 他の足場のためにそれは水平寸法の一つであります. それが一定の場合にのみ提供されるべきです。 幅 ストリップ面積については、基点パスまたは経度軸に対して垂直に測定されます。 それ以外の足場では、水平方向の寸法の一つです。一定の場合にのみ、与えられるべきです。"
-
-#:IFC.xml:48623
-msgid "Qto_PileBaseQuantities"
-msgstr "Qto PileBaseQuantities"
-
-msgid "Qto_PileBaseQuantities_DEFINITION"
-msgstr "すべてのパイルの出現の定義に共通する基本数量。 Comments Length(長さ) カットアウトやその他の処理機能を考慮していません。"
-
-#:IFC.xml:48665
-msgid "Qto_ReinforcingElementBaseQuantities"
-msgstr "Qto 補強要素ベース数量"
-
-msgid "Qto_ReinforcingElementBaseQuantities_DEFINITION"
-msgstr "すべての補強の発生の定義に共通する基本数量。"
-
-#:IFC.xml:48666
-msgid "Count"
-msgstr "カウント"
-
-msgid "Count_DEFINITION"
-msgstr "援軍アイテムの総数。"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "頂点の幾何学的空間の位置を定義する幾何学的点。"
 
