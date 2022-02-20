@@ -9,1171 +9,1479 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
-"X-Crowdin-File-ID: 86\n"
+"X-Crowdin-File: /master/IfcProfileResource.pot\n"
+"X-Crowdin-File-ID: 70\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-20 12:15\n"
 
-#:IFC.xml:43708
-msgid "IfcBuildingElementPart"
-msgstr "IfcBuildElementPart"
+#:IFC.xml:31330
+msgid "IfcArbitraryClosedProfileDef"
+msgstr "IfcArbitraryClosedProfileDef"
 
-msgid "IfcBuildingElementPart_DEFINITION"
-msgstr "[[IfcBuildingElementPart]] представляет основные компоненты в качестве подчиненных частей элемента здания. Типичные примеры использования включают в себя стену сэндвич-бетона, где слои могут иметь различные представления геометрии. В этом случае многоуровневое представление материала недостаточно описывает элемент. Каждый слой представлен собственным экземпляром [[IfcBuildingElementPart]] с его собственным описанием геометрии. Вид части строительного элемента далее указывается соответствующим экземпляром [[IfcBuildingElementPartType]] , обозначенным [[IfcRelDefinesByType]] . HISTORY New entity in IFC2x2. hange ifc2x4 IFC4 CHANGE Moved from IfcStructuralElementsDomain schema to IfcSharedElementElements schema, compatible change of supertype, attribute PredefinedType added."
+msgid "IfcArbitraryClosedProfileDef_DEFINITION"
+msgstr "The closed profile [[IfcArbitraryClosedProfileDef]] defines an arbitrary two dimensional profile for the use within the swept surface geometry, the swept area solid or a sectioned spine. It is given by an outer boundary from which the surface or solid can be constructed. HISTORY New entity in IFC1.5. Entity has been renamed from IfcArbitraryProfileDef in IFC2x. .spec head Informal Propositions 1. The OuterCurve has to be a closed curve. 2. The OuterCurve shall not intersect. Figure 1 illustrates the arbitrary closed profile definition. The OuterCurve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout1.gif Figure 1 Arbitrary closed profile"
 
-#:IFC.xml:43709
-msgid "IfcBuildingElementPart_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:12170
+msgid "IfcArbitraryClosedProfileDef_OuterCurve"
+msgstr "Внешняя кривая"
 
-msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
-msgstr "Тип части строительного элемента"
+msgid "IfcArbitraryClosedProfileDef_OuterCurve_DEFINITION"
+msgstr "Привязанная кривая, определяющая внешние границы произвольного профиля."
 
-#:IFC.xml:43716
-msgid "IfcBuildingElementPartType"
-msgstr "IfcBuildElementPartType"
+#:IFC.xml:31333
+msgid "IfcArbitraryOpenProfileDef"
+msgstr "IfcArbitraryOpenProfileDef"
 
-msgid "IfcBuildingElementPartType_DEFINITION"
-msgstr "Тип строительного элемента определяет списки общедоступных определений наборов общих свойств и карты представлений частей строительного элемента. HISTORY New entity in IFC4."
+msgid "IfcArbitraryOpenProfileDef_DEFINITION"
+msgstr "The open profile [[IfcArbitraryOpenProfileDef]] defines an arbitrary two dimensional open profile for the use within the swept surface geometry. It is given by an open boundary from which the surface can be constructed. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The Curve has to be an open curve. Figure 1 illustrates the arbitrary open profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout3.gif Figure 1 Arbitrary open profile"
 
-#:IFC.xml:43717
-msgid "IfcBuildingElementPartType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:11521
+msgid "IfcArbitraryOpenProfileDef_Curve"
+msgstr "Кривая"
 
-msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
-msgstr "Тип части строительного элемента"
+msgid "IfcArbitraryOpenProfileDef_Curve_DEFINITION"
+msgstr "Открыть ограниченную кривую определяющую профиль."
 
-#:IFC.xml:43724
-msgid "IfcBuildingElementPartTypeEnum"
-msgstr "IfcBuildElementPartEnum"
+#:IFC.xml:31336
+msgid "IfcArbitraryProfileDefWithVoids"
+msgstr "IfcArbitraryProfileDefWithVoids"
 
-msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
-msgstr "Это перечисление определяет различные типы элементов конструкции, и ГИСТОРИЯ Новое перечисление в МФК4. Индуляция изделий обеспечивает термическую изоляцию, например, в качестве изоляционного слоя между стеновыми панелями в стенах сэндвичей или наполнением стен. PRECASTPANEL Эта часть является преобразовательной панелью, обычно как внутренний или внешний слой в стене сэндвича. АРРОН Форма защиты от шкуры, состоящая из древесины, бетона, древесного бетона, древесного дерева или других сооружений, размещенных рядом с бумагами и пирогами для предотвращения подрыва. ARMOURUNIT - крупный каменоломный камень или бетон, используемый для предотвращения эрозии на склонах, таких как перекрытия и ловушки. Эти единицы группируются в слой курса. ПРИМЕЧАНИЕ ОПРЕДЕЛЕНИЯ ИСО 21650 относительно большой каменоломни или бетонной формы, отбираемой для соответствия определенным геометрическим характеристикам и плотности. Клетки безопасности БЕЗОПАСНОСТИ - это сборка круговых и вертикальных столбов, прикрепленных к шнурам стационарных трапов и закрепляемых на дорогу работника при восхождении на лестницу. Нанесенные таким образом лестницы также известны как кажевые или хрустящие лестницы. ПОЛЬЗОВАТЕЛЬНО определить аксессуары."
+msgid "IfcArbitraryProfileDefWithVoids_DEFINITION"
+msgstr "The [[IfcArbitraryProfileDefWithVoids]] defines an arbitrary closed two dimensional profile with holes. It is given by an outer boundary and inner boundaries. A common usage of [[IfcArbitraryProfileDefWithVoids]] is as the cross section for the creation of swept surfaces or swept solids. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The outer curve and all inner curves shall be closed curves. 2. The outer curve shall enclose all inner curves. 3. No inner curve shall intersect with the outer curve or any other inner curve. That is, no two curves of the profile definition shall have a point or segment in common, taken into account the geometric precision factor of the geometric representation context. In other words, curves must neither cross nor touch each other. 4. No inner curve may enclose another inner curve. Figure 1 illustrates the arbitrary closed profile definition with voids. The OuterCurve , defined at the supertype [[IfcArbitraryClosedProfileDef]] and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve, the InnerCurves define a set of two dimensional closed bounded curves. arbitrary profile with inner boundaries .. .. .. .. figures ifcarbitraryprofiledef layout2.gif Figure 1 Arbitrary profile with voids"
 
-#:IFC.xml:43740
-msgid "IfcBuildingElementPartTypeEnum_APRON"
-msgstr "APRON"
+#:IFC.xml:12182
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves"
+msgstr "Внутренние кривые"
 
-msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
-msgstr "Разновидная защита, состоящая из древесины, бетона, спела, уборки или другой конструкции, размещенной рядом с оскорблениями и пирогами для предотвращения подрыва."
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves_DEFINITION"
+msgstr "Набор ограниченных кривых, определяющих внутренние границы произвольного профиля."
 
-#:IFC.xml:43741
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
-msgstr "ARMOURUNIT"
+#:IFC.xml:31339
+msgid "IfcAsymmetricIShapeProfileDef"
+msgstr "IfcAsymmetricIShapeProfileDef"
 
-msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
-msgstr "Большой каменный или бетонный камень, используемый для предотвращения эрозии на склонах, таких как перекрытие и лопаточные воды. Эти единицы группируются в слой курса. ПРИМЕЧАНИЕ ОПРЕДЕЛЕНИЯ ИСО 21650 относительно большой каменоломни или бетонной формы, отбираемой для соответствия определенным геометрическим характеристикам и плотности."
+msgid "IfcAsymmetricIShapeProfileDef_DEFINITION"
+msgstr "[[IfcAsymmetricIShapeProfileDef]] defines a section profile that provides the defining parameters of a singly symmetric I shaped section. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. The overall width of the profile is implicitly given by the maximum of the bottom flange width and the top flange width. [[IfcAsymmetricIShapeProfileDef]] can also be used to model rail profiles if the application scenario does not require a full explicit shape model of the rail profile. Alternatively, [[IfcArbitraryClosedProfileDef]] can be used to provide the exact shape of rail profiles. Either way, a reference to an external document or library should be provided to further define the profile as described at [[IfcProfileDef]] . HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. The attribute CentreOfGravityInY has been made OPTIONAL. .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcIShapeProfileDef]] to [[IfcParameterizedProfileDef]] . Attributes which were inherited from [[IfcIShapeProfileDef]] are now defined directly at [[IfcAsymmetricIShapeProfileDef]] and have been partially renamed but were not reordered. Bottom flange may be narrower than top flange. Type of TopFlangeFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInY deleted, use respective property in IfcExtendedProfileProperties instead. Attributes BottomFlangeEdgeRadius , BottomFlangeSlope , TopFlangeEdgeRadius , TopFlangeSlope added. Figure 1 illustrates parameters of the asymmetric I shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInY property in IfcExtendedProfileProperties , if provided, is negative. asymmetric I shape profile .. .. .. .. figures ifcasymmetricishapeprofiledef.gif Figure 1 Assymetric I shape profile"
 
-#:IFC.xml:43742
-msgid "IfcBuildingElementPartTypeEnum_INSULATION"
-msgstr "УСТАНОВКА"
+#:IFC.xml:31340
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius"
+msgstr "Радиус снизу"
 
-msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
-msgstr "Эта часть обеспечивает термическую изоляцию, например, как изолирующий слой между стеновыми панелями в стенах сэндвичей или как наполняющая стенка шипов."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius_DEFINITION"
+msgstr "Радиус верхних краев нижнего фланца. 0 если острый край, если неизвестно."
 
-#:IFC.xml:43743
-msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:31345
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius"
+msgstr "Радиус снизу"
 
-msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный аксессуар."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius_DEFINITION"
+msgstr "Филе между весом и нижним фланцем. 0 если острые края, если неизвестно."
 
-#:IFC.xml:43744
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
-msgstr "ПРЕКАСТАНЬ"
+#:IFC.xml:31350
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope"
+msgstr "BottomFlangeSlope"
 
-msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
-msgstr "Эта часть представляет собой приборную панель, обычно как внутренний или внешний слой в стене сэндвича."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope_DEFINITION"
+msgstr "Наклон верхних граней нижнего фланца. Незначение нуля в случае навесного нижнего фланца, 0 в случае параллельного нижнего фланца, если неизвестно."
 
-#:IFC.xml:43745
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
-msgstr "SAFETYCAGE"
+#:IFC.xml:31355
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness"
+msgstr "Толщина снизу"
 
-msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
-msgstr "Клетки безопасности - это сборка круговых и вертикальных решёток, прикрепляемых к шнурам стационарных лестниц и закрепляемых для прохода работника при восхождении на лестницу. Лестницы так же известны как клетчатые или надувные лестницы."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness_DEFINITION"
+msgstr "Толщина фланца нижнего фланца."
 
-#:IFC.xml:43746
-msgid "IfcBuildingElementPartTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:31360
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth"
+msgstr "BottomFlangeWidth"
 
-msgid "IfcBuildingElementPartTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Пользовательское устройство."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth_DEFINITION"
+msgstr "Диаметр нижнего фланца, определенный параллельно оси x системы координат."
 
-#:IFC.xml:43747
-msgid "IfcDiscreteAccessory"
-msgstr "IfcDiscreteAccessory"
+#:IFC.xml:31365
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth"
+msgstr "Общая глубина"
 
-msgid "IfcDiscreteAccessory_DEFINITION"
-msgstr "Дискретный аксессуар - это представление различных видов аксессуаров, включенных в элементы или добавленных в них. Новая сущность в IFC2x2. .change ifc2x4 IFC4 CHANGE Атрибут PredefinedType добавлен."
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "Общая степень глубины, установленная параллельно оси y системы координат положения."
 
-#:IFC.xml:43748
-msgid "IfcDiscreteAccessory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31370
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius"
+msgstr "TopFlangeEdgeRadius"
 
-msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
-msgstr "Тип дискретного аксессуара, если USERDEFINED, тип дополнительно квалифицируется с помощью унаследованного атрибута ObjectType . См. [[IfcDiscreteAccessoryType]] для неэксклюзивного списка обозначений пользовательских типов, которые также применимы к [[IfcDiscreteAccessory]]."
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius_DEFINITION"
+msgstr "Радиус нижних краев верхнего фланца. 0 если острые края, опущены, если неизвестно."
 
-#:IFC.xml:43755
-msgid "IfcDiscreteAccessoryType"
-msgstr "IfcDiscreteAccessoryType"
+#:IFC.xml:31375
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius"
+msgstr "TopFlangeFilletRadius"
 
-msgid "IfcDiscreteAccessoryType_DEFINITION"
-msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessories. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted."
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius_DEFINITION"
+msgstr "Филе между весом и верхним фланцем. 0 если острые края, если неизвестно."
 
-#:IFC.xml:43756
-msgid "IfcDiscreteAccessoryType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31380
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope"
+msgstr "TopFlangeSlope"
 
-msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
-msgstr "Подтип дискретного аксессуара"
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope_DEFINITION"
+msgstr "Наклон нижних граней верхнего фланца. Non 0 in case of the tapered top flange, 0 in case of parallel top flange, opitted if unknown."
 
-#:IFC.xml:43763
-msgid "IfcDiscreteAccessoryTypeEnum"
-msgstr "IfcDiscreteAccessoryTypeEnum"
+#:IFC.xml:31385
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness"
+msgstr "TopFlangeThickness"
 
-msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
-msgstr "This enumeration defines the different types of discrete accessories. HISTORY New enumeration in IFC4. Items ANCHORPLATE An accessory consisting of a steel plate, shear stud connectors or welded on rebar which is embedded into the surface of a concrete element so that other elements can be welded or bolted onto it later. BRACKET An L shaped or similarly shaped accessory attached in a corner between elements to hold them together or to carry a secondary element. SHOE A column shoe or a beam shoe beam hanger used to support or secure an element. EXPANSION JOINT DEVICE Assembly connection element between construction elements to allow for thermic differential expansions. CABLEARRANGER A cable arranger is a flexible accessory or a part of a component placed around cables to arrange and minimize flexing of them at the point where it is placed. INSULATOR A device designed to support and insulate a conductive element. Note definition from IEC 151 15 39. LOCK A lock is a mechanical or electronic fastening device that is released either by a physical object e.g., key, fingerprint, RFID card, security token etc. , by supplying secret information e.g., number permutation, password , or by a combination thereof. TENSIONINGEQUIPMENT An equipment used to maintain the tension of conductors or cables. RAILPAD A non metallic pad placed between rail and baseplate or rail and sleeper, bearer or slab. Note definition from EN 13481 1. SLIDINGCHAIR A component which supports and retains the stock rail and a flat surface upon which the foot of the switch rail slides. RAIL LUBRICATION A device that prevents wearing of the rails throughout the flange of wheel to reduce noise emissions. It is often located at inner side of the outer rail in a curve or near turnouts depends on function wearing or noise reduction . PANEL STRENGTHENING A component that minimizes pump effects of the substructure. RAILBRACE A rail component that prevents rails from tipping and twisting. ELASTIC CUSHION A track elastic cushion is a kind of layer set on grooved sides of a concrete base, which is used for mitigating the impact of longitudinal and lateral load on track structures. A track elastic cushion shall only appear in ballastless track structures. SOUNDABSORPTION A component in the track for sound absorption and may also absorb vibrations. It is often used in combination with slab tracks. POINTMACHINEMOUNTINGDEVICE POINT MACHINE LOCKING DEVICE RAIL MECHANICAL EQUIPMENT A rail mechanical equipment is a mechnical equipment installed at railside, like blocking device, speed regulator, bias loaded inspector, track scale or controllable retarder. . BIRDPROTECTION A device that prevents a sitting down of birds at electrically critical points and thus birds are protected against electrical shocks and disturbances by short circuit are avoided. USERDEFINED User defined accessory. NOTDEFINED Undefined accessory."
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness_DEFINITION"
+msgstr "Толщина фланца. Формально этот атрибут необязательный только по историческим причинам. Всякий раз, когда известна толщина фланца, она должна предоставляться по стоимости."
 
-#:IFC.xml:43807
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
+#:IFC.xml:31390
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth"
+msgstr "TopFlangeWidth"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth_DEFINITION"
+msgstr "Диаметр верхнего фланца, определенный параллельно оси x системы координат."
+
+#:IFC.xml:31395
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Толщина веб-формы I веб сконцентрирована на оси x и оси y системы координат положения."
+
+#:IFC.xml:31402
+msgid "IfcCenterLineProfileDef"
+msgstr "IfcCenterLineProfileDef"
+
+msgid "IfcCenterLineProfileDef_DEFINITION"
+msgstr "The profile [[IfcCenterLineProfileDef]] defines an arbitrary two dimensional open, not self intersecting profile for the use within the swept solid geometry. It is given by an area defined by applying a constant thickness to a centerline, generating an area from which the solid can be constructed. Among else, [[IfcCenterLineProfileDef]] is used to model cold formed steel or aluminium sections Sigma, Zeta, Omega, and similar sections which are not covered by subtypes of [[IfcParameterizedProfileDef]] . However, since [[IfcCenterLineProfileDef]] does not provide shape parameters except for the thickness, there is generally a need to further specify the profile definition by means of the name, external reference to a document or library, profile properties, or a combination of them. See [[IfcProfileDef]] for guidance on external references for profiles. HISTORY New entity in IFC2x3. .spec head Informal Propositions 1. The Curve has to be an open curve. 2. The Curve has to be a non intersecting curve. Figure 1 illustrates the center line profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. The Thickness attribute defines a constant thickness along the curve. center line .. .. .. .. figures ifcarbitraryprofiledef layout4.gif Figure 1 Centerline profile"
+
+#:IFC.xml:31403
+msgid "IfcCenterLineProfileDef_Thickness"
+msgstr "Толщина"
+
+msgid "IfcCenterLineProfileDef_Thickness_DEFINITION"
+msgstr "Постоянная толщина, наложенная вдоль центральной линии."
+
+#:IFC.xml:31410
+msgid "IfcCircleHollowProfileDef"
+msgstr "IfcCircleHollowProfileDef"
+
+msgid "IfcCircleHollowProfileDef_DEFINITION"
+msgstr "[[IfcCircleHollowProfileDef]] defines a section profile that provides the defining parameters of a circular hollow section tube to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration.The centre of the position coordinate system is in the profile s centre of the bounding box for symmetric profiles identical with the centre of gravity . HISTORY New entity in IFC2x2. Figure 1 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The parameterized profile is defined by a set of parameter attributes. CHS shape profile .. .. .. .. figures ifccirclehollowprofiledef.gif Figure 1 Circle hollow profile"
+
+#:IFC.xml:31411
+msgid "IfcCircleHollowProfileDef_WallThickness"
+msgstr "Толщина стены"
+
+msgid "IfcCircleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "Толщина материала, это разница между внешним и внутренним радиусом."
+
+#:IFC.xml:31418
+msgid "IfcCircleProfileDef"
+msgstr "IfcCircleProfileDef"
+
+msgid "IfcCircleProfileDef_DEFINITION"
+msgstr "[[IfcCircleProfileDef]] defines a circle as the profile definition used by the swept surface geometry or by the swept area solid. It is given by its Radius attribute and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters for the circle profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines, it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . The Position attribute defines the 2D position coordinate system of the circle. The Radius attribute defines the radius of the circle. circle profile .. .. .. .. figures ifccircleprofiledef layout1.gif Figure 1 Circle profile"
+
+#:IFC.xml:31419
+msgid "IfcCircleProfileDef_Radius"
+msgstr "Radius"
+
+msgid "IfcCircleProfileDef_Radius_DEFINITION"
+msgstr "Радиус круга."
+
+#:IFC.xml:31426
+msgid "IfcCompositeProfileDef"
+msgstr "IfcCompositeProfileDef"
+
+msgid "IfcCompositeProfileDef_DEFINITION"
+msgstr "The [[IfcCompositeProfileDef]] defines the profile by composition of other profiles. The composition is given by a set of at least two other profile definitions. Any profile definition except for another composite profile can be used to construct the composite. HISTORY New entity in IFC2x. Figure 314 illustrates the composite profile definition. The [[IfcCompositeProfileDef]] does not define an own position coordinate system, it is directly defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The [[IfcCompositeProfileDef]] is defined using other profile definitions. Those other profile definitions are directly inserted into the underlying coordinate system. In case of parameterized profile definitions, the Position attribute of those standard profiles is used to place the profiles relatively to each other. In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system. NOTE The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid. composite .. .. .. .. figures ifccompositeprofiledef layout1.gif Figure 314 .use head Twin profiles special case If twin profiles are modeled by profile composition, the base profile should only be specified once. It is then included into the composite profile directly and additionally indirectly via [[IfcMirroredProfileDef]] . For example, a double angle made of two L100x10 with 10mm air gap between them, i.e. a shape, can be modeled as single L [[IfcLShapeProfileDef]] [[IfcLShapeProfileDef]] AREA, L100X100X10 , [[IfcAxis2Placement2D]] [[IfcCartesianPoint]] .100 .010 2., .0 , , .100, .100, .010, .012, , 0., , double L [[IfcCompositeProfileDef]] [[IfcCompositeProfileDef]] AREA, double angle , single L, [[IfcMirroredProfileDef]] AREA, , single L, , twin profile"
+
+#:IFC.xml:31434
+msgid "IfcCompositeProfileDef_Profiles"
+msgstr "Profiles"
+
+msgid "IfcCompositeProfileDef_Profiles_DEFINITION"
+msgstr "The profiles which are used to define the composite profile."
+
+#:IFC.xml:31427
+msgid "IfcCompositeProfileDef_Label"
+msgstr "Метка"
+
+msgid "IfcCompositeProfileDef_Label_DEFINITION"
+msgstr "Название, по которому может называться композиция. Фактическое значение названия должно быть определено в контексте приложений."
+
+#:IFC.xml:31446
+msgid "IfcCShapeProfileDef"
+msgstr "IfcCShapeProfileDef"
+
+msgid "IfcCShapeProfileDef_DEFINITION"
+msgstr "[[IfcCShapeProfileDef]] defines a section profile that provides the defining parameters of a C shaped section to be used by the swept area solid. This section is typically produced by cold forming steel. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of InternalFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInX deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the C shape profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInX property in IfcExtendedProfileProperties , if provided, is negative. C shape profile .. .. .. .. figures ifccshapeprofiledef.gif Figure 1 C shape profile"
+
+#:IFC.xml:31447
+msgid "IfcCShapeProfileDef_Depth"
+msgstr "Глубина"
+
+msgid "IfcCShapeProfileDef_Depth_DEFINITION"
+msgstr "Глубина профиля, смотрите иллюстрацию выше h ."
+
+#:IFC.xml:31452
+msgid "IfcCShapeProfileDef_Girth"
+msgstr "Гирт"
+
+msgid "IfcCShapeProfileDef_Girth_DEFINITION"
+msgstr "Длина жирца, см. иллюстрацию выше c ."
+
+#:IFC.xml:31457
+msgid "IfcCShapeProfileDef_InternalFilletRadius"
+msgstr "Радиус интернала"
+
+msgid "IfcCShapeProfileDef_InternalFilletRadius_DEFINITION"
+msgstr "Внутренний радиус филе в соответствии с приведенным выше рисунком r1 ."
+
+#:IFC.xml:31462
+msgid "IfcCShapeProfileDef_WallThickness"
+msgstr "Толщина стены"
+
+msgid "IfcCShapeProfileDef_WallThickness_DEFINITION"
+msgstr "Постоянная толщина стенки профиля ."
+
+#:IFC.xml:31467
+msgid "IfcCShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcCShapeProfileDef_Width_DEFINITION"
+msgstr "Ширина профиля, смотрите иллюстрацию выше b ."
+
+#:IFC.xml:31474
+msgid "IfcDerivedProfileDef"
+msgstr "IfcDerivedProfileDef"
+
+msgid "IfcDerivedProfileDef_DEFINITION"
+msgstr "[[IfcDerivedProfileDef]] defines the profile by transformation from the parent profile. The transformation is given by a two dimensional transformation operator. Transformation includes translation, rotation, mirror and scaling. The latter can be uniform or non uniform. The derived profiles may be used to define swept surfaces, swept area solids or sectioned spines. The transformation effects the position, rotation, mirroring or scale of the profile at the underlying coordinate system, i.e. the coordinate system defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The position and potential rotation of the ParentProfile within the underlying coordinate system is taken into consideration before applying the Cartesian transformation operator. Note, if only mirroring is required, [[IfcMirroredProfileDef]] should be used instead. HISTORY New entity in IFC2x. Uniform .. .. .. .. figures ifcderivedprofiledef layout1.gif Parameter The [[IfcDerivedProfileDef]] is defined using the [[IfcCartesianTransformationOperator2D]] CTO , which is applied to the parent profile definition. Example The example shows an uniform scaling and a transformation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] , Scale 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. Non uniform .. .. .. .. figures ifcderivedprofiledef layout2.gif Parameter The [[IfcDerivedProfileDef]] is defined using non uniform transformationsby applying the [[IfcCartesianTransformationOperator2DnonUniform]] as a subtype of the 2D CTO. Example The example shows a non uniform scaling and a translation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0., Scale 1. Scale2 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. mirroring .. .. .. .. figures ifcderivedprofiledef layout3.gif Parameter The [[IfcDerivedProfileDef]] is defined using mirroring by applying the [[IfcCartesianTransformationOperator2D]] CTO to the parent profile. Example The example shows a mirroring of an [[IfcLShapeProfileDef]] to match the centre cardinal point. The attributes of the CTO are Axis1 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0.,0. Scale NIL defaults to 1. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] 0.,0. . This example is for illustration only. If the transformation results only in mirroring like shown in the example, then [[IfcMirroredProfileDef]] should be used instead of [[IfcDerivedProfileDef]]. Note The following color map applies black coordinate axes show the underlying coordinate system of the swept surface, swept area solid, or sectioned spine red coordinate axes show the position coordinate system of the parent profile brown coordinate axes show the position coordinate system of the derived profile"
+
+#:IFC.xml:11932
+msgid "IfcDerivedProfileDef_Operator"
+msgstr "Оператор"
+
+msgid "IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "Transformation operator applied to the parent profile."
+
+#:IFC.xml:31482
+msgid "IfcDerivedProfileDef_ParentProfile"
+msgstr "Родительский профиль"
+
+msgid "IfcDerivedProfileDef_ParentProfile_DEFINITION"
+msgstr "The parent profile provides the origin of the transformation."
+
+#:IFC.xml:31475
+msgid "IfcDerivedProfileDef_Label"
+msgstr "Метка"
+
+msgid "IfcDerivedProfileDef_Label_DEFINITION"
+msgstr "Название, по которому можно ссылаться на преобразование. Фактическое значение имени должно быть определено в контексте приложений."
+
+#:IFC.xml:31494
+msgid "IfcEllipseProfileDef"
+msgstr "IfcEllipseProfileDef"
+
+msgid "IfcEllipseProfileDef_DEFINITION"
+msgstr "[[IfcEllipseProfileDef]] defines an ellipse as the profile definition used by the swept surface geometry or the swept area solid. It is given by its semi axis attributes and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC2x Figure 1 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The location of the position coordinate system defines the center of the ellipse. The SemiAxis1 attribute defines the first radius of the ellipse in the direction of the X axis, the SemiAxis2 attribute defines the second radius of the ellipse in the direction of the Y axis. NOTE The semi axes of the ellipse are rectangular to each other by definition. ellipse profile .. .. .. .. figures ifcellipseprofiledef layout1.gif Figure 1 Ellipse profile"
+
+#:IFC.xml:31495
+msgid "IfcEllipseProfileDef_SemiAxis1"
+msgstr "SemiAxis1"
+
+msgid "IfcEllipseProfileDef_SemiAxis1_DEFINITION"
+msgstr "Первый радиус эллипса измеряется по направлению Position.P 1 ."
+
+#:IFC.xml:31500
+msgid "IfcEllipseProfileDef_SemiAxis2"
+msgstr "SemiAxis2"
+
+msgid "IfcEllipseProfileDef_SemiAxis2_DEFINITION"
+msgstr "Второй радиус эллипса измеряется по направлению Position.P 2 ."
+
+#:IFC.xml:31507
+msgid "IfcIShapeProfileDef"
+msgstr "IfcIShapeProfileDef"
+
+msgid "IfcIShapeProfileDef_DEFINITION"
+msgstr "[[IfcIShapeProfileDef]] defines a section profile that provides the defining parameters of an I or H section. The I shape profile has values for its overall depth, width and its web and flange thicknesses. Additionally a fillet radius, flange edge radius, and flange slope may be given. This profile definition represents an I section which is symmetrical about its major and minor axes top and bottom flanges are equal and centred on the web. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Type of FilletRadius relaxed to allow for zero radius. Attributes FlangeEdgeRadius and FlangeSlope added. Figure 1 illustrates parameters of the I shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The parameterized profile is defined by a set of parameter attributes, see attribute definition below. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of lower left corner the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] 1 2 OverallWidth , RefDirection NIL defaults to 1.,0. Parameter If the FilletRadius is given, it is equally applied to all four corners created by the web and flanges. Figure 1 I shape profile"
+
+#:IFC.xml:31508
+msgid "IfcIShapeProfileDef_FilletRadius"
+msgstr "Радиус файла"
+
+msgid "IfcIShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Филе между сетью и фланцем. 0 если острые края, пропускаются, если неизвестно."
+
+#:IFC.xml:31513
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
+
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "Радиус нижних краев фланца и верхних краев нижнего фланца."
+
+#:IFC.xml:31518
+msgid "IfcIShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
+
+msgid "IfcIShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Наклон нижних граней верхнего фланца и верхних граней нижнего фланца. Non 0 in case of tapered flanges, 0 in case of parallel flanges, opitted if unknown."
+
+#:IFC.xml:31523
+msgid "IfcIShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
+
+msgid "IfcIShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Толщина фланца формы I. Толщина верхней и нижней фланцы одинакова и сконцентрированы по оси y системы координат положения."
+
+#:IFC.xml:31528
+msgid "IfcIShapeProfileDef_OverallDepth"
+msgstr "Общая глубина"
+
+msgid "IfcIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "Общая степень глубины, установленная параллельно оси y системы координат положения."
+
+#:IFC.xml:31533
+msgid "IfcIShapeProfileDef_OverallWidth"
+msgstr "Общая ширина"
+
+msgid "IfcIShapeProfileDef_OverallWidth_DEFINITION"
+msgstr "Общая ширина ширины, определенная параллельно оси x системы координат."
+
+#:IFC.xml:31538
+msgid "IfcIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Толщина веб-формы I веб сконцентрирована на оси x и оси y системы координат положения."
+
+#:IFC.xml:31545
+msgid "IfcLShapeProfileDef"
+msgstr "IfcLShapeProfileDef"
+
+msgid "IfcLShapeProfileDef_DEFINITION"
+msgstr "[[IfcLShapeProfileDef]] defines a section profile that provides the defining parameters of an L shaped section equilateral L profiles are also covered by this entity to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The shorter leg has the same direction as the positive Position.P 1 axis, the longer or equal leg the same as the positive Position.P 2 axis. The centre of the position coordinate system is in the profiles centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Types of FilletRadius and EdgeRadius were relaxed to allow for zero values. Trailing attributes CentreOfGravityInX and CentreOfGravityInY deleted, use respective properties in IfcExtendedProfileProperties instead. WHERE rule which required Width Depth removed. Figure 1 illustrates parameters of equal sided and non equal sided L shaped section definitions. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. In the illustrated example, the CentreOfGravityInX and CentreOfGravityInY properties in IfcExtendedProfileProperties, if provided, are both negative. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of gravity the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] CentreOfGravityInX , CentreOfGravityInY RefDirection NIL defaults to 1.,0. In the illustrated example, the x and y value of Position.Location, i.e. the measures CentreOfGravityInX and CentreOfGravityInY are both positive. On the other hand, the properties named CentreOfGravityInX and CentreOfGravityInY in IfcExtendedProfileProperties, if provided, must both be set to 0 now because the centre of gravity of the resulting profile definition is located in the coordinate origin. Figure 1 L shape profile"
+
+#:IFC.xml:31546
+msgid "IfcLShapeProfileDef_Depth"
+msgstr "Глубина"
+
+msgid "IfcLShapeProfileDef_Depth_DEFINITION"
+msgstr "Длина ног, см. иллюстрацию над h . То же, что и общая глубина."
+
+#:IFC.xml:31551
+msgid "IfcLShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
+
+msgid "IfcLShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Радиус края согласно приведенной выше иллюстрации r2 ."
+
+#:IFC.xml:31556
+msgid "IfcLShapeProfileDef_FilletRadius"
+msgstr "Радиус файла"
+
+msgid "IfcLShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Радиус филе на рисунке r1 ."
+
+#:IFC.xml:31561
+msgid "IfcLShapeProfileDef_LegSlope"
+msgstr "Откос Легок"
+
+msgid "IfcLShapeProfileDef_LegSlope_DEFINITION"
+msgstr "Наклон внутреннего лица каждой ноги профиля."
+
+#:IFC.xml:31566
+msgid "IfcLShapeProfileDef_Thickness"
+msgstr "Толщина"
+
+msgid "IfcLShapeProfileDef_Thickness_DEFINITION"
+msgstr "Постоянная толщина стенки профиля, см. иллюстрацию выше ts ."
+
+#:IFC.xml:31571
+msgid "IfcLShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcLShapeProfileDef_Width_DEFINITION"
+msgstr "Длина ног, см. иллюстрацию выше b . Этот атрибут формально необязательный только по историческим причинам. Когда ширина известна, она должна быть предоставлена по значению."
+
+#:IFC.xml:31578
+msgid "IfcMirroredProfileDef"
+msgstr "IfcMirroredProfileDef"
+
+msgid "IfcMirroredProfileDef_DEFINITION"
+msgstr "The [[IfcMirroredProfileDef]] defines the profile by mirroring the parent profile about the y axis of the parent profile coordinate system. That is, left and right of the parent profile are swapped. Notes [[IfcMirroredProfileDef]] is primarily useful together with [[IfcCShapeProfileDef]] , [[IfcLShapeProfileDef]] , [[IfcUShapeProfileDef]] , or [[IfcZShapeProfileDef]] as parent profile but can be used with other parent profile types as well. Mirroring of an [[IfcParameterizedProfileDef]] is performed after translation and rotation according to its Position attribute. For example, if the parent profile s Position offsets it by half of its width to the right, then the mirrored profile will be offset by half of its width to the left. Mirroring about the x axis, i.e. swapping top and bottom, can be achieved by mirroring about the y axis coupled with 180 degree rotation about the z axis. In general, rotation happens in a containing object such as [[IfcSweptAreaSolid]] , i.e. after mirroring by [[IfcMirroredProfileDef]] was performed. If the parent profile is an [[IfcParameterizedProfileDef]] , rotation can alternatively happen already in the parent profile by means of its Position attribute, i.e. before mirroring by [[IfcMirroredProfileDef]] was performed. HISTORY New entity in IFC4."
+
+#:IFC.xml:31579
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator"
+msgstr "SELF IfcDerivedProfileDef Оператор"
+
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "SELF [[IfcDerivedProfileDef]].Operator"
+
+#:IFC.xml:31585
+msgid "IfcOpenCrossProfileDef"
+msgstr "IfcOpenCrossProfileDef"
+
+msgid "IfcOpenCrossProfileDef_DEFINITION"
+msgstr "Двумерный открытый профиль, определяемый шириной и склонами для использования в геометрии покрытий в секции поверхности. Базовая система координат определяется потёрной поверхностью, которая использует определение профиля при использовании в Разделенной поверхности, это плоскость XY каждого элемента списка. rossSectionPositions где ось профиля X ориентирована перпендикулярно слева от Directrix в том же направлении, что и положительный LateralOffset в [[IfcPointByDistanceExpression]], как перед направлением вперед по направлению, и ось Y ориентирована вверх или вертикально перпендикулярно Directrix в зависимости от использования в SectionedSurface. Поведение OpenCrossProfileDef в операции подделки может контролироваться атрибутными Тегами. Теги позволяют двум последовательным пересечениям иметь разное количество точек останова с одинаковым значением тегов, соединены либо с учетом линейной продольной линии разрыва между ними, или кривой направляющего типа, определяемой тем же значением тега, что и точки перекрёстного звена. открыть кросс-профиль .. .. .. цифры [[IfcOpenCrossProfileDef]].png Рисунок 1 Открыть кросс-профиль"
+
+#:IFC.xml:11775
+msgid "IfcOpenCrossProfileDef_OffsetPoint"
+msgstr "OffsetPoint"
+
+msgid "IfcOpenCrossProfileDef_OffsetPoint_DEFINITION"
+msgstr "OffsetPoint"
+
+#:IFC.xml:31586
+msgid "IfcOpenCrossProfileDef_HorizontalWidths"
+msgstr "Ширина горизонтальности"
+
+msgid "IfcOpenCrossProfileDef_HorizontalWidths_DEFINITION"
+msgstr "Указывает, должны ли ширина измеряться горизонтально или вдоль углов."
+
+#:IFC.xml:31591
+msgid "IfcOpenCrossProfileDef_Slopes"
+msgstr "Склоны"
+
+msgid "IfcOpenCrossProfileDef_Slopes_DEFINITION"
+msgstr "Уклон такта."
+
+#:IFC.xml:31596
+msgid "IfcOpenCrossProfileDef_Tags"
+msgstr "Теги"
+
+msgid "IfcOpenCrossProfileDef_Tags_DEFINITION"
+msgstr "Теги"
+
+#:IFC.xml:31601
+msgid "IfcOpenCrossProfileDef_Widths"
+msgstr "Ширина"
+
+msgid "IfcOpenCrossProfileDef_Widths_DEFINITION"
+msgstr "Ширина горизонтальности при ширине горизонтальности .T. или расстояние по откосу при ширине горизонта . , для звеньев в профиле. А если Горизонтально .T. откосы не должны быть 90 град."
+
+#:IFC.xml:31608
+msgid "IfcParameterizedProfileDef"
+msgstr "Параметр IfcParameterizedProfileDef"
+
+msgid "IfcParameterizedProfileDef_DEFINITION"
+msgstr "The parameterized profile definition defines a 2D position coordinate system to which the parameters of the different profiles relate to. All profiles are defined centric to the origin of the position coordinate system, or more specific, the origin 0.,0. shall be in the center of the bounding box of the profile. The Position attribute of [[IfcParameterizedProfileDef]] is used to position the profile within the XY plane of the underlying coordinate system of the swept surface geometry, the swept area solid or the sectioned spine. It can be used to position the profile at any point which becomes the origin 0.,0.,0. of the extruded or rotated surface or solid. The Position attribute should not be used if the transformation can be specified in a containing object instead. In particular, this applies if the [[IfcParameterizedProfileDef]] is referenced as SweptArea in subtypes of [[IfcSweptAreaSolid]] or as CrossSections in [[IfcSectionedSpine]] . Several subtypes of [[IfcParameterizedProfileDef]] provide shape parameters which are optional. Sending systems should always provide values for these parameters if possible. If these parameters are left unspecified, receiving systems may retrieve values for them by external reference if a reference to an external document or library is given see guidance at [[IfcProfileDef]] , or estimate them, or simply assume zero values. HISTORY New entity in IFC2x2. .change ifc2x IFC2x CHANGE The [[IfcParameterizedProfileDef]] is introduced as an intermediate new abstract entity that unifies the definition and usage of the position coordinate system for all parameterized profiles. The Position attribute has been removed at all subtypes like [[IfcRectangleProfileDef]] , [[IfcCircleProfileDef]] , etc. . .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Position attribute made optional default identity transformation . Several radius parameters in subtypes have been changed from optional [[IfcPositiveLengthMeasure]] assumed default 0. to optional [[IfcNonNegativeLengthMeasure]] default unspecified . This change allows to explicitly specify zero radius. Sending systems shall export 0. values if parameters are known to be 0. Subtypes IfcCraneRailAShapeProfileDef and IfcCraneRailFShapeProfileDef deleted. Rail profiles shall be modeled as [[IfcArbitraryClosedProfileDef]] or as [[IfcAsymmetricIShapeProfileDef]] together with appropriate external reference."
+
+#:IFC.xml:11351
+msgid "IfcParameterizedProfileDef_Position"
+msgstr "Позиция"
+
+msgid "IfcParameterizedProfileDef_Position_DEFINITION"
+msgstr "Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied."
+
+#:IFC.xml:31611
+msgid "IfcProfileDef"
+msgstr "IfcProfileDef"
+
+msgid "IfcProfileDef_DEFINITION"
+msgstr "[[IfcProfileDef]] is the supertype of all definitions of standard and arbitrary profiles within IFC. It is used to define a standard set of commonly used section profiles by their parameters or by their explicit curve geometry. Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters. Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries. Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available. In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile. HISTORY New entity in IFC1.5, the capabilities have been extended in IFC2x. Profiles can now support swept surfaces and swept area solids with inner boundaries. It had been renamed from IfcAttDrivenProfileDef. .change ifc2x4 IFC4 CHANGE Changed from ABSTRACT to non abstract for uses which do not require an explicitly defined geometry. Added inverse attributes HasProperties and HasExternalReference . Use in material association Beams, columns, and similarly shaped building elements and their type objects may be associated with a section profile definition, combined with material definition, by means of [[IfcRelAssociatesMaterial]] together with [[IfcMaterialProfileSet]] and [[IfcMaterialProfileSetUsage]] . This way, building elements and element types with same section and material can share a common section profile definition and association. The profile definition in material association is required to be consistent with shape representations of the respective building elements. A higher level description of spatial aligment of the section profile of a member such as centered, bottom left, in the geometric centroid, and more can be provided within [[IfcMaterialProfileSetUsage]] by means of a cardinal point reference. This can be used redundant to geometric data in order to convey design intent. Use in shape models Profile definitions are used within the geometry and geometric model resource to create either swept surfaces, swept area solids, or sectioned spines. The purpose of the profile definition within the swept surfaces or swept area solids is to define a uniform cross section being swept along a line extrusion using [[IfcSurfaceOfLinearExtrusion]] or [[IfcExtrudedAreaSolid]] along a circular arc revolution using [[IfcSurfaceOfRevolution]] or [[IfcRevolvedAreaSolid]] along a directrix lying on a reference surface using [[IfcSurfaceCurveSweptAreaSolid]] The purpose of the profile definition within the sectioned spine is to define a varying cross sections at several positions along a spine curve. The subtype [[IfcDerivedProfileDef]] is particularly suited to provide the consecutive profiles to be based on transformations of the start profile and thus maintaining the identity of vertices and edges. NOTE Subtypes of the [[IfcProfileDef]] contain parameterized profiles as subtypes of [[IfcParameterizedProfileDef]] which establish their own 2D position coordinate system, profiles given by explicit curve geometry either open or closed profiles and two special types for composite profiles and derived profiles, based on a 2D Cartesian transformation. An [[IfcProfileDef]] is treated as bounded area if it is used within swept area solids. In this case, the inside of the profile is part of the profile. The attribute ProfileType is set to AREA. An [[IfcProfileDef]] is treated as a curve if it is used within swept surfaces. In this case, the inside of the profile if the curve is closed is not part of the profile. The attribute ProfileType is set to CURVE. Figure 1 illustrates use of parameterized profiles within a swept area solid. Position The [[IfcProfileDef]] is defined within the underlying coordinate system which is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position or of [[IfcSweptAreaSolid]].Position or of each list member of [[IfcSectionedSpine]].CrossSectionPositions. In the figure to the left, the z axis of the position coordinate system points outwards of the drawing plane. Note The subtype [[IfcParameterizedProfileDef]] optionally provides an additional 2D position coordinate system relative to the underlying coordinate system of the [[IfcProfileDef]]. Sweeping In the later use of the [[IfcProfileDef]] within the swept surface or swept area solid, e.g. the [[IfcExtrudedAreaSolid]] here used as an example , the profile boundaries here based on the 2D position coordinate system of [[IfcParameterizedProfileDef]] are placed within the xy plane of the 3D position coordinate system of the swept surface or swept area solid. The profile is inserted into the underlying coordinate system either directly in case of using [[IfcArbitraryClosedProfileDef]] and [[IfcArbitraryOpenProfileDef]], through an intermediate position coordinate system in case of using [[IfcParameterizedProfileDef]]. through an 2D Cartesian transformation operator applied directly to the curve position when using arbitrary profile definitions, or applied to the position coordinate system when using parameterized profile definitions in case of using [[IfcDerivedProfileDef]]. when using [[IfcCompositeProfileDef]] the insertion depends on the subtype of the included sub profiles. Figure 1 Profile sweeping Profile types Results of the different usage of the ProfileType attribute are demonstrated here. The ProfileType defines whether the inside the bounded area is part of the profile definition Area or not Curve . Figure 2 illustrates the resulting area or curve depending on ProfileType . ProfileType AREA ProfileType CURVE Figure 2 Profile types Profile specification by external reference If the profile is standardized by a norm or a catalogue, a reference to this norm or catalogue should be provided by means of HasExternalReference . This inverse relationship is used to associate an [[IfcExternalReference]] notably [[IfcClassificationReference]] or [[IfcLibraryReference]] with the profile. [[IfcClassificationReference]] is used to refer to a profile norm a common standard or manufacturer s standard . In this case, [[IfcClassificationReference]].ItemReference contains the formal profile designation from the norm. On the other hand, [[IfcProfileDef]].ProfileName contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the profile norm. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource . [[IfcLibraryReference]] is used to refer to a library which contains profile definitions. In this case, [[IfcLibraryReference]].ItemReference contains the identifier of the profile within the library and is meant to be machine readable in contrast to [[IfcProfileDef]].ProfileName which should be human readable . [[IfcLibraryReference]].Location and . Name or . ReferencedLibrary further describe the library. If an external reference is provided, sending systems shall ensure that the shape of the profile definition object agrees with the definitions in the referenced classification or library. Direct instances of [[IfcProfileDef]] Usually, only subtypes of [[IfcProfileDef]] should be instantiated. In some special cases, e.g. if the profile object is used for purposes other than geometric models e.g. for structural analysis models , it may be possible to directly instantiate [[IfcProfileDef]] and further specify the profile only by external reference or by profile properties. The latter are tracked by the inverse attribute HasProperties ."
+
+#:IFC.xml:9560
+msgid "IfcProfileDef_HasExternalReference"
+msgstr "HasExternalReference"
+
+msgid "IfcProfileDef_HasExternalReference_DEFINITION"
+msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the profile. .change ifc2x4 IFC4 CHANGE New inverse attribute"
+
+#:IFC.xml:31624
+msgid "IfcProfileDef_HasProperties"
+msgstr "Характеристики"
+
+msgid "IfcProfileDef_HasProperties_DEFINITION"
+msgstr "Дополнительные свойства профиля, например механические свойства. .change ifc2x4 IFC4 ИЗМЕНИТЬ Новый обратный атрибут"
+
+#:IFC.xml:31612
+msgid "IfcProfileDef_ProfileName"
+msgstr "ProfileName"
+
+msgid "IfcProfileDef_ProfileName_DEFINITION"
+msgstr "Имя профиля, доступное для чтения, например согласно стандартной таблице профиля. Как отмечалось выше, стандартизованные обозначения профиля должны читаться в [[IfcExternalReference]].ItemReference ."
+
+#:IFC.xml:31617
+msgid "IfcProfileDef_ProfileType"
+msgstr "ProfileType"
+
+msgid "IfcProfileDef_ProfileType_DEFINITION"
+msgstr "Определяет тип геометрии, в который будет разрешено определение профиля либо кривой, либо поверхности. В случае кривой профиль должен ссылаться на его поверхность со сметаной, в случае области профиль должен ссылаться на профиль надежной области."
+
+#:IFC.xml:31662
+msgid "IfcProfileProperties"
+msgstr "Параметры IfcProfileProperties"
+
+msgid "IfcProfileProperties_DEFINITION"
+msgstr "This is a collection of properties applicable to section profile definitions. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract. Subtypes IfcGeneralProfileProperties , IfcStructuralProfileProperties , and IfcStructuralSteelProfileProperties deleted. Attribute ProfileName deleted, use ProfileDefinition.ProfileName instead. Attribute ProfileDefinition made mandatory. Attributes Name , Description , and HasProperties added inherited from [[IfcExtendedProperties]] ."
+
+#:IFC.xml:31624
+msgid "IfcProfileProperties_ProfileDefinition"
+msgstr "Определение профиля"
+
+msgid "IfcProfileProperties_ProfileDefinition_DEFINITION"
+msgstr "Profile definition which is qualified by these properties."
+
+#:IFC.xml:31665
+msgid "IfcProfileTypeEnum"
+msgstr "IfcProfileTypeEnum"
+
+msgid "IfcProfileTypeEnum_DEFINITION"
+msgstr "Перечисление определяет, должно ли определение формы профиля быть геометрически преобразовано в кривую или в поверхность. Новый тип в стандарте IFC1.5. Пункты CURVE Результирующий геометрический элемент имеет тип кривой и закрыт только за исключением кривой, созданной [[IfcArbitraryOpenProfileDef]], которая разрешает в открытую кривую . Результирующая геометрия после применения операции перетаскивания представляет собой покрытую поверхность. Это может использоваться для определения фигур тонкими листами, например, протоками, где толщина не подходит для геометрического представления. Результирующая геометрическая деталь имеет тип поверхности. Результирующая геометрия после применения операции переделки представляет собой тело с заданным объемом."
+
+#:IFC.xml:31666
+msgid "IfcProfileTypeEnum_AREA"
+msgstr "ОБЛАСТЬ"
+
+msgid "IfcProfileTypeEnum_AREA_DEFINITION"
+msgstr "Результирующий геометрический элемент имеет поверхность типа. Результирующая геометрия после применения операции перекачивания представляет собой тело с заданным объемом."
+
+#:IFC.xml:31667
+msgid "IfcProfileTypeEnum_CURVE"
+msgstr "ТЕКУЩЕЕ"
+
+msgid "IfcProfileTypeEnum_CURVE_DEFINITION"
+msgstr "Результирующий геометрический элемент имеет тип кривой и закрыт только за исключением кривой, созданной [[IfcArbitraryOpenProfileDef]], которая разрешает в открытую кривую . Результирующая геометрия после применения операции перетаскивания представляет собой покрытую поверхность. Это может использоваться для определения фигур тонкими листами, например, протоками, где толщина не подходит для геометрического представления."
+
+#:IFC.xml:31669
+msgid "IfcRectangleHollowProfileDef"
+msgstr "IfcRectangleHollowProfileDef"
+
+msgid "IfcRectangleHollowProfileDef_DEFINITION"
+msgstr "[[IfcRectangleHollowProfileDef]] defines a section profile that provides the defining parameters of a rectangular or square hollow section to be used by the swept surface geometry or the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. A square hollow section can be defined by equal values for h and b. The centre of the position coordinate system is in the profiles centre of the bounding box for symmetric profiles identical with the centre of gravity . Normally, the longer sides are parallel to the y axis, the shorter sides parallel to the x axis. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Types of InnerFilletRadius and OuterFilletRadius relaxed to allow for zero values. Figure 1 illustrates parameters of a rectangular or square hollow profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 Rectangle hollow profile"
+
+#:IFC.xml:31670
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius"
+msgstr "InnerFilletRadius"
+
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius_DEFINITION"
+msgstr "Inner corner radius."
+
+#:IFC.xml:31675
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius"
+msgstr "Радиус внешнего фильтра"
+
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius_DEFINITION"
+msgstr "Радиус внешнего угла."
+
+#:IFC.xml:31680
+msgid "IfcRectangleHollowProfileDef_WallThickness"
+msgstr "Толщина стены"
+
+msgid "IfcRectangleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "Толщина материала."
+
+#:IFC.xml:31687
+msgid "IfcRectangleProfileDef"
+msgstr "IfcRectangleProfileDef"
+
+msgid "IfcRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRectangleProfileDef]] defines a rectangle as the profile definition used by the swept surface geometry or the swept area solid. It is given by its X extent and its Y extent, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters of the rectangle profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . Parameter The [[IfcRectangleProfileDef]] is defined within the position coordinate system, where the XDim defines the length measure for the length of the rectangle half along the positive x axis and the YDim defines the length measure for the width of the rectangle half along the positive y axis . Figure 1 Rectangle profile"
+
+#:IFC.xml:31688
+msgid "IfcRectangleProfileDef_XDim"
+msgstr "XDim"
+
+msgid "IfcRectangleProfileDef_XDim_DEFINITION"
+msgstr "Степень прямоугольника в направлении оси x."
+
+#:IFC.xml:31693
+msgid "IfcRectangleProfileDef_YDim"
+msgstr "Идим"
+
+msgid "IfcRectangleProfileDef_YDim_DEFINITION"
+msgstr "Степень прямоугольника в направлении оси y."
+
+#:IFC.xml:31700
+msgid "IfcReinforcementBarProperties"
+msgstr "Свойства IfcReinforcementBars"
+
+msgid "IfcReinforcementBarProperties_DEFINITION"
+msgstr "IfcReinforcementProperties defines the set of properties for a specific combination of reinforcement bar steel grade, bar type and effective depth. HISTORY New entity in IFC2x2. The total cross section area for the specific steel grade is always provided. Additionally also general reinforcing bar configurations as a count of bars may be provided as defined in attribute BarCount . In this case the nominal bar diameter should be identical for all given bars as defined in attribute NominalBarDiameter ."
+
+#:IFC.xml:31701
+msgid "IfcReinforcementBarProperties_BarCount"
+msgstr "BarCount"
+
+msgid "IfcReinforcementBarProperties_BarCount_DEFINITION"
+msgstr "Количество брусков с идентичным номинальным диаметром и маркой стали включено в специальную конфигурацию армирования."
+
+#:IFC.xml:31706
+msgid "IfcReinforcementBarProperties_BarSurface"
+msgstr "Барная поверхность"
+
+msgid "IfcReinforcementBarProperties_BarSurface_DEFINITION"
+msgstr "Индикатор того, является ли поверхность шины прозрачной или текстурой."
+
+#:IFC.xml:31711
+msgid "IfcReinforcementBarProperties_EffectiveDepth"
+msgstr "Эффективная Глубина"
+
+msgid "IfcReinforcementBarProperties_EffectiveDepth_DEFINITION"
+msgstr "Эффективная глубина, т.е. расстояние конкретной зоны арматуры или арматурной конфигурации в ряду, засчитывается из общей конкретной исходной точки. Исходная точка — верхняя поверхность пучка и слябов или аналогичная проекция в плоскости для колонок ."
+
+#:IFC.xml:31716
+msgid "IfcReinforcementBarProperties_NominalBarDiameter"
+msgstr "Номинальный БарДиаметр"
+
+msgid "IfcReinforcementBarProperties_NominalBarDiameter_DEFINITION"
+msgstr "Номинальный диаметр, определяющий размер поперечного сечения арматуры. Диаметр шины должен быть идентичен для всех баров, включенных в конкретную конфигурацию армирования."
+
+#:IFC.xml:31721
+msgid "IfcReinforcementBarProperties_SteelGrade"
+msgstr "Сталеград"
+
+msgid "IfcReinforcementBarProperties_SteelGrade_DEFINITION"
+msgstr "Номинальная марка стали определяется в соответствии с местными стандартами."
+
+#:IFC.xml:31726
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea"
+msgstr "Область общего пересечения"
+
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea_DEFINITION"
+msgstr "Общая площадь эффективного поперечного сечения армирования конкретной марки стали."
+
+#:IFC.xml:31745
+msgid "IfcReinforcingBarRoleEnum"
+msgstr "ИфекReinforcingBarRoleEnum"
+
+msgid "IfcReinforcingBarRoleEnum_DEFINITION"
+msgstr "В перечислении, определяющем стандартные типы для роли, назначения или использования бара, то есть вид нагрузок и стрессов, которые они предназначены для переноса. Добавлен новый тип в IFC2x2. ТРАНСПОРТНЫЕ СРЕДСТВА СИГНАЛИЗАЦИИ LIGATURE Укрепляющая шина — это лигатка, оглушающая стойку . Упругость арматуры — арматурная шина. Усиляющее усилие EDGE Edge подкрепление. Усиление кольца кольца. Усиление наклона подшипником. ПОЛЬЗОВАНО Тип арматуры определен. ВНИМАНИЕ: тип арматуры не определен."
+
+#:IFC.xml:31746
+msgid "IfcReinforcingBarRoleEnum_ANCHORING"
 msgstr "ИЗМЕНИТЬ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
-msgstr "принадлежность, состоящая из стальной пластины, сварные шпаклевки или сварные шпаклевки, которые встраиваются в поверхность бетонного элемента, таким образом, чтобы другие элементы могли быть сварены или закреплены на ней позже."
+msgid "IfcReinforcingBarRoleEnum_ANCHORING_DEFINITION"
+msgstr "Якорное подкрепление."
 
-#:IFC.xml:43808
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
-msgstr "ПОДРАЗДЕЛЕНИЕ"
+#:IFC.xml:31747
+msgid "IfcReinforcingBarRoleEnum_EDGE"
+msgstr "Эдж"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
-msgstr "Не допускается использование прибора, который предотвращает сидящие птицы в критических электрических точек, поэтому птицы защищены от электрических потрясений и помех коротким замыканием."
+msgid "IfcReinforcingBarRoleEnum_EDGE_DEFINITION"
+msgstr "Подкрепление ребра."
 
-#:IFC.xml:43809
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
-msgstr "БРАКЕТ"
+#:IFC.xml:31748
+msgid "IfcReinforcingBarRoleEnum_LIGATURE"
+msgstr "ЛИГАТ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
-msgstr "L-образный или аналогичный аксессуар, прикрепленный в углу между элементами для их удержания или для переноса вторичного элемента."
+msgid "IfcReinforcingBarRoleEnum_LIGATURE_DEFINITION"
+msgstr "Шкала арматуры (арматура — арматурная лигатура) — связующая лигатура."
 
-#:IFC.xml:43810
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
-msgstr "CABLEARRANGER"
+#:IFC.xml:31749
+msgid "IfcReinforcingBarRoleEnum_MAIN"
+msgstr "МАРКА"
 
-msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
-msgstr "Кабельный аранжировщик - это гибкий аксессуар или часть компонента, размещаемого вокруг кабелей для организации и минимизации их сгибания в той точке, где они расположены."
+msgid "IfcReinforcingBarRoleEnum_MAIN_DEFINITION"
+msgstr "Шкала арматуры - это главный столб."
 
-#:IFC.xml:43811
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
-msgstr "ЭЛЕКТРИЧЕСКИЙ КЛИЕНТ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
-msgstr "Трек эластичная подушка – это своего рода слой, наложенный на резные стороны бетонного основания, Это используется для смягчения воздействия продольной и поперечной нагрузки на конструкции трека. Эластичная подушка должна появляться только в несущих балластных конструкциях."
-
-#:IFC.xml:43812
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
-msgstr "РАССМОТРЕНИЕ ПРЕДОСТАВЛЕНИЯ ЭКСПЕРТОВ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
-msgstr "Элемент связи монтажа между конструкционными элементами, позволяющими расширить термодифференциальную мощность."
-
-#:IFC.xml:43813
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
-msgstr "УВЕДОМЛЕНИЕ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
-msgstr "Устройство, предназначенное для поддержания и изоляции проводящего элемента."
-
-#:IFC.xml:43814
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
-msgstr "Заблокировать"
-
-msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
-msgstr "Замок представляет собой механическое или электронное крепежное устройство, которое отпускается либо физическим объектом, напр. , предоставляя секретную информацию, например, переадресацию числа, пароль или комбинацию из них."
-
-#:IFC.xml:43815
-msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED"
+#:IFC.xml:31750
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED"
 msgstr "ОТВЕТСТВЕННО"
 
-msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный аксессуар."
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED_DEFINITION"
+msgstr "Тип подкрепления не определен."
 
-#:IFC.xml:43816
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
-msgstr "ПАНЕЛЬНЫЕ ПУНКТЫ"
+#:IFC.xml:31751
+msgid "IfcReinforcingBarRoleEnum_PUNCHING"
+msgstr "ЗАЩИТА"
 
-msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
-msgstr "Компонент, который минимизирует воздействие насоса на конструкцию."
+msgid "IfcReinforcingBarRoleEnum_PUNCHING_DEFINITION"
+msgstr "Брошенное подкрепление."
 
-#:IFC.xml:43817
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
-msgstr "УСТРОЙСТВО ТОЧКИ"
+#:IFC.xml:31752
+msgid "IfcReinforcingBarRoleEnum_RING"
+msgstr "Кольцо"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
-msgstr "УСТРОЙСТВО ТОЧКИ"
+msgid "IfcReinforcingBarRoleEnum_RING_DEFINITION"
+msgstr "Подкрепление кольца."
 
-#:IFC.xml:43818
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
-msgstr "ПОНЯТСЯ ГРУППА"
+#:IFC.xml:31753
+msgid "IfcReinforcingBarRoleEnum_SHEAR"
+msgstr "ТЫЛЬ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
-msgstr "ПОНЯТСЯ ГРУППА"
+msgid "IfcReinforcingBarRoleEnum_SHEAR_DEFINITION"
+msgstr "Шкала арматуры - это отрезок."
 
-#:IFC.xml:43819
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
-msgstr "ЛУЧШАЯ ЛЮБРИКА"
+#:IFC.xml:31754
+msgid "IfcReinforcingBarRoleEnum_STUD"
+msgstr "STUD"
 
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
-msgstr "Устройство, предотвращающее ношение рельсов на протяжении всего фланца колеса для уменьшения шума. Часто он расположен на внутренней стороне наружных рельсов в кривой или рядом с ней зависит от функции ношения или уменьшения шума."
+msgid "IfcReinforcingBarRoleEnum_STUD_DEFINITION"
+msgstr "Шкала арматуры – это шарм."
 
-#:IFC.xml:43820
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
-msgstr "МЕХАНИЧЕСКИЙ ОБОРУДОВАНИЕ РАСХОДОВ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
-msgstr "Механическое приспособление для рельсового транспорта — механическое приспособление, устанавливаемое на рельсах, например, блокирующее устройство, регулятор скорости, перегружаемый инспектор , рельсовая чешуя или управляемый отрезок."
-
-#:IFC.xml:43821
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
-msgstr "RAILBRACE"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
-msgstr "Рельсовый компонент, препятствующий передвижению рельсов."
-
-#:IFC.xml:43822
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
-msgstr "RAILPAD"
-
-msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
-msgstr "Неметаллическая навеска размещена между рельсовой и нижней табличкой, рельсовой и спиральной, носителем или плитой."
-
-#:IFC.xml:43823
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
-msgstr "ПОКАЗАТЬ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
-msgstr "Колонка обуви или балок с боковым пучком используются для поддержки или обеспечения безопасности элемента."
-
-#:IFC.xml:43824
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
-msgstr "СЛИДИНГЧИК"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
-msgstr "Компонент, который поддерживает и удерживает рельсы и плоскую поверхность, на которой ступня переключателя рельс."
-
-#:IFC.xml:43825
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
-msgstr "СОДЕРЖАНИЕ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
-msgstr "Компонент для звукопоглощения и может также поглощать вибрации."
-
-#:IFC.xml:43826
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
-msgstr "ТЕНСИОННОЕ ОБЕСПЕЧЕНИЕ"
-
-msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
-msgstr "Оборудование, используемое для поддержания натяжения проводников или кабелей."
-
-#:IFC.xml:43827
-msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED"
+#:IFC.xml:31755
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED"
 msgstr "ПОЛЬЗОВАТЕЛЬ"
 
-msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Пользовательское устройство."
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED_DEFINITION"
+msgstr "Тип подкрепления определен пользователем."
 
-#:IFC.xml:43828
-msgid "IfcElementComponent"
-msgstr "Компонент IfcElementent"
+#:IFC.xml:31757
+msgid "IfcReinforcingBarSurfaceEnum"
+msgstr "IfcReinforcingBarSurfaceEnum"
 
-msgid "IfcElementComponent_DEFINITION"
-msgstr "An element component is a representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples of [[IfcElementComponent]] s include different kinds of fasteners and various accessories. One or several instances of subtypes of [[IfcElementComponent]] should always be accompanied by a defining instance of a respective subtype of [[IfcElementComponentType]] . The type object holds shape and material information. HISTORY New entity in IFC2x2 It is often desirable to model a number of same shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below. To express the multiplicity of element components also on a higher semantic level, a Qto ElementComponentPatternQuantities should be provided via [[IfcRelDefinesByProperties]] and contain the number of pieces which are placed by a single [[IfcElementComponent]] instance. .use head Symbolic Representation A symbolic representation is defined for a row of components or several rows of components within a single instance of [[IfcElementComponent]] . Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an [[IfcShapeRepresentation]] with the attribute values RepresentationIdentifier Row RepresentationType GeometricCurveSet and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components bolts, nails, staples, straight reinforcement bars, or similar , the local placement of the [[IfcElementComponent]] shall be located and oriented such that the local z axis is parallel with the axes of the components. A Qto ElementComponentPatternQuantities should denote the count of pieces in the row or array and their spacing. Concepts Mapped Geometry The mapped item, [[IfcMappedItem]], should be used if appropriate as it allows for reusing the geometry definition of a type at all occurrences of the same type. A single instance of a subtype of [[IfcElementComponent]] can stand for several actual element components at once. In this case, the [[IfcShapeRepresentation]] contains as many mapped items as there are element components combined within this occurrence object. .. .. .. .. figures ifcelementcomponent multiple.png EXAMPLE Figure 304 illustrates multiple components modeled as a single occurrence object here [[IfcFastener]] Figure 304 Element component mapped representation Representation identifier and type are the same as in single mapped representation. The number of mapped items in the representation corresponds with the count of element components in the [[IfcElementQuantity]]. Property Sets for Objects"
+msgid "IfcReinforcingBarSurfaceEnum_DEFINITION"
+msgstr "Счетчик, указывающий на то, имеет ли шина ровную или текстурную облицованную поверхность. Текстовая поверхность арматуры PLAIN – это простая арматурная поверхность."
 
-#:IFC.xml:43831
-msgid "IfcElementComponentType"
-msgstr "Тип компонента IfcElementcomponent"
+#:IFC.xml:31758
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN"
+msgstr "ПЛАЙН"
 
-msgid "IfcElementComponentType_DEFINITION"
-msgstr "Тип элемента [[IfcElementComponentType]] определяет общую информацию для вхождения компонентов элемента. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов Он используется для определения спецификации типа элемента спецификации с указанием конкретной информации о продукте, которая является общей для всех вхождений этого типа товара. [[IfcElementComponentType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcElementComponentType]] представлены экземплярами [[IfcElementComponent]] . ИСТОРИЯ Новая сущность в IFC2x2."
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN_DEFINITION"
+msgstr "Поверхность арматуры проста."
 
-#:IFC.xml:43834
-msgid "IfcFastener"
-msgstr "Игнорирование"
+#:IFC.xml:31759
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED"
+msgstr "ТЕКСТУРА"
 
-msgid "IfcFastener_DEFINITION"
-msgstr "Представление фиксационных частей, которые используются в качестве креплений для соединения или объединения элементов с другими элементами. Исключены механические крепления, моделируемые отдельной сущностью [[IfcMechanicalFastener]] . HISTORY Новая сущность в IFC2x2 .change ifc2x4 IFC4 CHANGE Атрибут PredefinedType добавлен."
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED_DEFINITION"
+msgstr "Поверхность арматуры облицована ребрами ."
 
-#:IFC.xml:43835
-msgid "IfcFastener_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31761
+msgid "IfcRoundedRectangleProfileDef"
+msgstr "IfcRoundedRectangleProfileDef"
 
-msgid "IfcFastener_PredefinedType_DEFINITION"
-msgstr "Подтип крепления"
+msgid "IfcRoundedRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRoundedRectangleProfileDef]] определяет прямоугольник с одинаковым закруглённым углом в качестве определения профиля, используемого геометрией поверхности потота или сплошной зоной. Он дается по оси X, по оси Y и радиусу для закругленных угла, и помещается в систему 2D координат координат, установленную по атрибуту позиции. Она расположена в центральной части системы координат позиции, то есть в центре ограничительной коробки. .change ifc2x IFC2x CHANGE [[IfcRoundedRectangleProfileDef]] теперь подпечатано с [[IfcRectangleProfileDef]]. Атрибуты XDim и YDim были удалены из супертипа. Позиция параметризованного профиля определяет собственную систему координат позиции. Основополагающая система координат определяется поверхностью проточной или твердой поверхностью, использующей определение профиля. Это плоскость кси [[IfcSweptSurface]].Позиция [[IfcSweptAreaSolid]]. osition или в случае разделённых спиртов плоскость ксизма каждого члена списка [[IfcSectionedSpine]].CrossSection Positions. С помощью смещения местоположения параметризованный профиль может позиционироваться централизованно, используя x,y смещения 0. , или в любой позиции относительно профиля. Смешанные координаты используются для определения кардинальных точек. верхняя левая граница . Параметр [[IfcRoundedRectangleProfileDef]] определен в системе координат положения, где XDim определяет меру длины прямоугольной половины вдоль положительной оси x, YDim определяет длину измерения ширины прямоугольника на половину положительной оси y, а радиус окружения определяет радиус кривизны во всех четырех уголках прямоугольника. Рисунок 1 Прямоугольный профиль"
 
-#:IFC.xml:43842
-msgid "IfcFastenerType"
-msgstr "IfcFastenerType"
+#:IFC.xml:31762
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius"
+msgstr "Радиус окружности"
 
-msgid "IfcFastenerType_DEFINITION"
-msgstr "Тип компонента элемента [[IfcFastenerType]] определяет общую информацию для вхождения крепежных элементов. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов Он используется для определения спецификации более крепкого типа, указывающей конкретную информацию о продукте, которая является общей для всех вхождений этого типа товара. [[IfcFastenerType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcFastenerType]] представлены экземплярами [[IfcFastener]] . ИСТОРИЯ Новая сущность в IFC2x2."
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius_DEFINITION"
+msgstr "Радиус округления круглых дуг, по которым все четыре угла прямоугольника."
 
-#:IFC.xml:43843
-msgid "IfcFastenerType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31769
+msgid "IfcSectionProperties"
+msgstr "IfcSectionProperties"
 
-msgid "IfcFastenerType_PredefinedType_DEFINITION"
-msgstr "Подтип крепления"
+msgid "IfcSectionProperties_DEFINITION"
+msgstr "[[IfcSectionProperties]] определяет свойства поперечного сечения для одного продольного куска поперечного сечения. Это специальный вспомогательный класс для [[IfcSectionReinforcementProperties]] . HISTORY New entity in IFC2x2, a section piece may be uniform or tapeed. В последнем случае должен быть предоставлен конечный профиль. Стартовый и конечный профили считаются тем же типом профиля. Как правило, предполагается использование только прямоугольных или круглых перекрестных профилей."
 
-#:IFC.xml:43850
-msgid "IfcFastenerTypeEnum"
-msgstr "IfcFastenerTypeEnum"
+#:IFC.xml:31638
+msgid "IfcSectionProperties_StartProfile"
+msgstr "Начальный профиль"
 
-msgid "IfcFastenerTypeEnum_DEFINITION"
-msgstr "Это перечисление определяет различные типы крепежных элементов, за исключением механических крепежных элементов. ИСТОРИЯ ИСПЫТАНИЯ В МФК 4 добавляются элементы крепления, где для объединения элементов используется клей . MORTAR A состав минералов или других материалов, используемых для заполнения шнековых отверстий и, возможно, для выполнения роли, несущей нагрузки. ДОБРО ПОЖАЛОВАТЬ Сварной швов между металлическими материалами или другими подходящими материалами. УСТРОЙТЕ УСТАНОВЛЕННОЕ УСТАНОВИТЕЛЬНОЕ УСТАНОВИТЕЛЬНО. НЕОФИЦИАЛЬНОЕ УСТРОЙСТВО УСТАНОВЛЕННО."
+msgid "IfcSectionProperties_StartProfile_DEFINITION"
+msgstr "Поперечный профиль в начальной точке продольного сечения."
 
-#:IFC.xml:43862
-msgid "IfcFastenerTypeEnum_GLUE"
-msgstr "ГРУППА"
+#:IFC.xml:31650
+msgid "IfcSectionProperties_EndProfile"
+msgstr "Конечный профиль"
 
-msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
-msgstr "Крепежное соединение, в котором используется клей для объединения элементов."
+msgid "IfcSectionProperties_EndProfile_DEFINITION"
+msgstr "Поперечный профиль в конце продольного сечения."
 
-#:IFC.xml:43863
-msgid "IfcFastenerTypeEnum_MORTAR"
-msgstr "МОРТАР"
+#:IFC.xml:31770
+msgid "IfcSectionProperties_SectionType"
+msgstr "Тип раздела"
 
-msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
-msgstr "Состав минералических или других материалов, используемых для заполнения стыковочных разрывов и, возможно, для выполнения роли, несущей нагрузку."
+msgid "IfcSectionProperties_SectionType_DEFINITION"
+msgstr "Индикатор, независимо от того, является ли конкретный кусок поперечного сечения однородным или продольным направлением."
 
-#:IFC.xml:43864
-msgid "IfcFastenerTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:31789
+msgid "IfcSectionReinforcementProperties"
+msgstr "Свойства IfcСекционирования"
 
-msgid "IfcFastenerTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный элемент крепления."
+msgid "IfcSectionReinforcementProperties_DEFINITION"
+msgstr "[[IfcSectionReinforcementProperties]] определяет свойства поперечного сечения арматуры для одного продольного куска перекрестного сечения с конкретным типом использования арматуры. HISTORY New entity in IFC2x2. К свойствам армирования секций [[IfcReinforcementDefinitionProperties]] схемы домена IfcStructuralElementsDomain можно привязать несколько наборов армирующих свойств поперечного сечения, представленных экземплярами IfcReinforcementProperties , по одному для каждой комбинации марок стали и типов и размеров арматуры."
 
-#:IFC.xml:43865
-msgid "IfcFastenerTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:31733
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions"
+msgstr "CrossSectionReinforcementDefinitions"
 
-msgid "IfcFastenerTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Установленный пользователем крепеж."
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions_DEFINITION"
+msgstr "Комплект усиленных свойств прикреплен к определению армирующих свойств секции."
 
-#:IFC.xml:43866
-msgid "IfcFastenerTypeEnum_WELD"
-msgstr "ДОБРО"
+#:IFC.xml:31777
+msgid "IfcSectionReinforcementProperties_SectionDefinition"
+msgstr "Определение раздела"
 
-msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
-msgstr "Сварный швов между частями металлического материала или другими подходящими материалами."
+msgid "IfcSectionReinforcementProperties_SectionDefinition_DEFINITION"
+msgstr "Определение типа поперечного профиля и продольного сечения."
 
-#:IFC.xml:43867
-msgid "IfcMechanicalFastener"
-msgstr "IfcMechanicalFastener"
+#:IFC.xml:31790
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition"
+msgstr "Долгосрочная позиция"
 
-msgid "IfcMechanicalFastener_DEFINITION"
-msgstr "Механические крепежные устройства, соединяющие строительные элементы или детали. Один экземпляр этого класса может представлять собой один или много фактических механических крепежных приспособлений, например массив болтов или ряд гвоздей. Новая сущность в IFC2x2 .change ifc2x4 IFC4 CHANGE Supertype изменена с [[IfcFastener]] на [[IfcElementComponent]] . Атрибут PredefinedType добавлен. Атрибуты NominalDiameter и NominalLength устарели."
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition_DEFINITION"
+msgstr "Конечное положение в продольном направлении для свойств армирования сечений."
 
-#:IFC.xml:43868
-msgid "IfcMechanicalFastener_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:31795
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition"
+msgstr "Долгосрочное начало позиции"
 
-msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, описывающий размер поперечного сечения крепления. hange ifc2x4 IFC4 ИЗМЕНИТЬ Удаленный атрибут [[IfcMechanicalFastenerType]] должен быть использован."
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition_DEFINITION"
+msgstr "Стартовое положение в продольном направлении для свойств армирования сечений."
 
-#:IFC.xml:43873
-msgid "IfcMechanicalFastener_NominalLength"
-msgstr "Номинальная длина"
+#:IFC.xml:31800
+msgid "IfcSectionReinforcementProperties_ReinforcementRole"
+msgstr "Роль подкрепления"
 
-msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
-msgstr "Номинальная длина, описывающая продольные размеры крепления. hange ifc2x4 IFC4 ИЗМЕНИТЬ Удаленный атрибут [[IfcMechanicalFastenerType]] должен быть использован."
+msgid "IfcSectionReinforcementProperties_ReinforcementRole_DEFINITION"
+msgstr "Роль, назначение или использование подкрепления, т.е. вид нагрузок и стрессов предназначен для переноса, определяемого свойствами армирования профиля."
 
-#:IFC.xml:43878
-msgid "IfcMechanicalFastener_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31805
+msgid "IfcSectionReinforcementProperties_TransversePosition"
+msgstr "Трансформация"
 
-msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
-msgstr "Подтип механического крепления"
+msgid "IfcSectionReinforcementProperties_TransversePosition_DEFINITION"
+msgstr "Позиция для усилений секции в поперечном направлении."
 
-#:IFC.xml:43885
-msgid "IfcMechanicalFastenerType"
-msgstr "IfcMechanicalFastenerType"
+#:IFC.xml:31824
+msgid "IfcSectionTypeEnum"
+msgstr "IfcTypeEnum"
 
-msgid "IfcMechanicalFastenerType_DEFINITION"
-msgstr "Тип компонента элемента [[IfcMechanicalFastenerType]] определяет общую информацию о наличии механических крепежных элементов. Набор разделяемой информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Используется для определения механического типа крепления, указывающего конкретную информацию о продукте, которая является общей для всех вхождений этого типа товара. [[IfcMechanicalFastenerType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcMechanicalFastenerType]] представлены экземплярами [[IfcMechanicalFastener]] . ИСТОРИЯ Новая сущность в IFC2x2 . hange ifc2x4 IFC4 CHANGE Supertype изменен с [[IfcFastenerType]] на [[IfcElementComponentType]] . Атрибуты PredefinedType , NominalDiameter , Добавлена NominalLength. .use head Classification Use Mechantion Definition Mechanical fastener, especially болтов, часто стандартизованы. Наименование формального крепления в соответствии со стандартной нормой продукта , [[IfcRelAssociatesClassification]] вместе с [[IfcClassificationReference]] следует использовать. [[IfcClassificationReference]].Identification contains a machine readable form of the formal fastener designation of the norm. Пример M16X80 10.9 HV для высокопрочного конструкционного болтового комплекта для предварительной загрузки с помощью шестиугольной болта и гайки. С другой стороны, [[IfcMechanicalFastenerType]].Name содержит отображаемое имя, которое может не совпадать с формальным обозначением. [[IfcClassificationReference]].Name носит короткое название нормы крепления. Пример EN 14399 4 в качестве соответствующего европейского стандарта для высокопрочных шестиугольных болтов. Необязательно, норма может быть описана в [[IfcClassificationReference]]. eferencedSource , включающий в себя информацию как издатель и дату выпуска нормы. Более того, [[IfcRelAssociatesLibrary]] вместе с [[IfcLibraryReference]] могут использоваться для обозначения библиотеки, содержащей определения более крепежа."
+msgid "IfcSectionTypeEnum_DEFINITION"
+msgstr "Перечисление, указывающее, является ли конкретный кусок поперечного сечения однородным или продольным в продольном направлении; ИСТОРИЯ Новый тип в IFC2x2. Элементы UNIFORM Секция однородна в продольном направлении. ТАПЕРЕДЫ."
 
-#:IFC.xml:43886
-msgid "IfcMechanicalFastenerType_NominalDiameter"
-msgstr "NominalDiameter"
+#:IFC.xml:31825
+msgid "IfcSectionTypeEnum_TAPERED"
+msgstr "ТАПИРОВАНО"
 
-msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, описывающий размер поперечного сечения крепления."
+msgid "IfcSectionTypeEnum_TAPERED_DEFINITION"
+msgstr "Секция продольной ленты в продольном направлении."
 
-#:IFC.xml:43891
-msgid "IfcMechanicalFastenerType_NominalLength"
-msgstr "Номинальная длина"
+#:IFC.xml:31826
+msgid "IfcSectionTypeEnum_UNIFORM"
+msgstr "ФОРМА"
 
-msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
-msgstr "Номинальная длина, описывающая продольные размеры крепления."
+msgid "IfcSectionTypeEnum_UNIFORM_DEFINITION"
+msgstr "Секция однородна в продольном направлении."
 
-#:IFC.xml:43896
-msgid "IfcMechanicalFastenerType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:31828
+msgid "IfcTrapeziumProfileDef"
+msgstr "IfcTrapeziumProfileDef"
 
-msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
-msgstr "Подтип механического крепления"
+msgid "IfcTrapeziumProfileDef_DEFINITION"
+msgstr "[[IfcTrapeziumProfileDef]] определяет трапециум в качестве определения профиля, используемого геометрией поверхности тетради или твердой площадью. Он дается по размеру верхнего и нижнего X и по оси Y, а также по смещению верхнего Х расширения, и помещается в систему 2D координат координат, установленную по атрибуту позиции. Он расположен в центральной части системы координат, то есть в центре тушины. ИСТОРИЯ Новая сущность в IFC1.5. Определение использования изменилось в IFC2x. Позиция параметризованного профиля определяет собственную систему координат позиции. Основополагающая система координат определяется поверхностью проточной или твердой поверхностью, использующей определение профиля. Это плоскость кси [[IfcSweptSurface]].Позиция [[IfcSweptAreaSolid]]. osition или в случае разделённого спирания пиксельной плоскости каждого члена списка [[IfcSectionedSpine]].CrossSection Positions. С помощью смещения местоположения параметризованный профиль может позиционироваться централизованно, используя x,y смещения 0. , или в любой позиции относительно профиля. Смещения четких координат используются для определения кардинальных точек, например верхняя левая граница . Параметр [[IfcTrapeziumProfileDef]] определен в системе координат положения, где снизу Диам определяет длину для нижней линии половину положительной оси x, а YDim определяет длину для параллельного расстояния между нижней и верхней линиями половину вдоль положительной оси y . Верхняя линия начинается с расстояния TopXOffset от нижней линии 2,YDim, которая может быть отрицательной, нуль или положительный и имеет длину TopXDim по положительной оси x. Рисунок 1 Trapezium профиль"
 
-#:IFC.xml:43903
-msgid "IfcMechanicalFastenerTypeEnum"
-msgstr "IfcMechanicalFastenerTypeEnum"
+#:IFC.xml:31829
+msgid "IfcTrapeziumProfileDef_BottomXDim"
+msgstr "Нижняя XDim"
 
-msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
-msgstr "Это перечисление определяет различные типы механических крепежных приспособлений, а также новое числовое значение в МФК4. Предметы ANCHORBOLT - специальные болты, закрепленные в конрете, каменном или кирпичах. BOLT - цилиндрическая резьбовая шпилька, которая соединяет с нитью отверстий в орехе или любой другой части, чтобы сформировать крепеж. Механическое крепеж часто включает в себя одну или несколько шайб и одну или несколько орехов. DOWEL цилиндрическая стержня, приворачиваемая к отверстиям соединенных кусочков. NAIL A тонкий заостренный кусок металла, который проникает в материалы как крепеж. NAILPLATE A кусок листа с пробитыми точками, которые перекрывают соединенные части и прижимаются к их материалу. RIVET Крепежная часть, имеющая головку с одного конца, а другой – плоскую после прохождения отверстий в кусках, которые крепятся вместе. SCREW - это крепление с лентой резьбовой рубашкой и прокладкой головы. SHEARCONNECTOR - звоночный разъем, принимаемый с помощью клавиш на соединенных кусков или зубчатых кольцевых или квадратных коннекторах, прижатых к присоединенным кускам. STAPLE A doubly pointed piece of metal that is hammered into materials as a fastener. Заготовки для цилиндрического крепления с одной стороны - это цилиндрические детали с одной стороны. С другой стороны, они сварены на стальных элементах для использования в композитных стальных и бетонных конструкциях. COUPLER А часть, соединяющая два стержня или штанги, например арматурные штанги. , что позволяет соединить два рельсовых листа с функцией изоляции или увеличения пропускной способности . RAILFASTENING Сборка деталей, обеспечивающих рельсы к опоре и сохраняющих его в требуемом положении с разрешением любого необходимого вертикального, боковое и продольное движение. Определение ноты из EN 13481 CHAIN серии связанных металлических колец, используемых для крепления или крепления чего-либо, а также для тяговых нагрузок. ROPE длина толстого крепкого шнура сделана путем скручивания шнуров из белых, сизальных, нейлонных или аналогичных материалов. В первую очередь используется для прошивки судов, определяемых механическим крепежным оборудованием, без указания механического крепежного крепежа."
+msgid "IfcTrapeziumProfileDef_BottomXDim_DEFINITION"
+msgstr "Степень нижней линии, измеряемая по неявной оси x."
 
-#:IFC.xml:43939
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
-msgstr "УЧАСТНИК"
+#:IFC.xml:31834
+msgid "IfcTrapeziumProfileDef_TopXDim"
+msgstr "TopXDim"
 
-msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
-msgstr "Специальная болта, прикрепленная к конрету, камню или кирпичу."
+msgid "IfcTrapeziumProfileDef_TopXDim_DEFINITION"
+msgstr "Степень верхней линии, измеренная по неявной оси x."
 
-#:IFC.xml:43940
-msgid "IfcMechanicalFastenerTypeEnum_BOLT"
-msgstr "БОЛЬШЕ"
+#:IFC.xml:31839
+msgid "IfcTrapeziumProfileDef_TopXOffset"
+msgstr "TopXOffset"
 
-msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
-msgstr "Цилиндрическая стержня, которая соединяется с подобно ниткой отверстием в орехе или любой другой части для формирования застёжки. Механическое крепеж часто включает в себя одну или несколько шайб и одну или несколько орехов."
+msgid "IfcTrapeziumProfileDef_TopXOffset_DEFINITION"
+msgstr "Смещение от начала верхней линии к нижней линии, измеряемое по неявной оси x."
 
-#:IFC.xml:43941
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
-msgstr "ХАИН"
+#:IFC.xml:31844
+msgid "IfcTrapeziumProfileDef_YDim"
+msgstr "Идим"
 
-msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
-msgstr "серия связанных металлических колец, используемая для крепления или крепления чего-либо, а также для тяговых нагрузок."
+msgid "IfcTrapeziumProfileDef_YDim_DEFINITION"
+msgstr "Степень расстояния между параллельными нижними и верхними линиями, измеренная по неявной оси y."
 
-#:IFC.xml:43942
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
-msgstr "КУПЛЕР"
+#:IFC.xml:31851
+msgid "IfcTShapeProfileDef"
+msgstr "IfcTShapeProfileDef"
 
-msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
-msgstr "Части, соединяющие две штанги или штанги, такие как арматура."
+msgid "IfcTShapeProfileDef_DEFINITION"
+msgstr "[[IfcTShapeProfileDef]] определяет профиль раздела, который предоставляет определяющие параметры секции в форме T, который будет использоваться сплошной зоной. Его параметры и ориентация относительно системы координат соответствуют следующей иллюстрации. Центр системы координат положения находится в центре профиля с широкими рамками коробки ХИСТОРИ Новая сущность в IFC2x2. hange ifc2x3 IFC2x3 CHANGE Все происхождение профиля теперь находится в центре туши. hange ifc2x4 IFC4 CHANGE Тип FilletRadius , FlangeEdgeRadius , и WebEdgeRadius расслаблен, чтобы обеспечить нулевой радиус. Атрибут Trailing CentreOfGravityInY, вместо этого используйте соответствующее свойство в IfcExtendedProfileProperties. На рисунке 1 показаны параметры определения профиля формы Т. Позиция параметризованного профиля определяет свою собственную систему координат. Базовая система координат определена сплошным пространством, использующим определение профиля. Это плоскость ксизма [[IfcSweptAreaSolid]]. osition с использованием смещения координат, параметризованный профиль может располагаться в центре используя x,y смещения 0. , или в любой позиции относительно профиля. Рисунок 1 T формы профиль"
 
-#:IFC.xml:43943
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
-msgstr "DOWEL"
+#:IFC.xml:31852
+msgid "IfcTShapeProfileDef_Depth"
+msgstr "Глубина"
 
-msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
-msgstr "Цилиндрическая стержня, приворачиваемая в отверстия подключенных кусков."
+msgid "IfcTShapeProfileDef_Depth_DEFINITION"
+msgstr "Веб-длины, см. иллюстрацию выше h ."
 
-#:IFC.xml:43944
-msgid "IfcMechanicalFastenerTypeEnum_NAIL"
-msgstr "NAIL"
+#:IFC.xml:31857
+msgid "IfcTShapeProfileDef_FilletRadius"
+msgstr "Радиус файла"
 
-msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
-msgstr "Тонкий выделенный металлический элемент, который помещается в материалы как крепежный материал."
+msgid "IfcTShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Радиус филе на рисунке r1 ."
 
-#:IFC.xml:43945
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
-msgstr "НАЙМЕСЬ"
+#:IFC.xml:31862
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
 
-msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
-msgstr "Кусок листового металла с пробитыми точками, которые перекрывают соединенные части и прижимаются к их материалу."
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "Радиус края согласно приведенной выше иллюстрации r2 ."
 
-#:IFC.xml:43946
-msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:31867
+msgid "IfcTShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный механический крепежный материал."
+msgid "IfcTShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Наклон паутины профиля."
 
-#:IFC.xml:43947
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
-msgstr "РАЙСТИНА"
+#:IFC.xml:31872
+msgid "IfcTShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
-msgstr "Конструкция деталей, обеспечивающих рельсы к опоре и сохраняющих их в требуемом положении, позволяя при этом любые необходимые вертикальные, боковое и продольное движение. Определение ноты из EN 13481"
+msgid "IfcTShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Постоянная толщина стенки фланца tg ."
 
-#:IFC.xml:43948
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
-msgstr "РАЙЙОИНТ"
+#:IFC.xml:31877
+msgid "IfcTShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
-msgstr "Механическая конструкция, например, с рыбными плитами для соединения двух рельсовых концов с функцией изоляции или увеличенной емкостью ."
+msgid "IfcTShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Длина фланца, см. иллюстрацию выше b ."
 
-#:IFC.xml:43949
-msgid "IfcMechanicalFastenerTypeEnum_RIVET"
-msgstr "РИВЕТ"
+#:IFC.xml:31882
+msgid "IfcTShapeProfileDef_WebEdgeRadius"
+msgstr "ВебEdgeRadius"
 
-msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
-msgstr "Крепкая часть, имеющая головку с одного конца, а другой концовка ломалась плоской после прохождения отверстий в кусках, которые крепятся вместе."
+msgid "IfcTShapeProfileDef_WebEdgeRadius_DEFINITION"
+msgstr "Радиус края согласно приведенной выше иллюстрации r3 ."
 
-#:IFC.xml:43950
-msgid "IfcMechanicalFastenerTypeEnum_ROPE"
-msgstr "РОПИТЬ"
+#:IFC.xml:31887
+msgid "IfcTShapeProfileDef_WebSlope"
+msgstr "ВебСклон"
 
-msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
-msgstr "длина толстого крепкого шнура, сделанного из скручивания шнуров шнура, сизала, нейлона или аналогичного материала, в первую очередь для шнуров"
+msgid "IfcTShapeProfileDef_WebSlope_DEFINITION"
+msgstr "Отклон фланца профиля."
 
-#:IFC.xml:43951
-msgid "IfcMechanicalFastenerTypeEnum_SCREW"
-msgstr "СКРЕДА"
+#:IFC.xml:31892
+msgid "IfcTShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
-msgstr "Застежка с лентой резьбом и решетчатой головой."
+msgid "IfcTShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Постоянная толщина стенок веток ."
 
-#:IFC.xml:43952
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
-msgstr "ФЕАРНОКТОР"
+#:IFC.xml:31899
+msgid "IfcUShapeProfileDef"
+msgstr "IfcUShapeProfileDef"
 
-msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
-msgstr "Кольцевой разъем, принимаемый кольцевыми клавишами, на подключенных кусков или зубчатом кольцевом соединителе или квадратном соединителе, который прижимается к подключенным кускам."
+msgid "IfcUShapeProfileDef_DEFINITION"
+msgstr "[[IfcUShapeProfileDef]] определяет профиль раздела, который предоставляет определяющие параметры секции канала U фигуры, который будет использоваться сплошной зоной. Его параметры и ориентация относительно системы координат соответствуют следующей иллюстрации. Центр системы координат положения находится в центре профиля с широкими рамками коробки ХИСТОРИ Новая сущность в IFC2x2. hange ifc2x3 IFC2x3 CHANGE Все происхождение профиля теперь находится в центре туши. hange ifc2x4 IFC4 CHANGE Тип FilletRadius и EdgeRadius расслаблен, чтобы обеспечить нулевой радиус. Атрибут Trailing CentreOfGravityInX удалён, используйте соответствующее свойство в IfcExtendedProfileProperties. На рисунке 1 показаны параметры определения профиля U формы, позиция параметризованного профиля определяет свою собственную систему координат. Базовая система координат определена сплошным пространством, использующим определение профиля. Это плоскость ксизма [[IfcSweptAreaSolid]]. osition При использовании смещения местоположения параметризованный профиль может располагаться в центре используя x,y смещения 0. , или в любой позиции относительно профиля. Рисунок 1 U формы"
 
-#:IFC.xml:43953
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
-msgstr "СТАПЛЬ"
+#:IFC.xml:31900
+msgid "IfcUShapeProfileDef_Depth"
+msgstr "Глубина"
 
-msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
-msgstr "Двойно заостренный кусок металла, который пробивается в качестве крепежного материала."
+msgid "IfcUShapeProfileDef_Depth_DEFINITION"
+msgstr "Веб-длины, см. иллюстрацию выше h ."
 
-#:IFC.xml:43954
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
-msgstr "ПОДДЕРЖИВАНИЕ"
+#:IFC.xml:31905
+msgid "IfcUShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
-msgstr "Конструкторы стального типа являются цилиндрическими крепежными частями с головой с одной стороны. С другой стороны, они сварены на стальных элементах для использования в композитных стальных и бетонных конструкциях."
+msgid "IfcUShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Радиус края согласно приведенной выше иллюстрации r2 ."
 
-#:IFC.xml:43955
-msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:31910
+msgid "IfcUShapeProfileDef_FilletRadius"
+msgstr "Радиус файла"
 
-msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Установленный пользователем механический крепежный элемент."
+msgid "IfcUShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Радиус филе на рисунке r1 ."
 
-#:IFC.xml:43956
-msgid "IfcVibrationDamperTypeEnum"
-msgstr "IfcVibrationDamperTypeEnum"
+#:IFC.xml:31915
+msgid "IfcUShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-msgid "IfcVibrationDamperTypeEnum_DEFINITION"
-msgstr "Зависимый от типа «смещение», при котором сила сопротивления определяется по величине штамма пластмассы с использованием пластмассовых деформаций стального материала. Выход по изгибанию представляет собой заслонку, дающую стальной материал изгибом. Клапан зависимости типа клапана SHEAR YIELD A, в котором усилие сопротивления определяется по величине пластмассы с использованием пластиковой деформации стального материала. Выход из скважины является заглушкой, что приводит к деформации стального материала в направлении, перпендикулярном члену. Клапан зависимости от типа AXIAL YIELD A, в котором усилие сопротивления определяется объемом пластмассового штамма с использованием пластиковой деформации стального материала. Тип осевого выхода является глубиной, которая дает энергию поглощая стальной материал от деформации в осевом направлении, То есть, в направлении расширения и сокращения. FRICTION Тип трения - глушка, использующая трение, действующее на контактной поверхности материала. VISCOUS Вязный тип – демплекс, который поглощает энергию, используя сопротивление вязкого тела. RUBBER Резиновая смесь является деформацией ламинированной резины. Разница между сейсмическим изолирующим подшипником и каучуковым демпером состоит в том, чтобы или нет поддерживать вес верхних структур. Резиновый клапан не передает вес верхних строений подструктуре. Определенный тип демпфера вибрации NOTDEFINED Неопределенный тип демпфера вибрации."
+msgid "IfcUShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Отклон фланца профиля."
 
-#:IFC.xml:43975
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
-msgstr "AXIAL YIELD"
+#:IFC.xml:31920
+msgid "IfcUShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
-msgstr "Зависимый от типа «смещение», при котором сила сопротивления определяется по величине штамма пластмассы с использованием пластмассовых деформаций стального материала. Тип осевого выхода является глубиной, которая дает энергию поглощая стальной материал от деформации в осевом направлении, То есть, в направлении расширения и сокращения."
+msgid "IfcUShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Постоянная толщина стенки фланца tg ."
 
-#:IFC.xml:43976
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
-msgstr "РАСХОДЯЩАЯ ГОДА"
+#:IFC.xml:31925
+msgid "IfcUShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
-msgstr "Зависимый от типа «смещение», при котором сила сопротивления определяется по величине штамма пластмассы с использованием пластмассовых деформаций стального материала. Выход по изгибанию представляет собой заслонку, дающую стальной материал изгибом."
+msgid "IfcUShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Длина фланца, см. иллюстрацию выше b ."
 
-#:IFC.xml:43977
-msgid "IfcVibrationDamperTypeEnum_FRICTION"
-msgstr "ФРИКЦИЯ"
+#:IFC.xml:31930
+msgid "IfcUShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
-msgstr "Тип трения - демпфера с использованием трения, действующего на контактную поверхность материала."
+msgid "IfcUShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Постоянная толщина стенок веток ."
 
-#:IFC.xml:43978
-msgid "IfcVibrationDamperTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:31937
+msgid "IfcZShapeProfileDef"
+msgstr "IfcZShapeProfileDef"
 
-msgid "IfcVibrationDamperTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный тип клапана вибрации."
+msgid "IfcZShapeProfileDef_DEFINITION"
+msgstr "[[IfcZShapeProfileDef]] определяет профиль раздела, который предоставляет определяющие параметры секции фигуры Z, которая будет использоваться сплошной зоной. Его параметры и ориентация относительно системы координат соответствуют следующей иллюстрации. Центр системы координат положения находится в центре профиля с широкими рамками коробки ХИСТОРИ Новая сущность в IFC2x2. .change ifc2x4 IFC4 CHANGE Тип FilletRadius и EdgeRadius расслаблен, чтобы обеспечить нулевой радиус. Рисунок 1 иллюстрирует параметры определения профиля формы Z. Позиция параметризованного профиля определяет свою собственную систему координат. Основополагающая система координат определяется твердостью области потока, которая использует определение профиля. Это плоскость кси [[IfcSweptAreaSolid]]. osition При использовании смещения местоположения параметризованный профиль может располагаться в центре используя x,y смещения 0. , или в любой позиции относительно профиля. Рисунок 1 Z формы профиль"
 
-#:IFC.xml:43979
-msgid "IfcVibrationDamperTypeEnum_RUBBER"
-msgstr "РУББИТЕР"
+#:IFC.xml:31938
+msgid "IfcZShapeProfileDef_Depth"
+msgstr "Глубина"
 
-msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
-msgstr "Резиновая смесь является деформацией ламинированной резины. Разница между сейсмическим изолирующим подшипником и каучуковым демпером состоит в том, чтобы или нет поддерживать вес верхних структур. Резиновый клапан не передает вес верхних строений подструктуре."
+msgid "IfcZShapeProfileDef_Depth_DEFINITION"
+msgstr "Web length, см. иллюстрацию выше h ."
 
-#:IFC.xml:43980
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
-msgstr "ТЕНЕВОЙ ГОЛОС"
+#:IFC.xml:31943
+msgid "IfcZShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
-msgstr "Зависимый от типа «смещение», при котором сила сопротивления определяется по величине штамма пластмассы с использованием пластмассовых деформаций стального материала. Выход из скважины является заглушкой, что приводит к деформации стального материала в направлении, перпендикулярном члену."
+msgid "IfcZShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Радиус края согласно приведенной выше иллюстрации r2 ."
 
-#:IFC.xml:43981
-msgid "IfcVibrationDamperTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:31948
+msgid "IfcZShapeProfileDef_FilletRadius"
+msgstr "Радиус файла"
 
-msgid "IfcVibrationDamperTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Установленный пользователем глубин вибрации."
+msgid "IfcZShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Радиус филе на рисунке r1 ."
 
-#:IFC.xml:43982
-msgid "IfcVibrationDamperTypeEnum_VISCOUS"
-msgstr "VISCOUS"
+#:IFC.xml:31953
+msgid "IfcZShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
-msgstr "Вязаный тип – демппер, который поглощает энергию, используя сопротивление вязкого тела."
+msgid "IfcZShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Постоянная толщина стенки фланца, см. иллюстрацию над tg ."
 
-#:IFC.xml:43999
-msgid "Pset_DiscreteAccessoryColumnShoe"
-msgstr "Pset DiscreteAccessoryColumnShoe"
+#:IFC.xml:31958
+msgid "IfcZShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
-msgstr "Свойства фигуры, общие для ботинков столбцов."
+msgid "IfcZShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Длина фланца, см. иллюстрацию выше b ."
 
-#:IFC.xml:44000
-msgid "ColumnShoeBasePlateDepth"
-msgstr "ColumnShoeBasePlateDepth"
+#:IFC.xml:31963
+msgid "IfcZShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "ColumnShoeBasePlateDepth_DEFINITION"
-msgstr "Глубина основания обуви колонны."
+msgid "IfcZShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Постоянная толщина стенки веба, см. иллюстрацию выше ts ."
 
-#:IFC.xml:44005
-msgid "ColumnShoeBasePlateThickness"
-msgstr "ColumnShoeBasePlateThickness"
+#:IFC.xml:31970
+msgid "Pset_ProfileArbitraryDoubleT"
+msgstr "Pset ProfileArbitraryDoubleT"
 
-msgid "ColumnShoeBasePlateThickness_DEFINITION"
-msgstr "Толщина основания обуви столбца."
+msgid "Pset_ProfileArbitraryDoubleT_DEFINITION"
+msgstr "Это коллекция геометрических свойств профилей двойного сечения T бетонных элементов, для использования в сочетании с IfcArbitraryProfileDef в том случае, если профиль только не соответствует информационным требованиям."
 
-#:IFC.xml:44010
-msgid "ColumnShoeBasePlateWidth"
-msgstr "Ширина столбца"
+#:IFC.xml:31971
+msgid "FlangeBaseFillet"
+msgstr "FlangeBaseFillet"
 
-msgid "ColumnShoeBasePlateWidth_DEFINITION"
-msgstr "Ширина основания обуви столбца."
+msgid "FlangeBaseFillet_DEFINITION"
+msgstr "Фланцевый базовый филе профиля."
 
-#:IFC.xml:44015
-msgid "ColumnShoeCasingDepth"
-msgstr "Глубина колонн-ShoeCasingth"
+#:IFC.xml:31976
+msgid "FlangeChamfer"
+msgstr "FlangeChamfer"
 
-msgid "ColumnShoeCasingDepth_DEFINITION"
-msgstr "Глубина колонны корпуса обуви."
+msgid "FlangeChamfer_DEFINITION"
+msgstr "Фланцевая палатка профиля."
 
-#:IFC.xml:44020
-msgid "ColumnShoeCasingHeight"
-msgstr "Высота столбцового корпуса"
+#:IFC.xml:31981
+msgid "FlangeDepth"
+msgstr "Глубина фланга"
 
-msgid "ColumnShoeCasingHeight_DEFINITION"
-msgstr "Высота колонны корпуса обуви."
+msgid "FlangeDepth_DEFINITION"
+msgstr "Глубина профиля."
 
-#:IFC.xml:44025
-msgid "ColumnShoeCasingWidth"
-msgstr "Ширина столбца"
+#:IFC.xml:31986
+msgid "FlangeDraft"
+msgstr "FlangeDraft"
 
-msgid "ColumnShoeCasingWidth_DEFINITION"
-msgstr "Ширина корпуса обуви в колонне."
+msgid "FlangeDraft_DEFINITION"
+msgstr "Фланцевый черновик профиля."
 
-#:IFC.xml:44031
-msgid "Pset_DiscreteAccessoryCornerFixingPlate"
-msgstr "Утилита Развернуть Аксессуар Утилита Утилита"
+#:IFC.xml:31991
+msgid "FlangeTopFillet"
+msgstr "FlangeTopFillet"
 
-msgid "Pset_DiscreteAccessoryCornerFixingPlate_DEFINITION"
-msgstr "Свойства, специфичные для фиксных пластин."
+msgid "FlangeTopFillet_DEFINITION"
+msgstr "Фланцевый верхний филе профиля."
 
-#:IFC.xml:44032
-msgid "CornerFixingPlateFlangeWidthInPlaneX"
-msgstr "CornerFixingPlateFlangeWidthInPlaneX"
+#:IFC.xml:31996
+msgid "LeftFlangeWidth"
+msgstr "LeftFlangeWidth"
 
-msgid "CornerFixingPlateFlangeWidthInPlaneX_DEFINITION"
-msgstr "Ширина фланца угловой пластины формы L в плоскости X."
+msgid "LeftFlangeWidth_DEFINITION"
+msgstr "Ширина профиля левого фланца."
 
-#:IFC.xml:44037
-msgid "CornerFixingPlateFlangeWidthInPlaneZ"
-msgstr "CornerFixingPlateFlangeWidthInPlaneZ"
+#:IFC.xml:32001
+msgid "OverallDepth"
+msgstr "Общая глубина"
 
-msgid "CornerFixingPlateFlangeWidthInPlaneZ_DEFINITION"
-msgstr "Ширина фланца угловой пластины формы L в плоскости Z."
+msgid "OverallDepth_DEFINITION"
+msgstr "Общая глубина профиля."
 
-#:IFC.xml:44042
-msgid "CornerFixingPlateLength"
-msgstr "Фиксированная длина"
+#:IFC.xml:32006
+msgid "OverallWidth"
+msgstr "Общая ширина"
 
-msgid "CornerFixingPlateLength_DEFINITION"
-msgstr "Длина угловой пластины формы L."
+msgid "OverallWidth_DEFINITION"
+msgstr "Общая ширина профиля."
 
-#:IFC.xml:44047
-msgid "CornerFixingPlateThickness"
-msgstr "CornerFixingPlateThickness"
+#:IFC.xml:32011
+msgid "RightFlangeWidth"
+msgstr "RightFlangeWidth"
 
-msgid "CornerFixingPlateThickness_DEFINITION"
-msgstr "Толщина угловой пластины формы L."
+msgid "RightFlangeWidth_DEFINITION"
+msgstr "Ширина профиля правой фланцевой ширины."
 
-#:IFC.xml:44053
-msgid "Pset_DiscreteAccessoryDiagonalTrussConnector"
-msgstr "Pset DiscreteAccessoryDiagonalTrussConnector"
+#:IFC.xml:32016
+msgid "StemBaseChamfer"
+msgstr "StemBaseChamfer"
 
-msgid "Pset_DiscreteAccessoryDiagonalTrussConnector_DEFINITION"
-msgstr "Свойства фигуры, специфичные для соединения аксессуаров в форме с диагональными поперечными решетками."
+msgid "StemBaseChamfer_DEFINITION"
+msgstr "Стволовая палата профиля."
 
-#:IFC.xml:44054
-msgid "DiagonalTrussBaseBarDiameter"
-msgstr "Диаметр Диагонала"
+#:IFC.xml:32021
+msgid "StemBaseFillet"
+msgstr "StemBaseFillet"
 
-msgid "DiagonalTrussBaseBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр базовой шины."
+msgid "StemBaseFillet_DEFINITION"
+msgstr "Стволовый базовый филе профиля."
 
-#:IFC.xml:44059
-msgid "DiagonalTrussCrossBarDiameter"
-msgstr "DiagonalTrussCrossBarDiameter"
+#:IFC.xml:32026
+msgid "StemBaseWidth"
+msgstr "StemBaseWidth"
 
-msgid "DiagonalTrussCrossBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр диагональных перекрестных баров."
+msgid "StemBaseWidth_DEFINITION"
+msgstr "Ширина базы ствола профиля."
 
-#:IFC.xml:44064
-msgid "DiagonalTrussCrossBarSpacing"
-msgstr "Диагональная кроссбарширование"
+#:IFC.xml:32031
+msgid "StemTopChamfer"
+msgstr "StemTopChamfer"
 
-msgid "DiagonalTrussCrossBarSpacing_DEFINITION"
-msgstr "Расстояние между диагональными перекрестительными полосами."
+msgid "StemTopChamfer_DEFINITION"
+msgstr "Топ стволовой камеры профиля."
 
-#:IFC.xml:44069
-msgid "DiagonalTrussHeight"
-msgstr "Высота диагонали"
+#:IFC.xml:32036
+msgid "StemTopFillet"
+msgstr "StemTopFillet"
 
-msgid "DiagonalTrussHeight_DEFINITION"
-msgstr "Общая высота коннектора доверия."
+msgid "StemTopFillet_DEFINITION"
+msgstr "Топ стволового филе профиля."
 
-#:IFC.xml:44074
-msgid "DiagonalTrussLength"
-msgstr "Длина диаграммы"
+#:IFC.xml:32041
+msgid "StemTopWidth"
+msgstr "StemTopWidth"
 
-msgid "DiagonalTrussLength_DEFINITION"
-msgstr "Общая длина коннектора доверия."
+msgid "StemTopWidth_DEFINITION"
+msgstr "Ширина верхней части профиля."
 
-#:IFC.xml:44079
-msgid "DiagonalTrussSecondaryBarDiameter"
-msgstr "Диаметр Диагонала"
+#:IFC.xml:32047
+msgid "Pset_ProfileArbitraryHollowCore"
+msgstr "Pset ProfileArbitraryHollowCore"
 
-msgid "DiagonalTrussSecondaryBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр вторичной шины."
+msgid "Pset_ProfileArbitraryHollowCore_DEFINITION"
+msgstr "Это коллекция геометрических свойств пустообразных профилей профилей бетонных бетонов, для использования в сочетании с [[IfcArbitraryProfileDefWithVoids]], когда только обозначение профиля не отвечает информационным требованиям. Во всех случаях стержни симметрично распределяются по обе стороны линии центра доски, Независимо от того, является ли количество стержней нечетным или ровным. Для досок с центральным ядром с разной геометрией к другим стержням, обеспечить собственность CenterCoreSpacing. Если число ядер равномерно, то камера центральной ядра и чертежная камера - все камеры 45 градусов. Параметры CoreTopRadius и CoreBaseRadius могут быть выведены и поэтому не перечислены в наборе свойств. Они показали, что кривые являются дугами. Параметры для ядра центра те же, что и выше, но с префиксным центром ."
 
-#:IFC.xml:44085
-msgid "Pset_DiscreteAccessoryEdgeFixingPlate"
-msgstr "Pset DiscreteAccessoryEdgeFixingPlate"
+#:IFC.xml:32048
+msgid "BaseChamfer"
+msgstr "BaseChamfer"
 
-msgid "Pset_DiscreteAccessoryEdgeFixingPlate_DEFINITION"
-msgstr "Свойства, специфичные для фиксационных пластин."
+msgid "BaseChamfer_DEFINITION"
+msgstr "Базовая камера профиля."
 
-#:IFC.xml:44086
-msgid "EdgeFixingPlateFlangeWidthInPlaneX"
-msgstr "EdgeFixingPlateFlangeWidthInPlaneX"
+#:IFC.xml:32053
+msgid "BottomCover"
+msgstr "Нижний Покрытие"
 
-msgid "EdgeFixingPlateFlangeWidthInPlaneX_DEFINITION"
-msgstr "Ширина краевой пластины формы L в плоскости X."
+msgid "BottomCover_DEFINITION"
+msgstr "Нижняя обложка профиля."
 
-#:IFC.xml:44091
-msgid "EdgeFixingPlateFlangeWidthInPlaneZ"
-msgstr "EdgeFixingPlateFlangeWidthInPlaneZ"
+#:IFC.xml:32058
+msgid "CenterCoreBaseHeight"
+msgstr "Основание по центру"
 
-msgid "EdgeFixingPlateFlangeWidthInPlaneZ_DEFINITION"
-msgstr "Ширина краевой пластины формы L в плоскости Z."
+msgid "CenterCoreBaseHeight_DEFINITION"
+msgstr "Центрировать базовую высоту профиля."
 
-#:IFC.xml:44096
-msgid "EdgeFixingPlateLength"
-msgstr "Длина кромки"
+#:IFC.xml:32063
+msgid "CenterCoreBaseWidth"
+msgstr "CenterCoreBaseWidth"
 
-msgid "EdgeFixingPlateLength_DEFINITION"
-msgstr "Длина кромной пластины формы L."
+msgid "CenterCoreBaseWidth_DEFINITION"
+msgstr "По центру базовой ширины профиля."
 
-#:IFC.xml:44101
-msgid "EdgeFixingPlateThickness"
-msgstr "EdgeFixingPlateThickness"
+#:IFC.xml:32068
+msgid "CenterCoreMiddleHeight"
+msgstr "ЦентрCoreMiddleheight"
 
-msgid "EdgeFixingPlateThickness_DEFINITION"
-msgstr "Толщина кромки формы L."
+msgid "CenterCoreMiddleHeight_DEFINITION"
+msgstr "Центрировать центральную высоту профиля."
 
-#:IFC.xml:44107
-msgid "Pset_DiscreteAccessoryFixingSocket"
-msgstr "Разряд DiscreteAccessoryFixingSocket"
+#:IFC.xml:32073
+msgid "CenterCoreSpacing"
+msgstr "CenterCoreSpacing"
 
-msgid "Pset_DiscreteAccessoryFixingSocket_DEFINITION"
-msgstr "Свойства, общие для установки сокетов."
+msgid "CenterCoreSpacing_DEFINITION"
+msgstr "Центрировать интервал ядра профиля."
 
-#:IFC.xml:44108
-msgid "FixingSocketHeight"
-msgstr "Постоянная высота сокетов"
+#:IFC.xml:32078
+msgid "CenterCoreTopHeight"
+msgstr "CenterCoreTopHeight"
 
-msgid "FixingSocketHeight_DEFINITION"
-msgstr "Общая высота фиксирующего сокета."
+msgid "CenterCoreTopHeight_DEFINITION"
+msgstr "Центрировать верхнюю высоту профиля."
 
-#:IFC.xml:44113
-msgid "FixingSocketThreadDiameter"
-msgstr "FixingSocketThreadDiameter"
+#:IFC.xml:32083
+msgid "CenterCoreTopWidth"
+msgstr "CenterCoreTopWidth"
 
-msgid "FixingSocketThreadDiameter_DEFINITION"
-msgstr "Номинальный диаметр нити."
+msgid "CenterCoreTopWidth_DEFINITION"
+msgstr "Ширина основного ядра профиля."
 
-#:IFC.xml:44118
-msgid "FixingSocketThreadLength"
-msgstr "Длина потока исправления"
+#:IFC.xml:32088
+msgid "CoreBaseHeight"
+msgstr "Базовая высота"
 
-msgid "FixingSocketThreadLength_DEFINITION"
-msgstr "Длина резьбовой части фиксирующего сокета."
+msgid "CoreBaseHeight_DEFINITION"
+msgstr "Базовая высота профиля."
 
-#:IFC.xml:44123
-msgid "FixingSocketTypeReference"
-msgstr "Ссылка на FixingSocketTypeReference"
+#:IFC.xml:32093
+msgid "CoreBaseWidth"
+msgstr "CoreBaseWidth"
 
-msgid "FixingSocketTypeReference_DEFINITION"
-msgstr "5.3.2 Указание типа для фиксирующего сокета в соответствии с местными стандартами."
+msgid "CoreBaseWidth_DEFINITION"
+msgstr "Базовая ширина профиля."
 
-#:IFC.xml:44129
-msgid "Pset_DiscreteAccessoryLadderTrussConnector"
-msgstr "Pset DiscreteAccessoryLadderTrussConnector"
+#:IFC.xml:32098
+msgid "CoreMiddleHeight"
+msgstr "Высота Посредника"
 
-msgid "Pset_DiscreteAccessoryLadderTrussConnector_DEFINITION"
-msgstr "Свойства фигуры, специфичные для соединительных аксессуаров в форме трикотажа с прямыми поперечными решетками в форме лестницы."
+msgid "CoreMiddleHeight_DEFINITION"
+msgstr "Основная средняя высота профиля."
 
-#:IFC.xml:44130
-msgid "LadderTrussBaseBarDiameter"
-msgstr "LadderTrussBaseBarDiameter"
+#:IFC.xml:32103
+msgid "CoreSpacing"
+msgstr "CoreSpacing"
 
-msgid "LadderTrussBaseBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр базовой шины."
+msgid "CoreSpacing_DEFINITION"
+msgstr "Основной интервал профиля."
 
-#:IFC.xml:44135
-msgid "LadderTrussCrossBarDiameter"
-msgstr "LadderTrussCrossBarDiameter"
+#:IFC.xml:32108
+msgid "CoreTopHeight"
+msgstr "Верхняя высота"
 
-msgid "LadderTrussCrossBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр прямого перекрестного столба."
+msgid "CoreTopHeight_DEFINITION"
+msgstr "Высота основного элемента профиля."
 
-#:IFC.xml:44140
-msgid "LadderTrussCrossBarSpacing"
-msgstr "Кросс Лестниц"
+#:IFC.xml:32113
+msgid "CoreTopWidth"
+msgstr "CoreTopWidth"
 
-msgid "LadderTrussCrossBarSpacing_DEFINITION"
-msgstr "Расстояние между прямыми перекрестками."
+msgid "CoreTopWidth_DEFINITION"
+msgstr "Ширина основного элемента профиля."
 
-#:IFC.xml:44145
-msgid "LadderTrussHeight"
-msgstr "Высота Лестницы"
+#:IFC.xml:32118
+msgid "DraftBaseOffset"
+msgstr "DraftBaseOffset"
 
-msgid "LadderTrussHeight_DEFINITION"
-msgstr "Общая высота коннектора доверия."
+msgid "DraftBaseOffset_DEFINITION"
+msgstr "Проект базового смещения профиля."
 
-#:IFC.xml:44150
-msgid "LadderTrussLength"
-msgstr "Длина Лестницы"
+#:IFC.xml:32123
+msgid "DraftSideOffset"
+msgstr "DraftSideOffset"
 
-msgid "LadderTrussLength_DEFINITION"
-msgstr "Общая длина коннектора доверия."
+msgid "DraftSideOffset_DEFINITION"
+msgstr "Проект стороны смещения профиля."
 
-#:IFC.xml:44155
-msgid "LadderTrussSecondaryBarDiameter"
-msgstr "LadderTrussSecondaryBarDiameter"
+#:IFC.xml:32128
+msgid "EdgeDraft"
+msgstr "EdgeDraft"
 
-msgid "LadderTrussSecondaryBarDiameter_DEFINITION"
-msgstr "Номинальный диаметр вторичной шины."
+msgid "EdgeDraft_DEFINITION"
+msgstr "Красить черновик профиля."
 
-#:IFC.xml:44161
-msgid "Pset_DiscreteAccessoryStandardFixingPlate"
-msgstr "Напад DiscreteAccessoryStandardFixingPlate"
+#:IFC.xml:32133
+msgid "KeyDepth"
+msgstr "KeyDepth"
 
-msgid "Pset_DiscreteAccessoryStandardFixingPlate_DEFINITION"
-msgstr "Свойства, специфичные для стандартных фиксационных пластин."
+msgid "KeyDepth_DEFINITION"
+msgstr "Глубина профиля."
 
-#:IFC.xml:44162
-msgid "StandardFixingPlateDepth"
-msgstr "Постоянная стандартная глубина"
+#:IFC.xml:32138
+msgid "KeyHeight"
+msgstr "Высота клавиш"
 
-msgid "StandardFixingPlateDepth_DEFINITION"
-msgstr "Глубина стальной крепежной пластины."
+msgid "KeyHeight_DEFINITION"
+msgstr "Высота ключа профиля."
 
-#:IFC.xml:44167
-msgid "StandardFixingPlateThickness"
-msgstr "Стандартная толщина платины"
+#:IFC.xml:32143
+msgid "KeyOffset"
+msgstr "KeyOffset"
 
-msgid "StandardFixingPlateThickness_DEFINITION"
-msgstr "Толщина стандартной крепежной пластины."
+msgid "KeyOffset_DEFINITION"
+msgstr "Смещение ключа профиля."
 
-#:IFC.xml:44172
-msgid "StandardFixingPlateWidth"
-msgstr "Стандартная Фиксированная Ширина"
+#:IFC.xml:32164
+msgid "Pset_ProfileMechanical"
+msgstr "Механическая Pset"
 
-msgid "StandardFixingPlateWidth_DEFINITION"
-msgstr "Ширина стандартной фиксационной пластины."
+msgid "Pset_ProfileMechanical_DEFINITION"
+msgstr "Это набор механических свойств, которые применимы практически ко всем профильным классам. Комментарии по периметру профиля для расчета площади поверхности. Например, измеряется в мм."
 
-#:IFC.xml:44178
-msgid "Pset_DiscreteAccessoryWireLoop"
-msgstr "Pset DiscreteAccessoryWireLoop"
+#:IFC.xml:32165
+msgid "CentreOfGravityInX"
+msgstr "CentreOfGravityInX"
 
-msgid "Pset_DiscreteAccessoryWireLoop_DEFINITION"
-msgstr "Свойства фигуры, общие для проволочных соединителей."
+msgid "CentreOfGravityInX_DEFINITION"
+msgstr "Местоположение профиля центра гравитационной геометрии центроида , измеренное вдоль xp."
 
-#:IFC.xml:44179
-msgid "WireDiameter"
-msgstr "Диаметр"
+#:IFC.xml:32170
+msgid "CentreOfGravityInY"
+msgstr "ЦентрГравитацияИН"
 
-msgid "WireDiameter_DEFINITION"
-msgstr "Номинальный диаметр проволоки."
+msgid "CentreOfGravityInY_DEFINITION"
+msgstr "Расположение профиля в центре гравитационной геометрической центральной части , измеренное вдоль типа."
 
-#:IFC.xml:44184
-msgid "WireEmbeddingLength"
-msgstr "Длина вкладки"
+#:IFC.xml:32185
+msgid "MaximumPlateThickness"
+msgstr "Максимальная толщина"
 
-msgid "WireEmbeddingLength_DEFINITION"
-msgstr "Длина части проволоки, встроенной в бетонный бетонный элемент."
+msgid "MaximumPlateThickness_DEFINITION"
+msgstr "Это значение может потребоваться для анализа стресса и решения проблем изгиба. Он также может быть получен из данной геометрии профиля или классификации, и поэтому это всего лишь необязательная функция, допускающая явное описание. Например, измеряется в мм."
 
-#:IFC.xml:44189
-msgid "WireLoopBasePlateLength"
-msgstr "Длина карты WireLoopBasePlateLate"
+#:IFC.xml:32190
+msgid "MaximumSectionModulusY"
+msgstr "Максимальное количество модулей"
 
-msgid "WireLoopBasePlateLength_DEFINITION"
-msgstr "Длина базовой плиты."
+msgid "MaximumSectionModulusY_DEFINITION"
+msgstr "Изгибающее сопротивление к оси Y в точке с максимальным значением z. Например, измеряется в мм3."
 
-#:IFC.xml:44194
-msgid "WireLoopBasePlateThickness"
-msgstr "Толщина WireLoopBasePlatePlate"
+#:IFC.xml:32195
+msgid "MaximumSectionModulusZ"
+msgstr "Максимальный разделМодульZ"
 
-msgid "WireLoopBasePlateThickness_DEFINITION"
-msgstr "Толщина базовой пластины."
+msgid "MaximumSectionModulusZ_DEFINITION"
+msgstr "Изгибающее сопротивление к оси zs в точке с максимальным порядком ys. Например, измеряется в мм3."
 
-#:IFC.xml:44199
-msgid "WireLoopBasePlateWidth"
-msgstr "WireLoopBasePlateWidth"
+#:IFC.xml:32200
+msgid "MinimumPlateThickness"
+msgstr "Минимальная толщина"
 
-msgid "WireLoopBasePlateWidth_DEFINITION"
-msgstr "Ширина базовой пластины."
+msgid "MinimumPlateThickness_DEFINITION"
+msgstr "Это значение может потребоваться для анализа стресса и решения проблем изгиба. Он также может быть получен из данной геометрии профиля или классификации, и поэтому это всего лишь необязательная функция, допускающая явное описание. Например, измеряется в мм."
 
-#:IFC.xml:44204
-msgid "WireLoopLength"
-msgstr "Длина WireLoopth"
+#:IFC.xml:32205
+msgid "MinimumSectionModulusY"
+msgstr "Минимальный модульный"
 
-msgid "WireLoopLength_DEFINITION"
-msgstr "Длина петли крепления провода."
+msgid "MinimumSectionModulusY_DEFINITION"
+msgstr "Изгибающее сопротивление к оси Y в точке с минимальным значением z. Например, измеряется в мм3."
 
-#:IFC.xml:44210
-msgid "Pset_ElementComponentCommon"
-msgstr "Элемент-компонент Pset"
+#:IFC.xml:32210
+msgid "MinimumSectionModulusZ"
+msgstr "MinimumSectionModulusZ"
 
-msgid "Pset_ElementComponentCommon_DEFINITION"
-msgstr "Набор общих свойств элементов компонента, особенно дискретных аксессуаров, а также крепежных элементов, арматурных элементов или других типов компонентов ."
+msgid "MinimumSectionModulusZ_DEFINITION"
+msgstr "Изгибающее сопротивление к оси zs в точке с минимальным значением ys в mm3."
 
-#:IFC.xml:44211
-msgid "CorrosionTreatment"
-msgstr "Коррозионная терапия"
+#:IFC.xml:32215
+msgid "MomentOfInertiaY"
+msgstr "MomentOfInertiaY"
 
-msgid "CorrosionTreatment_DEFINITION"
-msgstr "Определяет обработку коррозии для металлических компонентов. Это свойство предоставляется в том случае, если требование должно быть выражено независимо от материальной спецификации и b как простое заявление требований, а не элемент обработки конструкции мастерской."
+msgid "MomentOfInertiaY_DEFINITION"
+msgstr "Момент инерции о сепарации инерции на второй момент области о сепаратизме .Например, в мм4."
 
-#:IFC.xml:44216
-msgid "DeliveryType"
-msgstr "Тип доставки"
+#:IFC.xml:32220
+msgid "MomentOfInertiaYZ"
+msgstr "MomentOfInertiaYZ"
 
-msgid "DeliveryType_DEFINITION"
-msgstr "Определяет, как аксессуар будет доставлен на сайт."
+msgid "MomentOfInertiaYZ_DEFINITION"
+msgstr "Moment of inertia about ys and zs product moment of area ."
 
-#:IFC.xml:44232
-msgid "Pset_FastenerWeld"
-msgstr "Pset FastenerWeld"
+#:IFC.xml:32225
+msgid "MomentOfInertiaZ"
+msgstr "MomentOfInertiaZ"
 
-msgid "Pset_FastenerWeld_DEFINITION"
-msgstr "Свойства, относящиеся к сварным соединениям."
+msgid "MomentOfInertiaZ_DEFINITION"
+msgstr "Момент инерции около zs второй момент области, около zs . Например, измеряется в мм4"
 
-#:IFC.xml:44233
-msgid "a"
-msgstr "а"
+#:IFC.xml:32235
+msgid "PlasticShapeFactorY"
+msgstr "Пластиковое производство"
 
-msgid "a_DEFINITION"
-msgstr "Измерьте величину в соответствии с ISO 2553"
+msgid "PlasticShapeFactorY_DEFINITION"
+msgstr "Соотношение емкости момента пластмасс и эластичного изгиба по отношению к оси анализа сечения."
 
-#:IFC.xml:44238
-msgid "c"
-msgstr "с"
+#:IFC.xml:32240
+msgid "PlasticShapeFactorZ"
+msgstr "Пластиковый факторZ"
 
-msgid "c_DEFINITION"
-msgstr "Измерьте c в соответствии с ISO 2553"
+msgid "PlasticShapeFactorZ_DEFINITION"
+msgstr "Соотношение емкости момента пластического и эластичного изгиба по отношению к оси анализа сечений."
 
-#:IFC.xml:44243
-msgid "d"
-msgstr "д"
+#:IFC.xml:32245
+msgid "ShearAreaY"
+msgstr "Ошибочное поле"
 
-msgid "d_DEFINITION"
-msgstr "Измерение d в соответствии с ISO 2553"
+msgid "ShearAreaY_DEFINITION"
+msgstr "Область профиля для расчета срезового напряжения за счет срез силы, параллельной оси анализа сечения. Например, в мм2 измеряемая область срез должна быть неотрицательной."
 
-#:IFC.xml:44248
-msgid "e"
-msgstr "е"
+#:IFC.xml:32250
+msgid "ShearAreaZ"
+msgstr "ShearAreaZ"
 
-msgid "e_DEFINITION"
-msgstr "Измерение e в соответствии с ISO 2553"
+msgid "ShearAreaZ_DEFINITION"
+msgstr "Область профиля для расчета срезового напряжения при срез силы, параллельной оси анализа сечения. Например, измеряется в мм2."
 
-#:IFC.xml:44253
-msgid "Intermittent"
-msgstr "Периодичность"
+#:IFC.xml:32255
+msgid "ShearCentreY"
+msgstr "Центр Ножей"
 
-msgid "Intermittent_DEFINITION"
-msgstr "Если филе сваривается, то прерывается или нет"
+msgid "ShearCentreY_DEFINITION"
+msgstr "Местоположение профиля срезного центра, измеряемого вдоль ов."
 
-#:IFC.xml:44258
-msgid "l"
-msgstr "т"
+#:IFC.xml:32260
+msgid "ShearCentreZ"
+msgstr "Центр опор Z"
 
-msgid "l_DEFINITION"
-msgstr "Измерьте l в соответствии с ISO 2553"
+msgid "ShearCentreZ_DEFINITION"
+msgstr "Местоположение профиля срезного центра, измеряемого вдоль zs."
 
-#:IFC.xml:44263
-msgid "n"
-msgstr "п"
+#:IFC.xml:32265
+msgid "ShearDeformationAreaY"
+msgstr "Деформация орехов"
 
-msgid "n_DEFINITION"
-msgstr "Укажите, может ли пользователь использовать защиту N или нет. При утверждении обоих свойств N Protection 50 и N Protection 100 значение N Protection Select установлено в значение TRUE. Собственность утверждается только в том случае, если собственность N Protection утверждается."
+msgid "ShearDeformationAreaY_DEFINITION"
+msgstr "Площадь профиля для расчета срезной деформации из-за срез силы, параллельной дате. Например, в мм2 измеряемая площадь деформации срез должна быть неотрицательной."
 
-#:IFC.xml:44268
-msgid "Process"
-msgstr "Обработка"
+#:IFC.xml:32270
+msgid "ShearDeformationAreaZ"
+msgstr "Деформация орехов Z"
 
-msgid "Process_DEFINITION"
-msgstr "Эталонное число процесса сварки в соответствии с ISO 4063, длинный код до трех цифр"
+msgid "ShearDeformationAreaZ_DEFINITION"
+msgstr "Площадь профиля для расчета срезной деформации из-за срез силы, параллельной zs. Например, измеряется в мм2."
 
-#:IFC.xml:44273
-msgid "ProcessName"
-msgstr "Имя Процесса"
+#:IFC.xml:32275
+msgid "TorsionalConstantX"
+msgstr "Нагруженная Константа"
 
-msgid "ProcessName_DEFINITION"
-msgstr "Название процесса сварки. Альтернатива свойству числового процесса."
+msgid "TorsionalConstantX_DEFINITION"
+msgstr "Точная константа с крутящим моментом около х (например, в мм4."
 
-#:IFC.xml:44278
-msgid "s"
-msgstr "с"
+#:IFC.xml:32280
+msgid "TorsionalSectionModulus"
+msgstr "Нагрудник"
 
-msgid "s_DEFINITION"
-msgstr "Измерение s в соответствии с ISO 2553"
+msgid "TorsionalSectionModulus_DEFINITION"
+msgstr "Сопротивление растяжению х , например, в мм3."
 
-#:IFC.xml:44283
-msgid "Staggered"
-msgstr "Ограбленные"
+#:IFC.xml:32285
+msgid "WarpingConstant"
+msgstr "Константа WarpingConstant"
 
-msgid "Staggered_DEFINITION"
-msgstr "Если периодические сварные сварки, ошеломляющие или не ошеломленные"
-
-#:IFC.xml:44288
-msgid "Surface1"
-msgstr "Поверхность1"
-
-msgid "Surface1_DEFINITION"
-msgstr "Аппарат сварных швов — плоскость , изогнутая или пустая ."
-
-#:IFC.xml:44293
-msgid "Surface2"
-msgstr "Поверхность2"
-
-msgid "Surface2_DEFINITION"
-msgstr "Surface1."
-
-#:IFC.xml:44298
-msgid "Type1"
-msgstr "Type1"
-
-msgid "Type1_DEFINITION"
-msgstr "Тип сварного шва в соответствии с ISO 2553. Примечание: комбинированные швы даются двумя соответствующими символами в направлении нормальной оси системы координат. Например, X сварных швов задается Типом 1 V и Типом 2 V ."
-
-#:IFC.xml:44303
-msgid "Type2"
-msgstr "Type2"
-
-msgid "Type2_DEFINITION"
-msgstr "См. Type1."
-
-#:IFC.xml:44308
-msgid "z"
-msgstr "z"
-
-msgid "z_DEFINITION"
-msgstr "Измерение z в соответствии с ISO 2553"
-
-#:IFC.xml:44314
-msgid "Pset_MechanicalFastenerAnchorBolt"
-msgstr "Механическая стрела Pset"
-
-msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
-msgstr "Свойства, общие для разных типов якорных болтов."
-
-#:IFC.xml:44315
-msgid "AnchorBoltDiameter"
-msgstr "Диаметр якорной болты"
-
-msgid "AnchorBoltDiameter_DEFINITION"
-msgstr "Номинальный диаметр шарниров s ."
-
-#:IFC.xml:44320
-msgid "AnchorBoltLength"
-msgstr "Длина якорной Болты"
-
-msgid "AnchorBoltLength_DEFINITION"
-msgstr "Длина якорного болта."
-
-#:IFC.xml:44325
-msgid "AnchorBoltProtrusionLength"
-msgstr "Протрузионная длина якорной Болты"
-
-msgid "AnchorBoltProtrusionLength_DEFINITION"
-msgstr "Длина выступающей части якорного болта."
-
-#:IFC.xml:44330
-msgid "AnchorBoltThreadLength"
-msgstr "Длина якорной BoltThreadth"
-
-msgid "AnchorBoltThreadLength_DEFINITION"
-msgstr "Длина резьбовой части якорной болта."
-
-#:IFC.xml:44336
-msgid "Pset_MechanicalFastenerBolt"
-msgstr "Механическая стрелка Pset"
-
-msgid "Pset_MechanicalFastenerBolt_DEFINITION"
-msgstr "Свойства, связанные с креплениями типа. Можно предоставить свойства всего комплекта с болтами, шайбами и гайками. Заметьте, как правило, не обязательно передавать эти свойства в случае со стандартными болтами."
-
-#:IFC.xml:44337
-msgid "HeadShape"
-msgstr "Форма головы"
-
-msgid "HeadShape_DEFINITION"
-msgstr "Форма болтов головой напр. шестиугольник , Контрсунк , Сыр ."
-
-#:IFC.xml:44342
-msgid "KeyShape"
-msgstr "Форма клавиш"
-
-msgid "KeyShape_DEFINITION"
-msgstr "Если применимо, форма головы S слот, например слот , Аллен ."
-
-#:IFC.xml:44347
-msgid "NutsCount"
-msgstr "НутсСчет"
-
-msgid "NutsCount_DEFINITION"
-msgstr "Количество орехов для крепления на один болт"
-
-#:IFC.xml:44352
-msgid "NutShape"
-msgstr "НутШейф"
-
-msgid "NutShape_DEFINITION"
-msgstr "Форма ореха, напр. шестиугольник , шапка , Крыло ,"
-
-#:IFC.xml:44357
-msgid "ThreadDiameter"
-msgstr "Диаметр потока"
-
-msgid "ThreadDiameter_DEFINITION"
-msgstr "Номинальный диаметр нитки, если отличается от диаметра болта"
-
-#:IFC.xml:44362
-msgid "ThreadLength"
-msgstr "Длина потока"
-
-msgid "ThreadLength_DEFINITION"
-msgstr "Номинальная длина потока"
-
-#:IFC.xml:44367
-msgid "WashersCount"
-msgstr "Очистка"
-
-msgid "WashersCount_DEFINITION"
-msgstr "Количество шайб для установки на один болт"
-
-#:IFC.xml:44372
-msgid "WasherShape"
-msgstr "Мягкая Форма"
-
-msgid "WasherShape_DEFINITION"
-msgstr "Форма шайб, например Стандарт , Площадь"
+msgid "WarpingConstant_DEFINITION"
+msgstr "Противоположная константа профиля для крутящего действия. Например, измеряется в мм6."
 
