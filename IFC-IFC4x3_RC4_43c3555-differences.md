@@ -1,6 +1,6 @@
 # Express schema differences
 
-70 items
+69 items
 
 
 ### Missing data
@@ -48,7 +48,7 @@
 
 ### Entity definitions
 
-29 items
+28 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                     | IFC.exp                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -66,7 +66,6 @@
 | IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                     | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                  |
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                           | ['PlacesObject', 'ReferencedByPlacements']                                                      |
 | IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                            |
-| IfcPolygonalFaceSet.Faces                    | Faces : list[1:?] of IfcIndexedPolygonalFace                                               | Faces : set[1:?] of IfcIndexedPolygonalFace                                                     |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                       |
 | IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                              |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                               |
