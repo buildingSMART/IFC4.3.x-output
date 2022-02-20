@@ -9,181 +9,605 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcCostResource.pot\n"
-"X-Crowdin-File-ID: 34\n"
+"X-Crowdin-File: /master/IfcActorResource.pot\n"
+"X-Crowdin-File-ID: 20\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-20 14:57\n"
 
-#:IFC.xml:3310
-msgid "IfcAppliedValue"
-msgstr "IfcAppliedValue"
+#:IFC.xml:23
+msgid "IfcActorRole"
+msgstr "IfcActorRole"
 
-msgid "IfcAppliedValue_DEFINITION"
-msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
+msgid "IfcActorRole_DEFINITION"
+msgstr "该实体指的是由一个行为者履行的角色，无论是个人、一个组织还是与一个组织有关的人。 注意角色属性枚举值的角色列表永远不会完整。 因此，使用枚举值USERDEFINED，用户可以提供属性用户定义角色的任何角色。 根据ISO 10303 41中界定的组织作用和个人作用改编的注实体：IFC1.5.1中的新实体。"
 
-#:IFC.xml:3355
-msgid "IfcAppliedValue_UnitBasis"
-msgstr "单位基础"
-
-msgid "IfcAppliedValue_UnitBasis_DEFINITION"
-msgstr "单位成本所依据的计量单位数。 注以及通常预期的尺寸单位，如长度、面积、体积等。 成本可以基于需要界定的计量单位，如sack、dr、pallet、item等。 单位成本可以根据比基本措施的单一数值或多或少的数量计算。 例如，木材每X米的单位成本率可能是X1的电缆、管道和许多其他物品的单位成本率。 基数可能是整数或实际值。 请注意，在适用成本按单位数量计算的所有情况下都应说明这一属性。 即使在使用某一物品价格的情况下，也可以断言这一点。 在这种情况下，单位成本基准应按项目或同等定义确定。"
-
-#:IFC.xml:3367
-msgid "IfcAppliedValue_Components"
-msgstr "组件"
-
-msgid "IfcAppliedValue_Components_DEFINITION"
-msgstr "计算附加值的可选组件值。"
-
-#:IFC.xml:3379
-msgid "IfcAppliedValue_HasExternalReference"
+#:IFC.xml:89
+msgid "IfcActorRole_HasExternalReference"
 msgstr "HasExternalReference"
 
-msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
-msgstr "引用外部引用，例如与[[IfcAppliedValue]相关联的库、分类或文档信息。 .更改 ifc2x4 IFC4 变换新反向属性。"
+msgid "IfcActorRole_HasExternalReference_DEFINITION"
+msgstr "参考外部信息，例如与行为者角色相关的库、分类或文档信息。更改ifc2x4 IFC4 变异新反向属性。"
 
-#:IFC.xml:3311
-msgid "IfcAppliedValue_ApplicableDate"
-msgstr "适用日期"
-
-msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
-msgstr "应用值的适用日期或起始日期。更改ifc2x4 IFC4 变异类型从 IfcDateTimeSelect."
-
-#:IFC.xml:3316
-msgid "IfcAppliedValue_AppliedValue"
-msgstr "已应用价值"
-
-msgid "IfcAppliedValue_AppliedValue_DEFINITION"
-msgstr "应用数值的范围或数量或数量。"
-
-#:IFC.xml:3321
-msgid "IfcAppliedValue_ArithmeticOperator"
-msgstr "算术运算符"
-
-msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
-msgstr "计算运算符应用于组件值。"
-
-#:IFC.xml:3326
-msgid "IfcAppliedValue_Category"
-msgstr "类别"
-
-msgid "IfcAppliedValue_Category_DEFINITION"
-msgstr "说明所使用的成本类型。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 为了允许任何类型的成本值，分配了[[IfcLabel]] 数据类型。 在没有任何明确界定的标准的情况下， 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。"
-
-#:IFC.xml:3331
-msgid "IfcAppliedValue_Condition"
-msgstr "条件"
-
-msgid "IfcAppliedValue_Condition_DEFINITION"
-msgstr "适用成本价值的条件。 例如，在提交投标书的情况下，这可能是指可能当选或不当选的选择。"
-
-#:IFC.xml:3336
-msgid "IfcAppliedValue_Description"
+#:IFC.xml:24
+msgid "IfcActorRole_Description"
 msgstr "描述"
 
-msgid "IfcAppliedValue_Description_DEFINITION"
-msgstr "可能应用有关成本价值的额外信息的描述。"
+msgid "IfcActorRole_Description_DEFINITION"
+msgstr "关于行为者所起作用的性质的文字说明。"
 
-#:IFC.xml:3341
-msgid "IfcAppliedValue_FixedUntilDate"
-msgstr "固定到日期"
+#:IFC.xml:29
+msgid "IfcActorRole_Role"
+msgstr "作用"
 
-msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
-msgstr "应用值适用的截止日期。从 IfcDateTimeSelect改变了 ifc2x4 IFC4 变异类型。"
+msgid "IfcActorRole_Role_DEFINITION"
+msgstr "角色的名称。 如果角色有值 USERDEFINED，那么用户定义的角色应作为属性用户定义角色的一个值。"
 
-#:IFC.xml:3346
-msgid "IfcAppliedValue_Name"
+#:IFC.xml:34
+msgid "IfcActorRole_UserDefinedRole"
+msgstr "用户定义的角色"
+
+msgid "IfcActorRole_UserDefinedRole_DEFINITION"
+msgstr "允许指定用户定义的角色超过由类型 [[IfcRoleEnum]]角色属性提供的枚举值。 当为属性用户定义角色提供一个值时，属性角色应具有枚举值的 USERDEFINED。"
+
+#:IFC.xml:101
+msgid "IfcActorSelect"
+msgstr "IfcActorselect"
+
+#:IFC.xml:102
+msgid "IfcAddress"
+msgstr "IfcAddress"
+
+msgid "IfcAddress_DEFINITION"
+msgstr "这个抽象的实体代表各种邮政和电信地址。 从ISO 10303 41中界定的地址改编的注实体, IFC1.5.1中的新实体。"
+
+#:IFC.xml:120
+msgid "IfcAddress_OfOrganization"
+msgstr "OfOrganization"
+
+msgid "IfcAddress_OfOrganization_DEFINITION"
+msgstr "与地址相关的本组织的反向关系。"
+
+#:IFC.xml:134
+msgid "IfcAddress_OfPerson"
+msgstr "Ofpersonon"
+
+msgid "IfcAddress_OfPerson_DEFINITION"
+msgstr "与地址关联的人的反向关系。"
+
+#:IFC.xml:103
+msgid "IfcAddress_Description"
+msgstr "描述"
+
+msgid "IfcAddress_Description_DEFINITION"
+msgstr "与地址性质有关的案文。"
+
+#:IFC.xml:108
+msgid "IfcAddress_Purpose"
+msgstr "目的"
+
+msgid "IfcAddress_Purpose_DEFINITION"
+msgstr "指明地址的逻辑位置。"
+
+#:IFC.xml:113
+msgid "IfcAddress_UserDefinedPurpose"
+msgstr "用户定义的目的"
+
+msgid "IfcAddress_UserDefinedPurpose_DEFINITION"
+msgstr "允许指定地址的用户特定目的，超出类型[[IfcAddressTypeEnum]]的目的属性提供的枚举值。 当为属性UserDefinedPurpose提供一个值时，属性的目的必须具有枚举值的 USERDEFINED。"
+
+#:IFC.xml:148
+msgid "IfcAddressTypeEnum"
+msgstr "IfcAddressTypeEnum"
+
+msgid "IfcAddressTypeEnum_DEFINITION"
+msgstr "此列举指明地址的逻辑位置，IF2x中的新列举。项目OFFICE 一个办公室地址。SITE 一个站点地址。 HOME 一个主地址。DISTRIBUTIONPINT是一个邮政分发点地址。UsERDEFINED 一个用户定义要提供的地址类型。"
+
+#:IFC.xml:149
+msgid "IfcAddressTypeEnum_DISTRIBUTIONPOINT"
+msgstr "脱机"
+
+msgid "IfcAddressTypeEnum_DISTRIBUTIONPOINT_DEFINITION"
+msgstr "邮政分销点地址。"
+
+#:IFC.xml:150
+msgid "IfcAddressTypeEnum_HOME"
+msgstr "主屏幕"
+
+msgid "IfcAddressTypeEnum_HOME_DEFINITION"
+msgstr "主页地址。"
+
+#:IFC.xml:151
+msgid "IfcAddressTypeEnum_OFFICE"
+msgstr "关闭"
+
+msgid "IfcAddressTypeEnum_OFFICE_DEFINITION"
+msgstr "办公地址。"
+
+#:IFC.xml:152
+msgid "IfcAddressTypeEnum_SITE"
+msgstr "站点"
+
+msgid "IfcAddressTypeEnum_SITE_DEFINITION"
+msgstr "站点地址。"
+
+#:IFC.xml:153
+msgid "IfcAddressTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcAddressTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义要提供的地址类型。"
+
+#:IFC.xml:155
+msgid "IfcOrganization"
+msgstr "IfcOrganization"
+
+msgid "IfcOrganization_DEFINITION"
+msgstr "一个具有公司身份的命名和结构化的组。 注意[[IfcOrganization]] 之间的关系，就像公司内部部门之间的关系一样，可以使用客观的关系 [[IfcOrganizationRelationship]] 来表示。 IOC1.5.1..change ifc2x4 IFC4 变异属性Id 更名为身份识别，从ISO 10303 41界定的组织改装的注实体."
+
+#:IFC.xml:41
+msgid "IfcOrganization_Roles"
+msgstr "角色"
+
+msgid "IfcOrganization_Roles_DEFINITION"
+msgstr "本组织发挥的作用。"
+
+#:IFC.xml:120
+msgid "IfcOrganization_Addresses"
+msgstr "地址"
+
+msgid "IfcOrganization_Addresses_DEFINITION"
+msgstr "一个组织的邮政和电信地址。注可能有几个地址涉及一个组织。"
+
+#:IFC.xml:187
+msgid "IfcOrganization_Relates"
+msgstr "关联性"
+
+msgid "IfcOrganization_Relates_DEFINITION"
+msgstr "关系关系的反向关系为 [[IfcOrganizationRelationship]]。"
+
+#:IFC.xml:201
+msgid "IfcOrganization_IsRelatedBy"
+msgstr "相关者"
+
+msgid "IfcOrganization_IsRelatedBy_DEFINITION"
+msgstr "关系关系的反向关系 [[IfcOrganizationRelationship]]。"
+
+#:IFC.xml:215
+msgid "IfcOrganization_Engages"
+msgstr "参与"
+
+msgid "IfcOrganization_Engages_DEFINITION"
+msgstr "与[[IfcPersonAndOrganization]] 关系的反向关系，其中[[IfcOrganization]] 涉及的关系。"
+
+#:IFC.xml:156
+msgid "IfcOrganization_Description"
+msgstr "描述"
+
+msgid "IfcOrganization_Description_DEFINITION"
+msgstr "与组织性质有关的案文。"
+
+#:IFC.xml:161
+msgid "IfcOrganization_Identification"
+msgstr "1. 身份识别"
+
+msgid "IfcOrganization_Identification_DEFINITION"
+msgstr "2. 组织的身份。"
+
+#:IFC.xml:166
+msgid "IfcOrganization_Name"
 msgstr "名称"
 
-msgid "IfcAppliedValue_Name_DEFINITION"
-msgstr "给出成本值的名称或额外澄清。"
+msgid "IfcOrganization_Name_DEFINITION"
+msgstr "指该组织的字词或一组词语。"
 
-#:IFC.xml:3391
-msgid "IfcAppliedValueSelect"
-msgstr "IfcAppliedValueSelect"
+#:IFC.xml:229
+msgid "IfcOrganizationRelationship"
+msgstr "一. 组织关系"
 
-#:IFC.xml:3392
-msgid "IfcArithmeticOperatorEnum"
-msgstr "IfcArithmeticOperatorEnum"
+msgid "IfcOrganizationRelationship_DEFINITION"
+msgstr "[[IfcOrganizationRelationship]] 建立了一个相关组织与一个或多个相关组织之间的联系。 从ISO 10303 41界定的组织关系中改编的注实体。 IFC2x .change ifc2x4 IFC4 更改属性名称和描述提升到新的超级类型 [[IfcResourceLevelRelationship]] 。"
 
-msgid "IfcArithmeticOperatorEnum_DEFINITION"
-msgstr "[[IfcArithmeticOperatorEnum]] 指定了关系所隐含的算术操作形式，IFC2x2中的HISTORY 新枚举项。项目 ADD DULTIPLY MUBTRACT"
+#:IFC.xml:187
+msgid "IfcOrganizationRelationship_RelatingOrganization"
+msgstr "关联组织"
 
-#:IFC.xml:3393
-msgid "IfcArithmeticOperatorEnum_ADD"
-msgstr "添加"
+msgid "IfcOrganizationRelationship_RelatingOrganization_DEFINITION"
+msgstr "组织是组织间关系的相关部分。"
 
-msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
-msgstr "添加"
+#:IFC.xml:201
+msgid "IfcOrganizationRelationship_RelatedOrganizations"
+msgstr "相关组织"
 
-#:IFC.xml:3394
-msgid "IfcArithmeticOperatorEnum_DIVIDE"
-msgstr "DIVIDE"
+msgid "IfcOrganizationRelationship_RelatedOrganizations_DEFINITION"
+msgstr "另一个或许是附属组织，它们是组织间关系的相关部分。"
 
-msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
-msgstr "DIVIDE"
+#:IFC.xml:232
+msgid "IfcPerson"
+msgstr "IfcPerson"
 
-#:IFC.xml:3395
-msgid "IfcArithmeticOperatorEnum_MULTIPLY"
-msgstr "MULTIPLY"
+msgid "IfcPerson_DEFINITION"
+msgstr "该实体代表一个个人，注意到许多国家都有关于在数据库中识别个人身份的立法。 虽然《国际金融公司模式》的意图是作为数据交换和分享的一项规范， 在某些情况下，国际金融公司的档案可能被视为一个能够根据这种立法确定某人身份的数据库。 用户应当了解可能适用于使用金融公司档案的地方的立法的局限性。 从ISO 10303 41界定的人改装的注实体。 IFC1.5.1. .change ifc2x4 IFC4 变异属性Id 更名为标识。 鉴于规则放宽了在提供身份识别资料时允许遗漏姓名的规定。"
 
-msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
-msgstr "MULTIPLY"
+#:IFC.xml:53
+msgid "IfcPerson_Roles"
+msgstr "角色"
 
-#:IFC.xml:3396
-msgid "IfcArithmeticOperatorEnum_SUBTRACT"
+msgid "IfcPerson_Roles_DEFINITION"
+msgstr "个人扮演的角色。"
+
+#:IFC.xml:134
+msgid "IfcPerson_Addresses"
+msgstr "地址"
+
+msgid "IfcPerson_Addresses_DEFINITION"
+msgstr "一个人的邮政和电信地址。注一个人可能有几个地址。"
+
+#:IFC.xml:291
+msgid "IfcPerson_EngagedIn"
+msgstr "参与者："
+
+msgid "IfcPerson_EngagedIn_DEFINITION"
+msgstr "与 [[IfcPersonAndOrganization]] 关系的反向关系：[[IfcPerson]] 关系。"
+
+#:IFC.xml:233
+msgid "IfcPerson_FamilyName"
+msgstr "FamilyName"
+
+msgid "IfcPerson_FamilyName_DEFINITION"
+msgstr "可确认个人家庭身份的姓名。 根据地理位置和文化情况，姓氏可以作为姓氏的第一个或最后一个组成部分出现。"
+
+#:IFC.xml:238
+msgid "IfcPerson_GivenName"
+msgstr "赠品名称"
+
+msgid "IfcPerson_GivenName_DEFINITION"
+msgstr "一个人在家庭中的名称，他或她可以通过这种名声得到承认。 根据地理位置和文化不同，名称中的注既可以是名字的第一个也可以是最后一个组成部分。"
+
+#:IFC.xml:243
+msgid "IfcPerson_Identification"
+msgstr "1. 身份识别"
+
+msgid "IfcPerson_Identification_DEFINITION"
+msgstr "3. 确定有关人员。"
+
+#:IFC.xml:248
+msgid "IfcPerson_MiddleNames"
+msgstr "中间名"
+
+msgid "IfcPerson_MiddleNames_DEFINITION"
+msgstr "给能够将其身份识别的人的其他姓名与可能有相同或类似家庭和姓名的人的姓名不同。 注中的姓名通常不用于熟悉的来文，但可以断言在必要时提供特定人员的补充身份。 如果当事人的姓氏通常发生在地理区域，那么这种做法可能特别有用。"
+
+#:IFC.xml:253
+msgid "IfcPerson_PrefixTitles"
+msgstr "前缀标题"
+
+msgid "IfcPerson_PrefixTitles_DEFINITION"
+msgstr "单词或一组词，指明个人的社会地位或专业地位，并出现在他的名字上。"
+
+#:IFC.xml:258
+msgid "IfcPerson_SuffixTitles"
+msgstr "后缀标题"
+
+msgid "IfcPerson_SuffixTitles_DEFINITION"
+msgstr "单词或一组单词，指明个人的社会地位或专业地位，并出现在他的名字之后。"
+
+#:IFC.xml:317
+msgid "IfcPersonAndOrganization"
+msgstr "IfcPersonAndOrganization"
+
+msgid "IfcPersonAndOrganization_DEFINITION"
+msgstr "该实体是代表一个组织行事的人。 根据ISO 10303 41中界定的个人和组织改装的注实体：IFC1.5.1中的新实体。"
+
+#:IFC.xml:65
+msgid "IfcPersonAndOrganization_Roles"
+msgstr "角色"
+
+msgid "IfcPersonAndOrganization_Roles_DEFINITION"
+msgstr "个人在一个组织中发挥的作用。 这些作用可能不同于在人的作用，而这种作用可能在没有组织背景的情况下得到肯定。"
+
+#:IFC.xml:215
+msgid "IfcPersonAndOrganization_TheOrganization"
+msgstr "TheOrganization"
+
+msgid "IfcPersonAndOrganization_TheOrganization_DEFINITION"
+msgstr "与该人有关系的组织。"
+
+#:IFC.xml:291
+msgid "IfcPersonAndOrganization_ThePerson"
+msgstr "ThePerson"
+
+msgid "IfcPersonAndOrganization_ThePerson_DEFINITION"
+msgstr "与该组织有关系的人。"
+
+#:IFC.xml:345
+msgid "IfcRoleEnum"
+msgstr "IfcRoleEnum"
+
+msgid "IfcRoleEnum_DEFINITION"
+msgstr "此列举界定了一个行为者可能发挥的作用，IFC1.5中的新型角色。更正了如果2x4 IFC4 变更拼写，则更改了ENGINEER。 已经供应的物品，如果是供应的物品，如果是供应的物品，则供应的物品必须是民用的，则供应的物品必须是民用的，必须提供的数值。"
+
+#:IFC.xml:346
+msgid "IfcRoleEnum_ARCHITECT"
+msgstr "ARCHITECT"
+
+msgid "IfcRoleEnum_ARCHITECT_DEFINITION"
+msgstr "ARCHITECT"
+
+#:IFC.xml:347
+msgid "IfcRoleEnum_BUILDINGOPERATOR"
+msgstr "BUILDINGOPERATOR"
+
+msgid "IfcRoleEnum_BUILDINGOPERATOR_DEFINITION"
+msgstr "BUILDINGOPERATOR"
+
+#:IFC.xml:348
+msgid "IfcRoleEnum_BUILDINGOWNER"
+msgstr "BUILDINGOWNER"
+
+msgid "IfcRoleEnum_BUILDINGOWNER_DEFINITION"
+msgstr "BUILDINGOWNER"
+
+#:IFC.xml:349
+msgid "IfcRoleEnum_CIVILENGINEER"
+msgstr "公民头像"
+
+msgid "IfcRoleEnum_CIVILENGINEER_DEFINITION"
+msgstr "公民头像"
+
+#:IFC.xml:350
+msgid "IfcRoleEnum_CLIENT"
+msgstr "点击"
+
+msgid "IfcRoleEnum_CLIENT_DEFINITION"
+msgstr "点击"
+
+#:IFC.xml:351
+msgid "IfcRoleEnum_COMMISSIONINGENGINEER"
+msgstr "常设委员会"
+
+msgid "IfcRoleEnum_COMMISSIONINGENGINEER_DEFINITION"
+msgstr "常设委员会"
+
+#:IFC.xml:352
+msgid "IfcRoleEnum_CONSTRUCTIONMANAGER"
+msgstr "劝说管理"
+
+msgid "IfcRoleEnum_CONSTRUCTIONMANAGER_DEFINITION"
+msgstr "劝说管理"
+
+#:IFC.xml:353
+msgid "IfcRoleEnum_CONSULTANT"
+msgstr "已连接"
+
+msgid "IfcRoleEnum_CONSULTANT_DEFINITION"
+msgstr "已连接"
+
+#:IFC.xml:354
+msgid "IfcRoleEnum_CONTRACTOR"
+msgstr "联系人"
+
+msgid "IfcRoleEnum_CONTRACTOR_DEFINITION"
+msgstr "联系人"
+
+#:IFC.xml:355
+msgid "IfcRoleEnum_COSTENGINEER"
+msgstr "炼钢厂公司"
+
+msgid "IfcRoleEnum_COSTENGINEER_DEFINITION"
+msgstr "炼钢厂公司"
+
+#:IFC.xml:356
+msgid "IfcRoleEnum_ELECTRICALENGINEER"
+msgstr "精选"
+
+msgid "IfcRoleEnum_ELECTRICALENGINEER_DEFINITION"
+msgstr "精选"
+
+#:IFC.xml:357
+msgid "IfcRoleEnum_ENGINEER"
+msgstr "蓝图"
+
+msgid "IfcRoleEnum_ENGINEER_DEFINITION"
+msgstr "蓝图"
+
+#:IFC.xml:358
+msgid "IfcRoleEnum_FACILITIESMANAGER"
+msgstr "FACILITIES MANAGER"
+
+msgid "IfcRoleEnum_FACILITIESMANAGER_DEFINITION"
+msgstr "FACILITIES MANAGER"
+
+#:IFC.xml:359
+msgid "IfcRoleEnum_FIELDCONSTRUCTIONMANAGER"
+msgstr "外星座"
+
+msgid "IfcRoleEnum_FIELDCONSTRUCTIONMANAGER_DEFINITION"
+msgstr "外星座"
+
+#:IFC.xml:360
+msgid "IfcRoleEnum_MANUFACTURER"
+msgstr "MANUFACTURER"
+
+msgid "IfcRoleEnum_MANUFACTURER_DEFINITION"
+msgstr "MANUFACTURER"
+
+#:IFC.xml:361
+msgid "IfcRoleEnum_MECHANICALENGINEER"
+msgstr "MECHANICANGEER"
+
+msgid "IfcRoleEnum_MECHANICALENGINEER_DEFINITION"
+msgstr "MECHANICANGEER"
+
+#:IFC.xml:362
+msgid "IfcRoleEnum_OWNER"
+msgstr "我的"
+
+msgid "IfcRoleEnum_OWNER_DEFINITION"
+msgstr "我的"
+
+#:IFC.xml:363
+msgid "IfcRoleEnum_PROJECTMANAGER"
+msgstr "PROJECTmanAGER"
+
+msgid "IfcRoleEnum_PROJECTMANAGER_DEFINITION"
+msgstr "PROJECTmanAGER"
+
+#:IFC.xml:364
+msgid "IfcRoleEnum_RESELLER"
+msgstr "重生"
+
+msgid "IfcRoleEnum_RESELLER_DEFINITION"
+msgstr "重生"
+
+#:IFC.xml:365
+msgid "IfcRoleEnum_STRUCTURALENGINEER"
+msgstr "结构"
+
+msgid "IfcRoleEnum_STRUCTURALENGINEER_DEFINITION"
+msgstr "结构"
+
+#:IFC.xml:366
+msgid "IfcRoleEnum_SUBCONTRACTOR"
 msgstr "订阅"
 
-msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
+msgid "IfcRoleEnum_SUBCONTRACTOR_DEFINITION"
 msgstr "订阅"
 
-#:IFC.xml:3398
-msgid "IfcCostValue"
-msgstr "IfcCostValue"
+#:IFC.xml:367
+msgid "IfcRoleEnum_SUPPLIER"
+msgstr "支持"
 
-msgid "IfcCostValue_DEFINITION"
-msgstr "[[IfcCostValue]] 是影响金额的金额或价值。 每个实例 [[IfcCostValue]] 也可能有一个类别。可能有许多类型的成本值可以确定。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 以下定义了可适用于类别属性的某些成本类别 年度回报率Bonus 批量购买合同咨询； 估计成本； 安装利率； 劳力租赁； 清单价格维护材料间接邮费和包装损益购买租金修缮出售； 少量附加零部件储存合同折扣； 贸易运输废物补贴； 整个寿命； 没有任何明确的标准。 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。 在 IFC1.0 中的新实体"
+msgid "IfcRoleEnum_SUPPLIER_DEFINITION"
+msgstr "支持"
 
-#:IFC.xml:3485
-msgid "IfcCurrencyRelationship"
-msgstr "货币关系"
+#:IFC.xml:368
+msgid "IfcRoleEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcCurrencyRelationship_DEFINITION"
-msgstr "[[IfcCurrencyRelationship]] 界定了特定时间两种指定货币之间以及特定来源公布的汇率。 一个 [[IfcCurrencyRelationship]] 在可能需要用一种货币引用一个 [[IfcCostValue]] 作为另一种货币时使用 [[IfcCostValue]] 。 它考虑到以下事实：货币汇率可能因要求记录所用货币汇率的日期和时间以及公布汇率的来源而有所变化。 可能有许多来源，货币兑换现时汇率和固定汇率前期购买货币的战略也不同。 货币交易的来源定义为一个 [[IfcLibraryInformation]] 的实例，其中包括一个名称和一个URL。 在 IFC2x2. 更改ifc2x4 IFC4 更改子键入的 [[IfcResourceLevelRelationship]] 属性顺序已更改。"
+msgid "IfcRoleEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义要提供的值。"
 
-#:IFC.xml:3498
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
-msgstr "关联货币单位"
+#:IFC.xml:370
+msgid "IfcTelecomAddress"
+msgstr "IfcTelecomAddress"
 
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
-msgstr "交易所来自的货币单位。 例如，在从英镑改为美元的情况下，相关的货币单位是英镑。"
+msgid "IfcTelecomAddress_DEFINITION"
+msgstr "这个实体是一个地址，应向其发送电话、电子邮件和其他形式的电信。 .更改ifc2x4 IFC4 更改属性消息。属性类型的WWHomePageURL兼容，从[IfcLabel]更改为[[IfcURIReference]] 。"
 
-#:IFC.xml:3510
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
-msgstr "关联的Monetary单位"
+#:IFC.xml:371
+msgid "IfcTelecomAddress_ElectronicMailAddresses"
+msgstr "ElectronicMail地址"
 
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
-msgstr "汇兑所得的货币单位。 例如，在从英镑转为美元的情况下，相关的货币单位是美元。"
+msgid "IfcTelecomAddress_ElectronicMailAddresses_DEFINITION"
+msgstr "可以接收邮件的电子邮件地址列表。"
 
-#:IFC.xml:3522
-msgid "IfcCurrencyRelationship_RateSource"
-msgstr "评分源"
+#:IFC.xml:376
+msgid "IfcTelecomAddress_FacsimileNumbers"
+msgstr "FacsimileNumbers"
 
-msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
-msgstr "获得汇率的来源。"
+msgid "IfcTelecomAddress_FacsimileNumbers_DEFINITION"
+msgstr "可以收到传真消息的传真号码列表。"
 
-#:IFC.xml:3486
-msgid "IfcCurrencyRelationship_ExchangeRate"
-msgstr "汇率"
+#:IFC.xml:381
+msgid "IfcTelecomAddress_MessagingIDs"
+msgstr "消息ID"
 
-msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
-msgstr "目前商定的相关货币单位金额的比率相当于货币关系中相关货币单位的单位金额。 例如，在从英镑兑换为美元的情况下，汇率的价值可为1.486美元(1英镑)。"
+msgid "IfcTelecomAddress_MessagingIDs_DEFINITION"
+msgstr "任何其他电信手段的ID或地址，例如即时消息、IP语音或文件传输协议。 通信协议用URI值表示方案命名，如irc、sip 或 ftp。"
 
-#:IFC.xml:3491
-msgid "IfcCurrencyRelationship_RateDateTime"
-msgstr "RateDateTime"
+#:IFC.xml:386
+msgid "IfcTelecomAddress_PagerNumber"
+msgstr "分页"
 
-msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
-msgstr "适用汇率的日期和时间。Ifc2x4 IFC4 变异类型从 IfcDateTimeSelect. 变异。属性是可选的。"
+msgid "IfcTelecomAddress_PagerNumber_DEFINITION"
+msgstr "可以接收分页消息的分页号码。"
+
+#:IFC.xml:391
+msgid "IfcTelecomAddress_TelephoneNumbers"
+msgstr "电话号码"
+
+msgid "IfcTelecomAddress_TelephoneNumbers_DEFINITION"
+msgstr "可接收电话信息的电话号码清单。"
+
+#:IFC.xml:396
+msgid "IfcTelecomAddress_WWWHomePageURL"
+msgstr "WWWHomePageURL"
+
+msgid "IfcTelecomAddress_WWWHomePageURL_DEFINITION"
+msgstr "该个人或组织的初步信息网页可在全世界范围内查找。 注意到一个人或一个组织在世界范围内的网址上的资料可分成若干页数和若干东道网址， 所有这些都可以联系在一起。 假定所有这类信息都可以从被称为该人或该组织主页的单一网页上查找。"
+
+#:IFC.xml:403
+msgid "Pset_Address"
+msgstr "Pset 地址"
+
+#:IFC.xml:404
+msgid "AddressLines"
+msgstr "地址行"
+
+msgid "AddressLines_DEFINITION"
+msgstr "地址行"
+
+#:IFC.xml:409
+msgid "Country"
+msgstr "国家"
+
+msgid "Country_DEFINITION"
+msgstr "国家"
+
+#:IFC.xml:414
+msgid "Description"
+msgstr "描述"
+
+msgid "Description_DEFINITION"
+msgstr "对象的描述。"
+
+#:IFC.xml:419
+msgid "InternalLocation"
+msgstr "内部位置"
+
+msgid "InternalLocation_DEFINITION"
+msgstr "内部位置"
+
+#:IFC.xml:424
+msgid "PostalBox"
+msgstr "邮政信箱"
+
+msgid "PostalBox_DEFINITION"
+msgstr "邮政信箱"
+
+#:IFC.xml:429
+msgid "PostalCode"
+msgstr "PostalCode"
+
+msgid "PostalCode_DEFINITION"
+msgstr "PostalCode"
+
+#:IFC.xml:434
+msgid "Purpose"
+msgstr "目的"
+
+msgid "Purpose_DEFINITION"
+msgstr "目的通常是列举一例。"
+
+#:IFC.xml:439
+msgid "Region"
+msgstr "地区"
+
+msgid "Region_DEFINITION"
+msgstr "地区"
+
+#:IFC.xml:444
+msgid "Town"
+msgstr "城市"
+
+msgid "Town_DEFINITION"
+msgstr "城市"
+
+#:IFC.xml:449
+msgid "UserDefinedPurpose"
+msgstr "用户定义的目的"
+
+msgid "UserDefinedPurpose_DEFINITION"
+msgstr "用户定义的目的"
 
