@@ -9,6 +9,8 @@
 * The Property 'Pset_Address.Town' has no definition
 * The Property 'Pset_Address.UserDefinedPurpose' has no definition
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
+* The Property 'Pset_BearingCommon.DisplacementAccommodated' has no definition
+* The Property 'Pset_BearingCommon.RotationAccommodated' has no definition
 * The Property 'Pset_BridgeCommon.StructureIndicator' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_1' has no definition
 * The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_3' has no definition
