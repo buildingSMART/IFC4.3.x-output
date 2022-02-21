@@ -9,181 +9,1171 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcCostResource.pot\n"
-"X-Crowdin-File-ID: 34\n"
+"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
+"X-Crowdin-File-ID: 86\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-21 16:14\n"
 
-#:IFC.xml:3264
-msgid "IfcAppliedValue"
-msgstr "IfcAppliedValue"
+#:IFC.xml:43663
+msgid "IfcBuildingElementPart"
+msgstr "IfcBuildingElementPart"
 
-msgid "IfcAppliedValue_DEFINITION"
-msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
+msgid "IfcBuildingElementPart_DEFINITION"
+msgstr "[[IfcBuildingElementPart]] 代表建筑元素的下属部件。 典型的使用例子包括预定混凝土的沙威奇墙壁，那里的图层可能有不同的几何形状。 在这种情况下，分层物质表现没有充分描述这一要素。 每个图层都由自己的实例 [[IfcBuildingElementPart]]代表，有自己的几何描述。 建筑元素组件的类型进一步由[[IfcBuildingElementPartType]] 的对应实例指定, 由 [[IfcRelDefinesByType]] 引用。 IFC2x2中的新实体。 hange ifc2x4 IFC4 变量已从IfcStructuralElementsDomain schema移动到IfcSharedComponentElement元素schema，并且超类型的兼容变更，属性已添加。"
 
-#:IFC.xml:3309
-msgid "IfcAppliedValue_UnitBasis"
-msgstr "单位基础"
+#:IFC.xml:43664
+msgid "IfcBuildingElementPart_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcAppliedValue_UnitBasis_DEFINITION"
-msgstr "单位成本所依据的计量单位数。 注以及通常预期的尺寸单位，如长度、面积、体积等。 成本可以基于需要界定的计量单位，如sack、dr、pallet、item等。 单位成本可以根据比基本措施的单一数值或多或少的数量计算。 例如，木材每X米的单位成本率可能是X1的电缆、管道和许多其他物品的单位成本率。 基数可能是整数或实际值。 请注意，在适用成本按单位数量计算的所有情况下都应说明这一属性。 即使在使用某一物品价格的情况下，也可以断言这一点。 在这种情况下，单位成本基准应按项目或同等定义确定。"
+msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
+msgstr "构建元素部件的子类型"
 
-#:IFC.xml:3321
-msgid "IfcAppliedValue_Components"
-msgstr "组件"
+#:IFC.xml:43671
+msgid "IfcBuildingElementPartType"
+msgstr "IfcBuildingElementPartType"
 
-msgid "IfcAppliedValue_Components_DEFINITION"
-msgstr "计算附加值的可选组件值。"
+msgid "IfcBuildingElementPartType_DEFINITION"
+msgstr "构件元件类型界定了共同财产组定义清单和建筑元件部分的表示图。 IFC4中的新实体。"
 
-#:IFC.xml:3333
-msgid "IfcAppliedValue_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:43672
+msgid "IfcBuildingElementPartType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
-msgstr "引用外部引用，例如与[[IfcAppliedValue]相关联的库、分类或文档信息。 .更改 ifc2x4 IFC4 变换新反向属性。"
+msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
+msgstr "构建元素部件的子类型"
 
-#:IFC.xml:3265
-msgid "IfcAppliedValue_ApplicableDate"
-msgstr "适用日期"
+#:IFC.xml:43679
+msgid "IfcBuildingElementPartTypeEnum"
+msgstr "IfcBuildingElementPartTypeEnum"
 
-msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
-msgstr "应用值的适用日期或起始日期。更改ifc2x4 IFC4 变异类型从 IfcDateTimeSelect."
+msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
+msgstr "这个枚举界定了不同类型的建筑要素，第四届国际商会中的新枚举就是如此。 物件装饰物。该部件提供了热绝缘，例如作为沙威奇墙壁墙壁板之间的隔热层或在墙壁中的感染。 PRECASTPANEL 这一部分是一个预制面板，通常是沙威奇墙壁面板中的内部或外部一层。 APRON 一种保护扫描的形式，包括木材、水泥、钻井、铺设或在停泊区和码头附近建造其他建筑，以防止破坏。 这是一块大型石块或水泥塑料，用来防止植被和断水等斜坡遭受侵蚀。 这些单元组合成课程层。 ISO 21650中的标注定义相对较大的石块或混凝土成型单位被选中以适应特定几何特性和密度。 SAFETYCAGE安全笼是一个圆形和垂直条形状的集合，可在固定梯子处加固，并安排工人在攀登梯子时将路径圈在一起。 此处所包含的梯子也称为笼子或钩子梯子。用户定义的配件。未定义配件。"
 
-#:IFC.xml:3270
-msgid "IfcAppliedValue_AppliedValue"
-msgstr "已应用价值"
+#:IFC.xml:43695
+msgid "IfcBuildingElementPartTypeEnum_APRON"
+msgstr "APRON"
 
-msgid "IfcAppliedValue_AppliedValue_DEFINITION"
-msgstr "应用数值的范围或数量或数量。"
+msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
+msgstr "一种保护扫描的形式，包括木材、混凝土、裂缝、铺面或在停泊区和码头附近建造其他建筑，以防止破坏。"
 
-#:IFC.xml:3275
-msgid "IfcAppliedValue_ArithmeticOperator"
-msgstr "算术运算符"
+#:IFC.xml:43696
+msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
+msgstr "ARMOURUNIT"
 
-msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
-msgstr "计算运算符应用于组件值。"
+msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
+msgstr "一块大型石块或水泥塑料，用来防止斜坡的侵蚀，例如重新布设和断水。 这些单元组合成课程层。 ISO 21650中的标注定义相对较大的石块或混凝土成型单位被选中以适应特定几何特性和密度。"
 
-#:IFC.xml:3280
-msgid "IfcAppliedValue_Category"
-msgstr "类别"
+#:IFC.xml:43697
+msgid "IfcBuildingElementPartTypeEnum_INSULATION"
+msgstr "配料"
 
-msgid "IfcAppliedValue_Category_DEFINITION"
-msgstr "说明所使用的成本类型。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 为了允许任何类型的成本值，分配了[[IfcLabel]] 数据类型。 在没有任何明确界定的标准的情况下， 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。"
+msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
+msgstr "这一部分提供了热绝缘，例如作为沙威奇墙壁壁板之间的隔绝层，或作为在墙壁中的感染。"
 
-#:IFC.xml:3285
-msgid "IfcAppliedValue_Condition"
-msgstr "条件"
+#:IFC.xml:43698
+msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcAppliedValue_Condition_DEFINITION"
-msgstr "适用成本价值的条件。 例如，在提交投标书的情况下，这可能是指可能当选或不当选的选择。"
+msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的配件。"
 
-#:IFC.xml:3290
-msgid "IfcAppliedValue_Description"
-msgstr "描述"
+#:IFC.xml:43699
+msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
+msgstr "PRECASTPANE"
 
-msgid "IfcAppliedValue_Description_DEFINITION"
-msgstr "可能应用有关成本价值的额外信息的描述。"
+msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
+msgstr "部件是预设面板，通常是沙威奇墙面板中的内外一层。"
 
-#:IFC.xml:3295
-msgid "IfcAppliedValue_FixedUntilDate"
-msgstr "固定到日期"
+#:IFC.xml:43700
+msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
+msgstr "SAFETYCAGE"
 
-msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
-msgstr "应用值适用的截止日期。从 IfcDateTimeSelect改变了 ifc2x4 IFC4 变异类型。"
+msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
+msgstr "安全笼是一个圆形和垂直条形的集合，可以在固定梯子的柱子上长，并且安排工人在攀登梯子时把路圈在一起。 如此封闭的梯子也被称为笼子或钩子梯。"
 
-#:IFC.xml:3300
-msgid "IfcAppliedValue_Name"
-msgstr "名称"
+#:IFC.xml:43701
+msgid "IfcBuildingElementPartTypeEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcAppliedValue_Name_DEFINITION"
-msgstr "给出成本值的名称或额外澄清。"
+msgid "IfcBuildingElementPartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的配件。"
 
-#:IFC.xml:3345
-msgid "IfcAppliedValueSelect"
-msgstr "IfcAppliedValueSelect"
+#:IFC.xml:43702
+msgid "IfcDiscreteAccessory"
+msgstr "IfcDiscrete配件。"
 
-#:IFC.xml:3346
-msgid "IfcArithmeticOperatorEnum"
-msgstr "IfcArithmeticOperatorEnum"
+msgid "IfcDiscreteAccessory_DEFINITION"
+msgstr "离散配件是指包含在单元内或添加到单元内的各种配件的表示物。 IFC2x2.中的HISTORY 新实体。ifc2x4 IFC4 更改属性预定义类型已添加。"
 
-msgid "IfcArithmeticOperatorEnum_DEFINITION"
-msgstr "[[IfcArithmeticOperatorEnum]] 指定了关系所隐含的算术操作形式，IFC2x2中的HISTORY 新枚举项。项目 ADD DULTIPLY MUBTRACT"
+#:IFC.xml:43703
+msgid "IfcDiscreteAccessory_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:3347
-msgid "IfcArithmeticOperatorEnum_ADD"
-msgstr "添加"
+msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
+msgstr "离散配件的子类型。如果是USERDEFINED，此类型通过继承属性对象类型进一步限定。 对于同样适用于[[IfcDiscreteAccessory]]的非排他性用户定义类型指定的列表，请参阅[[IfcDiscreteAccessoryType]。"
 
-msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
-msgstr "添加"
+#:IFC.xml:43710
+msgid "IfcDiscreteAccessoryType"
+msgstr "IfcDiscreteAccessoryType"
 
-#:IFC.xml:3348
-msgid "IfcArithmeticOperatorEnum_DIVIDE"
-msgstr "DIVIDE"
+msgid "IfcDiscreteAccessoryType_DEFINITION"
+msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessories. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted."
 
-msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
-msgstr "DIVIDE"
+#:IFC.xml:43711
+msgid "IfcDiscreteAccessoryType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:3349
-msgid "IfcArithmeticOperatorEnum_MULTIPLY"
-msgstr "MULTIPLY"
+msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
+msgstr "离散配件子类型"
 
-msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
-msgstr "MULTIPLY"
+#:IFC.xml:43718
+msgid "IfcDiscreteAccessoryTypeEnum"
+msgstr "IfcDiscreteAccessoryTypeEnum"
 
-#:IFC.xml:3350
-msgid "IfcArithmeticOperatorEnum_SUBTRACT"
-msgstr "订阅"
+msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
+msgstr "This enumeration defines the different types of discrete accessories. HISTORY New enumeration in IFC4. Items ANCHORPLATE An accessory consisting of a steel plate, shear stud connectors or welded on rebar which is embedded into the surface of a concrete element so that other elements can be welded or bolted onto it later. BRACKET An L shaped or similarly shaped accessory attached in a corner between elements to hold them together or to carry a secondary element. SHOE A column shoe or a beam shoe beam hanger used to support or secure an element. EXPANSION JOINT DEVICE Assembly connection element between construction elements to allow for thermic differential expansions. CABLEARRANGER A cable arranger is a flexible accessory or a part of a component placed around cables to arrange and minimize flexing of them at the point where it is placed. INSULATOR A device designed to support and insulate a conductive element. Note definition from IEC 151 15 39. LOCK A lock is a mechanical or electronic fastening device that is released either by a physical object e.g., key, fingerprint, RFID card, security token etc. , by supplying secret information e.g., number permutation, password , or by a combination thereof. TENSIONINGEQUIPMENT An equipment used to maintain the tension of conductors or cables. RAILPAD A non metallic pad placed between rail and baseplate or rail and sleeper, bearer or slab. Note definition from EN 13481 1. SLIDINGCHAIR A component which supports and retains the stock rail and a flat surface upon which the foot of the switch rail slides. RAIL LUBRICATION A device that prevents wearing of the rails throughout the flange of wheel to reduce noise emissions. It is often located at inner side of the outer rail in a curve or near turnouts depends on function wearing or noise reduction . PANEL STRENGTHENING A component that minimizes pump effects of the substructure. RAILBRACE A rail component that prevents rails from tipping and twisting. ELASTIC CUSHION A track elastic cushion is a kind of layer set on grooved sides of a concrete base, which is used for mitigating the impact of longitudinal and lateral load on track structures. A track elastic cushion shall only appear in ballastless track structures. SOUNDABSORPTION A component in the track for sound absorption and may also absorb vibrations. It is often used in combination with slab tracks. POINTMACHINEMOUNTINGDEVICE POINT MACHINE LOCKING DEVICE RAIL MECHANICAL EQUIPMENT A rail mechanical equipment is a mechnical equipment installed at railside, like blocking device, speed regulator, bias loaded inspector, track scale or controllable retarder. . BIRDPROTECTION A device that prevents a sitting down of birds at electrically critical points and thus birds are protected against electrical shocks and disturbances by short circuit are avoided. USERDEFINED User defined accessory. NOTDEFINED Undefined accessory."
 
-msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
-msgstr "订阅"
+#:IFC.xml:43762
+msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
+msgstr "ANCHOPLATE"
 
-#:IFC.xml:3352
-msgid "IfcCostValue"
-msgstr "IfcCostValue"
+msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
+msgstr "由钢板组成的配件， 插入水泥元素表面的玻璃连接器或焊接在钢条上，以便其它元素以后可以焊接或加粗。"
 
-msgid "IfcCostValue_DEFINITION"
-msgstr "[[IfcCostValue]] 是影响金额的金额或价值。 每个实例 [[IfcCostValue]] 也可能有一个类别。可能有许多类型的成本值可以确定。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 以下定义了可适用于类别属性的某些成本类别 年度回报率Bonus 批量购买合同咨询； 估计成本； 安装利率； 劳力租赁； 清单价格维护材料间接邮费和包装损益购买租金修缮出售； 少量附加零部件储存合同折扣； 贸易运输废物补贴； 整个寿命； 没有任何明确的标准。 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。 在 IFC1.0 中的新实体"
+#:IFC.xml:43763
+msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
+msgstr "BIRD保护"
 
-#:IFC.xml:3439
-msgid "IfcCurrencyRelationship"
-msgstr "货币关系"
+msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
+msgstr "防止鸟类坐下电临界点和鸟类不受电击和短路扰动的设备可以避免。"
 
-msgid "IfcCurrencyRelationship_DEFINITION"
-msgstr "[[IfcCurrencyRelationship]] 界定了特定时间两种指定货币之间以及特定来源公布的汇率。 一个 [[IfcCurrencyRelationship]] 在可能需要用一种货币引用一个 [[IfcCostValue]] 作为另一种货币时使用 [[IfcCostValue]] 。 它考虑到以下事实：货币汇率可能因要求记录所用货币汇率的日期和时间以及公布汇率的来源而有所变化。 可能有许多来源，货币兑换现时汇率和固定汇率前期购买货币的战略也不同。 货币交易的来源定义为一个 [[IfcLibraryInformation]] 的实例，其中包括一个名称和一个URL。 在 IFC2x2. 更改ifc2x4 IFC4 更改子键入的 [[IfcResourceLevelRelationship]] 属性顺序已更改。"
+#:IFC.xml:43764
+msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
+msgstr "竞技键"
 
-#:IFC.xml:3452
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
-msgstr "关联货币单位"
+msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
+msgstr "a. L形状或类似形状的配件附着在一个角落，用于把它们放在一起或携带一个次要元素。"
 
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
-msgstr "交易所来自的货币单位。 例如，在从英镑改为美元的情况下，相关的货币单位是英镑。"
+#:IFC.xml:43765
+msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
+msgstr "CABLEARRANGER"
 
-#:IFC.xml:3464
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
-msgstr "关联的Monetary单位"
+msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
+msgstr "电缆安排器是一种灵活的配件或放置在电缆周围的一部分，以便在电缆放置的地方安排和尽量减少电缆的弹性。"
 
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
-msgstr "汇兑所得的货币单位。 例如，在从英镑转为美元的情况下，相关的货币单位是美元。"
+#:IFC.xml:43766
+msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
+msgstr "ELASTIC CUSION"
 
-#:IFC.xml:3476
-msgid "IfcCurrencyRelationship_RateSource"
-msgstr "评分源"
+msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
+msgstr "轨迹弹性缓冲区是混凝土基边的一种层。 它用于减轻纵向和横向负荷对轨道结构的影响。 轨道弹性缓冲只能出现在无压轨道结构中。"
 
-msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
-msgstr "获得汇率的来源。"
+#:IFC.xml:43767
+msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
+msgstr "扩展联机设备"
 
-#:IFC.xml:3440
-msgid "IfcCurrencyRelationship_ExchangeRate"
-msgstr "汇率"
+msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
+msgstr "组件构造元素之间的连接元素以允许热差扩张。"
 
-msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
-msgstr "目前商定的相关货币单位金额的比率相当于货币关系中相关货币单位的单位金额。 例如，在从英镑兑换为美元的情况下，汇率的价值可为1.486美元(1英镑)。"
+#:IFC.xml:43768
+msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
+msgstr "咨询者"
 
-#:IFC.xml:3445
-msgid "IfcCurrencyRelationship_RateDateTime"
-msgstr "RateDateTime"
+msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
+msgstr "1. 设计用于支持和绝缘导电元件的装置。来自IEC 151 15 39的说明定义。"
 
-msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
-msgstr "适用汇率的日期和时间。Ifc2x4 IFC4 变异类型从 IfcDateTimeSelect. 变异。属性是可选的。"
+#:IFC.xml:43769
+msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
+msgstr "锁定"
+
+msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
+msgstr "锁是一种机械或电子快速设备，由物理对象释放，如： 密钥、指纹、RFID卡、安全令牌等等，通过提供保密信息，例如号码许可、密码或其中的组合。"
+
+#:IFC.xml:43770
+msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的配件。"
+
+#:IFC.xml:43771
+msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
+msgstr "画面"
+
+msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
+msgstr "最小化子结构水泵效果的组件。"
+
+#:IFC.xml:43772
+msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
+msgstr "点数加载设备"
+
+msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
+msgstr "点数加载设备"
+
+#:IFC.xml:43773
+msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
+msgstr "热门设备"
+
+msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
+msgstr "热门设备"
+
+#:IFC.xml:43774
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
+msgstr "块状图"
+
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
+msgstr "一种防止穿戴铁轨以减少噪音排放的装置。 它常常位于外铁路线的内侧曲线或靠近轮胎的地方取决于能否穿戴或降噪。"
+
+#:IFC.xml:43775
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
+msgstr "RAIL MECHANICAL EQUIPMENT"
+
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
+msgstr "铁路机械设备是安装在铁路侧的一种技术设备，例如阻塞装置、速度调节器、带有偏差的检查器、轨迹尺寸或可控制的阻燃器。"
+
+#:IFC.xml:43776
+msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
+msgstr "方形"
+
+msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
+msgstr "一个阻止铁路翻修和翻修的铁路部件。"
+
+#:IFC.xml:43777
+msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
+msgstr "内存模式"
+
+msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
+msgstr "放置在铁路和底板或铁路之间的非金属板块与睡眠者、持单人或板块之间。注解定义来自EN 13481。"
+
+#:IFC.xml:43778
+msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
+msgstr "显示"
+
+msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
+msgstr "用于支持或保护元素的列鞋或光束鞋架。"
+
+#:IFC.xml:43779
+msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
+msgstr "已下载"
+
+msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
+msgstr "支撑和保留股铁轨的部件和开关铁轨滑块的平坦表面。"
+
+#:IFC.xml:43780
+msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
+msgstr "SOUNDABSORPTION"
+
+msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
+msgstr "一个可以吸收的轨迹中的部件，也可以吸收振动。它常常与台式轨同时使用。"
+
+#:IFC.xml:43781
+msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
+msgstr "注意事项"
+
+msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
+msgstr "1. 用于维持导体或电缆紧张状态的设备。"
+
+#:IFC.xml:43782
+msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的配件。"
+
+#:IFC.xml:43783
+msgid "IfcElementComponent"
+msgstr "IfcElement组件"
+
+msgid "IfcElementComponent_DEFINITION"
+msgstr "An element component is a representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples of [[IfcElementComponent]] s include different kinds of fasteners and various accessories. One or several instances of subtypes of [[IfcElementComponent]] should always be accompanied by a defining instance of a respective subtype of [[IfcElementComponentType]] . The type object holds shape and material information. HISTORY New entity in IFC2x2 It is often desirable to model a number of same shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below. To express the multiplicity of element components also on a higher semantic level, a Qto ElementComponentPatternQuantities should be provided via [[IfcRelDefinesByProperties]] and contain the number of pieces which are placed by a single [[IfcElementComponent]] instance. .use head Symbolic Representation A symbolic representation is defined for a row of components or several rows of components within a single instance of [[IfcElementComponent]] . Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an [[IfcShapeRepresentation]] with the attribute values RepresentationIdentifier Row RepresentationType GeometricCurveSet and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components bolts, nails, staples, straight reinforcement bars, or similar , the local placement of the [[IfcElementComponent]] shall be located and oriented such that the local z axis is parallel with the axes of the components. A Qto ElementComponentPatternQuantities should denote the count of pieces in the row or array and their spacing. Concepts Mapped Geometry The mapped item, [[IfcMappedItem]], should be used if appropriate as it allows for reusing the geometry definition of a type at all occurrences of the same type. A single instance of a subtype of [[IfcElementComponent]] can stand for several actual element components at once. In this case, the [[IfcShapeRepresentation]] contains as many mapped items as there are element components combined within this occurrence object. .. .. .. .. figures ifcelementcomponent multiple.png EXAMPLE Figure 304 illustrates multiple components modeled as a single occurrence object here [[IfcFastener]] Figure 304 Element component mapped representation Representation identifier and type are the same as in single mapped representation. The number of mapped items in the representation corresponds with the count of element components in the [[IfcElementQuantity]]. Property Sets for Objects"
+
+#:IFC.xml:43786
+msgid "IfcElementComponentType"
+msgstr "IfcElementComponentType"
+
+msgid "IfcElementComponentType_DEFINITION"
+msgstr "元素类型 [[IfcElementComponentType]] 定义元素出现的常见共享信息。 共享信息可包括共有属性和共有属性的共用表达式。元素的共同成分。它用于定义元素类型规格，指明该产品类型所有发生的情况下共有的特定产品信息。 [[IfcElementComponentType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcElementComponentType]] 出现的情况用[[IfcElementComponent]] 表示。IFC2x2 中的新实体。"
+
+#:IFC.xml:43789
+msgid "IfcFastener"
+msgstr "伊夫克菲森尔"
+
+msgid "IfcFastener_DEFINITION"
+msgstr "用来连接或加入元素与其他元素的组件的修饰符的表达式。 排除的是机械快速器，由一个单独的实体 [[IfcMechanicalFastener]] 建模。 IFC2x2 .change ifc2x4 IFC4 更改属性预定义类型中的HISTORY 新实体。"
+
+#:IFC.xml:43790
+msgid "IfcFastener_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcFastener_PredefinedType_DEFINITION"
+msgstr "更快的子类型"
+
+#:IFC.xml:43797
+msgid "IfcFastenerType"
+msgstr "IfcFastenerType"
+
+msgid "IfcFastenerType_DEFINITION"
+msgstr "元素组件类型 [[IfcFastenerType]] 定义了常见的快速发生的共享信息。 共享信息的集合可能包括共有属性和共有属性设定了共同的表述方式。元素的共同组成。它用于定义一个更快的类型规格，指明该产品类型所有发生的情况下共有的特定产品信息。 [[IfcFastenerType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcFastenerType]] 出现的情况用[[IfcFastener]] 表示。IFC2x2 中的新实体。"
+
+#:IFC.xml:43798
+msgid "IfcFastenerType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcFastenerType_PredefinedType_DEFINITION"
+msgstr "更快的子类型"
+
+#:IFC.xml:43805
+msgid "IfcFastenerTypeEnum"
+msgstr "IfcFastenerTypeEnum"
+
+msgid "IfcFastenerTypeEnum_DEFINITION"
+msgstr "这个列举定义了不同类型的快速器，但机械快速器除外。 IFC4 中的新枚举。项目 GLUE A 快速连接，它用胶水合并元素。 MORTAR 一种矿物材料或其他材料的组成，用来弥补连接缺口和可能履行负载作用。 WELD 金属材料或其他合适材料的部件之间的焊接缝。用户定义更快。未定义更快器。"
+
+#:IFC.xml:43817
+msgid "IfcFastenerTypeEnum_GLUE"
+msgstr "蓝图"
+
+msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
+msgstr "一个可缩短的连接，它使用胶水一起加入元素。"
+
+#:IFC.xml:43818
+msgid "IfcFastenerTypeEnum_MORTAR"
+msgstr "莫尔塔尔"
+
+msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
+msgstr "一种矿物材料或其他材料的组合，用以弥补并可能发挥载荷作用。"
+
+#:IFC.xml:43819
+msgid "IfcFastenerTypeEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcFastenerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的快速器。"
+
+#:IFC.xml:43820
+msgid "IfcFastenerTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcFastenerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的快速设定。"
+
+#:IFC.xml:43821
+msgid "IfcFastenerTypeEnum_WELD"
+msgstr "WELD"
+
+msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
+msgstr "金属材料或其他适当材料之间的焊接。"
+
+#:IFC.xml:43822
+msgid "IfcMechanicalFastener"
+msgstr "IfcMechanicalFastener"
+
+msgid "IfcMechanicalFastener_DEFINITION"
+msgstr "机械式快速连接建筑元件或零部件。 此类的单个实例可能代表一个或多个实际机械快速器， 例如，一个螺丝数组或一行指针。 IFC2x2 .change ifc2x4 IFC4 变更超级类型从 [[IfcFastener]] 更改为 [[IfcElementComponent]] 。 属性预定义类型已添加。属性名直径和名长度已废弃。"
+
+#:IFC.xml:43823
+msgid "IfcMechanicalFastener_NominalDiameter"
+msgstr "NominalDiameter"
+
+msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
+msgstr "描述快速类型的横截尺寸的标称直径。 挂机ifc2x4 IFC4 变异应替代使用 [[IfcMechanicalFastenerType]] 的各自属性。"
+
+#:IFC.xml:43828
+msgid "IfcMechanicalFastener_NominalLength"
+msgstr "名义长度"
+
+msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
+msgstr "描述更快类型的纵向尺寸的名义长度。 挂机ifc2x4 IFC4 变异应替代使用 [[IfcMechanicalFastenerType]] 的各自属性。"
+
+#:IFC.xml:43833
+msgid "IfcMechanicalFastener_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
+msgstr "机械加速器的子类型"
+
+#:IFC.xml:43840
+msgid "IfcMechanicalFastenerType"
+msgstr "IfcMechanicalFastenerType"
+
+msgid "IfcMechanicalFastenerType_DEFINITION"
+msgstr "元素组件类型 [[IfcMechanicalFastenerType]] 定义了机械快速器发生的常见共享信息。 这套共享信息可包括共有属性和共有属性设定了共同的表述、共同的材料组合、元素的共同构成。 它用于界定一种机械式更快的类型规格，指明该产品类型的所有发生时所共有的特定产品信息。 [[IfcMechanicalFastenerType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcMechanicalFastenerType]] 出现的情况用[[IfcMechanicalFastener]] 表示。IFC2x2 中的新实体。 hange ifc2x4 IFC4 变异超级类型从 [[IfcFastenerType]] 更改为 [[IfcElementComponentType]]。属性预定义类型 , 名义直径, 代表长度已添加。 使用头分类使用定义机械式快速器，尤其是螺纹，往往是标准化的。 1. 参照根据标准的产品规范正式更快的称谓， [[IfcRelAssociatesClassification]] 应与[[IfcClassificationReference]] 一起使用。 [[IfcClassificationReference]].身份识别含有一种机器可读的格式从规范中获取更快的正式名称。 例如M16X80 10.9 HV, 用于高强度结构螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式预装。 另一方面，[[IfcMechanicalFastenerType]].Name 包含一个可显示的名称，不一定与正式指定相同。 [[IfcClassificationReference]].Name 带有更快规范的短名。例如EN 14399 4 作为欧洲高强力六边机枪的相关标准。 可选择由[[IfcClassificationReference]]进一步描述规范。 参考资料来源，包括出版商等信息和标准发布日期。 此外，[[IfcRelAssociatesLibrary]] 以及[[IfcLibraryReference]] 可以用来指含有更快定义的图书馆。"
+
+#:IFC.xml:43841
+msgid "IfcMechanicalFastenerType_NominalDiameter"
+msgstr "NominalDiameter"
+
+msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
+msgstr "描述快速类型的横截尺寸的标称直径。"
+
+#:IFC.xml:43846
+msgid "IfcMechanicalFastenerType_NominalLength"
+msgstr "名义长度"
+
+msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
+msgstr "描述更快类型的纵向尺寸的名义长度。"
+
+#:IFC.xml:43851
+msgid "IfcMechanicalFastenerType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
+msgstr "机械加速器的子类型"
+
+#:IFC.xml:43858
+msgid "IfcMechanicalFastenerTypeEnum"
+msgstr "IfcMechanicalFastenerTypeEnum"
+
+msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
+msgstr "此列举界定了不同类型的机械快速器。IFC4中的HISTORY新枚举。 一种固定在凝固、石头或砖瓦中的特殊螺钉。 BOLT A 线程圆柱杆，它与一个类似的线程洞在坚果或任何其他部件中形成一个快速器。 机械加速器通常还包括一个或多个洗涤器和一个或多个坚果。 DOWEL A 圆柱杆，被驱动到被连接的碎片的孔里。 NAIL A 薄块的金属，作为一个快照器被浸入材料中。 NAILPLATE 一块带有拳头点的金属板，它与所连接的块相重叠并被按下到它们的材料中。 RIVET A fastering part with a head at one 端, and other conditions is hamed placed after being through the honour of the back that be feed breaked. SCREW A 更快，带有一根经直线破解的架子和一个排定的头部。 SHEARCONNECTOR 一个环状连接器，这个环状连接器被连接的块中的环形键或被按下到连接的块中的牙齿循环或正方形连接器所接受。 STAPLE 一块双向的金属，被堆积在材料中，作为一个快艇。 STUDSHEARCONNECTOR Stud Shear连接器是圆柱形紧固部分，头部在一侧。 另一方面，它们被焊接在钢铁成员身上，用于合成钢和混凝土结构。 COUPLER 一个连接两个或多个铁条的部分，例如增援栏。RAILOJOINT 与e机械装配。 可连接两条铁轨的鱼板，具有可选功能绝缘或扩展能力。 装配能够保护铁轨至辅助结构的部件，并将其保留在必要的位置，同时允许任何必要的纵向， 横向和纵向流动。 注解定义来自13481。 CHAIN一系列连接的金属环，用来加固或保护某些东西，或用于提取负荷。 通过将大麻、剑麻、尼龙或类似材料混为一谈，取得了一定厚的和谐长度。 主要用于停泊船只USERDEFINED用户定义的机械快速器。未定义的机械快速器。"
+
+#:IFC.xml:43894
+msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
+msgstr "ANCHORBOLT"
+
+msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
+msgstr "一种固定在混凝土、石头或砖头上的特殊螺钉。"
+
+#:IFC.xml:43895
+msgid "IfcMechanicalFastenerTypeEnum_BOLT"
+msgstr "BOLT"
+
+msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
+msgstr "一个线程圆柱杆，它与一个类似的线程洞在坚果或任何其他部件中形成一个快速器。 机械加速器通常还包括一个或多个洗涤器和一个或多个坚果。"
+
+#:IFC.xml:43896
+msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
+msgstr "聊天室"
+
+msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
+msgstr "一系列连接的金属环，用来加固或保护东西，或用于提取负荷。"
+
+#:IFC.xml:43897
+msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
+msgstr "粗略的"
+
+msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
+msgstr "连接两个或多个铁条的部分，例如增援栏。"
+
+#:IFC.xml:43898
+msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
+msgstr "DOWEL"
+
+msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
+msgstr "一种气瓶棒，它被带到被连接的碎片的孔里。"
+
+#:IFC.xml:43899
+msgid "IfcMechanicalFastenerTypeEnum_NAIL"
+msgstr "NAIL"
+
+msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
+msgstr "一块微薄的金属，作为一个更快的材料被浸入材料中。"
+
+#:IFC.xml:43900
+msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
+msgstr "命名项"
+
+msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
+msgstr "一块带有拳头的金属板，与所连接的碎片相重叠并被按下到材料中。"
+
+#:IFC.xml:43901
+msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的机械快速器。"
+
+#:IFC.xml:43902
+msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
+msgstr "内置中"
+
+msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
+msgstr "为辅助结构保全铁路并将其保留在必要位置的部件组装，同时允许任何必要的垂直方向， 横向和纵向流动。 注解定义来自13481。"
+
+#:IFC.xml:43903
+msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
+msgstr "拉伊尔JONT"
+
+msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
+msgstr "机械装配，如鱼板，连接两条铁轨，具有可选功能绝缘或扩展能力。"
+
+#:IFC.xml:43904
+msgid "IfcMechanicalFastenerTypeEnum_RIVET"
+msgstr "里韦特"
+
+msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
+msgstr "一端头部紧缩的部分，另一端则在穿过碎块中的洞后被夷为平地。"
+
+#:IFC.xml:43905
+msgid "IfcMechanicalFastenerTypeEnum_ROPE"
+msgstr "情景模式"
+
+msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
+msgstr "通过将主要用于停泊船只的大麻、剑麻、尼龙或类似材料组合在一起而产生的厚和强力的长度。"
+
+#:IFC.xml:43906
+msgid "IfcMechanicalFastenerTypeEnum_SCREW"
+msgstr "SCREW"
+
+msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
+msgstr "一个较快的螺丝刀和排定时间档的头部。"
+
+#:IFC.xml:43907
+msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
+msgstr "热门游戏"
+
+msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
+msgstr "一个环状连接器，在连接的块中被环形键或被按下到连接的块上的牙齿圆形或方形连接器所接受。"
+
+#:IFC.xml:43908
+msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
+msgstr "状态"
+
+msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
+msgstr "一块双向的金属，作为一个更快的金属被堆积在材料中。"
+
+#:IFC.xml:43909
+msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
+msgstr "研究"
+
+msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
+msgstr "Stud shear连接器是圆柱形紧固部件，头部在一侧。 另一方面，它们被焊接在钢铁成员身上，用于合成钢和混凝土结构。"
+
+#:IFC.xml:43910
+msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的机械快速器。"
+
+#:IFC.xml:43911
+msgid "IfcVibrationDamperTypeEnum"
+msgstr "IfcVibration DamperTypeEnum"
+
+msgid "IfcVibrationDamperTypeEnum_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 弯曲产量类型是一种水坝，通过弯曲产生钢材。 SHEAR YIELD 是一种依赖于置换型号的水坝，其中产生的抗药力由利用钢材塑料变形的塑料菌株量来确定。 皮革产量类型是一种水坝，它使钢材在与该成员垂直的方向上产生变形效应。 AXIAL YIELD 是一种依赖于置换型号的水坝，其抗药力由利用钢材塑料变形的塑料菌株量来确定。 轴产量类型是通过吸收钢材料防止轴向变形产生能量的水坝。 这就是说，朝着扩大和缩减方向发展。 摩擦型是一种利用在材料接触面上的摩擦作用的水坝。 VISCOUS 直观型号是一种可视体的抗性能吸收能量。 RUBER 橡胶模组是一个通过使用层橡胶变形吸收能量的水坝。 地震隔离带与橡胶型水坝之间的区别在于是否支持上层结构的重量。 橡胶水坝不将上层结构的重量传输给下层结构。 用户定义的振动阻止类型。未定义的振动阻止类型。"
+
+#:IFC.xml:43930
+msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
+msgstr "被遗弃的年"
+
+msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 轴产量类型是通过吸收钢材料防止轴向变形产生能量的水坝。 这就是说，朝着扩大和缩减方向发展。"
+
+#:IFC.xml:43931
+msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
+msgstr "正在绑定YIELD"
+
+msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 弯曲产量类型是一种水坝，通过弯曲产生钢材。"
+
+#:IFC.xml:43932
+msgid "IfcVibrationDamperTypeEnum_FRICTION"
+msgstr "研磨机"
+
+msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
+msgstr "摩擦型型号是一种利用在材料接触表面上发生摩擦的水坝。"
+
+#:IFC.xml:43933
+msgid "IfcVibrationDamperTypeEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcVibrationDamperTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的振动阻力。"
+
+#:IFC.xml:43934
+msgid "IfcVibrationDamperTypeEnum_RUBBER"
+msgstr "路由器"
+
+msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
+msgstr "橡胶模组是一个通过使用层橡胶变形吸收能量的水坝。 地震隔离带与橡胶型水坝之间的区别在于是否支持上层结构的重量。 橡胶水坝不将上层结构的重量传输给下层结构。"
+
+#:IFC.xml:43935
+msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
+msgstr "给您留言"
+
+msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 皮革产量类型是一种水坝，它使钢材在与该成员垂直的方向上产生变形效应。"
+
+#:IFC.xml:43936
+msgid "IfcVibrationDamperTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcVibrationDamperTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的震动阻尼类型。"
+
+#:IFC.xml:43937
+msgid "IfcVibrationDamperTypeEnum_VISCOUS"
+msgstr "VISCOUS"
+
+msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
+msgstr "直观型号是一种通过利用可视体的抗药性吸收能量的水坝。"
+
+#:IFC.xml:43954
+msgid "Pset_DiscreteAccessoryColumnShoe"
+msgstr "Pset DiscreteAccessoryColumnShoe"
+
+msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
+msgstr "列鞋共同形状属性。"
+
+#:IFC.xml:43955
+msgid "ColumnShoeBasePlateDepth"
+msgstr "ColumnShoeBasePlateDepth"
+
+msgid "ColumnShoeBasePlateDepth_DEFINITION"
+msgstr "柱状底板的深度。"
+
+#:IFC.xml:43960
+msgid "ColumnShoeBasePlateThickness"
+msgstr "ColumnShoeBasePlateThickness"
+
+msgid "ColumnShoeBasePlateThickness_DEFINITION"
+msgstr "栏鞋底板厚度。"
+
+#:IFC.xml:43965
+msgid "ColumnShoeBasePlateWidth"
+msgstr "ColumnShoeBasePlateWidth"
+
+msgid "ColumnShoeBasePlateWidth_DEFINITION"
+msgstr "列鞋底板的宽度。"
+
+#:IFC.xml:43970
+msgid "ColumnShoeCasingDepth"
+msgstr "ColumnShoeCasingDepth"
+
+msgid "ColumnShoeCasingDepth_DEFINITION"
+msgstr "柱状壳的深度。"
+
+#:IFC.xml:43975
+msgid "ColumnShoeCasingHeight"
+msgstr "列星座高度"
+
+msgid "ColumnShoeCasingHeight_DEFINITION"
+msgstr "柱状壳的高度"
+
+#:IFC.xml:43980
+msgid "ColumnShoeCasingWidth"
+msgstr "ColumnShoeCasingWidth"
+
+msgid "ColumnShoeCasingWidth_DEFINITION"
+msgstr "列鞋壳的宽度。"
+
+#:IFC.xml:43986
+msgid "Pset_DiscreteAccessoryCornerFixingPlate"
+msgstr "Pset DiscreteachoryCornerFixingPlate"
+
+msgid "Pset_DiscreteAccessoryCornerFixingPlate_DEFINITION"
+msgstr "针对角固定板块的属性。"
+
+#:IFC.xml:43987
+msgid "CornerFixingPlateFlangeWidthInPlaneX"
+msgstr "CornerFixingPlateFlangeWidthInPlaneX"
+
+msgid "CornerFixingPlateFlangeWidthInPlaneX_DEFINITION"
+msgstr "飞机X中的L形角板的黄色宽度。"
+
+#:IFC.xml:43992
+msgid "CornerFixingPlateFlangeWidthInPlaneZ"
+msgstr "CornerFixingPlateFlangeWidthInPlaneZ"
+
+msgid "CornerFixingPlateFlangeWidthInPlaneZ_DEFINITION"
+msgstr "Z平面的L形角板的黄色宽度。"
+
+#:IFC.xml:43997
+msgid "CornerFixingPlateLength"
+msgstr "CornerFixingPlateLength"
+
+msgid "CornerFixingPlateLength_DEFINITION"
+msgstr "L形角板的长度。"
+
+#:IFC.xml:44002
+msgid "CornerFixingPlateThickness"
+msgstr "CornerFixingPlateThickness"
+
+msgid "CornerFixingPlateThickness_DEFINITION"
+msgstr "L形角板的厚度。"
+
+#:IFC.xml:44008
+msgid "Pset_DiscreteAccessoryDiagonalTrussConnector"
+msgstr "Pset DiscreteAnnexsoryDiagonalTrussConnector"
+
+msgid "Pset_DiscreteAccessoryDiagonalTrussConnector_DEFINITION"
+msgstr "与对角交叉栏连接托管形式附件特有的形状属性。"
+
+#:IFC.xml:44009
+msgid "DiagonalTrussBaseBarDiameter"
+msgstr "DiagonalTrussBaseBarDiameter"
+
+msgid "DiagonalTrussBaseBarDiameter_DEFINITION"
+msgstr "基准条的名义直径。"
+
+#:IFC.xml:44014
+msgid "DiagonalTrussCrossBarDiameter"
+msgstr "DiagonalTrussCrossBarDiameter"
+
+msgid "DiagonalTrussCrossBarDiameter_DEFINITION"
+msgstr "对角交叉条的标称直径。"
+
+#:IFC.xml:44019
+msgid "DiagonalTrussCrossBarSpacing"
+msgstr "DiagonalTrussCrossBarSpacing"
+
+msgid "DiagonalTrussCrossBarSpacing_DEFINITION"
+msgstr "对角交叉条段之间的间距。"
+
+#:IFC.xml:44024
+msgid "DiagonalTrussHeight"
+msgstr "对角信托基金高度"
+
+msgid "DiagonalTrussHeight_DEFINITION"
+msgstr "信任连接器的总高度。"
+
+#:IFC.xml:44029
+msgid "DiagonalTrussLength"
+msgstr "DiagonalTrussLength"
+
+msgid "DiagonalTrussLength_DEFINITION"
+msgstr "信任连接器的总长度。"
+
+#:IFC.xml:44034
+msgid "DiagonalTrussSecondaryBarDiameter"
+msgstr "DiagonalTrussSecondaryBarDiameter"
+
+msgid "DiagonalTrussSecondaryBarDiameter_DEFINITION"
+msgstr "二维条形状直径。"
+
+#:IFC.xml:44040
+msgid "Pset_DiscreteAccessoryEdgeFixingPlate"
+msgstr "Pset DiscreteAnnexsoryEdgeFixingPlate"
+
+msgid "Pset_DiscreteAccessoryEdgeFixingPlate_DEFINITION"
+msgstr "边缘修复板块特有的属性。"
+
+#:IFC.xml:44041
+msgid "EdgeFixingPlateFlangeWidthInPlaneX"
+msgstr "EdgeFixingPlateFlangeWidthInPlaneX"
+
+msgid "EdgeFixingPlateFlangeWidthInPlaneX_DEFINITION"
+msgstr "L形状边缘板块在飞机X上的黄色宽度。"
+
+#:IFC.xml:44046
+msgid "EdgeFixingPlateFlangeWidthInPlaneZ"
+msgstr "EdgeFixingPlateFlangeWidthInPlaneZ"
+
+msgid "EdgeFixingPlateFlangeWidthInPlaneZ_DEFINITION"
+msgstr "Z平面L形状边缘板的黄色宽度。"
+
+#:IFC.xml:44051
+msgid "EdgeFixingPlateLength"
+msgstr "EdgeFixingPlateLength"
+
+msgid "EdgeFixingPlateLength_DEFINITION"
+msgstr "L形状边缘板块的长度。"
+
+#:IFC.xml:44056
+msgid "EdgeFixingPlateThickness"
+msgstr "EdgeFixingPlateThickness"
+
+msgid "EdgeFixingPlateThickness_DEFINITION"
+msgstr "L形状边缘板的厚度。"
+
+#:IFC.xml:44062
+msgid "Pset_DiscreteAccessoryFixingSocket"
+msgstr "Pset DiscreteaccessoryFixingSocket"
+
+msgid "Pset_DiscreteAccessoryFixingSocket_DEFINITION"
+msgstr "修复套接字共有的属性。"
+
+#:IFC.xml:44063
+msgid "FixingSocketHeight"
+msgstr "固定草图高度"
+
+msgid "FixingSocketHeight_DEFINITION"
+msgstr "修复套接字的总体高度"
+
+#:IFC.xml:44068
+msgid "FixingSocketThreadDiameter"
+msgstr "FixingSocketThreadDiameter"
+
+msgid "FixingSocketThreadDiameter_DEFINITION"
+msgstr "线程的名义直径。"
+
+#:IFC.xml:44073
+msgid "FixingSocketThreadLength"
+msgstr "固定SocketThread长度"
+
+msgid "FixingSocketThreadLength_DEFINITION"
+msgstr "修复套接字的线程部分长度。"
+
+#:IFC.xml:44078
+msgid "FixingSocketTypeReference"
+msgstr "FixingSocketTypeReference"
+
+msgid "FixingSocketTypeReference_DEFINITION"
+msgstr "根据本地标准输入修理套接字的参考。"
+
+#:IFC.xml:44084
+msgid "Pset_DiscreteAccessoryLadderTrussConnector"
+msgstr "Pset DiscreteAnnexsoryLadderTrussConnector"
+
+msgid "Pset_DiscreteAccessoryLadderTrussConnector_DEFINITION"
+msgstr "形状属性，专门用于连接托管形式的配件和梯形形状的直截面条形状."
+
+#:IFC.xml:44085
+msgid "LadderTrussBaseBarDiameter"
+msgstr "LadderTrussBaseBarDiameter"
+
+msgid "LadderTrussBaseBarDiameter_DEFINITION"
+msgstr "基准条的名义直径。"
+
+#:IFC.xml:44090
+msgid "LadderTrussCrossBarDiameter"
+msgstr "LadderTrussCrossBarDiameter"
+
+msgid "LadderTrussCrossBarDiameter_DEFINITION"
+msgstr "直截面的标称直径。"
+
+#:IFC.xml:44095
+msgid "LadderTrussCrossBarSpacing"
+msgstr "LadderTrussCrossBarSpacing"
+
+msgid "LadderTrussCrossBarSpacing_DEFINITION"
+msgstr "直截面之间的间距。"
+
+#:IFC.xml:44100
+msgid "LadderTrussHeight"
+msgstr "梯度托拉斯高度"
+
+msgid "LadderTrussHeight_DEFINITION"
+msgstr "信任连接器的总高度。"
+
+#:IFC.xml:44105
+msgid "LadderTrussLength"
+msgstr "梯度托拉斯长度"
+
+msgid "LadderTrussLength_DEFINITION"
+msgstr "信任连接器的总长度。"
+
+#:IFC.xml:44110
+msgid "LadderTrussSecondaryBarDiameter"
+msgstr "LadderTrussSecondaryBarDiameter"
+
+msgid "LadderTrussSecondaryBarDiameter_DEFINITION"
+msgstr "二维条形状直径。"
+
+#:IFC.xml:44116
+msgid "Pset_DiscreteAccessoryStandardFixingPlate"
+msgstr "Pset DiscreteAnnexsoryStandardFixingPlate"
+
+msgid "Pset_DiscreteAccessoryStandardFixingPlate_DEFINITION"
+msgstr "标准修复板块特有的属性。"
+
+#:IFC.xml:44117
+msgid "StandardFixingPlateDepth"
+msgstr "StandardFixingPlateDepth"
+
+msgid "StandardFixingPlateDepth_DEFINITION"
+msgstr "标准修理板的深度。"
+
+#:IFC.xml:44122
+msgid "StandardFixingPlateThickness"
+msgstr "标准固定平板厚度"
+
+msgid "StandardFixingPlateThickness_DEFINITION"
+msgstr "标准修饰板的厚度。"
+
+#:IFC.xml:44127
+msgid "StandardFixingPlateWidth"
+msgstr "标准 FixingPlateWidth"
+
+msgid "StandardFixingPlateWidth_DEFINITION"
+msgstr "标准修理板的宽度。"
+
+#:IFC.xml:44133
+msgid "Pset_DiscreteAccessoryWireLoop"
+msgstr "Pset DiscreteaccessoryWireLoop"
+
+msgid "Pset_DiscreteAccessoryWireLoop_DEFINITION"
+msgstr "形状线环形联合连接器共有的属性。"
+
+#:IFC.xml:44134
+msgid "WireDiameter"
+msgstr "连线直线"
+
+msgid "WireDiameter_DEFINITION"
+msgstr "线的标称直径。"
+
+#:IFC.xml:44139
+msgid "WireEmbeddingLength"
+msgstr "无线嵌入长度"
+
+msgid "WireEmbeddingLength_DEFINITION"
+msgstr "嵌入预定混凝土元素的线部分的长度。"
+
+#:IFC.xml:44144
+msgid "WireLoopBasePlateLength"
+msgstr "WireLoopBasePlateLength"
+
+msgid "WireLoopBasePlateLength_DEFINITION"
+msgstr "基板的长度。"
+
+#:IFC.xml:44149
+msgid "WireLoopBasePlateThickness"
+msgstr "WireLoopBasePlate厚度"
+
+msgid "WireLoopBasePlateThickness_DEFINITION"
+msgstr "基板厚度。"
+
+#:IFC.xml:44154
+msgid "WireLoopBasePlateWidth"
+msgstr "WireLoopBasePlateWidth"
+
+msgid "WireLoopBasePlateWidth_DEFINITION"
+msgstr "基板的宽度。"
+
+#:IFC.xml:44159
+msgid "WireLoopLength"
+msgstr "WireLooplength"
+
+msgid "WireLoopLength_DEFINITION"
+msgstr "紧固循环部分的长度。"
+
+#:IFC.xml:44165
+msgid "Pset_ElementComponentCommon"
+msgstr "Pset 元素组件Common"
+
+msgid "Pset_ElementComponentCommon_DEFINITION"
+msgstr "组件元素的共同特性集，特别是离散配件，但也包括加速器、增强元件或其他类型的组件。"
+
+#:IFC.xml:44166
+msgid "CorrosionTreatment"
+msgstr "矫正处理"
+
+msgid "CorrosionTreatment_DEFINITION"
+msgstr "确定金属组件的腐蚀处理。 如果要求的表述必须独立于材料规格，而b只是要求说明，而不是车间设计处理特点，则提供这种属性。"
+
+#:IFC.xml:44171
+msgid "DeliveryType"
+msgstr "送货类型"
+
+msgid "DeliveryType_DEFINITION"
+msgstr "确定配件如何投递到站点。"
+
+#:IFC.xml:44187
+msgid "Pset_FastenerWeld"
+msgstr "Pset FastenerWeld"
+
+msgid "Pset_FastenerWeld_DEFINITION"
+msgstr "与焊接连接相关的属性。"
+
+#:IFC.xml:44188
+msgid "a"
+msgstr "a"
+
+msgid "a_DEFINITION"
+msgstr "根据ISO 2553测量一个"
+
+#:IFC.xml:44193
+msgid "c"
+msgstr "c"
+
+msgid "c_DEFINITION"
+msgstr "测量c 根据ISO 2553"
+
+#:IFC.xml:44198
+msgid "d"
+msgstr "d"
+
+msgid "d_DEFINITION"
+msgstr "根据ISO 2553测量d"
+
+#:IFC.xml:44203
+msgid "e"
+msgstr "e"
+
+msgid "e_DEFINITION"
+msgstr "根据ISO 2553测量e"
+
+#:IFC.xml:44208
+msgid "Intermittent"
+msgstr "间歇性的"
+
+msgid "Intermittent_DEFINITION"
+msgstr "如果文件焊接、断断续续或非"
+
+#:IFC.xml:44213
+msgid "l"
+msgstr "l"
+
+msgid "l_DEFINITION"
+msgstr "根据ISO 2553测量l"
+
+#:IFC.xml:44218
+msgid "n"
+msgstr "n"
+
+msgid "n_DEFINITION"
+msgstr "表明用户是否可以选择使用N保护。 如果N保护50和N保护100这两种属性都被断定，N保护选择属性的值设置为 TRUE。 这些财产只有在N保护财产得到维护的情况下才能得到维护。"
+
+#:IFC.xml:44223
+msgid "Process"
+msgstr "进程"
+
+msgid "Process_DEFINITION"
+msgstr "基于 ISO 4063 的焊接流程的参考号码，最多三位数长代码"
+
+#:IFC.xml:44228
+msgid "ProcessName"
+msgstr "处理名称"
+
+msgid "ProcessName_DEFINITION"
+msgstr "焊接工艺名称。替代数字工艺属性。"
+
+#:IFC.xml:44233
+msgid "s"
+msgstr "秒"
+
+msgid "s_DEFINITION"
+msgstr "根据ISO 2553测量值"
+
+#:IFC.xml:44238
+msgid "Staggered"
+msgstr "错开"
+
+msgid "Staggered_DEFINITION"
+msgstr "如果间歇性焊接，交错或不交送"
+
+#:IFC.xml:44243
+msgid "Surface1"
+msgstr "地平面1"
+
+msgid "Surface1_DEFINITION"
+msgstr "焊接表面的方面，即飞机、曲线或空洞，由两个相应符号给出，类似于Type1和Type2。"
+
+#:IFC.xml:44248
+msgid "Surface2"
+msgstr "地平面2"
+
+msgid "Surface2_DEFINITION"
+msgstr "见Surface1。"
+
+#:IFC.xml:44253
+msgid "Type1"
+msgstr "Type1"
+
+msgid "Type1_DEFINITION"
+msgstr "根据ISO 2553类型的焊接。 注，结合焊接用两个对应符号给定坐标系正常轴方向。 例如，Type1 V 和 Type2 V 规定了X焊接。"
+
+#:IFC.xml:44258
+msgid "Type2"
+msgstr "Type2"
+
+msgid "Type2_DEFINITION"
+msgstr "见Type1。"
+
+#:IFC.xml:44263
+msgid "z"
+msgstr "z"
+
+msgid "z_DEFINITION"
+msgstr "按照ISO 2553测量z"
+
+#:IFC.xml:44269
+msgid "Pset_MechanicalFastenerAnchorBolt"
+msgstr "Pset MechanicalFastenerAnchorBolt"
+
+msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
+msgstr "不同类型锚点螺钉共有的属性。"
+
+#:IFC.xml:44270
+msgid "AnchorBoltDiameter"
+msgstr "锚箭头直径"
+
+msgid "AnchorBoltDiameter_DEFINITION"
+msgstr "锚点螺杆的标称直径。"
+
+#:IFC.xml:44275
+msgid "AnchorBoltLength"
+msgstr "根博尔特长度"
+
+msgid "AnchorBoltLength_DEFINITION"
+msgstr "锚点螺钉的长度。"
+
+#:IFC.xml:44280
+msgid "AnchorBoltProtrusionLength"
+msgstr "根博尔特Protrussion长度"
+
+msgid "AnchorBoltProtrusionLength_DEFINITION"
+msgstr "锚系螺纹部分的长度。"
+
+#:IFC.xml:44285
+msgid "AnchorBoltThreadLength"
+msgstr "锚点粗线程长度"
+
+msgid "AnchorBoltThreadLength_DEFINITION"
+msgstr "锚点螺钉的线程长度。"
+
+#:IFC.xml:44291
+msgid "Pset_MechanicalFastenerBolt"
+msgstr "Pset MechanicalFastenerBolt"
+
+msgid "Pset_MechanicalFastenerBolt_DEFINITION"
+msgstr "与螺旋型快速器相关的属性。可以提供一整套的螺钉、洗涤器和坚固件的属性。 请注意，通常没有必要在标准化的螺钉的情况下传输这些属性，而是提到标准的。"
+
+#:IFC.xml:44292
+msgid "HeadShape"
+msgstr "头形状"
+
+msgid "HeadShape_DEFINITION"
+msgstr "螺钉头的形状，例如 Hexagon , Counsunk , Cheese"
+
+#:IFC.xml:44297
+msgid "KeyShape"
+msgstr "密钥形状"
+
+msgid "KeyShape_DEFINITION"
+msgstr "如果适用，头部槽的形状，例如槽，Allen"
+
+#:IFC.xml:44302
+msgid "NutsCount"
+msgstr "NutsCount"
+
+msgid "NutsCount_DEFINITION"
+msgstr "挂载在一只螺钉上的螺丝数"
+
+#:IFC.xml:44307
+msgid "NutShape"
+msgstr "Nut形状"
+
+msgid "NutShape_DEFINITION"
+msgstr "坚果形状，例如 Hexagon 、 Cap 、 Castle 、 Wing"
+
+#:IFC.xml:44312
+msgid "ThreadDiameter"
+msgstr "线程直线"
+
+msgid "ThreadDiameter_DEFINITION"
+msgstr "线程的名义直径，如果不同于粗体总名义直径。"
+
+#:IFC.xml:44317
+msgid "ThreadLength"
+msgstr "线程长度"
+
+msgid "ThreadLength_DEFINITION"
+msgstr "线程的名义长度"
+
+#:IFC.xml:44322
+msgid "WashersCount"
+msgstr "洗涤器计数"
+
+msgid "WashersCount_DEFINITION"
+msgstr "挂载在一局火车上的洗衣机数量"
+
+#:IFC.xml:44327
+msgid "WasherShape"
+msgstr "瓦希尔形状"
+
+msgid "WasherShape_DEFINITION"
+msgstr "洗涤器的形状，例如 Standard , Square"
 
