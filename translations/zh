@@ -9,1970 +9,1479 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcMeasureResource.pot\n"
-"X-Crowdin-File-ID: 54\n"
+"X-Crowdin-File: /master/IfcProfileResource.pot\n"
+"X-Crowdin-File-ID: 70\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:23052
-msgid "IfcContextDependentUnit"
-msgstr "IfcContextDependentUnit"
+#:IFC.xml:31277
+msgid "IfcArbitraryClosedProfileDef"
+msgstr "IfcArbitraryClosedProfileDef"
 
-msgid "IfcContextDependentUnit_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A context dependent unit is a unit which is not related to the SI system. NOTE The number of parts in an assembly is a physical quantity measured in units that may be called parts but which cannot be related to an SI unit. NOTE Corresponding ISO 10303 name context dependent unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
+msgid "IfcArbitraryClosedProfileDef_DEFINITION"
+msgstr "The closed profile [[IfcArbitraryClosedProfileDef]] defines an arbitrary two dimensional profile for the use within the swept surface geometry, the swept area solid or a sectioned spine. It is given by an outer boundary from which the surface or solid can be constructed. HISTORY New entity in IFC1.5. Entity has been renamed from IfcArbitraryProfileDef in IFC2x. .spec head Informal Propositions 1. The OuterCurve has to be a closed curve. 2. The OuterCurve shall not intersect. Figure 1 illustrates the arbitrary closed profile definition. The OuterCurve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout1.gif Figure 1 Arbitrary closed profile"
 
-#:IFC.xml:9466
-msgid "IfcContextDependentUnit_HasExternalReference"
+#:IFC.xml:12093
+msgid "IfcArbitraryClosedProfileDef_OuterCurve"
+msgstr "超曲线"
+
+msgid "IfcArbitraryClosedProfileDef_OuterCurve_DEFINITION"
+msgstr "四角曲线，确定任意貌相的外部界限。"
+
+#:IFC.xml:31280
+msgid "IfcArbitraryOpenProfileDef"
+msgstr "IfcArbitraryOpenProfileDef"
+
+msgid "IfcArbitraryOpenProfileDef_DEFINITION"
+msgstr "The open profile [[IfcArbitraryOpenProfileDef]] defines an arbitrary two dimensional open profile for the use within the swept surface geometry. It is given by an open boundary from which the surface can be constructed. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The Curve has to be an open curve. Figure 1 illustrates the arbitrary open profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout3.gif Figure 1 Arbitrary open profile"
+
+#:IFC.xml:11444
+msgid "IfcArbitraryOpenProfileDef_Curve"
+msgstr "曲线"
+
+msgid "IfcArbitraryOpenProfileDef_Curve_DEFINITION"
+msgstr "打开定义配置文件的边界曲线。"
+
+#:IFC.xml:31283
+msgid "IfcArbitraryProfileDefWithVoids"
+msgstr "IfcArbitraryProfileDefWithVoids"
+
+msgid "IfcArbitraryProfileDefWithVoids_DEFINITION"
+msgstr "The [[IfcArbitraryProfileDefWithVoids]] defines an arbitrary closed two dimensional profile with holes. It is given by an outer boundary and inner boundaries. A common usage of [[IfcArbitraryProfileDefWithVoids]] is as the cross section for the creation of swept surfaces or swept solids. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The outer curve and all inner curves shall be closed curves. 2. The outer curve shall enclose all inner curves. 3. No inner curve shall intersect with the outer curve or any other inner curve. That is, no two curves of the profile definition shall have a point or segment in common, taken into account the geometric precision factor of the geometric representation context. In other words, curves must neither cross nor touch each other. 4. No inner curve may enclose another inner curve. Figure 1 illustrates the arbitrary closed profile definition with voids. The OuterCurve , defined at the supertype [[IfcArbitraryClosedProfileDef]] and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve, the InnerCurves define a set of two dimensional closed bounded curves. arbitrary profile with inner boundaries .. .. .. .. figures ifcarbitraryprofiledef layout2.gif Figure 1 Arbitrary profile with voids"
+
+#:IFC.xml:12105
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves"
+msgstr "内部曲线"
+
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves_DEFINITION"
+msgstr "边界曲线集，定义任意剖面的内部边界。"
+
+#:IFC.xml:31286
+msgid "IfcAsymmetricIShapeProfileDef"
+msgstr "Ifc非对称IshapeProfileDef"
+
+msgid "IfcAsymmetricIShapeProfileDef_DEFINITION"
+msgstr "[[IfcAsymmetricIShapeProfileDef]] defines a section profile that provides the defining parameters of a singly symmetric I shaped section. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. The overall width of the profile is implicitly given by the maximum of the bottom flange width and the top flange width. [[IfcAsymmetricIShapeProfileDef]] can also be used to model rail profiles if the application scenario does not require a full explicit shape model of the rail profile. Alternatively, [[IfcArbitraryClosedProfileDef]] can be used to provide the exact shape of rail profiles. Either way, a reference to an external document or library should be provided to further define the profile as described at [[IfcProfileDef]] . HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. The attribute CentreOfGravityInY has been made OPTIONAL. .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcIShapeProfileDef]] to [[IfcParameterizedProfileDef]] . Attributes which were inherited from [[IfcIShapeProfileDef]] are now defined directly at [[IfcAsymmetricIShapeProfileDef]] and have been partially renamed but were not reordered. Bottom flange may be narrower than top flange. Type of TopFlangeFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInY deleted, use respective property in IfcExtendedProfileProperties instead. Attributes BottomFlangeEdgeRadius , BottomFlangeSlope , TopFlangeEdgeRadius , TopFlangeSlope added. Figure 1 illustrates parameters of the asymmetric I shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInY property in IfcExtendedProfileProperties , if provided, is negative. asymmetric I shape profile .. .. .. .. figures ifcasymmetricishapeprofiledef.gif Figure 1 Assymetric I shape profile"
+
+#:IFC.xml:31287
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius"
+msgstr "底部FlangeEdgeRadius"
+
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius_DEFINITION"
+msgstr "底部侧边半径的半径。0如果锋利边缘则省略，如果未知的话。"
+
+#:IFC.xml:31292
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius"
+msgstr "底部FlangeFillet半径"
+
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius_DEFINITION"
+msgstr "Web 和底部侧边之间的文件。0如果锋利边缘则省略，如果未知的话。"
+
+#:IFC.xml:31297
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope"
+msgstr "BottomFlangeSlope"
+
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope_DEFINITION"
+msgstr "底层侧顶部斜坡。 底部侧翼被切换为零，平行底部侧翼为零，如未知则省略。"
+
+#:IFC.xml:31302
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness"
+msgstr "底部Flange厚度"
+
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness_DEFINITION"
+msgstr "底层风扇的厚度。"
+
+#:IFC.xml:31307
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth"
+msgstr "BottomFlangeWidth"
+
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth_DEFINITION"
+msgstr "底部侧翼的范围，定义与位置坐标系统x轴平行的范围。"
+
+#:IFC.xml:31312
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth"
+msgstr "总体深度："
+
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "位置坐标系统的y轴定义的深度总范围。"
+
+#:IFC.xml:31317
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius"
+msgstr "TopFlangeEdgeRadius"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius_DEFINITION"
+msgstr "顶部侧边边缘的半径。0如果锋利边缘则省略，如果未知则省略。"
+
+#:IFC.xml:31322
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius"
+msgstr "TopFlangeFilletRadius"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius_DEFINITION"
+msgstr "网页和顶部侧边之间的文件。0如果锐化边缘则省略，如果未知则省略。"
+
+#:IFC.xml:31327
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope"
+msgstr "TopFlangeSlope"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope_DEFINITION"
+msgstr "顶部侧面的斜坡。 顶部平行侧翼为零，如未知则为零。"
+
+#:IFC.xml:31332
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness"
+msgstr "TopFlangeThickness"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness_DEFINITION"
+msgstr "顶部侧翼的厚度。这个属性在形式上是可选的，只是由于历史原因。 当已知的黄金厚度时，必须按数值提供。"
+
+#:IFC.xml:31337
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth"
+msgstr "TopFlangeWidth"
+
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth_DEFINITION"
+msgstr "顶部侧翼的范围，定义与位置坐标系统x轴平行的范围。"
+
+#:IFC.xml:31342
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "我形状的网络厚度。网络以x轴和位置坐标系的y轴为中心。"
+
+#:IFC.xml:31349
+msgid "IfcCenterLineProfileDef"
+msgstr "IfcCenterLineProfileDef"
+
+msgid "IfcCenterLineProfileDef_DEFINITION"
+msgstr "The profile [[IfcCenterLineProfileDef]] defines an arbitrary two dimensional open, not self intersecting profile for the use within the swept solid geometry. It is given by an area defined by applying a constant thickness to a centerline, generating an area from which the solid can be constructed. Among else, [[IfcCenterLineProfileDef]] is used to model cold formed steel or aluminium sections Sigma, Zeta, Omega, and similar sections which are not covered by subtypes of [[IfcParameterizedProfileDef]] . However, since [[IfcCenterLineProfileDef]] does not provide shape parameters except for the thickness, there is generally a need to further specify the profile definition by means of the name, external reference to a document or library, profile properties, or a combination of them. See [[IfcProfileDef]] for guidance on external references for profiles. HISTORY New entity in IFC2x3. .spec head Informal Propositions 1. The Curve has to be an open curve. 2. The Curve has to be a non intersecting curve. Figure 1 illustrates the center line profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. The Thickness attribute defines a constant thickness along the curve. center line .. .. .. .. figures ifcarbitraryprofiledef layout4.gif Figure 1 Centerline profile"
+
+#:IFC.xml:31350
+msgid "IfcCenterLineProfileDef_Thickness"
+msgstr "厚度"
+
+msgid "IfcCenterLineProfileDef_Thickness_DEFINITION"
+msgstr "在中心线沿线应用常量厚度。"
+
+#:IFC.xml:31357
+msgid "IfcCircleHollowProfileDef"
+msgstr "IfcCircleHollowProfileDef"
+
+msgid "IfcCircleHollowProfileDef_DEFINITION"
+msgstr "[[IfcCircleHollowProfileDef]] defines a section profile that provides the defining parameters of a circular hollow section tube to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration.The centre of the position coordinate system is in the profile s centre of the bounding box for symmetric profiles identical with the centre of gravity . HISTORY New entity in IFC2x2. Figure 1 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The parameterized profile is defined by a set of parameter attributes. CHS shape profile .. .. .. .. figures ifccirclehollowprofiledef.gif Figure 1 Circle hollow profile"
+
+#:IFC.xml:31358
+msgid "IfcCircleHollowProfileDef_WallThickness"
+msgstr "壁厚度"
+
+msgid "IfcCircleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "材料的厚度，是外半径和内半径之间的差数。"
+
+#:IFC.xml:31365
+msgid "IfcCircleProfileDef"
+msgstr "IfcCircleProfileDef"
+
+msgid "IfcCircleProfileDef_DEFINITION"
+msgstr "[[IfcCircleProfileDef]] defines a circle as the profile definition used by the swept surface geometry or by the swept area solid. It is given by its Radius attribute and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters for the circle profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines, it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . The Position attribute defines the 2D position coordinate system of the circle. The Radius attribute defines the radius of the circle. circle profile .. .. .. .. figures ifccircleprofiledef layout1.gif Figure 1 Circle profile"
+
+#:IFC.xml:31366
+msgid "IfcCircleProfileDef_Radius"
+msgstr "Radius"
+
+msgid "IfcCircleProfileDef_Radius_DEFINITION"
+msgstr "圆的半径。"
+
+#:IFC.xml:31373
+msgid "IfcCompositeProfileDef"
+msgstr "IfcCompositeProfileDef"
+
+msgid "IfcCompositeProfileDef_DEFINITION"
+msgstr "The [[IfcCompositeProfileDef]] defines the profile by composition of other profiles. The composition is given by a set of at least two other profile definitions. Any profile definition except for another composite profile can be used to construct the composite. HISTORY New entity in IFC2x. Figure 314 illustrates the composite profile definition. The [[IfcCompositeProfileDef]] does not define an own position coordinate system, it is directly defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The [[IfcCompositeProfileDef]] is defined using other profile definitions. Those other profile definitions are directly inserted into the underlying coordinate system. In case of parameterized profile definitions, the Position attribute of those standard profiles is used to place the profiles relatively to each other. In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system. NOTE The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid. composite .. .. .. .. figures ifccompositeprofiledef layout1.gif Figure 314 .use head Twin profiles special case If twin profiles are modeled by profile composition, the base profile should only be specified once. It is then included into the composite profile directly and additionally indirectly via [[IfcMirroredProfileDef]] . For example, a double angle made of two L100x10 with 10mm air gap between them, i.e. a shape, can be modeled as single L [[IfcLShapeProfileDef]] [[IfcLShapeProfileDef]] AREA, L100X100X10 , [[IfcAxis2Placement2D]] [[IfcCartesianPoint]] .100 .010 2., .0 , , .100, .100, .010, .012, , 0., , double L [[IfcCompositeProfileDef]] [[IfcCompositeProfileDef]] AREA, double angle , single L, [[IfcMirroredProfileDef]] AREA, , single L, , twin profile"
+
+#:IFC.xml:31381
+msgid "IfcCompositeProfileDef_Profiles"
+msgstr "Profiles"
+
+msgid "IfcCompositeProfileDef_Profiles_DEFINITION"
+msgstr "The profiles which are used to define the composite profile."
+
+#:IFC.xml:31374
+msgid "IfcCompositeProfileDef_Label"
+msgstr "标签"
+
+msgid "IfcCompositeProfileDef_Label_DEFINITION"
+msgstr "可提及成分的名称。名称的实际含义必须在申请中加以界定。"
+
+#:IFC.xml:31393
+msgid "IfcCShapeProfileDef"
+msgstr "IfcCShapeProfileDef"
+
+msgid "IfcCShapeProfileDef_DEFINITION"
+msgstr "[[IfcCShapeProfileDef]] defines a section profile that provides the defining parameters of a C shaped section to be used by the swept area solid. This section is typically produced by cold forming steel. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of InternalFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInX deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the C shape profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInX property in IfcExtendedProfileProperties , if provided, is negative. C shape profile .. .. .. .. figures ifccshapeprofiledef.gif Figure 1 C shape profile"
+
+#:IFC.xml:31394
+msgid "IfcCShapeProfileDef_Depth"
+msgstr "深度："
+
+msgid "IfcCShapeProfileDef_Depth_DEFINITION"
+msgstr "概况深度，见h 上面的说明。"
+
+#:IFC.xml:31399
+msgid "IfcCShapeProfileDef_Girth"
+msgstr "Girth"
+
+msgid "IfcCShapeProfileDef_Girth_DEFINITION"
+msgstr "girth长度见上面c。"
+
+#:IFC.xml:31404
+msgid "IfcCShapeProfileDef_InternalFilletRadius"
+msgstr "内部Fillet半径"
+
+msgid "IfcCShapeProfileDef_InternalFilletRadius_DEFINITION"
+msgstr "内部文件半径根据上面的说明 r1 。"
+
+#:IFC.xml:31409
+msgid "IfcCShapeProfileDef_WallThickness"
+msgstr "壁厚度"
+
+msgid "IfcCShapeProfileDef_WallThickness_DEFINITION"
+msgstr "配置文件的恒定壁厚度。"
+
+#:IFC.xml:31414
+msgid "IfcCShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcCShapeProfileDef_Width_DEFINITION"
+msgstr "概况宽度，见上文b。"
+
+#:IFC.xml:31421
+msgid "IfcDerivedProfileDef"
+msgstr "IfcDerivedProfileDef"
+
+msgid "IfcDerivedProfileDef_DEFINITION"
+msgstr "[[IfcDerivedProfileDef]] defines the profile by transformation from the parent profile. The transformation is given by a two dimensional transformation operator. Transformation includes translation, rotation, mirror and scaling. The latter can be uniform or non uniform. The derived profiles may be used to define swept surfaces, swept area solids or sectioned spines. The transformation effects the position, rotation, mirroring or scale of the profile at the underlying coordinate system, i.e. the coordinate system defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The position and potential rotation of the ParentProfile within the underlying coordinate system is taken into consideration before applying the Cartesian transformation operator. Note, if only mirroring is required, [[IfcMirroredProfileDef]] should be used instead. HISTORY New entity in IFC2x. Uniform .. .. .. .. figures ifcderivedprofiledef layout1.gif Parameter The [[IfcDerivedProfileDef]] is defined using the [[IfcCartesianTransformationOperator2D]] CTO , which is applied to the parent profile definition. Example The example shows an uniform scaling and a transformation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] , Scale 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. Non uniform .. .. .. .. figures ifcderivedprofiledef layout2.gif Parameter The [[IfcDerivedProfileDef]] is defined using non uniform transformationsby applying the [[IfcCartesianTransformationOperator2DnonUniform]] as a subtype of the 2D CTO. Example The example shows a non uniform scaling and a translation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0., Scale 1. Scale2 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. mirroring .. .. .. .. figures ifcderivedprofiledef layout3.gif Parameter The [[IfcDerivedProfileDef]] is defined using mirroring by applying the [[IfcCartesianTransformationOperator2D]] CTO to the parent profile. Example The example shows a mirroring of an [[IfcLShapeProfileDef]] to match the centre cardinal point. The attributes of the CTO are Axis1 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0.,0. Scale NIL defaults to 1. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] 0.,0. . This example is for illustration only. If the transformation results only in mirroring like shown in the example, then [[IfcMirroredProfileDef]] should be used instead of [[IfcDerivedProfileDef]]. Note The following color map applies black coordinate axes show the underlying coordinate system of the swept surface, swept area solid, or sectioned spine red coordinate axes show the position coordinate system of the parent profile brown coordinate axes show the position coordinate system of the derived profile"
+
+#:IFC.xml:11855
+msgid "IfcDerivedProfileDef_Operator"
+msgstr "运算符"
+
+msgid "IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "Transformation operator applied to the parent profile."
+
+#:IFC.xml:31429
+msgid "IfcDerivedProfileDef_ParentProfile"
+msgstr "家长资料"
+
+msgid "IfcDerivedProfileDef_ParentProfile_DEFINITION"
+msgstr "The parent profile provides the origin of the transformation."
+
+#:IFC.xml:31422
+msgid "IfcDerivedProfileDef_Label"
+msgstr "标签"
+
+msgid "IfcDerivedProfileDef_Label_DEFINITION"
+msgstr "可以引用转换的名称。名称的实际含义必须在应用中加以界定。"
+
+#:IFC.xml:31441
+msgid "IfcEllipseProfileDef"
+msgstr "IfcEllipseProfileDef"
+
+msgid "IfcEllipseProfileDef_DEFINITION"
+msgstr "[[IfcEllipseProfileDef]] defines an ellipse as the profile definition used by the swept surface geometry or the swept area solid. It is given by its semi axis attributes and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC2x Figure 1 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The location of the position coordinate system defines the center of the ellipse. The SemiAxis1 attribute defines the first radius of the ellipse in the direction of the X axis, the SemiAxis2 attribute defines the second radius of the ellipse in the direction of the Y axis. NOTE The semi axes of the ellipse are rectangular to each other by definition. ellipse profile .. .. .. .. figures ifcellipseprofiledef layout1.gif Figure 1 Ellipse profile"
+
+#:IFC.xml:31442
+msgid "IfcEllipseProfileDef_SemiAxis1"
+msgstr "SemiAxis1"
+
+msgid "IfcEllipseProfileDef_SemiAxis1_DEFINITION"
+msgstr "椭圆的第一个半径。它是按照定位.P 1 的方向测量的。"
+
+#:IFC.xml:31447
+msgid "IfcEllipseProfileDef_SemiAxis2"
+msgstr "SemiAxis2"
+
+msgid "IfcEllipseProfileDef_SemiAxis2_DEFINITION"
+msgstr "椭圆的第二个半径。它是按照定位.P 2 的方向测量的。"
+
+#:IFC.xml:31454
+msgid "IfcIShapeProfileDef"
+msgstr "IfcIShapeProfileDef"
+
+msgid "IfcIShapeProfileDef_DEFINITION"
+msgstr "[[IfcIShapeProfileDef]] defines a section profile that provides the defining parameters of an I or H section. The I shape profile has values for its overall depth, width and its web and flange thicknesses. Additionally a fillet radius, flange edge radius, and flange slope may be given. This profile definition represents an I section which is symmetrical about its major and minor axes top and bottom flanges are equal and centred on the web. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Type of FilletRadius relaxed to allow for zero radius. Attributes FlangeEdgeRadius and FlangeSlope added. Figure 1 illustrates parameters of the I shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The parameterized profile is defined by a set of parameter attributes, see attribute definition below. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of lower left corner the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] 1 2 OverallWidth , RefDirection NIL defaults to 1.,0. Parameter If the FilletRadius is given, it is equally applied to all four corners created by the web and flanges. Figure 1 I shape profile"
+
+#:IFC.xml:31455
+msgid "IfcIShapeProfileDef_FilletRadius"
+msgstr "Fillet半径"
+
+msgid "IfcIShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Web 和侧边之间的文件。0如果锐化边缘则省略，如果未知的话。"
+
+#:IFC.xml:31460
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
+
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "顶层风扇边缘和底层风扇上端边缘的半径。0如果锋利边缘则省略，如未知则省略。"
+
+#:IFC.xml:31465
+msgid "IfcIShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
+
+msgid "IfcIShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "顶部风扇下面和底部风扇上面的斜度。 平行平滑平流的情况下为零，如未知则为零。"
+
+#:IFC.xml:31470
+msgid "IfcIShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
+
+msgid "IfcIShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "我形状的厚度。 上侧和下下侧两侧的厚度相同，它们集中在位置坐标系的y轴上。"
+
+#:IFC.xml:31475
+msgid "IfcIShapeProfileDef_OverallDepth"
+msgstr "总体深度："
+
+msgid "IfcIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "位置坐标系统的y轴定义的深度总范围。"
+
+#:IFC.xml:31480
+msgid "IfcIShapeProfileDef_OverallWidth"
+msgstr "总体宽度"
+
+msgid "IfcIShapeProfileDef_OverallWidth_DEFINITION"
+msgstr "位置坐标系x轴定义的宽度总范围。"
+
+#:IFC.xml:31485
+msgid "IfcIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "我形状的网络厚度。网络以x轴和位置坐标系的y轴为中心。"
+
+#:IFC.xml:31492
+msgid "IfcLShapeProfileDef"
+msgstr "IfcLShapeProfileDef"
+
+msgid "IfcLShapeProfileDef_DEFINITION"
+msgstr "[[IfcLShapeProfileDef]] defines a section profile that provides the defining parameters of an L shaped section equilateral L profiles are also covered by this entity to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The shorter leg has the same direction as the positive Position.P 1 axis, the longer or equal leg the same as the positive Position.P 2 axis. The centre of the position coordinate system is in the profiles centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Types of FilletRadius and EdgeRadius were relaxed to allow for zero values. Trailing attributes CentreOfGravityInX and CentreOfGravityInY deleted, use respective properties in IfcExtendedProfileProperties instead. WHERE rule which required Width Depth removed. Figure 1 illustrates parameters of equal sided and non equal sided L shaped section definitions. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. In the illustrated example, the CentreOfGravityInX and CentreOfGravityInY properties in IfcExtendedProfileProperties, if provided, are both negative. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of gravity the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] CentreOfGravityInX , CentreOfGravityInY RefDirection NIL defaults to 1.,0. In the illustrated example, the x and y value of Position.Location, i.e. the measures CentreOfGravityInX and CentreOfGravityInY are both positive. On the other hand, the properties named CentreOfGravityInX and CentreOfGravityInY in IfcExtendedProfileProperties, if provided, must both be set to 0 now because the centre of gravity of the resulting profile definition is located in the coordinate origin. Figure 1 L shape profile"
+
+#:IFC.xml:31493
+msgid "IfcLShapeProfileDef_Depth"
+msgstr "深度："
+
+msgid "IfcLShapeProfileDef_Depth_DEFINITION"
+msgstr "腿部长度，见h 上方的图示。与总深度相同。"
+
+#:IFC.xml:31498
+msgid "IfcLShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
+
+msgid "IfcLShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "上图r2显示的边缘半径。"
+
+#:IFC.xml:31503
+msgid "IfcLShapeProfileDef_FilletRadius"
+msgstr "Fillet半径"
+
+msgid "IfcLShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "根据上述说明 r1 提供的文件半径。"
+
+#:IFC.xml:31508
+msgid "IfcLShapeProfileDef_LegSlope"
+msgstr "Legislative Slope"
+
+msgid "IfcLShapeProfileDef_LegSlope_DEFINITION"
+msgstr "剖面每段内外面的斜度。"
+
+#:IFC.xml:31513
+msgid "IfcLShapeProfileDef_Thickness"
+msgstr "厚度"
+
+msgid "IfcLShapeProfileDef_Thickness_DEFINITION"
+msgstr "个人资料的恒定壁厚度，见上面的图表。"
+
+#:IFC.xml:31518
+msgid "IfcLShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcLShapeProfileDef_Width_DEFINITION"
+msgstr "腿部长度，见上面的说明。与整个宽度相同。 此属性在形式上是可选的，只因为历史原因。每当已知宽度时，它必须按值提供。"
+
+#:IFC.xml:31525
+msgid "IfcMirroredProfileDef"
+msgstr "IfcMirredProfileDef"
+
+msgid "IfcMirroredProfileDef_DEFINITION"
+msgstr "The [[IfcMirroredProfileDef]] defines the profile by mirroring the parent profile about the y axis of the parent profile coordinate system. That is, left and right of the parent profile are swapped. Notes [[IfcMirroredProfileDef]] is primarily useful together with [[IfcCShapeProfileDef]] , [[IfcLShapeProfileDef]] , [[IfcUShapeProfileDef]] , or [[IfcZShapeProfileDef]] as parent profile but can be used with other parent profile types as well. Mirroring of an [[IfcParameterizedProfileDef]] is performed after translation and rotation according to its Position attribute. For example, if the parent profile s Position offsets it by half of its width to the right, then the mirrored profile will be offset by half of its width to the left. Mirroring about the x axis, i.e. swapping top and bottom, can be achieved by mirroring about the y axis coupled with 180 degree rotation about the z axis. In general, rotation happens in a containing object such as [[IfcSweptAreaSolid]] , i.e. after mirroring by [[IfcMirroredProfileDef]] was performed. If the parent profile is an [[IfcParameterizedProfileDef]] , rotation can alternatively happen already in the parent profile by means of its Position attribute, i.e. before mirroring by [[IfcMirroredProfileDef]] was performed. HISTORY New entity in IFC4."
+
+#:IFC.xml:31526
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator"
+msgstr "SELF IfcDerivedProfileDef 操作员"
+
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "SELF [[IfcDerivedProfileDef]].Operator"
+
+#:IFC.xml:31532
+msgid "IfcOpenCrossProfileDef"
+msgstr "IfcOpenCrossProfileDef"
+
+msgid "IfcOpenCrossProfileDef_DEFINITION"
+msgstr "一个由宽度和斜坡定义的两维开放剖面图形，特别是片段表面几何形状中使用。 底层坐标系统是由横向表层定义定义的，该表层使用剖面定义时使用剖面表面，它是每个部分列表成员的 XY 平面。 旋转区块位置，其剖面X轴方向垂直于Directrix左侧，其方向和左侧向前对齐的 [[IfcPointByDistanceExpression]] 正向后偏移相同方向， 和 Y剖面轴向上或垂直垂直于Directrix，取决于片段表面中的用法。 全面操作中OpenCrossProfileDef 的行为可以由属性标签控制。 标签允许连续两个交叉部分通过假设它们之间的线性纵线断线来连接具有相同标签值的断点数量不同。 或者通过一个指南曲线，由同一个标签值与交叉部分点标明。 打开交叉配置文件... ... ... 数字[[IfcOpenCrossProfileDef]].png 图1 打开交叉配置"
+
+#:IFC.xml:11698
+msgid "IfcOpenCrossProfileDef_OffsetPoint"
+msgstr "偏移点"
+
+msgid "IfcOpenCrossProfileDef_OffsetPoint_DEFINITION"
+msgstr "偏移点"
+
+#:IFC.xml:31533
+msgid "IfcOpenCrossProfileDef_HorizontalWidths"
+msgstr "水平宽度"
+
+msgid "IfcOpenCrossProfileDef_HorizontalWidths_DEFINITION"
+msgstr "表示宽度是否应横向测量或沿斜坡测量；"
+
+#:IFC.xml:31538
+msgid "IfcOpenCrossProfileDef_Slopes"
+msgstr "斜度"
+
+msgid "IfcOpenCrossProfileDef_Slopes_DEFINITION"
+msgstr "坡度计量。"
+
+#:IFC.xml:31543
+msgid "IfcOpenCrossProfileDef_Tags"
+msgstr "标签"
+
+msgid "IfcOpenCrossProfileDef_Tags_DEFINITION"
+msgstr "标签"
+
+#:IFC.xml:31548
+msgid "IfcOpenCrossProfileDef_Widths"
+msgstr "宽度"
+
+msgid "IfcOpenCrossProfileDef_Widths_DEFINITION"
+msgstr "水平宽度.T.或水平宽度时沿坡度的水平宽度。 对于剖面中的部分，如果水平.T.，斜坡不应为90度。"
+
+#:IFC.xml:31555
+msgid "IfcParameterizedProfileDef"
+msgstr "IfcParameteredProfileDef"
+
+msgid "IfcParameterizedProfileDef_DEFINITION"
+msgstr "The parameterized profile definition defines a 2D position coordinate system to which the parameters of the different profiles relate to. All profiles are defined centric to the origin of the position coordinate system, or more specific, the origin 0.,0. shall be in the center of the bounding box of the profile. The Position attribute of [[IfcParameterizedProfileDef]] is used to position the profile within the XY plane of the underlying coordinate system of the swept surface geometry, the swept area solid or the sectioned spine. It can be used to position the profile at any point which becomes the origin 0.,0.,0. of the extruded or rotated surface or solid. The Position attribute should not be used if the transformation can be specified in a containing object instead. In particular, this applies if the [[IfcParameterizedProfileDef]] is referenced as SweptArea in subtypes of [[IfcSweptAreaSolid]] or as CrossSections in [[IfcSectionedSpine]] . Several subtypes of [[IfcParameterizedProfileDef]] provide shape parameters which are optional. Sending systems should always provide values for these parameters if possible. If these parameters are left unspecified, receiving systems may retrieve values for them by external reference if a reference to an external document or library is given see guidance at [[IfcProfileDef]] , or estimate them, or simply assume zero values. HISTORY New entity in IFC2x2. .change ifc2x IFC2x CHANGE The [[IfcParameterizedProfileDef]] is introduced as an intermediate new abstract entity that unifies the definition and usage of the position coordinate system for all parameterized profiles. The Position attribute has been removed at all subtypes like [[IfcRectangleProfileDef]] , [[IfcCircleProfileDef]] , etc. . .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Position attribute made optional default identity transformation . Several radius parameters in subtypes have been changed from optional [[IfcPositiveLengthMeasure]] assumed default 0. to optional [[IfcNonNegativeLengthMeasure]] default unspecified . This change allows to explicitly specify zero radius. Sending systems shall export 0. values if parameters are known to be 0. Subtypes IfcCraneRailAShapeProfileDef and IfcCraneRailFShapeProfileDef deleted. Rail profiles shall be modeled as [[IfcArbitraryClosedProfileDef]] or as [[IfcAsymmetricIShapeProfileDef]] together with appropriate external reference."
+
+#:IFC.xml:11274
+msgid "IfcParameterizedProfileDef_Position"
+msgstr "位置"
+
+msgid "IfcParameterizedProfileDef_Position_DEFINITION"
+msgstr "Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied."
+
+#:IFC.xml:31558
+msgid "IfcProfileDef"
+msgstr "IfcProfileDef"
+
+msgid "IfcProfileDef_DEFINITION"
+msgstr "[[IfcProfileDef]] is the supertype of all definitions of standard and arbitrary profiles within IFC. It is used to define a standard set of commonly used section profiles by their parameters or by their explicit curve geometry. Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters. Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries. Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available. In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile. HISTORY New entity in IFC1.5, the capabilities have been extended in IFC2x. Profiles can now support swept surfaces and swept area solids with inner boundaries. It had been renamed from IfcAttDrivenProfileDef. .change ifc2x4 IFC4 CHANGE Changed from ABSTRACT to non abstract for uses which do not require an explicitly defined geometry. Added inverse attributes HasProperties and HasExternalReference . Use in material association Beams, columns, and similarly shaped building elements and their type objects may be associated with a section profile definition, combined with material definition, by means of [[IfcRelAssociatesMaterial]] together with [[IfcMaterialProfileSet]] and [[IfcMaterialProfileSetUsage]] . This way, building elements and element types with same section and material can share a common section profile definition and association. The profile definition in material association is required to be consistent with shape representations of the respective building elements. A higher level description of spatial aligment of the section profile of a member such as centered, bottom left, in the geometric centroid, and more can be provided within [[IfcMaterialProfileSetUsage]] by means of a cardinal point reference. This can be used redundant to geometric data in order to convey design intent. Use in shape models Profile definitions are used within the geometry and geometric model resource to create either swept surfaces, swept area solids, or sectioned spines. The purpose of the profile definition within the swept surfaces or swept area solids is to define a uniform cross section being swept along a line extrusion using [[IfcSurfaceOfLinearExtrusion]] or [[IfcExtrudedAreaSolid]] along a circular arc revolution using [[IfcSurfaceOfRevolution]] or [[IfcRevolvedAreaSolid]] along a directrix lying on a reference surface using [[IfcSurfaceCurveSweptAreaSolid]] The purpose of the profile definition within the sectioned spine is to define a varying cross sections at several positions along a spine curve. The subtype [[IfcDerivedProfileDef]] is particularly suited to provide the consecutive profiles to be based on transformations of the start profile and thus maintaining the identity of vertices and edges. NOTE Subtypes of the [[IfcProfileDef]] contain parameterized profiles as subtypes of [[IfcParameterizedProfileDef]] which establish their own 2D position coordinate system, profiles given by explicit curve geometry either open or closed profiles and two special types for composite profiles and derived profiles, based on a 2D Cartesian transformation. An [[IfcProfileDef]] is treated as bounded area if it is used within swept area solids. In this case, the inside of the profile is part of the profile. The attribute ProfileType is set to AREA. An [[IfcProfileDef]] is treated as a curve if it is used within swept surfaces. In this case, the inside of the profile if the curve is closed is not part of the profile. The attribute ProfileType is set to CURVE. Figure 1 illustrates use of parameterized profiles within a swept area solid. Position The [[IfcProfileDef]] is defined within the underlying coordinate system which is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position or of [[IfcSweptAreaSolid]].Position or of each list member of [[IfcSectionedSpine]].CrossSectionPositions. In the figure to the left, the z axis of the position coordinate system points outwards of the drawing plane. Note The subtype [[IfcParameterizedProfileDef]] optionally provides an additional 2D position coordinate system relative to the underlying coordinate system of the [[IfcProfileDef]]. Sweeping In the later use of the [[IfcProfileDef]] within the swept surface or swept area solid, e.g. the [[IfcExtrudedAreaSolid]] here used as an example , the profile boundaries here based on the 2D position coordinate system of [[IfcParameterizedProfileDef]] are placed within the xy plane of the 3D position coordinate system of the swept surface or swept area solid. The profile is inserted into the underlying coordinate system either directly in case of using [[IfcArbitraryClosedProfileDef]] and [[IfcArbitraryOpenProfileDef]], through an intermediate position coordinate system in case of using [[IfcParameterizedProfileDef]]. through an 2D Cartesian transformation operator applied directly to the curve position when using arbitrary profile definitions, or applied to the position coordinate system when using parameterized profile definitions in case of using [[IfcDerivedProfileDef]]. when using [[IfcCompositeProfileDef]] the insertion depends on the subtype of the included sub profiles. Figure 1 Profile sweeping Profile types Results of the different usage of the ProfileType attribute are demonstrated here. The ProfileType defines whether the inside the bounded area is part of the profile definition Area or not Curve . Figure 2 illustrates the resulting area or curve depending on ProfileType . ProfileType AREA ProfileType CURVE Figure 2 Profile types Profile specification by external reference If the profile is standardized by a norm or a catalogue, a reference to this norm or catalogue should be provided by means of HasExternalReference . This inverse relationship is used to associate an [[IfcExternalReference]] notably [[IfcClassificationReference]] or [[IfcLibraryReference]] with the profile. [[IfcClassificationReference]] is used to refer to a profile norm a common standard or manufacturer s standard . In this case, [[IfcClassificationReference]].ItemReference contains the formal profile designation from the norm. On the other hand, [[IfcProfileDef]].ProfileName contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the profile norm. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource . [[IfcLibraryReference]] is used to refer to a library which contains profile definitions. In this case, [[IfcLibraryReference]].ItemReference contains the identifier of the profile within the library and is meant to be machine readable in contrast to [[IfcProfileDef]].ProfileName which should be human readable . [[IfcLibraryReference]].Location and . Name or . ReferencedLibrary further describe the library. If an external reference is provided, sending systems shall ensure that the shape of the profile definition object agrees with the definitions in the referenced classification or library. Direct instances of [[IfcProfileDef]] Usually, only subtypes of [[IfcProfileDef]] should be instantiated. In some special cases, e.g. if the profile object is used for purposes other than geometric models e.g. for structural analysis models , it may be possible to directly instantiate [[IfcProfileDef]] and further specify the profile only by external reference or by profile properties. The latter are tracked by the inverse attribute HasProperties ."
+
+#:IFC.xml:9514
+msgid "IfcProfileDef_HasExternalReference"
 msgstr "HasExternalReference"
 
-msgid "IfcContextDependentUnit_HasExternalReference_DEFINITION"
-msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the context dependent unit. .change ifc2x4 IFC4 CHANGE New inverse attribute"
+msgid "IfcProfileDef_HasExternalReference_DEFINITION"
+msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the profile. .change ifc2x4 IFC4 CHANGE New inverse attribute"
 
-#:IFC.xml:23053
-msgid "IfcContextDependentUnit_Name"
-msgstr "名称"
+#:IFC.xml:31571
+msgid "IfcProfileDef_HasProperties"
+msgstr "HasProperties"
 
-msgid "IfcContextDependentUnit_Name_DEFINITION"
-msgstr "单词或单词组指上下文依赖单位。"
+msgid "IfcProfileDef_HasProperties_DEFINITION"
+msgstr "配置文件的其他属性，例如机械属性。更改ifc2x4 IFC4 变换新反向属性"
 
-#:IFC.xml:23061
-msgid "IfcConversionBasedUnit"
-msgstr "IfcConversionBasedUnit"
+#:IFC.xml:31559
+msgid "IfcProfileDef_ProfileName"
+msgstr "ProfileName"
 
-msgid "IfcConversionBasedUnit_DEFINITION"
-msgstr "An [[IfcConversionBasedUnit]] is used to define a unit that has a conversion rate to a base unit. To identify some commonly used conversion based units, the standard designations case insensitive for the Name attribute are indicated in Table 1. Name Description inch Length measure equal to 25.4 mm foot Length measure equal to 304.8 mm yard Length measure equal to 914 mm mile Length measure equal to 1609 m square inch Area measure equal to 0.0006452 square meters square foot Area measure equal to 0.09290 square meters square yard Area measure equal to 0.83612736 square meters acre Area measure equal to 4046.86 square meters square mile Area measure equal to 2 588 881 square meters cubic inch Volume measure equal to 0.00001639 cubic meters cubic foot Volume measure equal to 0.02832 cubic meters cubic yard Volume measure equal to 0.7636 cubic meters litre Volume measure equal to 0.001 cubic meters fluid ounce UK Volume measure equal to 0.0000284130625 cubic meters fluid ounce US Volume measure equal to 0.00002957353 cubic meters pint UK Volume measure equal to 0.000568 cubic meters pint US Volume measure equal to 0.000473 cubic meters gallon UK Volume measure equal to 0.004546 cubic meters gallon US Volume measure equal to 0.003785 cubic meters degree Angle measure equal to π 180 rad ounce Mass measure equal to 28.35 g pound Mass measure equal to 0.454 kg ton UK Mass measure equal to 1016.0469088 kg, also known as long ton, gross ton, shipper s ton ton US Mass measure equal to 907.18474 kg, also known as short ton, net ton lbf Force measure equal to 4.4482216153 N, pound force kip Force measure equal to 4448.2216153 N, kilopound force psi Pressure measure equal to 6894.7572932 Pa, pound force per square inch ksi Pressure measure equal to 6894757.2932 Pa, kilopound force per square inch minute Time measure equal to 60 s hour Time measure equal to 3600 s day Time measure equal to 86400 s btu Energy measure equal to 1055.056 J, British Thermal Unit Table 1 Standard unit names EXAMPLE An inch is a converted unit. It is from the Imperial system, its name is inch and it can be related to the SI unit, millimetre, through a measure with unit whose value is 25.4 millimetre. A foot is also a converted unit. It is from the Imperial system, its name is foot and it can be related to an [[IfcSIUnit]] , millimetre, either directly or through the unit called inch . Note that several US customary units differ from Imperial units nonmetric English units of the same name. .extDef NOTE Definition according to ISO CD 10303 41 1992 A conversion based unit is a unit that is defined based on a measure with unit. NOTE Entity adapted from conversion based unit defined in ISO 10303 41. HISTORY New entity in IFC1.5.1. .change ifc2x3 IFC2x3 CHANGE Standard names of typical units added. .change ifc2x4 IFC4 CHANGE Further names added square inch, square foot, square mile, square yard, cubic inch, cubic foot, cubic yard, fluid ounce UK US, ton UK US, degree."
+msgid "IfcProfileDef_ProfileName_DEFINITION"
+msgstr "个人可读取的简档名称，例如根据标准的简档表。 如上所述，机器可读的标准化配置文件名应在 [[IfcExternalReference]]ItemReference 中提供。"
 
-#:IFC.xml:9478
-msgid "IfcConversionBasedUnit_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:31564
+msgid "IfcProfileDef_ProfileType"
+msgstr "ProfileType"
 
-msgid "IfcConversionBasedUnit_HasExternalReference_DEFINITION"
-msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the conversion based unit. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgid "IfcProfileDef_ProfileType_DEFINITION"
+msgstr "定义解析此配置文件定义的几何类型，要么是曲线要么是表面区域。 在曲线的情况下，配置文件应以横向表面作为参照。 在区域的情况下，配置文件应该用横向区域固体来引用。"
 
-#:IFC.xml:23070
-msgid "IfcConversionBasedUnit_ConversionFactor"
-msgstr "转换因子"
+#:IFC.xml:31609
+msgid "IfcProfileProperties"
+msgstr "IfcProfileProperties"
 
-msgid "IfcConversionBasedUnit_ConversionFactor_DEFINITION"
-msgstr "The physical quantity from which the converted unit is derived."
+msgid "IfcProfileProperties_DEFINITION"
+msgstr "This is a collection of properties applicable to section profile definitions. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract. Subtypes IfcGeneralProfileProperties , IfcStructuralProfileProperties , and IfcStructuralSteelProfileProperties deleted. Attribute ProfileName deleted, use ProfileDefinition.ProfileName instead. Attribute ProfileDefinition made mandatory. Attributes Name , Description , and HasProperties added inherited from [[IfcExtendedProperties]] ."
 
-#:IFC.xml:23062
-msgid "IfcConversionBasedUnit_Name"
-msgstr "名称"
+#:IFC.xml:31571
+msgid "IfcProfileProperties_ProfileDefinition"
+msgstr "配置定义"
 
-msgid "IfcConversionBasedUnit_Name_DEFINITION"
-msgstr "用于指转换单位的单词或一组单词。"
+msgid "IfcProfileProperties_ProfileDefinition_DEFINITION"
+msgstr "Profile definition which is qualified by these properties."
 
-#:IFC.xml:23082
-msgid "IfcConversionBasedUnitWithOffset"
-msgstr "IfcConversionBasedUnitWithOffset"
+#:IFC.xml:31612
+msgid "IfcProfileTypeEnum"
+msgstr "IfcProfileTypeEnum"
 
-msgid "IfcConversionBasedUnitWithOffset_DEFINITION"
-msgstr "[[IfcConversionBasedUnitWithOffset]] is a unit which is converted from another unit by applying a conversion factor and an offset. HISTORY New entity in IFC4. Example The temperature unit Fahrenheit is based on the temperature unit Kelvin as follows f k 1.8 459.67 wherein k is an absolute temperature expressed in Kelvin and f is the same temperature in Fahrenheit. The following entity instances provide Fahrenheit as a unit [[IfcConversionBasedUnitWithOffset]] [[IfcDimensionalExponents]] 0, 0, 0, 0, 1, 0, 0 , THERMODYNAMICTEMPERATUREUNIT, Fahrenheit , [[IfcMeasureWithUnit]] [[IfcThermodynamicTemperatureMeasure]] 1.8 , [[IfcSIUnit]] THERMODYNAMICTEMPERATUREUNIT, , KELVIN , 459.67"
+msgid "IfcProfileTypeEnum_DEFINITION"
+msgstr "列举定义了剖面形状的定义应以几何方式解析为曲线还是表面。 IFC1.5中的新类型。 项目 CURVE 所产生的几何条目是类型曲线和闭合的，唯一的例外是解析为打开的曲线的 [[IfcArbitraryOpenProfileDef]] 所创建的曲线。 在进行全面操作后产生的几何形状是一种横扫的表面。 这可以用来界定厚度不适合几何形状的薄板，例如薄膜。 AREA 产生的几何物项是类型表面。进行一场全面操作后产生的几何形状是一种带有特定体积的冲积固体。"
 
-#:IFC.xml:23083
-msgid "IfcConversionBasedUnitWithOffset_ConversionOffset"
-msgstr "转换偏移"
+#:IFC.xml:31613
+msgid "IfcProfileTypeEnum_AREA"
+msgstr "AREA"
 
-msgid "IfcConversionBasedUnitWithOffset_ConversionOffset_DEFINITION"
-msgstr "在继承的转换因子后面添加一个正负偏移。"
+msgid "IfcProfileTypeEnum_AREA_DEFINITION"
+msgstr "产生的几何物项是类型表面。在进行一场全面操作后产生的几何形状是一种带有特定体积的冲积固体物。"
 
-#:IFC.xml:23090
-msgid "IfcCorrectDimensions__m"
-msgstr "IfcCorrectDimensions m"
-
-#:IFC.xml:23098
-msgid "IfcCorrectUnitAssignment"
-msgstr "IfcCorrectUnitDelegation"
-
-#:IFC.xml:23106
-msgid "IfcDeriveDimensionalExponents"
-msgstr "IfcDeriveDimensionalExponents"
-
-#:IFC.xml:23114
-msgid "IfcDerivedMeasureValue"
-msgstr "IfcDerivedMeasureValue"
-
-#:IFC.xml:23116
-msgid "IfcDerivedUnit"
-msgstr "Ifc衍生物股"
-
-msgid "IfcDerivedUnit_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A derived unit is an expression of units. EXAMPLE Newton per square millimetre is a derived unit. NOTE Corresponding ISO 10303 name derived unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
-
-#:IFC.xml:23133
-msgid "IfcDerivedUnit_Elements"
-msgstr "要件"
-
-msgid "IfcDerivedUnit_Elements_DEFINITION"
-msgstr "The group of units and their exponents that define the derived unit."
-
-#:IFC.xml:23117
-msgid "IfcDerivedUnit_Dimensions"
-msgstr "尺寸"
-
-msgid "IfcDerivedUnit_Dimensions_DEFINITION"
-msgstr "使用 IfcDerivedDimensionalExponents 生成的 Dimensional 指数使用SELF 作为输入值。"
-
-#:IFC.xml:23121
-msgid "IfcDerivedUnit_UnitType"
-msgstr "UnitType"
-
-msgid "IfcDerivedUnit_UnitType_DEFINITION"
-msgstr "从计算派生单位类型中选择用于IFC 模型的派生单位名称。"
-
-#:IFC.xml:23126
-msgid "IfcDerivedUnit_UserDefinedType"
-msgstr "UserDefinedType"
-
-msgid "IfcDerivedUnit_UserDefinedType_DEFINITION"
-msgstr "UserDefinedType"
-
-#:IFC.xml:23145
-msgid "IfcDerivedUnitElement"
-msgstr "Ifc衍生工具元素"
-
-msgid "IfcDerivedUnitElement_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A derived unit element is one of the unit quantities which makes up a derived unit. EXAMPLE Newtons per square millimetre is a derived unit. It has two elements, Newton whose exponent has a value of 1 and millimetre whose exponent is 2. NOTE Corresponding ISO 10303 name derived unit element, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
-
-#:IFC.xml:23152
-msgid "IfcDerivedUnitElement_Unit"
-msgstr "1 D-1, 1 P-5, 1 P-4, 1 P-3,"
-
-msgid "IfcDerivedUnitElement_Unit_DEFINITION"
-msgstr "The fixed quantity which is used as the mathematical factor."
-
-#:IFC.xml:23146
-msgid "IfcDerivedUnitElement_Exponent"
-msgstr "指数"
-
-msgid "IfcDerivedUnitElement_Exponent_DEFINITION"
-msgstr "适用于单位属性的力量。"
-
-#:IFC.xml:23164
-msgid "IfcDerivedUnitEnum"
-msgstr "IfcDerivedUnitEnum"
-
-msgid "IfcDerivedUnitEnum_DEFINITION"
-msgstr "[[IfcDerivedUnitEnum]] is an enumeration type for allowed types of derived units. HISTORY New type in IFC2.0. .change ifc2x4 IFC 2x4 change added AREADENSITYUNIT, SOUNDPOWERLEVELUNIT, SOUNDPRESSURELEVELUNIT and TEMPERATURERATEOFCHANGEUNIT. Items ANGULARVELOCITYUNIT AREADENSITYUNIT COMPOUNDPLANEANGLEUNIT DYNAMICVISCOSITYUNIT HEATFLUXDENSITYUNIT INTEGERCOUNTRATEUNIT ISOTHERMALMOISTURECAPACITYUNIT KINEMATICVISCOSITYUNIT LINEARVELOCITYUNIT MASSDENSITYUNIT MASSFLOWRATEUNIT MOISTUREDIFFUSIVITYUNIT MOLECULARWEIGHTUNIT SPECIFICHEATCAPACITYUNIT THERMALADMITTANCEUNIT THERMALCONDUCTANCEUNIT THERMALRESISTANCEUNIT THERMALTRANSMITTANCEUNIT VAPORPERMEABILITYUNIT VOLUMETRICFLOWRATEUNIT ROTATIONALFREQUENCYUNIT TORQUEUNIT MOMENTOFINERTIAUNIT LINEARMOMENTUNIT LINEARFORCEUNIT PLANARFORCEUNIT MODULUSOFELASTICITYUNIT SHEARMODULUSUNIT LINEARSTIFFNESSUNIT ROTATIONALSTIFFNESSUNIT MODULUSOFSUBGRADEREACTIONUNIT ACCELERATIONUNIT CURVATUREUNIT HEATINGVALUEUNIT IONCONCENTRATIONUNIT LUMINOUSINTENSITYDISTRIBUTIONUNIT MASSPERLENGTHUNIT MODULUSOFLINEARSUBGRADEREACTIONUNIT MODULUSOFROTATIONALSUBGRADEREACTIONUNIT PHUNIT ROTATIONALMASSUNIT SECTIONAREAINTEGRALUNIT SECTIONMODULUSUNIT SOUNDPOWERLEVELUNIT SOUNDPOWERUNIT SOUNDPRESSURELEVELUNIT SOUNDPRESSUREUNIT TEMPERATUREGRADIENTUNIT TEMPERATURERATEOFCHANGEUNIT THERMALEXPANSIONCOEFFICIENTUNIT WARPINGCONSTANTUNIT WARPINGMOMENTUNIT USERDEFINED User defined derived unit."
-
-#:IFC.xml:23165
-msgid "IfcDerivedUnitEnum_ACCELERATIONUNIT"
-msgstr "行动"
-
-msgid "IfcDerivedUnitEnum_ACCELERATIONUNIT_DEFINITION"
-msgstr "行动"
-
-#:IFC.xml:23166
-msgid "IfcDerivedUnitEnum_ANGULARVELOCITYUNIT"
-msgstr "四月"
-
-msgid "IfcDerivedUnitEnum_ANGULARVELOCITYUNIT_DEFINITION"
-msgstr "四月"
-
-#:IFC.xml:23167
-msgid "IfcDerivedUnitEnum_AREADENSITYUNIT"
-msgstr "领域"
-
-msgid "IfcDerivedUnitEnum_AREADENSITYUNIT_DEFINITION"
-msgstr "领域"
-
-#:IFC.xml:23168
-msgid "IfcDerivedUnitEnum_COMPOUNDPLANEANGLEUNIT"
-msgstr "常驻代表"
-
-msgid "IfcDerivedUnitEnum_COMPOUNDPLANEANGLEUNIT_DEFINITION"
-msgstr "常驻代表"
-
-#:IFC.xml:23169
-msgid "IfcDerivedUnitEnum_CURVATUREUNIT"
+#:IFC.xml:31614
+msgid "IfcProfileTypeEnum_CURVE"
 msgstr "解答"
 
-msgid "IfcDerivedUnitEnum_CURVATUREUNIT_DEFINITION"
-msgstr "解答"
+msgid "IfcProfileTypeEnum_CURVE_DEFINITION"
+msgstr "生成的几何条目是类型曲线和闭合的，唯一的例外是解析为打开的曲线的 [[IfcArbitraryOpenProfileDef]] 所创建的曲线。 在进行全面操作后产生的几何形状是一种横扫的表面。 这可以用来界定厚度不适合几何形状的薄板，例如薄膜。"
 
-#:IFC.xml:23170
-msgid "IfcDerivedUnitEnum_DYNAMICVISCOSITYUNIT"
-msgstr "DYNAMICVISCOSITYUNIT"
+#:IFC.xml:31616
+msgid "IfcRectangleHollowProfileDef"
+msgstr "IfcRecantangleHollowProfileDef"
 
-msgid "IfcDerivedUnitEnum_DYNAMICVISCOSITYUNIT_DEFINITION"
-msgstr "DYNAMICVISCOSITYUNIT"
+msgid "IfcRectangleHollowProfileDef_DEFINITION"
+msgstr "[[IfcRectangleHollowProfileDef]] defines a section profile that provides the defining parameters of a rectangular or square hollow section to be used by the swept surface geometry or the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. A square hollow section can be defined by equal values for h and b. The centre of the position coordinate system is in the profiles centre of the bounding box for symmetric profiles identical with the centre of gravity . Normally, the longer sides are parallel to the y axis, the shorter sides parallel to the x axis. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Types of InnerFilletRadius and OuterFilletRadius relaxed to allow for zero values. Figure 1 illustrates parameters of a rectangular or square hollow profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 Rectangle hollow profile"
 
-#:IFC.xml:23171
-msgid "IfcDerivedUnitEnum_HEATFLUXDENSITYUNIT"
-msgstr "六月"
+#:IFC.xml:31617
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius"
+msgstr "InnerFilletRadius"
 
-msgid "IfcDerivedUnitEnum_HEATFLUXDENSITYUNIT_DEFINITION"
-msgstr "六月"
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius_DEFINITION"
+msgstr "Inner corner radius."
 
-#:IFC.xml:23172
-msgid "IfcDerivedUnitEnum_HEATINGVALUEUNIT"
-msgstr "热点"
+#:IFC.xml:31622
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius"
+msgstr "超滤镜半径"
 
-msgid "IfcDerivedUnitEnum_HEATINGVALUEUNIT_DEFINITION"
-msgstr "热点"
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius_DEFINITION"
+msgstr "外角半径。"
 
-#:IFC.xml:23173
-msgid "IfcDerivedUnitEnum_INTEGERCOUNTRATEUNIT"
-msgstr "INTEGERCOUNTRATEUNIT"
+#:IFC.xml:31627
+msgid "IfcRectangleHollowProfileDef_WallThickness"
+msgstr "壁厚度"
 
-msgid "IfcDerivedUnitEnum_INTEGERCOUNTRATEUNIT_DEFINITION"
-msgstr "INTEGERCOUNTRATEUNIT"
+msgid "IfcRectangleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "材料厚度。"
 
-#:IFC.xml:23174
-msgid "IfcDerivedUnitEnum_IONCONCENTRATIONUNIT"
-msgstr "四、结 论"
+#:IFC.xml:31634
+msgid "IfcRectangleProfileDef"
+msgstr "IfcRecantangleProfileDef"
 
-msgid "IfcDerivedUnitEnum_IONCONCENTRATIONUNIT_DEFINITION"
-msgstr "四、结 论"
+msgid "IfcRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRectangleProfileDef]] defines a rectangle as the profile definition used by the swept surface geometry or the swept area solid. It is given by its X extent and its Y extent, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters of the rectangle profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . Parameter The [[IfcRectangleProfileDef]] is defined within the position coordinate system, where the XDim defines the length measure for the length of the rectangle half along the positive x axis and the YDim defines the length measure for the width of the rectangle half along the positive y axis . Figure 1 Rectangle profile"
 
-#:IFC.xml:23175
-msgid "IfcDerivedUnitEnum_ISOTHERMALMOISTURECAPACITYUNIT"
-msgstr "三月"
+#:IFC.xml:31635
+msgid "IfcRectangleProfileDef_XDim"
+msgstr "XDim"
 
-msgid "IfcDerivedUnitEnum_ISOTHERMALMOISTURECAPACITYUNIT_DEFINITION"
-msgstr "三月"
+msgid "IfcRectangleProfileDef_XDim_DEFINITION"
+msgstr "x轴方向矩形的范围。"
 
-#:IFC.xml:23176
-msgid "IfcDerivedUnitEnum_KINEMATICVISCOSITYUNIT"
-msgstr "KINEMATVISTYUNIT"
+#:IFC.xml:31640
+msgid "IfcRectangleProfileDef_YDim"
+msgstr "YDim"
 
-msgid "IfcDerivedUnitEnum_KINEMATICVISCOSITYUNIT_DEFINITION"
-msgstr "KINEMATVISTYUNIT"
+msgid "IfcRectangleProfileDef_YDim_DEFINITION"
+msgstr "y轴方向矩形的范围。"
 
-#:IFC.xml:23177
-msgid "IfcDerivedUnitEnum_LINEARFORCEUNIT"
-msgstr "联机信息"
+#:IFC.xml:31647
+msgid "IfcReinforcementBarProperties"
+msgstr "IfcReinforceBarProperties"
 
-msgid "IfcDerivedUnitEnum_LINEARFORCEUNIT_DEFINITION"
-msgstr "联机信息"
+msgid "IfcReinforcementBarProperties_DEFINITION"
+msgstr "IfcReinforcementProperties defines the set of properties for a specific combination of reinforcement bar steel grade, bar type and effective depth. HISTORY New entity in IFC2x2. The total cross section area for the specific steel grade is always provided. Additionally also general reinforcing bar configurations as a count of bars may be provided as defined in attribute BarCount . In this case the nominal bar diameter should be identical for all given bars as defined in attribute NominalBarDiameter ."
 
-#:IFC.xml:23178
-msgid "IfcDerivedUnitEnum_LINEARMOMENTUNIT"
-msgstr "LINEARMOMENTUNIT"
+#:IFC.xml:31648
+msgid "IfcReinforcementBarProperties_BarCount"
+msgstr "BarCount"
 
-msgid "IfcDerivedUnitEnum_LINEARMOMENTUNIT_DEFINITION"
-msgstr "LINEARMOMENTUNIT"
+msgid "IfcReinforcementBarProperties_BarCount_DEFINITION"
+msgstr "在特定加固配置中所包含的标称直径和钢等级相同的条形条数。"
 
-#:IFC.xml:23179
-msgid "IfcDerivedUnitEnum_LINEARSTIFFNESSUNIT"
-msgstr "LINEARSTIFFNESSUNIT"
+#:IFC.xml:31653
+msgid "IfcReinforcementBarProperties_BarSurface"
+msgstr "酒巴着色"
 
-msgid "IfcDerivedUnitEnum_LINEARSTIFFNESSUNIT_DEFINITION"
-msgstr "LINEARSTIFFNESSUNIT"
+msgid "IfcReinforcementBarProperties_BarSurface_DEFINITION"
+msgstr "指示栏表面是否纯洁或纹理。"
 
-#:IFC.xml:23180
-msgid "IfcDerivedUnitEnum_LINEARVELOCITYUNIT"
-msgstr "LINEARVELOCITYUNIT"
+#:IFC.xml:31658
+msgid "IfcReinforcementBarProperties_EffectiveDepth"
+msgstr "有效深度"
 
-msgid "IfcDerivedUnitEnum_LINEARVELOCITYUNIT_DEFINITION"
-msgstr "LINEARVELOCITYUNIT"
+msgid "IfcReinforcementBarProperties_EffectiveDepth_DEFINITION"
+msgstr "有效深度： 具体增援跨区或连续增援配置的距离，从一个共同的具体参照点计算。 通常，参考点是波束和板块的上表面，或是平面上列的类似投影点。"
 
-#:IFC.xml:23181
-msgid "IfcDerivedUnitEnum_LUMINOUSINTENSITYDISTRIBUTIONUNIT"
-msgstr "客户端信息"
+#:IFC.xml:31663
+msgid "IfcReinforcementBarProperties_NominalBarDiameter"
+msgstr "代名Bar直径"
 
-msgid "IfcDerivedUnitEnum_LUMINOUSINTENSITYDISTRIBUTIONUNIT_DEFINITION"
-msgstr "客户端信息"
+msgid "IfcReinforcementBarProperties_NominalBarDiameter_DEFINITION"
+msgstr "确定加固柱的横截尺寸的名义直径。 条形直径应当对具体增援配置中所包含的所有条形完全相同。"
 
-#:IFC.xml:23182
-msgid "IfcDerivedUnitEnum_MASSDENSITYUNIT"
-msgstr "MASSDENSITYUNIT"
+#:IFC.xml:31668
+msgid "IfcReinforcementBarProperties_SteelGrade"
+msgstr "钢种级"
 
-msgid "IfcDerivedUnitEnum_MASSDENSITYUNIT_DEFINITION"
-msgstr "MASSDENSITYUNIT"
+msgid "IfcReinforcementBarProperties_SteelGrade_DEFINITION"
+msgstr "根据当地标准确定的名义钢等级。"
 
-#:IFC.xml:23183
-msgid "IfcDerivedUnitEnum_MASSFLOWRATEUNIT"
-msgstr "MASSFLOWRATEUNIT"
+#:IFC.xml:31673
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea"
+msgstr "TotalCrossSectionarea"
 
-msgid "IfcDerivedUnitEnum_MASSFLOWRATEUNIT_DEFINITION"
-msgstr "MASSFLOWRATEUNIT"
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea_DEFINITION"
+msgstr "加固特定钢等级的总有效跨部门面积。"
 
-#:IFC.xml:23184
-msgid "IfcDerivedUnitEnum_MASSPERLENGTHUNIT"
-msgstr "马斯普伦特"
+#:IFC.xml:31692
+msgid "IfcReinforcingBarRoleEnum"
+msgstr "IfcReinforcingBarRoleEnum"
 
-msgid "IfcDerivedUnitEnum_MASSPERLENGTHUNIT_DEFINITION"
-msgstr "马斯普伦特"
+msgid "IfcReinforcingBarRoleEnum_DEFINITION"
+msgstr "为酒吧的作用、目的或使用界定标准类型的编号，即它们是要携带的负荷和压力的类型。 在 IFC2x2. 中的新类型。添加了 ifc2x4 IFC4 更改项目。 MaIN物品 加固栏是一个主栏。加固栏是一个加固栏。 强化栏是一种强化链接，窒息。强化栏是一种研究。强化栏是一种强化。强化强化效果。EDGE 边缘增援。 Ring Ring Reconstructions. ANGO Anchoring enhancement. USERDEFINED The type is defined user. Noteding FINED The type of emergency is defined."
 
-#:IFC.xml:23185
-msgid "IfcDerivedUnitEnum_MODULUSOFELASTICITYUNIT"
-msgstr "MODULUSOFELASTICITYUNIT"
+#:IFC.xml:31693
+msgid "IfcReinforcingBarRoleEnum_ANCHORING"
+msgstr "正在解析"
 
-msgid "IfcDerivedUnitEnum_MODULUSOFELASTICITYUNIT_DEFINITION"
-msgstr "MODULUSOFELASTICITYUNIT"
+msgid "IfcReinforcingBarRoleEnum_ANCHORING_DEFINITION"
+msgstr "护卫增援。"
 
-#:IFC.xml:23186
-msgid "IfcDerivedUnitEnum_MODULUSOFLINEARSUBGRADEREACTIONUNIT"
-msgstr "MODULUSOFLINEARSUBGRADEREACTIONUNIT"
+#:IFC.xml:31694
+msgid "IfcReinforcingBarRoleEnum_EDGE"
+msgstr "编辑"
 
-msgid "IfcDerivedUnitEnum_MODULUSOFLINEARSUBGRADEREACTIONUNIT_DEFINITION"
-msgstr "MODULUSOFLINEARSUBGRADEREACTIONUNIT"
+msgid "IfcReinforcingBarRoleEnum_EDGE_DEFINITION"
+msgstr "增援边缘。"
 
-#:IFC.xml:23187
-msgid "IfcDerivedUnitEnum_MODULUSOFROTATIONALSUBGRADEREACTIONUNIT"
-msgstr "MODULUSOFROTATIONALSUBGRADEREACTIONUNIT"
+#:IFC.xml:31695
+msgid "IfcReinforcingBarRoleEnum_LIGATURE"
+msgstr "过期的"
 
-msgid "IfcDerivedUnitEnum_MODULUSOFROTATIONALSUBGRADEREACTIONUNIT_DEFINITION"
-msgstr "MODULUSOFROTATIONALSUBGRADEREACTIONUNIT"
+msgid "IfcReinforcingBarRoleEnum_LIGATURE_DEFINITION"
+msgstr "加固栏是一种亮度链接，窒息。"
 
-#:IFC.xml:23188
-msgid "IfcDerivedUnitEnum_MODULUSOFSUBGRADEREACTIONUNIT"
-msgstr "MODULUSOFSUBGRADEREACTIONUNIT"
+#:IFC.xml:31696
+msgid "IfcReinforcingBarRoleEnum_MAIN"
+msgstr "主要的"
 
-msgid "IfcDerivedUnitEnum_MODULUSOFSUBGRADEREACTIONUNIT_DEFINITION"
-msgstr "MODULUSOFSUBGRADEREACTIONUNIT"
+msgid "IfcReinforcingBarRoleEnum_MAIN_DEFINITION"
+msgstr "加固栏是一个主要栏。"
 
-#:IFC.xml:23189
-msgid "IfcDerivedUnitEnum_MOISTUREDIFFUSIVITYUNIT"
-msgstr "MOISTUREDIFUSITYUNIT"
+#:IFC.xml:31697
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcDerivedUnitEnum_MOISTUREDIFFUSIVITYUNIT_DEFINITION"
-msgstr "MOISTUREDIFUSITYUNIT"
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义增援类型。"
 
-#:IFC.xml:23190
-msgid "IfcDerivedUnitEnum_MOLECULARWEIGHTUNIT"
-msgstr "MOLECULARWEIGHTUNIT"
+#:IFC.xml:31698
+msgid "IfcReinforcingBarRoleEnum_PUNCHING"
+msgstr "浮动通知"
 
-msgid "IfcDerivedUnitEnum_MOLECULARWEIGHTUNIT_DEFINITION"
-msgstr "MOLECULARWEIGHTUNIT"
+msgid "IfcReinforcingBarRoleEnum_PUNCHING_DEFINITION"
+msgstr "击中增援。"
 
-#:IFC.xml:23191
-msgid "IfcDerivedUnitEnum_MOMENTOFINERTIAUNIT"
-msgstr "MOMENTOFINERTIAUNIT"
+#:IFC.xml:31699
+msgid "IfcReinforcingBarRoleEnum_RING"
+msgstr "环状图"
 
-msgid "IfcDerivedUnitEnum_MOMENTOFINERTIAUNIT_DEFINITION"
-msgstr "MOMENTOFINERTIAUNIT"
+msgid "IfcReinforcingBarRoleEnum_RING_DEFINITION"
+msgstr "增援环。"
 
-#:IFC.xml:23192
-msgid "IfcDerivedUnitEnum_PHUNIT"
-msgstr "PHUNIT"
+#:IFC.xml:31700
+msgid "IfcReinforcingBarRoleEnum_SHEAR"
+msgstr "得分"
 
-msgid "IfcDerivedUnitEnum_PHUNIT_DEFINITION"
-msgstr "PHUNIT"
+msgid "IfcReinforcingBarRoleEnum_SHEAR_DEFINITION"
+msgstr "加固栏是切边栏。"
 
-#:IFC.xml:23193
-msgid "IfcDerivedUnitEnum_PLANARFORCEUNIT"
-msgstr "PLANARFORCEUNIT"
+#:IFC.xml:31701
+msgid "IfcReinforcingBarRoleEnum_STUD"
+msgstr "STUD"
 
-msgid "IfcDerivedUnitEnum_PLANARFORCEUNIT_DEFINITION"
-msgstr "PLANARFORCEUNIT"
+msgid "IfcReinforcingBarRoleEnum_STUD_DEFINITION"
+msgstr "加固栏是一项研究。"
 
-#:IFC.xml:23194
-msgid "IfcDerivedUnitEnum_ROTATIONALFREQUENCYUNIT"
-msgstr "RotATIONALFREQUENCYUNIT"
-
-msgid "IfcDerivedUnitEnum_ROTATIONALFREQUENCYUNIT_DEFINITION"
-msgstr "RotATIONALFREQUENCYUNIT"
-
-#:IFC.xml:23195
-msgid "IfcDerivedUnitEnum_ROTATIONALMASSUNIT"
-msgstr "RotATIONALMASSUNIT"
-
-msgid "IfcDerivedUnitEnum_ROTATIONALMASSUNIT_DEFINITION"
-msgstr "RotATIONALMASSUNIT"
-
-#:IFC.xml:23196
-msgid "IfcDerivedUnitEnum_ROTATIONALSTIFFNESSUNIT"
-msgstr "ROTATIONALSTIFFNESSUNIT"
-
-msgid "IfcDerivedUnitEnum_ROTATIONALSTIFFNESSUNIT_DEFINITION"
-msgstr "ROTATIONALSTIFFNESSUNIT"
-
-#:IFC.xml:23197
-msgid "IfcDerivedUnitEnum_SECTIONAREAINTEGRALUNIT"
-msgstr "附 件"
-
-msgid "IfcDerivedUnitEnum_SECTIONAREAINTEGRALUNIT_DEFINITION"
-msgstr "附 件"
-
-#:IFC.xml:23198
-msgid "IfcDerivedUnitEnum_SECTIONMODULUSUNIT"
-msgstr "章节"
-
-msgid "IfcDerivedUnitEnum_SECTIONMODULUSUNIT_DEFINITION"
-msgstr "章节"
-
-#:IFC.xml:23199
-msgid "IfcDerivedUnitEnum_SHEARMODULUSUNIT"
-msgstr "SHEARMODULUSUNIT"
-
-msgid "IfcDerivedUnitEnum_SHEARMODULUSUNIT_DEFINITION"
-msgstr "SHEARMODULUSUNIT"
-
-#:IFC.xml:23200
-msgid "IfcDerivedUnitEnum_SOUNDPOWERLEVELUNIT"
-msgstr "SOUNDPOWERLEVELUNIT"
-
-msgid "IfcDerivedUnitEnum_SOUNDPOWERLEVELUNIT_DEFINITION"
-msgstr "SOUNDPOWERLEVELUNIT"
-
-#:IFC.xml:23201
-msgid "IfcDerivedUnitEnum_SOUNDPOWERUNIT"
-msgstr "SOUNDPOWERUNIT"
-
-msgid "IfcDerivedUnitEnum_SOUNDPOWERUNIT_DEFINITION"
-msgstr "SOUNDPOWERUNIT"
-
-#:IFC.xml:23202
-msgid "IfcDerivedUnitEnum_SOUNDPRESSURELEVELUNIT"
-msgstr "SOUNDEPREVELUNIT"
-
-msgid "IfcDerivedUnitEnum_SOUNDPRESSURELEVELUNIT_DEFINITION"
-msgstr "SOUNDEPREVELUNIT"
-
-#:IFC.xml:23203
-msgid "IfcDerivedUnitEnum_SOUNDPRESSUREUNIT"
-msgstr "SOUNDEPRESIT"
-
-msgid "IfcDerivedUnitEnum_SOUNDPRESSUREUNIT_DEFINITION"
-msgstr "SOUNDEPRESIT"
-
-#:IFC.xml:23204
-msgid "IfcDerivedUnitEnum_SPECIFICHEATCAPACITYUNIT"
-msgstr "SPECIFICHATCAPACITYUNIT"
-
-msgid "IfcDerivedUnitEnum_SPECIFICHEATCAPACITYUNIT_DEFINITION"
-msgstr "SPECIFICHATCAPACITYUNIT"
-
-#:IFC.xml:23205
-msgid "IfcDerivedUnitEnum_TEMPERATUREGRADIENTUNIT"
-msgstr "测试版"
-
-msgid "IfcDerivedUnitEnum_TEMPERATUREGRADIENTUNIT_DEFINITION"
-msgstr "测试版"
-
-#:IFC.xml:23206
-msgid "IfcDerivedUnitEnum_TEMPERATURERATEOFCHANGEUNIT"
-msgstr "温度关闭"
-
-msgid "IfcDerivedUnitEnum_TEMPERATURERATEOFCHANGEUNIT_DEFINITION"
-msgstr "温度关闭"
-
-#:IFC.xml:23207
-msgid "IfcDerivedUnitEnum_THERMALADMITTANCEUNIT"
-msgstr "主 席"
-
-msgid "IfcDerivedUnitEnum_THERMALADMITTANCEUNIT_DEFINITION"
-msgstr "主 席"
-
-#:IFC.xml:23208
-msgid "IfcDerivedUnitEnum_THERMALCONDUCTANCEUNIT"
-msgstr "THERMALCONDUCTANCEUNIT"
-
-msgid "IfcDerivedUnitEnum_THERMALCONDUCTANCEUNIT_DEFINITION"
-msgstr "THERMALCONDUCTANCEUNIT"
-
-#:IFC.xml:23209
-msgid "IfcDerivedUnitEnum_THERMALEXPANSIONCOEFFICIENTUNIT"
-msgstr "主 题 页 次"
-
-msgid "IfcDerivedUnitEnum_THERMALEXPANSIONCOEFFICIENTUNIT_DEFINITION"
-msgstr "主 题 页 次"
-
-#:IFC.xml:23210
-msgid "IfcDerivedUnitEnum_THERMALRESISTANCEUNIT"
-msgstr "主 席"
-
-msgid "IfcDerivedUnitEnum_THERMALRESISTANCEUNIT_DEFINITION"
-msgstr "主 席"
-
-#:IFC.xml:23211
-msgid "IfcDerivedUnitEnum_THERMALTRANSMITTANCEUNIT"
-msgstr "其它传输方式"
-
-msgid "IfcDerivedUnitEnum_THERMALTRANSMITTANCEUNIT_DEFINITION"
-msgstr "其它传输方式"
-
-#:IFC.xml:23212
-msgid "IfcDerivedUnitEnum_TORQUEUNIT"
-msgstr "TORQUEUNIT"
-
-msgid "IfcDerivedUnitEnum_TORQUEUNIT_DEFINITION"
-msgstr "TORQUEUNIT"
-
-#:IFC.xml:23213
-msgid "IfcDerivedUnitEnum_USERDEFINED"
+#:IFC.xml:31702
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED"
 msgstr "已使用"
 
-msgid "IfcDerivedUnitEnum_USERDEFINED_DEFINITION"
-msgstr "User defined derived unit."
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED_DEFINITION"
+msgstr "增强型号是用户定义。"
 
-#:IFC.xml:23214
-msgid "IfcDerivedUnitEnum_VAPORPERMEABILITYUNIT"
-msgstr "VAPORPERMEABILITYUNIT"
+#:IFC.xml:31704
+msgid "IfcReinforcingBarSurfaceEnum"
+msgstr "IfcReinforcingBarSurfaceEnum"
 
-msgid "IfcDerivedUnitEnum_VAPORPERMEABILITYUNIT_DEFINITION"
-msgstr "VAPORPERMEABILITYUNIT"
+msgid "IfcReinforcingBarSurfaceEnum_DEFINITION"
+msgstr "指明条形状是平面还是纹理步表面，IFC2x2中的新型。 物品 加固栏表面是平面。TEXTURED 加固栏表面是纹理带。"
 
-#:IFC.xml:23215
-msgid "IfcDerivedUnitEnum_VOLUMETRICFLOWRATEUNIT"
-msgstr "自愿信标"
+#:IFC.xml:31705
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN"
+msgstr "游戏"
 
-msgid "IfcDerivedUnitEnum_VOLUMETRICFLOWRATEUNIT_DEFINITION"
-msgstr "自愿信标"
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN_DEFINITION"
+msgstr "加固条面是平滑的。"
 
-#:IFC.xml:23216
-msgid "IfcDerivedUnitEnum_WARPINGCONSTANTUNIT"
-msgstr "警告"
+#:IFC.xml:31706
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED"
+msgstr "TEXTURED"
 
-msgid "IfcDerivedUnitEnum_WARPINGCONSTANTUNIT_DEFINITION"
-msgstr "警告"
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED_DEFINITION"
+msgstr "加固栏表面是纹理机床。"
 
-#:IFC.xml:23217
-msgid "IfcDerivedUnitEnum_WARPINGMOMENTUNIT"
-msgstr "WARPINGMOMENTUNIT"
+#:IFC.xml:31708
+msgid "IfcRoundedRectangleProfileDef"
+msgstr "IfcRoundedRecantangleProfileDef"
 
-msgid "IfcDerivedUnitEnum_WARPINGMOMENTUNIT_DEFINITION"
-msgstr "WARPINGMOMENTUNIT"
+msgid "IfcRoundedRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRoundedRectangleProfileDef]] 定义一个等圆角的矩形，作为横向表面几何形状或横向区域所使用的轮廓定义。 它是由四舍五入角X、Y度和圆角半径给出的。 并置于位置属性所确定的2D位置坐标系统内。 它被置于位置坐标系统的中心，即国际商会2x中的新实体。 .更改ifc2x IFC2x 变异。[[IfcRoundedRectangleProfileDef]] 现在是从[[IfcRectangleProfileDef]] 的子类型。 XDim 和 YDim 属性现已从超级类型继承下来。图1显示四舍五入矩形配置文件定义的参数。 位置参数化配置定义了自己的位置坐标系统。 底层坐标系由使用剖面定义的横扫表面或横扫区域固体来界定。 它是 [[IfcSweptSurface]].position [[IfcSweptAreaSolid]]的xy 平面。 置放或在分割的情况下，会旋转每个列表成员的 [[IfcSectionedSpine]].CrossSectionPositionPositionPositionPositions 的xy平面。 通过使用位置偏移，参数化的配置文件可以使用 x，y 偏移0来放置中点。 , 或在相对于配置文件的任何位置。明确的坐标偏移用于定义基本点，例如: 左上角 参数 [[IfcRoundedRectangleProfileDef]] 是在位置坐标系统中定义的 其中，XDim 定义了正X轴沿着正方形半长度的尺寸， YDim 定义正方形半角宽度的长度尺寸，正方形轴的正方形半角半角，正方形半径则定义正方形的半角半径。 图1 圆角矩形配置"
 
-#:IFC.xml:23219
-msgid "IfcDimensionalExponents"
-msgstr "IfcDimensionalExponents"
+#:IFC.xml:31709
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius"
+msgstr "圆形半径"
 
-msgid "IfcDimensionalExponents_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 The dimensionality of any quantity can be expressed as a product of powers of the dimensions of base quantities. The dimensional exponents entity defines the powers of the dimensions of the base quantities. All the physical quantities are founded on seven base quantities ISO 31 clause 2 . NOTE Length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity are the seven base quantities. EXAMPLE A length of 2 millimetres has a length exponent of 1. The remaining exponents are equal to 0. EXAMPLE A velocity of 2 millimetres per second has a length exponent of 1 and a time exponent of 1. The remaining exponents are equal to 0. NOTE Corresponding STEP name dimensional exponents, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius_DEFINITION"
+msgstr "圆弧圆弧的半径，长方形的所有四角均等圆环。"
 
-#:IFC.xml:23220
-msgid "IfcDimensionalExponents_AmountOfSubstanceExponent"
-msgstr "质荷比指数"
+#:IFC.xml:31716
+msgid "IfcSectionProperties"
+msgstr "IfcSectionProperties"
 
-msgid "IfcDimensionalExponents_AmountOfSubstanceExponent_DEFINITION"
-msgstr "物质基数量的功率。"
+msgid "IfcSectionProperties_DEFINITION"
+msgstr "[[IfcSectionProperties]] 定义横截面的单一纵向块的交叉属性。 它是 [[IfcSectionReinforcementProperties]] 的特殊目的助手类。 IFC2x2中的HISTORY 新实体。该节可以是统一的，也可以是胶带。 在后一种情况下，还应提供结束配置文件。开始和结束配置文件假定是同一配置文件类型。 通常只使用矩形或圆形交叉剖面剖面图。"
 
-#:IFC.xml:23225
-msgid "IfcDimensionalExponents_ElectricCurrentExponent"
-msgstr "电流指数"
+#:IFC.xml:31585
+msgid "IfcSectionProperties_StartProfile"
+msgstr "首页"
 
-msgid "IfcDimensionalExponents_ElectricCurrentExponent_DEFINITION"
-msgstr "电流基量的能量。"
+msgid "IfcSectionProperties_StartProfile_DEFINITION"
+msgstr "纵横截面起点的交叉剖面。"
 
-#:IFC.xml:23230
-msgid "IfcDimensionalExponents_LengthExponent"
-msgstr "LengthExponent"
+#:IFC.xml:31597
+msgid "IfcSectionProperties_EndProfile"
+msgstr "结束配置文件"
 
-msgid "IfcDimensionalExponents_LengthExponent_DEFINITION"
-msgstr "长度基数的强度。"
+msgid "IfcSectionProperties_EndProfile_DEFINITION"
+msgstr "纵横截面末尾处的交叉剖面。"
 
-#:IFC.xml:23235
-msgid "IfcDimensionalExponents_LuminousIntensityExponent"
-msgstr "亮度强度指数"
+#:IFC.xml:31717
+msgid "IfcSectionProperties_SectionType"
+msgstr "班级类型"
 
-msgid "IfcDimensionalExponents_LuminousIntensityExponent_DEFINITION"
-msgstr "亮度强度基数的强度。"
+msgid "IfcSectionProperties_SectionType_DEFINITION"
+msgstr "指某一交叉段的某一特定块是统一的还是纵向变质的。"
 
-#:IFC.xml:23240
-msgid "IfcDimensionalExponents_MassExponent"
-msgstr "大量指数"
+#:IFC.xml:31736
+msgid "IfcSectionReinforcementProperties"
+msgstr "IfcSectionReinforcement属性"
 
-msgid "IfcDimensionalExponents_MassExponent_DEFINITION"
-msgstr "质量基数的威力。"
+msgid "IfcSectionReinforcementProperties_DEFINITION"
+msgstr "[[IfcSectionReinforcementProperties]] 定义了一个交叉路段的单一纵向部件的加固跨段属性，并具有特定的加固使用类型。 IFC2x2中的新实体。 IfcStructuralElements Domain schema的部分增强属性[[IfcReinforcementDefinitionProperties]] 的部分增强属性，以IfcReinforceProperties 的实例为代表的 IfcReinforceProperties 可能会被附加到IfcStructuralElements Domain schema 的 [ [IfcReinforcementDefinitionProperties] ] 钢种和加固条型和尺寸的每种组合一种。"
 
-#:IFC.xml:23245
-msgid "IfcDimensionalExponents_ThermodynamicTemperatureExponent"
-msgstr "热力温度指数"
+#:IFC.xml:31680
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions"
+msgstr "交叉强化定义"
 
-msgid "IfcDimensionalExponents_ThermodynamicTemperatureExponent_DEFINITION"
-msgstr "热动力气温基量的能量。"
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions_DEFINITION"
+msgstr "附加到一个章节增强属性定义的增强属性。"
 
-#:IFC.xml:23250
-msgid "IfcDimensionalExponents_TimeExponent"
-msgstr "TimeExponent"
+#:IFC.xml:31724
+msgid "IfcSectionReinforcementProperties_SectionDefinition"
+msgstr "章节定义"
 
-msgid "IfcDimensionalExponents_TimeExponent_DEFINITION"
-msgstr "时间基数的强度。"
+msgid "IfcSectionReinforcementProperties_SectionDefinition_DEFINITION"
+msgstr "交叉剖面图和纵横截图类型的定义。"
 
-#:IFC.xml:23268
-msgid "IfcDimensionsForSiUnit__n"
-msgstr "IfcDimensionsForSiUnit n"
+#:IFC.xml:31737
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition"
+msgstr "纵向末影位置"
 
-#:IFC.xml:23276
-msgid "IfcMeasureValue"
-msgstr "IfcMeasureValue"
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition_DEFINITION"
+msgstr "部件增强特性的纵向终点位置。"
 
-#:IFC.xml:23278
-msgid "IfcMeasureWithUnit"
-msgstr "IfcMeasure-without"
+#:IFC.xml:31742
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition"
+msgstr "经度星位置"
 
-msgid "IfcMeasureWithUnit_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A measure with unit is the specification of a physical quantity as defined in ISO 31 clause 2 . [[IfcMeasureWithUnit]] has two usages 1. For representing measure value together with its unit on the entity type attribute level thus overriding the IFC model global unit assignments. 2. For conversion based unit to give the conversion rate and its base. NOTE Corresponding ISO 10303 name measure with unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition_DEFINITION"
+msgstr "部件增强特性的纵向起始位置。"
 
-#:IFC.xml:23279
-msgid "IfcMeasureWithUnit_UnitComponent"
-msgstr "单位组件"
+#:IFC.xml:31747
+msgid "IfcSectionReinforcementProperties_ReinforcementRole"
+msgstr "增援作用"
 
-msgid "IfcMeasureWithUnit_UnitComponent_DEFINITION"
-msgstr "物理数量表示的单位。"
+msgid "IfcSectionReinforcementProperties_ReinforcementRole_DEFINITION"
+msgstr "2. 增援的作用、目的或用途，例如： 它是要携带的那种载荷和重力，而这种载荷和重力是为该部分增强特性定义的。"
 
-#:IFC.xml:23284
-msgid "IfcMeasureWithUnit_ValueComponent"
-msgstr "值组件"
+#:IFC.xml:31752
+msgid "IfcSectionReinforcementProperties_TransversePosition"
+msgstr "变换位置"
 
-msgid "IfcMeasureWithUnit_ValueComponent_DEFINITION"
-msgstr "当在指定单位中表示时的物理数量值。"
+msgid "IfcSectionReinforcementProperties_TransversePosition_DEFINITION"
+msgstr "该部分增强属性的位置是朝向横向的。"
 
-#:IFC.xml:23292
-msgid "IfcMonetaryUnit"
-msgstr "IfcMonetaryUnit"
+#:IFC.xml:31771
+msgid "IfcSectionTypeEnum"
+msgstr "IfcSectionTypeEnum"
 
-msgid "IfcMonetaryUnit_DEFINITION"
-msgstr "[[IfcMonetaryUnit]] is a unit to define currency for money. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Type of the attribute Currency changed."
+msgid "IfcSectionTypeEnum_DEFINITION"
+msgstr "指明某一交叉部分的某一特定块是否在纵向方向是统一的还是被涂改的，IFC2x2中的新型。 UNIFORM"
 
-#:IFC.xml:23293
-msgid "IfcMonetaryUnit_Currency"
-msgstr "货币"
+#:IFC.xml:31772
+msgid "IfcSectionTypeEnum_TAPERED"
+msgstr "推送"
 
-msgid "IfcMonetaryUnit_Currency_DEFINITION"
-msgstr "货币代码或名称。允许的值是按照ISO 4217 httwww.iso的三个字母字母货币代码。 rg iso 支持广泛使用的标准费率，其他货币代码列表1。 tm 目标顶部, 例如CNY, EUR, GBP, JPY, USD."
+msgid "IfcSectionTypeEnum_TAPERED_DEFINITION"
+msgstr "纵向对该节进行了微调。"
 
-#:IFC.xml:23300
-msgid "IfcNamedUnit"
-msgstr "IfcNamedUnit"
+#:IFC.xml:31773
+msgid "IfcSectionTypeEnum_UNIFORM"
+msgstr "联黎部队"
 
-msgid "IfcNamedUnit_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 41 1992 A named unit is a unit quantity associated with the word, or group of words, by which the unit is identified. NOTE Corresponding ISO 10303 name named unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New type in IFC1.5.1."
+msgid "IfcSectionTypeEnum_UNIFORM_DEFINITION"
+msgstr "该节纵向是统一的。"
 
-#:IFC.xml:23256
-msgid "IfcNamedUnit_Dimensions"
-msgstr "尺寸"
+#:IFC.xml:31775
+msgid "IfcTrapeziumProfileDef"
+msgstr "IfcTrapeziumProfileDef"
 
-msgid "IfcNamedUnit_Dimensions_DEFINITION"
-msgstr "The dimensional exponents of the SI base units by which the named unit is defined."
+msgid "IfcTrapeziumProfileDef_DEFINITION"
+msgstr "[[IfcTrapeziumProfileDef]] 将陷阱定义为干燥表面几何形状或干燥区域所使用的剖面定义。 它是由其顶X和底X的范围及其Y的范围以及顶X的偏移量来表示的。 并置于位置属性所确定的2D位置坐标系统内。 它被置于位置坐标系统的中心，即边界箱的中心。 IFC1.5中的新实体。使用定义在IFC2x中已经改变。图1显示了陷阱配置定义的参数。 位置参数化配置定义了自己的位置坐标系统。 底层坐标系由使用剖面定义的横扫表面或横扫区域固体来界定。 它是 [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]]的一个xy 平面。 置放或在分割的情况下，会旋转每个列表成员的 [[IfcSectionedSpine]].CrossSectionPositionPositionPositionPositions 的xy平面。 通过使用位置偏移，参数化的配置文件可以使用 x，y 偏移0来放置中点。 , 或在相对于配置文件的任何位置。明确的坐标偏移用于定义基本点, 例如左上角。 参数 [[IfcTrapeziumProfileDef]] 是在位置坐标系统中定义的 底部Dim确定正面x轴上底部线一半的长度尺度，YDim则确定正面y轴下底部和顶部平行距离的长度尺度。 顶部线从顶部顶部从底部2,YDim偏远的距离开始，这可能是负数， 零，或正值，沿正x轴长度为TopXDim。 图1 Trapezium 配置文件"
 
-#:IFC.xml:23301
-msgid "IfcNamedUnit_UnitType"
-msgstr "UnitType"
+#:IFC.xml:31776
+msgid "IfcTrapeziumProfileDef_BottomXDim"
+msgstr "底部XDim"
 
-msgid "IfcNamedUnit_UnitType_DEFINITION"
-msgstr "单元类型。"
+msgid "IfcTrapeziumProfileDef_BottomXDim_DEFINITION"
+msgstr "沿隐含x轴测量底线的范围。"
 
-#:IFC.xml:23332
-msgid "IfcSimpleValue"
-msgstr "IfcSimple值"
+#:IFC.xml:31781
+msgid "IfcTrapeziumProfileDef_TopXDim"
+msgstr "TopXDim"
 
-#:IFC.xml:23334
-msgid "IfcSIPrefix"
-msgstr "IfcSIPrefix"
+msgid "IfcTrapeziumProfileDef_TopXDim_DEFINITION"
+msgstr "沿隐含x轴测量的顶线的范围。"
 
-msgid "IfcSIPrefix_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 41 1992定义的注解。SI 前缀是可能与SI 单元相关联的前缀的名称。 ISO 1000条款3中规定了烧结厂前缀的定义。注意前缀定义了烧结厂单位的多次和下次数。 从ISO 10303 41定义的西前缀改编的注类型。 HISTORY New entity in IFC1.5.1.项EXA 10 18. PETA 10 15. TERA 10 12. GIGA 10 MEGA 10 6. KILO 10 3. HECTO 10 2. DECA 10. DECA 10. DECA 10 1. CENTI 10 2. CENTI 10 2. MILI 10 6. MICRO 10 6. NANO 10 9. PICO 10 12. FEMTO 10 15. ATTO 10 18."
+#:IFC.xml:31786
+msgid "IfcTrapeziumProfileDef_TopXOffset"
+msgstr "TopXOffset"
 
-#:IFC.xml:23335
-msgid "IfcSIPrefix_ATTO"
-msgstr "ATTO"
+msgid "IfcTrapeziumProfileDef_TopXOffset_DEFINITION"
+msgstr "从顶部线开始向底部线偏移，沿隐式x轴计量。"
 
-msgid "IfcSIPrefix_ATTO_DEFINITION"
-msgstr "10 18."
+#:IFC.xml:31791
+msgid "IfcTrapeziumProfileDef_YDim"
+msgstr "YDim"
 
-#:IFC.xml:23336
-msgid "IfcSIPrefix_CENTI"
-msgstr "CENTI"
+msgid "IfcTrapeziumProfileDef_YDim_DEFINITION"
+msgstr "平行底部线和顶部线之间按照隐含轴测量的距离范围。"
 
-msgid "IfcSIPrefix_CENTI_DEFINITION"
-msgstr "10 2."
+#:IFC.xml:31798
+msgid "IfcTShapeProfileDef"
+msgstr "IfcTShapeProfileDef"
 
-#:IFC.xml:23337
-msgid "IfcSIPrefix_DECA"
-msgstr "DECA"
+msgid "IfcTShapeProfileDef_DEFINITION"
+msgstr "[[IfcTShapeProfileDef]] 定义了一个剖面剖面描述，它提供了一个T形片段的定义参数，将由横扫区域固体使用。 该系统相对于位置协调系统的参数和方向说明如下。 位置协调系统的中心在二号IFC2x2中的新实体的轮廓中心。 挂机ifc2x3 IFC2x3 变换器。所有个人资料来源现在都位于边界框的中心。 悬挂ifc2x4 IFC4 FilletRadius 、FlangeEdgeRadius 和 WebEdgeRadius 放宽的更改类型以允许零半径。 Trailing attribute CentreOfGravityInY 已删除，请使用 IfcExtendedProfileProperties 中各自的属性。 图1显示T形状定义的参数。参数化的位置定义了自己的位置坐标系统。 底层坐标系由使用配置文件定义的横向区域固体定义。它是[[IfcSweptAreaSolid]]的xy平面。 使用位置偏移的位置，参数化的配置可以使用 x，y 偏移0来置于中心位置。 ，或相对于配置文件的任何位置。图 1 T 形状配置文件"
 
-msgid "IfcSIPrefix_DECA_DEFINITION"
-msgstr "DECA"
+#:IFC.xml:31799
+msgid "IfcTShapeProfileDef_Depth"
+msgstr "深度："
 
-#:IFC.xml:23338
-msgid "IfcSIPrefix_DECI"
-msgstr "DECI"
+msgid "IfcTShapeProfileDef_Depth_DEFINITION"
+msgstr "网页长度，见h 上面的说明。"
 
-msgid "IfcSIPrefix_DECI_DEFINITION"
-msgstr "10 1."
+#:IFC.xml:31804
+msgid "IfcTShapeProfileDef_FilletRadius"
+msgstr "Fillet半径"
 
-#:IFC.xml:23339
-msgid "IfcSIPrefix_EXA"
-msgstr "经验值"
+msgid "IfcTShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "根据上述说明 r1 提供的文件半径。"
 
-msgid "IfcSIPrefix_EXA_DEFINITION"
-msgstr "10 18."
+#:IFC.xml:31809
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
 
-#:IFC.xml:23340
-msgid "IfcSIPrefix_FEMTO"
-msgstr "FEMTO"
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "上图r2显示的边缘半径。"
 
-msgid "IfcSIPrefix_FEMTO_DEFINITION"
-msgstr "10 15."
+#:IFC.xml:31814
+msgid "IfcTShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-#:IFC.xml:23341
-msgid "IfcSIPrefix_GIGA"
-msgstr "GIGA"
+msgid "IfcTShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "剖面网的斜坡。"
 
-msgid "IfcSIPrefix_GIGA_DEFINITION"
-msgstr "10 9."
+#:IFC.xml:31819
+msgid "IfcTShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-#:IFC.xml:23342
-msgid "IfcSIPrefix_HECTO"
-msgstr "HECTO"
+msgid "IfcTShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "橙色tg的恒定墙厚度"
 
-msgid "IfcSIPrefix_HECTO_DEFINITION"
-msgstr "10 2."
+#:IFC.xml:31824
+msgid "IfcTShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-#:IFC.xml:23343
-msgid "IfcSIPrefix_KILO"
-msgstr "KILO"
+msgid "IfcTShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flange长度，见上文b所示。"
 
-msgid "IfcSIPrefix_KILO_DEFINITION"
-msgstr "10 3."
+#:IFC.xml:31829
+msgid "IfcTShapeProfileDef_WebEdgeRadius"
+msgstr "WebEdge半径"
 
-#:IFC.xml:23344
-msgid "IfcSIPrefix_MEGA"
-msgstr "MEGA"
+msgid "IfcTShapeProfileDef_WebEdgeRadius_DEFINITION"
+msgstr "上图r3显示的边缘半径。"
 
-msgid "IfcSIPrefix_MEGA_DEFINITION"
-msgstr "10 6."
+#:IFC.xml:31834
+msgid "IfcTShapeProfileDef_WebSlope"
+msgstr "WebSlope"
 
-#:IFC.xml:23345
-msgid "IfcSIPrefix_MICRO"
-msgstr "MICRO"
+msgid "IfcTShapeProfileDef_WebSlope_DEFINITION"
+msgstr "剖面黄色斜坡。"
 
-msgid "IfcSIPrefix_MICRO_DEFINITION"
-msgstr "10 6."
+#:IFC.xml:31839
+msgid "IfcTShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-#:IFC.xml:23346
-msgid "IfcSIPrefix_MILLI"
-msgstr "MILLI"
+msgid "IfcTShapeProfileDef_WebThickness_DEFINITION"
+msgstr "网页的恒定墙厚度 ."
 
-msgid "IfcSIPrefix_MILLI_DEFINITION"
-msgstr "10 6."
+#:IFC.xml:31846
+msgid "IfcUShapeProfileDef"
+msgstr "IfcUShapeProfileDef"
 
-#:IFC.xml:23347
-msgid "IfcSIPrefix_NANO"
-msgstr "无的"
+msgid "IfcUShapeProfileDef_DEFINITION"
+msgstr "[[IfcUShapeProfileDef]] 定义了一个剖面剖面图，提供了一个U形状通道部分的定义参数，用于横扫区域固体. 该系统相对于位置协调系统的参数和方向说明如下。 位置协调系统的中心在二号IFC2x2中的新实体的轮廓中心。 挂机ifc2x3 IFC2x3 变换器。所有个人资料来源现在都位于边界框的中心。 挂机ifc2x4 IFC4 FilletRadius 和 EdgeRadius 的变换类型放宽以允许零半径。 Trailing attribute CentreOfGravityInX已删除，请使用IfcExtendedProfileProperties中各自的属性。 图1显示U形状定义的参数。参数化的位置定义了自己的位置坐标系统。 底层坐标系由使用配置文件定义的横向区域固体定义。它是[[IfcSweptAreaSolid]]的xy平面。 通过使用位置偏移，参数化的配置文件可以使用 x，y 偏移0来置于中心位置。 ，或相对于配置文件的任何位置。图 1 U 形状配置文件"
 
-msgid "IfcSIPrefix_NANO_DEFINITION"
-msgstr "10 9."
+#:IFC.xml:31847
+msgid "IfcUShapeProfileDef_Depth"
+msgstr "深度："
 
-#:IFC.xml:23348
-msgid "IfcSIPrefix_PETA"
-msgstr "四月"
+msgid "IfcUShapeProfileDef_Depth_DEFINITION"
+msgstr "网页长度，见h 上面的说明。"
 
-msgid "IfcSIPrefix_PETA_DEFINITION"
-msgstr "10 15."
+#:IFC.xml:31852
+msgid "IfcUShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-#:IFC.xml:23349
-msgid "IfcSIPrefix_PICO"
-msgstr "PICO"
+msgid "IfcUShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "上图r2显示的边缘半径。"
 
-msgid "IfcSIPrefix_PICO_DEFINITION"
-msgstr "10 12."
+#:IFC.xml:31857
+msgid "IfcUShapeProfileDef_FilletRadius"
+msgstr "Fillet半径"
 
-#:IFC.xml:23350
-msgid "IfcSIPrefix_TERA"
-msgstr "TERA"
+msgid "IfcUShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "根据上述说明 r1 提供的文件半径。"
 
-msgid "IfcSIPrefix_TERA_DEFINITION"
-msgstr "10 12."
+#:IFC.xml:31862
+msgid "IfcUShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-#:IFC.xml:23352
-msgid "IfcSIUnit"
-msgstr "IfcSIUnit"
+msgid "IfcUShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "剖面黄色斜坡。"
 
-msgid "IfcSIUnit_DEFINITION"
-msgstr "The [[IfcSIUnit]] covers both standard base SI units such as meter and second, and derived SI units such as Pascal, square meter and cubic meter. .extDef NOTE Definition according to ISO CD 10303 41 1992 An SI unit is the fixed quantity used as a standard in terms of which items are measured as defined by ISO 1000 clause 2 . NOTE Corresponding ISO 10303 name si unit, please refer to ISO IS 10303 41 for the final definition of the formal standard. HISTORY New entity in IFC1.5.1."
+#:IFC.xml:31867
+msgid "IfcUShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-#:IFC.xml:23353
-msgid "IfcSIUnit_SELF_IfcNamedUnit_Dimensions"
-msgstr "SELF IfcNamedUnit 尺寸"
+msgid "IfcUShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "橙色tg的恒定墙厚度"
 
-msgid "IfcSIUnit_SELF_IfcNamedUnit_Dimensions_DEFINITION"
-msgstr "设置 [[IfcNamedUnit]].维度"
+#:IFC.xml:31872
+msgid "IfcUShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-#:IFC.xml:23357
-msgid "IfcSIUnit_Name"
-msgstr "名称"
+msgid "IfcUShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flange长度，见上文b所示。"
 
-msgid "IfcSIUnit_Name_DEFINITION"
-msgstr "The word, or group of words, by which the SI unit is referred to. NOTE Even though the SI system s base unit for mass is kilogram, the [[IfcSIUnit]] for mass is gram if no Prefix is asserted."
+#:IFC.xml:31877
+msgid "IfcUShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-#:IFC.xml:23362
-msgid "IfcSIUnit_Prefix"
-msgstr "前缀"
+msgid "IfcUShapeProfileDef_WebThickness_DEFINITION"
+msgstr "网页的恒定墙厚度 ."
 
-msgid "IfcSIUnit_Prefix_DEFINITION"
-msgstr "定义单元小数点倍数和潜水器的烧结厂前缀。"
+#:IFC.xml:31884
+msgid "IfcZShapeProfileDef"
+msgstr "IfcZShapeProfileDef"
 
-#:IFC.xml:23369
-msgid "IfcSIUnitName"
-msgstr "IfcSIUnitName"
+msgid "IfcZShapeProfileDef_DEFINITION"
+msgstr "[[IfcZShapeProfileDef]] 定义了一个剖面剖面描述，它提供了一个Z形状部分的定义参数，将由横扫区域固体使用。 该系统相对于位置协调系统的参数和方向说明如下。 位置协调系统的中心是IFC2x2中的新实体简介中心。 .更改 ifc2x4 IFC4 FilletRadius 和 EdgeRadius 类型放宽，以允许零半径。 图1显示Z形状剖面定义的参数。参数化剖面定义其自己的位置坐标系统。 底层坐标系由使用配置文件定义的横向区域固体定义。 它是[[IfcSweptAreaSolid]]的xy平面。 通过使用位置偏移，参数化的配置文件可以使用 x，y 偏移0来置于中心位置。 ，或相对于配置文件的任何位置。图 1 Z 形状配置文件"
 
-msgid "IfcSIUnitName_DEFINITION"
-msgstr ".extDef 根据ISO CD 10303 41 1992定义的注解。SI 单元名称是SI 单元的名称。 ISO 1000项第2项具体说明了SI 单位名称的定义。 从ISO 1030341中定义的si单位名称改编的注类型，IFC1.5.1.中的HISTORY 新实体，供电电流使用的项目AMPERE 单位。 BECQUEREL Unit for radio activity. CANDELA Unit for luminoussity. COULOMB Unit for electricity. CUBIC METRE Unit for volume. 用于热动力温度的DEGREE CELSIUS Unit for the thermal years. FARAD Unit for electrical capacity. GRM Unit for mass. GRY Unit for consumption radies. HENRY Unit for introduction. 频率单位. JOULE Unit for energys, KELVIN Unit for thermodelynamic temperature LUMEN 单位用于亮色通量。LUX 单位用于照明。METRE 单位长度。 MOLE Unit for amount material NEWTON Unit for force. OHM Unit for electrical resistance SIEEMENS Unit for electrical conduction. SIEVERT Unit for sexual dose equality. SQUARE METRE Unit for area. 用于固态角的STERADIAN 单位。用于磁通量密度的TESLA 单位。用于电压的VOLT 单位。用于电力的WATT 单位；用于磁通量的WEER 单位。"
+#:IFC.xml:31885
+msgid "IfcZShapeProfileDef_Depth"
+msgstr "深度："
 
-#:IFC.xml:23370
-msgid "IfcSIUnitName_AMPERE"
-msgstr "AMPERE"
+msgid "IfcZShapeProfileDef_Depth_DEFINITION"
+msgstr "网页长度，见h 上面的说明。"
 
-msgid "IfcSIUnitName_AMPERE_DEFINITION"
-msgstr "Unit for electric current."
+#:IFC.xml:31890
+msgid "IfcZShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-#:IFC.xml:23371
-msgid "IfcSIUnitName_BECQUEREL"
-msgstr "BECQUEREL"
+msgid "IfcZShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "上图r2显示的边缘半径。"
 
-msgid "IfcSIUnitName_BECQUEREL_DEFINITION"
-msgstr "Unit for radioactivity."
+#:IFC.xml:31895
+msgid "IfcZShapeProfileDef_FilletRadius"
+msgstr "Fillet半径"
 
-#:IFC.xml:23372
-msgid "IfcSIUnitName_CANDELA"
-msgstr "已取消的"
+msgid "IfcZShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "根据上述说明 r1 提供的文件半径。"
 
-msgid "IfcSIUnitName_CANDELA_DEFINITION"
-msgstr "Unit for luminousintensity."
+#:IFC.xml:31900
+msgid "IfcZShapeProfileDef_FlangeThickness"
+msgstr "FlangeThickness"
 
-#:IFC.xml:23373
-msgid "IfcSIUnitName_COULOMB"
-msgstr "约会"
+msgid "IfcZShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "风扇的固定壁厚度，见上面的图表。"
 
-msgid "IfcSIUnitName_COULOMB_DEFINITION"
-msgstr "电费单位。"
+#:IFC.xml:31905
+msgid "IfcZShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-#:IFC.xml:23374
-msgid "IfcSIUnitName_CUBIC_METRE"
-msgstr "CUBIC METRE"
+msgid "IfcZShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flange长度，见上文b。"
 
-msgid "IfcSIUnitName_CUBIC_METRE_DEFINITION"
-msgstr "卷单位。"
+#:IFC.xml:31910
+msgid "IfcZShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-#:IFC.xml:23375
-msgid "IfcSIUnitName_DEGREE_CELSIUS"
-msgstr "去除精致的"
+msgid "IfcZShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Web 的恒定壁厚度，见上面的图表。"
 
-msgid "IfcSIUnitName_DEGREE_CELSIUS_DEFINITION"
-msgstr "热动力温度单位。"
+#:IFC.xml:31917
+msgid "Pset_ProfileArbitraryDoubleT"
+msgstr "Pset ProfileArbitraryDoubleT"
 
-#:IFC.xml:23376
-msgid "IfcSIUnitName_FARAD"
-msgstr "FARAD"
+msgid "Pset_ProfileArbitraryDoubleT_DEFINITION"
+msgstr "这是预定混凝土元素的双曲线剖面特征集合。 如果个人资料指定不符合信息要求，则与IfcArbitraryProfileDef一起使用。"
 
-msgid "IfcSIUnitName_FARAD_DEFINITION"
-msgstr "电容单位。"
+#:IFC.xml:31918
+msgid "FlangeBaseFillet"
+msgstr "FlangeBaseFillet"
 
-#:IFC.xml:23377
-msgid "IfcSIUnitName_GRAM"
-msgstr "灰度"
+msgid "FlangeBaseFillet_DEFINITION"
+msgstr "Flange配置文件的基础文件。"
 
-msgid "IfcSIUnitName_GRAM_DEFINITION"
-msgstr "质量单位。"
+#:IFC.xml:31923
+msgid "FlangeChamfer"
+msgstr "FlangeChamfer"
 
-#:IFC.xml:23378
-msgid "IfcSIUnitName_GRAY"
-msgstr "灰度"
+msgid "FlangeChamfer_DEFINITION"
+msgstr "配置文件的熔炉。"
 
-msgid "IfcSIUnitName_GRAY_DEFINITION"
-msgstr "吸收放射性剂量。"
+#:IFC.xml:31928
+msgid "FlangeDepth"
+msgstr "FlangeDepth"
 
-#:IFC.xml:23379
-msgid "IfcSIUnitName_HENRY"
-msgstr "高光"
+msgid "FlangeDepth_DEFINITION"
+msgstr "剖面深度。"
 
-msgid "IfcSIUnitName_HENRY_DEFINITION"
-msgstr "诱导单位。"
+#:IFC.xml:31933
+msgid "FlangeDraft"
+msgstr "FlangeDraft"
 
-#:IFC.xml:23380
-msgid "IfcSIUnitName_HERTZ"
-msgstr "HERTZ"
+msgid "FlangeDraft_DEFINITION"
+msgstr "Flange配置文件草稿。"
 
-msgid "IfcSIUnitName_HERTZ_DEFINITION"
-msgstr "频率单位。"
+#:IFC.xml:31938
+msgid "FlangeTopFillet"
+msgstr "FlangeTopFillet"
 
-#:IFC.xml:23381
-msgid "IfcSIUnitName_JOULE"
-msgstr "JOULE"
+msgid "FlangeTopFillet_DEFINITION"
+msgstr "隐藏配置文件的顶部文件。"
 
-msgid "IfcSIUnitName_JOULE_DEFINITION"
-msgstr "能源单位。"
+#:IFC.xml:31943
+msgid "LeftFlangeWidth"
+msgstr "LeftFlangeWidth"
 
-#:IFC.xml:23382
-msgid "IfcSIUnitName_KELVIN"
-msgstr "KELVIN"
+msgid "LeftFlangeWidth_DEFINITION"
+msgstr "配置文件左侧的花旗宽度。"
 
-msgid "IfcSIUnitName_KELVIN_DEFINITION"
-msgstr "热动力温度单位。"
+#:IFC.xml:31948
+msgid "OverallDepth"
+msgstr "总体深度："
 
-#:IFC.xml:23383
-msgid "IfcSIUnitName_LUMEN"
-msgstr "LUMEN"
+msgid "OverallDepth_DEFINITION"
+msgstr "配置文件的总深度。"
 
-msgid "IfcSIUnitName_LUMEN_DEFINITION"
-msgstr "亮度流量单位。"
+#:IFC.xml:31953
+msgid "OverallWidth"
+msgstr "总体宽度"
 
-#:IFC.xml:23384
-msgid "IfcSIUnitName_LUX"
-msgstr "LUX"
+msgid "OverallWidth_DEFINITION"
+msgstr "配置文件的总体宽度。"
 
-msgid "IfcSIUnitName_LUX_DEFINITION"
-msgstr "照明单位。"
+#:IFC.xml:31958
+msgid "RightFlangeWidth"
+msgstr "RightFlangeWidth"
 
-#:IFC.xml:23385
-msgid "IfcSIUnitName_METRE"
-msgstr "平均值"
+msgid "RightFlangeWidth_DEFINITION"
+msgstr "剖析档右侧的橙色宽度。"
 
-msgid "IfcSIUnitName_METRE_DEFINITION"
-msgstr "长度单位。"
+#:IFC.xml:31963
+msgid "StemBaseChamfer"
+msgstr "StemBaseChamfer"
 
-#:IFC.xml:23386
-msgid "IfcSIUnitName_MOLE"
-msgstr "模式"
+msgid "StemBaseChamfer_DEFINITION"
+msgstr "剖析档的底部平滑。"
 
-msgid "IfcSIUnitName_MOLE_DEFINITION"
-msgstr "实质内容的单位。"
+#:IFC.xml:31968
+msgid "StemBaseFillet"
+msgstr "StemBaseFillet"
 
-#:IFC.xml:23387
-msgid "IfcSIUnitName_NEWTON"
-msgstr "NEWTON"
+msgid "StemBaseFillet_DEFINITION"
+msgstr "配置文件的Stem 基础文件。"
 
-msgid "IfcSIUnitName_NEWTON_DEFINITION"
-msgstr "15. 部队部队。"
+#:IFC.xml:31973
+msgid "StemBaseWidth"
+msgstr "StemBaseWidth"
 
-#:IFC.xml:23388
-msgid "IfcSIUnitName_OHM"
-msgstr "OHM"
+msgid "StemBaseWidth_DEFINITION"
+msgstr "剖析档的基础宽度。"
 
-msgid "IfcSIUnitName_OHM_DEFINITION"
-msgstr "电阻单位。"
+#:IFC.xml:31978
+msgid "StemTopChamfer"
+msgstr "StemTopChamfer"
 
-#:IFC.xml:23389
-msgid "IfcSIUnitName_PASCAL"
-msgstr "帕斯卡尔"
+msgid "StemTopChamfer_DEFINITION"
+msgstr "剖析档顶部平滑。"
 
-msgid "IfcSIUnitName_PASCAL_DEFINITION"
-msgstr "压力单位。"
+#:IFC.xml:31983
+msgid "StemTopFillet"
+msgstr "StemTopFillet"
 
-#:IFC.xml:23390
-msgid "IfcSIUnitName_RADIAN"
-msgstr "RADIAN"
+msgid "StemTopFillet_DEFINITION"
+msgstr "剖析配置文件的顶部文件。"
 
-msgid "IfcSIUnitName_RADIAN_DEFINITION"
-msgstr "平面角单位。"
+#:IFC.xml:31988
+msgid "StemTopWidth"
+msgstr "StemTopWidth"
 
-#:IFC.xml:23391
-msgid "IfcSIUnitName_SECOND"
-msgstr "秒"
+msgid "StemTopWidth_DEFINITION"
+msgstr "剖析档的顶部宽度。"
 
-msgid "IfcSIUnitName_SECOND_DEFINITION"
-msgstr "时间单位。"
+#:IFC.xml:31994
+msgid "Pset_ProfileArbitraryHollowCore"
+msgstr "Pset ProfileArbitraryHollowCore"
 
-#:IFC.xml:23392
-msgid "IfcSIUnitName_SIEMENS"
-msgstr "SIEMENS"
+msgid "Pset_ProfileArbitraryHollowCore_DEFINITION"
+msgstr "这是预定混凝土元素空心剖面剖面特征集。 当配置文件指定不符合信息要求时，将与 [[IfcArbitraryProfileDefWithVoids]] 一起使用。 在所有情况下，核心均在平面中心线两侧对称分布。 不论核心数是奇数还是偶数。 对于具有与其他核心不同几何形状的中心岩心的木板，提供属性中心核心间距。 当核心数为偶数时，不能断定中心核心属性。钥匙室和草拟室都是45度的平行室。 CoretopRadius 和 CoreBaseRadius 参数可以被派生，因此不会被列入属性集中。 它们显示出的定义是，曲线是弧度。 中心核心参数与上面相同，但前缀中心相同。"
 
-msgid "IfcSIUnitName_SIEMENS_DEFINITION"
-msgstr "电传单位。"
+#:IFC.xml:31995
+msgid "BaseChamfer"
+msgstr "BaseChamfer"
 
-#:IFC.xml:23393
-msgid "IfcSIUnitName_SIEVERT"
-msgstr "SIEVERT"
+msgid "BaseChamfer_DEFINITION"
+msgstr "配置文件的基础平滑。"
 
-msgid "IfcSIUnitName_SIEVERT_DEFINITION"
-msgstr "放射性剂量当量单位。"
+#:IFC.xml:32000
+msgid "BottomCover"
+msgstr "底部封面"
 
-#:IFC.xml:23394
-msgid "IfcSIUnitName_SQUARE_METRE"
-msgstr "方格度"
+msgid "BottomCover_DEFINITION"
+msgstr "配置文件的底部封面。"
 
-msgid "IfcSIUnitName_SQUARE_METRE_DEFINITION"
-msgstr "区域单位。"
+#:IFC.xml:32005
+msgid "CenterCoreBaseHeight"
+msgstr "中心基础高度"
 
-#:IFC.xml:23395
-msgid "IfcSIUnitName_STERADIAN"
-msgstr "STERADIAN"
+msgid "CenterCoreBaseHeight_DEFINITION"
+msgstr "居中核心基础高度."
 
-msgid "IfcSIUnitName_STERADIAN_DEFINITION"
-msgstr "固态角单位。"
+#:IFC.xml:32010
+msgid "CenterCoreBaseWidth"
+msgstr "CenterCoreBaseWidth"
 
-#:IFC.xml:23396
-msgid "IfcSIUnitName_TESLA"
-msgstr "TESLA"
+msgid "CenterCoreBaseWidth_DEFINITION"
+msgstr "居中核心基础宽度。"
 
-msgid "IfcSIUnitName_TESLA_DEFINITION"
-msgstr "磁通量密度单位。"
+#:IFC.xml:32015
+msgid "CenterCoreMiddleHeight"
+msgstr "中心中心中间高度"
 
-#:IFC.xml:23397
-msgid "IfcSIUnitName_VOLT"
-msgstr "VOLT"
+msgid "CenterCoreMiddleHeight_DEFINITION"
+msgstr "居中核心中间高度。"
 
-msgid "IfcSIUnitName_VOLT_DEFINITION"
-msgstr "电压单位。"
+#:IFC.xml:32020
+msgid "CenterCoreSpacing"
+msgstr "CenterCoreSpacing"
 
-#:IFC.xml:23398
-msgid "IfcSIUnitName_WATT"
-msgstr "关注："
+msgid "CenterCoreSpacing_DEFINITION"
+msgstr "居中核心间隔。"
 
-msgid "IfcSIUnitName_WATT_DEFINITION"
-msgstr "供电单位。"
+#:IFC.xml:32025
+msgid "CenterCoreTopHeight"
+msgstr "CenterCoreTopHeight"
 
-#:IFC.xml:23399
-msgid "IfcSIUnitName_WEBER"
-msgstr "WEBER"
+msgid "CenterCoreTopHeight_DEFINITION"
+msgstr "居中核心高度。"
 
-msgid "IfcSIUnitName_WEBER_DEFINITION"
-msgstr "磁通量单位。"
+#:IFC.xml:32030
+msgid "CenterCoreTopWidth"
+msgstr "CenterCoreTopWidth"
 
-#:IFC.xml:23401
-msgid "IfcUnit"
-msgstr "IfcUnit"
+msgid "CenterCoreTopWidth_DEFINITION"
+msgstr "居中核心配置文件顶部宽度。"
 
-#:IFC.xml:23402
-msgid "IfcUnitAssignment"
-msgstr "IfcUnit作业"
+#:IFC.xml:32035
+msgid "CoreBaseHeight"
+msgstr "核心高度"
 
-msgid "IfcUnitAssignment_DEFINITION"
-msgstr "[[IfcUnitAssignment]] 表示可以分配的一组单位。 在IfcUnitassation内，每个单位的定义都应当是独特的，即： 对于同一单位类型，如长度单位或面积单位，不应有多余的单位定义。 对于货币，必须在一个 [[IfcUnitAssignment]] 内只有一个 [[IfcMonetaryUnit]] 。 注A [[IfcProject]] 有一个单位分配，用于建立一套将在全球范围内使用的单位。 如果没有其他定义。 如果要求其他物品使用不属于项目单位分配范围的单位，则其他物品可能有当地的单位分配。 IFC1.5.1中的HISTORY 新实体。"
+msgid "CoreBaseHeight_DEFINITION"
+msgstr "配置文件的核心基高度."
 
-#:IFC.xml:23403
-msgid "IfcUnitAssignment_Units"
-msgstr "单位"
+#:IFC.xml:32040
+msgid "CoreBaseWidth"
+msgstr "CoreBaseWidth"
 
-msgid "IfcUnitAssignment_Units_DEFINITION"
-msgstr "将包括在单位分配范围内的单位。"
+msgid "CoreBaseWidth_DEFINITION"
+msgstr "配置文件的核心基宽度。"
 
-#:IFC.xml:23409
-msgid "IfcUnitEnum"
-msgstr "IfcUnitEnum"
+#:IFC.xml:32045
+msgid "CoreMiddleHeight"
+msgstr "核心中等高度"
 
-msgid "IfcUnitEnum_DEFINITION"
-msgstr "[[IfcUnitEnum]] 是允许的单位类型的 [[IfcNamedUnit]] 的枚举类型。IFC1.5.1 中的HISTORY 新类型。 2. 项目ABSORBDDOSEUNIT AMOUNTOUNIT ENERGYUNIT FOCEUNIT FREQUENCYIT INDUCTICCEUNIT ELECTECCHARGEUNIT ELECTRICICCONDUCTANCEUNIT ELECTRICT ELECTITICTITICTERICTASISTANCEUNIT ELECTRATITYUNIT ENERGYUNIT FOREQUEUNIT FREQUENCYIT UNILLUMINCEUNIT INDUSTANCEUNIT LEGTANCEUNIT LEGIT INDUSTANCEUNIT LUSTENSITYUNIT MAGNETENSITYUNIT MAGET 设备的类型只在其名称或使用上下文中隐含。"
+msgid "CoreMiddleHeight_DEFINITION"
+msgstr "配置文件的核心中间高度。"
 
-#:IFC.xml:23410
-msgid "IfcUnitEnum_ABSORBEDDOSEUNIT"
-msgstr "ABSORBEDDOSEUNIT"
+#:IFC.xml:32050
+msgid "CoreSpacing"
+msgstr "CoreSpacing"
 
-msgid "IfcUnitEnum_ABSORBEDDOSEUNIT_DEFINITION"
-msgstr "ABSORBEDDOSEUNIT"
+msgid "CoreSpacing_DEFINITION"
+msgstr "配置文件的核心间距。"
 
-#:IFC.xml:23411
-msgid "IfcUnitEnum_AMOUNTOFSUBSTANCEUNIT"
-msgstr "AmOUNTOFSUBSTANCEUNIT"
+#:IFC.xml:32055
+msgid "CoreTopHeight"
+msgstr "核心顶部高度"
 
-msgid "IfcUnitEnum_AMOUNTOFSUBSTANCEUNIT_DEFINITION"
-msgstr "AmOUNTOFSUBSTANCEUNIT"
+msgid "CoreTopHeight_DEFINITION"
+msgstr "配置文件的核心高度。"
 
-#:IFC.xml:23412
-msgid "IfcUnitEnum_AREAUNIT"
-msgstr "方形"
+#:IFC.xml:32060
+msgid "CoreTopWidth"
+msgstr "CoreTopWidth"
 
-msgid "IfcUnitEnum_AREAUNIT_DEFINITION"
-msgstr "方形"
+msgid "CoreTopWidth_DEFINITION"
+msgstr "配置文件的核心顶部宽度。"
 
-#:IFC.xml:23413
-msgid "IfcUnitEnum_DOSEEQUIVALENTUNIT"
-msgstr "DOSEEQUIVALENTUNIT"
+#:IFC.xml:32065
+msgid "DraftBaseOffset"
+msgstr "DraftBaseOffset"
 
-msgid "IfcUnitEnum_DOSEEQUIVALENTUNIT_DEFINITION"
-msgstr "DOSEEQUIVALENTUNIT"
+msgid "DraftBaseOffset_DEFINITION"
+msgstr "简介的基础偏移草案。"
 
-#:IFC.xml:23414
-msgid "IfcUnitEnum_ELECTRICCAPACITANCEUNIT"
-msgstr "ELECTRICCAPACITANCEUNIT"
+#:IFC.xml:32070
+msgid "DraftSideOffset"
+msgstr "DraftSideOffset"
 
-msgid "IfcUnitEnum_ELECTRICCAPACITANCEUNIT_DEFINITION"
-msgstr "ELECTRICCAPACITANCEUNIT"
+msgid "DraftSideOffset_DEFINITION"
+msgstr "简介的侧边偏移草案。"
 
-#:IFC.xml:23415
-msgid "IfcUnitEnum_ELECTRICCHARGEUNIT"
-msgstr "ELECTRICCHARGEUNIT"
+#:IFC.xml:32075
+msgid "EdgeDraft"
+msgstr "边缘草稿"
 
-msgid "IfcUnitEnum_ELECTRICCHARGEUNIT_DEFINITION"
-msgstr "ELECTRICCHARGEUNIT"
+msgid "EdgeDraft_DEFINITION"
+msgstr "配置文件的边缘草稿。"
 
-#:IFC.xml:23416
-msgid "IfcUnitEnum_ELECTRICCONDUCTANCEUNIT"
-msgstr "ELECTRICCONDUCTANCEUNIT"
+#:IFC.xml:32080
+msgid "KeyDepth"
+msgstr "KeyDepth"
 
-msgid "IfcUnitEnum_ELECTRICCONDUCTANCEUNIT_DEFINITION"
-msgstr "ELECTRICCONDUCTANCEUNIT"
+msgid "KeyDepth_DEFINITION"
+msgstr "配置文件的关键深度。"
 
-#:IFC.xml:23417
-msgid "IfcUnitEnum_ELECTRICCURRENTUNIT"
-msgstr "ELECTRICCURUNIT"
+#:IFC.xml:32085
+msgid "KeyHeight"
+msgstr "密钥高度"
 
-msgid "IfcUnitEnum_ELECTRICCURRENTUNIT_DEFINITION"
-msgstr "ELECTRICCURUNIT"
+msgid "KeyHeight_DEFINITION"
+msgstr "配置文件的密钥高度。"
 
-#:IFC.xml:23418
-msgid "IfcUnitEnum_ELECTRICRESISTANCEUNIT"
-msgstr "ELECTRICRESISTANCEUNIT"
+#:IFC.xml:32090
+msgid "KeyOffset"
+msgstr "KeyOffset"
 
-msgid "IfcUnitEnum_ELECTRICRESISTANCEUNIT_DEFINITION"
-msgstr "ELECTRICRESISTANCEUNIT"
+msgid "KeyOffset_DEFINITION"
+msgstr "配置文件的密钥偏移。"
 
-#:IFC.xml:23419
-msgid "IfcUnitEnum_ELECTRICVOLTAGEUNIT"
-msgstr "ELECTRICVOLTAGEUNIT"
+#:IFC.xml:32111
+msgid "Pset_ProfileMechanical"
+msgstr "Pset 配置方案"
 
-msgid "IfcUnitEnum_ELECTRICVOLTAGEUNIT_DEFINITION"
-msgstr "ELECTRICVOLTAGEUNIT"
+msgid "Pset_ProfileMechanical_DEFINITION"
+msgstr "这是一个几乎适用于所有配置类别的机械属性集。这些属性大多用于结构分析。 用于计算表面区域的剖面剖面的 Perimeter 标界器。例如用毫米测量的值。"
 
-#:IFC.xml:23420
-msgid "IfcUnitEnum_ENERGYUNIT"
-msgstr "英雄座"
+#:IFC.xml:32112
+msgid "CentreOfGravityInX"
+msgstr "CentreOfGravityInX"
 
-msgid "IfcUnitEnum_ENERGYUNIT_DEFINITION"
-msgstr "英雄座"
+msgid "CentreOfGravityInX_DEFINITION"
+msgstr "重力几何中心剖面图的中心位置，用xp进行计量。"
 
-#:IFC.xml:23421
-msgid "IfcUnitEnum_FORCEUNIT"
-msgstr "FORCEUNIT"
+#:IFC.xml:32117
+msgid "CentreOfGravityInY"
+msgstr "中心OfGravityInY"
 
-msgid "IfcUnitEnum_FORCEUNIT_DEFINITION"
-msgstr "FORCEUNIT"
+msgid "CentreOfGravityInY_DEFINITION"
+msgstr "重力几何中心剖面图的位置，按yp测量；"
 
-#:IFC.xml:23422
-msgid "IfcUnitEnum_FREQUENCYUNIT"
-msgstr "免费的"
+#:IFC.xml:32132
+msgid "MaximumPlateThickness"
+msgstr "最大平板厚度"
 
-msgid "IfcUnitEnum_FREQUENCYUNIT_DEFINITION"
-msgstr "免费的"
+msgid "MaximumPlateThickness_DEFINITION"
+msgstr "这个值可能需要用于压力分析和处理粘结问题。 它也可以从给定的轮廓几何形状或分类中衍生出来，因此它只是一个可选的特征，允许有明确的描述。 例如，以毫米为单位测量。"
 
-#:IFC.xml:23423
-msgid "IfcUnitEnum_ILLUMINANCEUNIT"
-msgstr "局部信息"
+#:IFC.xml:32137
+msgid "MaximumSectionModulusY"
+msgstr "MaximumSection模块"
 
-msgid "IfcUnitEnum_ILLUMINANCEUNIT_DEFINITION"
-msgstr "局部信息"
+msgid "MaximumSectionModulusY_DEFINITION"
+msgstr "以最大zs常量将对ys 轴的抗性与最大zs调节。例如，用mm3进行测量。"
 
-#:IFC.xml:23424
-msgid "IfcUnitEnum_INDUCTANCEUNIT"
-msgstr "INDUCTANCEUNIT"
+#:IFC.xml:32142
+msgid "MaximumSectionModulusZ"
+msgstr "MaximumSectionModulusZ"
 
-msgid "IfcUnitEnum_INDUCTANCEUNIT_DEFINITION"
-msgstr "INDUCTANCEUNIT"
+msgid "MaximumSectionModulusZ_DEFINITION"
+msgstr "将zs轴的抗性与最大常量保持在点。例如，用毫米3测量。"
 
-#:IFC.xml:23425
-msgid "IfcUnitEnum_LENGTHUNIT"
-msgstr "LENGTHUNIT"
+#:IFC.xml:32147
+msgid "MinimumPlateThickness"
+msgstr "最小平板厚度"
 
-msgid "IfcUnitEnum_LENGTHUNIT_DEFINITION"
-msgstr "LENGTHUNIT"
+msgid "MinimumPlateThickness_DEFINITION"
+msgstr "这个值可能需要用于压力分析和处理粘结问题。 它也可以从给定的轮廓几何形状或分类中衍生出来，因此它只是一个可选的特征，允许有明确的描述。 例如，以毫米为单位测量。"
 
-#:IFC.xml:23426
-msgid "IfcUnitEnum_LUMINOUSFLUXUNIT"
-msgstr "块数"
+#:IFC.xml:32152
+msgid "MinimumSectionModulusY"
+msgstr "最小区块模块"
 
-msgid "IfcUnitEnum_LUMINOUSFLUXUNIT_DEFINITION"
-msgstr "块数"
+msgid "MinimumSectionModulusY_DEFINITION"
+msgstr "以最小zs电量将ys 轴的抗性降低到点。例如，用mm3来测量。"
 
-#:IFC.xml:23427
-msgid "IfcUnitEnum_LUMINOUSINTENSITYUNIT"
-msgstr "留言："
+#:IFC.xml:32157
+msgid "MinimumSectionModulusZ"
+msgstr "MinimumSectionModulusZ"
 
-msgid "IfcUnitEnum_LUMINOUSINTENSITYUNIT_DEFINITION"
-msgstr "留言："
+msgid "MinimumSectionModulusZ_DEFINITION"
+msgstr "在最小分级的点对zs轴进行抗性。例如，用毫米3来测量。"
 
-#:IFC.xml:23428
-msgid "IfcUnitEnum_MAGNETICFLUXDENSITYUNIT"
-msgstr "三月"
+#:IFC.xml:32162
+msgid "MomentOfInertiaY"
+msgstr "MomentOfInertiaY"
 
-msgid "IfcUnitEnum_MAGNETICFLUXDENSITYUNIT_DEFINITION"
-msgstr "三月"
+msgid "MomentOfInertiaY_DEFINITION"
+msgstr "关于面积的第二刻，关于ys 。例如，用mm4来测量。"
 
-#:IFC.xml:23429
-msgid "IfcUnitEnum_MAGNETICFLUXUNIT"
-msgstr "MAGNETICFLUXUNIT"
+#:IFC.xml:32167
+msgid "MomentOfInertiaYZ"
+msgstr "MomentOfInertiaYZ"
 
-msgid "IfcUnitEnum_MAGNETICFLUXUNIT_DEFINITION"
-msgstr "MAGNETICFLUXUNIT"
+msgid "MomentOfInertiaYZ_DEFINITION"
+msgstr "等离子体和zs产品区域时间的惯性时间。例如用毫米4测量的时间。"
 
-#:IFC.xml:23430
-msgid "IfcUnitEnum_MASSUNIT"
-msgstr "MASSUNIT"
+#:IFC.xml:32172
+msgid "MomentOfInertiaZ"
+msgstr "MomentOfInertiaZ"
 
-msgid "IfcUnitEnum_MASSUNIT_DEFINITION"
-msgstr "MASSUNIT"
+msgid "MomentOfInertiaZ_DEFINITION"
+msgstr "关于z秒面积的惯性，约为zs。例如用mm4测量的"
 
-#:IFC.xml:23431
-msgid "IfcUnitEnum_PLANEANGLEUNIT"
-msgstr "PLANEANGLEUNIT"
+#:IFC.xml:32182
+msgid "PlasticShapeFactorY"
+msgstr "等离子因子"
 
-msgid "IfcUnitEnum_PLANEANGLEUNIT_DEFINITION"
-msgstr "PLANEANGLEUNIT"
+msgid "PlasticShapeFactorY_DEFINITION"
+msgstr "部件分析轴的塑料容量与弹性倾斜时间容量之比。这是一个无尺寸的值。"
 
-#:IFC.xml:23432
-msgid "IfcUnitEnum_POWERUNIT"
-msgstr "战利品"
+#:IFC.xml:32187
+msgid "PlasticShapeFactorZ"
+msgstr "等离子体"
 
-msgid "IfcUnitEnum_POWERUNIT_DEFINITION"
-msgstr "战利品"
+msgid "PlasticShapeFactorZ_DEFINITION"
+msgstr "部件分析轴的塑料和弹性时钟容量的比值。无尺寸。"
 
-#:IFC.xml:23433
-msgid "IfcUnitEnum_PRESSUREUNIT"
-msgstr "已保存"
+#:IFC.xml:32192
+msgid "ShearAreaY"
+msgstr "沙雷亚"
 
-msgid "IfcUnitEnum_PRESSUREUNIT_DEFINITION"
-msgstr "已保存"
+msgid "ShearAreaY_DEFINITION"
+msgstr "与剖面分析轴等平行的剖面功率计算牛皮压力的剖面阵列。 例如，用毫米2测量，若给定的话，表面面积不得为负。"
 
-#:IFC.xml:23434
-msgid "IfcUnitEnum_RADIOACTIVITYUNIT"
-msgstr "RADIOACTIVITYUNIT"
+#:IFC.xml:32197
+msgid "ShearAreaZ"
+msgstr "ShearAreaZ"
 
-msgid "IfcUnitEnum_RADIOACTIVITYUNIT_DEFINITION"
-msgstr "RADIOACTIVITYUNIT"
+msgid "ShearAreaZ_DEFINITION"
+msgstr "与平行的剖面分析轴z相平行的剖面功率计算牛油漆压力的剖面区域。 例如，用毫米2测量，若给定的话，表面面积不得为负。"
 
-#:IFC.xml:23435
-msgid "IfcUnitEnum_SOLIDANGLEUNIT"
-msgstr "SOLIDANGLEUNIT"
+#:IFC.xml:32202
+msgid "ShearCentreY"
+msgstr "化心中心"
 
-msgid "IfcUnitEnum_SOLIDANGLEUNIT_DEFINITION"
-msgstr "SOLIDANGLEUNIT"
+msgid "ShearCentreY_DEFINITION"
+msgstr "轮廓画展中心的位置，按正文计量。"
 
-#:IFC.xml:23436
-msgid "IfcUnitEnum_THERMODYNAMICTEMPERATUREUNIT"
-msgstr "THERMODYNAMICTEMPERREUNIT"
+#:IFC.xml:32207
+msgid "ShearCentreZ"
+msgstr "ShearCentreZ"
 
-msgid "IfcUnitEnum_THERMODYNAMICTEMPERATUREUNIT_DEFINITION"
-msgstr "THERMODYNAMICTEMPERREUNIT"
+msgid "ShearCentreZ_DEFINITION"
+msgstr "按zs测量的轮廓画面中心的位置。"
 
-#:IFC.xml:23437
-msgid "IfcUnitEnum_TIMEUNIT"
-msgstr "TIMEUNIT"
+#:IFC.xml:32212
+msgid "ShearDeformationAreaY"
+msgstr "沙发形区域"
 
-msgid "IfcUnitEnum_TIMEUNIT_DEFINITION"
-msgstr "TIMEUNIT"
+msgid "ShearDeformationAreaY_DEFINITION"
+msgstr "用于计算与sys平行的薄膜力变形的剖面阵列。 例如，用毫米2测量，若给定的话，光束变形区域不得为负。"
 
-#:IFC.xml:23438
-msgid "IfcUnitEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:32217
+msgid "ShearDeformationAreaZ"
+msgstr "沙发形区域aZ"
 
-msgid "IfcUnitEnum_USERDEFINED_DEFINITION"
-msgstr "用户定义的单位类型。单位类型只是其名称或使用上下文所暗含的。"
+msgid "ShearDeformationAreaZ_DEFINITION"
+msgstr "用于计算薄膜变形的剖面阵列区域是与锌平行的薄膜力量造成的。 例如，用毫米2测量，如果给定的话，钢板变形区域z不得为负。"
 
-#:IFC.xml:23439
-msgid "IfcUnitEnum_VOLUMEUNIT"
-msgstr "常量"
+#:IFC.xml:32222
+msgid "TorsionalConstantX"
+msgstr "休眠常量X"
 
-msgid "IfcUnitEnum_VOLUMEUNIT_DEFINITION"
-msgstr "常量"
+msgid "TorsionalConstantX_DEFINITION"
+msgstr "关于xs的种子常量。例如用mm4进行测量。"
 
-#:IFC.xml:23441
-msgid "IfcValue"
-msgstr "IfcValue"
+#:IFC.xml:32227
+msgid "TorsionalSectionModulus"
+msgstr "振动片段模块"
 
-#:IFC.xml:23456
-msgid "IfcAbsorbedDoseMeasure"
-msgstr "IfcAbsorbedDoseMeasure"
+msgid "TorsionalSectionModulus_DEFINITION"
+msgstr "对于xs的耐力。例如以mm3计测量。"
 
-msgid "IfcAbsorbedDoseMeasure_DEFINITION"
-msgstr "[[IfcAbsorbedDoseMeasure]] 是一种吸收放射性剂量的测量。 通常测量为灰色，J kg . 在 IFC2x中键入REAL HISTORY 新型。"
+#:IFC.xml:32232
+msgid "WarpingConstant"
+msgstr "温度常量"
 
-#:IFC.xml:23460
-msgid "IfcAccelerationMeasure"
-msgstr "IfcSpeerationMeasure"
-
-msgid "IfcAccelerationMeasure_DEFINITION"
-msgstr "[[IfcAccelerationMeasure]] 是一种加速度量。通常以m s2来测量。在 IFC2x中类型是REAL HISTORY 新类型。"
-
-#:IFC.xml:23464
-msgid "IfcAmountOfSubstanceMeasure"
-msgstr "IfcamountOfSubstanceMeasure"
-
-msgid "IfcAmountOfSubstanceMeasure_DEFINITION"
-msgstr "物质量度是指一种物质数量与0原子数量相比的数值。 12公斤碳。 通常用摩尔摩尔来测量。用ISO 1030341界定的物质计量量来调整REAL 注型。 IFC1.5.1中的HISTORY 新类型。"
-
-#:IFC.xml:23468
-msgid "IfcAngularVelocityMeasure"
-msgstr "IfcAngularVelocityMeasure"
-
-msgid "IfcAngularVelocityMeasure_DEFINITION"
-msgstr "[[IfcAngularVelocityMeasure]] 是以单位时间的角度子放大测量物体速度的一个尺度。 通常以弧度计。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23472
-msgid "IfcAreaDensityMeasure"
-msgstr "IfcArea密度测量方法"
-
-msgid "IfcAreaDensityMeasure_DEFINITION"
-msgstr "[[IfcAreaDensityMeasure]] 是一个测量两维物体密度的尺寸，按单位面积的质量计算。 通常以千克平方米来测量。在IFC4中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23476
-msgid "IfcAreaMeasure"
-msgstr "IfcAreaMeasure"
-
-msgid "IfcAreaMeasure_DEFINITION"
-msgstr "面积测量是表面范围的数值，通常以平方米2计。 类型REAL NotE Type modified from area measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23480
-msgid "IfcBinary"
-msgstr "伊夫二进制文件"
-
-msgid "IfcBinary_DEFINITION"
-msgstr "[[IfcBinary]] 是定义的简单数据类型 BINARY 类型，可用来编码二进制数据，例如嵌入的纹理. 注： 引入这种类型是为了保持与所有本地类型的一致性。 未来的 IFC 版本可能支持此数据类型在 [[IfcSimpleValue]] 内启用属性集。 在 IFC4 ADD1 更改中键入新类型不会影响文件兼容性。"
-
-#:IFC.xml:23484
-msgid "IfcBoolean"
-msgstr "IfcBoolean"
-
-msgid "IfcBoolean_DEFINITION"
-msgstr "[[IfcBoolean]] 是简单数据类型布尔值的定义数据类型。 它是必需的，因为选择类型 [[IfcSimpleValue]] 不能直接包含其选择列表中的简单类型。 布尔类型可以有值 TRUE 或 FALSE。在 IFC1.5.1 中输入 BOOLEA HISTORY 新类型。"
-
-#:IFC.xml:23494
-msgid "IfcComplexNumber"
-msgstr "IfcComplxnumber"
-
-msgid "IfcComplexNumber_DEFINITION"
-msgstr "[[IfcComplexNumber]] 是一个以两个元素的数组表示的复数的表达式。 第一个要素索引1表示实际构成部分，这个构成部分是一个复杂数目的数值，其方根可以明确计算。 第二个要素指数2表示假想成分，它是一个复杂数的数值成分，其方根不能通过提供假想号j的方形来确定，其中j2-1。 注意想像组件在某些引用中可能被称为i。在 IFC2x2 中类型为 ARRAY 1 2 of REAL HISTORY New Type"
-
-#:IFC.xml:23498
-msgid "IfcCompoundPlaneAngleMeasure"
-msgstr "IfcCompoundPlaneAngleMeasure"
-
-msgid "IfcCompoundPlaneAngleMeasure_DEFINITION"
-msgstr "[[IfcCompoundPlaneAngleMeasure]] is a compound measure of plane angle in degrees, minutes, seconds, and optionally millionth seconds of arc. NOTE [[IfcCompoundPlaneAngleMeasure]] is used where angles need to be described to an accuracy as fine as one millionth of a degree and expressed as parts of an arc. It may be used for angular measurement by surveyors or for other angular measurements where precision is required. Another usage is exact or approximate global positioning against a geographic coordinate systems using longitude and latitude. NOTE While the unit of measurement of the type [[IfcPlaneAngleMeasure]] depends on unit assignment radian or degree or other derived units globally at the IfcPoject or locally at an [[IfcMeasureWithUnit]] , the units of [[IfcCompoundPlaneAngleMeasure]] are always degrees, minutes, seconds, and millionth seconds irrespective of unit assignments. HISTORY New type in IFC1.5.1. Type LIST 3 4 OF INTEGER .use head Value restrictions The first integer measure is the number of degrees and is generally not range restricted. However, when [[IfcCompoundPlaneAngleMeasure]] is used to express geographic coordinates, only latitudes of 90, 90 and longitudes of 180, 180 are used in practice. The second integer measure is the number of minutes and shall be in the range 60, 60 . The third integer measure is the number of seconds and shall be in the range 60, 60 . The optional fourth integer measure is the number of millionth seconds and shall be in the range 1 000 000, 1 000 000 . .use head Signedness All measure components have the same sign positive or negative . It is therefore trivial to convert between floating point representation decimal degrees and compound representation regardless whether the angle is greater or smaller than zero. Example LOCAL a [[IfcPlaneAngleMeasure]] 50.975864 decimal degrees, 50 58 33 110400 b [[IfcPlaneAngleMeasure]] c [[IfcCompoundPlaneAngleMeasure]] s [[IfcText]] END LOCAL convert from float to compound c 1 a 50 c 2 a c 1 60 58 c 3 a c 1 60 c 2 60 33 c 4 a c 1 60 c 2 60 c 3 1.e6 110400 convert from compound to float b c 1 c 2 60. c 3 3600. c 4 3600.e6 50.975864 .use head Use in string representations When a compound plane angle measure is formatted for display or printout, the signs of the fractional components will usually be discarded because, to a human reader, the sign of the first component alone already indicates the sense of the angle convert from compound to human readable string s FORMAT c 1 , 000000B0 FORMAT ABS c 2 , FORMAT ABS c 3 , FORMAT ABS c 4 , 50 58 33 110400 Another often encountered display format of latitudes and longitudes is to omit the signs and print N, S, E, W indicators instead, for example, 50 58 33 S . When stored as [[IfcCompoundPlaneAngleMeasure]] however, a compound plane angle measure is always signed, with same sign of all components. Formal Propositions MinutesInRange The second measure minutes shall be between 60 exclusive and 60 exclusive. SecondsInRange The third measure seconds shall be between 60 exclusive and 60 exclusive. MicrosecondsInRange The forth measure millionth seconds , if asserted, shall be between 1e6 exclusive and 1e6 exclusive. ConsistentSign All non zero measure components shall have the same sign positive or negative ."
-
-#:IFC.xml:23502
-msgid "IfcContextDependentMeasure"
-msgstr "IfcContextDependentMeasure"
-
-msgid "IfcContextDependentMeasure_DEFINITION"
-msgstr "交易环境中定义的物理数量的值。 类型REAL NotE Type modified from context dependent measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23506
-msgid "IfcCountMeasure"
-msgstr "IfcCountMeasure"
-
-msgid "IfcCountMeasure_DEFINITION"
-msgstr "计数值是一个项目的值。 输入从 ISO 10303 41中定义的计数措施改编的NUMBER 注类型。 IFC1.5.1 中的HISTORY 新型。"
-
-#:IFC.xml:23510
-msgid "IfcCurvatureMeasure"
-msgstr "IfcCurvatureMeasure"
-
-msgid "IfcCurvatureMeasure_DEFINITION"
-msgstr "[[IfcCurvatureMeasure]] 是一个曲线度量值，定义为每长度变化斜度。 这通常是结构分析中的计算值。它通常以rd m计算。在 IFC2x2 中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23514
-msgid "IfcDescriptiveMeasure"
-msgstr "Ifc描述性措施"
-
-msgid "IfcDescriptiveMeasure_DEFINITION"
-msgstr "描述性计量是一种可由人来解释的可量化价值的定义，必须为交换情况确定解释方式。 输入由 ISO 10303 41 定义的描述性措施改编的STRING 注类型，IFC1.5.1 中的HISTORY 新型。"
-
-#:IFC.xml:23519
-msgid "IfcDoseEquivalentMeasure"
-msgstr "IfcDoseEquivalentMeasure"
-
-msgid "IfcDoseEquivalentMeasure_DEFINITION"
-msgstr "[[IfcDoseEquivalentMeasure]] 是放射性剂量等值的一种测量。 通常在Sievert Sv中测量, J kg . 在 IFC2x中键入REAL HISTORY 新类型。"
-
-#:IFC.xml:23523
-msgid "IfcDynamicViscosityMeasure"
-msgstr "IfcDynamicViscosityMeasure"
-
-msgid "IfcDynamicViscosityMeasure_DEFINITION"
-msgstr "[[IfcDynamicViscosityMeasure]] 是介质的直观抗性。 通常在 Pascal second Pa s 中测量。在 IFC2.0 中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23527
-msgid "IfcElectricCapacitanceMeasure"
-msgstr "电容度测量措施"
-
-msgid "IfcElectricCapacitanceMeasure_DEFINITION"
-msgstr "[[IfcElectricCapacitanceMeasure]] 是衡量电容量的尺度。 通常以Farad F, C V A sV V. 在IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23531
-msgid "IfcElectricChargeMeasure"
-msgstr "IfcElectricChargeMeasure"
-
-msgid "IfcElectricChargeMeasure_DEFINITION"
-msgstr "[[IfcElectricChargeMeasure]] 是电电荷的一种测量值。通常在 Coulomb C, A s 中测量。在 IFC2x 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23535
-msgid "IfcElectricConductanceMeasure"
-msgstr "电气行为措施"
-
-msgid "IfcElectricConductanceMeasure_DEFINITION"
-msgstr "[[IfcElectricConductanceMeasure]] 是衡量电导的尺度。 通常以Siemens S, 1 Ohm A V 度量。在IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23539
-msgid "IfcElectricCurrentMeasure"
-msgstr "电流措施"
-
-msgid "IfcElectricCurrentMeasure_DEFINITION"
-msgstr "充电颗粒的移动值。通常在Ampere A 中测量。 Type REAL NotE Type modified from electrical current measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23543
-msgid "IfcElectricResistanceMeasure"
-msgstr "电阻测量措施"
-
-msgid "IfcElectricResistanceMeasure_DEFINITION"
-msgstr "[[IfcElectricResistanceMeasure]] 是电阻度量度。通常在 Ohm V A 中测量。在 IFC2x 中键入新型。"
-
-#:IFC.xml:23547
-msgid "IfcElectricVoltageMeasure"
-msgstr "电压测量器"
-
-msgid "IfcElectricVoltageMeasure_DEFINITION"
-msgstr "[[IfcElectricVoltageMeasure]] 是一种电动机力测量值。通常在Volts V, W A中测量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23551
-msgid "IfcEnergyMeasure"
-msgstr "IfcEnergyMeasure"
-
-msgid "IfcEnergyMeasure_DEFINITION"
-msgstr "[[IfcEnergyMeasure]] 是需要或使用的能量度。通常在Joules, J, Nm 中测量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23555
-msgid "IfcForceMeasure"
-msgstr "IfcForce措施"
-
-msgid "IfcForceMeasure_DEFINITION"
-msgstr "[[IfcForceMeasure]] 是一种力量度。通常用牛顿N，千克s2来测量。在 IFC2x中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23559
-msgid "IfcFrequencyMeasure"
-msgstr "IfcFrequencyMeasure"
-
-msgid "IfcFrequencyMeasure_DEFINITION"
-msgstr "[[IfcFrequencyMeasure]] 是单位时间内物品振动的次数。 通常测量周期或赫茨赫兹。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23563
-msgid "IfcHeatFluxDensityMeasure"
-msgstr "IfcHeatFluxdensityMeasure"
-
-msgid "IfcHeatFluxDensityMeasure_DEFINITION"
-msgstr "[[IfcHeatFluxDensityMeasure]] 是一个体内热通量密度的尺度。 通常以W m2 J s m2 计量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23567
-msgid "IfcHeatingValueMeasure"
-msgstr "IfcHeatingValueMeasure"
-
-msgid "IfcHeatingValueMeasure_DEFINITION"
-msgstr "[[IfcHeatingValueMeasure]] 定义了燃烧燃料时通常以MJ公斤释放的能量。 在 IFC2x2 中这是一个新型的 WR1 格式Proposition"
-
-#:IFC.xml:23571
-msgid "IfcIdentifier"
-msgstr "Ifcidfier"
-
-msgid "IfcIdentifier_DEFINITION"
-msgstr "标识符是一个字母数字字符串，允许识别个别物品。它可能不提供自然语言的含义。 输入从 ISO 10303 41中定义的标识符修改过的最多255个字符的代码注类型。 挂机ifc2x4 IFC 2x4 变异以前建议的大小限制为255个字符，现在是强制性的。 为识别目的仅是机器可读字符串。 标识符通常是机器生成的，并且与人类可读标签[[IfcLabel]] 相对独立。 注： ISO 10646提供了在ISO 10303.21定义的交换结构中交换的字符集。 在基于文件的交换中，字符的编码定义为ISO 10303 21和ISO 10303 28。 在其他方面，这些规格定义了来自ISO 8859 1的8位字符的编码。 . 16位和2位字节和4位字节Unicode 字符，来自ISO 10646。 注意到 [[IfcIdentifier]] 被限制为 255 个字符，编码后交换文件的大小可能会大大超过255个目数， 取决于特定编码和标识的内容。"
-
-#:IFC.xml:23575
-msgid "IfcIlluminanceMeasure"
-msgstr "Ifc照明度量"
-
-msgid "IfcIlluminanceMeasure_DEFINITION"
-msgstr "[[IfcIlluminanceMeasure]] 是衡量照明程度的尺度。 通常以Lux lx计，Lumen m2 Candela Steradian m2 。在 IFC2x中类型REAL HISTORY 新型。"
-
-#:IFC.xml:23579
-msgid "IfcInductanceMeasure"
-msgstr "IfcInductanceMeasure"
-
-msgid "IfcInductanceMeasure_DEFINITION"
-msgstr "[[IfcInductanceMeasure]] 是衡量诱因的尺度。 Henry H, Weber A V s A . 在 IFC2x中键入新型。"
-
-#:IFC.xml:23583
-msgid "IfcInteger"
-msgstr "IfcInteger"
-
-msgid "IfcInteger_DEFINITION"
-msgstr "[[IfcInteger]] 是简单数据类型整数的定义类型。 它是必需的，因为选择类型 [[IfcSimpleValue]] 不能直接包括其选择列表中的简单类型。 原则上，作为整数的 [[IfcInteger]] 的域都是整数。 这里对于[[IfcInteger]]表示使用的位数是无限制的，但实际上是具体执行的。 在 IFC1.5.1 中键入INTEGR HISTORY 新类型。"
-
-#:IFC.xml:23587
-msgid "IfcIntegerCountRateMeasure"
-msgstr "IfcIntegerCountRateMeasure"
-
-msgid "IfcIntegerCountRateMeasure_DEFINITION"
-msgstr "[[IfcIntegerCountRateMeasure]] 是衡量每单位时间流量单位的整数数。 EXAMPLE 此度量可用来测量每秒整数或每小时整数单位。 例如，它可以用来衡量在机械图书处理系统中每小时传送的书籍数量。 每小时乘坐步行道的人数或每小时在路段行驶的车辆数目。 在 IFC2.0 中键入INTEGR HISTORY 新类型。"
-
-#:IFC.xml:23591
-msgid "IfcIonConcentrationMeasure"
-msgstr "IfcIon中央集权测量措施"
-
-msgid "IfcIonConcentrationMeasure_DEFINITION"
-msgstr "[[IfcIonConcentrationMeasure]] 是测量液体中特定离子浓度的尺寸，单位为mol m3。 IFC2x2. HISTORY 新型版本在 IFC 4.3中从mg L 更改为ml m3 符合国际用法。"
-
-#:IFC.xml:23595
-msgid "IfcIsothermalMoistureCapacityMeasure"
-msgstr "IfcIsothermalMoistureCapacityMeasure"
-
-msgid "IfcIsothermalMoistureCapacityMeasure_DEFINITION"
-msgstr "[[IfcIsothermalMoistureCapacityMeasure]] 是测量等热湿度容量的尺寸，通常以m3 kg为单位测量。在 IFC2x 中类型的红色高温新型。"
-
-#:IFC.xml:23599
-msgid "IfcKinematicViscosityMeasure"
-msgstr "IfcKinematicViscositymeasure"
-
-msgid "IfcKinematicViscosityMeasure_DEFINITION"
-msgstr "[[IfcKinematicViscosityMeasure]] 是一种介质至运动体的直观抗性。 通常以m2 s为单位。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23603
-msgid "IfcLabel"
-msgstr "Ifc标签"
-
-msgid "IfcLabel_DEFINITION"
-msgstr "标签是可以提到某些东西的术语。 这是一个能够代表某种东西的人类解释名称并具有自然语言含义的字符串。 输入从 ISO 10303 41中定义的标签中修改的最多255个字符的注类型。 挂卡if2x4 IFC4 变异以前建议的大小限制为255个字符，现在是强制性的。 为命名目的，作为一个人类可读的字符串，头部价值限制 标签通常是人为的且取决于区域，而不是纯机器可读的标识符，[[IfcIdentifier]] 。 注： ISO 10646提供了在ISO 10303.21定义的交换结构中交换的字符集。 在基于文件的交换中，字符的编码定义为ISO 10303 21和ISO 10303 28。 在其他方面，这些规格定义了来自ISO 8859 1的8位字符的编码。 . 16位和2位字节和4位字节Unicode 字符，来自ISO 10646。 注意到 [[IfcIdentifier]] 被限制为 255 个字符，编码后交换文件的大小可能会大大超过255个目数， 取决于特定编码和标识的内容。"
-
-#:IFC.xml:23607
-msgid "IfcLengthMeasure"
-msgstr "IfcLengthmeasure"
-
-msgid "IfcLengthMeasure_DEFINITION"
-msgstr "一个 [[IfcLengthMeasure]] 是距离的值。 类型REAL NotE Type modified from length measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23613
-msgid "IfcLinearForceMeasure"
-msgstr "IfcLinearForce措施"
-
-msgid "IfcLinearForceMeasure_DEFINITION"
-msgstr "[[IfcLinearForceMeasure]] 是测量线性力。通常用N 米来测量。在 IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23617
-msgid "IfcLinearMomentMeasure"
-msgstr "IfcLinearMomentmeasure"
-
-msgid "IfcLinearMomentMeasure_DEFINITION"
-msgstr "[[IfcLinearMomentMeasure]] 是线性时间的计量，通常以毫米计。在 IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23621
-msgid "IfcLinearStiffnessMeasure"
-msgstr "IfcLinearStiffness措施"
-
-msgid "IfcLinearStiffnessMeasure_DEFINITION"
-msgstr "[[IfcLinearStiffnessMeasure]] 是一种线性硬度度量。通常用N m度度量。在 IFC2x 中类型是REAL HISTORY 新类型。"
-
-#:IFC.xml:23626
-msgid "IfcLinearVelocityMeasure"
-msgstr "IfcLinearVelocityMeasure"
-
-msgid "IfcLinearVelocityMeasure_DEFINITION"
-msgstr "[[IfcLinearVelocityMeasure]] 是以单位时间移动距离测量物体速度的一个尺度。 通常以m 为单位。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23630
-msgid "IfcLogical"
-msgstr "Ifc逻辑运算法"
-
-msgid "IfcLogical_DEFINITION"
-msgstr "[[IfcLogical]] [[IfcSimpleValue]] 不能在其选择列表中直接包含简单的类型 逻辑数据类型可以有值 TRUE、FALSE 或UNKNOWN。在 IFC2x中键入LOGICAL HISTORY 新类型。"
-
-#:IFC.xml:23634
-msgid "IfcLuminousFluxMeasure"
-msgstr "卢夫尼苏斯流体测量值"
-
-msgid "IfcLuminousFluxMeasure_DEFINITION"
-msgstr "[[IfcLuminousFluxMeasure]] 是亮度流量的尺度，通常用Lumen lm, Candela Steradian 测量。在 IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23638
-msgid "IfcLuminousIntensityDistributionMeasure"
-msgstr "IfcluminousigsityDistributionMeasure"
-
-msgid "IfcLuminousIntensityDistributionMeasure_DEFINITION"
-msgstr "[[IfcLuminousIntensityDistributionMeasure]] 是根据射程方向变化的光源亮度的尺度。 它通常以某些标准化的分发灯光分布曲线为基础。 通常测量在Candela Lumen cd lm 或 cd klm 。在 IFC2x2 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23642
-msgid "IfcLuminousIntensityMeasure"
-msgstr "IfcluminoussityMeasure"
-
-msgid "IfcLuminousIntensityMeasure_DEFINITION"
-msgstr "一个 [[IfcLuminousIntensityMeasure]] 是物体亮度的值。通常在candela cd 中衡量。 类型REAL NotE Type modified from lumpleal strength measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1."
-
-#:IFC.xml:23646
-msgid "IfcMagneticFluxDensityMeasure"
-msgstr "IfcMagneticFluxsityMeasure"
-
-msgid "IfcMagneticFluxDensityMeasure_DEFINITION"
-msgstr "[[IfcMagneticFluxDensityMeasure]] 是磁通量密度的一个测量。 通常以Tesla T测量， Weber m2 V sm2 。在IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23650
-msgid "IfcMagneticFluxMeasure"
-msgstr "IfcMagneticFluxMeasure"
-
-msgid "IfcMagneticFluxMeasure_DEFINITION"
-msgstr "[[IfcMagneticFluxMeasure]] 是磁通量的测量值。通常用WeberWb, V s来测量。在 IFC2x中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23654
-msgid "IfcMassDensityMeasure"
-msgstr "IfcMasssityMeasure"
-
-msgid "IfcMassDensityMeasure_DEFINITION"
-msgstr "[[IfcMassDensityMeasure]] 是介质密度的尺度，通常以千克立方米测量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23658
-msgid "IfcMassFlowRateMeasure"
-msgstr "IfcMassFlowRateMeasure"
-
-msgid "IfcMassFlowRateMeasure_DEFINITION"
-msgstr "[[IfcMassFlowRateMeasure]] 是衡量单位时间中间流量质量的尺寸。 通常以公斤s进行测量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23662
-msgid "IfcMassMeasure"
-msgstr "IfcMassmeasure"
-
-msgid "IfcMassMeasure_DEFINITION"
-msgstr "一个 [[IfcMassMeasure]] 是物体所含物质数量的值。通常以千克或克克来衡量。 类型REAL NotE Type modified from mass measures defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23666
-msgid "IfcMassPerLengthMeasure"
-msgstr "IfcMassPerlengthmeasure"
-
-msgid "IfcMassPerLengthMeasure_DEFINITION"
-msgstr "[[IfcMassPerLengthMeasure]] 是衡量每个长度质量的尺寸。 例如，在滚动钢剖面图中，假想光束的重量通常以千克长度表示，以用于成本计算和结构分析。 在 IFC2x2 中键入 REAL HISTORY 新类型。"
-
-#:IFC.xml:23670
-msgid "IfcModulusOfElasticityMeasure"
-msgstr "IfcModulusOfElasticityMeasure"
-
-msgid "IfcModulusOfElasticityMeasure_DEFINITION"
-msgstr "[[IfcModulusOfElasticityMeasure]] 是一个弹性模块的尺寸。通常用N m2来测量。在 IFC2x中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23674
-msgid "IfcModulusOfLinearSubgradeReactionMeasure"
-msgstr "IfcModulusOfLinearSubgradeReaction措施"
-
-msgid "IfcModulusOfLinearSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfLinearSubgradeReactionMeasure]] 是线性亚级反应模块的计量。 它表示每个长度的线性结构元素的弹性床，如波束。 它通常以N m 2 度量。请在 IFC2x2 中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23679
-msgid "IfcModulusOfRotationalSubgradeReactionMeasure"
-msgstr "IfcModulusOfRotationSubgradeReactionmeasure"
-
-msgid "IfcModulusOfRotationalSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfRotationalSubgradeReactionMeasure]] 是一种旋转子级反应模块的计量。 它表示每个长度的线性结构元素的旋转弹性床位，如波束。 通常以Nm rad 测量。在 IFC2x2 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23684
-msgid "IfcModulusOfSubgradeReactionMeasure"
-msgstr "IfcModulusOfSubgradeReaction措施"
-
-msgid "IfcModulusOfSubgradeReactionMeasure_DEFINITION"
-msgstr "[[IfcModulusOfSubgradeReactionMeasure]] 是一种地质技术措施，描述地基结构与土壤之间的相互作用。 也可以称为床上测量，通常以N m3度计。在《IFC2x》中类型REAL HISTORY。 图1显示飞机成员的弹性支持... ... fcmodulusofsubgradeactionmeas.gif 图1 子级反应措施模块"
-
-#:IFC.xml:23689
-msgid "IfcMoistureDiffusivityMeasure"
-msgstr "IfcMoistureDiffusivityMeasure"
-
-msgid "IfcMoistureDiffusivityMeasure_DEFINITION"
-msgstr "[[IfcMoistureDiffusivityMeasure]] 是一种水分传播度量。通常以立方米来测量。在 IFC2x 中键入REAL HISTORY 新类型。"
-
-#:IFC.xml:23693
-msgid "IfcMolecularWeightMeasure"
-msgstr "IfcMolecular重力措施"
-
-msgid "IfcMolecularWeightMeasure_DEFINITION"
-msgstr "[[IfcMolecularWeightMeasure]] 是典型气体物质分子重量的尺寸。 通常以克摩尔为单位测量。在 IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23697
-msgid "IfcMomentOfInertiaMeasure"
-msgstr "IfcMomentOfInertiaMeasure"
-
-msgid "IfcMomentOfInertiaMeasure_DEFINITION"
-msgstr "[[IfcMomentOfInertiaMeasure]] 是惯性时刻的一种度量。通常以m4度量。在 IFC2x中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23701
-msgid "IfcMonetaryMeasure"
-msgstr "IfcMonetaryMeasure"
-
-msgid "IfcMonetaryMeasure_DEFINITION"
-msgstr "货币计量是一笔金额的价值，而不考虑货币。在 IFC2.0 中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23705
-msgid "IfcNonNegativeLengthMeasure"
-msgstr "IfcNonnegativeLengthmeasure"
-
-msgid "IfcNonNegativeLengthMeasure_DEFINITION"
-msgstr "非负长度测量是大于或等于零的长度计量。 在 IFC4 中输入 [[IfcLengthMeasure]] 高炉新类型。 正式提议的非消极措施必须大于或等于零。"
-
-#:IFC.xml:23710
-msgid "IfcNormalisedRatioMeasure"
-msgstr "IfcNormalisedRatio测量法"
-
-msgid "IfcNormalisedRatioMeasure_DEFINITION"
-msgstr "[[IfcNormalisedRatioMeasure]] 是一种无尺寸的表示比率值介于 0.0 到 1.0 之间。在 IFC2x 中输入REAL HISTORY 新类型。 正式提议的 WR1 正常化比率必须是非负值，小于或等于 1.0"
-
-#:IFC.xml:23716
-msgid "IfcNumericMeasure"
-msgstr "IfcNumericMeasure"
-
-msgid "IfcNumericMeasure_DEFINITION"
-msgstr "一个 [[IfcNumericMeasure]] 是物理数量的数值。 输入从 ISO 10303 41中定义的数值测量中调整的NUMBER 注类型。 IFC1.5.1 中的HISTORY 新类型。"
-
-#:IFC.xml:23720
-msgid "IfcParameterValue"
-msgstr "Ifc参数值"
-
-msgid "IfcParameterValue_DEFINITION"
-msgstr "一个 [[IfcParameterValue]] 是指定某个参数空间中参数数量的值。 类型REAL NotE Type modified from 参数值在 ISO 10303 41 中定义。HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23726
-msgid "IfcPHMeasure"
-msgstr "IfcPHMeasure"
-
-msgid "IfcPHMeasure_DEFINITION"
-msgstr "[[IfcPHMeasure]] 是一种通常被定义为在0-14范围内酸度量的液体中的摩尔氢离子浓度。 在 IFC2x2 中的新类型。正式建议 WR21 。pH 值必须在 0 至 14 之间。"
-
-#:IFC.xml:23730
-msgid "IfcPlanarForceMeasure"
-msgstr "IfcPlanarForceMeasure"
-
-msgid "IfcPlanarForceMeasure_DEFINITION"
-msgstr "[[IfcPlanarForceMeasure]] 是测量某个区域的力量。通常在 N m2 中测量。在 IFC2x 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23734
-msgid "IfcPlaneAngleMeasure"
-msgstr "IfcPlaneAngleMeasure"
-
-msgid "IfcPlaneAngleMeasure_DEFINITION"
-msgstr "一个 [[IfcPlaneAngleMeasure]] 是飞机上一个角度的值。 通常以辐射速率计，米1米，但也可以使用等级。 古代单位必须申报为以弧度单位为基础的转换单位。 注[[IfcPlaneAngleMeasure]]是指角必须以小于一度的精度描述并表示为角的十进制部分的地方。 它广泛用于角度测量，但需要使用弧度测量来界定准确性的情况除外，为此目的提供了[[IfcCompoundPlaneAngleMeasure]] 。 在IFC1.5.1中键入从 ISO 10303 41中定义的平面角度度量变异的REAL 注型。"
-
-#:IFC.xml:23739
-msgid "IfcPositiveInteger"
-msgstr "IfcPositiveInteger"
-
-msgid "IfcPositiveInteger_DEFINITION"
-msgstr "[[IfcPositiveInteger]] 是一种基于简单数据类型整数的定义类型，并附加了对正整数（不包括零）的限制。 原则上，[[IfcInteger]] 的域都是大于零的整数。 这里对于[[IfcInteger]] 表示使用的位数不受限制，但实际上是具体执行的。 在 IFC4 ADD1 正式提议WR1 中键入INTEGR HISTORY 新型。"
-
-#:IFC.xml:23743
-msgid "IfcPositiveLengthMeasure"
-msgstr "IfcPositiveLengthMeasure"
-
-msgid "IfcPositiveLengthMeasure_DEFINITION"
-msgstr "一个 [[IfcPositiveLengthMeasure]] 是大于零的长度计量。 输入 [[IfcLengthMeasure]] 从ISO 10303 41中定义的正长度尺度中调整的注类型。 IFC1.5.1. 正式提议的 WR1 新型。 积极措施必须大于零。"
-
-#:IFC.xml:23749
-msgid "IfcPositivePlaneAngleMeasure"
-msgstr "IfcPositivePlaneAngleMeasure"
-
-msgid "IfcPositivePlaneAngleMeasure_DEFINITION"
-msgstr "一个 [[IfcPositivePlaneAngleMeasure]] 是大于零的平面角度度量。 输入 [[IfcPlaneAngleMeasure]] 从正平面角度测量调整的注类型在 ISO10303 41 中定义。 IFC1.5.1. 正式提议的 WR1 新型。 积极措施必须大于零。"
-
-#:IFC.xml:23753
-msgid "IfcPositiveRatioMeasure"
-msgstr "Ifcpositive Ratio测量值"
-
-msgid "IfcPositiveRatioMeasure_DEFINITION"
-msgstr "一个 [[IfcPositiveRatioMeasure]] 是大于零的比率计量。 输入 [[IfcRatioMeasure]] 从ISO 10303 41中定义的正比测量中调整的注类型。 IFC1.5.1. 正式提议的 WR1 新型。 积极措施必须大于零。"
-
-#:IFC.xml:23758
-msgid "IfcPowerMeasure"
-msgstr "IfcPowerMeasure"
-
-msgid "IfcPowerMeasure_DEFINITION"
-msgstr "[[IfcPowerMeasure]] 是需要或使用的一种功率。 通常在Watts W, J s中测量。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23762
-msgid "IfcPressureMeasure"
-msgstr "IfcPressuremeasure"
-
-msgid "IfcPressureMeasure_DEFINITION"
-msgstr "[[IfcPressureMeasure]] 是一个测量单位区域内介质数量的尺度。 通常以Pascals Pa, N m2 . 在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23766
-msgid "IfcRadioActivityMeasure"
-msgstr "IfcRadioActivityMeasure"
-
-msgid "IfcRadioActivityMeasure_DEFINITION"
-msgstr "[[IfcRadioActivityMeasure]] 是放射性核素活动量度。通常在 Becquerel Bq，1 s 中测量。在 IFC2 x 中类型是REAL HISTORY 新的。"
-
-#:IFC.xml:23770
-msgid "IfcRatioMeasure"
-msgstr "IfcRatioMeasure"
-
-msgid "IfcRatioMeasure_DEFINITION"
-msgstr "一个 [[IfcRatioMeasure]] 是两个同类物理数量之间的关系值。 当存储为 [[IfcRatioMeasure]] 时，以百分比给出的注入将被除以100。 例如，25种变成0.25种，从ISO1030341中界定的比率尺度中改装的REAL Note型号IFC1.5.1中的新型HISTORY"
-
-#:IFC.xml:23776
-msgid "IfcReal"
-msgstr "伊夫克雷尔"
-
-msgid "IfcReal_DEFINITION"
-msgstr "[[IfcReal]] 是定义的简单数据类型 REAL。 它是必需的，因为选择类型 [[IfcSimpleValue]] 不能直接包括其选择列表中的简单类型。 原则上，[[IfcReal]] 的域名是真实的，所有这些都是合理、不合理和科学的真实数字。 这里的精确度不受约束，但实际上是具体的实现。在 IFC1.5.1 中类型是新型。"
-
-#:IFC.xml:23780
-msgid "IfcRotationalFrequencyMeasure"
-msgstr "IfcRotationFrequencymeasure"
-
-msgid "IfcRotationalFrequencyMeasure_DEFINITION"
-msgstr "[[IfcRotationalFrequencyMeasure]] 是衡量某个物品在单位时间内的循环次数的尺度。 通常以生理周期计量。在 IFC2x 中键入新型。"
-
-#:IFC.xml:23784
-msgid "IfcRotationalMassMeasure"
-msgstr "IfcRotationalMassmeasure"
-
-msgid "IfcRotationalMassMeasure_DEFINITION"
-msgstr "旋转质量测量表示一个机构对角加速的惯性。 通常用千克米2来测量，用IFC2x2来输入REAL HISTORY 新型。"
-
-#:IFC.xml:23788
-msgid "IfcRotationalStiffnessMeasure"
-msgstr "IfcRotationStiffness措施"
-
-msgid "IfcRotationalStiffnessMeasure_DEFINITION"
-msgstr "[[IfcRotationalStiffnessMeasure]] 是一种旋转温度的度量。通常以Nm速度测量。在 IFC2x 中类型是REAL HISTORY 新型。"
-
-#:IFC.xml:23793
-msgid "IfcSectionalAreaIntegralMeasure"
-msgstr "IfcSectionalAreaIntegralMeasure"
-
-msgid "IfcSectionalAreaIntegralMeasure_DEFINITION"
-msgstr "区段整体测量通常用于种子分析。通常以m 5度测量；类型REAL HISTORY New Type in IFC2x2。"
-
-#:IFC.xml:23797
-msgid "IfcSectionModulusMeasure"
-msgstr "IfcSectionModulusMeasure"
-
-msgid "IfcSectionModulusMeasure_DEFINITION"
-msgstr "[[IfcSectionModulusMeasure]] 是衡量交叉路段抵制弯曲或旋转时间的尺度。 它通常以m 3度量。在 IFC2x2 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23801
-msgid "IfcShearModulusMeasure"
-msgstr "IfcShearModulusMeasure"
-
-msgid "IfcShearModulusMeasure_DEFINITION"
-msgstr "[[IfcShearModulusMeasure]] 是衡量板材模块的尺寸。通常用N m2来测量。在 IFC2x中输入REAL HISTORY 新型。"
-
-#:IFC.xml:23805
-msgid "IfcSolidAngleMeasure"
-msgstr "IfcSolidAngleMeasure"
-
-msgid "IfcSolidAngleMeasure_DEFINITION"
-msgstr "一个 [[IfcSolidAngleMeasure]] 是固体中一个角度的值。通常在 Steradians, sr, m2 m2 . 类型REAL NotE Type modified from solid 角度测量值在 ISO 10303 41. IOC1.5.1 中定义的HISTORY 新类型。"
-
-#:IFC.xml:23809
-msgid "IfcSoundPowerLevelMeasure"
-msgstr "IfcSoundPowerLevel度措施"
-
-msgid "IfcSoundPowerLevelMeasure_DEFINITION"
-msgstr "一种可靠的功率度量是一种测量总辐射噪音的尺寸，其分形带的单位具有参考值为皮瓦特。 在 IFC4 中键入重命名为[[IfcSoundPowerMeasure]] 。"
-
-#:IFC.xml:23813
-msgid "IfcSoundPowerMeasure"
-msgstr "IfcSoundPowerMeasure"
-
-msgid "IfcSoundPowerMeasure_DEFINITION"
-msgstr "声音功率测量仪是测量每次单位辐射总噪音，单位为瓦声能量。 在 IFC2x2 中键入REAL HISTORY 新型，更改在 IFC4 中。另见[[IfcSoundPowerLevelMeasure]] 以便使用该设备的十进制设备。"
-
-#:IFC.xml:23817
-msgid "IfcSoundPressureLevelMeasure"
-msgstr "IfcSoundPressureLevel度措施"
-
-msgid "IfcSoundPressureLevelMeasure_DEFINITION"
-msgstr "一种可靠的压力水平测量值是衡量超越环境压力水平的压力波动的尺度，用具有微量粘贴参考值的十倍带单位。 在 IFC4 中键入重命名为[[IfcSoundPressureMeasure]] 。"
-
-#:IFC.xml:23821
-msgid "IfcSoundPressureMeasure"
-msgstr "IfcSoundPressureMeasure"
-
-msgid "IfcSoundPressureMeasure_DEFINITION"
-msgstr "一种可靠的压力计量，是用动画单位衡量超越环境压力水平的压力波动。 在 IFC2x2 中键入REAL HISTORY 新型，更改在 IFC4 中。 使用设备分贝即参考值的相对值，请同时查看 [[IfcSoundPressureLevelMeasure]] 。"
-
-#:IFC.xml:23825
-msgid "IfcSpecificHeatCapacityMeasure"
-msgstr "IfcSpecific HeatCapacityMeasure"
-
-msgid "IfcSpecificHeatCapacityMeasure_DEFINITION"
-msgstr "[[IfcSpecificHeatCapacityMeasure]] 界定材料的特定热量 每个温度单位吸收的热能。 通常以J kg Kelvin来测量。在IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23829
-msgid "IfcTemperatureGradientMeasure"
-msgstr "IfcTemperatureGradientMeasure"
-
-msgid "IfcTemperatureGradientMeasure_DEFINITION"
-msgstr "温度梯度测量每个长度的温度，例如在外部墙或其层中使用的温度差值。 通常用Km测量。在 IFC2x2 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23833
-msgid "IfcTemperatureRateOfChangeMeasure"
-msgstr "IfcTemperatureRateOfChangeMeasure"
-
-msgid "IfcTemperatureRateOfChangeMeasure_DEFINITION"
-msgstr "温度变化率是指每次温度正上升的差值为负下降，例如用于热传感器。 例如，它是以K s Kelvin /秒为单位测量的。在IFC4中类型REAL HISTORY 新型。"
-
-#:IFC.xml:23837
-msgid "IfcText"
-msgstr "IfcText"
-
-msgid "IfcText_DEFINITION"
-msgstr "一个 [[IfcText]] 是一个字母数字字符串，用于一个人阅读和理解。 它仅供参考。请输入从ISO 10303 41中定义的文本改编的STRING 注解类型。 IFC2x中的新类型。注意可能出现在ISO 10303定义的交换结构中的字符集。 其中1项以ISO 10646提供。 在基于文件的交换中，字符的编码定义为ISO 10303 21和ISO 10303 28。 其中，这些规格定义了来自ISO 8859 1的8位字符的编码... ISO10646中的16个字符，2个字节和4个字节Unicode 字符。 注意到虽然[[IfcText]] 没有正式限制长度， 在编码和逃避后，符合要求的交换文件在 ISO 10303 21 中的字符串大小必须不超过32767 之八。"
-
-#:IFC.xml:23841
-msgid "IfcThermalAdmittanceMeasure"
-msgstr "IfcThermalAdmittanceMeasure"
-
-msgid "IfcThermalAdmittanceMeasure_DEFINITION"
-msgstr "[[IfcThermalAdmittanceMeasure]] 是衡量表面平滑温度变化能力的尺度。 通常以Wattm2 Kelvin测量。在 IFC2.0 中类型REAL HISTORY 新型。"
-
-#:IFC.xml:23845
-msgid "IfcThermalConductivityMeasure"
-msgstr "IfcThermalConductivityMeasure"
-
-msgid "IfcThermalConductivityMeasure_DEFINITION"
-msgstr "[[IfcThermalConductivityMeasure]] 是一种热导管度量。通常在Wattm Kelvin进行测量。在 IFC2x中类型是REAL HISTORY 新类型。"
-
-#:IFC.xml:23849
-msgid "IfcThermalExpansionCoefficientMeasure"
-msgstr "IfcThermalExpassionCofficientMeasure"
-
-msgid "IfcThermalExpansionCoefficientMeasure_DEFINITION"
-msgstr "IfcThermalExpasionCoeffientMeasure 是一种物质热扩展系数的一种尺度，该系数表示其延伸作为每个温差的一个比率。 温度每个正升都以正数表示出正数值。 在 IFC2x2 中键入 REAL HISTORY 新类型。"
-
-#:IFC.xml:23853
-msgid "IfcThermalResistanceMeasure"
-msgstr "IfcTherResistance措施"
-
-msgid "IfcThermalResistanceMeasure_DEFINITION"
-msgstr "[[IfcThermalResistanceMeasure]] 是一种体对能源流动的抗拒。 通常以m2 Kelvin Watt. HISTORY New Types in IFC2.0来衡量。"
-
-#:IFC.xml:23857
-msgid "IfcThermalTransmittanceMeasure"
-msgstr "IfcThermalTransmittanceMeasure"
-
-msgid "IfcThermalTransmittanceMeasure_DEFINITION"
-msgstr "[[IfcThermalTransmittanceMeasure]] 是衡量能量通过身体传播速度的一种尺度。 通常以Watts m2 Kelvin测量。在 IFC2.0 中类型REAL HISTORY 新型。"
-
-#:IFC.xml:23861
-msgid "IfcThermodynamicTemperatureMeasure"
-msgstr "IfcThermodynamicTemperatureMeasure"
-
-msgid "IfcThermodynamicTemperatureMeasure_DEFINITION"
-msgstr "国际标准化组织CD 10303 41 1992年的定义 热动力气温度测量是物体热度的值。 通常以Kelvin K度来衡量。 对于ISO 10303名称热动力温度测量值，请参阅ISO IS 10303 41，以了解正式标准的最后定义。 IFC1.5.1中的HISTORY 新类型。"
-
-#:IFC.xml:23865
-msgid "IfcTimeMeasure"
-msgstr "IfcTimeMeasure"
-
-msgid "IfcTimeMeasure_DEFINITION"
-msgstr "一个 [[IfcTimeMeasure]] 是时间长度的值，以秒或天数或其他时间单位计算。 Type REAL Note Type modified from time measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23869
-msgid "IfcTorqueMeasure"
-msgstr "IfcTorqueMeasure"
-
-msgid "IfcTorqueMeasure_DEFINITION"
-msgstr "[[IfcTorqueMeasure]] 是衡量夫妻曲线或时刻的尺度。 通常测量为 N 米。在IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23873
-msgid "IfcVaporPermeabilityMeasure"
-msgstr "IfcVaporPermeabilityMeasure"
-
-msgid "IfcVaporPermeabilityMeasure_DEFINITION"
-msgstr "[[IfcVaporPermeabilityMeasure]] 是一种蒸汽渗透性度量。通常以kg s s m Pascal来测量。在 IFC2x中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23877
-msgid "IfcVolumeMeasure"
-msgstr "IfcVolumeMeasure"
-
-msgid "IfcVolumeMeasure_DEFINITION"
-msgstr "一个 [[IfcVolumeMeasure]] 是物体固态含量的值。通常以立方米立方米来衡量。 类型REAL NotE Type modified from volume measure defined in ISO 10303 41. HISTORY New Type in IFC1.5.1"
-
-#:IFC.xml:23881
-msgid "IfcVolumetricFlowRateMeasure"
-msgstr "IfcVolumeectricFlowRateMeasure"
-
-msgid "IfcVolumetricFlowRateMeasure_DEFINITION"
-msgstr "[[IfcVolumetricFlowRateMeasure]] 是衡量单位时间中间流量的一个尺寸。 通常以m3s为单位。在 IFC2.0 中键入REAL HISTORY 新型。"
-
-#:IFC.xml:23885
-msgid "IfcWarpingConstantMeasure"
-msgstr "IfcWarpingConstantmeasure"
-
-msgid "IfcWarpingConstantMeasure_DEFINITION"
-msgstr "[[IfcWarpingConstantMeasure]] 是用于在种子加载下穿越段的反抗性的计量。 它通常以m6度量，在IFC2x2中类型REAL HISTORY 新型。"
-
-#:IFC.xml:23889
-msgid "IfcWarpingMomentMeasure"
-msgstr "IfcWarpingMomentMeasure"
-
-msgid "IfcWarpingMomentMeasure_DEFINITION"
-msgstr "弹着时间措施是对战时时刻的一种衡量尺度，这是在对酷刑的分析中发生的。 通常以kN m 2度测量。在IFC2x2中键入REAL HISTORY 新型。"
+msgid "WarpingConstant_DEFINITION"
+msgstr "旋转状态动作的轮廓常量。例如，以mm6为单位测量。"
 
