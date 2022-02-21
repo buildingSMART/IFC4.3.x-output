@@ -9,586 +9,319 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
-"X-Crowdin-File-ID: 98\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
-"PO-Revision-Date: 2022-02-21 19:48\n"
+"PO-Revision-Date: 2022-02-21 19:47\n"
 
-#:IFC.xml:48656
-msgid "IfcBoundaryCondition"
-msgstr "IfcBoundaryCondition"
+#:IFC.xml:49041
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBoundaryCondition_DEFINITION"
-msgstr "The abstract entity [[IfcBoundaryCondition]] is the supertype of all boundary conditions that can be applied to structural connection definitions, either directly for the connection e.g. the joint or for the relation between a structural member and the connection. NOTE The boundary conditions are used within other parts, mainly by instances of [[IfcStructuralConnection]] for the definition of supports and instances of [[IfcRelConnectsStructuralMember]] for the definition of connections between structural members and structural connections . HISTORY New entity in IFC2x2."
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
 
-#:IFC.xml:48657
-msgid "IfcBoundaryCondition_Name"
-msgstr "名前"
+#:IFC.xml:49044
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBoundaryCondition_Name_DEFINITION"
-msgstr "必要に応じてこの境界条件の名前を定義します。"
+#:IFC.xml:49052
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-#:IFC.xml:48663
-msgid "IfcBoundaryEdgeCondition"
-msgstr "IfcBoundaryEdgeCondition"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
 
-msgid "IfcBoundaryEdgeCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。 適用曲線はサポートと接続を示します。 HISTORY IFC2x2の新しいエンティティ。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
+#:IFC.xml:49057
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-#:IFC.xml:48664
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
-msgstr "RotationalStiffnessByLengthX"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 接続された面セットは、面の境界エッジと頂点が接続されているような面セットです。 注記エンティティは、ISO 10303に定義されている接続面セットから適応されています 42. HISTORY IFC1.0 の新しいエンティティ。 ペックヘッド 非公式な提案 1 顔とその境界ループの領域の結合は、アークワイズ接続されなければならない。"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 軸についての回転剛性値。"
+#:IFC.xml:49060
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-#:IFC.xml:48669
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
-msgstr "RotationalStiffnessByLengthY"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "共通エッジまたは頂点に沿って接続された円弧方向の面セット。"
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 軸についての回転剛性値。"
+#:IFC.xml:49072
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-#:IFC.xml:48674
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
-msgstr "RotationalStiffnessByLengthZ"
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 軸についての回転剛性値。"
+#:IFC.xml:49075
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-#:IFC.xml:48679
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
-msgstr "TranslationalStiffnessByLengthX"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "端の開始点の頂点。"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
+#:IFC.xml:49087
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-#:IFC.xml:48684
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
-msgstr "TranslationalStiffnessByLengthY"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "エッジの終点頂点。同じ頂点は、EdgeStartとEdgeEndの両方に使用できます。"
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
+#:IFC.xml:49123
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgeCurve"
 
-#:IFC.xml:48689
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
-msgstr "TranslationalStiffnessByLengthZ"
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
+#:IFC.xml:12165
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "EdgeGeometry"
 
-#:IFC.xml:48696
-msgid "IfcBoundaryFaceCondition"
-msgstr "IfcBoundaryFaceCondition"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "エッジの形状と空間位置を定義する曲線。 この曲線は境界がなく、エッジドメインを定義するエッジの頂点によって暗黙的にトリミングされます。 複数のエッジが同じ曲線を参照できます。"
 
-msgid "IfcBoundaryFaceCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。適用性 表面サポートと接続。HISTORY IFC2x2に新しいエンティティ。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
+#:IFC.xml:49124
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:48697
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
-msgstr "TranslationalStiffnessByAreaX"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "この論理フラグは、TRUE を、エッジジオメトリを定義する曲線とエッジの感覚が同じかどうかを示します。 エッジの感覚は、エッジ開始頂点からエッジ終点までであり、カーブの感覚はパラメータを増やす方向にあります。"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
+#:IFC.xml:49132
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-#:IFC.xml:48702
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
-msgstr "TranslationalStiffnessByAreaY"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
+#:IFC.xml:49140
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "EdgeList"
 
-#:IFC.xml:48707
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
-msgstr "TranslationalStiffnessByAreaZ"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "このパスを形成するために連結される指向エッジエンティティのリスト。"
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
+#:IFC.xml:49133
+msgid "IfcEdgeLoop_Ne"
+msgstr "該当なし"
 
-#:IFC.xml:48714
-msgid "IfcBoundaryNodeCondition"
-msgstr "IfcBoundaryNodeCondition"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "エッジリスト内の要素数。"
 
-msgid "IfcBoundaryNodeCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。適用ポイントはサポートと接続です。HISTORY IFC2x2の新しいエンティティです。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
+#:IFC.xml:49152
+msgid "IfcFace"
+msgstr "IfcFace"
 
-#:IFC.xml:48715
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
-msgstr "RotationalStiffnessX"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 軸についての回転剛性値。"
+#:IFC.xml:27097
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:48720
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
-msgstr "RotationalStiffnessY"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 軸についての回転剛性値。"
+#:IFC.xml:49155
+msgid "IfcFace_Bounds"
+msgstr "バウンド数"
 
-#:IFC.xml:48725
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
-msgstr "RotationalStiffnessZ"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "顔の境界。"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 軸についての回転剛性値。"
+#:IFC.xml:49167
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-#:IFC.xml:48730
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
-msgstr "TranslationalStiffnessX"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 フェースバインドは、面をバウンディングするために使用されるループです。 注記エンティティは、ISO 10303で定義されている面から適応されています 42. HISTORYIFC1.0 の新しいエンティティ"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
+#:IFC.xml:49175
+msgid "IfcFaceBound_Bound"
+msgstr "バインドされています"
 
-#:IFC.xml:48735
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
-msgstr "TranslationalStiffnessY"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "面境界として使用されるループ。"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
+#:IFC.xml:49168
+msgid "IfcFaceBound_Orientation"
+msgstr "方向"
 
-#:IFC.xml:48740
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
-msgstr "TranslationalStiffnessZ"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "これは、「TRUE」か「FALSE」かを示しています。ループが最初に定義された場合と同じ意味を持ちます。 sense が FALSE の場合、コンポーネント指向のすべてのエッジのセンサーは顔に使用されると暗黙的に反転されます。"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
+#:IFC.xml:49187
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-#:IFC.xml:48747
-msgid "IfcBoundaryNodeConditionWarping"
-msgstr "IfcBoundaryNodeConditionWarping"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 面外側バインドは、顔に外側の境界を定義するための追加の意味を持つバインドされた特殊なサブタイプです。 このタイプの顔の境界線は複数ありません。 注記エンティティは、ISO 10303で定義された面外側から適応されています 42. HISTORY IFC1.0 の新しいエンティティ"
 
-msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
-msgstr "線形弾性支持条件または直線弾性歪み抑制を含む接続条件について説明します。 履歴 IFC2x2の新しいエンティティ .change ifc2x4 IFC4 変更点 全ての属性データ型がブール値と数値の間で数値から SELECT に変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
+#:IFC.xml:49190
+msgid "IfcFaceSurface"
+msgstr "IfcFaceSurface"
 
-#:IFC.xml:48748
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
-msgstr "WarpingStiffness"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "[[IfcFaceSurface]] では、表面に関連する表面の基礎となる形状を定義します。 注 トポロジは、サーフェスのジオメトリをトリミングするために使用されます。 トポロジーに合わせて表面を幾何学的にトリミングする必要はありません。 xtDef NOTE ISO CD 10303による定義 42 1992 面面は、ジオメトリが関連するサーフェスによって定義されるサブタイプの面です。 顔によって使用される表面の部分は、おそらく穴のあるオープンディスクとして平面に埋め込むことができます。 ただし、境界ループの端と頂点を持つ面の組合せは平面に埋め込む必要はありません。 それは、例えば、球体やトーラス全体をカバーすることができます。 面と幾何学面の両方が正常な方向を定義しているように、 BOOLEAN フラグは、サーフェスの通常が TRUE と一致するか、またはフェイスの通常方向を FALSE することに反対することを示すために使用されます。 顔のループのいずれかのコンポーネントに関連付けられた形状は、表面形状と一致する必要があります。 すべての頂点点とエッジ曲線の領域が面形状面に含まれているという意味です 複数の面サーフェスでサーフェスを参照することができます。 注意 ISO 10303に定義された顔面から適応したエンティティ 42. 履歴 IFC2x .spec ヘッド 非公式の提案 1. フェイスサーフェスのドメインは、ループによってトリミングされると、フェイスジオメトリのドメインとして正式に定義されます。 このドメインには境界ループは含まれていません 2. 面は有限範囲がゼロでない 3. 面はマニホールドであり 4. 面はアークワイズで接続されている。 5. フェイス表面には表面属性がある 6. ループはフェイスドメインの一部ではありません。 7. ループ幾何学は面幾何学と一致します。 これは、面表面を境界するループを定義する際に使用されるエッジ曲線または頂点点が面形状上にあることを意味します。 8 顔の輪は交差してはならない。"
 
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
-msgstr "ワーピング剛性値を定義します。"
+#:IFC.xml:13193
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "FaceSurf"
 
-#:IFC.xml:48755
-msgid "IfcFailureConnectionCondition"
-msgstr "IfcFailureConnectionCondition"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "面の内部形状を定義するサーフェス。このサーフェスはバインドされていない可能性があります。 面のドメインは、このサーフェスと継承された SELF FaceBounds 属性の境界ループによって定義されます。"
 
-msgid "IfcFailureConnectionCondition_DEFINITION"
-msgstr "サポートまたは接続に失敗する力を定義します。適用ポイントはサポートおよび接続をサポートします。HISTORY IFC2x2の新しいエンティティ。"
+#:IFC.xml:49191
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:48756
-msgid "IfcFailureConnectionCondition_CompressionFailureX"
-msgstr "圧縮失敗X"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "このフラグは、正常な表面の感覚が TRUE と一致するかどうかを示します。 または、顔に対するトポロジカル正常の感覚「FALSE」に対抗します。"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
-msgstr "接続に失敗するX方向の圧縮力。"
+#:IFC.xml:49199
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-#:IFC.xml:48761
-msgid "IfcFailureConnectionCondition_CompressionFailureY"
-msgstr "圧縮失敗"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 ループは単一の頂点から構築されたトポロジカル実体です。 接続された方向のエッジまたは線形のセグメントを同じ頂点で始まったり終わったりすることです 通常、表面に横たわって顔を結合するために使用されます。 ループは 0 または 1 の次元を持ちます。0 次元ループの領域は 1 つの点です。 1次元ループの領域は、接続された方向曲線ですが、マニホールドである必要はありません。 ループが円であるため、始点の位置は任意です。 ループのドメインには、0 <unk> が含まれます。 ループは単一の頂点、または指向エッジの順序付きコレクション、または点の順序付きコレクションで表されます。 ループはグラフであるため、MとGのグラフ属性はグラフトラバーサルアルゴリズムによって決まります。 M 1以来、オイラー方程式1は、この場合にはイメージに.. .. .. .. ..の図ifcloop数学1。 V と E l が一意の頂点の数であり、ループ内の方向のエッジの数であり、G l がループの属である場合。 注 ISO 10303 42 で定義されているループから適応されたエンティティ。 歴史 IFC2xの新しいエンティティ。.spec head 非公式提案 1. ループには有限範囲があります。 2. ループは、一致する開始点と終了点を持つ閉じたトポロジカル曲線を記述します。"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
-msgstr "接続の失敗につながるy 方向の圧縮力。"
+#:IFC.xml:49202
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadTail ALoop"
 
-#:IFC.xml:48766
-msgid "IfcFailureConnectionCondition_CompressionFailureZ"
-msgstr "CompressionFailureZ"
+#:IFC.xml:49210
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
-msgstr "接続に失敗するz方向の圧縮力。"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303による定義 42 1992 オープンシェルは寸法のシェルである 2. そのドメインが存在する場合、有限であり、接続されていて、指向性があり、境界を持つ2多様体であるが、閉じた表面ではない。 1つ以上の穴を開けた閉じた殻と考えられる。 オープンシェルのドメインは 0 <unk> 1 を満たします。 オープンシェルは、ドメインがハンドルを持つことができるため、顔よりも機能的に一般的です。 シェルは、指向性のある面の集合によって定義されます。 指向を考慮した後、各顔の感覚は、以下に定義されたように通常のシェルと一致しなければならない。 オリエンテーションは、指向面の BOOLEAN 属性として直接提供できます。 またはシェルメンバーが orientation 属性を持たない面の場合は TRUE をデフォルトにしてください。 オープンシェルに対する以下の組み合わせ制約と、ドメインに対する幾何学的制約が設計されています。 非公式の提案と共にオープンシェルに関連するあらゆる領域が 指向性多様体であることを保証するために 各フェイスの参照は一意でなければなりません。開いたシェルは少なくとも1つの面を持つものとします。 特定の顔は複数の開いた殻に存在する可能性があります。 開いているシェルの境界は、その面の面境界ループによって一度だけ参照されるエッジで構成されます。 全ての頂点と一緒になっています オープンシェルのドメインが存在する場合、面のすべてのエッジと頂点が含まれます。 注 これは、その限界のどれも含まれていないフェイスドメインの定義とは若干異なることに注意してください。 例えば、フェイスドメインは、絶縁された点またはラインセグメントを除外することができます。オープンなシェルドメインはそうでない可能性があります。以下の計算のためのアルゴリズムを参照してください。 注記エンティティは、ISO 10303 42で定義された開いているシェルから適応されています。 HISTORYIFC2x.spec ヘッド 非公式提案 1. すべてのエッジは、顔の顔の境界によって正確に2回参照されなければなりません。 各指向エッジは一意でなければならない 3. エッジは2つ以上の面で参照してはならない。 4. シェルの個別面は交差しませんが、エッジや頂点を共有することがあります。 5. エッジは交差しませんが頂点を共有することができます 6. 7. シェルのループはポリループとその他のループタイプの混合物ではない。 ポリループのみが面結合定義として定義されるため、これが与えられることに注意してください。 閉じたシェルは、2マニホールドに接続されたアークワイズアークワイズでなければなりません。"
 
-#:IFC.xml:48771
-msgid "IfcFailureConnectionCondition_TensionFailureX"
-msgstr "TensionFailureX"
+#:IFC.xml:49214
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
-msgstr "接続の障害につながるx方向の緊張力。"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
 
-#:IFC.xml:48776
-msgid "IfcFailureConnectionCondition_TensionFailureY"
-msgstr "TensionFailureY"
+#:IFC.xml:49099
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "EdgeElement"
 
-msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
-msgstr "接続の失敗につながるy方向の緊張力。"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "この指向エッジを構築するために使用されるエッジエンティティ。"
 
-#:IFC.xml:48781
-msgid "IfcFailureConnectionCondition_TensionFailureZ"
-msgstr "TensionFailureZ"
+#:IFC.xml:49215
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdge EdgeEnd"
 
-msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
-msgstr "接続の失敗につながるz方向の緊張力。"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:48788
-msgid "IfcModulusOfRotationalSubgradeReactionSelect"
-msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
+#:IFC.xml:49219
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdge EdgeStart"
 
-#:IFC.xml:48789
-msgid "IfcModulusOfSubgradeReactionSelect"
-msgstr "IfcModulusOfSubgradeReactionSelect"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:48790
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
-msgstr "IfcModulusOfTranslationalSubgradeReactionSelect"
+#:IFC.xml:49223
+msgid "IfcOrientedEdge_Orientation"
+msgstr "方向"
 
-#:IFC.xml:48791
-msgid "IfcRotationalStiffnessSelect"
-msgstr "IfcRotationalStiffnessSelect"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN (BOOLEAN) 使用されているトポロジカル方向が format@@0 の場合、エッジ要素の始点から終点までの方向と一致します。format@@1"
 
-#:IFC.xml:48792
-msgid "IfcSlippageConnectionCondition"
-msgstr "IfcSlippageConnectionConditionCondition"
+#:IFC.xml:49242
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcSlippageConnectionCondition_DEFINITION"
-msgstr "サポート条件または接続条件での滑りを説明します。 Slippage は、サポートまたは接続反応が起きる前に相対的な変位がサポートまたは接続で発生する可能性があることを意味します。 適用 ポイントのサポートと接続、曲線のサポートと接続、サーフェスのサポートと接続。 HISTORY IFC2x2に新しいエンティティ。"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 パスは、指向エッジの順序付けられたコレクションからなるトポロジカルエンティティです。 それぞれのエッジの始点が前のエッジの終点と一致するようにします パスは、最初の方向のエッジの始点から最後のエッジの終点まで順序付けられます。 指向エッジの BOOLEAN 値センスは、エッジ方向がパスの TRUE の方向と一致するか、または FALSE の逆方向であるかを示します。 個々のエッジは、個々のパスによって一度だけ参照することができます エッジは、複数のパスによって参照することができます。 エッジは、パスとは独立して存在することができます。ISO 10303 42 で定義されているパスから適応された注記エンティティ。 歴史 IFC2.0の新しいエンティティ .spec head 非公式命題1. パスに寸法性がある 1. パスはアークワイズ接続されている。 3. パスのエッジは、共通の頂点を除いて交差しません。 4. パスは有限でゼロではありません。"
 
-#:IFC.xml:48793
-msgid "IfcSlippageConnectionCondition_SlippageX"
-msgstr "SlippageX"
+#:IFC.xml:49230
+msgid "IfcPath_EdgeList"
+msgstr "EdgeList"
 
-msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向にスライドします。"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "このパスを形成するために連結された指向エッジのリスト。"
 
-#:IFC.xml:48798
-msgid "IfcSlippageConnectionCondition_SlippageY"
-msgstr "SlippageY"
+#:IFC.xml:49245
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadTail APath"
 
-msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 方向に滑らかになります。"
+#:IFC.xml:49253
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-#:IFC.xml:48803
-msgid "IfcSlippageConnectionCondition_SlippageZ"
-msgstr "SlippageZ"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
 
-msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 方向にスライドします。"
+#:IFC.xml:11782
+msgid "IfcPolyLoop_Polygon"
+msgstr "多角形（多角形）"
 
-#:IFC.xml:48810
-msgid "IfcStructuralConnectionCondition"
-msgstr "IfcStructuralConnectionCondition"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "ループを定義する点のリスト リストには繰り返される点はありません。"
 
-msgid "IfcStructuralConnectionCondition_DEFINITION"
-msgstr "接続プロパティを必要とすることはまれです。 HISTORY IFC2x2の新しいエンティティを記述します。"
+#:IFC.xml:49256
+msgid "IfcShell"
+msgstr "IfcShell"
 
-#:IFC.xml:48811
-msgid "IfcStructuralConnectionCondition_Name"
-msgstr "名前"
+#:IFC.xml:49257
+msgid "IfcSubedge"
+msgstr "IFcSubedge"
 
-msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
-msgstr "必要に応じてこの接続条件の名前を定義します。"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 サブエッジは、既存のエッジのドメインの接続部分であるエッジです。 サブエッジ上のトポロジカル制約は、エッジ上のトポロジカル制約と同じです。 注 ISO 10303 42に定義されているサブエッジから適応したエンティティ HISTORY IFC2x2の新しいエンティティ。 ペックヘッド 非公式な提案 1. サブエッジのドメインは、親エッジのドメインとして正式に定義されます。 で指定します。 2 開始頂点と終了頂点は、親エッジの頂点の領域と親エッジの領域の結合の範囲内でなければならない ."
 
-#:IFC.xml:48817
-msgid "IfcStructuralLoad"
-msgstr "IfcStructuralLoad"
+#:IFC.xml:49111
+msgid "IfcSubedge_ParentEdge"
+msgstr "ParentEdge"
 
-msgid "IfcStructuralLoad_DEFINITION"
-msgstr "この抽象エンティティは、構造解析によって生じるすべての負荷動作または反応または特定の要件のスーパータイプです。 構造解析に影響を与える特定の規定です 歴史 IFC2x2に新しいエンティティが追加されました。"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "エッジ、またはサブエッジを含むサブエッジ。"
 
-#:IFC.xml:48818
-msgid "IfcStructuralLoad_Name"
-msgstr "名前"
+#:IFC.xml:49260
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcStructuralLoad_Name_DEFINITION"
-msgstr "必要に応じてこのロードの名前を定義します。"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 トポロジ表示アイテムはジオメトリリソース内のすべてのトポロジ表示アイテムのスーパータイプです。 注記エンティティは ISO 10303 42に定義されているトポロジカル表現アイテムから適応されています。"
 
-#:IFC.xml:48824
-msgid "IfcStructuralLoadConfiguration"
-msgstr "IfcStructuralLoadConfiguration"
+#:IFC.xml:49263
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcStructuralLoadConfiguration_DEFINITION"
-msgstr "このクラスは、1 つまたは複数の負荷または結果の値を 1 または 2 次元構成で組み合わせます。 歴史 IFCにおける新しいエンティティ 4..spec head 非公式提案 1. 値の項目はすべて同じタイプでなければなりません。 2 曲線活動を構成する負荷または結果が曲線活動を構成する場合、1次元の位置が曲線に沿って局所的に測定されます。 位置は、曲線の曲線の範囲を超えてはなりません。 荷重サンプルおよび対応する場所は、位置の昇順に与えられます。 荷重または結果が表面活動を構成する場合は、2次元の位置を与えること。 局所的なX方向とY方向で測定されました 場所は、表面活動の境界を超えてはなりません。 ご注意 2次元ケースには注文要件はありませんが、1次元ケースは空間的に簡素化するために注文しなければなりません。"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点に対応するトポロジカル構造です。 それは次元0と次元0を持っています。 頂点の領域が存在する場合、m寸法実空間R Mの点であり、頂点のサブタイプによって表されます。 注記エンティティは、ISO 10303に定義されている頂点から適応しました 42. 履歴 IFC2.0の新しいエンティティ .spec ヘッド 非公式の提案 1. 頂点は次元性0を持っています. これは頂点の基本的な特性です. 2. 頂点の範囲はゼロであると定義されています."
 
-#:IFC.xml:48832
-msgid "IfcStructuralLoadConfiguration_Values"
-msgstr "値"
+#:IFC.xml:49278
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
-msgstr "負荷または結果の値のリストです。"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点ループは、1 つの頂点からなるゼロ属のループです。 頂点は頂点ループとは独立して存在することができます. トポロジデータは、次の制約画像を満たすものとします.. .. ifcvertexloop math1.gif NOTE ISO 10303で定義された頂点ループから適応した実体。HISTORY IFC2x2に新しい実体。 .spec ヘッド 非公式の提案 1. 頂点ループは、0の範囲と次元を持ちます。2. 頂点ループは属性0を持ちます。"
 
-#:IFC.xml:48825
-msgid "IfcStructuralLoadConfiguration_Locations"
-msgstr "場所"
+#:IFC.xml:49266
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義されたローカル座標系内で与えられた、ロードサンプルまたは結果サンプルの場所。 ロケーションのリスト内の各アイテムは、同じリストインデックスの値リストアイテムに関連付けられます。 この属性は、より高いレベルの定義から暗黙的にロケーションが知られる設定ではオプションです。"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "ループ全体を定義する頂点。"
 
-#:IFC.xml:48844
-msgid "IfcStructuralLoadLinearForce"
-msgstr "IfcStructuralLoadLinearForce"
+#:IFC.xml:49281
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcStructuralLoadLinearForce_DEFINITION"
-msgstr "エンティティ [[IfcStructuralLoadLinearForce]] のインスタンスは、曲線上のアクションを定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点として定義されているジオメトリを持つ頂点です。 注記エンティティは、ISO 10303 42 で定義されている頂点から適応しています。 歴史 IFC2x.spec ヘッド 非公式提案 1. 頂点の領域は正式に頂点の領域として定義されます。"
 
-#:IFC.xml:48845
-msgid "IfcStructuralLoadLinearForce_LinearForceX"
-msgstr "LinearForceX"
+#:IFC.xml:12753
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "頂点ジオメトリー"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
-msgstr "x 方向の線形力の値。"
-
-#:IFC.xml:48850
-msgid "IfcStructuralLoadLinearForce_LinearForceY"
-msgstr "LinearForceY"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
-msgstr "Y方向の線形力の値。"
-
-#:IFC.xml:48855
-msgid "IfcStructuralLoadLinearForce_LinearForceZ"
-msgstr "LinearForceZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
-msgstr "z 方向に線形力の値を設定します。"
-
-#:IFC.xml:48860
-msgid "IfcStructuralLoadLinearForce_LinearMomentX"
-msgstr "LinearMomentX"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
-msgstr "x軸についての線形モーメント。"
-
-#:IFC.xml:48865
-msgid "IfcStructuralLoadLinearForce_LinearMomentY"
-msgstr "LinearMomentY"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
-msgstr "y 軸についての線形モーメント。"
-
-#:IFC.xml:48870
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
-msgstr "LinearMomentZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
-msgstr "Z軸についての線形モーメント。"
-
-#:IFC.xml:48877
-msgid "IfcStructuralLoadOrResult"
-msgstr "IfcStructuralLoadOrResult"
-
-msgid "IfcStructuralLoadOrResult_DEFINITION"
-msgstr "簡単なロードクラスまたは結果クラスの抽象的なスーパークラス HISTORY IFC4の新しい抽象エンティティは、すべてのサブタイプの上方互換性が保持されます。"
-
-#:IFC.xml:48880
-msgid "IfcStructuralLoadPlanarForce"
-msgstr "IfcStructuralLoadPlanarForce"
-
-msgid "IfcStructuralLoadPlanarForce_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadPlanarForce]]のインスタンスは、面上のアクションを定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48881
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
-msgstr "PlanarForceX"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
-msgstr "x 方向の平面力の値。"
-
-#:IFC.xml:48886
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
-msgstr "PlanarForceY"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
-msgstr "Y方向の平面力値。"
-
-#:IFC.xml:48891
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
-msgstr "PlanarForceZ"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
-msgstr "平面力を z 方向に値します。"
-
-#:IFC.xml:48898
-msgid "IfcStructuralLoadSingleDisplacement"
-msgstr "IfcStructuralLoadSingleDisplacement"
-
-msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadSingleDisplacement]]のインスタンスは変位を定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48899
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
-msgstr "変位X"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
-msgstr "x 方向への変位。"
-
-#:IFC.xml:48904
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
-msgstr "変位Y"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
-msgstr "Y方向への変位。"
-
-#:IFC.xml:48909
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
-msgstr "変位Z"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
-msgstr "z方向への変位。"
-
-#:IFC.xml:48914
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
-msgstr "RotationalDisplacementRX"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
-msgstr "X 軸の周りの回転。"
-
-#:IFC.xml:48919
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
-msgstr "RotationalDisplacementRY"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
-msgstr "y軸周りの回転"
-
-#:IFC.xml:48924
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
-msgstr "RotationalDisplacementRZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
-msgstr "z 軸周りの回転"
-
-#:IFC.xml:48931
-msgid "IfcStructuralLoadSingleDisplacementDistortion"
-msgstr "IfcStructuralLoadSingleDisplacementDistortion"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
-msgstr "反りを伴う変位を定義します。履歴 IFC2x2 に新しい実体が追加されました。"
-
-#:IFC.xml:48932
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
-msgstr "<unk>"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
-msgstr "歪み曲率ワーピング、すなわち変位負荷に与えられた断面のde<unk> 。"
-
-#:IFC.xml:48939
-msgid "IfcStructuralLoadSingleForce"
-msgstr "IfcStructuralLoadSingleForce"
-
-msgid "IfcStructuralLoadSingleForce_DEFINITION"
-msgstr "エンティティ [[IfcStructuralLoadSingleForce]] のインスタンスは、単一点で動作するアクションの力と瞬間を定義するために使用されます。 歴史 IFC2x2に新しいエンティティが追加されました。"
-
-#:IFC.xml:48940
-msgid "IfcStructuralLoadSingleForce_ForceX"
-msgstr "ForceX"
-
-msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
-msgstr "X 方向に値を強制します。"
-
-#:IFC.xml:48945
-msgid "IfcStructuralLoadSingleForce_ForceY"
-msgstr "強制的に"
-
-msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
-msgstr "Y 方向に値を強制します。"
-
-#:IFC.xml:48950
-msgid "IfcStructuralLoadSingleForce_ForceZ"
-msgstr "ForceZ"
-
-msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
-msgstr "Z方向の値を強制的に設定します。"
-
-#:IFC.xml:48955
-msgid "IfcStructuralLoadSingleForce_MomentX"
-msgstr "MomentX"
-
-msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
-msgstr "X軸についての瞬間。"
-
-#:IFC.xml:48960
-msgid "IfcStructuralLoadSingleForce_MomentY"
-msgstr "MomentY"
-
-msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
-msgstr "Y軸についての瞬間。"
-
-#:IFC.xml:48965
-msgid "IfcStructuralLoadSingleForce_MomentZ"
-msgstr "MomentZ"
-
-msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
-msgstr "Z軸についての瞬間。"
-
-#:IFC.xml:48972
-msgid "IfcStructuralLoadSingleForceWarping"
-msgstr "IfcStructuralLoadSingleForceWarping"
-
-msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
-msgstr "図形[[IfcStructuralLoadSingleForceWarping]] のサブタイプとして [[IfcStructuralLoadSingleForce]] のインスタンス 1つの点でアクション操作を定義するために使用されます。 そのスーパータイプによって定義された力とモーメントに加えて、ワープモーメントを定義することができます。 HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48973
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
-msgstr "WarpingMoment"
-
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
-msgstr "ポイントでの歪みの瞬間がロードされます。"
-
-#:IFC.xml:48980
-msgid "IfcStructuralLoadStatic"
-msgstr "IfcStructuralLoadStatic"
-
-msgid "IfcStructuralLoadStatic_DEFINITION"
-msgstr "抽象エンティティ[[IfcStructuralLoadStatic]]は、定義可能なすべての静的負荷動作または反応のスーパータイプです。 スコープ内には単一の力と瞬間、線形iがあります。 をクリックします。 1次元分布力と瞬間、平面力、すなわち2次元分布力、さらに変位および温度負荷。 HISTORYIFC2x2に新しい実体。"
-
-#:IFC.xml:48983
-msgid "IfcStructuralLoadTemperature"
-msgstr "IfcStructuralLoadTemperature"
-
-msgid "IfcStructuralLoadTemperature_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadTemperature]]のインスタンスは、温度変化によって引き起こされるアクションを定義するために使用されます。 図1に示すように。 温度の変化は一定の値で与えられます それは完全な断面に適用されます そして部分の外側の繊維間の温度差の値です 沿革 IFC2x2の新しいエンティティ .. .. .. .. 構造的負荷温度を数値化する 図1 構造的負荷温度"
-
-#:IFC.xml:48984
-msgid "IfcStructuralLoadTemperature_DeltaTConstant"
-msgstr "DeltaTConstant"
-
-msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
-msgstr "温度変化は、構造部分の完全な部分、または不均一な温度変化の均一な部分に影響を与えます。 注 正の値は温度の上昇を示しています。 すなわち、正の一定の温度変化はメンバーの伸びを引き起こすか、それぞれの拘束がある場合はメンバーの圧縮を引き起こす。"
-
-#:IFC.xml:48989
-msgid "IfcStructuralLoadTemperature_DeltaTY"
-msgstr "Deltaty"
-
-msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
-msgstr "非均一な温度変化 Y方向の外側の温度変化の差として規定されています 解析メンバーのY方向の外側の繊維の温度変化から 注意 y における正の不均一な温度変化は、zについてのメンバーの負の曲率を引き起こします それぞれの拘束がある場合はzについての肯定的な曲げの瞬間です yとzは地元のメンバーの斧だ"
-
-#:IFC.xml:48994
-msgid "IfcStructuralLoadTemperature_DeltaTZ"
-msgstr "DeltaTZ"
-
-msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
-msgstr "非均一な温度変化 z方向の外側繊維の温度変化の違いとして規定されています 解析メンバーのz方向の外側繊維の温度変化から 注意 zの正の不均一な温度変化はyについてのメンバーの正の曲率を引き起こします それぞれの拘束がある場合はYについての負の曲げモーメントです yとzは地元のメンバーの斧だ"
-
-#:IFC.xml:49001
-msgid "IfcSurfaceReinforcementArea"
-msgstr "IfcSurfaceReinforcementArea"
-
-msgid "IfcSurfaceReinforcementArea_DEFINITION"
-msgstr "表面メンバーの補強領域を要求または提供します。 注 コンクリートカバー、効果的な深さ、メッシュまたは2つのリバーの向き、オプションで3方向などのメンバー設計パラメータ。 は、IfcStructuralLoadResource スキーマに指定されていません。これらは構造メンバーのレベルで指定されるものとします。"
-
-#:IFC.xml:49002
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
-msgstr "ShearReforço"
-
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
-msgstr "せん断補強。面積あたりの領域として指定されています。例えば平方メートルあたりの平方メートル、したがって比率測定、すなわちユニットレス。"
-
-#:IFC.xml:49007
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
-msgstr "SurfaceReforcement1"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
-msgstr "表面メンバーの正のローカルZ方向の側に位置するメンバーの顔面における補強。 面積/長さとして指定される。e. を選択します。 メートルあたりの平方メートルの長さを測定します。 たとえばメートル 。補強範囲は補強棒の 2 つまたは 3 つの方向に指定することができます。"
-
-#:IFC.xml:49012
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
-msgstr "SurfaceReforcement2"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
-msgstr "表面メンバーの負のローカルZ方向の側に位置するメンバーの顔部での強化。 面積/長さとして指定される。e. を選択します。 メートルあたりの平方メートルの長さを測定します。 たとえばメートル 。補強範囲は補強棒の 2 つまたは 3 つの方向に指定することができます。"
-
-#:IFC.xml:49019
-msgid "IfcTranslationalStiffnessSelect"
-msgstr "IfcTranslationalStiffnessSelect"
-
-#:IFC.xml:49020
-msgid "IfcWarpingStiffnessSelect"
-msgstr "IfcWarpingStiffnessSelect"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "頂点の幾何学的空間の位置を定義する幾何学的点。"
 
