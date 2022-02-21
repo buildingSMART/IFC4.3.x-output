@@ -9,319 +9,1368 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcSharedFacilitiesElements.pot\n"
+"X-Crowdin-File-ID: 88\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-21 17:05\n"
 
-#:IFC.xml:49041
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:44392
+msgid "IfcAsset"
+msgstr "IfcAsset"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
+msgid "IfcAsset_DEFINITION"
+msgstr "An asset is a uniquely identifiable grouping of elements acting as a single entity that has a financial value or that can be operated on as a single unit. An asset is generally the level of granularity at which maintenance operations are undertaken. An asset is a group that can contain one or more elements. Whilst the financial value of a component or element can be defined, financial value is also defined for accounting purposes at the level of the asset. There are a number of actors that can be associated with an asset, each actor having a role. Actors within the scope of the project are indicated using the [[IfcRelAssignsToActor]] .. .. ifckernel lexical ifcrelassignstoactor.htm relationship in which case roles should be defined through the [[IfcActorRole]] .. .. ifcactorresource lexical ifcactorrole.htm class otherwise principal actors are identified as attributes of the class. In the existence of both, direct attributes take precedence. There are a number of costs that can be associated with an asset, each cost having a role. These are specified through the OriginalValue , CurrentValue , TotalReplacementCost and DepreciatedValue attributes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE All attributes made optional and date values changed to use [[IfcDate]] ."
 
-#:IFC.xml:49044
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:267
+msgid "IfcAsset_ResponsiblePerson"
+msgstr "ResponsiblePerson"
 
-#:IFC.xml:49052
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcAsset_ResponsiblePerson_DEFINITION"
+msgstr "資産の責任者。 注 いくつかの規制では、例えば、英国の労働安全衛生法、職場の電気規制 , 資産の管理は責任者として特定され、誰に規制されているか、保険および他の組織が連絡するかを特定されなければなりません。 法的要件がない場合、責任者は資産管理者になりますが、法的地位はありません。"
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:3355
+msgid "IfcAsset_OriginalValue"
+msgstr "OriginalValue"
 
-#:IFC.xml:49057
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+msgid "IfcAsset_OriginalValue_DEFINITION"
+msgstr "購入時の資産のコスト価値。"
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 接続された面セットは、面の境界エッジと頂点が接続されているような面セットです。 注記エンティティは、ISO 10303に定義されている接続面セットから適応されています 42. HISTORY IFC1.0 の新しいエンティティ。 ペックヘッド 非公式な提案 1 顔とその境界ループの領域の結合は、アークワイズ接続されなければならない。"
+#:IFC.xml:3367
+msgid "IfcAsset_CurrentValue"
+msgstr "CurrentValue"
 
-#:IFC.xml:49060
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+msgid "IfcAsset_CurrentValue_DEFINITION"
+msgstr "資産の現在のコスト値"
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "共通エッジまたは頂点に沿って接続された円弧方向の面セット。"
+#:IFC.xml:3379
+msgid "IfcAsset_TotalReplacementCost"
+msgstr "合計交換コスト"
 
-#:IFC.xml:49072
-msgid "IfcEdge"
-msgstr "IfcEdge"
+msgid "IfcAsset_TotalReplacementCost_DEFINITION"
+msgstr "資産の交換の総コスト。"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
+#:IFC.xml:3391
+msgid "IfcAsset_DepreciatedValue"
+msgstr "減価償却価値"
 
-#:IFC.xml:49075
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+msgid "IfcAsset_DepreciatedValue_DEFINITION"
+msgstr "組織の会計規則および手続き内の資産の現在の価値。"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "端の開始点の頂点。"
+#:IFC.xml:44393
+msgid "IfcAsset_Identification"
+msgstr "識別"
 
-#:IFC.xml:49087
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+msgid "IfcAsset_Identification_DEFINITION"
+msgstr "他の資産との差別化を可能にする資産に割り当てられた固有の識別子。注意 資産識別子は、資産レジスタ内で一意です。 データベースに追加するエンティティのインスタンスに割り当てられたグローバル一意の id とは異なります。"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "エッジの終点頂点。同じ頂点は、EdgeStartとEdgeEndの両方に使用できます。"
+#:IFC.xml:44398
+msgid "IfcAsset_IncorporationDate"
+msgstr "IncorporationDate"
 
-#:IFC.xml:49123
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+msgid "IfcAsset_IncorporationDate_DEFINITION"
+msgstr "資産が作品に組み込まれた日付、設置、建設、完成した日付。 注 これは、資産が減価償却を開始すると見なされる日付です。.history IFC4 変更タイプは IfcDateTimeSelect から変更されます。"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
+#:IFC.xml:44403
+msgid "IfcAsset_Owner"
+msgstr "所有者"
 
-#:IFC.xml:12197
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "EdgeGeometry"
+msgid "IfcAsset_Owner_DEFINITION"
+msgstr "資産を所有する個人または組織の名前。"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "エッジの形状と空間位置を定義する曲線。 この曲線は境界がなく、エッジドメインを定義するエッジの頂点によって暗黙的にトリミングされます。 複数のエッジが同じ曲線を参照できます。"
+#:IFC.xml:44408
+msgid "IfcAsset_User"
+msgstr "ユーザー"
 
-#:IFC.xml:49124
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+msgid "IfcAsset_User_DEFINITION"
+msgstr "アセットを使用する個人または組織の名前。"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "この論理フラグは、TRUE を、エッジジオメトリを定義する曲線とエッジの感覚が同じかどうかを示します。 エッジの感覚は、エッジ開始頂点からエッジ終点までであり、カーブの感覚はパラメータを増やす方向にあります。"
+#:IFC.xml:44415
+msgid "IfcFurniture"
+msgstr "IfcFurniture"
 
-#:IFC.xml:49132
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+msgid "IfcFurniture_DEFINITION"
+msgstr "家具は、建物構造に恒久的に取り付けることができるまたはできないテーブル、机、椅子、またはキャビネットなどの完全な家具を定義します。 プロパティPset FurnitureTypeCommonが構築されている家具の発生。 sBuiltIn は TRUE であるとアサートされ、[[IfcRelConnectsElements]] の関係で定義された建物要素の出現との接続関係を持つ必要があります。 歴史 IFC2x2に新しいエンティティが追加されました。"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
+#:IFC.xml:44416
+msgid "IfcFurniture_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:49140
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "EdgeList"
+msgid "IfcFurniture_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "このパスを形成するために連結される指向エッジエンティティのリスト。"
+#:IFC.xml:44423
+msgid "IfcFurnitureType"
+msgstr "IfcFurnitureType"
 
-#:IFC.xml:49133
-msgid "IfcEdgeLoop_Ne"
-msgstr "該当なし"
+msgid "IfcFurnitureType_DEFINITION"
+msgstr "The furnishing element type [[IfcFurnitureType]] defines commonly shared information for occurrences of furnitures. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a furniture type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFurnitureType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFurnitureType]] are represented by instances of [[IfcFurniture]] . Refer to the documentation at [[IfcFurniture]] for supported property sets, materials, and composition. HISTORY New entity in IFC2x2 .note"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "エッジリスト内の要素数。"
+#:IFC.xml:44424
+msgid "IfcFurnitureType_AssemblyPlace"
+msgstr "アセンブリ場所"
 
-#:IFC.xml:49152
-msgid "IfcFace"
-msgstr "IfcFace"
+msgid "IfcFurnitureType_AssemblyPlace_DEFINITION"
+msgstr "アセンブリが行われる予定の名称。列挙リストで提供されている代替案の選択。"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+#:IFC.xml:44429
+msgid "IfcFurnitureType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:27097
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+msgid "IfcFurnitureType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+#:IFC.xml:44436
+msgid "IfcFurnitureTypeEnum"
+msgstr "IfcFurnitureTypeEnum"
 
-#:IFC.xml:49155
-msgid "IfcFace_Bounds"
-msgstr "バウンド数"
+msgid "IfcFurnitureTypeEnum_DEFINITION"
+msgstr "[[IfcFurnitureTypeEnum]] は、必要な家具の種類を指定します。 歴史 IFCの新しい列挙4. アイテム 一人で座るための家具のCHAIR。 複数人用カウンター付きTABLE Furniture DESK家具と一人用のオプション引き出し。 寝るためのBED Furniture。 FILECABINET家具, ファイルを保存するためのスライド引き出し付き, 書籍などを保存するためのシェルフ家具 複数の人に座席のためのSOFA家具. TECHNICALCABINET 技術キャビネットは、通常棚、引き出しやラックに編成された技術家電製品を保持、表示し、保護するための家具の一部です。 USERDEFINED User defined type. NOTDEFINED Undefined type."
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "顔の境界。"
+#:IFC.xml:44458
+msgid "IfcFurnitureTypeEnum_BED"
+msgstr "ベッド:"
 
-#:IFC.xml:49167
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+msgid "IfcFurnitureTypeEnum_BED_DEFINITION"
+msgstr "睡眠のための家具。"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 フェースバインドは、面をバウンディングするために使用されるループです。 注記エンティティは、ISO 10303で定義されている面から適応されています 42. HISTORYIFC1.0 の新しいエンティティ"
+#:IFC.xml:44459
+msgid "IfcFurnitureTypeEnum_CHAIR"
+msgstr "チェア"
 
-#:IFC.xml:49175
-msgid "IfcFaceBound_Bound"
-msgstr "バインドされています"
+msgid "IfcFurnitureTypeEnum_CHAIR_DEFINITION"
+msgstr "一人用の家具。"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "面境界として使用されるループ。"
+#:IFC.xml:44460
+msgid "IfcFurnitureTypeEnum_DESK"
+msgstr "DESC"
 
-#:IFC.xml:49168
-msgid "IfcFaceBound_Orientation"
-msgstr "方向"
+msgid "IfcFurnitureTypeEnum_DESK_DEFINITION"
+msgstr "一人用のカウンタートップとオプションの引き出し付き家具。"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "これは、「TRUE」か「FALSE」かを示しています。ループが最初に定義された場合と同じ意味を持ちます。 sense が FALSE の場合、コンポーネント指向のすべてのエッジのセンサーは顔に使用されると暗黙的に反転されます。"
+#:IFC.xml:44461
+msgid "IfcFurnitureTypeEnum_FILECABINET"
+msgstr "フィレカビネット"
 
-#:IFC.xml:49187
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+msgid "IfcFurnitureTypeEnum_FILECABINET_DEFINITION"
+msgstr "ファイルを保存するためのスライド引き出し付き家具。"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303に準拠した定義 42 1992 面外側バインドは、顔に外側の境界を定義するための追加の意味を持つバインドされた特殊なサブタイプです。 このタイプの顔の境界線は複数ありません。 注記エンティティは、ISO 10303で定義された面外側から適応されています 42. HISTORY IFC1.0 の新しいエンティティ"
+#:IFC.xml:44462
+msgid "IfcFurnitureTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-#:IFC.xml:49190
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+msgid "IfcFurnitureTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定義の型です。"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "[[IfcFaceSurface]] では、表面に関連する表面の基礎となる形状を定義します。 注 トポロジは、サーフェスのジオメトリをトリミングするために使用されます。 トポロジーに合わせて表面を幾何学的にトリミングする必要はありません。 xtDef NOTE ISO CD 10303による定義 42 1992 面面は、ジオメトリが関連するサーフェスによって定義されるサブタイプの面です。 顔によって使用される表面の部分は、おそらく穴のあるオープンディスクとして平面に埋め込むことができます。 ただし、境界ループの端と頂点を持つ面の組合せは平面に埋め込む必要はありません。 それは、例えば、球体やトーラス全体をカバーすることができます。 面と幾何学面の両方が正常な方向を定義しているように、 BOOLEAN フラグは、サーフェスの通常が TRUE と一致するか、またはフェイスの通常方向を FALSE することに反対することを示すために使用されます。 顔のループのいずれかのコンポーネントに関連付けられた形状は、表面形状と一致する必要があります。 すべての頂点点とエッジ曲線の領域が面形状面に含まれているという意味です 複数の面サーフェスでサーフェスを参照することができます。 注意 ISO 10303に定義された顔面から適応したエンティティ 42. 履歴 IFC2x .spec ヘッド 非公式の提案 1. フェイスサーフェスのドメインは、ループによってトリミングされると、フェイスジオメトリのドメインとして正式に定義されます。 このドメインには境界ループは含まれていません 2. 面は有限範囲がゼロでない 3. 面はマニホールドであり 4. 面はアークワイズで接続されている。 5. フェイス表面には表面属性がある 6. ループはフェイスドメインの一部ではありません。 7. ループ幾何学は面幾何学と一致します。 これは、面表面を境界するループを定義する際に使用されるエッジ曲線または頂点点が面形状上にあることを意味します。 8 顔の輪は交差してはならない。"
+#:IFC.xml:44463
+msgid "IfcFurnitureTypeEnum_SHELF"
+msgstr "シェル"
 
-#:IFC.xml:13225
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "FaceSurf"
+msgid "IfcFurnitureTypeEnum_SHELF_DEFINITION"
+msgstr "書籍などを保管するための家具。"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "面の内部形状を定義するサーフェス。このサーフェスはバインドされていない可能性があります。 面のドメインは、このサーフェスと継承された SELF FaceBounds 属性の境界ループによって定義されます。"
+#:IFC.xml:44464
+msgid "IfcFurnitureTypeEnum_SOFA"
+msgstr "SOFA"
 
-#:IFC.xml:49191
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+msgid "IfcFurnitureTypeEnum_SOFA_DEFINITION"
+msgstr "複数の人が座るための家具。"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "このフラグは、正常な表面の感覚が TRUE と一致するかどうかを示します。 または、顔に対するトポロジカル正常の感覚「FALSE」に対抗します。"
+#:IFC.xml:44465
+msgid "IfcFurnitureTypeEnum_TABLE"
+msgstr "テーブル"
 
-#:IFC.xml:49199
-msgid "IfcLoop"
-msgstr "IfcLoop"
+msgid "IfcFurnitureTypeEnum_TABLE_DEFINITION"
+msgstr "複数の人のためのカウンタートップ付き家具。"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 ループは単一の頂点から構築されたトポロジカル実体です。 接続された方向のエッジまたは線形のセグメントを同じ頂点で始まったり終わったりすることです 通常、表面に横たわって顔を結合するために使用されます。 ループは 0 または 1 の次元を持ちます。0 次元ループの領域は 1 つの点です。 1次元ループの領域は、接続された方向曲線ですが、マニホールドである必要はありません。 ループが円であるため、始点の位置は任意です。 ループのドメインには、0 <unk> が含まれます。 ループは単一の頂点、または指向エッジの順序付きコレクション、または点の順序付きコレクションで表されます。 ループはグラフであるため、MとGのグラフ属性はグラフトラバーサルアルゴリズムによって決まります。 M 1以来、オイラー方程式1は、この場合にはイメージに.. .. .. .. ..の図ifcloop数学1。 V と E l が一意の頂点の数であり、ループ内の方向のエッジの数であり、G l がループの属である場合。 注 ISO 10303 42 で定義されているループから適応されたエンティティ。 歴史 IFC2xの新しいエンティティ。.spec head 非公式提案 1. ループには有限範囲があります。 2. ループは、一致する開始点と終了点を持つ閉じたトポロジカル曲線を記述します。"
+#:IFC.xml:44466
+msgid "IfcFurnitureTypeEnum_TECHNICALCABINET"
+msgstr "TECHNICALCABINET"
 
-#:IFC.xml:49202
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadTail ALoop"
+msgid "IfcFurnitureTypeEnum_TECHNICALCABINET_DEFINITION"
+msgstr "技術キャビネットは、保持するための家具の一部であります, 技術家電製品を表示し、保護, 通常、棚に編成, 引き出しやラック."
 
-#:IFC.xml:49210
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:44467
+msgid "IfcFurnitureTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303による定義 42 1992 オープンシェルは寸法のシェルである 2. そのドメインが存在する場合、有限であり、接続されていて、指向性があり、境界を持つ2多様体であるが、閉じた表面ではない。 1つ以上の穴を開けた閉じた殻と考えられる。 オープンシェルのドメインは 0 <unk> 1 を満たします。 オープンシェルは、ドメインがハンドルを持つことができるため、顔よりも機能的に一般的です。 シェルは、指向性のある面の集合によって定義されます。 指向を考慮した後、各顔の感覚は、以下に定義されたように通常のシェルと一致しなければならない。 オリエンテーションは、指向面の BOOLEAN 属性として直接提供できます。 またはシェルメンバーが orientation 属性を持たない面の場合は TRUE をデフォルトにしてください。 オープンシェルに対する以下の組み合わせ制約と、ドメインに対する幾何学的制約が設計されています。 非公式の提案と共にオープンシェルに関連するあらゆる領域が 指向性多様体であることを保証するために 各フェイスの参照は一意でなければなりません。開いたシェルは少なくとも1つの面を持つものとします。 特定の顔は複数の開いた殻に存在する可能性があります。 開いているシェルの境界は、その面の面境界ループによって一度だけ参照されるエッジで構成されます。 全ての頂点と一緒になっています オープンシェルのドメインが存在する場合、面のすべてのエッジと頂点が含まれます。 注 これは、その限界のどれも含まれていないフェイスドメインの定義とは若干異なることに注意してください。 例えば、フェイスドメインは、絶縁された点またはラインセグメントを除外することができます。オープンなシェルドメインはそうでない可能性があります。以下の計算のためのアルゴリズムを参照してください。 注記エンティティは、ISO 10303 42で定義された開いているシェルから適応されています。 HISTORYIFC2x.spec ヘッド 非公式提案 1. すべてのエッジは、顔の顔の境界によって正確に2回参照されなければなりません。 各指向エッジは一意でなければならない 3. エッジは2つ以上の面で参照してはならない。 4. シェルの個別面は交差しませんが、エッジや頂点を共有することがあります。 5. エッジは交差しませんが頂点を共有することができます 6. 7. シェルのループはポリループとその他のループタイプの混合物ではない。 ポリループのみが面結合定義として定義されるため、これが与えられることに注意してください。 閉じたシェルは、2マニホールドに接続されたアークワイズアークワイズでなければなりません。"
+msgid "IfcFurnitureTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義の型。"
 
-#:IFC.xml:49214
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:44468
+msgid "IfcInventory"
+msgstr "IfcInventory"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
+msgid "IfcInventory_DEFINITION"
+msgstr "An inventory is a list of items within an enterprise. Various types of inventory can be included. These are identified by the range of values within the inventory type enumeration which includes space, asset, and furniture. User defined inventories can also be defined for lists of particular types of element such as may be required in operating and maintenance instructions. Such inventories should be constrained to contain a list of elements of a restricted type. There are a number of actors that can be associated with an inventory, each actor having a role. Actors within the scope of the project are indicated using the [[IfcRelAssignsToActor]] .. .. ifckernel lexical ifcrelassignstoactor.htm relationship in which case roles should be defined through the [[IfcActorRole]] .. .. ifcactorresource lexical ifcactorrole.htm class otherwise principal actors are identified as attributes of the class. In the existence of both, direct attributes take precedence. There are a number of costs that can be associated with an inventory, each cost having a role. These are specified through the CurrentValue and OriginalValue attributes. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE All attributes optional, Where Rule removed."
 
-#:IFC.xml:49099
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "EdgeElement"
+#:IFC.xml:279
+msgid "IfcInventory_ResponsiblePersons"
+msgstr "ResponsiblePersons"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "この指向エッジを構築するために使用されるエッジエンティティ。"
+msgid "IfcInventory_ResponsiblePersons_DEFINITION"
+msgstr "在庫の責任者。"
 
-#:IFC.xml:49215
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdge EdgeEnd"
+#:IFC.xml:3415
+msgid "IfcInventory_CurrentValue"
+msgstr "CurrentValue"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+msgid "IfcInventory_CurrentValue_DEFINITION"
+msgstr "在庫の現在のコスト価値の見積もり。"
 
-#:IFC.xml:49219
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:3427
+msgid "IfcInventory_OriginalValue"
+msgstr "OriginalValue"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+msgid "IfcInventory_OriginalValue_DEFINITION"
+msgstr "在庫の元のコスト値の見積もり。"
 
-#:IFC.xml:49223
-msgid "IfcOrientedEdge_Orientation"
-msgstr "方向"
+#:IFC.xml:44469
+msgid "IfcInventory_Jurisdiction"
+msgstr "管轄権"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN (BOOLEAN) 使用されているトポロジカル方向が format@@0 の場合、エッジ要素の始点から終点までの方向と一致します。format@@1"
+msgid "IfcInventory_Jurisdiction_DEFINITION"
+msgstr "在庫が適用される組織単位。"
 
-#:IFC.xml:49242
-msgid "IfcPath"
-msgstr "IfcPath"
+#:IFC.xml:44474
+msgid "IfcInventory_LastUpdateDate"
+msgstr "LastUpdateDate"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 パスは、指向エッジの順序付けられたコレクションからなるトポロジカルエンティティです。 それぞれのエッジの始点が前のエッジの終点と一致するようにします パスは、最初の方向のエッジの始点から最後のエッジの終点まで順序付けられます。 指向エッジの BOOLEAN 値センスは、エッジ方向がパスの TRUE の方向と一致するか、または FALSE の逆方向であるかを示します。 個々のエッジは、個々のパスによって一度だけ参照することができます エッジは、複数のパスによって参照することができます。 エッジは、パスとは独立して存在することができます。ISO 10303 42 で定義されているパスから適応された注記エンティティ。 歴史 IFC2.0の新しいエンティティ .spec head 非公式命題1. パスに寸法性がある 1. パスはアークワイズ接続されている。 3. パスのエッジは、共通の頂点を除いて交差しません。 4. パスは有限でゼロではありません。"
+msgid "IfcInventory_LastUpdateDate_DEFINITION"
+msgstr "在庫の最後の更新が行われた日付。 .change ifc2x4 IFC4 変更タイプは IfcDateTimeSelectから変更されました。"
 
-#:IFC.xml:49230
-msgid "IfcPath_EdgeList"
-msgstr "EdgeList"
+#:IFC.xml:44479
+msgid "IfcInventory_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "このパスを形成するために連結された指向エッジのリスト。"
+msgid "IfcInventory_PredefinedType_DEFINITION"
+msgstr ".change ifc2x4 IFC4 変更GE属性はオプションとなりました。"
 
-#:IFC.xml:49245
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadTail APath"
+#:IFC.xml:44486
+msgid "IfcInventoryTypeEnum"
+msgstr "IfcInventoryTypeEnum"
 
-#:IFC.xml:49253
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+msgid "IfcInventoryTypeEnum_DEFINITION"
+msgstr "[[IfcInventoryTypeEnum]] defines the types of inventory that can be defined. HISTORY New enumeration in IFC2.0. Items ASSETINVENTORY A collection of asset instances of type [[IfcAsset]]. SPACEINVENTORY A collection of space instances of type [[IfcSpace]]. FURNITUREINVENTORY A collection of furniture instances of type [[IfcFurnishingElement]]. USERDEFINED User defined type. NOTDEFINED Undefined type."
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
+#:IFC.xml:44493
+msgid "IfcInventoryTypeEnum_ASSETINVENTORY"
+msgstr "ASSETINVENTORY"
 
-#:IFC.xml:11814
-msgid "IfcPolyLoop_Polygon"
-msgstr "多角形（多角形）"
+msgid "IfcInventoryTypeEnum_ASSETINVENTORY_DEFINITION"
+msgstr "[[IfcAsset] ]型のアセットインスタンスのコレクション。"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "ループを定義する点のリスト リストには繰り返される点はありません。"
+#:IFC.xml:44494
+msgid "IfcInventoryTypeEnum_FURNITUREINVENTORY"
+msgstr "物件情報"
 
-#:IFC.xml:49256
-msgid "IfcShell"
-msgstr "IfcShell"
+msgid "IfcInventoryTypeEnum_FURNITUREINVENTORY_DEFINITION"
+msgstr "家具の種類のコレクション [[IfcFurnishingElement]]。"
 
-#:IFC.xml:49257
-msgid "IfcSubedge"
-msgstr "IFcSubedge"
+#:IFC.xml:44495
+msgid "IfcInventoryTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 サブエッジは、既存のエッジのドメインの接続部分であるエッジです。 サブエッジ上のトポロジカル制約は、エッジ上のトポロジカル制約と同じです。 注 ISO 10303 42に定義されているサブエッジから適応したエンティティ HISTORY IFC2x2の新しいエンティティ。 ペックヘッド 非公式な提案 1. サブエッジのドメインは、親エッジのドメインとして正式に定義されます。 で指定します。 2 開始頂点と終了頂点は、親エッジの頂点の領域と親エッジの領域の結合の範囲内でなければならない ."
+msgid "IfcInventoryTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定義の型です。"
 
-#:IFC.xml:49111
-msgid "IfcSubedge_ParentEdge"
-msgstr "ParentEdge"
+#:IFC.xml:44496
+msgid "IfcInventoryTypeEnum_SPACEINVENTORY"
+msgstr "スペース"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "エッジ、またはサブエッジを含むサブエッジ。"
+msgid "IfcInventoryTypeEnum_SPACEINVENTORY_DEFINITION"
+msgstr "[[IfcSpace] ]型の空間インスタンスのコレクション。"
 
-#:IFC.xml:49260
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:44497
+msgid "IfcInventoryTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 トポロジ表示アイテムはジオメトリリソース内のすべてのトポロジ表示アイテムのスーパータイプです。 注記エンティティは ISO 10303 42に定義されているトポロジカル表現アイテムから適応されています。"
+msgid "IfcInventoryTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義の型。"
 
-#:IFC.xml:49263
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:44498
+msgid "IfcOccupant"
+msgstr "IfcOccupant"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点に対応するトポロジカル構造です。 それは次元0と次元0を持っています。 頂点の領域が存在する場合、m寸法実空間R Mの点であり、頂点のサブタイプによって表されます。 注記エンティティは、ISO 10303に定義されている頂点から適応しました 42. 履歴 IFC2.0の新しいエンティティ .spec ヘッド 非公式の提案 1. 頂点は次元性0を持っています. これは頂点の基本的な特性です. 2. 頂点の範囲はゼロであると定義されています."
+msgid "IfcOccupant_DEFINITION"
+msgstr "An occupant is a type of actor that defines the form of occupancy of a property. The principal purpose of [[IfcOccupant]] is to determine the nature of occupancy of a property for a particular actor. All characteristics relating to the actor name and organization details are inherited from the [[IfcActor]] entity. HISTORY New entity in IFC2x"
 
-#:IFC.xml:49278
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:44499
+msgid "IfcOccupant_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点ループは、1 つの頂点からなるゼロ属のループです。 頂点は頂点ループとは独立して存在することができます. トポロジデータは、次の制約画像を満たすものとします.. .. ifcvertexloop math1.gif NOTE ISO 10303で定義された頂点ループから適応した実体。HISTORY IFC2x2に新しい実体。 .spec ヘッド 非公式の提案 1. 頂点ループは、0の範囲と次元を持ちます。2. 頂点ループは属性0を持ちます。"
+msgid "IfcOccupant_PredefinedType_DEFINITION"
+msgstr ".change ifc2x4 IFC4 変更属性はオプションとされる。"
 
-#:IFC.xml:49266
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:44509
+msgid "IfcOccupantTypeEnum"
+msgstr "IfcOccupantTypeEnum"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "ループ全体を定義する頂点。"
+msgid "IfcOccupantTypeEnum_DEFINITION"
+msgstr "[[IfcOccupantTypeEnum]] は、必要な型を選択できる乗員の種類を定義します。 HISTORY IFC2の新しい列挙。 をクリックします。 アイテム ASSIGNEE 割り当て者からプロパティ契約の割り当てを受け取るアクター。 割り当てにプロパティ契約を割り当てるアクター. LESSEE アクターは、より少ない者からプロパティのリースを受け取ります. LESSORアクターは、所有者、lessor、または割り当て者に代わって不動産契約に参加するアクターをリースします。 所有者アクターは、プロパティを所有しています. テンント 一定期間のプロパティの使用を借りる俳優. USERDEFINED User defined type. NOTDEFINED Undefined type."
 
-#:IFC.xml:49281
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:44520
+msgid "IfcOccupantTypeEnum_ASSIGNEE"
+msgstr "ASSIGNEE"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE ISO CD 10303 42 1992 頂点は点として定義されているジオメトリを持つ頂点です。 注記エンティティは、ISO 10303 42 で定義されている頂点から適応しています。 歴史 IFC2x.spec ヘッド 非公式提案 1. 頂点の領域は正式に頂点の領域として定義されます。"
+msgid "IfcOccupantTypeEnum_ASSIGNEE_DEFINITION"
+msgstr "割り当て者からプロパティアグリーの割り当てを受け取るアクター。"
 
-#:IFC.xml:12785
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "頂点ジオメトリー"
+#:IFC.xml:44521
+msgid "IfcOccupantTypeEnum_ASSIGNOR"
+msgstr "Assignor"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "頂点の幾何学的空間の位置を定義する幾何学的点。"
+msgid "IfcOccupantTypeEnum_ASSIGNOR_DEFINITION"
+msgstr "担当者にプロパティアグリーメントを割り当てるアクター。"
+
+#:IFC.xml:44522
+msgid "IfcOccupantTypeEnum_LESSEE"
+msgstr "LESSEE"
+
+msgid "IfcOccupantTypeEnum_LESSEE_DEFINITION"
+msgstr "より少ない者からの財産のリースを受け取る俳優。"
+
+#:IFC.xml:44523
+msgid "IfcOccupantTypeEnum_LESSOR"
+msgstr "LESSIR"
+
+msgid "IfcOccupantTypeEnum_LESSOR_DEFINITION"
+msgstr "アクターは、病院にプロパティをリース。"
+
+#:IFC.xml:44524
+msgid "IfcOccupantTypeEnum_LETTINGAGENT"
+msgstr "LETINGAGENT"
+
+msgid "IfcOccupantTypeEnum_LETTINGAGENT_DEFINITION"
+msgstr "所有者、レッサーまたは譲渡者に代わって、不動産契約に参加しているアクター。"
+
+#:IFC.xml:44525
+msgid "IfcOccupantTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcOccupantTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定義の型です。"
+
+#:IFC.xml:44526
+msgid "IfcOccupantTypeEnum_OWNER"
+msgstr "所有者"
+
+msgid "IfcOccupantTypeEnum_OWNER_DEFINITION"
+msgstr "財産を所有する俳優。"
+
+#:IFC.xml:44527
+msgid "IfcOccupantTypeEnum_TENANT"
+msgstr "テンント"
+
+msgid "IfcOccupantTypeEnum_TENANT_DEFINITION"
+msgstr "一定期間のプロパティの使用を借りる俳優."
+
+#:IFC.xml:44528
+msgid "IfcOccupantTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcOccupantTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義の型。"
+
+#:IFC.xml:44529
+msgid "IfcSystemFurnitureElement"
+msgstr "IfcSystemFurnitureElement"
+
+msgid "IfcSystemFurnitureElement_DEFINITION"
+msgstr "システム家具要素は、モジュラー家具のコンポーネントを定義します。これは、建物の構造に直接配置されるのではなく、家具の内部に集約されます。 歴史 IFC2x2に新しいエンティティが追加されました。"
+
+#:IFC.xml:44530
+msgid "IfcSystemFurnitureElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcSystemFurnitureElement_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:44537
+msgid "IfcSystemFurnitureElementType"
+msgstr "IfcSystemFurnitureElementType"
+
+msgid "IfcSystemFurnitureElementType_DEFINITION"
+msgstr "The furnishing element type [[IfcSystemFurnitureElementType]] defines commonly shared information for occurrences of system furniture elements. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a system furniture element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcSystemFurnitureElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcSystemFurnitureElementType]] are represented by instances of [[IfcSystemFurnitureElement]] . Refer to the documentation at [[IfcSystemFurnitureElement]] for supported property sets, materials, and composition. HISTORY New entity in IFC2x2 .note"
+
+#:IFC.xml:44538
+msgid "IfcSystemFurnitureElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcSystemFurnitureElementType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:44545
+msgid "IfcSystemFurnitureElementTypeEnum"
+msgstr "IfcSystemFurnitureElementTypeEnum"
+
+msgid "IfcSystemFurnitureElementTypeEnum_DEFINITION"
+msgstr "IfcSystemFurnitureTypeEnumは、必要なタイプを選択できるシステム家具のタイプを定義します。 沿革 IFC4の新しい列挙項目 PANEL 作業スペースの分割に使用される垂直パネル。 ワークサーフェスワークステーションカウンター. スブラックは、プラグ可能な電動サブユニットを格納し、マウントするために使用される技術キャビネットの一部です。 USERDEFINED User defined type. NOTDEFINED Undefined type."
+
+#:IFC.xml:44557
+msgid "IfcSystemFurnitureElementTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcSystemFurnitureElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定義の型です。"
+
+#:IFC.xml:44558
+msgid "IfcSystemFurnitureElementTypeEnum_PANEL"
+msgstr "パン"
+
+msgid "IfcSystemFurnitureElementTypeEnum_PANEL_DEFINITION"
+msgstr "作業スペースの分割に使用される垂直パネル"
+
+#:IFC.xml:44559
+msgid "IfcSystemFurnitureElementTypeEnum_SUBRACK"
+msgstr "SUBRACK"
+
+msgid "IfcSystemFurnitureElementTypeEnum_SUBRACK_DEFINITION"
+msgstr "サブラックは、プラグ可能な電気サブユニットを格納およびマウントするために使用される技術キャビネットの一部です。"
+
+#:IFC.xml:44560
+msgid "IfcSystemFurnitureElementTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcSystemFurnitureElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義の型。"
+
+#:IFC.xml:44561
+msgid "IfcSystemFurnitureElementTypeEnum_WORKSURFACE"
+msgstr "ワークサーフェイス"
+
+msgid "IfcSystemFurnitureElementTypeEnum_WORKSURFACE_DEFINITION"
+msgstr "ワークステーションカウンター。"
+
+#:IFC.xml:44661
+msgid "Pset_Asset"
+msgstr "Pset Asset"
+
+msgid "Pset_Asset_DEFINITION"
+msgstr "資産は、財務的価値を持ち、メンテナンスアクションが記録されることに対して一意に識別可能な要素です。"
+
+#:IFC.xml:44662
+msgid "AssetAccountingType"
+msgstr "アセットアカウントタイプ"
+
+msgid "AssetAccountingType_DEFINITION"
+msgstr "事前定義された種類のリスクを特定します。"
+
+#:IFC.xml:44667
+msgid "AssetInsuranceType"
+msgstr "AssetInsuranceType"
+
+msgid "AssetInsuranceType_DEFINITION"
+msgstr "必要な保険の種類が設定されている保険の定義済みの種類を識別します。"
+
+#:IFC.xml:44672
+msgid "AssetStatus"
+msgstr "AssetStatus"
+
+msgid "AssetStatus_DEFINITION"
+msgstr "ライフサイクルの現在の状態またはステージ。"
+
+#:IFC.xml:44677
+msgid "AssetTaxType"
+msgstr "AssetTaxType"
+
+msgid "AssetTaxType_DEFINITION"
+msgstr "必要な種類を設定することができる定義済みの課税グループの種類を識別します。"
+
+#:IFC.xml:44682
+msgid "AssetUse"
+msgstr "AssetUse"
+
+msgid "AssetUse_DEFINITION"
+msgstr "アセットの一般的な使用カテゴリ"
+
+#:IFC.xml:44688
+msgid "Pset_Condition"
+msgstr "Pset Condition"
+
+msgid "Pset_Condition_DEFINITION"
+msgstr "特定の時点の要素の状態または条件を指定します。"
+
+#:IFC.xml:44689
+msgid "AssessmentCondition"
+msgstr "テスト条件"
+
+msgid "AssessmentCondition_DEFINITION"
+msgstr "様々な基準によって行われた全体的な条件への貢献の評価に基づく製品の全体的な状態を考慮. 評価条件の価値に与えられる意味は、現地協定によって合意され、文書化されるべきである。 例えば、全体的な条件は、1 10のスケールで測定されたり、Good、OK、Poorなどの名前を割り当てたりしています。"
+
+#:IFC.xml:44694
+msgid "AssessmentDate"
+msgstr "評価日"
+
+msgid "AssessmentDate_DEFINITION"
+msgstr "全体的な状態が評価される日付"
+
+#:IFC.xml:44699
+msgid "AssessmentDescription"
+msgstr "テストの説明"
+
+msgid "AssessmentDescription_DEFINITION"
+msgstr "条件の定性的な説明。"
+
+#:IFC.xml:44704
+msgid "AssessmentFrequency"
+msgstr "テスト周波数"
+
+msgid "AssessmentFrequency_DEFINITION"
+msgstr "機器を評価する頻度を示し、動作状態を明確に見積もります。 メンテナンススタッフがメンテナンスを必要とするか、更新するか、交換するかを決めることができます。"
+
+#:IFC.xml:44709
+msgid "AssessmentMethod"
+msgstr "アセスメントメソッド"
+
+msgid "AssessmentMethod_DEFINITION"
+msgstr "テストを実行するために使用されるアセスメント方法またはアプリケーションへの外部参照。"
+
+#:IFC.xml:44714
+msgid "AssessmentType"
+msgstr "テストタイプ"
+
+msgid "AssessmentType_DEFINITION"
+msgstr "資産の最新の状態アセスメントレポートのカテゴリ"
+
+#:IFC.xml:44719
+msgid "LastAssessmentReport"
+msgstr "LastAssessmentReport"
+
+msgid "LastAssessmentReport_DEFINITION"
+msgstr "健康報告の最新の状態を参照します。"
+
+#:IFC.xml:44724
+msgid "NextAssessmentDate"
+msgstr "NextAssessmentDate"
+
+msgid "NextAssessmentDate_DEFINITION"
+msgstr "次の状態検査の日付"
+
+#:IFC.xml:44730
+msgid "Pset_ConstructionAdministration"
+msgstr "Pset ConstructionAdministration"
+
+#:IFC.xml:44731
+msgid "ProcurementMethod"
+msgstr "調達方法"
+
+msgid "ProcurementMethod_DEFINITION"
+msgstr "調達方法"
+
+#:IFC.xml:44736
+msgid "SpecificationSectionNumber"
+msgstr "仕様セクション番号"
+
+msgid "SpecificationSectionNumber_DEFINITION"
+msgstr "仕様セクション番号"
+
+#:IFC.xml:44741
+msgid "SubmittalIdentifer"
+msgstr "SubmittalIdentifier"
+
+msgid "SubmittalIdentifer_DEFINITION"
+msgstr "SubmittalIdentifier"
+
+#:IFC.xml:44747
+msgid "Pset_ConstructionOccurance"
+msgstr "Pset ConstructionOccurance"
+
+#:IFC.xml:44748
+msgid "AssetIdentifier"
+msgstr "AssetIdentifier"
+
+msgid "AssetIdentifier_DEFINITION"
+msgstr "AssetIdentifier"
+
+#:IFC.xml:44758
+msgid "ModelNumber"
+msgstr "ModelNumber"
+
+msgid "ModelNumber_DEFINITION"
+msgstr "ModelNumber"
+
+#:IFC.xml:44763
+msgid "TagNumber"
+msgstr "TagNumber"
+
+msgid "TagNumber_DEFINITION"
+msgstr "TagNumber"
+
+#:IFC.xml:44769
+msgid "Pset_FurnitureTypeChair"
+msgstr "Pset FurnitureTypeChair"
+
+msgid "Pset_FurnitureTypeChair_DEFINITION"
+msgstr "HISTORY家具型椅子の特性セットについて IFCリリース R1.5で発行されたPset Chair から改名されました。"
+
+#:IFC.xml:44770
+msgid "HighestSeatingHeight"
+msgstr "最高座席高さ"
+
+msgid "HighestSeatingHeight_DEFINITION"
+msgstr "椅子の高さが調整可能であれば、高レベルの座席高さの値。"
+
+#:IFC.xml:44775
+msgid "LowestSeatingHeight"
+msgstr "最小座席高さ"
+
+msgid "LowestSeatingHeight_DEFINITION"
+msgstr "椅子の高さが調整可能であれば、低レベルの座席高さの値。"
+
+#:IFC.xml:44780
+msgid "SeatingHeight"
+msgstr "座席の高さ"
+
+msgid "SeatingHeight_DEFINITION"
+msgstr "椅子の高さが調整できない場合の座席高さの値。"
+
+#:IFC.xml:44786
+msgid "Pset_FurnitureTypeCommon"
+msgstr "Pset FurnitureTypeCommon"
+
+msgid "Pset_FurnitureTypeCommon_DEFINITION"
+msgstr "椅子、机、テーブル、ファイルキャビネットなど、あらゆる種類の家具に共通のプロパティ HISTORY IFCリリースR1.5で発行されました。 IFC 2x4 IsBuiltInプロパティにコメントを追加しました NominalHeight このタイプの家具の名目高さ。 サイズ情報は、形状表示と内部で使用される幾何パラメータに加えて提供されます。 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:44787
+msgid "IsBuiltIn"
+msgstr "IsBuiltIn"
+
+msgid "IsBuiltIn_DEFINITION"
+msgstr "家具の種類が構築されることを意図しているかどうかを示します。 建物や施設のTRUEに物理的に接続されているかどうか、すなわち緩くて可動性FALSE。"
+
+#:IFC.xml:44792
+msgid "MainColor"
+msgstr "メインカラー"
+
+msgid "MainColor_DEFINITION"
+msgstr "このタイプの家具のメインカラー。"
+
+#:IFC.xml:44822
+msgid "Style"
+msgstr "スタイル"
+
+msgid "Style_DEFINITION"
+msgstr "家具のスタイルの説明。"
+
+#:IFC.xml:44828
+msgid "Pset_FurnitureTypeDesk"
+msgstr "Pset FurnitureTypedesk"
+
+msgid "Pset_FurnitureTypeDesk_DEFINITION"
+msgstr "HISTORY IFCリリースR1.5で初めて発行されたPset Deskから名前を変更しました。"
+
+#:IFC.xml:44829
+msgid "WorksurfaceArea"
+msgstr "WorksurfaceArea"
+
+msgid "WorksurfaceArea_DEFINITION"
+msgstr "デスクの作業面積の値。"
+
+#:IFC.xml:44835
+msgid "Pset_FurnitureTypeFileCabinet"
+msgstr "Pset FurnitureTypeFileCan"
+
+msgid "Pset_FurnitureTypeFileCabinet_DEFINITION"
+msgstr "家具型ファイルキャビネットHISTORYの特定のプロパティのセット IFCリリースR1.5で初めて発行されたPset Fileキャビネットから名前を変更しました。"
+
+#:IFC.xml:44836
+msgid "WithLock"
+msgstr "WithLock"
+
+msgid "WithLock_DEFINITION"
+msgstr "ファイルキャビネットが TRUE でロック可能か否かを示します。"
+
+#:IFC.xml:44842
+msgid "Pset_FurnitureTypeTable"
+msgstr "Pset FurnitureTypeTable"
+
+msgid "Pset_FurnitureTypeTable_DEFINITION"
+msgstr "履歴 IFCリリースR1.5で初めて発行されたPset Tableから改名。"
+
+#:IFC.xml:44843
+msgid "NumberOfChairs"
+msgstr "NumberOfChairs"
+
+msgid "NumberOfChairs_DEFINITION"
+msgstr "通常の使用のためのテーブルに合うことができる椅子の最大数。"
+
+#:IFC.xml:44854
+msgid "Pset_MaintenanceStrategy"
+msgstr "プッシュメンテナンス戦略"
+
+msgid "Pset_MaintenanceStrategy_DEFINITION"
+msgstr "メンテナンス戦略の関連付けをシステムの要素、資産に設定します。"
+
+#:IFC.xml:44855
+msgid "AccidentResponse"
+msgstr "事故応答"
+
+msgid "AccidentResponse_DEFINITION"
+msgstr "資産に選択された事故応答"
+
+#:IFC.xml:44860
+msgid "AssetCriticality"
+msgstr "AssetCriticality"
+
+msgid "AssetCriticality_DEFINITION"
+msgstr "施設の運用に対する資産の重要性の評価"
+
+#:IFC.xml:44865
+msgid "AssetFrailty"
+msgstr "AssetFrailty"
+
+msgid "AssetFrailty_DEFINITION"
+msgstr "損傷または劣化に対する資産の弱点の評価"
+
+#:IFC.xml:44870
+msgid "AssetPriority"
+msgstr "AssetPriority"
+
+msgid "AssetPriority_DEFINITION"
+msgstr "資産の運用とメンテナンスの優先順位を示す重要性と弱点の組み合わせによる評価"
+
+#:IFC.xml:44875
+msgid "MonitoringType"
+msgstr "モニタリングタイプ"
+
+msgid "MonitoringType_DEFINITION"
+msgstr "資産のために選択された監視戦略"
+
+#:IFC.xml:44881
+msgid "Pset_MaintenanceTriggerCondition"
+msgstr "プッシュメンテナンストリガー条件"
+
+msgid "Pset_MaintenanceTriggerCondition_DEFINITION"
+msgstr "点検ベースのメンテナンス戦略を持つ資産のレベルをトリガーします"
+
+#:IFC.xml:44882
+msgid "ConditionDisposalLevel"
+msgstr "ConditionDisposalLevel"
+
+msgid "ConditionDisposalLevel_DEFINITION"
+msgstr "処分プロセスをトリガーする条件"
+
+#:IFC.xml:44887
+msgid "ConditionMaintenanceLevel"
+msgstr "条件メンテナンスレベル"
+
+msgid "ConditionMaintenanceLevel_DEFINITION"
+msgstr "メンテナンスをトリガーする条件"
+
+#:IFC.xml:44892
+msgid "ConditionReplacementLevel"
+msgstr "条件置換レベル"
+
+msgid "ConditionReplacementLevel_DEFINITION"
+msgstr "交換プロセスをトリガーする条件"
+
+#:IFC.xml:44897
+msgid "ConditionTargetPerformance"
+msgstr "条件ターゲットパフォーマンス"
+
+msgid "ConditionTargetPerformance_DEFINITION"
+msgstr "資産のターゲット条件"
+
+#:IFC.xml:44903
+msgid "Pset_MaintenanceTriggerDuration"
+msgstr "Pset MaintenanceTriggerDuration"
+
+msgid "Pset_MaintenanceTriggerDuration_DEFINITION"
+msgstr "PPMベースのメンテナンス戦略を持つ資産のレベルをトリガーします。"
+
+#:IFC.xml:44904
+msgid "DurationDisposalLevel"
+msgstr "DurationDisposalLevel"
+
+msgid "DurationDisposalLevel_DEFINITION"
+msgstr "処分時の期間間隔"
+
+#:IFC.xml:44909
+msgid "DurationMaintenanceLevel"
+msgstr "DurationMaintenanceLevel"
+
+msgid "DurationMaintenanceLevel_DEFINITION"
+msgstr "メンテナンスが実行される期間間隔"
+
+#:IFC.xml:44914
+msgid "DurationReplacementLevel"
+msgstr "DurationReplacementLevel"
+
+msgid "DurationReplacementLevel_DEFINITION"
+msgstr "置換が実行される期間間隔"
+
+#:IFC.xml:44919
+msgid "DurationTargetPerformance"
+msgstr "DurationTargetPerformance"
+
+msgid "DurationTargetPerformance_DEFINITION"
+msgstr "資産の失敗の目標時間"
+
+#:IFC.xml:44925
+msgid "Pset_MaintenanceTriggerPerformance"
+msgstr "Pset MaintenanceTriggerPerformance"
+
+msgid "Pset_MaintenanceTriggerPerformance_DEFINITION"
+msgstr "パフォーマンスベースのメンテナンスポリシーのプロパティ"
+
+#:IFC.xml:44926
+msgid "DisposalLevel"
+msgstr "DisposalLevel"
+
+msgid "DisposalLevel_DEFINITION"
+msgstr "処分が行われるパフォーマンスレベル"
+
+#:IFC.xml:44931
+msgid "PerformanceMaintenanceLevel"
+msgstr "パフォーマンスメンテナンスレベル"
+
+msgid "PerformanceMaintenanceLevel_DEFINITION"
+msgstr "メンテナンスが行われるパフォーマンスレベル"
+
+#:IFC.xml:44936
+msgid "ReplacementLevel"
+msgstr "置換レベル"
+
+msgid "ReplacementLevel_DEFINITION"
+msgstr "置き換えが行われるパフォーマンスレベル"
+
+#:IFC.xml:44941
+msgid "TargetPerformance"
+msgstr "TargetPerformance"
+
+msgid "TargetPerformance_DEFINITION"
+msgstr "資産のターゲット容量またはパフォーマンス。パフォーマンス値の単位は、propertyValue 属性によって指定されます。"
+
+#:IFC.xml:44947
+msgid "Pset_ManufacturerOccurrence"
+msgstr "Pset メーカー発生"
+
+msgid "Pset_ManufacturerOccurrence_DEFINITION"
+msgstr "製造元によって与えられる製造された製品の個々のインスタンスのプロパティを定義します。HISTORY IFC 2x4 AssemblyPlaceプロパティを追加しました。 このプロパティは、Pset ManufacturerTypeInformation が型に割り当てられ、そこで AssemblyPlace プロパティがアサートされている場合、アサートする必要はありません。"
+
+#:IFC.xml:44948
+msgid "AcquisitionDate"
+msgstr "取得日"
+
+msgid "AcquisitionDate_DEFINITION"
+msgstr "製造された商品が購入された日。"
+
+#:IFC.xml:44958
+msgid "BarCode"
+msgstr "BarCode"
+
+msgid "BarCode_DEFINITION"
+msgstr "商品の発生に与えられたバーコードの身元。"
+
+#:IFC.xml:44963
+msgid "BatchReference"
+msgstr "BatchReference"
+
+msgid "BatchReference_DEFINITION"
+msgstr "製品の発生元となっているバッチ参照の身元。"
+
+#:IFC.xml:44968
+msgid "ManufacturingDate"
+msgstr "製造日"
+
+msgid "ManufacturingDate_DEFINITION"
+msgstr "要素が製造された日付。"
+
+#:IFC.xml:44973
+msgid "SerialNumber"
+msgstr "シリアル番号"
+
+msgid "SerialNumber_DEFINITION"
+msgstr "メーカーは製品の発生に割り当てられたシリアル番号を設定します。"
+
+#:IFC.xml:44979
+msgid "Pset_ManufacturerTypeInformation"
+msgstr "メーカータイプ情報"
+
+msgid "Pset_ManufacturerTypeInformation_DEFINITION"
+msgstr "メーカーが与えることができる製造された製品の種類の範囲の特性を定義します。 製造された用語は、サプライヤーによって供給され、特定された製品、または第三者プロバイダーによってサイト外で組み立てられた製品を指す場合もあることに注意してください。 履歴 このプロパティセットは、以前のIFCリリースのエンティティIfcManufacturerInformation を置き換えます。 IFC 2x4 AssemblyPlaceプロパティが追加されました。"
+
+#:IFC.xml:44980
+msgid "ArticleNumber"
+msgstr "記事番号"
+
+msgid "ArticleNumber_DEFINITION"
+msgstr "メーカーによって定義された記事番号定義の標準スキームに従って設定された製品に適用される記事番号または参照。 購買番号としてよく用いられる。"
+
+#:IFC.xml:44990
+msgid "GlobalTradeItemNumber"
+msgstr "GlobalTradeItemNumber"
+
+msgid "GlobalTradeItemNumber_DEFINITION"
+msgstr "Global Trade Item Number GTINは、GS1 www.gs1.orgによって開発されたトレードアイテムの識別子です。"
+
+#:IFC.xml:44995
+msgid "Manufacturer"
+msgstr "メーカー"
+
+msgid "Manufacturer_DEFINITION"
+msgstr "アイテムを製造または組み立てた組織。"
+
+#:IFC.xml:45000
+msgid "ModelLabel"
+msgstr "ModelLabel"
+
+msgid "ModelLabel_DEFINITION"
+msgstr "製品モデルまたは製品ラインの説明モデル名。製造された製品の製造元によって割り当てられている。"
+
+#:IFC.xml:45005
+msgid "ModelReference"
+msgstr "ModelReference"
+
+msgid "ModelReference_DEFINITION"
+msgstr "製品モデルまたは製品ラインのモデル番号または指定者 製造品目のメーカーによって割り当てられている製品モデルまたは製品ライン。"
+
+#:IFC.xml:45010
+msgid "OperationalDocument"
+msgstr "OperationalDocument"
+
+msgid "OperationalDocument_DEFINITION"
+msgstr "製造元の動作ドキュメント"
+
+#:IFC.xml:45015
+msgid "PerformanceCertificate"
+msgstr "PerformanceCertificate"
+
+msgid "PerformanceCertificate_DEFINITION"
+msgstr "製造業者のパフォーマンス証明書"
+
+#:IFC.xml:45020
+msgid "ProductionYear"
+msgstr "生産年"
+
+msgid "ProductionYear_DEFINITION"
+msgstr "製造年。"
+
+#:IFC.xml:45025
+msgid "SafetyDocument"
+msgstr "SafetyDocument"
+
+msgid "SafetyDocument_DEFINITION"
+msgstr "メーカーの安全文書"
+
+#:IFC.xml:45031
+msgid "Pset_PropertyAgreement"
+msgstr "Pset PropertyAgreement"
+
+msgid "Pset_PropertyAgreement_DEFINITION"
+msgstr "A property agreement is an agreement that enables the occupation of a property for a period of time. The objective is to capture the information within an agreement that is relevant to a facilities manager. Design and construction information associated with the property is not considered. A property agreement may be applied to an instance of [[IfcSpatialStructureElement]] including to compositions defined through the [[IfcSpatialStructureElement]].Element.CompositionEnum. Note that the associated actors are captured by the [[IfcOccupant]] class. Comments Duration The period of time for the lease."
+
+#:IFC.xml:45032
+msgid "AgreementDate"
+msgstr "契約日"
+
+msgid "AgreementDate_DEFINITION"
+msgstr "契約のバージョンが適用される日付。"
+
+#:IFC.xml:45037
+msgid "AgreementType"
+msgstr "契約タイプ"
+
+msgid "AgreementType_DEFINITION"
+msgstr "必要な型が設定されている定義済みのプロパティ契約の種類を識別します。"
+
+#:IFC.xml:45042
+msgid "AgreementVersion"
+msgstr "契約バージョン"
+
+msgid "AgreementVersion_DEFINITION"
+msgstr "同意のバージョン番号。"
+
+#:IFC.xml:45047
+msgid "CommencementDate"
+msgstr "開始日"
+
+msgid "CommencementDate_DEFINITION"
+msgstr "契約が開始される日付。"
+
+#:IFC.xml:45052
+msgid "ConditionCommencement"
+msgstr "条件の開始"
+
+msgid "ConditionCommencement_DEFINITION"
+msgstr "契約の開始時に提供される財産の条件、例えばコールドシェル、暖かい点灯シェル、ほうききれい、ターンキー。"
+
+#:IFC.xml:45057
+msgid "ConditionTermination"
+msgstr "条件の終了"
+
+msgid "ConditionTermination_DEFINITION"
+msgstr "契約の終了時に必要なプロパティの条件、例えば、コールドシェル、暖かい点灯シェル、ほうききれい、ターンキー。"
+
+#:IFC.xml:45067
+msgid "Options"
+msgstr "オプション"
+
+msgid "Options_DEFINITION"
+msgstr "本契約で利用可能なオプションの明細書。"
+
+#:IFC.xml:45072
+msgid "PropertyName"
+msgstr "PropertyName"
+
+msgid "PropertyName_DEFINITION"
+msgstr "契約書に記載されているように、プロパティの詳細を説明します。"
+
+#:IFC.xml:45077
+msgid "Restrictions"
+msgstr "制限"
+
+msgid "Restrictions_DEFINITION"
+msgstr "有能な権限によって置くことができる制限。"
+
+#:IFC.xml:45082
+msgid "TerminationDate"
+msgstr "終了日"
+
+msgid "TerminationDate_DEFINITION"
+msgstr "契約が終了する日時"
+
+#:IFC.xml:45087
+msgid "TrackingIdentifier"
+msgstr "追跡識別子"
+
+msgid "TrackingIdentifier_DEFINITION"
+msgstr "追跡の目的で契約に割り当てられた識別子。"
+
+#:IFC.xml:45093
+msgid "Pset_Risk"
+msgstr "リスク設定"
+
+msgid "Pset_Risk_DEFINITION"
+msgstr "偶然、危険、脅威、危険または損失への暴露の兆候。 AS NZS4360とBS PAS 1192 2017に沿った潜在的な危険性、可能性、および結果の記録。 製品、アクティビティ、または場所に割り当てることができます。 代わりに、ISO 3864 注釈記号に割り当てることもできます。 IFC2x3で拡張履歴 改訂された IFC4x3 発生する可能性のあるさまざまな種類のリスクがあり、インスタンスまたは型に関連付けられた複数のPset Riskインスタンスが存在する可能性があります。"
+
+#:IFC.xml:45094
+msgid "AssociatedActivity"
+msgstr "AssociatedActivity"
+
+msgid "AssociatedActivity_DEFINITION"
+msgstr "危険を引き起こす可能性のある関連するアクティビティまたはプロセスへの指示またはリンク。 アノテーションまたはセマンティックオブジェクト上で直接使用される場合。代替の場合は、グループによるエンホールドテンプレートの使用を参照してください。"
+
+#:IFC.xml:45099
+msgid "AssociatedLocation"
+msgstr "関連する場所"
+
+msgid "AssociatedLocation_DEFINITION"
+msgstr "危険を引き起こす可能性のある任意の関連する場所またはスペースへの指示またはリンク。 アノテーションまたはセマンティックオブジェクト上で直接使用される場合。代替の場合は、グループによるエンホールドテンプレートの使用を参照してください。"
+
+#:IFC.xml:45104
+msgid "AssociatedProduct"
+msgstr "関連製品"
+
+msgid "AssociatedProduct_DEFINITION"
+msgstr "危険を引き起こす可能性のある関連製品または材料への指示またはリンク。 アノテーションまたはセマンティックオブジェクト上で直接使用される場合。代替の場合は、グループによるエンホールドテンプレートの使用を参照してください。"
+
+#:IFC.xml:45109
+msgid "MitigatedRiskConsequence"
+msgstr "緩和リスク結果"
+
+msgid "MitigatedRiskConsequence_DEFINITION"
+msgstr "計画された緩和策に基づくハザードの結果を特定する。"
+
+#:IFC.xml:45114
+msgid "MitigatedRiskLikelihood"
+msgstr "緩和リスク可能性"
+
+msgid "MitigatedRiskLikelihood_DEFINITION"
+msgstr "計画緩和策を与えられたハザードの可能性を特定する。"
+
+#:IFC.xml:45119
+msgid "MitigatedRiskSignificance"
+msgstr "MitigatedRiskSignificance"
+
+msgid "MitigatedRiskSignificance_DEFINITION"
+msgstr "可能性と結果の緩和を与えられたリスクの意味を特定します。"
+
+#:IFC.xml:45124
+msgid "MitigationPlanned"
+msgstr "緩和計画"
+
+msgid "MitigationPlanned_DEFINITION"
+msgstr "計画は合意し、危険の可能性と結果の取り消し不可能な緩和。"
+
+#:IFC.xml:45129
+msgid "MitigationProposed"
+msgstr "緩和提案"
+
+msgid "MitigationProposed_DEFINITION"
+msgstr "提案されたが、まだ合意されていないと取り消せない、危険の可能性と結果の緩和。"
+
+#:IFC.xml:45134
+msgid "NatureOfRisk"
+msgstr "NatureOfRisk"
+
+msgid "NatureOfRisk_DEFINITION"
+msgstr "文脈またはハザードの一般的な性質の説明。"
+
+#:IFC.xml:45139
+msgid "RiskAssessmentMethodology"
+msgstr "リスクアセスメントの方法"
+
+msgid "RiskAssessmentMethodology_DEFINITION"
+msgstr "選択されたリスクアセスメントの方法論(PAS1192 6または選択されたISO13100アネックスなど)への指示またはリンク。"
+
+#:IFC.xml:45144
+msgid "RiskName"
+msgstr "RiskName"
+
+msgid "RiskName_DEFINITION"
+msgstr "プロジェクトのライフサイクルを通じてリスクの開発と処分を追跡するために使用できる、リスク入力のための局所的に固有の識別子"
+
+#:IFC.xml:45149
+msgid "RiskType"
+msgstr "リスクタイプ"
+
+msgid "RiskType_DEFINITION"
+msgstr "事前定義された種類のリスクを特定します。"
+
+#:IFC.xml:45154
+msgid "UnmitigatedRiskConsequence"
+msgstr "Un軽減リスク結果"
+
+msgid "UnmitigatedRiskConsequence_DEFINITION"
+msgstr "特定の緩和の前にハザードの結果を特定します。"
+
+#:IFC.xml:45159
+msgid "UnmitigatedRiskLikelihood"
+msgstr "Un軽減リスク可能性"
+
+msgid "UnmitigatedRiskLikelihood_DEFINITION"
+msgstr "特定の緩和の前にハザードの可能性を特定します。"
+
+#:IFC.xml:45164
+msgid "UnmitigatedRiskSignificance"
+msgstr "UnmitigatedRiskSignificance"
+
+msgid "UnmitigatedRiskSignificance_DEFINITION"
+msgstr "特定の緩和の前に、その可能性と結果が与えられたリスクの意味を特定する。"
+
+#:IFC.xml:45170
+msgid "Pset_ServiceLife"
+msgstr "Pset ServiceLife"
+
+msgid "Pset_ServiceLife_DEFINITION"
+msgstr "アーティファクトが持続する期間を取得します。 IfcServiceLifeの代替としてIFC2X4で導入された履歴"
+
+#:IFC.xml:45171
+msgid "MeanTimeBetweenFailure"
+msgstr "MeanTimeBetweenFailure"
+
+msgid "MeanTimeBetweenFailure_DEFINITION"
+msgstr "製品の故障のインスタンス間の平均時間。"
+
+#:IFC.xml:45176
+msgid "ServiceLifeDuration"
+msgstr "ServiceLifeDuration"
+
+msgid "ServiceLifeDuration_DEFINITION"
+msgstr "寿命の長さまたは長さ。 下限は悲観的なサービスライフ、上限は楽観的なサービスライフ、設定ポイントは典型的なサービスライフを示す。"
+
+#:IFC.xml:45182
+msgid "Pset_ServiceLifeFactors"
+msgstr "Pset ServiceLifeFactors"
+
+msgid "Pset_ServiceLifeFactors_DEFINITION"
+msgstr "システムやゾーン内の要素の期待される寿命に影響を与えるさまざまな要因をキャプチャします。"
+
+#:IFC.xml:45183
+msgid "DesignLevel"
+msgstr "デザインレベル"
+
+msgid "DesignLevel_DEFINITION"
+msgstr "使用する設計レベルの効果に起因する寿命の調整。"
+
+#:IFC.xml:45188
+msgid "IndoorEnvironment"
+msgstr "IndoorEnvironment"
+
+msgid "IndoorEnvironment_DEFINITION"
+msgstr "適切な屋内環境の影響から生じる耐用年数の調整。"
+
+#:IFC.xml:45193
+msgid "InUseConditions"
+msgstr "InUseConditions"
+
+msgid "InUseConditions_DEFINITION"
+msgstr "部品が動作している状態の影響による耐用年数の調整。"
+
+#:IFC.xml:45198
+msgid "MaintenanceLevel"
+msgstr "メンテナンスレベル"
+
+msgid "MaintenanceLevel_DEFINITION"
+msgstr "dcomponentsに適用されるメンテナンスのレベルまたは程度の影響によるサービス寿命の調整。"
+
+#:IFC.xml:45203
+msgid "OutdoorEnvironment"
+msgstr "屋外環境"
+
+msgid "OutdoorEnvironment_DEFINITION"
+msgstr "適切な屋外環境の影響による耐用年数の調整"
+
+#:IFC.xml:45208
+msgid "QualityOfComponents"
+msgstr "QualityOfComponents"
+
+msgid "QualityOfComponents_DEFINITION"
+msgstr "使用される部品の品質の影響に起因する寿命の調整。"
+
+#:IFC.xml:45213
+msgid "WorkExecutionLevel"
+msgstr "作業実行レベル"
+
+msgid "WorkExecutionLevel_DEFINITION"
+msgstr "実行された作業の品質の影響に起因する寿命の調整。"
+
+#:IFC.xml:45219
+msgid "Pset_SystemFurnitureElementTypeCommon"
+msgstr "Pset SystemFurnitureElementTypeCommon"
+
+msgid "Pset_SystemFurnitureElementTypeCommon_DEFINITION"
+msgstr "すべてのシステム家具の一般的な特性 すなわち、モジュラー家具の要素タイプ HISTORY IFCリリースR1で初めて発行されました。 をクリックします。 Pset furnitureElement共通コメント 公称高さ このタイプのシステム家具要素の公称高さ。 サイズ情報は、形状表示と内部で使用される幾何パラメータに加えて提供されます。 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:45220
+msgid "Finishing"
+msgstr "終了中"
+
+msgid "Finishing_DEFINITION"
+msgstr "このタイプのシステム家具要素に適用される仕上げ、例えばクルミ、ファブリック。"
+
+#:IFC.xml:45225
+msgid "GroupCode"
+msgstr "GroupCode"
+
+msgid "GroupCode_DEFINITION"
+msgstr "例: パネル、ワークサーフェス、ストレージなど。"
+
+#:IFC.xml:45230
+msgid "IsUsed"
+msgstr "IsUsed"
+
+msgid "IsUsed_DEFINITION"
+msgstr "要素がワークステーションの TRUE で使用されているかどうかを示します。"
+
+#:IFC.xml:45246
+msgid "Pset_SystemFurnitureElementTypePanel"
+msgstr "Pset SystemFurnitureElementTypePanel"
+
+msgid "Pset_SystemFurnitureElementTypePanel_DEFINITION"
+msgstr "アセンブリワークステーションの垂直パネルの特定のプロパティのセット。HISTORY IFCリリースR1.5で初めて発行されたPset Panelから名前を変更。"
+
+#:IFC.xml:45247
+msgid "FurniturePanelType"
+msgstr "家具パネルタイプ"
+
+msgid "FurniturePanelType_DEFINITION"
+msgstr "必要なパネルタイプを選択することができます。"
+
+#:IFC.xml:45252
+msgid "HasOpening"
+msgstr "HasOpening"
+
+msgid "HasOpening_DEFINITION"
+msgstr "は、パネルに FALSE があるかどうかを示します。"
+
+#:IFC.xml:45263
+msgid "Pset_SystemFurnitureElementTypeWorkSurface"
+msgstr "Pset SystemFurnitureElementTypeWorkSurface"
+
+msgid "Pset_SystemFurnitureElementTypeWorkSurface_DEFINITION"
+msgstr "ワークステーションで使用されるワークサーフェスの特定の特性のセット。HISTORY IFCリリース R1.5 で初めて発行されたPset Worksurface から名前を変更。"
+
+#:IFC.xml:45264
+msgid "HangingHeight"
+msgstr "HangingHeight"
+
+msgid "HangingHeight_DEFINITION"
+msgstr "ワークサーフェスの吊り高さ。"
+
+#:IFC.xml:45274
+msgid "ShapeDescription"
+msgstr "図形の説明"
+
+msgid "ShapeDescription_DEFINITION"
+msgstr "作業面の形状の説明（例：角の正方形、長方形など）"
+
+#:IFC.xml:45279
+msgid "SupportType"
+msgstr "サポートタイプ"
+
+msgid "SupportType_DEFINITION"
+msgstr "必要なサポートタイプを選択することができます。"
+
+#:IFC.xml:45284
+msgid "UsePurpose"
+msgstr "使用目的"
+
+msgid "UsePurpose_DEFINITION"
+msgstr "読み取り、コンピュータ、会議、プリンタ、参照ファイルなど、作業面が使用される主な目的。"
+
+#:IFC.xml:45290
+msgid "Pset_Warranty"
+msgstr "パンフレット保証"
+
+msgid "Pset_Warranty_DEFINITION"
+msgstr "芸術品の売り手または提供者によって与えられる保証、artefactは欠陥がなく、障害なしで定義された期間のために記述されたように動作し、その期間中に欠陥が発生した場合であること。 売り手または提供者によって修正されることになります。"
+
+#:IFC.xml:45291
+msgid "Exclusions"
+msgstr "除外"
+
+msgid "Exclusions_DEFINITION"
+msgstr "保証から除外される可能性のある項目、条件または行為は、保証が無効になる可能性があります。"
+
+#:IFC.xml:45296
+msgid "IsExtendedWarranty"
+msgstr "IsExtendedWarranty"
+
+msgid "IsExtendedWarranty_DEFINITION"
+msgstr "これが延長保証であるかどうかの表示は、その期間が通常アーティファクトTRUEに割り当てられているものよりも大きいです。"
+
+#:IFC.xml:45301
+msgid "PointOfContact"
+msgstr "PointOfContact"
+
+msgid "PointOfContact_DEFINITION"
+msgstr "保証の条件の下で行動のために連絡する必要がある組織。 組織メーカー、サプライヤー、インストーラなどの役割は、[[IfcActorRole]] 属性の[[IfcOrganization] ]によって決まります。"
+
+#:IFC.xml:45306
+msgid "WarrantyContent"
+msgstr "保証内容"
+
+msgid "WarrantyContent_DEFINITION"
+msgstr "保証の内容。"
+
+#:IFC.xml:45311
+msgid "WarrantyEndDate"
+msgstr "保証終了日"
+
+msgid "WarrantyEndDate_DEFINITION"
+msgstr "保証期間が終了した日付。"
+
+#:IFC.xml:45316
+msgid "WarrantyIdentifier"
+msgstr "保証識別子"
+
+msgid "WarrantyIdentifier_DEFINITION"
+msgstr "保証に割り当てられた識別子。"
+
+#:IFC.xml:45321
+msgid "WarrantyPeriod"
+msgstr "保証期間"
+
+msgid "WarrantyPeriod_DEFINITION"
+msgstr "製造業者またはサプライヤーがアーティファクトのパフォーマンスを保証または保証する期間。"
+
+#:IFC.xml:45326
+msgid "WarrantyStartDate"
+msgstr "WarrantyStartDate"
+
+msgid "WarrantyStartDate_DEFINITION"
+msgstr "保証が開始される日"
 
