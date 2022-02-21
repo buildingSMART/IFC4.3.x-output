@@ -9,319 +9,605 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcActorResource.pot\n"
+"X-Crowdin-File-ID: 20\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-02-21 13:39\n"
+"PO-Revision-Date: 2022-02-21 16:01\n"
 
-#:IFC.xml:49054
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:23
+msgid "IfcActorRole"
+msgstr "IfcActorRole"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "Ein fortgeschrittenes Gesicht ist eine Spezialisierung einer Gesichteroberfläche, die die Anforderungen an die Verwendung bestimmter topologischer und geometrischer Darstellungselemente für die Definition der Gesichter erfüllen muss. Kanten und Ecken. Eine [[IfcAdvancedFace]] ist beschränkt auf eine Oberflächengeometrie des Typs [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] , haben eine [[IfcFaceOuterBound]] als Gesichtsbindung, mit Ausnahme von geschlossenen Oberflächen, haben alle Flächen, die an [[IfcEdgeLoop]] oder [[IfcVertexLoop]] gebunden werden müssen, alle Kanten für eine Kantengeometrie haben die Kantenkurvengeometrie auf [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] Bei geschlossenen Flächen mit periodischen Oberflächen, wie zylindrische oder kugelförmige Oberflächen, im folgenden die Kanten der geschlossenen oberfläche, im Falle einer zylindrischen Oberfläche die obere und untere kappe, auf die gleiche Instanz von [[IfcVertexPoint]] zweimal verweisen, wird kein [[IfcFaceOuterBound]] zur Verfügung gestellt, oder das [[IfcFaceOuterBound]] wird mit einem [[IfcSeamCurve]] am periodischen Ende der geschlossenen Oberfläche erstellt im Falle einer zylindrischen Oberfläche bei 0. 360. Grad zylindrische Oberfläche .. .. .. Zahlen ifcadvancedface 01. ng Abbildung 1 Verwendung von [[IfcCylindricalSurface]] als Grundfläche eines [[IfcAdvancedFace]] HINWEISE Entität, angepasst von fortgeschrittenen Gesichtern, definiert in ISO 10303 511. GESCHICHTE Neue Entität in IFC4 Formale Angebote Anwendbare Oberfläche Die Geometrie verwendet in der Definition des Gesichts soll eingeschränkt werden. Die Gesichtsgeometrie soll ein [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] sein. RequiresEdgeCurve Die Geometrie aller Begrenzungskanten des Gesichts soll vollständig als [[IfcEdgeCurve]] s definiert werden. ApplicableEdgeCurves Die Kurvenarten zur Definition der Kantengeometrie sollen auf [[IfcLine]] beschränkt sein [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] ."
+msgid "IfcActorRole_DEFINITION"
+msgstr "Diese Entität zeigt eine Rolle an, die von einem Schauspieler ausgeübt wird, entweder einer Person, einer Organisation oder einer Person, die mit einer Organisation in Verbindung steht. HINWEIS Die Liste der Rollen der Aufzählungswerte des Rollenattributs kann nie vollständig sein. Daher kann der Benutzer unter Verwendung des Aufzählungswertes USERDEFINED jede Rolle als Wert des Attributs UserDefinedRole angeben. HISTORY New entity in IFC1.5.1."
 
-#:IFC.xml:49057
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:89
+msgid "IfcActorRole_HasExternalReference"
+msgstr "HasExternalReference"
 
-#:IFC.xml:49065
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcActorRole_HasExternalReference_DEFINITION"
+msgstr "Referenz auf externe Informationen, z.B. Bibliothek, Klassifizierung oder Dokumenteninformationen, die mit der Akteurrolle verbunden sind. .change ifc2x4 IFC4 CHANGE Neues Inverse-Attribut."
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:24
+msgid "IfcActorRole_Description"
+msgstr "Beschreibung"
 
-#:IFC.xml:49070
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+msgid "IfcActorRole_Description_DEFINITION"
+msgstr "Eine Textbeschreibung, die die Art der Rolle eines Schauspielers beschreibt."
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein angeschlossenes Gesichtersatz ist eine Gesichtermenge so dass die Domäne der Gesichter mit ihren Randkanten und Eckpunkten verbunden ist. HISTORY New Entity in IFC1.0 . Pec head Informelle Vorschläge 1. Die Vereinigung der Gesichter und ihrer Randschleifen soll arcweise verbunden sein."
+#:IFC.xml:29
+msgid "IfcActorRole_Role"
+msgstr "Rolle"
 
-#:IFC.xml:49073
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+msgid "IfcActorRole_Role_DEFINITION"
+msgstr "Der Name der Rolle eines Schauspielers. Hat die Rolle den Wert BENUTZERDEFINED, so wird die benutzerdefinierte Rolle als Wert des Attributs UserDefinedRole."
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "Der Satz der Gesichter im arktischen Sinne, der an gemeinsamen Kanten oder Eckpunkten verbunden ist."
+#:IFC.xml:34
+msgid "IfcActorRole_UserDefinedRole"
+msgstr "Benutzerdefinierte Rolle"
 
-#:IFC.xml:49085
-msgid "IfcEdge"
-msgstr "IfcEdge"
+msgid "IfcActorRole_UserDefinedRole_DEFINITION"
+msgstr "Ermöglicht die Angabe benutzerdefinierter Rollen jenseits der Aufzählungswerte, die durch Rollenattribut des Typs [[IfcRoleEnum]] angegeben werden. Wird ein Wert für das Attribut UserDefinedRole parallel zur Attribut Rolle zur Verfügung gestellt, so soll die Auflistung NUTZERDEFINED sein."
 
-msgid "IfcEdge_DEFINITION"
-msgstr "Ein [[IfcEdge]] definiert zwei Punkte, die topologisch verbunden sind. Die geometrische Darstellung der Verbindung zwischen den beiden Knoten erfolgt standardmäßig auf eine gerade Linie, wenn keine Kurvengeometrie mit dem Untertyp [[IfcEdgeCurve]] zugewiesen wird. Das [[IfcEdge]] kann daher zum Austausch von geraden Kanten ohne zugehörige Geometrie verwendet werden, die von [[IfcLine]] oder [[IfcPolyline]] Gedanke [[IfcEdgeCurve]] bereitgestellt wird. dgeGeometry . EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die Grenzen des [[IfcEdge]] von den EdgeStart und EdgeEnd angegeben werden, die auch die Richtung der Kante bestimmen. Der Ort innerhalb eines Koordinatenraums wird durch den [[IfcVertexPoint]] Typ für EdgeStart und EdgeEnd bestimmt. Da keine Kantengeometrie zugewiesen ist, wird standardmäßig eine geradlinige Linie verwendet, die dem Richtungssinn entspricht. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kante ist die topologische Konstruktion, die der Verbindung von zwei Knoten entspricht. abstrakter kann es für eine logische Beziehung zwischen zwei Punkten stehen. Die Domäne einer Kante, falls vorhanden, ist eine endliche, nicht selbstständig die offene Kurve in R M durchschneiden, das heißt, ein angeschlossener 1 dimensionaler Krümmer. Die Grenzen einer Kante sind zwei Eckpunkte, die nicht unterschieden werden müssen. Die Kante orientiert sich an der Auswahl ihrer Querrichtung und läuft von der ersten zum zweiten Scheitelpunkt. Wenn die beiden Punkte gleich sind, ist der Rand eine Selbstschleife. Die Domäne der Kante enthält keine Grenzen und 0 <unk> . Mit einer Kante verknüpft, kann eine geometrische Kurve sein, um den Rand in einem Koordinatenraum zu lokalisieren, der durch den Untertyp der Kantenkurve dargestellt wird. Die Kurve soll endlos und nicht selbstständig innerhalb des Bereichs der Kante kreuzen. Eine Kante ist ein Diagramm, so seine Vielfältigkeit M und Graphen Gen G e kann durch den Graph Traversal Algorithmus bestimmt werden. Seit M E 1 reduziert sich die Euler Gleichung 1 im Fall auf Bild .. . .. Zahlen ifcedge math1.gif wo V 1 oder 2, und G e 1 oder 0. Konkret soll der topologische Rand die Daten definieren, eine Kante zu befriedigen hat zwei Punkte Bild . .. .. Zahlen ifcedge math2.gif die Eckpunkte müssen nicht klar sein Bild . .. .. Zahlen ifcedge math3.gif Gleichung soll Bild .. .. .. .. Figuren ifcedge math4.gif NOTE Entity angepasst von Kante in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Rand hat Dimensionalität 1. 2. Der Umfang einer Kante soll endlich und nicht null sein."
+#:IFC.xml:101
+msgid "IfcActorSelect"
+msgstr "IfcActorSelect"
 
-#:IFC.xml:49088
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+#:IFC.xml:102
+msgid "IfcAddress"
+msgstr "Adresse"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "Startpunkt Scheitelpunkt der Kante."
+msgid "IfcAddress_DEFINITION"
+msgstr "Diese abstrakte Einheit repräsentiert verschiedene Arten von Post- und Telekommunikationsadressen. HISTORY New Entity in IFC1.5.1."
 
-#:IFC.xml:49100
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:120
+msgid "IfcAddress_OfOrganization"
+msgstr "OfOrganisation"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "Endpunkt des Kantenpunktes. Der gleiche Scheitelpunkt kann sowohl für EdgeStart als auch für EdgeEnd verwendet werden."
+msgid "IfcAddress_OfOrganization_DEFINITION"
+msgstr "Die inverse Beziehung zu der Organisation, mit der die Adresse verbunden ist."
 
-#:IFC.xml:49136
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgekurve"
+#:IFC.xml:134
+msgid "IfcAddress_OfPerson"
+msgstr "OfPerson"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "Ein [[IfcEdgeCurve]] definiert zwei Punkte, die topologisch verbunden sind, einschließlich der geometrischen Darstellung der Verbindung. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Kante zu schneiden. Es besteht keine Notwendigkeit, den Rand geometrisch zu schneiden, um mit der Topologie übereinzustimmen. EXAMPLE Abbildung 1 illustriert ein Beispiel, in dem die Kantengeometrie durch eine unbegrenzte Kurve gegeben wird, hier [[IfcCircle]]. Die Grenzen werden von EdgeStart und EdgeEnd bereitgestellt, die topologische Richtung des [[IfcEdgeCurve]] wendet sich gegen die Richtung des [[IfcCircle]] von SameSense FALSE. Abbildung 1 Kantenkurve . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenkurve ist ein spezieller Subtyp der Kante, der seine Geometrie vollständig definiert hat. Die Geometrie wird durch die Verknüpfung der Kante mit einer Kurve definiert, die unbegrenzt sein kann. Da die topologischen und geometrischen Richtungen abgelehnt werden können, mit einem Indikator identifiziert wird, ob Kanten- und Kurvenrichtung übereinstimmen oder dagegen sind. Der boolesche Wert gibt an, ob die Kurvenrichtung mit TRUE übereinstimmt oder in der entgegengesetzten Richtung FALSE zur Kantenrichtung ist. Jede Geometrie, die mit den Eckpunkten der Kante verbunden ist, entspricht der Kantengeometrie. Mehrere Kanten können die gleiche Kurve referenzieren. HINWEISE Entität, angepasst von Kantenkurve in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne der Kantenkurve ist formell als Domäne ihrer Kantengeometrie definiert, wie sie von den Eckpunkten beschnitten wird. Diese Domäne enthält nicht die Eckpunkte. 2. Eine Kantenkurve hat nicht Null endlichen Umfang. 3. Eine Kantenkurve ist ein Krümmer. 4. Eine Kantenkurve ist arktisch verbunden. 5. Der Kantenstart ist kein Teil der Kantendomäne. 6. Das Kantenende ist kein Teil der Kantendomäne. 7. Wirbelgeometrie soll mit der Kantengeometrie übereinstimmen."
+msgid "IfcAddress_OfPerson_DEFINITION"
+msgstr "Die inverse Beziehung zu der Person, mit der die Adresse verbunden ist."
 
-#:IFC.xml:12197
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "Kantengeometrie"
+#:IFC.xml:103
+msgid "IfcAddress_Description"
+msgstr "Beschreibung"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "Die Kurve, die die Form und räumliche Position der Kante definiert. Diese Kurve kann unbegrenzt sein und wird implizit durch die Eckpunkte der Kante, die die Randdomäne definiert, getrimmt. Mehrere Kanten können die gleiche Kurve referenzieren."
+msgid "IfcAddress_Description_DEFINITION"
+msgstr "Text, der sich auf die Art der Adresse bezieht."
 
-#:IFC.xml:49137
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:108
+msgid "IfcAddress_Purpose"
+msgstr "Zweck"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Dieses logische Flag gibt an, ob TRUE oder nicht FALSE die Sinne der Kante und die Kurve der Kantengeometrie gleich sind. Der Sinn für eine Kante ist vom Kantenstartpunkt bis zum Kantenpunkt der Sinn für eine Kurve in Richtung der Erhöhung des Parameters."
+msgid "IfcAddress_Purpose_DEFINITION"
+msgstr "Identifiziert die logische Position der Adresse."
 
-#:IFC.xml:49145
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:113
+msgid "IfcAddress_UserDefinedPurpose"
+msgstr "Benutzerdefinierter Zweck"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenschleife ist eine Schleife mit einem nicht null-weiten Ausmaß. Es ist ein Pfad, in dem die Anfangs- und Endpunkte gleich sind. Ihre Domäne, falls vorhanden, ist eine geschlossene Kurve. Eine Kantenschleife kann sich überlappen. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. Die Gattung des [[IfcEdgeLoop]] soll 1 oder größer sein. 2. Die Euler-Formel soll eine befriedigende Anzahl der Genen der Ränder 1 3 sein. Es darf kein Rand mehr als einmal von demselben [[IfcEdgeLoop]] mit demselben Sinn referenziert werden. Zu diesem Zweck wird eine Kante, die keine Orientierung ist, mit dem Sinn TRUE als referenziert."
+msgid "IfcAddress_UserDefinedPurpose_DEFINITION"
+msgstr "Ermöglicht die Angabe des benutzerspezifischen Zwecks der Adresse jenseits der Aufzählungswerte, die von Purpose Attribut des Typs [[IfcAddressTypeEnum]] angegeben werden. Wenn ein Wert für das Attribut UserDefinedPurpose zur Verfügung gestellt wird, soll parallel dazu das Attribut NUTZERDEFINED aufzählen."
 
-#:IFC.xml:49153
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Kantenliste"
+#:IFC.xml:148
+msgid "IfcAddressTypeEnum"
+msgstr "IfcAddressTypeEnum"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "Eine Liste von orientierten Randeinheiten, die zu diesem Pfad zusammengefasst werden."
+msgid "IfcAddressTypeEnum_DEFINITION"
+msgstr "Diese Aufzählung identifiziert den logischen Ort der Adresse. HOME A home Adresse. DISTRIBUTIONPOINT A post distribution point addresse."
 
-#:IFC.xml:49146
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ne"
+#:IFC.xml:149
+msgid "IfcAddressTypeEnum_DISTRIBUTIONPOINT"
+msgstr "DISTRIBUTIONPUNKT"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "Die Anzahl der Elemente in der Kantenliste."
+msgid "IfcAddressTypeEnum_DISTRIBUTIONPOINT_DEFINITION"
+msgstr "Eine Postverteilungspunkt-Adresse."
 
-#:IFC.xml:49165
-msgid "IfcFace"
-msgstr "IfcFace"
+#:IFC.xml:150
+msgid "IfcAddressTypeEnum_HOME"
+msgstr "HOME"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+msgid "IfcAddressTypeEnum_HOME_DEFINITION"
+msgstr "Eine Home-Adresse."
 
-#:IFC.xml:27099
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:151
+msgid "IfcAddressTypeEnum_OFFICE"
+msgstr "OFFIZIEL"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcAddressTypeEnum_OFFICE_DEFINITION"
+msgstr "Eine Büroadresse."
 
-#:IFC.xml:49168
-msgid "IfcFace_Bounds"
-msgstr "Grenzen"
+#:IFC.xml:152
+msgid "IfcAddressTypeEnum_SITE"
+msgstr "SEITE"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Grenzen des Gesichts."
+msgid "IfcAddressTypeEnum_SITE_DEFINITION"
+msgstr "Eine Site-Adresse."
 
-#:IFC.xml:49180
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:153
+msgid "IfcAddressTypeEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face bound ist eine Schleife, die zum Bewegen eines Gesichts verwendet werden soll. HINWEISE Entität, angepasst an Gesichtsbindung definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+msgid "IfcAddressTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Ein benutzerdefinierter Adresstyp, der angegeben werden soll."
 
-#:IFC.xml:49188
-msgid "IfcFaceBound_Bound"
-msgstr "Verbunden"
+#:IFC.xml:155
+msgid "IfcOrganization"
+msgstr "Unternehmen"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Die Schleife, die als Gesichtsgrenze verwendet wird."
+msgid "IfcOrganization_DEFINITION"
+msgstr "Eine benannte und strukturierte Gruppierung mit einer Corporate Identity. HINWEIS Die Beziehungen zwischen [[IfcOrganization]] s, wie zwischen den Abteilungen innerhalb eines Unternehmens, können mit der objektivierten Beziehung [[IfcOrganizationRelationship]] ausgedrückt werden. HISTORY New entity in IFC1.5.1. .change ifc2x4 IFC4 CHANGE Attribut Id umbenannt in Identifikation ."
 
-#:IFC.xml:49181
-msgid "IfcFaceBound_Orientation"
-msgstr "Ausrichtung"
+#:IFC.xml:41
+msgid "IfcOrganization_Roles"
+msgstr "Rollen"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dies zeigt an, ob TRUE oder nicht FALSE die Schleife den gleichen Sinn hat, wenn sie verwendet wird, um das Gesicht zu binden wie bei der ersten Definition. Wenn Sinn FALSE ist, werden die Sinne aller Komponentenkanten implizit umkehrt, wenn sie im Gesicht verwendet werden."
+msgid "IfcOrganization_Roles_DEFINITION"
+msgstr "Rollen gespielt von der Organisation."
 
-#:IFC.xml:49200
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+#:IFC.xml:120
+msgid "IfcOrganization_Addresses"
+msgstr "Adressen"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carry the additional semantics of defining a outer boundary on the face. Es darf nicht mehr als eine Grenze eines Gesichts dieser Art sein. HINWEISE Entität, angepasst an die Oberfläche nach ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+msgid "IfcOrganization_Addresses_DEFINITION"
+msgstr "Post- und Telekom-Adressen einer Organisation."
 
-#:IFC.xml:49203
-msgid "IfcFaceSurface"
-msgstr "IfcFaceOberfläche"
+#:IFC.xml:187
+msgid "IfcOrganization_Relates"
+msgstr "Verwandte"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "Die [[IfcFaceSurface]] definiert die zugrunde liegende Geometrie der zugehörigen Oberfläche auf dem Gesicht. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Oberfläche zu schneiden. Es besteht keine Notwendigkeit, die Oberfläche geometrisch an die Topologie anzupassen. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Oberflächenoberfläche ist ein Untertyp von Gesicht, in dem die Geometrie durch eine zugehörige Oberfläche definiert wird. Der Teil der Oberfläche, der vom Gesicht verwendet wird, soll als offene Scheibe einbettbar sein, eventuell mit Löchern. Allerdings muss die Vereinigung des Gesichts mit den Kanten und den Eckpunkten seiner Randschleifen nicht in die Ebene eingebettet sein. Es kann zum Beispiel eine ganze Sphäre oder einen ganzen Torus umfassen. Da sowohl eine Fläche als auch eine geometrische Oberfläche normale Richtungen definiert haben, ein BOOLEAN Flag wird verwendet, um anzugeben, ob die Oberfläche normal mit TRUE übereinstimmt oder ob FALSE die normale Richtung des Gesichts ablehnt. Die Geometrie, die mit jeder Komponente der Schleifen des Gesichts verbunden ist, soll mit der Oberflächengeometrie übereinstimmen. in dem Sinne, dass die Domänen aller Scheitelpunkte und Kantenkurven in der Gesichtsgeometrie enthalten sind. Eine Oberfläche kann von mehreren Flächen referenziert werden. HISTORY New entity in IFC2x .spec head Informal Propositions 1. Die Domäne der Oberfläche ist formell als Domäne ihrer Gesichtsgeometrie definiert, wie sie von den Schleifen beschnitten wird, diese Domain enthält nicht die Grenzschleifen. 2. Eine Oberfläche hat nicht null Finite Ausmaß. 3. Eine Oberfläche ist ein Krümmer. 4. Eine Flächenoberfläche ist in arktischer Hinsicht verbunden. 5. Eine Oberflächenoberfläche hat die Gattung 0. 6. Die Schleifen sind nicht Teil der Gesichtsdomäne 7. Die Schleifengeometrie soll mit der Gesichtsgeometrie übereinstimmen. Dies bedeutet, dass alle Kantenkurven oder Scheitelpunkte, die bei der Definition der Schleifen an der Oberfläche verwendet werden, auf der Gesichtsgeometrie liegen sollen. 8. Die Schleifen des Gesichts werden nicht durchschneiden."
+msgid "IfcOrganization_Relates_DEFINITION"
+msgstr "Die inverse Beziehung für die Beziehungsorganisation von [[IfcOrganizationRelationship]]."
 
-#:IFC.xml:13225
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Gesichtsfläche"
+#:IFC.xml:201
+msgid "IfcOrganization_IsRelatedBy"
+msgstr "IsRelatedBy"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "Die Oberfläche, die die innere Form des Gesichts definiert. Die Domäne des Gesichts wird durch diese Oberfläche und die Begrenzungsschleifen in dem geerbten Attribut SELF FaceBounds definiert."
+msgid "IfcOrganization_IsRelatedBy_DEFINITION"
+msgstr "Die inverse Beziehung für die Beziehung verwandte Organisationen von [[IfcOrganizationRelationship]]."
 
-#:IFC.xml:49204
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:215
+msgid "IfcOrganization_Engages"
+msgstr "Engpässe"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Diese Flagge zeigt an, ob der Sinn der normalen Oberfläche mit TRUE übereinstimmt, oder ist gegen FALSE , den Sinn der topologischen normal auf das Gesicht."
+msgid "IfcOrganization_Engages_DEFINITION"
+msgstr "Inverse Beziehung zu [[IfcPersonAndOrganization]] Beziehungen, in denen [[IfcOrganization]] involviert ist."
 
-#:IFC.xml:49212
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:156
+msgid "IfcOrganization_Description"
+msgstr "Beschreibung"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Schleife ist ein topologisches Gebilde, das aus einem einzigen Scheitel gebaut wurde, oder durch die Verbindung von verbundenen Kanten oder linearen Segmenten, die am selben Scheitelpunkt beginnen und enden. Es wird in der Regel verwendet, um ein Gesicht auf einer Oberfläche zu binden. Eine Schleife hat eine Dimensionalität von 0 oder 1. Die Domäne einer 0 dimensionalen Schleife ist ein einzelner Punkt. Die Domäne einer 1-dimensionalen Schleife ist eine verbundene, orientierte Kurve, muss aber nicht vielfältig sein. Da die Schleife ein Kreis ist, ist die Position des Anfangspunktes willkürlich. Die Domäne der Schleife enthält ihre Grenzen, ein 0 <unk> . Eine Schleife wird durch einen einzelnen Scheitel oder durch eine geordnete Sammlung von orientierten Kanten oder durch eine geordnete Punktesammlung repräsentiert. Eine Schleife ist ein Diagramm, so M und die Graphen G l können durch den Graph Traversal Algorithmus bestimmt werden. Seit M 1, die Euler Gleichung 1 reduziert in diesem Fall auf Bild .. .. .. Zahlen ifcloop math1. wenn V und E l sind die Anzahl der eindeutigen Knoten und orientiert Kanten in der Schleife und G l ist die Gattung der Schleife. HINWEISE Entität, angepasst von Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Eine Schleife hat einen endlichen Umfang. 2. Eine Schleife beschreibt eine geschlossene topologische Kurve mit zufälligen Anfangs- und Endpunkten."
+msgid "IfcOrganization_Description_DEFINITION"
+msgstr "Text, der sich auf die Natur der Organisation bezieht."
 
-#:IFC.xml:49215
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail ALoop"
+#:IFC.xml:161
+msgid "IfcOrganization_Identification"
+msgstr "Identifikation"
 
-#:IFC.xml:49223
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+msgid "IfcOrganization_Identification_DEFINITION"
+msgstr "Identifizierung der Organisation."
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Seine Domäne ist, wenn auch gegenwärtig, eine endliche, verbundene, zweimalige mit Grenze, aber nicht eine geschlossene Oberfläche. Man kann sie als geschlossene Schale mit einem oder mehreren Löchern in der Schale betrachten. Die Domäne einer offenen Shell erfüllt 0 <unk> 1. Eine offene Shell ist funktionell allgemeiner als ein Gesicht, da ihre Domäne Griffe haben kann. Die Shell wird durch eine Sammlung von Gesichtern definiert, die orientiert sein können. Der Gesichtssinn nach Berücksichtigung der Orientierung stimmt mit der unten definierten Shell überein. Die Orientierung kann direkt als BOOLEAN-Attribut eines orientierten Gesichts geliefert werden oder TRUE standardmäßig sein, wenn das Shell-Mitglied ein Gesicht ohne Orientierungsmerkmal ist. Die folgenden kombinatorischen Beschränkungen für offene Shells und geometrische Einschränkungen ihrer Domänen sind entworfen, zusammen mit den informellen Anträgen, um sicherzustellen, dass jede Domäne, die mit einer offenen Shell verbunden sind, ein Orientierungsmanöver ist. Jede Gesichtsreferenz soll einmalig sein, eine offene Shell soll mindestens ein Gesicht haben. Ein bestimmtes Gesicht kann in mehr als einer offenen Shell existieren. Die Grenze einer offenen Shell besteht aus den Kanten, auf die nur einmal die Gesichtsgrenzschleifen ihrer Gesichter verweisen, zusammen mit allen ihren Ecken. Die Domäne einer offenen Muschel, wenn vorhanden, enthält alle Kanten und Eckpunkte ihrer Gesichter. HINWEIS: Dies unterscheidet sich leicht von der Definition einer Gesichterdomäne, die keine ihrer Grenzen enthält. Zum Beispiel kann eine Gesichts-Domain ein isoliertes Punkt- oder Liniensegment ausschließen. Eine offene Shell-Domain darf dies nicht tun. Siehe den Algorithmus für die Berechnung unten. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Jede Kante soll genau zweimal von den Gesichtsgrenzen des Gesichts referenziert werden. Jede orientierte Kante soll einzigartig sein. 3. Kein Rand soll von mehr als zwei Gesichtern referenziert werden. 4. Unterschiedliche Gesichter der Shell kreuzen sich nicht, sondern können Kanten oder Knoten teilen. 5. Unterschiedliche Kanten schneiden sich nicht ab, sondern können die Eckpunkte teilen. 6. Die Schleifen der Schale sind keine Mischung aus Poly-Schleifen und anderen Schleifentypen. Beachten Sie, dass dies angegeben ist, da nur Poly-Schleife als Gesichterkennung definiert ist. Die geschlossene Schale soll ein in arktischer Richtung angeordneter 2 Krümmer sein."
+#:IFC.xml:166
+msgid "IfcOrganization_Name"
+msgstr "Name"
 
-#:IFC.xml:49227
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedRand"
+msgid "IfcOrganization_Name_DEFINITION"
+msgstr "Das Wort oder eine Gruppe von Wörtern, von denen die Organisation angesprochen wird."
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "Die [[IfcOrientedEdge]] repräsentiert ein [[IfcEdge]] mit einem angewendeten Orientierungszeichen. Es erlaubt die Wiederverwendung des gleichen [[IfcEdge]], wenn es genau zweimal durchquert wird, einmal vorwärts und einmal rückwärts. HINWEIS: Der Sinn des normalen [[IfcFace]] wird ausschließlich von den Kanten bestimmt. Wenn alle Kanten des Gesichts entgegen dem Uhrzeigersinn nach den Kantenausrichtungen verbunden sind, zeigt das Gesicht normal nach außen. Die Normale der zugrunde liegenden [[IfcFaceSurface]] repräsentiert die Geometrie des Gesichts hierfür, hat keine Relevanz. Der Zweck des [[IfcFaceSurface]]. ameSense Attribut ist es, zusätzliche Informationen zu Überprüfungszwecken zu geben. SameSense TRUE bedeutet, dass die Oberfläche normal und das Gesicht normal sind die gleichen, SameSense FALSE bedeutet, dass sie in entgegengesetzter Richtung sind. Der wiederverwendete Rand mit einer geometrischen Darstellung als [[IfcEdgeCurve]] definiert die Kante im 3D-Koordinatenraum. In einigen Fällen, insbesondere bei der Verwendung von elementaren oder gefegten Oberflächen, besteht die Gefahr einer ungenauen Kartierung des 3D-x, y, z [[IfcEdgeCurve]] auf die angrenzenden Oberflächen, um die Grenzen dieser Oberflächen zu bestimmen. Die optionale CurveOnSurface definiert den 2D u, v Rand innerhalb des parametrischen Raumes der Oberfläche. Es könnte verwendet werden, um die Richtigkeit der Zuordnung des 3D [[IfcEdgeCurve]] auf dieser Oberfläche zu ermitteln. EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die KurveOnSurface zusätzlich zur Kurvengeometrie der [[IfcEdgeCurve]] zur Verfügung gestellt wird. Abbildung 1 Kurve auf Oberflächendarstellung eines [[IfcOrientedEdge]] . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine orientierte Kante ist ein Rand aus einer anderen Kante konstruiert und enthält ein BOOLEAN-Richtungsflagge, um anzugeben, ob die Ausrichtung der konstruierten Kante mit der Ausrichtung der ursprünglichen Kante übereinstimmt. Außer vielleicht Orientierung, entspricht die Ausrichtung der Kante der ursprünglichen Kante. Eine gängige Praxis ist solide Modellierungssysteme ist eine Entität, die die Verwendung oder Durchquerung einer Kante darstellt. Diese Benutzungseinheit repräsentiert ausdrücklich die Anforderung in einem vielseitigen Festkörper, dass jede Kante genau zweimal durchquert werden muss, einmal in jede Richtung. Die Einsatzfunktionalität wird durch die kantenorientierte Subtyp-Kante zur Verfügung gestellt: NOTE Entity angepasst an die Ausrichtung von ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Das Attribut CurveOnSurface wurde hinzugefügt."
+#:IFC.xml:229
+msgid "IfcOrganizationRelationship"
+msgstr "IfcOrganizations-Beziehung"
 
-#:IFC.xml:49112
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Kantenelement"
+msgid "IfcOrganizationRelationship_DEFINITION"
+msgstr "Die [[IfcOrganizationRelationship]] schafft eine Verbindung zwischen einer verbundenen Organisation und einer oder mehreren verbundenen Organisationen. HINWEISE Entität, angepasst von Organisationsbeziehungen, die in ISO 10303 41 definiert sind. GESCHICHTE Neue Entität in IFC2x .change ifc2x4 IFC4 CHANGE Attributes Name und Beschreibung zum neuen Supertyp [[IfcResourceLevelRelationship]] ."
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Kantenentität verwendet, um diesen orientierten Rand zu konstruieren."
+#:IFC.xml:187
+msgid "IfcOrganizationRelationship_RelatingOrganization"
+msgstr "Beziehungsorganisation"
 
-#:IFC.xml:49228
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdgeEnd"
+msgid "IfcOrganizationRelationship_RelatingOrganization_DEFINITION"
+msgstr "Organisation, die den Zusammenhang zwischen den Organisationen darstellt."
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+#:IFC.xml:201
+msgid "IfcOrganizationRelationship_RelatedOrganizations"
+msgstr "Zugehörige Organisationen"
 
-#:IFC.xml:49232
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdgeStart"
+msgid "IfcOrganizationRelationship_RelatedOrganizations_DEFINITION"
+msgstr "Die anderen, möglicherweise abhängigen Organisationen, die die verwandten Teile der Beziehung zwischen Organisationen sind."
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+#:IFC.xml:232
+msgid "IfcPerson"
+msgstr "Person und Unternehmen"
 
-#:IFC.xml:49236
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Ausrichtung"
+msgid "IfcPerson_DEFINITION"
+msgstr "Diese Entität repräsentiert ein individuelles Mensch. Obwohl die Absicht des IFC-Modells darin besteht, als Spezifikation für Datenaustausch und Datenaustausch zu fungieren, eine IFC-Datei kann in einigen Fällen als eine Datenbank betrachtet werden, die die Identifizierung einer bestimmten Person gemäß den Bestimmungen dieser Gesetzgebung ermöglicht. Benutzer sollten sich über die Einschränkungen der Rechtsvorschriften im Klaren sein, die an den Orten gelten könnten, an denen IFC-Dateien verwendet werden. HINWEISE Entität, angepasst von Person nach ISO 10303 41. HISTORY New entity in IFC1.5.1. .change ifc2x4 IFC4 CHANGE Attribut Id umbenannt in Identification . WHERE Regel entspannt zu zulassen, dass keine Namen angegeben werden, wenn die Identifikation angegeben wird."
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, Wenn TRUE die verwendete topologische Ausrichtung mit der Orientierung vom Startpunkt bis zum Endpunkt des Kantenelementes übereinstimmt. Falls FALSE andernfalls der Fall ist."
+#:IFC.xml:53
+msgid "IfcPerson_Roles"
+msgstr "Rollen"
 
-#:IFC.xml:49255
-msgid "IfcPath"
-msgstr "IfcPath"
+msgid "IfcPerson_Roles_DEFINITION"
+msgstr "Rollen gespielt von der Person."
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Ein Pfad ist ein topologisches Gebilde, das aus einer bestellten Sammlung von orientierten Kanten besteht. so dass der Kantenpunkt jeder Kante mit dem Kantenende seines Vorgängers übereinstimmt. Der Pfad wird vom Kantenstart der ersten Kante bis zum Kantenende der letzten Kante sortiert. Der BOOLEAN-Wertesinn in der Ausrichtung zeigt an, ob die Kantenrichtung mit der Richtung des Pfades TRUE übereinstimmt oder die entgegengesetzte Richtung FALSE ist. Eine einzelne Kante kann nur einmal durch einen individuellen Pfad referenziert werden. Eine Kante kann unabhängig von einem Pfad existieren, NOTE Entität, angepasst an den Pfad ISO 10303 42. HISTORY Neue Entität in IFC2.0 .spec Kopf Informelle Vorschläge 1. Ein Pfad hat Dimensionalität 1. 2. Ein Pfad ist arktisch verbunden. 3. Die Kanten des Pfades überschneiden, außer bei den gängigen Ecken. 4. Ein Pfad hat einen endlichen, nicht null-weiten Umfang."
+#:IFC.xml:134
+msgid "IfcPerson_Addresses"
+msgstr "Adressen"
 
-#:IFC.xml:49243
-msgid "IfcPath_EdgeList"
-msgstr "Kantenliste"
+msgid "IfcPerson_Addresses_DEFINITION"
+msgstr "Post- und Telekommunikationsadressen einer Person."
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "Die Liste der Orientierungskanten, die zu diesem Pfad verkettet werden."
+#:IFC.xml:291
+msgid "IfcPerson_EngagedIn"
+msgstr "Beteiligt"
 
-#:IFC.xml:49258
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+msgid "IfcPerson_EngagedIn_DEFINITION"
+msgstr "Die inverse Beziehung zu [[IfcPersonAndOrganization]] Beziehungen, in denen [[IfcPerson]] tätig ist."
 
-#:IFC.xml:49266
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:233
+msgid "IfcPerson_FamilyName"
+msgstr "FamilyName"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Poly-Schleife ist eine Schleife mit geraden Kanten, die eine planare Region im Weltraum begrenzen. Eine Poly-Schleife ist eine Schleife der Gattung 1, bei der die Schleife durch eine geordnete koplanare Sammlung von Punkten repräsentiert wird, die die Eckpunkte der Schleife bilden. Die Schleife besteht aus geraden Liniensegmenten, die einen Punkt in der Sammlung zum erfolgreichen Punkt der Sammlung verbinden. Das Schlussteil ist vom letzten bis zum ersten Punkt der Sammlung. Die Richtung der Schleife ist in die Richtung der Liniensegmente. Eine Poly-Schleife soll den folgenden topologischen Zwängen entsprechen, die die Schleife hat die Gattung eins. die folgende Gleichung soll zufrieden sein Bild .. .. .. .. Zahlen ifcpolyloop math1. , wenn das [[IfcPolyLoop]] immer geschlossen ist und das letzte Segment aus dem letzten [[IfcCartesianPoint]] in der Liste der Polygon s zum ersten [[IfcCartesianPoint]] stammt. Daher soll der erste Punkt nicht am Ende der Liste wiederholt werden, auch nicht durch Verweis auf die selbe Instanz noch eine zusätzliche Instanz von [[IfcCartesianPoint]] zu verwenden, die die Koordinaten als ersten Punkt hat. HINWEIS Diese Einheit besteht in erster Linie zur Erleichterung der effizienten Kommunikation von facettierten B-Rep-Modellen. HINWEISE Entität, angepasst aus Poly-Schleife definiert in ISO 10303 42. HISTORY New Entity in IFC1. .spec Kopf Informelle Vorschläge 1. Alle Punkte im Polygon, die die Poly-Schleife definieren, sind Coplanar. 2. Der erste und letzte Polygon soll sich nach Wert unterscheiden."
+msgid "IfcPerson_FamilyName_DEFINITION"
+msgstr "Der Name, unter dem die familiäre Identität der Person anerkannt werden kann. HINWEIS: Abhängig von geografischer Lage und Kultur kann der Familienname entweder als Vor- oder Letztkomponente eines Namens erscheinen."
 
-#:IFC.xml:11814
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+#:IFC.xml:238
+msgid "IfcPerson_GivenName"
+msgstr "Name geben"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Liste der Punkte, die die Schleife definieren. Es gibt keine wiederholten Punkte in der Liste."
+msgid "IfcPerson_GivenName_DEFINITION"
+msgstr "Der Name, unter dem eine Person in einer Familie bekannt ist und durch den sie bekannt ist. HINWEIS: Abhängig von der geographischen Lage und Kultur kann der Vorname entweder als Vor- oder Letztkomponente eines Namens erscheinen."
 
-#:IFC.xml:49269
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:243
+msgid "IfcPerson_Identification"
+msgstr "Identifikation"
 
-#:IFC.xml:49270
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+msgid "IfcPerson_Identification_DEFINITION"
+msgstr "Identifizierung der Person."
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A subedge ist eine Kante, deren Domain ist ein angeschlossener Teil der Domäne einer bestehenden Kante. Die topologischen Zwänge auf einem Untergrund sind identisch mit denen an einer Kante. HISTORY New Entity in IFC2x2 . pec Kopf Informelle Vorschläge 1. Die Domäne der Unterseite ist formell definiert als die Domäne des übergeordneten Randes, wie durch den subedge getrimmt starten Scheitelpunkt und subbedge End-Scheitelpunkt. (2) Der Startpunkt und der Endpunkt sollen innerhalb der Vereinigung der Domänen der Eckpunkte des Mutterrandes und der Domäne des Mutterrandes liegen."
+#:IFC.xml:248
+msgid "IfcPerson_MiddleNames"
+msgstr "Mittelnamen"
 
-#:IFC.xml:49124
-msgid "IfcSubedge_ParentEdge"
-msgstr "Elternkante"
+msgid "IfcPerson_MiddleNames_DEFINITION"
+msgstr "Zusätzliche Namen für eine Person, die ihre Identifikation mit anderen Personen ermöglicht, die die gleiche oder ähnliche Familie und die angegebenen Namen haben. HINWEISE Mittlere Namen werden normalerweise nicht in der vertrauten Kommunikation verwendet, sondern können bei Bedarf als zusätzliche Identifikation einer bestimmten Person geltend gemacht werden. Sie können besonders nützlich sein, wenn die betreffende Person einen Familiennamen hat, der häufig in der geographischen Region vorkommt."
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "Die Kante oder das Subedge, die das Subed enthält."
+#:IFC.xml:253
+msgid "IfcPerson_PrefixTitles"
+msgstr "Präfixtitel"
 
-#:IFC.xml:49273
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+msgid "IfcPerson_PrefixTitles_DEFINITION"
+msgstr "Das Wort oder Gruppe von Wörtern, die die Person s sozialen oder beruflichen Status und erscheinen vor seinem Namen."
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Die topologische Repräsentation ist der Supertyp für alle topologischen Repräsentation Elemente in der Geometrie. HINWEISE Entität, angepasst von topologischen Repräsentation Element definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.5"
+#:IFC.xml:258
+msgid "IfcPerson_SuffixTitles"
+msgstr "SuffixTitel"
 
-#:IFC.xml:49276
-msgid "IfcVertex"
-msgstr "IfcVertex"
+msgid "IfcPerson_SuffixTitles_DEFINITION"
+msgstr "Das Wort oder Gruppe von Wörtern, die die Person s sozialen oder beruflichen Status und erscheinen nach seinem Namen."
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A vertex ist das topologische Konstrukt entsprechend einem Punkt. Es hat Dimensionalität 0 und Umfang 0. Die Domäne eines Scheitelpunktes ist, wenn vorhanden, ein Punkt in m dimensionalen realen Raum R M. Dies wird durch den Scheitelpunkt Untertyp repräsentiert. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Scheitel hat Dimensionalität 0. Dies ist eine grundlegende Eigenschaft des Scheitelpunkts. 2. Der Umfang eines Scheitelpunkts ist auf Null definiert."
+#:IFC.xml:317
+msgid "IfcPersonAndOrganization"
+msgstr "Person und Unternehmen"
 
-#:IFC.xml:49291
-msgid "IfcVertexLoop"
-msgstr "IfcVertexschleife"
+msgid "IfcPersonAndOrganization_DEFINITION"
+msgstr "Diese Entität repräsentiert eine Person, die im Namen einer Organisation handelt. NOTE Entität, angepasst von Person und Organisation definiert in ISO 10303 41. HISTORY New entity in IFC1.5.1."
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Eine Vertex-Schleife ist eine Schleife aus Null Gattung, die aus einem einzelnen Scheitelpunkt besteht. Ein Scheitelpunkt kann unabhängig von einer Vertex-Schleife existieren. Die topologischen Daten sollen die folgende Einschränkung Bild .. .. .. Figuren ifcvertexloop math1.gif NOTE Entity adaptiert aus Vertex Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x2. .spec Kopf Informelle Vorschläge 1. Eine Kegelschleife hat Null Umfang und Dimensionalität. 2. Die Kegelschleife hat die Gattung 0."
+#:IFC.xml:65
+msgid "IfcPersonAndOrganization_Roles"
+msgstr "Rollen"
 
-#:IFC.xml:49279
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "Loop-Vertex"
+msgid "IfcPersonAndOrganization_Roles_DEFINITION"
+msgstr "Rollen, die von der Person im Rahmen einer Organisation gespielt werden. Diese können sich von den Rollen in ThePerson.Roles unterscheiden, die ohne organisatorischen Kontext geltend gemacht werden können."
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "Der Vertex, der die gesamte Schleife definiert."
+#:IFC.xml:215
+msgid "IfcPersonAndOrganization_TheOrganization"
+msgstr "Die Organisation"
 
-#:IFC.xml:49294
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+msgid "IfcPersonAndOrganization_TheOrganization_DEFINITION"
+msgstr "Die Organisation, mit der die Person verwandt ist."
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein Scheitelpunkt ist ein Scheitelpunkt, der seine Geometrie als Punkt definiert hat. HINWEISE Entität, angepasst vom Scheitelpunkt nach ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne des Scheitelpunkts ist formell als Domäne seines Scheitelpunktes definiert."
+#:IFC.xml:291
+msgid "IfcPersonAndOrganization_ThePerson"
+msgstr "ThePerson"
 
-#:IFC.xml:12785
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometrie"
+msgid "IfcPersonAndOrganization_ThePerson_DEFINITION"
+msgstr "Die Person, die mit der Organisation in Verbindung steht."
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "Der geometrische Punkt, der die Position im geometrischen Raum des Scheitelpunkts definiert."
+#:IFC.xml:345
+msgid "IfcRoleEnum"
+msgstr "IfcRoleEnum"
+
+msgid "IfcRoleEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert Rollen, die von einem Schauspieler gespielt werden können. Artikel SUPPLIER MANUFACTURER CONTRACTOR SUBCONTRACTOR ARCHITECT STRUCTURALENGINEER COSTENGINEER CLIENT BUILDINGOWNER BUILDINGOPERATOR MECHANICALENGINEER ELECTRICALENGINEER PROJECTMANAGER FACILITIESMANAGER CIVILENGINEER COMMISSIONINGENGINEER OWNER CONSULTANT CONSTRUCTIONMANAGER FIELDCONSTRUCTIONMANAGER RESELLER USERDEFINED Benutzer definiert Wert zur Verfügung gestellt werden."
+
+#:IFC.xml:346
+msgid "IfcRoleEnum_ARCHITECT"
+msgstr "ARCHITEKT"
+
+msgid "IfcRoleEnum_ARCHITECT_DEFINITION"
+msgstr "ARCHITEKT"
+
+#:IFC.xml:347
+msgid "IfcRoleEnum_BUILDINGOPERATOR"
+msgstr "BAUWETTOPERATOR"
+
+msgid "IfcRoleEnum_BUILDINGOPERATOR_DEFINITION"
+msgstr "BAUWETTOPERATOR"
+
+#:IFC.xml:348
+msgid "IfcRoleEnum_BUILDINGOWNER"
+msgstr "BUILDINGOWNER"
+
+msgid "IfcRoleEnum_BUILDINGOWNER_DEFINITION"
+msgstr "BUILDINGOWNER"
+
+#:IFC.xml:349
+msgid "IfcRoleEnum_CIVILENGINEER"
+msgstr "ZIVILENGINEER"
+
+msgid "IfcRoleEnum_CIVILENGINEER_DEFINITION"
+msgstr "ZIVILENGINEER"
+
+#:IFC.xml:350
+msgid "IfcRoleEnum_CLIENT"
+msgstr "CLIENT"
+
+msgid "IfcRoleEnum_CLIENT_DEFINITION"
+msgstr "CLIENT"
+
+#:IFC.xml:351
+msgid "IfcRoleEnum_COMMISSIONINGENGINEER"
+msgstr "KOMMISSIONENGINEER"
+
+msgid "IfcRoleEnum_COMMISSIONINGENGINEER_DEFINITION"
+msgstr "KOMMISSIONENGINEER"
+
+#:IFC.xml:352
+msgid "IfcRoleEnum_CONSTRUCTIONMANAGER"
+msgstr "CONSTRUCTIONMANAGER"
+
+msgid "IfcRoleEnum_CONSTRUCTIONMANAGER_DEFINITION"
+msgstr "CONSTRUCTIONMANAGER"
+
+#:IFC.xml:353
+msgid "IfcRoleEnum_CONSULTANT"
+msgstr "INSULTANT"
+
+msgid "IfcRoleEnum_CONSULTANT_DEFINITION"
+msgstr "INSULTANT"
+
+#:IFC.xml:354
+msgid "IfcRoleEnum_CONTRACTOR"
+msgstr "CONTRACTOR"
+
+msgid "IfcRoleEnum_CONTRACTOR_DEFINITION"
+msgstr "CONTRACTOR"
+
+#:IFC.xml:355
+msgid "IfcRoleEnum_COSTENGINEER"
+msgstr "KOSTENLOSER"
+
+msgid "IfcRoleEnum_COSTENGINEER_DEFINITION"
+msgstr "KOSTENLOSER"
+
+#:IFC.xml:356
+msgid "IfcRoleEnum_ELECTRICALENGINEER"
+msgstr "ELECTRICALENGINEER"
+
+msgid "IfcRoleEnum_ELECTRICALENGINEER_DEFINITION"
+msgstr "ELECTRICALENGINEER"
+
+#:IFC.xml:357
+msgid "IfcRoleEnum_ENGINEER"
+msgstr "ENGINEER"
+
+msgid "IfcRoleEnum_ENGINEER_DEFINITION"
+msgstr "ENGINEER"
+
+#:IFC.xml:358
+msgid "IfcRoleEnum_FACILITIESMANAGER"
+msgstr "FAKILITIESMANAGER"
+
+msgid "IfcRoleEnum_FACILITIESMANAGER_DEFINITION"
+msgstr "FAKILITIESMANAGER"
+
+#:IFC.xml:359
+msgid "IfcRoleEnum_FIELDCONSTRUCTIONMANAGER"
+msgstr "FIELDCONSTRUCTIONMANAGER"
+
+msgid "IfcRoleEnum_FIELDCONSTRUCTIONMANAGER_DEFINITION"
+msgstr "FIELDCONSTRUCTIONMANAGER"
+
+#:IFC.xml:360
+msgid "IfcRoleEnum_MANUFACTURER"
+msgstr "MANUFAKTURER"
+
+msgid "IfcRoleEnum_MANUFACTURER_DEFINITION"
+msgstr "MANUFAKTURER"
+
+#:IFC.xml:361
+msgid "IfcRoleEnum_MECHANICALENGINEER"
+msgstr "MECHANISALENGINEER"
+
+msgid "IfcRoleEnum_MECHANICALENGINEER_DEFINITION"
+msgstr "MECHANISALENGINEER"
+
+#:IFC.xml:362
+msgid "IfcRoleEnum_OWNER"
+msgstr "OWNER"
+
+msgid "IfcRoleEnum_OWNER_DEFINITION"
+msgstr "OWNER"
+
+#:IFC.xml:363
+msgid "IfcRoleEnum_PROJECTMANAGER"
+msgstr "PROJEKTMANAGER"
+
+msgid "IfcRoleEnum_PROJECTMANAGER_DEFINITION"
+msgstr "PROJEKTMANAGER"
+
+#:IFC.xml:364
+msgid "IfcRoleEnum_RESELLER"
+msgstr "RESELLER"
+
+msgid "IfcRoleEnum_RESELLER_DEFINITION"
+msgstr "RESELLER"
+
+#:IFC.xml:365
+msgid "IfcRoleEnum_STRUCTURALENGINEER"
+msgstr "STRUKTURALENGINEER"
+
+msgid "IfcRoleEnum_STRUCTURALENGINEER_DEFINITION"
+msgstr "STRUKTURALENGINEER"
+
+#:IFC.xml:366
+msgid "IfcRoleEnum_SUBCONTRACTOR"
+msgstr "SUBCONTRACTOR"
+
+msgid "IfcRoleEnum_SUBCONTRACTOR_DEFINITION"
+msgstr "SUBCONTRACTOR"
+
+#:IFC.xml:367
+msgid "IfcRoleEnum_SUPPLIER"
+msgstr "SUPPLIER"
+
+msgid "IfcRoleEnum_SUPPLIER_DEFINITION"
+msgstr "SUPPLIER"
+
+#:IFC.xml:368
+msgid "IfcRoleEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcRoleEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Wert, der angegeben werden soll."
+
+#:IFC.xml:370
+msgid "IfcTelecomAddress"
+msgstr "IfcTelecomAddress"
+
+msgid "IfcTelecomAddress_DEFINITION"
+msgstr "Diese Einheit ist eine Adresse, an die Telefon, elektronische Post und andere Formen der Telekommunikation adressiert werden sollten. .change ifc2x4 IFC4 CHANGE Attribut MessagingIDs hinzugefügt. Typ des Attributs WWWHomePageURL wurde kompatibel von [[IfcLabel]] zu [[IfcURIReference]] geändert."
+
+#:IFC.xml:371
+msgid "IfcTelecomAddress_ElectronicMailAddresses"
+msgstr "Elektronische Mailadressen"
+
+msgid "IfcTelecomAddress_ElectronicMailAddresses_DEFINITION"
+msgstr "Liste der E-Mail-Adressen, an denen E-Mail-Nachrichten empfangen werden können."
+
+#:IFC.xml:376
+msgid "IfcTelecomAddress_FacsimileNumbers"
+msgstr "FacsimileNumbers"
+
+msgid "IfcTelecomAddress_FacsimileNumbers_DEFINITION"
+msgstr "Liste der Faxnummern, an denen Faxnachrichten empfangen werden können."
+
+#:IFC.xml:381
+msgid "IfcTelecomAddress_MessagingIDs"
+msgstr "Nachrichten-IDs"
+
+msgid "IfcTelecomAddress_MessagingIDs_DEFINITION"
+msgstr "IDs oder Adressen für andere Telekommunikationsmittel, wie zum Beispiel Instant Messaging, Voice over IP oder Dateiübertragungsprotokolle. Das Kommunikationsprotokoll wird durch den URI-Wert mit Schema-Bezeichnungen wie irc , sip , oder ftp angegeben."
+
+#:IFC.xml:386
+msgid "IfcTelecomAddress_PagerNumber"
+msgstr "Seitennummer"
+
+msgid "IfcTelecomAddress_PagerNumber_DEFINITION"
+msgstr "Die pager Nummer, bei der paging Nachrichten empfangen werden können."
+
+#:IFC.xml:391
+msgid "IfcTelecomAddress_TelephoneNumbers"
+msgstr "Telefonnummern"
+
+msgid "IfcTelecomAddress_TelephoneNumbers_DEFINITION"
+msgstr "Die Liste der Telefonnummern, an denen Telefonnachrichten empfangen werden können."
+
+#:IFC.xml:396
+msgid "IfcTelecomAddress_WWWHomePageURL"
+msgstr "WWWHomePageURL"
+
+msgid "IfcTelecomAddress_WWWHomePageURL_DEFINITION"
+msgstr "Die weltweite Web-Adresse, unter der die vorläufige Informationsseite für die Person oder Organisation gefunden werden kann. HINWEISE Informationen im weltweiten Web für eine Person oder Organisation können in eine Anzahl von Seiten und über eine Reihe von Host-Sites aufgeteilt werden alle können miteinander verbunden werden. Es wird davon ausgegangen, dass alle diese Informationen von einer einzelnen Seite aus verwiesen werden können, die als Homepage für diese Person oder Organisation bezeichnet wird."
+
+#:IFC.xml:403
+msgid "Pset_Address"
+msgstr "Pset-Adresse"
+
+#:IFC.xml:404
+msgid "AddressLines"
+msgstr "Adresszeile"
+
+msgid "AddressLines_DEFINITION"
+msgstr "Adresszeile"
+
+#:IFC.xml:409
+msgid "Country"
+msgstr "Land"
+
+msgid "Country_DEFINITION"
+msgstr "Land"
+
+#:IFC.xml:414
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Description_DEFINITION"
+msgstr "Die Beschreibung des Objekts."
+
+#:IFC.xml:419
+msgid "InternalLocation"
+msgstr "Interner Ort"
+
+msgid "InternalLocation_DEFINITION"
+msgstr "Interner Ort"
+
+#:IFC.xml:424
+msgid "PostalBox"
+msgstr "Postfach"
+
+msgid "PostalBox_DEFINITION"
+msgstr "Postfach"
+
+#:IFC.xml:429
+msgid "PostalCode"
+msgstr "PostalCode"
+
+msgid "PostalCode_DEFINITION"
+msgstr "PostalCode"
+
+#:IFC.xml:434
+msgid "Purpose"
+msgstr "Zweck"
+
+msgid "Purpose_DEFINITION"
+msgstr "Verwende in der Regel eine Aufzählung."
+
+#:IFC.xml:439
+msgid "Region"
+msgstr "Region"
+
+msgid "Region_DEFINITION"
+msgstr "Region"
+
+#:IFC.xml:444
+msgid "Town"
+msgstr "Stadt"
+
+msgid "Town_DEFINITION"
+msgstr "Stadt"
+
+#:IFC.xml:449
+msgid "UserDefinedPurpose"
+msgstr "Benutzerdefinierter Zweck"
+
+msgid "UserDefinedPurpose_DEFINITION"
+msgstr "Benutzerdefinierter Zweck"
 
