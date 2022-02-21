@@ -9,975 +9,1340 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcMaterialResource.pot\n"
+"X-Crowdin-File-ID: 52\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:626
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:21678
+msgid "IfcDirectionSenseEnum"
+msgstr "IfcDirectionSenseEnum"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcDirectionSenseEnum_DEFINITION"
+msgstr "[[IfcDirectionSenseEnum]] 表示方向感是正数还是负数朝给定轴。 IFC2x中的新类型。项目方向定义为正值。NEGATIVE 方向定义为负值。"
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspet样式"
+#:IFC.xml:21679
+msgid "IfcDirectionSenseEnum_NEGATIVE"
+msgstr "NEGATIVE"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "如果给出形状，形状部分反映了门形状的部分，这部分是门框。 .变更ifc2x4 IFC4 变迁. 该属性已废弃，不再使用，即其值应为 NIL 。"
+msgid "IfcDirectionSenseEnum_NEGATIVE_DEFINITION"
+msgstr "方向被定义为负。"
 
-#:IFC.xml:627
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "连铸深度："
+#:IFC.xml:21680
+msgid "IfcDirectionSenseEnum_POSITIVE"
+msgstr "帖子"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "垂直于门叶的平面外壳尺寸深度。 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
+msgid "IfcDirectionSenseEnum_POSITIVE_DEFINITION"
+msgstr "方向定义为正数。"
 
-#:IFC.xml:632
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "铸造厚度"
+#:IFC.xml:21682
+msgid "IfcLayerSetDirectionEnum"
+msgstr "IfcLayerSetDirectionEnum"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "门叶平面外壳尺寸的厚度 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
+msgid "IfcLayerSetDirectionEnum_DEFINITION"
+msgstr "[[IfcLayerSetDirectionEnum]] 提供元素几何形轴的标识，表示图层设定厚度方向或图层偏移方向。 IFC2x中的HISTORY 新型。项目AXIS1 通常x轴。AXIS2 通常是y 轴。AXIS3 Usually z轴。"
 
-#:IFC.xml:637
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "线程深度"
+#:IFC.xml:21683
+msgid "IfcLayerSetDirectionEnum_AXIS1"
+msgstr "AXIS1"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "门框深度，垂直于门框平面上。 如果遗漏并给定了线条厚度，则表示可调整的深度。 。一个根据墙壁厚度调整的深度，插入此门风格。"
+msgid "IfcLayerSetDirectionEnum_AXIS1_DEFINITION"
+msgstr "通常是 x 轴。"
 
-#:IFC.xml:642
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:21684
+msgid "IfcLayerSetDirectionEnum_AXIS2"
+msgstr "AXIS2"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "平面垂直于门框门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。"
+msgid "IfcLayerSetDirectionEnum_AXIS2_DEFINITION"
+msgstr "通常是 y 轴。"
 
-#:IFC.xml:647
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "线条厚度"
+#:IFC.xml:21685
+msgid "IfcLayerSetDirectionEnum_AXIS3"
+msgstr "AXIS3"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "如上图所述的门线厚度。如果线索值为0。 零表示一个门，没有一线，在这种情况下，所有其他线照参数都应设置为NIL。 如果线条厚度为 NIL ，则表示值不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
+msgid "IfcLayerSetDirectionEnum_AXIS3_DEFINITION"
+msgstr "通常z轴。"
 
-#:IFC.xml:652
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanel偏移量"
+#:IFC.xml:21687
+msgid "IfcMaterial"
+msgstr "IfcMaterials"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "沿本地位置的x轴测量的衬线和窗口面板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
+msgid "IfcMaterial_DEFINITION"
+msgstr "[[IfcMaterial]] 是一种同质或同质的物质，可用来形成元素物质或其组件。 [[IfcMaterial]] 是材料指定和定义的基本实体，这包括按名称和通过参照外部分类进行分类， 以及物质属性的关联，由子类型[[IfcMaterialProperties]] 界定的各向异性或异性属性。 一个 [[IfcMaterial]] 的实例可能与使用 [[IfcRelAssociatesMaterial]] 关系的元素或元素类型相关联。 转让可以是直接的，作为单一的实质性信息。 或者通过材料层设置了材料配置文件设置了一个材料组成集。[[IfcMaterial]] 也可能有演示信息相关联。 此种演示信息由[[IfcMaterialDefinitionRepresentation]] 提供, 将曲线样式、挂接定义或将渲染信息置于材料的表面颜色。 IFC4 .change ifc2x4 IFC4 变异中的新实体 已添加属性描述和类别。"
 
-#:IFC.xml:657
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanel偏移"
+#:IFC.xml:21729
+msgid "IfcMaterial_HasRepresentation"
+msgstr "急速代表"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "沿当地位置的y轴测量的衬线和门板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
+msgid "IfcMaterial_HasRepresentation_DEFINITION"
+msgstr "在风格定义中提到了为这个材料的共同表示提供演示信息的 [[IfcMaterialDefinitionRepresentation]] 。 .change ifc2x3 IFC2x3 变异已添加反向属性 HasRepresentative."
 
-#:IFC.xml:662
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "阈值深度"
+#:IFC.xml:21779
+msgid "IfcMaterial_RelatesTo"
+msgstr "关联到"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "平面深度垂直于门槛门槛的门叶。只有当门框包括门槛值时才能给出。 如果忽略，给定的阈值厚度则表示可调整的深度，例如： 一种深度，可根据插入此门风格的墙壁厚度进行调整。"
+msgid "IfcMaterial_RelatesTo_DEFINITION"
+msgstr "提及材料关系显示此材料复合有零件或组件。 .更改ifc2x4 IFC4 变异属性。"
 
-#:IFC.xml:667
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "阈值偏移"
+#:IFC.xml:21793
+msgid "IfcMaterial_IsRelatedWith"
+msgstr "与世隔绝的"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "平面垂直于门阈值门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。 仅在门框包含阈值且参数已知的情况下给出。"
+msgid "IfcMaterial_IsRelatedWith_DEFINITION"
+msgstr "系指表明该材料是材料合成物中的一部分或成分的物质关系。 .更改ifc2x4 IFC4 变异属性。 反属性已添加。"
 
-#:IFC.xml:672
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "阈值厚度"
+#:IFC.xml:21688
+msgid "IfcMaterial_Category"
+msgstr "类别"
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "门槛值的厚度如上图所解释。如果门槛值为0。 零表示门槛阈值深度在此情况下必须设置为 NIL。 如果阈值为 NIL ，则表示有关阈值的信息不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
+msgid "IfcMaterial_Category_DEFINITION"
+msgstr "类别组或材料类型的定义，以比属性名称更概括。 EXAMPLE 视图定义可能要求每个材料名称都是唯一的，例如： 对于一个项目所使用的每个混凝土或钢种，在这种情况下，材料类可采用混凝土或钢种的数值。 .更改ifc2x4 IFC4 变迁. 属性已添加到属性列表的末尾。"
 
-#:IFC.xml:677
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+#:IFC.xml:21693
+msgid "IfcMaterial_Description"
+msgstr "描述"
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "如果给定的转化器将门叶与上面的玻璃或窗口分开，则偏移。 抵消额从门口底部提供。"
+msgid "IfcMaterial_Description_DEFINITION"
+msgstr "材料的定义比属性名称或类别更具描述性。 .更改ifc2x4 IFC4 变迁. 属性已添加到属性列表的末尾。"
 
-#:IFC.xml:682
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "反射厚度"
+#:IFC.xml:21698
+msgid "IfcMaterial_Name"
+msgstr "名称"
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "平面厚度与转发器门叶平行，但条件是： 如果设置了 TransomOffset 属性，它会将门叶与上面的玻璃或窗口分开。 如果反光厚度设置为零，反向偏差设置为正长度， 然后将门垂直分割成叶子和无物理框架的转窗区域。 .更改 ifc2x4 IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
+msgid "IfcMaterial_Name_DEFINITION"
+msgstr "材料名称。EXAMPLE A view definition may required Material.Name to indext specified e.g. 水泥或钢钢种，在这种情况下属性材料。 类别可以使用混凝土或钢的值。注材料级在不同视图定义中可能有不同的含义。 a. 结构设计和分析的强度等级，或建筑应用的外观等级。 此外，更详细的物质等级定义也可以通过反向属性Hasternalreferency进行分类。"
 
-#:IFC.xml:701
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
+#:IFC.xml:21807
+msgid "IfcMaterialClassificationRelationship"
+msgstr "IfcMaterialClassificationRelationRelations"
 
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "这一列举界定了各门板运作的基本方式，如图1所示。 数字计数器滑动倾斜折叠循环滚动固定板用户定义的数字计数器操作 图1 门运算由[[IfcDoor]] 的本地位置给出门板的开头方向。 正极轴决定图2所示的方向。 面板方向..............如果有数字功能，fig10.gif 图2 数字面板运算符号取决于国家建筑代码。 这些数字只是用来作为IF2.0中的新枚举的示例来显示。添加了ifc2x4 IFC4 变异分子FIXEDPANEL 未精炼完的补丁项目"
+msgid "IfcMaterialClassificationRelationship_DEFINITION"
+msgstr "[[IfcMaterialClassificationRelationship]] 是指将分类分配给材料的关系，IFC2x中的新实体。 挂机ifc2x4 IFC4 变换器 实体[[IfcMaterialClassificationRelationship]] 自IFC4 以来已废弃，不再使用。使用 [[IfcExternalReferenceRelationship]] 代替。"
 
-#:IFC.xml:702
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
-msgstr "待办事项"
+#:IFC.xml:21705
+msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial"
+msgstr "分类材料"
 
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
-msgstr "待办事项"
+msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial_DEFINITION"
+msgstr "正在进行分类的材料。"
 
-#:IFC.xml:703
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
-msgstr "FIXEDPANEL"
+#:IFC.xml:21808
+msgid "IfcMaterialClassificationRelationship_MaterialClassifications"
+msgstr "材料分类"
 
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
-msgstr "FIXEDPANEL"
+msgid "IfcMaterialClassificationRelationship_MaterialClassifications_DEFINITION"
+msgstr "确定材料类型的材料分类。"
 
-#:IFC.xml:704
-msgid "IfcDoorPanelOperationEnum_FOLDING"
-msgstr "后续活动"
+#:IFC.xml:21814
+msgid "IfcMaterialConstituent"
+msgstr "IfcMaterialConstitution"
 
-msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
-msgstr "后续活动"
+msgid "IfcMaterialConstituent_DEFINITION"
+msgstr "[[IfcMaterialConstituent]] 是一个元素的单个和可识别的部分，由一个或多个元素的若干部分构造，每个元素都有一个单独的材料。 作为名称属性的值的关键字提供了该部件材料成分的关联。 为了确定和区分重要成分所适用的形状的部分，该元素的[[IfcProductDefinitionShape]]必须包括[[IfcShapeAspect]] 的实例， 对其名称属性使用相同的关键字。 注请参阅单个元素上的材料使用定义，在这个元素中，[[IfcMaterialConstituentSet]] 可以申请此种关键字的所需定义或推荐定义为[[IfcMaterialConstituent]]。 同名。IFC4中的新实体"
 
-#:IFC.xml:705
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:21717
+msgid "IfcMaterialConstituent_Material"
+msgstr "材料"
 
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "IfcMaterialConstituent_Material_DEFINITION"
+msgstr "参照构成该组成的材料。"
 
-#:IFC.xml:706
-msgid "IfcDoorPanelOperationEnum_REVOLVING"
-msgstr "正在阅读"
+#:IFC.xml:21837
+msgid "IfcMaterialConstituent_ToMaterialConstituentSet"
+msgstr "ToMaterialConstituentSet"
 
-msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
-msgstr "正在阅读"
+msgid "IfcMaterialConstituent_ToMaterialConstituentSet_DEFINITION"
+msgstr "含有这种材料成分的材料组合。"
 
-#:IFC.xml:707
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:21815
+msgid "IfcMaterialConstituent_Category"
+msgstr "类别"
 
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "ROLLINGUP"
+msgid "IfcMaterialConstituent_Category_DEFINITION"
+msgstr "物质构成的类别，例如它在其所属的成套成分中所起的作用。"
 
-#:IFC.xml:708
-msgid "IfcDoorPanelOperationEnum_SLIDING"
-msgstr "正在评分"
+#:IFC.xml:21820
+msgid "IfcMaterialConstituent_Description"
+msgstr "描述"
 
-msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
-msgstr "正在评分"
+msgid "IfcMaterialConstituent_Description_DEFINITION"
+msgstr "实质性成分的定义是描述性的。"
 
-#:IFC.xml:709
-msgid "IfcDoorPanelOperationEnum_SWINGING"
-msgstr "正在解决"
+#:IFC.xml:21825
+msgid "IfcMaterialConstituent_Fraction"
+msgstr "分数"
 
-msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
-msgstr "正在解决"
+msgid "IfcMaterialConstituent_Fraction_DEFINITION"
+msgstr "Optional provision of a fraction of the total amount volume or weight that applies to the [[IfcMaterialConstituentSet]] that is contributed by this [[IfcMaterialConstituent]] ."
 
-#:IFC.xml:710
-msgid "IfcDoorPanelOperationEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:21830
+msgid "IfcMaterialConstituent_Name"
+msgstr "名称"
 
-msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
-msgstr "已使用"
+msgid "IfcMaterialConstituent_Name_DEFINITION"
+msgstr "物件组成所用的名称。"
 
-#:IFC.xml:712
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+#:IFC.xml:21849
+msgid "IfcMaterialConstituentSet"
+msgstr "IfcMaterialConstituentSet"
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "此列举界定了描述门面板在门框内位置的基本方法。 IFC2x 中的新枚举图1显示了一个带有面板的门面板和带有面板RIGHT的门面板，一个带有面板的 OUBLE DOOR SINGN 的门风格。 位置显示在本地位置的XZ平面上，即显示正Y轴的方向。 门面板位置............. 数字如果门面板数字01.gif 图1门面板位置未定义的项目LEFT MIDLE RIGHTS"
+msgid "IfcMaterialConstituentSet_DEFINITION"
+msgstr "[[IfcMaterialConstituentSet]] 是个别材料成分的集合，每个成分将一个材料分配给某个元素的一部分。 零件只用关键字识别，而不是每个零件都有一个形状参数层厚度或图层配置文件的 [[IfcMaterialLayerSet]] 或 [[IfcMaterialProfileSet]] 。 应为窗口铺设和玻璃提供不同的材料。 一个 [[IfcMaterialConstituentSet]] 被分配到窗口，两个[[IfcMaterialConstituent]] 一个带有名称的光芒，一个带有名称的光芒。 注在单个元素上看材料使用定义，一个[[IfcMaterialConstituentSet]] 可能适用于此种关键词的必要定义或推荐定义。 IFC4中的新实体。"
 
-#:IFC.xml:713
-msgid "IfcDoorPanelPositionEnum_LEFT"
-msgstr "左键"
+#:IFC.xml:21837
+msgid "IfcMaterialConstituentSet_MaterialConstituents"
+msgstr "材料组件"
 
-msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
-msgstr "左键"
+msgid "IfcMaterialConstituentSet_MaterialConstituents_DEFINITION"
+msgstr "2. 确定构成材料成分的构成部分。"
 
-#:IFC.xml:714
-msgid "IfcDoorPanelPositionEnum_MIDDLE"
-msgstr "MIDDL"
+#:IFC.xml:21850
+msgid "IfcMaterialConstituentSet_Description"
+msgstr "描述"
 
-msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDL"
+msgid "IfcMaterialConstituentSet_Description_DEFINITION"
+msgstr "对成套实质性成份的定义是描述性的。"
 
-#:IFC.xml:715
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:21855
+msgid "IfcMaterialConstituentSet_Name"
+msgstr "名称"
 
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "IfcMaterialConstituentSet_Name_DEFINITION"
+msgstr "该组建的名称已知晓。"
 
-#:IFC.xml:716
-msgid "IfcDoorPanelPositionEnum_RIGHT"
-msgstr "右侧"
+#:IFC.xml:21862
+msgid "IfcMaterialDefinition"
+msgstr "IfcMaterial定义"
 
-msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "右侧"
+msgid "IfcMaterialDefinition_DEFINITION"
+msgstr "[[IfcMaterialDefinition]] 是 IFC 中具有共同材料相关属性的所有与材料相关的信息项目的一般超型，可能包括将材料与某种形状参数关联或指派给一个组件的指定部分。 将材料分配给单一组件或多个组件的方法有三种，它们被定性为图层，通过剖面将材料分配给具有不同形状的常量的图层，通过成份将材料分配给一个图层，然后通过成份将材料分配给某个组件形状的指定部分来进行输出。识别是由关键词而不是形状参数来进行的。每个瞬时子类型[[IfcMaterialDefinition]可能具有物质特性被赋予， 或对其定义有外部分类。 它可以分配给子类型[[IfcElement]] , 或使用客观关系 [[IfcRelAssociatesMaterial]] 的子类型 [[IfcElementType]] 。 IFC4 中的新实体"
 
-#:IFC.xml:718
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPanel属性"
+#:IFC.xml:9490
+msgid "IfcMaterialDefinition_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "门板通常是一种门叶，可以让人或货物通过。 门面板的参数界定了面板的几何相关参数。 [[IfcDoorPanelProperties]] 用于参数描述门面板的形状和运转。 参数定义可以单独或补充到门的明确形状外面。 [[IfcDoorType]] 可以定义由多个面板组成的门。 在这种情况下，每个门面板必须包含一个 [[IfcDoorPanelProperties]] 的实例。 PanelPosition 属性与IfcDoorStyle.OperationType 属性一起决定适用于哪个面板 [[IfcDoorPanelProperties]] 。 [[IfcDoorPanelProperties]] 是由[[IfcDoorType]] 属性HasPropertySets 给定的属性列表中包含的。 关于门面板的更多信息可以包含在 IfcDoorStyle 的相同列表中，使用动态扩展的 [[IfcPropertySet]]。 [[IfcDoorPanelProperties]] 没有几何表示。 然而，它界定了可以用来创建由[[IfcDoor]]插入项目空间范围的门类形状的参数，如图1所示。 [[IfcDoorPanelProperties]] 的参数定义标准门面板， 包括给定比例宽度以定义不统一的双向回转或滑动或折叠门。 面板的外部边界由分配给[[IfcDoor]] 的轮廓形状表示来确定 插入[[IfcDoorType]] 。 它还必须考虑到线条参数。 面板旋转、双动和滑动面板的深度，由面板深度参数确定。 对于包括一个以上面板在内的门操作类型，至少一个面板的宽度是通过正常化比率衡量的。 它决定了该面板的宽度，其定义是门窗总宽度的比率。 面板宽度图 1 IF2.0中的新实体的门面属性。ifc2x4 IFC4 变更超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
+msgid "IfcMaterialDefinition_HasExternalReferences_DEFINITION"
+msgstr "参考与材料有关的外部参考资料，例如图书馆、分类或文件资料。 .更改ifc2x4 IFC4 变异属性。 反属性已添加。"
 
-#:IFC.xml:741
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspet样式"
+#:IFC.xml:21866
+msgid "IfcMaterialDefinition_HasProperties"
+msgstr "HasProperties"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "如果给出形状，形状部分反映了门形状的部分，门面是门板。 .已弃用的 DEPRECATION 属性已废弃，不再使用，即值应为 NIL 。"
+msgid "IfcMaterialDefinition_HasProperties_DEFINITION"
+msgstr "分配给子类型 [[IfcMaterialDefinition]] 实例的材料属性。 .更改ifc2x4 IFC4 变异属性。 反属性已被添加。"
 
-#:IFC.xml:719
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "面板深度"
+#:IFC.xml:21880
+msgid "IfcMaterialDefinition_AssociatedTo"
+msgstr "关联到"
 
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "门板的深度，与门叶平面垂直。"
+msgid "IfcMaterialDefinition_AssociatedTo_DEFINITION"
+msgstr "在元素发生或元素类型的物质关联中使用 [[IfcMaterialDefinition]] 个子类型。 关联由 [[IfcRelAssociatesMaterial]] 关系建立。.change ifc2x4 IFC4 变异属性已被添加。"
 
-#:IFC.xml:724
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "面板操作"
+#:IFC.xml:21892
+msgid "IfcMaterialLayer"
+msgstr "IfcMaterialLayer"
 
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "该小组确定了该小组的运作方式。 门面板的面板必须与IfcDoor风格的操作类型相对应。"
+msgid "IfcMaterialLayer_DEFINITION"
+msgstr "[[IfcMaterialLayer]] 是一个由多层或多层构造的元素的单一和可识别部分。 每一个 [[IfcMaterialLayer]] 都有恒定厚度，相对于材料层集底座的参考值 [[IfcMaterialLayerSet]] 。 物质层内的空隙表示为[[IfcMaterialLayer]]，属性IsVentified 具有TRUE或UNKNOWN的值。 这种空隙应被解释为没有材料的空隙。 EXAMPLE A cavity wall with brick masonry used with an air bette between will be moduled by three [[IfcMaterialLayer]] s 1 积木， 2 空气差距，3 砖。 内层积木将有一个命名积木，一个单独的LayerThicknes，且可能有一个类别表示它装载， 一个优先级，控制这个材料层如何与其他材料层在墙上的连接中相互作用。 [[IfcMaterialLayer]] 的材料层名称可能不同于所引用的 [[IfcMaterial]] 名称。 EXAMPLE [[IfcMaterialLayer]] 绝缘层的名称可以是抗性，而[[IfcMaterial]] 的名称则是聚苯乙烯绝缘板。 IFC1.5中的新实体。 hange ifc2x4 IFC4 变异。属性名称、描述、类别、优先级已添加到属性列表末尾。 LayerThicknes的数据类型已放松到 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:729
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "面板位置"
+#:IFC.xml:21743
+msgid "IfcMaterialLayer_Material"
+msgstr "材料"
 
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "此面板在门内的位置。 门面板的面板必须与IfcDoor风格的操作类型相对应。"
+msgid "IfcMaterialLayer_Material_DEFINITION"
+msgstr "可选参照构造图层的材料。 注意，如果没有给定这个值，它不表示一个没有物质间隙的图层 ， 这只是指材料在那时没有具体规定。"
 
-#:IFC.xml:734
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "面板宽度"
+#:IFC.xml:21925
+msgid "IfcMaterialLayer_ToMaterialLayerSet"
+msgstr "总材料LayerSet"
 
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "此面板的宽度，作为相对门的总清开宽度的比率。如果是空的，它默认为1。 必须在IfcDoorStyle为所有具有OperationType s的门提供一个值，这个门有一个以上面板的门。"
+msgid "IfcMaterialLayer_ToMaterialLayerSet_DEFINITION"
+msgstr "参考材料层包含的[[IfcMaterialLayerSet]] 。"
 
-#:IFC.xml:753
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
+#:IFC.xml:21893
+msgid "IfcMaterialLayer_Category"
+msgstr "类别"
 
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "这一列举界定了建造大门的基本类型。 建筑类型涉及建造门所用的主要材料或材料组合。 IF2x中新的计数。未完成的项目已升级为单身玩家"
+msgid "IfcMaterialLayer_Category_DEFINITION"
+msgstr "材料图层的类别，例如： 它在它所属的图层中的角色，如装载、隔热等。 关键字清单可以通过模型视图定义扩展。 但下列关键词应适用于具有负载功能的所有实质性层，一般性负载铭记。 对所有具有散射功能的材料层进行抗蚀。 内部分物料层完成是内部分完成。外部分完成是外部分。"
 
-#:IFC.xml:754
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
-msgstr "AluminIUM"
+#:IFC.xml:21898
+msgid "IfcMaterialLayer_Description"
+msgstr "描述"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "AluminIUM"
+msgid "IfcMaterialLayer_Description_DEFINITION"
+msgstr "材料层的定义比属性名称或类别更具描述性。"
 
-#:IFC.xml:755
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
-msgstr "闹钟游戏"
+#:IFC.xml:21903
+msgid "IfcMaterialLayer_IsVentilated"
+msgstr "异常化"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
-msgstr "闹钟游戏"
+msgid "IfcMaterialLayer_IsVentilated_DEFINITION"
+msgstr "说明材料层是空气层还是洞。 设置为 TRUE，如果材料层是空隙，提供从空到空的空中交换。 设置为UNKNOWN，如果物质层是空隙，且不提供空中交换，或没有关于空中交换的这种信息。 设置为 FALSE 如果材料层是一个固态材料层默认。"
 
-#:IFC.xml:756
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "闹钟"
+#:IFC.xml:21908
+msgid "IfcMaterialLayer_LayerThickness"
+msgstr "图层厚度"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "闹钟"
+msgid "IfcMaterialLayer_LayerThickness_DEFINITION"
+msgstr "材料层厚度。厚度的含义取决于其用途。 在建筑元素使用 [[IfcMaterialLayerSetUsage]] 的情况下， 尺寸是按照[[IfcMaterialLayerSetUsage]] 中指定的正LayerSet方向测量的。 注意属性值可以是 0。 对于极接近零的材料厚度，例如薄膜。厚度0的材料层不得以几何形状呈现。 .更改ifc2x4 IFC4 变迁. 属性数据类型已更改为[[IfcNonNegativeLengthMeasure]] 允许0为厚度。"
 
-#:IFC.xml:757
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "高品级钢材质"
+#:IFC.xml:21913
+msgid "IfcMaterialLayer_Name"
+msgstr "名称"
 
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "高品级钢材质"
+msgid "IfcMaterialLayer_Name_DEFINITION"
+msgstr "物料层的名称."
 
-#:IFC.xml:758
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:21918
+msgid "IfcMaterialLayer_Priority"
+msgstr "优先权"
 
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "IfcMaterialLayer_Priority_DEFINITION"
+msgstr "图层的相对优先级，表示为普通整数范围0.100。 控制图层如何在连接中和构建图层元素的角落之间从一个元素跳跃到i。 如果前一个元素的优先级高于后者, 则将一个元素从这些元素的联合中的另一个元素替换. 某个元素中的材料层的优先值必须由软件应用相对于所连接元素中的材料层来设定和维护。 注意一个连接上的层优先级可能被优先级属性覆盖 [[IfcRelConnectsPathElements]的优先级属性，如果这种关系被用来在两个有层结构的建筑元素之间建立逻辑联系。"
 
-#:IFC.xml:759
-msgid "IfcDoorStyleConstructionEnum_PLASTIC"
-msgstr "游戏"
+#:IFC.xml:21937
+msgid "IfcMaterialLayerSet"
+msgstr "IfcMaterialLayerSet"
 
-msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "游戏"
+msgid "IfcMaterialLayerSet_DEFINITION"
+msgstr "The [[IfcMaterialLayerSet]] is a designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed. The Material Layer Set Base MlsBase describes the imaginary axis along which the material layers are positioned. In case of assigning the [[IfcMaterialLayerSet]] directly to an element or element type, the individual layers are stacked according to their position within the list of MaterialLayers without providing information on how to spatially relate the material layer information to the shape representation of the element or element type. In case of assigning the [[IfcMaterialLayerSet]] through an [[IfcMaterialLayerSetUsage]] to an element, the MlsBase is positioned along the reference axis or reference plane of the element. An offset from the reference axis or plane to MlsBase is supported by [[IfcMaterialLayerSetUsage]] which combines layers and an offset. Offsets from element edges are supported by the subtype [[IfcMaterialLayerWithOffsets]] . The positive LayerSetDirection MlsDirection describes the direction by which the individual material layers are stacked. The [[IfcMaterialLayer]] s are stacked with no gap. Gaps within a material layer set are expressed as layers by themselves. EXAMPLE A cavity brick wall would be modeled as [[IfcMaterialLayerSet]] consisting of three [[IfcMaterialLayer]] s brick, air cavity and brick. The air gap is identified by the IsVentilated flag at [[IfcMaterialLayer]] . HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcMaterialDefinition]] , the attribute Description has been added at the end of attribute list. .use head Attribute use definition As shown in Figure 1, each [[IfcMaterialLayerSet]] implicitly defines a material layer set base line MlsBase , to which the start of the first [[IfcMaterialLayer]] is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous no gaps or overlaps . material layer set .. .. .. .. figures ifcmateriallayerset 01.png Figure 1 Material layer set"
 
-#:IFC.xml:760
-msgid "IfcDoorStyleConstructionEnum_STEEL"
-msgstr "钢条"
+#:IFC.xml:21925
+msgid "IfcMaterialLayerSet_MaterialLayers"
+msgstr "材料图层"
 
-msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "钢条"
+msgid "IfcMaterialLayerSet_MaterialLayers_DEFINITION"
+msgstr "指定 [[IfcMaterialLayer]] 所生成的 [[IfcMaterialLayerSet]] 秒的标识。"
 
-#:IFC.xml:761
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:21938
+msgid "IfcMaterialLayerSet_TotalThickness"
+msgstr "TotalThickness"
 
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "已使用"
+msgid "IfcMaterialLayerSet_TotalThickness_DEFINITION"
+msgstr "材料层集的总厚度来自函数IfcMlsTotalThicknes。"
 
-#:IFC.xml:762
-msgid "IfcDoorStyleConstructionEnum_WOOD"
-msgstr "WOD"
+#:IFC.xml:21943
+msgid "IfcMaterialLayerSet_Description"
+msgstr "描述"
 
-msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOD"
+msgid "IfcMaterialLayerSet_Description_DEFINITION"
+msgstr "描述性术语的 [[IfcMaterialLayerSet]] 的定义。更改ifc2x4 IFC4 变异。属性已添加到属性列表的末尾。"
 
-#:IFC.xml:764
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+#:IFC.xml:21948
+msgid "IfcMaterialLayerSet_LayerSetName"
+msgstr "图层设置名称"
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE SWING LEFT DOUBLE SWING RIGHT DOUBLE DOOR DOUBLE SWING SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+msgid "IfcMaterialLayerSet_LayerSetName_DEFINITION"
+msgstr "要知道的 [[IfcMaterialLayerSet]] 的名称。"
 
-#:IFC.xml:765
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
-msgstr "待机处理"
+#:IFC.xml:21967
+msgid "IfcMaterialLayerSetUsage"
+msgstr "IfcMaterialLayerSetUsage"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
-msgstr "待机处理"
+msgid "IfcMaterialLayerSetUsage_DEFINITION"
+msgstr "The [[IfcMaterialLayerSetUsage]] determines the usage of [[IfcMaterialLayerSet]] in terms of its location and orientation relative to the associated element geometry. The location of material layer set shall be compatible with the building element geometry that is, material layers shall fit inside the element geometry . The rules to ensure the compatibility depend on the type of the building element. EXAMPLE For a cavity brick wall with shape representation SweptSolid, the [[IfcMaterialLayerSet]].TotalThickness shall be equal to the wall thickness. Also the OffsetFromReferenceLine shall match the exact positions between the two shape representations of [[IfcWallStandardCase]] , that is the [[IfcShapeRepresentation]] s with RepresentationIdentifier Axis and RepresentationIdentifier Body . NOTE Model view definitions or implementer agreements may provide more instructions on matching between building element geometry and material layer set usage. The [[IfcMaterialLayerSetUsage]] is always assigned to an individual occurrence object and only to relevant subtypes of [[IfcElement]] . The [[IfcMaterialLayerSet]] , referenced by ForLayerSet , can however be shared among several occurrence objects. If the element type is available in other words, an instance of the relevant subtype of [[IfcElementType]] exists , then the [[IfcMaterialLayerSet]] can be assigned to the element type. The assignment between a subtype of [[IfcElement]] and the [[IfcMaterialLayerSetUsage]] is handled by [[IfcRelAssociatesMaterial]] . .use head Attribute use definition The [[IfcMaterialLayerSetUsage]] is primarily intended to be associated with planar building elements having a constant thickness. With further agreements on the interpretation of LayerSetDirection , the usage can be extended also to other cases, for example to curved building elements, provided that the material layer thicknesses are constant. Generally, an element may be layered in any of its primary directions, denoted by its x, y or z axis. The geometry use definitions at each specific type of building element will determine the applicable LayerSetDirection . The following examples illustrate how the [[IfcMaterialLayerSetUsage]] attributes LayerSetDirection , DirectionSense , OffsetFromReferenceLine can be used in different cases. Normative material use definitions are documented at each element how these shall be used . Figure 1 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to the axis of a wall. EXAMPLE For a standard wall with extruded geometric representation vertical extrusion , the layer set direction will be perpendicular to extrusion direction, and can be derived from the direction of the wall axis. With the DirectionSense positive in this example the individual IfcMaterialLayers are assigned consecutively right to left or left to right. For a curved wall, direction denoting the wall thickness can be derived from the direction of the wall axis, and it will remain perpendicular to the wall path. The DirectionSense applies as well. NOTE According to the [[IfcWallStandardCase]] material use definition the LayerSetDirection for [[IfcWallStandardCase]] is always AXIS2 that is, along the y axis , as shown in this example. Mls usage .. .. .. .. figures ifcmateriallayersetusage wall 01.png Figure 1 Material layer set usage for wall Figure 2 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a slab. EXAMPLE For a slab with perpendicular extruded geometric representation, the LayerSetDirection will coincide with the extrusion direction in positive or negative sense . In this example, the material layer set base is the extruded profile and consistent with the [[IfcExtrudedAreaSolid]].Position , with the DirectionSense being positive, the individual IfcMaterialLayers are built up from the base towards the positive z direction in this case. NOTE According to the [[IfcSlabStandardCase]] material use definition the LayerSetDirection for [[IfcSlabStandardCase]] is always AXIS3 that is, along the z axis . Mls usage .. .. .. .. figures ifcmateriallayersetusage slab 01.png Figure 2 Material layer set usage for slab Figure 3 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a roof slab with non perpendicular extrusion. EXAMPLE For a slab with non perpendicular extruded geometric representation, the guidelines above apply as well. The material layer thickness and the OffsetFromReferenceLine are always measured perpendicularly, even if the extrusion direction is not perpendicular. Therefore the total material layer thickness is not equal to the extrusion depth of the geometry. Mls usage .. .. .. .. figures ifcmateriallayersetusage roofslab 01.png Figure 3 Material layer set usage for roof slab"
 
-#:IFC.xml:766
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
-msgstr "下一步待机"
+#:IFC.xml:21955
+msgid "IfcMaterialLayerSetUsage_ForLayerSet"
+msgstr "ForLayerSet"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
-msgstr "有两个面板的门，一个面板在左边折叠，另一个面板是向右倾斜。"
+msgid "IfcMaterialLayerSetUsage_ForLayerSet_DEFINITION"
+msgstr "使用 [[IfcMaterialLayerSet]] 设置的使用量。"
 
-#:IFC.xml:767
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
-msgstr "多台处理器"
+#:IFC.xml:21968
+msgid "IfcMaterialLayerSetUsage_DirectionSense"
+msgstr "方向Sense"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
-msgstr "带两个面板的门 一个是朝着双向和朝着右方向飞去，另一个是朝着两个方向飞去，另一个是朝着干线向左飞去。"
+msgid "IfcMaterialLayerSetUsage_DirectionSense_DEFINITION"
+msgstr "表示材料图层是正方向还是负方向，沿LayerSetDirect 定义的指定坐标轴。 正值意味着列表中的 [[IfcMaterialLayer]] 实例的连续图层 [[IfcMaterialLayerSet]]。 AXIS2LayerSetDirection 为AXIS2设定的正轴按面朝着正面置放， 就AXIS3而言，它将是z。 负值表示图层面朝负LayerSet方向的脸部放置. 在这两种情况下，从材料层开始设定基线。 注意到材料层设置基准线MlsBase由偏移FromReferenceLine定位， 并且可能在元素参考线的正面或负面或平面上，MlsBase的位置并不取决于DirectionSense 属性， 但在相关元素轴上。"
 
-#:IFC.xml:768
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
-msgstr "多托盘处理选项"
+#:IFC.xml:21973
+msgid "IfcMaterialLayerSetUsage_LayerSetDirection"
+msgstr "LayerSet方向"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
-msgstr "有两个面板的门都向左敞开，一个面板朝着一个方向摇动，另一个面板朝相反方向摇。"
+msgid "IfcMaterialLayerSetUsage_LayerSetDirection_DEFINITION"
+msgstr "相对于元素参考几何形状设置的材料图层方向. 此属性值的意义必须在每个元素的几何使用部分中指定。 对于外观形状，可以沿拉伸路径给出方向，如钢板或垂直于它的方向，例如墙壁。 注意[[IfcWallStandardCase]] 的图层设置方向必须是 AXIS2 或 y轴和 [[IfcSlabStandardCase]和 [[IfcPlateStandardCase]] 的y轴必须是 AXIS3 ，即z轴。 注意到所用集的材料层是应发展成给定轴的正向还是负面方向， 必须由 DirectionSense 属性定义。"
 
-#:IFC.xml:769
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
-msgstr "下面的容器解决选项右侧"
+#:IFC.xml:21978
+msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine"
+msgstr "OffsetFromReferenceLine"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
-msgstr "两个面板的门都对右边敞开，一个面板朝着一个方向走动，另一个面板朝着相反的方向走动。"
+msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine_DEFINITION"
+msgstr "材料图层从参考几何线或元素平面偏移基本线MlsBase 这种偏移可以是正数或负数，除非在其使用定义中对某一建筑要素类型加以限制，或通过实施者协议加以限制。 正值意味着MlsBase被置于参考线或平面的正面， 在 LayerSetDirection 在 AXIS2 情况下建立的轴方向到 y轴， 或者，如果AXIS2朝z 方向倾斜。 负值意味着MlsBase被置于负边。 由 LayerSetDirection 在 AXIS2 的情况下建立到 y 的方向。 注意到偏移中的正符号或负符号仅影响MlsBase位置， 它不会影响DirectionSense对材料层方向的应用，DirectionSense也不会改变MlsBase的位置。"
 
-#:IFC.xml:770
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
-msgstr "DOUBLE DOOULING"
+#:IFC.xml:21983
+msgid "IfcMaterialLayerSetUsage_ReferenceExtent"
+msgstr "参考范围"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
-msgstr "带有两个面板的门，一个正在滑向左，另一个正在向右滑动。"
+msgid "IfcMaterialLayerSetUsage_ReferenceExtent_DEFINITION"
+msgstr "元素体形状外移的程度适用[[IfcMaterialLayerSetUsage]] 。 它被用作IfcMaterialLayerSetWeOffs子类型提供的高偏移值2的参考值。 .更改 ifc2x4 IFC4 更改新属性添加到属性列表末尾。 注意: 属性参考范围必须断定，如果IfcMaterialLayerSetWOffset包含在ForLayerSet.MaterialLayerslayerslist of materialLayerslayers。 注意[[IfcWallStandardCase]] 的参考范围是从 z 0开始的参考高度开始的物体坐标系的 XY 平面。"
 
-#:IFC.xml:771
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
-msgstr "平滑处理指示灯"
+#:IFC.xml:21990
+msgid "IfcMaterialLayerWithOffsets"
+msgstr "IfcMaterialLayerWithOffsets"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
-msgstr "平滑处理指示灯"
+msgid "IfcMaterialLayerWithOffsets_DEFINITION"
+msgstr "[[IfcMaterialLayerWithOffsets]] 是专业化的 [[IfcMaterialLayer]] 使得物质层内的偏移值在父层集合中的使用率沿边沿线的定义成为可能。 它界定了物质层预定在物质层内使用的两个偏移值。 偏移适用于多层元素的边缘，即沿图层设定方向垂直。 偏移不得用于图层设置方向，即： 对于图层之间的差距或重叠，应将图层建模为图层，并为其配备适当的材料配置。 身处标准墙顶部，形状表示SweptSolid 可以在输出正Z轴方向指定给定图层的偏移量 应用于开始或结束时从底部到顶部，并且在正面扩展到上面或负结尾下面的拉伸。 使用外部材料层的标准墙，将外部隔离扩展到100毫米，但从同一基高度开始。 在这种情况下，以下数值是设置偏移方向.AXIS3。偏移值1 0.0 偏移值2 100。 默认单位假定为mm Note。实体形状表示[[IfcWall]] 或 [[IfcWallStandardCase]] 可能有多个项目，每个项目都是 [[IfcExtrudedAreaSolid]] 对应的 [[IfcMaterialLayer]] 和 [[IfcMaterialLayerWithOffsets]] 。 国际化学品统一分类标签制度中的HISTORY 新实体。 .spec首长非正式提议1。 偏移方向不能与对应的 [[IfcMaterialLayerSetUsage]] 的LayerSetDirection 完全相同。 2. 属性参考范围必须在相应的 [[IfcMaterialLayerSetUsage]] 上得到确认。 使用头部属性定义 偏移值和偏移方向对应于 [[IfcMaterialLayerSetUsage]] 的定义。参考范围和LayerSetDirection。 图1显示了将偏移数值应用于标准墙的物质层的例子。 [[IfcMaterialLayerWithOffsets]] fact 1 ... ... fcmateriallayerwithoffset fi1.png 图1 材料层与偏移"
 
-#:IFC.xml:772
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
-msgstr "解析右侧"
+#:IFC.xml:21991
+msgid "IfcMaterialLayerWithOffsets_OffsetDirection"
+msgstr "偏移方向"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
-msgstr "解析右侧"
+msgid "IfcMaterialLayerWithOffsets_OffsetDirection_DEFINITION"
+msgstr "偏移方向必须垂直于父层设定的方向。"
 
-#:IFC.xml:773
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
-msgstr "跟随最远的"
+#:IFC.xml:21996
+msgid "IfcMaterialLayerWithOffsets_OffsetValues"
+msgstr "偏移值"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
-msgstr "一个面板正在折叠到左边的门。"
+msgid "IfcMaterialLayerWithOffsets_OffsetValues_DEFINITION"
+msgstr "在属性偏移指定的坐标轴方向上的图层数值。 偏移值1确定轴方向下方位置的偏移量，通常是标准偏移开始， 偏移数值2确定轴方向上方位置的偏移量，通常是标准偏移的终点。"
 
-#:IFC.xml:774
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
-msgstr "向右继续"
+#:IFC.xml:22003
+msgid "IfcMaterialList"
+msgstr "IfcMaterialList"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
-msgstr "带有一个折叠到右边的门。"
+msgid "IfcMaterialList_DEFINITION"
+msgstr "[[IfcMaterialList]] 是一个元素中使用的不同材料列表。 注意到 [[IfcMaterialList]] 类通常将在一个更抽象的级别描述某个元素时使用。 例如，对于建筑规格作者， 关于水泥柱，唯一可能需要的信息是其中含有混凝土、加固钢和轻钢脂肪。 当可以定义不同层并且可以使用[[IfcMaterialLayerSet]] 类时，不得将其用于由材料层组成的元素。 此外，[[IfcMaterialList]] 不得用于由单一可识别材料组成的元素，例如代表异性材料的元素。 .change ifc2x4 IFC4 变迁。 实体[[IfcMaterialList]] 已废弃，不再使用。请使用 [[IfcMaterialConstituentSet]] 代替。"
 
-#:IFC.xml:775
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:21755
+msgid "IfcMaterialList_Materials"
+msgstr "材料"
 
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "一个没有定义操作类型的门被视为一个带有一线的门，但没有面板。因此它总是敞开。"
+msgid "IfcMaterialList_Materials_DEFINITION"
+msgstr "物质成分中使用的材料。"
 
-#:IFC.xml:776
-msgid "IfcDoorStyleOperationEnum_REVOLVING"
-msgstr "正在阅读"
+#:IFC.xml:22005
+msgid "IfcMaterialProfile"
+msgstr "IfcMaterialProfile"
 
-msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
-msgstr "一个由四个叶子组成的入口门，其形式是十字架，环绕着一个中央垂直轴，四个面板由一个[[IfcDoor]]面板属性来描述。"
+msgid "IfcMaterialProfile_DEFINITION"
+msgstr "[[IfcMaterialProfile]] 是一个元素的单个和可识别的交叉部分，由一个或多个配置文件构造。 注： 对于多个材料简介， 使用IfcProfileResource schema中的 [[IfcCompositeProfileDef]]概念来定义个别配置文件在 [[IfcMaterialProfileSet]] 中的相对位置， 只有一个材料简介是由个人 [[IfcProfileDef]] 子类型提供和定义的。 IFC4 中的新实体"
 
-#:IFC.xml:777
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:21767
+msgid "IfcMaterialProfile_Material"
+msgstr "材料"
 
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "由滚动打开的门。"
+msgid "IfcMaterialProfile_Material_DEFINITION"
+msgstr "可选参考资料系依据的材料。"
 
-#:IFC.xml:778
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
-msgstr "单片处理指示灯"
+#:IFC.xml:22028
+msgid "IfcMaterialProfile_Profile"
+msgstr "个人信息"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
-msgstr "一个面板打开左边的门。 从正极轴的方向来看，这些正轴在左侧。"
+msgid "IfcMaterialProfile_Profile_DEFINITION"
+msgstr "确定本材料简介与材料相关联的简介。"
 
-#:IFC.xml:779
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
-msgstr "片段右侧"
+#:IFC.xml:22040
+msgid "IfcMaterialProfile_ToMaterialProfileSet"
+msgstr "MaterialProfileSet"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
-msgstr "带着双向和右向双向的门和双向门的门。也叫做双向门的双向门。"
+msgid "IfcMaterialProfile_ToMaterialProfileSet_DEFINITION"
+msgstr "材料简介包含在其中的材料简介。"
 
-#:IFC.xml:780
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
-msgstr "正在发送至 LEFT"
+#:IFC.xml:22006
+msgid "IfcMaterialProfile_Category"
+msgstr "类别"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
-msgstr "带有一个面板的门正在滑向左。"
+msgid "IfcMaterialProfile_Category_DEFINITION"
+msgstr "材料配置的类别，例如它在它所属的配置文件中的角色。 关键字清单可以通过模型视图定义扩展。 但下列关键词应适用于一般装载功能的材料配置文件。 含有傲慢功能的材料配置。完成材料配置即可完成。"
 
-#:IFC.xml:781
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
-msgstr "解锁向右"
+#:IFC.xml:22011
+msgid "IfcMaterialProfile_Description"
+msgstr "描述"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
-msgstr "一个面板的门正在滑向右。"
+msgid "IfcMaterialProfile_Description_DEFINITION"
+msgstr "实质性简介的定义是描述性的。"
 
-#:IFC.xml:782
-msgid "IfcDoorStyleOperationEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:22016
+msgid "IfcMaterialProfile_Name"
+msgstr "名称"
 
-msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "用户定义的操作类型"
+msgid "IfcMaterialProfile_Name_DEFINITION"
+msgstr "材料配置文件使用的名称。"
 
-#:IFC.xml:784
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableCoveringOperationEnum"
+#:IFC.xml:22021
+msgid "IfcMaterialProfile_Priority"
+msgstr "优先权"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "此枚举定义了有效的渗透覆盖类型。IFC2.0中的新枚举。 金属条或铁丝保护屏幕。木材、金属等固定或可移动条纹集。 安排在保持亮度或降雨时让空气进入. SCREN Upright、固定或动产，有时用于防热、光线、存取或类似的折叠框架。 用户定义的可渗透覆盖类型。无可用信息。"
+msgid "IfcMaterialProfile_Priority_DEFINITION"
+msgstr "配置文件的相对优先级，表示为正常整数范围0.100。 控制剖面图在构建元素的连接和角之间的交叉性 从一个元素的剖面图变成例如： 如果前一个元素比后者更优先，则从这些元素的一个联合元素中替换一个配置文件。 某个元素中的材料简介的优先值必须由软件应用程序相对于所连接元素中的材料简介来设定和维护。"
 
-#:IFC.xml:785
-msgid "IfcPermeableCoveringOperationEnum_GRILL"
-msgstr "资源库"
+#:IFC.xml:22052
+msgid "IfcMaterialProfileSet"
+msgstr "IfcMaterialProfileSet"
 
-msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
-msgstr "金属条或线的保护屏幕。"
+msgid "IfcMaterialProfileSet_DEFINITION"
+msgstr "[[IfcMaterialProfileSet]] 是一种称呼，用以指明一个纯粹元素的单个材料 已知一个单一或多个材料剖面或构造的柱子。 注： 对于多个材料简介， 使用IfcProfileResource schema中的 [[IfcCompositeProfileDef]]概念来定义个别配置文件在 [[IfcMaterialProfileSet]] 中的相对位置， 只有一个材料简介是由个人 [[IfcProfileDef]] 子类型提供和定义的。 IFC4中的新实体。"
 
-#:IFC.xml:786
-msgid "IfcPermeableCoveringOperationEnum_LOUVER"
-msgstr "LOUVER"
+#:IFC.xml:22040
+msgid "IfcMaterialProfileSet_MaterialProfiles"
+msgstr "材料资料"
 
-msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
-msgstr "整套固定或可移动的木材、金属等条目安排在保持光线或降雨时让空气进入。"
+msgid "IfcMaterialProfileSet_MaterialProfiles_DEFINITION"
+msgstr "确定材料简介所根据的简介。"
 
-#:IFC.xml:787
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:22065
+msgid "IfcMaterialProfileSet_CompositeProfile"
+msgstr "合成配置文件"
 
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "无可用信息。"
+msgid "IfcMaterialProfileSet_CompositeProfile_DEFINITION"
+msgstr "参考此材料简介将其与每个个人简介相关联的复合简介定义。 如果只使用单一的材料简介，那么就不会断言“混成简介”。 注意被引用的 [[IfcCompositeProfileDef]] 实例必须由当前[[IfcMaterialProfileSet]] 中通过材料简介列表使用的所有[[IfcProfileDef]]实例组成。"
 
-#:IFC.xml:788
-msgid "IfcPermeableCoveringOperationEnum_SCREEN"
-msgstr "已扫描"
+#:IFC.xml:22053
+msgid "IfcMaterialProfileSet_Description"
+msgstr "描述"
 
-msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
-msgstr "用于防备热、光线、存取或类似的紫外线、固定或动产，有时折叠框架。"
+msgid "IfcMaterialProfileSet_Description_DEFINITION"
+msgstr "2. 用描述性术语界定材料简介。"
 
-#:IFC.xml:789
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:22058
+msgid "IfcMaterialProfileSet_Name"
+msgstr "名称"
 
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
-msgstr "用户定义的渗透覆盖类型。"
+msgid "IfcMaterialProfileSet_Name_DEFINITION"
+msgstr "素材配置文件的名称."
 
-#:IFC.xml:791
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+#:IFC.xml:22101
+msgid "IfcMaterialProfileSetUsage"
+msgstr "IfcMaterialProfileSetUsage"
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "该实体是一个门或窗口内的面板的描述，它是打开容许空气流的填充器。 它是由它的属性 [[IfcPermeableCoveringProperties]] 提供的。 可穿透的掩体是一种外壳，例如一个固定或开口的外壳，基本上是由一种外壳和一种内脏组成。 这种步兵通常是一个大型、大型或屏幕。行动方式是按照行动类型定义的。 [[IfcPermeableCoveringProperties]] 包含在 IfcWindowStyle 或 IfcDoorStyle 属性列表中。 关于渗透覆盖的更多信息可以包含在相同的窗口或门风格列表中，使用动态扩展的 [[IfcPropertySet]]。 这尤其适用于各种操作类型的额外属性。[[IfcPermeableCoveringProperties]] 不具有几何形状。 然而，它定义了可以用来创建由 [[IfcWindow]]插入项目空间环境的 IfcWindowStyle 形状的参数。 或 [[IfcDoor]] 插入的 IfcDoor风格。 [[IfcPermeableCoveringProperties]] 的参数定义了标准渗透覆盖面。 面板的外部边界由分配给[[IfcWindow]] 或 [[IfcDoor]] 的发生参数确定。 它还必须考虑到线条参数。 在整个窗口或门内的渗透覆盖位置由小组定位属性决定。 图1显示适用于直线内位置的小组，如小组位置属性所界定的那样。 以下参数应用于面板框架深度，帧厚度正在覆盖... fccermeeblecoveringproperties.gif 图1 涵盖IFC2中新实体属性的性能。 ，它已从 IFC2x 中的 IfcPermeableCovery改名。ifc2x4 IFC4 变换超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
+msgid "IfcMaterialProfileSetUsage_DEFINITION"
+msgstr "[[IfcMaterialProfileSetUsage]] 决定其位置相对于相关元素几何形状的使用 [[IfcMaterialProfileSet]] 。 物质配置组的位置必须与建筑元素几何相容，即： 材料剖面必须适合元素几何形状. 确保兼容性的规则取决于建筑元素的类型。 对于构造基于外置固体的形状表示的元素， 这是通过提及形状模型中的相同的配置文件定义来实现的。 注型视图定义或实施者协议可以提供更多关于构建元素几何和材料配置集使用之间匹配的指示。 注意到所引用的[[IfcMaterialProfileSet]] 可能代表一个单一的材料配置，或一个包含两个或多个材料配置文件的复合配置文件。 IFC4中的新实体。"
 
-#:IFC.xml:814
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "ShapeAspet样式"
+#:IFC.xml:22077
+msgid "IfcMaterialProfileSetUsage_ForProfileSet"
+msgstr "ForProfileSet"
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+msgid "IfcMaterialProfileSetUsage_ForProfileSet_DEFINITION"
+msgstr "使用 [[IfcMaterialProfileSet]] 设置的使用量。"
 
-#:IFC.xml:792
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "框架深度"
+#:IFC.xml:22102
+msgid "IfcMaterialProfileSetUsage_CardinalPoint"
+msgstr "CardinalPoint"
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "面板框架的深度，用来包括横向横向从前面到后面的孔。 c. 垂直于窗户或门高程平面上。"
+msgid "IfcMaterialProfileSetUsage_CardinalPoint_DEFINITION"
+msgstr "索引引用章节简介中的一个重要点。 描述相对于所关联成员的纵轴部分的对齐方式。 这个配置文件对齐的参数规格可以多余地提供到 ForProfileSet.MaterialProfile.Profile.Profile.Profiles。"
 
-#:IFC.xml:797
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "帧厚度"
+#:IFC.xml:22107
+msgid "IfcMaterialProfileSetUsage_ReferenceExtent"
+msgstr "参考范围"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "用于包括渗透覆盖面的面板边框宽度 ， 从面板内穿透面包裹到面板外的一层，在……，i。 。与窗户或门高程平行的。"
+msgid "IfcMaterialProfileSetUsage_ReferenceExtent_DEFINITION"
+msgstr "元素体形状外移的程度适用[[IfcMaterialProfileSetUsage]] 。 它用作IfcMaterialProfileSetWeds子类型为包含的材料配置提供的高偏移值2的参考值。 注： 如果IfcMaterialProfileSetWOffset包含在 ForProfileSet.MaterialProfiles 列表中，则属性引用的范围必须得到确认。 注意[[IfcBeamStandardCase]] 、[[IfcColumnStandardCase]] 的参考范围 和 [[IfcMemberStandardCase]] 是从 z 0 开始的参考长度是对象坐标系统的 XY 平面。"
 
-#:IFC.xml:802
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "操作类型"
+#:IFC.xml:22114
+msgid "IfcMaterialProfileSetUsageTapering"
+msgstr "IfcMaterialProfileSetUsageTapering"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "还用来按照国家建筑标准分配标准象征性演示。"
+msgid "IfcMaterialProfileSetUsageTapering_DEFINITION"
+msgstr "[[IfcMaterialProfileSetUsageTapering]] 指定了与触发原始束或类似元素列相关的双重材料配置集。IFC4 中的新实体. 以触发构建元素的首页使用 继承属性ForProfileSet 在成员开始时指定配置文件和材料 ForProfileEndSet 在结束。 起始和终对应元素或元素类型形状模型中的输出方向。 这两套材料都应参考同一材料，即只在其材料上有所不同。 使用带结构分析曲线成员[[IfcMaterialProfileSetUsageTapering]] 的磁头用法，可以与结构分析理想化的制服成员和缓解成员的结构分析理想化[[IfcStructuralCurveMember]]一起使用。 在统一成员的情况下，ForProfileSet 和 ForProfileEndSet 引用相同的材料配置集。 如果成员被缓解，ForProfileSet 会在成员开始时指定配置文件和材料，ForProfileEndSet 会在其结束时。 起始和终对应曲线成员地形表示的边缘方向。"
 
-#:IFC.xml:807
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "面板位置"
+#:IFC.xml:22089
+msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet"
+msgstr "ForProfileEndSet"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "这个渗透面板在整个窗口或门类型中的位置。"
+msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet_DEFINITION"
+msgstr "第二个应用 [[IfcMaterialProfileSet]] 设置的使用量。"
 
-#:IFC.xml:826
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowlining属性"
+#:IFC.xml:22115
+msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint"
+msgstr "CardinalEndPoint"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of IfcWindowStyle.HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint_DEFINITION"
+msgstr "索引参照了第二部分的一个重要点。 描述此部分相对于它所关联成员的轴的对齐方式。 这个配置文件对齐的参数规格可以多余地提供到 ForProfileSet.MaterialProfile.Profile.Profile.Profiles。"
 
-#:IFC.xml:884
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspet样式"
+#:IFC.xml:22122
+msgid "IfcMaterialProfileWithOffsets"
+msgstr "IfcMaterialProfileWidset"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "IfcMaterialProfileWithOffsets_DEFINITION"
+msgstr "[[IfcMaterialProfileWithOffsets]] 是一个专门化的 [[IfcMaterialProfile]]，具有额外的纵向偏移。 元素纵向方向中[[IfcMaterialProfileWithOffsets]]的相对位置可以定义在末端开始时给出偏移。 或在开始和结束时。 这不应用于个人剖面定义平面中个人剖面的相对位置，而复合剖面定义本身对此作了规定。 此外，在使用 [[IfcMaterialProfileSetUsageTapering]] 正确的起始和终偏移任务时应特别注意。IFC4 中的新实体。"
 
-#:IFC.xml:827
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:22123
+msgid "IfcMaterialProfileWithOffsets_OffsetValues"
+msgstr "偏移值"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "IfcMaterialProfileWithOffsets_OffsetValues_DEFINITION"
+msgstr "剖面图的数值偏移，轴方向始终是AXIS1，即沿离线的轴。 偏移值1确定轴方向下方位置的偏移量，通常是标准偏移开始， 偏移数值2确定轴方向上方位置的偏移量，通常是标准偏移的终点。"
 
-#:IFC.xml:832
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "首次反转偏移量"
+#:IFC.xml:22130
+msgid "IfcMaterialProperties"
+msgstr "IfcMaterialProperties"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "沿窗口放置协调系统z轴测量的转换中心线偏移。 偏移值0.5表示变压器放置在窗口中间。"
+msgid "IfcMaterialProperties_DEFINITION"
+msgstr "The [[IfcMaterialProperties]] assigns a set of material properties to associated material definitions. The set may be identified by a Name and a Description . The [[IfcProperty]] instantiable subtypes is used to express the individual material properties by name, description, value and unit. NOTE The set of material properties can be assigned to an individual [[IfcMaterial]] , a set or composite of materials [[IfcMaterialConstituent]] , [[IfcMaterialConstituentSet]] , or set or individual material layer [[IfcMaterialLayer]] , [[IfcMaterialLayerSet]] , or a set or individual material profile [[IfcMaterialProfile]] , [[IfcMaterialProfileSet]] HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Entity made non abstract. The subtypes IfcMechanicalMaterialProperties, IfcThermalMaterialProperties, IfcHygroscopicMaterialProperties, IfcGeneralMaterialProperties, IfcOpticalMaterialProperties, IfcWaterProperties, IfcFuelProperties, IfcProductsOfCombustionProperties, IfcExtendedMaterialProperties have been deleted, use [[IfcMaterialProperties]] instead."
 
-#:IFC.xml:837
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "线程深度"
+#:IFC.xml:21866
+msgid "IfcMaterialProperties_Material"
+msgstr "材料"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "垂直于窗口海拔平面的窗框深度。"
+msgid "IfcMaterialProperties_Material_DEFINITION"
+msgstr "参考一组属性所依据的实质性定义。 挂机ifc2x4 IFC4 变换. 数据类型已更改为超级类型 [[IfcMaterialDefinition]] 。"
 
-#:IFC.xml:842
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:22133
+msgid "IfcMaterialRelationship"
+msgstr "IfcMaterialRelationship"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMaterialRelationship_DEFINITION"
+msgstr "[[IfcMaterialRelationship]] 在材料定义中将零部件与整个之间的关系定义为合成材料中的关系。 以一套相关材料表示的零部件是材料成分，其中单一材料合计是由单一材料合成的。"
 
-#:IFC.xml:847
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "线条厚度"
+#:IFC.xml:21779
+msgid "IfcMaterialRelationship_RelatingMaterial"
+msgstr "相关材料"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMaterialRelationship_RelatingMaterial_DEFINITION"
+msgstr "2. 参照复合材料中的有关材料"
 
-#:IFC.xml:852
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanel偏移量"
+#:IFC.xml:21793
+msgid "IfcMaterialRelationship_RelatedMaterials"
+msgstr "相关材料"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMaterialRelationship_RelatedMaterials_DEFINITION"
+msgstr "2. 将相关材料作为复合材料的成分加以提及。"
 
-#:IFC.xml:857
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanel偏移"
+#:IFC.xml:22134
+msgid "IfcMaterialRelationship_MaterialExpression"
+msgstr "材料表达式"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "沿当地位置的y轴测得的衬线和窗口面板之间的偏移。 应小于或等于 [[IfcWindowPanelProperties]]。 anel厚度. .change ifc2x4 IFC4 变异新属性添加在实体定义末尾。"
+msgid "IfcMaterialRelationship_MaterialExpression_DEFINITION"
+msgstr "材料表达式"
 
-#:IFC.xml:862
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "多重厚度"
+#:IFC.xml:22141
+msgid "IfcMaterialSelect"
+msgstr "IfcMaterialSelect"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+#:IFC.xml:22142
+msgid "IfcMaterialUsageDefinition"
+msgstr "IfcMaterialUsageDefinition"
 
-#:IFC.xml:867
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+msgid "IfcMaterialUsageDefinition_DEFINITION"
+msgstr "[[IfcMaterialUsageDefinition]] 是 IFC 中所有与材料相关的信息项目的一般超级类型，这些信息项目具有发生的特定作业参数，可以为该组件的参考几何体积项分配一组带有形状参数的材料。 有两种方法来分配一组材料，其中有形参数的图层设定在参考曲线上，物质图层设有序列和厚度参数的材料图层设在一个元素的参考曲线上，该元素的轴形形状代表了一个剖面设定了一个基本点，将一个带有分配的剖面和插入点的物质图层设在一个参考曲线上。 这个元素的轴形状表示参考曲线被称为基本点。每个可实例化子类型[[IfcMaterialUsageDefinition]] 必须通过使用客观关系[[IfcRelAssociatesMaterial]]分配给子类型[[IfcElement]] ，它只能与元素发生一起有效。 IFC4 .spec首长非正式提议1中的新实体。 将子类型的 [[IfcMaterialUsageDefinition]] 分配给子类型的 [[IfcElementType]] 是非法的， 它只能分配给某个元素发生的情况。"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+#:IFC.xml:22144
+msgid "IfcMaterialUsageDefinition_AssociatedTo"
+msgstr "关联到"
 
-#:IFC.xml:872
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+msgid "IfcMaterialUsageDefinition_AssociatedTo_DEFINITION"
+msgstr "使用元素发生的物质关联内的 [[IfcMaterialUsageDefinition]] 子类型。关联是由 [[IfcRelAssociatesMaterial]] 关系建立的。"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+#:IFC.xml:22156
+msgid "IfcMlsTotalThickness__LayerSet"
+msgstr "IfcMlTotalThickness LayerSet"
 
-#:IFC.xml:877
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "反射厚度"
+#:IFC.xml:22164
+msgid "Pset_MaterialCombustion"
+msgstr "Pset 材料Combustion"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "Pset_MaterialCombustion_DEFINITION"
+msgstr "通常在建筑服务和流量分配系统中使用的元素所产生的燃烧产品的一系列扩大材料特性。 各单位吸收的燃烧热能产品的特定热量。"
 
-#:IFC.xml:896
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
+#:IFC.xml:22165
+msgid "CO2Content"
+msgstr "CO2内容"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure SideHungRightHand panel that opens to the right when viewed from the outside SideHungLeftHand panel that opens to the left when viewed from the outside TiltAndTurnRightHand panel that opens to the right and is bottom hung TiltAndTurnLeftHand panel that opens to the left and is bottom hung TopHung panel is top hung BottomHung panel is bottom hung PivotHorizontal panel is swinging horizontally hinges are in the middle PivotVertical panel is swinging vertically hinges are in the middle SlidingHorizontal panel is sliding horizontally SlidingVertical panel is sliding vertically RemovableCasement panel is removable FixedCasement panel is fixed OtherOperation user defined operation type NotDefined Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. Items SIDEHUNGRIGHTHAND SIDEHUNGLEFTHAND TILTANDTURNRIGHTHAND TILTANDTURNLEFTHAND TOPHUNG BOTTOMHUNG PIVOTHORIZONTAL PIVOTVERTICAL SLIDINGHORIZONTAL SLIDINGVERTICAL REMOVABLECASEMENT FIXEDCASEMENT OTHEROPERATION NOTDEFINED"
+msgid "CO2Content_DEFINITION"
+msgstr "燃烧产品的二氧化碳二氧化碳含量是以单位重量CO2的重量来计量的，因此是没有单位的。"
 
-#:IFC.xml:897
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
-msgstr "BOTTOMHUNG"
+#:IFC.xml:22170
+msgid "COContent"
+msgstr "COContent"
 
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
-msgstr "BOTTOMHUNG"
+msgid "COContent_DEFINITION"
+msgstr "燃烧产品中的一氧化碳CO含量，以单位重量计算，因此是没有单位的。"
 
-#:IFC.xml:898
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
-msgstr "FIXEDCASEMENT"
+#:IFC.xml:22175
+msgid "N20Content"
+msgstr "N20内容"
 
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
-msgstr "FIXEDCASEMENT"
+msgid "N20Content_DEFINITION"
+msgstr "燃烧产品的氧化亚氮N2O含量，以单位重量N2O计，因而没有单位。"
 
-#:IFC.xml:899
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:22180
+msgid "SpecificHeatCapacity"
+msgstr "Specific HeatCapacity"
 
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "SpecificHeatCapacity_DEFINITION"
+msgstr "界定一种材料的特定热能力。"
 
-#:IFC.xml:900
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
-msgstr "其他"
+#:IFC.xml:22186
+msgid "Pset_MaterialCommon"
+msgstr "Pset 材料常用"
 
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
-msgstr "其他"
+msgid "Pset_MaterialCommon_DEFINITION"
+msgstr "一组一般材料属性。"
 
-#:IFC.xml:901
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
-msgstr "四月"
+#:IFC.xml:22187
+msgid "MassDensity"
+msgstr "密度："
 
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
-msgstr "四月"
+msgid "MassDensity_DEFINITION"
+msgstr "材料质量密度。"
 
-#:IFC.xml:902
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
-msgstr "PIVOTVERTICAL"
+#:IFC.xml:22192
+msgid "MolecularWeight"
+msgstr "分子权重"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
-msgstr "PIVOTVERTICAL"
+msgid "MolecularWeight_DEFINITION"
+msgstr "材料的分子重量通常是气体。"
 
-#:IFC.xml:903
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
-msgstr "移除成员"
+#:IFC.xml:22197
+msgid "Porosity"
+msgstr "化验度"
 
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
-msgstr "移除成员"
+msgid "Porosity_DEFINITION"
+msgstr "材料Vbr Vnet Vbr占用总体积的无效部分。"
 
-#:IFC.xml:904
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
-msgstr "西欧格利福特"
+#:IFC.xml:22203
+msgid "Pset_MaterialConcrete"
+msgstr "Pset 材料混凝土"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
-msgstr "西欧格利福特"
+msgid "Pset_MaterialConcrete_DEFINITION"
+msgstr "一套与混凝土材料有关的扩展机械特性。"
 
-#:IFC.xml:905
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
-msgstr "SIDEHUNGRIGHTHAND"
+#:IFC.xml:22204
+msgid "AdmixturesDescription"
+msgstr "混音描述"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
-msgstr "SIDEHUNGRIGHTHAND"
+msgid "AdmixturesDescription_DEFINITION"
+msgstr "添加到混凝土混合物的admixtures 的描述。"
 
-#:IFC.xml:906
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
-msgstr "已下载"
+#:IFC.xml:22209
+msgid "CompressiveStrength"
+msgstr "压缩强度"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
-msgstr "已下载"
+msgid "CompressiveStrength_DEFINITION"
+msgstr "定义值 Alpha定义值压缩强度。"
 
-#:IFC.xml:907
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
-msgstr "潜伏的"
+#:IFC.xml:22214
+msgid "MaxAggregateSize"
+msgstr "MaxAggregateSize"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
-msgstr "潜伏的"
+msgid "MaxAggregateSize_DEFINITION"
+msgstr "混凝土的最大合计大小."
 
-#:IFC.xml:908
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
-msgstr "TILTANDTURNLEFTHAND"
+#:IFC.xml:22219
+msgid "ProtectivePoreRatio"
+msgstr "保护性的 PoreRatio"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
-msgstr "TILTANDTURNLEFTHAND"
+msgid "ProtectivePoreRatio_DEFINITION"
+msgstr "防护孔比表示混凝土的结冻抗性。"
 
-#:IFC.xml:909
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
-msgstr "TILTANDTURNRIGHTHAND"
+#:IFC.xml:22224
+msgid "WaterImpermeability"
+msgstr "水Impermeability"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
-msgstr "TILTANDTURNRIGHTHAND"
+msgid "WaterImpermeability_DEFINITION"
+msgstr "关于水不渗透特性的说明。"
 
-#:IFC.xml:910
-msgid "IfcWindowPanelOperationEnum_TOPHUNG"
-msgstr "TOPHUNG"
+#:IFC.xml:22229
+msgid "Workability"
+msgstr "工作能力"
 
-msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
-msgstr "TOPHUNG"
+msgid "Workability_DEFINITION"
+msgstr "说明根据当地标准界定的新鲜混凝土的可操作性。"
 
-#:IFC.xml:912
-msgid "IfcWindowPanelPositionEnum"
-msgstr "IfcWindowPanelPositionEnum"
+#:IFC.xml:22235
+msgid "Pset_MaterialEnergy"
+msgstr "Pset 材料能源"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the IfcWindowStyle definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+msgid "Pset_MaterialEnergy_DEFINITION"
+msgstr "一套用于计算能量的扩展材料特性。"
 
-#:IFC.xml:913
-msgid "IfcWindowPanelPositionEnum_BOTTOM"
-msgstr "BOTOM"
+#:IFC.xml:22236
+msgid "GasPressure"
+msgstr "气压"
 
-msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
-msgstr "BOTOM"
+msgid "GasPressure_DEFINITION"
+msgstr "填充气体之间的压力，例如填充气体在固定体积中的气体质量所产生的压力。"
 
-#:IFC.xml:914
-msgid "IfcWindowPanelPositionEnum_LEFT"
-msgstr "左键"
+#:IFC.xml:22241
+msgid "MoistureCapacityThermalGradient"
+msgstr "MoistureCapacityThermalGradient"
 
-msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
-msgstr "左键"
+msgid "MoistureCapacityThermalGradient_DEFINITION"
+msgstr "水分电容量的热梯度系数，基于水蒸汽密度。"
 
-#:IFC.xml:915
-msgid "IfcWindowPanelPositionEnum_MIDDLE"
-msgstr "MIDDL"
+#:IFC.xml:22246
+msgid "SolarRefractionIndex"
+msgstr "SolarRefractionIndex"
 
-msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDL"
+msgid "SolarRefractionIndex_DEFINITION"
+msgstr "折射太阳指数界定太阳射线从一种介质传入另一种介质时的弯曲。"
 
-#:IFC.xml:916
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:22251
+msgid "SpecificHeatTemperatureDerivative"
+msgstr "Specific HeatTemperatureDerivative"
 
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "SpecificHeatTemperatureDerivative_DEFINITION"
+msgstr "特定热温度衍生物。"
 
-#:IFC.xml:917
-msgid "IfcWindowPanelPositionEnum_RIGHT"
-msgstr "右侧"
+#:IFC.xml:22256
+msgid "ThermalConductivityTemperatureDerivative"
+msgstr "热导电温度导出器"
 
-msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "右侧"
+msgid "ThermalConductivityTemperatureDerivative_DEFINITION"
+msgstr "热导电温导衍生物。"
 
-#:IFC.xml:918
-msgid "IfcWindowPanelPositionEnum_TOP"
-msgstr "转发器"
+#:IFC.xml:22261
+msgid "ViscosityTemperatureDerivative"
+msgstr "直观温度导数"
 
-msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
-msgstr "转发器"
+msgid "ViscosityTemperatureDerivative_DEFINITION"
+msgstr "Viscosity温度衍生物。"
 
-#:IFC.xml:920
-msgid "IfcWindowPanelProperties"
-msgstr "IfcWindowPanel属性"
+#:IFC.xml:22266
+msgid "VisibleRefractionIndex"
+msgstr "可视化折射索引"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the IfcWindowStyle . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "VisibleRefractionIndex_DEFINITION"
+msgstr "可视反射索引定义在可见频谱从一种介质传递到另一种介质时将太阳光射线弯曲。"
 
-#:IFC.xml:943
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspet样式"
+#:IFC.xml:22272
+msgid "Pset_MaterialFuel"
+msgstr "Pset 材料燃料"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "与形状定义的可选关联。 这指的是用于代表面板的窗口风格几何表示的部分。 .已弃用的 DEPRECATION 属性已废弃，不再使用，即值应为 NIL 。"
+msgid "Pset_MaterialFuel_DEFINITION"
+msgstr "通常在建筑服务和流量分配系统范围内使用的一套燃料能源的扩大材料特性。 2. 当空气为298K和100千帕时材料的燃烧温度；"
 
-#:IFC.xml:921
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "框架深度"
+#:IFC.xml:22273
+msgid "CarbonContent"
+msgstr "碳化内容"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "CarbonContent_DEFINITION"
+msgstr "燃料中的碳含量是以燃料单位重量的碳重量来衡量的，因此是没有单位的。"
 
-#:IFC.xml:926
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "帧厚度"
+#:IFC.xml:22278
+msgid "CombustionTemperature"
+msgstr "组合温度"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+msgid "CombustionTemperature_DEFINITION"
+msgstr "燃烧温度。"
 
-#:IFC.xml:931
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "操作类型"
+#:IFC.xml:22283
+msgid "HigherHeatingValue"
+msgstr "高加热值"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "HigherHeatingValue_DEFINITION"
+msgstr "较高的加热值被定义为在燃料完全燃烧时释放的MJ公斤能量。 H2O在燃烧产品中以液体形式出现。"
 
-#:IFC.xml:936
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "面板位置"
+#:IFC.xml:22288
+msgid "LowerHeatingValue"
+msgstr "低热值"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "LowerHeatingValue_DEFINITION"
+msgstr "较低的加热值被定义为在燃料完全燃烧时释放的MJ公斤能量。 H2O在燃烧产品中以蒸汽形式出现。"
 
-#:IFC.xml:955
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcWindowStyConstructionEnum"
+#:IFC.xml:22294
+msgid "Pset_MaterialHygroscopic"
+msgstr "Pset 材料色谱法"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "此列举界定了建造窗户的基本类型。 施工类型涉及用于制造窗户的主要材料或材料组合。 IF2x中新的枚举。所有物品都能施放在钢铁板上。我们已经完成了其他的限定项目"
+msgid "Pset_MaterialHygroscopic_DEFINITION"
+msgstr "一组材料的水合特性。"
 
-#:IFC.xml:956
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
-msgstr "AluminIUM"
+#:IFC.xml:22295
+msgid "IsothermalMoistureCapacity"
+msgstr "IsothermalMoistureCapacity"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "AluminIUM"
+msgid "IsothermalMoistureCapacity_DEFINITION"
+msgstr "基于水蒸汽密度。"
 
-#:IFC.xml:957
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "闹钟"
+#:IFC.xml:22300
+msgid "LowerVaporResistanceFactor"
+msgstr "LowerVaporResistanceFactor"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "闹钟"
+msgid "LowerVaporResistanceFactor_DEFINITION"
+msgstr "空气材料的蒸气渗透关系通常值1，通常以较低的湿度测量为050RH 。"
 
-#:IFC.xml:958
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "高品级钢材质"
+#:IFC.xml:22305
+msgid "MoistureDiffusivity"
+msgstr "月经分散性"
 
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "高品级钢材质"
+msgid "MoistureDiffusivity_DEFINITION"
+msgstr "湿度分散是一种运输财产，经常用于建筑物包件的热分析中。"
 
-#:IFC.xml:959
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:22310
+msgid "UpperVaporResistanceFactor"
+msgstr "UpperVaporResistanceFactor"
 
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "UpperVaporResistanceFactor_DEFINITION"
+msgstr "空气材料的蒸气渗透关系通常值1，用较高的相对湿度来测量，一般为95RH。"
 
-#:IFC.xml:960
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
-msgstr "其它功用"
+#:IFC.xml:22315
+msgid "VaporPermeability"
+msgstr "VaporPermeability"
 
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
-msgstr "其它功用"
+msgid "VaporPermeability_DEFINITION"
+msgstr "试验条件下每单位蒸气压力差异的蒸气传输速率。"
 
-#:IFC.xml:961
-msgid "IfcWindowStyleConstructionEnum_PLASTIC"
-msgstr "游戏"
+#:IFC.xml:22321
+msgid "Pset_MaterialMechanical"
+msgstr "Pset 材料加工机"
 
-msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "游戏"
+msgid "Pset_MaterialMechanical_DEFINITION"
+msgstr "一套通常用于结构分析的机械材料特性，它包含与实际材料类型无关的所有特性。"
 
-#:IFC.xml:962
-msgid "IfcWindowStyleConstructionEnum_STEEL"
-msgstr "钢条"
+#:IFC.xml:22322
+msgid "DynamicViscosity"
+msgstr "动态Viscosity"
 
-msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "钢条"
+msgid "DynamicViscosity_DEFINITION"
+msgstr "该材料的直观抗性。"
 
-#:IFC.xml:963
-msgid "IfcWindowStyleConstructionEnum_WOOD"
-msgstr "WOD"
+#:IFC.xml:22327
+msgid "PoissonRatio"
+msgstr "PoissonRatio"
 
-msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOD"
+msgid "PoissonRatio_DEFINITION"
+msgstr "弹性范围内横向变形的计量。"
 
-#:IFC.xml:965
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyOperationEnum"
+#:IFC.xml:22332
+msgid "ShearModulus"
+msgstr "ShearModulus"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations Items SINGLE PANEL Window with one panel. DOUBLE PANEL VERTICAL Window with two panels. The configuration of the panels is vertically. DOUBLE PANEL HORIZONTAL Window with two panels. The configuration of the panels is horizontally. TRIPLE PANEL VERTICAL Window with three panels. The configuration of the panels is vertically. TRIPLE PANEL BOTTOM Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TRIPLE PANEL TOP Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TRIPLE PANEL LEFT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TRIPLE PANEL RIGHT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. TRIPLE PANEL HORIZONTAL Window with three panels. The configuration of the panels is horizontally. USERDEFINED user defined operation type NOTDEFINED"
+msgid "ShearModulus_DEFINITION"
+msgstr "材料弹性的表面模块。"
 
-#:IFC.xml:966
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
-msgstr "多余的 PANE HORIZONTAL"
+#:IFC.xml:22348
+msgid "Pset_MaterialOptical"
+msgstr "素材集"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "有两个面板的窗口。面板的配置是水平的。"
+msgid "Pset_MaterialOptical_DEFINITION"
+msgstr "一套材料光学特性。"
 
-#:IFC.xml:967
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
-msgstr "多余的PANEL"
+#:IFC.xml:22349
+msgid "SolarReflectanceBack"
+msgstr "SolarReflectanceBack"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
-msgstr "有两个面板的窗口。面板的配置是垂直的。"
+msgid "SolarReflectanceBack_DEFINITION"
+msgstr "在正常情况下太阳能回头反射。 定义射线从一个介质传输到另一个介质时所反映的太阳射线的分量。 在其他材料的后面，垂直于表面。 取决于材料和表面特性。"
 
-#:IFC.xml:968
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:22354
+msgid "SolarReflectanceFront"
+msgstr "士兵反省阵线："
 
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "SolarReflectanceFront_DEFINITION"
+msgstr "在正常情况下太阳前方反射。 定义射线从一个介质传输到另一个介质时所反映的太阳射线的分量。 在其他材料的前面，垂直于表面。 取决于材料和表面特性。"
 
-#:IFC.xml:969
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
-msgstr "SINGE PANEL"
+#:IFC.xml:22359
+msgid "SolarTransmittance"
+msgstr "SolarTransmittance"
 
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
-msgstr "Window with one panel."
+msgid "SolarTransmittance_DEFINITION"
+msgstr "直接穿越一个叫做Tite的系统的太阳辐射比例。请注意以下方程式Asol Rsol Tsol 1"
 
-#:IFC.xml:970
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
-msgstr "TRIPLE PANEL BOTOM"
+#:IFC.xml:22364
+msgid "ThermalIrEmissivityBack"
+msgstr "温度虚弱性后退"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
-msgstr "带有三个面板的窗口。两个面板的配置垂直，第三个面板水平在底部。"
+msgid "ThermalIrEmissivityBack_DEFINITION"
+msgstr "热红外反应堆后侧。 定义每个单位面积在同一温度下通过材料背面向黑体排放的热能分量。"
 
-#:IFC.xml:971
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
-msgstr "TRIPAL HORIZONTAL"
+#:IFC.xml:22369
+msgid "ThermalIrEmissivityFront"
+msgstr "ThermalIrmissibilityFront"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is horizontally."
+msgid "ThermalIrEmissivityFront_DEFINITION"
+msgstr "IR 热能发射前面。 定义每个单位面积在同一温度下通过材料的前面向黑体排放的热能分量。"
 
-#:IFC.xml:972
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
-msgstr "TRIPLE PANEL LEFT"
+#:IFC.xml:22374
+msgid "ThermalIrTransmittance"
+msgstr "热电传输器"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
-msgstr "带有三个面板的窗口。两个面板的配置是水平的，第三个面板垂直位于左侧。"
+msgid "ThermalIrTransmittance_DEFINITION"
+msgstr "在正常情况下热路由器传输。定义每个单位面积穿过的热能分量，垂直于表面。"
 
-#:IFC.xml:973
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
-msgstr "触发点右侧"
+#:IFC.xml:22379
+msgid "VisibleReflectanceBack"
+msgstr "可视反射返回"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side."
+msgid "VisibleReflectanceBack_DEFINITION"
+msgstr "正常情况下的反射可在背面看到。 定义太阳射线在反映的可见光谱中的分量，在射线从一种介质传输到另一种介质时不会传输。 在其他材料的后面，垂直于表面。 取决于材料和表面特性。"
 
-#:IFC.xml:974
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
-msgstr "TRIPE PANEL TOP"
+#:IFC.xml:22384
+msgid "VisibleReflectanceFront"
+msgstr "可视反射Front"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top."
+msgid "VisibleReflectanceFront_DEFINITION"
+msgstr "在正常情况下可见前端反射。 定义太阳射线在反映的可见光谱中的分量，在射线从一种介质传输到另一种介质时不会传输。 在其他材料的前面，垂直于表面。 取决于材料和表面特性。"
 
-#:IFC.xml:975
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
-msgstr "TRIPE PANEL 版本"
+#:IFC.xml:22389
+msgid "VisibleTransmittance"
+msgstr "可视传输量"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is vertically."
+msgid "VisibleTransmittance_DEFINITION"
+msgstr "正常情况下的传输次数可见。 定义每个单位面积穿过的太阳辐射可见光谱的分数，垂直于表面。"
 
-#:IFC.xml:976
-msgid "IfcWindowStyleOperationEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:22395
+msgid "Pset_MaterialSteel"
+msgstr "混凝土材料钢管"
 
-msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "user defined operation type"
+msgid "Pset_MaterialSteel_DEFINITION"
+msgstr "一套与钢或其他金属和各向异性材料有关的扩展机械特性。"
+
+#:IFC.xml:22396
+msgid "HardeningModule"
+msgstr "HardeningModule"
+
+msgid "HardeningModule_DEFINITION"
+msgstr "压力相对于压力曲线的材料坡度在产量范围后的硬化模块。"
+
+#:IFC.xml:22401
+msgid "PlasticStrain"
+msgstr "塑料火车"
+
+msgid "PlasticStrain_DEFINITION"
+msgstr "一种衡量长期流离失所情况的措施，如滑坡或结对，这种情况在压力消除之后仍然存在。 目前适用于材料0.2比例压力的紧张性。"
+
+#:IFC.xml:22406
+msgid "ProportionalStress"
+msgstr "相称性"
+
+msgid "ProportionalStress_DEFINITION"
+msgstr "测量材料的比例压力。 它描述了第一次塑料变形之前的压力，通常以0.01的变形来衡量。"
+
+#:IFC.xml:22411
+msgid "Relaxations"
+msgstr "放宽度"
+
+msgid "Relaxations_DEFINITION"
+msgstr "塑料流动所造成的压力在长时间间隔内减少的措施。 对于材料的不同初始应力水平，可以给出不同的放松值。 它描述了特定初始压力水平在恒定压力下的时间依靠相对放松值。 相关的值是放松值。相关的值是初始压力值"
+
+#:IFC.xml:22416
+msgid "UltimateStrain"
+msgstr "末影剧情模式"
+
+msgid "UltimateStrain_DEFINITION"
+msgstr "测量材料最终压力状态下的工程压力。"
+
+#:IFC.xml:22421
+msgid "UltimateStress"
+msgstr "终极感受器"
+
+msgid "UltimateStress_DEFINITION"
+msgstr "对材料最终压力的计量。"
+
+#:IFC.xml:22426
+msgid "YieldStress"
+msgstr "Yieldpress"
+
+msgid "YieldStress_DEFINITION"
+msgstr "一种测量物料产量压力或特性0.2%的证明压力。"
+
+#:IFC.xml:22432
+msgid "Pset_MaterialThermal"
+msgstr "Pset 材料热器"
+
+msgid "Pset_MaterialThermal_DEFINITION"
+msgstr "一组热材料特性。注释特性加热能力定义每个温度单位吸收的材料热能的特定热量。 热能通过材料传播的速度。"
+
+#:IFC.xml:22433
+msgid "BoilingPoint"
+msgstr "BoilingPoint"
+
+msgid "BoilingPoint_DEFINITION"
+msgstr "材料液体的锅炉。"
+
+#:IFC.xml:22438
+msgid "FreezingPoint"
+msgstr "冻结点"
+
+msgid "FreezingPoint_DEFINITION"
+msgstr "物质液的冻结点"
+
+#:IFC.xml:22454
+msgid "Pset_MaterialWater"
+msgstr "Pset 材料水"
+
+msgid "Pset_MaterialWater_DEFINITION"
+msgstr "通常在建筑服务和水流分配系统中使用的一套水的扩大材料特性。"
+
+#:IFC.xml:22455
+msgid "AcidityConcentration"
+msgstr "CidityCentration"
+
+msgid "AcidityConcentration_DEFINITION"
+msgstr "能够使酸失效的 CACO3 等效的最大值。"
+
+#:IFC.xml:22460
+msgid "AlkalinityConcentration"
+msgstr "碱度浓度"
+
+msgid "AlkalinityConcentration_DEFINITION"
+msgstr "作为CACO3测量的每一负离子物质的最大碱度浓度最大和。"
+
+#:IFC.xml:22465
+msgid "DissolvedSolidsContent"
+msgstr "解散的SolidsContent"
+
+msgid "DissolvedSolidsContent_DEFINITION"
+msgstr "溶解固体量与总水量之间的分数。 这种方法以溶解固体体重每次水重量来测量，因此是没有单位的。"
+
+#:IFC.xml:22470
+msgid "Hardness"
+msgstr "硬度"
+
+msgid "Hardness_DEFINITION"
+msgstr "水是否稀缺，作为水中正、多价离子浓度，通常是碳酸钙和镁的浓度。"
+
+#:IFC.xml:22475
+msgid "ImpuritiesContent"
+msgstr "Impurities内容"
+
+msgid "ImpuritiesContent_DEFINITION"
+msgstr "灰尘等杂质分成水量。 这是以每次水重量的杂质重量来测量的，因此是没有单位的。"
+
+#:IFC.xml:22480
+msgid "IsPotable"
+msgstr "伊波托尔"
+
+msgid "IsPotable_DEFINITION"
+msgstr "如果是TRUE，则水就被认为是可饮用的。"
+
+#:IFC.xml:22485
+msgid "PHLevel"
+msgstr "PHLevel"
+
+msgid "PHLevel_DEFINITION"
+msgstr "最大水位PH值介于 0 14 之间。"
+
+#:IFC.xml:22491
+msgid "Pset_MaterialWood"
+msgstr "木头材料"
+
+msgid "Pset_MaterialWood_DEFINITION"
+msgstr "这是适用于木材材料的特性集合，具体规定材料的种类和品位以及与湿度有关的参数。"
+
+#:IFC.xml:22492
+msgid "AppearanceGrade"
+msgstr "外观等级"
+
+msgid "AppearanceGrade_DEFINITION"
+msgstr "视觉质量方面的评分"
+
+#:IFC.xml:22497
+msgid "DimensionalChangeCoefficient"
+msgstr "维度变化系数"
+
+msgid "DimensionalChangeCoefficient_DEFINITION"
+msgstr "相对于湿度含量中的一个变化来说，加权尺度变化系数."
+
+#:IFC.xml:22502
+msgid "Layers"
+msgstr "图层"
+
+msgid "Layers_DEFINITION"
+msgstr "图层数量。"
+
+#:IFC.xml:22507
+msgid "Layup"
+msgstr "Layup"
+
+msgid "Layup_DEFINITION"
+msgstr "灯具配置。"
+
+#:IFC.xml:22512
+msgid "MoistureContent"
+msgstr "节能内容"
+
+msgid "MoistureContent_DEFINITION"
+msgstr "湿度相对于木头干燥重量的总重量。"
+
+#:IFC.xml:22517
+msgid "Plies"
+msgstr "Plies"
+
+msgid "Plies_DEFINITION"
+msgstr "复数."
+
+#:IFC.xml:22522
+msgid "Species"
+msgstr "物种："
+
+msgid "Species_DEFINITION"
+msgstr "固体木材或胶合板木材产品的木材种类。"
+
+#:IFC.xml:22527
+msgid "StrengthGrade"
+msgstr "强度等级"
+
+msgid "StrengthGrade_DEFINITION"
+msgstr "在机械强度和硬度方面的等级。"
+
+#:IFC.xml:22532
+msgid "ThicknessSwelling"
+msgstr "厚度"
+
+msgid "ThicknessSwelling_DEFINITION"
+msgstr "相对于板深度的肿胀比率。"
+
+#:IFC.xml:22538
+msgid "Pset_MaterialWoodBasedStructure"
+msgstr "Pset 材质woodBasedstructure"
+
+#:IFC.xml:22539
+msgid "ApplicableStructuralDesignMethod"
+msgstr "适用结构设计方法"
+
+msgid "ApplicableStructuralDesignMethod_DEFINITION"
+msgstr "确定机械材料特性是否适用于ASD允许的应力设计工作应力设计， LSD 限制状态设计，或 LRFD 负载和抗性因子设计。"
+
+#:IFC.xml:22545
+msgid "Pset_MechanicalBeamInPlane"
+msgstr "Pset MechanicalBeamInPlane"
+
+#:IFC.xml:22546
+msgid "BendingStrength"
+msgstr "BendingStrength"
+
+msgid "BendingStrength_DEFINITION"
+msgstr "定义值 Alpha定义值呈阳性强度。"
+
+#:IFC.xml:22551
+msgid "CompStrength"
+msgstr "强度"
+
+msgid "CompStrength_DEFINITION"
+msgstr "压缩强度，α0。"
+
+#:IFC.xml:22556
+msgid "CompStrengthPerp"
+msgstr "CompStrength Perp"
+
+msgid "CompStrengthPerp_DEFINITION"
+msgstr "压缩强度，α90"
+
+#:IFC.xml:22561
+msgid "InstabilityFactors"
+msgstr "不稳定因素"
+
+msgid "InstabilityFactors_DEFINITION"
+msgstr "定义值的斜度比率界定了强度的系数或除以数值，这取决于设计方法，如果有一个分隔符。"
+
+#:IFC.xml:22566
+msgid "RaisedCompStrengthPerp"
+msgstr "RaisedCompStrengthPerp"
+
+msgid "RaisedCompStrengthPerp_DEFINITION"
+msgstr "压缩强度，α90 的替代值，可在材料和代码依赖条件下使用，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
+
+#:IFC.xml:22571
+msgid "ReferenceDepth"
+msgstr "参考水深度"
+
+msgid "ReferenceDepth_DEFINITION"
+msgstr "机械特性有效的圆形深度作为检查物料分配完整性的手段。"
+
+#:IFC.xml:22581
+msgid "ShearModulusMin"
+msgstr "ShearModulusMin"
+
+msgid "ShearModulusMin_DEFINITION"
+msgstr "剪裁模块，最小值。"
+
+#:IFC.xml:22586
+msgid "ShearStrength"
+msgstr "心灵强度"
+
+msgid "ShearStrength_DEFINITION"
+msgstr "定义值 Alpha定义值穿透强度。"
+
+#:IFC.xml:22596
+msgid "TensileStrengthPerp"
+msgstr "TensileStrengthPerp"
+
+msgid "TensileStrengthPerp_DEFINITION"
+msgstr "2. 抗拉强度，α90"
+
+#:IFC.xml:22601
+msgid "TorsionalStrength"
+msgstr "激发强度"
+
+msgid "TorsionalStrength_DEFINITION"
+msgstr "在折磨中减弱实力。"
+
+#:IFC.xml:22611
+msgid "YoungModulusMin"
+msgstr "YoungModulusMin"
+
+msgid "YoungModulusMin_DEFINITION"
+msgstr "弹性模块，最小值 α0。"
+
+#:IFC.xml:22616
+msgid "YoungModulusPerp"
+msgstr "YoungModulusPerp"
+
+msgid "YoungModulusPerp_DEFINITION"
+msgstr "Elastic modulus, mean值, alpha90。"
+
+#:IFC.xml:22621
+msgid "YoungModulusPerpMin"
+msgstr "YoungModulusPerpMin"
+
+msgid "YoungModulusPerpMin_DEFINITION"
+msgstr "弹性模块，最小值 Alpha90 。"
+
+#:IFC.xml:22627
+msgid "Pset_MechanicalBeamInPlaneNegative"
+msgstr "Pset MechanicalBeamInPlaneNegative"
+
+#:IFC.xml:22709
+msgid "Pset_MechanicalBeamOutOfPlane"
+msgstr "Pset MechanicalBeamOutOfPlane"
+
+#:IFC.xml:22791
+msgid "Pset_MechanicalPanelInPlane"
+msgstr "Pset MechanicalPanelInPlane"
+
+#:IFC.xml:22792
+msgid "BearingStrength"
+msgstr "焦耳强度"
+
+msgid "BearingStrength_DEFINITION"
+msgstr "定义值α界定了具有喷口强度的数值，即无贸易压力。"
+
+#:IFC.xml:22807
+msgid "RaisedCompressiveStrength"
+msgstr "提升压缩强度"
+
+msgid "RaisedCompressiveStrength_DEFINITION"
+msgstr "可在材料和代码依赖条件下使用的压缩强度替代值，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
+
+#:IFC.xml:22832
+msgid "YoungModulusBending"
+msgstr "YoungModulusBending"
+
+msgid "YoungModulusBending_DEFINITION"
+msgstr "定义bend中的 Alpha定义值弹性模块。"
+
+#:IFC.xml:22837
+msgid "YoungModulusCompression"
+msgstr "YoungModulus压缩"
+
+msgid "YoungModulusCompression_DEFINITION"
+msgstr "压缩中的弹性模块。"
+
+#:IFC.xml:22842
+msgid "YoungModulusTension"
+msgstr "YoungModulusphension"
+
+msgid "YoungModulusTension_DEFINITION"
+msgstr "定义值α在紧张状态下定义的值弹性模块。"
+
+#:IFC.xml:22848
+msgid "Pset_MechanicalPanelOutOfPlane"
+msgstr "Pset MechanicalPanelOutOfPlane"
+
+#:IFC.xml:22905
+msgid "Pset_MechanicalPanelOutOfPlaneNegative"
+msgstr "套装机械板OutOfPlaneNegative"
+
+#:IFC.xml:23024
+msgid "IfcCardinalPointReference"
+msgstr "IfcCardinalPointReference"
+
+msgid "IfcCardinalPointReference_DEFINITION"
+msgstr "An [[IfcCardinalPointReference]] is an index reference to significant points of a section profile. This index is used to describe the spatial relationship between the section of a member and a reference axis of the same member. HISTORY New Type in IFC4. Indexes 1...9 refer to points at the bounding box of a profile. Indexes 10...19 refer to points defined by geometric centroid usually centre of gravity and shear centre, and their combinations with bounding box coordinates. In particular, the following index values are specified in this specification 1. bottom left 2. bottom centre 3. bottom right 4. mid depth left 5. mid depth centre 6. mid depth right 7. top left 8. top centre 9. top right 10. geometric centroid 11. bottom in line with the geometric centroid 12. left in line with the geometric centroid 13. right in line with the geometric centroid 14. top in line with the geometric centroid 15. shear centre 16. bottom in line with the shear centre 17. left in line with the shear centre 18. right in line with the shear centre 19. top in line with the shear centre 20. Lowest point inside of pipe or channel profile centre of flat bottom Other index values are possible but outside the scope of this specification. Figure 1 illustrates cardinal point values. arbitrary profile with cardinal points .. .. .. .. figures ifccardinalpointreference 01.png Figure 1 Cardinal point values Figure 2 illustrates an example extrusion shape with arbitrary profile [[IfcArbitraryClosedProfileDef]] , aligned mid depth right on the member axis. The line of sight follows the extrusion direction Z which points into the drawing plane of above illustration. Hence, left is in the positive X direction of the [[IfcProfileDef]] . Top is in the positive Y direction of the [[IfcProfileDef]] . extrusion shape with arbitrary profile and alignment .. .. .. .. figures ifccardinalpointreference 02.png Figure 2 Cardinal point extrusion Formal Propositions GreaterThanZero Cardinal point reference shall be greater than zero."
 
