@@ -2641,19 +2641,3 @@
 * For document 'zzOutOfPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzPerformanceUnit.md/z/properties/docs' a property cannot be found
 * For document 'zzTargetPerformance.md/z/properties/docs' a property cannot be found
-## QtoApplicability
-
-* The Property|Quantity Set 'Qto_CourseBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_EarthworksCutBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_EarthworksFillBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_ImpactProtectionDeviceBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_KerbBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_PavementBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_PictorialSignQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_ReinforcedSoilBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_SignBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_SignalBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_SleeperBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_SpatialZoneBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_SurfaceFeatureBaseQuantities' should have at least one applicability
-* The Property|Quantity Set 'Qto_VibrationIsolatorBaseQuantities' should have at least one applicability

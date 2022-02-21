@@ -10034,7 +10034,17 @@
       },
       "IfcImpactProtectionDevice": {
         "Parent": "IfcElementComponent",
-        "Description": ""
+        "Description": "",
+        "Psets": {
+          "Qto_ImpactProtectionDeviceBaseQuantities": {
+            "Properties": {
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
+              }
+            }
+          }
+        }
       },
       "IfcLinearElement": {
         "Parent": "IfcProduct",
@@ -11287,6 +11297,22 @@
               }
             }
           },
+          "Qto_SpatialZoneBaseQuantities": {
+            "Properties": {
+              "Height": {
+                "type": "real",
+                "Description": "Characteristic height."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
+          },
           "Pset_AirSideSystemInformation": {
             "Properties": {
               "AirflowSensible": {
@@ -11871,6 +11897,14 @@
               "VibrationTransmissibility": {
                 "type": "real",
                 "Description": "The vibration transmissibility percentage."
+              }
+            }
+          },
+          "Qto_VibrationIsolatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "real",
+                "Description": "Total Gross Weight of the object without any add-on parts and not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
               }
             }
           }
@@ -12673,6 +12707,34 @@
               "Radius": {
                 "type": "real",
                 "Description": "The radius of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+              }
+            }
+          },
+          "Qto_KerbBaseQuantities": {
+            "Properties": {
+              "Depth": {
+                "type": "real",
+                "Description": "The depth of the object."
+              },
+              "Height": {
+                "type": "real",
+                "Description": "Characteristic height."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "Volume": {
+                "type": "real",
+                "Description": "Volume of the element."
+              },
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
               }
             }
           },
@@ -18487,12 +18549,70 @@
                 "Description": "The nominal width of the system furniture elements of this type. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
               }
             }
+          },
+          "Qto_CourseBaseQuantities": {
+            "Properties": {
+              "GrossVolume": {
+                "type": "real",
+                "Description": "Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "Thickness": {
+                "type": "real",
+                "Description": "The geometric thickness of the object."
+              },
+              "Volume": {
+                "type": "real",
+                "Description": "Volume of the element."
+              },
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
           }
         }
       },
       "IfcEarthworksCut": {
         "Parent": "IfcFeatureElementSubtraction",
-        "Description": "The resulting void from modification of existing terrain or road structure by excavation or by other means of removing material.\nNOTE Definition from ISO 6707-1: void that results from bulk excavation of material.\nNOTE The material excavated and either used as fill or discarded as waste is not modelled as Cut, but may be handled as a different concept (Resource) in the future.\n"
+        "Description": "The resulting void from modification of existing terrain or road structure by excavation or by other means of removing material.\nNOTE Definition from ISO 6707-1: void that results from bulk excavation of material.\nNOTE The material excavated and either used as fill or discarded as waste is not modelled as Cut, but may be handled as a different concept (Resource) in the future.\n",
+        "Psets": {
+          "Qto_EarthworksCutBaseQuantities": {
+            "Properties": {
+              "Depth": {
+                "type": "real",
+                "Description": "The depth of the object."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "LooseVolume": {
+                "type": "real",
+                "Description": "Volume of the earthworks when in a loose piled state"
+              },
+              "UndisturbedVolume": {
+                "type": "real",
+                "Description": ""
+              },
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
+          }
+        }
       },
       "IfcEarthworksElement": {
         "Parent": "IfcBuiltElement",
@@ -18500,7 +18620,33 @@
       },
       "IfcEarthworksFill": {
         "Parent": "IfcEarthworksElement",
-        "Description": "A type of earthworks element created by earthwork activities to build subgrade or to raise the level of the ground in general.\n"
+        "Description": "A type of earthworks element created by earthwork activities to build subgrade or to raise the level of the ground in general.\n",
+        "Psets": {
+          "Qto_EarthworksFillBaseQuantities": {
+            "Properties": {
+              "CompactedVolume": {
+                "type": "real",
+                "Description": "Volume of the earthworks when finished and compacted in place."
+              },
+              "Depth": {
+                "type": "real",
+                "Description": "The depth of the object."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "LooseVolume": {
+                "type": "real",
+                "Description": "Volume of the earthworks when in a loose piled state"
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
+          }
+        }
       },
       "IfcGeomodel": {
         "Parent": "IfcGeotechnicalAssembly",
@@ -18737,12 +18883,70 @@
                 "Description": "Width of ceiling tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
               }
             }
+          },
+          "Qto_PavementBaseQuantities": {
+            "Properties": {
+              "Depth": {
+                "type": "real",
+                "Description": "The depth of the object."
+              },
+              "GrossArea": {
+                "type": "real",
+                "Description": "Gross Area of the object. Openings, recesses, projections and cut-outs are not taken into account."
+              },
+              "GrossVolume": {
+                "type": "real",
+                "Description": "Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "NetArea": {
+                "type": "real",
+                "Description": "Total net area of the object. Openings, recesses and cut-outs are taken into account by subtraction, projections by addition."
+              },
+              "NetVolume": {
+                "type": "real",
+                "Description": "Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses."
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
           }
         }
       },
       "IfcReinforcedSoil": {
         "Parent": "IfcEarthworksElement",
-        "Description": "Soil reinforced or stabilized by some mechanical or chemical method.\n"
+        "Description": "Soil reinforced or stabilized by some mechanical or chemical method.\n",
+        "Psets": {
+          "Qto_ReinforcedSoilBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "real",
+                "Description": "Calculated area for the object."
+              },
+              "Depth": {
+                "type": "real",
+                "Description": "The depth of the object."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              },
+              "Volume": {
+                "type": "real",
+                "Description": "Volume of the element."
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
+              }
+            }
+          }
+        }
       },
       "IfcSign": {
         "Parent": "IfcElementComponent",
@@ -18828,6 +19032,26 @@
                   "TRUE",
                   "FALSE"
                 ]
+              }
+            }
+          },
+          "Qto_SignBaseQuantities": {
+            "Properties": {
+              "Height": {
+                "type": "real",
+                "Description": "Characteristic height."
+              },
+              "Thickness": {
+                "type": "real",
+                "Description": "The geometric thickness of the object."
+              },
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
+              },
+              "Width": {
+                "type": "real",
+                "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
               }
             }
           }
@@ -19089,6 +19313,14 @@
                   "SWITCHINDICATOR",
                   "UNSET"
                 ]
+              }
+            }
+          },
+          "Qto_SignalBaseQuantities": {
+            "Properties": {
+              "Weight": {
+                "type": "real",
+                "Description": "Total weight of object"
               }
             }
           }
@@ -20214,7 +20446,21 @@
       },
       "IfcSurfaceFeature": {
         "Parent": "IfcFeatureElement",
-        "Description": "A surface feature is a modification at (onto, or into) of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element.\n\nThe part&ndash;whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements (element parts) and zero or more feature elements.\n\n> HISTORY&nbsp; New entity in IFC4.\n\n****Containment Use Definition****:\n\nSurface features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship.\n\n* The _SELF\\IfcElement.ContainedInStructure_ relationship shall be NIL.\n\n****Geometry use definition****:\n\nThe geometric representation of _IfcSurfaceFeatureElement_ is given by the _IfcProductDefinitionShape_, allowing multiple geometric representation.\n\n**Local Placement**\n\nThe local placement for _IfcSurfaceFeatureElement_ is defined in its supertype _IfcProduct_. It is defined by the _IfcLocalPlacement_, which defines the local coordinate system that is referenced by all geometric representations.\n\n* In case of features which are part of an element type, absolute placement into the type object's implied coordinate system shall be used.\n* In case of features which are voiding an element occurrence, the _PlacementRelTo_ relationship of _IfcLocalPlacement_ shall point to the local placement of the respective element.\n\n**Shape representation**\n\nDifferent shape representations may be used, depending on the nature of the feature and information requirements:\n\n* Symbolic representation, such as the two-dimensional bounding box of a tag. \n* A geometric set representing the geometric items of a mark.\n* Surface representations of treated parts of the lement surface by means of _IfcShellBasedSurfaceModel_. The faces within the surface model may be included into a B-Rep model within a representation map of the parent element type.\n\nHigher-level parameters (geometric and non-geometric) may be provided by property sets based on local agreements.\n"
+        "Description": "A surface feature is a modification at (onto, or into) of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element.\n\nThe part&ndash;whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements (element parts) and zero or more feature elements.\n\n> HISTORY&nbsp; New entity in IFC4.\n\n****Containment Use Definition****:\n\nSurface features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship.\n\n* The _SELF\\IfcElement.ContainedInStructure_ relationship shall be NIL.\n\n****Geometry use definition****:\n\nThe geometric representation of _IfcSurfaceFeatureElement_ is given by the _IfcProductDefinitionShape_, allowing multiple geometric representation.\n\n**Local Placement**\n\nThe local placement for _IfcSurfaceFeatureElement_ is defined in its supertype _IfcProduct_. It is defined by the _IfcLocalPlacement_, which defines the local coordinate system that is referenced by all geometric representations.\n\n* In case of features which are part of an element type, absolute placement into the type object's implied coordinate system shall be used.\n* In case of features which are voiding an element occurrence, the _PlacementRelTo_ relationship of _IfcLocalPlacement_ shall point to the local placement of the respective element.\n\n**Shape representation**\n\nDifferent shape representations may be used, depending on the nature of the feature and information requirements:\n\n* Symbolic representation, such as the two-dimensional bounding box of a tag. \n* A geometric set representing the geometric items of a mark.\n* Surface representations of treated parts of the lement surface by means of _IfcShellBasedSurfaceModel_. The faces within the surface model may be included into a B-Rep model within a representation map of the parent element type.\n\nHigher-level parameters (geometric and non-geometric) may be provided by property sets based on local agreements.\n",
+        "Psets": {
+          "Qto_SurfaceFeatureBaseQuantities": {
+            "Properties": {
+              "Area": {
+                "type": "real",
+                "Description": "Calculated area for the object."
+              },
+              "Length": {
+                "type": "real",
+                "Description": "The length of the object."
+              }
+            }
+          }
+        }
       },
       "IfcTendon": {
         "Parent": "IfcReinforcingElement",
