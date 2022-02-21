@@ -1214,7 +1214,6 @@
 * For document 'GasDetected.md/g/properties/docs' a property cannot be found
 * For document 'GasPressure.md/g/properties/docs' a property cannot be found
 * For document 'GasType.md/g/properties/docs' a property cannot be found
-* For document 'General.md/g/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
 * For document 'GlassColor.md/g/properties/docs' a property cannot be found
 * For document 'GlassLayers.md/g/properties/docs' a property cannot be found
