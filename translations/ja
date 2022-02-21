@@ -9,1039 +9,877 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcGeometricModelResource.pot\n"
-"X-Crowdin-File-ID: 44\n"
+"X-Crowdin-File: /master/IfcProcessExtension.pot\n"
+"X-Crowdin-File-ID: 66\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-21 13:40\n"
 
-#:IFC.xml:10294
-msgid "IfcAdvancedBrep"
-msgstr "IfcAdvancedBrep"
+#:IFC.xml:27556
+msgid "IfcEvent"
+msgstr "IfcEvent"
 
-msgid "IfcAdvancedBrep_DEFINITION"
-msgstr "An advanced B rep is a boundary representation model in which all faces, edges and vertices are explicitly represented. It is a solid with explicit topology and elementary or free form geometry. The faces of the B rep are of type [[IfcAdvancedFace]] . An advanced B rep has to meet the same topological constraints as the manifold solid B rep. NOTE The advanced B rep has been introduced in order to support the increasing number of applications that can define and exchange B rep models based on NURBS or other b spline surfaces. advanced brep b spline surface .. .. .. .. figures ifcadvancedbrep 01.png Figure 1 Advanced Brep, b spline surface Figure 1 illustrates use of [[IfcAdvancedBrep]] for boundary representation models with b spline surfaces. The diagram shows the topological and geometric representation items that are used for advanced B reps, based on [[IfcAdvancedFace]]. advanced brep elementary surface .. .. .. .. figures ifcadvancedbrep 02.png Figure 2 Advanced Brep, elementary surface Figure 2 illustrates use of [[IfcAdvancedBrep]] for boundary representation models with elementary surfaces. The diagram shows the topological and geometric representation items that are used for advanced B reps, based on [[IfcAdvancedFace]]. It shows the use of [[IfcIntersectionCurve]] to provide the geometric representation of the edge curve both as 3D curve and as u,v pcurve in the parametric space of the adjacent surfaces. NOTE Entity adapted from advanced brep shape representation defined in ISO 10303 514. HISTORY New entity in IFC4 .spec head Informal Propositions 1. each face is a face surface 2. each face surface has its geometry defined by an elementary surface, swept surface or a b spline surface 3. the edges used to define the boundaries of the face shall all reference an edge curve 4. each curve used to define the geometry of the faces and face bounds shall be either a conic, or a line or a polyline or a b spline curve 5. the edges used to define the face boundaries shall all be trimmed by vertices of type vertex point 6. no loop used to define a face bound shall be of the oriented subtype Formal Propositions HasAdvancedFaces Each face of the advanced B rep shall be of type [[IfcAdvancedFace]] ."
+msgid "IfcEvent_DEFINITION"
+msgstr "An [[IfcEvent]] is something that happens that triggers an action or response. HISTORY New entity in IFC4 .use head Use definitions [[IfcEvent]] is used to capture information about particular things that happen or that may happen. Particularly used in work plans or process maps they identify e.g. a point at which a message containing information may be issued or at which a rule or constraint is invoked."
 
-#:IFC.xml:10297
-msgid "IfcAdvancedBrepWithVoids"
-msgstr "IfcAdvancedBrepWithVoids"
+#:IFC.xml:3538
+msgid "IfcEvent_EventOccurenceTime"
+msgstr "EventOcurenceTime"
 
-msgid "IfcAdvancedBrepWithVoids_DEFINITION"
-msgstr "The [[IfcAdvancedBrepWithVoids]] is a specialization of an advanced B rep which contains one or more voids in its interior. The voids are represented as closed shells which are defined so that the shell normal point into the void. NOTE Entity adapted from advanced brep shape representation defined in ISO 10303 42. HISTORY New entity in IFC4 .spec head Informal Propositions 1. Each void shell shall be disjoint from the outer shell and from every other void shell 2. Each void shell shall be enclosed within the outer shell but not within any other void shell. In particular the outer shell is not in the set of void shells 3. Each shell in the [[IfcManifoldSolidBrep]] shall be referenced only once. 4. All the faces of all the shells in the [[IfcAdvancedBrep]] and the [[IfcAdvancedBrepWithVoids]].Voids shall be of type [[IfcAdvancedFace]] ."
+msgid "IfcEvent_EventOccurenceTime_DEFINITION"
+msgstr "イベントが発生した日時。"
 
-#:IFC.xml:10300
-msgid "IfcAdvancedBrepWithVoids_Voids"
-msgstr "Voids"
+#:IFC.xml:27557
+msgid "IfcEvent_EventTriggerType"
+msgstr "EventTriggerType"
 
-msgid "IfcAdvancedBrepWithVoids_Voids_DEFINITION"
-msgstr "Voids"
+msgid "IfcEvent_EventTriggerType_DEFINITION"
+msgstr "必要なタイプが設定されているイベントトリガーの定義済み型を識別します。"
 
-#:IFC.xml:10312
-msgid "IfcBlock"
-msgstr "IfcBlock"
+#:IFC.xml:27562
+msgid "IfcEvent_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcBlock_DEFINITION"
-msgstr "The [[IfcBlock]] is a Construction Solid Geometry CSG 3D primitive. It is defined by a position and a positve distance along the three orthogonal axes. The inherited Position attribute has the IfcAxisPlacement3D type and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The block has one vertex at location and the edges are aligned with the placement axes in the positive sense. The XLength , YLength , and ZLength attributes define the size of the [[IfcBlock]] along the three axes. Figure 1 illustrates geometric parameters of a block where the block positioned within its own placement coordinate system. The values for XLength, YLength, and ZLength are applied to the positive direction of the X, Y, and Z axis. Figure 1 Block geometry .extDef NOTE Definition according to ISO 10303 42 A block is a type of geometric representation item which is a solid rectangular parallelepiped, defined with a location and placement coordinate system. The block is specified by the positive lengths x, y, and z along the axes of the placement coordinate system, and has one vertex at the origin of the placement coordinate system. NOTE Entity adapted from block defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture definition On each side face, textures are aligned facing upright. On the top and bottom faces, textures are aligned facing front to back. Textures are stretched or repeated to the extent of each face according to RepeatS and RepeatT . Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Left X 0 YLength 0 Y Z Right X XLength 0 0 Y Z Front Y 0 0 0 X Z Back Y XLength YLength 0 X Z Bottom Z 0 YLength 0 X Y Top Z 0 0 ZLength X Y Figure 2 Block textures"
+msgid "IfcEvent_PredefinedType_DEFINITION"
+msgstr "必要なタイプが設定されているイベントの定義済み型を識別します。"
 
-#:IFC.xml:10313
-msgid "IfcBlock_XLength"
-msgstr "XLength"
+#:IFC.xml:27567
+msgid "IfcEvent_UserDefinedEventTriggerType"
+msgstr "UserDefinedEventTriggerType"
 
-msgid "IfcBlock_XLength_DEFINITION"
-msgstr "X 軸に沿ったブロックのサイズ。SELF [[IfcCsgPrimitive3D]].Position.P 1 を通して継承された軸配置によって提供されます。"
+msgid "IfcEvent_UserDefinedEventTriggerType_DEFINITION"
+msgstr "ユーザー定義のイベントトリガータイプ。イベントトリガータイプの値が USERDEFINED として宣言されたときにアサートされます。"
 
-#:IFC.xml:10318
-msgid "IfcBlock_YLength"
-msgstr "Y長さ"
+#:IFC.xml:27574
+msgid "IfcEventTriggerTypeEnum"
+msgstr "IfcEventTriggerTypeEnum"
 
-msgid "IfcBlock_YLength_DEFINITION"
-msgstr "Y軸に沿ったブロックのサイズ。SELF [[IfcCsgPrimitive3D]].Position.P 2 を通して継承された軸配置によって提供されます。"
+msgid "IfcEventTriggerTypeEnum_DEFINITION"
+msgstr "[[IfcEventTriggerTypeEnum]] は、指定できるさまざまなタイプのイベントトリガーの範囲を定義します。 イベントトリガータイプの定義は、業務プロセスモデリング記譜法BPMNから採用されました。 これは、ビジネスプロセスを定義するための情報配信マニュアルIDMでも使用されます。 イベントトリガータイプの使用に関する詳細は、これらの仕様に記載されています。 履歴 IFC4アイテムの新しいタイプ EVENTRULE ルールまたは制約のイベントトリガー。 EVENTMESSAGE メッセージまたは情報の集合であるイベントトリガー。 EVENTTIME 特定のポイントまたは期間の後に発生するイベントトリガー。 EVENTCOMPLEX 物事の複雑な組み合わせであるイベントトリガー. USERDEFINED NOTFINED"
 
-#:IFC.xml:10323
-msgid "IfcBlock_ZLength"
-msgstr "ZLength"
+#:IFC.xml:27575
+msgid "IfcEventTriggerTypeEnum_EVENTCOMPLEX"
+msgstr "EVENTCOMPLEX"
 
-msgid "IfcBlock_ZLength_DEFINITION"
-msgstr "配置 Z 軸に沿ったブロックのサイズ。SELF [[IfcCsgPrimitive3D]].Position.P 3 を通じて継承された軸配置によって提供されます。"
+msgid "IfcEventTriggerTypeEnum_EVENTCOMPLEX_DEFINITION"
+msgstr "物事の複雑な組み合わせであるイベントトリガー。"
 
-#:IFC.xml:10330
-msgid "IfcBooleanClippingResult"
-msgstr "IfcBooleanClippingResult"
+#:IFC.xml:27576
+msgid "IfcEventTriggerTypeEnum_EVENTMESSAGE"
+msgstr "イベントメッセージ"
 
-msgid "IfcBooleanClippingResult_DEFINITION"
-msgstr "A clipping result is defined as a special subtype of the general [[IfcBooleanResult]] . It constrains the operands and the operator of the Boolean result. A clipping result is the Boolean difference between a swept solid and a half space solid, or between the result of the Boolean difference and a half space solid. Hence more than one difference operation can be applied to achieve the final Boolean result. HISTORY New entity in IFC2x. Formal Propositions FirstOperandType The first operand of the Boolean clipping operation shall be either an [[IfcSweptAreaSolid]] or in case of more than one clipping an [[IfcBooleanResult]]. SecondOperandType The second operand of the Boolean clipping operation shall be an [[IfcHalfSpaceSolid]]. OperatorType The Boolean operator for clipping is always Difference ."
+msgid "IfcEventTriggerTypeEnum_EVENTMESSAGE_DEFINITION"
+msgstr "メッセージまたは情報のセットであるイベントトリガー。"
 
-#:IFC.xml:10333
-msgid "IfcBooleanOperand"
-msgstr "IfcBooleanOperand"
+#:IFC.xml:27577
+msgid "IfcEventTriggerTypeEnum_EVENTRULE"
+msgstr "イベント情報"
 
-#:IFC.xml:10334
-msgid "IfcBooleanOperator"
-msgstr "IfcBooleanOperator"
+msgid "IfcEventTriggerTypeEnum_EVENTRULE_DEFINITION"
+msgstr "ルールまたは制約であるイベントトリガー。"
 
-msgid "IfcBooleanOperator_DEFINITION"
-msgstr "最初と 2 番目のブール演算子に適用されるブール演算子。 xtDef Note: ISO CD 10303 42 1992 このタイプは、CSG ソリッドの定義で使用されている 3 つのブール演算子を定義します。 注 ISO 10303 42に定義されているブール演算子から適応したエンティティ HISTORY IFC1.5.1に新たなエンティティ。 Items UNION 2つの固体によって定義されたボリュームの規則的な集合理論組合を構築する作業。 INTERSECTION 2つの固体によって定義された体積の規則的な集合理論的交差を構築する操作。 DIFFERENCE 2つの固体で定義された体積間の規則的なセット理論差。"
+#:IFC.xml:27578
+msgid "IfcEventTriggerTypeEnum_EVENTTIME"
+msgstr "EVENTTIME"
 
-#:IFC.xml:10335
-msgid "IfcBooleanOperator_DIFFERENCE"
-msgstr "変化率"
+msgid "IfcEventTriggerTypeEnum_EVENTTIME_DEFINITION"
+msgstr "イベントトリガー。特定のポイントまたは期間の後に発生します。"
 
-msgid "IfcBooleanOperator_DIFFERENCE_DEFINITION"
-msgstr "2つの固体によって定義された容積間の規則的なセット理論の違い。"
+#:IFC.xml:27579
+msgid "IfcEventTriggerTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-#:IFC.xml:10336
-msgid "IfcBooleanOperator_INTERSECTION"
+msgid "IfcEventTriggerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:27580
+msgid "IfcEventTriggerTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcEventTriggerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:27582
+msgid "IfcEventType"
+msgstr "IfcEventType"
+
+msgid "IfcEventType_DEFINITION"
+msgstr "An [[IfcEventType]] defines a particular type of event that may be specified. HISTORY New entity in IFC4 An [[IfcEventType]] provides for all forms of types of event that may be specified. Usage of [[IfcEventType]] defines the parameters for one or more occurrences of [[IfcEvent]] . Parameters may be specified through property sets that may be enumerated in the [[IfcEventTypeEnum]] data type or through explicit attributes of [[IfcEvent]] . Event occurrences [[IfcEvent]] entities are linked to the event type through the [[IfcRelDefinesByType]] relationship."
+
+#:IFC.xml:27583
+msgid "IfcEventType_EventTriggerType"
+msgstr "EventTriggerType"
+
+msgid "IfcEventType_EventTriggerType_DEFINITION"
+msgstr "必要なタイプが設定されているイベントトリガーの定義済み型を識別します。"
+
+#:IFC.xml:27588
+msgid "IfcEventType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcEventType_PredefinedType_DEFINITION"
+msgstr "必要なタイプが設定されているイベントの定義済み型を識別します。"
+
+#:IFC.xml:27593
+msgid "IfcEventType_UserDefinedEventTriggerType"
+msgstr "UserDefinedEventTriggerType"
+
+msgid "IfcEventType_UserDefinedEventTriggerType_DEFINITION"
+msgstr "ユーザー定義のイベントトリガータイプ。イベントトリガータイプの値が USERDEFINED として宣言されたときにアサートされます。"
+
+#:IFC.xml:27600
+msgid "IfcEventTypeEnum"
+msgstr "IfcEventTypeEnum"
+
+msgid "IfcEventTypeEnum_DEFINITION"
+msgstr "[[IfcEventTypeEnum]] は、指定できるさまざまな種類のイベントの範囲を定義します。 歴史 IFC4アイテムの新しいタイプ STARTEVENT プロセスの開始イベント。 ENDEVENT - プロセスの終了イベント。INTERMEDIATEEVENT プロセスの中間段階で発生するイベント。 USERDEFINED NOTEFINED"
+
+#:IFC.xml:27607
+msgid "IfcEventTypeEnum_ENDEVENT"
+msgstr "終了数"
+
+msgid "IfcEventTypeEnum_ENDEVENT_DEFINITION"
+msgstr "プロセスの終了イベント。"
+
+#:IFC.xml:27608
+msgid "IfcEventTypeEnum_INTERMEDIATEEVENT"
+msgstr "INTERMEDIATEEVENT"
+
+msgid "IfcEventTypeEnum_INTERMEDIATEEVENT_DEFINITION"
+msgstr "プロセスの中間段階で発生するイベント。"
+
+#:IFC.xml:27609
+msgid "IfcEventTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcEventTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:27610
+msgid "IfcEventTypeEnum_STARTEVENT"
+msgstr "開始"
+
+msgid "IfcEventTypeEnum_STARTEVENT_DEFINITION"
+msgstr "プロセスの開始イベント。"
+
+#:IFC.xml:27611
+msgid "IfcEventTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcEventTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:27612
+msgid "IfcProcedure"
+msgstr "IfcProcedure"
+
+msgid "IfcProcedure_DEFINITION"
+msgstr "An [[IfcProcedure]] is a logical set of actions to be taken in response to an event or to cause an event to occur. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE ProcedureType renamed to PredefinedType and made optional upward compatible . Where rules WR1 and WR2 have been removed. .use head Use definitions [[IfcProcedure]] is used to capture information about stepped processes such as calibration, start stop procedures for equipment items, designated actions to take in the event of an emergency etc. A procedure is not a task, but may describe a set of tasks and their order of occurrence in response to or to cause an event. As shown in Figure 11, [[IfcProcedure]] does not restrict anything but describes specific steps of how something should happen. While a procedure does control restrict in the sense of indicating this is how the task should be performed by nature of describing inner detail, this is not different than parts of a product indicating this is how the parts should be assembled . Consequently, it doesn t restrict the outer item as a whole but provides inner detail of the item. procedure example .. .. .. .. figures ifcprocedure example.png Figure 1 Procedure relationships"
+
+#:IFC.xml:27613
+msgid "IfcProcedure_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcProcedure_PredefinedType_DEFINITION"
+msgstr "必要な型が設定されているプロシージャの定義済み型を識別します。"
+
+#:IFC.xml:27620
+msgid "IfcProcedureType"
+msgstr "IfcProcedureType"
+
+msgid "IfcProcedureType_DEFINITION"
+msgstr "An [[IfcProcedureType]] defines a particular type of procedure that may be specified. HISTORY New entity in IFC4 An [[IfcProcedureType]] provides for all forms of types of procedure that may be specified. Usage of [[IfcProcedureType]] defines the parameters for one or more occurrences of [[IfcProcedure]] . Parameters may be specified through property sets that may be enumerated in the [[IfcProcedureTypeEnum]] data type or through explict attributes of [[IfcProcedure]] . Procedure occurrences [[IfcProcedure]] entities are linked to the procedure type through the [[IfcRelDefinesByType]] relationship."
+
+#:IFC.xml:27621
+msgid "IfcProcedureType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcProcedureType_PredefinedType_DEFINITION"
+msgstr "必要な型が設定されているプロシージャの定義済み型を識別します。"
+
+#:IFC.xml:27628
+msgid "IfcProcedureTypeEnum"
+msgstr "IfcProcedureTypeEnum"
+
+msgid "IfcProcedureTypeEnum_DEFINITION"
+msgstr "[[IfcProcedureTypeEnum]] は、指定可能なさまざまな種類のプロシージャの範囲を定義します。 沿革 IFC2x2の新しいタイプの項目 注意事項は、手続きとして、または手続きを行う際に注意する必要があります。 注意事項手続きまたは手続きを行う際に注意すべき追加情報またはアドバイス。 アドバイス警告 プロシージャとしてまたはプロシージャを遂行するとき注意されるべき潜在的な危険の警告。 CALIBRATION アーティファクトを校正するための手順。 DIAGNOSTIC SHUTDOWN 操作を停止するための手順 アーティファクト. スタートアップ 操作を開始するための手順. ユーザー定義の通知"
+
+#:IFC.xml:27639
+msgid "IfcProcedureTypeEnum_ADVICE_CAUTION"
+msgstr "アドバイスの注意"
+
+msgid "IfcProcedureTypeEnum_ADVICE_CAUTION_DEFINITION"
+msgstr "手続きとして、または手続きを行う際に注意する必要があります。"
+
+#:IFC.xml:27640
+msgid "IfcProcedureTypeEnum_ADVICE_NOTE"
+msgstr "アドバイスノート"
+
+msgid "IfcProcedureTypeEnum_ADVICE_NOTE_DEFINITION"
+msgstr "手順として、または手順を実行する際に注意すべき追加情報やアドバイス。"
+
+#:IFC.xml:27641
+msgid "IfcProcedureTypeEnum_ADVICE_WARNING"
+msgstr "アドバイス警告"
+
+msgid "IfcProcedureTypeEnum_ADVICE_WARNING_DEFINITION"
+msgstr "手順として、または手順を実行する際に注意すべき潜在的な危険性の警告。"
+
+#:IFC.xml:27642
+msgid "IfcProcedureTypeEnum_CALIBRATION"
+msgstr "CALIBRATION"
+
+msgid "IfcProcedureTypeEnum_CALIBRATION_DEFINITION"
+msgstr "アーティファクトを校正するための手順。"
+
+#:IFC.xml:27643
+msgid "IfcProcedureTypeEnum_DIAGNOSTIC"
+msgstr "DIAGNOSTIC"
+
+msgid "IfcProcedureTypeEnum_DIAGNOSTIC_DEFINITION"
+msgstr "DIAGNOSTIC"
+
+#:IFC.xml:27644
+msgid "IfcProcedureTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcProcedureTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:27645
+msgid "IfcProcedureTypeEnum_SHUTDOWN"
+msgstr "シャットダウンする"
+
+msgid "IfcProcedureTypeEnum_SHUTDOWN_DEFINITION"
+msgstr "操作をシャットダウンする手順アーティファクト。"
+
+#:IFC.xml:27646
+msgid "IfcProcedureTypeEnum_STARTUP"
+msgstr "STARTUP"
+
+msgid "IfcProcedureTypeEnum_STARTUP_DEFINITION"
+msgstr "操作を開始するための手順アーティファクト。"
+
+#:IFC.xml:27647
+msgid "IfcProcedureTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcProcedureTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:27648
+msgid "IfcRelSequence"
+msgstr "IfcRelence"
+
+msgid "IfcRelSequence_DEFINITION"
+msgstr "[[IfcRelSequence]] is a sequential relationship between processes where one process must occur before the other in time and where the timing of the relationship may be described as a type of sequence. The relating process [[IfcRelSequence]].RelatingProcess is considered to be the predecessor in the relationship has precedence whilst the related process [[IfcRelSequence]].RelatedProcess is the successor. [[IfcRelSequence]] is defined as one to one relationship therefore it assigns one predecessor to one successor. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE Relocated to IfcProcessExtension schema. TimeLag and SequenceType made optional. USERDEFINED added to the IfcSequenceType enumeration. UserDefinedSequenceType attribute added. WHERE rule controlling use of the USERDEFINED enumeration added. .use head Use definitions [[IfcRelSequence]] is used to describe the logical sequence relationship that exists between two processes. This logical relationship identifies that there is a predecessor or relating process and a successor or related process. In IFC, there may be one predecessor and one successor in the relationship. Many occurrences of [[IfcRelSequence]] may exist to describe the sequence relationships of a predecessor task with many successor tasks or of many predecessor tasks with one successor task, thus enabling a m n sequence relationship between tasks. Please note that sequence relationships can be used to define dependencies between process occurrences but also between process types for further information see [[IfcRelDefinesByObject]] and [[IfcTaskType]] . In case of defining dependencies between process occurrences sequence relationships should stay within the limits of a directed, non cyclic graph. A sequence type may be set for a sequence. For tasks assigned to a work schedule, it is expected that the sequence type will be asserted. For a process map, where the sequence relationship between processes is simply a logical flow, it need not be asserted. A time lag may be assigned to a sequence, and the sequence type defines the way in which the time lag applies to the sequence either as a ratio or percentage of time duration e.g. start successor task when predecessor is 50 complete or as a time measure e.g. start successor task 1 week after commencement of the predecessor task . Care should be used when assigning a time lag to a sequence depending on the setting of the sequence type since there is no checking that the time lag value is in keeping with the sequence type set."
+
+#:IFC.xml:3590
+msgid "IfcRelSequence_TimeLag"
+msgstr "TimeLag"
+
+msgid "IfcRelSequence_TimeLag_DEFINITION"
+msgstr "シーケンスの期間は、SequenceType で指定されているように、前身と後継者の間のタイムラグです。"
+
+#:IFC.xml:20834
+msgid "IfcRelSequence_RelatingProcess"
+msgstr "RelatingProcess"
+
+msgid "IfcRelSequence_RelatingProcess_DEFINITION"
+msgstr "プロセスへの参照、それは前任者です。"
+
+#:IFC.xml:20848
+msgid "IfcRelSequence_RelatedProcess"
+msgstr "関連プロセス"
+
+msgid "IfcRelSequence_RelatedProcess_DEFINITION"
+msgstr "プロセスへの参照、それは後継者です。"
+
+#:IFC.xml:27649
+msgid "IfcRelSequence_SequenceType"
+msgstr "SequenceType"
+
+msgid "IfcRelSequence_SequenceType_DEFINITION"
+msgstr "タイムラグがシーケンスに適用される方法。"
+
+#:IFC.xml:27654
+msgid "IfcRelSequence_UserDefinedSequenceType"
+msgstr "UserDefinedSequenceType"
+
+msgid "IfcRelSequence_UserDefinedSequenceType_DEFINITION"
+msgstr "列挙値STARTを超えたシーケンスのユーザー定義タイプを指定できます。 FINISH, FINISH START, FINISH FINISH タイプ [[IfcSequenceEnum]] の SequenceType 属性によって提供されるFINISH を開始します。 属性に UserDefinedSequenceType が並列に与えられた場合、SequenceType は列挙値 USERDEFINED を持たなければなりません。.change ifc2x4 IFC4 変更点 属性追加"
+
+#:IFC.xml:27661
+msgid "IfcSequenceEnum"
+msgstr "IfcSequenceEnum"
+
+msgid "IfcSequenceEnum_DEFINITION"
+msgstr "[[IfcSequenceEnum]] は、2つのプロセス間のシーケンスにタイムラグが適用されるさまざまな方法を定義する列挙です。 歴史 IFC1.0項目に新たなエンティティが登場 後継タスクが開始される前に、前任タスクが開始されなければなりません。 START FINISH 後継タスクが完了する前に、先行タスクが開始されなければなりません。 FINISH START後継タスクが開始される前に、前任タスクが完了する必要があります。 FINISH FINISH 後継タスクが完了する前に、前任タスクが完了する必要があります。"
+
+#:IFC.xml:27662
+msgid "IfcSequenceEnum_FINISH_FINISH"
+msgstr "終了"
+
+msgid "IfcSequenceEnum_FINISH_FINISH_DEFINITION"
+msgstr "後継タスクが完了する前に、前任タスクが完了する必要があります。"
+
+#:IFC.xml:27663
+msgid "IfcSequenceEnum_FINISH_START"
+msgstr "完了開始"
+
+msgid "IfcSequenceEnum_FINISH_START_DEFINITION"
+msgstr "後継タスクが開始される前に、前任タスクが完了する必要があります。"
+
+#:IFC.xml:27664
+msgid "IfcSequenceEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcSequenceEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:27665
+msgid "IfcSequenceEnum_START_FINISH"
+msgstr "開始完了"
+
+msgid "IfcSequenceEnum_START_FINISH_DEFINITION"
+msgstr "後継タスクが完了する前に、前任タスクを開始する必要があります。"
+
+#:IFC.xml:27666
+msgid "IfcSequenceEnum_START_START"
+msgstr "開始"
+
+msgid "IfcSequenceEnum_START_START_DEFINITION"
+msgstr "後継タスクが開始される前に、前任タスクを開始する必要があります。"
+
+#:IFC.xml:27667
+msgid "IfcSequenceEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcSequenceEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:27669
+msgid "IfcTask"
+msgstr "IfcTask"
+
+msgid "IfcTask_DEFINITION"
+msgstr "An [[IfcTask]] is an identifiable unit of work to be carried out in a construction project. A task is typically used to describe an activity for the construction or installation of products, but is not limited to these types. For example it might be used to describe design processes, move operations and other design, construction and operation related activities as well. Quantities of resources consumed by the task are dealt with by defining the [[IfcElementQuantity]] for the resource and not at the instance of [[IfcTask]] . HISTORY New entity in IFC1.0. Renamed from IfcWorkTask in IFC2x. .change ifc2x4 IFC4 CHANGE Attributes TaskTime and PredefinedType added. IfcMove and IfcOrderRequest has been removed in IFC4 and are now represented by [[IfcTask]] . IfcRelAssignsTasks relationship has been removed as well. .use head Attribute use definition Each occurrence of [[IfcTask]] is given a name that is indicative of its content [[IfcRoot]].Name . A textual description of the task may be provided and this may be further elaborated by a narrative long description [[IfcProcess]].LongDescription . A work method may be declared for the method of work used in carrying out a task. A task is identified as being either a milestone task or not. A milestone task is defined by the marker IsMilestone . and has no duration. A status and priority for each task may also be set. .use head Time and duration use definition Compared to previous IFC releases, basic task time information scheduled start time, scheduled finish time, duration is now directly attached to [[IfcTask]] through the TaskTime attribute. Regular tasks are defined through [[IfcTaskTime]] . Recurring tasks are defined through [[IfcTaskTimeRecurring]] . In case a regular task is derived from a recurring task both tasks should be linked together through a [[IfcRelNests]] relationship, where [[IfcRelNests]].IsNestedBy points to the recurring task and [[IfcRelNests]].Nests points to all regular tasks that have been derived from the recurring task. .use head Representation of other activities The use definitions for [[IfcTask]] have been generalised to represent other activities as well, including activities that had been defined by own entities in previous IFC releases. This includes Order actions Move operations [[IfcTask]] represents an order that might be carried out by a Helpdesk acting the role of interface for the organization between the facility user and the functional requirement of fulfilling their needs. The actual task represented by the [[IfcTask]] entity is turning a request into an order and initiating the action that will enable the order to be completed. The [[IfcProjectOrder]] or one of its subtypes including maintenance work order, is related to the [[IfcTask]] using [[IfcRelAssignsToControl]] . [[IfcTask]] can also be used to describe an activity that moves people, groups within an organization or complete organizations together with their associated furniture and equipment from one place to another. It thus replaces the previous IFC entity IfcMove. The functionality is represented in [[IfcTask]] as follows Move from The place from which actors and their associated equipment are moving. Use [[IfcRelAssignsToProcess]] where RelatingProcess points to the task and RelatedObjects holds the location s from which to move. Move to The place to which actors and their associated equipment are moving. Use [[IfcRelAssignsToProduct]] where RelatedObjects points to the task s and RelatingProduct points to the location to which to move. Punch list A list of points concerning a move that require attention. Use LongDescription or else identify sub tasks to track punch list items individually via [[IfcRelNests]] ."
+
+#:IFC.xml:3893
+msgid "IfcTask_TaskTime"
+msgstr "タスク時間"
+
+msgid "IfcTask_TaskTime_DEFINITION"
+msgstr "タスクに関連する時間情報。.change ifc2x4 IFC4 変更属性追加"
+
+#:IFC.xml:27670
+msgid "IfcTask_IsMilestone"
+msgstr "Isマイルストーン"
+
+msgid "IfcTask_IsMilestone_DEFINITION"
+msgstr "タスクがマイルストーンのタスクであるか否かを特定します。 メモ 小さなプロジェクト計画アプリケーションでは、マイルストーンタスクは期間がないタスクであると理解できます。 そのように、それは時間の特異点を表します。"
+
+#:IFC.xml:27675
+msgid "IfcTask_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcTask_PredefinedType_DEFINITION"
+msgstr ".change ifc2x4 IFC4 変更属性が追加された、必要とされるタスクの定義済み型を識別します。"
+
+#:IFC.xml:27680
+msgid "IfcTask_Priority"
+msgstr "優先度"
+
+msgid "IfcTask_Priority_DEFINITION"
+msgstr "他のタスクの優先度と比較して、タスクの相対的な優先度を示す値。"
+
+#:IFC.xml:27685
+msgid "IfcTask_Status"
+msgstr "ステータス"
+
+msgid "IfcTask_Status_DEFINITION"
+msgstr "タスクの現在のステータス 注意 特定の状態の値は指定されていません。これらはローカルでの使用によって決定され、合意されるべきです。 可能なステータス値の例としては、未開始 、開始 、完了 が含まれます。"
+
+#:IFC.xml:27690
+msgid "IfcTask_WorkMethod"
+msgstr "WorkMethod"
+
+msgid "IfcTask_WorkMethod_DEFINITION"
+msgstr "仕事の遂行に使用される仕事の方法。 注 [[IfcTaskType] ] にworkメソッドを指定した場合、この属性を使用しないでください。"
+
+#:IFC.xml:27697
+msgid "IfcTaskType"
+msgstr "IfcTaskType"
+
+msgid "IfcTaskType_DEFINITION"
+msgstr "An [[IfcTaskType]] defines a particular type of task that may be specified for use within a work control. HISTORY New entity in IFC4 An [[IfcTaskType]] provides for all forms of types of task that may be specified. It is a reference definition for a unit of work that may be broken down into a sequence of subtasks. Please note that a reference definition can not be part of a workflow definition, i.e. [[IfcTaskType]] instances define the most abstract level of a reference process without dependencies to other reference processes. Usage of [[IfcTaskType]] defines the parameters for one or more occurrences of [[IfcTask]] . Parameters may be specified through property sets that may be enumerated in the [[IfcTaskTypeEnum]] data type or through explict attributes of [[IfcTaskType]] . Task occurrences [[IfcTask]] entities are linked to the task type through the [[IfcRelDefinesByType]] relationship. Figure 1 shows the definition of a task type that is part of a task template library. Please note that in this example the task type is further subdivided into tasks that define task times for example, duration and or a task sequence. task type instantiation diagram .. .. .. .. figures ifctasktype instantiation diagram.png Figure 1 Task type relationships"
+
+#:IFC.xml:27698
+msgid "IfcTaskType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcTaskType_PredefinedType_DEFINITION"
+msgstr "必要な種類が設定されているタスクタイプの定義済み型を識別します。"
+
+#:IFC.xml:27703
+msgid "IfcTaskType_WorkMethod"
+msgstr "WorkMethod"
+
+msgid "IfcTaskType_WorkMethod_DEFINITION"
+msgstr "仕事の遂行に使用される仕事の方法。"
+
+#:IFC.xml:27710
+msgid "IfcTaskTypeEnum"
+msgstr "IfcTaskTypeEnum"
+
+msgid "IfcTaskTypeEnum_DEFINITION"
+msgstr "[[IfcTaskTypeEnum]] は、指定可能なタスクの種類を定義します。 歴史 IFC4アイテムに新しいタイプが追加されました。 出席したり、他のことを待っています。 キャリブレーション構成 何かを構築または構築します。デモリション 何かを破壊または破壊します。 Dismantle リサイクルや再利用ができるように、慎重に何かを分解します。 緊急事態に応答するために必要な緊急タスク。 これは、空白、ゾーンなど、モデル内のあらゆる種類のオブジェクトに適用することができます。 緊急事態が異なる場合には緊急事態が発生することがあります 検査オブジェクトの検査を行うために必要なタスク。 インストール 建設に相当するものをインストールするが、より一般的にエンジニアリングタスクに使用される LOGISTIC輸送や何かの配達。 メンテナンス良好な作業順序のオブジェクトを保持するために必要なタスク. 移動 ある場所から別の場所に移動します。 操作 アーティファクトの操作を開始するための手順です。 REMOVAL 使用からアイテムを削除し、使用場所からアイテムを取り除きます。REMOVATION 新しい状態に何かをもたらします。 オブジェクトの安全な使用を保証するために必要なSAFETY タスク。例えば電気的なロックアウト命令。 SHUTDOWN 通常システムに適用される、秩序あるシャットダウンに必要な一連のタスク。 STARTUP 動作を開始または再起動するために必要なタスクのセットは、通常、システムに適用されます。 テスト オブジェクトのパフォーマンスを評価するために必要な一連のタスクは、通常、ElementTypesとSystemsに適用されます。 TROUBLESHOOTING 一般的に発生するパフォーマンスの問題を診断するために必要な一連のタスク、通常はエレメントタイプとシステムに適用されます。"
+
+#:IFC.xml:27735
+msgid "IfcTaskTypeEnum_ADJUSTMENT"
+msgstr "管理機能"
+
+msgid "IfcTaskTypeEnum_ADJUSTMENT_DEFINITION"
+msgstr "管理機能"
+
+#:IFC.xml:27736
+msgid "IfcTaskTypeEnum_ATTENDANCE"
+msgstr "ATTENDANCE"
+
+msgid "IfcTaskTypeEnum_ATTENDANCE_DEFINITION"
+msgstr "出席または他の事が起こるのを待っている。"
+
+#:IFC.xml:27737
+msgid "IfcTaskTypeEnum_CALIBRATION"
+msgstr "CALIBRATION"
+
+msgid "IfcTaskTypeEnum_CALIBRATION_DEFINITION"
+msgstr "CALIBRATION"
+
+#:IFC.xml:27738
+msgid "IfcTaskTypeEnum_CONSTRUCTION"
+msgstr "構造"
+
+msgid "IfcTaskTypeEnum_CONSTRUCTION_DEFINITION"
+msgstr "何かを作ったり組み立てたりします"
+
+#:IFC.xml:27739
+msgid "IfcTaskTypeEnum_DEMOLITION"
 msgstr "<unk>"
 
-msgid "IfcBooleanOperator_INTERSECTION_DEFINITION"
-msgstr "2つの固体によって定義された体積の規則的な集合理論的交差を構築する操作."
+msgid "IfcTaskTypeEnum_DEMOLITION_DEFINITION"
+msgstr "何かを破壊したり壊したりします。"
 
-#:IFC.xml:10337
-msgid "IfcBooleanOperator_UNION"
-msgstr "連合（UNION）"
+#:IFC.xml:27740
+msgid "IfcTaskTypeEnum_DISMANTLE"
+msgstr "切断"
 
-msgid "IfcBooleanOperator_UNION_DEFINITION"
-msgstr "2つの固体によって定義された容積の規則的な集合理論組合を構築する操作。"
+msgid "IfcTaskTypeEnum_DISMANTLE_DEFINITION"
+msgstr "それがリサイクルまたは再利用できるように慎重に何かを分解します。"
 
-#:IFC.xml:10339
-msgid "IfcBooleanResult"
-msgstr "IfcBooleanResult"
+#:IFC.xml:27741
+msgid "IfcTaskTypeEnum_DISPOSAL"
+msgstr "破棄"
 
-msgid "IfcBooleanResult_DEFINITION"
-msgstr "[[IfcBooleanResult]]は、2つのオペランドがソリッドであることにブール演算を適用した結果です。 例 最初のオペランドがブロックであり、2番目のオペランドが適切な寸法と場所の固体シリンダーである場合。 差分演算子によって生成されるブール値の結果は円形の穴を持つブロックになる。 xtDef NOTEの定義 ISO CD 10303による定義 42 1992 ブール値の結果は、新しいソリッドを作成するために2つのソリッドで規則的に操作された結果です。 有効な操作は、規則的な組合であり、規則的な交差点であり、規則的な差である。 ブール演算のために、ソリッドは正規化された点の集合と見なされます。 最終的なブール値の結果は、操作と2つのオペランドに依存します。 差分演算子の場合、オペランドの順序も重要です。演算子は、ユニオン、交差、または違いのいずれかを指定できます。 これらの演算子の効果は、2つの固体の上で以下に説明されています 新しいソリッドは、最初のオペランドまたは2番目のオペランドのいずれかにあるすべての点のセットの規則化である。 2つのソリッド上の交差は、最初のオペランドと2番目のオペランドの両方にあるすべての点のセットの規則化である新しいソリッドです。 2 つのソリッドの差分演算の結果は、最初のオペランドにあるすべての点の集合の規則化です。 2番目のオペランドでは違います 注意 対応するSTEP型ブール値の結果はISO 10303で定義されています. 履歴 IFC1.5.1に新しいエンティティ。"
+msgid "IfcTaskTypeEnum_DISPOSAL_DEFINITION"
+msgstr "何かを処分または取り除く。"
 
-#:IFC.xml:10340
-msgid "IfcBooleanResult_Dim"
-msgstr "Dim"
+#:IFC.xml:27742
+msgid "IfcTaskTypeEnum_EMERGENCY"
+msgstr "緊急性"
 
-msgid "IfcBooleanResult_Dim_DEFINITION"
-msgstr "このエンティティの空間次元。最初のオペランドの空間次元と同じです。 whereルールは、両方のオペランドが同じ空間次元を持つことを保証します。"
+msgid "IfcTaskTypeEnum_EMERGENCY_DEFINITION"
+msgstr "緊急事態への対応に必要なタスク。 これは、空白、ゾーンなど、モデル内のあらゆる種類のオブジェクトに適用することができます。 緊急事態が異なる場合には緊急事態が発生することがあります"
 
-#:IFC.xml:10345
-msgid "IfcBooleanResult_FirstOperand"
-msgstr "FirstOperand"
+#:IFC.xml:27743
+msgid "IfcTaskTypeEnum_INSPECTION"
+msgstr "検査"
 
-msgid "IfcBooleanResult_FirstOperand_DEFINITION"
-msgstr "ブール演算によって操作される最初のオペランド。"
+msgid "IfcTaskTypeEnum_INSPECTION_DEFINITION"
+msgstr "オブジェクトの検査を行うために必要な作業。"
 
-#:IFC.xml:10350
-msgid "IfcBooleanResult_Operator"
-msgstr "演算子"
+#:IFC.xml:27744
+msgid "IfcTaskTypeEnum_INSTALLATION"
+msgstr "インストール"
 
-msgid "IfcBooleanResult_Operator_DEFINITION"
-msgstr "結果を生成するために使用されるブール演算子。"
+msgid "IfcTaskTypeEnum_INSTALLATION_DEFINITION"
+msgstr "建設と同等のものをインストールしますが、エンジニアリングタスクに一般的に使用されます。"
 
-#:IFC.xml:10355
-msgid "IfcBooleanResult_SecondOperand"
-msgstr "SecondOperand"
+#:IFC.xml:27745
+msgid "IfcTaskTypeEnum_LOGISTIC"
+msgstr "LOGISTIC"
 
-msgid "IfcBooleanResult_SecondOperand_DEFINITION"
-msgstr "2 番目のオペランドは、操作のために指定されます。"
+msgid "IfcTaskTypeEnum_LOGISTIC_DEFINITION"
+msgstr "何かの輸送または配達。"
 
-#:IFC.xml:10364
-msgid "IfcBoundingBox"
-msgstr "IfcBoundingBox"
+#:IFC.xml:27746
+msgid "IfcTaskTypeEnum_MAINTENANCE"
+msgstr "メンテナンス"
 
-msgid "IfcBoundingBox_DEFINITION"
-msgstr "The [[IfcBoundingBox]] defines an orthogonal box oriented parallel to the axes of the object coordinate system in which it is defined. It is defined by a Corner being a three dimensional Cartesian point and three length measures defining the X, Y and Z parameters of the box in the direction of the positive axes. NOTE Any subtype of [[IfcProduct]] having a product shape representation may have a bounding box representation. The Box representation identifier defined at [[IfcShapeRepresentation]] utilizes the [[IfcBoundingBox]] as the simpliest 3D shape representation. As shown in Figure 1, the [[IfcBoundingBox]] is defined with its own location which can be used to place the [[IfcBoundingBox]] relative to the geometric coordinate system. The [[IfcBoundingBox]] is defined by the lower left corner Corner and the upper right corner XDim, YDim, ZDim measured within the parent co ordinate system . Figure 1 Bounding box NOTE Corresponding STEP type box domain defined in ISO 10303 42. HISTORY New entity in IFC1.0."
+msgid "IfcTaskTypeEnum_MAINTENANCE_DEFINITION"
+msgstr "オブジェクトがうまく動作する順序を維持するために必要なタスク。"
 
-#:IFC.xml:10387
-msgid "IfcBoundingBox_Corner"
-msgstr "コーナー"
+#:IFC.xml:27747
+msgid "IfcTaskTypeEnum_MAINTENANCE"
+msgstr "メンテナンス"
 
-msgid "IfcBoundingBox_Corner_DEFINITION"
-msgstr "最小値を持つ左下隅の位置。"
+msgid "IfcTaskTypeEnum_MAINTENANCE_DEFINITION"
+msgstr "オブジェクトがうまく動作する順序を維持するために必要なタスク。"
 
-#:IFC.xml:10365
-msgid "IfcBoundingBox_Dim"
-msgstr "Dim"
+#:IFC.xml:27748
+msgid "IfcTaskTypeEnum_MOVE"
+msgstr "移動"
 
-msgid "IfcBoundingBox_Dim_DEFINITION"
-msgstr "このクラスの空間次元、それは常に3です。"
+msgid "IfcTaskTypeEnum_MOVE_DEFINITION"
+msgstr "物をある場所から別の場所に移動させます。"
 
-#:IFC.xml:10370
-msgid "IfcBoundingBox_XDim"
-msgstr "XDim"
+#:IFC.xml:27749
+msgid "IfcTaskTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcBoundingBox_XDim_DEFINITION"
-msgstr "X軸と平行に沿って測定された長さ属性"
+msgid "IfcTaskTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:10375
-msgid "IfcBoundingBox_YDim"
-msgstr "YDim"
+#:IFC.xml:27750
+msgid "IfcTaskTypeEnum_OPERATION"
+msgstr "操作"
 
-msgid "IfcBoundingBox_YDim_DEFINITION"
-msgstr "Y軸に平行なエッジに沿って測定された幅属性"
+msgid "IfcTaskTypeEnum_OPERATION_DEFINITION"
+msgstr "操作を開始するための手順アーティファクト。"
 
-#:IFC.xml:10380
-msgid "IfcBoundingBox_ZDim"
-msgstr "ZDim"
+#:IFC.xml:27751
+msgid "IfcTaskTypeEnum_REMOVAL"
+msgstr "REMOVAL"
 
-msgid "IfcBoundingBox_ZDim_DEFINITION"
-msgstr "Height 属性は、Z 軸に平行に沿って測定されます。"
+msgid "IfcTaskTypeEnum_REMOVAL_DEFINITION"
+msgstr "使用からの項目を削除し、使用の場所からそれを取ります。"
 
-#:IFC.xml:10411
-msgid "IfcBoxedHalfSpace"
-msgstr "IfcBoxedHalfSpace"
+#:IFC.xml:27752
+msgid "IfcTaskTypeEnum_RENOVATION"
+msgstr "更新"
 
-msgid "IfcBoxedHalfSpace_DEFINITION"
-msgstr "The [[IfcBoxedHalfSpace]] is used as its supertype [[IfcHalfSpaceSolid]] only within Boolean operations. It divides the domain into exactly two subsets, where the domain in question is that of the attribute Enclosure . The purpose of the attribute Enclosure is to provide a search box for the other operand in the Boolean operation. It shall be sufficiently large to fully enclose the resulting solid after the Boolean operation with the half space. It however does not alter the final result. The result of the Boolean operation would be the same, as if executed by the supertype [[IfcHalfSpaceSolid]] . See Figure 1 below. correct use of enclosure .. .. .. .. figures ifcboxedhalfspace 01.png Figure 1 Boxed half space operands The [[IfcBoundingBox]] that provides the enclosure is given for the convenience of the receiving application to enable the use of size box comparison for efficiency for example, to check first whether size boxes intersect, if not no calculations has to be done to check whether the solids of the entities intersect . The Enclosure therefore helps to prevent dealing with infinite size related issues. The enclosure box is positioned within the object coordinate system, established by the ObjectPlacement of the element represented for example, by [[IfcLocalPlacement]] . Figure 2 shows the Enclosure box being sufficiently large to fully enclose the Boolean result. Figure 2 Boxed half space geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 This entity is a subtype of the half space solid which is trimmed by a surrounding rectangular box. The box has its edges parallel to the coordinate axes of the geometric coordinate system. The purpose of the box is to facilitate CSG computations by producing a solid of finite size. NOTE Entity adapted from boxed half space defined in ISO 10303 42. HISTORY New entity in IFC1.5.1 .change ifc2x4 IFC4 CHANGE Usage correct, position coordinate system for Enclosure is the object coordinate system."
+msgid "IfcTaskTypeEnum_RENOVATION_DEFINITION"
+msgstr "新しい状態として何かをもたらす。"
 
-#:IFC.xml:10399
-msgid "IfcBoxedHalfSpace_Enclosure"
-msgstr "エンクロージャー"
+#:IFC.xml:27753
+msgid "IfcTaskTypeEnum_SAFETY"
+msgstr "安全"
 
-msgid "IfcBoxedHalfSpace_Enclosure_DEFINITION"
-msgstr "計算目的のみ、半分のスペースソリッドを含むブール演算の結果ソリッドをバインドするボックス。"
+msgid "IfcTaskTypeEnum_SAFETY_DEFINITION"
+msgstr "オブジェクトを安全に使用するために必要なタスク。例えば電気ロックアウト命令。"
 
-#:IFC.xml:10414
-msgid "IfcCartesianPointList"
-msgstr "IfcCartesianPointList"
+#:IFC.xml:27754
+msgid "IfcTaskTypeEnum_SHUTDOWN"
+msgstr "シャットダウンする"
 
-msgid "IfcCartesianPointList_DEFINITION"
-msgstr "The [[IfcCartesianPointList]] is the abstract supertype of list of points. NOTE The [[IfcCartesianPointList]] is introduced to provide a compact representation of potentially larger list of points, such as in point clouds, and in indexable representation of points. HISTORY New entity in IFC4."
+msgid "IfcTaskTypeEnum_SHUTDOWN_DEFINITION"
+msgstr "秩序あるシャットダウンに必要なタスクのセットは、通常システムに適用されます。"
 
-#:IFC.xml:10415
-msgid "IfcCartesianPointList_Dim"
-msgstr "Dim"
+#:IFC.xml:27755
+msgid "IfcTaskTypeEnum_STARTUP"
+msgstr "STARTUP"
 
-msgid "IfcCartesianPointList_Dim_DEFINITION"
-msgstr "サブタイプに応じて、このクラスの空間次元、2 または 3 のいずれか。"
+msgid "IfcTaskTypeEnum_STARTUP_DEFINITION"
+msgstr "操作を開始または再起動するために必要なタスクのセットは、通常システムに適用されます。"
 
-#:IFC.xml:10434
-msgid "IfcCartesianPointList2D"
-msgstr "IfcCartesianPointList2D"
+#:IFC.xml:27756
+msgid "IfcTaskTypeEnum_TESTING"
+msgstr "テスト"
 
-msgid "IfcCartesianPointList2D_DEFINITION"
-msgstr "The [[IfcCartesianPointList2D]] defines an ordered collection of two dimentional Cartesian points. Each Cartesian point is provided as an two dimensional point by a fixed list of two coordinates. The attribute CoordList is a two dimensional list, where first dimension is an unbounded list representing each 2D Cartesian point second dimension is a fixed list of two list members, where 1 is the x coordinate, and 2 the y coordinate of the Cartesian point. NOTE The [[IfcCartesianPointList2D]] is introduced to provide a compact representation of larger list of points, such as in indexable representation of points used as vertices in poly curves. HISTORY New entity in IFC4 ADD1."
+msgid "IfcTaskTypeEnum_TESTING_DEFINITION"
+msgstr "オブジェクトのパフォーマンスを評価するために必要な一連のタスクは、通常、ElementTypesとSystemsに適用されます。"
 
-#:IFC.xml:10435
-msgid "IfcCartesianPointList2D_CoordList"
-msgstr "CoordList"
+#:IFC.xml:27757
+msgid "IfcTaskTypeEnum_TROUBLESHOOTING"
+msgstr "作業中"
 
-msgid "IfcCartesianPointList2D_CoordList_DEFINITION"
-msgstr "二つの座標によって提供される直交点の二次元リスト。"
+msgid "IfcTaskTypeEnum_TROUBLESHOOTING_DEFINITION"
+msgstr "一般的に発生するパフォーマンスの問題を診断するために必要な一連のタスクは、通常、ElementTypeとSystemsに適用されます。"
 
-#:IFC.xml:10440
-msgid "IfcCartesianPointList2D_TagList"
-msgstr "TagList"
+#:IFC.xml:27758
+msgid "IfcTaskTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcCartesianPointList2D_TagList_DEFINITION"
-msgstr "[[IfcOffsetCurveByDistances]] または IfcAlignmentCurve の Tag 属性に従って、基底曲線を識別するために使用できる各点に対応するタグのリスト。"
+msgid "IfcTaskTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:10447
-msgid "IfcCartesianPointList3D"
-msgstr "IfcCartesianPointList3D"
+#:IFC.xml:27759
+msgid "IfcWorkCalendar"
+msgstr "IfcWorkCalendar"
 
-msgid "IfcCartesianPointList3D_DEFINITION"
-msgstr "The [[IfcCartesianPointList3D]] defines an ordered collection of three dimentional Cartesian points. Each Cartesian point is provided as an three dimensional point by a fixed list of three coordinates. The attribute CoordList is a two dimensional list, where first dimension is an unbounded list representing each 3D Cartesian point second dimension is a fixed list of three list members, where 1 is the x coordinate, 2 the y coordinate and 3 the z coordinate of the Cartesian point. NOTE The [[IfcCartesianPointList]] is introduced to provide a compact representation of larger list of points, such as in point clouds, and in indexable representation of points used as vertices in tessellated items or poly curves. HISTORY New entity in IFC4."
+msgid "IfcWorkCalendar_DEFINITION"
+msgstr "An [[IfcWorkCalendar]] defines working and non working time periods for tasks and resources. It enables to define both specific time periods, such as from 7 00 till 12 00 on 25th August 2009, as well as repetitive time periods based on frequently used recurrence patterns, such as each Monday from 7 00 till 12 00 between 1st March 2009 and 31st December 2009. HISTORY New entity in IFC4. A work calendar is a subtype of [[IfcControl]] and thus inherits the feature for controlling other objects through [[IfcRelAssignsToControl]] , which is used to define a work calendar for tasks [[IfcTask]] and resources [[IfcResource]] . It also inherits a name and description attribute, whereas a name shall be given and a description may be given as an indication of its content and usage. The definition of time periods can be derived from a base calendar and or modified defined by a set of working times and non working exception times. All time periods defined by [[IfcWorkCalendar]].ExceptionTimes override the time periods inherited from the base calendar base calendar is defined as the next applicable calendar for the task or resource . Thus, exception times replace the working times from the base calendar. Figure 1 shows the definition of a work calendar, which is defined by a set of work times and exception times. The work times are defined as recurring patterns with optional boundaries applying from and or to a specific date . The shown example defines a simple work calendar with working times Monday to Thursday 8 00 to 12 00 and 13 00 to 17 00, Friday 8 00 to 14 00 and as exception every 1st Monday in a month the work starts one hour later i.e. the working time on every 1st Monday in a month is overriden to be 9 00 to 12 00 and 13 00 to 17 00. Both the working time and the exception time is valid for the period of 01.09.2010 till 30.08.2011. task type instantiation diagram .. .. .. .. figures ifcworkcalendar instantiation diagram.png Figure 1 Work calendar instantiation"
 
-#:IFC.xml:10448
-msgid "IfcCartesianPointList3D_CoordList"
-msgstr "CoordList"
+#:IFC.xml:4007
+msgid "IfcWorkCalendar_WorkingTimes"
+msgstr "作業時間"
 
-msgid "IfcCartesianPointList3D_CoordList_DEFINITION"
-msgstr "3つの座標によって提供される直交点の2次元リスト。"
+msgid "IfcWorkCalendar_WorkingTimes_DEFINITION"
+msgstr "作業時間の初期設定と見なされる期間のセットアップ。例外時間は、これらの作業時間をさらに制限することができます。"
 
-#:IFC.xml:10453
-msgid "IfcCartesianPointList3D_TagList"
-msgstr "TagList"
+#:IFC.xml:4019
+msgid "IfcWorkCalendar_ExceptionTimes"
+msgstr "ExceptionTimes"
 
-msgid "IfcCartesianPointList3D_TagList_DEFINITION"
-msgstr "[[IfcOffsetCurveByDistances]] または IfcAlignmentCurve の Tag 属性に従って、基底曲線を識別するために使用できる各点に対応するタグのリスト。"
+msgid "IfcWorkCalendar_ExceptionTimes_DEFINITION"
+msgstr "指定された場合、基準カレンダーを含む指定された作業時間に対して例外を定義する期間のセット。"
 
-#:IFC.xml:10472
-msgid "IfcCsgPrimitive3D"
-msgstr "IfcCsgPrimitive3D"
+#:IFC.xml:27760
+msgid "IfcWorkCalendar_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcCsgPrimitive3D_DEFINITION"
-msgstr "[[IfcCsgPrimitive3D]] は、ツリーのルート項目として使用されるすべての3次元プリミティブの抽象的なスーパータイプです。 または、CSGソリッドモデル内のブール値の結果として表示されます。 すべての3D CSGプリミティブは、3次元配置座標系内で定義されています。"
+msgid "IfcWorkCalendar_PredefinedType_DEFINITION"
+msgstr "必要なタイプが設定されている作業カレンダーの定義済み型を識別する。.change ifc2x4 IFC4 変更属性が追加された。"
 
-#:IFC.xml:10482
-msgid "IfcCsgPrimitive3D_Position"
-msgstr "位置"
+#:IFC.xml:27767
+msgid "IfcWorkCalendarTypeEnum"
+msgstr "IfcWorkカレンダーTypeEnum"
 
-msgid "IfcCsgPrimitive3D_Position_DEFINITION"
-msgstr "各CSGプリミティブのパラメータが適用される配置座標系。"
+msgid "IfcWorkCalendarTypeEnum_DEFINITION"
+msgstr "[[IfcWorkCalendarTypeEnum]] は、関連するコントロールを選択できる作業カレンダーの種類を指定する列挙データ型です。 与えられた場合は、基底カレンダーを識別するのに役立ちます。 IFC4で導入された履歴 最初のアイテムは最初のシフトに属します。 2番目のシフトに属します。 3番目のシフトに属します。"
 
-#:IFC.xml:10473
-msgid "IfcCsgPrimitive3D_Dim"
-msgstr "Dim"
+#:IFC.xml:27774
+msgid "IfcWorkCalendarTypeEnum_FIRSTSHIFT"
+msgstr "最初のスタイル"
 
-msgid "IfcCsgPrimitive3D_Dim_DEFINITION"
-msgstr "この幾何学的表現項目の空間寸法は、常に3です。"
+msgid "IfcWorkCalendarTypeEnum_FIRSTSHIFT_DEFINITION"
+msgstr "最初のシフトに属する。"
 
-#:IFC.xml:10494
-msgid "IfcCsgSelect"
-msgstr "IfcCsgSelect"
+#:IFC.xml:27775
+msgid "IfcWorkCalendarTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-#:IFC.xml:10495
-msgid "IfcCsgSolid"
-msgstr "IfcCsgSolid"
+msgid "IfcWorkCalendarTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-msgid "IfcCsgSolid_DEFINITION"
-msgstr "An [[IfcCsgSolid]] is the representation of a 3D shape using constructive solid geometry model. It is represented by a single 3D CSG primitive, or as a result of a Boolean operation. The operants of a Boolean operation can be Boolean operations themselves forming a CSG tree. The following volumes can be parts of the CSG tree Boundary representation models, such as [[IfcFacetedBrep]] , [[IfcFacetedBrepWithVoids]] , Closed tesselated representation modles, such as [[IfcPolygonalFaceSet]] , [[IfcTriangulatedFaceSet]] , Swept area solids, such as [[IfcExtrudedAreaSolid]] , [[IfcRevolvedAreaSolid]] , and their subtypes for tapering, Advanced swept area solids, such as [[IfcSurfaceCurveSweptAreaSolid]] , [[IfcFixedReferenceSweptAreaSolid]] , [[IfcSweptDiskSolid]] Half space solids, such as [[IfcHalfSpaceSolid]] and its subtypes , and CSG primitives, the subtypes of [[IfcCsgPrimitive3D]] . .extDef NOTE Definition according to ISO CD 10303 42 1992 A solid represented as a CSG model is defined by a collection of so called primitive solids, combined using regularized Boolean operations. The allowed operations are intersection, union, and difference. As a special case a CSG solid can also consists of a single CSG primitive. A CSG solid requires two kinds of information for its complete definition geometric and structural. The geometric information is conveyed by solid models. These typically primitive volumes such as cylinders, wedges and extrusions, but can include general B Rep models. Solid models can also be half space solids. The structural information is in a tree strictly an acyclic directed graph of Boolean result and CSG solids, which represent a recipe for building the solid. The terminal nodes are the geometric primitives and other solids. Every CSG solid has precisely one Boolean result associated with it which is the root of the tree that defines the solid. There may be further Boolean results within the tree as operands . The significance of a CSG solid entity is that the solid defined by the associated tree is thus identified as a significant object itself, and in this way it is distinguished from other Boolean result entities representing intermediate results during the construction process. NOTE Entity adapted from csg solid is defined in ISO 10303 42. HISTORY New entity in IFC1.5.1"
+#:IFC.xml:27776
+msgid "IfcWorkCalendarTypeEnum_SECONDSHIFT"
+msgstr "秒"
 
-#:IFC.xml:10496
-msgid "IfcCsgSolid_TreeRootExpression"
-msgstr "TreeRootExpression"
+msgid "IfcWorkCalendarTypeEnum_SECONDSHIFT_DEFINITION"
+msgstr "第二のシフトに属する。"
 
-msgid "IfcCsgSolid_TreeRootExpression_DEFINITION"
-msgstr "プリミティブのブール式と、ソリッドを記述する正規化された演算子。 ブール式のツリーのルートは、[[IfcBooleanResult]] エンティティまたは [[IfcCsgPrimitive3D]] のプリミティブなサブタイプとして明示的に指定されます。"
+#:IFC.xml:27777
+msgid "IfcWorkCalendarTypeEnum_THIRDSHIFT"
+msgstr "三番手"
 
-#:IFC.xml:10503
-msgid "IfcDirectrixDerivedReferenceSweptAreaSolid"
-msgstr "IfcDirectrixDerivedReferenceSweptAreaSolid"
+msgid "IfcWorkCalendarTypeEnum_THIRDSHIFT_DEFINITION"
+msgstr "三番目のシフトに属する。"
 
-#:IFC.xml:10506
-msgid "IfcExtrudedAreaSolid"
-msgstr "IfcExtradedAreaSolid"
+#:IFC.xml:27778
+msgid "IfcWorkCalendarTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcExtrudedAreaSolid_DEFINITION"
-msgstr "The [[IfcExtrudedAreaSolid]] is defined by sweeping a cross section provided by a profile definition. The direction of the extrusion is given by the ExtrudedDirection attribute and the length of the extrusion is given by the Depth attribute. If the planar area has inner boundaries holes defined , then those holes shall be swept into holes of the solid. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the extruded solid. If not provided, it defaults to the current object coordinate system. The ExtrudedDirection is given within the position coordinate system as defined by [[IfcSweptAreaSolid]] . Position . The extruded direction can be any direction which is not perpendicular to the z axis of the position coordinate system. EXAMPLE Figure 1 illustrates geometric parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The result is a solid. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. Figure 1 Extruded area solid geometry EXAMPLE Figure 2 illustrates geometric parameters and additional positioning parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the y axis. Figure 2 Repositioned extruded area solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 An extruded area solid is a solid defined by sweeping a bounded planar surface. The direction of translation is defined by a direction vector, and the length of the translation is defined by a distance depth. The planar area may have holes which will sweep into holes in the solid. NOTE Entity adapted from extruded area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .use head Texture use definition For side faces, textures are aligned facing upright continuously along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the extrusion axis according to RepeatT . For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. EXAMPLE Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcExtrudedAreaSolid]] having a profile of [[IfcIShapeProfileDef]], the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth , while the top end cap texture coordinates start at 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth . Figure 3 Extruded area solid textures"
+msgid "IfcWorkCalendarTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:10514
-msgid "IfcExtrudedAreaSolid_ExtrudedDirection"
-msgstr "ExtradedDirection"
+#:IFC.xml:27779
+msgid "IfcWorkControl"
+msgstr "IfcWorkControl"
 
-msgid "IfcExtrudedAreaSolid_ExtrudedDirection_DEFINITION"
-msgstr "SweptAreaによって提供される表面が掃引される方向。"
+msgid "IfcWorkControl_DEFINITION"
+msgstr "An [[IfcWorkControl]] is an abstract supertype which captures information that is common to both [[IfcWorkPlan]] and [[IfcWorkSchedule]] . HISTORY New entity in IFC2x .change ifc2x4 CHANGE IFC4 Corrected assignment of resources to work control in documentation. Assignment of tasks to work control updated based on changes of task time definitions and the introduction of a summary task. Identifier has been renamed now Identification and promoted to supertype [[IfcControl]] A work control may have resources assigned to it. This is handled by the [[IfcRelAssignsToControl]] relationship. A work control should also define a context that gives further information about its usage. If no special context information is required then the [[IfcProject]] instance as a global context should be used instead. An explicit link between the work control and the [[IfcProject]] via [[IfcRelDeclares]] should then be provided. The attribute [[IfcWorkControl]].Purpose is used to define the purpose of either a work schedule or a work plan. In the case of [[IfcWorkPlan]] , the purpose attribute can be used to determine if the work plan is for cost estimating, task scheduling or some other defined purpose."
 
-#:IFC.xml:10507
-msgid "IfcExtrudedAreaSolid_Depth"
-msgstr "深さ"
+#:IFC.xml:305
+msgid "IfcWorkControl_Creators"
+msgstr "クリエイター"
 
-msgid "IfcExtrudedAreaSolid_Depth_DEFINITION"
-msgstr "表面がExtradedDirectionに沿って掃引される距離。"
+msgid "IfcWorkControl_Creators_DEFINITION"
+msgstr "作業計画の著者。"
 
-#:IFC.xml:10526
-msgid "IfcExtrudedAreaSolidTapered"
-msgstr "IfcExtradedAreaSolidTapered"
+#:IFC.xml:27780
+msgid "IfcWorkControl_CreationDate"
+msgstr "作成日"
 
-msgid "IfcExtrudedAreaSolidTapered_DEFINITION"
-msgstr "[[IfcExtrudedAreaSolidTapered]] is defined by sweeping a cross section along a linear spine. The cross section may change along the sweep from the shape of the start cross section into the shape of the end cross section. The resulting solid is bounded by three or more faces A start face, an end face each defined by start and end planes and sections , and one or more lateral faces. Each lateral face is a ruled surface defined by a pair of corresponding edges of the start and end section. NOTE Given that the start and end section is provided by a polygon, the corresponding vertices of the start and end cross section are connected, forming a quadrilateral polygon between each pair of corresponding vertices. The surface defined by the bounding quadrilateral polygon is a ruled surface, that could be approximated by triangulation. The linear spine is defined by Start point SELF [[IfcSweptAreaSolid]].Position.Location Direction SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection Distance SELF [[IfcExtrudedAreaSolid]].Depth The start cross section is defined by SELF [[IfcSweptAreaSolid]].SweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by SELF [[IfcSweptAreaSolid]].Position.P 1 and SELF [[IfcSweptAreaSolid]].Position.P 2 The linear spine starts at the plane of the start cross section. The spine is not necessarily perpendicular to the plane. The end cross section is defined by EndSweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by translating the start position coordinates provided by SELF [[IfcSweptAreaSolid]].Position along the spine direction by the spine distance. The plane of the end cross section is coplanar to the plane of the start cross section. The end cross section is topologically similar to the start cross section i.e. having the same number of vertices and edges . The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane. In case of two parameterized profiles the shape is constructed as follows The end profile, defined by a cross section based on the same profile paramterization as the start profile, is translated by the spine distance along the spine direction. It may be shifted within the XY plane of the end postion coordinate system and may be twisted using the rotation parameter. The shift and rotation parameter are provided by the end cross section being of type [[IfcParameterizedProfileDef]] , where Shift is EndSweptArea [[IfcParameterizedProfileDef]].Position.Location Rotation is EndSweptArea [[IfcParameterizedProfileDef]].Position.RefDirection Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. In case of Cartesian transformation of the start cross section the shape is constructed as follows The cross section curve, which starts as a curve in the XY plane of the position coordinate system, is first scaled about the origin by the scale parameter. It is then translated by the spine distance along the spine direction. It maybe twisted by using the rotation parameter. The scale and rotation parameter are provided by the end cross section being of type [[IfcDerivedProfileDef]] , where Scale is EndSweptArea [[IfcDerivedProfileDef]].Operator.Scale Rotation is EndSweptArea [[IfcDerivedProfileDef]].Operator.Axis1 Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. HISTORY New entity in IFC4. .spec head Informal Propositions 1. Mirroring within [[IfcDerivedProfileDef]].Operator shall not be used"
+msgid "IfcWorkControl_CreationDate_DEFINITION"
+msgstr "プランが作成された日時"
 
-#:IFC.xml:10529
-msgid "IfcExtrudedAreaSolidTapered_EndSweptArea"
-msgstr "EndSweptArea"
+#:IFC.xml:27785
+msgid "IfcWorkControl_Duration"
+msgstr "期間"
 
-msgid "IfcExtrudedAreaSolidTapered_EndSweptArea_DEFINITION"
-msgstr "The surface defining the end of the swept area. It is given as a profile definition. The position coordinate system of the EndSwptArea is generated by translating the SELF [[IfcSweptAreaSolid]].Position along the SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection by the distance of SELF [[IfcExtrudedAreaSolid]].Depth ."
+msgid "IfcWorkControl_Duration_DEFINITION"
+msgstr "全体の作業スケジュールの合計期間。"
 
-#:IFC.xml:10541
-msgid "IfcFaceBasedSurfaceModel"
-msgstr "IfcFaceBasedSurfaceModel"
+#:IFC.xml:27790
+msgid "IfcWorkControl_FinishTime"
+msgstr "終了時間"
 
-msgid "IfcFaceBasedSurfaceModel_DEFINITION"
-msgstr "The [[IfcFaceBasedSurfaceModel]] represents the a shape by connected face sets. The connected faces have a dimensionality 2 and are placed in a coordinate space of dimensionality 3. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face based surface model is described by a set of connected face sets of dimensionality 2. The connected face sets shall not intersect except at edges and vertices, except that a face in one connected face set may overlap a face in another connected face set, provided the face boundaries are identical. There shall be at least one connected face set. A connected face set may exist independently of a surface model. NOTE Entity adapted from face based surface model defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The connected face sets shall not overlap or intersect except at common faces, edges or vertices. 2. The fbsm faces have dimensionality 2. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The entity [[IfcFacetedBrep]] shall be used instead."
+msgid "IfcWorkControl_FinishTime_DEFINITION"
+msgstr "スケジュールの終了時刻。"
 
-#:IFC.xml:10550
-msgid "IfcFaceBasedSurfaceModel_FbsmFaces"
-msgstr "FbsmFaces"
+#:IFC.xml:27795
+msgid "IfcWorkControl_Purpose"
+msgstr "目的"
 
-msgid "IfcFaceBasedSurfaceModel_FbsmFaces_DEFINITION"
-msgstr "接続されたフェイスセットは、フェイスベースのサーフェスモデルから構成されています。"
+msgid "IfcWorkControl_Purpose_DEFINITION"
+msgstr "作業スケジュールの目的の説明。"
 
-#:IFC.xml:10542
-msgid "IfcFaceBasedSurfaceModel_Dim"
-msgstr "Dim"
+#:IFC.xml:27800
+msgid "IfcWorkControl_StartTime"
+msgstr "StartTime"
 
-msgid "IfcFaceBasedSurfaceModel_Dim_DEFINITION"
-msgstr "このクラスの空間次元、それは常に3です。"
+msgid "IfcWorkControl_StartTime_DEFINITION"
+msgstr "スケジュールの開始時刻。"
 
-#:IFC.xml:10562
-msgid "IfcFacetedBrep"
-msgstr "IfcFacetedBrep"
+#:IFC.xml:27805
+msgid "IfcWorkControl_TotalFloat"
+msgstr "トータルFloat"
 
-msgid "IfcFacetedBrep_DEFINITION"
-msgstr "The [[IfcFacetedBrep]] is a manifold solid brep with the restriction that all faces are planar and bounded polygons. NOTE Use of [[IfcFacetedBrep]] is restricted for boundary representation models with planar surfaces only. Those surfaces are implicitly represented by the bounding polygons. The diagram shows the topological and geometric representation items that are used for faceted breps. Each [[IfcCartesianPoint]], used within the [[IfcFacetedBrep]] shall be referenced three times by an [[IfcPolyLoop]] bounding a different [[IfcFace]]. Figure 1 Diagram showing the use of [[IfcFacetedBrep]] .extDef NOTE Definition according to ISO CD 10303 42 1992 A faceted B rep is a simple form of boundary representation model in which all faces are planar and all edges are straight lines. Unlike the B rep model, edges and vertices are not represented explicitly in the model but are implicitly available through the poly loop entity. A faceted B rep has to meet the same topological constraints as the manifold solid B rep. .extDef The faceted B rep has been introduced in order to support the larger number of systems that allow boundary type solid representations with planar surfaces only. NOTE Entity adapted from manifold solid brep defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the bounding loops of all the faces of all the shells in the [[IfcFacetedBrep]] shall be of type [[IfcPolyLoop]] . 2. All vertices shall be referenced by all polyloops, sharing the vertex. I.e., each Cartesian point shall be references by at least three polyloops."
+msgid "IfcWorkControl_TotalFloat_DEFINITION"
+msgstr "全体の作業スケジュールの合計時間フロート。"
 
-#:IFC.xml:10565
-msgid "IfcFacetedBrepWithVoids"
-msgstr "IfcFacetedBrepWithVoids"
+#:IFC.xml:27812
+msgid "IfcWorkPlan"
+msgstr "IfcWorkPlan"
 
-msgid "IfcFacetedBrepWithVoids_DEFINITION"
-msgstr "The [[IfcFacetedBrepWithVoids]] is a specialization of a faceted B rep which contains one or more voids in its interior. The voids are represented as closed shells which are defined so that the shell normal point into the void. NOTE Entity adapted from brep with voids AND faceted brep defined in ISO 10303 42. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE Subtyping changed from [[IfcManifoldSolidBrep]] to [[IfcFacetedBrep]] with upward compatibility for file based exchange. .spec head Informal Propositions 1. Each void shell shall be disjoint from the outer shell and from every other void shell 2. Each void shell shall be enclosed within the outer shell but not within any other void shell. In particular the outer shell is not in the set of void shells 3. Each shell in the [[IfcManifoldSolidBrep]] shall be referenced only once. 4. All the bounding loops of all the faces of all the shells in the [[IfcFacetedBrep]] shall be of type [[IfcPolyLoop]] ."
+msgid "IfcWorkPlan_DEFINITION"
+msgstr "An [[IfcWorkPlan]] represents work plans in a construction or a facilities management project. HISTORY New entity in IFC2.0 A work plan contains a set of work schedules for different purposes including construction and facilities management . Contained work schedules are defined through the [[IfcRelAggregates]] relationship. Through inheritance from [[IfcWorkControl]] it is also possible to define references to activities for example, [[IfcTask]] and resources used in the work plan. A work plan has information such as start date, finish date, total free float, and so on. [[IfcWorkPlan]] can also refer to the construction project represented by the single [[IfcProject]] instance please also check the definition of [[IfcWorkControl]] . Figure 1 shows the backbone structure of a work plan that defines 1 contained work schedules through [[IfcRelAggregates]] and 2 , if not assigned otherwise to contained work schedules, assigned tasks and resources through [[IfcRelAssignsToControl]] . If an assigned [[IfcTask]] is a root level task, such task must be declared on the [[IfcProject]] using the [[IfcRelDeclares]] relationship. digraph dot figure subgraph cluster 0 label Project [[IfcProject]] [[IfcRelDeclares]] [[IfcProject]] [[IfcRelDeclares]] label RelatingContext subgraph cluster 1 label Work Plan [[IfcWorkPlan]] [[IfcRelAggregates]] [[IfcRelAssignsToControl]] [[IfcWorkPlan]] [[IfcRelAggregates]] label RelatingObject [[IfcWorkPlan]] [[IfcRelAssignsToControl]] label RelatingControl [[IfcRelDeclares]] [[IfcWorkPlan]] label RelatedDefinitions subgraph cluster 2 label Work Schedules [[IfcWorkSchedule]] [[IfcRelAggregates]] [[IfcWorkSchedule]] label RelatedObjects subgraph cluster 3 label Plan Summary Task [[IfcTask]] [[IfcRelAssignsToControl]] [[IfcTask]] label RelatedObjects"
 
-#:IFC.xml:10568
-msgid "IfcFacetedBrepWithVoids_Voids"
-msgstr "Voids"
+#:IFC.xml:27813
+msgid "IfcWorkPlan_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcFacetedBrepWithVoids_Voids_DEFINITION"
-msgstr "ソリッド内の空隙を定義する閉じたシェルのセット。"
+msgid "IfcWorkPlan_PredefinedType_DEFINITION"
+msgstr "必要なタイプが設定されている作業計画の定義済みタイプを識別します。"
 
-#:IFC.xml:10580
-msgid "IfcFixedReferenceSweptAreaSolid"
-msgstr "IfcFixedReferenceSweptAreaSolid"
+#:IFC.xml:27820
+msgid "IfcWorkPlanTypeEnum"
+msgstr "IfcWorkPlanTypeEnum"
 
-msgid "IfcFixedReferenceSweptAreaSolid_DEFINITION"
-msgstr "An [[IfcFixedReferenceSweptAreaSolid]] is a type of swept area solid which is the result of sweeping an area along a Directrix . The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the start tangent of the directrix at this point, and the profile s x axis agrees to the orthogonal projection of the FixedReference direction within the plane of start tangent and Fixed Reference . The orientation of the curve during the sweeping operation is controlled by the FixedReference direction. The SweptArea is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the projection of FixedReference onto the normal plane to the directrix at this point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The resulting swept solid is placed by the Position coordinate system. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no EndParam is provided the end defaults to the end of the directrix. NOTE The StartParam and the EndParam , if provided as a parameter value, are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. NOTE In the case of a curve composed of [[IfcCurveSegment]] , the [[IfcSweptAreaSolid]] Position is dependent on the [[IfcCurveSegment]] StartPlacement and the type of BasisCurve which defines the name function between the start and end explicitly defined as the start point of the next segment points of the segment EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In many cases, it is a surface of extrusion. The directrix lies on the surface, often defined as a p curve at this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the FixedReference direction. The Axis2 the y axis, or v is constructed. In this case the resulting swept solid is not repositioned. The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a CartesianTransformationOperator3d with attributes LocalOrigin as point 0 0 0 , Axis1 as the orthogonal projection of the FixedReference onto the normal plane defined by Axis3 . Axis3 as the direction of the tangent vector t at the point of the Directrix with parameter u . The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the Directrix parameter u . NOTE The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE Entity adapted from fixed reference swept surface defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. The SweptArea shall lie in the plane z 0. 2. The FixedReference shall not be parallel to a tangent vector to the directrix at any point along this curve. 3. The Directrix curve shall be tangent continuous."
+msgid "IfcWorkPlanTypeEnum_DEFINITION"
+msgstr "[[IfcWorkPlanTypeEnum]] は、関連するコントロールを選択できる作業計画の種類を指定する列挙データ型です。 IFC4で紹介された歴史 IFC2で紹介されたIfcWorkControlTypeEnumから派生。 アイテムACTUAL 実際のアイテムが表示されるコントロール。 BASELINE 後で行われるベースラインである制御を認識することができます。 PLANNED USERDEFINED NOTFINED"
 
-#:IFC.xml:10583
-msgid "IfcFixedReferenceSweptAreaSolid_FixedReference"
-msgstr "FixedReference"
+#:IFC.xml:27827
+msgid "IfcWorkPlanTypeEnum_ACTUAL"
+msgstr "アクティブな"
 
-msgid "IfcFixedReferenceSweptAreaSolid_FixedReference_DEFINITION"
-msgstr "FixedReference"
+msgid "IfcWorkPlanTypeEnum_ACTUAL_DEFINITION"
+msgstr "実際の項目を示す制御。"
 
-#:IFC.xml:10595
-msgid "IfcGeometricCurveSet"
-msgstr "IfcGeometricCurveSet"
+#:IFC.xml:27828
+msgid "IfcWorkPlanTypeEnum_BASELINE"
+msgstr "BASELINE"
 
-msgid "IfcGeometricCurveSet_DEFINITION"
-msgstr "[[IfcGeometricCurveSet]] は、2D または 3D 点と曲線のコレクションだけからなる形状表現の交換に使用されます。 xtDef NOTE ISO CD 10303 42 1992 幾何曲線セットは、2次元または3次元の曲線と曲線を集めたものです。 注 ISO 10303 42に定義されている幾何学的曲線セットから適応した実体。 正式な提案 NoSurface この幾何学的なセットには、サーフェスは含まれません。"
+msgid "IfcWorkPlanTypeEnum_BASELINE_DEFINITION"
+msgstr "ベースラインである制御は、後で行われる変化を認識することができます。"
 
-#:IFC.xml:10598
-msgid "IfcGeometricSet"
-msgstr "IfcGeometricSet"
+#:IFC.xml:27829
+msgid "IfcWorkPlanTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcGeometricSet_DEFINITION"
-msgstr "[[IfcGeometricSet]] は、2D または 3D 点、曲線、およびサーフェスからなる形状表現の交換に使用されます。 接続されたフェイスセットやシェルなどのトポロジカル構造を持たない はテッセレートされておらず、掃引された固体、CSGやBrepなどの固体モデルではありません。 .extDef NOTE ISO CD 10303からの定義 42 トポロジの構造が利用できない場合にモデルを転送するためのエンティティです。 注 ISO 10303 42に定義されている幾何学的集合から適応した実体。"
+msgid "IfcWorkPlanTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:10599
-msgid "IfcGeometricSet_Dim"
-msgstr "Dim"
+#:IFC.xml:27830
+msgid "IfcWorkPlanTypeEnum_PLANNED"
+msgstr "計画"
 
-msgid "IfcGeometricSet_Dim_DEFINITION"
-msgstr "このクラスの空間寸法は、集合の最初の要素と同じです。 whereルールは、すべての要素が同じ寸法であることを保証します。"
+msgid "IfcWorkPlanTypeEnum_PLANNED_DEFINITION"
+msgstr "計画"
 
-#:IFC.xml:10604
-msgid "IfcGeometricSet_Elements"
-msgstr "要素"
+#:IFC.xml:27831
+msgid "IfcWorkPlanTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcGeometricSet_Elements_DEFINITION"
-msgstr "幾何学的要素を構成する幾何学的要素は、これらは点であってもよいです。 曲線や面は同じ座標空間の寸法である必要があります。"
+msgid "IfcWorkPlanTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:10611
-msgid "IfcGeometricSetSelect"
-msgstr "IfcGeometricSetSelect"
+#:IFC.xml:27832
+msgid "IfcWorkSchedule"
+msgstr "IfcWorkSchedule"
 
-#:IFC.xml:10612
-msgid "IfcHalfSpaceSolid"
-msgstr "IfcHalfSpaceSolid"
+msgid "IfcWorkSchedule_DEFINITION"
+msgstr "An [[IfcWorkSchedule]] represents a task schedule of a work plan, which in turn can contain a set of schedules for different purposes. HISTORY New entity in IFC2.0. .use head Declaration Use Definition [[IfcWorkSchedule]] can reference a project the single [[IfcProject]] instance via [[IfcRelDeclares]] . Figure 1 shows the backbone structure of a work schedule that defines 1 a context through [[IfcRelDeclares]] not necessarily the project and 2 controls tasks typically the schedule summary task and resources. Please note that a work calendar shall be assigned to the summary task and not the work schedule. If an assigned [[IfcTask]] is a root level task, such task must be declared on the [[IfcProject]] using the [[IfcRelDeclares]] relationship. work schedule instantiation diagram .. .. .. .. figures ifcworkschedule instantiation diagram.png Figure 1 Work schedule relationships"
 
-msgid "IfcHalfSpaceSolid_DEFINITION"
-msgstr "A half space solid divides the domain into two by a base surface. Normally, the base surface is a plane and devides the infinitive space into two and indicates the side of the half space by agreeing or disagreeing to the normal of the plane. Figure 1 illustrates the definition of the [[IfcHalfSpaceSolid]] within a given coordinate system. The base surface is given by an unbounded plane, the red boundary is shown for visualization purposes only. half space solid .. .. .. .. figures ifchalfspacesolid layout1.gif Figure 1 Half space solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A half space solid is defined by the half space which is the regular subset of the domain which lies on one side of an unbounded surface. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into. For a valid half space solid the surface shall divide the domain into exactly two subsets. Also, within the domain the surface shall be manifold and all surface normals shall point into the same subset. NOTE A half space is not a subtype of solid model, half space solids are only useful as operands in Boolean expressions. NOTE Entity adapted from half space solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .spec head Informal Propositions 1. The base surface shall divide the domain into exactly two subsets. If the half space solid is of subtype boxed half space [[IfcBoxedHalfSpace]] , the domain in question is that of the attribute enclosure. In all other cases the domain is all of space and the base surface shall be unbounded. 2. The base surface shall be an unbounded surface subtype of [[IfcElementarySurface]] ."
+#:IFC.xml:27833
+msgid "IfcWorkSchedule_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:10626
-msgid "IfcHalfSpaceSolid_BaseSurface"
-msgstr "Base Surface"
+msgid "IfcWorkSchedule_PredefinedType_DEFINITION"
+msgstr "必要なタイプが設定されている作業スケジュールの定義済みタイプを識別します。"
 
-msgid "IfcHalfSpaceSolid_BaseSurface_DEFINITION"
-msgstr "半分の空間の側面を定義する表面。"
+#:IFC.xml:27840
+msgid "IfcWorkScheduleTypeEnum"
+msgstr "IfcWorkScheduleTypeEnum"
 
-#:IFC.xml:10613
-msgid "IfcHalfSpaceSolid_Dim"
-msgstr "Dim"
+msgid "IfcWorkScheduleTypeEnum_DEFINITION"
+msgstr "[[IfcWorkScheduleTypeEnum]] は、関連するコントロールを選択できる作業スケジュールの種類を指定する列挙データ型です。 歴史 IFC2.0で導入されたIfcWorkControlTypeEnumから派生したもの。 項目 ACTUAL 実施される実際の項目を示す制御。 BASELINE あとで行われるベースラインの変更を認識することができます。 PLANNED 計画されたアイテムを示す制御。"
 
-msgid "IfcHalfSpaceSolid_Dim_DEFINITION"
-msgstr "このクラスの空間次元は常に3です"
+#:IFC.xml:27847
+msgid "IfcWorkScheduleTypeEnum_ACTUAL"
+msgstr "アクティブな"
 
-#:IFC.xml:10618
-msgid "IfcHalfSpaceSolid_AgreementFlag"
-msgstr "合意フラグ"
+msgid "IfcWorkScheduleTypeEnum_ACTUAL_DEFINITION"
+msgstr "実際の項目を示す制御。"
 
-msgid "IfcHalfSpaceSolid_AgreementFlag_DEFINITION"
-msgstr "合意フラグは、通常のベースサーフェスが[[IfcHalfSpaceSolid]]の材料から離れている場合に真です。そうでなければ、それはFALSEです。"
+#:IFC.xml:27848
+msgid "IfcWorkScheduleTypeEnum_BASELINE"
+msgstr "BASELINE"
 
-#:IFC.xml:10638
-msgid "IfcIndexedPolygonalFace"
-msgstr "IfcIndexedPolygonalFace"
+msgid "IfcWorkScheduleTypeEnum_BASELINE_DEFINITION"
+msgstr "ベースラインである制御は、後で行われる変化を認識することができます。"
 
-msgid "IfcIndexedPolygonalFace_DEFINITION"
-msgstr "The [[IfcIndexedPolygonalFace]] is a compact representation of a planar face being part of a face set. The vertices of the polygonal planar face are provided by 3 or more Cartesian points, defined by indices that point into an [[IfcCartesianPointList3D]] , either direcly, or via the PnIndex , if provided at [[IfcPolygonalFaceSet]] . Figure 1 shows an [[IfcIndexedPolygonalFace]] at an [[IfcPolygonalFaceSet]] not using PnIndex the default . [[IfcIndexedPolygonalFace]] not using PnIndex .. .. .. .. figures ifcindexedpolygonalface 01.png Figure 1 Polygonal face geometry provided by indices into a point list Figure 2 shows an [[IfcIndexedPolygonalFace]] at an [[IfcPolygonalFaceSet]] using PnIndex . [[IfcIndexedPolygonalFace]] using PnIndex .. .. .. .. figures ifcindexedpolygonalface 02.png Figure 2 Polygonal face geometry provided by indices into an PN Index HISTORY New entity in IFC4 Addendum 2."
+#:IFC.xml:27849
+msgid "IfcWorkScheduleTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-#:IFC.xml:10646
-msgid "IfcIndexedPolygonalFace_ToFaceSet"
-msgstr "ToFaceSet"
+msgid "IfcWorkScheduleTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-msgid "IfcIndexedPolygonalFace_ToFaceSet_DEFINITION"
-msgstr "この顔が関連付けられている[[IfcPolygonalFaceSet]]を参照してください。"
+#:IFC.xml:27850
+msgid "IfcWorkScheduleTypeEnum_PLANNED"
+msgstr "計画"
 
-#:IFC.xml:10660
-msgid "IfcIndexedPolygonalFace_HasTexCoords"
-msgstr "HasTexCoords"
+msgid "IfcWorkScheduleTypeEnum_PLANNED_DEFINITION"
+msgstr "計画されたアイテムを表示するコントロール。"
 
-msgid "IfcIndexedPolygonalFace_HasTexCoords_DEFINITION"
-msgstr "この面にテクスチャを適用するためのテクスチャ座標を提供する[[IfcTextureCoordinateIndices]]へのオプション参照。"
+#:IFC.xml:27851
+msgid "IfcWorkScheduleTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:10639
-msgid "IfcIndexedPolygonalFace_CoordIndex"
-msgstr "CoordIndex"
+msgid "IfcWorkScheduleTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-msgid "IfcIndexedPolygonalFace_CoordIndex_DEFINITION"
-msgstr "One dimensional list with the indices for the three or more points, that define the vertices of the outer loop. If the tessellated face set is closed, indicated by SELF [[IfcTessellatedFaceSet]].Closed , then the points, defining the outer loop, shall connect counter clockwise, as seen from the outside of the body, so that the resulting normal will point outwards. NOTE The coordinates of the vertices are provided by the indexed list of SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList . If the SELF [[IfcTessellatedFaceSet]].PnIndex is provided, the indices point into it, otherwise directly into the [[IfcCartesianPointList3D]] ."
+#:IFC.xml:27852
+msgid "Pset_WorkControlCommon"
+msgstr "Pset WorkControlCommon"
 
-#:IFC.xml:10674
-msgid "IfcIndexedPolygonalFaceWithVoids"
-msgstr "IfcIndexedPolygonalFaceWithVoids"
+msgid "Pset_WorkControlCommon_DEFINITION"
+msgstr "Properties common to the definition of all occurrences of [[IfcWorkPlan]] and [[IfcWorkSchedule]] subtypes of [[IfcWorkControl]] ."
 
-msgid "IfcIndexedPolygonalFaceWithVoids_DEFINITION"
-msgstr "[[IfcIndexedPolygonalFaceWithVoids]]は、面セットの一部である内側ループを持つ平面面のコンパクトな表現です。 歴史 IFC4アドエンダムにおける新規エンティティ 2."
+#:IFC.xml:27853
+msgid "WorkDayDuration"
+msgstr "作業日時間"
 
-#:IFC.xml:10675
-msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices"
-msgstr "InnerCoordIndices"
+msgid "WorkDayDuration_DEFINITION"
+msgstr "作業時間ベースの日内の経過時間。 プレゼンテーションのために、アプリケーションは[[IfcTask]] の期間を[[IfcTaskTime]]日に表示することを選択できます。 urationType WORKTIME. この値は省略された場合、24時間以下でなければならず、8時間と仮定されます。"
 
-msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices_DEFINITION"
-msgstr "Two dimensional list, where the first dimension represents each inner loop from 1 to N and the second dimension the indices to three or more points that define the vertices of each inner loop. If the tessellated face set is closed, indicated by SELF [[IfcTessellatedFaceSet]].Closed , then the points, defining the inner loops, shall connect clockwise, as seen from the outside of the body. NOTE The coordinates of the vertices are provided by the indexed list of SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList . If the SELF [[IfcTessellatedFaceSet]].PnIndex is provided, the indices point into it, otherwise directly into the [[IfcCartesianPointList3D]] ."
+#:IFC.xml:27858
+msgid "WorkFinishTime"
+msgstr "WorkFinishTime"
 
-#:IFC.xml:10682
-msgid "IfcIndexedPolygonalTextureMap"
-msgstr "IfcIndexedPolygonalTextureMap"
+msgid "WorkFinishTime_DEFINITION"
+msgstr "タスクが完了するようにスケジュールされている日のデフォルト時間。 プレゼンテーションのために、タスクの終了時刻がWorkFinishTimeと一致する場合、アプリケーションは日付のみを表示することを選択できます。 逆に、時間を指定せずに日付を入力すると、アプリケーションは WorkFinishTime を自動的に追加します。"
 
-#:IFC.xml:10685
-msgid "IfcIndexedPolygonalTextureMap_TexCoords"
-msgstr "TexCoords"
+#:IFC.xml:27863
+msgid "WorkMonthDuration"
+msgstr "WorkMonthDuration"
 
-msgid "IfcIndexedPolygonalTextureMap_TexCoords_DEFINITION"
-msgstr "TexCoords"
+msgid "WorkMonthDuration_DEFINITION"
+msgstr "月に基づく労働時間内の経過時間。 プレゼンテーション目的の場合、アプリケーションは[[IfcTask]] の期間を[[IfcTaskTime]]作業月の間表示することを選択できます。 urationType WORKTIME. この値が省略された場合、31日の経過月に744時間以下である必要があります。"
 
-#:IFC.xml:10699
-msgid "IfcManifoldSolidBrep"
-msgstr "IfcManifoldSolidBrep"
+#:IFC.xml:27868
+msgid "WorkStartTime"
+msgstr "WorkStartTime"
 
-msgid "IfcManifoldSolidBrep_DEFINITION"
-msgstr "The [[IfcManifoldSolidBrep]] is a solid represented as a collection of connected surfaces that delimit the solid from the surrounding non solid. Instances of type [[IfcManifoldSolidBrep]] shall be of type [[IfcFacetedBrep]] , using only [[IfcPolyLoop]] for the bounds of [[IfcFaceBound]] , or of type [[IfcAdvancedBrep]] , using only [[IfcAdvancedFace]] for the face geometry, and [[IfcEdgeCurve]] for the edges. .extDef NOTE Definition according to ISO CD 10303 42 1992 A manifold solid b rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2 manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume. The Boundary Representation B rep of a manifold solid utilizes a graph of edges and vertices embedded in a connected, oriented, finite, closed two manifold surface. The embedded graph divides the surface into arcwise connected areas known as faces. The edges and vertices, therefore, form the boundaries of the face and the domain of a face does not include its boundaries. The embedded graph may be disconnected and may be a pseudo graph. The graph is labeled that is, each entity in the graph has a unique identity. The geometric surface definition used to specify the geometry of a face shall be 2 manifold embeddable in the plane within the domain of the face. In other words, it shall be connected, oriented, finite, non self intersecting, and of surface genus 0. Faces do not intersect except along their boundaries. Each edge along the boundary of a face is shared by at most one other face in the assemblage. The assemblage of edges in the B rep do not intersect except at their boundaries i.e., vertices . The geometry curve definition used to specify the geometry of an edge shall be arcwise connected and shall not self intersect or overlap within the domain of the edge. The geometry of an edge shall be consistent with the geometry of the faces of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. A B rep is represented by one or more closed shells which shall be disjoint. One shell, the outer, shall completely enclose all the other shells and no other shell may enclose a shell. The facility to define a B rep with one or more internal voids is provided by a subtype. The following version of the Euler formula shall be satisfied, math .. .. .. .. figures ifcmanifoldsolidbrep math1.gif where V, E, F, L l and S are the numbers of unique vertices, edges, faces, loop uses and shells in the model and G s is the sum of the genus of the shells. NOTE Entity adapted from manifold solid brep defined in ISO 10303 42. HISTORY New entity in IFC Release 1.0 Informal proposition 1. The dimensionality of a manifold solid brep shall be 3. 2. The extent of the manifold solid brep shall be finite and non zero. 3. All elements of the manifold solid brep shall have defined associated geometry. 4. The shell normals shall agree with the B rep normal and point away from the solid represented by the B rep. 5. Each face shall be referenced only once by the shells of the manifold solid brep. 6. The Euler equation shall be satisfied for the boundary representation, where the genus term shell term us the sum of the genus values for the shells of the brep."
+msgid "WorkStartTime_DEFINITION"
+msgstr "タスクが開始される予定日のデフォルト時刻です。 プレゼンテーションの目的で、タスクの開始時刻が WorkStartTime と一致する場合、アプリケーションは日付のみを表示することを選択できます。 逆に、時間を指定せずに日付を入力すると、アプリケーションは WorkStartTime を自動的に追加します。"
 
-#:IFC.xml:10702
-msgid "IfcManifoldSolidBrep_Outer"
-msgstr "外枠"
+#:IFC.xml:27873
+msgid "WorkWeekDuration"
+msgstr "WorkWeekDuration"
 
-msgid "IfcManifoldSolidBrep_Outer_DEFINITION"
-msgstr "固体の外部境界を定義する閉じたシェル. シェルノーマルは、固体の内部から離れて指すもの."
-
-#:IFC.xml:10714
-msgid "IfcPointListDim__PointList"
-msgstr "IfcPointListDim PointList"
-
-#:IFC.xml:10722
-msgid "IfcPolygonalBoundedHalfSpace"
-msgstr "IfcPolygonalBoundedHalfSpace"
-
-msgid "IfcPolygonalBoundedHalfSpace_DEFINITION"
-msgstr "The polygonal bounded half space is a special subtype of a half space solid, where the material of the half space used in Boolean expressions is bounded by a polygonal boundary. The base surface of the half space is positioned by its normal relative to the object coordinate system as defined at the supertype [[IfcHalfSpaceSolid]] , and its polygonal with or without arc segments boundary is defined in the XY plane of the position coordinate system established by the Position attribute, the subtraction body is extruded perpendicular to the XY plane of the position coordinate system, that is, into the direction of the positive Z axis defined by the Position attribute. The boundary is defined by a 2 dimensional polyline or 2 dimensional composite curve, consisting of straight segments and circular arc segments within the XY plane of the position coordinate system. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into. NOTE A polygonal bounded half space is not a subtype of [[IfcSolidModel]] , half space solids are only useful as operands in Boolean expressions. Figure 1 illustrates a polygonal bounded half space. Black coordinates indicate the object coordinate system usually provided by [[IfcLocalPlacement]] . Green coordinates indicate the position coordinate system the PolygonalBoundary is given within this coordinate system. It is provided by [[IfcPolygonalBoundedHalfSpace]].Position. This coordinate system is relative to the object coordinate system. The extrusion direction of the subtraction body is the positive Z axis. Red coordinates indicate the normal of the plane. It is provided by the BaseSurface [[IfcSurface]].Position . This normal is also relative to the object coordinate system. Figure 1 Polygonal half space geometry The polygonal bounded half space is used to limit the volume of the half space in Boolean difference expressions. Only the part that is defined by a theoretical intersection between the half space solid and an extruded area solid, defined by extruding the polygonal boundary, is used for Boolean expressions. The PolygonalBoundary defines the 2D polyline which bounds the effectiveness of the half space in Boolean expressions. The BaseSurface is defined by a plane, and the normal of the plane together with the AgreementFlag defines the side of the material of the half space. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The [[IfcPolyline]] or the [[IfcCompositeCurve]] providing the PolygonalBoundary shall be closed. 2. If the PolygonalBoundary is given by an [[IfcCompositeCurve]] , it shall only have [[IfcCompositeCurveSegment]] s of type [[IfcPolyline]] , or [[IfcTrimmedCurve]] having a BasisCurve of type [[IfcLine]] , or [[IfcCircle]] 3. The BaseSurface defined at supertype [[IfcHalfSpaceSolid]] shall be of type [[IfcPlane]] 4. The normal of the plane, being the BaseSurface , shall not be perpendicular to the z axis of the position coordinate system"
-
-#:IFC.xml:10725
-msgid "IfcPolygonalBoundedHalfSpace_Position"
-msgstr "位置"
-
-msgid "IfcPolygonalBoundedHalfSpace_Position_DEFINITION"
-msgstr "境界ポリラインと底面の位置座標系の定義 ."
-
-#:IFC.xml:10737
-msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary"
-msgstr "多角形境界線"
-
-msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary_DEFINITION"
-msgstr "位置座標系のxy平面で定義された2次元ポリライン境界曲線。 。 hrange ifc2x3 IFC2x3 CHANGE 属性タイプが [[IfcPolyline]] からそのスーパータイプ [[IfcBoundedCurve]] に変更され、ファイルベースの取引所では上方互換性があります。"
-
-#:IFC.xml:10749
-msgid "IfcPolygonalFaceSet"
-msgstr "IfcPolygonalFaceSet"
-
-msgid "IfcPolygonalFaceSet_DEFINITION"
-msgstr "The [[IfcPolygonalFaceSet]] is a tessellated face set with all faces being bound by polygons. The planar faces are constructed by implicit polylines defined by three or more Cartesian points. Each planar face is defined by an instance of [[IfcIndexedPolygonalFace]] , or in case of faces with inner loops by [[IfcIndexedPolygonalFaceWithVoids]] . Depending on the value of the inherited attribute Closed the instance of [[IfcPolygonalFaceSet]] represents if TRUE, a boundary representation or B rep if FALSE, a face based surface representation. The attribute Faces refers to a list of [[IfcIndexedPolygonalFace]] s having an one based CoordIndex that provides three or more indices. If the face has inner loops, the [[IfcIndexedPolygonalFaceWithVoids]] has a two dimensional, one based list, where the first dimension of the two dimensional list addresses the list of inner loops the second dimension of the two dimensional list provides three or more indices each being a vertex of the planar polygon representing the inner loop. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. PnIndex .. .. .. .. figures ifcpolygonalfaceset 01.png Figure 1 Use of PnIndex NOTE If the [[IfcPolygonalFaceSet]] is closed, the face vertices of the [[IfcIndexedPolygonalFace]] s shall connect counterclock wise when seen from the outside of the closed shell to guarantee that the face normal points away from the material of the shell. Inner loops, provided by the [[IfcIndexedPolygonalFaceWithVoids]] , shall connect clock wise. Figure 2 shows an IfcFacetedFaceSet represented by 1 [[IfcIndexedPolygonalFace]] 1, 2, 6, 5 2 [[IfcIndexedPolygonalFace]] 6, 2, 3, 7 3 [[IfcIndexedPolygonalFace]] 7, 3, 4, 8 4 [[IfcIndexedPolygonalFace]] 8, 4, 1, 5 5 [[IfcIndexedPolygonalFace]] 1, 4, 3, 2 6 [[IfcIndexedPolygonalFace]] 6, 7, 8, 5 7 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. Figure 2 Polygonal face set geometry NOTE The definition of IfcFacetedFaceSet is based on the indexedFaceSet defined in ISO IEC 19775 1 HISTORY New entity in IFC4 Addendum 2. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two outer or inner boundaries of faces the topological normal at each point on the boundary of the polygonal face set shall point away from the material of the solid."
-
-#:IFC.xml:10646
-msgid "IfcPolygonalFaceSet_Faces"
-msgstr "顔"
-
-msgid "IfcPolygonalFaceSet_Faces_DEFINITION"
-msgstr "内側のループの有無にかかわらず、ファセットされたフェイスセットを結合した多角形の顔のリスト。"
-
-#:IFC.xml:10750
-msgid "IfcPolygonalFaceSet_PnIndex"
-msgstr "PnIndex"
-
-msgid "IfcPolygonalFaceSet_PnIndex_DEFINITION"
-msgstr "The list of integers defining the locations in the [[IfcCartesianPointList3D]] to obtain the point coordinates for the indices at the indexed polygonal faces. If the PnIndex is not provided the indices at the indexed polygonal faces point directly into the [[IfcCartesianPointList3D]] ."
-
-#:IFC.xml:10757
-msgid "IfcRectangularPyramid"
-msgstr "IfcRectangularPyramid"
-
-msgid "IfcRectangularPyramid_DEFINITION"
-msgstr "The [[IfcRectangularPyramid]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a rectangular base and a point called apex as the top. The tapers from the base to the top. The axis from the center of the base to the apex is perpendicular to the base. The inherited Position attribute defines the IfcAxisPlacement3D and provides the location and orientation of the pyramid SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cone. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis of the inherited placement coordinate system provides the center axis of the [[IfcRightCircularCone]] , and the apex is at the Height value applied to the positive direction of the z axis. The BottomRadius defines the circular base at the xy plane of the placement coordinate system. As shown in Figure 1, the pyramid is positioned within its own placement coordinate system. The origin is the center of the bottom rectangle, that lies in the XY plane. The apex lies on the positive z axis at 0, 0, Height . pyramid .. .. .. .. figures ifcrectangularpyramid layout1.png Figure 1 Rectangular pyramid geometry HISTORY New entity in IFC2x3 .use head Texture use definition On each triangular side face, textures are aligned facing upright. Textures are stretched or repeated to the extent of the base of each face according to RepeatS. Textures are stretched or repeated towards the top point according to Repeat T, where the top point has coordinates of 0.5,1.0 if RepeatT is False. On the bottom face, textures are aligned facing front to back. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Left X 0 YLength 0 Y towards top point Right X Xlength 0 0 Y towards top point Front Y 0 0 0 X towards top point Back Y XLength YLength 0 X towards top point Bottom Z XLength 0 0 X Y Figure 2 Rectangular pyramid textures"
-
-#:IFC.xml:10758
-msgid "IfcRectangularPyramid_Height"
-msgstr "高さ"
-
-msgid "IfcRectangularPyramid_Height_DEFINITION"
-msgstr "ベースの平面上の頂点の高さ、Z軸の方向で測定された、SELF [[IfcCsgPrimitive3D]]。 osition.P 2 ."
-
-#:IFC.xml:10763
-msgid "IfcRectangularPyramid_XLength"
-msgstr "XLength"
-
-msgid "IfcRectangularPyramid_XLength_DEFINITION"
-msgstr "配置X軸に沿って測定されたベースの長さ。 これは SELF [[IfcCsgPrimitive3D]].Position.P 1 を通じて継承された軸配置によって提供されます。"
-
-#:IFC.xml:10768
-msgid "IfcRectangularPyramid_YLength"
-msgstr "Y長さ"
-
-msgid "IfcRectangularPyramid_YLength_DEFINITION"
-msgstr "配置Y軸に沿って測定されたベースの長さ。 これは SELF [[IfcCsgPrimitive3D]].Position.P 2 を通して継承された軸配置によって提供されます。"
-
-#:IFC.xml:10775
-msgid "IfcRevolvedAreaSolid"
-msgstr "IfcRevolvedAreaSolid"
-
-msgid "IfcRevolvedAreaSolid_DEFINITION"
-msgstr "An [[IfcRevolvedAreaSolid]] is a solid created by revolving a cross section provided by a profile definition about an axis. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the revolved solid. If not provided, it defaults to the current object coordinate system. The axis and the cross section shall be in the same plane, prior to any repositioning. NOTE Both the axis and the cross section are required to lie in the xy plane of the object position coordinate system. EXAMPLE Figure 1 illustrates geometric parameters of the revolved solid. The revolved area solid defines the revolution of a 2D area given by a profile definition by an axis and angle. The result is a solid. The swept area is given by a profile definition. The profile is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. The AxisLine can have any orientation within the XY plane, it does not have to be parallel to the y axis as shown in the illustration. Figure 1 Revolved area solid geometry EXAMPLE Figure 1 illustrates geometric parameters and additional positioning parameters of the revolved area solid. The revolved area solid defines the rotation of a 2D area by an axis and angle. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the x axis. Figure 2 Repositioned revolved area solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A revolved area solid is a solid formed by revolving a planar bounded surface about an axis. The axis shall be in the plane of the surface and the axis shall not intersect the interior of the bounded surface. The bounded surface may have holes which will sweep into holes in the solid. The direction of revolution is clockwise when viewed along the axis in the positive direction. More precisely if A is the axis location and d is the axis direction and C is an arc on the surface of revolution generated by an arbitrary point p on the boundary of the swept area, then C leaves p in direction d x p A as the area is revolved. NOTE Entity adapted from revolved area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .spec head Informal Propositions 1. The AxisLine shall lie in the plane of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 2. The AxisLine shall not intersect the interior of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 3. The Angle shall be between 0 and 360 , or 0 and 2π depending on the unit type for [[IfcPlaneAngleMeasure]] . .use head Texture Use Definition For side faces, textures are aligned facing upright along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the outermost longest revolution path according to RepeatT , where coordinates are compressed towards the axis of revolution. For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcRevolvedAreaSolid]] having a profile of [[IfcTShapeProfileDef]] and revolved at 22.5 degrees, the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth , while the top end cap texture coordinates start at 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth . Figure 3 Revolved area solid textures"
-
-#:IFC.xml:10787
-msgid "IfcRevolvedAreaSolid_Axis"
-msgstr "軸"
-
-msgid "IfcRevolvedAreaSolid_Axis_DEFINITION"
-msgstr "どの革命が起こるかについての軸。"
-
-#:IFC.xml:10776
-msgid "IfcRevolvedAreaSolid_AxisLine"
-msgstr "AxisLine"
-
-msgid "IfcRevolvedAreaSolid_AxisLine_DEFINITION"
-msgstr "革命軸の線。"
-
-#:IFC.xml:10780
-msgid "IfcRevolvedAreaSolid_Angle"
-msgstr "角度"
-
-msgid "IfcRevolvedAreaSolid_Angle_DEFINITION"
-msgstr "掃引が行われる角度。 この角度は、位置座標系のXY平面によって提供される掃引面積の平面から測定されます。"
-
-#:IFC.xml:10799
-msgid "IfcRevolvedAreaSolidTapered"
-msgstr "IfcRevolvedAreaSolidTapered"
-
-msgid "IfcRevolvedAreaSolidTapered_DEFINITION"
-msgstr "[[IfcRevolvedAreaSolidTapered]] is defined by revolving a cross section along a circular arc. The cross section may change along the revolving sweep from the shape of the start cross section into the shape of the end cross section. Corresponding vertices of the start and end cross sections are then connected. The bounded surface may have holes which will sweep into holes in the solid. The rotation axis is defined by Start point SELF [[IfcSweptAreaSolid]].Position.Location Direction SELF [[IfcRevolvedAreaSolid]].Axis Rotation axis SELF [[IfcRevolvedAreaSolid]].AxisLine , created from start point and direction by appying a 1 unit magnitude. Orientation Positive angles are applied clockwise when looking into the positive direction of the rotation axis. The start cross section is defined by SELF [[IfcSweptAreaSolid]].SweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by SELF [[IfcSweptAreaSolid]].Position.P 1 and SELF [[IfcSweptAreaSolid]].Position.P 2 The rotation axis lies in the plane of the start cross section but shall not intersect the interior of the start cross section. The end cross section is defined by EndSweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by rotating the start position coordinates provided by SELF [[IfcSweptAreaSolid]].Position around the rotation axis by the angle given by SELF [[IfcRevolvedAreaSolid]].Angle . The end cross section is topologically similar to the start cross section having the same number of vertices and edges . The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane. The solid is generated by transforming the start cross section into to end cross section. A start face, an end face each defined by start and end cross sections , and one or more lateral faces. Each lateral face is a ruled surface defined by a pair of corresponding edges of the start and end section. The ruled surfaces are constructed in the cylindrical coordinate space defined by the supertype [[IfcRevolvedAreaSolid]] . HISTORY New entity in IFC4. .spec head Informal Propositions 1. Mirroring within [[IfcDerivedProfileDef]].Operator shall not be used"
-
-#:IFC.xml:10802
-msgid "IfcRevolvedAreaSolidTapered_EndSweptArea"
-msgstr "EndSweptArea"
-
-msgid "IfcRevolvedAreaSolidTapered_EndSweptArea_DEFINITION"
-msgstr "EndSweptArea"
-
-#:IFC.xml:10814
-msgid "IfcRightCircularCone"
-msgstr "IfcRightCircularCone"
-
-msgid "IfcRightCircularCone_DEFINITION"
-msgstr "The [[IfcRightCircularCone]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a circular base and a point called apex as the top. The tapers from the base to the top. The axis from the center of the circular base to the apex is perpendicular to the base. The inherited Position attribute defines the IfcAxisPlacement3D and provides the location and orientation of the cone SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cone. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis of the inherited placement coordinate system provides the center axis of the [[IfcRightCircularCone]] , and the apex is at the Height value applied to the positive direction of the z axis. The BottomRadius defines the circular base at the xy plane of the placement coordinate system. Figure 1 illustrates geometric parameters of the cone. The cone is positioned within its own placement coordinate system. The origin is the center of the bottom circular disk, that lies in the XY plane. The apex lies on the positive z axis at 0, 0, Height . cone1 .. .. .. .. figures ifcrightcircularcone layout1.png Figure 1 Right circular cone geometry NOTE Entity adapted from right circular cone defined in ISO 10303 42. HISTORY New entity in IFC2x3 .use head Texture use definition On the circular side, textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the base circumference according to RepeatS. Textures are compressed linearly going upwards towards the top point according to RepeatT. On the bottom face, textures are aligned facing front to back, with the center of the circle aligned to the center of the texture. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X towards top point Bottom Z Radius Radius 0 X Y Figure 2 Right circular cone textures"
-
-#:IFC.xml:10815
-msgid "IfcRightCircularCone_BottomRadius"
-msgstr "下部半径"
-
-msgid "IfcRightCircularCone_BottomRadius_DEFINITION"
-msgstr "ベースの円錐の半径。"
-
-#:IFC.xml:10820
-msgid "IfcRightCircularCone_Height"
-msgstr "高さ"
-
-msgid "IfcRightCircularCone_Height_DEFINITION"
-msgstr "円錐台の底部と頂点の距離。"
-
-#:IFC.xml:10827
-msgid "IfcRightCircularCylinder"
-msgstr "IfcRightCircularCylinder"
-
-msgid "IfcRightCircularCylinder_DEFINITION"
-msgstr "The [[IfcRightCircularCylinder]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a circular base and top. The cylindrical surface between if formed by points at a fixed distance from the axis of the cylinder. The inherited Position attribute defines the IfcAxisPlacement3D and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cylinder. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis provides the center axis and the height is measured from the origin along the positive direction of the z axis. Figure 1 illustrates geometric parameters of the cylinder. The cylinder is positioned within its own placement coordiante system. The origin is the center of the bottom circular disk, that lies in the XY plane. The center of the top circular disk is on the positive z axis at 0, 0, Height . cylinder .. .. .. .. figures ifcrightcircularcylinder layout1.png Figure 1 Right circular cylinder geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A right circular cylinder is a CSG primitive in the form of a solid cylinder of finite height. It is defined by an axis point at the centre of one planar circular face, an axis, a height, and a radius. The faces are perpendicular to the axis and are circular discs with the specified radius. The height is the distance from the first circular face centre in the positive direction of the axis to the second circular face centre. NOTE Entity adapted from right circular cylinder defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture use definition On the circular side, textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the circumference according to RepeatS. Textures are stretched or repeated to the extent of the Height according to RepeatT. On the top and bottom faces, textures are aligned facing front to back, with the center of the circle aligned to the center of the texture. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X Z Bottom Z Radius Radius 0 X Y Top Z Radius Radius Height X Y Figure 2 Right circular cylinder textures"
-
-#:IFC.xml:10828
-msgid "IfcRightCircularCylinder_Height"
-msgstr "高さ"
-
-msgid "IfcRightCircularCylinder_Height_DEFINITION"
-msgstr "円柱の平面円面間の距離。"
-
-#:IFC.xml:10833
-msgid "IfcRightCircularCylinder_Radius"
-msgstr "Radius"
-
-msgid "IfcRightCircularCylinder_Radius_DEFINITION"
-msgstr "円筒の半径。"
-
-#:IFC.xml:10840
-msgid "IfcSectionedSolid"
-msgstr "IfcSectionedSolid"
-
-msgid "IfcSectionedSolid_DEFINITION"
-msgstr "[[IfcSectionedSolid]]は、潜在的に可変な断面積をディレクトリに沿って掃引することによって構築された固体の抽象ベース型です。"
-
-#:IFC.xml:10843
-msgid "IfcSectionedSolid_Directrix"
-msgstr "Direcrix"
-
-msgid "IfcSectionedSolid_Directrix_DEFINITION"
-msgstr "掃引演算を定義するために使用される曲線。"
-
-#:IFC.xml:10855
-msgid "IfcSectionedSolid_CrossSections"
-msgstr "断面図"
-
-msgid "IfcSectionedSolid_CrossSections_DEFINITION"
-msgstr "Direcrixに沿った順序で断面のリスト。"
-
-#:IFC.xml:10867
-msgid "IfcSectionedSolidHorizontal"
-msgstr "IfcSectionedSolidHorizontal"
-
-msgid "IfcSectionedSolidHorizontal_DEFINITION"
-msgstr "An [[IfcSectionedSolidHorizontal]] is a solid model constructed by sweeping potentially varying cross sections along a curve horizontally. The solid is generated by sweeping the CrossSections between CrossSectionPositions with linear interpolation of profile points, where the profile normal agrees with the tangent of the Directrix , the profile X axis is oriented perpendicularly to the left of the Directrix same direction as LateralOffset at [[IfcPointByDistanceExpression]] as facing forward along the directrix, and the profile Y axis is oriented upwards according to FixedAxisVertical . For sections having cross section rotated according to a single super elevation, [[IfcDerivedProfileDef]] may be used to indicate such rotation with each ParentProfile referring to the same underlying profile. For sections having cross section transformed according to multiple super elevations with points varying independently, each profile may be of a different instance but of same type e.g. [[IfcArbitraryClosedProfileDef]] , and may optionally have cross section points associated to string lines guide curves using [[IfcIndexedPolyCurve]] with IfcCartesianPointList2DLabelled . Figure 1 illustrates four girders of a bridge having a constant parameterized profile, two guardrails having a constant arbitrary profile one of them mirrored , and a bridge deck having a variable arbitrary profile. spatial structure .. .. .. .. figures ifcsectionedsolidhorizontal.png Figure 1 Sectioned solid horizontal Informal Propositions 1. No two consecutive sections shall intersect. 2. If the type of sections is not [[IfcParameterizedProfileDef]] i.e. an arbitrary profile , then the number of points and edges should be the same for two consecutive profiles 3. If the directrix is not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. 4. Very sharp edges may result in nearly impossible miter implementer agreements may define acceptable limits for tangent discontinuity or require the directrix to be tangent continuous. 5. The directrix shall not intersect"
-
-#:IFC.xml:10870
-msgid "IfcSectionedSolidHorizontal_CrossSectionPositions"
-msgstr "断面位置"
-
-msgid "IfcSectionedSolidHorizontal_CrossSectionPositions_DEFINITION"
-msgstr "CrossSections と対応する順序を順番に増やした距離の式のリストは、Directrix に沿った対応するセクションの位置を示します。"
-
-#:IFC.xml:10882
-msgid "IfcSectionedSpine"
-msgstr "IfcSectionedSpine"
-
-msgid "IfcSectionedSpine_DEFINITION"
-msgstr "An [[IfcSectionedSpine]] is a representation of the shape of a three dimensional object composed by a number of planar cross sections, and a spine curve. The shape is defined between the first element of cross sections and the last element of the cross sections. A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. All cross sections have to define areas by a closed profile to allow for the representation of a solid. All cross sections have to define curves by an open or closed profile to allow for the representation of a surface. The cross sections are defined by subtypes of [[IfcProfileDef]] , where the consecutive profiles may be derived by a transformation of the start profile or the previous consecutive profile. The spine curve shall be of type [[IfcCompositeCurve]] , each of its segments represented by [[IfcCompositeCurveSegment]] shall correspond to the part between exactly two consecutive cross sections. Figure 1 illustrates an example of an [[IfcSectionedSpine]] . The SpineCurve is given by an [[IfcCompositeCurve]] with two Segments . The Segments 1 has a ParentCurve of type [[IfcPolyline]] and a Transition CONTSAMEGRADIENT. The Segments 2 has a ParentCurve of type [[IfcTrimmedCurve]] and a Transition DISCONTINUOUS. Each CrossSectionPosition lies at a start or end point of the Segments . Each CrossSections are inserted by the CrossSectionPositions . The first two cross sections are of type [[IfcRectangleProfileDef]] , the third is of type [[IfcDerivedProfileDef]] . spine 1 .. .. .. .. figures ifcsectionedspine layout1.gif Figure 1 Sectioned spine geometry Figure 2 illustrates the final result of the [[IfcSectionedSpine]] . The body shown transparently is not fully defined by the exchange definition. render .. .. .. .. figures ifcsectionedspine.jpg Figure 2 Sectioned spine result .extDef NOTE Definition according to ISO CD 10303 42 1992 A sectioned spine is a representation of the shape of a three dimensional object composed of a spine curve and a number of planar cross sections. The shape is defined between the first element of cross sections and the last element of this set. NOTE A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. For the representation of a solid all cross sections are closed curves. NOTE Entity adapted from sectioned spine defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. none of the cross sections, after being placed by the cross section positions, shall intersect 2. none of the cross sections, after being placed by the cross section positions, shall lie in the same plane 3. the local origin of each cross section position shall lie at the beginning or end of a composite curve segment."
-
-#:IFC.xml:10890
-msgid "IfcSectionedSpine_SpineCurve"
-msgstr "SpineCurve"
-
-msgid "IfcSectionedSpine_SpineCurve_DEFINITION"
-msgstr "背骨曲線を定義する単一の複合曲線。それぞれの複合曲線セグメントは、2 つの断面間の部分に対応します。"
-
-#:IFC.xml:10902
-msgid "IfcSectionedSpine_CrossSections"
-msgstr "断面図"
-
-msgid "IfcSectionedSpine_CrossSections_DEFINITION"
-msgstr "少なくとも 2 つの断面のリスト, それぞれ断面の位置座標系の xy 平面内で定義. 位置座標系は、対応するリスト「CrossSectionPositions」によって与えられます。"
-
-#:IFC.xml:10914
-msgid "IfcSectionedSpine_CrossSectionPositions"
-msgstr "断面位置"
-
-msgid "IfcSectionedSpine_CrossSectionPositions_DEFINITION"
-msgstr "断面背骨を形成する断面の座標系。 断面を定義するプロファイルは、対応する位置座標系の xy 平面内に配置されます。"
-
-#:IFC.xml:10883
-msgid "IfcSectionedSpine_Dim"
-msgstr "Dim"
-
-msgid "IfcSectionedSpine_Dim_DEFINITION"
-msgstr "背骨曲線の寸法は常に3です。"
-
-#:IFC.xml:10926
-msgid "IfcSectionedSurface"
-msgstr "IfcSectionedSurface"
-
-msgid "IfcSectionedSurface_DEFINITION"
-msgstr "A kind of surface constructed by sweeping potentially varying open cross sections along a curve horizontally or near horizontally . The surface is generated by sweeping the CrossSections between CrossSectionPositions linear interpolation is assumed, unless transitions curves between cross section points are indicated by OpenCrossProfileDef.Tags. The CrossSections are oriented with the Y axis of each profile facing upwards in Z direction or vertically perpendicular to the Directrix, depending on the Attribute FixedAxisVertical value. sectioned surfacequot .. .. .. .. figures [[IfcSectionedSurface]] 1.png Figure 1 Sectioned surface using [[IfcOpenCrossProfileDef]] In case of branching longitudinal breaklines, the SectionedSurface may use OpenCrossProfileDef instances with varying number of cross section points. In that case, the point in two consecutive cross sections that are connected are identified by the same tag value. sectioned surfacequot .. .. .. .. figures [[IfcSectionedSurface]] 2.png Figure 1 Sectioned surface with branching longitudinal breaklines Formal propositions The curve entity which is the underlying directrix shall have the dimensionality of 3. The profile type shall be CURVE within the list of the profiles defining the cross sections. The entity type for each section must be the same. The list of cross sections and the list of cross section positions shall be of the same size. Informal Propositions No two consecutive sections shall intersect. If the directrix is not tangent continuous, the resulting surface is created by a miter at half angle between the two segments. Very sharp edges may result in nearly impossible miter implementer agreements may define acceptable limits for tangent discontinuity or require the directrix to be tangent continuous. The directrix shall not intersect"
-
-#:IFC.xml:10929
-msgid "IfcSectionedSurface_Directrix"
-msgstr "Direcrix"
-
-msgid "IfcSectionedSurface_Directrix_DEFINITION"
-msgstr "抜本的な操作の定義に使用される曲線"
-
-#:IFC.xml:10941
-msgid "IfcSectionedSurface_CrossSections"
-msgstr "断面図"
-
-msgid "IfcSectionedSurface_CrossSections_DEFINITION"
-msgstr "Direcrixに沿った順序で断面のリスト"
-
-#:IFC.xml:10953
-msgid "IfcSectionedSurface_CrossSectionPositions"
-msgstr "断面位置"
-
-msgid "IfcSectionedSurface_CrossSectionPositions_DEFINITION"
-msgstr "CrossSections と対応する順序を順番に増加させた距離の式のリストは、Directrix に沿った対応するセクションの位置を示します。"
-
-#:IFC.xml:10965
-msgid "IfcShellBasedSurfaceModel"
-msgstr "IfcShellBasedSurfaceModel"
-
-msgid "IfcShellBasedSurfaceModel_DEFINITION"
-msgstr "[[IfcShellBasedSurfaceModel]] は、開いたシェルまたは閉じたシェルで形状を表します。 シェル内で接続された面は次元2を持ち、次元3の座標空間に配置されます。 xtDef NOTE ISO CD 10303に準拠した定義 42 1992 シェルベースのサーフェスモデルは、寸法の開いたシェルまたは閉じたシェルのセットによって記述されます 2. シェルは、端と頂点を除いて交差してはなりません。特に、別の面が交差することはありません。 あるシェルの完全な顔を別のシェルと共有することができます。 一致する部分は、一致する領域を定義する同じ面、エッジと頂点の両方を参照しなければなりません. 少なくとも一つのシェルがなければなりません. シェルは、サーフェスモデルとは独立して存在する可能性があります。ISO 10303 42 で定義されているシェルベースのサーフェスモデルから適応されたエンティティ。 歴史 IFC2x.spec ヘッド 非公式な提案 1. シェルベースのサーフェスモデルの寸法は2です。 2 シェルは、共通の面、エッジまたは頂点を除き、重複または交差してはならない。"
-
-#:IFC.xml:10966
-msgid "IfcShellBasedSurfaceModel_Dim"
-msgstr "Dim"
-
-msgid "IfcShellBasedSurfaceModel_Dim_DEFINITION"
-msgstr "このクラスの空間次元、それは常に3です。"
-
-#:IFC.xml:10971
-msgid "IfcShellBasedSurfaceModel_SbsmBoundary"
-msgstr "SbsmBoundary"
-
-msgid "IfcShellBasedSurfaceModel_SbsmBoundary_DEFINITION"
-msgstr "SbsmBoundary"
-
-#:IFC.xml:10978
-msgid "IfcSolidModel"
-msgstr "IfcSolidModel"
-
-msgid "IfcSolidModel_DEFINITION"
-msgstr "[[IfcSolidModel]]は、異なる種類のソリッドモデル表現によって3D形状を表します。 境界表現、CSG表現、スイープ表現およびその他の適切な固体表現スキームの一般的な抽象的なスーパータイプです。 。 xtDef NOTE ISO CD 10303 42 1992 に準拠した定義 ソリッドモデルは、内部のすべてのポイントが接続されているような製品の公称形状の完全な表現です。 任意の点は、内部にあるとして分類することができます, 外側, または固体の境界上. ソリッドモデル表現のいくつかの異なる種類があります. 注記エンティティは、ISO 10303で定義されたソリッドモデルから適応されています 42. HISTORYIFC1.5に新しいエンティティがあります"
-
-#:IFC.xml:10979
-msgid "IfcSolidModel_Dim"
-msgstr "Dim"
-
-msgid "IfcSolidModel_Dim_DEFINITION"
-msgstr "このクラスの空間次元、それは常に3です。"
-
-#:IFC.xml:10988
-msgid "IfcSphere"
-msgstr "IfcSphere"
-
-msgid "IfcSphere_DEFINITION"
-msgstr "The [[IfcSphere]] is a Construction Solid Geometry CSG 3D primitive. It is a solid where all points at the surface have the same distance from the center point. The inherited Position attribute defines the IfcAxisPlacement3D and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the sphere. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis points at its positve direction towards the north pole, and by its negative directions towards the south pole. EXAMPLE Figure 1 illustrates geometric parameters of the sphere. The sphere is positioned within its own placement coordiante system relative to the object coordinate system. The origin is the center of the sphere. Figure 1 Sphere geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A sphere is a CSG primitive with a spherical shape defined by a centre and a radius. NOTE Entity adapted from sphere defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture Use Definition Textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the circumference at the equator according to RepeatS and RepeatT. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X, then curving counter clockwise Z, then curving towards top Figure 2 Sphere textures"
-
-#:IFC.xml:10989
-msgid "IfcSphere_Radius"
-msgstr "Radius"
-
-msgid "IfcSphere_Radius_DEFINITION"
-msgstr "球の半径。"
-
-#:IFC.xml:10996
-msgid "IfcSurfaceCurveSweptAreaSolid"
-msgstr "IfcSurfaceCurveSweptAreaSolid"
-
-msgid "IfcSurfaceCurveSweptAreaSolid_DEFINITION"
-msgstr "The [[IfcSurfaceCurveSweptAreaSolid]] is the result of sweeping an area along a directrix that lies on a reference surface. The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the tangent of the directrix at this point, and the profile s x axis agrees to the surface normal. At any point along the directrix, the swept profile origin lies on the directrix, the profile s normal points towards the tangent of the directrix, and the profile s x axis is identical to the surface normal at this point. NOTE The profile area s normal has to be identical to the tangent of the directrix at any given point. In case of a directrix having a linear segment at the start point, the segment has to be perpendicular to the profile at start. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , the parameter value is provided based on the curve parameterization. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , the parameter value is provided based on the curve parameterization. If no EndParam is provided the end defaults to the end of the directrix. The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE The StartParam and the EndParam are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. In case of a closed curve, such as [[IfcCircle]] or [[IfcEllipse]] , as the directrix, StartParam and the EndParam shall not exceed the parametic range, they shall not be 360 . EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In most cases, it is a plane or a surface of extrusion. The directrix lies on the surface, in case of a plane it might be defined as a polyline or composite curve, in case of a cylindrical or other non planer reference surface it might often be defined as a p curve on this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system of the implicit plane lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the normal of the reference surface at this point. The Axis2 the y axis, or v is constructed. The resulting body of the swept solid is not repositioned if the inherited Position attribute is omitted. Otherwise the coordinate system established by the Position attribute is used to reposition the body relative to the object coordinate system. EXAMPLE Figure 1 illustrates an example using a cylindrical reference surface and a p curve for sweeping a rectangle. The Postion is not provided and therefore it does not reposition the resulting swept solid. Figure 2 shows the expected result.NOTE The start of the directrix lies at the origin of the object coordinate system, as shown in the illustration,only by coincidence. The start of the directrix and thereby the start of the sweeping operation might be at any point within the object coordinate system and only depends on the position of the directrix.Figure 1 Surface curve wept area solid parameter Figure 2 Surface curve wept area solid results .extDef NOTE Definition according to ISO CD 10303 42 1992 A surface curve swept area solid is a type of swept area solid which is the result of sweeping a face along a Directrix lying on a ReferenceSurface . The orientation of the SweptArea is related to the direction of the surface normal. The SweptArea is required to be a curve bounded surface lying in the plane z 0 and this is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the normal to the ReferenceSurface at the current point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a Cartesian Transformation Operator 3D with attributes Local origin as point 0., 0., 0 , Axis 1 as the normal N to the reference surface at the point of the directrix with parameter u. Axis 3 as the direction of the tangent vector t at the point of the directrix with parameter u. The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the directrix parameter u. NOTE Entity adapted from surface curve swept area solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The SweptArea shall lie in the implicit plane z 0. 2. The Directrix shall lie on the ReferenceSurface ."
-
-#:IFC.xml:10999
-msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface"
-msgstr "Reference Surface"
-
-msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface_DEFINITION"
-msgstr "Reference Surface"
-
-#:IFC.xml:11011
-msgid "IfcSweptAreaSolid"
-msgstr "IfcSweptAreaSolid"
-
-msgid "IfcSweptAreaSolid_DEFINITION"
-msgstr "An [[IfcSweptAreaSolid]] represents the 3D shape by a sweeping representation scheme allowing a two dimensional planar cross section to sweep through space. The swept area is defined by a cross section, represented by a subtype if [[IfcProfileDef]] , that is provided as a closed two dimensional boundary on an implicit plane. The swept area is defined in the xy plane of the object coordinate system. The sweeping operation is applied to the swept area as defined within the subtypes of [[IfcSweptAreaSolid]] , some subtypes require an implicit transformation of the swept area to the start position of the sweep. The optional Positio n coordinate system allows for re positioning the resulting swept solid relative to the object coordinate system. .extDef NOTE Definition according to ISO CD 10303 42 1992 The swept area solid entity collects the entities which are defined procedurally by sweeping action on planar bounded surfaces. The position is space of the swept solid will be dependent upon the position of the swept area. The swept area will be a face of the resulting swept area solid, except for the case of a revolved area solid with angle equal to 2π or 360 degrees . NOTE Entity adapted from swept area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .change ifc2x4 IFC4 CHANGE The attribute Position has been changed to OPTIONAL with upward compatibility for file based exchange."
-
-#:IFC.xml:11014
-msgid "IfcSweptAreaSolid_SweptArea"
-msgstr "SweptArea"
-
-msgid "IfcSweptAreaSolid_SweptArea_DEFINITION"
-msgstr "掃引する領域を定義する表面。位置座標系の xy 平面内でプロファイル定義として与えられます。"
-
-#:IFC.xml:11026
-msgid "IfcSweptAreaSolid_Position"
-msgstr "位置"
-
-msgid "IfcSweptAreaSolid_Position_DEFINITION"
-msgstr "掃引動作の掃引固体の位置座標系. 位置座標系は、掃引固体の再配置を可能にする. 指定されていない場合は、掃引された固体は、断面または掃引操作に使用されるディレクトリによって決定されるような位置のままです。 .change ifc2x4 IFC4 変更点 属性は OPTIONAL に変更され、ファイルベースの取引所では上方互換性があります。"
-
-#:IFC.xml:11038
-msgid "IfcSweptDiskSolid"
-msgstr "IfcSweptDiskSolid"
-
-msgid "IfcSweptDiskSolid_DEFINITION"
-msgstr "An [[IfcSweptDiskSolid]] represents the 3D shape by a sweeping representation scheme allowing a two dimensional circularly bounded plane to sweep along a three dimensional Directrix through space. The StartParam and EndParam parameter are optional, if not provided they default to the start and end of the Directrix . Only if the Directrix is given by a bounded or by a closed curve, it is permissible to omit the values of StartParam and EndParam . If the transitions between consecutive segments of the Directrix are not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. Informal proposition restricts the permissible angle between two non tangent continuous segments. Figure 1 illustrates an example. Directrix given as [[IfcIndexedPolyCurve]] , having linear and circular arc segments, that are tangent continuous between each segments Directrix being a bounded and open curve No StartParam and EndParam are provided, start and end default to start and end of the bounded curve of the Directrix NOTE Although the example shows a Directrix as a poly curve on a planar reference surface, the definition of [[IfcSweptDiskSolid]] is not restricted to be based on planer curves. However view definitions or implementer agreements may provide restrictions. NOTE The geometric item [[IfcIndexedPolyCurve]] provides a more compact representation compared with [[IfcCompositeCurve]] as is therefore the prefered curve representation for the Directrix . disk solid .. .. .. .. figures ifcsweptdisksolid layout1.png Figure 1 Swept disk solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A swept disk solid is the solid produced by sweeping a circular disk along a three dimensional curve. During the sweeping operation the normal to the plane of the circular disk is in the direction of the tangent to the directrix curve and the center of the disk lies on the directrix. The circular disk may, optionally, have a central hole, in this case the resulting solid has a through hole, or, an internal void when the directrix forms a close curve. NOTE Entity adapted from swept disk solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE The attribute StartParam and EndParam have been made optional. .spec head Informal Propositions 1. If the Directrix curve definition is not tangent continuous, the transition between the segments has to be within an acceptable limit of tangent discontinuity. Very sharp edges may result in nearly impossible miter. Implementer agreements may define acceptable limits for tangent discontinuity. 2. The segments of the Directrix shall be long enough to apply the Radius . In case of an arc segment forming part of the Directrix , its radius shall be greater then the disk Radius 3. The Directrix shall not be based on an intersecting curve."
-
-#:IFC.xml:11061
-msgid "IfcSweptDiskSolid_Directrix"
-msgstr "Direcrix"
-
-msgid "IfcSweptDiskSolid_Directrix_DEFINITION"
-msgstr "抜本的な操作を定義するために使用される曲線. ソリッドは、Directrixに沿って円盤を掃引することによって生成されます."
-
-#:IFC.xml:11039
-msgid "IfcSweptDiskSolid_EndParam"
-msgstr "EndParam"
-
-msgid "IfcSweptDiskSolid_EndParam_DEFINITION"
-msgstr "掃引操作が終了するDirecrixのパラメータ値。 値が指定されていない場合は、掃引操作の終わりがDirectrixの終わりになります。 .change ifc2x4 IFC4 変更点 属性は OPTIONAL に変更され、ファイルベースの取引所では上方互換性があります。"
-
-#:IFC.xml:11044
-msgid "IfcSweptDiskSolid_InnerRadius"
-msgstr "InnerRadius"
-
-msgid "IfcSweptDiskSolid_InnerRadius_DEFINITION"
-msgstr "この属性は、ディスクの中央に円形の穴の半径を定義する場合はオプションです。"
-
-#:IFC.xml:11049
-msgid "IfcSweptDiskSolid_Radius"
-msgstr "Radius"
-
-msgid "IfcSweptDiskSolid_Radius_DEFINITION"
-msgstr "直角に沿って掃引される円盤の半径 . InnerRadiusが適用されている場合、外半径を示します。"
-
-#:IFC.xml:11054
-msgid "IfcSweptDiskSolid_StartParam"
-msgstr "StartParam"
-
-msgid "IfcSweptDiskSolid_StartParam_DEFINITION"
-msgstr "掃引操作が開始されるDirecrixのパラメータ値。 値が指定されていない場合、掃引操作の開始は、Directrixの開始時です。 .change ifc2x4 IFC4 変更点 属性は OPTIONAL に変更され、ファイルベースの取引所では上方互換性があります。"
-
-#:IFC.xml:11073
-msgid "IfcSweptDiskSolidPolygonal"
-msgstr "IfcSweptDiskSolidPolygonal"
-
-msgid "IfcSweptDiskSolidPolygonal_DEFINITION"
-msgstr "The [[IfcSweptDiskSolidPolygonal]] is a [[IfcSweptDiskSolid]] where the Directrix is restricted to be provided by an poly line only. An optional FilletRadius attribute can be asserted, it is then applied as a fillet to all transitions between the segments of the poly line. NOTE The geometric item [[IfcIndexedPolyCurve]] provides a more compact representation compared with [[IfcPolyline]] . Therefore it is the prefered curve representation for the Directrix . The [[IfcIndexedPolyCurve]] shall not have Segments defined, resticting it to a poly line only. HISTORY New entity in IFC4. .spec head Informal Propositions 1. The FilletRadius , if provided, has to be smaller than or equal to the length of the start and end segment of the [[IfcPolyline]] , and smaller than or equal to one half of the length of the shortest inner segment."
-
-#:IFC.xml:11074
-msgid "IfcSweptDiskSolidPolygonal_FilletRadius"
-msgstr "フィレット半径"
-
-msgid "IfcSweptDiskSolidPolygonal_FilletRadius_DEFINITION"
-msgstr "[[IfcPolyline]] のセグメント間のすべてのトランジションに均等に適用されるフィレット。 Direcrixの幾何学的表現を提供します。 省略した場合、セグメントにはフィレットは適用されません。"
-
-#:IFC.xml:11081
-msgid "IfcTaperedSweptAreaProfiles__StartArea"
-msgstr "IfcTaperedSweptAreaProfiles StartArea"
-
-#:IFC.xml:11089
-msgid "IfcTessellatedFaceSet"
-msgstr "IfcTessellatedFaceSet"
-
-msgid "IfcTessellatedFaceSet_DEFINITION"
-msgstr "The [[IfcTessellatedFaceSet]] is a boundary representation topological model limited to planar faces and straight edges. It may represent an approximation of an analytical surface or solid that may be provided in addition to its tessellation as a separate shape representation. The [[IfcTessellatedFaceSet]] provides a compact data representation of an connected face set using indices into ordered lists of vertices, normals, colours, and texture maps. NOTE The compact representation has been chosen to enable small data sets despite potentially large sets of faces, edges and vertices needed to represent tessellations of analyticals surfaces and solids, and despite large sets of colour and texture information to annotate the tessellated faces. The [[IfcTessellatedFaceSet]] is an abstract supertype of tesselated face sets each imposing specific constraints on face generation for tessellation, such as triangulation with or without strip and fans , or quadrilaterals, or polygonal faces with or without inner loops . NOTE Not all different constraints on face sets are included as specific subtypes in this release of the specification. The following attributes apply to all subtypes The Coordinates are the ordered list of Cartesian points representing the vertices of the tessellated item. An index list, defined at the level of subtypes, uses the points, identified by index position, to construct the polylines that represent the faces. The HasColours inverse relation provides an indexed colour map with an corresponding list of indices providing a colour for each face of the tessellated face set. The HasTextures inverse relation provides an indexed texture map with an corresponding list of indices providing texture coordinates that map to the geometric coordinates of the polylines representing the faces. Each face of the tessellated face set shall have at least three non coincident vertices vertices that define a planar polygon vertices that define a non self intersecting polygon. NOTE The definition of [[IfcTessellatedFaceSet]] is based on the indexedFaceSet defined in ISO IEC 19775 1 HISTORY New entity in IFC4."
-
-#:IFC.xml:10460
-msgid "IfcTessellatedFaceSet_Coordinates"
-msgstr "座標"
-
-msgid "IfcTessellatedFaceSet_Coordinates_DEFINITION"
-msgstr "[[IfcTessellatedFaceSet]] のサブタイプで定義された座標インデックスで使用される直交点の順序リスト。"
-
-#:IFC.xml:11103
-msgid "IfcTessellatedFaceSet_HasColours"
-msgstr "HasColors"
-
-msgid "IfcTessellatedFaceSet_HasColours_DEFINITION"
-msgstr "[[IfcTessellatedFaceSet]] のサブタイプの面に、対応する RGB 値を提供するインデックス付きカラーマップを参照します。"
-
-#:IFC.xml:11117
-msgid "IfcTessellatedFaceSet_HasTextures"
-msgstr "HasTextures"
-
-msgid "IfcTessellatedFaceSet_HasTextures_DEFINITION"
-msgstr "[[IfcTessellatedFaceSet]] のサブタイプの面を境界する頂点に対応するテクスチャ座標を提供する索引付きテクスチャマップを参照します。"
-
-#:IFC.xml:11090
-msgid "IfcTessellatedFaceSet_Dim"
-msgstr "Dim"
-
-msgid "IfcTessellatedFaceSet_Dim_DEFINITION"
-msgstr "この幾何学的表現項目の空間寸法は、常に3です。"
-
-#:IFC.xml:11095
-msgid "IfcTessellatedFaceSet_Closed"
-msgstr "クローズ済み"
-
-msgid "IfcTessellatedFaceSet_Closed_DEFINITION"
-msgstr "[[IfcTessellatedFaceSet]] が閉じたシェルであるか、または FALSE を指定します。省略された場合、そのような情報はアサートできません。"
-
-#:IFC.xml:11131
-msgid "IfcTessellatedItem"
-msgstr "IfcTessellatedItem"
-
-msgid "IfcTessellatedItem_DEFINITION"
-msgstr "[[IfcTessellatedItem]] はすべてのテッセレーション幾何モデルの抽象的なスーパータイプです. HISTORYIFC4の新しい実体."
-
-#:IFC.xml:11134
-msgid "IfcTextureCoordinateIndices"
-msgstr "IfcTextureCoordinateIndices"
-
-#:IFC.xml:10660
-msgid "IfcTextureCoordinateIndices_TexCoordsOf"
-msgstr "TexCoordsOf"
-
-msgid "IfcTextureCoordinateIndices_TexCoordsOf_DEFINITION"
-msgstr "TexCoordsOf"
-
-#:IFC.xml:10685
-msgid "IfcTextureCoordinateIndices_ToTexMap"
-msgstr "ToTexMap"
-
-msgid "IfcTextureCoordinateIndices_ToTexMap_DEFINITION"
-msgstr "ToTexMap"
-
-#:IFC.xml:11135
-msgid "IfcTextureCoordinateIndices_TexCoordIndex"
-msgstr "TexCoordIndex"
-
-msgid "IfcTextureCoordinateIndices_TexCoordIndex_DEFINITION"
-msgstr "TexCoordIndex"
-
-#:IFC.xml:11141
-msgid "IfcTextureCoordinateIndicesWithVoids"
-msgstr "IfcTextureCoordinateIndicesWithVoids"
-
-#:IFC.xml:11142
-msgid "IfcTextureCoordinateIndicesWithVoids_InnerTexCoordIndices"
-msgstr "InnerTexCoordinices"
-
-msgid "IfcTextureCoordinateIndicesWithVoids_InnerTexCoordIndices_DEFINITION"
-msgstr "InnerTexCoordinices"
-
-#:IFC.xml:11149
-msgid "IfcTriangulatedFaceSet"
-msgstr "IfcTriangulatedFaceSet"
-
-msgid "IfcTriangulatedFaceSet_DEFINITION"
-msgstr "The [[IfcTriangulatedFaceSet]] is a tessellated face set with all faces being bound by triangles. The faces are constructed by implicit polylines defined by three Cartesian points. Depending on the value of the inherited attribute Closed the instance of [[IfcTriangulatedFaceSet]] represents if TRUE, a boundary represention or B rep if FALSE, a face based surface representation. The coordinates of each point are provided by a one based index into an ordered list of Cartesian points provided by the two dimensional list CoordIndex , where the first dimension of the two dimensional list addresses the list of triangular faces the second dimension of the two dimensional list provides exactly three indices. Each index points to a Cartesian point being a vertex of the triangle. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. [[IfcTriangulatedFaceSet]] 01 .. .. .. .. figures ifctriangulatedfaceset 03.png Figure 1 Use of PnIndex See Figure 2 for using the [[IfcTriangulatedFaceSet]] without as default and with using the PnIndex . [[IfcTriangulatedFaceSet]] 02 .. .. .. .. figures ifctriangulatedfaceset 01.png Figure 2 Triangulated face set Optionally normals can be provided. Only normals per vector are supported allowing for visually curved triangles when the three normals of the corresponding three vertices of a triangle are not co linear to the normal of the triangular face. If they are identical, normals shall be omited. NOTE In case of a body representation having triangular faces with curvature, different normals for all three vertices in context of this triangles are exported, describing the curvature for smooth visualisation. In case of triangular faces with no curvature, the three vertex based normals are identical and could always be computed from the face. Therefore vertices should only be exported to support smooth visualisation by curvature of triangles. In case of faceted representation no vertices should be exported. Normals are provided by the two dimensional list Normals , where the first dimension of the two dimensional list addresses the corresponding list of vertex indices of the triangular faces the second dimension of the two dimensional list provides exactly three real values to determine the direction of the normal at this vertex of the triangle. The indices in the CoordIndex point into the list of Normals . The indices of CoordIndex are applied to both points, either directly directly, or via the PnIndex and normals. See Figure 3 for handling of normals. [[IfcTriangulatedFaceSet]] 02 .. .. .. .. figures ifctriangulatedfaceset 02.png Figure 3 Triangulated face set with normals NOTE Using corresponding lists of points and normals allows to use only a single list of indices into both at the expense of having non unique collections of vertices. Figure 4 shows the use of [[IfcTriangulatedFaceSet]] without annotation. The diagram of the [[IfcTriangulatedFaceSet]] represents the indices and the ordered list into which the indices point. The index starts with 1 indexed as 1 to N , if the greatest index in CoordIndex in N, then the [[IfcCartesianPointList]] shall have N lists of 3 3 coordinates. Figure 168 shows an [[IfcTriangulatedFaceSet]] represented by CoordIndex 1,6,5 , 1,2,6 , 6,2,7 , 7,2,3 , 7,8,6 , 6,8,5 , 5,8,1 , 1,8,4 , 4,2,1 , 2,4,3 , 4,8,7 , 7,3,4 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. Figure 4 Triangulated face set geometry NOTE The definition of [[IfcTriangulatedFaceSet]] is based on the indexedFaceSet and indexedTriangleSet defined in ISO IEC 19775 1. The use of PnIndex has been adopted from triangulated surface set defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two boundaries of faces the topological normal at each point on the boundary of the triangulated face set shall point away from the mater ial of the solid."
-
-#:IFC.xml:11150
-msgid "IfcTriangulatedFaceSet_NumberOfTriangles"
-msgstr "NumberOfTriangles"
-
-msgid "IfcTriangulatedFaceSet_NumberOfTriangles_DEFINITION"
-msgstr "この三角測量に使用される三角形の数。"
-
-#:IFC.xml:11155
-msgid "IfcTriangulatedFaceSet_CoordIndex"
-msgstr "CoordIndex"
-
-msgid "IfcTriangulatedFaceSet_CoordIndex_DEFINITION"
-msgstr "インデックス付き三角形の二次元リスト ここで、最初の次元は1からNまでの三角形を表します 2番目の次元は、1から3までの3つの頂点ポイントにインデックスを表す正確に3つの値を持っています。 注 頂点の座標は、SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList の索引付きリストから提供されます。"
-
-#:IFC.xml:11160
-msgid "IfcTriangulatedFaceSet_Normals"
-msgstr "標準"
-
-msgid "IfcTriangulatedFaceSet_Normals_DEFINITION"
-msgstr "3方向の順序付きリスト。3つのパラメータ値で提供される方向の2次元リストです。 1次元は座標軸の頂点インデックス 2次元は正確に3つの値を持ちます。 x方向1、y方向2、z方向3です"
-
-#:IFC.xml:11165
-msgid "IfcTriangulatedFaceSet_PnIndex"
-msgstr "PnIndex"
-
-msgid "IfcTriangulatedFaceSet_PnIndex_DEFINITION"
-msgstr "The list of integers defining the locations in the [[IfcCartesianPointList3D]] to obtain the point coordinates for the indices withint the CoordIndex . If the PnIndex is not provided the indices point directly into the [[IfcCartesianPointList3D]] ."
-
-#:IFC.xml:11172
-msgid "IfcTriangulatedIrregularNetwork"
-msgstr "IfcTriangulatedIrregulatedネットワーク"
-
-msgid "IfcTriangulatedIrregularNetwork_DEFINITION"
-msgstr "[[IfcTriangulatedIrregularNetwork]] は、水平面を表す三角形の面セットで、ドメイン内のすべての X 座標と Y 座標に 1 つの一意の Z 座標を表し、面または穴または穴として名称としてのブレークラインを示す各面に追加のフラグを付けます。 三角形は、上記の右手のルールに従って表示するように反時計回りの順序で定義する必要があります。 可視化のために、フラグが穴、空白、または将来の拡張が可能ないずれかの負のフラグとして設定されている場合には、アプリケーションは面を表示しないでください。 Void フラグは、他のジオメトリに落ちることなく顔を除外することを示すために使用されます。 このような指定は、建物または他の構造の下のサイトの部分に使用することができます。 ホールフラグは、顔が除外されることを示すために使用されますが、他のジオメトリに戻る可能性があります。 このような名称は、定義可能な既存のサイトに準拠し、変更しないでおくことが提案されたサイトの一部に使用できます 入力として使用される複数のサーフェスを組み合わせるシナリオでは、このような名称は、既存のサイトに準拠したままにすることができます。 Void とマークされた三角形は、void として保持されます。 一方、Hole としてマークされた三角形は、別のサーフェスが同じ水平位置内で定義された見える形状である場合に上書きされます。"
-
-#:IFC.xml:11173
-msgid "IfcTriangulatedIrregularNetwork_Flags"
-msgstr "フラグ"
-
-msgid "IfcTriangulatedIrregularNetwork_Flags_DEFINITION"
-msgstr "次のようにコンパクト形式で各三角形の属性を示します。2 つの見えない空間1の見えない穴0の目に見えない穴1のブレイクライン 1 エッジでのブレークライン 1 でのエッジでのブレークライン 2 でのエッジでのエッジでのブレークライン 2 でのエッジでのブレークライン 2 でのエッジでのブレークライン 3 エッジでのブレークライン 1 と エッジでのエッジでのエッジでのブレークライン 3 でのエッジ 1 と 3 での6のブレークライン エッジ1でのブレークライン 2と3。"
+msgid "WorkWeekDuration_DEFINITION"
+msgstr "労働時間ベースの週内の経過時間。 プレゼンテーション目的のために、アプリケーションは[[IfcTask]] の作業期間中に[[IfcTaskTime]]を表示することを選択できます。 urationType WORKTIME. この値は、省略された場合、40 時間と仮定された週の経過時間168時間以下でなければなりません。"
 
