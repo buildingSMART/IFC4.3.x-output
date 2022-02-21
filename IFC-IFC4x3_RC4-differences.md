@@ -1,11 +1,11 @@
 # Express schema differences
 
-75 items
+77 items
 
 
 ### Missing data
 
-29 items
+32 items
 
 | Name                                 | IFC4x3_RC4.exp          | IFC.exp          |
 |--------------------------------------|-------------------------|------------------|
@@ -13,11 +13,14 @@
 | IfcBuildingElementProxyType          |                         | not in 'IFC.exp' |
 | IfcBuildingElementProxyTypeEnum      |                         | not in 'IFC.exp' |
 | IfcDoorStyle                         |                         | not in 'IFC.exp' |
+| IfcFacilityPartTypeSelect            |                         | not in 'IFC.exp' |
+| IfcImpactProtectionDeviceTypeSelect  |                         | not in 'IFC.exp' |
 | IfcPlant                             |                         | not in 'IFC.exp' |
 | IfcPostalAddress                     |                         | not in 'IFC.exp' |
 | IfcProxy                             |                         | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                         | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                         | not in 'IFC.exp' |
+| IfcTransportElementTypeSelect        |                         | not in 'IFC.exp' |
 | IfcWindowStyle                       |                         | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcBuiltElementProxy                 | not in 'IFC4x3_RC4.exp' |                  |
@@ -41,13 +44,12 @@
 
 ### Type definitions
 
-3 items
+2 items
 
-| Name                          | IFC4x3_RC4.exp                                                                                                                                                                                  | IFC.exp                                                                                                                                                                                                                                                                         |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IfcTransportElementTypeSelect | IfcTransportElementFixedTypeEnum, IfcTransportElementNonFixedTypeEnum                                                                                                                           | IfcTransportElementTypeEnum, IfcVehicleTypeEnum                                                                                                                                                                                                                                 |
-| IfcRailwayPartTypeEnum        | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                                |
-| IfcTaskTypeEnum               | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED                                   | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
+| Name                   | IFC4x3_RC4.exp                                                                                                                                                                                  | IFC.exp                                                                                                                                                                                                                                                                         |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcRailwayPartTypeEnum | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                                |
+| IfcTaskTypeEnum        | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED                                   | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
 ### Entity definitions
 

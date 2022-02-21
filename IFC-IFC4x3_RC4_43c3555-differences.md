@@ -1,11 +1,11 @@
 # Express schema differences
 
-70 items
+72 items
 
 
 ### Missing data
 
-29 items
+32 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -13,11 +13,14 @@
 | IfcBuildingElementProxyType          |                                 | not in 'IFC.exp' |
 | IfcBuildingElementProxyTypeEnum      |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
+| IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
+| IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
 | IfcPlant                             |                                 | not in 'IFC.exp' |
 | IfcPostalAddress                     |                                 | not in 'IFC.exp' |
 | IfcProxy                             |                                 | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                                 | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                                 | not in 'IFC.exp' |
+| IfcTransportElementTypeSelect        |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcBuiltElementProxy                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
@@ -41,12 +44,11 @@
 
 ### Type definitions
 
-2 items
+1 items
 
-| Name                          | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                                         |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IfcTransportElementTypeSelect | IfcTransportElementFixedTypeEnum, IfcTransportElementNonFixedTypeEnum                                                                                         | IfcTransportElementTypeEnum, IfcVehicleTypeEnum                                                                                                                                                                                                                                 |
-| IfcTaskTypeEnum               | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
+| Name            | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                                         |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcTaskTypeEnum | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
 ### Entity definitions
 
