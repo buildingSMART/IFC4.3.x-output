@@ -9,1732 +9,319 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcStructuralElementsDomain.pot\n"
-"X-Crowdin-File-ID: 96\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:47409
-msgid "IfcBendingParameterSelect"
-msgstr "Выбор параметров IfcBendingSelect"
+#:IFC.xml:49041
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-#:IFC.xml:47410
-msgid "IfcFooting"
-msgstr "Ледяной стоп"
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
 
-msgid "IfcFooting_DEFINITION"
-msgstr "Фундамент – это часть фундамента структуры, которая распространяет и передает нагрузку на почву. Фундамент также характеризуется мелкодисперсным фундаментом, где грузы перемещаются на грунт возле поверхности. .extDef ПРИМЕЧАНИЕ Определение в соответствии с ISO 6707 1 ступенчатая конструкция, распространяющая нагрузку у подножия стены или колонки. HISTORY New entity in IFC2x2. ПРИМЕЧАНИЕ Фундаментальные слябы также называют сляб по сорту, не создаются как [[IfcFooting]], но [[IfcSlab]] или как подтип [[IfcSlabStandardCase]] , [[IfcSlabElementedCase]] с предопределенным типом [[IfcSlabTypeEnum]] . АСЕСЛАБА. Глубокие основания, которые переносят нагрузку на подповерхностные слои, представлены [[IfcDeepFoundation]] и ее подтипами [[IfcCaissonFoundation]] и [[IfcPile]] ."
+#:IFC.xml:49044
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-#:IFC.xml:47411
-msgid "IfcFooting_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49052
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-msgid "IfcFooting_PredefinedType_DEFINITION"
-msgstr "Общепризнанный тип нижней части .change ifc2x4 IFC4 CHANGE Атрибут сделал необязательным. Информация о типе может быть предоставлена [[IfcRelDefinesByType]] и [[IfcFootingType]] ."
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
 
-#:IFC.xml:47418
-msgid "IfcFootingType"
-msgstr "IfcFootingType"
+#:IFC.xml:49057
+msgid "IfcConnectedFaceSet"
+msgstr "Подключено к FaceSet"
 
-msgid "IfcFootingType_DEFINITION"
-msgstr "Тип строительного элемента [[IfcFootingType]] определяет общую информацию для вхождения в футы. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Он используется для определения спецификаций типа footing с указанием конкретной информации о продукте, которая является общей для всех вхождений этого типа товара. [[IfcFootingType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcFootingType]] представлены экземплярами [[IfcFooting]] . См. документацию [[IfcFooting]] для поддерживаемых наборов, материалов и композиции."
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A connected face set is a set of faces such that the domain of faces together with their bounding edges and vertices is connected. NOTE Entity adapted from connected face set defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. The union of the domains of the faces and their bounding loops shall be arcwise connected."
 
-#:IFC.xml:47419
-msgid "IfcFootingType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49060
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-msgid "IfcFootingType_PredefinedType_DEFINITION"
-msgstr "Подтип колонтитула."
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "The set of faces arcwise connected along common edges or vertices."
 
-#:IFC.xml:47426
-msgid "IfcFootingTypeEnum"
-msgstr "IfcFootingTypeEnum"
+#:IFC.xml:49072
+msgid "IfcEdge"
+msgstr "Ледяной Край"
 
-msgid "IfcFootingTypeEnum_DEFINITION"
-msgstr "Добавлена нумерация, определяющая общий тип подвала, добавлена новая версия IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Item CAISSON FOUNDATION. Предметы CAISSON FOUNDATION Тип фундамента, используемый в подводных конструкциях .change ifc4x2 IFC4x2 CHANGE Enum сделал факультативным и устаревшим. Используйте специальный класс [[IfcCaissonFoundation]]. Элементы FOOTING BEAM Footing, которые находятся в изгибе и поддерживаются чистыми от земли. Обычно они простираются между пирогами, кучами или колпачками. Они отличаются от балок в надстройке здания, поскольку для них обычно требуется более низкая степень отделки. Они отличаются от STRIP FOOTING так как они понятны из поверхности грунта и поэтому требуют опоры на нижнюю поверхность при изгибе бетона. PAD FOOTING Элемент, который переносит нагрузку одной колонки на землю. PILE CAP Элемент, который переносит нагрузку из столбца или группы столбцов на пир или кучу или группу пиров или кубиков. STRIP FOOTING A линейный элемент, который переносит груз в землю из либо непрерывного элемента, Например, стена или ряд элементов, таких как колонки. ПОЛЬЗОВАТЕЛЬ Особые виды кожи, которые соответствуют определенным местным требованиям, НЕ ИЗМЕНЯЕТСЯ."
+msgid "IfcEdge_DEFINITION"
+msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
 
-#:IFC.xml:47442
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION"
-msgstr "Падение кайссена"
+#:IFC.xml:49075
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION_DEFINITION"
-msgstr "Тип фундамента, используемый в подводных сооружениях. .change ifc4x2 IFC4x2 CHANGE Enum сделал необязательным и устаревшим. Вместо этого используйте специальный класс [[IfcCaissonFoundation]]."
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "Start point vertex of the edge."
 
-#:IFC.xml:47443
-msgid "IfcFootingTypeEnum_FOOTING_BEAM"
-msgstr "FOOTING BEAM"
+#:IFC.xml:49087
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-msgid "IfcFootingTypeEnum_FOOTING_BEAM_DEFINITION"
-msgstr "Элементы для ног, которые поддерживаются в изгибе и хорошо видны от поверхности. Обычно они простираются между кулаками, кулаками и колпачками. Они отличаются от балок в надстройке здания, поскольку для них обычно требуется более низкая степень отделки. Они отличаются от STRIP FOOTING так как они понятны из поверхности грунта и поэтому требуют опоры на нижнюю поверхность при изгибе бетона."
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "End point vertex of the edge. The same vertex can be used for both EdgeStart and EdgeEnd."
 
-#:IFC.xml:47444
-msgid "IfcFootingTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:49123
+msgid "IfcEdgeCurve"
+msgstr "Кривая Излучения"
 
-msgid "IfcFootingTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип обрезки не определен."
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
 
-#:IFC.xml:47445
-msgid "IfcFootingTypeEnum_PAD_FOOTING"
-msgstr "ПУСТИКАЕТСЯ"
+#:IFC.xml:12165
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Геометрия кромки"
 
-msgid "IfcFootingTypeEnum_PAD_FOOTING_DEFINITION"
-msgstr "Элемент, который переносит нагрузку одной колонки на землю."
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "The curve which defines the shape and spatial location of the edge. This curve may be unbounded and is implicitly trimmed by the vertices of the edge this defines the edge domain. Multiple edges can reference the same curve."
 
-#:IFC.xml:47446
-msgid "IfcFootingTypeEnum_PILE_CAP"
-msgstr "PILE CAP"
+#:IFC.xml:49124
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-msgid "IfcFootingTypeEnum_PILE_CAP_DEFINITION"
-msgstr "Элемент, который переносит нагрузку из столбца или группы колонок на пир или кучу или группу пиров или кубиков."
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Этот логический флаг указывает, что TRUE , или нет FALSE чувства края и кривая, определяющая геометрию края одинаковы. Смысл края - от края стартовой вершины до края конца вершины - смысл кривой в направлении увеличения параметра."
 
-#:IFC.xml:47447
-msgid "IfcFootingTypeEnum_STRIP_FOOTING"
-msgstr "ФОРМА СТРОИТЕЛЬСТВА"
+#:IFC.xml:49132
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-msgid "IfcFootingTypeEnum_STRIP_FOOTING_DEFINITION"
-msgstr "Линейный элемент, который перемещает нагрузку на землю из либо непрерывного элемента, Например, стена или ряд элементов, таких как колонки."
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
 
-#:IFC.xml:47448
-msgid "IfcFootingTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:49140
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Список EdgeList"
 
-msgid "IfcFootingTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Особые виды обуви, которые отвечают определенным местным требованиям."
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "A list of oriented edge entities which are concatenated together to form this path."
 
-#:IFC.xml:47449
-msgid "IfcPile"
-msgstr "IfcPile"
+#:IFC.xml:49133
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-msgid "IfcPile_DEFINITION"
-msgstr "Куча - это тонкая древесина, бетон или стальной конструкционный элемент, управляемый, прицеп либо встраиваемые в конце грунта с целью поддержания нагрузки. Куча характеризуется также глубоким фундаментом, где грузы перемещаются на более глубокие подповерхностные слои. Определение xtDef ПРИМЕЧАНИЕ в соответствии со стандартом ISO 6707 1 тонкий конструкционный член, в значительной степени подземный, предназначено для передачи силы S в несущие слои под поверхностью земли. ПРИМЕЧАНИЕ Мелкие основания, которые переносят нагрузки на землю вблизи ее поверхности, представлены [[IfcFooting]]. ИСТОРИЯ Новая сущность в IFC2x2."
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Количество элементов в списке краев."
 
-#:IFC.xml:47450
-msgid "IfcPile_ConstructionType"
-msgstr "Тип конструкции"
+#:IFC.xml:49152
+msgid "IfcFace"
+msgstr "Лицо"
 
-msgid "IfcPile_ConstructionType_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE Material profile association с помощью [[IfcRelAssociatesMaterial]] добавлено. Атрибут ConstructionType не должен использоваться всякий раз, когда его информация может быть предоставлена с помощью набора материалов профиля, либо ассоциируется с [[IfcPile]] объектом, или, если присутствует, с соответствующим экземпляром [[IfcPileType]] ."
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
 
-#:IFC.xml:47455
-msgid "IfcPile_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:27097
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-msgid "IfcPile_PredefinedType_DEFINITION"
-msgstr "Предопределенный общий тип кучи в соответствии с функцией. .change ifc2x4 IFC4 CHANGE Атрибут сделан необязательно. Информация о типе может быть предоставлена [[IfcRelDefinesByType]] и [[IfcPileType]] ."
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:47462
-msgid "IfcPileConstructionEnum"
-msgstr "IfcPileConstructionEnum"
+#:IFC.xml:49155
+msgid "IfcFace_Bounds"
+msgstr "Границы"
 
-msgid "IfcPileConstructionEnum_DEFINITION"
-msgstr "Вычисление, определяющее тип конструкции для кусочков, в основном, основано на том, как используются и изготовляются кучи. Некоторые материалы смешиваются, так как это влияет на способ использования кубиков. ИСТОРИЯ Новый тип в IFC2x2. Продукция CAST IN PLACE Пилы и пироги, которые раскопаны и засыпаны на месте. COMPOSITE ils, которые представляют собой смесь компонентов, такие как стальной наружный корпус, который втягивается в землю с литой на месте бетонного стержня. Пилы PRECAST CONCRETE - это полные бетоносмесителя возможно с некоторыми стальными или другими приспособлениями . PREFAB готовые свалки из стали полностью изготовлены из стали. В него также войдут стальные листовые сварочки, в которых они не являются частью другого строительного элемента. ПОЛЬЗОВАТЕЛЬ Особые виды кубиковой конструкции, отвечающие специфическим требованиям местных производителей."
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Boundaries of the face."
 
-#:IFC.xml:47463
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE"
-msgstr "СОЗДАТЬ В МЕСТЕ"
+#:IFC.xml:49167
+msgid "IfcFaceBound"
+msgstr "Лифтовая граница"
 
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE_DEFINITION"
-msgstr "Пилы и пироги, которые раскопаны и засыпаны на месте."
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face bound is a loop which is intended to be used for bounding a face. NOTE Entity adapted from face bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
 
-#:IFC.xml:47464
-msgid "IfcPileConstructionEnum_COMPOSITE"
-msgstr "СОСТАВИТЬ"
+#:IFC.xml:49175
+msgid "IfcFaceBound_Bound"
+msgstr "Привязка"
 
-msgid "IfcPileConstructionEnum_COMPOSITE_DEFINITION"
-msgstr "ils, которые представляют собой смесь компонентов, такие как стальной наружный корпус, который втягивается в землю с литой на месте бетонного стержня."
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "The loop which will be used as a face boundary."
 
-#:IFC.xml:47465
-msgid "IfcPileConstructionEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:49168
+msgid "IfcFaceBound_Orientation"
+msgstr "Направление"
 
-msgid "IfcPileConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип конструкции кучи не определен."
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Это показало, что ТРЕЙД или не ЛЕГЕТ цикл имеет то же значение, когда используется для привязки лица к первому определению. Если смысл FALSE, то ощущения всех его концов ориентируются на края неявно перевернуты при использовании в лицо."
 
-#:IFC.xml:47466
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE"
-msgstr "ПОДКРЕТНЫЙ ПРОЦЕСС"
+#:IFC.xml:49187
+msgid "IfcFaceOuterBound"
+msgstr "Физическая граница"
 
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE_DEFINITION"
-msgstr "Пилоты, полностью из бетона из бетона возможно с некоторыми стальными или другими элементами ."
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carries the additional semantics of defining an outer boundary on the face. No more than one boundary of a face shall be of this type. NOTE Entity adapted from face outer bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
 
-#:IFC.xml:47467
-msgid "IfcPileConstructionEnum_PREFAB_STEEL"
-msgstr "ПРЕФАБ СТАЛЬ"
+#:IFC.xml:49190
+msgid "IfcFaceSurface"
+msgstr "Ледяная поверхность"
 
-msgid "IfcPileConstructionEnum_PREFAB_STEEL_DEFINITION"
-msgstr "Сборные кувшины, изготовленные полностью из стали, также будут включать в себя стальные листовые кувшины, где они не являются частью другого строительного элемента."
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "The [[IfcFaceSurface]] defines the underlying geometry of the associated surface to the face. NOTE The topology is used to trim the geometry of the surface. There is no need to geometrically trim the surface to match the topology. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face surface is a subtype of face in which the geometry is defined by an associated surface. The portion of the surface used by the face shall be embeddable in the plane as an open disk, possibly with holes. However, the union of the face with the edges and vertices of its bounding loops need not be embeddable in the plane. It may, for example, cover an entire sphere or torus. As both a face and a geometric surface have defined normal directions, a BOOLEAN flag the orientation attribute is used to indicate whether the surface normal agrees with TRUE or is opposed to FALSE the face normal direction. The geometry associated with any component of the loops of the face shall be consistent with the surface geometry, in the sense that the domains of all the vertex points and edge curves are contained in the face geometry surface. A surface may be referenced by more than one face surface. NOTE Entity adapted from face surface defined in ISO 10303 42. HISTORY New entity in IFC2x .spec head Informal Propositions 1. The domain of the face surface is formally defined to be the domain of its face geometry as trimmed by the loops, this domain does not include the bounding loops. 2. A face surface has non zero finite extent. 3. A face surface is a manifold. 4. A face surface is arcwise connected. 5. A face surface has surface genus 0. 6. The loops are not part of the face domain. 7. Loop geometry shall be consistent with face geometry. This implies that any edge curves or vertex points used in defining the loops bounding the face surface shall lie on the face geometry. 8. The loops of the face shall not intersect."
 
-#:IFC.xml:47468
-msgid "IfcPileConstructionEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:13193
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Лицевой поверхности"
 
-msgid "IfcPileConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "Особые виды кубических конструкций, которые отвечают определенным местным требованиям."
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF FaceBounds."
 
-#:IFC.xml:47470
-msgid "IfcPileType"
-msgstr "Тип IfcPileType"
+#:IFC.xml:49191
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-msgid "IfcPileType_DEFINITION"
-msgstr "Тип строительного элемента [[IfcPileType]] определяет общую информацию для вхождения кучков. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Он используется для определения спецификации типа кучи, указывающей конкретную информацию о продукте, которая является общей для всех вхождений этого типа товара. [[IfcPileType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcPileType]] представлены экземплярами [[IfcPile]] . См. документацию [[IfcPile]] для поддерживаемых наборов, материалов и композиции."
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Этот флаг указывает, согласен ли смысл поверхности с TRUE , или выступает против ПОЖАЛУЙСТВ , чувства топологической нормальной к лицу."
 
-#:IFC.xml:47471
-msgid "IfcPileType_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:49199
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-msgid "IfcPileType_PredefinedType_DEFINITION"
-msgstr "Подтип кучи."
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A loop is a topological entity constructed from a single vertex, or by stringing together connected oriented edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0 dimensional loop is a single point. The domain of a 1 dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning ending point is arbitrary. The domain of the loop includes its bounds, an 0 Ξ . A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so M and the graph genus G l may be determined by the graph traversal algorithm. Since M 1, the Euler equation 1 reduces in this case to Image .. .. .. .. figures ifcloop math1.gif where V and E l are the number of unique vertices and oriented edges in the loop and G l is the genus of the loop. NOTE Entity adapted from loop defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. A loop has a finite extent. 2. A loop describes a closed topological curve with coincident start and end vertices."
 
-#:IFC.xml:47478
-msgid "IfcPileTypeEnum"
-msgstr "IfcPileTypeEnum"
+#:IFC.xml:49202
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-msgid "IfcPileTypeEnum_DEFINITION"
-msgstr "Добавлен номер типа кучи. Добавлен новый тип в IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Items BORED, DRIVEN, JETGROUTING . ВНИМАНИЕ: ВНИМАНИЕ: ВНИМАНИЕ: ВНИМАНИЕ: ВНИМАНИЕ: ВНИМАНИЕ! JETGROUTING Куча впрыска, как конструкция. COHESION A cohesion pile. FRICTION A friction pile. SUPPORT A support pile. USERDEFINED Тип функции кучи определен пользователем."
+#:IFC.xml:49210
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-#:IFC.xml:47496
-msgid "IfcPileTypeEnum_BORED"
-msgstr "БОЛЬШЕ"
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. An open shell shall have at least one face. A given face may exist in more than one open shell. The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. NOTE Entity adapted from open shell defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the face bounds of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied."
 
-msgid "IfcPileTypeEnum_BORED_DEFINITION"
-msgstr "Боковая куча."
+#:IFC.xml:49214
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedEdge"
 
-#:IFC.xml:47497
-msgid "IfcPileTypeEnum_COHESION"
-msgstr "КОХЕСОН"
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
 
-msgid "IfcPileTypeEnum_COHESION_DEFINITION"
-msgstr "Кусочек сплошности."
+#:IFC.xml:49099
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Элемент кромки"
 
-#:IFC.xml:47498
-msgid "IfcPileTypeEnum_DRIVEN"
-msgstr "ВОДИТЬ"
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Edge entity used to construct this oriented edge."
 
-msgid "IfcPileTypeEnum_DRIVEN_DEFINITION"
-msgstr "Измельченная, вибрационная или иным образом управляемая кучами."
+#:IFC.xml:49215
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF кромка Ifcdge"
 
-#:IFC.xml:47499
-msgid "IfcPileTypeEnum_FRICTION"
-msgstr "ФРИКЦИЯ"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-msgid "IfcPileTypeEnum_FRICTION_DEFINITION"
-msgstr "Грядка с трением."
+#:IFC.xml:49219
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdgeStart"
 
-#:IFC.xml:47500
-msgid "IfcPileTypeEnum_JETGROUTING"
-msgstr "JETGROUTING"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-msgid "IfcPileTypeEnum_JETGROUTING_DEFINITION"
-msgstr "Впрыскивание кучи, как конструкция."
+#:IFC.xml:49223
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Направление"
 
-#:IFC.xml:47501
-msgid "IfcPileTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, If TRUE the topological orientation as used coincide with the orientation from start vertex to end vertex of the edge element."
 
-msgid "IfcPileTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип функции кучи не определен."
+#:IFC.xml:49242
+msgid "IfcPath"
+msgstr "IfcPath"
 
-#:IFC.xml:47502
-msgid "IfcPileTypeEnum_SUPPORT"
-msgstr "ПОДДЕРЖКА"
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path TRUE or is the opposite direction FALSE . An individual edge can only be referenced once by an individual path. An edge can be referenced by multiple paths. An edge can exist independently of a path. NOTE Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. A path has dimensionality 1. 2. A path is arcwise connected. 3. The edges of the path do not intersect except at common vertices. 4. A path has a finite, non zero extent."
 
-msgid "IfcPileTypeEnum_SUPPORT_DEFINITION"
-msgstr "Поддержка кучи."
+#:IFC.xml:49230
+msgid "IfcPath_EdgeList"
+msgstr "Список EdgeList"
 
-#:IFC.xml:47503
-msgid "IfcPileTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Список ориентационных краев, объединенных друг с другом, для формирования этого пути."
 
-msgid "IfcPileTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип функции кучи определяется пользователем."
+#:IFC.xml:49245
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-#:IFC.xml:47504
-msgid "IfcReinforcementDefinitionProperties"
-msgstr "Свойства IfcReinforcementDefinitionName"
+#:IFC.xml:49253
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-msgid "IfcReinforcementDefinitionProperties_DEFINITION"
-msgstr "[[IfcReinforcementDefinitionProperties]] определяет свойства перекрестного сечения армирования, включенного в железобетонные элементы конструкции. Определение набора свойств может быть использовано как в сочетании с insitu, так и в прецизионных структурах. Этот подтип [[IfcPropertySetDefinition]] используется для определения арматурных свойств на ранних этапах проектирования, таких как определение требования или проектирование схемы. На последующих этапах проектирования используются явные экземпляры подтипов [[IfcReinforcingElement]]. Предполагаемое использование может быть указано с использованием значения атрибута DefinitionType в качестве рекомендуемых обозначения являются требованием области подкрепления или требованием конфигурации Reinforcement . Другие значения могут быть использованы в соответствии с местными стандартами. Только одно определение этого вида свойств используется для каждого конкретного строительного элемента в каждом предполагаемом использовании, указанном значением атрибута DefinitionType. Затем этот набор определяет список свойств поперечных сечений в дискретном числе продольных сечений как экземпляров [[IfcSectionReinforcementProperties]] по одному для каждой структурной арматуры роли , которая в свою очередь имеет поперечное свойство секции, определяемое как профиль и ряд арматурных свойств, по одному для каждого типа марки стали. Новая сущность в IFC2x2 .change ifc2x4 IFC4 CHANGE изменена с [[IfcPropertySetDefinition]] на [[IfcPreDefinedPropertySet]]"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
 
-#:IFC.xml:31759
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions"
-msgstr "ПодкрепленияОпределенияРазделов"
+#:IFC.xml:11782
+msgid "IfcPolyLoop_Polygon"
+msgstr "Полигон"
 
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions_DEFINITION"
-msgstr "Список усиленных свойств секции, прикрепленных к усилению определения свойств."
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Список точек, определяющих цикл. В списке нет повторяющихся точек."
 
-#:IFC.xml:47505
-msgid "IfcReinforcementDefinitionProperties_DefinitionType"
-msgstr "Тип определения"
+#:IFC.xml:49256
+msgid "IfcShell"
+msgstr "IfcShell"
 
-msgid "IfcReinforcementDefinitionProperties_DefinitionType_DEFINITION"
-msgstr "Описание типа применяется к усилению свойств определения."
+#:IFC.xml:49257
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-#:IFC.xml:47512
-msgid "IfcReinforcingBar"
-msgstr "Подкрепление"
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A subedge is an edge whose domain is a connected portion of the domain of an existing edge. The topological constraints on a subedge are the same as those on an edge. NOTE Entity adapted from subedge defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The domain of the subedge is formally defined to be the domain of the parent edge, as trimmed by the subedge start vertex and subedge end vertex. 2. The start vertex and end vertex shall be within the union of the domains of the vertices of the parent edge and the domain of the parent edge ."
 
-msgid "IfcReinforcingBar_DEFINITION"
-msgstr "Армирующая шина обычно изготовлена из стали с произведенными деформациями поверхности и используется в бетонной и каменной конструкциях для обеспечения дополнительной прочности. Один экземпляр этого класса может представлять один или несколько реальных баров, например ряд баров. HISTORY Новая сущность в IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Все атрибуты теперь необязательны. Несколько атрибутов являются устаревшими их информации, предоставляемой [[IfcReinforcingBarType]]. Bartribute BarRole переименован в PredefinedType . .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . Карта представления изображения тела должна содержать представление типа AdvancedSweptSolid, который содержит [[IfcSweptDiskSolid]] включая подтип [[IfcSweptDiskSolidPolygonal]] ."
+#:IFC.xml:49111
+msgid "IfcSubedge_ParentEdge"
+msgstr "Родительский край"
 
-#:IFC.xml:47513
-msgid "IfcReinforcingBar_BarLength"
-msgstr "Длина барла"
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "The Edge, or Subedge, which contains the Subedge."
 
-msgid "IfcReinforcingBar_BarLength_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE Атрибут устарел. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingBarType]]."
+#:IFC.xml:49260
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-#:IFC.xml:47518
-msgid "IfcReinforcingBar_BarSurface"
-msgstr "Барная поверхность"
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 The topological representation item is the supertype for all the topological representation items in the geometry resource. NOTE Entity adapted from topological representation item defined in ISO 10303 42. HISTORY New entity in IFC1.5"
 
-msgid "IfcReinforcingBar_BarSurface_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingBarType]]."
+#:IFC.xml:49263
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-#:IFC.xml:47523
-msgid "IfcReinforcingBar_CrossSectionArea"
-msgstr "Кросссечение"
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex is the topological construct corresponding to a point. It has dimensionality 0 and extent 0. The domain of a vertex, if present, is a point in m dimensional real space R M this is represented by the vertex point subtype. NOTE Entity adapted from vertex defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The vertex has dimensionality 0. This is a fundamental property of the vertex. 2. The extent of a vertex is defined to be zero."
 
-msgid "IfcReinforcingBar_CrossSectionArea_DEFINITION"
-msgstr "Область эффективного поперечного сечения арматуры или группы бар."
+#:IFC.xml:49278
+msgid "IfcVertexLoop"
+msgstr "IfcVertexLoop"
 
-#:IFC.xml:47528
-msgid "IfcReinforcingBar_NominalDiameter"
-msgstr "NominalDiameter"
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex loop is a loop of zero genus consisting of a single vertex. A vertex can exist independently of a vertex loop. The topological data shall satisfy the following constraint Image .. .. .. .. figures ifcvertexloop math1.gif NOTE Entity adapted from vertex loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. A vertex loop has zero extent and dimensionality. 2. The vertex loop has genus 0."
 
-msgid "IfcReinforcingBar_NominalDiameter_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingBarType]]."
+#:IFC.xml:49266
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "LoopVertex"
 
-#:IFC.xml:47533
-msgid "IfcReinforcingBar_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "Вершина, которая определяет весь цикл."
 
-msgid "IfcReinforcingBar_PredefinedType_DEFINITION"
-msgstr "Роль, предназначение или использование шины, т.е. вид нагрузок и стрессов, предназначенный для перевозки. hange ifc2x4 IFC4 CHANGE Атрибут переименован из BarRole в PredefinedType и сделан необязательным. Тип изменен с [[IfcReinforcingBarRoleEnum]] без изменений в диапазоне элементов перечисления."
+#:IFC.xml:49281
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-#:IFC.xml:47560
-msgid "IfcReinforcingBarType"
-msgstr "Тип Подкрепления"
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Определение в соответствии с ISO CD 10303 42 1992 A vertex является вершиной, которая имеет свою геометрию, определенную в качестве точки. ПРИМЕЧАНИЕ Сущность, адаптированная из вершины точки, определенной в ISO 10303 42. HISTORY New entity in IFC2x .spec Head Informal Propositions 1. Официально домен вершины определяется как домен вершины."
 
-msgid "IfcReinforcingBarType_DEFINITION"
-msgstr "Тип подкрепляющего элемента [[IfcReinforcingBarType]] определяет общую информацию для вхождения армирующих стержней. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Используется для определения спецификации типа арматуры, указывающей конкретную информацию о товаре, которая является общей для всех вхождений этого типа товара. [[IfcReinforcingBarType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcReinforcingBarType]] представлены экземплярами [[IfcReinforcingBar]] . ИСТОРИЯ Новая сущность в IFC4."
+#:IFC.xml:12753
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "Геометрия текста"
 
-#:IFC.xml:47561
-msgid "IfcReinforcingBarType_BarLength"
-msgstr "Длина барла"
-
-msgid "IfcReinforcingBarType_BarLength_DEFINITION"
-msgstr "Общая длина бара подкрепления. Общая длина изгибов рассчитывается в соответствии с местными стандартами с корректировками изгиба."
-
-#:IFC.xml:47566
-msgid "IfcReinforcingBarType_BarSurface"
-msgstr "Барная поверхность"
-
-msgid "IfcReinforcingBarType_BarSurface_DEFINITION"
-msgstr "Индикатор того, является ли поверхность шины прозрачной или текстурой."
-
-#:IFC.xml:47571
-msgid "IfcReinforcingBarType_BendingParameters"
-msgstr "Параметры бендинга"
-
-msgid "IfcReinforcingBarType_BendingParameters_DEFINITION"
-msgstr "Параметры изгиба фигуры. Их значение определяется по коду фигуры и соответствующему стандарту."
-
-#:IFC.xml:47576
-msgid "IfcReinforcingBarType_BendingShapeCode"
-msgstr "BendingShapeCode"
-
-msgid "IfcReinforcingBarType_BendingShapeCode_DEFINITION"
-msgstr "Код формы по стандарту типа ACI 315, ISO 3766, или аналогичный стандарт. Предполагается, что на протяжении всего проекта используется единый стандарт для определения гибкости шины и что на данный стандарт ссылается объект [[IfcProject]] через механизм [[IfcDocumentReference]]."
-
-#:IFC.xml:47581
-msgid "IfcReinforcingBarType_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "IfcReinforcingBarType_CrossSectionArea_DEFINITION"
-msgstr "Область эффективного перекрестного сечения арматуры."
-
-#:IFC.xml:47586
-msgid "IfcReinforcingBarType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcReinforcingBarType_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, определяющий размер поперечного сечения арматуры."
-
-#:IFC.xml:47591
-msgid "IfcReinforcingBarType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingBarType_PredefinedType_DEFINITION"
-msgstr "Подтип арматуры"
-
-#:IFC.xml:47598
-msgid "IfcReinforcingBarTypeEnum"
-msgstr "IfcReinforcingBarTypeEnum"
-
-msgid "IfcReinforcingBarTypeEnum_DEFINITION"
-msgstr "Перечисление, определяющее стандартные типы для роли, назначения или использования бара, т.е. ИСТОРИЯ ИСПОЛЬЗОВАНИЯ ИСТОРИЯ Нового типа в IFC2x2 . hange ifc2x4 IFC4 CHANGE Item ANCHORING добавлен. Цитация, переименованная в IFC4 из [[IfcReinforcingBarRoleEnum]], без изменения диапазона элементов перечисления. Подкрепления для крепления предметов. Подкрепление кромки EDGE Ege. LIGATURE это арматурная лигатура, продольная решетка, которая является основной шиной для арматуры. Подкрепления из пунктирного кольца. Подкрепления из кольца. ТРАНСПОРТНАЯ опора - это срез. Школы для арматуры SPACEBAR A шип в предохранительной системе для позиционирования TendonConduit. ПОЛЬЗОВАТЕЛЬ Тип арматуры определен пользователем: NOTDEFINED Тип арматуры не определен."
-
-#:IFC.xml:47622
-msgid "IfcReinforcingBarTypeEnum_ANCHORING"
-msgstr "ИЗМЕНИТЬ"
-
-msgid "IfcReinforcingBarTypeEnum_ANCHORING_DEFINITION"
-msgstr "Якорное подкрепление."
-
-#:IFC.xml:47623
-msgid "IfcReinforcingBarTypeEnum_EDGE"
-msgstr "Эдж"
-
-msgid "IfcReinforcingBarTypeEnum_EDGE_DEFINITION"
-msgstr "Подкрепление ребра."
-
-#:IFC.xml:47624
-msgid "IfcReinforcingBarTypeEnum_LIGATURE"
-msgstr "ЛИГАТ"
-
-msgid "IfcReinforcingBarTypeEnum_LIGATURE_DEFINITION"
-msgstr "Шкала арматуры (арматура — арматурная лигатура) — связующая лигатура."
-
-#:IFC.xml:47625
-msgid "IfcReinforcingBarTypeEnum_MAIN"
-msgstr "МАРКА"
-
-msgid "IfcReinforcingBarTypeEnum_MAIN_DEFINITION"
-msgstr "Шкала арматуры - это главный столб."
-
-#:IFC.xml:47626
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип подкрепления не определен."
-
-#:IFC.xml:47627
-msgid "IfcReinforcingBarTypeEnum_PUNCHING"
-msgstr "ЗАЩИТА"
-
-msgid "IfcReinforcingBarTypeEnum_PUNCHING_DEFINITION"
-msgstr "Брошенное подкрепление."
-
-#:IFC.xml:47628
-msgid "IfcReinforcingBarTypeEnum_RING"
-msgstr "Кольцо"
-
-msgid "IfcReinforcingBarTypeEnum_RING_DEFINITION"
-msgstr "Подкрепление кольца."
-
-#:IFC.xml:47629
-msgid "IfcReinforcingBarTypeEnum_SHEAR"
-msgstr "ТЫЛЬ"
-
-msgid "IfcReinforcingBarTypeEnum_SHEAR_DEFINITION"
-msgstr "Шкала арматуры - это отрезок."
-
-#:IFC.xml:47630
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR"
-msgstr "СПАСИБО"
-
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR_DEFINITION"
-msgstr "Усиление в системе пре-стресса для позиционирования TendonConduit."
-
-#:IFC.xml:47631
-msgid "IfcReinforcingBarTypeEnum_STUD"
-msgstr "STUD"
-
-msgid "IfcReinforcingBarTypeEnum_STUD_DEFINITION"
-msgstr "Шкала арматуры – это шарм."
-
-#:IFC.xml:47632
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип подкрепления определен пользователем."
-
-#:IFC.xml:47633
-msgid "IfcReinforcingElement"
-msgstr "Элемент Подкрепление"
-
-msgid "IfcReinforcingElement_DEFINITION"
-msgstr "Укрепляющий элемент представляет полосы, провода, пряжи, сетки, сухожилия, и другие компоненты встроены в бетонные таким образом, что арматура и бетон действуют вместе в сопротивлении сил. .extDef Определение в соответствии с ISO 6707 1 стержни , шины , ткани, волокна, Добавлены провода и кабели для придания дополнительной прочности или опоры материалу или компоненту. Один или несколько экземпляров подтипов [[IfcReinforcingElement]] всегда должны сопровождаться определяющим экземпляром соответствующего подтипа [[IfcReinforcingElementType]] . Объект типа содержит в себе форму и материальную информацию, HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Attribute SteelGrade устарел."
-
-#:IFC.xml:47634
-msgid "IfcReinforcingElement_SteelGrade"
-msgstr "Сталеград"
-
-msgid "IfcReinforcingElement_SteelGrade_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут устарел. Вместо этого используйте связь материала на [[IfcReinforcingElementType]]."
-
-#:IFC.xml:47641
-msgid "IfcReinforcingElementType"
-msgstr "IfcReinforcingElementType"
-
-msgid "IfcReinforcingElementType_DEFINITION"
-msgstr "Тип компонента элемента [[IfcReinforcingElementType]] определяет общую информацию для вхождения подкрепляющих элементов. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Используется для определения спецификации типа подкрепляющих элементов, указывающей конкретную информацию о продукте, которая является общей для всех вхождений этого типа товара. [[IfcReinforcingElementType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcReinforcingElementType]] представлены экземплярами [[IfcReinforcingElement]] . HISTORY New entity in IFC2x2 .use head Material Use Definition An associated material denotes the steel grade, preferrably using material classification."
-
-#:IFC.xml:47644
-msgid "IfcReinforcingMesh"
-msgstr "IfcReinforcingMesh"
-
-msgid "IfcReinforcingMesh_DEFINITION"
-msgstr "Укрепляющая сетка представляет собой серию продольных и поперечных проводов или решёток различных махов, устроенные под прямыми углами друг к другу и сваренные во всех точках пересечения, обычно используемые для укрепления бетонных слябов. Он также известен как ткань сварных проводов. ИСТОРИЯ НОВОЙ сущности в IFC2x2 .change ifc2x4 IFC4 CHANGE Теперь все атрибуты необязательны. Несколько атрибутов устарели, их информация теперь предоставляется [[IfcReinforcingMeshType]] . Атрибут PredefinedType добавлен. .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . Карта представления отображенного контура представления должна содержать представление типа Curve3D, который содержит [[IfcPolyline]] . Карта представления изображения тела должна содержать представление типа AdvancedSweptSolid, который содержит несколько [[IfcSweptDiskSolid]] включая подтип [[IfcSweptDiskSolidPolygonal]] ."
-
-#:IFC.xml:47645
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea"
-msgstr "Промежуточная зона"
-
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47650
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47655
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing"
-msgstr "Продольное пространство"
-
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47660
-msgid "IfcReinforcingMesh_MeshLength"
-msgstr "Длина сетки"
-
-msgid "IfcReinforcingMesh_MeshLength_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE Атрибут устарел. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47665
-msgid "IfcReinforcingMesh_MeshWidth"
-msgstr "Ширина сетки"
-
-msgid "IfcReinforcingMesh_MeshWidth_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE Атрибут устарел. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47670
-msgid "IfcReinforcingMesh_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMesh_PredefinedType_DEFINITION"
-msgstr "Вид сетки."
-
-#:IFC.xml:47675
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47680
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47685
-msgid "IfcReinforcingMesh_TransverseBarSpacing"
-msgstr "Промежуток перекосов"
-
-msgid "IfcReinforcingMesh_TransverseBarSpacing_DEFINITION"
-msgstr "Устарел. .change ifc2x4 IFC4 CHANGE атрибут сделан необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcReinforcingMeshType]]."
-
-#:IFC.xml:47692
-msgid "IfcReinforcingMeshType"
-msgstr "ТипИФК Усиления"
-
-msgid "IfcReinforcingMeshType_DEFINITION"
-msgstr "Тип подкрепляющего элемента [[IfcReinforcingMeshType]] определяет общую информацию для вхождения подкрепляющих сеток. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Используется для определения спецификации типа армирующей ячейки, указывающей конкретную информацию о продукте, которая является общей для всех вхождений этого типа товара. [[IfcReinforcingMeshType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcReinforcingMeshType]] представлены экземплярами [[IfcReinforcingMesh]] . ИСТОРИЯ Новая сущность в IFC4. .use head Geometry Use Definition The [[IfcReinforcingMeshType]] может определить общее геометрическое представление для многих ячеек сетки. Атрибут RepresentationMaps относится к списку [[IfcRepresentationMap]], который позволяет несколько геометрических представлений."
-
-#:IFC.xml:47693
-msgid "IfcReinforcingMeshType_BendingParameters"
-msgstr "Параметры бендинга"
-
-msgid "IfcReinforcingMeshType_BendingParameters_DEFINITION"
-msgstr "Если этот тип сетки является скорее изогнутым, чем плоскостью, то в этом атрибуте задаются параметры изгиба фигуры. Их значение определяется кодом формы изгиба и соответствующим стандартом."
-
-#:IFC.xml:47698
-msgid "IfcReinforcingMeshType_BendingShapeCode"
-msgstr "BendingShapeCode"
-
-msgid "IfcReinforcingMeshType_BendingShapeCode_DEFINITION"
-msgstr "Если этот тип сетки является изогнутым, а не планарным, Этот атрибут содержит код фигуры в стандарте типа ACI 315, ISO 3766, или аналогичный стандарт. Предполагается, что на протяжении всего проекта используется единый стандарт для определения изгиба сетки и что этот стандарт ссылается на него из объекта [[IfcProject]] через механизм [[IfcDocumentReference]]."
-
-#:IFC.xml:47703
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea"
-msgstr "Промежуточная зона"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Эффективная зона поперечного сечения продольных шин сетки."
-
-#:IFC.xml:47708
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр обозначает размер поперечного сечения продольных стержней."
-
-#:IFC.xml:47713
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing"
-msgstr "Продольное пространство"
-
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing_DEFINITION"
-msgstr "Промежуток между продольными столбами. Четное распределение шин предполагается, что другие случаи обрабатываются классификацией или наборами свойств."
-
-#:IFC.xml:47718
-msgid "IfcReinforcingMeshType_MeshLength"
-msgstr "Длина сетки"
-
-msgid "IfcReinforcingMeshType_MeshLength_DEFINITION"
-msgstr "Общая длина ячеек измеряется в продольном направлении."
-
-#:IFC.xml:47723
-msgid "IfcReinforcingMeshType_MeshWidth"
-msgstr "Ширина сетки"
-
-msgid "IfcReinforcingMeshType_MeshWidth_DEFINITION"
-msgstr "Общая ширина сетки измеряется в поперечном направлении."
-
-#:IFC.xml:47728
-msgid "IfcReinforcingMeshType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMeshType_PredefinedType_DEFINITION"
-msgstr "Подтип армирующей сетки."
-
-#:IFC.xml:47733
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Область эффективного перекрестного сечения поперечных шин сетки."
-
-#:IFC.xml:47738
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр обозначает размер поперечного сечения."
-
-#:IFC.xml:47743
-msgid "IfcReinforcingMeshType_TransverseBarSpacing"
-msgstr "Промежуток перекосов"
-
-msgid "IfcReinforcingMeshType_TransverseBarSpacing_DEFINITION"
-msgstr "Расстояние между поперечными столбами. Четное распределение баров предполагается в других случаях обрабатывается классификацией или набором свойств."
-
-#:IFC.xml:47750
-msgid "IfcReinforcingMeshTypeEnum"
-msgstr "IfcReinforcingMeshTypeEnum"
-
-msgid "IfcReinforcingMeshTypeEnum_DEFINITION"
-msgstr "Перечисление, определяющее тип армирующей ячейки. ГИСТОРИЯ Новый тип в IFC4 Элементах ПОЛЬЗОВАНО Определен тип ячеистой сетки."
-
-#:IFC.xml:47756
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сетки не определен."
-
-#:IFC.xml:47757
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип сетки определен пользователем."
-
-#:IFC.xml:47758
-msgid "IfcSurfaceFeature"
-msgstr "Функция IfcSurfaceFeature"
-
-msgid "IfcSurfaceFeature_DEFINITION"
-msgstr "Характеристика поверхности - это модификация на поверхности элемента или на его поверхности. Может повлиять на части поверхности всей поверхности. Объем и масса элемента могут быть увеличены, остаются неизменными или уменьшены на поверхности в зависимости от технологии изготовления. Однако любое увеличение или уменьшение объема по сравнению с общим объемом элемента. Вся часть отношения определяется по объекту агрегирования соотношений, выражение декомпозиции типа элемента в один или несколько дополнительных частей элементов и нулевых или более свойственных элементов. HISTORY New entity in IFC4. Характеристики определения использования Containment Use не должны иметь отношения пространственной изоляции к пространственной структуре, поскольку они зависят от типов элементов без отношений пространственного сдерживания или от появления элемента с собственными отношениями пространственного сдерживания. SELF [[IfcElement]].ContainedInStructure отношения должны быть NIL. Геометрия использует определение геометрическое представление IfcSurfaceFeatureElement дано [[IfcProductDefinitionShape]] , позволяющее множественное геометрическое представление. Локальное размещение IfcSurfaceFeatureElement задано в супертипе [[IfcProduct]] . Она определяется [[IfcLocalPlacement]] , которая определяет локальную систему координат, на которую ссылаются все геометрические представления. В случае особенностей, которые являются частью типа элемента, используется абсолютное размещение в объекте типа подразумеваемой системы координат. В случае признаков, исключающих появление элемента, отношение PlacementRelTo [[IfcLocalPlacement]] указывает на локальное расположение соответствующего элемента. Могут использоваться различные формы представления, в зависимости от характера функции и информационных требований символическое представление, например, двухмерный размыватель тега. Геометрический набор, представляющий геометрические элементы знака. Представления поверхности обработанных частей поверхности проката с помощью [[IfcShellBasedSurfaceModel]] . Грани внутри поверхностной модели могут быть включены в модель B Rep в рамках представления карты типа родительского элемента. Геометрические и негеометрические параметры более высокого уровня могут предоставляться наборами свойств на основании местных соглашений."
-
-#:IFC.xml:29042
-msgid "IfcSurfaceFeature_AdheresToElement"
-msgstr "Адрес для элемента"
-
-msgid "IfcSurfaceFeature_AdheresToElement_DEFINITION"
-msgstr "Ссылка на связь [[IfcRelAdheresToElement]], в которой используется этот [[IfcSurfaceFeature]] для ahere или обработки поверхности [[IfcRelAdheresToElement]] .RelatingElement."
-
-#:IFC.xml:47759
-msgid "IfcSurfaceFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSurfaceFeature_PredefinedType_DEFINITION"
-msgstr "Указывает вид поверхности."
-
-#:IFC.xml:47766
-msgid "IfcSurfaceFeatureTypeEnum"
-msgstr "IfcSurfaceFeatureTypeEnum"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFINITION"
-msgstr "В этом перечислении указывается тип поверхности - новый тип в стандарте IFC4. Пункты MARK A точка, линия, пересечение или другие знаки, применяемые, например, для облегчения регулировки элементов во время сборки. Тег имени TAG A, который позволяет идентифицировать элемент во время производства, доставки и монтажа. Может быть изготовлено различными способами, например, путем печати или нанесения кода отслеживания на элемент или путем прикрепления тега. TREATMENT A Субтрактивная поверхность, например шлифовка или добавка поверхности напр. Покрытие или пропитывание или серию таких методов лечения. ДЕФЕКТ обнаружил дефекты на поверхности элемента, например, коррозионную или эрозионную площадь. Маркировка поверхностей HATCHMARKING определяется закрытой двухмерной формой с заданным наполнением штрихов. Линии 2D LINEMARKING линии, окрашенные на поверхности тротуара, образуют границы, осевые и краевые разметки. Окрашенные или химические линии или символы на поверхности тротуаров дорог или укладка СИМБОЛЬМАРКИРОВАНИЯ, которые передают информацию в виде символов и форм, таких, как стрелки, текст или символы изображения. NONSKIDSURFACING краска или основание для предотвращения скольжения или катания. RUMBLESTRIP Поднял и часто текстурировал полосы на линии центра дороги или на плечах или по полоске, чтобы предупредить водителей вибрацией и шумом. Также полосы Jiggle . ПРИМЕЧАНИЕ Определения PIARC узкие поднятые и зачастую специально текстурированные полосы через или параллельно с движущейся, - воссоздание шума и вибраций с помощью транспортных средств, с тем чтобы предупредить водителей и побудить их замедлять работу по устранению конкретных опасностей. Зубная полоса для передвижных полос ."
-
-#:IFC.xml:47794
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT"
-msgstr "ОТКЛЮЧИТЬ"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT_DEFINITION"
-msgstr "Обнаружен дефект на поверхности элемента, например, коррозионная или эрозионная."
-
-#:IFC.xml:47795
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING"
-msgstr "ХАТШМАРИНГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING_DEFINITION"
-msgstr "маркировка поверхности, определяемая закрытой 2d формой с заданным наполнением штрихов."
-
-#:IFC.xml:47796
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING"
-msgstr "ЛИНИЗАЦИЯ"
-
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING_DEFINITION"
-msgstr "Линии 2D, нарисованные на тротуарах, образуют границы, осевые и краевые обозначения."
-
-#:IFC.xml:47797
-msgid "IfcSurfaceFeatureTypeEnum_MARK"
-msgstr "МАРК"
-
-msgid "IfcSurfaceFeatureTypeEnum_MARK_DEFINITION"
-msgstr "Точка, линия, пересечение или другая маркировка, применяемые, например, для облегчения регулировки элементов во время сборки."
-
-#:IFC.xml:47798
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING"
-msgstr "НЕОКРУЖАЮЩЕЕ ПРЕДЛОЖЕНИЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING_DEFINITION"
-msgstr "Окраска или наплавка, чтобы предотвратить скольжение или укрытие."
-
-#:IFC.xml:47799
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный тип свойства поверхности."
-
-#:IFC.xml:47800
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING"
-msgstr "РАСХОДЯЩЕЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING_DEFINITION"
-msgstr "Закрашенные или химические линии или символы на поверхности тротуаров дорога или укладка"
-
-#:IFC.xml:47801
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP"
-msgstr "RUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP_DEFINITION"
-msgstr "Зачастую это текстурированные полосы на линии центра дороги или на плече, или через полосы для оповещения водителей вибрацией и шумом. Также Jiggle бары. ПРИМЕЧАНИЕ Определения PIARC узкие поднятые и зачастую специально текстурированные полосы через или параллельно с движущейся, - воссоздание шума и вибраций с помощью транспортных средств, с тем чтобы предупредить водителей и побудить их замедлять работу по устранению конкретных опасностей."
-
-#:IFC.xml:47802
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING"
-msgstr "СИМБОЛМАРИНГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING_DEFINITION"
-msgstr "Маркировка поверхности, передающая информацию в виде символов и форм, таких как стрелки, текст или картинные символы."
-
-#:IFC.xml:47803
-msgid "IfcSurfaceFeatureTypeEnum_TAG"
-msgstr "ТЭГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_TAG_DEFINITION"
-msgstr "Название тег, который позволяет идентифицировать элемент при производстве, поставке и сборке. Может производиться различными способами. , напечатав код отслеживания на элемент или прикрепив тег."
-
-#:IFC.xml:47804
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP_DEFINITION"
-msgstr "Тип слуховой полосы бегущей полосы s ."
-
-#:IFC.xml:47805
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT"
-msgstr "СОЗДАНИЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT_DEFINITION"
-msgstr "Субтрактивная поверхность, например шлифовка или добавка поверхности напр. Покрытие или пропитывание или серию таких методов лечения."
-
-#:IFC.xml:47806
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип свойства поверхности."
-
-#:IFC.xml:47807
-msgid "IfcTendon"
-msgstr "ИфкТендон"
-
-msgid "IfcTendon_DEFINITION"
-msgstr "сухожилие является стальным элементом, таким как проволока, кабель, шина, стержень, или струна используется для погружения давления к бетону, когда элемент натяжен. Определение xtDef ПРИМЕЧАНИЕ в соответствии с ISO 6707 1 стальных брусков или группами брусок, нити или провода дают растяжение напряжение, которое приводит к сжатию в прессованном бетоне или каменке. .extDef ПРИМЕЧАНИЕ чтобы быть эффективным, кабель следует выравниванию палубы и перемещается по вертикали на вершину пирогов и вниз в середине пространства. Поэтому кабельная ось определяется относительно выравнивания палубы. Представление форм должно быть AdvancedSweptSolid геометрия, основанная на SectionedSolidHorizontal description, включая DistanceExpression, CircleProfileDef и AlignmentCurve, ведущая к полилинии, описывающей кабельную директрию. .extDef ПРИМЕЧАНИЕ Что касается модели структурного анализа, то кабель должен быть преобразован в нагрузки, применяемые в каждой точке картезиан, определяющей полилинию. HISTORY Новая сущность в IFC2x2. .change ifc2x4 IFC4 CHANGE Атрибут PredefinedType сделан необязательно. Номинальный диаметр и кросссекционирование сделаны необязательными и устаревшей этой информации теперь могут быть предоставлены [[IfcTendonType]]. Описание коэффициента трения исправлено."
-
-#:IFC.xml:47808
-msgid "IfcTendon_AnchorageSlip"
-msgstr "Скользящий якорь"
-
-msgid "IfcTendon_AnchorageSlip_DEFINITION"
-msgstr "Деформация якоря или проскальзывания сухожилий при освобождении дактилоскопического устройства."
-
-#:IFC.xml:47813
-msgid "IfcTendon_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "IfcTendon_CrossSectionArea_DEFINITION"
-msgstr "Эффективная площадь перекрестного сечения сухожилия. .change ifc2x4 IFC4 ИЗМЕНИТЬ атрибут сделанный необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcTendonType]]."
-
-#:IFC.xml:47818
-msgid "IfcTendon_FrictionCoefficient"
-msgstr "Коэффициент трения"
-
-msgid "IfcTendon_FrictionCoefficient_DEFINITION"
-msgstr "Коэффициент трения между сухожильным и сухожильным листом, в то время как сухожилие отвязывается."
-
-#:IFC.xml:47823
-msgid "IfcTendon_MinCurvatureRadius"
-msgstr "MinCurvatureRadius"
-
-msgid "IfcTendon_MinCurvatureRadius_DEFINITION"
-msgstr "Самый маленький радиус кривизны, рассчитанный на всю эффективную длину сухожилия, где свойства натяжения остаются в силе."
-
-#:IFC.xml:47828
-msgid "IfcTendon_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendon_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр сухожилия, определяющий размер поперечного сечения. hange ifc2x4 IFC4 CHANGE Атрибут сделал необязательным и устаревшим. Вместо этого используйте соответствующий атрибут в [[IfcTendonType]]."
-
-#:IFC.xml:47833
-msgid "IfcTendon_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendon_PredefinedType_DEFINITION"
-msgstr "Предопределенные общие типы для tendon. .change ifc2x4 IFC4 CHANGE Атрибут сделал опциональным."
-
-#:IFC.xml:47838
-msgid "IfcTendon_PreStress"
-msgstr "Предисловие"
-
-msgid "IfcTendon_PreStress_DEFINITION"
-msgstr "Прилагаемая к сухожилию давление."
-
-#:IFC.xml:47843
-msgid "IfcTendon_TensionForce"
-msgstr "Напряженная Сила"
-
-msgid "IfcTendon_TensionForce_DEFINITION"
-msgstr "2.3.2 Максимально допустимая сила натяжения, которая может применяться к сухожилию."
-
-#:IFC.xml:47850
-msgid "IfcTendonAnchor"
-msgstr "IfcTendonAnchor"
-
-msgid "IfcTendonAnchor_DEFINITION"
-msgstr "Якорь сухожилий - это конечное соединение сухожилий для сухожилий в бетоне прецизионного или посттензионного бетона."
-
-#:IFC.xml:47851
-msgid "IfcTendonAnchor_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchor_PredefinedType_DEFINITION"
-msgstr "Вид натяжного якоря."
-
-#:IFC.xml:47858
-msgid "IfcTendonAnchorType"
-msgstr "IfcTendonAnchorType"
-
-msgid "IfcTendonAnchorType_DEFINITION"
-msgstr "Укрепляющий тип элемента [[IfcTendonAnchorType]] определяет общую информацию для вхождения сухожильных якорей. Набор общей информации может включать общие свойства с общим свойством устанавливает общие представления материала общий состав элементов. Он используется для определения тендерных спецификаций типа якоря, указывающих конкретную информацию продукта, которая является общей для всех вхождений этого типа товара. [[IfcTendonAnchorType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcTendonAnchorType]] представлены экземплярами [[IfcTendonAnchor]] . ИСТОРИЯ Новая сущность в IFC4. .use head Material Use Definition A material or material constituent set may be associed. se head Geometry Use Definition The [[IfcTendonAnchorType]] may define the shared geometric representation for many tendon anchor occurrences. Атрибут RepresentationMaps относится к списку [[IfcRepresentationMap]], который позволяет несколько геометрических представлений."
-
-#:IFC.xml:47859
-msgid "IfcTendonAnchorType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchorType_PredefinedType_DEFINITION"
-msgstr "Подтип тендерного якоря."
-
-#:IFC.xml:47866
-msgid "IfcTendonAnchorTypeEnum"
-msgstr "IfcTendonAnchorTypeEnum"
-
-msgid "IfcTendonAnchorTypeEnum_DEFINITION"
-msgstr "ИСТОРИЯ Нового типа в IFC4. КАТЕГОРИЯ Элементов Якорь - промежуточное устройство, которое соединяет две сухожилия. FIXED END Якорь фиксирует конец сухожилия. Якорь используется или может использоваться для предания сухожилию. ПОЛЬЗОВАТЕЛЬ Тип якоря сухожилия определяется пользователем."
-
-#:IFC.xml:47878
-msgid "IfcTendonAnchorTypeEnum_COUPLER"
-msgstr "КУПЛЕР"
-
-msgid "IfcTendonAnchorTypeEnum_COUPLER_DEFINITION"
-msgstr "Якорь – это промежуточное устройство, которое соединяет два сухожила."
-
-#:IFC.xml:47879
-msgid "IfcTendonAnchorTypeEnum_FIXED_END"
-msgstr "ФИКСИРОВАННАЯ КОНЕЦ"
-
-msgid "IfcTendonAnchorTypeEnum_FIXED_END_DEFINITION"
-msgstr "Якорь фиксирует конец сухожилия."
-
-#:IFC.xml:47880
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип якоря сухожилия не определен."
-
-#:IFC.xml:47881
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END"
-msgstr "КОНЕЦ ТЕНЗИИ"
-
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END_DEFINITION"
-msgstr "Якорь используется или может использоваться для предания сухожилию."
-
-#:IFC.xml:47882
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определен тип якоря сухожилия."
-
-#:IFC.xml:47883
-msgid "IfcTendonConduit"
-msgstr "IfcTendonConduit"
-
-msgid "IfcTendonConduit_DEFINITION"
-msgstr "TendonConduit представляет собой компоненты системы канализации сухожилий, встроенной в бетонную структуру."
-
-#:IFC.xml:47884
-msgid "IfcTendonConduit_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduit_PredefinedType_DEFINITION"
-msgstr "Определенный общий тип канала сухожилия."
-
-#:IFC.xml:47891
-msgid "IfcTendonConduitType"
-msgstr "Тип IfcTendonConduitType"
-
-#:IFC.xml:47892
-msgid "IfcTendonConduitType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduitType_PredefinedType_DEFINITION"
-msgstr "Подтип канала сухожилия."
-
-#:IFC.xml:47899
-msgid "IfcTendonConduitTypeEnum"
-msgstr "IfcTendonConduitTypeEnum"
-
-msgid "IfcTendonConduitTypeEnum_DEFINITION"
-msgstr "Спящий или трубопровод связан с толщиной канала в зависимости от канала, либо накладываются на бетонную конструкцию, либо размещаются рядом с ней. КОУПЛЕР А часть, чтобы соединить каналы, расположенные в двух различных участках палубы и связанные с одной и той же сухожилием. GROUTING DUCT Дополнительные небольшие каналы соединены с основным каналом для группировки в случае натяжения столбов, такие как Grout Inlet, Grout outlet и Grout vent. Конкретная часть канала, которая должна быть расширена при выходе на якорь сухожилия, так как нити индивидуально соединяются на якоре. DIABOLO Часть сухожилий канала, связанного с девиатором. ПОЛЬЗОВАТЕЛЬНЫЙ Тип сухожильной трубы определен пользователем, НЕ ИЗМЕНЯЕТСЯ."
-
-#:IFC.xml:47915
-msgid "IfcTendonConduitTypeEnum_COUPLER"
-msgstr "КУПЛЕР"
-
-msgid "IfcTendonConduitTypeEnum_COUPLER_DEFINITION"
-msgstr "Часть для соединения проводников, расположенных в двух различных участках палубы и связанных с одной и той же сухожилием."
-
-#:IFC.xml:47916
-msgid "IfcTendonConduitTypeEnum_DIABOLO"
-msgstr "DIABOLO"
-
-msgid "IfcTendonConduitTypeEnum_DIABOLO_DEFINITION"
-msgstr "Часть сухожильных трубопроводов, связанных с девиатором."
-
-#:IFC.xml:47917
-msgid "IfcTendonConduitTypeEnum_DUCT"
-msgstr "ДУХА"
-
-msgid "IfcTendonConduitTypeEnum_DUCT_DEFINITION"
-msgstr "Спящий или трубопровод связан с толщиной канала в зависимости от канала, либо накладываются на бетонную конструкцию, либо размещаются рядом с ней."
-
-#:IFC.xml:47918
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT"
-msgstr "ГРУППА ПОЛУЧЕНИЯ"
-
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT_DEFINITION"
-msgstr "а) дополнительный небольшой канал, подключенный к основному каналу, позволяющий группировать в случае натяжения камня, такие как Grout Inlet, Grout outlet и Grout vent."
-
-#:IFC.xml:47919
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сухожильной трубы не определен."
-
-#:IFC.xml:47920
-msgid "IfcTendonConduitTypeEnum_TRUMPET"
-msgstr "ТРУМПЕТ"
-
-msgid "IfcTendonConduitTypeEnum_TRUMPET_DEFINITION"
-msgstr "Конкретная часть трубопровода, которая должна быть расширена при достижении якоря тензии, поскольку нити соединяются индивидуально на якоре."
-
-#:IFC.xml:47921
-msgid "IfcTendonConduitTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonConduitTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определен пользователем тип сухожилого канала."
-
-#:IFC.xml:47922
-msgid "IfcTendonType"
-msgstr "IfcTendonType"
-
-msgid "IfcTendonType_DEFINITION"
-msgstr "Тип подкрепляющего элемента [[IfcTendonType]] определяет общую информацию для вхождения сухожилий. Набор общей информации может включать общие свойства с общим свойством задает общие представления материала общий состав элементов. Он используется для определения спецификации сухожилий типа с указанием конкретной информации о товаре, которая является общей для всех вхождений этого типа товара. [[IfcTendonType]] может быть объявлено в пределах [[IfcProject]] или [[IfcProjectLibrary]] с помощью [[IfcRelDeclares]] и может быть обменено с типом или без него. События [[IfcTendonType]] представлены экземплярами [[IfcTendon]] . HISTORY New entity in IFC4 .use head Material Use Definition An associated material denotes the steel grade, preferrably by material classification. Набор материалов составляющих материала или набор материалов может быть привязан, если кабель, соединительный раствор или защита от коррозии, а также сухожильный лист описываются вместе ассоциацией материалов. .use head Geometry Use Definition [[IfcTendonType]] может определить общее геометрическое представление для многих встречных явлений. Атрибут RepresentationMaps относится к списку [[IfcRepresentationMap]], который позволяет несколько геометрических представлений."
-
-#:IFC.xml:47923
-msgid "IfcTendonType_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "IfcTendonType_CrossSectionArea_DEFINITION"
-msgstr "Эффективная поперечная зона сечения прессованной части сухожилия."
-
-#:IFC.xml:47928
-msgid "IfcTendonType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendonType_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, определяющий размер поперечного сечения препрессованной части сухожилия."
-
-#:IFC.xml:47933
-msgid "IfcTendonType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonType_PredefinedType_DEFINITION"
-msgstr "Подтип сухожилия."
-
-#:IFC.xml:47938
-msgid "IfcTendonType_SheathDiameter"
-msgstr "Диаметр Шейха"
-
-msgid "IfcTendonType_SheathDiameter_DEFINITION"
-msgstr "Диаметр листового трубка вокруг сухожилия, если имеется один с этим типом сухожилия."
-
-#:IFC.xml:47945
-msgid "IfcTendonTypeEnum"
-msgstr "IfcTendonTypeEnum"
-
-msgid "IfcTendonTypeEnum_DEFINITION"
-msgstr "Цикл определяет типы сухожильных веществ. ГИСТОРИЯ Новый тип в IFC2x2. Пункты БАР настроены как бар. СОВЕРШЕННОЕ сухожитие покрыто. Тщательная лента является линией. МЫ Тщательно проволока. ПОСЛЕДУЕМЫЕ Тип сухожилия определен пользователем, НЕ ИЗМЕНЯЕТСЯ."
-
-#:IFC.xml:47959
-msgid "IfcTendonTypeEnum_BAR"
-msgstr "БАР"
-
-msgid "IfcTendonTypeEnum_BAR_DEFINITION"
-msgstr "Напряжение настроено как бар."
-
-#:IFC.xml:47960
-msgid "IfcTendonTypeEnum_COATED"
-msgstr "СОБЛЮДЕНО"
-
-msgid "IfcTendonTypeEnum_COATED_DEFINITION"
-msgstr "сухожилие покрывается."
-
-#:IFC.xml:47961
-msgid "IfcTendonTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сухожилия не определен."
-
-#:IFC.xml:47962
-msgid "IfcTendonTypeEnum_STRAND"
-msgstr "ИЗМЕНИТЬ"
-
-msgid "IfcTendonTypeEnum_STRAND_DEFINITION"
-msgstr "сухожилие является строкой."
-
-#:IFC.xml:47963
-msgid "IfcTendonTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип сухожилия определяется пользователем."
-
-#:IFC.xml:47964
-msgid "IfcTendonTypeEnum_WIRE"
-msgstr "СЛОЖНО"
-
-msgid "IfcTendonTypeEnum_WIRE_DEFINITION"
-msgstr "Тенденция – это проволока."
-
-#:IFC.xml:47965
-msgid "IfcVoidingFeature"
-msgstr "Функция IfcVoiding"
-
-msgid "IfcVoidingFeature_DEFINITION"
-msgstr "Безграничный элемент - это модификация элемента, уменьшающего его объем. Такая особенность может быть изготовлена по-разному, например, путем резки, сверления, или фрезерование из различных материалов, или путем встраивания в форму литья членов из таких материалов, как бетон. Стандартное использование экземпляров [[IfcVoidingFeature]] является частью экземпляров подтипов элементов [[IfcElementType]] . Вся часть отношения определяется по объекту агрегирования соотношений, выражение декомпозиции типа элемента в один или несколько дополнительных частей элементов и нулевых или более свойственных элементов. HISTORY New entity in IFC4. Функции руководящих положений по вопросам использования систем обеспечения безопасности не должны иметь отношения к пространственной структуре, поскольку они зависят от типов элементов без отношений пространственного сдерживания или от появления элемента с собственными отношениями пространственного сдерживания. SELF [[IfcElement]].ContainedInStructure отношения должны быть NIL."
-
-#:IFC.xml:47966
-msgid "IfcVoidingFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVoidingFeature_PredefinedType_DEFINITION"
-msgstr "Определяет свойство, касающееся его формы и конфигурации относительно пустотного элемента."
-
-#:IFC.xml:47973
-msgid "IfcVoidingFeatureTypeEnum"
-msgstr "IfcVoidingFeatureTypeEnum"
-
-msgid "IfcVoidingFeatureTypeEnum_DEFINITION"
-msgstr "Данное перечисление квалифицируется как недействительный элемент относительно формы и конфигурации недействительного элемента. Элементы CUTOUT Внутренняя выреза, создающая отверстие или внешнюю вырезку, создающую перерыв в произвольной форме. Край между режущими плоскостями может быть перерезан или нижним, т.е. округлен. NOTCH Внешняя выреза с профилем преимущественно прямоугольной резки. Края между плоскостями резки может быть перерезанной или закругленной. HOLE циркулярная отверстия или отверстия в резьбе, как правило, но не обязательно меньшего размера, чем то, что будет считаться вырезанной. MITER A skewed plane end cut, removing material across the whole profile of the voided element. ПОКАЗАТЕЛЬНОЕ ИЗМЕНИТЬ Лесной раскрой, удаляющий материал только через часть профиля недействительного элемента. Изменение формы EDGE по краю элемента с длиной края в качестве преобладающего измерения свойства, и имеют размеры профиля, которые, как правило, значительно меньше длины края. Может быть краем шамбы, дифференцированным от камеры по соотношению размеров и, таким образом, обычно производится по-разному , закругленный край элемента края выпуклых , или края филе функции сжатого края . ПОЛЬЗОВАТЕЛЬНЫЙ пользовательский тип уклонения функции. ЗАМЕЧАНИЕ неопределённого типа уклонения."
-
-#:IFC.xml:47991
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER"
-msgstr "ЧЕМЛЕР"
-
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER_DEFINITION"
-msgstr "Порезать конечную часть плоскости, удаляя материал только через часть профиля недействительного элемента."
-
-#:IFC.xml:47992
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT"
-msgstr "КУТИТЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT_DEFINITION"
-msgstr "Внутренняя вырезанная поверхность создает отверстие или внешнюю вырезанную поверхность, позволяющую утолить произвольную фигуру. Край между режущими плоскостями может быть перерезан или нижним, т.е. округлен."
-
-#:IFC.xml:47993
-msgid "IfcVoidingFeatureTypeEnum_EDGE"
-msgstr "Эдж"
-
-msgid "IfcVoidingFeatureTypeEnum_EDGE_DEFINITION"
-msgstr "Изменение формы вдоль края элемента с длиной края в качестве доминирующего измерения свойства, и имеют размеры профиля, которые, как правило, значительно меньше длины края. Может быть краем шамбы, дифференцированным от камеры по соотношению размеров и, таким образом, обычно производится по-разному , закругленный край элемента края выпуклых , или края филе функции сжатого края ."
-
-#:IFC.xml:47994
-msgid "IfcVoidingFeatureTypeEnum_HOLE"
-msgstr "ХОЛЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_HOLE_DEFINITION"
-msgstr "Циркуляр или прорезь отверстия, как правило, но не обязательно меньшие размеры, чем то, что будет считаться вырезанной."
-
-#:IFC.xml:47995
-msgid "IfcVoidingFeatureTypeEnum_MITER"
-msgstr "MITER"
-
-msgid "IfcVoidingFeatureTypeEnum_MITER_DEFINITION"
-msgstr "Порезать конечную часть плоскости, удаляя материал по всему профилю пустотного элемента."
-
-#:IFC.xml:47996
-msgid "IfcVoidingFeatureTypeEnum_NOTCH"
-msgstr "ЗАМЕЧАНИЕ"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTCH_DEFINITION"
-msgstr "Внешнее вырезывание с помощью профиля преимущественно прямоугольной резки. Края между плоскостями резки могут быть перерезаны или закруглены."
-
-#:IFC.xml:47997
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределённый тип неопознанного свойства."
-
-#:IFC.xml:47998
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип функции voiding"
-
-#:IFC.xml:48014
-msgid "Pset_ConcreteElementGeneral"
-msgstr "Pset ConcreteElementGeneral"
-
-msgid "Pset_ConcreteElementGeneral_DEFINITION"
-msgstr "Общие свойства, общие для различных типов бетонных элементов, включая железобетонные элементы. Набор свойств может использоваться рядом подтипов IfcBuildingElement, указано, что такой элемент спроектирован или изготовлен с использованием бетонного метода конструкции."
-
-#:IFC.xml:48020
-msgid "ConcreteCover"
-msgstr "ConcreteCover"
-
-msgid "ConcreteCover_DEFINITION"
-msgstr "Защитное бетонное покрытие в арматурных решётках согласно местным нормам строительства."
-
-#:IFC.xml:48025
-msgid "ConcreteCoverAtLinks"
-msgstr "Атрибуты Покрытия ConcreteCovers"
-
-msgid "ConcreteCoverAtLinks_DEFINITION"
-msgstr "Защитное бетонное покрытие на арматурных соединениях согласно местным правилам строительства."
-
-#:IFC.xml:48030
-msgid "ConcreteCoverAtMainBars"
-msgstr "Главные панели КонкретКувера"
-
-msgid "ConcreteCoverAtMainBars_DEFINITION"
-msgstr "Защитное бетонное покрытие на главных арматурных решётках согласно местным нормам строительства."
-
-#:IFC.xml:48035
-msgid "ConstructionToleranceClass"
-msgstr "Допуск конструирования"
-
-msgid "ConstructionToleranceClass_DEFINITION"
-msgstr "Классификационное обозначение допусков на конструкции участка в соответствии с местными стандартами."
-
-#:IFC.xml:48040
-msgid "DimensionalAccuracyClass"
-msgstr "Размеры точностиКласс"
-
-msgid "DimensionalAccuracyClass_DEFINITION"
-msgstr "Классификационное обозначение требования к точности габаритов в соответствии с местными стандартами."
-
-#:IFC.xml:48045
-msgid "ExposureClass"
-msgstr "Класс экспозиции"
-
-msgid "ExposureClass_DEFINITION"
-msgstr "Классификация воздействия на окружающую среду, обычно указанная в соответствии с конкретным проектным кодом, который применяется в проекте."
-
-#:IFC.xml:48050
-msgid "ReinforcementAreaRatio"
-msgstr "Соотношение Подкрепления"
-
-msgid "ReinforcementAreaRatio_DEFINITION"
-msgstr "Требуемое соотношение эффективной площади арматуры к эффективной площади бетона На любом участке железобетонного конструкционного элемента."
-
-#:IFC.xml:48055
-msgid "ReinforcementStrengthClass"
-msgstr "Класс укрепления подкрепления"
-
-msgid "ReinforcementStrengthClass_DEFINITION"
-msgstr "Классификация арматурной прочности в соответствии с конструкторским кодом, применяемым в проекте. Класс укрепления силы часто сочетает в себе прочность и прочность."
-
-#:IFC.xml:48060
-msgid "ReinforcementVolumeRatio"
-msgstr "Соотношение подкрепления"
-
-msgid "ReinforcementVolumeRatio_DEFINITION"
-msgstr "Требуемое соотношение эффективной массы арматуры к эффективному объему бетона железобетонного конструкционного элемента."
-
-#:IFC.xml:48065
-msgid "StrengthClass"
-msgstr "Сильный Класс"
-
-msgid "StrengthClass_DEFINITION"
-msgstr "Классификация бетонной прочности в соответствии с бетонным проектным кодом, применяемым в проекте."
-
-#:IFC.xml:48070
-msgid "StructuralClass"
-msgstr "StructuralClass"
-
-msgid "StructuralClass_DEFINITION"
-msgstr "Класс конструкции, определенный для бетонной структуры, напр. 1 ."
-
-#:IFC.xml:48076
-msgid "Pset_FootingCommon"
-msgstr "Стоп FootingCommon"
-
-msgid "Pset_FootingCommon_DEFINITION"
-msgstr "Свойства, общие для определения всех вхождений [[IfcFooting]]."
-
-#:IFC.xml:48093
-msgid "Pset_PileCommon"
-msgstr "Прелестная пилетучая"
-
-msgid "Pset_PileCommon_DEFINITION"
-msgstr "Свойства, общие для определения всех вхождений [[IfcPile]]."
-
-#:IFC.xml:48110
-msgid "Pset_PrecastConcreteElementFabrication"
-msgstr "Pset PrecastConcreteElementFabrication"
-
-msgid "Pset_PrecastConcreteElementFabrication_DEFINITION"
-msgstr "Производственные и производственные свойства, общие для различных типов сборных бетонных элементов. Набор применяется к изготовленным деталям. Может использоваться рядом подтипов IfcBuildingElement. Если бетоносмеситель"
-
-#:IFC.xml:48111
-msgid "ActualErectionDate"
-msgstr "ActualErectionDate"
-
-msgid "ActualErectionDate_DEFINITION"
-msgstr "Дата установки."
-
-#:IFC.xml:48116
-msgid "ActualProductionDate"
-msgstr "ActualProductionDate"
-
-msgid "ActualProductionDate_DEFINITION"
-msgstr "Дата производства удаляется из формы ."
-
-#:IFC.xml:48121
-msgid "AsBuiltLocationNumber"
-msgstr "МестоположениеAsBuiltNumber"
-
-msgid "AsBuiltLocationNumber_DEFINITION"
-msgstr "Определяет уникальное местоположение внутри структуры, ячейку, в которую была установлена часть. Если части имеют один и тот же знак предмета, они могут быть взаимосвязаны. Значение известно только после установки."
-
-#:IFC.xml:48126
-msgid "PieceMark"
-msgstr "Метка"
-
-msgid "PieceMark_DEFINITION"
-msgstr "Определяет уникальную деталь для производства и все детали с одинаковым значением штуки идентичны и взаимозаменяемы. The piece mark may be composed of sub parts that have specific locally defined e. . В 1A может обозначаться пучком общего типа 1 и конкретная форма А ."
-
-#:IFC.xml:48131
-msgid "ProductionLotId"
-msgstr "Идентификатор продукта"
-
-msgid "ProductionLotId_DEFINITION"
-msgstr "Производитель имеет идентификатор серийного лота."
-
-#:IFC.xml:48147
-msgid "Pset_PrecastConcreteElementGeneral"
-msgstr "Pset PrecastConcreteElementGeneral"
-
-msgid "Pset_PrecastConcreteElementGeneral_DEFINITION"
-msgstr "Производственные и производственные свойства, общие для различных типов бетонных элементов, которые могут использоваться в ряде подтипов IfcBuildingElement. Если бетонный элемент является стеновой панелью сэндвича, то каждый структурный слой или корпус, представленный [[IfcBuildingElementPart]], может быть прикреплен к отдельному Pset этого типа, если необходимо. Некоторые из свойств применяются только для конкретных типов бетонных элементов."
-
-#:IFC.xml:48148
-msgid "BatterAtEnd"
-msgstr "Конец батареи"
-
-msgid "BatterAtEnd_DEFINITION"
-msgstr "Угол в радианах, Поворот на конечной лицевой стороне штриха вращается из вертикали, чтобы компенсировать вращение лица, которое будет происходить после удаления штриха от его формы, индукционная камера из-за эксцентричного пресса."
-
-#:IFC.xml:48153
-msgid "BatterAtStart"
-msgstr "Начать батарею"
-
-msgid "BatterAtStart_DEFINITION"
-msgstr "Угол в радианах, с помощью которого форма на стартовой стороне штриха поворачивается из вертикали для компенсации вращения лица, которое будет происходить после того, как штрих отрезается от его формы, индукционная камера из-за эксцентричного пресса."
-
-#:IFC.xml:48158
-msgid "CamberAtMidspan"
-msgstr "CamberAtMidspan"
-
-msgid "CamberAtMidspan_DEFINITION"
-msgstr "Прогиб камера, измеряется от средней точки костера до средней точки хорды, соединяющей концы того же лица, как показано на рисунке ниже, делить на исходную номинальную длину прямой лицевой части кузова."
-
-#:IFC.xml:48163
-msgid "CornerChamfer"
-msgstr "База"
-
-msgid "CornerChamfer_DEFINITION"
-msgstr "Камера в углах заданного элемента. Предполагается, что камера одинакова в обоих направлениях."
-
-#:IFC.xml:48168
-msgid "DesignLocationNumber"
-msgstr "Местоположение"
-
-msgid "DesignLocationNumber_DEFINITION"
-msgstr "Определяет уникальное местоположение внутри структуры, ячейку, для которой была разработана деталь."
-
-#:IFC.xml:48173
-msgid "FormStrippingStrength"
-msgstr "Сила FormStrippingstrength"
-
-msgid "FormStrippingStrength_DEFINITION"
-msgstr "Минимальная требуемая прочность на сжатие бетона при полоске формы."
-
-#:IFC.xml:48178
-msgid "HollowCorePlugging"
-msgstr "Плагин HollowCoreging"
-
-msgid "HollowCorePlugging_DEFINITION"
-msgstr "Описательная надпись для того, как обрабатываются концы пустого ядра, они могут быть открыты, закрыты штекером или опечатаны литым бетоном. Значения могут быть такими как Unplugged , Plugged , SealedWithConcrete . Это свойство относится только к половым ядрам ядра."
-
-#:IFC.xml:48183
-msgid "InitialTension"
-msgstr "Напряжение"
-
-msgid "InitialTension_DEFINITION"
-msgstr "Первоначальный стресс сухожилия, это свойство относится только к предсказанным конкретным элементам."
-
-#:IFC.xml:48188
-msgid "LiftingStrength"
-msgstr "Лифтинговая Сила"
-
-msgid "LiftingStrength_DEFINITION"
-msgstr "Минимальная требуемая прочность на сжатие бетона при снятии бетонного элемента."
-
-#:IFC.xml:48193
-msgid "ManufacturingToleranceClass"
-msgstr "- Класс допущения к производству"
-
-msgid "ManufacturingToleranceClass_DEFINITION"
-msgstr "Классификационное обозначение допусков производства в соответствии с местными стандартами."
-
-#:IFC.xml:48198
-msgid "MinimumAllowableSupportLength"
-msgstr "Минимальная длина поддержки"
-
-msgid "MinimumAllowableSupportLength_DEFINITION"
-msgstr "Минимальная допустимая длина опоры."
-
-#:IFC.xml:48208
-msgid "ReleaseStrength"
-msgstr "Сила релиза"
-
-msgid "ReleaseStrength_DEFINITION"
-msgstr "Минимальная требуемая прочность на сжатие бетона при освобождении сухожильного напряжения, что относится только к нажатым бетонным элементам."
-
-#:IFC.xml:48213
-msgid "Shortening"
-msgstr "Сокращение"
-
-msgid "Shortening_DEFINITION"
-msgstr "Отношение расстояния, на котором штука укорочена после отрыва от формы из-за сжатия, вызванного прессованием до его оригинальной номинальной длины."
-
-#:IFC.xml:48218
-msgid "SupportDuringTransportDescription"
-msgstr "Описание Поддержки"
-
-msgid "SupportDuringTransportDescription_DEFINITION"
-msgstr "Текстовое описание того, как поддерживается конкретный элемент во время перевозки."
-
-#:IFC.xml:48223
-msgid "SupportDuringTransportDocReference"
-msgstr "Длительность транспортной документации"
-
-msgid "SupportDuringTransportDocReference_DEFINITION"
-msgstr "Ссылка на внешний документ, определяющий, каким образом поддерживается конкретный элемент во время перевозки."
-
-#:IFC.xml:48228
-msgid "TendonRelaxation"
-msgstr "Тендонрелаксация"
-
-msgid "TendonRelaxation_DEFINITION"
-msgstr "Максимально допустимая релаксация сухожилия, обычно выраженная как 1000 ч."
-
-#:IFC.xml:48233
-msgid "TransportationStrength"
-msgstr "Мощность транспорта"
-
-msgid "TransportationStrength_DEFINITION"
-msgstr "Минимальная требуемая прочность на сжатие бетона, необходимого для транспортировки."
-
-#:IFC.xml:48238
-msgid "Twisting"
-msgstr "Двойной"
-
-msgid "Twisting_DEFINITION"
-msgstr "Угол в радианах, через который поворачивается конечная поверхность предписанного шкура относительно его начального лица, по своей продольной оси, в результате невыравниваемых опор. Эта мера также обозначается углом деформации."
-
-#:IFC.xml:48249
-msgid "Pset_PrecastSlab"
-msgstr "Pset PrecastSlab"
-
-msgid "Pset_PrecastSlab_DEFINITION"
-msgstr "Информация о профиле и компонентах, определяющая порядок нанесения слябовых деталей в сборочном слябе. Значения являются глобальными по умолчанию для слябов в целом, но могут быть переопределены локальными размерами индивидуального com"
-
-#:IFC.xml:48250
-msgid "AngleBetweenComponentAxes"
-msgstr "Апсы \"AngleBetween\""
-
-msgid "AngleBetweenComponentAxes_DEFINITION"
-msgstr "Угол между осями каждой пары компонентов."
-
-#:IFC.xml:48255
-msgid "AngleToFirstAxis"
-msgstr "AngleToFirstAxis"
-
-msgid "AngleToFirstAxis_DEFINITION"
-msgstr "Угол вращения оси первого компонента относительно западного края плиты."
-
-#:IFC.xml:48260
-msgid "DistanceBetweenComponentAxes"
-msgstr "Секиры-компоненты расстояния"
-
-msgid "DistanceBetweenComponentAxes_DEFINITION"
-msgstr "Расстояние между осями компонентов, измеряемое вдоль южного края плиты."
-
-#:IFC.xml:48265
-msgid "EdgeDistanceToFirstAxis"
-msgstr "EdgeDistanceToFirstAxis"
-
-msgid "EdgeDistanceToFirstAxis_DEFINITION"
-msgstr "Расстояние от левого западного края слябов в направлении пролета компонентов до оси первого компонента."
-
-#:IFC.xml:48275
-msgid "NominalToppingThickness"
-msgstr "Толщина номинирования"
-
-msgid "NominalToppingThickness_DEFINITION"
-msgstr "Номинальная толщина вершины."
-
-#:IFC.xml:48280
-msgid "ToppingType"
-msgstr "ToppingType"
-
-msgid "ToppingType_DEFINITION"
-msgstr "Определяет, применяется ли верхний элемент и какого вида. Значения - Полное верхнее верхнее , Мойка Периметра , Ничего"
-
-#:IFC.xml:48291
-msgid "Pset_ReinforcementBarCountOfIndependentFooting"
-msgstr "Подкрепление Pset УсиленияBarCountOfIndependentFooting"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_DEFINITION"
-msgstr "Вычисление бетонного параметра СТ 2 Числовая информация о значении арматурной панели с независимым футом. Направление X и Y основано на локальной системе координат этажа здания. Направление X и Y арматуры параллельно оси X и Y [[IfcBuildingStorey]] локальной координатной системы, соответственно. Артикул комментария А описательная надпись для общего типа армирования."
-
-#:IFC.xml:48302
-msgid "XDirectionLowerBarCount"
-msgstr "XDirectionLowerBarCount"
-
-msgid "XDirectionLowerBarCount_DEFINITION"
-msgstr "Количество баров с направлением X в нижней панели."
-
-#:IFC.xml:48307
-msgid "XDirectionUpperBarCount"
-msgstr "XDirectionUpperBarCount"
-
-msgid "XDirectionUpperBarCount_DEFINITION"
-msgstr "Количество баров с X направлением верхней панели."
-
-#:IFC.xml:48312
-msgid "YDirectionLowerBarCount"
-msgstr "YDirectionLowerBarCount"
-
-msgid "YDirectionLowerBarCount_DEFINITION"
-msgstr "Количество полос с направлением Y ниже."
-
-#:IFC.xml:48317
-msgid "YDirectionUpperBarCount"
-msgstr "YDirectionUpperBarCount"
-
-msgid "YDirectionUpperBarCount_DEFINITION"
-msgstr "Количество баров в направлении Y верхней панели."
-
-#:IFC.xml:48323
-msgid "Pset_ReinforcementBarPitchOfBeam"
-msgstr "Подкрепляющий Напал Бач"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_DEFINITION"
-msgstr "Информация о протяженности поля арматурного бара и пучка."
-
-#:IFC.xml:48334
-msgid "SpacingBarPitch"
-msgstr "Пробел"
-
-msgid "SpacingBarPitch_DEFINITION"
-msgstr "Длина шарнира интервала."
-
-#:IFC.xml:48339
-msgid "StirrupBarPitch"
-msgstr "Стиррутюн"
-
-msgid "StirrupBarPitch_DEFINITION"
-msgstr "Длина шарика шины."
-
-#:IFC.xml:48345
-msgid "Pset_ReinforcementBarPitchOfColumn"
-msgstr "Pset ReinforcementBarPitchOfColumn"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_DEFINITION"
-msgstr "Информация о длине тона арматуры с помощью колонки. Направление X и Y основано на локальной системе координат этажа здания. Направление X и Y арматуры параллельно оси X и Y [[IfcBuildingStorey]] локальной координатной системы, соответственно."
-
-#:IFC.xml:48351
-msgid "HoopBarPitch"
-msgstr "HoopBarPitch"
-
-msgid "HoopBarPitch_DEFINITION"
-msgstr "Длина отверстия лопатки"
-
-#:IFC.xml:48361
-msgid "ReinforcementBarType"
-msgstr "Тип Подкрепления"
-
-msgid "ReinforcementBarType_DEFINITION"
-msgstr "Определяет тип арматурной панели."
-
-#:IFC.xml:48366
-msgid "XDirectionTieHoopBarPitch"
-msgstr "XDirectionTieHoopBarPitch"
-
-msgid "XDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Длина направления по оси X для тяги галстука."
-
-#:IFC.xml:48371
-msgid "XDirectionTieHoopCount"
-msgstr "XDirectionTieHoopCount"
-
-msgid "XDirectionTieHoopCount_DEFINITION"
-msgstr "Количество баров с хупкой по оси X ."
-
-#:IFC.xml:48376
-msgid "YDirectionTieHoopBarPitch"
-msgstr "YDirectionTieHoopBarPitch"
-
-msgid "YDirectionTieHoopBarPitch_DEFINITION"
-msgstr "Длина направления Y хупа галстука."
-
-#:IFC.xml:48381
-msgid "YDirectionTieHoopCount"
-msgstr "YDirectionTieHoopCount"
-
-msgid "YDirectionTieHoopCount_DEFINITION"
-msgstr "Количество баров с крючком у направления Y."
-
-#:IFC.xml:48387
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting"
-msgstr "Непрерывное ПодкреплениеБарПитхоф-Стойка"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_DEFINITION"
-msgstr "Инструкция бетонного параметра ST 2 Информация о длине основы арматуры с непрерывной ножкой."
-
-#:IFC.xml:48388
-msgid "CrossingLowerBarPitch"
-msgstr "Перекрестная Нижняя БарПитч"
-
-msgid "CrossingLowerBarPitch_DEFINITION"
-msgstr "Длина поля нижней шины перекрестия."
-
-#:IFC.xml:48393
-msgid "CrossingUpperBarPitch"
-msgstr "Перекрестная Верхняя БарПитч"
-
-msgid "CrossingUpperBarPitch_DEFINITION"
-msgstr "Длина высоты перекрестия верхнего бара."
-
-#:IFC.xml:48409
-msgid "Pset_ReinforcementBarPitchOfSlab"
-msgstr "Подкрепляющая Капюшня"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_DEFINITION"
-msgstr "Информация о длине поля арматуры с плитой."
-
-#:IFC.xml:48415
-msgid "LongInsideCenterLowerBarPitch"
-msgstr "Долгосрочный Нижний БарПич"
-
-msgid "LongInsideCenterLowerBarPitch_DEFINITION"
-msgstr "Длина высоты длинной внутренней части нижней панели."
-
-#:IFC.xml:48420
-msgid "LongInsideCenterTopBarPitch"
-msgstr "Долгосрочный центр Топбарпич"
-
-msgid "LongInsideCenterTopBarPitch_DEFINITION"
-msgstr "Длина высоты длинной внутренней части верхней части панели."
-
-#:IFC.xml:48425
-msgid "LongInsideEndLowerBarPitch"
-msgstr "Долгосрочный Нижний БарПич"
-
-msgid "LongInsideEndLowerBarPitch_DEFINITION"
-msgstr "Длина высоты длинной внутренней части нижней панели."
-
-#:IFC.xml:48430
-msgid "LongInsideEndTopBarPitch"
-msgstr "Долгосрочный конечный ТопбарПич"
-
-msgid "LongInsideEndTopBarPitch_DEFINITION"
-msgstr "Длина высоты длинной внутренней части верхней части панели."
-
-#:IFC.xml:48435
-msgid "LongOutsideLowerBarPitch"
-msgstr "Долгосрочная Нижняя Шахта"
-
-msgid "LongOutsideLowerBarPitch_DEFINITION"
-msgstr "Длина высоты длинной снаружи нижней шины."
-
-#:IFC.xml:48440
-msgid "LongOutsideTopBarPitch"
-msgstr "Долгота вне TopBarPitch"
-
-msgid "LongOutsideTopBarPitch_DEFINITION"
-msgstr "Длина поля длинной снаружи верхней панели."
-
-#:IFC.xml:48450
-msgid "ShortInsideCenterLowerBarPitch"
-msgstr "Короткий Центр Нижнего БарПитча"
-
-msgid "ShortInsideCenterLowerBarPitch_DEFINITION"
-msgstr "Длина высоты короткой внутренней части нижней панели."
-
-#:IFC.xml:48455
-msgid "ShortInsideCenterTopBarPitch"
-msgstr "ShortInsideCenterTopBarPitch"
-
-msgid "ShortInsideCenterTopBarPitch_DEFINITION"
-msgstr "Длина высоты короткой внутренней панели верхнего колонки."
-
-#:IFC.xml:48460
-msgid "ShortInsideEndLowerBarPitch"
-msgstr "Короткий EndLowerBarPitch"
-
-msgid "ShortInsideEndLowerBarPitch_DEFINITION"
-msgstr "Длина поля короткой внутренней части нижней панели."
-
-#:IFC.xml:48465
-msgid "ShortInsideEndTopBarPitch"
-msgstr "ShortInsideSubBarPitch"
-
-msgid "ShortInsideEndTopBarPitch_DEFINITION"
-msgstr "Длина поля короткой внутренней части верхней части бара."
-
-#:IFC.xml:48470
-msgid "ShortOutsideLowerBarPitch"
-msgstr "Короткий предел Нижний Баршич"
-
-msgid "ShortOutsideLowerBarPitch_DEFINITION"
-msgstr "Длина поля короткого снаружи нижнего бара."
-
-#:IFC.xml:48475
-msgid "ShortOutsideTopBarPitch"
-msgstr "Короткий внешний TopBarPitch"
-
-msgid "ShortOutsideTopBarPitch_DEFINITION"
-msgstr "Длина поля небольшого внешнего бара."
-
-#:IFC.xml:48481
-msgid "Pset_ReinforcementBarPitchOfWall"
-msgstr "Усиление ячеек"
-
-msgid "Pset_ReinforcementBarPitchOfWall_DEFINITION"
-msgstr "Информация о длине поля арматуры со стеной."
-
-#:IFC.xml:48482
-msgid "BarAllocationType"
-msgstr "Тип BarAllocationType"
-
-msgid "BarAllocationType_DEFINITION"
-msgstr "Тип размещения арматуры."
-
-#:IFC.xml:48492
-msgid "HorizontalBarPitch"
-msgstr "Горизонтальная шина"
-
-msgid "HorizontalBarPitch_DEFINITION"
-msgstr "Длина высоты горизонтальной шины."
-
-#:IFC.xml:48507
-msgid "VerticalBarPitch"
-msgstr "Вертикальный BarPitch"
-
-msgid "VerticalBarPitch_DEFINITION"
-msgstr "Длина высоты вертикальной полосы."
-
-#:IFC.xml:48513
-msgid "Qto_FootingBaseQuantities"
-msgstr "Qto FootingBaseQuantities"
-
-msgid "Qto_FootingBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех вхождений футов. Комментарии Высота Суммарная номинальная высота фута. Она должна быть предоставлена, только если это постоянная. Длина не учитывает никакие вырезанные функции или другие функции обработки. Для полосных обломок измеряется по дорожке, для других обрезков это один из горизонтальных размеров. Он должен быть предоставлен, только если он является постоянным. Ширина полосы измеряется перпендикулярно траектории фуга или оси долготы. Для других футов это одно из горизонтальных размеров. Они должны быть предоставлены, только если они постоянны."
-
-#:IFC.xml:48565
-msgid "Qto_PileBaseQuantities"
-msgstr "Qto PileBaseQuantities"
-
-msgid "Qto_PileBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех случаев наводнения. Комментарии Длина не учитывают никакие вырезанные S или другие функции обработки."
-
-#:IFC.xml:48607
-msgid "Qto_ReinforcingElementBaseQuantities"
-msgstr "Qto ReinforcingElementBaseQuantities"
-
-msgid "Qto_ReinforcingElementBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех случаев подкрепления."
-
-#:IFC.xml:48608
-msgid "Count"
-msgstr "Счетчик"
-
-msgid "Count_DEFINITION"
-msgstr "Общее количество подкреплений."
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Геометрическая точка, которая определяет положение в геометрическом пространстве вершины."
 
