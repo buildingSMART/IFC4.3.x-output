@@ -9,310 +9,586 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
-"X-Crowdin-File-ID: 102\n"
+"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
+"X-Crowdin-File-ID: 98\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
 "PO-Revision-Date: 2022-02-21 13:43\n"
 
-#:IFC.xml:49324
-msgid "IfcApplication"
-msgstr "Aplicativo"
-
-msgid "IfcApplication_DEFINITION"
-msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5."
-
-#:IFC.xml:175
-msgid "IfcApplication_ApplicationDeveloper"
-msgstr "Desenvolvedor"
-
-msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
-msgstr "Name of the application developer."
-
-#:IFC.xml:49325
-msgid "IfcApplication_ApplicationFullName"
-msgstr "Nome"
-
-msgid "IfcApplication_ApplicationFullName_DEFINITION"
-msgstr "O nome completo do aplicativo, conforme especificado pelo desenvolvedor do aplicativo."
-
-#:IFC.xml:49330
-msgid "IfcApplication_ApplicationIdentifier"
-msgstr "Identificador"
-
-msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
-msgstr "Breve nome de identificação para o aplicativo."
-
-#:IFC.xml:49335
-msgid "IfcApplication_Version"
-msgstr "Versão"
-
-msgid "IfcApplication_Version_DEFINITION"
-msgstr "O número da versão deste software conforme especificado pelo desenvolvedor do aplicativo."
-
-#:IFC.xml:49365
-msgid "IfcChangeActionEnum"
-msgstr "IfcChangeActionEnum"
-
-msgid "IfcChangeActionEnum_DEFINITION"
-msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed Items NOCHANGE Object has not been modified. MODIFIED A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. ADDED The object has been created by the user and application defined by the OwningUser and OwningApplication respectively. DELETED The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. NOTDEFINED The change action is not known or has not been defined."
-
-#:IFC.xml:49366
-msgid "IfcChangeActionEnum_ADDED"
-msgstr "ADICIONADO"
-
-msgid "IfcChangeActionEnum_ADDED_DEFINITION"
-msgstr "The object has been created by the user and application defined by the OwningUser and OwningApplication respectively."
-
-#:IFC.xml:49367
-msgid "IfcChangeActionEnum_DELETED"
-msgstr "APAGADO"
-
-msgid "IfcChangeActionEnum_DELETED_DEFINITION"
-msgstr "The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
-
-#:IFC.xml:49368
-msgid "IfcChangeActionEnum_MODIFIED"
-msgstr "MODIFICADO"
-
-msgid "IfcChangeActionEnum_MODIFIED_DEFINITION"
-msgstr "A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
-
-#:IFC.xml:49369
-msgid "IfcChangeActionEnum_NOCHANGE"
-msgstr "MUDAR"
-
-msgid "IfcChangeActionEnum_NOCHANGE_DEFINITION"
-msgstr "Object has not been modified."
-
-#:IFC.xml:49370
-msgid "IfcChangeActionEnum_NOTDEFINED"
-msgstr "NÃOFINO"
-
-msgid "IfcChangeActionEnum_NOTDEFINED_DEFINITION"
-msgstr "The change action is not known or has not been defined."
-
-#:IFC.xml:49372
-msgid "IfcOwnerHistory"
-msgstr "IfcOwnerHistory"
-
-msgid "IfcOwnerHistory_DEFINITION"
-msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate."
-
-#:IFC.xml:321
-msgid "IfcOwnerHistory_OwningUser"
-msgstr "PossuirUsuário"
-
-msgid "IfcOwnerHistory_OwningUser_DEFINITION"
-msgstr "Direct reference to the end user who currently owns this object. Note that IFC includes the concept of ownership transfer from one user to another and therefore distinguishes between the Owning User and Creating User."
-
-#:IFC.xml:333
-msgid "IfcOwnerHistory_LastModifyingUser"
-msgstr "LastModifyingUser"
-
-msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
-msgstr "User who carried out the last modification using LastModifyingApplication."
-
-#:IFC.xml:49341
-msgid "IfcOwnerHistory_OwningApplication"
-msgstr "Aplicação"
-
-msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
-msgstr "Direct reference to the application which currently owns this object on behalf of the owning user of the application. Note that IFC includes the concept of ownership transfer from one application to another and therefore distinguishes between the Owning Application and Creating Application."
-
-#:IFC.xml:49353
-msgid "IfcOwnerHistory_LastModifyingApplication"
-msgstr "LastModifyingApplication"
-
-msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
-msgstr "Application used to make the last modification."
-
-#:IFC.xml:49373
-msgid "IfcOwnerHistory_ChangeAction"
-msgstr "Alteração"
-
-msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
-msgstr "Enumeração que define as ações associadas com as alterações feitas no objeto."
-
-#:IFC.xml:49378
-msgid "IfcOwnerHistory_CreationDate"
-msgstr "CriarData"
-
-msgid "IfcOwnerHistory_CreationDate_DEFINITION"
-msgstr "A data e a hora expressa em UTC Time Universal Coordenado, anteriormente Greenwich Mean Time ou GMT quando criado pelo aplicativo original de propriedade. Uma vez definido este valor permanece inalterado durante a vida da entidade."
-
-#:IFC.xml:49383
-msgid "IfcOwnerHistory_LastModifiedDate"
-msgstr "Última Modificação"
-
-msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
-msgstr "Data e hora coordenados em UTC tempo universal, Antigamente Greenwich Mean Time ou GMT no qual a última modificação foi feita pelo LastModifyingUser e pela LastModifyApplication."
-
-#:IFC.xml:49388
-msgid "IfcOwnerHistory_State"
-msgstr "Estado:"
-
-msgid "IfcOwnerHistory_State_DEFINITION"
-msgstr "Enumeração que define o estado atual de acesso do objeto."
-
-#:IFC.xml:49394
-msgid "IfcStateEnum"
-msgstr "IfcStateEnum"
-
-msgid "IfcStateEnum_DEFINITION"
-msgstr "A enumeração [[IfcStateEnum]] identifica o estado ou a acessibilidade do objeto, por exemplo, ler escrita, bloqueado. As enumerações válidas são uma nova enumeração de HISTORY na IFC2.0. .Change ifc2x3 IFC2x3 CHANGE Este conceito foi introduzido inicialmente na IFC2. como IfcModifiedFlag do tipo BINARY 3 FIXED e foi modificado em R2x3 para uma enumeração. Ela foi inicialmente introduzida como um primeiro passo para fornecer instalações para troca parcial de modelos e destinada a ser usada principalmente por um servidor modelo para que uma aplicação possa identificar o estado do objeto. Objeto Items READWRITE está em um estado de Leitura. Ele pode ser modificado por um aplicativo. Objeto READONSAMENTE está em um estado Somente Leitura. Ele pode ser visualizado mas não modificado por um aplicativo. Objeto LOCKED está em um estado bloqueado. Ele pode não ser acessado por um aplicativo. Objeto READWRITELOCKED está em um estado bloqueado de leitura. Ele pode não ser acessado por uma aplicação. Objeto READONLYLOCKED está em um estado apenas bloqueado de leitura. Ele pode não ser acessado por uma aplicação."
-
-#:IFC.xml:49395
-msgid "IfcStateEnum_LOCKED"
-msgstr "BLOQUEADO"
-
-msgid "IfcStateEnum_LOCKED_DEFINITION"
-msgstr "Object is in a Locked state. It may not be accessed by an application."
-
-#:IFC.xml:49396
-msgid "IfcStateEnum_READONLY"
-msgstr "RESPONSAMENTE"
-
-msgid "IfcStateEnum_READONLY_DEFINITION"
-msgstr "Object is in a Read Only state. It may be viewed but not modified by an application."
-
-#:IFC.xml:49397
-msgid "IfcStateEnum_READONLYLOCKED"
-msgstr "DESBLOQUEADO"
-
-msgid "IfcStateEnum_READONLYLOCKED_DEFINITION"
-msgstr "Object is in a Read Only Locked state. It may not be accessed by an application."
-
-#:IFC.xml:49398
-msgid "IfcStateEnum_READWRITE"
-msgstr "LEITURA"
-
-msgid "IfcStateEnum_READWRITE_DEFINITION"
-msgstr "Objeto está em um estado de Leitura. Ele pode ser modificado por uma aplicação."
-
-#:IFC.xml:49399
-msgid "IfcStateEnum_READWRITELOCKED"
-msgstr "READWRITELOCKED"
-
-msgid "IfcStateEnum_READWRITELOCKED_DEFINITION"
-msgstr "Object is in a Read Write Locked state. It may not be accessed by an application."
-
-#:IFC.xml:49401
-msgid "IfcTable"
-msgstr "Tabela"
-
-msgid "IfcTable_DEFINITION"
-msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. Table use .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. Table use alternative .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added."
-
-#:IFC.xml:49425
-msgid "IfcTable_Rows"
-msgstr "Linhas"
-
-msgid "IfcTable_Rows_DEFINITION"
-msgstr "Reference to information content of rows."
-
-#:IFC.xml:49437
-msgid "IfcTable_Columns"
-msgstr "Colunas"
-
-msgid "IfcTable_Columns_DEFINITION"
-msgstr "The column information associated with this table."
-
-#:IFC.xml:49402
-msgid "IfcTable_NumberOfCellsInRow"
-msgstr "Linha"
-
-msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
-msgstr "The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list."
-
-#:IFC.xml:49407
-msgid "IfcTable_NumberOfDataRows"
-msgstr "NúmeroDeDataRows"
-
-msgid "IfcTable_NumberOfDataRows_DEFINITION"
-msgstr "O número de linhas em uma tabela que contém dados, ou seja, o número total de linhas menos número de linhas na tabela."
-
-#:IFC.xml:49412
-msgid "IfcTable_NumberOfHeadings"
-msgstr "NumberOfHeadings"
-
-msgid "IfcTable_NumberOfHeadings_DEFINITION"
-msgstr "The number of headings in a table. This is restricted by WR3 to max. one."
-
-#:IFC.xml:49417
-msgid "IfcTable_Name"
+#:IFC.xml:48669
+msgid "IfcBoundaryCondition"
+msgstr "Condição"
+
+msgid "IfcBoundaryCondition_DEFINITION"
+msgstr "A entidade abstrata [[IfcBoundaryCondition]] é o supertipo de todas as condições de limites que podem ser aplicadas às definições de conexão estrutural, ou diretamente para a conexão. . o conjunto ou para a relação entre um membro estrutural e a conexão. NOTA: As condições limite são usadas dentro de outras partes, principalmente por instâncias de [[IfcStructuralConnection]] para a definição de suportes e instâncias de [[IfcRelConnectsStructuralMember]] para a definição de conexões entre membros estruturais e conexões estruturais. HISTÓRIA Nova entidade em IFC2x2."
+
+#:IFC.xml:48670
+msgid "IfcBoundaryCondition_Name"
 msgstr "Nome:"
 
-msgid "IfcTable_Name_DEFINITION"
+msgid "IfcBoundaryCondition_Name_DEFINITION"
+msgstr "Opcionalmente, define um nome para esta condição de limite."
+
+#:IFC.xml:48676
+msgid "IfcBoundaryEdgeCondition"
+msgstr "Condição"
+
+msgid "IfcBoundaryEdgeCondition_DEFINITION"
+msgstr "Descreve condições de suporte elástico linástico ou condições de conexão. Curva de aplicabilidade suporta e conexões. HISTORY nova entidade em IFC2x2. IFC 2x4 muda Atributos LinearStiffnessX Y Z renomeados para TranslationalStiffnessX Y Z. ifc2x4 IFC4 muda todos os tipos de dados de atributo alterados de numérico para SELECT entre booleano e numérico. As irregularidades podem agora também ser negativas, por exemplo, para a captura de efeitos desestabilizadores em condições de fronteiras: a Convenção IFC2x3 de 1. representando uma rigidez infinita não é mais válida e não deve ser usada. Infinita rigidez, ou seja, apoios fixos, agora são modelados pelo valor TRUE."
+
+#:IFC.xml:48677
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
+msgstr "X"
+
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo x do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48682
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
+msgstr "RotacionalStiffnessLengthY"
+
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo y do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48687
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
+msgstr "RotacionalStiffnessLengthZ"
+
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo z do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48692
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
+msgstr "TranslationalStiffnessByLengthX"
+
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção x do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48697
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
+msgstr "StiffnessByLengthY"
+
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção y do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48702
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
+msgstr "TranslationalStiffnessByLengthZ"
+
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção z do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48709
+msgid "IfcBoundaryFaceCondition"
+msgstr "Condição IfcBoundaryFace"
+
+msgid "IfcBoundaryFaceCondition_DEFINITION"
+msgstr "Descreve condições de suporte elástico linástico ou condições de conexão. Superfície de aplicabilidade suporte e conexões. HISTORY nova entidade em IFC2x2. IFC 2x4 muda Atributos LinearStiffnessX Y Z renomeados para TranslationalStiffnessX Y Z. ifc2x4 IFC4 muda todos os tipos de dados de atributo alterados de numérico para SELECT entre booleano e numérico. As irregularidades podem agora também ser negativas, por exemplo, para a captura de efeitos desestabilizadores em condições de fronteiras: a Convenção IFC2x3 de 1. representando uma rigidez infinita não é mais válida e não deve ser usada. Infinita rigidez, ou seja, apoios fixos, agora são modelados pelo valor TRUE."
+
+#:IFC.xml:48710
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
+msgstr "TranslationalStiffnessByAreaX"
+
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção x do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48715
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
+msgstr "TranslationalStiffnessByAreaY"
+
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção y do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48720
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
+msgstr "TranslationalStiffnessByAreaZ"
+
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção z do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48727
+msgid "IfcBoundaryNodeCondition"
+msgstr "Condição IfcBoundaryNodeCondição"
+
+msgid "IfcBoundaryNodeCondition_DEFINITION"
+msgstr "Descreve condições de suporte elástico linástico ou condições de conexão. Ponto de aplicação suporta e conexões. HISTORY nova entidade em IFC2x2. IFC 2x4 muda Atributos LinearStiffnessX Y Z renomeados para TranslationalStiffnessX Y Z. format@@0 hange ifc2x4 IFC4 CHANGE All attribute data type changed from numeric to SELECT between Boolean and numeric. As irregularidades podem agora também ser negativas, por exemplo, para a captura de efeitos desestabilizadores em condições de fronteiras: a Convenção IFC2x3 de 1. representando uma rigidez infinita não é mais válida e não deve ser usada. Infinita rigidez, ou seja, apoios fixos, agora são modelados pelo valor TRUE."
+
+#:IFC.xml:48728
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
+msgstr "RotacionalStiffnessX"
+
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo x do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48733
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
+msgstr "RotationalStiffnessY"
+
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo y do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48738
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
+msgstr "RotationalStiffnessZ"
+
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
+msgstr "Valor de rigidez rotativa sobre o eixo z do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48743
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
+msgstr "X translacionalStiffnessX"
+
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção x do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48748
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
+msgstr "TranslationalStiffnessY"
+
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção y do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48753
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
+msgstr "TranslationalStiffnessZ"
+
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
+msgstr "Valor de rigidez traduzcional na direção z do sistema de coordenadas definido pela instância que usa este objeto de recurso."
+
+#:IFC.xml:48760
+msgid "IfcBoundaryNodeConditionWarping"
+msgstr "DesvioDeCondição"
+
+msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
+msgstr "Descreve condições de suporte linearmente elástico ou condições de conexão, incluindo restrições linearmente elásticas. Ponto de aplicabilidade suporta e conexões. HISTÓRIA nova entidade no IFC2x2. Alterar IFC4 ifc2x4 CHANGE todos os tipos de dados de atributo alterados de numérico para SELECT entre booleano e numérico. As irregularidades podem agora também ser negativas, por exemplo, para a captura de efeitos desestabilizadores em condições de fronteiras: a Convenção IFC2x3 de 1. representando uma rigidez infinita não é mais válida e não deve ser usada. Infinita rigidez, ou seja, apoios fixos, agora são modelados pelo valor TRUE."
+
+#:IFC.xml:48761
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
+msgstr "Feitiço"
+
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
+msgstr "Define o valor da rigidez deturpada."
+
+#:IFC.xml:48768
+msgid "IfcFailureConnectionCondition"
+msgstr "Condição de IfcFailureConnection"
+
+msgid "IfcFailureConnectionCondition_DEFINITION"
+msgstr "Define forças em que um suporte ou conexão falhe. Suporte o Ponto de Aplicação e conexões. HISTORY nova entidade na IFC2x2."
+
+#:IFC.xml:48769
+msgid "IfcFailureConnectionCondition_CompressionFailureX"
+msgstr "CompressãoFalhureX"
+
+msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
+msgstr "Força de compressão no sentido x que leva ao fracasso da conexão."
+
+#:IFC.xml:48774
+msgid "IfcFailureConnectionCondition_CompressionFailureY"
+msgstr "CompressãoFalhou"
+
+msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
+msgstr "Força de compressão no sentido y leva ao fracasso da conexão."
+
+#:IFC.xml:48779
+msgid "IfcFailureConnectionCondition_CompressionFailureZ"
+msgstr "CompressionFailureZ"
+
+msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
+msgstr "Força de compressão na direção z leva ao fracasso da conexão."
+
+#:IFC.xml:48784
+msgid "IfcFailureConnectionCondition_TensionFailureX"
+msgstr "Falha"
+
+msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
+msgstr "Força de tensão no sentido x que leva ao fracasso da conexão."
+
+#:IFC.xml:48789
+msgid "IfcFailureConnectionCondition_TensionFailureY"
+msgstr "Falha"
+
+msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
+msgstr "Força de tensão no sentido y leva ao fracasso da conexão."
+
+#:IFC.xml:48794
+msgid "IfcFailureConnectionCondition_TensionFailureZ"
+msgstr "TensionFailureZ"
+
+msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
+msgstr "Força de tensão no sentido z que leva ao fracasso da conexão."
+
+#:IFC.xml:48801
+msgid "IfcModulusOfRotationalSubgradeReactionSelect"
+msgstr "Selecionar"
+
+#:IFC.xml:48802
+msgid "IfcModulusOfSubgradeReactionSelect"
+msgstr "Seleção"
+
+#:IFC.xml:48803
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
+msgstr "Seleção"
+
+#:IFC.xml:48804
+msgid "IfcRotationalStiffnessSelect"
+msgstr "Selecionar IfcRotacionalStiffnessSeleção"
+
+#:IFC.xml:48805
+msgid "IfcSlippageConnectionCondition"
+msgstr "Condição do IfcSlippageConexão"
+
+msgid "IfcSlippageConnectionCondition_DEFINITION"
+msgstr "Descreve página deslizante em condições de suporte ou condições de conexão. Slippage significa que um deslocamento relativo pode ocorrer em um suporte ou conexão antes que as reações de suporte ou conexão sejam chocadas. O Ponto de Aplicação suporta e conexões, suporte e conexões, suporte de superfície e conexões. HISTÓRIA nova entidade na IFC2x2."
+
+#:IFC.xml:48806
+msgid "IfcSlippageConnectionCondition_SlippageX"
+msgstr "PáginaX"
+
+msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
+msgstr "Página deslizante na direção x do sistema de coordenadas definido pela instância que utiliza este objeto de recurso."
+
+#:IFC.xml:48811
+msgid "IfcSlippageConnectionCondition_SlippageY"
+msgstr "SlippageY"
+
+msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
+msgstr "Página deslizante na direção y do sistema de coordenadas definido pela instância que utiliza este objeto de recurso."
+
+#:IFC.xml:48816
+msgid "IfcSlippageConnectionCondition_SlippageZ"
+msgstr "SlippageZ"
+
+msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
+msgstr "Slippage na direção z do sistema de coordenadas definido pela instância que utiliza este objeto de recurso."
+
+#:IFC.xml:48823
+msgid "IfcStructuralConnectionCondition"
+msgstr "Condição de IfcStructuralConnection"
+
+msgid "IfcStructuralConnectionCondition_DEFINITION"
+msgstr "Descreva propriedades de conexão raramente necessárias. HISTORY Nova entidade em IFC2x2."
+
+#:IFC.xml:48824
+msgid "IfcStructuralConnectionCondition_Name"
 msgstr "Nome:"
 
-#:IFC.xml:49449
-msgid "IfcTableColumn"
-msgstr "IfcTableColumn"
+msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
+msgstr "Opcionalmente, define um nome para essa condição de conexão."
 
-msgid "IfcTableColumn_DEFINITION"
-msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4."
+#:IFC.xml:48830
+msgid "IfcStructuralLoad"
+msgstr "IfcStructuralLoad"
 
-#:IFC.xml:2748
-msgid "IfcTableColumn_ReferencePath"
-msgstr "Caminho"
+msgid "IfcStructuralLoad_DEFINITION"
+msgstr "Essa entidade abstrata é o supertipo de todas as ações ou reações de carga ou de certos requisitos resultantes da análise estrutural. ou determinadas disposições que influenciam a análise estrutural. HISTÓRIA Nova entidade em IFC2x2."
 
-msgid "IfcTableColumn_ReferencePath_DEFINITION"
-msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied. For constraints, such path is relative to the [[IfcObjectDefinition]] associated by [[IfcRelAssociatesConstraint]] .RelatedObjects. For a constraint to be satisified, exactly one row of the table must match the referenced object for all columns where the ReferencePath attribute is set."
-
-#:IFC.xml:49450
-msgid "IfcTableColumn_Description"
-msgstr "Descrição:"
-
-msgid "IfcTableColumn_Description_DEFINITION"
-msgstr "A descrição fornece texto legível humano descrevendo a coluna da tabela."
-
-#:IFC.xml:49455
-msgid "IfcTableColumn_Identifier"
-msgstr "Identifier"
-
-msgid "IfcTableColumn_Identifier_DEFINITION"
-msgstr "O identificador identifica a coluna dentro da tabela. Se fornecido, ela deve ser exclusiva dentro da tabela. As colunas podem ser referenciadas entre várias tabelas compartilhando o mesmo identificador de coluna."
-
-#:IFC.xml:49460
-msgid "IfcTableColumn_Name"
+#:IFC.xml:48831
+msgid "IfcStructuralLoad_Name"
 msgstr "Nome:"
 
-msgid "IfcTableColumn_Name_DEFINITION"
-msgstr "O Nome é uma legível para a coluna da tabela. Não é necessariamente única."
+msgid "IfcStructuralLoad_Name_DEFINITION"
+msgstr "Opcionalmente, define um nome para essa carga."
 
-#:IFC.xml:49465
-msgid "IfcTableColumn_Unit"
-msgstr "Unidade"
+#:IFC.xml:48837
+msgid "IfcStructuralLoadConfiguration"
+msgstr "Configuração do IfcStructuralLoad"
 
-msgid "IfcTableColumn_Unit_DEFINITION"
-msgstr "A Unidade indica a unidade de medida a ser usada para estes dados das colunas. Se não for fornecido, então o projeto de unidades padrão é assumido. Se o Caminho de Referência for fornecido, a unidade deve ser da mesma medida que o atributo referenciado."
+msgid "IfcStructuralLoadConfiguration_DEFINITION"
+msgstr "Esta classe combina um ou mais valores de carga ou resultado em uma configuração dimensional de 1 ou 2. HISTÓRIA Nova entidade no IFC4. Especificações de cabeça Proposições Informais 1. Todos os itens nos Valores devem ser do mesmo tipo. 2. Se as cargas ou resultados compreenderem a atividade de curva, um local dimensional deve ser dado, medido localmente ao longo da curva. A localização não deve exceder os limites da atrividade da curva. As amostras de carga e os locais correspondentes serão indicados na ordem ascendente das localizações. 3. Se as cargas ou resultados compreenderem uma atividade de superfície, 2 locais dimensionais serão dados, Medido nas atividades de superfície em direções x e y locais. A localização não deve exceder os limites da atividade superficial. NOTE Não há nenhum requisito de ordem no caso da 2 dimensão do caso, mas o 1 caso dimensional será ordenado espacialmente por simplicidade."
 
-#:IFC.xml:49471
-msgid "IfcTableRow"
-msgstr "Linha IfcTableLinha"
+#:IFC.xml:48845
+msgid "IfcStructuralLoadConfiguration_Values"
+msgstr "Valores"
 
-msgid "IfcTableRow_DEFINITION"
-msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. Figure 337 illustrates table row use. Figure 337 Table row use Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . Figure 338 Table row use alternative HISTORY New entity in IFC1.5."
+msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
+msgstr "Lista de valores de carga ou resultado."
 
-#:IFC.xml:49472
-msgid "IfcTableRow_IsHeading"
-msgstr "IsHeading"
+#:IFC.xml:48838
+msgid "IfcStructuralLoadConfiguration_Locations"
+msgstr "Alocações"
 
-msgid "IfcTableRow_IsHeading_DEFINITION"
-msgstr "Flag which identifies if the row is a heading row or a row which contains row values. NOTE If the row is a heading, the flag takes the value TRUE."
+msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
+msgstr "Locais das amostras de carga ou amostras de resultados, dadas dentro do sistema de coordenadas locais definido pela instância que usa este objeto de recurso. Cada item na lista de locais pertence ao item da lista de valores na mesma lista. Este atributo é opcional para configurações onde as localizações são implicitamente conhecidas de definições de nível mais alto."
 
-#:IFC.xml:49477
-msgid "IfcTableRow_RowCells"
-msgstr "RowCells"
+#:IFC.xml:48857
+msgid "IfcStructuralLoadLinearForce"
+msgstr "Forçar IfcStructuralLoadLinearForce"
 
-msgid "IfcTableRow_RowCells_DEFINITION"
-msgstr "O valor dos dados da célula da tabela.."
+msgid "IfcStructuralLoadLinearForce_DEFINITION"
+msgstr "Uma instância da entidade [[IfcStructuralLoadLinearForce]] será usada para definir ações nas curvas. HISTÓRIA Nova entidade na IFC2x2."
 
-#:IFC.xml:49483
-msgid "IfcGloballyUniqueId"
-msgstr "IfcGloballyUniqueId"
+#:IFC.xml:48858
+msgid "IfcStructuralLoadLinearForce_LinearForceX"
+msgstr "LinearForceX"
 
-msgid "IfcGloballyUniqueId_DEFINITION"
-msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 0123456789012345678901234567890123456789012345678901234567890123 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1."
+msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
+msgstr "Valor linear força em x direção."
+
+#:IFC.xml:48863
+msgid "IfcStructuralLoadLinearForce_LinearForceY"
+msgstr "LinearForceY"
+
+msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
+msgstr "Valor linear de força em y direção."
+
+#:IFC.xml:48868
+msgid "IfcStructuralLoadLinearForce_LinearForceZ"
+msgstr "LinearForceZ"
+
+msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
+msgstr "Valor linear de força na direção do z."
+
+#:IFC.xml:48873
+msgid "IfcStructuralLoadLinearForce_LinearMomentX"
+msgstr "LinearMomentX"
+
+msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
+msgstr "Mês linear sobre o eixo x."
+
+#:IFC.xml:48878
+msgid "IfcStructuralLoadLinearForce_LinearMomentY"
+msgstr "LinearMomentY"
+
+msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
+msgstr "Momento linear sobre o eixo y."
+
+#:IFC.xml:48883
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
+msgstr "LinearMomentZ"
+
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
+msgstr "Momento linear sobre o eixo z."
+
+#:IFC.xml:48890
+msgid "IfcStructuralLoadOrResult"
+msgstr "IfcStructuralLoadOrResult"
+
+msgid "IfcStructuralLoadOrResult_DEFINITION"
+msgstr "Superclasse abstrata de classes simples de carga ou resultados. HISTORY Nova entidade abstrata em IFC4, a compatibilidade ascendente de todos os subtipos é preservada."
+
+#:IFC.xml:48893
+msgid "IfcStructuralLoadPlanarForce"
+msgstr "IfcStructuralLoadPlanarForce"
+
+msgid "IfcStructuralLoadPlanarForce_DEFINITION"
+msgstr "Uma instância da entidade [[IfcStructuralLoadPlanarForce]] será usada para definir ações em rostos. HISTÓRIA Nova entidade na IFC2x2."
+
+#:IFC.xml:48894
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
+msgstr "PlanarForceX"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
+msgstr "Valor de força plana em direção de x."
+
+#:IFC.xml:48899
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
+msgstr "ForçaY"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
+msgstr "Valor de força plana em direção y."
+
+#:IFC.xml:48904
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
+msgstr "PlanarForceZ"
+
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
+msgstr "Valor de força plana em direção z."
+
+#:IFC.xml:48911
+msgid "IfcStructuralLoadSingleDisplacement"
+msgstr "IfcStructuralLoadSingleDisplacement"
+
+msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
+msgstr "Instâncias da entidade [[IfcStructuralLoadSingleDisplacement]] serão usadas para definir deslocamentos. HISTÓRIA nova entidade em IFC2x2."
+
+#:IFC.xml:48912
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
+msgstr "DeslocamentoX"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
+msgstr "Deslocamento na direção x."
+
+#:IFC.xml:48917
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
+msgstr "Deslocamento"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
+msgstr "Deslocamento na direção y."
+
+#:IFC.xml:48922
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
+msgstr "DeslocamentoZ"
+
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
+msgstr "Deslocamento na direção z."
+
+#:IFC.xml:48927
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
+msgstr "RotationalDisplacementRX"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
+msgstr "Rotação sobre o eixo x."
+
+#:IFC.xml:48932
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
+msgstr "RY"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
+msgstr "Rotação sobre o eixo y."
+
+#:IFC.xml:48937
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
+msgstr "RotationalDisplacementRZ"
+
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
+msgstr "Rotação sobre o eixo z."
+
+#:IFC.xml:48944
+msgid "IfcStructuralLoadSingleDisplacementDistortion"
+msgstr "Distorção IfcStructuralLoadSingleDisplacementDistortion"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
+msgstr "Define um deslocamento com warping. HISTORY Nova entidade na IFC2x2."
+
+#:IFC.xml:48945
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
+msgstr "Distorção"
+
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
+msgstr "A guerra de curvatura da distorção, ou seja, uma deplação sectorial dada à carga de deslocamento."
+
+#:IFC.xml:48952
+msgid "IfcStructuralLoadSingleForce"
+msgstr "IfcStructuralLoadSingleForce"
+
+msgid "IfcStructuralLoadSingleForce_DEFINITION"
+msgstr "Instâncias da entidade [[IfcStructuralLoadSingleForce]] serão usadas para definir as forças e os momentos de uma ação operando em um único ponto. HISTÓRIA Nova entidade em IFC2x2."
+
+#:IFC.xml:48953
+msgid "IfcStructuralLoadSingleForce_ForceX"
+msgstr "Forçar"
+
+msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
+msgstr "Forçar valor na direção de x."
+
+#:IFC.xml:48958
+msgid "IfcStructuralLoadSingleForce_ForceY"
+msgstr "Forçar"
+
+msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
+msgstr "Forçar valor na direção y."
+
+#:IFC.xml:48963
+msgid "IfcStructuralLoadSingleForce_ForceZ"
+msgstr "ForceZ"
+
+msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
+msgstr "Forçar valor na direção do z."
+
+#:IFC.xml:48968
+msgid "IfcStructuralLoadSingleForce_MomentX"
+msgstr "MomentX"
+
+msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
+msgstr "Momento sobre o eixo x."
+
+#:IFC.xml:48973
+msgid "IfcStructuralLoadSingleForce_MomentY"
+msgstr "MomentY"
+
+msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
+msgstr "Momento sobre o eixo y."
+
+#:IFC.xml:48978
+msgid "IfcStructuralLoadSingleForce_MomentZ"
+msgstr "MomentZ"
+
+msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
+msgstr "Momento sobre o eixo z."
+
+#:IFC.xml:48985
+msgid "IfcStructuralLoadSingleForceWarping"
+msgstr "IfcStructuralLoadSingleForceWarping"
+
+msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
+msgstr "Instâncias da entidade [[IfcStructuralLoadSingleForceWarping]] , como um subtipo de [[IfcStructuralLoadSingleForce]], deve ser utilizada para definir uma operação de acção num único ponto. Além de forças e momentos definidos pelo seu supertipo, um momento de warping pode ser definido. HISTÓRIA Nova entidade no IFC2x2."
+
+#:IFC.xml:48986
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
+msgstr "Momento"
+
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
+msgstr "O momento de demissão na carga do ponto."
+
+#:IFC.xml:48993
+msgid "IfcStructuralLoadStatic"
+msgstr "IfcStructuralLoadStatic"
+
+msgid "IfcStructuralLoadStatic_DEFINITION"
+msgstr "A entidade abstrata [[IfcStructuralLoadStatic]] é o supertipo de todas as ações de carga estática ou reações que podem ser definidas. No âmbito de aplicação estão uns, ou seja, forças e momentos concentrados, i linear. . uma força e momentos distribuídos dimensionalmente, isto é, duas forças distribuídas dimensionalmente, além de deslocamentos e cargas de temperatura. Nova entidade HISTÓRIA na IFC2x2."
+
+#:IFC.xml:48996
+msgid "IfcStructuralLoadTemperature"
+msgstr "EstruturalLoadTemperature"
+
+msgid "IfcStructuralLoadTemperature_DEFINITION"
+msgstr "Uma instância da entidade [[IfcStructuralLoadTemperature]] será usada para definir ações que são causadas por uma mudança de temperatura. Como mostrado na Figura 1, a alteração da temperatura é dada com um valor constante que é aplicado à seção completa e valores para as diferenças de temperatura entre as fibras externas da seção. HISTORY nova entidade em IFC2x2. temperatura da carga estrutural... ... figura estruturalloadtemperature.gif 1 temperatura da carga estrutural"
+
+#:IFC.xml:48997
+msgid "IfcStructuralLoadTemperature_DeltaTConstant"
+msgstr "DeltaTConstant"
+
+msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
+msgstr "A alteração da temperatura afecta a parte completa do membro estrutural, ou a parte uniforme da alteração da temperatura não uniforme. NOTE Um valor positivo descreve um aumento na temperatura. I.e. Uma constante e positiva mudança de temperatura causa alongamento de um membro, ou compressão no membro se houver as respectivas restrições."
+
+#:IFC.xml:49002
+msgid "IfcStructuralLoadTemperature_DeltaTY"
+msgstr "DeltaTY"
+
+msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
+msgstr "Mudança de temperatura não uniforme especificado como a diferença da mudança de temperatura na fibra externa da direção positiva y menos a mudança de temperatura na fibra exterior da direção negativa do membro da análise. NOTA Uma mudança de temperatura não uniforme positiva em y induz uma curvatura negativa do membro sobre z, ou um momento positivo sobre z se houver as respectivas restrições. y e z são machados de membros locais."
+
+#:IFC.xml:49007
+msgid "IfcStructuralLoadTemperature_DeltaTZ"
+msgstr "DeltaTZ"
+
+msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
+msgstr "Mudança de temperatura não uniforme especificado como a diferença da mudança de temperatura na fibra externa da direção z positiva menos a mudança de temperatura na fibra exterior da direção z negativa do membro da análise. NOTE Uma mudança de temperatura não uniforme positiva em z induz uma curvatura positiva do membro sobre , ou um momento de curva negativa sobre y se houver respectivas restrições. y e z são machados de membros locais."
+
+#:IFC.xml:49014
+msgid "IfcSurfaceReinforcementArea"
+msgstr "IfcSurfaceReinforcementArea"
+
+msgid "IfcSurfaceReinforcementArea_DEFINITION"
+msgstr "Descreve a área de reforço de membros superficiais. NOTE os parâmetros de design dos membros como capa concreta, profundidade eficaz, orientação de malhas ou barras duas, opcionalmente três direções, etc. não são especificados no esquema IfcStructuralLoadResource. Eles serão especificados no nível de membros estruturais. HISTORY Nova entidade na IFC4."
+
+#:IFC.xml:49015
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
+msgstr "Reforço"
+
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
+msgstr "Corte reforço. Especificado como área por área, por exemplo, metro quadrado por metro quadrado, portanto medida da proporção, ou seja, menos unitária."
+
+#:IFC.xml:49020
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
+msgstr "SurfaceReinforcement1"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
+msgstr "Reforço à cara do membro que está localizado ao lado da direção Z positiva do membro de superfície. Especificado como área por comprimento. . Metro quadrado por metro da medida, por metro de comprimento, p. ex. metro. A área de reforço pode ser especificada para duas ou três direções de barras de reforço."
+
+#:IFC.xml:49025
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
+msgstr "SuperfaceReforce2"
+
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
+msgstr "Reforço à cara do membro que está localizado ao lado da direção local negativa do membro da superfície. Especificado como área por comprimento. . Metro quadrado por metro da medida, por metro de comprimento, p. ex. metro. A área de reforço pode ser especificada para duas ou três direções de barras de reforço."
+
+#:IFC.xml:49032
+msgid "IfcTranslationalStiffnessSelect"
+msgstr "IfcTranslationalStiffnessSelect"
+
+#:IFC.xml:49033
+msgid "IfcWarpingStiffnessSelect"
+msgstr "Selecionar IfcWarpingStiffnessSelecionar"
 
