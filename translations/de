@@ -9,319 +9,720 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcRoadDomain.pot\n"
+"X-Crowdin-File-ID: 107\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-02-21 16:04\n"
 
-#:IFC.xml:49054
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:38090
+msgid "IfcKerb"
+msgstr "IfcKerb"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "Ein fortgeschrittenes Gesicht ist eine Spezialisierung einer Gesichteroberfläche, die die Anforderungen an die Verwendung bestimmter topologischer und geometrischer Darstellungselemente für die Definition der Gesichter erfüllen muss. Kanten und Ecken. Eine [[IfcAdvancedFace]] ist beschränkt auf eine Oberflächengeometrie des Typs [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] , haben eine [[IfcFaceOuterBound]] als Gesichtsbindung, mit Ausnahme von geschlossenen Oberflächen, haben alle Flächen, die an [[IfcEdgeLoop]] oder [[IfcVertexLoop]] gebunden werden müssen, alle Kanten für eine Kantengeometrie haben die Kantenkurvengeometrie auf [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] Bei geschlossenen Flächen mit periodischen Oberflächen, wie zylindrische oder kugelförmige Oberflächen, im folgenden die Kanten der geschlossenen oberfläche, im Falle einer zylindrischen Oberfläche die obere und untere kappe, auf die gleiche Instanz von [[IfcVertexPoint]] zweimal verweisen, wird kein [[IfcFaceOuterBound]] zur Verfügung gestellt, oder das [[IfcFaceOuterBound]] wird mit einem [[IfcSeamCurve]] am periodischen Ende der geschlossenen Oberfläche erstellt im Falle einer zylindrischen Oberfläche bei 0. 360. Grad zylindrische Oberfläche .. .. .. Zahlen ifcadvancedface 01. ng Abbildung 1 Verwendung von [[IfcCylindricalSurface]] als Grundfläche eines [[IfcAdvancedFace]] HINWEISE Entität, angepasst von fortgeschrittenen Gesichtern, definiert in ISO 10303 511. GESCHICHTE Neue Entität in IFC4 Formale Angebote Anwendbare Oberfläche Die Geometrie verwendet in der Definition des Gesichts soll eingeschränkt werden. Die Gesichtsgeometrie soll ein [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] sein. RequiresEdgeCurve Die Geometrie aller Begrenzungskanten des Gesichts soll vollständig als [[IfcEdgeCurve]] s definiert werden. ApplicableEdgeCurves Die Kurvenarten zur Definition der Kantengeometrie sollen auf [[IfcLine]] beschränkt sein [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] ."
+msgid "IfcKerb_DEFINITION"
+msgstr "Eine Grenze aus Stein, Beton oder anderem starrem Material, das am Rand der Kutschbahn oder des Weges gebildet wird. HINWEISE Definition aus der ISO 6707 1 Grenze, normalerweise hochstehend, am Rande einer Straße, harte Streifen, harte Schulter oder Fußgänge, Curb, US . HINWEISE Definition von PIARC Einheit zur Trennung von Oberflächen verschiedener Oberflächen und zur physischen Abgrenzung oder Eindämmung CEN ."
 
-#:IFC.xml:49057
-msgid "IfcBooleanChoose__B"
-msgstr "IfcBooleanChoose B"
+#:IFC.xml:38091
+msgid "IfcKerb_Mountable"
+msgstr "Befestigen"
 
-#:IFC.xml:49065
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcKerb_Mountable_DEFINITION"
+msgstr "Legt fest, ob das Kfz leicht mit einem Fahrzeug klettert werden kann oder nicht."
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:38098
+msgid "IfcKerbType"
+msgstr "IfcKerbType"
 
-#:IFC.xml:49070
-msgid "IfcConnectedFaceSet"
-msgstr "IfcConnectedFaceSet"
+msgid "IfcKerbType_DEFINITION"
+msgstr "Das [[IfcKerbType]] stellt den Typ Informationen für das [[IfcKerb]] Element zur Verfügung. Ein [[IfcKerb]] ist ein Rand aus Stein, Beton oder anderem starrem Material, das am Rand der Kutschbahn oder des Weges gebildet wird."
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein angeschlossenes Gesichtersatz ist eine Gesichtermenge so dass die Domäne der Gesichter mit ihren Randkanten und Eckpunkten verbunden ist. HISTORY New Entity in IFC1.0 . Pec head Informelle Vorschläge 1. Die Vereinigung der Gesichter und ihrer Randschleifen soll arcweise verbunden sein."
+#:IFC.xml:38099
+msgid "IfcKerbType_Mountable"
+msgstr "Befestigen"
 
-#:IFC.xml:49073
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "CfsFaces"
+msgid "IfcKerbType_Mountable_DEFINITION"
+msgstr "Legt fest, ob das Kfz leicht mit einem Fahrzeug klettert werden kann oder nicht."
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "Der Satz der Gesichter im arktischen Sinne, der an gemeinsamen Kanten oder Eckpunkten verbunden ist."
+#:IFC.xml:38106
+msgid "IfcRoad"
+msgstr "IfcRoad"
 
-#:IFC.xml:49085
-msgid "IfcEdge"
-msgstr "IfcEdge"
+msgid "IfcRoad_DEFINITION"
+msgstr "Eine auf Grund gebaute Route, um Reisen von einem Ort zum anderen zu ermöglichen, einschließlich Autobahnen, Straßen, Rad- und Fußwege, aber ohne Eisenbahnen. Als eine Art Fazilität liefert Road das Grundelement in der Projekt-Struktur-Hierarchie für die Komponenten eines Straßenprojekts, d.h. B. in der Konstruktion, Konstruktion oder Instandhaltung.NOTE Definition von ISO 6707 1 Way vor allem für Fahrzeuge. HINWEISE Definition von PIARC Line der Kommunikation mit einer stabilisierten Basis außer Schienen oder Luftstreifen unterwegs in erster Linie für den Einsatz von Straßenfahrzeugen, die auf eigenem Rad fahren."
 
-msgid "IfcEdge_DEFINITION"
-msgstr "Ein [[IfcEdge]] definiert zwei Punkte, die topologisch verbunden sind. Die geometrische Darstellung der Verbindung zwischen den beiden Knoten erfolgt standardmäßig auf eine gerade Linie, wenn keine Kurvengeometrie mit dem Untertyp [[IfcEdgeCurve]] zugewiesen wird. Das [[IfcEdge]] kann daher zum Austausch von geraden Kanten ohne zugehörige Geometrie verwendet werden, die von [[IfcLine]] oder [[IfcPolyline]] Gedanke [[IfcEdgeCurve]] bereitgestellt wird. dgeGeometry . EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die Grenzen des [[IfcEdge]] von den EdgeStart und EdgeEnd angegeben werden, die auch die Richtung der Kante bestimmen. Der Ort innerhalb eines Koordinatenraums wird durch den [[IfcVertexPoint]] Typ für EdgeStart und EdgeEnd bestimmt. Da keine Kantengeometrie zugewiesen ist, wird standardmäßig eine geradlinige Linie verwendet, die dem Richtungssinn entspricht. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kante ist die topologische Konstruktion, die der Verbindung von zwei Knoten entspricht. abstrakter kann es für eine logische Beziehung zwischen zwei Punkten stehen. Die Domäne einer Kante, falls vorhanden, ist eine endliche, nicht selbstständig die offene Kurve in R M durchschneiden, das heißt, ein angeschlossener 1 dimensionaler Krümmer. Die Grenzen einer Kante sind zwei Eckpunkte, die nicht unterschieden werden müssen. Die Kante orientiert sich an der Auswahl ihrer Querrichtung und läuft von der ersten zum zweiten Scheitelpunkt. Wenn die beiden Punkte gleich sind, ist der Rand eine Selbstschleife. Die Domäne der Kante enthält keine Grenzen und 0 <unk> . Mit einer Kante verknüpft, kann eine geometrische Kurve sein, um den Rand in einem Koordinatenraum zu lokalisieren, der durch den Untertyp der Kantenkurve dargestellt wird. Die Kurve soll endlos und nicht selbstständig innerhalb des Bereichs der Kante kreuzen. Eine Kante ist ein Diagramm, so seine Vielfältigkeit M und Graphen Gen G e kann durch den Graph Traversal Algorithmus bestimmt werden. Seit M E 1 reduziert sich die Euler Gleichung 1 im Fall auf Bild .. . .. Zahlen ifcedge math1.gif wo V 1 oder 2, und G e 1 oder 0. Konkret soll der topologische Rand die Daten definieren, eine Kante zu befriedigen hat zwei Punkte Bild . .. .. Zahlen ifcedge math2.gif die Eckpunkte müssen nicht klar sein Bild . .. .. Zahlen ifcedge math3.gif Gleichung soll Bild .. .. .. .. Figuren ifcedge math4.gif NOTE Entity angepasst von Kante in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Rand hat Dimensionalität 1. 2. Der Umfang einer Kante soll endlich und nicht null sein."
+#:IFC.xml:38107
+msgid "IfcRoad_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:49088
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+msgid "IfcRoad_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "Startpunkt Scheitelpunkt der Kante."
+#:IFC.xml:38114
+msgid "IfcRoadPart"
+msgstr "IfcRoadPart"
 
-#:IFC.xml:49100
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+#:IFC.xml:38115
+msgid "IfcRoadPart_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "Endpunkt des Kantenpunktes. Der gleiche Scheitelpunkt kann sowohl für EdgeStart als auch für EdgeEnd verwendet werden."
+msgid "IfcRoadPart_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:49136
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgekurve"
+#:IFC.xml:38122
+msgid "IfcRoadPartTypeEnum"
+msgstr "IfcRoadPartTypeEnum"
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "Ein [[IfcEdgeCurve]] definiert zwei Punkte, die topologisch verbunden sind, einschließlich der geometrischen Darstellung der Verbindung. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Kante zu schneiden. Es besteht keine Notwendigkeit, den Rand geometrisch zu schneiden, um mit der Topologie übereinzustimmen. EXAMPLE Abbildung 1 illustriert ein Beispiel, in dem die Kantengeometrie durch eine unbegrenzte Kurve gegeben wird, hier [[IfcCircle]]. Die Grenzen werden von EdgeStart und EdgeEnd bereitgestellt, die topologische Richtung des [[IfcEdgeCurve]] wendet sich gegen die Richtung des [[IfcCircle]] von SameSense FALSE. Abbildung 1 Kantenkurve . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenkurve ist ein spezieller Subtyp der Kante, der seine Geometrie vollständig definiert hat. Die Geometrie wird durch die Verknüpfung der Kante mit einer Kurve definiert, die unbegrenzt sein kann. Da die topologischen und geometrischen Richtungen abgelehnt werden können, mit einem Indikator identifiziert wird, ob Kanten- und Kurvenrichtung übereinstimmen oder dagegen sind. Der boolesche Wert gibt an, ob die Kurvenrichtung mit TRUE übereinstimmt oder in der entgegengesetzten Richtung FALSE zur Kantenrichtung ist. Jede Geometrie, die mit den Eckpunkten der Kante verbunden ist, entspricht der Kantengeometrie. Mehrere Kanten können die gleiche Kurve referenzieren. HINWEISE Entität, angepasst von Kantenkurve in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne der Kantenkurve ist formell als Domäne ihrer Kantengeometrie definiert, wie sie von den Eckpunkten beschnitten wird. Diese Domäne enthält nicht die Eckpunkte. 2. Eine Kantenkurve hat nicht Null endlichen Umfang. 3. Eine Kantenkurve ist ein Krümmer. 4. Eine Kantenkurve ist arktisch verbunden. 5. Der Kantenstart ist kein Teil der Kantendomäne. 6. Das Kantenende ist kein Teil der Kantendomäne. 7. Wirbelgeometrie soll mit der Kantengeometrie übereinstimmen."
+msgid "IfcRoadPartTypeEnum_DEFINITION"
+msgstr "The predefined type container that collects all possible road facility part types together into the implemented enumeration. Items ROADSIDEPART A general concept for various parts of the Roadside. NOTE Examples of roadside parts may be side slopes, roadside ditches, back slopes, bunds etc. BUS STOP Lateral part of Road for stopping buses allowing them to draw out of the traffic lanes and wait for short periods. HARDSHOULDER A type of Shoulder that is surfaced, providing for safe use by vehicles in distress. NOTE Definition from ISO 6707 1 surfaced strip, adjacent to and abutting a carriageway, intended for use by vehicles in the event of difficulty or during obstruction of the carriageway, Emergency lane, Service lane, US . INTERSECTION At grade junction where two or more roads meet or cross. Intersections may be further classified by number of road segments, traffic controls, and or lane design. PASSINGBAY A lateral part of Road that is a widening of an otherwise single lane road where a vehicle may move over to enable another vehicle to pass. ROADWAYPLATEAU Lateral part of Road comprising the carriageway s , shoulders and medians. ROADSIDE A lateral RoadPart located along the Road adjoining the outer edges of the Shoulders. A general concept comprising the areas outside RoadwayPlateau not intended for vehicles. REFUGEISLAND A raised platform or a guarded area so sited in the carriageway as to divide the streams of traffic and to provide a safety area for pedestrians. TOLLPLAZA A part of road facility where tolls are collected for use of toll road, tunnel or bridge. CENTRALRESERVE Lateral RoadPart separating two carriageways of the same road or separating traffic lanes and sidewalk. NOTE Definition from ISO 6707 1 area that separates the carriageways of a road with dual carriageways, US Median, UK Central reservation . SIDEWALK A footpath along the side of a road. May accommodate moderate changes in grade elevation and is normally separated from the vehicular section by a kerb. There may be a central reserve or road verge between the sidewalk and traffic lanes. NOTE Definition from ISO 6707 1 portion of a road reserved exclusively for pedestrians, Sidewalk, Walkway, US footway . PARKINGBAY Lateral part of Road for parking vehicles. NOTE Definition from ISO 6707 1 Area intended, and usually designated and marked, for the parking of a vehicle. RAILWAYCROSSING At grade crossing between road and railway. PEDESTRIAN CROSSING Designated level crossing over a road for pedestrians. SOFTSHOULDER A type of Shoulder that is not surfaced. NOTE Definition from ISO 6707 1 strip alongside a carriageway not intended to support vehicular traffic. NOTE Definition from PIARC Shoulder not intended to support vehicular traffic. BICYCLECROSSING Designated level crossing over a road for cyclists. CENTRALISLAND The center of a roundabout not intended for traffic, can be painted or upraised. SHOULDER A lateral part of Road adjacent to, and usually at the same level as the Carriageway not intended for vehicular traffic but may be used in case of emergency. NOTE Definition from ISO 6707 1 part of a highway alongside a carriageway and at approximately the same level, exclusive of embankment or cutting slopes, Shoulder, US . NOTE Definition from PIARC Part of the roadway between the carriageway and the ditch or the cutting or embankment slope, which gives the carriageway lateral support. TRAFFICLANE Lateral part of carriageway designated to vehicular traffic for a particular purpose. NOTE Definition from ISO 6707 1 strip of carriageway intended to accommodate a single line of moving vehicles, frequently defined by road markings. ROADSEGMENT Longitudinal, linear segment of a road, either defined by uniform characteristics, or as a transition segment e.g. number of lanes changing . ROUNDABOUT Type of at grade junction at which traffic streams are directed around a circle. NOTE Definition from ISO 6707 1 portion of a road usually at a junction, on which traffic moves in one direction around a central element. LAYBY A lateral part of Road where vehicles can divert from ordinary stream of traffic. CARRIAGEWAY Unitary lateral part of Road built for traffic. Carriageway may comprise several kinds of traffic lanes and lay bys, as well as traffic islands, and in case of dual carriageway road they are separated by central reserve. NOTE Definition from ISO 6707 1 part of the road or highway constructed for use by vehicular traffic, including auxiliary traffic lanes, passing places, and lay bys US Roadway . TRAFFICISLAND A central or subsidiary area raised or marked on the carriageway, generally at a road junction or level crossing, shaped and placed so as to direct traffic movement and or provide refuge for pedestrians. USERDEFINED User defined type NOTDEFINED Undefined type."
 
-#:IFC.xml:12197
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "Kantengeometrie"
+#:IFC.xml:38151
+msgid "IfcRoadPartTypeEnum_BICYCLECROSSING"
+msgstr "BICYKLECROSSING"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "Die Kurve, die die Form und räumliche Position der Kante definiert. Diese Kurve kann unbegrenzt sein und wird implizit durch die Eckpunkte der Kante, die die Randdomäne definiert, getrimmt. Mehrere Kanten können die gleiche Kurve referenzieren."
+msgid "IfcRoadPartTypeEnum_BICYCLECROSSING_DEFINITION"
+msgstr "Benennte Ebene Überquerung über eine Straße für Radfahrer."
 
-#:IFC.xml:49137
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+#:IFC.xml:38152
+msgid "IfcRoadPartTypeEnum_BUS_STOP"
+msgstr "BUS STOP"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Dieses logische Flag gibt an, ob TRUE oder nicht FALSE die Sinne der Kante und die Kurve der Kantengeometrie gleich sind. Der Sinn für eine Kante ist vom Kantenstartpunkt bis zum Kantenpunkt der Sinn für eine Kurve in Richtung der Erhöhung des Parameters."
+msgid "IfcRoadPartTypeEnum_BUS_STOP_DEFINITION"
+msgstr "Der zweite Teil der Straße zum Halten von Bussen, die es ihnen ermöglichen, aus den Verkehrswegen zu ziehen und für kurze Zeiträume zu warten."
 
-#:IFC.xml:49145
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+#:IFC.xml:38153
+msgid "IfcRoadPartTypeEnum_CARRIAGEWAY"
+msgstr "CARRIAGEWAY"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenschleife ist eine Schleife mit einem nicht null-weiten Ausmaß. Es ist ein Pfad, in dem die Anfangs- und Endpunkte gleich sind. Ihre Domäne, falls vorhanden, ist eine geschlossene Kurve. Eine Kantenschleife kann sich überlappen. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. Die Gattung des [[IfcEdgeLoop]] soll 1 oder größer sein. 2. Die Euler-Formel soll eine befriedigende Anzahl der Genen der Ränder 1 3 sein. Es darf kein Rand mehr als einmal von demselben [[IfcEdgeLoop]] mit demselben Sinn referenziert werden. Zu diesem Zweck wird eine Kante, die keine Orientierung ist, mit dem Sinn TRUE als referenziert."
+msgid "IfcRoadPartTypeEnum_CARRIAGEWAY_DEFINITION"
+msgstr "Einheitlicher Seitenteil der Straße gebaut für den Verkehr. Der Carriageway kann mehrere Arten von Verkehrswegen und Läden sowie Verkehrsinseln umfassen, und im Falle einer zweigleisigen Straße werden sie durch eine zentrale Reserve getrennt. HINWEISE Definition von ISO 6707 1 Teil der Straße oder Autobahn, die für die Nutzung durch den Kraftfahrzeugverkehr konstruiert wurde. Mit Hilfe von Nebenverkehrswegen, vorbei an Orten und Laien Busse US Roadway ."
 
-#:IFC.xml:49153
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Kantenliste"
+#:IFC.xml:38154
+msgid "IfcRoadPartTypeEnum_CENTRALISLAND"
+msgstr "ZENTRALISLAND"
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "Eine Liste von orientierten Randeinheiten, die zu diesem Pfad zusammengefasst werden."
+msgid "IfcRoadPartTypeEnum_CENTRALISLAND_DEFINITION"
+msgstr "Das Zentrum eines Kreisverkehrs, der nicht für den Verkehr bestimmt ist, kann gemalt oder aufgestockt werden."
 
-#:IFC.xml:49146
-msgid "IfcEdgeLoop_Ne"
-msgstr "Ne"
+#:IFC.xml:38155
+msgid "IfcRoadPartTypeEnum_CENTRALRESERVE"
+msgstr "CENTRALRESERVE"
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "Die Anzahl der Elemente in der Kantenliste."
+msgid "IfcRoadPartTypeEnum_CENTRALRESERVE_DEFINITION"
+msgstr "Lateral RoadPart trennt zwei Autobahnen derselben Straße oder trennt Verkehrswege und Gehwege. HINWEISE Definition von ISO 6707 1 Bereich, der die Verkehrswege einer Straße mit zwei Autobahnen trennt, US Median, UK Central Reservierung ."
 
-#:IFC.xml:49165
-msgid "IfcFace"
-msgstr "IfcFace"
+#:IFC.xml:38156
+msgid "IfcRoadPartTypeEnum_HARDSHOULDER"
+msgstr "HARDSHOULDER"
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+msgid "IfcRoadPartTypeEnum_HARDSHOULDER_DEFINITION"
+msgstr "Eine Art von Schulter, die verdeckt ist, die eine sichere Verwendung von Fahrzeugen in Notlage ermöglicht. HINWEISE Definition von ISO 6707 1 oberflächlicher Streifen, angrenzend an und abquetschen einer Straße Für den Einsatz durch Fahrzeuge im Falle von Schwierigkeiten oder während der Behinderung der Fahrbahn, Notfallspur, Service Lane, US ."
 
-#:IFC.xml:27099
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+#:IFC.xml:38157
+msgid "IfcRoadPartTypeEnum_INTERSECTION"
+msgstr "ABSCHNITT"
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+msgid "IfcRoadPartTypeEnum_INTERSECTION_DEFINITION"
+msgstr "An der Kreuzung zwischen zwei oder mehr Straßen treffen oder kreuzen. Kreuzungen können nach der Anzahl der Straßensegmente, der Verkehrskontrolle und der Spurengestaltung weiter klassifiziert werden."
 
-#:IFC.xml:49168
-msgid "IfcFace_Bounds"
-msgstr "Grenzen"
+#:IFC.xml:38158
+msgid "IfcRoadPartTypeEnum_LAYBY"
+msgstr "LAYBY"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Grenzen des Gesichts."
+msgid "IfcRoadPartTypeEnum_LAYBY_DEFINITION"
+msgstr "Ein seitlicher Teil der Straße, in dem Fahrzeuge vom normalen Verkehrsstrom abgeleitet werden können."
 
-#:IFC.xml:49180
-msgid "IfcFaceBound"
-msgstr "IfcFaceBound"
+#:IFC.xml:38159
+msgid "IfcRoadPartTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face bound ist eine Schleife, die zum Bewegen eines Gesichts verwendet werden soll. HINWEISE Entität, angepasst an Gesichtsbindung definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+msgid "IfcRoadPartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-#:IFC.xml:49188
-msgid "IfcFaceBound_Bound"
-msgstr "Verbunden"
+#:IFC.xml:38160
+msgid "IfcRoadPartTypeEnum_PARKINGBAY"
+msgstr "PARKINGBAY"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "Die Schleife, die als Gesichtsgrenze verwendet wird."
+msgid "IfcRoadPartTypeEnum_PARKINGBAY_DEFINITION"
+msgstr "Lateraler Teil der Straße für Parkfahrzeuge. HINWEISE Definition von ISO 6707 1 Bereich beabsichtigt, und in der Regel gekennzeichnet und für den Parkplatz eines Fahrzeugs."
 
-#:IFC.xml:49181
-msgid "IfcFaceBound_Orientation"
-msgstr "Ausrichtung"
+#:IFC.xml:38161
+msgid "IfcRoadPartTypeEnum_PASSINGBAY"
+msgstr "PASSINGBAY"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Dies zeigt an, ob TRUE oder nicht FALSE die Schleife den gleichen Sinn hat, wenn sie verwendet wird, um das Gesicht zu binden wie bei der ersten Definition. Wenn Sinn FALSE ist, werden die Sinne aller Komponentenkanten implizit umkehrt, wenn sie im Gesicht verwendet werden."
+msgid "IfcRoadPartTypeEnum_PASSINGBAY_DEFINITION"
+msgstr "Ein seitlicher Teil der Straße, der eine Vergrößerung einer sonst nur spurigen Straße darstellt, in der ein Fahrzeug umziehen kann, um ein anderes Fahrzeug zu passieren."
 
-#:IFC.xml:49200
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+#:IFC.xml:38162
+msgid "IfcRoadPartTypeEnum_PEDESTRIAN_CROSSING"
+msgstr "PEDESTRIAL KROSSING"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carry the additional semantics of defining a outer boundary on the face. Es darf nicht mehr als eine Grenze eines Gesichts dieser Art sein. HINWEISE Entität, angepasst an die Oberfläche nach ISO 10303 42. HISTORY Neue Entität in IFC1.0"
+msgid "IfcRoadPartTypeEnum_PEDESTRIAN_CROSSING_DEFINITION"
+msgstr "Benennte Ebene überqueren eine Straße für Fußgänger."
 
-#:IFC.xml:49203
-msgid "IfcFaceSurface"
-msgstr "IfcFaceOberfläche"
+#:IFC.xml:38163
+msgid "IfcRoadPartTypeEnum_RAILWAYCROSSING"
+msgstr "RAILWAYKROSSING"
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "Die [[IfcFaceSurface]] definiert die zugrunde liegende Geometrie der zugehörigen Oberfläche auf dem Gesicht. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Oberfläche zu schneiden. Es besteht keine Notwendigkeit, die Oberfläche geometrisch an die Topologie anzupassen. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Oberflächenoberfläche ist ein Untertyp von Gesicht, in dem die Geometrie durch eine zugehörige Oberfläche definiert wird. Der Teil der Oberfläche, der vom Gesicht verwendet wird, soll als offene Scheibe einbettbar sein, eventuell mit Löchern. Allerdings muss die Vereinigung des Gesichts mit den Kanten und den Eckpunkten seiner Randschleifen nicht in die Ebene eingebettet sein. Es kann zum Beispiel eine ganze Sphäre oder einen ganzen Torus umfassen. Da sowohl eine Fläche als auch eine geometrische Oberfläche normale Richtungen definiert haben, ein BOOLEAN Flag wird verwendet, um anzugeben, ob die Oberfläche normal mit TRUE übereinstimmt oder ob FALSE die normale Richtung des Gesichts ablehnt. Die Geometrie, die mit jeder Komponente der Schleifen des Gesichts verbunden ist, soll mit der Oberflächengeometrie übereinstimmen. in dem Sinne, dass die Domänen aller Scheitelpunkte und Kantenkurven in der Gesichtsgeometrie enthalten sind. Eine Oberfläche kann von mehreren Flächen referenziert werden. HISTORY New entity in IFC2x .spec head Informal Propositions 1. Die Domäne der Oberfläche ist formell als Domäne ihrer Gesichtsgeometrie definiert, wie sie von den Schleifen beschnitten wird, diese Domain enthält nicht die Grenzschleifen. 2. Eine Oberfläche hat nicht null Finite Ausmaß. 3. Eine Oberfläche ist ein Krümmer. 4. Eine Flächenoberfläche ist in arktischer Hinsicht verbunden. 5. Eine Oberflächenoberfläche hat die Gattung 0. 6. Die Schleifen sind nicht Teil der Gesichtsdomäne 7. Die Schleifengeometrie soll mit der Gesichtsgeometrie übereinstimmen. Dies bedeutet, dass alle Kantenkurven oder Scheitelpunkte, die bei der Definition der Schleifen an der Oberfläche verwendet werden, auf der Gesichtsgeometrie liegen sollen. 8. Die Schleifen des Gesichts werden nicht durchschneiden."
+msgid "IfcRoadPartTypeEnum_RAILWAYCROSSING_DEFINITION"
+msgstr "An der Kreuzung zwischen Straße und Schiene."
 
-#:IFC.xml:13225
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Gesichtsfläche"
+#:IFC.xml:38164
+msgid "IfcRoadPartTypeEnum_REFUGEISLAND"
+msgstr "REFUGEISLAND"
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "Die Oberfläche, die die innere Form des Gesichts definiert. Die Domäne des Gesichts wird durch diese Oberfläche und die Begrenzungsschleifen in dem geerbten Attribut SELF FaceBounds definiert."
+msgid "IfcRoadPartTypeEnum_REFUGEISLAND_DEFINITION"
+msgstr "Eine erhöhte Plattform oder ein bewachtes Gebiet, das so in der Fahrbahn platziert ist, um die Ströme des Verkehrs zu teilen und ein Sicherheitsgebiet für Fußgänger zu schaffen."
 
-#:IFC.xml:49204
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+#:IFC.xml:38165
+msgid "IfcRoadPartTypeEnum_ROADSEGMENT"
+msgstr "ROADSEGMENT"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Diese Flagge zeigt an, ob der Sinn der normalen Oberfläche mit TRUE übereinstimmt, oder ist gegen FALSE , den Sinn der topologischen normal auf das Gesicht."
+msgid "IfcRoadPartTypeEnum_ROADSEGMENT_DEFINITION"
+msgstr "Längs- und lineares Segment einer Straße, entweder durch einheitliche Merkmale oder als Übergangsteil definiert, z.B. Anzahl der Wechselspuren."
 
-#:IFC.xml:49212
-msgid "IfcLoop"
-msgstr "IfcLoop"
+#:IFC.xml:38166
+msgid "IfcRoadPartTypeEnum_ROADSIDE"
+msgstr "ROADSIDE"
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Schleife ist ein topologisches Gebilde, das aus einem einzigen Scheitel gebaut wurde, oder durch die Verbindung von verbundenen Kanten oder linearen Segmenten, die am selben Scheitelpunkt beginnen und enden. Es wird in der Regel verwendet, um ein Gesicht auf einer Oberfläche zu binden. Eine Schleife hat eine Dimensionalität von 0 oder 1. Die Domäne einer 0 dimensionalen Schleife ist ein einzelner Punkt. Die Domäne einer 1-dimensionalen Schleife ist eine verbundene, orientierte Kurve, muss aber nicht vielfältig sein. Da die Schleife ein Kreis ist, ist die Position des Anfangspunktes willkürlich. Die Domäne der Schleife enthält ihre Grenzen, ein 0 <unk> . Eine Schleife wird durch einen einzelnen Scheitel oder durch eine geordnete Sammlung von orientierten Kanten oder durch eine geordnete Punktesammlung repräsentiert. Eine Schleife ist ein Diagramm, so M und die Graphen G l können durch den Graph Traversal Algorithmus bestimmt werden. Seit M 1, die Euler Gleichung 1 reduziert in diesem Fall auf Bild .. .. .. Zahlen ifcloop math1. wenn V und E l sind die Anzahl der eindeutigen Knoten und orientiert Kanten in der Schleife und G l ist die Gattung der Schleife. HINWEISE Entität, angepasst von Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Eine Schleife hat einen endlichen Umfang. 2. Eine Schleife beschreibt eine geschlossene topologische Kurve mit zufälligen Anfangs- und Endpunkten."
+msgid "IfcRoadPartTypeEnum_ROADSIDE_DEFINITION"
+msgstr "Ein seitlicher RoadPart befindet sich entlang der Straße, die an die äußeren Kanten der Schultern angrenzt. Ein allgemeines Konzept, das die Bereiche außerhalb des Straßenbahnplatzes umfasst, die nicht für Fahrzeuge bestimmt sind."
 
-#:IFC.xml:49215
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail ALoop"
+#:IFC.xml:38167
+msgid "IfcRoadPartTypeEnum_ROADSIDEPART"
+msgstr "ROADSIDEPART"
 
-#:IFC.xml:49223
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+msgid "IfcRoadPartTypeEnum_ROADSIDEPART_DEFINITION"
+msgstr "Ein allgemeines Konzept für verschiedene Teile der Straße."
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Seine Domäne ist, wenn auch gegenwärtig, eine endliche, verbundene, zweimalige mit Grenze, aber nicht eine geschlossene Oberfläche. Man kann sie als geschlossene Schale mit einem oder mehreren Löchern in der Schale betrachten. Die Domäne einer offenen Shell erfüllt 0 <unk> 1. Eine offene Shell ist funktionell allgemeiner als ein Gesicht, da ihre Domäne Griffe haben kann. Die Shell wird durch eine Sammlung von Gesichtern definiert, die orientiert sein können. Der Gesichtssinn nach Berücksichtigung der Orientierung stimmt mit der unten definierten Shell überein. Die Orientierung kann direkt als BOOLEAN-Attribut eines orientierten Gesichts geliefert werden oder TRUE standardmäßig sein, wenn das Shell-Mitglied ein Gesicht ohne Orientierungsmerkmal ist. Die folgenden kombinatorischen Beschränkungen für offene Shells und geometrische Einschränkungen ihrer Domänen sind entworfen, zusammen mit den informellen Anträgen, um sicherzustellen, dass jede Domäne, die mit einer offenen Shell verbunden sind, ein Orientierungsmanöver ist. Jede Gesichtsreferenz soll einmalig sein, eine offene Shell soll mindestens ein Gesicht haben. Ein bestimmtes Gesicht kann in mehr als einer offenen Shell existieren. Die Grenze einer offenen Shell besteht aus den Kanten, auf die nur einmal die Gesichtsgrenzschleifen ihrer Gesichter verweisen, zusammen mit allen ihren Ecken. Die Domäne einer offenen Muschel, wenn vorhanden, enthält alle Kanten und Eckpunkte ihrer Gesichter. HINWEIS: Dies unterscheidet sich leicht von der Definition einer Gesichterdomäne, die keine ihrer Grenzen enthält. Zum Beispiel kann eine Gesichts-Domain ein isoliertes Punkt- oder Liniensegment ausschließen. Eine offene Shell-Domain darf dies nicht tun. Siehe den Algorithmus für die Berechnung unten. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Jede Kante soll genau zweimal von den Gesichtsgrenzen des Gesichts referenziert werden. Jede orientierte Kante soll einzigartig sein. 3. Kein Rand soll von mehr als zwei Gesichtern referenziert werden. 4. Unterschiedliche Gesichter der Shell kreuzen sich nicht, sondern können Kanten oder Knoten teilen. 5. Unterschiedliche Kanten schneiden sich nicht ab, sondern können die Eckpunkte teilen. 6. Die Schleifen der Schale sind keine Mischung aus Poly-Schleifen und anderen Schleifentypen. Beachten Sie, dass dies angegeben ist, da nur Poly-Schleife als Gesichterkennung definiert ist. Die geschlossene Schale soll ein in arktischer Richtung angeordneter 2 Krümmer sein."
+#:IFC.xml:38168
+msgid "IfcRoadPartTypeEnum_ROADWAYPLATEAU"
+msgstr "ROADWAYPLATEAU"
 
-#:IFC.xml:49227
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedRand"
+msgid "IfcRoadPartTypeEnum_ROADWAYPLATEAU_DEFINITION"
+msgstr "Die Straßenbahn ist der zweitgrößte Teil der Straße, die den Straßenverkehr , Schultern und Medianern anbietet."
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "Die [[IfcOrientedEdge]] repräsentiert ein [[IfcEdge]] mit einem angewendeten Orientierungszeichen. Es erlaubt die Wiederverwendung des gleichen [[IfcEdge]], wenn es genau zweimal durchquert wird, einmal vorwärts und einmal rückwärts. HINWEIS: Der Sinn des normalen [[IfcFace]] wird ausschließlich von den Kanten bestimmt. Wenn alle Kanten des Gesichts entgegen dem Uhrzeigersinn nach den Kantenausrichtungen verbunden sind, zeigt das Gesicht normal nach außen. Die Normale der zugrunde liegenden [[IfcFaceSurface]] repräsentiert die Geometrie des Gesichts hierfür, hat keine Relevanz. Der Zweck des [[IfcFaceSurface]]. ameSense Attribut ist es, zusätzliche Informationen zu Überprüfungszwecken zu geben. SameSense TRUE bedeutet, dass die Oberfläche normal und das Gesicht normal sind die gleichen, SameSense FALSE bedeutet, dass sie in entgegengesetzter Richtung sind. Der wiederverwendete Rand mit einer geometrischen Darstellung als [[IfcEdgeCurve]] definiert die Kante im 3D-Koordinatenraum. In einigen Fällen, insbesondere bei der Verwendung von elementaren oder gefegten Oberflächen, besteht die Gefahr einer ungenauen Kartierung des 3D-x, y, z [[IfcEdgeCurve]] auf die angrenzenden Oberflächen, um die Grenzen dieser Oberflächen zu bestimmen. Die optionale CurveOnSurface definiert den 2D u, v Rand innerhalb des parametrischen Raumes der Oberfläche. Es könnte verwendet werden, um die Richtigkeit der Zuordnung des 3D [[IfcEdgeCurve]] auf dieser Oberfläche zu ermitteln. EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem die KurveOnSurface zusätzlich zur Kurvengeometrie der [[IfcEdgeCurve]] zur Verfügung gestellt wird. Abbildung 1 Kurve auf Oberflächendarstellung eines [[IfcOrientedEdge]] . xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine orientierte Kante ist ein Rand aus einer anderen Kante konstruiert und enthält ein BOOLEAN-Richtungsflagge, um anzugeben, ob die Ausrichtung der konstruierten Kante mit der Ausrichtung der ursprünglichen Kante übereinstimmt. Außer vielleicht Orientierung, entspricht die Ausrichtung der Kante der ursprünglichen Kante. Eine gängige Praxis ist solide Modellierungssysteme ist eine Entität, die die Verwendung oder Durchquerung einer Kante darstellt. Diese Benutzungseinheit repräsentiert ausdrücklich die Anforderung in einem vielseitigen Festkörper, dass jede Kante genau zweimal durchquert werden muss, einmal in jede Richtung. Die Einsatzfunktionalität wird durch die kantenorientierte Subtyp-Kante zur Verfügung gestellt: NOTE Entity angepasst an die Ausrichtung von ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Das Attribut CurveOnSurface wurde hinzugefügt."
+#:IFC.xml:38169
+msgid "IfcRoadPartTypeEnum_ROUNDABOUT"
+msgstr "ROUNDABOUT"
 
-#:IFC.xml:49112
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Kantenelement"
+msgid "IfcRoadPartTypeEnum_ROUNDABOUT_DEFINITION"
+msgstr "Typisch an der Kreuzung, an der Verkehrsträger um einen Kreislauf geleitet werden. HINWEISE Definition ab ISO 6707 1 Teil einer Straße in der Regel an einer Kreuzung, an der sich der Verkehr in eine Richtung um ein zentrales Element bewegt."
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Kantenentität verwendet, um diesen orientierten Rand zu konstruieren."
+#:IFC.xml:38170
+msgid "IfcRoadPartTypeEnum_SHOULDER"
+msgstr "SHOULTER"
 
-#:IFC.xml:49228
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "SELF IfcEdgeEnd"
+msgid "IfcRoadPartTypeEnum_SHOULDER_DEFINITION"
+msgstr "Ein seitlicher Teil der Straße angrenzend und in der Regel auf der gleichen Ebene wie die Carriageway, die nicht für den Vehikelverkehr bestimmt ist, sondern im Notfall benutzt werden kann. HINWEISE Definition von ISO 6707 1 Teil einer Autobahn entlang einer Straße und auf etwa dem gleichen Niveau. exklusiv für Damm oder Schneidepisten, Schulter, USA . HINWEISE Definition von PIARC Teil der Straße zwischen der Straße und dem Graben oder der Schneid- oder Schlepphalle, die die seitliche Unterstützung des Wagens gibt."
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeEnd"
+#:IFC.xml:38171
+msgid "IfcRoadPartTypeEnum_SIDEWALK"
+msgstr "SIDEWALK"
 
-#:IFC.xml:49232
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdgeStart"
+msgid "IfcRoadPartTypeEnum_SIDEWALK_DEFINITION"
+msgstr "Ein Fußweg entlang der Seite einer Straße. Kann gemäßigte Änderungen in der Höhe und ist normalerweise getrennt von der Vehicular Abschnitt durch ein Kerosin. Es kann ein zentrales Reserve- oder Straßenrand zwischen den Gehwegen und den Verkehrswegen geben. HINWEISE Definition ab ISO 6707 1 Teil einer Straße ausschließlich für Fußgänger, Sidewalk, Walkway, US Footway reserviert ."
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "SELF [[IfcEdge]].EdgeStart"
+#:IFC.xml:38172
+msgid "IfcRoadPartTypeEnum_SOFTSHOULDER"
+msgstr "SOFTSHOULDER"
 
-#:IFC.xml:49236
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Ausrichtung"
+msgid "IfcRoadPartTypeEnum_SOFTSHOULDER_DEFINITION"
+msgstr "Eine Art Schulter, die nicht oberflächlich ist, HINWEISE Definition von ISO 6707 1 Streifen neben einer Fahrbahn, die nicht zur Unterstützung des Fahrzeugverkehrs bestimmt ist. HINWEISE Definition von PIARC Schulter nicht zur Unterstützung des Ventilverkehrs."
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, Wenn TRUE die verwendete topologische Ausrichtung mit der Orientierung vom Startpunkt bis zum Endpunkt des Kantenelementes übereinstimmt. Falls FALSE andernfalls der Fall ist."
+#:IFC.xml:38173
+msgid "IfcRoadPartTypeEnum_TOLLPLAZA"
+msgstr "TOLLPLAZA"
 
-#:IFC.xml:49255
-msgid "IfcPath"
-msgstr "IfcPath"
+msgid "IfcRoadPartTypeEnum_TOLLPLAZA_DEFINITION"
+msgstr "Ein Teil der Straßenanlage, wo Mautgebühren für Mautstraßen, Tunnel oder Brücke erhoben werden."
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Ein Pfad ist ein topologisches Gebilde, das aus einer bestellten Sammlung von orientierten Kanten besteht. so dass der Kantenpunkt jeder Kante mit dem Kantenende seines Vorgängers übereinstimmt. Der Pfad wird vom Kantenstart der ersten Kante bis zum Kantenende der letzten Kante sortiert. Der BOOLEAN-Wertesinn in der Ausrichtung zeigt an, ob die Kantenrichtung mit der Richtung des Pfades TRUE übereinstimmt oder die entgegengesetzte Richtung FALSE ist. Eine einzelne Kante kann nur einmal durch einen individuellen Pfad referenziert werden. Eine Kante kann unabhängig von einem Pfad existieren, NOTE Entität, angepasst an den Pfad ISO 10303 42. HISTORY Neue Entität in IFC2.0 .spec Kopf Informelle Vorschläge 1. Ein Pfad hat Dimensionalität 1. 2. Ein Pfad ist arktisch verbunden. 3. Die Kanten des Pfades überschneiden, außer bei den gängigen Ecken. 4. Ein Pfad hat einen endlichen, nicht null-weiten Umfang."
+#:IFC.xml:38174
+msgid "IfcRoadPartTypeEnum_TRAFFICISLAND"
+msgstr "TRAFFICISCHE"
 
-#:IFC.xml:49243
-msgid "IfcPath_EdgeList"
-msgstr "Kantenliste"
+msgid "IfcRoadPartTypeEnum_TRAFFICISLAND_DEFINITION"
+msgstr "Ein zentrales oder subsidiäres Gebiet auf der Straße erhöht oder markiert Form, um Verkehrsbewegungen zu steuern oder Zuflucht für Fußgänger zu bieten."
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "Die Liste der Orientierungskanten, die zu diesem Pfad verkettet werden."
+#:IFC.xml:38175
+msgid "IfcRoadPartTypeEnum_TRAFFICLANE"
+msgstr "TRAFFICLANE"
 
-#:IFC.xml:49258
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+msgid "IfcRoadPartTypeEnum_TRAFFICLANE_DEFINITION"
+msgstr "Lateraler Teil der Straßenbahn, die für einen bestimmten Zweck bestimmt ist. HINWEISE Definition von ISO 6707 1 Streifen mit dem Ziel, eine einzige Linie von beweglichen Fahrzeugen zu unterbringen, die häufig durch Straßenmarkierungen definiert werden."
 
-#:IFC.xml:49266
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+#:IFC.xml:38176
+msgid "IfcRoadPartTypeEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Poly-Schleife ist eine Schleife mit geraden Kanten, die eine planare Region im Weltraum begrenzen. Eine Poly-Schleife ist eine Schleife der Gattung 1, bei der die Schleife durch eine geordnete koplanare Sammlung von Punkten repräsentiert wird, die die Eckpunkte der Schleife bilden. Die Schleife besteht aus geraden Liniensegmenten, die einen Punkt in der Sammlung zum erfolgreichen Punkt der Sammlung verbinden. Das Schlussteil ist vom letzten bis zum ersten Punkt der Sammlung. Die Richtung der Schleife ist in die Richtung der Liniensegmente. Eine Poly-Schleife soll den folgenden topologischen Zwängen entsprechen, die die Schleife hat die Gattung eins. die folgende Gleichung soll zufrieden sein Bild .. .. .. .. Zahlen ifcpolyloop math1. , wenn das [[IfcPolyLoop]] immer geschlossen ist und das letzte Segment aus dem letzten [[IfcCartesianPoint]] in der Liste der Polygon s zum ersten [[IfcCartesianPoint]] stammt. Daher soll der erste Punkt nicht am Ende der Liste wiederholt werden, auch nicht durch Verweis auf die selbe Instanz noch eine zusätzliche Instanz von [[IfcCartesianPoint]] zu verwenden, die die Koordinaten als ersten Punkt hat. HINWEIS Diese Einheit besteht in erster Linie zur Erleichterung der effizienten Kommunikation von facettierten B-Rep-Modellen. HINWEISE Entität, angepasst aus Poly-Schleife definiert in ISO 10303 42. HISTORY New Entity in IFC1. .spec Kopf Informelle Vorschläge 1. Alle Punkte im Polygon, die die Poly-Schleife definieren, sind Coplanar. 2. Der erste und letzte Polygon soll sich nach Wert unterscheiden."
+msgid "IfcRoadPartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ"
 
-#:IFC.xml:11814
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polygon"
+#:IFC.xml:38177
+msgid "IfcRoadTypeEnum"
+msgstr "IfcRoadTypeEnum"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Liste der Punkte, die die Schleife definieren. Es gibt keine wiederholten Punkte in der Liste."
+msgid "IfcRoadTypeEnum_DEFINITION"
+msgstr "Der vordefinierte Typbehälter, der alle möglichen Straßenanlagentypen in der implementierten Auflistung sammelt. Items BENUTZERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
 
-#:IFC.xml:49269
-msgid "IfcShell"
-msgstr "IfcShell"
+#:IFC.xml:38181
+msgid "IfcRoadTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
 
-#:IFC.xml:49270
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+msgid "IfcRoadTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A subedge ist eine Kante, deren Domain ist ein angeschlossener Teil der Domäne einer bestehenden Kante. Die topologischen Zwänge auf einem Untergrund sind identisch mit denen an einer Kante. HISTORY New Entity in IFC2x2 . pec Kopf Informelle Vorschläge 1. Die Domäne der Unterseite ist formell definiert als die Domäne des übergeordneten Randes, wie durch den subedge getrimmt starten Scheitelpunkt und subbedge End-Scheitelpunkt. (2) Der Startpunkt und der Endpunkt sollen innerhalb der Vereinigung der Domänen der Eckpunkte des Mutterrandes und der Domäne des Mutterrandes liegen."
+#:IFC.xml:38182
+msgid "IfcRoadTypeEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
 
-#:IFC.xml:49124
-msgid "IfcSubedge_ParentEdge"
-msgstr "Elternkante"
+msgid "IfcRoadTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "Die Kante oder das Subedge, die das Subed enthält."
+#:IFC.xml:38194
+msgid "Pset_BoundedCourseCommon"
+msgstr "Pset BoundedCourseCommon"
 
-#:IFC.xml:49273
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+msgid "Pset_BoundedCourseCommon_DEFINITION"
+msgstr "Immobilien für einen begrenzten Kurs."
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Die topologische Repräsentation ist der Supertyp für alle topologischen Repräsentation Elemente in der Geometrie. HINWEISE Entität, angepasst von topologischen Repräsentation Element definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.5"
+#:IFC.xml:38195
+msgid "SpreadingRate"
+msgstr "SpreadRate"
 
-#:IFC.xml:49276
-msgid "IfcVertex"
-msgstr "IfcVertex"
+msgid "SpreadingRate_DEFINITION"
+msgstr "Die nominale Gesamtmasse des Materials pro Fläche, die vom Kurs abgedeckt wird."
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A vertex ist das topologische Konstrukt entsprechend einem Punkt. Es hat Dimensionalität 0 und Umfang 0. Die Domäne eines Scheitelpunktes ist, wenn vorhanden, ein Punkt in m dimensionalen realen Raum R M. Dies wird durch den Scheitelpunkt Untertyp repräsentiert. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Scheitel hat Dimensionalität 0. Dies ist eine grundlegende Eigenschaft des Scheitelpunkts. 2. Der Umfang eines Scheitelpunkts ist auf Null definiert."
+#:IFC.xml:38201
+msgid "Pset_CourseApplicationConditions"
+msgstr "Pset Kursanwendungsbedingungen"
 
-#:IFC.xml:49291
-msgid "IfcVertexLoop"
-msgstr "IfcVertexschleife"
+msgid "Pset_CourseApplicationConditions_DEFINITION"
+msgstr "Immobilien bezüglich der Bedingungen bei der Anwendung eines Kurses."
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Eine Vertex-Schleife ist eine Schleife aus Null Gattung, die aus einem einzelnen Scheitelpunkt besteht. Ein Scheitelpunkt kann unabhängig von einer Vertex-Schleife existieren. Die topologischen Daten sollen die folgende Einschränkung Bild .. .. .. Figuren ifcvertexloop math1.gif NOTE Entity adaptiert aus Vertex Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x2. .spec Kopf Informelle Vorschläge 1. Eine Kegelschleife hat Null Umfang und Dimensionalität. 2. Die Kegelschleife hat die Gattung 0."
+#:IFC.xml:38202
+msgid "ApplicationTemperature"
+msgstr "Anwendungstemperatur"
 
-#:IFC.xml:49279
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "Loop-Vertex"
+msgid "ApplicationTemperature_DEFINITION"
+msgstr "Zeigt die Umgebungstemperatur an, bei der der Kurs angewendet wird"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "Der Vertex, der die gesamte Schleife definiert."
+#:IFC.xml:38207
+msgid "WeatherConditions"
+msgstr "Wetterbedingungen"
 
-#:IFC.xml:49294
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+msgid "WeatherConditions_DEFINITION"
+msgstr "Zeigt die Wetterbedingungen während der Anwendung des Kurses an"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein Scheitelpunkt ist ein Scheitelpunkt, der seine Geometrie als Punkt definiert hat. HINWEISE Entität, angepasst vom Scheitelpunkt nach ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne des Scheitelpunkts ist formell als Domäne seines Scheitelpunktes definiert."
+#:IFC.xml:38213
+msgid "Pset_CourseCommon"
+msgstr "Pset KursCommon"
 
-#:IFC.xml:12785
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "VertexGeometrie"
+msgid "Pset_CourseCommon_DEFINITION"
+msgstr "Allgemeine Eigenschaften für Kurse."
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "Der geometrische Punkt, der die Position im geometrischen Raum des Scheitelpunkts definiert."
+#:IFC.xml:38219
+msgid "NominalThickness"
+msgstr "Nominaldicke"
+
+msgid "NominalThickness_DEFINITION"
+msgstr "Die Nenndicke des Objekts. Bei Inkonsistenz zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:38230
+msgid "Pset_KerbCommon"
+msgstr "KerbCommon ansetzen"
+
+msgid "Pset_KerbCommon_DEFINITION"
+msgstr "Immobilien für einen Kerb."
+
+#:IFC.xml:38231
+msgid "CombinedKerbGutter"
+msgstr "CombinedKerbGutter"
+
+msgid "CombinedKerbGutter_DEFINITION"
+msgstr "Angabe der Verwendung eines kombinierten Kerosins und Bindegusses."
+
+#:IFC.xml:38236
+msgid "Upstand"
+msgstr "Aufheben"
+
+msgid "Upstand_DEFINITION"
+msgstr "Der Höhenunterschied zwischen den beiden getrennten Oberflächen."
+
+#:IFC.xml:38242
+msgid "Pset_KerbStone"
+msgstr "Kerbstein anheben"
+
+msgid "Pset_KerbStone_DEFINITION"
+msgstr "Eigenschaften für Kerbensteine."
+
+#:IFC.xml:38258
+msgid "StoneFinishes"
+msgstr "Steinbruch"
+
+msgid "StoneFinishes_DEFINITION"
+msgstr "Eg. Poliert , Bush Hammered , Split , gesägt , Flammen"
+
+#:IFC.xml:38263
+msgid "TypeDesignation"
+msgstr "Typenbezeichnung"
+
+msgid "TypeDesignation_DEFINITION"
+msgstr "Typ-Designer für das Element. Der Inhalt hängt von lokalen Standards ab. z. B. Bullnase , Halbbatter , Dropper , Chamfer usw."
+
+#:IFC.xml:38269
+msgid "Pset_MarkingLinesCommon"
+msgstr "Pset MarkingLinesCommon"
+
+msgid "Pset_MarkingLinesCommon_DEFINITION"
+msgstr "Eigenschaften für Zeilenmarkierungen."
+
+#:IFC.xml:38270
+msgid "DashedLine"
+msgstr "DashedLine"
+
+msgid "DashedLine_DEFINITION"
+msgstr "Lege fest, ob die Zeile gestrichen oder kontinuierlich ist"
+
+#:IFC.xml:38275
+msgid "DashedLinePattern"
+msgstr "DashedLinePattern"
+
+msgid "DashedLinePattern_DEFINITION"
+msgstr "Zeigt das Muster für gestrichelte Linientypen an, z.B. 3 9"
+
+#:IFC.xml:38286
+msgid "Pset_OnSiteCastKerb"
+msgstr "Pset OnSiteCastKerb"
+
+msgid "Pset_OnSiteCastKerb_DEFINITION"
+msgstr "Immobilien für einen on-site cast kerb."
+
+#:IFC.xml:38298
+msgid "Pset_PavementCommon"
+msgstr "Pset PavementCommon"
+
+msgid "Pset_PavementCommon_DEFINITION"
+msgstr "Beschreibt die gemeinsamen Eigenschaften und die nominalen Dimensionen des Pflasters. Objektverdeutlichung Die Nominaldicke des Gehäuses bleibt konstant mit dem Wert von Nominaldicke, es sei denn, die Eigenschaft Nominaldicke wird zur Verfügung gestellt. In diesem Fall ist Nominaldicke der Wert am Anfang eines Übergangs in der Regel am Ort der Objektplatzierung . B. ein Straßenübergangsteil, bei dem das Straßenübergangsobjekt s lineare Platzierung entlang einer Ausrichtung bezeichnet wird und NominalThicknessEnd der Wert am Ende ist, wie durch die Eigenschaft NominalLänge angegeben. Bei lokalen Platzierungen wird benutzerdefiniert, anhand welcher Achsenlängen und -breiten gemessen werden."
+
+#:IFC.xml:38309
+msgid "NominalThicknessEnd"
+msgstr "NominalThicknessEnd"
+
+msgid "NominalThicknessEnd_DEFINITION"
+msgstr "Die nominale Dicke des Objekts nach einem Übergang von seinem ursprünglichen Wert. Neben der Formendarstellung und den darin verwendeten geometrischen Parametern werden auch die Größeninformationen zur Verfügung gestellt. Bei Inkonsistenz zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:38329
+msgid "StructuralSlope"
+msgstr "Struktur-Neigung"
+
+msgid "StructuralSlope_DEFINITION"
+msgstr "Der Nennseitenhang erlaubt die Steigung der Pflasterstruktur ohne Seitenneigung als Positivanteilsmessung. Die Hanginformationen werden neben der Formendarstellung und den darin verwendeten geometrischen Parametern zur Verfügung gestellt. Im Falle von Inkonsistenzen zwischen den geometrischen Parametern haben Vorrang. Der Wert ist typischerweise kleiner als 1,0 1 1, kann aber bei steileren Pisten größer sein als der Wert."
+
+#:IFC.xml:38334
+msgid "StructuralSlopeType"
+msgstr "StrukturSlopeType"
+
+msgid "StructuralSlopeType_DEFINITION"
+msgstr "Benutzerdefinierte Beschreibung des Hangtyps, der für die Pflasterstruktur verwendet wird, ohne Seitenauffüllung ."
+
+#:IFC.xml:38340
+msgid "Pset_PavementMillingCommon"
+msgstr "Pset PavementMillingCommon"
+
+msgid "Pset_PavementMillingCommon_DEFINITION"
+msgstr "Eigenschaften für die Pflasterfräse."
+
+#:IFC.xml:38352
+msgid "Pset_PavementSurfaceCommon"
+msgstr "Pset PavementSurfaceCommon"
+
+msgid "Pset_PavementSurfaceCommon_DEFINITION"
+msgstr "Eigenschaften für eine Bodenbelagsfläche."
+
+#:IFC.xml:38353
+msgid "PavementRoughness"
+msgstr "PavementRoughness"
+
+msgid "PavementRoughness_DEFINITION"
+msgstr "Eine Bewertung des funktionalen Zustands der Bodenfläche als Index nach dem International Roughness Index IRI ."
+
+#:IFC.xml:38358
+msgid "PavementTexture"
+msgstr "PavementTextur"
+
+msgid "PavementTexture_DEFINITION"
+msgstr "Charakterisierung der Straßenbautextur durch mittlere Profiltiefe NOTE Definition nach ISO 13473 1 2019"
+
+#:IFC.xml:38364
+msgid "Pset_PlantCommon"
+msgstr "PlantCommon"
+
+msgid "Pset_PlantCommon_DEFINITION"
+msgstr "Eigenschaften einer Pflanze."
+
+#:IFC.xml:38365
+msgid "BotanicalName"
+msgstr "BotanicalName"
+
+msgid "BotanicalName_DEFINITION"
+msgstr "Formaler wissenschaftlicher Name, der dem Internationalen Nomenklaturkodex für Algen, Pilze und Pflanzen entspricht"
+
+#:IFC.xml:38370
+msgid "LocalName"
+msgstr "Lokalname"
+
+msgid "LocalName_DEFINITION"
+msgstr "Der örtliche Name, unter dem die Pflanze bekannt ist."
+
+#:IFC.xml:38376
+msgid "Pset_PrecastKerbStone"
+msgstr "Pset PrecastKerbStone"
+
+msgid "Pset_PrecastKerbStone_DEFINITION"
+msgstr "Eigenschaften für vorgelagerten kerbstein."
+
+#:IFC.xml:38398
+msgid "Pset_RadiiKerbStone"
+msgstr "Pset RadiiKerbStone"
+
+msgid "Pset_RadiiKerbStone_DEFINITION"
+msgstr "Eigenschaften, die den Keb-Steinradii beschreiben."
+
+#:IFC.xml:38399
+msgid "CurveShape"
+msgstr "KurveForm"
+
+msgid "CurveShape_DEFINITION"
+msgstr "Form nach KurveShapeEnum"
+
+#:IFC.xml:38404
+msgid "Radius"
+msgstr "Radius"
+
+msgid "Radius_DEFINITION"
+msgstr "Der Radius des Objekts. Die Größeninformation wird neben der Formendarstellung und den geometrischen Parametern zur Verfügung gestellt. Bei Unstimmigkeiten zwischen den geometrischen Parametern und den Größeneigenschaften, die in der angeschlossenen Eigenschaftsmenge angegeben sind, haben die geometrischen Parameter Vorrang."
+
+#:IFC.xml:38410
+msgid "Pset_RoadDesignCriteriaCommon"
+msgstr "Pset RoadDesignCriteriaCommon"
+
+msgid "Pset_RoadDesignCriteriaCommon_DEFINITION"
+msgstr "An Straßenbauteilen angehängte Kriterien für die Gestaltung von Straßen."
+
+#:IFC.xml:38411
+msgid "Crossfall"
+msgstr "Kreuzschlag"
+
+msgid "Crossfall_DEFINITION"
+msgstr "Bestimmt den nominalen Kreuzgang als Verhältnismessung Neigung am Veranstaltungsort."
+
+#:IFC.xml:38416
+msgid "DesignSpeed"
+msgstr "Designgeschwindigkeit"
+
+msgid "DesignSpeed_DEFINITION"
+msgstr "Schnelligkeit bei der Gestaltung einer neuen Straße oder bei der Modernisierung, Stärkung oder Sanierung einer bestehenden Straßenabschnitt, um die verschiedenen geometrischen Konstruktionsmerkmale der Waggons zu bestimmen, die es einem Auto erlauben, bei dieser Geschwindigkeit sicher zu reisen, unter normalen Straßen- und Wetterbedingungen. HINWEISE Definition nach PIARC. Die Designgeschwindigkeit ist nicht konstant, kann aber variieren je nach den Bedingungen der Reliefebene, Hügel, Berg ."
+
+#:IFC.xml:38421
+msgid "DesignTrafficVolume"
+msgstr "DesignTrafficvolumen"
+
+msgid "DesignTrafficVolume_DEFINITION"
+msgstr "Das für Planungs- und Konstruktionszwecke verwendete Verkehrsvolumen ist als Anzahl der Fahrzeuge pro Tag angegeben. Typischerweise als AADT Durchschnitt jährlichen Tagesverkehr angegeben"
+
+#:IFC.xml:38426
+msgid "DesignVehicleClass"
+msgstr "Fahrzeugklasse"
+
+msgid "DesignVehicleClass_DEFINITION"
+msgstr "Ein Fahrzeugdesigner mit Inhalt nach lokalen Normen."
+
+#:IFC.xml:38431
+msgid "LaneWidth"
+msgstr "LaneWidth"
+
+msgid "LaneWidth_DEFINITION"
+msgstr "Standard nominale Breite von einer Spur Spur."
+
+#:IFC.xml:38436
+msgid "NumberOfThroughLanes"
+msgstr "NumberOfThroughLanes"
+
+msgid "NumberOfThroughLanes_DEFINITION"
+msgstr "Die Gesamtzahl der Durchgänge im Segment ausgenommen Nebenstraßen, Parken und Drehen, Beschleunigungsverzögerungsbahnen, Mautsammlungen, Schultern usw."
+
+#:IFC.xml:38441
+msgid "RoadDesignClass"
+msgstr "RoadDesignClass"
+
+msgid "RoadDesignClass_DEFINITION"
+msgstr "Ein Straßenbau-Klasse-Designer mit Inhalt nach lokalen Normen."
+
+#:IFC.xml:38447
+msgid "Pset_RoadGuardElement"
+msgstr "Pset RoadGuardElement"
+
+msgid "Pset_RoadGuardElement_DEFINITION"
+msgstr "Eigenschaften zugewiesen an [[IfcWall]] PARAPET oder [[IfcRailing]] GUARDRAIL wenn sie als Elemente des Straßenschutzes zugewiesen werden."
+
+#:IFC.xml:38448
+msgid "IsMoveable"
+msgstr "Inselverschiebbar"
+
+msgid "IsMoveable_DEFINITION"
+msgstr "Wahr, wenn Element beweglich ist."
+
+#:IFC.xml:38453
+msgid "IsTerminal"
+msgstr "IsTerminal"
+
+msgid "IsTerminal_DEFINITION"
+msgstr "Wahr, wenn das Element ein Terminal ist. Siehe Klasse Terminal."
+
+#:IFC.xml:38458
+msgid "IsTransition"
+msgstr "IsÜbergang"
+
+msgid "IsTransition_DEFINITION"
+msgstr "Wahr, wenn ein Element ein Übergang ist. Siehe Klasse Übergang."
+
+#:IFC.xml:38463
+msgid "TerminalType"
+msgstr "Terminaltyp"
+
+msgid "TerminalType_DEFINITION"
+msgstr "Bestimmt die Art des Terminals, wenn IsTerminal wahr ist."
+
+#:IFC.xml:38469
+msgid "Pset_RoadMarkingCommon"
+msgstr "Pset RoadMarkingCommon"
+
+msgid "Pset_RoadMarkingCommon_DEFINITION"
+msgstr "Immobilien für Straßenmarkierungen."
+
+#:IFC.xml:38470
+msgid "ApplicationMethod"
+msgstr "Anwendungsmethode"
+
+msgid "ApplicationMethod_DEFINITION"
+msgstr "Verwendete Anwendungsmethode... z.B. Spray, extrudiert"
+
+#:IFC.xml:38475
+msgid "DiagramNumber"
+msgstr "Diagrammnummer"
+
+msgid "DiagramNumber_DEFINITION"
+msgstr "Ein Designer mit Inhalten nach lokalen Normen, z.B. M25."
+
+#:IFC.xml:38480
+msgid "MaterialColour"
+msgstr "Materialfarbe"
+
+msgid "MaterialColour_DEFINITION"
+msgstr "Aktuelle Farbe des Straßenmarkierungsmaterials"
+
+#:IFC.xml:38485
+msgid "MaterialThickness"
+msgstr "Materialdicke"
+
+msgid "MaterialThickness_DEFINITION"
+msgstr "Nominale Dicke des angewendeten Materials"
+
+#:IFC.xml:38490
+msgid "MaterialType"
+msgstr "Materialtyp"
+
+msgid "MaterialType_DEFINITION"
+msgstr "Verwendeter Materialtyp... z.B. Farbe, Band, Thermoplastik, Stein"
+
+#:IFC.xml:38495
+msgid "Structure"
+msgstr "Struktur"
+
+msgid "Structure_DEFINITION"
+msgstr "Zustand, ob Markierung strukturiert ist oder nicht, und welcher Typ... z.B. Kamflex, Longflex, Dropflex"
+
+#:IFC.xml:38501
+msgid "Pset_RoadSymbolsCommon"
+msgstr "Pset RoadSymbolsCommon"
+
+msgid "Pset_RoadSymbolsCommon_DEFINITION"
+msgstr "Eigenschaften von Straßensymbolen."
+
+#:IFC.xml:38502
+msgid "Text"
+msgstr "Text"
+
+msgid "Text_DEFINITION"
+msgstr "Textinhalt"
+
+#:IFC.xml:38513
+msgid "Pset_SumpBusterCommon"
+msgstr "Pset SumpBusterCommon"
+
+msgid "Pset_SumpBusterCommon_DEFINITION"
+msgstr "Immobilien für einen sump buster."
+
+#:IFC.xml:38520
+msgid "Pset_Superelevation"
+msgstr "Punkt-Überhöhung"
+
+msgid "Pset_Superelevation_DEFINITION"
+msgstr "Bestimmt die allgemeinen Eigenschaften für ein Superelevation Event."
+
+#:IFC.xml:38521
+msgid "Side"
+msgstr "Seite"
+
+msgid "Side_DEFINITION"
+msgstr "Legt fest, ob die Breite dem RECHT, oder dem LEFT der Kurve gemessen wird, auf die die Platzierung verweist, oder wenn der gleiche Wert auf BOTH-Seiten angewendet wird."
+
+#:IFC.xml:38526
+msgid "Superelevation"
+msgstr "Überhöhung"
+
+msgid "Superelevation_DEFINITION"
+msgstr "Legt die Überhöhung als Verhältnismessung am Veranstaltungsort fest."
+
+#:IFC.xml:38531
+msgid "TransitionSuperelevation"
+msgstr "Übergangsüberhöhung"
+
+msgid "TransitionSuperelevation_DEFINITION"
+msgstr "Die Art der Überhöhung vom vorherigen Ereignis zu diesem."
+
+#:IFC.xml:38537
+msgid "Pset_TrafficCalmingDeviceCommon"
+msgstr "Pset TrafficCalmingDeviceCommon"
+
+msgid "Pset_TrafficCalmingDeviceCommon_DEFINITION"
+msgstr "Eigenschaften für ein mobiles beruhigendes Gerät."
+
+#:IFC.xml:38544
+msgid "Pset_TransitionSectionCommon"
+msgstr "TransitionSectionCommon setzen"
+
+msgid "Pset_TransitionSectionCommon_DEFINITION"
+msgstr "Eigenschaften für einen Übergangsabschnitt."
+
+#:IFC.xml:38551
+msgid "Pset_TrenchExcavationCommon"
+msgstr "TrenchExcavationCommon zerstören"
+
+msgid "Pset_TrenchExcavationCommon_DEFINITION"
+msgstr "Eigenschaften für eine Grabgrabung."
+
+#:IFC.xml:38563
+msgid "Pset_Width"
+msgstr "Pset Width"
+
+msgid "Pset_Width_DEFINITION"
+msgstr "Bestimmt die allgemeinen Eigenschaften für eine Width-Veranstaltung."
+
+#:IFC.xml:38574
+msgid "TransitionWidth"
+msgstr "Übergangsbreite"
+
+msgid "TransitionWidth_DEFINITION"
+msgstr "Der Typ des Übergangs der Breite zwischen dem vorherigen Ereignis und diesem Ereignis."
 
