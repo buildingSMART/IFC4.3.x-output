@@ -1,3 +1,29 @@
+## DefinitionForEntity
+
+* The resource 'IfcBearingType' has no definition
+* The resource 'IfcBridgePart' has no definition
+* The resource 'IfcCaissonFoundationType' has no definition
+* The resource 'IfcDeepFoundationType' has no definition
+* The resource 'IfcDirectrixDerivedReferenceSweptAreaSolid' has no definition
+* The resource 'IfcFacilityPartCommon' has no definition
+* The resource 'IfcImpactProtectionDevice' has no definition
+* The resource 'IfcImpactProtectionDeviceType' has no definition
+* The resource 'IfcIndexedPolygonalTextureMap' has no definition
+* The resource 'IfcMarinePart' has no definition
+* The resource 'IfcPolynomialCurve' has no definition
+* The resource 'IfcRailwayPart' has no definition
+* The resource 'IfcRoadPart' has no definition
+* The resource 'IfcTendonConduitType' has no definition
+* The resource 'IfcTextureCoordinateIndices' has no definition
+* The resource 'IfcTextureCoordinateIndicesWithVoids' has no definition
+* The resource 'IfcTransportationDevice' has no definition
+* The resource 'IfcTransportationDeviceType' has no definition
+* The resource 'IfcVehicle' has no definition
+* The resource 'IfcVehicleType' has no definition
+* The resource 'IfcVibrationDamper' has no definition
+* The resource 'IfcVibrationDamperType' has no definition
+* The resource 'IfcVibrationIsolator' has no definition
+* The resource 'IfcVibrationIsolatorType' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_Address.AddressLines' has no definition
