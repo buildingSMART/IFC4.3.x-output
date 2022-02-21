@@ -9,145 +9,975 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/propertytypes.pot\n"
-"X-Crowdin-File-ID: 109\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2022-02-21 19:53\n"
+"PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:49500
-msgid "Pset_MechanicalBeamInPlane"
-msgstr "Pset MechanicalBeamInPlane"
+#:IFC.xml:626
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-#:IFC.xml:49506
-msgid "CompStrength"
-msgstr "强度"
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
 
-msgid "CompStrength_DEFINITION"
-msgstr "压缩强度，α0。"
+#:IFC.xml:689
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:49511
-msgid "CompStrengthPerp"
-msgstr "CompStrength Perp"
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "如果给出形状，形状部分反映了门形状的部分，这部分是门框。 .变更ifc2x4 IFC4 变迁. 该属性已废弃，不再使用，即其值应为 NIL 。"
 
-msgid "CompStrengthPerp_DEFINITION"
-msgstr "压缩强度，α90"
+#:IFC.xml:627
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "连铸深度："
 
-#:IFC.xml:49516
-msgid "InstabilityFactors"
-msgstr "不稳定因素"
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "垂直于门叶的平面外壳尺寸深度。 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-msgid "InstabilityFactors_DEFINITION"
-msgstr "定义值的斜度比率界定了强度的系数或除以数值，这取决于设计方法，如果有一个分隔符。"
+#:IFC.xml:632
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "铸造厚度"
 
-#:IFC.xml:49521
-msgid "RaisedCompStrengthPerp"
-msgstr "RaisedCompStrengthPerp"
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "门叶平面外壳尺寸的厚度 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-msgid "RaisedCompStrengthPerp_DEFINITION"
-msgstr "压缩强度，α90 的替代值，可在材料和代码依赖条件下使用，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
+#:IFC.xml:637
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "线程深度"
 
-#:IFC.xml:49526
-msgid "ReferenceDepth"
-msgstr "参考水深度"
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "门框深度，垂直于门框平面上。 如果遗漏并给定了线条厚度，则表示可调整的深度。 。一个根据墙壁厚度调整的深度，插入此门风格。"
 
-msgid "ReferenceDepth_DEFINITION"
-msgstr "机械特性有效的圆形深度作为检查物料分配完整性的手段。"
+#:IFC.xml:642
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-#:IFC.xml:49536
-msgid "ShearModulusMin"
-msgstr "ShearModulusMin"
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "平面垂直于门框门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。"
 
-msgid "ShearModulusMin_DEFINITION"
-msgstr "剪裁模块，最小值。"
+#:IFC.xml:647
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "线条厚度"
 
-#:IFC.xml:49541
-msgid "ShearStrength"
-msgstr "心灵强度"
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "如上图所述的门线厚度。如果线索值为0。 零表示一个门，没有一线，在这种情况下，所有其他线照参数都应设置为NIL。 如果线条厚度为 NIL ，则表示值不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
 
-msgid "ShearStrength_DEFINITION"
-msgstr "定义值 Alpha定义值穿透强度。"
+#:IFC.xml:652
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
 
-#:IFC.xml:49551
-msgid "TensileStrengthPerp"
-msgstr "TensileStrengthPerp"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "沿本地位置的x轴测量的衬线和窗口面板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
 
-msgid "TensileStrengthPerp_DEFINITION"
-msgstr "2. 抗拉强度，α90"
+#:IFC.xml:657
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
 
-#:IFC.xml:49566
-msgid "YoungModulusMin"
-msgstr "YoungModulusMin"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "沿当地位置的y轴测量的衬线和门板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
 
-msgid "YoungModulusMin_DEFINITION"
-msgstr "弹性模块，最小值 α0。"
+#:IFC.xml:662
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "阈值深度"
 
-#:IFC.xml:49571
-msgid "YoungModulusPerp"
-msgstr "YoungModulusPerp"
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "平面深度垂直于门槛门槛的门叶。只有当门框包括门槛值时才能给出。 如果忽略，给定的阈值厚度则表示可调整的深度，例如： 一种深度，可根据插入此门风格的墙壁厚度进行调整。"
 
-msgid "YoungModulusPerp_DEFINITION"
-msgstr "Elastic modulus, mean值, alpha90。"
+#:IFC.xml:667
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "阈值偏移"
 
-#:IFC.xml:49576
-msgid "YoungModulusPerpMin"
-msgstr "YoungModulusPerpMin"
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "平面垂直于门阈值门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。 仅在门框包含阈值且参数已知的情况下给出。"
 
-msgid "YoungModulusPerpMin_DEFINITION"
-msgstr "弹性模块，最小值 Alpha90 。"
+#:IFC.xml:672
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "阈值厚度"
 
-#:IFC.xml:49582
-msgid "Pset_MechanicalBeamInPlaneNegative"
-msgstr "Pset MechanicalBeamInPlaneNegative"
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "门槛值的厚度如上图所解释。如果门槛值为0。 零表示门槛阈值深度在此情况下必须设置为 NIL。 如果阈值为 NIL ，则表示有关阈值的信息不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:49664
-msgid "Pset_MechanicalBeamOutOfPlane"
-msgstr "Pset MechanicalBeamOutOfPlane"
+#:IFC.xml:677
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-#:IFC.xml:49746
-msgid "Pset_MechanicalPanelInPlane"
-msgstr "Pset MechanicalPanelInPlane"
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "如果给定的转化器将门叶与上面的玻璃或窗口分开，则偏移。 抵消额从门口底部提供。"
 
-#:IFC.xml:49747
-msgid "BearingStrength"
-msgstr "焦耳强度"
+#:IFC.xml:682
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "反射厚度"
 
-msgid "BearingStrength_DEFINITION"
-msgstr "定义值α界定了具有喷口强度的数值，即无贸易压力。"
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "平面厚度与转发器门叶平行，但条件是： 如果设置了 TransomOffset 属性，它会将门叶与上面的玻璃或窗口分开。 如果反光厚度设置为零，反向偏差设置为正长度， 然后将门垂直分割成叶子和无物理框架的转窗区域。 .更改 ifc2x4 IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:49762
-msgid "RaisedCompressiveStrength"
-msgstr "提升压缩强度"
+#:IFC.xml:701
+msgid "IfcDoorPanelOperationEnum"
+msgstr "IfcDoorPanelOperationEnum"
 
-msgid "RaisedCompressiveStrength_DEFINITION"
-msgstr "可在材料和代码依赖条件下使用的压缩强度替代值，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "这一列举界定了各门板运作的基本方式，如图1所示。 数字计数器滑动倾斜折叠循环滚动固定板用户定义的数字计数器操作 图1 门运算由[[IfcDoor]] 的本地位置给出门板的开头方向。 正极轴决定图2所示的方向。 面板方向..............如果有数字功能，fig10.gif 图2 数字面板运算符号取决于国家建筑代码。 这些数字只是用来作为IF2.0中的新枚举的示例来显示。添加了ifc2x4 IFC4 变异分子FIXEDPANEL 未精炼完的补丁项目"
 
-#:IFC.xml:49787
-msgid "YoungModulusBending"
-msgstr "YoungModulusBending"
+#:IFC.xml:702
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
+msgstr "待办事项"
 
-msgid "YoungModulusBending_DEFINITION"
-msgstr "定义bend中的 Alpha定义值弹性模块。"
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
+msgstr "待办事项"
 
-#:IFC.xml:49792
-msgid "YoungModulusCompression"
-msgstr "YoungModulus压缩"
+#:IFC.xml:703
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
+msgstr "FIXEDPANEL"
 
-msgid "YoungModulusCompression_DEFINITION"
-msgstr "压缩中的弹性模块。"
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
+msgstr "FIXEDPANEL"
 
-#:IFC.xml:49797
-msgid "YoungModulusTension"
-msgstr "YoungModulusphension"
+#:IFC.xml:704
+msgid "IfcDoorPanelOperationEnum_FOLDING"
+msgstr "后续活动"
 
-msgid "YoungModulusTension_DEFINITION"
-msgstr "定义值α在紧张状态下定义的值弹性模块。"
+msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
+msgstr "后续活动"
 
-#:IFC.xml:49803
-msgid "Pset_MechanicalPanelOutOfPlane"
-msgstr "Pset MechanicalPanelOutOfPlane"
+#:IFC.xml:705
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
+msgstr "未完成"
 
-#:IFC.xml:49860
-msgid "Pset_MechanicalPanelOutOfPlaneNegative"
-msgstr "套装机械板OutOfPlaneNegative"
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:706
+msgid "IfcDoorPanelOperationEnum_REVOLVING"
+msgstr "正在阅读"
+
+msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
+msgstr "正在阅读"
+
+#:IFC.xml:707
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
+
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
+msgstr "ROLLINGUP"
+
+#:IFC.xml:708
+msgid "IfcDoorPanelOperationEnum_SLIDING"
+msgstr "正在评分"
+
+msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
+msgstr "正在评分"
+
+#:IFC.xml:709
+msgid "IfcDoorPanelOperationEnum_SWINGING"
+msgstr "正在解决"
+
+msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
+msgstr "正在解决"
+
+#:IFC.xml:710
+msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
+msgstr "已使用"
+
+#:IFC.xml:712
+msgid "IfcDoorPanelPositionEnum"
+msgstr "IfcDoorPanelPositionEnum"
+
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "此列举界定了描述门面板在门框内位置的基本方法。 IFC2x 中的新枚举图1显示了一个带有面板的门面板和带有面板RIGHT的门面板，一个带有面板的 OUBLE DOOR SINGN 的门风格。 位置显示在本地位置的XZ平面上，即显示正Y轴的方向。 门面板位置............. 数字如果门面板数字01.gif 图1门面板位置未定义的项目LEFT MIDLE RIGHTS"
+
+#:IFC.xml:713
+msgid "IfcDoorPanelPositionEnum_LEFT"
+msgstr "左键"
+
+msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
+msgstr "左键"
+
+#:IFC.xml:714
+msgid "IfcDoorPanelPositionEnum_MIDDLE"
+msgstr "MIDDL"
+
+msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDL"
+
+#:IFC.xml:715
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:716
+msgid "IfcDoorPanelPositionEnum_RIGHT"
+msgstr "右侧"
+
+msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "右侧"
+
+#:IFC.xml:718
+msgid "IfcDoorPanelProperties"
+msgstr "IfcDoorPanel属性"
+
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "门板通常是一种门叶，可以让人或货物通过。 门面板的参数界定了面板的几何相关参数。 [[IfcDoorPanelProperties]] 用于参数描述门面板的形状和运转。 参数定义可以单独或补充到门的明确形状外面。 [[IfcDoorType]] 可以定义由多个面板组成的门。 在这种情况下，每个门面板必须包含一个 [[IfcDoorPanelProperties]] 的实例。 PanelPosition 属性与IfcDoorStyle.OperationType 属性一起决定适用于哪个面板 [[IfcDoorPanelProperties]] 。 [[IfcDoorPanelProperties]] 是由[[IfcDoorType]] 属性HasPropertySets 给定的属性列表中包含的。 关于门面板的更多信息可以包含在 IfcDoorStyle 的相同列表中，使用动态扩展的 [[IfcPropertySet]]。 [[IfcDoorPanelProperties]] 没有几何表示。 然而，它界定了可以用来创建由[[IfcDoor]]插入项目空间范围的门类形状的参数，如图1所示。 [[IfcDoorPanelProperties]] 的参数定义标准门面板， 包括给定比例宽度以定义不统一的双向回转或滑动或折叠门。 面板的外部边界由分配给[[IfcDoor]] 的轮廓形状表示来确定 插入[[IfcDoorType]] 。 它还必须考虑到线条参数。 面板旋转、双动和滑动面板的深度，由面板深度参数确定。 对于包括一个以上面板在内的门操作类型，至少一个面板的宽度是通过正常化比率衡量的。 它决定了该面板的宽度，其定义是门窗总宽度的比率。 面板宽度图 1 IF2.0中的新实体的门面属性。ifc2x4 IFC4 变更超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
+
+#:IFC.xml:741
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
+
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "如果给出形状，形状部分反映了门形状的部分，门面是门板。 .已弃用的 DEPRECATION 属性已废弃，不再使用，即值应为 NIL 。"
+
+#:IFC.xml:719
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "面板深度"
+
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "门板的深度，与门叶平面垂直。"
+
+#:IFC.xml:724
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "面板操作"
+
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "该小组确定了该小组的运作方式。 门面板的面板必须与IfcDoor风格的操作类型相对应。"
+
+#:IFC.xml:729
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "面板位置"
+
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "此面板在门内的位置。 门面板的面板必须与IfcDoor风格的操作类型相对应。"
+
+#:IFC.xml:734
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "面板宽度"
+
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "此面板的宽度，作为相对门的总清开宽度的比率。如果是空的，它默认为1。 必须在IfcDoorStyle为所有具有OperationType s的门提供一个值，这个门有一个以上面板的门。"
+
+#:IFC.xml:753
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
+
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "这一列举界定了建造大门的基本类型。 建筑类型涉及建造门所用的主要材料或材料组合。 IF2x中新的计数。未完成的项目已升级为单身玩家"
+
+#:IFC.xml:754
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
+msgstr "AluminIUM"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "AluminIUM"
+
+#:IFC.xml:755
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
+msgstr "闹钟游戏"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
+msgstr "闹钟游戏"
+
+#:IFC.xml:756
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "闹钟"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "闹钟"
+
+#:IFC.xml:757
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "高品级钢材质"
+
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "高品级钢材质"
+
+#:IFC.xml:758
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:759
+msgid "IfcDoorStyleConstructionEnum_PLASTIC"
+msgstr "游戏"
+
+msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "游戏"
+
+#:IFC.xml:760
+msgid "IfcDoorStyleConstructionEnum_STEEL"
+msgstr "钢条"
+
+msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "钢条"
+
+#:IFC.xml:761
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
+msgstr "已使用"
+
+#:IFC.xml:762
+msgid "IfcDoorStyleConstructionEnum_WOOD"
+msgstr "WOD"
+
+msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOD"
+
+#:IFC.xml:764
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
+
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE SWING LEFT DOUBLE SWING RIGHT DOUBLE DOOR DOUBLE SWING SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+
+#:IFC.xml:765
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
+msgstr "待机处理"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
+msgstr "待机处理"
+
+#:IFC.xml:766
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
+msgstr "下一步待机"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
+msgstr "有两个面板的门，一个面板在左边折叠，另一个面板是向右倾斜。"
+
+#:IFC.xml:767
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
+msgstr "多台处理器"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
+msgstr "带两个面板的门 一个是朝着双向和朝着右方向飞去，另一个是朝着两个方向飞去，另一个是朝着干线向左飞去。"
+
+#:IFC.xml:768
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
+msgstr "多托盘处理选项"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
+msgstr "有两个面板的门都向左敞开，一个面板朝着一个方向摇动，另一个面板朝相反方向摇。"
+
+#:IFC.xml:769
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
+msgstr "下面的容器解决选项右侧"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
+msgstr "两个面板的门都对右边敞开，一个面板朝着一个方向走动，另一个面板朝着相反的方向走动。"
+
+#:IFC.xml:770
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
+msgstr "DOUBLE DOOULING"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
+msgstr "带有两个面板的门，一个正在滑向左，另一个正在向右滑动。"
+
+#:IFC.xml:771
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
+msgstr "平滑处理指示灯"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
+msgstr "平滑处理指示灯"
+
+#:IFC.xml:772
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
+msgstr "解析右侧"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
+msgstr "解析右侧"
+
+#:IFC.xml:773
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
+msgstr "跟随最远的"
+
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
+msgstr "一个面板正在折叠到左边的门。"
+
+#:IFC.xml:774
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
+msgstr "向右继续"
+
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
+msgstr "带有一个折叠到右边的门。"
+
+#:IFC.xml:775
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "一个没有定义操作类型的门被视为一个带有一线的门，但没有面板。因此它总是敞开。"
+
+#:IFC.xml:776
+msgid "IfcDoorStyleOperationEnum_REVOLVING"
+msgstr "正在阅读"
+
+msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
+msgstr "一个由四个叶子组成的入口门，其形式是十字架，环绕着一个中央垂直轴，四个面板由一个[[IfcDoor]]面板属性来描述。"
+
+#:IFC.xml:777
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
+
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
+msgstr "由滚动打开的门。"
+
+#:IFC.xml:778
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
+msgstr "单片处理指示灯"
+
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
+msgstr "一个面板打开左边的门。 从正极轴的方向来看，这些正轴在左侧。"
+
+#:IFC.xml:779
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
+msgstr "片段右侧"
+
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
+msgstr "带着双向和右向双向的门和双向门的门。也叫做双向门的双向门。"
+
+#:IFC.xml:780
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
+msgstr "正在发送至 LEFT"
+
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
+msgstr "带有一个面板的门正在滑向左。"
+
+#:IFC.xml:781
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
+msgstr "解锁向右"
+
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
+msgstr "一个面板的门正在滑向右。"
+
+#:IFC.xml:782
+msgid "IfcDoorStyleOperationEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的操作类型"
+
+#:IFC.xml:784
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "IfcPermeableCoveringOperationEnum"
+
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "此枚举定义了有效的渗透覆盖类型。IFC2.0中的新枚举。 金属条或铁丝保护屏幕。木材、金属等固定或可移动条纹集。 安排在保持亮度或降雨时让空气进入. SCREN Upright、固定或动产，有时用于防热、光线、存取或类似的折叠框架。 用户定义的可渗透覆盖类型。无可用信息。"
+
+#:IFC.xml:785
+msgid "IfcPermeableCoveringOperationEnum_GRILL"
+msgstr "资源库"
+
+msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
+msgstr "金属条或线的保护屏幕。"
+
+#:IFC.xml:786
+msgid "IfcPermeableCoveringOperationEnum_LOUVER"
+msgstr "LOUVER"
+
+msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
+msgstr "整套固定或可移动的木材、金属等条目安排在保持光线或降雨时让空气进入。"
+
+#:IFC.xml:787
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "无可用信息。"
+
+#:IFC.xml:788
+msgid "IfcPermeableCoveringOperationEnum_SCREEN"
+msgstr "已扫描"
+
+msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
+msgstr "用于防备热、光线、存取或类似的紫外线、固定或动产，有时折叠框架。"
+
+#:IFC.xml:789
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的渗透覆盖类型。"
+
+#:IFC.xml:791
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
+
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "该实体是一个门或窗口内的面板的描述，它是打开容许空气流的填充器。 它是由它的属性 [[IfcPermeableCoveringProperties]] 提供的。 可穿透的掩体是一种外壳，例如一个固定或开口的外壳，基本上是由一种外壳和一种内脏组成。 这种步兵通常是一个大型、大型或屏幕。行动方式是按照行动类型定义的。 [[IfcPermeableCoveringProperties]] 包含在 IfcWindowStyle 或 IfcDoorStyle 属性列表中。 关于渗透覆盖的更多信息可以包含在相同的窗口或门风格列表中，使用动态扩展的 [[IfcPropertySet]]。 这尤其适用于各种操作类型的额外属性。[[IfcPermeableCoveringProperties]] 不具有几何形状。 然而，它定义了可以用来创建由 [[IfcWindow]]插入项目空间环境的 IfcWindowStyle 形状的参数。 或 [[IfcDoor]] 插入的 IfcDoor风格。 [[IfcPermeableCoveringProperties]] 的参数定义了标准渗透覆盖面。 面板的外部边界由分配给[[IfcWindow]] 或 [[IfcDoor]] 的发生参数确定。 它还必须考虑到线条参数。 在整个窗口或门内的渗透覆盖位置由小组定位属性决定。 图1显示适用于直线内位置的小组，如小组位置属性所界定的那样。 以下参数应用于面板框架深度，帧厚度正在覆盖... fccermeeblecoveringproperties.gif 图1 涵盖IFC2中新实体属性的性能。 ，它已从 IFC2x 中的 IfcPermeableCovery改名。ifc2x4 IFC4 变换超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
+
+#:IFC.xml:814
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
+
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+
+#:IFC.xml:792
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "框架深度"
+
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "面板框架的深度，用来包括横向横向从前面到后面的孔。 c. 垂直于窗户或门高程平面上。"
+
+#:IFC.xml:797
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "帧厚度"
+
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "用于包括渗透覆盖面的面板边框宽度 ， 从面板内穿透面包裹到面板外的一层，在……，i。 。与窗户或门高程平行的。"
+
+#:IFC.xml:802
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "操作类型"
+
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "还用来按照国家建筑标准分配标准象征性演示。"
+
+#:IFC.xml:807
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "面板位置"
+
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "这个渗透面板在整个窗口或门类型中的位置。"
+
+#:IFC.xml:826
+msgid "IfcWindowLiningProperties"
+msgstr "IfcWindowlining属性"
+
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of IfcWindowStyle.HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:884
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
+
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+
+#:IFC.xml:827
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
+
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+
+#:IFC.xml:832
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "首次反转偏移量"
+
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "沿窗口放置协调系统z轴测量的转换中心线偏移。 偏移值0.5表示变压器放置在窗口中间。"
+
+#:IFC.xml:837
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "线程深度"
+
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "垂直于窗口海拔平面的窗框深度。"
+
+#:IFC.xml:842
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
+
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+
+#:IFC.xml:847
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "线条厚度"
+
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:852
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
+
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+
+#:IFC.xml:857
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
+
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "沿当地位置的y轴测得的衬线和窗口面板之间的偏移。 应小于或等于 [[IfcWindowPanelProperties]]。 anel厚度. .change ifc2x4 IFC4 变异新属性添加在实体定义末尾。"
+
+#:IFC.xml:862
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "多重厚度"
+
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:867
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
+
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+
+#:IFC.xml:872
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "SecondTransomOffset"
+
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+
+#:IFC.xml:877
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "反射厚度"
+
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:896
+msgid "IfcWindowPanelOperationEnum"
+msgstr "IfcWindowPanelOperationEnum"
+
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure SideHungRightHand panel that opens to the right when viewed from the outside SideHungLeftHand panel that opens to the left when viewed from the outside TiltAndTurnRightHand panel that opens to the right and is bottom hung TiltAndTurnLeftHand panel that opens to the left and is bottom hung TopHung panel is top hung BottomHung panel is bottom hung PivotHorizontal panel is swinging horizontally hinges are in the middle PivotVertical panel is swinging vertically hinges are in the middle SlidingHorizontal panel is sliding horizontally SlidingVertical panel is sliding vertically RemovableCasement panel is removable FixedCasement panel is fixed OtherOperation user defined operation type NotDefined Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. Items SIDEHUNGRIGHTHAND SIDEHUNGLEFTHAND TILTANDTURNRIGHTHAND TILTANDTURNLEFTHAND TOPHUNG BOTTOMHUNG PIVOTHORIZONTAL PIVOTVERTICAL SLIDINGHORIZONTAL SLIDINGVERTICAL REMOVABLECASEMENT FIXEDCASEMENT OTHEROPERATION NOTDEFINED"
+
+#:IFC.xml:897
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
+msgstr "BOTTOMHUNG"
+
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
+msgstr "BOTTOMHUNG"
+
+#:IFC.xml:898
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
+msgstr "FIXEDCASEMENT"
+
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
+msgstr "FIXEDCASEMENT"
+
+#:IFC.xml:899
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:900
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
+msgstr "其他"
+
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
+msgstr "其他"
+
+#:IFC.xml:901
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
+msgstr "四月"
+
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
+msgstr "四月"
+
+#:IFC.xml:902
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
+msgstr "PIVOTVERTICAL"
+
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
+msgstr "PIVOTVERTICAL"
+
+#:IFC.xml:903
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
+msgstr "移除成员"
+
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
+msgstr "移除成员"
+
+#:IFC.xml:904
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
+msgstr "西欧格利福特"
+
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
+msgstr "西欧格利福特"
+
+#:IFC.xml:905
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
+msgstr "SIDEHUNGRIGHTHAND"
+
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
+msgstr "SIDEHUNGRIGHTHAND"
+
+#:IFC.xml:906
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
+msgstr "已下载"
+
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
+msgstr "已下载"
+
+#:IFC.xml:907
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
+msgstr "潜伏的"
+
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
+msgstr "潜伏的"
+
+#:IFC.xml:908
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
+msgstr "TILTANDTURNLEFTHAND"
+
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
+msgstr "TILTANDTURNLEFTHAND"
+
+#:IFC.xml:909
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
+msgstr "TILTANDTURNRIGHTHAND"
+
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
+msgstr "TILTANDTURNRIGHTHAND"
+
+#:IFC.xml:910
+msgid "IfcWindowPanelOperationEnum_TOPHUNG"
+msgstr "TOPHUNG"
+
+msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
+msgstr "TOPHUNG"
+
+#:IFC.xml:912
+msgid "IfcWindowPanelPositionEnum"
+msgstr "IfcWindowPanelPositionEnum"
+
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the IfcWindowStyle definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+
+#:IFC.xml:913
+msgid "IfcWindowPanelPositionEnum_BOTTOM"
+msgstr "BOTOM"
+
+msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
+msgstr "BOTOM"
+
+#:IFC.xml:914
+msgid "IfcWindowPanelPositionEnum_LEFT"
+msgstr "左键"
+
+msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
+msgstr "左键"
+
+#:IFC.xml:915
+msgid "IfcWindowPanelPositionEnum_MIDDLE"
+msgstr "MIDDL"
+
+msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDL"
+
+#:IFC.xml:916
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:917
+msgid "IfcWindowPanelPositionEnum_RIGHT"
+msgstr "右侧"
+
+msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "右侧"
+
+#:IFC.xml:918
+msgid "IfcWindowPanelPositionEnum_TOP"
+msgstr "转发器"
+
+msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
+msgstr "转发器"
+
+#:IFC.xml:920
+msgid "IfcWindowPanelProperties"
+msgstr "IfcWindowPanel属性"
+
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the IfcWindowStyle . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:943
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
+
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "与形状定义的可选关联。 这指的是用于代表面板的窗口风格几何表示的部分。 .已弃用的 DEPRECATION 属性已废弃，不再使用，即值应为 NIL 。"
+
+#:IFC.xml:921
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "框架深度"
+
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+
+#:IFC.xml:926
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "帧厚度"
+
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+
+#:IFC.xml:931
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "操作类型"
+
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+
+#:IFC.xml:936
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "面板位置"
+
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
+
+#:IFC.xml:955
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "IfcWindowStyConstructionEnum"
+
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "此列举界定了建造窗户的基本类型。 施工类型涉及用于制造窗户的主要材料或材料组合。 IF2x中新的枚举。所有物品都能施放在钢铁板上。我们已经完成了其他的限定项目"
+
+#:IFC.xml:956
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
+msgstr "AluminIUM"
+
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "AluminIUM"
+
+#:IFC.xml:957
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "闹钟"
+
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "闹钟"
+
+#:IFC.xml:958
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "高品级钢材质"
+
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "高品级钢材质"
+
+#:IFC.xml:959
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:960
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
+msgstr "其它功用"
+
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
+msgstr "其它功用"
+
+#:IFC.xml:961
+msgid "IfcWindowStyleConstructionEnum_PLASTIC"
+msgstr "游戏"
+
+msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "游戏"
+
+#:IFC.xml:962
+msgid "IfcWindowStyleConstructionEnum_STEEL"
+msgstr "钢条"
+
+msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "钢条"
+
+#:IFC.xml:963
+msgid "IfcWindowStyleConstructionEnum_WOOD"
+msgstr "WOD"
+
+msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOD"
+
+#:IFC.xml:965
+msgid "IfcWindowStyleOperationEnum"
+msgstr "IfcWindowStyOperationEnum"
+
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations Items SINGLE PANEL Window with one panel. DOUBLE PANEL VERTICAL Window with two panels. The configuration of the panels is vertically. DOUBLE PANEL HORIZONTAL Window with two panels. The configuration of the panels is horizontally. TRIPLE PANEL VERTICAL Window with three panels. The configuration of the panels is vertically. TRIPLE PANEL BOTTOM Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TRIPLE PANEL TOP Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TRIPLE PANEL LEFT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TRIPLE PANEL RIGHT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. TRIPLE PANEL HORIZONTAL Window with three panels. The configuration of the panels is horizontally. USERDEFINED user defined operation type NOTDEFINED"
+
+#:IFC.xml:966
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
+msgstr "多余的 PANE HORIZONTAL"
+
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr "有两个面板的窗口。面板的配置是水平的。"
+
+#:IFC.xml:967
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
+msgstr "多余的PANEL"
+
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
+msgstr "有两个面板的窗口。面板的配置是垂直的。"
+
+#:IFC.xml:968
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
+
+#:IFC.xml:969
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
+msgstr "SINGE PANEL"
+
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
+msgstr "Window with one panel."
+
+#:IFC.xml:970
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
+msgstr "TRIPLE PANEL BOTOM"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
+msgstr "带有三个面板的窗口。两个面板的配置垂直，第三个面板水平在底部。"
+
+#:IFC.xml:971
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
+msgstr "TRIPAL HORIZONTAL"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr "Window with three panels. The configuration of the panels is horizontally."
+
+#:IFC.xml:972
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
+msgstr "TRIPLE PANEL LEFT"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
+msgstr "带有三个面板的窗口。两个面板的配置是水平的，第三个面板垂直位于左侧。"
+
+#:IFC.xml:973
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
+msgstr "触发点右侧"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
+msgstr "Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side."
+
+#:IFC.xml:974
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
+msgstr "TRIPE PANEL TOP"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
+msgstr "Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top."
+
+#:IFC.xml:975
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
+msgstr "TRIPE PANEL 版本"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
+msgstr "Window with three panels. The configuration of the panels is vertically."
+
+#:IFC.xml:976
+msgid "IfcWindowStyleOperationEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "user defined operation type"
 
