@@ -9,586 +9,310 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
-"X-Crowdin-File-ID: 98\n"
+"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
+"X-Crowdin-File-ID: 102\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-21 17:05\n"
 
-#:IFC.xml:48656
-msgid "IfcBoundaryCondition"
-msgstr "IfcBoundaryCondition"
+#:IFC.xml:49311
+msgid "IfcApplication"
+msgstr "IfcApplication"
 
-msgid "IfcBoundaryCondition_DEFINITION"
-msgstr "The abstract entity [[IfcBoundaryCondition]] is the supertype of all boundary conditions that can be applied to structural connection definitions, either directly for the connection e.g. the joint or for the relation between a structural member and the connection. NOTE The boundary conditions are used within other parts, mainly by instances of [[IfcStructuralConnection]] for the definition of supports and instances of [[IfcRelConnectsStructuralMember]] for the definition of connections between structural members and structural connections . HISTORY New entity in IFC2x2."
+msgid "IfcApplication_DEFINITION"
+msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5."
 
-#:IFC.xml:48657
-msgid "IfcBoundaryCondition_Name"
+#:IFC.xml:175
+msgid "IfcApplication_ApplicationDeveloper"
+msgstr "アプリケーション開発者"
+
+msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
+msgstr "Name of the application developer."
+
+#:IFC.xml:49312
+msgid "IfcApplication_ApplicationFullName"
+msgstr "ApplicationFullName"
+
+msgid "IfcApplication_ApplicationFullName_DEFINITION"
+msgstr "アプリケーション開発者によって指定されたアプリケーションの完全な名前。"
+
+#:IFC.xml:49317
+msgid "IfcApplication_ApplicationIdentifier"
+msgstr "ApplicationID"
+
+msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
+msgstr "アプリケーションの短い識別名。"
+
+#:IFC.xml:49322
+msgid "IfcApplication_Version"
+msgstr "バージョン"
+
+msgid "IfcApplication_Version_DEFINITION"
+msgstr "アプリケーションの開発者によって指定されたこのソフトウェアのバージョン番号。"
+
+#:IFC.xml:49352
+msgid "IfcChangeActionEnum"
+msgstr "IfcChangeActionEnum"
+
+msgid "IfcChangeActionEnum_DEFINITION"
+msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed Items NOCHANGE Object has not been modified. MODIFIED A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. ADDED The object has been created by the user and application defined by the OwningUser and OwningApplication respectively. DELETED The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. NOTDEFINED The change action is not known or has not been defined."
+
+#:IFC.xml:49353
+msgid "IfcChangeActionEnum_ADDED"
+msgstr "追加"
+
+msgid "IfcChangeActionEnum_ADDED_DEFINITION"
+msgstr "The object has been created by the user and application defined by the OwningUser and OwningApplication respectively."
+
+#:IFC.xml:49354
+msgid "IfcChangeActionEnum_DELETED"
+msgstr "削除"
+
+msgid "IfcChangeActionEnum_DELETED_DEFINITION"
+msgstr "The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
+
+#:IFC.xml:49355
+msgid "IfcChangeActionEnum_MODIFIED"
+msgstr "変更"
+
+msgid "IfcChangeActionEnum_MODIFIED_DEFINITION"
+msgstr "A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
+
+#:IFC.xml:49356
+msgid "IfcChangeActionEnum_NOCHANGE"
+msgstr "変更なし"
+
+msgid "IfcChangeActionEnum_NOCHANGE_DEFINITION"
+msgstr "Object has not been modified."
+
+#:IFC.xml:49357
+msgid "IfcChangeActionEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcChangeActionEnum_NOTDEFINED_DEFINITION"
+msgstr "The change action is not known or has not been defined."
+
+#:IFC.xml:49359
+msgid "IfcOwnerHistory"
+msgstr "IfcOwnerHistory"
+
+msgid "IfcOwnerHistory_DEFINITION"
+msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate."
+
+#:IFC.xml:321
+msgid "IfcOwnerHistory_OwningUser"
+msgstr "所有しているユーザー"
+
+msgid "IfcOwnerHistory_OwningUser_DEFINITION"
+msgstr "Direct reference to the end user who currently owns this object. Note that IFC includes the concept of ownership transfer from one user to another and therefore distinguishes between the Owning User and Creating User."
+
+#:IFC.xml:333
+msgid "IfcOwnerHistory_LastModifyingUser"
+msgstr "LastModifyingUser"
+
+msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
+msgstr "User who carried out the last modification using LastModifyingApplication."
+
+#:IFC.xml:49328
+msgid "IfcOwnerHistory_OwningApplication"
+msgstr "所有しているアプリケーション"
+
+msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
+msgstr "Direct reference to the application which currently owns this object on behalf of the owning user of the application. Note that IFC includes the concept of ownership transfer from one application to another and therefore distinguishes between the Owning Application and Creating Application."
+
+#:IFC.xml:49340
+msgid "IfcOwnerHistory_LastModifyingApplication"
+msgstr "LastModifyingApplication"
+
+msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
+msgstr "Application used to make the last modification."
+
+#:IFC.xml:49360
+msgid "IfcOwnerHistory_ChangeAction"
+msgstr "ChangeAction"
+
+msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
+msgstr "オブジェクトに対する変更に関連付けられたアクションを定義する列挙。"
+
+#:IFC.xml:49365
+msgid "IfcOwnerHistory_CreationDate"
+msgstr "作成日"
+
+msgid "IfcOwnerHistory_CreationDate_DEFINITION"
+msgstr "UTCユニバーサルタイムコーディネート(UTC)で表される日付と時刻、元の所有アプリケーションによって最初に作成されたときに、グリニッジ標準時またはGMTで表される日付。 一度定義されると、この値はエンティティの存続期間を通じて変更されません。"
+
+#:IFC.xml:49370
+msgid "IfcOwnerHistory_LastModifiedDate"
+msgstr "LastModifiedDate"
+
+msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
+msgstr "UTCユニバーサルタイムコーディネートで表される日付と時刻 最後の変更が LastModifyingUser と LastModifyingApplicationによって行われた前のGreenwich Mean TimeまたはGMT。"
+
+#:IFC.xml:49375
+msgid "IfcOwnerHistory_State"
+msgstr "都道府県："
+
+msgid "IfcOwnerHistory_State_DEFINITION"
+msgstr "オブジェクトの現在のアクセス状態を定義する列挙。"
+
+#:IFC.xml:49381
+msgid "IfcStateEnum"
+msgstr "IfcStateEnum"
+
+msgid "IfcStateEnum_DEFINITION"
+msgstr "[[IfcStateEnum]] 列挙は、例えば、読み込み、ロックされた などのオブジェクトの状態やアクセシビリティを識別します。 有効な列挙は IFC2.0 での HISTORY New enumeration です。.change ifc2x3 IFC2x3 CHANGE この概念は IFC2 で最初に導入されました。 as IfcModifiedFlag of type BINARY 3 FIXED として、R2x3 で列挙に変更されました。 これは、当初、部分的なモデル交換のための機能を提供するための最初のステップとして導入され、アプリケーションがオブジェクトの状態を識別できるように、主にモデルサーバーによって使用されることを意図しています。 READWRITE オブジェクトはアプリケーションによって変更される可能性があります。READONLY オブジェクトは読み取り専用の状態です。 アプリケーションによって表示されるかもしれませんが、変更されない可能性があります。LOCKED オブジェクトはロック状態にあります。 アプリケーションからアクセスできない場合があります。READWRITELOCKED オブジェクトは Read Write Locked 状態です。 アプリケーションからアクセスできません。READONLYLOCKED オブジェクトは読み取り専用ロック状態にあります。アプリケーションからアクセスできない場合があります。"
+
+#:IFC.xml:49382
+msgid "IfcStateEnum_LOCKED"
+msgstr "ロック済み"
+
+msgid "IfcStateEnum_LOCKED_DEFINITION"
+msgstr "Object is in a Locked state. It may not be accessed by an application."
+
+#:IFC.xml:49383
+msgid "IfcStateEnum_READONLY"
+msgstr "読み取り専用"
+
+msgid "IfcStateEnum_READONLY_DEFINITION"
+msgstr "Object is in a Read Only state. It may be viewed but not modified by an application."
+
+#:IFC.xml:49384
+msgid "IfcStateEnum_READONLYLOCKED"
+msgstr "準備完了"
+
+msgid "IfcStateEnum_READONLYLOCKED_DEFINITION"
+msgstr "Object is in a Read Only Locked state. It may not be accessed by an application."
+
+#:IFC.xml:49385
+msgid "IfcStateEnum_READWRITE"
+msgstr "READWRITE"
+
+msgid "IfcStateEnum_READWRITE_DEFINITION"
+msgstr "オブジェクトはRead Write状態にあります。アプリケーションによって変更される可能性があります。"
+
+#:IFC.xml:49386
+msgid "IfcStateEnum_READWRITELOCKED"
+msgstr "READWRITELOCKED"
+
+msgid "IfcStateEnum_READWRITELOCKED_DEFINITION"
+msgstr "Object is in a Read Write Locked state. It may not be accessed by an application."
+
+#:IFC.xml:49388
+msgid "IfcTable"
+msgstr "IfcTable"
+
+msgid "IfcTable_DEFINITION"
+msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. Table use .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. Table use alternative .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added."
+
+#:IFC.xml:49412
+msgid "IfcTable_Rows"
+msgstr "行"
+
+msgid "IfcTable_Rows_DEFINITION"
+msgstr "Reference to information content of rows."
+
+#:IFC.xml:49424
+msgid "IfcTable_Columns"
+msgstr "列"
+
+msgid "IfcTable_Columns_DEFINITION"
+msgstr "The column information associated with this table."
+
+#:IFC.xml:49389
+msgid "IfcTable_NumberOfCellsInRow"
+msgstr "NumberOfCellsInRow"
+
+msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
+msgstr "The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list."
+
+#:IFC.xml:49394
+msgid "IfcTable_NumberOfDataRows"
+msgstr "NumberOfData行"
+
+msgid "IfcTable_NumberOfDataRows_DEFINITION"
+msgstr "データを含むテーブル内の行数、つまりテーブル内の行の合計数から見出し行の数を差し引いたテーブルです。"
+
+#:IFC.xml:49399
+msgid "IfcTable_NumberOfHeadings"
+msgstr "NumberOfHeadings"
+
+msgid "IfcTable_NumberOfHeadings_DEFINITION"
+msgstr "The number of headings in a table. This is restricted by WR3 to max. one."
+
+#:IFC.xml:49404
+msgid "IfcTable_Name"
 msgstr "名前"
 
-msgid "IfcBoundaryCondition_Name_DEFINITION"
-msgstr "必要に応じてこの境界条件の名前を定義します。"
-
-#:IFC.xml:48663
-msgid "IfcBoundaryEdgeCondition"
-msgstr "IfcBoundaryEdgeCondition"
-
-msgid "IfcBoundaryEdgeCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。 適用曲線はサポートと接続を示します。 HISTORY IFC2x2の新しいエンティティ。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
-
-#:IFC.xml:48664
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
-msgstr "RotationalStiffnessByLengthX"
-
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 軸についての回転剛性値。"
-
-#:IFC.xml:48669
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
-msgstr "RotationalStiffnessByLengthY"
-
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 軸についての回転剛性値。"
-
-#:IFC.xml:48674
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
-msgstr "RotationalStiffnessByLengthZ"
-
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 軸についての回転剛性値。"
-
-#:IFC.xml:48679
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
-msgstr "TranslationalStiffnessByLengthX"
-
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
-
-#:IFC.xml:48684
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
-msgstr "TranslationalStiffnessByLengthY"
-
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
-
-#:IFC.xml:48689
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
-msgstr "TranslationalStiffnessByLengthZ"
-
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
-
-#:IFC.xml:48696
-msgid "IfcBoundaryFaceCondition"
-msgstr "IfcBoundaryFaceCondition"
-
-msgid "IfcBoundaryFaceCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。適用性 表面サポートと接続。HISTORY IFC2x2に新しいエンティティ。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
-
-#:IFC.xml:48697
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
-msgstr "TranslationalStiffnessByAreaX"
-
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
-
-#:IFC.xml:48702
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
-msgstr "TranslationalStiffnessByAreaY"
-
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
-
-#:IFC.xml:48707
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
-msgstr "TranslationalStiffnessByAreaZ"
-
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
-
-#:IFC.xml:48714
-msgid "IfcBoundaryNodeCondition"
-msgstr "IfcBoundaryNodeCondition"
-
-msgid "IfcBoundaryNodeCondition_DEFINITION"
-msgstr "線形弾性サポート条件または接続条件について説明します。適用ポイントはサポートと接続です。HISTORY IFC2x2の新しいエンティティです。 IFC2x4の属性を変更 LinearStiffnessX Y Zの名前をTranslationalStiffnessX Y Z に変更. . hangeのifc2x4 IFC4の変更 すべての属性データ型は、ブール値と数値の間で数値からSELECTに変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
-
-#:IFC.xml:48715
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
-msgstr "RotationalStiffnessX"
-
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 軸についての回転剛性値。"
-
-#:IFC.xml:48720
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
-msgstr "RotationalStiffnessY"
-
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 軸についての回転剛性値。"
-
-#:IFC.xml:48725
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
-msgstr "RotationalStiffnessZ"
-
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 軸についての回転剛性値。"
-
-#:IFC.xml:48730
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
-msgstr "TranslationalStiffnessX"
-
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向の変換剛性値。"
-
-#:IFC.xml:48735
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
-msgstr "TranslationalStiffnessY"
-
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のY方向の変換剛性値。"
-
-#:IFC.xml:48740
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
-msgstr "TranslationalStiffnessZ"
-
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系のz方向の変換剛性値。"
-
-#:IFC.xml:48747
-msgid "IfcBoundaryNodeConditionWarping"
-msgstr "IfcBoundaryNodeConditionWarping"
-
-msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
-msgstr "線形弾性支持条件または直線弾性歪み抑制を含む接続条件について説明します。 履歴 IFC2x2の新しいエンティティ .change ifc2x4 IFC4 変更点 全ての属性データ型がブール値と数値の間で数値から SELECT に変更されました。 IFC2x3では、境界条件における不安定化効果を捉えるなど、堅実性も否定的になっている可能性があります。 無限の剛性を表すことはもはや有効ではなく、使用することはできません。無限の剛性、すなわち固定サポートは、真偽値でモデル化されるようになりました。"
-
-#:IFC.xml:48748
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
-msgstr "WarpingStiffness"
-
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
-msgstr "ワーピング剛性値を定義します。"
-
-#:IFC.xml:48755
-msgid "IfcFailureConnectionCondition"
-msgstr "IfcFailureConnectionCondition"
-
-msgid "IfcFailureConnectionCondition_DEFINITION"
-msgstr "サポートまたは接続に失敗する力を定義します。適用ポイントはサポートおよび接続をサポートします。HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48756
-msgid "IfcFailureConnectionCondition_CompressionFailureX"
-msgstr "圧縮失敗X"
-
-msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
-msgstr "接続に失敗するX方向の圧縮力。"
-
-#:IFC.xml:48761
-msgid "IfcFailureConnectionCondition_CompressionFailureY"
-msgstr "圧縮失敗"
-
-msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
-msgstr "接続の失敗につながるy 方向の圧縮力。"
-
-#:IFC.xml:48766
-msgid "IfcFailureConnectionCondition_CompressionFailureZ"
-msgstr "CompressionFailureZ"
-
-msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
-msgstr "接続に失敗するz方向の圧縮力。"
-
-#:IFC.xml:48771
-msgid "IfcFailureConnectionCondition_TensionFailureX"
-msgstr "TensionFailureX"
-
-msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
-msgstr "接続の障害につながるx方向の緊張力。"
-
-#:IFC.xml:48776
-msgid "IfcFailureConnectionCondition_TensionFailureY"
-msgstr "TensionFailureY"
-
-msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
-msgstr "接続の失敗につながるy方向の緊張力。"
-
-#:IFC.xml:48781
-msgid "IfcFailureConnectionCondition_TensionFailureZ"
-msgstr "TensionFailureZ"
-
-msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
-msgstr "接続の失敗につながるz方向の緊張力。"
-
-#:IFC.xml:48788
-msgid "IfcModulusOfRotationalSubgradeReactionSelect"
-msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
-
-#:IFC.xml:48789
-msgid "IfcModulusOfSubgradeReactionSelect"
-msgstr "IfcModulusOfSubgradeReactionSelect"
-
-#:IFC.xml:48790
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
-msgstr "IfcModulusOfTranslationalSubgradeReactionSelect"
-
-#:IFC.xml:48791
-msgid "IfcRotationalStiffnessSelect"
-msgstr "IfcRotationalStiffnessSelect"
-
-#:IFC.xml:48792
-msgid "IfcSlippageConnectionCondition"
-msgstr "IfcSlippageConnectionConditionCondition"
-
-msgid "IfcSlippageConnectionCondition_DEFINITION"
-msgstr "サポート条件または接続条件での滑りを説明します。 Slippage は、サポートまたは接続反応が起きる前に相対的な変位がサポートまたは接続で発生する可能性があることを意味します。 適用 ポイントのサポートと接続、曲線のサポートと接続、サーフェスのサポートと接続。 HISTORY IFC2x2に新しいエンティティ。"
-
-#:IFC.xml:48793
-msgid "IfcSlippageConnectionCondition_SlippageX"
-msgstr "SlippageX"
-
-msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の x 方向にスライドします。"
-
-#:IFC.xml:48798
-msgid "IfcSlippageConnectionCondition_SlippageY"
-msgstr "SlippageY"
-
-msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の y 方向に滑らかになります。"
-
-#:IFC.xml:48803
-msgid "IfcSlippageConnectionCondition_SlippageZ"
-msgstr "SlippageZ"
-
-msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義された座標系の z 方向にスライドします。"
-
-#:IFC.xml:48810
-msgid "IfcStructuralConnectionCondition"
-msgstr "IfcStructuralConnectionCondition"
-
-msgid "IfcStructuralConnectionCondition_DEFINITION"
-msgstr "接続プロパティを必要とすることはまれです。 HISTORY IFC2x2の新しいエンティティを記述します。"
-
-#:IFC.xml:48811
-msgid "IfcStructuralConnectionCondition_Name"
+msgid "IfcTable_Name_DEFINITION"
 msgstr "名前"
 
-msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
-msgstr "必要に応じてこの接続条件の名前を定義します。"
+#:IFC.xml:49436
+msgid "IfcTableColumn"
+msgstr "IfcTableColumn"
 
-#:IFC.xml:48817
-msgid "IfcStructuralLoad"
-msgstr "IfcStructuralLoad"
+msgid "IfcTableColumn_DEFINITION"
+msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4."
 
-msgid "IfcStructuralLoad_DEFINITION"
-msgstr "この抽象エンティティは、構造解析によって生じるすべての負荷動作または反応または特定の要件のスーパータイプです。 構造解析に影響を与える特定の規定です 歴史 IFC2x2に新しいエンティティが追加されました。"
+#:IFC.xml:2748
+msgid "IfcTableColumn_ReferencePath"
+msgstr "ReferencePath"
 
-#:IFC.xml:48818
-msgid "IfcStructuralLoad_Name"
+msgid "IfcTableColumn_ReferencePath_DEFINITION"
+msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied. For constraints, such path is relative to the [[IfcObjectDefinition]] associated by [[IfcRelAssociatesConstraint]] .RelatedObjects. For a constraint to be satisified, exactly one row of the table must match the referenced object for all columns where the ReferencePath attribute is set."
+
+#:IFC.xml:49437
+msgid "IfcTableColumn_Description"
+msgstr "説明"
+
+msgid "IfcTableColumn_Description_DEFINITION"
+msgstr "説明は、表の列を説明する人が読めるテキストを提供します。"
+
+#:IFC.xml:49442
+msgid "IfcTableColumn_Identifier"
+msgstr "Identifier"
+
+msgid "IfcTableColumn_Identifier_DEFINITION"
+msgstr "識別子は、テーブル内の列を識別します。指定された場合は、テーブル内で一意である必要があります。 列は、同じ列識別子を共有することによって、複数のテーブル間で相互参照することができます。"
+
+#:IFC.xml:49447
+msgid "IfcTableColumn_Name"
 msgstr "名前"
 
-msgid "IfcStructuralLoad_Name_DEFINITION"
-msgstr "必要に応じてこのロードの名前を定義します。"
+msgid "IfcTableColumn_Name_DEFINITION"
+msgstr "名前はテーブルカラムの人間が読めるキャプションです。必ずしも一意ではありません。"
 
-#:IFC.xml:48824
-msgid "IfcStructuralLoadConfiguration"
-msgstr "IfcStructuralLoadConfiguration"
+#:IFC.xml:49452
+msgid "IfcTableColumn_Unit"
+msgstr "単位"
 
-msgid "IfcStructuralLoadConfiguration_DEFINITION"
-msgstr "このクラスは、1 つまたは複数の負荷または結果の値を 1 または 2 次元構成で組み合わせます。 歴史 IFCにおける新しいエンティティ 4..spec head 非公式提案 1. 値の項目はすべて同じタイプでなければなりません。 2 曲線活動を構成する負荷または結果が曲線活動を構成する場合、1次元の位置が曲線に沿って局所的に測定されます。 位置は、曲線の曲線の範囲を超えてはなりません。 荷重サンプルおよび対応する場所は、位置の昇順に与えられます。 荷重または結果が表面活動を構成する場合は、2次元の位置を与えること。 局所的なX方向とY方向で測定されました 場所は、表面活動の境界を超えてはなりません。 ご注意 2次元ケースには注文要件はありませんが、1次元ケースは空間的に簡素化するために注文しなければなりません。"
+msgid "IfcTableColumn_Unit_DEFINITION"
+msgstr "単位は、この列のデータに使用される基準単位を示します。指定されていない場合は、プロジェクトのデフォルト単位が仮定されます。 ReferencePath が指定されている場合、ユニットは参照された属性と同じメジャーである必要があります。"
 
-#:IFC.xml:48832
-msgid "IfcStructuralLoadConfiguration_Values"
-msgstr "値"
+#:IFC.xml:49458
+msgid "IfcTableRow"
+msgstr "IfcTableRow"
 
-msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
-msgstr "負荷または結果の値のリストです。"
+msgid "IfcTableRow_DEFINITION"
+msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. Figure 337 illustrates table row use. Figure 337 Table row use Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . Figure 338 Table row use alternative HISTORY New entity in IFC1.5."
 
-#:IFC.xml:48825
-msgid "IfcStructuralLoadConfiguration_Locations"
-msgstr "場所"
+#:IFC.xml:49459
+msgid "IfcTableRow_IsHeading"
+msgstr "IsHeading"
 
-msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
-msgstr "このリソースオブジェクトを使用するインスタンスによって定義されたローカル座標系内で与えられた、ロードサンプルまたは結果サンプルの場所。 ロケーションのリスト内の各アイテムは、同じリストインデックスの値リストアイテムに関連付けられます。 この属性は、より高いレベルの定義から暗黙的にロケーションが知られる設定ではオプションです。"
+msgid "IfcTableRow_IsHeading_DEFINITION"
+msgstr "Flag which identifies if the row is a heading row or a row which contains row values. NOTE If the row is a heading, the flag takes the value TRUE."
 
-#:IFC.xml:48844
-msgid "IfcStructuralLoadLinearForce"
-msgstr "IfcStructuralLoadLinearForce"
+#:IFC.xml:49464
+msgid "IfcTableRow_RowCells"
+msgstr "RowCell"
 
-msgid "IfcStructuralLoadLinearForce_DEFINITION"
-msgstr "エンティティ [[IfcStructuralLoadLinearForce]] のインスタンスは、曲線上のアクションを定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
+msgid "IfcTableRow_RowCells_DEFINITION"
+msgstr "テーブルセルのデータ値.."
 
-#:IFC.xml:48845
-msgid "IfcStructuralLoadLinearForce_LinearForceX"
-msgstr "LinearForceX"
+#:IFC.xml:49470
+msgid "IfcGloballyUniqueId"
+msgstr "IfcGloballyUniqueId"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
-msgstr "x 方向の線形力の値。"
-
-#:IFC.xml:48850
-msgid "IfcStructuralLoadLinearForce_LinearForceY"
-msgstr "LinearForceY"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
-msgstr "Y方向の線形力の値。"
-
-#:IFC.xml:48855
-msgid "IfcStructuralLoadLinearForce_LinearForceZ"
-msgstr "LinearForceZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
-msgstr "z 方向に線形力の値を設定します。"
-
-#:IFC.xml:48860
-msgid "IfcStructuralLoadLinearForce_LinearMomentX"
-msgstr "LinearMomentX"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
-msgstr "x軸についての線形モーメント。"
-
-#:IFC.xml:48865
-msgid "IfcStructuralLoadLinearForce_LinearMomentY"
-msgstr "LinearMomentY"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
-msgstr "y 軸についての線形モーメント。"
-
-#:IFC.xml:48870
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
-msgstr "LinearMomentZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
-msgstr "Z軸についての線形モーメント。"
-
-#:IFC.xml:48877
-msgid "IfcStructuralLoadOrResult"
-msgstr "IfcStructuralLoadOrResult"
-
-msgid "IfcStructuralLoadOrResult_DEFINITION"
-msgstr "簡単なロードクラスまたは結果クラスの抽象的なスーパークラス HISTORY IFC4の新しい抽象エンティティは、すべてのサブタイプの上方互換性が保持されます。"
-
-#:IFC.xml:48880
-msgid "IfcStructuralLoadPlanarForce"
-msgstr "IfcStructuralLoadPlanarForce"
-
-msgid "IfcStructuralLoadPlanarForce_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadPlanarForce]]のインスタンスは、面上のアクションを定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48881
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
-msgstr "PlanarForceX"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
-msgstr "x 方向の平面力の値。"
-
-#:IFC.xml:48886
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
-msgstr "PlanarForceY"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
-msgstr "Y方向の平面力値。"
-
-#:IFC.xml:48891
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
-msgstr "PlanarForceZ"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
-msgstr "平面力を z 方向に値します。"
-
-#:IFC.xml:48898
-msgid "IfcStructuralLoadSingleDisplacement"
-msgstr "IfcStructuralLoadSingleDisplacement"
-
-msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadSingleDisplacement]]のインスタンスは変位を定義するために使用されます。HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48899
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
-msgstr "変位X"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
-msgstr "x 方向への変位。"
-
-#:IFC.xml:48904
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
-msgstr "変位Y"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
-msgstr "Y方向への変位。"
-
-#:IFC.xml:48909
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
-msgstr "変位Z"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
-msgstr "z方向への変位。"
-
-#:IFC.xml:48914
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
-msgstr "RotationalDisplacementRX"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
-msgstr "X 軸の周りの回転。"
-
-#:IFC.xml:48919
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
-msgstr "RotationalDisplacementRY"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
-msgstr "y軸周りの回転"
-
-#:IFC.xml:48924
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
-msgstr "RotationalDisplacementRZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
-msgstr "z 軸周りの回転"
-
-#:IFC.xml:48931
-msgid "IfcStructuralLoadSingleDisplacementDistortion"
-msgstr "IfcStructuralLoadSingleDisplacementDistortion"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
-msgstr "反りを伴う変位を定義します。履歴 IFC2x2 に新しい実体が追加されました。"
-
-#:IFC.xml:48932
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
-msgstr "<unk>"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
-msgstr "歪み曲率ワーピング、すなわち変位負荷に与えられた断面のde<unk> 。"
-
-#:IFC.xml:48939
-msgid "IfcStructuralLoadSingleForce"
-msgstr "IfcStructuralLoadSingleForce"
-
-msgid "IfcStructuralLoadSingleForce_DEFINITION"
-msgstr "エンティティ [[IfcStructuralLoadSingleForce]] のインスタンスは、単一点で動作するアクションの力と瞬間を定義するために使用されます。 歴史 IFC2x2に新しいエンティティが追加されました。"
-
-#:IFC.xml:48940
-msgid "IfcStructuralLoadSingleForce_ForceX"
-msgstr "ForceX"
-
-msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
-msgstr "X 方向に値を強制します。"
-
-#:IFC.xml:48945
-msgid "IfcStructuralLoadSingleForce_ForceY"
-msgstr "強制的に"
-
-msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
-msgstr "Y 方向に値を強制します。"
-
-#:IFC.xml:48950
-msgid "IfcStructuralLoadSingleForce_ForceZ"
-msgstr "ForceZ"
-
-msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
-msgstr "Z方向の値を強制的に設定します。"
-
-#:IFC.xml:48955
-msgid "IfcStructuralLoadSingleForce_MomentX"
-msgstr "MomentX"
-
-msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
-msgstr "X軸についての瞬間。"
-
-#:IFC.xml:48960
-msgid "IfcStructuralLoadSingleForce_MomentY"
-msgstr "MomentY"
-
-msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
-msgstr "Y軸についての瞬間。"
-
-#:IFC.xml:48965
-msgid "IfcStructuralLoadSingleForce_MomentZ"
-msgstr "MomentZ"
-
-msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
-msgstr "Z軸についての瞬間。"
-
-#:IFC.xml:48972
-msgid "IfcStructuralLoadSingleForceWarping"
-msgstr "IfcStructuralLoadSingleForceWarping"
-
-msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
-msgstr "図形[[IfcStructuralLoadSingleForceWarping]] のサブタイプとして [[IfcStructuralLoadSingleForce]] のインスタンス 1つの点でアクション操作を定義するために使用されます。 そのスーパータイプによって定義された力とモーメントに加えて、ワープモーメントを定義することができます。 HISTORY IFC2x2の新しいエンティティ。"
-
-#:IFC.xml:48973
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
-msgstr "WarpingMoment"
-
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
-msgstr "ポイントでの歪みの瞬間がロードされます。"
-
-#:IFC.xml:48980
-msgid "IfcStructuralLoadStatic"
-msgstr "IfcStructuralLoadStatic"
-
-msgid "IfcStructuralLoadStatic_DEFINITION"
-msgstr "抽象エンティティ[[IfcStructuralLoadStatic]]は、定義可能なすべての静的負荷動作または反応のスーパータイプです。 スコープ内には単一の力と瞬間、線形iがあります。 をクリックします。 1次元分布力と瞬間、平面力、すなわち2次元分布力、さらに変位および温度負荷。 HISTORYIFC2x2に新しい実体。"
-
-#:IFC.xml:48983
-msgid "IfcStructuralLoadTemperature"
-msgstr "IfcStructuralLoadTemperature"
-
-msgid "IfcStructuralLoadTemperature_DEFINITION"
-msgstr "エンティティ[[IfcStructuralLoadTemperature]]のインスタンスは、温度変化によって引き起こされるアクションを定義するために使用されます。 図1に示すように。 温度の変化は一定の値で与えられます それは完全な断面に適用されます そして部分の外側の繊維間の温度差の値です 沿革 IFC2x2の新しいエンティティ .. .. .. .. 構造的負荷温度を数値化する 図1 構造的負荷温度"
-
-#:IFC.xml:48984
-msgid "IfcStructuralLoadTemperature_DeltaTConstant"
-msgstr "DeltaTConstant"
-
-msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
-msgstr "温度変化は、構造部分の完全な部分、または不均一な温度変化の均一な部分に影響を与えます。 注 正の値は温度の上昇を示しています。 すなわち、正の一定の温度変化はメンバーの伸びを引き起こすか、それぞれの拘束がある場合はメンバーの圧縮を引き起こす。"
-
-#:IFC.xml:48989
-msgid "IfcStructuralLoadTemperature_DeltaTY"
-msgstr "Deltaty"
-
-msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
-msgstr "非均一な温度変化 Y方向の外側の温度変化の差として規定されています 解析メンバーのY方向の外側の繊維の温度変化から 注意 y における正の不均一な温度変化は、zについてのメンバーの負の曲率を引き起こします それぞれの拘束がある場合はzについての肯定的な曲げの瞬間です yとzは地元のメンバーの斧だ"
-
-#:IFC.xml:48994
-msgid "IfcStructuralLoadTemperature_DeltaTZ"
-msgstr "DeltaTZ"
-
-msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
-msgstr "非均一な温度変化 z方向の外側繊維の温度変化の違いとして規定されています 解析メンバーのz方向の外側繊維の温度変化から 注意 zの正の不均一な温度変化はyについてのメンバーの正の曲率を引き起こします それぞれの拘束がある場合はYについての負の曲げモーメントです yとzは地元のメンバーの斧だ"
-
-#:IFC.xml:49001
-msgid "IfcSurfaceReinforcementArea"
-msgstr "IfcSurfaceReinforcementArea"
-
-msgid "IfcSurfaceReinforcementArea_DEFINITION"
-msgstr "表面メンバーの補強領域を要求または提供します。 注 コンクリートカバー、効果的な深さ、メッシュまたは2つのリバーの向き、オプションで3方向などのメンバー設計パラメータ。 は、IfcStructuralLoadResource スキーマに指定されていません。これらは構造メンバーのレベルで指定されるものとします。"
-
-#:IFC.xml:49002
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
-msgstr "ShearReforço"
-
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
-msgstr "せん断補強。面積あたりの領域として指定されています。例えば平方メートルあたりの平方メートル、したがって比率測定、すなわちユニットレス。"
-
-#:IFC.xml:49007
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
-msgstr "SurfaceReforcement1"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
-msgstr "表面メンバーの正のローカルZ方向の側に位置するメンバーの顔面における補強。 面積/長さとして指定される。e. を選択します。 メートルあたりの平方メートルの長さを測定します。 たとえばメートル 。補強範囲は補強棒の 2 つまたは 3 つの方向に指定することができます。"
-
-#:IFC.xml:49012
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
-msgstr "SurfaceReforcement2"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
-msgstr "表面メンバーの負のローカルZ方向の側に位置するメンバーの顔部での強化。 面積/長さとして指定される。e. を選択します。 メートルあたりの平方メートルの長さを測定します。 たとえばメートル 。補強範囲は補強棒の 2 つまたは 3 つの方向に指定することができます。"
-
-#:IFC.xml:49019
-msgid "IfcTranslationalStiffnessSelect"
-msgstr "IfcTranslationalStiffnessSelect"
-
-#:IFC.xml:49020
-msgid "IfcWarpingStiffnessSelect"
-msgstr "IfcWarpingStiffnessSelect"
+msgid "IfcGloballyUniqueId_DEFINITION"
+msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 0123456789012345678901234567890123456789012345678901234567890123 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1."
 
