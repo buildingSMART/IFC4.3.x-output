@@ -9,975 +9,1479 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcProfileResource.pot\n"
+"X-Crowdin-File-ID: 70\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-02-21 16:03\n"
 
-#:IFC.xml:626
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:31285
+msgid "IfcArbitraryClosedProfileDef"
+msgstr "IfcArbitraryClosedProfileDef"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcArbitraryClosedProfileDef_DEFINITION"
+msgstr "The closed profile [[IfcArbitraryClosedProfileDef]] defines an arbitrary two dimensional profile for the use within the swept surface geometry, the swept area solid or a sectioned spine. It is given by an outer boundary from which the surface or solid can be constructed. HISTORY New entity in IFC1.5. Entity has been renamed from IfcArbitraryProfileDef in IFC2x. .spec head Informal Propositions 1. The OuterCurve has to be a closed curve. 2. The OuterCurve shall not intersect. Figure 1 illustrates the arbitrary closed profile definition. The OuterCurve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout1.gif Figure 1 Arbitrary closed profile"
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:12125
+msgid "IfcArbitraryClosedProfileDef_OuterCurve"
+msgstr "Auterkurve"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "IfcArbitraryClosedProfileDef_OuterCurve_DEFINITION"
+msgstr "Begrenzte Kurve, definiert die äußeren Grenzen des willkürlichen Profils."
 
-#:IFC.xml:627
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "CasingDepth"
+#:IFC.xml:31288
+msgid "IfcArbitraryOpenProfileDef"
+msgstr "IfcArbitraryOpenProfileDef"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Depth of the casing dimension in plane perpendicular to door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcArbitraryOpenProfileDef_DEFINITION"
+msgstr "The open profile [[IfcArbitraryOpenProfileDef]] defines an arbitrary two dimensional open profile for the use within the swept surface geometry. It is given by an open boundary from which the surface can be constructed. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The Curve has to be an open curve. Figure 1 illustrates the arbitrary open profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout3.gif Figure 1 Arbitrary open profile"
 
-#:IFC.xml:632
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "CasingThickness"
+#:IFC.xml:11476
+msgid "IfcArbitraryOpenProfileDef_Curve"
+msgstr "Kurve"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Thickness of the casing dimension in plane of the door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcArbitraryOpenProfileDef_Curve_DEFINITION"
+msgstr "Begrenzte Kurve öffnen, die das Profil definiert."
 
-#:IFC.xml:637
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:31291
+msgid "IfcArbitraryProfileDefWithVoids"
+msgstr "IfcArbitraryProfileDefWithVoids"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the door lining, measured perpendicular to the plane of the door lining. If omitted and with a given value to lining thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
+msgid "IfcArbitraryProfileDefWithVoids_DEFINITION"
+msgstr "The [[IfcArbitraryProfileDefWithVoids]] defines an arbitrary closed two dimensional profile with holes. It is given by an outer boundary and inner boundaries. A common usage of [[IfcArbitraryProfileDefWithVoids]] is as the cross section for the creation of swept surfaces or swept solids. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The outer curve and all inner curves shall be closed curves. 2. The outer curve shall enclose all inner curves. 3. No inner curve shall intersect with the outer curve or any other inner curve. That is, no two curves of the profile definition shall have a point or segment in common, taken into account the geometric precision factor of the geometric representation context. In other words, curves must neither cross nor touch each other. 4. No inner curve may enclose another inner curve. Figure 1 illustrates the arbitrary closed profile definition with voids. The OuterCurve , defined at the supertype [[IfcArbitraryClosedProfileDef]] and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve, the InnerCurves define a set of two dimensional closed bounded curves. arbitrary profile with inner boundaries .. .. .. .. figures ifcarbitraryprofiledef layout2.gif Figure 1 Arbitrary profile with voids"
 
-#:IFC.xml:642
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:12137
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves"
+msgstr "Innere Kurven"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door lining. The offset is given as distance to the x axis of the local placement."
+msgid "IfcArbitraryProfileDefWithVoids_InnerCurves_DEFINITION"
+msgstr "Set von begrenzten Kurven, die die inneren Grenzen des willkürlichen Profils definieren."
 
-#:IFC.xml:647
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:31294
+msgid "IfcAsymmetricIShapeProfileDef"
+msgstr "IfcAsymmetricIShapeProfileDef"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the door lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a door without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcAsymmetricIShapeProfileDef_DEFINITION"
+msgstr "[[IfcAsymmetricIShapeProfileDef]] defines a section profile that provides the defining parameters of a singly symmetric I shaped section. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. The overall width of the profile is implicitly given by the maximum of the bottom flange width and the top flange width. [[IfcAsymmetricIShapeProfileDef]] can also be used to model rail profiles if the application scenario does not require a full explicit shape model of the rail profile. Alternatively, [[IfcArbitraryClosedProfileDef]] can be used to provide the exact shape of rail profiles. Either way, a reference to an external document or library should be provided to further define the profile as described at [[IfcProfileDef]] . HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. The attribute CentreOfGravityInY has been made OPTIONAL. .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcIShapeProfileDef]] to [[IfcParameterizedProfileDef]] . Attributes which were inherited from [[IfcIShapeProfileDef]] are now defined directly at [[IfcAsymmetricIShapeProfileDef]] and have been partially renamed but were not reordered. Bottom flange may be narrower than top flange. Type of TopFlangeFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInY deleted, use respective property in IfcExtendedProfileProperties instead. Attributes BottomFlangeEdgeRadius , BottomFlangeSlope , TopFlangeEdgeRadius , TopFlangeSlope added. Figure 1 illustrates parameters of the asymmetric I shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInY property in IfcExtendedProfileProperties , if provided, is negative. asymmetric I shape profile .. .. .. .. figures ifcasymmetricishapeprofiledef.gif Figure 1 Assymetric I shape profile"
 
-#:IFC.xml:652
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:31295
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius"
+msgstr "BottomFlangeEdgeRadius"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius_DEFINITION"
+msgstr "Radius der oberen Kanten des unteren Flansches. 0 wenn scharf gekantet, ausgelassen wenn unbekannt."
 
-#:IFC.xml:657
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:31300
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius"
+msgstr "Unterer FlangeFilletRadius"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Versatz zwischen dem Futter und der Türplatte entlang der Y-Achse der lokalen Platzierung gemessen. .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius_DEFINITION"
+msgstr "Die Datei zwischen dem Web und der unteren Flansche. 0 wenn scharf Kante, weggelassen, wenn unbekannt."
 
-#:IFC.xml:662
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "ThresholdDepth"
+#:IFC.xml:31305
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope"
+msgstr "BottomFlangeSlope"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Depth dimension in plane perpendicular to door leaf of the door threshold. Only given if the door lining includes a threshold. If omitted and with a given value to threshold thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope_DEFINITION"
+msgstr "Neigung der oberen Flächen des unteren Flansches. Non null im Fall von verflipptem Boden, 0 bei paralleler Bodenflansche, ausgelassen, wenn unbekannt."
 
-#:IFC.xml:667
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "ThresholdOffset"
+#:IFC.xml:31310
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness"
+msgstr "Untere Flangedicke"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness_DEFINITION"
+msgstr "Flanschdicke des Bodenflansches."
 
-#:IFC.xml:672
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "ThresholdThickness"
+#:IFC.xml:31315
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth"
+msgstr "BottomFlangeWidth"
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. zero it denotes a door without a threshold ThresholdDepth shall be set to NIL in this case . If the ThresholdThickness is NIL it denotes that the information about a threshold is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth_DEFINITION"
+msgstr "Breite der unteren, parallel zur x-Achse des Positionskoordinatensystems."
 
-#:IFC.xml:677
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+#:IFC.xml:31320
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth"
+msgstr "Gesamttiefe"
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Offset of the transom if given which divides the door leaf from a glazing or window above. The offset is given from the bottom of the door opening."
+msgid "IfcAsymmetricIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "Gesamtumfang der Tiefe, die parallel zur Y-Achse des Positionskoordinatensystems definiert wird."
 
-#:IFC.xml:682
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:31325
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius"
+msgstr "TopFlangeEdgeRadius"
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness width in plane parallel to door leaf of the transom if provided that is, if the TransomOffset attribute is set , which divides the door leaf from a glazing or window above. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the door is divided vertically into a leaf and transom window area without a physical frame. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius_DEFINITION"
+msgstr "Radius der unteren Kanten der oberen Flansche. 0 wenn scharf gekantet, ausgelassen wenn unbekannt."
 
-#:IFC.xml:701
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
+#:IFC.xml:31330
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius"
+msgstr "TopFlangeFilletRadius"
 
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways how individual door panels operate as shown in Figure 1. Enumerator Illustration Swinging DoubleActing Sliding Folding Revolving Rollingup FixedPanel UserDefined NotDefined Figure 1 Door operations The opening direction of the door panels is given by the local placement of the [[IfcDoor]] . The positive y axis determines the direction as shown in Figure 2. panel direction .. .. .. .. figures ifcdoorpaneloperationenum fig10.gif Figure 2 Door panel operations NOTE Figures symbolic representation depend on the national building code. These figures are only shown as illustrations HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL added. Items SWINGING DOUBLE ACTING SLIDING FOLDING REVOLVING ROLLINGUP FIXEDPANEL USERDEFINED NOTDEFINED"
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius_DEFINITION"
+msgstr "Das Fillet zwischen dem Web und der oberen Flanke. 0 wenn scharfe Kante, weggelassen, wenn unbekannt."
 
-#:IFC.xml:702
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
-msgstr "AKTIVIEREN"
+#:IFC.xml:31335
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope"
+msgstr "TopFlangeSlope"
 
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
-msgstr "AKTIVIEREN"
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope_DEFINITION"
+msgstr "Neigung der unteren Flächen der oberen Flanke. Non null im Fall von verflipptem Oberflansch, 0 bei paralleler Oberflansche, ausgelassen, wenn unbekannt."
 
-#:IFC.xml:703
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
-msgstr "FIXEDPANEL"
+#:IFC.xml:31340
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness"
+msgstr "TopFlangeThickness"
 
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
-msgstr "FIXEDPANEL"
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness_DEFINITION"
+msgstr "Flanschdicke obere Flansche. Dieses Attribut ist nur aus historischen Gründen formell optional. Wann immer die Flanschdicke bekannt ist, ist sie wertvoll anzugeben."
 
-#:IFC.xml:704
-msgid "IfcDoorPanelOperationEnum_FOLDING"
-msgstr "FOLD"
+#:IFC.xml:31345
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth"
+msgstr "TopFlangeWidth"
 
-msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
-msgstr "FOLD"
+msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth_DEFINITION"
+msgstr "Umfang der oberen Flansche, die parallel zur X-Achse des Positionskoordinatensystems definiert wird."
 
-#:IFC.xml:705
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
+#:IFC.xml:31350
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcAsymmetricIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Die Dicke des Schleifens des I Formens, das sich auf die X-Achse und die Y-Achse des Positionskoordinatensystems konzentriert."
+
+#:IFC.xml:31357
+msgid "IfcCenterLineProfileDef"
+msgstr "IfcCenterLineProfilleDef"
+
+msgid "IfcCenterLineProfileDef_DEFINITION"
+msgstr "The profile [[IfcCenterLineProfileDef]] defines an arbitrary two dimensional open, not self intersecting profile for the use within the swept solid geometry. It is given by an area defined by applying a constant thickness to a centerline, generating an area from which the solid can be constructed. Among else, [[IfcCenterLineProfileDef]] is used to model cold formed steel or aluminium sections Sigma, Zeta, Omega, and similar sections which are not covered by subtypes of [[IfcParameterizedProfileDef]] . However, since [[IfcCenterLineProfileDef]] does not provide shape parameters except for the thickness, there is generally a need to further specify the profile definition by means of the name, external reference to a document or library, profile properties, or a combination of them. See [[IfcProfileDef]] for guidance on external references for profiles. HISTORY New entity in IFC2x3. .spec head Informal Propositions 1. The Curve has to be an open curve. 2. The Curve has to be a non intersecting curve. Figure 1 illustrates the center line profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. The Thickness attribute defines a constant thickness along the curve. center line .. .. .. .. figures ifcarbitraryprofiledef layout4.gif Figure 1 Centerline profile"
+
+#:IFC.xml:31358
+msgid "IfcCenterLineProfileDef_Thickness"
+msgstr "Pset_TubeBundleTypeFinned_Dicke"
+
+msgid "IfcCenterLineProfileDef_Thickness_DEFINITION"
+msgstr "Konstante Dicke entlang der Mittellinie."
+
+#:IFC.xml:31365
+msgid "IfcCircleHollowProfileDef"
+msgstr "IfcCircleHollowProfileDef"
+
+msgid "IfcCircleHollowProfileDef_DEFINITION"
+msgstr "[[IfcCircleHollowProfileDef]] defines a section profile that provides the defining parameters of a circular hollow section tube to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration.The centre of the position coordinate system is in the profile s centre of the bounding box for symmetric profiles identical with the centre of gravity . HISTORY New entity in IFC2x2. Figure 1 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The parameterized profile is defined by a set of parameter attributes. CHS shape profile .. .. .. .. figures ifccirclehollowprofiledef.gif Figure 1 Circle hollow profile"
+
+#:IFC.xml:31366
+msgid "IfcCircleHollowProfileDef_WallThickness"
+msgstr "Walldicke"
+
+msgid "IfcCircleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "Dicke des Materials, es ist der Unterschied zwischen dem äußeren und dem inneren Radius."
+
+#:IFC.xml:31373
+msgid "IfcCircleProfileDef"
+msgstr "IfcCircleProfileDef"
+
+msgid "IfcCircleProfileDef_DEFINITION"
+msgstr "[[IfcCircleProfileDef]] defines a circle as the profile definition used by the swept surface geometry or by the swept area solid. It is given by its Radius attribute and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters for the circle profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines, it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . The Position attribute defines the 2D position coordinate system of the circle. The Radius attribute defines the radius of the circle. circle profile .. .. .. .. figures ifccircleprofiledef layout1.gif Figure 1 Circle profile"
+
+#:IFC.xml:31374
+msgid "IfcCircleProfileDef_Radius"
+msgstr "Radius"
+
+msgid "IfcCircleProfileDef_Radius_DEFINITION"
+msgstr "Der Radius des Kreises."
+
+#:IFC.xml:31381
+msgid "IfcCompositeProfileDef"
+msgstr "IfcCompositeProfilleDef"
+
+msgid "IfcCompositeProfileDef_DEFINITION"
+msgstr "The [[IfcCompositeProfileDef]] defines the profile by composition of other profiles. The composition is given by a set of at least two other profile definitions. Any profile definition except for another composite profile can be used to construct the composite. HISTORY New entity in IFC2x. Figure 314 illustrates the composite profile definition. The [[IfcCompositeProfileDef]] does not define an own position coordinate system, it is directly defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The [[IfcCompositeProfileDef]] is defined using other profile definitions. Those other profile definitions are directly inserted into the underlying coordinate system. In case of parameterized profile definitions, the Position attribute of those standard profiles is used to place the profiles relatively to each other. In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system. NOTE The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid. composite .. .. .. .. figures ifccompositeprofiledef layout1.gif Figure 314 .use head Twin profiles special case If twin profiles are modeled by profile composition, the base profile should only be specified once. It is then included into the composite profile directly and additionally indirectly via [[IfcMirroredProfileDef]] . For example, a double angle made of two L100x10 with 10mm air gap between them, i.e. a shape, can be modeled as single L [[IfcLShapeProfileDef]] [[IfcLShapeProfileDef]] AREA, L100X100X10 , [[IfcAxis2Placement2D]] [[IfcCartesianPoint]] .100 .010 2., .0 , , .100, .100, .010, .012, , 0., , double L [[IfcCompositeProfileDef]] [[IfcCompositeProfileDef]] AREA, double angle , single L, [[IfcMirroredProfileDef]] AREA, , single L, , twin profile"
+
+#:IFC.xml:31389
+msgid "IfcCompositeProfileDef_Profiles"
+msgstr "Profiles"
+
+msgid "IfcCompositeProfileDef_Profiles_DEFINITION"
+msgstr "The profiles which are used to define the composite profile."
+
+#:IFC.xml:31382
+msgid "IfcCompositeProfileDef_Label"
+msgstr "Label"
+
+msgid "IfcCompositeProfileDef_Label_DEFINITION"
+msgstr "Der Name, unter dem die Komposition verwiesen werden kann."
+
+#:IFC.xml:31401
+msgid "IfcCShapeProfileDef"
+msgstr "IfcCShapeProfileDef"
+
+msgid "IfcCShapeProfileDef_DEFINITION"
+msgstr "[[IfcCShapeProfileDef]] defines a section profile that provides the defining parameters of a C shaped section to be used by the swept area solid. This section is typically produced by cold forming steel. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of InternalFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInX deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the C shape profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInX property in IfcExtendedProfileProperties , if provided, is negative. C shape profile .. .. .. .. figures ifccshapeprofiledef.gif Figure 1 C shape profile"
+
+#:IFC.xml:31402
+msgid "IfcCShapeProfileDef_Depth"
+msgstr "Tiefe"
+
+msgid "IfcCShapeProfileDef_Depth_DEFINITION"
+msgstr "Profiltiefe, siehe Abbildung oberhalb h ."
+
+#:IFC.xml:31407
+msgid "IfcCShapeProfileDef_Girth"
+msgstr "Girth"
+
+msgid "IfcCShapeProfileDef_Girth_DEFINITION"
+msgstr "Gürtellängen siehe Abbildung oberhalb c ."
+
+#:IFC.xml:31412
+msgid "IfcCShapeProfileDef_InternalFilletRadius"
+msgstr "Interner FilletRadius"
+
+msgid "IfcCShapeProfileDef_InternalFilletRadius_DEFINITION"
+msgstr "Interner Filletradius gemäß obiger Abbildung r1 ."
+
+#:IFC.xml:31417
+msgid "IfcCShapeProfileDef_WallThickness"
+msgstr "Walldicke"
+
+msgid "IfcCShapeProfileDef_WallThickness_DEFINITION"
+msgstr "Konstante Wanddicke von Profilen ."
+
+#:IFC.xml:31422
+msgid "IfcCShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcCShapeProfileDef_Width_DEFINITION"
+msgstr "Profilbreite siehe Abbildung über b ."
+
+#:IFC.xml:31429
+msgid "IfcDerivedProfileDef"
+msgstr "IfcDerivedProfileDef"
+
+msgid "IfcDerivedProfileDef_DEFINITION"
+msgstr "[[IfcDerivedProfileDef]] defines the profile by transformation from the parent profile. The transformation is given by a two dimensional transformation operator. Transformation includes translation, rotation, mirror and scaling. The latter can be uniform or non uniform. The derived profiles may be used to define swept surfaces, swept area solids or sectioned spines. The transformation effects the position, rotation, mirroring or scale of the profile at the underlying coordinate system, i.e. the coordinate system defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The position and potential rotation of the ParentProfile within the underlying coordinate system is taken into consideration before applying the Cartesian transformation operator. Note, if only mirroring is required, [[IfcMirroredProfileDef]] should be used instead. HISTORY New entity in IFC2x. Uniform .. .. .. .. figures ifcderivedprofiledef layout1.gif Parameter The [[IfcDerivedProfileDef]] is defined using the [[IfcCartesianTransformationOperator2D]] CTO , which is applied to the parent profile definition. Example The example shows an uniform scaling and a transformation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] , Scale 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. Non uniform .. .. .. .. figures ifcderivedprofiledef layout2.gif Parameter The [[IfcDerivedProfileDef]] is defined using non uniform transformationsby applying the [[IfcCartesianTransformationOperator2DnonUniform]] as a subtype of the 2D CTO. Example The example shows a non uniform scaling and a translation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0., Scale 1. Scale2 2. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] , already. mirroring .. .. .. .. figures ifcderivedprofiledef layout3.gif Parameter The [[IfcDerivedProfileDef]] is defined using mirroring by applying the [[IfcCartesianTransformationOperator2D]] CTO to the parent profile. Example The example shows a mirroring of an [[IfcLShapeProfileDef]] to match the centre cardinal point. The attributes of the CTO are Axis1 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0.,0. Scale NIL defaults to 1. NOTE The ParentProfile has a Position [[IfcCartesianPoint]] 0.,0. . This example is for illustration only. If the transformation results only in mirroring like shown in the example, then [[IfcMirroredProfileDef]] should be used instead of [[IfcDerivedProfileDef]]. Note The following color map applies black coordinate axes show the underlying coordinate system of the swept surface, swept area solid, or sectioned spine red coordinate axes show the position coordinate system of the parent profile brown coordinate axes show the position coordinate system of the derived profile"
+
+#:IFC.xml:11887
+msgid "IfcDerivedProfileDef_Operator"
+msgstr "Operator"
+
+msgid "IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "Transformation operator applied to the parent profile."
+
+#:IFC.xml:31437
+msgid "IfcDerivedProfileDef_ParentProfile"
+msgstr "Elternprofil"
+
+msgid "IfcDerivedProfileDef_ParentProfile_DEFINITION"
+msgstr "The parent profile provides the origin of the transformation."
+
+#:IFC.xml:31430
+msgid "IfcDerivedProfileDef_Label"
+msgstr "Label"
+
+msgid "IfcDerivedProfileDef_Label_DEFINITION"
+msgstr "Der Name, unter dem die Transformation referenziert werden kann."
+
+#:IFC.xml:31449
+msgid "IfcEllipseProfileDef"
+msgstr "IfcEllipseProfilleDef"
+
+msgid "IfcEllipseProfileDef_DEFINITION"
+msgstr "[[IfcEllipseProfileDef]] defines an ellipse as the profile definition used by the swept surface geometry or the swept area solid. It is given by its semi axis attributes and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC2x Figure 1 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The location of the position coordinate system defines the center of the ellipse. The SemiAxis1 attribute defines the first radius of the ellipse in the direction of the X axis, the SemiAxis2 attribute defines the second radius of the ellipse in the direction of the Y axis. NOTE The semi axes of the ellipse are rectangular to each other by definition. ellipse profile .. .. .. .. figures ifcellipseprofiledef layout1.gif Figure 1 Ellipse profile"
+
+#:IFC.xml:31450
+msgid "IfcEllipseProfileDef_SemiAxis1"
+msgstr "SemiAxis1"
+
+msgid "IfcEllipseProfileDef_SemiAxis1_DEFINITION"
+msgstr "Der erste Radius der Ellipse wird entlang der Richtung von Position.P 1 gemessen."
+
+#:IFC.xml:31455
+msgid "IfcEllipseProfileDef_SemiAxis2"
+msgstr "SemiAxis2"
+
+msgid "IfcEllipseProfileDef_SemiAxis2_DEFINITION"
+msgstr "Der zweite Radius der Ellipse wird entlang der Richtung von Position.P 2 gemessen."
+
+#:IFC.xml:31462
+msgid "IfcIShapeProfileDef"
+msgstr "IfcIShapeProfileDef"
+
+msgid "IfcIShapeProfileDef_DEFINITION"
+msgstr "[[IfcIShapeProfileDef]] defines a section profile that provides the defining parameters of an I or H section. The I shape profile has values for its overall depth, width and its web and flange thicknesses. Additionally a fillet radius, flange edge radius, and flange slope may be given. This profile definition represents an I section which is symmetrical about its major and minor axes top and bottom flanges are equal and centred on the web. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Type of FilletRadius relaxed to allow for zero radius. Attributes FlangeEdgeRadius and FlangeSlope added. Figure 1 illustrates parameters of the I shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The parameterized profile is defined by a set of parameter attributes, see attribute definition below. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of lower left corner the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] 1 2 OverallWidth , RefDirection NIL defaults to 1.,0. Parameter If the FilletRadius is given, it is equally applied to all four corners created by the web and flanges. Figure 1 I shape profile"
+
+#:IFC.xml:31463
+msgid "IfcIShapeProfileDef_FilletRadius"
+msgstr "FilletRadius"
+
+msgid "IfcIShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Die Datei zwischen dem Web und der Flansche. 0 wenn scharf gekantet, weggelassen, wenn unbekannt."
+
+#:IFC.xml:31468
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
+
+msgid "IfcIShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "Radius der unteren Kanten des oberen Flansches und der oberen Kanten des unteren Flansches. 0 wenn scharf gekantet, weggelassen, wenn unbekannt."
+
+#:IFC.xml:31473
+msgid "IfcIShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
+
+msgid "IfcIShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Neigung der unteren Flächen des oberen Flansches und der oberen Flächen des unteren Flansches. Non null im Falle von kegelförmigen Flanschen, 0 bei parallelen Flanschen, ausgelassen, wenn unbekannt."
+
+#:IFC.xml:31478
+msgid "IfcIShapeProfileDef_FlangeThickness"
+msgstr "Pset_PipeConnectionFlanged_Flanschdicke"
+
+msgid "IfcIShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Flansch Dicke des I Form. Sowohl die oberen als auch die unteren Flansche haben die gleiche Dicke und sind auf der Y-Achse des Positionkoordinatensystems zentriert."
+
+#:IFC.xml:31483
+msgid "IfcIShapeProfileDef_OverallDepth"
+msgstr "Gesamttiefe"
+
+msgid "IfcIShapeProfileDef_OverallDepth_DEFINITION"
+msgstr "Gesamtumfang der Tiefe, die parallel zur Y-Achse des Positionskoordinatensystems definiert wird."
+
+#:IFC.xml:31488
+msgid "IfcIShapeProfileDef_OverallWidth"
+msgstr "Gesamtbreite"
+
+msgid "IfcIShapeProfileDef_OverallWidth_DEFINITION"
+msgstr "Gesamtumfang der Breite, die parallel zur X-Achse des Positionskoordinatensystems definiert wird."
+
+#:IFC.xml:31493
+msgid "IfcIShapeProfileDef_WebThickness"
+msgstr "WebThickness"
+
+msgid "IfcIShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Die Dicke des Schleifens des I Formens, das sich auf die X-Achse und die Y-Achse des Positionskoordinatensystems konzentriert."
+
+#:IFC.xml:31500
+msgid "IfcLShapeProfileDef"
+msgstr "IfcLShapeProfileDef"
+
+msgid "IfcLShapeProfileDef_DEFINITION"
+msgstr "[[IfcLShapeProfileDef]] defines a section profile that provides the defining parameters of an L shaped section equilateral L profiles are also covered by this entity to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The shorter leg has the same direction as the positive Position.P 1 axis, the longer or equal leg the same as the positive Position.P 2 axis. The centre of the position coordinate system is in the profiles centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Types of FilletRadius and EdgeRadius were relaxed to allow for zero values. Trailing attributes CentreOfGravityInX and CentreOfGravityInY deleted, use respective properties in IfcExtendedProfileProperties instead. WHERE rule which required Width Depth removed. Figure 1 illustrates parameters of equal sided and non equal sided L shaped section definitions. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. In the illustrated example, the CentreOfGravityInX and CentreOfGravityInY properties in IfcExtendedProfileProperties, if provided, are both negative. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of gravity the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] CentreOfGravityInX , CentreOfGravityInY RefDirection NIL defaults to 1.,0. In the illustrated example, the x and y value of Position.Location, i.e. the measures CentreOfGravityInX and CentreOfGravityInY are both positive. On the other hand, the properties named CentreOfGravityInX and CentreOfGravityInY in IfcExtendedProfileProperties, if provided, must both be set to 0 now because the centre of gravity of the resulting profile definition is located in the coordinate origin. Figure 1 L shape profile"
+
+#:IFC.xml:31501
+msgid "IfcLShapeProfileDef_Depth"
+msgstr "Tiefe"
+
+msgid "IfcLShapeProfileDef_Depth_DEFINITION"
+msgstr "Beine Länge siehe Abbildung oberhalb h ."
+
+#:IFC.xml:31506
+msgid "IfcLShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
+
+msgid "IfcLShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Kantenradius entsprechend der obigen Abbildung r2 ."
+
+#:IFC.xml:31511
+msgid "IfcLShapeProfileDef_FilletRadius"
+msgstr "FilletRadius"
+
+msgid "IfcLShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Fillet Radius gemäß der obigen Abbildung r1 ."
+
+#:IFC.xml:31516
+msgid "IfcLShapeProfileDef_LegSlope"
+msgstr "Beinneigung"
+
+msgid "IfcLShapeProfileDef_LegSlope_DEFINITION"
+msgstr "Neigung der Innenseite der einzelnen Beine des Profils."
+
+#:IFC.xml:31521
+msgid "IfcLShapeProfileDef_Thickness"
+msgstr "Pset_TubeBundleTypeFinned_Dicke"
+
+msgid "IfcLShapeProfileDef_Thickness_DEFINITION"
+msgstr "Konstante Wanddicke des Profils, siehe Abbildung oben ts ."
+
+#:IFC.xml:31526
+msgid "IfcLShapeProfileDef_Width"
+msgstr "Width"
+
+msgid "IfcLShapeProfileDef_Width_DEFINITION"
+msgstr "Beinlänge, siehe Abbildung über b . Dieses Attribut ist formell nur aus historischen Gründen optional. Wenn die Breite bekannt ist, muss es als Wert angegeben werden."
+
+#:IFC.xml:31533
+msgid "IfcMirroredProfileDef"
+msgstr "IfcMirroredProfilleDef"
+
+msgid "IfcMirroredProfileDef_DEFINITION"
+msgstr "The [[IfcMirroredProfileDef]] defines the profile by mirroring the parent profile about the y axis of the parent profile coordinate system. That is, left and right of the parent profile are swapped. Notes [[IfcMirroredProfileDef]] is primarily useful together with [[IfcCShapeProfileDef]] , [[IfcLShapeProfileDef]] , [[IfcUShapeProfileDef]] , or [[IfcZShapeProfileDef]] as parent profile but can be used with other parent profile types as well. Mirroring of an [[IfcParameterizedProfileDef]] is performed after translation and rotation according to its Position attribute. For example, if the parent profile s Position offsets it by half of its width to the right, then the mirrored profile will be offset by half of its width to the left. Mirroring about the x axis, i.e. swapping top and bottom, can be achieved by mirroring about the y axis coupled with 180 degree rotation about the z axis. In general, rotation happens in a containing object such as [[IfcSweptAreaSolid]] , i.e. after mirroring by [[IfcMirroredProfileDef]] was performed. If the parent profile is an [[IfcParameterizedProfileDef]] , rotation can alternatively happen already in the parent profile by means of its Position attribute, i.e. before mirroring by [[IfcMirroredProfileDef]] was performed. HISTORY New entity in IFC4."
+
+#:IFC.xml:31534
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator"
+msgstr "SELF IfcDerivedProfileDef Operator"
+
+msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator_DEFINITION"
+msgstr "SELF [[IfcDerivedProfileDef]].Operator"
+
+#:IFC.xml:31540
+msgid "IfcOpenCrossProfileDef"
+msgstr "IfcOpenCrossProfilleDef"
+
+msgid "IfcOpenCrossProfileDef_DEFINITION"
+msgstr "Ein zweidimensionales offenes Profil definiert durch Breite und Pisten für den Einsatz innerhalb der gefegten Oberflächengeometrie, insbesondere in SectionedSurface. Das zugrundeliegende Koordinatensystem wird durch die gefegte Oberfläche definiert, die die Profildefinition verwendet, wenn sie in SectionedSurface verwendet wird, ist es die XY-Ebene jedes Listenmitglieds von SectionedSurface. rossSectionPositionPositionen, bei denen die Profil-X-Achse senkrecht links vom Directrix orientiert ist wie ein positiver LateralOffset bei [[IfcPointByDistanceExpression]] wie nach vorne entlang des Directrix, und die Profil Y-Achse ist nach oben oder vertikal senkrecht auf die Directrix ausgerichtet, abhängig von der Verwendung in der SectionedSurface. Das Verhalten von OpenCrossProfileDef im Kehrbetrieb kann durch Attribut-Tags gesteuert werden. Tags erlauben es zwei aufeinander folgende Querschnitte, unterschiedliche Anzahl von Haltepunkten mit dem gleichen Tagwert zu haben, die entweder durch die Annahme einer linearen Längsstrecke zwischen ihnen verbunden sind oder durch eine Richtkurve, die durch den gleichen Tag-Wert wie die Querschnittspunkte identifiziert wird. offenes Querprofil .. .. .. .. .. Figuren [[IfcOpenCrossProfileDef]].png Abbildung 1 Offenes Querprofil"
+
+#:IFC.xml:11730
+msgid "IfcOpenCrossProfileDef_OffsetPoint"
+msgstr "Versatzpunkt"
+
+msgid "IfcOpenCrossProfileDef_OffsetPoint_DEFINITION"
+msgstr "Versatzpunkt"
+
+#:IFC.xml:31541
+msgid "IfcOpenCrossProfileDef_HorizontalWidths"
+msgstr "Horizontalbreiten"
+
+msgid "IfcOpenCrossProfileDef_HorizontalWidths_DEFINITION"
+msgstr "Gibt an, ob die Breite horizontal oder entlang der Pisten gemessen werden soll."
+
+#:IFC.xml:31546
+msgid "IfcOpenCrossProfileDef_Slopes"
+msgstr "Neigungen"
+
+msgid "IfcOpenCrossProfileDef_Slopes_DEFINITION"
+msgstr "Die Neigungsmaßnahme."
+
+#:IFC.xml:31551
+msgid "IfcOpenCrossProfileDef_Tags"
+msgstr "Tags"
+
+msgid "IfcOpenCrossProfileDef_Tags_DEFINITION"
+msgstr "Tags"
+
+#:IFC.xml:31556
+msgid "IfcOpenCrossProfileDef_Widths"
+msgstr "Breite"
+
+msgid "IfcOpenCrossProfileDef_Widths_DEFINITION"
+msgstr "Die horizontalen Breiten, wenn HorizontalWidths .T. oder Entfernungen entlang der Neigung bei Horizontalbreiten . für die Segmente im Profil, und wenn Horizontal .T. die Neigungen nicht 90 Grad betragen."
+
+#:IFC.xml:31563
+msgid "IfcParameterizedProfileDef"
+msgstr "IfcParameterizedProfileDef"
+
+msgid "IfcParameterizedProfileDef_DEFINITION"
+msgstr "The parameterized profile definition defines a 2D position coordinate system to which the parameters of the different profiles relate to. All profiles are defined centric to the origin of the position coordinate system, or more specific, the origin 0.,0. shall be in the center of the bounding box of the profile. The Position attribute of [[IfcParameterizedProfileDef]] is used to position the profile within the XY plane of the underlying coordinate system of the swept surface geometry, the swept area solid or the sectioned spine. It can be used to position the profile at any point which becomes the origin 0.,0.,0. of the extruded or rotated surface or solid. The Position attribute should not be used if the transformation can be specified in a containing object instead. In particular, this applies if the [[IfcParameterizedProfileDef]] is referenced as SweptArea in subtypes of [[IfcSweptAreaSolid]] or as CrossSections in [[IfcSectionedSpine]] . Several subtypes of [[IfcParameterizedProfileDef]] provide shape parameters which are optional. Sending systems should always provide values for these parameters if possible. If these parameters are left unspecified, receiving systems may retrieve values for them by external reference if a reference to an external document or library is given see guidance at [[IfcProfileDef]] , or estimate them, or simply assume zero values. HISTORY New entity in IFC2x2. .change ifc2x IFC2x CHANGE The [[IfcParameterizedProfileDef]] is introduced as an intermediate new abstract entity that unifies the definition and usage of the position coordinate system for all parameterized profiles. The Position attribute has been removed at all subtypes like [[IfcRectangleProfileDef]] , [[IfcCircleProfileDef]] , etc. . .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Position attribute made optional default identity transformation . Several radius parameters in subtypes have been changed from optional [[IfcPositiveLengthMeasure]] assumed default 0. to optional [[IfcNonNegativeLengthMeasure]] default unspecified . This change allows to explicitly specify zero radius. Sending systems shall export 0. values if parameters are known to be 0. Subtypes IfcCraneRailAShapeProfileDef and IfcCraneRailFShapeProfileDef deleted. Rail profiles shall be modeled as [[IfcArbitraryClosedProfileDef]] or as [[IfcAsymmetricIShapeProfileDef]] together with appropriate external reference."
+
+#:IFC.xml:11306
+msgid "IfcParameterizedProfileDef_Position"
+msgstr "Pset_ActuatorPHistory_Position"
+
+msgid "IfcParameterizedProfileDef_Position_DEFINITION"
+msgstr "Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied."
+
+#:IFC.xml:31566
+msgid "IfcProfileDef"
+msgstr "IfcProfilleDef"
+
+msgid "IfcProfileDef_DEFINITION"
+msgstr "[[IfcProfileDef]] is the supertype of all definitions of standard and arbitrary profiles within IFC. It is used to define a standard set of commonly used section profiles by their parameters or by their explicit curve geometry. Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters. Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries. Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available. In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile. HISTORY New entity in IFC1.5, the capabilities have been extended in IFC2x. Profiles can now support swept surfaces and swept area solids with inner boundaries. It had been renamed from IfcAttDrivenProfileDef. .change ifc2x4 IFC4 CHANGE Changed from ABSTRACT to non abstract for uses which do not require an explicitly defined geometry. Added inverse attributes HasProperties and HasExternalReference . Use in material association Beams, columns, and similarly shaped building elements and their type objects may be associated with a section profile definition, combined with material definition, by means of [[IfcRelAssociatesMaterial]] together with [[IfcMaterialProfileSet]] and [[IfcMaterialProfileSetUsage]] . This way, building elements and element types with same section and material can share a common section profile definition and association. The profile definition in material association is required to be consistent with shape representations of the respective building elements. A higher level description of spatial aligment of the section profile of a member such as centered, bottom left, in the geometric centroid, and more can be provided within [[IfcMaterialProfileSetUsage]] by means of a cardinal point reference. This can be used redundant to geometric data in order to convey design intent. Use in shape models Profile definitions are used within the geometry and geometric model resource to create either swept surfaces, swept area solids, or sectioned spines. The purpose of the profile definition within the swept surfaces or swept area solids is to define a uniform cross section being swept along a line extrusion using [[IfcSurfaceOfLinearExtrusion]] or [[IfcExtrudedAreaSolid]] along a circular arc revolution using [[IfcSurfaceOfRevolution]] or [[IfcRevolvedAreaSolid]] along a directrix lying on a reference surface using [[IfcSurfaceCurveSweptAreaSolid]] The purpose of the profile definition within the sectioned spine is to define a varying cross sections at several positions along a spine curve. The subtype [[IfcDerivedProfileDef]] is particularly suited to provide the consecutive profiles to be based on transformations of the start profile and thus maintaining the identity of vertices and edges. NOTE Subtypes of the [[IfcProfileDef]] contain parameterized profiles as subtypes of [[IfcParameterizedProfileDef]] which establish their own 2D position coordinate system, profiles given by explicit curve geometry either open or closed profiles and two special types for composite profiles and derived profiles, based on a 2D Cartesian transformation. An [[IfcProfileDef]] is treated as bounded area if it is used within swept area solids. In this case, the inside of the profile is part of the profile. The attribute ProfileType is set to AREA. An [[IfcProfileDef]] is treated as a curve if it is used within swept surfaces. In this case, the inside of the profile if the curve is closed is not part of the profile. The attribute ProfileType is set to CURVE. Figure 1 illustrates use of parameterized profiles within a swept area solid. Position The [[IfcProfileDef]] is defined within the underlying coordinate system which is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position or of [[IfcSweptAreaSolid]].Position or of each list member of [[IfcSectionedSpine]].CrossSectionPositions. In the figure to the left, the z axis of the position coordinate system points outwards of the drawing plane. Note The subtype [[IfcParameterizedProfileDef]] optionally provides an additional 2D position coordinate system relative to the underlying coordinate system of the [[IfcProfileDef]]. Sweeping In the later use of the [[IfcProfileDef]] within the swept surface or swept area solid, e.g. the [[IfcExtrudedAreaSolid]] here used as an example , the profile boundaries here based on the 2D position coordinate system of [[IfcParameterizedProfileDef]] are placed within the xy plane of the 3D position coordinate system of the swept surface or swept area solid. The profile is inserted into the underlying coordinate system either directly in case of using [[IfcArbitraryClosedProfileDef]] and [[IfcArbitraryOpenProfileDef]], through an intermediate position coordinate system in case of using [[IfcParameterizedProfileDef]]. through an 2D Cartesian transformation operator applied directly to the curve position when using arbitrary profile definitions, or applied to the position coordinate system when using parameterized profile definitions in case of using [[IfcDerivedProfileDef]]. when using [[IfcCompositeProfileDef]] the insertion depends on the subtype of the included sub profiles. Figure 1 Profile sweeping Profile types Results of the different usage of the ProfileType attribute are demonstrated here. The ProfileType defines whether the inside the bounded area is part of the profile definition Area or not Curve . Figure 2 illustrates the resulting area or curve depending on ProfileType . ProfileType AREA ProfileType CURVE Figure 2 Profile types Profile specification by external reference If the profile is standardized by a norm or a catalogue, a reference to this norm or catalogue should be provided by means of HasExternalReference . This inverse relationship is used to associate an [[IfcExternalReference]] notably [[IfcClassificationReference]] or [[IfcLibraryReference]] with the profile. [[IfcClassificationReference]] is used to refer to a profile norm a common standard or manufacturer s standard . In this case, [[IfcClassificationReference]].ItemReference contains the formal profile designation from the norm. On the other hand, [[IfcProfileDef]].ProfileName contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the profile norm. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource . [[IfcLibraryReference]] is used to refer to a library which contains profile definitions. In this case, [[IfcLibraryReference]].ItemReference contains the identifier of the profile within the library and is meant to be machine readable in contrast to [[IfcProfileDef]].ProfileName which should be human readable . [[IfcLibraryReference]].Location and . Name or . ReferencedLibrary further describe the library. If an external reference is provided, sending systems shall ensure that the shape of the profile definition object agrees with the definitions in the referenced classification or library. Direct instances of [[IfcProfileDef]] Usually, only subtypes of [[IfcProfileDef]] should be instantiated. In some special cases, e.g. if the profile object is used for purposes other than geometric models e.g. for structural analysis models , it may be possible to directly instantiate [[IfcProfileDef]] and further specify the profile only by external reference or by profile properties. The latter are tracked by the inverse attribute HasProperties ."
+
+#:IFC.xml:9514
+msgid "IfcProfileDef_HasExternalReference"
+msgstr "HasExternalReference"
+
+msgid "IfcProfileDef_HasExternalReference_DEFINITION"
+msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the profile. .change ifc2x4 IFC4 CHANGE New inverse attribute"
+
+#:IFC.xml:31579
+msgid "IfcProfileDef_HasProperties"
+msgstr "Haseneigenschaften"
+
+msgid "IfcProfileDef_HasProperties_DEFINITION"
+msgstr "Zusätzliche Eigenschaften des Profils, zum Beispiel mechanische Eigenschaften. .change ifc2x4 IFC4 CHANGE Neues Inverse-Attribut"
+
+#:IFC.xml:31567
+msgid "IfcProfileDef_ProfileName"
+msgstr "ProfileName"
+
+msgid "IfcProfileDef_ProfileName_DEFINITION"
+msgstr "Der lesbare Name des Profils, zum Beispiel nach einer Standard-Profiltabelle. Wie oben erwähnt, sollten maschinenlesbare standardisierte Profilbezeichnungen in [[IfcExternalReference]].ItemReference angegeben werden."
+
+#:IFC.xml:31572
+msgid "IfcProfileDef_ProfileType"
+msgstr "ProfileType"
+
+msgid "IfcProfileDef_ProfileType_DEFINITION"
+msgstr "Definiert die Art der Geometrie, in die diese Profildefinition gelöst werden soll, entweder eine Kurve oder eine Fläche. Im Falle einer Kurve sollte das Profil von einer gefegten Oberfläche referenziert werden im Falle des Bereichs sollte das Profil von einem gefegten Bereich verwiesen werden."
+
+#:IFC.xml:31617
+msgid "IfcProfileProperties"
+msgstr "IfcProfil-Eigenschaften"
+
+msgid "IfcProfileProperties_DEFINITION"
+msgstr "This is a collection of properties applicable to section profile definitions. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract. Subtypes IfcGeneralProfileProperties , IfcStructuralProfileProperties , and IfcStructuralSteelProfileProperties deleted. Attribute ProfileName deleted, use ProfileDefinition.ProfileName instead. Attribute ProfileDefinition made mandatory. Attributes Name , Description , and HasProperties added inherited from [[IfcExtendedProperties]] ."
+
+#:IFC.xml:31579
+msgid "IfcProfileProperties_ProfileDefinition"
+msgstr "Profildefinition"
+
+msgid "IfcProfileProperties_ProfileDefinition_DEFINITION"
+msgstr "Profile definition which is qualified by these properties."
+
+#:IFC.xml:31620
+msgid "IfcProfileTypeEnum"
+msgstr "IfcProfilleTypeEnum"
+
+msgid "IfcProfileTypeEnum_DEFINITION"
+msgstr "Die Aufzählung bestimmt, ob die Definition einer Profilform geometrisch in eine Kurve oder in eine Oberfläche aufgelöst werden soll. HISTORY Neuer Typ in IFC1.5. Artikel CURVE Das resultierende geometrische Element ist von Typ-Kurve und geschlossen mit Ausnahme der von dem [[IfcArbitraryOpenProfileDef]] erzeugten Kurve, die sich in einer offenen Kurve auflöst. Die daraus resultierende Geometrie nach der Anwendung einer Kehroperation ist eine gekehrte Oberfläche. Dies kann verwendet werden, um Formen mit dünnen Blättern wie Kanten zu definieren, bei denen die Dicke für die geometrische Darstellung nicht geeignet ist. AREA Das daraus resultierende geometrische Element ist von Typenoberfläche, die nach Anwendung einer Kehroperation eine feste Kehroperation mit definiertem Volumen darstellt."
+
+#:IFC.xml:31621
+msgid "IfcProfileTypeEnum_AREA"
+msgstr "AREA"
+
+msgid "IfcProfileTypeEnum_AREA_DEFINITION"
+msgstr "Das daraus resultierende geometrische Element ist von typischer Oberfläche, die nach Anwendung einer Kehrbearbeitung eine festgelegte Volumenfestigkeit aufweist."
+
+#:IFC.xml:31622
+msgid "IfcProfileTypeEnum_CURVE"
+msgstr "KURVE"
+
+msgid "IfcProfileTypeEnum_CURVE_DEFINITION"
+msgstr "Das resultierende geometrische Element ist von Typ-Kurve und geschlossen mit der einzigen Ausnahme der Kurve, die vom [[IfcArbitraryOpenProfileDef]] erzeugt wurde, der sich in eine offene Kurve auflöst. Die daraus resultierende Geometrie nach der Anwendung einer Kehroperation ist eine gekehrte Oberfläche. Dies kann verwendet werden, um Formen mit dünnen Blättern wie Kanten zu definieren, bei denen die Dicke für die geometrische Darstellung nicht geeignet ist."
+
+#:IFC.xml:31624
+msgid "IfcRectangleHollowProfileDef"
+msgstr "IfcRectangleHollowProfilleDef"
+
+msgid "IfcRectangleHollowProfileDef_DEFINITION"
+msgstr "[[IfcRectangleHollowProfileDef]] defines a section profile that provides the defining parameters of a rectangular or square hollow section to be used by the swept surface geometry or the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. A square hollow section can be defined by equal values for h and b. The centre of the position coordinate system is in the profiles centre of the bounding box for symmetric profiles identical with the centre of gravity . Normally, the longer sides are parallel to the y axis, the shorter sides parallel to the x axis. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Types of InnerFilletRadius and OuterFilletRadius relaxed to allow for zero values. Figure 1 illustrates parameters of a rectangular or square hollow profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 Rectangle hollow profile"
+
+#:IFC.xml:31625
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius"
+msgstr "InnerFilletRadius"
+
+msgid "IfcRectangleHollowProfileDef_InnerFilletRadius_DEFINITION"
+msgstr "Inner corner radius."
+
+#:IFC.xml:31630
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius"
+msgstr "AuterFilletRadius"
+
+msgid "IfcRectangleHollowProfileDef_OuterFilletRadius_DEFINITION"
+msgstr "Radius der äußeren Ecke."
+
+#:IFC.xml:31635
+msgid "IfcRectangleHollowProfileDef_WallThickness"
+msgstr "Walldicke"
+
+msgid "IfcRectangleHollowProfileDef_WallThickness_DEFINITION"
+msgstr "Dicke des Materials."
+
+#:IFC.xml:31642
+msgid "IfcRectangleProfileDef"
+msgstr "IfcRectangleProfilleDef"
+
+msgid "IfcRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRectangleProfileDef]] defines a rectangle as the profile definition used by the swept surface geometry or the swept area solid. It is given by its X extent and its Y extent, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters of the rectangle profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . Parameter The [[IfcRectangleProfileDef]] is defined within the position coordinate system, where the XDim defines the length measure for the length of the rectangle half along the positive x axis and the YDim defines the length measure for the width of the rectangle half along the positive y axis . Figure 1 Rectangle profile"
+
+#:IFC.xml:31643
+msgid "IfcRectangleProfileDef_XDim"
+msgstr "XDim"
+
+msgid "IfcRectangleProfileDef_XDim_DEFINITION"
+msgstr "Der Umfang des Rechtecks in Richtung der x-Achse."
+
+#:IFC.xml:31648
+msgid "IfcRectangleProfileDef_YDim"
+msgstr "JDim"
+
+msgid "IfcRectangleProfileDef_YDim_DEFINITION"
+msgstr "Der Umfang des Rechtecks in Richtung der Y-Achse."
+
+#:IFC.xml:31655
+msgid "IfcReinforcementBarProperties"
+msgstr "IfcReinforcementBarProperties"
+
+msgid "IfcReinforcementBarProperties_DEFINITION"
+msgstr "IfcReinforcementProperties defines the set of properties for a specific combination of reinforcement bar steel grade, bar type and effective depth. HISTORY New entity in IFC2x2. The total cross section area for the specific steel grade is always provided. Additionally also general reinforcing bar configurations as a count of bars may be provided as defined in attribute BarCount . In this case the nominal bar diameter should be identical for all given bars as defined in attribute NominalBarDiameter ."
+
+#:IFC.xml:31656
+msgid "IfcReinforcementBarProperties_BarCount"
+msgstr "BarCount"
+
+msgid "IfcReinforcementBarProperties_BarCount_DEFINITION"
+msgstr "Die Anzahl der Stangen mit identischem Nenndurchmesser und Stahl, die in der spezifischen Verstärkungskonfiguration enthalten sind."
+
+#:IFC.xml:31661
+msgid "IfcReinforcementBarProperties_BarSurface"
+msgstr "Baroberfläche"
+
+msgid "IfcReinforcementBarProperties_BarSurface_DEFINITION"
+msgstr "Indikator dafür, ob die Balkenoberfläche flach oder strukturiert ist."
+
+#:IFC.xml:31666
+msgid "IfcReinforcementBarProperties_EffectiveDepth"
+msgstr "EffektiveTiefe"
+
+msgid "IfcReinforcementBarProperties_EffectiveDepth_DEFINITION"
+msgstr "Die effektive Tiefe, d.h. die Entfernung des spezifischen Querschnittsbereichs oder der nacheinander angelegten Verstärkungskonfiguration, die von einem gemeinsamen spezifischen Bezugspunkt gezählt wird. In der Regel ist der Bezugspunkt die obere Oberfläche für Balken und Brammen oder eine ähnliche Projektion in einer Ebene für Säulen ."
+
+#:IFC.xml:31671
+msgid "IfcReinforcementBarProperties_NominalBarDiameter"
+msgstr "NominalBardurchmesser"
+
+msgid "IfcReinforcementBarProperties_NominalBarDiameter_DEFINITION"
+msgstr "Der Nenndurchmesser, der die Querschnittsgröße der Bewehrungsleiste definiert. Der Balkendurchmesser sollte für alle in der spezifischen Bewehrungskonfiguration enthaltenen Balken identisch sein."
+
+#:IFC.xml:31676
+msgid "IfcReinforcementBarProperties_SteelGrade"
+msgstr "Stahlgrad"
+
+msgid "IfcReinforcementBarProperties_SteelGrade_DEFINITION"
+msgstr "Die nominale Stahlsorte ist nach lokalen Standards definiert."
+
+#:IFC.xml:31681
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea"
+msgstr "TotalCrossSectionArea"
+
+msgid "IfcReinforcementBarProperties_TotalCrossSectionArea_DEFINITION"
+msgstr "Der effektive Querschnittsbereich der Verstärkung einer bestimmten Stahlsorte."
+
+#:IFC.xml:31700
+msgid "IfcReinforcingBarRoleEnum"
+msgstr "IfcVerstärkungBarRoleEnum"
+
+msgid "IfcReinforcingBarRoleEnum_DEFINITION"
+msgstr "Aufzählung, die Standardtypen für die Rolle, den Zweck oder die Nutzung der Bar definiert, d.h. die Art der Belastungen und Belastungen, die sie tragen sollen. HISTORY New type in IFC2x2. .change ifc2x4 IFC4 CHANGE Item ANCHORING hinzugefügt. Items MAIN Die Bewehrungsleiste ist eine Hauptleiste. SHEAR Die Bewehrungsleiste ist eine Scherenleiste. LIGATURE Die Bewehrungsleiste ist eine Ligaturverbindung, Rührwerk . STUD Der Bewehrungsstab ist ein Gestüt. Stanzarmverstärkung. Kantenverstärkung. RING-Ringverstärkung ANCHORING-Verstärkung. NUTZERDEFINIERT Die Art der Verstärkung ist benutzerdefiniert. NICHTDEFINIERT Die Art der Verstärkung ist nicht definiert."
+
+#:IFC.xml:31701
+msgid "IfcReinforcingBarRoleEnum_ANCHORING"
+msgstr "ANCHORING"
+
+msgid "IfcReinforcingBarRoleEnum_ANCHORING_DEFINITION"
+msgstr "Verankerung der Verstärkung."
+
+#:IFC.xml:31702
+msgid "IfcReinforcingBarRoleEnum_EDGE"
+msgstr "Rand"
+
+msgid "IfcReinforcingBarRoleEnum_EDGE_DEFINITION"
+msgstr "Kantenverstärkung."
+
+#:IFC.xml:31703
+msgid "IfcReinforcingBarRoleEnum_LIGATURE"
+msgstr "LIGATUR"
+
+msgid "IfcReinforcingBarRoleEnum_LIGATURE_DEFINITION"
+msgstr "Der Verstärkungsbalken ist eine Ligaturverbindung, ein Rührwerk ."
+
+#:IFC.xml:31704
+msgid "IfcReinforcingBarRoleEnum_MAIN"
+msgstr "HAUT"
+
+msgid "IfcReinforcingBarRoleEnum_MAIN_DEFINITION"
+msgstr "Der Verstärkungsbalken ist ein Hauptbalken."
+
+#:IFC.xml:31705
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "IfcReinforcingBarRoleEnum_NOTDEFINED_DEFINITION"
+msgstr "Die Art der Verstärkung ist nicht definiert."
 
-#:IFC.xml:706
-msgid "IfcDoorPanelOperationEnum_REVOLVING"
-msgstr "VERWALTUNG"
+#:IFC.xml:31706
+msgid "IfcReinforcingBarRoleEnum_PUNCHING"
+msgstr "ANGEBOTE"
 
-msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
-msgstr "VERWALTUNG"
+msgid "IfcReinforcingBarRoleEnum_PUNCHING_DEFINITION"
+msgstr "Stanzende Verstärkung."
 
-#:IFC.xml:707
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:31707
+msgid "IfcReinforcingBarRoleEnum_RING"
+msgstr "LT"
 
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "ROLLINGUP"
+msgid "IfcReinforcingBarRoleEnum_RING_DEFINITION"
+msgstr "Verstärkung des Ringes."
 
-#:IFC.xml:708
-msgid "IfcDoorPanelOperationEnum_SLIDING"
-msgstr "SLIDING"
+#:IFC.xml:31708
+msgid "IfcReinforcingBarRoleEnum_SHEAR"
+msgstr "SHEAR"
 
-msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
-msgstr "SLIDING"
+msgid "IfcReinforcingBarRoleEnum_SHEAR_DEFINITION"
+msgstr "Die Bewehrungsstange ist eine Scherendecke."
 
-#:IFC.xml:709
-msgid "IfcDoorPanelOperationEnum_SWINGING"
-msgstr "SWINGEN"
+#:IFC.xml:31709
+msgid "IfcReinforcingBarRoleEnum_STUD"
+msgstr "STUD"
 
-msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
-msgstr "SWINGEN"
+msgid "IfcReinforcingBarRoleEnum_STUD_DEFINITION"
+msgstr "Der Verstärkungsbalken ist ein Gestüt."
 
-#:IFC.xml:710
-msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+#:IFC.xml:31710
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
-msgstr "BENUTZERDEFINIERT"
+msgid "IfcReinforcingBarRoleEnum_USERDEFINED_DEFINITION"
+msgstr "Die Art der Verstärkung ist vom Benutzer definiert."
 
-#:IFC.xml:712
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+#:IFC.xml:31712
+msgid "IfcReinforcingBarSurfaceEnum"
+msgstr "IfcVerstärkingBarSurfaceEnum"
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe the location of a door panel within a door lining. HISTORY New Enumeration in IFC2x Figure 1 shows the designation of a door panel with PanelPosition LEFT and a door panel with PanelPosition RIGHT within a door style with OperationType DOUBLE DOOR SINGLE SWING. The position is given as shown in the XZ plane of the local placement, looking into the direction of the positive Y axis. Door panel positions .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Door panel positions Items LEFT MIDDLE RIGHT NOTDEFINED"
+msgid "IfcReinforcingBarSurfaceEnum_DEFINITION"
+msgstr "Aufzählung, die angibt, ob die Bar eine schlichte oder strukturierte gerippte Oberfläche hat. Items PLAIN Die Bewehrungsleiste ist eben. TEXTURED Die Bewehrungsoberfläche ist strukturiert gerippt."
 
-#:IFC.xml:713
-msgid "IfcDoorPanelPositionEnum_LEFT"
-msgstr "LASSEN"
+#:IFC.xml:31713
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN"
+msgstr "SPIELEN"
 
-msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
-msgstr "LASSEN"
+msgid "IfcReinforcingBarSurfaceEnum_PLAIN_DEFINITION"
+msgstr "Die Bewehrungsfläche ist eben."
 
-#:IFC.xml:714
-msgid "IfcDoorPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
+#:IFC.xml:31714
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED"
+msgstr "TEXTURET"
 
-msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
+msgid "IfcReinforcingBarSurfaceEnum_TEXTURED_DEFINITION"
+msgstr "Die Bewehrungsoberfläche ist strukturiert gerippt."
 
-#:IFC.xml:715
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:31716
+msgid "IfcRoundedRectangleProfileDef"
+msgstr "IfcRoundedRectangleProfilleDef"
 
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "IfcRoundedRectangleProfileDef_DEFINITION"
+msgstr "[[IfcRoundedRectangleProfileDef]] definiert ein Rechteck mit gleichmäßig gerundeten Ecken als Profildefinition, die von der gepeitschten Oberflächengeometrie oder der gefegten Fläche verwendet wird. Es wird durch den X-Umfang, den Y-Umfang, und den Radius für die gerundeten Ecken angegeben. und innerhalb des 2D-Koordinatensystems platziert, das durch das Positionsattribut festgelegt wurde. Es wird zentrisch innerhalb des Positionskoordinatensystems, das heißt in der Mitte des Begrenzungsfeldes platziert. .change ifc2x IFC2x CHANGE Die [[IfcRoundedRectangleProfileDef]] wird nun von [[IfcRectangleProfileDef]] untertippt. Die Attribute XDim und YDim wurden nun vom Supertyp entfernt und zeigen die Parameter der abgerundeten Rechteck-Profildefinition. Position Das parametrisierte Profil definiert sein eigenes Positionskoordinatensystem. Das zugrundeliegende Koordinatensystem wird durch die gepeitschte Fläche oder den gepeitschten Bereich massiv definiert, der die Profildefinition verwendet. Es ist die xy-Ebene der beiden [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]]. osition oder im Falle von gespaltenen Stacheln die xy-Ebene jedes Listenmitglieds von [[IfcSectionedSpine]].CrossSectionPositions. Durch die Verwendung von Offsets des Positionsortes kann das parametrisierte Profil mit x,y Offsets 0 zentrisch positioniert werden. , oder an jeder Position relativ zum Profil. Explicit coordinsets werden verwendet, um Kardinalpunkte zu definieren, z. obere linke Grenze . Parameter Der [[IfcRoundedRectangleProfileDef]] ist innerhalb des Positionskoordinatensystems definiert wobei der XDim das Maß für die Länge des Rechtecks entlang der positiven x-Achse definiert der YDim definiert die Längenmessung für die Breite des Rechtecks entlang der positiven Y-Achse und der RundingRadius definiert den Radius der Krümmung in allen vier Ecken des Rechtecks. Abbildung 1 abgerundetes Rechteck-Profil"
 
-#:IFC.xml:716
-msgid "IfcDoorPanelPositionEnum_RIGHT"
-msgstr "RECHTS"
+#:IFC.xml:31717
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius"
+msgstr "Kreisradius"
 
-msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "RECHTS"
+msgid "IfcRoundedRectangleProfileDef_RoundingRadius_DEFINITION"
+msgstr "Radius der kreisförmigen Bögen, durch die alle vier Ecken des Rechtecks gleich gerundet werden."
 
-#:IFC.xml:718
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPaneleigenschaften"
+#:IFC.xml:31724
+msgid "IfcSectionProperties"
+msgstr "IfcSectionProperties"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "Eine Türplatte ist normalerweise ein Türblatt, das Personen oder Waren erlaubt, zu passieren. Die Parameter der Türplatte definieren den geometrisch relevanten Parameter des Panels Die [[IfcDoorPanelProperties]] werden verwendet, um die Form und den Betrieb von Türplatten parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung der Tür hinzugefügt werden. Die [[IfcDoorType]] kann Türen definieren, die aus mehr als einem Panel bestehen. In diesem Fall muss eine Instanz von [[IfcDoorPanelProperties]] für jedes Türpanel enthalten sein. Das Attribut PanelPosition legt in Verbindung mit dem Attribut IfcDoorStyle.OperationType fest, für welches Panel das [[IfcDoorPanelProperties]] gilt. Die [[IfcDoorPanelProperties]] sind in der Liste der Objekte enthalten, die durch das Attribut HasPropertySets der [[IfcDoorType]] angegeben werden. Weitere Informationen über das Tür-Panel können in die gleiche Liste des IfcDoorStyle mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Das [[IfcDoorPanelProperties]] enthält keine geometrische Darstellung. Er definiert jedoch Parameter, die verwendet werden können, um die Form des Türtyps zu erzeugen, der von der [[IfcDoor]] in den räumlichen Kontext des Projekts eingefügt wird, wie in Abbildung 1 dargestellt. Die Parameter der [[IfcDoorPanelProperties]] definieren eine Standardtür, einschließlich, wenn eine proportionale Breite angegeben wird, um nicht einheitliche Doppel- oder Schiebetüren oder Klapptüren zu definieren. Die äußere Grenze des Panels wird durch die Profilform-Repräsentation bestimmt, die der [[IfcDoor]] zugewiesen ist, , die die [[IfcDoorType]] einfügt. Es muss auch den Futter-Parameter berücksichtigen. Die Tiefe der Paneltiefe, des Schwenkens, des Doppelwirkens und der Schiebetafeln wird durch den Parameter PanelTiefe definiert. PanelTiefe Bei Türoperationstypen, die mehr als eine Platte enthalten, wird die Breite von mindestens einer Platte durch ein normalisiertes Verhältnis ermittelt. Es legt die Breite des Paneels fest, das als Verhältnis zur Gesamtbreite der Türöffnung definiert ist. PanelWidth Abbildung 1 Tür-Paneeleigenschaften HISTORY Neue Entität in IFC2.0. .change ifc2x4 IFC4 CHANGE Supertype geändert in neue [[IfcPreDefinedPropertySet]] ."
+msgid "IfcSectionProperties_DEFINITION"
+msgstr "[[IfcSectionProperties]] definiert die Querschnittseigenschaften für ein einzelnes Längsstück eines Querschnitts. Es ist eine spezielle Hilfsklasse für [[IfcSectionReinforcementProperties]] . GESCHICHTE Neue Entität in IFC2x2. Das Teilstück kann entweder einheitlich oder geklappt sein. Im letzteren Fall sollte auch ein Endprofil angegeben werden. Die Start- und Endprofile werden als denselben Profiltyp angenommen. Im Allgemeinen wird davon ausgegangen, dass nur rechteckige oder kreisförmige Querschnittsprofile verwendet werden."
 
-#:IFC.xml:741
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:31593
+msgid "IfcSectionProperties_StartProfile"
+msgstr "Startprofil"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Zeiger auf den Formaspekt, falls angegeben. Der Formaspekt spiegelt den Teil der Türform wider, der die Türplatte darstellt. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+msgid "IfcSectionProperties_StartProfile_DEFINITION"
+msgstr "Das Querschnittsprofil am Anfangspunkt des Längsabschnitts."
 
-#:IFC.xml:719
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "PanelDepth"
+#:IFC.xml:31605
+msgid "IfcSectionProperties_EndProfile"
+msgstr "Endprofil"
 
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Depth of the door panel, measured perpendicular to the plane of the door leaf."
+msgid "IfcSectionProperties_EndProfile_DEFINITION"
+msgstr "Das Querschnittsprofil am Ende des Längsabschnitts."
 
-#:IFC.xml:724
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "PanelOperation"
+#:IFC.xml:31725
+msgid "IfcSectionProperties_SectionType"
+msgstr "Sektionstyp"
 
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "Die PanelOperation definiert die Funktionsweise dieses Panels. Die PanelOperation des Tür-Panels muss dem OperationType des IfcDoorStyle entsprechen, von dem er referenziert wird."
+msgid "IfcSectionProperties_SectionType_DEFINITION"
+msgstr "Ein Indikator dafür, ob ein bestimmter Querschnitt einheitlich oder in Längsrichtung konstant ist."
 
-#:IFC.xml:729
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:31744
+msgid "IfcSectionReinforcementProperties"
+msgstr "IfcSection- Verstärkungseigenschaften"
 
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position dieses Panels innerhalb der Tür. Die PanelPosition der Türleiste muss dem OperationType des IfcDoorStyle entsprechen, auf den sie verwiesen wird."
+msgid "IfcSectionReinforcementProperties_DEFINITION"
+msgstr "[[IfcSectionReinforcementProperties]] definiert die Querschnittseigenschaften von Verstärkungen für ein einzelnes Längsstück eines Querschnitts mit einem bestimmten Bewehrungstyp. GESCHICHTE Neue Entität in IFC2x2. Mehrere Sätze von Verstärkungseigenschaften durch Querschnittselemente durch IfcVerstärkungseigenschaften können an die Eigenschaften der Gruppenverstärkung [[IfcReinforcementDefinitionProperties]] des IfcStructuralElementsDomain Schemas angeschlossen werden eine für jede Kombination von Stahlsorten und Verstärkungsbalken und -größen."
 
-#:IFC.xml:734
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "PanelWidth"
+#:IFC.xml:31688
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions"
+msgstr "Querschnittsverstärkungsdefinitionen"
 
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Breite dieses Panels, gemessen an der Gesamtübersichtlichkeit der Öffnungsbreite der Tür. Wenn sie weggelassen wird, ist sie standardmäßig 1. Ein Wert muss für alle Türen mit OperationType s bei IfcDoorStyle angegeben werden, die eine Tür mit mehr als einem Panel definieren."
+msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions_DEFINITION"
+msgstr "Das Set der Verstärkungseigenschaften, das an der Definition der Verstärkungseigenschaften der Teile befestigt ist."
 
-#:IFC.xml:753
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
+#:IFC.xml:31732
+msgid "IfcSectionReinforcementProperties_SectionDefinition"
+msgstr "Abschnittsdefinition"
 
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die Grundtypen der Türenkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die zur Herstellung der Türe verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL STEEL WOOD ALUMINIUM WOOD ALUMINIUM PLASTIC BENUTZERDEFINED NOTDEFINED"
+msgid "IfcSectionReinforcementProperties_SectionDefinition_DEFINITION"
+msgstr "Definition des Querschnittsprofils und des Längsschnittstyps."
 
-#:IFC.xml:754
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
+#:IFC.xml:31745
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition"
+msgstr "LongitudinalEndposition"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
+msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition_DEFINITION"
+msgstr "Die Endposition in Längsrichtung für die Querverstärkungseigenschaften."
 
-#:IFC.xml:755
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
-msgstr "ALUMINIUM PLASTIK"
+#:IFC.xml:31750
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition"
+msgstr "Längenstartposition"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
-msgstr "ALUMINIUM PLASTIK"
+msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition_DEFINITION"
+msgstr "Die Startposition in Längsrichtung für die Querverstärkungseigenschaften."
 
-#:IFC.xml:756
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOOD"
+#:IFC.xml:31755
+msgid "IfcSectionReinforcementProperties_ReinforcementRole"
+msgstr "Verstärkungsrolle"
 
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOOD"
+msgid "IfcSectionReinforcementProperties_ReinforcementRole_DEFINITION"
+msgstr "Die Rolle, der Zweck oder die Nutzung der Bewehrung, d.h. die Art der Belastungen und Belastungen, die es zu tragen, definiert für die Teileverstärkungseigenschaften."
 
-#:IFC.xml:757
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "HOCHGRADE STEEL"
+#:IFC.xml:31760
+msgid "IfcSectionReinforcementProperties_TransversePosition"
+msgstr "Transverseposition"
 
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "HOCHGRADE STEEL"
+msgid "IfcSectionReinforcementProperties_TransversePosition_DEFINITION"
+msgstr "Die Position für die Teileverstärkungseigenschaften in Querrichtung."
 
-#:IFC.xml:758
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:31779
+msgid "IfcSectionTypeEnum"
+msgstr "IfcSectionTypeEnum"
 
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "IfcSectionTypeEnum_DEFINITION"
+msgstr "Eine Aufzählung, die angibt, ob ein bestimmter Querschnitt einheitlich ist oder in Längsrichtung konserviert ist. Artikel UNIFORM Der Abschnitt ist in Längsrichtung einheitlich."
 
-#:IFC.xml:759
-msgid "IfcDoorStyleConstructionEnum_PLASTIC"
-msgstr "PLASTIK"
+#:IFC.xml:31780
+msgid "IfcSectionTypeEnum_TAPERED"
+msgstr "GESAMTZT"
 
-msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTIK"
+msgid "IfcSectionTypeEnum_TAPERED_DEFINITION"
+msgstr "Der Abschnitt ist in Längsrichtung gefüllt."
 
-#:IFC.xml:760
-msgid "IfcDoorStyleConstructionEnum_STEEL"
-msgstr "LÄNDERN"
+#:IFC.xml:31781
+msgid "IfcSectionTypeEnum_UNIFORM"
+msgstr "UNIFORM"
 
-msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "LÄNDERN"
+msgid "IfcSectionTypeEnum_UNIFORM_DEFINITION"
+msgstr "Der Abschnitt ist in Längsrichtung einheitlich."
 
-#:IFC.xml:761
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
+#:IFC.xml:31783
+msgid "IfcTrapeziumProfileDef"
+msgstr "IfcTrapeziumProfileDef"
 
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "BENUTZERDEFINIERT"
+msgid "IfcTrapeziumProfileDef_DEFINITION"
+msgstr "[[IfcTrapeziumProfileDef]] definiert ein Trapezum als Profildefinition für die gedrehte Oberflächengeometrie oder den gedrehten Bereich als solid. Sie wird durch ihren Top X und den unteren X-Umfang und ihren Y-Umfang sowie durch den Versatz der Top X Erweiterung gegeben, und innerhalb des 2D-Koordinatensystems platziert, das durch das Positionsattribut festgelegt wurde. Sie wird zentrisch innerhalb des Koordinatensystems platziert, das heißt in der Mitte des Begrenzungsfeldes. HISTORY New Entity in IFC1.5. Die Benutzungsdefinition hat sich in IFC2x geändert. Abbildung 1 illustriert die Parameter der Trapezprofildefinition. Position Das parametrisierte Profil definiert sein eigenes Positionskoordinatensystem. Das zugrundeliegende Koordinatensystem wird durch die gepeitschte Fläche oder den gepeitschten Bereich massiv definiert, der die Profildefinition verwendet. Es ist die xy-Ebene der beiden [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]]. osition oder im Falle von gespaltenen Stacheln die xy-Ebene jedes Listenmitglieds von [[IfcSectionedSpine]].CrossSectionPositions. Durch die Verwendung von Offsets des Positionsortes kann das parametrisierte Profil mit x,y Offsets 0 zentrisch positioniert werden. , oder an jeder Position relativ zum Profil. Explicit coordinsets werden verwendet, um Kardinalpunkte z.B. obere linke Grenze zu definieren. Parameter Der [[IfcTrapeziumProfileDef]] ist innerhalb des Positionskoordinatensystems definiert wobei der BottomDim das Längenmaß für die untere Linienhälfte entlang der positiven x-Achse definiert und der YDim die Längenmessung für den Parallelabstand der untersten und oberen Linienhälfte entlang der positiven y-Achse definiert. Die obere Zeile beginnt mit einer Entfernung von TopXOffset von unten Linie 2,JDM, die negativ sein kann Null oder positiv und hat eine Länge von TopXDim entlang der positiven x Achse. Figur 1 Trapeziumprofil"
 
-#:IFC.xml:762
-msgid "IfcDoorStyleConstructionEnum_WOOD"
-msgstr "WOOOD"
+#:IFC.xml:31784
+msgid "IfcTrapeziumProfileDef_BottomXDim"
+msgstr "Unten XDim"
 
-msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOOD"
+msgid "IfcTrapeziumProfileDef_BottomXDim_DEFINITION"
+msgstr "Der Umfang der Grundlinie, die entlang der impliziten x-Achse gemessen wird."
 
-#:IFC.xml:764
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+#:IFC.xml:31789
+msgid "IfcTrapeziumProfileDef_TopXDim"
+msgstr "TopXDim"
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE SWING LEFT DOUBLE SWING RIGHT DOUBLE DOOR DOUBLE SWING SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+msgid "IfcTrapeziumProfileDef_TopXDim_DEFINITION"
+msgstr "Der Umfang der obersten Linie, die entlang der impliziten X-Achse gemessen wird."
 
-#:IFC.xml:765
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
-msgstr "DOPPELDOOR DOPPELSWING"
+#:IFC.xml:31794
+msgid "IfcTrapeziumProfileDef_TopXOffset"
+msgstr "TopXOffset"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
-msgstr "DOPPELDOOR DOPPELSWING"
+msgid "IfcTrapeziumProfileDef_TopXOffset_DEFINITION"
+msgstr "Versatz vom Anfang der oberen Linie auf die untere Linie, gemessen entlang der impliziten X-Achse."
 
-#:IFC.xml:766
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
-msgstr "DOPPEL-FOLDING"
+#:IFC.xml:31799
+msgid "IfcTrapeziumProfileDef_YDim"
+msgstr "JDim"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
-msgstr "Tür mit zwei Paneelen, eine ist falten nach links, die andere ist falten nach rechts."
+msgid "IfcTrapeziumProfileDef_YDim_DEFINITION"
+msgstr "Der Abstand zwischen den parallelen Unter- und Oberleitungen, der entlang der impliziten Achse gemessen wird."
 
-#:IFC.xml:767
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
-msgstr "DOPPEL-SINGLER SINGLE SWING"
+#:IFC.xml:31806
+msgid "IfcTShapeProfileDef"
+msgstr "IfcTShapeProfileDef"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
-msgstr "Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction."
+msgid "IfcTShapeProfileDef_DEFINITION"
+msgstr "[[IfcTShapeProfileDef]] definiert ein Abschnittsprofil, das die definierenden Parameter eines T-förmigen Abschnitts enthält, der für den festen Swept-Bereich verwendet werden soll. Die Parameter und die Ausrichtung des Koordinatensystems entsprechen der folgenden Abbildung. Das Zentrum des Positionskoordinatensystems befindet sich in der Profil-Mitte der Umrandungsbox. hange ifc2x3 IFC2x3 CHANGE Alle Profil-Ursprünge befinden sich jetzt in der Mitte des Begrenzungskastens. hange ifc2x4 IFC4 CHANGE Type of FilletRadius , FlangeEdgeRadius und WebEdgeRadius entspannt um Null Radius zu ermöglichen. Trailing Attribut CentreOfGravityInY gelöscht, verwenden Sie stattdessen die entsprechende Eigenschaft in IfcExtendedProfileProperties. Abbildung 1 zeigt die Parameter der T-Formprofildefinition an. Das zugrunde liegende Koordinatensystem wird durch den festen feuchten Bereich definiert, der die Profildefinition verwendet. Es ist die xyebene von [[IfcSweptAreaSolid]]. osition unter Verwendung von Offsets des Positionsortes kann das parametrisierte Profil mit x,y Offsets 0 zentrisch positioniert werden. , oder an beliebiger Position relativ zum Profil. Figure 1 T Formprofil"
 
-#:IFC.xml:768
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
-msgstr "DOPPELLER EINZELLEN SWING OPPOSITE LEFT"
+#:IFC.xml:31807
+msgid "IfcTShapeProfileDef_Depth"
+msgstr "Tiefe"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
-msgstr "Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction."
+msgid "IfcTShapeProfileDef_Depth_DEFINITION"
+msgstr "Weblängen, siehe Abbildung über h ."
 
-#:IFC.xml:769
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
-msgstr "DOPPELLER EINZELLEN SWING OPPOSITE RECHTS"
+#:IFC.xml:31812
+msgid "IfcTShapeProfileDef_FilletRadius"
+msgstr "FilletRadius"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
-msgstr "Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction."
+msgid "IfcTShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Fillet Radius gemäß der obigen Abbildung r1 ."
 
-#:IFC.xml:770
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
-msgstr "DOPPEL-FOR-SLIDING"
+#:IFC.xml:31817
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius"
+msgstr "FlangeEdgeRadius"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
-msgstr "Door with two panels, one is sliding to the left the other is sliding to the right."
+msgid "IfcTShapeProfileDef_FlangeEdgeRadius_DEFINITION"
+msgstr "Kantenradius entsprechend der obigen Abbildung r2 ."
 
-#:IFC.xml:771
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
-msgstr "SWING-LEFT DOPPELN"
+#:IFC.xml:31822
+msgid "IfcTShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
-msgstr "SWING-LEFT DOPPELN"
+msgid "IfcTShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Neigung des Web des Profils."
 
-#:IFC.xml:772
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
-msgstr "SWING-RECHTS DOPPELN"
+#:IFC.xml:31827
+msgid "IfcTShapeProfileDef_FlangeThickness"
+msgstr "Pset_PipeConnectionFlanged_Flanschdicke"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
-msgstr "SWING-RECHTS DOPPELN"
+msgid "IfcTShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Konstante Wanddicke von Flansch tg ."
 
-#:IFC.xml:773
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
-msgstr "FOLDUNG ZUM LEFT"
+#:IFC.xml:31832
+msgid "IfcTShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
-msgstr "Door with one panel that is folding to the left."
+msgid "IfcTShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flanschlängen, siehe Abbildung über b ."
 
-#:IFC.xml:774
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
-msgstr "FOLDUNG ZUM RECHTS"
+#:IFC.xml:31837
+msgid "IfcTShapeProfileDef_WebEdgeRadius"
+msgstr "WebEdgeRadius"
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
-msgstr "Door with one panel that is folding to the right."
+msgid "IfcTShapeProfileDef_WebEdgeRadius_DEFINITION"
+msgstr "Kantenradius gemäß der obigen Abbildung r3 ."
 
-#:IFC.xml:775
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:31842
+msgid "IfcTShapeProfileDef_WebSlope"
+msgstr "WebNeigung"
 
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+msgid "IfcTShapeProfileDef_WebSlope_DEFINITION"
+msgstr "Neigung des Flansches des Profils."
 
-#:IFC.xml:776
-msgid "IfcDoorStyleOperationEnum_REVOLVING"
-msgstr "VERWALTUNG"
+#:IFC.xml:31847
+msgid "IfcTShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
-msgstr "An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property ."
+msgid "IfcTShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Konstante Wanddicke von Netzen ."
 
-#:IFC.xml:777
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:31854
+msgid "IfcUShapeProfileDef"
+msgstr "IfcUShapeProfileDef"
 
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "Door that opens by rolling up."
+msgid "IfcUShapeProfileDef_DEFINITION"
+msgstr "[[IfcUShapeProfileDef]] definiert ein Abschnittsprofil, das die Parameter eines U-Form-Kanalabschnitts angibt, der für den festen Bereich verwendet werden soll. Die Parameter und die Ausrichtung des Koordinatensystems entsprechen der folgenden Abbildung. Das Zentrum des Positionskoordinatensystems befindet sich in der Profil-Mitte der Umrandungsbox. hange ifc2x3 IFC2x3 CHANGE Alle Profil-Ursprünge befinden sich jetzt in der Mitte des Begrenzungskastens. hange ifc2x4 IFC4 CHANGE Typ von FilletRadius und EdgeRadius entspannt um Null Radius zu ermöglichen. Trailing Attribut CentreOfGravityInX gelöscht, verwenden Sie stattdessen die entsprechende Eigenschaft in IfcExtendedProfileProperties. Abbildung 1 zeigt die Parameter der U-Formprofildefinition an. Das zugrunde liegende Koordinatensystem wird durch den festen feuchten Bereich definiert, der die Profildefinition verwendet. Es ist die xyebene von [[IfcSweptAreaSolid]]. osition Durch die Verwendung von Offsets des Positionsortes kann das parametrisierte Profil zentrisch mit x,y Offsets 0 positioniert werden. , oder an beliebiger Position relativ zum Profil. Figure 1 U Formprofil"
 
-#:IFC.xml:778
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
-msgstr "EINZELE SCHWEIßLEFT"
+#:IFC.xml:31855
+msgid "IfcUShapeProfileDef_Depth"
+msgstr "Tiefe"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
-msgstr "Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis."
+msgid "IfcUShapeProfileDef_Depth_DEFINITION"
+msgstr "Weblängen, siehe Abbildung über h ."
 
-#:IFC.xml:779
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
-msgstr "EINZELE SWING RECHTS"
+#:IFC.xml:31860
+msgid "IfcUShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
-msgstr "Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door."
+msgid "IfcUShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Kantenradius entsprechend der obigen Abbildung r2 ."
 
-#:IFC.xml:780
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
-msgstr "SLIDING ZUM LEFT"
+#:IFC.xml:31865
+msgid "IfcUShapeProfileDef_FilletRadius"
+msgstr "FilletRadius"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
-msgstr "Door with one panel that is sliding to the left."
+msgid "IfcUShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Fillet Radius gemäß der obigen Abbildung r1 ."
 
-#:IFC.xml:781
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
-msgstr "SLIDING ZUM RECHTS"
+#:IFC.xml:31870
+msgid "IfcUShapeProfileDef_FlangeSlope"
+msgstr "FlangeSlope"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
-msgstr "Door with one panel that is sliding to the right."
+msgid "IfcUShapeProfileDef_FlangeSlope_DEFINITION"
+msgstr "Neigung des Flansches des Profils."
 
-#:IFC.xml:782
-msgid "IfcDoorStyleOperationEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
+#:IFC.xml:31875
+msgid "IfcUShapeProfileDef_FlangeThickness"
+msgstr "Pset_PipeConnectionFlanged_Flanschdicke"
 
-msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined operation type"
+msgid "IfcUShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Konstante Wanddicke von Flansch tg ."
 
-#:IFC.xml:784
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableCoveringOperationEnum"
+#:IFC.xml:31880
+msgid "IfcUShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die gültigen Typen von durchlässigen Deckungen, HISTORY New Enumeration in IFC2.0. Gegenstände GRILL Schutzschild von Metallstangen oder Drähten, LOUVER Set von festen oder beweglichen Streifen aus Holz, Metall, etc. Das Hotel liegt sehr zentral in der Nähe des Bahnhofs. SCREEN Upright, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem. BENUTZERDEFINED Benutzer definiert durchlässigen Cover-Typ. NOTDEFINED Keine Informationen verfügbar."
+msgid "IfcUShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flanschlängen, siehe Abbildung über b ."
 
-#:IFC.xml:785
-msgid "IfcPermeableCoveringOperationEnum_GRILL"
-msgstr "GRILL"
+#:IFC.xml:31885
+msgid "IfcUShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
-msgstr "Protective screen of metal bars or wires."
+msgid "IfcUShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Konstante Wanddicke von Netzen ."
 
-#:IFC.xml:786
-msgid "IfcPermeableCoveringOperationEnum_LOUVER"
-msgstr "LOUVER"
+#:IFC.xml:31892
+msgid "IfcZShapeProfileDef"
+msgstr "IfcZShapeProfileDef"
 
-msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
-msgstr "Set von festen oder beweglichen Streifen aus Holz, Metall, etc. angeordnet, um Luft zu lassen, während Licht oder Regen draußen."
+msgid "IfcZShapeProfileDef_DEFINITION"
+msgstr "[[IfcZShapeProfileDef]] definiert ein Abschnittsprofil, in dem die Parameter eines Z-Formabschnitts definiert werden, der für den gefegten Bereich verwendet werden soll. Die Parameter und die Ausrichtung des Koordinatensystems entsprechen der folgenden Abbildung. Das Zentrum des Positionskoordinatensystems befindet sich in der Profil-Mitte der Umrandungsbox. .change ifc2x4 IFC4 CHANGE Typ von FilletRadius und EdgeRadius entspannt um Null Radius zu ermöglichen. Abbildung 1 zeigt die Parameter der Z-Formprofildefinition an. Das zugrundeliegende Koordinatensystem wird durch den festen Bereich definiert, der die Profildefinition verwendet. Es ist die xy-Ebene von [[IfcSweptAreaSolid]]. osition Durch die Verwendung von Offsets des Positionsortes kann das parametrisierte Profil zentrisch mit x,y Offsets 0 positioniert werden. , oder an beliebiger Position relativ zum Profil. Figure 1 Z Formprofil"
 
-#:IFC.xml:787
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:31893
+msgid "IfcZShapeProfileDef_Depth"
+msgstr "Tiefe"
 
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "No information available."
+msgid "IfcZShapeProfileDef_Depth_DEFINITION"
+msgstr "Web-Länge, siehe Abbildung über h ."
 
-#:IFC.xml:788
-msgid "IfcPermeableCoveringOperationEnum_SCREEN"
-msgstr "SCREEN"
+#:IFC.xml:31898
+msgid "IfcZShapeProfileDef_EdgeRadius"
+msgstr "EdgeRadius"
 
-msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
-msgstr "Aufgehend, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem."
+msgid "IfcZShapeProfileDef_EdgeRadius_DEFINITION"
+msgstr "Kantenradius entsprechend der obigen Abbildung r2 ."
 
-#:IFC.xml:789
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
+#:IFC.xml:31903
+msgid "IfcZShapeProfileDef_FilletRadius"
+msgstr "FilletRadius"
 
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined permeable covering type."
+msgid "IfcZShapeProfileDef_FilletRadius_DEFINITION"
+msgstr "Fillet Radius gemäß der obigen Abbildung r1 ."
 
-#:IFC.xml:791
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+#:IFC.xml:31908
+msgid "IfcZShapeProfileDef_FlangeThickness"
+msgstr "Pset_PipeConnectionFlanged_Flanschdicke"
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "Diese Entität ist eine Beschreibung einer Platte innerhalb einer Tür oder Fenster als Füllstoffe für die Öffnung, die eine Luftströmung ermöglicht. Es wird durch seine Eigenschaften [[IfcPermeableCoveringProperties]] gegeben. Eine durchlässige Deckel ist ein Gehäuse, wie z. B. eine Komponente, befestigt oder Öffnung, die im Wesentlichen aus einem Rahmen und dem Aufblasen besteht. Bei der Auffüllung handelt es sich in der Regel um einen Grill, einen Schall oder eine Scheibe. Die [[IfcPermeableCoveringProperties]] sind in der Liste der Eigenschaften von HasPropertySets des IfcWindowStyle oder des IfcDoorStyle enthalten. Weitere Informationen über die durchlässige Deckung können in der gleichen Liste des Fenster- oder Türstils mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Dies gilt insbesondere für zusätzliche Eigenschaften für die verschiedenen Operationstypen Die [[IfcPermeableCoveringProperties]] enthält keine geometrische Darstellung. Es definiert jedoch Parameter, die verwendet werden können, um die Form des IfcWindowStyle zu erstellen, der von der [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird , oder des IfcDoorStyle, der von [[IfcDoor]] eingefügt wird. Die Parameter der [[IfcPermeableCoveringProperties]] definieren eine standardmäßig durchlässige Abdeckung. Die äußere Grenze des Panels wird durch den Parameter Vorkommen, der dem [[IfcWindow]] oder [[IfcDoor]] zugewiesen wurde, bestimmt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des durchlässigen Deckels innerhalb des gesamten Fensters oder der Türe wird durch das Attribut PanelPosition bestimmt. Abbildung 1 illustriert das Paneel, das auf die Position innerhalb des Futters angewendet wird, wie es durch die Podiumsposition definiert ist. Die folgenden Parameter gelten für das Panel FrameDepth , FrameThickness . figuren ifcpermeablecoveringproperties.gif Figure 1 Permeable covering properties HISTORY New entity in IFC2. , wurde sie von IfcPermeableCovering in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype geändert [[IfcPreDefinedPropertySet]] ."
+msgid "IfcZShapeProfileDef_FlangeThickness_DEFINITION"
+msgstr "Konstante Wanddicke der Flansche, siehe Abbildung oberhalb von tg ."
 
-#:IFC.xml:814
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:31913
+msgid "IfcZShapeProfileDef_FlangeWidth"
+msgstr "FlangeWidth"
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+msgid "IfcZShapeProfileDef_FlangeWidth_DEFINITION"
+msgstr "Flansch Länge, siehe Abbildung oberhalb b ."
 
-#:IFC.xml:792
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:31918
+msgid "IfcZShapeProfileDef_WebThickness"
+msgstr "WebThickness"
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame used to include the permeable covering , measured from front face to back face horizontally i.e. perpendicular to the window or door elevation plane."
+msgid "IfcZShapeProfileDef_WebThickness_DEFINITION"
+msgstr "Konstante Wanddicke des Netzes, siehe Abbildung oben ts ."
 
-#:IFC.xml:797
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:31925
+msgid "Pset_ProfileArbitraryDoubleT"
+msgstr "Pset Profil ArbitraryDoubleT"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame used to include the permeable covering , measured from inside of panel at permeable covering to outside of panel at lining , i.e. parallel to the window or door elevation plane."
+msgid "Pset_ProfileArbitraryDoubleT_DEFINITION"
+msgstr "Dies ist eine Sammlung von geometrischen Eigenschaften von Doppel-T-Profilen von Fertigbetonelementen, in Verbindung mit IfcArbitraryProfileDef verwendet werden, wenn die Bezeichnung des Profils allein nicht den Informationsanforderungen entspricht."
 
-#:IFC.xml:802
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "Betriebstyp"
+#:IFC.xml:31926
+msgid "FlangeBaseFillet"
+msgstr "Pset_ProfileArbitraryDoubleT_Flansch - untere Hohlkehle"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Types of permeable covering operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "FlangeBaseFillet_DEFINITION"
+msgstr "Flanschgrundleiste des Profils."
 
-#:IFC.xml:807
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:31931
+msgid "FlangeChamfer"
+msgstr "Pset_ProfileArbitraryDoubleT_Flanschfase"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Position of this permeable covering panel within the overall window or door type."
+msgid "FlangeChamfer_DEFINITION"
+msgstr "Flanschfase des Profils."
 
-#:IFC.xml:826
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowLiningeigenschaften"
+#:IFC.xml:31936
+msgid "FlangeDepth"
+msgstr "Pset_ProfileArbitraryDoubleT_Flanschtiefe"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of IfcWindowStyle.HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "FlangeDepth_DEFINITION"
+msgstr "Flanschtiefe des Profils."
 
-#:IFC.xml:884
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:31941
+msgid "FlangeDraft"
+msgstr "Pset_ProfileArbitraryDoubleT_Flanschzug"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "FlangeDraft_DEFINITION"
+msgstr "Flanschverzug des Profils."
 
-#:IFC.xml:827
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:31946
+msgid "FlangeTopFillet"
+msgstr "Pset_ProfileArbitraryDoubleT_Flansch - obere Hohlkehle"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "FlangeTopFillet_DEFINITION"
+msgstr "Flansch-Oberkante des Profils."
 
-#:IFC.xml:832
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "FirstTransomOffset"
+#:IFC.xml:31951
+msgid "LeftFlangeWidth"
+msgstr "Pset_ProfileArbitraryDoubleT_Linker Flansch - Breite"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline, measured along the z axis of the window placement co ordinate system. An offset value 0.5 indicates that the transom is positioned in the middle of the window."
+msgid "LeftFlangeWidth_DEFINITION"
+msgstr "Linke Flanschbreite des Profils."
 
-#:IFC.xml:837
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:31956
+msgid "OverallDepth"
+msgstr "Gesamttiefe"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the window lining dimension measured perpendicular to window elevation plane ."
+msgid "OverallDepth_DEFINITION"
+msgstr "Gesamttiefe des Profils."
 
-#:IFC.xml:842
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:31961
+msgid "OverallWidth"
+msgstr "Gesamtbreite"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "OverallWidth_DEFINITION"
+msgstr "Gesamtbreite des Profils."
 
-#:IFC.xml:847
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:31966
+msgid "RightFlangeWidth"
+msgstr "Pset_ProfileArbitraryDoubleT_Rechter Flansch - Breite"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "RightFlangeWidth_DEFINITION"
+msgstr "Rechte Flanschbreite des Profils."
 
-#:IFC.xml:852
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:31971
+msgid "StemBaseChamfer"
+msgstr "Pset_ProfileArbitraryDoubleT_Untere Stegfase"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "StemBaseChamfer_DEFINITION"
+msgstr "Spindelbasis Fase des Profils."
 
-#:IFC.xml:857
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:31976
+msgid "StemBaseFillet"
+msgstr "Pset_ProfileArbitraryDoubleT_Untere Steg-Hohlkehle"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Versatz zwischen Futter und Fenster, die entlang der Y-Achse der lokalen Platzierung gemessen werden. Sollte kleiner oder gleich dem [[IfcWindowPanelProperties]sein. AnelThickness . .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
+msgid "StemBaseFillet_DEFINITION"
+msgstr "Stammfußverrundung des Profils."
 
-#:IFC.xml:862
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "MullionThickness"
+#:IFC.xml:31981
+msgid "StemBaseWidth"
+msgstr "Pset_ProfileArbitraryDoubleT_Untere Stegbreite"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "StemBaseWidth_DEFINITION"
+msgstr "Stammfußbreite des Profils."
 
-#:IFC.xml:867
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:31986
+msgid "StemTopChamfer"
+msgstr "Pset_ProfileArbitraryDoubleT_Obere Stegfase"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "StemTopChamfer_DEFINITION"
+msgstr "Schaftoberkante des Profils."
 
-#:IFC.xml:872
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+#:IFC.xml:31991
+msgid "StemTopFillet"
+msgstr "Pset_ProfileArbitraryDoubleT_Obere Steg-Hohlkehle"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+msgid "StemTopFillet_DEFINITION"
+msgstr "Die obere Verrundung des Profils."
 
-#:IFC.xml:877
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:31996
+msgid "StemTopWidth"
+msgstr "Pset_ProfileArbitraryDoubleT_Obere Stegbreite"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "StemTopWidth_DEFINITION"
+msgstr "Breite der Spindeloberkante des Profils."
 
-#:IFC.xml:896
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
+#:IFC.xml:32002
+msgid "Pset_ProfileArbitraryHollowCore"
+msgstr "Pset ProfileArbitraryHollowCore"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure SideHungRightHand panel that opens to the right when viewed from the outside SideHungLeftHand panel that opens to the left when viewed from the outside TiltAndTurnRightHand panel that opens to the right and is bottom hung TiltAndTurnLeftHand panel that opens to the left and is bottom hung TopHung panel is top hung BottomHung panel is bottom hung PivotHorizontal panel is swinging horizontally hinges are in the middle PivotVertical panel is swinging vertically hinges are in the middle SlidingHorizontal panel is sliding horizontally SlidingVertical panel is sliding vertically RemovableCasement panel is removable FixedCasement panel is fixed OtherOperation user defined operation type NotDefined Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. Items SIDEHUNGRIGHTHAND SIDEHUNGLEFTHAND TILTANDTURNRIGHTHAND TILTANDTURNLEFTHAND TOPHUNG BOTTOMHUNG PIVOTHORIZONTAL PIVOTVERTICAL SLIDINGHORIZONTAL SLIDINGVERTICAL REMOVABLECASEMENT FIXEDCASEMENT OTHEROPERATION NOTDEFINED"
+msgid "Pset_ProfileArbitraryHollowCore_DEFINITION"
+msgstr "Dies ist eine Sammlung von geometrischen Eigenschaften von Hohlkernprofilen von Fertigbetonelementen, in Verbindung mit [[IfcArbitraryProfileDefWithVoids]] zu verwenden, wenn allein die Profilbezeichnung die Informationsanforderungen nicht erfüllt. In allen Fällen werden die Kerne symmetrisch auf beiden Seiten der plank-mittleren Linie verteilt unabhängig davon, ob die Anzahl der Kerne ungerade oder gar ist. Für Planken mit einem mittleren Kern mit einer anderen Geometrie als die der anderen Kerne, stellen Sie die Eigenschaft CenterCoreSpacing. Wenn die Anzahl der Kerne gleich ist, werden keine Kerneigenschaften des Zentrums geltend gemacht. Die Parameter CoreTopRadius und CoreBaseRadius können abgeleitet werden und sind daher nicht in der Eigenschaftsmenge aufgelistet. Es wird gezeigt, dass es sich bei den Kurven um Bögen handelt. Die Parameter für den zentrierten Kern sind die gleichen wie oben, aber mit dem prefix Center ."
 
-#:IFC.xml:897
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
-msgstr "BOTTOMHUNG"
+#:IFC.xml:32003
+msgid "BaseChamfer"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Fase"
 
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
-msgstr "BOTTOMHUNG"
+msgid "BaseChamfer_DEFINITION"
+msgstr "Basisfase des Profils."
 
-#:IFC.xml:898
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
-msgstr "FIXEDCASEMENT"
+#:IFC.xml:32008
+msgid "BottomCover"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Abdeckung"
 
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
-msgstr "FIXEDCASEMENT"
+msgid "BottomCover_DEFINITION"
+msgstr "Untere Abdeckung des Profils."
 
-#:IFC.xml:899
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:32013
+msgid "CenterCoreBaseHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Höhe - mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "CenterCoreBaseHeight_DEFINITION"
+msgstr "Höhe des Mittelkerns auf der Basis des Profils."
 
-#:IFC.xml:900
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
-msgstr "ANDERE OPERIERUNG"
+#:IFC.xml:32018
+msgid "CenterCoreBaseWidth"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Breite - mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
-msgstr "ANDERE OPERIERUNG"
+msgid "CenterCoreBaseWidth_DEFINITION"
+msgstr "Breite der Mittelkernbasis des Profils."
 
-#:IFC.xml:901
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
-msgstr "PIVOTHORISONTAL"
+#:IFC.xml:32023
+msgid "CenterCoreMiddleHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Mittlere Höhe - mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
-msgstr "PIVOTHORISONTAL"
+msgid "CenterCoreMiddleHeight_DEFINITION"
+msgstr "Mittenkern mittlere Höhe des Profils."
 
-#:IFC.xml:902
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
-msgstr "PIVOTVERTISCHE"
+#:IFC.xml:32028
+msgid "CenterCoreSpacing"
+msgstr "Pset_ProfileArbitraryHollowCore_Abstand mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
-msgstr "PIVOTVERTISCHE"
+msgid "CenterCoreSpacing_DEFINITION"
+msgstr "Mittelkernabstand des Profils."
 
-#:IFC.xml:903
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
-msgstr "ENTFERNEN"
+#:IFC.xml:32033
+msgid "CenterCoreTopHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Obere Höhe - mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
-msgstr "ENTFERNEN"
+msgid "CenterCoreTopHeight_DEFINITION"
+msgstr "Höhe des Mittelkerns auf der Oberseite des Profils."
 
-#:IFC.xml:904
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
-msgstr "SIDEHUNGLEFTHAND"
+#:IFC.xml:32038
+msgid "CenterCoreTopWidth"
+msgstr "Pset_ProfileArbitraryHollowCore_Mittlere Breite - mittlerer Kern"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
-msgstr "SIDEHUNGLEFTHAND"
+msgid "CenterCoreTopWidth_DEFINITION"
+msgstr "Die obere Breite des Mittelkerns des Profils."
 
-#:IFC.xml:905
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
-msgstr "SIDEHUNGRIGHTHAND"
+#:IFC.xml:32043
+msgid "CoreBaseHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Kernhöhe"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
-msgstr "SIDEHUNGRIGHTHAND"
+msgid "CoreBaseHeight_DEFINITION"
+msgstr "Kernfußhöhe des Profils."
 
-#:IFC.xml:906
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
-msgstr "SLIDINGHORIZONTAL"
+#:IFC.xml:32048
+msgid "CoreBaseWidth"
+msgstr "Pset_ProfileArbitraryHollowCore_Untere Kernbreite"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
-msgstr "SLIDINGHORIZONTAL"
+msgid "CoreBaseWidth_DEFINITION"
+msgstr "Kernfußbreite des Profils."
 
-#:IFC.xml:907
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
-msgstr "SLIDINGVERTISCHE"
+#:IFC.xml:32053
+msgid "CoreMiddleHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Mittlere Kernhöhe"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
-msgstr "SLIDINGVERTISCHE"
+msgid "CoreMiddleHeight_DEFINITION"
+msgstr "Kernmittenhöhe des Profils."
 
-#:IFC.xml:908
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
-msgstr "TILTANDTURNLEFTHAND"
+#:IFC.xml:32058
+msgid "CoreSpacing"
+msgstr "Pset_ProfileArbitraryHollowCore_Kernabstand"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
-msgstr "TILTANDTURNLEFTHAND"
+msgid "CoreSpacing_DEFINITION"
+msgstr "Kernabstand des Profils."
 
-#:IFC.xml:909
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
-msgstr "TILTANDTURNRIGHTHAND"
+#:IFC.xml:32063
+msgid "CoreTopHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Obere Kernhöhe"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
-msgstr "TILTANDTURNRIGHTHAND"
+msgid "CoreTopHeight_DEFINITION"
+msgstr "Kernoberkante Höhe des Profils."
 
-#:IFC.xml:910
-msgid "IfcWindowPanelOperationEnum_TOPHUNG"
-msgstr "TOPHUNG"
+#:IFC.xml:32068
+msgid "CoreTopWidth"
+msgstr "Pset_ProfileArbitraryHollowCore_Obere Kernbreite"
 
-msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
-msgstr "TOPHUNG"
+msgid "CoreTopWidth_DEFINITION"
+msgstr "Kernoberkante Breite des Profils."
 
-#:IFC.xml:912
-msgid "IfcWindowPanelPositionEnum"
-msgstr "IfcWindowPanelPositionEnum"
+#:IFC.xml:32073
+msgid "DraftBaseOffset"
+msgstr "Pset_ProfileArbitraryHollowCore_Zug - Offset unten"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the IfcWindowStyle definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+msgid "DraftBaseOffset_DEFINITION"
+msgstr "Tiefgangsversatz des Profils."
 
-#:IFC.xml:913
-msgid "IfcWindowPanelPositionEnum_BOTTOM"
-msgstr "BOTTOM"
+#:IFC.xml:32078
+msgid "DraftSideOffset"
+msgstr "Pset_ProfileArbitraryHollowCore_Zug - Offset seitlich"
 
-msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
-msgstr "BOTTOM"
+msgid "DraftSideOffset_DEFINITION"
+msgstr "Tiefgangsseitiger Versatz des Profils."
 
-#:IFC.xml:914
-msgid "IfcWindowPanelPositionEnum_LEFT"
-msgstr "LASSEN"
+#:IFC.xml:32083
+msgid "EdgeDraft"
+msgstr "Pset_ProfileArbitraryHollowCore_Kantenzug"
 
-msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
-msgstr "LASSEN"
+msgid "EdgeDraft_DEFINITION"
+msgstr "Kantenzug des Profils."
 
-#:IFC.xml:915
-msgid "IfcWindowPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
+#:IFC.xml:32088
+msgid "KeyDepth"
+msgstr "Pset_ProfileArbitraryHollowCore_Keiltiefe"
 
-msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
+msgid "KeyDepth_DEFINITION"
+msgstr "Schlüsseltiefe des Profils."
 
-#:IFC.xml:916
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:32093
+msgid "KeyHeight"
+msgstr "Pset_ProfileArbitraryHollowCore_Keilhöhe"
 
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "KeyHeight_DEFINITION"
+msgstr "Schlüsselhöhe des Profils."
 
-#:IFC.xml:917
-msgid "IfcWindowPanelPositionEnum_RIGHT"
-msgstr "RECHTS"
+#:IFC.xml:32098
+msgid "KeyOffset"
+msgstr "Pset_ProfileArbitraryHollowCore_Keil-Offset"
 
-msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "RECHTS"
+msgid "KeyOffset_DEFINITION"
+msgstr "Schlüsselversatz des Profils."
 
-#:IFC.xml:918
-msgid "IfcWindowPanelPositionEnum_TOP"
-msgstr "TOP"
+#:IFC.xml:32119
+msgid "Pset_ProfileMechanical"
+msgstr "Pset Profilmechanik"
 
-msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
-msgstr "TOP"
+msgid "Pset_ProfileMechanical_DEFINITION"
+msgstr "Dies ist eine Sammlung von mechanischen Eigenschaften, die für nahezu alle Profilklassen anwendbar sind. Kommentiert den Perimeter des Profils zur Berechnung der Flächenfläche, zum Beispiel in mm."
 
-#:IFC.xml:920
-msgid "IfcWindowPanelProperties"
-msgstr "IfcWindowPaneleigenschaften"
+#:IFC.xml:32120
+msgid "CentreOfGravityInX"
+msgstr "Pset_ProfileMechanical_Schwerpunkt in X-Richtung"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "Eine Fensterscheibe ist ein Gehäuse, also eine Komponente, befestigt oder öffnen, die im Wesentlichen aus einem Rahmen und der Aufblähung besteht. Die Verglasung einer Fensterscheibe erfolgt in der Regel und die Betriebsart ist im Operationstyp festgelegt. Die [[IfcWindowPanelProperties]] werden verwendet, um die Form und den Betrieb der Fensterscheiben parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung des Fensters hinzugefügt werden. Die [[IfcWindowType]] kann Fenster definieren, die aus mehr als einem Fenster bestehen. In diesem Fall muss für jedes Fensterfenster eine Instanz von [[IfcWindowPanelProperties]] hinzugefügt werden. Das Attribut PanelPosition legt in Verbindung mit dem Attribut [[IfcWindowType]] .OperationType fest, für welches Panel das [[IfcWindowPanelProperties]] gilt. Die [[IfcWindowPanelProperties]] sind in der Liste der Eigenschaften von HasPropertySets des IfcWindowStyle enthalten. Weitere Informationen über das Fensterpanel können mit der [[IfcPropertySet]] für dynamische Erweiterungen in die Liste der [[IfcWindowType]] aufgenommen werden. Das [[IfcWindowPanelProperties]] enthält keine eigene geometrische Darstellung. Allerdings definiert es Parameter, , mit dem die Form des [[IfcWindowType]] erstellt werden kann, das vom [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird. Die Parameter in der [[IfcWindowPanelProperties]] definieren ein Standardfenster. Die äußere Grenze des Futters wird durch die Profilformrepräsentation bestimmt, die der [[IfcWindow]] zugewiesen ist, , die die [[IfcWindowType]] einfügt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des Fensterfensters innerhalb des gesamten Fensters wird durch das Attribut PanelPosition bestimmt. Wie in Abbildung 1 dargestellt, wird die Kontrollleiste auf die Position innerhalb des Futters angewendet, wie sie durch die Positionseigenschaft des Panels definiert ist. Der folgende Parameter gilt für das Panel FrameDepth , FrameThickness . panel 1 .. .. .. Zahlen ifcwindowpanelproperties fig01.gif Figure 1 Fensterpanel Eigenschaften HISTORY Neue Entität in IFC2. , wurde es von IfcWindowPanel in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype auf neu geändert [[IfcPreDefinedPropertySet]] ."
+msgid "CentreOfGravityInX_DEFINITION"
+msgstr "Lage des Profilschwerpunkts (geometrischer Schwerpunkt), gemessen entlang der xp."
 
-#:IFC.xml:943
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:32125
+msgid "CentreOfGravityInY"
+msgstr "Pset_ProfileMechanical_Schwerpunkt in Y-Richtung"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optionaler Link zu einer Formaspektdefinition , der auf den Teil der geometrischen Darstellung des Fensterstils verweist, der zur Darstellung des Fensters verwendet wird. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+msgid "CentreOfGravityInY_DEFINITION"
+msgstr "Lage des Profilschwerpunkts (geometrischer Schwerpunkt), gemessen entlang yp."
 
-#:IFC.xml:921
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:32140
+msgid "MaximumPlateThickness"
+msgstr "Pset_ProfileMechanical_Maximale Plattendicke"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "MaximumPlateThickness_DEFINITION"
+msgstr "Dieser Wert kann für die Spannungsanalyse und zur Lösung von Knickproblemen benötigt werden, kann aber auch aus der gegebenen Profilgeometrie oder Klassifizierung abgeleitet werden und ist daher nur ein optionales Merkmal, das eine explizite Beschreibung erlaubt, z.B. in mm."
 
-#:IFC.xml:926
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:32145
+msgid "MaximumSectionModulusY"
+msgstr "Pset_ProfileMechanical_Maximales Widerstandsmoment Y"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+msgid "MaximumSectionModulusY_DEFINITION"
+msgstr "Biegewiderstand gegen die Ys-Achse an der Stelle mit maximalem Zs-Ordner."
 
-#:IFC.xml:931
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "Betriebstyp"
+#:IFC.xml:32150
+msgid "MaximumSectionModulusZ"
+msgstr "Pset_ProfileMechanical_Maximales Widerstandsmoment Z"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "MaximumSectionModulusZ_DEFINITION"
+msgstr "Biegewiderstand über die zs-Achse an der Stelle mit maximalen ys ordinate. Zum Beispiel gemessen in mm3."
 
-#:IFC.xml:936
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:32155
+msgid "MinimumPlateThickness"
+msgstr "Pset_ProfileMechanical_Minimale Plattendicke"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "MinimumPlateThickness_DEFINITION"
+msgstr "Dieser Wert kann für die Spannungsanalyse und zur Lösung von Knickproblemen benötigt werden, kann aber auch aus der gegebenen Profilgeometrie oder Klassifizierung abgeleitet werden und ist daher nur ein optionales Merkmal, das eine explizite Beschreibung erlaubt, z.B. in mm."
 
-#:IFC.xml:955
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcWindowStyleConstructionEnum"
+#:IFC.xml:32160
+msgid "MinimumSectionModulusY"
+msgstr "Pset_ProfileMechanical_Minimales Widerstandsmoment Y"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die Grundtypen der Fensterkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die für die Fensterherstellung verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL WOOD ALUMINIUM WOOD PLASTIK ANDERE CONSTRUCTION NOTDEFINED"
+msgid "MinimumSectionModulusY_DEFINITION"
+msgstr "Biegewiderstand über die Ys-Achse an der Stelle mit einer Z-Koordinate von minimalem Zs, zum Beispiel gemessen in mm3."
 
-#:IFC.xml:956
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
+#:IFC.xml:32165
+msgid "MinimumSectionModulusZ"
+msgstr "Pset_ProfileMechanical_Minimales Widerstandsmoment Z"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
+msgid "MinimumSectionModulusZ_DEFINITION"
+msgstr "Biegewiderstand über die zs-Achse an der Stelle mit minimalem ys ordinat."
 
-#:IFC.xml:957
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOOD"
+#:IFC.xml:32170
+msgid "MomentOfInertiaY"
+msgstr "Pset_ProfileMechanical_Massenträgheitsmoment in Y-Richtung"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOOD"
+msgid "MomentOfInertiaY_DEFINITION"
+msgstr "Trägheitsmoment um ys (zweites Flächenmoment, um ys), z.B. gemessen in mm."
 
-#:IFC.xml:958
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "HOCHGRADE STEEL"
+#:IFC.xml:32175
+msgid "MomentOfInertiaYZ"
+msgstr "Pset_ProfileMechanical_Massenträgheitsmoment in Y-Z-Richtung"
 
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "HOCHGRADE STEEL"
+msgid "MomentOfInertiaYZ_DEFINITION"
+msgstr "Trägheitsmoment um ys und zs (Produktmoment der Fläche), z.B. gemessen in mm."
 
-#:IFC.xml:959
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:32180
+msgid "MomentOfInertiaZ"
+msgstr "Pset_ProfileMechanical_Massenträgheitsmoment in Z-Richtung"
 
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "MomentOfInertiaZ_DEFINITION"
+msgstr "Trägheitsmoment um zs (zweites Flächenmoment, um zs), z.B. gemessen in mm."
 
-#:IFC.xml:960
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
-msgstr "ANDERE KONSTRUKTION"
+#:IFC.xml:32190
+msgid "PlasticShapeFactorY"
+msgstr "Pset_ProfileMechanical_Plastischer Formfaktor Y"
 
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
-msgstr "ANDERE KONSTRUKTION"
+msgid "PlasticShapeFactorY_DEFINITION"
+msgstr "Verhältnis von plastischer zu elastischer Biegemomentkapazität um die Querschnittsanalyseachse ys. Ein dimensionsloser Wert."
 
-#:IFC.xml:961
-msgid "IfcWindowStyleConstructionEnum_PLASTIC"
-msgstr "PLASTIK"
+#:IFC.xml:32195
+msgid "PlasticShapeFactorZ"
+msgstr "Pset_ProfileMechanical_Plastischer Formfaktor Z"
 
-msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTIK"
+msgid "PlasticShapeFactorZ_DEFINITION"
+msgstr "Verhältnis von plastischer zu elastischer Biegemomentkapazität um die Querschnittsanalyseachse zs. Ein dimensionsloser Wert."
 
-#:IFC.xml:962
-msgid "IfcWindowStyleConstructionEnum_STEEL"
-msgstr "LÄNDERN"
+#:IFC.xml:32200
+msgid "ShearAreaY"
+msgstr "Pset_ProfileMechanical_Schubbereich Y"
 
-msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "LÄNDERN"
+msgid "ShearAreaY_DEFINITION"
+msgstr "Bereich des Profils zur Berechnung des Scherenstresses durch Scherkraft, parallel zur Abschnittsanalyseachse ys. Wenn in mm2 angegeben, ist der Scherenbereich ys nicht negativ."
 
-#:IFC.xml:963
-msgid "IfcWindowStyleConstructionEnum_WOOD"
-msgstr "WOOOD"
+#:IFC.xml:32205
+msgid "ShearAreaZ"
+msgstr "Pset_ProfileMechanical_Schubbereich Z"
 
-msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOOD"
+msgid "ShearAreaZ_DEFINITION"
+msgstr "Bereich des Profils zur Berechnung des Scherenstresses durch Scherkraft, parallel zur Abschnittsanalyseachse zs. Wenn in mm2 angegeben, ist der Scherenbereich zs nicht negativ."
 
-#:IFC.xml:965
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyleOperationEnum"
+#:IFC.xml:32210
+msgid "ShearCentreY"
+msgstr "Pset_ProfileMechanical_Schubmittelpunkt in Y-Richtung"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations Items SINGLE PANEL Window with one panel. DOUBLE PANEL VERTICAL Window with two panels. The configuration of the panels is vertically. DOUBLE PANEL HORIZONTAL Window with two panels. The configuration of the panels is horizontally. TRIPLE PANEL VERTICAL Window with three panels. The configuration of the panels is vertically. TRIPLE PANEL BOTTOM Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TRIPLE PANEL TOP Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TRIPLE PANEL LEFT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TRIPLE PANEL RIGHT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. TRIPLE PANEL HORIZONTAL Window with three panels. The configuration of the panels is horizontally. USERDEFINED user defined operation type NOTDEFINED"
+msgid "ShearCentreY_DEFINITION"
+msgstr "Lage des Schermittelpunktes des Profils, gemessen entlang ys."
 
-#:IFC.xml:966
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
-msgstr "PANEL HORIZONTAL DOUBLE"
+#:IFC.xml:32215
+msgid "ShearCentreZ"
+msgstr "Pset_ProfileMechanical_Schubmittelpunkt in X-Richtung"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Fenster mit zwei Paneelen. Die Konfiguration der Paneele ist horizontal."
+msgid "ShearCentreZ_DEFINITION"
+msgstr "Lage des Schermittelpunktes des Profils, gemessen entlang zs."
 
-#:IFC.xml:967
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
-msgstr "PANELVERTISCHE DOPPELVERTISCH"
+#:IFC.xml:32220
+msgid "ShearDeformationAreaY"
+msgstr "Pset_ProfileMechanical_Schubverformungsbereich Y"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Fenster mit zwei Paneelen. Die Konfiguration der Paneele erfolgt vertikal."
+msgid "ShearDeformationAreaY_DEFINITION"
+msgstr "Bereich des Profils zur Berechnung der Scherendeformation durch eine Scherkraft, parallel zu ys. Wenn in mm2 angegeben, ist der Scherenverformungsbereich ys nicht negativ."
 
-#:IFC.xml:968
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:32225
+msgid "ShearDeformationAreaZ"
+msgstr "Pset_ProfileMechanical_Schubverformungsbereich Z"
 
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "ShearDeformationAreaZ_DEFINITION"
+msgstr "Bereich des Profils zur Berechnung der Scherendeformation durch eine Scherkraft, parallel zu zs. Wenn in mm2 angegeben, ist der Scherenverformungsbereich zs nicht negativ."
 
-#:IFC.xml:969
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
-msgstr "EINZELS PANEL"
+#:IFC.xml:32230
+msgid "TorsionalConstantX"
+msgstr "Pset_ProfileMechanical_Drehmomentkonstante in X-Richtung"
 
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
-msgstr "Window with one panel."
+msgid "TorsionalConstantX_DEFINITION"
+msgstr "Torsionskonstante um xs, z.B. gemessen in mm4."
 
-#:IFC.xml:970
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
-msgstr "TRIPLE PANEL BOTTOM"
+#:IFC.xml:32235
+msgid "TorsionalSectionModulus"
+msgstr "Pset_ProfileMechanical_Torsions-Widerstandsmoment"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
-msgstr "Fenster mit drei Paneelen. Die Konfiguration von zwei Paneelen ist vertikal und die dritte horizontal unten."
+msgid "TorsionalSectionModulus_DEFINITION"
+msgstr "Torsionalwiderstand über xs , zum Beispiel in mm3."
 
-#:IFC.xml:971
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
-msgstr "TRIPLE PANEL HORIZONTAL"
+#:IFC.xml:32240
+msgid "WarpingConstant"
+msgstr "Pset_ProfileMechanical_Krümmungskonstante"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is horizontally."
-
-#:IFC.xml:972
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
-msgstr "TRIPLE PANEL LEFT"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
-msgstr "Fenster mit drei Paneelen: Die Konfiguration von zwei Paneelen ist horizontal und die dritte befindet sich vertikal auf der linken Seite."
-
-#:IFC.xml:973
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
-msgstr "TRIPLE PANEL RECHTS"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side."
-
-#:IFC.xml:974
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
-msgstr "TRIPLE PANEL TOP"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
-msgstr "Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top."
-
-#:IFC.xml:975
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
-msgstr "TRIPLE PANEL VERTICAL"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Window with three panels. The configuration of the panels is vertically."
-
-#:IFC.xml:976
-msgid "IfcWindowStyleOperationEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
-
-msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "user defined operation type"
+msgid "WarpingConstant_DEFINITION"
+msgstr "Verzugskonstante des Profils für die Torsionswirkung, z.B. gemessen in mm."
 
