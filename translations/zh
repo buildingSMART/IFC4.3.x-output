@@ -9,632 +9,1171 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcRepresentationResource.pot\n"
-"X-Crowdin-File-ID: 78\n"
+"X-Crowdin-File: /master/IfcSharedComponentElements.pot\n"
+"X-Crowdin-File-ID: 86\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:37633
-msgid "IfcConvertDirectionInto2D"
-msgstr "IfcConvertDirectionInto2D"
+#:IFC.xml:43653
+msgid "IfcBuildingElementPart"
+msgstr "IfcBuildingElementPart"
 
-#:IFC.xml:37641
-msgid "IfcCoordinateOperation"
-msgstr "IfcCoordinate操作"
+msgid "IfcBuildingElementPart_DEFINITION"
+msgstr "[[IfcBuildingElementPart]] 代表建筑元素的下属部件。 典型的使用例子包括预定混凝土的沙威奇墙壁，那里的图层可能有不同的几何形状。 在这种情况下，分层物质表现没有充分描述这一要素。 每个图层都由自己的实例 [[IfcBuildingElementPart]]代表，有自己的几何描述。 建筑元素组件的类型进一步由[[IfcBuildingElementPartType]] 的对应实例指定, 由 [[IfcRelDefinesByType]] 引用。 IFC2x2中的新实体。 hange ifc2x4 IFC4 变量已从IfcStructuralElementsDomain schema移动到IfcSharedComponentElement元素schema，并且超类型的兼容变更，属性已添加。"
 
-msgid "IfcCoordinateOperation_DEFINITION"
-msgstr "The coordinate operation is an abstract supertype to handle any operation transformation or conversion between two coordinate reference systems. It is meant to provide expandability for future versions, since currently only the conversion of a local engineering coordinate system into a map coordinate reference system is dealt with by the subtype [[IfcMapConversion]] . By convention, a coordinate operation is given between the SourceCRS being the more local, or child coordinate reference system, and the TargetCRS being the more remote or parent coordinate reference system, in the special case the coordinate operation between the local engineering coordinate system of the construction project and any map or other coordinate reference system. .extDef NOTE Definition from OpenGIS Abstract Specification, Topic 2 If the relationship between any two coordinate reference systems is known, coordinates can be transformed or converted to another coordinate reference system. Coordinate operations are divided into two subtypes .note Coordinate conversion mathematical operation on coordinates that does not include any change of datum. The best known example of a coordinate conversion is a map projection. The parameters describing coordinate conversions are defined rather than empirically derived. Note that some conversions have no parameters. Coordinate transformation mathematical operation on coordinates that usually includes a change of datum. The parameters of a coordinate transformation are empirically derived from data containing the coordinates of a series of points in both coordinate reference systems. This computational process is usually over determined , allowing derivation of error or accuracy estimates for the transformation. Also, the stochastic nature of the parameters may result in multiple different versions of the same coordinate transformation. Because of this several transformations may exist for a given pair of coordinate reference systems, differing in their transformation method, parameter values and accuracy characteristics. HISTORY New entity in IFC4."
+#:IFC.xml:43654
+msgid "IfcBuildingElementPart_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:37648
-msgid "IfcCoordinateOperation_TargetCRS"
-msgstr "TargetCRS"
+msgid "IfcBuildingElementPart_PredefinedType_DEFINITION"
+msgstr "构建元素部件的子类型"
 
-msgid "IfcCoordinateOperation_TargetCRS_DEFINITION"
-msgstr "Target coordinate reference system for the operation."
+#:IFC.xml:43661
+msgid "IfcBuildingElementPartType"
+msgstr "IfcBuildingElementPartType"
 
-#:IFC.xml:37642
-msgid "IfcCoordinateOperation_SourceCRS"
-msgstr "来源CRS"
+msgid "IfcBuildingElementPartType_DEFINITION"
+msgstr "构件元件类型界定了共同财产组定义清单和建筑元件部分的表示图。 IFC4中的新实体。"
 
-msgid "IfcCoordinateOperation_SourceCRS_DEFINITION"
-msgstr "操作的源坐标参考系统。"
+#:IFC.xml:43662
+msgid "IfcBuildingElementPartType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:37684
-msgid "IfcCoordinateReferenceSystem"
-msgstr "IfcCoordinateReferenceSystem"
+msgid "IfcBuildingElementPartType_PredefinedType_DEFINITION"
+msgstr "构建元素部件的子类型"
 
-msgid "IfcCoordinateReferenceSystem_DEFINITION"
-msgstr "The [[IfcCoordinateReferenceSystem]] is a definition of a coordinate reference system by means of qualified identifiers only. The interpretation of the identifier is expected to be well known to the receiving software. .extDef NOTE Definition from OpenGIS Abstract Specification, Topic 2 A coordinate reference system is a coordinate system which is related to the real world by a datum. The coordinate system is composed of a set of coordinate axes with specified units of measure. The datum specifies the relationship of a coordinate system to the earth. The resulting combination of coordinate system and datum is a coordinate reference system. The unambiguous identifier by which the coordinate reference system is know, is stored in the Name attribute. Well defined identifiers include the geodetic and often also the vertical datum. In these cases the GeodeticDatum and the VerticalDatum can be omitted. EXAMPLE The identifier EPSG 25832 defines the geodetic datum ETRS89 in additon to the projection and the zone. EPSG 5555 defined the geodetic datum ETRS89 and the vertical datum DHHN92 . NOTE One widely used, publicly available authority is the European Petroleum Survey Group EPSG , and use of this authority is currently specified in several OGC Implementation Specifications. Software used to transport IFC engineering models into GIS applications and vice versa is expected to have knowledge about the OGC Implementation Specifications. HISTORY New entity in IFC4."
+#:IFC.xml:43669
+msgid "IfcBuildingElementPartTypeEnum"
+msgstr "IfcBuildingElementPartTypeEnum"
 
-#:IFC.xml:37660
-msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
-msgstr "HasCoordinate操作"
+msgid "IfcBuildingElementPartTypeEnum_DEFINITION"
+msgstr "这个枚举界定了不同类型的建筑要素，第四届国际商会中的新枚举就是如此。 物件装饰物。该部件提供了热绝缘，例如作为沙威奇墙壁墙壁板之间的隔热层或在墙壁中的感染。 PRECASTPANEL 这一部分是一个预制面板，通常是沙威奇墙壁面板中的内部或外部一层。 APRON 一种保护扫描的形式，包括木材、水泥、钻井、铺设或在停泊区和码头附近建造其他建筑，以防止破坏。 这是一块大型石块或水泥塑料，用来防止植被和断水等斜坡遭受侵蚀。 这些单元组合成课程层。 ISO 21650中的标注定义相对较大的石块或混凝土成型单位被选中以适应特定几何特性和密度。 SAFETYCAGE安全笼是一个圆形和垂直条形状的集合，可在固定梯子处加固，并安排工人在攀登梯子时将路径圈在一起。 此处所包含的梯子也称为笼子或钩子梯子。用户定义的配件。未定义配件。"
 
-msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
-msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between this coordinate reference system, and another Geographic coordinate reference system."
+#:IFC.xml:43685
+msgid "IfcBuildingElementPartTypeEnum_APRON"
+msgstr "APRON"
 
-#:IFC.xml:37685
-msgid "IfcCoordinateReferenceSystem_Description"
-msgstr "描述"
+msgid "IfcBuildingElementPartTypeEnum_APRON_DEFINITION"
+msgstr "一种保护扫描的形式，包括木材、混凝土、裂缝、铺面或在停泊区和码头附近建造其他建筑，以防止破坏。"
 
-msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
-msgstr "Informal description of this coordinate reference system .extDef NOTE In case Name equals WKT the Description is well known text that corresponds to ISO 19162 definition specifying the necessary parameters for the coordinate reference system. Example for ellipsoid ELLIPSOID ,,,"
+#:IFC.xml:43686
+msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT"
+msgstr "ARMOURUNIT"
 
-#:IFC.xml:37690
-msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
-msgstr "GeodeticDatum"
+msgid "IfcBuildingElementPartTypeEnum_ARMOURUNIT_DEFINITION"
+msgstr "一块大型石块或水泥塑料，用来防止斜坡的侵蚀，例如重新布设和断水。 这些单元组合成课程层。 ISO 21650中的标注定义相对较大的石块或混凝土成型单位被选中以适应特定几何特性和密度。"
 
-msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
-msgstr "Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid s connection and orientation to the actual globe earth. It needs to be provided, if the Name identifier does not unambiguously define the geodetic datum as well. .examples EXAMPLE geodetic datums include .note ED50 EUREF89 WSG84"
+#:IFC.xml:43687
+msgid "IfcBuildingElementPartTypeEnum_INSULATION"
+msgstr "配料"
 
-#:IFC.xml:37695
-msgid "IfcCoordinateReferenceSystem_Name"
-msgstr "名称"
+msgid "IfcBuildingElementPartTypeEnum_INSULATION_DEFINITION"
+msgstr "这一部分提供了热绝缘，例如作为沙威奇墙壁壁板之间的隔绝层，或作为在墙壁中的感染。"
 
-msgid "IfcCoordinateReferenceSystem_Name_DEFINITION"
-msgstr "Name by which the coordinate reference system is identified. NOTE 1 The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as EPSG 5555 . .extDef NOTE 2 The name shall be WKT if an EPSG code does not exist for the CRS."
-
-#:IFC.xml:37700
-msgid "IfcCoordinateReferenceSystem_VerticalDatum"
-msgstr "VerticalDatum"
-
-msgid "IfcCoordinateReferenceSystem_VerticalDatum_DEFINITION"
-msgstr "Name by which the vertical datum is identified. The vertical datum is associated with the height axis of the coordinate reference system and indicates the reference plane and fundamental point defining the origin of a height system. It needs to be provided, if the Name identifier does not unambiguously define the vertical datum as well and if the coordinate reference system is a 3D reference system. .examples EXAMPLE vertical datums include .note DHHN92 the German Haupthöhennetz EVRS2007 the European Vertical Reference System"
-
-#:IFC.xml:37707
-msgid "IfcCoordinateReferenceSystemSelect"
-msgstr "IfcCoordinateReferenceSystemSelect"
-
-#:IFC.xml:37708
-msgid "IfcGeometricProjectionEnum"
-msgstr "IfcGeometricProjectionEnum"
-
-msgid "IfcGeometricProjectionEnum_DEFINITION"
-msgstr "[[IfcGeometricProjectionEnum]] 定义了可以用语法区分的各种代表性类型。 形状表示的细节常常不同级别受表示类型的控制，IFC2x2中的HISTORY 新列出。 项目GRAPH VIEW 几何显示示意图，通常是1D 元素表示，例如 通过轴线代表一堵墙。SKETCH VIEW 几何显示表示显示一个抽象，通常是2D 元素表示，例如 代表一堵墙的双脚印边，冲动任何内层的布局。 MODEL VIEW 几何显示表示显示一个完整的3D元素代表性，例如通过其体积体表示一堵墙。 PLAN VIEW Geometric 显示表示显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 从上面可以看到这种预测。 重审的PLAN VIEW 几何表现形式显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 投影情况如下文所示。 SectION VIEW Geometric 显示表示显示了完整的2D元素代表性，详细程度往往取决于目标尺度，例如： 如果元素被线切割，则由其两个内外边缘和所有内层的边缘代表一堵墙。 ELEVATIV 几何表现形式显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。如果元素在高程视图内，则通过其边界边缘表示墙。 UsERDEFINED 用户定义的规格是由用户定义目标视图属性的值提供的。未提供任何规格。"
-
-#:IFC.xml:37709
-msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW"
-msgstr "评价视图"
-
-msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW_DEFINITION"
-msgstr "显示全部2D元素代表的几何显示器，详细程度往往取决于目标尺度。 。如果元素在高程视图内，则通过其边界边缘表示墙。"
-
-#:IFC.xml:37710
-msgid "IfcGeometricProjectionEnum_GRAPH_VIEW"
-msgstr "巨型视图"
-
-msgid "IfcGeometricProjectionEnum_GRAPH_VIEW_DEFINITION"
-msgstr "Geometric display representation that shows an abstract, often 1D element representation, e.g. representing a wall by its axis line."
-
-#:IFC.xml:37711
-msgid "IfcGeometricProjectionEnum_MODEL_VIEW"
-msgstr "移动视图"
-
-msgid "IfcGeometricProjectionEnum_MODEL_VIEW_DEFINITION"
-msgstr "Geometric display representation that shows a full 3D element representation, e.g. representing a wall by its volumetric body."
-
-#:IFC.xml:37712
-msgid "IfcGeometricProjectionEnum_NOTDEFINED"
+#:IFC.xml:43688
+msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED"
 msgstr "未完成"
 
-msgid "IfcGeometricProjectionEnum_NOTDEFINED_DEFINITION"
-msgstr "No specification given."
+msgid "IfcBuildingElementPartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的配件。"
 
-#:IFC.xml:37713
-msgid "IfcGeometricProjectionEnum_PLAN_VIEW"
-msgstr "播放视图"
+#:IFC.xml:43689
+msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL"
+msgstr "PRECASTPANE"
 
-msgid "IfcGeometricProjectionEnum_PLAN_VIEW_DEFINITION"
-msgstr "显示完整2D元素代表的几何显示器，详细程度往往取决于目标尺度，例如： 用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 从上面可以看到这种预测。"
+msgid "IfcBuildingElementPartTypeEnum_PRECASTPANEL_DEFINITION"
+msgstr "部件是预设面板，通常是沙威奇墙面板中的内外一层。"
 
-#:IFC.xml:37714
-msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW"
-msgstr "查看的玩家"
+#:IFC.xml:43690
+msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE"
+msgstr "SAFETYCAGE"
 
-msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW_DEFINITION"
-msgstr "显示完整2D元素代表的几何显示器，详细程度往往取决于目标尺度，例如： 用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 投影情况如下文所示。"
+msgid "IfcBuildingElementPartTypeEnum_SAFETYCAGE_DEFINITION"
+msgstr "安全笼是一个圆形和垂直条形的集合，可以在固定梯子的柱子上长，并且安排工人在攀登梯子时把路圈在一起。 如此封闭的梯子也被称为笼子或钩子梯。"
 
-#:IFC.xml:37715
-msgid "IfcGeometricProjectionEnum_SECTION_VIEW"
-msgstr "节视图"
-
-msgid "IfcGeometricProjectionEnum_SECTION_VIEW_DEFINITION"
-msgstr "显示全部2D元素代表的几何显示器，详细程度往往取决于目标尺度。 。由其两个内外边缘和所有内层的边缘代表一堵墙， 如果该元素被节行剪切。"
-
-#:IFC.xml:37716
-msgid "IfcGeometricProjectionEnum_SKETCH_VIEW"
-msgstr "SKETCH视图"
-
-msgid "IfcGeometricProjectionEnum_SKETCH_VIEW_DEFINITION"
-msgstr "几何显示呈现摘要，通常是2D元素表示，例如 代表一堵墙的双脚印边，冲动任何内层的布局。"
-
-#:IFC.xml:37717
-msgid "IfcGeometricProjectionEnum_USERDEFINED"
+#:IFC.xml:43691
+msgid "IfcBuildingElementPartTypeEnum_USERDEFINED"
 msgstr "已使用"
 
-msgid "IfcGeometricProjectionEnum_USERDEFINED_DEFINITION"
-msgstr "A user defined specification is given by the value of the UserDefinedTargetView attribute."
+msgid "IfcBuildingElementPartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的配件。"
 
-#:IFC.xml:37719
-msgid "IfcGeometricRepresentationContext"
-msgstr "IfcGeometricRepresentationContext"
+#:IFC.xml:43692
+msgid "IfcDiscreteAccessory"
+msgstr "IfcDiscrete配件。"
 
-msgid "IfcGeometricRepresentationContext_DEFINITION"
-msgstr "The [[IfcGeometricRepresentationContext]] defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the WorldCoordinateSystem attribute. The main representation context may also provide the true north direction, see Figure 1. The TrueNorth attribute should be provided, if the y axis of the WorldCoordinateSystem does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute WorldCoordinateSystem. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not resent, it defaults to 0.,1. i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction. The true North as seen in CAD within the figure on the left shows the correct interpretation of the TrueNorth direction If a conversion to a geographic coordinate system is included by virtue of the HasCoordinateOperation attribute, then the TrueNorth attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an [[IfcCoordinateOperation]]. Figure 1 Definition of the true north direction The use of one instance of [[IfcGeometricRepresentationContext]] to represent the model 3D view is mandatory, the use of a second instance of [[IfcGeometricRepresentationContext]] to represent the plan 2D view is optional but needs to be given, if there are scale dependent plan views , the additional scale or view dependent contexts need to be handled by using the subtype [[IfcGeometricRepresentationSubContext]] pointing to the model view or the plan view as the ParentContext . See Figure 2 for an example using geometric representation contexts for 3D and 2D with assigned sub contexts. NOTE The inherited attribute ContextType shall have one of the following recognized values Model , Plan , NotDefined . Use of representation contexts defined at [[IfcProject]] for 3D model and 2D plan context, including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space. Figure 2 Example of using geometric representation contexts .extDef NOTE Definition according to ISO CD 10303 42 1992 A geometric representation context is a representation context in which the geometric representation items are geometrically founded. NOTE Entity adapted from geometric representation context defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x3 IFC2x3 CHANGE Applicable values for ContextType are only Model , Plan , and NotDefined . All other contexts are now handled by [[IfcGeometricRepresentationSubContext]] . .change ifc2x4 IFC4 CHANGE Mapping to Geographic coordinate system added by inverse attribute HasCoordinateOperation ."
+msgid "IfcDiscreteAccessory_DEFINITION"
+msgstr "离散配件是指包含在单元内或添加到单元内的各种配件的表示物。 IFC2x2.中的HISTORY 新实体。ifc2x4 IFC4 更改属性预定义类型已添加。"
 
-#:IFC.xml:12355
-msgid "IfcGeometricRepresentationContext_TrueNorth"
-msgstr "TrueNorth"
+#:IFC.xml:43693
+msgid "IfcDiscreteAccessory_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
-msgstr "Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not present, it defaults to 0. 1., meaning that the positive Y axis of the project coordinate system equals the geographic northing direction. NOTE If a geographic placement is provided using [[IfcMapConversion]] then the true north is for information only. In case of inconsistency, the value provided with [[IfcMapConversion]] shall take precedence."
+msgid "IfcDiscreteAccessory_PredefinedType_DEFINITION"
+msgstr "离散配件的子类型。如果是USERDEFINED，此类型通过继承属性对象类型进一步限定。 对于同样适用于[[IfcDiscreteAccessory]]的非排他性用户定义类型指定的列表，请参阅[[IfcDiscreteAccessoryType]。"
 
-#:IFC.xml:37672
-msgid "IfcGeometricRepresentationContext_HasCoordinateOperation"
-msgstr "HasCoordinate操作"
+#:IFC.xml:43700
+msgid "IfcDiscreteAccessoryType"
+msgstr "IfcDiscreteAccessoryType"
 
-msgid "IfcGeometricRepresentationContext_HasCoordinateOperation_DEFINITION"
-msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between a Geographic map coordinate reference system, and the engineering coordinate system of this construction project. If there is more then one [[IfcGeometricRepresentationContext]] provided to the [[IfcProject]] then all contexts shall have an identical instance of [[IfcCoordinateOperation]] as HasCoordinateOperation refering to the same instance of [[IfcCoordinateReferenceSystem]] ."
+msgid "IfcDiscreteAccessoryType_DEFINITION"
+msgstr "The element component type [[IfcDiscreteAccessoryType]] defines commonly shared information for occurrences of discrete accessories. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a discrete accessory type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDiscreteAccessoryType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDiscreteAccessoryType]] are represented by instances of [[IfcDiscreteAccessory]] . HISTORY New entity in IFC4. .use head Type Use Definition The exact type information of the [[IfcDiscreteAccessoryType]] is given in the PredefinedType attribute, possibly in combination with the ElementType attribute inherited from [[IfcElementType]] . Standard ElementType designations are provided for guideline below. The list is not exhaustive and the list of definitions may be extended based on local agreements. Corbels as separate components Hidden steel corbel Corbel system made from steel components embedded into the master element. Visible steel corbel Corbel system made from steel components protruding from the master element. Visible concrete corbel Corbel system made as a separate precast concrete component added to the master element. Connecting accessories, for example for sandwich wall panels Diagonal truss connector A fixing device in truss form with diagonal cross bars holding two precast conrete panels together in a sandwich wall panel. Ladder truss connector A fixing device in truss form with straight cross bars in ladder form holding two precast conrete panels together in a sandwich wall panel. Panel suspender A straight fixing device holding two precast conrete panels together in a sandwich wall panel. Electrical accessories for precast concrete elements Protective plug Protective plug used in element for protecting electrical accessories during manufacturing, transportation and assembly. Fixing parts Standard fixing plate Standard fixing plate. Edge fixing plate Fixing plate attached to the edge of an element. Corner fixing plate Fixing plate attached to the corner of an element. Slab fixing plate Fixing plate for slabs. Channel fixing Fixing channels, often realized as cast in channels. Balcony hinge Accessory supporting and fixing balconies. Frame shoe Fixing shoe for frames. Thermo frame Thermo frame. Column shoe Fixing shoe for columns. Wall shoe Fixing shoe for walls. Fixing socket Fixing socket. Joint accessories Neoprene bearing plate Rubber plate used as a bearing in, for example, joints between column corbels and beams. Working joint reinforcement Reinforcement accessory used in working joints. Expansion joint reinforcement Reinforcement accessory used in expansion joints. Ribbed steel bar extension Extension accessory made of a ribbed reinforcement bar used in joints. Steel pin bolt Pin bolt used to join together, for example, columns and beams. Concrete dowel Dowel pin used in joints. Concrete groove A groove made in a joint. Steel plate A steel plate used as an accessory in a joint. Wire loop A joint connector accessory made from a wire loop. Steel loop A joint connector accessory made from a steel bar loop. Sealing strip A strip sealing the joint. Sealing compound Sealing compound protecting and sealing the joint. Lifting accessories Wire lifting hook A lifting aid in the form of a wire loop. Steel lifting hook A lifting aid in the form of a steel bar loop. Lifting socket A lifting aid in the form of a socket. Steel lifting anchor A lifting aid in the form of a steel lifting anchor. Lifting hole A lifting aid in the form of a hole. Accessories mainly used in the building services domain Antivibration An isolating device to prevent other elements to be effected by vibrations. Drop rod A length of material providing a hanging support to a bracket. Note that a drop rod is considered to include nuts and washers required for securing. Duct foot A base support used to receive a vertical pipe . Framing A frame placed around a penetration to prevent scraping against the building surface or structure. Grommet An element placed within a penetration that seals the penetration for a particular reason. Rack A set of shelving for the purposes of storage that may be freestanding or bolted to a structure. Safety part A part, typically installed in vertical shafts at each level, to ensure safety from falling when entering the shaft. Sleeve A thin barrier placed between a penetration and a penetrating element. Support section A section of material that is used as an intermediate support upon which multiple brackets can be mounted."
 
-#:IFC.xml:37738
-msgid "IfcGeometricRepresentationContext_HasSubContexts"
-msgstr "HasSubContexts"
+#:IFC.xml:43701
+msgid "IfcDiscreteAccessoryType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcGeometricRepresentationContext_HasSubContexts_DEFINITION"
-msgstr "The set of IfcGeometricRepresentationSubContexts that refer to this [[IfcGeometricRepresentationContext]] ."
+msgid "IfcDiscreteAccessoryType_PredefinedType_DEFINITION"
+msgstr "离散配件子类型"
 
-#:IFC.xml:37720
-msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension"
-msgstr "坐标空间尺寸"
+#:IFC.xml:43708
+msgid "IfcDiscreteAccessoryTypeEnum"
+msgstr "IfcDiscreteAccessoryTypeEnum"
 
-msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
-msgstr "坐标空间的整数尺寸计数以几何表示环境为模型。"
+msgid "IfcDiscreteAccessoryTypeEnum_DEFINITION"
+msgstr "This enumeration defines the different types of discrete accessories. HISTORY New enumeration in IFC4. Items ANCHORPLATE An accessory consisting of a steel plate, shear stud connectors or welded on rebar which is embedded into the surface of a concrete element so that other elements can be welded or bolted onto it later. BRACKET An L shaped or similarly shaped accessory attached in a corner between elements to hold them together or to carry a secondary element. SHOE A column shoe or a beam shoe beam hanger used to support or secure an element. EXPANSION JOINT DEVICE Assembly connection element between construction elements to allow for thermic differential expansions. CABLEARRANGER A cable arranger is a flexible accessory or a part of a component placed around cables to arrange and minimize flexing of them at the point where it is placed. INSULATOR A device designed to support and insulate a conductive element. Note definition from IEC 151 15 39. LOCK A lock is a mechanical or electronic fastening device that is released either by a physical object e.g., key, fingerprint, RFID card, security token etc. , by supplying secret information e.g., number permutation, password , or by a combination thereof. TENSIONINGEQUIPMENT An equipment used to maintain the tension of conductors or cables. RAILPAD A non metallic pad placed between rail and baseplate or rail and sleeper, bearer or slab. Note definition from EN 13481 1. SLIDINGCHAIR A component which supports and retains the stock rail and a flat surface upon which the foot of the switch rail slides. RAIL LUBRICATION A device that prevents wearing of the rails throughout the flange of wheel to reduce noise emissions. It is often located at inner side of the outer rail in a curve or near turnouts depends on function wearing or noise reduction . PANEL STRENGTHENING A component that minimizes pump effects of the substructure. RAILBRACE A rail component that prevents rails from tipping and twisting. ELASTIC CUSHION A track elastic cushion is a kind of layer set on grooved sides of a concrete base, which is used for mitigating the impact of longitudinal and lateral load on track structures. A track elastic cushion shall only appear in ballastless track structures. SOUNDABSORPTION A component in the track for sound absorption and may also absorb vibrations. It is often used in combination with slab tracks. POINTMACHINEMOUNTINGDEVICE POINT MACHINE LOCKING DEVICE RAIL MECHANICAL EQUIPMENT A rail mechanical equipment is a mechnical equipment installed at railside, like blocking device, speed regulator, bias loaded inspector, track scale or controllable retarder. . BIRDPROTECTION A device that prevents a sitting down of birds at electrically critical points and thus birds are protected against electrical shocks and disturbances by short circuit are avoided. USERDEFINED User defined accessory. NOTDEFINED Undefined accessory."
 
-#:IFC.xml:37725
-msgid "IfcGeometricRepresentationContext_Precision"
-msgstr "精度"
+#:IFC.xml:43752
+msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE"
+msgstr "ANCHOPLATE"
 
-msgid "IfcGeometricRepresentationContext_Precision_DEFINITION"
-msgstr "几何模型的模型精度值。 这是一个双值 REAL , 通常为1E 5-1E 8 范围内， 这表明了两点仍然被假定相同的容忍度。 这个值可以用来设定从边缘曲线到底面表面的最大距离，以酿造模型。"
+msgid "IfcDiscreteAccessoryTypeEnum_ANCHORPLATE_DEFINITION"
+msgstr "由钢板组成的配件， 插入水泥元素表面的玻璃连接器或焊接在钢条上，以便其它元素以后可以焊接或加粗。"
 
-#:IFC.xml:37730
-msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem"
-msgstr "世界坐标系统"
+#:IFC.xml:43753
+msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION"
+msgstr "BIRD保护"
 
-msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
-msgstr "Establishment of the engineering coordinate system often referred to as the world coordinate system in CAD for all representation contexts used by the project. NOTE It can be used to provide better numeric stability if the placement of the building s is far away from the origin. In most cases however it would be set to origin 0.,0.,0. and directions x 1.,0.,0. , y 0.,1.,0. , z 0.,0.,1. . If an geographic placement is provided using [[IfcMapConversion]] then the WorldCoordinateSystem atttibute is used to define the offset between the zero point of the local engineering coordinate system and the geographic reference point to which the [[IfcMapConversion]] offset relates. In preferred practise both points also called project base point and survey point should be coincidental. However it is possible to offset the geographic reference point from the local zero point."
+msgid "IfcDiscreteAccessoryTypeEnum_BIRDPROTECTION_DEFINITION"
+msgstr "防止鸟类坐下电临界点和鸟类不受电击和短路扰动的设备可以避免。"
 
-#:IFC.xml:37752
-msgid "IfcGeometricRepresentationSubContext"
-msgstr "IfcGeometricRepresentationSubContext"
+#:IFC.xml:43754
+msgid "IfcDiscreteAccessoryTypeEnum_BRACKET"
+msgstr "竞技键"
 
-msgid "IfcGeometricRepresentationSubContext_DEFINITION"
-msgstr "[[IfcGeometricRepresentationSubContext]] defines the context that applies to several shape representations of a product being a sub context, sharing the WorldCoordinateSystem , CoordinateSpaceDimension , Precision and TrueNorth attributes with the parent [[IfcGeometricRepresentationContext]] . The [[IfcGeometricRepresentationSubContext]] is used to define semantically distinguished representation types for different information content, dependent on the representation view and the target scale. It can be used to control the level of detail of the shape representation that is most applicable to this geometric representation context. In addition the sub context is used to control the later appearance of the [[IfcShapeRepresentation]] within a plot view. NOTE If the [[IfcShapeRepresentation]] using this sub context has [[IfcStyledItem]] s assigned to the Items , the presentation style information e.g. [[IfcCurveStyle]] , [[IfcTextStyle]] associated with the [[IfcStyledItem]] is given in target plot dimensions. For example, a line thickness [[IfcCurveStyle]].CurveWidth is given by a thickness measure relating to the thickness for a plot within the range of target scale. Each [[IfcProduct]] can then have several instances of subtypes of [[IfcRepresentation]] , each being assigned to a different [[IfcGeometricRepresentationSubContext]] . The applicable values for the inherited ContextIdentifier attribute shall be identical to the RepresentationIdentifier attrubute defined at [[IfcShapeRepresentation]] . NOTE The provision of a model view [[IfcGeometricRepresentationContext]].ContextType Model is mandatory. Instances of [[IfcGeometricRepresentationSubContext]] relate to it as its ParentContext . EXAMPLE Instances of [[IfcGeometricRepresentationSubContext]] can be used to handle the multi view blocks or macros, which are used in CAD programs to store several scale and or view dependent geometric representations of the same object. The application can then choose the most appropriate representation for showing the geometric shape of the product, depending on the target view and scale. HISTORY New entity in IFC2x2."
+msgid "IfcDiscreteAccessoryTypeEnum_BRACKET_DEFINITION"
+msgstr "a. L形状或类似形状的配件附着在一个角落，用于把它们放在一起或携带一个次要元素。"
 
-#:IFC.xml:37738
-msgid "IfcGeometricRepresentationSubContext_ParentContext"
-msgstr "ParentContext"
+#:IFC.xml:43755
+msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER"
+msgstr "CABLEARRANGER"
 
-msgid "IfcGeometricRepresentationSubContext_ParentContext_DEFINITION"
-msgstr "Parent context from which the sub context derives its world coordinate system, precision, space coordinate dimension and true north."
+msgid "IfcDiscreteAccessoryTypeEnum_CABLEARRANGER_DEFINITION"
+msgstr "电缆安排器是一种灵活的配件或放置在电缆周围的一部分，以便在电缆放置的地方安排和尽量减少电缆的弹性。"
 
-#:IFC.xml:37753
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension"
-msgstr "SELF IfcGeometricRepresentationContext CoordinateSpaceDimension"
+#:IFC.xml:43756
+msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION"
+msgstr "ELASTIC CUSION"
 
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
-msgstr "SELF [[IfcGeometricRepresentationContext]].CoordinateSpaceDimension"
+msgid "IfcDiscreteAccessoryTypeEnum_ELASTIC_CUSHION_DEFINITION"
+msgstr "轨迹弹性缓冲区是混凝土基边的一种层。 它用于减轻纵向和横向负荷对轨道结构的影响。 轨道弹性缓冲只能出现在无压轨道结构中。"
 
-#:IFC.xml:37758
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision"
-msgstr "SELF IfcGeometricRepresentationContext Precision"
+#:IFC.xml:43757
+msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE"
+msgstr "扩展联机设备"
 
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision_DEFINITION"
-msgstr "精准度 [[IfcGeometricRepresentationContext]]"
+msgid "IfcDiscreteAccessoryTypeEnum_EXPANSION_JOINT_DEVICE_DEFINITION"
+msgstr "组件构造元素之间的连接元素以允许热差扩张。"
 
-#:IFC.xml:37763
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth"
-msgstr "SELF IfcGeometricRepresentationContext TrueNorth"
+#:IFC.xml:43758
+msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR"
+msgstr "咨询者"
 
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
-msgstr "SELF [[IfcGeometricRepresentationContext]].TrueNorth"
+msgid "IfcDiscreteAccessoryTypeEnum_INSULATOR_DEFINITION"
+msgstr "1. 设计用于支持和绝缘导电元件的装置。来自IEC 151 15 39的说明定义。"
 
-#:IFC.xml:37767
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem"
-msgstr "SELF IfcGeometricRepresentationContext WorldCoordinatesSystem"
+#:IFC.xml:43759
+msgid "IfcDiscreteAccessoryTypeEnum_LOCK"
+msgstr "锁定"
 
-msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
-msgstr "环形 [[IfcGeometricRepresentationContext]].WorldCoordinateSystem"
+msgid "IfcDiscreteAccessoryTypeEnum_LOCK_DEFINITION"
+msgstr "锁是一种机械或电子快速设备，由物理对象释放，如： 密钥、指纹、RFID卡、安全令牌等等，通过提供保密信息，例如号码许可、密码或其中的组合。"
 
-#:IFC.xml:37772
-msgid "IfcGeometricRepresentationSubContext_TargetScale"
-msgstr "目标比例"
+#:IFC.xml:43760
+msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcGeometricRepresentationSubContext_TargetScale_DEFINITION"
-msgstr "The target plot scale of the representation to which this representation context applies. NOTE Scale indicates the target plot scale for the representation sub context, all annotation styles are given in plot dimensions according to this target plot scale. If multiple instances of [[IfcGeometricRepresentationSubContext]] are given having the same TargetView value, the target plot scale applies up to the next smaller scale, or up to unlimited small scale. NOTE Scale 1 100 given as 0.01 within TargetScale is bigger then 1 200 given as 0.005 within TargetScale ."
+msgid "IfcDiscreteAccessoryTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的配件。"
 
-#:IFC.xml:37777
-msgid "IfcGeometricRepresentationSubContext_TargetView"
-msgstr "目标视图"
+#:IFC.xml:43761
+msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING"
+msgstr "画面"
 
-msgid "IfcGeometricRepresentationSubContext_TargetView_DEFINITION"
-msgstr "这种代表情况所适用的代表的目标观点。"
+msgid "IfcDiscreteAccessoryTypeEnum_PANEL_STRENGTHENING_DEFINITION"
+msgstr "最小化子结构水泵效果的组件。"
 
-#:IFC.xml:37782
-msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView"
-msgstr "用户定义目标视图"
+#:IFC.xml:43762
+msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE"
+msgstr "点数加载设备"
 
-msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView_DEFINITION"
-msgstr "用户定义的目标视图，如果目标视图属性设置为 USERDEFINED，则必须给出此属性值。"
+msgid "IfcDiscreteAccessoryTypeEnum_POINT_MACHINE_LOCKING_DEVICE_DEFINITION"
+msgstr "点数加载设备"
 
-#:IFC.xml:37789
-msgid "IfcGlobalOrLocalEnum"
-msgstr "IfcGlobalOrLocalEnum"
+#:IFC.xml:43763
+msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE"
+msgstr "热门设备"
 
-msgid "IfcGlobalOrLocalEnum_DEFINITION"
-msgstr "这种列举类型定义了是否使用了项目的当地天体协调系统或全球世界坐标系统来描述提及这种类型的实体的测量值。 注意世界坐标系由 [[IfcGeometricRepresentationContext]].WorldCoordinateSystem 提供，并且在项目中是唯一的。 本地或对象坐标系由 [[IfcProduct]]给出。 喷射位置，被[[IfcProduct]]内的所有 [[IfcRepresentation]] 秒使用。 IFC2x2中新的枚举。项目 GLOBAL COORDS 是使用的全局项目协调系统。 本地对象协调系统。"
+msgid "IfcDiscreteAccessoryTypeEnum_POINTMACHINEMOUNTINGDEVICE_DEFINITION"
+msgstr "热门设备"
 
-#:IFC.xml:37790
-msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS"
-msgstr "全局焦点"
+#:IFC.xml:43764
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION"
+msgstr "块状图"
 
-msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS_DEFINITION"
-msgstr "使用了全球项目协调系统。"
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_LUBRICATION_DEFINITION"
+msgstr "一种防止穿戴铁轨以减少噪音排放的装置。 它常常位于外铁路线的内侧曲线或靠近轮胎的地方取决于能否穿戴或降噪。"
 
-#:IFC.xml:37791
-msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS"
-msgstr "本地课程"
+#:IFC.xml:43765
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT"
+msgstr "RAIL MECHANICAL EQUIPMENT"
 
-msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS_DEFINITION"
-msgstr "The local object coordinate system is used."
+msgid "IfcDiscreteAccessoryTypeEnum_RAIL_MECHANICAL_EQUIPMENT_DEFINITION"
+msgstr "铁路机械设备是安装在铁路侧的一种技术设备，例如阻塞装置、速度调节器、带有偏差的检查器、轨迹尺寸或可控制的阻燃器。"
 
-#:IFC.xml:37793
-msgid "IfcMapConversion"
-msgstr "IfcMap转换"
+#:IFC.xml:43766
+msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE"
+msgstr "方形"
 
-msgid "IfcMapConversion_DEFINITION"
-msgstr "The map conversion deals with transforming the local engineering coordinate system, often called world coordinate system, into the coordinate reference system of the underlying map. NOTE The [[IfcMapConversion]] does not handle the projection of a map from the geodetic coordinate reference system. The map conversion allows to convert the local origin of the local engineering coordinate system to its place within a map easting, northing, orthogonal height and to rotate the x axis of the local engineering coordinate system within the horizontal easting westing plane of the map. NOTE The z axis of the local engineering coordinate system is always parallel to the z axis of the map coordinate system. The scale factor can be used when the length unit for the 3 axes of the map coordinate system are not identical with the length unit established for this project see [[IfcProject]].UnitsInContext , if omitted, the scale factor 1.0 is assumed. HISTORY New entity in IFC4"
+msgid "IfcDiscreteAccessoryTypeEnum_RAILBRACE_DEFINITION"
+msgstr "一个阻止铁路翻修和翻修的铁路部件。"
 
-#:IFC.xml:37794
-msgid "IfcMapConversion_Eastings"
-msgstr "连环画"
+#:IFC.xml:43767
+msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD"
+msgstr "内存模式"
 
-msgid "IfcMapConversion_Eastings_DEFINITION"
-msgstr "Specifies the location along the easting of the coordinate system of the target map coordinate reference system. NOTE for right handed Cartesian coordinate systems this would establish the location along the x axis."
+msgid "IfcDiscreteAccessoryTypeEnum_RAILPAD_DEFINITION"
+msgstr "放置在铁路和底板或铁路之间的非金属板块与睡眠者、持单人或板块之间。注解定义来自EN 13481。"
 
-#:IFC.xml:37799
-msgid "IfcMapConversion_Northings"
-msgstr "Norths"
+#:IFC.xml:43768
+msgid "IfcDiscreteAccessoryTypeEnum_SHOE"
+msgstr "显示"
 
-msgid "IfcMapConversion_Northings_DEFINITION"
-msgstr "Specifies the location along the northing of the coordinate system of the target map coordinate reference system. NOTE for right handed Cartesian coordinate systems this would establish the location along the y axis"
+msgid "IfcDiscreteAccessoryTypeEnum_SHOE_DEFINITION"
+msgstr "用于支持或保护元素的列鞋或光束鞋架。"
 
-#:IFC.xml:37804
-msgid "IfcMapConversion_OrthogonalHeight"
-msgstr "垂直高度"
+#:IFC.xml:43769
+msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR"
+msgstr "已下载"
 
-msgid "IfcMapConversion_OrthogonalHeight_DEFINITION"
-msgstr "Orthogonal height relativ to the vertical datum specified. NOTE for right handed Cartesian coordinate systems this would establish the location along the z axis"
+msgid "IfcDiscreteAccessoryTypeEnum_SLIDINGCHAIR_DEFINITION"
+msgstr "支撑和保留股铁轨的部件和开关铁轨滑块的平坦表面。"
 
-#:IFC.xml:37809
-msgid "IfcMapConversion_Scale"
-msgstr "缩放比例"
+#:IFC.xml:43770
+msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION"
+msgstr "SOUNDABSORPTION"
 
-msgid "IfcMapConversion_Scale_DEFINITION"
-msgstr "当CRS的单位与工程坐标系统的单位不完全相同时，应使用的缩放。 如果留空，则假定值为1.0。"
+msgid "IfcDiscreteAccessoryTypeEnum_SOUNDABSORPTION_DEFINITION"
+msgstr "一个可以吸收的轨迹中的部件，也可以吸收振动。它常常与台式轨同时使用。"
 
-#:IFC.xml:37814
-msgid "IfcMapConversion_ScaleY"
-msgstr "缩放Y"
+#:IFC.xml:43771
+msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT"
+msgstr "注意事项"
 
-msgid "IfcMapConversion_ScaleY_DEFINITION"
-msgstr "Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+msgid "IfcDiscreteAccessoryTypeEnum_TENSIONINGEQUIPMENT_DEFINITION"
+msgstr "1. 用于维持导体或电缆紧张状态的设备。"
 
-#:IFC.xml:37819
-msgid "IfcMapConversion_ScaleZ"
-msgstr "缩放Z"
+#:IFC.xml:43772
+msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcMapConversion_ScaleZ_DEFINITION"
-msgstr "Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+msgid "IfcDiscreteAccessoryTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的配件。"
 
-#:IFC.xml:37824
-msgid "IfcMapConversion_XAxisAbscissa"
-msgstr "XAxisAbscissa"
+#:IFC.xml:43773
+msgid "IfcElementComponent"
+msgstr "IfcElement组件"
 
-msgid "IfcMapConversion_XAxisAbscissa_DEFINITION"
-msgstr "Specifies the value along the easing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system. NOTE 1 for right handed Cartesian coordinate systems this would establish the location along the x axis NOTE 2 together with the XAxisOrdinate it provides the direction of the local x axis within the horizontal plane of the map coordinate system"
+msgid "IfcElementComponent_DEFINITION"
+msgstr "An element component is a representation for minor items included in, added to or connecting to or between elements, which usually are not of interest from the overall building structure viewpoint. However, these small parts may have vital and load carrying functions within the construction. These items do not provide any actual space boundaries. Typical examples of [[IfcElementComponent]] s include different kinds of fasteners and various accessories. One or several instances of subtypes of [[IfcElementComponent]] should always be accompanied by a defining instance of a respective subtype of [[IfcElementComponentType]] . The type object holds shape and material information. HISTORY New entity in IFC2x2 It is often desirable to model a number of same shaped element components by means of a single occurrence object, e.g. several bolts within a connection or a row of reinforcement elements. In this IFC release, this is possible by means of multiple mapped representation as documented below. To express the multiplicity of element components also on a higher semantic level, a Qto ElementComponentPatternQuantities should be provided via [[IfcRelDefinesByProperties]] and contain the number of pieces which are placed by a single [[IfcElementComponent]] instance. .use head Symbolic Representation A symbolic representation is defined for a row of components or several rows of components within a single instance of [[IfcElementComponent]] . Such rows or arrays may contain possibly large numbers of individual pieces. The product definition shape consists of an [[IfcShapeRepresentation]] with the attribute values RepresentationIdentifier Row RepresentationType GeometricCurveSet and one or several curves as geometric items. The curves represent where reference points of the pieces are located. For example, such reference points may be at the heads of mechanical fasteners or at the starting point of the extrusion axis of reinforcement bars. In case of straight components bolts, nails, staples, straight reinforcement bars, or similar , the local placement of the [[IfcElementComponent]] shall be located and oriented such that the local z axis is parallel with the axes of the components. A Qto ElementComponentPatternQuantities should denote the count of pieces in the row or array and their spacing. Concepts Mapped Geometry The mapped item, [[IfcMappedItem]], should be used if appropriate as it allows for reusing the geometry definition of a type at all occurrences of the same type. A single instance of a subtype of [[IfcElementComponent]] can stand for several actual element components at once. In this case, the [[IfcShapeRepresentation]] contains as many mapped items as there are element components combined within this occurrence object. .. .. .. .. figures ifcelementcomponent multiple.png EXAMPLE Figure 304 illustrates multiple components modeled as a single occurrence object here [[IfcFastener]] Figure 304 Element component mapped representation Representation identifier and type are the same as in single mapped representation. The number of mapped items in the representation corresponds with the count of element components in the [[IfcElementQuantity]]. Property Sets for Objects"
 
-#:IFC.xml:37829
-msgid "IfcMapConversion_XAxisOrdinate"
-msgstr "XAxisOrdate"
+#:IFC.xml:43776
+msgid "IfcElementComponentType"
+msgstr "IfcElementComponentType"
 
-msgid "IfcMapConversion_XAxisOrdinate_DEFINITION"
-msgstr "Specifies the value along the northing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system. NOTE 1 for right handed Cartesian coordinate systems this would establish the location along the y axis .note XAxisAbscissa it provides the direction of the local x axis within the horizontal plane of the map coordinate system."
+msgid "IfcElementComponentType_DEFINITION"
+msgstr "元素类型 [[IfcElementComponentType]] 定义元素出现的常见共享信息。 共享信息可包括共有属性和共有属性的共用表达式。元素的共同成分。它用于定义元素类型规格，指明该产品类型所有发生的情况下共有的特定产品信息。 [[IfcElementComponentType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcElementComponentType]] 出现的情况用[[IfcElementComponent]] 表示。IFC2x2 中的新实体。"
 
-#:IFC.xml:37836
-msgid "IfcMaterialDefinitionRepresentation"
-msgstr "IfcMaterialDefinitionRepresentation"
+#:IFC.xml:43779
+msgid "IfcFastener"
+msgstr "伊夫克菲森尔"
 
-msgid "IfcMaterialDefinitionRepresentation_DEFINITION"
-msgstr "[[IfcMaterialDefinitionRepresentation]] defines presentation information relating to [[IfcMaterial]] . It allows for multiple presentations of the same material for different geometric representation contexts. NOTE The [[IfcMaterialDefinitionRepresentation]] is currently only used to define presentation information to material used at element occurrences, defined as subtypes of [[IfcElement]] , or at element types, defined as subtypes of [[IfcElementType]] . The [[IfcMaterial]] is assigned to the subtype of [[IfcElement]] , or [[IfcElementType]] using the [[IfcRelAssociatesMaterial]] relationship eventually via other material related entities [[IfcMaterialLayerSetUsage]] , [[IfcMaterialLayerSet]] , [[IfcMaterialLayer]] , or [[IfcMaterialProfileSetUsage]] , [[IfcMaterialProfileSet]] , [[IfcMaterialProfile]] . The [[IfcMaterialDefinitionRepresentation]] can apply different presentation styles for different representation contexts, for example, a different style for sketch view, model view or plan view, or for different target scales, for each representation context is can apply curve style, fill area style hatching , symbol, text and surface style. HISTORY New entity in IFC2x3. .change ifc2x3 IFC2x3 CHANGE The entity [[IfcMaterialDefinitionRepresentation]] has been added. Upward compatibility for file based exchange is guaranteed. .change ifc2x4 IFC4 CHANGE The assignment of curve, surface and other styles to an [[IfcStyledItem]] has been simplified by IfcStyleAssignmentSelect . The use of intermediate IfcPresentationStyleAssignment is deprecated. .use head Use definition As shown in Figure 1, the presentation assignment can be specific to a representation context by adding one and more [[IfcStyledRepresentation]] s. Each of them includes a single [[IfcStyledItem]] with exactly zero or one style for either curve, fill area, surface, text or symbol style that is applicable. Figure 1 Material definition representation"
+msgid "IfcFastener_DEFINITION"
+msgstr "用来连接或加入元素与其他元素的组件的修饰符的表达式。 排除的是机械快速器，由一个单独的实体 [[IfcMechanicalFastener]] 建模。 IFC2x2 .change ifc2x4 IFC4 更改属性预定义类型中的HISTORY 新实体。"
 
-#:IFC.xml:21729
-msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial"
-msgstr "演示材料"
+#:IFC.xml:43780
+msgid "IfcFastener_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial_DEFINITION"
-msgstr "请参阅陈述所适用的材料。"
+msgid "IfcFastener_PredefinedType_DEFINITION"
+msgstr "更快的子类型"
 
-#:IFC.xml:37839
-msgid "IfcProductDefinitionShape"
-msgstr "IfcProductDefinitionShape"
+#:IFC.xml:43787
+msgid "IfcFastenerType"
+msgstr "IfcFastenerType"
 
-msgid "IfcProductDefinitionShape_DEFINITION"
-msgstr "The [[IfcProductDefinitionShape]] defines all shape relevant information about an [[IfcProduct]] . It allows for multiple geometric shape representations of the same product. The shape relevant information includes the shape representation including geometric representation items for 3D solids, 2D annotations, etc. and associated presentation information line color, line type, surface rendering properties assignment to presentation layers CAD layers for visibility control or the topological representation items for connectivity systems vertex, edge, face representations that may include geometric representation items vertex points, edge curves, face surfaces NOTE The definition of this entity relates to the ISO 10303 entity product definition shape. Please refer to ISO IS 10303 41 1994 for the final definition of the formal standard. HISTORY New entity in IFC1.5"
+msgid "IfcFastenerType_DEFINITION"
+msgstr "元素组件类型 [[IfcFastenerType]] 定义了常见的快速发生的共享信息。 共享信息的集合可能包括共有属性和共有属性设定了共同的表述方式。元素的共同组成。它用于定义一个更快的类型规格，指明该产品类型所有发生的情况下共有的特定产品信息。 [[IfcFastenerType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcFastenerType]] 出现的情况用[[IfcFastener]] 表示。IFC2x2 中的新实体。"
 
-#:IFC.xml:20859
-msgid "IfcProductDefinitionShape_ShapeOfProduct"
-msgstr "ShapeOfProduct"
+#:IFC.xml:43788
+msgid "IfcFastenerType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcProductDefinitionShape_ShapeOfProduct_DEFINITION"
-msgstr "必须使用 [[IfcProductDefinitionShape]] 为一个或多个实例提供代表 [[IfcProduct]] 。 hange ifc2x3 IFC2x3 变异新反向属性。"
+msgid "IfcFastenerType_PredefinedType_DEFINITION"
+msgstr "更快的子类型"
 
-#:IFC.xml:37843
-msgid "IfcProductDefinitionShape_HasShapeAspects"
-msgstr "HasShapeAspects"
+#:IFC.xml:43795
+msgid "IfcFastenerTypeEnum"
+msgstr "IfcFastenerTypeEnum"
 
-msgid "IfcProductDefinitionShape_HasShapeAspects_DEFINITION"
-msgstr "提及形状或特征的部分形状方面。"
+msgid "IfcFastenerTypeEnum_DEFINITION"
+msgstr "这个列举定义了不同类型的快速器，但机械快速器除外。 IFC4 中的新枚举。项目 GLUE A 快速连接，它用胶水合并元素。 MORTAR 一种矿物材料或其他材料的组成，用来弥补连接缺口和可能履行负载作用。 WELD 金属材料或其他合适材料的部件之间的焊接缝。用户定义更快。未定义更快器。"
 
-#:IFC.xml:37855
-msgid "IfcProductRepresentation"
-msgstr "IfcProductRepresentation"
+#:IFC.xml:43807
+msgid "IfcFastenerTypeEnum_GLUE"
+msgstr "蓝图"
 
-msgid "IfcProductRepresentation_DEFINITION"
-msgstr "[[IfcProductRepresentation]] 界定了产品的代表性，包括其几何形状或地形特征。 一种产品可以是零、一种或多种几何表现，单一几何表现形式可以在各种产品之间使用映射进行分享。 注该实体的定义涉及ISO 10303实体属性定义。 避免了财产一词的使用，因为它与国际金融公司模式其他地方的财产、财产类型和财产设定定义相冲突。 IFC2.0 .change ifc2x3 IFC2x3 Note 用户不应从IFC2x3 开始实例化该实体。如果变更IF2x4 IFC4 变异实体就会抽象了。"
+msgid "IfcFastenerTypeEnum_GLUE_DEFINITION"
+msgstr "一个可缩短的连接，它使用胶水一起加入元素。"
 
-#:IFC.xml:37867
-msgid "IfcProductRepresentation_Representations"
-msgstr "B. 代表"
+#:IFC.xml:43808
+msgid "IfcFastenerTypeEnum_MORTAR"
+msgstr "莫尔塔尔"
 
-msgid "IfcProductRepresentation_Representations_DEFINITION"
-msgstr "包括形状陈述在内的陈述清单。每个成员界定在特定代表范围内某一特定类型的有效代表。"
+msgid "IfcFastenerTypeEnum_MORTAR_DEFINITION"
+msgstr "一种矿物材料或其他材料的组合，用以弥补并可能发挥载荷作用。"
 
-#:IFC.xml:37856
-msgid "IfcProductRepresentation_Description"
-msgstr "描述"
+#:IFC.xml:43809
+msgid "IfcFastenerTypeEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcProductRepresentation_Description_DEFINITION"
-msgstr "描述产品表现形式的单词或单词组。 它可以用来为产品表示的名称添加额外的含义。"
+msgid "IfcFastenerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的快速器。"
 
-#:IFC.xml:37861
-msgid "IfcProductRepresentation_Name"
-msgstr "名称"
+#:IFC.xml:43810
+msgid "IfcFastenerTypeEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcProductRepresentation_Name_DEFINITION"
-msgstr "产品表现形式所用的单词或单词组."
+msgid "IfcFastenerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的快速设定。"
 
-#:IFC.xml:37881
-msgid "IfcProductRepresentationSelect"
-msgstr "IfcProductRepresentationSelect"
+#:IFC.xml:43811
+msgid "IfcFastenerTypeEnum_WELD"
+msgstr "WELD"
 
-#:IFC.xml:37882
-msgid "IfcProjectedCRS"
-msgstr "IfcProjectedCRS"
+msgid "IfcFastenerTypeEnum_WELD_DEFINITION"
+msgstr "金属材料或其他适当材料之间的焊接。"
 
-msgid "IfcProjectedCRS_DEFINITION"
-msgstr "[[IfcProjectedCRS]] 是地图的坐标参考系统，与该系统有关的是建筑或设施工程项目当地工程坐标系统的地图翻译。 地图投影和地图区属性独特地确定了对基本地理坐标参考系统的投影方式。 但条件是它们在接收申请中是众所周知的。 预计的坐标参考系统假定是2D或3D右手的Cartesian坐标系统。 可选的 MapUnit 属性可以用来决定地图使用的长度单位。 xtDef NotE Definition from OpenGIS Abstract Specification, 主题2 A 2D 或 垂直坐标轴3D 坐标参照系统，用于近似平面上的地球形状； 但这样做是为了仔细控制和了解近似值所固有的扭曲。 扭曲校正通常适用于计算出来的轴承和距离，以产生与实际字段值密切匹配的值。 对坐标参考系统的明确识别码存放在继承的名称属性中。 精心定义的标识符包括地图投影和地图区域信息。 在这些情况下，可以省略MapProjection和MapZ区属性。 EXAMPLE The identificer EPSG 25832 defined the map投影UTM and the zone 32N in addon to 大地测量和垂直基准. IFC4中的新实体。"
+#:IFC.xml:43812
+msgid "IfcMechanicalFastener"
+msgstr "IfcMechanicalFastener"
 
-#:IFC.xml:23320
-msgid "IfcProjectedCRS_MapUnit"
-msgstr "地图单位"
+msgid "IfcMechanicalFastener_DEFINITION"
+msgstr "机械式快速连接建筑元件或零部件。 此类的单个实例可能代表一个或多个实际机械快速器， 例如，一个螺丝数组或一行指针。 IFC2x2 .change ifc2x4 IFC4 变更超级类型从 [[IfcFastener]] 更改为 [[IfcElementComponent]] 。 属性预定义类型已添加。属性名直径和名长度已废弃。"
 
-msgid "IfcProjectedCRS_MapUnit_DEFINITION"
-msgstr "构造地图坐标系统的坐标轴单位。 注1 仅限长度措施，地图坐标系统的所有两或三个轴均应有相同长度单位。 注2 如果留空了地图单位，坐标轴的单位将从默认单位中取出，正如[[IfcProject]].UnitInContext中所述。"
+#:IFC.xml:43813
+msgid "IfcMechanicalFastener_NominalDiameter"
+msgstr "NominalDiameter"
 
-#:IFC.xml:37883
-msgid "IfcProjectedCRS_MapProjection"
-msgstr "地图投影图"
+msgid "IfcMechanicalFastener_NominalDiameter_DEFINITION"
+msgstr "描述快速类型的横截尺寸的标称直径。 挂机ifc2x4 IFC4 变异应替代使用 [[IfcMechanicalFastenerType]] 的各自属性。"
 
-msgid "IfcProjectedCRS_MapProjection_DEFINITION"
-msgstr "识别地图投影的名称。示例EXAMPLE 映射项目包括 .note UTM Gaus Krueger"
+#:IFC.xml:43818
+msgid "IfcMechanicalFastener_NominalLength"
+msgstr "名义长度"
 
-#:IFC.xml:37888
-msgid "IfcProjectedCRS_MapZone"
-msgstr "MapZone"
+msgid "IfcMechanicalFastener_NominalLength_DEFINITION"
+msgstr "描述更快类型的纵向尺寸的名义长度。 挂机ifc2x4 IFC4 变异应替代使用 [[IfcMechanicalFastenerType]] 的各自属性。"
 
-msgid "IfcProjectedCRS_MapZone_DEFINITION"
-msgstr "识别与地图投影相关的地图区域名称。示例EXAMPLE ot 为 UTM, 区域编号, 例如32, UTM32, Gaus Krueger, 纵向宽度区域, 例如3"
+#:IFC.xml:43823
+msgid "IfcMechanicalFastener_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:37895
-msgid "IfcRepresentation"
-msgstr "Ifcrepresentation"
+msgid "IfcMechanicalFastener_PredefinedType_DEFINITION"
+msgstr "机械加速器的子类型"
 
-msgid "IfcRepresentation_DEFINITION"
-msgstr "[[IfcRepresentation]] 定义了代表产品属性特别是产品形状的一般概念。 xtdef NotCEE Definition from ISO 10303 43 A representation is a collection of one or more representative items that are related in a specific representative context. 代表项目与代表背景的关系是区分哪些代表项目实体相关的基础。 当一个要素是一项代表时，一个代表项目可以直接与代表情况有关。 如果它通过任何参与性实体的任何数目加以参考，则每种类型的代表项目都应予以参照。 从ISO 10303 42界定的代表中改编的注实体，《IF2.0》中的新实体就是如此。 挂载ifc2x3 IFC2x3 变换. 反向属性LayerAssignements and RepresentationMap 已经添加了向上兼容性。 .change ifc2x4 IFC4 变更实体 [[IfcRepresentation]] 已被更改为 ABSTRACT 超级类型。 se head Representation Use definition each representative, or [[IfcShapeRepresentation]] , 或 [[IfcTopologyRepresentation]] 应有一个明确定义的内容来指为此代表同意的 [[IfcGeometricRepresentationContext]] 。 代表名称，例如3D形状的物体，2D地面视图的印本，参考轴的轴。 几何形状或表面类型的代表类型名称，例如，3D 干燥固体的SweptSolid，边界形成。 在每个子类型[[IfcElement]] 的几何使用定义部分中提供了对这些属性应用正确值的注指南。 这些准则可以在定义或执行协定中进一步加以完善。"
+#:IFC.xml:43830
+msgid "IfcMechanicalFastenerType"
+msgstr "IfcMechanicalFastenerType"
 
-#:IFC.xml:12941
-msgid "IfcRepresentation_Items"
-msgstr "项目"
+msgid "IfcMechanicalFastenerType_DEFINITION"
+msgstr "元素组件类型 [[IfcMechanicalFastenerType]] 定义了机械快速器发生的常见共享信息。 这套共享信息可包括共有属性和共有属性设定了共同的表述、共同的材料组合、元素的共同构成。 它用于界定一种机械式更快的类型规格，指明该产品类型的所有发生时所共有的特定产品信息。 [[IfcMechanicalFastenerType]] 可能会在[[IfcProject]] 或[[IfcProjectLibrary]] 中使用[[IfcRelDeclares]] 声明并且可能会与类型的发生或不发生任何类型的情况进行交流。 [[IfcMechanicalFastenerType]] 出现的情况用[[IfcMechanicalFastener]] 表示。IFC2x2 中的新实体。 hange ifc2x4 IFC4 变异超级类型从 [[IfcFastenerType]] 更改为 [[IfcElementComponentType]]。属性预定义类型 , 名义直径, 代表长度已添加。 使用头分类使用定义机械式快速器，尤其是螺纹，往往是标准化的。 1. 参照根据标准的产品规范正式更快的称谓， [[IfcRelAssociatesClassification]] 应与[[IfcClassificationReference]] 一起使用。 [[IfcClassificationReference]].身份识别含有一种机器可读的格式从规范中获取更快的正式名称。 例如M16X80 10.9 HV, 用于高强度结构螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式螺旋式预装。 另一方面，[[IfcMechanicalFastenerType]].Name 包含一个可显示的名称，不一定与正式指定相同。 [[IfcClassificationReference]].Name 带有更快规范的短名。例如EN 14399 4 作为欧洲高强力六边机枪的相关标准。 可选择由[[IfcClassificationReference]]进一步描述规范。 参考资料来源，包括出版商等信息和标准发布日期。 此外，[[IfcRelAssociatesLibrary]] 以及[[IfcLibraryReference]] 可以用来指含有更快定义的图书馆。"
 
-msgid "IfcRepresentation_Items_DEFINITION"
-msgstr "为这种表示定义的几何表示项目集。"
+#:IFC.xml:43831
+msgid "IfcMechanicalFastenerType_NominalDiameter"
+msgstr "NominalDiameter"
 
-#:IFC.xml:12987
-msgid "IfcRepresentation_RepresentationMap"
-msgstr "代表地图"
+msgid "IfcMechanicalFastenerType_NominalDiameter_DEFINITION"
+msgstr "描述快速类型的横截尺寸的标称直径。"
 
-msgid "IfcRepresentation_RepresentationMap_DEFINITION"
-msgstr "使用 [[IfcRepresentationMap]] 内的表示方式。 如果使用，此 [[IfcRepresentation]] 可能会被分配给许多表示作为其项目之一，使用一个 [[IfcMappedItem]] 。 使用 [[IfcRepresentationMap]] 是分享多种产品常常类型[[IfcShapeRepresentation]的一个代表性的方式。 .更改ifc2x3 IFC2x3 变异已添加"
+#:IFC.xml:43836
+msgid "IfcMechanicalFastenerType_NominalLength"
+msgstr "名义长度"
 
-#:IFC.xml:27489
-msgid "IfcRepresentation_LayerAssignments"
-msgstr "图层分配"
+msgid "IfcMechanicalFastenerType_NominalLength_DEFINITION"
+msgstr "描述更快类型的纵向尺寸的名义长度。"
 
-msgid "IfcRepresentation_LayerAssignments_DEFINITION"
-msgstr "将整个表示权分为单一或多层……。 LayerAssigments 可以被项目列表中的 [[IfcRepresentationItem]] 的LayerAssigations 覆盖。 Note Implementation agreements can maximum number of layer assignments to 1. .change ifc2x3 IFC2x3 变异已添加"
+#:IFC.xml:43841
+msgid "IfcMechanicalFastenerType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:37867
-msgid "IfcRepresentation_OfProductRepresentation"
-msgstr "OfProductRepresentation"
+msgid "IfcMechanicalFastenerType_PredefinedType_DEFINITION"
+msgstr "机械加速器的子类型"
 
-msgid "IfcRepresentation_OfProductRepresentation_DEFINITION"
-msgstr "提及这种个人代表所适用的产品说明。 在大多数情况下，它是指一种或多种产品形状，这种形状的表述适用于这种形态。 .fc2x4 IFC4 变异关系卡性放松为0N。"
+#:IFC.xml:43848
+msgid "IfcMechanicalFastenerTypeEnum"
+msgstr "IfcMechanicalFastenerTypeEnum"
 
-#:IFC.xml:37908
-msgid "IfcRepresentation_ContextOfItems"
-msgstr "上下文项"
+msgid "IfcMechanicalFastenerTypeEnum_DEFINITION"
+msgstr "此列举界定了不同类型的机械快速器。IFC4中的HISTORY新枚举。 一种固定在凝固、石头或砖瓦中的特殊螺钉。 BOLT A 线程圆柱杆，它与一个类似的线程洞在坚果或任何其他部件中形成一个快速器。 机械加速器通常还包括一个或多个洗涤器和一个或多个坚果。 DOWEL A 圆柱杆，被驱动到被连接的碎片的孔里。 NAIL A 薄块的金属，作为一个快照器被浸入材料中。 NAILPLATE 一块带有拳头点的金属板，它与所连接的块相重叠并被按下到它们的材料中。 RIVET A fastering part with a head at one 端, and other conditions is hamed placed after being through the honour of the back that be feed breaked. SCREW A 更快，带有一根经直线破解的架子和一个排定的头部。 SHEARCONNECTOR 一个环状连接器，这个环状连接器被连接的块中的环形键或被按下到连接的块中的牙齿循环或正方形连接器所接受。 STAPLE 一块双向的金属，被堆积在材料中，作为一个快艇。 STUDSHEARCONNECTOR Stud Shear连接器是圆柱形紧固部分，头部在一侧。 另一方面，它们被焊接在钢铁成员身上，用于合成钢和混凝土结构。 COUPLER 一个连接两个或多个铁条的部分，例如增援栏。RAILOJOINT 与e机械装配。 可连接两条铁轨的鱼板，具有可选功能绝缘或扩展能力。 装配能够保护铁轨至辅助结构的部件，并将其保留在必要的位置，同时允许任何必要的纵向， 横向和纵向流动。 注解定义来自13481。 CHAIN一系列连接的金属环，用来加固或保护某些东西，或用于提取负荷。 通过将大麻、剑麻、尼龙或类似材料混为一谈，取得了一定厚的和谐长度。 主要用于停泊船只USERDEFINED用户定义的机械快速器。未定义的机械快速器。"
 
-msgid "IfcRepresentation_ContextOfItems_DEFINITION"
-msgstr "各类代表有效的代表环境定义。"
+#:IFC.xml:43884
+msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT"
+msgstr "ANCHORBOLT"
 
-#:IFC.xml:37896
-msgid "IfcRepresentation_RepresentationIdentifier"
-msgstr "标识符"
+msgid "IfcMechanicalFastenerTypeEnum_ANCHORBOLT_DEFINITION"
+msgstr "一种固定在混凝土、石头或砖头上的特殊螺钉。"
 
-msgid "IfcRepresentation_RepresentationIdentifier_DEFINITION"
-msgstr "项目中使用的可选标识符。"
+#:IFC.xml:43885
+msgid "IfcMechanicalFastenerTypeEnum_BOLT"
+msgstr "BOLT"
 
-#:IFC.xml:37901
-msgid "IfcRepresentation_RepresentationType"
-msgstr "代表性类型"
+msgid "IfcMechanicalFastenerTypeEnum_BOLT_DEFINITION"
+msgstr "一个线程圆柱杆，它与一个类似的线程洞在坚果或任何其他部件中形成一个快速器。 机械加速器通常还包括一个或多个洗涤器和一个或多个坚果。"
 
-msgid "IfcRepresentation_RepresentationType_DEFINITION"
-msgstr "表述类型的描述。表述类型界定了代表产品表述所用的几何类型或地形。 子类型 [[IfcShapeRepresentation]] 和 [[IfcTopologyRepresentation]] 提供了更多信息。 支持的上下文类型值将由执行者协议具体规定。"
+#:IFC.xml:43886
+msgid "IfcMechanicalFastenerTypeEnum_CHAIN"
+msgstr "聊天室"
 
-#:IFC.xml:37922
-msgid "IfcRepresentationContext"
-msgstr "IfcRepresentationContext"
+msgid "IfcMechanicalFastenerTypeEnum_CHAIN_DEFINITION"
+msgstr "一系列连接的金属环，用来加固或保护东西，或用于提取负荷。"
 
-msgid "IfcRepresentationContext_DEFINITION"
-msgstr "[[IfcRepresentationContext]] 定义了一个产品的 [[IfcRepresentation]] 所关联的上下文. xtdef NotTE定义来自ISO 10303 42 表示环境是一系列表示项目相关联的背景。 根据ISO 10303 42界定的代表环境调整的注实体，《国际化学品统一分类和标签制度》（IFC1.5）中的新实体。 .自从IFC2x4 IFC4 变异实体抽象后已从实例化中废弃。"
+#:IFC.xml:43887
+msgid "IfcMechanicalFastenerTypeEnum_COUPLER"
+msgstr "粗略的"
 
-#:IFC.xml:37908
-msgid "IfcRepresentationContext_RepresentationsInContext"
-msgstr "RepresentationsInContext"
+msgid "IfcMechanicalFastenerTypeEnum_COUPLER_DEFINITION"
+msgstr "连接两个或多个铁条的部分，例如增援栏。"
 
-msgid "IfcRepresentationContext_RepresentationsInContext_DEFINITION"
-msgstr "所有形状的表述都是在相同的表述环境下定义的。"
+#:IFC.xml:43888
+msgid "IfcMechanicalFastenerTypeEnum_DOWEL"
+msgstr "DOWEL"
 
-#:IFC.xml:37923
-msgid "IfcRepresentationContext_ContextIdentifier"
-msgstr "ContextIdentifier"
+msgid "IfcMechanicalFastenerTypeEnum_DOWEL_DEFINITION"
+msgstr "一种气瓶棒，它被带到被连接的碎片的孔里。"
 
-msgid "IfcRepresentationContext_ContextIdentifier_DEFINITION"
-msgstr "项目中使用的表示环境的可选标识符。"
+#:IFC.xml:43889
+msgid "IfcMechanicalFastenerTypeEnum_NAIL"
+msgstr "NAIL"
 
-#:IFC.xml:37928
-msgid "IfcRepresentationContext_ContextType"
-msgstr "上下文类型"
+msgid "IfcMechanicalFastenerTypeEnum_NAIL_DEFINITION"
+msgstr "一块微薄的金属，作为一个更快的材料被浸入材料中。"
 
-msgid "IfcRepresentationContext_ContextType_DEFINITION"
-msgstr "表示环境的类型描述。支持的上下文类型值将由执行者协议具体规定。"
+#:IFC.xml:43890
+msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE"
+msgstr "命名项"
 
-#:IFC.xml:37934
-msgid "IfcRepresentationContextSameWCS"
-msgstr "IfcRepresentationContextSameWCS"
+msgid "IfcMechanicalFastenerTypeEnum_NAILPLATE_DEFINITION"
+msgstr "一块带有拳头的金属板，与所连接的碎片相重叠并被按下到材料中。"
 
-#:IFC.xml:37942
-msgid "IfcSameValidPrecision"
-msgstr "IfcSameValidPrecision"
+#:IFC.xml:43891
+msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED"
+msgstr "未完成"
 
-#:IFC.xml:37950
-msgid "IfcShapeAspect"
-msgstr "IfcShapeAspect"
+msgid "IfcMechanicalFastenerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的机械快速器。"
 
-msgid "IfcShapeAspect_DEFINITION"
-msgstr "[[IfcShapeAspect]] 允许对代表产品形状的形状项目进行分组，这些项目代表产品形状的各个方面或组件。 因此，产品形状组成部分的形状代表着可以明确处理的产品的一个独特部分。 [[IfcShapeAspect]] s可能有与产品形状的其他部分不同的材料资料或其他显像特性。 注[[IfcShapeAspect]] 和[[IfcMaterialConstituent]] 可以用来将分形材料信息与产品形状表示的部分内容联系起来。 图1显示物质特性与形状的各个方面之间的联系……。 ... fcshapeaspect fig1.png 图1 与材料关联的形状. 从ISO 10303 41 产生的 xtDef 注解定义 一个形状方面是一个物体形状的可识别元素。 注实体从ISO 10303 42中界定的形状部分改装，IFC2中的新实体。 .更改 ifc2x4 IFC4 更改属性Party OfProductDefinitionShape 声明为OPTIA上，并扩展到以 [[IfcProductRepresentationSelect]为基础的文件交换向上兼容。 pec head Informal Propositions 1。 如果ShaperRepresentations 指向形状表示是[[IfcProductDefinitionShape]] 的一部分， PartofProductDefinitionShape 必须指这个实例 [[IfcProductDefinitionShape]] 。 2. 如果ShapeRepresentations 指向形状是[[IfcRepresentationMap]] 的一部分， PartofProductDefinitionShape 必须指这个实例 [[IfcRepresentationMap]] 。"
+#:IFC.xml:43892
+msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING"
+msgstr "内置中"
 
-#:IFC.xml:9538
-msgid "IfcShapeAspect_HasExternalReferences"
-msgstr "HasExternalReferences"
+msgid "IfcMechanicalFastenerTypeEnum_RAILFASTENING_DEFINITION"
+msgstr "为辅助结构保全铁路并将其保留在必要位置的部件组装，同时允许任何必要的垂直方向， 横向和纵向流动。 注解定义来自13481。"
 
-msgid "IfcShapeAspect_HasExternalReferences_DEFINITION"
-msgstr "HasExternalReferences"
+#:IFC.xml:43893
+msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT"
+msgstr "拉伊尔JONT"
 
-#:IFC.xml:37973
-msgid "IfcShapeAspect_ShapeRepresentations"
-msgstr "形状表示"
+msgid "IfcMechanicalFastenerTypeEnum_RAILJOINT_DEFINITION"
+msgstr "机械装配，如鱼板，连接两条铁轨，具有可选功能绝缘或扩展能力。"
 
-msgid "IfcShapeAspect_ShapeRepresentations_DEFINITION"
-msgstr "形状的表达式列表。 每个成员将某一特定类别的有效代表权定义为产品定义的一个方面或一部分。 .更改ifc2x3 IFC2x3 变迁. 数据类型已经从[[IfcShapeRepresentation]] 改为[[IfcShapeModel]] ，并且向上兼容性"
+#:IFC.xml:43894
+msgid "IfcMechanicalFastenerTypeEnum_RIVET"
+msgstr "里韦特"
 
-#:IFC.xml:37951
-msgid "IfcShapeAspect_Description"
-msgstr "描述"
+msgid "IfcMechanicalFastenerTypeEnum_RIVET_DEFINITION"
+msgstr "一端头部紧缩的部分，另一端则在穿过碎块中的洞后被夷为平地。"
 
-msgid "IfcShapeAspect_Description_DEFINITION"
-msgstr "形状方面的单词或单词组。它可以用来为分组名称添加额外的含义。"
+#:IFC.xml:43895
+msgid "IfcMechanicalFastenerTypeEnum_ROPE"
+msgstr "情景模式"
 
-#:IFC.xml:37956
-msgid "IfcShapeAspect_Name"
-msgstr "名称"
+msgid "IfcMechanicalFastenerTypeEnum_ROPE_DEFINITION"
+msgstr "通过将主要用于停泊船只的大麻、剑麻、尼龙或类似材料组合在一起而产生的厚和强力的长度。"
 
-msgid "IfcShapeAspect_Name_DEFINITION"
-msgstr "形状方面已知的单词或单词组。 它是一个标签，用于表示产品定义形状中一个组件的特殊语义，用于提供含义。 示例使用 Glazing 来定义窗口形状的哪个组件定义玻璃区域。"
+#:IFC.xml:43896
+msgid "IfcMechanicalFastenerTypeEnum_SCREW"
+msgstr "SCREW"
 
-#:IFC.xml:37961
-msgid "IfcShapeAspect_PartOfProductDefinitionShape"
-msgstr "PartofProductDefinitionShape"
+msgid "IfcMechanicalFastenerTypeEnum_SCREW_DEFINITION"
+msgstr "一个较快的螺丝刀和排定时间档的头部。"
 
-msgid "IfcShapeAspect_PartOfProductDefinitionShape_DEFINITION"
-msgstr "PartofProductDefinitionShape"
+#:IFC.xml:43897
+msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR"
+msgstr "热门游戏"
 
-#:IFC.xml:37966
-msgid "IfcShapeAspect_ProductDefinitional"
-msgstr "产品定义"
+msgid "IfcMechanicalFastenerTypeEnum_SHEARCONNECTOR_DEFINITION"
+msgstr "一个环状连接器，在连接的块中被环形键或被按下到连接的块上的牙齿圆形或方形连接器所接受。"
 
-msgid "IfcShapeAspect_ProductDefinitional_DEFINITION"
-msgstr "产品定义"
+#:IFC.xml:43898
+msgid "IfcMechanicalFastenerTypeEnum_STAPLE"
+msgstr "状态"
 
-#:IFC.xml:37987
-msgid "IfcShapeModel"
-msgstr "IfcShapeModel"
+msgid "IfcMechanicalFastenerTypeEnum_STAPLE_DEFINITION"
+msgstr "一块双向的金属，作为一个更快的金属被堆积在材料中。"
 
-msgid "IfcShapeModel_DEFINITION"
-msgstr "[[IfcShapeModel]] 代表一种产品形状的特定几何形状和或地形表面概念或产品成分在代表环境中的形状概念。 这种表示环境必须是几何表示环境，但没有相关几何形状的地形表示除外。 两个子类型是 [[IfcShapeRepresentation]] ，以覆盖代表形状的几何模型。 和 [[IfcTopologyRepresentation]] 以涵盖产品或产品组件的兼容性。 地形学可能与或不与几何学相关联。 [[IfcShapeModel]] 可以是一种通过[[IfcProductDefinitionShape]] 来表示产品的形状几何形状或地形图形， 或通过[[IfcShapeAspect]]来表示一个产品形状组件的形状几何形状或图形。 IFC2x3中的新实体。"
+#:IFC.xml:43899
+msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR"
+msgstr "研究"
 
-#:IFC.xml:37973
-msgid "IfcShapeModel_OfShapeAspect"
-msgstr "OfShapeAspet"
+msgid "IfcMechanicalFastenerTypeEnum_STUDSHEARCONNECTOR_DEFINITION"
+msgstr "Stud shear连接器是圆柱形紧固部件，头部在一侧。 另一方面，它们被焊接在钢铁成员身上，用于合成钢和混凝土结构。"
 
-msgid "IfcShapeModel_OfShapeAspect_DEFINITION"
-msgstr "提到形状方面，它是形状的代表。"
+#:IFC.xml:43900
+msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED"
+msgstr "已使用"
 
-#:IFC.xml:37990
-msgid "IfcShapeRepresentation"
-msgstr "IfcShapeRepresentation"
+msgid "IfcMechanicalFastenerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的机械快速器。"
 
-msgid "IfcShapeRepresentation_DEFINITION"
-msgstr "The [[IfcShapeRepresentation]] represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute RepresentationType is used to define the geometric model used for the shape representation e.g. SweptSolid , or Brep , the inherited attribute RepresentationIdentifier is used to denote the kind of the representation captured by the [[IfcShapeRepresentation]] e.g. Axis , Body , etc. . Several representation identifiers for shape representation are included as predefined values for RepresentationIdentifier . Table 1 indicates the defined list of values for RepresentationIdentifier . Identifier CoG Point to identify the center of gravity of an element. This value can be used for validation purposes. Box Bounding box as simplified 3D box geometry of an element Annotation 3D annotations not representing elements Axis 2D or 3D Axis, or single line, representation of an element FootPrint 2D Foot print, or double line, representation of an element, projected to ground view Profile 3D line representation of a profile being planar, e.g. used for door and window outlines Surface 3D Surface representation, e.g. of an analytical surface, of an elementplane Reference 3D representation that is not part of the Body representation. This is used, e.g., for opening geometries, if there are to be excluded from an implicit Boolean operation. Body 3D Body representation, e.g. as wireframe, surface, or solid model, of an element Body FallBack 3D Body representation, e.g. as tessellation, or other surface, or boundary representation, added in addition to the solid model potentially involving Boolean operations of an element Clearance 3D clearance volume of the element. Such clearance region indicates space that should not intersect with the Body representation of other elements, though may intersect with the Clearance representation of other elements. Lighting Representation of emitting light as a light source within a shape representation Table 1 Representation identifiers Several representation types for shape representation are included as predefined values for RepresentationType . Table 2 indicates the defined list of values for RepresentationType . Type Point 2 or 3 dimensional point s PointCloud 3 dimensional points prepresented by a point list Curve 2 or 3 dimensional curve s Curve2D 2 dimensional curve s Curve3D 3 dimensional curve s Surface 2 or 3 dimensional surface s Surface2D 2 dimensional surface s a region on ground view Surface3D 3 dimensional surface s FillArea 2D region s represented as a filled area hatching Text text defined as text literals AdvancedSurface 3 dimensional b spline surface s GeometricSet points, curves, surfaces 2 or 3 dimensional GeometricCurveSet points, curves 2 or 3 dimensional Annotation2D points, curves 2 or 3 dimensional , hatches and text 2 dimensional SurfaceModel face based and shell based surface model s , or tessellated surface model s Tessellation tessellated surface representation s only SolidModel including swept solid, Boolean results and Brep bodies more specific types are SweptSolid swept area solids, by extrusion and revolution, excluding tapered sweeps AdvancedSweptSolid swept area solids created by sweeping a profile along a directrix, and tapered sweeps Brep faceted Brep s with and without voids AdvancedBrep Brep s based on advanced faces, with b spline surface geometry, with and without voids CSG Boolean results of operations between solid models, half spaces and Boolean results Clipping Boolean differences between swept area solids, half spaces and Boolean results additional types some additional representation types are provided BoundingBox simplistic 3D representation by a bounding box SectionedSpine cross section based representation of a spine curve and planar cross sections. It can represent a surface or a solid and the interpolations of the between the cross sections is not defined LightSource light source with depending on type position, orientation, light colour, intensity and attenuation MappedRepresentation representation based on mapped item s , referring to a representation map. Note it can be seen as an inserted block reference. The shape representation of the mapped item has a representation type declaring the type of its representation items. Table 2 Representation types .extDef NOTE The definition relates to shape representation defined in ISO 10303 41. HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE The RepresentationType s Point , PointCloud , Curve , Curve3D , Surface , Surface2D , Surface3D , FillArea , Text , Tessellation , AdvancedBrep , LightSource , and the RepresentationIdentifier Body FallBack , Profile , Clearance , Lighting have been added. Formal Propositions CorrectContext The context to which the [[IfcShapeRepresentation]] is assign, shall be of type [[IfcGeometricRepresentationContext]]. NoTopologicalItem No topological representation item shall be directly used for shape representations, with the exception of [[IfcVertexPoint]], [[IfcEdgeCurve]], [[IfcFaceSurface]]. HasRepresentationType A representation type should be provided for the shape representation. HasRepresentationIdentifier A representation identifier should be provided for the shape representation. CorrectItemsForType Checks the proper use of Items according to the RepresentationType ."
+#:IFC.xml:43901
+msgid "IfcVibrationDamperTypeEnum"
+msgstr "IfcVibration DamperTypeEnum"
 
-#:IFC.xml:37993
-msgid "IfcShapeRepresentationTypes__RepType"
-msgstr "IfcShapeRepresentationTypes RepType"
+msgid "IfcVibrationDamperTypeEnum_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 弯曲产量类型是一种水坝，通过弯曲产生钢材。 SHEAR YIELD 是一种依赖于置换型号的水坝，其中产生的抗药力由利用钢材塑料变形的塑料菌株量来确定。 皮革产量类型是一种水坝，它使钢材在与该成员垂直的方向上产生变形效应。 AXIAL YIELD 是一种依赖于置换型号的水坝，其抗药力由利用钢材塑料变形的塑料菌株量来确定。 轴产量类型是通过吸收钢材料防止轴向变形产生能量的水坝。 这就是说，朝着扩大和缩减方向发展。 摩擦型是一种利用在材料接触面上的摩擦作用的水坝。 VISCOUS 直观型号是一种可视体的抗性能吸收能量。 RUBER 橡胶模组是一个通过使用层橡胶变形吸收能量的水坝。 地震隔离带与橡胶型水坝之间的区别在于是否支持上层结构的重量。 橡胶水坝不将上层结构的重量传输给下层结构。 用户定义的振动阻止类型。未定义的振动阻止类型。"
 
-#:IFC.xml:38001
-msgid "IfcStyledRepresentation"
-msgstr "IfcStyledRepresentation"
+#:IFC.xml:43919
+msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD"
+msgstr "被遗弃的年"
 
-msgid "IfcStyledRepresentation_DEFINITION"
-msgstr "[[IfcStyledRepresentation]] 表示样式展示的概念是产品或产品组件，如材料的表达。 这种表述环境不需要，但可能是几何表述环境。 注当前使用 [[IfcStyledRepresentation]] 仅限于向某一材料分配演示信息。 [[IfcStyledRepresentation]] 仅包括演示样式 [[IfcCurveStyle]] , FillAreaStyle , [[IfcSurfaceStyle]] 界定如何在特定的视野和视尺度大小的代表环境中提出材料。 所有 [[IfcStyledRepresentation]] 的实例都是 [[IfcMaterialDefinitionRepresentation]] 引用的，并由 [[IfcMaterialDefinitionRepresentation]] 分配到 [[IfcMaterial]]。正在呈现的材料。 样式表示必须包括一个或几个样式的条目以及相关的样式信息曲线、符号、文字、填充区域或表面风格。 它不应含有所称几何代表物项。 IFC2x2中的新实体。 只有[[IfcStyledItem]] s或子类型在项目列表中被允许为成员 从 [[IfcRepresentation]] 继承。 .更改 ifc2x3 IFC2x3 变换新，规则确保用于实质性定义的表述和其他非形状的使用"
+msgid "IfcVibrationDamperTypeEnum_AXIAL_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 轴产量类型是通过吸收钢材料防止轴向变形产生能量的水坝。 这就是说，朝着扩大和缩减方向发展。"
 
-#:IFC.xml:38004
-msgid "IfcStyleModel"
-msgstr "IfcStyleModel"
+#:IFC.xml:43920
+msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD"
+msgstr "正在绑定YIELD"
 
-msgid "IfcStyleModel_DEFINITION"
-msgstr "[[IfcStyleModel]] 代表了为产品或产品组成部分的材料或其他特性定义的特定展示风格的概念。 这种表述环境可能但不一定是几何表述环境。 [[IfcStyleModel]] 可以通过[[IfcMaterialDefinitionRepresentation]] 为材料的展示风格风格， 例如，可能因代表情况不同而有所区别，视目标代表情况的规模而有所不同。 IFC2x3中的新实体。"
+msgid "IfcVibrationDamperTypeEnum_BENDING_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 弯曲产量类型是一种水坝，通过弯曲产生钢材。"
 
-#:IFC.xml:38007
-msgid "IfcTopologyRepresentation"
-msgstr "IfcTopologyRepresentation"
+#:IFC.xml:43921
+msgid "IfcVibrationDamperTypeEnum_FRICTION"
+msgstr "研磨机"
 
-msgid "IfcTopologyRepresentation_DEFINITION"
-msgstr "[[IfcTopologyRepresentation]] 代表了一个产品或产品组成部分在代表范围内的特定地形表述概念。 这种表示环境不一定是一种几何表示环境，但可能是一种几何表示环境。 有几种形状表示的形状表示类型是预定义的顶部顶部表示，不论有无指定的几何形状边缘表示； 有或没有指定的几何形状代表类型的路径顶部表示，不论有无指定的几何形状表面表示； 未定义的表示类型是指在继承的属性代表类型下作为一个字符串值给定的。 IFC2x2中的新实体。正式提出的WR21只能使用地形代表项目。 WR22 应给地形表示一种代表性类型。WR23 应根据代表类型检查项目的适当使用。"
+msgid "IfcVibrationDamperTypeEnum_FRICTION_DEFINITION"
+msgstr "摩擦型型号是一种利用在材料接触表面上发生摩擦的水坝。"
 
-#:IFC.xml:38010
-msgid "IfcTopologyRepresentationTypes__RepType"
-msgstr "IfcTopologyRepresentationTypes Reptype"
+#:IFC.xml:43922
+msgid "IfcVibrationDamperTypeEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcVibrationDamperTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "未定义的振动阻力。"
+
+#:IFC.xml:43923
+msgid "IfcVibrationDamperTypeEnum_RUBBER"
+msgstr "路由器"
+
+msgid "IfcVibrationDamperTypeEnum_RUBBER_DEFINITION"
+msgstr "橡胶模组是一个通过使用层橡胶变形吸收能量的水坝。 地震隔离带与橡胶型水坝之间的区别在于是否支持上层结构的重量。 橡胶水坝不将上层结构的重量传输给下层结构。"
+
+#:IFC.xml:43924
+msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD"
+msgstr "给您留言"
+
+msgid "IfcVibrationDamperTypeEnum_SHEAR_YIELD_DEFINITION"
+msgstr "一种偏移依赖型号的阻燃剂，由利用钢材塑料变形塑料的塑料菌株量来决定产生的抵抗力量。 皮革产量类型是一种水坝，它使钢材在与该成员垂直的方向上产生变形效应。"
+
+#:IFC.xml:43925
+msgid "IfcVibrationDamperTypeEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcVibrationDamperTypeEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的震动阻尼类型。"
+
+#:IFC.xml:43926
+msgid "IfcVibrationDamperTypeEnum_VISCOUS"
+msgstr "VISCOUS"
+
+msgid "IfcVibrationDamperTypeEnum_VISCOUS_DEFINITION"
+msgstr "直观型号是一种通过利用可视体的抗药性吸收能量的水坝。"
+
+#:IFC.xml:43943
+msgid "Pset_DiscreteAccessoryColumnShoe"
+msgstr "Pset DiscreteAccessoryColumnShoe"
+
+msgid "Pset_DiscreteAccessoryColumnShoe_DEFINITION"
+msgstr "列鞋共同形状属性。"
+
+#:IFC.xml:43944
+msgid "ColumnShoeBasePlateDepth"
+msgstr "ColumnShoeBasePlateDepth"
+
+msgid "ColumnShoeBasePlateDepth_DEFINITION"
+msgstr "柱状底板的深度。"
+
+#:IFC.xml:43949
+msgid "ColumnShoeBasePlateThickness"
+msgstr "ColumnShoeBasePlateThickness"
+
+msgid "ColumnShoeBasePlateThickness_DEFINITION"
+msgstr "栏鞋底板厚度。"
+
+#:IFC.xml:43954
+msgid "ColumnShoeBasePlateWidth"
+msgstr "ColumnShoeBasePlateWidth"
+
+msgid "ColumnShoeBasePlateWidth_DEFINITION"
+msgstr "列鞋底板的宽度。"
+
+#:IFC.xml:43959
+msgid "ColumnShoeCasingDepth"
+msgstr "ColumnShoeCasingDepth"
+
+msgid "ColumnShoeCasingDepth_DEFINITION"
+msgstr "柱状壳的深度。"
+
+#:IFC.xml:43964
+msgid "ColumnShoeCasingHeight"
+msgstr "列星座高度"
+
+msgid "ColumnShoeCasingHeight_DEFINITION"
+msgstr "柱状壳的高度"
+
+#:IFC.xml:43969
+msgid "ColumnShoeCasingWidth"
+msgstr "ColumnShoeCasingWidth"
+
+msgid "ColumnShoeCasingWidth_DEFINITION"
+msgstr "列鞋壳的宽度。"
+
+#:IFC.xml:43975
+msgid "Pset_DiscreteAccessoryCornerFixingPlate"
+msgstr "Pset DiscreteachoryCornerFixingPlate"
+
+msgid "Pset_DiscreteAccessoryCornerFixingPlate_DEFINITION"
+msgstr "针对角固定板块的属性。"
+
+#:IFC.xml:43976
+msgid "CornerFixingPlateFlangeWidthInPlaneX"
+msgstr "CornerFixingPlateFlangeWidthInPlaneX"
+
+msgid "CornerFixingPlateFlangeWidthInPlaneX_DEFINITION"
+msgstr "飞机X中的L形角板的黄色宽度。"
+
+#:IFC.xml:43981
+msgid "CornerFixingPlateFlangeWidthInPlaneZ"
+msgstr "CornerFixingPlateFlangeWidthInPlaneZ"
+
+msgid "CornerFixingPlateFlangeWidthInPlaneZ_DEFINITION"
+msgstr "Z平面的L形角板的黄色宽度。"
+
+#:IFC.xml:43986
+msgid "CornerFixingPlateLength"
+msgstr "CornerFixingPlateLength"
+
+msgid "CornerFixingPlateLength_DEFINITION"
+msgstr "L形角板的长度。"
+
+#:IFC.xml:43991
+msgid "CornerFixingPlateThickness"
+msgstr "CornerFixingPlateThickness"
+
+msgid "CornerFixingPlateThickness_DEFINITION"
+msgstr "L形角板的厚度。"
+
+#:IFC.xml:43997
+msgid "Pset_DiscreteAccessoryDiagonalTrussConnector"
+msgstr "Pset DiscreteAnnexsoryDiagonalTrussConnector"
+
+msgid "Pset_DiscreteAccessoryDiagonalTrussConnector_DEFINITION"
+msgstr "与对角交叉栏连接托管形式附件特有的形状属性。"
+
+#:IFC.xml:43998
+msgid "DiagonalTrussBaseBarDiameter"
+msgstr "DiagonalTrussBaseBarDiameter"
+
+msgid "DiagonalTrussBaseBarDiameter_DEFINITION"
+msgstr "基准条的名义直径。"
+
+#:IFC.xml:44003
+msgid "DiagonalTrussCrossBarDiameter"
+msgstr "DiagonalTrussCrossBarDiameter"
+
+msgid "DiagonalTrussCrossBarDiameter_DEFINITION"
+msgstr "对角交叉条的标称直径。"
+
+#:IFC.xml:44008
+msgid "DiagonalTrussCrossBarSpacing"
+msgstr "DiagonalTrussCrossBarSpacing"
+
+msgid "DiagonalTrussCrossBarSpacing_DEFINITION"
+msgstr "对角交叉条段之间的间距。"
+
+#:IFC.xml:44013
+msgid "DiagonalTrussHeight"
+msgstr "对角信托基金高度"
+
+msgid "DiagonalTrussHeight_DEFINITION"
+msgstr "信任连接器的总高度。"
+
+#:IFC.xml:44018
+msgid "DiagonalTrussLength"
+msgstr "DiagonalTrussLength"
+
+msgid "DiagonalTrussLength_DEFINITION"
+msgstr "信任连接器的总长度。"
+
+#:IFC.xml:44023
+msgid "DiagonalTrussSecondaryBarDiameter"
+msgstr "DiagonalTrussSecondaryBarDiameter"
+
+msgid "DiagonalTrussSecondaryBarDiameter_DEFINITION"
+msgstr "二维条形状直径。"
+
+#:IFC.xml:44029
+msgid "Pset_DiscreteAccessoryEdgeFixingPlate"
+msgstr "Pset DiscreteAnnexsoryEdgeFixingPlate"
+
+msgid "Pset_DiscreteAccessoryEdgeFixingPlate_DEFINITION"
+msgstr "边缘修复板块特有的属性。"
+
+#:IFC.xml:44030
+msgid "EdgeFixingPlateFlangeWidthInPlaneX"
+msgstr "EdgeFixingPlateFlangeWidthInPlaneX"
+
+msgid "EdgeFixingPlateFlangeWidthInPlaneX_DEFINITION"
+msgstr "L形状边缘板块在飞机X上的黄色宽度。"
+
+#:IFC.xml:44035
+msgid "EdgeFixingPlateFlangeWidthInPlaneZ"
+msgstr "EdgeFixingPlateFlangeWidthInPlaneZ"
+
+msgid "EdgeFixingPlateFlangeWidthInPlaneZ_DEFINITION"
+msgstr "Z平面L形状边缘板的黄色宽度。"
+
+#:IFC.xml:44040
+msgid "EdgeFixingPlateLength"
+msgstr "EdgeFixingPlateLength"
+
+msgid "EdgeFixingPlateLength_DEFINITION"
+msgstr "L形状边缘板块的长度。"
+
+#:IFC.xml:44045
+msgid "EdgeFixingPlateThickness"
+msgstr "EdgeFixingPlateThickness"
+
+msgid "EdgeFixingPlateThickness_DEFINITION"
+msgstr "L形状边缘板的厚度。"
+
+#:IFC.xml:44051
+msgid "Pset_DiscreteAccessoryFixingSocket"
+msgstr "Pset DiscreteaccessoryFixingSocket"
+
+msgid "Pset_DiscreteAccessoryFixingSocket_DEFINITION"
+msgstr "修复套接字共有的属性。"
+
+#:IFC.xml:44052
+msgid "FixingSocketHeight"
+msgstr "固定草图高度"
+
+msgid "FixingSocketHeight_DEFINITION"
+msgstr "修复套接字的总体高度"
+
+#:IFC.xml:44057
+msgid "FixingSocketThreadDiameter"
+msgstr "FixingSocketThreadDiameter"
+
+msgid "FixingSocketThreadDiameter_DEFINITION"
+msgstr "线程的名义直径。"
+
+#:IFC.xml:44062
+msgid "FixingSocketThreadLength"
+msgstr "固定SocketThread长度"
+
+msgid "FixingSocketThreadLength_DEFINITION"
+msgstr "修复套接字的线程部分长度。"
+
+#:IFC.xml:44067
+msgid "FixingSocketTypeReference"
+msgstr "FixingSocketTypeReference"
+
+msgid "FixingSocketTypeReference_DEFINITION"
+msgstr "根据本地标准输入修理套接字的参考。"
+
+#:IFC.xml:44073
+msgid "Pset_DiscreteAccessoryLadderTrussConnector"
+msgstr "Pset DiscreteAnnexsoryLadderTrussConnector"
+
+msgid "Pset_DiscreteAccessoryLadderTrussConnector_DEFINITION"
+msgstr "形状属性，专门用于连接托管形式的配件和梯形形状的直截面条形状."
+
+#:IFC.xml:44074
+msgid "LadderTrussBaseBarDiameter"
+msgstr "LadderTrussBaseBarDiameter"
+
+msgid "LadderTrussBaseBarDiameter_DEFINITION"
+msgstr "基准条的名义直径。"
+
+#:IFC.xml:44079
+msgid "LadderTrussCrossBarDiameter"
+msgstr "LadderTrussCrossBarDiameter"
+
+msgid "LadderTrussCrossBarDiameter_DEFINITION"
+msgstr "直截面的标称直径。"
+
+#:IFC.xml:44084
+msgid "LadderTrussCrossBarSpacing"
+msgstr "LadderTrussCrossBarSpacing"
+
+msgid "LadderTrussCrossBarSpacing_DEFINITION"
+msgstr "直截面之间的间距。"
+
+#:IFC.xml:44089
+msgid "LadderTrussHeight"
+msgstr "梯度托拉斯高度"
+
+msgid "LadderTrussHeight_DEFINITION"
+msgstr "信任连接器的总高度。"
+
+#:IFC.xml:44094
+msgid "LadderTrussLength"
+msgstr "梯度托拉斯长度"
+
+msgid "LadderTrussLength_DEFINITION"
+msgstr "信任连接器的总长度。"
+
+#:IFC.xml:44099
+msgid "LadderTrussSecondaryBarDiameter"
+msgstr "LadderTrussSecondaryBarDiameter"
+
+msgid "LadderTrussSecondaryBarDiameter_DEFINITION"
+msgstr "二维条形状直径。"
+
+#:IFC.xml:44105
+msgid "Pset_DiscreteAccessoryStandardFixingPlate"
+msgstr "Pset DiscreteAnnexsoryStandardFixingPlate"
+
+msgid "Pset_DiscreteAccessoryStandardFixingPlate_DEFINITION"
+msgstr "标准修复板块特有的属性。"
+
+#:IFC.xml:44106
+msgid "StandardFixingPlateDepth"
+msgstr "StandardFixingPlateDepth"
+
+msgid "StandardFixingPlateDepth_DEFINITION"
+msgstr "标准修理板的深度。"
+
+#:IFC.xml:44111
+msgid "StandardFixingPlateThickness"
+msgstr "标准固定平板厚度"
+
+msgid "StandardFixingPlateThickness_DEFINITION"
+msgstr "标准修饰板的厚度。"
+
+#:IFC.xml:44116
+msgid "StandardFixingPlateWidth"
+msgstr "标准 FixingPlateWidth"
+
+msgid "StandardFixingPlateWidth_DEFINITION"
+msgstr "标准修理板的宽度。"
+
+#:IFC.xml:44122
+msgid "Pset_DiscreteAccessoryWireLoop"
+msgstr "Pset DiscreteaccessoryWireLoop"
+
+msgid "Pset_DiscreteAccessoryWireLoop_DEFINITION"
+msgstr "形状线环形联合连接器共有的属性。"
+
+#:IFC.xml:44123
+msgid "WireDiameter"
+msgstr "连线直线"
+
+msgid "WireDiameter_DEFINITION"
+msgstr "线的标称直径。"
+
+#:IFC.xml:44128
+msgid "WireEmbeddingLength"
+msgstr "无线嵌入长度"
+
+msgid "WireEmbeddingLength_DEFINITION"
+msgstr "嵌入预定混凝土元素的线部分的长度。"
+
+#:IFC.xml:44133
+msgid "WireLoopBasePlateLength"
+msgstr "WireLoopBasePlateLength"
+
+msgid "WireLoopBasePlateLength_DEFINITION"
+msgstr "基板的长度。"
+
+#:IFC.xml:44138
+msgid "WireLoopBasePlateThickness"
+msgstr "WireLoopBasePlate厚度"
+
+msgid "WireLoopBasePlateThickness_DEFINITION"
+msgstr "基板厚度。"
+
+#:IFC.xml:44143
+msgid "WireLoopBasePlateWidth"
+msgstr "WireLoopBasePlateWidth"
+
+msgid "WireLoopBasePlateWidth_DEFINITION"
+msgstr "基板的宽度。"
+
+#:IFC.xml:44148
+msgid "WireLoopLength"
+msgstr "WireLooplength"
+
+msgid "WireLoopLength_DEFINITION"
+msgstr "紧固循环部分的长度。"
+
+#:IFC.xml:44154
+msgid "Pset_ElementComponentCommon"
+msgstr "Pset 元素组件Common"
+
+msgid "Pset_ElementComponentCommon_DEFINITION"
+msgstr "组件元素的共同特性集，特别是离散配件，但也包括加速器、增强元件或其他类型的组件。"
+
+#:IFC.xml:44155
+msgid "CorrosionTreatment"
+msgstr "矫正处理"
+
+msgid "CorrosionTreatment_DEFINITION"
+msgstr "确定金属组件的腐蚀处理。 如果要求的表述必须独立于材料规格，而b只是要求说明，而不是车间设计处理特点，则提供这种属性。"
+
+#:IFC.xml:44160
+msgid "DeliveryType"
+msgstr "送货类型"
+
+msgid "DeliveryType_DEFINITION"
+msgstr "确定配件如何投递到站点。"
+
+#:IFC.xml:44176
+msgid "Pset_FastenerWeld"
+msgstr "Pset FastenerWeld"
+
+msgid "Pset_FastenerWeld_DEFINITION"
+msgstr "与焊接连接相关的属性。"
+
+#:IFC.xml:44177
+msgid "a"
+msgstr "a"
+
+msgid "a_DEFINITION"
+msgstr "根据ISO 2553测量一个"
+
+#:IFC.xml:44182
+msgid "c"
+msgstr "c"
+
+msgid "c_DEFINITION"
+msgstr "测量c 根据ISO 2553"
+
+#:IFC.xml:44187
+msgid "d"
+msgstr "d"
+
+msgid "d_DEFINITION"
+msgstr "根据ISO 2553测量d"
+
+#:IFC.xml:44192
+msgid "e"
+msgstr "e"
+
+msgid "e_DEFINITION"
+msgstr "根据ISO 2553测量e"
+
+#:IFC.xml:44197
+msgid "Intermittent"
+msgstr "间歇性的"
+
+msgid "Intermittent_DEFINITION"
+msgstr "如果文件焊接、断断续续或非"
+
+#:IFC.xml:44202
+msgid "l"
+msgstr "l"
+
+msgid "l_DEFINITION"
+msgstr "根据ISO 2553测量l"
+
+#:IFC.xml:44207
+msgid "n"
+msgstr "n"
+
+msgid "n_DEFINITION"
+msgstr "表明用户是否可以选择使用N保护。 如果N保护50和N保护100这两种属性都被断定，N保护选择属性的值设置为 TRUE。 这些财产只有在N保护财产得到维护的情况下才能得到维护。"
+
+#:IFC.xml:44212
+msgid "Process"
+msgstr "进程"
+
+msgid "Process_DEFINITION"
+msgstr "基于 ISO 4063 的焊接流程的参考号码，最多三位数长代码"
+
+#:IFC.xml:44217
+msgid "ProcessName"
+msgstr "处理名称"
+
+msgid "ProcessName_DEFINITION"
+msgstr "焊接工艺名称。替代数字工艺属性。"
+
+#:IFC.xml:44222
+msgid "s"
+msgstr "秒"
+
+msgid "s_DEFINITION"
+msgstr "根据ISO 2553测量值"
+
+#:IFC.xml:44227
+msgid "Staggered"
+msgstr "错开"
+
+msgid "Staggered_DEFINITION"
+msgstr "如果间歇性焊接，交错或不交送"
+
+#:IFC.xml:44232
+msgid "Surface1"
+msgstr "地平面1"
+
+msgid "Surface1_DEFINITION"
+msgstr "焊接表面的方面，即飞机、曲线或空洞，由两个相应符号给出，类似于Type1和Type2。"
+
+#:IFC.xml:44237
+msgid "Surface2"
+msgstr "地平面2"
+
+msgid "Surface2_DEFINITION"
+msgstr "见Surface1。"
+
+#:IFC.xml:44242
+msgid "Type1"
+msgstr "Type1"
+
+msgid "Type1_DEFINITION"
+msgstr "根据ISO 2553类型的焊接。 注，结合焊接用两个对应符号给定坐标系正常轴方向。 例如，Type1 V 和 Type2 V 规定了X焊接。"
+
+#:IFC.xml:44247
+msgid "Type2"
+msgstr "Type2"
+
+msgid "Type2_DEFINITION"
+msgstr "见Type1。"
+
+#:IFC.xml:44252
+msgid "z"
+msgstr "z"
+
+msgid "z_DEFINITION"
+msgstr "按照ISO 2553测量z"
+
+#:IFC.xml:44258
+msgid "Pset_MechanicalFastenerAnchorBolt"
+msgstr "Pset MechanicalFastenerAnchorBolt"
+
+msgid "Pset_MechanicalFastenerAnchorBolt_DEFINITION"
+msgstr "不同类型锚点螺钉共有的属性。"
+
+#:IFC.xml:44259
+msgid "AnchorBoltDiameter"
+msgstr "锚箭头直径"
+
+msgid "AnchorBoltDiameter_DEFINITION"
+msgstr "锚点螺杆的标称直径。"
+
+#:IFC.xml:44264
+msgid "AnchorBoltLength"
+msgstr "根博尔特长度"
+
+msgid "AnchorBoltLength_DEFINITION"
+msgstr "锚点螺钉的长度。"
+
+#:IFC.xml:44269
+msgid "AnchorBoltProtrusionLength"
+msgstr "根博尔特Protrussion长度"
+
+msgid "AnchorBoltProtrusionLength_DEFINITION"
+msgstr "锚系螺纹部分的长度。"
+
+#:IFC.xml:44274
+msgid "AnchorBoltThreadLength"
+msgstr "锚点粗线程长度"
+
+msgid "AnchorBoltThreadLength_DEFINITION"
+msgstr "锚点螺钉的线程长度。"
+
+#:IFC.xml:44280
+msgid "Pset_MechanicalFastenerBolt"
+msgstr "Pset MechanicalFastenerBolt"
+
+msgid "Pset_MechanicalFastenerBolt_DEFINITION"
+msgstr "与螺旋型快速器相关的属性。可以提供一整套的螺钉、洗涤器和坚固件的属性。 请注意，通常没有必要在标准化的螺钉的情况下传输这些属性，而是提到标准的。"
+
+#:IFC.xml:44281
+msgid "HeadShape"
+msgstr "头形状"
+
+msgid "HeadShape_DEFINITION"
+msgstr "螺钉头的形状，例如 Hexagon , Counsunk , Cheese"
+
+#:IFC.xml:44286
+msgid "KeyShape"
+msgstr "密钥形状"
+
+msgid "KeyShape_DEFINITION"
+msgstr "如果适用，头部槽的形状，例如槽，Allen"
+
+#:IFC.xml:44291
+msgid "NutsCount"
+msgstr "NutsCount"
+
+msgid "NutsCount_DEFINITION"
+msgstr "挂载在一只螺钉上的螺丝数"
+
+#:IFC.xml:44296
+msgid "NutShape"
+msgstr "Nut形状"
+
+msgid "NutShape_DEFINITION"
+msgstr "坚果形状，例如 Hexagon 、 Cap 、 Castle 、 Wing"
+
+#:IFC.xml:44301
+msgid "ThreadDiameter"
+msgstr "线程直线"
+
+msgid "ThreadDiameter_DEFINITION"
+msgstr "线程的名义直径，如果不同于粗体总名义直径。"
+
+#:IFC.xml:44306
+msgid "ThreadLength"
+msgstr "线程长度"
+
+msgid "ThreadLength_DEFINITION"
+msgstr "线程的名义长度"
+
+#:IFC.xml:44311
+msgid "WashersCount"
+msgstr "洗涤器计数"
+
+msgid "WashersCount_DEFINITION"
+msgstr "挂载在一局火车上的洗衣机数量"
+
+#:IFC.xml:44316
+msgid "WasherShape"
+msgstr "瓦希尔形状"
+
+msgid "WasherShape_DEFINITION"
+msgstr "洗涤器的形状，例如 Standard , Square"
 
