@@ -9,181 +9,156 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcCostResource.pot\n"
-"X-Crowdin-File-ID: 34\n"
+"X-Crowdin-File: /master/IfcApprovalResource.pot\n"
+"X-Crowdin-File-ID: 22\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-21 19:52\n"
 
-#:IFC.xml:3264
-msgid "IfcAppliedValue"
-msgstr "IfcAppliedValue"
+#:IFC.xml:469
+msgid "IfcApproval"
+msgstr "Ifc批准"
 
-msgid "IfcAppliedValue_DEFINITION"
-msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
+msgid "IfcApproval_DEFINITION"
+msgstr "一个 [[IfcApproval]] 代表有关批准过程的信息，例如计划的批准过程。 a 施工或设施管理项目中的设计、建议书或更改顺序。 [[IfcApproval]] 在 IfcControlExtension schema 中被[[IfcRelAssociatesApproval]] 引用，因此可能与所有子类型 [[IfcRoot]] 相关。 资源对象也可以在IFC2中使用 [[IfcResourceApprovalRelationship]] HISTORY 新实体获得批准。 .更改ifc2x4 IFC4 变异属性标识符和名称为可选，此处添加规则要求至少保留其中的一个。 反向属性属性，ApprovedObjects，ApprovedResources and HasExternalreferences added 。逆向属性属性删除了通过逆向ApprovedResources而使用的更普遍的关系。"
 
-#:IFC.xml:3309
-msgid "IfcAppliedValue_UnitBasis"
-msgstr "单位基础"
+#:IFC.xml:517
+msgid "IfcApproval_Relates"
+msgstr "关联性"
 
-msgid "IfcAppliedValue_UnitBasis_DEFINITION"
-msgstr "单位成本所依据的计量单位数。 注以及通常预期的尺寸单位，如长度、面积、体积等。 成本可以基于需要界定的计量单位，如sack、dr、pallet、item等。 单位成本可以根据比基本措施的单一数值或多或少的数量计算。 例如，木材每X米的单位成本率可能是X1的电缆、管道和许多其他物品的单位成本率。 基数可能是整数或实际值。 请注意，在适用成本按单位数量计算的所有情况下都应说明这一属性。 即使在使用某一物品价格的情况下，也可以断言这一点。 在这种情况下，单位成本基准应按项目或同等定义确定。"
+msgid "IfcApproval_Relates_DEFINITION"
+msgstr "其他批准与本协议相关的一系列关系。"
 
-#:IFC.xml:3321
-msgid "IfcAppliedValue_Components"
-msgstr "组件"
+#:IFC.xml:531
+msgid "IfcApproval_IsRelatedWith"
+msgstr "与世隔绝的"
 
-msgid "IfcAppliedValue_Components_DEFINITION"
-msgstr "计算附加值的可选组件值。"
+msgid "IfcApproval_IsRelatedWith_DEFINITION"
+msgstr "这种批准与他人相关的一系列关系。"
 
-#:IFC.xml:3333
-msgid "IfcAppliedValue_HasExternalReference"
-msgstr "HasExternalReference"
+#:IFC.xml:545
+msgid "IfcApproval_ApprovedObjects"
+msgstr "批准的对象"
 
-msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
-msgstr "引用外部引用，例如与[[IfcAppliedValue]相关联的库、分类或文档信息。 .更改 ifc2x4 IFC4 变换新反向属性。"
+msgid "IfcApproval_ApprovedObjects_DEFINITION"
+msgstr "参考 [[IfcRelAssociatesApproval]] 实例将此批准关联到对象 [[IfcRoot] ] 的子类型"
 
-#:IFC.xml:3265
-msgid "IfcAppliedValue_ApplicableDate"
-msgstr "适用日期"
+#:IFC.xml:559
+msgid "IfcApproval_ApprovedResources"
+msgstr "审批资源"
 
-msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
-msgstr "应用值的适用日期或起始日期。更改ifc2x4 IFC4 变异类型从 IfcDateTimeSelect."
+msgid "IfcApproval_ApprovedResources_DEFINITION"
+msgstr "资源对象经此批准批准的关系集。"
 
-#:IFC.xml:3270
-msgid "IfcAppliedValue_AppliedValue"
-msgstr "已应用价值"
+#:IFC.xml:573
+msgid "IfcApproval_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-msgid "IfcAppliedValue_AppliedValue_DEFINITION"
-msgstr "应用数值的范围或数量或数量。"
+msgid "IfcApproval_HasExternalReferences_DEFINITION"
+msgstr "提及与审批相关的外部引用，例如库、分类或文档信息。 .change ifc2x4 IFC4 变异新反向属性。"
 
-#:IFC.xml:3275
-msgid "IfcAppliedValue_ArithmeticOperator"
-msgstr "算术运算符"
-
-msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
-msgstr "计算运算符应用于组件值。"
-
-#:IFC.xml:3280
-msgid "IfcAppliedValue_Category"
-msgstr "类别"
-
-msgid "IfcAppliedValue_Category_DEFINITION"
-msgstr "说明所使用的成本类型。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 为了允许任何类型的成本值，分配了[[IfcLabel]] 数据类型。 在没有任何明确界定的标准的情况下， 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。"
-
-#:IFC.xml:3285
-msgid "IfcAppliedValue_Condition"
-msgstr "条件"
-
-msgid "IfcAppliedValue_Condition_DEFINITION"
-msgstr "适用成本价值的条件。 例如，在提交投标书的情况下，这可能是指可能当选或不当选的选择。"
-
-#:IFC.xml:3290
-msgid "IfcAppliedValue_Description"
+#:IFC.xml:470
+msgid "IfcApproval_Description"
 msgstr "描述"
 
-msgid "IfcAppliedValue_Description_DEFINITION"
-msgstr "可能应用有关成本价值的额外信息的描述。"
+msgid "IfcApproval_Description_DEFINITION"
+msgstr "关于正在批准的设计、工作任务、计划等的一般性文字描述。"
 
-#:IFC.xml:3295
-msgid "IfcAppliedValue_FixedUntilDate"
-msgstr "固定到日期"
+#:IFC.xml:475
+msgid "IfcApproval_GivingApproval"
+msgstr "给予批准"
 
-msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
-msgstr "应用值适用的截止日期。从 IfcDateTimeSelect改变了 ifc2x4 IFC4 变异类型。"
+msgid "IfcApproval_GivingApproval_DEFINITION"
+msgstr "在 [[IfcOrganization]] 或个别在 [[IfcPerson]] 指定的角色并给予批准的演员。 .更改 ifc2x4 IFC4 更改批准条款的新属性，以取代正在删除的 IfcApprovalActorRelationship 。"
 
-#:IFC.xml:3300
-msgid "IfcAppliedValue_Name"
+#:IFC.xml:480
+msgid "IfcApproval_Identifier"
+msgstr "Identifier"
+
+msgid "IfcApproval_Identifier_DEFINITION"
+msgstr "用于识别批准的计算机可解释标识符。"
+
+#:IFC.xml:485
+msgid "IfcApproval_Level"
+msgstr "关卡"
+
+msgid "IfcApproval_Level_DEFINITION"
+msgstr "批准级别，例如 Draft v.s. 已完成设计。"
+
+#:IFC.xml:490
+msgid "IfcApproval_Name"
 msgstr "名称"
 
-msgid "IfcAppliedValue_Name_DEFINITION"
-msgstr "给出成本值的名称或额外澄清。"
+msgid "IfcApproval_Name_DEFINITION"
+msgstr "给予批准的人类可读名称。"
 
-#:IFC.xml:3345
-msgid "IfcAppliedValueSelect"
-msgstr "IfcAppliedValueSelect"
+#:IFC.xml:495
+msgid "IfcApproval_Qualifier"
+msgstr "合格者"
 
-#:IFC.xml:3346
-msgid "IfcArithmeticOperatorEnum"
-msgstr "IfcArithmeticOperatorEnum"
+msgid "IfcApproval_Qualifier_DEFINITION"
+msgstr "批准的特殊限制或条件的文字说明。"
 
-msgid "IfcArithmeticOperatorEnum_DEFINITION"
-msgstr "[[IfcArithmeticOperatorEnum]] 指定了关系所隐含的算术操作形式，IFC2x2中的HISTORY 新枚举项。项目 ADD DULTIPLY MUBTRACT"
+#:IFC.xml:500
+msgid "IfcApproval_RequestingApproval"
+msgstr "请求批准"
 
-#:IFC.xml:3347
-msgid "IfcArithmeticOperatorEnum_ADD"
-msgstr "添加"
+msgid "IfcApproval_RequestingApproval_DEFINITION"
+msgstr "在 [[IfcOrganization]] 或单独在 [[IfcPerson]]指定的角色并请求批准的演员。 .更改 ifc2x4 IFC4 更改新属性以请求批准，替换正在删除的 IfcApprovalActorRelationsh。"
 
-msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
-msgstr "添加"
+#:IFC.xml:505
+msgid "IfcApproval_Status"
+msgstr "状态"
 
-#:IFC.xml:3348
-msgid "IfcArithmeticOperatorEnum_DIVIDE"
-msgstr "DIVIDE"
+msgid "IfcApproval_Status_DEFINITION"
+msgstr "批准的结果或当前状态，例如：请求、 处理、 批准、 未批准。"
 
-msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
-msgstr "DIVIDE"
+#:IFC.xml:510
+msgid "IfcApproval_TimeOfApproval"
+msgstr "TimeOfApproval"
 
-#:IFC.xml:3349
-msgid "IfcArithmeticOperatorEnum_MULTIPLY"
-msgstr "MULTIPLY"
+msgid "IfcApproval_TimeOfApproval_DEFINITION"
+msgstr "产生批准结果的日期和时间。 挂载ifc2x4 IFC4 变异属性数据类型已改为[[IfcDateTime]]，使用ISO 8601表示方式，从审批日期重新命名并制成OPTIONAL。"
 
-msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
-msgstr "MULTIPLY"
+#:IFC.xml:585
+msgid "IfcApprovalRelationship"
+msgstr "IfcapprovalRelationship"
 
-#:IFC.xml:3350
-msgid "IfcArithmeticOperatorEnum_SUBTRACT"
-msgstr "订阅"
+msgid "IfcApprovalRelationship_DEFINITION"
+msgstr "一个 [[IfcApprovalRelationship]] 将批准一个相关的批准与一个或多个相关的批准, 每个项目随着批准程序或核准的对象的演变而具有不同的状态或水平。 在 IFC2x2. 更改ifc2x4 IFC4 变量子类型从 [[IfcResourceLevelRelationship]] 改变属性顺序。"
 
-msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
-msgstr "订阅"
+#:IFC.xml:517
+msgid "IfcApprovalRelationship_RelatingApproval"
+msgstr "关联审批中"
 
-#:IFC.xml:3352
-msgid "IfcCostValue"
-msgstr "IfcCostValue"
+msgid "IfcApprovalRelationship_RelatingApproval_DEFINITION"
+msgstr "与其他核准有关的核准。"
 
-msgid "IfcCostValue_DEFINITION"
-msgstr "[[IfcCostValue]] 是影响金额的金额或价值。 每个实例 [[IfcCostValue]] 也可能有一个类别。可能有许多类型的成本值可以确定。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 以下定义了可适用于类别属性的某些成本类别 年度回报率Bonus 批量购买合同咨询； 估计成本； 安装利率； 劳力租赁； 清单价格维护材料间接邮费和包装损益购买租金修缮出售； 少量附加零部件储存合同折扣； 贸易运输废物补贴； 整个寿命； 没有任何明确的标准。 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。 在 IFC1.0 中的新实体"
+#:IFC.xml:531
+msgid "IfcApprovalRelationship_RelatedApprovals"
+msgstr "相关批准"
 
-#:IFC.xml:3439
-msgid "IfcCurrencyRelationship"
-msgstr "货币关系"
+msgid "IfcApprovalRelationship_RelatedApprovals_DEFINITION"
+msgstr "与另一个审批相关的审批。更改ifc2x4 IFC4 变换。此属性的重要性已更改为SET。"
 
-msgid "IfcCurrencyRelationship_DEFINITION"
-msgstr "[[IfcCurrencyRelationship]] 界定了特定时间两种指定货币之间以及特定来源公布的汇率。 一个 [[IfcCurrencyRelationship]] 在可能需要用一种货币引用一个 [[IfcCostValue]] 作为另一种货币时使用 [[IfcCostValue]] 。 它考虑到以下事实：货币汇率可能因要求记录所用货币汇率的日期和时间以及公布汇率的来源而有所变化。 可能有许多来源，货币兑换现时汇率和固定汇率前期购买货币的战略也不同。 货币交易的来源定义为一个 [[IfcLibraryInformation]] 的实例，其中包括一个名称和一个URL。 在 IFC2x2. 更改ifc2x4 IFC4 更改子键入的 [[IfcResourceLevelRelationship]] 属性顺序已更改。"
+#:IFC.xml:588
+msgid "IfcResourceApprovalRelationship"
+msgstr "IfcResourceApprovalRelationship"
 
-#:IFC.xml:3452
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
-msgstr "关联货币单位"
+msgid "IfcResourceApprovalRelationship_DEFINITION"
+msgstr "一个 [[IfcResourceApprovalRelationship]] 用于关联对资源对象的批准。 一个或多个项目可以通过[[IfcResourceObjectSelect]]获得单独的批准。IFC4中的新实体。"
 
-msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
-msgstr "交易所来自的货币单位。 例如，在从英镑改为美元的情况下，相关的货币单位是英镑。"
+#:IFC.xml:559
+msgid "IfcResourceApprovalRelationship_RelatingApproval"
+msgstr "关联审批中"
 
-#:IFC.xml:3464
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
-msgstr "关联的Monetary单位"
+msgid "IfcResourceApprovalRelationship_RelatingApproval_DEFINITION"
+msgstr "所选资源对象的批准。"
 
-msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
-msgstr "汇兑所得的货币单位。 例如，在从英镑转为美元的情况下，相关的货币单位是美元。"
+#:IFC.xml:589
+msgid "IfcResourceApprovalRelationship_RelatedResourceObjects"
+msgstr "关联的资源对象"
 
-#:IFC.xml:3476
-msgid "IfcCurrencyRelationship_RateSource"
-msgstr "评分源"
-
-msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
-msgstr "获得汇率的来源。"
-
-#:IFC.xml:3440
-msgid "IfcCurrencyRelationship_ExchangeRate"
-msgstr "汇率"
-
-msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
-msgstr "目前商定的相关货币单位金额的比率相当于货币关系中相关货币单位的单位金额。 例如，在从英镑兑换为美元的情况下，汇率的价值可为1.486美元(1英镑)。"
-
-#:IFC.xml:3445
-msgid "IfcCurrencyRelationship_RateDateTime"
-msgstr "RateDateTime"
-
-msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
-msgstr "适用汇率的日期和时间。Ifc2x4 IFC4 变异类型从 IfcDateTimeSelect. 变异。属性是可选的。"
+msgid "IfcResourceApprovalRelationship_RelatedResourceObjects_DEFINITION"
+msgstr "已批准的资源对象。"
 
