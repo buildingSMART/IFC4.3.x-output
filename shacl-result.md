@@ -402,6 +402,43 @@
 ## DefinitionForSelect
 
 * The resource 'IfcCurveMeasureSelect' has no definition
+## IfcObjectAssociationForPropertySetAssoc
+
+* The association 'IfcArbitraryClosedProfileDefPropertySetsforObjectsPset_ProfileArbitraryDoubleT' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryClosedProfileDef'
+* The association 'IfcArbitraryProfileDefWithVoidsPropertySetsforObjectsPset_ProfileArbitraryHollowCore' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryProfileDefWithVoids'
+* The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
+* The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
+* The association 'IfcElementTypePropertySetsforObjectsPset_ElementKinematics' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcElementType'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialCombustion' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialConcrete' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialEnergy' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialFuel' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialHygroscopic' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialMechanical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialOptical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialSteel' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialThermal' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWater' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWood' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWoodBasedStructure' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamInPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamInPlaneNegative' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamOutOfPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelInPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelOutOfPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelOutOfPlaneNegative' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
+* The association 'IfcMooringDeviceTypePropertySetsforObjectsPset_MooringDeviceCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMooringDeviceType'
+* The association 'IfcProfileDefPropertySetsforObjectsPset_ProfileMechanical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcProfileDef'
+* The association 'IfcProjectPropertySetsforObjectsPset_ProjectCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcProject'
+* The association 'IfcSpatialElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcSpatialElementType'
+* The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
+* The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
+* The association 'IfcTransportElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
+* The association 'IfcTypeProcessPropertySetsforObjectsPset_Risk' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProcess'
+* The association 'IfcTypeProductPropertySetsforObjectsPset_Risk' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
+* The association 'IfcTypeProductPropertySetsforObjectsPset_Tolerance' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
+* The association 'IfcTypeProductPropertySetsforObjectsPset_Uncertainty' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
 ## PropertyForDefinition
 
 * For document 'ACResistance.md/a/properties/docs' a property cannot be found
