@@ -9,1361 +9,632 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcMaterialResource.pot\n"
-"X-Crowdin-File-ID: 52\n"
+"X-Crowdin-File: /master/IfcRepresentationResource.pot\n"
+"X-Crowdin-File-ID: 78\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-22 19:20\n"
 
-#:IFC.xml:21678
-msgid "IfcDirectionSenseEnum"
-msgstr "IfcDirectionSenseEnum"
+#:IFC.xml:37633
+msgid "IfcConvertDirectionInto2D"
+msgstr "IfcConvertDirectionInto2D"
 
-msgid "IfcDirectionSenseEnum_DEFINITION"
-msgstr "[[IfcDirectionSenseEnum]] 表示方向感是正数还是负数朝给定轴。 IFC2x中的新类型。项目方向定义为正值。NEGATIVE 方向定义为负值。"
+#:IFC.xml:37641
+msgid "IfcCoordinateOperation"
+msgstr "IfcCoordinate操作"
 
-#:IFC.xml:21679
-msgid "IfcDirectionSenseEnum_NEGATIVE"
-msgstr "NEGATIVE"
+msgid "IfcCoordinateOperation_DEFINITION"
+msgstr "The coordinate operation is an abstract supertype to handle any operation transformation or conversion between two coordinate reference systems. It is meant to provide expandability for future versions, since currently only the conversion of a local engineering coordinate system into a map coordinate reference system is dealt with by the subtype [[IfcMapConversion]] . By convention, a coordinate operation is given between the SourceCRS being the more local, or child coordinate reference system, and the TargetCRS being the more remote or parent coordinate reference system, in the special case the coordinate operation between the local engineering coordinate system of the construction project and any map or other coordinate reference system. .extDef NOTE Definition from OpenGIS Abstract Specification, Topic 2 If the relationship between any two coordinate reference systems is known, coordinates can be transformed or converted to another coordinate reference system. Coordinate operations are divided into two subtypes .note Coordinate conversion mathematical operation on coordinates that does not include any change of datum. The best known example of a coordinate conversion is a map projection. The parameters describing coordinate conversions are defined rather than empirically derived. Note that some conversions have no parameters. Coordinate transformation mathematical operation on coordinates that usually includes a change of datum. The parameters of a coordinate transformation are empirically derived from data containing the coordinates of a series of points in both coordinate reference systems. This computational process is usually over determined , allowing derivation of error or accuracy estimates for the transformation. Also, the stochastic nature of the parameters may result in multiple different versions of the same coordinate transformation. Because of this several transformations may exist for a given pair of coordinate reference systems, differing in their transformation method, parameter values and accuracy characteristics. HISTORY New entity in IFC4."
 
-msgid "IfcDirectionSenseEnum_NEGATIVE_DEFINITION"
-msgstr "方向被定义为负。"
+#:IFC.xml:37648
+msgid "IfcCoordinateOperation_TargetCRS"
+msgstr "TargetCRS"
 
-#:IFC.xml:21680
-msgid "IfcDirectionSenseEnum_POSITIVE"
-msgstr "帖子"
+msgid "IfcCoordinateOperation_TargetCRS_DEFINITION"
+msgstr "Target coordinate reference system for the operation."
 
-msgid "IfcDirectionSenseEnum_POSITIVE_DEFINITION"
-msgstr "方向定义为正数。"
+#:IFC.xml:37642
+msgid "IfcCoordinateOperation_SourceCRS"
+msgstr "来源CRS"
 
-#:IFC.xml:21682
-msgid "IfcLayerSetDirectionEnum"
-msgstr "IfcLayerSetDirectionEnum"
+msgid "IfcCoordinateOperation_SourceCRS_DEFINITION"
+msgstr "操作的源坐标参考系统。"
 
-msgid "IfcLayerSetDirectionEnum_DEFINITION"
-msgstr "[[IfcLayerSetDirectionEnum]] 提供元素几何形轴的标识，表示图层设定厚度方向或图层偏移方向。 IFC2x中的HISTORY 新型。项目AXIS1 通常x轴。AXIS2 通常是y 轴。AXIS3 Usually z轴。"
+#:IFC.xml:37684
+msgid "IfcCoordinateReferenceSystem"
+msgstr "IfcCoordinateReferenceSystem"
 
-#:IFC.xml:21683
-msgid "IfcLayerSetDirectionEnum_AXIS1"
-msgstr "AXIS1"
+msgid "IfcCoordinateReferenceSystem_DEFINITION"
+msgstr "The [[IfcCoordinateReferenceSystem]] is a definition of a coordinate reference system by means of qualified identifiers only. The interpretation of the identifier is expected to be well known to the receiving software. .extDef NOTE Definition from OpenGIS Abstract Specification, Topic 2 A coordinate reference system is a coordinate system which is related to the real world by a datum. The coordinate system is composed of a set of coordinate axes with specified units of measure. The datum specifies the relationship of a coordinate system to the earth. The resulting combination of coordinate system and datum is a coordinate reference system. The unambiguous identifier by which the coordinate reference system is know, is stored in the Name attribute. Well defined identifiers include the geodetic and often also the vertical datum. In these cases the GeodeticDatum and the VerticalDatum can be omitted. EXAMPLE The identifier EPSG 25832 defines the geodetic datum ETRS89 in additon to the projection and the zone. EPSG 5555 defined the geodetic datum ETRS89 and the vertical datum DHHN92 . NOTE One widely used, publicly available authority is the European Petroleum Survey Group EPSG , and use of this authority is currently specified in several OGC Implementation Specifications. Software used to transport IFC engineering models into GIS applications and vice versa is expected to have knowledge about the OGC Implementation Specifications. HISTORY New entity in IFC4."
 
-msgid "IfcLayerSetDirectionEnum_AXIS1_DEFINITION"
-msgstr "通常是 x 轴。"
+#:IFC.xml:37660
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
+msgstr "HasCoordinate操作"
 
-#:IFC.xml:21684
-msgid "IfcLayerSetDirectionEnum_AXIS2"
-msgstr "AXIS2"
+msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
+msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between this coordinate reference system, and another Geographic coordinate reference system."
 
-msgid "IfcLayerSetDirectionEnum_AXIS2_DEFINITION"
-msgstr "通常是 y 轴。"
+#:IFC.xml:37685
+msgid "IfcCoordinateReferenceSystem_Description"
+msgstr "描述"
 
-#:IFC.xml:21685
-msgid "IfcLayerSetDirectionEnum_AXIS3"
-msgstr "AXIS3"
+msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
+msgstr "Informal description of this coordinate reference system .extDef NOTE In case Name equals WKT the Description is well known text that corresponds to ISO 19162 definition specifying the necessary parameters for the coordinate reference system. Example for ellipsoid ELLIPSOID ,,,"
 
-msgid "IfcLayerSetDirectionEnum_AXIS3_DEFINITION"
-msgstr "通常z轴。"
+#:IFC.xml:37690
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
+msgstr "GeodeticDatum"
 
-#:IFC.xml:21687
-msgid "IfcMaterial"
-msgstr "IfcMaterials"
+msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
+msgstr "Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid s connection and orientation to the actual globe earth. It needs to be provided, if the Name identifier does not unambiguously define the geodetic datum as well. .examples EXAMPLE geodetic datums include .note ED50 EUREF89 WSG84"
 
-msgid "IfcMaterial_DEFINITION"
-msgstr "[[IfcMaterial]] 是一种同质或同质的物质，可用来形成元素物质或其组件。 [[IfcMaterial]] 是材料指定和定义的基本实体，这包括按名称和通过参照外部分类进行分类， 以及物质属性的关联，由子类型[[IfcMaterialProperties]] 界定的各向异性或异性属性。 一个 [[IfcMaterial]] 的实例可能与使用 [[IfcRelAssociatesMaterial]] 关系的元素或元素类型相关联。 转让可以是直接的，作为单一的实质性信息。 或者通过材料层设置了材料配置文件设置了一个材料组成集。[[IfcMaterial]] 也可能有演示信息相关联。 此种演示信息由[[IfcMaterialDefinitionRepresentation]] 提供, 将曲线样式、挂接定义或将渲染信息置于材料的表面颜色。 IFC4 .change ifc2x4 IFC4 变异中的新实体 已添加属性描述和类别。"
+#:IFC.xml:37695
+msgid "IfcCoordinateReferenceSystem_Name"
+msgstr "名称"
+
+msgid "IfcCoordinateReferenceSystem_Name_DEFINITION"
+msgstr "Name by which the coordinate reference system is identified. NOTE 1 The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as EPSG 5555 . .extDef NOTE 2 The name shall be WKT if an EPSG code does not exist for the CRS."
+
+#:IFC.xml:37700
+msgid "IfcCoordinateReferenceSystem_VerticalDatum"
+msgstr "VerticalDatum"
+
+msgid "IfcCoordinateReferenceSystem_VerticalDatum_DEFINITION"
+msgstr "Name by which the vertical datum is identified. The vertical datum is associated with the height axis of the coordinate reference system and indicates the reference plane and fundamental point defining the origin of a height system. It needs to be provided, if the Name identifier does not unambiguously define the vertical datum as well and if the coordinate reference system is a 3D reference system. .examples EXAMPLE vertical datums include .note DHHN92 the German Haupthöhennetz EVRS2007 the European Vertical Reference System"
+
+#:IFC.xml:37707
+msgid "IfcCoordinateReferenceSystemSelect"
+msgstr "IfcCoordinateReferenceSystemSelect"
+
+#:IFC.xml:37708
+msgid "IfcGeometricProjectionEnum"
+msgstr "IfcGeometricProjectionEnum"
+
+msgid "IfcGeometricProjectionEnum_DEFINITION"
+msgstr "[[IfcGeometricProjectionEnum]] 定义了可以用语法区分的各种代表性类型。 形状表示的细节常常不同级别受表示类型的控制，IFC2x2中的HISTORY 新列出。 项目GRAPH VIEW 几何显示示意图，通常是1D 元素表示，例如 通过轴线代表一堵墙。SKETCH VIEW 几何显示表示显示一个抽象，通常是2D 元素表示，例如 代表一堵墙的双脚印边，冲动任何内层的布局。 MODEL VIEW 几何显示表示显示一个完整的3D元素代表性，例如通过其体积体表示一堵墙。 PLAN VIEW Geometric 显示表示显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 从上面可以看到这种预测。 重审的PLAN VIEW 几何表现形式显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 投影情况如下文所示。 SectION VIEW Geometric 显示表示显示了完整的2D元素代表性，详细程度往往取决于目标尺度，例如： 如果元素被线切割，则由其两个内外边缘和所有内层的边缘代表一堵墙。 ELEVATIV 几何表现形式显示了完整的2D元素代表性，详细程度往往取决于目标尺度。 。如果元素在高程视图内，则通过其边界边缘表示墙。 UsERDEFINED 用户定义的规格是由用户定义目标视图属性的值提供的。未提供任何规格。"
+
+#:IFC.xml:37709
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW"
+msgstr "评价视图"
+
+msgid "IfcGeometricProjectionEnum_ELEVATION_VIEW_DEFINITION"
+msgstr "显示全部2D元素代表的几何显示器，详细程度往往取决于目标尺度。 。如果元素在高程视图内，则通过其边界边缘表示墙。"
+
+#:IFC.xml:37710
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW"
+msgstr "巨型视图"
+
+msgid "IfcGeometricProjectionEnum_GRAPH_VIEW_DEFINITION"
+msgstr "Geometric display representation that shows an abstract, often 1D element representation, e.g. representing a wall by its axis line."
+
+#:IFC.xml:37711
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW"
+msgstr "移动视图"
+
+msgid "IfcGeometricProjectionEnum_MODEL_VIEW_DEFINITION"
+msgstr "Geometric display representation that shows a full 3D element representation, e.g. representing a wall by its volumetric body."
+
+#:IFC.xml:37712
+msgid "IfcGeometricProjectionEnum_NOTDEFINED"
+msgstr "未完成"
+
+msgid "IfcGeometricProjectionEnum_NOTDEFINED_DEFINITION"
+msgstr "No specification given."
+
+#:IFC.xml:37713
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW"
+msgstr "播放视图"
+
+msgid "IfcGeometricProjectionEnum_PLAN_VIEW_DEFINITION"
+msgstr "显示完整2D元素代表的几何显示器，详细程度往往取决于目标尺度，例如： 用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 从上面可以看到这种预测。"
+
+#:IFC.xml:37714
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW"
+msgstr "查看的玩家"
+
+msgid "IfcGeometricProjectionEnum_REFLECTED_PLAN_VIEW_DEFINITION"
+msgstr "显示完整2D元素代表的几何显示器，详细程度往往取决于目标尺度，例如： 用它的两个脚印边缘和所有内层的边缘来表示一堵墙。 投影情况如下文所示。"
+
+#:IFC.xml:37715
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW"
+msgstr "节视图"
+
+msgid "IfcGeometricProjectionEnum_SECTION_VIEW_DEFINITION"
+msgstr "显示全部2D元素代表的几何显示器，详细程度往往取决于目标尺度。 。由其两个内外边缘和所有内层的边缘代表一堵墙， 如果该元素被节行剪切。"
+
+#:IFC.xml:37716
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW"
+msgstr "SKETCH视图"
+
+msgid "IfcGeometricProjectionEnum_SKETCH_VIEW_DEFINITION"
+msgstr "几何显示呈现摘要，通常是2D元素表示，例如 代表一堵墙的双脚印边，冲动任何内层的布局。"
+
+#:IFC.xml:37717
+msgid "IfcGeometricProjectionEnum_USERDEFINED"
+msgstr "已使用"
+
+msgid "IfcGeometricProjectionEnum_USERDEFINED_DEFINITION"
+msgstr "A user defined specification is given by the value of the UserDefinedTargetView attribute."
+
+#:IFC.xml:37719
+msgid "IfcGeometricRepresentationContext"
+msgstr "IfcGeometricRepresentationContext"
+
+msgid "IfcGeometricRepresentationContext_DEFINITION"
+msgstr "The [[IfcGeometricRepresentationContext]] defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the WorldCoordinateSystem attribute. The main representation context may also provide the true north direction, see Figure 1. TrueNorth .. .. .. .. figures ifcgeometricrepresentationcontext truenorth.png Figure 1 Definition of the true north direction The TrueNorth attribute should be provided, if the y axis of the WorldCoordinateSystem does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute WorldCoordinateSystem. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not resent, it defaults to 0.,1. i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction. The true North as seen in CAD within Figure 1 shows the correct interpretation of the TrueNorth direction. If a conversion to a geographic coordinate system is included by virtue of the HasCoordinateOperation attribute, then the TrueNorth attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an [[IfcCoordinateOperation]]. The use of one instance of [[IfcGeometricRepresentationContext]] to represent the model 3D view is mandatory, the use of a second instance of [[IfcGeometricRepresentationContext]] to represent the plan 2D view is optional but needs to be given, if there are scale dependent plan views , the additional scale or view dependent contexts need to be handled by using the subtype [[IfcGeometricRepresentationSubContext]] pointing to the model view or the plan view as the ParentContext . See Figure 2 for an example using geometric representation contexts for 3D and 2D with assigned sub contexts. NOTE The inherited attribute ContextType shall have one of the following recognized values Model , Plan , NotDefined . representation context .. .. .. .. figures ifcgeometricrepresentationcontext layout.png Figure 2 Example of using geometric representation contexts Use of representation contexts defined at [[IfcProject]] for 3D model and 2D plan context, including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space. .extDef NOTE Definition according to ISO CD 10303 42 1992 A geometric representation context is a representation context in which the geometric representation items are geometrically founded. NOTE Entity adapted from geometric representation context defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x3 IFC2x3 CHANGE Applicable values for ContextType are only Model , Plan , and NotDefined . All other contexts are now handled by [[IfcGeometricRepresentationSubContext]] . .change ifc2x4 IFC4 CHANGE Mapping to Geographic coordinate system added by inverse attribute HasCoordinateOperation ."
+
+#:IFC.xml:12355
+msgid "IfcGeometricRepresentationContext_TrueNorth"
+msgstr "TrueNorth"
+
+msgid "IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system. It is given by a 2 dimensional direction within the xy plane of the project coordinate system. If not present, it defaults to 0. 1., meaning that the positive Y axis of the project coordinate system equals the geographic northing direction. NOTE If a geographic placement is provided using [[IfcMapConversion]] then the true north is for information only. In case of inconsistency, the value provided with [[IfcMapConversion]] shall take precedence."
+
+#:IFC.xml:37672
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation"
+msgstr "HasCoordinate操作"
+
+msgid "IfcGeometricRepresentationContext_HasCoordinateOperation_DEFINITION"
+msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between a Geographic map coordinate reference system, and the engineering coordinate system of this construction project. If there is more then one [[IfcGeometricRepresentationContext]] provided to the [[IfcProject]] then all contexts shall have an identical instance of [[IfcCoordinateOperation]] as HasCoordinateOperation refering to the same instance of [[IfcCoordinateReferenceSystem]] ."
+
+#:IFC.xml:37738
+msgid "IfcGeometricRepresentationContext_HasSubContexts"
+msgstr "HasSubContexts"
+
+msgid "IfcGeometricRepresentationContext_HasSubContexts_DEFINITION"
+msgstr "The set of IfcGeometricRepresentationSubContexts that refer to this [[IfcGeometricRepresentationContext]] ."
+
+#:IFC.xml:37720
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "坐标空间尺寸"
+
+msgid "IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "坐标空间的整数尺寸计数以几何表示环境为模型。"
+
+#:IFC.xml:37725
+msgid "IfcGeometricRepresentationContext_Precision"
+msgstr "精度"
+
+msgid "IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "几何模型的模型精度值。 这是一个双值 REAL , 通常为1E 5-1E 8 范围内， 这表明了两点仍然被假定相同的容忍度。 这个值可以用来设定从边缘曲线到底面表面的最大距离，以酿造模型。"
+
+#:IFC.xml:37730
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "世界坐标系统"
+
+msgid "IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "Establishment of the engineering coordinate system often referred to as the world coordinate system in CAD for all representation contexts used by the project. NOTE It can be used to provide better numeric stability if the placement of the building s is far away from the origin. In most cases however it would be set to origin 0.,0.,0. and directions x 1.,0.,0. , y 0.,1.,0. , z 0.,0.,1. . If an geographic placement is provided using [[IfcMapConversion]] then the WorldCoordinateSystem atttibute is used to define the offset between the zero point of the local engineering coordinate system and the geographic reference point to which the [[IfcMapConversion]] offset relates. In preferred practise both points also called project base point and survey point should be coincidental. However it is possible to offset the geographic reference point from the local zero point."
+
+#:IFC.xml:37752
+msgid "IfcGeometricRepresentationSubContext"
+msgstr "IfcGeometricRepresentationSubContext"
+
+msgid "IfcGeometricRepresentationSubContext_DEFINITION"
+msgstr "[[IfcGeometricRepresentationSubContext]] defines the context that applies to several shape representations of a product being a sub context, sharing the WorldCoordinateSystem , CoordinateSpaceDimension , Precision and TrueNorth attributes with the parent [[IfcGeometricRepresentationContext]] . The [[IfcGeometricRepresentationSubContext]] is used to define semantically distinguished representation types for different information content, dependent on the representation view and the target scale. It can be used to control the level of detail of the shape representation that is most applicable to this geometric representation context. In addition the sub context is used to control the later appearance of the [[IfcShapeRepresentation]] within a plot view. NOTE If the [[IfcShapeRepresentation]] using this sub context has [[IfcStyledItem]] s assigned to the Items , the presentation style information e.g. [[IfcCurveStyle]] , [[IfcTextStyle]] associated with the [[IfcStyledItem]] is given in target plot dimensions. For example, a line thickness [[IfcCurveStyle]].CurveWidth is given by a thickness measure relating to the thickness for a plot within the range of target scale. Each [[IfcProduct]] can then have several instances of subtypes of [[IfcRepresentation]] , each being assigned to a different [[IfcGeometricRepresentationSubContext]] . The applicable values for the inherited ContextIdentifier attribute shall be identical to the RepresentationIdentifier attrubute defined at [[IfcShapeRepresentation]] . NOTE The provision of a model view [[IfcGeometricRepresentationContext]].ContextType Model is mandatory. Instances of [[IfcGeometricRepresentationSubContext]] relate to it as its ParentContext . EXAMPLE Instances of [[IfcGeometricRepresentationSubContext]] can be used to handle the multi view blocks or macros, which are used in CAD programs to store several scale and or view dependent geometric representations of the same object. The application can then choose the most appropriate representation for showing the geometric shape of the product, depending on the target view and scale. HISTORY New entity in IFC2x2."
+
+#:IFC.xml:37738
+msgid "IfcGeometricRepresentationSubContext_ParentContext"
+msgstr "ParentContext"
+
+msgid "IfcGeometricRepresentationSubContext_ParentContext_DEFINITION"
+msgstr "Parent context from which the sub context derives its world coordinate system, precision, space coordinate dimension and true north."
+
+#:IFC.xml:37753
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension"
+msgstr "SELF IfcGeometricRepresentationContext CoordinateSpaceDimension"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_CoordinateSpaceDimension_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].CoordinateSpaceDimension"
+
+#:IFC.xml:37758
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision"
+msgstr "SELF IfcGeometricRepresentationContext Precision"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_Precision_DEFINITION"
+msgstr "精准度 [[IfcGeometricRepresentationContext]]"
+
+#:IFC.xml:37763
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth"
+msgstr "SELF IfcGeometricRepresentationContext TrueNorth"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_TrueNorth_DEFINITION"
+msgstr "SELF [[IfcGeometricRepresentationContext]].TrueNorth"
+
+#:IFC.xml:37767
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem"
+msgstr "SELF IfcGeometricRepresentationContext WorldCoordinatesSystem"
+
+msgid "IfcGeometricRepresentationSubContext_SELF_IfcGeometricRepresentationContext_WorldCoordinateSystem_DEFINITION"
+msgstr "环形 [[IfcGeometricRepresentationContext]].WorldCoordinateSystem"
+
+#:IFC.xml:37772
+msgid "IfcGeometricRepresentationSubContext_TargetScale"
+msgstr "目标比例"
+
+msgid "IfcGeometricRepresentationSubContext_TargetScale_DEFINITION"
+msgstr "The target plot scale of the representation to which this representation context applies. NOTE Scale indicates the target plot scale for the representation sub context, all annotation styles are given in plot dimensions according to this target plot scale. If multiple instances of [[IfcGeometricRepresentationSubContext]] are given having the same TargetView value, the target plot scale applies up to the next smaller scale, or up to unlimited small scale. NOTE Scale 1 100 given as 0.01 within TargetScale is bigger then 1 200 given as 0.005 within TargetScale ."
+
+#:IFC.xml:37777
+msgid "IfcGeometricRepresentationSubContext_TargetView"
+msgstr "目标视图"
+
+msgid "IfcGeometricRepresentationSubContext_TargetView_DEFINITION"
+msgstr "这种代表情况所适用的代表的目标观点。"
+
+#:IFC.xml:37782
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView"
+msgstr "用户定义目标视图"
+
+msgid "IfcGeometricRepresentationSubContext_UserDefinedTargetView_DEFINITION"
+msgstr "用户定义的目标视图，如果目标视图属性设置为 USERDEFINED，则必须给出此属性值。"
+
+#:IFC.xml:37789
+msgid "IfcGlobalOrLocalEnum"
+msgstr "IfcGlobalOrLocalEnum"
+
+msgid "IfcGlobalOrLocalEnum_DEFINITION"
+msgstr "这种列举类型定义了是否使用了项目的当地天体协调系统或全球世界坐标系统来描述提及这种类型的实体的测量值。 注意世界坐标系由 [[IfcGeometricRepresentationContext]].WorldCoordinateSystem 提供，并且在项目中是唯一的。 本地或对象坐标系由 [[IfcProduct]]给出。 喷射位置，被[[IfcProduct]]内的所有 [[IfcRepresentation]] 秒使用。 IFC2x2中新的枚举。项目 GLOBAL COORDS 是使用的全局项目协调系统。 本地对象协调系统。"
+
+#:IFC.xml:37790
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS"
+msgstr "全局焦点"
+
+msgid "IfcGlobalOrLocalEnum_GLOBAL_COORDS_DEFINITION"
+msgstr "使用了全球项目协调系统。"
+
+#:IFC.xml:37791
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS"
+msgstr "本地课程"
+
+msgid "IfcGlobalOrLocalEnum_LOCAL_COORDS_DEFINITION"
+msgstr "The local object coordinate system is used."
+
+#:IFC.xml:37793
+msgid "IfcMapConversion"
+msgstr "IfcMap转换"
+
+msgid "IfcMapConversion_DEFINITION"
+msgstr "The map conversion deals with transforming the local engineering coordinate system, often called world coordinate system, into the coordinate reference system of the underlying map. NOTE The [[IfcMapConversion]] does not handle the projection of a map from the geodetic coordinate reference system. The map conversion allows to convert the local origin of the local engineering coordinate system to its place within a map easting, northing, orthogonal height and to rotate the x axis of the local engineering coordinate system within the horizontal easting westing plane of the map. NOTE The z axis of the local engineering coordinate system is always parallel to the z axis of the map coordinate system. The scale factor can be used when the length unit for the 3 axes of the map coordinate system are not identical with the length unit established for this project see [[IfcProject]].UnitsInContext , if omitted, the scale factor 1.0 is assumed. HISTORY New entity in IFC4"
+
+#:IFC.xml:37794
+msgid "IfcMapConversion_Eastings"
+msgstr "连环画"
+
+msgid "IfcMapConversion_Eastings_DEFINITION"
+msgstr "Specifies the location along the easting of the coordinate system of the target map coordinate reference system. NOTE for right handed Cartesian coordinate systems this would establish the location along the x axis."
+
+#:IFC.xml:37799
+msgid "IfcMapConversion_Northings"
+msgstr "Norths"
+
+msgid "IfcMapConversion_Northings_DEFINITION"
+msgstr "Specifies the location along the northing of the coordinate system of the target map coordinate reference system. NOTE for right handed Cartesian coordinate systems this would establish the location along the y axis"
+
+#:IFC.xml:37804
+msgid "IfcMapConversion_OrthogonalHeight"
+msgstr "垂直高度"
+
+msgid "IfcMapConversion_OrthogonalHeight_DEFINITION"
+msgstr "Orthogonal height relativ to the vertical datum specified. NOTE for right handed Cartesian coordinate systems this would establish the location along the z axis"
+
+#:IFC.xml:37809
+msgid "IfcMapConversion_Scale"
+msgstr "缩放比例"
+
+msgid "IfcMapConversion_Scale_DEFINITION"
+msgstr "当CRS的单位与工程坐标系统的单位不完全相同时，应使用的缩放。 如果留空，则假定值为1.0。"
+
+#:IFC.xml:37814
+msgid "IfcMapConversion_ScaleY"
+msgstr "缩放Y"
+
+msgid "IfcMapConversion_ScaleY_DEFINITION"
+msgstr "Scale Y by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+
+#:IFC.xml:37819
+msgid "IfcMapConversion_ScaleZ"
+msgstr "缩放Z"
+
+msgid "IfcMapConversion_ScaleZ_DEFINITION"
+msgstr "Scale Z by which the length measures in local engineering CS have to be multiplied to get map coordinates"
+
+#:IFC.xml:37824
+msgid "IfcMapConversion_XAxisAbscissa"
+msgstr "XAxisAbscissa"
+
+msgid "IfcMapConversion_XAxisAbscissa_DEFINITION"
+msgstr "Specifies the value along the easing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system. NOTE 1 for right handed Cartesian coordinate systems this would establish the location along the x axis NOTE 2 together with the XAxisOrdinate it provides the direction of the local x axis within the horizontal plane of the map coordinate system"
+
+#:IFC.xml:37829
+msgid "IfcMapConversion_XAxisOrdinate"
+msgstr "XAxisOrdate"
+
+msgid "IfcMapConversion_XAxisOrdinate_DEFINITION"
+msgstr "Specifies the value along the northing axis of the end point of a vector indicating the position of the local x axis of the engineering coordinate reference system. NOTE 1 for right handed Cartesian coordinate systems this would establish the location along the y axis .note XAxisAbscissa it provides the direction of the local x axis within the horizontal plane of the map coordinate system."
+
+#:IFC.xml:37836
+msgid "IfcMaterialDefinitionRepresentation"
+msgstr "IfcMaterialDefinitionRepresentation"
+
+msgid "IfcMaterialDefinitionRepresentation_DEFINITION"
+msgstr "[[IfcMaterialDefinitionRepresentation]] 定义了与 [[IfcMaterial]] 相关的演示信息。 它允许在不同几何表现环境下多次介绍同一材料。 注： [[IfcMaterialDefinitionRepresentation]] 目前仅用于定义元素发生时所用材料的演示信息， 定义为子类型 [[IfcElement]] 或元素类型，定义为子类型 [[IfcElementType]] 。 [[IfcMaterial]] 被分配到子类型 [[IfcElement]] ， 或 [[IfcElementType]] 最终通过其他材料相关实体使用 [[IfcRelAssociatesMaterial]] 关系 [[IfcMaterialLayerSetUsage]] [[IfcMaterialLayerSet]] , [[IfcMaterialLayer]] , 或 [[IfcMaterialProfileSetUsage]] , [[IfcMaterialProfileSet]] , [[IfcMaterialProfile]] . . [[IfcMaterialDefinitionRepresentation]] 可以对不同的表述方式应用不同的表述方式。 例如，草图视图，模型视图或计划视图的不同样式。 或者对于不同的目标尺度，对于每个表示环境来说，可以应用曲线风格，填满区域风格，符号，文字和表面风格。 IFC2x3中的新实体。更改ifc2x3 IFC2x3 更改已添加 [[IfcMaterialDefinitionRepresentation]] 实体。 基于文件交换的更新兼容性得到保证。 挂载ifc2x4 IFC4 变换. 曲线、表面和其他样式的分配由 IfcStyleAssignmentSelect 简化为 [[IfcStyledItem]] 。 不建议使用中间的 IfcPresentationStyleDelegation 。使用头使用定义使用关系图。 ... ... fcmaterialdefinitionrepresentation 01。 ng 图1 如图1所示的材料定义说明 演示作业可以通过添加一个或多个[[IfcStyledRepresentation]] 来专门针对一个演示背景。 每个曲线都包含一个纯为零的[[IfcStyledItem]] 或一种风格， 填充可适用的面积、表面、文本或符号风格。"
 
 #:IFC.xml:21729
-msgid "IfcMaterial_HasRepresentation"
-msgstr "急速代表"
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial"
+msgstr "演示材料"
 
-msgid "IfcMaterial_HasRepresentation_DEFINITION"
-msgstr "在风格定义中提到了为这个材料的共同表示提供演示信息的 [[IfcMaterialDefinitionRepresentation]] 。 .change ifc2x3 IFC2x3 变异已添加反向属性 HasRepresentative."
+msgid "IfcMaterialDefinitionRepresentation_RepresentedMaterial_DEFINITION"
+msgstr "请参阅陈述所适用的材料。"
 
-#:IFC.xml:21779
-msgid "IfcMaterial_RelatesTo"
-msgstr "关联到"
+#:IFC.xml:37839
+msgid "IfcProductDefinitionShape"
+msgstr "IfcProductDefinitionShape"
 
-msgid "IfcMaterial_RelatesTo_DEFINITION"
-msgstr "提及材料关系显示此材料复合有零件或组件。 .更改ifc2x4 IFC4 变异属性。"
+msgid "IfcProductDefinitionShape_DEFINITION"
+msgstr "The [[IfcProductDefinitionShape]] defines all shape relevant information about an [[IfcProduct]] . It allows for multiple geometric shape representations of the same product. The shape relevant information includes the shape representation including geometric representation items for 3D solids, 2D annotations, etc. and associated presentation information line color, line type, surface rendering properties assignment to presentation layers CAD layers for visibility control or the topological representation items for connectivity systems vertex, edge, face representations that may include geometric representation items vertex points, edge curves, face surfaces NOTE The definition of this entity relates to the ISO 10303 entity product definition shape. Please refer to ISO IS 10303 41 1994 for the final definition of the formal standard. HISTORY New entity in IFC1.5"
 
-#:IFC.xml:21793
-msgid "IfcMaterial_IsRelatedWith"
-msgstr "与世隔绝的"
+#:IFC.xml:20859
+msgid "IfcProductDefinitionShape_ShapeOfProduct"
+msgstr "ShapeOfProduct"
 
-msgid "IfcMaterial_IsRelatedWith_DEFINITION"
-msgstr "系指表明该材料是材料合成物中的一部分或成分的物质关系。 .更改ifc2x4 IFC4 变异属性。 反属性已添加。"
+msgid "IfcProductDefinitionShape_ShapeOfProduct_DEFINITION"
+msgstr "必须使用 [[IfcProductDefinitionShape]] 为一个或多个实例提供代表 [[IfcProduct]] 。 hange ifc2x3 IFC2x3 变异新反向属性。"
 
-#:IFC.xml:21688
-msgid "IfcMaterial_Category"
-msgstr "类别"
+#:IFC.xml:37843
+msgid "IfcProductDefinitionShape_HasShapeAspects"
+msgstr "HasShapeAspects"
 
-msgid "IfcMaterial_Category_DEFINITION"
-msgstr "类别组或材料类型的定义，以比属性名称更概括。 EXAMPLE 视图定义可能要求每个材料名称都是唯一的，例如： 对于一个项目所使用的每个混凝土或钢种，在这种情况下，材料类可采用混凝土或钢种的数值。 .更改ifc2x4 IFC4 变迁. 属性已添加到属性列表的末尾。"
+msgid "IfcProductDefinitionShape_HasShapeAspects_DEFINITION"
+msgstr "提及形状或特征的部分形状方面。"
 
-#:IFC.xml:21693
-msgid "IfcMaterial_Description"
+#:IFC.xml:37855
+msgid "IfcProductRepresentation"
+msgstr "IfcProductRepresentation"
+
+msgid "IfcProductRepresentation_DEFINITION"
+msgstr "[[IfcProductRepresentation]] 界定了产品的代表性，包括其几何形状或地形特征。 一种产品可以是零、一种或多种几何表现，单一几何表现形式可以在各种产品之间使用映射进行分享。 注该实体的定义涉及ISO 10303实体属性定义。 避免了财产一词的使用，因为它与国际金融公司模式其他地方的财产、财产类型和财产设定定义相冲突。 IFC2.0 .change ifc2x3 IFC2x3 Note 用户不应从IFC2x3 开始实例化该实体。如果变更IF2x4 IFC4 变异实体就会抽象了。"
+
+#:IFC.xml:37867
+msgid "IfcProductRepresentation_Representations"
+msgstr "B. 代表"
+
+msgid "IfcProductRepresentation_Representations_DEFINITION"
+msgstr "包括形状陈述在内的陈述清单。每个成员界定在特定代表范围内某一特定类型的有效代表。"
+
+#:IFC.xml:37856
+msgid "IfcProductRepresentation_Description"
 msgstr "描述"
 
-msgid "IfcMaterial_Description_DEFINITION"
-msgstr "材料的定义比属性名称或类别更具描述性。 .更改ifc2x4 IFC4 变迁. 属性已添加到属性列表的末尾。"
+msgid "IfcProductRepresentation_Description_DEFINITION"
+msgstr "描述产品表现形式的单词或单词组。 它可以用来为产品表示的名称添加额外的含义。"
 
-#:IFC.xml:21698
-msgid "IfcMaterial_Name"
+#:IFC.xml:37861
+msgid "IfcProductRepresentation_Name"
 msgstr "名称"
 
-msgid "IfcMaterial_Name_DEFINITION"
-msgstr "材料名称。EXAMPLE A view definition may required Material.Name to indext specified e.g. 水泥或钢钢种，在这种情况下属性材料。 类别可以使用混凝土或钢的值。注材料级在不同视图定义中可能有不同的含义。 a. 结构设计和分析的强度等级，或建筑应用的外观等级。 此外，更详细的物质等级定义也可以通过反向属性Hasternalreferency进行分类。"
+msgid "IfcProductRepresentation_Name_DEFINITION"
+msgstr "产品表现形式所用的单词或单词组."
 
-#:IFC.xml:21807
-msgid "IfcMaterialClassificationRelationship"
-msgstr "IfcMaterialClassificationRelationRelations"
+#:IFC.xml:37881
+msgid "IfcProductRepresentationSelect"
+msgstr "IfcProductRepresentationSelect"
 
-msgid "IfcMaterialClassificationRelationship_DEFINITION"
-msgstr "[[IfcMaterialClassificationRelationship]] 是指将分类分配给材料的关系，IFC2x中的新实体。 挂机ifc2x4 IFC4 变换器 实体[[IfcMaterialClassificationRelationship]] 自IFC4 以来已废弃，不再使用。使用 [[IfcExternalReferenceRelationship]] 代替。"
+#:IFC.xml:37882
+msgid "IfcProjectedCRS"
+msgstr "IfcProjectedCRS"
 
-#:IFC.xml:21705
-msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial"
-msgstr "分类材料"
+msgid "IfcProjectedCRS_DEFINITION"
+msgstr "[[IfcProjectedCRS]] 是地图的坐标参考系统，与该系统有关的是建筑或设施工程项目当地工程坐标系统的地图翻译。 地图投影和地图区属性独特地确定了对基本地理坐标参考系统的投影方式。 但条件是它们在接收申请中是众所周知的。 预计的坐标参考系统假定是2D或3D右手的Cartesian坐标系统。 可选的 MapUnit 属性可以用来决定地图使用的长度单位。 xtDef NotE Definition from OpenGIS Abstract Specification, 主题2 A 2D 或 垂直坐标轴3D 坐标参照系统，用于近似平面上的地球形状； 但这样做是为了仔细控制和了解近似值所固有的扭曲。 扭曲校正通常适用于计算出来的轴承和距离，以产生与实际字段值密切匹配的值。 对坐标参考系统的明确识别码存放在继承的名称属性中。 精心定义的标识符包括地图投影和地图区域信息。 在这些情况下，可以省略MapProjection和MapZ区属性。 EXAMPLE The identificer EPSG 25832 defined the map投影UTM and the zone 32N in addon to 大地测量和垂直基准. IFC4中的新实体。"
 
-msgid "IfcMaterialClassificationRelationship_ClassifiedMaterial_DEFINITION"
-msgstr "正在进行分类的材料。"
+#:IFC.xml:23320
+msgid "IfcProjectedCRS_MapUnit"
+msgstr "地图单位"
 
-#:IFC.xml:21808
-msgid "IfcMaterialClassificationRelationship_MaterialClassifications"
-msgstr "材料分类"
+msgid "IfcProjectedCRS_MapUnit_DEFINITION"
+msgstr "构造地图坐标系统的坐标轴单位。 注1 仅限长度措施，地图坐标系统的所有两或三个轴均应有相同长度单位。 注2 如果留空了地图单位，坐标轴的单位将从默认单位中取出，正如[[IfcProject]].UnitInContext中所述。"
 
-msgid "IfcMaterialClassificationRelationship_MaterialClassifications_DEFINITION"
-msgstr "确定材料类型的材料分类。"
+#:IFC.xml:37883
+msgid "IfcProjectedCRS_MapProjection"
+msgstr "地图投影图"
 
-#:IFC.xml:21814
-msgid "IfcMaterialConstituent"
-msgstr "IfcMaterialConstitution"
+msgid "IfcProjectedCRS_MapProjection_DEFINITION"
+msgstr "识别地图投影的名称。示例EXAMPLE 映射项目包括 .note UTM Gaus Krueger"
 
-msgid "IfcMaterialConstituent_DEFINITION"
-msgstr "[[IfcMaterialConstituent]] 是一个元素的单个和可识别的部分，由一个或多个元素的若干部分构造，每个元素都有一个单独的材料。 作为名称属性的值的关键字提供了该部件材料成分的关联。 为了确定和区分重要成分所适用的形状的部分，该元素的[[IfcProductDefinitionShape]]必须包括[[IfcShapeAspect]] 的实例， 对其名称属性使用相同的关键字。 注请参阅单个元素上的材料使用定义，在这个元素中，[[IfcMaterialConstituentSet]] 可以申请此种关键字的所需定义或推荐定义为[[IfcMaterialConstituent]]。 同名。IFC4中的新实体"
+#:IFC.xml:37888
+msgid "IfcProjectedCRS_MapZone"
+msgstr "MapZone"
 
-#:IFC.xml:21717
-msgid "IfcMaterialConstituent_Material"
-msgstr "材料"
+msgid "IfcProjectedCRS_MapZone_DEFINITION"
+msgstr "识别与地图投影相关的地图区域名称。示例EXAMPLE ot 为 UTM, 区域编号, 例如32, UTM32, Gaus Krueger, 纵向宽度区域, 例如3"
 
-msgid "IfcMaterialConstituent_Material_DEFINITION"
-msgstr "参照构成该组成的材料。"
+#:IFC.xml:37895
+msgid "IfcRepresentation"
+msgstr "Ifcrepresentation"
 
-#:IFC.xml:21837
-msgid "IfcMaterialConstituent_ToMaterialConstituentSet"
-msgstr "ToMaterialConstituentSet"
+msgid "IfcRepresentation_DEFINITION"
+msgstr "[[IfcRepresentation]] 定义了代表产品属性特别是产品形状的一般概念。 xtdef NotCEE Definition from ISO 10303 43 A representation is a collection of one or more representative items that are related in a specific representative context. 代表项目与代表背景的关系是区分哪些代表项目实体相关的基础。 当一个要素是一项代表时，一个代表项目可以直接与代表情况有关。 如果它通过任何参与性实体的任何数目加以参考，则每种类型的代表项目都应予以参照。 从ISO 10303 42界定的代表中改编的注实体，《IF2.0》中的新实体就是如此。 挂载ifc2x3 IFC2x3 变换. 反向属性LayerAssignements and RepresentationMap 已经添加了向上兼容性。 .change ifc2x4 IFC4 变更实体 [[IfcRepresentation]] 已被更改为 ABSTRACT 超级类型。 se head Representation Use definition each representative, or [[IfcShapeRepresentation]] , 或 [[IfcTopologyRepresentation]] 应有一个明确定义的内容来指为此代表同意的 [[IfcGeometricRepresentationContext]] 。 代表名称，例如3D形状的物体，2D地面视图的印本，参考轴的轴。 几何形状或表面类型的代表类型名称，例如，3D 干燥固体的SweptSolid，边界形成。 在每个子类型[[IfcElement]] 的几何使用定义部分中提供了对这些属性应用正确值的注指南。 这些准则可以在定义或执行协定中进一步加以完善。"
 
-msgid "IfcMaterialConstituent_ToMaterialConstituentSet_DEFINITION"
-msgstr "含有这种材料成分的材料组合。"
+#:IFC.xml:12941
+msgid "IfcRepresentation_Items"
+msgstr "项目"
 
-#:IFC.xml:21815
-msgid "IfcMaterialConstituent_Category"
-msgstr "类别"
+msgid "IfcRepresentation_Items_DEFINITION"
+msgstr "为这种表示定义的几何表示项目集。"
 
-msgid "IfcMaterialConstituent_Category_DEFINITION"
-msgstr "物质构成的类别，例如它在其所属的成套成分中所起的作用。"
+#:IFC.xml:12987
+msgid "IfcRepresentation_RepresentationMap"
+msgstr "代表地图"
 
-#:IFC.xml:21820
-msgid "IfcMaterialConstituent_Description"
-msgstr "描述"
+msgid "IfcRepresentation_RepresentationMap_DEFINITION"
+msgstr "使用 [[IfcRepresentationMap]] 内的表示方式。 如果使用，此 [[IfcRepresentation]] 可能会被分配给许多表示作为其项目之一，使用一个 [[IfcMappedItem]] 。 使用 [[IfcRepresentationMap]] 是分享多种产品常常类型[[IfcShapeRepresentation]的一个代表性的方式。 .更改ifc2x3 IFC2x3 变异已添加"
 
-msgid "IfcMaterialConstituent_Description_DEFINITION"
-msgstr "实质性成分的定义是描述性的。"
+#:IFC.xml:27489
+msgid "IfcRepresentation_LayerAssignments"
+msgstr "图层分配"
 
-#:IFC.xml:21825
-msgid "IfcMaterialConstituent_Fraction"
-msgstr "分数"
+msgid "IfcRepresentation_LayerAssignments_DEFINITION"
+msgstr "将整个表示权分为单一或多层……。 LayerAssigments 可以被项目列表中的 [[IfcRepresentationItem]] 的LayerAssigations 覆盖。 Note Implementation agreements can maximum number of layer assignments to 1. .change ifc2x3 IFC2x3 变异已添加"
 
-msgid "IfcMaterialConstituent_Fraction_DEFINITION"
-msgstr "Optional provision of a fraction of the total amount volume or weight that applies to the [[IfcMaterialConstituentSet]] that is contributed by this [[IfcMaterialConstituent]] ."
+#:IFC.xml:37867
+msgid "IfcRepresentation_OfProductRepresentation"
+msgstr "OfProductRepresentation"
 
-#:IFC.xml:21830
-msgid "IfcMaterialConstituent_Name"
-msgstr "名称"
+msgid "IfcRepresentation_OfProductRepresentation_DEFINITION"
+msgstr "提及这种个人代表所适用的产品说明。 在大多数情况下，它是指一种或多种产品形状，这种形状的表述适用于这种形态。 .fc2x4 IFC4 变异关系卡性放松为0N。"
 
-msgid "IfcMaterialConstituent_Name_DEFINITION"
-msgstr "物件组成所用的名称。"
+#:IFC.xml:37908
+msgid "IfcRepresentation_ContextOfItems"
+msgstr "上下文项"
 
-#:IFC.xml:21849
-msgid "IfcMaterialConstituentSet"
-msgstr "IfcMaterialConstituentSet"
+msgid "IfcRepresentation_ContextOfItems_DEFINITION"
+msgstr "各类代表有效的代表环境定义。"
 
-msgid "IfcMaterialConstituentSet_DEFINITION"
-msgstr "[[IfcMaterialConstituentSet]] 是个别材料成分的集合，每个成分将一个材料分配给某个元素的一部分。 零件只用关键字识别，而不是每个零件都有一个形状参数层厚度或图层配置文件的 [[IfcMaterialLayerSet]] 或 [[IfcMaterialProfileSet]] 。 应为窗口铺设和玻璃提供不同的材料。 一个 [[IfcMaterialConstituentSet]] 被分配到窗口，两个[[IfcMaterialConstituent]] 一个带有名称的光芒，一个带有名称的光芒。 注在单个元素上看材料使用定义，一个[[IfcMaterialConstituentSet]] 可能适用于此种关键词的必要定义或推荐定义。 IFC4中的新实体。"
+#:IFC.xml:37896
+msgid "IfcRepresentation_RepresentationIdentifier"
+msgstr "标识符"
 
-#:IFC.xml:21837
-msgid "IfcMaterialConstituentSet_MaterialConstituents"
-msgstr "材料组件"
+msgid "IfcRepresentation_RepresentationIdentifier_DEFINITION"
+msgstr "项目中使用的可选标识符。"
 
-msgid "IfcMaterialConstituentSet_MaterialConstituents_DEFINITION"
-msgstr "2. 确定构成材料成分的构成部分。"
+#:IFC.xml:37901
+msgid "IfcRepresentation_RepresentationType"
+msgstr "代表性类型"
 
-#:IFC.xml:21850
-msgid "IfcMaterialConstituentSet_Description"
-msgstr "描述"
+msgid "IfcRepresentation_RepresentationType_DEFINITION"
+msgstr "表述类型的描述。表述类型界定了代表产品表述所用的几何类型或地形。 子类型 [[IfcShapeRepresentation]] 和 [[IfcTopologyRepresentation]] 提供了更多信息。 支持的上下文类型值将由执行者协议具体规定。"
 
-msgid "IfcMaterialConstituentSet_Description_DEFINITION"
-msgstr "对成套实质性成份的定义是描述性的。"
+#:IFC.xml:37922
+msgid "IfcRepresentationContext"
+msgstr "IfcRepresentationContext"
 
-#:IFC.xml:21855
-msgid "IfcMaterialConstituentSet_Name"
-msgstr "名称"
+msgid "IfcRepresentationContext_DEFINITION"
+msgstr "[[IfcRepresentationContext]] 定义了一个产品的 [[IfcRepresentation]] 所关联的上下文. xtdef NotTE定义来自ISO 10303 42 表示环境是一系列表示项目相关联的背景。 根据ISO 10303 42界定的代表环境调整的注实体，《国际化学品统一分类和标签制度》（IFC1.5）中的新实体。 .自从IFC2x4 IFC4 变异实体抽象后已从实例化中废弃。"
 
-msgid "IfcMaterialConstituentSet_Name_DEFINITION"
-msgstr "该组建的名称已知晓。"
+#:IFC.xml:37908
+msgid "IfcRepresentationContext_RepresentationsInContext"
+msgstr "RepresentationsInContext"
 
-#:IFC.xml:21862
-msgid "IfcMaterialDefinition"
-msgstr "IfcMaterial定义"
+msgid "IfcRepresentationContext_RepresentationsInContext_DEFINITION"
+msgstr "所有形状的表述都是在相同的表述环境下定义的。"
 
-msgid "IfcMaterialDefinition_DEFINITION"
-msgstr "[[IfcMaterialDefinition]] 是 IFC 中具有共同材料相关属性的所有与材料相关的信息项目的一般超型，可能包括将材料与某种形状参数关联或指派给一个组件的指定部分。 将材料分配给单一组件或多个组件的方法有三种，它们被定性为图层，通过剖面将材料分配给具有不同形状的常量的图层，通过成份将材料分配给一个图层，然后通过成份将材料分配给某个组件形状的指定部分来进行输出。识别是由关键词而不是形状参数来进行的。每个瞬时子类型[[IfcMaterialDefinition]可能具有物质特性被赋予， 或对其定义有外部分类。 它可以分配给子类型[[IfcElement]] , 或使用客观关系 [[IfcRelAssociatesMaterial]] 的子类型 [[IfcElementType]] 。 IFC4 中的新实体"
+#:IFC.xml:37923
+msgid "IfcRepresentationContext_ContextIdentifier"
+msgstr "ContextIdentifier"
 
-#:IFC.xml:9490
-msgid "IfcMaterialDefinition_HasExternalReferences"
+msgid "IfcRepresentationContext_ContextIdentifier_DEFINITION"
+msgstr "项目中使用的表示环境的可选标识符。"
+
+#:IFC.xml:37928
+msgid "IfcRepresentationContext_ContextType"
+msgstr "上下文类型"
+
+msgid "IfcRepresentationContext_ContextType_DEFINITION"
+msgstr "表示环境的类型描述。支持的上下文类型值将由执行者协议具体规定。"
+
+#:IFC.xml:37934
+msgid "IfcRepresentationContextSameWCS"
+msgstr "IfcRepresentationContextSameWCS"
+
+#:IFC.xml:37942
+msgid "IfcSameValidPrecision"
+msgstr "IfcSameValidPrecision"
+
+#:IFC.xml:37950
+msgid "IfcShapeAspect"
+msgstr "IfcShapeAspect"
+
+msgid "IfcShapeAspect_DEFINITION"
+msgstr "[[IfcShapeAspect]] 允许对代表产品形状的形状项目进行分组，这些项目代表产品形状的各个方面或组件。 因此，产品形状组成部分的形状代表着可以明确处理的产品的一个独特部分。 [[IfcShapeAspect]] s可能有与产品形状的其他部分不同的材料资料或其他显像特性。 注[[IfcShapeAspect]] 和[[IfcMaterialConstituent]] 可以用来将分形材料信息与产品形状表示的部分内容联系起来。 图1显示物质特性与形状的各个方面之间的联系……。 ... fcshapeaspect fig1.png 图1 与材料关联的形状. 从ISO 10303 41 产生的 xtDef 注解定义 一个形状方面是一个物体形状的可识别元素。 注实体从ISO 10303 42中界定的形状部分改装，IFC2中的新实体。 .更改 ifc2x4 IFC4 更改属性Party OfProductDefinitionShape 声明为OPTIA上，并扩展到以 [[IfcProductRepresentationSelect]为基础的文件交换向上兼容。 pec head Informal Propositions 1。 如果ShaperRepresentations 指向形状表示是[[IfcProductDefinitionShape]] 的一部分， PartofProductDefinitionShape 必须指这个实例 [[IfcProductDefinitionShape]] 。 2. 如果ShapeRepresentations 指向形状是[[IfcRepresentationMap]] 的一部分， PartofProductDefinitionShape 必须指这个实例 [[IfcRepresentationMap]] 。"
+
+#:IFC.xml:9538
+msgid "IfcShapeAspect_HasExternalReferences"
 msgstr "HasExternalReferences"
 
-msgid "IfcMaterialDefinition_HasExternalReferences_DEFINITION"
-msgstr "参考与材料有关的外部参考资料，例如图书馆、分类或文件资料。 .更改ifc2x4 IFC4 变异属性。 反属性已添加。"
+msgid "IfcShapeAspect_HasExternalReferences_DEFINITION"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:21866
-msgid "IfcMaterialDefinition_HasProperties"
-msgstr "HasProperties"
+#:IFC.xml:37973
+msgid "IfcShapeAspect_ShapeRepresentations"
+msgstr "形状表示"
 
-msgid "IfcMaterialDefinition_HasProperties_DEFINITION"
-msgstr "分配给子类型 [[IfcMaterialDefinition]] 实例的材料属性。 .更改ifc2x4 IFC4 变异属性。 反属性已被添加。"
+msgid "IfcShapeAspect_ShapeRepresentations_DEFINITION"
+msgstr "形状的表达式列表。 每个成员将某一特定类别的有效代表权定义为产品定义的一个方面或一部分。 .更改ifc2x3 IFC2x3 变迁. 数据类型已经从[[IfcShapeRepresentation]] 改为[[IfcShapeModel]] ，并且向上兼容性"
 
-#:IFC.xml:21880
-msgid "IfcMaterialDefinition_AssociatedTo"
-msgstr "关联到"
-
-msgid "IfcMaterialDefinition_AssociatedTo_DEFINITION"
-msgstr "在元素发生或元素类型的物质关联中使用 [[IfcMaterialDefinition]] 个子类型。 关联由 [[IfcRelAssociatesMaterial]] 关系建立。.change ifc2x4 IFC4 变异属性已被添加。"
-
-#:IFC.xml:21892
-msgid "IfcMaterialLayer"
-msgstr "IfcMaterialLayer"
-
-msgid "IfcMaterialLayer_DEFINITION"
-msgstr "[[IfcMaterialLayer]] 是一个由多层或多层构造的元素的单一和可识别部分。 每一个 [[IfcMaterialLayer]] 都有恒定厚度，相对于材料层集底座的参考值 [[IfcMaterialLayerSet]] 。 物质层内的空隙表示为[[IfcMaterialLayer]]，属性IsVentified 具有TRUE或UNKNOWN的值。 这种空隙应被解释为没有材料的空隙。 EXAMPLE A cavity wall with brick masonry used with an air bette between will be moduled by three [[IfcMaterialLayer]] s 1 积木， 2 空气差距，3 砖。 内层积木将有一个命名积木，一个单独的LayerThicknes，且可能有一个类别表示它装载， 一个优先级，控制这个材料层如何与其他材料层在墙上的连接中相互作用。 [[IfcMaterialLayer]] 的材料层名称可能不同于所引用的 [[IfcMaterial]] 名称。 EXAMPLE [[IfcMaterialLayer]] 绝缘层的名称可以是抗性，而[[IfcMaterial]] 的名称则是聚苯乙烯绝缘板。 IFC1.5中的新实体。 hange ifc2x4 IFC4 变异。属性名称、描述、类别、优先级已添加到属性列表末尾。 LayerThicknes的数据类型已放松到 [[IfcNonNegativeLengthMeasure]] 。"
-
-#:IFC.xml:21743
-msgid "IfcMaterialLayer_Material"
-msgstr "材料"
-
-msgid "IfcMaterialLayer_Material_DEFINITION"
-msgstr "可选参照构造图层的材料。 注意，如果没有给定这个值，它不表示一个没有物质间隙的图层 ， 这只是指材料在那时没有具体规定。"
-
-#:IFC.xml:21925
-msgid "IfcMaterialLayer_ToMaterialLayerSet"
-msgstr "总材料LayerSet"
-
-msgid "IfcMaterialLayer_ToMaterialLayerSet_DEFINITION"
-msgstr "参考材料层包含的[[IfcMaterialLayerSet]] 。"
-
-#:IFC.xml:21893
-msgid "IfcMaterialLayer_Category"
-msgstr "类别"
-
-msgid "IfcMaterialLayer_Category_DEFINITION"
-msgstr "材料图层的类别，例如： 它在它所属的图层中的角色，如装载、隔热等。 关键字清单可以通过模型视图定义扩展。 但下列关键词应适用于具有负载功能的所有实质性层，一般性负载铭记。 对所有具有散射功能的材料层进行抗蚀。 内部分物料层完成是内部分完成。外部分完成是外部分。"
-
-#:IFC.xml:21898
-msgid "IfcMaterialLayer_Description"
+#:IFC.xml:37951
+msgid "IfcShapeAspect_Description"
 msgstr "描述"
 
-msgid "IfcMaterialLayer_Description_DEFINITION"
-msgstr "材料层的定义比属性名称或类别更具描述性。"
+msgid "IfcShapeAspect_Description_DEFINITION"
+msgstr "形状方面的单词或单词组。它可以用来为分组名称添加额外的含义。"
 
-#:IFC.xml:21903
-msgid "IfcMaterialLayer_IsVentilated"
-msgstr "异常化"
-
-msgid "IfcMaterialLayer_IsVentilated_DEFINITION"
-msgstr "说明材料层是空气层还是洞。 设置为 TRUE，如果材料层是空隙，提供从空到空的空中交换。 设置为UNKNOWN，如果物质层是空隙，且不提供空中交换，或没有关于空中交换的这种信息。 设置为 FALSE 如果材料层是一个固态材料层默认。"
-
-#:IFC.xml:21908
-msgid "IfcMaterialLayer_LayerThickness"
-msgstr "图层厚度"
-
-msgid "IfcMaterialLayer_LayerThickness_DEFINITION"
-msgstr "材料层厚度。厚度的含义取决于其用途。 在建筑元素使用 [[IfcMaterialLayerSetUsage]] 的情况下， 尺寸是按照[[IfcMaterialLayerSetUsage]] 中指定的正LayerSet方向测量的。 注意属性值可以是 0。 对于极接近零的材料厚度，例如薄膜。厚度0的材料层不得以几何形状呈现。 .更改ifc2x4 IFC4 变迁. 属性数据类型已更改为[[IfcNonNegativeLengthMeasure]] 允许0为厚度。"
-
-#:IFC.xml:21913
-msgid "IfcMaterialLayer_Name"
+#:IFC.xml:37956
+msgid "IfcShapeAspect_Name"
 msgstr "名称"
 
-msgid "IfcMaterialLayer_Name_DEFINITION"
-msgstr "物料层的名称."
+msgid "IfcShapeAspect_Name_DEFINITION"
+msgstr "形状方面已知的单词或单词组。 它是一个标签，用于表示产品定义形状中一个组件的特殊语义，用于提供含义。 示例使用 Glazing 来定义窗口形状的哪个组件定义玻璃区域。"
 
-#:IFC.xml:21918
-msgid "IfcMaterialLayer_Priority"
-msgstr "优先权"
+#:IFC.xml:37961
+msgid "IfcShapeAspect_PartOfProductDefinitionShape"
+msgstr "PartofProductDefinitionShape"
 
-msgid "IfcMaterialLayer_Priority_DEFINITION"
-msgstr "图层的相对优先级，表示为普通整数范围0.100。 控制图层如何在连接中和构建图层元素的角落之间从一个元素跳跃到i。 如果前一个元素的优先级高于后者, 则将一个元素从这些元素的联合中的另一个元素替换. 某个元素中的材料层的优先值必须由软件应用相对于所连接元素中的材料层来设定和维护。 注意一个连接上的层优先级可能被优先级属性覆盖 [[IfcRelConnectsPathElements]的优先级属性，如果这种关系被用来在两个有层结构的建筑元素之间建立逻辑联系。"
+msgid "IfcShapeAspect_PartOfProductDefinitionShape_DEFINITION"
+msgstr "PartofProductDefinitionShape"
 
-#:IFC.xml:21937
-msgid "IfcMaterialLayerSet"
-msgstr "IfcMaterialLayerSet"
+#:IFC.xml:37966
+msgid "IfcShapeAspect_ProductDefinitional"
+msgstr "产品定义"
 
-msgid "IfcMaterialLayerSet_DEFINITION"
-msgstr "The [[IfcMaterialLayerSet]] is a designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed. The Material Layer Set Base MlsBase describes the imaginary axis along which the material layers are positioned. In case of assigning the [[IfcMaterialLayerSet]] directly to an element or element type, the individual layers are stacked according to their position within the list of MaterialLayers without providing information on how to spatially relate the material layer information to the shape representation of the element or element type. In case of assigning the [[IfcMaterialLayerSet]] through an [[IfcMaterialLayerSetUsage]] to an element, the MlsBase is positioned along the reference axis or reference plane of the element. An offset from the reference axis or plane to MlsBase is supported by [[IfcMaterialLayerSetUsage]] which combines layers and an offset. Offsets from element edges are supported by the subtype [[IfcMaterialLayerWithOffsets]] . The positive LayerSetDirection MlsDirection describes the direction by which the individual material layers are stacked. The [[IfcMaterialLayer]] s are stacked with no gap. Gaps within a material layer set are expressed as layers by themselves. EXAMPLE A cavity brick wall would be modeled as [[IfcMaterialLayerSet]] consisting of three [[IfcMaterialLayer]] s brick, air cavity and brick. The air gap is identified by the IsVentilated flag at [[IfcMaterialLayer]] . HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcMaterialDefinition]] , the attribute Description has been added at the end of attribute list. .use head Attribute use definition As shown in Figure 1, each [[IfcMaterialLayerSet]] implicitly defines a material layer set base line MlsBase , to which the start of the first [[IfcMaterialLayer]] is aligned. The total thickness of a layer set is calculated from the individual layer thicknesses, the first layer starting from the MlsBase and following layers being placed on top of the previous no gaps or overlaps . material layer set .. .. .. .. figures ifcmateriallayerset 01.png Figure 1 Material layer set"
+msgid "IfcShapeAspect_ProductDefinitional_DEFINITION"
+msgstr "产品定义"
 
-#:IFC.xml:21925
-msgid "IfcMaterialLayerSet_MaterialLayers"
-msgstr "材料图层"
+#:IFC.xml:37987
+msgid "IfcShapeModel"
+msgstr "IfcShapeModel"
 
-msgid "IfcMaterialLayerSet_MaterialLayers_DEFINITION"
-msgstr "指定 [[IfcMaterialLayer]] 所生成的 [[IfcMaterialLayerSet]] 秒的标识。"
+msgid "IfcShapeModel_DEFINITION"
+msgstr "[[IfcShapeModel]] 代表一种产品形状的特定几何形状和或地形表面概念或产品成分在代表环境中的形状概念。 这种表示环境必须是几何表示环境，但没有相关几何形状的地形表示除外。 两个子类型是 [[IfcShapeRepresentation]] ，以覆盖代表形状的几何模型。 和 [[IfcTopologyRepresentation]] 以涵盖产品或产品组件的兼容性。 地形学可能与或不与几何学相关联。 [[IfcShapeModel]] 可以是一种通过[[IfcProductDefinitionShape]] 来表示产品的形状几何形状或地形图形， 或通过[[IfcShapeAspect]]来表示一个产品形状组件的形状几何形状或图形。 IFC2x3中的新实体。"
 
-#:IFC.xml:21938
-msgid "IfcMaterialLayerSet_TotalThickness"
-msgstr "TotalThickness"
+#:IFC.xml:37973
+msgid "IfcShapeModel_OfShapeAspect"
+msgstr "OfShapeAspet"
 
-msgid "IfcMaterialLayerSet_TotalThickness_DEFINITION"
-msgstr "材料层集的总厚度来自函数IfcMlsTotalThicknes。"
+msgid "IfcShapeModel_OfShapeAspect_DEFINITION"
+msgstr "提到形状方面，它是形状的代表。"
 
-#:IFC.xml:21943
-msgid "IfcMaterialLayerSet_Description"
-msgstr "描述"
+#:IFC.xml:37990
+msgid "IfcShapeRepresentation"
+msgstr "IfcShapeRepresentation"
 
-msgid "IfcMaterialLayerSet_Description_DEFINITION"
-msgstr "描述性术语的 [[IfcMaterialLayerSet]] 的定义。更改ifc2x4 IFC4 变异。属性已添加到属性列表的末尾。"
+msgid "IfcShapeRepresentation_DEFINITION"
+msgstr "The [[IfcShapeRepresentation]] represents the concept of a particular geometric representation of a product or a product component within a specific geometric representation context. The inherited attribute RepresentationType is used to define the geometric model used for the shape representation e.g. SweptSolid , or Brep , the inherited attribute RepresentationIdentifier is used to denote the kind of the representation captured by the [[IfcShapeRepresentation]] e.g. Axis , Body , etc. . Several representation identifiers for shape representation are included as predefined values for RepresentationIdentifier . Table 1 indicates the defined list of values for RepresentationIdentifier . Identifier Description CoG Point to identify the center of gravity of an element. This value can be used for validation purposes. Box Bounding box as simplified 3D box geometry of an element Annotation 3D annotations not representing elements Axis 2D or 3D Axis, or single line, representation of an element FootPrint 2D Foot print, or double line, representation of an element, projected to ground view Profile 3D line representation of a profile being planar, e.g. used for door and window outlines Surface 3D Surface representation, e.g. of an analytical surface, of an elementplane Reference 3D representation that is not part of the Body representation. This is used, e.g., for opening geometries, if there are to be excluded from an implicit Boolean operation. Body 3D Body representation, e.g. as wireframe, surface, or solid model, of an element Body FallBack 3D Body representation, e.g. as tessellation, or other surface, or boundary representation, added in addition to the solid model potentially involving Boolean operations of an element Clearance 3D clearance volume of the element. Such clearance region indicates space that should not intersect with the Body representation of other elements, though may intersect with the Clearance representation of other elements. Lighting Representation of emitting light as a light source within a shape representation Table 1 Representation identifiers Several representation types for shape representation are included as predefined values for RepresentationType . Table 2 indicates the defined list of values for RepresentationType . Type Description Point 2 or 3 dimensional point s PointCloud 3 dimensional points prepresented by a point list Curve 2 or 3 dimensional curve s Curve2D 2 dimensional curve s Curve3D 3 dimensional curve s Surface 2 or 3 dimensional surface s Surface2D 2 dimensional surface s a region on ground view Surface3D 3 dimensional surface s FillArea 2D region s represented as a filled area hatching Text text defined as text literals AdvancedSurface 3 dimensional b spline surface s GeometricSet points, curves, surfaces 2 or 3 dimensional GeometricCurveSet points, curves 2 or 3 dimensional Annotation2D points, curves 2 or 3 dimensional , hatches and text 2 dimensional SurfaceModel face based and shell based surface model s , or tessellated surface model s Tessellation Tessellated surface representation s only SolidModel including swept solid, Boolean results and Brep bodies more specific types are SweptSolid swept area solids, by extrusion and revolution, excluding tapered sweeps AdvancedSweptSolid swept area solids created by sweeping a profile along a directrix, and tapered sweeps Brep Faceted Brep s with and without voids AdvancedBrep Brep s based on advanced faces, with b spline surface geometry, with and without voids CSG Boolean results of operations between solid models, half spaces and Boolean results Clipping Boolean differences between swept area solids, half spaces and Boolean results BoundingBox simplistic 3D representation by a bounding box SectionedSpine cross section based representation of a spine curve and planar cross sections. It can represent a surface or a solid and the interpolations of the between the cross sections is not defined LightSource light source with depending on type position, orientation, light colour, intensity and attenuation MappedRepresentation representation based on mapped item s , referring to a representation map. Note it can be seen as an inserted block reference. The shape representation of the mapped item has a representation type declaring the type of its representation items. Table 2 Representation types .extDef NOTE The definition relates to shape representation defined in ISO 10303 41. HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE The RepresentationType s Point , PointCloud , Curve , Curve3D , Surface , Surface2D , Surface3D , FillArea , Text , Tessellation , AdvancedBrep , LightSource , and the RepresentationIdentifier Body FallBack , Profile , Clearance , Lighting have been added. Formal Propositions CorrectContext The context to which the [[IfcShapeRepresentation]] is assign, shall be of type [[IfcGeometricRepresentationContext]]. NoTopologicalItem No topological representation item shall be directly used for shape representations, with the exception of [[IfcVertexPoint]], [[IfcEdgeCurve]], [[IfcFaceSurface]]. HasRepresentationType A representation type should be provided for the shape representation. HasRepresentationIdentifier A representation identifier should be provided for the shape representation. CorrectItemsForType Checks the proper use of Items according to the RepresentationType ."
 
-#:IFC.xml:21948
-msgid "IfcMaterialLayerSet_LayerSetName"
-msgstr "图层设置名称"
+#:IFC.xml:37993
+msgid "IfcShapeRepresentationTypes__RepType"
+msgstr "IfcShapeRepresentationTypes RepType"
 
-msgid "IfcMaterialLayerSet_LayerSetName_DEFINITION"
-msgstr "要知道的 [[IfcMaterialLayerSet]] 的名称。"
+#:IFC.xml:38001
+msgid "IfcStyledRepresentation"
+msgstr "IfcStyledRepresentation"
 
-#:IFC.xml:21967
-msgid "IfcMaterialLayerSetUsage"
-msgstr "IfcMaterialLayerSetUsage"
+msgid "IfcStyledRepresentation_DEFINITION"
+msgstr "[[IfcStyledRepresentation]] 表示样式展示的概念是产品或产品组件，如材料的表达。 这种表述环境不需要，但可能是几何表述环境。 注当前使用 [[IfcStyledRepresentation]] 仅限于向某一材料分配演示信息。 [[IfcStyledRepresentation]] 仅包括演示样式 [[IfcCurveStyle]] , FillAreaStyle , [[IfcSurfaceStyle]] 界定如何在特定的视野和视尺度大小的代表环境中提出材料。 所有 [[IfcStyledRepresentation]] 的实例都是 [[IfcMaterialDefinitionRepresentation]] 引用的，并由 [[IfcMaterialDefinitionRepresentation]] 分配到 [[IfcMaterial]]。正在呈现的材料。 样式表示必须包括一个或几个样式的条目以及相关的样式信息曲线、符号、文字、填充区域或表面风格。 它不应含有所称几何代表物项。 IFC2x2中的新实体。 只有[[IfcStyledItem]] s或子类型在项目列表中被允许为成员 从 [[IfcRepresentation]] 继承。 .更改 ifc2x3 IFC2x3 变换新，规则确保用于实质性定义的表述和其他非形状的使用"
 
-msgid "IfcMaterialLayerSetUsage_DEFINITION"
-msgstr "The [[IfcMaterialLayerSetUsage]] determines the usage of [[IfcMaterialLayerSet]] in terms of its location and orientation relative to the associated element geometry. The location of material layer set shall be compatible with the building element geometry that is, material layers shall fit inside the element geometry . The rules to ensure the compatibility depend on the type of the building element. EXAMPLE For a cavity brick wall with shape representation SweptSolid, the [[IfcMaterialLayerSet]].TotalThickness shall be equal to the wall thickness. Also the OffsetFromReferenceLine shall match the exact positions between the two shape representations of [[IfcWall]] , that is the [[IfcShapeRepresentation]] s with RepresentationIdentifier Axis and RepresentationIdentifier Body . NOTE Model view definitions or implementer agreements may provide more instructions on matching between building element geometry and material layer set usage. The [[IfcMaterialLayerSetUsage]] is always assigned to an individual occurrence object and only to relevant subtypes of [[IfcElement]] . The [[IfcMaterialLayerSet]] , referenced by ForLayerSet , can however be shared among several occurrence objects. If the element type is available in other words, an instance of the relevant subtype of [[IfcElementType]] exists , then the [[IfcMaterialLayerSet]] can be assigned to the element type. The assignment between a subtype of [[IfcElement]] and the [[IfcMaterialLayerSetUsage]] is handled by [[IfcRelAssociatesMaterial]] . .use head Attribute use definition The [[IfcMaterialLayerSetUsage]] is primarily intended to be associated with planar building elements having a constant thickness. With further agreements on the interpretation of LayerSetDirection , the usage can be extended also to other cases, for example to curved building elements, provided that the material layer thicknesses are constant. Generally, an element may be layered in any of its primary directions, denoted by its x, y or z axis. The geometry use definitions at each specific type of building element will determine the applicable LayerSetDirection . The following examples illustrate how the [[IfcMaterialLayerSetUsage]] attributes LayerSetDirection , DirectionSense , OffsetFromReferenceLine can be used in different cases. Normative material use definitions are documented at each element how these shall be used . Figure 1 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to the axis of a wall. EXAMPLE For a layered wall with extruded geometric representation vertical extrusion , the layer set direction will be perpendicular to extrusion direction, and can be derived from the direction of the wall axis. With the DirectionSense positive in this example the individual IfcMaterialLayers are assigned consecutively right to left or left to right. For a curved wall, direction denoting the wall thickness can be derived from the direction of the wall axis, and it will remain perpendicular to the wall path. The DirectionSense applies as well. NOTE According to the [[IfcWall]] material use definition the LayerSetDirection for [[IfcWall]] is always AXIS2 that is, along the y axis , as shown in this example. Mls usage .. .. .. .. figures ifcmateriallayersetusage wall 01.png Figure 1 Material layer set usage for wall Figure 2 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a slab. EXAMPLE For a slab with perpendicular extruded geometric representation, the LayerSetDirection will coincide with the extrusion direction in positive or negative sense . In this example, the material layer set base is the extruded profile and consistent with the [[IfcExtrudedAreaSolid]].Position , with the DirectionSense being positive, the individual IfcMaterialLayers are built up from the base towards the positive z direction in this case. NOTE According to the [[IfcSlab]] material use definition the LayerSetDirection for [[IfcSlab]] is always AXIS3 that is, along the z axis . Mls usage .. .. .. .. figures ifcmateriallayersetusage slab 01.png Figure 2 Material layer set usage for slab Figure 3 shows an example of the use of [[IfcMaterialLayerSetUsage]] aligned to a roof slab with non perpendicular extrusion. EXAMPLE For a slab with non perpendicular extruded geometric representation, the guidelines above apply as well. The material layer thickness and the OffsetFromReferenceLine are always measured perpendicularly, even if the extrusion direction is not perpendicular. Therefore the total material layer thickness is not equal to the extrusion depth of the geometry. Mls usage .. .. .. .. figures ifcmateriallayersetusage roofslab 01.png Figure 3 Material layer set usage for roof slab"
+#:IFC.xml:38004
+msgid "IfcStyleModel"
+msgstr "IfcStyleModel"
 
-#:IFC.xml:21955
-msgid "IfcMaterialLayerSetUsage_ForLayerSet"
-msgstr "ForLayerSet"
+msgid "IfcStyleModel_DEFINITION"
+msgstr "[[IfcStyleModel]] 代表了为产品或产品组成部分的材料或其他特性定义的特定展示风格的概念。 这种表述环境可能但不一定是几何表述环境。 [[IfcStyleModel]] 可以通过[[IfcMaterialDefinitionRepresentation]] 为材料的展示风格风格， 例如，可能因代表情况不同而有所区别，视目标代表情况的规模而有所不同。 IFC2x3中的新实体。"
 
-msgid "IfcMaterialLayerSetUsage_ForLayerSet_DEFINITION"
-msgstr "使用 [[IfcMaterialLayerSet]] 设置的使用量。"
+#:IFC.xml:38007
+msgid "IfcTopologyRepresentation"
+msgstr "IfcTopologyRepresentation"
 
-#:IFC.xml:21968
-msgid "IfcMaterialLayerSetUsage_DirectionSense"
-msgstr "方向Sense"
+msgid "IfcTopologyRepresentation_DEFINITION"
+msgstr "[[IfcTopologyRepresentation]] 代表了一个产品或产品组成部分在代表范围内的特定地形表述概念。 这种表示环境不一定是一种几何表示环境，但可能是一种几何表示环境。 形状表示的几种表示类型包括预定义的类型描述顶部顶部表示，不论有无指定几何形状边缘表示，不论有无指定几何形状边缘表示； 带有或无指定几何形状形状表面表示； 有或无指定几何形状外壳表面表示； 未定义任何限制； 表示类型作为继承属性表示类型的字符串。 IFC2x2中的新实体。正式提出的WR21只能使用地形代表项目。 WR22 应给地形表示一种代表性类型。WR23 应根据代表类型检查项目的适当使用。"
 
-msgid "IfcMaterialLayerSetUsage_DirectionSense_DEFINITION"
-msgstr "表示材料图层是正方向还是负方向，沿LayerSetDirect 定义的指定坐标轴。 正值意味着列表中的 [[IfcMaterialLayer]] 实例的连续图层 [[IfcMaterialLayerSet]]。 AXIS2LayerSetDirection 为AXIS2设定的正轴按面朝着正面置放， 就AXIS3而言，它将是z。 负值表示图层面朝负LayerSet方向的脸部放置. 在这两种情况下，从材料层开始设定基线。 注意到材料层设置基准线MlsBase由偏移FromReferenceLine定位， 并且可能在元素参考线的正面或负面或平面上，MlsBase的位置并不取决于DirectionSense 属性， 但在相关元素轴上。"
-
-#:IFC.xml:21973
-msgid "IfcMaterialLayerSetUsage_LayerSetDirection"
-msgstr "LayerSet方向"
-
-msgid "IfcMaterialLayerSetUsage_LayerSetDirection_DEFINITION"
-msgstr "相对于元素参考几何形状设置的材料图层方向. 此属性值的意义必须在每个元素的几何使用部分中指定。 对于外观形状，可以沿拉伸路径给出方向，如钢板或垂直于它的方向，例如墙壁。 注意[[IfcWall]] 的图层设置方向必须是 AXIS2 或 y轴和 [[IfcSlab]和 [[IfcPlate]] 的y轴必须是 AXIS3 ，即z轴。 注意到所用集的材料层是应发展成给定轴的正向还是负面方向， 必须由 DirectionSense 属性定义。"
-
-#:IFC.xml:21978
-msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine"
-msgstr "OffsetFromReferenceLine"
-
-msgid "IfcMaterialLayerSetUsage_OffsetFromReferenceLine_DEFINITION"
-msgstr "材料图层从参考几何线或元素平面偏移基本线MlsBase 这种偏移可以是正数或负数，除非在其使用定义中对某一建筑要素类型加以限制，或通过实施者协议加以限制。 正值意味着MlsBase被置于参考线或平面的正面， 在 LayerSetDirection 在 AXIS2 情况下建立的轴方向到 y轴， 或者，如果AXIS2朝z 方向倾斜。 负值意味着MlsBase被置于负边。 由 LayerSetDirection 在 AXIS2 的情况下建立到 y 的方向。 注意到偏移中的正符号或负符号仅影响MlsBase位置， 它不会影响DirectionSense对材料层方向的应用，DirectionSense也不会改变MlsBase的位置。"
-
-#:IFC.xml:21983
-msgid "IfcMaterialLayerSetUsage_ReferenceExtent"
-msgstr "参考范围"
-
-msgid "IfcMaterialLayerSetUsage_ReferenceExtent_DEFINITION"
-msgstr "元素体形状外移的程度适用[[IfcMaterialLayerSetUsage]] 。 它被用作IfcMaterialLayerSetWeOffs子类型提供的高偏移值2的参考值。 .更改 ifc2x4 IFC4 更改新属性添加到属性列表末尾。 注意: 属性参考范围必须断定，如果IfcMaterialLayerSetWOffset包含在ForLayerSet.MaterialLayerslayerslist of materialLayerslayers。 注意[[IfcWall]] 的参考范围是从 z 0开始的参考高度开始的物体坐标系的 XY 平面。"
-
-#:IFC.xml:21990
-msgid "IfcMaterialLayerWithOffsets"
-msgstr "IfcMaterialLayerWithOffsets"
-
-msgid "IfcMaterialLayerWithOffsets_DEFINITION"
-msgstr "[[IfcMaterialLayerWithOffsets]] 是专业化的 [[IfcMaterialLayer]] 使得物质层内的偏移值在父层集合中的使用率沿边沿线的定义成为可能。 它界定了物质层预定在物质层内使用的两个偏移值。 偏移适用于多层元素的边缘，即沿图层设定方向垂直。 偏移不得用于图层设置方向，即： 对于图层之间的差距或重叠，应将图层建模为图层，并为其配备适当的材料配置。 EXAMPLE 在一个层围墙的顶部，形状表示SweptSolid ， 可以在输出正Z轴方向指定给定图层的偏移量 应用于开始或结束时从底部到顶部，并且在正面扩展到上面或负结尾下面的拉伸。 用一个带有外部材料层的多层墙来进行外部隔离，外延伸100毫米，但从同一基高度开始。 在这种情况下，以下数值是设置偏移方向.AXIS3。偏移值1 0.0 偏移值2 100。 默认单位假定为mm Note……机构形状表示[[IfcWall]] 可能有多个项目，每个项目都是 [[IfcExtrudedAreaSolid]] 对应的 [[IfcMaterialLayer]] 和 [[IfcMaterialLayerWithOffsets]] 。 IFC4 中的新实体。非正式提议1。偏移方向不应与相应的 [[IfcMaterialLayerSetUsage]] 的LayerSetDirection 完全相同。 2. 属性参考范围必须在相应的 [[IfcMaterialLayerSetUsage]] 上得到确认。 在[[IfcMaterialLayerSetUsage]] 处的引用范围和LayerSetDirection对应于定义的偏移值和偏移方向。 图1显示了将偏移数值应用于墙层物质层的例子。 [[IfcMaterialLayerWithOffsets]] fact 1 ... ... fcmateriallayerwithoffset fi1.png 图1 材料层与偏移"
-
-#:IFC.xml:21991
-msgid "IfcMaterialLayerWithOffsets_OffsetDirection"
-msgstr "偏移方向"
-
-msgid "IfcMaterialLayerWithOffsets_OffsetDirection_DEFINITION"
-msgstr "偏移方向必须垂直于父层设定的方向。"
-
-#:IFC.xml:21996
-msgid "IfcMaterialLayerWithOffsets_OffsetValues"
-msgstr "偏移值"
-
-msgid "IfcMaterialLayerWithOffsets_OffsetValues_DEFINITION"
-msgstr "在属性偏移指定的坐标轴方向上的图层数值。 偏移值1确定轴方向下方位置的偏移量，通常是层输出开始， 偏移数值2确定轴方向上方位置的偏移量，通常是层外移的末尾。"
-
-#:IFC.xml:22003
-msgid "IfcMaterialList"
-msgstr "IfcMaterialList"
-
-msgid "IfcMaterialList_DEFINITION"
-msgstr "[[IfcMaterialList]] 是一个元素中使用的不同材料列表。 注意到 [[IfcMaterialList]] 类通常将在一个更抽象的级别描述某个元素时使用。 例如，对于建筑规格作者， 关于水泥柱，唯一可能需要的信息是其中含有混凝土、加固钢和轻钢脂肪。 当可以定义不同层并且可以使用[[IfcMaterialLayerSet]] 类时，不得将其用于由材料层组成的元素。 此外，[[IfcMaterialList]] 不得用于由单一可识别材料组成的元素，例如代表异性材料的元素。 .change ifc2x4 IFC4 变迁。 实体[[IfcMaterialList]] 已废弃，不再使用。请使用 [[IfcMaterialConstituentSet]] 代替。"
-
-#:IFC.xml:21755
-msgid "IfcMaterialList_Materials"
-msgstr "材料"
-
-msgid "IfcMaterialList_Materials_DEFINITION"
-msgstr "物质成分中使用的材料。"
-
-#:IFC.xml:22005
-msgid "IfcMaterialProfile"
-msgstr "IfcMaterialProfile"
-
-msgid "IfcMaterialProfile_DEFINITION"
-msgstr "[[IfcMaterialProfile]] 是一个元素的单个和可识别的交叉部分，由一个或多个配置文件构造。 注： 对于多个材料简介， 使用IfcProfileResource schema中的 [[IfcCompositeProfileDef]]概念来定义个别配置文件在 [[IfcMaterialProfileSet]] 中的相对位置， 只有一个材料简介是由个人 [[IfcProfileDef]] 子类型提供和定义的。 IFC4 中的新实体"
-
-#:IFC.xml:21767
-msgid "IfcMaterialProfile_Material"
-msgstr "材料"
-
-msgid "IfcMaterialProfile_Material_DEFINITION"
-msgstr "可选参考资料系依据的材料。"
-
-#:IFC.xml:22028
-msgid "IfcMaterialProfile_Profile"
-msgstr "个人信息"
-
-msgid "IfcMaterialProfile_Profile_DEFINITION"
-msgstr "确定本材料简介与材料相关联的简介。"
-
-#:IFC.xml:22040
-msgid "IfcMaterialProfile_ToMaterialProfileSet"
-msgstr "MaterialProfileSet"
-
-msgid "IfcMaterialProfile_ToMaterialProfileSet_DEFINITION"
-msgstr "材料简介包含在其中的材料简介。"
-
-#:IFC.xml:22006
-msgid "IfcMaterialProfile_Category"
-msgstr "类别"
-
-msgid "IfcMaterialProfile_Category_DEFINITION"
-msgstr "材料配置的类别，例如它在它所属的配置文件中的角色。 关键字清单可以通过模型视图定义扩展。 但下列关键词应适用于一般装载功能的材料配置文件。 含有傲慢功能的材料配置。完成材料配置即可完成。"
-
-#:IFC.xml:22011
-msgid "IfcMaterialProfile_Description"
-msgstr "描述"
-
-msgid "IfcMaterialProfile_Description_DEFINITION"
-msgstr "实质性简介的定义是描述性的。"
-
-#:IFC.xml:22016
-msgid "IfcMaterialProfile_Name"
-msgstr "名称"
-
-msgid "IfcMaterialProfile_Name_DEFINITION"
-msgstr "材料配置文件使用的名称。"
-
-#:IFC.xml:22021
-msgid "IfcMaterialProfile_Priority"
-msgstr "优先权"
-
-msgid "IfcMaterialProfile_Priority_DEFINITION"
-msgstr "配置文件的相对优先级，表示为正常整数范围0.100。 控制剖面图在构建元素的连接和角之间的交叉性 从一个元素的剖面图变成例如： 如果前一个元素比后者更优先，则从这些元素的一个联合元素中替换一个配置文件。 某个元素中的材料简介的优先值必须由软件应用程序相对于所连接元素中的材料简介来设定和维护。"
-
-#:IFC.xml:22052
-msgid "IfcMaterialProfileSet"
-msgstr "IfcMaterialProfileSet"
-
-msgid "IfcMaterialProfileSet_DEFINITION"
-msgstr "[[IfcMaterialProfileSet]] 是一种称呼，用以指明一个纯粹元素的单个材料 已知一个单一或多个材料剖面或构造的柱子。 注： 对于多个材料简介， 使用IfcProfileResource schema中的 [[IfcCompositeProfileDef]]概念来定义个别配置文件在 [[IfcMaterialProfileSet]] 中的相对位置， 只有一个材料简介是由个人 [[IfcProfileDef]] 子类型提供和定义的。 IFC4中的新实体。"
-
-#:IFC.xml:22040
-msgid "IfcMaterialProfileSet_MaterialProfiles"
-msgstr "材料资料"
-
-msgid "IfcMaterialProfileSet_MaterialProfiles_DEFINITION"
-msgstr "确定材料简介所根据的简介。"
-
-#:IFC.xml:22065
-msgid "IfcMaterialProfileSet_CompositeProfile"
-msgstr "合成配置文件"
-
-msgid "IfcMaterialProfileSet_CompositeProfile_DEFINITION"
-msgstr "参考此材料简介将其与每个个人简介相关联的复合简介定义。 如果只使用单一的材料简介，那么就不会断言“混成简介”。 注意被引用的 [[IfcCompositeProfileDef]] 实例必须由当前[[IfcMaterialProfileSet]] 中通过材料简介列表使用的所有[[IfcProfileDef]]实例组成。"
-
-#:IFC.xml:22053
-msgid "IfcMaterialProfileSet_Description"
-msgstr "描述"
-
-msgid "IfcMaterialProfileSet_Description_DEFINITION"
-msgstr "2. 用描述性术语界定材料简介。"
-
-#:IFC.xml:22058
-msgid "IfcMaterialProfileSet_Name"
-msgstr "名称"
-
-msgid "IfcMaterialProfileSet_Name_DEFINITION"
-msgstr "素材配置文件的名称."
-
-#:IFC.xml:22101
-msgid "IfcMaterialProfileSetUsage"
-msgstr "IfcMaterialProfileSetUsage"
-
-msgid "IfcMaterialProfileSetUsage_DEFINITION"
-msgstr "[[IfcMaterialProfileSetUsage]] 决定其位置相对于相关元素几何形状的使用 [[IfcMaterialProfileSet]] 。 物质配置组的位置必须与建筑元素几何相容，即： 材料剖面必须适合元素几何形状. 确保兼容性的规则取决于建筑元素的类型。 对于构造基于外置固体的形状表示的元素， 这是通过提及形状模型中的相同的配置文件定义来实现的。 注型视图定义或实施者协议可以提供更多关于构建元素几何和材料配置集使用之间匹配的指示。 注意到所引用的[[IfcMaterialProfileSet]] 可能代表一个单一的材料配置，或一个包含两个或多个材料配置文件的复合配置文件。 IFC4中的新实体。"
-
-#:IFC.xml:22077
-msgid "IfcMaterialProfileSetUsage_ForProfileSet"
-msgstr "ForProfileSet"
-
-msgid "IfcMaterialProfileSetUsage_ForProfileSet_DEFINITION"
-msgstr "使用 [[IfcMaterialProfileSet]] 设置的使用量。"
-
-#:IFC.xml:22102
-msgid "IfcMaterialProfileSetUsage_CardinalPoint"
-msgstr "CardinalPoint"
-
-msgid "IfcMaterialProfileSetUsage_CardinalPoint_DEFINITION"
-msgstr "索引引用章节简介中的一个重要点。 描述相对于所关联成员的纵轴部分的对齐方式。 这个配置文件对齐的参数规格可以多余地提供到 ForProfileSet.MaterialProfile.Profile.Profile.Profiles。"
-
-#:IFC.xml:22107
-msgid "IfcMaterialProfileSetUsage_ReferenceExtent"
-msgstr "参考范围"
-
-msgid "IfcMaterialProfileSetUsage_ReferenceExtent_DEFINITION"
-msgstr "元素体形状外移的程度适用[[IfcMaterialProfileSetUsage]] 。 它用作IfcMaterialProfileSetWeds子类型为包含的材料配置提供的高偏移值2的参考值。 注： 如果IfcMaterialProfileSetWOffset包含在 ForProfileSet.MaterialProfiles 列表中，则属性引用的范围必须得到确认。 注意[[IfcBeam]] 、[[IfcColumn]] 的参考范围 和 [[IfcMember]] 是从 z 0 开始的参考长度是对象坐标系统的 XY 平面。"
-
-#:IFC.xml:22114
-msgid "IfcMaterialProfileSetUsageTapering"
-msgstr "IfcMaterialProfileSetUsageTapering"
-
-msgid "IfcMaterialProfileSetUsageTapering_DEFINITION"
-msgstr "[[IfcMaterialProfileSetUsageTapering]] 指定了与触发原始束或类似元素列相关的双重材料配置集。IFC4 中的新实体. 以触发构建元素的首页使用 继承属性ForProfileSet 在成员开始时指定配置文件和材料 ForProfileEndSet 在结束。 起始和终对应元素或元素类型形状模型中的输出方向。 这两套材料都应参考同一材料，即只在其材料上有所不同。 使用带结构分析曲线成员[[IfcMaterialProfileSetUsageTapering]] 的磁头用法，可以与结构分析理想化的制服成员和缓解成员的结构分析理想化[[IfcStructuralCurveMember]]一起使用。 在统一成员的情况下，ForProfileSet 和 ForProfileEndSet 引用相同的材料配置集。 如果成员被缓解，ForProfileSet 会在成员开始时指定配置文件和材料，ForProfileEndSet 会在其结束时。 起始和终对应曲线成员地形表示的边缘方向。"
-
-#:IFC.xml:22089
-msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet"
-msgstr "ForProfileEndSet"
-
-msgid "IfcMaterialProfileSetUsageTapering_ForProfileEndSet_DEFINITION"
-msgstr "第二个应用 [[IfcMaterialProfileSet]] 设置的使用量。"
-
-#:IFC.xml:22115
-msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint"
-msgstr "CardinalEndPoint"
-
-msgid "IfcMaterialProfileSetUsageTapering_CardinalEndPoint_DEFINITION"
-msgstr "索引参照了第二部分的一个重要点。 描述此部分相对于它所关联成员的轴的对齐方式。 这个配置文件对齐的参数规格可以多余地提供到 ForProfileSet.MaterialProfile.Profile.Profile.Profiles。"
-
-#:IFC.xml:22122
-msgid "IfcMaterialProfileWithOffsets"
-msgstr "IfcMaterialProfileWidset"
-
-msgid "IfcMaterialProfileWithOffsets_DEFINITION"
-msgstr "[[IfcMaterialProfileWithOffsets]] 是一个专门化的 [[IfcMaterialProfile]]，具有额外的纵向偏移。 元素纵向方向中[[IfcMaterialProfileWithOffsets]]的相对位置可以定义在末端开始时给出偏移。 或在开始和结束时。 这不应用于个人剖面定义平面中个人剖面的相对位置，而复合剖面定义本身对此作了规定。 此外，在使用 [[IfcMaterialProfileSetUsageTapering]] 正确的起始和终偏移任务时应特别注意。IFC4 中的新实体。"
-
-#:IFC.xml:22123
-msgid "IfcMaterialProfileWithOffsets_OffsetValues"
-msgstr "偏移值"
-
-msgid "IfcMaterialProfileWithOffsets_OffsetValues_DEFINITION"
-msgstr "剖面图的数值偏移，轴方向始终是AXIS1，即沿离线的轴。 偏移值1确定轴方向下方位置的偏移量，通常是标准偏移开始， 偏移数值2确定轴方向上方位置的偏移量，通常是标准偏移的终点。"
-
-#:IFC.xml:22130
-msgid "IfcMaterialProperties"
-msgstr "IfcMaterialProperties"
-
-msgid "IfcMaterialProperties_DEFINITION"
-msgstr "The [[IfcMaterialProperties]] assigns a set of material properties to associated material definitions. The set may be identified by a Name and a Description . The [[IfcProperty]] instantiable subtypes is used to express the individual material properties by name, description, value and unit. NOTE The set of material properties can be assigned to an individual [[IfcMaterial]] , a set or composite of materials [[IfcMaterialConstituent]] , [[IfcMaterialConstituentSet]] , or set or individual material layer [[IfcMaterialLayer]] , [[IfcMaterialLayerSet]] , or a set or individual material profile [[IfcMaterialProfile]] , [[IfcMaterialProfileSet]] HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Entity made non abstract. The subtypes IfcMechanicalMaterialProperties, IfcThermalMaterialProperties, IfcHygroscopicMaterialProperties, IfcGeneralMaterialProperties, IfcOpticalMaterialProperties, IfcWaterProperties, IfcFuelProperties, IfcProductsOfCombustionProperties, IfcExtendedMaterialProperties have been deleted, use [[IfcMaterialProperties]] instead."
-
-#:IFC.xml:21866
-msgid "IfcMaterialProperties_Material"
-msgstr "材料"
-
-msgid "IfcMaterialProperties_Material_DEFINITION"
-msgstr "参考一组属性所依据的实质性定义。 挂机ifc2x4 IFC4 变换. 数据类型已更改为超级类型 [[IfcMaterialDefinition]] 。"
-
-#:IFC.xml:22133
-msgid "IfcMaterialRelationship"
-msgstr "IfcMaterialRelationship"
-
-msgid "IfcMaterialRelationship_DEFINITION"
-msgstr "[[IfcMaterialRelationship]] 在材料定义中将零部件与整个之间的关系定义为合成材料中的关系。 以一套相关材料表示的零部件是材料成分，其中单一材料合计是由单一材料合成的。"
-
-#:IFC.xml:21779
-msgid "IfcMaterialRelationship_RelatingMaterial"
-msgstr "相关材料"
-
-msgid "IfcMaterialRelationship_RelatingMaterial_DEFINITION"
-msgstr "2. 参照复合材料中的有关材料"
-
-#:IFC.xml:21793
-msgid "IfcMaterialRelationship_RelatedMaterials"
-msgstr "相关材料"
-
-msgid "IfcMaterialRelationship_RelatedMaterials_DEFINITION"
-msgstr "2. 将相关材料作为复合材料的成分加以提及。"
-
-#:IFC.xml:22134
-msgid "IfcMaterialRelationship_MaterialExpression"
-msgstr "材料表达式"
-
-msgid "IfcMaterialRelationship_MaterialExpression_DEFINITION"
-msgstr "材料表达式"
-
-#:IFC.xml:22141
-msgid "IfcMaterialSelect"
-msgstr "IfcMaterialSelect"
-
-#:IFC.xml:22142
-msgid "IfcMaterialUsageDefinition"
-msgstr "IfcMaterialUsageDefinition"
-
-msgid "IfcMaterialUsageDefinition_DEFINITION"
-msgstr "[[IfcMaterialUsageDefinition]] 是 IFC 中所有与材料相关的信息项目的一般超级类型，这些信息项目具有发生的特定作业参数，可以为该组件的参考几何体积项分配一组带有形状参数的材料。 有两种方法来分配一组材料，其中有形参数的图层设定在参考曲线上，物质图层设有序列和厚度参数的材料图层设在一个元素的参考曲线上，该元素的轴形形状代表了一个剖面设定了一个基本点，将一个带有分配的剖面和插入点的物质图层设在一个参考曲线上。 这个元素的轴形状表示参考曲线被称为基本点。每个可实例化子类型[[IfcMaterialUsageDefinition]] 必须通过使用客观关系[[IfcRelAssociatesMaterial]]分配给子类型[[IfcElement]] ，它只能与元素发生一起有效。 IFC4 .spec首长非正式提议1中的新实体。 将子类型的 [[IfcMaterialUsageDefinition]] 分配给子类型的 [[IfcElementType]] 是非法的， 它只能分配给某个元素发生的情况。"
-
-#:IFC.xml:22144
-msgid "IfcMaterialUsageDefinition_AssociatedTo"
-msgstr "关联到"
-
-msgid "IfcMaterialUsageDefinition_AssociatedTo_DEFINITION"
-msgstr "使用元素发生的物质关联内的 [[IfcMaterialUsageDefinition]] 子类型。关联是由 [[IfcRelAssociatesMaterial]] 关系建立的。"
-
-#:IFC.xml:22156
-msgid "IfcMlsTotalThickness__LayerSet"
-msgstr "IfcMlTotalThickness LayerSet"
-
-#:IFC.xml:22164
-msgid "Pset_MaterialCombustion"
-msgstr "Pset 材料Combustion"
-
-msgid "Pset_MaterialCombustion_DEFINITION"
-msgstr "通常在建筑服务和流量分配系统中使用的元素所产生的燃烧产品的一系列扩大材料特性。 各单位吸收的燃烧热能产品的特定热量。"
-
-#:IFC.xml:22165
-msgid "CO2Content"
-msgstr "CO2内容"
-
-msgid "CO2Content_DEFINITION"
-msgstr "燃烧产品的二氧化碳二氧化碳含量是以单位重量CO2的重量来计量的，因此是没有单位的。"
-
-#:IFC.xml:22170
-msgid "COContent"
-msgstr "COContent"
-
-msgid "COContent_DEFINITION"
-msgstr "燃烧产品中的一氧化碳CO含量，以单位重量计算，因此是没有单位的。"
-
-#:IFC.xml:22175
-msgid "N20Content"
-msgstr "N20内容"
-
-msgid "N20Content_DEFINITION"
-msgstr "燃烧产品的氧化亚氮N2O含量，以单位重量N2O计，因而没有单位。"
-
-#:IFC.xml:22180
-msgid "SpecificHeatCapacity"
-msgstr "Specific HeatCapacity"
-
-msgid "SpecificHeatCapacity_DEFINITION"
-msgstr "界定一种材料的特定热能力。"
-
-#:IFC.xml:22186
-msgid "Pset_MaterialCommon"
-msgstr "Pset 材料常用"
-
-msgid "Pset_MaterialCommon_DEFINITION"
-msgstr "一组一般材料属性。"
-
-#:IFC.xml:22187
-msgid "MassDensity"
-msgstr "密度："
-
-msgid "MassDensity_DEFINITION"
-msgstr "材料质量密度。"
-
-#:IFC.xml:22192
-msgid "MolecularWeight"
-msgstr "分子权重"
-
-msgid "MolecularWeight_DEFINITION"
-msgstr "材料的分子重量通常是气体。"
-
-#:IFC.xml:22197
-msgid "Porosity"
-msgstr "化验度"
-
-msgid "Porosity_DEFINITION"
-msgstr "材料Vbr Vnet Vbr占用总体积的无效部分。"
-
-#:IFC.xml:22203
-msgid "Pset_MaterialConcrete"
-msgstr "Pset 材料混凝土"
-
-msgid "Pset_MaterialConcrete_DEFINITION"
-msgstr "一套与混凝土材料有关的扩展机械特性。"
-
-#:IFC.xml:22204
-msgid "AdmixturesDescription"
-msgstr "混音描述"
-
-msgid "AdmixturesDescription_DEFINITION"
-msgstr "添加到混凝土混合物的admixtures 的描述。"
-
-#:IFC.xml:22209
-msgid "CompressiveStrength"
-msgstr "压缩强度"
-
-msgid "CompressiveStrength_DEFINITION"
-msgstr "定义值 Alpha定义值压缩强度。"
-
-#:IFC.xml:22214
-msgid "MaxAggregateSize"
-msgstr "MaxAggregateSize"
-
-msgid "MaxAggregateSize_DEFINITION"
-msgstr "混凝土的最大合计大小."
-
-#:IFC.xml:22219
-msgid "ProtectivePoreRatio"
-msgstr "保护性的 PoreRatio"
-
-msgid "ProtectivePoreRatio_DEFINITION"
-msgstr "防护孔比表示混凝土的结冻抗性。"
-
-#:IFC.xml:22224
-msgid "WaterImpermeability"
-msgstr "水Impermeability"
-
-msgid "WaterImpermeability_DEFINITION"
-msgstr "关于水不渗透特性的说明。"
-
-#:IFC.xml:22229
-msgid "Workability"
-msgstr "工作能力"
-
-msgid "Workability_DEFINITION"
-msgstr "说明根据当地标准界定的新鲜混凝土的可操作性。"
-
-#:IFC.xml:22235
-msgid "Pset_MaterialEnergy"
-msgstr "Pset 材料能源"
-
-msgid "Pset_MaterialEnergy_DEFINITION"
-msgstr "一套用于计算能量的扩展材料特性。"
-
-#:IFC.xml:22236
-msgid "GasPressure"
-msgstr "气压"
-
-msgid "GasPressure_DEFINITION"
-msgstr "填充气体之间的压力，例如填充气体在固定体积中的气体质量所产生的压力。"
-
-#:IFC.xml:22241
-msgid "MoistureCapacityThermalGradient"
-msgstr "MoistureCapacityThermalGradient"
-
-msgid "MoistureCapacityThermalGradient_DEFINITION"
-msgstr "水分电容量的热梯度系数，基于水蒸汽密度。"
-
-#:IFC.xml:22246
-msgid "SolarRefractionIndex"
-msgstr "SolarRefractionIndex"
-
-msgid "SolarRefractionIndex_DEFINITION"
-msgstr "折射太阳指数界定太阳射线从一种介质传入另一种介质时的弯曲。"
-
-#:IFC.xml:22251
-msgid "SpecificHeatTemperatureDerivative"
-msgstr "Specific HeatTemperatureDerivative"
-
-msgid "SpecificHeatTemperatureDerivative_DEFINITION"
-msgstr "特定热温度衍生物。"
-
-#:IFC.xml:22256
-msgid "ThermalConductivityTemperatureDerivative"
-msgstr "热导电温度导出器"
-
-msgid "ThermalConductivityTemperatureDerivative_DEFINITION"
-msgstr "热导电温导衍生物。"
-
-#:IFC.xml:22261
-msgid "ViscosityTemperatureDerivative"
-msgstr "直观温度导数"
-
-msgid "ViscosityTemperatureDerivative_DEFINITION"
-msgstr "Viscosity温度衍生物。"
-
-#:IFC.xml:22266
-msgid "VisibleRefractionIndex"
-msgstr "可视化折射索引"
-
-msgid "VisibleRefractionIndex_DEFINITION"
-msgstr "可视反射索引定义在可见频谱从一种介质传递到另一种介质时将太阳光射线弯曲。"
-
-#:IFC.xml:22272
-msgid "Pset_MaterialFuel"
-msgstr "Pset 材料燃料"
-
-msgid "Pset_MaterialFuel_DEFINITION"
-msgstr "通常在建筑服务和流量分配系统范围内使用的一套燃料能源的扩大材料特性。 2. 当空气为298K和100千帕时材料的燃烧温度；"
-
-#:IFC.xml:22273
-msgid "CarbonContent"
-msgstr "碳化内容"
-
-msgid "CarbonContent_DEFINITION"
-msgstr "燃料中的碳含量是以燃料单位重量的碳重量来衡量的，因此是没有单位的。"
-
-#:IFC.xml:22278
-msgid "CombustionTemperature"
-msgstr "组合温度"
-
-msgid "CombustionTemperature_DEFINITION"
-msgstr "燃烧温度。"
-
-#:IFC.xml:22283
-msgid "HigherHeatingValue"
-msgstr "高加热值"
-
-msgid "HigherHeatingValue_DEFINITION"
-msgstr "较高的加热值被定义为在燃料完全燃烧时释放的MJ公斤能量。 H2O在燃烧产品中以液体形式出现。"
-
-#:IFC.xml:22288
-msgid "LowerHeatingValue"
-msgstr "低热值"
-
-msgid "LowerHeatingValue_DEFINITION"
-msgstr "较低的加热值被定义为在燃料完全燃烧时释放的MJ公斤能量。 H2O在燃烧产品中以蒸汽形式出现。"
-
-#:IFC.xml:22294
-msgid "Pset_MaterialHygroscopic"
-msgstr "Pset 材料色谱法"
-
-msgid "Pset_MaterialHygroscopic_DEFINITION"
-msgstr "一组材料的水合特性。"
-
-#:IFC.xml:22295
-msgid "IsothermalMoistureCapacity"
-msgstr "IsothermalMoistureCapacity"
-
-msgid "IsothermalMoistureCapacity_DEFINITION"
-msgstr "基于水蒸汽密度。"
-
-#:IFC.xml:22300
-msgid "LowerVaporResistanceFactor"
-msgstr "LowerVaporResistanceFactor"
-
-msgid "LowerVaporResistanceFactor_DEFINITION"
-msgstr "空气材料的蒸气渗透关系通常值1，通常以较低的湿度测量为050RH 。"
-
-#:IFC.xml:22305
-msgid "MoistureDiffusivity"
-msgstr "月经分散性"
-
-msgid "MoistureDiffusivity_DEFINITION"
-msgstr "湿度分散是一种运输财产，经常用于建筑物包件的热分析中。"
-
-#:IFC.xml:22310
-msgid "UpperVaporResistanceFactor"
-msgstr "UpperVaporResistanceFactor"
-
-msgid "UpperVaporResistanceFactor_DEFINITION"
-msgstr "空气材料的蒸气渗透关系通常值1，用较高的相对湿度来测量，一般为95RH。"
-
-#:IFC.xml:22315
-msgid "VaporPermeability"
-msgstr "VaporPermeability"
-
-msgid "VaporPermeability_DEFINITION"
-msgstr "试验条件下每单位蒸气压力差异的蒸气传输速率。"
-
-#:IFC.xml:22321
-msgid "Pset_MaterialMechanical"
-msgstr "Pset 材料加工机"
-
-msgid "Pset_MaterialMechanical_DEFINITION"
-msgstr "一套通常用于结构分析的机械材料特性，它包含与实际材料类型无关的所有特性。"
-
-#:IFC.xml:22322
-msgid "DynamicViscosity"
-msgstr "动态Viscosity"
-
-msgid "DynamicViscosity_DEFINITION"
-msgstr "该材料的直观抗性。"
-
-#:IFC.xml:22327
-msgid "PoissonRatio"
-msgstr "PoissonRatio"
-
-msgid "PoissonRatio_DEFINITION"
-msgstr "弹性范围内横向变形的计量。"
-
-#:IFC.xml:22332
-msgid "ShearModulus"
-msgstr "ShearModulus"
-
-msgid "ShearModulus_DEFINITION"
-msgstr "材料弹性的表面模块。"
-
-#:IFC.xml:22348
-msgid "Pset_MaterialOptical"
-msgstr "素材集"
-
-msgid "Pset_MaterialOptical_DEFINITION"
-msgstr "一套材料光学特性。"
-
-#:IFC.xml:22349
-msgid "SolarReflectanceBack"
-msgstr "SolarReflectanceBack"
-
-msgid "SolarReflectanceBack_DEFINITION"
-msgstr "在正常情况下太阳能回头反射。 定义射线从一个介质传输到另一个介质时所反映的太阳射线的分量。 在其他材料的后面，垂直于表面。 取决于材料和表面特性。"
-
-#:IFC.xml:22354
-msgid "SolarReflectanceFront"
-msgstr "士兵反省阵线："
-
-msgid "SolarReflectanceFront_DEFINITION"
-msgstr "在正常情况下太阳前方反射。 定义射线从一个介质传输到另一个介质时所反映的太阳射线的分量。 在其他材料的前面，垂直于表面。 取决于材料和表面特性。"
-
-#:IFC.xml:22359
-msgid "SolarTransmittance"
-msgstr "SolarTransmittance"
-
-msgid "SolarTransmittance_DEFINITION"
-msgstr "直接穿越一个叫做Tite的系统的太阳辐射比例。请注意以下方程式Asol Rsol Tsol 1"
-
-#:IFC.xml:22364
-msgid "ThermalIrEmissivityBack"
-msgstr "温度虚弱性后退"
-
-msgid "ThermalIrEmissivityBack_DEFINITION"
-msgstr "热红外反应堆后侧。 定义每个单位面积在同一温度下通过材料背面向黑体排放的热能分量。"
-
-#:IFC.xml:22369
-msgid "ThermalIrEmissivityFront"
-msgstr "ThermalIrmissibilityFront"
-
-msgid "ThermalIrEmissivityFront_DEFINITION"
-msgstr "IR 热能发射前面。 定义每个单位面积在同一温度下通过材料的前面向黑体排放的热能分量。"
-
-#:IFC.xml:22374
-msgid "ThermalIrTransmittance"
-msgstr "热电传输器"
-
-msgid "ThermalIrTransmittance_DEFINITION"
-msgstr "在正常情况下热路由器传输。定义每个单位面积穿过的热能分量，垂直于表面。"
-
-#:IFC.xml:22379
-msgid "VisibleReflectanceBack"
-msgstr "可视反射返回"
-
-msgid "VisibleReflectanceBack_DEFINITION"
-msgstr "正常情况下的反射可在背面看到。 定义太阳射线在反映的可见光谱中的分量，在射线从一种介质传输到另一种介质时不会传输。 在其他材料的后面，垂直于表面。 取决于材料和表面特性。"
-
-#:IFC.xml:22384
-msgid "VisibleReflectanceFront"
-msgstr "可视反射Front"
-
-msgid "VisibleReflectanceFront_DEFINITION"
-msgstr "在正常情况下可见前端反射。 定义太阳射线在反映的可见光谱中的分量，在射线从一种介质传输到另一种介质时不会传输。 在其他材料的前面，垂直于表面。 取决于材料和表面特性。"
-
-#:IFC.xml:22389
-msgid "VisibleTransmittance"
-msgstr "可视传输量"
-
-msgid "VisibleTransmittance_DEFINITION"
-msgstr "正常情况下的传输次数可见。 定义每个单位面积穿过的太阳辐射可见光谱的分数，垂直于表面。"
-
-#:IFC.xml:22395
-msgid "Pset_MaterialSteel"
-msgstr "混凝土材料钢管"
-
-msgid "Pset_MaterialSteel_DEFINITION"
-msgstr "一套与钢或其他金属和各向异性材料有关的扩展机械特性。"
-
-#:IFC.xml:22396
-msgid "HardeningModule"
-msgstr "HardeningModule"
-
-msgid "HardeningModule_DEFINITION"
-msgstr "压力相对于压力曲线的材料坡度在产量范围后的硬化模块。"
-
-#:IFC.xml:22401
-msgid "PlasticStrain"
-msgstr "塑料火车"
-
-msgid "PlasticStrain_DEFINITION"
-msgstr "一种衡量长期流离失所情况的措施，如滑坡或结对，这种情况在压力消除之后仍然存在。 目前适用于材料0.2比例压力的紧张性。"
-
-#:IFC.xml:22406
-msgid "ProportionalStress"
-msgstr "相称性"
-
-msgid "ProportionalStress_DEFINITION"
-msgstr "测量材料的比例压力。 它描述了第一次塑料变形之前的压力，通常以0.01的变形来衡量。"
-
-#:IFC.xml:22411
-msgid "Relaxations"
-msgstr "放宽度"
-
-msgid "Relaxations_DEFINITION"
-msgstr "塑料流动所造成的压力在长时间间隔内减少的措施。 对于材料的不同初始应力水平，可以给出不同的放松值。 它描述了特定初始压力水平在恒定压力下的时间依靠相对放松值。 相关的值是放松值。相关的值是初始压力值"
-
-#:IFC.xml:22416
-msgid "UltimateStrain"
-msgstr "末影剧情模式"
-
-msgid "UltimateStrain_DEFINITION"
-msgstr "测量材料最终压力状态下的工程压力。"
-
-#:IFC.xml:22421
-msgid "UltimateStress"
-msgstr "终极感受器"
-
-msgid "UltimateStress_DEFINITION"
-msgstr "对材料最终压力的计量。"
-
-#:IFC.xml:22426
-msgid "YieldStress"
-msgstr "Yieldpress"
-
-msgid "YieldStress_DEFINITION"
-msgstr "一种测量物料产量压力或特性0.2%的证明压力。"
-
-#:IFC.xml:22432
-msgid "Pset_MaterialThermal"
-msgstr "Pset 材料热器"
-
-msgid "Pset_MaterialThermal_DEFINITION"
-msgstr "一组热材料特性。注释特性加热能力定义每个温度单位吸收的材料热能的特定热量。 热能通过材料传播的速度。"
-
-#:IFC.xml:22433
-msgid "BoilingPoint"
-msgstr "BoilingPoint"
-
-msgid "BoilingPoint_DEFINITION"
-msgstr "材料液体的锅炉。"
-
-#:IFC.xml:22438
-msgid "FreezingPoint"
-msgstr "冻结点"
-
-msgid "FreezingPoint_DEFINITION"
-msgstr "物质液的冻结点"
-
-#:IFC.xml:22454
-msgid "Pset_MaterialWater"
-msgstr "Pset 材料水"
-
-msgid "Pset_MaterialWater_DEFINITION"
-msgstr "通常在建筑服务和水流分配系统中使用的一套水的扩大材料特性。"
-
-#:IFC.xml:22455
-msgid "AcidityConcentration"
-msgstr "CidityCentration"
-
-msgid "AcidityConcentration_DEFINITION"
-msgstr "能够使酸失效的 CACO3 等效的最大值。"
-
-#:IFC.xml:22460
-msgid "AlkalinityConcentration"
-msgstr "碱度浓度"
-
-msgid "AlkalinityConcentration_DEFINITION"
-msgstr "作为CACO3测量的每一负离子物质的最大碱度浓度最大和。"
-
-#:IFC.xml:22465
-msgid "DissolvedSolidsContent"
-msgstr "解散的SolidsContent"
-
-msgid "DissolvedSolidsContent_DEFINITION"
-msgstr "溶解固体量与总水量之间的分数。 这种方法以溶解固体体重每次水重量来测量，因此是没有单位的。"
-
-#:IFC.xml:22470
-msgid "Hardness"
-msgstr "硬度"
-
-msgid "Hardness_DEFINITION"
-msgstr "水是否稀缺，作为水中正、多价离子浓度，通常是碳酸钙和镁的浓度。"
-
-#:IFC.xml:22475
-msgid "ImpuritiesContent"
-msgstr "Impurities内容"
-
-msgid "ImpuritiesContent_DEFINITION"
-msgstr "灰尘等杂质分成水量。 这是以每次水重量的杂质重量来测量的，因此是没有单位的。"
-
-#:IFC.xml:22480
-msgid "IsPotable"
-msgstr "伊波托尔"
-
-msgid "IsPotable_DEFINITION"
-msgstr "如果是TRUE，则水就被认为是可饮用的。"
-
-#:IFC.xml:22485
-msgid "PHLevel"
-msgstr "PHLevel"
-
-msgid "PHLevel_DEFINITION"
-msgstr "最大水位PH值介于 0 14 之间。"
-
-#:IFC.xml:22491
-msgid "Pset_MaterialWood"
-msgstr "木头材料"
-
-msgid "Pset_MaterialWood_DEFINITION"
-msgstr "这是适用于木材材料的特性集合，具体规定材料的种类和品位以及与湿度有关的参数。"
-
-#:IFC.xml:22492
-msgid "AppearanceGrade"
-msgstr "外观等级"
-
-msgid "AppearanceGrade_DEFINITION"
-msgstr "视觉质量方面的评分"
-
-#:IFC.xml:22497
-msgid "DimensionalChangeCoefficient"
-msgstr "维度变化系数"
-
-msgid "DimensionalChangeCoefficient_DEFINITION"
-msgstr "相对于湿度含量中的一个变化来说，加权尺度变化系数."
-
-#:IFC.xml:22502
-msgid "Layers"
-msgstr "图层"
-
-msgid "Layers_DEFINITION"
-msgstr "图层数量。"
-
-#:IFC.xml:22507
-msgid "Layup"
-msgstr "Layup"
-
-msgid "Layup_DEFINITION"
-msgstr "灯具配置。"
-
-#:IFC.xml:22512
-msgid "MoistureContent"
-msgstr "节能内容"
-
-msgid "MoistureContent_DEFINITION"
-msgstr "湿度相对于木头干燥重量的总重量。"
-
-#:IFC.xml:22517
-msgid "Plies"
-msgstr "Plies"
-
-msgid "Plies_DEFINITION"
-msgstr "复数."
-
-#:IFC.xml:22522
-msgid "Species"
-msgstr "物种："
-
-msgid "Species_DEFINITION"
-msgstr "固体木材或胶合板木材产品的木材种类。"
-
-#:IFC.xml:22527
-msgid "StrengthGrade"
-msgstr "强度等级"
-
-msgid "StrengthGrade_DEFINITION"
-msgstr "在机械强度和硬度方面的等级。"
-
-#:IFC.xml:22532
-msgid "ThicknessSwelling"
-msgstr "厚度"
-
-msgid "ThicknessSwelling_DEFINITION"
-msgstr "相对于板深度的肿胀比率。"
-
-#:IFC.xml:22538
-msgid "Pset_MaterialWoodBasedStructure"
-msgstr "Pset 材质woodBasedstructure"
-
-msgid "Pset_MaterialWoodBasedStructure_DEFINITION"
-msgstr "木质结构材料的属性。"
-
-#:IFC.xml:22539
-msgid "ApplicableStructuralDesignMethod"
-msgstr "适用结构设计方法"
-
-msgid "ApplicableStructuralDesignMethod_DEFINITION"
-msgstr "确定机械材料特性是否适用于ASD允许的应力设计工作应力设计， LSD 限制状态设计，或 LRFD 负载和抗性因子设计。"
-
-#:IFC.xml:22545
-msgid "Pset_MechanicalBeamInPlane"
-msgstr "Pset MechanicalBeamInPlane"
-
-msgid "Pset_MechanicalBeamInPlane_DEFINITION"
-msgstr "球体中机械束的属性。"
-
-#:IFC.xml:22546
-msgid "BendingStrength"
-msgstr "BendingStrength"
-
-msgid "BendingStrength_DEFINITION"
-msgstr "定义值 Alpha定义值呈阳性强度。"
-
-#:IFC.xml:22551
-msgid "CompStrength"
-msgstr "强度"
-
-msgid "CompStrength_DEFINITION"
-msgstr "压缩强度，α0。"
-
-#:IFC.xml:22556
-msgid "CompStrengthPerp"
-msgstr "CompStrength Perp"
-
-msgid "CompStrengthPerp_DEFINITION"
-msgstr "压缩强度，α90"
-
-#:IFC.xml:22561
-msgid "InstabilityFactors"
-msgstr "不稳定因素"
-
-msgid "InstabilityFactors_DEFINITION"
-msgstr "定义值的斜度比率界定了强度的系数或除以数值，这取决于设计方法，如果有一个分隔符。"
-
-#:IFC.xml:22566
-msgid "RaisedCompStrengthPerp"
-msgstr "RaisedCompStrengthPerp"
-
-msgid "RaisedCompStrengthPerp_DEFINITION"
-msgstr "压缩强度，α90 的替代值，可在材料和代码依赖条件下使用，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
-
-#:IFC.xml:22571
-msgid "ReferenceDepth"
-msgstr "参考水深度"
-
-msgid "ReferenceDepth_DEFINITION"
-msgstr "机械特性有效的圆形深度作为检查物料分配完整性的手段。"
-
-#:IFC.xml:22581
-msgid "ShearModulusMin"
-msgstr "ShearModulusMin"
-
-msgid "ShearModulusMin_DEFINITION"
-msgstr "剪裁模块，最小值。"
-
-#:IFC.xml:22586
-msgid "ShearStrength"
-msgstr "心灵强度"
-
-msgid "ShearStrength_DEFINITION"
-msgstr "定义值 Alpha定义值穿透强度。"
-
-#:IFC.xml:22596
-msgid "TensileStrengthPerp"
-msgstr "TensileStrengthPerp"
-
-msgid "TensileStrengthPerp_DEFINITION"
-msgstr "2. 抗拉强度，α90"
-
-#:IFC.xml:22601
-msgid "TorsionalStrength"
-msgstr "激发强度"
-
-msgid "TorsionalStrength_DEFINITION"
-msgstr "在折磨中减弱实力。"
-
-#:IFC.xml:22611
-msgid "YoungModulusMin"
-msgstr "YoungModulusMin"
-
-msgid "YoungModulusMin_DEFINITION"
-msgstr "弹性模块，最小值 α0。"
-
-#:IFC.xml:22616
-msgid "YoungModulusPerp"
-msgstr "YoungModulusPerp"
-
-msgid "YoungModulusPerp_DEFINITION"
-msgstr "Elastic modulus, mean值, alpha90。"
-
-#:IFC.xml:22621
-msgid "YoungModulusPerpMin"
-msgstr "YoungModulusPerpMin"
-
-msgid "YoungModulusPerpMin_DEFINITION"
-msgstr "弹性模块，最小值 Alpha90 。"
-
-#:IFC.xml:22627
-msgid "Pset_MechanicalBeamInPlaneNegative"
-msgstr "Pset MechanicalBeamInPlaneNegative"
-
-msgid "Pset_MechanicalBeamInPlaneNegative_DEFINITION"
-msgstr "Plane Negative 中机械束的属性。"
-
-#:IFC.xml:22709
-msgid "Pset_MechanicalBeamOutOfPlane"
-msgstr "Pset MechanicalBeamOutOfPlane"
-
-msgid "Pset_MechanicalBeamOutOfPlane_DEFINITION"
-msgstr "机械束离开飞机的属性。"
-
-#:IFC.xml:22791
-msgid "Pset_MechanicalPanelInPlane"
-msgstr "Pset MechanicalPanelInPlane"
-
-msgid "Pset_MechanicalPanelInPlane_DEFINITION"
-msgstr "机械板在飞机上的属性。"
-
-#:IFC.xml:22792
-msgid "BearingStrength"
-msgstr "焦耳强度"
-
-msgid "BearingStrength_DEFINITION"
-msgstr "定义值α界定了具有喷口强度的数值，即无贸易压力。"
-
-#:IFC.xml:22807
-msgid "RaisedCompressiveStrength"
-msgstr "提升压缩强度"
-
-msgid "RaisedCompressiveStrength_DEFINITION"
-msgstr "可在材料和代码依赖条件下使用的压缩强度替代值，例如： 如果变形是可容忍的，或者远离成员条件的结尾应该在 SELF [[IfcProperty]].Description中说明。"
-
-#:IFC.xml:22832
-msgid "YoungModulusBending"
-msgstr "YoungModulusBending"
-
-msgid "YoungModulusBending_DEFINITION"
-msgstr "定义bend中的 Alpha定义值弹性模块。"
-
-#:IFC.xml:22837
-msgid "YoungModulusCompression"
-msgstr "YoungModulus压缩"
-
-msgid "YoungModulusCompression_DEFINITION"
-msgstr "压缩中的弹性模块。"
-
-#:IFC.xml:22842
-msgid "YoungModulusTension"
-msgstr "YoungModulusphension"
-
-msgid "YoungModulusTension_DEFINITION"
-msgstr "定义值α在紧张状态下定义的值弹性模块。"
-
-#:IFC.xml:22848
-msgid "Pset_MechanicalPanelOutOfPlane"
-msgstr "Pset MechanicalPanelOutOfPlane"
-
-msgid "Pset_MechanicalPanelOutOfPlane_DEFINITION"
-msgstr "机械立体脱离飞机的属性"
-
-#:IFC.xml:22905
-msgid "Pset_MechanicalPanelOutOfPlaneNegative"
-msgstr "套装机械板OutOfPlaneNegative"
-
-msgid "Pset_MechanicalPanelOutOfPlaneNegative_DEFINITION"
-msgstr "机械板脱离机床的属性。"
-
-#:IFC.xml:23024
-msgid "IfcCardinalPointReference"
-msgstr "IfcCardinalPointReference"
-
-msgid "IfcCardinalPointReference_DEFINITION"
-msgstr "An [[IfcCardinalPointReference]] is an index reference to significant points of a section profile. This index is used to describe the spatial relationship between the section of a member and a reference axis of the same member. HISTORY New Type in IFC4. Indexes 1...9 refer to points at the bounding box of a profile. Indexes 10...19 refer to points defined by geometric centroid usually centre of gravity and shear centre, and their combinations with bounding box coordinates. In particular, the following index values are specified in this specification 1. bottom left 2. bottom centre 3. bottom right 4. mid depth left 5. mid depth centre 6. mid depth right 7. top left 8. top centre 9. top right 10. geometric centroid 11. bottom in line with the geometric centroid 12. left in line with the geometric centroid 13. right in line with the geometric centroid 14. top in line with the geometric centroid 15. shear centre 16. bottom in line with the shear centre 17. left in line with the shear centre 18. right in line with the shear centre 19. top in line with the shear centre 20. Lowest point inside of pipe or channel profile centre of flat bottom Other index values are possible but outside the scope of this specification. Figure 1 illustrates cardinal point values. arbitrary profile with cardinal points .. .. .. .. figures ifccardinalpointreference 01.png Figure 1 Cardinal point values Figure 2 illustrates an example extrusion shape with arbitrary profile [[IfcArbitraryClosedProfileDef]] , aligned mid depth right on the member axis. The line of sight follows the extrusion direction Z which points into the drawing plane of above illustration. Hence, left is in the positive X direction of the [[IfcProfileDef]] . Top is in the positive Y direction of the [[IfcProfileDef]] . extrusion shape with arbitrary profile and alignment .. .. .. .. figures ifccardinalpointreference 02.png Figure 2 Cardinal point extrusion Formal Propositions GreaterThanZero Cardinal point reference shall be greater than zero."
+#:IFC.xml:38010
+msgid "IfcTopologyRepresentationTypes__RepType"
+msgstr "IfcTopologyRepresentationTypes Reptype"
 
