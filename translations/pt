@@ -9,975 +9,586 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcRail.pot\n"
+"X-Crowdin-File-ID: 76\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
 "PO-Revision-Date: 2022-02-22 19:18\n"
 
-#:IFC.xml:626
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:31996
+msgid "IfcAlignmentCant"
+msgstr "IfcAlignmentCant"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as described below. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . lining 1 .. .. .. .. figures ifcdoorliningproperties fig01.png The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. lining 2 .. .. .. .. figures ifcdoorliningproperties fig02.png The lining can only cover part of the opening reveal. LiningOffset, given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. lining 3 .. .. .. .. figures ifcdoorliningproperties fig03.png The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness lining 4 .. .. .. .. figures ifcdoorliningproperties fig04.png The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth, if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure , given, if the threshold edge has an offset to the x axis of the local placement. lining 5 .. .. .. .. figures ifcdoorliningproperties fig05.png The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset, a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcAlignmentCant_DEFINITION"
+msgstr "Um IfcAlignment2DCant é um perfil de inclinação lateral definido ao longo do alinhamento horizontal. Todos os pontos definidos neste perfil têm dois valores de coordenada. O primeiro valor é a distância ao longo do alinhamento horizontal, e o segundo valor é a altura relativa à projeção do ponto ao longo do alinhamento vertical."
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:31997
+msgid "IfcAlignmentCant_RailHeadDistance"
+msgstr "Distancia"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Ponteiro no aspecto da forma, se for dado. O aspecto da forma reflete a parte da forma da porta, que representa o fechamento da porta. .change ifc2x4 IFC4 CHANGE O atributo está obsoleto e não será mais usado, ou seja, o valor deve ser NIL ."
+msgid "IfcAlignmentCant_RailHeadDistance_DEFINITION"
+msgstr "Comprimento medido como distância entre os pontos centrais nominais dos dois conjuntos de contato de um conjunto de rodas e trilhos."
 
-#:IFC.xml:627
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "Profundidade Casada"
+#:IFC.xml:32005
+msgid "IfcDirectrixDistanceSweptAreaSolid"
+msgstr "IfcDirectrixDistanceSweptAreaSolid"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Profundidade da dimensão revestida no avião perpendicular à folha de porta. Se for dada a sua aplicação igual aos quatro lados da parede adjacente."
+msgid "IfcDirectrixDistanceSweptAreaSolid_DEFINITION"
+msgstr "Uma entidade abstrata definindo informações comuns sobre um tipo de área sólida varreda que é o resultado de varrer uma área numa Directriz. A área de varredura é fornecida por um subtipo de [[IfcProfileDef]]. O perfil é colocado por um operador de transformação cartesiana implícita no ponto inicial da varredura. O perfil normal é onde o perfil normal concorda com a tangente da trix diretiva neste momento. A regra de orientação do eixo de perfil x é especializada pelos subtipos de IfcDirextrixDistanceSweptAreaSolid. O início da operação de varredura é no StartDistance, fornecido pela IfcDistanceExpressão. Se nenhuma Inicialização for fornecida, o início padrão é o início do diretrix. O fim da operação de varredura é no EndDistance, fornecido pela IfcDistanceExpressão. Se nenhuma EndDistance for fornecida, o padrão é o final do diretório trix."
 
-#:IFC.xml:632
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "Espessura"
+#:IFC.xml:11926
+msgid "IfcDirectrixDistanceSweptAreaSolid_Directrix"
+msgstr "Diretriz"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Espessura da dimensão do revestimento no avião da folha de porta. Se for dada a sua aplicação igual aos quatro lados da parede adjacente."
+msgid "IfcDirectrixDistanceSweptAreaSolid_Directrix_DEFINITION"
+msgstr "Diretriz"
 
-#:IFC.xml:637
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "Profundidade"
+#:IFC.xml:12672
+msgid "IfcDirectrixDistanceSweptAreaSolid_EndDistance"
+msgstr "EndDistance"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profundidade do cerco da porta, medida perpendicular ao avião do fechamento da porta. Se omitido e com um determinado valor para forro de espessura, ele indica uma profundidade ajustável i. . uma profundidade que se ajusta à espessura da parede na qual a ocorrência desta porta é inserida."
+msgid "IfcDirectrixDistanceSweptAreaSolid_EndDistance_DEFINITION"
+msgstr "EndDistance"
 
-#:IFC.xml:642
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:12684
+msgid "IfcDirectrixDistanceSweptAreaSolid_StartDistance"
+msgstr "Distância inicial"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Dimensão de deslocamento no avião perpendicular à folha de porta do cerco da porta. O deslocamento é dado como distância ao eixo x da localização local."
+msgid "IfcDirectrixDistanceSweptAreaSolid_StartDistance_DEFINITION"
+msgstr "Distância inicial"
 
-#:IFC.xml:647
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "LingThickness"
+#:IFC.xml:32008
+msgid "IfcDistributionBoard"
+msgstr "IfcDistributionBoard"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Espessura do forro da porta, conforme explicado na figura acima. Se o valor da LingThickness for 0. zero, indica uma porta sem um forro de todos os outros parâmetros de forro devem ser definidos como NIL neste caso. Se a LingThickness é NIL, ela indica que o valor não está disponível. .change ifc2x4 IFC4 CHANGE Data modificado para ser [[IfcNonNegativeLengthMeasure]]."
+msgid "IfcDistributionBoard_DEFINITION"
+msgstr "Um quadro de distribuição é um controlador de fluxos em que casos de dispositivos eléctricos ou de comunicação são reunidos num único local para um determinado propósito. Uma distribuição proporciona uma habitação para elementos de distribuição interligados, para que possam ser vistos, operados ou acusados a partir de um único local. Cada item conectado pode ter sua própria representação e localização geométrica."
 
-#:IFC.xml:652
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:32009
+msgid "IfcDistributionBoard_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Deslocamento entre o forro e o painel da janela medido ao longo do eixo x do posicionamento local. .change ifc2x4 IFC4 CHANGE novo atributo adicionado ao final da definição da entidade."
+msgid "IfcDistributionBoard_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:657
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:32031
+msgid "IfcDistributionBoardType"
+msgstr "IfcDistributionBoardType"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Deslocamento entre o forro e o painel da porta medido ao longo do eixo y do posicionamento local. .change ifc2x4 IFC4 CHANGE novo atributo adicionado ao final da definição da entidade."
+msgid "IfcDistributionBoardType_DEFINITION"
+msgstr "O tipo de controlador de fluxo [[IfcDistributionBoardType]] define informações compartilhadas comumente para ocorrências de quadros de distribuição. O conjunto de informações compartilhadas pode incluir propriedades comuns com propriedades compartilhadas conjuntos de representações comuns em materiais comuns compostos por elementos de portos comuns. É usado para definir uma especificação de tipo de quadro de distribuição indicando as informações específicas do produto que são comuns a todas as ocorrências desse tipo de produto. A [[IfcDistributionBoardType]] pode ser declarada dentro de [[IfcProject]] ou [[IfcProjectLibrary]] usando [[IfcRelDeclares]] e pode ser trocada com ou sem ocorrências do tipo. Ocorrências de [[IfcDistributionBoardType]] são representadas por instâncias de [[IfcDistributionBoard]]. Consulte a documentação em [[IfcDistributionBoard]] para os conjuntos de propriedades suportados, materiais, composição e portos."
 
-#:IFC.xml:662
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "Profundidade máxima"
+#:IFC.xml:32032
+msgid "IfcDistributionBoardType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Dimensão da profundidade do avião perpendicular à folha de porta do limite da porta. Apenas dado se o forro da porta incluir um limiar. Se omitido e com um determinado valor para a espessura do limite, indica uma profundidade ajustável, ou seja, uma profundidade que se ajusta à espessura da parede na qual a ocorrência desta porta está inserida."
+msgid "IfcDistributionBoardType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:667
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "Deslocamento"
+#:IFC.xml:32051
+msgid "IfcDistributionBoardTypeEnum"
+msgstr "IfcDistributionBoardTypeEnum"
 
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Dimensão de compensação no avião perpendicular à folha de porta do limite de porta. O deslocamento é dado como distância ao eixo x da localização local. Só quando o forro da porta tiver um limiar, e o parâmetro for conhecido."
+#:IFC.xml:32065
+msgid "IfcDistributionBoardTypeEnum_SWITCHBOARD"
+msgstr "TROCADO"
 
-#:IFC.xml:672
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "Espessura"
+msgid "IfcDistributionBoardTypeEnum_SWITCHBOARD_DEFINITION"
+msgstr "Um ponto de distribuição no qual se localizam os dispositivos alternativos."
 
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Espessura do limite da porta, conforme explicado na figura acima. Se o valor de Espessura for 0. zero indica uma porta sem um limite de profundidade de ThresholdDepth será definida como NIL neste caso. Se o ThresholdThickness é NIL, ele indica que a informação sobre um limite não está disponível. .change ifc2x4 IFC4 CHANGE Data modificado para ser [[IfcNonNegativeLengthMeasure]]."
+#:IFC.xml:32057
+msgid "IfcDistributionBoardTypeEnum_CONSUMERUNIT"
+msgstr "CONSUMERUNIT"
 
-#:IFC.xml:677
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
+msgid "IfcDistributionBoardTypeEnum_CONSUMERUNIT_DEFINITION"
+msgstr "Um ponto de distribuição no abastecimento eléctrico que chega, tipicamente em locais domésticos, onde se situam os dispositivos de protecção."
 
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Deslocamento do transom se determinado que divide a porta de um glazeiro ou janela acima. O deslocamento é dado a partir da base da abertura da porta."
+#:IFC.xml:32064
+msgid "IfcDistributionBoardTypeEnum_MOTORCONTROLCENTRE"
+msgstr "MOTORCONTROCENTRO"
 
-#:IFC.xml:682
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+msgid "IfcDistributionBoardTypeEnum_MOTORCONTROLCENTRE_DEFINITION"
+msgstr "Um ponto de distribuição no qual se localizam dispositivos de início e controle para as principais plantas."
 
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Largura de espessura em um avião paralelo à folha de porta do transom se for fornecido se o atributo TransomOffset estiver definido, o que divide a porta de um glaciar ou janela acima. Se a TransomThickness está definida como zero e o TransomOffset como um comprimento positivo, então a porta é dividida verticalmente em uma área de janela de folha e de transom sem uma moldura física. .change ifc2x4 IFC4 CHANGE Data alterado para [[IfcNonNegativeLengthMeasure]]."
+#:IFC.xml:32061
+msgid "IfcDistributionBoardTypeEnum_DISTRIBUTIONFRAME"
+msgstr "DESTRIBUÇÃO"
 
-#:IFC.xml:701
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
+msgid "IfcDistributionBoardTypeEnum_DISTRIBUTIONFRAME_DEFINITION"
+msgstr "Um quadro de distribuição é usado para interconectar e gerenciar a fiação entre equipamentos ativos e assinantes. Ele pode ser composto por vários quadros de distribuição e outros componentes."
 
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "Esta enumeração define as formas básicas de funcionamento dos painéis de porta individuais, conforme mostrado na Figura 1. A direção de abertura dos painéis de porta é dada pela posição local do [[IfcDoor]]. O eixo y positivo determina a direção conforme mostrado na figura 2. direção do painel.. .. .. figura ifcdoorpaneloperationenum fig10.gif Figure 2 painel de operações NOTE Representações simbólicas dependem do código de construção nacional. Estes números são mostrados apenas como ilustrações da HISTORY Nova enumeração na IFC2.0. [IfcDoor] hange ifc2x4 IFC4 CHANGE Enumerator FIXEDPANEL added Items SWINGING .. .. .. figures ifcdoorpaneloperationenum fig01.gif DOUBLE ACTING . .. .. ifcdoorpaneloperationenum fig02.gif SLIDING .. .. figura ifcdoorpaneloperationenum fig03.gif FOLDING .. .. .. ifcdoorpaneloperationenum fig04.gif REVOLVING .. .. figura ifcdoorpaneloperationenum fig05.gif ROLINGUP .. .. . figura ifcdoorpaneloperationenum fig06.gif FIXEDPANEL .. .. figura ifcdoorpaneloperationenum fig07.gif USERDEFINED NOTDEFINED"
+#:IFC.xml:32058
+msgid "IfcDistributionBoardTypeEnum_DISTRIBUTIONBOARD"
+msgstr "DISTRIBUITO"
 
-#:IFC.xml:702
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
-msgstr "ATENÇÃO EM DOBRO"
+msgid "IfcDistributionBoardTypeEnum_DISTRIBUTIONBOARD_DEFINITION"
+msgstr "Um ponto de distribuição no qual as conexões são feitas para distribuição de circuitos eléctricos, geralmente através de dispositivos protetores."
 
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
-msgstr ".. .. .. figura ifcdoorpaneloperationenum fig02.gif"
+#:IFC.xml:32066
+msgid "IfcElectricFlowTreatmentDevice"
+msgstr "Dispositivo IfcElectricFlowTreatmentDevice"
 
-#:IFC.xml:703
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
-msgstr "FIXEDPANEL"
+msgid "IfcElectricFlowTreatmentDevice_DEFINITION"
+msgstr "É utilizado um dispositivo de tratamento de fluxo eléctrico para remover a matéria indesejada de um sinal elétrico ou electrónico num sistema de distribuição de fluxo."
 
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
-msgstr ".. .. .. figura ifcdoorpaneloperationenum fig07.gif"
+#:IFC.xml:32067
+msgid "IfcElectricFlowTreatmentDevice_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:704
-msgid "IfcDoorPanelOperationEnum_FOLDING"
-msgstr "SEGUINDO"
+msgid "IfcElectricFlowTreatmentDevice_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
-msgstr ".. .. .. .. figura ifcdoorpaneloperationenum fig04.gif"
+#:IFC.xml:32086
+msgid "IfcElectricFlowTreatmentDeviceType"
+msgstr "IfcElectricFlowTreatmentDeviceType"
 
-#:IFC.xml:705
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
-msgstr "NÃOFINO"
+msgid "IfcElectricFlowTreatmentDeviceType_DEFINITION"
+msgstr "O tipo de dispositivo de tratamento de fluxo [[IfcElectricFlowTreatmentDeviceType]] define informações compartilhadas comumente para ocorrências de aparelhos de telecomunicações móveis. O conjunto de informações compartilhadas pode incluir propriedades comuns com propriedades compartilhadas define representações comuns materiais comuns compostos por elementos de portas comuns. É usado para definir uma especificação de tipo de dispositivo de tratamento de fluxo elétrico, indicando as informações específicas do produto que são comuns a todas as ocorrências desse tipo de produto. A [[IfcElectricFlowTreatmentDeviceType]] pode ser declarada dentro de [[IfcProject]] ou [[IfcProjectLibrary]] usando [[IfcRelDeclares]] e pode ser trocada com ou sem ocorrências do tipo. Ocorrências de [[IfcElectricFlowTreatmentDeviceType]] são representadas por instâncias de [[IfcElectricFlowTreatmentDevice]]. Consulte a documentação em [[IfcElectricFlowTreatmentDevice]] para os conjuntos de propriedades suportados, materiais, composição e portos."
 
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
+#:IFC.xml:32087
+msgid "IfcElectricFlowTreatmentDeviceType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:706
-msgid "IfcDoorPanelOperationEnum_REVOLVING"
-msgstr "REVOLVANDO"
+msgid "IfcElectricFlowTreatmentDeviceType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
-msgstr ".. .. .. .. figura ifcdoorpaneloperationenum fig05.gif"
+#:IFC.xml:32106
+msgid "IfcElectricFlowTreatmentDeviceTypeEnum"
+msgstr "IfcElectricFlowTreatmentDeviceTypeEnum"
 
-#:IFC.xml:707
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+msgid "IfcElectricFlowTreatmentDeviceTypeEnum_DEFINITION"
+msgstr "A [[IfcElectricFlowTreatmentDeviceTypeEnum]] define a variedade de diferentes tipos de dispositivo de tratamento de fluxo de eletricidade que podem ser especificados."
 
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
-msgstr ".. .. .. figura ifcdoorpaneloperationenum fig06.gif"
+#:IFC.xml:32108
+msgid "IfcElectricFlowTreatmentDeviceTypeEnum_ELECTRONICFILTER"
+msgstr "ELECTRONICFILTER"
 
-#:IFC.xml:708
-msgid "IfcDoorPanelOperationEnum_SLIDING"
-msgstr "SALVANDO"
+msgid "IfcElectricFlowTreatmentDeviceTypeEnum_ELECTRONICFILTER_DEFINITION"
+msgstr "Linear dois dispositivos de porta projetado para transmitir componentes específicos da quantidade de entrada de acordo com uma lei específica, geralmente a fim de passar os componentes em certas faixas de freqüência e atenuá-los em outras faixas"
 
-msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
-msgstr ".. .. .. figura ifcdoorpaneloperationenum fig03.gif"
+#:IFC.xml:32110
+msgid "IfcInclinedReferenceSweptAreaSolid"
+msgstr "IfcInclinedReferenceSweptAreaSolid"
 
-#:IFC.xml:709
-msgid "IfcDoorPanelOperationEnum_SWINGING"
-msgstr "ESPANDO"
+msgid "IfcInclinedReferenceSweptAreaSolid_DEFINITION"
+msgstr "Um [[IfcInclinedReferenceSweptAreaSolid]] é um [[IfcDirectrixDistanceSweptAreaSolid]]. A orientação do eixo do perfil x segue sempre a regra definida pela IfcAxisLateralInclinação."
 
-msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
-msgstr ".. .. .. figura ifcdoorpaneloperationenum fig01.gif"
+#:IFC.xml:32111
+msgid "IfcInclinedReferenceSweptAreaSolid_FixedAxisVertical"
+msgstr "FixedAxisVertical"
 
-#:IFC.xml:710
-msgid "IfcDoorPanelOperationEnum_USERDEFINED"
-msgstr "USUÁRIO"
+msgid "IfcInclinedReferenceSweptAreaSolid_FixedAxisVertical_DEFINITION"
+msgstr "Indica se o perfil está orientado com seu eixo Y virado para cima na direção Verdadeiro Z, ou verticalmente perpendicular à Directriz variando de acordo com o inclinador Falso ."
 
-msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
-msgstr "USUÁRIO"
+#:IFC.xml:32118
+msgid "IfcMobileTelecommunicationsAppliance"
+msgstr "Aplicação"
 
-#:IFC.xml:712
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+msgid "IfcMobileTelecommunicationsAppliance_DEFINITION"
+msgstr "Um aparelho de telecomunicações móveis é um dispositivo que transmite, converte, amplifica ou recebe sinais utilizados em redes móveis. Note que esta entidade é usada para definir aparelhos específicos utilizados em redes móveis de telecomunicações. Os aparelhos de comunicações gerais e os usados em redes de transmissão fixas devem ser instanciados usando [[IfcCommunicationsAppliance]]."
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "Esta enumeração define as formas básicas de descrever a localização de um painel de portas dentro de um fechamento de porta. HISTÓRIA Nova Enumeração na Figura IFC2x 1 mostra a designação de um painel de portas com uma Posição das portas LEFT do painel e um painel de portas com RIGHT do tipo PanelPosition dentro de um estilo de porta com OperationType DOUBLE DOOU SINGEL. A posição é dada como mostrado no plano XZ da localização local, analisando a direção do eixo Y positivo. Posições de painel de porta .. .. .. figura ifcdoorpanelpositionenum fig01.gif Figura 1 painel de porta posiciona Itens SAÍDA MIDDLE NOTÍCIAS DIREITAS"
+#:IFC.xml:32119
+msgid "IfcMobileTelecommunicationsAppliance_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:713
-msgid "IfcDoorPanelPositionEnum_LEFT"
-msgstr "ESQUERDA"
+msgid "IfcMobileTelecommunicationsAppliance_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
-msgstr "ESQUERDA"
-
-#:IFC.xml:714
-msgid "IfcDoorPanelPositionEnum_MIDDLE"
-msgstr "MEDALHO"
-
-msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MEDALHO"
-
-#:IFC.xml:715
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
-msgstr "NÃOFINO"
-
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
-
-#:IFC.xml:716
-msgid "IfcDoorPanelPositionEnum_RIGHT"
-msgstr "DIREITA"
-
-msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "DIREITA"
-
-#:IFC.xml:718
-msgid "IfcDoorPanelProperties"
-msgstr "Propriedades"
-
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "Um painel de portas é normalmente uma folha de porta que se abre para permitir que pessoas ou bens passem. Os parâmetros do painel da porta definem o parâmetro geométrico relevante do painel, A [[IfcDoorPanelProperties]] é usada para descrever paramétrica a forma e a operação dos painéis de porta. A definição paramétrica pode ser acrescentada única ou exclusivamente à representação explícita da porta. A [[IfcDoorType]] pode definir portas compostas por mais de um painel. Nesse caso, uma instância de [[IfcDoorPanelProperties]] deve ser incluída para cada painel de porta. O atributo PanelPosition em conjunto com [[IfcDoorType]]. atributo perationType, determina para qual painel o [[IfcDoorPanelProperties]] aplica. A [[IfcDoorPanelProperties]] está incluída na lista de propriedades, dada pelo atributo HasPropertySet do [[IfcDoorType]]. Mais informações sobre o painel de portas podem ser incluídas na mesma lista de [[IfcDoorType]] usando o [[IfcPropertySet]] para extensões dinâmicas. A [[IfcDoorPanelProperties]] não possui uma representação geométrica. No entanto, ele define parâmetros que podem ser usados para criar a forma do tipo de porta que é inserido pelo [[IfcDoor]] no contexto espacial do projeto, conforme mostrado na Tabela 1. Os parâmetros do [[IfcDoorPanelProperties]] definem um painel de porta padrão, incluindo se for dada uma largura proporcional para definir duplo balanço não uniforme ou portas de slide, ou dobramento. O limite externo do painel é determinado pela representação de forma de perfil atribuída ao [[IfcDoor]], o que insere a [[IfcDoorType]]. Ele precisa levar o parâmetro forfetário em conta também. Diagrama painel de descrição do atributo 1 .. .. figuras ifcdoorpanelproperties fig01. if PanelDepth A profundidade do painel de balanço, ato duplo e painéis de slide é definida pelo parâmetro de profundidade do painel. painel 2 .. .. .. .. pinças ifcdoorpainelproperties fig02. Se PanelWidth para tipos de operação à porta que incluem mais de um painel, a largura de pelo menos um painel é dada por uma medida normalizada de proporção. Determina a largura desse painel, que é definido como uma proporção da largura total da abertura da porta. A tabela 1 Como os atributos afetam a forma porta do HISTÓRIO Nova entidade na IFC2.0. .Muda o ifc2x4 IFC4 CHANGE Supertipo alterado para novo [[IfcPreDefinedPropertySet]]."
-
-#:IFC.xml:741
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
-
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Ponteiro no aspecto da forma, se dado. O aspecto da forma reflete a parte da forma da porta, que representa o painel de porta. DEPRECAÇÃO obsoleta que o atributo está obsoleto e não será mais usado, ou seja, o valor será NIL."
-
-#:IFC.xml:719
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "Profundidade do painel"
-
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Profundidade do painel de porta, medida perpendicular ao avião da folha de porta."
-
-#:IFC.xml:724
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "Operação"
-
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "A Operação de painel define a forma de operação desse painel. A Operação do painel tem que corresponder ao Tipo de Operação do [[IfcDoorType]] pela qual é referenciado."
-
-#:IFC.xml:729
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "Posição"
-
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Posição deste painel dentro da porta. A Posição do painel porta deve corresponder ao Tipo de Operação do [[IfcDoorType]] pelo qual é referenciado."
-
-#:IFC.xml:734
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "Largura do painel"
-
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Largura deste painel, dada como proporção em relação à largura total de abertura da porta. Se omitido, o padrão é 1. Um valor deve ser fornecido para todas as portas com OperationType s em [[IfcDoorType]] definindo uma porta com mais do que um painel."
-
-#:IFC.xml:753
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
-
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "Esta enumeração define os tipos básicos de construção de portas. O tipo de construção diz respeito à combinação principal do material ou material utilizado para fazer a porta. Nova enumeração de HISTÓRIA em IFC2x. Itens ALUMINIUM ALUMINICIA POR GRANDE O AÇO WOOOD ALUMINIUM PLASTICO DE USUÁRIO NÃO DEFINIDO"
-
-#:IFC.xml:754
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
-
-#:IFC.xml:755
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
-msgstr "PLASTICO ALUMINIUM"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
-msgstr "PLASTICO ALUMINIUM"
-
-#:IFC.xml:756
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "WOOOD ALUMINIUM"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "WOOOD ALUMINIUM"
-
-#:IFC.xml:757
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "ALTO GRANDE AÇA"
-
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "ALTO GRANDE AÇA"
-
-#:IFC.xml:758
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
-msgstr "NÃOFINO"
-
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
-
-#:IFC.xml:759
-msgid "IfcDoorStyleConstructionEnum_PLASTIC"
-msgstr "PLASTICA"
-
-msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTICA"
-
-#:IFC.xml:760
-msgid "IfcDoorStyleConstructionEnum_STEEL"
-msgstr "ETAPA"
-
-msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "ETAPA"
-
-#:IFC.xml:761
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
-msgstr "USUÁRIO"
-
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "USUÁRIO"
-
-#:IFC.xml:762
-msgid "IfcDoorStyleConstructionEnum_WOOD"
-msgstr "MAIS"
-
-msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "MAIS"
-
-#:IFC.xml:764
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
-
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate. HISTORY New enumeration in IFC2x. Note 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing left .. .. .. .. figures ifcdoorstyleoperationenum fig01.gif SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing right .. .. .. .. figures ifcdoorstyleoperationenum fig02.gif DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing .. .. .. .. figures ifcdoorstyleoperationenum fig03.gif DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite left .. .. .. .. figures ifcdoorstyleoperationenum fig06a.gif DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite right .. .. .. .. figures ifcdoorstyleoperationenum fig06b.gif DOUBLE SWING LEFT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing left .. .. .. .. figures ifcdoorstyleoperationenum fig04.gif DOUBLE SWING RIGHT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing right .. .. .. .. figures ifcdoorstyleoperationenum fig05.gif DOUBLE DOOR DOUBLE SWING NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double double swing .. .. .. .. figures ifcdoorstyleoperationenum fig06.gif SLIDING TO LEFT Door with one panel that is sliding to the left. sliding to left .. .. .. .. figures ifcdoorstyleoperationenum fig07.gif SLIDING TO RIGHT Door with one panel that is sliding to the right. sliding to right .. .. .. .. figures ifcdoorstyleoperationenum fig08.gif DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. double sliding .. .. .. .. figures ifcdoorstyleoperationenum fig09.gif FOLDING TO LEFT Door with one panel that is folding to the left. folding to left .. .. .. .. figures ifcdoorstyleoperationenum fig10.gif FOLDING TO RIGHT Door with one panel that is folding to the right. folding to right .. .. .. .. figures ifcdoorstyleoperationenum fig11.gif DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. double folding .. .. .. .. figures ifcdoorstyleoperationenum fig12.gif REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . revolving .. .. .. .. figures ifcdoorstyleoperationenum fig13.gif ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. rolling .. .. .. .. figures ifcdoorstyleoperationenum fig14.gif USERDEFINED User defined operation type not defined .. .. .. .. figures ifcdoorstyleoperationenum fig15.gif NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
-
-#:IFC.xml:765
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
-msgstr "Som DOBRADO DOBRADO EM DOBRO"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
-msgstr "NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. balanço duplo ... figura ifcdoorstyleoperationenum fig06.gif"
-
-#:IFC.xml:766
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
-msgstr "DOUBLE DOOR SEGUINDO"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
-msgstr "Porta com dois painéis, um está a dobrar à esquerda o outro está a dobrar à direita. dobramento duplo.. .. .. figura ifcdoorstyleoperationenum fig12.gif"
-
-#:IFC.xml:767
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
-msgstr "DOBRO DOBRO DOBRO ESQUERDO"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
-msgstr "Porta com dois painéis, um oscila em ambas as direções e para a direita na direção principal do traseiro, os outros balanços também em ambas as direções e para a esquerda na direção principal do trafico. NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. balanço duplo.. .. figura ifcdoorstyleoperationenum fig03.gif"
-
-#:IFC.xml:768
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
-msgstr "DOUBLE DOOR SINGLE ESQUERDA DE OPOSITE"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
-msgstr "Porta com dois painéis abertos à esquerda, um painel oscila em uma direção e os outros painéis oscila na direção oposta. NOTA direção de balanço de entrada ou saída é determinado pelo [[IfcDoor]]. oposto à esquerda.. .. figura ifcdoorstyleoperationenum fig06a.gif"
-
-#:IFC.xml:769
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
-msgstr "DOBRO DOBRO DESAFIO DIREITO DE RESPONSABILIDADE"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
-msgstr "Porta com dois painéis abertos à direita, um painel oscila em uma direção e os outros painéis oscila na direção oposta. NOTE direção de balançar se dentro ou fora é determinado no [[IfcDoor]]. oposto direito.. .. figura ifcdoorstyleoperationenum fig06b.gif"
-
-#:IFC.xml:770
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
-msgstr "LIGAÇÕES DOBRADAS DOBRADAS"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
-msgstr "Porta com dois painéis, um está deslizando para a esquerda o outro está deslizando para a direita. deslizamento duplo.. .. .. figura ifcdoorstyleoperationenum fig09.gif"
-
-#:IFC.xml:771
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
-msgstr "DUPLO SENHA ESQUERDA"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
-msgstr "NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. balanço duplo à esquerda.. .. figura ifcdoorstyleoperationenum fig04.gif"
-
-#:IFC.xml:772
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
-msgstr "DUPLA DIREITA DE SENHA"
-
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
-msgstr "NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. balanço duplo da direita... figura ifcdoorstyleoperationenum fig05.gif"
-
-#:IFC.xml:773
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
-msgstr "SEGUINDO À ESQUERDA"
-
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
-msgstr "Porta com um painel que está dobrando para a esquerda. dobrando para a esquerda.. figura ifcdoorstyleoperationenum fig10.gif"
-
-#:IFC.xml:774
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
-msgstr "SEGUINDO À DIREITA"
-
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
-msgstr "Porta com um painel que está dobrando para a direita. dobrando para a direita... figura ifcdoorstyleoperationenum fig11.gif"
-
-#:IFC.xml:775
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
-msgstr "NÃOFINO"
-
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "Uma porta com um tipo de operação não definido é vista como uma porta com um forno, mas sem painéis. Desta forma, está sempre aberta."
-
-#:IFC.xml:776
-msgid "IfcDoorStyleOperationEnum_REVOLVING"
-msgstr "REVOLVANDO"
-
-msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
-msgstr "Uma porta de entrada composta por quatro folhas definidas em uma forma de cruz e girando em torno de um eixo vertical central os quatro painéis são descritos por uma única propriedade do painel [[IfcDoor]]. girando .. .. figura ifcdoorstyleoperationenum fig13.gif"
-
-#:IFC.xml:777
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
-
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "Porta que abre rolando para cima. NOTA: se ela rola para o interior ou para o exterior é determinada em [[IfcDoor]]. rolando .. .. figura ifcdoorstyleoperationenum fig14.gif"
-
-#:IFC.xml:778
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
-msgstr "SENHA ESQUERDA"
-
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
-msgstr "Porta com um painel que abre balanços à esquerda. As dobradiças estão do lado esquerdo como vistas na direção do eixo positivo. NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. Um único balanço à esquerda.. .. figura ifcdoorstyleoperationenum fig01.gif"
-
-#:IFC.xml:779
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
-msgstr "ALGUMA DIREITA"
-
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
-msgstr "Porta com um painel que oscila em ambos os sentidos e para a direita na direção de travessia principal. Também chamado de dupla porta. NOTE Direção de balançar se dentro ou fora é determinado pelo [[IfcDoor]]. Um único balanço direito.. .. figura ifcdoorstyleoperationenum fig02.gif"
-
-#:IFC.xml:780
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
-msgstr "DESLIGANDO PARA A ESQUERDA"
-
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
-msgstr "Porta com um painel que está deslizando para a esquerda. deslizando para a esquerda.. .. figuras ifcdoorstyleoperationenum fig07.gif"
-
-#:IFC.xml:781
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
-msgstr "DESLIGANDO PARA DIREITA"
-
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
-msgstr "Porta com um painel que está deslizando para a direita. deslizando para a direita... figura ifcdoorstyleoperationenum fig08.gif"
-
-#:IFC.xml:782
-msgid "IfcDoorStyleOperationEnum_USERDEFINED"
-msgstr "USUÁRIO"
-
-msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "Tipo de operação definido pelo usuário não está definido.. .. .. figura ifcdoorstyleoperationenum fig15.gif"
-
-#:IFC.xml:784
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableCoveringOperationEnum"
-
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "Esta enumeração define os tipos válidos de coberturas permeáveis. HISTÓRIA Nova enumeração na IFC2.0. Itens GRAMA protetor de tela de barras de metal ou fios. CONSUMO conjunto de tiras fixas ou móveis de madeira, metal, etc. providenciado para que o ar entrasse enquanto mantivesse luz ou chuva fora. SCREEN UTORIZADO, corrigido ou móvel, às vezes dobrável, quadro usado para proteção contra calor, luz, acesso ou similar. Usuário USERDEFINIDO definido por tipo de cobertura permeável. NOTDEFINIDO Nenhuma informação disponível."
-
-#:IFC.xml:785
-msgid "IfcPermeableCoveringOperationEnum_GRILL"
-msgstr "CONFIRMAR"
-
-msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
-msgstr "Tela protegida de barras de metal ou arames."
-
-#:IFC.xml:786
-msgid "IfcPermeableCoveringOperationEnum_LOUVER"
-msgstr "LOUVER"
-
-msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
-msgstr "Conjunto de tiras de madeira fixas ou móveis de metal, etc. providenciado para deixar ar vivo enquanto mantém a luz ou a chuva fora."
-
-#:IFC.xml:787
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
-msgstr "NÃOFINO"
-
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "Nenhuma informação disponível."
-
-#:IFC.xml:788
-msgid "IfcPermeableCoveringOperationEnum_SCREEN"
-msgstr "TELA"
-
-msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
-msgstr "Upright, fixa ou móvel, às vezes dobrável, quadro usado para proteção contra calor, luz, acesso ou similar."
-
-#:IFC.xml:789
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
-msgstr "USUÁRIO"
-
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
-msgstr "Tipo de cobertura permeável definido pelo usuário."
-
-#:IFC.xml:791
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
-
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "Esta entidade é uma descrição de um painel dentro de uma porta ou janela como filtros de abertura que permitem o fluxo de ar. É dado por suas propriedades [[IfcPermeableCoveringProperties]]. Uma cobertura permeável é um caso, como um componente, fixo ou aberto, consistindo essencialmente de uma estrutura e de uma infiltração. Normalmente, o inflacionamento é uma grade, um barulho ou uma tela. A forma de operação é definida no tipo de operação. A [[IfcPermeableCoveringProperties]] está incluída na lista de propriedades HasPropertySets dos [[IfcWindowType]] ou [[IfcDoorType]. Mais informações sobre as coberturas permeáveis podem ser incluídas na mesma lista da janela ou estilo de porta usando o [[IfcPropertySet]] para extensões dinâmicas. Isto se aplica especialmente para propriedades adicionais para os vários tipos de operações. O [[IfcPermeableCoveringProperties]] não possui uma representação geométrica. No entanto, ele define parâmetros que podem ser usados para criar a forma do [[IfcWindowType]] que é inserido pelo [[IfcWindow]] no contexto espacial do projeto , ou do [[IfcDoorType]] que é inserido por [[IfcDoor]]. Os parâmetros na [[IfcPermeableCoveringProperties]] definem uma cobertura padrão permeável. O limite externo do painel é determinado pelo parâmetro de ocorrência atribuído ao [[IfcWindow]] ou [[IfcDoor]]. Tem de ter também em conta o parâmetro de referência. A posição da cobertura permeável dentro da janela ou porta global é determinada pelo atributo PanelPosition A figura 1 ilustra o painel aplicado à posição dentro do link, conforme definido pelo atributo da posição do painel. Os seguintes parâmetros se aplicam ao painel FrameDepth , FrameThickness . cobrir.. .. .. figura ifcpermeablecoveringproperties.gif Figura 1 permeável cobrindo propriedades HISTORY Nova entidade na IFC2. , tinha sido renomeado de IfcPermeableCovering em IFC2x. .change ifc2x4 IFC4 CHANGE Supertype alterado para novo [[IfcPreDefinedPropertySet]]."
-
-#:IFC.xml:814
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
-
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
-
-#:IFC.xml:792
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "Profundidade"
-
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Profundidade do quadro do painel usado para incluir a cobertura permeável, medida da face frontal para a face traseira horizontalmente. . perpendicular ao avião de elevação da janela ou porta."
-
-#:IFC.xml:797
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "Espessura"
-
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Largura do quadro do painel usado para incluir a cobertura permeável, medida a partir de dentro de um painel de cobertura permeável, cobrindo até o exterior do painel no forro de , i. . Paralelamente ao plano de elevação da janela ou porta."
-
-#:IFC.xml:802
-msgid "IfcPermeableCoveringProperties_OperationType"
+#:IFC.xml:32140
+msgid "IfcMobileTelecommunicationsApplianceType"
 msgstr "Tipo"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Tipos de operações permeáveis de cobertura. Também usado para atribuir apresentações simbólicas padrão de acordo com as normas nacionais de construção."
+msgid "IfcMobileTelecommunicationsApplianceType_DEFINITION"
+msgstr "O tipo de terminal de fluxo [[IfcMobileTelecommunicationsApplianceType]] define informações compartilhadas comumente para ocorrências de aparelhos de telecomunicações móveis. O conjunto de informações partilhadas pode incluir propriedades comuns, com conjuntos de propriedades partilhadas, representações comuns compostos por materiais comuns compostos por elementos de portos comuns, sendo utilizado para definir uma especificação do tipo aparelhos de telecomunicações móveis indicando as informações específicas do produto que são comuns a todas as ocorrências desse tipo de produto. A [[IfcMobileTelecommunicationsApplianceType]] pode ser declarada dentro de [[IfcProject]] ou [[IfcProjectLibrary]] usando [[IfcRelDeclares]] e pode ser trocada com ou sem ocorrências do tipo. Ocorrências de [[IfcMobileTelecommunicationsApplianceType]] são representadas por instâncias de [[IfcMobileTelecommunicationsAppliance]]. Consulte a documentação em [[IfcMobileTelecommunicationsAppliance]] para os conjuntos de propriedades suportados, materiais, composição e portos."
 
-#:IFC.xml:807
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "Posição"
+#:IFC.xml:32141
+msgid "IfcMobileTelecommunicationsApplianceType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Posição desse painel de cobertura permeável dentro da janela geral ou do tipo de porta."
+msgid "IfcMobileTelecommunicationsApplianceType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:826
-msgid "IfcWindowLiningProperties"
-msgstr "Propriedades"
+#:IFC.xml:32160
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum"
+msgstr "IfcMobileTelecommunicationsApplianceTypeEnum"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowType]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . Figure OperationType Applicable Parameters lining 5 .. .. .. .. figures ifcwindowliningproperties fig05.png All LiningDepth, LiningThickness, LiningOffset, LiningToPanelOffsetX, LiningToPanelOffsetY Note The inner side is defined as the direction of the window panel opening operation. lining 1 .. .. .. .. figures ifcwindowliningproperties fig01.png DoublePanelVertical shown , TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight MullionThickness, FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 2 .. .. .. .. figures ifcwindowliningproperties fig02.png DoublePanelHorizontal, TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight TransomThickness, FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure lining 3 .. .. .. .. figures ifcwindowliningproperties fig03.png TriplePanelVertical SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 4 .. .. .. .. figures ifcwindowliningproperties fig04.png TriplePanelHorizontal SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Table 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_DEFINITION"
+msgstr "O [[IfcMobileTelecommunicationsApplianceTypeEnum]] define o intervalo de diferentes tipos de appliance de telecomunicações móveis que podem ser especificados."
 
-#:IFC.xml:884
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:32174
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_E_UTRAN_NODE_B"
+msgstr "E UTRAN NODE B"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_E_UTRAN_NODE_B_DEFINITION"
+msgstr "Um E utran nodel B é um componente lógico de rede que serve uma ou mais células utra E. É o hardware conectado ao desenvolvimento do núcleo do EPC , mais especificamente para o MME da entidade de gerenciamento de mobilidade, o que se comunica diretamente com o equipamento de usuário de forma sem fio."
 
-#:IFC.xml:827
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:32179
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_REMOTE_RADIO_UNIT"
+msgstr "UNIDADE DE CONTROLE REMOTO"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_REMOTE_RADIO_UNIT_DEFINITION"
+msgstr "Uma unidade de rádio remota é um componente de uma estação de transceiver de base distribuída que converte sinais de baseband digital em sinais de alta frequência rf e envia sinais de alta frequência de rf para a antena para radiação."
 
-#:IFC.xml:832
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "FirstTransomOffset"
+#:IFC.xml:32168
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_ACCESSPOINT"
+msgstr "ACCESSPOINTE"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Deslocamento do centro do transor, medido ao longo do eixo z do sistema ordinado de colocação da janela. Um valor de deslocamento 0,5 indica que o transom está posicionado no meio da janela."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_ACCESSPOINT_DEFINITION"
+msgstr "Um ponto de acesso é um dispositivo que permite que dispositivos sem fio se conectem a uma rede com fio."
 
-#:IFC.xml:837
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "Profundidade"
+#:IFC.xml:32172
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_BASETRANSCEIVERSTATION"
+msgstr "BASETRANSCEIVERSTAÇÃO"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Profundidade da dimensão de forro da janela medida perpendicular ao plano de elevação da janela."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_BASETRANSCEIVERSTATION_DEFINITION"
+msgstr "Uma estação de transceiver BTS base é um componente de rede que serve uma célula. Completa a conversão entre o controlador de estação base e o canal sem fio, e percebe a transmissão sem fio e as funções de controle relacionadas entre o controlador de estação base e o alternador móvel através da interface de ar."
 
-#:IFC.xml:842
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:32181
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_REMOTEUNIT"
+msgstr "REMOTEUNIT"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_REMOTEUNIT_DEFINITION"
+msgstr "Uma unidade remota é um dispositivo usado para amplificar um sinal de estação base."
 
-#:IFC.xml:847
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "LingThickness"
+#:IFC.xml:32170
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_BASEBANDUNIT"
+msgstr "BASEBANDUNIDADE"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_BASEBANDUNIT_DEFINITION"
+msgstr "Uma unidade baseband é um componente de uma estação de transceiver base distribuída para a implementação de funções de processamento de banda-base."
 
-#:IFC.xml:852
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:32176
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_MASTERUNIT"
+msgstr "MASTERUNIT"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcMobileTelecommunicationsApplianceTypeEnum_MASTERUNIT_DEFINITION"
+msgstr "Uma unidade mestre é um componente de uma repetidora para sinais da estação base de acoplamento."
 
-#:IFC.xml:857
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:32183
+msgid "IfcRailType"
+msgstr "IfcRailType"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Deslocamento entre o forro e o painel da janela medido ao longo do eixo y do posicionamento local. Deve ser menor ou igual ao [[IfcWindowPanelProperties]]. anelThickness . .change ifc2x4 IFC4 ALTERAR Novo atributo adicionado no final da definição da entidade."
+msgid "IfcRailType_DEFINITION"
+msgstr "O tipo de elemento [[IfcRailType]] define informações compartilhadas comuns para ocorrências de trilhos. O conjunto de informações compartilhadas pode incluir propriedades comuns dentro de propriedades compartilhadas define informações materiais comuns de definições de perfil comuns em representações de formas comuns. É usado para definir uma especificação de trilho, ou estilo ferroviário as informações específicas do produto que são comuns a todas as ocorrências desse tipo de caminho-de-ferro. Tipos de trilhos podem ser trocados sem já serem atribuídos a ocorrências. Ocorrências de [[IfcRailType]] são representadas por instâncias de [[IfcRail]]."
 
-#:IFC.xml:862
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "Espessura MullionThness"
+#:IFC.xml:32184
+msgid "IfcRailType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcRailType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:867
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:32203
+msgid "IfcRailTypeEnum"
+msgstr "IfcRailTypeEnum"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "IfcRailTypeEnum_DEFINITION"
+msgstr "Esta enumeração define os diferentes tipos predefinidos de um objeto [[IfcRail]] ou [[IfcRailType]]."
 
-#:IFC.xml:872
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+#:IFC.xml:32344
+msgid "IfcRailTypeEnum_RACKRAIL"
+msgstr "RACKRAR"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+msgid "IfcRailTypeEnum_RACKRAIL_DEFINITION"
+msgstr "Um trilho de rack é um módulo de construção para melhorar o desempenho e quebrar tração."
 
-#:IFC.xml:877
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:32371
+msgid "IfcRailTypeEnum_BLADE"
+msgstr "LÂMINA"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcRailTypeEnum_BLADE_DEFINITION"
+msgstr "Uma lâmina é um trilho maquilhado, muitas vezes de seção especial, mas fixo e ou unido no calcanhar de um comboio para garantir a continuidade do apoio à roda. Os dois corredores trocadores em um conjunto são os dois trilhos. Um caminho-de-ferro alternador é descrito como mão direita ou esquerda, de acordo com o que faz parte de um conjunto de interruptores para a direita ou para a esquerda. Definição de nota a partir de EN 13232 1 2004."
 
-#:IFC.xml:896
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
+#:IFC.xml:32350
+msgid "IfcRailTypeEnum_GUARDRAIL"
+msgstr "GUARDRAIL"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "Esta enumeração define as formas básicas de descrever como os painéis de janelas funcionam, como mostrado na Figura 2. A direção de abertura dos painéis de janela é dada pela posição local do [[IfcWindow]]. O eixo y positivo determina a direção conforme mostrado na figura 2. Nota 1. Números são mostrados como visualizados do exterior em direção ao eixo y positivo. 2. Figuras simbólicas dependem do código de construção nacional 3. Estas figuras são mostradas apenas como ilustrações que abrem a direção .. .. .. figura ifcwindowpaneloperationenum fig13. Se o painel Figure 2 Janela direciona a Nova enumeração HISTÓRIA na IFC2.0. Painel SIDEHUNGRIFICAÇÃO de itens que abre à direita quando visto de fora. mão direita... figura ifcwindowpaneloperationenum fig01.gif SIDEHUNGLEFTHAND Panel que abre à esquerda quando vista do lado de fora. mão esquerda.. .. figura ifcwindowpaneloperationenum fig02.gif TILTANDIDADE DO painel que se abre à direita e é a base da caçada. inclinação e virar a mão.. .. figuras ifcwindowpaneloperationenum fig03. se o painel TILTANDURNLEFTHE que abre à esquerda e é a base da fome. Vire esquerdo e inclinação.. .. figuras ifcwindowpaneloperationenum fig04. if TOPHUNG Panel is top hung. top hung. .. .. if cwindowpaneloperationenum fig05.gif BOTTOMHUNG Panel is bottom hung. o fundo pendurado... ... as figuras ifcwindowpaneloperationenum fig06.gif Painel PIVOTHORIZONTAL está balançando horizontalmente as dobradiças estão no meio. balançando chifre... ... as figuras ifcwindowpaneloperationenum fig07.gif PIVOTVERTICAL estão balançando verticalmente as dobradiças estão no meio. ao balançar verti .. .. ... figuras ifcwindowpaneloperationenum fig08.gif SLIDINGHORIZONTAL Panel está deslizando horizontalmente. .. .. figura ifcwindowpaneloperationenum fig09.gif SLIDINGVERTICAL está deslizando verticalmente. Slide verti .. .. figura ifcwindowpaneloperationenum fig10.gif REMOVABLECASEMENT Panel é removível. removível.. .. figuras ifcwindowpaneloperationenum fig11. if FIXEDCASEMENT Panel is fixed. fixed .. .. .. figures ifcwindowpaneloperationenum fig12.gif OTHEROPERATION NOTDEFINED"
+msgid "IfcRailTypeEnum_GUARDRAIL_DEFINITION"
+msgstr "Um trilho de guarda é um trilho que limita o risco de descarrilamento do comboio, normalmente não carregado."
 
-#:IFC.xml:897
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
-msgstr "BOTTOMHUNG"
+#:IFC.xml:32379
+msgid "IfcRailTypeEnum_STOCKRAIL"
+msgstr "PARARIA"
 
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
-msgstr "O painel está no fundo, pendurado.. .. .. ifcwindowpaneloperationenum fig06.gif"
+msgid "IfcRailTypeEnum_STOCKRAIL_DEFINITION"
+msgstr "Um trilho de estoque é um trilho fixo, garantindo a continuidade na trilha principal ou divergente com o interruptor na posição aberta. A parte mecânica do pátio suporta seu trilho de alternância na posição fechada, dando continuidade à linha através deste trilho trocador. Os dois trilhos de ação num conjunto de interruptores são os dois trilhos do exterior. Uma linha férrea é descrita como mão direita ou esquerda, consoante faça parte de uma mão direita ou de uma mão esquerda com um conjunto de trocas. Definição de nota a partir de EN 13232 1 2004."
 
-#:IFC.xml:898
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
-msgstr "CORREÇÃO"
+#:IFC.xml:32361
+msgid "IfcRailTypeEnum_CHECKRAIL"
+msgstr "CORRIDA"
 
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
-msgstr "Painel foi corrigido. Corrigido.. .. .. figuras ifcwindowpaneloperationenum fig12.gif"
+msgid "IfcRailTypeEnum_CHECKRAIL_DEFINITION"
+msgstr "Um trilho de verificação é um trilho colocado perto da face de uma correda que participa na orientação lateral da roda e impede o descarrilamento de um pequeno raio curvo e alternadores e passagens de curva. Nota definição a partir de EN 13481 1."
 
-#:IFC.xml:899
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
-msgstr "NÃOFINO"
+#:IFC.xml:32354
+msgid "IfcRailTypeEnum_RAIL"
+msgstr "RAIL"
 
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
+msgid "IfcRailTypeEnum_RAIL_DEFINITION"
+msgstr "Um trilho é uma barra de corte especial geralmente do aço, garantindo a orientação da roda de um vagão ou de outras máquinas pesadas. Em vias férreas, dois trilhos são combinados para formar uma pista."
 
-#:IFC.xml:900
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
-msgstr "OUTRA"
+#:IFC.xml:32222
+msgid "IfcRailway"
+msgstr "Ferrovia IfcRway"
 
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
-msgstr "OUTRA"
+msgid "IfcRailway_DEFINITION"
+msgstr "[[IfcRailway]] é um elemento de estrutura espacial como rota de um local para outro para passagem guiada de veículos de rodas em trilhos. Um [[IfcRailway]] atua como um elemento básico de estrutura espacial que suporta a divisão de um projeto ferroviário em partes gerenciáveis. Nota de acordo com o sistema de transporte ISO 6706 2017 nacional ou regional para passagem guiada de veículos de rodas nos trilhos."
 
-#:IFC.xml:901
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
-msgstr "PIVOTHORIZONTAL"
+#:IFC.xml:32225
+msgid "IfcRailway_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
-msgstr "O painel está balançando horizontalmente as dobradiças estão no meio . balançando hori .. .. figuras ifcwindowpaneloperationenum fig07.gif"
+msgid "IfcRailway_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:902
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
-msgstr "PIVOTVERTICAL"
+#:IFC.xml:32240
+msgid "IfcRailwayPartTypeEnum"
+msgstr "IfcRailwayPartEnum"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
-msgstr "O painel está balançando verticalmente as dobras estão no meio . balançando verti .. .. figuras ifcwindowpaneloperationenum fig08.gif"
+msgid "IfcRailwayPartTypeEnum_DEFINITION"
+msgstr "A [[IfcRailwayPartTypeEnum]] define o intervalo de diferentes tipos de partes ferroviárias que podem ser especificadas."
 
-#:IFC.xml:903
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
-msgstr "REMOVABLEMA"
+#:IFC.xml:32269
+msgid "IfcRailwayPartTypeEnum_TRACKSTRUCTURE"
+msgstr "TRACKSTRUTURO"
 
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
-msgstr "Painel removível. removível. .. .. ifcwindowpaneloperationenum fig11.gif"
+msgid "IfcRailwayPartTypeEnum_TRACKSTRUCTURE_DEFINITION"
+msgstr "Um elemento de estrutura espacial que contém elementos de rastreamento relacionados."
 
-#:IFC.xml:904
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
-msgstr "SIDEHUNGLEFTHAND"
+#:IFC.xml:32281
+msgid "IfcRailwayPartTypeEnum_TRACKSTRUCTUREPART"
+msgstr "PARTE"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
-msgstr "Painel que abre à esquerda quando visualizado do lado de fora. A mão esquerda.. .. figuras ifcwindowpaneloperationenum fig02.gif"
+msgid "IfcRailwayPartTypeEnum_TRACKSTRUCTUREPART_DEFINITION"
+msgstr "Uma parte da estrutura de trilha se refere a um segmento de um sistema de trilhas. Geralmente ele tem uma das seguintes funções para pé, faixa de participação de participação, trilha de dilatação."
 
-#:IFC.xml:905
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
-msgstr "SIDEHUNGRIGHTHAND"
+#:IFC.xml:32261
+msgid "IfcRailwayPartTypeEnum_LINESIDESTRUCTUREPART"
+msgstr "LINESIDESTRUTURO"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
-msgstr "Painel que abre à direita quando visualizado do lado de fora. ... figura ifcwindowpaneloperationenum fig01.gif"
+msgid "IfcRailwayPartTypeEnum_LINESIDESTRUCTUREPART_DEFINITION"
+msgstr "Uma parte da estrutura do lado da linha férrea é uma decomposição longitudinal da estrutura da linha férrea em volume mais gerenciável para fins de engenharia."
 
-#:IFC.xml:906
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
-msgstr "SLIDINGHORIZONTAL"
+#:IFC.xml:32374
+msgid "IfcRailwayPartTypeEnum_DILATATIONSUPERSTRUCTURE"
+msgstr "DILATIONSUPERSTRUTURA"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
-msgstr "Painel está deslizando horizontalmente. Deslizar hori ... ... ifcwindowpaneloperationenum fig09.gif"
+msgid "IfcRailwayPartTypeEnum_DILATATIONSUPERSTRUCTURE_DEFINITION"
+msgstr "A superestrutura de dilatação é um tipo específico da estrutura da faixa. Ela não contém nenhum painel plano ou painel de participação."
 
-#:IFC.xml:907
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
-msgstr "SLIDINGVERTICAL"
+#:IFC.xml:32356
+msgid "IfcRailwayPartTypeEnum_PLAINTRACKSUPESTRUCTURE"
+msgstr "PLAINTRACKSUPESTRUTURA"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
-msgstr "Painel está deslizando verticalmente. Deslizar verti ... ... ifcwindowpaneloperationenum fig10.gif"
+msgid "IfcRailwayPartTypeEnum_PLAINTRACKSUPESTRUCTURE_DEFINITION"
+msgstr "A superestrutura do caminho plano é um tipo específico da estrutura do caminho. Ela não contém nenhum painel de participação ou painel de dilatação."
 
-#:IFC.xml:908
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
-msgstr "TILTANDTURNLEFTHAND"
+#:IFC.xml:32252
+msgid "IfcRailwayPartTypeEnum_LINESIDESTRUCTURE"
+msgstr "LINESIDESTRUTURAS"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
-msgstr "Painel que abre à esquerda e é a base da caçada. virar à esquerda e til... ... figuras ifcwindowpaneloperationenum fig04.gif"
+msgid "IfcRailwayPartTypeEnum_LINESIDESTRUCTURE_DEFINITION"
+msgstr "Um elemento de estrutura espacial que contém os elementos do caminho-de-ferro que não estão dentro ou sobre as vias, daí o lado da linha."
 
-#:IFC.xml:909
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
-msgstr "TILTANDTURNRIGHTHAND"
+#:IFC.xml:32267
+msgid "IfcRailwayPartTypeEnum_SUPERSTRUCTURE"
+msgstr "SUPERSTRUTURA"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
-msgstr "Painel que se abre à direita e é a base da caçada. inclinação direita e virar... figuras ifcwindowpaneloperationenum fig03.gif"
+msgid "IfcRailwayPartTypeEnum_SUPERSTRUCTURE_DEFINITION"
+msgstr "Um elemento de estrutura espacial que contém elementos que são posicionados sobre as faixas, como catenários."
 
-#:IFC.xml:910
-msgid "IfcWindowPanelOperationEnum_TOPHUNG"
-msgstr "TOPHUNG"
+#:IFC.xml:32363
+msgid "IfcRailwayPartTypeEnum_TURNOUTSUPERSTRUCTURE"
+msgstr "TURNOUTSUPERSTRUTURAS"
 
-msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
-msgstr "O painel está com mais frequência, por exemplo.. .. ifcwindowpaneloperationenum fig05.gif"
+msgid "IfcRailwayPartTypeEnum_TURNOUTSUPERSTRUCTURE_DEFINITION"
+msgstr "A superestrutura da participação é um tipo específico da estrutura da faixa. Ela não contém nenhum painel de faixa simples ou dilatação."
 
-#:IFC.xml:912
-msgid "IfcWindowPanelPositionEnum"
-msgstr "IfcWindowPanelPositionEnum"
+#:IFC.xml:32283
+msgid "IfcRailwayTypeEnum"
+msgstr "IfcRailwayTypeEnum"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowType]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig01.gif DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig02.gif TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig03.gif TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig04.gif TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig05.gif TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig06.gif TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig07.gif TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig08.gif HISTORY New enumeration in IFC2.0. Note 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+#:IFC.xml:32284
+msgid "IfcTrackElementType"
+msgstr "IfcTrackElementType"
 
-#:IFC.xml:913
-msgid "IfcWindowPanelPositionEnum_BOTTOM"
-msgstr "BOTTOM"
+msgid "IfcTrackElementType_DEFINITION"
+msgstr "O tipo de elemento [[IfcTrackElementType]] define informações compartilhadas comuns para ocorrências de elementos do trajeto. O conjunto de informações compartilhadas pode incluir propriedades comuns dentro de propriedades compartilhadas define informações de material comum definições de perfil comuns em representações. Ele é usado para definir um elemento de trilha especificando as informações específicas do produto que são comuns a todas as ocorrências desse tipo do elemento trilha. Tipos de elementos do controle podem ser trocados sem já serem atribuídos a ocorrências. Ocorrências de [[IfcTrackElementType]] são representadas por instâncias de [[IfcTrackElement]]."
 
-msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
-msgstr "BOTTOM"
+#:IFC.xml:32285
+msgid "IfcTrackElementType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:914
-msgid "IfcWindowPanelPositionEnum_LEFT"
-msgstr "ESQUERDA"
+msgid "IfcTrackElementType_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
-msgstr "ESQUERDA"
+#:IFC.xml:32304
+msgid "IfcTrackElementTypeEnum"
+msgstr "IfcTrackElementTypeEnum"
 
-#:IFC.xml:915
-msgid "IfcWindowPanelPositionEnum_MIDDLE"
-msgstr "MEDALHO"
+#:IFC.xml:32343
+msgid "IfcTrackElementTypeEnum_TRACKENDOFALIGNMENT"
+msgstr "ENDOFALIGNAMENTO"
 
-msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MEDALHO"
+msgid "IfcTrackElementTypeEnum_TRACKENDOFALIGNMENT_DEFINITION"
+msgstr "O ponto de extremidade do alinhamento é uma instalação funcional especial, como o ponto de transição de medição de eixos ou o ponto de carga do transportador."
 
-#:IFC.xml:916
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
-msgstr "NÃOFINO"
+#:IFC.xml:32341
+msgid "IfcTrackElementTypeEnum_BLOCKINGDEVICE"
+msgstr "DESBLOQUEADOR"
 
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
+msgid "IfcTrackElementTypeEnum_BLOCKINGDEVICE_DEFINITION"
+msgstr "Um dispositivo composto por componentes pneumáticos, mecânicos ou elétricos que causam a quebra de um trem em caso de emergência."
 
-#:IFC.xml:917
-msgid "IfcWindowPanelPositionEnum_RIGHT"
-msgstr "DIREITA"
+#:IFC.xml:32352
+msgid "IfcTrackElementTypeEnum_VEHICLESTOP"
+msgstr "VEHICLARP"
 
-msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "DIREITA"
+msgid "IfcTrackElementTypeEnum_VEHICLESTOP_DEFINITION"
+msgstr "Uma instalação fixa no final do percurso que para qualquer movimento do veículo, por exemplo, parada de buffer, humor de areia, etc."
 
-#:IFC.xml:918
-msgid "IfcWindowPanelPositionEnum_TOP"
-msgstr "PRINCIPAL"
+#:IFC.xml:32377
+msgid "IfcTrackElementTypeEnum_SLEEPER"
+msgstr "LIMPADOR"
 
-msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
-msgstr "PRINCIPAL"
+msgid "IfcTrackElementTypeEnum_SLEEPER_DEFINITION"
+msgstr "Dormir é um elemento que suporta rodar trilhos, guardar trilhos e verificar trilhos em ângulos retos do eixo."
 
-#:IFC.xml:920
-msgid "IfcWindowPanelProperties"
-msgstr "Propriedades"
+#:IFC.xml:32366
+msgid "IfcTrackElementTypeEnum_HALF_SET_OF_BLADES"
+msgstr "SEJA DE BANDES"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "O painel de janelas é um caso, ou seja, um componente, fixo ou aberto, consistindo essencialmente de um quadro e do inflacionamento. O carregamento de um painel de janelas é normalmente glazing. O modo de operação é definido no tipo de operação. A [[IfcWindowPanelProperties]] é usada para descrever paramétrica a forma e a operação dos painéis de janela. A definição paramétrica pode ser adicionada única ou adicionalmente à representação explícita de forma da janela. A [[IfcWindowType]] pode definir janelas que contenham mais do que um painel. Neste caso, uma instância de [[IfcWindowPanelProperties]] precisa ser incluída para cada painel da janela. O atributo PanelPosition , em conjunto com o atributo [[IfcWindowType]] .OperationType determina para qual painel o [[IfcWindowPanelProperties]] se aplica. A [[IfcWindowPanelProperties]] está incluída na lista de propriedades HasPropertySets dos [[IfcWindowType]]. Mais informações sobre o painel de janelas podem ser incluídas na mesma lista de [[IfcWindowType]] usando o [[IfcPropertySet]] para extensões dinâmicas. A [[IfcWindowPanelProperties]] não possui uma representação geométrica própria. No entanto ele define o parâmetro, que pode ser usado para criar a forma do [[IfcWindowType]] que é inserido pelo [[IfcWindow]] no contexto espacial do projeto. Os parâmetros no [[IfcWindowPanelProperties]] definem um painel de janela padrão. O limite externo do forro é determinado pela representação de forma de perfil atribuída ao [[IfcWindow]], o que insere a [[IfcWindowType]]. Tem de ter também em conta o parâmetro de referência. A posição do painel de janela dentro da janela geral é determinada pelo atributo PanelPosition Como mostrado na Figura 1, o painel é aplicado à posição dentro do forro definido pelo atributo da posição do painel. O seguinte parâmetro se aplica a este painel FrameDepth , FrameThickness . painel 1 .. .. .. figura ifcwindowpanelproperties fig01.gif Figura 1 do painel de janela propriedades HISTORY Nova entidade na IFC2. , foi renomeado pelo IfcWindowPanel no IFC2x. Alterar ifc2x4 IFC4 CHANGE Supertipo alterado para novo [[IfcPreDefinedPropertySet]]."
+msgid "IfcTrackElementTypeEnum_HALF_SET_OF_BLADES_DEFINITION"
+msgstr "Um meio conjunto de lâminas consiste em um trilho de estoque e seu trilho completo com pequenos equipamentos. É da mão direita ou da esquerda, como visto por um observador no centro da pista de frente com o calcanhar da mudança de canal. Definição de nota a partir de EN 13232 1 2004."
 
-#:IFC.xml:943
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:32348
+msgid "IfcTrackElementTypeEnum_SPEEDREGULATOR"
+msgstr "RÁPIDO"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Link opcional para uma definição de aspecto de forma, que aponta para a parte da representação geométrica do estilo de janela, usada para representar o painel. DEPRECAÇÃO obsoleta que o atributo está obsoleto e não será mais usado, ou seja, o valor será NIL."
+msgid "IfcTrackElementTypeEnum_SPEEDREGULATOR_DEFINITION"
+msgstr "Um dispositivo composto por componentes pneumáticos, mecânicos ou elétricos que causam a quebra de um trem em caso de emergência."
 
-#:IFC.xml:921
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "Profundidade"
+#:IFC.xml:32346
+msgid "IfcTrackElementTypeEnum_DERAILER"
+msgstr "DERAILER"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "IfcTrackElementTypeEnum_DERAILER_DEFINITION"
+msgstr "Um dispositivo fixo que, quando colocado nos caminhos-de-ferro, desvia as rodas de um veículo e serve para proteger uma linha convergente. Nota da definição de IEC 60050 821."
 
-#:IFC.xml:926
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "Espessura"
+#:IFC.xml:32359
+msgid "IfcTrackElementTypeEnum_FROG"
+msgstr "GRUPO"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Largura do quadro do painel, medida de dentro do painel no glazing para fora do painel em forro de painel, ou seja, paralelo ao plano de elevação da janela."
+msgid "IfcTrackElementTypeEnum_FROG_DEFINITION"
+msgstr "Um sapo é um acordo que garante a intersecção entre duas extremidades opostas de participação ou cruzamentos de diamantes e a travessia de um veado e dois trilhos de asa. Definição de nota a partir de EN 13232 1 2004."
 
-#:IFC.xml:931
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "Tipo"
+#:IFC.xml:32325
+msgid "IfcRail"
+msgstr "IfcRail"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "IfcRail_DEFINITION"
+msgstr "Um trilho é um elemento predominantemente linear que tem um perfil de seção especial. O trilho é distintivo dos elementos construídos com formas geométricas semelhantes. . beam, membro da sua principal função é assegurar a orientação da mobilidade dos veículos ou de outros tipos de máquinas."
 
-#:IFC.xml:936
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "Posição"
+#:IFC.xml:32326
+msgid "IfcRail_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "IfcRail_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:955
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcWindowStyleConstructionEnum"
+#:IFC.xml:32333
+msgid "IfcTrackElement"
+msgstr "IfcTrackElement"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "Esta enumeração define os tipos básicos de construção de janelas. O tipo de construção diz respeito ao principal material ou material utilizado para fazer a janela. Nova enumeração de HISTÓRIA em IFC2x. Itens ALUMINIUM ALUMINICIA DE ALTO AÇO WOOOOD ALUMINIUM PLASTICO OUTRA CONSTRUÇÃO NÃO."
+msgid "IfcTrackElement_DEFINITION"
+msgstr "Um elemento trilha é um elemento construído usado especificamente no domínio trilho da ferrovia."
 
-#:IFC.xml:956
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
+#:IFC.xml:32334
+msgid "IfcTrackElement_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
+msgid "IfcTrackElement_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:957
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "WOOOD ALUMINIUM"
+#:IFC.xml:32382
+msgid "Pset_MobileTelecommunicationsApplianceTypeMasterUnit"
+msgstr "Pset MobileTelecommunicationsApplianceTypeMasterUnit"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "WOOOD ALUMINIUM"
+#:IFC.xml:32383
+msgid "Pset_RailwayFacility"
+msgstr "Pset RailwayFacility"
 
-#:IFC.xml:958
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "ALTO GRANDE AÇA"
+#:IFC.xml:32385
+msgid "Pset_RailwayPart"
+msgstr "format@@0 Pset RailwayPart"
 
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "ALTO GRANDE AÇA"
+msgid "Pset_RailwayPart_DEFINITION"
+msgstr "Representa uma subdivisão de um[[IfcRailway]] como trilhas de Linhas"
 
-#:IFC.xml:959
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
-msgstr "NÃOFINO"
+#:IFC.xml:32386
+msgid "Pset_TelecomActiveEquipmentGeneral"
+msgstr "Pset TelecomActiveEquipmentGeneral"
 
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
+#:IFC.xml:32388
+msgid "Pset_RailwayEnergyFacility"
+msgstr "Pset FerroviárioInstalações"
 
-#:IFC.xml:960
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
-msgstr "Outra CONSTRUÇÃO"
+#:IFC.xml:32390
+msgid "Pset_RailwayPowerSupplyFacility"
+msgstr "Pset RailwayPowerSupplyFacility"
 
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
-msgstr "Outra CONSTRUÇÃO"
+#:IFC.xml:32391
+msgid "Pset_RailwayPowerSupplyFacility_RailwayPowerSupplyFacilityType"
+msgstr "Tipo RailwayPowerSupplyFacilityType"
 
-#:IFC.xml:961
-msgid "IfcWindowStyleConstructionEnum_PLASTIC"
-msgstr "PLASTICA"
+msgid "Pset_RailwayPowerSupplyFacility_RailwayPowerSupplyFacilityType_DEFINITION"
+msgstr "Tipo RailwayPowerSupplyFacilityType"
 
-msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTICA"
+#:IFC.xml:32408
+msgid "Pset_SlidingChair"
+msgstr "Cadeia de Pset"
 
-#:IFC.xml:962
-msgid "IfcWindowStyleConstructionEnum_STEEL"
-msgstr "ETAPA"
+#:IFC.xml:32410
+msgid "Pset_Blade"
+msgstr "Lâmina de Pset"
 
-msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "ETAPA"
+#:IFC.xml:32412
+msgid "Pset_Sleeper"
+msgstr "Pset Adormecido"
 
-#:IFC.xml:963
-msgid "IfcWindowStyleConstructionEnum_WOOD"
-msgstr "MAIS"
+#:IFC.xml:32413
+msgid "Pset_Sleeper_IsHollow"
+msgstr "Esvaziada"
 
-msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "MAIS"
+msgid "Pset_Sleeper_IsHollow_DEFINITION"
+msgstr "Esvaziada"
 
-#:IFC.xml:965
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyleOperationEnum"
+#:IFC.xml:32419
+msgid "Pset_StockRail"
+msgstr "Pset Estoque Trilho"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "Essa enumeração define a configuração básica do tipo de janela em termos do número de painéis de janela e da subdivisão da janela total. As configurações de janela são dadas para janelas com um, dois ou três painéis, incluindo painéis fixos, como mostrado na Figura 1. Janelas que são subdivididas em mais de três painéis devem ser definidas apenas pela geometria. O tipo de tais janelas é USUÁRIO. HISTORY New Enumeration in IFC2.0. Nota 1. A forma como cada painel funciona é definida no [[IfcWindowPanelProperties]]. tipo peracao . 2. A referência do painel de janela à localização desse painel na configuração de estilo da janela é tratada pelo [[IfcWindowPanelProperties]]. posiçãoAnela . 3. As figuras são mostradas como elevações no plano XZ da posição local da janela, Olhando para a direção do eixo Y positivo. 4. Estas figuras são mostradas apenas como itens de ilustrações da Janela de PANEL SINGLE com um painel.. .. .. .. figura ifcwindowstyleoperationenum fig01.gif DOUBLE janela VERTICAL com dois painéis. A configuração dos painéis é verticalmente.. .. figura a janela do styleoperationenum fig02.gif DOUBLE PANEL HORIZONTAL com dois painéis. A configuração dos painéis é horizontal. .. .. .. figura ifcwindowstyleoperationenum fig03.gif TRIPLE GRÁTIS VERTICAL Window com três painéis. A configuração dos painéis é verticalmente. .. .. .. figura ifcwindowstyleoperationenum fig04.gif TRIPLE PANEL BOTTOM com três painéis. A configuração de dois painéis é verticalmente e o terceiro é horizontalmente na parte inferior. .. .. figuras ifcwindowstyleoperationenum fig06. se a janela TOP TRIPLA com três painéis. A configuração de dois painéis é vertical e o terceiro está horizontalmente no topo. .. .. .. figura ifcwindowstyleoperationenum fig07. se Janela de LED TRIPLA DE PANEL com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente no lado esquerdo.. .. figura a janela do styleoperationenum fig08.gif TRIPLA RIGHT com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente no lado direito. .. .. .. figura ifcwindowstyleoperationenum fig09.gif TRIPLE FANEL HORIZONTAL janela com três painéis. A configuração dos painéis é horizontalmente. .. .. .. if cwindowstyleoperationenum fig05.gif USERDEFINIDO tipo de operação definida pelo usuário NOTDEFINIDO"
+#:IFC.xml:32421
+msgid "PEnum_RailwayPowerSupplyFacilityType"
+msgstr "PEnum RailwayPowerSupplyFacilityType"
 
-#:IFC.xml:966
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
-msgstr "format@@0 DOUBLE PANEL HORIZONTAL"
+#:IFC.xml:32422
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_AUTOTRANSFORMER_POST"
+msgstr "POSTA DE ARQUIVO AUTOTRANSFORMADOR"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Janela com dois painéis. A configuração dos painéis é horizontalmente. .. .. figura ifcwindowstyleoperationenum fig03.gif"
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_AUTOTRANSFORMER_POST_DEFINITION"
+msgstr "POSTA DE ARQUIVO AUTOTRANSFORMADOR"
 
-#:IFC.xml:967
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
-msgstr "VERTICAL DE PANEL DUPLO"
+#:IFC.xml:32423
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_SUBSTATION"
+msgstr "SUBSTAÇÃO DE RAILWAY"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Janela com dois painéis. A configuração dos painéis é verticalmente. .. .. .. figura ifcwindowstyleoperationenum fig02.gif"
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_SUBSTATION_DEFINITION"
+msgstr "SUBSTAÇÃO DE RAILWAY"
 
-#:IFC.xml:968
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
-msgstr "NÃOFINO"
+#:IFC.xml:32424
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_TRACTION_POST"
+msgstr "POSTA DE TRAÇÃO DA RAILWAY"
 
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NÃOFINO"
-
-#:IFC.xml:969
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
-msgstr "PAINEL DE SINGLE"
-
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
-msgstr "Janela com um painel. .. .. figura ifcwindowstyleoperationenum fig01.gif"
-
-#:IFC.xml:970
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
-msgstr "CAIXA DE PANEL TRIPLO"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
-msgstr "Janela com três painéis. A configuração de dois painéis é verticalmente e o terceiro está horizontalmente embaixo. .. .. .. figura ifcwindowstyleoperationenum fig06.gif"
-
-#:IFC.xml:971
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
-msgstr "format@@0 TRIPLE PANEL HORIZONTAL"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr "Janela com três painéis. A configuração dos painéis é horizontalmente.. .. figura ifcwindowstyleoperationenum fig05.gif"
-
-#:IFC.xml:972
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
-msgstr "NÍVEL DE PANEL TRIPLO"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
-msgstr "Janela com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente no lado esquerdo. .. .. .. figura ifcwindowstyleoperationenum fig08.gif"
-
-#:IFC.xml:973
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
-msgstr "DIREITA DE PANELA TRIPLA"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
-msgstr "Janela com três painéis. A configuração de dois painéis é horizontal e o terceiro está verticalmente ao lado direito. .. .. .. figura ifcwindowstyleoperationenum fig09.gif"
-
-#:IFC.xml:974
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
-msgstr "TOP DE PANEL TRIPLO"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
-msgstr "Janela com três painéis. A configuração de dois painéis é verticalmente e o terceiro está horizontalmente no topo. .. .. .. figura ifcwindowstyleoperationenum fig07.gif"
-
-#:IFC.xml:975
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
-msgstr "VERTICAL DE PANEL TRIPLO"
-
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
-msgstr "Janela com três painéis. A configuração dos painéis é verticalmente. .. .. .. figura ifcwindowstyleoperationenum fig04.gif"
-
-#:IFC.xml:976
-msgid "IfcWindowStyleOperationEnum_USERDEFINED"
-msgstr "USUÁRIO"
-
-msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "user defined operation type"
+msgid "PEnum_RailwayPowerSupplyFacilityType_RAILWAY_TRACTION_POST_DEFINITION"
+msgstr "POSTA DE TRAÇÃO DA RAILWAY"
 
