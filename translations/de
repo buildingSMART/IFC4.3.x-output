@@ -9,975 +9,1857 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
-"X-Crowdin-File-ID: 24\n"
+"X-Crowdin-File: /master/IfcBuildingControlsDomain.pot\n"
+"X-Crowdin-File-ID: 26\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-02-22 19:13\n"
 
-#:IFC.xml:626
-msgid "IfcDoorLiningProperties"
-msgstr "IfcDoorLiningProperties"
+#:IFC.xml:1121
+msgid "IfcActuator"
+msgstr "IfcActuator"
 
-msgid "IfcDoorLiningProperties_DEFINITION"
-msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as described below. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . lining 1 .. .. .. .. figures ifcdoorliningproperties fig01.png The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. lining 2 .. .. .. .. figures ifcdoorliningproperties fig02.png The lining can only cover part of the opening reveal. LiningOffset, given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. lining 3 .. .. .. .. figures ifcdoorliningproperties fig03.png The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness lining 4 .. .. .. .. figures ifcdoorliningproperties fig04.png The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth, if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure , given, if the threshold edge has an offset to the x axis of the local placement. lining 5 .. .. .. .. figures ifcdoorliningproperties fig05.png The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset, a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "IfcActuator_DEFINITION"
+msgstr "Ein Aktor ist ein mechanisches Gerät zur Bewegung oder Steuerung eines Mechanismus oder Systems. Ein Aktor nimmt Energie, die normalerweise durch Luft, Strom oder Flüssigkeit erzeugt wird, und wandelt diese in eine Art Bewegung um. HISTORY New Entity in IFC4"
 
-#:IFC.xml:689
-msgid "IfcDoorLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:1122
+msgid "IfcActuator_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "IfcActuator_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-#:IFC.xml:627
-msgid "IfcDoorLiningProperties_CasingDepth"
-msgstr "CasingDepth"
+#:IFC.xml:1132
+msgid "IfcActuatorType"
+msgstr "IfcActuatorType"
 
-msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
-msgstr "Depth of the casing dimension in plane perpendicular to door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcActuatorType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcActuatorType]] definiert allgemein geteilte Informationen für Aktuatoren. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Aktuatortyp Spezifikation zu definieren, die die spezifischen Produktinformationen, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcActuatorType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcActuatorType]] werden durch Instanzen von [[IfcActuator]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcActuator]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC2x2"
 
-#:IFC.xml:632
-msgid "IfcDoorLiningProperties_CasingThickness"
-msgstr "CasingThickness"
+#:IFC.xml:1133
+msgid "IfcActuatorType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
-msgstr "Thickness of the casing dimension in plane of the door leaf . If given it is applied equally to all four sides of the adjacent wall."
+msgid "IfcActuatorType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Aktuatortypen, aus denen der gewünschte Typ gesetzt werden kann."
 
-#:IFC.xml:637
-msgid "IfcDoorLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:1140
+msgid "IfcActuatorTypeEnum"
+msgstr "IfcActuatorTypeEnum"
 
-msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the door lining, measured perpendicular to the plane of the door lining. If omitted and with a given value to lining thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
+msgid "IfcActuatorTypeEnum_DEFINITION"
+msgstr "Die [[IfcActuatorTypeEnum]] definiert den Bereich der verschiedenen Aktortypen, die angegeben werden können. HISTORY New Enumeration in IFC2. Items ELECTRICACTUATOR Ein Gerät, das ein Steuerelement elektrisch betätigt. HANDOPERATEDACTUATOR Ein Gerät, das ein Steuerelement manuell betätigt. HYDRAULICACTUATOR Ein Gerät, das ein Steuerelement hydraulisch betätigt, PNEUMATICACTUATOR Ein Gerät, das ein Steuerelement pneumatisch betätigt. THERMOSTATICACTUATOR Ein Gerät, das ein Steuerelement thermostatisch aktiviert. BENUTZERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
 
-#:IFC.xml:642
-msgid "IfcDoorLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:1156
+msgid "IfcActuatorTypeEnum_ELECTRICACTUATOR"
+msgstr "ELECTRICACTUATOR"
 
-msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door lining. The offset is given as distance to the x axis of the local placement."
+msgid "IfcActuatorTypeEnum_ELECTRICACTUATOR_DEFINITION"
+msgstr "Ein Gerät, das ein Steuerelement elektrisch betätigt."
 
-#:IFC.xml:647
-msgid "IfcDoorLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:1157
+msgid "IfcActuatorTypeEnum_HANDOPERATEDACTUATOR"
+msgstr "HANDOPERATEDACTUATOR"
 
-msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the door lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a door without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "IfcActuatorTypeEnum_HANDOPERATEDACTUATOR_DEFINITION"
+msgstr "Ein Gerät, das ein Steuerelement manuell aktiviert."
 
-#:IFC.xml:652
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:1158
+msgid "IfcActuatorTypeEnum_HYDRAULICACTUATOR"
+msgstr "HYDRAULICACTUATOR"
 
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "IfcActuatorTypeEnum_HYDRAULICACTUATOR_DEFINITION"
+msgstr "Ein Gerät, das hydraulisch ein Steuerelement betätigt."
 
-#:IFC.xml:657
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
-
-msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Versatz zwischen dem Futter und der Türplatte entlang der Y-Achse der lokalen Platzierung gemessen. .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
-
-#:IFC.xml:662
-msgid "IfcDoorLiningProperties_ThresholdDepth"
-msgstr "ThresholdDepth"
-
-msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
-msgstr "Depth dimension in plane perpendicular to door leaf of the door threshold. Only given if the door lining includes a threshold. If omitted and with a given value to threshold thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
-
-#:IFC.xml:667
-msgid "IfcDoorLiningProperties_ThresholdOffset"
-msgstr "ThresholdOffset"
-
-msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
-msgstr "Offset dimension in plane perpendicular to door leaf of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known."
-
-#:IFC.xml:672
-msgid "IfcDoorLiningProperties_ThresholdThickness"
-msgstr "ThresholdThickness"
-
-msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
-msgstr "Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. zero it denotes a door without a threshold ThresholdDepth shall be set to NIL in this case . If the ThresholdThickness is NIL it denotes that the information about a threshold is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
-
-#:IFC.xml:677
-msgid "IfcDoorLiningProperties_TransomOffset"
-msgstr "TransomOffset"
-
-msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
-msgstr "Offset of the transom if given which divides the door leaf from a glazing or window above. The offset is given from the bottom of the door opening."
-
-#:IFC.xml:682
-msgid "IfcDoorLiningProperties_TransomThickness"
-msgstr "TransomThickness"
-
-msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness width in plane parallel to door leaf of the transom if provided that is, if the TransomOffset attribute is set , which divides the door leaf from a glazing or window above. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the door is divided vertically into a leaf and transom window area without a physical frame. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
-
-#:IFC.xml:701
-msgid "IfcDoorPanelOperationEnum"
-msgstr "IfcDoorPanelOperationEnum"
-
-msgid "IfcDoorPanelOperationEnum_DEFINITION"
-msgstr "Diese Aufzählung legt fest, wie die einzelnen Türplatten wie in Abbildung 1 gezeigt werden. Die Öffnungsrichtung der Türplatten wird durch die lokale Platzierung der [[IfcDoor]] angegeben. Die positive Y-Achse bestimmt die Richtung, wie sie in Abbildung 2 gezeigt wird. Panel Richtung .. .. .. .. Zahlen ifcdoorpaneloperationenum fig10.gif Figure 2 Tür-Panel Operationen NOTE Zahlen symbolische Darstellung abhängig von der nationalen Bau-Code. Diese Figuren sind nur als Illustrationen GESCHICHTE Neue Auflistung in IFC2.0. .. figurifcdoorpaneloperationenum fig01.gif DOUBLE ACTING . .. Zahlen ifcdoorpaneloperationenum fig02.gif SLIDING .. .. .. Zahlen ifcdoorpaneloperationenum fig03.gif FOLDING .. .. .. Zahlen ifcdoorpaneloperationenum fig04.gif REVOLVING .. .. .. Zahlen ifcdoorpaneloperationenum fig05.gif ROLLINGUP .. .. .. . figures ifcdoorpaneloperationenum fig06.gif FIXEDPANEL .. .. figures ifcdoorpaneloperationenum fig07.gif USERDEFINED NOTDEFINED .."
-
-#:IFC.xml:702
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
-msgstr "AKTIVIEREN"
-
-msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig02.gif"
-
-#:IFC.xml:703
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
-msgstr "FIXEDPANEL"
-
-msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig07.gif"
-
-#:IFC.xml:704
-msgid "IfcDoorPanelOperationEnum_FOLDING"
-msgstr "FOLD"
-
-msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig04.gif"
-
-#:IFC.xml:705
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
+#:IFC.xml:1159
+msgid "IfcActuatorTypeEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "IfcActuatorTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-#:IFC.xml:706
-msgid "IfcDoorPanelOperationEnum_REVOLVING"
-msgstr "VERWALTUNG"
+#:IFC.xml:1160
+msgid "IfcActuatorTypeEnum_PNEUMATICACTUATOR"
+msgstr "PNEUMATICACTUATOR"
 
-msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig05.gif"
+msgid "IfcActuatorTypeEnum_PNEUMATICACTUATOR_DEFINITION"
+msgstr "Ein Gerät, das ein Steuerelement pneumatisch betätigt."
 
-#:IFC.xml:707
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:1161
+msgid "IfcActuatorTypeEnum_THERMOSTATICACTUATOR"
+msgstr "THERMOSTATISCHER"
 
-msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig06.gif"
+msgid "IfcActuatorTypeEnum_THERMOSTATICACTUATOR_DEFINITION"
+msgstr "Ein Gerät, das ein Steuerelement thermostatisch betätigt."
 
-#:IFC.xml:708
-msgid "IfcDoorPanelOperationEnum_SLIDING"
-msgstr "SLIDING"
-
-msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig03.gif"
-
-#:IFC.xml:709
-msgid "IfcDoorPanelOperationEnum_SWINGING"
-msgstr "SWINGEN"
-
-msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
-msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig01.gif"
-
-#:IFC.xml:710
-msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+#:IFC.xml:1162
+msgid "IfcActuatorTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
+msgid "IfcActuatorTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
+
+#:IFC.xml:1163
+msgid "IfcAlarm"
+msgstr "IfcAlarm"
+
+msgid "IfcAlarm_DEFINITION"
+msgstr "Ein Alarm ist ein Gerät, das die Existenz einer Bedingung oder einer Situation signalisiert, die sich außerhalb der Grenzen der normalen Erwartung befindet oder ein solches Gerät aktiviert. Alarme beinhalten die Bereitstellung von Break-Glas-Buttons und manuellen Pull-Boxen, die verwendet werden, um Alarme zu aktivieren. HISTORY New Entity in IFC4 .note"
+
+#:IFC.xml:1164
+msgid "IfcAlarm_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcAlarm_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:1171
+msgid "IfcAlarmType"
+msgstr "IfcAlarmType"
+
+msgid "IfcAlarmType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcAlarmType]] definiert allgemein geteilte Informationen für Vorkommen von Alarmen. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Alarmtyp-Spezifikation zu definieren, die die spezifischen Produktinformationen, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcAlarmType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcAlarmType]] werden durch Instanzen von [[IfcAlarm]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcAlarm]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC2x2"
+
+#:IFC.xml:1172
+msgid "IfcAlarmType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcAlarmType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Alarmtypen, von denen der benötigte Typ eingestellt werden kann."
+
+#:IFC.xml:1179
+msgid "IfcAlarmTypeEnum"
+msgstr "IfcAlarmTypeEnum"
+
+msgid "IfcAlarmTypeEnum_DEFINITION"
+msgstr "Die [[IfcAlarmTypeEnum]] definiert den Bereich der verschiedenen Alarme, die angegeben werden können. HISTORY Neue Aufzählung in IFC2x2. Artikel BELL Ein hörbarer Alarm. BREAKGLASSBUTTON Ein Alarmaktivierungsmechanismus, in dem ein Schutzglas zerbrochen werden muss, um eine Taste drücken zu können. LIGHT Ein visueller Alarm. MANUALPULLBOX Ein Alarm-Aktivierungsmechanismus, bei dem die Aktivierung durch eine Pulling-Aktion erreicht wird. GESCHÄFTSFÜHREN Ein elektrischer Kontakt zwischen den Schienen auf dem vier Fuß Weg zu Warnungen in der Lokomotivkabine. RAILWAYDETONATOR Ein Münzgerät, das als lautes Warnsignal für Fahrer verwendet wird. Normalerweise wird er oben auf der Schiene platziert, meist mit zwei Bleigurten, eins auf jeder Seite. BENUTZERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
+
+#:IFC.xml:1201
+msgid "IfcAlarmTypeEnum_BELL"
+msgstr "BELL"
+
+msgid "IfcAlarmTypeEnum_BELL_DEFINITION"
+msgstr "Ein hörbarer Alarm."
+
+#:IFC.xml:1202
+msgid "IfcAlarmTypeEnum_BREAKGLASSBUTTON"
+msgstr "BREAKGLASSBUTTON"
+
+msgid "IfcAlarmTypeEnum_BREAKGLASSBUTTON_DEFINITION"
+msgstr "Ein Alarm-Aktivierungsmechanismus, in dem ein Schutzglas zerlegt werden muss, um eine Taste drücken zu können."
+
+#:IFC.xml:1203
+msgid "IfcAlarmTypeEnum_LIGHT"
+msgstr "LICHTS"
+
+msgid "IfcAlarmTypeEnum_LIGHT_DEFINITION"
+msgstr "Ein visueller Alarm."
+
+#:IFC.xml:1204
+msgid "IfcAlarmTypeEnum_MANUALPULLBOX"
+msgstr "MANUALPULLBOX"
+
+msgid "IfcAlarmTypeEnum_MANUALPULLBOX_DEFINITION"
+msgstr "Ein Alarm-Aktivierungsmechanismus, bei dem die Aktivierung durch eine Pulling-Aktion erreicht wird."
+
+#:IFC.xml:1205
+msgid "IfcAlarmTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcAlarmTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
+
+#:IFC.xml:1206
+msgid "IfcAlarmTypeEnum_RAILWAYCROCODILE"
+msgstr "RAILWAYKROCODILE"
+
+msgid "IfcAlarmTypeEnum_RAILWAYCROCODILE_DEFINITION"
+msgstr "Ein elektrischer Kontakt zwischen den Schienen in der vier Fuß Weg, um Warnungen in der Lokomotivkabine."
+
+#:IFC.xml:1207
+msgid "IfcAlarmTypeEnum_RAILWAYDETONATOR"
+msgstr "RAILWAYDETONATOR"
+
+msgid "IfcAlarmTypeEnum_RAILWAYDETONATOR_DEFINITION"
+msgstr "Ein Münzgerät, das als lautes Warnsignal zum Trainieren von Fahrern verwendet wird. Normalerweise wird er oben auf der Schiene platziert, meist mit zwei Bleigurten, eins auf jeder Seite."
+
+#:IFC.xml:1208
+msgid "IfcAlarmTypeEnum_SIREN"
+msgstr "SIREN"
+
+msgid "IfcAlarmTypeEnum_SIREN_DEFINITION"
+msgstr "Ein hörbarer Alarm."
+
+#:IFC.xml:1209
+msgid "IfcAlarmTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-#:IFC.xml:712
-msgid "IfcDoorPanelPositionEnum"
-msgstr "IfcDoorPanelPositionEnum"
+msgid "IfcAlarmTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
 
-msgid "IfcDoorPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe the location of a door panel within a door lining. HISTORY New Enumeration in IFC2x Figure 1 shows the designation of a door panel with PanelPosition LEFT and a door panel with PanelPosition RIGHT within a door style with OperationType DOUBLE DOOR SINGLE SWING. The position is given as shown in the XZ plane of the local placement, looking into the direction of the positive Y axis. Door panel positions .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Door panel positions Items LEFT MIDDLE RIGHT NOTDEFINED"
+#:IFC.xml:1210
+msgid "IfcAlarmTypeEnum_WHISTLE"
+msgstr "PFEHLER"
 
-#:IFC.xml:713
-msgid "IfcDoorPanelPositionEnum_LEFT"
-msgstr "LASSEN"
+msgid "IfcAlarmTypeEnum_WHISTLE_DEFINITION"
+msgstr "Ein hörbarer Alarm."
 
-msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
-msgstr "LASSEN"
+#:IFC.xml:1211
+msgid "IfcController"
+msgstr "IfcController"
 
-#:IFC.xml:714
-msgid "IfcDoorPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
+msgid "IfcController_DEFINITION"
+msgstr "Ein Regler ist ein Gerät, das Eingänge überwacht und die Ausgänge innerhalb eines Gebäudeautomationssystems steuert. Ein Controller kann physikalisch sein, wenn er innerhalb einer räumlichen Struktur oder logisch einer Software-Schnittstelle platziert oder innerhalb eines programmierbaren physikalischen Controllers zusammengefasst wird. GESCHICHTE Neue Entität in IFC4 .note"
 
-msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
+#:IFC.xml:1212
+msgid "IfcController_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:715
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
+msgid "IfcController_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:1219
+msgid "IfcControllerType"
+msgstr "IfcControllertyp"
+
+msgid "IfcControllerType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcControllerType]] definiert allgemein geteilte Informationen für das Vorkommen von Controllern. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Controller-Typspezifikation zu definieren, die die spezifischen Produktinformationen, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcControllerType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcControllerType]] werden durch Instanzen von [[IfcController]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcController]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC2x2"
+
+#:IFC.xml:1220
+msgid "IfcControllerType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcControllerType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Controllertypen, von denen der benötigte Controllertyp eingestellt werden kann."
+
+#:IFC.xml:1227
+msgid "IfcControllerTypeEnum"
+msgstr "IfcControllerTypeEnum"
+
+msgid "IfcControllerTypeEnum_DEFINITION"
+msgstr "Die [[IfcControllerTypeEnum]] definiert den Bereich der verschiedenen Controllertypen, die angegeben werden können. HISTORY New Enumeration in IFC2.0. hange ifc2x4 IFC4 CHANGE PROPORTIONALINTEGRAL und PROPORTIONALINTEGRALDERIVATIVE Werte gelöschte Eigenschaften-Set Aufzählung jetzt verwendet . MULTIPOSITION hinzugefügt. FOLGENDE Ausgabe erhöht oder verringert sich mit einer konstanten oder beschleunigenden Geschwindigkeit. PROGRAMMABLE Output ist programmierbar wie Discrete Digital Control DDC . MULTIPOSITION Ausgabe ist diskreten Wert, kann einer von drei oder mehr Werten sein. TWOPOSITION Ausgabe kann entweder ein- oder ausgeschaltet werden. USERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
+
+#:IFC.xml:1243
+msgid "IfcControllerTypeEnum_FLOATING"
+msgstr "SCHLADEN"
+
+msgid "IfcControllerTypeEnum_FLOATING_DEFINITION"
+msgstr "Die Leistung steigt oder sinkt mit einer konstanten oder beschleunigenden Geschwindigkeit."
+
+#:IFC.xml:1244
+msgid "IfcControllerTypeEnum_MULTIPOSITION"
+msgstr "MULTIPOSITION"
+
+msgid "IfcControllerTypeEnum_MULTIPOSITION_DEFINITION"
+msgstr "Ausgabe ist diskreter Wert, kann einer von drei oder mehr Werten."
+
+#:IFC.xml:1245
+msgid "IfcControllerTypeEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "IfcControllerTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-#:IFC.xml:716
-msgid "IfcDoorPanelPositionEnum_RIGHT"
-msgstr "RECHTS"
+#:IFC.xml:1246
+msgid "IfcControllerTypeEnum_PROGRAMMABLE"
+msgstr "PROGRAMMISCH"
 
-msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "RECHTS"
+msgid "IfcControllerTypeEnum_PROGRAMMABLE_DEFINITION"
+msgstr "Ausgänge sind programmierbar wie Discrete Digital Control DDC ."
 
-#:IFC.xml:718
-msgid "IfcDoorPanelProperties"
-msgstr "IfcDoorPaneleigenschaften"
+#:IFC.xml:1247
+msgid "IfcControllerTypeEnum_PROPORTIONAL"
+msgstr "PROPORTIONAL"
 
-msgid "IfcDoorPanelProperties_DEFINITION"
-msgstr "Eine Türplatte ist normalerweise ein Türblatt, das Personen oder Waren erlaubt, zu passieren. Die Parameter der Türplatte definieren den geometrisch relevanten Parameter des Panels Die [[IfcDoorPanelProperties]] werden verwendet, um die Form und den Betrieb von Türplatten parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung der Tür hinzugefügt werden. Die [[IfcDoorType]] kann Türen definieren, die aus mehr als einem Panel bestehen. In diesem Fall muss eine Instanz von [[IfcDoorPanelProperties]] für jedes Türpanel enthalten sein. Das Attribut PanelPosition, in Verbindung mit dem [[IfcDoorType]]. perationType-Attribut legt fest, auf welches Panel die [[IfcDoorPanelProperties]] angewendet wird. Die [[IfcDoorPanelProperties]] sind in der Liste der Objekte enthalten, die durch das Attribut HasPropertySets der [[IfcDoorType]] angegeben werden. Weitere Informationen über das Türpanel können in die gleiche Liste der [[IfcDoorType]] mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Das [[IfcDoorPanelProperties]] enthält keine geometrische Darstellung. Es definiert jedoch Parameter, die verwendet werden können, um die Form des Türtyps zu erzeugen, der von der [[IfcDoor]] in den räumlichen Kontext des Projekts eingefügt wird, wie in Tabelle 1 dargestellt. Die Parameter der [[IfcDoorPanelProperties]] definieren eine Standardtür, einschließlich, wenn eine proportionale Breite angegeben wird, um nicht einheitliche Doppel- oder Schiebetüren oder Klapptüren zu definieren. Die äußere Grenze des Panels wird durch die Profilform-Repräsentation bestimmt, die der [[IfcDoor]] zugewiesen ist, , die die [[IfcDoorType]] einfügt. .. Figuren ifcdoorpanelproperties fig01. wenn PanelTiefe Die Tiefe der Paneltiefe, die doppelte Aktion und die Schiebetafel wird durch den Parameter PanelTiefe definiert. panel 2 .. .. .. Zahlen ifcdoorpanelproperties fig02. wenn PanelBreite für Türoperationstypen, die mehr als ein Panel enthalten, die Breite von mindestens einem Panel wird durch eine normalisierte Verhältnismessung angegeben. Es legt die Breite des Paneels fest, das als Verhältnis zur Gesamtbreite der Türöffnung definiert ist. Tabelle 1 Wie Attribute die Türform neue Entität in IFC2.0 beeinflussen. .change ifc2x4 IFC4 CHANGE Supertype geändert auf neu [[IfcPreDefinedPropertySet]] ."
+msgid "IfcControllerTypeEnum_PROPORTIONAL_DEFINITION"
+msgstr "Die Ausgabe ist proportional zum Kontrollfehler und wahlweise zeitintegraler und derivativer Zeitpunkt."
 
-#:IFC.xml:741
-msgid "IfcDoorPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:1248
+msgid "IfcControllerTypeEnum_TWOPOSITION"
+msgstr "ZWEITERE"
 
-msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Zeiger auf den Formaspekt, falls angegeben. Der Formaspekt spiegelt den Teil der Türform wider, der die Türplatte darstellt. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+msgid "IfcControllerTypeEnum_TWOPOSITION_DEFINITION"
+msgstr "Die Ausgabe kann entweder ein- oder ausgeschaltet sein."
 
-#:IFC.xml:719
-msgid "IfcDoorPanelProperties_PanelDepth"
-msgstr "PanelDepth"
-
-msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
-msgstr "Depth of the door panel, measured perpendicular to the plane of the door leaf."
-
-#:IFC.xml:724
-msgid "IfcDoorPanelProperties_PanelOperation"
-msgstr "PanelOperation"
-
-msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
-msgstr "Die PanelOperation definiert die Funktionsweise dieses Panels. Die Paneloperation der Türplatte muss dem Operationstyp der [[IfcDoorType]] entsprechen, von der sie referenziert wird."
-
-#:IFC.xml:729
-msgid "IfcDoorPanelProperties_PanelPosition"
-msgstr "PanelPosition"
-
-msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position dieses Panels innerhalb der Tür. Die Panelposition der Türplatte muss dem Operationstyp der [[IfcDoorType]] entsprechen, von der sie referenziert wird."
-
-#:IFC.xml:734
-msgid "IfcDoorPanelProperties_PanelWidth"
-msgstr "PanelWidth"
-
-msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
-msgstr "Breite dieses Panels, gemessen an der Gesamtübersichtlichkeit der Öffnungsbreite der Tür. Wenn sie weggelassen wird, ist sie standardmäßig 1. Für alle Türen mit OperationType s bei [[IfcDoorType]] muss ein Wert angegeben werden, der eine Tür mit mehr als einem Panel definiert."
-
-#:IFC.xml:753
-msgid "IfcDoorStyleConstructionEnum"
-msgstr "IfcDoorStyleConstructionEnum"
-
-msgid "IfcDoorStyleConstructionEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die Grundtypen der Türenkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die zur Herstellung der Türe verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL STEEL WOOD ALUMINIUM WOOD ALUMINIUM PLASTIC BENUTZERDEFINED NOTDEFINED"
-
-#:IFC.xml:754
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
-
-#:IFC.xml:755
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
-msgstr "ALUMINIUM PLASTIK"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
-msgstr "ALUMINIUM PLASTIK"
-
-#:IFC.xml:756
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOOD"
-
-msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOOD"
-
-#:IFC.xml:757
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "HOCHGRADE STEEL"
-
-msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "HOCHGRADE STEEL"
-
-#:IFC.xml:758
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
-
-msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
-
-#:IFC.xml:759
-msgid "IfcDoorStyleConstructionEnum_PLASTIC"
-msgstr "PLASTIK"
-
-msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTIK"
-
-#:IFC.xml:760
-msgid "IfcDoorStyleConstructionEnum_STEEL"
-msgstr "LÄNDERN"
-
-msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "LÄNDERN"
-
-#:IFC.xml:761
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
+#:IFC.xml:1249
+msgid "IfcControllerTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
+msgid "IfcControllerTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
+
+#:IFC.xml:1250
+msgid "IfcFlowInstrument"
+msgstr "IfcFlowInstrument"
+
+msgid "IfcFlowInstrument_DEFINITION"
+msgstr "Ein Fließinstrument liest und zeigt den Wert einer bestimmten Eigenschaft eines Systems an einem Punkt an oder zeigt den Unterschied im Wert einer Eigenschaft zwischen zwei Punkten an. Die Instrumentierung dient in der Regel der Bestimmung des Wertes der Eigenschaft zu einem Zeitpunkt. Es ist nicht der Zweck eines Instruments, die Werte mit der Zeit aufzuzeichnen oder zu integrieren, obwohl sie möglicherweise an Geräte angeschlossen sind, die eine solche Funktion ausüben. Diese Entität sorgt für alle Formen von mechanischen Fließinstrumenten Thermometern, Druckmessgeräten usw. und elektrische Strömungsgeräte Ammeter, Voltmeter usw. GESCHICHTE Neue Entität in IFC4 .note"
+
+#:IFC.xml:1251
+msgid "IfcFlowInstrument_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcFlowInstrument_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:1258
+msgid "IfcFlowInstrumentType"
+msgstr "IfcFlowInstrumentType"
+
+msgid "IfcFlowInstrumentType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcFlowInstrumentType]] definiert allgemein geteilte Informationen für das Auftreten von Strömungsinstrumenten. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Fließinstrumententypspezifikation zu definieren, die die spezifischen Produktinformationen angibt, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcFlowInstrumentType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcFlowInstrumentType]] werden durch Instanzen von [[IfcFlowInstrument]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcFlowInstrument]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC2x2"
+
+#:IFC.xml:1259
+msgid "IfcFlowInstrumentType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcFlowInstrumentType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Typen von Durchflussinstrumenten, aus denen der benötigte Typ gesetzt werden kann."
+
+#:IFC.xml:1266
+msgid "IfcFlowInstrumentTypeEnum"
+msgstr "IfcFlowInstrumentTypeEnum"
+
+msgid "IfcFlowInstrumentTypeEnum_DEFINITION"
+msgstr "Die [[IfcFlowInstrumentTypeEnum]] definiert den Bereich der verschiedenen Fließinstrumente, die angegeben werden können. HISTORY New Enumeration in IFC2x2. Artikel PRESSUREGAUGE Ein Gerät, das liest und zeigt einen Druckwert an einem Punkt oder den Druckunterschied zwischen zwei Punkten. THERMOMETER Ein Gerät, das einen Temperaturwert an einem Punkt liest und anzeigt. AMMETER Ein Gerät, das den Stromfluss in einem Schaltkreis liest und anzeigt. FREQUENCYMETER Ein Gerät, das die elektrische Frequenz eines Wechselstroms liest und anzeigt. POWERFACTORMETER Ein Gerät, das den Leistungsfaktor eines elektrischen Schaltkreises liest und anzeigt. PHASEANGLEMETER Ein Gerät, das den Phasenwinkel eines Phasenkreises liest und anzeigt. VOLTMETER PEAK Ein Gerät, das die Spitzenspannung in einem Stromkreis liest und anzeigt. VOLTMETER RMS Ein Gerät, das die RMS Mittelspannung in einem elektrischen Stromkreis liest und anzeigt. COMBINED Ein Gerät, das den Wert mehrerer Eigenschaften eines Systems an einem Punkt liest und anzeigt oder zeigt den Unterschied im Wert einer Eigenschaft zwischen zwei Punkten an. VOLTMETER Ein Gerät, das die Spannung in einem Schaltkreis misst und anzeigt. NUTZERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
+
+#:IFC.xml:1292
+msgid "IfcFlowInstrumentTypeEnum_AMMETER"
+msgstr "AMMETER"
+
+msgid "IfcFlowInstrumentTypeEnum_AMMETER_DEFINITION"
+msgstr "Ein Gerät, das den Stromfluss in einem Schaltkreis liest und anzeigt."
+
+#:IFC.xml:1293
+msgid "IfcFlowInstrumentTypeEnum_COMBINED"
+msgstr "GEBINDEN"
+
+msgid "IfcFlowInstrumentTypeEnum_COMBINED_DEFINITION"
+msgstr "Ein Gerät, das den Wert mehrerer Eigenschaften eines Systems an einem Punkt liest und anzeigt oder zeigt den Unterschied im Wert einer Eigenschaft zwischen zwei Punkten an."
+
+#:IFC.xml:1294
+msgid "IfcFlowInstrumentTypeEnum_FREQUENCYMETER"
+msgstr "FREQUENZYMETER"
+
+msgid "IfcFlowInstrumentTypeEnum_FREQUENCYMETER_DEFINITION"
+msgstr "Ein Gerät, das die elektrische Frequenz eines Wechselstroms liest und anzeigt."
+
+#:IFC.xml:1295
+msgid "IfcFlowInstrumentTypeEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcFlowInstrumentTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
+
+#:IFC.xml:1296
+msgid "IfcFlowInstrumentTypeEnum_PHASEANGLEMETER"
+msgstr "PHASEANGLEMETER"
+
+msgid "IfcFlowInstrumentTypeEnum_PHASEANGLEMETER_DEFINITION"
+msgstr "Ein Gerät, das den Phasenwinkel einer Phase in einem polyphasischen elektrischen Schaltkreis liest und anzeigt."
+
+#:IFC.xml:1297
+msgid "IfcFlowInstrumentTypeEnum_POWERFACTORMETER"
+msgstr "POWERFAKTORMETER"
+
+msgid "IfcFlowInstrumentTypeEnum_POWERFACTORMETER_DEFINITION"
+msgstr "Ein Gerät, das den Leistungsfaktor eines Stromkreises liest und anzeigt."
+
+#:IFC.xml:1298
+msgid "IfcFlowInstrumentTypeEnum_PRESSUREGAUGE"
+msgstr "PRESSUREGAUGE"
+
+msgid "IfcFlowInstrumentTypeEnum_PRESSUREGAUGE_DEFINITION"
+msgstr "Ein Gerät, das einen Druckwert an einem Punkt oder den Druckunterschied zwischen zwei Punkten liest und anzeigt."
+
+#:IFC.xml:1299
+msgid "IfcFlowInstrumentTypeEnum_THERMOMETER"
+msgstr "THERMOMETER"
+
+msgid "IfcFlowInstrumentTypeEnum_THERMOMETER_DEFINITION"
+msgstr "Ein Gerät, das einen Temperaturwert an einem Punkt liest und anzeigt."
+
+#:IFC.xml:1300
+msgid "IfcFlowInstrumentTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-#:IFC.xml:762
-msgid "IfcDoorStyleConstructionEnum_WOOD"
-msgstr "WOOOD"
+msgid "IfcFlowInstrumentTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
 
-msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOOD"
+#:IFC.xml:1301
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER"
+msgstr "VOLTMETER"
 
-#:IFC.xml:764
-msgid "IfcDoorStyleOperationEnum"
-msgstr "IfcDoorStyleOperationEnum"
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER_DEFINITION"
+msgstr "Ein Gerät, das die Spannung in einem Schaltkreis misst und anzeigt."
 
-msgid "IfcDoorStyleOperationEnum_DEFINITION"
-msgstr "This enumeration defines the basic ways to describe how doors operate. HISTORY New enumeration in IFC2x. Note 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing left .. .. .. .. figures ifcdoorstyleoperationenum fig01.gif SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing right .. .. .. .. figures ifcdoorstyleoperationenum fig02.gif DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing .. .. .. .. figures ifcdoorstyleoperationenum fig03.gif DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite left .. .. .. .. figures ifcdoorstyleoperationenum fig06a.gif DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite right .. .. .. .. figures ifcdoorstyleoperationenum fig06b.gif DOUBLE SWING LEFT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing left .. .. .. .. figures ifcdoorstyleoperationenum fig04.gif DOUBLE SWING RIGHT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing right .. .. .. .. figures ifcdoorstyleoperationenum fig05.gif DOUBLE DOOR DOUBLE SWING NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double double swing .. .. .. .. figures ifcdoorstyleoperationenum fig06.gif SLIDING TO LEFT Door with one panel that is sliding to the left. sliding to left .. .. .. .. figures ifcdoorstyleoperationenum fig07.gif SLIDING TO RIGHT Door with one panel that is sliding to the right. sliding to right .. .. .. .. figures ifcdoorstyleoperationenum fig08.gif DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. double sliding .. .. .. .. figures ifcdoorstyleoperationenum fig09.gif FOLDING TO LEFT Door with one panel that is folding to the left. folding to left .. .. .. .. figures ifcdoorstyleoperationenum fig10.gif FOLDING TO RIGHT Door with one panel that is folding to the right. folding to right .. .. .. .. figures ifcdoorstyleoperationenum fig11.gif DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. double folding .. .. .. .. figures ifcdoorstyleoperationenum fig12.gif REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . revolving .. .. .. .. figures ifcdoorstyleoperationenum fig13.gif ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. rolling .. .. .. .. figures ifcdoorstyleoperationenum fig14.gif USERDEFINED User defined operation type not defined .. .. .. .. figures ifcdoorstyleoperationenum fig15.gif NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+#:IFC.xml:1302
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER_PEAK"
+msgstr "VOLTMETER PEAK"
 
-#:IFC.xml:765
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
-msgstr "DOPPELDOOR DOPPELSWING"
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER_PEAK_DEFINITION"
+msgstr "Ein Gerät, das die Spitzenspannung in einem elektrischen Stromkreis liest und anzeigt."
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
-msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing .. .. .. .. figures ifcdoorstyleoperationenum fig06.gif .."
+#:IFC.xml:1303
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER_RMS"
+msgstr "VOLTMETER RMS"
 
-#:IFC.xml:766
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
-msgstr "DOPPEL-FOLDING"
+msgid "IfcFlowInstrumentTypeEnum_VOLTMETER_RMS_DEFINITION"
+msgstr "Ein Gerät, das die RMS Mittelspannung in einem elektrischen Stromkreis liest und anzeigt."
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
-msgstr "Tür mit zwei Paneelen, eine ist falten nach links, die andere ist falten nach rechts. .. Zahlen ifcdoorstyleoperationenum fig12.gif .."
+#:IFC.xml:1304
+msgid "IfcSensor"
+msgstr "IfcSensor"
 
-#:IFC.xml:767
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
-msgstr "DOPPEL-SINGLER SINGLE SWING"
+msgid "IfcSensor_DEFINITION"
+msgstr "Ein Sensor ist ein Gerät, das eine physikalische Menge misst und in ein Signal umwandelt, das von einem Beobachter oder einem Instrument gelesen werden kann. GESCHICHTE Neue Entität in IFC4 .note"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
-msgstr "Tür mit zwei Paneelen, Eine schwenkt in beide Richtungen und nach rechts in die Hauptrichtung, die anderen bewegt sich auch in beide Richtungen und nach links in die Hauptrichtung. HINWEISE Richtung des Schwungs, ob in oder aus ist bestimmt an der [[IfcDoor]]. double swing .. .. .. Zahlen ifcdoorstyleoperationenum fig03.gif"
+#:IFC.xml:1305
+msgid "IfcSensor_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:768
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
-msgstr "DOPPELLER EINZELLEN SWING OPPOSITE LEFT"
+msgid "IfcSensor_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
-msgstr "Tür mit zwei nach links geöffneten Paneelen, ein Paneel bewegt sich in eine Richtung und das andere Panel bewegt sich in die entgegengesetzte Richtung. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite left .. .. .. figures ifcdoorstyleoperationenum fig06a.gif .."
+#:IFC.xml:1315
+msgid "IfcSensorType"
+msgstr "IfcSensorType"
 
-#:IFC.xml:769
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
-msgstr "DOPPELLER EINZELLEN SWING OPPOSITE RECHTS"
+msgid "IfcSensorType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcSensorType]] definiert allgemein geteilte Informationen über das Auftreten von Sensoren. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsamen Ports Es wird verwendet, um eine Sensortyp Spezifikation zu definieren, die die spezifischen Produktinformationen, die allen Vorkommnissen dieses Produkttyps gemein sind. Die [[IfcSensorType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcSensorType]] werden durch Instanzen von [[IfcSensor]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcSensor]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC2x2"
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
-msgstr "Tür mit zwei Paneelen, die beide nach rechts öffnen, ein Paneel bewegt sich in eine Richtung und die andere Paneele bewegt sich in die entgegengesetzte Richtung. HINWEISE Richtung des Schwungs, ob in oder aus ist im [[IfcDoor]]. Gegenüber .. .. Zahlen ifcdoorstyleoperationenum fig06b.gif bestimmt."
+#:IFC.xml:1316
+msgid "IfcSensorType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:770
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
-msgstr "DOPPEL-FOR-SLIDING"
+msgid "IfcSensorType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Sensortypen, von denen der benötigte Typ eingestellt werden kann."
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
-msgstr "Tür mit zwei Paneelen, eine rutscht nach links und die andere nach rechts. .. Zahlen ifcdoorstyleoperationenum fig09.gif .."
+#:IFC.xml:1323
+msgid "IfcSensorTypeEnum"
+msgstr "IfcSensorTypeEnum"
 
-#:IFC.xml:771
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
-msgstr "SWING-LEFT DOPPELN"
+msgid "IfcSensorTypeEnum_DEFINITION"
+msgstr "The [[IfcSensorTypeEnum]] defines the range of different types of sensor that can be specified. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Additional enumerations added. Items COSENSOR A device that senses or detects carbon monoxide. CO2SENSOR A device that senses or detects carbon dioxide. CONDUCTANCESENSOR A device that senses or detects electrical conductance. CONTACTSENSOR A device that senses or detects contact, such as for detecting if a door is closed. FIRESENSOR A device that senses or detects fire FLOWSENSOR A device that senses or detects flow in a fluid. FROSTSENSOR A device that senses or detects frost on a window. GASSENSOR A device that senses or detects gas concentration other than CO2 HEATSENSOR A device that senses or detects heat. HUMIDITYSENSOR A device that senses or detects humidity. IDENTIFIERSENSOR A device that reads a tag, such as for gaining access to a door or elevator IONCONCENTRATIONSENSOR A device that senses or detects ion concentration, such as for water hardness. LEVELSENSOR A device that senses or detects fill level, such as for a tank. LIGHTSENSOR A device that senses or detects light. MOISTURESENSOR A device that senses or detects moisture. MOVEMENTSENSOR A device that senses or detects movement. PHSENSOR A device that senses or detects acidity. PRESSURESENSOR A device that senses or detects pressure. RADIATIONSENSOR A device that senses or detects pressure. RADIOACTIVITYSENSOR A device that senses or detects atomic decay. SMOKESENSOR A device that senses or detects smoke. SOUNDSENSOR A device that senses or detects sound. TEMPERATURESENSOR A device that senses or detects temperature. WINDSENSOR A device that senses or detects airflow speed and direction. EARTHQUAKESENSOR A device that senses or detects the seismic wave and measures the seismic intensity in case of earthquake. FOREIGNOBJECTDETECTIONSENSOR A device that senses or detects foreign objects that shock or break the power network. It may alarm when such accidents happen. OBSTACLESENSOR A device that senses or detects any obstacles. Examples are detectors sensing objects falling from a bridge, rock fall detectors, etc. RAINSENSOR A device that senses or collects rainfall related information. SNOWDEPTHSENSOR A device that senses or measures the depth of snowfall. TRAINSENSOR A device, usually attached to the rear end of the last vehicle of a train, acting on a fixed equipment to give an indication that the train is complete. TURNOUTCLOSURESENSOR A device that senses or detects the position of a blade of a turnout. WHEELSENSOR A device that senses or detects the passage of a wheel. USERDEFINED User defined type. NOTDEFINED Undefined type."
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
-msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing left .. .. .. .. figures ifcdoorstyleoperationenum fig04.gif"
+#:IFC.xml:1393
+msgid "IfcSensorTypeEnum_CO2SENSOR"
+msgstr "CO2SENSOR"
 
-#:IFC.xml:772
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
-msgstr "SWING-RECHTS DOPPELN"
+msgid "IfcSensorTypeEnum_CO2SENSOR_DEFINITION"
+msgstr "Ein Gerät, das Kohlendioxid spürt oder erkennt."
 
-msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
-msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing right .. .. .. .. figures ifcdoorstyleoperationenum fig05.gif"
+#:IFC.xml:1394
+msgid "IfcSensorTypeEnum_CONDUCTANCESENSOR"
+msgstr "CONDUCTANCESENSOR"
 
-#:IFC.xml:773
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
-msgstr "FOLDUNG ZUM LEFT"
+msgid "IfcSensorTypeEnum_CONDUCTANCESENSOR_DEFINITION"
+msgstr "Ein Gerät, das elektrische Leitfähigkeit erkennt oder erkennt."
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
-msgstr "Door with one panel that is falding to the left folding to left .. .. figures ifcdoorstyleoperationenum fig10.gif .."
+#:IFC.xml:1395
+msgid "IfcSensorTypeEnum_CONTACTSENSOR"
+msgstr "KONTAKTSENSOR"
 
-#:IFC.xml:774
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
-msgstr "FOLDUNG ZUM RECHTS"
+msgid "IfcSensorTypeEnum_CONTACTSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Kontakte erkennt oder erkennt, z. B. um festzustellen, ob eine Tür geschlossen ist."
 
-msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
-msgstr "Door mit einem Paneel, das nach rechts gefaltet ist .. .. Zahlen ifcdoorstyleoperationenum fig11.gif .."
+#:IFC.xml:1396
+msgid "IfcSensorTypeEnum_COSENSOR"
+msgstr "COSENSOR"
 
-#:IFC.xml:775
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
+msgid "IfcSensorTypeEnum_COSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Kohlenmonoxid erkennt oder erkennt."
+
+#:IFC.xml:1397
+msgid "IfcSensorTypeEnum_EARTHQUAKESENSOR"
+msgstr "ARTHQUAKESENSOR"
+
+msgid "IfcSensorTypeEnum_EARTHQUAKESENSOR_DEFINITION"
+msgstr "Ein Gerät, das die seismische Welle erkennt oder erkennt und die seismische Intensität im Falle eines Erdbebens misst."
+
+#:IFC.xml:1398
+msgid "IfcSensorTypeEnum_FIRESENSOR"
+msgstr "FIRESENSOR"
+
+msgid "IfcSensorTypeEnum_FIRESENSOR_DEFINITION"
+msgstr "Ein Gerät, das Feuer erkennt oder erkennt"
+
+#:IFC.xml:1399
+msgid "IfcSensorTypeEnum_FLOWSENSOR"
+msgstr "FLOWSENSOR"
+
+msgid "IfcSensorTypeEnum_FLOWSENSOR_DEFINITION"
+msgstr "Ein Gerät, das den Fluss in einer Flüssigkeit erkennt oder erkennt."
+
+#:IFC.xml:1400
+msgid "IfcSensorTypeEnum_FOREIGNOBJECTDETECTIONSENSOR"
+msgstr "FOREIGNOBJEKTDETECTIONSENSOR"
+
+msgid "IfcSensorTypeEnum_FOREIGNOBJECTDETECTIONSENSOR_DEFINITION"
+msgstr "Ein Gerät, das fremde Objekte erkennt oder erkennt, die das Stromnetzwerk schockieren oder zerbrechen. Es kann alarmieren, wenn solche Unfälle auftreten."
+
+#:IFC.xml:1401
+msgid "IfcSensorTypeEnum_FROSTSENSOR"
+msgstr "FROSTSENSOR"
+
+msgid "IfcSensorTypeEnum_FROSTSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Frost an einem Fenster erkennt oder erkennt."
+
+#:IFC.xml:1402
+msgid "IfcSensorTypeEnum_GASSENSOR"
+msgstr "GASSENSOR"
+
+msgid "IfcSensorTypeEnum_GASSENSOR_DEFINITION"
+msgstr "Ein Gerät, das andere Gaskonzentrationen als CO2 erkennt oder erkennt"
+
+#:IFC.xml:1403
+msgid "IfcSensorTypeEnum_HEATSENSOR"
+msgstr "HEATSENSOR"
+
+msgid "IfcSensorTypeEnum_HEATSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Wärme spürt oder erkennt."
+
+#:IFC.xml:1404
+msgid "IfcSensorTypeEnum_HUMIDITYSENSOR"
+msgstr "HUMIDITYSENSOR"
+
+msgid "IfcSensorTypeEnum_HUMIDITYSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Feuchtigkeit erkennt oder erkennt."
+
+#:IFC.xml:1405
+msgid "IfcSensorTypeEnum_IDENTIFIERSENSOR"
+msgstr "IDENTIFIERSENSOR"
+
+msgid "IfcSensorTypeEnum_IDENTIFIERSENSOR_DEFINITION"
+msgstr "Ein Gerät, das einen Tag liest, zum Beispiel um Zugang zu einer Tür oder einem Aufzug zu erhalten"
+
+#:IFC.xml:1406
+msgid "IfcSensorTypeEnum_IONCONCENTRATIONSENSOR"
+msgstr "IONKONZENTRATIONSENSOR"
+
+msgid "IfcSensorTypeEnum_IONCONCENTRATIONSENSOR_DEFINITION"
+msgstr "Ein Gerät, das die Ionenkonzentration spürt oder erkennt, wie zum Beispiel bei der Wasserhärte."
+
+#:IFC.xml:1407
+msgid "IfcSensorTypeEnum_LEVELSENSOR"
+msgstr "LEVELSENSOR"
+
+msgid "IfcSensorTypeEnum_LEVELSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Füllstände erkennt oder erkennt, wie zum Beispiel für einen Behälter."
+
+#:IFC.xml:1408
+msgid "IfcSensorTypeEnum_LIGHTSENSOR"
+msgstr "LECHTSENSOR"
+
+msgid "IfcSensorTypeEnum_LIGHTSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Licht erkennt oder erkennt."
+
+#:IFC.xml:1409
+msgid "IfcSensorTypeEnum_MOISTURESENSOR"
+msgstr "MOISTURESENSOR"
+
+msgid "IfcSensorTypeEnum_MOISTURESENSOR_DEFINITION"
+msgstr "Ein Gerät, das Feuchtigkeit erkennt oder erkennt."
+
+#:IFC.xml:1410
+msgid "IfcSensorTypeEnum_MOVEMENTSENSOR"
+msgstr "MOVEMENTSENSOR"
+
+msgid "IfcSensorTypeEnum_MOVEMENTSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Bewegungen erkennt oder erkennt."
+
+#:IFC.xml:1411
+msgid "IfcSensorTypeEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+msgid "IfcSensorTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-#:IFC.xml:776
-msgid "IfcDoorStyleOperationEnum_REVOLVING"
-msgstr "VERWALTUNG"
+#:IFC.xml:1412
+msgid "IfcSensorTypeEnum_OBSTACLESENSOR"
+msgstr "OBSTACLESENSOR"
 
-msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
-msgstr "Eine Eingangstür bestehend aus vier Blättern in Form eines Kreuzes, die sich um eine zentrale vertikale Achse dreht, werden durch eine einzelne [[IfcDoor]] Paneeleigenschaft beschrieben. revolving .. .. .. Zahlen ifcdoorstyleoperationenum fig13.gif"
+msgid "IfcSensorTypeEnum_OBSTACLESENSOR_DEFINITION"
+msgstr "Ein Gerät, das alle Hindernisse erkennt oder erkennt."
 
-#:IFC.xml:777
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
-msgstr "ROLLINGUP"
+#:IFC.xml:1413
+msgid "IfcSensorTypeEnum_PHSENSOR"
+msgstr "PHSENSOR"
 
-msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
-msgstr "Tür, die sich öffnet, indem Sie nach oben rollen, ACHTUNG, ob sie nach innen oder nach außen rollt, wird im [[IfcDoor]] festgelegt. rollend .. .. .. Zahlen ifcdoorstyleoperationenum fig14.gif"
+msgid "IfcSensorTypeEnum_PHSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Säure erkennt oder erkennt."
 
-#:IFC.xml:778
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
-msgstr "EINZELE SCHWEIßLEFT"
+#:IFC.xml:1414
+msgid "IfcSensorTypeEnum_PRESSURESENSOR"
+msgstr "PRESSURESENSOR"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
-msgstr "Tür mit einem Paneel, das Schwankungen nach links öffnet. Die Scharniere sind auf der linken Seite in Richtung der positiven Y-Achse. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing left .. .. .. .. figures ifcdoorstyleoperationenum fig01.gif"
+msgid "IfcSensorTypeEnum_PRESSURESENSOR_DEFINITION"
+msgstr "Ein Gerät, das Druck spürt oder erkennt."
 
-#:IFC.xml:779
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
-msgstr "EINZELE SWING RECHTS"
+#:IFC.xml:1415
+msgid "IfcSensorTypeEnum_RADIATIONSENSOR"
+msgstr "RADIATIONSENSOR"
 
-msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
-msgstr "Tür mit einem Paneel, das in beide Richtungen und nach rechts in die Richtung schwankt. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing right .. .. .. .. figures ifcdoorstyleoperationenum fig02.gif"
+msgid "IfcSensorTypeEnum_RADIATIONSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Druck spürt oder erkennt."
 
-#:IFC.xml:780
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
-msgstr "SLIDING ZUM LEFT"
+#:IFC.xml:1416
+msgid "IfcSensorTypeEnum_RADIOACTIVITYSENSOR"
+msgstr "RADIOACTIVITYSENSOR"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
-msgstr "Tür mit einem Paneel, dass nach links schieben .. .. Figuren ifcdoorstyleoperationenum fig07.gif .."
+msgid "IfcSensorTypeEnum_RADIOACTIVITYSENSOR_DEFINITION"
+msgstr "Ein Gerät, das atomaren Verfall erkennt oder erkennt."
 
-#:IFC.xml:781
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
-msgstr "SLIDING ZUM RECHTS"
+#:IFC.xml:1417
+msgid "IfcSensorTypeEnum_RAINSENSOR"
+msgstr "RAINSENSOR"
 
-msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
-msgstr "Door with one panel that is sliding to the right .. .. figures ifcdoorstyleoperationenum fig08.gif .."
+msgid "IfcSensorTypeEnum_RAINSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Informationen über Regen erfasst oder sammelt."
 
-#:IFC.xml:782
-msgid "IfcDoorStyleOperationEnum_USERDEFINED"
+#:IFC.xml:1418
+msgid "IfcSensorTypeEnum_SMOKESENSOR"
+msgstr "SMOKESENSOR"
+
+msgid "IfcSensorTypeEnum_SMOKESENSOR_DEFINITION"
+msgstr "Ein Gerät, das Rauch erkennt oder spürt."
+
+#:IFC.xml:1419
+msgid "IfcSensorTypeEnum_SNOWDEPTHSENSOR"
+msgstr "SNOWDEPTHSENSOR"
+
+msgid "IfcSensorTypeEnum_SNOWDEPTHSENSOR_DEFINITION"
+msgstr "Ein Gerät, das die Schneefalltiefe spürt oder misst."
+
+#:IFC.xml:1420
+msgid "IfcSensorTypeEnum_SOUNDSENSOR"
+msgstr "SOUNDSENSOR"
+
+msgid "IfcSensorTypeEnum_SOUNDSENSOR_DEFINITION"
+msgstr "Ein Gerät, das Klang erkennt oder erkennt."
+
+#:IFC.xml:1421
+msgid "IfcSensorTypeEnum_TEMPERATURESENSOR"
+msgstr "TEMPERATURESENSOR"
+
+msgid "IfcSensorTypeEnum_TEMPERATURESENSOR_DEFINITION"
+msgstr "Ein Gerät, das die Temperatur erkennt oder erkennt."
+
+#:IFC.xml:1422
+msgid "IfcSensorTypeEnum_TRAINSENSOR"
+msgstr "TRAINSENSOR"
+
+msgid "IfcSensorTypeEnum_TRAINSENSOR_DEFINITION"
+msgstr "Ein Gerät, das normalerweise am hinteren Ende des letzten Zuges befestigt wird auf einer festen Ausrüstung zu zeigen, dass der Zug komplett ist."
+
+#:IFC.xml:1423
+msgid "IfcSensorTypeEnum_TURNOUTCLOSURESENSOR"
+msgstr "TURNOUTCLOSURESENSOR"
+
+msgid "IfcSensorTypeEnum_TURNOUTCLOSURESENSOR_DEFINITION"
+msgstr "Ein Gerät, das die Position einer Klinge einer Wahlbeteiligung erkennt oder erkennt."
+
+#:IFC.xml:1424
+msgid "IfcSensorTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined operation type not defined .. .. .. .. figures ifcdoorstyleoperationenum fig15.gif"
+msgid "IfcSensorTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
 
-#:IFC.xml:784
-msgid "IfcPermeableCoveringOperationEnum"
-msgstr "IfcPermeableCoveringOperationEnum"
+#:IFC.xml:1425
+msgid "IfcSensorTypeEnum_WHEELSENSOR"
+msgstr "WHEELSENSOR"
 
-msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die gültigen Typen von durchlässigen Deckungen, HISTORY New Enumeration in IFC2.0. Gegenstände GRILL Schutzschild von Metallstangen oder Drähten, LOUVER Set von festen oder beweglichen Streifen aus Holz, Metall, etc. Das Hotel liegt sehr zentral in der Nähe des Bahnhofs. SCREEN Upright, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem. BENUTZERDEFINED Benutzer definiert durchlässigen Cover-Typ. NOTDEFINED Keine Informationen verfügbar."
+msgid "IfcSensorTypeEnum_WHEELSENSOR_DEFINITION"
+msgstr "Ein Gerät, das den Durchgang eines Rades erkennt oder erkennt."
 
-#:IFC.xml:785
-msgid "IfcPermeableCoveringOperationEnum_GRILL"
-msgstr "GRILL"
+#:IFC.xml:1426
+msgid "IfcSensorTypeEnum_WINDSENSOR"
+msgstr "WINDSENSOR"
 
-msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
-msgstr "Protective screen of metal bars or wires."
+msgid "IfcSensorTypeEnum_WINDSENSOR_DEFINITION"
+msgstr "Ein Gerät, das die Geschwindigkeit und Richtung des Luftstroms erkennt oder erkennt."
 
-#:IFC.xml:786
-msgid "IfcPermeableCoveringOperationEnum_LOUVER"
-msgstr "LOUVER"
+#:IFC.xml:1427
+msgid "IfcUnitaryControlElement"
+msgstr "IfcUnitaryControlElement"
 
-msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
-msgstr "Set von festen oder beweglichen Streifen aus Holz, Metall, etc. angeordnet, um Luft zu lassen, während Licht oder Regen draußen."
+msgid "IfcUnitaryControlElement_DEFINITION"
+msgstr "Ein Einheitskontrollelement kombiniert eine Reihe von Steuerungskomponenten zu einem Produkt, wie zum Beispiel einem Thermostat oder einer Luftfeuchtigkeit. Ein Einheitssteuerelement stellt ein Gehäuse für eine Aggregation von Steuer- oder elektrischen Verteilungselementen zur Verfügung, die in Kombination einen einzigen Einheitszweck erfüllen. Jedes Element in der Aggregation kann seine eigene geometrische Darstellung und Position haben. HISTORY Neue Entität in IFC4 .note"
 
-#:IFC.xml:787
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
+#:IFC.xml:1428
+msgid "IfcUnitaryControlElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcUnitaryControlElement_PredefinedType_DEFINITION"
+msgstr "PredefinedType"
+
+#:IFC.xml:1435
+msgid "IfcUnitaryControlElementType"
+msgstr "IfcUnitaryControlElementtyp"
+
+msgid "IfcUnitaryControlElementType_DEFINITION"
+msgstr "Der Verteilungssteuerelementtyp [[IfcUnitaryControlElementType]] definiert allgemein geteilte Informationen für Einheitskontrollelemente. Der Satz der gemeinsamen Informationen können gemeinsame Eigenschaften mit gemeinsamen Eigenschaften setzen gemeinsame Darstellungen gemeinsame Materialien gemeinsame Zusammensetzung der Elemente gemeinsame Ports Es wird verwendet, um eine einheitliche Kontrollelementtypspezifikation zu definieren, die die spezifischen Produktinformationen angibt, die bei allen Vorkommnissen dieses Produkttyps gemeinsam sind. Die [[IfcUnitaryControlElementType]] können in [[IfcProject]] oder [[IfcProjectLibrary]] mit [[IfcRelDeclares]] deklariert werden und mit oder ohne Vorkommnisse des Typs ausgetauscht werden. Vorkommen von [[IfcUnitaryControlElementType]] werden durch Instanzen von [[IfcUnitaryControlElement]] repräsentiert. Lesen Sie die Dokumentation unter [[IfcUnitaryControlElement]] für unterstützte Objekte, Materialien, Komposition und Ports. HISTORY Neue Entität in IFC4"
+
+#:IFC.xml:1436
+msgid "IfcUnitaryControlElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcUnitaryControlElementType_PredefinedType_DEFINITION"
+msgstr "Identifiziert die vordefinierten Typen von Einheitssteuerelementen, aus denen der benötigte Typ gesetzt werden kann."
+
+#:IFC.xml:1443
+msgid "IfcUnitaryControlElementTypeEnum"
+msgstr "IfcUnitaryControlElementTypeEnum"
+
+msgid "IfcUnitaryControlElementTypeEnum_DEFINITION"
+msgstr "Die [[IfcUnitaryControlElementTypeEnum]] definiert den Bereich von verschiedenen Typen oder Funktionen von Einheitssteuerelementen. GESCHICHTE Neue Auflistung in IFC4. Artikel ALARMPANEL A Kontrollelement, bei dem Alarme vernichtet werden. CONTROLPANEL Ein Steuerelement bei dem Geräte, die den Betrieb eines Standortes steuern oder überwachen Der Bau oder ein Teil eines Gebäudes befinden sich in GASDETECTIONPANEL A Kontrollelement, bei dem die Ermittlung des Gases aufgehoben wird. INDICATORPANEL Ein Kontrollelement, bei dem Betriebszustand, Zustand, Sicherheitszustand oder andere erforderliche Parameter angegeben werden. MIMICPANEL Ein Kontrollelement, bei dem Informationen, die anderswo verfügbar sind, wiederholt oder nachgeahmt werden. HUMIDISTAT Ein Steuerelement, das die Feuchtigkeit eines Systems oder Raumes, so dass die Feuchtigkeit in der Nähe eines gewünschten Sollwertes gehalten wird, erkennt und reguliert. THERMOSTAT Ein Steuerelement, das die Temperatur eines Elements erkennt und reguliert System oder Raum, so dass die Temperatur in der Nähe eines gewünschten Sollwertes gehalten wird. WEATHERSTATION Ein Steuerelement das verschiedene Klimaeigenschaften wie Temperatur, Luftfeuchtigkeit, Druck, Wind und Regen spürt. COMBINED Kombination von mindestens zwei vordefinierten Typen einheitlicher Steuerelemente. BASESTATIONCONTROLLER Ein Basisstationsregler BSC ist eine Netzwerkkomponente mit den Funktionen zur Steuerung einer oder mehrerer Basisstationen. BSC ist verantwortlich für die Verwaltung verschiedener Schnittstellen, drahtloser Ressourcen und Parameter, die Signalverarbeitung der Call Establishment und die Kanalzuweisung in der Zell. BENUTZERDEFINED benutzerdefinierter Typ. NOTDEFINED undefinierter Typ."
+
+#:IFC.xml:1469
+msgid "IfcUnitaryControlElementTypeEnum_ALARMPANEL"
+msgstr "ALARMPANEL"
+
+msgid "IfcUnitaryControlElementTypeEnum_ALARMPANEL_DEFINITION"
+msgstr "Ein Kontrollelement, bei dem Alarme vernichtet werden."
+
+#:IFC.xml:1470
+msgid "IfcUnitaryControlElementTypeEnum_BASESTATIONCONTROLLER"
+msgstr "STANDKONTROLLER"
+
+msgid "IfcUnitaryControlElementTypeEnum_BASESTATIONCONTROLLER_DEFINITION"
+msgstr "Ein Basis-Stations-Controller BSC ist eine Netzwerkkomponente mit den Funktionen zur Steuerung einer oder mehrerer Base-Transceiver-Stationen. BSC ist verantwortlich für die Verwaltung verschiedener Schnittstellen, drahtloser Ressourcen und Parameter, die Signalverarbeitung der Call Establishment und die Kanalzuweisung in der Zell."
+
+#:IFC.xml:1471
+msgid "IfcUnitaryControlElementTypeEnum_COMBINED"
+msgstr "GEBINDEN"
+
+msgid "IfcUnitaryControlElementTypeEnum_COMBINED_DEFINITION"
+msgstr "Kombination von mindestens zwei vordefinierten Typen einheitlicher Steuerelemente."
+
+#:IFC.xml:1472
+msgid "IfcUnitaryControlElementTypeEnum_CONTROLPANEL"
+msgstr "CONTROLPANEL"
+
+msgid "IfcUnitaryControlElementTypeEnum_CONTROLPANEL_DEFINITION"
+msgstr "Ein Steuerelement, an dem sich Geräte, die den Betrieb eines Standortes steuern oder überwachen, befinden, Gebäude oder Teile eines Gebäudes befinden"
+
+#:IFC.xml:1473
+msgid "IfcUnitaryControlElementTypeEnum_GASDETECTIONPANEL"
+msgstr "GASDETEKTIONPANEL"
+
+msgid "IfcUnitaryControlElementTypeEnum_GASDETECTIONPANEL_DEFINITION"
+msgstr "Ein Kontrollelement, bei dem die Erkennung von Gas aufgehoben wird."
+
+#:IFC.xml:1474
+msgid "IfcUnitaryControlElementTypeEnum_HUMIDISTAT"
+msgstr "HUMIDISTAT"
+
+msgid "IfcUnitaryControlElementTypeEnum_HUMIDISTAT_DEFINITION"
+msgstr "Ein Steuerelement, das die Feuchtigkeit eines Systems oder Raumes, so dass die Feuchtigkeit in der Nähe eines gewünschten Sollwertes gehalten wird, erkennt und regelt."
+
+#:IFC.xml:1475
+msgid "IfcUnitaryControlElementTypeEnum_INDICATORPANEL"
+msgstr "INDICATORPANEL"
+
+msgid "IfcUnitaryControlElementTypeEnum_INDICATORPANEL_DEFINITION"
+msgstr "Ein Kontrollelement, bei dem Betriebszustand, Zustand, Sicherheitszustand oder andere erforderliche Parameter angegeben werden."
+
+#:IFC.xml:1476
+msgid "IfcUnitaryControlElementTypeEnum_MIMICPANEL"
+msgstr "MIMICPANEL"
+
+msgid "IfcUnitaryControlElementTypeEnum_MIMICPANEL_DEFINITION"
+msgstr "Ein Kontrollelement, bei dem Informationen, die anderswo verfügbar sind, wiederholt oder nachgeahmt werden."
+
+#:IFC.xml:1477
+msgid "IfcUnitaryControlElementTypeEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "No information available."
+msgid "IfcUnitaryControlElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "Undefinierter Typ."
 
-#:IFC.xml:788
-msgid "IfcPermeableCoveringOperationEnum_SCREEN"
-msgstr "SCREEN"
+#:IFC.xml:1478
+msgid "IfcUnitaryControlElementTypeEnum_THERMOSTAT"
+msgstr "THERMOSTAT"
 
-msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
-msgstr "Aufgehend, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem."
+msgid "IfcUnitaryControlElementTypeEnum_THERMOSTAT_DEFINITION"
+msgstr "Ein Steuerelement, das die Temperatur eines Elements, eines Systems oder eines Raumes, so dass die Temperatur in der Nähe eines gewünschten Sollwertes gehalten wird, erkennt und regelt."
 
-#:IFC.xml:789
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
+#:IFC.xml:1479
+msgid "IfcUnitaryControlElementTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
-msgstr "User defined permeable covering type."
+msgid "IfcUnitaryControlElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "Benutzerdefinierter Typ."
 
-#:IFC.xml:791
-msgid "IfcPermeableCoveringProperties"
-msgstr "IfcPermeableCoveringProperties"
+#:IFC.xml:1480
+msgid "IfcUnitaryControlElementTypeEnum_WEATHERSTATION"
+msgstr "WETTERSTATION"
 
-msgid "IfcPermeableCoveringProperties_DEFINITION"
-msgstr "Diese Entität ist eine Beschreibung einer Platte innerhalb einer Tür oder Fenster als Füllstoffe für die Öffnung, die eine Luftströmung ermöglicht. Es wird durch seine Eigenschaften [[IfcPermeableCoveringProperties]] gegeben. Eine durchlässige Deckel ist ein Gehäuse, wie z. B. eine Komponente, befestigt oder Öffnung, die im Wesentlichen aus einem Rahmen und dem Aufblasen besteht. Bei der Auffüllung handelt es sich in der Regel um einen Grill, einen Schall oder eine Scheibe. Die [[IfcPermeableCoveringProperties]] sind in der Liste der Eigenschaften enthalten, die HasPropertySets der [[IfcWindowType]] oder der [[IfcDoorType]] . Weitere Informationen über die durchlässige Deckung können in der gleichen Liste des Fenster- oder Türstils mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Dies gilt insbesondere für zusätzliche Eigenschaften für die verschiedenen Operationstypen Die [[IfcPermeableCoveringProperties]] enthält keine geometrische Darstellung. Er definiert jedoch Parameter, die verwendet werden können, um die Form des [[IfcWindowType]] zu erzeugen, das von der [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird , oder der [[IfcDoorType]], die vom [[IfcDoor]] eingefügt wird. Die Parameter der [[IfcPermeableCoveringProperties]] definieren eine standardmäßig durchlässige Abdeckung. Die äußere Grenze des Panels wird durch den Parameter Vorkommen, der dem [[IfcWindow]] oder [[IfcDoor]] zugewiesen wurde, bestimmt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des durchlässigen Deckels innerhalb des gesamten Fensters oder der Türe wird durch das Attribut PanelPosition bestimmt. Abbildung 1 illustriert das Paneel, das auf die Position innerhalb des Futters angewendet wird, wie es durch die Podiumsposition definiert ist. Die folgenden Parameter gelten für das Panel FrameDepth , FrameThickness . figuren ifcpermeablecoveringproperties.gif Figure 1 Permeable covering properties HISTORY New entity in IFC2. , wurde sie von IfcPermeableCovering in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype geändert [[IfcPreDefinedPropertySet]] ."
+msgid "IfcUnitaryControlElementTypeEnum_WEATHERSTATION_DEFINITION"
+msgstr "Ein Kontrollelement, das verschiedene Klimaeigenschaften wie Temperatur, Luftfeuchtigkeit, Druck, Wind und Regen spürt."
 
-#:IFC.xml:814
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:1656
+msgid "Pset_ActuatorPHistory"
+msgstr "Pset ActuatorPHistory"
 
-msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+msgid "Pset_ActuatorPHistory_DEFINITION"
+msgstr "Eigenschaften für die Historie von Aktuatoren. HISTORY hinzugefügt in IFC4."
 
-#:IFC.xml:792
-msgid "IfcPermeableCoveringProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:1657
+msgid "PositionHistory"
+msgstr "Positionshistorie"
 
-msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame used to include the permeable covering , measured from front face to back face horizontally i.e. perpendicular to the window or door elevation plane."
+msgid "PositionHistory_DEFINITION"
+msgstr "Zeigt die Position des Stellantriebs über die Zeit an, in der 0,0 vollständig geschlossen und 1,0 vollständig geöffnet ist."
 
-#:IFC.xml:797
-msgid "IfcPermeableCoveringProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:1662
+msgid "QualityHistory"
+msgstr "Qualitätsverlauf"
 
-msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame used to include the permeable covering , measured from inside of panel at permeable covering to outside of panel at lining , i.e. parallel to the window or door elevation plane."
+msgid "QualityHistory_DEFINITION"
+msgstr "True: Messwerte gelten als zuverlässig; False: Messwerte gelten als nicht zuverlässig (d.h. ein Fehler wurde erkannt); Unbekannt: Die Zuverlässigkeit der Werte ist unsicher."
 
-#:IFC.xml:802
-msgid "IfcPermeableCoveringProperties_OperationType"
-msgstr "Betriebstyp"
+#:IFC.xml:1667
+msgid "StatusHistory"
+msgstr "Statusverlauf"
 
-msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
-msgstr "Types of permeable covering operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "StatusHistory_DEFINITION"
+msgstr "Kennzeichnet einen Fehlercode oder Identifikator, dessen Bedeutung spezifisch für das jeweilige Automatisierungssystem ist.  Beispielwerte sind z.B.:'ConfigurationError','NotConnected','DeviceFailure','SensorFailure','LastKnown','CommunicationsFailure','OutOfService'."
 
-#:IFC.xml:807
-msgid "IfcPermeableCoveringProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:1673
+msgid "Pset_ActuatorTypeCommon"
+msgstr "Pset ActuatorTypeCommon"
 
-msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
-msgstr "Position of this permeable covering panel within the overall window or door type."
+msgid "Pset_ActuatorTypeCommon_DEFINITION"
+msgstr "Gemeinsame Attribute des Actuatortyps."
 
-#:IFC.xml:826
-msgid "IfcWindowLiningProperties"
-msgstr "IfcWindowLiningeigenschaften"
+#:IFC.xml:1674
+msgid "ActuatorApplication"
+msgstr "ActuatorAnwendung"
 
-msgid "IfcWindowLiningProperties_DEFINITION"
-msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowType]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . Figure OperationType Applicable Parameters lining 5 .. .. .. .. figures ifcwindowliningproperties fig05.png All LiningDepth, LiningThickness, LiningOffset, LiningToPanelOffsetX, LiningToPanelOffsetY Note The inner side is defined as the direction of the window panel opening operation. lining 1 .. .. .. .. figures ifcwindowliningproperties fig01.png DoublePanelVertical shown , TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight MullionThickness, FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 2 .. .. .. .. figures ifcwindowliningproperties fig02.png DoublePanelHorizontal, TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight TransomThickness, FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure lining 3 .. .. .. .. figures ifcwindowliningproperties fig03.png TriplePanelVertical SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 4 .. .. .. .. figures ifcwindowliningproperties fig04.png TriplePanelHorizontal SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Table 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+msgid "ActuatorApplication_DEFINITION"
+msgstr "Zeigt die Anwendung des Stellantriebs an."
 
-#:IFC.xml:884
-msgid "IfcWindowLiningProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:1679
+msgid "ActuatorStatus"
+msgstr "ActuatorStatus"
 
-msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+msgid "ActuatorStatus_DEFINITION"
+msgstr "Status des Elementes, das vorwiegend in Renovierungs- oder Nachrüstungsprojekten verwendet wird: Der Status kann alsNeu-Element zugewiesen werden, das als Neuzugang entworfen wurde,Vorhandenes - Element existiert und bleibt,Abbruch-Element existiert, aber abgerissen werden soll,Temporär-Element existiert nur temporär (wie eine temporäre Stützkonstruktion)."
 
-#:IFC.xml:827
-msgid "IfcWindowLiningProperties_FirstMullionOffset"
-msgstr "FirstMullionOffset"
+#:IFC.xml:1684
+msgid "FailPosition"
+msgstr "Pset_ActuatorTypeCommon_Ausfallsichere Stellung"
 
-msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+msgid "FailPosition_DEFINITION"
+msgstr "Gibt die gewünschte Sicherheitsstellung des Antriebs an."
 
-#:IFC.xml:832
-msgid "IfcWindowLiningProperties_FirstTransomOffset"
-msgstr "FirstTransomOffset"
+#:IFC.xml:1689
+msgid "ManualOverride"
+msgstr "Pset_ActuatorTypeCommon_Manuelle Übersteuerung"
 
-msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline, measured along the z axis of the window placement co ordinate system. An offset value 0.5 indicates that the transom is positioned in the middle of the window."
+msgid "ManualOverride_DEFINITION"
+msgstr "Kennzeichnet, ob die Handbetätigung als Override (= TRUE) oder nicht (= FALSE) vorgesehen ist, wobei dieser Wert bei einem Handbetätigten Antrieb standardmäßig auf FALSE gesetzt werden sollte."
 
-#:IFC.xml:837
-msgid "IfcWindowLiningProperties_LiningDepth"
-msgstr "LiningDepth"
+#:IFC.xml:1694
+msgid "Reference"
+msgstr "Pset_ActuatorTypeCommon_Referenz"
 
-msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
-msgstr "Depth of the window lining dimension measured perpendicular to window elevation plane ."
+msgid "Reference_DEFINITION"
+msgstr "Referenz-ID für diesen spezifizierten Typ in diesem Projekt z.B. Typ A 1 , auch als Bauart bezeichnet. Es sollte als Alternative zum Namen des Objekttyps zur Verfügung gestellt werden , wenn die Software keine Objekttypen unterstützt und keine Klassifikationsreferenz auf ein anerkanntes Klassifikationssystem verwendet wird. IFC4.3.0.0 DEPRECATION Die Referenz-Eigenschaft ist veraltet und wird nicht mehr verwendet. Verwenden Sie Attributname stattdessen für den zugehörigen Typ."
 
-#:IFC.xml:842
-msgid "IfcWindowLiningProperties_LiningOffset"
-msgstr "LiningOffset"
+#:IFC.xml:1700
+msgid "Pset_ActuatorTypeElectricActuator"
+msgstr "Pset ActuatorTypeElectricActuator"
 
-msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
-msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "Pset_ActuatorTypeElectricActuator_DEFINITION"
+msgstr "Ein Gerät, das ein Steuerelement elektrisch betätigt."
 
-#:IFC.xml:847
-msgid "IfcWindowLiningProperties_LiningThickness"
-msgstr "LiningThickness"
+#:IFC.xml:1701
+msgid "ActuatorInputPower"
+msgstr "Pset_ActuatorTypeElectricActuator_Eingangsspannung"
 
-msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
-msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+msgid "ActuatorInputPower_DEFINITION"
+msgstr "Maximaler Eingangsleistungsbedarf."
 
-#:IFC.xml:852
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
-msgstr "LiningToPanelOffsetX"
+#:IFC.xml:1706
+msgid "ControlPulseCurrent"
+msgstr "ControlPulseStrom"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
-msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+msgid "ControlPulseCurrent_DEFINITION"
+msgstr "Der Strom des Steuerimpulses des elektrischen Aktors."
 
-#:IFC.xml:857
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
-msgstr "LiningToPanelOffsetY"
+#:IFC.xml:1711
+msgid "ElectricActuatorType"
+msgstr "Pset_ActuatorTypeElectricActuator_Aktortyp"
 
-msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
-msgstr "Versatz zwischen Futter und Fenster, die entlang der Y-Achse der lokalen Platzierung gemessen werden. Sollte kleiner oder gleich dem [[IfcWindowPanelProperties]sein. AnelThickness . .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
+msgid "ElectricActuatorType_DEFINITION"
+msgstr "Aufzählung, die den elektrischen Antrieb im Sinne seines Funktionsprinzips identifiziert."
 
-#:IFC.xml:862
-msgid "IfcWindowLiningProperties_MullionThickness"
-msgstr "MullionThickness"
+#:IFC.xml:1717
+msgid "Pset_ActuatorTypeHydraulicActuator"
+msgstr "Pset ActuatorTypeHydraulicActuator"
 
-msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
-msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "Pset_ActuatorTypeHydraulicActuator_DEFINITION"
+msgstr "Ein Gerät, das hydraulisch ein Steuerelement betätigt. Kommentiert die Hydraulische Durchflussrate der InputFlowrate. Maximaler Konstruktionsdruck für den Aktor."
 
-#:IFC.xml:867
-msgid "IfcWindowLiningProperties_SecondMullionOffset"
-msgstr "SecondMullionOffset"
+#:IFC.xml:1718
+msgid "InputFlowrate"
+msgstr "Pset_ActuatorTypeHydraulicActuator_Eingangs-Durchflussmenge"
 
-msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
-msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+msgid "InputFlowrate_DEFINITION"
+msgstr "Maximale Anforderung an die Eingangsflussrate."
 
-#:IFC.xml:872
-msgid "IfcWindowLiningProperties_SecondTransomOffset"
-msgstr "SecondTransomOffset"
+#:IFC.xml:1723
+msgid "InputPressure"
+msgstr "Pset_ActuatorTypeHydraulicActuator_Eingangsdruck"
 
-msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
-msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+msgid "InputPressure_DEFINITION"
+msgstr "Maximaler Eingangs- oder Designdruck für das Objekt."
 
-#:IFC.xml:877
-msgid "IfcWindowLiningProperties_TransomThickness"
-msgstr "TransomThickness"
+#:IFC.xml:1729
+msgid "Pset_ActuatorTypeLinearActuation"
+msgstr "Pset ActuatorTypeLinearActuation"
 
-msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
-msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+msgid "Pset_ActuatorTypeLinearActuation_DEFINITION"
+msgstr "Merkmale der linearen Betätigung eines Aktuators Geschichte ersetzt den Pset LinearActuator"
 
-#:IFC.xml:896
-msgid "IfcWindowPanelOperationEnum"
-msgstr "IfcWindowPanelOperationEnum"
+#:IFC.xml:1730
+msgid "Force"
+msgstr "Pset_ActuatorTypeLinearActuation_Kraft"
 
-msgid "IfcWindowPanelOperationEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die grundlegenden Wege, wie Fensterfenster funktionieren, wie in Abbildung 2 dargestellt. Die Öffnungsrichtung der Fensterpaneele wird durch die lokale Platzierung der [[IfcWindow]] angegeben. Die positive y-Achse bestimmt die Richtung, wie in Abbildung 2 gezeigt. Abbildungen werden von außen in Richtung der positiven Y-Achse angezeigt. 2. Die symbolische Darstellung hängt vom nationalen Baukodex 3 ab. Diese Zahlen sind nur als Illustrationen öffnen Richtung .. .. .. Zahlen ifcwindowpaneloperationenum fig13. Wenn Abbildung 2 Fensterpanel Richtung HISTORY Neue Auflistung in IFC2.0, Artikel SIDEHUNGRIGHTHAND Panel, die nach rechts öffnet wenn von außen. rechte Hand .. .. .. Zahlen ifcwindowpaneloperationenum fig01.gif SIDEHUNGLEFTHAND Panel, die nach links öffnet, wenn von außen betrachtet. linke Hand .. .. .. Zahlen ifcwindowpaneloperationenum fig02.gif TILTANDTURNRIGHTHAND Panel, öffnet sich nach rechts und ist unten gehungen. rechte Hand tilt und drehen .. .. .. Zahlen ifcwindowpaneloperationenum fig03. wenn TILTANDTURNLEFTHAND Panel, die nach links öffnet und ist unten gehung. links abbiegen und neigen .. .. .. Zahlen ifcwindowpaneloperationenum fig04. If TOPHUNG Panel is top hung .. .. .. figures ifcwindowpaneloperationenum fig05.gif BOTTOMHUNG Panel is bottom hung. .. .. Zahlen ifcwindowpaneloperationenum fig06.gif PIVOTHORIZONTAL Panel is swinging horizontal hinges are in the middle . swinging hori .. .. .. Zahlen ifcwindowpaneloperationenum fig07.gif PIVOTVERTICAL Panel is swinging vertically hinges are in the middle . swinging verti .. .. .. Zahlen ifcwindowpaneloperationenum fig08.gif SLIDINGHORIZONTAL Panel is sliding horizontal . .. .. Zahlen ifcwindowpaneloperationenum fig09.gif SLIDINGVERTICAL Panel is sliding vertically. figures ifcwindowpaneloperationenum fig10.gif REMOVABLECASEMENT Panel is removable. If FIXEDCASEMENT Panel is fixed. .. .. figures ifcwindowpaneloperationenum fig12.gif OTHEROPERATION NOTDEFINED .."
+msgid "Force_DEFINITION"
+msgstr "Gibt die maximale Schließkraft für den Antrieb an"
 
-#:IFC.xml:897
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
-msgstr "BOTTOMHUNG"
+#:IFC.xml:1735
+msgid "Stroke"
+msgstr "Pset_ActuatorTypeLinearActuation_Hub"
 
-msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
-msgstr "Panel ist unten hung .. .. .. Zahlen ifcwindowpaneloperationenum fig06.gif"
+msgid "Stroke_DEFINITION"
+msgstr "Gibt den maximalen Abstand an, den der Antrieb zurücklegen muss"
 
-#:IFC.xml:898
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
-msgstr "FIXEDCASEMENT"
+#:IFC.xml:1741
+msgid "Pset_ActuatorTypePneumaticActuator"
+msgstr "Pset ActuatorTypePneumaticActuator"
 
-msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
-msgstr ".. Zahlen ifcwindowpaneloperationenum fig12.gif .."
+msgid "Pset_ActuatorTypePneumaticActuator_DEFINITION"
+msgstr "Ein Gerät, das pneumatisch ein Steuerelement Comments InputFlowrate Control Luftstrom aktiviert."
 
-#:IFC.xml:899
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:1753
+msgid "Pset_ActuatorTypeRotationalActuation"
+msgstr "Pset ActuatorTypeRotationalActuation"
 
-msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "Pset_ActuatorTypeRotationalActuation_DEFINITION"
+msgstr "Eigenschaften der Rotationsgeschwindigkeit eines Aktuators Geschichte ersetzt den Pset RotationalActuator"
 
-#:IFC.xml:900
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
-msgstr "ANDERE OPERIERUNG"
+#:IFC.xml:1754
+msgid "RangeAngle"
+msgstr "Pset_ActuatorTypeRotationalActuation_Winkelbereich"
 
-msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
-msgstr "ANDERE OPERIERUNG"
+msgid "RangeAngle_DEFINITION"
+msgstr "Gibt die maximale Umdrehung an, die der Antrieb durchlaufen muss."
 
-#:IFC.xml:901
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
-msgstr "PIVOTHORISONTAL"
+#:IFC.xml:1759
+msgid "Torque"
+msgstr "Pset_ActuatorTypeRotationalActuation_Drehmoment"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
-msgstr "Panel is swinging horizontal hinges are in the middle . swinging hori .. .. .. figures ifcwindowpaneloperationenum fig07.gif .."
+msgid "Torque_DEFINITION"
+msgstr "Gibt das maximale Abschaltdrehmoment für den Antrieb an."
 
-#:IFC.xml:902
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
-msgstr "PIVOTVERTISCHE"
+#:IFC.xml:1765
+msgid "Pset_AlarmPHistory"
+msgstr "Pset AlarmPHistory"
 
-msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
-msgstr "Panel is swinging vertically hinges are in the middle . swinging verti .. .. .. figures ifcwindowpaneloperationenum fig08.gif .."
+msgid "Pset_AlarmPHistory_DEFINITION"
+msgstr "Eigenschaften für die Historie von Alarmwerten. HISTORY hinzugefügt in IFC4."
 
-#:IFC.xml:903
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
-msgstr "ENTFERNEN"
+#:IFC.xml:1766
+msgid "Acknowledge"
+msgstr "Pset_AlarmPHistory_Quittierung"
 
-msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
-msgstr ".. Zahlen ifcwindowpaneloperationenum fig11.gif .."
+msgid "Acknowledge_DEFINITION"
+msgstr "Zeigt den Quittierungsstatus an, wobei False bedeutet, dass eine Quittierung erforderlich und ausstehend ist, True bedeutet, dass eine Quittierung bestätigt wurde und Unknown bedeutet, dass keine Quittierung erforderlich ist."
 
-#:IFC.xml:904
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
-msgstr "SIDEHUNGLEFTHAND"
+#:IFC.xml:1771
+msgid "ConditionHistory"
+msgstr "Bedingungshistorie"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
-msgstr "Panel, das nach links öffnet, wenn von außen betrachtet .. linken Hand .. .. Figuren ifcwindowpaneloperationenum fig02.gif .."
+msgid "ConditionHistory_DEFINITION"
+msgstr "Der Bereich der möglichen Werte und deren Bedeutung wird durch Pset_AlarmTypeCommon.Condition festgelegt."
 
-#:IFC.xml:905
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
-msgstr "SIDEHUNGRIGHTHAND"
+#:IFC.xml:1776
+msgid "Enabled"
+msgstr "Pset_AlarmPHistory_Aktiviert"
 
-msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
-msgstr "Panel, das nach rechts öffnet, wenn von außen betrachtet .. rechte Hand .. .. Zahlen ifcwindowpaneloperationenum fig01.gif .."
+msgid "Enabled_DEFINITION"
+msgstr "Zeigt an, ob der Alarm im Laufe der Zeit aktiviert oder deaktiviert wurde."
 
-#:IFC.xml:906
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
-msgstr "SLIDINGHORIZONTAL"
+#:IFC.xml:1781
+msgid "Severity"
+msgstr "Pset_AlarmPHistory_Schweregrad"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
-msgstr ".. Figuren ifcwindowpaneloperationenum fig09.gif"
+msgid "Severity_DEFINITION"
+msgstr "Zeigt die Schwere des Alarms über die Zeit an, wobei die Skala der Werte durch die Konfiguration der Steuerung bestimmt wird."
 
-#:IFC.xml:907
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
-msgstr "SLIDINGVERTISCHE"
+#:IFC.xml:1786
+msgid "UserHistory"
+msgstr "UserHistory"
 
-msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
-msgstr ".. .. Zahlen ifcwindowpaneloperationenum fig10.gif .."
+msgid "UserHistory_DEFINITION"
+msgstr "Zeigt an, dass der Benutzer im Laufe der Zeit durch eine Identifikation, die der IfcPerson.Identification auf einem IfcActor entspricht, bestätigt wird."
 
-#:IFC.xml:908
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
-msgstr "TILTANDTURNLEFTHAND"
+#:IFC.xml:1792
+msgid "Pset_AlarmTypeCommon"
+msgstr "Pset AlarmTypeCommon"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
-msgstr "Panel, das nach links öffnet und ist unten gehung. Links drehen und kippen .. .. .. Zahlen ifcwindowpaneloperationenum fig04.gif"
+msgid "Pset_AlarmTypeCommon_DEFINITION"
+msgstr "Gemeinsame Attribute des Alarmtyps. HISTORY hinzugefügt in IFC4."
 
-#:IFC.xml:909
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
-msgstr "TILTANDTURNRIGHTHAND"
+#:IFC.xml:1793
+msgid "AlarmCondition"
+msgstr "Alarmbedingung"
 
-msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
-msgstr "Panel, das nach rechts öffnet und ist unten gehung. rechte Hand Neigung und drehen .. .. .. Figuren ifcwindowpaneloperationenum fig03.gif"
+msgid "AlarmCondition_DEFINITION"
+msgstr "Tabellenzuordnung von Alarmzustandsbezeichnungen zu beschreibenden Bezeichnungen, die zur Interpretation von Pset_AlarmPHistory.Condition verwendet werden können."
 
-#:IFC.xml:910
-msgid "IfcWindowPanelOperationEnum_TOPHUNG"
-msgstr "TOPHUNG"
+#:IFC.xml:1803
+msgid "Status"
+msgstr "Status"
 
-msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
-msgstr "Panel is top hung. Top hung .. .. .. .. Zahlen ifcwindowpaneloperationenum fig05.gif"
+msgid "Status_DEFINITION"
+msgstr "Status des Elementes, das vorwiegend in Renovierungs- oder Nachrüstungsprojekten verwendet wird: Der Status kann alsNeu-Element zugewiesen werden, das als Neuzugang entworfen wurde,Vorhandenes - Element existiert und bleibt,Abbruch-Element existiert, aber abgerissen werden soll,Temporär-Element existiert nur temporär (wie eine temporäre Stützkonstruktion)."
 
-#:IFC.xml:912
-msgid "IfcWindowPanelPositionEnum"
-msgstr "IfcWindowPanelPositionEnum"
+#:IFC.xml:1809
+msgid "Pset_ControllerPHistory"
+msgstr "Pset ControllerPHistorie"
 
-msgid "IfcWindowPanelPositionEnum_DEFINITION"
-msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowType]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig01.gif DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig02.gif TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig03.gif TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig04.gif TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig05.gif TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig06.gif TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig07.gif TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig08.gif HISTORY New enumeration in IFC2.0. Note 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+msgid "Pset_ControllerPHistory_DEFINITION"
+msgstr "Eigenschaften für die Historie von Controller-Werten. HISTORY hinzugefügt in IFC4. Kommentar-Status zeigt einen Fehlercode oder einen Bezeichner an, dessen Bedeutung für das jeweilige Automatisierungssystem spezifisch ist. Beispiele sind ConfigurationError , NotConnected , DeviceFailure , SensorFailure , LastKnown, CommunicationsFailure , OutOfService ."
 
-#:IFC.xml:913
-msgid "IfcWindowPanelPositionEnum_BOTTOM"
-msgstr "BOTTOM"
+#:IFC.xml:1810
+msgid "Quality"
+msgstr "Pset_ActuatorPHistory_Qualität"
 
-msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
-msgstr "BOTTOM"
+msgid "Quality_DEFINITION"
+msgstr "True: Messwerte gelten als zuverlässig; False: Messwerte gelten als nicht zuverlässig (d.h. ein Fehler wurde erkannt); Unbekannt: Die Zuverlässigkeit der Werte ist unsicher."
 
-#:IFC.xml:914
-msgid "IfcWindowPanelPositionEnum_LEFT"
-msgstr "LASSEN"
+#:IFC.xml:1820
+msgid "ValueHistory"
+msgstr "Wertverlauf"
 
-msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
-msgstr "LASSEN"
+msgid "ValueHistory_DEFINITION"
+msgstr "Der Wertebereich der möglichen Werte wird durch die Value-Eigenschaft auf der entsprechenden Vorkommenseigenschaft festgelegt (Pset_ControllerTypeFloating, Pset_ControllerTypeProportional, Pset_ControllerTypeMultiPosition, Pset_ControllerTypeMultiPosition oder Pset_ControllerTypeTwoPosition)."
 
-#:IFC.xml:915
-msgid "IfcWindowPanelPositionEnum_MIDDLE"
-msgstr "MIDDLE"
+#:IFC.xml:1826
+msgid "Pset_ControllerTypeCommon"
+msgstr "Pset ControllerTypeCommon"
 
-msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
-msgstr "MIDDLE"
+msgid "Pset_ControllerTypeCommon_DEFINITION"
+msgstr "Gemeinsame Attribute des Controllertyps."
 
-#:IFC.xml:916
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:1838
+msgid "Pset_ControllerTypeFloating"
+msgstr "Pset ControllerTypeFloating"
 
-msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "Pset_ControllerTypeFloating_DEFINITION"
+msgstr "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued output. HISTORY IFC4 adapted from Pset ControllerTypeCommon and applicable predefined type made specific to FLOATING ACCUMULATOR and PULSECONVERTER types added additional properties added to replace Pset AnalogInput and Pset AnalogOutput. Comments ControlType CONSTANT No inputs SignalOffset is written to the output value. MODIFIER Single analog input is read, added to SignalOffset, multiplied by SignalFactor, and written to the output value. ABSOLUTE Single analog input is read and absolute value is written to the output value. INVERSE Single analog input is read, 1.0 is divided by the input value and written to the output value. HYSTERISIS Single analog input is read, delayed according to SignalTime, and written to the output value. RUNNINGAVERAGE Single analog input is read, averaged over SignalTime, and written to the output value. DERIVATIVE Single analog input is read and the rate of change during the SignalTime is written to the output value. INTEGRAL Single analog input is read and the average value during the SignalTime is written to the output value. BINARY Single binary input is read and SignalOffset is written to the output value if True. ACCUMULATOR Single binary input is read, and for each pulse the SignalOffset is added to the accumulator, and while the accumulator is greater than the SignalFactor, the accumulator is decremented by SignalFactor and the integer result is incremented by one. PULSECONVERTER Single integer input is read, and for each increment the SignalMultiplier is added and written to the output value. SUM Two analog inputs are read, added, and written to the output value. SUBTRACT Two analog inputs are read, subtracted, and written to the output value. PRODUCT Two analog inputs are read, multiplied, and written to the output value. DIVIDE Two analog inputs are read, divided, and written to the output value. AVERAGE Two analog inputs are read and the average is written to the output value. MAXIMUM Two analog inputs are read and the maximum is written to the output value. MINIMUM Two analog inputs are read and the minimum is written to the output value.. INPUT Controller element is a dedicated input. OUTPUT Controller element is a dedicated output. VARIABLE Controller element is an in memory variable. Value The expected range and default value. While the property data type is [[IfcReal]] to support all cases including when the units are unknown , a unit may optionally be provided to indicate the measure and unit. The LowerLimitValue and UpperLimitValue must fall within the physical Range and may be used to determine extents when charting Pset ControllerPHistory.Value."
 
-#:IFC.xml:917
-msgid "IfcWindowPanelPositionEnum_RIGHT"
-msgstr "RECHTS"
+#:IFC.xml:1839
+msgid "ControlType"
+msgstr "Pset_ControllerTypeFloating_Regelungsart"
 
-msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
-msgstr "RECHTS"
+msgid "ControlType_DEFINITION"
+msgstr "Der Typ-Controller, die Signaländerung und die zutreffenden Ports"
 
-#:IFC.xml:918
-msgid "IfcWindowPanelPositionEnum_TOP"
-msgstr "TOP"
+#:IFC.xml:1844
+msgid "Labels"
+msgstr "Pset_ControllerTypeFloating_Bezeichnungen"
 
-msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
-msgstr "TOP"
+msgid "Labels_DEFINITION"
+msgstr "Tabellenzuordnung von Werten zu Labels, wobei solche Labels die Bedeutung von True und False angeben, wie z.B.Open und Closed."
 
-#:IFC.xml:920
-msgid "IfcWindowPanelProperties"
-msgstr "IfcWindowPaneleigenschaften"
+#:IFC.xml:1849
+msgid "Range"
+msgstr "Pset_ControllerTypeFloating_Bereich"
 
-msgid "IfcWindowPanelProperties_DEFINITION"
-msgstr "Eine Fensterscheibe ist ein Gehäuse, also eine Komponente, befestigt oder öffnen, die im Wesentlichen aus einem Rahmen und der Aufblähung besteht. Die Verglasung einer Fensterscheibe erfolgt in der Regel und die Betriebsart ist im Operationstyp festgelegt. Die [[IfcWindowPanelProperties]] werden verwendet, um die Form und den Betrieb der Fensterscheiben parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung des Fensters hinzugefügt werden. Die [[IfcWindowType]] kann Fenster definieren, die aus mehr als einem Fenster bestehen. In diesem Fall muss für jedes Fensterfenster eine Instanz von [[IfcWindowPanelProperties]] hinzugefügt werden. Das Attribut PanelPosition legt in Verbindung mit dem Attribut [[IfcWindowType]] .OperationType fest, für welches Panel das [[IfcWindowPanelProperties]] gilt. Die [[IfcWindowPanelProperties]] sind in der Liste der Objekte enthalten, die HasPropertySets der [[IfcWindowType]] sind. Weitere Informationen über das Fensterpanel können in die gleiche Liste der [[IfcWindowType]] mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Das [[IfcWindowPanelProperties]] enthält keine eigene geometrische Darstellung. Allerdings definiert es Parameter, , mit dem die Form des [[IfcWindowType]] erstellt werden kann, das vom [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird. Die Parameter in der [[IfcWindowPanelProperties]] definieren ein Standardfenster. Die äußere Grenze des Futters wird durch die Profilformdarstellung bestimmt, die der [[IfcWindow]] zugewiesen ist, , die die [[IfcWindowType]] einfügt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des Fensterfensters innerhalb des gesamten Fensters wird durch das Attribut PanelPosition bestimmt. Wie in Abbildung 1 dargestellt, wird die Kontrollleiste auf die Position innerhalb des Futters angewendet, wie sie durch die Positionseigenschaft des Panels definiert ist. Der folgende Parameter gilt für das Panel FrameDepth , FrameThickness . panel 1 .. .. .. Zahlen ifcwindowpanelproperties fig01.gif Figure 1 Fensterpanel Eigenschaften HISTORY Neue Entität in IFC2. , wurde sie von IfcWindowPanel in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype geändert [[IfcPreDefinedPropertySet]] ."
+msgid "Range_DEFINITION"
+msgstr "Der physikalische Wertebereich, der vom Gerät unterstützt wird."
 
-#:IFC.xml:943
-msgid "IfcWindowPanelProperties_ShapeAspectStyle"
-msgstr "ShapeAspectStyle"
+#:IFC.xml:1854
+msgid "SignalFactor"
+msgstr "Pset_ControllerTypeFloating_Signalfaktor"
 
-msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
-msgstr "Optionaler Link zu einer Formaspektdefinition , der auf den Teil der geometrischen Darstellung des Fensterstils verweist, der zur Darstellung des Fensters verwendet wird. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+msgid "SignalFactor_DEFINITION"
+msgstr "Faktor multipliziert mit dem Offset-Signal."
 
-#:IFC.xml:921
-msgid "IfcWindowPanelProperties_FrameDepth"
-msgstr "FrameDepth"
+#:IFC.xml:1859
+msgid "SignalOffset"
+msgstr "Pset_ControllerTypeFloating_Signaloffset"
 
-msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
-msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+msgid "SignalOffset_DEFINITION"
+msgstr "Offsetkonstante, die zum modifizierten Signal addiert wird."
 
-#:IFC.xml:926
-msgid "IfcWindowPanelProperties_FrameThickness"
-msgstr "FrameThickness"
+#:IFC.xml:1864
+msgid "SignalTime"
+msgstr "Pset_ControllerTypeFloating_Signalzeit"
 
-msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
-msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+msgid "SignalTime_DEFINITION"
+msgstr "Zeitfaktor, der für Integral- und laufende Mittelwert-Regler verwendet wird."
 
-#:IFC.xml:931
-msgid "IfcWindowPanelProperties_OperationType"
-msgstr "Betriebstyp"
+#:IFC.xml:1869
+msgid "Value"
+msgstr "Pset_ControllerPHistory_Wert"
 
-msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
-msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+msgid "Value_DEFINITION"
+msgstr "Der erwartete Bereich und der Standardwert."
 
-#:IFC.xml:936
-msgid "IfcWindowPanelProperties_PanelPosition"
-msgstr "PanelPosition"
+#:IFC.xml:1875
+msgid "Pset_ControllerTypeMultiPosition"
+msgstr "ControllerTypeMultiPosition festlegen"
 
-msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
-msgstr "Position of this panel within the overall window style."
+msgid "Pset_ControllerTypeMultiPosition_DEFINITION"
+msgstr "Eigenschaften für diskrete Eingänge, Ausgänge und Werte innerhalb eines programmierbaren Logikcontrollers. HISTORY Neu in IFC4, ersetzt Pset MultiStateInput und Pset MultiStateOutput. OUTPUT Controller Element ist eine dedizierte Ausgabe. Wert Der erwartete Bereich und der Standardwert. Der LowLimitValue und der UpperLimitValue müssen in den physikalischen Bereich fallen."
 
-#:IFC.xml:955
-msgid "IfcWindowStyleConstructionEnum"
-msgstr "IfcWindowStyleConstructionEnum"
+#:IFC.xml:1881
+msgid "IntegerRange"
+msgstr "Integerbereich"
 
-msgid "IfcWindowStyleConstructionEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die Grundtypen der Fensterkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die für die Fensterherstellung verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL WOOD ALUMINIUM WOOD PLASTIK ANDERE CONSTRUCTION NOTDEFINED"
+msgid "IntegerRange_DEFINITION"
+msgstr "Der physikalische Wertebereich, der vom Gerät unterstützt wird."
 
-#:IFC.xml:956
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
-msgstr "ALUMINIUM"
+#:IFC.xml:1897
+msgid "Pset_ControllerTypeProgrammable"
+msgstr "Pset ControllerTypeProgrammierbar"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
-msgstr "ALUMINIUM"
+msgid "Pset_ControllerTypeProgrammable_DEFINITION"
+msgstr "Eigenschaften für Discrete Digital Control DDC oder programmierbare Logik-Controller. Comments ControlType PRIMARY Controller hat in der Kommunikationsschnittstelle für die PC-Verbindung eingebaut, kann sekundäre Controller verwalten. SECONDARY Controller kommuniziert mit dem primären Controller und seinen eigenen verwalteten Geräten."
 
-#:IFC.xml:957
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
-msgstr "ALUMINIUM WOOOD"
+#:IFC.xml:1898
+msgid "Application"
+msgstr "Pset_ActuatorTypeCommon_Anwendung"
 
-msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
-msgstr "ALUMINIUM WOOOD"
+msgid "Application_DEFINITION"
+msgstr "Befeuchterapplikation. Fixed: Befeuchter installiert in einem Kanalnetz. Portable: Befeuchter ist nicht in einem Kanalnetz installiert."
 
-#:IFC.xml:958
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
-msgstr "HOCHGRADE STEEL"
+#:IFC.xml:1908
+msgid "FirmwareVersion"
+msgstr "Pset_ControllerTypeProgrammable_Firmware-Version"
 
-msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
-msgstr "HOCHGRADE STEEL"
+msgid "FirmwareVersion_DEFINITION"
+msgstr "Zeigt die Version der Geräte-Firmware entsprechend dem Gerätehersteller an."
 
-#:IFC.xml:959
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:1913
+msgid "SoftwareVersion"
+msgstr "Pset_ControllerTypeProgrammable_Software-Version"
 
-msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "SoftwareVersion_DEFINITION"
+msgstr "Zeigt die Version der Anwendungssoftware nach Systemintegrator an."
 
-#:IFC.xml:960
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
-msgstr "ANDERE KONSTRUKTION"
+#:IFC.xml:1919
+msgid "Pset_ControllerTypeProportional"
+msgstr "Pset ControllerTypeProportional"
 
-msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
-msgstr "ANDERE KONSTRUKTION"
+msgid "Pset_ControllerTypeProportional_DEFINITION"
+msgstr "Eigenschaften für die Signalverarbeitung für einen proportionalen Controller, der Soll- und Rückkopplungseingänge übernimmt und eine einzige Wertausgabe erzeugt. GESCHICHTE In IFC4, SignalFactor1, SignalFactor2 und SignalFactor3 änderten sich in ProportionalConstant, IntegralConstant und Derivativkonstant. Comments ControlType PROPORTIONAL Ausgabe ist proportional zum Kontrollfehler. Der Gewinn eines proportionalen Kontrollkps wird den Effekt haben, die Aufstiegszeit zu verringern und zu reduzieren , aber nie beseitigen, den stetigen Zustandsfehler der Variable kontrolliert. PROPORTIONALINTEGRAL Teil der Ausgabe ist proportional zum Steuerfehler und Teil ist proportional zum Zeitbestandteil des Steuerfehlers. Das Hinzufügen des Gewinns einer ganzheitlichen Kontrolle Ki hat den Effekt, den stetigen Zustandsfehler der kontrollierten Variable zu beseitigen, aber es könnte die vorübergehende Reaktion verschlimmern. PROPORTIONALINTEGRALDERIVATIVE Teil der Ausgabe ist proportional zum Kontrollfehler, Teil ist proportional zum zeitintegralen Bestandteil des Kontrollfehlers und Teil ist proportional zur Zeitabfolge des Kontrollfehlers. Hinzufügen des Gewinns einer Derivatekontrolle Kd hat den Effekt der Erhöhung der Stabilität des Systems, Reduzierung der Überschreitung und Verbesserung der transienten Reaktion der kontrollierten Variablen. Wert Der erwartete Bereich und der Standardwert. Während der Eigenschaftsdatentyp [[IfcReal]] alle Fälle unterstützt, auch wenn die Einheiten unbekannt sind, eine Einheit kann optional zur Angabe des Maßes und der Einheit zur Verfügung gestellt werden."
 
-#:IFC.xml:961
-msgid "IfcWindowStyleConstructionEnum_PLASTIC"
-msgstr "PLASTIK"
+#:IFC.xml:1925
+msgid "DerivativeConstant"
+msgstr "Pset_ControllerTypeProportional_Abgeleitete Konstante"
 
-msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
-msgstr "PLASTIK"
+msgid "DerivativeConstant_DEFINITION"
+msgstr "Der abgeleitete Verstärkungsfaktor des Reglers (üblicherweise als Kd bezeichnet).  Wird angegeben, wenn ControlType PROPORTIONALINTEGRALDERIVATIVE ist."
 
-#:IFC.xml:962
-msgid "IfcWindowStyleConstructionEnum_STEEL"
-msgstr "LÄNDERN"
+#:IFC.xml:1930
+msgid "IntegralConstant"
+msgstr "Pset_ControllerTypeProportional_Integralkonstante"
 
-msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
-msgstr "LÄNDERN"
+msgid "IntegralConstant_DEFINITION"
+msgstr "Der integrale Verstärkungsfaktor des Reglers (üblicherweise als Ki bezeichnet).  Wird angegeben, wenn ControlType PROPORTIONALINTEGRAL oder PROPORTIONALINTEGRALDERIVATIVE ist."
 
-#:IFC.xml:963
-msgid "IfcWindowStyleConstructionEnum_WOOD"
-msgstr "WOOOD"
+#:IFC.xml:1940
+msgid "ProportionalConstant"
+msgstr "Pset_ControllerTypeProportional_Proportionalkonstante"
 
-msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
-msgstr "WOOOD"
+msgid "ProportionalConstant_DEFINITION"
+msgstr "Der Proportional-Verstärkungsfaktor des Reglers (üblicherweise als Kp bezeichnet)."
 
-#:IFC.xml:965
-msgid "IfcWindowStyleOperationEnum"
-msgstr "IfcWindowStyleOperationEnum"
+#:IFC.xml:1950
+msgid "SignalTimeDecrease"
+msgstr "Pset_ControllerTypeProportional_Signalzeitabfall"
 
-msgid "IfcWindowStyleOperationEnum_DEFINITION"
-msgstr "Diese Aufzählung definiert die Grundkonfiguration des Fenstertyps in Bezug auf die Anzahl der Fensterfenster und die Unterteilung des Gesamtfensters. Die Fensterkonfigurationen werden für Fenster mit einem, zwei oder drei Paneelen mit festen Paneelen wie in Abbildung 1 dargestellt. Windows, die in mehr als drei Panels unterteilt sind, müssen nur durch die Geometrie definiert werden. Der Typ solcher Fenster ist USERDEFINED, HISTORY New Enumeration in IFC2.0. Hinweis 1. Die Funktionsweise jedes Panels wird im [[IfcWindowPanelProperties]] definiert. perationType . 2. Der Verweis vom Fensterfenster auf die Position des Fensters in der Fensterstilkonfiguration wird von der [[IfcWindowPanelProperties]] bearbeitet. anelPosition . 3. Die Figuren werden in der XZ-Ebene der lokalen Platzierung des Fensters als Höhen angezeigt. in die Richtung der positiven Y-Achse. 4. Diese Zahlen werden nur als Illustrationen Artikel SINGLE PANEL Fenster mit einem Panel. .. .. .. Figuren ifcwindowstyleoperationenum fig01.gif DOUBLE PANEL VERTICAL Window with two panels. .. Figuren ifcwindowstyleoperationenum fig02.gif DOUBLE PANEL HORIZONTAL Fenster mit zwei Paneelen. .. .. Zahlen ifcwindowstyleoperationenum fig03.gif TRIPLE PANEL VERTICAL Fenster mit drei Panels. .. .. Zahlen ifcwindowstyleoperationenum fig04.gif TRIPLE PANEL BOTTOM Fenster mit drei Panels. Die Konfiguration von zwei Panels ist vertikal und die dritte ist horizontal unten .. .. .. .. Zahlen ifcwindowstyleoperationenum fig06. Wenn TRIPLE PANEL TOP Fenster mit drei Panels ausgestattet ist, ist die Konfiguration von zwei Paneelen vertikal und die dritte horizontal an der Oberseite. .. .. Zahlen ifcwindowstyleoperationenum fig07. wenn TRIPLE PANEL LEFT Fenster mit drei Panels. Die Konfiguration von zwei Panels ist horizontal und die dritte ist vertikal auf der linken Seite .. .. .. .. figuren ifcwindowstyleoperationenum fig08.gif TRIPLE PANEL RIGHT Fenster mit drei Panels. Die Konfiguration von zwei Paneelen erfolgt horizontal und die dritte befindet sich vertikal auf der rechten Seite. .. .. Zahlen ifcwindowstyleoperationenum fig09.gif TRIPLE PANEL HORIZONTAL Fenster mit drei Panels. .. .. Zahlen ifcwindowstyleoperationenum fig05.gif USERDEFINED user defined operation type NOTDEFINED"
+msgid "SignalTimeDecrease_DEFINITION"
+msgstr "Zeitfaktor, der für die exponentielle Abnahme verwendet wird."
 
-#:IFC.xml:966
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
-msgstr "PANEL HORIZONTAL DOUBLE"
+#:IFC.xml:1955
+msgid "SignalTimeIncrease"
+msgstr "Pset_ControllerTypeProportional_Signalzeitanstieg"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig03.gif .."
+msgid "SignalTimeIncrease_DEFINITION"
+msgstr "Zeitfaktor, der für die exponentielle Erhöhung verwendet wird."
 
-#:IFC.xml:967
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
-msgstr "PANELVERTISCHE DOPPELVERTISCH"
+#:IFC.xml:1966
+msgid "Pset_ControllerTypeTwoPosition"
+msgstr "ControllerTypeTwoPosition festlegen"
 
-msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
-msgstr ".. .. Figuren ifcwindowstyleoperationenum fig02.gif fig02.gif"
+msgid "Pset_ControllerTypeTwoPosition_DEFINITION"
+msgstr "Eigenschaften für die Signalverarbeitung für einen analogen Controller, der unterschiedliche Werte für mehrere Eingänge nutzt und eine einheitliche Binärausgabe erzeugt. HISTORY In IFC4, erweiterte Eigenschaften, um Pset BinaryInput und Pset BinaryOutput. Comments ControlType LOWERLIMITSWITCH Einzelne Analogeingabe wird gelesen und wenn weniger als Value.LowerBound dann True wird in den Ausgabewert geschrieben. UPPERLIMITSWITCH Einzelne Analogeingabe wird gelesen und wenn mehr als Value.UpperBound dann True auf den Ausgabewert geschrieben wird. LOWERBANDSWITCH Einzelanalogeingabe wird gelesen und wenn kleiner als Wert. owerBound BandWidth dann True wird in den Ausgabewert geschrieben. pperBound BandWidth dann True wird in den Ausgabewert geschrieben. Keine einzelne Binäreingabe wird gelesen und der gegenteilige Wert wird auf den Ausgabewert geschrieben. AND Zwei binäre Eingaben werden gelesen und wenn beide True sind, wird True in den Ausgabewert geschrieben. ODER Zwei binäre Eingaben werden gelesen und wenn einer der beiden True ist, wird True in den Ausgabewert geschrieben. XOR Zwei binäre Eingaben werden gelesen und wenn eine wahr ist, wird True in den Ausgabewert geschrieben. KALENDAR Keine Eingabe der aktuellen Uhrzeit wird mit einem [[IfcWorkCalendar]] verglichen, dem das [[IfcController]] zugeordnet ist und True geschrieben wird, wenn aktiv. INPUT Controller Element ist eine dedizierte Eingabe. OUTPUT Controller Element ist eine dedizierte Ausgabe. Der Standardwert wie normalerweise geschlossen oder normalerweise geöffnet."
 
-#:IFC.xml:968
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
+#:IFC.xml:1977
+msgid "Polarity"
+msgstr "Pset_ControllerTypeTwoPosition_Polarität"
 
-msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
-msgstr "NOTDEFINIERT"
+msgid "Polarity_DEFINITION"
+msgstr "True steht für normale Polarität, False für umgekehrte Polarität."
 
-#:IFC.xml:969
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
-msgstr "EINZELS PANEL"
+#:IFC.xml:1988
+msgid "Pset_FlowInstrumentPHistory"
+msgstr "Pset FlowInstrumentPHistorie"
 
-msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
-msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig01.gif .."
+msgid "Pset_FlowInstrumentPHistory_DEFINITION"
+msgstr "Eigenschaften für die Geschichte der Fließinstrumentenwerte. HISTORY Hinzugefügt in IFC4. Kommentar-Status zeigt einen Fehlercode oder einen Bezeichner an, dessen Bedeutung für das jeweilige Automatisierungssystem spezifisch ist. Beispiele sind ConfigurationError , NotConnected , DeviceFailure , SensorFailure , LastKnown, CommunicationsFailure , OutOfService . Der Wert zeigt gemessene Werte im Laufe der Zeit an, die kontinuierlich oder nur dann erfasst werden können, wenn sie über einen bestimmten Zeitraum hinaus geändert werden."
 
-#:IFC.xml:970
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
-msgstr "TRIPLE PANEL BOTTOM"
+#:IFC.xml:2005
+msgid "Pset_FlowInstrumentTypeCommon"
+msgstr "Pset FlowInstrumentTypeCommon"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
-msgstr "Fenster mit drei Paneelen. Die Konfiguration von zwei Paneelen ist vertikal und die dritte horizontal unten. .. .. Zahlen ifcwindowstyleoperationenum fig06.gif"
+msgid "Pset_FlowInstrumentTypeCommon_DEFINITION"
+msgstr "Allgemeine Attribute des Flow Instrumententyps. HISTORY hinzugefügt in IFC4."
 
-#:IFC.xml:971
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
-msgstr "TRIPLE PANEL HORIZONTAL"
+#:IFC.xml:2017
+msgid "Pset_FlowInstrumentTypePressureGauge"
+msgstr "Pset FlowInstrumentTypePressureGauge"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
-msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig05.gif fig05.gif"
+msgid "Pset_FlowInstrumentTypePressureGauge_DEFINITION"
+msgstr "Ein Gerät, das einen Druckwert an einem Punkt oder den Druckunterschied zwischen zwei Punkten liest und anzeigt. Kommentare DisplayGröße Für eine Wähldruckmessung wird es der Durchmesser des Wählrades sein."
 
-#:IFC.xml:972
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
-msgstr "TRIPLE PANEL LEFT"
+#:IFC.xml:2018
+msgid "DisplaySize"
+msgstr "Pset_FlowInstrumentTypePressureGauge_Anzeigegröße"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
-msgstr "Fenster mit drei Paneelen: Die Konfiguration von zwei Paneelen ist horizontal und die dritte befindet sich vertikal auf der linken Seite. .. .. Zahlen ifcwindowstyleoperationenum fig08.gif"
+msgid "DisplaySize_DEFINITION"
+msgstr "Die physische Größe des Displays."
 
-#:IFC.xml:973
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
-msgstr "TRIPLE PANEL RECHTS"
+#:IFC.xml:2023
+msgid "PressureGaugeType"
+msgstr "Pset_FlowInstrumentTypePressureGauge_Druckmessgerätetyp"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
-msgstr "Fenster mit drei Paneelen: Die Konfiguration von zwei Paneelen ist horizontal und die dritte befindet sich vertikal auf der rechten Seite. .. .. Zahlen ifcwindowstyleoperationenum fig09.gif"
+msgid "PressureGaugeType_DEFINITION"
+msgstr "Kennzeichnet die Art und Weise, wie der Druck angezeigt wird."
 
-#:IFC.xml:974
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
-msgstr "TRIPLE PANEL TOP"
+#:IFC.xml:2029
+msgid "Pset_FlowInstrumentTypeThermometer"
+msgstr "Pset FlowInstrumentTypeThermometer"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
-msgstr "Fenster mit drei Paneelen. Die Konfiguration von zwei Paneelen ist vertikal und die dritte horizontal. .. .. Zahlen ifcwindowstyleoperationenum fig07.gif"
+msgid "Pset_FlowInstrumentTypeThermometer_DEFINITION"
+msgstr "Ein Gerät, das einen Temperaturwert an einem Punkt liest und anzeigt. Kommentare DisplayGröße Im Falle eines Stammthermometers wird dies die Länge des Stammes sein. Für ein Zifferthermometer wird es der Durchmesser des Zifferblattes sein."
 
-#:IFC.xml:975
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
-msgstr "TRIPLE PANEL VERTICAL"
+#:IFC.xml:2035
+msgid "ThermometerType"
+msgstr "Pset_FlowInstrumentTypeThermometer_Thermometertyp"
 
-msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
-msgstr ".. .. Figuren ifcwindowstyleoperationenum fig04.gif fig04.gif"
+msgid "ThermometerType_DEFINITION"
+msgstr "Bezeichnet die Art und Weise, wie die Temperatur angezeigt wird."
 
-#:IFC.xml:976
-msgid "IfcWindowStyleOperationEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
+#:IFC.xml:2041
+msgid "Pset_SensorPHistory"
+msgstr "Pset SensorPHistorie"
 
-msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
-msgstr "user defined operation type"
+msgid "Pset_SensorPHistory_DEFINITION"
+msgstr "Eigenschaften für die Historie von Controller-Werten. HISTORY hinzugefügt in IFC4. Comments Value zeigt erfasste Werte im Laufe der Zeit an, die kontinuierlich oder nur bei einer Änderung außerhalb einer bestimmten Deadline aufgezeichnet werden können. Der Bereich der möglichen Werte wird durch die SetPoint-Eigenschaft des entsprechenden Sensortyp-Eigenschaftssets definiert."
+
+#:IFC.xml:2042
+msgid "Direction"
+msgstr "Pset_SensorPHistory_Richtung"
+
+msgid "Direction_DEFINITION"
+msgstr "Zeigt die gemessene Richtung für Sensoren an, die Größe und Richtung von True North (0 Grad) im Uhrzeigersinn erfassen."
+
+#:IFC.xml:2063
+msgid "Pset_SensorTypeCO2Sensor"
+msgstr "Pset SensorTypeCO2Sensor"
+
+msgid "Pset_SensorTypeCO2Sensor_DEFINITION"
+msgstr "Ein Gerät, das Kohlendioxid spürt oder erkennt."
+
+#:IFC.xml:2064
+msgid "SetPointCO2Concentration"
+msgstr "SetPointCO2Konzentration"
+
+msgid "SetPointCO2Concentration_DEFINITION"
+msgstr "Die zu sendende Kohlendioxidkonzentration. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2070
+msgid "Pset_SensorTypeCommon"
+msgstr "Pset SensorTypeCommon"
+
+msgid "Pset_SensorTypeCommon_DEFINITION"
+msgstr "Gemeinsame Attribute des Sensortyps. HISTORY hinzugefügt in IFC4."
+
+#:IFC.xml:2082
+msgid "Pset_SensorTypeConductanceSensor"
+msgstr "SensorTypeConductanceSensor setzen"
+
+msgid "Pset_SensorTypeConductanceSensor_DEFINITION"
+msgstr "Ein Gerät, das elektrische Leitungen erkennt oder erkennt."
+
+#:IFC.xml:2083
+msgid "SetPointConductance"
+msgstr "Pset_SensorTypeConductanceSensor_Einstellpunkt Leitwert"
+
+msgid "SetPointConductance_DEFINITION"
+msgstr "Der zu sendende Füllstufenwert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2089
+msgid "Pset_SensorTypeContactSensor"
+msgstr "SensorTypeContactSensor setzen"
+
+msgid "Pset_SensorTypeContactSensor_DEFINITION"
+msgstr "Ein Gerät, das Kontakte erkennt oder erkennt. HISTORY hinzugefügt in IFC4."
+
+#:IFC.xml:2090
+msgid "SetPointContact"
+msgstr "Pset_SensorTypeContactSensor_Einstellpunkt Berührung"
+
+msgid "SetPointContact_DEFINITION"
+msgstr "Der zu sendende Kontaktwert. Verwenden Sie [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2096
+msgid "Pset_SensorTypeFireSensor"
+msgstr "Pset SensorTypeFireSensor"
+
+msgid "Pset_SensorTypeFireSensor_DEFINITION"
+msgstr "Ein Gerät, das das Vorhandensein von Feuer erkennt oder erkennt."
+
+#:IFC.xml:2097
+msgid "AccuracyOfFireSensor"
+msgstr "Pset_SensorTypeFireSensor_Genauigkeit des Feuersensors"
+
+msgid "AccuracyOfFireSensor_DEFINITION"
+msgstr "Die Genauigkeit des Sensors."
+
+#:IFC.xml:2102
+msgid "FireSensorSetPoint"
+msgstr "Pset_SensorTypeFireSensor_Einstellpunkt Feuersensor"
+
+msgid "FireSensorSetPoint_DEFINITION"
+msgstr "Der zu erfassende Temperaturwert, der das Vorhandensein von Feuer anzeigt."
+
+#:IFC.xml:2107
+msgid "TimeConstant"
+msgstr "Pset_SensorTypeFireSensor_Zeitkonstante"
+
+msgid "TimeConstant_DEFINITION"
+msgstr "Die Zeitkonstante des Sensors."
+
+#:IFC.xml:2113
+msgid "Pset_SensorTypeFlowSensor"
+msgstr "Pset SensorTypeFlowsensor"
+
+msgid "Pset_SensorTypeFlowSensor_DEFINITION"
+msgstr "Ein Gerät, das Flow erkennt oder spürt."
+
+#:IFC.xml:2114
+msgid "SetPointFlow"
+msgstr "Pset_SensorTypeFlowSensor_Einstellpunkt Durchfluss"
+
+msgid "SetPointFlow_DEFINITION"
+msgstr "Der zu sendende Volumenflusswert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den festgelegten Punktwert festzulegen."
+
+#:IFC.xml:2120
+msgid "Pset_SensorTypeFrostSensor"
+msgstr "Pset SensorTypeFrostSensor"
+
+msgid "Pset_SensorTypeFrostSensor_DEFINITION"
+msgstr "Ein Gerät, das das Presense des Frosts erkennt oder erkennt."
+
+#:IFC.xml:2121
+msgid "SetPointFrost"
+msgstr "SetPointFrost"
+
+msgid "SetPointFrost_DEFINITION"
+msgstr "Die Erkennung von Frost."
+
+#:IFC.xml:2127
+msgid "Pset_SensorTypeGasSensor"
+msgstr "Pset SensorTypeGasSensor"
+
+msgid "Pset_SensorTypeGasSensor_DEFINITION"
+msgstr "Ein Gerät, das Gas erkennt oder erkennt. Gas. GESCHICHTIGE Änderung in IFC4. Gas in Aufzählung, Sollkonzentration und Abdeckungsbereich hinzugefügt. In der Regel wird der Bereich CoverageArea Floor als Kreis gemessen, dessen Zentrum sich an der Position des Sensors befindet."
+
+#:IFC.xml:2128
+msgid "CoverageArea"
+msgstr "Pset_SensorTypeGasSensor_Abgedeckter Bereich"
+
+msgid "CoverageArea_DEFINITION"
+msgstr "Der Bereich, der vom Objekt abgedeckt ist."
+
+#:IFC.xml:2133
+msgid "GasDetected"
+msgstr "Pset_SensorTypeGasSensor_Erkanntes Gas"
+
+msgid "GasDetected_DEFINITION"
+msgstr "Identifizierung des zu detektierenden Gases nach chemischer Formel: Kohlenmonoxid ist z.B. CO, Kohlendioxid ist CO2, Sauerstoff ist O2."
+
+#:IFC.xml:2138
+msgid "SetPointConcentration"
+msgstr "SetPointkonzentration"
+
+msgid "SetPointConcentration_DEFINITION"
+msgstr "Die zu sendende Konzentration. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2144
+msgid "Pset_SensorTypeHeatSensor"
+msgstr "Pset SensorTypeHeatSensor"
+
+msgid "Pset_SensorTypeHeatSensor_DEFINITION"
+msgstr "Ein Gerät, das Wärme spürt oder erkennt. HISTORY In IFC4 beinhaltet Feuermelder. HeatSensorSetPoint wurde in SetPointTemperature Comments CoverageArea Floor Area umbenannt."
+
+#:IFC.xml:2150
+msgid "RateOfTemperatureRise"
+msgstr "Pset_SensorTypeHeatSensor_Temperaturanstiegsrate"
+
+msgid "RateOfTemperatureRise_DEFINITION"
+msgstr "Die Temperaturanstiegsgeschwindigkeit, die als gefährlich zu empfinden ist."
+
+#:IFC.xml:2155
+msgid "SetPointTemperature"
+msgstr "Pset_SensorTypeHeatSensor_Einstellpunkt Temperatur"
+
+msgid "SetPointTemperature_DEFINITION"
+msgstr "Verwenden Sie IfcPropertyBoundedValue.SetPointValue, um den Sollwert einzustellen."
+
+#:IFC.xml:2161
+msgid "Pset_SensorTypeHumiditySensor"
+msgstr "Pset SensorTypeHumiditySensor"
+
+msgid "Pset_SensorTypeHumiditySensor_DEFINITION"
+msgstr "Ein Gerät, das Luftfeuchtigkeit erkennt oder erkennt. HISTORY FeuchtigkeitSensorSetPoint wurde in SetPointfeuchtigkeit geändert. Reichweite, Genauigkeit und Zeitkonstante gelöscht."
+
+#:IFC.xml:2162
+msgid "SetPointHumidity"
+msgstr "Pset_SensorTypeHumiditySensor_Einstellpunkt Feuchtigkeit"
+
+msgid "SetPointHumidity_DEFINITION"
+msgstr "Der zu sendende Luftfeuchtigkeitswert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2168
+msgid "Pset_SensorTypeIdentifierSensor"
+msgstr "Pset SensorTypeIdentifierSensor"
+
+msgid "Pset_SensorTypeIdentifierSensor_DEFINITION"
+msgstr "Ein Gerät, das Identifikations-Tags erkennt."
+
+#:IFC.xml:2169
+msgid "SetPointIdentifier"
+msgstr "SetPointBezeichner"
+
+msgid "SetPointIdentifier_DEFINITION"
+msgstr "Der erkannte Tag-Wert."
+
+#:IFC.xml:2175
+msgid "Pset_SensorTypeIonConcentrationSensor"
+msgstr "Pset SensorTypeIonKonzentrationsSensor"
+
+msgid "Pset_SensorTypeIonConcentrationSensor_DEFINITION"
+msgstr "Ein Gerät, das Ionenkonzentration wie Wasserhärte spürt oder erkennt."
+
+#:IFC.xml:2176
+msgid "SetPointIonConcentration"
+msgstr "SetPointIonKonzentration"
+
+msgid "SetPointIonConcentration_DEFINITION"
+msgstr "Verwenden Sie IfcPropertyBoundedValue.SetPointValue, um den Sollwert einzustellen."
+
+#:IFC.xml:2181
+msgid "SubstanceDetected"
+msgstr "Pset_SensorTypeIonConcentrationSensor_Erkannte Substanz"
+
+msgid "SubstanceDetected_DEFINITION"
+msgstr "Identifizierung des Stoffes, der nach chemischer Formel nachgewiesen wird, z.B. Calciumcarbonat ist CaCO3\"."
+
+#:IFC.xml:2187
+msgid "Pset_SensorTypeLevelSensor"
+msgstr "Pset SensorTypeLevelSensor"
+
+msgid "Pset_SensorTypeLevelSensor_DEFINITION"
+msgstr "Ein Gerät, das Füllstand erkennt oder erkennt. HISTORY hinzugefügt in IFC4."
+
+#:IFC.xml:2188
+msgid "SetPointLevel"
+msgstr "Pset_SensorTypeLevelSensor_Einstellpunkt Füllstand"
+
+msgid "SetPointLevel_DEFINITION"
+msgstr "Der zu sendende Füllstufenwert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2194
+msgid "Pset_SensorTypeLightSensor"
+msgstr "Pset SensorTypeLightSensor"
+
+msgid "Pset_SensorTypeLightSensor_DEFINITION"
+msgstr "Ein Gerät, das Licht erkennt oder erkennt. HISTORY LightSensorSensorSetPoint wurde in SetPointIlluminanz geändert. Bereich, Genauigkeit und Zeitkonstante gelöscht."
+
+#:IFC.xml:2195
+msgid "SetPointIlluminance"
+msgstr "Pset_SensorTypeLightSensor_Einstellpunkt Beleuchtungsstärke"
+
+msgid "SetPointIlluminance_DEFINITION"
+msgstr "Der zu sendende Leuchtwert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2201
+msgid "Pset_SensorTypeMoistureSensor"
+msgstr "Pset SensorTypeMoistureSensor"
+
+msgid "Pset_SensorTypeMoistureSensor_DEFINITION"
+msgstr "Ein Gerät, das Feuchtigkeit erkennt oder erkennt."
+
+#:IFC.xml:2202
+msgid "SetPointMoisture"
+msgstr "Pset_SensorTypeMoistureSensor_Einstellpunkt Feuchtigkeit"
+
+msgid "SetPointMoisture_DEFINITION"
+msgstr "Der zu sendende Feuchtigkeitswert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2208
+msgid "Pset_SensorTypeMovementSensor"
+msgstr "Pset SensorTypeBewegungssensor"
+
+msgid "Pset_SensorTypeMovementSensor_DEFINITION"
+msgstr "Ein Gerät, das Bewegungen erkennt oder erkennt. HISTORY In IFC4, die Zeitkonstante gelöscht."
+
+#:IFC.xml:2209
+msgid "MovementSensingType"
+msgstr "Pset_SensorTypeMovementSensor_Art der Bewegungserkennung"
+
+msgid "MovementSensingType_DEFINITION"
+msgstr "Aufzählung, die den Typ des Bewegungserkennungsmechanismus identifiziert."
+
+#:IFC.xml:2214
+msgid "SetPointMovement"
+msgstr "Pset_SensorTypeMovementSensor_Einstellpunkt Konzentration"
+
+msgid "SetPointMovement_DEFINITION"
+msgstr "Die zu erfassende Bewegung."
+
+#:IFC.xml:2220
+msgid "Pset_SensorTypePHSensor"
+msgstr "Pset SensorTypePHSensor"
+
+msgid "Pset_SensorTypePHSensor_DEFINITION"
+msgstr "Ein Gerät, das Säure erkennt oder erkennt."
+
+#:IFC.xml:2221
+msgid "SetPointPH"
+msgstr "Pset_SensorTypePHSensor_Einstellpunkt pH-Wert"
+
+msgid "SetPointPH_DEFINITION"
+msgstr "Der zu sendende Füllstufenwert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2227
+msgid "Pset_SensorTypePressureSensor"
+msgstr "SensorTypeDrucksensor einstellen"
+
+msgid "Pset_SensorTypePressureSensor_DEFINITION"
+msgstr "Ein Gerät, das Druck erkennt oder erkennt. HISTORY PressureSensorSensorSetPoint wurde zu SetPointPressure-Bereich, Genauigkeit und Zeitkonstante gelöscht."
+
+#:IFC.xml:2228
+msgid "IsSwitch"
+msgstr "Pset_SensorTypePressureSensor_Schalter"
+
+msgid "IsSwitch_DEFINITION"
+msgstr "Identifiziert, ob der Sensor auch als Schalter am Sollwert arbeitet (=TRUE) oder nicht (=FALSE)."
+
+#:IFC.xml:2233
+msgid "SetPointPressure"
+msgstr "Pset_SensorTypePressureSensor_Einstellpunkt Druck"
+
+msgid "SetPointPressure_DEFINITION"
+msgstr "Mit IfcPropertyBoundedValue.SetPointValue wird der Sollwert eingestellt."
+
+#:IFC.xml:2239
+msgid "Pset_SensorTypeRadiationSensor"
+msgstr "Pset SensorTypeRadiationSensor"
+
+msgid "Pset_SensorTypeRadiationSensor_DEFINITION"
+msgstr "Ein Gerät, das Bestrahlungen erkennt oder erkennt."
+
+#:IFC.xml:2240
+msgid "SetPointRadiation"
+msgstr "Pset_SensorTypeRadiationSensor_Einstellpunkt Konzentration"
+
+msgid "SetPointRadiation_DEFINITION"
+msgstr "Der zu sendende Strahlungswert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2246
+msgid "Pset_SensorTypeRadioactivitySensor"
+msgstr "Pset SensorTypeRadioactivitySensor"
+
+msgid "Pset_SensorTypeRadioactivitySensor_DEFINITION"
+msgstr "Ein Gerät, das atomaren Verfall erkennt oder erkennt."
+
+#:IFC.xml:2247
+msgid "SetPointRadioactivity"
+msgstr "Pset_SensorTypeRadioactivitySensor_Einstellpunkt Radioaktivität"
+
+msgid "SetPointRadioactivity_DEFINITION"
+msgstr "Der zu sendende Radioaktivitätswert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2253
+msgid "Pset_SensorTypeSmokeSensor"
+msgstr "SensortypsmokeSensor setzen"
+
+msgid "Pset_SensorTypeSmokeSensor_DEFINITION"
+msgstr "Ein Gerät, das Rauch erkennt oder erkennt. HISTORY PressureSensorSensorSetPoint-Fehler in der vorherigen Version wurde auf SetPointConcentration geändert. In der Regel wird der Bereich CoverageArea Floor als Kreis gemessen, dessen Zentrum sich an der Position des Sensors befindet."
+
+#:IFC.xml:2259
+msgid "HasBuiltInAlarm"
+msgstr "Pset_SensorTypeSmokeSensor_Mit integriertem Alarm"
+
+msgid "HasBuiltInAlarm_DEFINITION"
+msgstr "Zeigt an, ob der Rauchmelder als Element in einer Rauchmelder-/Sensoreinheit enthalten ist (WAHR) oder nicht (FALSCH)."
+
+#:IFC.xml:2270
+msgid "Pset_SensorTypeSoundSensor"
+msgstr "Pset SensorTypeSoundSensor"
+
+msgid "Pset_SensorTypeSoundSensor_DEFINITION"
+msgstr "Ein Gerät, das Klang erkennt oder erkennt. HISTORY SoundSensorSensorSetPoint wurde in SetPointSound geändert. Bereich, Genauigkeit und Zeitkonstante wurden gelöscht."
+
+#:IFC.xml:2271
+msgid "SetPointSound"
+msgstr "Pset_SensorTypeSoundSensor_Einstellpunkt Konzentration"
+
+msgid "SetPointSound_DEFINITION"
+msgstr "Der zu sendende Schalldruckwert. Verwende [[IfcPropertyBoundedValue]].SetPointValue um den Sollwert festzulegen."
+
+#:IFC.xml:2277
+msgid "Pset_SensorTypeTemperatureSensor"
+msgstr "Pset SensorTypeTemperatursensor"
+
+msgid "Pset_SensorTypeTemperatureSensor_DEFINITION"
+msgstr "Ein Gerät, das die Temperatur erkennt oder erkennt. HISTORY TemperatureSensorSensorSetPunkt wurde auf SetPointtemperatur geändert. Bereich, Genauigkeit und Zeitkonstante gelöscht."
+
+#:IFC.xml:2283
+msgid "TemperatureSensorType"
+msgstr "Pset_SensorTypeTemperatureSensor_Temperatursensortyp"
+
+msgid "TemperatureSensorType_DEFINITION"
+msgstr "Enumeration that Identifiziert die Typen von Temperatursensoren, die spezifiziert werden können."
+
+#:IFC.xml:2289
+msgid "Pset_SensorTypeWindSensor"
+msgstr "Pset SensorTypeWindSensor"
+
+msgid "Pset_SensorTypeWindSensor_DEFINITION"
+msgstr "Ein Gerät, das Windgeschwindigkeit und Windrichtung erkennt oder erkennt."
+
+#:IFC.xml:2290
+msgid "DampingRatio"
+msgstr "Dampingverhältnis"
+
+msgid "DampingRatio_DEFINITION"
+msgstr "Gibt das Dämpfungsverhältnis des Geräts an."
+
+#:IFC.xml:2295
+msgid "DataCollectionType"
+msgstr "Datensammlungstyp"
+
+msgid "DataCollectionType_DEFINITION"
+msgstr "Gibt den Typ oder die Art der Datenerfassung an."
+
+#:IFC.xml:2300
+msgid "LinearVelocityResolution"
+msgstr "LinearVelocityresolution"
+
+msgid "LinearVelocityResolution_DEFINITION"
+msgstr "Gibt die Auflösung der erkannten linearen Geschwindigkeit an."
+
+#:IFC.xml:2305
+msgid "MarginOfError"
+msgstr "MarginOfError"
+
+msgid "MarginOfError_DEFINITION"
+msgstr "Gibt den Fehlerrand der Messung an."
+
+#:IFC.xml:2310
+msgid "SamplingFrequency"
+msgstr "SamplingFrequenz"
+
+msgid "SamplingFrequency_DEFINITION"
+msgstr "Gibt die Abtastrate des Geräts an."
+
+#:IFC.xml:2315
+msgid "SerialInterfaceType"
+msgstr "SerialInterfaceType"
+
+msgid "SerialInterfaceType_DEFINITION"
+msgstr "Gibt den Typ der seriellen Schnittstelle an, die vom Gerät verwendet wird."
+
+#:IFC.xml:2320
+msgid "SetPointSpeed"
+msgstr "Pset_SensorTypeWindSensor_Einstellpunkt Konzentration"
+
+msgid "SetPointSpeed_DEFINITION"
+msgstr "Verwenden Sie IfcPropertyBoundedValue.SetPointValue, um den Sollwert einzustellen."
+
+#:IFC.xml:2325
+msgid "StartingWindSpeed"
+msgstr "StartWindSpeed"
+
+msgid "StartingWindSpeed_DEFINITION"
+msgstr "Gibt die Startgeschwindigkeit des Windsensors an."
+
+#:IFC.xml:2335
+msgid "WindAngleRange"
+msgstr "Windwinkelbereich"
+
+msgid "WindAngleRange_DEFINITION"
+msgstr "Gibt den Winkelbereich an, den der Sensor überwachen kann."
+
+#:IFC.xml:2340
+msgid "WindSensorType"
+msgstr "Pset_SensorTypeWindSensor_Windsensortyp"
+
+msgid "WindSensorType_DEFINITION"
+msgstr "Enumeration that Identifiziert die Typen von Windsensoren, die spezifiziert werden können."
+
+#:IFC.xml:2345
+msgid "WindSpeedRange"
+msgstr "Windgeschwindigkeitsbereich"
+
+msgid "WindSpeedRange_DEFINITION"
+msgstr "Gibt den Bereich der Windgeschwindigkeit an, die der Sensor überwachen kann."
+
+#:IFC.xml:2350
+msgid "WorkingState"
+msgstr "Arbeitsstaat"
+
+msgid "WorkingState_DEFINITION"
+msgstr "Gibt den Arbeitszustand des Geräts oder des Systems an."
+
+#:IFC.xml:2356
+msgid "Pset_UnitaryControlElementPHistory"
+msgstr "UnitaryControlElementPHistorie festlegen"
+
+msgid "Pset_UnitaryControlElementPHistory_DEFINITION"
+msgstr "Eigenschaften für den Verlauf und den Betrieb von Thermostaten. HISTORY hinzugefügt in IFC4. Kommentare SetPoint Zeigt den Temperatur-Sollwert an. Für Thermostaten mit Rückschlägen oder getrennten hohen und niedrigen Einstellungspunkten dann kann die Zeitreihe ein Paar von Werten an jedem Eintrag enthalten, wo der erste Wert ist die Heizung Sollwert niedrig und der zweite Wert ist die Kühlung Sollpunkt hoch . Temperatur zeigt die gemessene Temperatur an."
+
+#:IFC.xml:2357
+msgid "Fan"
+msgstr "Pset_UnitaryControlElementPHistory_Lüfter"
+
+msgid "Fan_DEFINITION"
+msgstr "Zeigt den Lüfterbetrieb an, bei dem True eingeschaltet ist, False ausgeschaltet ist und Unknown automatisch ist"
+
+#:IFC.xml:2362
+msgid "OperationModeHistory"
+msgstr "OperationModeverlauf"
+
+msgid "OperationModeHistory_DEFINITION"
+msgstr "Zeigt die Betriebsart an, die der Betriebsart Pset_UnitaryControlTypeCommon.Mode entspricht, z.B.'HEAT','COOL','AUTO'"
+
+#:IFC.xml:2367
+msgid "SetPoint"
+msgstr "Pset_UnitaryControlElementPHistory_Einstellpunkt"
+
+msgid "SetPoint_DEFINITION"
+msgstr "Gibt den Sollwert und das Label an."
+
+#:IFC.xml:2372
+msgid "Temperature"
+msgstr "Pset_UnitaryControlElementPHistory_Temperatur"
+
+msgid "Temperature_DEFINITION"
+msgstr "Temperatur der Flüssigkeit."
+
+#:IFC.xml:2378
+msgid "Pset_UnitaryControlElementTypeCommon"
+msgstr "Pset UnitaryControlElementTypeCommon"
+
+msgid "Pset_UnitaryControlElementTypeCommon_DEFINITION"
+msgstr "Gemeinsames Attribut vom Typ der Unitärkontrolle."
+
+#:IFC.xml:2379
+msgid "OperationMode"
+msgstr "Betriebsmodus"
+
+msgid "OperationMode_DEFINITION"
+msgstr "Tabellenzuordnung Betriebsartenidentifikatoren zu beschreibenden Bezeichnungen, die zur Interpretation von Pset_UnitaryControlElementPHistory.Mode verwendet werden können."
+
+#:IFC.xml:2395
+msgid "Pset_UnitaryControlElementTypeIndicatorPanel"
+msgstr "Pset UnitaryControlElementTypeIndicatorPanel"
+
+msgid "Pset_UnitaryControlElementTypeIndicatorPanel_DEFINITION"
+msgstr "Eigenschaften des Kontrollelementtyps für Einheitstexte in IFC4."
+
+#:IFC.xml:2396
+msgid "UnitaryApplication"
+msgstr "UnitaryAnwendung"
+
+msgid "UnitaryApplication_DEFINITION"
+msgstr "Die Anwendung des Einheitskontrollelements."
+
+#:IFC.xml:2402
+msgid "Pset_UnitaryControlElementTypeThermostat"
+msgstr "Pset UnitaryControlElementTypeThermostat"
+
+msgid "Pset_UnitaryControlElementTypeThermostat_DEFINITION"
+msgstr "Eigenschaften des Einheitlichen Steuerelementtyps Thermostaten. HISTORY hinzugefügt in IFC4."
+
+#:IFC.xml:2403
+msgid "TemperatureSetPoint"
+msgstr "Pset_UnitaryControlElementTypeThermostat_Temperatureinstellpunkt"
+
+msgid "TemperatureSetPoint_DEFINITION"
+msgstr "Der Temperatur-Sollbereich und der Standardeinstellungspunkt."
+
+#:IFC.xml:2409
+msgid "Qto_ActuatorBaseQuantities"
+msgstr "Qto ActuatorBaseQuantities"
+
+msgid "Qto_ActuatorBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Vorkommnisse des Aktors gemeinsam sind."
+
+#:IFC.xml:2410
+msgid "GrossWeight"
+msgstr "Großgewicht"
+
+msgid "GrossWeight_DEFINITION"
+msgstr "Gesamtes Brutto-Gewicht des Objektes ohne Hinzufügen von Bauteilen und nicht unter Berücksichtigung der möglichen Verarbeitungsfunktionen geschnitten s, etc. oder Öffnungen und Pausen."
+
+#:IFC.xml:2416
+msgid "Qto_AlarmBaseQuantities"
+msgstr "Qto AlarmBaseQuantities"
+
+msgid "Qto_AlarmBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Alarmvorkommen üblich sind."
+
+#:IFC.xml:2423
+msgid "Qto_ControllerBaseQuantities"
+msgstr "Qto ControllerBaseQuantities"
+
+msgid "Qto_ControllerBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Vorkommnisse des Controllers gemeinsam sind."
+
+#:IFC.xml:2430
+msgid "Qto_FlowInstrumentBaseQuantities"
+msgstr "Qto FlowInstrumentBaseQuantities"
+
+msgid "Qto_FlowInstrumentBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Vorkommnisse des Strömungsinstruments üblich sind."
+
+#:IFC.xml:2437
+msgid "Qto_SensorBaseQuantities"
+msgstr "Qto SensorBaseanzahl"
+
+msgid "Qto_SensorBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Sensorvorkommen üblich sind."
+
+#:IFC.xml:2444
+msgid "Qto_UnitaryControlElementBaseQuantities"
+msgstr "Qto UnitaryControlElementBaseQuantities"
+
+msgid "Qto_UnitaryControlElementBaseQuantities_DEFINITION"
+msgstr "Basismengen, die bei der Definition aller Vorkommnisse eines einheitlichen Kontrollelementes üblich sind."
 
