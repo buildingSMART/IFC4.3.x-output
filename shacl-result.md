@@ -32,36 +32,9 @@
 * The resource 'IfcRailwayTypeEnum' has no definition
 * The resource 'IfcTendonConduitTypeEnum' has no definition
 * The resource 'IfcTrackElementTypeEnum' has no definition
-* The resource 'IfcTransportElementTypeEnum' has no definition
 * The resource 'IfcVibrationDamperTypeEnum' has no definition
-* The resource 'IfcVirtualElementTypeEnum' has no definition
 ## DefinitionForEnumLiteral
 
-* The resource 'IfcActionSourceTypeEnum.BRAKES' has no definition
-* The resource 'IfcActionSourceTypeEnum.BUOYANCY' has no definition
-* The resource 'IfcActionSourceTypeEnum.COMPLETION_G1' has no definition
-* The resource 'IfcActionSourceTypeEnum.CREEP' has no definition
-* The resource 'IfcActionSourceTypeEnum.CURRENT' has no definition
-* The resource 'IfcActionSourceTypeEnum.DEAD_LOAD_G' has no definition
-* The resource 'IfcActionSourceTypeEnum.EARTHQUAKE_E' has no definition
-* The resource 'IfcActionSourceTypeEnum.ERECTION' has no definition
-* The resource 'IfcActionSourceTypeEnum.FIRE' has no definition
-* The resource 'IfcActionSourceTypeEnum.ICE' has no definition
-* The resource 'IfcActionSourceTypeEnum.IMPACT' has no definition
-* The resource 'IfcActionSourceTypeEnum.IMPULSE' has no definition
-* The resource 'IfcActionSourceTypeEnum.LACK_OF_FIT' has no definition
-* The resource 'IfcActionSourceTypeEnum.LIVE_LOAD_Q' has no definition
-* The resource 'IfcActionSourceTypeEnum.PRESTRESSING_P' has no definition
-* The resource 'IfcActionSourceTypeEnum.PROPPING' has no definition
-* The resource 'IfcActionSourceTypeEnum.RAIN' has no definition
-* The resource 'IfcActionSourceTypeEnum.SETTLEMENT_U' has no definition
-* The resource 'IfcActionSourceTypeEnum.SHRINKAGE' has no definition
-* The resource 'IfcActionSourceTypeEnum.SNOW_S' has no definition
-* The resource 'IfcActionSourceTypeEnum.SYSTEM_IMPERFECTION' has no definition
-* The resource 'IfcActionSourceTypeEnum.TEMPERATURE_T' has no definition
-* The resource 'IfcActionSourceTypeEnum.TRANSPORT' has no definition
-* The resource 'IfcActionSourceTypeEnum.WAVE' has no definition
-* The resource 'IfcActionSourceTypeEnum.WIND_W' has no definition
 * The resource 'IfcActionTypeEnum.EXTRAORDINARY_A' has no definition
 * The resource 'IfcActionTypeEnum.PERMANENT_G' has no definition
 * The resource 'IfcActionTypeEnum.VARIABLE_Q' has no definition
@@ -260,7 +233,6 @@
 * The resource 'IfcTrackElementTypeEnum.SPEEDREGULATOR' has no definition
 * The resource 'IfcTrackElementTypeEnum.TRACKENDOFALIGNMENT' has no definition
 * The resource 'IfcTrackElementTypeEnum.VEHICLESTOP' has no definition
-* The resource 'IfcTransportElementTypeEnum.HAULINGGEAR' has no definition
 * The resource 'IfcUnitEnum.ABSORBEDDOSEUNIT' has no definition
 * The resource 'IfcUnitEnum.AMOUNTOFSUBSTANCEUNIT' has no definition
 * The resource 'IfcUnitEnum.AREAUNIT' has no definition
@@ -296,8 +268,6 @@
 * The resource 'IfcVibrationDamperTypeEnum.RUBBER' has no definition
 * The resource 'IfcVibrationDamperTypeEnum.SHEAR_YIELD' has no definition
 * The resource 'IfcVibrationDamperTypeEnum.VISCOUS' has no definition
-* The resource 'IfcVirtualElementTypeEnum.PROVISIONFORSPACE' has no definition
-* The resource 'IfcVirtualElementTypeEnum.PROVISIONFORVOID' has no definition
 * The resource 'IfcWindowPanelOperationEnum.OTHEROPERATION' has no definition
 * The resource 'IfcWindowPanelPositionEnum.BOTTOM' has no definition
 * The resource 'IfcWindowPanelPositionEnum.LEFT' has no definition
@@ -2944,6 +2914,4 @@
 * The resource 'IfcRailwayTypeEnum' has no definition
 * The resource 'IfcTendonConduitTypeEnum' has no definition
 * The resource 'IfcTrackElementTypeEnum' has no definition
-* The resource 'IfcTransportElementTypeEnum' has no definition
 * The resource 'IfcVibrationDamperTypeEnum' has no definition
-* The resource 'IfcVirtualElementTypeEnum' has no definition
