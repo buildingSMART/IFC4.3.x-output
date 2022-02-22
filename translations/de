@@ -9,586 +9,319 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
-"X-Crowdin-File-ID: 98\n"
+"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
+"X-Crowdin-File-ID: 100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-02-22 19:14\n"
 
-#:IFC.xml:48656
-msgid "IfcBoundaryCondition"
-msgstr "IfcGrenzbedingung"
+#:IFC.xml:49041
+msgid "IfcAdvancedFace"
+msgstr "IfcAdvancedFace"
 
-msgid "IfcBoundaryCondition_DEFINITION"
-msgstr "Die abstrakte Entität [[IfcBoundaryCondition]] ist der Supertyp aller Randbedingungen, die auf strukturelle Verbindungsdefinitionen angewendet werden können entweder direkt für die Verbindung e. . die Verbindung oder die Beziehung zwischen einem strukturellen Mitglied und der Verbindung. HINWEIS Die Randbedingungen werden in anderen Teilen verwendet hauptsächlich durch Beispiele von [[IfcStructuralConnection]] zur Definition von Unterstützungen und Instanzen von [[IfcRelConnectsStructuralMember]] zur Definition von Verbindungen zwischen strukturellen Mitgliedern und strukturellen Verbindungen . GESCHICHTE Neue Entität in IFC2x2."
+msgid "IfcAdvancedFace_DEFINITION"
+msgstr "Ein fortgeschrittenes Gesicht ist eine Spezialisierung einer Gesichteroberfläche, die die Anforderungen an die Verwendung bestimmter topologischer und geometrischer Darstellungselemente für die Definition der Gesichter erfüllen muss. Kanten und Ecken. Eine [[IfcAdvancedFace]] ist beschränkt auf eine Oberflächengeometrie des Typs [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] , haben eine [[IfcFaceOuterBound]] als Gesichtsbindung, mit Ausnahme von geschlossenen Oberflächen, haben alle Flächen, die an [[IfcEdgeLoop]] oder [[IfcVertexLoop]] gebunden werden müssen, alle Kanten für eine Kantengeometrie haben die Kantenkurvengeometrie auf [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] Bei geschlossenen Flächen mit periodischen Oberflächen, wie zylindrische oder kugelförmige Oberflächen, im folgenden die Kanten der geschlossenen oberfläche, im Falle einer zylindrischen Oberfläche die obere und untere kappe, auf die gleiche Instanz von [[IfcVertexPoint]] zweimal verweisen, wird kein [[IfcFaceOuterBound]] zur Verfügung gestellt, oder das [[IfcFaceOuterBound]] wird mit einem [[IfcSeamCurve]] am periodischen Ende der geschlossenen Oberfläche erstellt im Falle einer zylindrischen Oberfläche bei 0. 360. Grad zylindrische Oberfläche .. .. .. Zahlen ifcadvancedface 01. ng Abbildung 1 Verwendung von [[IfcCylindricalSurface]] als Grundfläche eines [[IfcAdvancedFace]] HINWEISE Entität, angepasst von fortgeschrittenen Gesichtern, definiert in ISO 10303 511. GESCHICHTE Neue Entität in IFC4 Formale Angebote Anwendbare Oberfläche Die Geometrie verwendet in der Definition des Gesichts soll eingeschränkt werden. Die Gesichtsgeometrie soll ein [[IfcElementarySurface]] , [[IfcSweptSurface]] oder [[IfcBSplineSurface]] sein. RequiresEdgeCurve Die Geometrie aller Begrenzungskanten des Gesichts soll vollständig als [[IfcEdgeCurve]] s definiert werden. ApplicableEdgeCurves Die Kurvenarten zur Definition der Kantengeometrie sollen auf [[IfcLine]] beschränkt sein [[IfcConic]] , [[IfcPolyline]] , oder [[IfcBSplineCurve]] ."
 
-#:IFC.xml:48657
-msgid "IfcBoundaryCondition_Name"
-msgstr "Name"
+#:IFC.xml:49044
+msgid "IfcBooleanChoose__B"
+msgstr "IfcBooleanChoose B"
 
-msgid "IfcBoundaryCondition_Name_DEFINITION"
-msgstr "Legt optional einen Namen für diese Randbedingung fest."
+#:IFC.xml:49052
+msgid "IfcClosedShell"
+msgstr "IfcClosedShell"
 
-#:IFC.xml:48663
-msgid "IfcBoundaryEdgeCondition"
-msgstr "IfcBegrenzungsbedingung"
+msgid "IfcClosedShell_DEFINITION"
+msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
 
-msgid "IfcBoundaryEdgeCondition_DEFINITION"
-msgstr "Beschreibt lineare elastische Bedingungen oder Verbindungsbedingungen. Anwendbarkeitskurve unterstützt und verbindet. IFC 2x4 ändert Attribute LinearStiffnessX Y Z umbenannt in TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 ändert alle Attributdatentypen, die von numerisch zu SELECT zwischen boolesch und numerisch geändert wurden. Auch die Steifigkeit kann nun negativ sein, beispielsweise um destabilisierende Effekte unter Randbedingungen zu erfassen. Die unendliche Steifigkeit ist nicht mehr gültig und darf nicht verwendet werden."
+#:IFC.xml:49057
+msgid "IfcConnectedFaceSet"
+msgstr "IfcConnectedFaceSet"
 
-#:IFC.xml:48664
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
-msgstr "RotationalStiffnessByLengthX"
+msgid "IfcConnectedFaceSet_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein angeschlossenes Gesichtersatz ist eine Gesichtermenge so dass die Domäne der Gesichter mit ihren Randkanten und Eckpunkten verbunden ist. HISTORY New Entity in IFC1.0 . Pec head Informelle Vorschläge 1. Die Vereinigung der Gesichter und ihrer Randschleifen soll arcweise verbunden sein."
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
-msgstr "Rotationale Steifigkeit über die X-Achse des Koordinatensystems, die von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49060
+msgid "IfcConnectedFaceSet_CfsFaces"
+msgstr "CfsFaces"
 
-#:IFC.xml:48669
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
-msgstr "RotationalStiffnessByLänge"
+msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
+msgstr "Der Satz der Gesichter im arktischen Sinne, der an gemeinsamen Kanten oder Eckpunkten verbunden ist."
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
-msgstr "Rotationaler Steifigkeitswert über die Y-Achse des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49072
+msgid "IfcEdge"
+msgstr "IfcEdge"
 
-#:IFC.xml:48674
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
-msgstr "RotationalStiffnessByLengthZ"
+msgid "IfcEdge_DEFINITION"
+msgstr "Ein [[IfcEdge]] definiert zwei Punkte, die topologisch verbunden sind. Die geometrische Darstellung der Verbindung zwischen den beiden Knoten erfolgt standardmäßig auf eine gerade Linie, wenn keine Kurvengeometrie mit dem Untertyp [[IfcEdgeCurve]] zugewiesen wird. Das [[IfcEdge]] kann daher zum Austausch von geraden Kanten ohne zugehörige Geometrie verwendet werden, die von [[IfcLine]] oder [[IfcPolyline]] Gedanke [[IfcEdgeCurve]] bereitgestellt wird. dgeGeometry . Kantendarstellung .. .. .. .. Zahlen ifcedge. ng Abbildung 1 Kantendarstellung EXAMPLE Abbildung 1 zeigt ein Beispiel an, bei dem die Grenzen des [[IfcEdge]] durch die EdgeStart und EdgeEnd angegeben werden. Der Ort innerhalb eines Koordinatenraums wird durch den [[IfcVertexPoint]] Typ für EdgeStart und EdgeEnd bestimmt. Da keine Kantengeometrie zugewiesen ist, wird standardmäßig eine geradlinige Linie verwendet, die dem Richtungssinn zustimmt. .extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kante ist das topologische Konstrukt entsprechend der Verbindung von zwei Ecken. abstrakter kann es für eine logische Beziehung zwischen zwei Punkten stehen. Die Domäne einer Kante, falls vorhanden, ist eine endliche, nicht selbstständig die offene Kurve in R M durchschneiden, das heißt, ein angeschlossener 1 dimensionaler Krümmer. Die Grenzen einer Kante sind zwei Eckpunkte, die nicht unterschieden werden müssen. Die Kante orientiert sich an der Auswahl ihrer Querrichtung und läuft von der ersten zum zweiten Scheitelpunkt. Wenn die beiden Punkte gleich sind, ist der Rand eine Selbstschleife. Die Domäne der Kante enthält keine Grenzen und 0 <unk> . Mit einer Kante verknüpft, kann eine geometrische Kurve sein, um den Rand in einem Koordinatenraum zu lokalisieren, der durch den Untertyp der Kantenkurve dargestellt wird. Die Kurve soll endlos und nicht selbstständig innerhalb des Bereichs der Kante kreuzen. Eine Kante ist ein Diagramm, so seine Vielfältigkeit M und Graphen Gen G e kann durch den Graph Traversal Algorithmus bestimmt werden. Seit M E 1 reduziert sich die Euler Gleichung 1 im Fall auf Bild .. . .. Zahlen ifcedge math1.gif wo V 1 oder 2, und G e 1 oder 0. Konkret soll der topologische Rand die Daten definieren, eine Kante zu befriedigen hat zwei Punkte Bild . .. .. Zahlen ifcedge math2.gif die Eckpunkte müssen nicht klar sein Bild . .. .. Zahlen ifcedge math3.gif Gleichung soll Bild .. .. .. .. Figuren ifcedge math4.gif NOTE Entity angepasst von Kante in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Rand hat Dimensionalität 1. 2. Der Umfang einer Kante soll endlich und nicht null sein."
 
-msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
-msgstr "Rotationaler Steifigkeitswert über die z-Achse des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49075
+msgid "IfcEdge_EdgeStart"
+msgstr "EdgeStart"
 
-#:IFC.xml:48679
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
-msgstr "TranslationalStiffnessByLengthX"
+msgid "IfcEdge_EdgeStart_DEFINITION"
+msgstr "Startpunkt Scheitelpunkt der Kante."
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in x-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49087
+msgid "IfcEdge_EdgeEnd"
+msgstr "EdgeEnd"
 
-#:IFC.xml:48684
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
-msgstr "TranslationalStiffnessByLänge"
+msgid "IfcEdge_EdgeEnd_DEFINITION"
+msgstr "Endpunkt des Kantenpunktes. Der gleiche Scheitelpunkt kann sowohl für EdgeStart als auch für EdgeEnd verwendet werden."
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in y Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49123
+msgid "IfcEdgeCurve"
+msgstr "IfcEdgekurve"
 
-#:IFC.xml:48689
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
-msgstr "TranslationalStiffnessByLengthZ"
+msgid "IfcEdgeCurve_DEFINITION"
+msgstr "Ein [[IfcEdgeCurve]] definiert zwei Punkte, die topologisch verbunden sind, einschließlich der geometrischen Darstellung der Verbindung. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Kante zu schneiden. Es gibt keine Notwendigkeit, geometrisch zu schneiden die Kante, um die Topologie. Beispiel .. .. .. Zahlen ifcedgecurve. ng Abbildung 1 Kantenkurve EXAMPLE Abbildung 1 illustriert ein Beispiel, in dem die Kantengeometrie durch eine unbegrenzte Kurve gegeben wird, hier [[IfcCircle]]. Die Grenzen werden von EdgeStart und EdgeEnd bereitgestellt, die topologische Richtung des [[IfcEdgeCurve]] wendet sich gegen die Richtung des [[IfcCircle]] von SameSense FALSE. .extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenkurve ist ein spezieller Untertyp mit einer vollständig definierten Geometrie. Die Geometrie wird durch die Verknüpfung der Kante mit einer Kurve definiert, die unbegrenzt sein kann. Da die topologischen und geometrischen Richtungen abgelehnt werden können, mit einem Indikator identifiziert wird, ob Kanten- und Kurvenrichtung übereinstimmen oder dagegen sind. Der boolesche Wert gibt an, ob die Kurvenrichtung mit TRUE übereinstimmt oder in der entgegengesetzten Richtung FALSE zur Kantenrichtung ist. Jede Geometrie, die mit den Eckpunkten der Kante verbunden ist, entspricht der Kantengeometrie. Mehrere Kanten können die gleiche Kurve referenzieren. HINWEISE Entität, angepasst von Kantenkurve in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne der Kantenkurve ist formell als Domäne ihrer Kantengeometrie definiert, wie sie von den Eckpunkten beschnitten wird. Diese Domäne enthält nicht die Eckpunkte. 2. Eine Kantenkurve hat nicht Null endlichen Umfang. 3. Eine Kantenkurve ist ein Krümmer. 4. Eine Kantenkurve ist arktisch verbunden. 5. Der Kantenstart ist kein Teil der Kantendomäne. 6. Das Kantenende ist kein Teil der Kantendomäne. 7. Wirbelgeometrie soll mit der Kantengeometrie übereinstimmen."
 
-msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in z-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:12165
+msgid "IfcEdgeCurve_EdgeGeometry"
+msgstr "Kantengeometrie"
 
-#:IFC.xml:48696
-msgid "IfcBoundaryFaceCondition"
-msgstr "IfcBegrenzungsbedingung"
+msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
+msgstr "Die Kurve, die die Form und räumliche Position der Kante definiert. Diese Kurve kann unbegrenzt sein und wird implizit durch die Eckpunkte der Kante, die die Randdomäne definiert, getrimmt. Mehrere Kanten können die gleiche Kurve referenzieren."
 
-msgid "IfcBoundaryFaceCondition_DEFINITION"
-msgstr "Beschreibt lineare elastische Supportbedingungen oder Verbindungsbedingungen. Anwendbarkeit Oberfläche unterstützt und verbindet. IFC 2x4 ändert Attribute LinearStiffnessX Y Z umbenannt in TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 ändert alle Attributdatentypen, die von numerisch zu SELECT zwischen boolesch und numerisch geändert wurden. Auch die Steifigkeit kann nun negativ sein, beispielsweise um destabilisierende Effekte unter Randbedingungen zu erfassen. Die unendliche Steifigkeit ist nicht mehr gültig und darf nicht verwendet werden."
+#:IFC.xml:49124
+msgid "IfcEdgeCurve_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:48697
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
-msgstr "TranslationalStiffnessByAreaX"
+msgid "IfcEdgeCurve_SameSense_DEFINITION"
+msgstr "Dieses logische Flag gibt an, ob TRUE oder nicht FALSE die Sinne der Kante und die Kurve der Kantengeometrie gleich sind. Der Sinn für eine Kante ist vom Kantenstartpunkt bis zum Kantenpunkt der Sinn für eine Kurve in Richtung der Erhöhung des Parameters."
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in x-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49132
+msgid "IfcEdgeLoop"
+msgstr "IfcEdgeLoop"
 
-#:IFC.xml:48702
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
-msgstr "TranslationalStiffnessByAreaY"
+msgid "IfcEdgeLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Kantenschleife ist eine Schleife mit einem nicht null-weiten Ausmaß. Es ist ein Pfad, in dem die Anfangs- und Endpunkte gleich sind. Ihre Domäne, falls vorhanden, ist eine geschlossene Kurve. Eine Kantenschleife kann sich überlappen. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. Die Gattung des [[IfcEdgeLoop]] soll 1 oder größer sein. 2. Die Euler-Formel soll eine befriedigende Anzahl der Genen der Ränder 1 3 sein. Es darf kein Rand mehr als einmal von demselben [[IfcEdgeLoop]] mit demselben Sinn referenziert werden. Zu diesem Zweck wird eine Kante, die keine Orientierung ist, mit dem Sinn TRUE als referenziert."
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in y Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49140
+msgid "IfcEdgeLoop_EdgeList"
+msgstr "Kantenliste"
 
-#:IFC.xml:48707
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
-msgstr "TranslationalStiffnessByAreaZ"
+msgid "IfcEdgeLoop_EdgeList_DEFINITION"
+msgstr "Eine Liste von orientierten Randeinheiten, die zu diesem Pfad zusammengefasst werden."
 
-msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in z-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49133
+msgid "IfcEdgeLoop_Ne"
+msgstr "Ne"
 
-#:IFC.xml:48714
-msgid "IfcBoundaryNodeCondition"
-msgstr "IfcBoundaryNodeCondition"
+msgid "IfcEdgeLoop_Ne_DEFINITION"
+msgstr "Die Anzahl der Elemente in der Kantenliste."
 
-msgid "IfcBoundaryNodeCondition_DEFINITION"
-msgstr "Beschreibt lineare elastische Supportbedingungen oder Verbindungsbedingungen. Anwendbarkeit Point unterstützt und verbindet. HISTORY New entity in IFC2x2. IFC 2x4 ändert Attribute LinearStiffnessX Y Z umbenannt in TranslationalStiffnessX Y Z . hange ifc2x4 IFC4 CHANGE Alle Attributdatentypen wurden von numerisch zu SELECT zwischen boolesch und numerisch. Auch die Steifigkeit kann nun negativ sein, beispielsweise um destabilisierende Effekte unter Randbedingungen zu erfassen. Die unendliche Steifigkeit ist nicht mehr gültig und darf nicht verwendet werden."
+#:IFC.xml:49152
+msgid "IfcFace"
+msgstr "IfcFace"
 
-#:IFC.xml:48715
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
-msgstr "RotationalStiffnessX"
+msgid "IfcFace_DEFINITION"
+msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
-msgstr "Rotationale Steifigkeit über die X-Achse des Koordinatensystems, die von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:27097
+msgid "IfcFace_HasTextureMaps"
+msgstr "HasTextureMaps"
 
-#:IFC.xml:48720
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
-msgstr "RotationalStiffnessY"
+msgid "IfcFace_HasTextureMaps_DEFINITION"
+msgstr "HasTextureMaps"
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
-msgstr "Rotationaler Steifigkeitswert über die Y-Achse des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49155
+msgid "IfcFace_Bounds"
+msgstr "Grenzen"
 
-#:IFC.xml:48725
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
-msgstr "RotationalStiffnessZ"
+msgid "IfcFace_Bounds_DEFINITION"
+msgstr "Grenzen des Gesichts."
 
-msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
-msgstr "Rotationaler Steifigkeitswert über die z-Achse des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49167
+msgid "IfcFaceBound"
+msgstr "IfcFaceBound"
 
-#:IFC.xml:48730
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
-msgstr "TranslationalStiffnessX"
+msgid "IfcFaceBound_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face bound ist eine Schleife, die zum Bewegen eines Gesichts verwendet werden soll. HINWEISE Entität, angepasst an Gesichtsbindung definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.0"
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in x-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49175
+msgid "IfcFaceBound_Bound"
+msgstr "Verbunden"
 
-#:IFC.xml:48735
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
-msgstr "TranslationalStiffnessY"
+msgid "IfcFaceBound_Bound_DEFINITION"
+msgstr "Die Schleife, die als Gesichtsgrenze verwendet wird."
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in y Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49168
+msgid "IfcFaceBound_Orientation"
+msgstr "Ausrichtung"
 
-#:IFC.xml:48740
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
-msgstr "TranslationalStiffnessZ"
+msgid "IfcFaceBound_Orientation_DEFINITION"
+msgstr "Dies zeigt an, ob TRUE oder nicht FALSE die Schleife den gleichen Sinn hat, wenn sie verwendet wird, um das Gesicht zu binden wie bei der ersten Definition. Wenn Sinn FALSE ist, werden die Sinne aller Komponentenkanten implizit umkehrt, wenn sie im Gesicht verwendet werden."
 
-msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
-msgstr "Übersetzender Steifigkeitswert in z-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49187
+msgid "IfcFaceOuterBound"
+msgstr "IfcFaceOuterBound"
 
-#:IFC.xml:48747
-msgid "IfcBoundaryNodeConditionWarping"
-msgstr "IfcBoundaryNodeConditionWarping"
+msgid "IfcFaceOuterBound_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carry the additional semantics of defining a outer boundary on the face. Es darf nicht mehr als eine Grenze eines Gesichts dieser Art sein. HINWEISE Entität, angepasst an die Oberfläche nach ISO 10303 42. HISTORY Neue Entität in IFC1.0"
 
-msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
-msgstr "Beschreibt lineare elastische Stützbedingungen oder Verbindungsbedingungen, einschließlich linearer elastischer Verformungsstützen und -verbindungen. HISTORY New Entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Alle Attributdatentypen wurden von numerisch zu SELECT zwischen boolesch und numerisch. Auch die Steifigkeit kann nun negativ sein, beispielsweise um destabilisierende Effekte unter Randbedingungen zu erfassen. Die unendliche Steifigkeit ist nicht mehr gültig und darf nicht verwendet werden."
+#:IFC.xml:49190
+msgid "IfcFaceSurface"
+msgstr "IfcFaceOberfläche"
 
-#:IFC.xml:48748
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
-msgstr "Warpingsteifigkeit"
+msgid "IfcFaceSurface_DEFINITION"
+msgstr "Die [[IfcFaceSurface]] definiert die zugrunde liegende Geometrie der zugehörigen Oberfläche auf dem Gesicht. HINWEIS: Die Topologie wird verwendet, um die Geometrie der Oberfläche zu schneiden. Es besteht keine Notwendigkeit, die Oberfläche geometrisch an die Topologie anzupassen. xtDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Oberflächenoberfläche ist ein Untertyp von Gesicht, in dem die Geometrie durch eine zugehörige Oberfläche definiert wird. Der Teil der Oberfläche, der vom Gesicht verwendet wird, soll als offene Scheibe einbettbar sein, eventuell mit Löchern. Allerdings muss die Vereinigung des Gesichts mit den Kanten und den Eckpunkten seiner Randschleifen nicht in die Ebene eingebettet sein. Es kann zum Beispiel eine ganze Sphäre oder einen ganzen Torus umfassen. Da sowohl eine Fläche als auch eine geometrische Oberfläche normale Richtungen definiert haben, ein BOOLEAN Flag wird verwendet, um anzugeben, ob die Oberfläche normal mit TRUE übereinstimmt oder ob FALSE die normale Richtung des Gesichts ablehnt. Die Geometrie, die mit jeder Komponente der Schleifen des Gesichts verbunden ist, soll mit der Oberflächengeometrie übereinstimmen. in dem Sinne, dass die Domänen aller Scheitelpunkte und Kantenkurven in der Gesichtsgeometrie enthalten sind. Eine Oberfläche kann von mehreren Flächen referenziert werden. HISTORY New entity in IFC2x .spec head Informal Propositions 1. Die Domäne der Oberfläche ist formell als Domäne ihrer Gesichtsgeometrie definiert, wie sie von den Schleifen beschnitten wird, diese Domain enthält nicht die Grenzschleifen. 2. Eine Oberfläche hat nicht null Finite Ausmaß. 3. Eine Oberfläche ist ein Krümmer. 4. Eine Flächenoberfläche ist in arktischer Hinsicht verbunden. 5. Eine Oberflächenoberfläche hat die Gattung 0. 6. Die Schleifen sind nicht Teil der Gesichtsdomäne 7. Die Schleifengeometrie soll mit der Gesichtsgeometrie übereinstimmen. Dies bedeutet, dass alle Kantenkurven oder Scheitelpunkte, die bei der Definition der Schleifen an der Oberfläche verwendet werden, auf der Gesichtsgeometrie liegen sollen. 8. Die Schleifen des Gesichts werden nicht durchschneiden."
 
-msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
-msgstr "Definiert den Haltbarkeitswert."
+#:IFC.xml:13193
+msgid "IfcFaceSurface_FaceSurface"
+msgstr "Gesichtsfläche"
 
-#:IFC.xml:48755
-msgid "IfcFailureConnectionCondition"
-msgstr "IfcFailureConnectionBedingungen"
+msgid "IfcFaceSurface_FaceSurface_DEFINITION"
+msgstr "Die Oberfläche, die die innere Form des Gesichts definiert. Die Domäne des Gesichts wird durch diese Oberfläche und die Begrenzungsschleifen in dem geerbten Attribut SELF FaceBounds definiert."
 
-msgid "IfcFailureConnectionCondition_DEFINITION"
-msgstr "Definiert Kräfte, bei denen eine Unterstützung oder Verbindung fehlschlägt. Anwendbarkeitspunkt unterstützt und verbindet ihn. HISTORY Neue Entität in IFC2x2."
+#:IFC.xml:49191
+msgid "IfcFaceSurface_SameSense"
+msgstr "SameSense"
 
-#:IFC.xml:48756
-msgid "IfcFailureConnectionCondition_CompressionFailureX"
-msgstr "KompressionFailureX"
+msgid "IfcFaceSurface_SameSense_DEFINITION"
+msgstr "Diese Flagge zeigt an, ob der Sinn der normalen Oberfläche mit TRUE übereinstimmt, oder ist gegen FALSE , den Sinn der topologischen normal auf das Gesicht."
 
-msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
-msgstr "Kompressionskraft in x-Richtung, was zu einem Verbindungsfehler führt."
+#:IFC.xml:49199
+msgid "IfcLoop"
+msgstr "IfcLoop"
 
-#:IFC.xml:48761
-msgid "IfcFailureConnectionCondition_CompressionFailureY"
-msgstr "KompressionFailureY"
+msgid "IfcLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Schleife ist ein topologisches Gebilde, das aus einem einzigen Scheitel gebaut wurde, oder durch die Verbindung von verbundenen Kanten oder linearen Segmenten, die am selben Scheitelpunkt beginnen und enden. Es wird in der Regel verwendet, um ein Gesicht auf einer Oberfläche zu binden. Eine Schleife hat eine Dimensionalität von 0 oder 1. Die Domäne einer 0 dimensionalen Schleife ist ein einzelner Punkt. Die Domäne einer 1-dimensionalen Schleife ist eine verbundene, orientierte Kurve, muss aber nicht vielfältig sein. Da die Schleife ein Kreis ist, ist die Position des Anfangspunktes willkürlich. Die Domäne der Schleife enthält ihre Grenzen, ein 0 <unk> . Eine Schleife wird durch einen einzelnen Scheitel oder durch eine geordnete Sammlung von orientierten Kanten oder durch eine geordnete Punktesammlung repräsentiert. Eine Schleife ist ein Diagramm, so M und die Graphen G l können durch den Graph Traversal Algorithmus bestimmt werden. Seit M 1, die Euler Gleichung 1 reduziert in diesem Fall auf Bild .. .. .. Zahlen ifcloop math1. wenn V und E l sind die Anzahl der eindeutigen Knoten und orientiert Kanten in der Schleife und G l ist die Gattung der Schleife. HINWEISE Entität, angepasst von Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Eine Schleife hat einen endlichen Umfang. 2. Eine Schleife beschreibt eine geschlossene topologische Kurve mit zufälligen Anfangs- und Endpunkten."
 
-msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
-msgstr "Kompressionskraft in y Richtung führt zu einem Versagen der Verbindung."
+#:IFC.xml:49202
+msgid "IfcLoopHeadToTail__ALoop"
+msgstr "IfcLoopHeadToTail ALoop"
 
-#:IFC.xml:48766
-msgid "IfcFailureConnectionCondition_CompressionFailureZ"
-msgstr "CompressionFailureZ"
+#:IFC.xml:49210
+msgid "IfcOpenShell"
+msgstr "IfcOpenShell"
 
-msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
-msgstr "Kompressionskraft in z-Richtung führt zu einem Verbindungsfehler."
+msgid "IfcOpenShell_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Seine Domäne ist, wenn auch gegenwärtig, eine endliche, verbundene, zweimalige mit Grenze, aber nicht eine geschlossene Oberfläche. Man kann sie als geschlossene Schale mit einem oder mehreren Löchern in der Schale betrachten. Die Domäne einer offenen Shell erfüllt 0 <unk> 1. Eine offene Shell ist funktionell allgemeiner als ein Gesicht, da ihre Domäne Griffe haben kann. Die Shell wird durch eine Sammlung von Gesichtern definiert, die orientiert sein können. Der Gesichtssinn nach Berücksichtigung der Orientierung stimmt mit der unten definierten Shell überein. Die Orientierung kann direkt als BOOLEAN-Attribut eines orientierten Gesichts geliefert werden oder TRUE standardmäßig sein, wenn das Shell-Mitglied ein Gesicht ohne Orientierungsmerkmal ist. Die folgenden kombinatorischen Beschränkungen für offene Shells und geometrische Einschränkungen ihrer Domänen sind entworfen, zusammen mit den informellen Anträgen, um sicherzustellen, dass jede Domäne, die mit einer offenen Shell verbunden sind, ein Orientierungsmanöver ist. Jede Gesichtsreferenz soll einmalig sein, eine offene Shell soll mindestens ein Gesicht haben. Ein bestimmtes Gesicht kann in mehr als einer offenen Shell existieren. Die Grenze einer offenen Shell besteht aus den Kanten, auf die nur einmal die Gesichtsgrenzschleifen ihrer Gesichter verweisen, zusammen mit allen ihren Ecken. Die Domäne einer offenen Muschel, wenn vorhanden, enthält alle Kanten und Eckpunkte ihrer Gesichter. HINWEIS: Dies unterscheidet sich leicht von der Definition einer Gesichterdomäne, die keine ihrer Grenzen enthält. Zum Beispiel kann eine Gesichts-Domain ein isoliertes Punkt- oder Liniensegment ausschließen. Eine offene Shell-Domain darf dies nicht tun. Siehe den Algorithmus für die Berechnung unten. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Jede Kante soll genau zweimal von den Gesichtsgrenzen des Gesichts referenziert werden. Jede orientierte Kante soll einzigartig sein. 3. Kein Rand soll von mehr als zwei Gesichtern referenziert werden. 4. Unterschiedliche Gesichter der Shell kreuzen sich nicht, sondern können Kanten oder Knoten teilen. 5. Unterschiedliche Kanten schneiden sich nicht ab, sondern können die Eckpunkte teilen. 6. Die Schleifen der Schale sind keine Mischung aus Poly-Schleifen und anderen Schleifentypen. Beachten Sie, dass dies angegeben ist, da nur Poly-Schleife als Gesichterkennung definiert ist. Die geschlossene Schale soll ein in arktischer Richtung angeordneter 2 Krümmer sein."
 
-#:IFC.xml:48771
-msgid "IfcFailureConnectionCondition_TensionFailureX"
-msgstr "SpannungFailureX"
+#:IFC.xml:49214
+msgid "IfcOrientedEdge"
+msgstr "IfcOrientedRand"
 
-msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
-msgstr "Spannkraft in x-Richtung, was zum Versagen der Verbindung führt."
+msgid "IfcOrientedEdge_DEFINITION"
+msgstr "Die [[IfcOrientedEdge]] repräsentiert ein [[IfcEdge]] mit einem angewendeten Orientierungszeichen. Es erlaubt die Wiederverwendung des gleichen [[IfcEdge]], wenn es genau zweimal durchquert wird, einmal vorwärts und einmal rückwärts. HINWEIS: Der Sinn des normalen [[IfcFace]] wird ausschließlich von den Kanten bestimmt. Wenn alle Kanten des Gesichts entgegen dem Uhrzeigersinn nach den Kantenausrichtungen verbunden sind, zeigt das Gesicht normal nach außen. Die Normale der zugrunde liegenden [[IfcFaceSurface]] repräsentiert die Geometrie des Gesichts hierfür, hat keine Relevanz. Der Zweck des [[IfcFaceSurface]]. ameSense Attribut ist es, zusätzliche Informationen zu Überprüfungszwecken zu geben. SameSense TRUE bedeutet, dass die Oberfläche normal und das Gesicht normal sind die gleichen, SameSense FALSE bedeutet, dass sie in entgegengesetzter Richtung sind. Der wiederverwendete Rand mit einer geometrischen Darstellung als [[IfcEdgeCurve]] definiert die Kante im 3D-Koordinatenraum. In einigen Fällen, insbesondere bei der Verwendung von elementaren oder gefegten Oberflächen, besteht die Gefahr einer ungenauen Kartierung des 3D-x, y, z [[IfcEdgeCurve]] auf die angrenzenden Oberflächen, um die Grenzen dieser Oberflächen zu bestimmen. Die optionale CurveOnSurface definiert den 2D u, v Rand innerhalb des parametrischen Raumes der Oberfläche. Es könnte verwendet werden, um die Richtigkeit der Zuordnung des 3D [[IfcEdgeCurve]] auf dieser Oberfläche zu ermitteln. Beispiel .. .. .. Zahlen ifcadvancedbrep 02. ng Abbildung 1 Kurve auf der Oberflächendarstellung einer EXAMPLE Abbildung 1 illustriert ein Beispiel, bei dem neben der Kurvengeometrie der [[IfcEdgeCurve]] die Kurvenfläche zur Verfügung gestellt wird. .extDef NOTE Definition nach ISO CD 10303 42 1992 Eine orientierte Kante ist ein Rand aus einer anderen Kante konstruiert und enthält ein BOOLEAN-Richtungsflagge, um anzugeben, ob die Ausrichtung des konstruierten Kantes mit der Ausrichtung der ursprünglichen Kante übereinstimmt. Außer vielleicht Orientierung, entspricht die Ausrichtung der Kante der ursprünglichen Kante. Eine gängige Praxis ist solide Modellierungssysteme ist eine Entität, die die Verwendung oder Durchquerung einer Kante darstellt. Diese Benutzungseinheit repräsentiert ausdrücklich die Anforderung in einem vielseitigen Festkörper, dass jede Kante genau zweimal durchquert werden muss, einmal in jede Richtung. Die Einsatzfunktionalität wird durch die kantenorientierte Subtyp-Kante zur Verfügung gestellt: NOTE Entity angepasst an die Ausrichtung von ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE Das Attribut CurveOnSurface wurde hinzugefügt."
 
-#:IFC.xml:48776
-msgid "IfcFailureConnectionCondition_TensionFailureY"
-msgstr "Spannungsausfall Y"
+#:IFC.xml:49099
+msgid "IfcOrientedEdge_EdgeElement"
+msgstr "Kantenelement"
 
-msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
-msgstr "Spannungskraft in y führt zu einem Versagen der Verbindung."
+msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
+msgstr "Kantenentität verwendet, um diesen orientierten Rand zu konstruieren."
 
-#:IFC.xml:48781
-msgid "IfcFailureConnectionCondition_TensionFailureZ"
-msgstr "SpannungFailureZ"
+#:IFC.xml:49215
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
+msgstr "SELF IfcEdgeEnd"
 
-msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
-msgstr "Spannkraft in Z-Richtung führt zu einem Versagen der Verbindung."
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeEnd"
 
-#:IFC.xml:48788
-msgid "IfcModulusOfRotationalSubgradeReactionSelect"
-msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
+#:IFC.xml:49219
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
+msgstr "SELF IfcEdgeStart"
 
-#:IFC.xml:48789
-msgid "IfcModulusOfSubgradeReactionSelect"
-msgstr "IfcModulusOfSubgradeReactionSelect"
+msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
+msgstr "SELF [[IfcEdge]].EdgeStart"
 
-#:IFC.xml:48790
-msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
-msgstr "IfcModulusOfTranslationalSubgradeReactionSelect"
+#:IFC.xml:49223
+msgid "IfcOrientedEdge_Orientation"
+msgstr "Ausrichtung"
 
-#:IFC.xml:48791
-msgid "IfcRotationalStiffnessSelect"
-msgstr "IfcRotationalStiffnessSelect"
+msgid "IfcOrientedEdge_Orientation_DEFINITION"
+msgstr "BOOLEAN, Wenn TRUE die verwendete topologische Ausrichtung mit der Orientierung vom Startpunkt bis zum Endpunkt des Kantenelementes übereinstimmt. Falls FALSE andernfalls der Fall ist."
 
-#:IFC.xml:48792
-msgid "IfcSlippageConnectionCondition"
-msgstr "IfcSlippageConnectionbedingung"
+#:IFC.xml:49242
+msgid "IfcPath"
+msgstr "IfcPath"
 
-msgid "IfcSlippageConnectionCondition_DEFINITION"
-msgstr "Beschreibt Slippage unter Bedingungen der Unterst�tzung oder Verbindungsbedingungen. Slippage bedeutet, dass eine relative Verschiebung in einer Unterstützung oder Verbindung auftreten kann, bevor Unterstützung oder Verbindungsreaktionen ausgelöst werden. Applicability Point unterstützt und verbindet und unterstützt Verbindungen mit Kurven, unterstützt und verbindet Oberflächenunterstützung und Verbindungen."
+msgid "IfcPath_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Ein Pfad ist ein topologisches Gebilde, das aus einer bestellten Sammlung von orientierten Kanten besteht. so dass der Kantenpunkt jeder Kante mit dem Kantenende seines Vorgängers übereinstimmt. Der Pfad wird vom Kantenstart der ersten Kante bis zum Kantenende der letzten Kante sortiert. Der BOOLEAN-Wertesinn in der Ausrichtung zeigt an, ob die Kantenrichtung mit der Richtung des Pfades TRUE übereinstimmt oder die entgegengesetzte Richtung FALSE ist. Eine einzelne Kante kann nur einmal durch einen individuellen Pfad referenziert werden. Eine Kante kann unabhängig von einem Pfad existieren, NOTE Entität, angepasst an den Pfad ISO 10303 42. HISTORY Neue Entität in IFC2.0 .spec Kopf Informelle Vorschläge 1. Ein Pfad hat Dimensionalität 1. 2. Ein Pfad ist arktisch verbunden. 3. Die Kanten des Pfades überschneiden, außer bei den gängigen Ecken. 4. Ein Pfad hat einen endlichen, nicht null-weiten Umfang."
 
-#:IFC.xml:48793
-msgid "IfcSlippageConnectionCondition_SlippageX"
-msgstr "SlippageX"
+#:IFC.xml:49230
+msgid "IfcPath_EdgeList"
+msgstr "Kantenliste"
 
-msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
-msgstr "Slippage in x Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+msgid "IfcPath_EdgeList_DEFINITION"
+msgstr "Die Liste der Orientierungskanten, die zu diesem Pfad verkettet werden."
 
-#:IFC.xml:48798
-msgid "IfcSlippageConnectionCondition_SlippageY"
-msgstr "SlippageY"
+#:IFC.xml:49245
+msgid "IfcPathHeadToTail__APath"
+msgstr "IfcPathHeadToTail APath"
 
-msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
-msgstr "Slippage in y Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:49253
+msgid "IfcPolyLoop"
+msgstr "IfcPolyLoop"
 
-#:IFC.xml:48803
-msgid "IfcSlippageConnectionCondition_SlippageZ"
-msgstr "SlippageZ"
+msgid "IfcPolyLoop_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 Eine Poly-Schleife ist eine Schleife mit geraden Kanten, die eine planare Region im Weltraum begrenzen. Eine Poly-Schleife ist eine Schleife der Gattung 1, bei der die Schleife durch eine geordnete koplanare Sammlung von Punkten repräsentiert wird, die die Eckpunkte der Schleife bilden. Die Schleife besteht aus geraden Liniensegmenten, die einen Punkt in der Sammlung zum erfolgreichen Punkt der Sammlung verbinden. Das Schlussteil ist vom letzten bis zum ersten Punkt der Sammlung. Die Richtung der Schleife ist in die Richtung der Liniensegmente. Eine Poly-Schleife soll den folgenden topologischen Zwängen entsprechen, die die Schleife hat die Gattung eins. die folgende Gleichung soll zufrieden sein Bild .. .. .. .. Zahlen ifcpolyloop math1. , wenn das [[IfcPolyLoop]] immer geschlossen ist und das letzte Segment aus dem letzten [[IfcCartesianPoint]] in der Liste der Polygon s zum ersten [[IfcCartesianPoint]] stammt. Daher soll der erste Punkt nicht am Ende der Liste wiederholt werden, auch nicht durch Verweis auf die selbe Instanz noch eine zusätzliche Instanz von [[IfcCartesianPoint]] zu verwenden, die die Koordinaten als ersten Punkt hat. HINWEIS Diese Einheit besteht in erster Linie zur Erleichterung der effizienten Kommunikation von facettierten B-Rep-Modellen. HINWEISE Entität, angepasst aus Poly-Schleife definiert in ISO 10303 42. HISTORY New Entity in IFC1. .spec Kopf Informelle Vorschläge 1. Alle Punkte im Polygon, die die Poly-Schleife definieren, sind Coplanar. 2. Der erste und letzte Polygon soll sich nach Wert unterscheiden."
 
-msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
-msgstr "Slippage in z-Richtung des Koordinatensystems, das von der Instanz definiert wird, die dieses Ressourcen-Objekt verwendet."
+#:IFC.xml:11782
+msgid "IfcPolyLoop_Polygon"
+msgstr "Polygon"
 
-#:IFC.xml:48810
-msgid "IfcStructuralConnectionCondition"
-msgstr "IfcStructuralConnectionbedingung"
+msgid "IfcPolyLoop_Polygon_DEFINITION"
+msgstr "Liste der Punkte, die die Schleife definieren. Es gibt keine wiederholten Punkte in der Liste."
 
-msgid "IfcStructuralConnectionCondition_DEFINITION"
-msgstr "Beschreiben Sie selten benötigte Verbindungseigenschaften. HISTORY Neue Entität in IFC2x2."
+#:IFC.xml:49256
+msgid "IfcShell"
+msgstr "IfcShell"
 
-#:IFC.xml:48811
-msgid "IfcStructuralConnectionCondition_Name"
-msgstr "Name"
+#:IFC.xml:49257
+msgid "IfcSubedge"
+msgstr "IfcSubedge"
 
-msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
-msgstr "Definiert optional einen Namen für diese Verbindungsbedingung."
+msgid "IfcSubedge_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A subedge ist eine Kante, deren Domain ist ein angeschlossener Teil der Domäne einer bestehenden Kante. Die topologischen Zwänge auf einem Untergrund sind identisch mit denen an einer Kante. HISTORY New Entity in IFC2x2 . pec Kopf Informelle Vorschläge 1. Die Domäne der Unterseite ist formell definiert als die Domäne des übergeordneten Randes, wie durch den subedge getrimmt starten Scheitelpunkt und subbedge End-Scheitelpunkt. (2) Der Startpunkt und der Endpunkt sollen innerhalb der Vereinigung der Domänen der Eckpunkte des Mutterrandes und der Domäne des Mutterrandes liegen."
 
-#:IFC.xml:48817
-msgid "IfcStructuralLoad"
-msgstr "IfcStructuralLoad"
+#:IFC.xml:49111
+msgid "IfcSubedge_ParentEdge"
+msgstr "Elternkante"
 
-msgid "IfcStructuralLoad_DEFINITION"
-msgstr "Diese abstrakte Entität ist der Supertyp aller Lastaktionen oder Reaktionen oder bestimmter Anforderungen, die sich aus der Strukturanalyse ergeben oder bestimmte Bestimmungen, die die Strukturanalyse beeinflussen. GESCHICHTE Neue Entität in IFC2x2."
+msgid "IfcSubedge_ParentEdge_DEFINITION"
+msgstr "Die Kante oder das Subedge, die das Subed enthält."
 
-#:IFC.xml:48818
-msgid "IfcStructuralLoad_Name"
-msgstr "Name"
+#:IFC.xml:49260
+msgid "IfcTopologicalRepresentationItem"
+msgstr "IfcTopologicalRepresentationItem"
 
-msgid "IfcStructuralLoad_Name_DEFINITION"
-msgstr "Legt optional einen Namen für diese Last fest."
+msgid "IfcTopologicalRepresentationItem_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Die topologische Repräsentation ist der Supertyp für alle topologischen Repräsentation Elemente in der Geometrie. HINWEISE Entität, angepasst von topologischen Repräsentation Element definiert in ISO 10303 42. HISTORY Neue Entität in IFC1.5"
 
-#:IFC.xml:48824
-msgid "IfcStructuralLoadConfiguration"
-msgstr "IfcStructuralLoadKonfiguration"
+#:IFC.xml:49263
+msgid "IfcVertex"
+msgstr "IfcVertex"
 
-msgid "IfcStructuralLoadConfiguration_DEFINITION"
-msgstr "Diese Klasse kombiniert eine oder mehrere Last- oder Ergebniswerte in einer 1 oder 2 dimensionalen Konfiguration. GESCHICHTE Neue Entität in IFC4. .spec Kopf Informelle Vorschläge 1. Alle Elemente in Werten müssen vom gleichen Typ sein. 2. Wenn die Lasten oder Ergebnisse eine Kurvenaktivität umfassen, müssen jeweils eine dimensionale Position angegeben werden, die lokal entlang der Kurve gemessen wird. Der Ort darf die Grenzen der Kurvenwirksamkeit nicht überschreiten. Die Lastproben und die entsprechenden Standorte werden aufsteigend angegeben. Wenn die Lasten oder Ergebnisse eine Oberflächenaktivität beinhalten, müssen 2 dimensionale Orte angegeben werden, gemessen in der Oberflächenaktivität s lokale x und y Richtungen. Der Standort darf die Grenzen der Oberflächenaktivität nicht überschreiten. HINWEIS: Im 2-dimensionalen Fall gibt es keine Bestellanforderungen, aber der 1-dimensionale Fall muss aus Gründen der Einfachheit räumlich bestellt werden."
+msgid "IfcVertex_DEFINITION"
+msgstr ".extDef NOTE Definition gemäß ISO CD 10303 42 1992 A vertex ist das topologische Konstrukt entsprechend einem Punkt. Es hat Dimensionalität 0 und Umfang 0. Die Domäne eines Scheitelpunktes ist, wenn vorhanden, ein Punkt in m dimensionalen realen Raum R M. Dies wird durch den Scheitelpunkt Untertyp repräsentiert. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. Der Scheitel hat Dimensionalität 0. Dies ist eine grundlegende Eigenschaft des Scheitelpunkts. 2. Der Umfang eines Scheitelpunkts ist auf Null definiert."
 
-#:IFC.xml:48832
-msgid "IfcStructuralLoadConfiguration_Values"
-msgstr "Werte"
+#:IFC.xml:49278
+msgid "IfcVertexLoop"
+msgstr "IfcVertexschleife"
 
-msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
-msgstr "Liste der Last- oder Ergebniswerte."
+msgid "IfcVertexLoop_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Eine Vertex-Schleife ist eine Schleife aus Null Gattung, die aus einem einzelnen Scheitelpunkt besteht. Ein Scheitelpunkt kann unabhängig von einer Vertex-Schleife existieren. Die topologischen Daten sollen die folgende Einschränkung Bild .. .. .. Figuren ifcvertexloop math1.gif NOTE Entity adaptiert aus Vertex Schleife definiert in ISO 10303 42. HISTORY New entity in IFC2x2. .spec Kopf Informelle Vorschläge 1. Eine Kegelschleife hat Null Umfang und Dimensionalität. 2. Die Kegelschleife hat die Gattung 0."
 
-#:IFC.xml:48825
-msgid "IfcStructuralLoadConfiguration_Locations"
-msgstr "Standorte"
+#:IFC.xml:49266
+msgid "IfcVertexLoop_LoopVertex"
+msgstr "Loop-Vertex"
 
-msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
-msgstr "Standorte der Lastmuster oder Ergebnismuster, die innerhalb des lokalen Koordinatensystems durch die Instanz definiert werden, die dieses Ressourcenobjekt verwendet. Jedes Element in der Liste der Standorte bezieht sich auf das Element der Werteliste im gleichen Listenindex. Dieses Attribut ist optional für Konfigurationen, in denen die Standorte implizit aus höheren Leveldefinitionen bekannt sind."
+msgid "IfcVertexLoop_LoopVertex_DEFINITION"
+msgstr "Der Vertex, der die gesamte Schleife definiert."
 
-#:IFC.xml:48844
-msgid "IfcStructuralLoadLinearForce"
-msgstr "IfcStructuralLoadLinearForce"
+#:IFC.xml:49281
+msgid "IfcVertexPoint"
+msgstr "IfcVertexPoint"
 
-msgid "IfcStructuralLoadLinearForce_DEFINITION"
-msgstr "Eine Instanz der Entität [[IfcStructuralLoadLinearForce]] soll verwendet werden, um Aktionen auf Kurven zu definieren. HISTORY Neue Entität in IFC2x2."
+msgid "IfcVertexPoint_DEFINITION"
+msgstr ".extDef NOTE Definition nach ISO CD 10303 42 1992 Ein Scheitelpunkt ist ein Scheitelpunkt, der seine Geometrie als Punkt definiert hat. HINWEISE Entität, angepasst vom Scheitelpunkt nach ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Die Domäne des Scheitelpunkts ist formell als Domäne seines Scheitelpunktes definiert."
 
-#:IFC.xml:48845
-msgid "IfcStructuralLoadLinearForce_LinearForceX"
-msgstr "LinearForceX"
+#:IFC.xml:12753
+msgid "IfcVertexPoint_VertexGeometry"
+msgstr "VertexGeometrie"
 
-msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
-msgstr "Lineare Kraft Wert in x Richtung."
-
-#:IFC.xml:48850
-msgid "IfcStructuralLoadLinearForce_LinearForceY"
-msgstr "LinearForceY"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
-msgstr "Linearer Kraftwert in y Richtung."
-
-#:IFC.xml:48855
-msgid "IfcStructuralLoadLinearForce_LinearForceZ"
-msgstr "LinearForceZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
-msgstr "Linearer Kraftwert in Z-Richtung."
-
-#:IFC.xml:48860
-msgid "IfcStructuralLoadLinearForce_LinearMomentX"
-msgstr "LinearMomentX"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
-msgstr "Lineare Moment über die X-Achse."
-
-#:IFC.xml:48865
-msgid "IfcStructuralLoadLinearForce_LinearMomentY"
-msgstr "LinearMomentY"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
-msgstr "Lineare Moment über die y Achse."
-
-#:IFC.xml:48870
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
-msgstr "LinearMomentZ"
-
-msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
-msgstr "Lineare Moment über die Z-Achse."
-
-#:IFC.xml:48877
-msgid "IfcStructuralLoadOrResult"
-msgstr "IfcStructuralLoadOrResult"
-
-msgid "IfcStructuralLoadOrResult_DEFINITION"
-msgstr "Abstrakte Superklasse von einfachen Last- oder Ergebnisklassen. HISTORY Neue abstrakte Entität in IFC4, Upwards Kompatibilität aller Subtypen bleibt erhalten."
-
-#:IFC.xml:48880
-msgid "IfcStructuralLoadPlanarForce"
-msgstr "IfcStructuralLoadPlanarForce"
-
-msgid "IfcStructuralLoadPlanarForce_DEFINITION"
-msgstr "Eine Instanz der Entität [[IfcStructuralLoadPlanarForce]] soll verwendet werden, um Aktionen auf Gesichtern zu definieren. HISTORY Neue Entität in IFC2x2."
-
-#:IFC.xml:48881
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
-msgstr "PlanarForceX"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
-msgstr "Ebenenkraftwert in x-Richtung."
-
-#:IFC.xml:48886
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
-msgstr "PlanarForceY"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
-msgstr "Ebenenkraftwert in y Richtung."
-
-#:IFC.xml:48891
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
-msgstr "PlanarForceZ"
-
-msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
-msgstr "Ebenenkraftwert in z-Richtung."
-
-#:IFC.xml:48898
-msgid "IfcStructuralLoadSingleDisplacement"
-msgstr "IfcStructuralLoadSingleDisplacement"
-
-msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
-msgstr "Instanzen der Entität [[IfcStructuralLoadSingleDisplacement]] sollen verwendet werden, um Verschiebungen zu definieren. HISTORY Neue Entität in IFC2x2."
-
-#:IFC.xml:48899
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
-msgstr "VerschiebungX"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
-msgstr "Verschiebung in x-Richtung."
-
-#:IFC.xml:48904
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
-msgstr "Verschiebung Y"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
-msgstr "Verschiebung in y Richtung."
-
-#:IFC.xml:48909
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
-msgstr "VerschiebungsZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
-msgstr "Verschiebung in z-Richtung."
-
-#:IFC.xml:48914
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
-msgstr "RotationalDisplacementRX"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
-msgstr "Rotation um die X-Achse."
-
-#:IFC.xml:48919
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
-msgstr "Rotationale Verschiebung RY"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
-msgstr "Rotation um die Y-Achse."
-
-#:IFC.xml:48924
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
-msgstr "RotationalDisplacementRZ"
-
-msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
-msgstr "Drehung um die Z-Achse."
-
-#:IFC.xml:48931
-msgid "IfcStructuralLoadSingleDisplacementDistortion"
-msgstr "IfcStructuralLoadSingleDisplacementDistortion"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
-msgstr "Definiert eine Verschiebung mit Warping. HISTORY New Entity in IFC2x2."
-
-#:IFC.xml:48932
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
-msgstr "Verzerrung"
-
-msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
-msgstr "Die Verzerrung der Krümmung, d.h. eine Querschnittsdeplanation, die der Verschiebungslast gegeben wird."
-
-#:IFC.xml:48939
-msgid "IfcStructuralLoadSingleForce"
-msgstr "IfcStructuralLoadSingleForce"
-
-msgid "IfcStructuralLoadSingleForce_DEFINITION"
-msgstr "Instanzen der Entität [[IfcStructuralLoadSingleForce]] sollen verwendet werden, um die Kräfte und Momente einer Aktion zu definieren, die an einem einzigen Punkt operiert. GESCHICHTE Neue Entität in IFC2x2."
-
-#:IFC.xml:48940
-msgid "IfcStructuralLoadSingleForce_ForceX"
-msgstr "Kraft X"
-
-msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
-msgstr "Wert in x Richtung erzwingen."
-
-#:IFC.xml:48945
-msgid "IfcStructuralLoadSingleForce_ForceY"
-msgstr "Kraft Y"
-
-msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
-msgstr "Erzwinge Wert in y Richtung."
-
-#:IFC.xml:48950
-msgid "IfcStructuralLoadSingleForce_ForceZ"
-msgstr "ForceZ"
-
-msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
-msgstr "Wert in z-Richtung erzwingen."
-
-#:IFC.xml:48955
-msgid "IfcStructuralLoadSingleForce_MomentX"
-msgstr "MomentX"
-
-msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
-msgstr "Moment über die X-Achse."
-
-#:IFC.xml:48960
-msgid "IfcStructuralLoadSingleForce_MomentY"
-msgstr "MomentY"
-
-msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
-msgstr "Moment über die y Achse."
-
-#:IFC.xml:48965
-msgid "IfcStructuralLoadSingleForce_MomentZ"
-msgstr "MomentZ"
-
-msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
-msgstr "Moment über die Z-Achse."
-
-#:IFC.xml:48972
-msgid "IfcStructuralLoadSingleForceWarping"
-msgstr "IfcStructuralLoadSingleForceWarping"
-
-msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
-msgstr "Instanzen der Entität [[IfcStructuralLoadSingleForceWarping]] , als Untertyp von [[IfcStructuralLoadSingleForce]] , wird verwendet, um eine Aktion an einem einzigen Punkt zu definieren. Zusätzlich zu den Kräften und Momenten, die durch ihren Supertyp definiert werden, kann ein Warping-Moment definiert werden."
-
-#:IFC.xml:48973
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
-msgstr "WarpingMoment"
-
-msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
-msgstr "Der Warping-Moment bei der Punktlast."
-
-#:IFC.xml:48980
-msgid "IfcStructuralLoadStatic"
-msgstr "IfcStructuralLoadStatic"
-
-msgid "IfcStructuralLoadStatic_DEFINITION"
-msgstr "Die abstrakte Entität [[IfcStructuralLoadStatic]] ist der Supertyp aller statischen Ladeaktionen oder Reaktionen, die definiert werden können. Innerhalb des Umfangs sind einzelne Kräfte und Momente, lineare i. B. eine dimensional verteilte Kräfte und Momente, planarisch d.h. zweidimensional verteilte Kräfte, darüber hinaus Verschiebungen und Temperaturbelastungen, neue Einheit in IFC2x2."
-
-#:IFC.xml:48983
-msgid "IfcStructuralLoadTemperature"
-msgstr "IfcStructuralLoad-Temperatur"
-
-msgid "IfcStructuralLoadTemperature_DEFINITION"
-msgstr "Eine Instanz der Entität [[IfcStructuralLoadTemperature]] soll verwendet werden, um Aktionen zu definieren, die durch eine Temperaturänderung verursacht werden. Wie in Abbildung 1 gezeigt die Änderung der Temperatur wird mit einem konstanten Wert gegeben, der auf den kompletten Abschnitt und die Werte für die Temperaturunterschiede zwischen den äußeren Fasern des Abschnitts angewendet wird. GESCHICHTE Neue Entität in IFC2x2. Strukturelle Lasttemperatur .. .. .. berechnet structuralloadtemperature.gif Abbildung 1 Strukturelle Lasttemperatur"
-
-#:IFC.xml:48984
-msgid "IfcStructuralLoadTemperature_DeltaTConstant"
-msgstr "DeltaTConstant"
-
-msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
-msgstr "Temperaturveränderung, die den kompletten Teil des Strukturmitglieds oder den einheitlichen Teil einer nicht einheitlichen Temperaturänderung beeinflusst. HINWEIS Ein positiver Wert beschreibt einen Temperaturanstieg. Das heißt, eine positive konstante Temperaturänderung führt zur Verlängerung eines Mitglieds oder zur Komprimierung im Mitglied, wenn es entsprechende Einschränkungen gibt."
-
-#:IFC.xml:48989
-msgid "IfcStructuralLoadTemperature_DeltaTY"
-msgstr "DeltaTY"
-
-msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
-msgstr "Uneinheitliche Temperaturänderung spezifiziert als die Differenz der Temperaturänderung an der äußeren Faser der positiven y Richtung abzüglich der Temperaturänderung an der äußeren Faser der negativen y Richtung des Analysemitglieds. HINWEIS Eine positive nicht einheitliche Temperaturänderung in y verursacht eine negative Krümmung des Mitglieds über z, oder ein positiver Biegemoment über z, wenn es entsprechende Beschränkungen gibt. y und z sind lokale Mitgliederachsen."
-
-#:IFC.xml:48994
-msgid "IfcStructuralLoadTemperature_DeltaTZ"
-msgstr "DeltaTZ"
-
-msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
-msgstr "Uneinheitliche Temperaturänderung spezifiziert als Differenz der Temperaturänderung an der äußeren Faser der positiven z-Richtung abzüglich der Temperaturänderung an der äußeren Faser der negativen z-Richtung des Analysemitglieds. HINWEIS Eine positive nicht einheitliche Temperaturänderung in z führt zu einer positiven Krümmung des Mitglieds über y oder ein negatives Biegemoment über y wenn es entsprechende Beschränkungen gibt. y und z sind lokale Mitgliederachsen."
-
-#:IFC.xml:49001
-msgid "IfcSurfaceReinforcementArea"
-msgstr "IfcSurfaceReinforcementArea"
-
-msgid "IfcSurfaceReinforcementArea_DEFINITION"
-msgstr "Beschreibt die benötigte oder gewährte Verstärkungsfläche der Oberflächenmitglieder. HINWEISE Mitglieder Design-Parameter wie Betondeckel, effektive Tiefe, Ausrichtung von Netzen oder Nachbehältern zwei, optional drei Richtungen usw. sind nicht im IfcStructuralLoadResource Schema spezifiziert. Sie sollen auf der Ebene der Strukturmitglieder angegeben werden. HISTORY New entity in IFC4."
-
-#:IFC.xml:49002
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
-msgstr "Scherbenverstärkung"
-
-msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
-msgstr "Scherenverstärkung. Spezifiziert als Fläche pro Fläche, z.B. Quadratmeter pro Quadratmeter und Verhältnismessung, d.h. unbegrenzt ."
-
-#:IFC.xml:49007
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
-msgstr "Oberflächenverstärkung1"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
-msgstr "Verstärkung an der Seite des Mitglieds, das sich an der Seite der positiven Z-Richtung des Oberflächenmitglieds befindet. Angegeben als Fläche pro Länge, z. . Die Verstärkungsfläche kann für zwei oder drei Richtungen von Bewehrungsleisten festgelegt werden."
-
-#:IFC.xml:49012
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
-msgstr "Oberflächenverstärkung 2"
-
-msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
-msgstr "Verstärkung an der Seite des Mitglieds, das sich an der Seite der negativen Z-Richtung des oberflächlichen Mitglieds befindet. Angegeben als Fläche pro Länge, z. . Die Verstärkungsfläche kann für zwei oder drei Richtungen von Bewehrungsleisten festgelegt werden."
-
-#:IFC.xml:49019
-msgid "IfcTranslationalStiffnessSelect"
-msgstr "IfcTranslationalStiffnessSelect"
-
-#:IFC.xml:49020
-msgid "IfcWarpingStiffnessSelect"
-msgstr "IfcWarpingStiffnessSelect"
+msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
+msgstr "Der geometrische Punkt, der die Position im geometrischen Raum des Scheitelpunkts definiert."
 
