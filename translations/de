@@ -9,779 +9,86 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcConstructionMgmtDomain.pot\n"
-"X-Crowdin-File-ID: 30\n"
+"X-Crowdin-File: /master/IfcControlExtension.pot\n"
+"X-Crowdin-File-ID: 32\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2022-02-22 19:13\n"
+"PO-Revision-Date: 2022-02-22 19:14\n"
 
-#:IFC.xml:2816
-msgid "IfcConstructionEquipmentResource"
-msgstr "IfcConstructionEquipment Ressource"
+#:IFC.xml:3212
+msgid "IfcPerformanceHistory"
+msgstr "IfcPerformanceHistory"
 
-msgid "IfcConstructionEquipmentResource_DEFINITION"
-msgstr "[[IfcConstructionEquipmentResource]] benutzt Bauausrüstungen, um die Bauleistung zu unterstützen. Bauausrüstungsressourcen werden ganz oder teilweise verbraucht oder besetzt in der Ausführung des Baus. . Vorkommen von [[IfcConstructionEquipmentResource]] sind Produkte, die als Ressourcen verwendet werden, um den Bauprozess zu unterstützen. Konkret handelt es sich um Produkte, die als eigenständige Produkte in ein Projekt gebracht werden, um einen bestimmten Zweck zu erfüllen. Beispiele dafür sind ein Turmkran oder ein anderer mobiler Kran, eine Schraubenmaschine oder ein Hebehub. Instanzen eines jeden Untertyps von [[IfcProduct]] können mit [[IfcRelAssignsToResource]] der Geräteressource zugewiesen werden, um das Gerät weiter zu charakterisieren wie im Supertyp [[IfcResource]] beschrieben. Beispiele für relevante Untertypen von [[IfcProduct]] sind [[IfcTransportElement]] , [[IfcDiscreteAccessory]] , oder IfcProxy für bestimmte Fälle, in denen genauere Nutzungsdetails nicht verfügbar sind"
+msgid "IfcPerformanceHistory_DEFINITION"
+msgstr "[[IfcPerformanceHistory]] wird verwendet, um die tatsächliche Performance einer Vorkommnisinstanz mit der Zeit zu dokumentieren. Es umfasst maschinengemessene Daten aus Gebäudeautomatisierungssystemen und von Menschen spezifizierte Daten wie Aufgaben- und Ressourcennutzung. Die Daten können tatsächliche Bedingungen, Vorhersagen oder Simulationen darstellen. Die Echtzeit-Daten, die durch den Performance-Verlauf verfolgt werden, sind in Form von Eigenschaftsmengen, bei denen alle Eigenschaften auf Zeitreihenfolge basieren. Im Gegensatz zu modellbasierten Daten bei Vorkommen und Typen sind leistungsgetriebene Daten zeitempfindlich und können sich in Echtzeit durch einige Messgeräte ändern. Daten können in unregelmäßigen Abständen erfasst werden, z. B. wenn sich Werte über festgelegte Schwellenwerte oder in regelmäßigen Abständen von vorgegebener Dauer ändern. Deklarationsanwendungsdefinition [[IfcPerformanceHistory]] kann innerhalb eines Projekts mit [[IfcRelDeclares]] deklariert werden, wobei RelatingContext auf [[IfcProject]] bezieht und RelatedDefinitions die [[IfcPerformanceHistory]] enthält. Standardeinheiten, die für Eigenschaftssets verwendet werden, werden durch das Deklarationsprojekt angezeigt. Nur Objekte der obersten Ebene werden durch [[IfcRelNests]] als verschachtelte Performance-History-Objekte deklariert."
 
-#:IFC.xml:2817
-msgid "IfcConstructionEquipmentResource_PredefinedType"
+#:IFC.xml:3213
+msgid "IfcPerformanceHistory_LifeCyclePhase"
+msgstr "Lebenszyklusphase"
+
+msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
+msgstr "Beschreibt die jeweils anwendbare Lebenszyklusphase: Typische Werte sind DESIGNDEVELOPMENT, SCHEMATICDEVELOPMENT, CONSTRUCTIONDOKUMENT, CONSTRUCTION, KOMMISSIONEN, usw."
+
+#:IFC.xml:3218
+msgid "IfcPerformanceHistory_PredefinedType"
 msgstr "PredefinedType"
 
-msgid "IfcConstructionEquipmentResource_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Bauausrüstungen. .change ifc2x4 IFC4 Neues Attribut."
+msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
+msgstr "Vordefinierter generischer Typ für eine Performact-Chronik, der in einer Aufzählung angegeben wird. hange ifc2x4 IFC4 CHANGE Das Attribut wurde am Ende der Entitätsdefinition hinzugefügt."
 
-#:IFC.xml:2827
-msgid "IfcConstructionEquipmentResourceType"
-msgstr "IfcConstructionEquipment ResourceType"
+#:IFC.xml:3237
+msgid "IfcPerformanceHistoryTypeEnum"
+msgstr "IfcPerformanceHistoryTypeEnum"
 
-msgid "IfcConstructionEquipmentResourceType_DEFINITION"
-msgstr "Der Ressourcentyp IfcConstructionEquipmentType definiert allgemein geteilte Informationen über Vorfälle von Bauausrüstungen. Die Menge der gemeinsam genutzten Informationen kann gemeinsame Produktionen enthalten gemeinsame Kosten-Raten gemeinsame Eigenschaften innerhalb von gemeinsamen Eigenschaften-Set Es wird verwendet, um eine Bauausrüstung Ressourcen-Spezifikation die spezifischen Ressourcen-Informationen, die für alle Vorkommnisse dieser Ressource gemeinsam sind . Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcConstructionEquipmentResourceType]] werden durch Instanzen von [[IfcConstructionEquipmentResource]] repräsentiert. HISTORY New entity in IFC4. se head Assignment Definition Zusätzlich zu den in der Basisklasse angegebenen Zuweisungen [[IfcConstructionResourceType]] , ein Ressourcentyp für Bauausrüstungen kann eigene Zuordnungen mit [[IfcRelAssignsToResource]] haben, wenn RelatingResource auf die [[IfcConstructionEquipmentResourceType]] bezieht und RelatedObjects einen oder mehrere [[IfcTypeProduct]] Untertypen enthält. Diese Beziehung zeigt die Art der Ausrüstung, die als Eingabe verwendet werden soll, die als ein Ereignis instanziiert wird, das für jedes Vorkommen von Ressourcen zugewiesen wird. Es kann mehrere Produktionsketten geben, bei denen ein solcher Produkttyp seine eigene Aufgabe und Ressourcentypen haben kann, die angeben, wie solche Anlagen zusammengebaut werden können."
+msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
+msgstr "Diese Aufzählung wird verwendet, um den primären Zweck des Performance-Verlaufs zu identifizieren. Die [[IfcPerformanceHistoryTypeEnum]] enthält den folgenden NUTZERDEFINED Benutzer definiert. HISTORY New enumeration in IFC4 Items BENUTZERDEFINIERT NOTDEFINED"
 
-#:IFC.xml:2828
-msgid "IfcConstructionEquipmentResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcConstructionEquipmentResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Bauausrüstungen."
-
-#:IFC.xml:2835
-msgid "IfcConstructionEquipmentResourceTypeEnum"
-msgstr "IfcConstructionEquipment ResourceTypeEnum"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung dient der Identifizierung des primären Zwecks einer Bauausrüstung. Es ist beschränkt auf die gängigste Bauausrüstung, HISTORY New Enumeration in IFC4. Objekte DAMIT Entfernen oder Zerstörung von Bauelementen. EARTHMOVE Aushöhlung, Füllung oder Konturierung der Erde. FEHLER Aufsitzen, Positionieren und Platzieren von Elementen. HEATING Temporäre Hitze zur Unterstützung des Baues. LÄNGE Temporäre Beleuchtung zur Unterstützung des Baues. PAVING Straßen oder Gehwege wie Asphalt oder Beton. PUMPING Installation von Materialien durch Pumpen. TRANSPORTING Transportieren von Produkten oder Materialien. NUTZERDEFINED Benutzerdefinierte Ressource. NOTDEFINED undefinierte Ressource."
-
-#:IFC.xml:2847
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEMOLISHING"
-msgstr "DEMOLISIEREN"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_DEMOLISHING_DEFINITION"
-msgstr "Entfernen oder Zerstörung von Bauelementen."
-
-#:IFC.xml:2848
-msgid "IfcConstructionEquipmentResourceTypeEnum_EARTHMOVING"
-msgstr "EARTHMOVE"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_EARTHMOVING_DEFINITION"
-msgstr "Erhebung, Füllung oder Konturierung der Erde."
-
-#:IFC.xml:2849
-msgid "IfcConstructionEquipmentResourceTypeEnum_ERECTING"
-msgstr "FEHLERN"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_ERECTING_DEFINITION"
-msgstr "Heben, Positionieren und Platzieren von Elementen."
-
-#:IFC.xml:2850
-msgid "IfcConstructionEquipmentResourceTypeEnum_HEATING"
-msgstr "HEATING"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_HEATING_DEFINITION"
-msgstr "Temporäre Wärme zur Unterstützung des Baues."
-
-#:IFC.xml:2851
-msgid "IfcConstructionEquipmentResourceTypeEnum_LIGHTING"
-msgstr "LÄNGER"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_LIGHTING_DEFINITION"
-msgstr "Temporäre Beleuchtung zur Unterstützung des Baues."
-
-#:IFC.xml:2852
-msgid "IfcConstructionEquipmentResourceTypeEnum_NOTDEFINED"
+#:IFC.xml:3241
+msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcConstructionEquipmentResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:2853
-msgid "IfcConstructionEquipmentResourceTypeEnum_PAVING"
-msgstr "PAVING"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_PAVING_DEFINITION"
-msgstr "Straßen oder Spazierwege wie Asphalt oder Beton."
-
-#:IFC.xml:2854
-msgid "IfcConstructionEquipmentResourceTypeEnum_PUMPING"
-msgstr "PUMPIEREN"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_PUMPING_DEFINITION"
-msgstr "Materialien über Pumpen einbauen."
-
-#:IFC.xml:2855
-msgid "IfcConstructionEquipmentResourceTypeEnum_TRANSPORTING"
-msgstr "TRANSPORTING"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_TRANSPORTING_DEFINITION"
-msgstr "Transport von Produkten oder Materialien."
-
-#:IFC.xml:2856
-msgid "IfcConstructionEquipmentResourceTypeEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
-
-msgid "IfcConstructionEquipmentResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
-
-#:IFC.xml:2857
-msgid "IfcConstructionMaterialResource"
-msgstr "IfcConstructionMaterial-Ressource"
-
-msgid "IfcConstructionMaterialResource_DEFINITION"
-msgstr "[[IfcConstructionMaterialResource]] identifiziert einen Materialressourcentyp in einem Bauprojekt. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Das Attribut Lieferanten wurde gelöscht mit [[IfcRelAssignsToResource]], um einen [[IfcActor]] zur Erfüllung der Rolle als Lieferant zuzuweisen. Das Attribut UsageRatio wurde mit BaseQuantityConsumed und BaseQuantityProduced gelöscht, um den Materialverbrauch anzuzeigen. Vorkommen von [[IfcConstructionMaterialResource]] werden ganz oder teilweise verbraucht oder während einer Bauaufgabe [[IfcTask]] belegt. Ähnlich wie [[IfcConstructionProductResource]] , manchmal werden Dinge wie etwa 5000kg Kies bereits als Instanz eines [[IfcProduct]] Subtyps instanziiert, weil sie zum Beispiel auf eine Arbeitsaufgabe zurückzuführen sind Transport von Kies . In diesem Fall die Instanz von [[IfcConstructionMaterialResource]] mit der Produkt-Instanz von 5000kg Kies assoziiert werden kann, um weitere Informationen für den Ressourcenverbrauch bereitzustellen. Nichtsdestotrotz sollte [[IfcConstructionMaterialResource]] nur zur Darstellung des Ressourcenverbrauchs verwendet werden, aber nicht für Produktsubstanzen. HINWEIS: Diese Entität ist nicht identisch mit [[IfcMaterial]] . Einerseits, [[IfcConstructionMaterialResource]] steht für die Verwendung von Schüttgütern wie Sand, Kiesel, Nägel und so weiter. Körperliche Manifestationen können auch von [[IfcProduct]] aus instanziiert werden, abhängig von deren Verwendung im System und ein solches [[IfcProduct]] Objekt kann dem [[IfcConstructionMaterialResource]] Objekt über [[IfcRelAssignsToResource]] zugewiesen werden. Andererseits geht es [[IfcMaterial]] um physikalische Materialien, aus denen ein physikalisches Gebäudeelement besteht, möglicherweise mit detaillierten Informationen über die Materiallagerung."
-
-#:IFC.xml:2858
-msgid "IfcConstructionMaterialResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcConstructionMaterialResource_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Baumaterial-Ressourcen. .change ifc2x4 IFC4 Neues Attribut."
-
-#:IFC.xml:2868
-msgid "IfcConstructionMaterialResourceType"
-msgstr "IfcConstructionMaterial-Typ"
-
-msgid "IfcConstructionMaterialResourceType_DEFINITION"
-msgstr "Der Ressourcentyp IfcConstructionMaterialType definiert allgemein geteilte Informationen über Vorkommen von Baumaterialien. Die Menge der gemeinsam genutzten Informationen kann gemeinsame Produktivitäten gemeinsame Kosten-Raten gemeinsame Eigenschaften in gemeinsamen Eigenschaftensets enthalten. Es wird verwendet, um eine Baumaterial-Ressourcen-Spezifikation die spezifischen Ressourcen-Informationen, die für alle Vorkommnisse dieser Ressource gemeinsam sind . Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcConstructionMaterialResourceType]] werden durch Instanzen von [[IfcConstructionMaterialResource]] repräsentiert. HISTORY New entity in IFC4. se head Assignment Use Definition Zusätzlich zu den in der Basisklasse angegebenen Aufgaben [[IfcConstructionResourceType]] , ein Werkstoff-Typ kann eigene Zuordnungen mit [[IfcRelAssignsToResource]] haben, bei denen RelatingResource auf die [[IfcConstructionMaterialResourceType]] bezieht und verwandte Objekte einen oder mehrere [[IfcTypeProduct]] Untertypen enthalten. Ein solches Verhältnis gibt an, dass materielle Spezifikationen als Eingaben verwendet werden sollen, was als ein Ereignis instanziiert wird, das für jedes Vorkommen von Ressourcen zugewiesen wird. Mit dem [[IfcGeographicElementType]] kann die Materialdarstellung über [[IfcRelAssociatesMaterial]] gehalten werden. Es kann mehrere Produktionsketten geben, bei denen solche Produkttypen ihre eigene Aufgabe und Ressourcentypen haben, die angeben, wie solche Materialien transportiert oder extrahiert werden können."
-
-#:IFC.xml:2869
-msgid "IfcConstructionMaterialResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcConstructionMaterialResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Baumaterialressourcen."
-
-#:IFC.xml:2876
-msgid "IfcConstructionMaterialResourceTypeEnum"
-msgstr "IfcConstructionMaterial-RessourcenTypeEnum"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung dient der Identifizierung des primären Zwecks einer Baustoffressource. Es ist auf die gängigsten Rohstoffe im Bauwesen beschränkt und schließt Materialien aus, die üblicherweise als Fertigerzeugnisse verkauft werden. GESCHICHTE Neue Auflistung in IFC4. Artikel AGGREGATES Bau Aggregat mit Sand, Kiesel und zerkleinertem Stein. DRYWALL Wandplatte inklusive Gipskarton FUEL Brennstoff für Laufgeräte. GYPSUM Jedes Gipsmaterial. MASONRY Mauerwerk inklusive Ziegel, Stein, Betonblock, Glasblock und Kachel. METAL Jedes metallische Material. PLASTIC Jegliche Kunststoffmaterialien, WOOOOD Jedes Holzmaterial. NOTDEFINED undefinierte Ressource. BENUTZERDEFINED Benutzer definierte Ressource."
-
-#:IFC.xml:2889
-msgid "IfcConstructionMaterialResourceTypeEnum_AGGREGATES"
-msgstr "AGREGATES"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_AGGREGATES_DEFINITION"
-msgstr "Bauaggregat mit Sand, Kiesel und zerkleinertem Stein."
-
-#:IFC.xml:2890
-msgid "IfcConstructionMaterialResourceTypeEnum_CONCRETE"
-msgstr "BESTÄTIGEN"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_CONCRETE_DEFINITION"
-msgstr "Gegossen an Ort Beton."
-
-#:IFC.xml:2891
-msgid "IfcConstructionMaterialResourceTypeEnum_DRYWALL"
-msgstr "DRYWALL"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_DRYWALL_DEFINITION"
-msgstr "Wandplatte, einschließlich Gipskarton."
-
-#:IFC.xml:2892
-msgid "IfcConstructionMaterialResourceTypeEnum_FUEL"
-msgstr "FUEL"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_FUEL_DEFINITION"
-msgstr "Treibstoff für laufende Ausrüstung."
-
-#:IFC.xml:2893
-msgid "IfcConstructionMaterialResourceTypeEnum_GYPSUM"
-msgstr "GYPSUM"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_GYPSUM_DEFINITION"
-msgstr "Jedes Gipsmaterial."
-
-#:IFC.xml:2894
-msgid "IfcConstructionMaterialResourceTypeEnum_MASONRY"
-msgstr "MASONRIE"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_MASONRY_DEFINITION"
-msgstr "Mauerwerk mit Ziegel, Stein, Betonblock, Glasblock und Kachel."
-
-#:IFC.xml:2895
-msgid "IfcConstructionMaterialResourceTypeEnum_METAL"
-msgstr "METAL"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_METAL_DEFINITION"
-msgstr "Beliebiges metallisches Material."
-
-#:IFC.xml:2896
-msgid "IfcConstructionMaterialResourceTypeEnum_NOTDEFINED"
+msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
 msgstr "NOTDEFINIERT"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:2897
-msgid "IfcConstructionMaterialResourceTypeEnum_PLASTIC"
-msgstr "PLASTIK"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_PLASTIC_DEFINITION"
-msgstr "Jedes Kunststoff."
-
-#:IFC.xml:2898
-msgid "IfcConstructionMaterialResourceTypeEnum_USERDEFINED"
+#:IFC.xml:3242
+msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcConstructionMaterialResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
-
-#:IFC.xml:2899
-msgid "IfcConstructionMaterialResourceTypeEnum_WOOD"
-msgstr "WOOOD"
-
-msgid "IfcConstructionMaterialResourceTypeEnum_WOOD_DEFINITION"
-msgstr "Jedes Holz Material."
-
-#:IFC.xml:2900
-msgid "IfcConstructionProductResource"
-msgstr "IfcConstructionProductResource"
-
-msgid "IfcConstructionProductResource_DEFINITION"
-msgstr "[[IfcConstructionProductResource]] definiert die Rolle eines Produkts, das ganz oder teilweise konsumiert wird oder bei der Ausführung des Bauvorhabens beschäftigt ist. GESCHICHTE Neue Entität in IFC2. . Umbenannt von IfcProductResource in IFC2x. Vorkommen von [[IfcConstructionProductResource]] sind die Verwendung von Produkten, um den Bauprozess zu unterstützen. Konkret handelt es sich dabei um den Einsatz von Produkten, die sich aus einigen Bauprozessen ergeben und die dann als Ressourcen für die weitere Konstruktion verwendet werden. Zum Beispiel können Schalungen als Produkte instanziiert werden, die sich aus der Prozesskonstruktion von Schalungen ergeben. Sie werden jedoch als Ressourcen für den Prozess verwendet, der in einem späteren Stadium des Projekts konkretisiert."
-
-#:IFC.xml:2901
-msgid "IfcConstructionProductResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcConstructionProductResource_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Bauprodukt-Ressourcen. .change ifc2x4 IFC4 Neues Attribut."
-
-#:IFC.xml:2911
-msgid "IfcConstructionProductResourceType"
-msgstr "IfcConstructionProductResourceType"
-
-msgid "IfcConstructionProductResourceType_DEFINITION"
-msgstr "Der Ressourcentyp IfcConstructionProductType definiert allgemein geteilte Informationen für Vorfälle von Bauproduktressourcen. The set of shared information may include common productivities common cost rates common properties within shared property sets It is used to define a construction product resource specification i. , die spezifischen Ressourceninformationen enthält, die bei allen Vorfällen dieser Ressource gemeinsam sind. Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcConstructionProductResourceType]] werden durch Instanzen von [[IfcConstructionProductResource]] repräsentiert. GESCHICHTE Neue Entität in IFC4. se head Assignment Definition Zusätzlich zu den in der Basisklasse angegebenen Zuweisungen [[IfcConstructionResourceType]] , ein Bauprodukt-Ressourcentyp kann eigene Zuordnungen mit [[IfcRelAssignsToResource]] haben, bei denen RelatingResource auf die [[IfcConstructionProductResourceType]] bezieht und RelatedObjects einen oder mehrere [[IfcTypeProduct]] Untertypen enthält. Diese Beziehung gibt die Art des Produkts an, das als Eingabe verwendet werden soll, was als Vorkommnis für jedes Vorkommen von Ressourcen instanziiert wird. Es kann mehrere Produktionsketten geben, bei denen solche Produkttypen ihre eigene Aufgaben- und Ressourcentypen zugewiesen haben."
-
-#:IFC.xml:2912
-msgid "IfcConstructionProductResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcConstructionProductResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Bauproduktressourcen."
-
-#:IFC.xml:2919
-msgid "IfcConstructionProductResourceTypeEnum"
-msgstr "IfcConstructionProductResourceTypeEnum"
-
-msgid "IfcConstructionProductResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung dient der Identifizierung des primären Zwecks einer Bauproduktressource. Es beschreibt den Einsatz von Bauprodukten und schließt die Produkte des fertigen Baumodells aus. Artikel ASSEMBLY Bau von Baugruppen für den Einsatz als Input für das Baumodell oder andere Baugruppen. FORMWARK-Bau oder Platzierung von Formen für die Platzierung von Materialien wie Beton."
-
-#:IFC.xml:2925
-msgid "IfcConstructionProductResourceTypeEnum_ASSEMBLY"
-msgstr "ASSEMBLY"
-
-msgid "IfcConstructionProductResourceTypeEnum_ASSEMBLY_DEFINITION"
-msgstr "Bau von Baugruppen für den Einsatz als Input für das Baumodell oder andere Baugruppen."
-
-#:IFC.xml:2926
-msgid "IfcConstructionProductResourceTypeEnum_FORMWORK"
-msgstr "FORMWORKS"
-
-msgid "IfcConstructionProductResourceTypeEnum_FORMWORK_DEFINITION"
-msgstr "Bau oder Platzierung von Formen für die Platzierung von Materialien wie Beton."
-
-#:IFC.xml:2927
-msgid "IfcConstructionProductResourceTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
-
-msgid "IfcConstructionProductResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:2928
-msgid "IfcConstructionProductResourceTypeEnum_USERDEFINED"
+msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
 msgstr "BENUTZERDEFINIERT"
 
-msgid "IfcConstructionProductResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
+#:IFC.xml:3243
+msgid "IfcRelAssociatesApproval"
+msgstr "IfcRelAssociatesApproval"
 
-#:IFC.xml:2929
-msgid "IfcConstructionResource"
-msgstr "IfcConstructionResource"
+msgid "IfcRelAssociatesApproval_DEFINITION"
+msgstr "Die Entität [[IfcRelAssociatesApproval]] wird verwendet, um Genehmigungsinformationen anzuwenden, die von [[IfcApproval]] definiert sind, im IfcApprovalResource Schema, Untertypen von [[IfcRoot]] . GESCHICHTE Neue Entität in IFC2x2."
 
-msgid "IfcConstructionResource_DEFINITION"
-msgstr "[[IfcConstructionResource]] is an abstract generalization of the different resources used in construction projects, mainly labour, material, equipment and product resources, plus subcontracted resources and aggregations such as a crew resource. A resource represents use of something and does not necessarily correspond to a single item such as a person or vehicle, but represents a pool of items having limited availability such as general labor or an equipment fleet. A resource can represent either a generic resource pool not having any task assignment or a task specific resource allocation having an [[IfcTask]] assignment . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Modified in to promote ResourceIdentifer and ResourceGroup renamed to LongDescription to supertype [[IfcResource]] and add attributes as described. .use head Declaration use definition A root level resource specifically [[IfcCrewResource]] or [[IfcSubContractResource]] is declared within the project by [[IfcRelDeclares]] where RelatingContext refers to the single [[IfcProject]] and RelatedObjects refers to one or more [[IfcConstructionResource]] , and other root level objects within the project. .use head Assignment use definition A resource may be assigned to an actor by [[IfcRelAssignsToActor]] where RelatingActor refers to an [[IfcActor]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Such relationship indicates the actor responsible for allocating the resource such as partitioning into task specific allocations, delegating to other actors, and or scheduling over time. Note that this assignment does not indicate the person or organization performing the work that is indicated by [[IfcRelAssignsToResource]] . The actor responsible for the resource may or may not be the same as any actor s performing work. A resource may be assigned to a control by [[IfcRelAssignsToControl]] where RelatingProduct refers to an [[IfcControl]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcWorkCalendar]] is assigned indicating availability of the resource, where such calendar is nested within a base calendar or an [[IfcWorkPlan]] which in turn is assigned to the [[IfcProject]] . A resource may be assigned to a group by [[IfcRelAssignsToGroup]] where RelatingGroup refers to an [[IfcGroup]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcAsset]] is assigned indicating the asset to be tracked, where such asset is nested within an [[IfcInventory]] which in turn is assigned to the [[IfcProject]] . A resource may be assigned to a product by [[IfcRelAssignsToProduct]] where RelatingProduct refers to an [[IfcProduct]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcElement]] subtype is assigned indicating the product to be constructed, where such product is connected to a spatial structure which in turn is aggregated within the [[IfcProject]] . A resource may be assigned to a process by [[IfcRelAssignsToProcess]] where RelatingProcess refers to an [[IfcProcess]] and RelatedObjects refers to one or more [[IfcConstructionResource]] or other objects. Most commonly an [[IfcTask]] is assigned indicating the task to be performed by the resource, where such task is nested within a summary task which in turn is assigned to the [[IfcProject]] . A resource may have assignments of other objects using [[IfcRelAssignsToResource]] where RelatingResource refers to the [[IfcConstructionResource]] and RelatedObjects refers to one or more objects such as [[IfcActor]] or [[IfcProduct]] subtypes. This relationship indicates specific objects assigned to fulfill resource usage. Figure 1 illustrates resource assignment. Assignment Use Definition .. .. .. .. figures ifcconstructionresource assignment.png Figure 1 Construction resource assignment use .use head Baseline use definition A resource may have any number of baselines defined using the relationship [[IfcRelDefinesByObject]] where RelatingObject is the current resource and RelatedObjects consists of multiple baseline resources, each representing a copy of the resource as it existed at an earlier point in time as shown in Figure 185. Each baseline [[IfcConstructionResource]] is identified by its nested [[IfcRelAssignsToControl]] relationship to an [[IfcWorkSchedule]] having PredefinedType BASELINE , [[IfcWorkSchedule]].CreationDate indicating the date of the baseline, and [[IfcWorkSchedule]].Name indicating the name of the baseline. Baseline Use Definition .. .. .. .. figures ifcconstructionresource baseline.png Figure 2 Construction resource baseline use"
+#:IFC.xml:545
+msgid "IfcRelAssociatesApproval_RelatingApproval"
+msgstr "Relating-Genehmigung"
 
-#:IFC.xml:2935
-msgid "IfcConstructionResource_Usage"
-msgstr "Auslastung"
+msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
+msgstr "Bezugnahme auf die Genehmigung, die unter Verwendung dieser Beziehung angewendet wird."
 
-msgid "IfcConstructionResource_Usage_DEFINITION"
-msgstr "Zeigt die Arbeits-, Nutzungs- und Zeitangaben an. Einige Attribute dieses Objekts haben möglicherweise zugehörige Einschränkungen oder Zeitserien siehe Dokumentation von [[IfcResourceTime]] für eine spezifische Nutzung. Wenn die Ressource verschachtelt ist, können bestimmte Werte anhand der in [[IfcResourceTime]] angegebenen Komponentenressourcen berechnet werden. .change ifc2x4 IFC4 CHANGE Neues Attribut."
+#:IFC.xml:3246
+msgid "IfcRelAssociatesConstraint"
+msgstr "IfcRelAssociatesConstraint"
 
-#:IFC.xml:2947
-msgid "IfcConstructionResource_BaseCosts"
-msgstr "Basiskosten"
+msgid "IfcRelAssociatesConstraint_DEFINITION"
+msgstr "Die Entität [[IfcRelAssociatesConstraint]] wird verwendet, um Beziehungsinformationen anzuwenden, die von [[IfcConstraint]] definiert sind, im IfcConstraintResource Schema, Untertypen von [[IfcRoot]] . GESCHICHTE Neue Entität in IFC2x2."
 
-msgid "IfcConstructionResource_BaseCosts_DEFINITION"
-msgstr "Gibt die Stückkosten an, für die anfallende Beträge berechnet werden sollen. Solche Stückkosten können zum Beispiel in Namenbezeichnungen aufgeteilt werden, Standard , Overtime , und kann eine Hierarchie der Kostenwerte enthalten, die an verschiedenen Terminen unter Verwendung von [[IfcCostValue]] gelten. pplicableDate und [[IfcCostValue]].FixedUntilDate . .change ifc2x4 IFC4 CHANGE New attribute."
+#:IFC.xml:2596
+msgid "IfcRelAssociatesConstraint_RelatingConstraint"
+msgstr "RelatingConstraint"
 
-#:IFC.xml:2959
-msgid "IfcConstructionResource_BaseQuantity"
-msgstr "BaseQuantity"
+msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
+msgstr "Bezugnahme auf Einschränkungen, die mit dieser Beziehung angewendet werden."
 
-msgid "IfcConstructionResource_BaseQuantity_DEFINITION"
-msgstr "Identifiziert die von der Ressource verbrauchte Basismenge im Verhältnis zu den Aufgaben. Für Besatzung, Arbeit, Unterauftragnehmer und Ausrüstungsressourcen bezieht sich dies auf [[IfcQuantityTime]] . Für materielle Ressourcen bezieht sich dies auf [[IfcQuantityVolume]] . Für Produktressourcen bezieht sich dies auf [[IfcQuantityCount]] . .change ifc2x4 IFC4 CHANGE New attribute."
+#:IFC.xml:3247
+msgid "IfcRelAssociatesConstraint_Intent"
+msgstr "Vorsatz"
 
-#:IFC.xml:2971
-msgid "IfcConstructionResourceType"
-msgstr "IfcConstructionResourceType"
-
-msgid "IfcConstructionResourceType_DEFINITION"
-msgstr "[[IfcConstructionResourceType]] is an abstract generalization of the different resource types used in construction projects, mainly labor, material, equipment and product resource types, plus subcontracted resource types and aggregations such as a crew resource type. A resource type represents a model of use of something and does not necessarily correspond to a specific type of object such as a person or vehicle, but represents possible usages of such objects such as general labor or an equipment fleet. A resource type can either represent usage in general consumption attributes defined but no task type assignment or a task specific resource type production attributes defined and having an [[IfcTask]] assignment . A construction resource type captures common productivities and cost rates for applying resources to particular task types. HISTORY New entity in IFC4. .use head Composition use definition Resource types may be decomposed into nested resource types indicating productivities when applying the resource to specific task types using the [[IfcRelNests]] relationship where [[IfcRelNests]].RelatingObject refers to the general resource type and [[IfcRelNests]].RelatedObjects refers to one or more task specific productivities. For example, an [[IfcLaborResourceType]] may be defined for Carpenter which may have a nested [[IfcLaborResourceType]] for Carpenter Wall Framing and another nested [[IfcLaborResourceType]] for Carpenter Drywall , each of which may have productivities based according to specific task types [[IfcTaskType]] . .use head Assignment use definition Resource types may be assigned to process types [[IfcTypeProcess]] subtypes using the [[IfcRelAssignsToProcess]] relationship as shown in Figure 1. Such relationship indicates that the resource type applies to the process type for the use indicated e.g. [[IfcTaskType]].PredefinedType . Such relationship enables a scenario of placing an [[IfcProduct]] of a particular [[IfcTypeProduct]] , querying for a set of [[IfcTypeProcess]] process types for constructing such product e.g. [[IfcTaskTypeEnum]].CONSTRUCTION , querying each [[IfcTypeProcess]] for a set of [[IfcTypeResource]] resource types for carrying out the process, and finally choosing an [[IfcTypeProcess]] and [[IfcTypeResource]] combination resulting in the shortest time for instantiated [[IfcTask]] occurrence s and or lowest cost for instantiated [[IfcConstructionResource]] occurrence s . Assignment Use Definition .. .. .. .. figures ifcconstructionresourcetype assignment.png Figure 1 Construction resource type assignment"
-
-#:IFC.xml:2974
-msgid "IfcConstructionResourceType_BaseCosts"
-msgstr "Basiskosten"
-
-msgid "IfcConstructionResourceType_BaseCosts_DEFINITION"
-msgstr "Gibt die Stückkosten und die Umweltauswirkungen an, für die die anfallenden Beträge berechnet werden sollen. Standard , Overtime , und kann eine Hierarchie der Kostenwerte enthalten, die an verschiedenen Terminen unter Verwendung von [[IfcCostValue]] gelten. pplicable Date und [[IfcCostValue]].FixedUntilDate ."
-
-#:IFC.xml:2986
-msgid "IfcConstructionResourceType_BaseQuantity"
-msgstr "BaseQuantity"
-
-msgid "IfcConstructionResourceType_BaseQuantity_DEFINITION"
-msgstr "Gibt die Menge an, für die BaseQuantityProduced gilt. Der Name des [[IfcPhysicalQuantity]] gibt die zu messende Mengendefinition an, z.B. GrossVolume . carpentry work , dieser Wert bezieht sich auf Mengen auf [[IfcProduct]] s, denen das zugewiesene [[IfcTask]] zugewiesen ist. Für dauerbasierte Ressourcen. . Sicherheitskontrolle, Treibstoff für Geräte , dieser Wert bezieht sich auf Mengen, die dem Vorkommen der zugewiesenen [[IfcTaskType]] zugewiesen werden können."
-
-#:IFC.xml:2998
-msgid "IfcCrewResource"
-msgstr "IfcCrew-Ressource"
-
-msgid "IfcCrewResource_DEFINITION"
-msgstr "[[IfcCrewResource]] stellt eine Sammlung von internen Ressourcen dar, die in Bauprozessen verwendet werden. HISTORY New Entity in IFC2.0. Die Identifizierung von Personen und Ausrüstung einer Mannschaft wird durch ihre Spezifikation auf der Ebene der Komponente erreicht. Daher zu wissen, welche Personen sich in einer Crew befinden, wird durch die Identifizierung der Personen, die jedem [[IfcLaborResource]] innerhalb der [[IfcCrewResource]] zugewiesen sind, erreicht. In ähnlicher Weise zu identifizieren, dass eine Schraubenmaschine für Rohrbeschläge Teil der Besatzung ist, indem eine geeignete Instanz von [[IfcElementComponent]] mit der [[IfcConstructionEquipmentResource]] verknüpft wird, die ein Element des [[IfcCrewResource]] bildet."
-
-#:IFC.xml:2999
-msgid "IfcCrewResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcCrewResource_PredefinedType_DEFINITION"
-msgstr "Definiert Typen von Crewressourcen. .change ifc2x4 IFC4 Neues Attribut."
-
-#:IFC.xml:3006
-msgid "IfcCrewResourceType"
-msgstr "IfcCrewResourceType"
-
-msgid "IfcCrewResourceType_DEFINITION"
-msgstr "Der Ressourcentyp [[IfcCrewResourceType]] definiert allgemein geteilte Informationen für Vorkommen von Crewressourcen. Die Menge der gemeinsam genutzten Informationen kann gemeinsame Produktivitäten gemeinsame Preise für gemeinsame Eigenschaften in gemeinsamen Eigenschaftensets enthalten. Es wird verwendet, um eine Crew Ressourcenspezifikation die spezifischen Ressourceninformationen zu definieren, die allen Vorkommnissen dieser Ressource gemein ist. Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcCrewResourceType]] werden durch Instanzen von [[IfcCrewResource]] repräsentiert."
-
-#:IFC.xml:3007
-msgid "IfcCrewResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcCrewResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Besatzungsressourcen."
-
-#:IFC.xml:3014
-msgid "IfcCrewResourceTypeEnum"
-msgstr "IfcCrewResourceTypeEnum"
-
-msgid "IfcCrewResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung wird verwendet, um den primären Zweck einer Crew zu identifizieren HISTORY New Enumeration in IFC4. Posten OFFICE Eine Zusammenstellung von Ressourcen, die Verwaltungsarbeit in einem Büro. SITE Eine Zusammenstellung von Ressourcen, die Produktionsarbeiten auf einer Baustelle ausführen."
-
-#:IFC.xml:3020
-msgid "IfcCrewResourceTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
-
-msgid "IfcCrewResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:3021
-msgid "IfcCrewResourceTypeEnum_OFFICE"
-msgstr "OFFIZIEL"
-
-msgid "IfcCrewResourceTypeEnum_OFFICE_DEFINITION"
-msgstr "Eine Zusammenstellung von Ressourcen, die die Verwaltung in einem Büro ausüben."
-
-#:IFC.xml:3022
-msgid "IfcCrewResourceTypeEnum_SITE"
-msgstr "SEITE"
-
-msgid "IfcCrewResourceTypeEnum_SITE_DEFINITION"
-msgstr "Eine Zusammenstellung von Ressourcen, die Produktionsarbeiten auf einer Baustelle durchführen."
-
-#:IFC.xml:3023
-msgid "IfcCrewResourceTypeEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
-
-msgid "IfcCrewResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
-
-#:IFC.xml:3024
-msgid "IfcLaborResource"
-msgstr "IfcLabor-Ressource"
-
-msgid "IfcLaborResource_DEFINITION"
-msgstr "Ein [[IfcLaborResource]] wird im Bau mit bestimmten Fertigkeiten oder Handwerkskunst verwendet, um bestimmte Bau- oder Managementaufgaben durchzuführen. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Das Attribut Skillset wurde gelöscht mit LongDescription beschrieben. Der Zweck eines [[IfcLaborResource]] ist es, ein Fähigkeitsset zu identifizieren, das benötigt oder genutzt werden kann. Die ermittelte Fertigkeit kann zum Beispiel Ladungs-, Foreman-, Arbeiter-, Klempner- usw. sein und eine bestimmte Qualifikationsstufe bestimmen. Es kann verwendet werden, um die generische Art der Arbeitsressource, die für einen Zweck benötigt wird, zu identifizieren, ohne spezifisch über die Akteurin Person oder Organisation, die das Auftreten der Ressource zur Verfügung stellt. Es kann besonders nützlich sein, wenn ein Gesamtplan für einen Prozess oder einen Prozess erstellt wird. Zum Beispiel in der Wartung oder bei der Planung der Arbeiten kann es eine bekannte Aufgabe geben, die erledigt werden muss, um einen Chargenandrohr-Schrauber zu benötigen. Möglicherweise gibt es mehrere solche Arbeitskräfteressourcen, und deshalb ist es nicht notwendig, zu ermitteln, welche in der Planungsphase genutzt werden. Zu einem späteren Zeitpunkt können einzelne Akteure für die Arbeitsressourcen ermittelt werden, indem der Akteur durch [[IfcActor]] spezifiziert wird. Der Akteur wird dann durch das [[IfcRelAssignsToResource]] als das Auftreten von Arbeitsressourcen identifiziert. elatedResource Attribut. Das [[IfcLaborResource]] stellt das [[IfcRelAssignsToResource]] zur Verfügung. RelatingResource Attribut."
-
-#:IFC.xml:3025
-msgid "IfcLaborResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcLaborResource_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Arbeitsressourcen. .change ifc2x4 IFC4 Neues Attribut."
-
-#:IFC.xml:3035
-msgid "IfcLaborResourceType"
-msgstr "IfcLaborResourceType"
-
-msgid "IfcLaborResourceType_DEFINITION"
-msgstr "Der Ressourcentyp [[IfcLaborResourceType]] definiert allgemein geteilte Informationen über Vorfälle von Arbeitsressourcen. Die Menge der gemeinsam genutzten Informationen kann gemeinsame Produktivitäten gemeinsame Kostensätze für gemeinsame Eigenschaften in gemeinsamen Eigenschaftensets enthalten. Es wird verwendet, um eine Arbeitsressourcenspezifikation die spezifischen Ressourceninformationen zu definieren, die allen Vorkommnissen dieser Ressource gemein ist. Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcLaborResourceType]] werden durch Instanzen von [[IfcLaborResource]] repräsentiert."
-
-#:IFC.xml:3036
-msgid "IfcLaborResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcLaborResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Arbeitskräfteressourcen."
-
-#:IFC.xml:3043
-msgid "IfcLaborResourceTypeEnum"
-msgstr "IfcLaborResourceTypeEnum"
-
-msgid "IfcLaborResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung dient der Identifizierung des primären Zwecks eines Arbeitskräftepotenzials und ist auf Kategorien auf hohem Niveau beschränkt, die auf gemeinsamen Fähigkeitsstufen basieren. HISTORY New enumeration in IFC4. LASSEN SIE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE RECHTE REC FLOORING GENERAL General work without required specific skill. HVAC Heiz- und Lüftungseinrichtungen, Anlagen und Leitungen. LANDSCAPING Gras, Pflanzen, Bäume oder Bewässerung. MASONRY Verlegungsziegel oder Blöcke mit Mörtel. ZAHLUNG Auftragen von dekorativen Beschichtungen oder Beschichtungen. PAVING Asphalt oder Betonwege und Gehwege. ROOFING-Membranen, Schindeln, Fliesen oder andere Dachdeckungen SITEGRADING Aushöhlung, Füllung oder Kontur Erde. SURVEYING Positionen, Distanzen und Winkel bestimmen. NUTZERDEFINED Benutzer definierte Ressource. Nicht definierte Ressource."
-
-#:IFC.xml:3066
-msgid "IfcLaborResourceTypeEnum_ADMINISTRATION"
-msgstr "ADMINISTRIERUNG"
-
-msgid "IfcLaborResourceTypeEnum_ADMINISTRATION_DEFINITION"
-msgstr "Koordinierung der Arbeit."
-
-#:IFC.xml:3067
-msgid "IfcLaborResourceTypeEnum_CARPENTRY"
-msgstr "KARPENTRIE"
-
-msgid "IfcLaborResourceTypeEnum_CARPENTRY_DEFINITION"
-msgstr "Grobe Schreinerei mit gerahmtem Rahmen."
-
-#:IFC.xml:3068
-msgid "IfcLaborResourceTypeEnum_CLEANING"
-msgstr "LÖSCHEN"
-
-msgid "IfcLaborResourceTypeEnum_CLEANING_DEFINITION"
-msgstr "Beseitigung von Staub und Schutt."
-
-#:IFC.xml:3069
-msgid "IfcLaborResourceTypeEnum_CONCRETE"
-msgstr "BESTÄTIGEN"
-
-msgid "IfcLaborResourceTypeEnum_CONCRETE_DEFINITION"
-msgstr "BESTÄTIGEN"
-
-#:IFC.xml:3070
-msgid "IfcLaborResourceTypeEnum_DRYWALL"
-msgstr "DRYWALL"
-
-msgid "IfcLaborResourceTypeEnum_DRYWALL_DEFINITION"
-msgstr "Gypsum Wallboard Platzierung und Taping."
-
-#:IFC.xml:3071
-msgid "IfcLaborResourceTypeEnum_ELECTRIC"
-msgstr "ELECTRIK"
-
-msgid "IfcLaborResourceTypeEnum_ELECTRIC_DEFINITION"
-msgstr "Elektrische Vorrichtungen, Geräte und Kabel."
-
-#:IFC.xml:3072
-msgid "IfcLaborResourceTypeEnum_FINISHING"
-msgstr "BEENDEN"
-
-msgid "IfcLaborResourceTypeEnum_FINISHING_DEFINITION"
-msgstr "Schreinerei mit individueller Schrank."
-
-#:IFC.xml:3073
-msgid "IfcLaborResourceTypeEnum_FLOORING"
-msgstr "FLOORING"
-
-msgid "IfcLaborResourceTypeEnum_FLOORING_DEFINITION"
-msgstr "FLOORING"
-
-#:IFC.xml:3074
-msgid "IfcLaborResourceTypeEnum_GENERAL"
-msgstr "ALLGEMEINE"
-
-msgid "IfcLaborResourceTypeEnum_GENERAL_DEFINITION"
-msgstr "Alltagskräfte, die keine besonderen Fähigkeiten erfordern."
-
-#:IFC.xml:3075
-msgid "IfcLaborResourceTypeEnum_HVAC"
-msgstr "HVAC"
-
-msgid "IfcLaborResourceTypeEnum_HVAC_DEFINITION"
-msgstr "Heiz- und Lüftungsvorrichtungen, Anlagen und Leitungen."
-
-#:IFC.xml:3076
-msgid "IfcLaborResourceTypeEnum_LANDSCAPING"
-msgstr "LANDSCHAFTUNG"
-
-msgid "IfcLaborResourceTypeEnum_LANDSCAPING_DEFINITION"
-msgstr "Gras, Pflanzen, Bäume oder Bewässerung."
-
-#:IFC.xml:3077
-msgid "IfcLaborResourceTypeEnum_MASONRY"
-msgstr "MASONRIE"
-
-msgid "IfcLaborResourceTypeEnum_MASONRY_DEFINITION"
-msgstr "Schleifsteine oder Blöcke mit Mörser."
-
-#:IFC.xml:3078
-msgid "IfcLaborResourceTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
-
-msgid "IfcLaborResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:3079
-msgid "IfcLaborResourceTypeEnum_PAINTING"
-msgstr "ZAHLUNG"
-
-msgid "IfcLaborResourceTypeEnum_PAINTING_DEFINITION"
-msgstr "Auftragen von dekorativen Beschichtungen oder Abdeckungen."
-
-#:IFC.xml:3080
-msgid "IfcLaborResourceTypeEnum_PAVING"
-msgstr "PAVING"
-
-msgid "IfcLaborResourceTypeEnum_PAVING_DEFINITION"
-msgstr "Asphalt oder Betonstraßen und Gehwege."
-
-#:IFC.xml:3081
-msgid "IfcLaborResourceTypeEnum_PLUMBING"
-msgstr "PLUMBING"
-
-msgid "IfcLaborResourceTypeEnum_PLUMBING_DEFINITION"
-msgstr "Klempnereinrichtungen, Ausrüstungen und Rohre."
-
-#:IFC.xml:3082
-msgid "IfcLaborResourceTypeEnum_ROOFING"
-msgstr "ROOFEN"
-
-msgid "IfcLaborResourceTypeEnum_ROOFING_DEFINITION"
-msgstr "Membranen, Schindeln, Fliesen oder andere Dache."
-
-#:IFC.xml:3083
-msgid "IfcLaborResourceTypeEnum_SITEGRADING"
-msgstr "SITEGRADING"
-
-msgid "IfcLaborResourceTypeEnum_SITEGRADING_DEFINITION"
-msgstr "Erhebung, Füllung oder Konturierung der Erde."
-
-#:IFC.xml:3084
-msgid "IfcLaborResourceTypeEnum_STEELWORK"
-msgstr "STEELWORKS"
-
-msgid "IfcLaborResourceTypeEnum_STEELWORK_DEFINITION"
-msgstr "Stahlelemente aufbauen und befestigen."
-
-#:IFC.xml:3085
-msgid "IfcLaborResourceTypeEnum_SURVEYING"
-msgstr "ÜBERLEBEN"
-
-msgid "IfcLaborResourceTypeEnum_SURVEYING_DEFINITION"
-msgstr "Positionen, Entfernungen und Winkel bestimmen."
-
-#:IFC.xml:3086
-msgid "IfcLaborResourceTypeEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
-
-msgid "IfcLaborResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
-
-#:IFC.xml:3087
-msgid "IfcSubContractResource"
-msgstr "IfcSubContractResource"
-
-msgid "IfcSubContractResource_DEFINITION"
-msgstr "[[IfcSubContractResource]] ist eine Bauressource, die in einem Bauprozess benötigt wird, der einen Unterunternehmer repräsentiert. HISTORY New entity in IFC2.0. hange ifc2x4 IFC4 CHANGE Das Attribut Subunternehmer wurde gelöscht mit [[IfcRelAssignsToResource]], um einen [[IfcActor]] zur Erfüllung der Rolle als Subunternehmer zuzuweisen. Das Attribut JobBeschreibung wurde gelöscht mit LongDescription beschrieben. Ein [[IfcSubContractResource]] kann zur Kostenberechnung und zur Arbeitsplanung mit oder ohne Angabe des Subunternehmers und des Vertragsvertrags verwendet werden. Der Zweck eines [[IfcSubContractResource]] ist es, eine Arbeit eines bestimmten Typs anzuzeigen, die durch die Verwendung eines Untervertrags zu verwirklichen ist. Sein Ziel ist es, die Beschreibung der erforderlichen Untervertragsarbeit zu identifizieren. Es kann verwendet werden, um die generische Art der Untervertragsressource, die für einen Zweck benötigt wird, zu identifizieren, ohne spezifisch über die Akteurin Person oder Organisation, die das Auftreten der Ressource zur Verfügung stellt. Es kann besonders nützlich sein, wenn ein Gesamtplan für einen Prozess oder einen Prozess erstellt wird. Zum Beispiel in der Wartung oder bei der Planung der Arbeiten kann es eine bekannte Aufgabe geben, die zu erledigen ist um einen Dämmspezialist zu benötigen. Eine Unterauftragsressource kann auf verschiedenen Stufen und Detailstufen durch ihre Zuordnungen beschrieben werden, die für bestimmte Aufgaben bestimmte Akteure bestimmt sind, um Gebote zu beantragen Kostenvoranschläge von Akteuren Projekt-Auftragsauftragsauftrag erhalten Änderung der Reihenfolge usw. ausgeführt"
-
-#:IFC.xml:3088
-msgid "IfcSubContractResource_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSubContractResource_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Untervertragsressourcen. .change ifc2x4 IFC4 Neues Attribut."
-
-#:IFC.xml:3098
-msgid "IfcSubContractResourceType"
-msgstr "IfcSubContractResourceType"
-
-msgid "IfcSubContractResourceType_DEFINITION"
-msgstr "Der Ressourcentyp [[IfcSubContractResourceType]] definiert allgemein geteilte Informationen für Fälle von Untervertragsressourcen. Die Menge der gemeinsam genutzten Informationen kann gemeinsame Produktivitäten gemeinsame Kostensätze für gemeinsame Eigenschaften in gemeinsamen Eigenschaftensets enthalten. Es wird verwendet, um eine Untervertrags-Ressourcenspezifikation die spezifischen Ressourceninformationen zu definieren, die allen Vorkommnissen dieser Ressource gemein ist. Ressourcentypen können ausgetauscht werden, ohne bereits Vorkommnisse zugewiesen zu sein. Vorkommen des [[IfcSubContractResourceType]] werden durch Instanzen von [[IfcSubContractResource]] repräsentiert."
-
-#:IFC.xml:3099
-msgid "IfcSubContractResourceType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSubContractResourceType_PredefinedType_DEFINITION"
-msgstr "Definiert Arten von Untervertragsressourcen."
-
-#:IFC.xml:3106
-msgid "IfcSubContractResourceTypeEnum"
-msgstr "IfcSubContractResourceTypeEnum"
-
-msgid "IfcSubContractResourceTypeEnum_DEFINITION"
-msgstr "Diese Aufzählung dient der Identifizierung des primären Zwecks einer Untervertragsressource. Artikel KAUF Einrichtung oder Lieferung von Produkten. ARBEITEN Arbeiten vor Ort. NUTZERDEFINED Benutzerdefinierte Ressource. NICHT definierte Ressource."
-
-#:IFC.xml:3112
-msgid "IfcSubContractResourceTypeEnum_NOTDEFINED"
-msgstr "NOTDEFINIERT"
-
-msgid "IfcSubContractResourceTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Undefinierte Ressource."
-
-#:IFC.xml:3113
-msgid "IfcSubContractResourceTypeEnum_PURCHASE"
-msgstr "KAUF"
-
-msgid "IfcSubContractResourceTypeEnum_PURCHASE_DEFINITION"
-msgstr "Möbel oder Lieferung von Produkten."
-
-#:IFC.xml:3114
-msgid "IfcSubContractResourceTypeEnum_USERDEFINED"
-msgstr "BENUTZERDEFINIERT"
-
-msgid "IfcSubContractResourceTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Benutzerdefinierte Ressource."
-
-#:IFC.xml:3115
-msgid "IfcSubContractResourceTypeEnum_WORK"
-msgstr "ARBEIT"
-
-msgid "IfcSubContractResourceTypeEnum_WORK_DEFINITION"
-msgstr "Arbeiten vor Ort durchführen."
-
-#:IFC.xml:3116
-msgid "Pset_ConstructionResource"
-msgstr "Bau-Ressource festlegen"
-
-msgid "Pset_ConstructionResource_DEFINITION"
-msgstr "Eigenschaften zur Verfolgung der Ressourcennutzung im Laufe der Zeit."
-
-#:IFC.xml:3117
-msgid "ActualCompletion"
-msgstr "Pset_ConstructionResource_Tatsächliche Fertigstellung"
-
-msgid "ActualCompletion_DEFINITION"
-msgstr "Der tatsächliche Fertigstellungsgrad der Ressourcenzuweisung."
-
-#:IFC.xml:3122
-msgid "ActualCost"
-msgstr "Pset_ConstructionResource_Tatsächliche Kosten"
-
-msgid "ActualCost_DEFINITION"
-msgstr "Die tatsächlichen Kosten der Ressourcenzuweisung."
-
-#:IFC.xml:3127
-msgid "ActualWorkTime"
-msgstr "Aktuelle Arbeitszeit"
-
-msgid "ActualWorkTime_DEFINITION"
-msgstr "Die eigentliche Arbeit der Ressourcenzuweisung."
-
-#:IFC.xml:3132
-msgid "RemainingCost"
-msgstr "Pset_ConstructionResource_Verbleibende Kosten"
-
-msgid "RemainingCost_DEFINITION"
-msgstr "Die restlichen Kosten der Ressourcenzuweisung."
-
-#:IFC.xml:3137
-msgid "RemainingWorkProgression"
-msgstr "Verbleibender Work-Fortschritt"
-
-msgid "RemainingWorkProgression_DEFINITION"
-msgstr "Die restlichen Arbeiten der Ressourcenzuweisung."
-
-#:IFC.xml:3142
-msgid "ScheduleCompletion"
-msgstr "Pset_ConstructionResource_Zeitplan Fertigstellung"
-
-msgid "ScheduleCompletion_DEFINITION"
-msgstr "Der geplante Fertigstellungsgrad der Ressourcenzuweisung."
-
-#:IFC.xml:3147
-msgid "ScheduleCost"
-msgstr "Pset_ConstructionResource_Zeitplan Kosten"
-
-msgid "ScheduleCost_DEFINITION"
-msgstr "Die budgetierten Kosten der Ressourcenzuweisung."
-
-#:IFC.xml:3152
-msgid "ScheduleWorkProgression"
-msgstr "ScheduleWork-Fortschritt"
-
-msgid "ScheduleWorkProgression_DEFINITION"
-msgstr "Die geplante Arbeit der Ressourcenzuweisung."
-
-#:IFC.xml:3158
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities"
-msgstr "Qto KonstruktionEquipmentEquipmentResourceBaseQuantities"
-
-msgid "Qto_ConstructionEquipmentResourceBaseQuantities_DEFINITION"
-msgstr "Basismengen, die bei der Definition aller Vorkommnisse von Bauausrüstungsressourcen gemeinsam sind."
-
-#:IFC.xml:3159
-msgid "OperatingTime"
-msgstr "Betriebszeit"
-
-msgid "OperatingTime_DEFINITION"
-msgstr "Produktionszeit unter Verwendung der Geräte einschließlich Betriebszeit und ohne Leerlaufzeit."
-
-#:IFC.xml:3164
-msgid "UsageTime"
-msgstr "Benutzungszeit"
-
-msgid "UsageTime_DEFINITION"
-msgstr "Gesamtzeit mit der Ausrüstung inklusive Betriebszeit und Leerlaufzeit."
-
-#:IFC.xml:3170
-msgid "Qto_ConstructionMaterialResourceBaseQuantities"
-msgstr "Qto Baumaterial-RessourcenbaseQuantitäten"
-
-msgid "Qto_ConstructionMaterialResourceBaseQuantities_DEFINITION"
-msgstr "Basismengen, die bei der Definition aller Vorkommnisse von Baumaterialressourcen gemeinsam sind. Comments GrossVolume Inklusive Material platziert und verschwendet. NetVolume Gesamt Netto-Volumen des Materials, einschließlich Material platziert, aber ohne Material verschwendet. NetWeight Total Nettogewicht des Materials, einschließlich Material platziert, aber ohne Material verschwendet."
-
-#:IFC.xml:3171
-msgid "GrossVolume"
-msgstr "Großvolumen"
-
-msgid "GrossVolume_DEFINITION"
-msgstr "Gesamtvolumen des Objekts. Öffnungen, Eindrücke, eingeschlossene Objekte und Projektionen werden nicht berücksichtigt."
-
-#:IFC.xml:3181
-msgid "NetVolume"
-msgstr "NetVolume"
-
-msgid "NetVolume_DEFINITION"
-msgstr "Gesamtvolumen des Objekts, unter Berücksichtigung der möglichen Verarbeitungsfunktionen geschnitten s, etc. oder Öffnungen und Einträge."
-
-#:IFC.xml:3186
-msgid "NetWeight"
-msgstr "Netzgewicht"
-
-msgid "NetWeight_DEFINITION"
-msgstr "Gesamtgewicht des Objekts ohne Teilezugehörigkeit unter Berücksichtigung der möglichen Verarbeitungsmerkmale geschnitten s, etc. oder Öffnungen und Einbrüche."
-
-#:IFC.xml:3192
-msgid "Qto_LaborResourceBaseQuantities"
-msgstr "Qto LaborResourceBaseQuantities"
-
-msgid "Qto_LaborResourceBaseQuantities_DEFINITION"
-msgstr "Basismengen, die bei der Definition aller Vorkommnisse von Arbeitskräften gemeinsam sind."
-
-#:IFC.xml:3193
-msgid "OvertimeWork"
-msgstr "Überstundenarbeit"
-
-msgid "OvertimeWork_DEFINITION"
-msgstr "Arbeiten, die nach Überschreiten einer bestimmten Grenze ausgeführt werden, wie z. B. Stunden pro Tag oder Stunden pro Woche, nach welcher Unternehmens- oder Kommunalpolitik ein anderer Tarif erforderlich ist. Notizrichtlinien für Überstunden liegen in der Verantwortung des Benutzers oder der Anwendung, die nicht in IFC modelliert sind."
-
-#:IFC.xml:3198
-msgid "StandardWork"
-msgstr "Standardarbeit"
-
-msgid "StandardWork_DEFINITION"
-msgstr "Regelmäßige Arbeiten bis zu einer bestimmten Grenze, nach der Überstundenraten gelten können."
+msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
+msgstr "Die Absicht der Beschränkung Verwendung in Bezug auf ihre verwandten [[IfcConstraint]] und IfcObjects, IfcPropertyDefinitions oder IfcRelationships. Typische Werte können z.B. RATIONALE oder EXPECTED PERFORMANCE sein."
 
