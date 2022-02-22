@@ -9,638 +9,995 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: no\n"
-"X-Crowdin-File: /master/IfcExternalReferenceResource.pot\n"
-"X-Crowdin-File-ID: 40\n"
+"X-Crowdin-File: /master/IfcGeometricModelResource.pot\n"
+"X-Crowdin-File-ID: 44\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: no_NO\n"
 "PO-Revision-Date: 2022-02-22 19:16\n"
 
-#:IFC.xml:9124
-msgid "IfcClassification"
-msgstr "IfcClassification"
+#:IFC.xml:10294
+msgid "IfcAdvancedBrep"
+msgstr "IfcAdvancedBrep"
 
-msgid "IfcClassification_DEFINITION"
-msgstr "En [[IfcClassification]] brukes til arrangement av objekter i en klasse eller kategori i samsvar med et vanlig formål eller deres besittelse av vanlige egenskaper. En klassifisering i følelse av [[IfcClassification]] er taksonomi eller taksonomisk ordning, ordnet i en hierarkisk struktur. En kategori av objekter er knyttet til andre kategorier i et generaliseringsforhold. Derfor er klassifiseringselementene i en klassifisering organisert i en trestruktur. Den [[IfcClassification]] identifiserer klassifiseringssystemet eller kilden som en klassifisering refererer til. Hver klassifiseringsreferanse kan referere til en forekomst av [[IfcClassification]] . Et klassifiseringssystem som deklareres kan enten formelt publiseres, eller det kan være en lokalt definert metode for klassifiseringsinformasjon. MERKNAD Eksempler på slike formelt publiserte klassifiseringer er niklass, Uniclass, Masterformat eller DIN277. Det er to metoder for å definere og referere til et klassifikasjonssystem 1. Inkludert klassifiseringssystemstrukturen i datasettet Her er et hierarkisk tre av [[IfcClassificationReference]] tatt med som definerer klassifiseringssystemet, inkludert forholdet mellom klassifiseringselementene. ReferencedKildeattributtet til [[IfcClassificationReference]] kobler klassifiseringselementet til det overordnede elementet, og overordnet element til til slutt [[IfcClassification]] . 2. Henvisning til klassifiseringssystemet av en klassifiseringsnøkkel eller id Her brukes [[IfcClassificationReference]for å tildele en klassifiseringsid eller nøkkel som identifikasjonsattributt, og den kan kobles ved ReferencedSource attributt direkte til [[IfcClassification]] . HISTORY Ny enhet i IFC1.5 .change ifc2x4 IFC 2x4 CHANGE Attribute Edition laget valgfritt. Attributter beskrivelse, Sted og ReferenceTokens og motsatt attributt Hasreferanser lagt til."
+msgid "IfcAdvancedBrep_DEFINITION"
+msgstr "En avansert B rep er en grenselinjemodell der alle flater, kanter og vertikaler er uttrykkelig representert. Den er en solid med eksplisitt topologi og elementær eller fri formgeometri. Avtalene på B-representanten er av type [[IfcAdvancedFace]] . En avansert B rep må oppfylle de samme topologiske begrensningene som manifold solid B rep. MERKNAD Det er blitt innført avansert B rep for å støtte stadig antall applikasjoner som kan definere og utveksle B-rep modeller basert på NURBS eller andre b flensoverflater. avansert brup b splintoverflate . .. .. figurer frem mot 01. ng Figur 1 Avansert Brep, b splint overflate figur 1 illustrerer bruk av [[IfcAdvancedBrep]] for grensespenningsmodeller med b splinte overflater. Diagrammet viser den topologiske og geometriske representasjonen elementene som brukes for avanserte B-reps, basert på [[IfcAdvancedFace]]. avansert elementær bryggoverflate ... ... ... ... figurer ifcadvancedbrep 02. ng Figur 2 Avansert Brep, elementær overflate figur 2 illustrerer bruk av [[IfcAdvancedBrep]] for gjengivelsesmodeller med elementære overflater. Diagrammet viser de topologiske og geometriske fremstillingselementene som brukes for avanserte B-reps, basert på [[IfcAdvancedFace]]. Den viser bruk av [[IfcIntersectionCurve]] for å gi den geometriske representasjonen av kantkurven både som 3D-kurve og som u, pkurve i det parametriske rommet til de tilstøtende overflatene. MERKNAD HISTORY Ny enhet i IFC4 .spec head, uformell framstilling definert i NS-EN ISO 10303 514. HISTORY New entity in IFC4 .spec head. hver flate er en flate 2. hver flate har geometrien definert av en elementær overflate, en sveipturoverflate eller en b splinunderlag 3. kantene som brukes til å definere flatens grenser, skal alle referere en kantkurve 4. hver kurve som brukes til å definere geometrien til flatene og flategrensene, skal enten være en konisk, eller en linje eller en polylinje eller en b splintkurve 5. kantene som brukes til å definere flategrensene skal alle beskjæres av vertikaler av type vertex punkt 6. ingen sløyfe som brukes til å definere en grenseflate skal være av orientert undertypeFormelle posisjoner HasAdvancedFaces Hver side av den avanserte B rep skal være av type [[IfcAdvancedFace]] ."
 
-#:IFC.xml:9164
-msgid "IfcClassification_ClassificationForObjects"
-msgstr "Klassifiseringsobjekter"
+#:IFC.xml:10297
+msgid "IfcAdvancedBrepWithVoids"
+msgstr "IfcAdvancedBrepWithVoids"
 
-msgid "IfcClassification_ClassificationForObjects_DEFINITION"
-msgstr "Klassifiseringen hvilke objekter som er knyttet til. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+msgid "IfcAdvancedBrepWithVoids_DEFINITION"
+msgstr "[[IfcAdvancedBrepWithVoids]] er en spesialisering av en avansert B rep som inneholder ett eller flere hulrom i dens interiør. Stykkene er representert som lukkede skjell som er definert som at skallet normalt peker inn i hulrommet. MERKNAD Enhet tilpasset fra framstilling av avansert utforming definert i ISO 10303 42. HISTORY Ny enhet i IFC4 .spec head Uformell posisjon 1. Hvert hulrom skal fjernes fra ytre skall, og fra hvert annet hulrom 2. Hvert hulrom skal være innesluttet i det ytre skallet, men ikke i noe annet hulrom. Det er spesielt det ytre skallet som ikke står i settet med hulromskall 3. Hvert skall i [[IfcManifoldSolidBrep]] skal bare refereres til én gang. 4. Alle flatene på alle skall i [[IfcAdvancedBrep]] og [[IfcAdvancedBrepWithVoids]]. oider skal være av type [[IfcAdvancedFace]] ."
 
-#:IFC.xml:9176
-msgid "IfcClassification_HasReferences"
-msgstr "Heldinger"
+#:IFC.xml:10300
+msgid "IfcAdvancedBrepWithVoids_Voids"
+msgstr "Voids"
 
-msgid "IfcClassification_HasReferences_DEFINITION"
-msgstr "Klassifiseringen refererer til som klassifiseringen gjelder for. Den kan enten være den endelige klassifiseringsmerknaden eller en intermediær klassifikasjon."
+msgid "IfcAdvancedBrepWithVoids_Voids_DEFINITION"
+msgstr "Voids"
 
-#:IFC.xml:9125
-msgid "IfcClassification_Description"
-msgstr "Beskrivelse"
+#:IFC.xml:10312
+msgid "IfcBlock"
+msgstr "Slovenija"
 
-msgid "IfcClassification_Description_DEFINITION"
-msgstr "Ytterligere beskrivelse gitt for klassifiseringen. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+msgid "IfcBlock_DEFINITION"
+msgstr "[[IfcBlock]] er et \"Construction Solid Geometry CSG 3D primitive. Den er definert som en posisjon og en positallavstand langs de tre ortogonale aksene. Den arvede posisjon-attributtet har IfcAxisPlacement3D typen og gir SELF [[IfcCsgPrimitive3D]].Position The location and orientof the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location blokken har en vertex på plass og kantene er i samsvar med plasseringsaksene i positiv retning. XLengde, Ylength og ZLength attributter definerer størrelsen på [[IfcBlock]] langs de tre aksene. blokk .. .. .. figurer om lag 1. ng Figur 1 Blokkens geometri figur 1 viser geometriske parametere for en blokk hvor blokken plasseres innenfor sitt eget plasseringskoordinatsystem. Verdiene for XLength, YLength og Zlength legges til den positive retningen av X, Y og Z-aksen. extDef MERKNAD Definisjon etter NS-EN ISO 10303 42 A blokk er en type geometrisk representasjonselement som er et solid rektangulært parallellepiped, definert med koordinatsystem for plassering og plassering. Blokken spesifiseres av positive lengder x, y og z langs aksene til plasseringskoordinatsystemet, og har en vertex på opprinnelsen til plasseringens koordinatsystem. MERKNAD Enhet tilpasset fra blokk definert i ISO 10303 42. HISTORY ny enhet i IFC2x3. Bruk definisjonen av hode tekstur på hver side, teksturer er justert vendt mot stående. På topp- og bunnflaten er teksturer justert foran til baksiden. Teksturer er strekke eller gjentatt i hvilket omfang hvert ansikt er i henhold til Repeter og Gjenta. Figur 2 illustrerer standard teksturkartlegging med en klampet teksturrepoS False og RepeterT False . Bildet til venstre viser teksturen der S-aksen peker mot høyre og T-aksen oppover. Bildet til høyre viser teksturen som brukes på geometrien der X-aksen peker tilbake til høyre, Y-aksen peker tilbake til venstre, og Z-aksen oppover. .gridtable tekstur . .. .. figurer hvis-blokk-tekst. ng Figur 2 Blokkteksturer Side Normal Origin X Origin X Origin Y Origin Z-aksens T aksen venstre X 0 Lengde 0 Y Z Høyre X Lengde 0 0 Z Front Y 0 0 0 X Z Bakside Y Lengde 0 X Z Nederst Z 0 Lengde 0 X 0 X Y top Z 0 ZLengde 0 X Y Tabell 3 Teksturparametere"
 
-#:IFC.xml:9130
-msgid "IfcClassification_Edition"
-msgstr "Utgave"
+#:IFC.xml:10313
+msgid "IfcBlock_XLength"
+msgstr "XLengde"
 
-msgid "IfcClassification_Edition_DEFINITION"
-msgstr "Utgave eller versjon av klassifiseringssystemet som klassifiseringen notasjonen er utledet fra. MERKNAD Versjonssystemet er spesifikt for klassifikasjonssystemet. .change ifc2x4 IFC4 CHANGE Attributtet er endret til å være valgfritt."
+msgid "IfcBlock_XLength_DEFINITION"
+msgstr "Kvartalets størrelse langs X-aksen. Den er gitt av den arvede akseplasseringen gjennom SELF [[IfcCsgPrimitive3D]].Position.P 1 ."
 
-#:IFC.xml:9135
-msgid "IfcClassification_EditionDate"
-msgstr "Utgavedato"
+#:IFC.xml:10318
+msgid "IfcBlock_YLength"
+msgstr "Lengde"
 
-msgid "IfcClassification_EditionDate_DEFINITION"
-msgstr "Datoen som utgaven av klassifiseringen som ble brukt, ble gyldig. MERKNAD Indikasjonen på utgaven kan være tilstrekkelig til å identifisere klassifiseringskilden entydig, men nummeret er levert som et valgfritt attributt for å muliggjøre mer presis identifikasjon der det er nødvendig. .change ifc2x4 IFC4 CHANGE Datatypen er endret til [[IfcDate]] , datostrengen i henhold til ISO8601."
+msgid "IfcBlock_YLength_DEFINITION"
+msgstr "Kvartalets størrelse langs plasseringsaksen Y-. Den er gitt av den arvede akseplasseringen gjennom SELF [[IfcCsgPrimitive3D]].Posisjon.P 2 ."
 
-#:IFC.xml:9140
-msgid "IfcClassification_Name"
-msgstr "Navn"
+#:IFC.xml:10323
+msgid "IfcBlock_ZLength"
+msgstr "ZLengde"
 
-msgid "IfcClassification_Name_DEFINITION"
-msgstr "Navnet eller etiketten som klassifiseringen brukes etter er vanligvis kjent. MERKNAD Eksempler på navn er CI SfB, Masterformat, BSAB, Uniclass, STABU, DIN276, DIN277 osv."
+msgid "IfcBlock_ZLength_DEFINITION"
+msgstr "Kvartalets størrelse langs Z-aksen. Den er gitt av den arvede akseplasseringen gjennom SELF [[IfcCsgPrimitive3D]].Position.P 3 ."
 
-#:IFC.xml:9145
-msgid "IfcClassification_ReferenceTokens"
-msgstr "Referanse"
+#:IFC.xml:10330
+msgid "IfcBooleanClippingResult"
+msgstr "IfcBooleanClippingResult"
 
-msgid "IfcClassification_ReferenceTokens_DEFINITION"
-msgstr "Skilletegn tokens som brukes til å merke grensene for individuelle fasedannelser i en klassifiseringsreferanse. Dette gjelder typisk siden [[IfcClassification]] brukes i konjuction med [[IfcClassificationReference]] s. Hvis det bare finnes én referanseToken, gjelder den alle grensene for enkeltflater, hvis det finnes flere enn én ReferenceToken, det første symbolet gjelder den første grensen, det andre symbolet for den andre grensen, og n den ene symbolet for n og ytterligere en grense. MERKNAD Tokens anbefales typisk i klassifiseringen selv, og hver token vil ha en bestemt rolle. EKSEMPEL 1 For å angi at fasetegulatoren brukes til DIN277 2 referansedekning. Kontorrom er . , en enkelt ReferenceToken . For å angi at faktaskilletskilletene brukt til Omniklass Tabell 13 etter funksjonstabell 13 15 11 34 11 personer per styreleder er og , to referanserToken , oppgis. EKSEMPEL 2 Bruken av ReferenceTokens kan også utvides til å omfatte masker. Bruk må avtales med henblikk på definisjoner eller implementer avtaler som angir en maske syntaks som bør brukes. .change ifc2x4 IFC4 CHANGE Ny attributt lagt til på slutten av listen over attributter."
+msgid "IfcBooleanClippingResult_DEFINITION"
+msgstr "Et klipp resultat er definert som en spesiell undertype av den generelle [[IfcBooleanResult]] . Det begrenser operandene og operatøren av boolsk resultat. Et klipperesultat er boolsk forskjell mellom et solid og et halvt fast punkt, eller mellom resultatet av den boolske forskjellen og et halvt romsolid. Dermed kan mer enn én operasjon anvendes for å oppnå det siste boolske resultatet. HISTORY Ny enhet i IFC2x. Formelle posisjoner FirstOperandType Den første operasjonen i den Bolske klippingen skal være enten en [[IfcSweptAreaSolid]] eller i tilfelle mer enn én klipping en [[IfcBooleanResult]. SecondOperandType Andre operasjon for den bolske klippingen skal være en [[IfcHalfSpaceSolid]]. Operatørtypen Den boolske operatøren for klipping er alltid forskjell ."
 
-#:IFC.xml:9150
-msgid "IfcClassification_Source"
-msgstr "Kilde"
+#:IFC.xml:10333
+msgid "IfcBooleanOperand"
+msgstr "IfcBooleanOperand"
 
-msgid "IfcClassification_Source_DEFINITION"
-msgstr "Kilde eller utgiver for denne klassifiseringen. MERKNAD At kilden til klassifiseringen betyr den personen eller organisasjonen som var den opprinnelige forfatteren eller personen eller organisasjonen som for tiden oppholder seg som utfører."
+#:IFC.xml:10334
+msgid "IfcBooleanOperator"
+msgstr "IfcBooleanOperator"
 
-#:IFC.xml:9155
-msgid "IfcClassification_Specification"
-msgstr "Spesifikasjon"
+msgid "IfcBooleanOperator_DEFINITION"
+msgstr "Boolske operatører som gjelder for de første og andre boolske operandene. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne typen definerer de tre Bolske operatørene som brukes til definisjon av CSG-fast materiale. MERKNAD Enhet tilpasset fra boolsk operatør definert i ISO 10303 42. HISTORY ny enhet i IFC1.5.1. Elementer UNION Operasjonen med å bygge det regulerte settet teoretisk union av de volumene som er definert av to faste stoffer. INTERSECTION Driften av å bygge det regulariserte settet teoretiske krysset av volumene som er definert av to faste stoffer. DIFERRENCE har regularisert en teoretisk forskjell mellom volumene som er definert av to faste materialer."
 
-msgid "IfcClassification_Specification_DEFINITION"
-msgstr "Spesifikasjon"
+#:IFC.xml:10335
+msgid "IfcBooleanOperator_DIFFERENCE"
+msgstr "DIFFRERENCE"
 
-#:IFC.xml:9188
-msgid "IfcClassificationReference"
-msgstr "IfcClassificationReferanse"
+msgid "IfcBooleanOperator_DIFFERENCE_DEFINITION"
+msgstr "I regulariteten ble det teoretisk forskjell mellom volumene som er definert av to faste masser."
 
-msgid "IfcClassificationReference_DEFINITION"
-msgstr "En [[IfcClassificationReference]] er en referanse til et klassifiseringssystem eller en kilde, se [[IfcClassification]] for en bestemt klassifikasjonsnøkkel eller merknaden . De arvede attributtene har følgende meningsidentifikasjon har nøkkelen som er gitt for en bestemt referanse til klassifikasjonselementer eller -tabeller. Navn gir mulighet for et menneskelig tolkbart betegnelse på en klassifikasjon. Lokaliseringen har eventuelt en direkte URI-lenke til klassifiseringssystemet eller kilden til å hyperlenke av klassifiseringsnøkkelen. [[IfcClassificationReference]] kan enten tilordnes direkte til [[IfcClassification]], for eksempel hvis ingen klassifisering hierarki skal omfattes, eller den refererer til foreldreklassifikasjonsmerknaden, hvis hele klassifiseringshierarkiet inkluderes i datasettet. Den første refereres til som en lettklassifisering , og den andre som en fullstendig klassifisering . Attributtet ReferencedSource inneholder deretter følgende informasjonsvalg med [[IfcClassificationReferenceSelect]] 1. er av type [[IfcClassification]] direkte referanse til klassifiseringssystemet med informasjon om meta gitt 2. om type [[IfcClassificationReference]] henvisning til overordnet klassifikasjon innenfor klassifiseringshierarkiet. EKSEMPEL The [[IfcClassificationReference]] kan brukes som en form for lettveksklassifisering gjennom identifikasjonsattributet som arves fra abstrakten [[IfcExternalReference]] klassen. I så fall kan identifikasjon for eksempel føre til merknaden Uniclass L6814 som, hvis klassifiseringen var godt forstått av alle parter og det er kjent at den kan tas fra en bestemt klassifiseringskilde, er det tilstrekkelig. Navneattributtet kan være tittelen Tank. Dette vil fjerne behovet for overhodet på den mer fullstendige klassifiseringen av modellen. HISTORY ny enhet i IFC2x. hange ifc2x4 IFC4 CHANGE Attributtbeskrivelse og omvendt attributt HasReferanser er lagt til. Attributtidentifikasjonen har blitt omdøpt fra Elementreferanse."
+#:IFC.xml:10336
+msgid "IfcBooleanOperator_INTERSECTION"
+msgstr "INTERSEKSJON"
 
-#:IFC.xml:9208
-msgid "IfcClassificationReference_HasReferences"
-msgstr "Heldinger"
+msgid "IfcBooleanOperator_INTERSECTION_DEFINITION"
+msgstr "Drift av å bygge et regularisert samspill mellom de regulerte volumene som er definert av to faste materialer."
 
-msgid "IfcClassificationReference_HasReferences_DEFINITION"
-msgstr "Den overordnede klassifiseringen refererer til som denne underklassifiseringen refererer til. Det kan enten være den endelige bladet for klassifisering av elementet eller en mellomliggende klassifikasjon. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+#:IFC.xml:10337
+msgid "IfcBooleanOperator_UNION"
+msgstr "UNION"
 
-#:IFC.xml:9220
-msgid "IfcClassificationReference_ClassificationRefForObjects"
-msgstr "KlassifiseringRefleobjekter"
+msgid "IfcBooleanOperator_UNION_DEFINITION"
+msgstr "Drift av å bygge den regulerte unionen av de volumene som er definert av to faste materialer."
 
-msgid "IfcClassificationReference_ClassificationRefForObjects_DEFINITION"
-msgstr "Klassifiseringen som objekter er knyttet til. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+#:IFC.xml:10339
+msgid "IfcBooleanResult"
+msgstr "IfcBooleanResult"
 
-#:IFC.xml:9189
-msgid "IfcClassificationReference_Description"
-msgstr "Beskrivelse"
+msgid "IfcBooleanResult_DEFINITION"
+msgstr "Den [[IfcBooleanResult]] er resultatet av at en Boolean operasjon utføres på to operander som har solid drift. EKSEMPEL Hvis den første betjeningen er en blokk og andre betjening, er en solid sylinder med egnede dimensjoner og plassering, det bolske resultatet som er produsert med forskjellsoperatøren ville være en blokk med et sirkulært hull. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et boolsk resultat er et resultat av en regularisert drift på to faste stoffer for å skape en ny fast masse. Gyldige operasjoner er regulariserte ikke regelmessige, regulerte kryss og regularisert forskjell. Til formål for bolske operasjoner anses et solid sett med faste punkter. Det siste boolske resultatet avhenger av operasjonen og de to operandene. Når det gjelder forskjellsoperatører, er rekkefølgen av operandene også betydelig. Operatøren kan være enten union, kryss eller forskjell. Effekten av disse operatørene er beskrevet under unionen på to solider er den nye solide og reguleringen av settet med alle punkter som enten er i den første operasjonen eller i den andre driften eller i begge deler. Kryss av to solider er den nye solid som er reguleringen av settet med alle punkter som ligger både i den første operasjonen og i den andre operasjonen. Resultatet av differansdriften på to faste stoffer er regulariseringen av settet med alle punkter som er i den første driften, men ikke i den andre operanden. MERKNAD Tilsvarende STEP-resultat definert i ISO 10303 42. HISTORY ny enhet i IFC1.5.1."
 
-msgid "IfcClassificationReference_Description_DEFINITION"
-msgstr "Beskrivelse av klassifiseringsreferansen for informasjonsformål. .endre ifc2x4 IFC4 CHANGE Ny attributt lagt til i slutten av attributtlisten."
+#:IFC.xml:10340
+msgid "IfcBooleanResult_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9194
-msgid "IfcClassificationReference_ReferencedSource"
-msgstr "ReferanseKilde"
+msgid "IfcBooleanResult_Dim_DEFINITION"
+msgstr "Romdimensjonaliteten til denne enheten. Den er identisk med romdimensjonaliteten ved den første operasjonen. En der regelen sikrer at begge operander har samme romdimensjonalitet."
 
-msgid "IfcClassificationReference_ReferencedSource_DEFINITION"
-msgstr "Klassifiseringssystemet eller kilden som det refereres til. .change ifc2x4 IFC4 CHANGE datatype endret til [[IfcClassificationReferenceSelect]] ."
+#:IFC.xml:10345
+msgid "IfcBooleanResult_FirstOperand"
+msgstr "FirstOperand"
 
-#:IFC.xml:9199
-msgid "IfcClassificationReference_Sort"
-msgstr "Sorter"
+msgid "IfcBooleanResult_FirstOperand_DEFINITION"
+msgstr "Den første operatoren skal opereres ved hjelp av den Bolske operasjonen."
 
-msgid "IfcClassificationReference_Sort_DEFINITION"
-msgstr "Valgfri identifikator for å sortere klassifikasjonssettet med referanser for den refererte kilden, enten en klassifikasjonsside på høyere nivå, eller selve klassifiseringssystemet. .change ifc2x4 IFC4 CHANGE Ny attributt lagt til på slutten av listen over attributter."
+#:IFC.xml:10350
+msgid "IfcBooleanResult_Operator"
+msgstr "Operatør"
 
-#:IFC.xml:9232
-msgid "IfcClassificationReferenceSelect"
-msgstr "IfcClassificationReferenceVelg"
+msgid "IfcBooleanResult_Operator_DEFINITION"
+msgstr "Den boolske operatøren brukte i operasjonen for å skape resultatet."
 
-#:IFC.xml:9233
-msgid "IfcClassificationSelect"
-msgstr "IfcClassificationVelg"
+#:IFC.xml:10355
+msgid "IfcBooleanResult_SecondOperand"
+msgstr "Sekundær operand"
 
-#:IFC.xml:9234
-msgid "IfcDocumentConfidentialityEnum"
-msgstr "DokumentKonfidensialitet"
+msgid "IfcBooleanResult_SecondOperand_DEFINITION"
+msgstr "Den andre operasjonen ble oppgitt for operasjonen."
 
-msgid "IfcDocumentConfidentialityEnum_DEFINITION"
-msgstr "[[IfcDocumentConfidentialityEnum]] Muliggjør valg av konfidensialitetsinformasjon fra en liste over valg. HISTORIE Nytt Numerasjon i IFC2x. Epostene PUBLIC Document er offentlig tilgjengelig. RESTRICTED Dokumenttilgjengelighet er begrenset. CONFIDENTIAL dokument er konfidensielt, og innholdet skal ikke vises uten tillatelse. PERSONAL Document er personlig til forfatteren. BRUKERDEFINERT NOTDEFINERT"
+#:IFC.xml:10364
+msgid "IfcBoundingBox"
+msgstr "IfcBoundingBox"
 
-#:IFC.xml:9235
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL"
-msgstr "GODKJENNE"
+msgid "IfcBoundingBox_DEFINITION"
+msgstr "[[IfcBoundingBox]] definerer en ortogonal boks orientert parallelt med aksene til objektkoordinatsystemet der den blir definert. Den er definert av en hjørne som et tredimensjonalt kartongpunkt og tre lengdetiltak som definerer X, Y og Z parametere for boksen i retning av positive akser. MERKNAD Enhver undertype [[IfcProduct]som har en produktform kan ha en gjengivelse av en begrensningsboks. I faktaboks representasjonsidentifikatoren som er definert i [[IfcShapeRepresentation]] benyttes [[IfcBoundingBox]] som den letteste 3D-form-representasjonen. grensende boks .. .. .. figurer ifcboundingbox oppsett1. hvis figur 1 lokkeboks som vist på figur 1, [[IfcBoundingBox]] er definert med sitt eget sted som kan brukes til å plassere [[IfcBoundingBox]] i forhold til det geometriske koordinatsystemet. [[IfcBoundingBox]] er definert av det nederste venstre hjørnet og øvre høyre hjørne XDim, YDim, ZDim målt i overordnet styringssystem. MERKNAD Tilsvarende STEP-type boksdomene definert i ISO 10303 42. HISTORY ny enhet i IFC1.0."
 
-msgid "IfcDocumentConfidentialityEnum_CONFIDENTIAL_DEFINITION"
-msgstr "Dokumentet er konfidensielt, og innholdet skal ikke vises uten tillatelse."
+#:IFC.xml:10387
+msgid "IfcBoundingBox_Corner"
+msgstr "Hjørne"
 
-#:IFC.xml:9236
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED"
-msgstr "IKKERFINERT"
+msgid "IfcBoundingBox_Corner_DEFINITION"
+msgstr "Plassering av nedre venstre hjørne med minste verdier ."
 
-msgid "IfcDocumentConfidentialityEnum_NOTDEFINED_DEFINITION"
-msgstr "IKKERFINERT"
+#:IFC.xml:10365
+msgid "IfcBoundingBox_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9237
-msgid "IfcDocumentConfidentialityEnum_PERSONAL"
-msgstr "PRIVAT"
+msgid "IfcBoundingBox_Dim_DEFINITION"
+msgstr "Romdimensjonal til denne klassen, det er alltid 3."
 
-msgid "IfcDocumentConfidentialityEnum_PERSONAL_DEFINITION"
-msgstr "Dokumentet er personlig til forfatteren."
+#:IFC.xml:10370
+msgid "IfcBoundingBox_XDim"
+msgstr "XDim"
 
-#:IFC.xml:9238
-msgid "IfcDocumentConfidentialityEnum_PUBLIC"
-msgstr "OFFENTLIGE"
+msgid "IfcBoundingBox_XDim_DEFINITION"
+msgstr "Lengdeattributt målt langs kanten parallelt med X-aksen"
 
-msgid "IfcDocumentConfidentialityEnum_PUBLIC_DEFINITION"
-msgstr "Dokumentet er offentlig tilgjengelig."
+#:IFC.xml:10375
+msgid "IfcBoundingBox_YDim"
+msgstr "YDim"
 
-#:IFC.xml:9239
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED"
-msgstr "RESTRIKSJONER"
+msgid "IfcBoundingBox_YDim_DEFINITION"
+msgstr "Breddeattributt målt langs kanten parallelt med Y-aksen"
 
-msgid "IfcDocumentConfidentialityEnum_RESTRICTED_DEFINITION"
-msgstr "Dokumentets tilgjengelighet er begrenset."
+#:IFC.xml:10380
+msgid "IfcBoundingBox_ZDim"
+msgstr "Zdim"
 
-#:IFC.xml:9240
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED"
-msgstr "BRUKERDEFINERT"
+msgid "IfcBoundingBox_ZDim_DEFINITION"
+msgstr "Høydeattributtet målt langs kanten parallelt med Z-aksen."
 
-msgid "IfcDocumentConfidentialityEnum_USERDEFINED_DEFINITION"
-msgstr "BRUKERDEFINERT"
+#:IFC.xml:10411
+msgid "IfcBoxedHalfSpace"
+msgstr "IfcBoxedHalfSpace"
 
-#:IFC.xml:9242
-msgid "IfcDocumentInformation"
-msgstr "IfcDocumentInformation"
+msgid "IfcBoxedHalfSpace_DEFINITION"
+msgstr "[[IfcBoxedHalfSpace]] brukes som supertype [[IfcHalfSpaceSolid]] bare innenfor boolske operasjoner. Det er domenet i nøyaktig to delsett, der det aktuelle domenet er attributtet vedlegg. Hensikten med attributtet Vedlegg er å gi en søkeboks for den andre operasjonen i den boolske operasjonen. Det skal være tilstrekkelig stor til å lukke resulterende solid helt etter den Bolske operasjonen i halvrommet. Samtidig endrer ikke det endelige resultatet. Resultatet av den boolske operasjonen ville være det samme, som om den ble utført av supertypen [[IfcHalfSpaceSolid]] . Se figur 1 nedenfor. riktig bruk av kabinettet.. .. figurer ihcboxedhalfspace 01. ng Figur 1 Boksede halve romoperasjoner [[IfcBoundingBox]] som sikrer kabinettet er gitt slik at mottaksanvendelsen er enkel å bruke en dimensjonsbokssammenligning for eksempel med hensyn til effektivitet. For å først kontrollere om størrelsesboksene krysser eller ikke skal det gjøres noen beregninger for å kontrollere om enhetenes faste verdier krysser . boxed halfspace ... ... ... figurer ifcboxedhalfspace oppsett1. ng Figur 2 Boksed halvromsgeometri Kabinettet bidrar derfor til å forhindre at de tar hensyn til uendelige størrelser. Denne innkapslingsboksen plasseres innenfor systemet for objektkoordinater, fastsatt av elementets opprinnelige plassering med for eksempel [[IfcLocalPlacement]] . Figur 2 viser at lukkeboksen er tilstrekkelig stor til at den Bolske resultatet holdes fullstendig lukket. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Denne enheten er en undertype av det halvrommet som er trimmet av en omkringliggende rektangulær boks. Boksen har sine kanter parallelt med koordinataksene til det geometriske koordinatsystemet. Formålet med boksen er å lette beregning av CSG-data ved å produsere en solid mengde finmaterialer. MERKNAD Enhet tilpasset fra oppstartsareal definert i ISO 10303 42. HISTORY Ny enhet i IFC1.5.1 .change ifc2x4 IFC4 CHANGE Usage riktig, posisjonskoordinatsystem for innkapsling er objektkoordinatsystemet."
 
-msgid "IfcDocumentInformation_DEFINITION"
-msgstr "[[IfcDocumentInformation]] fanger metadata fra et eksternt dokument. Det faktiske innholdet i dokumentet er ikke definert i denne spesifikasjonen i stedet, den kan finnes etter stedsattributtet. Det samme [[IfcDocumentInformation]] kan det refereres fra utvekslingsstrukturen totalt eller i deler . . ved henvisning til bestemte kapitler eller avsnitt ved bruk av [[IfcDocumentReference]] Alle [[IfcDocumentReference]] s som benytter [[IfcDocumentInformation]] er tilgjengelige fra inversforholdet HasDocumentReferences . HISTORY Ny enhet i IFC2x. . hange ifc2x4 IFC4 CHANGE Attribute HasDocumentReferences changed to be inverse, attribute Location added, and attribute ElectronicFormat changfied. (Automatic Copy)"
+#:IFC.xml:10399
+msgid "IfcBoxedHalfSpace_Enclosure"
+msgstr "Kabinett"
 
-#:IFC.xml:9331
-msgid "IfcDocumentInformation_IsPointer"
-msgstr "IsPointer"
+msgid "IfcBoxedHalfSpace_Enclosure_DEFINITION"
+msgstr "Kassen som avgrenser det resulterende faste omfanget av den Bolske operasjonen, ved bruk av det halve rommet, bare til beregningsformål."
 
-msgid "IfcDocumentInformation_IsPointer_DEFINITION"
-msgstr "Et omvendt forhold fra [[IfcDocumentInformationRelationship]] til det tilknyttede dokumentet."
+#:IFC.xml:10414
+msgid "IfcCartesianPointList"
+msgstr "IfcCartesianPointList"
 
-#:IFC.xml:9345
-msgid "IfcDocumentInformation_IsPointedTo"
-msgstr "IsPointedTo"
+msgid "IfcCartesianPointList_DEFINITION"
+msgstr "[[IfcCartesianPointList]] er den abstrakte overtypen elementer over punkter. MERKNAD [[IfcCartesianPointList]] introduseres for å gi en kompakt framstilling av potensielt større liste med punkter, slik som i punktskyer og i en indekserbar representasjon av punkter. HISTORY Ny enhet i IFC4."
 
-msgid "IfcDocumentInformation_IsPointedTo_DEFINITION"
-msgstr "Et omvendt forhold fra [[IfcDocumentInformationRelationship]] til de relaterte dokumentene. EPM HTML"
+#:IFC.xml:10415
+msgid "IfcCartesianPointList_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9359
-msgid "IfcDocumentInformation_HasDocumentReferences"
-msgstr "HasDocumentReferences"
+msgid "IfcCartesianPointList_Dim_DEFINITION"
+msgstr "Romdimensjonaliteten for denne klassen, enten 2 eller 3, avhengig av undertypen."
 
-msgid "IfcDocumentInformation_HasDocumentReferences_DEFINITION"
-msgstr "Dokumentet refererer til i dokumentet som gjelder"
+#:IFC.xml:10434
+msgid "IfcCartesianPointList2D"
+msgstr "IfcCartesianPointList2D"
 
-#:IFC.xml:9373
-msgid "IfcDocumentInformation_DocumentInfoForObjects"
-msgstr "DokumentInfoForobjekter"
+msgid "IfcCartesianPointList2D_DEFINITION"
+msgstr "[[IfcCartesianPointList2D]] definerer en ordnet samling av to dimensjonale kartongpunkter. Hvert kartesisk punkt er forsynt med et to dimensjonspunkt ved en fast liste med to koordinater. Attributtet CoordList er en todimensjonal liste, der den første dimensjonen er en ubegrenset liste som representerer hver 2D kartongs andre dimensjon er en fast liste over to listeelementer, der 1 er x-koordinaten, og 2 y-koordinatene av det kartesiske punktet. MERKNAD [[IfcCartesianPointList2D]] introduseres for å gi en kompakt framstilling av en større liste med punkter, som en indekserbar representasjon av punkter som brukes som punkter i høfskrummene. HISTORY Ny enhet i IFC4 ADD1."
 
-msgid "IfcDocumentInformation_DocumentInfoForObjects_DEFINITION"
-msgstr "Dokumentinformasjon om hvilke objekter som er knyttet til. .change ifc2x4 IFC4-CHANGE New inverse attributt."
+#:IFC.xml:10435
+msgid "IfcCartesianPointList2D_CoordList"
+msgstr "CoordList"
 
-#:IFC.xml:9243
-msgid "IfcDocumentInformation_Confidentiality"
-msgstr "Konfidensialitet"
+msgid "IfcCartesianPointList2D_CoordList_DEFINITION"
+msgstr "To dimensjonal liste over kartongpunkter som er oppgitt av to koordinater."
 
-msgid "IfcDocumentInformation_Confidentiality_DEFINITION"
-msgstr "Nivået på konfidensialiteten i dokumentet."
+#:IFC.xml:10440
+msgid "IfcCartesianPointList2D_TagList"
+msgstr "TagList"
 
-#:IFC.xml:9248
-msgid "IfcDocumentInformation_CreationTime"
-msgstr "Opprettelsestid"
+msgid "IfcCartesianPointList2D_TagList_DEFINITION"
+msgstr "Liste over tagger som tilsvarer hvert punkt som kan brukes til å identifisere en basiskurve i henhold til Tag attributtet i [[IfcOffsetCurveByDistances]] eller IfcAlignmentCurve ."
 
-msgid "IfcDocumentInformation_CreationTime_DEFINITION"
-msgstr "Dato og tidsstempel når dokumentet opprinnelig ble opprettet. hange ifc2x4 IFC4 CHANGE Datatypen har blitt endret til [[IfcDateTime], datotidslinjen i henhold til ISO8601."
+#:IFC.xml:10447
+msgid "IfcCartesianPointList3D"
+msgstr "IfcCartesianPointList3D"
 
-#:IFC.xml:9253
-msgid "IfcDocumentInformation_Description"
-msgstr "Beskrivelse"
+msgid "IfcCartesianPointList3D_DEFINITION"
+msgstr "[[IfcCartesianPointList3D]] definerer en ordnet samling av tre dimensjonale kartongpunkter. Hvert kartesisk punkt er tilgjengelig som et tredimensjonalt punkt med en fast liste over tre koordinater. Attributtet CoordList er en todimensjonal liste, der første dimensjon er en ubegrenset liste som representerer hver 3D Cartesiian andre dimensjon er en fast liste over tre listeelementer, der 1 er x-koordinaten, 2 y-koordinatene og 3 koordinatene av kartesisk punkt. MERKNAD [[IfcCartesianPointList]] introduseres for å gi en kompakt framstilling av en større liste med punkter, som i punktskyer, og i indekserbar visning av punkter som brukes som vertikaler i velstellerte elementer eller poly-kurver. HISTORY Ny enhet i IFC4."
 
-msgid "IfcDocumentInformation_Description_DEFINITION"
-msgstr "Beskrivelse av dokumentet og innholdet i det."
+#:IFC.xml:10448
+msgid "IfcCartesianPointList3D_CoordList"
+msgstr "CoordList"
 
-#:IFC.xml:9258
-msgid "IfcDocumentInformation_DocumentOwner"
-msgstr "Dokumenteier"
+msgid "IfcCartesianPointList3D_CoordList_DEFINITION"
+msgstr "To dimensjonal liste over kartongpunkter som leveres av tre koordinater."
 
-msgid "IfcDocumentInformation_DocumentOwner_DEFINITION"
-msgstr "Informasjon om personen og organisasjonen som er anerkjent som eieren av dette dokumentet. I noen sammenhenger bestemmer eieren av dokumentet hvem som har tilgang til eller redigerer rettigheter til dokumentet."
+#:IFC.xml:10453
+msgid "IfcCartesianPointList3D_TagList"
+msgstr "TagList"
 
-#:IFC.xml:9263
-msgid "IfcDocumentInformation_Editors"
-msgstr "Redaktører"
+msgid "IfcCartesianPointList3D_TagList_DEFINITION"
+msgstr "Liste over tagger som tilsvarer hvert punkt som kan brukes til å identifisere en basiskurve i henhold til Tag attributtet i [[IfcOffsetCurveByDistances]] eller IfcAlignmentCurve ."
 
-msgid "IfcDocumentInformation_Editors_DEFINITION"
-msgstr "Personene og eller organisasjonene som har opprettet dette dokumentet, eller som har bidratt til det."
+#:IFC.xml:10472
+msgid "IfcCsgPrimitive3D"
+msgstr "IfcCsgPrimitive3D"
 
-#:IFC.xml:9268
-msgid "IfcDocumentInformation_ElectronicFormat"
-msgstr "ElectronicFormat"
+msgid "IfcCsgPrimitive3D_DEFINITION"
+msgstr "[[IfcCsgPrimitive3D]] er en abstrakt supertype av alle tre primitiver som brukes som enten rot til tre; eller som boolske resultater i en CSG-solid modell. Alle 3D-CSG-primitiver er definert innenfor et system med tredimensjonal plasseringskoordinat. HISTORY New entity in IFC2x3."
 
-msgid "IfcDocumentInformation_ElectronicFormat_DEFINITION"
-msgstr "Beskriver medietypen som brukes i ulike Internett-protokoller, også kalt innholdstype, eller MIME-type Internett-Postutvidelse , av dokumentet som refereres. Det består av minst to deler, type og undertype. MERKNAD iana Internett Assigned Numbers Authority utgitte mediatypene. EKSEMPEL bilde png angir en bildetype av undertypen png Portable Network Graphics Søknadsskjema inneholder en egen anvendelsestype av pdf-formatets undertype . hange ifc2x4 IFC4 CHANGE Datatypen er blitt endret fra entitets datatype til [[IfcIdentifier]] ."
+#:IFC.xml:10482
+msgid "IfcCsgPrimitive3D_Position"
+msgstr "Posisjon"
 
-#:IFC.xml:9273
-msgid "IfcDocumentInformation_Identification"
-msgstr "Identifikasjon"
+msgid "IfcCsgPrimitive3D_Position_DEFINITION"
+msgstr "Plasseringskoordinatsystemet som parametrene for hvert enkelt CSG-primitiv gjelder for."
 
-msgid "IfcDocumentInformation_Identification_DEFINITION"
-msgstr "Identifikator som unikt identifiserer et dokument. .change ifc2x4 IFC4 CHANGE Attribute omdøpt fra DocumentId ."
+#:IFC.xml:10473
+msgid "IfcCsgPrimitive3D_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9278
-msgid "IfcDocumentInformation_IntendedUse"
-msgstr "IntendedUse"
+msgid "IfcCsgPrimitive3D_Dim_DEFINITION"
+msgstr "Romdimensjonaliteten til denne geometriske representasjonselementet, den er alltid 3."
 
-msgid "IfcDocumentInformation_IntendedUse_DEFINITION"
-msgstr "Tiltenkt bruk for dette dokumentet."
+#:IFC.xml:10494
+msgid "IfcCsgSelect"
+msgstr "IfcCsgSelect"
 
-#:IFC.xml:9283
-msgid "IfcDocumentInformation_LastRevisionTime"
-msgstr "LastRevisionTime"
+#:IFC.xml:10495
+msgid "IfcCsgSolid"
+msgstr "IfcCsgSolid"
 
-msgid "IfcDocumentInformation_LastRevisionTime_DEFINITION"
-msgstr "Dato og tid stempel når denne dokumentversjonen ble opprettet. hange ifc2x4 IFC4 CHANGE Datatypen har blitt endret til [[IfcDateTime], datotidslinjen i henhold til ISO8601."
+msgid "IfcCsgSolid_DEFINITION"
+msgstr "En [[IfcCsgSolid]] er representasjon av en 3D-form ved hjelp av konstruktiv solid geometrimodell. Den representeres med én enkelt 3D-CSG primitiv, eller som et resultat av en Bolsk operasjon. Operantene til en boolsk operasjon kan være boolske operasjoner selv til et CSG-tre. Følgende volumer kan være deler av de britiske meldingene til CSG-tre, som for eksempel [[IfcFacetedBrep]] , [[IfcFacetedBrepWithVoids]] Lukkede foreldete representasjonsmodeller, som for eksempel [[IfcPolygonalFaceSet]] , [[IfcTriangulatedFaceSet]] , Swept area solids, som [[IfcExtrudedAreaSolid]] [[IfcRevolvedAreaSolid]] , og undertyper for taping, Avanserte bruddareal faste rammer, som [[IfcSurfaceCurveSweptAreaSolid]] , [[IfcFixedReferenceSweptAreaSolid]] , [[IfcSweptDiskSolid]] Halvromsolider, som [[IfcHalfSpaceSolid]] og dens undertyper og CSG primitiver, undertypene [[IfcCsgPrimitive3D]] . .extDef NOTE Definition etter ISO CD 10303 42 1992 En solid representert som CSG-modell er definert ved en samling av såkalte primitive solider, kombinert med regelmessig boolsk operasjon. De tillatte operasjonene er kryssetning, union og forskjell. Ettersom et CSG stort sett også kan bestå av én enkelt CSG primitiv. Et CSG-solid krever to typer informasjon for den komplette definisjonens geometrisk og strukturelt. Den geometriske informasjonen føres sammen med solide modeller. Disse primitive volumene som sylindere, kiler og ekstruderinger, men kan omfatte generelle B Rep modeller. Solide modeller kan også være halve romsolider. Strukturen er gitt i et tre med nøyaktig et asyklisk regissert diagram for Boolean resultat og CSG-faste stoffer, som representerer en oppskrift for å bygge massen. Terminalen noder er geometrisk primitiver og andre faste stoffer. Hvert CSG solid har nøyaktig ett boolsk resultat knyttet til det, som er roten av treet som definerer massen. Det kan være ytterligere boolske resultater i treet som operandet . Betydningen av en CSG solid enhet er at det faste definert av det tilknyttede treet dermed identifiseres som et betydelig objekt i seg selv. og slik skiller den seg fra andre boolske resulterende enheter som representerer formete resultater underveis i byggeprosessen. MERKNAD Enhet tilpasset fra csg solid er definert i NS-EN ISO 10303 42. Ny enhet i IFC1.5.1."
 
-#:IFC.xml:9288
-msgid "IfcDocumentInformation_Location"
-msgstr "Sted"
+#:IFC.xml:10496
+msgid "IfcCsgSolid_TreeRootExpression"
+msgstr "TreeRootExpression"
 
-msgid "IfcDocumentInformation_Location_DEFINITION"
-msgstr "Ressursidentitet eller finner sted, levert som URI, URN eller URL, av dokumentinformasjonen for online referanser. .change ifc2x4 IFC4 CHANGE Ny attributt lagt til i stedet for den fjernede dokumentreferansen ."
+msgid "IfcCsgSolid_TreeRootExpression_DEFINITION"
+msgstr "Boolsk uttrykk for primitiver og regulariserte operatører som beskriver fast masse. Roten av treet i boolske uttrykk gis eksplisitt som et [[IfcBooleanResult]] helhet, eller som et primitivt undertyper av [[IfcCsgPrimitive3D]] ."
 
-#:IFC.xml:9293
-msgid "IfcDocumentInformation_Name"
-msgstr "Navn"
+#:IFC.xml:10503
+msgid "IfcDirectrixDerivedReferenceSweptAreaSolid"
+msgstr "IfcDirectrixDerivedReferenceSweptAreaSolid"
 
-msgid "IfcDocumentInformation_Name_DEFINITION"
-msgstr "Filnavn eller dokumentnavn tildelt av eieren."
+msgid "IfcDirectrixDerivedReferenceSweptAreaSolid_DEFINITION"
+msgstr "En [[IfcDirectrixDerivedReferenceSweptAreaSolid]] er en spesialisering på [[IfcFixedReferenceSweptAreaSolid]]."
 
-#:IFC.xml:9298
-msgid "IfcDocumentInformation_Purpose"
-msgstr "Formål"
+#:IFC.xml:10506
+msgid "IfcExtrudedAreaSolid"
+msgstr "IfcExtrudedAreaSolid"
 
-msgid "IfcDocumentInformation_Purpose_DEFINITION"
-msgstr "Formål for dette dokumentet."
+msgid "IfcExtrudedAreaSolid_DEFINITION"
+msgstr "The [[IfcExtrudedAreaSolid]] is defined by sweeping a cross section provided by a profile definition. The direction of the extrusion is given by the ExtrudedDirection attribute and the length of the extrusion is given by the Depth attribute. If the planar area has inner boundaries holes defined , then those holes shall be swept into holes of the solid. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the extruded solid. If not provided, it defaults to the current object coordinate system. The ExtrudedDirection is given within the position coordinate system as defined by [[IfcSweptAreaSolid]] . Position . The extruded direction can be any direction which is not perpendicular to the z axis of the position coordinate system. extruded area solid .. .. .. .. figures ifcextrudedareasolid fig1.png Figure 1 Extruded area solid geometry EXAMPLE Figure 1 illustrates geometric parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The result is a solid. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. extruded area solid repositioned .. .. .. .. figures ifcextrudedareasolid fig2.png Figure 2 Repositioned extruded area solid geometry EXAMPLE Figure 2 illustrates geometric parameters and additional positioning parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the y axis. .extDef NOTE Definition according to ISO CD 10303 42 1992 An extruded area solid is a solid defined by sweeping a bounded planar surface. The direction of translation is defined by a direction vector, and the length of the translation is defined by a distance depth. The planar area may have holes which will sweep into holes in the solid. NOTE Entity adapted from extruded area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .use head Texture use definition For side faces, textures are aligned facing upright continuously along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the extrusion axis according to RepeatT . For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. texture .. .. .. .. figures ifcextrudedareasolid texture.png Figure 3 Extruded area solid textures EXAMPLE Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcExtrudedAreaSolid]] having a profile of [[IfcIShapeProfileDef]], the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth , while the top end cap texture coordinates start at 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth ."
 
-#:IFC.xml:9303
-msgid "IfcDocumentInformation_Revision"
-msgstr "Revisjon"
+#:IFC.xml:10514
+msgid "IfcExtrudedAreaSolid_ExtrudedDirection"
+msgstr "Ekstrudering"
 
-msgid "IfcDocumentInformation_Revision_DEFINITION"
-msgstr "Dokumentrevisjon utpeking."
+msgid "IfcExtrudedAreaSolid_ExtrudedDirection_DEFINITION"
+msgstr "Retningen der overflaten, som Grupperommet skal sveipOmråde, skal sveipes ut."
 
-#:IFC.xml:9308
-msgid "IfcDocumentInformation_Scope"
-msgstr "Omfang"
+#:IFC.xml:10507
+msgid "IfcExtrudedAreaSolid_Depth"
+msgstr "Dybde"
 
-msgid "IfcDocumentInformation_Scope_DEFINITION"
-msgstr "Omfang for dette dokumentet."
+msgid "IfcExtrudedAreaSolid_Depth_DEFINITION"
+msgstr "Avstanden mellom overflaten skal sveipes langs ekstrafraksjonen ."
 
-#:IFC.xml:9313
-msgid "IfcDocumentInformation_Status"
-msgstr "Status:"
+#:IFC.xml:10526
+msgid "IfcExtrudedAreaSolidTapered"
+msgstr "IfcExtrudedAreaSolidTapered"
 
-msgid "IfcDocumentInformation_Status_DEFINITION"
-msgstr "Nåværende status for dokumentet. Eksempler på statusverdier som kan benyttes i en dokumentinformasjonsstatus omfatter DRAFT FINAL DRAFT FINAL REVISION"
+msgid "IfcExtrudedAreaSolidTapered_DEFINITION"
+msgstr "[[IfcExtrudedAreaSolidTapered]] is defined by sweeping a cross section along a linear spine. The cross section may change along the sweep from the shape of the start cross section into the shape of the end cross section. The resulting solid is bounded by three or more faces A start face, an end face each defined by start and end planes and sections , and one or more lateral faces. Each lateral face is a ruled surface defined by a pair of corresponding edges of the start and end section. NOTE Given that the start and end section is provided by a polygon, the corresponding vertices of the start and end cross section are connected, forming a quadrilateral polygon between each pair of corresponding vertices. The surface defined by the bounding quadrilateral polygon is a ruled surface, that could be approximated by triangulation. The linear spine is defined by Start point SELF [[IfcSweptAreaSolid]].Position.Location Direction SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection Distance SELF [[IfcExtrudedAreaSolid]].Depth The start cross section is defined by SELF [[IfcSweptAreaSolid]].SweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by SELF [[IfcSweptAreaSolid]].Position.P 1 and SELF [[IfcSweptAreaSolid]].Position.P 2 The linear spine starts at the plane of the start cross section. The spine is not necessarily perpendicular to the plane. The end cross section is defined by EndSweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by translating the start position coordinates provided by SELF [[IfcSweptAreaSolid]].Position along the spine direction by the spine distance. The plane of the end cross section is coplanar to the plane of the start cross section. The end cross section is topologically similar to the start cross section i.e. having the same number of vertices and edges . The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane. In case of two parameterized profiles the shape is constructed as follows The end profile, defined by a cross section based on the same profile paramterization as the start profile, is translated by the spine distance along the spine direction. It may be shifted within the XY plane of the end postion coordinate system and may be twisted using the rotation parameter. The shift and rotation parameter are provided by the end cross section being of type [[IfcParameterizedProfileDef]] , where Shift is EndSweptArea [[IfcParameterizedProfileDef]].Position.Location Rotation is EndSweptArea [[IfcParameterizedProfileDef]].Position.RefDirection Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. In case of Cartesian transformation of the start cross section the shape is constructed as follows The cross section curve, which starts as a curve in the XY plane of the position coordinate system, is first scaled about the origin by the scale parameter. It is then translated by the spine distance along the spine direction. It maybe twisted by using the rotation parameter. The scale and rotation parameter are provided by the end cross section being of type [[IfcDerivedProfileDef]] , where Scale is EndSweptArea [[IfcDerivedProfileDef]].Operator.Scale Rotation is EndSweptArea [[IfcDerivedProfileDef]].Operator.Axis1 Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. HISTORY New entity in IFC4. .spec head Informal Propositions 1. Mirroring within [[IfcDerivedProfileDef]].Operator shall not be used"
 
-#:IFC.xml:9318
-msgid "IfcDocumentInformation_ValidFrom"
-msgstr "Godkjenn"
+#:IFC.xml:10529
+msgid "IfcExtrudedAreaSolidTapered_EndSweptArea"
+msgstr "EndSweptArea"
 
-msgid "IfcDocumentInformation_ValidFrom_DEFINITION"
-msgstr "Dato når dokumentet er gyldig. hange ifc2x4 IFC4 CHANGE Datatypen er endret til [[IfcDate]] , datoen strengen i henhold til ISO8601."
+msgid "IfcExtrudedAreaSolidTapered_EndSweptArea_DEFINITION"
+msgstr "Overflaten som definerer enden av sveipområdet. Den er gitt som en profildefinisjon. Posisjonskoordinatsystemet i EndSwptArea genereres ved å oversette SELF [[IfcSweptAreaSolid]]. osid langs SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection via avstanden til SELF [[IfcExtrudedAreaSolid]].Depth ."
 
-#:IFC.xml:9323
-msgid "IfcDocumentInformation_ValidUntil"
-msgstr "ValidUntil"
+#:IFC.xml:10541
+msgid "IfcFaceBasedSurfaceModel"
+msgstr "IfcFaceBasedSurfaceModel"
 
-msgid "IfcDocumentInformation_ValidUntil_DEFINITION"
-msgstr "Dato for når dokumentet forblir gyldig. hange ifc2x4 IFC4 CHANGE Datatypen er endret til [[IfcDate]] , datoen strengen i henhold til ISO8601."
+msgid "IfcFaceBasedSurfaceModel_DEFINITION"
+msgstr "Den [[IfcFaceBasedSurfaceModel]] representerer en form ved hjelp av tilkoblede ansiktssett. De tilkoblede flatene har en dimensjonalitet 2 og plasseres i et koordinatrom av dimensjonalitet 3. .extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En overflatebasert modell er beskrevet ved hjelp av et sett med sammenkoblede flenssett med dimensjonalitet 2. De tilkoblede flatesettene skal ikke skjære bortsett fra ved kanter og vertikaler, bortsett fra at en flate i ett sammenkoblede flater kan overlappe en flate i en annen sammenkoblet flate forutsatt at ansiktsgrensene er identiske. Det skal være minst ett sett med sammenkoblede flater. En forbundet flate kan finnes uavhengig av en overflatemodell. MERKNAD Enhet tilpasset fra ansiktsbasert overflatemodell definert i ISO 10303 42. HISTORY ny enhet i IFC2x. .spec head uformelle Proposisjon 1. De tilkoblede flatesettene skal ikke overlappe eller krysse unntatt på vanlige flater, kanter eller vertikaler. 2. Fbsm-flatene har dimensjonalitet 2. .foreldet IFC4 CHANGE enheten er foreldet og skal ikke brukes. Objektet [[IfcFacetedBrep]skal brukes i stedet."
 
-#:IFC.xml:9385
-msgid "IfcDocumentInformationRelationship"
-msgstr "Forholdet mellom sikkerhetsinformasjon"
+#:IFC.xml:10550
+msgid "IfcFaceBasedSurfaceModel_FbsmFaces"
+msgstr "Fbsmurker"
 
-msgid "IfcDocumentInformationRelationship_DEFINITION"
-msgstr "En [[IfcDocumentInformationRelationship]] er en relasjonsenhet som gjør det mulig for et dokument å ha mulighet til å referere til andre dokumenter. Den brukes til å beskrive forhold der ett dokument kan referere til ett eller flere andre underdokumenter eller når et dokument brukes som erstatning for et annet dokument, men der både originaldokumentet og det erstatningsdokumentet må beholdes. HISTORY ny enhet i IFC2x. .change ifc2x4 IFC4 CHANGE subtype fra [[IfcResourceLevelRelationship]] , rekkefølgen på attributter endret."
+msgid "IfcFaceBasedSurfaceModel_FbsmFaces_DEFINITION"
+msgstr "Settet med tilkoblede flate sett som omfatter den overflatebaserte overflatemodellen."
 
-#:IFC.xml:9331
-msgid "IfcDocumentInformationRelationship_RelatingDocument"
-msgstr "Relaterer dokument"
+#:IFC.xml:10542
+msgid "IfcFaceBasedSurfaceModel_Dim"
+msgstr "Dim"
 
-msgid "IfcDocumentInformationRelationship_RelatingDocument_DEFINITION"
-msgstr "Dokumentet i et sammenheng, det vil si referanse eller originaldokumentet i et forhold."
+msgid "IfcFaceBasedSurfaceModel_Dim_DEFINITION"
+msgstr "Romdimensjonal til denne klassen, det er alltid 3."
 
-#:IFC.xml:9345
-msgid "IfcDocumentInformationRelationship_RelatedDocuments"
-msgstr "Relaterte dokumenter"
+#:IFC.xml:10562
+msgid "IfcFacetedBrep"
+msgstr "IfcFacetedBrep"
 
-msgid "IfcDocumentInformationRelationship_RelatedDocuments_DEFINITION"
-msgstr "Dokumentet som fungerer som barnet, det refereres til eller erstatter dokument i et forhold."
+msgid "IfcFacetedBrep_DEFINITION"
+msgstr "[[IfcFacetedBrep]] er et manifold solid databruk med begrensning som alle flater er plane og avgrensede polygoner. Fasert brygginstans.. .. .. .. figurer ifcfacetedbrep 01. ng Figur 1 Diagram som viser bruken av [[IfcFacetedBrep]] MERKNAD Bruk av [[IfcFacetedBrep]] er begrenset for grenseregodeller med bare plane overflater. Disse overflatene er implisitt representert ved hjelp av randmangekantene. Figuren viser den topologiske og geometriske representasjonen som er brukt for rene raser. Hver [[IfcCartesianPoint]], brukes innenfor [[IfcFacetedBrep]] skal det refereres til tre ganger gjennom en [[IfcPolyLoop]] innenfor en annen [[IfcFace].extDef NOTE Definisjon etter ISO CD 10303 42 1992 En overflatet B rep er en enkel form for grenserelatert representasjonsmodell der alle flater er plane og alle kanter er rette linjer. I motsetning til B rep modell, kantene og vertiticene er ikke eksplisitt representert i modellen, men er implisitt tilgjengelig gjennom enheten Poly-løkke. En ansiktsutsatt B rep må oppfylle de samme topologiske begrensningene som det manifoldede solide B rep. Ekstro Def The faceted B rep er innført for å støtte det større antallet systemer som tillater solid fremstilling av grenseflater med bare plane flater. MERKNAD Enhet tilpasset fra manifold solid brep definert i NS-EN ISO 10303 42. HISTORY Ny enhet i IFC1.0 .spec head uformelle Proposisjon 1. Alle grenseløkker på alle sider av alle skall i [[IfcFacetedBrep]] skal være av type [[IfcPolyLoop]] . 2. Alle vertikaler skal refereres til alle polylooper, som deler vertskritt. Det skal refereres til hvert kartesisk med minst tre polylooper."
 
-#:IFC.xml:9386
-msgid "IfcDocumentInformationRelationship_RelationshipType"
-msgstr "Relasjonstype"
+#:IFC.xml:10565
+msgid "IfcFacetedBrepWithVoids"
+msgstr "IfcFacetBrepWithVoider"
 
-msgid "IfcDocumentInformationRelationship_RelationshipType_DEFINITION"
-msgstr "Beskriver type forhold mellom dokumenter. Dette kan være underlagsdokument, erstatning osv. Fortolkningen må være etablert i en programsammenheng."
+msgid "IfcFacetedBrepWithVoids_DEFINITION"
+msgstr "The [[IfcFacetedBrepWithVoids]] is a specialization of a faceted B rep som inneholder ett eller flere voids in its interior. Stykkene er representert som lukkede skjell som er definert som at skallet normalt peker inn i hulrommet. MERKNAD Enhetshjelp tilpasset fra brep med hulrom OG forfalte brygger definert i ISO 10303 42. Ny HISTORY enhet i IFC1.0 . hange ifc2x4 IFC4 CHANGE Subtyping endret fra [[IfcManifoldSolidBrep]] til [[IfcFacetedBrep]] med oppadrettet kompatibilitet for filbasert utveksling. pec hodehøyde uformell Propositiver 1. Hvert hulrom skal fjernes fra ytre skall og fra annenhver hulrom 2. Hvert hulrom skal være innesluttet i det ytre skallet, men ikke i noe annet hulrom. Det er spesielt det ytre skallet som ikke står i settet med hulromskall 3. Hvert skall i [[IfcManifoldSolidBrep]] skal bare refereres til. 4. Alle grenseløkker på alle sideflater på alle skall i [[IfcFacetedBrep]] skal være av type [[IfcPolyLoop]] ."
 
-#:IFC.xml:9393
-msgid "IfcDocumentReference"
-msgstr "IfcDocumentReference"
+#:IFC.xml:10568
+msgid "IfcFacetedBrepWithVoids_Voids"
+msgstr "Voids"
 
-msgid "IfcDocumentReference_DEFINITION"
-msgstr "En [[IfcDocumentReference]] refererer til plasseringen av et dokument. Referansen er gitt av et system-tolkbart attributt, en URL-streng der dokumentet kan finnes, og en valgfri intern referanse Identifikasjon som viser til et systemfortolkbart sted i dokumentet. Det valgfrie arvede navn-attributtet er ment å ha mening for menneskelige lesere. Valgfritt dokumentmetadata kan også fanges gjennom referanse til [[IfcDocumentInformation]] . HISTORY ny enhet i IFC2.0"
+msgid "IfcFacetedBrepWithVoids_Voids_DEFINITION"
+msgstr "Sett med lukkede skjell som definerer hulrom i fast masse."
 
-#:IFC.xml:9359
-msgid "IfcDocumentReference_ReferencedDocument"
-msgstr "ReferansedDokument"
+#:IFC.xml:10580
+msgid "IfcFixedReferenceSweptAreaSolid"
+msgstr "IfcFixedReferenceSweptAreaSolid"
 
-msgid "IfcDocumentReference_ReferencedDocument_DEFINITION"
-msgstr "Dokumentet som er referert."
+msgid "IfcFixedReferenceSweptAreaSolid_DEFINITION"
+msgstr "An [[IfcFixedReferenceSweptAreaSolid]] is a type of swept area solid which is the result of sweeping an area along a Directrix . The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the start tangent of the directrix at this point, and the profile s x axis agrees to the orthogonal projection of the FixedReference direction within the plane of start tangent and Fixed Reference . The orientation of the curve during the sweeping operation is controlled by the FixedReference direction. The SweptArea is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the projection of FixedReference onto the normal plane to the directrix at this point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The resulting swept solid is placed by the Position coordinate system. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no EndParam is provided the end defaults to the end of the directrix. NOTE The StartParam and the EndParam , if provided as a parameter value, are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. NOTE In the case of a curve composed of [[IfcCurveSegment]] , the [[IfcSweptAreaSolid]] Position is dependent on the [[IfcCurveSegment]] StartPlacement and the type of BasisCurve which defines the name function between the start and end explicitly defined as the start point of the next segment points of the segment EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In many cases, it is a surface of extrusion. The directrix lies on the surface, often defined as a p curve at this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the FixedReference direction. The Axis2 the y axis, or v is constructed. In this case the resulting swept solid is not repositioned. The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a CartesianTransformationOperator3d with attributes LocalOrigin as point 0 0 0 , Axis1 as the orthogonal projection of the FixedReference onto the normal plane defined by Axis3 . Axis3 as the direction of the tangent vector t at the point of the Directrix with parameter u . The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the Directrix parameter u . NOTE The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE Entity adapted from fixed reference swept surface defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. The SweptArea shall lie in the plane z 0. 2. The FixedReference shall not be parallel to a tangent vector to the directrix at any point along this curve. 3. The Directrix curve shall be tangent continuous."
 
-#:IFC.xml:9402
-msgid "IfcDocumentReference_DocumentRefForObjects"
-msgstr "DocumentRefForObjekt"
+#:IFC.xml:10583
+msgid "IfcFixedReferenceSweptAreaSolid_FixedReference"
+msgstr "FixedReference"
 
-msgid "IfcDocumentReference_DocumentRefForObjects_DEFINITION"
-msgstr "Dokumentreferansen hvilke objekter som er knyttet til. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+msgid "IfcFixedReferenceSweptAreaSolid_FixedReference_DEFINITION"
+msgstr "FixedReference"
 
-#:IFC.xml:9394
-msgid "IfcDocumentReference_Description"
-msgstr "Beskrivelse"
+#:IFC.xml:10595
+msgid "IfcGeometricCurveSet"
+msgstr "IfcGeometricCurveSet"
 
-msgid "IfcDocumentReference_Description_DEFINITION"
-msgstr "Beskrivelse av dokumentreferansen for informasjonsformål. .endre ifc2x4 IFC4 CHANGE Ny attributt lagt til i slutten av attributtlisten."
+msgid "IfcGeometricCurveSet_DEFINITION"
+msgstr "[[IfcGeometricCurveSet]] brukes til å utveksle formgjengivelse bestående av en samling av bare 2D eller 3D-punkter, og kurver . xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et geometrisk kurvesett er en samling med to eller tre dimensjonspunkter og kurver. MERKNAD Hele andelen tilpasset fra geometrisk kurvsett definert i ISO 10303 42. HISTORY ny enhet i IFC2x2. Formelle posisjoner Ingen overflate skal omfattes i dette geometriske settet."
 
-#:IFC.xml:9414
-msgid "IfcDocumentSelect"
-msgstr "IfcDocumentSelect"
+#:IFC.xml:10598
+msgid "IfcGeometricSet"
+msgstr "IfcGeometrisset"
 
-#:IFC.xml:9415
-msgid "IfcDocumentStatusEnum"
-msgstr "IfcDocumentStatusEnum"
+msgid "IfcGeometricSet_DEFINITION"
+msgstr "[[IfcGeometricSet]] brukes til representasjon av form som består av 2D eller 3D-punkter, kurver og overflater, – som ikke har en topologisk struktur, som sammenkoblede ansiktssett eller skall ikke er essellert og ikke er solide modeller som f.eks. søtstillinger, CSG eller Brep. .extDef NOTE Definisjon fra ISO CD 10303 42 Denne enheten er ment for overføring av modeller når en topologisk struktur ikke er tilgjengelig. MERKNAD Hele tilpasset fra geometrisk sett definert i ISO 10303 42. HISTORY ny enhet i IFC2x."
 
-msgid "IfcDocumentStatusEnum_DEFINITION"
-msgstr "[[IfcDocumentStatusEnum]] Mulig å velge status for dokumentinformasjon fra en liste over valg. HISTORY New enumeration i IFC2x. Elementer UTKAST dokument er et utkast. FINDRAFT dokument er en endelig utkast. FINAL Document er endelig. REVISION-dokumentet har gjennomgått revisjon. NOTDEFINERT"
+#:IFC.xml:10599
+msgid "IfcGeometricSet_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9416
-msgid "IfcDocumentStatusEnum_DRAFT"
-msgstr "UTKAST"
+msgid "IfcGeometricSet_Dim_DEFINITION"
+msgstr "Romdimensjonaliteten til denne klassen, det er identisk med det første elementet i settet. En der regel sikrer at alle elementer har samme dimensjonalitet."
 
-msgid "IfcDocumentStatusEnum_DRAFT_DEFINITION"
-msgstr "Dokumentet er et utkast."
+#:IFC.xml:10604
+msgid "IfcGeometricSet_Elements"
+msgstr "Elementer"
 
-#:IFC.xml:9417
-msgid "IfcDocumentStatusEnum_FINAL"
-msgstr "ENDELIG"
+msgid "IfcGeometricSet_Elements_DEFINITION"
+msgstr "De geometriske elementene som utgjør det geometriske settet, kan være punkter, kurver eller overflater, men må være av samme koordinatdimensjonalitet."
 
-msgid "IfcDocumentStatusEnum_FINAL_DEFINITION"
-msgstr "Dokumentet er endelig."
+#:IFC.xml:10611
+msgid "IfcGeometricSetSelect"
+msgstr "IfcGeometricSetVelg"
 
-#:IFC.xml:9418
-msgid "IfcDocumentStatusEnum_FINALDRAFT"
-msgstr "FINALDRAFT"
+#:IFC.xml:10612
+msgid "IfcHalfSpaceSolid"
+msgstr "IfcHalfSpaceSolid"
 
-msgid "IfcDocumentStatusEnum_FINALDRAFT_DEFINITION"
-msgstr "Dokumentet er et endelig utkast."
+msgid "IfcHalfSpaceSolid_DEFINITION"
+msgstr "Et halvt romsfest, splitter domenet inn i to ved hjelp av en bunnoverflate. Normalt Bunnflaten er et plan og deler det uendelige rommet inn i to og angir siden på halvrommet ved å bli enig om eller uenig om det normale av planet. Figur 1 viser definisjonen av [[IfcHalfSpaceSolid]] i et gitt koordinatsystem. Basen flaten blir gitt av et ubegrenset plan, den røde grensen blir vist bare for visualiseringsformål. Halvrommet... ... ... ifchalfometrisk olid geometri figur 1 Halvroms solid geometri . xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Et halvt roms fast er definert av det vanlige delsettet av domenet som ligger på den ene siden av en ubundet overflate. På siden av underlaget som er i halve rommet, bestemmes normalt på underlaget og avtaleflagget. Dersom avtaleflagget er SANDET er delsettet det som ligger til grunn for en avstand fra avtaleflagget. Dersom avtaleflagget er FALSE, er delsettet det som er det normale punktet i. For gyldig halvrommet skal flaten dele det aktuelle domenet inn i nøyaktig to delsett. I tillegg skal overflaten være manifold, og alle overflatenormer skal peke i samme underlag. MERKNAD Halvt mellomrom er ikke en undertype av solid modell, halvromsstativer er bare nyttige som operasjoner i Bolske uttrykk. MERKNAD Enhet tilpasset fra et halvt romsolid, definert i ISO 10303 42. HISTORY Ny enhet i IFC1.5 .spec head uformelle Propositions 1. Grunnflaten skal dividere domenet i nøyaktig to delsett. Hvis det halve rommet er solid av undertypen bodet halvplass [[IfcBoxedHalfSpace]], er det aktuelle domenet at attributtet skal lukkes. I alle andre tilfeller skal hele rommet og bunnflaten være ubegrensert. 2. Bunnflaten skal være en ubegrenset undertype av overflate på [[IfcElementarySurface]] ."
 
-#:IFC.xml:9419
-msgid "IfcDocumentStatusEnum_NOTDEFINED"
-msgstr "IKKERFINERT"
+#:IFC.xml:10626
+msgid "IfcHalfSpaceSolid_BaseSurface"
+msgstr "BaseOverflate"
 
-msgid "IfcDocumentStatusEnum_NOTDEFINED_DEFINITION"
-msgstr "IKKERFINERT"
+msgid "IfcHalfSpaceSolid_BaseSurface_DEFINITION"
+msgstr "Overflate som definerer siden av et halvrom."
 
-#:IFC.xml:9420
-msgid "IfcDocumentStatusEnum_REVISION"
-msgstr "REVISJON"
+#:IFC.xml:10613
+msgid "IfcHalfSpaceSolid_Dim"
+msgstr "Dim"
 
-msgid "IfcDocumentStatusEnum_REVISION_DEFINITION"
-msgstr "Dokumentet har blitt revidert."
+msgid "IfcHalfSpaceSolid_Dim_DEFINITION"
+msgstr "Romdimensjonal til denne klassen, det er alltid 3"
 
-#:IFC.xml:9422
-msgid "IfcExternalInformation"
-msgstr "IfcExternalInformation"
+#:IFC.xml:10618
+msgid "IfcHalfSpaceSolid_AgreementFlag"
+msgstr "Avtaleflag"
 
-msgid "IfcExternalInformation_DEFINITION"
-msgstr "En [[IfcExternalInformation]] er identifiseringen av en informasjonskilde som ikke er eksplisitt representert i den aktuelle modellen eller i prosjektdatabasen som en implementering av gjeldende modell . Den [[IfcExternalInformation]] identifiserer den eksterne kildeklassifiseringen, dokumentet eller biblioteket, men ikke de bestemte elementene, som en ordboksføring, en klassifikasjonsnotasjon, eller et dokumentreferanse i den eksterne kilden The [[IfcExternalInformation]] er en abstrakt overtype for all ekstern informasjon. HISTORY Ny enhet i IFC4."
+msgid "IfcHalfSpaceSolid_AgreementFlag_DEFINITION"
+msgstr "Avtalen flagget er TRUE hvis det er vanlig med BaseSurface points away from the material of the [[IfcHalfSpaceSolid]]. Ellers er det FALSE."
 
-#:IFC.xml:9424
-msgid "IfcExternalReference"
-msgstr "IfcExternalReference"
+#:IFC.xml:10638
+msgid "IfcIndexedPolygonalFace"
+msgstr "IfcIndexedPolygonalFace"
 
-msgid "IfcExternalReference_DEFINITION"
-msgstr "En [[IfcExternalReference]] er identifikasjon av informasjon som ikke er eksplisitt representert i den aktuelle modellen eller i prosjektdatabasen som en implementering av gjeldende modell . Slik informasjon kan finnes i klassifiseringer, dokumenter eller biblioteker. The [[IfcExternalReference]] Identifies a particular item, such as a dictionary entry, a classification notation, or a document reference within the external source. Bare plasseringen som en nettadresse er gitt for å beskrive stedet der informasjonen kan bli funnet. Også en valgfri identifikasjon som en nøkkel til å tillate mer spesifikke referanser med deler eller tabeller er oppgitt. Identifikasjonen definerer en systemfortolkbar metode for å identifisere den relevante delen av informasjonen ved kilden. I tillegg kan et menneskelig fortolkbart navn tildeles for å identifisere informasjonspersonen, for eksempel en klassifiseringskode. [[IfcExternalReference]] er en abstrakt overtype for alle eksterne referanseenheter. HISTORY Ny enhet i IFC2x. hange ifc2x4 IFC 2x4 CHANGE Attribute Identification renamed from ItemReference, attribute Location datatype changed, and inverse attribute ExternalReferenceForResources added."
+msgid "IfcIndexedPolygonalFace_DEFINITION"
+msgstr "[[IfcIndexedPolygonalFace]] er en kompakt framstilling av en plane flate som en del av et ansiktssett. Vertikene på mangekantet flate er angitt med 3 eller flere kartongespunkter, definert av indekser som peker inn i en [[IfcCartesianPointList3D]], enten direkte eller via PnIndex , hvis gitt på [[IfcPolygonalFaceSet]] . Figur 1 viser en [[IfcIndexedPolygonalFace]] ved en [[IfcPolygonalFaceSet]] som ikke bruker PnIndex standard . [[IfcIndexedPolygonalFace]] som ikke bruker PnIndex ... .. .. figurer ifcindexedpolygonalface 01. ng Figur 1 Polygonal ansiktsgeometri oppgitt av indekser til en punktliste 2 viser en [[IfcIndexedPolygonalFace]] på en [[IfcPolygonalFaceSet]] over PnIndex . [[IfcIndexedPolygonalFace]] bruke PnIndex ... ... ... ... figurer ifcindexedpolygonalface 02 ng Figur 2 Polygonal ansiktsgeometri fra indekser til en ny PN-indeks HISTORY i IFC4 Addendum 2."
 
-#:IFC.xml:9444
-msgid "IfcExternalReference_ExternalReferenceForResources"
-msgstr "ExternalReferenceForResources"
+#:IFC.xml:10646
+msgid "IfcIndexedPolygonalFace_ToFaceSet"
+msgstr "ToFaceSet"
 
-msgid "IfcExternalReference_ExternalReferenceForResources_DEFINITION"
-msgstr "Referanse til alle tilknytninger mellom denne eksterne referansen og objekter innenfor [[IfcResourceObjectSelect]] som er merket av den eksterne referansen. .change ifc2x4 IFC4-CHANGE New inverse attribute added with upward compatibility."
+msgid "IfcIndexedPolygonalFace_ToFaceSet_DEFINITION"
+msgstr "Referanse til [[IfcPolygonalFaceSet]] som dette ansiktet er knyttet til."
 
-#:IFC.xml:9425
-msgid "IfcExternalReference_Identification"
-msgstr "Identifikasjon"
+#:IFC.xml:10660
+msgid "IfcIndexedPolygonalFace_HasTexCoords"
+msgstr "HasTexCoords"
 
-msgid "IfcExternalReference_Identification_DEFINITION"
-msgstr "Identifikasjonen gir en unik identifikasjon av elementet som det refereres til innenfor den eksterne kildekodeklassifiseringen, dokumentet eller biblioteket . Det kan gis som en nøkkel, f.eks. et klassifiseringsnotat, som f.eks. en NF2. håndtak et uuid eller guid Det kan være leselig for eksempel en nøkkel eller ikke som et håndtak eller uuid avhengig av konteksten til bruken som må fastsettes av lokal avtale. .change ifc2x4 IFC4 CHANGE Attribute renamed fra ItemReference for consistency."
+msgid "IfcIndexedPolygonalFace_HasTexCoords_DEFINITION"
+msgstr "Valgfri referanse til [[IfcTextureCoordinateIndices]] som angir teksturkoordinatene som skal brukes på dette ansiktet."
 
-#:IFC.xml:9430
-msgid "IfcExternalReference_Location"
-msgstr "Sted"
+#:IFC.xml:10639
+msgid "IfcIndexedPolygonalFace_CoordIndex"
+msgstr "CoordIndex"
 
-msgid "IfcExternalReference_Location_DEFINITION"
-msgstr "Lokalisering, der den eksterne kildeklassifiseringen, dokumentet eller biblioteket kan nås på elektroniske måter. Det elektroniske stedet er angitt som en URI, og ville normalt bli gitt som en URL-lokasjon. .change ifc2x4 IFC4 CHANGE Datatypen har blitt endret fra [[IfcLabel]] til [[IfcURIReference]] ."
+msgid "IfcIndexedPolygonalFace_CoordIndex_DEFINITION"
+msgstr "En dimensjonsliste med indeksene for de tre eller flere punktene som definerer vertikalene i den ytre løkken. Hvis det tessellerte flatesettet er lukket, angitt med SELF [[IfcTessellatedFaceSet]]. tapt, så skal punktene som definerer den ytre løkken, kobles mot klokken. som sett fra utsiden av kroppen, slik at normalen vil peke utover. MERKNAD Koordinatene til vertikalene leveres av listen over indeksert SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList . Dersom SELF [[IfcTessellatedFaceSet]].PnIndex er oppgitt, vil indeksene peke inn i den ellers direkte i [[IfcCartesianPointList3D]] ."
 
-#:IFC.xml:9435
-msgid "IfcExternalReference_Name"
-msgstr "Navn"
+#:IFC.xml:10674
+msgid "IfcIndexedPolygonalFaceWithVoids"
+msgstr "IfcIndexedPolygonalFaceWithVoids"
 
-msgid "IfcExternalReference_Name_DEFINITION"
-msgstr "Valgfritt navn for nærmere å spesifisere referansen. Den kan angi en lesbar personidentifikator som ikke nødvendigvis trenger å ha en motpart i den interne strukturen i dokumentet ."
+msgid "IfcIndexedPolygonalFaceWithVoids_DEFINITION"
+msgstr "[[IfcIndexedPolygonalFaceWithVoids]] er en kompakt framstilling av en planar med indre løkker, som er en del av et ansiktssett. HISTORY Ny enhet i IFC4 Addendum 2."
 
-#:IFC.xml:9458
-msgid "IfcExternalReferenceRelationship"
-msgstr "IfcExternalReferenceRelationship"
+#:IFC.xml:10675
+msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices"
+msgstr "InnerCoordIndices"
 
-msgid "IfcExternalReferenceRelationship_DEFINITION"
-msgstr "[[IfcExternalReferenceRelationship]] er en relasjonsenhet som tillater objekter fra [[IfcResourceObjectSelect]] å ha evnen til å merkes av eksterne referanser. MERKNAD Denne sammenhengen brukes til å tildele klassifisering, bibliotek eller dokumentinformasjon til enheter som ikke arver fra [[IfcRoot]] . Den har en tilsvarende funksjonalitet som undertypene av [[IfcRelAssociates]] . HISTORY en ny enhet i IFC4."
+msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices_DEFINITION"
+msgstr "To dimensjonal liste, der den første dimensjonen representerer hver indre løkke fra 1 til N, og den andre dimensjonen består av indeksene til tre eller flere punkter som definerer vertikalene i hver indre løkke. Hvis det tessellerte flatesettet er lukket, angitt med SELF [[IfcTessellatedFaceSet]]. tapt, så skal punktene som definerer de indre løkkene, forbinde med klokkene, som vist fra utsiden av kroppen. MERKNAD Koordinatene til vertikalene leveres av den indekserte listen over SELF [[IfcTessellatedFaceSet]]. oordinates.CoordList . Hvis SELF [[IfcTessellatedFaceSet]].PnIndex er oppgitt, gis indeksene i denne, ellers direkte inn i [[IfcCartesianPointList3D]] ."
 
-#:IFC.xml:9444
-msgid "IfcExternalReferenceRelationship_RelatingReference"
-msgstr "Relaterer referanse"
+#:IFC.xml:10682
+msgid "IfcManifoldSolidBrep"
+msgstr "IfcManifoldSolidBrep"
 
-msgid "IfcExternalReferenceRelationship_RelatingReference_DEFINITION"
-msgstr "En ekstern referanse som kan brukes til å merke et objekt innenfor området [[IfcResourceObjectSelect]] . MERKNAD Eksterne referanser kan være en bibliotekreferanse for eksempel en ordbok eller en katalogreferanse , en klassifiseringsreferanse eller en dokumentasjonsreferanse."
+msgid "IfcManifoldSolidBrep_DEFINITION"
+msgstr "The [[IfcManifoldSolidBrep]] is a solid represented as a collection of connected surfaces that delimit the solid from the surrounding non solid. Instances of type [[IfcManifoldSolidBrep]] shall be of type [[IfcFacetedBrep]] , using only [[IfcPolyLoop]] for the bounds of [[IfcFaceBound]] , or of type [[IfcAdvancedBrep]] , using only [[IfcAdvancedFace]] for the face geometry, and [[IfcEdgeCurve]] for the edges. .extDef NOTE Definition according to ISO CD 10303 42 1992 A manifold solid b rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2 manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume. The Boundary Representation B rep of a manifold solid utilizes a graph of edges and vertices embedded in a connected, oriented, finite, closed two manifold surface. The embedded graph divides the surface into arcwise connected areas known as faces. The edges and vertices, therefore, form the boundaries of the face and the domain of a face does not include its boundaries. The embedded graph may be disconnected and may be a pseudo graph. The graph is labeled that is, each entity in the graph has a unique identity. The geometric surface definition used to specify the geometry of a face shall be 2 manifold embeddable in the plane within the domain of the face. In other words, it shall be connected, oriented, finite, non self intersecting, and of surface genus 0. Faces do not intersect except along their boundaries. Each edge along the boundary of a face is shared by at most one other face in the assemblage. The assemblage of edges in the B rep do not intersect except at their boundaries i.e., vertices . The geometry curve definition used to specify the geometry of an edge shall be arcwise connected and shall not self intersect or overlap within the domain of the edge. The geometry of an edge shall be consistent with the geometry of the faces of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. A B rep is represented by one or more closed shells which shall be disjoint. One shell, the outer, shall completely enclose all the other shells and no other shell may enclose a shell. The facility to define a B rep with one or more internal voids is provided by a subtype. The following version of the Euler formula shall be satisfied, math .. .. .. .. figures ifcmanifoldsolidbrep math1.gif where V, E, F, L l and S are the numbers of unique vertices, edges, faces, loop uses and shells in the model and G s is the sum of the genus of the shells. NOTE Entity adapted from manifold solid brep defined in ISO 10303 42. HISTORY New entity in IFC Release 1.0 Informal proposition 1. The dimensionality of a manifold solid brep shall be 3. 2. The extent of the manifold solid brep shall be finite and non zero. 3. All elements of the manifold solid brep shall have defined associated geometry. 4. The shell normals shall agree with the B rep normal and point away from the solid represented by the B rep. 5. Each face shall be referenced only once by the shells of the manifold solid brep. 6. The Euler equation shall be satisfied for the boundary representation, where the genus term shell term us the sum of the genus values for the shells of the brep."
 
-#:IFC.xml:9459
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects"
-msgstr "RelatedResourceObjects"
+#:IFC.xml:10685
+msgid "IfcManifoldSolidBrep_Outer"
+msgstr "Ytre"
 
-msgid "IfcExternalReferenceRelationship_RelatedResourceObjects_DEFINITION"
-msgstr "Objekter i listen over [[IfcResourceObjectSelect]] som kan tagges av en ekstern referanse til en ordliste, bibliotek, katalog, klassifisering eller dokumentasjon."
+msgid "IfcManifoldSolidBrep_Outer_DEFINITION"
+msgstr "Et lukket skall som definerer randen av fast masse. Skallet normalt skal peke vekk fra innsiden av fast masse."
 
-#:IFC.xml:9550
-msgid "IfcLibraryInformation"
-msgstr "IfcLibraryInformasjon"
+#:IFC.xml:10697
+msgid "IfcPointListDim__PointList"
+msgstr "IfcPointListDim PointList"
 
-msgid "IfcLibraryInformation_DEFINITION"
-msgstr "Et [[IfcLibraryInformation]] beskriver et bibliotek der et bibliotek er en strukturert butikk med informasjon, vanligvis organisert på en måte som tillater oppslag av informasjon gjennom en indeks eller en referanseverdi. [[IfcLibraryInformation]] gir navnet og valgfri beskrivelse, Versjon , VersionDate og Publisher attributter. Et sted kan legges til for elektronisk adgang til biblioteket. I en slik forstand [[IfcLibraryInformation]] inneholder metabeløpet for å fange opp revisjonsinformasjonen ved sjekk i bibliotek og andre data til et revisjonskontrollsystem. HISTORY Ny enhet i IFC2x. hange ifc2x4 IFC4 CHANGE Location and Description attributes added Publisher and VersionDate data type changed HasLibraryReferences inverse attribute added previous LibraryReference changed to inverse ."
+#:IFC.xml:10705
+msgid "IfcPolygonalBoundedHalfSpace"
+msgstr "IfcPolygonalBoundedHalfSpace"
 
-#:IFC.xml:9584
-msgid "IfcLibraryInformation_HasLibraryReferences"
-msgstr "HasemBiblioteker"
+msgid "IfcPolygonalBoundedHalfSpace_DEFINITION"
+msgstr "The polygonal bounded half space is a special subtype of a half space solid, where the material of the half space used in Boolean expressions is bounded by a polygonal boundary. The base surface of the half space is positioned by its normal relative to the object coordinate system as defined at the supertype [[IfcHalfSpaceSolid]] , and its polygonal with or without arc segments boundary is defined in the XY plane of the position coordinate system established by the Position attribute, the subtraction body is extruded perpendicular to the XY plane of the position coordinate system, that is, into the direction of the positive Z axis defined by the Position attribute. The boundary is defined by a 2 dimensional polyline or 2 dimensional composite curve, consisting of straight segments and circular arc segments within the XY plane of the position coordinate system. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into. NOTE A polygonal bounded half space is not a subtype of [[IfcSolidModel]] , half space solids are only useful as operands in Boolean expressions. Figure 1 illustrates a polygonal bounded half space. polygonal bounded halfspace .. .. .. .. figures ifcpolygonalboundedhalfspace layout1.png Figure 1 Polygonal half space geometry Black coordinates indicate the object coordinate system usually provided by [[IfcLocalPlacement]] . Green coordinates indicate the position coordinate system the PolygonalBoundary is given within this coordinate system. It is provided by [[IfcPolygonalBoundedHalfSpace]].Position. This coordinate system is relative to the object coordinate system. The extrusion direction of the subtraction body is the positive Z axis. Red coordinates indicate the normal of the plane. It is provided by the BaseSurface [[IfcSurface]].Position . This normal is also relative to the object coordinate system. The polygonal bounded half space is used to limit the volume of the half space in Boolean difference expressions. Only the part that is defined by a theoretical intersection between the half space solid and an extruded area solid, defined by extruding the polygonal boundary, is used for Boolean expressions. The PolygonalBoundary defines the 2D polyline which bounds the effectiveness of the half space in Boolean expressions. The BaseSurface is defined by a plane, and the normal of the plane together with the AgreementFlag defines the side of the material of the half space. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The [[IfcPolyline]] or the [[IfcCompositeCurve]] providing the PolygonalBoundary shall be closed. 2. If the PolygonalBoundary is given by an [[IfcCompositeCurve]] , it shall only have [[IfcCompositeCurveSegment]] s of type [[IfcPolyline]] , or [[IfcTrimmedCurve]] having a BasisCurve of type [[IfcLine]] , or [[IfcCircle]] 3. The BaseSurface defined at supertype [[IfcHalfSpaceSolid]] shall be of type [[IfcPlane]] 4. The normal of the plane, being the BaseSurface , shall not be perpendicular to the z axis of the position coordinate system"
 
-msgid "IfcLibraryInformation_HasLibraryReferences_DEFINITION"
-msgstr "Biblioteket refererer til som informasjonen i biblioteket gjelder."
+#:IFC.xml:10708
+msgid "IfcPolygonalBoundedHalfSpace_Position"
+msgstr "Posisjon"
 
-#:IFC.xml:9598
-msgid "IfcLibraryInformation_LibraryInfoForObjects"
-msgstr "BibliotekarInfoForObjekter"
+msgid "IfcPolygonalBoundedHalfSpace_Position_DEFINITION"
+msgstr "Definisjon av posisjonskoordinatsystemet for grensepassering og underlaget ."
 
-msgid "IfcLibraryInformation_LibraryInfoForObjects_DEFINITION"
-msgstr "Bibliotekets informasjon om hvilke objekter som er knyttet til. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+#:IFC.xml:10720
+msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary"
+msgstr "PolygonalBoundary"
 
-#:IFC.xml:9551
-msgid "IfcLibraryInformation_Description"
-msgstr "Beskrivelse"
+msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary_DEFINITION"
+msgstr "Todimensjonal polylinje avgrenset kurve, definert i xy-planet til posisjonskoordinatsystemet. hange ifc2x3 IFC2x3 CHANGE Attributttypen er endret fra [[IfcPolyline]] til supertypen [[IfcBoundedCurve]] med større kompatibilitet for filbasert utveksling."
 
-msgid "IfcLibraryInformation_Description_DEFINITION"
-msgstr "Ytterligere beskrivelse for biblioteksrevisjonsinformasjonen .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+#:IFC.xml:10732
+msgid "IfcPolygonalFaceSet"
+msgstr "IfcPolygonalFaceSet"
 
-#:IFC.xml:9556
-msgid "IfcLibraryInformation_Location"
-msgstr "Sted"
+msgid "IfcPolygonalFaceSet_DEFINITION"
+msgstr "The [[IfcPolygonalFaceSet]] is a tessellated face set with all faces being bound by polygons. The planar faces are constructed by implicit polylines defined by three or more Cartesian points. Each planar face is defined by an instance of [[IfcIndexedPolygonalFace]] , or in case of faces with inner loops by [[IfcIndexedPolygonalFaceWithVoids]] . Depending on the value of the inherited attribute Closed the instance of [[IfcPolygonalFaceSet]] represents if TRUE, a boundary representation or B rep if FALSE, a face based surface representation. The attribute Faces refers to a list of [[IfcIndexedPolygonalFace]] s having an one based CoordIndex that provides three or more indices. If the face has inner loops, the [[IfcIndexedPolygonalFaceWithVoids]] has a two dimensional, one based list, where the first dimension of the two dimensional list addresses the list of inner loops the second dimension of the two dimensional list provides three or more indices each being a vertex of the planar polygon representing the inner loop. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. PnIndex .. .. .. .. figures ifcpolygonalfaceset 01.png Figure 1 Use of PnIndex NOTE If the [[IfcPolygonalFaceSet]] is closed, the face vertices of the [[IfcIndexedPolygonalFace]] s shall connect counterclock wise when seen from the outside of the closed shell to guarantee that the face normal points away from the material of the shell. Inner loops, provided by the [[IfcIndexedPolygonalFaceWithVoids]] , shall connect clock wise. IfcFacetedFaceSet Example 01 .. .. .. .. figures ifcfacetedfaceset example 01.png Figure 2 Polygonal face set geometry Figure 2 shows an IfcFacetedFaceSet represented by 1 [[IfcIndexedPolygonalFace]] 1, 2, 6, 5 2 [[IfcIndexedPolygonalFace]] 6, 2, 3, 7 3 [[IfcIndexedPolygonalFace]] 7, 3, 4, 8 4 [[IfcIndexedPolygonalFace]] 8, 4, 1, 5 5 [[IfcIndexedPolygonalFace]] 1, 4, 3, 2 6 [[IfcIndexedPolygonalFace]] 6, 7, 8, 5 7 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. NOTE The definition of IfcFacetedFaceSet is based on the indexedFaceSet defined in ISO IEC 19775 1 HISTORY New entity in IFC4 Addendum 2. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two outer or inner boundaries of faces the topological normal at each point on the boundary of the polygonal face set shall point away from the material of the solid."
 
-msgid "IfcLibraryInformation_Location_DEFINITION"
-msgstr "Ressursidentifikator eller finner sted oppgitt som URI, URN eller URL, av bibliotekets informasjon for online referanser. .change ifc2x4 IFC4 CHANGE Ny attributt lagt til på slutten av listen over attributter."
+#:IFC.xml:10646
+msgid "IfcPolygonalFaceSet_Faces"
+msgstr "Flater"
 
-#:IFC.xml:9561
-msgid "IfcLibraryInformation_Name"
-msgstr "Navn"
+msgid "IfcPolygonalFaceSet_Faces_DEFINITION"
+msgstr "Listen av mangekantet ansikt, med eller uten løkker som binder ansiktssettet."
 
-msgid "IfcLibraryInformation_Name_DEFINITION"
-msgstr "Navnet som brukes til å identifisere biblioteket."
+#:IFC.xml:10733
+msgid "IfcPolygonalFaceSet_PnIndex"
+msgstr "PnIndex"
 
-#:IFC.xml:9566
-msgid "IfcLibraryInformation_Publisher"
-msgstr "Utgiver"
+msgid "IfcPolygonalFaceSet_PnIndex_DEFINITION"
+msgstr "Listen over heltall som definerer stedene i [[IfcCartesianPointList3D]] for å få punktkoordinatene til indeksene på de indekserte polygonale flatene. Dersom PnIndex ikke er oppgitt vil indeksene i det indekserte mangekantet flateflater direkte inn i [[IfcCartesianPointList3D]] ."
 
-msgid "IfcLibraryInformation_Publisher_DEFINITION"
-msgstr "Informasjon om organisasjonen som fungerer som utgiveren. .change ifc2x4 IFC4 CHANGE Datatypen har blitt endret til [[IfcActorSelect]]"
+#:IFC.xml:10740
+msgid "IfcRectangularPyramid"
+msgstr "IfcRectangularPyramid"
 
-#:IFC.xml:9571
-msgid "IfcLibraryInformation_Version"
-msgstr "Versjon"
+msgid "IfcRectangularPyramid_DEFINITION"
+msgstr "[[IfcRectangularPyramid]] er et \"Construction Solid Geometry CSG 3D primitive. Det er et solid med en rektangulær base og et punkt kalt apex som toppen. Tvangene fra bunnen til toppen. Aksen fra midten av basen til eplen er vinkelrett på underlaget. Den arvede posisjon-attributtet definerer IfcAxisPlacement3D og gir plassering og orientering i pyramiden SELF [[IfcCsgPrimitive3D]]. osisjon Plassering og retning av akse systemet for primitivet. SELF [[IfcCsgPrimitive3D]].Position. ocation Center av det runde arealet som ligger nederst på konen. SELF [[IfcCsgPrimitive3D]. opposisjon. osisjon 3 z aksen til det arvede plasseringssamoordinsystemet gir tilskueraksen til [[IfcRightCircularCone]] og apex er ved høyden påført den positive retningen til z-aksen. BottomRadius definerer den sirkulære basen på xy-planet til plasseringskoordinatsystemet. Som vist på figur 1 er pyramiden plassert i sitt eget koordinatsystem. Opphavet er midt i bunnrektangelet, som ligger i XY-flyet. Apeene ligger på den positive z-aksen ved 0, høyde . pyramide.. .. .. figurer om tangularpyramidets oppsett1. ng Figur 1 Rektangulær pyramide geometri HISTORY ny enhet IFC2x3 definisjon av hvordan hodet skal brukes på hver trekantede sideflate, teksturer er justert vendt mot stående. Teksturer er strekke eller gjentatt i omfang av basis i hvert ansikt ifølge RepeatS. Teksturer er strekke eller gjentatt mot topppunktet i henhold til Gjenta T, hvor det øverste punktet har koordinater på 0.5,1.0 hvis Repetering er False. På bunnen av ansiktet er teksturer justert foran til baksiden. Figur 2 illustrerer standard teksturkartlegging med en klampet teksturrepoS False og RepeterT False . Bildet til venstre viser teksturen der S-aksen peker mot høyre og T-aksen oppover. Bildet til høyre viser teksturen som brukes på geometrien der X-aksen peker tilbake til høyre, Y-aksen peker tilbake til venstre, og Z-aksen oppover. .gridtable tekstur .. .. .. .. figurer ifctangularpyramidets tekstur. ng Figur 2 Rektangulær pyramide teksturer Side Normal Origin X Origin Y Origin Z Axis Venstre 0 YF Lengde 0 Y mot topppunktet X X X X Lengde 0 0 0 Y mot øverste punkt Front Y 0 0 0 X mot øvre punkt tilbake til Y-lengden 0 X Lengde 0 X mot øverste punkt bunn Z XLengde 0 X 0 X Y tabell 3 Tekstparametre 0 0 X"
 
-msgid "IfcLibraryInformation_Version_DEFINITION"
-msgstr "Identifikator for bibliotekversjonen som brukes for referanse."
+#:IFC.xml:10741
+msgid "IfcRectangularPyramid_Height"
+msgstr "Høyde"
 
-#:IFC.xml:9576
-msgid "IfcLibraryInformation_VersionDate"
-msgstr "VersionDate"
+msgid "IfcRectangularPyramid_Height_DEFINITION"
+msgstr "Apehøyden over basens plan, målt i retning av plasseringen Z aksen, SELF [[IfcCsgPrimitive3D]]. osition.P 2 ."
 
-msgid "IfcLibraryInformation_VersionDate_DEFINITION"
-msgstr "Datoen for den refererte versjonen av biblioteket. . hange ifc2x4 IFC4 CHANGE Datatypen har blitt endret til [[IfcDateTime], dato og klokkeslett i henhold til ISO8601."
+#:IFC.xml:10746
+msgid "IfcRectangularPyramid_XLength"
+msgstr "XLengde"
 
-#:IFC.xml:9610
-msgid "IfcLibraryReference"
-msgstr "IfcLibraryReferanse"
+msgid "IfcRectangularPyramid_XLength_DEFINITION"
+msgstr "Lengden på fundamentet målt langs X-aksen. Den leveres av den arvede akseplasseringen gjennom SELF [[IfcCsgPrimitive3D]].Position.P 1 ."
 
-msgid "IfcLibraryReference_DEFINITION"
-msgstr "En [[IfcLibraryReference]] refererer til et informasjonsbibliotek av lokasjon angitt som en URI . Den inneholder også en valgfri arvet identifikasjonsnøkkel for å gi mer spesifikke referanser til avsnittene eller tabellene. Det arvede navn-attributtet tillater en menneskelig fortolkbar identifikasjon av biblioteket. I tillegg er det lagt inn generell informasjon om biblioteket som referansen gjelder for. er angitt ved ReferencedLibrary forholdet som identifiserer den relevante forekomsten av [[IfcLibraryInformation]] . Bibliotekets referanse gir i tillegg muligheten til å håndtere flerspråklige bibliotekoppføringer. Språkattributtet inneholder da språkkoden for det språket som brukes av strengene oppbevart i navnet og beskrivelsesattributtet. HISTORY Ny enhet i IFC2.0. .change ifc2x4 IFC4 CHANGE Description and Language attribute added ReferencedLibrary attribute added reversing previous ReferenceIntoLibrary inverse relationship ."
+#:IFC.xml:10751
+msgid "IfcRectangularPyramid_YLength"
+msgstr "Lengde"
 
-#:IFC.xml:9584
-msgid "IfcLibraryReference_ReferencedLibrary"
-msgstr "Referansebibliotek"
+msgid "IfcRectangularPyramid_YLength_DEFINITION"
+msgstr "Lengden av fundamentet målt langs plasseringen Y aksen. Den leveres av den arvede akseplasseringen gjennom SELF [[IfcCsgPrimitive3D]].Position.P 2 ."
 
-msgid "IfcLibraryReference_ReferencedLibrary_DEFINITION"
-msgstr "Kontaktinformasjon om bibliotek som refereres."
+#:IFC.xml:10758
+msgid "IfcRevolvedAreaSolid"
+msgstr "IfcRevolvedAreaSolid"
 
-#:IFC.xml:9624
-msgid "IfcLibraryReference_LibraryRefForObjects"
-msgstr "Bibliotekets referanse"
+msgid "IfcRevolvedAreaSolid_DEFINITION"
+msgstr "An [[IfcRevolvedAreaSolid]] is a solid created by revolving a cross section provided by a profile definition about an axis. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the revolved solid. If not provided, it defaults to the current object coordinate system. The axis and the cross section shall be in the same plane, prior to any repositioning. NOTE Both the axis and the cross section are required to lie in the xy plane of the object position coordinate system. revolved area solid .. .. .. .. figures ifcrevolvedareasolid fig1.png Figure 1 Revolved area solid geometry EXAMPLE Figure 1 illustrates geometric parameters of the revolved solid. The revolved area solid defines the revolution of a 2D area given by a profile definition by an axis and angle. The result is a solid. The swept area is given by a profile definition. The profile is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. The AxisLine can have any orientation within the XY plane, it does not have to be parallel to the y axis as shown in the illustration. revolved area solid .. .. .. .. figures ifcrevolvedareasolid fig2.png Figure 2 Repositioned revolved area solid geometry EXAMPLE Figure 1 illustrates geometric parameters and additional positioning parameters of the revolved area solid. The revolved area solid defines the rotation of a 2D area by an axis and angle. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the x axis. .extDef NOTE Definition according to ISO CD 10303 42 1992 A revolved area solid is a solid formed by revolving a planar bounded surface about an axis. The axis shall be in the plane of the surface and the axis shall not intersect the interior of the bounded surface. The bounded surface may have holes which will sweep into holes in the solid. The direction of revolution is clockwise when viewed along the axis in the positive direction. More precisely if A is the axis location and d is the axis direction and C is an arc on the surface of revolution generated by an arbitrary point p on the boundary of the swept area, then C leaves p in direction d x p A as the area is revolved. NOTE Entity adapted from revolved area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .spec head Informal Propositions 1. The AxisLine shall lie in the plane of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 2. The AxisLine shall not intersect the interior of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 3. The Angle shall be between 0 and 360 , or 0 and 2π depending on the unit type for [[IfcPlaneAngleMeasure]] . .use head Texture Use Definition For side faces, textures are aligned facing upright along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the outermost longest revolution path according to RepeatT , where coordinates are compressed towards the axis of revolution. For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. texture .. .. .. .. figures ifcrevolvedareasolid texture.png Figure 3 Revolved area solid textures Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcRevolvedAreaSolid]] having a profile of [[IfcTShapeProfileDef]] and revolved at 22.5 degrees, the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth , while top end cap texture coordinates start at 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth ."
 
-msgid "IfcLibraryReference_LibraryRefForObjects_DEFINITION"
-msgstr "Biblioteket som viser hvilke objekter som er knyttet til. .change ifc2x4 IFC4 CHANGE New inverse attributt."
+#:IFC.xml:10770
+msgid "IfcRevolvedAreaSolid_Axis"
+msgstr "Akse"
 
-#:IFC.xml:9611
-msgid "IfcLibraryReference_Description"
-msgstr "Beskrivelse"
+msgid "IfcRevolvedAreaSolid_Axis_DEFINITION"
+msgstr "Axis om hvilken revolusjon som skjer."
 
-msgid "IfcLibraryReference_Description_DEFINITION"
-msgstr "Ytterligere beskrivelse gitt for biblioteket referanse. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the attribute list."
+#:IFC.xml:10759
+msgid "IfcRevolvedAreaSolid_AxisLine"
+msgstr "AxisLine"
 
-#:IFC.xml:9616
-msgid "IfcLibraryReference_Language"
-msgstr "Språk"
+msgid "IfcRevolvedAreaSolid_AxisLine_DEFINITION"
+msgstr "The line of the axis of revolution."
 
-msgid "IfcLibraryReference_Language_DEFINITION"
-msgstr "Språket hvor en biblioteksreferanse er uttrykt. Endre ifc2x4 IFC4 CHANGE Ny attributt lagt til i slutten av attributtlisten."
+#:IFC.xml:10763
+msgid "IfcRevolvedAreaSolid_Angle"
+msgstr "Vinkel"
 
-#:IFC.xml:9636
-msgid "IfcLibrarySelect"
-msgstr "IfcLibraryVelg"
+msgid "IfcRevolvedAreaSolid_Angle_DEFINITION"
+msgstr "Den vinkelen som den fang skal lages gjennom. Denne vinkelen måles fra svingningsarealet gitt av XY-planet til posisjonskoordinatsystemet."
 
-#:IFC.xml:9637
-msgid "IfcResourceLevelRelationship"
-msgstr "IfcResourceLevelationship"
+#:IFC.xml:10782
+msgid "IfcRevolvedAreaSolidTapered"
+msgstr "IfcRevolvedAreaSolidTapered"
 
-msgid "IfcResourceLevelRelationship_DEFINITION"
-msgstr "[[IfcResourceLevelRelationship]] er en abstrakt baseenhet for forhold mellom enheter av ressursnivå. HISTORY Ny enhet i IFC4."
+msgid "IfcRevolvedAreaSolidTapered_DEFINITION"
+msgstr "[[IfcRevolvedAreaSolidTapered]] defineres ved at et tverrsnitt drepes langs en sirkulær bue. Tverrsnittet kan endres langs den sveipede fra formen på starttverrsnittet til formen på endetverrsnittet. Tilsvarende vertikaler for start- og endeklossene skal deretter tilkobles. Overflaten som er avgrenset, kan ha hull som slipper ut i hullene. Rotasjonsaksen er definert ved startpunkt SELF [[IfcSweptAreaSolid]]. osition.Location Direction SELF [[IfcRevolvedAreaSolid]].Axis Rotation axis SELF [[IfcRevolvedAreaSolid]]. xisLine , opprettet fra startpunkt og retning ved bruk av en enhetsstørrelse. Retning Positive vinkler brukes med urviseren når du ser inn i den positive retningen til rotasjonsaksen. Avsnittets startseksjon er definert med SELF [[IfcSweptAreaSolid]]. weptArea A begrenset planflate som ligger i XY-planet av posisjonskoordinatsystemet definert av SELF [[IfcSweptAreaSolid]]. osition.P 1 og SELF [[IfcSweptAreaSolid]]. osition.P 2 Rotasjonsaksen ligger i starttverrsnittets plan, men skal ikke krysse innsiden av tverrsnittet. Endetverrsnittet er definert av EndSweptArea A begrenset plan overflate som ligger i XY-planet i posisjonskoordinatsystemet definert ved å rotere posisjonskoordinatene i SELF [[IfcSweptAreaSolid]]. osid rundt rotasjonsaksen av vinkelen gitt av SELF [[IfcRevolvedAreaSolid]].Vinkel . Tverrsnitt er topologisk likt tverrsnittet med samme antall vertikaler og kanter . Endetverrsnittet kan enten defineres av den samme paramteriske profilen ved hjelp av ulike parameterverdier, eller ved en 2D kartongtransformasjon av startprofilen i tverrsnittet med siste tverrsnitt. Flytende legeme oppstår ved at startseksjonen overføres til endekrysset. En startflate der en endeflate hver definert ved start- og endeprofiler og én eller flere sideflater. Hver sideflate er en rulleflate definert av et par tilsvarende kanter på start- og sluttseksjonen. De regnede overflatene er konstruert i det sylindriske koordinatrommet definert av supertypen [[IfcRevolvedAreaSolid]] . HISTORY Ny enhet i IFC4. .spec heads uformelle posisjoner 1. Speil innenfor [[IfcDerivedProfileDef]].Operatør skal ikke brukes"
 
-#:IFC.xml:9638
-msgid "IfcResourceLevelRelationship_Description"
-msgstr "Beskrivelse"
+#:IFC.xml:10785
+msgid "IfcRevolvedAreaSolidTapered_EndSweptArea"
+msgstr "EndSweptArea"
 
-msgid "IfcResourceLevelRelationship_Description_DEFINITION"
-msgstr "En beskrivelse som kan gjelde ytterligere informasjon om forholdene."
+msgid "IfcRevolvedAreaSolidTapered_EndSweptArea_DEFINITION"
+msgstr "EndSweptArea"
 
-#:IFC.xml:9643
-msgid "IfcResourceLevelRelationship_Name"
-msgstr "Navn"
+#:IFC.xml:10797
+msgid "IfcRightCircularCone"
+msgstr "IfcRightCircularCone"
 
-msgid "IfcResourceLevelRelationship_Name_DEFINITION"
-msgstr "Et navn som brukes til å identifisere eller kvalifisere relasjonen."
+msgid "IfcRightCircularCone_DEFINITION"
+msgstr "[[IfcRightCircularCone]] er et \"Construction Solid Geometry CSG 3D primitive. Det er et fast fundament med en sirkulær plate, og et punkt kalt apex som toppen. Tvangene fra bunnen til toppen. Aksen fra midten av den sirkelformede foten til apex er vinkelrett på underlaget. Den arvede posisjon-attributtet definerer IfcAxisPlacement3D og gir plassering og orientering av cone SELF [[IfcCsgPrimitive3D]]. osisjon Plassering og retning av akse systemet for primitivet. SELF [[IfcCsgPrimitive3D]].Position. ocation Center av det sirkulære arealet som er nederst på konen. SELF [[IfcCsgPrimitive3D]].Posisjon. osisjon 3 z aksen til det arvede plasseringssamoordinsystemet gir tilskueraksen til [[IfcRightCircularCone]] og apex er ved høyden påført den positive retningen til z-aksen. BottomRadius definerer den sirkulære basen på xy-planet til plasseringskoordinatsystemet. Figur 1 viser geometriske parametere for konge. Konten plasseres innenfor sitt eget koordinatsystem. Opphavet er midtpunktet av bunnrund plate, som ligger i XY-flyet. apexen ligger på den positive z-aksen ved 0, høyde lik 1. ... ... ... figurer hviske ut oppsettet. ng Figur 1 Høyre sirkulære kjeglegeometri MERKNAD Entity adapted from right circular cone definert i NS-EN ISO 10303 42. HISTORY Ny enhet i IFC2x3 . definert som \"head\" tekstur head\" bruksdefinisjon på den sirkulære siden, teksturer er plassert vendt loddrett med opprinnelse i den bakre Y-retningen med vinklet mot klokken. Teksturer er strukket opp eller gjentatt i omfanget av omkretsen av basen ifølge Repets. Teksten er komprimert lineært med å gå oppover mot topppunktet i henhold til Gjentagelse. På bunnen av ansiktet, er teksturer justert forsiden mot ryggen, med sirkelsentrum tilpasset midten av teksten. Figur 2 illustrerer standard teksturkartlegging med en klampet teksturrepoS False og RepeterT False . Bildet til venstre viser teksturen der S-aksen peker mot høyre og T-aksen oppover. Bildet til høyre viser teksturen som brukes på geometrien der X-aksen peker tilbake til høyre, Y-aksen peker tilbake til venstre, og Z-aksen oppover. tekst... ... ... ... tall kripssirkel teksten. ng Figur 2 Høyresirkulære konteksturer Side Origin X Origin Y Origin Z S Axis T-Axis side Y 0 Radius 0 X mot topppunktets bunn Z Radius Radius 0 X Y tabell 3 Teksturparametere"
 
-#:IFC.xml:9649
-msgid "IfcResourceObjectSelect"
-msgstr "IfcResourceObjectSelect"
+#:IFC.xml:10798
+msgid "IfcRightCircularCone_BottomRadius"
+msgstr "BunnRadius"
 
-#:IFC.xml:9690
-msgid "IfcLanguageId"
-msgstr "IfcLanguageId"
+msgid "IfcRightCircularCone_BottomRadius_DEFINITION"
+msgstr "Radiusen til konusen i underlaget."
 
-msgid "IfcLanguageId_DEFINITION"
-msgstr "[[IfcLanguageId]] identifiserer språket for en naturlig tekst i teksten. Den bruker en språkkode for å identifisere språket. MERKNAD Taggen skal overholde IETF-taggen for Internet Engineering Task Force som uttrykt i RFC 5646. Et program som oppfyller kravene, skal støtte den enkle språkundertaggen og språk-formatet på språkkode. EKSEMPEL for enkle språk-tagger på engelsk, de tysk , fr France , eller ja japansk , og for språkområder tagger en amerikansk engelsk som brukt i USA, de CH tysk som benyttet i tysk talende del av Sveits . Skriv [[IfcIdentifier]] MERKNAD Se RFC 5646 .. .. .. bibliography.htm RFC 5646 for definisjon av språktagg. HISTORY Ny definert datatype i IFC4."
+#:IFC.xml:10803
+msgid "IfcRightCircularCone_Height"
+msgstr "Høyde"
 
-#:IFC.xml:9693
-msgid "IfcURIReference"
-msgstr "IfcURIReference"
+msgid "IfcRightCircularCone_Height_DEFINITION"
+msgstr "Avstanden mellom bunnen av kontapet og eplet."
 
-msgid "IfcURIReference_DEFINITION"
-msgstr "[[IfcURIReference]] gir deg mulighet til å identifisere en enhetlig ressursidentifikator URI . En URI kan klassifiseres som en finner eller et navn, eller begge dette kan bestå av en Uniform Resource Locator URL eller en enhetlig ressursnavn-URN . En enhetlig ressurs-lokator, URL, er en streng som samsvarer med et standardisert format, som viser til en ressurs på Internett, for eksempel et dokument eller et bilde av sin plassering. En enhetlig ressursnavn, URN, er ment å være vedvarende, lokaliseringsidentifikatoren og er utformet for å gjøre det enkelt å kartlegge andre navneområder som deler egenskapene til URN-er til plass i URN-. MERKNAD Se RFC 3986 ... ... biblioghy.htm RFC 3986 for definisjon av Uniform Resource Identifier. HISTORY New defined datatype i IFC4."
+#:IFC.xml:10810
+msgid "IfcRightCircularCylinder"
+msgstr "IfcRightCircularCylinder"
+
+msgid "IfcRightCircularCylinder_DEFINITION"
+msgstr "The [[IfcRightCircularCylinder]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a circular base and top. The cylindrical surface between if formed by points at a fixed distance from the axis of the cylinder. The inherited Position attribute defines the IfcAxisPlacement3D and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cylinder. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis provides the center axis and the height is measured from the origin along the positive direction of the z axis. Figure 1 illustrates geometric parameters of the cylinder. The cylinder is positioned within its own placement coordiante system. The origin is the center of the bottom circular disk, that lies in the XY plane. The center of the top circular disk is on the positive z axis at 0, 0, Height . cylinder .. .. .. .. figures ifcrightcircularcylinder layout1.png Figure 1 Right circular cylinder geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A right circular cylinder is a CSG primitive in the form of a solid cylinder of finite height. It is defined by an axis point at the centre of one planar circular face, an axis, a height, and a radius. The faces are perpendicular to the axis and are circular discs with the specified radius. The height is the distance from the first circular face centre in the positive direction of the axis to the second circular face centre. NOTE Entity adapted from right circular cylinder defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture use definition On the circular side, textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the circumference according to RepeatS. Textures are stretched or repeated to the extent of the Height according to RepeatT. On the top and bottom faces, textures are aligned facing front to back, with the center of the circle aligned to the center of the texture. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable texture .. .. .. .. figures ifcrightcircularcylinder texture.png Figure 2 Right circular cylinder textures Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X Z Bottom Z Radius Radius 0 X Y Top Z Radius Radius Height X Y Table 3 Texture parameters"
+
+#:IFC.xml:10811
+msgid "IfcRightCircularCylinder_Height"
+msgstr "Høyde"
+
+msgid "IfcRightCircularCylinder_Height_DEFINITION"
+msgstr "Avstanden mellom de plane sirkulære flatene på sylinderen."
+
+#:IFC.xml:10816
+msgid "IfcRightCircularCylinder_Radius"
+msgstr "Radius"
+
+msgid "IfcRightCircularCylinder_Radius_DEFINITION"
+msgstr "Radiusen til sylinderen."
+
+#:IFC.xml:10823
+msgid "IfcSectionedSolid"
+msgstr "IfcSectionedSolid"
+
+msgid "IfcSectionedSolid_DEFINITION"
+msgstr "En [[IfcSectionedSolid]] er en abstrakt basetype for faste stoff bygd ved hjelp av glidende potensielt variable tverrsnitt langs et direktiv."
+
+#:IFC.xml:10826
+msgid "IfcSectionedSolid_Directrix"
+msgstr "Direktør"
+
+msgid "IfcSectionedSolid_Directrix_DEFINITION"
+msgstr "Kurven som brukes til å definere svingningsutløsningen."
+
+#:IFC.xml:10838
+msgid "IfcSectionedSolid_CrossSections"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSolid_CrossSections_DEFINITION"
+msgstr "Liste over tverrsnitt i rekkefølge langs Directrix ."
+
+#:IFC.xml:10850
+msgid "IfcSectionedSolidHorizontal"
+msgstr "IfcSectionedSolidHorisontal"
+
+msgid "IfcSectionedSolidHorizontal_DEFINITION"
+msgstr "En [[IfcSectionedSolidHorizontal]] er en solid modell laget av å svinge potensielt varierende tverrsnitt langs en kurve horisontalt. Den faste fremkommer ved å la tverrsnittene mellom tverrsnittsposisjoner med lineær interpolasjon av profilpunkter, der profilen er normal enig i tangenten til Directrix , profilaksen er såvidt innrettet vinkelrett til venstre i Directrix samme retning som LateralOffset ved [[IfcPointByDistanceExpression]] som vendt fremover langs direktivet, og profilen Y-aksen er orientert oppover i henhold til FixedAxisVertical . For tverrsnitt med rotasjon i henhold til én enkelt hovedhøyde [[IfcDerivedProfileDef]] kan brukes til å angi en slik rotasjon for hver parentProfile som viser til den samme profilen. For tverrsnitt som har tverrsnittstransformert etter flere deløkninger, med punkter som varierer uavhengig av hverandre hver profil kan være av en annen forekomst, men av samme type, f.eks. [[IfcArbitraryClosedProfileDef]] , og kan eventuelt ha tverrsnittspunkter knyttet til strenglinjer som styrer kurver med [[IfcIndexedPolyCurve]] med IfcCartesianPoint2DLabelled . Figur 1 viser fire dragere i en bru som har konstant parameterisert profil, to gelendere med en konstant vilkårlig profil blant dem speilet og et brodekk med en variabel vilkårlig profil. romlig struktur ... ... ... ... figurer ifcsectionedsolidhorizontal.png Figur 1 Seksjonert solide horisontale Proposisjoner 1. Ingen etterfølgende seksjoner skal krysses. 2. Hvis profiltypen ikke er [[IfcParameterizedProfileDef]], dvs. En vilkårlig profil , deretter skal antall punkter og kanter være det samme for to påfølgende profiler 3. Hvis retningen ikke er konstant (tangent), er det resulterende solide laget av en smaker i halv vinkel mellom de to segmentene. 4. Svært skarpe kanter kan føre til at idéavtaler om nesten umulig kan definere akseptable grenser for tangent diskontinuitet, eller at direkturen er tangent kontinuerlig. 5. Rettrix skal ikke krysse"
+
+#:IFC.xml:10853
+msgid "IfcSectionedSolidHorizontal_CrossSectionPositions"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSolidHorizontal_CrossSectionPositions_DEFINITION"
+msgstr "Liste over avstandsuttrykk i sekvensielt økende rekkefølge i henhold til Tverrsnitt , viser plasseringen av tilhørende seksjon langs Directrix ."
+
+#:IFC.xml:10865
+msgid "IfcSectionedSpine"
+msgstr "IfcSectionedSpine"
+
+msgid "IfcSectionedSpine_DEFINITION"
+msgstr "An [[IfcSectionedSpine]] is a representation of the shape of a three dimensional object composed by a number of planar cross sections, and a spine curve. The shape is defined between the first element of cross sections and the last element of the cross sections. A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. All cross sections have to define areas by a closed profile to allow for the representation of a solid. All cross sections have to define curves by an open or closed profile to allow for the representation of a surface. The cross sections are defined by subtypes of [[IfcProfileDef]] , where the consecutive profiles may be derived by a transformation of the start profile or the previous consecutive profile. The spine curve shall be of type [[IfcCompositeCurve]] , each of its segments represented by [[IfcCompositeCurveSegment]] shall correspond to the part between exactly two consecutive cross sections. Figure 1 illustrates an example of an [[IfcSectionedSpine]] . The SpineCurve is given by an [[IfcCompositeCurve]] with two Segments . The Segments 1 has a ParentCurve of type [[IfcPolyline]] and a Transition CONTSAMEGRADIENT. The Segments 2 has a ParentCurve of type [[IfcTrimmedCurve]] and a Transition DISCONTINUOUS. Each CrossSectionPosition lies at a start or end point of the Segments . Each CrossSections are inserted by the CrossSectionPositions . The first two cross sections are of type [[IfcRectangleProfileDef]] , the third is of type [[IfcDerivedProfileDef]] . spine 1 .. .. .. .. figures ifcsectionedspine layout1.gif Figure 1 Sectioned spine geometry Figure 2 illustrates the final result of the [[IfcSectionedSpine]] . The body shown transparently is not fully defined by the exchange definition. render .. .. .. .. figures ifcsectionedspine.jpg Figure 2 Sectioned spine result .extDef NOTE Definition according to ISO CD 10303 42 1992 A sectioned spine is a representation of the shape of a three dimensional object composed of a spine curve and a number of planar cross sections. The shape is defined between the first element of cross sections and the last element of this set. NOTE A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. For the representation of a solid all cross sections are closed curves. NOTE Entity adapted from sectioned spine defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. none of the cross sections, after being placed by the cross section positions, shall intersect 2. none of the cross sections, after being placed by the cross section positions, shall lie in the same plane 3. the local origin of each cross section position shall lie at the beginning or end of a composite curve segment."
+
+#:IFC.xml:10873
+msgid "IfcSectionedSpine_SpineCurve"
+msgstr "Angripende"
+
+msgid "IfcSectionedSpine_SpineCurve_DEFINITION"
+msgstr "En enkel komposittkurve som definerer kurven. Hver av sammensatte kurve tilsvarer delen mellom to tverrsnitt."
+
+#:IFC.xml:10885
+msgid "IfcSectionedSpine_CrossSections"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSpine_CrossSections_DEFINITION"
+msgstr "En liste over minst to tverrsnitt der tverrsnittets posisjonskoordinatsystem er definert i xy planet av tverrsnittets posisjonskoordinatsystem. Posisjonskoordinatsystemet angis av de tilsvarende listene CrosssectionPositions."
+
+#:IFC.xml:10897
+msgid "IfcSectionedSpine_CrossSectionPositions"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSpine_CrossSectionPositions_DEFINITION"
+msgstr "Posisjonskoordinatsystemer for tverrsnittene som utgjør den faste delen av ryggsøylen. Profilene som definerer tverrsnittene, er plassert i xy-planet i det tilsvarende systemet for posisjonskoordinatsystem."
+
+#:IFC.xml:10866
+msgid "IfcSectionedSpine_Dim"
+msgstr "Dim"
+
+msgid "IfcSectionedSpine_Dim_DEFINITION"
+msgstr "Målverdien for ryggradskurven er alltid 3."
+
+#:IFC.xml:10909
+msgid "IfcSectionedSurface"
+msgstr "IfcSectionedSurface"
+
+msgid "IfcSectionedSurface_DEFINITION"
+msgstr "En type overflate som består av glidende potensielt varierende åpne tverrsnitt langs en kurve horisontalt eller nær horisontalt . Overflaten genereres ved å la kryssseksjonene mellom CrossSectionPositions linear interpolasjon er antatt, med mindre overgangskurver mellom krysningspunktene er angitt med OpenCrossProfileDef. Alder. Kryssseksjonene er orientert med Y-aksen til hver profil som vender oppover i Z eller vertikalt vinkelrett på direktivet, avhengig av attributtet FixedAxisVertical value. delt bakgrunn r.. .. ... figurer [[IfcSectionedSurface]] 1. ng Figur 1 Seksjonsoverflate med [[IfcOpenCrossProfileDef]] I tilfelle grenrør av langsgående brudd The SectionedSurface kan bruke OpenCrossProfileDef instanser med varierende antall tverrsnittspunkter. I så fall er punktene i to etterfølgende tverrsnitt som er tilkoblet, identifisert med samme tagg. delt overflate, se figur en.. .. .. ... figurer [[IfcSectionedSurface]] 2. ng Figur 1 Sementert overflate med grenrør Formal proposisjoner, Kurveenheten som er den underliggende rekken skal ha en dimensjonalitet på 3. Profiltypen skal være KURVE innenfor listen over profilene som definerer tverrsnittene. Enhetstypen for hver seksjon må være den samme. Listen over tverrsnitt og listen over punkter i tverrsnittet skal ha samme størrelse. Uformelle posisjoner Ingen to etterfølgende seksjoner skal krysse hverandre. Hvis retningen ikke er truet sammenhengende, dannes den resulterende overflaten av en smakende vinkel på halvannen mellom de to delene. Kraftige kanter kan føre til at mitteravtaler avtaler om snarest umulig kan definere akseptable grenser for tangent diskontinuitet eller at direkttrix er tangent kontinuerlig. Rettrix skal ikke krysse"
+
+#:IFC.xml:10912
+msgid "IfcSectionedSurface_Directrix"
+msgstr "Direktør"
+
+msgid "IfcSectionedSurface_Directrix_DEFINITION"
+msgstr "Kurven som brukes til å definere bevegelsen til svinging"
+
+#:IFC.xml:10924
+msgid "IfcSectionedSurface_CrossSections"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSurface_CrossSections_DEFINITION"
+msgstr "Liste over tverrsnitt i rekkefølge langs Directrix"
+
+#:IFC.xml:10936
+msgid "IfcSectionedSurface_CrossSectionPositions"
+msgstr "Kryssseksjoner"
+
+msgid "IfcSectionedSurface_CrossSectionPositions_DEFINITION"
+msgstr "Liste over avstandsuttrykk i sekvensielt økende rekkefølge i henhold til Tverrsnittene viser plasseringen av tilsvarende seksjon i direktivet."
+
+#:IFC.xml:10948
+msgid "IfcShellBasedSurfaceModel"
+msgstr "IfcShellBasedSurfaceModel"
+
+msgid "IfcShellBasedSurfaceModel_DEFINITION"
+msgstr "En [[IfcShellBasedSurfaceModel]] representerer formen med et sett med åpne eller lukkede skjell. De tilkoblede flatene inne i skallet har en dimensjonalitet 2 og plasseres i et koordinatrom 3. xtDef MERKNAD Definisjon i henhold til ISO CD 10303 42 1992 En skallbasert overflatemodell er beskrevet med et sett åpne eller lukkede skall av dimensjonalitet 2. Skallene skal ikke krysse unntatt i kanter og vertikk. Spesielt kan ikke forskjellige flater krysse hverandre. En komplett flate på ett skall kan deles med et annet skall. Sammenfallende deler av skall skal referere til de samme ansikter, kantene og vertikalene som definerer sammenfallende område. Det skal være minst ett skall. Et skall kan finnes uavhengig av en overflatemodell. MERKNAD Entity-et tilpasset fra skallbasert overflatemodell definert i ISO 10303 42. HISTORY Ny enhet i IFC2x .spec head uformell Proposisjonene 1. Dimensjoneringen av skallbasert overflatemodell er 2. 2. Skallet skal ikke overlappe eller krysse bortsett fra på vanlige flater, kanter eller vertikaler."
+
+#:IFC.xml:10949
+msgid "IfcShellBasedSurfaceModel_Dim"
+msgstr "Dim"
+
+msgid "IfcShellBasedSurfaceModel_Dim_DEFINITION"
+msgstr "Romdimensjonal til denne klassen, det er alltid 3."
+
+#:IFC.xml:10954
+msgid "IfcShellBasedSurfaceModel_SbsmBoundary"
+msgstr "SbsmBoundary"
+
+msgid "IfcShellBasedSurfaceModel_SbsmBoundary_DEFINITION"
+msgstr "SbsmBoundary"
+
+#:IFC.xml:10961
+msgid "IfcSolidModel"
+msgstr "IfcSolidModel"
+
+msgid "IfcSolidModel_DEFINITION"
+msgstr "En [[IfcSolidModel]] representerer 3D-form av ulike typer solide modellframstillinger. Det er den felles abstrakte overtypen Boundary representasjon, CSG-representasjon, holdningsrepresentasjon og andre egnede solide representasjonsordninger. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En solid modell er en fullstendig framstilling av den nominelle formen til et produkt, slik at alle punktene i innsiden kobles til. Ethvert punkt kan klassifiseres som innside, utside eller på grensen til en fast masse. Det finnes flere ulike typer representasjoner av solide modeller. MERKNAD Enhet tilpasset fra solid modell definert i ISO 10303 42. HISTORY ny enhet i IFC1.5"
+
+#:IFC.xml:10962
+msgid "IfcSolidModel_Dim"
+msgstr "Dim"
+
+msgid "IfcSolidModel_Dim_DEFINITION"
+msgstr "Romdimensjonal til denne klassen, det er alltid 3."
+
+#:IFC.xml:10971
+msgid "IfcSphere"
+msgstr "IfcSphere"
+
+msgid "IfcSphere_DEFINITION"
+msgstr "[[IfcSphere]] er et \"Construction Solid Geometry CSG 3D primitive. Det er et kompakt der alle punktene ved overflaten har samme avstand fra midtpunktet. Den arvede posisjon-attributtet definerer IfcAxisPlacement3D og gir SELF [[IfcCsgPrimitive3D]]. plassering og orientering av akse for primitivet. SELF [[IfcCsgPrimitive3D]].Position.Location Center of the sphere. SELF [[IfcCsgPrimitive3D]]. Posisjon.Position 3 The z axis points at its positve direction towards the north pole, and by its negative directions towards the south pole. sfære ... ... ... figurer ifcsphere oppsett1.png Figur 1 Sfere geometri EKSEMPEL Figur 1 illustrerer geometriske parametere av sfæla. Sfæren er plassert innenfor sitt eget system for koordiantet for plasseringer i forhold til koordinatsystemet for objekter. opprinnelsen er midt i sfæren. xtDef MERKNAD Definisjon etter ISO CD 10303 42 1992 En sfære er en CSG-primitiv med en sfærisk form definert av et senter og en radius. MERKNAD Enhet tilpasset fra sfære definert i ISO 10303 42. HISTORY ny enhet i IFC2x3. se Hode Tekstur Bruk Definition Textures er tilpasset vendt oppreist med opprinnelse, til bakre Y-retning revolverende mot klokken. Teksturer er strukket opp eller gjentatt i omfang av omkretsen til ekvatoren ifølge RepeterS og Gjentas. Figur 2 illustrerer standard teksturkartlegging med en klampet teksturrepoS False og RepeterT False . Bildet til venstre viser teksturen der S-aksen peker mot høyre og T-aksen oppover. Bildet til høyre viser teksturen som brukes på geometrien der X-aksen peker tilbake til høyre, Y-aksen peker tilbake til venstre, og Z-aksen oppover. .gridtable tekstur ... ... ... figurer hvis-tekst ng Figur 2 Sfære tekstursider Normal Origin X Origin Y Origin Z S Axis T-aksside 0 Radius 0 X deretter kurve mot klokken Z, og deretter kurve mot øverste tabell 3 teksturparametere"
+
+#:IFC.xml:10972
+msgid "IfcSphere_Radius"
+msgstr "Radius"
+
+msgid "IfcSphere_Radius_DEFINITION"
+msgstr "Radiusen av sfæren."
+
+#:IFC.xml:10979
+msgid "IfcSurfaceCurveSweptAreaSolid"
+msgstr "IfcSurfaceCurveSweptAreaSolid"
+
+msgid "IfcSurfaceCurveSweptAreaSolid_DEFINITION"
+msgstr "The [[IfcSurfaceCurveSweptAreaSolid]] is the result of sweeping an area along a directrix that lies on a reference surface. The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the tangent of the directrix at this point, and the profile s x axis agrees to the surface normal. At any point along the directrix, the swept profile origin lies on the directrix, the profile s normal points towards the tangent of the directrix, and the profile s x axis is identical to the surface normal at this point. NOTE The profile area s normal has to be identical to the tangent of the directrix at any given point. In case of a directrix having a linear segment at the start point, the segment has to be perpendicular to the profile at start. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , the parameter value is provided based on the curve parameterization. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , the parameter value is provided based on the curve parameterization. If no EndParam is provided the end defaults to the end of the directrix. The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE The StartParam and the EndParam are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. In case of a closed curve, such as [[IfcCircle]] or [[IfcEllipse]] , as the directrix, StartParam and the EndParam shall not exceed the parametic range, they shall not be 360 . EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In most cases, it is a plane or a surface of extrusion. The directrix lies on the surface, in case of a plane it might be defined as a polyline or composite curve, in case of a cylindrical or other non planer reference surface it might often be defined as a p curve on this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system of the implicit plane lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the normal of the reference surface at this point. The Axis2 the y axis, or v is constructed. The resulting body of the swept solid is not repositioned if the inherited Position attribute is omitted. Otherwise the coordinate system established by the Position attribute is used to reposition the body relative to the object coordinate system. surface curve wept area solid .. .. .. .. figures ifcsurfacecurvesweptareasolid 01.png Figure 1 Surface curve wept area solid parameter EXAMPLE Figure 1 illustrates an example using a cylindrical reference surface and a p curve for sweeping a rectangle. The Postion is not provided and therefore it does not reposition the resulting swept solid. Figure 2 shows the expected result. NOTE The start of the directrix lies at the origin of the object coordinate system, as shown in the illustration,only by coincidence. The start of the directrix and thereby the start of the sweeping operation might be at any point within the object coordinate system and only depends on the position of the directrix. surface curve wept area solid .. .. .. .. figures ifcsurfacecurvesweptareasolid 02.png Figure 2 Surface curve wept area solid results .extDef NOTE Definition according to ISO CD 10303 42 1992 A surface curve swept area solid is a type of swept area solid which is the result of sweeping a face along a Directrix lying on a ReferenceSurface . The orientation of the SweptArea is related to the direction of the surface normal. The SweptArea is required to be a curve bounded surface lying in the plane z 0 and this is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the normal to the ReferenceSurface at the current point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a Cartesian Transformation Operator 3D with attributes Local origin as point 0., 0., 0 , Axis 1 as the normal N to the reference surface at the point of the directrix with parameter u. Axis 3 as the direction of the tangent vector t at the point of the directrix with parameter u. The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the directrix parameter u. NOTE Entity adapted from surface curve swept area solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The SweptArea shall lie in the implicit plane z 0. 2. The Directrix shall lie on the ReferenceSurface ."
+
+#:IFC.xml:10982
+msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface"
+msgstr "Referanseflate"
+
+msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface_DEFINITION"
+msgstr "Referanseflate"
+
+#:IFC.xml:10994
+msgid "IfcSweptAreaSolid"
+msgstr "IfcSweptAreaSolid"
+
+msgid "IfcSweptAreaSolid_DEFINITION"
+msgstr "En [[IfcSweptAreaSolid]] representerer 3D-formen ved hjelp av en svingningsform som tillater en todimensjonal plane tverrsnitt for å sveipe gjennom verdensrommet. Saltarealet er definert av et tverrsnitt, representert ved en undertype hvis [[IfcProfileDef]] , som er forutsatt som en lukket todimensjonal grense på et implisitt plan. Sveipt-området er definert i xy-planet til objektkoordinatsystemet. Utglidningsutglidningen anvendes på kostområdet som definert innenfor undertypene av [[IfcSweptAreaSolid]] , noen undertyper krever en implisitt transformasjon av sveiptområdet til startposisjonen for sveipeområdet. Det valgfrie posisjonsystemet n koordinatsystemet tillater posisjonering av utdraget solid i forhold til objektreoordinatsystemet. .extDef MERKNAD Definisjon etter ISO CD 10303 42 1992 Saltområdet solid enhet samler inn enhetene som er prosedyredefinert ved å svingende handling på plane avgrensede overflater. Posisjonen er plassen til det faste glideområdet og vil være avhengig av plasseringen av sveiptarealet. Saltområdet vil være et eksempel på et svingområde med fast areal. bortsett fra for et dreibart område som er støpt med en vinkel på 2 eller 360 grader. MERKNAD Enheten tilpasset fra flyteområde fast definert i ISO 10303 42. HISTORY Ny enhet i IFC1.5 .change ifc2x4 IFC4 CHANGE Attribute Position is been changed to OPTIONAL with upward compatibility for file based exchange."
+
+#:IFC.xml:10997
+msgid "IfcSweptAreaSolid_SweptArea"
+msgstr "SweptArea"
+
+msgid "IfcSweptAreaSolid_SweptArea_DEFINITION"
+msgstr "Overflaten som definerer området som skal feires. Det er gitt som en profildefinisjon i xy-planet til posisjonskoordinatsystemet."
+
+#:IFC.xml:11009
+msgid "IfcSweptAreaSolid_Position"
+msgstr "Posisjon"
+
+msgid "IfcSweptAreaSolid_Position_DEFINITION"
+msgstr "Posisjonskoordinatsystem for den sveip faste operasjonen og posisjonskoordinatsystemet gjør det mulig å flytte glideløsningen til samme sted. Hvis det ikke er montert, er det faste bruddstykket, som er bestemt ved tverrsnittet eller ved direksjonen som brukes til svinging. .change ifc2x4 IFC4 CHANGE Attributtet er endret til OPTIONAL med oppadrettet kompatibilitet for filbasert utveksling."
+
+#:IFC.xml:11021
+msgid "IfcSweptDiskSolid"
+msgstr "IfcSweptDiskSolid"
+
+msgid "IfcSweptDiskSolid_DEFINITION"
+msgstr "An [[IfcSweptDiskSolid]] represents the 3D shape by a sweeping representation scheme allowing a two dimensional circularly bounded plane to sweep along a three dimensional Directrix through space. The StartParam and EndParam parameter are optional, if not provided they default to the start and end of the Directrix . Only if the Directrix is given by a bounded or by a closed curve, it is permissible to omit the values of StartParam and EndParam . If the transitions between consecutive segments of the Directrix are not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. Informal proposition restricts the permissible angle between two non tangent continuous segments. Figure 1 illustrates an example. Directrix given as [[IfcIndexedPolyCurve]] , having linear and circular arc segments, that are tangent continuous between each segments Directrix being a bounded and open curve No StartParam and EndParam are provided, start and end default to start and end of the bounded curve of the Directrix NOTE Although the example shows a Directrix as a poly curve on a planar reference surface, the definition of [[IfcSweptDiskSolid]] is not restricted to be based on planer curves. However view definitions or implementer agreements may provide restrictions. NOTE The geometric item [[IfcIndexedPolyCurve]] provides a more compact representation compared with [[IfcCompositeCurve]] as is therefore the prefered curve representation for the Directrix . disk solid .. .. .. .. figures ifcsweptdisksolid layout1.png Figure 1 Swept disk solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A swept disk solid is the solid produced by sweeping a circular disk along a three dimensional curve. During the sweeping operation the normal to the plane of the circular disk is in the direction of the tangent to the directrix curve and the center of the disk lies on the directrix. The circular disk may, optionally, have a central hole, in this case the resulting solid has a through hole, or, an internal void when the directrix forms a close curve. NOTE Entity adapted from swept disk solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE The attribute StartParam and EndParam have been made optional. .spec head Informal Propositions 1. If the Directrix curve definition is not tangent continuous, the transition between the segments has to be within an acceptable limit of tangent discontinuity. Very sharp edges may result in nearly impossible miter. Implementer agreements may define acceptable limits for tangent discontinuity. 2. The segments of the Directrix shall be long enough to apply the Radius . In case of an arc segment forming part of the Directrix , its radius shall be greater then the disk Radius 3. The Directrix shall not be based on an intersecting curve."
+
+#:IFC.xml:11044
+msgid "IfcSweptDiskSolid_Directrix"
+msgstr "Direktør"
+
+msgid "IfcSweptDiskSolid_Directrix_DEFINITION"
+msgstr "Kurven som brukes til å definere flyteoperasjonen. Den massive forårsakes av en sirkulær disk langs Directrix ."
+
+#:IFC.xml:11022
+msgid "IfcSweptDiskSolid_EndParam"
+msgstr "Endepunkt"
+
+msgid "IfcSweptDiskSolid_EndParam_DEFINITION"
+msgstr "Parameterverdien på Directrix som operasjonen slutter i. Hvis ingen verdi er angitt, er enden av driften av svingningene ved slutten av direktivet. .change ifc2x4 IFC4 CHANGE Attributtet er endret til OPTIONAL med oppadrettet kompatibilitet for filbasert utveksling."
+
+#:IFC.xml:11027
+msgid "IfcSweptDiskSolid_InnerRadius"
+msgstr "InnerRadius"
+
+msgid "IfcSweptDiskSolid_InnerRadius_DEFINITION"
+msgstr "Denne egenskapen er valgfritt, hvis den angir radiusen til et sirkulært hull i midten av disken."
+
+#:IFC.xml:11032
+msgid "IfcSweptDiskSolid_Radius"
+msgstr "Radius"
+
+msgid "IfcSweptDiskSolid_Radius_DEFINITION"
+msgstr "Radiusen til den sirkelformede disken som skal sveipes langs retningen. Danter den ytre radius, hvis en innerRadius anvendes."
+
+#:IFC.xml:11037
+msgid "IfcSweptDiskSolid_StartParam"
+msgstr "StartParam"
+
+msgid "IfcSweptDiskSolid_StartParam_DEFINITION"
+msgstr "Parameterverdien på Directrix der svingningene starter. Hvis det ikke er noen verdi, er starten på svingeoperasjonen i begynnelsen av direktivet. .change ifc2x4 IFC4 CHANGE Attributtet er endret til OPTIONAL med oppadrettet kompatibilitet for filbasert utveksling."
+
+#:IFC.xml:11056
+msgid "IfcSweptDiskSolidPolygonal"
+msgstr "IfcSweptDiskSolidPolygonal"
+
+msgid "IfcSweptDiskSolidPolygonal_DEFINITION"
+msgstr "[[IfcSweptDiskSolidPolygonal]] er en [[IfcSweptDiskSolid]] der Directrix bare er begrenset til å kunne oppgis av en poly-linje. En valgfri Filletradius-attributt kan beskreves, den brukes deretter som en filet til alle overganger mellom segmentene i menylinjen. MERKNAD Det geometriske elementet [[IfcIndexedPolyCurve]] gir en mer kompakt representasjon sammenlignet med [[IfcPolyline]] . Derfor er det den foretrukne kurvrepresentasjonen for Directrix . [[IfcIndexedPolyCurve]] skal ikke ha Segments som er definert, bare ved å restisere det tilbake til en poly linje. HISTORY Ny enhet i IFC4. Filletradius , hvis den foreligger, må være mindre enn eller lik lengden av start- og sluttdelen av [[IfcPolyline]] , og mindre enn eller lik halvparten av lengden på det korteste indre segmentet."
+
+#:IFC.xml:11057
+msgid "IfcSweptDiskSolidPolygonal_FilletRadius"
+msgstr "FilletRadius"
+
+msgid "IfcSweptDiskSolidPolygonal_FilletRadius_DEFINITION"
+msgstr "Fileten som gjelder like mye for alle overganger mellom segmentene i [[IfcPolyline]] , angi den geometriske representasjonen for Directrix . Hvis utelatt, gjelder ingen filet for segmentene."
+
+#:IFC.xml:11064
+msgid "IfcTaperedSweptAreaProfiles__StartArea"
+msgstr "IfcTaperedSweptAreaProfiles StartArea"
+
+#:IFC.xml:11072
+msgid "IfcTessellatedFaceSet"
+msgstr "IfcTessellatedFaceSet"
+
+msgid "IfcTessellatedFaceSet_DEFINITION"
+msgstr "[[IfcTessellatedFaceSet]] er en grenseoverskridende gjengivelse topologisk modell begrenset til plane flater og rette kanter. Den kan gi en tilnærming til en analytisk overflate eller et fast stoff, som kan være aktuelt, og som en egen formrepresentasjon. [[IfcTessellatedFaceSet]] gir en kompakt dataframstilling av et tilkoblet ansikt ved hjelp av indekser i bestillte lister over lover, normaler, fargar og teksturkart. MERKNAD Den kompakte framstillingen har blitt valgt for å muliggjøre små datasett til tross for potensielt store sett av overflater, kanter og vertikaler som er nødvendige for å representere rettesystemets overflater og faste stoffer, og til tross for store sett med farge- og teksturinformasjon slik at de tessellerte flatene blir kommentert. [[IfcTessellatedFaceSet]] er en abstrakt supertype av advarsler for hvert enkelt anklagede ansikt som pålegger spesielle begrensninger på hvordan det genereres ansikt for tessellasjon, f.eks. triangulering med eller uten remse og vifter , eller firkantere, eller mangekangonale overflater med eller uten løkker . MERKNAD Ikke alle forskjellige begrensninger på ansiktssett omfattes som spesifikke undertyper i denne frigivelsen av spesifikasjonen. Følgende attributter gjelder for alle undertyper Koordinatene er den bestilte listen av kartesisk punkter som representerer vertikalene av det erfaringsfulle elementet. En indeksliste, definert på undertypenivå, bruker punktene, identifisert ved indeksering, ved konstruksjon av polylinjene som representerer flatene. HasColours inverse relation gir et indeksert fargekart med tilsvarende liste over indekser som gir en farge for hver side av den graderte ansiktssettet. HasTextures invers-forhold er et indeksert teksturkart med et tilsvarende liste over indekser som gir teksturkoordinater som kartet til de geometriske koordinatene til polylene som representerer ansiktene. Hver flate på det tessellerte flatesettet skal ha minst tre motstående vertikaler som definerer en plan polygonvertikalt som definerer en ikke-selvkryssende polygon. MERKNAD Definisjonen av [[IfcTessellatedFaceSet]] er basert på indexedFaceSet definert i ISO IEC 19775 1 HISTORY Ny enhet i IFC4."
+
+#:IFC.xml:10460
+msgid "IfcTessellatedFaceSet_Coordinates"
+msgstr "Koordinater"
+
+msgid "IfcTessellatedFaceSet_Coordinates_DEFINITION"
+msgstr "En ordnet liste over kartesisk punkter som brukes av koordinatindeksen definert i undertypene av [[IfcTessellatedFaceSet]]"
+
+#:IFC.xml:11086
+msgid "IfcTessellatedFaceSet_HasColours"
+msgstr "Farger"
+
+msgid "IfcTessellatedFaceSet_HasColours_DEFINITION"
+msgstr "Referanse til det indekserte fargekartet som gir de tilsvarende verdiene RGB til flatene på undertypene [[IfcTessellatedFaceSet]] ."
+
+#:IFC.xml:11100
+msgid "IfcTessellatedFaceSet_HasTextures"
+msgstr "HasTextures"
+
+msgid "IfcTessellatedFaceSet_HasTextures_DEFINITION"
+msgstr "Referanse til det indekserte teksturkartet, som inneholder de tilsvarende teksturkoordinatene til vertikalene for undertypene [[IfcTessellatedFaceSet]] ."
+
+#:IFC.xml:11073
+msgid "IfcTessellatedFaceSet_Dim"
+msgstr "Dim"
+
+msgid "IfcTessellatedFaceSet_Dim_DEFINITION"
+msgstr "Romdimensjonaliteten til denne geometriske representasjonselementet, den er alltid 3."
+
+#:IFC.xml:11078
+msgid "IfcTessellatedFaceSet_Closed"
+msgstr "Lukket"
+
+msgid "IfcTessellatedFaceSet_Closed_DEFINITION"
+msgstr "Angivelse av om [[IfcTessellatedFaceSet]] er en lukket shell TRUE eller en åpen skjell FALSE . Hvis utelatt ingen slike opplysninger fremkommer fram."
+
+#:IFC.xml:11114
+msgid "IfcTessellatedItem"
+msgstr "IfcTessellatedItem"
+
+msgid "IfcTessellatedItem_DEFINITION"
+msgstr "The [[IfcTessellatedItem]] is the abstract supertype of all tessellated geometric models. HISTORY New entity in IFC4."
+
+#:IFC.xml:11117
+msgid "IfcTriangulatedFaceSet"
+msgstr "IfcTriangulatedFaceSet"
+
+msgid "IfcTriangulatedFaceSet_DEFINITION"
+msgstr "The [[IfcTriangulatedFaceSet]] is a tessellated face set with all faces being bound by triangles. The faces are constructed by implicit polylines defined by three Cartesian points. Depending on the value of the inherited attribute Closed the instance of [[IfcTriangulatedFaceSet]] represents if TRUE, a boundary represention or B rep if FALSE, a face based surface representation. The coordinates of each point are provided by a one based index into an ordered list of Cartesian points provided by the two dimensional list CoordIndex , where the first dimension of the two dimensional list addresses the list of triangular faces the second dimension of the two dimensional list provides exactly three indices. Each index points to a Cartesian point being a vertex of the triangle. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. [[IfcTriangulatedFaceSet]] 01 .. .. .. .. figures ifctriangulatedfaceset 03.png Figure 1 Use of PnIndex See Figure 2 for using the [[IfcTriangulatedFaceSet]] without as default and with using the PnIndex . [[IfcTriangulatedFaceSet]] 02 .. .. .. .. figures ifctriangulatedfaceset 01.png Figure 2 Triangulated face set Optionally normals can be provided. Only normals per vector are supported allowing for visually curved triangles when the three normals of the corresponding three vertices of a triangle are not co linear to the normal of the triangular face. If they are identical, normals shall be omited. NOTE In case of a body representation having triangular faces with curvature, different normals for all three vertices in context of this triangles are exported, describing the curvature for smooth visualisation. In case of triangular faces with no curvature, the three vertex based normals are identical and could always be computed from the face. Therefore vertices should only be exported to support smooth visualisation by curvature of triangles. In case of faceted representation no vertices should be exported. Normals are provided by the two dimensional list Normals , where the first dimension of the two dimensional list addresses the corresponding list of vertex indices of the triangular faces the second dimension of the two dimensional list provides exactly three real values to determine the direction of the normal at this vertex of the triangle. The indices in the CoordIndex point into the list of Normals . The indices of CoordIndex are applied to both points, either directly directly, or via the PnIndex and normals. See Figure 3 for handling of normals. [[IfcTriangulatedFaceSet]] 02 .. .. .. .. figures ifctriangulatedfaceset 02.png Figure 3 Triangulated face set with normals NOTE Using corresponding lists of points and normals allows to use only a single list of indices into both at the expense of having non unique collections of vertices. Figure 4 shows the use of [[IfcTriangulatedFaceSet]] without annotation. The diagram of the [[IfcTriangulatedFaceSet]] represents the indices and the ordered list into which the indices point. The index starts with 1 indexed as 1 to N , if the greatest index in CoordIndex in N, then the [[IfcCartesianPointList]] shall have N lists of 3 3 coordinates. [[IfcTriangulatedFaceSet]] Example 01 .. .. .. .. figures ifctriangulatedfaceset example 01.png Figure 4 Triangulated face set geometry Figure 4 shows an [[IfcTriangulatedFaceSet]] represented by CoordIndex 1,6,5 , 1,2,6 , 6,2,7 , 7,2,3 , 7,8,6 , 6,8,5 , 5,8,1 , 1,8,4 , 4,2,1 , 2,4,3 , 4,8,7 , 7,3,4 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. NOTE The definition of [[IfcTriangulatedFaceSet]] is based on the indexedFaceSet and indexedTriangleSet defined in ISO IEC 19775 1. The use of PnIndex has been adopted from triangulated surface set defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two boundaries of faces the topological normal at each point on the boundary of the triangulated face set shall point away from the mater ial of the solid."
+
+#:IFC.xml:11118
+msgid "IfcTriangulatedFaceSet_NumberOfTriangles"
+msgstr "NummerOfTriangler"
+
+msgid "IfcTriangulatedFaceSet_NumberOfTriangles_DEFINITION"
+msgstr "Utledet antall trekanter som ble brukt for denne trekanten."
+
+#:IFC.xml:11123
+msgid "IfcTriangulatedFaceSet_CoordIndex"
+msgstr "CoordIndex"
+
+msgid "IfcTriangulatedFaceSet_CoordIndex_DEFINITION"
+msgstr "To dimensjonale lister for de indekserte baserte trekantene, der den første dimensjonen representerer trekantene fra 1 til N Den andre dimensjonen har nøyaktig tre verdier som representerer indeksene til tre vertex punkter fra 1 til 3 . MERKNAD Koordinatene til vertikalene er gitt av listen over indeksert SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList ."
+
+#:IFC.xml:11128
+msgid "IfcTriangulatedFaceSet_Normals"
+msgstr "Normaler"
+
+msgid "IfcTriangulatedFaceSet_Normals_DEFINITION"
+msgstr "En liste over de tre normene i orden. Det er en todimensjonal liste over retninger angitt med tre parameterverdier. Den første dimensjonen samsvarer med vertex-indeksene i Coordindex Den andre dimensjonen har nøyaktig tre verdier, 1 x retning, 2 y-retningen og 3 z-retningene"
+
+#:IFC.xml:11133
+msgid "IfcTriangulatedFaceSet_PnIndex"
+msgstr "PnIndex"
+
+msgid "IfcTriangulatedFaceSet_PnIndex_DEFINITION"
+msgstr "Listen over tall som definerer plasseringene i [[IfcCartesianPointList3D]] for å få punktkoordinatene til indeksene utenom CoordIndex . Hvis PnIndex ikke er angitt direkte inn i indeksene [[IfcCartesianPointList3D]."
+
+#:IFC.xml:11140
+msgid "IfcTriangulatedIrregularNetwork"
+msgstr "IfcTriangulatedIrregularNetwork"
+
+msgid "IfcTriangulatedIrregularNetwork_DEFINITION"
+msgstr "[[IfcTriangulatedIrregularNetwork]] er et trekantet flatesett for å representere horisontale overflater et unikt Z-koordinat for alle X og Y koordinater innenfor domenet med ytterligere flagg for hver flate som viser brudd mellom flater eller betegnelse som hull eller hulrom. Triangler skal defineres med vertikaler i klokkeretningen fra neste høyre side, som vist fra følgene høyre regel. For visualisering bør ikke applikasjoner vise overflater med flagg satt som negative enten et hull, ugyldig eller mulig fremtidig utvidelse . Flagget Void skal brukes til å angi at flater skal unntas uten å falle tilbake på noen annen geometri. En slik betegnelse kan brukes for deler av en byggeplass under en bygning eller en annen konstruksjon. Flagggarden skal benyttes til å angi at flater skal være utelukket, men kan falle tilbake på annen geometri. En slik betegnelse kan brukes for deler av en foreslått byggeplass som er uendret i samsvar med en eksisterende byggeplass som også kan defineres for scenarier der flere overflater som brukes til å kombineres, alle triangler merket Ugyldig skal beholdes som hulrom, hvis noen av trekantene som er merket med løftet, skal de overstyres hvis en annen flate har synlig geometri definert innenfor samme horisontale sone."
+
+#:IFC.xml:11141
+msgid "IfcTriangulatedIrregularNetwork_Flags"
+msgstr "Flagg"
+
+msgid "IfcTriangulatedIrregularNetwork_Flags_DEFINITION"
+msgstr "Indikerer attributter for hver trekant i en kompakt form som følger 2 usynlig hultall 1 usynlig heltall 0 ingen brytningslinjer 1 bruddlinje ved kant 2 3 delestrek ved kanter 1 og 2 4 delestrek ved kant 3 5 delestrek ved kanter 1 og 3 delestrek ved kant 2 og 3 7 brytelinje ved kant 1, 2 og 3."
 
