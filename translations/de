@@ -9,156 +9,975 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /master/IfcApprovalResource.pot\n"
-"X-Crowdin-File-ID: 22\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "PO-Revision-Date: 2022-02-22 19:13\n"
 
-#:IFC.xml:469
-msgid "IfcApproval"
-msgstr "IfcApproval"
+#:IFC.xml:626
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-msgid "IfcApproval_DEFINITION"
-msgstr "Eine [[IfcApproval]] repräsentiert Informationen über Genehmigungsverfahren wie zum Beispiel für einen Plan ein Entwurf, ein Vorschlag oder ein Änderungsauftrag in einem Bau- oder Einrichtungsmanagement Projekt. [[IfcApproval]] wird im IfcControlExtension Schema von [[IfcRelAssociatesApproval]] referenziert und kann damit mit allen Untertypen von [[IfcRoot]] verwandt werden. Eine Genehmigung kann auch für Ressourcenobjekte erteilt werden, die [[IfcResourceApprovalRelationship]] GESCHICHTE Neue Entität in IFC2. .change ifc2x4 IFC4 CHANGE Attributes Identifier and Name made optional, where rule added to require least one of them being assered. Umgekehrte Attribute für genehmigte Objekte, genehmigte Ressourcen und HasExternalReferences hinzugefügt. Inverse Attributeigenschaften löschten eine allgemeinere Beziehung über inverse genehmigte Ressourcen, die stattdessen verwendet werden soll."
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as described below. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . lining 1 .. .. .. .. figures ifcdoorliningproperties fig01.png The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. lining 2 .. .. .. .. figures ifcdoorliningproperties fig02.png The lining can only cover part of the opening reveal. LiningOffset, given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. lining 3 .. .. .. .. figures ifcdoorliningproperties fig03.png The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness lining 4 .. .. .. .. figures ifcdoorliningproperties fig04.png The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth, if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure , given, if the threshold edge has an offset to the x axis of the local placement. lining 5 .. .. .. .. figures ifcdoorliningproperties fig05.png The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset, a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
 
-#:IFC.xml:517
-msgid "IfcApproval_Relates"
-msgstr "Verwandte"
+#:IFC.xml:689
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
 
-msgid "IfcApproval_Relates_DEFINITION"
-msgstr "Der Zusammenhang, durch den andere Genehmigungen mit dieser verbunden sind."
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
 
-#:IFC.xml:531
-msgid "IfcApproval_IsRelatedWith"
-msgstr "IsRelatedWith"
+#:IFC.xml:627
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "CasingDepth"
 
-msgid "IfcApproval_IsRelatedWith_DEFINITION"
-msgstr "Die Beziehungen, durch die diese Genehmigung mit anderen zusammenhängt."
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "Depth of the casing dimension in plane perpendicular to door leaf . If given it is applied equally to all four sides of the adjacent wall."
 
-#:IFC.xml:545
-msgid "IfcApproval_ApprovedObjects"
-msgstr "Genehmigte Objekte"
+#:IFC.xml:632
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "CasingThickness"
 
-msgid "IfcApproval_ApprovedObjects_DEFINITION"
-msgstr "Verweis auf die [[IfcRelAssociatesApproval]] Instanzen, die diese Freigabe mit Objektsubtypen von [[IfcRoot] ] verknüpfen"
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "Thickness of the casing dimension in plane of the door leaf . If given it is applied equally to all four sides of the adjacent wall."
 
-#:IFC.xml:559
-msgid "IfcApproval_ApprovedResources"
-msgstr "Genehmigte Ressourcen"
+#:IFC.xml:637
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "LiningDepth"
 
-msgid "IfcApproval_ApprovedResources_DEFINITION"
-msgstr "Die Beziehungen, durch die Ressourcenobjekte, die durch diese Genehmigung genehmigt werden, bekannt sind."
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "Depth of the door lining, measured perpendicular to the plane of the door lining. If omitted and with a given value to lining thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
 
-#:IFC.xml:573
-msgid "IfcApproval_HasExternalReferences"
-msgstr "HasExternalReferences"
+#:IFC.xml:642
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcApproval_HasExternalReferences_DEFINITION"
-msgstr "Referenz auf externe Referenzen, z.B. Bibliothek, Klassifizierung oder Dokumenteninformationen, die mit der Genehmigung verbunden sind."
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset dimension in plane perpendicular to door leaf of the door lining. The offset is given as distance to the x axis of the local placement."
 
-#:IFC.xml:470
-msgid "IfcApproval_Description"
-msgstr "Beschreibung"
+#:IFC.xml:647
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "LiningThickness"
 
-msgid "IfcApproval_Description_DEFINITION"
-msgstr "Eine allgemeine textuelle Beschreibung eines Entwurfs, einer Arbeitsaufgabe, eines Plans usw. für die genehmigt wird."
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "Thickness of the door lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a door without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:475
-msgid "IfcApproval_GivingApproval"
-msgstr "Genehmigung erteilen"
+#:IFC.xml:652
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanelOffsetX"
 
-msgid "IfcApproval_GivingApproval_DEFINITION"
-msgstr "Der Akteur, der in der in [[IfcOrganization]] oder individuell bei [[IfcPerson]] angegebenen Rolle agiert und eine Genehmigung erteilt. .change ifc2x4 IFC4 CHANGE Neues Attribut für Genehmigungsbestimmungen, die IfcApprovalActorRelationship zu löschen ."
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:480
-msgid "IfcApproval_Identifier"
-msgstr "Identifier"
+#:IFC.xml:657
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanelOffsetY"
 
-msgid "IfcApproval_Identifier_DEFINITION"
-msgstr "Ein Computer interpretierbarer Identifikator, durch den die Genehmigung bekannt ist."
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Versatz zwischen dem Futter und der Türplatte entlang der Y-Achse der lokalen Platzierung gemessen. .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
 
-#:IFC.xml:485
-msgid "IfcApproval_Level"
-msgstr "Level"
+#:IFC.xml:662
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "ThresholdDepth"
 
-msgid "IfcApproval_Level_DEFINITION"
-msgstr "Genehmigungsgrad z.B. Entwurf v.s. Vollständiges Design."
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "Depth dimension in plane perpendicular to door leaf of the door threshold. Only given if the door lining includes a threshold. If omitted and with a given value to threshold thickness it indicates an adjustable depth i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted ."
 
-#:IFC.xml:490
-msgid "IfcApproval_Name"
-msgstr "Name"
+#:IFC.xml:667
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "ThresholdOffset"
 
-msgid "IfcApproval_Name_DEFINITION"
-msgstr "Ein menschlicher lesbarer Name, der einer Genehmigung zugewiesen wird."
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "Offset dimension in plane perpendicular to door leaf of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known."
 
-#:IFC.xml:495
-msgid "IfcApproval_Qualifier"
-msgstr "Qualifikator"
+#:IFC.xml:672
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "ThresholdThickness"
 
-msgid "IfcApproval_Qualifier_DEFINITION"
-msgstr "Textuelle Beschreibung von besonderen Einschränkungen oder Bedingungen zur Genehmigung."
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "Thickness of the door threshold as explained in the figure above. If ThresholdThickness value is 0. zero it denotes a door without a threshold ThresholdDepth shall be set to NIL in this case . If the ThresholdThickness is NIL it denotes that the information about a threshold is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:500
-msgid "IfcApproval_RequestingApproval"
-msgstr "Genehmigung anfordern"
+#:IFC.xml:677
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-msgid "IfcApproval_RequestingApproval_DEFINITION"
-msgstr "Der Akteur, der in der in [[IfcOrganization]] oder individuell bei [[IfcPerson]] angegebenen Rolle agiert und eine Genehmigung anfordert. .change ifc2x4 IFC4 CHANGE Neues Attribut für Zulassungsanforderungen, die IfcApprovalActorRelationship zu löschen ."
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "Offset of the transom if given which divides the door leaf from a glazing or window above. The offset is given from the bottom of the door opening."
 
-#:IFC.xml:505
-msgid "IfcApproval_Status"
-msgstr "Status"
+#:IFC.xml:682
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "TransomThickness"
 
-msgid "IfcApproval_Status_DEFINITION"
-msgstr "Das Ergebnis oder der aktuelle Status der Genehmigung, z.B. angefragt, bearbeitet, genehmigt, nicht genehmigt."
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "Thickness width in plane parallel to door leaf of the transom if provided that is, if the TransomOffset attribute is set , which divides the door leaf from a glazing or window above. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the door is divided vertically into a leaf and transom window area without a physical frame. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:510
-msgid "IfcApproval_TimeOfApproval"
-msgstr "TimeOfApproval"
+#:IFC.xml:701
+msgid "IfcDoorPanelOperationEnum"
+msgstr "IfcDoorPanelOperationEnum"
 
-msgid "IfcApproval_TimeOfApproval_DEFINITION"
-msgstr "Datum und Uhrzeit, wann das Ergebnis des Genehmigungsverfahrens erstellt wird. hange ifc2x4 IFC4 CHANGE Attributdatentyp geändert auf [[IfcDateTime]] mit ISO-8601-Darstellung, umbenannt von ApprovalDateTime und OPTIONAL."
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "Diese Aufzählung legt fest, wie die einzelnen Türplatten wie in Abbildung 1 gezeigt werden. Die Öffnungsrichtung der Türplatten wird durch die lokale Platzierung der [[IfcDoor]] angegeben. Die positive Y-Achse bestimmt die Richtung, wie sie in Abbildung 2 gezeigt wird. Panel Richtung .. .. .. .. Zahlen ifcdoorpaneloperationenum fig10.gif Figure 2 Tür-Panel Operationen NOTE Zahlen symbolische Darstellung abhängig von der nationalen Bau-Code. Diese Figuren sind nur als Illustrationen GESCHICHTE Neue Auflistung in IFC2.0. .. figurifcdoorpaneloperationenum fig01.gif DOUBLE ACTING . .. Zahlen ifcdoorpaneloperationenum fig02.gif SLIDING .. .. .. Zahlen ifcdoorpaneloperationenum fig03.gif FOLDING .. .. .. Zahlen ifcdoorpaneloperationenum fig04.gif REVOLVING .. .. .. Zahlen ifcdoorpaneloperationenum fig05.gif ROLLINGUP .. .. .. . figures ifcdoorpaneloperationenum fig06.gif FIXEDPANEL .. .. figures ifcdoorpaneloperationenum fig07.gif USERDEFINED NOTDEFINED .."
 
-#:IFC.xml:585
-msgid "IfcApprovalRelationship"
-msgstr "IfcApprovalRelationship"
+#:IFC.xml:702
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
+msgstr "AKTIVIEREN"
 
-msgid "IfcApprovalRelationship_DEFINITION"
-msgstr "Ein [[IfcApprovalRelationship]] assoziiert Genehmigungen für eine zugehörige Genehmigung und eine oder mehrere zugehörige Genehmigungen , jeder mit unterschiedlichen Status oder Stufe, während sich der Genehmigungsprozess oder die genehmigten Objekte entwickeln. HISTORY Neue Entität in IFC2x2. .change ifc2x4 IFC4 CHANGE Untertippt von [[IfcResourceLevelRelationship]] , Reihenfolge der Attribute geändert."
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig02.gif"
 
-#:IFC.xml:517
-msgid "IfcApprovalRelationship_RelatingApproval"
-msgstr "Relating-Genehmigung"
+#:IFC.xml:703
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
+msgstr "FIXEDPANEL"
 
-msgid "IfcApprovalRelationship_RelatingApproval_DEFINITION"
-msgstr "Die Zustimmung, mit der sich die andere Genehmigung befasst."
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig07.gif"
 
-#:IFC.xml:531
-msgid "IfcApprovalRelationship_RelatedApprovals"
-msgstr "Zugehörige Genehmigungen"
+#:IFC.xml:704
+msgid "IfcDoorPanelOperationEnum_FOLDING"
+msgstr "FOLD"
 
-msgid "IfcApprovalRelationship_RelatedApprovals_DEFINITION"
-msgstr "Die Genehmigungen, die mit einer anderen Genehmigung in Zusammenhang stehen. .change ifc2x4 IFC4 CHANGE Die Kardinalität dieses Attributs wurde auf SET geändert."
+msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig04.gif"
 
-#:IFC.xml:588
-msgid "IfcResourceApprovalRelationship"
-msgstr "IfcResourceApproval-Beziehung"
+#:IFC.xml:705
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
 
-msgid "IfcResourceApprovalRelationship_DEFINITION"
-msgstr "Ein [[IfcResourceApprovalRelationship]] wird verwendet, um Ressourcenobjekte zu genehmigen. Über [[IfcResourceObjectSelect]] . HISTORY New Entity in IFC4 kann eine einzige Genehmigung für ein oder mehrere Artikel erteilt werden."
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
 
-#:IFC.xml:559
-msgid "IfcResourceApprovalRelationship_RelatingApproval"
-msgstr "Relating-Genehmigung"
+#:IFC.xml:706
+msgid "IfcDoorPanelOperationEnum_REVOLVING"
+msgstr "VERWALTUNG"
 
-msgid "IfcResourceApprovalRelationship_RelatingApproval_DEFINITION"
-msgstr "Die Genehmigung für die ausgewählten Ressourcen-Objekte."
+msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig05.gif"
 
-#:IFC.xml:589
-msgid "IfcResourceApprovalRelationship_RelatedResourceObjects"
-msgstr "Zugehörige Ressourcenobjekte"
+#:IFC.xml:707
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
 
-msgid "IfcResourceApprovalRelationship_RelatedResourceObjects_DEFINITION"
-msgstr "Ressourcen-Objekte, die genehmigt werden."
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig06.gif"
+
+#:IFC.xml:708
+msgid "IfcDoorPanelOperationEnum_SLIDING"
+msgstr "SLIDING"
+
+msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig03.gif"
+
+#:IFC.xml:709
+msgid "IfcDoorPanelOperationEnum_SWINGING"
+msgstr "SWINGEN"
+
+msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
+msgstr ".. .. Zahlen ifcdoorpaneloperationenum fig01.gif"
+
+#:IFC.xml:710
+msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
+msgstr "BENUTZERDEFINIERT"
+
+#:IFC.xml:712
+msgid "IfcDoorPanelPositionEnum"
+msgstr "IfcDoorPanelPositionEnum"
+
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe the location of a door panel within a door lining. HISTORY New Enumeration in IFC2x Figure 1 shows the designation of a door panel with PanelPosition LEFT and a door panel with PanelPosition RIGHT within a door style with OperationType DOUBLE DOOR SINGLE SWING. The position is given as shown in the XZ plane of the local placement, looking into the direction of the positive Y axis. Door panel positions .. .. .. .. figures ifcdoorpanelpositionenum fig01.gif Figure 1 Door panel positions Items LEFT MIDDLE RIGHT NOTDEFINED"
+
+#:IFC.xml:713
+msgid "IfcDoorPanelPositionEnum_LEFT"
+msgstr "LASSEN"
+
+msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
+msgstr "LASSEN"
+
+#:IFC.xml:714
+msgid "IfcDoorPanelPositionEnum_MIDDLE"
+msgstr "MIDDLE"
+
+msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDLE"
+
+#:IFC.xml:715
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:716
+msgid "IfcDoorPanelPositionEnum_RIGHT"
+msgstr "RECHTS"
+
+msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "RECHTS"
+
+#:IFC.xml:718
+msgid "IfcDoorPanelProperties"
+msgstr "IfcDoorPaneleigenschaften"
+
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "Eine Türplatte ist normalerweise ein Türblatt, das Personen oder Waren erlaubt, zu passieren. Die Parameter der Türplatte definieren den geometrisch relevanten Parameter des Panels Die [[IfcDoorPanelProperties]] werden verwendet, um die Form und den Betrieb von Türplatten parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung der Tür hinzugefügt werden. Die [[IfcDoorType]] kann Türen definieren, die aus mehr als einem Panel bestehen. In diesem Fall muss eine Instanz von [[IfcDoorPanelProperties]] für jedes Türpanel enthalten sein. Das Attribut PanelPosition, in Verbindung mit dem [[IfcDoorType]]. perationType-Attribut legt fest, auf welches Panel die [[IfcDoorPanelProperties]] angewendet wird. Die [[IfcDoorPanelProperties]] sind in der Liste der Objekte enthalten, die durch das Attribut HasPropertySets der [[IfcDoorType]] angegeben werden. Weitere Informationen über das Türpanel können in die gleiche Liste der [[IfcDoorType]] mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Das [[IfcDoorPanelProperties]] enthält keine geometrische Darstellung. Es definiert jedoch Parameter, die verwendet werden können, um die Form des Türtyps zu erzeugen, der von der [[IfcDoor]] in den räumlichen Kontext des Projekts eingefügt wird, wie in Tabelle 1 dargestellt. Die Parameter der [[IfcDoorPanelProperties]] definieren eine Standardtür, einschließlich, wenn eine proportionale Breite angegeben wird, um nicht einheitliche Doppel- oder Schiebetüren oder Klapptüren zu definieren. Die äußere Grenze des Panels wird durch die Profilform-Repräsentation bestimmt, die der [[IfcDoor]] zugewiesen ist, , die die [[IfcDoorType]] einfügt. .. Figuren ifcdoorpanelproperties fig01. wenn PanelTiefe Die Tiefe der Paneltiefe, die doppelte Aktion und die Schiebetafel wird durch den Parameter PanelTiefe definiert. panel 2 .. .. .. Zahlen ifcdoorpanelproperties fig02. wenn PanelBreite für Türoperationstypen, die mehr als ein Panel enthalten, die Breite von mindestens einem Panel wird durch eine normalisierte Verhältnismessung angegeben. Es legt die Breite des Paneels fest, das als Verhältnis zur Gesamtbreite der Türöffnung definiert ist. Tabelle 1 Wie Attribute die Türform neue Entität in IFC2.0 beeinflussen. .change ifc2x4 IFC4 CHANGE Supertype geändert auf neu [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:741
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
+
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Zeiger auf den Formaspekt, falls angegeben. Der Formaspekt spiegelt den Teil der Türform wider, der die Türplatte darstellt. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+
+#:IFC.xml:719
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "PanelDepth"
+
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "Depth of the door panel, measured perpendicular to the plane of the door leaf."
+
+#:IFC.xml:724
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "PanelOperation"
+
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "Die PanelOperation definiert die Funktionsweise dieses Panels. Die Paneloperation der Türplatte muss dem Operationstyp der [[IfcDoorType]] entsprechen, von der sie referenziert wird."
+
+#:IFC.xml:729
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "PanelPosition"
+
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position dieses Panels innerhalb der Tür. Die Panelposition der Türplatte muss dem Operationstyp der [[IfcDoorType]] entsprechen, von der sie referenziert wird."
+
+#:IFC.xml:734
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "PanelWidth"
+
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "Breite dieses Panels, gemessen an der Gesamtübersichtlichkeit der Öffnungsbreite der Tür. Wenn sie weggelassen wird, ist sie standardmäßig 1. Für alle Türen mit OperationType s bei [[IfcDoorType]] muss ein Wert angegeben werden, der eine Tür mit mehr als einem Panel definiert."
+
+#:IFC.xml:753
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
+
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die Grundtypen der Türenkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die zur Herstellung der Türe verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL STEEL WOOD ALUMINIUM WOOD ALUMINIUM PLASTIC BENUTZERDEFINED NOTDEFINED"
+
+#:IFC.xml:754
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
+msgstr "ALUMINIUM"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "ALUMINIUM"
+
+#:IFC.xml:755
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
+msgstr "ALUMINIUM PLASTIK"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
+msgstr "ALUMINIUM PLASTIK"
+
+#:IFC.xml:756
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "ALUMINIUM WOOOD"
+
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "ALUMINIUM WOOOD"
+
+#:IFC.xml:757
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "HOCHGRADE STEEL"
+
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "HOCHGRADE STEEL"
+
+#:IFC.xml:758
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:759
+msgid "IfcDoorStyleConstructionEnum_PLASTIC"
+msgstr "PLASTIK"
+
+msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "PLASTIK"
+
+#:IFC.xml:760
+msgid "IfcDoorStyleConstructionEnum_STEEL"
+msgstr "LÄNDERN"
+
+msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "LÄNDERN"
+
+#:IFC.xml:761
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
+msgstr "BENUTZERDEFINIERT"
+
+#:IFC.xml:762
+msgid "IfcDoorStyleConstructionEnum_WOOD"
+msgstr "WOOOD"
+
+msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOOOD"
+
+#:IFC.xml:764
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
+
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate. HISTORY New enumeration in IFC2x. Note 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing left .. .. .. .. figures ifcdoorstyleoperationenum fig01.gif SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing right .. .. .. .. figures ifcdoorstyleoperationenum fig02.gif DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing .. .. .. .. figures ifcdoorstyleoperationenum fig03.gif DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite left .. .. .. .. figures ifcdoorstyleoperationenum fig06a.gif DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite right .. .. .. .. figures ifcdoorstyleoperationenum fig06b.gif DOUBLE SWING LEFT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing left .. .. .. .. figures ifcdoorstyleoperationenum fig04.gif DOUBLE SWING RIGHT NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing right .. .. .. .. figures ifcdoorstyleoperationenum fig05.gif DOUBLE DOOR DOUBLE SWING NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double double swing .. .. .. .. figures ifcdoorstyleoperationenum fig06.gif SLIDING TO LEFT Door with one panel that is sliding to the left. sliding to left .. .. .. .. figures ifcdoorstyleoperationenum fig07.gif SLIDING TO RIGHT Door with one panel that is sliding to the right. sliding to right .. .. .. .. figures ifcdoorstyleoperationenum fig08.gif DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. double sliding .. .. .. .. figures ifcdoorstyleoperationenum fig09.gif FOLDING TO LEFT Door with one panel that is folding to the left. folding to left .. .. .. .. figures ifcdoorstyleoperationenum fig10.gif FOLDING TO RIGHT Door with one panel that is folding to the right. folding to right .. .. .. .. figures ifcdoorstyleoperationenum fig11.gif DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. double folding .. .. .. .. figures ifcdoorstyleoperationenum fig12.gif REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . revolving .. .. .. .. figures ifcdoorstyleoperationenum fig13.gif ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. rolling .. .. .. .. figures ifcdoorstyleoperationenum fig14.gif USERDEFINED User defined operation type not defined .. .. .. .. figures ifcdoorstyleoperationenum fig15.gif NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+
+#:IFC.xml:765
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
+msgstr "DOPPELDOOR DOPPELSWING"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
+msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing .. .. .. .. figures ifcdoorstyleoperationenum fig06.gif .."
+
+#:IFC.xml:766
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
+msgstr "DOPPEL-FOLDING"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
+msgstr "Tür mit zwei Paneelen, eine ist falten nach links, die andere ist falten nach rechts. .. Zahlen ifcdoorstyleoperationenum fig12.gif .."
+
+#:IFC.xml:767
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
+msgstr "DOPPEL-SINGLER SINGLE SWING"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
+msgstr "Tür mit zwei Paneelen, Eine schwenkt in beide Richtungen und nach rechts in die Hauptrichtung, die anderen bewegt sich auch in beide Richtungen und nach links in die Hauptrichtung. HINWEISE Richtung des Schwungs, ob in oder aus ist bestimmt an der [[IfcDoor]]. double swing .. .. .. Zahlen ifcdoorstyleoperationenum fig03.gif"
+
+#:IFC.xml:768
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
+msgstr "DOPPELLER EINZELLEN SWING OPPOSITE LEFT"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
+msgstr "Tür mit zwei nach links geöffneten Paneelen, ein Paneel bewegt sich in eine Richtung und das andere Panel bewegt sich in die entgegengesetzte Richtung. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. opposite left .. .. .. figures ifcdoorstyleoperationenum fig06a.gif .."
+
+#:IFC.xml:769
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
+msgstr "DOPPELLER EINZELLEN SWING OPPOSITE RECHTS"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
+msgstr "Tür mit zwei Paneelen, die beide nach rechts öffnen, ein Paneel bewegt sich in eine Richtung und die andere Paneele bewegt sich in die entgegengesetzte Richtung. HINWEISE Richtung des Schwungs, ob in oder aus ist im [[IfcDoor]]. Gegenüber .. .. Zahlen ifcdoorstyleoperationenum fig06b.gif bestimmt."
+
+#:IFC.xml:770
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
+msgstr "DOPPEL-FOR-SLIDING"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
+msgstr "Tür mit zwei Paneelen, eine rutscht nach links und die andere nach rechts. .. Zahlen ifcdoorstyleoperationenum fig09.gif .."
+
+#:IFC.xml:771
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
+msgstr "SWING-LEFT DOPPELN"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
+msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing left .. .. .. .. figures ifcdoorstyleoperationenum fig04.gif"
+
+#:IFC.xml:772
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
+msgstr "SWING-RECHTS DOPPELN"
+
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
+msgstr "NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. double swing right .. .. .. .. figures ifcdoorstyleoperationenum fig05.gif"
+
+#:IFC.xml:773
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
+msgstr "FOLDUNG ZUM LEFT"
+
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
+msgstr "Door with one panel that is falding to the left folding to left .. .. figures ifcdoorstyleoperationenum fig10.gif .."
+
+#:IFC.xml:774
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
+msgstr "FOLDUNG ZUM RECHTS"
+
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
+msgstr "Door mit einem Paneel, das nach rechts gefaltet ist .. .. Zahlen ifcdoorstyleoperationenum fig11.gif .."
+
+#:IFC.xml:775
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
+
+#:IFC.xml:776
+msgid "IfcDoorStyleOperationEnum_REVOLVING"
+msgstr "VERWALTUNG"
+
+msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
+msgstr "Eine Eingangstür bestehend aus vier Blättern in Form eines Kreuzes, die sich um eine zentrale vertikale Achse dreht, werden durch eine einzelne [[IfcDoor]] Paneeleigenschaft beschrieben. revolving .. .. .. Zahlen ifcdoorstyleoperationenum fig13.gif"
+
+#:IFC.xml:777
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
+
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
+msgstr "Tür, die sich öffnet, indem Sie nach oben rollen, ACHTUNG, ob sie nach innen oder nach außen rollt, wird im [[IfcDoor]] festgelegt. rollend .. .. .. Zahlen ifcdoorstyleoperationenum fig14.gif"
+
+#:IFC.xml:778
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
+msgstr "EINZELE SCHWEIßLEFT"
+
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
+msgstr "Tür mit einem Paneel, das Schwankungen nach links öffnet. Die Scharniere sind auf der linken Seite in Richtung der positiven Y-Achse. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing left .. .. .. .. figures ifcdoorstyleoperationenum fig01.gif"
+
+#:IFC.xml:779
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
+msgstr "EINZELE SWING RECHTS"
+
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
+msgstr "Tür mit einem Paneel, das in beide Richtungen und nach rechts in die Richtung schwankt. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. single swing right .. .. .. .. figures ifcdoorstyleoperationenum fig02.gif"
+
+#:IFC.xml:780
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
+msgstr "SLIDING ZUM LEFT"
+
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
+msgstr "Tür mit einem Paneel, dass nach links schieben .. .. Figuren ifcdoorstyleoperationenum fig07.gif .."
+
+#:IFC.xml:781
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
+msgstr "SLIDING ZUM RECHTS"
+
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
+msgstr "Door with one panel that is sliding to the right .. .. figures ifcdoorstyleoperationenum fig08.gif .."
+
+#:IFC.xml:782
+msgid "IfcDoorStyleOperationEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "User defined operation type not defined .. .. .. .. figures ifcdoorstyleoperationenum fig15.gif"
+
+#:IFC.xml:784
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "IfcPermeableCoveringOperationEnum"
+
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die gültigen Typen von durchlässigen Deckungen, HISTORY New Enumeration in IFC2.0. Gegenstände GRILL Schutzschild von Metallstangen oder Drähten, LOUVER Set von festen oder beweglichen Streifen aus Holz, Metall, etc. Das Hotel liegt sehr zentral in der Nähe des Bahnhofs. SCREEN Upright, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem. BENUTZERDEFINED Benutzer definiert durchlässigen Cover-Typ. NOTDEFINED Keine Informationen verfügbar."
+
+#:IFC.xml:785
+msgid "IfcPermeableCoveringOperationEnum_GRILL"
+msgstr "GRILL"
+
+msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
+msgstr "Protective screen of metal bars or wires."
+
+#:IFC.xml:786
+msgid "IfcPermeableCoveringOperationEnum_LOUVER"
+msgstr "LOUVER"
+
+msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
+msgstr "Set von festen oder beweglichen Streifen aus Holz, Metall, etc. angeordnet, um Luft zu lassen, während Licht oder Regen draußen."
+
+#:IFC.xml:787
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "No information available."
+
+#:IFC.xml:788
+msgid "IfcPermeableCoveringOperationEnum_SCREEN"
+msgstr "SCREEN"
+
+msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
+msgstr "Aufgehend, fixiert oder beweglich, manchmal faltendes Rahmenwerk zum Schutz vor Hitze, Licht, Zugang oder ähnlichem."
+
+#:IFC.xml:789
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
+msgstr "User defined permeable covering type."
+
+#:IFC.xml:791
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
+
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "Diese Entität ist eine Beschreibung einer Platte innerhalb einer Tür oder Fenster als Füllstoffe für die Öffnung, die eine Luftströmung ermöglicht. Es wird durch seine Eigenschaften [[IfcPermeableCoveringProperties]] gegeben. Eine durchlässige Deckel ist ein Gehäuse, wie z. B. eine Komponente, befestigt oder Öffnung, die im Wesentlichen aus einem Rahmen und dem Aufblasen besteht. Bei der Auffüllung handelt es sich in der Regel um einen Grill, einen Schall oder eine Scheibe. Die [[IfcPermeableCoveringProperties]] sind in der Liste der Eigenschaften enthalten, die HasPropertySets der [[IfcWindowType]] oder der [[IfcDoorType]] . Weitere Informationen über die durchlässige Deckung können in der gleichen Liste des Fenster- oder Türstils mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Dies gilt insbesondere für zusätzliche Eigenschaften für die verschiedenen Operationstypen Die [[IfcPermeableCoveringProperties]] enthält keine geometrische Darstellung. Er definiert jedoch Parameter, die verwendet werden können, um die Form des [[IfcWindowType]] zu erzeugen, das von der [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird , oder der [[IfcDoorType]], die vom [[IfcDoor]] eingefügt wird. Die Parameter der [[IfcPermeableCoveringProperties]] definieren eine standardmäßig durchlässige Abdeckung. Die äußere Grenze des Panels wird durch den Parameter Vorkommen, der dem [[IfcWindow]] oder [[IfcDoor]] zugewiesen wurde, bestimmt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des durchlässigen Deckels innerhalb des gesamten Fensters oder der Türe wird durch das Attribut PanelPosition bestimmt. Abbildung 1 illustriert das Paneel, das auf die Position innerhalb des Futters angewendet wird, wie es durch die Podiumsposition definiert ist. Die folgenden Parameter gelten für das Panel FrameDepth , FrameThickness . figuren ifcpermeablecoveringproperties.gif Figure 1 Permeable covering properties HISTORY New entity in IFC2. , wurde sie von IfcPermeableCovering in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype geändert [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:814
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
+
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
+
+#:IFC.xml:792
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "FrameDepth"
+
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame used to include the permeable covering , measured from front face to back face horizontally i.e. perpendicular to the window or door elevation plane."
+
+#:IFC.xml:797
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "FrameThickness"
+
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame used to include the permeable covering , measured from inside of panel at permeable covering to outside of panel at lining , i.e. parallel to the window or door elevation plane."
+
+#:IFC.xml:802
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "Betriebstyp"
+
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "Types of permeable covering operations. Also used to assign standard symbolic presentations according to national building standards."
+
+#:IFC.xml:807
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "PanelPosition"
+
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "Position of this permeable covering panel within the overall window or door type."
+
+#:IFC.xml:826
+msgid "IfcWindowLiningProperties"
+msgstr "IfcWindowLiningeigenschaften"
+
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowType]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . Figure OperationType Applicable Parameters lining 5 .. .. .. .. figures ifcwindowliningproperties fig05.png All LiningDepth, LiningThickness, LiningOffset, LiningToPanelOffsetX, LiningToPanelOffsetY Note The inner side is defined as the direction of the window panel opening operation. lining 1 .. .. .. .. figures ifcwindowliningproperties fig01.png DoublePanelVertical shown , TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight MullionThickness, FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 2 .. .. .. .. figures ifcwindowliningproperties fig02.png DoublePanelHorizontal, TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight TransomThickness, FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure lining 3 .. .. .. .. figures ifcwindowliningproperties fig03.png TriplePanelVertical SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure lining 4 .. .. .. .. figures ifcwindowliningproperties fig04.png TriplePanelHorizontal SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Table 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:884
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
+
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining. .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
+
+#:IFC.xml:827
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
+
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
+
+#:IFC.xml:832
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "FirstTransomOffset"
+
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline, measured along the z axis of the window placement co ordinate system. An offset value 0.5 indicates that the transom is positioned in the middle of the window."
+
+#:IFC.xml:837
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "LiningDepth"
+
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "Depth of the window lining dimension measured perpendicular to window elevation plane ."
+
+#:IFC.xml:842
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
+
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "Offset of the window lining. The offset is given as distance along the y axis of the local placement perpendicular to the window plane . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+
+#:IFC.xml:847
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "LiningThickness"
+
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "Thickness of the window lining as explained in the figure above. If LiningThickness value is 0. zero it denotes a window without a lining all other lining parameters shall be set to NIL in this case . If the LiningThickness is NIL it denotes that the value is not available. .change ifc2x4 IFC4 CHANGE Data type modified to be [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:852
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanelOffsetX"
+
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the x axis of the local placement. Should be smaller or equal to the LiningThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
+
+#:IFC.xml:857
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanelOffsetY"
+
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Versatz zwischen Futter und Fenster, die entlang der Y-Achse der lokalen Platzierung gemessen werden. Sollte kleiner oder gleich dem [[IfcWindowPanelProperties]sein. AnelThickness . .change ifc2x4 IFC4 CHANGE Neues Attribut am Ende der Entitätsdefinition hinzugefügt."
+
+#:IFC.xml:862
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "MullionThickness"
+
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:867
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
+
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
+
+#:IFC.xml:872
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "SecondTransomOffset"
+
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
+
+#:IFC.xml:877
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "TransomThickness"
+
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
+
+#:IFC.xml:896
+msgid "IfcWindowPanelOperationEnum"
+msgstr "IfcWindowPanelOperationEnum"
+
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die grundlegenden Wege, wie Fensterfenster funktionieren, wie in Abbildung 2 dargestellt. Die Öffnungsrichtung der Fensterpaneele wird durch die lokale Platzierung der [[IfcWindow]] angegeben. Die positive y-Achse bestimmt die Richtung, wie in Abbildung 2 gezeigt. Abbildungen werden von außen in Richtung der positiven Y-Achse angezeigt. 2. Die symbolische Darstellung hängt vom nationalen Baukodex 3 ab. Diese Zahlen sind nur als Illustrationen öffnen Richtung .. .. .. Zahlen ifcwindowpaneloperationenum fig13. Wenn Abbildung 2 Fensterpanel Richtung HISTORY Neue Auflistung in IFC2.0, Artikel SIDEHUNGRIGHTHAND Panel, die nach rechts öffnet wenn von außen. rechte Hand .. .. .. Zahlen ifcwindowpaneloperationenum fig01.gif SIDEHUNGLEFTHAND Panel, die nach links öffnet, wenn von außen betrachtet. linke Hand .. .. .. Zahlen ifcwindowpaneloperationenum fig02.gif TILTANDTURNRIGHTHAND Panel, öffnet sich nach rechts und ist unten gehungen. rechte Hand tilt und drehen .. .. .. Zahlen ifcwindowpaneloperationenum fig03. wenn TILTANDTURNLEFTHAND Panel, die nach links öffnet und ist unten gehung. links abbiegen und neigen .. .. .. Zahlen ifcwindowpaneloperationenum fig04. If TOPHUNG Panel is top hung .. .. .. figures ifcwindowpaneloperationenum fig05.gif BOTTOMHUNG Panel is bottom hung. .. .. Zahlen ifcwindowpaneloperationenum fig06.gif PIVOTHORIZONTAL Panel is swinging horizontal hinges are in the middle . swinging hori .. .. .. Zahlen ifcwindowpaneloperationenum fig07.gif PIVOTVERTICAL Panel is swinging vertically hinges are in the middle . swinging verti .. .. .. Zahlen ifcwindowpaneloperationenum fig08.gif SLIDINGHORIZONTAL Panel is sliding horizontal . .. .. Zahlen ifcwindowpaneloperationenum fig09.gif SLIDINGVERTICAL Panel is sliding vertically. figures ifcwindowpaneloperationenum fig10.gif REMOVABLECASEMENT Panel is removable. If FIXEDCASEMENT Panel is fixed. .. .. figures ifcwindowpaneloperationenum fig12.gif OTHEROPERATION NOTDEFINED .."
+
+#:IFC.xml:897
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
+msgstr "BOTTOMHUNG"
+
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
+msgstr "Panel ist unten hung .. .. .. Zahlen ifcwindowpaneloperationenum fig06.gif"
+
+#:IFC.xml:898
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
+msgstr "FIXEDCASEMENT"
+
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
+msgstr ".. Zahlen ifcwindowpaneloperationenum fig12.gif .."
+
+#:IFC.xml:899
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:900
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
+msgstr "ANDERE OPERIERUNG"
+
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
+msgstr "ANDERE OPERIERUNG"
+
+#:IFC.xml:901
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
+msgstr "PIVOTHORISONTAL"
+
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
+msgstr "Panel is swinging horizontal hinges are in the middle . swinging hori .. .. .. figures ifcwindowpaneloperationenum fig07.gif .."
+
+#:IFC.xml:902
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
+msgstr "PIVOTVERTISCHE"
+
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
+msgstr "Panel is swinging vertically hinges are in the middle . swinging verti .. .. .. figures ifcwindowpaneloperationenum fig08.gif .."
+
+#:IFC.xml:903
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
+msgstr "ENTFERNEN"
+
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
+msgstr ".. Zahlen ifcwindowpaneloperationenum fig11.gif .."
+
+#:IFC.xml:904
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
+msgstr "SIDEHUNGLEFTHAND"
+
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
+msgstr "Panel, das nach links öffnet, wenn von außen betrachtet .. linken Hand .. .. Figuren ifcwindowpaneloperationenum fig02.gif .."
+
+#:IFC.xml:905
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
+msgstr "SIDEHUNGRIGHTHAND"
+
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
+msgstr "Panel, das nach rechts öffnet, wenn von außen betrachtet .. rechte Hand .. .. Zahlen ifcwindowpaneloperationenum fig01.gif .."
+
+#:IFC.xml:906
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
+msgstr "SLIDINGHORIZONTAL"
+
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
+msgstr ".. Figuren ifcwindowpaneloperationenum fig09.gif"
+
+#:IFC.xml:907
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
+msgstr "SLIDINGVERTISCHE"
+
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
+msgstr ".. .. Zahlen ifcwindowpaneloperationenum fig10.gif .."
+
+#:IFC.xml:908
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
+msgstr "TILTANDTURNLEFTHAND"
+
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
+msgstr "Panel, das nach links öffnet und ist unten gehung. Links drehen und kippen .. .. .. Zahlen ifcwindowpaneloperationenum fig04.gif"
+
+#:IFC.xml:909
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
+msgstr "TILTANDTURNRIGHTHAND"
+
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
+msgstr "Panel, das nach rechts öffnet und ist unten gehung. rechte Hand Neigung und drehen .. .. .. Figuren ifcwindowpaneloperationenum fig03.gif"
+
+#:IFC.xml:910
+msgid "IfcWindowPanelOperationEnum_TOPHUNG"
+msgstr "TOPHUNG"
+
+msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
+msgstr "Panel is top hung. Top hung .. .. .. .. Zahlen ifcwindowpaneloperationenum fig05.gif"
+
+#:IFC.xml:912
+msgid "IfcWindowPanelPositionEnum"
+msgstr "IfcWindowPanelPositionEnum"
+
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowType]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig01.gif DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig02.gif TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig03.gif TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig04.gif TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig05.gif TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig06.gif TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM .. .. .. .. figures ifcwindowpanelpositionenum fig07.gif TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT .. .. .. .. figures ifcwindowpanelpositionenum fig08.gif HISTORY New enumeration in IFC2.0. Note 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
+
+#:IFC.xml:913
+msgid "IfcWindowPanelPositionEnum_BOTTOM"
+msgstr "BOTTOM"
+
+msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
+msgstr "BOTTOM"
+
+#:IFC.xml:914
+msgid "IfcWindowPanelPositionEnum_LEFT"
+msgstr "LASSEN"
+
+msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
+msgstr "LASSEN"
+
+#:IFC.xml:915
+msgid "IfcWindowPanelPositionEnum_MIDDLE"
+msgstr "MIDDLE"
+
+msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDLE"
+
+#:IFC.xml:916
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:917
+msgid "IfcWindowPanelPositionEnum_RIGHT"
+msgstr "RECHTS"
+
+msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "RECHTS"
+
+#:IFC.xml:918
+msgid "IfcWindowPanelPositionEnum_TOP"
+msgstr "TOP"
+
+msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
+msgstr "TOP"
+
+#:IFC.xml:920
+msgid "IfcWindowPanelProperties"
+msgstr "IfcWindowPaneleigenschaften"
+
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "Eine Fensterscheibe ist ein Gehäuse, also eine Komponente, befestigt oder öffnen, die im Wesentlichen aus einem Rahmen und der Aufblähung besteht. Die Verglasung einer Fensterscheibe erfolgt in der Regel und die Betriebsart ist im Operationstyp festgelegt. Die [[IfcWindowPanelProperties]] werden verwendet, um die Form und den Betrieb der Fensterscheiben parametrisch zu beschreiben. Die parametrische Definition kann ausschließlich oder zusätzlich zur expliziten Darstellung des Fensters hinzugefügt werden. Die [[IfcWindowType]] kann Fenster definieren, die aus mehr als einem Fenster bestehen. In diesem Fall muss für jedes Fensterfenster eine Instanz von [[IfcWindowPanelProperties]] hinzugefügt werden. Das Attribut PanelPosition legt in Verbindung mit dem Attribut [[IfcWindowType]] .OperationType fest, für welches Panel das [[IfcWindowPanelProperties]] gilt. Die [[IfcWindowPanelProperties]] sind in der Liste der Objekte enthalten, die HasPropertySets der [[IfcWindowType]] sind. Weitere Informationen über das Fensterpanel können in die gleiche Liste der [[IfcWindowType]] mit der [[IfcPropertySet]] für dynamische Erweiterungen aufgenommen werden. Das [[IfcWindowPanelProperties]] enthält keine eigene geometrische Darstellung. Allerdings definiert es Parameter, , mit dem die Form des [[IfcWindowType]] erstellt werden kann, das vom [[IfcWindow]] in den räumlichen Kontext des Projekts eingefügt wird. Die Parameter in der [[IfcWindowPanelProperties]] definieren ein Standardfenster. Die äußere Grenze des Futters wird durch die Profilformdarstellung bestimmt, die der [[IfcWindow]] zugewiesen ist, , die die [[IfcWindowType]] einfügt. Es muss auch den Futter-Parameter berücksichtigen. Die Position des Fensterfensters innerhalb des gesamten Fensters wird durch das Attribut PanelPosition bestimmt. Wie in Abbildung 1 dargestellt, wird die Kontrollleiste auf die Position innerhalb des Futters angewendet, wie sie durch die Positionseigenschaft des Panels definiert ist. Der folgende Parameter gilt für das Panel FrameDepth , FrameThickness . panel 1 .. .. .. Zahlen ifcwindowpanelproperties fig01.gif Figure 1 Fensterpanel Eigenschaften HISTORY Neue Entität in IFC2. , wurde sie von IfcWindowPanel in IFC2x umbenannt. .change ifc2x4 IFC4 CHANGE Supertype geändert [[IfcPreDefinedPropertySet]] ."
+
+#:IFC.xml:943
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspectStyle"
+
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optionaler Link zu einer Formaspektdefinition , der auf den Teil der geometrischen Darstellung des Fensterstils verweist, der zur Darstellung des Fensters verwendet wird. .deprecated DEPRECATION Das Attribut ist veraltet und wird nicht mehr verwendet, d.h. der Wert ist NIL ."
+
+#:IFC.xml:921
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "FrameDepth"
+
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
+
+#:IFC.xml:926
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "FrameThickness"
+
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
+
+#:IFC.xml:931
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "Betriebstyp"
+
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
+
+#:IFC.xml:936
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "PanelPosition"
+
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
+
+#:IFC.xml:955
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "IfcWindowStyleConstructionEnum"
+
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die Grundtypen der Fensterkonstruktion. Die Bauart bezieht sich auf das Hauptmaterial oder die Materialkombination, die für die Fensterherstellung verwendet wird. GESCHICHTE Neue Auflistung in IFC2x. Artikel ALUMINIUM HOCHGRADE STEEL WOOD ALUMINIUM WOOD PLASTIK ANDERE CONSTRUCTION NOTDEFINED"
+
+#:IFC.xml:956
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
+msgstr "ALUMINIUM"
+
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "ALUMINIUM"
+
+#:IFC.xml:957
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "ALUMINIUM WOOOD"
+
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "ALUMINIUM WOOOD"
+
+#:IFC.xml:958
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "HOCHGRADE STEEL"
+
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "HOCHGRADE STEEL"
+
+#:IFC.xml:959
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:960
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
+msgstr "ANDERE KONSTRUKTION"
+
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
+msgstr "ANDERE KONSTRUKTION"
+
+#:IFC.xml:961
+msgid "IfcWindowStyleConstructionEnum_PLASTIC"
+msgstr "PLASTIK"
+
+msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "PLASTIK"
+
+#:IFC.xml:962
+msgid "IfcWindowStyleConstructionEnum_STEEL"
+msgstr "LÄNDERN"
+
+msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "LÄNDERN"
+
+#:IFC.xml:963
+msgid "IfcWindowStyleConstructionEnum_WOOD"
+msgstr "WOOOD"
+
+msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOOOD"
+
+#:IFC.xml:965
+msgid "IfcWindowStyleOperationEnum"
+msgstr "IfcWindowStyleOperationEnum"
+
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "Diese Aufzählung definiert die Grundkonfiguration des Fenstertyps in Bezug auf die Anzahl der Fensterfenster und die Unterteilung des Gesamtfensters. Die Fensterkonfigurationen werden für Fenster mit einem, zwei oder drei Paneelen mit festen Paneelen wie in Abbildung 1 dargestellt. Windows, die in mehr als drei Panels unterteilt sind, müssen nur durch die Geometrie definiert werden. Der Typ solcher Fenster ist USERDEFINED, HISTORY New Enumeration in IFC2.0. Hinweis 1. Die Funktionsweise jedes Panels wird im [[IfcWindowPanelProperties]] definiert. perationType . 2. Der Verweis vom Fensterfenster auf die Position des Fensters in der Fensterstilkonfiguration wird von der [[IfcWindowPanelProperties]] bearbeitet. anelPosition . 3. Die Figuren werden in der XZ-Ebene der lokalen Platzierung des Fensters als Höhen angezeigt. in die Richtung der positiven Y-Achse. 4. Diese Zahlen werden nur als Illustrationen Artikel SINGLE PANEL Fenster mit einem Panel. .. .. .. Figuren ifcwindowstyleoperationenum fig01.gif DOUBLE PANEL VERTICAL Window with two panels. .. Figuren ifcwindowstyleoperationenum fig02.gif DOUBLE PANEL HORIZONTAL Fenster mit zwei Paneelen. .. .. Zahlen ifcwindowstyleoperationenum fig03.gif TRIPLE PANEL VERTICAL Fenster mit drei Panels. .. .. Zahlen ifcwindowstyleoperationenum fig04.gif TRIPLE PANEL BOTTOM Fenster mit drei Panels. Die Konfiguration von zwei Panels ist vertikal und die dritte ist horizontal unten .. .. .. .. Zahlen ifcwindowstyleoperationenum fig06. Wenn TRIPLE PANEL TOP Fenster mit drei Panels ausgestattet ist, ist die Konfiguration von zwei Paneelen vertikal und die dritte horizontal an der Oberseite. .. .. Zahlen ifcwindowstyleoperationenum fig07. wenn TRIPLE PANEL LEFT Fenster mit drei Panels. Die Konfiguration von zwei Panels ist horizontal und die dritte ist vertikal auf der linken Seite .. .. .. .. figuren ifcwindowstyleoperationenum fig08.gif TRIPLE PANEL RIGHT Fenster mit drei Panels. Die Konfiguration von zwei Paneelen erfolgt horizontal und die dritte befindet sich vertikal auf der rechten Seite. .. .. Zahlen ifcwindowstyleoperationenum fig09.gif TRIPLE PANEL HORIZONTAL Fenster mit drei Panels. .. .. Zahlen ifcwindowstyleoperationenum fig05.gif USERDEFINED user defined operation type NOTDEFINED"
+
+#:IFC.xml:966
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
+msgstr "PANEL HORIZONTAL DOUBLE"
+
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig03.gif .."
+
+#:IFC.xml:967
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
+msgstr "PANELVERTISCHE DOPPELVERTISCH"
+
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
+msgstr ".. .. Figuren ifcwindowstyleoperationenum fig02.gif fig02.gif"
+
+#:IFC.xml:968
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
+msgstr "NOTDEFINIERT"
+
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "NOTDEFINIERT"
+
+#:IFC.xml:969
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
+msgstr "EINZELS PANEL"
+
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
+msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig01.gif .."
+
+#:IFC.xml:970
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
+msgstr "TRIPLE PANEL BOTTOM"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
+msgstr "Fenster mit drei Paneelen. Die Konfiguration von zwei Paneelen ist vertikal und die dritte horizontal unten. .. .. Zahlen ifcwindowstyleoperationenum fig06.gif"
+
+#:IFC.xml:971
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
+msgstr "TRIPLE PANEL HORIZONTAL"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr ".. .. Zahlen ifcwindowstyleoperationenum fig05.gif fig05.gif"
+
+#:IFC.xml:972
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
+msgstr "TRIPLE PANEL LEFT"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
+msgstr "Fenster mit drei Paneelen: Die Konfiguration von zwei Paneelen ist horizontal und die dritte befindet sich vertikal auf der linken Seite. .. .. Zahlen ifcwindowstyleoperationenum fig08.gif"
+
+#:IFC.xml:973
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
+msgstr "TRIPLE PANEL RECHTS"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
+msgstr "Fenster mit drei Paneelen: Die Konfiguration von zwei Paneelen ist horizontal und die dritte befindet sich vertikal auf der rechten Seite. .. .. Zahlen ifcwindowstyleoperationenum fig09.gif"
+
+#:IFC.xml:974
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
+msgstr "TRIPLE PANEL TOP"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
+msgstr "Fenster mit drei Paneelen. Die Konfiguration von zwei Paneelen ist vertikal und die dritte horizontal. .. .. Zahlen ifcwindowstyleoperationenum fig07.gif"
+
+#:IFC.xml:975
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
+msgstr "TRIPLE PANEL VERTICAL"
+
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
+msgstr ".. .. Figuren ifcwindowstyleoperationenum fig04.gif fig04.gif"
+
+#:IFC.xml:976
+msgid "IfcWindowStyleOperationEnum_USERDEFINED"
+msgstr "BENUTZERDEFINIERT"
+
+msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "user defined operation type"
 
