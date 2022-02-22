@@ -9,86 +9,181 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcControlExtension.pot\n"
-"X-Crowdin-File-ID: 32\n"
+"X-Crowdin-File: /master/IfcCostResource.pot\n"
+"X-Crowdin-File-ID: 34\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-22 19:20\n"
 
-#:IFC.xml:3212
-msgid "IfcPerformanceHistory"
-msgstr "Ifcperance历史"
+#:IFC.xml:3264
+msgid "IfcAppliedValue"
+msgstr "IfcAppliedValue"
 
-msgid "IfcPerformanceHistory_DEFINITION"
-msgstr "[[IfcPerformanceHistory]] 用于记录一个事件实例在一段时间内的实际性能。 它包括建筑物自动化系统的机器测量数据以及诸如任务和资源使用等人的具体数据。 这些数据可能代表实际条件、预测或模拟。 性能历史跟踪的实时数据采取属性集的形式，所有属性都以时间序列为基础。 与发生和类型的基于设计的数据不同，性能驱动的数据是时间敏感的，可能会因某些测量设备而在实时变化。 数据可以不定期收集，如值变化超过既定阈值时，或定期收集。 声明使用定义[[IfcPerformanceHistory]] 可能会在一个项目中使用[[IfcRelDeclares]]声明。相关的定义是[[IfcProject]] 相关的定义包括[[IfcPerformanceHistory]] 。 用于属性集的默认单位由声明项目标标明。 只有顶级对象被宣布为嵌套性能历史对象通过 [[IfcRelNests]]不参与此种关系。IFC2x2 中的HISTORY 新实体。"
+msgid "IfcAppliedValue_DEFINITION"
+msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
 
-#:IFC.xml:3213
-msgid "IfcPerformanceHistory_LifeCyclePhase"
-msgstr "生命周期阶段"
+#:IFC.xml:3309
+msgid "IfcAppliedValue_UnitBasis"
+msgstr "单位基础"
 
-msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
-msgstr "说明适用的建筑物生命周期阶段，典型的值应当是设计和开发、废止、控制和控制，以及赔偿委员会、赔偿委员会、赔偿委员会、赔偿委员会和赔偿委员会。"
+msgid "IfcAppliedValue_UnitBasis_DEFINITION"
+msgstr "单位成本所依据的计量单位数。 注以及通常预期的尺寸单位，如长度、面积、体积等。 成本可以基于需要界定的计量单位，如sack、dr、pallet、item等。 单位成本可以根据比基本措施的单一数值或多或少的数量计算。 例如，木材每X米的单位成本率可能是X1的电缆、管道和许多其他物品的单位成本率。 基数可能是整数或实际值。 请注意，在适用成本按单位数量计算的所有情况下都应说明这一属性。 即使在使用某一物品价格的情况下，也可以断言这一点。 在这种情况下，单位成本基准应按项目或同等定义确定。"
 
-#:IFC.xml:3218
-msgid "IfcPerformanceHistory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:3321
+msgid "IfcAppliedValue_Components"
+msgstr "组件"
 
-msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
-msgstr "预定义在枚举中指定的性能历史记录的通用类型。 挂机ifc2x4 IFC4 变换. 属性已添加到实体定义的末尾."
+msgid "IfcAppliedValue_Components_DEFINITION"
+msgstr "计算附加值的可选组件值。"
 
-#:IFC.xml:3237
-msgid "IfcPerformanceHistoryTypeEnum"
-msgstr "IfcPerformanceHistoryTypeEnum"
+#:IFC.xml:3333
+msgid "IfcAppliedValue_HasExternalReference"
+msgstr "HasExternalReference"
 
-msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
-msgstr "此枚举用于识别性能历史的主要目的。[[IfcPerformanceHistoryTypeEnum]] 包含以下用户定义的用户. 未定义。IFC4 项目中使用的新枚举未完成"
+msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
+msgstr "引用外部引用，例如与[[IfcAppliedValue]相关联的库、分类或文档信息。 .更改 ifc2x4 IFC4 变换新反向属性。"
 
-#:IFC.xml:3241
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
-msgstr "未完成"
+#:IFC.xml:3265
+msgid "IfcAppliedValue_ApplicableDate"
+msgstr "适用日期"
 
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "未完成"
+msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
+msgstr "应用值的适用日期或起始日期。更改ifc2x4 IFC4 变异类型从 IfcDateTimeSelect."
 
-#:IFC.xml:3242
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:3270
+msgid "IfcAppliedValue_AppliedValue"
+msgstr "已应用价值"
 
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "已使用"
+msgid "IfcAppliedValue_AppliedValue_DEFINITION"
+msgstr "应用数值的范围或数量或数量。"
 
-#:IFC.xml:3243
-msgid "IfcRelAssociatesApproval"
-msgstr "IfcRelAssociatesApproval"
+#:IFC.xml:3275
+msgid "IfcAppliedValue_ArithmeticOperator"
+msgstr "算术运算符"
 
-msgid "IfcRelAssociatesApproval_DEFINITION"
-msgstr "实体 [[IfcRelAssociatesApproval]] 用于应用由 [[IfcApproval]] 定义的批准信息 在 IfcApprovvalResource schema, 到子类型 [[IfcRoot]] 。 IFC2x2中的新实体。"
+msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
+msgstr "计算运算符应用于组件值。"
 
-#:IFC.xml:545
-msgid "IfcRelAssociatesApproval_RelatingApproval"
-msgstr "关联审批中"
+#:IFC.xml:3280
+msgid "IfcAppliedValue_Category"
+msgstr "类别"
 
-msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
-msgstr "提及正在使用这种关系适用的批准。"
+msgid "IfcAppliedValue_Category_DEFINITION"
+msgstr "说明所使用的成本类型。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 为了允许任何类型的成本值，分配了[[IfcLabel]] 数据类型。 在没有任何明确界定的标准的情况下， 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。"
 
-#:IFC.xml:3246
-msgid "IfcRelAssociatesConstraint"
-msgstr "IfcRelAssociatesConstraint"
+#:IFC.xml:3285
+msgid "IfcAppliedValue_Condition"
+msgstr "条件"
 
-msgid "IfcRelAssociatesConstraint_DEFINITION"
-msgstr "实体 [[IfcRelAssociatesConstraint]] 用于应用由 [[IfcConstraint]] 定义的约束信息 在 IfcConstraintResource schema, 到子类型 [[IfcRoot]] 。 IFC2x2中的新实体。"
+msgid "IfcAppliedValue_Condition_DEFINITION"
+msgstr "适用成本价值的条件。 例如，在提交投标书的情况下，这可能是指可能当选或不当选的选择。"
 
-#:IFC.xml:2596
-msgid "IfcRelAssociatesConstraint_RelatingConstraint"
-msgstr "相关约束"
+#:IFC.xml:3290
+msgid "IfcAppliedValue_Description"
+msgstr "描述"
 
-msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
-msgstr "引用正在使用这种关系的约束。"
+msgid "IfcAppliedValue_Description_DEFINITION"
+msgstr "可能应用有关成本价值的额外信息的描述。"
 
-#:IFC.xml:3247
-msgid "IfcRelAssociatesConstraint_Intent"
-msgstr "意向的"
+#:IFC.xml:3295
+msgid "IfcAppliedValue_FixedUntilDate"
+msgstr "固定到日期"
 
-msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
-msgstr "约束用法对相关的 [[IfcConstraint]] 和IfcObjects, IfcPropertyDefinitions 或 IfcRelationships的意向。 典型的数值可以是例如比率或执行性能值。"
+msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
+msgstr "应用值适用的截止日期。从 IfcDateTimeSelect改变了 ifc2x4 IFC4 变异类型。"
+
+#:IFC.xml:3300
+msgid "IfcAppliedValue_Name"
+msgstr "名称"
+
+msgid "IfcAppliedValue_Name_DEFINITION"
+msgstr "给出成本值的名称或额外澄清。"
+
+#:IFC.xml:3345
+msgid "IfcAppliedValueSelect"
+msgstr "IfcAppliedValueSelect"
+
+#:IFC.xml:3346
+msgid "IfcArithmeticOperatorEnum"
+msgstr "IfcArithmeticOperatorEnum"
+
+msgid "IfcArithmeticOperatorEnum_DEFINITION"
+msgstr "[[IfcArithmeticOperatorEnum]] 指定了关系所隐含的算术操作形式，IFC2x2中的HISTORY 新枚举项。项目 ADD DULTIPLY MUBTRACT"
+
+#:IFC.xml:3347
+msgid "IfcArithmeticOperatorEnum_ADD"
+msgstr "添加"
+
+msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
+msgstr "添加"
+
+#:IFC.xml:3348
+msgid "IfcArithmeticOperatorEnum_DIVIDE"
+msgstr "DIVIDE"
+
+msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
+msgstr "DIVIDE"
+
+#:IFC.xml:3349
+msgid "IfcArithmeticOperatorEnum_MULTIPLY"
+msgstr "MULTIPLY"
+
+msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
+msgstr "MULTIPLY"
+
+#:IFC.xml:3350
+msgid "IfcArithmeticOperatorEnum_SUBTRACT"
+msgstr "订阅"
+
+msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
+msgstr "订阅"
+
+#:IFC.xml:3352
+msgid "IfcCostValue"
+msgstr "IfcCostValue"
+
+msgid "IfcCostValue_DEFINITION"
+msgstr "[[IfcCostValue]] 是影响金额的金额或价值。 每个实例 [[IfcCostValue]] 也可能有一个类别。可能有许多类型的成本值可以确定。 虽然人们对可能分配给不同类型费用的名称的含义有着广泛的理解， 没有一般的费用类型命名标准，也没有任何广泛界定的分类。 以下定义了可适用于类别属性的某些成本类别 年度回报率Bonus 批量购买合同咨询； 估计成本； 安装利率； 劳力租赁； 清单价格维护材料间接邮费和包装损益购买租金修缮出售； 少量附加零部件储存合同折扣； 贸易运输废物补贴； 整个寿命； 没有任何明确的标准。 建议在当地达成协定，界定某一项目或区域内允许和可以理解的成本价值类型。 在 IFC1.0 中的新实体"
+
+#:IFC.xml:3439
+msgid "IfcCurrencyRelationship"
+msgstr "货币关系"
+
+msgid "IfcCurrencyRelationship_DEFINITION"
+msgstr "[[IfcCurrencyRelationship]] 界定了特定时间两种指定货币之间以及特定来源公布的汇率。 一个 [[IfcCurrencyRelationship]] 在可能需要用一种货币引用一个 [[IfcCostValue]] 作为另一种货币时使用 [[IfcCostValue]] 。 它考虑到以下事实：货币汇率可能因要求记录所用货币汇率的日期和时间以及公布汇率的来源而有所变化。 可能有许多来源，货币兑换现时汇率和固定汇率前期购买货币的战略也不同。 货币交易的来源定义为一个 [[IfcLibraryInformation]] 的实例，其中包括一个名称和一个URL。 在 IFC2x2. 更改ifc2x4 IFC4 更改子键入的 [[IfcResourceLevelRelationship]] 属性顺序已更改。"
+
+#:IFC.xml:3452
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
+msgstr "关联货币单位"
+
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
+msgstr "交易所来自的货币单位。 例如，在从英镑改为美元的情况下，相关的货币单位是英镑。"
+
+#:IFC.xml:3464
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
+msgstr "关联的Monetary单位"
+
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
+msgstr "汇兑所得的货币单位。 例如，在从英镑转为美元的情况下，相关的货币单位是美元。"
+
+#:IFC.xml:3476
+msgid "IfcCurrencyRelationship_RateSource"
+msgstr "评分源"
+
+msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
+msgstr "获得汇率的来源。"
+
+#:IFC.xml:3440
+msgid "IfcCurrencyRelationship_ExchangeRate"
+msgstr "汇率"
+
+msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
+msgstr "目前商定的相关货币单位金额的比率相当于货币关系中相关货币单位的单位金额。 例如，在从英镑兑换为美元的情况下，汇率的价值可为1.486美元(1英镑)。"
+
+#:IFC.xml:3445
+msgid "IfcCurrencyRelationship_RateDateTime"
+msgstr "RateDateTime"
+
+msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
+msgstr "适用汇率的日期和时间。Ifc2x4 IFC4 变异类型从 IfcDateTimeSelect. 变异。属性是可选的。"
 
