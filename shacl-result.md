@@ -188,9 +188,6 @@
 * The resource 'IfcGeographicElementTypeEnum.TERRAIN' has no definition
 * The resource 'IfcLaborResourceTypeEnum.FLOORING' has no definition
 * The resource 'IfcLightDistributionCurveEnum.NOTDEFINED' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_A' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_B' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_C' has no definition
 * The resource 'IfcLightEmissionSourceEnum.COMPACTFLUORESCENT' has no definition
 * The resource 'IfcLightEmissionSourceEnum.FLUORESCENT' has no definition
 * The resource 'IfcLightEmissionSourceEnum.HIGHPRESSUREMERCURY' has no definition
