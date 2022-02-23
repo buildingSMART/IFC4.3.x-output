@@ -229,52 +229,9 @@
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowrateRange' has no definition
 * The Property 'Pset_FastenerWeld.n' has no definition
 * The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has no definition
-* The Property 'Pset_SpaceHVACDesign.AirHandlingName' has no definition
-* The Property 'Pset_SpaceHVACDesign.HumidityMax' has no definition
-* The Property 'Pset_SpaceHVACDesign.HumidityMin' has no definition
-* The Property 'Pset_SpaceHVACDesign.HumiditySetPoint' has no definition
-* The Property 'Pset_SpaceHVACDesign.HumiditySummer' has no definition
-* The Property 'Pset_SpaceHVACDesign.HumidityWinter' has no definition
-* The Property 'Pset_SpaceHVACDesign.MechanicalVentilation' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureMax' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureMin' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureSummerMax' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureSummerMin' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureWinterMax' has no definition
-* The Property 'Pset_SpaceHVACDesign.TemperatureWinterMin' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
-* The Property 'Pset_VehicleAvailability.MaintenanceDowntime' has no definition
-## DefinitionForPropertySet
-
-* The resource 'Pset_Address' has no definition
-* The resource 'Pset_BearingCommon' has no definition
-* The resource 'Pset_BridgeCommon' has no definition
-* The resource 'Pset_BuiltElementProxyCommon' has no definition
-* The resource 'Pset_ConstructionAdministration' has no definition
-* The resource 'Pset_ConstructionOccurance' has no definition
-* The resource 'Pset_CoveringTypeMembrane' has no definition
-* The resource 'Pset_ElementSize' has no definition
-* The resource 'Pset_FittingBend' has no definition
-* The resource 'Pset_FittingJunction' has no definition
-* The resource 'Pset_FittingTransition' has no definition
-* The resource 'Pset_MaterialWoodBasedStructure' has no definition
-* The resource 'Pset_MechanicalBeamInPlane' has no definition
-* The resource 'Pset_MechanicalBeamInPlaneNegative' has no definition
-* The resource 'Pset_MechanicalBeamOutOfPlane' has no definition
-* The resource 'Pset_MechanicalPanelInPlane' has no definition
-* The resource 'Pset_MechanicalPanelOutOfPlane' has no definition
-* The resource 'Pset_MechanicalPanelOutOfPlaneNegative' has no definition
-* The resource 'Pset_ProvisionForVoid' has no definition
-* The resource 'Pset_SignCommon' has no definition
-* The resource 'Pset_SpaceAirHandlingDimensioning' has no definition
-* The resource 'Pset_SpaceHVACDesign' has no definition
-* The resource 'Pset_SpaceLightingDesign' has no definition
-* The resource 'Pset_SpatialZoneCommon' has no definition
-* The resource 'Pset_ThermalLoad' has no definition
-* The resource 'Pset_Tiling' has no definition
 ## DefinitionForQuantity
 
-* The Property 'Qto_BuildingStoreyBaseQuantities.NetHeigtht' has no definition
 * The Property 'Qto_EarthworksCutBaseQuantities.UndisturbedVolume' has no definition
 * The Property 'Qto_PictorialSignQuantities.SignArea' has no definition
 * The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
@@ -294,9 +251,6 @@
 * The resource 'Qto_SignalBaseQuantities' has no definition
 * The resource 'Qto_SpatialZoneBaseQuantities' has no definition
 * The resource 'Qto_SurfaceFeatureBaseQuantities' has no definition
-## DefinitionForSelect
-
-* The resource 'IfcCurveMeasureSelect' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
 
 * The association 'IfcArbitraryClosedProfileDefPropertySetsforObjectsPset_ProfileArbitraryDoubleT' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryClosedProfileDef'
@@ -399,6 +353,7 @@
 * For document 'AirFlowrateVersusFlowControlElement.md/a/properties/docs' a property cannot be found
 * For document 'AirHandlerConstruction.md/a/properties/docs' a property cannot be found
 * For document 'AirHandlerFanCoilArrangement.md/a/properties/docs' a property cannot be found
+* For document 'AirHandlingName.md/a/properties/docs' a property cannot be found
 * For document 'AirParticleFilterType.md/a/properties/docs' a property cannot be found
 * For document 'AirPressureDropCurve.md/a/properties/docs' a property cannot be found
 * For document 'AirPressureDropCurveHistory.md/a/properties/docs' a property cannot be found
@@ -1250,6 +1205,11 @@
 * For document 'HousingThickness.md/h/properties/docs' a property cannot be found
 * For document 'HumidifierApplication.md/h/properties/docs' a property cannot be found
 * For document 'HumidityEffectiveness.md/h/properties/docs' a property cannot be found
+* For document 'HumidityMax.md/h/properties/docs' a property cannot be found
+* For document 'HumidityMin.md/h/properties/docs' a property cannot be found
+* For document 'HumiditySetPoint.md/h/properties/docs' a property cannot be found
+* For document 'HumiditySummer.md/h/properties/docs' a property cannot be found
+* For document 'HumidityWinter.md/h/properties/docs' a property cannot be found
 * For document 'HydraulicConductivity.md/h/properties/docs' a property cannot be found
 * For document 'HydraulicDiameter.md/h/properties/docs' a property cannot be found
 * For document 'HygrothermalRating.md/h/properties/docs' a property cannot be found
@@ -1559,6 +1519,7 @@
 * For document 'LubricationSystemType.md/l/properties/docs' a property cannot be found
 * For document 'MainColor.md/m/properties/docs' a property cannot be found
 * For document 'MaintenaceType.md/m/properties/docs' a property cannot be found
+* For document 'MaintenanceDowntime.md/m/properties/docs' a property cannot be found
 * For document 'MaintenanceFactor.md/m/properties/docs' a property cannot be found
 * For document 'MaintenanceLevel.md/m/properties/docs' a property cannot be found
 * For document 'MaintenanceType.md/m/properties/docs' a property cannot be found
@@ -1644,6 +1605,7 @@
 * For document 'MechanicalOperated.md/m/properties/docs' a property cannot be found
 * For document 'MechanicalStressType.md/m/properties/docs' a property cannot be found
 * For document 'MechanicalTension.md/m/properties/docs' a property cannot be found
+* For document 'MechanicalVentilation.md/m/properties/docs' a property cannot be found
 * For document 'MechanicalVentilationRate.md/m/properties/docs' a property cannot be found
 * For document 'MediaContent.md/m/properties/docs' a property cannot be found
 * For document 'MediaExtendedArea.md/m/properties/docs' a property cannot be found
@@ -2512,10 +2474,16 @@
 * For document 'TemperatureEffectiveness.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureFactor.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureHistory.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureMax.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureMin.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureRange.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureRating.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureSensorType.md/t/properties/docs' a property cannot be found
 * For document 'TemperatureSetPoint.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureSummerMax.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureSummerMin.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureWinterMax.md/t/properties/docs' a property cannot be found
+* For document 'TemperatureWinterMin.md/t/properties/docs' a property cannot be found
 * For document 'TendonRelaxation.md/t/properties/docs' a property cannot be found
 * For document 'TensileStrength.md/t/properties/docs' a property cannot be found
 * For document 'TensileStrengthPerp.md/t/properties/docs' a property cannot be found
