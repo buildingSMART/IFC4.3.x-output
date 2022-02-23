@@ -232,25 +232,7 @@
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForQuantity
 
-* The Property 'Qto_EarthworksCutBaseQuantities.UndisturbedVolume' has no definition
-* The Property 'Qto_PictorialSignQuantities.SignArea' has no definition
 * The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
-## DefinitionForQuantitySet
-
-* The resource 'Qto_BuildingElementProxyQuantities' has no definition
-* The resource 'Qto_ConduitSegmentBaseQuantities' has no definition
-* The resource 'Qto_CourseBaseQuantities' has no definition
-* The resource 'Qto_EarthworksCutBaseQuantities' has no definition
-* The resource 'Qto_EarthworksFillBaseQuantities' has no definition
-* The resource 'Qto_ImpactProtectionDeviceBaseQuantities' has no definition
-* The resource 'Qto_KerbBaseQuantities' has no definition
-* The resource 'Qto_PavementBaseQuantities' has no definition
-* The resource 'Qto_PictorialSignQuantities' has no definition
-* The resource 'Qto_ReinforcedSoilBaseQuantities' has no definition
-* The resource 'Qto_SignBaseQuantities' has no definition
-* The resource 'Qto_SignalBaseQuantities' has no definition
-* The resource 'Qto_SpatialZoneBaseQuantities' has no definition
-* The resource 'Qto_SurfaceFeatureBaseQuantities' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
 
 * The association 'IfcArbitraryClosedProfileDefPropertySetsforObjectsPset_ProfileArbitraryDoubleT' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryClosedProfileDef'
@@ -2276,6 +2258,7 @@
 * For document 'ShowerType.md/s/properties/docs' a property cannot be found
 * For document 'Side.md/s/properties/docs' a property cannot be found
 * For document 'SideFlatness.md/s/properties/docs' a property cannot be found
+* For document 'SignArea.md/s/properties/docs' a property cannot be found
 * For document 'SignLegend.md/s/properties/docs' a property cannot be found
 * For document 'SignalAspectSymbol.md/s/properties/docs' a property cannot be found
 * For document 'SignalAspectType.md/s/properties/docs' a property cannot be found
@@ -2636,6 +2619,7 @@
 * For document 'UncertaintyBasis.md/u/properties/docs' a property cannot be found
 * For document 'UncertaintyDescription.md/u/properties/docs' a property cannot be found
 * For document 'UnderSleeperPadStiffness.md/u/properties/docs' a property cannot be found
+* For document 'UndisturbedVolume.md/u/properties/docs' a property cannot be found
 * For document 'UniformlyDistributedLoad.md/u/properties/docs' a property cannot be found
 * For document 'Unit.md/u/properties/docs' a property cannot be found
 * For document 'UnitaryApplication.md/u/properties/docs' a property cannot be found
