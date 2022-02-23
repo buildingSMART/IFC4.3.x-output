@@ -1,17 +1,3 @@
-## DefinitionForEnumLiteral
-
-* The resource 'IfcAnalysisTheoryTypeEnum.FIRST_ORDER_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.FULL_NONLINEAR_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.SECOND_ORDER_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.THIRD_ORDER_THEORY' has no definition
-* The resource 'IfcBridgeTypeEnum.ARCHED' has no definition
-* The resource 'IfcBridgeTypeEnum.CABLE_STAYED' has no definition
-* The resource 'IfcBridgeTypeEnum.CANTILEVER' has no definition
-* The resource 'IfcBridgeTypeEnum.CULVERT' has no definition
-* The resource 'IfcBridgeTypeEnum.FRAMEWORK' has no definition
-* The resource 'IfcBridgeTypeEnum.SUSPENSION' has no definition
-* The resource 'IfcDataOriginEnum.USERDEFINED' has no definition
-* The resource 'IfcReflectanceMethodEnum.PHYSICAL' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
