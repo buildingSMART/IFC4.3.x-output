@@ -1,6 +1,6 @@
 # Express schema differences
 
-72 items
+73 items
 
 
 ### Missing data
@@ -44,11 +44,12 @@
 
 ### Type definitions
 
-1 items
+2 items
 
-| Name            | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                                         |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IfcTaskTypeEnum | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
+| Name                     | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                                         |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcReflectanceMethodEnum | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                  | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                                          |
+| IfcTaskTypeEnum          | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
 ### Entity definitions
 

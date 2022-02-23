@@ -190,6 +190,7 @@
 * The resource 'IfcReferentTypeEnum.MILEPOINT' has no definition
 * The resource 'IfcReferentTypeEnum.STATION' has no definition
 * The resource 'IfcReflectanceMethodEnum.NOTDEFINED' has no definition
+* The resource 'IfcReflectanceMethodEnum.PHYSICAL' has no definition
 * The resource 'IfcRoleEnum.ARCHITECT' has no definition
 * The resource 'IfcRoleEnum.BUILDINGOPERATOR' has no definition
 * The resource 'IfcRoleEnum.BUILDINGOWNER' has no definition
