@@ -1,38 +1,3 @@
-## DefinitionForEntity
-
-* The resource 'IfcBearingType' has no definition
-* The resource 'IfcBridgePart' has no definition
-* The resource 'IfcCaissonFoundationType' has no definition
-* The resource 'IfcDeepFoundationType' has no definition
-* The resource 'IfcDirectrixDerivedReferenceSweptAreaSolid' has no definition
-* The resource 'IfcFacilityPartCommon' has no definition
-* The resource 'IfcImpactProtectionDevice' has no definition
-* The resource 'IfcImpactProtectionDeviceType' has no definition
-* The resource 'IfcIndexedPolygonalTextureMap' has no definition
-* The resource 'IfcMarinePart' has no definition
-* The resource 'IfcPolynomialCurve' has no definition
-* The resource 'IfcRailwayPart' has no definition
-* The resource 'IfcRoadPart' has no definition
-* The resource 'IfcTendonConduitType' has no definition
-* The resource 'IfcTextureCoordinateIndices' has no definition
-* The resource 'IfcTextureCoordinateIndicesWithVoids' has no definition
-* The resource 'IfcTransportationDevice' has no definition
-* The resource 'IfcTransportationDeviceType' has no definition
-* The resource 'IfcVehicle' has no definition
-* The resource 'IfcVehicleType' has no definition
-* The resource 'IfcVibrationDamper' has no definition
-* The resource 'IfcVibrationDamperType' has no definition
-* The resource 'IfcVibrationIsolator' has no definition
-* The resource 'IfcVibrationIsolatorType' has no definition
-## DefinitionForEnum
-
-* The resource 'IfcBearingTypeDisplacementEnum' has no definition
-* The resource 'IfcBearingTypeEnum' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum' has no definition
-* The resource 'IfcRailwayTypeEnum' has no definition
-* The resource 'IfcTendonConduitTypeEnum' has no definition
-* The resource 'IfcTrackElementTypeEnum' has no definition
-* The resource 'IfcVibrationDamperTypeEnum' has no definition
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcActionTypeEnum.EXTRAORDINARY_A' has no definition
@@ -49,18 +14,6 @@
 * The resource 'IfcArithmeticOperatorEnum.DIVIDE' has no definition
 * The resource 'IfcArithmeticOperatorEnum.MULTIPLY' has no definition
 * The resource 'IfcArithmeticOperatorEnum.SUBTRACT' has no definition
-* The resource 'IfcBearingTypeDisplacementEnum.FIXED_MOVEMENT' has no definition
-* The resource 'IfcBearingTypeDisplacementEnum.FREE_MOVEMENT' has no definition
-* The resource 'IfcBearingTypeDisplacementEnum.GUIDED_LONGITUDINAL' has no definition
-* The resource 'IfcBearingTypeDisplacementEnum.GUIDED_TRANSVERSAL' has no definition
-* The resource 'IfcBearingTypeEnum.CYLINDRICAL' has no definition
-* The resource 'IfcBearingTypeEnum.DISK' has no definition
-* The resource 'IfcBearingTypeEnum.ELASTOMERIC' has no definition
-* The resource 'IfcBearingTypeEnum.GUIDE' has no definition
-* The resource 'IfcBearingTypeEnum.POT' has no definition
-* The resource 'IfcBearingTypeEnum.ROCKER' has no definition
-* The resource 'IfcBearingTypeEnum.ROLLER' has no definition
-* The resource 'IfcBearingTypeEnum.SPHERICAL' has no definition
 * The resource 'IfcBridgePartTypeEnum.DECK_SEGMENT' has no definition
 * The resource 'IfcBridgePartTypeEnum.PIER_SEGMENT' has no definition
 * The resource 'IfcBridgePartTypeEnum.SURFACESTRUCTURE' has no definition
@@ -70,8 +23,6 @@
 * The resource 'IfcBridgeTypeEnum.CULVERT' has no definition
 * The resource 'IfcBridgeTypeEnum.FRAMEWORK' has no definition
 * The resource 'IfcBridgeTypeEnum.SUSPENSION' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.CAISSON' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.WELL' has no definition
 * The resource 'IfcDataOriginEnum.USERDEFINED' has no definition
 * The resource 'IfcDerivedUnitEnum.ACCELERATIONUNIT' has no definition
 * The resource 'IfcDerivedUnitEnum.ANGULARVELOCITYUNIT' has no definition
@@ -218,22 +169,10 @@
 * The resource 'IfcTaskTypeEnum.ADJUSTMENT' has no definition
 * The resource 'IfcTaskTypeEnum.NOTDEFINED' has no definition
 * The resource 'IfcTaskTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTendonConduitTypeEnum.DIABOLO' has no definition
-* The resource 'IfcTendonConduitTypeEnum.DUCT' has no definition
-* The resource 'IfcTendonConduitTypeEnum.GROUTING_DUCT' has no definition
-* The resource 'IfcTendonConduitTypeEnum.TRUMPET' has no definition
 * The resource 'IfcTextPath.DOWN' has no definition
 * The resource 'IfcTextPath.LEFT' has no definition
 * The resource 'IfcTextPath.RIGHT' has no definition
 * The resource 'IfcTextPath.UP' has no definition
-* The resource 'IfcTrackElementTypeEnum.BLOCKINGDEVICE' has no definition
-* The resource 'IfcTrackElementTypeEnum.DERAILER' has no definition
-* The resource 'IfcTrackElementTypeEnum.FROG' has no definition
-* The resource 'IfcTrackElementTypeEnum.HALF_SET_OF_BLADES' has no definition
-* The resource 'IfcTrackElementTypeEnum.SLEEPER' has no definition
-* The resource 'IfcTrackElementTypeEnum.SPEEDREGULATOR' has no definition
-* The resource 'IfcTrackElementTypeEnum.TRACKENDOFALIGNMENT' has no definition
-* The resource 'IfcTrackElementTypeEnum.VEHICLESTOP' has no definition
 * The resource 'IfcUnitEnum.ABSORBEDDOSEUNIT' has no definition
 * The resource 'IfcUnitEnum.AMOUNTOFSUBSTANCEUNIT' has no definition
 * The resource 'IfcUnitEnum.AREAUNIT' has no definition
@@ -263,12 +202,6 @@
 * The resource 'IfcUnitEnum.THERMODYNAMICTEMPERATUREUNIT' has no definition
 * The resource 'IfcUnitEnum.TIMEUNIT' has no definition
 * The resource 'IfcUnitEnum.VOLUMEUNIT' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.AXIAL_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.BENDING_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.FRICTION' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.RUBBER' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.SHEAR_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.VISCOUS' has no definition
 * The resource 'IfcWindowPanelOperationEnum.OTHEROPERATION' has no definition
 * The resource 'IfcWindowPanelPositionEnum.BOTTOM' has no definition
 * The resource 'IfcWindowPanelPositionEnum.LEFT' has no definition
@@ -290,26 +223,7 @@
 * The resource 'IfcWorkScheduleTypeEnum.USERDEFINED' has no definition
 ## DefinitionForProperty
 
-* The Property 'Pset_Address.AddressLines' has no definition
-* The Property 'Pset_Address.Country' has no definition
-* The Property 'Pset_Address.InternalLocation' has no definition
-* The Property 'Pset_Address.PostalBox' has no definition
-* The Property 'Pset_Address.PostalCode' has no definition
-* The Property 'Pset_Address.Region' has no definition
-* The Property 'Pset_Address.Town' has no definition
-* The Property 'Pset_Address.UserDefinedPurpose' has no definition
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
-* The Property 'Pset_BearingCommon.DisplacementAccommodated' has no definition
-* The Property 'Pset_BearingCommon.RotationAccommodated' has no definition
-* The Property 'Pset_BridgeCommon.StructureIndicator' has no definition
-* The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_1' has no definition
-* The Property 'Pset_CableSegmentTypeCableSegment.SelfExtinguishing60332_3' has no definition
-* The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_1' has no definition
-* The Property 'Pset_CableSegmentTypeCoreSegment.SelfExtinguishing60332_3' has no definition
-* The Property 'Pset_ConstructionAdministration.ProcurementMethod' has no definition
-* The Property 'Pset_ConstructionAdministration.SpecificationSectionNumber' has no definition
-* The Property 'Pset_ConstructionAdministration.SubmittalIdentifer' has no definition
-* The Property 'Pset_ConstructionOccurance.AssetIdentifier' has no definition
 * The Property 'Pset_ConstructionOccurance.ModelNumber' has no definition
 * The Property 'Pset_ConstructionOccurance.TagNumber' has no definition
 * The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
@@ -330,7 +244,6 @@
 * The Property 'Pset_ProvisionForVoid.VoidShape' has no definition
 * The Property 'Pset_SignCommon.TactileMarking' has no definition
 * The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has no definition
-* The Property 'Pset_SpaceAirHandlingDimensioning.CoolingDesignAirFlow' has no definition
 * The Property 'Pset_SpaceAirHandlingDimensioning.DesignAirFlow' has no definition
 * The Property 'Pset_SpaceAirHandlingDimensioning.HeatingDesignAirFlow' has no definition
 * The Property 'Pset_SpaceAirHandlingDimensioning.SensibleHeatGain' has no definition
@@ -481,6 +394,7 @@
 * For document 'ActuatorStatus.md/a/properties/docs' a property cannot be found
 * For document 'AddedMassCoefficientMethod.md/a/properties/docs' a property cannot be found
 * For document 'AdditionalProcessing.md/a/properties/docs' a property cannot be found
+* For document 'AddressLines.md/a/properties/docs' a property cannot be found
 * For document 'Addressablility.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentDesignation.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentRange.md/a/properties/docs' a property cannot be found
@@ -572,6 +486,7 @@
 * For document 'AssetAccountingType.md/a/properties/docs' a property cannot be found
 * For document 'AssetCriticality.md/a/properties/docs' a property cannot be found
 * For document 'AssetFrailty.md/a/properties/docs' a property cannot be found
+* For document 'AssetIdentifier.md/a/properties/docs' a property cannot be found
 * For document 'AssetInsuranceType.md/a/properties/docs' a property cannot be found
 * For document 'AssetPriority.md/a/properties/docs' a property cannot be found
 * For document 'AssetStatus.md/a/properties/docs' a property cannot be found
@@ -841,7 +756,7 @@
 * For document 'ConvectorType.md/c/properties/docs' a property cannot be found
 * For document 'ConversionTime.md/c/properties/docs' a property cannot be found
 * For document 'CoolingAirFlowRate.md/c/properties/docs' a property cannot be found
-* For document 'CoolingDesignAirflow.md/c/properties/docs' a property cannot be found
+* For document 'CoolingDesignAirFlow.md/c/properties/docs' a property cannot be found
 * For document 'CoolingDesignDay.md/c/properties/docs' a property cannot be found
 * For document 'CoolingDryBulb.md/c/properties/docs' a property cannot be found
 * For document 'CoolingEfficiency.md/c/properties/docs' a property cannot be found
@@ -872,6 +787,7 @@
 * For document 'CountedEfficiency.md/c/properties/docs' a property cannot be found
 * For document 'CountedEfficiencyCurve.md/c/properties/docs' a property cannot be found
 * For document 'CounterSlope.md/c/properties/docs' a property cannot be found
+* For document 'Country.md/c/properties/docs' a property cannot be found
 * For document 'CouplingLoss.md/c/properties/docs' a property cannot be found
 * For document 'CouplingType.md/c/properties/docs' a property cannot be found
 * For document 'CoverLength.md/c/properties/docs' a property cannot be found
@@ -961,6 +877,7 @@
 * For document 'DishwasherType.md/d/properties/docs' a property cannot be found
 * For document 'DispatchingBoardType.md/d/properties/docs' a property cannot be found
 * For document 'Displacement.md/d/properties/docs' a property cannot be found
+* For document 'DisplacementAccommodated.md/d/properties/docs' a property cannot be found
 * For document 'DisplacementAccomodated.md/d/properties/docs' a property cannot be found
 * For document 'DisplayHeight.md/d/properties/docs' a property cannot be found
 * For document 'DisplaySize.md/d/properties/docs' a property cannot be found
@@ -1428,6 +1345,7 @@
 * For document 'InteriorRoughnessCoefficient.md/i/properties/docs' a property cannot be found
 * For document 'Intermittent.md/i/properties/docs' a property cannot be found
 * For document 'InternalControl.md/i/properties/docs' a property cannot be found
+* For document 'InternalLocation.md/i/properties/docs' a property cannot be found
 * For document 'InternalRefrigerantVolume.md/i/properties/docs' a property cannot be found
 * For document 'InternalSurfaceArea.md/i/properties/docs' a property cannot be found
 * For document 'InternalWaterVolume.md/i/properties/docs' a property cannot be found
@@ -2096,6 +2014,8 @@
 * For document 'PositionHistory.md/p/properties/docs' a property cannot be found
 * For document 'PositionInTrack.md/p/properties/docs' a property cannot be found
 * For document 'PossibleFlowRateRange.md/p/properties/docs' a property cannot be found
+* For document 'PostalBox.md/p/properties/docs' a property cannot be found
+* For document 'PostalCode.md/p/properties/docs' a property cannot be found
 * For document 'Power.md/p/properties/docs' a property cannot be found
 * For document 'PowerCapacity.md/p/properties/docs' a property cannot be found
 * For document 'PowerDemand.md/p/properties/docs' a property cannot be found
@@ -2137,6 +2057,7 @@
 * For document 'ProcessItem.md/p/properties/docs' a property cannot be found
 * For document 'ProcessName.md/p/properties/docs' a property cannot be found
 * For document 'ProcessPerformance.md/p/properties/docs' a property cannot be found
+* For document 'ProcurementMethod.md/p/properties/docs' a property cannot be found
 * For document 'ProductDescription.md/p/properties/docs' a property cannot be found
 * For document 'ProductionLotId.md/p/properties/docs' a property cannot be found
 * For document 'ProductionYear.md/p/properties/docs' a property cannot be found
@@ -2215,6 +2136,7 @@
 * For document 'RefrigerantClass.md/r/properties/docs' a property cannot be found
 * For document 'RefrigerantFoulingResistance.md/r/properties/docs' a property cannot be found
 * For document 'RegeneratedSoundCurve.md/r/properties/docs' a property cannot be found
+* For document 'Region.md/r/properties/docs' a property cannot be found
 * For document 'ReheatType.md/r/properties/docs' a property cannot be found
 * For document 'Reinforcement.md/r/properties/docs' a property cannot be found
 * For document 'ReinforcementAreaRatio.md/r/properties/docs' a property cannot be found
@@ -2278,6 +2200,7 @@
 * For document 'RoadVisibleDistanceRight.md/r/properties/docs' a property cannot be found
 * For document 'RockVolume.md/r/properties/docs' a property cannot be found
 * For document 'Roll.md/r/properties/docs' a property cannot be found
+* For document 'RotationAccommodated.md/r/properties/docs' a property cannot be found
 * For document 'RotationAccomodated.md/r/properties/docs' a property cannot be found
 * For document 'RotationSpeed.md/r/properties/docs' a property cannot be found
 * For document 'Roughness.md/r/properties/docs' a property cannot be found
@@ -2314,6 +2237,8 @@
 * For document 'SelectorType.md/s/properties/docs' a property cannot be found
 * For document 'SelfClosing.md/s/properties/docs' a property cannot be found
 * For document 'SelfExtinguishing60332.md/s/properties/docs' a property cannot be found
+* For document 'SelfExtinguishing60332_1.md/s/properties/docs' a property cannot be found
+* For document 'SelfExtinguishing60332_3.md/s/properties/docs' a property cannot be found
 * For document 'SelfTestFunction.md/s/properties/docs' a property cannot be found
 * For document 'SensibleCoolingCapacity.md/s/properties/docs' a property cannot be found
 * For document 'SensibleEffectiveness.md/s/properties/docs' a property cannot be found
@@ -2492,6 +2417,7 @@
 * For document 'Species.md/s/properties/docs' a property cannot be found
 * For document 'SpecificHeatCapacity.md/s/properties/docs' a property cannot be found
 * For document 'SpecificHeatTemperatureDerivative.md/s/properties/docs' a property cannot be found
+* For document 'SpecificationSectionNumber.md/s/properties/docs' a property cannot be found
 * For document 'Spectrum.md/s/properties/docs' a property cannot be found
 * For document 'SpilloverLevel.md/s/properties/docs' a property cannot be found
 * For document 'SprayType.md/s/properties/docs' a property cannot be found
@@ -2543,7 +2469,9 @@
 * For document 'StructuralStyle.md/s/properties/docs' a property cannot be found
 * For document 'StructuralType.md/s/properties/docs' a property cannot be found
 * For document 'Structure.md/s/properties/docs' a property cannot be found
+* For document 'StructureIndicator.md/s/properties/docs' a property cannot be found
 * For document 'Style.md/s/properties/docs' a property cannot be found
+* For document 'SubmittalIdentifer.md/s/properties/docs' a property cannot be found
 * For document 'SubstanceDetected.md/s/properties/docs' a property cannot be found
 * For document 'SulphurDioxideEmissions.md/s/properties/docs' a property cannot be found
 * For document 'SumpHeaterPower.md/s/properties/docs' a property cannot be found
@@ -2680,6 +2608,7 @@
 * For document 'TotalUACurves.md/t/properties/docs' a property cannot be found
 * For document 'TotalWattage.md/t/properties/docs' a property cannot be found
 * For document 'TouchScreen.md/t/properties/docs' a property cannot be found
+* For document 'Town.md/t/properties/docs' a property cannot be found
 * For document 'TrackCharacteristic.md/t/properties/docs' a property cannot be found
 * For document 'TrackElementOrientation.md/t/properties/docs' a property cannot be found
 * For document 'TrackExpansion.md/t/properties/docs' a property cannot be found
@@ -2771,6 +2700,7 @@
 * For document 'UserCapacity.md/u/properties/docs' a property cannot be found
 * For document 'UserCorrectionFactor.md/u/properties/docs' a property cannot be found
 * For document 'UserDefinedLRMType.md/u/properties/docs' a property cannot be found
+* For document 'UserDefinedPurpose.md/u/properties/docs' a property cannot be found
 * For document 'UserHistory.md/u/properties/docs' a property cannot be found
 * For document 'UserInterfaceType.md/u/properties/docs' a property cannot be found
 * For document 'VacancyRateInCategoryFuture.md/v/properties/docs' a property cannot be found
@@ -2931,6 +2861,7 @@
 * For document 'YoungModulusPerpMin.md/y/properties/docs' a property cannot be found
 * For document 'YoungModulusTension.md/y/properties/docs' a property cannot be found
 * For document 'Zoom.md/z/properties/docs' a property cannot be found
+* For document '_CoolingDesignAirflow.md/c/properties/docs' a property cannot be found
 * For document 'a.md/a/properties/docs' a property cannot be found
 * For document 'c.md/c/properties/docs' a property cannot be found
 * For document 'd.md/d/properties/docs' a property cannot be found
@@ -2945,12 +2876,3 @@
 * For document 'zzOutOfPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzPerformanceUnit.md/z/properties/docs' a property cannot be found
 * For document 'zzTargetPerformance.md/z/properties/docs' a property cannot be found
-## SimpleType
-
-* The resource 'IfcBearingTypeDisplacementEnum' has no definition
-* The resource 'IfcBearingTypeEnum' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum' has no definition
-* The resource 'IfcRailwayTypeEnum' has no definition
-* The resource 'IfcTendonConduitTypeEnum' has no definition
-* The resource 'IfcTrackElementTypeEnum' has no definition
-* The resource 'IfcVibrationDamperTypeEnum' has no definition
