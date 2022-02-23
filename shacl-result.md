@@ -380,6 +380,7 @@
 * The resource 'Pset_Tiling' has no definition
 ## DefinitionForQuantity
 
+* The Property 'Qto_BuildingStoreyBaseQuantities.NetHeigtht' has no definition
 * The Property 'Qto_EarthworksCutBaseQuantities.UndisturbedVolume' has no definition
 * The Property 'Qto_PictorialSignQuantities.SignArea' has no definition
 * The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
@@ -1811,7 +1812,7 @@
 * For document 'NetEarnedValue.md/n/properties/docs' a property cannot be found
 * For document 'NetFloorArea.md/n/properties/docs' a property cannot be found
 * For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
-* For document 'NetHeigtht.md/n/properties/docs' a property cannot be found
+* For document 'NetHeight.md/n/properties/docs' a property cannot be found
 * For document 'NetImpedance.md/n/properties/docs' a property cannot be found
 * For document 'NetPerimeter.md/n/properties/docs' a property cannot be found
 * For document 'NetPlannedArea.md/n/properties/docs' a property cannot be found

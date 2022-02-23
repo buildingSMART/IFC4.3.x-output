@@ -15,7 +15,7 @@ msgid "IfcDistributionChamberElement"
 msgstr "IfcDistributionChamberElement"
 
 msgid "IfcDistributionChamberElement_DEFINITION"
-msgstr "A distribution chamber element defines a place at which distribution systems and their constituent elements may be inspected or through which they may travel. An [[IfcDistributionChamberElement]] is a formed volume used in a distribution system, such as a sump, trench or manhole. Instances of [[IfcDistributionSystem]] or [[IfcDistributionFlowElement]] may be related to the [[IfcDistributionChamberElement]] enabling their location in or at the chamber to be determined. HISTORY New entity in IFC2x2."
+msgstr "A distribution chamber element defines a place at which distribution systems and their constituent elements may be inspected or through which they may travel."
 
 #:IFC.xml:41874
 msgid "IfcDistributionChamberElement_PredefinedType"
@@ -29,7 +29,7 @@ msgid "IfcDistributionChamberElementType"
 msgstr "IfcDistributionChamberElementType"
 
 msgid "IfcDistributionChamberElementType_DEFINITION"
-msgstr "The distribution flow element type [[IfcDistributionChamberElementType]] defines commonly shared information for occurrences of distribution chamber elements. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements common ports It is used to define a distribution chamber element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcDistributionChamberElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcDistributionChamberElementType]] are represented by instances of [[IfcDistributionChamberElement]] . Refer to the documentation at [[IfcDistributionChamberElement]] for supported property sets, materials, composition, and ports. HISTORY New entity in IFC2x2."
+msgstr "The distribution flow element type [[IfcDistributionChamberElementType]] defines commonly shared information for occurrences of distribution chamber elements. The set of shared information may include"
 
 #:IFC.xml:41882
 msgid "IfcDistributionChamberElementType_PredefinedType"
@@ -43,7 +43,7 @@ msgid "IfcDistributionChamberElementTypeEnum"
 msgstr "IfcDistributionChamberElementTypeEnum"
 
 msgid "IfcDistributionChamberElementTypeEnum_DEFINITION"
-msgstr "This enumeration identifies different types of distribution chambers. HISTORY New enumeration in IFC2x2. Items FORMEDDUCT Space formed in the ground for the passage of pipes, cables, ducts. INSPECTIONCHAMBER Chamber constructed on a drain, sewer or pipeline with a removable cover that permits visble inspection. INSPECTIONPIT Recess or chamber formed to permit access for inspection of substructure and services. MANHOLE hamber constructed on a drain, sewer or pipeline with a removable cover that permits the entry of a person. METERCHAMBER Chamber that houses a meter s . SUMP Recessed or small chamber into which liquid is drained to facilitate its collection for removal. TRENCH Excavated chamber, the length of which typically exceeds the width. VALVECHAMBER Chamber that houses a valve s . USERDEFINED User defined chamber type. NOTDEFINED Undefined chamber type."
+msgstr "This enumeration identifies different types of distribution chambers."
 
 #:IFC.xml:41911
 msgid "IfcDistributionChamberElementTypeEnum_FORMEDDUCT"
@@ -120,14 +120,14 @@ msgid "IfcDistributionCircuit"
 msgstr "IfcDistributionCircuit"
 
 msgid "IfcDistributionCircuit_DEFINITION"
-msgstr "A distribution circuit is a partition of a distribution system that is conditionally switched such as an electrical circuit. HISTORY New entity in IFC4. .change ifc2x4 IFC4 CHANGE For electrical power systems, IfcElectricalCircuit has been used for low voltage 12 1000 V power circuits and has been replaced by [[IfcDistributionCircuit]] in IFC4 [[IfcDistributionSystem]] with PredefinedType ELECTRICAL should be used for overall power systems, and [[IfcDistributionCircuit]] with PredefinedType ELECTRICAL should be used for each switched circuit. Composition Use Definition An [[IfcDistributionCircuit]] may aggregate an [[IfcDistributionSystem]] using the [[IfcRelAggregates]] relationship where RelatingObject refers to the [[IfcDistributionSystem]] and RelatedObjects includes one or more [[IfcDistributionCircuit]] groups. An [[IfcDistributionCircuit]] may be aggregated into sub circuits using the [[IfcRelAggregates]] relationship where RelatingObject refers to the parent [[IfcDistributionCircuit]] and RelatedObjects refers to one or more [[IfcDistributionCircuit]] sub circuits. Assignment Use Definition An [[IfcDistributionCircuit]] should be assigned to an [[IfcDistributionPort]] on an [[IfcFlowController]] element indicating the host or origination of the system using the [[IfcRelAssignsToProduct]] relationship. Each device whose operation is conditional based upon the state of the circuit is assigned to the [[IfcDistributionCircuit]] via the [[IfcRelAssignsToGroup]] relationship. An [[IfcDistributionElement]] may belong to multiple systems or circuits, however only one [[IfcDistributionSystem]] or [[IfcDistributionCircuit]] of a particular PredefinedType ."
+msgstr "A distribution circuit is a partition of a distribution system that is conditionally switched such as an electrical circuit."
 
 #:IFC.xml:41924
 msgid "IfcDistributionControlElement"
 msgstr "IfcDistributionControlElement"
 
 msgid "IfcDistributionControlElement_DEFINITION"
-msgstr "The distribution element [[IfcDistributionControlElement]] defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system. [[IfcDistributionControlElement]] defines elements of a building automation control system. These are typically used to control distribution system elements to maintain variables such as temperature, humidity, pressure, flow, power, or lighting levels, through the modulation, staging or sequencing of mechanical or electrical devices. The three general functional categories of control elements are as follows Impart control over flow control elements [[IfcFlowController]] in a distribution system such as dampers, valves, or relays, typically through the use of actuation [[IfcActuator]] . Sensing elements [[IfcSensor]] that measure changes in the controlled variable such as temperature, humidity, pressure, or flow. Controllers [[IfcController]] typically classified according to the control action they seek to perform and generally responsible for making decisions about the elements under control. Since [[IfcDistributionControlElement]] and its subtypes typically relate to many different distribution flow elements [[IfcDistributionFlowElement]] , the objectified relationship [[IfcRelFlowControlElements]] has been provided to relate control and flow elements as required. The key distinction between [[IfcDistributionFlowElement]] and [[IfcDistributionControlElement]] is whether it is internal or external to the flow system, respectively. For example, the distinction between [[IfcFlowMeter]] subtype of [[IfcDistributionFlowElement]] measuring a flow quantity and [[IfcFlowInstrument]] subtype of [[IfcDistributionControlElement]] measuring a flow quality , is based on this principal. A physical device that connects within the flow system in which it measures having inlet outlet pipes for the measured substance follows the [[IfcDistributionFlowElement]] hierarchy and therefore [[IfcFlowMeter]] which measures the flow internally . Otherwise, if it monitors controls but does not connect inline within the flow system it is external or is a component of another device , then it follows the [[IfcDistributionControlElement]] hierarchy and therefore [[IfcFlowInstrument]] which may display various attributes through connected sensors . HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Attribute ControlElementId attribute deleted replaced by classification usage. Ports are now primarily defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported, however is now specific to dynamically connected ports."
+msgstr "The distribution element [[IfcDistributionControlElement]] defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system."
 
 #:IFC.xml:41936
 msgid "IfcDistributionControlElement_AssignedToFlowElement"
@@ -141,14 +141,14 @@ msgid "IfcDistributionControlElementType"
 msgstr "IfcDistributionControlElementType"
 
 msgid "IfcDistributionControlElementType_DEFINITION"
-msgstr "The element type [[IfcDistributionControlElementType]] defines a list of commonly shared property set definitions of an element and an optional set of product representations. It is used to define an element specification the specific product information that is common to all occurrences of that product type . Distribution control element types or the instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcDistributionControlElementType]] are represented by instances of [[IfcDistributionControlElement]] or its subtypes. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Ports may now be defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported on occurrence objects, however is now specific to dynamically connected ports. Concepts Product Type Assignment"
+msgstr "The element type [[IfcDistributionControlElementType]] defines a list of commonly shared property set definitions of an element and an optional set of product representations. It is used to define an element specification the specific product information that is common to all occurrences of that product type ."
 
 #:IFC.xml:41962
 msgid "IfcDistributionFlowElement"
 msgstr "IfcDistributionFlowElement"
 
 msgid "IfcDistributionFlowElement_DEFINITION"
-msgstr "The distribution element [[IfcDistributionFlowElement]] defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power. EXAMPLE Examples of distribution flow elements are ducts, pipes, wires, fittings, and equipment. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Ports are now primarily defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported, however is now specific to dynamically connected ports."
+msgstr "The distribution element [[IfcDistributionFlowElement]] defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."
 
 #:IFC.xml:41965
 msgid "IfcDistributionFlowElement_HasControlElements"
@@ -162,14 +162,14 @@ msgid "IfcDistributionFlowElementType"
 msgstr "IfcDistributionFlowElementType"
 
 msgid "IfcDistributionFlowElementType_DEFINITION"
-msgstr "The element type [[IfcDistributionFlowElementType]] defines a list of commonly shared property set definitions of an element and an optional set of product representations. It is used to define an element specification the specific product information that is common to all occurrences of that product type . Distribution flow element types orthe instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcDistributionFlowElementType]] are represented by instances of [[IfcDistributionFlowElement]] or its subtypes. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Ports may now be defined using [[IfcRelNests]] to enable definition of ports at type definitions both forward and backward compatible , provide a logical order, and reduce the number of relationship objects needed. The relationship [[IfcRelConnectsPortToElement]] is still supported on occurrence objects, however is now specific to dynamically connected ports. Concepts Axis Geometry This represents the 3D flow path of the item having [[IfcShapeRepresentation]].RepresentationType of Curve3D and containing a single [[IfcBoundedCurve]] subtype such as [[IfcPolyline]], [[IfcTrimmedCurve]], or [[IfcCompositeCurve]]. For elements containing directional ports [[IfcDistributionPort]] with FlowDirection of SOURCE or SINK , the direction of the curve indicates direction of flow where a SINK port is positioned at the start of the curve and a SOURCE port is positioned at the end of the curve. This representation is most applicable to flow segment types pipes, ducts, cables , however may be used at other elements to define a primary flow path if applicable. If an element type is defined parametrically such as a flow segment type defining common material profile but no particular length or path , then no representations shall be asserted at the type. NOTE The product representations are defined as representation maps at the level of the supertype [[IfcTypeProduct]], which get assigned by an element occurrence instance through the [[IfcShapeRepresentation]].Item 1 being an [[IfcMappedItem]]. Clearance Geometry This represents the 3D clearance volume of the item having RepresentationType of Surface3D . Such clearance region indicates space that should not intersect with the Body representation between element occurrences, though may intersect with the Clearance representation of other element occurrences. The particular use of clearance space may be for safety, maintenance, or other purposes. Lighting Geometry This represents the light emission of the item having [[IfcShapeRepresentation]].RepresentationType of LightSource and containing one or more [[IfcLightSource]] subtypes. This representation is most applicable to lamps and light fixtures, however may be used at other elements that emit light."
+msgstr "The element type [[IfcDistributionFlowElementType]] defines a list of commonly shared property set definitions of an element and an optional set of product representations. It is used to define an element specification the specific product information that is common to all occurrences of that product type ."
 
 #:IFC.xml:41982
 msgid "IfcDistributionPort"
 msgstr "IfcDistributionPort"
 
 msgid "IfcDistributionPort_DEFINITION"
-msgstr "A distribution port is an inlet or outlet of a product through which a particular substance may flow. Distribution ports are used for passage of solid, liquid, or gas substances, as well as electricity for power or communications. Flow segments pipes, ducts, cables may be used to connect ports across products. Distribution ports are defined by system type and flow direction such that for two ports to be connected, they must share the same system type and have opposite flow directions one side being a SOURCE and the other being a SINK . Ports are similar to openings in that they do not have any visible geometry such geometry is captured at the shape representation of the enclosing element or element type. Ports may have placement that indicates the position and orientation of the connection. Ports are assigned the distribution systems in order to indicate its role in a particular system, e.g. cold water inlet. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Ports are now related to products and product types using the [[IfcRelNests]] relationship use of [[IfcRelConnectsPortToElement]] is now reserved for dynamically attached ports such as drilling a hole in a tank ."
+msgstr "A distribution port is an inlet or outlet of a product through which a particular substance may flow."
 
 #:IFC.xml:41983
 msgid "IfcDistributionPort_FlowDirection"
@@ -197,7 +197,7 @@ msgid "IfcDistributionPortTypeEnum"
 msgstr "IfcDistributionPortTypeEnum"
 
 msgid "IfcDistributionPortTypeEnum_DEFINITION"
-msgstr "This enumeration identifies different types of distribution ports. It is used to designate ports by their general function, which determines applicable property sets and compatible systems. HISTORY New enumeration in IFC4. Items CABLE Connection to cable segment or fitting for distribution of electricity. CABLECARRIER Connection to cable carrier segment or fitting for enclosing cables. DUCT Connection to duct segment or fitting for distribution of air. PIPE Connection to pipe segment or fitting for distribution of solid, liquid, or gas. WIRELESS Wireless connection to communication appliances for distribution of data or communication. USERDEFINED User defined port type. NOTDEFINED Undefined port type."
+msgstr "This enumeration identifies different types of distribution ports. It is used to designate ports by their general function, which determines applicable property sets and compatible systems."
 
 #:IFC.xml:42015
 msgid "IfcDistributionPortTypeEnum_CABLE"
@@ -253,14 +253,14 @@ msgid "IfcDistributionSystem"
 msgstr "IfcDistributionSystem"
 
 msgid "IfcDistributionSystem_DEFINITION"
-msgstr "A distribution system is a network designed to receive, store, maintain, distribute, or control the flow of a distribution media. A common example is a heating hot water system that consists of a pump, a tank, and an interconnected piping system for distributing hot water to terminals. The group [[IfcDistributionSystem]] defines the occurrence of a specialized system for use within the context of building services or utilities for built facilities. Important functionalities for the description of a distribution system are derived from existing IFC entities From [[IfcSystem]] it inherits the ability to couple the built system via [[IfcRelReferencedInSpatialStructure]] to one or more [[IfcSpatialElement]] subtypes as necessary. From [[IfcGroup]] it inherits the inverse attribute IsGroupedBy, pointing to the relationship class [[IfcRelAssignsToGroup]] . This allows the grouping of distribution elements instances of [[IfcDistributionElement]] subtypes . From [[IfcObjectDefinition]] it inherits the inverse attribute IsDecomposedBy pointing to the relationship class [[IfcRelAggregates]] . It provides the hierarchy between the separate partial distribution systems. For example, an electrical main circuit may be aggregated into branch circuits. HISTORY New entity in IFC4. .change ifc2x4 IFC4 CHANGE For electrical power systems, IfcElectricalCircuit has been used for low voltage 12 1000 V power circuits and has been replaced by [[IfcDistributionCircuit]] in IFC4 [[IfcDistributionSystem]] with PredefinedType ELECTRICAL should be used for overall power systems, and [[IfcDistributionCircuit]] with PredefinedType ELECTRICAL should be used for each switched circuit."
+msgstr "A distribution system is a network designed to receive, store, maintain, distribute, or control the flow of a distribution media. A common example is a heating hot water system that consists of a pump, a tank, and an interconnected piping system for distributing hot water to terminals."
 
 #:IFC.xml:42023
 msgid "IfcDistributionSystem_LongName"
 msgstr "LongName"
 
 msgid "IfcDistributionSystem_LongName_DEFINITION"
-msgstr "Long name for a distribution system, used for informal purposes. It should be used, if available, in conjunction with the inherited Name attribute. X 0D NOTE In many scenarios the Name attribute refers to the short name or number of a distribution system or branch circuit, and the LongName refers to a descriptive name."
+msgstr "Long name for a distribution system, used for informal purposes. It should be used, if available, in conjunction with the inherited Name attribute. X 0D"
 
 #:IFC.xml:42028
 msgid "IfcDistributionSystem_PredefinedType"
@@ -274,7 +274,7 @@ msgid "IfcDistributionSystemEnum"
 msgstr "IfcDistributionSystemEnum"
 
 msgid "IfcDistributionSystemEnum_DEFINITION"
-msgstr "This enumeration identifies different types of distribution systems. It is used to designate systems by their function as well as ports of devices within such systems to restrict connectivity to compatible connections. HISTORY New enumeration in IFC4. Ports for cable carriers may be connected using [[IfcCableCarrierSegment]] and [[IfcCableCarrierFitting]] . Type objects for cable carrier segments and fittings [[IfcCableCarrierSegmentType]] and [[IfcCableCarrierFittingType]] that are not specific to a particular system type may have ports with PredefinedType of NOTDEFINED which indicates that occurrences of such objects may connect to ports of any other cable carrier based port. Valid enumerations for cable carriers are the same as that for cables, and may be asserted if ports of the contained cables are all of the same type. Items AIRCONDITIONING Conditioned air distribution system for purposes of maintaining a temperature range within one or more spaces. AUDIOVISUAL A transport of a single media source, having audio and or video streams. CHEMICAL Arbitrary chemical further qualified by property set, such as for medical or industrial use. CHILLEDWATER Nonpotable chilled water, such as circulated through an evaporator. COMMUNICATION COMPRESSEDAIR Compressed air system. CONDENSERWATER Nonpotable water, such as circulated through a condenser. CONTROL A transport or network dedicated to control system usage. CONVEYING Arbitrary supply of substances. DATA A network having general purpose usage. DISPOSAL Arbitrary disposal of substances. DOMESTICCOLDWATER Unheated potable water distribution system. DOMESTICHOTWATER Heated potable water distribution system. DRAINAGE Drainage collection system. EARTHING A path for equipotential bonding, conducting current to the ground. ELECTRICAL A circuit for delivering electrical power. ELECTROACOUSTIC An amplified audio signal such as for loudspeakers. EXHAUST Exhaust air collection system for removing stale or noxious air from one or more spaces. FIREPROTECTION Fire protection sprinkler system. FUEL Arbitrary supply of fuel. GAS Gas phase materials such as methane or natural gas. HAZARDOUS Hazardous material or fluid collection system. HEATING Water or steam heated from a boiler and circulated through radiators. LIGHTING A circuit dedicated for lighting, such as a fixture having sockets for lamps. LIGHTNINGPROTECTION A path for conducting lightning current to the ground. MUNICIPALSOLIDWASTE Items consumed and discarded, commonly known as trash or garbage. OIL Oil distribution system. OPERATIONAL Operating supplies system. POWERGENERATION A path for power generation. RAINWATER Rainwater resulting from precipitation which directly falls on a parcel. REFRIGERATION Refrigerant distribution system for purposes of fulfilling all or parts of a refrigeration cycle. SECURITY A transport or network dedicated to security system usage. SEWAGE Sewage collection system. SIGNAL A raw analog signal, such as modulated data or measurements from sensors. STORMWATER Stormwater resulting from precipitation which runs off or travels over the ground surface. TELEPHONE A transport or network dedicated to telephone system usage. TV A transport of multiple media sources such as analog cable TV, satellite TV, or over the air TV. VACUUM Vacuum distribution system. VENT Vent system for wastewater piping systems. VENTILATION Ventilation air distribution system involved in either the exchange of air to the outside as well as circulation of air within a building. WASTEWATER Water adversely affected in quality by anthropogenic influence, possibly originating from sewage, drainage, or other source. WATERSUPPLY Arbitrary water supply. CATENARY SYSTEM A longitudinal distribution system that supports contact wires, including catenary wire droppers and stich wires. OVERHEAD CONTACTLINE SYSTEM An overhead contact line system above the upper limit of the train using an overhead contact line and a catenary system to supply current to traction units. RETURN CIRCUIT A distribution system which forms the intended path for the traction return current and the current under fault conditions. FIXEDTRANSMISSIONNETWORK Represents all wired networks that provide a data transmission channel using optical fiber cables, copper cables or both. It aggregates many technologies that are based on the multiplexing method. OPERATIONALTELEPHONYSYSTEM A system that allows communications between operators e.g. switchtender, traffic regulator, operational agents, etc. in operational centers and on the infrastructure site e.g. railway, tunnel or road . MOBILENETWORK Mobile network insures wireless communication by providing a secure platform for voice and data communication between infrastructure operators, including drivers, dispatchers, shunting team members and station controllers. MONITORINGSYSTEM Sensor based system for building and infastructure environmental monitoring and control. USERDEFINED NOTDEFINED"
+msgstr "This enumeration identifies different types of distribution systems. It is used to designate systems by their function as well as ports of devices within such systems to restrict connectivity to compatible connections."
 
 #:IFC.xml:42139
 msgid "IfcDistributionSystemEnum_AIRCONDITIONING"
@@ -638,35 +638,35 @@ msgid "IfcEnergyConversionDevice"
 msgstr "IfcEnergyConversionDevice"
 
 msgid "IfcEnergyConversionDevice_DEFINITION"
-msgstr "The distribution flow element [[IfcEnergyConversionDevice]] defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system. Its type is defined by [[IfcEnergyConversionDeviceType]] or its subtypes. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcEnergyConversionDevice]] defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system. Its type is defined by [[IfcEnergyConversionDeviceType]] or its subtypes."
 
 #:IFC.xml:42193
 msgid "IfcEnergyConversionDeviceType"
 msgstr "IfcEnergyConversionDeviceType"
 
 msgid "IfcEnergyConversionDeviceType_DEFINITION"
-msgstr "The element type IfcEnergyConversionType defines a list of commonly shared property set definitions of an energy conversion device and an optional set of product representations. It is used to define an energy conversion device specification the specific product information, that is common to all occurrences of that product type . A energy conversion type is used to define the common properties of a energy conversion device that may be applied to many occurrences of that type. An energy conversion device is a building systems device that converts energy from one form into another such as a boiler combusting gas to heat water , chiller using a refrigeration cycle to cool a liquid , or a cooling coil using the phase change characteristics of a refrigerant to cool air . Energy conversion types or the instantiable subtypes may be exchanged without being already assigned to occurrences. Occurrences of the IfcEnergyConversionType are represented by instances of [[IfcEnergyConversionDevice]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type IfcEnergyConversionType defines a list of commonly shared property set definitions of an energy conversion device and an optional set of product representations. It is used to define an energy conversion device specification the specific product information, that is common to all occurrences of that product type ."
 
 #:IFC.xml:42196
 msgid "IfcFlowController"
 msgstr "IfcFlowController"
 
 msgid "IfcFlowController_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowController]] defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays. Its type is defined by [[IfcFlowControllerType]] or subtypes. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcFlowController]] defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays. Its type is defined by [[IfcFlowControllerType]] or subtypes."
 
 #:IFC.xml:42199
 msgid "IfcFlowControllerType"
 msgstr "IfcFlowControllerType"
 
 msgid "IfcFlowControllerType_DEFINITION"
-msgstr "The element type [[IfcFlowControllerType]] defines a list of commonly shared property set definitions of a flow controller and an optional set of product representations. It is used to define a flow controller specification i.e. the specific product information, that is common to all occurrences of that product type . A flow controller type is used to define the common properties of a flow controller that may be applied to many occurrences of that type. A flow controller is a device that regulates flow within a distribution system, such as a valve in a piping system, modulating damper in an air distribution system, or electrical switch in an electrical distribution system. Flow controller types or the instantiable subtypes may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcFlowControllerType]] are represented by instances of [[IfcFlowController]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowControllerType]] defines a list of commonly shared property set definitions of a flow controller and an optional set of product representations. It is used to define a flow controller specification i.e. the specific product information, that is common to all occurrences of that product type ."
 
 #:IFC.xml:42202
 msgid "IfcFlowDirectionEnum"
 msgstr "IfcFlowDirectionEnum"
 
 msgid "IfcFlowDirectionEnum_DEFINITION"
-msgstr "This enumeration defines the flow direction at a distribution port. For pipe based ports, the direction is the physical flow direction. For duct based ports, the direction is the physical flow direction. Items SOURCE A flow source, where a substance flows out of the connection. SINK A flow sink, where a substance flows into the connection. SOURCEANDSINK Both a source and sink, where a substance flows both into and out of the connection simultaneously. NOTDEFINED Undefined flow direction."
+msgstr "This enumeration defines the flow direction at a distribution port."
 
 #:IFC.xml:42212
 msgid "IfcFlowDirectionEnum_NOTDEFINED"
@@ -701,91 +701,91 @@ msgid "IfcFlowFitting"
 msgstr "IfcFlowFitting"
 
 msgid "IfcFlowFitting_DEFINITION"
-msgstr ""
+msgstr "The distribution flow element [[IfcFlowFitting]] defines the occurrence of a junction or transition in a flow distribution system, such as an elbow or tee. Its type is defined by [[IfcFlowFittingType]] or its subtypes."
 
 #:IFC.xml:42219
 msgid "IfcFlowFittingType"
 msgstr "IfcFlowFittingType"
 
 msgid "IfcFlowFittingType_DEFINITION"
-msgstr "The element type [[IfcFlowFittingType]] defines a list of commonly shared property set definitions of a flow fitting and an optional set of product representations. It is used to define a flow fitting specification i.e. the specific product information, that is common to all occurrences of that product type . A flow fitting type is used to define the common properties of a flow fitting that may be applied to many occurrences of that type. A flow fitting is a device that is used to interconnect flow segments or other fittings within a distribution system, such as a tee in a ducted system that branches flow into two directions, or a junction box in an electrical distribution system. Flow fitting types or the instantiable subtypes may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcFlowFittingType]] are represented by instances of [[IfcFlowFitting]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowFittingType]] defines a list of commonly shared property set definitions of a flow fitting and an optional set of product representations. It is used to define a flow fitting specification i.e. the specific product information, that is common to all occurrences of that product type ."
 
 #:IFC.xml:42222
 msgid "IfcFlowMovingDevice"
 msgstr "IfcFlowMovingDevice"
 
 msgid "IfcFlowMovingDevice_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowMovingDevice]] defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases such as a pump or fan , and typically participates in a flow distribution system. Its type is defined by [[IfcFlowMovingDeviceType]] or its subtypes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcFlowMovingDevice]] defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases such as a pump or fan , and typically participates in a flow distribution system. Its type is defined by [[IfcFlowMovingDeviceType]] or its subtypes."
 
 #:IFC.xml:42225
 msgid "IfcFlowMovingDeviceType"
 msgstr "IfcFlowMovingDeviceType"
 
 msgid "IfcFlowMovingDeviceType_DEFINITION"
-msgstr "The element type [[IfcFlowMovingDeviceType]] defines a list of commonly shared property set definitions of a flow moving device and an optional set of product representations. It is used to define a flow moving device specification i.e. the specific product information, that is common to all occurrences of that product type . A flow moving type is used to define the common properties of a flow moving device that may be applied to many occurrences of that type. A flow moving device is a device that is used to produce a pressure differential in a distribution system, such as a pump, fan, or compressor. Flow moving types or the instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcFlowMovingDeviceType]] are represented by instances of [[IfcFlowMovingDevice]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowMovingDeviceType]] defines a list of commonly shared property set definitions of a flow moving device and an optional set of product representations. It is used to define a flow moving device specification i.e. the specific product information, that is common to all occurrences of that product type ."
 
 #:IFC.xml:42228
 msgid "IfcFlowSegment"
 msgstr "IfcFlowSegment"
 
 msgid "IfcFlowSegment_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowSegment]] defines the occurrence of a segment of a flow distribution system. The [[IfcFlowSegment]] defines a particular occurrence of a segment inserted in the spatial context of a project. The parameters defining the type of the segment and or its shape are defined by the [[IfcFlowSegmentType]] , which is related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead. Concepts Axis Geometry Standard representations are defined at the supertype [[IfcDistributionFlowElement]]. For parametric flow segments where [[IfcMaterialProfileSetUsage]] is defined and an Axis representation is defined, then the Body representation may be generated using the SweptSolid or AdvancedSweptSolid representation types by sweeping the profile s along the axis. Material Profile Set Usage The material of the [[IfcFlowSegment]] is defined using one of the following entities [[IfcMaterialProfileSetUsage]] for parametric segments, this defines the cross section and alignment to the Axis representation, from which the Body representation may be generated. [[IfcMaterialProfileSet]] for non parametric segments having fixed length or path , this may define the cross section for analysis purposes, however the Body representation is independently generated. [[IfcMaterialConstituentSet]] for elements containing multiple materials where profiles are not applicable, this indicates materials at named parts. [[IfcMaterial]] for elements comprised of a single material where profiles are not applicable, this indicates the material. The material is attached by the RelatingMaterial attribute on the [[IfcRelAssociatesMaterial]] relationship. It is accessible by the HasAssociations inverse attribute. Material information can also be given at the [[IfcFlowSegmentType]], defining the common attribute data for all occurrences of the same type. Standard names and material types are defined at subtypes."
+msgstr "The distribution flow element [[IfcFlowSegment]] defines the occurrence of a segment of a flow distribution system."
 
 #:IFC.xml:42231
 msgid "IfcFlowSegmentType"
 msgstr "IfcFlowSegmentType"
 
 msgid "IfcFlowSegmentType_DEFINITION"
-msgstr "The element type [[IfcFlowSegmentType]] defines a list of commonly shared property set definitions of a flow segment and an optional set of product representations. It is used to define a flow segment specification the specific product information, that is common to all occurrences of that product type . A flow segment type is used to define the common properties of a flow segment that may be applied to many occurrences of that type. A flow segment is a section of a distribution system, such as a duct, pipe, or conduit, that typically has only two ports. Flow segment types or the instantiable subtypes may be exchanged without being already assigned to occurrences. Occurrences of the [[IfcFlowSegmentType]] are represented by instances of [[IfcFlowSegment]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowSegmentType]] defines a list of commonly shared property set definitions of a flow segment and an optional set of product representations. It is used to define a flow segment specification the specific product information, that is common to all occurrences of that product type ."
 
 #:IFC.xml:42234
 msgid "IfcFlowStorageDevice"
 msgstr "IfcFlowStorageDevice"
 
 msgid "IfcFlowStorageDevice_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowStorageDevice]] defines the occurrence of a device that participates in a distribution system and is used for temporary storage such as a tank . Its type is defined by [[IfcFlowStorageDeviceType]] or its subtypes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcFlowStorageDevice]] defines the occurrence of a device that participates in a distribution system and is used for temporary storage such as a tank . Its type is defined by [[IfcFlowStorageDeviceType]] or its subtypes."
 
 #:IFC.xml:42237
 msgid "IfcFlowStorageDeviceType"
 msgstr "IfcFlowStorageDeviceType"
 
 msgid "IfcFlowStorageDeviceType_DEFINITION"
-msgstr "The element type [[IfcFlowStorageDeviceType]] defines a list of commonly shared property set definitions of a flow storage device and an optional set of product representations. It is used to define a flow storage device specification the specific product information that is common to all occurrences of that product type . A flow storage device is a device used for the temporary storage of a fluid such as a tank or the voltage potential induced by the induced electron flow such as a battery . Flow storage types or the instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcFlowStorageDeviceType]] are represented by instances of [[IfcFlowStorageDevice]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowStorageDeviceType]] defines a list of commonly shared property set definitions of a flow storage device and an optional set of product representations. It is used to define a flow storage device specification the specific product information that is common to all occurrences of that product type ."
 
 #:IFC.xml:42240
 msgid "IfcFlowTerminal"
 msgstr "IfcFlowTerminal"
 
 msgid "IfcFlowTerminal_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowTerminal]] defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system such as an air outlet, drain, water closet, or sink . A terminal is typically a point at which a system interfaces with an external environment. Its type is defined by [[IfcFlowTerminalType]] or its subtypes. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcFlowTerminal]] defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system such as an air outlet, drain, water closet, or sink . A terminal is typically a point at which a system interfaces with an external environment. Its type is defined by [[IfcFlowTerminalType]] or its subtypes."
 
 #:IFC.xml:42243
 msgid "IfcFlowTerminalType"
 msgstr "IfcFlowTerminalType"
 
 msgid "IfcFlowTerminalType_DEFINITION"
-msgstr "The element type [[IfcFlowTerminalType]] defines a list of commonly shared property set definitions of a flow terminal and an optional set of product representations. It is used to define a flow terminal specification the specific product information that is common to all occurrences of that product type . A flow terminal type is used to define the common properties of a flow terminal that may be applied to many occurrences of that type. A flow terminal acts as a terminus or beginning element in a distribution system such as a ceiling register in a ducted air distribution system, a sink in a waste water system, or a light fixture in an electrical lighting system. Flow terminal types or the instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcFlowTerminalType]] are represented by instances of [[IfcFlowTerminal]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowTerminalType]] defines a list of commonly shared property set definitions of a flow terminal and an optional set of product representations. It is used to define a flow terminal specification the specific product information that is common to all occurrences of that product type ."
 
 #:IFC.xml:42246
 msgid "IfcFlowTreatmentDevice"
 msgstr "IfcFlowTreatmentDevice"
 
 msgid "IfcFlowTreatmentDevice_DEFINITION"
-msgstr "The distribution flow element [[IfcFlowTreatmentDevice]] defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system. Its type is defined by [[IfcFlowTreatmentDeviceType]] or its subtypes. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE This entity has been deprecated for instantiation and will become ABSTRACT in a future release new subtypes should now be used instead."
+msgstr "The distribution flow element [[IfcFlowTreatmentDevice]] defines the occurrence of a device typically used to remove unwanted matter from a fluid, either liquid or gas, and typically participates in a flow distribution system. Its type is defined by [[IfcFlowTreatmentDeviceType]] or its subtypes."
 
 #:IFC.xml:42249
 msgid "IfcFlowTreatmentDeviceType"
 msgstr "IfcFlowTreatmentDeviceType"
 
 msgid "IfcFlowTreatmentDeviceType_DEFINITION"
-msgstr "The element type [[IfcFlowTreatmentDeviceType]] defines a list of commonly shared property set definitions of a flow treatment device and an optional set of product representations. It is used to define a flow treatment device specification the specific product information that is common to all occurrences of that product type . A flow treatment device is a device used to change the physical properties of the medium, such as an air, oil or water filter used to remove particulates from the fluid , or a duct silencer used to attenuate noise . Flow treatment types or the instantiable subtypes may be exchanged without being already assigned to occurrences. The occurrences of the [[IfcFlowTreatmentDeviceType]] are represented by instances of [[IfcFlowTreatmentDevice]] or its subtypes. HISTORY New entity in IFC2x2."
+msgstr "The element type [[IfcFlowTreatmentDeviceType]] defines a list of commonly shared property set definitions of a flow treatment device and an optional set of product representations. It is used to define a flow treatment device specification the specific product information that is common to all occurrences of that product type ."
 
 #:IFC.xml:42252
 msgid "IfcRelFlowControlElements"
 msgstr "IfcRelFlowControlElements"
 
 msgid "IfcRelFlowControlElements_DEFINITION"
-msgstr "This objectified relationship between a distribution flow element occurrence and one to many control element occurrences indicates that the control element s sense or control some aspect of the flow element. It is applied to [[IfcDistributionFlowElement]] and [[IfcDistributionControlElement]] . This relationship may be used to indicate an operational relationship such as an actuator operating a valve, damper, or switch. It may also be used to indicate a sensing relationship such as a sensor detecting conditions of fluid flow. This relationship implies a sensing or controlling relationship if elements are merely connected without any control relationship, then [[IfcRelConnectsElements]] should be used. HISTORY New entity in IFC2x."
+msgstr "This objectified relationship between a distribution flow element occurrence and one to many control element occurrences indicates that the control element s sense or control some aspect of the flow element. It is applied to [[IfcDistributionFlowElement]] and [[IfcDistributionControlElement]]."
 
 #:IFC.xml:41936
 msgid "IfcRelFlowControlElements_RelatedControlElements"
@@ -911,14 +911,14 @@ msgid "Pset_DistributionChamberElementCommon"
 msgstr "Pset DistributionChamberElementCommon"
 
 msgid "Pset_DistributionChamberElementCommon_DEFINITION"
-msgstr "Common properties of all occurrences of [[IfcDistributionChamberElement]]. Comments Reference E.g. WWS VS1 400 001 , which indicates the occurrence belongs to system WWS, subsystems VSI 400, and has the component number 001."
+msgstr "Common properties of all occurrences of [[IfcDistributionChamberElement]]."
 
 #:IFC.xml:42496
 msgid "Pset_DistributionChamberElementTypeFormedDuct"
 msgstr "Pset DistributionChamberElementTypeFormedDuct"
 
 msgid "Pset_DistributionChamberElementTypeFormedDuct_DEFINITION"
-msgstr "Space formed in the ground for the passage of pipes, cables, ducts. Comments ClearDepth It indicates the formed space in the duct. ClearWidth It indicates the formed space in the duct."
+msgstr "Space formed in the ground for the passage of pipes, cables, ducts."
 
 #:IFC.xml:42497
 msgid "AccessCoverLoadRating"
@@ -1317,7 +1317,7 @@ msgid "ElectricalConnectionType"
 msgstr "ElectricalConnectionType"
 
 msgid "ElectricalConnectionType_DEFINITION"
-msgstr "The physical port connection ACPLUG AC plug DCPLUG DC plug CRIMP bare wire"
+msgstr "The physical port connection"
 
 #:IFC.xml:42951
 msgid "HasConnector"
@@ -1345,21 +1345,21 @@ msgid "Pset_DistributionPortTypeDuct"
 msgstr "Pset DistributionPortTypeDuct"
 
 msgid "Pset_DistributionPortTypeDuct_DEFINITION"
-msgstr "Duct port occurrence attributes attached to an instance of [[IfcDistributionPort]]. Comments DryBulbTemperature Indicates dry bulb temperature of the air. NominalHeight The nominal height of the duct connection. Only provided for rectangular shaped ducts."
+msgstr "Duct port occurrence attributes attached to an instance of [[IfcDistributionPort]]."
 
 #:IFC.xml:42978
 msgid "ConnectionSubType"
 msgstr "ConnectionSubType"
 
 msgid "ConnectionSubType_DEFINITION"
-msgstr "The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended ACPLUG A, B, C, D, E, F, EF, G, H, I, J, K, L, M DIN Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P DSub DA15, DB25, DC37, DD50, DE9, DE15 EIAJ RC5720 HDMI A, B, C RADIO IEEE802.11g, IEEE802.11n RJ 4P4C, 6P2C, 8P8C SOCKET E 11, E 12, E 14, E 17, E 26, E 27, E 39, E 40 TRS TS Mini, TS SubMini, TRS Mini, TRS SubMini"
+msgstr "The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended"
 
 #:IFC.xml:42983
 msgid "ConnectionType"
 msgstr "ConnectionType"
 
 msgid "ConnectionType_DEFINITION"
-msgstr "The end style treatment of the duct port BEADEDSLEEVE Beaded Sleeve. COMPRESSION Compression. CRIMP Crimp. DRAWBAND Drawband. DRIVESLIP Drive slip. FLANGED Flanged. OUTSIDESLEEVE Outside Sleeve. SLIPON Slipon. SOLDERED Soldered. SSLIP S Slip. STANDINGSEAM Standing seam. SWEDGE Swedge. WELDED Welded. OTHER Another type of end style has been applied. NONE No end style has been applied."
+msgstr "The end style treatment of the duct port"
 
 #:IFC.xml:42988
 msgid "DryBulbTemperature"
@@ -1394,7 +1394,7 @@ msgid "Pset_DistributionPortTypePipe"
 msgstr "Pset DistributionPortTypePipe"
 
 msgid "Pset_DistributionPortTypePipe_DEFINITION"
-msgstr "Pipe port occurrence attributes attached to an instance of [[IfcDistributionPort]]. Comments NominalDiameter The nominal diameter of the pipe connection."
+msgstr "Pipe port occurrence attributes attached to an instance of [[IfcDistributionPort]]."
 
 #:IFC.xml:43040
 msgid "FlowCondition"
@@ -1415,7 +1415,7 @@ msgid "Pset_DistributionSystemCommon"
 msgstr "Pset DistributionSystemCommon"
 
 msgid "Pset_DistributionSystemCommon_DEFINITION"
-msgstr "Distribution system occurrence attributes attached to an instance of [[IfcDistributionSystem]]. Comments Reference E.g. WWS VS1 , which indicates the system to be WWS, subsystems VSI 400."
+msgstr "Distribution system occurrence attributes attached to an instance of [[IfcDistributionSystem]]."
 
 #:IFC.xml:43093
 msgid "Pset_DistributionSystemTypeElectrical"
@@ -1443,7 +1443,7 @@ msgid "ElectricalSystemType"
 msgstr "ElectricalSystemType"
 
 msgid "ElectricalSystemType_DEFINITION"
-msgstr "For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground Earth . Identifiers that may be assigned through IEC 60364 are TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors, TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system, TN S type system, a TN type system having separate neutral and protective conductors throughout the system, TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system, TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source, IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed."
+msgstr "For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground Earth . Identifiers that may be assigned through IEC 60364 are"
 
 #:IFC.xml:43109
 msgid "MaximumAllowedVoltageDrop"
@@ -1478,7 +1478,7 @@ msgid "Pset_DistributionSystemTypeVentilation"
 msgstr "Pset DistributionSystemTypeVentilation"
 
 msgid "Pset_DistributionSystemTypeVentilation_DEFINITION"
-msgstr "This property set is used to define the general characteristics of the duct design parameters within a system. HISTORY New property set in IFC Release 2.0. Renamed from Pset DuctDesignCriteria in IFC4. Comments PressureClass Nominal pressure rating of the system components."
+msgstr "This property set is used to define the general characteristics of the duct design parameters within a system. HISTORY New property set in IFC Release 2.0. Renamed from Pset DuctDesignCriteria in IFC4."
 
 #:IFC.xml:43131
 msgid "AspectRatio"
@@ -1555,7 +1555,7 @@ msgid "Pset_OutsideDesignCriteria"
 msgstr "Pset OutsideDesignCriteria"
 
 msgid "Pset_OutsideDesignCriteria_DEFINITION"
-msgstr "Outside air conditions used as the basis for calculating thermal loads at peak conditions, as well as the weather data location from which these conditions were obtained. HISTORY New property set in IFC Release 1.0. Comments CoolingDryBulb Outside dry bulb temperature HeatingDryBulb At outside."
+msgstr "Outside air conditions used as the basis for calculating thermal loads at peak conditions, as well as the weather data location from which these conditions were obtained. HISTORY New property set in IFC Release 1.0."
 
 #:IFC.xml:43188
 msgid "BuildingThermalExposure"
@@ -1660,14 +1660,14 @@ msgid "SoundScale"
 msgstr "SoundScale"
 
 msgid "SoundScale_DEFINITION"
-msgstr "The reference sound scale. DBA Decibels in an A weighted scale DBB Decibels in an B weighted scale DBC Decibels in an C weighted scale NC Noise criteria NR Noise rating"
+msgstr "The reference sound scale."
 
 #:IFC.xml:43261
 msgid "Pset_SoundGeneration"
 msgstr "Pset SoundGeneration"
 
 msgid "Pset_SoundGeneration_DEFINITION"
-msgstr "Common definition to capture the properties of sound typically used within the context of building services and flow distribution systems. This property set is instantiated multiple times on an object for each frequency band. HISTORY New property set in IFC Release 2x4. Comments SoundCurve Table of sound frequencies and sound power measured in decibels at a reference power of 1 picowatt 10 12 watt for the referenced octave band frequency."
+msgstr "Common definition to capture the properties of sound typically used within the context of building services and flow distribution systems. This property set is instantiated multiple times on an object for each frequency band. HISTORY New property set in IFC Release 2x4."
 
 #:IFC.xml:43262
 msgid "SoundCurve"
@@ -1681,7 +1681,7 @@ msgid "Pset_SpaceAirHandlingDimensioning"
 msgstr "Pset SpaceAirHandlingDimensioning"
 
 msgid "Pset_SpaceAirHandlingDimensioning_DEFINITION"
-msgstr "Properties for Space AirHandling Dimensioning."
+msgstr ""
 
 #:IFC.xml:43269
 msgid "BoundaryAreaHeatLoss"
@@ -1702,7 +1702,7 @@ msgid "CoolingDesignAirFlow"
 msgstr "CoolingDesignAirFlow"
 
 msgid "CoolingDesignAirFlow_DEFINITION"
-msgstr "The air flowrate required during the peak cooling conditions."
+msgstr "CoolingDesignAirFlow"
 
 #:IFC.xml:43289
 msgid "CoolingRelativeHumidity"
@@ -1716,14 +1716,14 @@ msgid "DesignAirFlow"
 msgstr "DesignAirFlow"
 
 msgid "DesignAirFlow_DEFINITION"
-msgstr "The air flowrate required during the peak cooling conditions."
+msgstr "DesignAirFlow"
 
 #:IFC.xml:43299
 msgid "HeatingDesignAirFlow"
 msgstr "HeatingDesignAirFlow"
 
 msgid "HeatingDesignAirFlow_DEFINITION"
-msgstr "The air flowrate required during the peak heating conditions, but could also be determined by minimum ventilation requirement or minimum air change requirements."
+msgstr "HeatingDesignAirFlow"
 
 #:IFC.xml:43309
 msgid "HeatingRelativeHumidity"
@@ -1737,7 +1737,7 @@ msgid "SensibleHeatGain"
 msgstr "SensibleHeatGain"
 
 msgid "SensibleHeatGain_DEFINITION"
-msgstr "The sensible heat or energy gained by the space during the peak conditions."
+msgstr "SensibleHeatGain"
 
 #:IFC.xml:43319
 msgid "TotalHeatGain"
@@ -1758,14 +1758,14 @@ msgid "VentilationDesignAirFlow"
 msgstr "VentilationDesignAirFlow"
 
 msgid "VentilationDesignAirFlow_DEFINITION"
-msgstr "Ventilation outside air requirement for the space."
+msgstr "VentilationDesignAirFlow"
 
 #:IFC.xml:43335
 msgid "Pset_SpaceThermalLoad"
 msgstr "Pset SpaceThermalLoad"
 
 msgid "Pset_SpaceThermalLoad_DEFINITION"
-msgstr "The space thermal load defines all thermal losses and gains occurring within a space or zone. The thermal load source attribute defines an enumeration of possible sources of the thermal load. The maximum, minimum, time series and app Comments DryBulbTemperature Loads from the dry bulb temperature."
+msgstr "The space thermal load defines all thermal losses and gains occurring within a space or zone. The thermal load source attribute defines an enumeration of possible sources of the thermal load. The maximum, minimum, time series and app"
 
 #:IFC.xml:43336
 msgid "AirExchangeRate"
@@ -1968,7 +1968,7 @@ msgid "Pset_ThermalLoad"
 msgstr "Pset ThermalLoad"
 
 msgid "Pset_ThermalLoad_DEFINITION"
-msgstr "Properties for thermal loads of elements."
+msgstr ""
 
 #:IFC.xml:43485
 msgid "AppliancePercentLoadToRadiant"
@@ -2087,5 +2087,5 @@ msgid "Qto_DistributionChamberElementBaseQuantities"
 msgstr "Qto DistributionChamberElementBaseQuantities"
 
 msgid "Qto_DistributionChamberElementBaseQuantities_DEFINITION"
-msgstr "Base quantities that are common to the definition of all occurrences of distribution chamber elements. Comments Depth Indicates the depth of the element. NetSurfaceArea Total net area of the inner surface of the chamber, subtracting any openings such as for pipes, ducts, or cables. NetVolume Total net volume of the chamber, subtracting any enclosed elements such as pipes, ducts, cables, or equipment."
+msgstr "Base quantities that are common to the definition of all occurrences of distribution chamber elements."
 

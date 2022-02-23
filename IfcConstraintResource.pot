@@ -15,7 +15,7 @@ msgid "IfcBenchmarkEnum"
 msgstr "IfcBenchmarkEnum"
 
 msgid "IfcBenchmarkEnum_DEFINITION"
-msgstr "[[IfcBenchmarkEnum]] is an enumeration used to identify the logical comparators that can be applied in conjunction with constraint values. HISTORY New enumeration in IFC2.0 .change ifc2x4 IFC4 CHANGE Extended to include comparators for item set and set item comparisons INCLUDES, NOTINCLUDES, INCLUDEDIN and NOTINCLUDEDIN, to test if an individual item is a member of a given aggregation, or if an aggregation has a given individual item as a member. Items GREATERTHAN Identifies that a value must be greater than that set by the constraint. GREATERTHANOREQUALTO Identifies that a value must be either greater than or equal to that set by the constraint. LESSTHAN Identifies that a value must be less than that set by the constraint. LESSTHANOREQUALTO Identifies that a value must be either less than or equal to that set by the constraint. EQUALTO Identifies that a value must be equal to that set by the constraint. NOTEQUALTO Identifies that a value must be not equal to that set by the constraint. INCLUDES Identifies that an aggregation set, list or table must include the value individual item set by the constraint. NOTINCLUDES Identifies that an aggregation set, list or table must not include the value individual item set by the constraint. INCLUDEDIN Identifies that a value individual item must be included in the aggregation set, list or table set by the constraint. NOTINCLUDEDIN Identifies that a value individual item must not be included in the aggregation set, list or table set by the constraint."
+msgstr "[[IfcBenchmarkEnum]] is an enumeration used to identify the logical comparators that can be applied in conjunction with constraint values."
 
 #:IFC.xml:2535
 msgid "IfcBenchmarkEnum_EQUALTO"
@@ -92,7 +92,7 @@ msgid "IfcConstraint"
 msgstr "IfcConstraint"
 
 msgid "IfcConstraint_DEFINITION"
-msgstr "An [[IfcConstraint]] is used to define a constraint or limiting value or boundary condition that may be applied to an object or to the value of a property. Constraints may be subdivided into user defined constraints and system defined constraints. User defined constraints are applied by a user and are restricted to high level definitions such as object properties. System defined constraints may apply to any object attribute, are typically defined by an application to enforce data validation or parametric behavior, and are intended to be enforced by applications but not to be directly editable by an end user. [[IfcConstraint]] may be associated with any subtype of [[IfcObjectDefinition]] or [[IfcPropertyDefinition]] through the [[IfcRelAssociatesConstraint]] relationship to indicate a system defined constraint, or may be associated with [[IfcResourceObjectSelect]] such as [[IfcPropertySingleValue]] by [[IfcResourceConstraintRelationship]] to indicate a user defined constraint. A constraint must have a name applied through the [[IfcConstraint]].Name attribute and optionally, a description through [[IfcConstraint]].Description . The grade of the constraint hard, soft, advisory must be specified through [[IfcConstraint]].ConstraintGrade or [[IfcConstraint]].UserDefinedGrade whilst the source, creating actor and time at which the constraint is created may be optionally asserted through [[IfcConstraint]].ConstraintSource , [[IfcConstraint]].CreatingActor and [[IfcConstraint]].CreationTime . A constraint may also have additional external information such as classification or document information associated to it by [[IfcExternalReferenceRelationship]] , accessible through inverse attribute [[IfcConstraint]].HasExternalReferences HISTORY New entity in IFC2.0 .change ifc2x4 IFC4 CHANGE CreationTime changed to [[IfcDateTime]] for ISO 8601 representation, HasExternalReferences new inverse attribute."
+msgstr "An [[IfcConstraint]] is used to define a constraint or limiting value or boundary condition that may be applied to an object or to the value of a property."
 
 #:IFC.xml:2608
 msgid "IfcConstraint_PropertiesForConstraint"
@@ -106,7 +106,7 @@ msgid "IfcConstraint_HasExternalReferences"
 msgstr "HasExternalReferences"
 
 msgid "IfcConstraint_HasExternalReferences_DEFINITION"
-msgstr "Reference to an external references, e.g. library, classification, or document information, that are associated to the constraint. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgstr "Reference to an external references, e.g. library, classification, or document information, that are associated to the constraint. .change ifc2x4"
 
 #:IFC.xml:2547
 msgid "IfcConstraint_ConstraintGrade"
@@ -155,14 +155,14 @@ msgid "IfcConstraint_UserDefinedGrade"
 msgstr "UserDefinedGrade"
 
 msgid "IfcConstraint_UserDefinedGrade_DEFINITION"
-msgstr "Allows for specification of user defined grade of the constraint beyond the enumeration values hard, soft, advisory provided by ConstraintGrade attribute of type [[IfcConstraintEnum]] . When a value is provided for attribute UserDefinedGrade in parallel the attribute ConstraintGrade shall have enumeration value USERDEFINED."
+msgstr "Allows for specification of user defined grade of the constraint beyond the enumeration values hard, soft, advisory provided by ConstraintGrade attribute of type [[IfcConstraintEnum]]. When a value is provided for attribute UserDefinedGrade in parallel the attribute ConstraintGrade shall have enumeration value USERDEFINED."
 
 #:IFC.xml:2634
 msgid "IfcConstraintEnum"
 msgstr "IfcConstraintEnum"
 
 msgid "IfcConstraintEnum_DEFINITION"
-msgstr "[[IfcConstraintEnum]] is an enumeration used to qualify a constraint. HISTORY New enumeration in IFC2.0 Items HARD Qualifies a constraint such that it must be followed rigidly within or at the values set. SOFT Qualifies a constraint such that it should be followed within or at the values set. ADVISORY Qualifies a constraint such that it is advised that it is followed within or at the values set. USERDEFINED A user defined grade indicated by a separate attribute at the referencing entity. NOTDEFINED Grade has not been specified."
+msgstr "[[IfcConstraintEnum]] is an enumeration used to qualify a constraint."
 
 #:IFC.xml:2635
 msgid "IfcConstraintEnum_ADVISORY"
@@ -204,7 +204,7 @@ msgid "IfcLogicalOperatorEnum"
 msgstr "IfcLogicalOperatorEnum"
 
 msgid "IfcLogicalOperatorEnum_DEFINITION"
-msgstr "[[IfcLogicalOperatorEnum]] is an enumeration that defines the logical operators that may be applied for the satisfaction of one or more operands [[IfcConstraint]] at a time. The following tables illustrates application of [[IfcLogicalOperatorEnum]] in a case of three operands, A, B and C, for each operator. Operand A F F F T F T T T B F F T F T F T T C F T F F T T F T RESULT F F F F F F F T Table 1 LOGICALAND A,B,C Operand A F F F T F T T T B F F T F T F T T C F T F F T T F T RESULT F T T T T T T T Table 2 LOGICALOR A,B,C Operand A F F F T F T T T B F F T F T F T T C F T F F T T F T RESULT F T T T F F F F Table 3 LOGICALXOR A,B,C Operand A F F F T F T T T B F F T F T F T T C F T F F T T F T RESULT T T T T T T T F Table 4 LOGICALNOTAND A,B,C Operand A F F F T F T T T B F F T F T F T T C F T F F T T F T RESULT T F F F F F F F Table 5 LOGICALNOTOR A,B,C HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Extended to include LOGICALXOR, LOGICALNOTAND and LOGICALNOTOR. Items LOGICALAND Defines a relationship between operands whereby the result is true if all operands are true, and false if at least one operand is false. LOGICALOR Defines a relationship between operands whereby the result is true if at least one operand is true, and false if all operands are false. LOGICALXOR Defines a relationship between operands whereby the result is true if exactly one operand is true exclusive or . LOGICALNOTAND Defines a relationship between operands whereby the result is true if at least one operand is false, and false if all operands are true. LOGICALNOTOR Defines a relationship between operands whereby the result is true if all operands are false, and false if at least one operand is true."
+msgstr "[[IfcLogicalOperatorEnum]] is an enumeration that defines the logical operators that may be applied for the satisfaction of one or more operands [[IfcConstraint]] at a time."
 
 #:IFC.xml:2642
 msgid "IfcLogicalOperatorEnum_LOGICALAND"
@@ -246,14 +246,14 @@ msgid "IfcMetric"
 msgstr "IfcMetric"
 
 msgid "IfcMetric_DEFINITION"
-msgstr "An [[IfcMetric]] is used to capture quantitative resultant metrics that can be applied to objectives. [[IfcMetric]] is a subtype of [[IfcConstraint]] and may be associated with any subtype of [[IfcRoot]] through the [[IfcRelAssociatesConstraint]] relationship in the IfcControlExtension schema, or may be associated with [[IfcProperty]] by [[IfcResourceConstraintRelationship]] . The aim of [[IfcMetric]] is to capture the quantitative aspects of a constraint. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE ReferencePath attribute added for indicating the value to be constrained along a path of attribute references."
+msgstr "An [[IfcMetric]] is used to capture quantitative resultant metrics that can be applied to objectives."
 
 #:IFC.xml:2666
 msgid "IfcMetric_ReferencePath"
 msgstr "ReferencePath"
 
 msgid "IfcMetric_ReferencePath_DEFINITION"
-msgstr "Optional path to an attribute to be constrained on associated objects. If provided, the metric may be validated by resolving the path to the current value on associated object s , and comparing such value with DataValue according to the Benchmark ."
+msgstr "Optional path to an attribute to be constrained on associated objects. If provided, the metric may be validated by resolving the path to the current value on associated object s , and comparing such value with DataValue according to the Benchmark."
 
 #:IFC.xml:2649
 msgid "IfcMetric_Benchmark"
@@ -267,14 +267,14 @@ msgid "IfcMetric_DataValue"
 msgstr "DataValue"
 
 msgid "IfcMetric_DataValue_DEFINITION"
-msgstr "The value to be compared on associated objects. A null value indicates comparison to null. .change ifc4 IFC4 ADD1 CHANGE This attribute is now optional."
+msgstr "The value to be compared on associated objects. A null value indicates comparison to null. .change ifc4"
 
 #:IFC.xml:2659
 msgid "IfcMetric_ValueSource"
 msgstr "ValueSource"
 
 msgid "IfcMetric_ValueSource_DEFINITION"
-msgstr "Reference source for data values. If DataValue refers to an [[IfcTable]] , this attribute identifies the relevent column identified by [[IfcTableColumn]] . Identifier ."
+msgstr "Reference source for data values."
 
 #:IFC.xml:2678
 msgid "IfcMetricValueSelect"
@@ -288,21 +288,21 @@ msgid "IfcObjective"
 msgstr "IfcObjective"
 
 msgid "IfcObjective_DEFINITION"
-msgstr "An [[IfcObjective]] captures qualitative information for an objective based constraint. [[IfcObjective]] is a subtype of [[IfcConstraint]] and may be associated with any subtype of [[IfcRoot]] through the [[IfcRelAssociatesConstraint]] relationship in the IfcControlExtension schema, or may be associated with [[IfcProperty]] by [[IfcResourceConstraintRelationship]] . The aim of [[IfcObjective]] is to specify the purpose for which the constraint is applied and to capture the benchmark metrics of the constraint. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 CHANGE Attribute BenchmarkValues modified to be a LIST of [[IfcConstraint]] , attribute ResultValues replaced with [[IfcLogicalOperatorEnum]] ."
+msgstr "An [[IfcObjective]] captures qualitative information for an objective based constraint."
 
 #:IFC.xml:2584
 msgid "IfcObjective_BenchmarkValues"
 msgstr "BenchmarkValues"
 
 msgid "IfcObjective_BenchmarkValues_DEFINITION"
-msgstr "A list of nested constraints. .change ifc2x4 IFC2X4 CHANGE Modified to be a LIST of nested constraints, which replaces the former IfcConstraintAggregationRelationship ."
+msgstr "A list of nested constraints."
 
 #:IFC.xml:2680
 msgid "IfcObjective_LogicalAggregator"
 msgstr "LogicalAggregator"
 
 msgid "IfcObjective_LogicalAggregator_DEFINITION"
-msgstr "Enumeration that identifies the logical type of aggregation for the benchmark metrics. .change ifc2x4 IFC2X4 CHANGE This attribute replaces replaces the former ResultValues attribute and indicates the aggregation behavior formerly defined at IfcConstraintAggregationRelationship ."
+msgstr "Enumeration that identifies the logical type of aggregation for the benchmark metrics."
 
 #:IFC.xml:2685
 msgid "IfcObjective_ObjectiveQualifier"
@@ -323,7 +323,7 @@ msgid "IfcObjectiveEnum"
 msgstr "IfcObjectiveEnum"
 
 msgid "IfcObjectiveEnum_DEFINITION"
-msgstr "[[IfcObjectiveEnum]] is an enumeration used to determine the objective for which purpose the constraint needs to be satisfied. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Extended to include CODEWAIVER. Items CODECOMPLIANCE A constraint whose objective is to ensure satisfaction of a code compliance provision. CODEWAIVER A constraint whose objective is to identify an agreement that code compliance requirements the waiver will not be enforced. DESIGNINTENT A constraint whose objective is to ensure satisfaction of a design intent provision. EXTERNAL A constraint whose objective is to synchronize data with an external source such as a file HEALTHANDSAFETY A constraint whose objective is to ensure satisfaction of a health and safety provision. MERGECONFLICT A constraint whose objective is to resolve a conflict such as merging data from multiple sources. MODELVIEW A constraint whose objective is to ensure data conforms to a model view definition. PARAMETER A constraint whose objective is to calculate a value based on other referenced values. REQUIREMENT A constraint whose objective is to ensure satisfaction of a project requirement provision. SPECIFICATION A constraint whose objective is to ensure satisfaction of a specification provision. TRIGGERCONDITION A constraint whose objective is to indicate a limiting value beyond which the condition of an object requires a particular form of attention. USERDEFINED NOTDEFINED"
+msgstr "[[IfcObjectiveEnum]] is an enumeration used to determine the objective for which purpose the constraint needs to be satisfied."
 
 #:IFC.xml:2698
 msgid "IfcObjectiveEnum_CODECOMPLIANCE"
@@ -428,7 +428,7 @@ msgid "IfcReference_InnerReference"
 msgstr "InnerReference"
 
 msgid "IfcReference_InnerReference_DEFINITION"
-msgstr "Optional reference to an inner value for ENTITY, SELECT, SET, or LIST attributes. A path may be formed by linking [[IfcReference]] instances together. EXAMPLE A material layer thickness may be referenced using several instances 1 IFCREFERENCE , [[IfcSlab]] , HasAssociations , 2 2 IFCREFERENCE , [[IfcMaterialLayerSet]] , MaterialLayers , 3 3 IFCREFERENCE Core , [[IfcMaterialLayer]] , LayerThickness ,"
+msgstr "Optional reference to an inner value for ENTITY, SELECT, SET, or LIST attributes. A path may be formed by linking [[IfcReference]] instances together."
 
 #:IFC.xml:2713
 msgid "IfcReference_AttributeIdentifier"
@@ -442,7 +442,7 @@ msgid "IfcReference_InstanceName"
 msgstr "InstanceName"
 
 msgid "IfcReference_InstanceName_DEFINITION"
-msgstr "Optionally identifies an instance within a collection according to name. If the instance has an attribute called Name , such attribute is used for comparison otherwise the first STRING based attribute of the entity is used. EXAMPLE [[IfcRoot]] based entities such as [[IfcPropertySet]] use the Name attribute [[IfcRepresentation]] entities use the RepresentationIdentifier attribute."
+msgstr "Optionally identifies an instance within a collection according to name. If the instance has an attribute called Name , such attribute is used for comparison otherwise the first STRING based attribute of the entity is used."
 
 #:IFC.xml:2723
 msgid "IfcReference_ListPositions"
@@ -456,14 +456,14 @@ msgid "IfcReference_TypeIdentifier"
 msgstr "TypeIdentifier"
 
 msgid "IfcReference_TypeIdentifier_DEFINITION"
-msgstr "Optional identifier of the entity or type such as [[IfcMaterialLayerSet]] . For entity, type, or select based references within a collection, this resolves the reference to such type. If omitted, the type is assumed to be the same as the declared referencing attribute. EXAMPLE [[IfcRelAssociatesMaterial]] . RelatingMaterial may be resolved to [[IfcMaterialLayerSet]] ."
+msgstr "Optional identifier of the entity or type such as [[IfcMaterialLayerSet]] . For entity, type, or select based references within a collection, this resolves the reference to such type. If omitted, the type is assumed to be the same as the declared referencing attribute."
 
 #:IFC.xml:2760
 msgid "IfcResourceConstraintRelationship"
 msgstr "IfcResourceConstraintRelationship"
 
 msgid "IfcResourceConstraintRelationship_DEFINITION"
-msgstr "An [[IfcResourceConstraintRelationship]] is a relationship entity that enables a constraint to be related to one or more resource level objects. An [[IfcResourceConstraintRelationship]] allows for the specification of a constraint to be applied to many entity types. An important case is to apply constraints to properties. The constraints applied therefore enable a property to carry values identifying requirements as well as those identifying the fulfilment of those requirements. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Renamed from IfcPropertyConstraintRelationship and extended to apply to all resource level entities. Subtyped from [[IfcResourceLevelRelationship]] ."
+msgstr "An [[IfcResourceConstraintRelationship]] is a relationship entity that enables a constraint to be related to one or more resource level objects."
 
 #:IFC.xml:2608
 msgid "IfcResourceConstraintRelationship_RelatingConstraint"

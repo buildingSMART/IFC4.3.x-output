@@ -15,7 +15,7 @@ msgid "IfcApplication"
 msgstr "IfcApplication"
 
 msgid "IfcApplication_DEFINITION"
-msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5."
+msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer."
 
 #:IFC.xml:175
 msgid "IfcApplication_ApplicationDeveloper"
@@ -50,7 +50,7 @@ msgid "IfcChangeActionEnum"
 msgstr "IfcChangeActionEnum"
 
 msgid "IfcChangeActionEnum_DEFINITION"
-msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed Items NOCHANGE Object has not been modified. MODIFIED A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. ADDED The object has been created by the user and application defined by the OwningUser and OwningApplication respectively. DELETED The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. NOTDEFINED The change action is not known or has not been defined."
+msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are"
 
 #:IFC.xml:49353
 msgid "IfcChangeActionEnum_ADDED"
@@ -92,7 +92,7 @@ msgid "IfcOwnerHistory"
 msgstr "IfcOwnerHistory"
 
 msgid "IfcOwnerHistory_DEFINITION"
-msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate."
+msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties."
 
 #:IFC.xml:321
 msgid "IfcOwnerHistory_OwningUser"
@@ -155,7 +155,7 @@ msgid "IfcStateEnum"
 msgstr "IfcStateEnum"
 
 msgid "IfcStateEnum_DEFINITION"
-msgstr "The [[IfcStateEnum]] enumeration identifies the state or accessibility of the object for example, read write, locked . Valid enumerations are HISTORY New enumeration in IFC2.0. .change ifc2x3 IFC2x3 CHANGE This concept was initially introduced in IFC2.0 as IfcModifiedFlag of type BINARY 3 FIXED and has been modified in R2x3 to an enumeration. It was initially introduced as a first step towards providing facilities for partial model exchange and is intended for use primarily by a model server so that an application can identify the state of the object. Items READWRITE Object is in a Read Write state. It may be modified by an application. READONLY Object is in a Read Only state. It may be viewed but not modified by an application. LOCKED Object is in a Locked state. It may not be accessed by an application. READWRITELOCKED Object is in a Read Write Locked state. It may not be accessed by an application. READONLYLOCKED Object is in a Read Only Locked state. It may not be accessed by an application."
+msgstr "The [[IfcStateEnum]] enumeration identifies the state or accessibility of the object for example, read write, locked ."
 
 #:IFC.xml:49382
 msgid "IfcStateEnum_LOCKED"
@@ -197,7 +197,7 @@ msgid "IfcTable"
 msgstr "IfcTable"
 
 msgid "IfcTable_DEFINITION"
-msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. Table use .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. Table use alternative .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added."
+msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects."
 
 #:IFC.xml:49412
 msgid "IfcTable_Rows"
@@ -246,14 +246,14 @@ msgid "IfcTableColumn"
 msgstr "IfcTableColumn"
 
 msgid "IfcTableColumn_DEFINITION"
-msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4."
+msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]]. Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects."
 
 #:IFC.xml:2748
 msgid "IfcTableColumn_ReferencePath"
 msgstr "ReferencePath"
 
 msgid "IfcTableColumn_ReferencePath_DEFINITION"
-msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied. For constraints, such path is relative to the [[IfcObjectDefinition]] associated by [[IfcRelAssociatesConstraint]] .RelatedObjects. For a constraint to be satisified, exactly one row of the table must match the referenced object for all columns where the ReferencePath attribute is set."
+msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied."
 
 #:IFC.xml:49437
 msgid "IfcTableColumn_Description"
@@ -288,14 +288,14 @@ msgid "IfcTableRow"
 msgstr "IfcTableRow"
 
 msgid "IfcTableRow_DEFINITION"
-msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. .. .. .. .. figures ifctablerow image1.gif Figure 337 Table row use Figure 337 illustrates table row use. .. .. .. .. figures ifctablerow image2.gif Figure 338 Table row use alternative Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . HISTORY New entity in IFC1.5."
+msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]]."
 
 #:IFC.xml:49459
 msgid "IfcTableRow_IsHeading"
 msgstr "IsHeading"
 
 msgid "IfcTableRow_IsHeading_DEFINITION"
-msgstr "Flag which identifies if the row is a heading row or a row which contains row values. NOTE If the row is a heading, the flag takes the value TRUE."
+msgstr "Flag which identifies if the row is a heading row or a row which contains row values."
 
 #:IFC.xml:49464
 msgid "IfcTableRow_RowCells"
@@ -309,5 +309,5 @@ msgid "IfcGloballyUniqueId"
 msgstr "IfcGloballyUniqueId"
 
 msgid "IfcGloballyUniqueId_DEFINITION"
-msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 0123456789012345678901234567890123456789012345678901234567890123 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1."
+msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below"
 
