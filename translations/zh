@@ -9,1438 +9,1045 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcKernel.pot\n"
-"X-Crowdin-File-ID: 50\n"
+"X-Crowdin-File: /master/IfcArchitectureDomain.pot\n"
+"X-Crowdin-File-ID: 24\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-24 03:59\n"
 
-#:IFC.xml:19909
-msgid "IfcActor"
-msgstr "镜头"
+#:IFC.xml:632
+msgid "IfcDoorLiningProperties"
+msgstr "IfcDoorLiningProperties"
 
-msgid "IfcActor_DEFINITION"
-msgstr "The [[IfcActor]] defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model. This includes name, address, telecommunication addresses, and roles. HISTORY New entity in IFC2.0"
+msgid "IfcDoorLiningProperties_DEFINITION"
+msgstr "The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining. NOTE The [[IfcDoorLiningProperties]] shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute [[IfcDoorType]] .ParameterTakesPrecedence is set TRUE. The [[IfcDoorLiningProperties]] are included in the list of properties of [[IfcDoorType]] .HasPropertySets. More information about the door lining can be included in the same list of the IfcDoorTyype using another [[IfcPropertySet]] for dynamic extensions. The [[IfcDoorLiningProperties]] does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type which is inserted by the [[IfcDoor]] into the spatial context of the project as shown in Figure 1. The parameters of the [[IfcDoorLiningProperties]] define a standard door lining, including if given a threshold and a transom. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcDoor]] , which inserts the [[IfcDoorType]] . The lining is applied to the left, right and upper side of the opening reveal. The parameters are LiningDepth, if omited, equal to wall thickness this only takes effect if a value for LiningThickness is given. If both parameters are not given, then there is no lining. LiningThickness LiningToPanelOffsetX LiningToPanelOffsetY NOTE The parameters LiningToPanelOffsetX and LiningToPanelOffsetY are added in IFC4. The lining can only cover part of the opening reveal. LiningOffset given if lining edge has an offset to the x axis of the local placement. NOTE In addition to the LiningOffset, the local placement of the [[IfcDoor]] can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by LiningOffset. The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are CasingDepth CasingThickness The lining may include a threshold, which covers the bottom side of the opening. The parameters are ThresholdDepth if omited, equal to wall thickness this only takes effect if a value for ThresholdThickness is given. If both parameters are not given, then there is no threshold. ThresholdThickness ThresholdOffset not shown in figure given, if the threshold edge has an offset to the x axis of the local placement. The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by TransomOffset a parallel edge to the x axis of the local placement TransomThickness The depth of the transom is identical to the depth of the lining and not given as separate parameter. Figure 1 Door lining properties NOTE LiningDepth describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used like the same type of single swing door , but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to automatically aligned to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to ThresholdDepth . HISTORY New entity in IFC2.0. Has been renamed from IfcDoorLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
 
-#:IFC.xml:19932
-msgid "IfcActor_IsActingUpon"
-msgstr "IsactingUn"
+#:IFC.xml:695
+msgid "IfcDoorLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcActor_IsActingUpon_DEFINITION"
-msgstr "参考将行为者与对象联系在一起的关系。"
+msgid "IfcDoorLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "如果给出形状，形状部分反映了门形状的部分，这部分是门框。 .变更ifc2x4 IFC4 变迁. 该属性已废弃，不再使用，即其值应为 NIL 。"
 
-#:IFC.xml:19910
-msgid "IfcActor_TheActor"
-msgstr "观战者"
+#:IFC.xml:633
+msgid "IfcDoorLiningProperties_CasingDepth"
+msgstr "连铸深度："
 
-msgid "IfcActor_TheActor_DEFINITION"
-msgstr "关于行为者的信息。"
+msgid "IfcDoorLiningProperties_CasingDepth_DEFINITION"
+msgstr "垂直于门叶的平面外壳尺寸深度。 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-#:IFC.xml:19946
-msgid "IfcComplexPropertyTemplate"
-msgstr "IfcComplex属性模板"
+#:IFC.xml:638
+msgid "IfcDoorLiningProperties_CasingThickness"
+msgstr "铸造厚度"
 
-msgid "IfcComplexPropertyTemplate_DEFINITION"
-msgstr "The [[IfcComplexPropertyTemplate]] defines the template for all complex properties, either the [[IfcComplexProperty]] s, or the [[IfcPhysicalComplexQuantity]] s. The individual complex property templates are interpreted according to their Name attribute and and optional UsageName attribute. HISTORY New entity in IFC4."
+msgid "IfcDoorLiningProperties_CasingThickness_DEFINITION"
+msgstr "门叶平面外壳尺寸的厚度 如果给予它，它同样适用于毗邻隔离墙的所有四面。"
 
-#:IFC.xml:19954
-msgid "IfcComplexPropertyTemplate_TemplateType"
-msgstr "模板类型"
+#:IFC.xml:643
+msgid "IfcDoorLiningProperties_LiningDepth"
+msgstr "线程深度"
 
-msgid "IfcComplexPropertyTemplate_TemplateType_DEFINITION"
-msgstr "模板类型"
+msgid "IfcDoorLiningProperties_LiningDepth_DEFINITION"
+msgstr "门框深度，垂直于门框平面上。 如果遗漏并给定了线条厚度，则表示可调整的深度。 。一个根据墙壁厚度调整的深度，插入此门风格。"
 
-#:IFC.xml:19966
-msgid "IfcComplexPropertyTemplate_HasPropertyTemplates"
-msgstr "HasProperty模板"
+#:IFC.xml:648
+msgid "IfcDoorLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcComplexPropertyTemplate_HasPropertyTemplates_DEFINITION"
-msgstr "引用了一组属性模板。只有当属性类型设置为 COMPLEX时，它才能提供。"
+msgid "IfcDoorLiningProperties_LiningOffset_DEFINITION"
+msgstr "平面垂直于门框门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。"
 
-#:IFC.xml:19947
-msgid "IfcComplexPropertyTemplate_UsageName"
-msgstr "用法名称"
+#:IFC.xml:653
+msgid "IfcDoorLiningProperties_LiningThickness"
+msgstr "线条厚度"
 
-msgid "IfcComplexPropertyTemplate_UsageName_DEFINITION"
-msgstr "用法名称"
+msgid "IfcDoorLiningProperties_LiningThickness_DEFINITION"
+msgstr "如上图所述的门线厚度。如果线索值为0。 零表示一个门，没有一线，在这种情况下，所有其他线照参数都应设置为NIL。 如果线条厚度为 NIL ，则表示值不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:19980
-msgid "IfcComplexPropertyTemplateTypeEnum"
-msgstr "IfcComplexPropertyTemplateTypeEnum"
+#:IFC.xml:658
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
 
-msgid "IfcComplexPropertyTemplateTypeEnum_DEFINITION"
-msgstr "This enumeration defines the applicable subtype of instances of [[IfcComplexProperty]] or [[IfcPhysicalComplexQuantity]] that may be created and defined by an [[IfcComplexPropertyTemplate]] . HISTORY New enumeration in IFC4. Items P Q COMPLEX"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "沿本地位置的x轴测量的衬线和窗口面板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
 
-#:IFC.xml:21019
-msgid "IfcComplexPropertyTemplateTypeEnum_P_COMPLEX"
-msgstr "P COMPLEX"
+#:IFC.xml:663
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
 
-msgid "IfcComplexPropertyTemplateTypeEnum_P_COMPLEX_DEFINITION"
-msgstr "P COMPLEX"
+msgid "IfcDoorLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "沿当地位置的y轴测量的衬线和门板之间的偏移。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
 
-#:IFC.xml:21082
-msgid "IfcComplexPropertyTemplateTypeEnum_Q_COMPLEX"
-msgstr "Q COMPLEX"
+#:IFC.xml:668
+msgid "IfcDoorLiningProperties_ThresholdDepth"
+msgstr "阈值深度"
 
-msgid "IfcComplexPropertyTemplateTypeEnum_Q_COMPLEX_DEFINITION"
-msgstr "Q COMPLEX"
+msgid "IfcDoorLiningProperties_ThresholdDepth_DEFINITION"
+msgstr "平面深度垂直于门槛门槛的门叶。只有当门框包括门槛值时才能给出。 如果忽略，给定的阈值厚度则表示可调整的深度，例如： 一种深度，可根据插入此门风格的墙壁厚度进行调整。"
 
-#:IFC.xml:19983
-msgid "IfcContext"
-msgstr "IfcContext"
+#:IFC.xml:673
+msgid "IfcDoorLiningProperties_ThresholdOffset"
+msgstr "阈值偏移"
 
-msgid "IfcContext_DEFINITION"
-msgstr "[[IfcContext]] is the generalization of a project context in which objects, type objects, property sets, and properties are defined. The [[IfcProject]] as subtype of [[IfcContext]] provides the context for all information on a construction project, it may include one or several [[IfcProjectLibrary]] s as subtype of [[IfcContext]] to register the included libraries for the project. A library of products that is referenced is declared within the [[IfcProjectLibrary]] as the context of that library. Context definitions can be named, using the inherited Name attribute, which should be a user recognizable key or number for the context. The LongName can add a full name. Further explanations to the context can be given using the inherited Description attribute. A Context is declared by the relationship object [[IfcRelDeclares]] that refers to the corresponding objects within the context. More specific relationships are introduced at the level of subtypes. HISTORY New abstract entity in IFC4."
+msgid "IfcDoorLiningProperties_ThresholdOffset_DEFINITION"
+msgstr "平面垂直于门阈值门叶的偏移尺寸。 偏移量为本地位置的x轴的距离。 仅在门框包含阈值且参数已知的情况下给出。"
 
-#:IFC.xml:20001
-msgid "IfcContext_RepresentationContexts"
-msgstr "A. 背景情况"
+#:IFC.xml:678
+msgid "IfcDoorLiningProperties_ThresholdThickness"
+msgstr "阈值厚度"
 
-msgid "IfcContext_RepresentationContexts_DEFINITION"
-msgstr "Context of the representations used within the context. When the context is a project and it includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and or the precision factor. .change ifc2x4 IFC4 CHANGE The attribute has been changed to be optional. Change made with upward compatibility for file based exchange."
+msgid "IfcDoorLiningProperties_ThresholdThickness_DEFINITION"
+msgstr "门槛值的厚度如上图所解释。如果门槛值为0。 零表示门槛阈值深度在此情况下必须设置为 NIL。 如果阈值为 NIL ，则表示有关阈值的信息不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:20013
-msgid "IfcContext_UnitsInContext"
-msgstr "UnitsInContext"
+#:IFC.xml:683
+msgid "IfcDoorLiningProperties_TransomOffset"
+msgstr "TransomOffset"
 
-msgid "IfcContext_UnitsInContext_DEFINITION"
-msgstr "Units globally assigned to measure types used within the context. .change ifc2x4 IFC4 CHANGE The attribute has been changed to be optional. Change made with upward compatibility for file based exchange."
+msgid "IfcDoorLiningProperties_TransomOffset_DEFINITION"
+msgstr "如果给定的转化器将门叶与上面的玻璃或窗口分开，则偏移。 抵消额从门口底部提供。"
 
-#:IFC.xml:20025
-msgid "IfcContext_Declares"
-msgstr "声明"
+#:IFC.xml:688
+msgid "IfcDoorLiningProperties_TransomThickness"
+msgstr "反射厚度"
 
-msgid "IfcContext_Declares_DEFINITION"
-msgstr "Reference to the [[IfcRelDeclares]] relationship that assigns the uppermost entities of includes hierarchies to this context instance. NOTE The spatial hiearchy is assigned to [[IfcProject]] using the [[IfcRelAggregates]] relationship. This is a single exception due to compatibility reasons with earlier releases."
+msgid "IfcDoorLiningProperties_TransomThickness_DEFINITION"
+msgstr "平面厚度与转发器门叶平行，但条件是： 如果设置了 TransomOffset 属性，它会将门叶与上面的玻璃或窗口分开。 如果反光厚度设置为零，反向偏差设置为正长度， 然后将门垂直分割成叶子和无物理框架的转窗区域。 .更改 ifc2x4 IFC4 变换数据类型更改为 [[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:20039
-msgid "IfcContext_IsDefinedBy"
-msgstr "IsDefinedBy"
+#:IFC.xml:707
+msgid "IfcDoorPanelOperationEnum"
+msgstr "IfcDoorPanelOperationEnum"
 
-msgid "IfcContext_IsDefinedBy_DEFINITION"
-msgstr "Set of relationships to property set definitions attached to this context. Those statically or dynamically defined properties contain alphanumeric information content that further defines the context. .change ifc2x4 IFC4 CHANGE The data type has been changed from [[IfcRelDefines]] to [[IfcRelDefinesByProperties]] with upward compatibility for file based exchange."
+msgid "IfcDoorPanelOperationEnum_DEFINITION"
+msgstr "这一列举界定了各门板运作的基本方式，如图1所示。 数字计数器滑动倾斜折叠循环滚动固定板用户定义的数字计数器操作 图1 门运算由[[IfcDoor]] 的本地位置给出门板的开头方向。 正极轴决定图2所示的方向。 面板方向..............如果有数字功能，fig10.gif 图2 数字面板运算符号取决于国家建筑代码。 这些数字只是用来作为IF2.0中的新枚举的示例来显示。添加了ifc2x4 IFC4 变异分子FIXEDPANEL 未精炼完的补丁项目"
 
-#:IFC.xml:19984
-msgid "IfcContext_LongName"
-msgstr "长度名称"
+#:IFC.xml:708
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING"
+msgstr "待办事项"
 
-msgid "IfcContext_LongName_DEFINITION"
-msgstr "用于参考的上下文长名。"
+msgid "IfcDoorPanelOperationEnum_DOUBLE_ACTING_DEFINITION"
+msgstr "待办事项"
 
-#:IFC.xml:19989
-msgid "IfcContext_ObjectType"
-msgstr "对象类型"
+#:IFC.xml:709
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL"
+msgstr "FIXEDPANEL"
 
-msgid "IfcContext_ObjectType_DEFINITION"
-msgstr "The object type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. NOTE Subtypes of [[IfcContext]] do not introduce a PredefinedType attribute, therefore the usage of ObjectType is not bound to the selection of USERDEFINED within the PredefinedType enumaration."
+msgid "IfcDoorPanelOperationEnum_FIXEDPANEL_DEFINITION"
+msgstr "FIXEDPANEL"
 
-#:IFC.xml:19994
-msgid "IfcContext_Phase"
-msgstr "阶段"
+#:IFC.xml:710
+msgid "IfcDoorPanelOperationEnum_FOLDING"
+msgstr "后续活动"
 
-msgid "IfcContext_Phase_DEFINITION"
-msgstr "目前的项目阶段，或本项目的生命周期阶段，必须通过视图定义或执行协议商定适用的数值。"
+msgid "IfcDoorPanelOperationEnum_FOLDING_DEFINITION"
+msgstr "后续活动"
 
-#:IFC.xml:20051
-msgid "IfcControl"
-msgstr "离子控制"
-
-msgid "IfcControl_DEFINITION"
-msgstr "[[IfcControl]] is the abstract generalization of all concepts that control or constrain the utilization of products, processes, or resources in general. It can be seen as a regulation, cost schedule, request or order, or other requirements applied to a product, process or resource whose requirements and provisions must be fulfilled. EXAMPLE Controls include action requests, cost schedules, project orders, work plans, and work calendars. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE Attribute Identification added."
-
-#:IFC.xml:20059
-msgid "IfcControl_Controls"
-msgstr "控件"
-
-msgid "IfcControl_Controls_DEFINITION"
-msgstr "引用将控制与被控制对象关联的关系。"
-
-#:IFC.xml:20052
-msgid "IfcControl_Identification"
-msgstr "1. 身份识别"
-
-msgid "IfcControl_Identification_DEFINITION"
-msgstr "An identifying designation given to a control It is the identifier at the occurrence level. .change ifc2x4 IFC4 CHANGE Attribute unified by promoting from various subtypes of [[IfcControl]] ."
-
-#:IFC.xml:20073
-msgid "IfcCorrectObjectAssignment"
-msgstr "IfcCorrectObjectAssignment"
-
-#:IFC.xml:20081
-msgid "IfcDefinitionSelect"
-msgstr "IfcDefinitionSelect"
-
-#:IFC.xml:20082
-msgid "IfcGroup"
-msgstr "IfcGroup"
-
-msgid "IfcGroup_DEFINITION"
-msgstr "[[IfcGroup]] is an generalization of any arbitrary group. A group is a logical collection of objects. It does not have its own position, nor can it hold its own shape representation. Therefore a group is an aggregation under some non geometrical topological grouping aspects. EXAMPLE An example for a group is a system, since it groups elements under the aspect of their role, regardless of their position in a building. One of the most important usage of a group representing a system is the [[IfcDistributionSystem]] , that groups distribution components, such as space heaters and valves into a heating system. A group can hold any collection of objects, the relationship [[IfcRelAssignsToGroup]] is used to establish the group collection. Objects within a group are products, processes, controls, resources, actors or other groups, thus groups can be nested. An object can be part of zero, one, or many groups. Grouping relationships are not required to be hierarchical nor do they imply a dependency. Groups are assigned to other objects such as a process or a resource by the relationship object that refers to the corresponding object Process assigned using [[IfcRelAssignsToProcess]] Resource assigned using [[IfcRelAssignsToResource]] Controls affecting the group using [[IfcRelAssignsToControl]] A group can be exchanged without having already objects within the group collection. [[IfcGroup]] does not define an own object coordinate system, nor does it have an independent shape representation. NOTE Use [[IfcRelAggregates]] together with the appropriate subtypes of [[IfcProduct]] to define an aggregation of products that may have its own position and shape representation. This relationship shall be used to create a product breakdown structure. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE The inverse IsGroupedBy relationship is set to 0..n"
-
-#:IFC.xml:20086
-msgid "IfcGroup_IsGroupedBy"
-msgstr "IsGroupedBy"
-
-msgid "IfcGroup_IsGroupedBy_DEFINITION"
-msgstr "Reference to the relationship [[IfcRelAssignsToGroup]] that assigns the one to many group members to the [[IfcGroup]] object. .change ifc2x4 IFC4 CHANGE The cardinality has been changed from 1..1 to 0.. in order to allow the exchange of a group concept without having already group members assigned. It now also allows the use of many instances of [[IfcRelAssignsToGroup]] to assign the group members. The change has been done with upward compatibility for file based exchange."
-
-#:IFC.xml:20100
-msgid "IfcObject"
-msgstr "IfcObject"
-
-msgid "IfcObject_DEFINITION"
-msgstr "An [[IfcObject]] is the generalization of any semantically treated thing or process. Objects are things as they appear i.e. occurrences. NOTE Examples of [[IfcObject]] include physically tangible items such as wall, beam or covering, physically existing items such as spaces, or conceptual items such as grids or virtual boundaries. It also stands for processes such as work tasks, for controls such as cost items, or for actors such as persons involved in the design process. Objects can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. The ObjectType attribute is used to store the user defined value for all subtypes of [[IfcObject]] , where a PredefinedType attribute is given, and its value is set to USERDEFINED. to provide a type information could be seen as a very lightweight classifier of the subtype of [[IfcObject]] , if no PredefinedType attribute is given. This is often the case, if no comprehensive list of predefined types is available. Objects are independent pieces of information that might contain or reference other pieces of information. There are several relationships in which objects can be involved Association to external internal resource information an association relationship that refers to external internal sources of information. See supertype [[IfcObjectDefinition]] for more information. Assignment of other objects an assignment relationship that refers to other types of objects. See supertype [[IfcObjectDefinition]] for more information. Aggregation of other objects an aggregation relationship that establishes a whole part relation. Objects can either be a whole, or a part, or both. See supertype [[IfcObjectDefinition]] for more information. Assignment of a type IsTypedBy a definition relationship [[IfcRelDefinesByType]] that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of a partial type IsDeclaredBy , Declares a definition relationship [[IfcRelDefinesByObject]] that uses a component of a type definition a part of a type, called the declaring part to define a component of an occurence part of occurrence, called the reflected part . This is also refered to as a deep copy . The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific occurrence relationship with implied dependencies as the occurrence properties depend on the properties of the type, but may override them . Assignment of property sets IsDefinedBy a definition relationship [[IfcRelDefinesByProperties]] that assignes property set definitions to the object occurrence. NOTE See [[IfcRelDefinesByType]] for an explanatory figure. Also see there for how to override type properties by occurrence properties. See [[IfcRelDefinesByObject]] for an explanatory figure for the assignment of a partial type. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The inverse relationships Declares , IsDeclaredBy , and IsTypedBy have been added, types are not longer included in the IsDefinesBy relationship. [[IfcProject]] has been promoted to be a subtype of [[IfcObjectDefinition]] [[IfcContext]] . .spec head Informal Propositions 1. A partial type assignment, i.e. the inverse attribute IsDeclaredBy , or Declares shall only be used, if the object is part of a decomposition, i.e. if either IsDecomposedBy , or Decomposes is exerted."
-
-#:IFC.xml:20108
-msgid "IfcObject_IsDeclaredBy"
-msgstr "Isledby"
-
-msgid "IfcObject_IsDeclaredBy_DEFINITION"
-msgstr "Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated [[IfcObject]] , or its subtypes, contains the specific information as part of a type, or style, definition , that is common to all reflected instances of the declaring [[IfcObject]] , or its subtypes. .change ifc2x4 IFC4 CHANGE New inverse relationship, change made with upward compatibility for file based exchange."
-
-#:IFC.xml:20122
-msgid "IfcObject_Declares"
-msgstr "声明"
-
-msgid "IfcObject_Declares_DEFINITION"
-msgstr "Link to the relationship object pointing to the reflected object s that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated [[IfcObject]] , or its subtypes, provides the specific information as part of a type, or style, definition , that is common to all reflected instances of the declaring [[IfcObject]] , or its subtypes. .change ifc2x4 IFC4 CHANGE New inverse relationship, change made with upward compatibility for file based exchange."
-
-#:IFC.xml:20136
-msgid "IfcObject_IsTypedBy"
-msgstr "IsTypedBy"
-
-msgid "IfcObject_IsTypedBy_DEFINITION"
-msgstr "Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated [[IfcTypeObject]] , or its subtypes, contains the specific information or type, or style , that is common to all instances of [[IfcObject]] , or its subtypes, referring to the same type. .change ifc2x4 IFC4 CHANGE New inverse relationship, the link to [[IfcRelDefinesByType]] had previously be included in the inverse relationship [[IfcRelDefines]] . Change made with upward compatibility for file based exchange."
-
-#:IFC.xml:20150
-msgid "IfcObject_IsDefinedBy"
-msgstr "IsDefinedBy"
-
-msgid "IfcObject_IsDefinedBy_DEFINITION"
-msgstr "Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object. .change ifc2x4 IFC4 CHANGE The data type has been changed from [[IfcRelDefines]] to [[IfcRelDefinesByProperties]] with upward compatibility for file based exchange."
-
-#:IFC.xml:20101
-msgid "IfcObject_ObjectType"
-msgstr "对象类型"
-
-msgid "IfcObject_ObjectType_DEFINITION"
-msgstr "类型表示进一步显示对象的特定类型。使用必须在可实例子类型的级别上确定。 尤其是，它持有用户定义类型，如果预定义类型的属性枚举设置为 USERDEFINED。"
-
-#:IFC.xml:20162
-msgid "IfcObjectDefinition"
-msgstr "IfcObjectDefinition"
-
-msgid "IfcObjectDefinition_DEFINITION"
-msgstr "An [[IfcObjectDefinition]] is the generalization of any semantically treated thing or process, either being a type or an occurrences. Object defintions can be named, using the inherited Name attribute, which should be a user recognizable label for the object occurrance. Further explanations to the object can be given using the inherited Description attribute. A context is a specific kind of object definition as it provides the project or library context in which object types and object occurrences are defined. Objects are independent pieces of information that might contain or reference other pieces of information. There are four essential kinds of relationships in which object definitons by their instantiable subtypes can be involved Assignment of other objects an assignment relationship [[IfcRelAssigns]] that refers to other types of objects and creates a bi directional association. The semantic of the assignment is established at the level of the subtypes of the general [[IfcRelAssigns]] relationship. There is no dependency implied a priori by the assignment. Association to external resources an association relationship [[IfcRelAssociates]] that refers to external sources of information most notably a classification or document and creates a uni directional association. There is no dependency implied by the association. Aggregation of other objects an aggregation relationship [[IfcRelAggregates]] that establishes an unordered, spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Nesting of other objects a nesting relationship [[IfcRelNests]] that establishes an ordered, non spatial whole part relation and creates a bi directional relation. There is an implied dependency established. Declaration within a context a relationship [[IfcRelDeclares]] of the uppermost object definition within the object definition tree e.g. the summary object within an object nesting tree to the context a project or project library . It applies the units, representation context and other context information to this object definition and all dependent ones. NOTE The link between the uppermost object in the spatial structure tree, that is [[IfcSite]] or ifcBuilding , and the context provided by [[IfcProject]] is created using the [[IfcRelAggregates]] relationship. See [[IfcProject]] for more information. HISTORY New abstract entity in IFC2x3. .change ifc2x4 IFC4 CHANGE The new subtype [[IfcContext]] and the relationship to context HasContext has been added . The decomposition relationship is split into ordered nesting Nests , IsNestedBy and un ordered aggregating Decomposes , IsDecomposedBy ."
-
-#:IFC.xml:20166
-msgid "IfcObjectDefinition_IsDecomposedBy"
-msgstr "分解器"
-
-msgid "IfcObjectDefinition_IsDecomposedBy_DEFINITION"
-msgstr "References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole part decomposition relationship. An object definitions can be aggregated by several other objects occurrences or parts . .change ifc2x4 IFC4 CHANGE The inverse attribute datatype has been changed from the supertype [[IfcRelDecomposes]] to subtype [[IfcRelAggregates]] ."
-
-#:IFC.xml:20180
-msgid "IfcObjectDefinition_Decomposes"
-msgstr "分解"
-
-msgid "IfcObjectDefinition_Decomposes_DEFINITION"
-msgstr "References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole part decomposition relationship. An object definitions can only be part of a single decomposition to allow hierarchical strutures only . .change ifc2x4 IFC4 CHANGE The inverse attribute datatype has been changed from the supertype [[IfcRelDecomposes]] to subtype [[IfcRelAggregates]] ."
-
-#:IFC.xml:20194
-msgid "IfcObjectDefinition_HasAssignments"
-msgstr "急速分配"
-
-msgid "IfcObjectDefinition_HasAssignments_DEFINITION"
-msgstr "引用关系对象，由关联关系中的其他子类型[[IfcObject]] 分配给此对象实例。 例如与产品、加工、控制、资源或团体的联系。"
-
-#:IFC.xml:20220
-msgid "IfcObjectDefinition_IsNestedBy"
-msgstr "IsNestedBy"
-
-msgid "IfcObjectDefinition_IsNestedBy_DEFINITION"
-msgstr "References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole part decomposition relationship. An object or object type can be nested by several other objects occurrences or types . .change ifc2x4 IFC4 CHANGE The inverse attribute datatype has been added and separated from IsDecomposedBy defined at [[IfcObjectDefinition]] ."
-
-#:IFC.xml:20234
-msgid "IfcObjectDefinition_Nests"
-msgstr "恩斯文"
-
-msgid "IfcObjectDefinition_Nests_DEFINITION"
-msgstr "References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole part decomposition relationship. An object occurrence or type can only be part of a single decomposition to allow hierarchical strutures only . .change ifc2x4 IFC4 CHANGE The inverse attribute datatype has been added and separated from Decomposes defined at [[IfcObjectDefinition]] ."
-
-#:IFC.xml:20248
-msgid "IfcObjectDefinition_HasContext"
-msgstr "HasContext"
-
-msgid "IfcObjectDefinition_HasContext_DEFINITION"
-msgstr "References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non spatial object. .change ifc2x4 IFC4 CHANGE The inverse attribute datatype has been added."
-
-#:IFC.xml:20260
-msgid "IfcObjectDefinition_HasAssociations"
-msgstr "HasAssociations"
-
-msgid "IfcObjectDefinition_HasAssociations_DEFINITION"
-msgstr "引用关系对象，将外部引用或其他资源定义关联到对象。例如关联到库、文档或分类。"
-
-#:IFC.xml:20272
-msgid "IfcObjectTypeEnum"
-msgstr "IfcObjectTypeEnum"
-
-msgid "IfcObjectTypeEnum_DEFINITION"
-msgstr "This enumeration defines the applicable object categories. Attached to an object, it indicates to which subtype of [[IfcObject]] the entity referencing it would otherwise comply with. HISTORY New entity in IFC1.0. .deprecated DEPRECATION The use of this enumeration is deprecated since IFC2x3. Items PRODUCT PROCESS CONTROL RESOURCE ACTOR GROUP PROJECT NOTDEFINED"
-
-#:IFC.xml:20273
-msgid "IfcObjectTypeEnum_ACTOR"
-msgstr "ACTO"
-
-msgid "IfcObjectTypeEnum_ACTOR_DEFINITION"
-msgstr "ACTO"
-
-#:IFC.xml:20274
-msgid "IfcObjectTypeEnum_CONTROL"
-msgstr "控制"
-
-msgid "IfcObjectTypeEnum_CONTROL_DEFINITION"
-msgstr "控制"
-
-#:IFC.xml:20275
-msgid "IfcObjectTypeEnum_GROUP"
-msgstr "群組"
-
-msgid "IfcObjectTypeEnum_GROUP_DEFINITION"
-msgstr "群組"
-
-#:IFC.xml:20276
-msgid "IfcObjectTypeEnum_NOTDEFINED"
+#:IFC.xml:711
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED"
 msgstr "未完成"
 
-msgid "IfcObjectTypeEnum_NOTDEFINED_DEFINITION"
+msgid "IfcDoorPanelOperationEnum_NOTDEFINED_DEFINITION"
 msgstr "未完成"
 
-#:IFC.xml:20277
-msgid "IfcObjectTypeEnum_PROCESS"
-msgstr "进程"
+#:IFC.xml:712
+msgid "IfcDoorPanelOperationEnum_REVOLVING"
+msgstr "正在阅读"
 
-msgid "IfcObjectTypeEnum_PROCESS_DEFINITION"
-msgstr "进程"
+msgid "IfcDoorPanelOperationEnum_REVOLVING_DEFINITION"
+msgstr "正在阅读"
 
-#:IFC.xml:20278
-msgid "IfcObjectTypeEnum_PRODUCT"
-msgstr "产品"
+#:IFC.xml:713
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
 
-msgid "IfcObjectTypeEnum_PRODUCT_DEFINITION"
-msgstr "产品"
+msgid "IfcDoorPanelOperationEnum_ROLLINGUP_DEFINITION"
+msgstr "ROLLINGUP"
 
-#:IFC.xml:20279
-msgid "IfcObjectTypeEnum_PROJECT"
-msgstr "进程"
+#:IFC.xml:714
+msgid "IfcDoorPanelOperationEnum_SLIDING"
+msgstr "正在评分"
 
-msgid "IfcObjectTypeEnum_PROJECT_DEFINITION"
-msgstr "进程"
+msgid "IfcDoorPanelOperationEnum_SLIDING_DEFINITION"
+msgstr "正在评分"
 
-#:IFC.xml:20280
-msgid "IfcObjectTypeEnum_RESOURCE"
-msgstr "资源"
+#:IFC.xml:715
+msgid "IfcDoorPanelOperationEnum_SWINGING"
+msgstr "正在解决"
 
-msgid "IfcObjectTypeEnum_RESOURCE_DEFINITION"
-msgstr "资源"
+msgid "IfcDoorPanelOperationEnum_SWINGING_DEFINITION"
+msgstr "正在解决"
 
-#:IFC.xml:20282
-msgid "IfcPreDefinedPropertySet"
-msgstr "IfcPreDefinedPropertySet"
+#:IFC.xml:716
+msgid "IfcDoorPanelOperationEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcPreDefinedPropertySet_DEFINITION"
-msgstr "[[IfcPreDefinedPropertySet]] is a generalization of all statically defined property sets that are assigned to an object or type object. The statically or pre defined property sets are entities with a fixed list of attributes having particular defined data types. Property sets are related to other objects by using the relationship object that refers to the corresponding object Occurrence Object [[IfcRelDefinesByProperties]] using the inverse attribute DefinesOccurrence . Type Object using a direct link by inverse attribute DefinesType . [[IfcPreDefinedPropertySet]] s can be assigned to objects and object types but do not have a defining property set template. HISTORY New entity in IFC4"
+msgid "IfcDoorPanelOperationEnum_USERDEFINED_DEFINITION"
+msgstr "已使用"
 
-#:IFC.xml:20285
-msgid "IfcProcess"
-msgstr "离子进程"
+#:IFC.xml:718
+msgid "IfcDoorPanelPositionEnum"
+msgstr "IfcDoorPanelPositionEnum"
 
-msgid "IfcProcess_DEFINITION"
-msgstr "[[IfcProcess]] is defined as one individual activity or event, that is ordered in time, that has sequence relationships with other processes, which transforms input in output, and may connect to other other processes through input output relationships. An [[IfcProcess]] can be an activity or task , or an event. It takes usually place in building construction with the intent of designing, costing, acquiring, constructing, or maintaining products or other and similar tasks or procedures. Figure 1 illustrates process relationships. .extDef NOTE Definition according to ISO9000 A process is a set of activities that are interrelated or that interact with one another. Processes use resources to transform inputs into outputs. Processes are interconnected because the output from one process becomes the input for another process. In effect, processes are glued together by means of such input output relationships. icon diagram .. .. .. .. figures ifcprocess icon fig.png Figure 1 Process relationships and the ICON process diagram. Process information relates to other objects by establishing the following relationships Nesting of processes [[IfcRelNests]] A process can contain sub processes and thereby be nested. Sequencing of processes [[IfcRelSequence]] Processes can be placed in sequence including overlapping for parallel tasks , and have predecessors and successors. Assigning process to schedules [[IfcRelAssignsToControl]] Activities such as tasks, and predominately summary tasks, are assigned to a work schedule. Having a product assigned to the process as input [[IfcRelAssignsToProcess]] Products can be assigned as input to a process, such as for construction process planning. Having a product assigned to the process as output [[IfcRelAssignsToProduct]] Products can be assigned as output to a process, such as for construction process planning. Having a control assigned to the process as process control [[IfcRelAssignsToProcess]] Items that act as a control onto the process can be assigned to a process, such as for cost management a cost item assigned to a work task . Having a resource assigned to the process as consumed by the process [[IfcRelAssignsToProcess]] Items that act as a mechanism to a process, such as labor, material and equipment in cost calculations. HISTORY New entity in IFC1.0. .change ifc2x IFC2x CHANGE The attribute Productivity has been removed. .change ifc2x4 IFC4 CHANGE The attribute Identification has been promoted from subtypes [[IfcTask]] and others."
+msgid "IfcDoorPanelPositionEnum_DEFINITION"
+msgstr "此列举界定了描述门面板在门框内位置的基本方法。 IFC2x 中的新枚举图1显示了一个带有面板的门面板和带有面板RIGHT的门面板，一个带有面板的 OUBLE DOOR SINGN 的门风格。 位置显示在本地位置的XZ平面上，即显示正Y轴的方向。 门面板位置............. 数字如果门面板数字01.gif 图1门面板位置未定义的项目LEFT MIDLE RIGHTS"
 
-#:IFC.xml:20299
-msgid "IfcProcess_IsPredecessorTo"
-msgstr "IsPredecessorTo"
+#:IFC.xml:719
+msgid "IfcDoorPanelPositionEnum_LEFT"
+msgstr "左键"
 
-msgid "IfcProcess_IsPredecessorTo_DEFINITION"
-msgstr "它是指这两项活动之间的依附关系，即该项活动是其前身的后续活动。 两项活动之间的链接可以包括链接类型和滞后时间。"
+msgid "IfcDoorPanelPositionEnum_LEFT_DEFINITION"
+msgstr "左键"
 
-#:IFC.xml:20313
-msgid "IfcProcess_IsSuccessorFrom"
-msgstr "IssuccessorFrom"
+#:IFC.xml:720
+msgid "IfcDoorPanelPositionEnum_MIDDLE"
+msgstr "MIDDL"
 
-msgid "IfcProcess_IsSuccessorFrom_DEFINITION"
-msgstr "这两项活动之间的依赖关系是指该项活动是其继承人的前一项活动。 两项活动之间的链接可以包括链接类型和滞后时间。"
+msgid "IfcDoorPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDL"
 
-#:IFC.xml:20327
-msgid "IfcProcess_OperatesOn"
-msgstr "操作"
-
-msgid "IfcProcess_OperatesOn_DEFINITION"
-msgstr "与其他对象的关系集，如加工过程中操作的产品、工艺、控制、资源或行为者。"
-
-#:IFC.xml:20286
-msgid "IfcProcess_Identification"
-msgstr "1. 身份识别"
-
-msgid "IfcProcess_Identification_DEFINITION"
-msgstr "An identifying designation given to a process or activity. It is the identifier at the occurrence level. .change ifc2x4 IFC4 CHANGE Attribute promoted from subtypes."
-
-#:IFC.xml:20291
-msgid "IfcProcess_LongDescription"
-msgstr "长度描述"
-
-msgid "IfcProcess_LongDescription_DEFINITION"
-msgstr "An extended description or narrative that may be provided. .change ifc2x4 IFC4 CHANGE New attribute."
-
-#:IFC.xml:20339
-msgid "IfcProcessSelect"
-msgstr "IfcProcessselect"
-
-#:IFC.xml:20340
-msgid "IfcProduct"
-msgstr "IfcProduct"
-
-msgid "IfcProduct_DEFINITION"
-msgstr "The [[IfcProduct]] is an abstract representation of any object that relates to a geometric or spatial context. An [[IfcProduct]] occurs at a specific location in space if it has a geometric representation assigned. It can be placed relatively to other products, but ultimately relative to the project coordinate system. The ObjectPlacement attribute establishes the coordinate system in which all points and directions used by the geometric representation items under Representation are founded. The Representation is provided by an [[IfcProductDefinitionShape]] being either a geometric shape representation, or a topology representation with or without underlying geometry of the topological items . Products include manufactured, supplied or created objects referred to as elements for incorporation into an AEC FM project. This also includes objects that are created indirectly by other products, as spaces are defined by bounding elements. Products can be designated for permanent use or temporary use, an example for the latter is formwork. Products are defined by their properties and representations. In addition to physical products covered by the subtype [[IfcElement]] and spatial items covered by the subtype [[IfcSpatialElement]] the [[IfcProduct]] also includes non physical items, that relate to a geometric or spatial contexts, such as grid, port, annotation, structural actions, etc. Any instance of [[IfcProduct]] defines a particular occurrence of a product, the common type information, that relates to many similar or identical occurrences of [[IfcProduct]] , is handled by the [[IfcTypeProduct]] and its subtypes , assigned to one or many occurrences of [[IfcProduct]] by using the objectified relationship [[IfcRelDefinesByType]] . The [[IfcTypeProduct]] may provide, in addition to common properties, also a common geometric representation for all occurrences. NOTE See [[IfcTypeProduct]] for how to use a common geometric representation and [[IfcRelDefinesByType]] for using and overriding common properties. On a generic level products can be assigned to processes, controls, resources, project by using the relationship objects that refer to the corresponding object Having a control applied assigned using [[IfcRelAssignsToControl]] linking the [[IfcProduct]] to an [[IfcControl]] Being assigned to a process assigned using [[IfcRelAssignsToProcess]] linking the [[IfcProduct]] to an [[IfcProcess]] Being assigned to a resource assigned using [[IfcRelAssignsToResource]] linking the [[IfcProduct]] to an [[IfcResource]] EXAMPLE An example of the control relationship is the assignment of a performance history to a distribution element. An example of process assignment relationship is the assignment of products like wall, slab, column to a contruction task for construction planning. And an example of resource assignment relationship is the assignment of products to a construction resource that consumes the product. HISTORY New entity in IFC1.0"
-
-#:IFC.xml:9780
-msgid "IfcProduct_ObjectPlacement"
-msgstr "对象位置"
-
-msgid "IfcProduct_ObjectPlacement_DEFINITION"
-msgstr "产品放置在空间中，相对于世界坐标系而言，放置可以是绝对值， 相对于其它产品的对象位置，或约束，例如 相对于网格坐标轴。 它是由各种子类型[[IfcObjectPlacement]]决定的。 它包括用于确定对象坐标系统转换的轴位置信息。"
-
-#:IFC.xml:20345
-msgid "IfcProduct_Representation"
-msgstr "代表"
-
-msgid "IfcProduct_Representation_DEFINITION"
-msgstr "参照产品的表述方式 作为代表 [[IfcProductRepresentation]] 或作为特殊案例作为形状表示 [[IfcProductDefinitionShape]] 。 产品定义形状规定了在同一对象坐标系统内物体形状属性的多个几何形状。 由对象位置定义."
-
-#:IFC.xml:20381
-msgid "IfcProduct_PositionedRelativeTo"
-msgstr "PositionedRelativeTo"
-
-msgid "IfcProduct_PositionedRelativeTo_DEFINITION"
-msgstr "PositionedRelativeTo"
-
-#:IFC.xml:20395
-msgid "IfcProduct_ReferencedBy"
-msgstr "引用者"
-
-msgid "IfcProduct_ReferencedBy_DEFINITION"
-msgstr "引用了[[IfcRelAssignsToProduct]] 关系，其中包括其他产品、工艺、控制器。 资源或行为体作为子类型的 [[IfcObjectDefinition]] 可能与此产品相关。"
-
-#:IFC.xml:20407
-msgid "IfcProduct_ReferencedInStructures"
-msgstr "引用的结构"
-
-msgid "IfcProduct_ReferencedInStructures_DEFINITION"
-msgstr "引用的结构"
-
-#:IFC.xml:20419
-msgid "IfcProductSelect"
-msgstr "IfcProductselect"
-
-#:IFC.xml:20420
-msgid "IfcProject"
-msgstr "IfcProject"
-
-msgid "IfcProject_DEFINITION"
-msgstr "[[IfcProject]] indicates the undertaking of some design, engineering, construction, or maintenance activities leading towards a product. The project establishes the context for information to be exchanged or shared, and it may represent a construction project but does not have to. The [[IfcProject]] s main purpose in an exchange structure is to provide the root instance and the context for all other information items included. The context provided by the [[IfcProject]] includes the default units the geometric representation context for exchange structures including shape representations the project coordinate system the coordinate space dimension the precision used within the geometric representations optionally the indication of the true north optionally the map conversion between the project coordinate system and the geospatial coordinate reference system. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The attributes RepresentationContexts and UnitsInContext are made optional and are promoted to supertype [[IfcContext]] . .spec head Informal Propositions 1. There shall only be one project within the exchange context. This is enforced by the global rule [[IfcSingleProjectInstance]] . Formal Propositions HasName The Name attribute has to be provided for [[IfcProject]] . It is the short name for the project. CorrectContext If a RepresentationContexts relation is provided then there shall be no instance of [[IfcGeometricRepresentationSubContext]] directly included in the set of RepresentationContexts . NoDecomposition The [[IfcProject]] represents the root of the any decomposition tree. It shall therefore not be used to decompose any other object definition. Concepts Project Classification Information Project Declaration The [[IfcProject]] is also the context for other information about the construction project such as a work plan. Non product structures are assigned by their first level object to [[IfcProject]] using the [[IfcRelDeclares]] relationship. The [[IfcProject]] provides the context for work plans or other non product based descriptions of the construction project. It is handled by the objectified relationship [[IfcRelDeclares]]. NOTE The spatial structure and the schedule structure can be decomposed. For example the [[IfcBuilding]] can be decomposed into [[IfcBuildingStorey]] s, and the [[IfcWorkPlan]] can be decomposed into [[IfcWorkSchedule]] s. NOTE The products and tasks can be decomposed further. For example the [[IfcCurtainWall]] can be decomposed into [[IfcMember]] and [[IfcPlate]], the [[IfcTask]] can be decomposed into other [[IfcTask]] s. NOTE The products and tasks can have direct linking relationships. For example the [[IfcCurtainWall]] can be assigned to a [[IfcTask]] as an input or output for a construction schedule. Figure 128 illustrates the use of [[IfcProject]] as context for work plans or work schedules. project relationships .. .. .. .. figuresifcproject fig 1.png Figure 128 Project spatial and work plan structure Project Document Information Project Global Positioning The representation context of the project refers to a global positioning, i.e. the local engineering coordinate system of the project has a mapping to a defined projected coordinate system a rectangular map coordinate system, as used in GIS systems Project Library Information Project Representation Context Project Units Spatial Decomposition The [[IfcProject]] is used to reference the root of the spatial structure of a building or other construction project that serves as the primary project breakdown and is required to be hierarchical . The spatial structure elements are linked together, and to the [[IfcProject]], by using the objectified relationship [[IfcRelAggregates]]. The following constraints are applied to using the relationshio [[IfcRelAggregates]] in context of [[IfcProject]] NOTE The anomaly to use the composition structure through [[IfcRelAggregates]] for assigning the uppermost spatial container to [[IfcProject]] is due to upward compatibility reasons with earlier releases of this standard. [[IfcProject]].Decomposes it shall be NIL, i.e. the [[IfcProject]] shall be on top of the root of the spatial structure tree. [[IfcProject]].IsDecomposedBy referencing [[IfcSite]] [[IfcBuilding]] [[IfcSpatialZone]] by using [[IfcRelAggregates]].RelatedObjects. The [[IfcSite]], [[IfcBuilding]], or [[IfcSpatialZone]] being referenced shall be the root of the spatial structure. Figure 129 illustrates project relationships with spatial structures, elements, and element type libraries. spatial decomposition relationships .. .. .. .. figuresifcproject fig 2.png Figure 129 Project spatial structure, products and product type library"
-
-#:IFC.xml:20447
-msgid "IfcProjectLibrary"
-msgstr "IfcProjectLibrary"
-
-msgid "IfcProjectLibrary_DEFINITION"
-msgstr "An [[IfcProjectLibrary]] collects all library elements that are included within a referenced project data set. Examples for project libraries include type libraries also called style or family libraries a collection of subtypes of [[IfcTypeObject]] property definition libraries a collections of [[IfcPropertySetTemplate]] or IfcPropertyTemplates The inherited attributes RepresentationContext and UnitsInContext have the following meaning Context of the representations used within the project library. When the project library includes shape representations for its library type objects, one or several geometric representation contexts need to be included that define the coordinate system, the coordinate space dimensions, and or the precision factor, Units locally assigned to measure types used within the context of this project library. NOTE It is generally discouraged to use a different length measure and plane angle measure in an included project library compared with the project itself. It may lead to unexpected results for the shape representation of items included in the project library. Instances of [[IfcProjectLibrary]] are assigned to the project context using the [[IfcRelDeclares]] relationship and accessible through the inverse attribute HasContext . Individual object types and property set templates are assigned to the [[IfcProjectLibrary]] using the [[IfcRelDeclares]] relationship and are accessible through the inverse attribute Declares . An [[IfcProjectLibrary]] may be decomposed into sub libraries using the relationship [[IfcRelNests]] . Sub libraries are accessed by the [[IfcProjectLibrary]] through the inverse attribute IsNestedBy . HISTORY New entity in IFC4."
-
-#:IFC.xml:20450
-msgid "IfcPropertyDefinition"
-msgstr "Ifc属性定义"
-
-msgid "IfcPropertyDefinition_DEFINITION"
-msgstr "[[IfcPropertyDefinition]] defines the generalization of all characteristics i.e. a grouping of individual properties , that may be assigned to objects. Currently, subtypes of [[IfcPropertyDefinition]] include property set occurrences, property set templates, and property templates. Property set template [[IfcPropertySetTemplate]] , a collection of property templates that determine the definition of properties used within a project context. Property template [[IfcPropertyTemplate]] , a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template. Property set occurrence [[IfcPropertySet]] , a set of individual properties that may or may not be determined by a property template holding individual values, measure types and units, and are associated to an object occurrence or object type. NOTE The subtype hierarchy of [[IfcPropertyDefinition]] also includes statically defined property sets as [[IfcPreDefinedPropertySet]] . Those are rarely used collections of fixed attributes combined in an entity definition. The [[IfcPreDefinedPropertySet]] can not be determined by an [[IfcPropertySetTemplate]] . NOTE Individual properties, subtypes of [[IfcProperty]] , are currently not included in the subtype hierarchy of [[IfcPropertyDefinition]] . This anomaly is due to upward compatibility reasons with earlier releases of this standard. Property definitions define information that is shared among multiple instances of objects, either object occurrences or object types. [[IfcPropertyDefinition]] s by their instantiable subtypes can participate within the following relationships Assignment to a project context an HasContext relationship to [[IfcRelDeclares]] that establishes the project context in which this property definition is declared. This relationship is predominately applicable to subtypes of [[IfcPropertyTemplateDefinition]] . Association to external resources an HasAssociation relationship to [[IfcRelAssociates]] that refers to external sources of information most notably a classification or document and creates a uni directional association. There is no dependency implied by the association. Subtypes are included in more specific relationships, see [[IfcPropertySetDefinition]] and [[IfcPropertyTemplateDefinition]] for details. HISTORY New entity in IFC2.0"
-
-#:IFC.xml:20454
-msgid "IfcPropertyDefinition_HasContext"
-msgstr "HasContext"
-
-msgid "IfcPropertyDefinition_HasContext_DEFINITION"
-msgstr "HasContext"
-
-#:IFC.xml:20466
-msgid "IfcPropertyDefinition_HasAssociations"
-msgstr "HasAssociations"
-
-msgid "IfcPropertyDefinition_HasAssociations_DEFINITION"
-msgstr "指的是关系 [[IfcRelAssociates]] ，因此指的是外部定义的概念， 像与属性定义相关的分类、文件或图书馆信息。"
-
-#:IFC.xml:20478
-msgid "IfcPropertySet"
-msgstr "IfcPropertySet"
-
-msgid "IfcPropertySet_DEFINITION"
-msgstr "The [[IfcPropertySet]] is a container that holds properties within a property tree. These properties are interpreted according to their name attribute. Each individual property has a significant name string. Some property sets are included in the specification of this standard and have a predefined set of properties indicated by assigning a significant name. These property sets are listed under property sets within this specification. Property sets applicable to certain objects are listed in the object specification. The naming convention Pset Xxx applies to all those property sets that are defined as part of this specification and it shall be used as the value of the Name attribute. In addition any user defined property set can be captured. Property sets that are not declared as part of the IFC specification shall have a Name value not including the Pset prefix. [[IfcPropertySet]] can be assigned to object occurrences and object types. An [[IfcPropertySet]] assigned to an object type is shared among all occurrences of the same object type. NOTE See [[IfcRelDefinesByType]] for how to override property sets assigned to an object type within the object occurrence. An [[IfcPropertySetTemplate]] may define the underlying structure, i.e. the required name, the applicable object or object types to which the property set can be attached, and the individual properties that can be included. Property sets are related to other objects by using the relationship object that refers to the corresponding object Occurrence Object [[IfcRelDefinesByProperties]] using the inverse attribute DefinesOccurrence . Type Object using a direct link by inverse attribute DefinesType . Underlying template [[IfcRelDefinesByTemplate]] using the inverse attribute IsDefinedBy . External reference subtypes of [[IfcRelAssociates]] are used to provide a link to a classification system, or external library providing further reference to the property set. Accessible by inverse attribute HasAssociations . HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE All statically defined property set entities are no longer subtypes of [[IfcPropertySet]] ."
-
-#:IFC.xml:20481
-msgid "IfcPropertySet_HasProperties"
-msgstr "HasProperties"
-
-msgid "IfcPropertySet_HasProperties_DEFINITION"
-msgstr "包含的属性集。 对于定义为 IFC 对象模型的属性集，属性集中的属性对象被定义为标准的一部分。 如果一个属性未包含在预定义属性的组中，则其值此时尚未设定。"
-
-#:IFC.xml:20495
-msgid "IfcPropertySetDefinition"
-msgstr "IfcPropertySetting定义"
-
-msgid "IfcPropertySetDefinition_DEFINITION"
-msgstr "[[IfcPropertySetDefinition]] is a generalization of all individual property sets that can be assigned to an object or type object. The property set definition can be either Dynamically extendable property sets [[IfcPropertySet]] , a set of properties for which the IFC specification only provides a kind of meta model , to be further declared by agreement. This means no entity definition of the properties exists within the IFC specification. The declaration is done by assigning a significant string value to the Name attribute of the entity as defined in the entity [[IfcPropertySet]] and at each subtype of [[IfcProperty]] , referenced by the property set. Dynamically defined property sets may have an underlying template provided by [[IfcPropertySetTemplate]] . Statically defined property sets [[IfcPreDefinedPropertySet]] , a property set entity that exists within the IFC specification. The semantic meaning of each statically defined property set is declared by its entity type and the meaning of the properties is defined by the name and data type of the explicit attribute representing it. Property set definitions define information that is shared among multiple instances of objects, either object occurrences or object types. [[IfcPropertySetDefinition]] s by their instantiable subtypes can participate within the following relationships Assignment to object types an DefinesType direct relationship to [[IfcTypeObject]] that applies the property set, with all included properties, to the object type. Those properties apply to all object occurrences having the same object type. Assignment to object occurrences an DefinesOccurrence relationship to [[IfcRelDefinesByProperties]] that applies the property set, with all included properties, to the object occurrence. NOTE Properties assigned to object occurrences may override properties assigned to the object type. See [[IfcRelDefinesByType]] for further information. HISTORY New entity in IFC2x .change ifc2x4 IFC4 CHANGE The subtype [[IfcPreDefinedPropertySet]] has been added."
-
-#:IFC.xml:20499
-msgid "IfcPropertySetDefinition_IsDefinedBy"
-msgstr "IsDefinedBy"
-
-msgid "IfcPropertySetDefinition_IsDefinedBy_DEFINITION"
-msgstr "Relation to the property set template, via the objectified relationship [[IfcRelDefinesByTemplate]] , that, if given, provides the definition template for the property set or quantity set and its properties. .change ifc2x4 IFC4 CHANGE New inverse relationship, change made with upward compatibility for file based exchange."
-
-#:IFC.xml:20513
-msgid "IfcPropertySetDefinition_DefinesType"
-msgstr "DefinesType"
-
-msgid "IfcPropertySetDefinition_DefinesType_DEFINITION"
-msgstr "The type object to which the property set is assigned. The property set acts as a shared property set to all occurrences of the type object. NOTE The relationship between the [[IfcPropertySetDefinition]] and the [[IfcTypeObject]] is a direct relationship, not utilizing [[IfcRelDefinesByProperties]] , for maintaining compatibility with earlier releases of this standard. .change ifc2x4 IFC4 CHANGE The cardinality has been changed from 0 1 to 0 with upward compatibility for file based exchange."
-
-#:IFC.xml:20527
-msgid "IfcPropertySetDefinition_DefinesOccurrence"
-msgstr "定义"
-
-msgid "IfcPropertySetDefinition_DefinesOccurrence_DEFINITION"
-msgstr "Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship IfcRefDefinesByProperties . .change ifc2x4 IFC4 CHANGE Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file based exchange."
-
-#:IFC.xml:20539
-msgid "IfcPropertySetDefinitionSelect"
-msgstr "IfcPropertySetDefinitionSelect"
-
-#:IFC.xml:20540
-msgid "IfcPropertySetTemplate"
-msgstr "IfcPropertySet模板"
-
-msgid "IfcPropertySetTemplate_DEFINITION"
-msgstr "[[IfcPropertySetTemplate]] defines the template for all dynamically extensible property sets represented by [[IfcPropertySet]] . The property set template is a container of property templates within a property tree. The individual property templates are interpreted according to their Name attribute and shall have no values assigned. NOTE By convention an [[IfcPropertySetTemplate]] can also be used as a template for an [[IfcElementQuantity]] , being a particular type of a property set definition. Property set templates can form part of a property library used and declared within a project. Depending on the TemplateType the [[IfcPropertySetTemplate]] defines a template for Pset occurrences of [[IfcPropertySet]] QTO occurrences of [[IfcElementQuantity]] The inherited HasContext inverse relation to [[IfcRelDeclares]] is used to declare the [[IfcPropertySetTemplate]] within a project library. If included in an exchange data set it can then be traversed through the [[IfcProjectLibrary]] . The Defines inverse relation to [[IfcRelDefinesByTemplate]] is provided to keep the definition relationship between the [[IfcPropertySetTemplate]] and the one to many [[IfcPropertySet]] s, for which it provides the template. Figure 1 illustrates relationships used for property set templates. property set template .. .. .. .. figures ifcpropertysettemplate fig 1.png Figure 1 Property set template relationships Between [[IfcProperty]] s within the HasProperties set of [[IfcPropertySet]] having the same Name attribute value as the [[IfcPropertyTemplate]] s within the HasPropertyTemplates set of [[IfcPropertySetTemplate]] an implicit definition relationship is established that assigns the template to the individual properties. HISTORY New entity in IFC4."
-
-#:IFC.xml:20548
-msgid "IfcPropertySetTemplate_TemplateType"
-msgstr "模板类型"
-
-msgid "IfcPropertySetTemplate_TemplateType_DEFINITION"
-msgstr "Property set type defining whether the property set is applicable to a type subtypes of [[IfcTypeObject]] , to an occurrence subtypes of [[IfcObject]] , or as a special case to a performance history. The attribute ApplicableEntity may further refine the applicability to a single or multiple entity type s ."
-
-#:IFC.xml:20560
-msgid "IfcPropertySetTemplate_HasPropertyTemplates"
-msgstr "HasProperty模板"
-
-msgid "IfcPropertySetTemplate_HasPropertyTemplates_DEFINITION"
-msgstr "Set of [[IfcPropertyTemplate]] s that are defined within the scope of the [[IfcPropertySetTemplate]] ."
-
-#:IFC.xml:20574
-msgid "IfcPropertySetTemplate_Defines"
-msgstr "定义"
-
-msgid "IfcPropertySetTemplate_Defines_DEFINITION"
-msgstr "Relation to the property sets, via the objectified relationship [[IfcRelDefinesByTemplate]] , that, if given, utilize the definition template."
-
-#:IFC.xml:20541
-msgid "IfcPropertySetTemplate_ApplicableEntity"
-msgstr "适用的实体"
-
-msgid "IfcPropertySetTemplate_ApplicableEntity_DEFINITION"
-msgstr "The attribute optionally defines the data type of the applicable type or occurrence object, to which the assigned property set template can relate. If not present, no instruction is given to which type or occurrence object the property set template is applicable. The following conventions are used The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix It can be optionally followed by the predefined type after the separator forward slash , using upper case If a performance history object of a particular distribution object is attributes by the property set template, then the entity name and potentially amended by the predefined type is expanded by adding PerformanceHistory If one property set template is applicable to many type and or occurrence objects, then those object names should be separate by comma , forming a comma separated string. EXAMPLE Refering to a boiler type as applicable entity would be expressed as [[IfcBoilerType]] , refering to a steam boiler type as applicable entity would be expressed as [[IfcBoilerType]] STEAM , refering to a wall and wall standard case and a wall type would be expressed as [[IfcWall]], [[IfcWallStandardCase]], [[IfcWallType]] . An applicable [[IfcPerformanceHistory]] assigned to an occurrence or type object would be indicated by [[IfcBoilerType]] PerformanceHistory , or respectively [[IfcBoilerType]] STEAM PerformanceHistory ."
-
-#:IFC.xml:20588
-msgid "IfcPropertySetTemplateTypeEnum"
-msgstr "IfcPropertySetTemplateTypeEnum"
-
-msgid "IfcPropertySetTemplateTypeEnum_DEFINITION"
-msgstr "This enumeration defines the general applicability of instances of [[IfcPropertySet]] , or [[IfcElementQuantity]] defined by this [[IfcPropertySetTemplate]] , to subtypes of [[IfcObjectDefinition]] . HISTORY New enumeration in IFC4. Items PSET TYPEDRIVENONLY The property sets defined by this [[IfcPropertySetTemplate]] can only be assigned to subtypes of [[IfcTypeObject]] . PSET PSET OCCURRENCEDRIVEN The property sets defined by this [[IfcPropertySetTemplate]] can only be assigned to subtypes of [[IfcObject]] . PSET QTO TYPEDRIVENONLY The element quantity defined by this [[IfcPropertySetTemplate]] can only be assigned to subtypes of [[IfcTypeObject]] . QTO QTO OCCURRENCEDRIVEN The element quantity defined by this [[IfcPropertySetTemplate]] can only be assigned to subtypes of [[IfcObject]] . NOTDEFINED No restriction provided, the property sets defined by this [[IfcPropertySetTemplate]] can be assigned to any entity, if not otherwise restricted by the ApplicableEntity attribute."
-
-msgid "IfcPropertySetTemplateTypeEnum_NOTDEFINED"
+#:IFC.xml:721
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED"
 msgstr "未完成"
 
-msgid "IfcPropertySetTemplateTypeEnum_NOTDEFINED_DEFINITION"
+msgid "IfcDoorPanelPositionEnum_NOTDEFINED_DEFINITION"
 msgstr "未完成"
 
-#:IFC.xml:20589
-msgid "IfcPropertyTemplate"
-msgstr "Ifc属性模板"
+#:IFC.xml:722
+msgid "IfcDoorPanelPositionEnum_RIGHT"
+msgstr "右侧"
 
-msgid "IfcPropertyTemplate_DEFINITION"
-msgstr "The [[IfcPropertyTemplate]] is an abstract supertype comprising the templates for all dynamically extensible properties, either as an [[IfcComplexPropertyTemplate]] , or an [[IfcSimplePropertyTemplate]] . These templates determine the structure of in case of [[IfcComplexPropertyTemplate]] an [[IfcComplexProperty]] an [[IfcPhysicalComplexQuantity]] in case of [[IfcSimplePropertyTemplate]] a subtype of [[IfcSimpleProperty]] a subtype of [[IfcPhysicalSimpleQuantity]] The individual property templates are interpreted according to their Name attribute and may have a predefined property type, property unit, and property data type. A template however shall not have measure values, or quantity values assigned. NOTE Property templates can form part of a property library used and attached as part of a project library. In general the [[IfcPropertySetTemplate]] , containing the subtypes of [[IfcPropertyTemplate]] would be directly linked to the [[IfcProjectLibrary]] . HISTORY New entity in IFC4."
+msgid "IfcDoorPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "右侧"
 
-#:IFC.xml:19966
-msgid "IfcPropertyTemplate_PartOfComplexTemplate"
-msgstr "PartOfComplexTemplate"
+#:IFC.xml:724
+msgid "IfcDoorPanelProperties"
+msgstr "IfcDoorPanel属性"
 
-msgid "IfcPropertyTemplate_PartOfComplexTemplate_DEFINITION"
-msgstr "引用复杂的属性模板。它只能提供，如果引用的复合属性模板的属性类型设置为 COMPLEX。"
+msgid "IfcDoorPanelProperties_DEFINITION"
+msgstr "门板通常是一种门叶，可以让人或货物通过。 门面板的参数界定了面板的几何相关参数。 [[IfcDoorPanelProperties]] 用于参数描述门面板的形状和运转。 参数定义可以单独或补充到门的明确形状外面。 [[IfcDoorType]] 可以定义由多个面板组成的门。 在这种情况下，每个门面板必须包含一个 [[IfcDoorPanelProperties]] 的实例。 PanelPosition 属性，结合[[IfcDoorStyle]].OperationType 属性，决定适用哪个面板 [[IfcDoorPanelProperties]] 。 [[IfcDoorPanelProperties]] 包含在属性列表中，它是由 [[IfcDoorType]] 属性HasPropertySets 给定的。 关于门面板的更多信息可以包含在同一列表中 [[IfcDoorStyle]] 使用[[IfcPropertySet]] 进行动态扩展。 [[IfcDoorPanelProperties]] 没有几何表示。 然而，它界定了可以用来创建由[[IfcDoor]]插入项目空间范围的门类形状的参数，如图1所示。 [[IfcDoorPanelProperties]] 的参数定义标准门面板， 包括给定比例宽度以定义不统一的双向回转或滑动或折叠门。 面板的外部边界由分配给[[IfcDoor]] 的剖面形状表示来确定 插入[[IfcDoorType]] 。 它还必须考虑到线条参数。 面板旋转、双动和滑动面板的深度，由面板深度参数确定。 对于包括一个以上面板在内的门操作类型，至少一个面板的宽度是通过正常化比率衡量的。 它决定了该面板的宽度，其定义是门窗总宽度的比率。 面板宽度图 1 IF2.0中的新实体的门面属性。ifc2x4 IFC4 更改超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
 
-#:IFC.xml:20560
-msgid "IfcPropertyTemplate_PartOfPsetTemplate"
-msgstr "PartOfPsetTemplate"
+#:IFC.xml:747
+msgid "IfcDoorPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcPropertyTemplate_PartOfPsetTemplate_DEFINITION"
-msgstr "Reference to the [[IfcPropertySetTemplate]] that defines the scope for the [[IfcPropertyTemplate]] . A single [[IfcPropertyTemplate]] can be defined within the scope of zero, one or many [[IfcPropertySetTemplate]] ."
+msgid "IfcDoorPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "如果给出形状，形状部分反映了门形状的部分，门面是门板。 .已弃用的 DEPRECATION 属性已废弃，不再使用，即值应为 NIL 。"
 
-#:IFC.xml:20592
-msgid "IfcPropertyTemplateDefinition"
-msgstr "Ifc属性模板定义"
+#:IFC.xml:725
+msgid "IfcDoorPanelProperties_PanelDepth"
+msgstr "面板深度"
 
-msgid "IfcPropertyTemplateDefinition_DEFINITION"
-msgstr "[[IfcPropertyTemplateDefinition]] is a generalization of all property and property set templates. Templates define the collection, types, names, applicable measure types and units of individual properties used in a project. The property template definition can be either Property set template [[IfcPropertySetTemplate]] , a collection of property templates that determine the definition of properties used within a project context. Property template [[IfcPropertyTemplate]] , a single template that determines the definition of a particular property used in the same project context. The template may determine the name, description, data type, the unit, or a standard expression for each property that is based on that template. The subtypes of [[IfcPropertyTemplateDefinition]] are declared within a project context. The uppermost template definition e.g. the [[IfcPropertySetTemplate]] including several [[IfcPropertyTemplate]] s should be related to the context, either [[IfcProject]] , or [[IfcProjectLibrary]] , using the inherited HasContext inverse attribute. HISTORY New entity in IFC4."
+msgid "IfcDoorPanelProperties_PanelDepth_DEFINITION"
+msgstr "门板的深度，与门叶平面垂直。"
 
-#:IFC.xml:20595
-msgid "IfcProxy"
-msgstr "IfcProxy"
+#:IFC.xml:730
+msgid "IfcDoorPanelProperties_PanelOperation"
+msgstr "面板操作"
 
-msgid "IfcProxy_DEFINITION"
-msgstr "[[IfcProxy]] is intended to be a kind of a container for wrapping objects which are defined by associated properties, which may or may not have a geometric representation and placement in space. A proxy may have a semantic meaning, defined by the Name attribute, and property definitions, attached through the property assignment relationship, which definition may be outside of the definitions given by the current release of IFC. The ProxyType may give an indication to which high level semantic breakdown of object the semantic definition of the proxy relates to. the Tag attribute may be used to assign a human or system interpretable identifier such as a serial number or bar code . NOTE Given that only a limited number of semantic constructs can be formally defined within IFC and it will never be possible to define all , there has to be a mechanism for capturing those constructs that are not yet defined by IFC. NOTE Product proxies are a mechanism that allows to exchange data that is part of the project but not necessarily part of the IFC model. Those proxies may have geometric representations assigned. HISTORY New entity in IFC1.5. .deprecated DEPRECATION The entity is deprecated and shall not be used."
+msgid "IfcDoorPanelProperties_PanelOperation_DEFINITION"
+msgstr "该小组确定了该小组的运作方式。 门面板的面板必须与它所引用的 [[IfcDoorStyle]] 操作类型相对应。"
 
-#:IFC.xml:20596
-msgid "IfcProxy_ProxyType"
-msgstr "ProxyType"
+#:IFC.xml:735
+msgid "IfcDoorPanelProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcProxy_ProxyType_DEFINITION"
-msgstr "High level and only semantic meaning attached to the [[IfcProxy]], defining the basic construct type behind the Proxy, e.g. Product or Process."
+msgid "IfcDoorPanelProperties_PanelPosition_DEFINITION"
+msgstr "此面板在门内的位置。 门面板的面板必须与它所引用的 [[IfcDoorStyle]] 操作类型相对应。"
 
-#:IFC.xml:20601
-msgid "IfcProxy_Tag"
-msgstr "标签"
+#:IFC.xml:740
+msgid "IfcDoorPanelProperties_PanelWidth"
+msgstr "面板宽度"
 
-msgid "IfcProxy_Tag_DEFINITION"
-msgstr "产品特定实例中的标签或标签标识符，例如 序列号或位置号。它是事件级别的标识符。"
+msgid "IfcDoorPanelProperties_PanelWidth_DEFINITION"
+msgstr "此面板的宽度，作为相对门的总清开宽度的比率。如果是空的，它默认为1。 必须为所有使用 OperationType s 的 [[IfcDoorStyle]] 的门提供一个值，并且多于一个面板。"
 
-#:IFC.xml:20608
-msgid "IfcQuantitySet"
-msgstr "IfcQuantitySet"
+#:IFC.xml:759
+msgid "IfcDoorStyle"
+msgstr "IfcDoorStyle"
 
-msgid "IfcQuantitySet_DEFINITION"
-msgstr "[[IfcQuantitySet]] is the the abstract supertype for all quantity sets attached to objects. The quantity set is a container class that holds the individual quantities within a quantity tree. These quantities are interpreted according to their name attribute and classified according to their measure type. Some quantity sets are included in the IFC specification and have a predefined set of quantities indicated by assigning a significant name. These quantity sets are listed as quantity sets within this specification. Quantity sets applicable to certain objects are listed in the object specification. An [[IfcPropertySetTemplate]] may define the underlying structure, i.e. the required name, the applicable object or object types to which the quantity set can be attached, and the individual quantities that maybe included. Quantity sets are related to other objects by using the relationship object that refers to the corresponding object Occurrence Object [[IfcRelDefinesByProperties]] using the inverse attribute DefinesOccurrence . Type Object using a direct link by inverse attribute DefinesType . Underlying template [[IfcRelDefinesByTemplate]] using the inverse attribute IsDefinedBy . External reference subtypes of [[IfcRelAssociates]] are used to provide a link to a classification system, or external library providing further reference to the quantity set. Accessible by inverse attribute HasAssociations . HISTORY New entity in IFC4."
+msgid "IfcDoorStyle_DEFINITION"
+msgstr "定义门风格，[[IfcDoorStyle]] , 定义了特殊的门风格， 可以通过实例 [[IfcDoor]] 纳入建筑模型的空间背景。 门风格定义了门风格的总体参数，并且通过[[IfcDoorLiningProperties]] 和 [[IfcDoorPanelProperties]] 指线和一个或多个面板的特定参数。 The door entity, [[IfcDoor]] , define a particular occurrence of a door placed in the spatial context of a project. 门或其形状的实际参数定义在[[IfcDoorStyle]] ， IsDefinedBy 指向IfcReledByType 的，[[IfcDoor]] 与IfcReledByType 的反向关系 [[IfcDoorStyle]] 也定义了衬里、[[IfcDoorLiningProperties]] 和面板[[IfcDoorPanelProperties]] 的特定属性。 [[IfcDoorStyle]] 定义了基线几何形状或表示图。 指向此样式的门风格由[[IfcDoor]] 给出，指向此样式。 大门风格的表示可以由商定的一组最低参数来表示， 为门衬和门窗定义， 或者它可以由[[IfcRepresentationMap]] 使用的几何表示方式给出。 属性参数须优先决定，是否可以将一组参数用于确切代表门风格TRUE 的形状， 或者所附[[IfcRepresentationMap]] 是否持有FALSE 的确切代表 IfcDoorStyleOperationTypeEnum定义门风格的一般布局。 视枚举者而定，恰当的实例[[IfcDoorLiningProperties]] 和 [[IfcDoorPanelProperties]] 附在HasPropertySets列表中。 IfcDoorStyleOperationTypeEnum主要决定了左边或右边的饥饿、 操作挥发、滑动、折叠等以及面板数量。 在IfcDoorStyleOperationTypeEnum上使用几何定义来正确使用不同操作类型的开头符号。 IFC2x中的新实体。该实体已被废弃，不应使用。 将使用新实体 [[IfcDoorType]] 。"
 
-#:IFC.xml:20611
-msgid "IfcRelAggregates"
-msgstr "IfcRelAggregates"
+#:IFC.xml:760
+msgid "IfcDoorStyle_ConstructionType"
+msgstr "构造类型"
 
-msgid "IfcRelAggregates_DEFINITION"
-msgstr "The aggregation relationship [[IfcRelAggregates]] is a special type of the general composition decomposition or whole part relationship [[IfcRelDecomposes]] . The aggregation relationship can be applied to all subtypes of [[IfcObjectDefinition]] . In cases of aggregation of physical elements into a physical aggregate the shape representation of the whole within the same representation identifier can be taken from the sum of the shape representations of the parts. EXAMPLE A roof is the aggregation of the roof elements, such as roof slabs, rafters, purlins, etc. Within the same representation identifier such as the body geometric representation , the shape representation of the roof is given by the shape representation of its parts. Decompositions imply a dependency, implying that the whole depends on the definition of the parts and the parts depend on the existence of the whole. The behaviour that is implied from the dependency relationship has to be established inside the applications. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The attributes RelatingObject and RelatedObjects are demoted from the supertype [[IfcRelDecomposes]] ."
+msgid "IfcDoorStyle_ConstructionType_DEFINITION"
+msgstr "确定门的基本构造和材料类型的类型。"
 
-#:IFC.xml:20166
-msgid "IfcRelAggregates_RelatingObject"
-msgstr "关联对象"
+#:IFC.xml:765
+msgid "IfcDoorStyle_OperationType"
+msgstr "操作类型"
 
-msgid "IfcRelAggregates_RelatingObject_DEFINITION"
-msgstr "The object definition, either an object type or an object occurrence, that represents the aggregation. It is the whole within the whole part relationship. .change ifc2x4 IFC4 CHANGE The attribute has been demoted from the supertype [[IfcRelDecomposes]] and defines the non ordered aggregation relationship."
+msgid "IfcDoorStyle_OperationType_DEFINITION"
+msgstr "键入定义门风格的一般布局和操作。"
 
-#:IFC.xml:20180
-msgid "IfcRelAggregates_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:770
+msgid "IfcDoorStyle_ParameterTakesPrecedence"
+msgstr "参数优先顺序"
 
-msgid "IfcRelAggregates_RelatedObjects_DEFINITION"
-msgstr "The object definitions, either object occurrences or object types, that are being aggregated. They are defined as the parts in the whole part relationship. No order is implied between the parts. .change ifc2x4 IFC4 CHANGE The attribute has been demoted from the supertype [[IfcRelDecomposes]] and defines the non ordered set of parts within the aggregation."
+msgid "IfcDoorStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "布尔值反映了在附加的衬线和面板属性中给出的参数是否确切定义了几何形状, 或者附加样式形状是否优先于 FALSE 。 在最后一种情况下，参数仅有信息值。"
 
-#:IFC.xml:20614
-msgid "IfcRelAssigns"
-msgstr "离子Relassigns"
+#:IFC.xml:775
+msgid "IfcDoorStyle_Sizeable"
+msgstr "可大小"
 
-msgid "IfcRelAssigns_DEFINITION"
-msgstr "The assignment relationship, [[IfcRelAssigns]] , is a generalization of link relationships among instances of [[IfcObject]] and its various 1 st level subtypes. A link denotes the specific association through which one object the client applies the services of other objects the suppliers , or through which one object may navigate to other objects. The client is denoted as the relating object and is established at the level of the specific, instantiable subtypes of [[IfcRelAssigns]] . The suppliers are denoted as the related objects and they are established by the RelatedObjects attribute. NOTE The terms client and supplier are used in a general concept and do not imply any meaning for implementations of systems like client server . EXAMPLE A resource may receive information about its nature of representing real building products by establishing a link between [[IfcResource]] and IfcBuildingElement subtype of [[IfcProduct]] through the assignment relationship [[IfcRelAssignsToResource]] . The resource is then the client that applies the services of other objects here building elements to express the particular view of elements to be consumed as a resource in a process. The assignment relationship establishs a bi directional relationship among the participating objects and does not imply any dependency. The subtypes of [[IfcRelAssigns]] establishes the particular semantic meaning of the assignment relationship. HISTORY New entity in IFC2x."
+msgid "IfcDoorStyle_Sizeable_DEFINITION"
+msgstr "布尔表示所附IfcMappedRepresentation（如果给定的话）是否可以使用比例转换系数大小，或者不是 FALSE 。 如果没有， IfcMappedRepresentation应该是 [[IfcShapeRepresentation]] 的 [[IfcDoor]] ，使用[[IfcMappedItem]] 作为比额系数1。"
 
-#:IFC.xml:20194
-msgid "IfcRelAssigns_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:782
+msgid "IfcDoorStyleConstructionEnum"
+msgstr "IfcDoorStyleConstructionEnum"
 
-msgid "IfcRelAssigns_RelatedObjects_DEFINITION"
-msgstr "被分配给单个对象的相关对象。 单个或相关对象的类型在子类型中定义 [[IfcRelAssigns]]。"
+msgid "IfcDoorStyleConstructionEnum_DEFINITION"
+msgstr "这一列举界定了建造大门的基本类型。 建筑类型涉及建造门所用的主要材料或材料组合。 IF2x中的最新枚举。未完成的项目已升级至高无上！"
 
-#:IFC.xml:20615
-msgid "IfcRelAssigns_RelatedObjectsType"
-msgstr "关联对象类型"
+#:IFC.xml:783
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM"
+msgstr "AluminIUM"
 
-msgid "IfcRelAssigns_RelatedObjectsType_DEFINITION"
-msgstr "Particular type of the assignment relationship. It can constrain the applicable object types, used within the role of RelatedObjects . .change ifc2x4 IFC4 CHANGE The attribute is deprecated and shall no longer be used. A NIL value should always be assigned."
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "AluminIUM"
 
-#:IFC.xml:20622
-msgid "IfcRelAssignsToActor"
-msgstr "IfcRelAssignsToActor"
+#:IFC.xml:784
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC"
+msgstr "闹钟游戏"
 
-msgid "IfcRelAssignsToActor_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToActor]] handles the assignment of objects subtypes of [[IfcObject]] to an actor subtypes of [[IfcActor]] . The [[IfcRelAssignsToActor]] objectified relationship defines a relationship between an [[IfcActor]] and one or many objects. A particular role of the actor played in that relationship can be associated. If specified, it takes priority over the role that may be directly assigned to the person or organization. EXAMPLE An occupant as an actor may rent a flat as a collection of spaces or a zone . This would be an application of this generic relationship. Reference to the objects or single object on which the actor acts upon in a certain role if given is specified in the inherited RelatedObjects attribute. HISTORY New entity in IFC2.0. Has been renamed from IfcRelActsUpon in IFC2x."
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_PLASTIC_DEFINITION"
+msgstr "闹钟游戏"
 
-#:IFC.xml:72
-msgid "IfcRelAssignsToActor_ActingRole"
-msgstr "活动角色"
+#:IFC.xml:785
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "闹钟"
 
-msgid "IfcRelAssignsToActor_ActingRole_DEFINITION"
-msgstr "行为者在目标分配方面发挥的作用"
+msgid "IfcDoorStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "闹钟"
 
-#:IFC.xml:19932
-msgid "IfcRelAssignsToActor_RelatingActor"
-msgstr "相关操作者"
+#:IFC.xml:786
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "高品级钢材质"
 
-msgid "IfcRelAssignsToActor_RelatingActor_DEFINITION"
-msgstr "2. 有关行为者的资料，包括有关个人或组织及其地址的资料。"
+msgid "IfcDoorStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "高品级钢材质"
 
-#:IFC.xml:20625
-msgid "IfcRelAssignsToControl"
-msgstr "IfcRelAssignsToControl"
+#:IFC.xml:787
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcRelAssignsToControl_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToControl]] handles the assignment of a control represented by subtypes of [[IfcControl]] to other objects represented by subtypes of [[IfcObject]] , with the exception of controls . EXAMPLE The assignment of a performance history as subtype of [[IfcControl]] for a building service element as subtype of [[IfcObject]] is an application of this generic relationship. HISTORY New entity in IFC2.0. .change ifc2x IFC2x CHANGE Entity has been renamed from IfcRelControls ."
+msgid "IfcDoorStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
 
-#:IFC.xml:20059
-msgid "IfcRelAssignsToControl_RelatingControl"
-msgstr "相关控制"
+#:IFC.xml:788
+msgid "IfcDoorStyleConstructionEnum_PLASTIC"
+msgstr "游戏"
 
-msgid "IfcRelAssignsToControl_RelatingControl_DEFINITION"
-msgstr "引用对对象适用控制的 [[IfcControl]] 。"
+msgid "IfcDoorStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "游戏"
 
-#:IFC.xml:20628
-msgid "IfcRelAssignsToGroup"
-msgstr "IfcRelAssignsToGroup"
+#:IFC.xml:789
+msgid "IfcDoorStyleConstructionEnum_STEEL"
+msgstr "钢条"
 
-msgid "IfcRelAssignsToGroup_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToGroup]] handles the assignment of object definitions individual object occurrences as subtypes of [[IfcObject]] , and object types as subtypes of [[IfcTypeObject]] to a group subtypes of [[IfcGroup]] . The relationship handles the assignment of group members to the group object. It allows for grouping arbitrary objects within a group, including other groups. The grouping relationship can be applied in a recursive manner. The resulting group is of type [[IfcGroup]] . NOTE Examples of groups include zones as a grouping of spaces, distribution systems as a grouping of building service components, or structural analysis models as a grouping of structural items. The inherited attribute RelatedObjects gives the references to the objects, which are the elements within the group. The RelatingGroup is the group that comprises all elements. The same object or object type can be included in zero, one or many groups. Grouping relationships are not hierarchical. .spec head Informal Propositions 1. The group assignment relationship shall be acyclic, that is, a group shall not participate in its own grouping relationship. HISTORY New entity in IFC1.0. It has been renamed from IfcRelGroups in IFC2x."
+msgid "IfcDoorStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "钢条"
 
-#:IFC.xml:20086
-msgid "IfcRelAssignsToGroup_RelatingGroup"
-msgstr "关联组"
+#:IFC.xml:790
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcRelAssignsToGroup_RelatingGroup_DEFINITION"
-msgstr "引用包含所有分配的群组成员。"
+msgid "IfcDoorStyleConstructionEnum_USERDEFINED_DEFINITION"
+msgstr "已使用"
 
-#:IFC.xml:20631
-msgid "IfcRelAssignsToGroupByFactor"
-msgstr "IfcRelassignsToGroupByFactor"
+#:IFC.xml:791
+msgid "IfcDoorStyleConstructionEnum_WOOD"
+msgstr "WOD"
 
-msgid "IfcRelAssignsToGroupByFactor_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToGroupByFactor]] is a specialization of the general grouping mechanism. It allows to add a factor to define the ratio that applies to the assignment of object definitions individual object occurrences as subtypes of [[IfcObject]] and object types as subtypes of [[IfcTypeObject]] to a group subtypes of [[IfcGroup]] . The ratio can be used to define a percentage assignment. For example, a Factor of 0.8 would indicate that the object is assigned by 80 to the group, or a Factor of 2.5 would indicate the object is assigned with a weight factor of 2.5 to the group. NOTE Examples of factored groups include the assignment of load cases in a load combination in structural analysis, or the assignment of spaces by percentage to different rental zones. The same object or object type may be included with the same or different Factor values to many groups. Grouping relationships are not hierarchical. HISTORY New entity in IFC4."
+msgid "IfcDoorStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOD"
 
-#:IFC.xml:20632
-msgid "IfcRelAssignsToGroupByFactor_Factor"
-msgstr "因子"
+#:IFC.xml:793
+msgid "IfcDoorStyleOperationEnum"
+msgstr "IfcDoorStyleOperationEnum"
 
-msgid "IfcRelAssignsToGroupByFactor_Factor_DEFINITION"
-msgstr "作为确定适用于集团分配的分数或加权系数的比率尺度。"
+msgid "IfcDoorStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how doors operate as shown in Figure 1. Enumerator Description Figure SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. Note Direction of swing whether in or out is determined at the [[IfcDoor]]. SINGLE SWING RIGHT Door with one panel that opens swings to the right. The hinges are on the right side as viewed in the direction of the positive y axis. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING Door with two panels, one opens swings to the left the other opens swings to the right. NOTE Direction of swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING LEFT Door with one panel that swings in both directions and to the left in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR DOUBLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. NOTE Direction of main swing whether in or out is determined at the [[IfcDoor]]. SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE DOOR FOLDING Door with two panels, one is folding to the left the other is folding to the right. REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. NOTE Whether it rolls up to the inside or outside is determined at the [[IfcDoor]]. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open. Figure 1 Door style operations HISTORY New enumeration in IFC2x. NOTE 1. Figures are shown in the ground view. 2. Figures symbolic representation depend on the national building code. 3. These figures are only shown as illustrations, the actual representation in the ground view might differ. 4. Open to the outside is declared as open into the direction of the positive y axis, determined by the ObjectPlacement at [[IfcDoor]] 5. The location of the panel relative to the wall thickness is defined by the ObjectPlacement at [[IfcDoor]] , and the [[IfcDoorLiningProperties]].LiningOffset parameter. Items SINGLE SWING LEFT Door with one panel that opens swings to the left. The hinges are on the left side as viewed in the direction of the positive y axis. SINGLE SWING RIGHT Door with one panel that swings in both directions and to the right in the main trafic direction. Also called double acting door. DOUBLE DOOR SINGLE SWING Door with two panels, one swings in both directions and to the right in the main trafic direction the other swings also in both directions and to the left in the main trafic direction. DOUBLE DOOR SINGLE SWING OPPOSITE LEFT Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOOR SINGLE SWING OPPOSITE RIGHT Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction. DOUBLE DOUBLE SWING RIGHT DOUBLE DOOR DOUBLE SWING SLIDING TO LEFT Door with one panel that is sliding to the left. SLIDING TO RIGHT Door with one panel that is sliding to the right. DOUBLE DOOR SLIDING Door with two panels, one is sliding to the left the other is sliding to the right. FOLDING TO LEFT Door with one panel that is folding to the left. FOLDING TO RIGHT Door with one panel that is folding to the right. DOUBLE REVOLVING An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis the four panels are described by a single [[IfcDoor]] panel property . ROLLINGUP Door that opens by rolling up. USERDEFINED User defined operation type NOTDEFINED A door with a not defined operation type is considered as a door with a lining, but no panels. It is thereby always open."
 
-#:IFC.xml:20639
-msgid "IfcRelAssignsToProcess"
-msgstr "IfcRelassignsToProcess"
+#:IFC.xml:794
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING"
+msgstr "待机处理"
 
-msgid "IfcRelAssignsToProcess_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToProcess]] handles the assignment of one or many objects to a process or activity. An object can be a product that is the item the process operates on. Processes and activities can operate on things other than products, and can operate in ways other than input and output. EXAMPLE It may be common to define processes during estimating or scheduling that describe design tasks resulting in documents , procurement tasks resulting in construction materials , planning tasks resulting in processes , etc. Furthermore, the ways in which process can operate on something might include installs , finishes , transports , removes , etc. The ways are described as operation types. The inherited attribute RelatedObjects gives the references to the objects, or object type, which the process operates on. The RelatingProcess is the process or process type, that operates on the object. The operation types are captured in the inherited attribute Name . NOTE The agreement on valid and recognizable values for the Name attribute is part of view definitions and implementer agreements. HISTORY New entity in IFC1.5. Has been renamed from IfcRelProcessOperatesOn in IFC2x. .change ifc2x4 IFC4 CHANGE The data type RelatingProcess has been extended to cover also [[IfcTypeProcess]]"
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_DOUBLE_SWING_DEFINITION"
+msgstr "待机处理"
 
-#:IFC.xml:20647
-msgid "IfcRelAssignsToProcess_QuantityInProcess"
-msgstr "QuantityInProcess"
+#:IFC.xml:795
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING"
+msgstr "下一步待机"
 
-msgid "IfcRelAssignsToProcess_QuantityInProcess_DEFINITION"
-msgstr "此流程操作特定对象的数量。"
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_FOLDING_DEFINITION"
+msgstr "下一步待机"
 
-#:IFC.xml:20640
-msgid "IfcRelAssignsToProcess_RelatingProcess"
-msgstr "RelatingProcess"
+#:IFC.xml:796
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING"
+msgstr "多台处理器"
 
-msgid "IfcRelAssignsToProcess_RelatingProcess_DEFINITION"
-msgstr "Reference to the process to which the objects are assigned to. .change ifc2x4 IFC4 CHANGE Datatype expanded to include [[IfcProcess]] and [[IfcTypeProcess]] ."
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_DEFINITION"
+msgstr "带两个面板的门 一个是朝着双向和朝着右方向飞去，另一个是朝着两个方向飞去，另一个是朝着干线向左飞去。"
 
-#:IFC.xml:20671
-msgid "IfcRelAssignsToProduct"
-msgstr "IfcRelassignsToProduct"
+#:IFC.xml:797
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT"
+msgstr "多托盘处理选项"
 
-msgid "IfcRelAssignsToProduct_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToProduct]] handles the assignment of objects subtypes of [[IfcObject]] to a product subtypes of [[IfcProduct]] . The Name attribute should be used to classify the usage of the [[IfcRelAssignsToProduct]] objectified relationship. The following Name values are proposed Context Assignment of a context specific representation, such as of structural members to a different context representation with potentially different decomposition breakdown such as of building elements for a specific context specific representation. View Assignment of a product via RelatingProduct that is decomposed according to a discipline view, to another product via RelatedObjects that is decomposed according to a different discipline view. An example is the assignment of the architectural slab to a different decomposition of the pre manufactured sections of a slab under a precast concrete discipline view . HISTORY New entity in IFC2x .change ifc2x3 IFC2x3 CHANGE The reference of a product within a spatial structure is now handled by a new relationship object [[IfcRelReferencedInSpatialStructure]] . The [[IfcRelAssignsToProduct]] shall not be used to represent this relation from IFC2x3 onwards."
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT_DEFINITION"
+msgstr "有两个面板的门都向左敞开，一个面板朝着一个方向摇动，另一个面板朝相反方向摇。"
 
-#:IFC.xml:20672
-msgid "IfcRelAssignsToProduct_RelatingProduct"
-msgstr "相关产品"
+#:IFC.xml:798
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT"
+msgstr "下面的容器解决选项右侧"
 
-msgid "IfcRelAssignsToProduct_RelatingProduct_DEFINITION"
-msgstr "Reference to the product or product type to which the objects are assigned to. .change ifc2x4 IFC4 CHANGE Datatype expanded to include [[IfcProduct]] and [[IfcTypeProduct]] ."
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT_DEFINITION"
+msgstr "两个面板的门都对右边敞开，一个面板朝着一个方向走动，另一个面板朝着相反的方向走动。"
 
-#:IFC.xml:20691
-msgid "IfcRelAssignsToResource"
-msgstr "IfcRelassignsToResource"
+#:IFC.xml:799
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING"
+msgstr "DOUBLE DOOULING"
 
-msgid "IfcRelAssignsToResource_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssignsToResource]] handles the assignment of objects as subtypes of [[IfcObject]] , acting as a resource usage or consumption, to a resource as subtypes of [[IfcResource]] . EXAMPLE The assignment of a resource usage to a construction resource is an application of this generic relationship. It could be an actor, as person or organization assigned to a labor resource, or a raw product assigned to a construction product or material resource . HISTORY New entity in IFC2x."
+msgid "IfcDoorStyleOperationEnum_DOUBLE_DOOR_SLIDING_DEFINITION"
+msgstr "带有两个面板的门，一个正在滑向左，另一个正在向右滑动。"
 
-#:IFC.xml:20692
-msgid "IfcRelAssignsToResource_RelatingResource"
-msgstr "关联资源"
+#:IFC.xml:800
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT"
+msgstr "平滑处理指示灯"
 
-msgid "IfcRelAssignsToResource_RelatingResource_DEFINITION"
-msgstr "Reference to the resource to which the objects are assigned to. .change ifc2x4 IFC4 CHANGE Datatype expanded to include [[IfcResource]] and [[IfcTypeResource]] ."
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_LEFT_DEFINITION"
+msgstr "平滑处理指示灯"
 
-#:IFC.xml:20723
-msgid "IfcRelAssociates"
-msgstr "IfcRelAssociates"
+#:IFC.xml:801
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT"
+msgstr "解析右侧"
 
-msgid "IfcRelAssociates_DEFINITION"
-msgstr "The association relationship [[IfcRelAssociates]] refers to sources of information most notably a classification, library, document, approval, contraint, or material . The information associated may reside internally or externally of the project data. There is no dependency implied by the association. EXAMPLE Further external information may be provided to the tank equipment as subtype of [[IfcProduct]] in terms of its classification and instruction documents, the source of the additional information is held external to the project data model. Association relationships can be established to objects occurrences as subtypes of [[IfcObject]] or to types as subtypes of [[IfcTypeObject]] . Some associations such as approval, or document may also be applied to property templates as subtypes of [[IfcPropertyDefinition]] . EXAMPLE The classification information for the storage tank equipment may be associated to the [[IfcTankType]] subtype of [[IfcTypeObject]] , defining the specific information for all occurencies of that tank in the project. Therefore the association of the Uniclass notation L6814 may be associated by a subtype of [[IfcRelAssociates]] to the type information. EXAMPLE The classification information for a particular space within a building may be associated to the [[IfcSpace]] object subtype of [[IfcObject]] , defining a particular occurrence of space. Therefore the association of the DIN notation NF 1.5 may be associated by a subtype of [[IfcRelAssociates]] to the object. The association relationship establishs an association between one to many objects or property templates and the associated information. The subtypes of [[IfcRelAssociates]] establish the particular semantic meaning of the association relationship. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Entity has been changed into an ABSTRACT supertype"
+msgid "IfcDoorStyleOperationEnum_DOUBLE_SWING_RIGHT_DEFINITION"
+msgstr "解析右侧"
 
-#:IFC.xml:20724
-msgid "IfcRelAssociates_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:802
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT"
+msgstr "跟随最远的"
 
-msgid "IfcRelAssociates_RelatedObjects_DEFINITION"
-msgstr "Set of object or property definitions to which the external references or information is associated. It includes object and type objects, property set templates, property templates and property sets and contexts. .change ifc2x4 IFC4 CHANGE The attribute datatype has been changed from [[IfcRoot]] to [[IfcDefinitionSelect]] ."
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_LEFT_DEFINITION"
+msgstr "一个面板正在折叠到左边的门。"
 
-#:IFC.xml:20731
-msgid "IfcRelAssociatesClassification"
-msgstr "IfcRelAssociates分类"
+#:IFC.xml:803
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT"
+msgstr "向右继续"
 
-msgid "IfcRelAssociatesClassification_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssociatesClassification]] handles the assignment of a classification item items of the select [[IfcClassificationSelect]] to objects occurrences subtypes of [[IfcObject]] or object types subtypes of [[IfcTypeObject]] . The relationship is used to assign a classification item, or a classification system itself to objects. Depending on the type of the RelatingClassification it is either a reference to an classification item within an external classification system, or a reference to the classification system itself NOTE The reference to a classification item includes a link to the classification system within which the item is declared. It assigns the meaning of the classification item to the object ocurrence or type . The reference to the classification system provides the information that the object occurrence or type is governed by the classification system but no assignment of a particular items has been done yet. The inherited attribute RelatedObjects define the objects or object types to which the classification is applied. The attribute RelatingClassification is the reference to a classification, applied to the object s . A single RelatingClassification can thereby be applied to one or multiple objects. HISTORY New entity in IFC2x."
+msgid "IfcDoorStyleOperationEnum_FOLDING_TO_RIGHT_DEFINITION"
+msgstr "带有一个折叠到右边的门。"
 
-#:IFC.xml:20732
-msgid "IfcRelAssociatesClassification_RelatingClassification"
-msgstr "相关分类"
+#:IFC.xml:804
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcRelAssociatesClassification_RelatingClassification_DEFINITION"
-msgstr "分类适用于物体。"
+msgid "IfcDoorStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "一个没有定义操作类型的门被视为一个带有一线的门，但没有面板。因此它总是敞开。"
 
-#:IFC.xml:20739
-msgid "IfcRelAssociatesDocument"
-msgstr "IfcRelassDocument"
+#:IFC.xml:805
+msgid "IfcDoorStyleOperationEnum_REVOLVING"
+msgstr "正在阅读"
 
-msgid "IfcRelAssociatesDocument_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssociatesDocument]] handles the assignment of a document information items of the select [[IfcDocumentSelect]] to objects occurrences subtypes of [[IfcObject]] or object types subtypes of [[IfcTypeObject]] . The relationship is used to assign a document reference or a more detailed document information to objects. A single document reference can be applied to multiple objects. The inherited attribute RelatedObjects define the objects to which the document association is applied. The attribute RelatingDocument is the reference to a document reference, applied to the object s . HISTORY New entity in IFC2x."
+msgid "IfcDoorStyleOperationEnum_REVOLVING_DEFINITION"
+msgstr "一个由四个叶子组成的入口门，其形式是十字架，环绕着一个中央垂直轴，四个面板由一个[[IfcDoor]]面板属性来描述。"
 
-#:IFC.xml:20740
-msgid "IfcRelAssociatesDocument_RelatingDocument"
-msgstr "关联文档"
+#:IFC.xml:806
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP"
+msgstr "ROLLINGUP"
 
-msgid "IfcRelAssociatesDocument_RelatingDocument_DEFINITION"
-msgstr "适用于对象的文档信息或参考资料。"
+msgid "IfcDoorStyleOperationEnum_ROLLINGUP_DEFINITION"
+msgstr "由滚动打开的门。"
 
-#:IFC.xml:20747
-msgid "IfcRelAssociatesLibrary"
-msgstr "IfcRelAssociatesLibrary"
+#:IFC.xml:807
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT"
+msgstr "单片处理指示灯"
 
-msgid "IfcRelAssociatesLibrary_DEFINITION"
-msgstr "The objectified relationship [[IfcRelAssociatesLibrary]] handles the assignment of a library item items of the select [[IfcLibrarySelect]] to subtypes of [[IfcObjectDefinition]] or [[IfcPropertyDefinition]] . The relationship is used to assign a library reference or a more detailed link to a library information to objects, property sets or types. A single library reference can be applied to multiple items. The inherited attribute RelatedObjects define the items to which the library association is applied. The attribute RelatingLibrary is the reference to a library reference, applied to the item s . HISTORY New entity in IFC2x."
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_LEFT_DEFINITION"
+msgstr "一个面板打开左边的门。 从正极轴的方向来看，这些正轴在左侧。"
 
-#:IFC.xml:20748
-msgid "IfcRelAssociatesLibrary_RelatingLibrary"
-msgstr "关联库"
+#:IFC.xml:808
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT"
+msgstr "片段右侧"
 
-msgid "IfcRelAssociatesLibrary_RelatingLibrary_DEFINITION"
-msgstr "参考图书馆，财产集的定义取自图书馆。"
+msgid "IfcDoorStyleOperationEnum_SINGLE_SWING_RIGHT_DEFINITION"
+msgstr "带着双向和右向双向的门和双向门的门。也叫做双向门的双向门。"
 
-#:IFC.xml:20755
-msgid "IfcRelationship"
-msgstr "关联性"
+#:IFC.xml:809
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT"
+msgstr "正在发送至 LEFT"
 
-msgid "IfcRelationship_DEFINITION"
-msgstr "[[IfcRelationship]] is the abstract generalization of all objectified relationships in IFC. Objectified relationships are the preferred way to handle relationships among objects. This allows to keep relationship specific properties directly at the relationship and opens the possibility to later handle relationship specific behavior. There are two different types of relationships, 1 to 1 relationships and 1 to many relationship. used within the subtypes of [[IfcRelationship]] . The following convention applies to all subtypes The two sides of the objectified relationship are named Relating and Related In case of the 1 to many relationship, the related side of the relationship shall be an aggregate being a set 1 N HISTORY New entity in IFC1.0."
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_LEFT_DEFINITION"
+msgstr "带有一个面板的门正在滑向左。"
 
-#:IFC.xml:20758
-msgid "IfcRelConnects"
-msgstr "IfcRel连接"
+#:IFC.xml:810
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT"
+msgstr "解锁向右"
 
-msgid "IfcRelConnects_DEFINITION"
-msgstr "[[IfcRelConnects]] is a connectivity relationship that connects objects under some criteria. As a general connectivity it does not imply constraints, however subtypes of the relationship define the applicable object types for the connectivity relationship and the semantics of the particular connectivity. HISTORY New entity in IFC2x."
+msgid "IfcDoorStyleOperationEnum_SLIDING_TO_RIGHT_DEFINITION"
+msgstr "一个面板的门正在滑向右。"
 
-#:IFC.xml:20761
-msgid "IfcRelDeclares"
-msgstr "IfcRelDeclares"
+#:IFC.xml:811
+msgid "IfcDoorStyleOperationEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcRelDeclares_DEFINITION"
-msgstr "The objectified relationship [[IfcRelDeclares]] handles the declaration of objects subtypes of [[IfcObject]] or properties subtypes of [[IfcPropertyDefinition]] to a project or project library represented by [[IfcProject]] , or [[IfcProjectLibrary]] . The relationship handles the assignment of other objects, like [[IfcActor]] , or [[IfcTypeObject]] to the project, or project libary. The attribute RelatedDefinitions provides the references to the first level objects, that are the elements within the context. All other objects that relate to the first level objects are also defined in the context. NOTE Every object as subtype of [[IfcObject]] has to be declared within the context of a single [[IfcProject]] , or of a [[IfcProjectLibrary]] assigned to a single [[IfcProject]] . This declaration is transitive. For example the [[IfcWorkPlan]] as first level object is declared within the context of [[IfcProject]] via [[IfcRelDeclares]] , all related [[IfcWorkSchedule]] s are related to the context in a transitive way through [[IfcWorkPlan]] . NOTE The assignment excludes subtypes of [[IfcProduct]] s, these are assigned to the [[IfcProject]] using the spatial structure approach through [[IfcSpatialStructureElement]] s , where the outer container element such as [[IfcSite]] or [[IfcBuilding]] has an [[IfcRelAggregates]] relationship with the [[IfcProject]] . The RelatingContext is the project, or project library that comprises all elements. The unit assignments and the presentation contexts defined at [[IfcProject]] or [[IfcProjectLibrary]] apply to all these elements. HISTORY New entity in IFC4."
+msgid "IfcDoorStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的操作类型"
 
-#:IFC.xml:20025
-msgid "IfcRelDeclares_RelatingContext"
-msgstr "相关内容"
+#:IFC.xml:813
+msgid "IfcPermeableCoveringOperationEnum"
+msgstr "IfcPermeableCoveringOperationEnum"
 
-msgid "IfcRelDeclares_RelatingContext_DEFINITION"
-msgstr "参考 [[IfcProject]] 额外信息指派给哪些信息。"
+msgid "IfcPermeableCoveringOperationEnum_DEFINITION"
+msgstr "这个枚举定义了有效的渗透覆盖类型。IF2.0中的新枚举。金属条或线的物品清单保护屏幕。 登录用户定义的可渗透覆盖类型。没有可用的信息。"
 
-#:IFC.xml:20762
-msgid "IfcRelDeclares_RelatedDefinitions"
-msgstr "RelatedDefinitions"
+#:IFC.xml:814
+msgid "IfcPermeableCoveringOperationEnum_GRILL"
+msgstr "资源库"
 
-msgid "IfcRelDeclares_RelatedDefinitions_DEFINITION"
-msgstr "被分配给某一上下文并适用该上下文中的单位和表示上下文定义的物体或财产定义集。"
+msgid "IfcPermeableCoveringOperationEnum_GRILL_DEFINITION"
+msgstr "金属条或线的保护屏幕。"
 
-#:IFC.xml:20769
-msgid "IfcRelDecomposes"
-msgstr "离子Relomposes"
+#:IFC.xml:815
+msgid "IfcPermeableCoveringOperationEnum_LOUVER"
+msgstr "LOUVER"
 
-msgid "IfcRelDecomposes_DEFINITION"
-msgstr "The decomposition relationship, [[IfcRelDecomposes]] , defines the general concept of elements being composed or decomposed. The decomposition relationship denotes a whole part hierarchy with the ability to navigate from the whole the composition to the parts and vice versa. Decompositions may be constrained by requiring both, the whole and its parts, to be of the same type thus establishing a nesting relationship. Or they may require some form of physical containment, thus establishing special types of aggregation relationships. NOTE There are two special names for decomposition, which are linguistically distinguished, nesting and aggregation. The subtypes of [[IfcRelDecomposes]] will introduce either the nesting or aggregation convention see [[IfcRelNests]] and [[IfcRelAggregates]] . EXAMPLE A cost element is a nest of other cost elements. Or a structural frame is an aggregation of beams and columns. Both are applications of decomposition relationship. Decompositions imply a dependency, i.e. the definition of the whole depends on the definition of the parts and the parts depend on the existence of the whole. The decomposition relationship can be applied in a recursive manner, i.e. a decomposed element can be part in another decomposition. Cyclic references have to be prevented at application level. HISTORY New entity in IFC1.5, it is a generalisation of the IFC2.0 entity [[IfcRelNests]] . .change ifc2x4 IFC4 CHANGE The differentiation between the aggregation and nesting is determined to be a non ordered or an ordered collection of parts. The attributes RelatingObject and RelatedObjects have been demoted to the subtypes."
+msgid "IfcPermeableCoveringOperationEnum_LOUVER_DEFINITION"
+msgstr "LOUVER"
 
-#:IFC.xml:20772
-msgid "IfcRelDefines"
-msgstr "IfcRelDefines"
+#:IFC.xml:816
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcRelDefines_DEFINITION"
-msgstr "A generic and abstract relationship which subtypes are used to assign a object type to an object occurrence assign a property set to an object instance assign a property set template to a property set EXAMPLE Several instances of windows within the IFC project model may be of the same catalogue or manufacturer type. Thereby they share the same properties. This relationship is established by the subtype [[IfcRelDefinesByType]] of [[IfcRelDefines]] relationship assigning an [[IfcWindowStyle]] to multiple occurrences [[IfcWindow]] . EXAMPLE The same property set, e.g. Pset ProductManufacturerInfo, keeping the manufacturer name, label and production year of a product, can be assigned to one, or many instances of furnishing. This relationship is established by the subtype [[IfcRelDefinesByProperties]] of [[IfcRelDefines]] relationship assigning an [[IfcPropertySet]] to one or more instances of [[IfcFurnishingElement]] . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The attribute RelatedObjects had been demoted to the subtypes [[IfcRelDefinesByProperties]] and [[IfcRelDefinesByType]] ."
+msgid "IfcPermeableCoveringOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "无可用信息。"
 
-#:IFC.xml:20775
-msgid "IfcRelDefinesByObject"
-msgstr "IfcReldefinesByObject"
+#:IFC.xml:817
+msgid "IfcPermeableCoveringOperationEnum_SCREEN"
+msgstr "已扫描"
 
-msgid "IfcRelDefinesByObject_DEFINITION"
-msgstr "The objectified relationship [[IfcRelDefinesByObject]] defines the relationship between an object taking part in an object type decomposition and an object occurrences taking part in an occurrence decomposition of that type. The [[IfcRelDefinesByObject]] is a 1 to N relationship, as it allows for the assignment of one declaring object information to a single or to many reflected objects. Those objects then share the same object property sets and, for subtypes of [[IfcProduct]] , the eventually assigned representation maps. Only objects that take part in a type decomposition and in an occurrence decomposition of the same type can be connected by the [[IfcRelDefinesByObject]] relationship. The [[IfcRelDefinesByObject]] links the decomposed object type part, also called the declaring part with the occurrence of that part inside the occurrence of the decomposed type, also called the reflected part , as shown in Figure 1. instance diagram .. .. .. .. figures ifcreldefinesbyobject fig 1.png Figure 1 Part definition relationships The [[IfcRelDefinesByObject]] can be used together with the shape representations of the product type as shown in Figure 2. The [[IfcShapeRepresentation]] of the declaring part is referenced by the reflected part . The [[IfcObjectPlacement]] of the model occurrence the whole determines the position within the project context. geometry diagram .. .. .. .. figures ifcreldefinesbyobject fig 2.png Figure 2 Part definition relationships with shape representation HISTORY New entity in IFC4."
+msgid "IfcPermeableCoveringOperationEnum_SCREEN_DEFINITION"
+msgstr "已扫描"
 
-#:IFC.xml:20108
-msgid "IfcRelDefinesByObject_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:818
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "IfcRelDefinesByObject_RelatedObjects_DEFINITION"
-msgstr "对象是对象发生分解的一部分，作为关系中的反射部件。"
+msgid "IfcPermeableCoveringOperationEnum_USERDEFINED_DEFINITION"
+msgstr "用户定义的渗透覆盖类型。"
 
-#:IFC.xml:20122
-msgid "IfcRelDefinesByObject_RelatingObject"
-msgstr "关联对象"
+#:IFC.xml:820
+msgid "IfcPermeableCoveringProperties"
+msgstr "IfcPermeableCoveringProperties"
 
-msgid "IfcRelDefinesByObject_RelatingObject_DEFINITION"
-msgstr "物体是物体类型分解的一部分，作为声明的关系的一部分。"
+msgid "IfcPermeableCoveringProperties_DEFINITION"
+msgstr "该实体是一个门或窗口内的面板的描述，它是打开容许空气流的填充器。 它是由它的属性 [[IfcPermeableCoveringProperties]] 提供的。 可穿透的掩体是一种外壳，例如一个固定或开口的外壳，基本上是由一种外壳和一种内脏组成。 这种步兵通常是一个大型、大型或屏幕。行动方式是按照行动类型定义的。 [[IfcPermeableCoveringProperties]] 包含在 [[IfcWindowStyle]] 或 [[IfcDoorStyle]] 属性列表中的 HasPropertySet 中。 关于渗透覆盖的更多信息可以包含在相同的窗口或门风格列表中，使用动态扩展的 [[IfcPropertySet]]。 这尤其适用于各种操作类型的额外属性。[[IfcPermeableCoveringProperties]] 不具有几何形状。 然而，它定义了可以用来创建由[[IfcWindow]]插入项目空间环境中的 [[IfcWindowStyle]]形状的参数。 或由[[IfcDoor]] 插入的 [[IfcDoorStyle]] 。 在 [[IfcPermeableCoveringProperties]] 上的参数定义了标准渗透覆盖面。 面板的外部边界由分配给[[IfcWindow]] 或 [[IfcDoor]] 的发生参数确定。 它还必须考虑到线条参数。 在整个窗口或门内的渗透覆盖位置由小组定位属性决定。 图1显示适用于直线内位置的小组，如小组位置属性所界定的那样。 以下参数应用于面板框架深度，帧厚度正在覆盖... fccermeeblecoveringproperties.gif 图1 涵盖IFC2中新实体属性的性能。 ，它已从 IFC2x 中的 IfcPermeableCovery重新命名。ifc2x4 IFC4 变异超级类型更改为新的 [[IfcPreDefinedPropertySet]] 。"
 
-#:IFC.xml:20778
-msgid "IfcRelDefinesByProperties"
-msgstr "IfcRel定义字节属性"
+#:IFC.xml:843
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcRelDefinesByProperties_DEFINITION"
-msgstr "The objectified relationship [[IfcRelDefinesByProperties]] defines the relationships between property set definitions and objects. Properties are aggregated in property sets. Property sets can be either directly assigned to occurrence objects using this relationship, or assigned to an object type and assigned via that type to occurrence objects. The assignment of an [[IfcPropertySet]] to an [[IfcTypeObject]] is not handled via this objectified relationship, but through the direct relationship HasPropertySets at [[IfcTypeObject]] . The [[IfcRelDefinesByProperties]] is an N to N relationship, as it allows for the assignment of one or more property sets to one or more objects. Those objects then share the same property definition. HISTORY New entity in IFC2.0. Has been renamed from IfcRelAssignsProperties in IFC2x. .change ifc2x4 IFC4 CHANGE The attribute RelatedObjects had been demoted from the supertype [[IfcRelDefines]] to [[IfcRelDefinesByProperties]] . This relationship has been modified to support multiple property sets referenced by a single relationship."
+msgid "IfcPermeableCoveringProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the permeable covering."
 
-#:IFC.xml:20208
-msgid "IfcRelDefinesByProperties_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:821
+msgid "IfcPermeableCoveringProperties_FrameDepth"
+msgstr "框架深度"
 
-msgid "IfcRelDefinesByProperties_RelatedObjects_DEFINITION"
-msgstr "Reference to the objects or single object to which the property definition applies. .change ifc2x4 IFC4 CHANGE Data type promoted from subtype [[IfcObject]] ."
+msgid "IfcPermeableCoveringProperties_FrameDepth_DEFINITION"
+msgstr "面板框架的深度，用来包括横向横向从前面到后面的孔。 c. 垂直于窗户或门高程平面上。"
 
-#:IFC.xml:20779
-msgid "IfcRelDefinesByProperties_RelatingPropertyDefinition"
-msgstr "关联属性定义"
+#:IFC.xml:826
+msgid "IfcPermeableCoveringProperties_FrameThickness"
+msgstr "帧厚度"
 
-msgid "IfcRelDefinesByProperties_RelatingPropertyDefinition_DEFINITION"
-msgstr "提及该对象或一组对象的属性设定定义。"
+msgid "IfcPermeableCoveringProperties_FrameThickness_DEFINITION"
+msgstr "用于包括渗透覆盖面的面板边框宽度 ， 从面板内穿透面包裹到面板外的一层，在……，i。 。与窗户或门高程平行的。"
 
-#:IFC.xml:20786
-msgid "IfcRelDefinesByTemplate"
-msgstr "IfcReldefinesBy模板"
+#:IFC.xml:831
+msgid "IfcPermeableCoveringProperties_OperationType"
+msgstr "操作类型"
 
-msgid "IfcRelDefinesByTemplate_DEFINITION"
-msgstr "The objectified relationship [[IfcRelDefinesByTemplate]] defines the relationships between property set template and property sets. Common information about property sets, e.g. the applicable name, description, contained properties, is defined by the property set template and assigned to all property sets. NOTE The assignment of an [[IfcPropertySetTemplate]] is supported for [[IfcPropertySet]] and [[IfcQuantitySet]] . The [[IfcRelDefinesByTemplate]] is a 1 to N relationship, as it allows for the assignment of one property set template to a single or to many property sets or quantity sets. Those property sets then share the same property set template definition. HISTORY New entity in IFC4."
+msgid "IfcPermeableCoveringProperties_OperationType_DEFINITION"
+msgstr "还用来按照国家建筑标准分配标准象征性演示。"
 
-#:IFC.xml:20499
-msgid "IfcRelDefinesByTemplate_RelatedPropertySets"
-msgstr "关联属性集"
+#:IFC.xml:836
+msgid "IfcPermeableCoveringProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcRelDefinesByTemplate_RelatedPropertySets_DEFINITION"
-msgstr "从单个属性集模板获取定义的一个或多个属性集或数量集。"
+msgid "IfcPermeableCoveringProperties_PanelPosition_DEFINITION"
+msgstr "这个渗透面板在整个窗口或门类型中的位置。"
 
-#:IFC.xml:20574
-msgid "IfcRelDefinesByTemplate_RelatingTemplate"
-msgstr "关联模板"
+#:IFC.xml:855
+msgid "IfcWindowLiningProperties"
+msgstr "IfcWindowlining属性"
 
-msgid "IfcRelDefinesByTemplate_RelatingTemplate_DEFINITION"
-msgstr "属性集模板，提供相关属性集的共同定义。"
+msgid "IfcWindowLiningProperties_DEFINITION"
+msgstr "The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the [[IfcWindowLiningProperties]] define the geometrically relevant parameter of the lining. NOTE The [[IfcWindowLiningProperties]] shall only be applied to construct the 3D shape of a window, if the attribute [[IfcWindowType]] .ParameterTakesPrecedence is set TRUE. The [[IfcWindowLiningProperties]] are included in the set of properties of [[IfcWindowStyle]].HasPropertySets . More information about the window lining can be included in the same set of the [[IfcWindowType]] using another [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowLiningProperties]] does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type which is inserted by the [[IfcWindow]] into the spatial context of the project as shown in Figure 1. The parameters at the [[IfcWindowLiningProperties]] define a standard window lining, including if given a mullion and a transom for horizontal and vertical splits . The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . The lining is applied to all faces of the opening reveal. The parameter are LiningDepth LiningThickness LiningOffset LiningToPanelOffsetX LiningToPanelOffsetY The inner side is defined as the direction of the window panel opening operation. If the OperationType of the window style is DoublePanelVertical shown TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply MullionThickness FirstMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is DoublePanelHorizontal TriplePanelBottom TriplePanelTop TriplePanelLeft TriplePanelRight the following additional parameter apply TransomThickness FirstTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelVertical the following additional parameter apply SecondMullionOffset measured as offset to the Z axis in XZ plane as a normalized ratio measure If the OperationType of the window type is TriplePanelHorizontal the following additional parameter apply SecondTransomOffset measured as offset to the X axis in XZ plane as a normalized ratio measure Figure 1 Window lining properties HISTORY New entity in IFC2.0. Has been renamed from IfcWindowLining in IFC2x. .change ifc2x4 IFC4 CHANGE The following attributes have been added LiningOffset , LiningToPanelOffsetX , LiningToPanelOffsetY . The attribute ShapeAspectStyle is deprecated and shall no longer be used. Supertype changed to new [[IfcPreDefinedPropertySet]] ."
 
-#:IFC.xml:20789
-msgid "IfcRelDefinesByType"
-msgstr "IfcRelDefinesByType"
+#:IFC.xml:913
+msgid "IfcWindowLiningProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-msgid "IfcRelDefinesByType_DEFINITION"
-msgstr "The objectified relationship [[IfcRelDefinesByType]] defines the relationship between an object type and object occurrences. The [[IfcRelDefinesByType]] is a 1 to N relationship, as it allows for the assignment of one type information to a single or to many objects. Those objects then share the same object type, and the property sets and properties assigned to the object type. The [[IfcRelDefinesByType]] links the object type definition with the object occurrence. Both may define properties by assigning an [[IfcPropertySet]] , including one or many subtypes of [[IfcProperty]] to either the object type or object occurrence, as shown in Figure 1. There are several scenarios to define the same property set on the object type definition and object occurrence side 1. All properties for all object occurrences of a common object type have the same value then only the object type definition has a property set assigned. 2. All properties for all object occurrences are different, that is there are no common property values for the object type definition then each of the object occurrence has a property set assigned. 3. Some properties within the same property set have common values and are assigned to the object type definition and some are occurrence specific and assigned with potentially different values to the object occurrences then The sum of all properties within a given property set applicable to an object occurrence is the union of properties assigned to the object type definition plus the properties assigned to the object occurrence. If the object occurrence has a property with the same [[IfcProperty]].Name in an [[IfcPropertySet]] , as the corresponding object type definition, then the occurrence property value overrides the type property value. Figure 1 Type definition relationships The following table provides an example of assigning properties assigned to [[IfcWall]] properties assigned to [[IfcWallType]] resulting property value for individual wall Pset WallCommon Pset WallCommon ExtendToStructure TRUE TRUE ThermalTransmittance 0.375 0.375 ExtendToStructure FALSE ExtendToStructure TRUE FALSE HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The attribute RelatedObjects had been demoted from the supertype [[IfcRelDefines]] to [[IfcRelDefinesByType]] ."
+msgid "IfcWindowLiningProperties_ShapeAspectStyle_DEFINITION"
+msgstr "与形状定义的可选关联。 这指的是窗口风格几何表现的一部分，用来表示那条线。 .变更ifc2x4 IFC4 变迁. 该属性已废弃，不再使用，即其值应为 NIL 。"
 
-#:IFC.xml:20136
-msgid "IfcRelDefinesByType_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:856
+msgid "IfcWindowLiningProperties_FirstMullionOffset"
+msgstr "FirstMullionOffset"
 
-msgid "IfcRelDefinesByType_RelatedObjects_DEFINITION"
-msgstr "关联对象"
+msgid "IfcWindowLiningProperties_FirstMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline, measured along the x axis of the window placement co ordinate system. An offset value 0.5 indicates that the mullion is positioned in the middle of the window."
 
-#:IFC.xml:20792
-msgid "IfcRelDefinesByType_RelatingType"
-msgstr "关联类型"
+#:IFC.xml:861
+msgid "IfcWindowLiningProperties_FirstTransomOffset"
+msgstr "首次反转偏移量"
 
-msgid "IfcRelDefinesByType_RelatingType_DEFINITION"
-msgstr "引用该对象或对象集的类型或样式信息。"
+msgid "IfcWindowLiningProperties_FirstTransomOffset_DEFINITION"
+msgstr "沿窗口放置协调系统z轴测量的转换中心线偏移。 偏移值0.5表示变压器放置在窗口中间。"
 
-#:IFC.xml:20806
-msgid "IfcRelNests"
-msgstr "离子Relnes"
+#:IFC.xml:866
+msgid "IfcWindowLiningProperties_LiningDepth"
+msgstr "线程深度"
 
-msgid "IfcRelNests_DEFINITION"
-msgstr "The nesting relationship [[IfcRelNests]] is a special type of the general composition decomposition or whole part relationship [[IfcRelDecomposes]] . The nesting relationship can be applied to all non physical subtypes of object and object types, namely processes, controls like cost items , and resources. It can also be applied to physical subtypes of object and object types, namely elements having ports. The nesting implies an order among the nested parts. EXAMPLE A nesting of costs items in an [[IfcCostSchedule]] is the composition of complex cost items from other cost items. The order of the nested cost items underneath the parent cost item is determined by the order of the list of RelatedObjects . EXAMPLE A nesting of [[IfcTask]] s within a work schedule is the composition of a parent work task from more specific sub work tasks. The order of the sub tasks underneath the parent task is determined by the order of the list of RelatedObjects . EXAMPLE A series of [[IfcDistributionPort]] s can be nested within an [[IfcDistributionElement]] . They decompose the distribution element and have an implied order. Decompositions imply a dependency, i.e. the definition of the whole depends on the definition of the parts and the parts depend on the existence of the whole. The behaviour that is implied from the dependency has to be established inside the applications. HISTORY New entity in IFC2.0 .change ifc2x4 IFC4 CHANGE The attributes RelatingObject and RelatedObjects are demoted from the supertype [[IfcRelDecomposes]] , and RelatedObjects is refined to be a list. The use of [[IfcRelNests]] is repurposed to be a nesting of an ordered collections of parts."
+msgid "IfcWindowLiningProperties_LiningDepth_DEFINITION"
+msgstr "垂直于窗口海拔平面的窗框深度。"
 
-#:IFC.xml:20220
-msgid "IfcRelNests_RelatingObject"
-msgstr "关联对象"
+#:IFC.xml:871
+msgid "IfcWindowLiningProperties_LiningOffset"
+msgstr "LiningOffset"
 
-msgid "IfcRelNests_RelatingObject_DEFINITION"
-msgstr "The object definition, either an non product object type or a non product object occurrence, that represents the nest. It is the whole within the whole part relationship. .change ifc2x4 IFC4 CHANGE The attribute has been demoted from the supertype [[IfcRelDecomposes]] and defines the ordered nesting relationship."
+msgid "IfcWindowLiningProperties_LiningOffset_DEFINITION"
+msgstr "窗口线的偏移。偏移量按窗口平面垂直于本地置放置点的y轴的距离表示。 .更改实体定义末尾添加的ifc2x4 IFC4 变异新属性。"
 
-#:IFC.xml:20234
-msgid "IfcRelNests_RelatedObjects"
-msgstr "关联对象"
+#:IFC.xml:876
+msgid "IfcWindowLiningProperties_LiningThickness"
+msgstr "线条厚度"
 
-msgid "IfcRelNests_RelatedObjects_DEFINITION"
-msgstr "The object definitions, either non product object occurrences or non product object types, that are being nestes. They are defined as the parts in the ordered whole part relationship i.e. there is an implied order among the parts expressed by the position within the list of RelatedObjects . .change ifc2x4 IFC4 CHANGE The attribute has been demoted from the supertype [[IfcRelDecomposes]] and defines the ordered set of parts within the nest."
+msgid "IfcWindowLiningProperties_LiningThickness_DEFINITION"
+msgstr "如上图所解释的，窗口线条厚度。如果线条厚度值为0。 零表示一个窗口，在此情况下，所有其他线条参数均应设置为 NIL。 如果线条厚度为 NIL ，则表示值不可用。 .更改ifc2x4 IFC4 变更数据类型为[[IfcNonNegativeLengthMeasure]] 。"
 
-#:IFC.xml:20809
-msgid "IfcResource"
-msgstr "IfcResource"
+#:IFC.xml:881
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX"
+msgstr "LiningToPanel偏移量"
 
-msgid "IfcResource_DEFINITION"
-msgstr "[[IfcResource]] contains the information needed to represent the costs, schedule, and other impacts from the use of a thing in a process. It is not intended to use [[IfcResource]] to model the general properties of the things themselves, while an optional linkage from [[IfcResource]] to the things to be used can be specified specifically, the relationship from subtypes of [[IfcResource]] to [[IfcProduct]] through the [[IfcRelAssignsToResource]] relationship . There are two basic intended uses of [[IfcResource]] . First, if the attributes of the thing are not needed for the purpose of the use of [[IfcResource]] , or the types of things are not explicitly modeled in IFC yet, then the linkage between the resource and the thing doesn t have to be instantiated in the system. That is, the attributes of [[IfcResource]] or its subtypes alone are sufficient to represent the use of the thing as a resource for the purpose of the project. EXAMPLE construction equipment such as earth moving vehicles or tools are not currently modeled within the IFC. For the purpose of estimating and scheduling, these can be represented using subtypes of [[IfcResource]] alone. Second, if the attributes of the thing are needed for the use of [[IfcResource]] objects, and they are modeled explicitly as objects, then the [[IfcResource]] instances can be linked to the instances of the type of the things being referenced. Things that might be used as resources and that are already modeled in the IFC include physical products, people and organizations, and materials. The relationship object [[IfcRelAssignsToResource]] is provided for this approach. The inherited attribute ObjectType is used as a textual code that identifies the resource type. HISTORY New entity in IFC1.0 .change ifc2x IFC2x CHANGE The attributes BaseUnit and ResourceConsumption have been removed from the abstract entity they are reintroduced at a lower level in the hierarchy."
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetX_DEFINITION"
+msgstr "沿本地位置的x轴测量的衬线和窗口面板之间的偏移。 应小于或等于 LiningThicknes。.change ifc2x4 IFC4 变异新属性添加在实体定义末尾。"
 
-#:IFC.xml:20699
-msgid "IfcResource_ResourceOf"
-msgstr "资源"
+#:IFC.xml:886
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY"
+msgstr "LiningToPanel偏移"
 
-msgid "IfcResource_ResourceOf_DEFINITION"
-msgstr "此资源对象是其他对象的关系集，如产品、流程、控制、资源或行为者。"
+msgid "IfcWindowLiningProperties_LiningToPanelOffsetY_DEFINITION"
+msgstr "Offset between the lining and the window panel measured along the y axis of the local placement. Should be smaller or equal to the [[IfcWindowPanelProperties]].PanelThickness . .change ifc2x4 IFC4 CHANGE New attribute added at the end of the entity definition."
 
-#:IFC.xml:20810
-msgid "IfcResource_Identification"
-msgstr "1. 身份识别"
+#:IFC.xml:891
+msgid "IfcWindowLiningProperties_MullionThickness"
+msgstr "多重厚度"
 
-msgid "IfcResource_Identification_DEFINITION"
-msgstr "An identifying designation given to a resource. It is the identifier at the occurrence level. .change ifc2x4 IFC4 CHANGE Attribute promoted from subtype [[IfcConstructionResource]] ."
+msgid "IfcWindowLiningProperties_MullionThickness_DEFINITION"
+msgstr "Thickness of the mullion vertical separator of window panels within a window , measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth. If the MullionThickness is set to zero and the MullionOffset set to a positive length , then the window is divided horizontally without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
 
-#:IFC.xml:20815
-msgid "IfcResource_LongDescription"
-msgstr "长度描述"
+#:IFC.xml:896
+msgid "IfcWindowLiningProperties_SecondMullionOffset"
+msgstr "SecondMullionOffset"
 
-msgid "IfcResource_LongDescription_DEFINITION"
-msgstr "A detailed description of the resource e.g. the skillset for a labor resource . .change ifc2x4 IFC4 CHANGE The attribute LongDescription is added replacing the ResourceGroup attribute at subtype [[IfcConstructionResource]] ."
+msgid "IfcWindowLiningProperties_SecondMullionOffset_DEFINITION"
+msgstr "Offset of the mullion centerline for the second mullion, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second mullion is positioned at two third of the window."
 
-#:IFC.xml:20823
-msgid "IfcResourceSelect"
-msgstr "IfcResource选择"
+#:IFC.xml:901
+msgid "IfcWindowLiningProperties_SecondTransomOffset"
+msgstr "SecondTransomOffset"
 
-#:IFC.xml:20824
-msgid "IfcRoot"
-msgstr "IfcRoot"
+msgid "IfcWindowLiningProperties_SecondTransomOffset_DEFINITION"
+msgstr "Offset of the transom centerline for the second transom, measured along the x axis of the window placement co ordinate system. An offset value 0.666 indicates that the second transom is positioned at two third of the window."
 
-msgid "IfcRoot_DEFINITION"
-msgstr "[[IfcRoot]] is the most abstract and root class for all entity definitions that roots in the kernel or in subsequent layers of the IFC specification. It is therefore the common supertype of all IFC entities, beside those defined in an IFC resource schema. All entities that are subtypes of [[IfcRoot]] can be used independently, whereas resource schema entities, that are not subtypes of [[IfcRoot]] , are not supposed to be independent entities. NOTE View definitions and implementation agreement may impose additional restrictions on the use of the OwnerHistory to handle object versioning. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE The attribute OwnerHistory has been made OPTIONAL."
+#:IFC.xml:906
+msgid "IfcWindowLiningProperties_TransomThickness"
+msgstr "反射厚度"
 
-#:IFC.xml:20841
-msgid "IfcRoot_OwnerHistory"
-msgstr "所有者历史"
+msgid "IfcWindowLiningProperties_TransomThickness_DEFINITION"
+msgstr "Thickness of the transom horizontal separator of window panels within a window , measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth. If the TransomThickness is set to zero and the TransomOffset set to a positive length , then the window is divided vertically without a physical divider. .change ifc2x4 IFC4 CHANGE Data type changed to [[IfcNonNegativeLengthMeasure]] ."
 
-msgid "IfcRoot_OwnerHistory_DEFINITION"
-msgstr "Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE only the last modification in stored either as addition, deletion or modification. .change ifc2x4 IFC4 CHANGE The attribute has been changed to be OPTIONAL."
+#:IFC.xml:925
+msgid "IfcWindowPanelOperationEnum"
+msgstr "IfcWindowPanelOperationEnum"
 
-#:IFC.xml:20825
-msgid "IfcRoot_Description"
-msgstr "描述"
+msgid "IfcWindowPanelOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic ways to describe how window panels operate, as shown in Figure 2. Enumerator Description Figure SideHungRightHand panel that opens to the right when viewed from the outside SideHungLeftHand panel that opens to the left when viewed from the outside TiltAndTurnRightHand panel that opens to the right and is bottom hung TiltAndTurnLeftHand panel that opens to the left and is bottom hung TopHung panel is top hung BottomHung panel is bottom hung PivotHorizontal panel is swinging horizontally hinges are in the middle PivotVertical panel is swinging vertically hinges are in the middle SlidingHorizontal panel is sliding horizontally SlidingVertical panel is sliding vertically RemovableCasement panel is removable FixedCasement panel is fixed OtherOperation user defined operation type NotDefined Figure 1 Window panel operations The opening direction of the window panels is given by the local placement of the [[IfcWindow]] . The positive y axis determines the direction as shown in Figure 2. NOTE 1. Figures are shown as viewed from the outside in direction of the positive y axis . 2. Figures symbolic representation depend on the national building code 3. These figures are only shown as illustrations opening direction .. .. .. .. figures ifcwindowpaneloperationenum fig13.gif Figure 2 Window panel directions HISTORY New enumeration in IFC2.0. Items SIDEHUNGRIGHTHAND SIDEHUNGLEFTHAND TILTANDTURNRIGHTHAND TILTANDTURNLEFTHAND TOPHUNG BOTTOMHUNG PIVOTHORIZONTAL PIVOTVERTICAL SLIDINGHORIZONTAL SLIDINGVERTICAL REMOVABLECASEMENT FIXEDCASEMENT OTHEROPERATION NOTDEFINED"
 
-msgid "IfcRoot_Description_DEFINITION"
-msgstr "任择性描述为交流意见提供了信息。"
+#:IFC.xml:926
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG"
+msgstr "BOTTOMHUNG"
 
-#:IFC.xml:20830
-msgid "IfcRoot_GlobalId"
-msgstr "GlobalId"
+msgid "IfcWindowPanelOperationEnum_BOTTOMHUNG_DEFINITION"
+msgstr "BOTTOMHUNG"
 
-msgid "IfcRoot_GlobalId_DEFINITION"
-msgstr "在整个软件世界中分配一个全局唯一的标识符。"
+#:IFC.xml:927
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT"
+msgstr "FIXEDCASEMENT"
 
-#:IFC.xml:20835
-msgid "IfcRoot_Name"
-msgstr "名称"
+msgid "IfcWindowPanelOperationEnum_FIXEDCASEMENT_DEFINITION"
+msgstr "FIXEDCASEMENT"
 
-msgid "IfcRoot_Name_DEFINITION"
-msgstr "可供参与软件系统或用户使用的可选名称。 对于一些子类型 [[IfcRoot]] 可能需要插入名称属性。这将由某个规则强制执行。"
+#:IFC.xml:928
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED"
+msgstr "未完成"
 
-#:IFC.xml:20853
-msgid "IfcSimplePropertyTemplate"
-msgstr "IfcSimple属性模板"
+msgid "IfcWindowPanelOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
 
-msgid "IfcSimplePropertyTemplate_DEFINITION"
-msgstr "The [[IfcSimplePropertyTemplate]] defines the template for all dynamically extensible properties, either the subtypes of [[IfcSimpleProperty]] , or the subtypes of [[IfcPhysicalSimpleQuantity]] . The individual property templates are interpreted according to their Name attribute and may have a predefined template type, property units, and property measure types. The correct interpretation of the attributes PrimaryUnit SecondaryUnit PrimaryMeasureType SecondaryMeasureType is determined by the TemplateType . The attributes Enumerators and Expression only apply to instances of [[IfcSimplePropertyTemplate]] having a particular TemplateType . The TemplateType also controls, which subtype of either [[IfcSimpleProperty]] or [[IfcPhysicalSimpleQuantity]] shall be used for property occurrences corresponding to this template. The [[IfcSimplePropertyTemplate]] is part of the set of templates included in the [[IfcPropertySetTemplate]] . The template can be accessed throught the inverse attribute PartOfPsetTemplate The [[IfcPropertySetTemplate]] may define one or several instances of [[IfcPropertySet]] or [[IfcElementQuantity]] . The definition assignment is established by the objectified relationship [[IfcRelDefinesByTemplate]] as shown in Figure 1. There is no direct link between an [[IfcSimplePropertyTemplate]] and a subtype of either [[IfcSimpleProperty]] or [[IfcPhysicalSimpleQuantity]] . The definition relationship between the template and the individual properties or quantities is established by the Name attributes. NOTE Constraints at [[IfcPropertySetTemplate]] and [[IfcPropertySet]] and [[IfcElementQuantity]] guarantee that the Name attributes of included property templates and individual properties are unique. [[IfcSimplePropertyTemplate]] figure 1 .. .. .. .. figures ifcsimplepropertytemplate fig 1.png Figure 1 Property template relationships HISTORY New entity in IFC4."
+#:IFC.xml:929
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION"
+msgstr "其他"
 
-#:IFC.xml:20886
-msgid "IfcSimplePropertyTemplate_TemplateType"
-msgstr "模板类型"
+msgid "IfcWindowPanelOperationEnum_OTHEROPERATION_DEFINITION"
+msgstr "其他"
 
-msgid "IfcSimplePropertyTemplate_TemplateType_DEFINITION"
-msgstr "Property type defining whether the property template defines a property with a single value, a bounded value, a list value, a table value, an enumerated value, or a reference value. Or the quantity type defining whether the template defines a quantity with a length, area, volume, weight or time value. NOTE the value of this property determines the correct use of the PrimaryUnit , SecondaryUnit , PrimaryDataType , SecondaryDataType , and Expression attributes."
+#:IFC.xml:930
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL"
+msgstr "四月"
 
-#:IFC.xml:20898
-msgid "IfcSimplePropertyTemplate_Enumerators"
-msgstr "枚举数"
+msgid "IfcWindowPanelOperationEnum_PIVOTHORIZONTAL_DEFINITION"
+msgstr "四月"
 
-msgid "IfcSimplePropertyTemplate_Enumerators_DEFINITION"
-msgstr "财产列名的名称和所有有效的清点者的名单，都是根据财产的定义指定的可选值。 此属性只能提供，如果属性类型设置为 P ENUMERATEDVALUE"
+#:IFC.xml:931
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL"
+msgstr "PIVOTVERTICAL"
 
-#:IFC.xml:20854
-msgid "IfcSimplePropertyTemplate_AccessState"
-msgstr "AccessState"
+msgid "IfcWindowPanelOperationEnum_PIVOTVERTICAL_DEFINITION"
+msgstr "PIVOTVERTICAL"
 
-msgid "IfcSimplePropertyTemplate_AccessState_DEFINITION"
-msgstr "Information about the access state of the property. It determines whether a property be viewed and or modified by any receiving application without specific knowledge of it. Attribute use definition for [[IfcStateEnum]] READWRITE Properties of this template are readable and writable. They may be viewed and modified by users of any application. These are typical informational properties set by a user. READONLY Properties of this template are read only. They may be viewed but not modified by users of any application. Applications may generate such values . These are typical automatically generated properties that should be displayed only, but not written back. LOCKED Properties of this template are locked. They may only be accessed by the owning application the publisher of the property set template . These are typically application depended, internal properties that should not be published. READWRITELOCKED Properties of this template are locked, readable, and writable. They may only be accessed by the owning application. READONLYLOCKED Properties of this template are locked and read only. They may only be accessed by the owning application."
+#:IFC.xml:932
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT"
+msgstr "移除成员"
 
-#:IFC.xml:20859
-msgid "IfcSimplePropertyTemplate_Expression"
-msgstr "表达式"
+msgid "IfcWindowPanelOperationEnum_REMOVABLECASEMENT_DEFINITION"
+msgstr "移除成员"
 
-msgid "IfcSimplePropertyTemplate_Expression_DEFINITION"
-msgstr "The expression used to store additional information for the property template depending on the PropertyType . It should the following definitions, if the PropertyType is set to P TABLEVALUE the expression that could be evaluated to define the correlation between the defining values and the defined values. Q LENGTH, Q AREA, Q VOLUME, Q COUNT, Q WEIGTH, Q TIME the formula to be used to calculate the quantity NOTE No value shall be asserted if the PropertyType is not listed above."
+#:IFC.xml:933
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND"
+msgstr "西欧格利福特"
 
-#:IFC.xml:20864
-msgid "IfcSimplePropertyTemplate_PrimaryMeasureType"
-msgstr "主要测量类型"
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGLEFTHAND_DEFINITION"
+msgstr "西欧格利福特"
 
-msgid "IfcSimplePropertyTemplate_PrimaryMeasureType_DEFINITION"
-msgstr "Primary measure type assigned to the definition of the property. It should be provided, if the PropertyType is set to P SINGLEVALUE determining the measure type of [[IfcPropertySingleValue]].NominalValue P ENUMERATEDVALUE determining the measure type of [[IfcPropertyEnumeratedValue]].EnumerationValues P BOUNDEDVALUE determining the measure type of [[IfcPropertyBoundedValue]].LowerBoundValue P LISTVALUE determining the measure type of [[IfcPropertyListValue]].ListValues P TABLEVALUE determining the measure type of [[IfcPropertyTableValue]].DefiningValues P REFERENCEVALUE determining the measure type of [[IfcPropertyTableValue]].PropertyReference NOTE The value range of the measure type is within the select type [[IfcValue]] for all PropertyType s with the exeption of P REFERENCEVALUE. Here it is within the select type [[IfcObjectReferenceSelect]] ."
+#:IFC.xml:934
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND"
+msgstr "SIDEHUNGRIGHTHAND"
 
-#:IFC.xml:20869
-msgid "IfcSimplePropertyTemplate_PrimaryUnit"
-msgstr "主要股"
+msgid "IfcWindowPanelOperationEnum_SIDEHUNGRIGHTHAND_DEFINITION"
+msgstr "SIDEHUNGRIGHTHAND"
 
-msgid "IfcSimplePropertyTemplate_PrimaryUnit_DEFINITION"
-msgstr "分配给财产定义的主要单位。 如果属性类型设置为 P SINGLEVALUE 来确定 [[IfcPropertySingleValue]]。Unit P ENUMERATEDVALUE 确定 [[IfcPropertyEnumeration]]。 nit P BOUNDEDVALUE determining the [[IfcPropertyBoundedValue]].Unit P ListVALUE determining the [[IfcPropertyListValue]].Unit P TABLEVALUE determining the [[IfcPropertyTableValue]].DefiningUnit"
+#:IFC.xml:935
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL"
+msgstr "已下载"
 
-#:IFC.xml:20874
-msgid "IfcSimplePropertyTemplate_SecondaryMeasureType"
-msgstr "二级测量类型"
+msgid "IfcWindowPanelOperationEnum_SLIDINGHORIZONTAL_DEFINITION"
+msgstr "已下载"
 
-msgid "IfcSimplePropertyTemplate_SecondaryMeasureType_DEFINITION"
-msgstr "Secondary measure type assigned to the definition of the property. It should be provided, if the PropertyType is set to P BOUNDEDVALUE determining the measure type of [[IfcPropertyBoundedValue]].UpperBoundValue P TABLEVALUE determining the measure type of [[IfcPropertyTableValue]].DefinedValues The value range of the measure type is within the select type [[IfcValue]] for all PropertyType s with the exeption of P ENUMERATEDVALUE. Here it is the comma delimited list of enumerators. NOTE The measure type of [[IfcPropertyEnumeration]].EnumerationValues is provided as PrimaryDataType ."
+#:IFC.xml:936
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL"
+msgstr "潜伏的"
 
-#:IFC.xml:20879
-msgid "IfcSimplePropertyTemplate_SecondaryUnit"
-msgstr "借调股"
+msgid "IfcWindowPanelOperationEnum_SLIDINGVERTICAL_DEFINITION"
+msgstr "潜伏的"
 
-msgid "IfcSimplePropertyTemplate_SecondaryUnit_DEFINITION"
-msgstr "分配给财产定义的次级单位。 如果属性类型设置为 P TABLEVALUE 来确定 [[IfcPropertyTableValue]]。定义单位"
+#:IFC.xml:937
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND"
+msgstr "TILTANDTURNLEFTHAND"
 
-#:IFC.xml:20910
-msgid "IfcSimplePropertyTemplateTypeEnum"
-msgstr "IfcSimplePropertyTemplateTypeEnum"
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNLEFTHAND_DEFINITION"
+msgstr "TILTANDTURNLEFTHAND"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_DEFINITION"
-msgstr "This enumeration defines the correct subtype of instances of [[IfcSimpleProperty]] or [[IfcPhysicalSimpleQuantity]] that are created and are assigned to this [[IfcSimplePropertyTemplate]] . It also determines how the attributes of [[IfcPropertyTemplate]] , PrimaryUnit , SecondaryUnit , Enumerators , PrimaryDataType , SecondaryDataType , should be used. HISTORY New enumeration in IFC4. Items P SINGLEVALUE The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertySingleValue]] . P ENUMERATEDVALUE The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyEnumeratedValue]] . P BOUNDEDVALUE The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyBoundedValue]] . P LISTVALUE The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyListValue]] . P TABLEVALUE The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyTableValue]] . P Q Q AREA The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityArea]] . Q VOLUME The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityVolume]] . Q COUNT The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityCount]] . Q WEIGHT The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityWeight]] . Q TIME The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityTime]] ."
+#:IFC.xml:938
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND"
+msgstr "TILTANDTURNRIGHTHAND"
 
-#:IFC.xml:21023
-msgid "IfcSimplePropertyTemplateTypeEnum_P_SINGLEVALUE"
-msgstr "P SINGLEVALUE"
+msgid "IfcWindowPanelOperationEnum_TILTANDTURNRIGHTHAND_DEFINITION"
+msgstr "TILTANDTURNRIGHTHAND"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_SINGLEVALUE_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertySingleValue]] ."
+#:IFC.xml:939
+msgid "IfcWindowPanelOperationEnum_TOPHUNG"
+msgstr "TOPHUNG"
 
-#:IFC.xml:21020
-msgid "IfcSimplePropertyTemplateTypeEnum_P_ENUMERATEDVALUE"
-msgstr "P ENUMERATEDVALUE"
+msgid "IfcWindowPanelOperationEnum_TOPHUNG_DEFINITION"
+msgstr "TOPHUNG"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_ENUMERATEDVALUE_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyEnumeratedValue]] ."
+#:IFC.xml:941
+msgid "IfcWindowPanelPositionEnum"
+msgstr "IfcWindowPanelPositionEnum"
 
-#:IFC.xml:21018
-msgid "IfcSimplePropertyTemplateTypeEnum_P_BOUNDEDVALUE"
-msgstr "P BOUNDEDVALUE"
+msgid "IfcWindowPanelPositionEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the location of window panels. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. It corresponds to the OperationType of the [[IfcWindowStyle]] definition, which references the [[IfcWindowPanelProperties]] . Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is given by an [[IfcWindowType]].OperationType USERDEFINED or NOTDEFINED see [[IfcWindowStyleOperationEnum]] for details . Enumerator from [[IfcWindowStyleOperationEnum]] Use of enumerators from [[IfcWindowPanelPositionEnum]] Figure DoublePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHT DoublePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelVertical first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelHorizontal first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition MIDDLEthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelBottom first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition RIGHTthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelTop first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition LEFTthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT TriplePanelLeft first [[IfcWindowPanelProperties]] with PanelPosition LEFTsecond [[IfcWindowPanelProperties]] with PanelPosition TOPthird [[IfcWindowPanelProperties]] with PanelPosition BOTTOM TriplePanelRight first [[IfcWindowPanelProperties]] with PanelPosition TOPsecond [[IfcWindowPanelProperties]] with PanelPosition BOTTOMthird [[IfcWindowPanelProperties]] with PanelPosition RIGHT Figure 1 Window panel positions HISTORY New enumeration in IFC2.0. NOTE 1. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 2. These figures are only shown as illustrations. Items LEFT MIDDLE RIGHT BOTTOM TOP NOTDEFINED"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_BOUNDEDVALUE_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyBoundedValue]] ."
+#:IFC.xml:942
+msgid "IfcWindowPanelPositionEnum_BOTTOM"
+msgstr "BOTOM"
 
-#:IFC.xml:21021
-msgid "IfcSimplePropertyTemplateTypeEnum_P_LISTVALUE"
-msgstr "P LISTVALUE"
+msgid "IfcWindowPanelPositionEnum_BOTTOM_DEFINITION"
+msgstr "BOTOM"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_LISTVALUE_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyListValue]] ."
+#:IFC.xml:943
+msgid "IfcWindowPanelPositionEnum_LEFT"
+msgstr "左键"
 
-#:IFC.xml:21024
-msgid "IfcSimplePropertyTemplateTypeEnum_P_TABLEVALUE"
-msgstr "P TABLEVALUE"
+msgid "IfcWindowPanelPositionEnum_LEFT_DEFINITION"
+msgstr "左键"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_TABLEVALUE_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcPropertyTableValue]] ."
+#:IFC.xml:944
+msgid "IfcWindowPanelPositionEnum_MIDDLE"
+msgstr "MIDDL"
 
-#:IFC.xml:21022
-msgid "IfcSimplePropertyTemplateTypeEnum_P_REFERENCEVALUE"
-msgstr "P REFERENCEVALUE"
+msgid "IfcWindowPanelPositionEnum_MIDDLE_DEFINITION"
+msgstr "MIDDL"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_P_REFERENCEVALUE_DEFINITION"
-msgstr "P REFERENCEVALUE"
+#:IFC.xml:945
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED"
+msgstr "未完成"
 
-#:IFC.xml:21084
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_LENGTH"
-msgstr "Q LENGTH"
+msgid "IfcWindowPanelPositionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_LENGTH_DEFINITION"
-msgstr "Q LENGTH"
+#:IFC.xml:946
+msgid "IfcWindowPanelPositionEnum_RIGHT"
+msgstr "右侧"
 
-#:IFC.xml:21081
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_AREA"
-msgstr "Q AREA"
+msgid "IfcWindowPanelPositionEnum_RIGHT_DEFINITION"
+msgstr "右侧"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_AREA_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityArea]] ."
+#:IFC.xml:947
+msgid "IfcWindowPanelPositionEnum_TOP"
+msgstr "转发器"
 
-#:IFC.xml:21086
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_VOLUME"
-msgstr "Q VOLUME"
+msgid "IfcWindowPanelPositionEnum_TOP_DEFINITION"
+msgstr "转发器"
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_VOLUME_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityVolume]] ."
+#:IFC.xml:949
+msgid "IfcWindowPanelProperties"
+msgstr "IfcWindowPanel属性"
 
-#:IFC.xml:21083
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_COUNT"
-msgstr "Q COUNT"
+msgid "IfcWindowPanelProperties_DEFINITION"
+msgstr "A window panel is a casement, that is, a component, fixed or opening, consisting essentially of a frame and the infilling. The infilling of a window panel is normally glazing. The way of operation is defined in the operation type. The [[IfcWindowPanelProperties]] are used to parametrically describe the shape and operation of window panels. The parametric definition can be added solely or additionally to the explicit shape representation of the window. The [[IfcWindowType]] can define windows consisting of more then one panel. In this case, one instance of [[IfcWindowPanelProperties]] has to be included for each window panel. The PanelPosition attribute, in conjunction with the [[IfcWindowType]] .OperationType attribute, determines to which panel the [[IfcWindowPanelProperties]] apply. The [[IfcWindowPanelProperties]] are included in the list of properties HasPropertySets of the [[IfcWindowStyle]] . More information about the window panel can be included in the same list of the [[IfcWindowType]] using the [[IfcPropertySet]] for dynamic extensions. The [[IfcWindowPanelProperties]] does not hold an own geometric representation. However it defines parameter, which can be used to create the shape of the [[IfcWindowType]] which is inserted by the [[IfcWindow]] into the spatial context of the project . The parameters at the [[IfcWindowPanelProperties]] define a standard window panel. The outer boundary of the lining is determined by the Profile shape representation assigned to the [[IfcWindow]] , which inserts the [[IfcWindowType]] . It has to take the lining parameter into account as well. The position of the window panel within the overall window is determined by the PanelPosition attribute. As shown in Figure 1, the panel is applied to the position within the lining as defined by the panel position attribute. The following parameter apply to that panel FrameDepth , FrameThickness . panel 1 .. .. .. .. figures ifcwindowpanelproperties fig01.gif Figure 1 Window panel properties HISTORY New entity in IFC2.0, it had been renamed from IfcWindowPanel in IFC2x. .change ifc2x4 IFC4 CHANGE Supertype changed to new [[IfcPreDefinedPropertySet]] ."
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_COUNT_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityCount]] ."
+#:IFC.xml:972
+msgid "IfcWindowPanelProperties_ShapeAspectStyle"
+msgstr "ShapeAspet样式"
 
-#:IFC.xml:21087
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_WEIGHT"
-msgstr "Q WEIGHT"
+msgid "IfcWindowPanelProperties_ShapeAspectStyle_DEFINITION"
+msgstr "Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the panel. .deprecated DEPRECATION The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ."
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_WEIGHT_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityWeight]] ."
+#:IFC.xml:950
+msgid "IfcWindowPanelProperties_FrameDepth"
+msgstr "框架深度"
 
-#:IFC.xml:21085
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_TIME"
-msgstr "Q TIME"
+msgid "IfcWindowPanelProperties_FrameDepth_DEFINITION"
+msgstr "Depth of panel frame, measured from front face to back face horizontally i.e. perpendicular to the window elevation plane."
 
-msgid "IfcSimplePropertyTemplateTypeEnum_Q_TIME_DEFINITION"
-msgstr "The properties defined by this [[IfcPropertyTemplate]] are of type [[IfcQuantityTime]] ."
+#:IFC.xml:955
+msgid "IfcWindowPanelProperties_FrameThickness"
+msgstr "帧厚度"
 
-#:IFC.xml:20923
-msgid "IfcSingleProjectInstance"
-msgstr "IfcSingleProject实例"
+msgid "IfcWindowPanelProperties_FrameThickness_DEFINITION"
+msgstr "Width of panel frame, measured from inside of panel at glazing to outside of panel at lining , i.e. parallel to the window elevation plane."
 
-#:IFC.xml:20931
-msgid "IfcTypeObject"
-msgstr "IfcTypeObject"
+#:IFC.xml:960
+msgid "IfcWindowPanelProperties_OperationType"
+msgstr "操作类型"
 
-msgid "IfcTypeObject_DEFINITION"
-msgstr "The object type defines the specific information about a type, being common to all occurrences of this type. It refers to the specific level of the well recognized generic specific occurrance modeling paradigm. The [[IfcTypeObject]] gets assigned to the individual object instances the occurrences via the [[IfcRelDefinesByType]] relationship. NOTE The terms Type and Style are often used interchangeably. The object type is represented by a set of property set definitions. The attached property sets describe the available alpha numeric information about the object type. and are used to define all common properties that apply to all object occurrences of that type. NOTE If a property having having the same name is used within the [[IfcPropertySet]] assigned to an [[IfcTypeObject]] and subtypes and to an occurrence of that type, then the occurrence property overrides the type property. See [[IfcRelDefinesByType]] for an explanatory figure. Object types may be exchanged without being already assigned to objects. An object type may have an indication of the library or catalogue from which its definition originates. This association is handled by the inherited HasAssociations relationship pointing to [[IfcRelAssociatesLibrary]] . HISTORY New entity in IFC2x .change ifc2x3 IFC2x3 CHANGE The [[IfcTypeObject]] is now subtyped from the new supertype [[IfcObjectDefinition]] , and the attribute HasPropertySets has been changed from a LIST into a SET. .change ifc2x4 IFC4 CHANGE The entity [[IfcTypeObject]] shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC. The inverse attribute Types has been renamed from ObjectTypeOf ."
+msgid "IfcWindowPanelProperties_OperationType_DEFINITION"
+msgstr "Types of window panel operations. Also used to assign standard symbolic presentations according to national building standards."
 
-#:IFC.xml:20513
-msgid "IfcTypeObject_HasPropertySets"
-msgstr "HasPropertySets"
+#:IFC.xml:965
+msgid "IfcWindowPanelProperties_PanelPosition"
+msgstr "面板位置"
 
-msgid "IfcTypeObject_HasPropertySets_DEFINITION"
-msgstr "Set list of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type. .change ifc2x3 IFC2x3 CHANGE The attribute aggregate type has been changed from LIST to SET."
+msgid "IfcWindowPanelProperties_PanelPosition_DEFINITION"
+msgstr "Position of this panel within the overall window style."
 
-#:IFC.xml:20792
-msgid "IfcTypeObject_Types"
-msgstr "类型"
+#:IFC.xml:984
+msgid "IfcWindowStyle"
+msgstr "IfcWindowStyle"
 
-msgid "IfcTypeObject_Types_DEFINITION"
-msgstr "参照IfcReledByType 的关系，从而参照由这种类型定义的事件物体。"
+msgid "IfcWindowStyle_DEFINITION"
+msgstr "The window style defines a particular style of windows, which may be included into the spatial context of the building model through instances of [[IfcWindow]] . A window style defines the overall parameter of the window style and refers to the particular parameter of the lining and one or several panels through [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] . The window entity [[IfcWindow]] defines a particular occurrence of a window inserted in the spatial context of a project. The actual parameter of the window and or its shape is defined at the [[IfcWindowStyle]] , to which the [[IfcWindow]] related by the inverse relationship IsDefinedBy pointing to [[IfcRelDefinesByType]] . The [[IfcWindowStyle]] also defines the particular attributes for the lining [[IfcWindowLiningProperties]] and panels [[IfcWindowPanelProperties]] . The [[IfcWindowStyle]] defines the baseline geometry, or the representation map, for all occurrences of the window style, given by the [[IfcWindow]], pointing to this style. The representation of the window style may be given by the agreed set of minimal parameters, defined for the window lining and the window panel s , or it may be given by a geometric representation used by the [[IfcRepresentationMap]] . The attribute ParameterTakesPrecedence decides, whether the set of parameters can be used to exactly represent the shape of the window style TRUE , or whether the attached [[IfcRepresentationMap]] holds the exact representation FALSE . The IfcWindowStyleOperationTypeEnum defines the general layout of the window style. Depending on the enumerator, the appropriate instances of [[IfcWindowLiningProperties]] and [[IfcWindowPanelProperties]] are attached in the list of HasPropertySets . See geometry use definitions there. HISTORY New entity in IFC2x. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The new entity [[IfcWindowType]] shall be used instead."
 
-#:IFC.xml:20932
-msgid "IfcTypeObject_ApplicableOccurrence"
-msgstr "适用的事件"
+#:IFC.xml:985
+msgid "IfcWindowStyle_ConstructionType"
+msgstr "构造类型"
 
-msgid "IfcTypeObject_ApplicableOccurrence_DEFINITION"
-msgstr "The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix It can be optionally followed by the predefined type after the separator forward slash , using uppercase If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma , forming a comma separated string. EXAMPLE Refering to a furniture as applicable occurrence entity would be expressed as [[IfcFurnishingElement]] , refering to a brace as applicable entity would be expressed as [[IfcMember]] BRACE , refering to a wall and wall standard case would be expressed as [[IfcWall]], [[IfcWallStandardCase]] ."
+msgid "IfcWindowStyle_ConstructionType_DEFINITION"
+msgstr "Type defining the basic construction and material type of the window."
 
-#:IFC.xml:20939
-msgid "IfcTypeProcess"
-msgstr "IfcType进程"
+#:IFC.xml:990
+msgid "IfcWindowStyle_OperationType"
+msgstr "操作类型"
 
-msgid "IfcTypeProcess_DEFINITION"
-msgstr "[[IfcTypeProcess]] defines a specific or type definition of a process or activity without being assigned to a schedule or a time. It is used to define a process or activity specification, that is, the specific process or activity information that is common to all occurrences that are defined for that process or activity type. An [[IfcTypeProcess]] may have a list of property set attached. Values of these properties are common to all occurrences of that process or activity type. The type occurrence relationship is realized using the objectified relationship [[IfcRelDefinesByType]] . Subtypes of [[IfcTypeProcess]] may be exchanged without being already assigned to subtypes of [[IfcProcess]] . HISTORY New entity in IFC4."
+msgid "IfcWindowStyle_OperationType_DEFINITION"
+msgstr "Type defining the general layout and operation of the window style."
 
-#:IFC.xml:20659
-msgid "IfcTypeProcess_OperatesOn"
-msgstr "操作"
+#:IFC.xml:995
+msgid "IfcWindowStyle_ParameterTakesPrecedence"
+msgstr "参数优先顺序"
 
-msgid "IfcTypeProcess_OperatesOn_DEFINITION"
-msgstr "Set of relationships to other objects, e.g. products, processes, controls, resources or actors that are operated on by the process type. HISTORY New inverse relationship in IFC4."
+msgid "IfcWindowStyle_ParameterTakesPrecedence_DEFINITION"
+msgstr "布尔值反映了在附加的衬线和面板属性中给出的参数是否确切定义了几何形状, 或者附加样式形状是否优先于 FALSE 。 在最后一种情况下，参数仅有信息值。"
 
-#:IFC.xml:20940
-msgid "IfcTypeProcess_Identification"
-msgstr "1. 身份识别"
+#:IFC.xml:1000
+msgid "IfcWindowStyle_Sizeable"
+msgstr "可大小"
 
-msgid "IfcTypeProcess_Identification_DEFINITION"
-msgstr "给某一进程类型的识别名称。"
+msgid "IfcWindowStyle_Sizeable_DEFINITION"
+msgstr "The Boolean indicates, whether the attached ShapeStyle can be sized using scale factor of transformation , or not FALSE . If not, the ShapeStyle should be inserted by the [[IfcWindow]] using [[IfcMappedItem]] with the scale factor 1."
 
-#:IFC.xml:20945
-msgid "IfcTypeProcess_LongDescription"
-msgstr "长度描述"
+#:IFC.xml:1007
+msgid "IfcWindowStyleConstructionEnum"
+msgstr "IfcWindowStyConstructionEnum"
 
-msgid "IfcTypeProcess_LongDescription_DEFINITION"
-msgstr "An long description, or text, describing the activity in detail. NOTE The inherited SELF [[IfcRoot]].Description attribute is used as the short description."
+msgid "IfcWindowStyleConstructionEnum_DEFINITION"
+msgstr "This enumeration defines the basic types of construction of windows. The construction type relates to the main material or material combination used for making the window. HISTORY New enumeration in IFC2x. Items ALUMINIUM HIGH STEEL WOOD ALUMINIUM WOOD PLASTIC OTHER CONSTRUCTION NOTDEFINED"
 
-#:IFC.xml:20950
-msgid "IfcTypeProcess_ProcessType"
-msgstr "处理类型"
+#:IFC.xml:1008
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM"
+msgstr "AluminIUM"
 
-msgid "IfcTypeProcess_ProcessType_DEFINITION"
-msgstr "类型是指进一步显示流程的特定类型。使用必须在可实例子类型的级别上确定。 尤其是，它持有用户定义类型，如果预定义类型的属性枚举设置为 USERDEFINED。"
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_DEFINITION"
+msgstr "AluminIUM"
 
-#:IFC.xml:20958
-msgid "IfcTypeProduct"
-msgstr "IfcTypeProduct"
+#:IFC.xml:1009
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD"
+msgstr "闹钟"
 
-msgid "IfcTypeProduct_DEFINITION"
-msgstr "[[IfcTypeProduct]] defines a type definition of a product without being already inserted into a project structure without having a placement , and not being included in the geometric representation context of the project. It is used to define a product specification, that is, the specific product information that is common to all occurrences of that product type. An [[IfcTypeProduct]] may have a list of property set attached and an optional set of product representations. Values of these properties and the representation maps are common to all occurrences of that product type. The type occurrence relationship is realized using the objectified relationship [[IfcRelDefinesByType]] . NOTE The product representations are defined as representation maps, which may be assigned by a product instance through the representation item s being an [[IfcShapeRepresentation]] and having Items of type [[IfcMappedItem]] . The representations at the occurrence level represented by subtypes of [[IfcProduct]] can override the specific representations at the type level for geometric representations, a Cartesian transformation operator can be applied at the occurrence level. for property sets, a property within an occurrence property set, assigned at the product occurrence, overrides the same property assigned to the product type. An [[IfcTypeProduct]] may be exchanged without being already assigned to subtypes of [[IfcProduct]] . HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE The entity [[IfcTypeProduct]] shall not be instantiated from IFC4 onwards. It will be changed into an ABSTRACT supertype in future releases of IFC."
+msgid "IfcWindowStyleConstructionEnum_ALUMINIUM_WOOD_DEFINITION"
+msgstr "闹钟"
 
-#:IFC.xml:12574
-msgid "IfcTypeProduct_RepresentationMaps"
-msgstr "代表地图"
+#:IFC.xml:1010
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL"
+msgstr "高品级钢材质"
 
-msgid "IfcTypeProduct_RepresentationMaps_DEFINITION"
-msgstr "唯一的映射图列表。每个映射图描述了产品样式形状的方块定义。 通过提供多个表示地图，可以给出多视图方块定义。"
+msgid "IfcWindowStyleConstructionEnum_HIGH_GRADE_STEEL_DEFINITION"
+msgstr "高品级钢材质"
 
-#:IFC.xml:20679
-msgid "IfcTypeProduct_ReferencedBy"
-msgstr "引用者"
+#:IFC.xml:1011
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED"
+msgstr "未完成"
 
-msgid "IfcTypeProduct_ReferencedBy_DEFINITION"
-msgstr "Reference to the [[IfcRelAssignsToProduct]] relationship, by which other products, processes, controls, resources or actors as subtypes of [[IfcObjectDefinition]] can be related to this product type. .change ifc2x4 IFC4 CHANGE New inverse relationship."
+msgid "IfcWindowStyleConstructionEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
 
-#:IFC.xml:20959
-msgid "IfcTypeProduct_Tag"
-msgstr "标签"
+#:IFC.xml:1012
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION"
+msgstr "其它功用"
 
-msgid "IfcTypeProduct_Tag_DEFINITION"
-msgstr "产品特定类型的标签或标签标识符，例如 文章编号类似于北非。它是特定级别的标识符。"
+msgid "IfcWindowStyleConstructionEnum_OTHER_CONSTRUCTION_DEFINITION"
+msgstr "其它功用"
 
-#:IFC.xml:20967
-msgid "IfcTypeResource"
-msgstr "IfcTypeResource"
+#:IFC.xml:1013
+msgid "IfcWindowStyleConstructionEnum_PLASTIC"
+msgstr "游戏"
 
-msgid "IfcTypeResource_DEFINITION"
-msgstr "[[IfcTypeResource]] defines a specific or type definition of a resource. It is used to define a resource specification the specific resource, that is common to all occurrences that are defined for that resource and could act as a resource template. An [[IfcTypeResource]] may have a list of property sets attached. Values of these properties are common to all occurrences of that resource type. The type occurrence relationship is realized using the objectified relationship [[IfcRelDefinesByType]] . Subtypes of [[IfcTypeResource]] may be exchanged without being already assigned to subtypes of [[IfcResource]] . HISTORY New entity in IFC4."
+msgid "IfcWindowStyleConstructionEnum_PLASTIC_DEFINITION"
+msgstr "游戏"
 
-#:IFC.xml:20711
-msgid "IfcTypeResource_ResourceOf"
-msgstr "资源"
+#:IFC.xml:1014
+msgid "IfcWindowStyleConstructionEnum_STEEL"
+msgstr "钢条"
 
-msgid "IfcTypeResource_ResourceOf_DEFINITION"
-msgstr "Set of relationships to other objects, e.g. products, processes, controls, resources or actors to which this resource type is a resource. HISTORY New inverse relationship in IFC4."
+msgid "IfcWindowStyleConstructionEnum_STEEL_DEFINITION"
+msgstr "钢条"
 
-#:IFC.xml:20968
-msgid "IfcTypeResource_Identification"
-msgstr "1. 身份识别"
+#:IFC.xml:1015
+msgid "IfcWindowStyleConstructionEnum_WOOD"
+msgstr "WOD"
 
-msgid "IfcTypeResource_Identification_DEFINITION"
-msgstr "给资源类型的识别名称。"
+msgid "IfcWindowStyleConstructionEnum_WOOD_DEFINITION"
+msgstr "WOD"
 
-#:IFC.xml:20973
-msgid "IfcTypeResource_LongDescription"
-msgstr "长度描述"
+#:IFC.xml:1017
+msgid "IfcWindowStyleOperationEnum"
+msgstr "IfcWindowStyOperationEnum"
 
-msgid "IfcTypeResource_LongDescription_DEFINITION"
-msgstr "An long description, or text, describing the resource in detail. NOTE The inherited SELF [[IfcRoot]].Description attribute is used as the short description."
+msgid "IfcWindowStyleOperationEnum_DEFINITION"
+msgstr "This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels including fixed panels as shown in Figure 1. Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED. Enumerator Description Figure SinglePanel Window with one panel. DoublePanelVertical Window with two panels. The configuration of the panels is vertically. DoublePanelHorizontal Window with two panels. The configuration of the panels is horizontally. TriplePanelVertical Window with three panels. The configuration of the panels is vertically. TriplePanelHorizontal Window with three panels. The configuration of the panels is horizontally. TriplePanelBottom Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the bottom. TriplePanelTop Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TriplePanelLeft Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the left hand side. TriplePanelRight Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. UserDefined user defined operation type NotDefined Figure 1 Window style operations HISTORY New Enumeration in IFC2.0. NOTE 1. The way how each panel operates is defined at the [[IfcWindowPanelProperties]].OperationType . 2. The reference from the window panel to the location of that panel in the window style configuration is handled by the [[IfcWindowPanelProperties]].PanelPosition . 3. The figures are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis. 4. These figures are only shown as illustrations Items SINGLE PANEL Window with one panel. DOUBLE DOUBLE TRIPLE PANEL VERTICAL Window with three panels. The configuration of the panels is vertically. TRIPLE TRIPLE PANEL TOP Window with three panels. The configuration of two panels is vertically and the third one is horizontally at the top. TRIPLE TRIPLE PANEL RIGHT Window with three panels. The configuration of two panels is horizontally and the third one is vertically at the right hand side. TRIPLE PANEL HORIZONTAL Window with three panels. The configuration of the panels is horizontally. USERDEFINED user defined operation type NOTDEFINED"
 
-#:IFC.xml:20978
-msgid "IfcTypeResource_ResourceType"
-msgstr "资源类型"
+#:IFC.xml:1018
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL"
+msgstr "多余的 PANE HORIZONTAL"
 
-msgid "IfcTypeResource_ResourceType_DEFINITION"
-msgstr "类型是指进一步显示资源的特定类型。使用必须在可实例子类型的级别上确定。 尤其是，它持有用户定义类型，如果预定义类型的属性枚举设置为 USERDEFINED。"
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr "多余的 PANE HORIZONTAL"
 
-#:IFC.xml:20986
-msgid "IfcUniqueDefinitionNames__Relations"
-msgstr "IfcUniqueDefinitionNames Relations"
+#:IFC.xml:1019
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL"
+msgstr "多余的PANEL"
 
-#:IFC.xml:20994
-msgid "IfcUniquePropertyName__Properties"
-msgstr "IfcUnquePropertyname 属性"
+msgid "IfcWindowStyleOperationEnum_DOUBLE_PANEL_VERTICAL_DEFINITION"
+msgstr "多余的PANEL"
 
-#:IFC.xml:21002
-msgid "IfcUniquePropertySetNames__Properties"
-msgstr "IfcUniquePropertySet名称属性"
+#:IFC.xml:1020
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED"
+msgstr "未完成"
 
-#:IFC.xml:21010
-msgid "IfcUniquePropertyTemplateNames__Properties"
-msgstr "IfcUniquePropertyTemplatenames 属性"
+msgid "IfcWindowStyleOperationEnum_NOTDEFINED_DEFINITION"
+msgstr "未完成"
 
-#:IFC.xml:21032
-msgid "Pset_ActorCommon"
-msgstr "Pset ActorCommon"
+#:IFC.xml:1021
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL"
+msgstr "SINGE PANEL"
 
-msgid "Pset_ActorCommon_DEFINITION"
-msgstr "一套能够对行为者作进一步分类的属性，包括能够使一些行为者被指定为人口的属性， 被指定为属性的数字作为一个单一的值处理，而不必将数值的实例合计为[[IfcActor]]。"
+msgid "IfcWindowStyleOperationEnum_SINGLE_PANEL_DEFINITION"
+msgstr "有一个面板的窗口。"
 
-#:IFC.xml:21033
-msgid "Pset_ActorCommon_Category"
-msgstr "类别"
+#:IFC.xml:1022
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM"
+msgstr "TRIPLE PANEL BOTOM"
 
-msgid "Pset_ActorCommon_Category_DEFINITION"
-msgstr "2. 指定行为者所属的类别。"
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_BOTTOM_DEFINITION"
+msgstr "TRIPLE PANEL BOTOM"
 
-#:IFC.xml:21038
-msgid "Pset_ActorCommon_NumberOfActors"
-msgstr "NumberOfActors"
+#:IFC.xml:1023
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL"
+msgstr "TRIPAL HORIZONTAL"
 
-msgid "Pset_ActorCommon_NumberOfActors_DEFINITION"
-msgstr "The number of actors that are to be dealt with together in the population."
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_HORIZONTAL_DEFINITION"
+msgstr "带有三个面板的窗口。面板的配置是水平的。"
 
-#:IFC.xml:21043
-msgid "Pset_ActorCommon_SkillLevel"
-msgstr "SkillLevel"
+#:IFC.xml:1024
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT"
+msgstr "TRIPLE PANEL LEFT"
 
-msgid "Pset_ActorCommon_SkillLevel_DEFINITION"
-msgstr "Skill level exhibited by the actor and which indicates an extent of their capability to perform actions on the artefacts upon which they can act."
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_LEFT_DEFINITION"
+msgstr "TRIPLE PANEL LEFT"
 
-#:IFC.xml:21049
-msgid "Pset_ProjectCommon"
-msgstr "Pset 工程Common"
+#:IFC.xml:1025
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT"
+msgstr "触发点右侧"
 
-msgid "Pset_ProjectCommon_DEFINITION"
-msgstr "将高层工程信息应用于所有事件的 [[IfcProject] ] 属性设置"
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_RIGHT_DEFINITION"
+msgstr "带有三个面板的窗口。两个面板的配置水平上，第三个面板垂直在右侧。"
 
-#:IFC.xml:21050
-msgid "Pset_ProjectCommon_FundingSource"
-msgstr "FundingSource"
+#:IFC.xml:1026
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP"
+msgstr "TRIPE PANEL TOP"
 
-msgid "Pset_ProjectCommon_FundingSource_DEFINITION"
-msgstr "Investment funding source"
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_TOP_DEFINITION"
+msgstr "带有三个面板的窗口。两个面板的配置垂直，第三个面板水平在顶部。"
 
-#:IFC.xml:21055
-msgid "Pset_ProjectCommon_NetEarnedValue"
-msgstr "NetEarnedValue"
+#:IFC.xml:1027
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL"
+msgstr "TRIPE PANEL 版本"
 
-msgid "Pset_ProjectCommon_NetEarnedValue_DEFINITION"
-msgstr "Net earned value"
+msgid "IfcWindowStyleOperationEnum_TRIPLE_PANEL_VERTICAL_DEFINITION"
+msgstr "带有三个面板的窗口。面板的配置垂直。"
 
-#:IFC.xml:21060
-msgid "Pset_ProjectCommon_PaybackPeriod"
-msgstr "PaybackPeriod"
+#:IFC.xml:1028
+msgid "IfcWindowStyleOperationEnum_USERDEFINED"
+msgstr "已使用"
 
-msgid "Pset_ProjectCommon_PaybackPeriod_DEFINITION"
-msgstr "Payback period of investment"
-
-#:IFC.xml:21065
-msgid "Pset_ProjectCommon_ProjectInvestmentEstimate"
-msgstr "ProjectInvestmentEstimate"
-
-msgid "Pset_ProjectCommon_ProjectInvestmentEstimate_DEFINITION"
-msgstr "Estimate of investment cost"
-
-#:IFC.xml:21070
-msgid "Pset_ProjectCommon_ProjectType"
-msgstr "ProjectType"
-
-msgid "Pset_ProjectCommon_ProjectType_DEFINITION"
-msgstr "Additional typing of a project"
-
-#:IFC.xml:21075
-msgid "Pset_ProjectCommon_ROI"
-msgstr "ROI"
-
-msgid "Pset_ProjectCommon_ROI_DEFINITION"
-msgstr "Return on Investment"
-
-#:IFC.xml:21122
-msgid "IfcPropertySetDefinitionSet"
-msgstr "IfcPropertySetDefinitionSet"
-
-msgid "IfcPropertySetDefinitionSet_DEFINITION"
-msgstr "The purpose of this defined type is enabling the assignment of a set of [[IfcPropertySetDefinition]] s to an [[IfcRelDefinesByProperties]] relationship. NOTE The sole purpose of this defined type is to enable an upward compatible enhancement of the objectified relationship [[IfcRelDefinesByProperties]] in order to assign multiple [[IfcPropertySet]] s, [[IfcElementQuantity]] s or other subtypes of [[IfcPropertySetDefinition]] to objects using a single instance of [[IfcRelDefinesByProperties]] . HISTORY New type in IFC4."
+msgid "IfcWindowStyleOperationEnum_USERDEFINED_DEFINITION"
+msgstr "user defined operation type"
 
