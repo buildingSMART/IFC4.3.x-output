@@ -9,412 +9,223 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcPropertyResource.pot\n"
-"X-Crowdin-File-ID: 72\n"
+"X-Crowdin-File: /master/IfcQuantityResource.pot\n"
+"X-Crowdin-File-ID: 74\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-24 03:58\n"
 
-#:IFC.xml:31167
-msgid "IfcComplexProperty"
-msgstr "Сложное Снаряжение"
+#:IFC.xml:31459
+msgid "IfcPhysicalComplexQuantity"
+msgstr "КоличествоФизический Комплекс"
 
-msgid "IfcComplexProperty_DEFINITION"
-msgstr "[[IfcComplexProperty]] is used to define complex properties to be handled completely within a property set. The included set of properties may be a mixed or consistent collection of [[IfcProperty]] subtypes. This enables the definition of a set of properties to be included as a single property entry in an [[IfcPropertySet]] . The definition of such an [[IfcComplexProperty]] can be reused in many different [[IfcPropertySet]] s. NOTE Since an [[IfcComplexProperty]] may contain other complex properties, sets of properties can be nested. This nesting may be restricted by view definitions and implementer agreements. HISTORY New entity in IFC2.0."
+msgid "IfcPhysicalComplexQuantity_DEFINITION"
+msgstr "The complex physical quantity, [[IfcPhysicalComplexQuantity]] , is an entity that holds a set of single quantity measure value as defined at the subtypes of [[IfcPhysicalSimpleQuantity]] , that all apply to a given component or aspect of the element. EXAMPLE A layered element, like a wall, may have several material layers, each having individual quantities, like footprint area, side area and volume. An instance of [[IfcPhysicalComplexQuantity]] would group these individual quantities given by a subtype of [[IfcPhysicalSimpleQuantity]] and name them according to the material layer name by using the Name attribute. The Discrimination attribute would then be layer . A section Quantity Use Definition at individual entities as subtypes of IfcBuildingElement gives guidance to the usage of the Name and Discrimination attribute to characterize the complex quantities. HISTORY New entity in IFC2x2 Addendum 1. .change ifc2x2 IFC2x2 ADDENDUM 1 CHANGE The entity [[IfcPhysicalComplexQuantity]] has been added. Upward compatibility for file based exchange is guaranteed."
 
-#:IFC.xml:31175
-msgid "IfcComplexProperty_HasProperties"
+#:IFC.xml:31477
+msgid "IfcPhysicalComplexQuantity_HasQuantities"
 msgstr "Характеристики"
 
-msgid "IfcComplexProperty_HasProperties_DEFINITION"
-msgstr "Набор свойств, которые могут быть использованы в этом комплексном объекте может включать в себя другие сложные свойства ."
+msgid "IfcPhysicalComplexQuantity_HasQuantities_DEFINITION"
+msgstr "Набор физических количеств, сгруппированных по этому сложному физическому количеству в соответствии с данной дискриминацией."
 
-#:IFC.xml:31168
-msgid "IfcComplexProperty_UsageName"
-msgstr "Имя использования"
+#:IFC.xml:31460
+msgid "IfcPhysicalComplexQuantity_Discrimination"
+msgstr "Дискриминация"
 
-msgid "IfcComplexProperty_UsageName_DEFINITION"
-msgstr "Usage description of the [[IfcComplexProperty]] within the property set which references the [[IfcComplexProperty]] . NOTE Consider a complex property for glazing properties. The Name attribute of the [[IfcComplexProperty]] could be Pset GlazingProperties , and the UsageName attribute could be OuterGlazingPane ."
+msgid "IfcPhysicalComplexQuantity_Discrimination_DEFINITION"
+msgstr "Примерами проявлений дискриминации являются слой , диаметр стальной шины и др."
 
-#:IFC.xml:31189
-msgid "IfcCurveInterpolationEnum"
-msgstr "Интерполяция IfcCurveCurveInterpolationEnum"
+#:IFC.xml:31465
+msgid "IfcPhysicalComplexQuantity_Quality"
+msgstr "Качество"
 
-msgid "IfcCurveInterpolationEnum_DEFINITION"
-msgstr "[[IfcCurveInterpolationEnum]] specifies the possible methods for the interpolation of property values given as a curve. HISTORY New type in IFC4. Items LINEAR Indicates that values between the defined values are to be found by linear interpolation. LOG LOG LOG Indicates that values between the defined values are to be found by linear interpolation of the Briggs logarithm base 10 of the values. NOTDEFINED No interpolation information is provided"
+msgid "IfcPhysicalComplexQuantity_Quality_DEFINITION"
+msgstr "Дополнительное указание качества количеств, которые группируются по этому физическому сложному количеству."
 
-#:IFC.xml:31190
-msgid "IfcCurveInterpolationEnum_LINEAR"
-msgstr "ЛИНИЙ"
+#:IFC.xml:31470
+msgid "IfcPhysicalComplexQuantity_Usage"
+msgstr "Использование"
 
-msgid "IfcCurveInterpolationEnum_LINEAR_DEFINITION"
-msgstr "Указывает, что значения между заданными значениями будут найдены линейной интерполяцией."
+msgid "IfcPhysicalComplexQuantity_Usage_DEFINITION"
+msgstr "Дополнительное указание типа использования количеств, которые группируются под это физическое сложное количество."
 
-#:IFC.xml:31191
-msgid "IfcCurveInterpolationEnum_LOG_LINEAR"
-msgstr "ЛОГИЧЕСКАЯ ЛИНИЯ"
+#:IFC.xml:31491
+msgid "IfcPhysicalQuantity"
+msgstr "Физическое Количество"
 
-msgid "IfcCurveInterpolationEnum_LOG_LINEAR_DEFINITION"
-msgstr "ЛОГИЧЕСКАЯ ЛИНИЯ"
+msgid "IfcPhysicalQuantity_DEFINITION"
+msgstr "The physical quantity, [[IfcPhysicalQuantity]] , is an abstract entity that holds a complex or simple quantity measure together with a semantic definition of the usage for the single or several measure value. The Name attribute defines the actual usage or kind of measure. The interpretation of the name label has to be established within the actual exchange context. In addition an informative text may be associated to each quantity by the Description attribute. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31192
-msgid "IfcCurveInterpolationEnum_LOG_LOG"
-msgstr "LOG LOG"
-
-msgid "IfcCurveInterpolationEnum_LOG_LOG_DEFINITION"
-msgstr "Указывает, что значения между заданными значениями будут найдены путем линейной интерполяции основ логарифма Бриггса 10 значений."
-
-#:IFC.xml:31193
-msgid "IfcCurveInterpolationEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcCurveInterpolationEnum_NOTDEFINED_DEFINITION"
-msgstr "Нет информации о интерполяции"
-
-#:IFC.xml:31195
-msgid "IfcExtendedProperties"
-msgstr "Свойства IfcExtended"
-
-msgid "IfcExtendedProperties_DEFINITION"
-msgstr "The [[IfcExtendedProperties]] is an abstract supertype of all extensible property collections that are applicable to certain characterized entities. Instantiable subtypes of [[IfcExtendedProperties]] assign the property collection to a particular characterized entity. NOTE Extensible property collections are provided for materials and profiles. Instantiable subtypes have a set of Properties , each providing property name, value and unit and other instance information, depending on the subtype of [[IfcProperty]] referenced. HISTORY New entity in IFC4."
-
-#:IFC.xml:31208
-msgid "IfcExtendedProperties_Properties"
-msgstr "Свойства"
-
-msgid "IfcExtendedProperties_Properties_DEFINITION"
-msgstr "Комплекс недвижимости, предоставленный для этой расширенной коллекции недвижимости."
-
-#:IFC.xml:31196
-msgid "IfcExtendedProperties_Description"
-msgstr "Описание"
-
-msgid "IfcExtendedProperties_Description_DEFINITION"
-msgstr "Описание набора свойств."
-
-#:IFC.xml:31201
-msgid "IfcExtendedProperties_Name"
-msgstr "Наименование"
-
-msgid "IfcExtendedProperties_Name_DEFINITION"
-msgstr "Имя для набора свойств."
-
-#:IFC.xml:31220
-msgid "IfcObjectReferenceSelect"
-msgstr "IfcObjectReferenceSelect"
-
-#:IFC.xml:31221
-msgid "IfcPreDefinedProperties"
-msgstr "Определенные свойства IfcSet"
-
-msgid "IfcPreDefinedProperties_DEFINITION"
-msgstr "The [[IfcPreDefinedProperties]] is an abstract supertype of all predefined property collections that have explicit attributes, each representing a property. Instantiable subtypes are assigned to specific characterised entities. HISTORY New entity in IFC4."
-
-#:IFC.xml:31224
-msgid "IfcProperty"
-msgstr "IfcObjekt"
-
-msgid "IfcProperty_DEFINITION"
-msgstr "[[IfcProperty]] is an abstract generalization for all types of properties that can be associated with IFC objects through the property set mechanism. HISTORY New entity in IFC1.0."
-
-#:IFC.xml:601
-msgid "IfcProperty_HasApprovals"
-msgstr "Утверждения"
-
-msgid "IfcProperty_HasApprovals_DEFINITION"
-msgstr "Пользовательские утверждения для свойства."
-
-#:IFC.xml:2760
-msgid "IfcProperty_HasConstraints"
-msgstr "Ограничения"
-
-msgid "IfcProperty_HasConstraints_DEFINITION"
-msgstr "Пользовательские ограничения для свойства."
-
-#:IFC.xml:20481
-msgid "IfcProperty_PartOfPset"
-msgstr "PartOfPset"
-
-msgid "IfcProperty_PartOfPset_DEFINITION"
-msgstr "Reference to the [[IfcPropertySet]] by which the [[IfcProperty]] is referenced. .change ifc2x4 IFC4 CHANGE New inverse attribute to navigate from [[IfcProperty]] to [[IfcPropertySet]] with upward compatibility for file based exchange."
-
-#:IFC.xml:31175
-msgid "IfcProperty_PartOfComplex"
-msgstr "PartOfComplex"
-
-msgid "IfcProperty_PartOfComplex_DEFINITION"
-msgstr "Reference to the [[IfcComplexProperty]] in which the [[IfcProperty]] is contained. .change ifc2x4 IFC4 CHANGE The cardinality has changed to 0..n to allow reuse of instances of [[IfcProperty]] in several [[IfcComplexProperty]] with upward compatibility for file based exchange."
-
-#:IFC.xml:31237
-msgid "IfcProperty_PropertyForDependance"
-msgstr "Недвижимость Зависимости"
-
-msgid "IfcProperty_PropertyForDependance_DEFINITION"
-msgstr "Свойство, от которого зависит ценность другого имущества."
-
-#:IFC.xml:31251
-msgid "IfcProperty_PropertyDependsOn"
-msgstr "PropertyDependsOn"
-
-msgid "IfcProperty_PropertyDependsOn_DEFINITION"
-msgstr "Недвижимость, от которой зависит стоимость недвижимости."
-
-#:IFC.xml:31225
-msgid "IfcProperty_Name"
-msgstr "Наименование"
-
-msgid "IfcProperty_Name_DEFINITION"
-msgstr "Имя для этого свойства. Это значительная строка названия, которая определяет семантическое значение свойства."
-
-#:IFC.xml:31230
-msgid "IfcProperty_Specification"
-msgstr "Спецификация"
-
-msgid "IfcProperty_Specification_DEFINITION"
-msgstr "Ссылка URI на местонахождение с семантическим определением или информативным текстом объяснить имущество."
-
-#:IFC.xml:31265
-msgid "IfcPropertyAbstraction"
-msgstr "Абстракция IfcPropertyAbstraction"
-
-msgid "IfcPropertyAbstraction_DEFINITION"
-msgstr "The [[IfcPropertyAbstraction]] is an abstract supertype of all property related entities defined as dependent resource entities within the specification. It may have an external reference to a dictionary or library that provides additional information about its definition. Instantiable subtypes have property name, value and other instance information. HISTORY New entity in IFC4."
-
-#:IFC.xml:9109
-msgid "IfcPropertyAbstraction_HasExternalReferences"
+#:IFC.xml:9085
+msgid "IfcPhysicalQuantity_HasExternalReferences"
 msgstr "HasExternalReferences"
 
-msgid "IfcPropertyAbstraction_HasExternalReferences_DEFINITION"
-msgstr "Reference to an external reference, e.g. library, classification, or document information, that is associated to the property definition. .change ifc2x4 IFC4 CHANGE New inverse attribute."
+msgid "IfcPhysicalQuantity_HasExternalReferences_DEFINITION"
+msgstr "Reference to an external reference, e.g. library, classification, or document information, that is associated to the quantity. .change ifc2x4 IFC4 CHANGE New inverse attribute."
 
-#:IFC.xml:31267
-msgid "IfcPropertyBoundedValue"
-msgstr "IfcPropertyBoundedValue"
+#:IFC.xml:31477
+msgid "IfcPhysicalQuantity_PartOfComplex"
+msgstr "PartOfComplex"
 
-msgid "IfcPropertyBoundedValue_DEFINITION"
-msgstr "A property with a bounded value, [[IfcPropertyBoundedValue]] , defines a property object which has a maximum of two numeric or descriptive values assigned, the first value specifying the upper bound and the second value specifying the lower bound. It defines a property value bound min max combination for which the property Name , an optional Description , the optional UpperBoundValue with measure type, the optional LowerBoundValue with measure type, and the optional Unit is given. A set point value can be provided in addition to the upper and lower bound values for operational value setting. The unit is handled by the Unit attribute, see Table 1 for an example of a bounded property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. The [[IfcPropertyBoundedValue]] allows for the specification of an interval for the value component of the property description. If either the LowerBoundValue or the UpperBoundValue is not given, then it indicates an open bound either a minimum value or a maximum value . The interval is by definition inclusive, that is, the value given for the LowerBoundValue or the UpperBoundValue is included in the interval. NOTE An [[IfcPropertyBoundedValue]] may be exchanged with no values assigned yet. In this case the LowerBoundValue and the UpperBoundValue are set to NIL. Name UpperBoundValue LowerBoundValue SetPointValue Type through [[IfcValue]] Unit OverallHeight 1930 2300 [[IfcPositiveLengthMeasure]] OverallWidth 0.9 1.25 [[IfcPositiveLengthMeasure]] m MaxHeight 20.0 [[IfcPositiveLengthMeasure]] MinWeight 20 [[IfcMassMeasure]] kg Where rules ensures same measure type for all values Table 1 Bounded property with values, measure types and units HISTORY New entity in IFC2x. .change ifc2x2 IFC2x2 CHANGE The attribute type of the attribute UpperBoundValue and LowerBoundValue has been made optional with upward compatibility for file based exchange. .change ifc2x4 IFC4 CHANGE The attribute SetPointValue has been added. .spec head Informal Propositions 1. If the measure type for the upper and lover bound value is a numeric measure, then the following shall be true UpperBoundValue LowerBoundValue ."
+msgid "IfcPhysicalQuantity_PartOfComplex_DEFINITION"
+msgstr "Ссылка на количество физического комплекса, в котором может содержаться физическое количество."
 
-#:IFC.xml:31268
-msgid "IfcPropertyBoundedValue_LowerBoundValue"
-msgstr "Нижняя граница"
+#:IFC.xml:31492
+msgid "IfcPhysicalQuantity_Description"
+msgstr "Описание"
 
-msgid "IfcPropertyBoundedValue_LowerBoundValue_DEFINITION"
-msgstr "Нижнее значение для интервала, определяющего значение свойства. Если значение не задано, то оно указывает на открытую границу все значения, которые должны быть меньше или равны UpperBoundValue ."
+msgid "IfcPhysicalQuantity_Description_DEFINITION"
+msgstr "Дальнейшее объяснение, которое может быть дано количеству."
 
-#:IFC.xml:31273
-msgid "IfcPropertyBoundedValue_SetPointValue"
-msgstr "SetPointValue"
-
-msgid "IfcPropertyBoundedValue_SetPointValue_DEFINITION"
-msgstr "Set point value as typically used for operational value setting. .change ifc2x4 IFC4 CHANGE The attribute has been added at the end of the attribute list."
-
-#:IFC.xml:31278
-msgid "IfcPropertyBoundedValue_Unit"
-msgstr "Единица измерения"
-
-msgid "IfcPropertyBoundedValue_Unit_DEFINITION"
-msgstr "Unit for the upper and lower bound values, if not given, the default value for the measure type is used as defined by the global unit assignment at [[IfcProject]].UnitInContext . The applicable unit is then selected by the underlying TYPE of the UpperBoundValue , LowerBoundValue , and SetPointValue"
-
-#:IFC.xml:31283
-msgid "IfcPropertyBoundedValue_UpperBoundValue"
-msgstr "Верхняя граница"
-
-msgid "IfcPropertyBoundedValue_UpperBoundValue_DEFINITION"
-msgstr "Верхняя граница значения для интервала, определяющего значение свойства. Если значение не задано, то оно указывает на открытую границу все значения, которые должны быть больше или равны нижней границе ."
-
-#:IFC.xml:31290
-msgid "IfcPropertyDependencyRelationship"
-msgstr "IfcPropertyDependencyRelationship"
-
-msgid "IfcPropertyDependencyRelationship_DEFINITION"
-msgstr "An [[IfcPropertyDependencyRelationship]] describes an identified dependency between the value of one property and that of another. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Made subtype of [[IfcResourceLevelRelationship]] attribute order changed . .use head Use Definition Whilst the [[IfcPropertyDependencyRelationship]] may be used to describe the dependency, and it may do so in terms of the expression of how the dependency operates, it is not possible through the current IFC model for the value of the related property to be actually derived from the value of the relating property. The determination of value according to the dependency is required to be performed by an application that can then use the Expression attribute to flag the form of the dependency."
-
-#:IFC.xml:31237
-msgid "IfcPropertyDependencyRelationship_DependingProperty"
-msgstr "Зависимые свойства"
-
-msgid "IfcPropertyDependencyRelationship_DependingProperty_DEFINITION"
-msgstr "Свойство, от которого зависит отношение."
-
-#:IFC.xml:31251
-msgid "IfcPropertyDependencyRelationship_DependantProperty"
-msgstr "DependantProperty"
-
-msgid "IfcPropertyDependencyRelationship_DependantProperty_DEFINITION"
-msgstr "Зависимое имущество."
-
-#:IFC.xml:31291
-msgid "IfcPropertyDependencyRelationship_Expression"
-msgstr "Выражение"
-
-msgid "IfcPropertyDependencyRelationship_Expression_DEFINITION"
-msgstr "Выражение, которое далее описывает характер отношения зависимостей."
-
-#:IFC.xml:31298
-msgid "IfcPropertyEnumeratedValue"
-msgstr "IfcPropertyEnumeratedЗначение"
-
-msgid "IfcPropertyEnumeratedValue_DEFINITION"
-msgstr "A property with an enumerated value, [[IfcPropertyEnumeratedValue]] , defines a property object which has a value assigned that is chosen from an enumeration. It defines a property value combination for which the property Name , an optional Description , the optional EnumerationValues with measure type and optionally an Unit is given. NOTE Multiple choices from the property enumeration are supported. The unit is handled by the Unit attribute, see Table 1 for an example of a enumerated property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit. More precisely The [[IfcPropertyEnumeratedValue]] defines a property, which value is selected from a defined list of enumerators. The enumerators are stored in a dynamic enumeration of values including the type information from [[IfcValue]] see [[IfcPropertyEnumeration]] . This enables applications to use an enumeration value as a property within a property set [[IfcPropertySet]] including the allowed list of values. NOTE An [[IfcPropertyEnumeratedValue]] may be exchanged with no values assigned yet. In this case the EnumerationValues are set to NIL. Name Value EnumerationValue Type through [[IfcValue]] [[IfcPropertyEnumeration]] Name BladeAction Opposed [[IfcLabel]] DamperBladeActionEnum BladeAction Parallel [[IfcLabel]] DamperBladeActionEnum Table 1 Enumerated property with values, measure types and units The [[IfcPropertyEnumeratedValue]] refers to an [[IfcPropertyEnumeration]] , see Table 2 for an example Name EnumerationValues Type through [[IfcValue]] Unit DamperBladeActionEnum Parallel, Opposed, Other, Unset IfcString Table 2 Property enumeration with enumerators It is not mandatory to use an instance of [[IfcPropertyEnumeration]] to hold the applicable values for [[IfcPropertyEnumeratedValue]] , however this is the preferred way. A single instance of [[IfcPropertyEnumeration]] can be referenced by multiple instances of [[IfcPropertyEnumeratedValue]] . HISTORY New entity in IFC2.0. .change ifc2x IFC2x CHANGE Entity has been renamed from IfcEnumeratedProperty .change ifc2x4 IFC4 CHANGE Attribute EnumerationValues has been made OPTIONAL with upward compatibility for file based exchange."
-
-#:IFC.xml:31306
-msgid "IfcPropertyEnumeratedValue_EnumerationReference"
-msgstr "Ссылка на перечисление"
-
-msgid "IfcPropertyEnumeratedValue_EnumerationReference_DEFINITION"
-msgstr "Перечисление, из которого было выбрано значение перечисления."
-
-#:IFC.xml:31299
-msgid "IfcPropertyEnumeratedValue_EnumerationValues"
-msgstr "ЗначенияПеречисления"
-
-msgid "IfcPropertyEnumeratedValue_EnumerationValues_DEFINITION"
-msgstr "Enumeration values, which shall be listed in the referenced [[IfcPropertyEnumeration]] , if such a reference is provided. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
-
-#:IFC.xml:31318
-msgid "IfcPropertyEnumeration"
-msgstr "IfcPropertyEnumeration"
-
-msgid "IfcPropertyEnumeration_DEFINITION"
-msgstr "[[IfcPropertyEnumeration]] is a collection of simple or measure values that define a prescribed set of alternatives from which enumeration values are selected. This enables inclusion of enumeration values in property sets. [[IfcPropertyEnumeration]] provides a name for the enumeration as well as a list of unique numeric or descriptive values that may have a measure type assigned . The entity defines the list of potential enumerators to be exchanged together or separately with properties of type [[IfcPropertyEnumeratedValue]] that selects their actual property values from this enumeration. The unit is handled by the Unit attribute, see Table 1 for an example of a unitless property enumeration If the Unit attribute is not given, than the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, the unit assigned by the unit attribute overrides the globally assigned unit. Name EnumerationValues Type through [[IfcValue]] Unit PEnum DamperBladeAction Parallel [[IfcLabel]] Opposed [[IfcLabel]] Other [[IfcLabel]] Unset [[IfcLabel]] Table 1 Property enumeration with values, measure types and units HISTORY New entity in IFC2.0, capabilities enhanced in IFC2x. .change ifc2x IFC2x CHANGE Entity has been renamed from IfcEnumeration"
-
-#:IFC.xml:31319
-msgid "IfcPropertyEnumeration_EnumerationValues"
-msgstr "ЗначенияПеречисления"
-
-msgid "IfcPropertyEnumeration_EnumerationValues_DEFINITION"
-msgstr "Список значений, формирующих перечисление."
-
-#:IFC.xml:31324
-msgid "IfcPropertyEnumeration_Name"
+#:IFC.xml:31497
+msgid "IfcPhysicalQuantity_Name"
 msgstr "Наименование"
 
-msgid "IfcPropertyEnumeration_Name_DEFINITION"
-msgstr "Название этого перечисления."
+msgid "IfcPhysicalQuantity_Name_DEFINITION"
+msgstr "Количество или количество элемента. Название атрибута должно быть узнаваемым по другим соглашениям."
 
-#:IFC.xml:31329
-msgid "IfcPropertyEnumeration_Unit"
+#:IFC.xml:31516
+msgid "IfcPhysicalSimpleQuantity"
+msgstr "Физическое Количество"
+
+msgid "IfcPhysicalSimpleQuantity_DEFINITION"
+msgstr "The physical quantity, [[IfcPhysicalSimpleQuantity]] , is an entity that holds a single quantity measure value as defined at the subtypes of [[IfcPhysicalSimpleQuantity]] together with a semantic definition of the usage for the measure value. EXAMPLE An element, like a wall, may have several area measures, like footprint area, left wall face area, right wall face area. These areas would be given by three instances of the area quantity subtype, with different Name string values. A section Quantity Use Definition at individual entities as subtypes of IfcBuildingElement gives guidance to the usage of the Name attribute to characterize the individual quantities. If the Unit attribute is given, the value attribute introduced at the level of subtypes of [[IfcPhysicalSimpleQuantity]] are given as quantities of this unit, otherwise the global unit definitions given by [[IfcUnitAssignment]] are used. HISTORY New entity in IFC2x2 Addendum 1. .change ifc2x2 IFC2x2 ADDENDUM 1 CHANGE The abstract entity [[IfcPhysicalSimpleQuantity]] has been added. Upward compatibility for file based exchange is guaranteed."
+
+#:IFC.xml:22431
+msgid "IfcPhysicalSimpleQuantity_Unit"
 msgstr "Единица измерения"
 
-msgid "IfcPropertyEnumeration_Unit_DEFINITION"
-msgstr "Единица измерения числа, если не указано, значение по умолчанию для типа измерения, данного ТИП номинального значения, используется в соответствии с глобальным назначением единицы в [[IfcProject]]."
+msgid "IfcPhysicalSimpleQuantity_Unit_DEFINITION"
+msgstr "Необязательное назначение единицы. Если единица не указана, то значение глобальной единицы, как установлено в [[IfcProject]], применяется к количеству."
 
-#:IFC.xml:31336
-msgid "IfcPropertyListValue"
-msgstr "IfcPropertyListValue"
+#:IFC.xml:31519
+msgid "IfcQuantityArea"
+msgstr "IfcQuantityArea"
 
-msgid "IfcPropertyListValue_DEFINITION"
-msgstr "An [[IfcPropertyListValue]] defines a property that has several numeric or descriptive values assigned, these values are given by an ordered list. It defines a property list value combination for which the property Name , an optional Description , the optional ListValues with measure type and optionally an Unit is given. An [[IfcPropertyListValue]] is a list of values. The order in which values appear is significant. All list members shall be of the same type. The unit is handled by the Unit attribute, see Table 1 for an example of a list property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. NOTE An [[IfcPropertyListValue]] may be exchanged with no values assigned yet. In this case the ListValues are set to NIL. Name ListValues Type through [[IfcValue]] Unit ApplicableSizes 1200 [[IfcPositiveLengthMeasure]] 1600 [[IfcPositiveLengthMeasure]] 2400 [[IfcPositiveLengthMeasure]] Table 1 List property with values, measure types and units HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute ListValues has been made OPTIONAL with upward compatibility for file based exchange."
+msgid "IfcQuantityArea_DEFINITION"
+msgstr "[[IfcQuantityArea]] is a physical quantity that defines a derived area measure to provide an element s physical property. It is normally derived from the physical properties of the element under the specific measure rules given by a method of measurement. EXAMPLE An opening may have an opening area used to deduct it from the wall surface area. The actual size of the area depends on the method of measurement used. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31337
-msgid "IfcPropertyListValue_ListValues"
-msgstr "ЗначенияСписок"
+#:IFC.xml:31520
+msgid "IfcQuantityArea_AreaValue"
+msgstr "Значение области"
 
-msgid "IfcPropertyListValue_ListValues_DEFINITION"
-msgstr "List of property values. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
+msgid "IfcQuantityArea_AreaValue_DEFINITION"
+msgstr "Выборочная величина этого количества."
 
-#:IFC.xml:31342
-msgid "IfcPropertyListValue_Unit"
-msgstr "Единица измерения"
+#:IFC.xml:31525
+msgid "IfcQuantityArea_Formula"
+msgstr "Формула"
 
-msgid "IfcPropertyListValue_Unit_DEFINITION"
-msgstr "Единица измерения для значений списка, если не указано, значение по умолчанию для типа измерения, данного ТИП номинального значения, используется в соответствии с глобальным назначением единицы в [[IfcProject]]."
+msgid "IfcQuantityArea_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
 
-#:IFC.xml:31349
-msgid "IfcPropertyReferenceValue"
-msgstr "IfcPropertyReferenceЗначение"
+#:IFC.xml:31532
+msgid "IfcQuantityCount"
+msgstr "Количество"
 
-msgid "IfcPropertyReferenceValue_DEFINITION"
-msgstr "The [[IfcPropertyReferenceValue]] allows a property value to be of type of an resource level entity. The applicable entities that can be used as value references are given by the [[IfcObjectReferenceSelect]] . HISTORY New entity in IFC1.5. Entity has been renamed from IfcObjectReference in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute PropertyReference has been made OPTIONAL with upward compatibility for file based exchange."
+msgid "IfcQuantityCount_DEFINITION"
+msgstr "[[IfcQuantityCount]] is a physical quantity that defines a derived count measure to provide an element s physical property. It is normally derived from the physical properties of the element under the specific measure rules given by a method of measurement. EXAMPLE An radiator may be measured according to its number of coils. The actual counting method depends on the method of measurement used. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31350
-msgid "IfcPropertyReferenceValue_PropertyReference"
-msgstr "PropertyReference"
+#:IFC.xml:31533
+msgid "IfcQuantityCount_CountValue"
+msgstr "Кол-во"
 
-msgid "IfcPropertyReferenceValue_PropertyReference_DEFINITION"
-msgstr "Reference to another property entity through one of the select types in the [[IfcObjectReferenceSelect]] . .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
+msgid "IfcQuantityCount_CountValue_DEFINITION"
+msgstr "Измерение величины этого количества."
 
-#:IFC.xml:31355
-msgid "IfcPropertyReferenceValue_UsageName"
-msgstr "Имя использования"
+#:IFC.xml:31538
+msgid "IfcQuantityCount_Formula"
+msgstr "Формула"
 
-msgid "IfcPropertyReferenceValue_UsageName_DEFINITION"
-msgstr "Описание использования упомянутого значения внутри свойства. Это описательный текст, который может содержать выражение или другую дополнительную информацию."
+msgid "IfcQuantityCount_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
 
-#:IFC.xml:31362
-msgid "IfcPropertySingleValue"
-msgstr "Значение IfcPropertySingleValue"
+#:IFC.xml:31545
+msgid "IfcQuantityLength"
+msgstr "Длина количества"
 
-msgid "IfcPropertySingleValue_DEFINITION"
-msgstr "The property with a single value [[IfcPropertySingleValue]] defines a property object which has a single numeric or descriptive value assigned. It defines a property single value combination for which the property Name , an optional Description , and an optional NominalValue with measure type is provided. In addition, the default unit as specified within the project unit context can be overriden by assigning an Unit . The unit is handled by the Unit attribute, see Table 1 for an example of various single value properties If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. Name NominalValue Type through [[IfcValue]] Unit Description Manufacturer A door [[IfcLabel]] PanelThickness 0.12 [[IfcPositiveLengthMeasure]] ThermalTransmittance 2.6 [[IfcThermalTransmittanceMeasure]] W m2K Table 1 Single value properties with values, measure types and units HISTORY New entity in IFC1.0. .change ifc2x IFC2x CHANGE Entity has been renamed from [[IfcSimpleProperty]]. .change ifc2x3 IFC2x3 CHANGE Attribute NominalValue has been made OPTIONAL with upward compatibility for file based exchange."
+msgid "IfcQuantityLength_DEFINITION"
+msgstr "[[IfcQuantityLength]] is a physical quantity that defines a derived length measure to provide an element s physical property. It is normally derived from the physical properties of the element under the specific measure rules given by a method of measurement. EXAMPLE A rafter within a roof construction may be measured according to its length taking a common cross section into account . The actual size of the length depends on the method of measurement used. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31363
-msgid "IfcPropertySingleValue_NominalValue"
-msgstr "Номинальное значение"
+#:IFC.xml:31546
+msgid "IfcQuantityLength_Formula"
+msgstr "Формула"
 
-msgid "IfcPropertySingleValue_NominalValue_DEFINITION"
-msgstr "Value and measure type of this property. NOTE By virtue of the defined data type, that is selected from the SELECT [[IfcValue]] , the appropriate unit can be found within the [[IfcUnitAssignment]] , defined for the project if no value for the unit attribute is given. .note IFC2x3 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
+msgid "IfcQuantityLength_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
 
-#:IFC.xml:31368
-msgid "IfcPropertySingleValue_Unit"
-msgstr "Единица измерения"
+#:IFC.xml:31551
+msgid "IfcQuantityLength_LengthValue"
+msgstr "LengthValue"
 
-msgid "IfcPropertySingleValue_Unit_DEFINITION"
-msgstr "Единица измерения номинального значения, если не указано, значение по умолчанию для типа измерения, данного ТИП номинального значения, используется в соответствии с глобальным назначением единицы в [[IfcProject]]."
+msgid "IfcQuantityLength_LengthValue_DEFINITION"
+msgstr "Длина измерения значения этого количества."
 
-#:IFC.xml:31375
-msgid "IfcPropertyTableValue"
-msgstr "Значение IfcPropertyTableValue"
+#:IFC.xml:31558
+msgid "IfcQuantityTime"
+msgstr "IfcQuantityTime"
 
-msgid "IfcPropertyTableValue_DEFINITION"
-msgstr "[[IfcPropertyTableValue]] is a property with a value range defined by a property object which has two lists of numeric or descriptive values assigned. The values specify a table with two columns. The defining values provide the first column and establish the scope for the defined values the second column . An optional Expression attribute may give the equation used for deriving the range value, which is for information purposes only. The [[IfcPropertyTableValue]] defines a defining defined property value combination for which the property name, the table with defining and defined values with measure type and optional the units for defining and defined values are given. NOTE The [[IfcPropertyTableValue]] only captures properties that can be expressed by a table with two columns. Use [[IfcPropertyReferenceValue]] with the PropertyReference being an [[IfcTable]] to express all those properties that require a table with tree or more columns. The units are handled by the DefiningUnit and DefinedUnit attributes, see Table 1 for an example of a table value property If the DefiningUnit or DefinedUnit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the DefiningUnit or DefinedUnit attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit. The [[IfcPropertyTableValue]] allows for the specification of a table of defining defined value pairs of the property description. The optional attribute CurveInterpolation allows to determine the interval between two given values. Name DefiningValues DefiningValue Type through [[IfcValue]] DefinedValues DefinedValue Type through [[IfcValue]] DefingUnit DefinedUnit SoundTransmissionLoss 100 [[IfcFrequencyMeasure]] 20 [[IfcNumericMeasure]] dB 200 [[IfcFrequencyMeasure]] 42 [[IfcNumericMeasure]] 400 [[IfcFrequencyMeasure]] 46 [[IfcNumericMeasure]] 800 [[IfcFrequencyMeasure]] 56 [[IfcNumericMeasure]] 1600 [[IfcFrequencyMeasure]] 60 [[IfcNumericMeasure]] 3200 [[IfcFrequencyMeasure]] 65 [[IfcNumericMeasure]] Table 1 Table value property with values, measure types and units HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Attributes DefiningValues and DefinedValues have been made OPTIONAL with upward compatibility for file based exchange. The attribute CurveInterpolation has been added. .spec head Informal Propositions 1. The list of DefinedValues and the list of DefiningValues are corresponding lists."
+msgid "IfcQuantityTime_DEFINITION"
+msgstr "[[IfcQuantityTime]] is an element quantity that defines a time measure to provide a property of time related to an element. It is normally given by the recipe information of the element under the specific measure rules given by a method of measurement. EXAMPLE The amount of time needed to pour concrete for a wall is given as a time quantity for the labor part of the recipe information. HISTORY New entity in IFC2x2."
 
-#:IFC.xml:31376
-msgid "IfcPropertyTableValue_CurveInterpolation"
-msgstr "Интерполяция кривой"
+#:IFC.xml:31559
+msgid "IfcQuantityTime_Formula"
+msgstr "Формула"
 
-msgid "IfcPropertyTableValue_CurveInterpolation_DEFINITION"
-msgstr "Interpolation of the curve between two defining and defined values that are provided. if not provided a linear interpolation is assumed. .change ifc2x4 IFC4 CHANGE The attribute has been added at the end of the attribute list."
+msgid "IfcQuantityTime_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
 
-#:IFC.xml:31381
-msgid "IfcPropertyTableValue_DefinedUnit"
-msgstr "DefinedUnit"
+#:IFC.xml:31564
+msgid "IfcQuantityTime_TimeValue"
+msgstr "Значение времени"
 
-msgid "IfcPropertyTableValue_DefinedUnit_DEFINITION"
-msgstr "Единица измерения для определенных значений, если не указано, значение по умолчанию для типа измерения, данного ТИП определенных значений, используется в соответствии с назначением глобальной единицы измерения в [[IfcProject]]."
+msgid "IfcQuantityTime_TimeValue_DEFINITION"
+msgstr "Время измеряет значение этого количества."
 
-#:IFC.xml:31386
-msgid "IfcPropertyTableValue_DefinedValues"
-msgstr "Определенные значения"
+#:IFC.xml:31571
+msgid "IfcQuantityVolume"
+msgstr "IfcQuantityVolume"
 
-msgid "IfcPropertyTableValue_DefinedValues_DEFINITION"
-msgstr "Defined values which are applicable for the scope as defined by the defining values. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
+msgid "IfcQuantityVolume_DEFINITION"
+msgstr "[[IfcQuantityVolume]] is a physical quantity that defines a derived volume measure to provide an element s physical property. It is normally derived from the physical properties of the element under the specific measure rules given by a method of measurement. EXAMPLE A thick brick wall may be measured according to its volume. The actual size of the volume depends on the method of measurement used. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31391
-msgid "IfcPropertyTableValue_DefiningUnit"
-msgstr "Единица измерения"
+#:IFC.xml:31572
+msgid "IfcQuantityVolume_Formula"
+msgstr "Формула"
 
-msgid "IfcPropertyTableValue_DefiningUnit_DEFINITION"
-msgstr "Единица измерения определяющих значений, если не указано, значение по умолчанию для типа измерения, данного ТИП определяющих значений, используется в соответствии с глобальным назначением единицы в [[IfcProject]]."
+msgid "IfcQuantityVolume_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
 
-#:IFC.xml:31396
-msgid "IfcPropertyTableValue_DefiningValues"
-msgstr "Определение значений"
+#:IFC.xml:31577
+msgid "IfcQuantityVolume_VolumeValue"
+msgstr "Объем"
 
-msgid "IfcPropertyTableValue_DefiningValues_DEFINITION"
-msgstr "List of defining values, which determine the defined values. This list shall have unique values only. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
+msgid "IfcQuantityVolume_VolumeValue_DEFINITION"
+msgstr "Объем измеряет значение этого количества."
 
-#:IFC.xml:31401
-msgid "IfcPropertyTableValue_Expression"
-msgstr "Выражение"
+#:IFC.xml:31584
+msgid "IfcQuantityWeight"
+msgstr "IfcQuantityWeight"
 
-msgid "IfcPropertyTableValue_Expression_DEFINITION"
-msgstr "Выражение для получения определенных значений из определяемых значений приведено только для информации. . из выражения нельзя ожидать автоматической обработки."
+msgid "IfcQuantityWeight_DEFINITION"
+msgstr "[[IfcQuantityWeight]] is a physical element quantity that defines a derived weight measure to provide an element s physical property. It is normally derived from the physical properties of the element under the specific measure rules given by a method of measurement. EXAMPLE The amount of reinforcement used within a building element may be measured according to its weight. The actual size of the weight depends on the method of measurement used. HISTORY New entity in IFC2x. It replaces the calcXxx attributes used in previous IFC Releases."
 
-#:IFC.xml:31408
-msgid "IfcSimpleProperty"
-msgstr "IfcSimpleProperty"
+#:IFC.xml:31585
+msgid "IfcQuantityWeight_Formula"
+msgstr "Формула"
 
-msgid "IfcSimpleProperty_DEFINITION"
-msgstr "[[IfcSimpleProperty]] is a generalization of a single property object. The various subtypes of [[IfcSimpleProperty]] establish different ways in which a property value can be set. HISTORY New entity in IFC1.0, definition changed in IFC2x."
+msgid "IfcQuantityWeight_Formula_DEFINITION"
+msgstr "A formula by which the quantity has been calculated. It can be assigned in addition to the actual value of the quantity. Formulas could be mathematic calculations like width x height , database links, or a combination. The formula is for informational purposes only. .change ifc2x4 IFC4 CHANGE Attribute added to the end of the attribute list."
+
+#:IFC.xml:31590
+msgid "IfcQuantityWeight_WeightValue"
+msgstr "Значение веса"
+
+msgid "IfcQuantityWeight_WeightValue_DEFINITION"
+msgstr "Массовое измерение значения этого количества."
+
+#:IFC.xml:31597
+msgid "IfcUniqueQuantityNames__Properties"
+msgstr "IfcUniqueQuantityNames Properties"
 
