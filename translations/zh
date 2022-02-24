@@ -9,1521 +9,412 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /master/IfcProfileResource.pot\n"
-"X-Crowdin-File-ID: 70\n"
+"X-Crowdin-File: /master/IfcPropertyResource.pot\n"
+"X-Crowdin-File-ID: 72\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: zh_CN\n"
 "PO-Revision-Date: 2022-02-24 03:59\n"
 
-#:IFC.xml:30170
-msgid "IfcArbitraryClosedProfileDef"
-msgstr "IfcArbitraryClosedProfileDef"
-
-msgid "IfcArbitraryClosedProfileDef_DEFINITION"
-msgstr "The closed profile [[IfcArbitraryClosedProfileDef]] defines an arbitrary two dimensional profile for the use within the swept surface geometry, the swept area solid or a sectioned spine. It is given by an outer boundary from which the surface or solid can be constructed. HISTORY New entity in IFC1.5. Entity has been renamed from IfcArbitraryProfileDef in IFC2x. .spec head Informal Propositions 1. The OuterCurve has to be a closed curve. 2. The OuterCurve shall not intersect. Figure 1 illustrates the arbitrary closed profile definition. The OuterCurve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout1.gif Figure 1 Arbitrary closed profile"
-
-#:IFC.xml:11666
-msgid "IfcArbitraryClosedProfileDef_OuterCurve"
-msgstr "超曲线"
-
-msgid "IfcArbitraryClosedProfileDef_OuterCurve_DEFINITION"
-msgstr "四角曲线，确定任意貌相的外部界限。"
-
-#:IFC.xml:30173
-msgid "IfcArbitraryOpenProfileDef"
-msgstr "IfcArbitraryOpenProfileDef"
-
-msgid "IfcArbitraryOpenProfileDef_DEFINITION"
-msgstr "The open profile [[IfcArbitraryOpenProfileDef]] defines an arbitrary two dimensional open profile for the use within the swept surface geometry. It is given by an open boundary from which the surface can be constructed. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The Curve has to be an open curve. Figure 1 illustrates the arbitrary open profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. arbitrary profile without boundaries .. .. .. .. figures ifcarbitraryprofiledef layout3.gif Figure 1 Arbitrary open profile"
-
-#:IFC.xml:11017
-msgid "IfcArbitraryOpenProfileDef_Curve"
-msgstr "曲线"
-
-msgid "IfcArbitraryOpenProfileDef_Curve_DEFINITION"
-msgstr "打开定义配置文件的边界曲线。"
-
-#:IFC.xml:30176
-msgid "IfcArbitraryProfileDefWithVoids"
-msgstr "IfcArbitraryProfileDefWithVoids"
-
-msgid "IfcArbitraryProfileDefWithVoids_DEFINITION"
-msgstr "The [[IfcArbitraryProfileDefWithVoids]] defines an arbitrary closed two dimensional profile with holes. It is given by an outer boundary and inner boundaries. A common usage of [[IfcArbitraryProfileDefWithVoids]] is as the cross section for the creation of swept surfaces or swept solids. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The outer curve and all inner curves shall be closed curves. 2. The outer curve shall enclose all inner curves. 3. No inner curve shall intersect with the outer curve or any other inner curve. That is, no two curves of the profile definition shall have a point or segment in common, taken into account the geometric precision factor of the geometric representation context. In other words, curves must neither cross nor touch each other. 4. No inner curve may enclose another inner curve. Figure 1 illustrates the arbitrary closed profile definition with voids. The OuterCurve , defined at the supertype [[IfcArbitraryClosedProfileDef]] and the inner curves are defined in the same underlying coordinate system. The common underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The OuterCurve attribute defines a two dimensional closed bounded curve, the InnerCurves define a set of two dimensional closed bounded curves. arbitrary profile with inner boundaries .. .. .. .. figures ifcarbitraryprofiledef layout2.gif Figure 1 Arbitrary profile with voids"
-
-#:IFC.xml:11678
-msgid "IfcArbitraryProfileDefWithVoids_InnerCurves"
-msgstr "内部曲线"
-
-msgid "IfcArbitraryProfileDefWithVoids_InnerCurves_DEFINITION"
-msgstr "边界曲线集，定义任意剖面的内部边界。"
-
-#:IFC.xml:30179
-msgid "IfcAsymmetricIShapeProfileDef"
-msgstr "Ifc非对称IshapeProfileDef"
-
-msgid "IfcAsymmetricIShapeProfileDef_DEFINITION"
-msgstr "[[IfcAsymmetricIShapeProfileDef]] defines a section profile that provides the defining parameters of a singly symmetric I shaped section. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. The overall width of the profile is implicitly given by the maximum of the bottom flange width and the top flange width. [[IfcAsymmetricIShapeProfileDef]] can also be used to model rail profiles if the application scenario does not require a full explicit shape model of the rail profile. Alternatively, [[IfcArbitraryClosedProfileDef]] can be used to provide the exact shape of rail profiles. Either way, a reference to an external document or library should be provided to further define the profile as described at [[IfcProfileDef]] . HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. The attribute CentreOfGravityInY has been made OPTIONAL. .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcIShapeProfileDef]] to [[IfcParameterizedProfileDef]] . Attributes which were inherited from [[IfcIShapeProfileDef]] are now defined directly at [[IfcAsymmetricIShapeProfileDef]] and have been partially renamed but were not reordered. Bottom flange may be narrower than top flange. Type of TopFlangeFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInY deleted, use respective property in IfcExtendedProfileProperties instead. Attributes BottomFlangeEdgeRadius , BottomFlangeSlope , TopFlangeEdgeRadius , TopFlangeSlope added. Figure 1 illustrates parameters of the asymmetric I shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInY property in IfcExtendedProfileProperties , if provided, is negative. asymmetric I shape profile .. .. .. .. figures ifcasymmetricishapeprofiledef.gif Figure 1 Assymetric I shape profile"
-
-#:IFC.xml:30180
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius"
-msgstr "底部FlangeEdgeRadius"
-
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeEdgeRadius_DEFINITION"
-msgstr "底部侧边半径的半径。0如果锋利边缘则省略，如果未知的话。"
-
-#:IFC.xml:30185
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius"
-msgstr "底部FlangeFillet半径"
-
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeFilletRadius_DEFINITION"
-msgstr "Web 和底部侧边之间的文件。0如果锋利边缘则省略，如果未知的话。"
-
-#:IFC.xml:30190
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope"
-msgstr "BottomFlangeSlope"
-
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeSlope_DEFINITION"
-msgstr "底层侧顶部斜坡。 底部侧翼被切换为零，平行底部侧翼为零，如未知则省略。"
-
-#:IFC.xml:30195
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness"
-msgstr "底部Flange厚度"
-
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeThickness_DEFINITION"
-msgstr "底层风扇的厚度。"
-
-#:IFC.xml:30200
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth"
-msgstr "BottomFlangeWidth"
-
-msgid "IfcAsymmetricIShapeProfileDef_BottomFlangeWidth_DEFINITION"
-msgstr "底部侧翼的范围，定义与位置坐标系统x轴平行的范围。"
-
-#:IFC.xml:30205
-msgid "IfcAsymmetricIShapeProfileDef_OverallDepth"
-msgstr "总体深度："
-
-msgid "IfcAsymmetricIShapeProfileDef_OverallDepth_DEFINITION"
-msgstr "位置坐标系统的y轴定义的深度总范围。"
-
-#:IFC.xml:30210
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius"
-msgstr "TopFlangeEdgeRadius"
-
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeEdgeRadius_DEFINITION"
-msgstr "顶部侧边边缘的半径。0如果锋利边缘则省略，如果未知则省略。"
-
-#:IFC.xml:30215
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius"
-msgstr "TopFlangeFilletRadius"
-
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeFilletRadius_DEFINITION"
-msgstr "网页和顶部侧边之间的文件。0如果锐化边缘则省略，如果未知则省略。"
-
-#:IFC.xml:30220
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope"
-msgstr "TopFlangeSlope"
-
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeSlope_DEFINITION"
-msgstr "顶部侧面的斜坡。 顶部平行侧翼为零，如未知则为零。"
-
-#:IFC.xml:30225
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness"
-msgstr "TopFlangeThickness"
-
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeThickness_DEFINITION"
-msgstr "顶部侧翼的厚度。这个属性在形式上是可选的，只是由于历史原因。 当已知的黄金厚度时，必须按数值提供。"
-
-#:IFC.xml:30230
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth"
-msgstr "TopFlangeWidth"
-
-msgid "IfcAsymmetricIShapeProfileDef_TopFlangeWidth_DEFINITION"
-msgstr "顶部侧翼的范围，定义与位置坐标系统x轴平行的范围。"
-
-#:IFC.xml:30235
-msgid "IfcAsymmetricIShapeProfileDef_WebThickness"
-msgstr "WebThickness"
-
-msgid "IfcAsymmetricIShapeProfileDef_WebThickness_DEFINITION"
-msgstr "我形状的网络厚度。网络以x轴和位置坐标系的y轴为中心。"
-
-#:IFC.xml:30242
-msgid "IfcCenterLineProfileDef"
-msgstr "IfcCenterLineProfileDef"
-
-msgid "IfcCenterLineProfileDef_DEFINITION"
-msgstr "The profile [[IfcCenterLineProfileDef]] defines an arbitrary two dimensional open, not self intersecting profile for the use within the swept solid geometry. It is given by an area defined by applying a constant thickness to a centerline, generating an area from which the solid can be constructed. Among else, [[IfcCenterLineProfileDef]] is used to model cold formed steel or aluminium sections Sigma, Zeta, Omega, and similar sections which are not covered by subtypes of [[IfcParameterizedProfileDef]] . However, since [[IfcCenterLineProfileDef]] does not provide shape parameters except for the thickness, there is generally a need to further specify the profile definition by means of the name, external reference to a document or library, profile properties, or a combination of them. See [[IfcProfileDef]] for guidance on external references for profiles. HISTORY New entity in IFC2x3. .spec head Informal Propositions 1. The Curve has to be an open curve. 2. The Curve has to be a non intersecting curve. Figure 1 illustrates the center line profile definition. The Curve is defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position The Curve attribute defines a two dimensional open bounded curve. The Thickness attribute defines a constant thickness along the curve. center line .. .. .. .. figures ifcarbitraryprofiledef layout4.gif Figure 1 Centerline profile"
-
-#:IFC.xml:30243
-msgid "IfcCenterLineProfileDef_Thickness"
-msgstr "厚度"
-
-msgid "IfcCenterLineProfileDef_Thickness_DEFINITION"
-msgstr "在中心线沿线应用常量厚度。"
-
-#:IFC.xml:30250
-msgid "IfcCircleHollowProfileDef"
-msgstr "IfcCircleHollowProfileDef"
-
-msgid "IfcCircleHollowProfileDef_DEFINITION"
-msgstr "[[IfcCircleHollowProfileDef]] defines a section profile that provides the defining parameters of a circular hollow section tube to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration.The centre of the position coordinate system is in the profile s centre of the bounding box for symmetric profiles identical with the centre of gravity . HISTORY New entity in IFC2x2. Figure 1 illustrates parameters of the circular hollow profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The parameterized profile is defined by a set of parameter attributes. CHS shape profile .. .. .. .. figures ifccirclehollowprofiledef.gif Figure 1 Circle hollow profile"
-
-#:IFC.xml:30251
-msgid "IfcCircleHollowProfileDef_WallThickness"
-msgstr "壁厚度"
-
-msgid "IfcCircleHollowProfileDef_WallThickness_DEFINITION"
-msgstr "材料的厚度，是外半径和内半径之间的差数。"
-
-#:IFC.xml:30258
-msgid "IfcCircleProfileDef"
-msgstr "IfcCircleProfileDef"
-
-msgid "IfcCircleProfileDef_DEFINITION"
-msgstr "[[IfcCircleProfileDef]] defines a circle as the profile definition used by the swept surface geometry or by the swept area solid. It is given by its Radius attribute and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters for the circle profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines, it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . The Position attribute defines the 2D position coordinate system of the circle. The Radius attribute defines the radius of the circle. circle profile .. .. .. .. figures ifccircleprofiledef layout1.gif Figure 1 Circle profile"
-
-#:IFC.xml:30259
-msgid "IfcCircleProfileDef_Radius"
-msgstr "Radius"
-
-msgid "IfcCircleProfileDef_Radius_DEFINITION"
-msgstr "圆的半径。"
-
-#:IFC.xml:30266
-msgid "IfcCompositeProfileDef"
-msgstr "IfcCompositeProfileDef"
-
-msgid "IfcCompositeProfileDef_DEFINITION"
-msgstr "The [[IfcCompositeProfileDef]] defines the profile by composition of other profiles. The composition is given by a set of at least two other profile definitions. Any profile definition except for another composite profile can be used to construct the composite. HISTORY New entity in IFC2x. Figure 314 illustrates the composite profile definition. The [[IfcCompositeProfileDef]] does not define an own position coordinate system, it is directly defined in the underlying coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The [[IfcCompositeProfileDef]] is defined using other profile definitions. Those other profile definitions are directly inserted into the underlying coordinate system. In case of parameterized profile definitions, the Position attribute of those standard profiles is used to place the profiles relatively to each other. In case of arbitrary profile definitions, each Cartesian coordinate is given directly within the underlying coordinate system. NOTE The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid. composite .. .. .. .. figures ifccompositeprofiledef layout1.gif Figure 314 .use head Twin profiles special case If twin profiles are modeled by profile composition, the base profile should only be specified once. It is then included into the composite profile directly and additionally indirectly via [[IfcMirroredProfileDef]] . For example, a double angle made of two L100x10 with 10mm air gap between them, i.e. a shape, can be modeled as single L [[IfcLShapeProfileDef]] [[IfcLShapeProfileDef]] AREA, L100X100X10 , [[IfcAxis2Placement2D]] [[IfcCartesianPoint]] .100 .010 2., .0 , , .100, .100, .010, .012, , 0., , double L [[IfcCompositeProfileDef]] [[IfcCompositeProfileDef]] AREA, double angle , single L, [[IfcMirroredProfileDef]] AREA, , single L, , twin profile"
-
-#:IFC.xml:30274
-msgid "IfcCompositeProfileDef_Profiles"
-msgstr "Profiles"
-
-msgid "IfcCompositeProfileDef_Profiles_DEFINITION"
-msgstr "The profiles which are used to define the composite profile."
-
-#:IFC.xml:30267
-msgid "IfcCompositeProfileDef_Label"
-msgstr "标签"
-
-msgid "IfcCompositeProfileDef_Label_DEFINITION"
-msgstr "可提及成分的名称。名称的实际含义必须在申请中加以界定。"
-
-#:IFC.xml:30286
-msgid "IfcCShapeProfileDef"
-msgstr "IfcCShapeProfileDef"
-
-msgid "IfcCShapeProfileDef_DEFINITION"
-msgstr "[[IfcCShapeProfileDef]] defines a section profile that provides the defining parameters of a C shaped section to be used by the swept area solid. This section is typically produced by cold forming steel. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of InternalFilletRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInX deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the C shape profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the CentreOfGravityInX property in IfcExtendedProfileProperties , if provided, is negative. C shape profile .. .. .. .. figures ifccshapeprofiledef.gif Figure 1 C shape profile"
-
-#:IFC.xml:30287
-msgid "IfcCShapeProfileDef_Depth"
-msgstr "深度："
-
-msgid "IfcCShapeProfileDef_Depth_DEFINITION"
-msgstr "概况深度，见h 上面的说明。"
-
-#:IFC.xml:30292
-msgid "IfcCShapeProfileDef_Girth"
-msgstr "Girth"
-
-msgid "IfcCShapeProfileDef_Girth_DEFINITION"
-msgstr "girth长度见上面c。"
-
-#:IFC.xml:30297
-msgid "IfcCShapeProfileDef_InternalFilletRadius"
-msgstr "内部Fillet半径"
-
-msgid "IfcCShapeProfileDef_InternalFilletRadius_DEFINITION"
-msgstr "内部文件半径根据上面的说明 r1 。"
-
-#:IFC.xml:30302
-msgid "IfcCShapeProfileDef_WallThickness"
-msgstr "壁厚度"
-
-msgid "IfcCShapeProfileDef_WallThickness_DEFINITION"
-msgstr "配置文件的恒定壁厚度。"
-
-#:IFC.xml:30307
-msgid "IfcCShapeProfileDef_Width"
-msgstr "Width"
-
-msgid "IfcCShapeProfileDef_Width_DEFINITION"
-msgstr "概况宽度，见上文b。"
-
-#:IFC.xml:30314
-msgid "IfcDerivedProfileDef"
-msgstr "IfcDerivedProfileDef"
-
-msgid "IfcDerivedProfileDef_DEFINITION"
-msgstr "[[IfcDerivedProfileDef]] defines the profile by transformation from the parent profile. The transformation is given by a two dimensional transformation operator. Transformation includes translation, rotation, mirror and scaling. The latter can be uniform or non uniform. The derived profiles may be used to define swept surfaces, swept area solids or sectioned spines. The transformation effects the position, rotation, mirroring or scale of the profile at the underlying coordinate system, i.e. the coordinate system defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . The position and potential rotation of the ParentProfile within the underlying coordinate system is taken into consideration before applying the Cartesian transformation operator. Note, if only mirroring is required, [[IfcMirroredProfileDef]] should be used instead. HISTORY New entity in IFC2x. Figure 1 illustrates examples of derived profiles. Parameter The [[IfcDerivedProfileDef]] is defined using the [[IfcCartesianTransformationOperator2D]] CTO , which is applied to the parent profile definition. Example The example shows an uniform scaling and a transformation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] , Scale 2. Note The ParentProfile has a Position [[IfcCartesianPoint]] , already. Parameter The [[IfcDerivedProfileDef]] is defined using non uniform transformationsby applying the [[IfcCartesianTransformationOperator2DnonUniform]] as a subtype of the 2D CTO. Example The example shows a non uniform scaling and a translation of an [[IfcRectangleProfileDef]] to match the lower left cardinal point. The attributes of the CTO are Axis1 NIL defaults to 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0., Scale 1. Scale2 2. Note The ParentProfile has a Position [[IfcCartesianPoint]] , already. Parameter The [[IfcDerivedProfileDef]] is defined using mirroring by applying the [[IfcCartesianTransformationOperator2D]] CTO to the parent profile. Example The example shows a mirroring of an [[IfcLShapeProfileDef]] to match the centre cardinal point. The attributes of the CTO are Axis1 1.,0. Axis2 NIL defaults to 0.,1. LocalOrigin [[IfcCartesianPoint]] 0.,0. Scale NIL defaults to 1. Note The ParentProfile has a Position [[IfcCartesianPoint]] 0.,0. . This example is for illustration only. If the transformation results only in mirroring like shown in the example, then [[IfcMirroredProfileDef]] should be used instead of [[IfcDerivedProfileDef]]. Note The following color map applies black coordinate axes show the underlying coordinate system of the swept surface, swept area solid, or sectioned spine red coordinate axes show the position coordinate system of the parent profile brown coordinate axes show the position coordinate system of the derived profile Figure 1 Derived profile"
-
-#:IFC.xml:11428
-msgid "IfcDerivedProfileDef_Operator"
-msgstr "运算符"
-
-msgid "IfcDerivedProfileDef_Operator_DEFINITION"
-msgstr "Transformation operator applied to the parent profile."
-
-#:IFC.xml:30322
-msgid "IfcDerivedProfileDef_ParentProfile"
-msgstr "家长资料"
-
-msgid "IfcDerivedProfileDef_ParentProfile_DEFINITION"
-msgstr "The parent profile provides the origin of the transformation."
-
-#:IFC.xml:30315
-msgid "IfcDerivedProfileDef_Label"
-msgstr "标签"
-
-msgid "IfcDerivedProfileDef_Label_DEFINITION"
-msgstr "可以引用转换的名称。名称的实际含义必须在应用中加以界定。"
-
-#:IFC.xml:30334
-msgid "IfcEllipseProfileDef"
-msgstr "IfcEllipseProfileDef"
-
-msgid "IfcEllipseProfileDef_DEFINITION"
-msgstr "[[IfcEllipseProfileDef]] defines an ellipse as the profile definition used by the swept surface geometry or the swept area solid. It is given by its semi axis attributes and placed within the 2D position coordinate system, established by the Position attribute. HISTORY New entity in IFC2x Figure 1 illustrates parameters for the ellipse profile definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position Or in case of sectioned spines it is the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions . By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . The location of the position coordinate system defines the center of the ellipse. The SemiAxis1 attribute defines the first radius of the ellipse in the direction of the X axis, the SemiAxis2 attribute defines the second radius of the ellipse in the direction of the Y axis. NOTE The semi axes of the ellipse are rectangular to each other by definition. ellipse profile .. .. .. .. figures ifcellipseprofiledef layout1.gif Figure 1 Ellipse profile"
-
-#:IFC.xml:30335
-msgid "IfcEllipseProfileDef_SemiAxis1"
-msgstr "SemiAxis1"
-
-msgid "IfcEllipseProfileDef_SemiAxis1_DEFINITION"
-msgstr "椭圆的第一个半径。它是按照定位.P 1 的方向测量的。"
-
-#:IFC.xml:30340
-msgid "IfcEllipseProfileDef_SemiAxis2"
-msgstr "SemiAxis2"
-
-msgid "IfcEllipseProfileDef_SemiAxis2_DEFINITION"
-msgstr "椭圆的第二个半径。它是按照定位.P 2 的方向测量的。"
-
-#:IFC.xml:30347
-msgid "IfcIShapeProfileDef"
-msgstr "IfcIShapeProfileDef"
-
-msgid "IfcIShapeProfileDef_DEFINITION"
-msgstr "[[IfcIShapeProfileDef]] defines a section profile that provides the defining parameters of an I or H section. The I shape profile has values for its overall depth, width and its web and flange thicknesses. Additionally a fillet radius, flange edge radius, and flange slope may be given. This profile definition represents an I section which is symmetrical about its major and minor axes top and bottom flanges are equal and centred on the web. HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Type of FilletRadius relaxed to allow for zero radius. Attributes FlangeEdgeRadius and FlangeSlope added. Figure 1 illustrates parameters of the I shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The parameterized profile is defined by a set of parameter attributes, see attribute definition below. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of lower left corner the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] 1 2 OverallWidth , RefDirection NIL defaults to 1.,0. Parameter If the FilletRadius is given, it is equally applied to all four corners created by the web and flanges. Figure 1 I shape profile"
-
-#:IFC.xml:30348
-msgid "IfcIShapeProfileDef_FilletRadius"
-msgstr "Fillet半径"
-
-msgid "IfcIShapeProfileDef_FilletRadius_DEFINITION"
-msgstr "Web 和侧边之间的文件。0如果锐化边缘则省略，如果未知的话。"
-
-#:IFC.xml:30353
-msgid "IfcIShapeProfileDef_FlangeEdgeRadius"
-msgstr "FlangeEdgeRadius"
-
-msgid "IfcIShapeProfileDef_FlangeEdgeRadius_DEFINITION"
-msgstr "顶层风扇边缘和底层风扇上端边缘的半径。0如果锋利边缘则省略，如未知则省略。"
-
-#:IFC.xml:30358
-msgid "IfcIShapeProfileDef_FlangeSlope"
-msgstr "FlangeSlope"
-
-msgid "IfcIShapeProfileDef_FlangeSlope_DEFINITION"
-msgstr "顶部风扇下面和底部风扇上面的斜度。 平行平滑平流的情况下为零，如未知则为零。"
-
-#:IFC.xml:30363
-msgid "IfcIShapeProfileDef_FlangeThickness"
-msgstr "FlangeThickness"
-
-msgid "IfcIShapeProfileDef_FlangeThickness_DEFINITION"
-msgstr "我形状的厚度。 上侧和下下侧两侧的厚度相同，它们集中在位置坐标系的y轴上。"
-
-#:IFC.xml:30368
-msgid "IfcIShapeProfileDef_OverallDepth"
-msgstr "总体深度："
-
-msgid "IfcIShapeProfileDef_OverallDepth_DEFINITION"
-msgstr "位置坐标系统的y轴定义的深度总范围。"
-
-#:IFC.xml:30373
-msgid "IfcIShapeProfileDef_OverallWidth"
-msgstr "总体宽度"
-
-msgid "IfcIShapeProfileDef_OverallWidth_DEFINITION"
-msgstr "位置坐标系x轴定义的宽度总范围。"
-
-#:IFC.xml:30378
-msgid "IfcIShapeProfileDef_WebThickness"
-msgstr "WebThickness"
-
-msgid "IfcIShapeProfileDef_WebThickness_DEFINITION"
-msgstr "我形状的网络厚度。网络以x轴和位置坐标系的y轴为中心。"
-
-#:IFC.xml:30385
-msgid "IfcLShapeProfileDef"
-msgstr "IfcLShapeProfileDef"
-
-msgid "IfcLShapeProfileDef_DEFINITION"
-msgstr "[[IfcLShapeProfileDef]] defines a section profile that provides the defining parameters of an L shaped section equilateral L profiles are also covered by this entity to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The shorter leg has the same direction as the positive Position.P 1 axis, the longer or equal leg the same as the positive Position.P 2 axis. The centre of the position coordinate system is in the profiles centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Types of FilletRadius and EdgeRadius were relaxed to allow for zero values. Trailing attributes CentreOfGravityInX and CentreOfGravityInY deleted, use respective properties in IfcExtendedProfileProperties instead. WHERE rule which required Width Depth removed. Figure 1 illustrates parameters of equal sided and non equal sided L shaped section definitions. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. In the illustrated example, the CentreOfGravityInX and CentreOfGravityInY properties in IfcExtendedProfileProperties, if provided, are both negative. Note The black coordinate axes show the underlying coordinate system of the swept surface or swept area solid Position The profile is inserted into the underlying coordinate system of the swept area solid by using the Position attribute. In this example cardinal point of gravity the attribute values of [[IfcAxis2Placement2D]] are Location [[IfcCartesianPoint]] CentreOfGravityInX , CentreOfGravityInY RefDirection NIL defaults to 1.,0. In the illustrated example, the x and y value of Position.Location, i.e. the measures CentreOfGravityInX and CentreOfGravityInY are both positive. On the other hand, the properties named CentreOfGravityInX and CentreOfGravityInY in IfcExtendedProfileProperties, if provided, must both be set to 0 now because the centre of gravity of the resulting profile definition is located in the coordinate origin. Figure 1 L shape profile"
-
-#:IFC.xml:30386
-msgid "IfcLShapeProfileDef_Depth"
-msgstr "深度："
-
-msgid "IfcLShapeProfileDef_Depth_DEFINITION"
-msgstr "腿部长度，见h 上方的图示。与总深度相同。"
-
-#:IFC.xml:30391
-msgid "IfcLShapeProfileDef_EdgeRadius"
-msgstr "EdgeRadius"
-
-msgid "IfcLShapeProfileDef_EdgeRadius_DEFINITION"
-msgstr "上图r2显示的边缘半径。"
-
-#:IFC.xml:30396
-msgid "IfcLShapeProfileDef_FilletRadius"
-msgstr "Fillet半径"
-
-msgid "IfcLShapeProfileDef_FilletRadius_DEFINITION"
-msgstr "根据上述说明 r1 提供的文件半径。"
-
-#:IFC.xml:30401
-msgid "IfcLShapeProfileDef_LegSlope"
-msgstr "Legislative Slope"
-
-msgid "IfcLShapeProfileDef_LegSlope_DEFINITION"
-msgstr "剖面每段内外面的斜度。"
-
-#:IFC.xml:30406
-msgid "IfcLShapeProfileDef_Thickness"
-msgstr "厚度"
-
-msgid "IfcLShapeProfileDef_Thickness_DEFINITION"
-msgstr "个人资料的恒定壁厚度，见上面的图表。"
-
-#:IFC.xml:30411
-msgid "IfcLShapeProfileDef_Width"
-msgstr "Width"
-
-msgid "IfcLShapeProfileDef_Width_DEFINITION"
-msgstr "腿部长度，见上面的说明。与整个宽度相同。 此属性在形式上是可选的，只因为历史原因。每当已知宽度时，它必须按值提供。"
-
-#:IFC.xml:30418
-msgid "IfcMirroredProfileDef"
-msgstr "IfcMirredProfileDef"
-
-msgid "IfcMirroredProfileDef_DEFINITION"
-msgstr "The [[IfcMirroredProfileDef]] defines the profile by mirroring the parent profile about the y axis of the parent profile coordinate system. That is, left and right of the parent profile are swapped. Notes [[IfcMirroredProfileDef]] is primarily useful together with [[IfcCShapeProfileDef]] , [[IfcLShapeProfileDef]] , [[IfcUShapeProfileDef]] , or [[IfcZShapeProfileDef]] as parent profile but can be used with other parent profile types as well. Mirroring of an [[IfcParameterizedProfileDef]] is performed after translation and rotation according to its Position attribute. For example, if the parent profile s Position offsets it by half of its width to the right, then the mirrored profile will be offset by half of its width to the left. Mirroring about the x axis, i.e. swapping top and bottom, can be achieved by mirroring about the y axis coupled with 180 degree rotation about the z axis. In general, rotation happens in a containing object such as [[IfcSweptAreaSolid]] , i.e. after mirroring by [[IfcMirroredProfileDef]] was performed. If the parent profile is an [[IfcParameterizedProfileDef]] , rotation can alternatively happen already in the parent profile by means of its Position attribute, i.e. before mirroring by [[IfcMirroredProfileDef]] was performed. HISTORY New entity in IFC4."
-
-#:IFC.xml:30419
-msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator"
-msgstr "SELF IfcDerivedProfileDef 操作员"
-
-msgid "IfcMirroredProfileDef_SELF_IfcDerivedProfileDef_Operator_DEFINITION"
-msgstr "SELF [[IfcDerivedProfileDef]].Operator"
-
-#:IFC.xml:30425
-msgid "IfcOpenCrossProfileDef"
-msgstr "IfcOpenCrossProfileDef"
-
-msgid "IfcOpenCrossProfileDef_DEFINITION"
-msgstr "A two dimensional open profile defined by widths and slopes for the use within the swept surface geometry, in SectionedSurface in particular. The underlying coordinate system is defined by the swept surface that uses the profile definition when used in SectionedSurface it is the XY plane of each list member of SectionedSurface.CrossSectionPositions where the profile X axis is oriented perpendicularly to the left of the Directrix same direction as positive LateralOffset at [[IfcPointByDistanceExpression]] as facing forward along the directrix, and the profile Y axis is oriented upwards or vertically perpendicular to the Directrix depending on the usage in the SectionedSurface. The behaviour of OpenCrossProfileDef in sweeping operation can be controlled by attribute Tags. Tags allow two consecutive cross sections to have different number of break points points with the same tag value are connected either by assuming linear longitudinal breakline between them, or by a guide curve identified by the same Tag value as the cross section points. Formal propositions The profile type shall be CURVE. The list of slopes and the list of widths shall be of the same size, and the list of tags shall have one more member. open cross profile .. .. .. .. figures [[IfcOpenCrossProfileDef]].png Figure 1 Open cross profile"
-
-#:IFC.xml:11271
-msgid "IfcOpenCrossProfileDef_OffsetPoint"
-msgstr "偏移点"
-
-msgid "IfcOpenCrossProfileDef_OffsetPoint_DEFINITION"
-msgstr "偏移点"
-
-#:IFC.xml:30426
-msgid "IfcOpenCrossProfileDef_HorizontalWidths"
-msgstr "水平宽度"
-
-msgid "IfcOpenCrossProfileDef_HorizontalWidths_DEFINITION"
-msgstr "表示宽度是否应横向测量或沿斜坡测量；"
-
-#:IFC.xml:30431
-msgid "IfcOpenCrossProfileDef_Slopes"
-msgstr "斜度"
-
-msgid "IfcOpenCrossProfileDef_Slopes_DEFINITION"
-msgstr "坡度计量。"
-
-#:IFC.xml:30436
-msgid "IfcOpenCrossProfileDef_Tags"
-msgstr "标签"
-
-msgid "IfcOpenCrossProfileDef_Tags_DEFINITION"
-msgstr "标签"
-
-#:IFC.xml:30441
-msgid "IfcOpenCrossProfileDef_Widths"
-msgstr "宽度"
-
-msgid "IfcOpenCrossProfileDef_Widths_DEFINITION"
-msgstr "水平宽度.T.或水平宽度时沿坡度的水平宽度。 对于剖面中的部分，如果水平.T.，斜坡不应为90度。"
-
-#:IFC.xml:30448
-msgid "IfcParameterizedProfileDef"
-msgstr "IfcParameteredProfileDef"
-
-msgid "IfcParameterizedProfileDef_DEFINITION"
-msgstr "The parameterized profile definition defines a 2D position coordinate system to which the parameters of the different profiles relate to. All profiles are defined centric to the origin of the position coordinate system, or more specific, the origin 0.,0. shall be in the center of the bounding box of the profile. The Position attribute of [[IfcParameterizedProfileDef]] is used to position the profile within the XY plane of the underlying coordinate system of the swept surface geometry, the swept area solid or the sectioned spine. It can be used to position the profile at any point which becomes the origin 0.,0.,0. of the extruded or rotated surface or solid. The Position attribute should not be used if the transformation can be specified in a containing object instead. In particular, this applies if the [[IfcParameterizedProfileDef]] is referenced as SweptArea in subtypes of [[IfcSweptAreaSolid]] or as CrossSections in [[IfcSectionedSpine]] . Several subtypes of [[IfcParameterizedProfileDef]] provide shape parameters which are optional. Sending systems should always provide values for these parameters if possible. If these parameters are left unspecified, receiving systems may retrieve values for them by external reference if a reference to an external document or library is given see guidance at [[IfcProfileDef]] , or estimate them, or simply assume zero values. HISTORY New entity in IFC2x2. .change ifc2x IFC2x CHANGE The [[IfcParameterizedProfileDef]] is introduced as an intermediate new abstract entity that unifies the definition and usage of the position coordinate system for all parameterized profiles. The Position attribute has been removed at all subtypes like [[IfcRectangleProfileDef]] , [[IfcCircleProfileDef]] , etc. . .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Position attribute made optional default identity transformation . Several radius parameters in subtypes have been changed from optional [[IfcPositiveLengthMeasure]] assumed default 0. to optional [[IfcNonNegativeLengthMeasure]] default unspecified . This change allows to explicitly specify zero radius. Sending systems shall export 0. values if parameters are known to be 0. Subtypes IfcCraneRailAShapeProfileDef and IfcCraneRailFShapeProfileDef deleted. Rail profiles shall be modeled as [[IfcArbitraryClosedProfileDef]] or as [[IfcAsymmetricIShapeProfileDef]] together with appropriate external reference."
-
-#:IFC.xml:10847
-msgid "IfcParameterizedProfileDef_Position"
-msgstr "位置"
-
-msgid "IfcParameterizedProfileDef_Position_DEFINITION"
-msgstr "Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied."
-
-#:IFC.xml:30451
-msgid "IfcProfileDef"
-msgstr "IfcProfileDef"
-
-msgid "IfcProfileDef_DEFINITION"
-msgstr "[[IfcProfileDef]] is the supertype of all definitions of standard and arbitrary profiles within IFC. It is used to define a standard set of commonly used section profiles by their parameters or by their explicit curve geometry. Parameterized profiles are 2D primitives, which are used within the industry to describe cross sections by a description of its parameters. Arbitrary profiles are cross sections defined by an outer boundary as bounded curve, which may also include holes, defined by inner boundaries. Derived profiles, based on a transformation of a parent profile, are also part of the profile definitions available. In addition composite profiles can be defined, which include two or more profile definitions to define the resulting profile. HISTORY New entity in IFC1.5, the capabilities have been extended in IFC2x. Profiles can now support swept surfaces and swept area solids with inner boundaries. It had been renamed from IfcAttDrivenProfileDef. .change ifc2x4 IFC4 CHANGE Changed from ABSTRACT to non abstract for uses which do not require an explicitly defined geometry. Added inverse attributes HasProperties and HasExternalReference . Use in material association Beams, columns, and similarly shaped building elements and their type objects may be associated with a section profile definition, combined with material definition, by means of [[IfcRelAssociatesMaterial]] together with [[IfcMaterialProfileSet]] and [[IfcMaterialProfileSetUsage]] . This way, building elements and element types with same section and material can share a common section profile definition and association. The profile definition in material association is required to be consistent with shape representations of the respective building elements. A higher level description of spatial aligment of the section profile of a member such as centered, bottom left, in the geometric centroid, and more can be provided within [[IfcMaterialProfileSetUsage]] by means of a cardinal point reference. This can be used redundant to geometric data in order to convey design intent. Use in shape models Profile definitions are used within the geometry and geometric model resource to create either swept surfaces, swept area solids, or sectioned spines. The purpose of the profile definition within the swept surfaces or swept area solids is to define a uniform cross section being swept along a line extrusion using [[IfcSurfaceOfLinearExtrusion]] or [[IfcExtrudedAreaSolid]] along a circular arc revolution using [[IfcSurfaceOfRevolution]] or [[IfcRevolvedAreaSolid]] along a directrix lying on a reference surface using [[IfcSurfaceCurveSweptAreaSolid]] The purpose of the profile definition within the sectioned spine is to define a varying cross sections at several positions along a spine curve. The subtype [[IfcDerivedProfileDef]] is particularly suited to provide the consecutive profiles to be based on transformations of the start profile and thus maintaining the identity of vertices and edges. NOTE Subtypes of the [[IfcProfileDef]] contain parameterized profiles as subtypes of [[IfcParameterizedProfileDef]] which establish their own 2D position coordinate system, profiles given by explicit curve geometry either open or closed profiles and two special types for composite profiles and derived profiles, based on a 2D Cartesian transformation. An [[IfcProfileDef]] is treated as bounded area if it is used within swept area solids. In this case, the inside of the profile is part of the profile. The attribute ProfileType is set to AREA. An [[IfcProfileDef]] is treated as a curve if it is used within swept surfaces. In this case, the inside of the profile if the curve is closed is not part of the profile. The attribute ProfileType is set to CURVE. Figure 1 illustrates use of parameterized profiles within a swept area solid. Position The [[IfcProfileDef]] is defined within the underlying coordinate system which is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptSurface]].Position or of [[IfcSweptAreaSolid]].Position or of each list member of [[IfcSectionedSpine]].CrossSectionPositions. In the figure to the left, the z axis of the position coordinate system points outwards of the drawing plane. Note The subtype [[IfcParameterizedProfileDef]] optionally provides an additional 2D position coordinate system relative to the underlying coordinate system of the [[IfcProfileDef]]. Sweeping In the later use of the [[IfcProfileDef]] within the swept surface or swept area solid, e.g. the [[IfcExtrudedAreaSolid]] here used as an example , the profile boundaries here based on the 2D position coordinate system of [[IfcParameterizedProfileDef]] are placed within the xy plane of the 3D position coordinate system of the swept surface or swept area solid. The profile is inserted into the underlying coordinate system either directly in case of using [[IfcArbitraryClosedProfileDef]] and [[IfcArbitraryOpenProfileDef]], through an intermediate position coordinate system in case of using [[IfcParameterizedProfileDef]]. through an 2D Cartesian transformation operator applied directly to the curve position when using arbitrary profile definitions, or applied to the position coordinate system when using parameterized profile definitions in case of using [[IfcDerivedProfileDef]]. when using [[IfcCompositeProfileDef]] the insertion depends on the subtype of the included sub profiles. Figure 1 Profile sweeping Profile types Results of the different usage of the ProfileType attribute are demonstrated here. The ProfileType defines whether the inside the bounded area is part of the profile definition Area or not Curve . Figure 2 illustrates the resulting area or curve depending on ProfileType . ProfileType AREA ProfileType CURVE Figure 2 Profile types Profile specification by external reference If the profile is standardized by a norm or a catalogue, a reference to this norm or catalogue should be provided by means of HasExternalReference . This inverse relationship is used to associate an [[IfcExternalReference]] notably [[IfcClassificationReference]] or [[IfcLibraryReference]] with the profile. [[IfcClassificationReference]] is used to refer to a profile norm a common standard or manufacturer s standard . In this case, [[IfcClassificationReference]].ItemReference contains the formal profile designation from the norm. On the other hand, [[IfcProfileDef]].ProfileName contains a displayable name which may not necessarily be the same as the formal designation. [[IfcClassificationReference]].Name carries the short name of the profile norm. Optionally, the norm can be further described by [[IfcClassificationReference]].ReferencedSource . [[IfcLibraryReference]] is used to refer to a library which contains profile definitions. In this case, [[IfcLibraryReference]].ItemReference contains the identifier of the profile within the library and is meant to be machine readable in contrast to [[IfcProfileDef]].ProfileName which should be human readable . [[IfcLibraryReference]].Location and . Name or . ReferencedLibrary further describe the library. If an external reference is provided, sending systems shall ensure that the shape of the profile definition object agrees with the definitions in the referenced classification or library. Direct instances of [[IfcProfileDef]] Usually, only subtypes of [[IfcProfileDef]] should be instantiated. In some special cases, e.g. if the profile object is used for purposes other than geometric models e.g. for structural analysis models , it may be possible to directly instantiate [[IfcProfileDef]] and further specify the profile only by external reference or by profile properties. The latter are tracked by the inverse attribute HasProperties ."
-
-#:IFC.xml:9097
-msgid "IfcProfileDef_HasExternalReference"
-msgstr "HasExternalReference"
-
-msgid "IfcProfileDef_HasExternalReference_DEFINITION"
-msgstr "Reference to external information, e.g. library, classification, or document information, which is associated with the profile. .change ifc2x4 IFC4 CHANGE New inverse attribute"
-
-#:IFC.xml:30464
-msgid "IfcProfileDef_HasProperties"
+#:IFC.xml:31167
+msgid "IfcComplexProperty"
+msgstr "复合属性"
+
+msgid "IfcComplexProperty_DEFINITION"
+msgstr "[[IfcComplexProperty]] is used to define complex properties to be handled completely within a property set. The included set of properties may be a mixed or consistent collection of [[IfcProperty]] subtypes. This enables the definition of a set of properties to be included as a single property entry in an [[IfcPropertySet]] . The definition of such an [[IfcComplexProperty]] can be reused in many different [[IfcPropertySet]] s. NOTE Since an [[IfcComplexProperty]] may contain other complex properties, sets of properties can be nested. This nesting may be restricted by view definitions and implementer agreements. HISTORY New entity in IFC2.0."
+
+#:IFC.xml:31175
+msgid "IfcComplexProperty_HasProperties"
 msgstr "HasProperties"
 
-msgid "IfcProfileDef_HasProperties_DEFINITION"
-msgstr "Additional properties of the profile, for example mechanical properties. .change ifc2x4 IFC4 CHANGE New inverse attribute"
+msgid "IfcComplexProperty_HasProperties_DEFINITION"
+msgstr "可以在此复合属性中使用的属性集可能包括其他复杂属性。"
 
-#:IFC.xml:30452
-msgid "IfcProfileDef_ProfileName"
-msgstr "ProfileName"
+#:IFC.xml:31168
+msgid "IfcComplexProperty_UsageName"
+msgstr "用法名称"
 
-msgid "IfcProfileDef_ProfileName_DEFINITION"
-msgstr "Human readable name of the profile, for example according to a standard profile table. As noted above, machine readable standardized profile designations should be provided in [[IfcExternalReference]].ItemReference ."
+msgid "IfcComplexProperty_UsageName_DEFINITION"
+msgstr "Usage description of the [[IfcComplexProperty]] within the property set which references the [[IfcComplexProperty]] . NOTE Consider a complex property for glazing properties. The Name attribute of the [[IfcComplexProperty]] could be Pset GlazingProperties , and the UsageName attribute could be OuterGlazingPane ."
 
-#:IFC.xml:30457
-msgid "IfcProfileDef_ProfileType"
-msgstr "ProfileType"
+#:IFC.xml:31189
+msgid "IfcCurveInterpolationEnum"
+msgstr "IfcCurveInternationEnum"
 
-msgid "IfcProfileDef_ProfileType_DEFINITION"
-msgstr "定义解析此配置文件定义的几何类型，要么是曲线要么是表面区域。 在曲线的情况下，配置文件应以横向表面作为参照。 在区域的情况下，配置文件应该用横向区域固体来引用。"
+msgid "IfcCurveInterpolationEnum_DEFINITION"
+msgstr "[[IfcCurveInterpolationEnum]] specifies the possible methods for the interpolation of property values given as a curve. HISTORY New type in IFC4. Items LINEAR Indicates that values between the defined values are to be found by linear interpolation. LOG LOG LOG Indicates that values between the defined values are to be found by linear interpolation of the Briggs logarithm base 10 of the values. NOTDEFINED No interpolation information is provided"
 
-#:IFC.xml:30502
-msgid "IfcProfileProperties"
-msgstr "IfcProfileProperties"
+#:IFC.xml:31190
+msgid "IfcCurveInterpolationEnum_LINEAR"
+msgstr "连线"
 
-msgid "IfcProfileProperties_DEFINITION"
-msgstr "This is a collection of properties applicable to section profile definitions. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract. Subtypes IfcGeneralProfileProperties , IfcStructuralProfileProperties , and IfcStructuralSteelProfileProperties deleted. Attribute ProfileName deleted, use ProfileDefinition.ProfileName instead. Attribute ProfileDefinition made mandatory. Attributes Name , Description , and HasProperties added inherited from [[IfcExtendedProperties]] ."
+msgid "IfcCurveInterpolationEnum_LINEAR_DEFINITION"
+msgstr "表示定义值之间的值将通过线性插值找到。"
 
-#:IFC.xml:30464
-msgid "IfcProfileProperties_ProfileDefinition"
-msgstr "配置定义"
+#:IFC.xml:31191
+msgid "IfcCurveInterpolationEnum_LOG_LINEAR"
+msgstr "锁定线"
 
-msgid "IfcProfileProperties_ProfileDefinition_DEFINITION"
-msgstr "Profile definition which is qualified by these properties."
+msgid "IfcCurveInterpolationEnum_LOG_LINEAR_DEFINITION"
+msgstr "锁定线"
 
-#:IFC.xml:30505
-msgid "IfcProfileTypeEnum"
-msgstr "IfcProfileTypeEnum"
+#:IFC.xml:31192
+msgid "IfcCurveInterpolationEnum_LOG_LOG"
+msgstr "LOG 日志"
 
-msgid "IfcProfileTypeEnum_DEFINITION"
-msgstr "The enumeration defines whether the definition of a profile shape shall be geometrically resolved into a curve or into a surface. HISTORY New type in IFC1.5. Items CURVE AREA"
+msgid "IfcCurveInterpolationEnum_LOG_LOG_DEFINITION"
+msgstr "表示定义数值之间的数值将通过Briggs数值的对数基础10的线性内插来找到。"
 
-#:IFC.xml:30506
-msgid "IfcProfileTypeEnum_AREA"
-msgstr "AREA"
-
-msgid "IfcProfileTypeEnum_AREA_DEFINITION"
-msgstr "AREA"
-
-#:IFC.xml:30507
-msgid "IfcProfileTypeEnum_CURVE"
-msgstr "解答"
-
-msgid "IfcProfileTypeEnum_CURVE_DEFINITION"
-msgstr "解答"
-
-#:IFC.xml:30509
-msgid "IfcRectangleHollowProfileDef"
-msgstr "IfcRecantangleHollowProfileDef"
-
-msgid "IfcRectangleHollowProfileDef_DEFINITION"
-msgstr "[[IfcRectangleHollowProfileDef]] defines a section profile that provides the defining parameters of a rectangular or square hollow section to be used by the swept surface geometry or the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. A square hollow section can be defined by equal values for h and b. The centre of the position coordinate system is in the profiles centre of the bounding box for symmetric profiles identical with the centre of gravity . Normally, the longer sides are parallel to the y axis, the shorter sides parallel to the x axis. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Types of InnerFilletRadius and OuterFilletRadius relaxed to allow for zero values. Figure 1 illustrates parameters of a rectangular or square hollow profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 Rectangle hollow profile"
-
-#:IFC.xml:30510
-msgid "IfcRectangleHollowProfileDef_InnerFilletRadius"
-msgstr "InnerFilletRadius"
-
-msgid "IfcRectangleHollowProfileDef_InnerFilletRadius_DEFINITION"
-msgstr "Inner corner radius."
-
-#:IFC.xml:30515
-msgid "IfcRectangleHollowProfileDef_OuterFilletRadius"
-msgstr "超滤镜半径"
-
-msgid "IfcRectangleHollowProfileDef_OuterFilletRadius_DEFINITION"
-msgstr "外角半径。"
-
-#:IFC.xml:30520
-msgid "IfcRectangleHollowProfileDef_WallThickness"
-msgstr "壁厚度"
-
-msgid "IfcRectangleHollowProfileDef_WallThickness_DEFINITION"
-msgstr "材料厚度。"
-
-#:IFC.xml:30527
-msgid "IfcRectangleProfileDef"
-msgstr "IfcRecantangleProfileDef"
-
-msgid "IfcRectangleProfileDef_DEFINITION"
-msgstr "[[IfcRectangleProfileDef]] defines a rectangle as the profile definition used by the swept surface geometry or the swept area solid. It is given by its X extent and its Y extent, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system. HISTORY New entity in IFC1.5. Figure 1 illustrates parameters of the rectangle profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points for example, upper left bound . Parameter The [[IfcRectangleProfileDef]] is defined within the position coordinate system, where the XDim defines the length measure for the length of the rectangle half along the positive x axis and the YDim defines the length measure for the width of the rectangle half along the positive y axis . Figure 1 Rectangle profile"
-
-#:IFC.xml:30528
-msgid "IfcRectangleProfileDef_XDim"
-msgstr "XDim"
-
-msgid "IfcRectangleProfileDef_XDim_DEFINITION"
-msgstr "x轴方向矩形的范围。"
-
-#:IFC.xml:30533
-msgid "IfcRectangleProfileDef_YDim"
-msgstr "YDim"
-
-msgid "IfcRectangleProfileDef_YDim_DEFINITION"
-msgstr "y轴方向矩形的范围。"
-
-#:IFC.xml:30540
-msgid "IfcReinforcementBarProperties"
-msgstr "IfcReinforceBarProperties"
-
-msgid "IfcReinforcementBarProperties_DEFINITION"
-msgstr "IfcReinforcementProperties defines the set of properties for a specific combination of reinforcement bar steel grade, bar type and effective depth. HISTORY New entity in IFC2x2. The total cross section area for the specific steel grade is always provided. Additionally also general reinforcing bar configurations as a count of bars may be provided as defined in attribute BarCount . In this case the nominal bar diameter should be identical for all given bars as defined in attribute NominalBarDiameter ."
-
-#:IFC.xml:30541
-msgid "IfcReinforcementBarProperties_BarCount"
-msgstr "BarCount"
-
-msgid "IfcReinforcementBarProperties_BarCount_DEFINITION"
-msgstr "在特定加固配置中所包含的标称直径和钢等级相同的条形条数。"
-
-#:IFC.xml:30546
-msgid "IfcReinforcementBarProperties_BarSurface"
-msgstr "酒巴着色"
-
-msgid "IfcReinforcementBarProperties_BarSurface_DEFINITION"
-msgstr "指示栏表面是否纯洁或纹理。"
-
-#:IFC.xml:30551
-msgid "IfcReinforcementBarProperties_EffectiveDepth"
-msgstr "有效深度"
-
-msgid "IfcReinforcementBarProperties_EffectiveDepth_DEFINITION"
-msgstr "有效深度： 具体增援跨区或连续增援配置的距离，从一个共同的具体参照点计算。 通常，参考点是波束和板块的上表面，或是平面上列的类似投影点。"
-
-#:IFC.xml:30556
-msgid "IfcReinforcementBarProperties_NominalBarDiameter"
-msgstr "代名Bar直径"
-
-msgid "IfcReinforcementBarProperties_NominalBarDiameter_DEFINITION"
-msgstr "确定加固柱的横截尺寸的名义直径。 条形直径应当对具体增援配置中所包含的所有条形完全相同。"
-
-#:IFC.xml:30561
-msgid "IfcReinforcementBarProperties_SteelGrade"
-msgstr "钢种级"
-
-msgid "IfcReinforcementBarProperties_SteelGrade_DEFINITION"
-msgstr "根据当地标准确定的名义钢等级。"
-
-#:IFC.xml:30566
-msgid "IfcReinforcementBarProperties_TotalCrossSectionArea"
-msgstr "TotalCrossSectionarea"
-
-msgid "IfcReinforcementBarProperties_TotalCrossSectionArea_DEFINITION"
-msgstr "加固特定钢等级的总有效跨部门面积。"
-
-#:IFC.xml:30585
-msgid "IfcReinforcingBarRoleEnum"
-msgstr "IfcReinforcingBarRoleEnum"
-
-msgid "IfcReinforcingBarRoleEnum_DEFINITION"
-msgstr "Enumeration defining standard types for the role, purpose or usage of the bar, i.e. the kind of loads and stresses they are intended to carry. HISTORY New type in IFC2x2. .change ifc2x4 IFC4 CHANGE Item ANCHORING added. Items MAIN The reinforcing bar is a main bar. SHEAR The reinforcing bar is a shear bar. LIGATURE The reinforcing bar is a ligature link, stirrup . STUD The reinforcing bar is a stud. PUNCHING Punching reinforcement. EDGE Edge reinforcement. RING Ring reinforcement. ANCHORING Anchoring reinforcement. USERDEFINED NOTDEFINED The type of reinforcement is not defined."
-
-#:IFC.xml:30586
-msgid "IfcReinforcingBarRoleEnum_ANCHORING"
-msgstr "正在解析"
-
-msgid "IfcReinforcingBarRoleEnum_ANCHORING_DEFINITION"
-msgstr "护卫增援。"
-
-#:IFC.xml:30587
-msgid "IfcReinforcingBarRoleEnum_EDGE"
-msgstr "编辑"
-
-msgid "IfcReinforcingBarRoleEnum_EDGE_DEFINITION"
-msgstr "增援边缘。"
-
-#:IFC.xml:30588
-msgid "IfcReinforcingBarRoleEnum_LIGATURE"
-msgstr "过期的"
-
-msgid "IfcReinforcingBarRoleEnum_LIGATURE_DEFINITION"
-msgstr "加固栏是一种亮度链接，窒息。"
-
-#:IFC.xml:30589
-msgid "IfcReinforcingBarRoleEnum_MAIN"
-msgstr "主要的"
-
-msgid "IfcReinforcingBarRoleEnum_MAIN_DEFINITION"
-msgstr "加固栏是一个主要栏。"
-
-#:IFC.xml:30590
-msgid "IfcReinforcingBarRoleEnum_NOTDEFINED"
+#:IFC.xml:31193
+msgid "IfcCurveInterpolationEnum_NOTDEFINED"
 msgstr "未完成"
 
-msgid "IfcReinforcingBarRoleEnum_NOTDEFINED_DEFINITION"
-msgstr "未定义增援类型。"
+msgid "IfcCurveInterpolationEnum_NOTDEFINED_DEFINITION"
+msgstr "没有提供插值信息"
 
-#:IFC.xml:30591
-msgid "IfcReinforcingBarRoleEnum_PUNCHING"
-msgstr "浮动通知"
+#:IFC.xml:31195
+msgid "IfcExtendedProperties"
+msgstr "扩展属性"
 
-msgid "IfcReinforcingBarRoleEnum_PUNCHING_DEFINITION"
-msgstr "击中增援。"
+msgid "IfcExtendedProperties_DEFINITION"
+msgstr "The [[IfcExtendedProperties]] is an abstract supertype of all extensible property collections that are applicable to certain characterized entities. Instantiable subtypes of [[IfcExtendedProperties]] assign the property collection to a particular characterized entity. NOTE Extensible property collections are provided for materials and profiles. Instantiable subtypes have a set of Properties , each providing property name, value and unit and other instance information, depending on the subtype of [[IfcProperty]] referenced. HISTORY New entity in IFC4."
 
-#:IFC.xml:30592
-msgid "IfcReinforcingBarRoleEnum_RING"
-msgstr "环状图"
+#:IFC.xml:31208
+msgid "IfcExtendedProperties_Properties"
+msgstr "属性"
 
-msgid "IfcReinforcingBarRoleEnum_RING_DEFINITION"
-msgstr "增援环。"
+msgid "IfcExtendedProperties_Properties_DEFINITION"
+msgstr "此扩展属性集合所提供的属性集合。"
 
-#:IFC.xml:30593
-msgid "IfcReinforcingBarRoleEnum_SHEAR"
-msgstr "得分"
+#:IFC.xml:31196
+msgid "IfcExtendedProperties_Description"
+msgstr "描述"
 
-msgid "IfcReinforcingBarRoleEnum_SHEAR_DEFINITION"
-msgstr "加固栏是切边栏。"
+msgid "IfcExtendedProperties_Description_DEFINITION"
+msgstr "属性集的描述。"
 
-#:IFC.xml:30594
-msgid "IfcReinforcingBarRoleEnum_STUD"
-msgstr "STUD"
+#:IFC.xml:31201
+msgid "IfcExtendedProperties_Name"
+msgstr "名称"
 
-msgid "IfcReinforcingBarRoleEnum_STUD_DEFINITION"
-msgstr "加固栏是一项研究。"
+msgid "IfcExtendedProperties_Name_DEFINITION"
+msgstr "给定属性集的名称。"
 
-#:IFC.xml:30595
-msgid "IfcReinforcingBarRoleEnum_USERDEFINED"
-msgstr "已使用"
+#:IFC.xml:31220
+msgid "IfcObjectReferenceSelect"
+msgstr "IfcObjectReferenceSelect"
 
-msgid "IfcReinforcingBarRoleEnum_USERDEFINED_DEFINITION"
-msgstr "已使用"
+#:IFC.xml:31221
+msgid "IfcPreDefinedProperties"
+msgstr "IfcPredefined属性"
 
-#:IFC.xml:30597
-msgid "IfcReinforcingBarSurfaceEnum"
-msgstr "IfcReinforcingBarSurfaceEnum"
+msgid "IfcPreDefinedProperties_DEFINITION"
+msgstr "The [[IfcPreDefinedProperties]] is an abstract supertype of all predefined property collections that have explicit attributes, each representing a property. Instantiable subtypes are assigned to specific characterised entities. HISTORY New entity in IFC4."
 
-msgid "IfcReinforcingBarSurfaceEnum_DEFINITION"
-msgstr "Enumeration indicating whether the bar has a plain or textured ribbed surface. HISTORY New type in IFC2x2. Items PLAIN The reinforcing bar surface is plain. TEXTURED The reinforcing bar surface is textured ribbed ."
+#:IFC.xml:31224
+msgid "IfcProperty"
+msgstr "离子属性"
 
-#:IFC.xml:30598
-msgid "IfcReinforcingBarSurfaceEnum_PLAIN"
-msgstr "游戏"
+msgid "IfcProperty_DEFINITION"
+msgstr "[[IfcProperty]] is an abstract generalization for all types of properties that can be associated with IFC objects through the property set mechanism. HISTORY New entity in IFC1.0."
 
-msgid "IfcReinforcingBarSurfaceEnum_PLAIN_DEFINITION"
-msgstr "加固条面是平滑的。"
+#:IFC.xml:601
+msgid "IfcProperty_HasApprovals"
+msgstr "快速批准"
 
-#:IFC.xml:30599
-msgid "IfcReinforcingBarSurfaceEnum_TEXTURED"
-msgstr "TEXTURED"
+msgid "IfcProperty_HasApprovals_DEFINITION"
+msgstr "用户定义的属性审批。"
 
-msgid "IfcReinforcingBarSurfaceEnum_TEXTURED_DEFINITION"
-msgstr "加固栏表面是纹理机床。"
+#:IFC.xml:2760
+msgid "IfcProperty_HasConstraints"
+msgstr "急速限制"
 
-#:IFC.xml:30601
-msgid "IfcRoundedRectangleProfileDef"
-msgstr "IfcRoundedRecantangleProfileDef"
+msgid "IfcProperty_HasConstraints_DEFINITION"
+msgstr "用户定义的属性限制。"
 
-msgid "IfcRoundedRectangleProfileDef_DEFINITION"
-msgstr "[[IfcRoundedRectangleProfileDef]] defines a rectangle with equally rounded corners as the profile definition used by the swept surface geometry or the swept area solid. It is given by the X extent, the Y extent, and the radius for the rounded corners, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system, that is, in the center of the bounding box. HISTORY New entity in IFC2x. .change ifc2x IFC2x CHANGE The [[IfcRoundedRectangleProfileDef]] is now subtyped from [[IfcRectangleProfileDef]] . The XDim and YDim attributes have been removed now inherited from supertype . Figure 1 illustrates parameters of the rounded rectangle profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The [[IfcRoundedRectangleProfileDef]] is defined within the position coordinate system, where the XDim defines the measure for the length of the rectangle half along the positive x axis , the YDim defines the length measure for the width of the rectangle half along the positive y axis and the RoundingRadius defines the radius of curvature in all four corners of the rectangle. Figure 1 Rounded rectangle profile"
+#:IFC.xml:20481
+msgid "IfcProperty_PartOfPset"
+msgstr "PartOfPset"
 
-#:IFC.xml:30602
-msgid "IfcRoundedRectangleProfileDef_RoundingRadius"
-msgstr "圆形半径"
+msgid "IfcProperty_PartOfPset_DEFINITION"
+msgstr "Reference to the [[IfcPropertySet]] by which the [[IfcProperty]] is referenced. .change ifc2x4 IFC4 CHANGE New inverse attribute to navigate from [[IfcProperty]] to [[IfcPropertySet]] with upward compatibility for file based exchange."
 
-msgid "IfcRoundedRectangleProfileDef_RoundingRadius_DEFINITION"
-msgstr "圆弧圆弧的半径，长方形的所有四角均等圆环。"
+#:IFC.xml:31175
+msgid "IfcProperty_PartOfComplex"
+msgstr "PartOfComplex"
 
-#:IFC.xml:30609
-msgid "IfcSectionProperties"
-msgstr "IfcSectionProperties"
+msgid "IfcProperty_PartOfComplex_DEFINITION"
+msgstr "Reference to the [[IfcComplexProperty]] in which the [[IfcProperty]] is contained. .change ifc2x4 IFC4 CHANGE The cardinality has changed to 0..n to allow reuse of instances of [[IfcProperty]] in several [[IfcComplexProperty]] with upward compatibility for file based exchange."
 
-msgid "IfcSectionProperties_DEFINITION"
-msgstr "[[IfcSectionProperties]] defines the cross section properties for a single longitudinal piece of a cross section. It is a special purpose helper class for [[IfcSectionReinforcementProperties]] . HISTORY New entity in IFC2x2. The section piece may be either uniform or tapered. In the latter case an end profile should also be provided. The start and end profiles are assumed to be of the same profile type. Generally only rectangular or circular cross section profiles are assumed to be used."
+#:IFC.xml:31237
+msgid "IfcProperty_PropertyForDependance"
+msgstr "属性ForDependance"
 
-#:IFC.xml:30478
-msgid "IfcSectionProperties_StartProfile"
-msgstr "首页"
+msgid "IfcProperty_PropertyForDependance_DEFINITION"
+msgstr "财产的价值取决于另一个财产的价值。"
 
-msgid "IfcSectionProperties_StartProfile_DEFINITION"
-msgstr "纵横截面起点的交叉剖面。"
+#:IFC.xml:31251
+msgid "IfcProperty_PropertyDependsOn"
+msgstr "PropertyDependsOn"
 
-#:IFC.xml:30490
-msgid "IfcSectionProperties_EndProfile"
-msgstr "结束配置文件"
+msgid "IfcProperty_PropertyDependsOn_DEFINITION"
+msgstr "财产价值所依赖的有关财产。"
 
-msgid "IfcSectionProperties_EndProfile_DEFINITION"
-msgstr "纵横截面末尾处的交叉剖面。"
+#:IFC.xml:31225
+msgid "IfcProperty_Name"
+msgstr "名称"
 
-#:IFC.xml:30610
-msgid "IfcSectionProperties_SectionType"
-msgstr "班级类型"
+msgid "IfcProperty_Name_DEFINITION"
+msgstr "此属性的名称。此标签是定义属性语义的重要名称字符串。"
 
-msgid "IfcSectionProperties_SectionType_DEFINITION"
-msgstr "指某一交叉段的某一特定块是统一的还是纵向变质的。"
+#:IFC.xml:31230
+msgid "IfcProperty_Specification"
+msgstr "说明"
 
-#:IFC.xml:30629
-msgid "IfcSectionReinforcementProperties"
-msgstr "IfcSectionReinforcement属性"
+msgid "IfcProperty_Specification_DEFINITION"
+msgstr "URI 是指一个具有语义定义或内容丰富的文本来解释该属性的位置。"
 
-msgid "IfcSectionReinforcementProperties_DEFINITION"
-msgstr "[[IfcSectionReinforcementProperties]] defines the cross section properties of reinforcement for a single longitudinal piece of a cross section with a specific reinforcement usage type. HISTORY New entity in IFC2x2. Several sets of cross section reinforcement properties represented by instances of IfcReinforcementProperties may be attached to the section reinforcement properties [[IfcReinforcementDefinitionProperties]] of IfcStructuralElementsDomain schema , one for each combination of steel grades and reinforcement bar types and sizes."
+#:IFC.xml:31265
+msgid "IfcPropertyAbstraction"
+msgstr "IfcPropertyAbstraction"
 
-#:IFC.xml:30573
-msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions"
-msgstr "交叉强化定义"
+msgid "IfcPropertyAbstraction_DEFINITION"
+msgstr "The [[IfcPropertyAbstraction]] is an abstract supertype of all property related entities defined as dependent resource entities within the specification. It may have an external reference to a dictionary or library that provides additional information about its definition. Instantiable subtypes have property name, value and other instance information. HISTORY New entity in IFC4."
 
-msgid "IfcSectionReinforcementProperties_CrossSectionReinforcementDefinitions_DEFINITION"
-msgstr "附加到一个章节增强属性定义的增强属性。"
+#:IFC.xml:9109
+msgid "IfcPropertyAbstraction_HasExternalReferences"
+msgstr "HasExternalReferences"
 
-#:IFC.xml:30617
-msgid "IfcSectionReinforcementProperties_SectionDefinition"
-msgstr "章节定义"
+msgid "IfcPropertyAbstraction_HasExternalReferences_DEFINITION"
+msgstr "Reference to an external reference, e.g. library, classification, or document information, that is associated to the property definition. .change ifc2x4 IFC4 CHANGE New inverse attribute."
 
-msgid "IfcSectionReinforcementProperties_SectionDefinition_DEFINITION"
-msgstr "交叉剖面图和纵横截图类型的定义。"
+#:IFC.xml:31267
+msgid "IfcPropertyBoundedValue"
+msgstr "IfcPropertyBounded值"
 
-#:IFC.xml:30630
-msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition"
-msgstr "纵向末影位置"
+msgid "IfcPropertyBoundedValue_DEFINITION"
+msgstr "A property with a bounded value, [[IfcPropertyBoundedValue]] , defines a property object which has a maximum of two numeric or descriptive values assigned, the first value specifying the upper bound and the second value specifying the lower bound. It defines a property value bound min max combination for which the property Name , an optional Description , the optional UpperBoundValue with measure type, the optional LowerBoundValue with measure type, and the optional Unit is given. A set point value can be provided in addition to the upper and lower bound values for operational value setting. The unit is handled by the Unit attribute, see Table 1 for an example of a bounded property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. The [[IfcPropertyBoundedValue]] allows for the specification of an interval for the value component of the property description. If either the LowerBoundValue or the UpperBoundValue is not given, then it indicates an open bound either a minimum value or a maximum value . The interval is by definition inclusive, that is, the value given for the LowerBoundValue or the UpperBoundValue is included in the interval. NOTE An [[IfcPropertyBoundedValue]] may be exchanged with no values assigned yet. In this case the LowerBoundValue and the UpperBoundValue are set to NIL. Name UpperBoundValue LowerBoundValue SetPointValue Type through [[IfcValue]] Unit OverallHeight 1930 2300 [[IfcPositiveLengthMeasure]] OverallWidth 0.9 1.25 [[IfcPositiveLengthMeasure]] m MaxHeight 20.0 [[IfcPositiveLengthMeasure]] MinWeight 20 [[IfcMassMeasure]] kg Where rules ensures same measure type for all values Table 1 Bounded property with values, measure types and units HISTORY New entity in IFC2x. .change ifc2x2 IFC2x2 CHANGE The attribute type of the attribute UpperBoundValue and LowerBoundValue has been made optional with upward compatibility for file based exchange. .change ifc2x4 IFC4 CHANGE The attribute SetPointValue has been added. .spec head Informal Propositions 1. If the measure type for the upper and lover bound value is a numeric measure, then the following shall be true UpperBoundValue LowerBoundValue ."
 
-msgid "IfcSectionReinforcementProperties_LongitudinalEndPosition_DEFINITION"
-msgstr "部件增强特性的纵向终点位置。"
+#:IFC.xml:31268
+msgid "IfcPropertyBoundedValue_LowerBoundValue"
+msgstr "低边界值"
 
-#:IFC.xml:30635
-msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition"
-msgstr "经度星位置"
+msgid "IfcPropertyBoundedValue_LowerBoundValue_DEFINITION"
+msgstr "定义属性值的间隔下限。 如果未给定值，则表示开放绑定的所有值都低于或等于上边界值。"
 
-msgid "IfcSectionReinforcementProperties_LongitudinalStartPosition_DEFINITION"
-msgstr "部件增强特性的纵向起始位置。"
+#:IFC.xml:31273
+msgid "IfcPropertyBoundedValue_SetPointValue"
+msgstr "设置点值"
 
-#:IFC.xml:30640
-msgid "IfcSectionReinforcementProperties_ReinforcementRole"
-msgstr "增援作用"
+msgid "IfcPropertyBoundedValue_SetPointValue_DEFINITION"
+msgstr "Set point value as typically used for operational value setting. .change ifc2x4 IFC4 CHANGE The attribute has been added at the end of the attribute list."
 
-msgid "IfcSectionReinforcementProperties_ReinforcementRole_DEFINITION"
-msgstr "2. 增援的作用、目的或用途，例如： 它是要携带的那种载荷和重力，而这种载荷和重力是为该部分增强特性定义的。"
+#:IFC.xml:31278
+msgid "IfcPropertyBoundedValue_Unit"
+msgstr "1 D-1, 1 P-5, 1 P-4, 1 P-3,"
 
-#:IFC.xml:30645
-msgid "IfcSectionReinforcementProperties_TransversePosition"
-msgstr "变换位置"
+msgid "IfcPropertyBoundedValue_Unit_DEFINITION"
+msgstr "Unit for the upper and lower bound values, if not given, the default value for the measure type is used as defined by the global unit assignment at [[IfcProject]].UnitInContext . The applicable unit is then selected by the underlying TYPE of the UpperBoundValue , LowerBoundValue , and SetPointValue"
 
-msgid "IfcSectionReinforcementProperties_TransversePosition_DEFINITION"
-msgstr "该部分增强属性的位置是朝向横向的。"
+#:IFC.xml:31283
+msgid "IfcPropertyBoundedValue_UpperBoundValue"
+msgstr "上边界值"
 
-#:IFC.xml:30664
-msgid "IfcSectionTypeEnum"
-msgstr "IfcSectionTypeEnum"
+msgid "IfcPropertyBoundedValue_UpperBoundValue_DEFINITION"
+msgstr "定义属性值的间隔的最大绑定值。 如果未给定值，则表示开放绑定的所有值都大于或等于低边界值。"
 
-msgid "IfcSectionTypeEnum_DEFINITION"
-msgstr "An enumeration indicating whether a specific piece of a cross section is uniform or tapered in longitudinal direction. HISTORY New type in IFC2x2. Items UNIFORM TAPERED The section is tapered in longitudinal direction."
+#:IFC.xml:31290
+msgid "IfcPropertyDependencyRelationship"
+msgstr "IfcPropertyDependency关系"
 
-#:IFC.xml:30665
-msgid "IfcSectionTypeEnum_TAPERED"
-msgstr "推送"
+msgid "IfcPropertyDependencyRelationship_DEFINITION"
+msgstr "An [[IfcPropertyDependencyRelationship]] describes an identified dependency between the value of one property and that of another. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Made subtype of [[IfcResourceLevelRelationship]] attribute order changed . .use head Use Definition Whilst the [[IfcPropertyDependencyRelationship]] may be used to describe the dependency, and it may do so in terms of the expression of how the dependency operates, it is not possible through the current IFC model for the value of the related property to be actually derived from the value of the relating property. The determination of value according to the dependency is required to be performed by an application that can then use the Expression attribute to flag the form of the dependency."
 
-msgid "IfcSectionTypeEnum_TAPERED_DEFINITION"
-msgstr "纵向对该节进行了微调。"
+#:IFC.xml:31237
+msgid "IfcPropertyDependencyRelationship_DependingProperty"
+msgstr "依赖属性"
 
-#:IFC.xml:30666
-msgid "IfcSectionTypeEnum_UNIFORM"
-msgstr "联黎部队"
+msgid "IfcPropertyDependencyRelationship_DependingProperty_DEFINITION"
+msgstr "关系所依赖的财产。"
 
-msgid "IfcSectionTypeEnum_UNIFORM_DEFINITION"
-msgstr "联黎部队"
+#:IFC.xml:31251
+msgid "IfcPropertyDependencyRelationship_DependantProperty"
+msgstr "DependantProperty"
 
-#:IFC.xml:30668
-msgid "IfcTrapeziumProfileDef"
-msgstr "IfcTrapeziumProfileDef"
+msgid "IfcPropertyDependencyRelationship_DependantProperty_DEFINITION"
+msgstr "受扶养人财产。"
 
-msgid "IfcTrapeziumProfileDef_DEFINITION"
-msgstr "[[IfcTrapeziumProfileDef]] defines a trapezium as the profile definition used by the swept surface geometry or the swept area solid. It is given by its Top X and Bottom X extent and its Y extent as well as by the offset of the Top X extend, and placed within the 2D position coordinate system, established by the Position attribute. It is placed centric within the position coordinate system, that is, in the center of the bounding box. HISTORY New entity in IFC1.5. The use definition has changed in IFC2x. Figure 1 illustrates parameters of the trapezium profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept surface or swept area solid that uses the profile definition. It is the xy plane of either [[IfcSweptSurface]].Position [[IfcSweptAreaSolid]].Position or in case of sectioned spines the xy plane of each list member of [[IfcSectionedSpine]].CrossSectionPositions. By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Explicit coordinate offsets are used to define cardinal points e.g. upper left bound . Parameter The [[IfcTrapeziumProfileDef]] is defined within the position coordinate system, where the BottomDim defines the length measure for the bottom line half along the positive x axis and the YDim defines the length measure for the parallel distance of bottom and top line half along the positive y axis . The top line starts with a distance of TopXOffset from BottomLine 2,YDim which can be negative, zero, or positive and has a length of TopXDim along the positive x axis. Figure 1 Trapezium profile"
+#:IFC.xml:31291
+msgid "IfcPropertyDependencyRelationship_Expression"
+msgstr "表达式"
 
-#:IFC.xml:30669
-msgid "IfcTrapeziumProfileDef_BottomXDim"
-msgstr "底部XDim"
+msgid "IfcPropertyDependencyRelationship_Expression_DEFINITION"
+msgstr "表述方式进一步描述了依赖关系的性质。"
 
-msgid "IfcTrapeziumProfileDef_BottomXDim_DEFINITION"
-msgstr "沿隐含x轴测量底线的范围。"
+#:IFC.xml:31298
+msgid "IfcPropertyEnumeratedValue"
+msgstr "IfcPropertyEnumated值"
 
-#:IFC.xml:30674
-msgid "IfcTrapeziumProfileDef_TopXDim"
-msgstr "TopXDim"
+msgid "IfcPropertyEnumeratedValue_DEFINITION"
+msgstr "A property with an enumerated value, [[IfcPropertyEnumeratedValue]] , defines a property object which has a value assigned that is chosen from an enumeration. It defines a property value combination for which the property Name , an optional Description , the optional EnumerationValues with measure type and optionally an Unit is given. NOTE Multiple choices from the property enumeration are supported. The unit is handled by the Unit attribute, see Table 1 for an example of a enumerated property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit. More precisely The [[IfcPropertyEnumeratedValue]] defines a property, which value is selected from a defined list of enumerators. The enumerators are stored in a dynamic enumeration of values including the type information from [[IfcValue]] see [[IfcPropertyEnumeration]] . This enables applications to use an enumeration value as a property within a property set [[IfcPropertySet]] including the allowed list of values. NOTE An [[IfcPropertyEnumeratedValue]] may be exchanged with no values assigned yet. In this case the EnumerationValues are set to NIL. Name Value EnumerationValue Type through [[IfcValue]] [[IfcPropertyEnumeration]] Name BladeAction Opposed [[IfcLabel]] DamperBladeActionEnum BladeAction Parallel [[IfcLabel]] DamperBladeActionEnum Table 1 Enumerated property with values, measure types and units The [[IfcPropertyEnumeratedValue]] refers to an [[IfcPropertyEnumeration]] , see Table 2 for an example Name EnumerationValues Type through [[IfcValue]] Unit DamperBladeActionEnum Parallel, Opposed, Other, Unset IfcString Table 2 Property enumeration with enumerators It is not mandatory to use an instance of [[IfcPropertyEnumeration]] to hold the applicable values for [[IfcPropertyEnumeratedValue]] , however this is the preferred way. A single instance of [[IfcPropertyEnumeration]] can be referenced by multiple instances of [[IfcPropertyEnumeratedValue]] . HISTORY New entity in IFC2.0. .change ifc2x IFC2x CHANGE Entity has been renamed from IfcEnumeratedProperty .change ifc2x4 IFC4 CHANGE Attribute EnumerationValues has been made OPTIONAL with upward compatibility for file based exchange."
 
-msgid "IfcTrapeziumProfileDef_TopXDim_DEFINITION"
-msgstr "沿隐含x轴测量的顶线的范围。"
+#:IFC.xml:31306
+msgid "IfcPropertyEnumeratedValue_EnumerationReference"
+msgstr "枚举引用"
 
-#:IFC.xml:30679
-msgid "IfcTrapeziumProfileDef_TopXOffset"
-msgstr "TopXOffset"
+msgid "IfcPropertyEnumeratedValue_EnumerationReference_DEFINITION"
+msgstr "从中选择了枚举值的枚举。所引用的枚举也确定了枚举值的单位。"
 
-msgid "IfcTrapeziumProfileDef_TopXOffset_DEFINITION"
-msgstr "从顶部线开始向底部线偏移，沿隐式x轴计量。"
+#:IFC.xml:31299
+msgid "IfcPropertyEnumeratedValue_EnumerationValues"
+msgstr "枚举值"
 
-#:IFC.xml:30684
-msgid "IfcTrapeziumProfileDef_YDim"
-msgstr "YDim"
+msgid "IfcPropertyEnumeratedValue_EnumerationValues_DEFINITION"
+msgstr "Enumeration values, which shall be listed in the referenced [[IfcPropertyEnumeration]] , if such a reference is provided. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcTrapeziumProfileDef_YDim_DEFINITION"
-msgstr "平行底部线和顶部线之间按照隐含轴测量的距离范围。"
+#:IFC.xml:31318
+msgid "IfcPropertyEnumeration"
+msgstr "IfcPropertyEnumeration"
 
-#:IFC.xml:30691
-msgid "IfcTShapeProfileDef"
-msgstr "IfcTShapeProfileDef"
+msgid "IfcPropertyEnumeration_DEFINITION"
+msgstr "[[IfcPropertyEnumeration]] is a collection of simple or measure values that define a prescribed set of alternatives from which enumeration values are selected. This enables inclusion of enumeration values in property sets. [[IfcPropertyEnumeration]] provides a name for the enumeration as well as a list of unique numeric or descriptive values that may have a measure type assigned . The entity defines the list of potential enumerators to be exchanged together or separately with properties of type [[IfcPropertyEnumeratedValue]] that selects their actual property values from this enumeration. The unit is handled by the Unit attribute, see Table 1 for an example of a unitless property enumeration If the Unit attribute is not given, than the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, the unit assigned by the unit attribute overrides the globally assigned unit. Name EnumerationValues Type through [[IfcValue]] Unit PEnum DamperBladeAction Parallel [[IfcLabel]] Opposed [[IfcLabel]] Other [[IfcLabel]] Unset [[IfcLabel]] Table 1 Property enumeration with values, measure types and units HISTORY New entity in IFC2.0, capabilities enhanced in IFC2x. .change ifc2x IFC2x CHANGE Entity has been renamed from IfcEnumeration"
 
-msgid "IfcTShapeProfileDef_DEFINITION"
-msgstr "[[IfcTShapeProfileDef]] defines a section profile that provides the defining parameters of a T shaped section to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of FilletRadius , FlangeEdgeRadius , and WebEdgeRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInY deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the T shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position by using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 T shape profile"
+#:IFC.xml:31319
+msgid "IfcPropertyEnumeration_EnumerationValues"
+msgstr "枚举值"
 
-#:IFC.xml:30692
-msgid "IfcTShapeProfileDef_Depth"
-msgstr "深度："
+msgid "IfcPropertyEnumeration_EnumerationValues_DEFINITION"
+msgstr "代表枚举的值列表。"
 
-msgid "IfcTShapeProfileDef_Depth_DEFINITION"
-msgstr "网页长度，见h 上面的说明。"
+#:IFC.xml:31324
+msgid "IfcPropertyEnumeration_Name"
+msgstr "名称"
 
-#:IFC.xml:30697
-msgid "IfcTShapeProfileDef_FilletRadius"
-msgstr "Fillet半径"
+msgid "IfcPropertyEnumeration_Name_DEFINITION"
+msgstr "此枚举的名称。"
 
-msgid "IfcTShapeProfileDef_FilletRadius_DEFINITION"
-msgstr "根据上述说明 r1 提供的文件半径。"
+#:IFC.xml:31329
+msgid "IfcPropertyEnumeration_Unit"
+msgstr "1 D-1, 1 P-5, 1 P-4, 1 P-3,"
 
-#:IFC.xml:30702
-msgid "IfcTShapeProfileDef_FlangeEdgeRadius"
-msgstr "FlangeEdgeRadius"
+msgid "IfcPropertyEnumeration_Unit_DEFINITION"
+msgstr "计数器值的单位，如果未给出的话。 由TYPE给出的标定值类型的默认值是按照全局单位分配在 [[IfcProject] ]定义的。"
 
-msgid "IfcTShapeProfileDef_FlangeEdgeRadius_DEFINITION"
-msgstr "上图r2显示的边缘半径。"
+#:IFC.xml:31336
+msgid "IfcPropertyListValue"
+msgstr "IfcPropertyListValue"
 
-#:IFC.xml:30707
-msgid "IfcTShapeProfileDef_FlangeSlope"
-msgstr "FlangeSlope"
+msgid "IfcPropertyListValue_DEFINITION"
+msgstr "An [[IfcPropertyListValue]] defines a property that has several numeric or descriptive values assigned, these values are given by an ordered list. It defines a property list value combination for which the property Name , an optional Description , the optional ListValues with measure type and optionally an Unit is given. An [[IfcPropertyListValue]] is a list of values. The order in which values appear is significant. All list members shall be of the same type. The unit is handled by the Unit attribute, see Table 1 for an example of a list property If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. NOTE An [[IfcPropertyListValue]] may be exchanged with no values assigned yet. In this case the ListValues are set to NIL. Name ListValues Type through [[IfcValue]] Unit ApplicableSizes 1200 [[IfcPositiveLengthMeasure]] 1600 [[IfcPositiveLengthMeasure]] 2400 [[IfcPositiveLengthMeasure]] Table 1 List property with values, measure types and units HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute ListValues has been made OPTIONAL with upward compatibility for file based exchange."
 
-msgid "IfcTShapeProfileDef_FlangeSlope_DEFINITION"
-msgstr "剖面网的斜坡。"
+#:IFC.xml:31337
+msgid "IfcPropertyListValue_ListValues"
+msgstr "列表值"
 
-#:IFC.xml:30712
-msgid "IfcTShapeProfileDef_FlangeThickness"
-msgstr "FlangeThickness"
+msgid "IfcPropertyListValue_ListValues_DEFINITION"
+msgstr "List of property values. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcTShapeProfileDef_FlangeThickness_DEFINITION"
-msgstr "橙色tg的恒定墙厚度"
+#:IFC.xml:31342
+msgid "IfcPropertyListValue_Unit"
+msgstr "1 D-1, 1 P-5, 1 P-4, 1 P-3,"
 
-#:IFC.xml:30717
-msgid "IfcTShapeProfileDef_FlangeWidth"
-msgstr "FlangeWidth"
+msgid "IfcPropertyListValue_Unit_DEFINITION"
+msgstr "列表值的单位，如果未给出的话。 由TYPE给出的标定值类型的默认值是按照全局单位分配在 [[IfcProject] ]定义的。"
 
-msgid "IfcTShapeProfileDef_FlangeWidth_DEFINITION"
-msgstr "Flange长度，见上文b所示。"
+#:IFC.xml:31349
+msgid "IfcPropertyReferenceValue"
+msgstr "IfcPropertyReferenceValue"
 
-#:IFC.xml:30722
-msgid "IfcTShapeProfileDef_WebEdgeRadius"
-msgstr "WebEdge半径"
+msgid "IfcPropertyReferenceValue_DEFINITION"
+msgstr "The [[IfcPropertyReferenceValue]] allows a property value to be of type of an resource level entity. The applicable entities that can be used as value references are given by the [[IfcObjectReferenceSelect]] . HISTORY New entity in IFC1.5. Entity has been renamed from IfcObjectReference in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute PropertyReference has been made OPTIONAL with upward compatibility for file based exchange."
 
-msgid "IfcTShapeProfileDef_WebEdgeRadius_DEFINITION"
-msgstr "上图r3显示的边缘半径。"
+#:IFC.xml:31350
+msgid "IfcPropertyReferenceValue_PropertyReference"
+msgstr "PropertyReference"
 
-#:IFC.xml:30727
-msgid "IfcTShapeProfileDef_WebSlope"
-msgstr "WebSlope"
+msgid "IfcPropertyReferenceValue_PropertyReference_DEFINITION"
+msgstr "Reference to another property entity through one of the select types in the [[IfcObjectReferenceSelect]] . .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcTShapeProfileDef_WebSlope_DEFINITION"
-msgstr "剖面黄色斜坡。"
+#:IFC.xml:31355
+msgid "IfcPropertyReferenceValue_UsageName"
+msgstr "用法名称"
 
-#:IFC.xml:30732
-msgid "IfcTShapeProfileDef_WebThickness"
-msgstr "WebThickness"
+msgid "IfcPropertyReferenceValue_UsageName_DEFINITION"
+msgstr "描述属性中引用值的使用。它是一个可以包含表达式或其他附加信息的描述性文本。"
 
-msgid "IfcTShapeProfileDef_WebThickness_DEFINITION"
-msgstr "网页的恒定墙厚度 ."
+#:IFC.xml:31362
+msgid "IfcPropertySingleValue"
+msgstr "IfcPropertySingleValue"
 
-#:IFC.xml:30739
-msgid "IfcUShapeProfileDef"
-msgstr "IfcUShapeProfileDef"
+msgid "IfcPropertySingleValue_DEFINITION"
+msgstr "The property with a single value [[IfcPropertySingleValue]] defines a property object which has a single numeric or descriptive value assigned. It defines a property single value combination for which the property Name , an optional Description , and an optional NominalValue with measure type is provided. In addition, the default unit as specified within the project unit context can be overriden by assigning an Unit . The unit is handled by the Unit attribute, see Table 1 for an example of various single value properties If the Unit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the Unit attribute is given, then the unit assigned by the Unit attribute overrides the globally assigned unit. Name NominalValue Type through [[IfcValue]] Unit Description Manufacturer A door [[IfcLabel]] PanelThickness 0.12 [[IfcPositiveLengthMeasure]] ThermalTransmittance 2.6 [[IfcThermalTransmittanceMeasure]] W m2K Table 1 Single value properties with values, measure types and units HISTORY New entity in IFC1.0. .change ifc2x IFC2x CHANGE Entity has been renamed from [[IfcSimpleProperty]]. .change ifc2x3 IFC2x3 CHANGE Attribute NominalValue has been made OPTIONAL with upward compatibility for file based exchange."
 
-msgid "IfcUShapeProfileDef_DEFINITION"
-msgstr "[[IfcUShapeProfileDef]] defines a section profile that provides the defining parameters of a U shape channel section to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x3 IFC2x3 CHANGE All profile origins are now in the center of the bounding box. .change ifc2x4 IFC4 CHANGE Type of FilletRadius and EdgeRadius relaxed to allow for zero radius. Trailing attribute CentreOfGravityInX deleted, use respective property in IfcExtendedProfileProperties instead. Figure 1 illustrates parameters of the U shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 U shape profile"
+#:IFC.xml:31363
+msgid "IfcPropertySingleValue_NominalValue"
+msgstr "名义值"
 
-#:IFC.xml:30740
-msgid "IfcUShapeProfileDef_Depth"
-msgstr "深度："
+msgid "IfcPropertySingleValue_NominalValue_DEFINITION"
+msgstr "Value and measure type of this property. NOTE By virtue of the defined data type, that is selected from the SELECT [[IfcValue]] , the appropriate unit can be found within the [[IfcUnitAssignment]] , defined for the project if no value for the unit attribute is given. .note IFC2x3 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcUShapeProfileDef_Depth_DEFINITION"
-msgstr "网页长度，见h 上面的说明。"
+#:IFC.xml:31368
+msgid "IfcPropertySingleValue_Unit"
+msgstr "1 D-1, 1 P-5, 1 P-4, 1 P-3,"
 
-#:IFC.xml:30745
-msgid "IfcUShapeProfileDef_EdgeRadius"
-msgstr "EdgeRadius"
+msgid "IfcPropertySingleValue_Unit_DEFINITION"
+msgstr "名义价值单位，如果未给出此单位。 由TYPE给出的标定值类型的默认值是按照全局单位分配在 [[IfcProject] ]定义的。"
 
-msgid "IfcUShapeProfileDef_EdgeRadius_DEFINITION"
-msgstr "上图r2显示的边缘半径。"
+#:IFC.xml:31375
+msgid "IfcPropertyTableValue"
+msgstr "Ifc属性表值"
 
-#:IFC.xml:30750
-msgid "IfcUShapeProfileDef_FilletRadius"
-msgstr "Fillet半径"
+msgid "IfcPropertyTableValue_DEFINITION"
+msgstr "[[IfcPropertyTableValue]] is a property with a value range defined by a property object which has two lists of numeric or descriptive values assigned. The values specify a table with two columns. The defining values provide the first column and establish the scope for the defined values the second column . An optional Expression attribute may give the equation used for deriving the range value, which is for information purposes only. The [[IfcPropertyTableValue]] defines a defining defined property value combination for which the property name, the table with defining and defined values with measure type and optional the units for defining and defined values are given. NOTE The [[IfcPropertyTableValue]] only captures properties that can be expressed by a table with two columns. Use [[IfcPropertyReferenceValue]] with the PropertyReference being an [[IfcTable]] to express all those properties that require a table with tree or more columns. The units are handled by the DefiningUnit and DefinedUnit attributes, see Table 1 for an example of a table value property If the DefiningUnit or DefinedUnit attribute is not given, then the unit is already implied by the type of [[IfcMeasureValue]] or [[IfcDerivedMeasureValue]] . The associated unit can be found at the [[IfcUnitAssignment]] globally defined at the project level [[IfcProject]].UnitsInContext . If the DefiningUnit or DefinedUnit attribute is given, then the unit assigned by the unit attribute overrides the globally assigned unit. The [[IfcPropertyTableValue]] allows for the specification of a table of defining defined value pairs of the property description. The optional attribute CurveInterpolation allows to determine the interval between two given values. Name DefiningValues DefiningValue Type through [[IfcValue]] DefinedValues DefinedValue Type through [[IfcValue]] DefingUnit DefinedUnit SoundTransmissionLoss 100 [[IfcFrequencyMeasure]] 20 [[IfcNumericMeasure]] dB 200 [[IfcFrequencyMeasure]] 42 [[IfcNumericMeasure]] 400 [[IfcFrequencyMeasure]] 46 [[IfcNumericMeasure]] 800 [[IfcFrequencyMeasure]] 56 [[IfcNumericMeasure]] 1600 [[IfcFrequencyMeasure]] 60 [[IfcNumericMeasure]] 3200 [[IfcFrequencyMeasure]] 65 [[IfcNumericMeasure]] Table 1 Table value property with values, measure types and units HISTORY New entity in IFC2x. .change ifc2x4 IFC4 CHANGE Attributes DefiningValues and DefinedValues have been made OPTIONAL with upward compatibility for file based exchange. The attribute CurveInterpolation has been added. .spec head Informal Propositions 1. The list of DefinedValues and the list of DefiningValues are corresponding lists."
 
-msgid "IfcUShapeProfileDef_FilletRadius_DEFINITION"
-msgstr "根据上述说明 r1 提供的文件半径。"
+#:IFC.xml:31376
+msgid "IfcPropertyTableValue_CurveInterpolation"
+msgstr "曲线插值"
 
-#:IFC.xml:30755
-msgid "IfcUShapeProfileDef_FlangeSlope"
-msgstr "FlangeSlope"
+msgid "IfcPropertyTableValue_CurveInterpolation_DEFINITION"
+msgstr "Interpolation of the curve between two defining and defined values that are provided. if not provided a linear interpolation is assumed. .change ifc2x4 IFC4 CHANGE The attribute has been added at the end of the attribute list."
 
-msgid "IfcUShapeProfileDef_FlangeSlope_DEFINITION"
-msgstr "剖面黄色斜坡。"
+#:IFC.xml:31381
+msgid "IfcPropertyTableValue_DefinedUnit"
+msgstr "DefinedUnit"
 
-#:IFC.xml:30760
-msgid "IfcUShapeProfileDef_FlangeThickness"
-msgstr "FlangeThickness"
+msgid "IfcPropertyTableValue_DefinedUnit_DEFINITION"
+msgstr "定义值的单位，如果未给出的话。 由定义值的 TYPE 给出的测量类型的默认值是按照全局单位分配在 [[IfcProject] ]定义的。"
 
-msgid "IfcUShapeProfileDef_FlangeThickness_DEFINITION"
-msgstr "橙色tg的恒定墙厚度"
+#:IFC.xml:31386
+msgid "IfcPropertyTableValue_DefinedValues"
+msgstr "定义值"
 
-#:IFC.xml:30765
-msgid "IfcUShapeProfileDef_FlangeWidth"
-msgstr "FlangeWidth"
+msgid "IfcPropertyTableValue_DefinedValues_DEFINITION"
+msgstr "Defined values which are applicable for the scope as defined by the defining values. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcUShapeProfileDef_FlangeWidth_DEFINITION"
-msgstr "Flange长度，见上文b所示。"
+#:IFC.xml:31391
+msgid "IfcPropertyTableValue_DefiningUnit"
+msgstr "定义单位"
 
-#:IFC.xml:30770
-msgid "IfcUShapeProfileDef_WebThickness"
-msgstr "WebThickness"
+msgid "IfcPropertyTableValue_DefiningUnit_DEFINITION"
+msgstr "定义值的单位，如果没有给出的话。 定义值的 TYPE 给出的测量类型的默认值是按照全局单位分配在 [[IfcProject] ]定义的。"
 
-msgid "IfcUShapeProfileDef_WebThickness_DEFINITION"
-msgstr "网页的恒定墙厚度 ."
+#:IFC.xml:31396
+msgid "IfcPropertyTableValue_DefiningValues"
+msgstr "定义值"
 
-#:IFC.xml:30777
-msgid "IfcZShapeProfileDef"
-msgstr "IfcZShapeProfileDef"
+msgid "IfcPropertyTableValue_DefiningValues_DEFINITION"
+msgstr "List of defining values, which determine the defined values. This list shall have unique values only. .change ifc2x4 IFC4 CHANGE The attribute has been made optional with upward compatibility for file based exchange."
 
-msgid "IfcZShapeProfileDef_DEFINITION"
-msgstr "[[IfcZShapeProfileDef]] defines a section profile that provides the defining parameters of a Z shape section to be used by the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile s centre of the bounding box. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Type of FilletRadius and EdgeRadius relaxed to allow for zero radius. Figure 1 illustrates parameters of the Z shape profile definition. Position The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of [[IfcSweptAreaSolid]].Position By using offsets of the position location, the parameterized profile can be positioned centric using x,y offsets 0. , or at any position relative to the profile. Figure 1 Z shape profile"
+#:IFC.xml:31401
+msgid "IfcPropertyTableValue_Expression"
+msgstr "表达式"
 
-#:IFC.xml:30778
-msgid "IfcZShapeProfileDef_Depth"
-msgstr "深度："
+msgid "IfcPropertyTableValue_Expression_DEFINITION"
+msgstr "从定义值中衍生定义值的表达式，表达式仅仅提供信息。 。无法从表达式中自动处理。"
 
-msgid "IfcZShapeProfileDef_Depth_DEFINITION"
-msgstr "网页长度，见h 上面的说明。"
+#:IFC.xml:31408
+msgid "IfcSimpleProperty"
+msgstr "IfcSimpleProperty"
 
-#:IFC.xml:30783
-msgid "IfcZShapeProfileDef_EdgeRadius"
-msgstr "EdgeRadius"
-
-msgid "IfcZShapeProfileDef_EdgeRadius_DEFINITION"
-msgstr "上图r2显示的边缘半径。"
-
-#:IFC.xml:30788
-msgid "IfcZShapeProfileDef_FilletRadius"
-msgstr "Fillet半径"
-
-msgid "IfcZShapeProfileDef_FilletRadius_DEFINITION"
-msgstr "根据上述说明 r1 提供的文件半径。"
-
-#:IFC.xml:30793
-msgid "IfcZShapeProfileDef_FlangeThickness"
-msgstr "FlangeThickness"
-
-msgid "IfcZShapeProfileDef_FlangeThickness_DEFINITION"
-msgstr "风扇的固定壁厚度，见上面的图表。"
-
-#:IFC.xml:30798
-msgid "IfcZShapeProfileDef_FlangeWidth"
-msgstr "FlangeWidth"
-
-msgid "IfcZShapeProfileDef_FlangeWidth_DEFINITION"
-msgstr "Flange长度，见上文b。"
-
-#:IFC.xml:30803
-msgid "IfcZShapeProfileDef_WebThickness"
-msgstr "WebThickness"
-
-msgid "IfcZShapeProfileDef_WebThickness_DEFINITION"
-msgstr "Web 的恒定壁厚度，见上面的图表。"
-
-#:IFC.xml:30810
-msgid "Pset_ProfileArbitraryDoubleT"
-msgstr "Pset ProfileArbitraryDoubleT"
-
-msgid "Pset_ProfileArbitraryDoubleT_DEFINITION"
-msgstr "这是预定混凝土元素的双曲线剖面特征集合。 如果个人资料指定不符合信息要求，则与IfcArbitraryProfileDef一起使用。"
-
-#:IFC.xml:30811
-msgid "Pset_ProfileArbitraryDoubleT_FlangeBaseFillet"
-msgstr "FlangeBaseFillet"
-
-msgid "Pset_ProfileArbitraryDoubleT_FlangeBaseFillet_DEFINITION"
-msgstr "Flange base fillet of the profile."
-
-#:IFC.xml:30816
-msgid "Pset_ProfileArbitraryDoubleT_FlangeChamfer"
-msgstr "FlangeChamfer"
-
-msgid "Pset_ProfileArbitraryDoubleT_FlangeChamfer_DEFINITION"
-msgstr "Flange chamfer of the profile."
-
-#:IFC.xml:30821
-msgid "Pset_ProfileArbitraryDoubleT_FlangeDepth"
-msgstr "FlangeDepth"
-
-msgid "Pset_ProfileArbitraryDoubleT_FlangeDepth_DEFINITION"
-msgstr "Flange depth of the profile."
-
-#:IFC.xml:30826
-msgid "Pset_ProfileArbitraryDoubleT_FlangeDraft"
-msgstr "FlangeDraft"
-
-msgid "Pset_ProfileArbitraryDoubleT_FlangeDraft_DEFINITION"
-msgstr "Flange draft of the profile."
-
-#:IFC.xml:30831
-msgid "Pset_ProfileArbitraryDoubleT_FlangeTopFillet"
-msgstr "FlangeTopFillet"
-
-msgid "Pset_ProfileArbitraryDoubleT_FlangeTopFillet_DEFINITION"
-msgstr "Flange top fillet of the profile."
-
-#:IFC.xml:30836
-msgid "Pset_ProfileArbitraryDoubleT_LeftFlangeWidth"
-msgstr "LeftFlangeWidth"
-
-msgid "Pset_ProfileArbitraryDoubleT_LeftFlangeWidth_DEFINITION"
-msgstr "Left flange width of the profile."
-
-#:IFC.xml:30841
-msgid "Pset_ProfileArbitraryDoubleT_OverallDepth"
-msgstr "总体深度："
-
-msgid "Pset_ProfileArbitraryDoubleT_OverallDepth_DEFINITION"
-msgstr "Overall depth of the profile."
-
-#:IFC.xml:30846
-msgid "Pset_ProfileArbitraryDoubleT_OverallWidth"
-msgstr "总体宽度"
-
-msgid "Pset_ProfileArbitraryDoubleT_OverallWidth_DEFINITION"
-msgstr "Overall width of the profile."
-
-#:IFC.xml:30851
-msgid "Pset_ProfileArbitraryDoubleT_RightFlangeWidth"
-msgstr "RightFlangeWidth"
-
-msgid "Pset_ProfileArbitraryDoubleT_RightFlangeWidth_DEFINITION"
-msgstr "Right flange width of the profile."
-
-#:IFC.xml:30856
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseChamfer"
-msgstr "StemBaseChamfer"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseChamfer_DEFINITION"
-msgstr "Stem base chamfer of the profile."
-
-#:IFC.xml:30861
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseFillet"
-msgstr "StemBaseFillet"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseFillet_DEFINITION"
-msgstr "Stem base fillet of the profile."
-
-#:IFC.xml:30866
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseWidth"
-msgstr "StemBaseWidth"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemBaseWidth_DEFINITION"
-msgstr "Stem base width of the profile."
-
-#:IFC.xml:30871
-msgid "Pset_ProfileArbitraryDoubleT_StemTopChamfer"
-msgstr "StemTopChamfer"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemTopChamfer_DEFINITION"
-msgstr "Stem top chamfer of the profile."
-
-#:IFC.xml:30876
-msgid "Pset_ProfileArbitraryDoubleT_StemTopFillet"
-msgstr "StemTopFillet"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemTopFillet_DEFINITION"
-msgstr "Stem top fillet of the profile."
-
-#:IFC.xml:30881
-msgid "Pset_ProfileArbitraryDoubleT_StemTopWidth"
-msgstr "StemTopWidth"
-
-msgid "Pset_ProfileArbitraryDoubleT_StemTopWidth_DEFINITION"
-msgstr "Stem top width of the profile."
-
-#:IFC.xml:30887
-msgid "Pset_ProfileArbitraryHollowCore"
-msgstr "Pset ProfileArbitraryHollowCore"
-
-msgid "Pset_ProfileArbitraryHollowCore_DEFINITION"
-msgstr "This is a collection of geometric properties of hollow core section profiles of precast concrete elements, to be used in conjunction with [[IfcArbitraryProfileDefWithVoids]] when profile designation alone does not fulfill the information requirements. In all cases, the cores are symmetrically distributed on either side of the plank center line, irrespective of whether the number of cores is odd or even. For planks with a center core with different geometry to that of the other cores, provide the property CenterCoreSpacing. When the number of cores is even, no Center Core properties shall be asserted. Key chamfers and draft chamfer are all 45 degree chamfers. The CoreTopRadius and CoreBaseRadius parameters can be derived and are therefore not listed in the property set. They are shown to define that the curves are arcs. The parameters for the center core are the same as above, but with the prefix Center ."
-
-#:IFC.xml:30888
-msgid "Pset_ProfileArbitraryHollowCore_BaseChamfer"
-msgstr "BaseChamfer"
-
-msgid "Pset_ProfileArbitraryHollowCore_BaseChamfer_DEFINITION"
-msgstr "Base chamfer of the profile."
-
-#:IFC.xml:30893
-msgid "Pset_ProfileArbitraryHollowCore_BottomCover"
-msgstr "BottomCover"
-
-msgid "Pset_ProfileArbitraryHollowCore_BottomCover_DEFINITION"
-msgstr "Bottom cover of the profile."
-
-#:IFC.xml:30898
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreBaseHeight"
-msgstr "CenterCoreBaseHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreBaseHeight_DEFINITION"
-msgstr "Center core base height of the profile."
-
-#:IFC.xml:30903
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreBaseWidth"
-msgstr "CenterCoreBaseWidth"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreBaseWidth_DEFINITION"
-msgstr "Center core base width of the profile."
-
-#:IFC.xml:30908
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreMiddleHeight"
-msgstr "CenterCoreMiddleHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreMiddleHeight_DEFINITION"
-msgstr "Center core middle height of the profile."
-
-#:IFC.xml:30913
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreSpacing"
-msgstr "CenterCoreSpacing"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreSpacing_DEFINITION"
-msgstr "Center core spacing of the profile."
-
-#:IFC.xml:30918
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreTopHeight"
-msgstr "CenterCoreTopHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreTopHeight_DEFINITION"
-msgstr "Center core top height of the profile."
-
-#:IFC.xml:30923
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreTopWidth"
-msgstr "CenterCoreTopWidth"
-
-msgid "Pset_ProfileArbitraryHollowCore_CenterCoreTopWidth_DEFINITION"
-msgstr "Center core top width of the profile."
-
-#:IFC.xml:30928
-msgid "Pset_ProfileArbitraryHollowCore_CoreBaseHeight"
-msgstr "CoreBaseHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreBaseHeight_DEFINITION"
-msgstr "Core base height of the profile."
-
-#:IFC.xml:30933
-msgid "Pset_ProfileArbitraryHollowCore_CoreBaseWidth"
-msgstr "CoreBaseWidth"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreBaseWidth_DEFINITION"
-msgstr "Core base width of the profile."
-
-#:IFC.xml:30938
-msgid "Pset_ProfileArbitraryHollowCore_CoreMiddleHeight"
-msgstr "CoreMiddleHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreMiddleHeight_DEFINITION"
-msgstr "Core middle height of the profile."
-
-#:IFC.xml:30943
-msgid "Pset_ProfileArbitraryHollowCore_CoreSpacing"
-msgstr "CoreSpacing"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreSpacing_DEFINITION"
-msgstr "Core spacing of the profile."
-
-#:IFC.xml:30948
-msgid "Pset_ProfileArbitraryHollowCore_CoreTopHeight"
-msgstr "CoreTopHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreTopHeight_DEFINITION"
-msgstr "Core top height of the profile."
-
-#:IFC.xml:30953
-msgid "Pset_ProfileArbitraryHollowCore_CoreTopWidth"
-msgstr "CoreTopWidth"
-
-msgid "Pset_ProfileArbitraryHollowCore_CoreTopWidth_DEFINITION"
-msgstr "Core top width of the profile."
-
-#:IFC.xml:30958
-msgid "Pset_ProfileArbitraryHollowCore_DraftBaseOffset"
-msgstr "DraftBaseOffset"
-
-msgid "Pset_ProfileArbitraryHollowCore_DraftBaseOffset_DEFINITION"
-msgstr "Draft base offset of the profile."
-
-#:IFC.xml:30963
-msgid "Pset_ProfileArbitraryHollowCore_DraftSideOffset"
-msgstr "DraftSideOffset"
-
-msgid "Pset_ProfileArbitraryHollowCore_DraftSideOffset_DEFINITION"
-msgstr "Draft side offset of the profile."
-
-#:IFC.xml:30968
-msgid "Pset_ProfileArbitraryHollowCore_EdgeDraft"
-msgstr "EdgeDraft"
-
-msgid "Pset_ProfileArbitraryHollowCore_EdgeDraft_DEFINITION"
-msgstr "Edge draft of the profile."
-
-#:IFC.xml:30973
-msgid "Pset_ProfileArbitraryHollowCore_KeyDepth"
-msgstr "KeyDepth"
-
-msgid "Pset_ProfileArbitraryHollowCore_KeyDepth_DEFINITION"
-msgstr "Key depth of the profile."
-
-#:IFC.xml:30978
-msgid "Pset_ProfileArbitraryHollowCore_KeyHeight"
-msgstr "KeyHeight"
-
-msgid "Pset_ProfileArbitraryHollowCore_KeyHeight_DEFINITION"
-msgstr "Key height of the profile."
-
-#:IFC.xml:30983
-msgid "Pset_ProfileArbitraryHollowCore_KeyOffset"
-msgstr "KeyOffset"
-
-msgid "Pset_ProfileArbitraryHollowCore_KeyOffset_DEFINITION"
-msgstr "Key offset of the profile."
-
-#:IFC.xml:30988
-msgid "Pset_ProfileArbitraryHollowCore_NumberOfCores"
-msgstr "数字OfCores"
-
-msgid "Pset_ProfileArbitraryHollowCore_NumberOfCores_DEFINITION"
-msgstr "有线客车中的核心数量。"
-
-#:IFC.xml:30993
-msgid "Pset_ProfileArbitraryHollowCore_OverallDepth"
-msgstr "总体深度："
-
-msgid "Pset_ProfileArbitraryHollowCore_OverallDepth_DEFINITION"
-msgstr "Overall depth of the profile."
-
-#:IFC.xml:30998
-msgid "Pset_ProfileArbitraryHollowCore_OverallWidth"
-msgstr "总体宽度"
-
-msgid "Pset_ProfileArbitraryHollowCore_OverallWidth_DEFINITION"
-msgstr "Overall width of the profile."
-
-#:IFC.xml:31004
-msgid "Pset_ProfileMechanical"
-msgstr "Pset 配置方案"
-
-msgid "Pset_ProfileMechanical_DEFINITION"
-msgstr "这是一个几乎适用于所有配置类别的机械属性集。这些属性大多用于结构分析。"
-
-#:IFC.xml:31005
-msgid "Pset_ProfileMechanical_CentreOfGravityInX"
-msgstr "CentreOfGravityInX"
-
-msgid "Pset_ProfileMechanical_CentreOfGravityInX_DEFINITION"
-msgstr "Location of the profile s centre of gravity geometric centroid , measured along xp."
-
-#:IFC.xml:31010
-msgid "Pset_ProfileMechanical_CentreOfGravityInY"
-msgstr "CentreOfGravityInY"
-
-msgid "Pset_ProfileMechanical_CentreOfGravityInY_DEFINITION"
-msgstr "Location of the profile s centre of gravity geometric centroid , measured along yp."
-
-#:IFC.xml:31015
-msgid "Pset_ProfileMechanical_CrossSectionArea"
-msgstr "跨部门区域"
-
-msgid "Pset_ProfileMechanical_CrossSectionArea_DEFINITION"
-msgstr "剖面区域。例如，用毫米2测量的。如果给出，横截面区域的值必须大于零。"
-
-#:IFC.xml:31020
-msgid "Pset_ProfileMechanical_MassPerLength"
-msgstr "MassPerLength"
-
-msgid "Pset_ProfileMechanical_MassPerLength_DEFINITION"
-msgstr "Mass per length, i.e. mass of a beam with a unit length of extrusion. For example measured in kg m."
-
-#:IFC.xml:31025
-msgid "Pset_ProfileMechanical_MaximumPlateThickness"
-msgstr "MaximumPlateThickness"
-
-msgid "Pset_ProfileMechanical_MaximumPlateThickness_DEFINITION"
-msgstr "This value may be needed for stress analysis and to handle buckling problems. It can also be derived from the given profile geometry or classification and therefore it is only an optional feature allowing for an explicit description. For example measured in mm."
-
-#:IFC.xml:31030
-msgid "Pset_ProfileMechanical_MaximumSectionModulusY"
-msgstr "MaximumSectionModulusY"
-
-msgid "Pset_ProfileMechanical_MaximumSectionModulusY_DEFINITION"
-msgstr "Bending resistance about the ys axis at the point with maximum zs ordinate. For example measured in mm³."
-
-#:IFC.xml:31035
-msgid "Pset_ProfileMechanical_MaximumSectionModulusZ"
-msgstr "MaximumSectionModulusZ"
-
-msgid "Pset_ProfileMechanical_MaximumSectionModulusZ_DEFINITION"
-msgstr "Bending resistance about the zs axis at the point with maximum ys ordinate. For example measured in mm³."
-
-#:IFC.xml:31040
-msgid "Pset_ProfileMechanical_MinimumPlateThickness"
-msgstr "MinimumPlateThickness"
-
-msgid "Pset_ProfileMechanical_MinimumPlateThickness_DEFINITION"
-msgstr "This value may be needed for stress analysis and to handle buckling problems. It can also be derived from the given profile geometry or classification and therefore it is only an optional feature allowing for an explicit description. For example measured in mm."
-
-#:IFC.xml:31045
-msgid "Pset_ProfileMechanical_MinimumSectionModulusY"
-msgstr "MinimumSectionModulusY"
-
-msgid "Pset_ProfileMechanical_MinimumSectionModulusY_DEFINITION"
-msgstr "Bending resistance about the ys axis at the point with minimum zs ordinate. For example measured in mm³."
-
-#:IFC.xml:31050
-msgid "Pset_ProfileMechanical_MinimumSectionModulusZ"
-msgstr "MinimumSectionModulusZ"
-
-msgid "Pset_ProfileMechanical_MinimumSectionModulusZ_DEFINITION"
-msgstr "Bending resistance about the zs axis at the point with minimum ys ordinate. For example measured in mm³."
-
-#:IFC.xml:31055
-msgid "Pset_ProfileMechanical_MomentOfInertiaY"
-msgstr "MomentOfInertiaY"
-
-msgid "Pset_ProfileMechanical_MomentOfInertiaY_DEFINITION"
-msgstr "Moment of inertia about ys second moment of area, about ys . For example measured in mm4."
-
-#:IFC.xml:31060
-msgid "Pset_ProfileMechanical_MomentOfInertiaYZ"
-msgstr "MomentOfInertiaYZ"
-
-msgid "Pset_ProfileMechanical_MomentOfInertiaYZ_DEFINITION"
-msgstr "Moment of inertia about ys and zs product moment of area . For example measured in mm4."
-
-#:IFC.xml:31065
-msgid "Pset_ProfileMechanical_MomentOfInertiaZ"
-msgstr "MomentOfInertiaZ"
-
-msgid "Pset_ProfileMechanical_MomentOfInertiaZ_DEFINITION"
-msgstr "Moment of inertia about zs second moment of area, about zs . For example measured in mm4"
-
-#:IFC.xml:31070
-msgid "Pset_ProfileMechanical_Perimeter"
-msgstr "Perimeter"
-
-msgid "Pset_ProfileMechanical_Perimeter_DEFINITION"
-msgstr "Perimeter of the profile for calculating the surface area. For example measured in mm."
-
-#:IFC.xml:31075
-msgid "Pset_ProfileMechanical_PlasticShapeFactorY"
-msgstr "PlasticShapeFactorY"
-
-msgid "Pset_ProfileMechanical_PlasticShapeFactorY_DEFINITION"
-msgstr "Ratio of plastic versus elastic bending moment capacity about the section analysis axis ys. A dimensionless value."
-
-#:IFC.xml:31080
-msgid "Pset_ProfileMechanical_PlasticShapeFactorZ"
-msgstr "PlasticShapeFactorZ"
-
-msgid "Pset_ProfileMechanical_PlasticShapeFactorZ_DEFINITION"
-msgstr "Ratio of plastic versus elastic bending moment capacity about the section analysis axis zs. A dimensionless value."
-
-#:IFC.xml:31085
-msgid "Pset_ProfileMechanical_ShearAreaY"
-msgstr "ShearAreaY"
-
-msgid "Pset_ProfileMechanical_ShearAreaY_DEFINITION"
-msgstr "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis ys. For example measured in mm². If given, the shear area ys shall be non negative."
-
-#:IFC.xml:31090
-msgid "Pset_ProfileMechanical_ShearAreaZ"
-msgstr "ShearAreaZ"
-
-msgid "Pset_ProfileMechanical_ShearAreaZ_DEFINITION"
-msgstr "Area of the profile for calculating the shear stress due to shear force parallel to the section analysis axis zs. For example measured in mm². If given, the shear area zs shall be non negative."
-
-#:IFC.xml:31095
-msgid "Pset_ProfileMechanical_ShearCentreY"
-msgstr "ShearCentreY"
-
-msgid "Pset_ProfileMechanical_ShearCentreY_DEFINITION"
-msgstr "Location of the profile s shear centre, measured along ys."
-
-#:IFC.xml:31100
-msgid "Pset_ProfileMechanical_ShearCentreZ"
-msgstr "ShearCentreZ"
-
-msgid "Pset_ProfileMechanical_ShearCentreZ_DEFINITION"
-msgstr "Location of the profile s shear centre, measured along zs."
-
-#:IFC.xml:31105
-msgid "Pset_ProfileMechanical_ShearDeformationAreaY"
-msgstr "ShearDeformationAreaY"
-
-msgid "Pset_ProfileMechanical_ShearDeformationAreaY_DEFINITION"
-msgstr "Area of the profile for calculating the shear deformation due to a shear force parallel to ys. For example measured in mm². If given, the shear deformation area ys shall be non negative."
-
-#:IFC.xml:31110
-msgid "Pset_ProfileMechanical_ShearDeformationAreaZ"
-msgstr "ShearDeformationAreaZ"
-
-msgid "Pset_ProfileMechanical_ShearDeformationAreaZ_DEFINITION"
-msgstr "Area of the profile for calculating the shear deformation due to a shear force parallel to zs. For example measured in mm². If given, the shear deformation area zs shall be non negative."
-
-#:IFC.xml:31115
-msgid "Pset_ProfileMechanical_TorsionalConstantX"
-msgstr "TorsionalConstantX"
-
-msgid "Pset_ProfileMechanical_TorsionalConstantX_DEFINITION"
-msgstr "Torsional constant about xs. For example measured in mm4."
-
-#:IFC.xml:31120
-msgid "Pset_ProfileMechanical_TorsionalSectionModulus"
-msgstr "TorsionalSectionModulus"
-
-msgid "Pset_ProfileMechanical_TorsionalSectionModulus_DEFINITION"
-msgstr "Torsional resistance about xs . For example measured in mm³."
-
-#:IFC.xml:31125
-msgid "Pset_ProfileMechanical_WarpingConstant"
-msgstr "WarpingConstant"
-
-msgid "Pset_ProfileMechanical_WarpingConstant_DEFINITION"
-msgstr "Warping constant of the profile for torsional action. For example measured in mm6."
+msgid "IfcSimpleProperty_DEFINITION"
+msgstr "[[IfcSimpleProperty]] is a generalization of a single property object. The various subtypes of [[IfcSimpleProperty]] establish different ways in which a property value can be set. HISTORY New entity in IFC1.0, definition changed in IFC2x."
 
