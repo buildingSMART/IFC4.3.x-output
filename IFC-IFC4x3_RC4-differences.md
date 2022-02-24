@@ -1,6 +1,6 @@
 # Express schema differences
 
-78 items
+79 items
 
 
 ### Missing data
@@ -54,7 +54,7 @@
 
 ### Entity definitions
 
-32 items
+33 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -73,6 +73,7 @@
 | IfcOpenCrossProfileDef attributes            | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags']                                           | ['HorizontalWidths', 'Widths', 'Slopes', 'Tags', 'OffsetPoint']                                                 |
 | IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                                            |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                                       |
+| IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                      | ['PredefinedType']                                                                                              |
 | IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                             | ['CrossSectionPositions']                                                                                       |
 | IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']               | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
 | IfcSectionedSurface.CrossSectionPositions    | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression                          | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |

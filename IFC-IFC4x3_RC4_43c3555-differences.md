@@ -1,6 +1,6 @@
 # Express schema differences
 
-73 items
+74 items
 
 
 ### Missing data
@@ -53,7 +53,7 @@
 
 ### Entity definitions
 
-27 items
+28 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                     | IFC.exp                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -71,6 +71,7 @@
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                           | ['PlacesObject', 'ReferencedByPlacements']                                                      |
 | IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                            |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                       |
+| IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                      | ['PredefinedType']                                                                              |
 | IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                              |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                               |
 | IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                             |
