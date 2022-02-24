@@ -1,0 +1,503 @@
+<?xml version="1.0" ?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
+  <Name>Pset_MaterialWoodBasedBeam</Name>
+  <Definition>This is a collection of mechanical properties applicable to wood-based materials for beam-like products, especially laminated materials like glulam and LVL.
+Anisotropy of such materials is taken into account by different properties according to grain direction and load types.
+
+All values shall be given for a standardized service condition, a standardized load duration and a standardized reference size of the member according to local design codes.
+
+NOTE: In cases where mechanical material properties are graduated for different given reference sizes, separate instances of IfcExtendedMaterialProperties and IfcMaterial have to be used for each required graduation. Mechanically differing versions of a material are treated as different materials.
+
+References to the orientation of grain or lay-up correspond to material orientation given by geometrical or topological representation of element objects or types, especially IfcMemberType and IfcStructuralMember.</Definition>
+  <Applicability/>
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef>
+      <Name>ApplicableStructuralDesignMethod</Name>
+      <Definition>Determines whether mechanical material properties are applicable to 'ASD' = allowable stress design (working stress design), 'LSD' = limit state design, or 'LRFD' = load and resistance factor design.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>InPlane</Name>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalBeam">
+          <PropertyDef>
+            <Name>YoungModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerpMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TorsionalStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>InstabilityFactors</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </PropertyType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>InPlaneNegative</Name>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalBeam">
+          <PropertyDef>
+            <Name>YoungModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerpMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TorsionalStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>InstabilityFactors</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </PropertyType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>OutOfPlane</Name>
+      <Definition/>
+      <PropertyType>
+        <TypeComplexProperty name="CP_MaterialMechanicalBeam">
+          <PropertyDef>
+            <Name>YoungModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>YoungModulusPerpMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulus</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearModulusMin</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcModulusOfElasticityMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>BendingStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TensileStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>CompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>RaisedCompStrengthPerp</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ShearStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>TorsionalStrength</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPressureMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>ReferenceDepth</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertySingleValue>
+                <DataType type="IfcPositiveLengthMeasure"/>
+              </TypePropertySingleValue>
+            </PropertyType>
+          </PropertyDef>
+          <PropertyDef>
+            <Name>InstabilityFactors</Name>
+            <Definition/>
+            <PropertyType>
+              <TypePropertyTableValue>
+                <Expression/>
+                <DefiningValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefiningValue>
+                <DefinedValue>
+                  <DataType type="IfcPositiveRatioMeasure"/>
+                </DefinedValue>
+              </TypePropertyTableValue>
+            </PropertyType>
+          </PropertyDef>
+        </TypeComplexProperty>
+      </PropertyType>
+    </PropertyDef>
+  </PropertyDefs>
+</PropertySetDef>

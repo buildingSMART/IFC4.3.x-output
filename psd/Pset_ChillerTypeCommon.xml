@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_ChillerTypeCommon</Name>
   <Definition>Chiller type common attributes.</Definition>
   <Applicability/>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -36,8 +36,8 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
-      <Name>ChillerCapacity</Name>
-      <Definition>Nominal cooling capacity of chiller at standardized conditions as defined by the agency having jurisdiction.</Definition>
+      <Name>NominalCapacity</Name>
+      <Definition>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -46,7 +46,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalEfficiency</Name>
-      <Definition>Nominal object efficiency under nominal conditions.</Definition>
+      <Definition>The nominal efficiency of the boiler as defined by the manufacturer. For steam boilers, a function of inlet temperature versus steam pressure.  Note: as two variables are used, DefiningValues and DefinedValues are null, and values are stored in IfcTable in the following order: InletTemperature(IfcThermodynamicTemperatureMeasure) and OutletTemperature(IfcThermodynamicTemperatureMeasure) in DefiningValues, and NominalEfficiency(IfcNormalisedRatioMeasure) in DefinedValues. For example, DefininfValues(InletTemp, OutletTemp), DefinedValues(null, NominalEfficiency).  The IfcTable is related to IfcPropertyTableValue using IfcMetric and IfcPropertyConstraintRelationship.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>
@@ -91,8 +91,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>CapacityCurve</Name>
-      <Definition>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1*Tei+c1*Tei\^2+d1*Tci+e1*Tci\^2+f1*Tei*Tci.
-This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order:
+      <Definition>Chiller cooling capacity is a function of condensing temperature and evaporating temperature, data is in table form, Capacity = f (TempCon, TempEvp), capacity = a1+b1\*Tei+c1\*Tei\^2+d1\*Tci+e1\*Tci\^2+f1\*Tei\*Tci. 
+This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
 1.IfcPowerMeasure:Capacity
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature</Definition>
@@ -110,8 +110,8 @@ This table uses multiple input variables; to represent, both DefiningValues and 
     </PropertyDef>
     <PropertyDef>
       <Name>CoefficientOfPerformanceCurve</Name>
-      <Definition>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2*Tei+c2*Tei\^2+d2*Tci+e2*Tci\^2+f2*Tei*Tci.
-This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order:
+      <Definition>Chiller coefficient of performance (COP) is function of condensing temperature and evaporating temperature, data is in table form, COP= f (TempCon, TempEvp), COP = a2+b2\*Tei+c2\*Tei\^2+d2\*Tci+e2\*Tci\^2+f2\*Tei\*Tci. 
+This table uses multiple input variables; to represent, both DefiningValues and DefinedValues lists are null and IfcTable is attached using IfcPropertyConstraintRelationship and IfcMetric.  Columns are specified in the following order: 
 1.IfcPositiveRatioMeasure:CoefficientOfPerformance
 2.IfcThermodynamicTemperatureMeasure:CondensingTemperature
 3.IfcThermodynamicTemperatureMeasure:EvaporatingTemperature</Definition>

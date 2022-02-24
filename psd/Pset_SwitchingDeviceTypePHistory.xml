@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_SwitchingDeviceTypePHistory</Name>
   <Definition>Indicates switch positions or levels over time, such as for energy management or surveillance.</Definition>
   <Applicability/>
@@ -10,8 +10,13 @@
   <ApplicableTypeValue>IfcSwitchingDevice</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>SetPointHistory</Name>
-      <Definition>Indicates the switch position over time according to Pset_SwitchingDeviceTypeCommon.SetPoint.</Definition>
+      <Name>SetPoint</Name>
+      <Definition>Indicates the setpoint and label.  For toggle switches, there are two positions, 0 for off and 1 for on.  For dimmer switches, the values may indicate the fully-off and full-on positions, where missing integer values in between are interpolated.   For selector switches, the range indicates the available positions.  
+An IfcTable may be attached (using IfcMetric and IfcPropertyConstraintRelationship) containing columns of the specified header names and types:
+'Position' (IfcInteger): The discrete setpoint level.
+'Sink' (IfcLabel): The Name of the switched input port (IfcDistributionPort with FlowDirection=SINK).
+'Source' (IfcLabel): The Name of the switched output port (IfcDistributionPort with FlowDirection=SOURCE).
+'Ratio' (IfcNormalizedRatioMeasure): The ratio of power at the setpoint where 0.0 is off and 1.0 is fully on.</Definition>
       <PropertyType>
         <TypePropertyReferenceValue reftype="IfcTimeSeries"/>
       </PropertyType>

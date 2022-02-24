@@ -1,22 +1,31 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_AirSideSystemInformation</Name>
   <Definition>Attributes that apply to an air side HVAC system. HISTORY: New property set in IFC Release 1.0.</Definition>
   <Applicability/>
   <ApplicableClasses>
-    <ClassName>IfcSpatialElement</ClassName>
+    <ClassName>IfcSpace</ClassName>
     <ClassName>IfcSpatialZone</ClassName>
     <ClassName>IfcZone</ClassName>
   </ApplicableClasses>
-  <ApplicableTypeValue>IfcSpatialElement,IfcSpatialZone,IfcZone</ApplicableTypeValue>
+  <ApplicableTypeValue>IfcSpace,IfcSpatialZone,IfcZone</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>Description</Name>
-      <Definition>The Description of the object.</Definition>
+      <Name>Name</Name>
+      <Definition>The name of the air side system.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcText"/>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Description</Name>
+      <Definition>The description of the air side system.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
@@ -106,6 +115,15 @@
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
+      <Name>LightingDiversity</Name>
+      <Definition>Lighting diversity.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
       <Name>InfiltrationDiversitySummer</Name>
       <Definition>Diversity factor for Summer infiltration.</Definition>
       <PropertyType>
@@ -126,6 +144,15 @@
     <PropertyDef>
       <Name>ApplianceDiversity</Name>
       <Definition>Diversity of appliance load.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>LoadSafetyFactor</Name>
+      <Definition>Load safety factor.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveRatioMeasure"/>

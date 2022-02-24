@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_WasteTerminalTypeGullyTrap</Name>
   <Definition>Pipe fitting or assembly of fittings to receive surface water or waste water, fitted with a grating or sealed cover and discharging through a trap (BS6100 330 3504 modified)</Definition>
   <Applicability/>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>NominalBodyLength</Name>
-      <Definition>Nominal or quoted length measured along the x-axis of the local coordinate system of the object.</Definition>
+      <Definition>Nominal or quoted length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the chamber of the gully trap.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -20,7 +20,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalBodyWidth</Name>
-      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object.</Definition>
+      <Definition>Nominal or quoted length, measured along the y-axis of the local coordinate system of the object, of the body of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -29,7 +29,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NominalBodyDepth</Name>
-      <Definition>Nominal or quoted length measured along the z-axis of the local coordinate system of the object.</Definition>
+      <Definition>Nominal or quoted =length, measured along the z-axis of the local coordinate system of the object, of the body of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -62,7 +62,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>TrapType</Name>
-      <Definition>Identifies the predefined types of trap from which the type required may be set.</Definition>
+      <Definition>Identifies the predefined types of waste trap used in combination with the floor trap from which the type required may be set.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_TrapType">
@@ -79,7 +79,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>OutletConnectionSize</Name>
-      <Definition>Size of the outlet connection from the object.</Definition>
+      <Definition>Size of the outlet connection from the waste disposal unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -88,11 +88,19 @@
     </PropertyDef>
     <PropertyDef>
       <Name>BackInletPatternType</Name>
-      <Definition>Identifies the pattern of inlet connections to a gully trap.A gulley trap may have 0,1,2,3 or 4 inlet connections and the pattern of their arrangement may vary. The enumeration makes the convention that an outlet is either vertical or is placed at the bottom (south side) of the gully trap (when viewed in plan). Position 1 is to the left (west), position 2 is to the top (north), position 3 is to the right (east) and position 4 is to the bottom (south).2
-           |!                       |
+      <Definition>Identifies the pattern of inlet connections to a gully trap.
+
+A gulley trap may have 0,1,2,3 or 4 inlet connections and the pattern of their arrangement may vary. The enumeration makes the convention that an outlet is either vertical or is placed at the bottom (south side) of the gully trap (when viewed in plan). Position 1 is to the left (west), position 2 is to the top (north), position 3 is to the right (east) and position 4 is to the bottom (south).
+
+               2
+               |
+   ----------------
+   !                       |
 1-|                       |-3
-   !                       ||
-          4</Definition>
+   !                       |
+   ----------------
+               |
+              4</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_BackInletPatternType">
@@ -118,7 +126,8 @@
     </PropertyDef>
     <PropertyDef>
       <Name>InletConnectionSize</Name>
-      <Definition>Size of the inlet connection.
+      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
+
 Note that all inlet connections are assumed to be the same size.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -128,7 +137,7 @@ Note that all inlet connections are assumed to be the same size.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>CoverLength</Name>
-      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the object.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the oil interceptor.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>
@@ -137,7 +146,7 @@ Note that all inlet connections are assumed to be the same size.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>CoverWidth</Name>
-      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the object.</Definition>
+      <Definition>The length measured along the x-axis in the local coordinate system of the cover of the oil interceptor.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPositiveLengthMeasure"/>

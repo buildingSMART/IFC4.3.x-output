@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_WindowCommon</Name>
   <Definition>Properties common to the definition of all occurrences of Window.</Definition>
   <Applicability/>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -47,7 +47,7 @@ It is provided according to the national building code. It indicates the sound t
     </PropertyDef>
     <PropertyDef>
       <Name>FireRating</Name>
-      <Definition>Fire rating for this object. It is given according to the national fire safety classification.</Definition>
+      <Definition>Fire rating for this object. It is given according to the national fire safety code or regulation.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -84,7 +84,9 @@ It is giving according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of the element. It is the total thermal transmittance coefficient through the building element proxy within the direction of the thermal flow (including all materials).
+
+Note: new property in IFC4</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure"/>
@@ -93,7 +95,7 @@ It is giving according to the national building code.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>GlazingAreaFraction</Name>
-      <Definition>Fraction of the glazing area relative to the total area of the filling element.
+      <Definition>Fraction of the glazing area relative to the total area of the filling element. 
 It shall be used, if the glazing area is not given separately for all panels within the filling element.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
@@ -139,7 +141,8 @@ It shall be used, if the glazing area is not given separately for all panels wit
     </PropertyDef>
     <PropertyDef>
       <Name>FireExit</Name>
-      <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).</Definition>
+      <Definition>Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).
+Here whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>

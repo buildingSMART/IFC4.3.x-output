@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_EvaporativeCoolerTypeCommon</Name>
   <Definition>Evaporative cooler type common attributes.
 Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definition>
@@ -12,7 +12,7 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -39,8 +39,9 @@ Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.
     <PropertyDef>
       <Name>FlowArrangement</Name>
       <Definition>CounterFlow: Air and water flow enter in different directions.
+
 CrossFlow: Air and water flow are perpendicular.
-ParallelFlow: air and water flow enter in same directions.</Definition>
+ParallelFlow: Air and water flow enter in same directions.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_EvaporativeCoolerFlowArrangement">
@@ -65,7 +66,7 @@ ParallelFlow: air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>OperationTemperatureRange</Name>
-      <Definition>Allowable operation ambient air temperature range.</Definition>
+      <Definition>Allowable operational range of the ambient air temperature.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>
@@ -74,7 +75,7 @@ ParallelFlow: air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>WaterRequirement</Name>
-      <Definition>Make-up water requirement.</Definition>
+      <Definition>Make-up water requirements.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -98,7 +99,7 @@ ParallelFlow: air and water flow enter in same directions.</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>AirPressureDropCurve</Name>
-      <Definition>Air pressure drop as a function of air flow rate.</Definition>
+      <Definition>Air pressure drop curve, pressure drop – flow rate curve, AirPressureDrop = f (AirflowRate).</Definition>
       <PropertyType>
         <TypePropertyTableValue>
           <Expression/>

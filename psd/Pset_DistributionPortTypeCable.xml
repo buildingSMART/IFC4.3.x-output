@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_DistributionPortTypeCable</Name>
   <Definition>Cable port occurrence attributes attached to an instance of IfcDistributionPort.</Definition>
   <Applicability/>
@@ -10,10 +10,24 @@
   <ApplicableTypeValue>IfcDistributionPort/CABLE</ApplicableTypeValue>
   <PropertyDefs>
     <PropertyDef>
-      <Name>ElectricalConnectionType</Name>
-      <Definition>The physical port connection:ACPLUG: AC plug
-DCPLUG: DC plug
-CRIMP: bare wire</Definition>
+      <Name>ConnectionType</Name>
+      <Definition>The end-style treatment of the duct port:
+
+BEADEDSLEEVE: Beaded Sleeve. 
+COMPRESSION: Compression. 
+CRIMP: Crimp. 
+DRAWBAND: Drawband. 
+DRIVESLIP: Drive slip. 
+FLANGED: Flanged. 
+OUTSIDESLEEVE: Outside Sleeve. 
+SLIPON: Slipon. 
+SOLDERED: Soldered. 
+SSLIP: S-Slip. 
+STANDINGSEAM: Standing seam. 
+SWEDGE: Swedge. 
+WELDED: Welded. 
+OTHER: Another type of end-style has been applied.
+NONE: No end-style has been applied.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_DistributionPortElectricalType">
@@ -66,7 +80,7 @@ CRIMP: bare wire</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>ConductorFunction</Name>
-      <Definition>Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
+      <Definition>Function of a line conductor to which a device  is intended to be connected where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ConductorFunctionEnum">
@@ -112,7 +126,7 @@ CRIMP: bare wire</Definition>
     </PropertyDef>
     <PropertyDef>
       <Name>Power</Name>
-      <Definition>The actual power and operable range.</Definition>
+      <Definition>The actual power consumption of the pump.</Definition>
       <PropertyType>
         <TypePropertyBoundedValue>
           <DataType type="IfcPowerMeasure"/>
@@ -128,24 +142,6 @@ CRIMP: bare wire</Definition>
             <DataType type="IfcIdentifier"/>
           </ListValue>
         </TypePropertyListValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>HasConnector</Name>
-      <Definition>Indicate whether the wire pair end point is terminated with a connector or not.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcBoolean"/>
-        </TypePropertySingleValue>
-      </PropertyType>
-    </PropertyDef>
-    <PropertyDef>
-      <Name>IsWelded</Name>
-      <Definition>Indicates whether the wire pair end point is joined to another wire pair end point by means of a welded junction.</Definition>
-      <PropertyType>
-        <TypePropertySingleValue>
-          <DataType type="IfcBoolean"/>
-        </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

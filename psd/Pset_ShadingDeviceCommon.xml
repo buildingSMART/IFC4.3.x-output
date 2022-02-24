@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_46fbfe1"/>
+  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
   <Name>Pset_ShadingDeviceCommon</Name>
   <Definition>Shading device properties associated with an element that represents a shading device</Definition>
   <Applicability/>
@@ -11,7 +11,7 @@
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -63,28 +63,28 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SolarTransmittance</Name>
-      <Definition>The ratio of incident solar radiation that directly passes through a system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
+      <Definition>(Tsol): The ratio of incident solar radiation that directly passes through a shading system (also named τe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>SolarReflectance</Name>
-      <Definition>(Rsol): The ratio of incident solar radiation that is reflected by a glazing system (also named ρe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
+      <Definition>(Rsol): The ratio of incident solar radiation that is reflected by a shading system (also named ρe). Note the following equation Asol + Rsol + Tsol = 1</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>VisibleLightTransmittance</Name>
-      <Definition>Fraction of the visible light that passes the object at normal incidence. It is a value without unit.</Definition>
+      <Definition>Fraction of the visible light that passes the shading system  at normal incidence. It is a value without unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
@@ -93,13 +93,15 @@
       <Definition>Fraction of the visible light that is reflected by the glazing at normal incidence. It is a value without unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcNormalisedRatioMeasure"/>
+          <DataType type="IfcPositiveRatioMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>ThermalTransmittance</Name>
-      <Definition>Thermal transmittance coefficient (U-Value) of an element, within the direction of the thermal flow (including all materials).</Definition>
+      <Definition>Thermal transmittance coefficient (U-Value) of the element. It is the total thermal transmittance coefficient through the building element proxy within the direction of the thermal flow (including all materials).
+
+Note: new property in IFC4</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermalTransmittanceMeasure"/>
