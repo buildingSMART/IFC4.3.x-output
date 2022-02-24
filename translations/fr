@@ -9,86 +9,181 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /master/IfcControlExtension.pot\n"
-"X-Crowdin-File-ID: 32\n"
+"X-Crowdin-File: /master/IfcCostResource.pot\n"
+"X-Crowdin-File-ID: 34\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: fr_FR\n"
 "PO-Revision-Date: 2022-02-24 03:53\n"
 
-#:IFC.xml:3205
-msgid "IfcPerformanceHistory"
-msgstr "Historique des performances"
+#:IFC.xml:3257
+msgid "IfcAppliedValue"
+msgstr "Si la valeur est appliquée"
 
-msgid "IfcPerformanceHistory_DEFINITION"
-msgstr "[[IfcPerformanceHistory]] est utilisé pour documenter la performance réelle d'une instance d'occurrence au fil du temps. Il comprend des données mesurées par machine à partir des systèmes d'automatisation de construction et des données spécifiées par l'homme telles que l'utilisation des tâches et des ressources. Les données peuvent représenter des conditions, des prédictions ou des simulations réelles. Les données en temps réel suivies par l'historique des performances prennent la forme de jeux de propriétés où toutes les propriétés sont basées sur des séries temporelles. Contrairement aux données basées sur la conception lors des occurrences et des types, les données basées sur les performances sont sensibles au temps et peuvent être modifiées en temps réel par un périphérique de mesure. Les données peuvent être saisies à des intervalles irréguliers, comme lorsque les valeurs changent au-delà des seuils établis, ou à intervalles réguliers de la durée spécifiée. La définition d'utilisation de la déclaration [[IfcPerformanceHistory]] peut être déclarée dans un projet en utilisant [[IfcRelDeclares]] où le Contexte relatif fait référence à la [[IfcProject]] et les définitions connexes incluent la [[IfcPerformanceHistory]] . Les unités utilisées par défaut pour les jeux de propriétés sont indiquées par le projet déclarant. Seuls les objets de haut niveau sont déclarés imbriqués dans l'historique des performances via [[IfcRelNests]] ne participent pas à une telle relation. L'HISTOIRE Nouvelle entité dans IFC2x2."
+msgid "IfcAppliedValue_DEFINITION"
+msgstr "Cette entité capture une valeur basée sur une formule, avec des qualifications supplémentaires incluant la base de l'unité, la plage de dates valide, et la catégorisation. L'étendue de [[IfcAppliedValue]] est déterminée par l'attribut AppliedValue qui peut être défini soit comme un [[IfcMeasureWithUnit]] soit comme un [[IfcMonetaryMeasure]] ou comme un [[IfcRatioMeasure]] via le type [[IfcAppliedValueSelect]]. Optionnellement, un [[IfcAppliedValue]] peut avoir une date applicable. Ceci est destiné à fixer la date à laquelle la valeur est devenue pertinente pour l'utilisation. Il peut s'agir de la date à laquelle la valeur a été définie dans le modèle ou d'une date antérieure ou future lorsque la valeur devient opérable. De même, un [[IfcAppliedValue]] peut avoir une date limite fixe. Ceci est destiné à fixer la date à laquelle la valeur cesse d'être pertinente. Une instance de [[IfcAppliedValue]] peut avoir une base unitaire affirmée. Ceci est défini comme un [[IfcMeasureWithUnit]] qui détermine l'étendue de la valeur de l'unité aux fins de l'application. Il est supposé que lorsque cet attribut est asserté, alors la valeur donnée à [[IfcAppliedValue]] est celle de la quantité unitaire. Cela n'est pas appliqué dans le schéma et doit donc être contrôlé au sein d'une application. Les valeurs appliquées peuvent être référencées à partir d'un document comme un catalogue de prix . La relation entre une ou plusieurs occurrences de [[IfcAppliedValue]] ou ses sous-types est obtenue grâce à l'utilisation de la [[IfcExternalReferenceRelationship]] dans laquelle le document fournit le [[IfcExternalReferenceRelationship]]. elatingExtReference et les occurrences de valeur sont les [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORIE Nouvelle entité dans IFC2x2. hange ifc2x4 IFC4 CHANGE Entity rendue non abstraite pour supporter les expressions générales de formules de contraintes, le type de données des attributs basés sur la date a été changé en [[IfcDate]] , ValueType and Condition promues from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
 
-#:IFC.xml:3206
-msgid "IfcPerformanceHistory_LifeCyclePhase"
-msgstr "Phase de cycle de vie"
+#:IFC.xml:3302
+msgid "IfcAppliedValue_UnitBasis"
+msgstr "Bases Unités"
 
-msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
-msgstr "Décrit la phase de cycle de vie du bâtiment applicable. Les valeurs typiques doivent être DESIGNDEVELOPMENT, SCHEMATICDEVELOPMENT, CONSTRUCTIONDOCUMENT, CONSTRUCTION, ASBUILT, COMMISSIONING, OPERATION, etc."
+msgid "IfcAppliedValue_UnitBasis_DEFINITION"
+msgstr "Le nombre et l'unité de mesure sur lesquelles le coût unitaire est basé. Remarque ainsi que les unités de mesure normalement attendues telles que la longueur, la superficie, le volume, etc. les coûts peuvent être basés sur des unités de mesure qui doivent être définies (par exemple, sac, tambour, palette, objet, etc.). Les coûts unitaires peuvent être fondés sur des quantités supérieures ou inférieures à la valeur unitaire de la mesure de base. Par exemple, le bois peut avoir un taux de coût unitaire par X mètres où X 1 est similaire pour le câble, la tuyauterie et beaucoup d'autres objets. Le nombre de base peut être soit un entier soit une valeur réelle. Remarque Cet attribut doit être affirmé pour toutes les circonstances où le coût à appliquer est par quantité unitaire. Elle peut être affirmée même pour les circonstances où le prix d'un article est utilisé, auquel cas la base du coût unitaire doit être par article ou par définition équivalente ."
 
-#:IFC.xml:3211
-msgid "IfcPerformanceHistory_PredefinedType"
-msgstr "TypePredefini"
+#:IFC.xml:3314
+msgid "IfcAppliedValue_Components"
+msgstr "Composants"
 
-msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
-msgstr "Type générique prédéfini pour un historique de performance qui est spécifié dans une énumération. hange ifc2x4 IFC4 CHANGE L'attribut a été ajouté à la fin de la définition de l'entité."
+msgid "IfcAppliedValue_Components_DEFINITION"
+msgstr "Valeurs optionnelles du composant à partir duquel la valeur AppliedValue est calculée."
 
-#:IFC.xml:3230
-msgid "IfcPerformanceHistoryTypeEnum"
-msgstr "format@@0 IfcPerformance HistoryTypeEnum"
+#:IFC.xml:3326
+msgid "IfcAppliedValue_HasExternalReference"
+msgstr "HasExternalReference"
 
-msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
-msgstr "Cette énumération est utilisée pour identifier le but principal de l'historique des performances. Le [[IfcPerformanceHistoryTypeEnum]] contient l'utilisateur USERDEFINED suivant défini. NOTDEFINED Undefined. HISTORY New enumeration in IFC4 Items USERDEFINED NOTDEFINED"
+msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
+msgstr "Référence à une référence externe, par exemple la bibliothèque, la classification ou les informations de document, qui est associée à la [[IfcAppliedValue]]. .change ifc2x4 IFC4 CHANGE Nouvel attribut inversé."
 
-#:IFC.xml:3234
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
-msgstr "NON DÉFINI"
+#:IFC.xml:3258
+msgid "IfcAppliedValue_ApplicableDate"
+msgstr "Date applicable"
 
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "NON DÉFINI"
+msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
+msgstr "La date à partir de laquelle une valeur appliquée est applicable. .change ifc2x4 IFC4 CHANGE Type a changé de IfcDateTimeSelect."
 
-#:IFC.xml:3235
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
-msgstr "UTILISATEUR DÉFINI"
+#:IFC.xml:3263
+msgid "IfcAppliedValue_AppliedValue"
+msgstr "Valeur appliquée"
 
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "UTILISATEUR DÉFINI"
+msgid "IfcAppliedValue_AppliedValue_DEFINITION"
+msgstr "L'étendue ou la quantité d'une valeur appliquée."
 
-#:IFC.xml:3236
-msgid "IfcRelAssociatesApproval"
-msgstr "IfcRelAssociatesApproval"
+#:IFC.xml:3268
+msgid "IfcAppliedValue_ArithmeticOperator"
+msgstr "Opérateur Arithmétique"
 
-msgid "IfcRelAssociatesApproval_DEFINITION"
-msgstr "L'entité [[IfcRelAssociatesApproval]] est utilisée pour appliquer les informations d'approbation définies par [[IfcApproval]] , dans le schéma IfcApprovalResource à des sous-types de [[IfcRoot]] . HISTOIRE Nouvelle entité dans IFC2x2."
+msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
+msgstr "L'opérateur arithmétique appliqué aux valeurs des composants."
 
-#:IFC.xml:550
-msgid "IfcRelAssociatesApproval_RelatingApproval"
-msgstr "Relating Approbation"
+#:IFC.xml:3273
+msgid "IfcAppliedValue_Category"
+msgstr "Catégorie"
 
-msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
-msgstr "Référence à l'approbation qui est appliquée à l'aide de cette relation."
+msgid "IfcAppliedValue_Category_DEFINITION"
+msgstr "Spécification du type de coût utilisé. NOTE Il existe de nombreux types possibles de valeur de coût qui peuvent être identifiés. Bien qu'il y ait une large compréhension de la signification des noms qui peuvent être attribués à différents types de coûts. il n'y a pas de norme générale pour nommer les types de coûts et il n'y a aucune classification largement définie. Pour permettre n'importe quel type de valeur de coût, le type de données [[IfcLabel]] est assigné. En l'absence d'un standard bien défini, il est recommandé de conclure des ententes locales pour définir des types de valeur de coût acceptables et compréhensibles dans un projet ou une région."
 
-#:IFC.xml:3239
-msgid "IfcRelAssociatesConstraint"
-msgstr "SifcRelatesContraintes"
+#:IFC.xml:3278
+msgid "IfcAppliedValue_Condition"
+msgstr "Condition"
 
-msgid "IfcRelAssociatesConstraint_DEFINITION"
-msgstr "L'entité [[IfcRelAssociatesConstraint]] est utilisée pour appliquer les informations de contrainte définies par [[IfcConstraint]] , dans le schéma IfcConstraintResource à des sous-types de [[IfcRoot]] . HISTOIRE Nouvelle entité dans IFC2x2."
+msgid "IfcAppliedValue_Condition_DEFINITION"
+msgstr "La condition dans laquelle une valeur de coût s’applique. Par exemple, dans le contexte d'une soumission d'offres, cela peut se référer à une option qui pourrait ou non être élue."
 
-#:IFC.xml:2588
-msgid "IfcRelAssociatesConstraint_RelatingConstraint"
-msgstr "Contrainte de lien"
+#:IFC.xml:3283
+msgid "IfcAppliedValue_Description"
+msgstr "Libellé"
 
-msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
-msgstr "Référence à la contrainte qui est appliquée en utilisant cette relation."
+msgid "IfcAppliedValue_Description_DEFINITION"
+msgstr "La description qui peut appliquer des renseignements supplémentaires sur une valeur de coût."
 
-#:IFC.xml:3240
-msgid "IfcRelAssociatesConstraint_Intent"
-msgstr "Intentions"
+#:IFC.xml:3288
+msgid "IfcAppliedValue_FixedUntilDate"
+msgstr "Fixé jusqu'à la date"
 
-msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
-msgstr "L'intention de l'utilisation de la contrainte par rapport à ses [[IfcConstraint]] et IfcObjects, IfcPropertyDefinitions ou IfcRelationships. Les valeurs typiques peuvent être par exemple RATIONALE ou EXPECTED PERFORMANCE."
+msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
+msgstr "La date jusqu'à laquelle la valeur appliquée est applicable. .change ifc2x4 IFC4 CHANGE Type a changé de IfcDateTimeSelect."
+
+#:IFC.xml:3293
+msgid "IfcAppliedValue_Name"
+msgstr "Nom"
+
+msgid "IfcAppliedValue_Name_DEFINITION"
+msgstr "Un nom ou une clarification supplémentaire donné à une valeur de coût."
+
+#:IFC.xml:3338
+msgid "IfcAppliedValueSelect"
+msgstr "Si la valeur utilisée est sélectionnée, veuillez la sélectionner"
+
+#:IFC.xml:3339
+msgid "IfcArithmeticOperatorEnum"
+msgstr "IfcArithmeticOperatorEnum"
+
+msgid "IfcArithmeticOperatorEnum_DEFINITION"
+msgstr "[[IfcArithmeticOperatorEnum]] spécifie la forme d'opération arithmétique impliquée par la relation. HISTOIRE Nouvelle énumération dans IFC2x2. Eléments AJOUTER DIVIDE MULTIPLY SUBTRACT"
+
+#:IFC.xml:3340
+msgid "IfcArithmeticOperatorEnum_ADD"
+msgstr "AJOUTER"
+
+msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
+msgstr "AJOUTER"
+
+#:IFC.xml:3341
+msgid "IfcArithmeticOperatorEnum_DIVIDE"
+msgstr "DIVIDE"
+
+msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
+msgstr "DIVIDE"
+
+#:IFC.xml:3342
+msgid "IfcArithmeticOperatorEnum_MULTIPLY"
+msgstr "MULTIPLIE"
+
+msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
+msgstr "MULTIPLIE"
+
+#:IFC.xml:3343
+msgid "IfcArithmeticOperatorEnum_SUBTRACT"
+msgstr "SUBTRACT"
+
+msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
+msgstr "SUBTRACT"
+
+#:IFC.xml:3345
+msgid "IfcCostValue"
+msgstr "IfcCostValue"
+
+msgid "IfcCostValue_DEFINITION"
+msgstr "[[IfcCostValue]] est un montant d'argent ou une valeur qui affecte un montant d'argent. Chaque instance de [[IfcCostValue]] peut aussi avoir une catégorie. Il y a de nombreux types possibles de valeur de coût qui peuvent être identifiés. Bien qu'il y ait une compréhension générale de la signification des noms qui peuvent être attribués à différents types de coûts. il n'y a pas de norme générale pour nommer les types de coûts et il n'y a aucune classification largement définie. Les énoncés suivants définissent certaines catégories de coûts qui pourraient être appliquées à l'attribut annuel de l'attribut Catégorie taux de retour de la livraison en bloc de la remise en masse du contrat de remboursement du contrat de consultation Estimation taux d'intérêt de l'embauche taux de main-d'œuvre de la liste des prix de maintenance du matériel de maintenance et d'emballage de la vente de remplacement de la réparation de profit Profit de remplacement de la vente de petites quantités surcharge Spares de stockage sous contrat réduction de contrat de transport Whole life Whole life NOTE En l'absence de toute norme bien définie, il est recommandé de conclure des ententes locales pour définir des types de valeur de coût acceptables et compréhensibles dans un projet ou une région. HISTOIRE Nouvelle entité dans IFC1.0"
+
+#:IFC.xml:3432
+msgid "IfcCurrencyRelationship"
+msgstr "IfcDeviseRelation"
+
+msgid "IfcCurrencyRelationship_DEFINITION"
+msgstr "[[IfcCurrencyRelationship]] définit le taux de change qui s'applique entre deux devises désignées à un moment donné et tel que publié par une source particulière. Un [[IfcCurrencyRelationship]] est utilisé lorsqu'il peut y avoir besoin de référencer un [[IfcCostValue]] dans une devise à un [[IfcCostValue]] dans une autre devise. Il tient compte du fait que les taux de change peuvent varier en exigeant l'enregistrement de la date et de l'heure du taux de change utilisé et de la source qui publie le taux. Il peut y avoir de nombreuses sources et il y a différentes stratégies pour la conversion du taux de change au comptant, l'achat de la monnaie à terme à un taux fixe . La source de l'échange de devises est définie comme une instance de [[IfcLibraryInformation]] qui comprend un nom et une URL. HISTOIRE Nouvelle entité dans IFC2x2. .change ifc2x4 IFC4 Subtyp from [[IfcResourceLevelRelationship]] , ordre d'attribut changé."
+
+#:IFC.xml:3445
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
+msgstr "Unité monétaire en relation"
+
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
+msgstr "L'unité monétaire à partir de laquelle un échange est dérivé. Par exemple, dans le cas d'une conversion de GBP à USD, l'unité monétaire correspondante est le GBP."
+
+#:IFC.xml:3457
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
+msgstr "Unité monétaire associée"
+
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
+msgstr "L'unité monétaire à laquelle aboutit un échange. Par exemple, dans le cas d'une conversion de GBP à USD, l'unité monétaire correspondante est USD."
+
+#:IFC.xml:3469
+msgid "IfcCurrencyRelationship_RateSource"
+msgstr "format@@0 RateSource"
+
+msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
+msgstr "La source à partir de laquelle un taux de change est obtenu."
+
+#:IFC.xml:3433
+msgid "IfcCurrencyRelationship_ExchangeRate"
+msgstr "Taux de change"
+
+msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
+msgstr "Le ratio actuellement convenu du montant d'une unité monétaire connexe qui est équivalent à un montant unitaire de l'unité monétaire correspondante dans une relation monétaire. Par exemple, dans le cas d'une conversion de GBP à USD, la valeur du taux de change peut être de 1,486 USD 1 GBP ."
+
+#:IFC.xml:3438
+msgid "IfcCurrencyRelationship_RateDateTime"
+msgstr "Noter la date et l'heure"
+
+msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
+msgstr "La date et l'heure à laquelle un taux de change s'applique. .change ifc2x4 IFC4 CHANGE Type changé de IfcDateTimeSelect. Attribut rendu facultatif."
 
