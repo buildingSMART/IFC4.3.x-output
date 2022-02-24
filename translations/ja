@@ -9,86 +9,181 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcControlExtension.pot\n"
-"X-Crowdin-File-ID: 32\n"
+"X-Crowdin-File: /master/IfcCostResource.pot\n"
+"X-Crowdin-File-ID: 34\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-24 03:55\n"
 
-#:IFC.xml:3205
-msgid "IfcPerformanceHistory"
-msgstr "IfcPerformanceHistory"
+#:IFC.xml:3257
+msgid "IfcAppliedValue"
+msgstr "IfcAppliedValue"
 
-msgid "IfcPerformanceHistory_DEFINITION"
-msgstr "[[IfcPerformanceHistory]] is used to document the actual performance of an occurrence instance over time. It includes machine measured data from building automation systems and human specified data such as task and resource usage. The data may represent actual conditions, predictions, or simulations. The realtime data tracked by performance history takes the form of property sets where all properties are based on time series. Unlike design based data at occurrences and types, performance driven data is time sensitive and may change in realtime by some measurement device. Data may be captured at irregular intervals such as when values change beyond established thresholds, or at regular intervals of specified duration. Declaration use definition [[IfcPerformanceHistory]] may be declared within a project using [[IfcRelDeclares]] where RelatingContext refers to the [[IfcProject]] and RelatedDefinitions includes the [[IfcPerformanceHistory]] . Default units used for property sets are indicated by the declaring project. Only top level objects are declared nested performance history objects through [[IfcRelNests]] do not participate in such relationship. HISTORY New entity in IFC2x2."
+msgid "IfcAppliedValue_DEFINITION"
+msgstr "This entity captures a value driven by a formula, with additional qualifications including unit basis, valid date range, and categorization. The extent of the [[IfcAppliedValue]] is determined by the AppliedValue attribute which may be defined either as an [[IfcMeasureWithUnit]] or as an [[IfcMonetaryMeasure]] or as an [[IfcRatioMeasure]] via the [[IfcAppliedValueSelect]] type. Optionally, an [[IfcAppliedValue]] may have an applicable date. This is intended to fix the date on which the value became relevant for use. It may be the date on which the value was set in the model or it may be a prior or future date when the value becomes operable. Similarly, an [[IfcAppliedValue]] may have a fixed until date. This is intended to fix the date on which the value ceases to be relevant for use. An instance of [[IfcAppliedValue]] may have a unit basis asserted. This is defined as an [[IfcMeasureWithUnit]] that determines the extent of the unit value for application purposes. It is assumed that when this attribute is asserted, then the value given to [[IfcAppliedValue]] is that for unit quantity. This is not enforced within the schema and thus needs to be controlled within an application. Applied values may be referenced from a document such as a price list . The relationship between one or more occurrences of [[IfcAppliedValue]] or its subtypes is achieved through the use of the [[IfcExternalReferenceRelationship]] in which the document provides the [[IfcExternalReferenceRelationship]].RelatingExtReference and the value occurrences are the [[IfcExternalReferenceRelationship]].RelatedResourceObjects . HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, data type of date based attributes changed into [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator attributes added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
 
-#:IFC.xml:3206
-msgid "IfcPerformanceHistory_LifeCyclePhase"
-msgstr "LifeCyclePhase"
+#:IFC.xml:3302
+msgid "IfcAppliedValue_UnitBasis"
+msgstr "UnitBasis"
 
-msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
-msgstr "適用可能な建物のライフサイクルフェーズについて説明します。代表的な値は、DESIGNDEVELOPMENT、SCHEMATICDEVELOPMENT、CONSTRUCTION、ASBUILT、COMMISSIONING、OPERATIONなどです。"
+msgid "IfcAppliedValue_UnitBasis_DEFINITION"
+msgstr "単価が基づいている単位の数と単位。 メモ 通常予想される長さ、面積、音量などの測定単位と同様に。 コストは、袋、ドラム、パレット、アイテムなどを定義する必要がある測定単位に基づくことができます。 単価は、単位単一値よりも大きいか小さい量に基づく場合があります。 例えば、木材はXメートルあたりの単価であり、X1はケーブル、配管、その他の多くのアイテムと同様です。 基本数は整数または実際の値である可能性があります。 メモ この属性は、適用されるコストが単位数量あたりであるすべての状況で有効にする必要があります。 商品価格が使用されている場合でも主張されることがあります。 この場合、単価ベースはアイテムまたは同等の定義でなければなりません。"
 
-#:IFC.xml:3211
-msgid "IfcPerformanceHistory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:3314
+msgid "IfcAppliedValue_Components"
+msgstr "コンポーネント"
 
-msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
-msgstr "列挙で指定されているパフォーマンス履歴の定義済み汎用型。 hrange ifc2x4 IFC4 変更点 エンティティ定義の最後に属性が追加されました。"
+msgid "IfcAppliedValue_Components_DEFINITION"
+msgstr "AppliedValue が計算される任意のコンポーネント値。"
 
-#:IFC.xml:3230
-msgid "IfcPerformanceHistoryTypeEnum"
-msgstr "IfcPerformanceHistoryTypeEnum"
+#:IFC.xml:3326
+msgid "IfcAppliedValue_HasExternalReference"
+msgstr "HasExternalReference"
 
-msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
-msgstr "この列挙は、パフォーマンス履歴の主な目的を特定するために使用されます。[[IfcPerformanceHistoryTypeEnum]] には、以下の USERDEFINED ユーザーが定義されています。 NOTFINED Undefined HISTORY IFC4アイテムに新しい列挙が追加されました"
+msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
+msgstr "外部参照、例えばライブラリ、分類、文書情報など、[[IfcAppliedValue]] に関連付けられている参照。 .change ifc2x4 IFC4 変更点 新しい逆属性。"
 
-#:IFC.xml:3234
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
-msgstr "注記されました"
+#:IFC.xml:3258
+msgid "IfcAppliedValue_ApplicableDate"
+msgstr "適用日"
 
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "注記されました"
+msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
+msgstr "適用された値が適用される日付またはその日付。.change ifc2x4 IFC4 変更タイプは IfcDateTimeSelectから変更されます。"
 
-#:IFC.xml:3235
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
-msgstr "ユーザー定義済み"
+#:IFC.xml:3263
+msgid "IfcAppliedValue_AppliedValue"
+msgstr "AppliedValue"
 
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ユーザー定義済み"
+msgid "IfcAppliedValue_AppliedValue_DEFINITION"
+msgstr "適用された値の範囲または数量または量。"
 
-#:IFC.xml:3236
-msgid "IfcRelAssociatesApproval"
-msgstr "IfcRelAssociatesApproval"
+#:IFC.xml:3268
+msgid "IfcAppliedValue_ArithmeticOperator"
+msgstr "算術演算子"
 
-msgid "IfcRelAssociatesApproval_DEFINITION"
-msgstr "The entity [[IfcRelAssociatesApproval]] is used to apply approval information defined by [[IfcApproval]] , in IfcApprovalResource schema, to subtypes of [[IfcRoot]] . HISTORY New entity in IFC2x2."
+msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
+msgstr "算術演算子は、コンポーネントの値に適用されます。"
 
-#:IFC.xml:550
-msgid "IfcRelAssociatesApproval_RelatingApproval"
-msgstr "RelatingApproval"
+#:IFC.xml:3273
+msgid "IfcAppliedValue_Category"
+msgstr "カテゴリ"
 
-msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
-msgstr "この関係を使用して適用されている承認を参照してください。"
+msgid "IfcAppliedValue_Category_DEFINITION"
+msgstr "使用されるコストの種類の仕様 注意 特定できるコスト値には多くの種類があります。 異なる種類のコストに割り当てられる名前の意味については、広範な理解があります。 一般的にコスト型の命名基準はなく広く定義された分類もありません 任意のタイプのコスト値を可能にするために、[[IfcLabel]] データ型が割り当てられます。 明確に定義された標準が存在しない場合 プロジェクトまたは地域内で許容され理解できるコスト価値の種類を定義するために、ローカル契約を行うことが推奨されます。"
 
-#:IFC.xml:3239
-msgid "IfcRelAssociatesConstraint"
-msgstr "IfcRelatesConstraint"
+#:IFC.xml:3278
+msgid "IfcAppliedValue_Condition"
+msgstr "条件"
 
-msgid "IfcRelAssociatesConstraint_DEFINITION"
-msgstr "The entity [[IfcRelAssociatesConstraint]] is used to apply constraint information defined by [[IfcConstraint]] , in the IfcConstraintResource schema, to subtypes of [[IfcRoot]] . HISTORY New entity in IFC2x2."
+msgid "IfcAppliedValue_Condition_DEFINITION"
+msgstr "コスト値が適用される条件。 例えば、入札提出のコンテキスト内では、これは、選択することができるか、または選択しないことができるオプションを参照することができます。"
 
-#:IFC.xml:2588
-msgid "IfcRelAssociatesConstraint_RelatingConstraint"
-msgstr "関連制約"
+#:IFC.xml:3283
+msgid "IfcAppliedValue_Description"
+msgstr "説明"
 
-msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
-msgstr "この関係を使用して適用されている制約への参照。"
+msgid "IfcAppliedValue_Description_DEFINITION"
+msgstr "コスト値に関する追加情報を適用する場合の説明。"
 
-#:IFC.xml:3240
-msgid "IfcRelAssociatesConstraint_Intent"
-msgstr "Intent"
+#:IFC.xml:3288
+msgid "IfcAppliedValue_FixedUntilDate"
+msgstr "FixedUntilDate"
 
-msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
-msgstr "関連する[[IfcConstraint]]とIfcObjects、IfcPropertyDefinitions、IfcRelationshipsに関する制約の使用の目的。 代表的な値は、例えばRATIONALEやEXPECTED PerFORMANCEなどです。"
+msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
+msgstr "適用される値が適用されるまでの日付。.change ifc2x4 IFC4 変更タイプは IfcDateTimeSelect から変更されます。"
+
+#:IFC.xml:3293
+msgid "IfcAppliedValue_Name"
+msgstr "名前"
+
+msgid "IfcAppliedValue_Name_DEFINITION"
+msgstr "コスト値に与えられた名前または追加の明確化。"
+
+#:IFC.xml:3338
+msgid "IfcAppliedValueSelect"
+msgstr "IfcAppliedValueSelect"
+
+#:IFC.xml:3339
+msgid "IfcArithmeticOperatorEnum"
+msgstr "IfcArithmeticOperatorEnum"
+
+msgid "IfcArithmeticOperatorEnum_DEFINITION"
+msgstr "[[IfcArithmeticOperatorEnum]] は、関係によって暗示される算術演算の形式を指定します。HISTORY IFC2x2の新しい列挙。項目追加 DIVIDEマルチトラック。"
+
+#:IFC.xml:3340
+msgid "IfcArithmeticOperatorEnum_ADD"
+msgstr "追加"
+
+msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
+msgstr "追加"
+
+#:IFC.xml:3341
+msgid "IfcArithmeticOperatorEnum_DIVIDE"
+msgstr "Divide"
+
+msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
+msgstr "Divide"
+
+#:IFC.xml:3342
+msgid "IfcArithmeticOperatorEnum_MULTIPLY"
+msgstr "倍率表示"
+
+msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
+msgstr "倍率表示"
+
+#:IFC.xml:3343
+msgid "IfcArithmeticOperatorEnum_SUBTRACT"
+msgstr "サブトラック"
+
+msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
+msgstr "サブトラック"
+
+#:IFC.xml:3345
+msgid "IfcCostValue"
+msgstr "IfcCostValue"
+
+msgid "IfcCostValue_DEFINITION"
+msgstr "[[IfcCostValue]] is an amount of money or a value that affects an amount of money. Each instance of [[IfcCostValue]] may also have a category. There are many possible types of cost value that may be identified. While there is a broad understanding of the meaning of names that may be assigned to different types of costs, there is no general standard for naming cost types nor are there any broadly defined classifications. The following defines some cost categories that might be applied to the Category attribute Annual rate of return Bonus Bulk purchase rebate Contract Consultancy Delivery Estimated cost Hire Installation Interest rate Labor Lease List price Maintenance Material Overhead Postage and packing Profit Purchase Rental Repair Replacement Sale Small quantity surcharge Spares Storage Sub Contract Trade discount Transportation Waste allowance Whole life NOTE In the absence of any well defined standard, it is recommended that local agreements should be made to define allowable and understandable cost value types within a project or region. HISTORY New entity in IFC1.0"
+
+#:IFC.xml:3432
+msgid "IfcCurrencyRelationship"
+msgstr "IfcCurrencyRelationship"
+
+msgid "IfcCurrencyRelationship_DEFINITION"
+msgstr "[[IfcCurrencyRelationship]] defines the rate of exchange that applies between two designated currencies at a particular time and as published by a particular source. An [[IfcCurrencyRelationship]] is used where there may be a need to reference an [[IfcCostValue]] in one currency to an [[IfcCostValue]] in another currency. It takes account of fact that currency exchange rates may vary by requiring the recording the date and time of the currency exchange rate used and the source that publishes the rate. There may be many sources and there are different strategies for currency conversion spot rate, forward buying of currency at a fixed rate . The source for the currency exchange is defined as an instance of [[IfcLibraryInformation]] that includes a name and a URL. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Subtyped from [[IfcResourceLevelRelationship]] , attribute order changed."
+
+#:IFC.xml:3445
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
+msgstr "RelatingMonetaryUnit"
+
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
+msgstr "取引所が派生する通貨単位。 例えば、GBPからUSDへの換算の場合、通貨単位はGBPとなります。"
+
+#:IFC.xml:3457
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
+msgstr "関連MonetaryUnit"
+
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
+msgstr "交換が結果として得られる通貨単位。 例えば、GBPからUSDへの換算の場合、関連する通貨単位はUSDです。"
+
+#:IFC.xml:3469
+msgid "IfcCurrencyRelationship_RateSource"
+msgstr "RateSource"
+
+msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
+msgstr "為替レートが取得される元。"
+
+#:IFC.xml:3433
+msgid "IfcCurrencyRelationship_ExchangeRate"
+msgstr "為替レート："
+
+msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
+msgstr "現在合意されている通貨単位の金額の比率は、通貨関係における通貨単位の単位量に相当します。 例えば、GBPからUSDへの換算の場合、為替レートは1.486USD1GBPとなります。"
+
+#:IFC.xml:3438
+msgid "IfcCurrencyRelationship_RateDateTime"
+msgstr "RateDateTime"
+
+msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
+msgstr "交換レートが適用される日時。.change ifc2x4 IFC4 変更タイプは IfcDateTimeSelect から変更される。"
 
