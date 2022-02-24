@@ -9,86 +9,181 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcControlExtension.pot\n"
-"X-Crowdin-File-ID: 32\n"
+"X-Crowdin-File: /master/IfcCostResource.pot\n"
+"X-Crowdin-File-ID: 34\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-24 03:59\n"
 
-#:IFC.xml:3205
-msgid "IfcPerformanceHistory"
-msgstr "История производительности"
+#:IFC.xml:3257
+msgid "IfcAppliedValue"
+msgstr "IfcAppliedValue"
 
-msgid "IfcPerformanceHistory_DEFINITION"
-msgstr "[[IfcPerformanceHistory]] используется для документирования фактической производительности экземпляра с течением времени. Он включает в себя данные измеряемых машин, полученные от систем автоматизации зданий, и данные о конкретных людях, таких как задачи и использование ресурсов. Данные могут представлять собой фактические условия, прогнозы или моделирование. Данные реального времени, отслеживаемые историей производительности, принимают форму наборов свойств, где все свойства основаны на временных рядах. В отличие от проектируемых данных о входах и типах, данные на основе производительности чувствительны к времени и могут измениться в реальном времени некоторыми измерительными устройствами. Данные могут регистрироваться с нерегулярными интервалами, например при изменении значений сверх установленных пороговых значений или с регулярными интервалами заданной продолжительности. Определение использования объявления [[IfcPerformanceHistory]] может быть объявлено в рамках проекта с помощью [[IfcRelDeclares]], где RelatingContext ссылается на [[IfcProject]] и RelatedDefinitions включает [[IfcPerformanceHistory]] . Единицы по умолчанию, используемые для наборов свойств, обозначаются декларирующим проектом. Только объекты верхнего уровня объявлены вложенными объектами истории производительности через [[IfcRelNests]] не участвуют в таких отношениях."
+msgid "IfcAppliedValue_DEFINITION"
+msgstr "Эта сущность фиксирует значение, продиктованное формулой с дополнительной квалификацией, включая базу единиц, действительный диапазон дат и категоризацию. Степень [[IfcAppliedValue]] определяется атрибутом AppliedValue , который может быть определен либо как [[IfcMeasureWithUnit]], либо как [[IfcMonetaryMeasure]] или как [[IfcRatioMeasure]] по типу [[IfcAppliedValueSelect]]. Необязательно, [[IfcAppliedValue]] может иметь подходящую дату. Это предназначено для исправления даты, в которой значение стало актуальным для использования. Это может быть дата, на которой значение было установлено в модели или может быть предшествующей или будущей даты, когда значение становится работоспособным. Аналогично, [[IfcAppliedValue]] могут быть исправлены до даты. Это предназначено для фиксирования даты, в которой значение перестает быть актуальным для использования. Могут быть утверждены экземпляр [[IfcAppliedValue]]. Это определено как [[IfcMeasureWithUnit]], который определяет степень значения единицы измерения для прикладных целей. Предполагается, что при утверждении этого атрибута, то значением, присвоенным [[IfcAppliedValue]], является значение для количества единицы. Это не допускается в рамках схемы и поэтому должно контролироваться в рамках приложения. Применяемые значения могут быть приведены из такого документа, как прайс-лист . Отношение между одним или несколькими случаями [[IfcAppliedValue]] или его подтипами достигается за счет использования [[IfcExternalReferenceRelationship]], в котором документ предоставляет [[IfcExternalReferenceRelationship]]. elatingExtReference и значение входов [[IfcExternalReferenceRelationship]].RelatedResourceObjects . ИСТОРИЯ Новая сущность в IFC2x2. hange ifc2x4 IFC4 CHANGE Entity made non abstract to support general formula expressions of constraints, атрибуты на основе данных изменены на [[IfcDate]] , ValueType and Condition promoted from [[IfcCostValue]] , Components and ArithmeticOperator added to replace IfcAppliedValueRelationship for more efficient encoding and reference tracking."
 
-#:IFC.xml:3206
-msgid "IfcPerformanceHistory_LifeCyclePhase"
-msgstr "LifeCyclePhase"
+#:IFC.xml:3302
+msgid "IfcAppliedValue_UnitBasis"
+msgstr "Единица базиса"
 
-msgid "IfcPerformanceHistory_LifeCyclePhase_DEFINITION"
-msgstr "Описывает соответствующую фазу жизненного цикла строительства. Типичные значения должны быть DESIGNDEVELOPMENT, SCHEMATICDEVELOPMENT, CONSTRUCTIONDOCUMENT, CONSTRUCTION, ASBUILT, COMMISSIONING, OPERATION, etc."
+msgid "IfcAppliedValue_UnitBasis_DEFINITION"
+msgstr "Число и единица измерения, на которой базируется стоимость единицы. Примечание, а также обычно ожидаемые единицы измерения, такие как длина, площадь, объем и т.д. расходы могут быть основаны на единицах измерения, которые необходимо определить, например, мешок, барабан, поддон и т.д. Расходы на единицу могут основываться на количествах, превышающих унитарную величину базовой меры. Например, древесина может иметь цену за единицу в Х метрах, где X 1 аналогично для кабелей, трубопроводов и многих других предметов. Базовое число может быть целым или реальным значением. Примечание Этот атрибут следует указывать при всех обстоятельствах, когда применяемая стоимость составляет количество единицы. Он может быть использован даже при обстоятельствах, когда используется цена предмета. в таком случае основание стоимости единицы должно быть по определению пункта или по эквивалентному определению."
 
-#:IFC.xml:3211
-msgid "IfcPerformanceHistory_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:3314
+msgid "IfcAppliedValue_Components"
+msgstr "Компоненты"
 
-msgid "IfcPerformanceHistory_PredefinedType_DEFINITION"
-msgstr "Предопределенный общий тип для истории производительности, указанной в перечислении. hange ifc2x4 IFC4 CHANGE Этот атрибут был добавлен в конце определения сущности."
+msgid "IfcAppliedValue_Components_DEFINITION"
+msgstr "Необязательные значения компонента, из которых вычисляется Appliedvalue."
 
-#:IFC.xml:3230
-msgid "IfcPerformanceHistoryTypeEnum"
-msgstr "IfcPerformanceTypeEnum"
+#:IFC.xml:3326
+msgid "IfcAppliedValue_HasExternalReference"
+msgstr "HasExternalReference"
 
-msgid "IfcPerformanceHistoryTypeEnum_DEFINITION"
-msgstr "Это перечисление используется для определения основной цели истории производительности. [[IfcPerformanceHistoryTypeEnum]] содержит определенный пользователь ПОЛУЧЕН. НЕОФИЦИАЛЬНО. Новое перечисление IFC4 пунктов ПОЛЬЗОВАННОЕ НЕОФИЦИАЛЬНОЕ"
+msgid "IfcAppliedValue_HasExternalReference_DEFINITION"
+msgstr "Ссылка на внешнюю ссылку, например библиотеку, классификацию или информацию о документе, связанную с [[IfcAppliedValue]]. .change ifc2x4 IFC4 CHANGE Новый обратный атрибут."
 
-#:IFC.xml:3234
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:3258
+msgid "IfcAppliedValue_ApplicableDate"
+msgstr "Применимая дата"
 
-msgid "IfcPerformanceHistoryTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcAppliedValue_ApplicableDate_DEFINITION"
+msgstr "Дата или с которой применимо значение. .change ifc2x4 IFC4 CHANGE Type изменился с IfcDateTimeSelect."
 
-#:IFC.xml:3235
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:3263
+msgid "IfcAppliedValue_AppliedValue"
+msgstr "Установленное значение"
 
-msgid "IfcPerformanceHistoryTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcAppliedValue_AppliedValue_DEFINITION"
+msgstr "Размер или количество или количество примененного значения."
 
-#:IFC.xml:3236
-msgid "IfcRelAssociatesApproval"
-msgstr "IfcRelAssociatesApproval"
+#:IFC.xml:3268
+msgid "IfcAppliedValue_ArithmeticOperator"
+msgstr "Арифметический Оператор"
 
-msgid "IfcRelAssociatesApproval_DEFINITION"
-msgstr "Сущность [[IfcRelAssociatesApproval]] используется для применения информации о допущении, определенной [[IfcApproval]] , в схеме IfcApprovalResource schema, к подтипам [[IfcRoot]] . HISTORY New entity in IFC2x2."
+msgid "IfcAppliedValue_ArithmeticOperator_DEFINITION"
+msgstr "Арифметический оператор, применяемый к значениям компонента."
 
-#:IFC.xml:550
-msgid "IfcRelAssociatesApproval_RelatingApproval"
-msgstr "Соответствующее утверждение"
+#:IFC.xml:3273
+msgid "IfcAppliedValue_Category"
+msgstr "Категория"
 
-msgid "IfcRelAssociatesApproval_RelatingApproval_DEFINITION"
-msgstr "Ссылка на одобрение, которое применяется с использованием этого отношения."
+msgid "IfcAppliedValue_Category_DEFINITION"
+msgstr "Описание типа используемой стоимости. ПРИМЕЧАНИЕ Хотя существует широкое понимание смысла названий, которые могут быть присвоены различным типам расходов, не существует общего стандарта именования видов затрат и не существует каких-либо классификаций, определяемых широким кругом. Чтобы разрешить любой тип стоимости, назначается тип данных [[IfcLabel]]. В отсутствие какого-либо четко определенного стандарта, Рекомендуется разработать местные соглашения для определения допустимых и понятных видов стоимостной ценности в рамках проекта или региона."
 
-#:IFC.xml:3239
-msgid "IfcRelAssociatesConstraint"
-msgstr "IfcRelAssociatesConstraint"
+#:IFC.xml:3278
+msgid "IfcAppliedValue_Condition"
+msgstr "Состояние"
 
-msgid "IfcRelAssociatesConstraint_DEFINITION"
-msgstr "Сущность [[IfcRelAssociatesConstraint]] используется для применения ограничительной информации, определенной [[IfcConstraint]] , в схеме IfcConstraintResource к подтипам [[IfcRoot]] . HISTORY New entity in IFC2x2."
+msgid "IfcAppliedValue_Condition_DEFINITION"
+msgstr "Условие при котором применяется стоимость. Например, в контексте представления заявки она может ссылаться на вариант, который может быть избран или не избран."
 
-#:IFC.xml:2588
-msgid "IfcRelAssociatesConstraint_RelatingConstraint"
-msgstr "Отношение ограничения"
+#:IFC.xml:3283
+msgid "IfcAppliedValue_Description"
+msgstr "Описание"
 
-msgid "IfcRelAssociatesConstraint_RelatingConstraint_DEFINITION"
-msgstr "Ссылка на ограничение, которое применяется с использованием этих отношений."
+msgid "IfcAppliedValue_Description_DEFINITION"
+msgstr "Описание, которое может применить дополнительную информацию о стоимости."
 
-#:IFC.xml:3240
-msgid "IfcRelAssociatesConstraint_Intent"
-msgstr "Наличие"
+#:IFC.xml:3288
+msgid "IfcAppliedValue_FixedUntilDate"
+msgstr "Дата измененияУдаления"
 
-msgid "IfcRelAssociatesConstraint_Intent_DEFINITION"
-msgstr "Цель использования ограничения в отношении его родственных [[IfcConstraint]] и IfcObjects, IfcPropertyDefinitions или IfcRelationships. Типичные значения могут быть например RATIONALE или EXPECTED PERFORMANCE."
+msgid "IfcAppliedValue_FixedUntilDate_DEFINITION"
+msgstr "Дата до которой применено значение .change ifc2x4 IFC4 CHANGE Тип изменен с IfcDateTimeSelect."
+
+#:IFC.xml:3293
+msgid "IfcAppliedValue_Name"
+msgstr "Наименование"
+
+msgid "IfcAppliedValue_Name_DEFINITION"
+msgstr "Название или дополнительные разъяснения, данные стоимостной стоимости."
+
+#:IFC.xml:3338
+msgid "IfcAppliedValueSelect"
+msgstr "IfcAppliedВыбрать значение"
+
+#:IFC.xml:3339
+msgid "IfcArithmeticOperatorEnum"
+msgstr "IfcArithmeticOperatorEnum"
+
+msgid "IfcArithmeticOperatorEnum_DEFINITION"
+msgstr "[[IfcArithmeticOperatorEnum]] определяет форму арифметической операции, подразумеваемой отношением. ИСТОРИЯ Новое перечисление в IFC2x2. Пункты ДОБАВИТЬ МУЛЬТIPLY СУБТРАКТ"
+
+#:IFC.xml:3340
+msgid "IfcArithmeticOperatorEnum_ADD"
+msgstr "ДОБАВИТЬ"
+
+msgid "IfcArithmeticOperatorEnum_ADD_DEFINITION"
+msgstr "ДОБАВИТЬ"
+
+#:IFC.xml:3341
+msgid "IfcArithmeticOperatorEnum_DIVIDE"
+msgstr "ДИВИДА"
+
+msgid "IfcArithmeticOperatorEnum_DIVIDE_DEFINITION"
+msgstr "ДИВИДА"
+
+#:IFC.xml:3342
+msgid "IfcArithmeticOperatorEnum_MULTIPLY"
+msgstr "МНОЖИВАНИЕ"
+
+msgid "IfcArithmeticOperatorEnum_MULTIPLY_DEFINITION"
+msgstr "МНОЖИВАНИЕ"
+
+#:IFC.xml:3343
+msgid "IfcArithmeticOperatorEnum_SUBTRACT"
+msgstr "РЕЙТИНГ"
+
+msgid "IfcArithmeticOperatorEnum_SUBTRACT_DEFINITION"
+msgstr "РЕЙТИНГ"
+
+#:IFC.xml:3345
+msgid "IfcCostValue"
+msgstr "IfcCostValue"
+
+msgid "IfcCostValue_DEFINITION"
+msgstr "[[IfcCostValue]] — это денежное количество или стоимость, влияющее на количество денег. Каждый экземпляр [[IfcCostValue]] также может иметь категорию. Есть много возможных типов стоимостного значения, которые могут быть определены. Хотя существует широкое понимание смысла названий, которые могут быть присвоены различным видам расходов, не существует общего стандарта именования видов затрат и не существует каких-либо классификаций, определяемых широким кругом. В следующей категории определены некоторые категории расходов, которые могут быть применены к атрибуту Категория годовая ставка возврата бонусных начисленных начисленных компенсаций Контракта Контракт поставки ставка Инсталляция Налог Процент Процент Инсталляции Трудового Листа Технических Налогов Положений Материалы и Упаковка Закупки Закупки Заменного Ремонта Закупки Заказчика Запасы Затраты Контракта Скидки Транспортирование Отходы Весь жизненный NOTE В отсутствие каких-либо хорошо определенных стандартов, Рекомендуется разработать местные соглашения для определения допустимых и понятных видов стоимостной ценности в рамках проекта или региона. ИСТОРИЯ Новая организация в IFC1.0"
+
+#:IFC.xml:3432
+msgid "IfcCurrencyRelationship"
+msgstr "Связь IfcВалют"
+
+msgid "IfcCurrencyRelationship_DEFINITION"
+msgstr "[[IfcCurrencyRelationship]] определяет обменный курс, который применяется между двумя указанными валютами в определенное время и опубликован конкретным источником. [[IfcCurrencyRelationship]используется там, где может понадобиться ссылка на [[IfcCostValue]] в одной валюте [[IfcCostValue]] в другой валюте. При этом учитывается, что курсы валют могут варьироваться в зависимости от даты и времени использования обменного курса, а также от источника, который публикует курс. Существует много источников, и существуют различные стратегии для конвертации спота валюты, форвардная покупка валюты по фиксированному курсу . Источник для обмена валюты определен как экземпляр [[IfcLibraryInformation]], включающий имя и URL. Порядок атрибутов изменен в файле IFC2x2.change ifc2x4 IFC4 CHANGE из [[IfcResourceLevelRelationship]]."
+
+#:IFC.xml:3445
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit"
+msgstr "Относительная Монетарная Единица"
+
+msgid "IfcCurrencyRelationship_RelatingMonetaryUnit_DEFINITION"
+msgstr "Денежная единица, с которой происходит обмен. Например, в случае конвертации из GBP в USD, соответствующая денежная единица равна GBP."
+
+#:IFC.xml:3457
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit"
+msgstr "Связанные MonetaryUnit"
+
+msgid "IfcCurrencyRelationship_RelatedMonetaryUnit_DEFINITION"
+msgstr "Денежная единица, на которую результаты обмена. Например, в случае конвертации из GBP в USD, соответствующая денежная единица равна USD."
+
+#:IFC.xml:3469
+msgid "IfcCurrencyRelationship_RateSource"
+msgstr "Источник баллов"
+
+msgid "IfcCurrencyRelationship_RateSource_DEFINITION"
+msgstr "Источник, из которого получается обменный курс."
+
+#:IFC.xml:3433
+msgid "IfcCurrencyRelationship_ExchangeRate"
+msgstr "Обменный курс"
+
+msgid "IfcCurrencyRelationship_ExchangeRate_DEFINITION"
+msgstr "В настоящее время согласованное соотношение количества соответствующей денежной единицы, эквивалентное количеству единицы соответствующей денежной единицы в отношениях между валютой. Например, в случае конвертации из GBP в USD, стоимость обменного курса может составлять 1.486 USD 1 GBP ."
+
+#:IFC.xml:3438
+msgid "IfcCurrencyRelationship_RateDateTime"
+msgstr "Дата и время"
+
+msgid "IfcCurrencyRelationship_RateDateTime_DEFINITION"
+msgstr "Дата и время, в которое применяется обменный курс."
 
