@@ -9,319 +9,1773 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: pt\n"
-"X-Crowdin-File: /master/IfcTopologyResource.pot\n"
-"X-Crowdin-File-ID: 100\n"
+"X-Crowdin-File: /master/IfcPortsAndWaterwaysDomain.pot\n"
+"X-Crowdin-File-ID: 103\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: pt_PT\n"
 "PO-Revision-Date: 2022-02-24 03:59\n"
 
-#:IFC.xml:43582
-msgid "IfcAdvancedFace"
-msgstr "IfcAdvancedFace"
+#:IFC.xml:24420
+msgid "IfcConveyorSegment"
+msgstr "IfcConveyorSegmento"
 
-msgid "IfcAdvancedFace_DEFINITION"
-msgstr "An advanced face is a specialization of a face surface that has to meet requirements on using particular topological and geometric representation items for the definition of the faces, edges and vertices. An [[IfcAdvancedFace]] is restricted to have a face surface geometry of type [[IfcElementarySurface]] , [[IfcSweptSurface]] or [[IfcBSplineSurface]] , have one [[IfcFaceOuterBound]] as the bound of the face, with the exception of closed surfaces, have all faces to be bound by [[IfcEdgeLoop]] or [[IfcVertexLoop]] , have all edges to have an edge curve geometry, have the edge curve geometry restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] In case of closed faces with periodic surfaces, such as cylindrical or spherical surfaces, the following applies the edges of the closed surface, in case of a cylindrical surface the upper and lower cap, refer to the same instance of [[IfcVertexPoint]] twice, no [[IfcFaceOuterBound]] is provided, or the [[IfcFaceOuterBound]] is constructed using an [[IfcSeamCurve]] at the periodic end of the underlying closed surface, in case of a cylindrical surface at 0. 360. degree. cylindrical surface .. .. .. .. figures ifcadvancedface 01.png Figure 1 Use of [[IfcCylindricalSurface]] as underlying surface of an [[IfcAdvancedFace]] NOTE Entity adapted from advanced face defined in ISO 10303 511. HISTORY New entity in IFC4 Formal Propositions ApplicableSurface The geometry used in the definition of the face shall be restricted. The face geometry shall be an [[IfcElementarySurface]] , [[IfcSweptSurface]] , or [[IfcBSplineSurface]] . RequiresEdgeCurve The geometry of all bounding edges of the face shall be fully defined as [[IfcEdgeCurve]] s. ApplicableEdgeCurves The types of curve used to define the geometry of edges shall be restricted to [[IfcLine]] , [[IfcConic]] , [[IfcPolyline]] , or [[IfcBSplineCurve]] ."
+msgid "IfcConveyorSegment_DEFINITION"
+msgstr "A conveyor segment defines an occurrence of a flow segment continuous run within a conveyor system that joins two sections of the system. these can utilise different carrying methods such as belt, rope, chain, screw etc. NOTE Definition according to ISO6707 1 machine that continuously transports material or objects along a gentle slope using an endless belt, rope or chain, or rollers."
 
-#:IFC.xml:43585
-msgid "IfcBooleanChoose__B"
-msgstr "Escolha IfcBooleanB"
+#:IFC.xml:24421
+msgid "IfcConveyorSegment_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43593
-msgid "IfcClosedShell"
-msgstr "IfcClosedShell"
+msgid "IfcConveyorSegment_PredefinedType_DEFINITION"
+msgstr "Identifies the predefined type of a conveyor segment. This type may associate additional specific property sets. NOTE The PredefinedType shall only be used, if no [[IfcConveyorSegmentType]] is assigned, providing its own [[IfcConveyorSegmentType]] .PredefinedType."
 
-msgid "IfcClosedShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A closed shell is a shell of the dimensionality 2 which typically serves as a bound for a region in R3. A closed shell has no boundary, and has non zero finite extent. If the shell has a domain with coordinate space R3, it divides that space into two connected regions, one finite and the other infinite. In this case, the topological normal of the shell is defined as being directed from the finite to the infinite region. The shell is represented by a collection of faces. The domain of the shell, if present, contains all those faces, together with their bounds. Associated with each face in the shell is a logical value which indicates whether the face normal agrees with TRUE or is opposed to FALSE the shell normal. The logical value can be applied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell boundary attribute member is a face without the orientation attribute. The combinatorial restrictions on closed shells and geometrical restrictions on their domains are designed to ensure that any domain associated with a closed shell is a closed, orientable manifold. The domain of a closed shell, if present, is a connected, closed, oriented 2 manifold. It is always topologically equivalent to an H fold torus for some H 0. The number H is referred to as the surface genus of the shell. If a shell of genus H has a domain within coordinate space R 3 , then the finite region of space inside it is topologically equivalent to a solid ball with H tunnels drilled through it. The Euler equation applies with B 0, because in this case there are no holes. As in the case of open shells, the surface genus H may not be known a priori, but shall be an integer 0. Thus a necessary, but not sufficient, condition for a well formed closed shell is the following Image .. .. .. .. figures ifcopenshell math1.gif NOTE Entity adapted from closed shell defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the loops of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied. Note Please refer to ISO 10303 42 for the equation."
+#:IFC.xml:24428
+msgid "IfcConveyorSegmentType"
+msgstr "Tipo"
 
-#:IFC.xml:43598
-msgid "IfcConnectedFaceSet"
-msgstr "Conjunto IfcConectado"
+msgid "IfcConveyorSegmentType_DEFINITION"
+msgstr "A [[IfcConveyorSegmentType]] fornece as informações de tipo para ocorrências de [[IfcConveyorSegment]]. Um segmento transportador define uma ocorrência de um segmento de fluxo contínuo executado em um sistema conveyor que se junta a duas seções do sistema. estes podem utilizar diferentes métodos de transporte como cinto, corda, corrente, parafuso etc."
 
-msgid "IfcConnectedFaceSet_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A connected face set is a set of faces such that the domain of faces together with their bounding edges and vertices is connected. NOTE Entity adapted from connected face set defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. The union of the domains of the faces and their bounding loops shall be arcwise connected."
+#:IFC.xml:24429
+msgid "IfcConveyorSegmentType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43601
-msgid "IfcConnectedFaceSet_CfsFaces"
-msgstr "Rostos"
+msgid "IfcConveyorSegmentType_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um segmento conveyor."
 
-msgid "IfcConnectedFaceSet_CfsFaces_DEFINITION"
-msgstr "The set of faces arcwise connected along common edges or vertices."
+#:IFC.xml:24436
+msgid "IfcConveyorSegmentTypeEnum"
+msgstr "IfcConveyorSegmentTypeEnum"
 
-#:IFC.xml:43613
-msgid "IfcEdge"
-msgstr "IfcEdge"
+msgid "IfcConveyorSegmentTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of conveyor segments that can further specify an [[IfcConveyorSegment]] or [[IfcConveyorSegmentType]] . Items CHUTECONVEYOR Gravity operated conveyor where media descends through a trough or chute. BELTCONVEYOR An endless belt for carrying material without stretching. SCREWCONVEYOR composed of a longitudinal screw in a trough or pipe that rotates to force media through the segment BUCKETCONVEYOR A conveyor in the form of connected buckets or segments that move in a continuous loop USERDEFINED NOTDEFINED"
 
-msgid "IfcEdge_DEFINITION"
-msgstr "An [[IfcEdge]] defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype [[IfcEdgeCurve]] . The [[IfcEdge]] can therefore be used to exchange straight edges without an associated geometry provided by [[IfcLine]] or [[IfcPolyline]] thought [[IfcEdgeCurve]].EdgeGeometry . EXAMPLE Figure 1 illustrates an example where the bounds of the [[IfcEdge]] are given by the EdgeStart and EdgeEnd this also determines the direction of the edge. The location within a coordinate space is determined by the [[IfcVertexPoint]] type for EdgeStart and EdgeEnd. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense. Figure 1 Edge representation .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non self intersecting open curve in R M , that is, a connected 1 dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 Ξ . Associated with an edge may be a geometric curve to locate the edge in a coordinate space this is represented by the edge curve subtype. The curve shall be finite and non self intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus G e may be determined by the graph traversal algorithm. Since M E 1, the Euler equation 1 reduces in the case to Image .. .. .. .. figures ifcedge math1.gif where V 1 or 2, and G e 1 or 0. Specifically, the topological edge defining data shall satisfy an edge has two vertices Image .. .. .. .. figures ifcedge math2.gif the vertices need not be distinct Image .. .. .. .. figures ifcedge math3.gif Equation shall hold Image .. .. .. .. figures ifcedge math4.gif NOTE Entity adapted from edge defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The edge has dimensionality 1. 2. The extent of an edge shall be finite and nonzero."
+#:IFC.xml:24450
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR"
+msgstr "BELTCONVEIRO"
 
-#:IFC.xml:43616
-msgid "IfcEdge_EdgeStart"
-msgstr "EdgeStart"
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR_DEFINITION"
+msgstr "Uma cintura interminável para transportar materiais sem esticar."
 
-msgid "IfcEdge_EdgeStart_DEFINITION"
-msgstr "Start point vertex of the edge."
+#:IFC.xml:24451
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR"
+msgstr "CONVEIRO"
 
-#:IFC.xml:43628
-msgid "IfcEdge_EdgeEnd"
-msgstr "EdgeEnd"
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR_DEFINITION"
+msgstr "Um transportador na forma de baldes ou segmentos conectados que se movem em um loop contínuo"
 
-msgid "IfcEdge_EdgeEnd_DEFINITION"
-msgstr "End point vertex of the edge. The same vertex can be used for both EdgeStart and EdgeEnd."
+#:IFC.xml:24452
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR"
+msgstr "ESCOLHER"
 
-#:IFC.xml:43664
-msgid "IfcEdgeCurve"
-msgstr "IfcEdgeCurve"
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR_DEFINITION"
+msgstr "Circulação de gravidade operada onde a mídia desce através de uma mancha ou chute."
 
-msgid "IfcEdgeCurve_DEFINITION"
-msgstr "An [[IfcEdgeCurve]] defines two vertices being connected topologically including the geometric representation of the connection. NOTE The topology is used to trim the geometry of the edge. There is no need to geometrically trim the edge to match the topology. EXAMPLE Figure 1 illustrates an example where the edge geometry is given by an unbounded curve, here [[IfcCircle]]. The bounds are provided by the EdgeStart and EdgeEnd, the topological direction of the [[IfcEdgeCurve]] opposes the direction of the [[IfcCircle]] by SameSense FALSE. Figure 1 Edge curve .extDef NOTE Definition according to ISO CD 10303 42 1992 An edge curve is a special subtype of edge which has its geometry fully defined. The geometry is defined by associating the edge with a curve which may be unbounded. As the topological and geometric directions may be opposed, an indicator same sense is used to identify whether the edge and curve directions agree or are opposed. The Boolean value indicates whether the curve direction agrees with TRUE or is in the opposite direction FALSE to the edge direction. Any geometry associated with the vertices of the edge shall be consistent with the edge geometry. Multiple edges can reference the same curve. NOTE Entity adapted from edge curve defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the edge curve is formally defined to be the domain of its edge geometry as trimmed by the vertices. This domain does not include the vertices. 2. An edge curve has non zero finite extent. 3. An edge curve is a manifold. 4. An edge curve is arcwise connected. 5. The edge start is not a part of the edge domain. 6. The edge end is not a part of the edge domain. 7. Vertex geometry shall be consistent with edge geometry."
+#:IFC.xml:24453
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
 
-#:IFC.xml:11738
-msgid "IfcEdgeCurve_EdgeGeometry"
-msgstr "Esquiva Geometria"
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
 
-msgid "IfcEdgeCurve_EdgeGeometry_DEFINITION"
-msgstr "The curve which defines the shape and spatial location of the edge. This curve may be unbounded and is implicitly trimmed by the vertices of the edge this defines the edge domain. Multiple edges can reference the same curve."
+#:IFC.xml:24454
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR"
+msgstr "ESCREWCONVEIRO"
 
-#:IFC.xml:43665
-msgid "IfcEdgeCurve_SameSense"
-msgstr "SameSense"
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR_DEFINITION"
+msgstr "composto por um parafuso longitudinal em uma engrenagem ou tubo que gira para forçar a mídia através do segmento"
 
-msgid "IfcEdgeCurve_SameSense_DEFINITION"
-msgstr "Esta bandeira lógica indica se TRUE ou não FALSE os sentidos da aresta e a curva que define a geometria da borda são os mesmos. O senso de uma aresta é do vértice inicial da borda até o vértice final da aresta do senso de uma curva está na direção de aumentar o parâmetro."
+#:IFC.xml:24455
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
 
-#:IFC.xml:43673
-msgid "IfcEdgeLoop"
-msgstr "IfcEdgeLoop"
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
 
-msgid "IfcEdgeLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An edge loop is a loop with nonzero extent. It is a path in which the start and end vertices are the same. Its domain, if present, is a closed curve. An edge loop may overlap itself. NOTE Entity adapted from edge loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The genus of the [[IfcEdgeLoop]] shall be 1 or greater. 2. The Euler formula shall be satisfied number of vertices genus number of edges 1 3. No edge may be referenced more than once by the same [[IfcEdgeLoop]] with the same sense. For this purpose, an edge which is not an oriented edge is considered to be referenced with the sense TRUE."
+#:IFC.xml:24456
+msgid "IfcLiquidTerminal"
+msgstr "IfcLiquidTerminal"
 
-#:IFC.xml:43681
-msgid "IfcEdgeLoop_EdgeList"
-msgstr "Lista"
+msgid "IfcLiquidTerminal_DEFINITION"
+msgstr "Um terminal líquido é um ponto de encerramento ou de origem para a transferência de líquido entre sistemas de distribuição . É este o ponto em que o sistema de distribuição de líquidos interage com o ambiente externo. Um exemplo disto é um braço de carregamento para a transferência de líquido de um navio atracado."
 
-msgid "IfcEdgeLoop_EdgeList_DEFINITION"
-msgstr "A list of oriented edge entities which are concatenated together to form this path."
+#:IFC.xml:24457
+msgid "IfcLiquidTerminal_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:43674
-msgid "IfcEdgeLoop_Ne"
-msgstr "Não"
+msgid "IfcLiquidTerminal_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um terminal líquido. Este tipo pode associar conjuntos de propriedades específicas adicionais. NOTA: O tipo pré-definido só será usado, se nenhum [[IfcLiquidTerminalType]] for atribuído, fornecendo seu próprio [[IfcLiquidTerminalType]].PredefinedType."
 
-msgid "IfcEdgeLoop_Ne_DEFINITION"
-msgstr "O número de elementos na lista de arestas."
+#:IFC.xml:24464
+msgid "IfcLiquidTerminalType"
+msgstr "Tipo"
 
-#:IFC.xml:43693
-msgid "IfcFace"
-msgstr "IfcFace"
+msgid "IfcLiquidTerminalType_DEFINITION"
+msgstr "O LiquidTerminalType fornece informações de tipo para ocorrências de LiquidTerminal. Um terminal líquido é um ponto de encerramento ou de origem para a transferência de líquido entre sistemas de distribuição . É este o ponto em que o sistema de distribuição de líquidos interage com o ambiente externo. Um exemplo disto é um braço de carregamento para a transferência de líquido de um navio atracado."
 
-msgid "IfcFace_DEFINITION"
-msgstr "An [[IfcFace]] is topological entity used to define surface, bounded by loops, of a shell. NOTE In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the [[IfcEdge]] s and [[IfcOrientedEdge]] s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the [[IfcFaceSurface]] , or the value of the [[IfcFaceSurface]].SameSense attribute have no effect on the orientation of the face. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2 manifold in R m . A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 Ξ . A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal TRUE or should be reversed FALSE . A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen. The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation 1 for this graph becomes Image .. .. .. .. figures ifcface math1.gif where G l i is the graph genus of the i th loop. NOTE Entity adapted from face defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. No edge shall be referenced by the face more than twice. 2. Distinct face bounds of the face shall have no common vertices. 3. If geometry is present, distinct loops of the same face shall not intersect. 4. The face shall satisfy the Euler Equation number of vertices number of edges number of loops sum of genus for loops 0."
+#:IFC.xml:24465
+msgid "IfcLiquidTerminalType_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:26181
-msgid "IfcFace_HasTextureMaps"
-msgstr "HasTextureMaps"
+msgid "IfcLiquidTerminalType_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um terminal líquido."
 
-msgid "IfcFace_HasTextureMaps_DEFINITION"
-msgstr "HasTextureMaps"
+#:IFC.xml:24472
+msgid "IfcLiquidTerminalTypeEnum"
+msgstr "IfcLiquidTerminalTypeEnum"
 
-#:IFC.xml:43696
-msgid "IfcFace_Bounds"
-msgstr "Limites"
+msgid "IfcLiquidTerminalTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of liquid terminals that can further specify an [[IfcLiquidTerminal]] or [[IfcLiquidTerminalType]] . Items LOADINGARM HOSEREEL A Supporting framework on which a hose may be wound whose primary purpose is to connect and interact with the external environment. USERDEFINED NOTDEFINED"
 
-msgid "IfcFace_Bounds_DEFINITION"
-msgstr "Boundaries of the face."
+#:IFC.xml:24482
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL"
+msgstr "HOSEREEL"
 
-#:IFC.xml:43708
-msgid "IfcFaceBound"
-msgstr "Libra IfcFaceBound"
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL_DEFINITION"
+msgstr "Um quadro de apoio no qual um manto pode ser ferido cujo principal objetivo é conectar e interagir com o ambiente externo."
 
-msgid "IfcFaceBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face bound is a loop which is intended to be used for bounding a face. NOTE Entity adapted from face bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
+#:IFC.xml:24483
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM"
+msgstr "CARREGAMENTO"
 
-#:IFC.xml:43716
-msgid "IfcFaceBound_Bound"
-msgstr "Vinculado"
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM_DEFINITION"
+msgstr "CARREGAMENTO"
 
-msgid "IfcFaceBound_Bound_DEFINITION"
-msgstr "The loop which will be used as a face boundary."
+#:IFC.xml:24484
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
 
-#:IFC.xml:43709
-msgid "IfcFaceBound_Orientation"
-msgstr "Orientação"
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
 
-msgid "IfcFaceBound_Orientation_DEFINITION"
-msgstr "Isto indica se TRUE ou não FALAR, o laço tem a mesma sensação quando usado para vincular a face como quando definido primeiro. Se o sentido for FALSE, os sentidos de todas as arestas orientadas para componentes são implicitamente invertidos quando usados na face."
+#:IFC.xml:24485
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
 
-#:IFC.xml:43728
-msgid "IfcFaceOuterBound"
-msgstr "IfcFaceOuterBound"
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
 
-msgid "IfcFaceOuterBound_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A face outer bound is a special subtype of face bound which carries the additional semantics of defining an outer boundary on the face. No more than one boundary of a face shall be of this type. NOTE Entity adapted from face outer bound defined in ISO 10303 42. HISTORY New entity in IFC1.0"
+#:IFC.xml:24486
+msgid "IfcMarineFacility"
+msgstr "IfcMarineFacilidade"
 
-#:IFC.xml:43731
-msgid "IfcFaceSurface"
-msgstr "IfcFaceSurface"
+msgid "IfcMarineFacility_DEFINITION"
+msgstr "Uma instalação marinha representa qualquer estrutura ou entidade importante que seja específica dos portos e das vias navegáveis. Exemplos disso são as quaias, as jaulas, os estaleiros navais, as rupturas, etc."
 
-msgid "IfcFaceSurface_DEFINITION"
-msgstr "The [[IfcFaceSurface]] defines the underlying geometry of the associated surface to the face. NOTE The topology is used to trim the geometry of the surface. There is no need to geometrically trim the surface to match the topology. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face surface is a subtype of face in which the geometry is defined by an associated surface. The portion of the surface used by the face shall be embeddable in the plane as an open disk, possibly with holes. However, the union of the face with the edges and vertices of its bounding loops need not be embeddable in the plane. It may, for example, cover an entire sphere or torus. As both a face and a geometric surface have defined normal directions, a BOOLEAN flag the orientation attribute is used to indicate whether the surface normal agrees with TRUE or is opposed to FALSE the face normal direction. The geometry associated with any component of the loops of the face shall be consistent with the surface geometry, in the sense that the domains of all the vertex points and edge curves are contained in the face geometry surface. A surface may be referenced by more than one face surface. NOTE Entity adapted from face surface defined in ISO 10303 42. HISTORY New entity in IFC2x .spec head Informal Propositions 1. The domain of the face surface is formally defined to be the domain of its face geometry as trimmed by the loops, this domain does not include the bounding loops. 2. A face surface has non zero finite extent. 3. A face surface is a manifold. 4. A face surface is arcwise connected. 5. A face surface has surface genus 0. 6. The loops are not part of the face domain. 7. Loop geometry shall be consistent with face geometry. This implies that any edge curves or vertex points used in defining the loops bounding the face surface shall lie on the face geometry. 8. The loops of the face shall not intersect."
+#:IFC.xml:24487
+msgid "IfcMarineFacility_PredefinedType"
+msgstr "PredefinedType"
 
-#:IFC.xml:12766
-msgid "IfcFaceSurface_FaceSurface"
-msgstr "Superfície"
+msgid "IfcMarineFacility_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de uma instalação marinha. Este tipo pode associar conjuntos de propriedades específicas adicionais."
 
-msgid "IfcFaceSurface_FaceSurface_DEFINITION"
-msgstr "The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF FaceBounds."
+#:IFC.xml:24494
+msgid "IfcMarineFacilityTypeEnum"
+msgstr "IfcMarineFacilityTypeEnum"
 
-#:IFC.xml:43732
-msgid "IfcFaceSurface_SameSense"
-msgstr "SameSense"
+msgid "IfcMarineFacilityTypeEnum_DEFINITION"
+msgstr "The predefined type container that collects all possible marine facility types together into the implemented enumeration. Items CANAL A man made watercourse constructed usually, to join rivers, lakes or seas and often of a size suitable for navigation. NOTE definition in ISO 6707 channel constructed to carry water, usually for navigation, but which can also be used for water power, irrigation, collecting rainwater run off , or drainage of surface water. WATERWAYSHIPLIFT A facility used for raising and lowering boats, ships and other watercraft between stretches of water of different levels on river and canal waterways or between impounded basins. This is achieved via an impounded trough of water which is mechanically lifted up and down. REVETMENT LAUNCHRECOVERY MARINEDEFENCE HYDROLIFT A type of vessel launch recovery facility, also known as a hydraulic lift dock, where ships are lifted vertically by water impounding systems, then floated laterally across the land to berths which subsequently become dry. SHIPYARD A coastal waterside facility where ships are built and repaired. SHIPLIFT A type of vessel launch recovery facility, where ships are lifted vertically out of the water on platforms connected to winches, then transferred horizontally to land based berths on rail, wheel or track systems. PORT QUAY a facility for the mooring of vessels accompanied with the loading and unloading of cargo or passengers or the maintenance of vessels. FLOATINGDOCK NAVIGATIONALCHANNEL BREAKWATER A longitudinal structure that protects a shore area, harbour, basin or estuary from waves. NOTE Definition in ISO 21650 structure protecting a shore area, harbour, anchorage and or basin from waves NOTE Definition in ISO 6707 long structure in a body of water designed to protect a basin or the shore from waves DRYDOCK a Dry dock is an enclosed chamber by gate that allows the draining of water for the construction or repair of marine vessels. NOTE definition in ISO 6707 dock with gates from which water can be drained or pumped, leaving it dry to enable a vessel to be built or repaired JETTY A berthing structure, that extends out into the sea usually perpendicular to the coastline, primarily for the transfer of liquid bulk materials. NOTE definition in ISO 21650 deck structure supported by vertical and possibly inclined piles extending into the sea, frequently in a direction normal to the coastline. NOTE definition in ISO 28640 facility consisting of a trestle or similar structure, berthing facilities including fendering and topside equipment to enable the transfer of LNG between ship and shore. SHIPLOCK A facility used for raising and lowering boats, ships and other watercraft between stretches of water of different levels on rivers and canal waterways or between impounded basins. This is achieved via an impounded chamber of water which is filled and emptied. BARRIERBEACH a sand ridge that rises slightly above the surface of the sea and runs roughly parallel to the shore, from which it is separated by a lagoon. SLIPWAY A facility for the dynamic launch or recovery of a vessel utilizing an inclined ramp and gravitational or mechanical hauling systems. WATERWAY A subset of facilities that have the primary function of providing a navigable area of water. USERDEFINED NOTDEFINED"
 
-msgid "IfcFaceSurface_SameSense_DEFINITION"
-msgstr "Esta bandeira indica se o sentido da normalidade superficial concorda com TRUE , ou se opõe ao FALSE, o sentido da normalidade topológica até ao rosto."
+#:IFC.xml:24517
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH"
+msgstr "BARRIERBEACH"
 
-#:IFC.xml:43740
-msgid "IfcLoop"
-msgstr "IfcLoop"
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH_DEFINITION"
+msgstr "uma borda de areia que sobe ligeiramente acima da superfície do mar e corre aproximadamente paralelo à costa, do qual é separada por uma lagoa."
 
-msgid "IfcLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A loop is a topological entity constructed from a single vertex, or by stringing together connected oriented edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0 dimensional loop is a single point. The domain of a 1 dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning ending point is arbitrary. The domain of the loop includes its bounds, an 0 Ξ . A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so M and the graph genus G l may be determined by the graph traversal algorithm. Since M 1, the Euler equation 1 reduces in this case to Image .. .. .. .. figures ifcloop math1.gif where V and E l are the number of unique vertices and oriented edges in the loop and G l is the genus of the loop. NOTE Entity adapted from loop defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. A loop has a finite extent. 2. A loop describes a closed topological curve with coincident start and end vertices."
+#:IFC.xml:24518
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER"
+msgstr "SOPRADOR"
 
-#:IFC.xml:43743
-msgid "IfcLoopHeadToTail__ALoop"
-msgstr "IfcLoopHeadToTail ALoop"
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER_DEFINITION"
+msgstr "Uma estrutura longitudinal que protege uma área costeira, porto, bacia ou estuário de ondas. NOTA: Definição na estrutura ISO 21650 que protege uma área costeira, porto ancoragem e ou base de ondas de NOTA na estrutura ISO 6707 longa, em um corpo de água projetado para proteger uma bacia ou a costa de ondas"
 
-#:IFC.xml:43751
-msgid "IfcOpenShell"
-msgstr "IfcOpenShell"
+#:IFC.xml:24519
+msgid "IfcMarineFacilityTypeEnum_CANAL"
+msgstr "CANAL"
 
-msgid "IfcOpenShell_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 An open shell is a shell of the dimensionality 2. Its domain, if present, is a finite, connected, oriented, 2 manifold with boundary, but is not a closed surface. It can be thought of as a closed shell with one or more holes punched in it. The domain of an open shell satisfies 0 Ξ 1. An open shell is functionally more general than a face because its domain can have handles. The shell is defined by a collection of faces, which may be oriented faces. The sense of each face, after taking account of the orientation, shall agree with the shell normal as defined below. The orientation can be supplied directly as a BOOLEAN attribute of an oriented face, or be defaulted to TRUE if the shell member is a face without the orientation attribute. The following combinatorial restrictions on open shells and geometrical restrictions on their domains are designed, together with the informal propositions, to ensure that any domain associated with an open shell is an orientable manifold. Each face reference shall be unique. An open shell shall have at least one face. A given face may exist in more than one open shell. The boundary of an open shell consists of the edges that are referenced only once by the face bounds loops of its faces, together with all of their vertices. The domain of an open shell, if present, contains all edges and vertices of its faces. NOTE Note that this is slightly different from the definition of a face domain, which includes none of its bounds. For example, a face domain may exclude an isolated point or line segment. An open shell domain may not. See the algorithm for computing below. NOTE Entity adapted from open shell defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. Every edge shall be referenced exactly twice by the face bounds of the face. 2. Each oriented edge shall be unique. 3. No edge shall be referenced by more than two faces. 4. Distinct faces of the shell do not intersect, but may share edges or vertices. 5. Distinct edges do not intersect but may share vertices. 6. Each face reference shall be unique. 7. The loops of the shell shall not be a mixture of poly loop and other loop types. Note this is given, since only poly loop is defined as face bound definition. 8. The closed shell shall be an oriented arcwise connected 2 manifold. 9. The Euler equation shall be satisfied."
+msgid "IfcMarineFacilityTypeEnum_CANAL_DEFINITION"
+msgstr "Um homem fez um curso de água geralmente construído, para entrar nos rios, lagos ou mares e muitas vezes de um tamanho adequado para navegação. NOTE definição no canal ISO 6707 construído para transportar água, geralmente para navegação, mas que também pode ser utilizado para a água potável, irrigação, recolha de água da chuva escorre ou drenagem de água de superfície."
 
-#:IFC.xml:43755
-msgid "IfcOrientedEdge"
-msgstr "IfcOrientedEdge"
+#:IFC.xml:24520
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK"
+msgstr "DRYDOCK"
 
-msgid "IfcOrientedEdge_DEFINITION"
-msgstr "The [[IfcOrientedEdge]] represents an [[IfcEdge]] with an Orientation flag applied. It allows to reuse the same [[IfcEdge]] when traversed exactly twice, once forwards and once backwards. NOTE The sense of the normal to the [[IfcFace]] is solely determined from the edges. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The normal to the underlying [[IfcFaceSurface]] representing the geometry of that face has no relevance to this. The purpose of the [[IfcFaceSurface]].SameSense attribute is to give additional information for verification purposes. SameSense TRUE means surface normal and face normal are the same, SameSense FALSE means they are in opposite directions. The reused edge with a geometric representation as [[IfcEdgeCurve]] defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D x, y, z [[IfcEdgeCurve]] onto the adjacent surfaces to determine the boundaries of these surfaces. The optional CurveOnSurface defines the 2D u, v edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D [[IfcEdgeCurve]] onto this surface. EXAMPLE Figure 1 illustrates an example where the CurveOnSurface is provided in addition to the curve geometry of the [[IfcEdgeCurve]]. Figure 1 Curve on surface representation of an [[IfcOrientedEdge]] .extDef NOTE Definition according to ISO CD 10303 42 1992 An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge. A common practice is solid modelling systems is to have an entity that represents the use or traversal of an edge. This use entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The use functionality is provided by the edge subtype oriented edge. NOTE Entity adapted from oriented edge defined in ISO 10303 42. HISTORY New entity in IFC2.0. .change ifc2x4 IFC4 Add2 CHANGE The attribute CurveOnSurface has been added."
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK_DEFINITION"
+msgstr "Uma cadeira de rio é uma câmara fechada pelo portão que permite drenar água para a construção ou reparação de navios marinhos. NOTE definição na doca ISO 6707 com portões a partir dos quais a água pode ser drenada ou bombada, saindo seco para permitir que um navio seja construído ou reparado"
 
-#:IFC.xml:43640
-msgid "IfcOrientedEdge_EdgeElement"
-msgstr "Elemento do Acabamento"
+#:IFC.xml:24521
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK"
+msgstr "FLOATINGDOCK"
 
-msgid "IfcOrientedEdge_EdgeElement_DEFINITION"
-msgstr "Edge entity used to construct this oriented edge."
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK_DEFINITION"
+msgstr "FLOATINGDOCK"
 
-#:IFC.xml:43756
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd"
-msgstr "EdgeEnd da SELF"
+#:IFC.xml:24522
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT"
+msgstr "HYDROLIFT"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeEnd_DEFINITION"
-msgstr "VENDA [[IfcEdge]].EdgeEnd"
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT_DEFINITION"
+msgstr "Um tipo de instalação de recuperação de navios, também conhecido como uma estação de ancoragem hidráulica, onde os navios são levantados verticalmente por sistemas de barragem de água. depois flutuou posteriormente em toda a terra para anjos que depois se tornam secos."
 
-#:IFC.xml:43760
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart"
-msgstr "SELF IfcEdge EdgeStart"
+#:IFC.xml:24523
+msgid "IfcMarineFacilityTypeEnum_JETTY"
+msgstr "JEITAR"
 
-msgid "IfcOrientedEdge_SELF_IfcEdge_EdgeStart_DEFINITION"
-msgstr "VENDA [[IfcEdge]].EdgeStart"
+msgid "IfcMarineFacilityTypeEnum_JETTY_DEFINITION"
+msgstr "Uma estrutura de frutos de baga, que se estende ao mar geralmente perpendicular à linha costeira, principalmente para a transferência de materiais líquidos a granel graneleiro. NOTA definição na estrutura do deck ISO 21650 suportada por pilhas verticais e possivelmente inclinadas a se estender ao mar, frequentemente em uma direção normal à linha costeira. NOTE definição na instalação ISO 28640 que consiste de uma trestle ou estrutura semelhante, instalações de bagagem, incluindo a cólera e equipamento superior para permitir a transferência de GNL entre navio e costa."
 
-#:IFC.xml:43764
-msgid "IfcOrientedEdge_Orientation"
-msgstr "Orientação"
+#:IFC.xml:24524
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY"
+msgstr "LANÇAMENTO"
 
-msgid "IfcOrientedEdge_Orientation_DEFINITION"
-msgstr "BOOLEAN, se TRUE a orientação topológica como usada coincide com a orientação do vértice inicial até o vértice final do elemento de areia. Se FALSE, caso contrário."
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY_DEFINITION"
+msgstr "LANÇAMENTO"
 
-#:IFC.xml:43783
-msgid "IfcPath"
-msgstr "Caminho"
+#:IFC.xml:24525
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE"
+msgstr "MARINEDEFÊNCIA"
 
-msgid "IfcPath_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path TRUE or is the opposite direction FALSE . An individual edge can only be referenced once by an individual path. An edge can be referenced by multiple paths. An edge can exist independently of a path. NOTE Entity adapted from path defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. A path has dimensionality 1. 2. A path is arcwise connected. 3. The edges of the path do not intersect except at common vertices. 4. A path has a finite, non zero extent."
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE_DEFINITION"
+msgstr "MARINEDEFÊNCIA"
 
-#:IFC.xml:43771
-msgid "IfcPath_EdgeList"
-msgstr "Lista"
+#:IFC.xml:24526
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL"
+msgstr "ALCANAL"
 
-msgid "IfcPath_EdgeList_DEFINITION"
-msgstr "A lista de arestas orientadas que são concatenadas para formar este caminho."
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL_DEFINITION"
+msgstr "ALCANAL"
 
-#:IFC.xml:43786
-msgid "IfcPathHeadToTail__APath"
-msgstr "IfcPathHeadToTail APath"
+#:IFC.xml:24527
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
 
-#:IFC.xml:43794
-msgid "IfcPolyLoop"
-msgstr "IfcPolyLoop"
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
 
-msgid "IfcPolyLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A poly loop is a loop with straight edges bounding a planar region in space. A poly loop is a loop of genus 1 where the loop is represented by an ordered coplanar collection of points forming the vertices of the loop. The loop is composed of straight line segments joining a point in the collection to the succeeding point in the collection. The closing segment is from the last to the first point in the collection. The direction of the loop is in the direction of the line segments. A poly loop shall conform to the following topological constraints the loop has the genus of one. the following equation shall be satisfied Image .. .. .. .. figures ifcpolyloop math1.gif The [[IfcPolyLoop]] is always closed and the last segment is from the last [[IfcCartesianPoint]] in the list of Polygon s to the first [[IfcCartesianPoint]] . Therefore the first point shall not be repeated at the end of the list, neither by referencing the same instance, nor by using an additional instance of [[IfcCartesianPoint]] having the coordinates as the first point. NOTE This entity exists primarily to facilitate the efficient communication of faceted B rep models. NOTE Entity adapted from poly loop defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the points in the polygon defining the poly loop shall be coplanar. 2. The first and the last Polygon shall be different by value."
+#:IFC.xml:24528
+msgid "IfcMarineFacilityTypeEnum_PORT"
+msgstr "PORTAR"
 
-#:IFC.xml:11355
-msgid "IfcPolyLoop_Polygon"
-msgstr "Polígono"
+msgid "IfcMarineFacilityTypeEnum_PORT_DEFINITION"
+msgstr "PORTAR"
 
-msgid "IfcPolyLoop_Polygon_DEFINITION"
-msgstr "Lista de pontos que definem o loop. Não há pontos repetidos na lista."
+#:IFC.xml:24529
+msgid "IfcMarineFacilityTypeEnum_QUAY"
+msgstr "QUALQUER"
 
-#:IFC.xml:43797
-msgid "IfcShell"
-msgstr "IfcShell"
+msgid "IfcMarineFacilityTypeEnum_QUAY_DEFINITION"
+msgstr "uma facilidade de amarração de navios acompanhados da carga e descarga de carga, passageiros ou da manutenção de navios."
 
-#:IFC.xml:43798
-msgid "IfcSubedge"
-msgstr "IfcSubedge"
+#:IFC.xml:24530
+msgid "IfcMarineFacilityTypeEnum_REVETMENT"
+msgstr "REVETMENTO"
 
-msgid "IfcSubedge_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A subedge is an edge whose domain is a connected portion of the domain of an existing edge. The topological constraints on a subedge are the same as those on an edge. NOTE Entity adapted from subedge defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The domain of the subedge is formally defined to be the domain of the parent edge, as trimmed by the subedge start vertex and subedge end vertex. 2. The start vertex and end vertex shall be within the union of the domains of the vertices of the parent edge and the domain of the parent edge ."
+msgid "IfcMarineFacilityTypeEnum_REVETMENT_DEFINITION"
+msgstr "REVETMENTO"
 
-#:IFC.xml:43652
-msgid "IfcSubedge_ParentEdge"
-msgstr "Parentânea"
+#:IFC.xml:24531
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT"
+msgstr "LOJA"
 
-msgid "IfcSubedge_ParentEdge_DEFINITION"
-msgstr "The Edge, or Subedge, which contains the Subedge."
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT_DEFINITION"
+msgstr "Um tipo de instalação de recuperação de embarcações, onde os navios são retirados verticalmente da água em plataformas ligadas a vinhos, então transferido horizontalmente para berões baseados em trilhos, rodas ou sistemas de trilha."
 
-#:IFC.xml:43801
-msgid "IfcTopologicalRepresentationItem"
-msgstr "IfcTopologicalRepresentationItem"
+#:IFC.xml:24532
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK"
+msgstr "ESPAÇO"
 
-msgid "IfcTopologicalRepresentationItem_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 The topological representation item is the supertype for all the topological representation items in the geometry resource. NOTE Entity adapted from topological representation item defined in ISO 10303 42. HISTORY New entity in IFC1.5"
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK_DEFINITION"
+msgstr "Uma instalação usada para levantar e diminuir os barcos, navios e outros observatórios entre as margens de água de diferentes níveis nos rios e nas vias navegáveis de canal ou entre bacias hidrográficas. Isto é conseguido através de uma câmara de água apreendida que é preenchida e esvaziada."
 
-#:IFC.xml:43804
-msgid "IfcVertex"
-msgstr "IfcVertex"
+#:IFC.xml:24533
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD"
+msgstr "ESPAÇO"
 
-msgid "IfcVertex_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex is the topological construct corresponding to a point. It has dimensionality 0 and extent 0. The domain of a vertex, if present, is a point in m dimensional real space R M this is represented by the vertex point subtype. NOTE Entity adapted from vertex defined in ISO 10303 42. HISTORY New entity in IFC2.0 .spec head Informal Propositions 1. The vertex has dimensionality 0. This is a fundamental property of the vertex. 2. The extent of a vertex is defined to be zero."
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD_DEFINITION"
+msgstr "Uma instalação costeira da zona navegável onde os navios são construídos e reparados."
 
-#:IFC.xml:43819
-msgid "IfcVertexLoop"
-msgstr "IfcVertexLoop"
+#:IFC.xml:24534
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY"
+msgstr "SLIPWAY"
 
-msgid "IfcVertexLoop_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex loop is a loop of zero genus consisting of a single vertex. A vertex can exist independently of a vertex loop. The topological data shall satisfy the following constraint Image .. .. .. .. figures ifcvertexloop math1.gif NOTE Entity adapted from vertex loop defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. A vertex loop has zero extent and dimensionality. 2. The vertex loop has genus 0."
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY_DEFINITION"
+msgstr "Uma facilidade para o lançamento dinâmico ou a recuperação de um navio que utiliza uma rampa inclinada e sistemas de gravitação ou de carga mecânica."
 
-#:IFC.xml:43807
-msgid "IfcVertexLoop_LoopVertex"
-msgstr "LoopVertex"
+#:IFC.xml:24535
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
 
-msgid "IfcVertexLoop_LoopVertex_DEFINITION"
-msgstr "O vértice que define o laço inteiro."
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
 
-#:IFC.xml:43822
-msgid "IfcVertexPoint"
-msgstr "IfcVertexPoint"
+#:IFC.xml:24536
+msgid "IfcMarineFacilityTypeEnum_WATERWAY"
+msgstr "ÁGUA"
 
-msgid "IfcVertexPoint_DEFINITION"
-msgstr ".extDef NOTE Definition according to ISO CD 10303 42 1992 A vertex point is a vertex which has its geometry defined as a point. NOTE Entity adapted from vertex point defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The domain of the vertex is formally defined to be the domain of its vertex point."
+msgid "IfcMarineFacilityTypeEnum_WATERWAY_DEFINITION"
+msgstr "Um subconjunto de instalações que têm a função principal de fornecer uma área navegável de água."
 
-#:IFC.xml:12326
-msgid "IfcVertexPoint_VertexGeometry"
-msgstr "Vértice-geometria"
+#:IFC.xml:24537
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT"
+msgstr "WATERWAYSHIPLIFT"
 
-msgid "IfcVertexPoint_VertexGeometry_DEFINITION"
-msgstr "O ponto geométrico, que define a situação no espaço geométrico do vértice."
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT_DEFINITION"
+msgstr "Uma instalação usada para levantar e diminuir os barcos, navios e outros observatórios entre as margens de água de diferentes níveis nas vias navegáveis fluviais e canais, ou entre bacias hidrográficas. Isto é conseguido através de um emaranhado de água que é mecanicamente recuperada para cima e para baixo."
+
+#:IFC.xml:24538
+msgid "IfcMarinePartTypeEnum"
+msgstr "IfcMarinePartTypeEnum"
+
+msgid "IfcMarinePartTypeEnum_DEFINITION"
+msgstr "The predefined type container that collects all possible marine facility part types together into the implemented enumeration. Items CREST A lateral spatial part that forms the crest area of breakwater or embankment where additional structures are placed such as access items or roads. MANUFACTURING LOWWATERLINE CORE A lateral spatial part that sub divides the core structure of a facility such as a breakwater or embankment WATERFIELD A region or lateral facility part that covers the water field of a waterside facility such as a quay. CILL BERTHINGSTRUCTURE COPELEVEL A vertical spatial part that represents the elevation working surface of the quay for the placement of quay furniture and plant. CHAMBER A longitudinal spatial part of a waterway or port facility that forms the impounded chamber of a facility, such as a ship lock, dry dock or hydrolift STORAGEAREA A region spatial part that forms a sub division of a facility for the purpose of storing cargo. For example container stacks, dry bulk storage yards, material storage yards. APPROACHCHANNEL A longitudinal spatial part of a waterway or port facility that covers the approach of the primary facility. VEHICLESERVICING A region spatial part that represents a functional division designed for the maintenance and or storage of vehicles used for facility operations. SHIPTRANSFER GATEHEAD GUDINGSTRUCTURE A longitudinal spatial part of a waterway or port facility that forms the guiding and assistive structures at the entrance to an impounded facility. BELOWWATERLINE A vertical spatial part that represents the part below the mean waterline defined within the site area. WEATHERSIDE A lateral spatial part that covers the side of protective structures that is designed to protect and be impacted by weather or wave effects. such as the outer side of breakwaters or the riverside of flood embankments. LANDFIELD A region or lateral facility part that covers the land field of a waterside facility such as a quay. PROTECTION A lateral or region spatial part that forms the area which contains protective measures for scour and erosion of a facility. LEEWARDSIDE A lateral spatial part that covers the side of protective structures that do not experience weather or wave effects. ABOVEWATERLINE A vertical spatial part that represents the part above the mean waterline defined within the site area. ANCHORAGE NAVIGATIONALAREA A region spatial part that covers a managed navigational area that is maintained for an operational reason, this could be a dredged turning circle or waiting area. HIGHWATERLINE A vertical spatial part that represents the elevation of the high waterline, multiple high waterlines can be used to represent the different high tide types. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24567
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE"
+msgstr "SOBRE"
+
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE_DEFINITION"
+msgstr "Uma parte espacial vertical que representa a parte acima da linha de água média definida dentro da área do local."
+
+#:IFC.xml:24568
+msgid "IfcMarinePartTypeEnum_ANCHORAGE"
+msgstr "ANQUIÇÃO"
+
+msgid "IfcMarinePartTypeEnum_ANCHORAGE_DEFINITION"
+msgstr "ANQUIÇÃO"
+
+#:IFC.xml:24569
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL"
+msgstr "APROCANAL"
+
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL_DEFINITION"
+msgstr "Uma parte espacial longitudinal de uma via navegável ou instalações portuárias que cobre a abordagem da instalação primária."
+
+#:IFC.xml:24570
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE"
+msgstr "INVENTÁRIO"
+
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE_DEFINITION"
+msgstr "Uma parte do espaço vertical que representa a parte abaixo da média da linha de água definida dentro da área do local."
+
+#:IFC.xml:24571
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE"
+msgstr "BERTHINGSTRUTURAS"
+
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE_DEFINITION"
+msgstr "BERTHINGSTRUTURAS"
+
+#:IFC.xml:24572
+msgid "IfcMarinePartTypeEnum_CHAMBER"
+msgstr "CAMBER"
+
+msgid "IfcMarinePartTypeEnum_CHAMBER_DEFINITION"
+msgstr "Uma parte espacial longitudinal de uma via navegável ou instalação portuária que forma a câmara de uma instalação, como um bloqueio de navio, doca seca ou hidratos"
+
+#:IFC.xml:24573
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL"
+msgstr "NÍVEL DE CILL"
+
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL_DEFINITION"
+msgstr "NÍVEL DE CILL"
+
+#:IFC.xml:24574
+msgid "IfcMarinePartTypeEnum_COPELEVEL"
+msgstr "COPELEVEL"
+
+msgid "IfcMarinePartTypeEnum_COPELEVEL_DEFINITION"
+msgstr "Uma parte do espaço vertical que representa a elevação da superfície de trabalho do caos para a colocação de mobiliário e planta de quay."
+
+#:IFC.xml:24575
+msgid "IfcMarinePartTypeEnum_CORE"
+msgstr "NÚCLEO"
+
+msgid "IfcMarinePartTypeEnum_CORE_DEFINITION"
+msgstr "Uma parte espacial lateral que separa a estrutura central de uma instalação, como uma mina de água ou bordo,"
+
+#:IFC.xml:24576
+msgid "IfcMarinePartTypeEnum_CREST"
+msgstr "CRESTE"
+
+msgid "IfcMarinePartTypeEnum_CREST_DEFINITION"
+msgstr "Uma peça espacial lateral que constitui a área de foca de água quebrável ou embrulhada onde são colocadas estruturas adicionais, como itens de acesso ou estradas."
+
+#:IFC.xml:24577
+msgid "IfcMarinePartTypeEnum_GATEHEAD"
+msgstr "GATEHEAD"
+
+msgid "IfcMarinePartTypeEnum_GATEHEAD_DEFINITION"
+msgstr "GATEHEAD"
+
+#:IFC.xml:24578
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE"
+msgstr "GUINGSTRUTURA"
+
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE_DEFINITION"
+msgstr "Uma parte espacial longitudinal de uma via navegável ou de uma instalação portuária que forma as estruturas orientadoras e assistivas na entrada de uma instalação apreendida."
+
+#:IFC.xml:24579
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE"
+msgstr "DESSULFURAÇÃO"
+
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE_DEFINITION"
+msgstr "Uma parte do espaço vertical que representa a elevação da linha de água alta, várias linhas de água de alta qualidade podem ser usadas para representar os diferentes tipos de maré alta."
+
+#:IFC.xml:24580
+msgid "IfcMarinePartTypeEnum_LANDFIELD"
+msgstr "LANDFIELD"
+
+msgid "IfcMarinePartTypeEnum_LANDFIELD_DEFINITION"
+msgstr "Uma região ou uma peça de instalação lateral que cobre o campo de terra de uma instalação aquática, como um quai."
+
+#:IFC.xml:24581
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE"
+msgstr "LEEWARDSIDE"
+
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE_DEFINITION"
+msgstr "Uma parte lateral do espaço que cobre o lado das estruturas de proteção que não têm efeitos climáticos ou de onda."
+
+#:IFC.xml:24582
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE"
+msgstr "LOWATERLINE"
+
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE_DEFINITION"
+msgstr "LOWATERLINE"
+
+#:IFC.xml:24583
+msgid "IfcMarinePartTypeEnum_MANUFACTURING"
+msgstr "PERSONALIZANDO"
+
+msgid "IfcMarinePartTypeEnum_MANUFACTURING_DEFINITION"
+msgstr "PERSONALIZANDO"
+
+#:IFC.xml:24584
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA"
+msgstr "NAVIGATIONALAREA"
+
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA_DEFINITION"
+msgstr "Uma parte espacial da região que cobre uma área de navegação gerenciada que é mantida por uma razão operacional, este poderia ser um círculo de viragem ou uma área de espera."
+
+#:IFC.xml:24585
+msgid "IfcMarinePartTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
+
+msgid "IfcMarinePartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
+
+#:IFC.xml:24586
+msgid "IfcMarinePartTypeEnum_PROTECTION"
+msgstr "PROTEÇÃO"
+
+msgid "IfcMarinePartTypeEnum_PROTECTION_DEFINITION"
+msgstr "Uma parte espacial lateral ou regional que constitui a área que contém medidas de protecção para o escopo e a erosão de uma instalação."
+
+#:IFC.xml:24587
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER"
+msgstr "ESPAÇO"
+
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER_DEFINITION"
+msgstr "ESPAÇO"
+
+#:IFC.xml:24588
+msgid "IfcMarinePartTypeEnum_STORAGEAREA"
+msgstr "ESTORÁRIA"
+
+msgid "IfcMarinePartTypeEnum_STORAGEAREA_DEFINITION"
+msgstr "Uma parte espacial regional que constitui uma sub divisão de uma instalação com o objetivo de armazenar carga. Por exemplo, pilhas de recipientes, estaleiros de armazenamento em massa, armazéns de material."
+
+#:IFC.xml:24589
+msgid "IfcMarinePartTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
+
+msgid "IfcMarinePartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
+
+#:IFC.xml:24590
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING"
+msgstr "VÍCULO"
+
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING_DEFINITION"
+msgstr "Uma parte espacial da região que representa uma divisão funcional concebida para a manutenção e ou armazenamento de veículos utilizados para operações de instalações."
+
+#:IFC.xml:24591
+msgid "IfcMarinePartTypeEnum_WATERFIELD"
+msgstr "LARGURA"
+
+msgid "IfcMarinePartTypeEnum_WATERFIELD_DEFINITION"
+msgstr "Uma região ou uma peça de instalação lateral que cobre o campo de água de uma instalação aquática, como um quai."
+
+#:IFC.xml:24592
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE"
+msgstr "ÁGUA"
+
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE_DEFINITION"
+msgstr "Uma parte lateral do espaço que cobre o lado das estruturas de proteção que é projetada para proteger e ser afetada pelos efeitos meteorológicos ou ondas. como o lado exterior das águas quebradas ou o rio dos emblemas de inundações."
+
+#:IFC.xml:24593
+msgid "IfcMooringDevice"
+msgstr "Dispositivo IfcMooringDevice"
+
+msgid "IfcMooringDevice_DEFINITION"
+msgstr "Um dispositivo de atracação é um elemento ativo ou passivo cuja principal função é participar da amarração de um navio, isto poderia ser na forma de um bollard usado como um ponto de fixação para linhas ou equipamentos ativos como ganchos de lançamento rápido."
+
+#:IFC.xml:24594
+msgid "IfcMooringDevice_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDevice_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um dispositivo de atracação. Este tipo pode associar conjuntos de propriedades específicas adicionais. NOTA: O tipo pré-definido só será usado, se nenhum [[IfcMooringDeviceType]] for atribuído, fornecendo seu próprio [[IfcMooringDeviceType]].PredefinedType."
+
+#:IFC.xml:24601
+msgid "IfcMooringDeviceType"
+msgstr "Tipo IfcMooringDevice"
+
+msgid "IfcMooringDeviceType_DEFINITION"
+msgstr "A [[IfcMooringDeviceType]] fornece as informações de tipo para ocorrências de [[IfcMooringDevice]]. Um dispositivo de atracação é um elemento ativo ou passivo cuja principal função é participar da amarração de um navio, isto poderia ser na forma de um bollard usado como um ponto de fixação para linhas ou equipamentos ativos como ganchos de lançamento rápido."
+
+#:IFC.xml:24602
+msgid "IfcMooringDeviceType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDeviceType_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um dispositivo de atracação."
+
+#:IFC.xml:24609
+msgid "IfcMooringDeviceTypeEnum"
+msgstr "IfcMooringDeviceTypeEnum"
+
+msgid "IfcMooringDeviceTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of mooring elements that can further specify an [[IfcMooringDevice]] or [[IfcMooringDeviceType]] . Items LINETENSIONER A mechanical device used to apply a tensioning load to mooring lines to improve vessel stability for port operations. MAGNETICDEVICE Mooring device that uses magnets as the primary method of securing the vessel. MOORINGHOOKS Quick release mooring hooks an active device used to secure a vessel and provide automated release of vessels. VACUUMDEVICE Mooring device that uses vacuum suction as the primary method of securing the vessel. BOLLARD a short, thick post on the deck of a ship or a quay side, to which ship s rope may be secured. not to be confused with traffic bollards. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24625
+msgid "IfcMooringDeviceTypeEnum_BOLLARD"
+msgstr "BOLLARDA"
+
+msgid "IfcMooringDeviceTypeEnum_BOLLARD_DEFINITION"
+msgstr "um poste curto e grosso no convés de um navio ou um lado do café, para qual corda do navio pode ser protegida. Não se confunda com ousadia do tráfego."
+
+#:IFC.xml:24626
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER"
+msgstr "LINETÊNCIA"
+
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER_DEFINITION"
+msgstr "Um dispositivo mecânico utilizado para aplicar uma carga de tensão a linhas de amarração para melhorar a estabilidade do navio para as operações portuárias."
+
+#:IFC.xml:24627
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE"
+msgstr "MAGNETICÁVEL"
+
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE_DEFINITION"
+msgstr "Dispositivo de amarração que utiliza ímãs como método principal para proteger o navio."
+
+#:IFC.xml:24628
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS"
+msgstr "COMENTÁRIOS"
+
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS_DEFINITION"
+msgstr "O atracamento de amarração rápida é um dispositivo ativo usado para proteger um navio e fornecer liberação automatizada de navios."
+
+#:IFC.xml:24629
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
+
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
+
+#:IFC.xml:24630
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
+
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
+
+#:IFC.xml:24631
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE"
+msgstr "VACUUMIDADE"
+
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE_DEFINITION"
+msgstr "Dispositivo de atracação que utiliza a roupa de vácuo como método primário para proteger o navio."
+
+#:IFC.xml:24632
+msgid "IfcNavigationElement"
+msgstr "IfcNavigationElement"
+
+msgid "IfcNavigationElement_DEFINITION"
+msgstr "Um elemento de navegação é um elemento construído ativo ou passivo que tem a função principal de fornecer instruções e avisos de navegação aos navios, isto poderia estar na forma de um bobo flutuante, um farol fixo. Elementos de navegação podem agregar outros componentes e elementos para formar a estrutura inteira. isto pode incluir uma estrutura de quadros para formar o corpo, instâncias de [[IfcSign]] para assinatura ou instâncias de [[IfcSignal]] para lâmpadas suplementares um ou sinais de som."
+
+#:IFC.xml:24633
+msgid "IfcNavigationElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElement_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um elemento de navegação. Este tipo pode associar conjuntos de propriedades específicas adicionais. NOTA: O tipo pré-definido só será usado, se nenhum [[IfcNavigationElementType]] for atribuído, fornecendo seu próprio [[IfcNavigationElementType]].PredefinedType."
+
+#:IFC.xml:24640
+msgid "IfcNavigationElementType"
+msgstr "IfcNavigationElementType"
+
+msgid "IfcNavigationElementType_DEFINITION"
+msgstr "A [[IfcNavigationElementType]] fornece as informações de tipo para ocorrências de [[IfcNavigationElement]]. Um elemento de navegação é um elemento construído ativo ou passivo que tem a função principal de fornecer instruções e avisos de navegação aos navios, isto poderia estar na forma de uma bolha flutuante, um farol fixo ou um sinal de som."
+
+#:IFC.xml:24641
+msgid "IfcNavigationElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElementType_PredefinedType_DEFINITION"
+msgstr "Identifica o tipo predefinido de um elemento de navegação."
+
+#:IFC.xml:24648
+msgid "IfcNavigationElementTypeEnum"
+msgstr "IfcNavigationElementTypeEnum"
+
+msgid "IfcNavigationElementTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of navigation elements that can further specify an [[IfcNavigationElement]] or [[IfcNavigationElementType]] . Items BEACON a fixed vertical structure serving as a navigation mark, to show reefs or other hazards, or provide navigational directions. BUOY an anchored floating structure serving as a navigation mark, to show reefs or other hazards, or provide navigational directions. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24658
+msgid "IfcNavigationElementTypeEnum_BEACON"
+msgstr "ENCONTRAR"
+
+msgid "IfcNavigationElementTypeEnum_BEACON_DEFINITION"
+msgstr "uma estrutura vertical fixa servindo como marca de navegação, para mostrar recifes ou outros perigos, ou fornecer direções de navegação."
+
+#:IFC.xml:24659
+msgid "IfcNavigationElementTypeEnum_BUOY"
+msgstr "COMPRAR"
+
+msgid "IfcNavigationElementTypeEnum_BUOY_DEFINITION"
+msgstr "uma estrutura flutuante ancorada servindo como marca de navegação, para mostrar recifes ou outros perigos, ou para fornecer direções de navegação."
+
+#:IFC.xml:24660
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED"
+msgstr "NÃOFINO"
+
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "NÃOFINO"
+
+#:IFC.xml:24661
+msgid "IfcNavigationElementTypeEnum_USERDEFINED"
+msgstr "USUÁRIO"
+
+msgid "IfcNavigationElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "USUÁRIO"
+
+#:IFC.xml:24708
+msgid "Pset_BerthCommon"
+msgstr "Pset BerthCommon"
+
+msgid "Pset_BerthCommon_DEFINITION"
+msgstr "propriedades comuns à definição de todas as ocorrências de [[IfcSpace]] e tipos de [[IfcSpaceType]] com o tipo predefinido definido definido como BERTH"
+
+#:IFC.xml:24709
+msgid "Pset_BerthCommon_AbnormalBerthingFactor"
+msgstr "AbnormalBerthingFactor"
+
+msgid "Pset_BerthCommon_AbnormalBerthingFactor_DEFINITION"
+msgstr "Risk assessed safety factor"
+
+#:IFC.xml:24714
+msgid "Pset_BerthCommon_BerthApproach"
+msgstr "BerthAbproach"
+
+msgid "Pset_BerthCommon_BerthApproach_DEFINITION"
+msgstr "How the vessel approaches the berth"
+
+#:IFC.xml:24719
+msgid "Pset_BerthCommon_BerthingAngle"
+msgstr "BerthingAngle"
+
+msgid "Pset_BerthCommon_BerthingAngle_DEFINITION"
+msgstr "Angle of approach for the vessel to the berth"
+
+#:IFC.xml:24724
+msgid "Pset_BerthCommon_BerthingVelocity"
+msgstr "BerthingVelocity"
+
+msgid "Pset_BerthCommon_BerthingVelocity_DEFINITION"
+msgstr "Velocity of the vessel as it berths"
+
+#:IFC.xml:24729
+msgid "Pset_BerthCommon_BerthMode"
+msgstr "BerthMode"
+
+msgid "Pset_BerthCommon_BerthMode_DEFINITION"
+msgstr "Orientation of vessel as it approaches berth"
+
+#:IFC.xml:24735
+msgid "Pset_BreakwaterCommon"
+msgstr "Pset BreakwaterCommon"
+
+msgid "Pset_BreakwaterCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como BREAKWATER."
+
+#:IFC.xml:24736
+msgid "Pset_BreakwaterCommon_Elevation"
+msgstr "Elevação"
+
+msgid "Pset_BreakwaterCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:24741
+msgid "Pset_BreakwaterCommon_StructuralStyle"
+msgstr "StructuralStyle"
+
+msgid "Pset_BreakwaterCommon_StructuralStyle_DEFINITION"
+msgstr "Structural style of the element"
+
+#:IFC.xml:24747
+msgid "Pset_CargoCommon"
+msgstr "Pset CargoCommon"
+
+msgid "Pset_CargoCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcTransportElement]] e tipos de [[IfcTransportElementType]] com o tipo predefinido definido definido como CARGO."
+
+#:IFC.xml:24748
+msgid "Pset_CargoCommon_AdditionalProcessing"
+msgstr "AdditionalProcessing"
+
+msgid "Pset_CargoCommon_AdditionalProcessing_DEFINITION"
+msgstr "Any additional or special processing requirements on the associated cargo."
+
+#:IFC.xml:24753
+msgid "Pset_CargoCommon_ProcessDirection"
+msgstr "ProcessDirection"
+
+msgid "Pset_CargoCommon_ProcessDirection_DEFINITION"
+msgstr "The direction of flow of the cargo within the process."
+
+#:IFC.xml:24758
+msgid "Pset_CargoCommon_ProcessItem"
+msgstr "ProcessItem"
+
+msgid "Pset_CargoCommon_ProcessItem_DEFINITION"
+msgstr "The type of item and its measurement method being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+
+#:IFC.xml:24764
+msgid "Pset_ChamberCommon"
+msgstr "Pset ChamberCommon"
+
+msgid "Pset_ChamberCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcFacilityPart]] com o tipo predefinido definido definido como CHAMBER."
+
+#:IFC.xml:24765
+msgid "Pset_ChamberCommon_EffectiveChamberSize"
+msgstr "Tamanho"
+
+msgid "Pset_ChamberCommon_EffectiveChamberSize_DEFINITION"
+msgstr "Volumetric measure defining the effective chamber size for operational and design activities."
+
+#:IFC.xml:24770
+msgid "Pset_ChamberCommon_StructuralType"
+msgstr "Tipo"
+
+msgid "Pset_ChamberCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24776
+msgid "Pset_EnergyRequirements"
+msgstr "Pset EnergiaRequisitos"
+
+msgid "Pset_EnergyRequirements_DEFINITION"
+msgstr "Propriedade definida para a aplicação dos requisitos de energia para o equipamento e elementos físicos"
+
+#:IFC.xml:24777
+msgid "Pset_EnergyRequirements_EnergyConsumption"
+msgstr "EnergyConsumption"
+
+msgid "Pset_EnergyRequirements_EnergyConsumption_DEFINITION"
+msgstr "Annual energy consumption requirement"
+
+#:IFC.xml:24782
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency"
+msgstr "EnergyConversionEfficiency"
+
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency_DEFINITION"
+msgstr "Measure of the efficiency of conversion of fuel energy to mechanical energy"
+
+#:IFC.xml:24787
+msgid "Pset_EnergyRequirements_EnergySource"
+msgstr "EnergySource"
+
+msgid "Pset_EnergyRequirements_EnergySource_DEFINITION"
+msgstr "Enumeration defining the energy source or fuel combusted to generate heat if applicable. Note hydronic heaters shall use UNSET dual use hydronic electric heaters shall use ELECTRICITY."
+
+#:IFC.xml:24792
+msgid "Pset_EnergyRequirements_PowerDemand"
+msgstr "PowerDemand"
+
+msgid "Pset_EnergyRequirements_PowerDemand_DEFINITION"
+msgstr "Power demand of the element"
+
+#:IFC.xml:24798
+msgid "Pset_FenderCommon"
+msgstr "Pset FenderCommon"
+
+msgid "Pset_FenderCommon_DEFINITION"
+msgstr "Propriedades comuns para a definição de todas as ocorrências de [[IfcImpactProtectionDevice]] e tipos de [[IfcImpactProtectionDeviceType]] com o tipo predefinido definido como FENDER."
+
+#:IFC.xml:24799
+msgid "Pset_FenderCommon_CoefficientOfFriction"
+msgstr "CoeficienteDeFricção"
+
+msgid "Pset_FenderCommon_CoefficientOfFriction_DEFINITION"
+msgstr "Coefficient of friction value for the fender"
+
+#:IFC.xml:24804
+msgid "Pset_FenderCommon_EnergyAbsorption"
+msgstr "Absorção"
+
+msgid "Pset_FenderCommon_EnergyAbsorption_DEFINITION"
+msgstr "Absorção"
+
+#:IFC.xml:24809
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance"
+msgstr "Tolerância"
+
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on energy absorption"
+
+#:IFC.xml:24814
+msgid "Pset_FenderCommon_FenderType"
+msgstr "FenderType"
+
+msgid "Pset_FenderCommon_FenderType_DEFINITION"
+msgstr "The type of fender"
+
+#:IFC.xml:24819
+msgid "Pset_FenderCommon_MaximumTemperatureFactor"
+msgstr "MáximumTemperatureFator"
+
+msgid "Pset_FenderCommon_MaximumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to maximum design temperature"
+
+#:IFC.xml:24824
+msgid "Pset_FenderCommon_MaxReaction"
+msgstr "Reação"
+
+msgid "Pset_FenderCommon_MaxReaction_DEFINITION"
+msgstr "Maximum reaction from the element"
+
+#:IFC.xml:24829
+msgid "Pset_FenderCommon_MaxReactionTolerance"
+msgstr "Tolerância"
+
+msgid "Pset_FenderCommon_MaxReactionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on maximum reaction at fender support."
+
+#:IFC.xml:24834
+msgid "Pset_FenderCommon_MinimumTemperatureFactor"
+msgstr "MinimumTemperatureFactor"
+
+msgid "Pset_FenderCommon_MinimumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to minimum design temperature"
+
+#:IFC.xml:24839
+msgid "Pset_FenderCommon_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderCommon_VelocityFactorEnergy_DEFINITION"
+msgstr "Deviation in energy absorption performance due to strain rate"
+
+#:IFC.xml:24844
+msgid "Pset_FenderCommon_VelocityFactorReaction"
+msgstr "Reação"
+
+msgid "Pset_FenderCommon_VelocityFactorReaction_DEFINITION"
+msgstr "Deviation in reaction due to strain rate"
+
+#:IFC.xml:24850
+msgid "Pset_FenderDesignCriteria"
+msgstr "Pset FenderDesignCritério"
+
+msgid "Pset_FenderDesignCriteria_DEFINITION"
+msgstr "Propriedades comuns para a definição de critérios de design de todas as ocorrências de [[IfcImpactProtectionDevice]] e tipos de [[IfcImpactProtectionDeviceType]] com o tipo predefinido definido definido como FENDER."
+
+#:IFC.xml:24851
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod"
+msgstr "MétodoDeMassCoeficientes"
+
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod_DEFINITION"
+msgstr "Method used to determine the Added Mass Coefficient used for design"
+
+#:IFC.xml:24856
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction"
+msgstr "CoeficienteDeFricção"
+
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction_DEFINITION"
+msgstr "Coefficient of friction value for the fender"
+
+#:IFC.xml:24861
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption"
+msgstr "Absorção"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption_DEFINITION"
+msgstr "Absorção"
+
+#:IFC.xml:24866
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance"
+msgstr "Tolerância"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on energy absorption"
+
+#:IFC.xml:24871
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor"
+msgstr "MáximumTemperatureFator"
+
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to maximum design temperature"
+
+#:IFC.xml:24876
+msgid "Pset_FenderDesignCriteria_MaxReaction"
+msgstr "Reação"
+
+msgid "Pset_FenderDesignCriteria_MaxReaction_DEFINITION"
+msgstr "Maximum reaction from the element"
+
+#:IFC.xml:24881
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance"
+msgstr "Tolerância"
+
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on maximum reaction at fender support."
+
+#:IFC.xml:24886
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight"
+msgstr "MinCompressedFenderHeight"
+
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight_DEFINITION"
+msgstr "Minimum height required for a compressed fender to prevent vessels striking the structure"
+
+#:IFC.xml:24891
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor"
+msgstr "MinimumTemperatureFactor"
+
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to minimum design temperature"
+
+#:IFC.xml:24896
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy_DEFINITION"
+msgstr "Deviation in energy absorption performance due to strain rate"
+
+#:IFC.xml:24901
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction"
+msgstr "Reação"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction_DEFINITION"
+msgstr "Deviation in reaction due to strain rate"
+
+#:IFC.xml:24907
+msgid "Pset_GateHeadCommon"
+msgstr "GateHeadCommon de pset"
+
+msgid "Pset_GateHeadCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcFacilityPart]] com o tipo predefinido definido definido como GATEHEAD."
+
+#:IFC.xml:24908
+msgid "Pset_GateHeadCommon_StructuralType"
+msgstr "Tipo"
+
+msgid "Pset_GateHeadCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24914
+msgid "Pset_JettyCommon"
+msgstr "Pset JettyCommon"
+
+msgid "Pset_JettyCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como JETTY."
+
+#:IFC.xml:24915
+msgid "Pset_JettyCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_JettyCommon_BentSpacing_DEFINITION"
+msgstr "Bent upright spacing"
+
+#:IFC.xml:24920
+msgid "Pset_JettyCommon_Elevation"
+msgstr "Elevação"
+
+msgid "Pset_JettyCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:24925
+msgid "Pset_JettyCommon_PierSectionType"
+msgstr "Tipo"
+
+msgid "Pset_JettyCommon_PierSectionType_DEFINITION"
+msgstr "Whether the structure presents a solid closed barrier to the passage of water or is open."
+
+#:IFC.xml:24930
+msgid "Pset_JettyCommon_StructuralType"
+msgstr "Tipo"
+
+msgid "Pset_JettyCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24936
+msgid "Pset_JettyDesignCriteria"
+msgstr "Pset JettyDesignCriteria"
+
+msgid "Pset_JettyDesignCriteria_DEFINITION"
+msgstr "Propriedades comuns para a definição de critérios de design de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como JETTY."
+
+#:IFC.xml:24937
+msgid "Pset_JettyDesignCriteria_EquipmentLoading"
+msgstr "Carregamento"
+
+msgid "Pset_JettyDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Loading from equipment"
+
+#:IFC.xml:24942
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel"
+msgstr "Nível ExtremeHighWater"
+
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "Extreme high water level"
+
+#:IFC.xml:24947
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel"
+msgstr "Nível ExtremeLowWaterlevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Extreme low water level"
+
+#:IFC.xml:24952
+msgid "Pset_JettyDesignCriteria_FlowLoading"
+msgstr "Carregando"
+
+msgid "Pset_JettyDesignCriteria_FlowLoading_DEFINITION"
+msgstr "Flow loading force"
+
+#:IFC.xml:24957
+msgid "Pset_JettyDesignCriteria_HighWaterLevel"
+msgstr "Nível Alto Água"
+
+msgid "Pset_JettyDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "High water level"
+
+#:IFC.xml:24962
+msgid "Pset_JettyDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "Low water level"
+
+#:IFC.xml:24967
+msgid "Pset_JettyDesignCriteria_ShipLoading"
+msgstr "CarregamentoCarregando"
+
+msgid "Pset_JettyDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Ship loading force"
+
+#:IFC.xml:24972
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "Uniformly Distributed Load"
+
+#:IFC.xml:24977
+msgid "Pset_JettyDesignCriteria_WaveLoading"
+msgstr "Ondulando"
+
+msgid "Pset_JettyDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Wave loading force"
+
+#:IFC.xml:24983
+msgid "Pset_MarineFacilityTransportation"
+msgstr "Transporte Pset MarineFacilityTransportation"
+
+msgid "Pset_MarineFacilityTransportation_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] que são catalogadas como instalações de transporte como Portos, marinas, etc."
+
+#:IFC.xml:24984
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight"
+msgstr "BerthCargoWeight"
+
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight_DEFINITION"
+msgstr "Total cargo weight of berths within the facility"
+
+#:IFC.xml:24989
+msgid "Pset_MarineFacilityTransportation_BerthGrade"
+msgstr "Grau"
+
+msgid "Pset_MarineFacilityTransportation_BerthGrade_DEFINITION"
+msgstr "Berth grade"
+
+#:IFC.xml:24994
+msgid "Pset_MarineFacilityTransportation_Berths"
+msgstr "Berths"
+
+msgid "Pset_MarineFacilityTransportation_Berths_DEFINITION"
+msgstr "Number of standard berths within the facility"
+
+#:IFC.xml:25000
+msgid "Pset_MarineVehicleCommon"
+msgstr "Pset MarineVehicleCommon"
+
+msgid "Pset_MarineVehicleCommon_DEFINITION"
+msgstr "Propriedades comuns para a definição de todas as ocorrências de [[IfcTransportElement]] e tipos de [[IfcTransportElementType]] com o tipo predefinido definido definido como VEHICLEMARINE."
+
+#:IFC.xml:25001
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd"
+msgstr "AboveDeckProjectedWindEnd"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd_DEFINITION"
+msgstr "End on projected windage area above the main deck"
+
+#:IFC.xml:25006
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide"
+msgstr "Pistola"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide_DEFINITION"
+msgstr "Side on projected windage area above the main deck"
+
+#:IFC.xml:25011
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight"
+msgstr "CargoDeadWeight"
+
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight_DEFINITION"
+msgstr "Weight of bulk cargo carried"
+
+#:IFC.xml:25016
+msgid "Pset_MarineVehicleCommon_Displacement"
+msgstr "Deslocamento"
+
+msgid "Pset_MarineVehicleCommon_Displacement_DEFINITION"
+msgstr "Weight of water displaced by the vessel"
+
+#:IFC.xml:25021
+msgid "Pset_MarineVehicleCommon_LaneMeters"
+msgstr "Serradores"
+
+msgid "Pset_MarineVehicleCommon_LaneMeters_DEFINITION"
+msgstr "Length of lanes accommodating vehicles on roll on, roll off vessels"
+
+#:IFC.xml:25026
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars"
+msgstr "LengthBetweenPerpendiculars"
+
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars_DEFINITION"
+msgstr "Length of vessel from rudder shaft to crossing point of the bow and the loaded waterline."
+
+#:IFC.xml:25031
+msgid "Pset_MarineVehicleCommon_VesselDepth"
+msgstr "Profundidade"
+
+msgid "Pset_MarineVehicleCommon_VesselDepth_DEFINITION"
+msgstr "Depth of the vessel from the main deck to the keel."
+
+#:IFC.xml:25036
+msgid "Pset_MarineVehicleCommon_VesselDraft"
+msgstr "Rascunho"
+
+msgid "Pset_MarineVehicleCommon_VesselDraft_DEFINITION"
+msgstr "Depth of vessel from the waterline to the keel LightShip, Ballasted, Maximum"
+
+#:IFC.xml:25042
+msgid "Pset_MarineVehicleDesignCriteria"
+msgstr "Pset MarineVehicleDesignCteria"
+
+msgid "Pset_MarineVehicleDesignCriteria_DEFINITION"
+msgstr "Propriedades comuns para a definição de critérios de design de todas as ocorrências de [[IfcTransportElement]] e tipos de [[IfcTransportElementType]] com o tipo predefinido definido definido como MARINEVEHICLE"
+
+#:IFC.xml:25043
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure"
+msgstr "Pressão Permitida"
+
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure_DEFINITION"
+msgstr "Allowable contact pressure between fender and hull"
+
+#:IFC.xml:25048
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient"
+msgstr "Coeficiente"
+
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient_DEFINITION"
+msgstr "Vessel flexibility factor proportion of impact energy absorbed by the hull."
+
+#:IFC.xml:25054
+msgid "Pset_MooringDeviceCommon"
+msgstr "Pset MooringDeviceComum"
+
+msgid "Pset_MooringDeviceCommon_DEFINITION"
+msgstr "Properties common to the definition of all occurrences of [[IfcMooringDevice]] and types of [[IfcMooringDeviceType]] ."
+
+#:IFC.xml:25055
+msgid "Pset_MooringDeviceCommon_AnchorageType"
+msgstr "Tipo"
+
+msgid "Pset_MooringDeviceCommon_AnchorageType_DEFINITION"
+msgstr "Mooring device anchorage type"
+
+#:IFC.xml:25060
+msgid "Pset_MooringDeviceCommon_DeviceCapacity"
+msgstr "Capacidade"
+
+msgid "Pset_MooringDeviceCommon_DeviceCapacity_DEFINITION"
+msgstr "Mooring device force capacity"
+
+#:IFC.xml:25065
+msgid "Pset_MooringDeviceCommon_DeviceType"
+msgstr "Dispositivo:"
+
+msgid "Pset_MooringDeviceCommon_DeviceType_DEFINITION"
+msgstr "Mooring device type"
+
+#:IFC.xml:25070
+msgid "Pset_MooringDeviceCommon_MaximumLineCount"
+msgstr "ContagemMáxima"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineCount_DEFINITION"
+msgstr "Maximum number of lines that may be secured to the mooring device."
+
+#:IFC.xml:25075
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope"
+msgstr "MaximumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope_DEFINITION"
+msgstr "Maximum allowable line angle in degrees negative if below horizontal from quay"
+
+#:IFC.xml:25080
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope"
+msgstr "MinumumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope_DEFINITION"
+msgstr "Minimum allowable line angle in degrees negative if below horizontal from quay"
+
+#:IFC.xml:25086
+msgid "Pset_QuayCommon"
+msgstr "Pset QuayCommon"
+
+msgid "Pset_QuayCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como QUAY."
+
+#:IFC.xml:25087
+msgid "Pset_QuayCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_QuayCommon_BentSpacing_DEFINITION"
+msgstr "Bent upright spacing"
+
+#:IFC.xml:25092
+msgid "Pset_QuayCommon_Elevation"
+msgstr "Elevação"
+
+msgid "Pset_QuayCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:25097
+msgid "Pset_QuayCommon_QuaySectionType"
+msgstr "Tipo"
+
+msgid "Pset_QuayCommon_QuaySectionType_DEFINITION"
+msgstr "Whether the structure presents a solid closed barrier to the passage of water or is open."
+
+#:IFC.xml:25102
+msgid "Pset_QuayCommon_StructuralType"
+msgstr "Tipo"
+
+msgid "Pset_QuayCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:25108
+msgid "Pset_QuayDesignCriteria"
+msgstr "Pset QuayDesignCriteria"
+
+msgid "Pset_QuayDesignCriteria_DEFINITION"
+msgstr "Propriedades comuns para a definição de critérios de design de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como QUAY."
+
+#:IFC.xml:25109
+msgid "Pset_QuayDesignCriteria_EquipmentLoading"
+msgstr "Carregamento"
+
+msgid "Pset_QuayDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Loading from equipment"
+
+#:IFC.xml:25114
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel"
+msgstr "Nível ExtremeHighWater"
+
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "Extreme high water level"
+
+#:IFC.xml:25119
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel"
+msgstr "Nível ExtremeLowWaterlevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Extreme low water level"
+
+#:IFC.xml:25124
+msgid "Pset_QuayDesignCriteria_FlowLoading"
+msgstr "Carregando"
+
+msgid "Pset_QuayDesignCriteria_FlowLoading_DEFINITION"
+msgstr "Flow loading force"
+
+#:IFC.xml:25129
+msgid "Pset_QuayDesignCriteria_HighWaterLevel"
+msgstr "Nível Alto Água"
+
+msgid "Pset_QuayDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "High water level"
+
+#:IFC.xml:25134
+msgid "Pset_QuayDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "Low water level"
+
+#:IFC.xml:25139
+msgid "Pset_QuayDesignCriteria_ShipLoading"
+msgstr "CarregamentoCarregando"
+
+msgid "Pset_QuayDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Ship loading force"
+
+#:IFC.xml:25144
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "Uniformly Distributed Load"
+
+#:IFC.xml:25149
+msgid "Pset_QuayDesignCriteria_WaveLoading"
+msgstr "Ondulando"
+
+msgid "Pset_QuayDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Wave loading force"
+
+#:IFC.xml:25155
+msgid "Pset_RevetmentCommon"
+msgstr "Pset RevetmentCommon"
+
+msgid "Pset_RevetmentCommon_DEFINITION"
+msgstr "Propriedades comuns para a definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como REVETMENT."
+
+#:IFC.xml:25156
+msgid "Pset_RevetmentCommon_Elevation"
+msgstr "Elevação"
+
+msgid "Pset_RevetmentCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:25161
+msgid "Pset_RevetmentCommon_StructuralType"
+msgstr "Tipo"
+
+msgid "Pset_RevetmentCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:25167
+msgid "Pset_ShipLockCommon"
+msgstr "Pset NavioTronco Comum"
+
+msgid "Pset_ShipLockCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como SHIPLOCK."
+
+#:IFC.xml:25168
+msgid "Pset_ShipLockCommon_CillLevelLowerHead"
+msgstr "CillLevelLowerHead"
+
+msgid "Pset_ShipLockCommon_CillLevelLowerHead_DEFINITION"
+msgstr "Height of the lower head cill level"
+
+#:IFC.xml:25173
+msgid "Pset_ShipLockCommon_CillLevelUpperHead"
+msgstr "Cabeça"
+
+msgid "Pset_ShipLockCommon_CillLevelUpperHead_DEFINITION"
+msgstr "Height of the upper head cill level"
+
+#:IFC.xml:25178
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType"
+msgstr "Tipo WaterDeliverySystem"
+
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType_DEFINITION"
+msgstr "Type of water delivery system"
+
+#:IFC.xml:25183
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType"
+msgstr "Tipo WaterDeliveryValve"
+
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType_DEFINITION"
+msgstr "Type of water delivery valve"
+
+#:IFC.xml:25189
+msgid "Pset_ShiplockComplex"
+msgstr "Pset Complexo de navio"
+
+msgid "Pset_ShiplockComplex_DEFINITION"
+msgstr "Propriedades comuns à definição de ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como SHIPLOCK, onde a instalação representa um complexo de vários bandos de navios."
+
+#:IFC.xml:25190
+msgid "Pset_ShiplockComplex_LockChamberLevels"
+msgstr "LockChamberNíveis"
+
+msgid "Pset_ShiplockComplex_LockChamberLevels_DEFINITION"
+msgstr "Number of steps chambers in a lock line"
+
+#:IFC.xml:25195
+msgid "Pset_ShiplockComplex_LockGrade"
+msgstr "Bloquear"
+
+msgid "Pset_ShiplockComplex_LockGrade_DEFINITION"
+msgstr "Operational grading of the ship lock complex"
+
+#:IFC.xml:25200
+msgid "Pset_ShiplockComplex_LockLines"
+msgstr "LockLines"
+
+msgid "Pset_ShiplockComplex_LockLines_DEFINITION"
+msgstr "Number of Parallel lock series"
+
+#:IFC.xml:25205
+msgid "Pset_ShiplockComplex_LockMode"
+msgstr "Modo de Bloqueio"
+
+msgid "Pset_ShiplockComplex_LockMode_DEFINITION"
+msgstr "Type of lock system used."
+
+#:IFC.xml:25211
+msgid "Pset_ShiplockDesignCriteria"
+msgstr "Pset ShiplockDesignCritério"
+
+msgid "Pset_ShiplockDesignCriteria_DEFINITION"
+msgstr "Propriedades comuns à definição de critérios de design de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como SHIPLOCK."
+
+#:IFC.xml:25212
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel"
+msgstr "DownstreamFloodWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel_DEFINITION"
+msgstr "the design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25217
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel"
+msgstr "NívelDownstreamMantenhaWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "Design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25222
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel"
+msgstr "Nível MaximumDownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design maximum downstream water level for the lock complex"
+
+#:IFC.xml:25227
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel"
+msgstr "Nível MaximumUpstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25232
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel"
+msgstr "Nível Mínimo DownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design minimum downstream water level for the lock complex"
+
+#:IFC.xml:25237
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel"
+msgstr "Nível WaterLevel MinimumUpstreamer"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25242
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel"
+msgstr "Nível de UpstreamFloodWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25247
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel"
+msgstr "Nível WaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25253
+msgid "Pset_ShipyardCommon"
+msgstr "Pset ShipyardComum"
+
+msgid "Pset_ShipyardCommon_DEFINITION"
+msgstr "Propriedades comuns à definição de todas as ocorrências de [[IfcMarineFacility]] com o tipo predefinido definido definido como SHIPYARD."
+
+#:IFC.xml:25254
+msgid "Pset_ShipyardCommon_PrimaryProductionType"
+msgstr "Tipo"
+
+msgid "Pset_ShipyardCommon_PrimaryProductionType_DEFINITION"
+msgstr "Primary type of ship production of the facility"
+
+#:IFC.xml:25260
+msgid "Pset_SiteWeather"
+msgstr "Pset SiteWeather"
+
+msgid "Pset_SiteWeather_DEFINITION"
+msgstr "Propriedades do clima do site"
+
+#:IFC.xml:25261
+msgid "Pset_SiteWeather_MaxAmbientTemp"
+msgstr "MaxAmbientTemp"
+
+msgid "Pset_SiteWeather_MaxAmbientTemp_DEFINITION"
+msgstr "Maximum ambient temperature of the site used as a basis of design"
+
+#:IFC.xml:25266
+msgid "Pset_SiteWeather_MinAmbientTemp"
+msgstr "MinAmbientTemp"
+
+msgid "Pset_SiteWeather_MinAmbientTemp_DEFINITION"
+msgstr "Minimum ambient temperature of the site used as a basis of design"
+
+#:IFC.xml:25272
+msgid "Pset_VehicleAvailability"
+msgstr "Veículos Pset Disponibilidade"
+
+msgid "Pset_VehicleAvailability_DEFINITION"
+msgstr "Propriedade definida para a aplicação dos dados disponíveis a veículos e equipamentos."
+
+#:IFC.xml:25273
+msgid "Pset_VehicleAvailability_MaintenanceDowntime"
+msgstr "MaintenanceDowntime"
+
+msgid "Pset_VehicleAvailability_MaintenanceDowntime_DEFINITION"
+msgstr "MaintenanceDowntime"
+
+#:IFC.xml:25278
+msgid "Pset_VehicleAvailability_VehicleAvailability"
+msgstr "VehicleAvailability"
+
+msgid "Pset_VehicleAvailability_VehicleAvailability_DEFINITION"
+msgstr "Vehicle or Plant availability"
+
+#:IFC.xml:25283
+msgid "Pset_VehicleAvailability_WeatherDowntime"
+msgstr "WeatherDowntime"
+
+msgid "Pset_VehicleAvailability_WeatherDowntime_DEFINITION"
+msgstr "Weather downtime proportion"
+
+#:IFC.xml:25289
+msgid "Pset_VesselLineCommon"
+msgstr "Pset VesselLinhaComum"
+
+msgid "Pset_VesselLineCommon_DEFINITION"
+msgstr "Propriedades para linhas do navio e ancoragem"
+
+#:IFC.xml:25290
+msgid "Pset_VesselLineCommon_CentreLineToFairlead"
+msgstr "CentreLineToFairlead"
+
+msgid "Pset_VesselLineCommon_CentreLineToFairlead_DEFINITION"
+msgstr "Distance from the vessel centreline to the fairlead for the line"
+
+#:IFC.xml:25295
+msgid "Pset_VesselLineCommon_FairleadToTermination"
+msgstr "FairleadToTermination"
+
+msgid "Pset_VesselLineCommon_FairleadToTermination_DEFINITION"
+msgstr "Distance from the fairlead to the bitt or winch on the vessel where the line terminates"
+
+#:IFC.xml:25300
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck"
+msgstr "Deck HeightAboveMaink"
+
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck_DEFINITION"
+msgstr "Height of the fairlead above the main deck of the vessel"
+
+#:IFC.xml:25305
+msgid "Pset_VesselLineCommon_LineIdentifier"
+msgstr "LineIdentifier"
+
+msgid "Pset_VesselLineCommon_LineIdentifier_DEFINITION"
+msgstr "Reference ID relative to a design vessel in the project"
+
+#:IFC.xml:25310
+msgid "Pset_VesselLineCommon_LineStrength"
+msgstr "Força"
+
+msgid "Pset_VesselLineCommon_LineStrength_DEFINITION"
+msgstr "Breaking load of the line note that ultimate stress is not part of any of the material Psets"
+
+#:IFC.xml:25315
+msgid "Pset_VesselLineCommon_LineType"
+msgstr "Tipo"
+
+msgid "Pset_VesselLineCommon_LineType_DEFINITION"
+msgstr "Mooring line type"
+
+#:IFC.xml:25320
+msgid "Pset_VesselLineCommon_MidshipToFairLead"
+msgstr "MidshipToFairLead"
+
+msgid "Pset_VesselLineCommon_MidshipToFairLead_DEFINITION"
+msgstr "Distance from the vessel midship to the fairlead for the line"
+
+#:IFC.xml:25325
+msgid "Pset_VesselLineCommon_PreTensionAim"
+msgstr "PreTensionAim"
+
+msgid "Pset_VesselLineCommon_PreTensionAim_DEFINITION"
+msgstr "Line force that the winch is set to maintain minimum load"
+
+#:IFC.xml:25330
+msgid "Pset_VesselLineCommon_TailDiameter"
+msgstr "TailDiameter"
+
+msgid "Pset_VesselLineCommon_TailDiameter_DEFINITION"
+msgstr "Diameter of the tail"
+
+#:IFC.xml:25335
+msgid "Pset_VesselLineCommon_TailLength"
+msgstr "Comprimento de Cauda"
+
+msgid "Pset_VesselLineCommon_TailLength_DEFINITION"
+msgstr "Length of the tail"
+
+#:IFC.xml:25340
+msgid "Pset_VesselLineCommon_TailStrength"
+msgstr "Força Caudal"
+
+msgid "Pset_VesselLineCommon_TailStrength_DEFINITION"
+msgstr "Breaking load of the tail note that ultimate stress is not part of any of the material Psets"
+
+#:IFC.xml:25345
+msgid "Pset_VesselLineCommon_TailType"
+msgstr "Tipo Caudal"
+
+msgid "Pset_VesselLineCommon_TailType_DEFINITION"
+msgstr "Mooring tail type"
+
+#:IFC.xml:25350
+msgid "Pset_VesselLineCommon_WinchBreakLimit"
+msgstr "Limite de WinchBreak"
+
+msgid "Pset_VesselLineCommon_WinchBreakLimit_DEFINITION"
+msgstr "Line force at which the winch starts to release the line maximum load"
+
+#:IFC.xml:25356
+msgid "Qto_FacilityPartBaseQuantities"
+msgstr "Qto FacilityPartQuantities"
+
+msgid "Qto_FacilityPartBaseQuantities_DEFINITION"
+msgstr "Base quantities that are common to the definition of all occurrences of [[IfcFacility]] ."
+
+#:IFC.xml:25357
+msgid "Qto_FacilityPartBaseQuantities_Area"
+msgstr "área"
+
+msgid "Qto_FacilityPartBaseQuantities_Area_DEFINITION"
+msgstr "Area of the projection as viewed by an elevation view for wall projections or as viewed by a ground floor view for slab projections ."
+
+#:IFC.xml:25362
+msgid "Qto_FacilityPartBaseQuantities_Height"
+msgstr "Altura"
+
+msgid "Qto_FacilityPartBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25367
+msgid "Qto_FacilityPartBaseQuantities_Length"
+msgstr "Comprimento"
+
+msgid "Qto_FacilityPartBaseQuantities_Length_DEFINITION"
+msgstr "O comprimento nominal da seção de transição. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
+
+#:IFC.xml:25372
+msgid "Qto_FacilityPartBaseQuantities_Volume"
+msgstr "Volume"
+
+msgid "Qto_FacilityPartBaseQuantities_Volume_DEFINITION"
+msgstr "Total volume of fluid in the tubes and their headers."
+
+#:IFC.xml:25377
+msgid "Qto_FacilityPartBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_FacilityPartBaseQuantities_Width_DEFINITION"
+msgstr "A largura nominal da escavação de trincha. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
+
+#:IFC.xml:25383
+msgid "Qto_MarineFacilityBaseQuantities"
+msgstr "Qto MarineFacilityBaseQuantidades"
+
+msgid "Qto_MarineFacilityBaseQuantities_DEFINITION"
+msgstr "Base quantities that are common to the definition of all occurrences of [[IfcMarineFacility]] ."
+
+#:IFC.xml:25384
+msgid "Qto_MarineFacilityBaseQuantities_Area"
+msgstr "área"
+
+msgid "Qto_MarineFacilityBaseQuantities_Area_DEFINITION"
+msgstr "Area of the projection as viewed by an elevation view for wall projections or as viewed by a ground floor view for slab projections ."
+
+#:IFC.xml:25389
+msgid "Qto_MarineFacilityBaseQuantities_Height"
+msgstr "Altura"
+
+msgid "Qto_MarineFacilityBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25394
+msgid "Qto_MarineFacilityBaseQuantities_Length"
+msgstr "Comprimento"
+
+msgid "Qto_MarineFacilityBaseQuantities_Length_DEFINITION"
+msgstr "O comprimento nominal da seção de transição. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
+
+#:IFC.xml:25399
+msgid "Qto_MarineFacilityBaseQuantities_Volume"
+msgstr "Volume"
+
+msgid "Qto_MarineFacilityBaseQuantities_Volume_DEFINITION"
+msgstr "Total volume of fluid in the tubes and their headers."
+
+#:IFC.xml:25404
+msgid "Qto_MarineFacilityBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_MarineFacilityBaseQuantities_Width_DEFINITION"
+msgstr "A largura nominal da escavação de trincha. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
+
+#:IFC.xml:25410
+msgid "Qto_VehicleBaseQuantities"
+msgstr "Qto VehicleBaseQuantidades"
+
+msgid "Qto_VehicleBaseQuantities_DEFINITION"
+msgstr "Quantidade de veículos"
+
+#:IFC.xml:25411
+msgid "Qto_VehicleBaseQuantities_Height"
+msgstr "Altura"
+
+msgid "Qto_VehicleBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25416
+msgid "Qto_VehicleBaseQuantities_Length"
+msgstr "Comprimento"
+
+msgid "Qto_VehicleBaseQuantities_Length_DEFINITION"
+msgstr "O comprimento nominal da seção de transição. A informação de tamanho é fornecida, além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
+
+#:IFC.xml:25421
+msgid "Qto_VehicleBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_VehicleBaseQuantities_Width_DEFINITION"
+msgstr "A largura nominal da escavação de trincha. A informação de tamanho é fornecida além da representação da forma e dos parâmetros geométricos usados dentro. Em casos de inconsistência entre os parâmetros geométricos e as propriedades de tamanho, fornecidas no conjunto de propriedades anexadas, os parâmetros geométricos têm precedência."
 
