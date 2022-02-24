@@ -4,7 +4,14 @@
 * The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
 * The Property 'Pset_DistributionPortTypePipe.ConnectionSubType' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowrateRange' has no definition
-* The Property 'Pset_FastenerWeld.n' has no definition
+* The Property 'Pset_FastenerWeld.DeepPenetrationThroatThickness' has no definition
+* The Property 'Pset_FastenerWeld.NominalThroatThickness' has no definition
+* The Property 'Pset_FastenerWeld.NumberOfWeldElements' has no definition
+* The Property 'Pset_FastenerWeld.WeldDiameter' has no definition
+* The Property 'Pset_FastenerWeld.WeldElementLength' has no definition
+* The Property 'Pset_FastenerWeld.WeldElementSpacing' has no definition
+* The Property 'Pset_FastenerWeld.WeldLegLength' has no definition
+* The Property 'Pset_FastenerWeld.WeldWidth' has no definition
 * The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForQuantity
@@ -119,7 +126,14 @@
 * For document 'Version.md/v/properties/docs' a property cannot be found
 * For document 'VersionDate.md/v/properties/docs' a property cannot be found
 * For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
+* For document 'a.md/a/properties/docs' a property cannot be found
+* For document 'c.md/c/properties/docs' a property cannot be found
+* For document 'd.md/d/properties/docs' a property cannot be found
+* For document 'e.md/e/properties/docs' a property cannot be found
+* For document 'l.md/l/properties/docs' a property cannot be found
 * For document 'n.md/n/properties/docs' a property cannot be found
+* For document 's.md/s/properties/docs' a property cannot be found
+* For document 'z.md/z/properties/docs' a property cannot be found
 * For document 'zzInPlane.md/z/properties/docs' a property cannot be found
 * For document 'zzInPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzOutOfPlane.md/z/properties/docs' a property cannot be found
