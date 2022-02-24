@@ -9,310 +9,1773 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /master/IfcUtilityResource.pot\n"
-"X-Crowdin-File-ID: 102\n"
+"X-Crowdin-File: /master/IfcPortsAndWaterwaysDomain.pot\n"
+"X-Crowdin-File-ID: 103\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ja_JP\n"
 "PO-Revision-Date: 2022-02-24 03:55\n"
 
-#:IFC.xml:43852
-msgid "IfcApplication"
-msgstr "IfcApplication"
+#:IFC.xml:24420
+msgid "IfcConveyorSegment"
+msgstr "IfcConveyorSegment"
 
-msgid "IfcApplication_DEFINITION"
-msgstr "[[IfcApplication]] holds the information about an IFC compliant application developed by an application developer. The [[IfcApplication]] utilizes a short identifying name as provided by the application developer. HISTORY New entity in IFC1.5."
+msgid "IfcConveyorSegment_DEFINITION"
+msgstr "A conveyor segment defines an occurrence of a flow segment continuous run within a conveyor system that joins two sections of the system. these can utilise different carrying methods such as belt, rope, chain, screw etc. NOTE Definition according to ISO6707 1 machine that continuously transports material or objects along a gentle slope using an endless belt, rope or chain, or rollers."
 
-#:IFC.xml:170
-msgid "IfcApplication_ApplicationDeveloper"
-msgstr "アプリケーション開発者"
+#:IFC.xml:24421
+msgid "IfcConveyorSegment_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcApplication_ApplicationDeveloper_DEFINITION"
-msgstr "Name of the application developer."
+msgid "IfcConveyorSegment_PredefinedType_DEFINITION"
+msgstr "Identifies the predefined type of a conveyor segment. This type may associate additional specific property sets. NOTE The PredefinedType shall only be used, if no [[IfcConveyorSegmentType]] is assigned, providing its own [[IfcConveyorSegmentType]] .PredefinedType."
 
-#:IFC.xml:43853
-msgid "IfcApplication_ApplicationFullName"
-msgstr "ApplicationFullName"
+#:IFC.xml:24428
+msgid "IfcConveyorSegmentType"
+msgstr "IfcConveyorSegmentType"
 
-msgid "IfcApplication_ApplicationFullName_DEFINITION"
-msgstr "アプリケーション開発者によって指定されたアプリケーションの完全な名前。"
+msgid "IfcConveyorSegmentType_DEFINITION"
+msgstr "[[IfcConveyorSegmentType]] は、[[IfcConveyorSegment]] 発生の型情報を提供します。 コンベアセグメントは、システムの2つのセクションを結合するコンベアシステム内で連続的に実行されるフローセグメントの発生を定義します。 これらはベルト、ロープ、チェーン、ネジなどの異なる運搬方法を利用できます"
 
-#:IFC.xml:43858
-msgid "IfcApplication_ApplicationIdentifier"
-msgstr "ApplicationID"
+#:IFC.xml:24429
+msgid "IfcConveyorSegmentType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcApplication_ApplicationIdentifier_DEFINITION"
-msgstr "アプリケーションの短い識別名。"
+msgid "IfcConveyorSegmentType_PredefinedType_DEFINITION"
+msgstr "事前に定義されたコンベアセグメントのタイプを識別します。"
 
-#:IFC.xml:43863
-msgid "IfcApplication_Version"
-msgstr "バージョン"
+#:IFC.xml:24436
+msgid "IfcConveyorSegmentTypeEnum"
+msgstr "IfcConveyorSegmentTypeEnum"
 
-msgid "IfcApplication_Version_DEFINITION"
-msgstr "アプリケーションの開発者によって指定されたこのソフトウェアのバージョン番号。"
+msgid "IfcConveyorSegmentTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of conveyor segments that can further specify an [[IfcConveyorSegment]] or [[IfcConveyorSegmentType]] . Items CHUTECONVEYOR Gravity operated conveyor where media descends through a trough or chute. BELTCONVEYOR An endless belt for carrying material without stretching. SCREWCONVEYOR composed of a longitudinal screw in a trough or pipe that rotates to force media through the segment BUCKETCONVEYOR A conveyor in the form of connected buckets or segments that move in a continuous loop USERDEFINED NOTDEFINED"
 
-#:IFC.xml:43893
-msgid "IfcChangeActionEnum"
-msgstr "IfcChangeActionEnum"
+#:IFC.xml:24450
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR"
+msgstr "BELTCONVEYOR"
 
-msgid "IfcChangeActionEnum_DEFINITION"
-msgstr "[[IfcChangeActionEnum]] identifies the type of change that might have occurred to the object during the last session for example, added, modified, deleted . This information is required in a partial model exchange scenario so that an application or model server will know how an object might have been affected by the previous application. Valid enumerations are Consider Application A will create an IFC dataset that it wants to publish to others for modification and have the ability to subsequently merge these changes back into the original model. Before publication, it may want to set the [[IfcChangeActionEnum]] to NOCHANGE to establish a baseline so that other application changes can be easily identified. Application B then receives this IFC dataset and adds a new object and sets [[IfcChangeActionEnum]] to ADDED with Application B defined as the OwningApplication. Application B then modifies an existing object and re defines the LastModifiedDate to the time of the modification, LastModifyingUser to the [[IfcPersonAndOrganization]] making the change, and sets the LastModifyingApplication to Application B. When Application A receives this modified dataset, it can determine which objects have been added and modified by Application B and either merge or reject these changes as necessary. Consequently, the intent is that an application only modifies the value of [[IfcChangeActionEnum]] when it does something to the object, with the further intent that a model server is responsible for clearing the [[IfcChangeActionEnum]] back to NOCHANGE when it is ready to be republished. HISTORY New enumeration in IFC2.0. .change ifc2x4 IFC4 CHANGE Enumerators MODIFIEDADDED and MODIFIEDDELETED have been removed Items NOCHANGE Object has not been modified. MODIFIED A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. ADDED The object has been created by the user and application defined by the OwningUser and OwningApplication respectively. DELETED The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively. NOTDEFINED The change action is not known or has not been defined."
+msgid "IfcConveyorSegmentTypeEnum_BELTCONVEYOR_DEFINITION"
+msgstr "ストレッチなしで素材を運ぶための無限のベルト。"
 
-#:IFC.xml:43894
-msgid "IfcChangeActionEnum_ADDED"
-msgstr "追加"
+#:IFC.xml:24451
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR"
+msgstr "BUCKETCONVEYAR"
 
-msgid "IfcChangeActionEnum_ADDED_DEFINITION"
-msgstr "The object has been created by the user and application defined by the OwningUser and OwningApplication respectively."
+msgid "IfcConveyorSegmentTypeEnum_BUCKETCONVEYOR_DEFINITION"
+msgstr "連続的なループで動く接続されたバケットまたはセグメントのコンベア。"
 
-#:IFC.xml:43895
-msgid "IfcChangeActionEnum_DELETED"
-msgstr "削除"
+#:IFC.xml:24452
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR"
+msgstr "CHUTECONVEYOR"
 
-msgid "IfcChangeActionEnum_DELETED_DEFINITION"
-msgstr "The object has been deleted by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
+msgid "IfcConveyorSegmentTypeEnum_CHUTECONVEYOR_DEFINITION"
+msgstr "重力は媒体がトラフかシュートを通って下降するコンベアを操作します。"
 
-#:IFC.xml:43896
-msgid "IfcChangeActionEnum_MODIFIED"
-msgstr "変更"
-
-msgid "IfcChangeActionEnum_MODIFIED_DEFINITION"
-msgstr "A modification to the object has been made by the user and application defined by the LastModifyingUser and LastModifyingApplication respectively."
-
-#:IFC.xml:43897
-msgid "IfcChangeActionEnum_NOCHANGE"
-msgstr "変更なし"
-
-msgid "IfcChangeActionEnum_NOCHANGE_DEFINITION"
-msgstr "Object has not been modified."
-
-#:IFC.xml:43898
-msgid "IfcChangeActionEnum_NOTDEFINED"
+#:IFC.xml:24453
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED"
 msgstr "注記されました"
 
-msgid "IfcChangeActionEnum_NOTDEFINED_DEFINITION"
-msgstr "The change action is not known or has not been defined."
+msgid "IfcConveyorSegmentTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:43900
-msgid "IfcOwnerHistory"
-msgstr "IfcOwnerHistory"
+#:IFC.xml:24454
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR"
+msgstr "SCREWCONVEYOR"
 
-msgid "IfcOwnerHistory_DEFINITION"
-msgstr "[[IfcOwnerHistory]] defines all history and identification related information. In order to provide fast access it is directly attached to all independent objects, relationships and properties. [[IfcOwnerHistory]] is used to identify the creating and owning application and user for the associated object, as well as capture the last modifying application and user. HISTORY New entity in IFC1.0. .change ifc2x4 IFC4 CHANGE ChangeAction is now optional and a related WHERE rule enforces conditions when it is asserted. .spec head Informal Propositions 1. If LastModifiedDate is defined but ChangeAction is not asserted, then the state of ChangeAction is assumed to be UNDEFINED. 2. If both LastModifiedDate and ChangeAction are asserted, then the state of ChangeAction applies to the value asserted in LastModifiedDate."
+msgid "IfcConveyorSegmentTypeEnum_SCREWCONVEYOR_DEFINITION"
+msgstr "トラフやパイプの中の縦方向のスクリューで構成されておりこのセグメントを通じてメディアを強制的に回転させ"
 
-#:IFC.xml:316
-msgid "IfcOwnerHistory_OwningUser"
-msgstr "所有しているユーザー"
+#:IFC.xml:24455
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcOwnerHistory_OwningUser_DEFINITION"
-msgstr "Direct reference to the end user who currently owns this object. Note that IFC includes the concept of ownership transfer from one user to another and therefore distinguishes between the Owning User and Creating User."
+msgid "IfcConveyorSegmentTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:328
-msgid "IfcOwnerHistory_LastModifyingUser"
-msgstr "LastModifyingUser"
+#:IFC.xml:24456
+msgid "IfcLiquidTerminal"
+msgstr "IfcLiquidTerminal"
 
-msgid "IfcOwnerHistory_LastModifyingUser_DEFINITION"
-msgstr "User who carried out the last modification using LastModifyingApplication."
+msgid "IfcLiquidTerminal_DEFINITION"
+msgstr "液体端子とは、分配システムs 間の液体の移動のための終点または起点である。 液体分配システムが外部環境と相互作用する点です その一例として、ドッキングされた容器から液体を移送するための装填アームがあります。"
 
-#:IFC.xml:43869
-msgid "IfcOwnerHistory_OwningApplication"
-msgstr "所有しているアプリケーション"
+#:IFC.xml:24457
+msgid "IfcLiquidTerminal_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcOwnerHistory_OwningApplication_DEFINITION"
-msgstr "Direct reference to the application which currently owns this object on behalf of the owning user of the application. Note that IFC includes the concept of ownership transfer from one application to another and therefore distinguishes between the Owning Application and Creating Application."
+msgid "IfcLiquidTerminal_PredefinedType_DEFINITION"
+msgstr "液体端子の定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 注 PredefinedType は、[[IfcLiquidTerminalType]] が割り当てられていない場合にのみ使用され、独自の [[IfcLiquidTerminalType]].PredefinedType を提供します。"
 
-#:IFC.xml:43881
-msgid "IfcOwnerHistory_LastModifyingApplication"
-msgstr "LastModifyingApplication"
+#:IFC.xml:24464
+msgid "IfcLiquidTerminalType"
+msgstr "IfcLiquidTerminalType"
 
-msgid "IfcOwnerHistory_LastModifyingApplication_DEFINITION"
-msgstr "Application used to make the last modification."
+msgid "IfcLiquidTerminalType_DEFINITION"
+msgstr "LiquidTerminalType は LiquidTerminal 発生の型情報を提供します。 液体端子とは、分配システムs 間の液体の移動のための終点または起点である。 液体分配システムが外部環境と相互作用する点です その一例として、ドッキングされた容器から液体を移送するための装填アームがあります。"
 
-#:IFC.xml:43901
-msgid "IfcOwnerHistory_ChangeAction"
-msgstr "ChangeAction"
+#:IFC.xml:24465
+msgid "IfcLiquidTerminalType_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcOwnerHistory_ChangeAction_DEFINITION"
-msgstr "オブジェクトに対する変更に関連付けられたアクションを定義する列挙。"
+msgid "IfcLiquidTerminalType_PredefinedType_DEFINITION"
+msgstr "液体端子の定義済みタイプを識別します。"
 
-#:IFC.xml:43906
-msgid "IfcOwnerHistory_CreationDate"
-msgstr "作成日"
+#:IFC.xml:24472
+msgid "IfcLiquidTerminalTypeEnum"
+msgstr "IfcLiquidTerminalTypeEnum"
 
-msgid "IfcOwnerHistory_CreationDate_DEFINITION"
-msgstr "UTCユニバーサルタイムコーディネート(UTC)で表される日付と時刻、元の所有アプリケーションによって最初に作成されたときに、グリニッジ標準時またはGMTで表される日付。 一度定義されると、この値はエンティティの存続期間を通じて変更されません。"
+msgid "IfcLiquidTerminalTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of liquid terminals that can further specify an [[IfcLiquidTerminal]] or [[IfcLiquidTerminalType]] . Items LOADINGARM HOSEREEL A Supporting framework on which a hose may be wound whose primary purpose is to connect and interact with the external environment. USERDEFINED NOTDEFINED"
 
-#:IFC.xml:43911
-msgid "IfcOwnerHistory_LastModifiedDate"
-msgstr "LastModifiedDate"
+#:IFC.xml:24482
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL"
+msgstr "精細機"
 
-msgid "IfcOwnerHistory_LastModifiedDate_DEFINITION"
-msgstr "UTCユニバーサルタイムコーディネートで表される日付と時刻 最後の変更が LastModifyingUser と LastModifyingApplicationによって行われた前のGreenwich Mean TimeまたはGMT。"
+msgid "IfcLiquidTerminalTypeEnum_HOSEREEL_DEFINITION"
+msgstr "外部環境との接続および対話を主な目的とするホースを傷つける可能性があるサポートフレームワーク。"
 
-#:IFC.xml:43916
-msgid "IfcOwnerHistory_State"
-msgstr "都道府県："
+#:IFC.xml:24483
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM"
+msgstr "ローディング"
 
-msgid "IfcOwnerHistory_State_DEFINITION"
-msgstr "オブジェクトの現在のアクセス状態を定義する列挙。"
+msgid "IfcLiquidTerminalTypeEnum_LOADINGARM_DEFINITION"
+msgstr "ローディング"
 
-#:IFC.xml:43922
-msgid "IfcStateEnum"
-msgstr "IfcStateEnum"
+#:IFC.xml:24484
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcStateEnum_DEFINITION"
-msgstr "The [[IfcStateEnum]] enumeration identifies the state or accessibility of the object for example, read write, locked . Valid enumerations are HISTORY New enumeration in IFC2.0. .change ifc2x3 IFC2x3 CHANGE This concept was initially introduced in IFC2.0 as IfcModifiedFlag of type BINARY 3 FIXED and has been modified in R2x3 to an enumeration. It was initially introduced as a first step towards providing facilities for partial model exchange and is intended for use primarily by a model server so that an application can identify the state of the object. Items READWRITE READONLY Object is in a Read Only state. It may be viewed but not modified by an application. LOCKED Object is in a Locked state. It may not be accessed by an application. READWRITELOCKED Object is in a Read Write Locked state. It may not be accessed by an application. READONLYLOCKED Object is in a Read Only Locked state. It may not be accessed by an application."
+msgid "IfcLiquidTerminalTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:43923
-msgid "IfcStateEnum_LOCKED"
-msgstr "ロック済み"
+#:IFC.xml:24485
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
 
-msgid "IfcStateEnum_LOCKED_DEFINITION"
-msgstr "Object is in a Locked state. It may not be accessed by an application."
+msgid "IfcLiquidTerminalTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
 
-#:IFC.xml:43924
-msgid "IfcStateEnum_READONLY"
-msgstr "読み取り専用"
+#:IFC.xml:24486
+msgid "IfcMarineFacility"
+msgstr "IfcMarineFacility"
 
-msgid "IfcStateEnum_READONLY_DEFINITION"
-msgstr "Object is in a Read Only state. It may be viewed but not modified by an application."
+msgid "IfcMarineFacility_DEFINITION"
+msgstr "海洋施設は、港や水路領域に固有の主要な構造またはエンティティを表します。 この例にはクエーイ、ジェット、造船所、防波堤などがあります"
 
-#:IFC.xml:43925
-msgid "IfcStateEnum_READONLYLOCKED"
-msgstr "準備完了"
+#:IFC.xml:24487
+msgid "IfcMarineFacility_PredefinedType"
+msgstr "PredefinedType"
 
-msgid "IfcStateEnum_READONLYLOCKED_DEFINITION"
-msgstr "Object is in a Read Only Locked state. It may not be accessed by an application."
+msgid "IfcMarineFacility_PredefinedType_DEFINITION"
+msgstr "海洋施設の定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。"
 
-#:IFC.xml:43926
-msgid "IfcStateEnum_READWRITE"
-msgstr "READWRITE"
+#:IFC.xml:24494
+msgid "IfcMarineFacilityTypeEnum"
+msgstr "IfcMarineFacilityTypeEnum"
 
-msgid "IfcStateEnum_READWRITE_DEFINITION"
-msgstr "READWRITE"
+msgid "IfcMarineFacilityTypeEnum_DEFINITION"
+msgstr "The predefined type container that collects all possible marine facility types together into the implemented enumeration. Items CANAL A man made watercourse constructed usually, to join rivers, lakes or seas and often of a size suitable for navigation. NOTE definition in ISO 6707 channel constructed to carry water, usually for navigation, but which can also be used for water power, irrigation, collecting rainwater run off , or drainage of surface water. WATERWAYSHIPLIFT A facility used for raising and lowering boats, ships and other watercraft between stretches of water of different levels on river and canal waterways or between impounded basins. This is achieved via an impounded trough of water which is mechanically lifted up and down. REVETMENT LAUNCHRECOVERY MARINEDEFENCE HYDROLIFT A type of vessel launch recovery facility, also known as a hydraulic lift dock, where ships are lifted vertically by water impounding systems, then floated laterally across the land to berths which subsequently become dry. SHIPYARD A coastal waterside facility where ships are built and repaired. SHIPLIFT A type of vessel launch recovery facility, where ships are lifted vertically out of the water on platforms connected to winches, then transferred horizontally to land based berths on rail, wheel or track systems. PORT QUAY a facility for the mooring of vessels accompanied with the loading and unloading of cargo or passengers or the maintenance of vessels. FLOATINGDOCK NAVIGATIONALCHANNEL BREAKWATER A longitudinal structure that protects a shore area, harbour, basin or estuary from waves. NOTE Definition in ISO 21650 structure protecting a shore area, harbour, anchorage and or basin from waves NOTE Definition in ISO 6707 long structure in a body of water designed to protect a basin or the shore from waves DRYDOCK a Dry dock is an enclosed chamber by gate that allows the draining of water for the construction or repair of marine vessels. NOTE definition in ISO 6707 dock with gates from which water can be drained or pumped, leaving it dry to enable a vessel to be built or repaired JETTY A berthing structure, that extends out into the sea usually perpendicular to the coastline, primarily for the transfer of liquid bulk materials. NOTE definition in ISO 21650 deck structure supported by vertical and possibly inclined piles extending into the sea, frequently in a direction normal to the coastline. NOTE definition in ISO 28640 facility consisting of a trestle or similar structure, berthing facilities including fendering and topside equipment to enable the transfer of LNG between ship and shore. SHIPLOCK A facility used for raising and lowering boats, ships and other watercraft between stretches of water of different levels on rivers and canal waterways or between impounded basins. This is achieved via an impounded chamber of water which is filled and emptied. BARRIERBEACH a sand ridge that rises slightly above the surface of the sea and runs roughly parallel to the shore, from which it is separated by a lagoon. SLIPWAY A facility for the dynamic launch or recovery of a vessel utilizing an inclined ramp and gravitational or mechanical hauling systems. WATERWAY A subset of facilities that have the primary function of providing a navigable area of water. USERDEFINED NOTDEFINED"
 
-#:IFC.xml:43927
-msgid "IfcStateEnum_READWRITELOCKED"
-msgstr "READWRITELOCKED"
+#:IFC.xml:24517
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH"
+msgstr "BARRIERBEACH"
 
-msgid "IfcStateEnum_READWRITELOCKED_DEFINITION"
-msgstr "Object is in a Read Write Locked state. It may not be accessed by an application."
+msgid "IfcMarineFacilityTypeEnum_BARRIERBEACH_DEFINITION"
+msgstr "海面上にわずかに上昇し海岸とほぼ平行に走る砂の尾根です ラグーンで区切られています"
 
-#:IFC.xml:43929
-msgid "IfcTable"
-msgstr "IfcTable"
+#:IFC.xml:24518
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER"
+msgstr "BREAKWATER"
 
-msgid "IfcTable_DEFINITION"
-msgstr "An [[IfcTable]] is a data structure for the provision of information in the form of rows and columns. Each instance may have [[IfcTableColumn]] instances that define the name, description and units for each column. The rows of information are stored as a list of [[IfcTableRow]] objects. Limitation For backwards compatibility, the rows of an [[IfcTable]] object are constrained to have the same number of cells. The first row of the table provides the number of cells. All other rows are forced to include the same number of cells. This is enforced by the WR2. Figure 1 illustrates table use. Table use .. .. .. .. figures ifctable image1.gif Figure 1 Table use Figure 2 depicts how tables were structured prior to IFC4. Table use alternative .. .. .. .. figures ifctable image2.gif Figure 2 Table use alternative HISTORY New entity in IFC1.5. .change ifc2x4 IFC4 CHANGE Columns attribute added."
+msgid "IfcMarineFacilityTypeEnum_BREAKWATER_DEFINITION"
+msgstr "海岸エリア、港、流域または河口を波から保護する縦方向構造。 注記の定義 ISO 21650 の定義は海岸エリア、港を保護します。 波からのアンカレッジおよび流域(注) 流域または海岸を波から保護するために設計された水体のISO6707の長い構造体における定義"
 
-#:IFC.xml:43953
-msgid "IfcTable_Rows"
-msgstr "行"
+#:IFC.xml:24519
+msgid "IfcMarineFacilityTypeEnum_CANAL"
+msgstr "CANAL"
 
-msgid "IfcTable_Rows_DEFINITION"
-msgstr "Reference to information content of rows."
+msgid "IfcMarineFacilityTypeEnum_CANAL_DEFINITION"
+msgstr "人は、川、湖や海に合流し、多くの場合、ナビゲーションに適したサイズの水路を作った。 注記の定義は、通常はナビゲーション用に水を運ぶために構築された ISO 6707 チャネルです。 水力や灌漑、雨水の収集や地表水の排水にも使えます"
 
-#:IFC.xml:43965
-msgid "IfcTable_Columns"
-msgstr "列"
+#:IFC.xml:24520
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK"
+msgstr "DRYDOCK"
 
-msgid "IfcTable_Columns_DEFINITION"
-msgstr "The column information associated with this table."
+msgid "IfcMarineFacilityTypeEnum_DRYDOCK_DEFINITION"
+msgstr "ドライドックは、船舶の建設や修理のための水の排水を可能にするゲートで囲まれたチャンバーです。 ISO 6707ドック内の注記の定義では、水を排水またはポンプすることができるゲートがあります。 容器の建設や修理を可能にするために乾燥させておきます"
 
-#:IFC.xml:43930
-msgid "IfcTable_NumberOfCellsInRow"
-msgstr "NumberOfCellsInRow"
+#:IFC.xml:24521
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK"
+msgstr "FLOATING DOCK"
 
-msgid "IfcTable_NumberOfCellsInRow_DEFINITION"
-msgstr "The number of cells in each row, this complies to the number of columns in a table. See WR2 that ensures that each row has the same number of cells. The actual value is derived from the first member of the Rows list."
+msgid "IfcMarineFacilityTypeEnum_FLOATINGDOCK_DEFINITION"
+msgstr "FLOATING DOCK"
 
-#:IFC.xml:43935
-msgid "IfcTable_NumberOfDataRows"
-msgstr "NumberOfData行"
+#:IFC.xml:24522
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT"
+msgstr "HYDROLIFT"
 
-msgid "IfcTable_NumberOfDataRows_DEFINITION"
-msgstr "データを含むテーブル内の行数、つまりテーブル内の行の合計数から見出し行の数を差し引いたテーブルです。"
+msgid "IfcMarineFacilityTypeEnum_HYDROLIFT_DEFINITION"
+msgstr "油圧リフトドックとしても知られている船舶発射回収施設で、船舶が押し込まれるシステムによって垂直方向に持ち上げられます。 土地を横切ってバースに流されその後乾燥します"
 
-#:IFC.xml:43940
-msgid "IfcTable_NumberOfHeadings"
-msgstr "NumberOfHeadings"
+#:IFC.xml:24523
+msgid "IfcMarineFacilityTypeEnum_JETTY"
+msgstr "JETTY"
 
-msgid "IfcTable_NumberOfHeadings_DEFINITION"
-msgstr "The number of headings in a table. This is restricted by WR3 to max. one."
+msgid "IfcMarineFacilityTypeEnum_JETTY_DEFINITION"
+msgstr "通常、海岸線に垂直に広がる海に広がる降着構造、主に液体のバルク材の移動のために。 ISO 21650 デッキ構造におけるNOTEの定義は、海に拡張された垂直方向およびおそらく傾斜した杭によってサポートされています。 頻繁に海岸線に通常の方向に向かっています 注記の定義 ISO 28640 の定義は、架台または同様の構造で構成されています。 船舶と海岸間のLNG移送を可能にするフェンダーやトップサイド設備などのバース施設。"
 
-#:IFC.xml:43945
-msgid "IfcTable_Name"
-msgstr "名前"
+#:IFC.xml:24524
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY"
+msgstr "ローンチ時:"
 
-msgid "IfcTable_Name_DEFINITION"
-msgstr "名前"
+msgid "IfcMarineFacilityTypeEnum_LAUNCHRECOVERY_DEFINITION"
+msgstr "ローンチ時:"
 
-#:IFC.xml:43977
-msgid "IfcTableColumn"
-msgstr "IfcTableColumn"
+#:IFC.xml:24525
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE"
+msgstr "射撃場"
 
-msgid "IfcTableColumn_DEFINITION"
-msgstr "An [[IfcTableColumn]] is a data structure that captures column information for use in an [[IfcTable]] . Each instance defines the identifier, name, description, and units of measure that are applicable to the columnar data associated with the [[IfcTableRow]] objects. The use of [[IfcTableColumn]] supersedes the IsHeading flag associated with [[IfcTableRow]] . HISTORY New entity in IFC4."
+msgid "IfcMarineFacilityTypeEnum_MARINEDEFENCE_DEFINITION"
+msgstr "射撃場"
 
-#:IFC.xml:2740
-msgid "IfcTableColumn_ReferencePath"
-msgstr "ReferencePath"
+#:IFC.xml:24526
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL"
+msgstr "ナビゲーションのチャンネル"
 
-msgid "IfcTableColumn_ReferencePath_DEFINITION"
-msgstr "The ReferencePath indicates a relative path to the object and attribute for which data within this column is to be applied. For constraints, such path is relative to the [[IfcObjectDefinition]] associated by [[IfcRelAssociatesConstraint]] .RelatedObjects. For a constraint to be satisified, exactly one row of the table must match the referenced object for all columns where the ReferencePath attribute is set."
+msgid "IfcMarineFacilityTypeEnum_NAVIGATIONALCHANNEL_DEFINITION"
+msgstr "ナビゲーションのチャンネル"
 
-#:IFC.xml:43978
-msgid "IfcTableColumn_Description"
-msgstr "説明"
+#:IFC.xml:24527
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED"
+msgstr "注記されました"
 
-msgid "IfcTableColumn_Description_DEFINITION"
-msgstr "説明は、表の列を説明する人が読めるテキストを提供します。"
+msgid "IfcMarineFacilityTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
 
-#:IFC.xml:43983
-msgid "IfcTableColumn_Identifier"
-msgstr "Identifier"
+#:IFC.xml:24528
+msgid "IfcMarineFacilityTypeEnum_PORT"
+msgstr "ポート"
 
-msgid "IfcTableColumn_Identifier_DEFINITION"
-msgstr "識別子は、テーブル内の列を識別します。指定された場合は、テーブル内で一意である必要があります。 列は、同じ列識別子を共有することによって、複数のテーブル間で相互参照することができます。"
+msgid "IfcMarineFacilityTypeEnum_PORT_DEFINITION"
+msgstr "ポート"
 
-#:IFC.xml:43988
-msgid "IfcTableColumn_Name"
-msgstr "名前"
+#:IFC.xml:24529
+msgid "IfcMarineFacilityTypeEnum_QUAY"
+msgstr "月"
 
-msgid "IfcTableColumn_Name_DEFINITION"
-msgstr "名前はテーブルカラムの人間が読めるキャプションです。必ずしも一意ではありません。"
+msgid "IfcMarineFacilityTypeEnum_QUAY_DEFINITION"
+msgstr "貨物や乗客の積み降ろしや船舶のメンテナンスを伴う船舶の係留のための施設"
 
-#:IFC.xml:43993
-msgid "IfcTableColumn_Unit"
-msgstr "単位"
+#:IFC.xml:24530
+msgid "IfcMarineFacilityTypeEnum_REVETMENT"
+msgstr "返信"
 
-msgid "IfcTableColumn_Unit_DEFINITION"
-msgstr "単位は、この列のデータに使用される基準単位を示します。指定されていない場合は、プロジェクトのデフォルト単位が仮定されます。 ReferencePath が指定されている場合、ユニットは参照された属性と同じメジャーである必要があります。"
+msgid "IfcMarineFacilityTypeEnum_REVETMENT_DEFINITION"
+msgstr "返信"
 
-#:IFC.xml:43999
-msgid "IfcTableRow"
-msgstr "IfcTableRow"
+#:IFC.xml:24531
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT"
+msgstr "船舶へ移動"
 
-msgid "IfcTableRow_DEFINITION"
-msgstr "[[IfcTableRow]] contains data for a single row within an [[IfcTable]] . Limitation For backward compatibility, all [[IfcTableRow]] objects referenced by an [[IfcTable]] shall have the same number of Row Cells. The actual number of Cells shall be taken from the number of cells of the first [[IfcTableRow]] for that table. The number of Cells is calculated by the derived attribute NumberOfCellsInRow in the associated [[IfcTable]] . NOTE The attribute IsHeading exists for backward compatibility. [[IfcTableColumn]] should be used instead beginning with IFC4. Figure 337 illustrates table row use. Figure 337 Table row use Figure 338 depicts how table rows were structured prior to IFC4 with the use of the IsHeading flag. Note that the use of the [[IfcTableColumn]] constructs should be used instead of the IsHeading flag which remains for backward compatibility only . Figure 338 Table row use alternative HISTORY New entity in IFC1.5."
+msgid "IfcMarineFacilityTypeEnum_SHIPLIFT_DEFINITION"
+msgstr "ウインチに接続されているプラットフォーム上の水上から船を垂直に持ち上げる船舶発射回収施設の一種。 そして水平にレールや車輪や軌道システムに基づいて土地に移されます"
 
-#:IFC.xml:44000
-msgid "IfcTableRow_IsHeading"
-msgstr "IsHeading"
+#:IFC.xml:24532
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK"
+msgstr "シップロック"
 
-msgid "IfcTableRow_IsHeading_DEFINITION"
-msgstr "Flag which identifies if the row is a heading row or a row which contains row values. NOTE If the row is a heading, the flag takes the value TRUE."
+msgid "IfcMarineFacilityTypeEnum_SHIPLOCK_DEFINITION"
+msgstr "ボートの上下に使用される施設 船やその他の水の間の水の間の様々なレベルの水の間の川や運河の水路、または押し込まれた盆地間。 これは、満たされ、空にされた水の押し込まれたチャンバーを介して達成されます。"
 
-#:IFC.xml:44005
-msgid "IfcTableRow_RowCells"
-msgstr "RowCell"
+#:IFC.xml:24533
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD"
+msgstr "シップヤード"
 
-msgid "IfcTableRow_RowCells_DEFINITION"
-msgstr "テーブルセルのデータ値.."
+msgid "IfcMarineFacilityTypeEnum_SHIPYARD_DEFINITION"
+msgstr "船舶が建設され、修理されている沿岸の水辺施設。"
 
-#:IFC.xml:44011
-msgid "IfcGloballyUniqueId"
-msgstr "IfcGloballyUniqueId"
+#:IFC.xml:24534
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY"
+msgstr "スリップウェイ"
 
-msgid "IfcGloballyUniqueId_DEFINITION"
-msgstr "An [[IfcGloballyUniqueId]] holds an encoded string identifier that is used to uniquely identify an IFC object. An [[IfcGloballyUniqueId]] is a Globally Unique Identifier GUID which is an auto generated 128 bit number. Since this identifier is required for all IFC object instances, it is desirable to compress it to reduce overhead. The encoding of the base 64 character set is shown below 1 2 3 4 5 6 0123456789012345678901234567890123456789012345678901234567890123 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz The resulting string is a fixed 22 character length string to be exchanged within the IFC exchange file structure. NOTE Refer to the BuildingSMART website www.buildingsmart tech.org http www.buildingsmart tech.org for more information and sample encoding algorithms. HISTORY New type in IFC1.5.1."
+msgid "IfcMarineFacilityTypeEnum_SLIPWAY_DEFINITION"
+msgstr "傾斜ランプや重力、機械式運搬システムを利用した船舶の動的な打ち上げまたは回収のための施設。"
+
+#:IFC.xml:24535
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMarineFacilityTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:24536
+msgid "IfcMarineFacilityTypeEnum_WATERWAY"
+msgstr "水"
+
+msgid "IfcMarineFacilityTypeEnum_WATERWAY_DEFINITION"
+msgstr "水の航行可能な領域を提供する主な機能を持つ施設のサブセット。"
+
+#:IFC.xml:24537
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT"
+msgstr "水上移動"
+
+msgid "IfcMarineFacilityTypeEnum_WATERWAYSHIPLIFT_DEFINITION"
+msgstr "ボートの上下に使用される施設 船や他の水の間の水の間の様々なレベルの水の間の川と運河の水路または押し込まれた盆地間。 これは、機械的に上下に持ち上げられている押し込まれた溝を介して達成されます。"
+
+#:IFC.xml:24538
+msgid "IfcMarinePartTypeEnum"
+msgstr "IfcMarinePartTypeEnum"
+
+msgid "IfcMarinePartTypeEnum_DEFINITION"
+msgstr "The predefined type container that collects all possible marine facility part types together into the implemented enumeration. Items CREST A lateral spatial part that forms the crest area of breakwater or embankment where additional structures are placed such as access items or roads. MANUFACTURING LOWWATERLINE CORE A lateral spatial part that sub divides the core structure of a facility such as a breakwater or embankment WATERFIELD A region or lateral facility part that covers the water field of a waterside facility such as a quay. CILL BERTHINGSTRUCTURE COPELEVEL A vertical spatial part that represents the elevation working surface of the quay for the placement of quay furniture and plant. CHAMBER A longitudinal spatial part of a waterway or port facility that forms the impounded chamber of a facility, such as a ship lock, dry dock or hydrolift STORAGEAREA A region spatial part that forms a sub division of a facility for the purpose of storing cargo. For example container stacks, dry bulk storage yards, material storage yards. APPROACHCHANNEL A longitudinal spatial part of a waterway or port facility that covers the approach of the primary facility. VEHICLESERVICING A region spatial part that represents a functional division designed for the maintenance and or storage of vehicles used for facility operations. SHIPTRANSFER GATEHEAD GUDINGSTRUCTURE A longitudinal spatial part of a waterway or port facility that forms the guiding and assistive structures at the entrance to an impounded facility. BELOWWATERLINE A vertical spatial part that represents the part below the mean waterline defined within the site area. WEATHERSIDE A lateral spatial part that covers the side of protective structures that is designed to protect and be impacted by weather or wave effects. such as the outer side of breakwaters or the riverside of flood embankments. LANDFIELD A region or lateral facility part that covers the land field of a waterside facility such as a quay. PROTECTION A lateral or region spatial part that forms the area which contains protective measures for scour and erosion of a facility. LEEWARDSIDE A lateral spatial part that covers the side of protective structures that do not experience weather or wave effects. ABOVEWATERLINE A vertical spatial part that represents the part above the mean waterline defined within the site area. ANCHORAGE NAVIGATIONALAREA A region spatial part that covers a managed navigational area that is maintained for an operational reason, this could be a dredged turning circle or waiting area. HIGHWATERLINE A vertical spatial part that represents the elevation of the high waterline, multiple high waterlines can be used to represent the different high tide types. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24567
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE"
+msgstr "AboveWaterLINE"
+
+msgid "IfcMarinePartTypeEnum_ABOVEWATERLINE_DEFINITION"
+msgstr "サイトエリア内で定義された平均水路の上の部分を表す垂直の空間的な部分。"
+
+#:IFC.xml:24568
+msgid "IfcMarinePartTypeEnum_ANCHORAGE"
+msgstr "ANCHORAGE"
+
+msgid "IfcMarinePartTypeEnum_ANCHORAGE_DEFINITION"
+msgstr "ANCHORAGE"
+
+#:IFC.xml:24569
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL"
+msgstr "APPROACHCHANNEL"
+
+msgid "IfcMarinePartTypeEnum_APPROACHCHANNEL_DEFINITION"
+msgstr "主要施設のアプローチをカバーする水路または港湾施設の縦方向空間的な部分。"
+
+#:IFC.xml:24570
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE"
+msgstr "BELOWWATERLINE"
+
+msgid "IfcMarinePartTypeEnum_BELOWWATERLINE_DEFINITION"
+msgstr "サイトエリア内で定義された平均水路以下の部分を表す垂直空間部品。"
+
+#:IFC.xml:24571
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE"
+msgstr "バウンス構造"
+
+msgid "IfcMarinePartTypeEnum_BERTHINGSTRUCTURE_DEFINITION"
+msgstr "バウンス構造"
+
+#:IFC.xml:24572
+msgid "IfcMarinePartTypeEnum_CHAMBER"
+msgstr "チャンバー"
+
+msgid "IfcMarinePartTypeEnum_CHAMBER_DEFINITION"
+msgstr "施設の貯蔵室を形成する水路または港湾施設の縦方向空間の一部 船のロックやドライドックやハイドロリフトなど"
+
+#:IFC.xml:24573
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL"
+msgstr "CILL レベル"
+
+msgid "IfcMarinePartTypeEnum_CILL_LEVEL_DEFINITION"
+msgstr "CILL レベル"
+
+#:IFC.xml:24574
+msgid "IfcMarinePartTypeEnum_COPELEVEL"
+msgstr "オブジェクトの移動"
+
+msgid "IfcMarinePartTypeEnum_COPELEVEL_DEFINITION"
+msgstr "岸壁の作業面を表す垂直方向の空間的な部分は、岸壁の家具や植物の配置のための高度を表します。"
+
+#:IFC.xml:24575
+msgid "IfcMarinePartTypeEnum_CORE"
+msgstr "CORE"
+
+msgid "IfcMarinePartTypeEnum_CORE_DEFINITION"
+msgstr "防波堤や堤防などの施設の中核構造を分割する側空間部品"
+
+#:IFC.xml:24576
+msgid "IfcMarinePartTypeEnum_CREST"
+msgstr "CREST"
+
+msgid "IfcMarinePartTypeEnum_CREST_DEFINITION"
+msgstr "防波堤や堤防などの領域を形成する側空間的な部分で、アクセス項目や道路などの追加構造を配置する。"
+
+#:IFC.xml:24577
+msgid "IfcMarinePartTypeEnum_GATEHEAD"
+msgstr "GATEHEAD"
+
+msgid "IfcMarinePartTypeEnum_GATEHEAD_DEFINITION"
+msgstr "GATEHEAD"
+
+#:IFC.xml:24578
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE"
+msgstr "GudingStructure"
+
+msgid "IfcMarinePartTypeEnum_GUDINGSTRUCTURE_DEFINITION"
+msgstr "水路や港湾施設の縦方向の空間的な部分で、入口に設置された補助的な構造物を形成します。"
+
+#:IFC.xml:24579
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE"
+msgstr "ハイライトライン"
+
+msgid "IfcMarinePartTypeEnum_HIGHWATERLINE_DEFINITION"
+msgstr "高水路の標高を表す垂直空間的な部分は、異なる高潮タイプを表すために複数の高水路を使用することができます。"
+
+#:IFC.xml:24580
+msgid "IfcMarinePartTypeEnum_LANDFIELD"
+msgstr "LANDFIELD"
+
+msgid "IfcMarinePartTypeEnum_LANDFIELD_DEFINITION"
+msgstr "岸壁などの水辺施設の土地を覆う領域または側面施設の一部。"
+
+#:IFC.xml:24581
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE"
+msgstr "LEWARDSIDE"
+
+msgid "IfcMarinePartTypeEnum_LEEWARDSIDE_DEFINITION"
+msgstr "天候や波の影響を経験しない保護構造の側面をカバーする横空間の部分。"
+
+#:IFC.xml:24582
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE"
+msgstr "LOWWATERLINE"
+
+msgid "IfcMarinePartTypeEnum_LOWWATERLINE_DEFINITION"
+msgstr "LOWWATERLINE"
+
+#:IFC.xml:24583
+msgid "IfcMarinePartTypeEnum_MANUFACTURING"
+msgstr "操作"
+
+msgid "IfcMarinePartTypeEnum_MANUFACTURING_DEFINITION"
+msgstr "操作"
+
+#:IFC.xml:24584
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA"
+msgstr "NAVIGATIONALAREA"
+
+msgid "IfcMarinePartTypeEnum_NAVIGATIONALAREA_DEFINITION"
+msgstr "運用上の理由で維持されている管理されたナビゲーション領域をカバーする領域空間部品。 これは浚渫された旋回か待ち場所かもしれない"
+
+#:IFC.xml:24585
+msgid "IfcMarinePartTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcMarinePartTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:24586
+msgid "IfcMarinePartTypeEnum_PROTECTION"
+msgstr "保護"
+
+msgid "IfcMarinePartTypeEnum_PROTECTION_DEFINITION"
+msgstr "施設のスカウトと浸食のための保護対策を含む領域を形成する横または領域の空間部。"
+
+#:IFC.xml:24587
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER"
+msgstr "出荷者"
+
+msgid "IfcMarinePartTypeEnum_SHIPTRANSFER_DEFINITION"
+msgstr "出荷者"
+
+#:IFC.xml:24588
+msgid "IfcMarinePartTypeEnum_STORAGEAREA"
+msgstr "STORAGEAREA"
+
+msgid "IfcMarinePartTypeEnum_STORAGEAREA_DEFINITION"
+msgstr "貨物を保管するための施設のサブ分割を形成する領域空間部品。 例えば、コンテナスタック、ドライバルク貯蔵ヤード、材料貯蔵ヤード。"
+
+#:IFC.xml:24589
+msgid "IfcMarinePartTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMarinePartTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:24590
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING"
+msgstr "VEHICLESERVICING"
+
+msgid "IfcMarinePartTypeEnum_VEHICLESERVICING_DEFINITION"
+msgstr "施設の運用に使用される車両のメンテナンスや保管のために設計された機能部門を表す領域空間部品。"
+
+#:IFC.xml:24591
+msgid "IfcMarinePartTypeEnum_WATERFIELD"
+msgstr "WATERFIELD"
+
+msgid "IfcMarinePartTypeEnum_WATERFIELD_DEFINITION"
+msgstr "岸壁などの水辺施設の水場をカバーする領域または側面施設の一部。"
+
+#:IFC.xml:24592
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE"
+msgstr "WEATHERSIDE"
+
+msgid "IfcMarinePartTypeEnum_WEATHERSIDE_DEFINITION"
+msgstr "天候や波の影響によって保護され、影響を受けるように設計された保護構造の側面をカバーする横空間の部分。 防波堤の外側や堤防の川岸などです"
+
+#:IFC.xml:24593
+msgid "IfcMooringDevice"
+msgstr "IfcMooringDevice"
+
+msgid "IfcMooringDevice_DEFINITION"
+msgstr "係留装置は、主な機能は容器の係留に参加することであるアクティブまたは受動的に構築された要素です。 線の付着点として使われるボルラードかクイックリリースフックのようなアクティブな装置か"
+
+#:IFC.xml:24594
+msgid "IfcMooringDevice_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDevice_PredefinedType_DEFINITION"
+msgstr "係留デバイスの定義済みタイプを識別します。このタイプは、追加の特定のプロパティセットを関連付けることができます。 注 PredefinedType は、[[IfcMooringDeviceType]] が割り当てられていない場合にのみ使用され、独自の [[IfcMooringDeviceType]].PredefinedType を提供します。"
+
+#:IFC.xml:24601
+msgid "IfcMooringDeviceType"
+msgstr "IfcMooringDeviceType"
+
+msgid "IfcMooringDeviceType_DEFINITION"
+msgstr "[[IfcMooringDeviceType]] は、[[IfcMooringDevice]] 発生の型情報を提供します。 係留装置は、主な機能は容器の係留に参加することであるアクティブまたは受動的に構築された要素です。 線の付着点として使われるボルラードかクイックリリースフックのようなアクティブな装置か"
+
+#:IFC.xml:24602
+msgid "IfcMooringDeviceType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcMooringDeviceType_PredefinedType_DEFINITION"
+msgstr "係留デバイスの定義済みタイプを識別します。"
+
+#:IFC.xml:24609
+msgid "IfcMooringDeviceTypeEnum"
+msgstr "IfcMooringDeviceTypeEnum"
+
+msgid "IfcMooringDeviceTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of mooring elements that can further specify an [[IfcMooringDevice]] or [[IfcMooringDeviceType]] . Items LINETENSIONER A mechanical device used to apply a tensioning load to mooring lines to improve vessel stability for port operations. MAGNETICDEVICE Mooring device that uses magnets as the primary method of securing the vessel. MOORINGHOOKS Quick release mooring hooks an active device used to secure a vessel and provide automated release of vessels. VACUUMDEVICE Mooring device that uses vacuum suction as the primary method of securing the vessel. BOLLARD a short, thick post on the deck of a ship or a quay side, to which ship s rope may be secured. not to be confused with traffic bollards. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24625
+msgid "IfcMooringDeviceTypeEnum_BOLLARD"
+msgstr "BOLLARD"
+
+msgid "IfcMooringDeviceTypeEnum_BOLLARD_DEFINITION"
+msgstr "船や岸壁のデッキにある短い厚いポストだ 船のロープが確保されるかも 混同しないでください"
+
+#:IFC.xml:24626
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER"
+msgstr "ライン"
+
+msgid "IfcMooringDeviceTypeEnum_LINETENSIONER_DEFINITION"
+msgstr "引張負荷を係留ラインに適用し、ポート操作の容器安定性を向上させる機械装置。"
+
+#:IFC.xml:24627
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE"
+msgstr "MAGNETICDEVICE"
+
+msgid "IfcMooringDeviceTypeEnum_MAGNETICDEVICE_DEFINITION"
+msgstr "容器を確保する主な方法として磁石を使用する係留装置。"
+
+#:IFC.xml:24628
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS"
+msgstr "ムーア時間"
+
+msgid "IfcMooringDeviceTypeEnum_MOORINGHOOKS_DEFINITION"
+msgstr "クイックリリース係留フック容器を確保し、容器の自動リリースを提供するために使用されるアクティブなデバイス。"
+
+#:IFC.xml:24629
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcMooringDeviceTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:24630
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcMooringDeviceTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:24631
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE"
+msgstr "VACUMDEVICE"
+
+msgid "IfcMooringDeviceTypeEnum_VACUUMDEVICE_DEFINITION"
+msgstr "真空吸引を使用した係留装置は、容器を確保する主な方法です。"
+
+#:IFC.xml:24632
+msgid "IfcNavigationElement"
+msgstr "IfcNavigationElement"
+
+msgid "IfcNavigationElement_DEFINITION"
+msgstr "navigation 要素は、アクティブまたはパッシブに構築された要素で、主な機能は、船舶にナビゲーション命令や警告を提供することです。 これは浮遊ブイの形である可能性があります固定のビーコンです ナビゲーション要素は、他のコンポーネントと要素を集約して構造全体を形成することができます。 これは身体を形成するフレーム構造を含むかもしれません サイネージや補足信号を照らす場合は[[IfcSign]]、または[[IfcSignal]]のインスタンス。"
+
+#:IFC.xml:24633
+msgid "IfcNavigationElement_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElement_PredefinedType_DEFINITION"
+msgstr "ナビゲーション要素の定義済み型を識別します。この型は追加の特定のプロパティセットを関連付けることができます。 注 PredefinedType は、[[IfcNavigationElementType]] が割り当てられていない場合にのみ使用され、独自の [[IfcNavigationElementType]].PredefinedType を提供します。"
+
+#:IFC.xml:24640
+msgid "IfcNavigationElementType"
+msgstr "IfcNavigationElementType"
+
+msgid "IfcNavigationElementType_DEFINITION"
+msgstr "[[IfcNavigationElementType]] は、[[IfcNavigationElement]] 発生の型情報を提供します。 navigation 要素は、アクティブまたはパッシブに構築された要素で、主な機能は、船舶にナビゲーション命令や警告を提供することです。 これは浮遊式ブイの形でしょうビーコンや信号を固定しています"
+
+#:IFC.xml:24641
+msgid "IfcNavigationElementType_PredefinedType"
+msgstr "PredefinedType"
+
+msgid "IfcNavigationElementType_PredefinedType_DEFINITION"
+msgstr "ナビゲーション要素の定義済み型を識別します。"
+
+#:IFC.xml:24648
+msgid "IfcNavigationElementTypeEnum"
+msgstr "IfcNavigationElementTypeEnum"
+
+msgid "IfcNavigationElementTypeEnum_DEFINITION"
+msgstr "This container defines the different predefined types of navigation elements that can further specify an [[IfcNavigationElement]] or [[IfcNavigationElementType]] . Items BEACON a fixed vertical structure serving as a navigation mark, to show reefs or other hazards, or provide navigational directions. BUOY an anchored floating structure serving as a navigation mark, to show reefs or other hazards, or provide navigational directions. USERDEFINED NOTDEFINED"
+
+#:IFC.xml:24658
+msgid "IfcNavigationElementTypeEnum_BEACON"
+msgstr "BEACON"
+
+msgid "IfcNavigationElementTypeEnum_BEACON_DEFINITION"
+msgstr "固定された垂直方向の構造が航海マークとして機能し サンゴ礁やその他の危険を示したり、航行方向を示したりします"
+
+#:IFC.xml:24659
+msgid "IfcNavigationElementTypeEnum_BUOY"
+msgstr "BUOY"
+
+msgid "IfcNavigationElementTypeEnum_BUOY_DEFINITION"
+msgstr "アンカーされた浮体構造物は航法標識として機能し サンゴ礁やその他の危険を示し 航行方向を示しています"
+
+#:IFC.xml:24660
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED"
+msgstr "注記されました"
+
+msgid "IfcNavigationElementTypeEnum_NOTDEFINED_DEFINITION"
+msgstr "注記されました"
+
+#:IFC.xml:24661
+msgid "IfcNavigationElementTypeEnum_USERDEFINED"
+msgstr "ユーザー定義済み"
+
+msgid "IfcNavigationElementTypeEnum_USERDEFINED_DEFINITION"
+msgstr "ユーザー定義済み"
+
+#:IFC.xml:24708
+msgid "Pset_BerthCommon"
+msgstr "Pset BerthCommon"
+
+msgid "Pset_BerthCommon_DEFINITION"
+msgstr "[[IfcSpace]] と[[IfcSpaceType]] のすべての出現の定義に共通するプロパティと、事前定義された型が BERTH に設定されています"
+
+#:IFC.xml:24709
+msgid "Pset_BerthCommon_AbnormalBerthingFactor"
+msgstr "AbnormalBerthingFactor"
+
+msgid "Pset_BerthCommon_AbnormalBerthingFactor_DEFINITION"
+msgstr "Risk assessed safety factor"
+
+#:IFC.xml:24714
+msgid "Pset_BerthCommon_BerthApproach"
+msgstr "BerthApproach"
+
+msgid "Pset_BerthCommon_BerthApproach_DEFINITION"
+msgstr "How the vessel approaches the berth"
+
+#:IFC.xml:24719
+msgid "Pset_BerthCommon_BerthingAngle"
+msgstr "BerthingAngle"
+
+msgid "Pset_BerthCommon_BerthingAngle_DEFINITION"
+msgstr "Angle of approach for the vessel to the berth"
+
+#:IFC.xml:24724
+msgid "Pset_BerthCommon_BerthingVelocity"
+msgstr "BerthingVelocity"
+
+msgid "Pset_BerthCommon_BerthingVelocity_DEFINITION"
+msgstr "Velocity of the vessel as it berths"
+
+#:IFC.xml:24729
+msgid "Pset_BerthCommon_BerthMode"
+msgstr "BerthMode"
+
+msgid "Pset_BerthCommon_BerthMode_DEFINITION"
+msgstr "Orientation of vessel as it approaches berth"
+
+#:IFC.xml:24735
+msgid "Pset_BreakwaterCommon"
+msgstr "Pset BreakwaterCommon"
+
+msgid "Pset_BreakwaterCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、事前定義された型は BREAKWATER に設定されています。"
+
+#:IFC.xml:24736
+msgid "Pset_BreakwaterCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_BreakwaterCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:24741
+msgid "Pset_BreakwaterCommon_StructuralStyle"
+msgstr "StructuralStyle"
+
+msgid "Pset_BreakwaterCommon_StructuralStyle_DEFINITION"
+msgstr "Structural style of the element"
+
+#:IFC.xml:24747
+msgid "Pset_CargoCommon"
+msgstr "Pset CargoCommon"
+
+msgid "Pset_CargoCommon_DEFINITION"
+msgstr "[[IfcTransportElement]] と[[IfcTransportElementType]] のすべての出現の定義に共通のプロパティとして、定義済みの型が CARGO に設定されています。"
+
+#:IFC.xml:24748
+msgid "Pset_CargoCommon_AdditionalProcessing"
+msgstr "AdditionalProcessing"
+
+msgid "Pset_CargoCommon_AdditionalProcessing_DEFINITION"
+msgstr "Any additional or special processing requirements on the associated cargo."
+
+#:IFC.xml:24753
+msgid "Pset_CargoCommon_ProcessDirection"
+msgstr "ProcessDirection"
+
+msgid "Pset_CargoCommon_ProcessDirection_DEFINITION"
+msgstr "The direction of flow of the cargo within the process."
+
+#:IFC.xml:24758
+msgid "Pset_CargoCommon_ProcessItem"
+msgstr "ProcessItem"
+
+msgid "Pset_CargoCommon_ProcessItem_DEFINITION"
+msgstr "The type of item and its measurement method being modelled within a process. This can be cargo, passengers or vehicles that pass through the system."
+
+#:IFC.xml:24764
+msgid "Pset_ChamberCommon"
+msgstr "Pset ChamberCommon"
+
+msgid "Pset_ChamberCommon_DEFINITION"
+msgstr "[[IfcFacilityPart]] のすべての出現の定義に共通のプロパティで、事前定義された型は CHAMBERに設定されています。"
+
+#:IFC.xml:24765
+msgid "Pset_ChamberCommon_EffectiveChamberSize"
+msgstr "有効チャンバーサイズ"
+
+msgid "Pset_ChamberCommon_EffectiveChamberSize_DEFINITION"
+msgstr "Volumetric measure defining the effective chamber size for operational and design activities."
+
+#:IFC.xml:24770
+msgid "Pset_ChamberCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_ChamberCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24776
+msgid "Pset_EnergyRequirements"
+msgstr "Pset Energy要件"
+
+msgid "Pset_EnergyRequirements_DEFINITION"
+msgstr "施設と物理的な要素へのエネルギー要件の適用のためのプロパティセット"
+
+#:IFC.xml:24777
+msgid "Pset_EnergyRequirements_EnergyConsumption"
+msgstr "EnergyConsumption"
+
+msgid "Pset_EnergyRequirements_EnergyConsumption_DEFINITION"
+msgstr "Annual energy consumption requirement"
+
+#:IFC.xml:24782
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency"
+msgstr "EnergyConversionEfficiency"
+
+msgid "Pset_EnergyRequirements_EnergyConversionEfficiency_DEFINITION"
+msgstr "Measure of the efficiency of conversion of fuel energy to mechanical energy"
+
+#:IFC.xml:24787
+msgid "Pset_EnergyRequirements_EnergySource"
+msgstr "EnergySource"
+
+msgid "Pset_EnergyRequirements_EnergySource_DEFINITION"
+msgstr "Enumeration defining the energy source or fuel combusted to generate heat if applicable. Note hydronic heaters shall use UNSET dual use hydronic electric heaters shall use ELECTRICITY."
+
+#:IFC.xml:24792
+msgid "Pset_EnergyRequirements_PowerDemand"
+msgstr "PowerDemand"
+
+msgid "Pset_EnergyRequirements_PowerDemand_DEFINITION"
+msgstr "Power demand of the element"
+
+#:IFC.xml:24798
+msgid "Pset_FenderCommon"
+msgstr "Pset FenderCommon"
+
+msgid "Pset_FenderCommon_DEFINITION"
+msgstr "[[IfcImpactProtectionDevice]] のすべての出現の定義と、FENDER に設定されている[[IfcImpactProtectionDeviceType]] の型に共通するプロパティ。"
+
+#:IFC.xml:24799
+msgid "Pset_FenderCommon_CoefficientOfFriction"
+msgstr "摩擦係数（係数）"
+
+msgid "Pset_FenderCommon_CoefficientOfFriction_DEFINITION"
+msgstr "Coefficient of friction value for the fender"
+
+#:IFC.xml:24804
+msgid "Pset_FenderCommon_EnergyAbsorption"
+msgstr "エネルギー吸収量"
+
+msgid "Pset_FenderCommon_EnergyAbsorption_DEFINITION"
+msgstr "エネルギー吸収量"
+
+#:IFC.xml:24809
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance"
+msgstr "エネルギー吸収耐性値"
+
+msgid "Pset_FenderCommon_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on energy absorption"
+
+#:IFC.xml:24814
+msgid "Pset_FenderCommon_FenderType"
+msgstr "FenderType"
+
+msgid "Pset_FenderCommon_FenderType_DEFINITION"
+msgstr "The type of fender"
+
+#:IFC.xml:24819
+msgid "Pset_FenderCommon_MaximumTemperatureFactor"
+msgstr "最大温度係数"
+
+msgid "Pset_FenderCommon_MaximumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to maximum design temperature"
+
+#:IFC.xml:24824
+msgid "Pset_FenderCommon_MaxReaction"
+msgstr "最大の反応"
+
+msgid "Pset_FenderCommon_MaxReaction_DEFINITION"
+msgstr "Maximum reaction from the element"
+
+#:IFC.xml:24829
+msgid "Pset_FenderCommon_MaxReactionTolerance"
+msgstr "最大反応許容差"
+
+msgid "Pset_FenderCommon_MaxReactionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on maximum reaction at fender support."
+
+#:IFC.xml:24834
+msgid "Pset_FenderCommon_MinimumTemperatureFactor"
+msgstr "最小温度係数"
+
+msgid "Pset_FenderCommon_MinimumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to minimum design temperature"
+
+#:IFC.xml:24839
+msgid "Pset_FenderCommon_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderCommon_VelocityFactorEnergy_DEFINITION"
+msgstr "Deviation in energy absorption performance due to strain rate"
+
+#:IFC.xml:24844
+msgid "Pset_FenderCommon_VelocityFactorReaction"
+msgstr "VelocityFactorReaction"
+
+msgid "Pset_FenderCommon_VelocityFactorReaction_DEFINITION"
+msgstr "Deviation in reaction due to strain rate"
+
+#:IFC.xml:24850
+msgid "Pset_FenderDesignCriteria"
+msgstr "Pset FenderDesignCriteria"
+
+msgid "Pset_FenderDesignCriteria_DEFINITION"
+msgstr "[[IfcImpactProtectionDevice]] および[[IfcImpactProtectionDeviceType]] のすべての出現の設計条件の定義に共通するプロパティで、FENDER に定義済みの型が設定されています。"
+
+#:IFC.xml:24851
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod"
+msgstr "AddedMassCoefficientMethod"
+
+msgid "Pset_FenderDesignCriteria_AddedMassCoefficientMethod_DEFINITION"
+msgstr "Method used to determine the Added Mass Coefficient used for design"
+
+#:IFC.xml:24856
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction"
+msgstr "摩擦係数（係数）"
+
+msgid "Pset_FenderDesignCriteria_CoefficientOfFriction_DEFINITION"
+msgstr "Coefficient of friction value for the fender"
+
+#:IFC.xml:24861
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption"
+msgstr "エネルギー吸収量"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorption_DEFINITION"
+msgstr "エネルギー吸収量"
+
+#:IFC.xml:24866
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance"
+msgstr "エネルギー吸収耐性値"
+
+msgid "Pset_FenderDesignCriteria_EnergyAbsorptionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on energy absorption"
+
+#:IFC.xml:24871
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor"
+msgstr "最大温度係数"
+
+msgid "Pset_FenderDesignCriteria_MaximumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to maximum design temperature"
+
+#:IFC.xml:24876
+msgid "Pset_FenderDesignCriteria_MaxReaction"
+msgstr "最大の反応"
+
+msgid "Pset_FenderDesignCriteria_MaxReaction_DEFINITION"
+msgstr "Maximum reaction from the element"
+
+#:IFC.xml:24881
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance"
+msgstr "最大反応許容差"
+
+msgid "Pset_FenderDesignCriteria_MaxReactionTolerance_DEFINITION"
+msgstr "Manufacturing tolerance on maximum reaction at fender support."
+
+#:IFC.xml:24886
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight"
+msgstr "MinCompressedFenderHeight"
+
+msgid "Pset_FenderDesignCriteria_MinCompressedFenderHeight_DEFINITION"
+msgstr "Minimum height required for a compressed fender to prevent vessels striking the structure"
+
+#:IFC.xml:24891
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor"
+msgstr "最小温度係数"
+
+msgid "Pset_FenderDesignCriteria_MinimumTemperatureFactor_DEFINITION"
+msgstr "Deviation in performance due to minimum design temperature"
+
+#:IFC.xml:24896
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy"
+msgstr "VelocityFactorEnergy"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorEnergy_DEFINITION"
+msgstr "Deviation in energy absorption performance due to strain rate"
+
+#:IFC.xml:24901
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction"
+msgstr "VelocityFactorReaction"
+
+msgid "Pset_FenderDesignCriteria_VelocityFactorReaction_DEFINITION"
+msgstr "Deviation in reaction due to strain rate"
+
+#:IFC.xml:24907
+msgid "Pset_GateHeadCommon"
+msgstr "Pset GateHeadCommon"
+
+msgid "Pset_GateHeadCommon_DEFINITION"
+msgstr "[[IfcFacilityPart]] のすべての出現の定義に共通するプロパティは、GATEHEAD に設定されています。"
+
+#:IFC.xml:24908
+msgid "Pset_GateHeadCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_GateHeadCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24914
+msgid "Pset_JettyCommon"
+msgstr "Pset JettyCommon"
+
+msgid "Pset_JettyCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、定義済みの型が JETTYに設定されています。"
+
+#:IFC.xml:24915
+msgid "Pset_JettyCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_JettyCommon_BentSpacing_DEFINITION"
+msgstr "Bent upright spacing"
+
+#:IFC.xml:24920
+msgid "Pset_JettyCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_JettyCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:24925
+msgid "Pset_JettyCommon_PierSectionType"
+msgstr "PierSectionType"
+
+msgid "Pset_JettyCommon_PierSectionType_DEFINITION"
+msgstr "Whether the structure presents a solid closed barrier to the passage of water or is open."
+
+#:IFC.xml:24930
+msgid "Pset_JettyCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_JettyCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:24936
+msgid "Pset_JettyDesignCriteria"
+msgstr "Pset JettyDesignCriteria"
+
+msgid "Pset_JettyDesignCriteria_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現のデザイン条件の定義に共通するプロパティは、定義済みの型が JETTYに設定されています。"
+
+#:IFC.xml:24937
+msgid "Pset_JettyDesignCriteria_EquipmentLoading"
+msgstr "装備の読み込み"
+
+msgid "Pset_JettyDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Loading from equipment"
+
+#:IFC.xml:24942
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel"
+msgstr "ExtremeHighWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "Extreme high water level"
+
+#:IFC.xml:24947
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel"
+msgstr "ExtremeLowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Extreme low water level"
+
+#:IFC.xml:24952
+msgid "Pset_JettyDesignCriteria_FlowLoading"
+msgstr "FlowLoading"
+
+msgid "Pset_JettyDesignCriteria_FlowLoading_DEFINITION"
+msgstr "Flow loading force"
+
+#:IFC.xml:24957
+msgid "Pset_JettyDesignCriteria_HighWaterLevel"
+msgstr "ハイウォーターレベル"
+
+msgid "Pset_JettyDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "High water level"
+
+#:IFC.xml:24962
+msgid "Pset_JettyDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_JettyDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "Low water level"
+
+#:IFC.xml:24967
+msgid "Pset_JettyDesignCriteria_ShipLoading"
+msgstr "ShipLoading"
+
+msgid "Pset_JettyDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Ship loading force"
+
+#:IFC.xml:24972
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_JettyDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "Uniformly Distributed Load"
+
+#:IFC.xml:24977
+msgid "Pset_JettyDesignCriteria_WaveLoading"
+msgstr "WaveLoading"
+
+msgid "Pset_JettyDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Wave loading force"
+
+#:IFC.xml:24983
+msgid "Pset_MarineFacilityTransportation"
+msgstr "Pset MarineFacilityTransportation"
+
+msgid "Pset_MarineFacilityTransportation_DEFINITION"
+msgstr "ポート、マリーナなどの輸送施設としてカタゴライドされている[[IfcMarineFacility]]のすべての発生の定義に共通するプロパティ。"
+
+#:IFC.xml:24984
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight"
+msgstr "BerthCargoWeight"
+
+msgid "Pset_MarineFacilityTransportation_BerthCargoWeight_DEFINITION"
+msgstr "Total cargo weight of berths within the facility"
+
+#:IFC.xml:24989
+msgid "Pset_MarineFacilityTransportation_BerthGrade"
+msgstr "BerthGrade"
+
+msgid "Pset_MarineFacilityTransportation_BerthGrade_DEFINITION"
+msgstr "Berth grade"
+
+#:IFC.xml:24994
+msgid "Pset_MarineFacilityTransportation_Berths"
+msgstr "Berths"
+
+msgid "Pset_MarineFacilityTransportation_Berths_DEFINITION"
+msgstr "Number of standard berths within the facility"
+
+#:IFC.xml:25000
+msgid "Pset_MarineVehicleCommon"
+msgstr "Pset MarineVehicleCommon"
+
+msgid "Pset_MarineVehicleCommon_DEFINITION"
+msgstr "[[IfcTransportElement]] と[[IfcTransportElementType]] のすべての出現の定義に共通するプロパティと、事前定義された型が VEHICLEMARINE に設定されています。"
+
+#:IFC.xml:25001
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd"
+msgstr "AboveDeckProjectedWindEnd"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindEnd_DEFINITION"
+msgstr "End on projected windage area above the main deck"
+
+#:IFC.xml:25006
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide"
+msgstr "AboveDeckProjectedWindSide"
+
+msgid "Pset_MarineVehicleCommon_AboveDeckProjectedWindSide_DEFINITION"
+msgstr "Side on projected windage area above the main deck"
+
+#:IFC.xml:25011
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight"
+msgstr "CargoDeadWeight"
+
+msgid "Pset_MarineVehicleCommon_CargoDeadWeight_DEFINITION"
+msgstr "Weight of bulk cargo carried"
+
+#:IFC.xml:25016
+msgid "Pset_MarineVehicleCommon_Displacement"
+msgstr "変位する"
+
+msgid "Pset_MarineVehicleCommon_Displacement_DEFINITION"
+msgstr "Weight of water displaced by the vessel"
+
+#:IFC.xml:25021
+msgid "Pset_MarineVehicleCommon_LaneMeters"
+msgstr "レーンメーター"
+
+msgid "Pset_MarineVehicleCommon_LaneMeters_DEFINITION"
+msgstr "Length of lanes accommodating vehicles on roll on, roll off vessels"
+
+#:IFC.xml:25026
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars"
+msgstr "LengthBetweenPerpendiculars"
+
+msgid "Pset_MarineVehicleCommon_LengthBetweenPerpendiculars_DEFINITION"
+msgstr "Length of vessel from rudder shaft to crossing point of the bow and the loaded waterline."
+
+#:IFC.xml:25031
+msgid "Pset_MarineVehicleCommon_VesselDepth"
+msgstr "VesselDepth"
+
+msgid "Pset_MarineVehicleCommon_VesselDepth_DEFINITION"
+msgstr "Depth of the vessel from the main deck to the keel."
+
+#:IFC.xml:25036
+msgid "Pset_MarineVehicleCommon_VesselDraft"
+msgstr "VesselDraft"
+
+msgid "Pset_MarineVehicleCommon_VesselDraft_DEFINITION"
+msgstr "Depth of vessel from the waterline to the keel LightShip, Ballasted, Maximum"
+
+#:IFC.xml:25042
+msgid "Pset_MarineVehicleDesignCriteria"
+msgstr "Pset MarineVehicle DesignCriteria"
+
+msgid "Pset_MarineVehicleDesignCriteria_DEFINITION"
+msgstr "[[IfcTransportElement]] と[[IfcTransportElementType]] のすべての出現の設計条件の定義に共通するプロパティと、あらかじめ定義された型が MARINEVEHICLE に設定された[ format@@2 ]の型"
+
+#:IFC.xml:25043
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure"
+msgstr "AllowEnableHullPressure"
+
+msgid "Pset_MarineVehicleDesignCriteria_AllowableHullPressure_DEFINITION"
+msgstr "Allowable contact pressure between fender and hull"
+
+#:IFC.xml:25048
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient"
+msgstr "ソフトネス係数"
+
+msgid "Pset_MarineVehicleDesignCriteria_SoftnessCoefficient_DEFINITION"
+msgstr "Vessel flexibility factor proportion of impact energy absorbed by the hull."
+
+#:IFC.xml:25054
+msgid "Pset_MooringDeviceCommon"
+msgstr "Pset MooringDeviceCommon"
+
+msgid "Pset_MooringDeviceCommon_DEFINITION"
+msgstr "Properties common to the definition of all occurrences of [[IfcMooringDevice]] and types of [[IfcMooringDeviceType]] ."
+
+#:IFC.xml:25055
+msgid "Pset_MooringDeviceCommon_AnchorageType"
+msgstr "アンカレッジタイプ"
+
+msgid "Pset_MooringDeviceCommon_AnchorageType_DEFINITION"
+msgstr "Mooring device anchorage type"
+
+#:IFC.xml:25060
+msgid "Pset_MooringDeviceCommon_DeviceCapacity"
+msgstr "デバイス容量"
+
+msgid "Pset_MooringDeviceCommon_DeviceCapacity_DEFINITION"
+msgstr "Mooring device force capacity"
+
+#:IFC.xml:25065
+msgid "Pset_MooringDeviceCommon_DeviceType"
+msgstr "デバイスタイプ"
+
+msgid "Pset_MooringDeviceCommon_DeviceType_DEFINITION"
+msgstr "Mooring device type"
+
+#:IFC.xml:25070
+msgid "Pset_MooringDeviceCommon_MaximumLineCount"
+msgstr "MaximumLineCount"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineCount_DEFINITION"
+msgstr "Maximum number of lines that may be secured to the mooring device."
+
+#:IFC.xml:25075
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope"
+msgstr "MaximumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MaximumLineSlope_DEFINITION"
+msgstr "Maximum allowable line angle in degrees negative if below horizontal from quay"
+
+#:IFC.xml:25080
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope"
+msgstr "MinumumLineSlope"
+
+msgid "Pset_MooringDeviceCommon_MinumumLineSlope_DEFINITION"
+msgstr "Minimum allowable line angle in degrees negative if below horizontal from quay"
+
+#:IFC.xml:25086
+msgid "Pset_QuayCommon"
+msgstr "Pset QuayCommon"
+
+msgid "Pset_QuayCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、定義済みの型が QUAYに設定されています。"
+
+#:IFC.xml:25087
+msgid "Pset_QuayCommon_BentSpacing"
+msgstr "BentSpacing"
+
+msgid "Pset_QuayCommon_BentSpacing_DEFINITION"
+msgstr "Bent upright spacing"
+
+#:IFC.xml:25092
+msgid "Pset_QuayCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_QuayCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:25097
+msgid "Pset_QuayCommon_QuaySectionType"
+msgstr "QuaySectionType"
+
+msgid "Pset_QuayCommon_QuaySectionType_DEFINITION"
+msgstr "Whether the structure presents a solid closed barrier to the passage of water or is open."
+
+#:IFC.xml:25102
+msgid "Pset_QuayCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_QuayCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:25108
+msgid "Pset_QuayDesignCriteria"
+msgstr "Pset QuayDesignCriteria"
+
+msgid "Pset_QuayDesignCriteria_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の設計条件の定義に共通するプロパティで、定義済みの型は QUAYに設定されています。"
+
+#:IFC.xml:25109
+msgid "Pset_QuayDesignCriteria_EquipmentLoading"
+msgstr "装備の読み込み"
+
+msgid "Pset_QuayDesignCriteria_EquipmentLoading_DEFINITION"
+msgstr "Loading from equipment"
+
+#:IFC.xml:25114
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel"
+msgstr "ExtremeHighWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeHighWaterLevel_DEFINITION"
+msgstr "Extreme high water level"
+
+#:IFC.xml:25119
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel"
+msgstr "ExtremeLowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_ExtremeLowWaterLevel_DEFINITION"
+msgstr "Extreme low water level"
+
+#:IFC.xml:25124
+msgid "Pset_QuayDesignCriteria_FlowLoading"
+msgstr "FlowLoading"
+
+msgid "Pset_QuayDesignCriteria_FlowLoading_DEFINITION"
+msgstr "Flow loading force"
+
+#:IFC.xml:25129
+msgid "Pset_QuayDesignCriteria_HighWaterLevel"
+msgstr "ハイウォーターレベル"
+
+msgid "Pset_QuayDesignCriteria_HighWaterLevel_DEFINITION"
+msgstr "High water level"
+
+#:IFC.xml:25134
+msgid "Pset_QuayDesignCriteria_LowWaterLevel"
+msgstr "LowWaterLevel"
+
+msgid "Pset_QuayDesignCriteria_LowWaterLevel_DEFINITION"
+msgstr "Low water level"
+
+#:IFC.xml:25139
+msgid "Pset_QuayDesignCriteria_ShipLoading"
+msgstr "ShipLoading"
+
+msgid "Pset_QuayDesignCriteria_ShipLoading_DEFINITION"
+msgstr "Ship loading force"
+
+#:IFC.xml:25144
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad"
+msgstr "UniformlyDistributedLoad"
+
+msgid "Pset_QuayDesignCriteria_UniformlyDistributedLoad_DEFINITION"
+msgstr "Uniformly Distributed Load"
+
+#:IFC.xml:25149
+msgid "Pset_QuayDesignCriteria_WaveLoading"
+msgstr "WaveLoading"
+
+msgid "Pset_QuayDesignCriteria_WaveLoading_DEFINITION"
+msgstr "Wave loading force"
+
+#:IFC.xml:25155
+msgid "Pset_RevetmentCommon"
+msgstr "Pset RevetmentCommon"
+
+msgid "Pset_RevetmentCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、REVETMENTに定義済みの型が設定されています。"
+
+#:IFC.xml:25156
+msgid "Pset_RevetmentCommon_Elevation"
+msgstr "標高上昇"
+
+msgid "Pset_RevetmentCommon_Elevation_DEFINITION"
+msgstr "Elevation of the entity"
+
+#:IFC.xml:25161
+msgid "Pset_RevetmentCommon_StructuralType"
+msgstr "構造体タイプ"
+
+msgid "Pset_RevetmentCommon_StructuralType_DEFINITION"
+msgstr "Structural type of the object"
+
+#:IFC.xml:25167
+msgid "Pset_ShipLockCommon"
+msgstr "Pset ShipLockCommon"
+
+msgid "Pset_ShipLockCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、SHIPLOCK に定義された型を指定します。"
+
+#:IFC.xml:25168
+msgid "Pset_ShipLockCommon_CillLevelLowerHead"
+msgstr "CillLevelLowerHead"
+
+msgid "Pset_ShipLockCommon_CillLevelLowerHead_DEFINITION"
+msgstr "Height of the lower head cill level"
+
+#:IFC.xml:25173
+msgid "Pset_ShipLockCommon_CillLevelUpperHead"
+msgstr "CillLevelUpperHead"
+
+msgid "Pset_ShipLockCommon_CillLevelUpperHead_DEFINITION"
+msgstr "Height of the upper head cill level"
+
+#:IFC.xml:25178
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType"
+msgstr "WaterDeliverySystemType"
+
+msgid "Pset_ShipLockCommon_WaterDeliverySystemType_DEFINITION"
+msgstr "Type of water delivery system"
+
+#:IFC.xml:25183
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType"
+msgstr "ウォーターデリバリーバルブタイプ"
+
+msgid "Pset_ShipLockCommon_WaterDeliveryValveType_DEFINITION"
+msgstr "Type of water delivery valve"
+
+#:IFC.xml:25189
+msgid "Pset_ShiplockComplex"
+msgstr "Pset ShiplockComplex"
+
+msgid "Pset_ShiplockComplex_DEFINITION"
+msgstr "[[IfcMarineFacility]] の発生の定義に共通するプロパティで、SHIPLOCKに定義済みの型が設定されています。 施設は複数のシッポックの複合体を表しています"
+
+#:IFC.xml:25190
+msgid "Pset_ShiplockComplex_LockChamberLevels"
+msgstr "LockChamberLevel"
+
+msgid "Pset_ShiplockComplex_LockChamberLevels_DEFINITION"
+msgstr "Number of steps chambers in a lock line"
+
+#:IFC.xml:25195
+msgid "Pset_ShiplockComplex_LockGrade"
+msgstr "LockGrade"
+
+msgid "Pset_ShiplockComplex_LockGrade_DEFINITION"
+msgstr "Operational grading of the ship lock complex"
+
+#:IFC.xml:25200
+msgid "Pset_ShiplockComplex_LockLines"
+msgstr "LockLines"
+
+msgid "Pset_ShiplockComplex_LockLines_DEFINITION"
+msgstr "Number of Parallel lock series"
+
+#:IFC.xml:25205
+msgid "Pset_ShiplockComplex_LockMode"
+msgstr "ロックモード"
+
+msgid "Pset_ShiplockComplex_LockMode_DEFINITION"
+msgstr "Type of lock system used."
+
+#:IFC.xml:25211
+msgid "Pset_ShiplockDesignCriteria"
+msgstr "Pset ShiplockDesignCriteria"
+
+msgid "Pset_ShiplockDesignCriteria_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の設計条件の定義に共通するプロパティで、あらかじめ定義された型が SHIPLOCK に設定されています。"
+
+#:IFC.xml:25212
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel"
+msgstr "下流の洪水の水レベル"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamFloodWaterLevel_DEFINITION"
+msgstr "the design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25217
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel"
+msgstr "下流メンテナンスウォーターレベル"
+
+msgid "Pset_ShiplockDesignCriteria_DownstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "Design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25222
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel"
+msgstr "MaximumDownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design maximum downstream water level for the lock complex"
+
+#:IFC.xml:25227
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel"
+msgstr "MaximumUpstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MaximumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25232
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel"
+msgstr "MinimumDownstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumDownstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design minimum downstream water level for the lock complex"
+
+#:IFC.xml:25237
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel"
+msgstr "MinimumUpstreamNavigableWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_MinimumUpstreamNavigableWaterLevel_DEFINITION"
+msgstr "Design minimum upstream water level for the lock complex"
+
+#:IFC.xml:25242
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel"
+msgstr "UpstreamFloodWaterLevel"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamFloodWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25247
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel"
+msgstr "上流メンテナンス水レベル"
+
+msgid "Pset_ShiplockDesignCriteria_UpstreamMaintenanceWaterLevel_DEFINITION"
+msgstr "Design maximum upstream water level for the lock complex"
+
+#:IFC.xml:25253
+msgid "Pset_ShipyardCommon"
+msgstr "Pset ShipyardCommon"
+
+msgid "Pset_ShipyardCommon_DEFINITION"
+msgstr "[[IfcMarineFacility]] のすべての出現の定義に共通するプロパティで、あらかじめ定義された型が SHIPYARD に設定されています。"
+
+#:IFC.xml:25254
+msgid "Pset_ShipyardCommon_PrimaryProductionType"
+msgstr "プライマリプロダクションタイプ"
+
+msgid "Pset_ShipyardCommon_PrimaryProductionType_DEFINITION"
+msgstr "Primary type of ship production of the facility"
+
+#:IFC.xml:25260
+msgid "Pset_SiteWeather"
+msgstr "Pset SiteWeather"
+
+msgid "Pset_SiteWeather_DEFINITION"
+msgstr "サイト天気のプロパティ"
+
+#:IFC.xml:25261
+msgid "Pset_SiteWeather_MaxAmbientTemp"
+msgstr "MaxAmbientTemp"
+
+msgid "Pset_SiteWeather_MaxAmbientTemp_DEFINITION"
+msgstr "Maximum ambient temperature of the site used as a basis of design"
+
+#:IFC.xml:25266
+msgid "Pset_SiteWeather_MinAmbientTemp"
+msgstr "MinAmbientTemp"
+
+msgid "Pset_SiteWeather_MinAmbientTemp_DEFINITION"
+msgstr "Minimum ambient temperature of the site used as a basis of design"
+
+#:IFC.xml:25272
+msgid "Pset_VehicleAvailability"
+msgstr "Pset VehicleAvailability"
+
+msgid "Pset_VehicleAvailability_DEFINITION"
+msgstr "車両や機器への可用性データの適用のためのプロパティセット。"
+
+#:IFC.xml:25273
+msgid "Pset_VehicleAvailability_MaintenanceDowntime"
+msgstr "MaintenanceDowntime"
+
+msgid "Pset_VehicleAvailability_MaintenanceDowntime_DEFINITION"
+msgstr "MaintenanceDowntime"
+
+#:IFC.xml:25278
+msgid "Pset_VehicleAvailability_VehicleAvailability"
+msgstr "VehicleAvailability"
+
+msgid "Pset_VehicleAvailability_VehicleAvailability_DEFINITION"
+msgstr "Vehicle or Plant availability"
+
+#:IFC.xml:25283
+msgid "Pset_VehicleAvailability_WeatherDowntime"
+msgstr "WeatherDowntime"
+
+msgid "Pset_VehicleAvailability_WeatherDowntime_DEFINITION"
+msgstr "Weather downtime proportion"
+
+#:IFC.xml:25289
+msgid "Pset_VesselLineCommon"
+msgstr "Pset VesselLineCommon"
+
+msgid "Pset_VesselLineCommon_DEFINITION"
+msgstr "容器ラインおよびアンカーの特性"
+
+#:IFC.xml:25290
+msgid "Pset_VesselLineCommon_CentreLineToFairlead"
+msgstr "CentreLineToFairlead"
+
+msgid "Pset_VesselLineCommon_CentreLineToFairlead_DEFINITION"
+msgstr "Distance from the vessel centreline to the fairlead for the line"
+
+#:IFC.xml:25295
+msgid "Pset_VesselLineCommon_FairleadToTermination"
+msgstr "FairleadToTermination"
+
+msgid "Pset_VesselLineCommon_FairleadToTermination_DEFINITION"
+msgstr "Distance from the fairlead to the bitt or winch on the vessel where the line terminates"
+
+#:IFC.xml:25300
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck"
+msgstr "HeightAboveMainDeck"
+
+msgid "Pset_VesselLineCommon_HeightAboveMainDeck_DEFINITION"
+msgstr "Height of the fairlead above the main deck of the vessel"
+
+#:IFC.xml:25305
+msgid "Pset_VesselLineCommon_LineIdentifier"
+msgstr "LineIdentifier"
+
+msgid "Pset_VesselLineCommon_LineIdentifier_DEFINITION"
+msgstr "Reference ID relative to a design vessel in the project"
+
+#:IFC.xml:25310
+msgid "Pset_VesselLineCommon_LineStrength"
+msgstr "線形強度"
+
+msgid "Pset_VesselLineCommon_LineStrength_DEFINITION"
+msgstr "Breaking load of the line note that ultimate stress is not part of any of the material Psets"
+
+#:IFC.xml:25315
+msgid "Pset_VesselLineCommon_LineType"
+msgstr "LineType"
+
+msgid "Pset_VesselLineCommon_LineType_DEFINITION"
+msgstr "Mooring line type"
+
+#:IFC.xml:25320
+msgid "Pset_VesselLineCommon_MidshipToFairLead"
+msgstr "MidshipToFairLead"
+
+msgid "Pset_VesselLineCommon_MidshipToFairLead_DEFINITION"
+msgstr "Distance from the vessel midship to the fairlead for the line"
+
+#:IFC.xml:25325
+msgid "Pset_VesselLineCommon_PreTensionAim"
+msgstr "PreTensionAim"
+
+msgid "Pset_VesselLineCommon_PreTensionAim_DEFINITION"
+msgstr "Line force that the winch is set to maintain minimum load"
+
+#:IFC.xml:25330
+msgid "Pset_VesselLineCommon_TailDiameter"
+msgstr "TailDiameter"
+
+msgid "Pset_VesselLineCommon_TailDiameter_DEFINITION"
+msgstr "Diameter of the tail"
+
+#:IFC.xml:25335
+msgid "Pset_VesselLineCommon_TailLength"
+msgstr "TailLength"
+
+msgid "Pset_VesselLineCommon_TailLength_DEFINITION"
+msgstr "Length of the tail"
+
+#:IFC.xml:25340
+msgid "Pset_VesselLineCommon_TailStrength"
+msgstr "TailStrength"
+
+msgid "Pset_VesselLineCommon_TailStrength_DEFINITION"
+msgstr "Breaking load of the tail note that ultimate stress is not part of any of the material Psets"
+
+#:IFC.xml:25345
+msgid "Pset_VesselLineCommon_TailType"
+msgstr "テールタイプ"
+
+msgid "Pset_VesselLineCommon_TailType_DEFINITION"
+msgstr "Mooring tail type"
+
+#:IFC.xml:25350
+msgid "Pset_VesselLineCommon_WinchBreakLimit"
+msgstr "WinchBreakLimit"
+
+msgid "Pset_VesselLineCommon_WinchBreakLimit_DEFINITION"
+msgstr "Line force at which the winch starts to release the line maximum load"
+
+#:IFC.xml:25356
+msgid "Qto_FacilityPartBaseQuantities"
+msgstr "Qto FacilityPartBaseQuantities"
+
+msgid "Qto_FacilityPartBaseQuantities_DEFINITION"
+msgstr "Base quantities that are common to the definition of all occurrences of [[IfcFacility]] ."
+
+#:IFC.xml:25357
+msgid "Qto_FacilityPartBaseQuantities_Area"
+msgstr "エリア"
+
+msgid "Qto_FacilityPartBaseQuantities_Area_DEFINITION"
+msgstr "Area of the projection as viewed by an elevation view for wall projections or as viewed by a ground floor view for slab projections ."
+
+#:IFC.xml:25362
+msgid "Qto_FacilityPartBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_FacilityPartBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25367
+msgid "Qto_FacilityPartBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_FacilityPartBaseQuantities_Length_DEFINITION"
+msgstr "遷移セクションの公称長さ。形状表現と内部で使用される幾何パラメータに加えて、サイズ情報が提供されます。 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:25372
+msgid "Qto_FacilityPartBaseQuantities_Volume"
+msgstr "音量"
+
+msgid "Qto_FacilityPartBaseQuantities_Volume_DEFINITION"
+msgstr "Total volume of fluid in the tubes and their headers."
+
+#:IFC.xml:25377
+msgid "Qto_FacilityPartBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_FacilityPartBaseQuantities_Width_DEFINITION"
+msgstr "トレンチ掘削の公称幅. サイズ情報は、形状表現と内部で使用される幾何学的パラメータに加えて提供されます. 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:25383
+msgid "Qto_MarineFacilityBaseQuantities"
+msgstr "Qto MarineFacilityBaseQuantities"
+
+msgid "Qto_MarineFacilityBaseQuantities_DEFINITION"
+msgstr "Base quantities that are common to the definition of all occurrences of [[IfcMarineFacility]] ."
+
+#:IFC.xml:25384
+msgid "Qto_MarineFacilityBaseQuantities_Area"
+msgstr "エリア"
+
+msgid "Qto_MarineFacilityBaseQuantities_Area_DEFINITION"
+msgstr "Area of the projection as viewed by an elevation view for wall projections or as viewed by a ground floor view for slab projections ."
+
+#:IFC.xml:25389
+msgid "Qto_MarineFacilityBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_MarineFacilityBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25394
+msgid "Qto_MarineFacilityBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_MarineFacilityBaseQuantities_Length_DEFINITION"
+msgstr "遷移セクションの公称長さ。形状表現と内部で使用される幾何パラメータに加えて、サイズ情報が提供されます。 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:25399
+msgid "Qto_MarineFacilityBaseQuantities_Volume"
+msgstr "音量"
+
+msgid "Qto_MarineFacilityBaseQuantities_Volume_DEFINITION"
+msgstr "Total volume of fluid in the tubes and their headers."
+
+#:IFC.xml:25404
+msgid "Qto_MarineFacilityBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_MarineFacilityBaseQuantities_Width_DEFINITION"
+msgstr "トレンチ掘削の公称幅. サイズ情報は、形状表現と内部で使用される幾何学的パラメータに加えて提供されます. 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:25410
+msgid "Qto_VehicleBaseQuantities"
+msgstr "Qto車両ベース数量"
+
+msgid "Qto_VehicleBaseQuantities_DEFINITION"
+msgstr "車両の数量"
+
+#:IFC.xml:25411
+msgid "Qto_VehicleBaseQuantities_Height"
+msgstr "高さ"
+
+msgid "Qto_VehicleBaseQuantities_Height_DEFINITION"
+msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+
+#:IFC.xml:25416
+msgid "Qto_VehicleBaseQuantities_Length"
+msgstr "長さ"
+
+msgid "Qto_VehicleBaseQuantities_Length_DEFINITION"
+msgstr "遷移セクションの公称長さ。形状表現と内部で使用される幾何パラメータに加えて、サイズ情報が提供されます。 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
+
+#:IFC.xml:25421
+msgid "Qto_VehicleBaseQuantities_Width"
+msgstr "Width"
+
+msgid "Qto_VehicleBaseQuantities_Width_DEFINITION"
+msgstr "トレンチ掘削の公称幅. サイズ情報は、形状表現と内部で使用される幾何学的パラメータに加えて提供されます. 接続されたプロパティセットに記載されている幾何パラメータとサイズプロパティの間に矛盾がある場合、幾何パラメータが優先されます。"
 
