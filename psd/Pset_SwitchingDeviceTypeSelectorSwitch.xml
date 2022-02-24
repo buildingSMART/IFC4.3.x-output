@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
+  <IfcVersion version="IFC4X3_DEV_404a780"/>
   <Name>Pset_SwitchingDeviceTypeSelectorSwitch</Name>
   <Definition>A selector switch is a switch that adjusts electrical power through a multi-position action.  HISTORY: Added in IFC4.</Definition>
   <Applicability/>
@@ -27,7 +27,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SwitchUsage</Name>
-      <Definition>A list of the available usages for selector switches from which that required may be selected.</Definition>
+      <Definition>A list of the available usages for switches from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SwitchUsage">
@@ -45,7 +45,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>SwitchActivation</Name>
-      <Definition>A list of the available activations for selector switches from which that required may be selected.</Definition>
+      <Definition>A list of the available activations for switches from which that required may be selected.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_SwitchActivation">
@@ -61,6 +61,51 @@
             <EnumItem>WIRE</EnumItem>
           </EnumList>
         </TypePropertyEnumeratedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalCurrent</Name>
+      <Definition>The nominal current that is designed to be measured.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>ReferenceEnvironmentTemperature</Name>
+      <Definition>Ideal temperature range.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>RatedFrequency</Name>
+      <Definition>Frequency of the AC electric power supply when the device or system reaches its optimum operating condition.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcFrequencyMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NumberOfPhases</Name>
+      <Definition>Number of phases that the equipment operates on.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalPower</Name>
+      <Definition>A conventional value of apparent power determining a value of the rated current that may be carried with rated voltage applied, under specified conditions. ( IEV ref 421-04-04)</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>

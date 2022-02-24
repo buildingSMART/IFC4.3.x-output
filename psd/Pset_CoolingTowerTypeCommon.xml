@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
+  <IfcVersion version="IFC4X3_DEV_404a780"/>
   <Name>Pset_CoolingTowerTypeCommon</Name>
   <Definition>Cooling tower type common attributes.
 WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definition>
@@ -12,7 +12,7 @@ WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definiti
   <PropertyDefs>
     <PropertyDef>
       <Name>Reference</Name>
-      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types.</Definition>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as &quot;construction type&quot;. It should be provided as an alternative to the name of the &quot;object type&quot;, if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcIdentifier"/>
@@ -38,7 +38,7 @@ WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definiti
     </PropertyDef>
     <PropertyDef>
       <Name>NominalCapacity</Name>
-      <Definition>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
+      <Definition>The total nominal or volumetric capacity of the object.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcPowerMeasure"/>
@@ -69,9 +69,8 @@ DryWet: A combination of a dry tower and a wet tower.</Definition>
     <PropertyDef>
       <Name>FlowArrangement</Name>
       <Definition>CounterFlow: Air and water flow enter in different directions.
-
 CrossFlow: Air and water flow are perpendicular.
-ParallelFlow: Air and water flow enter in same directions.</Definition>
+ParallelFlow: air and water flow enter in same directions.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_CoolingTowerFlowArrangement">
@@ -152,7 +151,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Def
       <Definition>Number of cells in one cooling tower unit.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
+          <DataType type="IfcCountMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
@@ -176,7 +175,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Def
     </PropertyDef>
     <PropertyDef>
       <Name>WaterRequirement</Name>
-      <Definition>Make-up water requirements.</Definition>
+      <Definition>Make-up water requirement.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcVolumetricFlowRateMeasure"/>
@@ -185,7 +184,7 @@ WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Def
     </PropertyDef>
     <PropertyDef>
       <Name>OperationTemperatureRange</Name>
-      <Definition>Allowable operational range of the ambient air temperature.</Definition>
+      <Definition>Allowable operation ambient air temperature range.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcThermodynamicTemperatureMeasure"/>

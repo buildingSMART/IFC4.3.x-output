@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_d8fc879"/>
+  <IfcVersion version="IFC4X3_DEV_404a780"/>
   <Name>Pset_ElectricalDeviceCommon</Name>
   <Definition>A collection of properties that are commonly used by electrical device types.</Definition>
   <Applicability/>
@@ -38,7 +38,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>PowerFactor</Name>
-      <Definition>The ratio between the rated electrical power and the product of the rated current and rated voltage</Definition>
+      <Definition>Power factor; usually as ratio.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcNormalisedRatioMeasure"/>
@@ -47,7 +47,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>ConductorFunction</Name>
-      <Definition>Function of a line conductor to which a device  is intended to be connected where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
+      <Definition>Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.</Definition>
       <PropertyType>
         <TypePropertyEnumeratedValue>
           <EnumList name="PEnum_ConductorFunctionEnum">
@@ -66,16 +66,16 @@
     </PropertyDef>
     <PropertyDef>
       <Name>NumberOfPoles</Name>
-      <Definition>The number of live lines that is intended to be handled by the device.</Definition>
+      <Definition>Number of poles that the object would affect.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
-          <DataType type="IfcInteger"/>
+          <DataType type="IfcCountMeasure"/>
         </TypePropertySingleValue>
       </PropertyType>
     </PropertyDef>
     <PropertyDef>
       <Name>HasProtectiveEarth</Name>
-      <Definition>Indicates whether the electrical device has a protective earth connection (=TRUE) or not (= FALSE).</Definition>
+      <Definition>Indicates whether the object has a protective earth connection (=TRUE) or not (= FALSE).</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcBoolean"/>
@@ -102,7 +102,7 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IP_Code</Name>
-      <Definition/>
+      <Definition>IP Code, the International Protection Marking, IEC 60529), classifies and rates the degree of protection provided against intrusion.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
@@ -111,11 +111,62 @@
     </PropertyDef>
     <PropertyDef>
       <Name>IK_Code</Name>
-      <Definition/>
+      <Definition>IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.NOTE  In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.</Definition>
       <PropertyType>
         <TypePropertySingleValue>
           <DataType type="IfcLabel"/>
         </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>EarthingStyle</Name>
+      <Definition>Indicates the earthing style of the electric device.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>HeatDissipation</Name>
+      <Definition>Indicates the heat dissipation of the electric device measured in power.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>Power</Name>
+      <Definition>The actual power and operable range.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertyBoundedValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NominalPowerConsumption</Name>
+      <Definition>Nominal total power consumption.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure"/>
+        </TypePropertySingleValue>
+      </PropertyType>
+    </PropertyDef>
+    <PropertyDef>
+      <Name>NumberOfPowerSupplyPorts</Name>
+      <Definition>Indicates the number of power supply ports of the electric device.</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression/>
+          <DefiningValue>
+            <DataType type="IfcLabel"/>
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcInteger"/>
+          </DefinedValue>
+        </TypePropertyTableValue>
       </PropertyType>
     </PropertyDef>
   </PropertyDefs>
