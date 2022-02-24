@@ -9,656 +9,992 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: es\n"
-"X-Crowdin-File: /master/IfcGeometricConstraintResource.pot\n"
-"X-Crowdin-File-ID: 42\n"
+"X-Crowdin-File: /master/IfcGeometricModelResource.pot\n"
+"X-Crowdin-File-ID: 44\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: es_ES\n"
 "PO-Revision-Date: 2022-02-24 03:54\n"
 
-#:IFC.xml:9312
-msgid "IfcAlignmentCantSegment"
-msgstr "IfcAlignmentCantSegment"
+#:IFC.xml:9876
+msgid "IfcAdvancedBrep"
+msgstr "IfcAdvancedBrep"
 
-msgid "IfcAlignmentCantSegment_DEFINITION"
-msgstr "An [[IfcAlignmentCantSegment]] is an individual segment along [[IfcAlignmentCant]] . The cant alignment is defined by ordered segments that connect end to start. The points defined in a cant alignment segment are defined in a plane with x distance along horizontal alignment and y height relative to projected points in vertical alignment. The following cant segment types are defined Bloss transition [[IfcAlignmentCantSegmentTypeEnum]] .BLOSSCURVE. Constant cant [[IfcAlignmentCantSegmentTypeEnum]] .CONSTANTCANT. Cosine transition [[IfcAlignmentCantSegmentTypeEnum]] .COSINECURVE. Helmert transition [[IfcAlignmentCantSegmentTypeEnum]] .HELMERTCURVE. Linear transition [[IfcAlignmentCantSegmentTypeEnum]] .LINEARTRANSITION. Sine transition [[IfcAlignmentCantSegmentTypeEnum]] SINECURVE Viennese Bend R transition [[IfcAlignmentCantSegmentTypeEnum]] .VIENNESEBEND. For each cant segment, the following information is provided the start point, defined by distance along the horizontal alignment the length as horizontal length along the distance along not the curve segment length the start cant, given by the values of left cant and right cant, measured relatively to vertical alignment the end cant, given by the values of left cant and right cant, measured from vertical alignment the information of tangential continuity that can be used to check continuity of segments e.g. invalid sudden change of cant or missing cant information if end point and starting point differ over a threshold ."
+msgid "IfcAdvancedBrep_DEFINITION"
+msgstr "An advanced B rep is a boundary representation model in which all faces, edges and vertices are explicitly represented. It is a solid with explicit topology and elementary or free form geometry. The faces of the B rep are of type [[IfcAdvancedFace]] . An advanced B rep has to meet the same topological constraints as the manifold solid B rep. NOTE The advanced B rep has been introduced in order to support the increasing number of applications that can define and exchange B rep models based on NURBS or other b spline surfaces. Figure 1 illustrates use of [[IfcAdvancedBrep]] for boundary representation models with b spline surfaces. The diagram shows the topological and geometric representation items that are used for advanced B reps, based on [[IfcAdvancedFace]]. Figure 1 Advanced Brep, b spline surface Figure 2 illustrates use of [[IfcAdvancedBrep]] for boundary representation models with elementary surfaces. The diagram shows the topological and geometric representation items that are used for advanced B reps, based on [[IfcAdvancedFace]]. It shows the use of [[IfcIntersectionCurve]] to provide the geometric representation of the edge curve both as 3D curve and as u,v pcurve in the parametric space of the adjacent surfaces. Figure 2 Advanced Brep, elementary surface NOTE Entity adapted from advanced brep shape representation defined in ISO 10303 514. HISTORY New entity in IFC4 .spec head Informal Propositions 1. each face is a face surface 2. each face surface has its geometry defined by an elementary surface, swept surface or a b spline surface 3. the edges used to define the boundaries of the face shall all reference an edge curve 4. each curve used to define the geometry of the faces and face bounds shall be either a conic, or a line or a polyline or a b spline curve 5. the edges used to define the face boundaries shall all be trimmed by vertices of type vertex point 6. no loop used to define a face bound shall be of the oriented subtype Formal Propositions HasAdvancedFaces Each face of the advanced B rep shall be of type [[IfcAdvancedFace]] ."
 
-#:IFC.xml:9313
-msgid "IfcAlignmentCantSegment_EndCantLeft"
-msgstr "Cante final izquierdo"
+#:IFC.xml:9879
+msgid "IfcAdvancedBrepWithVoids"
+msgstr "IfcAdvancedBrepWithVoids"
 
-msgid "IfcAlignmentCantSegment_EndCantLeft_DEFINITION"
-msgstr "Longitud medida para el cante izquierdo al final del segmento."
+msgid "IfcAdvancedBrepWithVoids_DEFINITION"
+msgstr "The [[IfcAdvancedBrepWithVoids]] is a specialization of an advanced B rep which contains one or more voids in its interior. The voids are represented as closed shells which are defined so that the shell normal point into the void. NOTE Entity adapted from advanced brep shape representation defined in ISO 10303 42. HISTORY New entity in IFC4 .spec head Informal Propositions 1. Each void shell shall be disjoint from the outer shell and from every other void shell 2. Each void shell shall be enclosed within the outer shell but not within any other void shell. In particular the outer shell is not in the set of void shells 3. Each shell in the [[IfcManifoldSolidBrep]] shall be referenced only once. 4. All the faces of all the shells in the [[IfcAdvancedBrep]] and the [[IfcAdvancedBrepWithVoids]].Voids shall be of type [[IfcAdvancedFace]] ."
 
-#:IFC.xml:9318
-msgid "IfcAlignmentCantSegment_EndCantRight"
-msgstr "CantDerecha Final"
+#:IFC.xml:9882
+msgid "IfcAdvancedBrepWithVoids_Voids"
+msgstr "Voids"
 
-msgid "IfcAlignmentCantSegment_EndCantRight_DEFINITION"
-msgstr "Longitud medida para el cante derecho al final del segmento."
+msgid "IfcAdvancedBrepWithVoids_Voids_DEFINITION"
+msgstr "Voids"
 
-#:IFC.xml:9323
-msgid "IfcAlignmentCantSegment_HorizontalLength"
-msgstr "Longitud horizontal"
+#:IFC.xml:9894
+msgid "IfcBlock"
+msgstr "Bloque Ifc"
 
-msgid "IfcAlignmentCantSegment_HorizontalLength_DEFINITION"
-msgstr "Longitud medida como distancia a lo largo del alineamiento horizontal del segmento."
+msgid "IfcBlock_DEFINITION"
+msgstr "The [[IfcBlock]] is a Construction Solid Geometry CSG 3D primitive. It is defined by a position and a positve distance along the three orthogonal axes. The inherited Position attribute has the IfcAxisPlacement3D type and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The block has one vertex at location and the edges are aligned with the placement axes in the positive sense. The XLength , YLength , and ZLength attributes define the size of the [[IfcBlock]] along the three axes. Figure 1 illustrates geometric parameters of a block where the block positioned within its own placement coordinate system. The values for XLength, YLength, and ZLength are applied to the positive direction of the X, Y, and Z axis. Figure 1 Block geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A block is a solid rectangular parallelepiped, defined with a location and placement coordinate system. The block is specified by the positive lengths x, y, and z along the axes of the placement coordinate system, and has one vertex at the origin of the placement coordinate system. NOTE Entity adapted from block defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture definition On each side face, textures are aligned facing upright. On the top and bottom faces, textures are aligned facing front to back. Textures are stretched or repeated to the extent of each face according to RepeatS and RepeatT . Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Left X 0 YLength 0 Y Z Right X XLength 0 0 Y Z Front Y 0 0 0 X Z Back Y XLength YLength 0 X Z Bottom Z 0 YLength 0 X Y Top Z 0 0 ZLength X Y Figure 2 Block textures"
 
-#:IFC.xml:9328
-msgid "IfcAlignmentCantSegment_PredefinedType"
-msgstr "PredefinedType"
+#:IFC.xml:9895
+msgid "IfcBlock_XLength"
+msgstr "XLongitud"
 
-msgid "IfcAlignmentCantSegment_PredefinedType_DEFINITION"
-msgstr "PredefinedType"
+msgid "IfcBlock_XLength_DEFINITION"
+msgstr "El tamaño del bloque a lo largo del eje X de posición. Es proporcionado por la posición del eje heredado a través de SELF [[IfcCsgPrimitive3D]].Position.P 1 ."
 
-#:IFC.xml:9333
-msgid "IfcAlignmentCantSegment_StartCantLeft"
-msgstr "StartCantLeft"
+#:IFC.xml:9900
+msgid "IfcBlock_YLength"
+msgstr "Longitud"
 
-msgid "IfcAlignmentCantSegment_StartCantLeft_DEFINITION"
-msgstr "Longitud medida para el cante izquierdo al comienzo del segmento."
+msgid "IfcBlock_YLength_DEFINITION"
+msgstr "El tamaño del bloque a lo largo del eje Y de posición. Se proporciona mediante la colocación del eje heredado a través de SELF [[IfcCsgPrimitive3D]].Position.P 2 ."
 
-#:IFC.xml:9338
-msgid "IfcAlignmentCantSegment_StartCantRight"
-msgstr "CantDerecha inicial"
+#:IFC.xml:9905
+msgid "IfcBlock_ZLength"
+msgstr "ZLength"
 
-msgid "IfcAlignmentCantSegment_StartCantRight_DEFINITION"
-msgstr "Longitud medida para el cante derecho al comienzo del segmento."
+msgid "IfcBlock_ZLength_DEFINITION"
+msgstr "El tamaño del bloque a lo largo del eje Z de posición. Se proporciona mediante la colocación del eje heredado a través de SELF [[IfcCsgPrimitive3D]].Position.P 3 ."
 
-#:IFC.xml:9343
-msgid "IfcAlignmentCantSegment_StartDistAlong"
-msgstr "Iniciar Dististar"
+#:IFC.xml:9912
+msgid "IfcBooleanClippingResult"
+msgstr "IfcBooleanClipingResultado"
 
-msgid "IfcAlignmentCantSegment_StartDistAlong_DEFINITION"
-msgstr "Distancia a lo largo de la alineación horizontal, medida a lo largo de la IfcAlignment2DHorizontal dada en la unidad de longitud del global [[IfcUnitAssignment]]."
+msgid "IfcBooleanClippingResult_DEFINITION"
+msgstr "A clipping result is defined as a special subtype of the general [[IfcBooleanResult]] . It constrains the operands and the operator of the Boolean result. A clipping result is the Boolean difference between a swept solid and a half space solid, or between the result of the Boolean difference and a half space solid. Hence more than one difference operation can be applied to achieve the final Boolean result. HISTORY New entity in IFC2x. Formal Propositions FirstOperandType The first operand of the Boolean clipping operation shall be either an [[IfcSweptAreaSolid]] or in case of more than one clipping an [[IfcBooleanResult]]. SecondOperandType The second operand of the Boolean clipping operation shall be an [[IfcHalfSpaceSolid]]. OperatorType The Boolean operator for clipping is always Difference ."
 
-#:IFC.xml:9350
-msgid "IfcAlignmentCantSegmentTypeEnum"
-msgstr "IfcAlignmentCantSegmentTypeEnum"
+#:IFC.xml:9915
+msgid "IfcBooleanOperand"
+msgstr "IfcBooleanOperand"
 
-msgid "IfcAlignmentCantSegmentTypeEnum_DEFINITION"
-msgstr "The [[IfcAlignmentCantSegmentTypeEnum]] indicates the type of a segment of a cant alignment segment [[IfcAlignmentCantSegment]] . Cant is defined as the amount by which one running rail is raised above the other running rail, in a track cross section. NOTE Definition according to EN 13803 2017 For 3D modeling both the cant value and the cant angle bank angle, lateral angle, cross slope angle are relevant. The relation between cant value D , Railhead distance b and cant angle ψ is shown below. Cant angle ψ .. .. .. .. figures ifcalignmentcantsegmenttypeenum CantAngle.png Figure 1 Cant angle, Cant, Railhead distance NOTE in contempory track engineering ψ is approximated by sinus of ψ or tangens of ψ very often. Variation of Cant Segmenttype Enumeration Values 0 both rails without relative elevation CONSTANTCANT constant in the complete segment, 0 elevated rail CONSTANTCANT variation along the segment Transition with linear cant variation LINEARTRANSITION variation along the segment Transition with non linear cant variation HELMERTCURVE, BLOSSCURVE, COSINECURVE, SINECURVE, VIENNESEBEND Cant variation in high performance transition bends While for combinations of horizontal clothoids and linear cant transitions the extension along the base line differs in some cases, curvature transition and cant transition for high performance horizontal transition bends are expected to have the same start position and end position. In some regulations the same linear extension requirement is mandatory for high performance transition bends. Whether the cant variation is defined by the same base formula as the curvature of the corresponding horizontal high performance transition bend or by a linear ramp also might differ between regulations. Used Symbols and their meaning Symbol meaning Unit, value range L full length of segment positive length L 0 s current position on segment 0 s L ξ s L Greek xi standardised, dimensionless path length along the alignment track centre line 0 ξ 1 D cant .... amount by which one running rail is raised above the other running rail, in a track cross section length D1 cant at beginning of the alignment segment length D s variable cant at station s along the alignment cant segment. length b Railhead distance distance between the nominal centre points of the two contact patches of a wheelset e.g. about 1500 mm for nominal track gauge 1435 mm length ψ Greek psi Angle of cant cross slope angle, bank angle rad φ Greek phi Directional angle azimuth, bearing rad NOTE Symbols according to EN 13803 2017 Items BLOSSCURVE Non linear cant variation according to Bloss curve base formula. Base formula Cant Bloss cant transition segment .. .. figures ifcalignmentcantsegmenttypeenum blosscurve.png Figure 1 Cant for Bloss curve transition segment CONSTANTCANT COSINECURVE HELMERTCURVE LINEARTRANSITION SINECURVE Non linear cant variation according to Sine curve base formula. Base formula Cant Sine cant transition segment .. .. figures ifcalignmentcantsegmenttypeenum sinecurve.png Figure 1 Cant for Sine curve transition segment VIENNESEBEND"
+#:IFC.xml:9916
+msgid "IfcBooleanOperator"
+msgstr "IfcBooleanOperator"
 
-#:IFC.xml:9359
-msgid "IfcAlignmentCantSegmentTypeEnum_BLOSSCURVE"
-msgstr "BLOSSCURVE"
+msgid "IfcBooleanOperator_DEFINITION"
+msgstr "Boolean operators that apply to the first and second Boolean operands. .extDef NOTE Definition according to ISO CD 10303 42 1992 This type defines the three Boolean operators used in the definition of CSG solids. NOTE Entity adapted from boolean operator defined in ISO 10303 42. HISTORY New entity in IFC1.5.1. Items UNION INTERSECTION The operation of constructing the regularised set theoretic intersection of the volumes defined by two solids. DIFFERENCE The regularised set theoretic difference between the volumes defined by two solids."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_BLOSSCURVE_DEFINITION"
-msgstr "Non linear cant variation according to Bloss curve base formula. Base formula Cant Bloss cant transition segment .. .. figures ifcalignmentcantsegmenttypeenum blosscurve.png Figure 1 Cant for Bloss curve transition segment"
+#:IFC.xml:9917
+msgid "IfcBooleanOperator_DIFFERENCE"
+msgstr "DIFFERENCIA"
 
-#:IFC.xml:9360
-msgid "IfcAlignmentCantSegmentTypeEnum_CONSTANTCANT"
-msgstr "CONSTANTCANT"
+msgid "IfcBooleanOperator_DIFFERENCE_DEFINITION"
+msgstr "The regularised set theoretic difference between the volumes defined by two solids."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_CONSTANTCANT_DEFINITION"
-msgstr "CONSTANTCANT"
+#:IFC.xml:9918
+msgid "IfcBooleanOperator_INTERSECTION"
+msgstr "INTERSECCIÓN"
 
-#:IFC.xml:9361
-msgid "IfcAlignmentCantSegmentTypeEnum_COSINECURVE"
-msgstr "COSINECURVO"
+msgid "IfcBooleanOperator_INTERSECTION_DEFINITION"
+msgstr "The operation of constructing the regularised set theoretic intersection of the volumes defined by two solids."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_COSINECURVE_DEFINITION"
-msgstr "COSINECURVO"
+#:IFC.xml:9919
+msgid "IfcBooleanOperator_UNION"
+msgstr "UNIÓN"
 
-#:IFC.xml:9362
-msgid "IfcAlignmentCantSegmentTypeEnum_HELMERTCURVE"
-msgstr "HELMERTCURVE"
+msgid "IfcBooleanOperator_UNION_DEFINITION"
+msgstr "UNIÓN"
 
-msgid "IfcAlignmentCantSegmentTypeEnum_HELMERTCURVE_DEFINITION"
-msgstr "HELMERTCURVE"
+#:IFC.xml:9921
+msgid "IfcBooleanResult"
+msgstr "IfcBooleanResult"
 
-#:IFC.xml:9363
-msgid "IfcAlignmentCantSegmentTypeEnum_LINEARTRANSITION"
-msgstr "LINERTRANSIÓN"
+msgid "IfcBooleanResult_DEFINITION"
+msgstr "The [[IfcBooleanResult]] is the result of applying a Boolean operation to two operands being solids. EXAMPLE If the first operand is a block and the second operand is a solid cylinder of suitable dimensions and location, the boolean result produced with the difference operator would be a block with a circular hole. .extDef NOTE Definition according to ISO CD 10303 42 1992 A Boolean result is the result of a regularized operation on two solids to create a new solid. Valid operations are regularized union, regularized intersection, and regularized difference. For purpose of Boolean operations, a solid is considered to be a regularized set of points. The final Boolean result depends upon the operation and the two operands. In the case of the difference operator the order of the operands is also significant. The operator can be either union, intersection or difference. The effect of these operators is described below Union on two solids is the new solid that is the regularization of the set of all points that are in either the first operand or the second operand or in both. Intersection on two solids is the new solid that is the regularization of the set of all points that are in both the first operand and the second operand. The result of the difference operation on two solids is the regularization of the set of all points which are in the first operand, but not in the second operand. NOTE Corresponding STEP type boolean result defined in ISO 10303 42. HISTORY New entity in IFC1.5.1."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_LINEARTRANSITION_DEFINITION"
-msgstr "LINERTRANSIÓN"
+#:IFC.xml:9922
+msgid "IfcBooleanResult_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9364
-msgid "IfcAlignmentCantSegmentTypeEnum_SINECURVE"
-msgstr "INECURVO"
+msgid "IfcBooleanResult_Dim_DEFINITION"
+msgstr "La dimensión espacial de esta entidad, es idéntica a la dimensión espacial del primer operador. Una regla donde se garantiza que ambos operandos tengan la misma dimensión espacial."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_SINECURVE_DEFINITION"
-msgstr "Non linear cant variation according to Sine curve base formula. Base formula Cant Sine cant transition segment .. .. figures ifcalignmentcantsegmenttypeenum sinecurve.png Figure 1 Cant for Sine curve transition segment"
+#:IFC.xml:9927
+msgid "IfcBooleanResult_FirstOperand"
+msgstr "Primaveral"
 
-#:IFC.xml:9365
-msgid "IfcAlignmentCantSegmentTypeEnum_VIENNESEBEND"
-msgstr "VIENNESEBEND"
+msgid "IfcBooleanResult_FirstOperand_DEFINITION"
+msgstr "El primer operario operado por la operación booleana."
 
-msgid "IfcAlignmentCantSegmentTypeEnum_VIENNESEBEND_DEFINITION"
-msgstr "VIENNESEBEND"
+#:IFC.xml:9932
+msgid "IfcBooleanResult_Operator"
+msgstr "Operador"
 
-#:IFC.xml:9366
-msgid "IfcAlignmentHorizontalSegment"
-msgstr "IfcAlignmentHorizontalSegment"
+msgid "IfcBooleanResult_Operator_DEFINITION"
+msgstr "El operador booleano utilizado en la operación para crear el resultado."
 
-msgid "IfcAlignmentHorizontalSegment_DEFINITION"
-msgstr "Individual segment along the [[IfcAlignmentHorizontal]] , being defined in the x y coordinate space. Each single horizontal alignment segment has an optional associated segment definition. The placement of [[IfcAlignmentHorizontalSegment]] and the [[IfcCurveSegment]] StartPlacement correspond to each other. The following information can be calculated and is therefore not exchanged explicitly to avoid redundancy and inconsistencies the end point from start point, direction, segment length and curve parameter the start distance along from the end distance along of the previous segment, or the start distance along of the horizontal alignment if it is the first segment the end distance along from the start distance and the segment length the end direction from the curve parameter, the start direction and the segment length the point of intersection from the start direction and the end direction The following checks can be done to validate the correct exchange continuity does the calculated end point of the previous segment matches with the provided start point of this segment tangential continuity does the calculated end direction of the previous segment matches with the provided start direction of this segment"
+#:IFC.xml:9937
+msgid "IfcBooleanResult_SecondOperand"
+msgstr "Secundaria"
 
-#:IFC.xml:9399
-msgid "IfcAlignmentHorizontalSegment_StartPoint"
-msgstr "Punto de inicio"
+msgid "IfcBooleanResult_SecondOperand_DEFINITION"
+msgstr "El segundo operando especificado para la operación."
 
-msgid "IfcAlignmentHorizontalSegment_StartPoint_DEFINITION"
-msgstr "El punto de partida del segmento definido por un punto cartesiano."
+#:IFC.xml:9946
+msgid "IfcBoundingBox"
+msgstr "IfcBoundingBox"
 
-#:IFC.xml:9367
-msgid "IfcAlignmentHorizontalSegment_EndRadiusOfCurvature"
-msgstr "Radius final de curvatura"
+msgid "IfcBoundingBox_DEFINITION"
+msgstr "The [[IfcBoundingBox]] defines an orthogonal box oriented parallel to the axes of the object coordinate system in which it is defined. It is defined by a Corner being a three dimensional Cartesian point and three length measures defining the X, Y and Z parameters of the box in the direction of the positive axes. NOTE Any subtype of [[IfcProduct]] having a product shape representation may have a bounding box representation. The Box representation identifier defined at [[IfcShapeRepresentation]] utilizes the [[IfcBoundingBox]] as the simpliest 3D shape representation. As shown in Figure 1, the [[IfcBoundingBox]] is defined with its own location which can be used to place the [[IfcBoundingBox]] relative to the geometric coordinate system. The [[IfcBoundingBox]] is defined by the lower left corner Corner and the upper right corner XDim, YDim, ZDim measured within the parent co ordinate system . Figure 1 Bounding box NOTE Corresponding STEP type box domain defined in ISO 10303 42. HISTORY New entity in IFC1.0."
 
-msgid "IfcAlignmentHorizontalSegment_EndRadiusOfCurvature_DEFINITION"
-msgstr "For a NONLINEAR horizontal segment type the radius of the curve at the end point. If the radius is 0 it shall be interpreted as INFINITE. Positive values imply a CCW direction whereas negative CW."
+#:IFC.xml:9969
+msgid "IfcBoundingBox_Corner"
+msgstr "Esquina"
 
-#:IFC.xml:9372
-msgid "IfcAlignmentHorizontalSegment_GravityCenterLineHeight"
-msgstr "Altura de la línea central de gravedad"
+msgid "IfcBoundingBox_Corner_DEFINITION"
+msgstr "Location of the bottom left corner having the minimum values ."
 
-msgid "IfcAlignmentHorizontalSegment_GravityCenterLineHeight_DEFINITION"
-msgstr "Optional attribute require for the exchange of Vienna bend transition segment."
+#:IFC.xml:9947
+msgid "IfcBoundingBox_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9377
-msgid "IfcAlignmentHorizontalSegment_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcBoundingBox_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, it is always 3."
 
-msgid "IfcAlignmentHorizontalSegment_PredefinedType_DEFINITION"
-msgstr "Predefined type of the horizontal alignmnent segment."
+#:IFC.xml:9952
+msgid "IfcBoundingBox_XDim"
+msgstr "XDim"
 
-#:IFC.xml:9382
-msgid "IfcAlignmentHorizontalSegment_SegmentLength"
-msgstr "Longitud del segmento"
+msgid "IfcBoundingBox_XDim_DEFINITION"
+msgstr "Atributo de longitud medido a lo largo del borde paralelo al eje X"
 
-msgid "IfcAlignmentHorizontalSegment_SegmentLength_DEFINITION"
-msgstr "The length along the curve."
+#:IFC.xml:9957
+msgid "IfcBoundingBox_YDim"
+msgstr "Dim"
 
-#:IFC.xml:9387
-msgid "IfcAlignmentHorizontalSegment_StartDirection"
-msgstr "Dirección de inicio"
+msgid "IfcBoundingBox_YDim_DEFINITION"
+msgstr "Atributo ancho medido a lo largo del borde paralelo al eje Y"
 
-msgid "IfcAlignmentHorizontalSegment_StartDirection_DEFINITION"
-msgstr "La dirección de la tangente en el punto de inicio. Valor de dirección 0. indica una curva con una tangente de inicio a lo largo del eje x positivo. Los valores aumentan en sentido contrario al reloj y disminuyen en el sentido de las agujas del reloj. Dependiendo de la unidad de ángulo plano, ya sea de grado o radianes, la gama sensible es 360 n 360 o 2 cm. Valores más grandes entonces no se utilizará un círculo completo 360 o 2."
+#:IFC.xml:9962
+msgid "IfcBoundingBox_ZDim"
+msgstr "ZDim"
 
-#:IFC.xml:9392
-msgid "IfcAlignmentHorizontalSegment_StartRadiusOfCurvature"
-msgstr "Radius de inicio en curvatura"
+msgid "IfcBoundingBox_ZDim_DEFINITION"
+msgstr "Atributo de altura medido a lo largo del borde paralelo al eje Z ."
 
-msgid "IfcAlignmentHorizontalSegment_StartRadiusOfCurvature_DEFINITION"
-msgstr "For a NONLINEAR horizontal segment type the radius of the curve at the start point Placement of the segment . For CIRCULAR type it is constant i.e. StartRadiusOfCurvature and EndRadiusOfCurvature are always the same. For LINE type, both StartRadiusOfCurvature and EndRadiusOfCurvature is 0. If the radius is 0 it shall be interpreted as INFINITE. Positive values imply a CCW direction whereas negative CW."
+#:IFC.xml:9993
+msgid "IfcBoxedHalfSpace"
+msgstr "Espacio IfcBoxedHalfSpace"
 
-#:IFC.xml:9411
-msgid "IfcAlignmentHorizontalSegmentTypeEnum"
-msgstr "IfcAlignmentHorizontalSegmentTypeEnum"
+msgid "IfcBoxedHalfSpace_DEFINITION"
+msgstr "The [[IfcBoxedHalfSpace]] is used as its supertype [[IfcHalfSpaceSolid]] only within Boolean operations. It divides the domain into exactly two subsets, where the domain in question is that of the attribute Enclosure . The purpose of the attribute Enclosure is to provide a search box for the other operand in the Boolean operation. It shall be sufficiently large to fully enclose the resulting solid after the Boolean operation with the half space. It however does not alter the final result. The result of the Boolean operation would be the same, as if executed by the supertype [[IfcHalfSpaceSolid]] . See Figure 1 below. correct use of enclosure .. .. .. .. figures ifcboxedhalfspace 01.png Figure 1 Boxed half space operands The [[IfcBoundingBox]] that provides the enclosure is given for the convenience of the receiving application to enable the use of size box comparison for efficiency for example, to check first whether size boxes intersect, if not no calculations has to be done to check whether the solids of the entities intersect . The Enclosure therefore helps to prevent dealing with infinite size related issues. The enclosure box is positioned within the object coordinate system, established by the ObjectPlacement of the element represented for example, by [[IfcLocalPlacement]] . Figure 2 shows the Enclosure box being sufficiently large to fully enclose the Boolean result. Figure 2 Boxed half space geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 This entity is a subtype of the half space solid which is trimmed by a surrounding rectangular box. The box has its edges parallel to the coordinate axes of the geometric coordinate system. The purpose of the box is to facilitate CSG computations by producing a solid of finite size. NOTE Entity adapted from boxed half space defined in ISO 10303 42. HISTORY New entity in IFC1.5.1 .change ifc2x4 IFC4 CHANGE Usage correct, position coordinate system for Enclosure is the object coordinate system."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_DEFINITION"
-msgstr "The [[IfcAlignmentHorizontalSegmentTypeEnum]] indicates the type of a segment of a horizontal alignment segment [[IfcAlignmentHorizontalSegment]] . Horizontal segments can be viewed from a geometric perspective and from a kinematic perspective. In recent times the kinematic perspective gained importance. The enumerations are detailed according to this development especially in modern track design. Kinematic perspective on horizontal alignment segments The central parameter of the kinematic perspective is lateral acceleration of the vehicle induced by change of direction while driving. In the horizontal layout this is the represented by the curvature of the segment. According to the curvature value the following categorization can be made Curvature Segmenttype Enumeration Values 0 straight line LINE constant in the complete segment, 0 Circular arc CIRCULARARC variation along the segment Transition with linear curvature variation CLOTHOID, CUBIC variation along the segment Transition with non linear curvature variation HELMERTCURVE, BLOSSCURVE, COSINECURVE, SINECURVE, VIENNESEBEND Geometric perspective on horizontal alignment segments The traditional view is denoted by the geometric perspective in the context of the business terminology related [[IfcAlignment]] documentation. Before the availability of modern computers alignment design was performed using traditional drawing techniques. In the first phase of computerization this origin led to a representation in the x,y space first and a check of safety related properties in a second step. This can still be seen in regulations which have been put into effect 1980 or earlier. Of course designs which have been produced on basis of these regulations reflect the good enough attitude in the precision of the documentation. In a later phase an increasing importance of the kinematic perspective can be observed. Here precise control of the lateral acceleration horizontal and cant layout and vertical acceleration vertical layout became prevalent. Designers started to use high performance transition bends especially in high speed scenarios. In the kinematic perspective precise curvature fitting between consecutive segments needs to be better than in the good enough approach of traditional geometric perspective. Central terms are e.g. jerks , theoretical cant or cant deficiency . Generic calculation of intrinsic x, y coordinates for a given curvature For each horizontal alignment segment with a known curvature formula a generic method to calculate segment intrinsic coordinates exists. Double integration .. .. figures ifcalignmenthorizontalsegmenttypeenum curvature2coord.png Figure 1 Double integration of curvature yielding intrinsic coordinates NOTE While it is possible to apply the generic calculation also for trivial cases like LINE or CIRCULARARC it is much more efficient to use available formulas. Word of warning Good enough traditional designs have to be carefully checked before being included into a high precision 3D model. Intermediate corrections might be necessary. Fortunately the clothoid works very well with comparable documentation quality both in the classic geometric perspective and in the more recent kinematic perspective. Fortunately the vast majority of horizontal transition bends are designed and implemented as clothoids. Recommendation Check the relevant regulations for the network in question. Alignment designs as such are very stable over the lifetime of the road or track. Especially for old designs quality and precision of available documentation has to be checked very carefully. A clear understanding of limitations should be established before implementing automated data flows between high precision BIM environments and legacy documentation systems. This applies both to legacy, central databases and to legacy, individual documents. Used Symbols and their meaning Symbol meaning Unit, value range L full length of segment positive length L 0 s current position on segment 0 s L ξ s L Greek xi standardised, dimensionless path length along the alignment track centre line 0 ξ 1 κ Greek kappa Curvature inverse radius of the alignment track centre line in plan view horizontal layout . 1 radius κ1 Curvature inverse radius at beginning of the alignment track centre line in plan view horizontal layout . 1 radius h height of the gravity center line used for calculation above the track centreline in the ground plan. length ψ Greek psi Angle of cant cross slope angle, bank angle rad φ Greek phi Directional angle azimuth, bearing rad x s variable longitudinal coordinate of the projection of the alignment track centreline into the ground plan. length y s variable transverse coordinate of the projection of the alignment track centreline into the ground plan. length Terminology Intrinsic coordinate, intrinisc coordinate system of an alignment segment The origin of an intrinsic coordinate system is the start of the segment. The direction of the positive x axis is the start direction of the segments. Items LINE In the geometry perspective it denotes a straight connection between two points. In the dynamic perspective, it denotes a segment with a curvature with a value of 0. This means that no lateral acceleration acts on the moving vehicle. Base formula Curvature Horizontal line segment .. .. figures ifcalignmenthorizontalsegmenttypeenum line.png Figure 1 Curvature for horizontal straight line segment CIRCULARARC In the geometric perspective, it denotes a connection between two points that follows a circular path. In the dynamic perspective, it denotes a segment with constant lateral acceleration on the moving vehicle, i.e. constant curvature. Base formula Curvature Circular arc segment .. .. figures ifcalignmenthorizontalsegmenttypeenum circulararc.png Figure 1 Curvature for horizontal circular segment CLOTHOID CUBIC In IFC CUBIC denotes a transition segment where x and y coordinates obey a cubic formula. General formula Cubic .. .. figures ifcalignmenthorizontalsegmenttypeenum cubic general.png Figure 1 General formula for cubic It was discovered very early that setting a to 1 6RL and b , c and d to 0 yields a good enough approximation of the clothoid in many situations. Cubic formula for alignment Cubic transition .. .. figures ifcalignmenthorizontalsegmenttypeenum cubic.png Figure 2 Alignment formula for cubic Since the manual computation of cubics was considerable easier compared to the theoretically sound clothoid, cubic transistions became very popular as good enough replacement curves. Cubic transition bends can still be found in many legacy alignments based on earlier design regulations. There also exist regulations containing cubic transitions for new designs. It is obvious that simple approximations cannot fulfil all requirements for a kinematically correct track design. For example, the requirement of tangential continuity has often been neglected in favour of lower design costs by using sufficiently good cubic curves. The cubic is known in two variants as Cubic Parabola or Cubic Spiral setting either the sinus or the cosinus of the deflection angle to 0. HELMERTCURVE The Helmert curve or Helmert transition is an early example of a high performance transition bend. It is now widely accepted in relevant science and engineering that the linear change of the clothoid induces unwanted kinematic influences to a running train at speeds higher than 125 km h. In the geometry perspective the Helmert segment is the assembly of two parts of same length which mirror the same change in radius of curvature. A rough approximation is known as the biquadratic parabola. NOTE also referred to as Schramm curve. Base formula Curvature Helmert curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum helmertcurve.png Figure 1 Curvature for horizontal Helmert transition segment BLOSSCURVE The Bloss transition is a more recent form of a high performance transition bend. Proposed in 1936. it is now in use in several railway networks. There is no established rough geometric approximation. NOTE Further reading Constantin Ciobanu, BLOSS TRANSITION A SHORT DESIGN GUIDE Base formula Curvature Bloss curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum blosscurve.png Figure 1 Curvature for horizontal Bloss curve transition segment COSINECURVE SINECURVE Sine transition or sinusoidal transition was suggested 1937. The curvature function is built up of one period of a sine function. The sine curve is characterised by particularly advantageous smoothing properties at the end points. Compared to the clothoid, it is twice as long. NOTE also referred to as Klein curve. Base formula Curvature Sine curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum sinecurve.png Figure 1 Curvature for horizontal Sine curve transition segment VIENNESEBEND The Viennese Bend R is an innovative track geometry transition element. Instead of analyzing the vehicle movement at the track plane the optimization efforts target a gravity center line at a defined height above the rails. As a consequence the path of the horizontal alignment center line is also influenced by the cant layout. The first part of the curvature formula is assembled from the basic function like the other transition bends. The additional term contains the bank angle ψ and the gravity center line height h and is unique to the Viennes Bend R . This term causes a small movement contrary to the main direction in the x,y layout. Curvature formula Viennese bend R transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum viennesebend.png Figure 1 Curvature for horizontal Viennese bend R transition segment"
+#:IFC.xml:9981
+msgid "IfcBoxedHalfSpace_Enclosure"
+msgstr "Armario"
 
-#:IFC.xml:9422
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_BLOSSCURVE"
-msgstr "BLOSSCURVE"
+msgid "IfcBoxedHalfSpace_Enclosure_DEFINITION"
+msgstr "La caja que limita la solidez resultante de la operación booleana que implica el medio espacio sólido sólo para fines computacionales."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_BLOSSCURVE_DEFINITION"
-msgstr "The Bloss transition is a more recent form of a high performance transition bend. Proposed in 1936. it is now in use in several railway networks. There is no established rough geometric approximation. NOTE Further reading Constantin Ciobanu, BLOSS TRANSITION A SHORT DESIGN GUIDE Base formula Curvature Bloss curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum blosscurve.png Figure 1 Curvature for horizontal Bloss curve transition segment"
+#:IFC.xml:9996
+msgid "IfcCartesianPointList"
+msgstr "Lista de puntos de IfcCartesiana"
 
-#:IFC.xml:9423
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CIRCULARARC"
-msgstr "CIRCULARC"
+msgid "IfcCartesianPointList_DEFINITION"
+msgstr "The [[IfcCartesianPointList]] is the abstract supertype of list of points. NOTE The [[IfcCartesianPointList]] is introduced to provide a compact representation of potentially larger list of points, such as in point clouds, and in indexable representation of points. HISTORY New entity in IFC4."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CIRCULARARC_DEFINITION"
-msgstr "In the geometric perspective, it denotes a connection between two points that follows a circular path. In the dynamic perspective, it denotes a segment with constant lateral acceleration on the moving vehicle, i.e. constant curvature. Base formula Curvature Circular arc segment .. .. figures ifcalignmenthorizontalsegmenttypeenum circulararc.png Figure 1 Curvature for horizontal circular segment"
+#:IFC.xml:9997
+msgid "IfcCartesianPointList_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9424
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CLOTHOID"
-msgstr "CLOTODOS"
+msgid "IfcCartesianPointList_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, either 2 or 3, depending on the sub type."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CLOTHOID_DEFINITION"
-msgstr "CLOTODOS"
+#:IFC.xml:10016
+msgid "IfcCartesianPointList2D"
+msgstr "IfcCartesianPointList2D"
 
-#:IFC.xml:9425
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_COSINECURVE"
-msgstr "COSINECURVO"
+msgid "IfcCartesianPointList2D_DEFINITION"
+msgstr "The [[IfcCartesianPointList2D]] defines an ordered collection of two dimentional Cartesian points. Each Cartesian point is provided as an two dimensional point by a fixed list of two coordinates. The attribute CoordList is a two dimensional list, where first dimension is an unbounded list representing each 2D Cartesian point second dimension is a fixed list of two list members, where 1 is the x coordinate, and 2 the y coordinate of the Cartesian point. NOTE The [[IfcCartesianPointList2D]] is introduced to provide a compact representation of larger list of points, such as in indexable representation of points used as vertices in poly curves. HISTORY New entity in IFC4 ADD1."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_COSINECURVE_DEFINITION"
-msgstr "COSINECURVO"
+#:IFC.xml:10017
+msgid "IfcCartesianPointList2D_CoordList"
+msgstr "CoordList"
 
-#:IFC.xml:9426
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBIC"
-msgstr "CUBIC"
+msgid "IfcCartesianPointList2D_CoordList_DEFINITION"
+msgstr "Lista de dos dimensiones de los puntos cartesianos proporcionados por dos coordenadas."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_CUBIC_DEFINITION"
-msgstr "In IFC CUBIC denotes a transition segment where x and y coordinates obey a cubic formula. General formula Cubic .. .. figures ifcalignmenthorizontalsegmenttypeenum cubic general.png Figure 1 General formula for cubic It was discovered very early that setting a to 1 6RL and b , c and d to 0 yields a good enough approximation of the clothoid in many situations. Cubic formula for alignment Cubic transition .. .. figures ifcalignmenthorizontalsegmenttypeenum cubic.png Figure 2 Alignment formula for cubic Since the manual computation of cubics was considerable easier compared to the theoretically sound clothoid, cubic transistions became very popular as good enough replacement curves. Cubic transition bends can still be found in many legacy alignments based on earlier design regulations. There also exist regulations containing cubic transitions for new designs. It is obvious that simple approximations cannot fulfil all requirements for a kinematically correct track design. For example, the requirement of tangential continuity has often been neglected in favour of lower design costs by using sufficiently good cubic curves. The cubic is known in two variants as Cubic Parabola or Cubic Spiral setting either the sinus or the cosinus of the deflection angle to 0."
+#:IFC.xml:10022
+msgid "IfcCartesianPointList2D_TagList"
+msgstr "TagList"
 
-#:IFC.xml:9427
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_HELMERTCURVE"
-msgstr "HELMERTCURVE"
+msgid "IfcCartesianPointList2D_TagList_DEFINITION"
+msgstr "List of tags corresponding to each point that may be used to identify a basis curve according to the Tag attribute at [[IfcOffsetCurveByDistances]] or IfcAlignmentCurve ."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_HELMERTCURVE_DEFINITION"
-msgstr "The Helmert curve or Helmert transition is an early example of a high performance transition bend. It is now widely accepted in relevant science and engineering that the linear change of the clothoid induces unwanted kinematic influences to a running train at speeds higher than 125 km h. In the geometry perspective the Helmert segment is the assembly of two parts of same length which mirror the same change in radius of curvature. A rough approximation is known as the biquadratic parabola. NOTE also referred to as Schramm curve. Base formula Curvature Helmert curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum helmertcurve.png Figure 1 Curvature for horizontal Helmert transition segment"
+#:IFC.xml:10029
+msgid "IfcCartesianPointList3D"
+msgstr "IfcCartesianPointList3D"
 
-#:IFC.xml:9428
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_LINE"
-msgstr "LÍNEA"
+msgid "IfcCartesianPointList3D_DEFINITION"
+msgstr "The [[IfcCartesianPointList3D]] defines an ordered collection of three dimentional Cartesian points. Each Cartesian point is provided as an three dimensional point by a fixed list of three coordinates. The attribute CoordList is a two dimensional list, where first dimension is an unbounded list representing each 3D Cartesian point second dimension is a fixed list of three list members, where 1 is the x coordinate, 2 the y coordinate and 3 the z coordinate of the Cartesian point. NOTE The [[IfcCartesianPointList]] is introduced to provide a compact representation of larger list of points, such as in point clouds, and in indexable representation of points used as vertices in tessellated items or poly curves. HISTORY New entity in IFC4."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_LINE_DEFINITION"
-msgstr "In the geometry perspective it denotes a straight connection between two points. In the dynamic perspective, it denotes a segment with a curvature with a value of 0. This means that no lateral acceleration acts on the moving vehicle. Base formula Curvature Horizontal line segment .. .. figures ifcalignmenthorizontalsegmenttypeenum line.png Figure 1 Curvature for horizontal straight line segment"
+#:IFC.xml:10030
+msgid "IfcCartesianPointList3D_CoordList"
+msgstr "CoordList"
 
-#:IFC.xml:9429
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_SINECURVE"
-msgstr "INECURVO"
+msgid "IfcCartesianPointList3D_CoordList_DEFINITION"
+msgstr "Lista de dos dimensiones de los puntos cartesianos proporcionados por tres coordenadas."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_SINECURVE_DEFINITION"
-msgstr "Sine transition or sinusoidal transition was suggested 1937. The curvature function is built up of one period of a sine function. The sine curve is characterised by particularly advantageous smoothing properties at the end points. Compared to the clothoid, it is twice as long. NOTE also referred to as Klein curve. Base formula Curvature Sine curve transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum sinecurve.png Figure 1 Curvature for horizontal Sine curve transition segment"
+#:IFC.xml:10035
+msgid "IfcCartesianPointList3D_TagList"
+msgstr "TagList"
 
-#:IFC.xml:9430
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_VIENNESEBEND"
-msgstr "VIENNESEBEND"
+msgid "IfcCartesianPointList3D_TagList_DEFINITION"
+msgstr "List of tags corresponding to each point that may be used to identify a basis curve according to the Tag attribute at [[IfcOffsetCurveByDistances]] or IfcAlignmentCurve ."
 
-msgid "IfcAlignmentHorizontalSegmentTypeEnum_VIENNESEBEND_DEFINITION"
-msgstr "The Viennese Bend R is an innovative track geometry transition element. Instead of analyzing the vehicle movement at the track plane the optimization efforts target a gravity center line at a defined height above the rails. As a consequence the path of the horizontal alignment center line is also influenced by the cant layout. The first part of the curvature formula is assembled from the basic function like the other transition bends. The additional term contains the bank angle ψ and the gravity center line height h and is unique to the Viennes Bend R . This term causes a small movement contrary to the main direction in the x,y layout. Curvature formula Viennese bend R transition segment .. .. figures ifcalignmenthorizontalsegmenttypeenum viennesebend.png Figure 1 Curvature for horizontal Viennese bend R transition segment"
+#:IFC.xml:10054
+msgid "IfcCsgPrimitive3D"
+msgstr "IfcCsgPrimitive3D"
 
-#:IFC.xml:9431
-msgid "IfcAlignmentParameterSegment"
-msgstr "IfcAlignmentParameterSegment"
+msgid "IfcCsgPrimitive3D_DEFINITION"
+msgstr "[[IfcCsgPrimitive3D]] is an abstract supertype of all three dimensional primitives used as either tree root item, or as Boolean results within a CSG solid model. All 3D CSG primitives are defined within a three dimensional placement coordinate system. HISTORY New entity in IFC2x3."
 
-msgid "IfcAlignmentParameterSegment_DEFINITION"
-msgstr "An abstract entity defining common information about horizontal, vertical and cant alignment segments. NOTE The start and end tag are defined as annotations, not as referents along the alignment. Only absolute distance expressions are in scope, not distances ahead or behind a referent, such as a station. However such information can be exchanged as tags."
+#:IFC.xml:10064
+msgid "IfcCsgPrimitive3D_Position"
+msgstr "Posición"
 
-#:IFC.xml:9432
-msgid "IfcAlignmentParameterSegment_EndTag"
-msgstr "EndTag"
+msgid "IfcCsgPrimitive3D_Position_DEFINITION"
+msgstr "The placement coordinate system to which the parameters of each individual CSG primitive apply."
 
-msgid "IfcAlignmentParameterSegment_EndTag_DEFINITION"
-msgstr "Tag to annotate the end point of the alignment segment."
+#:IFC.xml:10055
+msgid "IfcCsgPrimitive3D_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9437
-msgid "IfcAlignmentParameterSegment_StartTag"
-msgstr "StartTag"
+msgid "IfcCsgPrimitive3D_Dim_DEFINITION"
+msgstr "The space dimensionality of this geometric representation item, it is always 3."
 
-msgid "IfcAlignmentParameterSegment_StartTag_DEFINITION"
-msgstr "Tag to annotate the start point of the alignment segment."
+#:IFC.xml:10076
+msgid "IfcCsgSelect"
+msgstr "IfcCsgSelect"
 
-#:IFC.xml:9455
-msgid "IfcAlignmentVerticalSegment"
-msgstr "Segmento vertical IfcAlineamiento"
+#:IFC.xml:10077
+msgid "IfcCsgSolid"
+msgstr "IfcCsgSolid"
 
-msgid "IfcAlignmentVerticalSegment_DEFINITION"
-msgstr "Individual segment along the [[IfcAlignmentVertical]] , being defined in the distance along z coordinate space. The vertical alignment is defined by segments that connects end to start. The vertical alignment curve geometry is defined in a plane with x distance along horizontal, the y height or elevation . The transition at the segment connection is not enforced to be tangential, The [[IfcSegment]] Transition enumeration specifies the type of transition explicitly. The following vertical segment types are defined line segment [[IfcAlignmentVerticalSegmentTypeEnum]] .LINE. circular arc segment [[IfcAlignmentVerticalSegmentTypeEnum]] .ARC. parabolic arc segment [[IfcAlignmentVerticalSegmentTypeEnum]] .PARABOLICARC. which can describe symmetric and unsymmetric parabolas transition segment with linear curvature variation [[IfcAlignmentVerticalSegmentTypeEnum]] .CLOTHOID. For each vertical segment, the following non redundant information is provided the start point in distance along height coordinates the start gradient as a ratio measure with horizontal being 0, uphill positive, and downhill negative usually between 1 n 1 equal to a percentage of 100 n 100 , or to a degree of 45 n 45 but higher values are possible the length as horizontal length along the distance along not the curve segment length the curve parameter needed for circular and parabolic arc segments The following information can be calculated and is therefore not exchanged explicitly to avoid redundancy and inconsistencies the end distance along from the distance along and segment length the end height from start distance along, gradient, length and curve parameter the end direction from start direction, segment length and curve parameter the point of vertical intersection from start direction and end direction The following checks can be done to validate the correct exchange continuity does the calculated end distance along of the previous segment matches with the provided start distance along of this segment tangential continuity does the calculated end gradient of the previous segment matches with the provided start gradient of this segment NOTE Specific subtypes of the [[IfcAlignmentVerticalSegment]] add specific geometric curve parameters. Connectivity between vertical segments is not necessarily tangential, but this can be enforced as a requirement through the attribute TangentialContinuity . Alignment vertical segment .. .. .. .. figures ifcalignment2dverticalsegment.png Figure 1 Alignment vertical segment"
+msgid "IfcCsgSolid_DEFINITION"
+msgstr "An [[IfcCsgSolid]] is the representation of a 3D shape using constructive solid geometry model. It is represented by a single 3D CSG primitive, or as a result of a Boolean operation. The operants of a Boolean operation can be Boolean operations themselves forming a CSG tree. The following volumes can be parts of the CSG tree Boundary representation models, such as [[IfcFacetedBrep]] , [[IfcFacetedBrepWithVoids]] , Closed tesselated representation modles, such as [[IfcPolygonalFaceSet]] , [[IfcTriangulatedFaceSet]] , Swept area solids, such as [[IfcExtrudedAreaSolid]] , [[IfcRevolvedAreaSolid]] , and their subtypes for tapering, Advanced swept area solids, such as [[IfcSurfaceCurveSweptAreaSolid]] , [[IfcFixedReferenceSweptAreaSolid]] , [[IfcSweptDiskSolid]] Half space solids, such as [[IfcHalfSpaceSolid]] and its subtypes , and CSG primitives, the subtypes of [[IfcCsgPrimitive3D]] . .extDef NOTE Definition according to ISO CD 10303 42 1992 A solid represented as a CSG model is defined by a collection of so called primitive solids, combined using regularized Boolean operations. The allowed operations are intersection, union, and difference. As a special case a CSG solid can also consists of a single CSG primitive. A CSG solid requires two kinds of information for its complete definition geometric and structural. The geometric information is conveyed by solid models. These typically primitive volumes such as cylinders, wedges and extrusions, but can include general B Rep models. Solid models can also be half space solids. The structural information is in a tree strictly an acyclic directed graph of Boolean result and CSG solids, which represent a recipe for building the solid. The terminal nodes are the geometric primitives and other solids. Every CSG solid has precisely one Boolean result associated with it which is the root of the tree that defines the solid. There may be further Boolean results within the tree as operands . The significance of a CSG solid entity is that the solid defined by the associated tree is thus identified as a significant object itself, and in this way it is distinguished from other Boolean result entities representing intermediate results during the construction process. NOTE Entity adapted from csg solid is defined in ISO 10303 42. HISTORY New entity in IFC1.5.1"
 
-#:IFC.xml:9456
-msgid "IfcAlignmentVerticalSegment_EndGradient"
-msgstr "Gradiente final"
+#:IFC.xml:10078
+msgid "IfcCsgSolid_TreeRootExpression"
+msgstr "Expresión raíz del árbol"
 
-msgid "IfcAlignmentVerticalSegment_EndGradient_DEFINITION"
-msgstr "End gradient of the segment. In the case of a PredefinedType .CONSTANTGRADIENT. the value is the same as StartGradient ."
+msgid "IfcCsgSolid_TreeRootExpression_DEFINITION"
+msgstr "Expresión booleana de primitivos y operadores regularizados que describen el sólido. La raíz del árbol de expresiones booleanas se da explícitamente como una entidad [[IfcBooleanResult]] o como un subtipo primitivo de [[IfcCsgPrimitive3D]] ."
 
-#:IFC.xml:9461
-msgid "IfcAlignmentVerticalSegment_HorizontalLength"
-msgstr "Longitud horizontal"
+#:IFC.xml:10085
+msgid "IfcDirectrixDerivedReferenceSweptAreaSolid"
+msgstr "IfcDirectrixDerivedReferenceSweptAreaSolid"
 
-msgid "IfcAlignmentVerticalSegment_HorizontalLength_DEFINITION"
-msgstr "Longitud medida como distancia a lo largo del alineamiento horizontal del segmento."
+#:IFC.xml:10088
+msgid "IfcExtrudedAreaSolid"
+msgstr "IfcAreasólido extraído"
 
-#:IFC.xml:9466
-msgid "IfcAlignmentVerticalSegment_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcExtrudedAreaSolid_DEFINITION"
+msgstr "The [[IfcExtrudedAreaSolid]] is defined by sweeping a cross section provided by a profile definition. The direction of the extrusion is given by the ExtrudedDirection attribute and the length of the extrusion is given by the Depth attribute. If the planar area has inner boundaries holes defined , then those holes shall be swept into holes of the solid. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the extruded solid. If not provided, it defaults to the current object coordinate system. The ExtrudedDirection is given within the position coordinate system as defined by [[IfcSweptAreaSolid]] . Position . The extruded direction can be any direction which is not perpendicular to the z axis of the position coordinate system. EXAMPLE Figure 1 illustrates geometric parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The result is a solid. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. Figure 1 Extruded area solid geometry EXAMPLE Figure 2 illustrates geometric parameters and additional positioning parameters of the extruded area solid. The extruded area solid defines the extrusion of a 2D area by an direction and depth. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the y axis. Figure 2 Repositioned extruded area solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 An extruded area solid is a solid defined by sweeping a bounded planar surface. The direction of translation is defined by a direction vector, and the length of the translation is defined by a distance depth. The planar area may have holes which will sweep into holes in the solid. NOTE Entity adapted from extruded area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .use head Texture use definition For side faces, textures are aligned facing upright continuously along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the extrusion axis according to RepeatT . For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. EXAMPLE Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcExtrudedAreaSolid]] having a profile of [[IfcIShapeProfileDef]], the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth , while the top end cap texture coordinates start at 0.5 [[IfcIShapeProfileDef]].OverallWidth, 0.5 [[IfcIShapeProfileDef]].OverallDepth . Figure 3 Extruded area solid textures"
 
-msgid "IfcAlignmentVerticalSegment_PredefinedType_DEFINITION"
-msgstr "Predefined type of the vertical alignmnent segment."
+#:IFC.xml:10096
+msgid "IfcExtrudedAreaSolid_ExtrudedDirection"
+msgstr "Dirección extraída"
 
-#:IFC.xml:9471
-msgid "IfcAlignmentVerticalSegment_RadiusOfCurvature"
-msgstr "Radius de curvatura"
+msgid "IfcExtrudedAreaSolid_ExtrudedDirection_DEFINITION"
+msgstr "The direction in which the surface, provided by SweptArea is to be swept."
 
-msgid "IfcAlignmentVerticalSegment_RadiusOfCurvature_DEFINITION"
-msgstr "Radius of parabola or arc. Positive values imply a CCW direction whereas negative CW. NOTE1 For PredefinedType is ARC. The radius of the basis circle for the arc. NOTE2 For PredefinedType is PARABOLICARC. Parabola constant determining the steepness of the parabola . The parabola constant is provided by the minimum parabola radius , the true radius of a parabola at its vertical axis the zero gradient point of the parabola . The minimum radius is twice the focal length of the parabola the distance between the focal point and the vertex . NOTE3 For PredefinedType that is not either ARC or PARABOLICARC the value should be empty."
+#:IFC.xml:10089
+msgid "IfcExtrudedAreaSolid_Depth"
+msgstr "Profundidad"
 
-#:IFC.xml:9476
-msgid "IfcAlignmentVerticalSegment_StartDistAlong"
-msgstr "Iniciar Dististar"
+msgid "IfcExtrudedAreaSolid_Depth_DEFINITION"
+msgstr "The distance the surface is to be swept along the ExtrudedDirection ."
 
-msgid "IfcAlignmentVerticalSegment_StartDistAlong_DEFINITION"
-msgstr "Distance along the horizontal alignment as measured along the corresponding [[IfcAlignmentHorizontal]] . NOTE 1 The distance along is measured from the start point of [[IfcAlignmentHorizontal]] , any optionally provided offset expressed by [[IfcAlignmentHorizontal]] .StartDistanceAlong is not taken into account. NOTE 2 The unit of measurement is the global length unit, as set by [[IfcContext]] .UnitInContext"
+#:IFC.xml:10108
+msgid "IfcExtrudedAreaSolidTapered"
+msgstr "IfcExtrudedAreaSolidTapered"
 
-#:IFC.xml:9481
-msgid "IfcAlignmentVerticalSegment_StartGradient"
-msgstr "Iniciar evaluación"
+msgid "IfcExtrudedAreaSolidTapered_DEFINITION"
+msgstr "[[IfcExtrudedAreaSolidTapered]] is defined by sweeping a cross section along a linear spine. The cross section may change along the sweep from the shape of the start cross section into the shape of the end cross section. The resulting solid is bounded by three or more faces A start face, an end face each defined by start and end planes and sections , and one or more lateral faces. Each lateral face is a ruled surface defined by a pair of corresponding edges of the start and end section. NOTE Given that the start and end section is provided by a polygon, the corresponding vertices of the start and end cross section are connected, forming a quadrilateral polygon between each pair of corresponding vertices. The surface defined by the bounding quadrilateral polygon is a ruled surface, that could be approximated by triangulation. The linear spine is defined by Start point SELF [[IfcSweptAreaSolid]].Position.Location Direction SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection Distance SELF [[IfcExtrudedAreaSolid]].Depth The start cross section is defined by SELF [[IfcSweptAreaSolid]].SweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by SELF [[IfcSweptAreaSolid]].Position.P 1 and SELF [[IfcSweptAreaSolid]].Position.P 2 The linear spine starts at the plane of the start cross section. The spine is not necessarily perpendicular to the plane. The end cross section is defined by EndSweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by translating the start position coordinates provided by SELF [[IfcSweptAreaSolid]].Position along the spine direction by the spine distance. The plane of the end cross section is coplanar to the plane of the start cross section. The end cross section is topologically similar to the start cross section i.e. having the same number of vertices and edges . The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane. In case of two parameterized profiles the shape is constructed as follows The end profile, defined by a cross section based on the same profile paramterization as the start profile, is translated by the spine distance along the spine direction. It may be shifted within the XY plane of the end postion coordinate system and may be twisted using the rotation parameter. The shift and rotation parameter are provided by the end cross section being of type [[IfcParameterizedProfileDef]] , where Shift is EndSweptArea [[IfcParameterizedProfileDef]].Position.Location Rotation is EndSweptArea [[IfcParameterizedProfileDef]].Position.RefDirection Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. In case of Cartesian transformation of the start cross section the shape is constructed as follows The cross section curve, which starts as a curve in the XY plane of the position coordinate system, is first scaled about the origin by the scale parameter. It is then translated by the spine distance along the spine direction. It maybe twisted by using the rotation parameter. The scale and rotation parameter are provided by the end cross section being of type [[IfcDerivedProfileDef]] , where Scale is EndSweptArea [[IfcDerivedProfileDef]].Operator.Scale Rotation is EndSweptArea [[IfcDerivedProfileDef]].Operator.Axis1 Corresponding vertices of the start and end cross section are connected. Lateral faces are constructed as ruled surfaces between corresponding edges of start and end cross section. HISTORY New entity in IFC4. .spec head Informal Propositions 1. Mirroring within [[IfcDerivedProfileDef]].Operator shall not be used"
 
-msgid "IfcAlignmentVerticalSegment_StartGradient_DEFINITION"
-msgstr "Start gradient of the segment."
+#:IFC.xml:10111
+msgid "IfcExtrudedAreaSolidTapered_EndSweptArea"
+msgstr "EndSweptArea"
 
-#:IFC.xml:9486
-msgid "IfcAlignmentVerticalSegment_StartHeight"
-msgstr "Altura de inicio"
+msgid "IfcExtrudedAreaSolidTapered_EndSweptArea_DEFINITION"
+msgstr "The surface defining the end of the swept area. It is given as a profile definition. The position coordinate system of the EndSwptArea is generated by translating the SELF [[IfcSweptAreaSolid]].Position along the SELF [[IfcExtrudedAreaSolid]].ExtrudedDirection by the distance of SELF [[IfcExtrudedAreaSolid]].Depth ."
 
-msgid "IfcAlignmentVerticalSegment_StartHeight_DEFINITION"
-msgstr "Elevation in Z of the start point relative to the [[IfcAlignment]] coordinate system. NOTE It is strongly advised to not offset the [[IfcAlignment]] coordinate system from the project engineering coordinate system."
+#:IFC.xml:10123
+msgid "IfcFaceBasedSurfaceModel"
+msgstr "Modelo basado en superficie Ifcface"
 
-#:IFC.xml:9493
-msgid "IfcAlignmentVerticalSegmentTypeEnum"
-msgstr "IfcAlineación VerticalSegmentTypeEnum"
+msgid "IfcFaceBasedSurfaceModel_DEFINITION"
+msgstr "The [[IfcFaceBasedSurfaceModel]] represents the a shape by connected face sets. The connected faces have a dimensionality 2 and are placed in a coordinate space of dimensionality 3. .extDef NOTE Definition according to ISO CD 10303 42 1992 A face based surface model is described by a set of connected face sets of dimensionality 2. The connected face sets shall not intersect except at edges and vertices, except that a face in one connected face set may overlap a face in another connected face set, provided the face boundaries are identical. There shall be at least one connected face set. A connected face set may exist independently of a surface model. NOTE Entity adapted from face based surface model defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The connected face sets shall not overlap or intersect except at common faces, edges or vertices. 2. The fbsm faces have dimensionality 2. .deprecated IFC4 CHANGE The entity has been deprecated and shall not be used. The entity [[IfcFacetedBrep]] shall be used instead."
 
-msgid "IfcAlignmentVerticalSegmentTypeEnum_DEFINITION"
-msgstr "The [[IfcAlignmentVerticalSegmentTypeEnum]] indicates the type of a segment of a vertical alignment segment [[IfcAlignmentVerticalSegment]] . Vertical curvature Segmenttype Enumeration Values No vertical curvature constant gradient CONSTANTGRADIENT Derivative of gradient with respect to horizontal projection of alignment is constant Vertical curve, parabola PARABOLICARC Derivative of vertical angle with respect to 3D arc length along the alignment is constant Vertical curve, circular CIRCULARARC Variation of vertical curvature is constant Vertical curve, clothoid CLOTHOID NOTE A vertical curve in track that starts or ends in canted switches and crossings can be of a higher order polynomial than a parabola. NOTE chainage is longitudinal distance along the horizontal projection of the alignment e.g. track centre line . NOTE Definitions according to EN 13803 2017 except CLOTHOID Used Symbols and their meaning Symbol meaning Unit, value range L full length of segment positive length L 0 s current position on segment 0 s L θ Greek theta Longitudinal slope angle incline or decline rad g gradient math g tan θ x s variable longitudinal coordinate of the projection of the alignment track centreline into the ground plan. length y s variable transverse coordinate of the projection of the alignment track centreline into the ground plan. length z s Variable vertical coordinate of the projection of the track centreline in plan in a Cartesian coordinate system in the vertical direction. length zc s Ordinate of the vertical circular arc of measured away from the tangent line at position s. length LV length of vertical radius radius inverse curvature length RV radius inverse curvature of the track centreline at a point in the elevation diagram longitudinal section length κV Greek kappa Vertical curvature 1 radiusV ZG Distance of the tangent intersection from the chord of the vertical circular arc length ZM Distance of the centre of the vertical circular arc to the tangent intersection point stitch height length lT Length of the tangents of the vertical circular arc length NOTE Symbols according to EN 13803 2017 NOTE gradient has a slightly different definition in civil engineering. Gradient Civ.Eng. is the degree of slope, e.g. of a highway or a railway. US grade . NOTE most railway track designs use the small angle assumption . That means θ tan θ gradient. References to EN 13803 2017 EN 13803 2017 covers Track alignment design parameters . As such it is not fully compatible with definitions for IFC Alignment. Therefore rail specific terms like track have been replaced with more general terms also applicable to road design. Referenced content of EN 13803 2017 Table 2 Elements for vertical alignment has been modified as follows Vertical curve, parabola Derivative of gradient with respect to chainage is constant Generalized Derivative of gradient with respect to horizontal projection of alignment is constant Vertical curve, circular Derivative of vertical angle with respect to sloping length along the track is constant Generalized Derivative of vertical angle with respect to 3D arc length along the alignment is constant EN13803 clause 3.5 Chainage longitudinal distance along the horizontal projection of the track centre line. Items CONSTANTGRADIENT CIRCULARARC Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track 3D length is constant. Vertical Curvature Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc curvature.png Figure 1 Curvature for vertical circular arc segment Segment length Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc length.png Figure 2 Length for vertical circular arc segment Distance between point on segment to tangent Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc z s.png Figure 3 Distance of point an vertical circular arc segment to tangent PARABOLICARC CLOTHOID Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track 3D length obeys a linear change. Vertical clothoid segment .. .. figures ifcalignmentverticalsegmenttypeenum clothoid curvature.png Figure 1 curvature equation of the vertical clothoid segment"
+#:IFC.xml:10132
+msgid "IfcFaceBasedSurfaceModel_FbsmFaces"
+msgstr "FbsmFaces"
 
-#:IFC.xml:9499
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CIRCULARARC"
-msgstr "CIRCULARC"
+msgid "IfcFaceBasedSurfaceModel_FbsmFaces_DEFINITION"
+msgstr "The set of connected face sets comprising the face based surface model."
 
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CIRCULARARC_DEFINITION"
-msgstr "Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track 3D length is constant. Vertical Curvature Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc curvature.png Figure 1 Curvature for vertical circular arc segment Segment length Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc length.png Figure 2 Length for vertical circular arc segment Distance between point on segment to tangent Vertical circular arc segment .. .. figures ifcalignmentverticalsegmenttypeenum arc z s.png Figure 3 Distance of point an vertical circular arc segment to tangent"
+#:IFC.xml:10124
+msgid "IfcFaceBasedSurfaceModel_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9500
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CLOTHOID"
-msgstr "CLOTODOS"
+msgid "IfcFaceBasedSurfaceModel_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, it is always 3."
 
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CLOTHOID_DEFINITION"
-msgstr "Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track 3D length obeys a linear change. Vertical clothoid segment .. .. figures ifcalignmentverticalsegmenttypeenum clothoid curvature.png Figure 1 curvature equation of the vertical clothoid segment"
+#:IFC.xml:10144
+msgid "IfcFacetedBrep"
+msgstr "IfcFacetedBrep"
 
-#:IFC.xml:9501
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CONSTANTGRADIENT"
-msgstr "CONSTANTANTGRADIENTE"
+msgid "IfcFacetedBrep_DEFINITION"
+msgstr "The [[IfcFacetedBrep]] is a manifold solid brep with the restriction that all faces are planar and bounded polygons. NOTE Use of [[IfcFacetedBrep]] is restricted for boundary representation models with planar surfaces only. Those surfaces are implicitly represented by the bounding polygons. The diagram shows the topological and geometric representation items that are used for faceted breps. Each [[IfcCartesianPoint]], used within the [[IfcFacetedBrep]] shall be referenced three times by an [[IfcPolyLoop]] bounding a different [[IfcFace]]. Figure 1 Diagram showing the use of [[IfcFacetedBrep]] .extDef NOTE Definition according to ISO CD 10303 42 1992 A faceted B rep is a simple form of boundary representation model in which all faces are planar and all edges are straight lines. Unlike the B rep model, edges and vertices are not represented explicitly in the model but are implicitly available through the poly loop entity. A faceted B rep has to meet the same topological constraints as the manifold solid B rep. .extDef The faceted B rep has been introduced in order to support the larger number of systems that allow boundary type solid representations with planar surfaces only. NOTE Entity adapted from manifold solid brep defined in ISO 10303 42. HISTORY New entity in IFC1.0 .spec head Informal Propositions 1. All the bounding loops of all the faces of all the shells in the [[IfcFacetedBrep]] shall be of type [[IfcPolyLoop]] . 2. All vertices shall be referenced by all polyloops, sharing the vertex. I.e., each Cartesian point shall be references by at least three polyloops."
 
-msgid "IfcAlignmentVerticalSegmentTypeEnum_CONSTANTGRADIENT_DEFINITION"
-msgstr "CONSTANTANTGRADIENTE"
+#:IFC.xml:10147
+msgid "IfcFacetedBrepWithVoids"
+msgstr "IfcFacetedBrepWithVoids"
 
-#:IFC.xml:9502
-msgid "IfcAlignmentVerticalSegmentTypeEnum_PARABOLICARC"
-msgstr "PARABOLICARC"
+msgid "IfcFacetedBrepWithVoids_DEFINITION"
+msgstr "The [[IfcFacetedBrepWithVoids]] is a specialization of a faceted B rep which contains one or more voids in its interior. The voids are represented as closed shells which are defined so that the shell normal point into the void. NOTE Entity adapted from brep with voids AND faceted brep defined in ISO 10303 42. HISTORY New entity in IFC1.0 .change ifc2x4 IFC4 CHANGE Subtyping changed from [[IfcManifoldSolidBrep]] to [[IfcFacetedBrep]] with upward compatibility for file based exchange. .spec head Informal Propositions 1. Each void shell shall be disjoint from the outer shell and from every other void shell 2. Each void shell shall be enclosed within the outer shell but not within any other void shell. In particular the outer shell is not in the set of void shells 3. Each shell in the [[IfcManifoldSolidBrep]] shall be referenced only once. 4. All the bounding loops of all the faces of all the shells in the [[IfcFacetedBrep]] shall be of type [[IfcPolyLoop]] ."
 
-msgid "IfcAlignmentVerticalSegmentTypeEnum_PARABOLICARC_DEFINITION"
-msgstr "PARABOLICARC"
+#:IFC.xml:10150
+msgid "IfcFacetedBrepWithVoids_Voids"
+msgstr "Voids"
 
-#:IFC.xml:9503
-msgid "IfcConnectionCurveGeometry"
-msgstr "IfcGeometría de la curva de conexión"
+msgid "IfcFacetedBrepWithVoids_Voids_DEFINITION"
+msgstr "Set of closed shells defining voids within the solid."
 
-msgid "IfcConnectionCurveGeometry_DEFINITION"
-msgstr "[[IfcConnectionCurveGeometry]] is used to describe the geometric constraints that facilitate the physical connection of two objects at a curve or at an edge with curve geometry associated. It is envisioned as a control that applies to the element connection relationships. The [[IfcCurve]] or the [[IfcEdgeCurve]] with an associated [[IfcCurve]] at the CurveOnRelatingElement attribute defines the curve where the basic geometry items of the connected elements connects. The curve geometry and coordinates are provided within the local coordinate system of the RelatingElement , as specified at the [[IfcRelConnects]] subtype that utilizes the [[IfcConnectionCurveGeometry]] . Optionally, the same curve geometry and coordinates can also be provided within the local coordinate system of the RelatedElement by using the CurveOnRelatedElement attribute. EXAMPLE The connection relationship between two walls has a geometric constraint which describes the end caps or cut off of the wall ends by a CurveOnRelatingElement for the first wall and a CurveOnRelatedElement for the second wall. The exact usage of the [[IfcConnectionCurveGeometry]] is further defined in the geometry use sections of the elements that use it. The available geometry for the connection constraint may be further restricted to only allow straight segments by applying [[IfcPolyline]] only. Such an usage constraint is provided at the object definition of the [[IfcElement]] subtype, utilizing the element connection by referring to the subtype of [[IfcRelConnects]] with the associated [[IfcConnectionCurveGeometry]]. HISTORY New entity in IFC1.5. .change ifc2x IFC2x CHANGE Renamed from IfcLineConnectionGeometry. .change ifc2x3 IFC2x3 CHANGE The provision of topology with associated geometry, [[IfcEdgeCurve]] , is enabled by using the [[IfcCurveOrEdgeCurve]] ."
+#:IFC.xml:10162
+msgid "IfcFixedReferenceSweptAreaSolid"
+msgstr "IfcFixedReferenceSweptAreaSolid"
 
-#:IFC.xml:9504
-msgid "IfcConnectionCurveGeometry_CurveOnRelatedElement"
-msgstr "Curva en el elemento relacionado"
+msgid "IfcFixedReferenceSweptAreaSolid_DEFINITION"
+msgstr "An [[IfcFixedReferenceSweptAreaSolid]] is a type of swept area solid which is the result of sweeping an area along a Directrix . The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the start tangent of the directrix at this point, and the profile s x axis agrees to the orthogonal projection of the FixedReference direction within the plane of start tangent and Fixed Reference . The orientation of the curve during the sweeping operation is controlled by the FixedReference direction. The SweptArea is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the projection of FixedReference onto the normal plane to the directrix at this point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The resulting swept solid is placed by the Position coordinate system. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , being either the parameter value based on the curve parameterization, or by a length measured along the directrix from its beginning. If no EndParam is provided the end defaults to the end of the directrix. NOTE The StartParam and the EndParam , if provided as a parameter value, are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. NOTE In the case of a curve composed of [[IfcCurveSegment]] , the [[IfcSweptAreaSolid]] Position is dependent on the [[IfcCurveSegment]] StartPlacement and the type of BasisCurve which defines the name function between the start and end explicitly defined as the start point of the next segment points of the segment EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In many cases, it is a surface of extrusion. The directrix lies on the surface, often defined as a p curve at this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the FixedReference direction. The Axis2 the y axis, or v is constructed. In this case the resulting swept solid is not repositioned. The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a CartesianTransformationOperator3d with attributes LocalOrigin as point 0 0 0 , Axis1 as the orthogonal projection of the FixedReference onto the normal plane defined by Axis3 . Axis3 as the direction of the tangent vector t at the point of the Directrix with parameter u . The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the Directrix parameter u . NOTE The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE Entity adapted from fixed reference swept surface defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. The SweptArea shall lie in the plane z 0. 2. The FixedReference shall not be parallel to a tangent vector to the directrix at any point along this curve. 3. The Directrix curve shall be tangent continuous."
 
-msgid "IfcConnectionCurveGeometry_CurveOnRelatedElement_DEFINITION"
-msgstr "La curva delimitada en la que los objetos conectados están alineados en el elemento relacionado, dado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+#:IFC.xml:10165
+msgid "IfcFixedReferenceSweptAreaSolid_FixedReference"
+msgstr "FixedReference"
 
-#:IFC.xml:9509
-msgid "IfcConnectionCurveGeometry_CurveOnRelatingElement"
-msgstr "Curva en relación"
+msgid "IfcFixedReferenceSweptAreaSolid_FixedReference_DEFINITION"
+msgstr "FixedReference"
 
-msgid "IfcConnectionCurveGeometry_CurveOnRelatingElement_DEFINITION"
-msgstr "La curva delimitada en la que los objetos conectados están alineados en el elemento relacionado, indicado en el LCS del elemento relacionado."
+#:IFC.xml:10177
+msgid "IfcGeometricCurveSet"
+msgstr "IfcGeometricCurveSet"
 
-#:IFC.xml:9516
-msgid "IfcConnectionGeometry"
-msgstr "IfcGeometría de conexión"
+msgid "IfcGeometricCurveSet_DEFINITION"
+msgstr "The [[IfcGeometricCurveSet]] is used for the exchange of shape representation consisting of an collection of 2D or 3D points and curves only. .extDef NOTE Definition according to ISO CD 10303 42 1992 A geometric curve set is a collection of two or three dimensional points and curves. NOTE Entity adapted from geometric curve set defined in ISO 10303 42. HISTORY New entity in IFC2x2. Formal Propositions NoSurfaces No surface shall be included in this geometric set."
 
-msgid "IfcConnectionGeometry_DEFINITION"
-msgstr "[[IfcConnectionGeometry]] is used to describe the geometric and topological constraints that facilitate the physical connection of two objects. It is envisioned as a control that applies to the element connection relationships. NOTE The element connection relationship normally provides for a logical connection information, by referencing the relating and related elements. If in addition an [[IfcConnectionGeometry]] is provided, physical connection information is given by specifying exactly where at the relating and related element the element connection occurs. Using the eccentricity subtypes, the connection can also be described when there is a physical distance or eccentricity between the connection elements. The [[IfcConnectionGeometry]] allows for the provision of connection constraints between geometric and topological elements, the following connection geometry topology types are in scope point vertex point, curve edge curve, surface face surface, HISTORY New entity in IFC1.5. .change ifc2x3 IFC2x3 CHANGE The definition of the subtypes has been enhanced by allowing either geometric representation items point curve surface or topological representation items with associated geometry vertex point edge curve face surface ."
+#:IFC.xml:10180
+msgid "IfcGeometricSet"
+msgstr "Conjunto geométrico Ifc"
 
-#:IFC.xml:9565
-msgid "IfcConnectionPointEccentricity"
-msgstr "IfcConnectionPointEccentricidad"
+msgid "IfcGeometricSet_DEFINITION"
+msgstr "The [[IfcGeometricSet]] is used for the exchange of shape representation consisting of 2D or 3D points, curves, and surfaces, which do not have a topological structure such as connected face sets or shells , are not tessellated and are not solid models such as swept solids, CSG or Brep . .extDef NOTE Definition from ISO CD 10303 42 This entity is intended for the transfer of models when a topological structure is not available. NOTE Entity adapted from geometric set defined in ISO 10303 42. HISTORY New entity in IFC2x."
 
-msgid "IfcConnectionPointEccentricity_DEFINITION"
-msgstr "[[IfcConnectionPointEccentricity]] is used to describe the geometric constraints that facilitate the physical connection of two objects at a point or vertex point with associated point coordinates. There is a physical distance, or eccentricity, etween the connection points of both object. The eccentricity can be either given by providing the PointOnRelatingElement and the PointOnRelatedElement , where both point coordinates are not identical within a common parent coordinate system latestly within the world coordinate system , providing the PointOnRelatingElement and the three distance measures, EccentricityInX , EccentricityInY , and EccentricityInZ or only EccentricityInX , and EccentricityInY if the underlying coordinate system is two dimensional , or providing both. NOTE If both, PointOnRelatedElement , and EccentricityInX , EccentricityInY , EccentricityInZ are provided, the values should be consistent. In case of any non consistency, the calculated distance between PointOnRelatingElement and PointOnRelatedElement takes precedence. The [[IfcPoint]] or the [[IfcVertexPoint]] with an associated [[IfcPoint]] at the PointOnRelatingElement attribute defines the point where the basic geometry items of the connected elements connects. The point coordinates are provided within the local coordinate system of the RelatingElement , as specified at the [[IfcRelConnects]] subtype that utilizes the [[IfcConnectionPointGeometry]] . Optionally, the same point coordinates can also be provided within the local coordinate system of the RelatedElement by using the PointOnRelatedElement attribute, otherwise the distance to the point at the RelatedElement has to be given by the three eccentricity values. The explicit values for EccentricityInX , EccentricityInY , and EccentricityInZ are always measured in the following direction and coordinate system defining when the value is positive or negative from the PointOnRelatedElement to PointOnRelatingElement within the coordinate system of the RelatingElement . in addition when used to specify connections in structural analysis models, the [[IfcStructuralMember]] is to be used as the RelatingElement of the relationship object utilizing [[IfcConnectionPointEccentricity]] , and the [[IfcStructuralConnection]] is the RelatedElement . HISTORY New entity in IFC2x3."
+#:IFC.xml:10181
+msgid "IfcGeometricSet_Dim"
+msgstr "Dim"
 
-#:IFC.xml:9566
-msgid "IfcConnectionPointEccentricity_EccentricityInX"
-msgstr "EccentricityInX"
+msgid "IfcGeometricSet_Dim_DEFINITION"
+msgstr "La dimensión espacial de esta clase, es idéntica al primer elemento del conjunto. Una regla en la que se garantice que todos los elementos tengan la misma dimensionalidad."
 
-msgid "IfcConnectionPointEccentricity_EccentricityInX_DEFINITION"
-msgstr "Distancia en la dirección x entre los dos puntos o puntos de vértice involucrados en la conexión del punto."
+#:IFC.xml:10186
+msgid "IfcGeometricSet_Elements"
+msgstr "Elementos"
 
-#:IFC.xml:9571
-msgid "IfcConnectionPointEccentricity_EccentricityInY"
-msgstr "EccentricityInY"
+msgid "IfcGeometricSet_Elements_DEFINITION"
+msgstr "Los elementos geométricos que componen el conjunto geométrico, pueden ser puntos, curvas o superficies pero son necesarias para ser de la misma dimensión de espacio de coordenadas."
 
-msgid "IfcConnectionPointEccentricity_EccentricityInY_DEFINITION"
-msgstr "Distancia en la dirección y entre los dos puntos o puntos de vértices involucrados en la conexión del punto."
+#:IFC.xml:10193
+msgid "IfcGeometricSetSelect"
+msgstr "Selección Geométrica Ifc"
 
-#:IFC.xml:9576
-msgid "IfcConnectionPointEccentricity_EccentricityInZ"
-msgstr "EccentricityInZ"
+#:IFC.xml:10194
+msgid "IfcHalfSpaceSolid"
+msgstr "IfcHalfSpaceSolid"
 
-msgid "IfcConnectionPointEccentricity_EccentricityInZ_DEFINITION"
-msgstr "Distancia en la dirección z entre los dos puntos o puntos de vértices que participan en la conexión del punto."
+msgid "IfcHalfSpaceSolid_DEFINITION"
+msgstr "A half space solid divides the domain into two by a base surface. Normally, the base surface is a plane and devides the infinitive space into two and indicates the side of the half space by agreeing or disagreeing to the normal of the plane. Figure 1 illustrates the definition of the [[IfcHalfSpaceSolid]] within a given coordinate system. The base surface is given by an unbounded plane, the red boundary is shown for visualization purposes only. half space solid .. .. .. .. figures ifchalfspacesolid layout1.gif Figure 1 Half space solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A half space solid is defined by the half space which is the regular subset of the domain which lies on one side of an unbounded surface. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into. For a valid half space solid the surface shall divide the domain into exactly two subsets. Also, within the domain the surface shall be manifold and all surface normals shall point into the same subset. NOTE A half space is not a subtype of solid model, half space solids are only useful as operands in Boolean expressions. NOTE Entity adapted from half space solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .spec head Informal Propositions 1. The base surface shall divide the domain into exactly two subsets. If the half space solid is of subtype boxed half space [[IfcBoxedHalfSpace]] , the domain in question is that of the attribute enclosure. In all other cases the domain is all of space and the base surface shall be unbounded. 2. The base surface shall be an unbounded surface subtype of [[IfcElementarySurface]] ."
 
-#:IFC.xml:9583
-msgid "IfcConnectionPointGeometry"
-msgstr "Geometría de punto de conexión Ifc"
+#:IFC.xml:10208
+msgid "IfcHalfSpaceSolid_BaseSurface"
+msgstr "Superficie base"
 
-msgid "IfcConnectionPointGeometry_DEFINITION"
-msgstr "[[IfcConnectionPointGeometry]] is used to describe the geometric constraints that facilitate the physical connection of two objects at a point here [[IfcCartesianPoint]] or at an vertex with point coordinates associated. It is envisioned as a control that applies to the element connection relationships. EXAMPLE The connection relationship between two path based elements like a column and a beam has a geometric constraint which describes the connection points by a PointOnRelatingElement for the column and a PointOnRelatedElement for the beam. The exact usage of the [[IfcConnectionPointGeometry]] is further defined in the geometry use sections of the elements that use it. The [[IfcPoint]] or the [[IfcVertexPoint]] with an associated [[IfcPoint]] at the PointOnRelatingElement attribute defines the point where the basic geometry items of the connected elements connect. The point coordinates are provided within the local coordinate system of the RelatingElement , as specified at the IfcRelConnectsSubtype that utilizes the [[IfcConnectionPointGeometry]] . Optionally, the same point coordinates can also be provided within the local coordinate system of the RelatedElement by using the PointOnRelatedElement attribute. If both point coordinates are not identical within a common parent coordinate system ultimately within the world coordinate system , the subtype [[IfcConnectionPointEccentricity]] shall be used. NOTE If the point connection has an offset if the two points or vertex points at the relating and related element do not physically match , the subtype [[IfcConnectionPointEccentricity]] shall be used. HISTORY New entity in IFC1.5. .change ifc2x IFC2x CHANGE Renamed from IfcPointConnectionGeometry. .change ifc2x3 IFC2x3 CHANGE The provision of topology with associated geometry, [[IfcVertexPoint]] , is enabled by using the [[IfcPointOrVertexPoint]] ."
+msgid "IfcHalfSpaceSolid_BaseSurface_DEFINITION"
+msgstr "Surface defining side of half space."
 
-#:IFC.xml:9584
-msgid "IfcConnectionPointGeometry_PointOnRelatedElement"
-msgstr "Elemento relacionado con puntos"
+#:IFC.xml:10195
+msgid "IfcHalfSpaceSolid_Dim"
+msgstr "Dim"
 
-msgid "IfcConnectionPointGeometry_PointOnRelatedElement_DEFINITION"
-msgstr "Punto en el que los objetos conectados están alineados al elemento relacionado, dado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+msgid "IfcHalfSpaceSolid_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, it is always 3"
 
-#:IFC.xml:9589
-msgid "IfcConnectionPointGeometry_PointOnRelatingElement"
-msgstr "Elemento Relacionado"
+#:IFC.xml:10200
+msgid "IfcHalfSpaceSolid_AgreementFlag"
+msgstr "Bandera de acuerdo"
 
-msgid "IfcConnectionPointGeometry_PointOnRelatingElement_DEFINITION"
-msgstr "Punto en el que el objeto conectado está alineado al elemento relacionado, indicado en el LCS del elemento relacionado."
+msgid "IfcHalfSpaceSolid_AgreementFlag_DEFINITION"
+msgstr "La bandera de acuerdo es TRUE si la normal de la superficie base apunta lejos del material del [[IfcHalfSpaceSolid]]. De lo contrario, es FALSE."
 
-#:IFC.xml:9596
-msgid "IfcConnectionSurfaceGeometry"
-msgstr "Geometría superficial IfcConnectionSurfacetry"
+#:IFC.xml:10220
+msgid "IfcIndexedPolygonalFace"
+msgstr "IfcIndexado Cara Poligonal"
 
-msgid "IfcConnectionSurfaceGeometry_DEFINITION"
-msgstr "[[IfcConnectionSurfaceGeometry]] is used to describe the geometric constraints that facilitate the physical connection of two objects at a surface or at a face with surface geometry associated. It is envisioned as a control that applies to the element connection relationships. The [[IfcSurface]] or the [[IfcFaceSurface]] with an associated [[IfcSurface]] at the SurfaceOnRelatingElement attribute defines the surface where the basic geometry items of the connected elements connects. The surface geometry and coordinates are provided within the local coordinate system of the RelatingElement , as specified at the IfcRelConnectsSubtype that utilizes the [[IfcConnectionSurfaceGeometry]] . Optionally, the same surface geometry and coordinates can also be provided within the local coordinate system of the RelatedElement by using the SurfaceOnRelatedElement attribute. HISTORY New entity in IFC2x. .change ifc2x3 IFC2x3 CHANGE The provision of topology with associated geometry, [[IfcFaceSurface]] , is enabled by using the [[IfcSurfaceOrFaceSurface]] ."
+msgid "IfcIndexedPolygonalFace_DEFINITION"
+msgstr "The [[IfcIndexedPolygonalFace]] is a compact representation of a planar face being part of a face set. The vertices of the polygonal planar face are provided by 3 or more Cartesian points, defined by indices that point into an [[IfcCartesianPointList3D]] , either direcly, or via the PnIndex , if provided at [[IfcPolygonalFaceSet]] . Figure 1 shows an [[IfcIndexedPolygonalFace]] at an [[IfcPolygonalFaceSet]] not using PnIndex the default . [[IfcIndexedPolygonalFace]] .. .. .. .. figures ifcindexedpolygonalface 01.png Figure 1 Polygonal face geometry provided by indices into a point list Figure 2 shows an [[IfcIndexedPolygonalFace]] at an [[IfcPolygonalFaceSet]] using PnIndex . [[IfcIndexedPolygonalFace]] us ing PnIndex .. .. .. .. figures ifcindexedpolygonalface 02.png Figure 2 Polygonal face geometry provided by indices into a point list HISTORY New entity in IFC4 Addendum 2."
 
-#:IFC.xml:9597
-msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatedElement"
-msgstr "Superficie en relación"
+#:IFC.xml:10228
+msgid "IfcIndexedPolygonalFace_ToFaceSet"
+msgstr "ToFaceSet"
 
-msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatedElement_DEFINITION"
-msgstr "Superficie en la que el elemento relativo está alineado con el elemento relacionado, indicado en el LCS del elemento relacionado. Si se omite la información, se utilizará el origen del elemento relacionado."
+msgid "IfcIndexedPolygonalFace_ToFaceSet_DEFINITION"
+msgstr "Reference to the [[IfcPolygonalFaceSet]] for which this face is associated."
 
-#:IFC.xml:9602
-msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatingElement"
-msgstr "Superficie en relación"
+#:IFC.xml:10221
+msgid "IfcIndexedPolygonalFace_CoordIndex"
+msgstr "CoordIndex"
 
-msgid "IfcConnectionSurfaceGeometry_SurfaceOnRelatingElement_DEFINITION"
-msgstr "Superficie en la que el objeto relacionado está alineado en el elemento relacionado, indicado en el LCS del elemento relacionado."
+msgid "IfcIndexedPolygonalFace_CoordIndex_DEFINITION"
+msgstr "One dimensional list with the indices for the three or more points, that define the vertices of the outer loop. If the tessellated face set is closed, indicated by SELF [[IfcTessellatedFaceSet]].Closed , then the points, defining the outer loop, shall connect counter clockwise, as seen from the outside of the body, so that the resulting normal will point outwards. NOTE The coordinates of the vertices are provided by the indexed list of SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList . If the SELF [[IfcTessellatedFaceSet]].PnIndex is provided, the indices point into it, otherwise directly into the [[IfcCartesianPointList3D]] ."
 
-#:IFC.xml:9609
-msgid "IfcConnectionVolumeGeometry"
-msgstr "IfcVolúmen de conexión"
+#:IFC.xml:10242
+msgid "IfcIndexedPolygonalFaceWithVoids"
+msgstr "IfcIndexedPolygonalFaceWithVoids"
 
-msgid "IfcConnectionVolumeGeometry_DEFINITION"
-msgstr "[[IfcConnectionVolumeGeometry]] is used to describe the geometric constraints that facilitate the physical connection or overlap of two objects at a volume defined by a solid or closed shell. It is envisioned as a control that applies to the element connection or interference relationships. The [[IfcSolidModel]] or the [[IfcClosedShell]] at the VolumeOnRelatingElement attribute defines the volume where the basic geometry items of the interfering elements overlap. The volume geometry and coordinates are provided within the local coordinate system of the RelatingElement , as specified at the subtypes of the relationship [[IfcRelConnects]] that utilizes the [[IfcConnectionSurfaceGeometry]] . Optionally, the same volume geometry and coordinates can also be provided within the local coordinate system of the RelatedElement by using the VolumeOnRelatedElement attribute. HISTORY New entity in IFC4."
+msgid "IfcIndexedPolygonalFaceWithVoids_DEFINITION"
+msgstr "The [[IfcIndexedPolygonalFaceWithVoids]] is a compact representation of a planar face with inner loops, being part of a face set. HISTORY New entity in IFC4 Addendum 2."
 
-#:IFC.xml:9610
-msgid "IfcConnectionVolumeGeometry_VolumeOnRelatedElement"
-msgstr "Volumen en Relacionado"
+#:IFC.xml:10243
+msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices"
+msgstr "Indices InnerCoords"
 
-msgid "IfcConnectionVolumeGeometry_VolumeOnRelatedElement_DEFINITION"
-msgstr "Volumen en el que el objeto relacionado se solapa con el elemento relacionado, indicado en el LCS del elemento relacionado."
+msgid "IfcIndexedPolygonalFaceWithVoids_InnerCoordIndices_DEFINITION"
+msgstr "Two dimensional list, where the first dimension represents each inner loop from 1 to N and the second dimension the indices to three or more points that define the vertices of each inner loop. If the tessellated face set is closed, indicated by SELF [[IfcTessellatedFaceSet]].Closed , then the points, defining the inner loops, shall connect clockwise, as seen from the outside of the body. NOTE The coordinates of the vertices are provided by the indexed list of SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList . If the SELF [[IfcTessellatedFaceSet]].PnIndex is provided, the indices point into it, otherwise directly into the [[IfcCartesianPointList3D]] ."
 
-#:IFC.xml:9615
-msgid "IfcConnectionVolumeGeometry_VolumeOnRelatingElement"
-msgstr "Volumen en relación al elemento"
+#:IFC.xml:10250
+msgid "IfcManifoldSolidBrep"
+msgstr "IfcManifoldSolidBrep"
 
-msgid "IfcConnectionVolumeGeometry_VolumeOnRelatingElement_DEFINITION"
-msgstr "Volumen en el que el objeto relacionado se solapa con el elemento relacionado, indicado en el LCS del elemento relacionado."
+msgid "IfcManifoldSolidBrep_DEFINITION"
+msgstr "The [[IfcManifoldSolidBrep]] is a solid represented as a collection of connected surfaces that delimit the solid from the surrounding non solid. Instances of type [[IfcManifoldSolidBrep]] shall be of type [[IfcFacetedBrep]] , using only [[IfcPolyLoop]] for the bounds of [[IfcFaceBound]] , or of type [[IfcAdvancedBrep]] , using only [[IfcAdvancedFace]] for the face geometry, and [[IfcEdgeCurve]] for the edges. .extDef NOTE Definition according to ISO CD 10303 42 1992 A manifold solid b rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2 manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume. The Boundary Representation B rep of a manifold solid utilizes a graph of edges and vertices embedded in a connected, oriented, finite, closed two manifold surface. The embedded graph divides the surface into arcwise connected areas known as faces. The edges and vertices, therefore, form the boundaries of the face and the domain of a face does not include its boundaries. The embedded graph may be disconnected and may be a pseudo graph. The graph is labeled that is, each entity in the graph has a unique identity. The geometric surface definition used to specify the geometry of a face shall be 2 manifold embeddable in the plane within the domain of the face. In other words, it shall be connected, oriented, finite, non self intersecting, and of surface genus 0. Faces do not intersect except along their boundaries. Each edge along the boundary of a face is shared by at most one other face in the assemblage. The assemblage of edges in the B rep do not intersect except at their boundaries i.e., vertices . The geometry curve definition used to specify the geometry of an edge shall be arcwise connected and shall not self intersect or overlap within the domain of the edge. The geometry of an edge shall be consistent with the geometry of the faces of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound. A B rep is represented by one or more closed shells which shall be disjoint. One shell, the outer, shall completely enclose all the other shells and no other shell may enclose a shell. The facility to define a B rep with one or more internal voids is provided by a subtype. The following version of the Euler formula shall be satisfied, math .. .. .. .. figures ifcmanifoldsolidbrep math1.gif where V, E, F, L l and S are the numbers of unique vertices, edges, faces, loop uses and shells in the model and G s is the sum of the genus of the shells. NOTE Entity adapted from manifold solid brep defined in ISO 10303 42. HISTORY New entity in IFC Release 1.0 Informal proposition 1. The dimensionality of a manifold solid brep shall be 3. 2. The extent of the manifold solid brep shall be finite and non zero. 3. All elements of the manifold solid brep shall have defined associated geometry. 4. The shell normals shall agree with the B rep normal and point away from the solid represented by the B rep. 5. Each face shall be referenced only once by the shells of the manifold solid brep. 6. The Euler equation shall be satisfied for the boundary representation, where the genus term shell term us the sum of the genus values for the shells of the brep."
 
-#:IFC.xml:9622
-msgid "IfcCorrectLocalPlacement"
-msgstr "IfcCorrectLocalPlacement"
+#:IFC.xml:10253
+msgid "IfcManifoldSolidBrep_Outer"
+msgstr "Martín"
 
-#:IFC.xml:9630
-msgid "IfcCurveOrEdgeCurve"
-msgstr "IfcCurva Ordena"
+msgid "IfcManifoldSolidBrep_Outer_DEFINITION"
+msgstr "A closed shell defining the exterior boundary of the solid. The shell normal shall point away from the interior of the solid."
 
-#:IFC.xml:9631
-msgid "IfcGridAxis"
-msgstr "IfcGridAxis"
+#:IFC.xml:10265
+msgid "IfcPointListDim__PointList"
+msgstr "IfcPointListDim PointList"
 
-msgid "IfcGridAxis_DEFINITION"
-msgstr "An individual axis, [[IfcGridAxis]] , is defined in the context of a design grid. The axis definition is based on a curve of dimensionality 2. The grid axis is positioned within the XY plane of the position coordinate system defined by the [[IfcGrid]] . The standard geometric representation of [[IfcGridAxis]] is defined using a 2D curve entity. Grid axes are normally defined by an offset to another axis. The [[IfcOffsetCurve2D]] supports this concept. Each grid axis has a sense given by the parameterization of the curve. The attribute SameSense is an indicator of whether or not the sense of the grid axis agrees with, or opposes, that of the underlying curve. As shown in Figure 1, the grid axis is defined as a 2D curve within the xy plane of the position coordinate system. Any curve can be used to define a grid axis, most common is the use of [[IfcLine]] for linear grids and [[IfcCircle]] for radial grids. Most grids are defined by a pair of axis lists, each defined by a base grid axis and axes given by an offset to the base axis. The use of [[IfcOffsetCurve2D]] as underlying AxisCurve supports this concept. Figure 1 Grid axis HISTORY New entity in IFC1.0"
+#:IFC.xml:10273
+msgid "IfcPolygonalBoundedHalfSpace"
+msgstr "Espacio delimitado IfcPoligonal"
 
-#:IFC.xml:9643
-msgid "IfcGridAxis_AxisCurve"
-msgstr "AxisCurve"
+msgid "IfcPolygonalBoundedHalfSpace_DEFINITION"
+msgstr "The polygonal bounded half space is a special subtype of a half space solid, where the material of the half space used in Boolean expressions is bounded by a polygonal boundary. The base surface of the half space is positioned by its normal relative to the object coordinate system as defined at the supertype [[IfcHalfSpaceSolid]] , and its polygonal with or without arc segments boundary is defined in the XY plane of the position coordinate system established by the Position attribute, the subtraction body is extruded perpendicular to the XY plane of the position coordinate system, that is, into the direction of the positive Z axis defined by the Position attribute. The boundary is defined by a 2 dimensional polyline or 2 dimensional composite curve, consisting of straight segments and circular arc segments within the XY plane of the position coordinate system. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into. NOTE A polygonal bounded half space is not a subtype of [[IfcSolidModel]] , half space solids are only useful as operands in Boolean expressions. Figure 1 illustrates a polygonal bounded half space. Black coordinates indicate the object coordinate system usually provided by [[IfcLocalPlacement]] . Green coordinates indicate the position coordinate system the PolygonalBoundary is given within this coordinate system. It is provided by [[IfcPolygonalBoundedHalfSpace]].Position. This coordinate system is relative to the object coordinate system. The extrusion direction of the subtraction body is the positive Z axis. Red coordinates indicate the normal of the plane. It is provided by the BaseSurface [[IfcSurface]].Position . This normal is also relative to the object coordinate system. Figure 1 Polygonal half space geometry The polygonal bounded half space is used to limit the volume of the half space in Boolean difference expressions. Only the part that is defined by a theoretical intersection between the half space solid and an extruded area solid, defined by extruding the polygonal boundary, is used for Boolean expressions. The PolygonalBoundary defines the 2D polyline which bounds the effectiveness of the half space in Boolean expressions. The BaseSurface is defined by a plane, and the normal of the plane together with the AgreementFlag defines the side of the material of the half space. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The [[IfcPolyline]] or the [[IfcCompositeCurve]] providing the PolygonalBoundary shall be closed. 2. If the PolygonalBoundary is given by an [[IfcCompositeCurve]] , it shall only have [[IfcCompositeCurveSegment]] s of type [[IfcPolyline]] , or [[IfcTrimmedCurve]] having a BasisCurve of type [[IfcLine]] , or [[IfcCircle]] 3. The BaseSurface defined at supertype [[IfcHalfSpaceSolid]] shall be of type [[IfcPlane]] 4. The normal of the plane, being the BaseSurface , shall not be perpendicular to the z axis of the position coordinate system"
 
-msgid "IfcGridAxis_AxisCurve_DEFINITION"
-msgstr "Curva subyacente que proporciona la geometría para este eje de rejilla."
+#:IFC.xml:10276
+msgid "IfcPolygonalBoundedHalfSpace_Position"
+msgstr "Posición"
 
-#:IFC.xml:9655
-msgid "IfcGridAxis_PartOfU"
-msgstr "PartOfU"
+msgid "IfcPolygonalBoundedHalfSpace_Position_DEFINITION"
+msgstr "Definition of the position coordinate system for the bounding polyline and the base surface ."
 
-msgid "IfcGridAxis_PartOfU_DEFINITION"
-msgstr "If provided, the [[IfcGridAxis]] is part of the UAxes of [[IfcGrid]] . .change ifc2x3 IFC2x3 CHANGE New inverse attribute."
+#:IFC.xml:10288
+msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary"
+msgstr "Límite poligonal"
 
-#:IFC.xml:9669
-msgid "IfcGridAxis_PartOfV"
-msgstr "PartOfV"
+msgid "IfcPolygonalBoundedHalfSpace_PolygonalBoundary_DEFINITION"
+msgstr "Two dimensional polyline bounded curve, defined in the xy plane of the position coordinate system. .change ifc2x3 IFC2x3 CHANGE The attribute type has been changed from [[IfcPolyline]] to its supertype [[IfcBoundedCurve]] with upward compatibility for file based exchange."
 
-msgid "IfcGridAxis_PartOfV_DEFINITION"
-msgstr "If provided, the [[IfcGridAxis]] is part of the VAxes of [[IfcGrid]] . .change ifc2x3 IFC2x3 CHANGE New inverse attribute."
+#:IFC.xml:10300
+msgid "IfcPolygonalFaceSet"
+msgstr "IfcPolygonalFaceSet"
 
-#:IFC.xml:9683
-msgid "IfcGridAxis_PartOfW"
-msgstr "PartOfW"
+msgid "IfcPolygonalFaceSet_DEFINITION"
+msgstr "The [[IfcPolygonalFaceSet]] is a tessellated face set with all faces being bound by polygons. The planar faces are constructed by implicit polylines defined by three or more Cartesian points. Each planar face is defined by an instance of [[IfcIndexedPolygonalFace]] , or in case of faces with inner loops by [[IfcIndexedPolygonalFaceWithVoids]] . Depending on the value of the attribute Closed the instance of [[IfcPolygonalFaceSet]] represents if TRUE, a boundary represention or B rep if FALSE, a face based surface representation. The attribute Faces refers to a list of [[IfcIndexedPolygonalFace]] s having an one based CoordIndex that provides three or more indices. If the face has inner loops, the [[IfcIndexedPolygonalFaceWithVoids]] has a two dimensional, one based list, where the first dimension of the two dimensional list addresses the list of inner loops the second dimension of the two dimensional list provides three or more indices each being a vertex of the planar polygon representing the inner loop. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. PnIndex .. .. .. .. figures ifcpolygonalfaceset 01.png Figure 1 Use of PnIndex NOTE If the [[IfcPolygonalFaceSet]] is closed, the face vertices of the [[IfcIndexedPolygonalFace]] s shall connect counterclock wise when seen from the outside of the closed shell to guarantee that the face normal points away from the material of the shell. Inner loops, provided by the [[IfcIndexedPolygonalFaceWithVoids]] , shall connect clock wise. Figure 2 shows an IfcFacetedFaceSet represented by 1 [[IfcIndexedPolygonalFace]] 1, 2, 3, 4 2 [[IfcIndexedPolygonalFace]] 6, 2, 3, 7 3 [[IfcIndexedPolygonalFace]] 7, 3, 4, 8 4 [[IfcIndexedPolygonalFace]] 8, 4, 1, 5 5 [[IfcIndexedPolygonalFace]] 1, 4, 3, 2 6 [[IfcIndexedPolygonalFace]] 6, 7, 8, 5 7 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. Figure 2 Polygonal face set geometry NOTE The definition of IfcFacetedFaceSet is based on the indexedFaceSet defined in ISO IEC 19775 1 HISTORY New entity in IFC4 Addendum 2. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two outer or inner boundaries of faces the topological normal at each point on the boundary of the polygonal face set shall point away from the material of the solid."
 
-msgid "IfcGridAxis_PartOfW_DEFINITION"
-msgstr "If provided, the [[IfcGridAxis]] is part of the WAxes of [[IfcGrid]] . .change ifc2x3 IFC2x3 CHANGE New inverse attribute."
+#:IFC.xml:10228
+msgid "IfcPolygonalFaceSet_Faces"
+msgstr "Caras"
 
-#:IFC.xml:9697
-msgid "IfcGridAxis_HasIntersections"
-msgstr "Intersecciones"
+msgid "IfcPolygonalFaceSet_Faces_DEFINITION"
+msgstr "The list of polygonal faces, with or without inner loops, that bound the faceted face set."
 
-msgid "IfcGridAxis_HasIntersections_DEFINITION"
-msgstr "The reference to a set of [[IfcVirtualGridIntersection]] s, that connect other grid axes to this grid axis. .change ifc2x3 IFC2x3 CHANGE New inverse attribute."
+#:IFC.xml:10301
+msgid "IfcPolygonalFaceSet_Closed"
+msgstr "Closed"
 
-#:IFC.xml:9632
-msgid "IfcGridAxis_AxisTag"
-msgstr "AxisTag"
+msgid "IfcPolygonalFaceSet_Closed_DEFINITION"
+msgstr "Indication whether the [[IfcPolygonalFaceSet]] is a closed shell or not. If omited no such information can be provided."
 
-msgid "IfcGridAxis_AxisTag_DEFINITION"
-msgstr "La etiqueta o nombre para este eje de cuadrícula."
+#:IFC.xml:10306
+msgid "IfcPolygonalFaceSet_PnIndex"
+msgstr "PnIndex"
 
-#:IFC.xml:9637
-msgid "IfcGridAxis_SameSense"
-msgstr "SameSense"
+msgid "IfcPolygonalFaceSet_PnIndex_DEFINITION"
+msgstr "The list of integers defining the locations in the [[IfcCartesianPointList3D]] to obtain the point coordinates for the indices at the indexed polygonal faces. If the PnIndex is not provided the indices at the indexed polygonal faces point directly into the [[IfcCartesianPointList3D]] ."
 
-msgid "IfcGridAxis_SameSense_DEFINITION"
-msgstr "Define si se utiliza el sentido original de la curva o si se revierte en el contexto del eje de la cuadrícula."
+#:IFC.xml:10313
+msgid "IfcRectangularPyramid"
+msgstr "IfcRectangularpiramida"
 
-#:IFC.xml:9711
-msgid "IfcGridPlacement"
-msgstr "IfcGridPlacement"
+msgid "IfcRectangularPyramid_DEFINITION"
+msgstr "The [[IfcRectangularPyramid]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a rectangular base and a point called apex as the top. The tapers from the base to the top. The axis from the center of the base to the apex is perpendicular to the base. The inherited Position attribute defines the IfcAxisPlacement3D and provides the location and orientation of the pyramid SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cone. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis of the inherited placement coordinate system provides the center axis of the [[IfcRightCircularCone]] , and the apex is at the Height value applied to the positive direction of the z axis. The BottomRadius defines the circular base at the xy plane of the placement coordinate system. As shown in Figure 1, the pyramid is positioned within its own placement coordinate system. The origin is the center of the bottom rectangle, that lies in the XY plane. The apex lies on the positive z axis at 0, 0, Height . pyramid .. .. .. .. figures ifcrectangularpyramid layout1.png Figure 1 Rectangular pyramid geometry HISTORY New entity in IFC2x3 .use head Texture use definition On each triangular side face, textures are aligned facing upright. Textures are stretched or repeated to the extent of the base of each face according to RepeatS. Textures are stretched or repeated towards the top point according to Repeat T, where the top point has coordinates of 0.5,1.0 if RepeatT is False. On the bottom face, textures are aligned facing front to back. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Left X 0 YLength 0 Y towards top point Right X Xlength 0 0 Y towards top point Front Y 0 0 0 X towards top point Back Y XLength YLength 0 X towards top point Bottom Z XLength 0 0 X Y Figure 2 Rectangular pyramid textures"
 
-msgid "IfcGridPlacement_DEFINITION"
-msgstr "[[IfcGridPlacement]] provides a specialization of [[IfcObjectPlacement]] in which the placement and axis direction of the object coordinate system is defined by a reference to the design grid as defined in [[IfcGrid]] . The location of the object coordinate system is given by the attribute PlacementLocation . It is defined as an [[IfcVirtualGridIntersection]] , that is, an intersection between two grid axes with optional offsets. The axis direction of the x axis of the object coordinate system is given either PlacementRefDirection NIL by the tangent of the first grid axis PlacementLocation.IntersectingAxes 1 at the virtual intersection maybe using the offset curve, if PlacementLocation.OffsetDistances is given PlacementRefDirection [[IfcDirection]] by the explicitly provided direction information PlacementRefDirection [[IfcVirtualGridIntersection]] by the tangent between the virtual grid intersection of PlacementLocation and the virtual grid intersection of PlacementRefDirection . Offsets as potentially provided in the [[IfcVirtualGridIntersection]] s of PlacementLocation and PlacementRefDirection have to be taken into account. The direction of the y axis of the [[IfcGridPlacement]] is the orthogonal complement to the x axis. The plane defined by the x and y axis shall be co planar to the xy plane of the local placement of the [[IfcGrid]] . The direction of the z axis is the orientation of the cross product of the x axis and the y axis, i.e. the z axis of the [[IfcGridPlacement]] shall be co linear to the z axis of the local placement of the [[IfcGrid]] . NOTE The [[IfcGrid]] local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the virtual grid intersection. NOTE The PlacementLocation.OffsetDistances 3 and the PlacementRefDirection.OffsetDistances 3 shall either not be assigned or should have the same z offset value. The following figures show the usage of placement location and direction for an [[IfcGridPlacement]] . Figure 1 illustrates the case where PlacementRefDirection is not given the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the tangent of the first intersecting axis in the offset location of the virtual grid intersection Figure 1 Grid placement Figure 2 illustrates the case where PlacementRefDirection is given as an [[IfcDirection]] the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the DirectionRatios of the [[IfcDirection]], only the ratios for x and y are taken into account, Figure 2 Grid placement with direction Figure 3 illustrates the case where PlacementRefDirection is given as an [[IfcVirtualGridIntersection]] the object coordinate system is defined by its location given by the virtual grid intersection of PlacementLocation its x axis direction given by the tangent of the line between the virtual grid intersection of the PlacementLocation and the virtual grid intersection of the PlacementRefDirection. Figure 3 Grid placement with intersection HISTORY New entity in IFC1.5. The entity name was changed from IfcConstrainedPlacement in IFC2x. .change ifc2x4 IFC4 CHANGE Attribute data type of PlacementRefDirection has been changed to [[IfcGridPlacementDirectionSelect]] ."
+#:IFC.xml:10314
+msgid "IfcRectangularPyramid_Height"
+msgstr "Altura"
 
-#:IFC.xml:9719
-msgid "IfcGridPlacement_PlacementLocation"
-msgstr "Ubicación"
+msgid "IfcRectangularPyramid_Height_DEFINITION"
+msgstr "La altura de la apex sobre el plano de la base, medida en la dirección del eje Z de colocación, el SELF [[IfcCsgPrimitive3D]]. osition.P 2 ."
 
-msgid "IfcGridPlacement_PlacementLocation_DEFINITION"
-msgstr "Colocación del sistema de coordenadas de objetos definido por la intersección de dos ejes de rejilla."
+#:IFC.xml:10319
+msgid "IfcRectangularPyramid_XLength"
+msgstr "XLongitud"
 
-#:IFC.xml:9712
-msgid "IfcGridPlacement_PlacementRefDirection"
-msgstr "Dirección de ubicación"
+msgid "IfcRectangularPyramid_XLength_DEFINITION"
+msgstr "La longitud de la base medida a lo largo del eje X de colocación. Es proporcionado por la colocación del eje heredado a través de SELF [[IfcCsgPrimitive3D]].Position.P 1 ."
 
-msgid "IfcGridPlacement_PlacementRefDirection_DEFINITION"
-msgstr "Reference to either an explicit direction, or a second grid axis intersection, which defines the orientation of the grid placement. .change ifc2x4 IFC4 CHANGE The select of an explict direction has been added."
+#:IFC.xml:10324
+msgid "IfcRectangularPyramid_YLength"
+msgstr "Longitud"
 
-#:IFC.xml:9731
-msgid "IfcGridPlacementDirectionSelect"
-msgstr "IfcGridPlacementDirectionSelect"
+msgid "IfcRectangularPyramid_YLength_DEFINITION"
+msgstr "La longitud de la base medida a lo largo del eje Y de la colocación. Es proporcionado por la colocación del eje heredado a través de SELF [[IfcCsgPrimitive3D]].Position.P 2 ."
 
-#:IFC.xml:9732
-msgid "IfcLinearPlacement"
-msgstr "IfcLinearPlacement"
+#:IFC.xml:10331
+msgid "IfcRevolvedAreaSolid"
+msgstr "IfcRevolvedAreaSolid"
 
-msgid "IfcLinearPlacement_DEFINITION"
-msgstr "[[IfcLinearPlacement]] provides a specialization of [[IfcObjectPlacement]] in which the placement and axis direction of the object coordinate system is defined by a reference to a curve. RelativePlacement is therefore restricted to [[IfcAxis2PlacementLinear]] ."
+msgid "IfcRevolvedAreaSolid_DEFINITION"
+msgstr "An [[IfcRevolvedAreaSolid]] is a solid created by revolving a cross section provided by a profile definition about an axis. The resulting solid is positioned by the [[IfcSweptAreaSolid]] . Position relative to the object coordinate system. If provided, it allows to reposition the revolved solid. If not provided, it defaults to the current object coordinate system. The axis and the cross section shall be in the same plane, prior to any repositioning. NOTE Both the axis and the cross section are required to lie in the xy plane of the object position coordinate system. EXAMPLE Figure 1 illustrates geometric parameters of the revolved solid. The revolved area solid defines the revolution of a 2D area given by a profile definition by an axis and angle. The result is a solid. The swept area is given by a profile definition. The profile is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system since no 2D profile position coordinate system is provided, here [[IfcParameterizedProfileDef]].Position NIL, the profile is positioned without transformation into the xy plane of the object coordinate system by default, centric at 0.,0. with no rotation The resulting swept solid is not repositioned, as no position coordinate system is provided, here [[IfcSweptAreaSolid]].Position NIL. The AxisLine can have any orientation within the XY plane, it does not have to be parallel to the y axis as shown in the illustration. Figure 1 Revolved area solid geometry EXAMPLE Figure 1 illustrates geometric parameters and additional positioning parameters of the revolved area solid. The revolved area solid defines the rotation of a 2D area by an axis and angle. The 2D area, provided by a parameterized profile definition, can be positioned relative to the object coordinate system other then by default at 0.,0. with no rotation . The result is a solid that can be repositioned within the object coordinate system. The profile to be swept is defined as a 2D primitive, here [[IfcRectangleProfileDef]], that is placed relative to the xy plane of object coordinate system a 2D profile position coordinate system is provided that positions the profile relative to the xy plane here at a corner of the rectangle The resulting swept solid is repositioned, here it is moved into local z and rotated by 15 along the x axis. Figure 2 Repositioned revolved area solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A revolved area solid is a solid formed by revolving a planar bounded surface about an axis. The axis shall be in the plane of the surface and the axis shall not intersect the interior of the bounded surface. The bounded surface may have holes which will sweep into holes in the solid. The direction of revolution is clockwise when viewed along the axis in the positive direction. More precisely if A is the axis location and d is the axis direction and C is an arc on the surface of revolution generated by an arbitrary point p on the boundary of the swept area, then C leaves p in direction d x p A as the area is revolved. NOTE Entity adapted from revolved area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .spec head Informal Propositions 1. The AxisLine shall lie in the plane of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 2. The AxisLine shall not intersect the interior of the SweptArea as defined at supertype [[IfcSweptAreaSolid]] . 3. The Angle shall be between 0 and 360 , or 0 and 2π depending on the unit type for [[IfcPlaneAngleMeasure]] . .use head Texture Use Definition For side faces, textures are aligned facing upright along the sides with origin at the first point of an arbitrary profile, and following the outer bound of the profile counter clockwise as seen from above . For parameterized profiles, the origin is defined at the Y extent for rounded profiles having no sharp edge and the first sharp edge counter clockwise from the Y extent for all other profiles. Textures are stretched or repeated on each side along the outer boundary of the profile according to RepeatS . Textures are stretched or repeated on each side along the outermost longest revolution path according to RepeatT , where coordinates are compressed towards the axis of revolution. For top and bottom caps, textures are aligned facing front to back, with the origin at the minimum X and Y extent. Textures are stretched or repeated on the top and bottom to the extent of each face according to RepeatS and RepeatT . For profiles with voids, textures are aligned facing upright along the inner side with origin at the first point of an arbitrary profile, and following the inner bound of the profile clockwise as seen from above . For parameterized profiles, the origin of inner sides is defined at the Y extent for rounded profiles having no sharp edge such as hollow ellipses or rounded rectangles and the first sharp edge clockwise from the Y extent for all other profiles. Figure 3 illustrates default texture mapping with a repeated texture RepeatS True and RepeatT True . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. For an [[IfcRevolvedAreaSolid]] having a profile of [[IfcTShapeProfileDef]] and revolved at 22.5 degrees, the side texture coordinate origin is the first corner counter clockwise from the Y axis, which equals 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth , while the top end cap texture coordinates start at 0.5 [[IfcTShapeProfileDef]].OverallWidth, 0.5 [[IfcTShapeProfileDef]].OverallDepth . Figure 3 Revolved area solid textures"
 
-#:IFC.xml:9735
-msgid "IfcLinearPlacement_RelativePlacement"
-msgstr "Ubicación relativa"
+#:IFC.xml:10343
+msgid "IfcRevolvedAreaSolid_Axis"
+msgstr "Eje"
 
-msgid "IfcLinearPlacement_RelativePlacement_DEFINITION"
-msgstr "Ubicación relativa"
+msgid "IfcRevolvedAreaSolid_Axis_DEFINITION"
+msgstr "Axis about which revolution will take place."
 
-#:IFC.xml:9747
-msgid "IfcLinearPlacement_CartesianPosition"
-msgstr "Posición cartesiana"
+#:IFC.xml:10332
+msgid "IfcRevolvedAreaSolid_AxisLine"
+msgstr "AxisLine"
 
-msgid "IfcLinearPlacement_CartesianPosition_DEFINITION"
-msgstr "Posición cartesiana"
+msgid "IfcRevolvedAreaSolid_AxisLine_DEFINITION"
+msgstr "Línea del eje de revolución."
 
-#:IFC.xml:9759
-msgid "IfcLocalPlacement"
-msgstr "IfcLocalPlacement"
+#:IFC.xml:10336
+msgid "IfcRevolvedAreaSolid_Angle"
+msgstr "Ángulo"
 
-msgid "IfcLocalPlacement_DEFINITION"
-msgstr "An [[IfcLocalPlacement]] defines the relative placement of a product in relation to the placement of another product or the absolute placement of a product within the geometric representation context of the project. The [[IfcLocalPlacement]] allows that an [[IfcProduct]] can be placed by this [[IfcLocalPlacement]] through the attribute ObjectPlacement within the local coordinate system of the object placement of another [[IfcProduct]] , which is referenced by the PlacementRelTo . Rules to prevent cyclic relative placements have to be introduced on the application level. If the PlacementRelTo is not given, then the [[IfcProduct]] is placed absolutely within the world coordinate system. The following conventions shall apply as default relative positions if the relative placement is used. The conventions are given for all five direct subtypes of [[IfcProduct]] , the [[IfcSpatialStructureElement]] , [[IfcElement]] , [[IfcAnnotation]] , [[IfcGrid]] , [[IfcPort]] . More detailed placement information is given at the level of subtypes of those five types mentioned. For the subtypes of [[IfcSpatialStructureElement]] the following conventions apply [[IfcSite]] shall be placed absolutely within the world coordinate system established by the geometric representation context of the [[IfcProject]] [[IfcFacility]] shall be placed relative to the local placement of [[IfcSite]] [[IfcFacilityPart]] shall be placed relative to the local placement of [[IfcFacility]] For [[IfcGrid]] and [[IfcAnnotation]] the convention applies that it shall be placed relative to the local placement of its container, either [[IfcSite]] , [[IfcBuilding]] , or [[IfcBuildingStorey]] it should be the same container element that is referenced by the [[IfcRelContainedInSpatialStructure]] containment relationship, For [[IfcAlignment]] placed relative to the local placement of its container [[IfcSite]] when not placed absolutely within the world coordinate system. For [[IfcPort]] the convention applies that it shall be placed relative to the local placement of the [[IfcElement]] it belongs to it should be the same element that is referenced by the [[IfcRelConnectsPortToElement]] connection relationship, For [[IfcElement]] the convention applies that it shall be placed relative to the local placement of its container, either [[IfcSite]] , [[IfcFacility]] , or [[IfcFacilityPart]] it should be the same container element that is referenced by the [[IfcRelContainedInSpatialStructure]] containment relationship, to the local placement of the [[IfcElement]] to which it is tied by an element composition relationship for features that are located relative to the main component such as openings , as expressed by [[IfcRelVoidsElement]] and [[IfcRelProjectsElement]] for elements that fill an opening such as doors or windows , as expressed by [[IfcRelFillsElement]] for coverings that cover the element, as expressed by [[IfcRelCoversBldgElements]] for sub components that are aggregated to the main component, as expressed by [[IfcRelAggregates]] and [[IfcRelNests]] . HISTORY New entity in IFC1.0."
+msgid "IfcRevolvedAreaSolid_Angle_DEFINITION"
+msgstr "El ángulo a través del cual se hará el barrido. Este ángulo se mide desde el plano del área barrida proporcionada por el plano XY del sistema de coordenadas de posición."
 
-#:IFC.xml:9760
-msgid "IfcLocalPlacement_RelativePlacement"
-msgstr "Ubicación relativa"
+#:IFC.xml:10355
+msgid "IfcRevolvedAreaSolidTapered"
+msgstr "IfcRevolvedAreaSolidTapered"
 
-msgid "IfcLocalPlacement_RelativePlacement_DEFINITION"
-msgstr "Colocación geométrica que define la transformación del sistema de coordenadas relacionado a la relación. La colocación puede ser tanto 2D como 3D, dependiendo del conteo de dimensiones del sistema de coordenadas."
+msgid "IfcRevolvedAreaSolidTapered_DEFINITION"
+msgstr "[[IfcRevolvedAreaSolidTapered]] is defined by revolving a cross section along a circular arc. The cross section may change along the revolving sweep from the shape of the start cross section into the shape of the end cross section. Corresponding vertices of the start and end cross sections are then connected. The bounded surface may have holes which will sweep into holes in the solid. The rotation axis is defined by Start point SELF [[IfcSweptAreaSolid]].Position.Location Direction SELF [[IfcRevolvedAreaSolid]].Axis Rotation axis SELF [[IfcRevolvedAreaSolid]].AxisLine , created from start point and direction by appying a 1 unit magnitude. Orientation Positive angles are applied clockwise when looking into the positive direction of the rotation axis. The start cross section is defined by SELF [[IfcSweptAreaSolid]].SweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by SELF [[IfcSweptAreaSolid]].Position.P 1 and SELF [[IfcSweptAreaSolid]].Position.P 2 The rotation axis lies in the plane of the start cross section but shall not intersect the interior of the start cross section. The end cross section is defined by EndSweptArea A bounded planar surface lying in the XY plane of the position coordinate system defined by rotating the start position coordinates provided by SELF [[IfcSweptAreaSolid]].Position around the rotation axis by the angle given by SELF [[IfcRevolvedAreaSolid]].Angle . The end cross section is topologically similar to the start cross section having the same number of vertices and edges . The end cross section can either be defined by the same paramteric profile using different parameter values, or by a 2D Cartesian transformation of the start profile within the end cross section plane. The solid is generated by transforming the start cross section into to end cross section. A start face, an end face each defined by start and end cross sections , and one or more lateral faces. Each lateral face is a ruled surface defined by a pair of corresponding edges of the start and end section. The ruled surfaces are constructed in the cylindrical coordinate space defined by the supertype [[IfcRevolvedAreaSolid]] . HISTORY New entity in IFC4. .spec head Informal Propositions 1. Mirroring within [[IfcDerivedProfileDef]].Operator shall not be used"
 
-#:IFC.xml:9767
-msgid "IfcObjectPlacement"
-msgstr "Colocación de objetos Ifc"
+#:IFC.xml:10358
+msgid "IfcRevolvedAreaSolidTapered_EndSweptArea"
+msgstr "EndSweptArea"
 
-msgid "IfcObjectPlacement_DEFINITION"
-msgstr "[[IfcObjectPlacement]] is an abstract supertype for the special types defining the object coordinate system. The [[IfcObjectPlacement]] has to be provided for each product that has a shape representation. The object placement can be given absolute by an axis2 placement, relative to the world coordinate system, relative by an axis2 placement, relative to the object placement of another product, by grid reference by the virtual intersection and reference direction given by two axes of a design grid, linear placement by distance along a curve, with possible offsets. In any case the object placement has to unambiguously define the object coordinate system as either two dimensional axis placement [[IfcAxis2Placement2D]] or three dimensional axis placement [[IfcAxis2Placement3D]] . The axis placement may have to be calculated. HISTORY New entity in IFC2x."
+msgid "IfcRevolvedAreaSolidTapered_EndSweptArea_DEFINITION"
+msgstr "EndSweptArea"
 
-#:IFC.xml:9768
-msgid "IfcObjectPlacement_PlacementRelTo"
-msgstr "Colocar en"
+#:IFC.xml:10370
+msgid "IfcRightCircularCone"
+msgstr "IfcRightCircularCone"
 
-msgid "IfcObjectPlacement_PlacementRelTo_DEFINITION"
-msgstr "Referencia a la colocación de objetos que proporciona la colocación relativa con su colocación en una cuadrícula, sistema de coordenadas local o posición lineal referenciada. Si se omite, entonces en el caso de la colocación lineal se establece por el origen de la alineación horizontal del eje referenciado [[IfcAlignment]]. En el caso de la colocación local es establecido por el contexto de representación geométrica."
+msgid "IfcRightCircularCone_DEFINITION"
+msgstr "The [[IfcRightCircularCone]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a circular base and a point called apex as the top. The tapers from the base to the top. The axis from the center of the circular base to the apex is perpendicular to the base. The inherited Position attribute defines the IfcAxisPlacement3D and provides the location and orientation of the cone SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cone. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis of the inherited placement coordinate system provides the center axis of the [[IfcRightCircularCone]] , and the apex is at the Height value applied to the positive direction of the z axis. The BottomRadius defines the circular base at the xy plane of the placement coordinate system. Figure 1 illustrates geometric parameters of the cone. The cone is positioned within its own placement coordinate system. The origin is the center of the bottom circular disk, that lies in the XY plane. The apex lies on the positive z axis at 0, 0, Height . cone1 .. .. .. .. figures ifcrightcircularcone layout1.png Figure 1 Right circular cone geometry NOTE Entity adapted from right circular cone defined in ISO 10303 42. HISTORY New entity in IFC2x3 .use head Texture use definition On the circular side, textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the base circumference according to RepeatS. Textures are compressed linearly going upwards towards the top point according to RepeatT. On the bottom face, textures are aligned facing front to back, with the center of the circle aligned to the center of the texture. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X towards top point Bottom Z Radius Radius 0 X Y Figure 2 Right circular cone textures"
 
-#:IFC.xml:9780
-msgid "IfcObjectPlacement_PlacesObject"
-msgstr "Colocar objeto"
+#:IFC.xml:10371
+msgid "IfcRightCircularCone_BottomRadius"
+msgstr "BottomRadio"
 
-msgid "IfcObjectPlacement_PlacesObject_DEFINITION"
-msgstr "The [[IfcObjectPlacement]] shall be used to provide a placement and an object coordinate system for instances of [[IfcProduct]] . .note If an [[IfcObjectPlacement]] is shared by many instances of [[IfcProduct]] it does not apply a semantic meaning of being a shared placement that needs to be maintained. The same instance of [[IfcObjectPlacement]] could simply be used to reduce exchange file size. .change ifc2x3 IFC2x3 CHANGE New inverse attribute. .change ifc2x4 IFC4 CHANGE The cardinality has changed to 0..n to allow reuse of instances of [[IfcObjectPlacement]] as placement object in one to many products. It takes also into account that it can act as a placement for [[IfcStructuralAnalysisModel]] ."
+msgid "IfcRightCircularCone_BottomRadius_DEFINITION"
+msgstr "El radio del cono en la base."
 
-#:IFC.xml:9806
-msgid "IfcPointOrVertexPoint"
-msgstr "IfcPointOrVertexPoint"
+#:IFC.xml:10376
+msgid "IfcRightCircularCone_Height"
+msgstr "Altura"
 
-#:IFC.xml:9807
-msgid "IfcSolidOrShell"
-msgstr "IfcSolidOrShell"
+msgid "IfcRightCircularCone_Height_DEFINITION"
+msgstr "La distancia entre la base del cono y la apex."
 
-#:IFC.xml:9808
-msgid "IfcSurfaceOrFaceSurface"
-msgstr "Superficie IfcSurfaceOrFacesuperficie"
+#:IFC.xml:10383
+msgid "IfcRightCircularCylinder"
+msgstr "CircularCylinder IfcDerecho"
 
-#:IFC.xml:9809
-msgid "IfcVirtualGridIntersection"
-msgstr "IfcVirtualGridIntersección"
+msgid "IfcRightCircularCylinder_DEFINITION"
+msgstr "The [[IfcRightCircularCylinder]] is a Construction Solid Geometry CSG 3D primitive. It is a solid with a circular base and top. The cylindrical surface between if formed by points at a fixed distance from the axis of the cylinder. The inherited Position attribute defines the IfcAxisPlacement3D and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the circular area being the bottom face of the cylinder. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis provides the center axis and the height is measured from the origin along the positive direction of the z axis. Figure 1 illustrates geometric parameters of the cylinder. The cylinder is positioned within its own placement coordiante system. The origin is the center of the bottom circular disk, that lies in the XY plane. The center of the top circular disk is on the positive z axis at 0, 0, Height . cylinder .. .. .. .. figures ifcrightcircularcylinder layout1.png Figure 1 Right circular cylinder geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A right circular cylinder is a CSG primitive in the form of a solid cylinder of finite height. It is defined by an axis point at the centre of one planar circular face, an axis, a height, and a radius. The faces are perpendicular to the axis and are circular discs with the specified radius. The height is the distance from the first circular face centre in the positive direction of the axis to the second circular face centre. NOTE Entity adapted from right circular cylinder defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture use definition On the circular side, textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the circumference according to RepeatS. Textures are stretched or repeated to the extent of the Height according to RepeatT. On the top and bottom faces, textures are aligned facing front to back, with the center of the circle aligned to the center of the texture. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X Z Bottom Z Radius Radius 0 X Y Top Z Radius Radius Height X Y Figure 2 Right circular cylinder textures"
 
-msgid "IfcVirtualGridIntersection_DEFINITION"
-msgstr "[[IfcVirtualGridIntersection]] defines the derived location of the intersection between two grid axes. Offset values may be given to set an offset distance to the grid axis for the calculation of the virtual grid intersection. The two intersecting axes IntersectingAxes define the intersection point, which exact location in terms of the Cartesian point representing the intersection has to be calculated from the geometric representation of the two participating curves. NOTE The [[IfcGrid]] local placement, that can be provided relative to the local placement of another spatial structure element, has to be taken into account for calculating the absolute placement of the [[IfcVirtualGridIntersection]] . Where rules and informal rules ensure, that the IntersectingAxes belong to the same [[IfcGrid]] Offset values may be given OffsetDistances . If given, the position within the list of OffsetDistances corresponds with the position within the list of IntersectingAxes . Therefore OffsetDistances 1 sets the offset to IntersectingAxes 1 , OffsetDistances 2 sets the offset to IntersectingAxes 2 , and OffsetDistances 3 sets the offset to the virtual intersection in direction of the orientation of the cross product of IntersectingAxes 1 and the orthogonal complement of the IntersectingAxes 1 which is the positive or negative direction of the z axis of the design grid position . The following figures explain the usage of the OffsetDistances and IntersectingAxes attributes. Figure 1 illustrates two offset distances given where the virtual intersection is defined in the xy plane of the grid axis placement. Figure 1 Virtual grid intersection with two offsets Figure 2 illustrates three offset distances given where the virtual intersection is defined by an offset in direction of the z axis of the design grid placement to the virtual intersection in the xy plane of the grid axis placement. Figure 2 Virtual grid intersection with three offsets The distance of the offset curve OffsetDistances n is measured from the basis curve. The distance may be positive, negative or zero. A positive value of distance defines an offset in the direction which is normal to the curve in the sense of an anti clockwise rotation through 90 degrees from the tangent vector T at the given point. This is in the direction of orthogonal complement T . This can be reverted by the SameSense attribute at [[IfcGridAxis]] which may switch the sense of the AxisCurve . Figure 3 illustrates an example of a negative offset where the figure shows the side of the offset. IntersectingAxes 1 .AxisCurve is an [[IfcTrimmedCurve]] with an [[IfcCircle]] as BasisCurve and SenseAgreement TRUE. IntersectingAxes 1 .SameSense TRUE. OffsetDistances 1 is a negative length measure Figure 3 Virtual grid intersection negative offset HISTORY New entity in IFC1.5. .change ifc2x IFC2x CHANGE Renamed from IfcConstraintRelIntersection. .spec head Informal Propositions 1. Both, IntersectingAxes 1 and IntersectingAxes 2 shall be two [[IfcGridAxis]] defined by the same [[IfcGrid]] . 2. IntersectingAxes 1 and IntersectingAxes 2 shall not be part of the same row of grid axes, i.e. both shall not be within the same set of [[IfcGrid]].UAxes or [[IfcGrid]].VAxes of the corresponding [[IfcGrid]] ."
+#:IFC.xml:10384
+msgid "IfcRightCircularCylinder_Height"
+msgstr "Altura"
 
-#:IFC.xml:9697
-msgid "IfcVirtualGridIntersection_IntersectingAxes"
-msgstr "Ejes intersectoriales"
+msgid "IfcRightCircularCylinder_Height_DEFINITION"
+msgstr "La distancia entre las caras circulares planas del cilindro."
 
-msgid "IfcVirtualGridIntersection_IntersectingAxes_DEFINITION"
-msgstr "Dos ejes de cuadrícula que se intersecan exactamente en una intersección ven también la propuesta informal en [[IfcGrid]] . Si se omite el atributo OffsetDistances, la intersección define la dirección de colocación o ref de una cuadrícula directamente. Si se dan OffsetDistances, la intersección es definida por las curvas offset a los ejes de la cuadrícula."
+#:IFC.xml:10389
+msgid "IfcRightCircularCylinder_Radius"
+msgstr "Radius"
 
-#:IFC.xml:9810
-msgid "IfcVirtualGridIntersection_OffsetDistances"
-msgstr "OfsetDistances"
+msgid "IfcRightCircularCylinder_Radius_DEFINITION"
+msgstr "El radio del cilindro."
 
-msgid "IfcVirtualGridIntersection_OffsetDistances_DEFINITION"
-msgstr "Desplaza las distancias a los ejes de la cuadrícula. Si se indica, define las curvas de desplazamiento virtuales a los ejes de la cuadrícula. La intersección de las curvas de desplazamiento especifica la intersección de cuadrícula virtual."
+#:IFC.xml:10396
+msgid "IfcSectionedSolid"
+msgstr "IfcSólido seccionado"
+
+msgid "IfcSectionedSolid_DEFINITION"
+msgstr "An [[IfcSectionedSolid]] is an abstract base type for solids constructed by sweeping potentially variable cross sections along a directrix."
+
+#:IFC.xml:10399
+msgid "IfcSectionedSolid_Directrix"
+msgstr "Directriz"
+
+msgid "IfcSectionedSolid_Directrix_DEFINITION"
+msgstr "The curve used to define the sweeping operation."
+
+#:IFC.xml:10411
+msgid "IfcSectionedSolid_CrossSections"
+msgstr "Secciones cruzadas"
+
+msgid "IfcSectionedSolid_CrossSections_DEFINITION"
+msgstr "List of cross sections in sequential order along the Directrix ."
+
+#:IFC.xml:10423
+msgid "IfcSectionedSolidHorizontal"
+msgstr "IfcSolidHorizontal Seccionado"
+
+msgid "IfcSectionedSolidHorizontal_DEFINITION"
+msgstr "An [[IfcSectionedSolidHorizontal]] is a solid model constructed by sweeping potentially varying cross sections along a curve horizontally. The solid is generated by sweeping the CrossSections between CrossSectionPositions with linear interpolation of profile points, where the profile normal agrees with the tangent of the Directrix , the profile X axis is oriented perpendicularly to the left of the Directrix same direction as LateralOffset at [[IfcPointByDistanceExpression]] as facing forward along the directrix, and the profile Y axis is oriented upwards according to FixedAxisVertical . For sections having cross section rotated according to a single super elevation, [[IfcDerivedProfileDef]] may be used to indicate such rotation with each ParentProfile referring to the same underlying profile. For sections having cross section transformed according to multiple super elevations with points varying independently, each profile may be of a different instance but of same type e.g. [[IfcArbitraryClosedProfileDef]] , and may optionally have cross section points associated to string lines guide curves using [[IfcIndexedPolyCurve]] with IfcCartesianPointList2DLabelled . Figure 1 illustrates four girders of a bridge having a constant parameterized profile, two guardrails having a constant arbitrary profile one of them mirrored , and a bridge deck having a variable arbitrary profile. spatial structure .. .. .. .. figures ifcsectionedsolidhorizontal.png Figure 1 Sectioned solid horizontal Informal Propositions 1. No two consecutive sections shall intersect. 2. If the type of sections is not [[IfcParameterizedProfileDef]] i.e. an arbitrary profile , then the number of points and edges should be the same for two consecutive profiles 3. If the directrix is not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. 4. Very sharp edges may result in nearly impossible miter implementer agreements may define acceptable limits for tangent discontinuity or require the directrix to be tangent continuous. 5. The directrix shall not intersect"
+
+#:IFC.xml:10426
+msgid "IfcSectionedSolidHorizontal_CrossSectionPositions"
+msgstr "Grupos de posiciones"
+
+msgid "IfcSectionedSolidHorizontal_CrossSectionPositions_DEFINITION"
+msgstr "List of distance expressions in sequentially increasing order paired with CrossSections , indicating the position of the corresponding section along the Directrix ."
+
+#:IFC.xml:10438
+msgid "IfcSectionedSpine"
+msgstr "IfcSectionedSpine"
+
+msgid "IfcSectionedSpine_DEFINITION"
+msgstr "An [[IfcSectionedSpine]] is a representation of the shape of a three dimensional object composed by a number of planar cross sections, and a spine curve. The shape is defined between the first element of cross sections and the last element of the cross sections. A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. All cross sections have to define areas by a closed profile to allow for the representation of a solid. All cross sections have to define curves by an open or closed profile to allow for the representation of a surface. The cross sections are defined by subtypes of [[IfcProfileDef]] , where the consecutive profiles may be derived by a transformation of the start profile or the previous consecutive profile. The spine curve shall be of type [[IfcCompositeCurve]] , each of its segments represented by [[IfcCompositeCurveSegment]] shall correspond to the part between exactly two consecutive cross sections. Figure 1 illustrates an example of an [[IfcSectionedSpine]] . The SpineCurve is given by an [[IfcCompositeCurve]] with two Segments . The Segments 1 has a ParentCurve of type [[IfcPolyline]] and a Transition CONTSAMEGRADIENT. The Segments 2 has a ParentCurve of type [[IfcTrimmedCurve]] and a Transition DISCONTINUOUS. Each CrossSectionPosition lies at a start or end point of the Segments . Each CrossSections are inserted by the CrossSectionPositions . The first two cross sections are of type [[IfcRectangleProfileDef]] , the third is of type [[IfcDerivedProfileDef]] . spine 1 .. .. .. .. figures ifcsectionedspine layout1.gif Figure 1 Sectioned spine geometry Figure 2 illustrates the final result of the [[IfcSectionedSpine]] . The body shown transparently is not fully defined by the exchange definition. render .. .. .. .. figures ifcsectionedspine.jpg Figure 2 Sectioned spine result .extDef NOTE Definition according to ISO CD 10303 42 1992 A sectioned spine is a representation of the shape of a three dimensional object composed of a spine curve and a number of planar cross sections. The shape is defined between the first element of cross sections and the last element of this set. NOTE A sectioned spine may be used to represent a surface or a solid but the interpolation of the shape between the cross sections is not defined. For the representation of a solid all cross sections are closed curves. NOTE Entity adapted from sectioned spine defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. none of the cross sections, after being placed by the cross section positions, shall intersect 2. none of the cross sections, after being placed by the cross section positions, shall lie in the same plane 3. the local origin of each cross section position shall lie at the beginning or end of a composite curve segment."
+
+#:IFC.xml:10446
+msgid "IfcSectionedSpine_SpineCurve"
+msgstr "Curva espinosa"
+
+msgid "IfcSectionedSpine_SpineCurve_DEFINITION"
+msgstr "A single composite curve, that defines the spine curve. Each of the composite curve segments correspond to the part between two cross sections."
+
+#:IFC.xml:10458
+msgid "IfcSectionedSpine_CrossSections"
+msgstr "Secciones cruzadas"
+
+msgid "IfcSectionedSpine_CrossSections_DEFINITION"
+msgstr "Una lista de al menos dos secciones cruzadas, cada una definida dentro del plano xy del sistema de coordenadas de posición de la sección cruzada. El sistema de coordenadas de posición es dado por la lista correspondiente CrossSectionPositions."
+
+#:IFC.xml:10470
+msgid "IfcSectionedSpine_CrossSectionPositions"
+msgstr "Grupos de posiciones"
+
+msgid "IfcSectionedSpine_CrossSectionPositions_DEFINITION"
+msgstr "Posición de los sistemas de coordenadas para las secciones cruzadas que forman el lomo seccionado. Los perfiles que definen las secciones cruzadas se posicionan dentro del plano xy del sistema de coordenadas de posición correspondiente."
+
+#:IFC.xml:10439
+msgid "IfcSectionedSpine_Dim"
+msgstr "Dim"
+
+msgid "IfcSectionedSpine_Dim_DEFINITION"
+msgstr "La dimensión de la curva de la columna es siempre 3."
+
+#:IFC.xml:10482
+msgid "IfcSectionedSurface"
+msgstr "Superficie seccionada Ifc"
+
+msgid "IfcSectionedSurface_DEFINITION"
+msgstr "A kind of surface constructed by sweeping potentially varying open cross sections along a curve horizontally or near horizontally . The surface is generated by sweeping the CrossSections between CrossSectionPositions linear interpolation is assumed, unless transitions curves between cross section points are indicated by OpenCrossProfileDef.Tags. The CrossSections are oriented with the Y axis of each profile facing upwards in Z direction or vertically perpendicular to the Directrix, depending on the Attribute FixedAxisVertical value. sectioned surfacequot .. .. .. .. figures [[IfcSectionedSurface]] 1.png Figure 1 Sectioned surface using [[IfcOpenCrossProfileDef]] In case of branching longitudinal breaklines, the SectionedSurface may use OpenCrossProfileDef instances with varying number of cross section points. In that case, the point in two consecutive cross sections that are connected are identified by the same tag value. sectioned surfacequot .. .. .. .. figures [[IfcSectionedSurface]] 2.png Figure 1 Sectioned surface with branching longitudinal breaklines Formal propositions The curve entity which is the underlying directrix shall have the dimensionality of 3. The profile type shall be CURVE within the list of the profiles defining the cross sections. The entity type for each section must be the same. The list of cross sections and the list of cross section positions shall be of the same size. Informal Propositions No two consecutive sections shall intersect. If the directrix is not tangent continuous, the resulting surface is created by a miter at half angle between the two segments. Very sharp edges may result in nearly impossible miter implementer agreements may define acceptable limits for tangent discontinuity or require the directrix to be tangent continuous. The directrix shall not intersect"
+
+#:IFC.xml:10485
+msgid "IfcSectionedSurface_Directrix"
+msgstr "Directriz"
+
+msgid "IfcSectionedSurface_Directrix_DEFINITION"
+msgstr "La curva utilizada para definir la operación de barrido"
+
+#:IFC.xml:10497
+msgid "IfcSectionedSurface_CrossSections"
+msgstr "Secciones cruzadas"
+
+msgid "IfcSectionedSurface_CrossSections_DEFINITION"
+msgstr "Lista de secciones cruzadas en orden secuencial a lo largo de la Directriz"
+
+#:IFC.xml:10509
+msgid "IfcSectionedSurface_CrossSectionPositions"
+msgstr "Grupos de posiciones"
+
+msgid "IfcSectionedSurface_CrossSectionPositions_DEFINITION"
+msgstr "Lista de expresiones a distancia en orden secuencialmente creciente emparejadas con Secciones Crosas, indicando la posición de la sección correspondiente a lo largo de la Directriz."
+
+#:IFC.xml:10521
+msgid "IfcShellBasedSurfaceModel"
+msgstr "Modelo de superficie IfcBasedBased"
+
+msgid "IfcShellBasedSurfaceModel_DEFINITION"
+msgstr "An [[IfcShellBasedSurfaceModel]] represents the shape by a set of open or closed shells. The connected faces within the shell have a dimensionality 2 and are placed in a coordinate space of dimensionality 3. .extDef NOTE Definition according to ISO CD 10303 42 1992 A shell based surface model is described by a set of open or closed shells of dimensionality 2. The shells shall not intersect except at edges and vertices. In particular, distinct faces may not intersect. A complete face of one shell may be shared with another shell. Coincident portions of shells shall both reference the same faces, edges and vertices defining the coincident region. There shall be at least one shell. A shell may exist independently of a surface model. NOTE Entity adapted from shell based surface model defined in ISO 10303 42. HISTORY New entity in IFC2x. .spec head Informal Propositions 1. The dimensionality of the shell based surface model is 2. 2. The shells shall not overlap or intersect except at common faces, edges or vertices."
+
+#:IFC.xml:10522
+msgid "IfcShellBasedSurfaceModel_Dim"
+msgstr "Dim"
+
+msgid "IfcShellBasedSurfaceModel_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, it is always 3."
+
+#:IFC.xml:10527
+msgid "IfcShellBasedSurfaceModel_SbsmBoundary"
+msgstr "Límite Sbsms"
+
+msgid "IfcShellBasedSurfaceModel_SbsmBoundary_DEFINITION"
+msgstr "Límite Sbsms"
+
+#:IFC.xml:10534
+msgid "IfcSolidModel"
+msgstr "IfcSolidModel"
+
+msgid "IfcSolidModel_DEFINITION"
+msgstr "An [[IfcSolidModel]] represents the 3D shape by different types of solid model representations. It is the common abstract supertype of Boundary representation, CSG representation, Sweeping representation and other suitable solid representation schemes. .extDef NOTE Definition according to ISO CD 10303 42 1992 A solid model is a complete representation of the nominal shape of a product such that all points in the interior are connected. Any point can be classified as being inside, outside, or on the boundary of a solid. There are several different types of solid model representations. NOTE Entity adapted from solid model defined in ISO 10303 42. HISTORY New entity in IFC1.5"
+
+#:IFC.xml:10535
+msgid "IfcSolidModel_Dim"
+msgstr "Dim"
+
+msgid "IfcSolidModel_Dim_DEFINITION"
+msgstr "The space dimensionality of this class, it is always 3."
+
+#:IFC.xml:10544
+msgid "IfcSphere"
+msgstr "IfcSphere"
+
+msgid "IfcSphere_DEFINITION"
+msgstr "The [[IfcSphere]] is a Construction Solid Geometry CSG 3D primitive. It is a solid where all points at the surface have the same distance from the center point. The inherited Position attribute defines the IfcAxisPlacement3D and provides SELF [[IfcCsgPrimitive3D]].Position The location and orientation of the axis system for the primitive. SELF [[IfcCsgPrimitive3D]].Position.Location The center of the sphere. SELF [[IfcCsgPrimitive3D]].Position.Position 3 The z axis points at its positve direction towards the north pole, and by its negative directions towards the south pole. EXAMPLE Figure 1 illustrates geometric parameters of the sphere. The sphere is positioned within its own placement coordiante system relative to the object coordinate system. The origin is the center of the sphere. Figure 1 Sphere geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A sphere is a CSG primitive with a spherical shape defined by a centre and a radius. NOTE Entity adapted from sphere defined in ISO 10303 42. HISTORY New entity in IFC2x3. .use head Texture Use Definition Textures are aligned facing upright with origin at the back Y direction revolving counter clockwise. Textures are stretched or repeated to the extent of the circumference at the equator according to RepeatS and RepeatT. Figure 2 illustrates default texture mapping with a clamped texture RepeatS False and RepeatT False . The image on the left shows the texture where the S axis points to the right and the T axis points up. The image on the right shows the texture applied to the geometry where the X axis points back to the right, the Y axis points back to the left, and the Z axis points up. .gridtable Side Normal Origin X Origin Y Origin Z S Axis T Axis Side Y 0 Radius 0 X, then curving counter clockwise Z, then curving towards top Figure 2 Sphere textures"
+
+#:IFC.xml:10545
+msgid "IfcSphere_Radius"
+msgstr "Radius"
+
+msgid "IfcSphere_Radius_DEFINITION"
+msgstr "El radio de la esfera."
+
+#:IFC.xml:10552
+msgid "IfcSurfaceCurveSweptAreaSolid"
+msgstr "IfcSurfaceCurveSweptAreaSolid"
+
+msgid "IfcSurfaceCurveSweptAreaSolid_DEFINITION"
+msgstr "The [[IfcSurfaceCurveSweptAreaSolid]] is the result of sweeping an area along a directrix that lies on a reference surface. The swept area is provided by a subtype of [[IfcProfileDef]] . The profile is placed by an implicit cartesian transformation operator at the start point of the sweep, where the profile normal agrees to the tangent of the directrix at this point, and the profile s x axis agrees to the surface normal. At any point along the directrix, the swept profile origin lies on the directrix, the profile s normal points towards the tangent of the directrix, and the profile s x axis is identical to the surface normal at this point. NOTE The profile area s normal has to be identical to the tangent of the directrix at any given point. In case of a directrix having a linear segment at the start point, the segment has to be perpendicular to the profile at start. The Directrix and the ReferenceSurface are positioned within the object coordinate system. The start of the sweeping operation is at the StartParam , the parameter value is provided based on the curve parameterization. If no StartParam is provided the start defaults to the begin of the directrix. The end of the sweeping operation is at the EndParam , the parameter value is provided based on the curve parameterization. If no EndParam is provided the end defaults to the end of the directrix. The geometric shape of the solid is not dependent upon the curve parameterization the volume depends upon the area swept and the length of the Directrix . NOTE The StartParam and the EndParam are not normalized by default, they depend upon the parameterization of the curve. However using the [[IfcReparametrisedCompositeCurveSegment]] within an [[IfcCompositeCurve]] as the directrix allows to explicitly reparameterize the underlying sweeping curve. In case of a closed curve, such as [[IfcCircle]] or [[IfcEllipse]] , as the directrix, StartParam and the EndParam shall not exceed the parametic range, they shall not be 360 . EXAMPLE The reference surface is any surface plane, cylindric, composite situated in 3D space and positioned in the object coordinate system. In most cases, it is a plane or a surface of extrusion. The directrix lies on the surface, in case of a plane it might be defined as a polyline or composite curve, in case of a cylindrical or other non planer reference surface it might often be defined as a p curve on this reference surface. At any point of the directrix, a plane can be constructed. The origin of the position coordinate system of the implicit plane lies at the directrix. The Axis3 the z axis, or normal of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 the x axis, or u of the position coordinate system is identical to the normal of the reference surface at this point. The Axis2 the y axis, or v is constructed. The resulting body of the swept solid is not repositioned if the inherited Position attribute is omitted. Otherwise the coordinate system established by the Position attribute is used to reposition the body relative to the object coordinate system. EXAMPLE Figure 1 illustrates an example using a cylindrical reference surface and a p curve for sweeping a rectangle. The Postion is not provided and therefore it does not reposition the resulting swept solid. Figure 2 shows the expected result.NOTE The start of the directrix lies at the origin of the object coordinate system, as shown in the illustration,only by coincidence. The start of the directrix and thereby the start of the sweeping operation might be at any point within the object coordinate system and only depends on the position of the directrix.Figure 1 Surface curve wept area solid parameter Figure 2 Surface curve wept area solid results .extDef NOTE Definition according to ISO CD 10303 42 1992 A surface curve swept area solid is a type of swept area solid which is the result of sweeping a face along a Directrix lying on a ReferenceSurface . The orientation of the SweptArea is related to the direction of the surface normal. The SweptArea is required to be a curve bounded surface lying in the plane z 0 and this is swept along the Directrix in such a way that the origin of the local coordinate system used to define the SweptArea is on the Directrix and the local x axis is in the direction of the normal to the ReferenceSurface at the current point. The resulting solid has the property that the cross section of the surface by the normal plane to the Directrix at any point is a copy of the SweptArea . The orientation of the SweptArea as it sweeps along the Directrix is precisely defined by a Cartesian Transformation Operator 3D with attributes Local origin as point 0., 0., 0 , Axis 1 as the normal N to the reference surface at the point of the directrix with parameter u. Axis 3 as the direction of the tangent vector t at the point of the directrix with parameter u. The remaining attributes are defaulted to define a corresponding transformation matrix T u , which varies with the directrix parameter u. NOTE Entity adapted from surface curve swept area solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .spec head Informal Propositions 1. The SweptArea shall lie in the implicit plane z 0. 2. The Directrix shall lie on the ReferenceSurface ."
+
+#:IFC.xml:10555
+msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface"
+msgstr "Referenciar superficie"
+
+msgid "IfcSurfaceCurveSweptAreaSolid_ReferenceSurface_DEFINITION"
+msgstr "Referenciar superficie"
+
+#:IFC.xml:10567
+msgid "IfcSweptAreaSolid"
+msgstr "IfcSweptAreaSolid"
+
+msgid "IfcSweptAreaSolid_DEFINITION"
+msgstr "An [[IfcSweptAreaSolid]] represents the 3D shape by a sweeping representation scheme allowing a two dimensional planar cross section to sweep through space. The swept area is defined by a cross section, represented by a subtype if [[IfcProfileDef]] , that is provided as a closed two dimensional boundary on an implicit plane. The swept area is defined in the xy plane of the object coordinate system. The sweeping operation is applied to the swept area as defined within the subtypes of [[IfcSweptAreaSolid]] , some subtypes require an implicit transformation of the swept area to the start position of the sweep. The optional Positio n coordinate system allows for re positioning the resulting swept solid relative to the object coordinate system. .extDef NOTE Definition according to ISO CD 10303 42 1992 The swept area solid entity collects the entities which are defined procedurally by sweeping action on planar bounded surfaces. The position is space of the swept solid will be dependent upon the position of the swept area. The swept area will be a face of the resulting swept area solid, except for the case of a revolved area solid with angle equal to 2π or 360 degrees . NOTE Entity adapted from swept area solid defined in ISO 10303 42. HISTORY New entity in IFC1.5 .change ifc2x4 IFC4 CHANGE The attribute Position has been changed to OPTIONAL with upward compatibility for file based exchange."
+
+#:IFC.xml:10570
+msgid "IfcSweptAreaSolid_SweptArea"
+msgstr "SweptArea"
+
+msgid "IfcSweptAreaSolid_SweptArea_DEFINITION"
+msgstr "La superficie que define el área a ser barrida. Se da como una definición de perfil dentro del plano xy del sistema de coordenadas de posición."
+
+#:IFC.xml:10582
+msgid "IfcSweptAreaSolid_Position"
+msgstr "Posición"
+
+msgid "IfcSweptAreaSolid_Position_DEFINITION"
+msgstr "Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation. .change ifc2x4 IFC4 CHANGE The attribute has been changed to OPTIONAL with upward compatibility for file based exchange."
+
+#:IFC.xml:10594
+msgid "IfcSweptDiskSolid"
+msgstr "IfcSweptDiskSolid"
+
+msgid "IfcSweptDiskSolid_DEFINITION"
+msgstr "An [[IfcSweptDiskSolid]] represents the 3D shape by a sweeping representation scheme allowing a two dimensional circularly bounded plane to sweep along a three dimensional Directrix through space. The StartParam and EndParam parameter are optional, if not provided they default to the start and end of the Directrix . Only if the Directrix is given by a bounded or by a closed curve, it is permissible to omit the values of StartParam and EndParam . If the transitions between consecutive segments of the Directrix are not tangent continuous, the resulting solid is created by a miter at half angle between the two segments. Informal proposition restricts the permissible angle between two non tangent continuous segments. Figure 1 illustrates an example. Directrix given as [[IfcIndexedPolyCurve]] , having linear and circular arc segments, that are tangent continuous between each segments Directrix being a bounded and open curve No StartParam and EndParam are provided, start and end default to start and end of the bounded curve of the Directrix NOTE Although the example shows a Directrix as a poly curve on a planar reference surface, the definition of [[IfcSweptDiskSolid]] is not restricted to be based on planer curves. However view definitions or implementer agreements may provide restrictions. NOTE The geometric item [[IfcIndexedPolyCurve]] provides a more compact representation compared with [[IfcCompositeCurve]] as is therefore the prefered curve representation for the Directrix . disk solid .. .. .. .. figures ifcsweptdisksolid layout1.png Figure 1 Swept disk solid geometry .extDef NOTE Definition according to ISO CD 10303 42 1992 A swept disk solid is the solid produced by sweeping a circular disk along a three dimensional curve. During the sweeping operation the normal to the plane of the circular disk is in the direction of the tangent to the directrix curve and the center of the disk lies on the directrix. The circular disk may, optionally, have a central hole, in this case the resulting solid has a through hole, or, an internal void when the directrix forms a close curve. NOTE Entity adapted from swept disk solid defined in ISO 10303 42. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE The attribute StartParam and EndParam have been made optional. .spec head Informal Propositions 1. If the Directrix curve definition is not tangent continuous, the transition between the segments has to be within an acceptable limit of tangent discontinuity. Very sharp edges may result in nearly impossible miter. Implementer agreements may define acceptable limits for tangent discontinuity. 2. The segments of the Directrix shall be long enough to apply the Radius . In case of an arc segment forming part of the Directrix , its radius shall be greater then the disk Radius 3. The Directrix shall not be based on an intersecting curve."
+
+#:IFC.xml:10617
+msgid "IfcSweptDiskSolid_Directrix"
+msgstr "Directriz"
+
+msgid "IfcSweptDiskSolid_Directrix_DEFINITION"
+msgstr "The curve used to define the sweeping operation. The solid is generated by sweeping a circular disk along the Directrix ."
+
+#:IFC.xml:10595
+msgid "IfcSweptDiskSolid_EndParam"
+msgstr "Parámetro final"
+
+msgid "IfcSweptDiskSolid_EndParam_DEFINITION"
+msgstr "The parameter value on the Directrix at which the sweeping operation ends. If no value is provided the end of the sweeping operation is at the end of the Directrix . .change ifc2x4 IFC4 CHANGE The attribute has been changed to OPTIONAL with upward compatibility for file based exchange."
+
+#:IFC.xml:10600
+msgid "IfcSweptDiskSolid_InnerRadius"
+msgstr "InnerRadius"
+
+msgid "IfcSweptDiskSolid_InnerRadius_DEFINITION"
+msgstr "Este atributo es opcional, si está presente define el radio de un agujero circular en el centro del disco."
+
+#:IFC.xml:10605
+msgid "IfcSweptDiskSolid_Radius"
+msgstr "Radius"
+
+msgid "IfcSweptDiskSolid_Radius_DEFINITION"
+msgstr "The Radius of the circular disk to be swept along the directrix . Denotes the outer radius, if an InnerRadius is applied."
+
+#:IFC.xml:10610
+msgid "IfcSweptDiskSolid_StartParam"
+msgstr "StartParam"
+
+msgid "IfcSweptDiskSolid_StartParam_DEFINITION"
+msgstr "The parameter value on the Directrix at which the sweeping operation commences. If no value is provided the start of the sweeping operation is at the start of the Directrix . .change ifc2x4 IFC4 CHANGE The attribute has been changed to OPTIONAL with upward compatibility for file based exchange."
+
+#:IFC.xml:10629
+msgid "IfcSweptDiskSolidPolygonal"
+msgstr "IfcSweptDiskSolidPolygonal"
+
+msgid "IfcSweptDiskSolidPolygonal_DEFINITION"
+msgstr "The [[IfcSweptDiskSolidPolygonal]] is a [[IfcSweptDiskSolid]] where the Directrix is restricted to be provided by an poly line only. An optional FilletRadius attribute can be asserted, it is then applied as a fillet to all transitions between the segments of the poly line. NOTE The geometric item [[IfcIndexedPolyCurve]] provides a more compact representation compared with [[IfcPolyline]] . Therefore it is the prefered curve representation for the Directrix . The [[IfcIndexedPolyCurve]] shall not have Segments defined, resticting it to a poly line only. HISTORY New entity in IFC4. .spec head Informal Propositions 1. The FilletRadius , if provided, has to be smaller then or equal to the length of the start and end segment of the [[IfcPolyline]] , and smaller then or equal to one half of the lenght of the shortest inner segment."
+
+#:IFC.xml:10630
+msgid "IfcSweptDiskSolidPolygonal_FilletRadius"
+msgstr "Radio de relleno"
+
+msgid "IfcSweptDiskSolidPolygonal_FilletRadius_DEFINITION"
+msgstr "The fillet that is equally applied to all transitions between the segments of the [[IfcPolyline]] , providing the geometric representation for the Directrix . If omited, no fillet is applied to the segments."
+
+#:IFC.xml:10637
+msgid "IfcTaperedSweptAreaProfiles__StartArea"
+msgstr "IfcTaperedSweptAreaProfiles StartArea"
+
+#:IFC.xml:10645
+msgid "IfcTessellatedFaceSet"
+msgstr "IfcTessellatedFaceSet"
+
+msgid "IfcTessellatedFaceSet_DEFINITION"
+msgstr "The [[IfcTessellatedFaceSet]] is a boundary representation topological model limited to planar faces and straight edges. It may represent an approximation of an analytical surface or solid that may be provided in addition to its tessellation as a separate shape representation. The [[IfcTessellatedFaceSet]] provides a compact data representation of an connected face set using indices into ordered lists of vertices, normals, colours, and texture maps. NOTE The compact representation has been chosen to enable small data sets despite potentially large sets of faces, edges and vertices needed to represent tessellations of analyticals surfaces and solids, and despite large sets of colour and texture information to annotate the tessellated faces. The [[IfcTessellatedFaceSet]] is an abstract supertype of tesselated face sets each imposing specific constraints on face generation for tessellation, such as triangulation with or without strip and fans , or quadrilaterals, or polygonal faces with or without inner loops . NOTE Not all different constraints on face sets are included as specific subtypes in this release of the specification. The following attributes apply to all subtypes The Coordinates are the ordered list of Cartesian points representing the vertices of the tessellated item. An index list, defined at the level of subtypes, uses the points, identified by index position, to construct the polylines that represent the faces. The HasColours inverse relation provides an indexed colour map with an corresponding list of indices providing a colour for each face of the tessellated face set. The HasTextures inverse relation provides an indexed texture map with an corresponding list of indices providing texture coordinates that map to the geometric coordinates of the polylines representing the faces. Each face of the tessellated face set shall have at least three non coincident vertices vertices that define a planar polygon vertices that define a non self intersecting polygon. NOTE The definition of [[IfcTessellatedFaceSet]] is based on the indexedFaceSet defined in ISO IEC 19775 1 HISTORY New entity in IFC4."
+
+#:IFC.xml:10042
+msgid "IfcTessellatedFaceSet_Coordinates"
+msgstr "Coordenadas"
+
+msgid "IfcTessellatedFaceSet_Coordinates_DEFINITION"
+msgstr "An ordered list of Cartesian points used by the coordinate index defined at the subtypes of [[IfcTessellatedFaceSet]] ."
+
+#:IFC.xml:10654
+msgid "IfcTessellatedFaceSet_HasColours"
+msgstr "Colores"
+
+msgid "IfcTessellatedFaceSet_HasColours_DEFINITION"
+msgstr "Reference to the indexed colour map providing the corresponding colour RGB values to the faces of the subtypes of [[IfcTessellatedFaceSet]] ."
+
+#:IFC.xml:10668
+msgid "IfcTessellatedFaceSet_HasTextures"
+msgstr "Texturas Hass"
+
+msgid "IfcTessellatedFaceSet_HasTextures_DEFINITION"
+msgstr "Reference to the indexed texture map providing the corresponding texture coordinates to the vertices bounding the faces of the subtypes of [[IfcTessellatedFaceSet]] ."
+
+#:IFC.xml:10646
+msgid "IfcTessellatedFaceSet_Dim"
+msgstr "Dim"
+
+msgid "IfcTessellatedFaceSet_Dim_DEFINITION"
+msgstr "The space dimensionality of this geometric representation item, it is always 3."
+
+#:IFC.xml:10682
+msgid "IfcTessellatedItem"
+msgstr "IfcTessellatedItem"
+
+msgid "IfcTessellatedItem_DEFINITION"
+msgstr "The [[IfcTessellatedItem]] is the abstract supertype of all tessellated geometric models. HISTORY New entity in IFC4."
+
+#:IFC.xml:10685
+msgid "IfcTriangulatedFaceSet"
+msgstr "IfcTriangulado conjunto de facetas"
+
+msgid "IfcTriangulatedFaceSet_DEFINITION"
+msgstr "The [[IfcTriangulatedFaceSet]] is a tessellated face set with all faces being bound by triangles. The faces are constructed by implicit polylines defined by three Cartesian points. Depending on the value of the attribute Closed the instance of [[IfcTriangulatedFaceSet]] represents if TRUE, a boundary represention or B rep if FALSE, a face based surface representation. The coordinates of each point are provided by a one based index into an ordered list of Cartesian points provided by the two dimensional list CoordIndex , where the first dimension of the two dimensional list addresses the list of triangular faces the second dimension of the two dimensional list provides exactly three indices. Each index points to a Cartesian point being a vertex of the triangle. Depending on the provision of PnIndex the indices point either directly into the [[IfcCartesianPointList3D]] referenced by Coordinates defined at the supertype [[IfcTessellatedFaceSet]] , or they point into the PnIndex where the integer values at that position provides the location of the coordinate values within the [[IfcCartesianPointList3D]] . See Figure 1 for the handling of point index. PnIndex .. .. .. .. figures ifctriangulatedfaceset 03.png Figure 1 Use of PnIndex See Figure 2 for using the [[IfcTriangulatedFaceSet]] without as default and with using the PnIndex . [[IfcTriangulatedFaceSet]] 01 .. .. .. .. figures ifctriangulatedfaceset 01.png Figure 2 Triangulated face set Optionally normals can be provided. Only normals per vector are supported allowing for visually curved triangles when the three normals of the corresponding three vertices of a triangle are not co linear to the normal of the triangular face. If they are identical, normals shall be omited. NOTE In case of a body representation having triangular faces with curvature, different normals for all three vertices in context of this triangles are exported, describing the curvature for smooth visualisation. In case of triangular faces with no curvature, the three vertex based normals are identical and could always be computed from the face. Therefore vertices should only be exported to support smooth visualisation by curvature of triangles. In case of faceted representation no vertices should be exported. Normals are provided by the two dimensional list Normals , where the first dimension of the two dimensional list addresses the corresponding list of vertex indices of the triangular faces the second dimension of the two dimensional list provides exactly three real values to determine the direction of the normal at this vertex of the triangle. The indices in the CoordIndex point into the list of Normals . The indices of CoordIndex are applied to both points, either directly directly, or via the PnIndex and normals. See Figure 3 for handling of normals. [[IfcTriangulatedFaceSet]] 02 .. .. .. .. figures ifctriangulatedfaceset 02.png Figure 3 Triangulated face set with normals NOTE Using corresponding lists of points and normals allows to use only a single list of indices into both at the expense of having non unique collections of vertices. Figure 4 shows the use of [[IfcTriangulatedFaceSet]] without annotation. The diagram of the [[IfcTriangulatedFaceSet]] represents the indices and the ordered list into which the indices point. The index starts with 1 indexed as 1 to N , if the greatest index in CoordIndex in N, then the [[IfcCartesianPointList]] shall have N lists of 3 3 coordinates. Figure 168 shows an [[IfcTriangulatedFaceSet]] represented by CoordIndex 1,6,5 , 1,2,6 , 6,2,7 , 7,2,3 , 7,8,6 , 6,8,5 , 5,8,1 , 1,8,4 , 4,2,1 , 2,4,3 , 4,8,7 , 7,3,4 [[IfcCartesianPointList3D]] 0.,0.,0. , 1.,0.,0. , 1.,1.,0. , 0.,1.,0. , 0.,0.,2. , 1.,0.,2. , 1.,1.,2. , 0.,1.,2. Figure 4 Triangulated face set geometry NOTE The definition of [[IfcTriangulatedFaceSet]] is based on the indexedFaceSet and indexedTriangleSet defined in ISO IEC 19775 1. The use of PnIndex has been adopted from triangulated surface set defined in ISO 10303 42. HISTORY New entity in IFC4. .spec head Informal Propositions 1. If Closed TRUE, the same topological constraints as imposed by an faceted boundary representation shall be safisfied. In particular each face shall be unique each edge shall be used by exactly two boundaries of faces the topological normal at each point on the boundary of the triangulated face set shall point away from the mater ial of the solid."
+
+#:IFC.xml:10686
+msgid "IfcTriangulatedFaceSet_NumberOfTriangles"
+msgstr "Número de triángulos"
+
+msgid "IfcTriangulatedFaceSet_NumberOfTriangles_DEFINITION"
+msgstr "Número derivado de triángulos usados para esta triangulación."
+
+#:IFC.xml:10691
+msgid "IfcTriangulatedFaceSet_Closed"
+msgstr "Closed"
+
+msgid "IfcTriangulatedFaceSet_Closed_DEFINITION"
+msgstr "Indication whether the [[IfcTriangulatedFaceSet]] is a closed shell or not. If omited no such information can be provided."
+
+#:IFC.xml:10696
+msgid "IfcTriangulatedFaceSet_CoordIndex"
+msgstr "CoordIndex"
+
+msgid "IfcTriangulatedFaceSet_CoordIndex_DEFINITION"
+msgstr "Two dimensional list for the indexed based triangles, where The first dimension represents the triangles from 1 to N The second dimension has exactly three values representing the indices to three vertex points from 1 to 3 . NOTE The coordinates of the vertices are provided by the indexed list of SELF [[IfcTessellatedFaceSet]].Coordinates.CoordList ."
+
+#:IFC.xml:10701
+msgid "IfcTriangulatedFaceSet_Normals"
+msgstr "Normales"
+
+msgid "IfcTriangulatedFaceSet_Normals_DEFINITION"
+msgstr "Una lista ordenada de tres direcciones para las normales, es una lista de dos dimensiones de direcciones proporcionada por tres valores de parámetro. La primera dimensión corresponde a los índices de vértices del índice Coord. La segunda dimensión tiene exactamente tres valores, 1 dirección x, 2 dirección y 3 direcciones z"
+
+#:IFC.xml:10706
+msgid "IfcTriangulatedFaceSet_PnIndex"
+msgstr "PnIndex"
+
+msgid "IfcTriangulatedFaceSet_PnIndex_DEFINITION"
+msgstr "The list of integers defining the locations in the [[IfcCartesianPointList3D]] to obtain the point coordinates for the indices withint the CoordIndex . If the PnIndex is not provided the indices point directly into the [[IfcCartesianPointList3D]] ."
+
+#:IFC.xml:10713
+msgid "IfcTriangulatedIrregularNetwork"
+msgstr "IfcTriangulada Red Irregular"
+
+msgid "IfcTriangulatedIrregularNetwork_DEFINITION"
+msgstr "The [[IfcTriangulatedIrregularNetwork]] is a triangulated face set for representing horizontal surfaces one unique Z coordinate for all X and Y coordinates within domain with additional flags for each face indicating breaklines between faces or designation as a hole or void. Triangles shall be defined with vertices in counterclockwise order as viewing from above following right hand rule . For visualization, applications should not display faces where flags are set as negative either a hole, void, or possible future extension . The flag Void shall be used to indicate that faces are to be excluded without falling back on any other geometry. Such designation could be used for portions of a site beneath a building or other structure. The flag Hole shall be used to indicate that faces are to be excluded but may fall back on other geometry. Such designation could be used for portions of a proposed site that are to remain unchanged conforming to an existing site that may also be defined For scenarios where multiple surfaces used as input are to be combined, any triangles marked Void shall be retained as voids, while any triangles marked as Hole shall be overridden if another surface has visible geometry defined within the same horizontal location."
+
+#:IFC.xml:10714
+msgid "IfcTriangulatedIrregularNetwork_Flags"
+msgstr "Banderas"
+
+msgid "IfcTriangulatedIrregularNetwork_Flags_DEFINITION"
+msgstr "Indica los atributos de cada triángulo en una forma compacta de la siguiente manera 2 vacío invisible 1 agujero invisible 0 sin saltos 1 línea de salto en el borde 1 2 de salto al borde 2 3 de salto en los bordes 1 y 2 de salto en el borde 3 5 de salto en los bordes 1 y 3 6 de salto en los bordes 2 y 3 7 de salto en los bordes 1, 2, y 3."
 
