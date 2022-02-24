@@ -9,2054 +9,586 @@ msgstr ""
 "X-Crowdin-Project: 7478baf291faba855dd524435a261a19\n"
 "X-Crowdin-Project-ID: 2\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /master/IfcStructuralElementsDomain.pot\n"
-"X-Crowdin-File-ID: 96\n"
+"X-Crowdin-File: /master/IfcStructuralLoadResource.pot\n"
+"X-Crowdin-File-ID: 98\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: ru_RU\n"
 "PO-Revision-Date: 2022-02-24 03:59\n"
 
-#:IFC.xml:41950
-msgid "IfcBendingParameterSelect"
-msgstr "Выбор параметров IfcBendingSelect"
+#:IFC.xml:43197
+msgid "IfcBoundaryCondition"
+msgstr "Граница пролива"
 
-#:IFC.xml:41951
-msgid "IfcFooting"
-msgstr "Ледяной стоп"
+msgid "IfcBoundaryCondition_DEFINITION"
+msgstr "The abstract entity [[IfcBoundaryCondition]] is the supertype of all boundary conditions that can be applied to structural connection definitions, either directly for the connection e.g. the joint or for the relation between a structural member and the connection. NOTE The boundary conditions are used within other parts, mainly by instances of [[IfcStructuralConnection]] for the definition of supports and instances of [[IfcRelConnectsStructuralMember]] for the definition of connections between structural members and structural connections . HISTORY New entity in IFC2x2."
 
-msgid "IfcFooting_DEFINITION"
-msgstr "A footing is a part of the foundation of a structure that spreads and transmits the load to the soil. A footing is also characterized as shallow foundation, where the loads are transfered to the ground near the surface. .extDef NOTE Definition according to ISO 6707 1 stepped construction that spreads the load at the foot of a wall or column. HISTORY New entity in IFC2x2. NOTE Slab foundations, also called slab on grade, are not instantiated as [[IfcFooting]] but as [[IfcSlab]] or as its subtype [[IfcSlabStandardCase]] , [[IfcSlabElementedCase]] with a predefined type of [[IfcSlabTypeEnum]] .BASESLAB. Deep foundations, which transfer the loads to subsurface layers, are represented by [[IfcDeepFoundation]] and its subtypes [[IfcCaissonFoundation]] and [[IfcPile]] ."
+#:IFC.xml:43198
+msgid "IfcBoundaryCondition_Name"
+msgstr "Наименование"
 
-#:IFC.xml:41952
-msgid "IfcFooting_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcBoundaryCondition_Name_DEFINITION"
+msgstr "При необходимости определяет имя для этого пограничного условия."
 
-msgid "IfcFooting_PredefinedType_DEFINITION"
-msgstr "The generic type of the footing. .change ifc2x4 IFC4 CHANGE Attribute made optional. Type information can be provided by [[IfcRelDefinesByType]] and [[IfcFootingType]] ."
+#:IFC.xml:43204
+msgid "IfcBoundaryEdgeCondition"
+msgstr "Погрешность границы"
 
-#:IFC.xml:41959
-msgid "IfcFootingType"
-msgstr "IfcFootingType"
+msgid "IfcBoundaryEdgeCondition_DEFINITION"
+msgstr "Describes linearly elastic support conditions or connection conditions. Applicability Curve supports and connections. HISTORY New entity in IFC2x2. IFC 2x4 change Attributes LinearStiffnessX Y Z renamed to TranslationalStiffnessX Y Z . .change ifc2x4 IFC4 change All attribute data types changed from numeric to SELECT between Boolean and numeric. Stiffnesses may now also be negative, for example to capture destabilizing effects in boundary conditions. The IFC2x3 convention of 1. representing infinite stiffness is no longer valid and must not be used. Infinite stiffness, i.e. fixed supports, are now modeled by the Boolean value TRUE."
 
-msgid "IfcFootingType_DEFINITION"
-msgstr "The building element type [[IfcFootingType]] defines commonly shared information for occurrences of footings. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a footing type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcFootingType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcFootingType]] are represented by instances of [[IfcFooting]] . Refer to the documentation at [[IfcFooting]] for supported property sets, materials, and composition. HISTORY New entity in IFC4."
+#:IFC.xml:43205
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX"
+msgstr "Поворот наклонности по длине X"
 
-#:IFC.xml:41960
-msgid "IfcFootingType_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthX_DEFINITION"
+msgstr "Значение точности вращения по отношению к оси x системы координат, определенной экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingType_PredefinedType_DEFINITION"
-msgstr "Подтип колонтитула."
+#:IFC.xml:43210
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY"
+msgstr "Поворотная склонность по длине"
 
-#:IFC.xml:41967
-msgid "IfcFootingTypeEnum"
-msgstr "IfcFootingTypeEnum"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthY_DEFINITION"
+msgstr "Значение точности вращения по оси y системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_DEFINITION"
-msgstr "Enumeration defining the generic footing type. HISTORY New type in IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Item CAISSON FOUNDATION added. Items CAISSON FOUNDATION A foundation construction type used in underwater construction. .change ifc4x2 IFC4x2 CHANGE Enum made optional and deprecated. Use the dedicated class [[IfcCaissonFoundation]] instead. FOOTING BEAM Footing elements that are in bending and are supported clear of the ground. They will normally span between piers, piles or pile caps. They are distinguished from beams in the building superstructure since they will normally require a lower grade of finish. They are distinguished from STRIP FOOTING since they are clear of the ground surface and hence require support to the lower face while the concrete is curing. PAD FOOTING An element that transfers the load of a single column possibly two to the ground. PILE CAP An element that transfers the load from a column or group of columns to a pier or pile or group of piers or piles. STRIP USERDEFINED Special types of footings which meet specific local requirements. NOTDEFINED The type of footing is not defined."
+#:IFC.xml:43215
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ"
+msgstr "Поворот наклонности ByLengthZ"
 
-#:IFC.xml:41983
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION"
-msgstr "Падение кайссена"
+msgid "IfcBoundaryEdgeCondition_RotationalStiffnessByLengthZ_DEFINITION"
+msgstr "Значение точности вращения по отношению к оси z системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_CAISSON_FOUNDATION_DEFINITION"
-msgstr "A foundation construction type used in underwater construction. .change ifc4x2 IFC4x2 CHANGE Enum made optional and deprecated. Use the dedicated class [[IfcCaissonFoundation]] instead."
+#:IFC.xml:43220
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX"
+msgstr "TranslationalStiffnessByLengthX"
 
-#:IFC.xml:41984
-msgid "IfcFootingTypeEnum_FOOTING_BEAM"
-msgstr "FOOTING BEAM"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthX_DEFINITION"
+msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_FOOTING_BEAM_DEFINITION"
-msgstr "Элементы для ног, которые поддерживаются в изгибе и хорошо видны от поверхности. Обычно они простираются между кулаками, кулаками и колпачками. Они отличаются от балок в надстройке здания, поскольку для них обычно требуется более низкая степень отделки. Они отличаются от STRIP FOOTING так как они понятны из поверхности грунта и поэтому требуют опоры на нижнюю поверхность при изгибе бетона."
+#:IFC.xml:43225
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY"
+msgstr "TranslationalStiffnessByLengthY"
 
-#:IFC.xml:41985
-msgid "IfcFootingTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthY_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип обрезки не определен."
+#:IFC.xml:43230
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ"
+msgstr "TranslationalStiffnessByLengthZ"
 
-#:IFC.xml:41986
-msgid "IfcFootingTypeEnum_PAD_FOOTING"
-msgstr "ПУСТИКАЕТСЯ"
+msgid "IfcBoundaryEdgeCondition_TranslationalStiffnessByLengthZ_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_PAD_FOOTING_DEFINITION"
-msgstr "Элемент, который переносит нагрузку одной колонки на землю."
+#:IFC.xml:43237
+msgid "IfcBoundaryFaceCondition"
+msgstr "Граница пролива"
 
-#:IFC.xml:41987
-msgid "IfcFootingTypeEnum_PILE_CAP"
-msgstr "PILE CAP"
+msgid "IfcBoundaryFaceCondition_DEFINITION"
+msgstr "Describes linearly elastic support conditions or connection conditions. Applicability Surface supports and connections. HISTORY New entity in IFC2x2. IFC 2x4 change Attributes LinearStiffnessX Y Z renamed to TranslationalStiffnessX Y Z . .change ifc2x4 IFC4 change All attribute data types changed from numeric to SELECT between Boolean and numeric. Stiffnesses may now also be negative, for example to capture destabilizing effects in boundary conditions. The IFC2x3 convention of 1. representing infinite stiffness is no longer valid and must not be used. Infinite stiffness, i.e. fixed supports, are now modeled by the Boolean value TRUE."
 
-msgid "IfcFootingTypeEnum_PILE_CAP_DEFINITION"
-msgstr "Элемент, который переносит нагрузку из столбца или группы колонок на пир или кучу или группу пиров или кубиков."
+#:IFC.xml:43238
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX"
+msgstr "TranslationalStiffnessByAreaX"
 
-#:IFC.xml:41988
-msgid "IfcFootingTypeEnum_STRIP_FOOTING"
-msgstr "ФОРМА СТРОИТЕЛЬСТВА"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaX_DEFINITION"
+msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_STRIP_FOOTING_DEFINITION"
-msgstr "ФОРМА СТРОИТЕЛЬСТВА"
+#:IFC.xml:43243
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY"
+msgstr "TranslationalStiffnessByAreaY"
 
-#:IFC.xml:41989
-msgid "IfcFootingTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaY_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
 
-msgid "IfcFootingTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Особые виды обуви, которые отвечают определенным местным требованиям."
+#:IFC.xml:43248
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ"
+msgstr "TranslationalStiffnessByAreaZ"
 
-#:IFC.xml:41990
-msgid "IfcPile"
-msgstr "IfcPile"
+msgid "IfcBoundaryFaceCondition_TranslationalStiffnessByAreaZ_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
 
-msgid "IfcPile_DEFINITION"
-msgstr "A pile is a slender timber, concrete, or steel structural element, driven, jetted, or otherwise embedded on end in the ground for the purpose of supporting a load. A pile is also characterized as deep foundation, where the loads are transfered to deeper subsurface layers. .extDef NOTE Definition according to ISO 6707 1 slender structural member, substantially underground, intended to transmit force s into loadbearing strata below the surface of the ground. NOTE Shallow foundations, which transfer the loads to the ground near its surface, are represented by [[IfcFooting]] . HISTORY New entity in IFC2x2."
+#:IFC.xml:43255
+msgid "IfcBoundaryNodeCondition"
+msgstr "Зависимость границы"
 
-#:IFC.xml:41991
-msgid "IfcPile_ConstructionType"
-msgstr "Тип конструкции"
+msgid "IfcBoundaryNodeCondition_DEFINITION"
+msgstr "Describes linearly elastic support conditions or connection conditions. Applicability Point supports and connections. HISTORY New entity in IFC2x2. IFC 2x4 change Attributes LinearStiffnessX Y Z renamed to TranslationalStiffnessX Y Z . .change ifc2x4 IFC4 CHANGE All attribute data types changed from numeric to SELECT between Boolean and numeric. Stiffnesses may now also be negative, for example to capture destabilizing effects in boundary conditions. The IFC2x3 convention of 1. representing infinite stiffness is no longer valid and must not be used. Infinite stiffness, i.e. fixed supports, are now modeled by the Boolean value TRUE."
 
-msgid "IfcPile_ConstructionType_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Material profile association capability by means of [[IfcRelAssociatesMaterial]] has been added. The attribute ConstructionType should not be used whenever its information can be provided by a material profile set, either associated with the [[IfcPile]] object or, if present, with a corresponding instance of [[IfcPileType]] ."
+#:IFC.xml:43256
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX"
+msgstr "Поворот наследственности X"
 
-#:IFC.xml:41996
-msgid "IfcPile_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessX_DEFINITION"
+msgstr "Значение точности вращения по отношению к оси x системы координат, определенной экземпляром, который использует объект ресурса."
 
-msgid "IfcPile_PredefinedType_DEFINITION"
-msgstr "The predefined generic type of the pile according to function. .change ifc2x4 IFC4 CHANGE Attribute made optional. Type information can be provided by [[IfcRelDefinesByType]] and [[IfcPileType]] ."
+#:IFC.xml:43261
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY"
+msgstr "RotationalStiffnessY"
 
-#:IFC.xml:42003
-msgid "IfcPileConstructionEnum"
-msgstr "IfcPileConstructionEnum"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessY_DEFINITION"
+msgstr "Значение точности вращения по оси y системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcPileConstructionEnum_DEFINITION"
-msgstr "Enumeration defining the construction type for piles. The type is mainly based on how the piles are used and manufactured. Some material information is mixed in because this affects the way the piles are used. HISTORY New type in IFC2x2. Items CAST IN PLACE Piles and piers that are excavated and poured in place. COMPOSITE iles that are a mix of components, such as a steel outer casing which is driven into the ground with a cast in place concrete core. PRECAST CONCRETE Piles that are entirely of precast concrete possibly with some steel or other fixtures . PREFAB USERDEFINED NOTDEFINED The type of pile construction is not defined."
+#:IFC.xml:43266
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ"
+msgstr "RotationalStiffnessZ"
 
-#:IFC.xml:42004
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE"
-msgstr "СОЗДАТЬ В МЕСТЕ"
+msgid "IfcBoundaryNodeCondition_RotationalStiffnessZ_DEFINITION"
+msgstr "Значение точности вращения по отношению к оси z системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcPileConstructionEnum_CAST_IN_PLACE_DEFINITION"
-msgstr "Пилы и пироги, которые раскопаны и засыпаны на месте."
+#:IFC.xml:43271
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX"
+msgstr "TranslationalStiffnessX"
 
-#:IFC.xml:42005
-msgid "IfcPileConstructionEnum_COMPOSITE"
-msgstr "СОСТАВИТЬ"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessX_DEFINITION"
+msgstr "Значение прозрачности перевода в x направлении системы координат, определяемой экземпляром, который использует объект ресурса."
 
-msgid "IfcPileConstructionEnum_COMPOSITE_DEFINITION"
-msgstr "ils, которые представляют собой смесь компонентов, такие как стальной наружный корпус, который втягивается в землю с литой на месте бетонного стержня."
+#:IFC.xml:43276
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY"
+msgstr "TranslationalStiffnessY"
 
-#:IFC.xml:42006
-msgid "IfcPileConstructionEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessY_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении системы координат определяется экземпляром, который использует объект ресурса."
 
-msgid "IfcPileConstructionEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип конструкции кучи не определен."
+#:IFC.xml:43281
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ"
+msgstr "TranslationalStiffnessZ"
 
-#:IFC.xml:42007
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE"
-msgstr "ПОДКРЕТНЫЙ ПРОЦЕСС"
+msgid "IfcBoundaryNodeCondition_TranslationalStiffnessZ_DEFINITION"
+msgstr "Значение прозрачности перевода в направлении координатной системы, определенной экземпляром, который использует объект ресурса."
 
-msgid "IfcPileConstructionEnum_PRECAST_CONCRETE_DEFINITION"
-msgstr "Пилоты, полностью из бетона из бетона возможно с некоторыми стальными или другими элементами ."
+#:IFC.xml:43288
+msgid "IfcBoundaryNodeConditionWarping"
+msgstr "Размыкание границыNodeWarping"
 
-#:IFC.xml:42008
-msgid "IfcPileConstructionEnum_PREFAB_STEEL"
-msgstr "ПРЕФАБ СТАЛЬ"
+msgid "IfcBoundaryNodeConditionWarping_DEFINITION"
+msgstr "Describes linearly elastic support conditions or connection conditions, including linearly elastic warping restraints. Applicability Point supports and connections. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE All attribute data types changed from numeric to SELECT between Boolean and numeric. Stiffnesses may now also be negative, for example to capture destabilizing effects in boundary conditions. The IFC2x3 convention of 1. representing infinite stiffness is no longer valid and must not be used. Infinite stiffness, i.e. fixed supports, are now modeled by the Boolean value TRUE."
 
-msgid "IfcPileConstructionEnum_PREFAB_STEEL_DEFINITION"
-msgstr "ПРЕФАБ СТАЛЬ"
+#:IFC.xml:43289
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness"
+msgstr "Тяжелость"
 
-#:IFC.xml:42009
-msgid "IfcPileConstructionEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcBoundaryNodeConditionWarping_WarpingStiffness_DEFINITION"
+msgstr "Определяет значение жесткости предупреждения."
 
-msgid "IfcPileConstructionEnum_USERDEFINED_DEFINITION"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:43296
+msgid "IfcFailureConnectionCondition"
+msgstr "Условие подключения к серверу"
 
-#:IFC.xml:42011
-msgid "IfcPileType"
-msgstr "Тип IfcPileType"
+msgid "IfcFailureConnectionCondition_DEFINITION"
+msgstr "Defines forces at which a support or connection fails. Applicability Point supports and connections. HISTORY New entity in IFC2x2."
 
-msgid "IfcPileType_DEFINITION"
-msgstr "The building element type [[IfcPileType]] defines commonly shared information for occurrences of piles. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a pile type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcPileType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcPileType]] are represented by instances of [[IfcPile]] . Refer to the documentation at [[IfcPile]] for supported property sets, materials, and composition. HISTORY New entity in IFC4."
+#:IFC.xml:43297
+msgid "IfcFailureConnectionCondition_CompressionFailureX"
+msgstr "Сжатие Неисправности"
 
-#:IFC.xml:42012
-msgid "IfcPileType_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcFailureConnectionCondition_CompressionFailureX_DEFINITION"
+msgstr "Сила сжатия в направлении x, приводящая к сбою соединения."
 
-msgid "IfcPileType_PredefinedType_DEFINITION"
-msgstr "Подтип кучи."
+#:IFC.xml:43302
+msgid "IfcFailureConnectionCondition_CompressionFailureY"
+msgstr "Сбой сжатия"
 
-#:IFC.xml:42019
-msgid "IfcPileTypeEnum"
-msgstr "IfcPileTypeEnum"
+msgid "IfcFailureConnectionCondition_CompressionFailureY_DEFINITION"
+msgstr "Сила сжатия в направлении y приводит к отказу соединения."
 
-msgid "IfcPileTypeEnum_DEFINITION"
-msgstr "Enumeration defining the pile type. HISTORY New type in IFC2x2 .change ifc2x4 IFC 2x4 CHANGE Items BORED, DRIVEN, JETGROUTING added. Items BORED A bore pile. DRIVEN A rammed, vibrated, or otherwise driven pile. JETGROUTING An injected pile like construction. COHESION A cohesion pile. FRICTION A friction pile. SUPPORT A support pile. USERDEFINED NOTDEFINED The type of pile function is not defined."
+#:IFC.xml:43307
+msgid "IfcFailureConnectionCondition_CompressionFailureZ"
+msgstr "CompressionFailureZ"
 
-#:IFC.xml:42037
-msgid "IfcPileTypeEnum_BORED"
-msgstr "БОЛЬШЕ"
+msgid "IfcFailureConnectionCondition_CompressionFailureZ_DEFINITION"
+msgstr "Сила сжатия в направлении z приводит к сбою соединения."
 
-msgid "IfcPileTypeEnum_BORED_DEFINITION"
-msgstr "Боковая куча."
+#:IFC.xml:43312
+msgid "IfcFailureConnectionCondition_TensionFailureX"
+msgstr "Сбой напряжения"
 
-#:IFC.xml:42038
-msgid "IfcPileTypeEnum_COHESION"
-msgstr "КОХЕСОН"
+msgid "IfcFailureConnectionCondition_TensionFailureX_DEFINITION"
+msgstr "Сила растяжения в направлении x, приводящая к отказу соединения."
 
-msgid "IfcPileTypeEnum_COHESION_DEFINITION"
-msgstr "Кусочек сплошности."
+#:IFC.xml:43317
+msgid "IfcFailureConnectionCondition_TensionFailureY"
+msgstr "Сбой напряжения"
 
-#:IFC.xml:42039
-msgid "IfcPileTypeEnum_DRIVEN"
-msgstr "ВОДИТЬ"
+msgid "IfcFailureConnectionCondition_TensionFailureY_DEFINITION"
+msgstr "Усиление силы в направлении y приводит к отказу соединения."
 
-msgid "IfcPileTypeEnum_DRIVEN_DEFINITION"
-msgstr "Измельченная, вибрационная или иным образом управляемая кучами."
+#:IFC.xml:43322
+msgid "IfcFailureConnectionCondition_TensionFailureZ"
+msgstr "TensionFailureZ"
 
-#:IFC.xml:42040
-msgid "IfcPileTypeEnum_FRICTION"
-msgstr "ФРИКЦИЯ"
+msgid "IfcFailureConnectionCondition_TensionFailureZ_DEFINITION"
+msgstr "Сила растяжения в направлении z приводит к отказу соединения."
 
-msgid "IfcPileTypeEnum_FRICTION_DEFINITION"
-msgstr "Грядка с трением."
+#:IFC.xml:43329
+msgid "IfcModulusOfRotationalSubgradeReactionSelect"
+msgstr "IfcModulusOfRotationalSubgradeReactionSelect"
 
-#:IFC.xml:42041
-msgid "IfcPileTypeEnum_JETGROUTING"
-msgstr "JETGROUTING"
+#:IFC.xml:43330
+msgid "IfcModulusOfSubgradeReactionSelect"
+msgstr "IfcModulusOfSubgradeReactionSelect"
 
-msgid "IfcPileTypeEnum_JETGROUTING_DEFINITION"
-msgstr "Впрыскивание кучи, как конструкция."
+#:IFC.xml:43331
+msgid "IfcModulusOfTranslationalSubgradeReactionSelect"
+msgstr "Выбор субверсии IfcModulusOfTranslationalSubgradeReactionSelect"
 
-#:IFC.xml:42042
-msgid "IfcPileTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+#:IFC.xml:43332
+msgid "IfcRotationalStiffnessSelect"
+msgstr "Поворот ифка"
 
-msgid "IfcPileTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип функции кучи не определен."
+#:IFC.xml:43333
+msgid "IfcSlippageConnectionCondition"
+msgstr "IfcSlippageConnectionCondition"
 
-#:IFC.xml:42043
-msgid "IfcPileTypeEnum_SUPPORT"
-msgstr "ПОДДЕРЖКА"
+msgid "IfcSlippageConnectionCondition_DEFINITION"
+msgstr "Describes slippage in support conditions or connection conditions. Slippage means that a relative displacement may occur in a support or connection before support or connection reactions are awoken. Applicability Point supports and connections, curve supports and connections, surface supports and connections. HISTORY New entity in IFC2x2."
 
-msgid "IfcPileTypeEnum_SUPPORT_DEFINITION"
-msgstr "Поддержка кучи."
+#:IFC.xml:43334
+msgid "IfcSlippageConnectionCondition_SlippageX"
+msgstr "SlippageX"
 
-#:IFC.xml:42044
-msgid "IfcPileTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcSlippageConnectionCondition_SlippageX_DEFINITION"
+msgstr "Проскальзывание в x направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
 
-msgid "IfcPileTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+#:IFC.xml:43339
+msgid "IfcSlippageConnectionCondition_SlippageY"
+msgstr "SlippageY"
 
-#:IFC.xml:42045
-msgid "IfcReinforcementDefinitionProperties"
-msgstr "Свойства IfcReinforcementDefinitionName"
+msgid "IfcSlippageConnectionCondition_SlippageY_DEFINITION"
+msgstr "Проскальзывание по y в направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
 
-msgid "IfcReinforcementDefinitionProperties_DEFINITION"
-msgstr "[[IfcReinforcementDefinitionProperties]] defines the cross section properties of reinforcement included in reinforced concrete building elements. The property set definition may be used both in conjunction with insitu and precast structures. This subtype of [[IfcPropertySetDefinition]] is used to define the reinforcement properties in early design stages, such as in requirement definition or scheme design. In later design stages explicit instances of subtypes of [[IfcReinforcingElement]] are used. The intended usage may be indicated using the DefinitionType attribute value as a designator recommended values are Reinforcement area requirement or Reinforcement configuration requirement . Other values may be used according to local standards. Only one property set definition of this kind is used for each concrete building element in each intended usage indicated by the DefinitionType attribute value. This set then defines a list of cross section properties in a discrete number of longitudinal sections as instances of [[IfcSectionReinforcementProperties]] one for each structural reinforcement bar role , which in turn have a section cross section property defined as a profile and a number of reinforcement properties, one for each steel grade bar type. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Supertype changed from [[IfcPropertySetDefinition]] to [[IfcPreDefinedPropertySet]]"
+#:IFC.xml:43344
+msgid "IfcSlippageConnectionCondition_SlippageZ"
+msgstr "SlippageZ"
 
-#:IFC.xml:30652
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions"
-msgstr "ПодкрепленияОпределенияРазделов"
+msgid "IfcSlippageConnectionCondition_SlippageZ_DEFINITION"
+msgstr "Проскальзывание по оси z в направлении системы координат, определенной экземпляром, который использует этот объект ресурса."
 
-msgid "IfcReinforcementDefinitionProperties_ReinforcementSectionDefinitions_DEFINITION"
-msgstr "Список усиленных свойств секции, прикрепленных к усилению определения свойств."
+#:IFC.xml:43351
+msgid "IfcStructuralConnectionCondition"
+msgstr "Условие IfcStructuralConnect"
 
-#:IFC.xml:42046
-msgid "IfcReinforcementDefinitionProperties_DefinitionType"
-msgstr "Тип определения"
+msgid "IfcStructuralConnectionCondition_DEFINITION"
+msgstr "Describe more rarely needed connection properties. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcementDefinitionProperties_DefinitionType_DEFINITION"
-msgstr "Описание типа применяется к усилению свойств определения."
+#:IFC.xml:43352
+msgid "IfcStructuralConnectionCondition_Name"
+msgstr "Наименование"
 
-#:IFC.xml:42053
-msgid "IfcReinforcingBar"
-msgstr "Подкрепление"
+msgid "IfcStructuralConnectionCondition_Name_DEFINITION"
+msgstr "При необходимости определяет имя для этого условия подключения."
 
-msgid "IfcReinforcingBar_DEFINITION"
-msgstr "A reinforcing bar is usually made of steel with manufactured deformations in the surface, and used in concrete and masonry construction to provide additional strength. A single instance of this class may represent one or many of actual rebars, for example a row of rebars. HISTORY New entity in IFC2x2 .change ifc2x4 IFC 2x4 CHANGE All attributes are optional now. Several attributes are deprecated their information now provided by [[IfcReinforcingBarType]] . Attribute BarRole renamed to PredefinedType . .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds an [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] ."
+#:IFC.xml:43358
+msgid "IfcStructuralLoad"
+msgstr "IfcStructuralLoad"
 
-#:IFC.xml:42054
-msgid "IfcReinforcingBar_BarLength"
-msgstr "Длина барла"
+msgid "IfcStructuralLoad_DEFINITION"
+msgstr "This abstract entity is the supertype of all loads actions or reactions or of certain requirements resulting from structural analysis, or certain provisions which influence structural analysis. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingBar_BarLength_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute deprecated. Use respective attribute at [[IfcReinforcingBarType]] instead."
+#:IFC.xml:43359
+msgid "IfcStructuralLoad_Name"
+msgstr "Наименование"
 
-#:IFC.xml:42059
-msgid "IfcReinforcingBar_BarSurface"
-msgstr "Барная поверхность"
+msgid "IfcStructuralLoad_Name_DEFINITION"
+msgstr "При необходимости определяет имя для этой нагрузки."
 
-msgid "IfcReinforcingBar_BarSurface_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingBarType]] instead."
+#:IFC.xml:43365
+msgid "IfcStructuralLoadConfiguration"
+msgstr "Настройка нагрузки IfcStructuralLoadConfiguration"
 
-#:IFC.xml:42064
-msgid "IfcReinforcingBar_CrossSectionArea"
-msgstr "Кросссечение"
+msgid "IfcStructuralLoadConfiguration_DEFINITION"
+msgstr "This class combines one or more load or result values in a 1 or 2 dimensional configuration. HISTORY New entity in IFC4. .spec head Informal Propositions 1. All items in Values shall be of the same type. 2. If the loads or results comprise a curve activity, 1 dimensional locations shall be given, measured locally along the curve. The location shall not exceed the bounds of the curve actvity. The load samples and corresponding locations shall be given in ascending order of locations. 3. If the loads or results comprise a surface activity, 2 dimensional locations shall be given, measured in the surface activity s local x and y directions. The location shall not exceed the bounds of the surface activity. NOTE There are no ordering requirements in the 2 dimensional case, but the 1 dimensional case shall be spatially ordered for simplicity."
 
-msgid "IfcReinforcingBar_CrossSectionArea_DEFINITION"
-msgstr "The effective cross section area of the reinforcing bar or group of bars. .change ifc2x4 IFC4 CHANGE Attribute made optional."
+#:IFC.xml:43373
+msgid "IfcStructuralLoadConfiguration_Values"
+msgstr "Значения"
 
-#:IFC.xml:42069
-msgid "IfcReinforcingBar_NominalDiameter"
-msgstr "NominalDiameter"
+msgid "IfcStructuralLoadConfiguration_Values_DEFINITION"
+msgstr "Список значений нагрузки или результатов."
 
-msgid "IfcReinforcingBar_NominalDiameter_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingBarType]] instead."
+#:IFC.xml:43366
+msgid "IfcStructuralLoadConfiguration_Locations"
+msgstr "Места"
 
-#:IFC.xml:42074
-msgid "IfcReinforcingBar_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcStructuralLoadConfiguration_Locations_DEFINITION"
+msgstr "Расположение нагрузочных образцов или результирующих образцов в рамках локальной системы координат, определенной экземпляром, использующим данный объект ресурса. Каждый элемент в списке локаций относится к элементу списка значений по одному и тому же индексу списка. Этот атрибут является необязательным для конфигураций, в которых местоположение неявно известно из определений более высокого уровня."
 
-msgid "IfcReinforcingBar_PredefinedType_DEFINITION"
-msgstr "The role, purpose or usage of the bar, i.e. the kind of loads and stresses it is intended to carry. .change ifc2x4 IFC4 CHANGE Attribute renamed from BarRole to PredefinedType and made optional. Type changed from [[IfcReinforcingBarRoleEnum]] without changes to the range of enumeration items."
+#:IFC.xml:43385
+msgid "IfcStructuralLoadLinearForce"
+msgstr "IfcStructuralLoadLinearForce"
 
-#:IFC.xml:42101
-msgid "IfcReinforcingBarType"
-msgstr "Тип Подкрепления"
+msgid "IfcStructuralLoadLinearForce_DEFINITION"
+msgstr "An instance of the entity [[IfcStructuralLoadLinearForce]] shall be used to define actions on curves. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingBarType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingBarType]] defines commonly shared information for occurrences of reinforcing bars. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing bar type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingBarType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingBarType]] are represented by instances of [[IfcReinforcingBar]] . HISTORY New entity in IFC4."
+#:IFC.xml:43386
+msgid "IfcStructuralLoadLinearForce_LinearForceX"
+msgstr "LinearForceX"
 
-#:IFC.xml:42102
-msgid "IfcReinforcingBarType_BarLength"
-msgstr "Длина барла"
+msgid "IfcStructuralLoadLinearForce_LinearForceX_DEFINITION"
+msgstr "Линейное значение силы в направлении x."
 
-msgid "IfcReinforcingBarType_BarLength_DEFINITION"
-msgstr "Общая длина бара подкрепления. Общая длина изгибов рассчитывается в соответствии с местными стандартами с корректировками изгиба."
+#:IFC.xml:43391
+msgid "IfcStructuralLoadLinearForce_LinearForceY"
+msgstr "LinearForceY"
 
-#:IFC.xml:42107
-msgid "IfcReinforcingBarType_BarSurface"
-msgstr "Барная поверхность"
+msgid "IfcStructuralLoadLinearForce_LinearForceY_DEFINITION"
+msgstr "Линейное значение силы в направлении y ."
 
-msgid "IfcReinforcingBarType_BarSurface_DEFINITION"
-msgstr "Индикатор того, является ли поверхность шины прозрачной или текстурой."
+#:IFC.xml:43396
+msgid "IfcStructuralLoadLinearForce_LinearForceZ"
+msgstr "LinearForceZ"
 
-#:IFC.xml:42112
-msgid "IfcReinforcingBarType_BendingParameters"
-msgstr "Параметры бендинга"
+msgid "IfcStructuralLoadLinearForce_LinearForceZ_DEFINITION"
+msgstr "Линейное значение силы в направлении Z."
 
-msgid "IfcReinforcingBarType_BendingParameters_DEFINITION"
-msgstr "Параметры изгиба фигуры. Их значение определяется по коду фигуры и соответствующему стандарту."
+#:IFC.xml:43401
+msgid "IfcStructuralLoadLinearForce_LinearMomentX"
+msgstr "Линейная МоментаX"
 
-#:IFC.xml:42117
-msgid "IfcReinforcingBarType_BendingShapeCode"
-msgstr "BendingShapeCode"
+msgid "IfcStructuralLoadLinearForce_LinearMomentX_DEFINITION"
+msgstr "Линейный момент вокруг оси x."
 
-msgid "IfcReinforcingBarType_BendingShapeCode_DEFINITION"
-msgstr "Код формы по стандарту типа ACI 315, ISO 3766, или аналогичный стандарт. Предполагается, что на протяжении всего проекта используется единый стандарт для определения гибкости шины и что на данный стандарт ссылается объект [[IfcProject]] через механизм [[IfcDocumentReference]]."
+#:IFC.xml:43406
+msgid "IfcStructuralLoadLinearForce_LinearMomentY"
+msgstr "LinearMomentY"
 
-#:IFC.xml:42122
-msgid "IfcReinforcingBarType_CrossSectionArea"
-msgstr "Кросссечение"
+msgid "IfcStructuralLoadLinearForce_LinearMomentY_DEFINITION"
+msgstr "Линейный момент вокруг оси y."
 
-msgid "IfcReinforcingBarType_CrossSectionArea_DEFINITION"
-msgstr "Область эффективного перекрестного сечения арматуры."
+#:IFC.xml:43411
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ"
+msgstr "LinearMomentZ"
 
-#:IFC.xml:42127
-msgid "IfcReinforcingBarType_NominalDiameter"
-msgstr "NominalDiameter"
+msgid "IfcStructuralLoadLinearForce_LinearMomentZ_DEFINITION"
+msgstr "Линейный момент вокруг оси z."
 
-msgid "IfcReinforcingBarType_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, определяющий размер поперечного сечения арматуры."
+#:IFC.xml:43418
+msgid "IfcStructuralLoadOrResult"
+msgstr "IfcStructuralLoadOrResult"
 
-#:IFC.xml:42132
-msgid "IfcReinforcingBarType_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcStructuralLoadOrResult_DEFINITION"
+msgstr "Abstract superclass of simple load or result classes. HISTORY New abstract entity in IFC4, upwards compatibility of all subtypes is preserved."
 
-msgid "IfcReinforcingBarType_PredefinedType_DEFINITION"
-msgstr "Подтип арматуры"
+#:IFC.xml:43421
+msgid "IfcStructuralLoadPlanarForce"
+msgstr "IfcStructuralLoadPlanarForce"
 
-#:IFC.xml:42139
-msgid "IfcReinforcingBarTypeEnum"
-msgstr "IfcReinforcingBarTypeEnum"
+msgid "IfcStructuralLoadPlanarForce_DEFINITION"
+msgstr "An instance of the entity [[IfcStructuralLoadPlanarForce]] shall be used to define actions on faces. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingBarTypeEnum_DEFINITION"
-msgstr "Enumeration defining standard types for the role, purpose or usage of the bar, i.e. the kind of loads and stresses they are intended to carry. HISTORY New type in IFC2x2 .change ifc2x4 IFC4 CHANGE Item ANCHORING added. Enumeration renamed in IFC4 from [[IfcReinforcingBarRoleEnum]] without changes to the range of enumeration items. Items ANCHORING Anchoring reinforcement. EDGE LIGATURE MAIN The reinforcing bar is a main bar. PUNCHING Punching reinforcement. RING SHEAR The reinforcing bar is a shear bar. STUD The reinforcing bar is a stud. SPACEBAR A stirrup in pre stressing system to position TendonConduit. USERDEFINED The type of reinforcement is user defined. NOTDEFINED The type of reinforcement is not defined."
+#:IFC.xml:43422
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX"
+msgstr "PlanarForceX"
 
-#:IFC.xml:42163
-msgid "IfcReinforcingBarTypeEnum_ANCHORING"
-msgstr "ИЗМЕНИТЬ"
+msgid "IfcStructuralLoadPlanarForce_PlanarForceX_DEFINITION"
+msgstr "Значение силы планарного усилия в направлении x."
 
-msgid "IfcReinforcingBarTypeEnum_ANCHORING_DEFINITION"
-msgstr "Якорное подкрепление."
+#:IFC.xml:43427
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY"
+msgstr "PlanarForceY"
 
-#:IFC.xml:42164
-msgid "IfcReinforcingBarTypeEnum_EDGE"
-msgstr "Эдж"
+msgid "IfcStructuralLoadPlanarForce_PlanarForceY_DEFINITION"
+msgstr "Значение силы планеры в направлении оси y."
 
-msgid "IfcReinforcingBarTypeEnum_EDGE_DEFINITION"
-msgstr "Эдж"
+#:IFC.xml:43432
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ"
+msgstr "PlanarForceZ"
 
-#:IFC.xml:42165
-msgid "IfcReinforcingBarTypeEnum_LIGATURE"
-msgstr "ЛИГАТ"
+msgid "IfcStructuralLoadPlanarForce_PlanarForceZ_DEFINITION"
+msgstr "Значение силы планера в направлении z ."
 
-msgid "IfcReinforcingBarTypeEnum_LIGATURE_DEFINITION"
-msgstr "ЛИГАТ"
+#:IFC.xml:43439
+msgid "IfcStructuralLoadSingleDisplacement"
+msgstr "IfcStructuralLoadSingleDisplacement"
 
-#:IFC.xml:42166
-msgid "IfcReinforcingBarTypeEnum_MAIN"
-msgstr "МАРКА"
+msgid "IfcStructuralLoadSingleDisplacement_DEFINITION"
+msgstr "Instances of the entity [[IfcStructuralLoadSingleDisplacement]] shall be used to define displacements. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingBarTypeEnum_MAIN_DEFINITION"
-msgstr "Шкала арматуры - это главный столб."
+#:IFC.xml:43440
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX"
+msgstr "DisplacementX"
 
-#:IFC.xml:42167
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementX_DEFINITION"
+msgstr "Перемещение в направлении оси x."
 
-msgid "IfcReinforcingBarTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип подкрепления не определен."
+#:IFC.xml:43445
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY"
+msgstr "Перемещение Y"
 
-#:IFC.xml:42168
-msgid "IfcReinforcingBarTypeEnum_PUNCHING"
-msgstr "ЗАЩИТА"
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementY_DEFINITION"
+msgstr "Перемещение в направлении оси y."
 
-msgid "IfcReinforcingBarTypeEnum_PUNCHING_DEFINITION"
-msgstr "Брошенное подкрепление."
+#:IFC.xml:43450
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ"
+msgstr "Размещение Z"
 
-#:IFC.xml:42169
-msgid "IfcReinforcingBarTypeEnum_RING"
-msgstr "Кольцо"
+msgid "IfcStructuralLoadSingleDisplacement_DisplacementZ_DEFINITION"
+msgstr "Перемещение в направлении Z."
 
-msgid "IfcReinforcingBarTypeEnum_RING_DEFINITION"
-msgstr "Кольцо"
+#:IFC.xml:43455
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX"
+msgstr "RotationalDisplacementRX"
 
-#:IFC.xml:42170
-msgid "IfcReinforcingBarTypeEnum_SHEAR"
-msgstr "ТЫЛЬ"
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRX_DEFINITION"
+msgstr "Поворот вокруг оси x."
 
-msgid "IfcReinforcingBarTypeEnum_SHEAR_DEFINITION"
-msgstr "Шкала арматуры - это отрезок."
+#:IFC.xml:43460
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY"
+msgstr "Поворот перемещений"
 
-#:IFC.xml:42171
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR"
-msgstr "СПАСИБО"
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRY_DEFINITION"
+msgstr "Поворот вокруг оси y."
 
-msgid "IfcReinforcingBarTypeEnum_SPACEBAR_DEFINITION"
-msgstr "Усиление в системе пре-стресса для позиционирования TendonConduit."
+#:IFC.xml:43465
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ"
+msgstr "RotationalDisplacementRZ"
 
-#:IFC.xml:42172
-msgid "IfcReinforcingBarTypeEnum_STUD"
-msgstr "STUD"
+msgid "IfcStructuralLoadSingleDisplacement_RotationalDisplacementRZ_DEFINITION"
+msgstr "Поворот вокруг оси z."
 
-msgid "IfcReinforcingBarTypeEnum_STUD_DEFINITION"
-msgstr "Шкала арматуры – это шарм."
+#:IFC.xml:43472
+msgid "IfcStructuralLoadSingleDisplacementDistortion"
+msgstr "IfcStructuralLoadSingleDisplacementDistortion"
 
-#:IFC.xml:42173
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
+msgid "IfcStructuralLoadSingleDisplacementDistortion_DEFINITION"
+msgstr "Defines a displacement with warping. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingBarTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип подкрепления определен пользователем."
+#:IFC.xml:43473
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion"
+msgstr "Искажение"
 
-#:IFC.xml:42174
-msgid "IfcReinforcingElement"
-msgstr "Элемент Подкрепление"
+msgid "IfcStructuralLoadSingleDisplacementDistortion_Distortion_DEFINITION"
+msgstr "Искривление деформации, то есть деплантация перекрестного сечения при смещающей нагрузке."
 
-msgid "IfcReinforcingElement_DEFINITION"
-msgstr "A reinforcing element represents bars, wires, strands, meshes, tendons, and other components embedded in concrete in such a manner that the reinforcement and the concrete act together in resisting forces. .extDef NOTE Definition according to ISO 6707 1 rod s , bar s , fabric, fibres, wires and cable s added to give additional strength or support to a material or component. One or several instances of subtypes of [[IfcReinforcingElement]] should always be accompanied by a defining instance of a respective subtype of [[IfcReinforcingElementType]] . The type object holds shape and material information. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE Attribute SteelGrade deprecated."
+#:IFC.xml:43480
+msgid "IfcStructuralLoadSingleForce"
+msgstr "Сингл нагрузки IfcStructuralнагрузки"
 
-#:IFC.xml:42175
-msgid "IfcReinforcingElement_SteelGrade"
-msgstr "Сталеград"
+msgid "IfcStructuralLoadSingleForce_DEFINITION"
+msgstr "Instances of the entity [[IfcStructuralLoadSingleForce]] shall be used to define the forces and moments of an action operating on a single point. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingElement_SteelGrade_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute deprecated. Use material association at [[IfcReinforcingElementType]] instead."
+#:IFC.xml:43481
+msgid "IfcStructuralLoadSingleForce_ForceX"
+msgstr "СилаX"
 
-#:IFC.xml:42182
-msgid "IfcReinforcingElementType"
-msgstr "IfcReinforcingElementType"
+msgid "IfcStructuralLoadSingleForce_ForceX_DEFINITION"
+msgstr "Принудительное значение по оси x."
 
-msgid "IfcReinforcingElementType_DEFINITION"
-msgstr "The element component type [[IfcReinforcingElementType]] defines commonly shared information for occurrences of reinforcing elements. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing element type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingElementType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingElementType]] are represented by instances of [[IfcReinforcingElement]] . HISTORY New entity in IFC2x2. .use head Material Use Definition An associated material denotes the steel grade, preferrably using material classification."
+#:IFC.xml:43486
+msgid "IfcStructuralLoadSingleForce_ForceY"
+msgstr "Сила"
 
-#:IFC.xml:42185
-msgid "IfcReinforcingMesh"
-msgstr "IfcReinforcingMesh"
+msgid "IfcStructuralLoadSingleForce_ForceY_DEFINITION"
+msgstr "Значение силы в направлении y."
 
-msgid "IfcReinforcingMesh_DEFINITION"
-msgstr "A reinforcing mesh is a series of longitudinal and transverse wires or bars of various gauges, arranged at right angles to each other and welded at all points of intersection usually used for concrete slab reinforcement. It is also known as welded wire fabric. In scope are plane meshes as well as bent meshes. HISTORY New entity in IFC2x2 .change ifc2x4 IFC4 CHANGE All attributes are optional now. Several attributes are deprecated their information is now provided by [[IfcReinforcingMeshType]] . Attribute PredefinedType added. .use head Geometry Use Definition Placement and representation are defined at the supertype [[IfcElementComponent]] . The representation map of a mapped Outline representation should contain a representation of type Curve3D which holds an [[IfcPolyline]] . The representation map of a mapped Body representation should contain a representation of type AdvancedSweptSolid which holds multiple [[IfcSweptDiskSolid]] including subtype [[IfcSweptDiskSolidPolygonal]] ."
+#:IFC.xml:43491
+msgid "IfcStructuralLoadSingleForce_ForceZ"
+msgstr "ForceZ"
 
-#:IFC.xml:42186
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea"
-msgstr "Промежуточная зона"
+msgid "IfcStructuralLoadSingleForce_ForceZ_DEFINITION"
+msgstr "Принудительное значение по z направлению."
 
-msgid "IfcReinforcingMesh_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43496
+msgid "IfcStructuralLoadSingleForce_MomentX"
+msgstr "МоментX"
 
-#:IFC.xml:42191
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
+msgid "IfcStructuralLoadSingleForce_MomentX_DEFINITION"
+msgstr "Момент вокруг оси x."
 
-msgid "IfcReinforcingMesh_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43501
+msgid "IfcStructuralLoadSingleForce_MomentY"
+msgstr "MomentY"
 
-#:IFC.xml:42196
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing"
-msgstr "Продольное пространство"
+msgid "IfcStructuralLoadSingleForce_MomentY_DEFINITION"
+msgstr "Момент относительно оси y."
 
-msgid "IfcReinforcingMesh_LongitudinalBarSpacing_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43506
+msgid "IfcStructuralLoadSingleForce_MomentZ"
+msgstr "MomentZ"
 
-#:IFC.xml:42201
-msgid "IfcReinforcingMesh_MeshLength"
-msgstr "Длина сетки"
+msgid "IfcStructuralLoadSingleForce_MomentZ_DEFINITION"
+msgstr "Момент относительно оси z."
 
-msgid "IfcReinforcingMesh_MeshLength_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43513
+msgid "IfcStructuralLoadSingleForceWarping"
+msgstr "IfcStructuralLoadSingleForceWarping"
 
-#:IFC.xml:42206
-msgid "IfcReinforcingMesh_MeshWidth"
-msgstr "Ширина сетки"
+msgid "IfcStructuralLoadSingleForceWarping_DEFINITION"
+msgstr "Instances of the entity [[IfcStructuralLoadSingleForceWarping]] , as a subtype of [[IfcStructuralLoadSingleForce]] , shall be used to define an action operation on a single point. In addition to forces and moments defined by its supertype a warping moment can be defined. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingMesh_MeshWidth_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43514
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment"
+msgstr "Модификация Варпенга"
 
-#:IFC.xml:42211
-msgid "IfcReinforcingMesh_PredefinedType"
-msgstr "PredefinedType"
+msgid "IfcStructuralLoadSingleForceWarping_WarpingMoment_DEFINITION"
+msgstr "Двойной момент в точке загрузки."
 
-msgid "IfcReinforcingMesh_PredefinedType_DEFINITION"
-msgstr "Вид сетки."
+#:IFC.xml:43521
+msgid "IfcStructuralLoadStatic"
+msgstr "IfcStructuralLoadStatic"
 
-#:IFC.xml:42216
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
+msgid "IfcStructuralLoadStatic_DEFINITION"
+msgstr "The abstract entity [[IfcStructuralLoadStatic]] is the supertype of all static loads actions or reactions which can be defined. Within scope are single i.e. concentrated forces and moments, linear i.e. one dimensionally distributed forces and moments, planar i.e. two dimensionally distributed forces, furthermore displacements and temperature loads. HISTORY New entity in IFC2x2."
 
-msgid "IfcReinforcingMesh_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43524
+msgid "IfcStructuralLoadTemperature"
+msgstr "Температура нагрузки"
 
-#:IFC.xml:42221
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
+msgid "IfcStructuralLoadTemperature_DEFINITION"
+msgstr "An instance of the entity [[IfcStructuralLoadTemperature]] shall be used to define actions which are caused by a temperature change. As shown in Figure 1, the change of temperature is given with a constant value which is applied to the complete section and values for temperature differences between outer fibres of the section. HISTORY New entity in IFC2x2. Structural load temperature .. .. .. .. figures structuralloadtemperature.gif Figure 1 Structural load temperature"
 
-msgid "IfcReinforcingMesh_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43525
+msgid "IfcStructuralLoadTemperature_DeltaTConstant"
+msgstr "DeltaTConstant"
 
-#:IFC.xml:42226
-msgid "IfcReinforcingMesh_TransverseBarSpacing"
-msgstr "Промежуток перекосов"
+msgid "IfcStructuralLoadTemperature_DeltaTConstant_DEFINITION"
+msgstr "Temperature change which affects the complete section of the structural member, or the uniform portion of a non uniform temperature change. NOTE A positive value describes an increase in temperature. I.e. a positive constant temperature change causes elongation of a member, or compression in the member if there are respective restraints."
 
-msgid "IfcReinforcingMesh_TransverseBarSpacing_DEFINITION"
-msgstr "Deprecated. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcReinforcingMeshType]] instead."
+#:IFC.xml:43530
+msgid "IfcStructuralLoadTemperature_DeltaTY"
+msgstr "Дельтати"
 
-#:IFC.xml:42233
-msgid "IfcReinforcingMeshType"
-msgstr "ТипИФК Усиления"
+msgid "IfcStructuralLoadTemperature_DeltaTY_DEFINITION"
+msgstr "Non uniform temperature change, specified as the difference of the temperature change at the outer fibre of the positive y direction minus the temperature change at the outer fibre of the negative y direction of the analysis member. NOTE A positive non uniform temperature change in y induces a negative curvature of the member about z, or a positive bending moment about z if there are respective restraints. y and z are local member axes."
 
-msgid "IfcReinforcingMeshType_DEFINITION"
-msgstr "The reinforcing element type [[IfcReinforcingMeshType]] defines commonly shared information for occurrences of reinforcing meshs. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a reinforcing mesh type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcReinforcingMeshType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcReinforcingMeshType]] are represented by instances of [[IfcReinforcingMesh]] . HISTORY New entity in IFC4. .use head Geometry Use Definition The [[IfcReinforcingMeshType]] may define the shared geometric representation for many mesh occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
+#:IFC.xml:43535
+msgid "IfcStructuralLoadTemperature_DeltaTZ"
+msgstr "ДельтаTZ"
 
-#:IFC.xml:42234
-msgid "IfcReinforcingMeshType_BendingParameters"
-msgstr "Параметры бендинга"
+msgid "IfcStructuralLoadTemperature_DeltaTZ_DEFINITION"
+msgstr "Non uniform temperature change, specified as the difference of the temperature change at the outer fibre of the positive z direction minus the temperature change at the outer fibre of the negative z direction of the analysis member. NOTE A positive non uniform temperature change in z induces a positive curvature of the member about y, or a negative bending moment about y if there are respective restraints. y and z are local member axes."
 
-msgid "IfcReinforcingMeshType_BendingParameters_DEFINITION"
-msgstr "Если этот тип сетки является скорее изогнутым, чем плоскостью, то в этом атрибуте задаются параметры изгиба фигуры. Их значение определяется кодом формы изгиба и соответствующим стандартом."
+#:IFC.xml:43542
+msgid "IfcSurfaceReinforcementArea"
+msgstr "IfcSurfaceReinforcementArea"
 
-#:IFC.xml:42239
-msgid "IfcReinforcingMeshType_BendingShapeCode"
-msgstr "BendingShapeCode"
+msgid "IfcSurfaceReinforcementArea_DEFINITION"
+msgstr "Describes required or provided reinforcement area of surface members. NOTE Member design parameters like concrete cover, effective depth, orientation of meshes or rebars two, optionally three directions etc. are not specified in IfcStructuralLoadResource schema. They shall be specified at the level of structural members. HISTORY New entity in IFC4."
 
-msgid "IfcReinforcingMeshType_BendingShapeCode_DEFINITION"
-msgstr "Если этот тип сетки является изогнутым, а не планарным, Этот атрибут содержит код фигуры в стандарте типа ACI 315, ISO 3766, или аналогичный стандарт. Предполагается, что на протяжении всего проекта используется единый стандарт для определения изгиба сетки и что этот стандарт ссылается на него из объекта [[IfcProject]] через механизм [[IfcDocumentReference]]."
+#:IFC.xml:43543
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement"
+msgstr "Подкрепление Ножей"
 
-#:IFC.xml:42244
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea"
-msgstr "Промежуточная зона"
+msgid "IfcSurfaceReinforcementArea_ShearReinforcement_DEFINITION"
+msgstr "Усиление стрижки. Указывается как площадь площади, например, квадратный метр на квадратный метр, то есть единица без."
 
-msgid "IfcReinforcingMeshType_LongitudinalBarCrossSectionArea_DEFINITION"
-msgstr "Эффективная зона поперечного сечения продольных шин сетки."
+#:IFC.xml:43548
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1"
+msgstr "Поверхностное подкрепление1"
 
-#:IFC.xml:42249
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter"
-msgstr "LongitudinalBarNominalDiameter"
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement1_DEFINITION"
+msgstr "Усиление на лицевой стороне члена, расположенного на грани позитивного локального z направления поверхностного члена. Указывается как площадь по длине, e. ) — единица измерения длины арматуры , обозначающая расстояние между двумя и тремя направлениями арматуры."
 
-msgid "IfcReinforcingMeshType_LongitudinalBarNominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр обозначает размер поперечного сечения продольных стержней."
+#:IFC.xml:43553
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2"
+msgstr "Поверхностное подкрепление2"
 
-#:IFC.xml:42254
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing"
-msgstr "Продольное пространство"
+msgid "IfcSurfaceReinforcementArea_SurfaceReinforcement2_DEFINITION"
+msgstr "Усиление на лицевой стороне члена, расположенного в отрицательном локальном направлении Z поверхностного члена. Указывается как площадь по длине, e. ) — единица измерения длины арматуры , обозначающая расстояние между двумя и тремя направлениями арматуры."
 
-msgid "IfcReinforcingMeshType_LongitudinalBarSpacing_DEFINITION"
-msgstr "Промежуток между продольными столбами. Четное распределение шин предполагается, что другие случаи обрабатываются классификацией или наборами свойств."
+#:IFC.xml:43560
+msgid "IfcTranslationalStiffnessSelect"
+msgstr "IfcTranslationalStiffnessSelect"
 
-#:IFC.xml:42259
-msgid "IfcReinforcingMeshType_MeshLength"
-msgstr "Длина сетки"
-
-msgid "IfcReinforcingMeshType_MeshLength_DEFINITION"
-msgstr "Общая длина ячеек измеряется в продольном направлении."
-
-#:IFC.xml:42264
-msgid "IfcReinforcingMeshType_MeshWidth"
-msgstr "Ширина сетки"
-
-msgid "IfcReinforcingMeshType_MeshWidth_DEFINITION"
-msgstr "Общая ширина сетки измеряется в поперечном направлении."
-
-#:IFC.xml:42269
-msgid "IfcReinforcingMeshType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcReinforcingMeshType_PredefinedType_DEFINITION"
-msgstr "Подтип армирующей сетки."
-
-#:IFC.xml:42274
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea"
-msgstr "TransverseBarCrossSectionArea"
-
-msgid "IfcReinforcingMeshType_TransverseBarCrossSectionArea_DEFINITION"
-msgstr "Область эффективного перекрестного сечения поперечных шин сетки."
-
-#:IFC.xml:42279
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter"
-msgstr "TransverseBarNominalDiameter"
-
-msgid "IfcReinforcingMeshType_TransverseBarNominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр обозначает размер поперечного сечения."
-
-#:IFC.xml:42284
-msgid "IfcReinforcingMeshType_TransverseBarSpacing"
-msgstr "Промежуток перекосов"
-
-msgid "IfcReinforcingMeshType_TransverseBarSpacing_DEFINITION"
-msgstr "Расстояние между поперечными столбами. Четное распределение баров предполагается в других случаях обрабатывается классификацией или набором свойств."
-
-#:IFC.xml:42291
-msgid "IfcReinforcingMeshTypeEnum"
-msgstr "IfcReinforcingMeshTypeEnum"
-
-msgid "IfcReinforcingMeshTypeEnum_DEFINITION"
-msgstr "Enumeration defining the reinforcing mesh type. HISTORY New type in IFC4 Items USERDEFINED The type of mesh is user defined. NOTDEFINED The type of mesh is not defined."
-
-#:IFC.xml:42297
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcReinforcingMeshTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сетки не определен."
-
-#:IFC.xml:42298
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcReinforcingMeshTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Тип сетки определен пользователем."
-
-#:IFC.xml:42299
-msgid "IfcSurfaceFeature"
-msgstr "Функция IfcSurfaceFeature"
-
-msgid "IfcSurfaceFeature_DEFINITION"
-msgstr "A surface feature is a modification at onto, or into of the surface of an element. Parts of the surface of the entire surface may be affected. The volume and mass of the element may be increased, remain unchanged, or be decreased by the surface feature, depending on manufacturing technology. However, any increase or decrease of volume is small compared to the total volume of the element. The part whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements element parts and zero or more feature elements. HISTORY New entity in IFC4. Containment Use Definition Surface features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship. The SELF [[IfcElement]].ContainedInStructure relationship shall be NIL. Geometry use definition The geometric representation of IfcSurfaceFeatureElement is given by the [[IfcProductDefinitionShape]] , allowing multiple geometric representation. Local Placement The local placement for IfcSurfaceFeatureElement is defined in its supertype [[IfcProduct]] . It is defined by the [[IfcLocalPlacement]] , which defines the local coordinate system that is referenced by all geometric representations. In case of features which are part of an element type, absolute placement into the type object s implied coordinate system shall be used. In case of features which are voiding an element occurrence, the PlacementRelTo relationship of [[IfcLocalPlacement]] shall point to the local placement of the respective element. Shape representation Different shape representations may be used, depending on the nature of the feature and information requirements Symbolic representation, such as the two dimensional bounding box of a tag. A geometric set representing the geometric items of a mark. Surface representations of treated parts of the lement surface by means of [[IfcShellBasedSurfaceModel]] . The faces within the surface model may be included into a B Rep model within a representation map of the parent element type. Higher level parameters geometric and non geometric may be provided by property sets based on local agreements."
-
-#:IFC.xml:28079
-msgid "IfcSurfaceFeature_AdheresToElement"
-msgstr "Адрес для элемента"
-
-msgid "IfcSurfaceFeature_AdheresToElement_DEFINITION"
-msgstr "Reference to the [[IfcRelAdheresToElement]] relationship that uses this [[IfcSurfaceFeature]] to ahere or treat the surface of the [[IfcRelAdheresToElement]] .RelatingElement."
-
-#:IFC.xml:42300
-msgid "IfcSurfaceFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcSurfaceFeature_PredefinedType_DEFINITION"
-msgstr "Указывает вид поверхности."
-
-#:IFC.xml:42307
-msgid "IfcSurfaceFeatureTypeEnum"
-msgstr "IfcSurfaceFeatureTypeEnum"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFINITION"
-msgstr "This enumeration indicates the type of a surface feature. HISTORY New type in IFC4. Items MARK A point, line, cross, or other mark, applied for example for easier adjustment of elements during assembly. TAG TREATMENT A subtractive surface feature, e.g. grinding, or an additive surface feature, e.g. coating, or an impregnating treatment, or a series of any of these kinds of treatments. DEFECT Detected defect on the surface of an element, such as corroded or eroded area. HATCHMARKING surface markings defined by enclosed 2d shape with defined hatch fillings. LINEMARKING 2D lines painted on pavement surfaces to form boundaries, centrelines and edge markings. PAVEMENTSURFACEMARKING Painted or chemical lines or symbols on the surface of pavements a road or paved area SYMBOLMARKING Surface markings that convey information in the form of symbols and shapes such as arrows, text or pictorial symbols. NONSKIDSURFACING Paint or surfacing to prevent sliding or skidding. RUMBLESTRIP TRANSVERSERUMBLESTRIP Type of rumble strip running across lane s . USERDEFINED A user defined type of surface feature. NOTDEFINED An undefined type of surface feature."
-
-#:IFC.xml:42335
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT"
-msgstr "ОТКЛЮЧИТЬ"
-
-msgid "IfcSurfaceFeatureTypeEnum_DEFECT_DEFINITION"
-msgstr "Обнаружен дефект на поверхности элемента, например, коррозионная или эрозионная."
-
-#:IFC.xml:42336
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING"
-msgstr "ХАТШМАРИНГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_HATCHMARKING_DEFINITION"
-msgstr "маркировка поверхности, определяемая закрытой 2d формой с заданным наполнением штрихов."
-
-#:IFC.xml:42337
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING"
-msgstr "ЛИНИЗАЦИЯ"
-
-msgid "IfcSurfaceFeatureTypeEnum_LINEMARKING_DEFINITION"
-msgstr "Линии 2D, нарисованные на тротуарах, образуют границы, осевые и краевые обозначения."
-
-#:IFC.xml:42338
-msgid "IfcSurfaceFeatureTypeEnum_MARK"
-msgstr "МАРК"
-
-msgid "IfcSurfaceFeatureTypeEnum_MARK_DEFINITION"
-msgstr "Точка, линия, пересечение или другая маркировка, применяемые, например, для облегчения регулировки элементов во время сборки."
-
-#:IFC.xml:42339
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING"
-msgstr "НЕОКРУЖАЮЩЕЕ ПРЕДЛОЖЕНИЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_NONSKIDSURFACING_DEFINITION"
-msgstr "Окраска или наплавка, чтобы предотвратить скольжение или укрытие."
-
-#:IFC.xml:42340
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcSurfaceFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределенный тип свойства поверхности."
-
-#:IFC.xml:42341
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING"
-msgstr "РАСХОДЯЩЕЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_PAVEMENTSURFACEMARKING_DEFINITION"
-msgstr "Закрашенные или химические линии или символы на поверхности тротуаров дорога или укладка"
-
-#:IFC.xml:42342
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP"
-msgstr "RUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_RUMBLESTRIP_DEFINITION"
-msgstr "RUMBLESTRIP"
-
-#:IFC.xml:42343
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING"
-msgstr "СИМБОЛМАРИНГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_SYMBOLMARKING_DEFINITION"
-msgstr "Маркировка поверхности, передающая информацию в виде символов и форм, таких как стрелки, текст или картинные символы."
-
-#:IFC.xml:42344
-msgid "IfcSurfaceFeatureTypeEnum_TAG"
-msgstr "ТЭГ"
-
-msgid "IfcSurfaceFeatureTypeEnum_TAG_DEFINITION"
-msgstr "ТЭГ"
-
-#:IFC.xml:42345
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP"
-msgstr "TRANSVERSERUMBLESTRIP"
-
-msgid "IfcSurfaceFeatureTypeEnum_TRANSVERSERUMBLESTRIP_DEFINITION"
-msgstr "Тип слуховой полосы бегущей полосы s ."
-
-#:IFC.xml:42346
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT"
-msgstr "СОЗДАНИЕ"
-
-msgid "IfcSurfaceFeatureTypeEnum_TREATMENT_DEFINITION"
-msgstr "Субтрактивная поверхность, например шлифовка или добавка поверхности напр. Покрытие или пропитывание или серию таких методов лечения."
-
-#:IFC.xml:42347
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcSurfaceFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип свойства поверхности."
-
-#:IFC.xml:42348
-msgid "IfcTendon"
-msgstr "ИфкТендон"
-
-msgid "IfcTendon_DEFINITION"
-msgstr "A tendon is a steel element such as a wire, cable, bar, rod, or strand used to impart prestress to concrete when the element is tensioned. .extDef NOTE Definition according to ISO 6707 1 steel bar s or groups of bars, strands or wires given a tensile stress that produces a compressive stress in prestressed concrete or masonry. .extDef NOTE To be efficient, the cable follows the deck alignment and moves vertically up on the top of the piers and down in the middle of the span. Therefore the cable axis is defined relatively towards the deck alignment. The ShapeRepresentation should be AdvancedSweptSolid geometry based on SectionedSolidHorizontal description including DistanceExpression, CircleProfileDef and AlignmentCurve, leading to a polyline describing the cable directrix. .extDef NOTE Regarding the Structural Analysis model, the cable has to be transformed into loads applied at each CartesianPoint defining the polyline. HISTORY New entity in IFC2x2. .change ifc2x4 IFC4 CHANGE Attribute PredefinedType made optional. NominalDiameter and CrossSectionArea made optional and deprecated this information can now be provided by [[IfcTendonType]] . Description of FrictionCoefficient corrected."
-
-#:IFC.xml:42349
-msgid "IfcTendon_AnchorageSlip"
-msgstr "Скользящий якорь"
-
-msgid "IfcTendon_AnchorageSlip_DEFINITION"
-msgstr "Деформация якоря или проскальзывания сухожилий при освобождении дактилоскопического устройства."
-
-#:IFC.xml:42354
-msgid "IfcTendon_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "IfcTendon_CrossSectionArea_DEFINITION"
-msgstr "The effective cross section area of the tendon. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcTendonType]] instead."
-
-#:IFC.xml:42359
-msgid "IfcTendon_FrictionCoefficient"
-msgstr "Коэффициент трения"
-
-msgid "IfcTendon_FrictionCoefficient_DEFINITION"
-msgstr "Коэффициент трения между сухожильным и сухожильным листом, в то время как сухожилие отвязывается."
-
-#:IFC.xml:42364
-msgid "IfcTendon_MinCurvatureRadius"
-msgstr "MinCurvatureRadius"
-
-msgid "IfcTendon_MinCurvatureRadius_DEFINITION"
-msgstr "Самый маленький радиус кривизны, рассчитанный на всю эффективную длину сухожилия, где свойства натяжения остаются в силе."
-
-#:IFC.xml:42369
-msgid "IfcTendon_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendon_NominalDiameter_DEFINITION"
-msgstr "The nominal diameter defining the cross section size of the tendon. .change ifc2x4 IFC4 CHANGE Attribute made optional and deprecated. Use respective attribute at [[IfcTendonType]] instead."
-
-#:IFC.xml:42374
-msgid "IfcTendon_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendon_PredefinedType_DEFINITION"
-msgstr "Predefined generic types for a tendon. .change ifc2x4 IFC4 CHANGE Attribute made optional."
-
-#:IFC.xml:42379
-msgid "IfcTendon_PreStress"
-msgstr "Предисловие"
-
-msgid "IfcTendon_PreStress_DEFINITION"
-msgstr "Прилагаемая к сухожилию давление."
-
-#:IFC.xml:42384
-msgid "IfcTendon_TensionForce"
-msgstr "Напряженная Сила"
-
-msgid "IfcTendon_TensionForce_DEFINITION"
-msgstr "2.3.2 Максимально допустимая сила натяжения, которая может применяться к сухожилию."
-
-#:IFC.xml:42391
-msgid "IfcTendonAnchor"
-msgstr "IfcTendonAnchor"
-
-msgid "IfcTendonAnchor_DEFINITION"
-msgstr "A tendon anchor is the end connection for tendons in prestressed or posttensioned concrete. HISTORY New entity in IFC2x2. .history IFC4 CHANGE Attribute PredefinedType added."
-
-#:IFC.xml:42392
-msgid "IfcTendonAnchor_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchor_PredefinedType_DEFINITION"
-msgstr "Вид натяжного якоря."
-
-#:IFC.xml:42399
-msgid "IfcTendonAnchorType"
-msgstr "IfcTendonAnchorType"
-
-msgid "IfcTendonAnchorType_DEFINITION"
-msgstr "The reinforcing element type [[IfcTendonAnchorType]] defines commonly shared information for occurrences of tendon anchors. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a tendon anchor type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcTendonAnchorType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcTendonAnchorType]] are represented by instances of [[IfcTendonAnchor]] . HISTORY New entity in IFC4. .use head Material Use Definition A material or material constituent set may be associated. .use head Geometry Use Definition The [[IfcTendonAnchorType]] may define the shared geometric representation for many tendon anchor occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
-
-#:IFC.xml:42400
-msgid "IfcTendonAnchorType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonAnchorType_PredefinedType_DEFINITION"
-msgstr "Подтип тендерного якоря."
-
-#:IFC.xml:42407
-msgid "IfcTendonAnchorTypeEnum"
-msgstr "IfcTendonAnchorTypeEnum"
-
-msgid "IfcTendonAnchorTypeEnum_DEFINITION"
-msgstr "Enumeration defining the types of tendon anchors. HISTORY New type in IFC4. Items COUPLER FIXED END The anchor fixes the end of a tendon. TENSIONING USERDEFINED The type of tendon anchor is user defined. NOTDEFINED The type of tendon anchor is not defined."
-
-#:IFC.xml:42419
-msgid "IfcTendonAnchorTypeEnum_COUPLER"
-msgstr "КУПЛЕР"
-
-msgid "IfcTendonAnchorTypeEnum_COUPLER_DEFINITION"
-msgstr "КУПЛЕР"
-
-#:IFC.xml:42420
-msgid "IfcTendonAnchorTypeEnum_FIXED_END"
-msgstr "ФИКСИРОВАННАЯ КОНЕЦ"
-
-msgid "IfcTendonAnchorTypeEnum_FIXED_END_DEFINITION"
-msgstr "Якорь фиксирует конец сухожилия."
-
-#:IFC.xml:42421
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonAnchorTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип якоря сухожилия не определен."
-
-#:IFC.xml:42422
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END"
-msgstr "КОНЕЦ ТЕНЗИИ"
-
-msgid "IfcTendonAnchorTypeEnum_TENSIONING_END_DEFINITION"
-msgstr "КОНЕЦ ТЕНЗИИ"
-
-#:IFC.xml:42423
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonAnchorTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определен тип якоря сухожилия."
-
-#:IFC.xml:42424
-msgid "IfcTendonConduit"
-msgstr "IfcTendonConduit"
-
-msgid "IfcTendonConduit_DEFINITION"
-msgstr "TendonConduit представляет собой компоненты системы канализации сухожилий, встроенной в бетонную структуру."
-
-#:IFC.xml:42425
-msgid "IfcTendonConduit_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduit_PredefinedType_DEFINITION"
-msgstr "Определенный общий тип канала сухожилия."
-
-#:IFC.xml:42432
-msgid "IfcTendonConduitType"
-msgstr "Тип IfcTendonConduitType"
-
-#:IFC.xml:42433
-msgid "IfcTendonConduitType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonConduitType_PredefinedType_DEFINITION"
-msgstr "Subtype of tendon conduit."
-
-#:IFC.xml:42440
-msgid "IfcTendonConduitTypeEnum"
-msgstr "IfcTendonConduitTypeEnum"
-
-msgid "IfcTendonConduitTypeEnum_DEFINITION"
-msgstr "A Sleeve or duct is related to the thickness of the conduit depending on the conduit, either cast into the concrete structure or placed adjacent to it. COUPLER A part to connect the conduits located in two different deck segments and related to the same tendon. GROUTING TRUMPET A specific part of conduit which has to be widened when reaching the tendon anchor because the strands are connected individually on the anchor. DIABOLO USERDEFINED NOTDEFINED The type of tendon conduit is not defined. Items DUCT COUPLER GROUTING TRUMPET DIABOLO USERDEFINED NOTDEFINED Items DUCT A Sleeve or duct is related to the thickness of the conduit depending on the conduit, either cast into the concrete structure or placed adjacent to it. COUPLER A part to connect the conduits located in two different deck segments and related to the same tendon. GROUTING TRUMPET A specific part of conduit which has to be widened when reaching the tendon anchor because the strands are connected individually on the anchor. DIABOLO USERDEFINED NOTDEFINED The type of tendon conduit is not defined. Items DUCT A Sleeve or duct is related to the thickness of the conduit depending on the conduit, either cast into the concrete structure or placed adjacent to it. COUPLER A part to connect the conduits located in two different deck segments and related to the same tendon. GROUTING TRUMPET A specific part of conduit which has to be widened when reaching the tendon anchor because the strands are connected individually on the anchor. DIABOLO USERDEFINED NOTDEFINED The type of tendon conduit is not defined."
-
-#:IFC.xml:42456
-msgid "IfcTendonConduitTypeEnum_COUPLER"
-msgstr "КУПЛЕР"
-
-msgid "IfcTendonConduitTypeEnum_COUPLER_DEFINITION"
-msgstr "Часть для соединения проводников, расположенных в двух различных участках палубы и связанных с одной и той же сухожилием."
-
-#:IFC.xml:42457
-msgid "IfcTendonConduitTypeEnum_DIABOLO"
-msgstr "DIABOLO"
-
-msgid "IfcTendonConduitTypeEnum_DIABOLO_DEFINITION"
-msgstr "DIABOLO"
-
-#:IFC.xml:42458
-msgid "IfcTendonConduitTypeEnum_DUCT"
-msgstr "ДУХА"
-
-msgid "IfcTendonConduitTypeEnum_DUCT_DEFINITION"
-msgstr "Спящий или трубопровод связан с толщиной канала в зависимости от канала, либо накладываются на бетонную конструкцию, либо размещаются рядом с ней."
-
-#:IFC.xml:42459
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT"
-msgstr "ГРУППА ПОЛУЧЕНИЯ"
-
-msgid "IfcTendonConduitTypeEnum_GROUTING_DUCT_DEFINITION"
-msgstr "ГРУППА ПОЛУЧЕНИЯ"
-
-#:IFC.xml:42460
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonConduitTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сухожильной трубы не определен."
-
-#:IFC.xml:42461
-msgid "IfcTendonConduitTypeEnum_TRUMPET"
-msgstr "ТРУМПЕТ"
-
-msgid "IfcTendonConduitTypeEnum_TRUMPET_DEFINITION"
-msgstr "Конкретная часть трубопровода, которая должна быть расширена при достижении якоря тензии, поскольку нити соединяются индивидуально на якоре."
-
-#:IFC.xml:42462
-msgid "IfcTendonConduitTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonConduitTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-#:IFC.xml:42463
-msgid "IfcTendonType"
-msgstr "IfcTendonType"
-
-msgid "IfcTendonType_DEFINITION"
-msgstr "The reinforcing element type [[IfcTendonType]] defines commonly shared information for occurrences of tendons. The set of shared information may include common properties with shared property sets common representations common materials common composition of elements It is used to define a tendon type specification indicating the specific product information that is common to all occurrences of that product type. The [[IfcTendonType]] may be declared within [[IfcProject]] or [[IfcProjectLibrary]] using [[IfcRelDeclares]] and may be exchanged with or without occurrences of the type. Occurrences of [[IfcTendonType]] are represented by instances of [[IfcTendon]] . HISTORY New entity in IFC4. .use head Material Use Definition An associated material denotes the steel grade, preferrably via material classification. A material constituent set or material profile set may be associated if the cable, bonding mortar or corrosion protection, and tendon sheeth are to be described together by the material association. .use head Geometry Use Definition The [[IfcTendonType]] may define the shared geometric representation for many tendon occurrences. The RepresentationMaps attribute refers to a list of [[IfcRepresentationMap]] s, that allow for multiple geometric representations."
-
-#:IFC.xml:42464
-msgid "IfcTendonType_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "IfcTendonType_CrossSectionArea_DEFINITION"
-msgstr "Эффективная поперечная зона сечения прессованной части сухожилия."
-
-#:IFC.xml:42469
-msgid "IfcTendonType_NominalDiameter"
-msgstr "NominalDiameter"
-
-msgid "IfcTendonType_NominalDiameter_DEFINITION"
-msgstr "Номинальный диаметр, определяющий размер поперечного сечения препрессованной части сухожилия."
-
-#:IFC.xml:42474
-msgid "IfcTendonType_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcTendonType_PredefinedType_DEFINITION"
-msgstr "Подтип сухожилия."
-
-#:IFC.xml:42479
-msgid "IfcTendonType_SheathDiameter"
-msgstr "Диаметр Шейха"
-
-msgid "IfcTendonType_SheathDiameter_DEFINITION"
-msgstr "Диаметр листового трубка вокруг сухожилия, если имеется один с этим типом сухожилия."
-
-#:IFC.xml:42486
-msgid "IfcTendonTypeEnum"
-msgstr "IfcTendonTypeEnum"
-
-msgid "IfcTendonTypeEnum_DEFINITION"
-msgstr "Enumeration defining the types of tendons. HISTORY New type in IFC2x2. Items BAR COATED The tendon is coated. STRAND WIRE The tendon is a wire. USERDEFINED NOTDEFINED The type of tendon is not defined."
-
-#:IFC.xml:42500
-msgid "IfcTendonTypeEnum_BAR"
-msgstr "БАР"
-
-msgid "IfcTendonTypeEnum_BAR_DEFINITION"
-msgstr "БАР"
-
-#:IFC.xml:42501
-msgid "IfcTendonTypeEnum_COATED"
-msgstr "СОБЛЮДЕНО"
-
-msgid "IfcTendonTypeEnum_COATED_DEFINITION"
-msgstr "сухожилие покрывается."
-
-#:IFC.xml:42502
-msgid "IfcTendonTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcTendonTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Тип сухожилия не определен."
-
-#:IFC.xml:42503
-msgid "IfcTendonTypeEnum_STRAND"
-msgstr "ИЗМЕНИТЬ"
-
-msgid "IfcTendonTypeEnum_STRAND_DEFINITION"
-msgstr "ИЗМЕНИТЬ"
-
-#:IFC.xml:42504
-msgid "IfcTendonTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcTendonTypeEnum_USERDEFINED_DEFINITION"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-#:IFC.xml:42505
-msgid "IfcTendonTypeEnum_WIRE"
-msgstr "СЛОЖНО"
-
-msgid "IfcTendonTypeEnum_WIRE_DEFINITION"
-msgstr "Тенденция – это проволока."
-
-#:IFC.xml:42506
-msgid "IfcVoidingFeature"
-msgstr "Функция IfcVoiding"
-
-msgid "IfcVoidingFeature_DEFINITION"
-msgstr "A voiding feature is a modification of an element which reduces its volume. Such a feature may be manufactured in different ways, for example by cutting, drilling, or milling of members made of various materials, or by inlays into the formwork of cast members made of materials such as concrete. The standard use of instances of [[IfcVoidingFeature]] is as a part of element type objects instances of subtypes of [[IfcElementType]] . The part whole relationship is established by an aggregation relationship object, expressing the decomposition of an element type into one or more additive elements element parts and zero or more feature elements. HISTORY New entity in IFC4. .use head Containment Use Definition Voiding features shall have no spatial containment relationship to the spatial structure since they are dependent on element types without spatial containment relationships or on an element occurrence with own spatial containment relationship. The SELF [[IfcElement]].ContainedInStructure relationship shall be NIL."
-
-#:IFC.xml:42507
-msgid "IfcVoidingFeature_PredefinedType"
-msgstr "PredefinedType"
-
-msgid "IfcVoidingFeature_PredefinedType_DEFINITION"
-msgstr "Определяет свойство, касающееся его формы и конфигурации относительно пустотного элемента."
-
-#:IFC.xml:42514
-msgid "IfcVoidingFeatureTypeEnum"
-msgstr "IfcVoidingFeatureTypeEnum"
-
-msgid "IfcVoidingFeatureTypeEnum_DEFINITION"
-msgstr "This enumeration qualifies a voiding feature regarding its shape and configuration relative to the voided element. HISTORY New type in IFC4. Items CUTOUT NOTCH An external cutout of with a mostly rectangular cutting profile. The edges between cutting planes may be overcut or undercut, i.e. rounded. HOLE A circular or slotted or threaded hole, typically but not necessarily of smaller dimension than what would be considered a cutout. MITER A skewed plane end cut, removing material across the entire profile of the voided element. CHAMFER A skewed plane end cut, removing material only across a part of the profile of the voided element. EDGE A shape modification along an edge of the element with the edge length as the predominant dimension of the feature, and feature profile dimensions which are typically much smaller than the edge length. Can for example be a chamfer edge differentiated from a chamfer by its ratio of dimensions and thus usually manufactured differently , rounded edge a convex edge feature , or fillet edge a concave edge feature . USERDEFINED A user defined type of voiding feature. NOTDEFINED An undefined type of voiding feature."
-
-#:IFC.xml:42532
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER"
-msgstr "ЧЕМЛЕР"
-
-msgid "IfcVoidingFeatureTypeEnum_CHAMFER_DEFINITION"
-msgstr "Порезать конечную часть плоскости, удаляя материал только через часть профиля недействительного элемента."
-
-#:IFC.xml:42533
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT"
-msgstr "КУТИТЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_CUTOUT_DEFINITION"
-msgstr "КУТИТЬ"
-
-#:IFC.xml:42534
-msgid "IfcVoidingFeatureTypeEnum_EDGE"
-msgstr "Эдж"
-
-msgid "IfcVoidingFeatureTypeEnum_EDGE_DEFINITION"
-msgstr "Изменение формы вдоль края элемента с длиной края в качестве доминирующего измерения свойства, и имеют размеры профиля, которые, как правило, значительно меньше длины края. Может быть краем шамбы, дифференцированным от камеры по соотношению размеров и, таким образом, обычно производится по-разному , закругленный край элемента края выпуклых , или края филе функции сжатого края ."
-
-#:IFC.xml:42535
-msgid "IfcVoidingFeatureTypeEnum_HOLE"
-msgstr "ХОЛЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_HOLE_DEFINITION"
-msgstr "Циркуляр или прорезь отверстия, как правило, но не обязательно меньшие размеры, чем то, что будет считаться вырезанной."
-
-#:IFC.xml:42536
-msgid "IfcVoidingFeatureTypeEnum_MITER"
-msgstr "MITER"
-
-msgid "IfcVoidingFeatureTypeEnum_MITER_DEFINITION"
-msgstr "Порезать конечную часть плоскости, удаляя материал по всему профилю пустотного элемента."
-
-#:IFC.xml:42537
-msgid "IfcVoidingFeatureTypeEnum_NOTCH"
-msgstr "ЗАМЕЧАНИЕ"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTCH_DEFINITION"
-msgstr "Внешнее вырезывание с помощью профиля преимущественно прямоугольной резки. Края между плоскостями резки могут быть перерезаны или закруглены."
-
-#:IFC.xml:42538
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED"
-msgstr "ОТВЕТСТВЕННО"
-
-msgid "IfcVoidingFeatureTypeEnum_NOTDEFINED_DEFINITION"
-msgstr "Неопределённый тип неопознанного свойства."
-
-#:IFC.xml:42539
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED"
-msgstr "ПОЛЬЗОВАТЕЛЬ"
-
-msgid "IfcVoidingFeatureTypeEnum_USERDEFINED_DEFINITION"
-msgstr "Определенный пользователем тип функции voiding"
-
-#:IFC.xml:42555
-msgid "Pset_ConcreteElementGeneral"
-msgstr "Pset ConcreteElementGeneral"
-
-msgid "Pset_ConcreteElementGeneral_DEFINITION"
-msgstr "Общие свойства, общие для различных типов бетонных элементов, включая железобетонные элементы. Набор свойств может использоваться рядом подтипов IfcBuildingElement, указано, что такой элемент спроектирован или изготовлен с использованием бетонного метода конструкции."
-
-#:IFC.xml:42556
-msgid "Pset_ConcreteElementGeneral_ConcreteCover"
-msgstr "ConcreteCover"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCover_DEFINITION"
-msgstr "The protective concrete cover at the reinforcing bars according to local building regulations."
-
-#:IFC.xml:42561
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks"
-msgstr "ConcreteCoverAtLinks"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtLinks_DEFINITION"
-msgstr "The protective concrete cover at the reinforcement links according to local building regulations."
-
-#:IFC.xml:42566
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars"
-msgstr "ConcreteCoverAtMainBars"
-
-msgid "Pset_ConcreteElementGeneral_ConcreteCoverAtMainBars_DEFINITION"
-msgstr "The protective concrete cover at the main reinforcing bars according to local building regulations."
-
-#:IFC.xml:42571
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod"
-msgstr "ConstructionMethod"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionMethod_DEFINITION"
-msgstr "Designator for whether the concrete element is constructed on site or prefabricated. Allowed values are In Situ vs Precast ."
-
-#:IFC.xml:42576
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass"
-msgstr "ConstructionToleranceClass"
-
-msgid "Pset_ConcreteElementGeneral_ConstructionToleranceClass_DEFINITION"
-msgstr "Classification designation of the on site construction tolerances according to local standards."
-
-#:IFC.xml:42581
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass"
-msgstr "DimensionalAccuracyClass"
-
-msgid "Pset_ConcreteElementGeneral_DimensionalAccuracyClass_DEFINITION"
-msgstr "Classification designation of the dimensional accuracy requirement according to local standards."
-
-#:IFC.xml:42586
-msgid "Pset_ConcreteElementGeneral_ExposureClass"
-msgstr "ExposureClass"
-
-msgid "Pset_ConcreteElementGeneral_ExposureClass_DEFINITION"
-msgstr "Classification of exposure to environmental conditions, usually specified in accordance with the concrete design code which is applied in the project."
-
-#:IFC.xml:42591
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio"
-msgstr "ReinforcementAreaRatio"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementAreaRatio_DEFINITION"
-msgstr "The required ratio of the effective area of the reinforcement to the effective area of the concrete At any section of a reinforced concrete structural element."
-
-#:IFC.xml:42596
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass"
-msgstr "ReinforcementStrengthClass"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementStrengthClass_DEFINITION"
-msgstr "Classification of the reinforcement strength in accordance with the concrete design code which is applied in the project. The reinforcing strength class often combines strength and ductility."
-
-#:IFC.xml:42601
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio"
-msgstr "ReinforcementVolumeRatio"
-
-msgid "Pset_ConcreteElementGeneral_ReinforcementVolumeRatio_DEFINITION"
-msgstr "The required ratio of the effective mass of the reinforcement to the effective volume of the concrete of a reinforced concrete structural element."
-
-#:IFC.xml:42606
-msgid "Pset_ConcreteElementGeneral_StrengthClass"
-msgstr "StrengthClass"
-
-msgid "Pset_ConcreteElementGeneral_StrengthClass_DEFINITION"
-msgstr "Classification of the concrete strength in accordance with the concrete design code which is applied in the project."
-
-#:IFC.xml:42611
-msgid "Pset_ConcreteElementGeneral_StructuralClass"
-msgstr "StructuralClass"
-
-msgid "Pset_ConcreteElementGeneral_StructuralClass_DEFINITION"
-msgstr "The structural class defined for the concrete structure e.g. 1 ."
-
-#:IFC.xml:42617
-msgid "Pset_FootingCommon"
-msgstr "Стоп FootingCommon"
-
-msgid "Pset_FootingCommon_DEFINITION"
-msgstr "Свойства, общие для определения всех вхождений [[IfcFooting]]."
-
-#:IFC.xml:42618
-msgid "Pset_FootingCommon_LoadBearing"
-msgstr "LoadBearing"
-
-msgid "Pset_FootingCommon_LoadBearing_DEFINITION"
-msgstr "Indicates whether the object is intended to carry loads TRUE or not FALSE ."
-
-#:IFC.xml:42623
-msgid "Pset_FootingCommon_Reference"
-msgstr "Артикул"
-
-msgid "Pset_FootingCommon_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42628
-msgid "Pset_FootingCommon_Status"
-msgstr "Статус"
-
-msgid "Pset_FootingCommon_Status_DEFINITION"
-msgstr "Статус этого элемента, главным образом использовался при осуществлении ремонтных или ретрофирующих проектов. Статус может быть присвоен как Новый элемент, разработанный как новый дополнение, существующий элемент существует и остается, Существуют элементы сноса, но они должны быть снесены, временный элемент будет существовать только временно, как временная вспомогательная структура ."
-
-#:IFC.xml:42634
-msgid "Pset_PileCommon"
-msgstr "Прелестная пилетучая"
-
-msgid "Pset_PileCommon_DEFINITION"
-msgstr "Свойства, общие для определения всех вхождений [[IfcPile]]."
-
-#:IFC.xml:42635
-msgid "Pset_PileCommon_LoadBearing"
-msgstr "LoadBearing"
-
-msgid "Pset_PileCommon_LoadBearing_DEFINITION"
-msgstr "Indicates whether the object is intended to carry loads TRUE or not FALSE ."
-
-#:IFC.xml:42640
-msgid "Pset_PileCommon_Reference"
-msgstr "Артикул"
-
-msgid "Pset_PileCommon_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42645
-msgid "Pset_PileCommon_Status"
-msgstr "Статус"
-
-msgid "Pset_PileCommon_Status_DEFINITION"
-msgstr "Статус этого элемента, главным образом использовался при осуществлении ремонтных или ретрофирующих проектов. Статус может быть присвоен как Новый элемент, разработанный как новый дополнение, существующий элемент существует и остается, Существуют элементы сноса, но они должны быть снесены, временный элемент будет существовать только временно, как временная вспомогательная структура ."
-
-#:IFC.xml:42651
-msgid "Pset_PrecastConcreteElementFabrication"
-msgstr "Pset PrecastConcreteElementFabrication"
-
-msgid "Pset_PrecastConcreteElementFabrication_DEFINITION"
-msgstr "Производственные и производственные свойства, общие для различных типов сборных бетонных элементов. Набор применяется к изготовленным деталям. Может использоваться рядом подтипов IfcBuildingElement. Если бетоносмеситель"
-
-#:IFC.xml:42652
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate"
-msgstr "ActualErectionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualErectionDate_DEFINITION"
-msgstr "Date erected."
-
-#:IFC.xml:42657
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate"
-msgstr "ActualProductionDate"
-
-msgid "Pset_PrecastConcreteElementFabrication_ActualProductionDate_DEFINITION"
-msgstr "Production date stripped from form ."
-
-#:IFC.xml:42662
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber"
-msgstr "AsBuiltLocationNumber"
-
-msgid "Pset_PrecastConcreteElementFabrication_AsBuiltLocationNumber_DEFINITION"
-msgstr "Defines a unique location within a structure, the slot into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection."
-
-#:IFC.xml:42667
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark"
-msgstr "PieceMark"
-
-msgid "Pset_PrecastConcreteElementFabrication_PieceMark_DEFINITION"
-msgstr "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub parts that have specific locally defined meaning e.g. B 1A may denote a beam, of generic type 1 and specific shape A ."
-
-#:IFC.xml:42672
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId"
-msgstr "ProductionLotId"
-
-msgid "Pset_PrecastConcreteElementFabrication_ProductionLotId_DEFINITION"
-msgstr "The manufacturer s production lot identifier."
-
-#:IFC.xml:42677
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber"
-msgstr "SerialNumber"
-
-msgid "Pset_PrecastConcreteElementFabrication_SerialNumber_DEFINITION"
-msgstr "The manufacturer s serial number for the precast concrete element."
-
-#:IFC.xml:42682
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignation"
-msgstr "Назначение типа"
-
-msgid "Pset_PrecastConcreteElementFabrication_TypeDesignation_DEFINITION"
-msgstr "Обозначение типа для элемента. Содержание зависит от местных стандартов. Например: Бык нос , Половина , Повседневный , Шамфер и т.д."
-
-#:IFC.xml:42688
-msgid "Pset_PrecastConcreteElementGeneral"
-msgstr "Pset PrecastConcreteElementGeneral"
-
-msgid "Pset_PrecastConcreteElementGeneral_DEFINITION"
-msgstr "Производственные и производственные свойства, общие для различных типов бетонных элементов, которые могут использоваться в ряде подтипов IfcBuildingElement. Если бетонный элемент является стеновой панелью сэндвича, то каждый структурный слой или корпус, представленный [[IfcBuildingElementPart]], может быть прикреплен к отдельному Pset этого типа, если необходимо. Некоторые из свойств применяются только для конкретных типов бетонных элементов."
-
-#:IFC.xml:42689
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd"
-msgstr "BatterAtEnd"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtEnd_DEFINITION"
-msgstr "The angle, in radians, by which the formwork at the ending face of a piece is to be rotated from the vertical in order to compensate for the rotation of the face that will occur once the piece is stripped from its form, inducing camber due to eccentric prestressing."
-
-#:IFC.xml:42694
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart"
-msgstr "BatterAtStart"
-
-msgid "Pset_PrecastConcreteElementGeneral_BatterAtStart_DEFINITION"
-msgstr "The angle, in radians, by which the formwork at the starting face of a piece is to be rotated from the vertical in order to compensate for the rotation of the face that will occur once the piece is stripped from its form, inducing camber due to eccentric prestressing."
-
-#:IFC.xml:42699
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan"
-msgstr "CamberAtMidspan"
-
-msgid "Pset_PrecastConcreteElementGeneral_CamberAtMidspan_DEFINITION"
-msgstr "The camber deflection, measured from the midpoint of a cambered face of a piece to the midpoint of the chord joining the ends of the same face, as shown in the figure below, divided by the original nominal straight length of the face of the piece."
-
-#:IFC.xml:42704
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer"
-msgstr "CornerChamfer"
-
-msgid "Pset_PrecastConcreteElementGeneral_CornerChamfer_DEFINITION"
-msgstr "The chamfer in the corners of the precast element. The chamfer is presumed to be equal in both directions."
-
-#:IFC.xml:42709
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber"
-msgstr "DesignLocationNumber"
-
-msgid "Pset_PrecastConcreteElementGeneral_DesignLocationNumber_DEFINITION"
-msgstr "Defines a unique location within a structure, the slot for which the piece was designed."
-
-#:IFC.xml:42714
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength"
-msgstr "FormStrippingStrength"
-
-msgid "Pset_PrecastConcreteElementGeneral_FormStrippingStrength_DEFINITION"
-msgstr "The minimum required compressive strength of the concrete at form stripping time."
-
-#:IFC.xml:42719
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging"
-msgstr "HollowCorePlugging"
-
-msgid "Pset_PrecastConcreteElementGeneral_HollowCorePlugging_DEFINITION"
-msgstr "A descriptive label for how the hollow core ends are treated they may be left open, closed with a plug, or sealed with cast concrete. Values would be, for example Unplugged , Plugged , SealedWithConcrete . This property applies to hollow core slabs only."
-
-#:IFC.xml:42724
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension"
-msgstr "InitialTension"
-
-msgid "Pset_PrecastConcreteElementGeneral_InitialTension_DEFINITION"
-msgstr "The initial stress of the tendon. This property applies to prestressed concrete elements only."
-
-#:IFC.xml:42729
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength"
-msgstr "LiftingStrength"
-
-msgid "Pset_PrecastConcreteElementGeneral_LiftingStrength_DEFINITION"
-msgstr "The minimum required compressive strength of the concrete when the concrete element is lifted."
-
-#:IFC.xml:42734
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass"
-msgstr "ManufacturingToleranceClass"
-
-msgid "Pset_PrecastConcreteElementGeneral_ManufacturingToleranceClass_DEFINITION"
-msgstr "Classification designation of the manufacturing tolerances according to local standards."
-
-#:IFC.xml:42739
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength"
-msgstr "MinimumAllowableSupportLength"
-
-msgid "Pset_PrecastConcreteElementGeneral_MinimumAllowableSupportLength_DEFINITION"
-msgstr "The minimum allowable support length."
-
-#:IFC.xml:42744
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark"
-msgstr "PieceMark"
-
-msgid "Pset_PrecastConcreteElementGeneral_PieceMark_DEFINITION"
-msgstr "Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub parts that have specific locally defined meaning e.g. B 1A may denote a beam, of generic type 1 and specific shape A ."
-
-#:IFC.xml:42749
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength"
-msgstr "ReleaseStrength"
-
-msgid "Pset_PrecastConcreteElementGeneral_ReleaseStrength_DEFINITION"
-msgstr "The minimum required compressive strength of the concrete when the tendon stress is released. This property applies to prestressed concrete elements only."
-
-#:IFC.xml:42754
-msgid "Pset_PrecastConcreteElementGeneral_Shortening"
-msgstr "Shortening"
-
-msgid "Pset_PrecastConcreteElementGeneral_Shortening_DEFINITION"
-msgstr "The ratio of the distance by which a precast piece is shortened after release from its form due to compression induced by prestressing to its original nominal length."
-
-#:IFC.xml:42759
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription"
-msgstr "SupportDuringTransportDescription"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDescription_DEFINITION"
-msgstr "Textual description of how the concrete element is supported during transportation."
-
-#:IFC.xml:42764
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference"
-msgstr "SupportDuringTransportDocReference"
-
-msgid "Pset_PrecastConcreteElementGeneral_SupportDuringTransportDocReference_DEFINITION"
-msgstr "Reference to an external document defining how the concrete element is supported during transportation."
-
-#:IFC.xml:42769
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation"
-msgstr "TendonRelaxation"
-
-msgid "Pset_PrecastConcreteElementGeneral_TendonRelaxation_DEFINITION"
-msgstr "The maximum allowable relaxation of the tendon usually expressed as 1000 h .This property applies to prestressed concrete elements only."
-
-#:IFC.xml:42774
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength"
-msgstr "TransportationStrength"
-
-msgid "Pset_PrecastConcreteElementGeneral_TransportationStrength_DEFINITION"
-msgstr "The minimum required compressive strength of the concrete required for transportation."
-
-#:IFC.xml:42779
-msgid "Pset_PrecastConcreteElementGeneral_Twisting"
-msgstr "Twisting"
-
-msgid "Pset_PrecastConcreteElementGeneral_Twisting_DEFINITION"
-msgstr "The angle, in radians, through which the end face of a precast piece is rotated with respect to its starting face, along its longitudinal axis, as a result of non aligned supports. This measure is also termed the warping angle."
-
-#:IFC.xml:42784
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignation"
-msgstr "Назначение типа"
-
-msgid "Pset_PrecastConcreteElementGeneral_TypeDesignation_DEFINITION"
-msgstr "Обозначение типа для элемента. Содержание зависит от местных стандартов. Например: Бык нос , Половина , Повседневный , Шамфер и т.д."
-
-#:IFC.xml:42790
-msgid "Pset_PrecastSlab"
-msgstr "Pset PrecastSlab"
-
-msgid "Pset_PrecastSlab_DEFINITION"
-msgstr "Информация о профиле и компонентах, определяющая порядок нанесения слябовых деталей в сборочном слябе. Значения являются глобальными по умолчанию для слябов в целом, но могут быть переопределены локальными размерами индивидуального com"
-
-#:IFC.xml:42791
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes"
-msgstr "AngleBetweenComponentAxes"
-
-msgid "Pset_PrecastSlab_AngleBetweenComponentAxes_DEFINITION"
-msgstr "The angle between the axes of each pair of components."
-
-#:IFC.xml:42796
-msgid "Pset_PrecastSlab_AngleToFirstAxis"
-msgstr "AngleToFirstAxis"
-
-msgid "Pset_PrecastSlab_AngleToFirstAxis_DEFINITION"
-msgstr "The angle of rotation of the axis of the first component relative to the West edge of the slab."
-
-#:IFC.xml:42801
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes"
-msgstr "DistanceBetweenComponentAxes"
-
-msgid "Pset_PrecastSlab_DistanceBetweenComponentAxes_DEFINITION"
-msgstr "The distance between the axes of the components, measured along the South edge of the slab."
-
-#:IFC.xml:42806
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis"
-msgstr "EdgeDistanceToFirstAxis"
-
-msgid "Pset_PrecastSlab_EdgeDistanceToFirstAxis_DEFINITION"
-msgstr "The distance from the left West edge of the slab in the direction of span of the components to the axis of the first component."
-
-#:IFC.xml:42811
-msgid "Pset_PrecastSlab_NominalThickness"
-msgstr "NominalThickness"
-
-msgid "Pset_PrecastSlab_NominalThickness_DEFINITION"
-msgstr "The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
-
-#:IFC.xml:42816
-msgid "Pset_PrecastSlab_NominalToppingThickness"
-msgstr "NominalToppingThickness"
-
-msgid "Pset_PrecastSlab_NominalToppingThickness_DEFINITION"
-msgstr "The nominal thickness of the topping."
-
-#:IFC.xml:42821
-msgid "Pset_PrecastSlab_ToppingType"
-msgstr "ToppingType"
-
-msgid "Pset_PrecastSlab_ToppingType_DEFINITION"
-msgstr "Defines if a topping is applied and what kind. Values are Full topping , Perimeter Wash , None"
-
-#:IFC.xml:42826
-msgid "Pset_PrecastSlab_TypeDesignation"
-msgstr "Назначение типа"
-
-msgid "Pset_PrecastSlab_TypeDesignation_DEFINITION"
-msgstr "Обозначение типа для элемента. Содержание зависит от местных стандартов. Например: Бык нос , Половина , Повседневный , Шамфер и т.д."
-
-#:IFC.xml:42832
-msgid "Pset_ReinforcementBarCountOfIndependentFooting"
-msgstr "Подкрепление Pset УсиленияBarCountOfIndependentFooting"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_DEFINITION"
-msgstr "Вычисление бетонного параметра СТ 2 Числовая информация о значении арматурной панели с независимым футом. Направление X и Y основано на локальной системе координат этажа здания. Направление X и Y арматуры параллельно оси X и Y [[IfcBuildingStorey]] локальной координатной системы, соответственно."
-
-#:IFC.xml:42833
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:42838
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42843
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount"
-msgstr "XDirectionLowerBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionLowerBarCount_DEFINITION"
-msgstr "The number of bars with X direction lower bar."
-
-#:IFC.xml:42848
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount"
-msgstr "XDirectionUpperBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_XDirectionUpperBarCount_DEFINITION"
-msgstr "The number of bars with X direction upper bar."
-
-#:IFC.xml:42853
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount"
-msgstr "YDirectionLowerBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionLowerBarCount_DEFINITION"
-msgstr "The number of bars with Y direction lower bar."
-
-#:IFC.xml:42858
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount"
-msgstr "YDirectionUpperBarCount"
-
-msgid "Pset_ReinforcementBarCountOfIndependentFooting_YDirectionUpperBarCount_DEFINITION"
-msgstr "The number of bars with Y direction upper bar."
-
-#:IFC.xml:42864
-msgid "Pset_ReinforcementBarPitchOfBeam"
-msgstr "Подкрепляющий Напал Бач"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_DEFINITION"
-msgstr "Информация о протяженности поля арматурного бара и пучка."
-
-#:IFC.xml:42865
-msgid "Pset_ReinforcementBarPitchOfBeam_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:42870
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42875
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch"
-msgstr "SpacingBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_SpacingBarPitch_DEFINITION"
-msgstr "The pitch length of the spacing bar."
-
-#:IFC.xml:42880
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch"
-msgstr "StirrupBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfBeam_StirrupBarPitch_DEFINITION"
-msgstr "The pitch length of the stirrup bar."
-
-#:IFC.xml:42886
-msgid "Pset_ReinforcementBarPitchOfColumn"
-msgstr "Pset ReinforcementBarPitchOfColumn"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_DEFINITION"
-msgstr "Информация о длине тона арматуры с помощью колонки. Направление X и Y основано на локальной системе координат этажа здания. Направление X и Y арматуры параллельно оси X и Y [[IfcBuildingStorey]] локальной координатной системы, соответственно."
-
-#:IFC.xml:42887
-msgid "Pset_ReinforcementBarPitchOfColumn_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:42892
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch"
-msgstr "HoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_HoopBarPitch_DEFINITION"
-msgstr "The pitch length of the hoop bar."
-
-#:IFC.xml:42897
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42902
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType"
-msgstr "ReinforcementBarType"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_ReinforcementBarType_DEFINITION"
-msgstr "Defines the type of the reinforcement bar."
-
-#:IFC.xml:42907
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch"
-msgstr "XDirectionTieHoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopBarPitch_DEFINITION"
-msgstr "The X direction pitch length of the tie hoop."
-
-#:IFC.xml:42912
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount"
-msgstr "XDirectionTieHoopCount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_XDirectionTieHoopCount_DEFINITION"
-msgstr "The number of bars with X direction tie hoop bars."
-
-#:IFC.xml:42917
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch"
-msgstr "YDirectionTieHoopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopBarPitch_DEFINITION"
-msgstr "The Y direction pitch length of the tie hoop."
-
-#:IFC.xml:42922
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount"
-msgstr "YDirectionTieHoopCount"
-
-msgid "Pset_ReinforcementBarPitchOfColumn_YDirectionTieHoopCount_DEFINITION"
-msgstr "The number of bars with Y direction tie hoop bars."
-
-#:IFC.xml:42928
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting"
-msgstr "Непрерывное ПодкреплениеБарПитхоф-Стойка"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_DEFINITION"
-msgstr "Инструкция бетонного параметра ST 2 Информация о длине основы арматуры с непрерывной ножкой."
-
-#:IFC.xml:42929
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch"
-msgstr "CrossingLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the crossing lower bar."
-
-#:IFC.xml:42934
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch"
-msgstr "CrossingUpperBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_CrossingUpperBarPitch_DEFINITION"
-msgstr "The pitch length of the crossing upper bar."
-
-#:IFC.xml:42939
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:42944
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarPitchOfContinuousFooting_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42950
-msgid "Pset_ReinforcementBarPitchOfSlab"
-msgstr "Подкрепляющая Капюшня"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_DEFINITION"
-msgstr "Информация о длине поля арматуры с плитой."
-
-#:IFC.xml:42951
-msgid "Pset_ReinforcementBarPitchOfSlab_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:42956
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch"
-msgstr "LongInsideCenterLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the long inside center lower bar."
-
-#:IFC.xml:42961
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch"
-msgstr "LongInsideCenterTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideCenterTopBarPitch_DEFINITION"
-msgstr "The pitch length of the long inside center top bar."
-
-#:IFC.xml:42966
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch"
-msgstr "LongInsideEndLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the long inside end lower bar."
-
-#:IFC.xml:42971
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch"
-msgstr "LongInsideEndTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongInsideEndTopBarPitch_DEFINITION"
-msgstr "The pitch length of the long inside end top bar."
-
-#:IFC.xml:42976
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch"
-msgstr "LongOutsideLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the long outside lower bar."
-
-#:IFC.xml:42981
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch"
-msgstr "LongOutsideTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_LongOutsideTopBarPitch_DEFINITION"
-msgstr "The pitch length of the long outside top bar."
-
-#:IFC.xml:42986
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:42991
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch"
-msgstr "ShortInsideCenterLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the short inside center lower bar."
-
-#:IFC.xml:42996
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch"
-msgstr "ShortInsideCenterTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideCenterTopBarPitch_DEFINITION"
-msgstr "The pitch length of the short inside center top bar."
-
-#:IFC.xml:43001
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch"
-msgstr "ShortInsideEndLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the short inside end lower bar."
-
-#:IFC.xml:43006
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch"
-msgstr "ShortInsideEndTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortInsideEndTopBarPitch_DEFINITION"
-msgstr "The pitch length of the short inside end top bar."
-
-#:IFC.xml:43011
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch"
-msgstr "ShortOutsideLowerBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideLowerBarPitch_DEFINITION"
-msgstr "The pitch length of the short outside lower bar."
-
-#:IFC.xml:43016
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch"
-msgstr "ShortOutsideTopBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfSlab_ShortOutsideTopBarPitch_DEFINITION"
-msgstr "The pitch length of the short outside top bar."
-
-#:IFC.xml:43022
-msgid "Pset_ReinforcementBarPitchOfWall"
-msgstr "Усиление ячеек"
-
-msgid "Pset_ReinforcementBarPitchOfWall_DEFINITION"
-msgstr "Информация о длине поля арматуры со стеной."
-
-#:IFC.xml:43023
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType"
-msgstr "BarAllocationType"
-
-msgid "Pset_ReinforcementBarPitchOfWall_BarAllocationType_DEFINITION"
-msgstr "Defines the type of the reinforcement bar allocation."
-
-#:IFC.xml:43028
-msgid "Pset_ReinforcementBarPitchOfWall_Description"
-msgstr "Описание"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Description_DEFINITION"
-msgstr "The description of the air side system."
-
-#:IFC.xml:43033
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch"
-msgstr "HorizontalBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_HorizontalBarPitch_DEFINITION"
-msgstr "The pitch length of the horizontal bar."
-
-#:IFC.xml:43038
-msgid "Pset_ReinforcementBarPitchOfWall_Reference"
-msgstr "Артикул"
-
-msgid "Pset_ReinforcementBarPitchOfWall_Reference_DEFINITION"
-msgstr "Идентификатор для данного типа проекта, например тип A 1 , также именуемый типом строительства . Она должна быть предоставлена в качестве альтернативы названию типа объекта , если программное обеспечение не поддерживает типы объектов."
-
-#:IFC.xml:43043
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch"
-msgstr "SpacingBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_SpacingBarPitch_DEFINITION"
-msgstr "The pitch length of the spacing bar."
-
-#:IFC.xml:43048
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch"
-msgstr "VerticalBarPitch"
-
-msgid "Pset_ReinforcementBarPitchOfWall_VerticalBarPitch_DEFINITION"
-msgstr "The pitch length of the vertical bar."
-
-#:IFC.xml:43054
-msgid "Qto_FootingBaseQuantities"
-msgstr "Qto FootingBaseQuantities"
-
-msgid "Qto_FootingBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех случаев наступления."
-
-#:IFC.xml:43055
-msgid "Qto_FootingBaseQuantities_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "Qto_FootingBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Площадь профиля. Например, измеряется в мм2. Если указано, то площадь поперечного сечения должна быть больше нуля."
-
-#:IFC.xml:43060
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_FootingBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "Total area of the footing, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
-
-#:IFC.xml:43065
-msgid "Qto_FootingBaseQuantities_GrossVolume"
-msgstr "ГросОбъем"
-
-msgid "Qto_FootingBaseQuantities_GrossVolume_DEFINITION"
-msgstr "Сумма всех валовых объемов помещений, прикрытых зданием на этаже, включает в себя объемы строительных элементов на этаже. Могут быть предоставлены в дополнение к количеству помещений и строительным элементам, присвоенным на склад. В случае несоответствий преимущественную силу имеют отдельные количества помещений и конструкционных элементов."
-
-#:IFC.xml:43070
-msgid "Qto_FootingBaseQuantities_GrossWeight"
-msgstr "Вес груза"
-
-msgid "Qto_FootingBaseQuantities_GrossWeight_DEFINITION"
-msgstr "Общий вес брутто фольги без добавления на части, без учета возможных особенностей обработки вырезанных и т.д."
-
-#:IFC.xml:43075
-msgid "Qto_FootingBaseQuantities_Height"
-msgstr "Высота"
-
-msgid "Qto_FootingBaseQuantities_Height_DEFINITION"
-msgstr "Height of the object. It is the upper hight of the railing above the floor or stair. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
-
-#:IFC.xml:43080
-msgid "Qto_FootingBaseQuantities_Length"
-msgstr "Длина"
-
-msgid "Qto_FootingBaseQuantities_Length_DEFINITION"
-msgstr "Номинальная длина перехода. Представлена информация о размере в дополнение к представлению формы и геометрическим параметрам, используемым внутри секции. В случае несоответствия между геометрическими параметрами и параметрами размера, предусмотренными в подложном наборе свойств, преобладают геометрические параметры."
-
-#:IFC.xml:43085
-msgid "Qto_FootingBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_FootingBaseQuantities_NetVolume_DEFINITION"
-msgstr "Сумма всех чистых объемов помещений, прикрытых зданием, исключает объемы строительных элементов на этаже. Может быть предоставлено в дополнение к количеству мест, присвоенных магазину. В случае несоответствий приоритет отдается отдельным количествам пробелов."
-
-#:IFC.xml:43090
-msgid "Qto_FootingBaseQuantities_NetWeight"
-msgstr "Вес сети"
-
-msgid "Qto_FootingBaseQuantities_NetWeight_DEFINITION"
-msgstr "Общий вес нетто фольги без добавления на части, с учетом возможных функций обработки вырезанные и т.д."
-
-#:IFC.xml:43095
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea"
-msgstr "Поверхность"
-
-msgid "Qto_FootingBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "Общая площадь экструзионных поверхностей ног без учета поверхностей конечной крышки , которые обычно образуются в виде длины периметра."
-
-#:IFC.xml:43100
-msgid "Qto_FootingBaseQuantities_Width"
-msgstr "Width"
-
-msgid "Qto_FootingBaseQuantities_Width_DEFINITION"
-msgstr "Номинальная ширина траншейных раскопок, информация о размерах предоставлена в дополнение к показателю формы и геометрическим параметрам, используемым внутри. В случае несоответствия между геометрическими параметрами и параметрами размера, предусмотренными в подложном наборе свойств, преобладают геометрические параметры."
-
-#:IFC.xml:43106
-msgid "Qto_PileBaseQuantities"
-msgstr "Qto PileBaseQuantities"
-
-msgid "Qto_PileBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех случаев наводнения."
-
-#:IFC.xml:43107
-msgid "Qto_PileBaseQuantities_CrossSectionArea"
-msgstr "Кросссечение"
-
-msgid "Qto_PileBaseQuantities_CrossSectionArea_DEFINITION"
-msgstr "Площадь профиля. Например, измеряется в мм2. Если указано, то площадь поперечного сечения должна быть больше нуля."
-
-#:IFC.xml:43112
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea"
-msgstr "GrossSurfaceArea"
-
-msgid "Qto_PileBaseQuantities_GrossSurfaceArea_DEFINITION"
-msgstr "Total area of the footing, normally generated as perimeter length 2 cross section area. It is the sum of OuterSurfaceArea 2 x CrossSectionArea and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
-
-#:IFC.xml:43117
-msgid "Qto_PileBaseQuantities_GrossVolume"
-msgstr "ГросОбъем"
-
-msgid "Qto_PileBaseQuantities_GrossVolume_DEFINITION"
-msgstr "Сумма всех валовых объемов помещений, прикрытых зданием на этаже, включает в себя объемы строительных элементов на этаже. Могут быть предоставлены в дополнение к количеству помещений и строительным элементам, присвоенным на склад. В случае несоответствий преимущественную силу имеют отдельные количества помещений и конструкционных элементов."
-
-#:IFC.xml:43122
-msgid "Qto_PileBaseQuantities_GrossWeight"
-msgstr "Вес груза"
-
-msgid "Qto_PileBaseQuantities_GrossWeight_DEFINITION"
-msgstr "Общий вес брутто фольги без добавления на части, без учета возможных особенностей обработки вырезанных и т.д."
-
-#:IFC.xml:43127
-msgid "Qto_PileBaseQuantities_Length"
-msgstr "Длина"
-
-msgid "Qto_PileBaseQuantities_Length_DEFINITION"
-msgstr "Номинальная длина перехода. Представлена информация о размере в дополнение к представлению формы и геометрическим параметрам, используемым внутри секции. В случае несоответствия между геометрическими параметрами и параметрами размера, предусмотренными в подложном наборе свойств, преобладают геометрические параметры."
-
-#:IFC.xml:43132
-msgid "Qto_PileBaseQuantities_NetVolume"
-msgstr "NetVolume"
-
-msgid "Qto_PileBaseQuantities_NetVolume_DEFINITION"
-msgstr "Сумма всех чистых объемов помещений, прикрытых зданием, исключает объемы строительных элементов на этаже. Может быть предоставлено в дополнение к количеству мест, присвоенных магазину. В случае несоответствий приоритет отдается отдельным количествам пробелов."
-
-#:IFC.xml:43137
-msgid "Qto_PileBaseQuantities_NetWeight"
-msgstr "Вес сети"
-
-msgid "Qto_PileBaseQuantities_NetWeight_DEFINITION"
-msgstr "Общий вес нетто фольги без добавления на части, с учетом возможных функций обработки вырезанные и т.д."
-
-#:IFC.xml:43142
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea"
-msgstr "Поверхность"
-
-msgid "Qto_PileBaseQuantities_OuterSurfaceArea_DEFINITION"
-msgstr "Общая площадь экструзионных поверхностей ног без учета поверхностей конечной крышки , которые обычно образуются в виде длины периметра."
-
-#:IFC.xml:43148
-msgid "Qto_ReinforcingElementBaseQuantities"
-msgstr "Qto ReinforcingElementBaseQuantities"
-
-msgid "Qto_ReinforcingElementBaseQuantities_DEFINITION"
-msgstr "Базовые количества, которые являются общими для определения всех случаев подкрепления."
-
-#:IFC.xml:43149
-msgid "Qto_ReinforcingElementBaseQuantities_Count"
-msgstr "Count"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Count_DEFINITION"
-msgstr "Total count of reinforcing items."
-
-#:IFC.xml:43154
-msgid "Qto_ReinforcingElementBaseQuantities_Length"
-msgstr "Длина"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Length_DEFINITION"
-msgstr "Номинальная длина перехода. Представлена информация о размере в дополнение к представлению формы и геометрическим параметрам, используемым внутри секции. В случае несоответствия между геометрическими параметрами и параметрами размера, предусмотренными в подложном наборе свойств, преобладают геометрические параметры."
-
-#:IFC.xml:43159
-msgid "Qto_ReinforcingElementBaseQuantities_Weight"
-msgstr "Вес"
-
-msgid "Qto_ReinforcingElementBaseQuantities_Weight_DEFINITION"
-msgstr "Вес увлажнителя."
+#:IFC.xml:43561
+msgid "IfcWarpingStiffnessSelect"
+msgstr "IfcWarpingStiffnessSelect"
 
