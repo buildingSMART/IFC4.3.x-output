@@ -1,14 +1,23 @@
 ## DefinitionForProperty
 
+* The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
+* The Property 'Pset_AirSideSystemInformation.TotalAirFlow' has no definition
+* The Property 'Pset_AirTerminalBoxPHistory.AirFlowCurve' has no definition
+* The Property 'Pset_AirTerminalBoxTypeCommon.AirFlowRateRange' has no definition
+* The Property 'Pset_AirTerminalOccurrence.AirFlowType' has no definition
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
-* The Property 'Pset_DistributionPortTypeDuct.ConnectionSubType' has no definition
-* The Property 'Pset_DistributionPortTypePipe.ConnectionSubType' has no definition
+* The Property 'Pset_AirToAirHeatRecoveryTypeCommon.PrimaryAirFlowRateRange' has no definition
+* The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
+* The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
+* The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowrateRange' has no definition
-* The Property 'Pset_SolidStratumCapacity.LoadbearingCapacity' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForQuantity
 
+* The Property 'Qto_BuildingBaseQuantities.FootPrintArea' has no definition
 * The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
+* The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
+* The Property 'Qto_WallBaseQuantities.NetFootPrintArea' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
 
 * The association 'IfcArbitraryClosedProfileDefPropertySetsforObjectsPset_ProfileArbitraryDoubleT' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryClosedProfileDef'
@@ -54,6 +63,10 @@
 * For document 'AdjustmentValues.md/a/properties/docs' a property cannot be found
 * For document 'AffectsSurroundings.md/a/properties/docs' a property cannot be found
 * For document 'Aggregation.md/a/properties/docs' a property cannot be found
+* For document 'AirflowCurve.md/a/properties/docs' a property cannot be found
+* For document 'AirflowRateRange.md/a/properties/docs' a property cannot be found
+* For document 'AirflowSensible.md/a/properties/docs' a property cannot be found
+* For document 'AirflowType.md/a/properties/docs' a property cannot be found
 * For document 'Arrangement.md/a/properties/docs' a property cannot be found
 * For document 'AssessmentOfRisk.md/a/properties/docs' a property cannot be found
 * For document 'Colour.md/c/properties/docs' a property cannot be found
@@ -62,8 +75,10 @@
 * For document 'DisplacementAccomodated.md/d/properties/docs' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
+* For document 'FootprintArea.md/f/properties/docs' a property cannot be found
 * For document 'ForeignObjectDetectionSensorInterface.md/f/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
+* For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
 * For document 'IK.md/i/properties/docs' a property cannot be found
 * For document 'IP.md/i/properties/docs' a property cannot be found
 * For document 'Identifier.md/i/properties/docs' a property cannot be found
@@ -79,12 +94,14 @@
 * For document 'MountingType.md/m/properties/docs' a property cannot be found
 * For document 'Name.md/n/properties/docs' a property cannot be found
 * For document 'Nesting.md/n/properties/docs' a property cannot be found
+* For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
 * For document 'OutOfPlane.md/o/properties/docs' a property cannot be found
 * For document 'PerformanceUnit.md/p/properties/docs' a property cannot be found
 * For document 'PlacementType.md/p/properties/docs' a property cannot be found
 * For document 'Position.md/p/properties/docs' a property cannot be found
 * For document 'PossibleFlowRateRange.md/p/properties/docs' a property cannot be found
 * For document 'PreventiveMeasures.md/p/properties/docs' a property cannot be found
+* For document 'PrimaryAirflowRateRange.md/p/properties/docs' a property cannot be found
 * For document 'Pset.md/p/properties/docs' a property cannot be found
 * For document 'Qto.md/q/properties/docs' a property cannot be found
 * For document 'RemainingWork.md/r/properties/docs' a property cannot be found
@@ -93,6 +110,7 @@
 * For document 'RotationAccomodated.md/r/properties/docs' a property cannot be found
 * For document 'ScheduleWork.md/s/properties/docs' a property cannot be found
 * For document 'Scope.md/s/properties/docs' a property cannot be found
+* For document 'SecondaryAirflowRateRange.md/s/properties/docs' a property cannot be found
 * For document 'SelfExtinguishing60332.md/s/properties/docs' a property cannot be found
 * For document 'Shape.md/s/properties/docs' a property cannot be found
 * For document 'SignalElevationAngle.md/s/properties/docs' a property cannot be found
@@ -108,6 +126,7 @@
 * For document 'SpaceTemperatureSummerMin.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureWinterMax.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureWinterMin.md/s/properties/docs' a property cannot be found
+* For document 'TotalAirflow.md/t/properties/docs' a property cannot be found
 * For document 'TotalSensibleHeatGain.md/t/properties/docs' a property cannot be found
 * For document 'Transition.md/t/properties/docs' a property cannot be found
 * For document 'TypeDesignator.md/t/properties/docs' a property cannot be found
