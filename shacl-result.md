@@ -72,7 +72,6 @@
 
 * The concept usage 'Actor Assignment [Alignment-based Reference View]' for entity 'IfcActor' is not modeled in UML
 * The concept usage 'Actor Assignment [Reference View]' for entity 'IfcActor' is not modeled in UML
-* The concept usage 'Actor Assignment' for entity 'IfcActor' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcActionRequest' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcElementAssembly' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcPerformanceHistory' is not modeled in UML
@@ -88,17 +87,11 @@
 * The concept usage 'Axis 2D Geometry' for entity 'IfcRampFlight' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcStair' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcStairFlight' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcWall' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcWallStandardCase' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcBeam' is not modeled in UML
 * The concept usage 'Axis 3D Geometry' for entity 'IfcBeamStandardCase' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcColumn' is not modeled in UML
 * The concept usage 'Axis 3D Geometry' for entity 'IfcColumnStandardCase' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcMember' is not modeled in UML
 * The concept usage 'Axis 3D Geometry' for entity 'IfcMemberStandardCase' is not modeled in UML
-* The concept usage 'Axis Geometry' for entity 'IfcDistributionFlowElement' is not modeled in UML
 * The concept usage 'Axis Geometry' for entity 'IfcDistributionFlowElementType' is not modeled in UML
-* The concept usage 'Axis Geometry' for entity 'IfcFlowSegment' is not modeled in UML
 * The concept usage 'Body AdvancedBrep Geometry' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeam' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeamStandardCase' is not modeled in UML
@@ -154,7 +147,6 @@
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcStairFlight' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcWall' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcWallStandardCase' is not modeled in UML
-* The concept usage 'Body Tessellation Geometry' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Box Geometry' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcGeographicElement' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcObjectDefinition' is not modeled in UML
@@ -162,7 +154,6 @@
 * The concept usage 'Classification' for entity 'IfcCostItem' is not modeled in UML
 * The concept usage 'Classification' for entity 'IfcPerformanceHistory' is not modeled in UML
 * The concept usage 'Classification' for entity 'IfcTask' is not modeled in UML
-* The concept usage 'Clearance Geometry' for entity 'IfcDistributionFlowElement' is not modeled in UML
 * The concept usage 'Clearance Geometry' for entity 'IfcDistributionFlowElementType' is not modeled in UML
 * The concept usage 'CoG Geometry' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Composition' for entity 'IfcController' is not modeled in UML
@@ -170,7 +161,6 @@
 * The concept usage 'Constraint' for entity 'IfcTask' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcActionRequest' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcControl' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcCostItem' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcCostSchedule' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcEvent' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcPermit' is not modeled in UML
@@ -183,30 +173,21 @@
 * The concept usage 'Document' for entity 'IfcConstructionResource' is not modeled in UML
 * The concept usage 'Document' for entity 'IfcWorkSchedule' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'IfcRamp' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'IfcRoof' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'IfcStair' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'IfcWallElementedCase' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' is not modeled in UML
 * The concept usage 'Element Voiding' for entity 'IfcWallElementedCase' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuilding' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuildingStorey' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcSite' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcSpace' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcGrid' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcRampFlight' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcStairFlight' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'IfcDistributionSystem' is not modeled in UML
 * The concept usage 'Group Assignment' for entity 'IfcGroup' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'IfcZone' is not modeled in UML
 * The concept usage 'Identity' for entity 'IfcRoot' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcDistributionFlowElementType' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElementComponent' is not modeled in UML
-* The concept usage 'Material Constituent Set' for entity 'IfcDoor' is not modeled in UML
-* The concept usage 'Material Constituent Set' for entity 'IfcWindow' is not modeled in UML
 * The concept usage 'Material Constituents' for entity 'IfcDistributionChamberElement' is not modeled in UML
 * The concept usage 'Material Constituents' for entity 'IfcRailing' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcCovering' is not modeled in UML
@@ -255,15 +236,8 @@
 * The concept usage 'Nesting' for entity 'IfcWorkSchedule' is not modeled in UML
 * The concept usage 'Object Classification' for entity 'IfcDistributionControlElement' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcBuildingElementProxy' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcBuiltElementProxy' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcConstructionResource' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcDistributionElement' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcEvent' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcObject' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcProcedure' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcTask' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcTransportElement' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcBeamStandardCase' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcBuilding' is not modeled in UML
@@ -282,14 +256,9 @@
 * The concept usage 'Port Nesting' for entity 'IfcDistributionPort' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcProcedure' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcTask' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'IfcDistributionControlElement' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'IfcDistributionPort' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'IfcEvent' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'IfcProcedure' is not modeled in UML
 * The concept usage 'Product Geometric Representation' for entity 'IfcProduct' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDistributionPort' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDoor' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcElement' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSpace' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcVoidingFeature' is not modeled in UML
@@ -306,9 +275,7 @@
 * The concept usage 'Profile 3D Geometry' for entity 'IfcDoorStandardCase' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcWindow' is not modeled in UML
 * The concept usage 'Profile Geometry' for entity 'IfcWindowStandardCase' is not modeled in UML
-* The concept usage 'Project Declaration' for entity 'IfcProject' is not modeled in UML
 * The concept usage 'Project Global Positioning' for entity 'IfcProject' is not modeled in UML
-* The concept usage 'Property Sets for Objects' for entity 'IfcConstructionResource' is not modeled in UML
 * The concept usage 'Property Sets for Objects' for entity 'IfcObject' is not modeled in UML
 * The concept usage 'Property Sets for Performance' for entity 'IfcPerformanceHistory' is not modeled in UML
 * The concept usage 'Property Sets for Types' for entity 'IfcDoorType' is not modeled in UML
@@ -316,16 +283,12 @@
 * The concept usage 'Property Sets with Override' for entity 'IfcObject' is not modeled in UML
 * The concept usage 'Quantity Sets' for entity 'IfcDistributionElement' is not modeled in UML
 * The concept usage 'Reference Geometry' for entity 'IfcOpeningElement' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'IfcStructuralCurveMember' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'IfcStructuralPointConnection' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'IfcStructuralSurfaceMember' is not modeled in UML
 * The concept usage 'Revision Control' for entity 'IfcRoot' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcEvent' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcProcedure' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcTask' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBuilding' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBuildingStorey' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'IfcSite' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcSpace' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBuilding' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBuildingStorey' is not modeled in UML
@@ -365,8 +328,6 @@
 * The concept usage 'Surface Geometry' for entity 'IfcVirtualElement' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcWall' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcWallElementedCase' is not modeled in UML
-* The concept usage 'Survey Points Geometry' for entity 'IfcSite' is not modeled in UML
-* The concept usage 'Window Attributes' for entity 'IfcWindow' is not modeled in UML
 ## PropertyForDefinition
 
 * For document 'ActualWork.md/a/properties/docs' a property cannot be found
