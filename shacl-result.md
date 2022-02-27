@@ -223,7 +223,6 @@
 * The concept usage 'Material Profile Set' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Solid' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcBuiltElementProxy' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Solid' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Solid' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Solid' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
@@ -236,7 +235,6 @@
 * The concept usage 'Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Classification' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
@@ -297,7 +295,6 @@
 * The concept usage 'Spatial Container' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcBuiltElementProxy' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcChimney' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML

@@ -1,17 +1,14 @@
 # Express schema differences
 
-151 items
+147 items
 
 
 ### Missing data
 
-32 items
+26 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
-| IfcBuildingElementProxy              |                                 | not in 'IFC.exp' |
-| IfcBuildingElementProxyType          |                                 | not in 'IFC.exp' |
-| IfcBuildingElementProxyTypeEnum      |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
@@ -23,9 +20,6 @@
 | IfcTransportElementTypeSelect        |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBuiltElementProxy                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBuiltElementProxyType             | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBuiltElementProxyTypeEnum         | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
@@ -44,12 +38,13 @@
 
 ### Type definitions
 
-2 items
+3 items
 
-| Name                     | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                            |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IfcReflectanceMethodEnum | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                  | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
-| IfcTaskTypeEnum          | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
+| Name                            | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                            |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IfcBuildingElementProxyTypeEnum | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, PROVISIONFORSPACE, PROVISIONFORVOID, USERDEFINED                                                                       | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, USERDEFINED                                                                                                                                                                                                                 |
+| IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                  | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
+| IfcTaskTypeEnum                 | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
 ### Entity definitions
 
@@ -88,7 +83,7 @@
 
 ### Constraints
 
-89 items
+90 items
 
 | Name                                                | IFC4x3_RC4_43c3555.exp                                                                                                                                                                                                                                                                                                                                                                                                                                                     | IFC.exp                                                                                                                                                                                                            |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,6 +95,7 @@
 | IfcBlobTexture where rules                          | ['SupportedRasterFormat', 'RasterCodeByteStream']                                                                                                                                                                                                                                                                                                                                                                                                                          | ['RasterCodeByteStream', 'SupportedRasterFormat']                                                                                                                                                                  |
 | IfcBooleanClippingResult where rules                | ['FirstOperandType', 'SecondOperandType', 'OperatorType']                                                                                                                                                                                                                                                                                                                                                                                                                  | ['FirstOperandType', 'OperatorType', 'SecondOperandType']                                                                                                                                                          |
 | IfcBooleanResult where rules                        | ['SameDim', 'FirstOperandClosed', 'SecondOperandClosed']                                                                                                                                                                                                                                                                                                                                                                                                                   | ['FirstOperandClosed', 'SameDim', 'SecondOperandClosed']                                                                                                                                                           |
+| IfcBuildingElementProxy where rules                 | ['HasObjectName', 'CorrectPredefinedType', 'CorrectTypeAssigned']                                                                                                                                                                                                                                                                                                                                                                                                          | ['CorrectPredefinedType', 'CorrectTypeAssigned', 'HasObjectName']                                                                                                                                                  |
 | IfcBuildingSystem where rules                       | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ['CorrectPredefinedType']                                                                                                                                                                                          |
 | IfcCartesianTransformationOperator2D where rules    | ['DimEqual2', 'Axis1Is2D', 'Axis2Is2D']                                                                                                                                                                                                                                                                                                                                                                                                                                    | ['Axis1Is2D', 'Axis2Is2D', 'DimEqual2']                                                                                                                                                                            |
 | IfcCartesianTransformationOperator3D where rules    | ['DimIs3D', 'Axis1Is3D', 'Axis2Is3D', 'Axis3Is3D']                                                                                                                                                                                                                                                                                                                                                                                                                         | ['Axis1Is3D', 'Axis2Is3D', 'Axis3Is3D', 'DimIs3D']                                                                                                                                                                 |
