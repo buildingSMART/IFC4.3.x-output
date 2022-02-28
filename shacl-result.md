@@ -70,18 +70,17 @@
 * The association 'IfcTypeProductPropertySetsforObjectsPset_Uncertainty' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
 ## ParametrizationForConceptUsageDocumentation
 
-* The concept usage 'Actor Assignment [Alignment-based Reference View]' for entity 'IfcActor' in MVD 'Alignment-basedReferenceView' is not modeled in UML
-* The concept usage 'Actor Assignment [Reference View]' for entity 'IfcActor' in MVD 'ReferenceView' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity 'IfcController' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcElementAssembly' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
@@ -91,7 +90,6 @@
 * The concept usage 'Axis 3D Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 3D Geometry' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 3D Geometry' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis Geometry' for entity 'IfcDistributionFlowElementType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedBrep Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -108,19 +106,17 @@
 * The concept usage 'Body Clipping Geometry' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcBeamType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcColumnType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
@@ -149,17 +145,17 @@
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Tessellation Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Box Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Building Attributes' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity 'IfcAsset' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity 'IfcCostItem' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcGeographicElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcObjectDefinition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification' for entity 'IfcAsset' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification' for entity 'IfcCostItem' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Clearance Geometry' for entity 'IfcDistributionFlowElementType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'CoG Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Composition' for entity 'IfcController' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Constraint' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Constraint' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Constraint Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Constraint Association' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcControl' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
@@ -171,33 +167,25 @@
 * The concept usage 'Control Assignment' for entity 'IfcWorkCalendar' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcWorkControl' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Document' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Document' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Document Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Document Association' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Voiding' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Footprint Geometry' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Footprint Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Footprint Geometry' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint Geometry' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Group Assignment' for entity 'IfcGroup' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Identity' for entity 'IfcRoot' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Lighting Geometry' for entity 'IfcDistributionFlowElementType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElementComponent' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Constituents' for entity 'IfcDistributionChamberElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Constituents' for entity 'IfcRailing' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Constituent Set' for entity 'IfcRailing' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcStructuralSurfaceMember' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
@@ -206,13 +194,10 @@
 * The concept usage 'Material Layer Set' for entity 'IfcSlabType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcWallType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcFlowSegment' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcStructuralCurveMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
@@ -222,59 +207,61 @@
 * The concept usage 'Material Profile Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Solid' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcCostItem' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Classification' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcRoof' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'IfcSurfaceFeature' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Port Connectivity' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Port Nesting' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Geometric Representation' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcRoof' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSurfaceFeature' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcVoidingFeature' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Type Shape' for entity 'IfcTypeProduct' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcDoorStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile Geometry' for entity 'IfcWindowStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Project Global Positioning' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Project Template Definitions' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Objects' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Performance' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Types' for entity 'IfcDoorType' in MVD 'GeneralUsage' is not modeled in UML
@@ -282,15 +269,22 @@
 * The concept usage 'Property Sets with Override' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Quantity Sets' for entity 'IfcDistributionElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Reference Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference SweptSolid PolyCurve Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Tessellation Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Revision Control' for entity 'IfcRoot' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Software Identity' for entity 'IfcRoot' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
@@ -314,11 +308,13 @@
 * The concept usage 'Spatial Containment' for entity 'IfcTransportElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface 3D Geometry' for entity 'IfcBuiltElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface 3D Geometry' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
@@ -326,6 +322,10 @@
 * The concept usage 'Surface Geometry' for entity 'IfcVirtualElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity 'IfcBeamType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity 'IfcColumnType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
 ## PropertyForDefinition
 
 * For document 'ActualWork.md/a/properties/docs' a property cannot be found
