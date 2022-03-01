@@ -27,8 +27,6 @@
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForQuantity
 
-* The Property 'Qto_BuildingBaseQuantities.FootPrintArea' has no definition
-* The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.NetFootPrintArea' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
@@ -335,7 +333,6 @@
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FinishColor.md/f/properties/docs' a property cannot be found
-* For document 'FootprintArea.md/f/properties/docs' a property cannot be found
 * For document 'ForeignObjectDetectionSensorInterface.md/f/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
 * For document 'GlassColor.md/g/properties/docs' a property cannot be found
