@@ -1,3 +1,16 @@
+## DefinitionForEntity
+
+* The resource 'IfcCaissonFoundation' has no definition
+* The resource 'IfcCaissonFoundationType' has no definition
+* The resource 'IfcDeepFoundation' has no definition
+* The resource 'IfcDeepFoundationType' has no definition
+## DefinitionForEnum
+
+* The resource 'IfcCaissonFoundationTypeEnum' has no definition
+## DefinitionForEnumLiteral
+
+* The resource 'IfcCaissonFoundationTypeEnum.CAISSON' has no definition
+* The resource 'IfcCaissonFoundationTypeEnum.WELL' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -27,8 +40,6 @@
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForQuantity
 
-* The Property 'Qto_BuildingBaseQuantities.FootPrintArea' has no definition
-* The Property 'Qto_PipeSegmentBaseQuantities.FootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.NetFootPrintArea' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
@@ -86,10 +97,6 @@
 * The concept usage 'Axis 2D Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Axis 2D Geometry' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedBrep Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -161,11 +168,8 @@
 * The concept usage 'Control Assignment' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcControl' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcWorkCalendar' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcWorkControl' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Control Assignment' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
@@ -174,11 +178,6 @@
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint Geometry' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Group Assignment' for entity 'IfcGroup' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' in MVD 'GeneralUsage' is not modeled in UML
@@ -226,7 +225,6 @@
 * The concept usage 'Object Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -240,28 +238,12 @@
 * The concept usage 'Product Local Placement' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcRoof' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcSurfaceFeature' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcVoidingFeature' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -287,12 +269,10 @@
 * The concept usage 'Sequential Connectivity' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Software Identity' for entity 'IfcRoot' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Container' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
@@ -318,8 +298,6 @@
 * The concept usage 'Spatial Containment' for entity 'IfcTransportElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
@@ -364,7 +342,6 @@
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FinishColor.md/f/properties/docs' a property cannot be found
-* For document 'FootprintArea.md/f/properties/docs' a property cannot be found
 * For document 'ForeignObjectDetectionSensorInterface.md/f/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
 * For document 'GlassColor.md/g/properties/docs' a property cannot be found
@@ -436,3 +413,122 @@
 * For document 'zzOutOfPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzPerformanceUnit.md/z/properties/docs' a property cannot be found
 * For document 'zzTargetPerformance.md/z/properties/docs' a property cannot be found
+## QtoApplicability
+
+* The Property|Quantity Set 'Qto_ActuatorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_AirTerminalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_AirTerminalBoxTypeBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_AirToAirHeatRecoveryBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_AlarmBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ArealStratumBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_AudioVisualApplianceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BeamBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BoilerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BuildingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BuildingElementProxyQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BuildingStoreyBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BurnerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CableCarrierFittingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CableCarrierSegmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CableFittingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CableSegmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ChillerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ChimneyBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CoilBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ColumnBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CommunicationsApplianceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CompressorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CondenserBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ConduitSegmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ConstructionEquipmentResourceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ConstructionMaterialResourceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ControllerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CooledBeamBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CoolingTowerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CourseBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CoveringBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_CurtainWallQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DamperBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DistributionBoardBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DistributionChamberElementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DoorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DuctFittingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DuctSegmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_DuctSilencerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_EarthworksCutBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_EarthworksFillBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ElectricApplianceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ElectricFlowStorageDeviceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ElectricGeneratorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ElectricMotorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ElectricTimeControlBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_EvaporativeCoolerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_EvaporatorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FacilityPartBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FanBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FilterBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FireSuppressionTerminalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FlowInstrumentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FlowMeterBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_FootingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_HeatExchangerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_HumidifierBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ImpactProtectionDeviceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_InterceptorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_JunctionBoxBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_KerbBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_LaborResourceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_LampBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_LightFixtureBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_LinearStratumBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_MarineFacilityBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_MemberBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_MotorConnectionBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_OpeningElementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_OutletBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PavementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PictorialSignQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PileBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PipeFittingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PipeSegmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PlateBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ProjectionElementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ProtectiveDeviceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ProtectiveDeviceTrippingUnitBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_PumpBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_RailBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_RailingBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_RampFlightBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ReinforcedSoilBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ReinforcingElementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_RoofBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SanitaryTerminalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SensorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SignBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SignalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SiteBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SlabBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SleeperBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SolarDeviceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SpaceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SpaceHeaterBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SpatialZoneBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_StackTerminalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_StairFlightBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SurfaceFeatureBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_SwitchingDeviceBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_TankBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_TransformerBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_TubeBundleBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_UnitaryControlElementBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_UnitaryEquipmentBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_ValveBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_VehicleBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_VibrationIsolatorBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_VolumetricStratumBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_WallBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_WasteTerminalBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_WindowBaseQuantities' should have at least one applicability
+## SimpleType
+
+* The resource 'IfcCaissonFoundationTypeEnum' has no definition
