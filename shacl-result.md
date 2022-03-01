@@ -1,3 +1,16 @@
+## DefinitionForEntity
+
+* The resource 'IfcCaissonFoundation' has no definition
+* The resource 'IfcCaissonFoundationType' has no definition
+* The resource 'IfcDeepFoundation' has no definition
+* The resource 'IfcDeepFoundationType' has no definition
+## DefinitionForEnum
+
+* The resource 'IfcCaissonFoundationTypeEnum' has no definition
+## DefinitionForEnumLiteral
+
+* The resource 'IfcCaissonFoundationTypeEnum.CAISSON' has no definition
+* The resource 'IfcCaissonFoundationTypeEnum.WELL' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -520,3 +533,6 @@
 * The Property|Quantity Set 'Qto_WallBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WasteTerminalBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WindowBaseQuantities' should have at least one applicability
+## SimpleType
+
+* The resource 'IfcCaissonFoundationTypeEnum' has no definition
