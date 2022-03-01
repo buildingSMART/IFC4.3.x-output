@@ -5003,7 +5003,7 @@
             "Properties": {
               "FootPrintArea": {
                 "type": "real",
-                "Description": "Gross area of the site covered by the building(s)."
+                "Description": ""
               },
               "GrossCrossSectionArea": {
                 "type": "real",
@@ -8644,7 +8644,7 @@
               },
               "FootPrintArea": {
                 "type": "real",
-                "Description": "Gross area of the site covered by the building(s)."
+                "Description": ""
               },
               "GrossFloorArea": {
                 "type": "real",
@@ -13085,6 +13085,28 @@
         "Parent": "IfcBuiltElement",
         "Description": "Type of building element that is usually used to transmit loads from superstructure to substructure, and usually allowing movement (displacement or rotation) in one or more degrees of freedom. It is typically a mechanical component procured as a whole and installed on site, but in simple cases it may be built on site (composed of other building elements, element components, etc.).NOTE  The sliding and roller materials are to be assigned to the bearing with the Material Constituent Set concept.\nNOTE  The displacements and rotations accommodated can be defined in the Pset_BearingCommon property set."
       },
+      "IfcBuildingSystem": {
+        "Parent": "IfcSystem",
+        "Description": "A building system is a group by which building elements are grouped according to a common function within the facility.The group IfcBuildingSystem defines the occurrence of a specialized system for use within the context of a building and finishing fabric. Important functionalities for the description of a building system are derived from supertypes:From IfcSystem it inherits the ability to couple the building system via IfcRelServicesBuildings to one or more IfcSpatialElement subtypes as necessary.\nFrom IfcGroup it inherits the inverse attribute IsGroupedBy, pointing to the relationship class IfcRelAssignsToGroup. This allows to group building elements (instances of IfcBuildingElement subtypes, IfcFurnishingElement subtype, IfcElementAssembly and IfcTransportElement).\nFrom IfcObjectDefinition it inherits the inverse attribute IsDecomposedBy pointing to the relationship class IfcRelAggregates. It provides the hierarchy between the separate (partial) building systems.HISTORY  New entity in IFC4.",
+        "Psets": {
+          "Pset_BuildingSystemCommon": {
+            "Properties": {
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
+              }
+            }
+          },
+          "Attributes": {
+            "Properties": {
+              "LongName": {
+                "type": "string",
+                "Description": null
+              }
+            }
+          }
+        }
+      },
       "IfcBuildingElementProxy": {
         "Parent": "IfcBuiltElement",
         "Description": "The IfcBuildingElementProxy is a proxy definition that provides the same functionality as subtypes of IfcBuildingElement, but without having a predefined meaning of the special type of building element, it represents.Proxies can also be used as spatial place holders or provisions, that are later replaced by special types of elements.One use of the proxy object is a provision for voids, i.e. where a particular volume of space is requested by an engineering function that might later be accepted or rejected. If accepted it is transformed into a void within a building element, like a wall opening, or a slab opening. The provision for voids is exchanged as an IfcBuildingElementProxy with the PredefinedType = ProvisionForVoid. Such proxy shall have a swept solid geometry, where the profile of the swept solid lies on/near the surface of the referred building element and the extrusion depths is equal to or bigger then (in case of round or otherwise irregular element shape) the thickness of the building element. The appropriate property set should be attached.In addition to the provision for voids, the building element proxy can also represent a provision for space, often the necessary space allocation for mechanical equipment that will be determined in a later design phase. The provision for space is exchanged as an IfcBuildingElementProxy with the PredefinedType = ProvisionForSpace.Other usages of IfcBuildingElementProxy include:The IfcBuildingElementProxy can be used to exchange special types of building elements for which the current specification does not yet provide a semantic definition.\nThe IfcBuildingElementProxy can also be used to represent building elements for which the participating applications can not provide a semantic definition.HISTORY  New entity in IFC2x.",
@@ -13320,27 +13342,9 @@
           }
         }
       },
-      "IfcBuildingSystem": {
-        "Parent": "IfcSystem",
-        "Description": "A building system is a group by which building elements are grouped according to a common function within the facility.The group IfcBuildingSystem defines the occurrence of a specialized system for use within the context of a building and finishing fabric. Important functionalities for the description of a building system are derived from supertypes:From IfcSystem it inherits the ability to couple the building system via IfcRelServicesBuildings to one or more IfcSpatialElement subtypes as necessary.\nFrom IfcGroup it inherits the inverse attribute IsGroupedBy, pointing to the relationship class IfcRelAssignsToGroup. This allows to group building elements (instances of IfcBuildingElement subtypes, IfcFurnishingElement subtype, IfcElementAssembly and IfcTransportElement).\nFrom IfcObjectDefinition it inherits the inverse attribute IsDecomposedBy pointing to the relationship class IfcRelAggregates. It provides the hierarchy between the separate (partial) building systems.HISTORY  New entity in IFC4.",
-        "Psets": {
-          "Pset_BuildingSystemCommon": {
-            "Properties": {
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
-              }
-            }
-          },
-          "Attributes": {
-            "Properties": {
-              "LongName": {
-                "type": "string",
-                "Description": null
-              }
-            }
-          }
-        }
+      "IfcCaissonFoundation": {
+        "Parent": "IfcDeepFoundation",
+        "Description": "CaissonFoundation essentially is a hollow box that can be either open or closed.(NOTE: corresponding predefined type is deprecated from IfcFootingTypeEnum)."
       },
       "IfcChimney": {
         "Parent": "IfcBuiltElement",
@@ -13579,7 +13583,7 @@
       },
       "IfcColumn": {
         "Parent": "IfcBuiltElement",
-        "Description": "An IfcColumn is a vertical structural or architectural member which often is aligned with a structural grid intersection. In most cases it represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It may also represent such a member from an architectural point of view in which case it may represent a non load bearing element. Whether it is a structural load bearing element or a non-load bearing element is determined by the Pset_ColumnCommon.LoadBearing property.NOTE  Definition according to ISO 6707-1\nstructural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.There are two main representations for column occurrences:IfcColumn with IfcMaterialProfileSetUsage is used for all occurrences of columns, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsag_e. These columns are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned.\n\n\nIfcColumn is used for all other occurrences of columns, particularly for columns with changing profile sizes along the extrusion, or columns defined by non-linear extrusion, or columns having only 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.NOTE  The entity IfcColumnStandardCase has been deprecated, IfcColumn with IfcMaterialProfileSetUsage is used instead.For any longitudial structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity IfcMember exists.NOTE  The representation of a column in a structural analysis model is provided by IfcStructuralCurveMember being part of an IfcStructuralAnalysisModel.\nHISTORY  New entity in IFC1.0",
+        "Description": "An IfcColumn is a vertical structural member which often is aligned with a structural grid intersection. It represents a vertical, or nearly vertical, structural member that transmits, through compression, the weight of the structure above to other structural elements below. It represents such a member from an architectural point of view. It is not required to be load bearing.NOTE  Definition according to ISO 6707-1\nstructural member of slender form, usually vertical, that transmits to its base the forces, primarily in compression, that are applied to it.There are two main representations for column occurrences:IfcColumn with IfcMaterialProfileSetUsage is used for all occurrences of columns, that have a profile defined that is swept along a directrix. The profile might be changed uniformly by a taper definition along the directrix. The profile parameter and its cardinal point of insertion can be fully described by the _IfcMaterialProfileSetUsag_e. These columns are always represented geometricly by an 'Axis' and a 'SweptSolid' or 'AdvancedSweptSolid' shape representation (or by a 'Clipping' geometry based on the swept solid), if a 3D geometric representation is assigned.\n\n\nIfcColumn is used for all other occurrences of columns, particularly for columns with changing profile sizes along the extrusion, or columns defined by non-linear extrusion, or columns having only 'Brep', or 'SurfaceModel' geometry, or if a more parametric representation is not intended.NOTE  The entity IfcColumnStandardCase has been deprecated, IfcColumn with IfcMaterialProfileSetUsage is used instead.For any longitudial structural member, not constrained to be predominately horizontal nor vertical, or where this semantic information is irrelevant, the entity IfcMember exists.NOTE  The representation of a column in a structural analysis model is provided by IfcStructuralCurveMember being part of an IfcStructuralAnalysisModel.\nHISTORY  New entity in IFC1.0",
         "Psets": {
           "Pset_ColumnCommon": {
             "Properties": {
@@ -14080,6 +14084,10 @@
             }
           }
         }
+      },
+      "IfcDeepFoundation": {
+        "Parent": "IfcBuiltElement",
+        "Description": "Deep foundation is a type of foundation that transfers loads deeper than shallow foundation below the soft soils not capable of bearing the above structure. Depending on the soil strength it might have to reach down to the rock layer.Deep foundation is a new supertype incorporating the existing IfcPile and the new IfcCaissonFoundation."
       },
       "IfcDoor": {
         "Parent": "IfcBuiltElement",
@@ -19755,14 +19763,6 @@
       "IfcStructuralSurfaceReaction": {
         "Parent": "IfcStructuralReaction",
         "Description": "This entity defines a reaction which occurs distributed over a surface. A surface reaction may be connected with a surface member or surface connection.HISTORY  New entity in IFC4.*Coordinate Systems*:See definitions at IfcStructuralActivity.*Topology Use Definitions*:See definitions at IfcStructuralActivity.{ .spec-head}\nInformal Propositions:If the surface reaction is of the predefined type CONST, SELF\\IfcStructuralActivity.AppliedLoad must not be of type IfcStructuralLoadConfiguration.\nIf the surface reaction is of the predefined type BILINEAR, SELF\\IfcStructuralActivity.AppliedLoad shall be of type IfcStructuralLoadConfiguration and shall contain three items with two-dimensional IfcStructuralLoadConfiguration.Locations, defining the location of the result samples in local coordinates of the surface reaction.\n  If the surface reaction is of the predefined type DISCRETE, SELF\\IfcStructuralActivity.AppliedLoad shall be of type IfcStructuralLoadConfiguration and shall contain two or more items with two-dimensional locations.\n  If the surface reaction is of the predefined type ISOCONTOUR, SELF\\IfcStructuralActivity.AppliedLoad shall be of type IfcStructuralLoadConfiguration and shall contain the same number of items as the set SELF.IfcProduct.Representation.Representations[?].Items.  Each item in the load configuration shall have a two-dimensional location, defining the location of the result samples in local coordinates of the surface reaction.  Each item in SELF\\IfcStructuralActivity.AppliedLoad shall be located at exactly one of the isocontours.\n  NOTE   The set of representation items is unordered, hence result locations are required to correlate result values and isocontours.\nNOTE   Isocontours are represented as IfcPCurves which are defined in terms of surface parameters u,v, while result locations are given in local surface item coordinates x,y.  It is strongly recommended that the surface parameterization u,v is scaled 1:1 in order to avoid different scales of u,v versus x,y.  If u,v are scaled 1:1 and the IfcPCurve's base surface is identical with the surface item's base surface, u,v and local x,y are identical.\n\nAll items in SELF\\IfcStructuralActivity.AppliedLoad\\IfcStructuralLoadConfiguration.Values shall be of the same entity type."
-      },
-      "IfcCaissonFoundation": {
-        "Parent": "IfcDeepFoundation",
-        "Description": ""
-      },
-      "IfcDeepFoundation": {
-        "Parent": "IfcBuiltElement",
-        "Description": ""
       },
       "IfcFooting": {
         "Parent": "IfcBuiltElement",
