@@ -1,30 +1,34 @@
 # Express schema differences
 
-148 items
+152 items
 
 
 ### Missing data
 
-26 items
+30 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
+| IfcCosine                            |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
 | IfcPlant                             |                                 | not in 'IFC.exp' |
 | IfcPostalAddress                     |                                 | not in 'IFC.exp' |
 | IfcProxy                             |                                 | not in 'IFC.exp' |
+| IfcSine                              |                                 | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                                 | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                                 | not in 'IFC.exp' |
 | IfcTransportElementTypeSelect        |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcCosineSpiral                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcSineSpiral                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4_43c3555.exp' |                  |

@@ -2401,43 +2401,8 @@
 * The association 'IfcTypeProductPropertySetsforObjectsPset_Uncertainty' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
 ## ObjectTypeAssociationForTypeDrivenPropSets
 
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ActionRequest' should be associated to an element with corresponding IfcObjectType, not IfcActionRequest
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ActorCommon' should be associated to an element with corresponding IfcObjectType, not IfcActor
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Address' should be associated to an element with corresponding IfcObjectType, not IfcBuilding
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Address' should be associated to an element with corresponding IfcObjectType, not IfcSite
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_AirSideSystemInformation' should be associated to an element with corresponding IfcObjectType, not IfcZone
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_AnnotationContourLine' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_AnnotationLineOfSight' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_AnnotationSurveyArea' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Asset' should be associated to an element with corresponding IfcObjectType, not IfcAsset
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BreakwaterCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BridgeCommon' should be associated to an element with corresponding IfcObjectType, not IfcBridge
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuildingCommon' should be associated to an element with corresponding IfcObjectType, not IfcBuilding
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuildingStoreyCommon' should be associated to an element with corresponding IfcObjectType, not IfcBuildingStorey
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuildingSystemCommon' should be associated to an element with corresponding IfcObjectType, not IfcBuildingSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuildingUse' should be associated to an element with corresponding IfcObjectType, not IfcBuilding
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuildingUseAdjacent' should be associated to an element with corresponding IfcObjectType, not IfcBuilding
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuiltSystemRailwayLine' should be associated to an element with corresponding IfcObjectType, not IfcBuiltSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_BuiltSystemTrack' should be associated to an element with corresponding IfcObjectType, not IfcBuiltSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ChamberCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarinePart
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Condition' should be associated to an element with corresponding IfcObjectType, not IfcAsset
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Condition' should be associated to an element with corresponding IfcObjectType, not IfcSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionPortCommon' should be associated to an element with corresponding IfcObjectType, not IfcDistributionPort
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionPortTypeCable' should be associated to an element with corresponding IfcObjectType, not IfcDistributionPort
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionPortTypeDuct' should be associated to an element with corresponding IfcObjectType, not IfcDistributionPort
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionPortTypePipe' should be associated to an element with corresponding IfcObjectType, not IfcDistributionPort
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionSystemCommon' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionSystemTypeElectrical' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystemEnum.ELECTRICAL
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionSystemTypeOverheadContactlineSystem' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystemEnum.OVERHEAD_CONTACTLINE_SYSTEM
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_DistributionSystemTypeVentilation' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystemEnum.VENTILATION
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_GateHeadCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarinePart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_GeotechnicalAssemblyCommon' should be associated to an element with corresponding IfcObjectType, not IfcGeotechnicalAssembly
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_GeotechnicalStratumCommon' should be associated to an element with corresponding IfcObjectType, not IfcGeotechnicalStratum
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_JettyCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_JettyDesignCriteria' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_LandRegistration' should be associated to an element with corresponding IfcObjectType, not IfcSite
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_LinearReferencingMethod' should be associated to an element with corresponding IfcObjectType, not IfcAlignment
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_LinearReferencingMethod' should be associated to an element with corresponding IfcObjectType, not IfcReferent
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceStrategy' should be associated to an element with corresponding IfcObjectType, not IfcAsset
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceStrategy' should be associated to an element with corresponding IfcObjectType, not IfcSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerCondition' should be associated to an element with corresponding IfcObjectType, not IfcAsset
@@ -2446,8 +2411,6 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerDuration' should be associated to an element with corresponding IfcObjectType, not IfcSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerPerformance' should be associated to an element with corresponding IfcObjectType, not IfcAsset
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerPerformance' should be associated to an element with corresponding IfcObjectType, not IfcSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MarineFacilityTransportation' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MarkingLinesCommon' should be associated to an element with corresponding IfcObjectType, not IfcSurfaceFeature
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialCombustion' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialCommon' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialConcrete' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
@@ -2467,78 +2430,25 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelInPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelOutOfPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelOutOfPlaneNegative' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_OpeningElementCommon' should be associated to an element with corresponding IfcObjectType, not IfcOpeningElement
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_OutsideDesignCriteria' should be associated to an element with corresponding IfcObjectType, not IfcBuilding
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_PavementMillingCommon' should be associated to an element with corresponding IfcObjectType, not IfcEarthworksCut
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Permit' should be associated to an element with corresponding IfcObjectType, not IfcPermit
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_PlantCommon' should be associated to an element with corresponding IfcObjectType, not IfcVegetation
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_PowerControlSystem' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystemEnum.ELECTRICAL
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcBuiltSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileArbitraryDoubleT' should be associated to an element with corresponding IfcObjectType, not IfcArbitraryClosedProfileDef
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileArbitraryHollowCore' should be associated to an element with corresponding IfcObjectType, not IfcArbitraryProfileDefWithVoids
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileMechanical' should be associated to an element with corresponding IfcObjectType, not IfcProfileDef
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProjectOrderChangeOrder' should be associated to an element with corresponding IfcObjectType, not IfcProjectOrder
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProjectOrderMaintenanceWorkOrder' should be associated to an element with corresponding IfcObjectType, not IfcProjectOrder
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProjectOrderMoveOrder' should be associated to an element with corresponding IfcObjectType, not IfcProjectOrder
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProjectOrderPurchaseOrder' should be associated to an element with corresponding IfcObjectType, not IfcProjectOrder
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProjectOrderWorkOrder' should be associated to an element with corresponding IfcObjectType, not IfcProjectOrder
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProvisionForVoid' should be associated to an element with corresponding IfcObjectType, not IfcVirtualElement
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_QuayCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_QuayDesignCriteria' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RailwayLevelCrossing' should be associated to an element with corresponding IfcObjectType, not IfcFacilityPartCommon
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RailwayTrackStructurePart' should be associated to an element with corresponding IfcObjectType, not IfcRailwayPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RailwayTrackStructurePart' should be associated to an element with corresponding IfcObjectType, not IfcRailwayPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RailwayTrackStructurePart' should be associated to an element with corresponding IfcObjectType, not IfcRailwayPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RailwayTrackStructurePart' should be associated to an element with corresponding IfcObjectType, not IfcRailwayPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ReferentCommon' should be associated to an element with corresponding IfcObjectType, not IfcReferent
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RevetmentCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcGroup
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProcess
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProduct
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcTypeProcess
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcFacilityPartCommon
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcFacilityPartCommon
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcFacilityPartCommon
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoad
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadDesignCriteriaCommon' should be associated to an element with corresponding IfcObjectType, not IfcRoadPart
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_RoadSymbolsCommon' should be associated to an element with corresponding IfcObjectType, not IfcSurfaceFeature
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ShipLockCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ShiplockComplex' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ShiplockDesignCriteria' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ShipyardCommon' should be associated to an element with corresponding IfcObjectType, not IfcMarineFacility
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SiteCommon' should be associated to an element with corresponding IfcObjectType, not IfcSite
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SiteWeather' should be associated to an element with corresponding IfcObjectType, not IfcSite
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SolidStratumCapacity' should be associated to an element with corresponding IfcObjectType, not IfcSolidStratum
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SolidStratumComposition' should be associated to an element with corresponding IfcObjectType, not IfcSolidStratum
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SoundAttenuation' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceFireSafetyRequirements' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceHVACDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceLightingDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceOccupancyRequirements' should be associated to an element with corresponding IfcObjectType, not IfcZone
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Stationing' should be associated to an element with corresponding IfcObjectType, not IfcReferent
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_StructuralSurfaceMemberVaryingThickness' should be associated to an element with corresponding IfcObjectType, not IfcStructuralSurfaceMemberVarying
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Superelevation' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Tolerance' should be associated to an element with corresponding IfcObjectType, not IfcProduct
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Tolerance' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_TractionPowerSystem' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystemEnum.ELECTRICAL
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_TransitionSectionCommon' should be associated to an element with corresponding IfcObjectType, not IfcEarthworksFill
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_TrenchExcavationCommon' should be associated to an element with corresponding IfcObjectType, not IfcEarthworksCut
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Uncertainty' should be associated to an element with corresponding IfcObjectType, not IfcProduct
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Uncertainty' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_WaterStratumCommon' should be associated to an element with corresponding IfcObjectType, not IfcWaterStratum
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Width' should be associated to an element with corresponding IfcObjectType, not IfcAnnotation
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_WiredCommunicationPortCommon' should be associated to an element with corresponding IfcObjectType, not IfcDistributionPort
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_WorkControlCommon' should be associated to an element with corresponding IfcObjectType, not IfcWorkControl
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ZoneCommon' should be associated to an element with corresponding IfcObjectType, not IfcZone
 ## ParametrizationForConceptUsageDocumentation
 
 * The concept usage 'Aggregation' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
@@ -3735,7 +3645,7 @@
 * The Property|Quantity Set 'IfcCorrectLocalPlacement' should have at least one applicability
 * The Property|Quantity Set 'IfcCorrectObjectAssignment' should have at least one applicability
 * The Property|Quantity Set 'IfcCorrectUnitAssignment' should have at least one applicability
-* The Property|Quantity Set 'IfcCosine' should have at least one applicability
+* The Property|Quantity Set 'IfcCosineSpiral' should have at least one applicability
 * The Property|Quantity Set 'IfcCostItem' should have at least one applicability
 * The Property|Quantity Set 'IfcCostItemTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcCostItemTypeEnum.USERDEFINED' should have at least one applicability
@@ -4928,7 +4838,7 @@
 * The Property|Quantity Set 'IfcSimplePropertyTemplate' should have at least one applicability
 * The Property|Quantity Set 'IfcSimplePropertyTemplateTypeEnum' should have at least one applicability
 * The Property|Quantity Set 'IfcSimpleValue' should have at least one applicability
-* The Property|Quantity Set 'IfcSine' should have at least one applicability
+* The Property|Quantity Set 'IfcSineSpiral' should have at least one applicability
 * The Property|Quantity Set 'IfcSingleProjectInstance' should have at least one applicability
 * The Property|Quantity Set 'IfcSizeSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabElementedCase' should have at least one applicability
