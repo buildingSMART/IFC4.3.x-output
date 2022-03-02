@@ -1,3 +1,6 @@
+## DefinitionForEnumLiteral
+
+* The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -3622,7 +3625,6 @@
 * The Property|Quantity Set 'IfcCommunicationsApplianceTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcComplexProperty' should have at least one applicability
 * The Property|Quantity Set 'IfcComplexPropertyTemplate' should have at least one applicability
-* The Property|Quantity Set 'IfcComplexPropertyTemplateTypeEnum' should have at least one applicability
 * The Property|Quantity Set 'IfcCompositeCurve' should have at least one applicability
 * The Property|Quantity Set 'IfcCompositeCurveOnSurface' should have at least one applicability
 * The Property|Quantity Set 'IfcCompositeCurveSegment' should have at least one applicability
