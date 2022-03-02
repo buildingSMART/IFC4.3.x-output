@@ -2462,11 +2462,6 @@
 * The concept usage 'Approval Association' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedBrep Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
