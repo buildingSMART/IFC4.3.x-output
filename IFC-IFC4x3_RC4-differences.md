@@ -1,6 +1,6 @@
 # Express schema differences
 
-157 items
+159 items
 
 
 ### Missing data
@@ -53,7 +53,7 @@
 
 ### Entity definitions
 
-33 items
+35 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -62,6 +62,7 @@
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                                  |
 | IfcFacilityPart                              | not abstract                                                                               | abstract                                                                                                        |
 | IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                            | ['UsageType']                                                                                                   |
+| IfcGradientCurve.EndPoint                    | EndPoint : optional IfcPlacement                                                           | EndPoint : IfcPlacement                                                                                         |
 | IfcGroup inverses                            | ['IsGroupedBy']                                                                            | ['IsGroupedBy', 'ReferencedInStructures']                                                                       |
 | IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                     |
 | IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                       | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                              |
@@ -76,6 +77,7 @@
 | IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                             | ['CrossSectionPositions']                                                                                       |
 | IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']               | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
 | IfcSectionedSurface.CrossSectionPositions    | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression                          | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
+| IfcSegmentedReferenceCurve.EndPoint          | EndPoint : optional IfcPlacement                                                           | EndPoint : IfcPlacement                                                                                         |
 | IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                                              |
 | IfcSpatialElement inverses                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']                            | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                                               |

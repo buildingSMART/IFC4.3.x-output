@@ -1,6 +1,6 @@
 # Express schema differences
 
-152 items
+154 items
 
 
 ### Missing data
@@ -52,7 +52,7 @@
 
 ### Entity definitions
 
-28 items
+30 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                     | IFC.exp                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -61,6 +61,7 @@
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                  |
 | IfcFacilityPart                              | not abstract                                                                               | abstract                                                                                        |
 | IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                            | ['UsageType']                                                                                   |
+| IfcGradientCurve.EndPoint                    | EndPoint : optional IfcPlacement                                                           | EndPoint : IfcPlacement                                                                         |
 | IfcGroup inverses                            | ['IsGroupedBy']                                                                            | ['IsGroupedBy', 'ReferencedInStructures']                                                       |
 | IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                     |
 | IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                       | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                              |
@@ -71,6 +72,7 @@
 | IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                            |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                       |
 | IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                      | ['PredefinedType']                                                                              |
+| IfcSegmentedReferenceCurve.EndPoint          | EndPoint : optional IfcPlacement                                                           | EndPoint : IfcPlacement                                                                         |
 | IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                              |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                               |
 | IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                             |
