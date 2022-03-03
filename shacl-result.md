@@ -2456,6 +2456,7 @@
 * The concept usage 'Aggregation' for entity 'IfcElementAssembly' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
