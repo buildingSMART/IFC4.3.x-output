@@ -2463,6 +2463,9 @@
 * The concept usage 'Approval Association' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedBrep Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -2589,6 +2592,7 @@
 * The concept usage 'Object Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -2605,8 +2609,12 @@
 * The concept usage 'Product Local Placement' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
@@ -3320,7 +3328,6 @@
 * The Property|Quantity Set 'IfcBSplineSurface' should have at least one applicability
 * The Property|Quantity Set 'IfcBSplineSurfaceWithKnots' should have at least one applicability
 * The Property|Quantity Set 'IfcBaseAxis' should have at least one applicability
-* The Property|Quantity Set 'IfcBeamStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcBeamType' should have at least one applicability
 * The Property|Quantity Set 'IfcBeamTypeEnum.BEAM' should have at least one applicability
 * The Property|Quantity Set 'IfcBeamTypeEnum.CORNICE' should have at least one applicability
@@ -3504,7 +3511,6 @@
 * The Property|Quantity Set 'IfcColourRgb' should have at least one applicability
 * The Property|Quantity Set 'IfcColourRgbList' should have at least one applicability
 * The Property|Quantity Set 'IfcColourSpecification' should have at least one applicability
-* The Property|Quantity Set 'IfcColumnStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcColumnType' should have at least one applicability
 * The Property|Quantity Set 'IfcColumnTypeEnum.COLUMN' should have at least one applicability
 * The Property|Quantity Set 'IfcColumnTypeEnum.NOTDEFINED' should have at least one applicability
@@ -3812,7 +3818,6 @@
 * The Property|Quantity Set 'IfcDocumentSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcDoorLiningProperties' should have at least one applicability
 * The Property|Quantity Set 'IfcDoorPanelProperties' should have at least one applicability
-* The Property|Quantity Set 'IfcDoorStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcDoorType' should have at least one applicability
 * The Property|Quantity Set 'IfcDoorTypeEnum.DOOR' should have at least one applicability
 * The Property|Quantity Set 'IfcDoorTypeEnum.GATE' should have at least one applicability
@@ -4333,7 +4338,6 @@
 * The Property|Quantity Set 'IfcMedicalDeviceTypeEnum.OXYGENPLANT' should have at least one applicability
 * The Property|Quantity Set 'IfcMedicalDeviceTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcMedicalDeviceTypeEnum.VACUUMSTATION' should have at least one applicability
-* The Property|Quantity Set 'IfcMemberStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcMemberType' should have at least one applicability
 * The Property|Quantity Set 'IfcMemberTypeEnum.ARCH_SEGMENT' should have at least one applicability
 * The Property|Quantity Set 'IfcMemberTypeEnum.CHORD' should have at least one applicability
@@ -4412,7 +4416,6 @@
 * The Property|Quantity Set 'IfcOpeningElementTypeEnum.OPENING' should have at least one applicability
 * The Property|Quantity Set 'IfcOpeningElementTypeEnum.RECESS' should have at least one applicability
 * The Property|Quantity Set 'IfcOpeningElementTypeEnum.USERDEFINED' should have at least one applicability
-* The Property|Quantity Set 'IfcOpeningStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcOrganization' should have at least one applicability
 * The Property|Quantity Set 'IfcOrganizationRelationship' should have at least one applicability
 * The Property|Quantity Set 'IfcOrientedEdge' should have at least one applicability
@@ -4477,7 +4480,6 @@
 * The Property|Quantity Set 'IfcPlanarBox' should have at least one applicability
 * The Property|Quantity Set 'IfcPlanarExtent' should have at least one applicability
 * The Property|Quantity Set 'IfcPlane' should have at least one applicability
-* The Property|Quantity Set 'IfcPlateStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcPlateType' should have at least one applicability
 * The Property|Quantity Set 'IfcPlateTypeEnum.BASE_PLATE' should have at least one applicability
 * The Property|Quantity Set 'IfcPlateTypeEnum.COVER_PLATE' should have at least one applicability
@@ -4836,7 +4838,6 @@
 * The Property|Quantity Set 'IfcSingleProjectInstance' should have at least one applicability
 * The Property|Quantity Set 'IfcSizeSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabElementedCase' should have at least one applicability
-* The Property|Quantity Set 'IfcSlabStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabType' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabTypeEnum.APPROACH_SLAB' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabTypeEnum.FLOOR' should have at least one applicability
@@ -5269,7 +5270,6 @@
 * The Property|Quantity Set 'IfcWasteTerminalTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcWindowLiningProperties' should have at least one applicability
 * The Property|Quantity Set 'IfcWindowPanelProperties' should have at least one applicability
-* The Property|Quantity Set 'IfcWindowStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcWindowType' should have at least one applicability
 * The Property|Quantity Set 'IfcWindowTypeEnum.LIGHTDOME' should have at least one applicability
 * The Property|Quantity Set 'IfcWindowTypeEnum.NOTDEFINED' should have at least one applicability
