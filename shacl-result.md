@@ -2518,10 +2518,8 @@
 * The concept usage 'Building Attributes' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcAsset' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcCostItem' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcGeographicElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcObjectDefinition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Classification Association' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'CoG Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Constraint Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
@@ -2541,6 +2539,8 @@
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Group Assignment' for entity 'IfcGroup' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Library Association' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Library Association' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElementComponent' in MVD 'GeneralUsage' is not modeled in UML
