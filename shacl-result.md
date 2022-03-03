@@ -2486,19 +2486,14 @@
 * The concept usage 'Body Clipping Geometry' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Clipping Geometry' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcReinforcingBar' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcReinforcingMesh' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcTendon' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity 'IfcSpatialElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SurfaceModel Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SurfaceOrSolidModel Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
@@ -2549,6 +2544,9 @@
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcElementComponent' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity 'IfcReinforcingBar' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity 'IfcReinforcingMesh' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity 'IfcTendon' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Constituent Set' for entity 'IfcRailing' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
