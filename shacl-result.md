@@ -28,6 +28,9 @@
 * The Property 'Pset_LampTypeCommon.ColourTemperature' has no definition
 * The Property 'Pset_ShadingDeviceCommon.SurfaceColour' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
+## DefinitionForPropertySet
+
+* The resource 'Pset_MarinePartChamberCommon' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
@@ -2183,7 +2186,6 @@
 * The resource 'ProductGeometryLayer' has no definition
 * The resource 'ProductGridPlacement' has no definition
 * The resource 'ProductLinearPlacement' has no definition
-* The resource 'ProductLocalPlacement' has no definition
 * The resource 'ProductRelativePositioning' has no definition
 * The resource 'ProductSpanPositioning' has no definition
 * The resource 'ProjectRepresentationContext2D' has no definition
@@ -2201,6 +2203,7 @@
 * The resource 'PropertyReferenceValue' has no definition
 * The resource 'PropertySingleValue' has no definition
 * The resource 'PropertyTableValue' has no definition
+* The resource 'Pset_MarinePartChamberCommon' has no definition
 * The resource 'Q_AREA' has no definition
 * The resource 'Q_COMPLEX' has no definition
 * The resource 'Q_COUNT' has no definition
@@ -2550,7 +2553,6 @@
 * The concept usage 'Mapped Geometry' for entity 'IfcReinforcingBar' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcReinforcingMesh' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcTendon' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Constituent Set' for entity 'IfcRailing' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
@@ -2593,7 +2595,6 @@
 * The concept usage 'Object Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Typing' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcBeamStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
@@ -2606,16 +2607,29 @@
 * The concept usage 'Product Local Placement' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcMemberStandardCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcPlateStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcRoof' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSlabElementedCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSlabStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcSurfaceFeature' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcVoidingFeature' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcColumnStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Placement' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Type Shape' for entity 'IfcTypeProduct' in MVD 'GeneralUsage' is not modeled in UML
@@ -5447,7 +5461,6 @@
 * The Property|Quantity Set 'ProductGeometryLayer' should have at least one applicability
 * The Property|Quantity Set 'ProductGridPlacement' should have at least one applicability
 * The Property|Quantity Set 'ProductLinearPlacement' should have at least one applicability
-* The Property|Quantity Set 'ProductLocalPlacement' should have at least one applicability
 * The Property|Quantity Set 'ProductRelativePositioning' should have at least one applicability
 * The Property|Quantity Set 'ProductSpanPositioning' should have at least one applicability
 * The Property|Quantity Set 'ProjectRepresentationContext2D' should have at least one applicability
