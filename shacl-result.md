@@ -2624,12 +2624,10 @@
 * The concept usage 'Profile Geometry' for entity 'IfcWindowStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Project Global Positioning' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Project Template Definitions' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets for Objects' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Performance' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Types' for entity 'IfcDoorType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Types' for entity 'IfcWindowType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets with Override' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Quantity Sets' for entity 'IfcDistributionElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Reference Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Reference SweptSolid PolyCurve Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Reference Tessellation Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
