@@ -2541,7 +2541,6 @@
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Footprint Geometry' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'IfcGroup' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Library Association' for entity 'IfcDistributionControlElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Library Association' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Lighting Geometry' for entity 'IfcLightFixture' in MVD 'GeneralUsage' is not modeled in UML
