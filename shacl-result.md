@@ -2530,14 +2530,6 @@
 * The concept usage 'CoG Geometry' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Constraint Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Constraint Association' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcControl' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcWorkCalendar' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcWorkControl' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Document Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Document Association' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
