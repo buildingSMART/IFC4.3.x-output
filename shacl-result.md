@@ -2534,6 +2534,7 @@
 * The concept usage 'Document Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Document Association' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity 'IfcWallElementedCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
@@ -4845,7 +4846,6 @@
 * The Property|Quantity Set 'IfcSineSpiral' should have at least one applicability
 * The Property|Quantity Set 'IfcSingleProjectInstance' should have at least one applicability
 * The Property|Quantity Set 'IfcSizeSelect' should have at least one applicability
-* The Property|Quantity Set 'IfcSlabElementedCase' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabType' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabTypeEnum.APPROACH_SLAB' should have at least one applicability
 * The Property|Quantity Set 'IfcSlabTypeEnum.FLOOR' should have at least one applicability
@@ -5257,7 +5257,6 @@
 * The Property|Quantity Set 'IfcVoidingFeatureTypeEnum.NOTCH' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeatureTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeatureTypeEnum.USERDEFINED' should have at least one applicability
-* The Property|Quantity Set 'IfcWallElementedCase' should have at least one applicability
 * The Property|Quantity Set 'IfcWallStandardCase' should have at least one applicability
 * The Property|Quantity Set 'IfcWallType' should have at least one applicability
 * The Property|Quantity Set 'IfcWallTypeEnum.ELEMENTEDWALL' should have at least one applicability

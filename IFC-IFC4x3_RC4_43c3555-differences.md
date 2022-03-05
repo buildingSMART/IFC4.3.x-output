@@ -1,11 +1,11 @@
 # Express schema differences
 
-161 items
+163 items
 
 
 ### Missing data
 
-38 items
+40 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -23,10 +23,12 @@
 | IfcPostalAddress                     |                                 | not in 'IFC.exp' |
 | IfcProxy                             |                                 | not in 'IFC.exp' |
 | IfcSine                              |                                 | not in 'IFC.exp' |
+| IfcSlabElementedCase                 |                                 | not in 'IFC.exp' |
 | IfcSlabStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                                 | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                                 | not in 'IFC.exp' |
 | IfcTransportElementTypeSelect        |                                 | not in 'IFC.exp' |
+| IfcWallElementedCase                 |                                 | not in 'IFC.exp' |
 | IfcWindowStandardCase                |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
