@@ -2378,25 +2378,6 @@
 * The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
 * The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
 * The association 'IfcElementTypePropertySetsforObjectsPset_ElementKinematics' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcElementType'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialCombustion' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialConcrete' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialEnergy' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialFuel' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialHygroscopic' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialMechanical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialOptical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialSteel' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialThermal' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWater' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWood' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MaterialWoodBasedStructure' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamInPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamInPlaneNegative' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalBeamOutOfPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelInPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelOutOfPlane' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
-* The association 'IfcMaterialPropertySetsforObjectsPset_MechanicalPanelOutOfPlaneNegative' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMaterial'
 * The association 'IfcMooringDeviceTypePropertySetsforObjectsPset_MooringDeviceCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMooringDeviceType'
 * The association 'IfcProfileDefPropertySetsforObjectsPset_ProfileMechanical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcProfileDef'
 * The association 'IfcSpatialElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcSpatialElementType'
@@ -2419,25 +2400,6 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerDuration' should be associated to an element with corresponding IfcObjectType, not IfcSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerPerformance' should be associated to an element with corresponding IfcObjectType, not IfcAsset
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaintenanceTriggerPerformance' should be associated to an element with corresponding IfcObjectType, not IfcSystem
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialCombustion' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialCommon' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialConcrete' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialEnergy' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialFuel' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialHygroscopic' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialMechanical' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialOptical' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialSteel' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialThermal' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialWater' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialWood' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MaterialWoodBasedStructure' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalBeamInPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalBeamInPlaneNegative' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalBeamOutOfPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelInPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelOutOfPlane' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_MechanicalPanelOutOfPlaneNegative' should be associated to an element with corresponding IfcObjectType, not IfcMaterial
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcBuiltSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcZone
@@ -2815,6 +2777,25 @@
 * The Property|Quantity Set 'Pset_FlowInstrumentPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_HumidifierPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_IpNetworkEquipmentPHistory' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialCombustion' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialCommon' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialConcrete' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialEnergy' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialFuel' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialHygroscopic' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialMechanical' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialOptical' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialSteel' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialThermal' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWater' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWood' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWoodBasedStructure' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamInPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamInPlaneNegative' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamOutOfPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelInPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlaneNegative' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeFittingPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeSegmentPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_ProjectCommon' should have at least one applicability
@@ -4341,6 +4322,7 @@
 * The Property|Quantity Set 'IfcMarinePartTypeEnum.VEHICLESERVICING' should have at least one applicability
 * The Property|Quantity Set 'IfcMarinePartTypeEnum.WATERFIELD' should have at least one applicability
 * The Property|Quantity Set 'IfcMarinePartTypeEnum.WEATHERSIDE' should have at least one applicability
+* The Property|Quantity Set 'IfcMaterial' should have at least one applicability
 * The Property|Quantity Set 'IfcMaterialClassificationRelationship' should have at least one applicability
 * The Property|Quantity Set 'IfcMaterialConstituent' should have at least one applicability
 * The Property|Quantity Set 'IfcMaterialConstituentSet' should have at least one applicability
@@ -5542,6 +5524,25 @@
 * The Property|Quantity Set 'Pset_FlowInstrumentPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_HumidifierPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_IpNetworkEquipmentPHistory' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialCombustion' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialCommon' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialConcrete' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialEnergy' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialFuel' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialHygroscopic' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialMechanical' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialOptical' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialSteel' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialThermal' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWater' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWood' should have at least one applicability
+* The Property|Quantity Set 'Pset_MaterialWoodBasedStructure' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamInPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamInPlaneNegative' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalBeamOutOfPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelInPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlane' should have at least one applicability
+* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlaneNegative' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeFittingPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeSegmentPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_ProjectCommon' should have at least one applicability
