@@ -2373,13 +2373,10 @@
 * The resource 'WindowTypeAttributes' has no definition
 ## IfcObjectAssociationForPropertySetAssoc
 
-* The association 'IfcArbitraryClosedProfileDefPropertySetsforObjectsPset_ProfileArbitraryDoubleT' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryClosedProfileDef'
-* The association 'IfcArbitraryProfileDefWithVoidsPropertySetsforObjectsPset_ProfileArbitraryHollowCore' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcArbitraryProfileDefWithVoids'
 * The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
 * The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
 * The association 'IfcElementTypePropertySetsforObjectsPset_ElementKinematics' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcElementType'
 * The association 'IfcMooringDeviceTypePropertySetsforObjectsPset_MooringDeviceCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMooringDeviceType'
-* The association 'IfcProfileDefPropertySetsforObjectsPset_ProfileMechanical' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcProfileDef'
 * The association 'IfcSpatialElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcSpatialElementType'
 * The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
 * The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
@@ -2403,9 +2400,6 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcBuiltSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcZone
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileArbitraryDoubleT' should be associated to an element with corresponding IfcObjectType, not IfcArbitraryClosedProfileDef
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileArbitraryHollowCore' should be associated to an element with corresponding IfcObjectType, not IfcArbitraryProfileDefWithVoids
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProfileMechanical' should be associated to an element with corresponding IfcObjectType, not IfcProfileDef
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcGroup
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProcess
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProduct
@@ -2798,6 +2792,9 @@
 * The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlaneNegative' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeFittingPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeSegmentPHistory' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileArbitraryDoubleT' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileArbitraryHollowCore' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileMechanical' should have at least one applicability
 * The Property|Quantity Set 'Pset_ProjectCommon' should have at least one applicability
 * The Property|Quantity Set 'Pset_PumpPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_SensorPHistory' should have at least one applicability
@@ -3333,7 +3330,9 @@
 * The Property|Quantity Set 'IfcAppliedValueSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcApproval' should have at least one applicability
 * The Property|Quantity Set 'IfcApprovalRelationship' should have at least one applicability
+* The Property|Quantity Set 'IfcArbitraryClosedProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcArbitraryOpenProfileDef' should have at least one applicability
+* The Property|Quantity Set 'IfcArbitraryProfileDefWithVoids' should have at least one applicability
 * The Property|Quantity Set 'IfcAssociatedSurface' should have at least one applicability
 * The Property|Quantity Set 'IfcAsymmetricIShapeProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcAudioVisualApplianceType' should have at least one applicability
@@ -4558,6 +4557,7 @@
 * The Property|Quantity Set 'IfcProductRepresentation' should have at least one applicability
 * The Property|Quantity Set 'IfcProductRepresentationSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcProductSelect' should have at least one applicability
+* The Property|Quantity Set 'IfcProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcProfileProperties' should have at least one applicability
 * The Property|Quantity Set 'IfcProject' should have at least one applicability
 * The Property|Quantity Set 'IfcProjectLibrary' should have at least one applicability
@@ -5545,6 +5545,9 @@
 * The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlaneNegative' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeFittingPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeSegmentPHistory' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileArbitraryDoubleT' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileArbitraryHollowCore' should have at least one applicability
+* The Property|Quantity Set 'Pset_ProfileMechanical' should have at least one applicability
 * The Property|Quantity Set 'Pset_ProjectCommon' should have at least one applicability
 * The Property|Quantity Set 'Pset_PumpPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_SensorPHistory' should have at least one applicability
