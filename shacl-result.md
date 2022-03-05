@@ -1,6 +1,8 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
+* The resource 'IfcDiscreteAccessoryTypeEnum.FILLER' has no definition
+* The resource 'IfcDiscreteAccessoryTypeEnum.FLASHING' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -856,6 +858,8 @@
 * The resource 'IfcDiscreteAccessoryTypeEnum.CABLEARRANGER' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.ELASTIC_CUSHION' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.EXPANSION_JOINT_DEVICE' has no definition
+* The resource 'IfcDiscreteAccessoryTypeEnum.FILLER' has no definition
+* The resource 'IfcDiscreteAccessoryTypeEnum.FLASHING' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.INSULATOR' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.LOCK' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.NOTDEFINED' has no definition
@@ -3778,6 +3782,8 @@
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.BIRDPROTECTION' should have at least one applicability
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.ELASTIC_CUSHION' should have at least one applicability
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.EXPANSION_JOINT_DEVICE' should have at least one applicability
+* The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.FILLER' should have at least one applicability
+* The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.FLASHING' should have at least one applicability
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.PANEL_STRENGTHENING' should have at least one applicability
 * The Property|Quantity Set 'IfcDiscreteAccessoryTypeEnum.POINTMACHINEMOUNTINGDEVICE' should have at least one applicability
