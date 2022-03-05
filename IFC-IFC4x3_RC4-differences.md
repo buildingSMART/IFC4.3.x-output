@@ -1,42 +1,30 @@
 # Express schema differences
 
-166 items
+153 items
 
 
 ### Missing data
 
-38 items
+26 items
 
 | Name                                 | IFC4x3_RC4.exp          | IFC.exp          |
 |--------------------------------------|-------------------------|------------------|
-| IfcBeamStandardCase                  |                         | not in 'IFC.exp' |
-| IfcColumnStandardCase                |                         | not in 'IFC.exp' |
-| IfcCosine                            |                         | not in 'IFC.exp' |
-| IfcDoorStandardCase                  |                         | not in 'IFC.exp' |
 | IfcDoorStyle                         |                         | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                         | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                         | not in 'IFC.exp' |
-| IfcMemberStandardCase                |                         | not in 'IFC.exp' |
-| IfcOpeningStandardCase               |                         | not in 'IFC.exp' |
 | IfcPlant                             |                         | not in 'IFC.exp' |
-| IfcPlateStandardCase                 |                         | not in 'IFC.exp' |
 | IfcPostalAddress                     |                         | not in 'IFC.exp' |
 | IfcProxy                             |                         | not in 'IFC.exp' |
-| IfcSine                              |                         | not in 'IFC.exp' |
-| IfcSlabStandardCase                  |                         | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                         | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                         | not in 'IFC.exp' |
 | IfcTransportElementTypeSelect        |                         | not in 'IFC.exp' |
-| IfcWindowStandardCase                |                         | not in 'IFC.exp' |
 | IfcWindowStyle                       |                         | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4.exp' |                  |
-| IfcCosineSpiral                      | not in 'IFC4x3_RC4.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4.exp' |                  |
-| IfcSineSpiral                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4.exp' |                  |
@@ -50,12 +38,11 @@
 
 ### Type definitions
 
-5 items
+4 items
 
 | Name                            | IFC4x3_RC4.exp                                                                                                                                                                                  | IFC.exp                                                                                                                                                                                                                                                            |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IfcBuildingElementProxyTypeEnum | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, PROVISIONFORSPACE, PROVISIONFORVOID, USERDEFINED                                                                                                         | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, USERDEFINED                                                                                                                                                                                                                 |
-| IfcCableCarrierFittingTypeEnum  | BEND, CROSS, NOTDEFINED, REDUCER, TEE, USERDEFINED                                                                                                                                              | BEND, CONNECTOR, CROSS, JUNCTION, NOTDEFINED, TEE, TRANSITION, USERDEFINED                                                                                                                                                                                         |
 | IfcRailwayPartTypeEnum          | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                   |
 | IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                                                    | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
 | IfcTaskTypeEnum                 | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED                                   | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
