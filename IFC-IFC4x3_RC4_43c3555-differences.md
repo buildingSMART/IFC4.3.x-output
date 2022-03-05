@@ -1,30 +1,42 @@
 # Express schema differences
 
-148 items
+161 items
 
 
 ### Missing data
 
-26 items
+38 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
+| IfcBeamStandardCase                  |                                 | not in 'IFC.exp' |
+| IfcColumnStandardCase                |                                 | not in 'IFC.exp' |
+| IfcCosine                            |                                 | not in 'IFC.exp' |
+| IfcDoorStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
+| IfcMemberStandardCase                |                                 | not in 'IFC.exp' |
+| IfcOpeningStandardCase               |                                 | not in 'IFC.exp' |
 | IfcPlant                             |                                 | not in 'IFC.exp' |
+| IfcPlateStandardCase                 |                                 | not in 'IFC.exp' |
 | IfcPostalAddress                     |                                 | not in 'IFC.exp' |
 | IfcProxy                             |                                 | not in 'IFC.exp' |
+| IfcSine                              |                                 | not in 'IFC.exp' |
+| IfcSlabStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                                 | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                                 | not in 'IFC.exp' |
 | IfcTransportElementTypeSelect        |                                 | not in 'IFC.exp' |
+| IfcWindowStandardCase                |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcCosineSpiral                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcSineSpiral                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
@@ -38,11 +50,12 @@
 
 ### Type definitions
 
-3 items
+4 items
 
 | Name                            | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                            |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IfcBuildingElementProxyTypeEnum | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, PROVISIONFORSPACE, PROVISIONFORVOID, USERDEFINED                                                                       | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, USERDEFINED                                                                                                                                                                                                                 |
+| IfcCableCarrierFittingTypeEnum  | BEND, CROSS, NOTDEFINED, REDUCER, TEE, USERDEFINED                                                                                                            | BEND, CONNECTOR, CROSS, JUNCTION, NOTDEFINED, TEE, TRANSITION, USERDEFINED                                                                                                                                                                                         |
 | IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                  | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
 | IfcTaskTypeEnum                 | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 
