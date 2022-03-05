@@ -1,6 +1,6 @@
 # Express schema differences
 
-160 items
+161 items
 
 
 ### Missing data
@@ -50,11 +50,12 @@
 
 ### Type definitions
 
-3 items
+4 items
 
 | Name                            | IFC4x3_RC4_43c3555.exp                                                                                                                                        | IFC.exp                                                                                                                                                                                                                                                            |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IfcBuildingElementProxyTypeEnum | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, PROVISIONFORSPACE, PROVISIONFORVOID, USERDEFINED                                                                       | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, USERDEFINED                                                                                                                                                                                                                 |
+| IfcCableCarrierFittingTypeEnum  | BEND, CROSS, NOTDEFINED, REDUCER, TEE, USERDEFINED                                                                                                            | BEND, CONNECTOR, CROSS, JUNCTION, NOTDEFINED, TEE, TRANSITION, USERDEFINED                                                                                                                                                                                         |
 | IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                  | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
 | IfcTaskTypeEnum                 | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |
 

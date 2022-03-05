@@ -1,6 +1,6 @@
 # Express schema differences
 
-165 items
+166 items
 
 
 ### Missing data
@@ -50,11 +50,12 @@
 
 ### Type definitions
 
-4 items
+5 items
 
 | Name                            | IFC4x3_RC4.exp                                                                                                                                                                                  | IFC.exp                                                                                                                                                                                                                                                            |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IfcBuildingElementProxyTypeEnum | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, PROVISIONFORSPACE, PROVISIONFORVOID, USERDEFINED                                                                                                         | COMPLEX, ELEMENT, NOTDEFINED, PARTIAL, USERDEFINED                                                                                                                                                                                                                 |
+| IfcCableCarrierFittingTypeEnum  | BEND, CROSS, NOTDEFINED, REDUCER, TEE, USERDEFINED                                                                                                                                              | BEND, CONNECTOR, CROSS, JUNCTION, NOTDEFINED, TEE, TRANSITION, USERDEFINED                                                                                                                                                                                         |
 | IfcRailwayPartTypeEnum          | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                   |
 | IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                                                    | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                             |
 | IfcTaskTypeEnum                 | ATTENDANCE, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, USERDEFINED                                   | ADJUSTMENT, ATTENDANCE, CALIBRATION, CONSTRUCTION, DEMOLITION, DISMANTLE, DISPOSAL, EMERGENCY, INSPECTION, INSTALLATION, LOGISTIC, MAINTENANCE, MOVE, NOTDEFINED, OPERATION, REMOVAL, RENOVATION, SAFETY, SHUTDOWN, STARTUP, TESTING, TROUBLESHOOTING, USERDEFINED |

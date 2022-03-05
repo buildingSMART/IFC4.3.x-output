@@ -636,10 +636,12 @@
 * The resource 'IfcBurnerTypeEnum.NOTDEFINED' has no definition
 * The resource 'IfcBurnerTypeEnum.USERDEFINED' has no definition
 * The resource 'IfcCableCarrierFittingTypeEnum.BEND' has no definition
+* The resource 'IfcCableCarrierFittingTypeEnum.CONNECTOR' has no definition
 * The resource 'IfcCableCarrierFittingTypeEnum.CROSS' has no definition
+* The resource 'IfcCableCarrierFittingTypeEnum.JUNCTION' has no definition
 * The resource 'IfcCableCarrierFittingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.REDUCER' has no definition
 * The resource 'IfcCableCarrierFittingTypeEnum.TEE' has no definition
+* The resource 'IfcCableCarrierFittingTypeEnum.TRANSITION' has no definition
 * The resource 'IfcCableCarrierFittingTypeEnum.USERDEFINED' has no definition
 * The resource 'IfcCableCarrierSegmentTypeEnum.CABLEBRACKET' has no definition
 * The resource 'IfcCableCarrierSegmentTypeEnum.CABLELADDERSEGMENT' has no definition
@@ -3447,9 +3449,9 @@
 * The Property|Quantity Set 'IfcBurnerTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcCShapeProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierFittingType' should have at least one applicability
+* The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.CONNECTOR' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.CROSS' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.NOTDEFINED' should have at least one applicability
-* The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.REDUCER' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.TEE' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierFittingTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcCableCarrierSegmentType' should have at least one applicability
