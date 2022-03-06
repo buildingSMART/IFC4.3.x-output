@@ -20,6 +20,7 @@
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SheathColours' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
+* The Property 'Pset_ConcreteElementGeneral.CastingMethod' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeCommon.FinishColour' has no definition
 * The Property 'Pset_DistributionPortCommon.ColourCode' has no definition
@@ -97,8 +98,6 @@
 * The resource 'ClearanceGeometry' has no definition
 * The resource 'ComplexPropertyCP_MaterialMechanicalBeam' has no definition
 * The resource 'ComplexPropertyCP_MaterialMechanicalPanel' has no definition
-* The resource 'ConstraintAssociationAttribute1Values.' has no definition
-* The resource 'ConstraintAssociationAttribute1Values.Usage' has no definition
 * The resource 'DoorTypeAttributes' has no definition
 * The resource 'EarthworksCuttings' has no definition
 * The resource 'ElementComposition' has no definition
@@ -184,6 +183,7 @@
 * The resource 'EnumeratedValuePEnum_CompressedAirFilterType' has no definition
 * The resource 'EnumeratedValuePEnum_CompressorTypePowerSource' has no definition
 * The resource 'EnumeratedValuePEnum_ComputerUIType' has no definition
+* The resource 'EnumeratedValuePEnum_ConcreteCastingMethod' has no definition
 * The resource 'EnumeratedValuePEnum_ConductorFunctionEnum' has no definition
 * The resource 'EnumeratedValuePEnum_ConduitShapeType' has no definition
 * The resource 'EnumeratedValuePEnum_ConstructionEnum' has no definition
@@ -1997,8 +1997,6 @@
 * The resource 'IfcVirtualElementTypeEnum.BOUNDARY' has no definition
 * The resource 'IfcVirtualElementTypeEnum.CLEARANCE' has no definition
 * The resource 'IfcVirtualElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcVirtualElementTypeEnum.PROVISIONFORAREA' has no definition
-* The resource 'IfcVirtualElementTypeEnum.PROVISIONFORSPACE' has no definition
 * The resource 'IfcVirtualElementTypeEnum.PROVISIONFORVOID' has no definition
 * The resource 'IfcVirtualElementTypeEnum.USERDEFINED' has no definition
 * The resource 'IfcVoidingFeatureTypeEnum.CHAMFER' has no definition
@@ -2060,23 +2058,8 @@
 * The resource 'ListValueTimeMeasure' has no definition
 * The resource 'ListValueURIReference' has no definition
 * The resource 'MaterialConstituentSet' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Back' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Casing' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Coating' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Conductor' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Fill' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Front' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Insulation' has no definition
-* The resource 'MaterialLayerSetUsageNameValues.Lining' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Casing' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Coating' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Conductor' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Core' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Insulation' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Lining' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Screen' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Sheath' has no definition
-* The resource 'MaterialProfileSetUsageNameValues.Trim' has no definition
+* The resource 'MaterialLayerSetUsage' has no definition
+* The resource 'MaterialProfileSetUsage' has no definition
 * The resource 'MaterialSetNameValues.Back' has no definition
 * The resource 'MaterialSetNameValues.Base' has no definition
 * The resource 'MaterialSetNameValues.Blade' has no definition
@@ -2541,22 +2524,10 @@
 * The concept usage 'Mapped Geometry' for entity 'IfcReinforcingBar' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcReinforcingMesh' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Mapped Geometry' for entity 'IfcTendon' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcStructuralSurfaceMember' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcPlateType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcSlabType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcWallType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcFlowSegment' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'IfcStructuralCurveMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcBeamType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcColumnType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
@@ -2567,11 +2538,6 @@
 * The concept usage 'Material Single' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'IfcTaskType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object User Identity' for entity 'IfcObject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Placement' for entity 'IfcGrid' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Port Connectivity' for entity 'IfcDistributionPort' in MVD 'GeneralUsage' is not modeled in UML
@@ -2648,7 +2614,11 @@
 * The concept usage 'Spatial Containment' for entity 'IfcTransportElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Containment' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Decomposition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
@@ -3004,8 +2974,6 @@
 * The Property|Quantity Set 'ClearanceGeometry' should have at least one applicability
 * The Property|Quantity Set 'ComplexPropertyCP_MaterialMechanicalBeam' should have at least one applicability
 * The Property|Quantity Set 'ComplexPropertyCP_MaterialMechanicalPanel' should have at least one applicability
-* The Property|Quantity Set 'ConstraintAssociationAttribute1Values.' should have at least one applicability
-* The Property|Quantity Set 'ConstraintAssociationAttribute1Values.Usage' should have at least one applicability
 * The Property|Quantity Set 'DataType' should have at least one applicability
 * The Property|Quantity Set 'DataType' should have at least one applicability
 * The Property|Quantity Set 'DataType' should have at least one applicability
@@ -3099,6 +3067,7 @@
 * The Property|Quantity Set 'EnumeratedValuePEnum_CompressedAirFilterType' should have at least one applicability
 * The Property|Quantity Set 'EnumeratedValuePEnum_CompressorTypePowerSource' should have at least one applicability
 * The Property|Quantity Set 'EnumeratedValuePEnum_ComputerUIType' should have at least one applicability
+* The Property|Quantity Set 'EnumeratedValuePEnum_ConcreteCastingMethod' should have at least one applicability
 * The Property|Quantity Set 'EnumeratedValuePEnum_ConductorFunctionEnum' should have at least one applicability
 * The Property|Quantity Set 'EnumeratedValuePEnum_ConduitShapeType' should have at least one applicability
 * The Property|Quantity Set 'EnumeratedValuePEnum_ConstructionEnum' should have at least one applicability
@@ -5411,8 +5380,6 @@
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.BOUNDARY' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.CLEARANCE' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.NOTDEFINED' should have at least one applicability
-* The Property|Quantity Set 'IfcVirtualElementTypeEnum.PROVISIONFORAREA' should have at least one applicability
-* The Property|Quantity Set 'IfcVirtualElementTypeEnum.PROVISIONFORSPACE' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualGridIntersection' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeature' should have at least one applicability
@@ -5479,23 +5446,8 @@
 * The Property|Quantity Set 'ListValueTimeMeasure' should have at least one applicability
 * The Property|Quantity Set 'ListValueURIReference' should have at least one applicability
 * The Property|Quantity Set 'MaterialConstituentSet' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Back' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Casing' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Coating' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Conductor' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Fill' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Front' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Insulation' should have at least one applicability
-* The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Lining' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Casing' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Coating' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Conductor' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Core' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Insulation' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Lining' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Screen' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Sheath' should have at least one applicability
-* The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Trim' should have at least one applicability
+* The Property|Quantity Set 'MaterialLayerSetUsage' should have at least one applicability
+* The Property|Quantity Set 'MaterialProfileSetUsage' should have at least one applicability
 * The Property|Quantity Set 'MaterialSetNameValues.Back' should have at least one applicability
 * The Property|Quantity Set 'MaterialSetNameValues.Base' should have at least one applicability
 * The Property|Quantity Set 'MaterialSetNameValues.Blade' should have at least one applicability

@@ -1,6 +1,6 @@
 # Express schema differences
 
-178 items
+176 items
 
 
 ### Missing data
@@ -72,11 +72,10 @@
 
 ### Entity definitions
 
-31 items
+29 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                     | IFC.exp                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| IfcBuilding attributes                       | ['ElevationOfRefHeight', 'ElevationOfTerrain', 'BuildingAddress']                          | ['ElevationOfRefHeight', 'ElevationOfTerrain']                                                  |
 | IfcClassification attributes                 | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Location', 'ReferenceTokens'] | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Specification', 'ReferenceTokens'] |
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                  |
 | IfcDerivedUnit attributes                    | ['Elements', 'UnitType', 'UserDefinedType']                                                | ['Elements', 'UnitType', 'UserDefinedType', 'Name']                                             |
@@ -94,7 +93,6 @@
 | IfcPolygonalFaceSet attributes               | ['Closed', 'Faces', 'PnIndex']                                                             | ['Faces', 'PnIndex']                                                                            |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                    | ['Name', 'Specification']                                                                       |
 | IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                      | ['PredefinedType']                                                                              |
-| IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                              |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                               |
 | IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                             |
 | IfcTessellatedFaceSet attributes             | ['Coordinates']                                                                            | ['Coordinates', 'Closed']                                                                       |

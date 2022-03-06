@@ -1,6 +1,6 @@
 # Express schema differences
 
-184 items
+182 items
 
 
 ### Missing data
@@ -73,11 +73,10 @@
 
 ### Entity definitions
 
-36 items
+34 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| IfcBuilding attributes                       | ['ElevationOfRefHeight', 'ElevationOfTerrain', 'BuildingAddress']                          | ['ElevationOfRefHeight', 'ElevationOfTerrain']                                                                  |
 | IfcClassification attributes                 | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Location', 'ReferenceTokens'] | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Specification', 'ReferenceTokens']                 |
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                  | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                                  |
 | IfcDerivedUnit attributes                    | ['Elements', 'UnitType', 'UserDefinedType']                                                | ['Elements', 'UnitType', 'UserDefinedType', 'Name']                                                             |
@@ -99,7 +98,6 @@
 | IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                             | ['CrossSectionPositions']                                                                                       |
 | IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']               | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                         |
 | IfcSectionedSurface.CrossSectionPositions    | CrossSectionPositions : list[2:?] of IfcPointByDistanceExpression                          | CrossSectionPositions : list[2:?] of IfcAxis2PlacementLinear                                                    |
-| IfcSite attributes                           | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber', 'SiteAddress']          | ['RefLatitude', 'RefLongitude', 'RefElevation', 'LandTitleNumber']                                              |
 | IfcSpatialElement inverses                   | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements']                            | ['ContainsElements', 'ServicedBySystems', 'ReferencesElements', 'IsInterferedByElements', 'InterferesElements'] |
 | IfcStructuralCurveConnection attributes      | ['Axis']                                                                                   | ['AxisDirection']                                                                                               |
 | IfcSweptDiskSolidPolygonal.FilletRadius      | FilletRadius : optional IfcPositiveLengthMeasure                                           | FilletRadius : optional IfcNonNegativeLengthMeasure                                                             |
