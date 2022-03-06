@@ -1,6 +1,7 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
+* The resource 'IfcCoveringTypeEnum.TOPPING' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -828,6 +829,7 @@
 * The resource 'IfcCoveringTypeEnum.ROOFING' has no definition
 * The resource 'IfcCoveringTypeEnum.SKIRTINGBOARD' has no definition
 * The resource 'IfcCoveringTypeEnum.SLEEVING' has no definition
+* The resource 'IfcCoveringTypeEnum.TOPPING' has no definition
 * The resource 'IfcCoveringTypeEnum.USERDEFINED' has no definition
 * The resource 'IfcCoveringTypeEnum.WRAPPING' has no definition
 * The resource 'IfcCrewResourceTypeEnum.NOTDEFINED' has no definition
@@ -3675,6 +3677,7 @@
 * The Property|Quantity Set 'IfcCoveringTypeEnum.ROOFING' should have at least one applicability
 * The Property|Quantity Set 'IfcCoveringTypeEnum.SKIRTINGBOARD' should have at least one applicability
 * The Property|Quantity Set 'IfcCoveringTypeEnum.SLEEVING' should have at least one applicability
+* The Property|Quantity Set 'IfcCoveringTypeEnum.TOPPING' should have at least one applicability
 * The Property|Quantity Set 'IfcCoveringTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcCoveringTypeEnum.WRAPPING' should have at least one applicability
 * The Property|Quantity Set 'IfcCrewResource' should have at least one applicability
