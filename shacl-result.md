@@ -1,7 +1,6 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
-* The resource 'IfcCoveringTypeEnum.TOPPING' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
