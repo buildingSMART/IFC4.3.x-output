@@ -2070,6 +2070,42 @@
 * The resource 'MaterialProfileSetUsageNameValues.Screen' has no definition
 * The resource 'MaterialProfileSetUsageNameValues.Sheath' has no definition
 * The resource 'MaterialProfileSetUsageNameValues.Trim' has no definition
+* The resource 'MaterialSetNameValues.Back' has no definition
+* The resource 'MaterialSetNameValues.Base' has no definition
+* The resource 'MaterialSetNameValues.Blade' has no definition
+* The resource 'MaterialSetNameValues.Bulb' has no definition
+* The resource 'MaterialSetNameValues.Casing' has no definition
+* The resource 'MaterialSetNameValues.Coating' has no definition
+* The resource 'MaterialSetNameValues.Conductor' has no definition
+* The resource 'MaterialSetNameValues.Core' has no definition
+* The resource 'MaterialSetNameValues.Cover' has no definition
+* The resource 'MaterialSetNameValues.Damping' has no definition
+* The resource 'MaterialSetNameValues.Filament' has no definition
+* The resource 'MaterialSetNameValues.Fill' has no definition
+* The resource 'MaterialSetNameValues.Finish' has no definition
+* The resource 'MaterialSetNameValues.Frame' has no definition
+* The resource 'MaterialSetNameValues.Framing' has no definition
+* The resource 'MaterialSetNameValues.Front' has no definition
+* The resource 'MaterialSetNameValues.Fuel' has no definition
+* The resource 'MaterialSetNameValues.Glazing' has no definition
+* The resource 'MaterialSetNameValues.Hardware' has no definition
+* The resource 'MaterialSetNameValues.Impeller' has no definition
+* The resource 'MaterialSetNameValues.Insulation' has no definition
+* The resource 'MaterialSetNameValues.Lining' has no definition
+* The resource 'MaterialSetNameValues.LoadBearing' has no definition
+* The resource 'MaterialSetNameValues.Media' has no definition
+* The resource 'MaterialSetNameValues.Operation' has no definition
+* The resource 'MaterialSetNameValues.Padding' has no definition
+* The resource 'MaterialSetNameValues.Panel' has no definition
+* The resource 'MaterialSetNameValues.Refrigerant' has no definition
+* The resource 'MaterialSetNameValues.Screen' has no definition
+* The resource 'MaterialSetNameValues.Seal' has no definition
+* The resource 'MaterialSetNameValues.Sheath' has no definition
+* The resource 'MaterialSetNameValues.Strainer' has no definition
+* The resource 'MaterialSetNameValues.Surface' has no definition
+* The resource 'MaterialSetNameValues.Trim' has no definition
+* The resource 'MaterialSetNameValues.Wall' has no definition
+* The resource 'MaterialSetNameValues.Wheel' has no definition
 * The resource 'MechanicalFastenerAttributes' has no definition
 * The resource 'MechanicalFastenerTypeAttributes' has no definition
 * The resource 'ObjectConnectivity' has no definition
@@ -5450,6 +5486,42 @@
 * The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Screen' should have at least one applicability
 * The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Sheath' should have at least one applicability
 * The Property|Quantity Set 'MaterialProfileSetUsageNameValues.Trim' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Back' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Base' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Blade' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Bulb' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Casing' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Coating' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Conductor' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Core' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Cover' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Damping' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Filament' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Fill' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Finish' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Frame' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Framing' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Front' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Fuel' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Glazing' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Hardware' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Impeller' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Insulation' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Lining' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.LoadBearing' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Media' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Operation' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Padding' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Panel' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Refrigerant' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Screen' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Seal' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Sheath' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Strainer' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Surface' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Trim' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Wall' should have at least one applicability
+* The Property|Quantity Set 'MaterialSetNameValues.Wheel' should have at least one applicability
 * The Property|Quantity Set 'MechanicalFastenerAttributes' should have at least one applicability
 * The Property|Quantity Set 'MechanicalFastenerTypeAttributes' should have at least one applicability
 * The Property|Quantity Set 'ObjectConnectivity' should have at least one applicability
