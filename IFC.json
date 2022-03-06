@@ -16220,6 +16220,34 @@
         "Parent": "IfcObject",
         "Description": "The IfcProduct is an abstract representation of any object that relates to a geometric or spatial context. An IfcProduct occurs at a specific location in space if it has a geometric representation assigned. It can be placed relatively to other products, but ultimately relative to the project coordinate system. The ObjectPlacement attribute establishes the coordinate system in which all points and directions used by the geometric representation items under Representation are founded. The Representation is provided by an IfcProductDefinitionShape being either a geometric shape representation, or a topology representation (with or without underlying geometry of the topological items).Products include manufactured, supplied or created objects (referred to as elements) for incorporation into an AEC/FM project. This also includes objects that are created indirectly by other products, as spaces are defined by bounding elements. Products can be designated for permanent use or temporary use, an example for the latter is formwork. Products are defined by their properties and representations.In addition to physical products (covered by the subtype IfcElement) and spatial items (covered by the subtype IfcSpatialElement) the IfcProduct also includes non-physical items, that relate to a geometric or spatial contexts, such as grid, port, annotation, structural actions, etc.Any instance of IfcProduct defines a particular occurrence of a product, the common type information, that relates to many similar (or identical) occurrences of IfcProduct, is handled by the IfcTypeProduct (and its subtypes), assigned to one or many occurrences of IfcProduct by using the objectified relationship IfcRelDefinesByType. The IfcTypeProduct may provide, in addition to common properties, also a common geometric representation for all occurrences.NOTE  See IfcTypeProduct for how to use a common geometric representation and IfcRelDefinesByType for using and overriding common properties.On a generic level products can be assigned to processes, controls, resources, project by using the relationship objects that refer to the corresponding object:Having a control applied: assigned using IfcRelAssignsToControl linking the IfcProduct to an IfcControl\nBeing assigned to a process: assigned using IfcRelAssignsToProcess linking the IfcProduct to an IfcProcess\nBeing assigned to a resource: assigned using IfcRelAssignsToResource linking the IfcProduct to an IfcResourceEXAMPLE  An example of the control relationship is the assignment of a performance history to a distribution element. An example of process assignment relationship is the assignment of products like wall, slab, column to a construction task for construction planning. And an example of resource assignment relationship is the assignment of products to a construction resource that consumes the product.\nHISTORY  New entity in IFC1.0",
         "Psets": {
+          "Qto_BodyGeometryValidation": {
+            "Properties": {
+              "GrossSurfaceArea": {
+                "type": "real",
+                "Description": "Total gross area of the object, normally generated as perimeter * length + 2 * cross section area. It is the sum of OuterSurfaceArea + (2 x CrossSectionArea) and shall only be given, if the OuterSurfaceArea and CrossSectionArea cannot be established separately."
+              },
+              "GrossVolume": {
+                "type": "real",
+                "Description": "Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account."
+              },
+              "NetSurfaceArea": {
+                "type": "real",
+                "Description": "Net surface area of the object, normally generated as perimeter * length + 2 * cross section area taking into account possible processing features (cut-out's, etc.) or openings and recesses."
+              },
+              "NetVolume": {
+                "type": "real",
+                "Description": "Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses."
+              },
+              "SurfaceGenusAfterFeatures": {
+                "type": "real",
+                "Description": "The Surface Genus of the evaluated representation items after applying product-level geometric features such as openings and projections.Surface Genus is a topological measure that represents the number of \"holes\" or \"handles\" on a surface. For example, a sphere has genus 0, and a torus has genus 1.Computed using the Euler characteristic:$$\\chi=V-E+F$$With the numbers of vertices (V), edges (E) and faces (F)$$\\chi=2\u22122g\u2212b$$With surface genus (g) and the number of boundaries (b) the latter zero in case of an enclosed volume."
+              },
+              "SurfaceGenusBeforeFeatures": {
+                "type": "real",
+                "Description": "The Surface Genus of the evaluated representation items before applying product-level geometric features such as openings and projections.Surface Genus is a topological measure that represents the number of \"holes\" or \"handles\" on a surface. For example, a sphere has genus 0, and a torus has genus 1.Computed using the Euler characteristic:$$\\chi=V-E+F$$With the numbers of vertices (V), edges (E) and faces (F)$$\\chi=2\u22122g\u2212b$$With surface genus (g) and the number of boundaries (b) the latter zero in case of an enclosed volume."
+              }
+            }
+          },
           "Pset_Tolerance": {
             "Properties": {
               "ElevationalFlatness": {
@@ -40193,216 +40221,6 @@
               "Width": {
                 "type": "real",
                 "Description": "The width of the object. Only given, if the object has constant thickness (prismatic)."
-              }
-            }
-          }
-        }
-      },
-      "IfcSolidStratum": {
-        "Parent": "IfcGeotechnicalStratum",
-        "Description": "Representation of the concept of an identified discrete almost homogenous solid geological or surface feature, including discontinuities such as faults, fractures, boundaries and interfaces that are not explicitly modelled.",
-        "Psets": {
-          "Pset_SolidStratumCapacity": {
-            "Properties": {
-              "CohesionBehaviour": {
-                "type": "real",
-                "Description": "Cohesive shear strength of a rock or soil that is independent of interparticle friction."
-              },
-              "FrictionAngle": {
-                "type": "real",
-                "Description": "Friction angle is the tested inclination angle from horizontal."
-              },
-              "FrictionBehaviour": {
-                "type": "real",
-                "Description": "Friction shear strength of a rock or soil that is dependent on interparticle friction."
-              },
-              "GrainSize": {
-                "type": "real",
-                "Description": "Grain size diameter."
-              },
-              "HydraulicConductivity": {
-                "type": "real",
-                "Description": "Hydraulic Conductivity (permeability) of soil for water, given with the K or Kf value in m/s"
-              },
-              "LoadBearingCapacity": {
-                "type": "real",
-                "Description": "Maximum load bearing capacity of the floor structure throughtout the storey as designed."
-              },
-              "NValue": {
-                "type": "integer",
-                "Description": "Blow count from standard penetration testing, to ISO 22476-3, ASTM D1586[1] and Australian Standards AS 1289.6.3.1, which correlates to other engineering properties of soils."
-              },
-              "PermeabilityBehaviour": {
-                "type": "real",
-                "Description": "Proportionality constant in Darcy's law which relates flow rate and viscosity to a pressure gradient applied to the porous media."
-              },
-              "PoisonsRatio": {
-                "type": "real",
-                "Description": "Ratio of transverse contraction strain to longitudinal extension strain in the direction of stretching force."
-              },
-              "PwaveVelocity": {
-                "type": "real",
-                "Description": "P-wave velocity of a rock or soil."
-              },
-              "Resistivity": {
-                "type": "real",
-                "Description": "Electrical resistivity of a rock or soil (Ohm-m)."
-              },
-              "SettlementBehaviour": {
-                "type": "real",
-                "Description": "Estimate of the settlement/compaction behaviour of the stratum."
-              },
-              "SwaveVelocity": {
-                "type": "real",
-                "Description": "S-wave velocity of a rock or soil."
-              }
-            }
-          },
-          "Pset_SolidStratumComposition": {
-            "Properties": {
-              "AirVolume": {
-                "type": "real",
-                "Description": "Relative volume of air stratum constituents."
-              },
-              "BouldersVolume": {
-                "type": "real",
-                "Description": "Relative volume of boulders (typically larger than 200mm) stratum constituents."
-              },
-              "ClayVolume": {
-                "type": "real",
-                "Description": "Relative volume of clay (typically smaller than 0.002mm) stratum constituents."
-              },
-              "CobblesVolume": {
-                "type": "real",
-                "Description": "Relative volume of cobbles (typically larger than 63mm) stratum constituents."
-              },
-              "CompositeFractions": {
-                "type": "PEnum_SoilCompositeFractions",
-                "Description": "Denomination into soil groups by composite fractions",
-                "values": [
-                  "BOULDERS",
-                  "BOULDERS_WITH_COBBLES",
-                  "BOULDERS_WITH_FINER_SOILS",
-                  "CLAY",
-                  "CLAYEY_SILT",
-                  "COBBLES",
-                  "COBBLES_WITH_BOULDERS",
-                  "COBBLES_WITH_FINER_SOILS",
-                  "FILL",
-                  "GRAVEL",
-                  "GRAVEL_WITH_CLAY_OR_SILT",
-                  "GRAVEL_WITH_COBBLES",
-                  "GRAVELLY_SAND",
-                  "NOTKNOWN",
-                  "ORGANIC_CLAY",
-                  "ORGANIC_SILT",
-                  "OTHER",
-                  "SAND",
-                  "SAND_WITH_CLAY_AND_SILT",
-                  "SANDY_CLAYEY_SILT",
-                  "SANDY_GRAVEL",
-                  "SANDY_GRAVEL_WITH_COBBLES",
-                  "SANDY_GRAVELLY_CLAY",
-                  "SANDY_GRAVELLY_SILT",
-                  "SANDY_PEAT",
-                  "SANDY_SILT",
-                  "SILT",
-                  "SILTY_CLAY",
-                  "UNSET"
-                ]
-              },
-              "ContaminantVolume": {
-                "type": "real",
-                "Description": "Relative volume of contaminant stratum constituents."
-              },
-              "FillVolume": {
-                "type": "real",
-                "Description": "Relative volume of fill (controlled placement of anthropogenic soil) stratum constituents."
-              },
-              "GravelVolume": {
-                "type": "real",
-                "Description": "Relative volume of gravel (typically larger than 2mm) stratum constituents."
-              },
-              "OrganicVolume": {
-                "type": "real",
-                "Description": "Relative volume of organic (peat/humus) stratum constituents especially soil."
-              },
-              "RockVolume": {
-                "type": "real",
-                "Description": "Relative volume of rock stratum constituents."
-              },
-              "SandVolume": {
-                "type": "real",
-                "Description": "Relative volume of sand (typically smaller than 2mm) stratum constituents."
-              },
-              "SiltVolume": {
-                "type": "real",
-                "Description": "Relative volume of silt (typically smaller than 0.063mm) stratum constituents."
-              },
-              "WaterVolume": {
-                "type": "real",
-                "Description": "Relative volume of water stratum constituents."
-              }
-            }
-          }
-        }
-      },
-      "IfcVegetation": {
-        "Parent": "IfcGeographicElement",
-        "Description": "Plant life or plant cover (as of an area).\nFor example trees, shrubs, herbs, grasses, ferns, and mosses.",
-        "Psets": {
-          "Pset_PlantCommon": {
-            "Properties": {
-              "BotanicalName": {
-                "type": "string",
-                "Description": "Formal scientific name conforming to the International Code of Nomenclature for algae, fungi, and plants (ICN)"
-              },
-              "LocalName": {
-                "type": "string",
-                "Description": "The local name that the plant is known as."
-              }
-            }
-          }
-        }
-      },
-      "IfcVoidStratum": {
-        "Parent": "IfcGeotechnicalStratum",
-        "Description": "Representation of the concept of an identified discrete air filled geological feature, including caves and other voids"
-      },
-      "IfcWaterStratum": {
-        "Parent": "IfcGeotechnicalStratum",
-        "Description": "Representation of the concept of an identified discrete water filled geological or surface feature including lakes, rivers and seas.",
-        "Psets": {
-          "Pset_WaterStratumCommon": {
-            "Properties": {
-              "AnnualRange": {
-                "type": "real",
-                "Description": "Indicative (95%-100%) annual range in levels."
-              },
-              "AnnualTrend": {
-                "type": "real",
-                "Description": "Indicative (95%-100%) annual rise in level."
-              },
-              "IsFreshwater": {
-                "type": "logical",
-                "Description": "Indication of freshwater (true,false or unknown)",
-                "values": [
-                  "TRUE",
-                  "FALSE",
-                  "UNKNOWN"
-                ]
-              },
-              "SeicheRange": {
-                "type": "real",
-                "Description": "Indicative (95%-100%) range between peaks and troughts of seiche (resonant) waves."
-              },
-              "TidalRange": {
-                "type": "real",
-                "Description": "Indicative (95%-100%) range between high and low tide levels."
-              },
-              "WaveRange": {
-                "type": "real",
-                "Description": "Indicative (95%-100%) range between peaks and troughs of waves"
               }
             }
           }

@@ -37,6 +37,7 @@
 ## DefinitionForPropertySet
 
 * The resource 'Pset_MarinePartChamberCommon' has no definition
+* The resource 'Pset_VegetationCommon' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
@@ -1204,6 +1205,12 @@
 * The resource 'IfcGeographicElementTypeEnum.SOIL_BORING_POINT' has no definition
 * The resource 'IfcGeographicElementTypeEnum.TERRAIN' has no definition
 * The resource 'IfcGeographicElementTypeEnum.USERDEFINED' has no definition
+* The resource 'IfcGeographicElementTypeEnum.VEGETATION' has no definition
+* The resource 'IfcGeotechnicalStratumTypeEnum.NOTDEFINED' has no definition
+* The resource 'IfcGeotechnicalStratumTypeEnum.SOLID' has no definition
+* The resource 'IfcGeotechnicalStratumTypeEnum.USERDEFINED' has no definition
+* The resource 'IfcGeotechnicalStratumTypeEnum.VOID' has no definition
+* The resource 'IfcGeotechnicalStratumTypeEnum.WATER' has no definition
 * The resource 'IfcGradient' has no definition
 * The resource 'IfcGridTypeEnum.IRREGULAR' has no definition
 * The resource 'IfcGridTypeEnum.NOTDEFINED' has no definition
@@ -2253,6 +2260,7 @@
 * The resource 'PropertySingleValue' has no definition
 * The resource 'PropertyTableValue' has no definition
 * The resource 'Pset_MarinePartChamberCommon' has no definition
+* The resource 'Pset_VegetationCommon' has no definition
 * The resource 'Q_AREA' has no definition
 * The resource 'Q_COMPLEX' has no definition
 * The resource 'Q_COUNT' has no definition
@@ -4265,6 +4273,9 @@
 * The Property|Quantity Set 'IfcGeomodel' should have at least one applicability
 * The Property|Quantity Set 'IfcGeoslice' should have at least one applicability
 * The Property|Quantity Set 'IfcGeotechnicalElement' should have at least one applicability
+* The Property|Quantity Set 'IfcGeotechnicalStratumTypeEnum.NOTDEFINED' should have at least one applicability
+* The Property|Quantity Set 'IfcGeotechnicalStratumTypeEnum.USERDEFINED' should have at least one applicability
+* The Property|Quantity Set 'IfcGeotechnicalStratumTypeEnum.VOID' should have at least one applicability
 * The Property|Quantity Set 'IfcGetBasisSurface' should have at least one applicability
 * The Property|Quantity Set 'IfcGradient' should have at least one applicability
 * The Property|Quantity Set 'IfcGradientCurve' should have at least one applicability
@@ -5404,7 +5415,6 @@
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.PROVISIONFORSPACE' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualElementTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcVirtualGridIntersection' should have at least one applicability
-* The Property|Quantity Set 'IfcVoidStratum' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeature' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeatureTypeEnum.CHAMFER' should have at least one applicability
 * The Property|Quantity Set 'IfcVoidingFeatureTypeEnum.CUTOUT' should have at least one applicability
@@ -5750,6 +5760,7 @@
 * The Property|Quantity Set 'Qto_ArealStratumBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_AudioVisualApplianceBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_BeamBaseQuantities' should have at least one applicability
+* The Property|Quantity Set 'Qto_BodyGeometryValidation' should have at least one applicability
 * The Property|Quantity Set 'Qto_BoilerBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_BuildingBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_BuildingElementProxyQuantities' should have at least one applicability

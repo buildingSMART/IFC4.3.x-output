@@ -1,11 +1,11 @@
 # Express schema differences
 
-177 items
+184 items
 
 
 ### Missing data
 
-40 items
+43 items
 
 | Name                                 | IFC4x3_RC4.exp          | IFC.exp          |
 |--------------------------------------|-------------------------|------------------|
@@ -24,15 +24,19 @@
 | IfcSine                              |                         | not in 'IFC.exp' |
 | IfcSlabElementedCase                 |                         | not in 'IFC.exp' |
 | IfcSlabStandardCase                  |                         | not in 'IFC.exp' |
+| IfcSolidStratum                      |                         | not in 'IFC.exp' |
 | IfcTransportElementFixedTypeEnum     |                         | not in 'IFC.exp' |
 | IfcTransportElementNonFixedTypeEnum  |                         | not in 'IFC.exp' |
 | IfcTransportElementTypeSelect        |                         | not in 'IFC.exp' |
+| IfcVoidStratum                       |                         | not in 'IFC.exp' |
 | IfcWallElementedCase                 |                         | not in 'IFC.exp' |
+| IfcWaterStratum                      |                         | not in 'IFC.exp' |
 | IfcWindowStandardCase                |                         | not in 'IFC.exp' |
 | IfcWindowStyle                       |                         | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcCosineSpiral                      | not in 'IFC4x3_RC4.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4.exp' |                  |
+| IfcGeotechnicalStratumTypeEnum       | not in 'IFC4x3_RC4.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcQuantityNumber                    | not in 'IFC4x3_RC4.exp' |                  |
@@ -44,7 +48,6 @@
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTransportationDevice              | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTransportationDeviceType          | not in 'IFC4x3_RC4.exp' |                  |
-| IfcVegetation                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcVehicle                           | not in 'IFC4x3_RC4.exp' |                  |
 | IfcVehicleType                       | not in 'IFC4x3_RC4.exp' |                  |
 | IfcVehicleTypeEnum                   | not in 'IFC4x3_RC4.exp' |                  |
@@ -52,7 +55,7 @@
 
 ### Type definitions
 
-10 items
+11 items
 
 | Name                            | IFC4x3_RC4.exp                                                                                                                                                                                                                                                                                                                                   | IFC.exp                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,6 +65,7 @@
 | IfcCableCarrierFittingTypeEnum  | BEND, CROSS, NOTDEFINED, REDUCER, TEE, USERDEFINED                                                                                                                                                                                                                                                                                               | BEND, CONNECTOR, CROSS, JUNCTION, NOTDEFINED, TEE, TRANSITION, USERDEFINED                                                                                                                                                                                                                                                                                         |
 | IfcCoveringTypeEnum             | CEILING, CLADDING, COPING, FLOORING, INSULATION, MEMBRANE, MOLDING, NOTDEFINED, ROOFING, SKIRTINGBOARD, SLEEVING, USERDEFINED, WRAPPING                                                                                                                                                                                                          | CEILING, CLADDING, COPING, FLOORING, INSULATION, MEMBRANE, MOLDING, NOTDEFINED, ROOFING, SKIRTINGBOARD, SLEEVING, TOPPING, USERDEFINED, WRAPPING                                                                                                                                                                                                                   |
 | IfcDiscreteAccessoryTypeEnum    | ANCHORPLATE, BIRDPROTECTION, BRACKET, CABLEARRANGER, ELASTIC_CUSHION, EXPANSION_JOINT_DEVICE, INSULATOR, LOCK, NOTDEFINED, PANEL_STRENGTHENING, POINTMACHINEMOUNTINGDEVICE, POINT_MACHINE_LOCKING_DEVICE, RAILBRACE, RAILPAD, RAIL_LUBRICATION, RAIL_MECHANICAL_EQUIPMENT, SHOE, SLIDINGCHAIR, SOUNDABSORPTION, TENSIONINGEQUIPMENT, USERDEFINED | ANCHORPLATE, BIRDPROTECTION, BRACKET, CABLEARRANGER, ELASTIC_CUSHION, EXPANSION_JOINT_DEVICE, FILLER, FLASHING, INSULATOR, LOCK, NOTDEFINED, PANEL_STRENGTHENING, POINTMACHINEMOUNTINGDEVICE, POINT_MACHINE_LOCKING_DEVICE, RAILBRACE, RAILPAD, RAIL_LUBRICATION, RAIL_MECHANICAL_EQUIPMENT, SHOE, SLIDINGCHAIR, SOUNDABSORPTION, TENSIONINGEQUIPMENT, USERDEFINED |
+| IfcGeographicElementTypeEnum    | NOTDEFINED, SOIL_BORING_POINT, TERRAIN, USERDEFINED                                                                                                                                                                                                                                                                                              | NOTDEFINED, SOIL_BORING_POINT, TERRAIN, USERDEFINED, VEGETATION                                                                                                                                                                                                                                                                                                    |
 | IfcPropertySetTemplateTypeEnum  | NOTDEFINED, PSET_OCCURRENCEDRIVEN, PSET_PERFORMANCEDRIVEN, PSET_TYPEDRIVENONLY, PSET_TYPEDRIVENOVERRIDE, QTO_OCCURRENCEDRIVEN, QTO_TYPEDRIVENONLY, QTO_TYPEDRIVENOVERRIDE                                                                                                                                                                        | NOTDEFINED, PSET_MATERIALDRIVEN, PSET_OCCURRENCEDRIVEN, PSET_PERFORMANCEDRIVEN, PSET_PROFILEDRIVEN, PSET_TYPEDRIVENONLY, PSET_TYPEDRIVENOVERRIDE, QTO_OCCURRENCEDRIVEN, QTO_TYPEDRIVENONLY, QTO_TYPEDRIVENOVERRIDE                                                                                                                                                 |
 | IfcRailwayPartTypeEnum          | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPESTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                                                                                                  | DILATATIONSUPERSTRUCTURE, LINESIDESTRUCTURE, LINESIDESTRUCTUREPART, NOTDEFINED, PLAINTRACKSUPERSTRUCTURE, SUPERSTRUCTURE, TRACKSTRUCTURE, TRACKSTRUCTUREPART, TURNOUTSUPERSTRUCTURE, USERDEFINED                                                                                                                                                                   |
 | IfcReflectanceMethodEnum        | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PLASTIC, STRAUSS                                                                                                                                                                                                                                                                     | BLINN, FLAT, GLASS, MATT, METAL, MIRROR, NOTDEFINED, PHONG, PHYSICAL, PLASTIC, STRAUSS                                                                                                                                                                                                                                                                             |
@@ -69,7 +73,7 @@
 
 ### Entity definitions
 
-34 items
+36 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                             | IFC.exp                                                                                                         |
 |----------------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -79,6 +83,8 @@
 | IfcDerivedUnit attributes                    | ['Elements', 'UnitType', 'UserDefinedType']                                                | ['Elements', 'UnitType', 'UserDefinedType', 'Name']                                                             |
 | IfcFacilityPart                              | not abstract                                                                               | abstract                                                                                                        |
 | IfcFacilityPart attributes                   | ['PredefinedType', 'UsageType']                                                            | ['UsageType']                                                                                                   |
+| IfcGeotechnicalStratum                       | abstract                                                                                   | not abstract                                                                                                    |
+| IfcGeotechnicalStratum attributes            | []                                                                                         | ['PredefinedType']                                                                                              |
 | IfcGroup inverses                            | ['IsGroupedBy']                                                                            | ['IsGroupedBy', 'ReferencedInStructures']                                                                       |
 | IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                              | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                     |
 | IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                       | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                              |
@@ -110,7 +116,7 @@
 
 ### Constraints
 
-93 items
+94 items
 
 | Name                                                | IFC4x3_RC4.exp                                                                                                                                                                                                                                                                                                                                                                                                                                                             | IFC.exp                                                                                                                                                                                                            |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -145,6 +151,7 @@
 | IfcFooting.CorrectPredefinedType                    | notexists(PredefinedType) or (PredefinedType <> IfcFootingTypeEnum.USERDEFINED) or ((PredefinedType = IfcFootingTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                                                                                                                                                                                                                                                                                               | not(exists(PredefinedType)) or (PredefinedType <> IfcFootingTypeEnum.USERDEFINED) or ((PredefinedType = IfcFootingTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                                     |
 | IfcFurnitureType.CorrectPredefinedType              | (PredefinedType <> IfcFurnitureTypeEnum.USERDEFINED) or ((PredefinedType = IfcFurnitureTypeEnum.USERDEFINED) and exists(self\IfcElementType.ElementType))                                                                                                                                                                                                                                                                                                                  | not(exists(PredefinedType)) or (PredefinedType <> IfcFurnitureTypeEnum.USERDEFINED) or ((PredefinedType = IfcFurnitureTypeEnum.USERDEFINED) and exists(self\IfcElementType.ElementType))                           |
 | IfcGeometricRepresentationSubContext where rules    | ['ParentNoSub', 'UserTargetProvided', 'NoCoordOperation']                                                                                                                                                                                                                                                                                                                                                                                                                  | ['NoCoordOperation', 'ParentNoSub', 'UserTargetProvided']                                                                                                                                                          |
+| IfcGeotechnicalStratum where rules                  | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ['CorrectPredefinedType']                                                                                                                                                                                          |
 | IfcIShapeProfileDef where rules                     | ['ValidFlangeThickness', 'ValidWebThickness', 'ValidFilletRadius']                                                                                                                                                                                                                                                                                                                                                                                                         | ['ValidFilletRadius', 'ValidFlangeThickness', 'ValidWebThickness']                                                                                                                                                 |
 | IfcImpactProtectionDevice.CorrectPredefinedType     | not(exists(PredefinedType)) or ((PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or (PredefinedType <> IfcVibrationDamperTypeEnum.USERDEFINED) or (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED)) or (((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or (PredefinedType = IfcVibrationDamperTypeEnum.USERDEFINED) or (PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED)) and exists(self\IfcObject.ObjectType)) | not(exists(PredefinedType)) or (PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or ((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))       |
 | IfcImpactProtectionDeviceType.CorrectPredefinedType | ((PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or (PredefinedType <> IfcVibrationDamperTypeEnum.USERDEFINED) or (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED)) or (((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or (PredefinedType = IfcVibrationDamperTypeEnum.USERDEFINED) or (PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED)) and exists(self\IfcObject.ObjectType))                                | (PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) or ((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) and exists(self\IfcElementType.ElementType))                                |
