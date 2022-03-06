@@ -1,11 +1,11 @@
 # Express schema differences
 
-168 items
+167 items
 
 
 ### Missing data
 
-40 items
+39 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -20,7 +20,6 @@
 | IfcOpeningStandardCase               |                                 | not in 'IFC.exp' |
 | IfcPlant                             |                                 | not in 'IFC.exp' |
 | IfcPlateStandardCase                 |                                 | not in 'IFC.exp' |
-| IfcPostalAddress                     |                                 | not in 'IFC.exp' |
 | IfcProxy                             |                                 | not in 'IFC.exp' |
 | IfcSine                              |                                 | not in 'IFC.exp' |
 | IfcSlabElementedCase                 |                                 | not in 'IFC.exp' |

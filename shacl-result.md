@@ -3,6 +3,12 @@
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
 ## DefinitionForProperty
 
+* The Property 'Pset_Address.ElectronicMailAddresses' has no definition
+* The Property 'Pset_Address.FacsimileNumbers' has no definition
+* The Property 'Pset_Address.MessagingIDs' has no definition
+* The Property 'Pset_Address.PagerNumber' has no definition
+* The Property 'Pset_Address.TelephoneNumbers' has no definition
+* The Property 'Pset_Address.WWWHomePageURL' has no definition
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
 * The Property 'Pset_AirSideSystemInformation.TotalAirFlow' has no definition
 * The Property 'Pset_AirTerminalBoxPHistory.AirFlowCurve' has no definition
@@ -2046,6 +2052,7 @@
 * The resource 'ListValueLabel' has no definition
 * The resource 'ListValueLengthMeasure' has no definition
 * The resource 'ListValueTimeMeasure' has no definition
+* The resource 'ListValueURIReference' has no definition
 * The resource 'MaterialConstituentSet' has no definition
 * The resource 'MaterialLayerSetUsageNameValues.Back' has no definition
 * The resource 'MaterialLayerSetUsageNameValues.Casing' has no definition
@@ -2308,6 +2315,7 @@
 * The resource 'SingleValueTimeMeasure' has no definition
 * The resource 'SingleValueTorqueMeasure' has no definition
 * The resource 'SingleValueUNKNOWN' has no definition
+* The resource 'SingleValueURIRefernce' has no definition
 * The resource 'SingleValueVaporPermeabilityMeasure' has no definition
 * The resource 'SingleValueVolumeMeasure' has no definition
 * The resource 'SingleValueVolumetricFlowRateMeasure' has no definition
@@ -4627,6 +4635,7 @@
 * The Property|Quantity Set 'IfcPolynomialCurve' should have at least one applicability
 * The Property|Quantity Set 'IfcPort' should have at least one applicability
 * The Property|Quantity Set 'IfcPositioningElement' should have at least one applicability
+* The Property|Quantity Set 'IfcPostalAddress' should have at least one applicability
 * The Property|Quantity Set 'IfcPreDefinedColour' should have at least one applicability
 * The Property|Quantity Set 'IfcPreDefinedCurveFont' should have at least one applicability
 * The Property|Quantity Set 'IfcPreDefinedItem' should have at least one applicability
@@ -5425,6 +5434,7 @@
 * The Property|Quantity Set 'ListValueLabel' should have at least one applicability
 * The Property|Quantity Set 'ListValueLengthMeasure' should have at least one applicability
 * The Property|Quantity Set 'ListValueTimeMeasure' should have at least one applicability
+* The Property|Quantity Set 'ListValueURIReference' should have at least one applicability
 * The Property|Quantity Set 'MaterialConstituentSet' should have at least one applicability
 * The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Back' should have at least one applicability
 * The Property|Quantity Set 'MaterialLayerSetUsageNameValues.Casing' should have at least one applicability
@@ -5867,6 +5877,7 @@
 * The Property|Quantity Set 'SingleValueTimeMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueTorqueMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueUNKNOWN' should have at least one applicability
+* The Property|Quantity Set 'SingleValueURIRefernce' should have at least one applicability
 * The Property|Quantity Set 'SingleValueVaporPermeabilityMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueVolumeMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueVolumetricFlowRateMeasure' should have at least one applicability
