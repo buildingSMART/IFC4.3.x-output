@@ -2495,11 +2495,8 @@
 * The concept usage 'Material Layer Set Usage' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set Usage' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcPlateType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcSlabType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Layer Set' for entity 'IfcWallType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
@@ -2507,12 +2504,9 @@
 * The concept usage 'Material Profile Set Usage' for entity 'IfcFlowSegment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set Usage' for entity 'IfcStructuralCurveMember' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcBeamType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcColumnType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcCoveringType' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Profile Set' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
