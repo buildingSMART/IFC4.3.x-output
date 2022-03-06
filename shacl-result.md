@@ -1,8 +1,6 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.FILLER' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.FLASHING' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
