@@ -1,4 +1,4 @@
-SCHEMA IFC4X3_DEV_541569b;
+SCHEMA IFC4X3_DEV_2797029;
 
 TYPE IfcAbsorbedDoseMeasure = REAL;
 END_TYPE;
@@ -3819,7 +3819,7 @@ ENTITY IfcActuator
  (PredefinedType <> IfcActuatorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcActuatorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCACTUATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCACTUATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcActuatorType
@@ -3852,7 +3852,7 @@ ENTITY IfcAdvancedBrep
  SUBTYPE OF (IfcManifoldSolidBrep);
  WHERE
 	HasAdvancedFaces : SIZEOF(QUERY(Afs <* SELF\IfcManifoldSolidBrep.Outer.CfsFaces |
-  (NOT ('IFC4X3_DEV_541569b.IFCADVANCEDFACE' IN TYPEOF(Afs)))
+  (NOT ('IFC4X3_DEV_2797029.IFCADVANCEDFACE' IN TYPEOF(Afs)))
 )) = 0;
 END_ENTITY;
 
@@ -3862,7 +3862,7 @@ ENTITY IfcAdvancedBrepWithVoids
  WHERE
 	VoidsHaveAdvancedFaces : SIZEOF (QUERY (Vsh <* Voids |
   SIZEOF (QUERY (Afs <* Vsh.CfsFaces |
-  (NOT ('IFC4X3_DEV_541569b.IFCADVANCEDFACE' IN TYPEOF(Afs)))
+  (NOT ('IFC4X3_DEV_2797029.IFCADVANCEDFACE' IN TYPEOF(Afs)))
   )) = 0
 )) = 0;
 END_ENTITY;
@@ -3872,25 +3872,25 @@ ENTITY IfcAdvancedFace
  WHERE
 	ApplicableEdgeCurves : SIZEOF(QUERY (ElpFbnds <* 
   QUERY (Bnds <* SELF\IfcFace.Bounds |
-    'IFC4X3_DEV_541569b.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_DEV_2797029.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe <* ElpFbnds.Bound\IfcEdgeLoop.EdgeList |
-       NOT (SIZEOF (['IFC4X3_DEV_541569b.IFCLINE',
-                     'IFC4X3_DEV_541569b.IFCCONIC',
-                     'IFC4X3_DEV_541569b.IFCPOLYLINE',
-                     'IFC4X3_DEV_541569b.IFCBSPLINECURVE'] *
+       NOT (SIZEOF (['IFC4X3_DEV_2797029.IFCLINE',
+                     'IFC4X3_DEV_2797029.IFCCONIC',
+                     'IFC4X3_DEV_2797029.IFCPOLYLINE',
+                     'IFC4X3_DEV_2797029.IFCBSPLINECURVE'] *
          TYPEOF(Oe\IfcOrientedEdge.EdgeElement\IfcEdgeCurve.EdgeGeometry)) = 1 )
   )) = 0
 ))) = 0;
 	ApplicableSurface : SIZEOF (
-['IFC4X3_DEV_541569b.IFCELEMENTARYSURFACE',
- 'IFC4X3_DEV_541569b.IFCSWEPTSURFACE',
- 'IFC4X3_DEV_541569b.IFCBSPLINESURFACE'] *
+['IFC4X3_DEV_2797029.IFCELEMENTARYSURFACE',
+ 'IFC4X3_DEV_2797029.IFCSWEPTSURFACE',
+ 'IFC4X3_DEV_2797029.IFCBSPLINESURFACE'] *
 TYPEOF(SELF\IfcFaceSurface.FaceSurface)) = 1;
 	RequiresEdgeCurve : SIZEOF(QUERY (ElpFbnds <* 
   QUERY (Bnds <* SELF\IfcFace.Bounds |
-    'IFC4X3_DEV_541569b.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_DEV_2797029.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe <* ElpFbnds.Bound\IfcEdgeLoop.EdgeList |
-       NOT('IFC4X3_DEV_541569b.IFCEDGECURVE' IN 
+       NOT('IFC4X3_DEV_2797029.IFCEDGECURVE' IN 
        TYPEOF(Oe\IfcOrientedEdge.EdgeElement)
   ))) = 0
 ))) = 0;
@@ -3904,7 +3904,7 @@ ENTITY IfcAirTerminal
  (PredefinedType <> IfcAirTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcAirTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCAIRTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCAIRTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcAirTerminalBox
@@ -3915,7 +3915,7 @@ ENTITY IfcAirTerminalBox
  (PredefinedType <> IfcAirTerminalBoxTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcAirTerminalBoxTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCAIRTERMINALBOXTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCAIRTERMINALBOXTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcAirTerminalBoxType
@@ -3942,7 +3942,7 @@ ENTITY IfcAirToAirHeatRecovery
  (PredefinedType <> IfcAirToAirHeatRecoveryTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcAirToAirHeatRecoveryTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCAIRTOAIRHEATRECOVERYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCAIRTOAIRHEATRECOVERYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcAirToAirHeatRecoveryType
@@ -3961,7 +3961,7 @@ ENTITY IfcAlarm
  (PredefinedType <> IfcAlarmTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcAlarmTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCALARMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCALARMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcAlarmType
@@ -4110,8 +4110,8 @@ ENTITY IfcArbitraryClosedProfileDef
 	OuterCurve : IfcCurve;
  WHERE
 	WR1 : OuterCurve.Dim = 2;
-	WR2 : NOT('IFC4X3_DEV_541569b.IFCLINE' IN TYPEOF(OuterCurve));
-	WR3 : NOT('IFC4X3_DEV_541569b.IFCOFFSETCURVE2D' IN TYPEOF(OuterCurve));
+	WR2 : NOT('IFC4X3_DEV_2797029.IFCLINE' IN TYPEOF(OuterCurve));
+	WR3 : NOT('IFC4X3_DEV_2797029.IFCOFFSETCURVE2D' IN TYPEOF(OuterCurve));
 END_ENTITY;
 
 ENTITY IfcArbitraryOpenProfileDef
@@ -4120,7 +4120,7 @@ ENTITY IfcArbitraryOpenProfileDef
  SUBTYPE OF (IfcProfileDef);
 	Curve : IfcBoundedCurve;
  WHERE
-	WR11 : ('IFC4X3_DEV_541569b.IFCCENTERLINEPROFILEDEF' IN TYPEOF(SELF)) OR 
+	WR11 : ('IFC4X3_DEV_2797029.IFCCENTERLINEPROFILEDEF' IN TYPEOF(SELF)) OR 
  (SELF\IfcProfileDef.ProfileType = IfcProfileTypeEnum.CURVE);
 	WR12 : Curve.Dim = 2;
 END_ENTITY;
@@ -4131,7 +4131,7 @@ ENTITY IfcArbitraryProfileDefWithVoids
  WHERE
 	WR1 : SELF\IfcProfileDef.ProfileType = AREA;
 	WR2 : SIZEOF(QUERY(temp <* InnerCurves | temp.Dim <> 2)) = 0;
-	WR3 : SIZEOF(QUERY(temp <* InnerCurves | 'IFC4X3_DEV_541569b.IFCLINE' IN TYPEOF(temp))) = 0;
+	WR3 : SIZEOF(QUERY(temp <* InnerCurves | 'IFC4X3_DEV_2797029.IFCLINE' IN TYPEOF(temp))) = 0;
 END_ENTITY;
 
 ENTITY IfcAsset
@@ -4178,7 +4178,7 @@ ENTITY IfcAudioVisualAppliance
  (PredefinedType <> IfcAudioVisualApplianceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcAudioVisualApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCAUDIOVISUALAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCAUDIOVISUALAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcAudioVisualApplianceType
@@ -4197,7 +4197,7 @@ ENTITY IfcAxis1Placement
  WHERE
 	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
 	LocationIs3D : SELF\IfcPlacement.Location.Dim = 3;
-	LocationIsCP : 'IFC4X3_DEV_541569b.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
+	LocationIsCP : 'IFC4X3_DEV_2797029.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 END_ENTITY;
 
 ENTITY IfcAxis2Placement2D
@@ -4207,7 +4207,7 @@ ENTITY IfcAxis2Placement2D
 	 P : LIST [2:2] OF IfcDirection := IfcBuild2Axes(RefDirection);
  WHERE
 	LocationIs2D : SELF\IfcPlacement.Location.Dim = 2;
-	LocationIsCP : 'IFC4X3_DEV_541569b.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
+	LocationIsCP : 'IFC4X3_DEV_2797029.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 	RefDirIs2D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 2);
 END_ENTITY;
 
@@ -4222,7 +4222,7 @@ ENTITY IfcAxis2Placement3D
 	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
 	AxisToRefDirPosition : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 	LocationIs3D : SELF\IfcPlacement.Location.Dim = 3;
-	LocationIsCP : 'IFC4X3_DEV_541569b.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
+	LocationIsCP : 'IFC4X3_DEV_2797029.IFCCARTESIANPOINT' IN TYPEOF(SELF\IfcPlacement.Location);
 	RefDirIs3D : (NOT (EXISTS (RefDirection))) OR (RefDirection.Dim = 3);
 END_ENTITY;
 
@@ -4231,7 +4231,7 @@ ENTITY IfcAxis2PlacementLinear
 	Axis : OPTIONAL IfcDirection;
 	RefDirection : OPTIONAL IfcDirection;
  WHERE
-	WR1 : 'IFC4X3_DEV_541569b.IFCPOINTBYDISTANCEEXPRESSION' IN TYPEOF(SELF\IfcPlacement.Location);
+	WR1 : 'IFC4X3_DEV_2797029.IFCPOINTBYDISTANCEEXPRESSION' IN TYPEOF(SELF\IfcPlacement.Location);
 	WR2 : (NOT (EXISTS (Axis))) OR (NOT (EXISTS (RefDirection))) OR (IfcCrossProduct(Axis,RefDirection).Magnitude > 0.0);
 END_ENTITY;
 
@@ -4317,7 +4317,7 @@ ENTITY IfcBeam
  (PredefinedType <> IfcBeamTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBeamTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBEAMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBEAMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBeamType
@@ -4336,7 +4336,7 @@ ENTITY IfcBearing
  (PredefinedType <> IfcBearingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBearingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBEARINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBEARINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBearingType
@@ -4371,7 +4371,7 @@ ENTITY IfcBoiler
  (PredefinedType <> IfcBoilerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBoilerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBOILERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBOILERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBoilerType
@@ -4385,11 +4385,11 @@ END_ENTITY;
 ENTITY IfcBooleanClippingResult
  SUBTYPE OF (IfcBooleanResult);
  WHERE
-	FirstOperandType : ('IFC4X3_DEV_541569b.IFCSWEPTAREASOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3_DEV_541569b.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3_DEV_541569b.IFCBOOLEANCLIPPINGRESULT' IN TYPEOF(FirstOperand));
+	FirstOperandType : ('IFC4X3_DEV_2797029.IFCSWEPTAREASOLID' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_DEV_2797029.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_DEV_2797029.IFCBOOLEANCLIPPINGRESULT' IN TYPEOF(FirstOperand));
 	OperatorType : Operator = DIFFERENCE;
-	SecondOperandType : ('IFC4X3_DEV_541569b.IFCHALFSPACESOLID' IN TYPEOF(SecondOperand));
+	SecondOperandType : ('IFC4X3_DEV_2797029.IFCHALFSPACESOLID' IN TYPEOF(SecondOperand));
 END_ENTITY;
 
 ENTITY IfcBooleanResult
@@ -4402,9 +4402,9 @@ ENTITY IfcBooleanResult
  DERIVE
 	 Dim : IfcDimensionCount := FirstOperand.Dim;
  WHERE
-	FirstOperandClosed : NOT('IFC4X3_DEV_541569b.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
+	FirstOperandClosed : NOT('IFC4X3_DEV_2797029.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
 	SameDim : FirstOperand.Dim = SecondOperand.Dim;
-	SecondOperandClosed : NOT('IFC4X3_DEV_541569b.IFCTESSELLATEDFACESET' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);
+	SecondOperandClosed : NOT('IFC4X3_DEV_2797029.IFCTESSELLATEDFACESET' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);
 END_ENTITY;
 
 ENTITY IfcBorehole
@@ -4494,7 +4494,7 @@ ENTITY IfcBoxedHalfSpace
  SUBTYPE OF (IfcHalfSpaceSolid);
 	Enclosure : IfcBoundingBox;
  WHERE
-	UnboundedSurface : NOT ('IFC4X3_DEV_541569b.IFCCURVEBOUNDEDPLANE' IN TYPEOF(SELF\IfcHalfSpaceSolid.BaseSurface));
+	UnboundedSurface : NOT ('IFC4X3_DEV_2797029.IFCCURVEBOUNDEDPLANE' IN TYPEOF(SELF\IfcHalfSpaceSolid.BaseSurface));
 END_ENTITY;
 
 ENTITY IfcBridge
@@ -4529,7 +4529,7 @@ ENTITY IfcBuildingElementPart
  (PredefinedType <> IfcBuildingElementPartTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBuildingElementPartTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBUILDINGELEMENTPARTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBUILDINGELEMENTPARTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBuildingElementPartType
@@ -4548,7 +4548,7 @@ ENTITY IfcBuildingElementProxy
  (PredefinedType <> IfcBuildingElementProxyTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBuildingElementProxyTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBUILDINGELEMENTPROXYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBUILDINGELEMENTPROXYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 	HasObjectName : EXISTS(SELF\IfcRoot.Name);
 END_ENTITY;
 
@@ -4610,7 +4610,7 @@ ENTITY IfcBuiltElement
  SUBTYPE OF (IfcElement);
  WHERE
 	MaxOneMaterialAssociation : SIZEOF (QUERY(temp <* SELF\IfcObjectDefinition.HasAssociations |
-  'IFC4X3_DEV_541569b.IFCRELASSOCIATESMATERIAL' IN TYPEOF(temp)
+  'IFC4X3_DEV_2797029.IFCRELASSOCIATESMATERIAL' IN TYPEOF(temp)
   )) <= 1;
 END_ENTITY;
 
@@ -4666,7 +4666,7 @@ ENTITY IfcBurner
  (PredefinedType <> IfcBurnerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcBurnerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCBURNERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCBURNERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcBurnerType
@@ -4699,7 +4699,7 @@ ENTITY IfcCableCarrierFitting
  (PredefinedType <> IfcCableCarrierFittingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCableCarrierFittingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCABLECARRIERFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCABLECARRIERFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCableCarrierFittingType
@@ -4718,7 +4718,7 @@ ENTITY IfcCableCarrierSegment
  (PredefinedType <> IfcCableCarrierSegmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCableCarrierSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCABLECARRIERSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCABLECARRIERSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCableCarrierSegmentType
@@ -4737,7 +4737,7 @@ ENTITY IfcCableFitting
  (PredefinedType <> IfcCableFittingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCableFittingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCABLEFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCABLEFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCableFittingType
@@ -4756,7 +4756,7 @@ ENTITY IfcCableSegment
  (PredefinedType <> IfcCableSegmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCableSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCABLESEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCABLESEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCableSegmentType
@@ -4775,7 +4775,7 @@ ENTITY IfcCaissonFoundation
  (PredefinedType <> IfcCaissonFoundationTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCaissonFoundationTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCAISSONFOUNDATIONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCAISSONFOUNDATIONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCaissonFoundationType
@@ -4898,7 +4898,7 @@ ENTITY IfcChiller
  (PredefinedType <> IfcChillerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcChillerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCHILLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCHILLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcChillerType
@@ -4917,7 +4917,7 @@ ENTITY IfcChimney
  (PredefinedType <> IfcChimneyTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcChimneyTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCHIMNEYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCHIMNEYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcChimneyType
@@ -4996,7 +4996,7 @@ ENTITY IfcCoil
  (PredefinedType <> IfcCoilTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCoilTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOILTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOILTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCoilType
@@ -5034,7 +5034,7 @@ ENTITY IfcColumn
  (PredefinedType <> IfcColumnTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcColumnTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOLUMNTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOLUMNTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcColumnType
@@ -5053,7 +5053,7 @@ ENTITY IfcCommunicationsAppliance
  (PredefinedType <> IfcCommunicationsApplianceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCommunicationsApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOMMUNICATIONSAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOMMUNICATIONSAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCommunicationsApplianceType
@@ -5118,7 +5118,7 @@ ENTITY IfcCompositeCurveSegment
  DERIVE
 	 Dim : IfcDimensionCount := ParentCurve.Dim;
  WHERE
-	ParentIsBoundedCurve : ('IFC4X3_DEV_541569b.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
+	ParentIsBoundedCurve : ('IFC4X3_DEV_2797029.IFCBOUNDEDCURVE' IN TYPEOF(ParentCurve));
 END_ENTITY;
 
 ENTITY IfcCompositeProfileDef
@@ -5127,7 +5127,7 @@ ENTITY IfcCompositeProfileDef
 	Label : OPTIONAL IfcLabel;
  WHERE
 	InvariantProfileType : SIZEOF(QUERY(temp <* Profiles | temp.ProfileType <> Profiles[1].ProfileType)) = 0;
-	NoRecursion : SIZEOF(QUERY(temp <* Profiles | 'IFC4X3_DEV_541569b.IFCCOMPOSITEPROFILEDEF' IN TYPEOF(temp))) = 0;
+	NoRecursion : SIZEOF(QUERY(temp <* Profiles | 'IFC4X3_DEV_2797029.IFCCOMPOSITEPROFILEDEF' IN TYPEOF(temp))) = 0;
 END_ENTITY;
 
 ENTITY IfcCompressor
@@ -5138,7 +5138,7 @@ ENTITY IfcCompressor
  (PredefinedType <> IfcCompressorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCompressorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOMPRESSORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOMPRESSORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCompressorType
@@ -5157,7 +5157,7 @@ ENTITY IfcCondenser
  (PredefinedType <> IfcCondenserTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCondenserTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCONDENSERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCONDENSERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCondenserType
@@ -5347,7 +5347,7 @@ ENTITY IfcController
  (PredefinedType <> IfcControllerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcControllerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCONTROLLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCONTROLLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcControllerType
@@ -5381,7 +5381,7 @@ ENTITY IfcConveyorSegment
  (PredefinedType <> IfcConveyorSegmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcConveyorSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCONVEYORSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCONVEYORSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcConveyorSegmentType
@@ -5400,7 +5400,7 @@ ENTITY IfcCooledBeam
  (PredefinedType <> IfcCooledBeamTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCooledBeamTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOOLEDBEAMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOOLEDBEAMTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCooledBeamType
@@ -5419,7 +5419,7 @@ ENTITY IfcCoolingTower
  (PredefinedType <> IfcCoolingTowerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCoolingTowerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOOLINGTOWERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOOLINGTOWERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCoolingTowerType
@@ -5481,7 +5481,7 @@ ENTITY IfcCourse
  (PredefinedType <> IfcCourseTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCourseTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOURSETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOURSETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCourseType
@@ -5503,7 +5503,7 @@ ENTITY IfcCovering
  (PredefinedType <> IfcCoveringTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCoveringTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCOVERINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCOVERINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCoveringType
@@ -5559,7 +5559,7 @@ ENTITY IfcCurtainWall
  (PredefinedType <> IfcCurtainWallTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcCurtainWallTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCCURTAINWALLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCCURTAINWALLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcCurtainWallType
@@ -5618,8 +5618,8 @@ ENTITY IfcCurveStyle
  WHERE
 	IdentifiableCurveStyle : EXISTS(CurveFont) OR EXISTS(CurveWidth) OR EXISTS(CurveColour);
 	MeasureOfWidth : (NOT(EXISTS(CurveWidth))) OR
-('IFC4X3_DEV_541569b.IFCPOSITIVELENGTHMEASURE' IN TYPEOF(CurveWidth)) OR 
- (('IFC4X3_DEV_541569b.IFCDESCRIPTIVEMEASURE' IN TYPEOF(CurveWidth)) AND
+('IFC4X3_DEV_2797029.IFCPOSITIVELENGTHMEASURE' IN TYPEOF(CurveWidth)) OR 
+ (('IFC4X3_DEV_2797029.IFCDESCRIPTIVEMEASURE' IN TYPEOF(CurveWidth)) AND
  (CurveWidth = 'by layer'));
 END_ENTITY;
 
@@ -5657,7 +5657,7 @@ ENTITY IfcDamper
  (PredefinedType <> IfcDamperTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDamperTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDAMPERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDAMPERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDamperType
@@ -5741,7 +5741,7 @@ ENTITY IfcDirectrixCurveSweptAreaSolid
 	EndParam : OPTIONAL IfcCurveMeasureSelect;
  WHERE
 	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFC4X3_DEV_541569b.IFCCONIC', 'IFC4X3_DEV_541569b.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
+(SIZEOF(['IFC4X3_DEV_2797029.IFCCONIC', 'IFC4X3_DEV_2797029.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
 END_ENTITY;
 
 ENTITY IfcDirectrixDerivedReferenceSweptAreaSolid
@@ -5756,7 +5756,7 @@ ENTITY IfcDiscreteAccessory
  (PredefinedType <> IfcDiscreteAccessoryTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDiscreteAccessoryTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDISCRETEACCESSORYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDISCRETEACCESSORYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDiscreteAccessoryType
@@ -5775,7 +5775,7 @@ ENTITY IfcDistributionBoard
  (PredefinedType <> IfcDistributionBoardTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDistributionBoardTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDISTRIBUTIONBOARDTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDISTRIBUTIONBOARDTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionBoardType
@@ -5794,7 +5794,7 @@ ENTITY IfcDistributionChamberElement
  (PredefinedType <> IfcDistributionChamberElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDistributionChamberElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDISTRIBUTIONCHAMBERELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDISTRIBUTIONCHAMBERELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDistributionChamberElementType
@@ -5955,7 +5955,7 @@ ENTITY IfcDoor
  (PredefinedType <> IfcDoorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDoorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDOORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDOORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDoorLiningProperties
@@ -5983,9 +5983,9 @@ ENTITY IfcDoorLiningProperties
 	WR35 : (EXISTS(SELF\IfcPropertySetDefinition.DefinesType[1])) 
 AND 
 (
- ('IFC4X3_DEV_541569b.IFCDOORTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCDOORTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
   OR
- ('IFC4X3_DEV_541569b.IFCDOORSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCDOORSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
 );
 END_ENTITY;
 
@@ -6000,9 +6000,9 @@ ENTITY IfcDoorPanelProperties
 	ApplicableToType : (EXISTS(SELF\IfcPropertySetDefinition.DefinesType[1])) 
 AND 
 (
- ('IFC4X3_DEV_541569b.IFCDOORTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCDOORTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
   OR
- ('IFC4X3_DEV_541569b.IFCDOORSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCDOORSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
 );
 END_ENTITY;
 
@@ -6044,7 +6044,7 @@ ENTITY IfcDuctFitting
  (PredefinedType <> IfcDuctFittingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDuctFittingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDUCTFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDUCTFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDuctFittingType
@@ -6063,7 +6063,7 @@ ENTITY IfcDuctSegment
  (PredefinedType <> IfcDuctSegmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDuctSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDUCTSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDUCTSEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDuctSegmentType
@@ -6082,7 +6082,7 @@ ENTITY IfcDuctSilencer
  (PredefinedType <> IfcDuctSilencerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDuctSilencerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCDUCTSILENCERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCDUCTSILENCERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcDuctSilencerType
@@ -6152,7 +6152,7 @@ ENTITY IfcElectricAppliance
  (PredefinedType <> IfcElectricApplianceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricApplianceType
@@ -6171,7 +6171,7 @@ ENTITY IfcElectricDistributionBoard
  (PredefinedType <> IfcElectricDistributionBoardTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricDistributionBoardTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICDISTRIBUTIONBOARDTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICDISTRIBUTIONBOARDTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricDistributionBoardType
@@ -6190,7 +6190,7 @@ ENTITY IfcElectricFlowStorageDevice
  (PredefinedType <> IfcElectricFlowStorageDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricFlowStorageDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICFLOWSTORAGEDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICFLOWSTORAGEDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricFlowStorageDeviceType
@@ -6209,7 +6209,7 @@ ENTITY IfcElectricFlowTreatmentDevice
  (PredefinedType <> IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICFLOWTREATMENTDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICFLOWTREATMENTDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricFlowTreatmentDeviceType
@@ -6228,7 +6228,7 @@ ENTITY IfcElectricGenerator
  (PredefinedType <> IfcElectricGeneratorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricGeneratorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICGENERATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICGENERATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricGeneratorType
@@ -6247,7 +6247,7 @@ ENTITY IfcElectricMotor
  (PredefinedType <> IfcElectricMotorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricMotorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICMOTORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICMOTORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricMotorType
@@ -6266,7 +6266,7 @@ ENTITY IfcElectricTimeControl
  (PredefinedType <> IfcElectricTimeControlTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElectricTimeControlTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELECTRICTIMECONTROLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELECTRICTIMECONTROLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElectricTimeControlType
@@ -6316,7 +6316,7 @@ ENTITY IfcElementAssembly
  (PredefinedType <> IfcElementAssemblyTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcElementAssemblyTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCELEMENTASSEMBLYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCELEMENTASSEMBLYTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcElementAssemblyType
@@ -6457,7 +6457,7 @@ ENTITY IfcEngine
  (PredefinedType <> IfcEngineTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcEngineTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCENGINETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCENGINETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcEngineType
@@ -6476,7 +6476,7 @@ ENTITY IfcEvaporativeCooler
  (PredefinedType <> IfcEvaporativeCoolerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcEvaporativeCoolerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCEVAPORATIVECOOLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCEVAPORATIVECOOLERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcEvaporativeCoolerType
@@ -6495,7 +6495,7 @@ ENTITY IfcEvaporator
  (PredefinedType <> IfcEvaporatorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcEvaporatorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCEVAPORATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCEVAPORATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcEvaporatorType
@@ -6621,7 +6621,7 @@ ENTITY IfcFace
  INVERSE
 	HasTextureMaps : SET [0:?] OF IfcTextureMap FOR MappedTo;
  WHERE
-	HasOuterBound : SIZEOF(QUERY(temp <* Bounds | 'IFC4X3_DEV_541569b.IFCFACEOUTERBOUND' IN TYPEOF(temp))) <= 1;
+	HasOuterBound : SIZEOF(QUERY(temp <* Bounds | 'IFC4X3_DEV_2797029.IFCFACEOUTERBOUND' IN TYPEOF(temp))) <= 1;
 END_ENTITY;
 
 ENTITY IfcFaceBasedSurfaceModel
@@ -6710,7 +6710,7 @@ ENTITY IfcFan
  (PredefinedType <> IfcFanTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFanTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFANTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFANTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFanType
@@ -6729,7 +6729,7 @@ ENTITY IfcFastener
  (PredefinedType <> IfcFastenerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFastenerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFASTENERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFASTENERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFastenerType
@@ -6778,11 +6778,11 @@ ENTITY IfcFillAreaStyle
  WHERE
 	ConsistentHatchStyleDef : IfcCorrectFillAreaStyle(SELF.FillStyles);
 	MaxOneColour : SIZEOF(QUERY(Style <* SELF.FillStyles |
-  'IFC4X3_DEV_541569b.IFCCOLOUR' IN
+  'IFC4X3_DEV_2797029.IFCCOLOUR' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneExtHatchStyle : SIZEOF(QUERY(Style <* SELF.FillStyles |
-  'IFC4X3_DEV_541569b.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
+  'IFC4X3_DEV_2797029.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
    TYPEOF(Style)
   )) <= 1;
 END_ENTITY;
@@ -6815,7 +6815,7 @@ ENTITY IfcFilter
  (PredefinedType <> IfcFilterTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFilterTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFILTERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFILTERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFilterType
@@ -6834,7 +6834,7 @@ ENTITY IfcFireSuppressionTerminal
  (PredefinedType <> IfcFireSuppressionTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFireSuppressionTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFIRESUPPRESSIONTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFIRESUPPRESSIONTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFireSuppressionTerminalType
@@ -6908,7 +6908,7 @@ ENTITY IfcFlowInstrument
  (PredefinedType <> IfcFlowInstrumentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFlowInstrumentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFLOWINSTRUMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFLOWINSTRUMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowInstrumentType
@@ -6927,7 +6927,7 @@ ENTITY IfcFlowMeter
  (PredefinedType <> IfcFlowMeterTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFlowMeterTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFLOWMETERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFLOWMETERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFlowMeterType
@@ -7056,7 +7056,7 @@ ENTITY IfcFooting
  (PredefinedType <> IfcFootingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFootingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFOOTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFOOTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFootingType
@@ -7089,7 +7089,7 @@ ENTITY IfcFurniture
  (PredefinedType <> IfcFurnitureTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcFurnitureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCFURNITURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCFURNITURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcFurnitureType
@@ -7112,7 +7112,7 @@ ENTITY IfcGeographicElement
  (PredefinedType <> IfcGeographicElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcGeographicElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCGEOGRAPHICELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCGEOGRAPHICELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcGeographicElementType
@@ -7127,7 +7127,7 @@ ENTITY IfcGeometricCurveSet
  SUBTYPE OF (IfcGeometricSet);
  WHERE
 	NoSurfaces : SIZEOF(QUERY(Temp <* SELF\IfcGeometricSet.Elements |
-'IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(Temp))) = 0;
+'IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(Temp))) = 0;
 END_ENTITY;
 
 ENTITY IfcGeometricRepresentationContext
@@ -7188,7 +7188,7 @@ ENTITY IfcGeometricRepresentationSubContext
 	 SELF\IfcGeometricRepresentationContext.Precision : IfcReal := NVL(ParentContext.Precision,1.E-5);
  WHERE
 	NoCoordOperation : SIZEOF(SELF\IfcGeometricRepresentationContext.HasCoordinateOperation) = 0;
-	ParentNoSub : NOT('IFC4X3_DEV_541569b.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext));
+	ParentNoSub : NOT('IFC4X3_DEV_2797029.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext));
 	UserTargetProvided :  (TargetView <> IfcGeometricProjectionEnum.USERDEFINED) OR 
 ((TargetView =  IfcGeometricProjectionEnum.USERDEFINED) AND EXISTS(UserDefinedTargetView)) ;
 END_ENTITY;
@@ -7305,7 +7305,7 @@ ENTITY IfcHeatExchanger
  (PredefinedType <> IfcHeatExchangerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcHeatExchangerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCHEATEXCHANGERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCHEATEXCHANGERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcHeatExchangerType
@@ -7324,7 +7324,7 @@ ENTITY IfcHumidifier
  (PredefinedType <> IfcHumidifierTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcHumidifierTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCHUMIDIFIERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCHUMIDIFIERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcHumidifierType
@@ -7365,7 +7365,7 @@ ENTITY IfcImpactProtectionDevice
  (PredefinedType <> IfcImpactProtectionDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcImpactProtectionDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCIMPACTPROTECTIONDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCIMPACTPROTECTIONDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcImpactProtectionDeviceType
@@ -7435,7 +7435,7 @@ ENTITY IfcInterceptor
  (PredefinedType <> IfcInterceptorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcInterceptorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCINTERCEPTORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCINTERCEPTORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcInterceptorType
@@ -7481,7 +7481,7 @@ ENTITY IfcJunctionBox
  (PredefinedType <> IfcJunctionBoxTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcJunctionBoxTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCJUNCTIONBOXTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCJUNCTIONBOXTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcJunctionBoxType
@@ -7538,7 +7538,7 @@ ENTITY IfcLamp
  (PredefinedType <> IfcLampTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcLampTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCLAMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCLAMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcLampType
@@ -7585,7 +7585,7 @@ ENTITY IfcLightFixture
  (PredefinedType <> IfcLightFixtureTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcLightFixtureTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCLIGHTFIXTURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCLIGHTFIXTURETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcLightFixtureType
@@ -7689,7 +7689,7 @@ ENTITY IfcLiquidTerminal
  (PredefinedType <> IfcLiquidTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcLiquidTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCLIQUIDTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCLIQUIDTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcLiquidTerminalType
@@ -7813,7 +7813,7 @@ ENTITY IfcMaterialDefinitionRepresentation
 	RepresentedMaterial : IfcMaterial;
  WHERE
 	OnlyStyledRepresentations : SIZEOF(QUERY(temp <* Representations | 
-  (NOT('IFC4X3_DEV_541569b.IFCSTYLEDREPRESENTATION' IN TYPEOF(temp)))
+  (NOT('IFC4X3_DEV_2797029.IFCSTYLEDREPRESENTATION' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;
 
@@ -7941,7 +7941,7 @@ ENTITY IfcMechanicalFastener
  (PredefinedType <> IfcMechanicalFastenerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMechanicalFastenerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMECHANICALFASTENERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMECHANICALFASTENERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMechanicalFastenerType
@@ -7962,7 +7962,7 @@ ENTITY IfcMedicalDevice
  (PredefinedType <> IfcMedicalDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMedicalDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMEDICALDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMEDICALDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMedicalDeviceType
@@ -7981,7 +7981,7 @@ ENTITY IfcMember
  (PredefinedType <> IfcMemberTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMemberTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMEMBERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMEMBERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMemberType
@@ -8028,7 +8028,7 @@ ENTITY IfcMobileTelecommunicationsAppliance
  (PredefinedType <> IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMOBILETELECOMMUNICATIONSAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMOBILETELECOMMUNICATIONSAPPLIANCETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMobileTelecommunicationsApplianceType
@@ -8051,7 +8051,7 @@ ENTITY IfcMooringDevice
  (PredefinedType <> IfcMooringDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMooringDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMOORINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMOORINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMooringDeviceType
@@ -8070,7 +8070,7 @@ ENTITY IfcMotorConnection
  (PredefinedType <> IfcMotorConnectionTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcMotorConnectionTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCMOTORCONNECTIONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCMOTORCONNECTIONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcMotorConnectionType
@@ -8100,7 +8100,7 @@ ENTITY IfcNavigationElement
  (PredefinedType <> IfcNavigationElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcNavigationElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCNAVIGATIONELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCNAVIGATIONELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcNavigationElementType
@@ -8264,7 +8264,7 @@ ENTITY IfcOrientedEdge
 	 SELF\IfcEdge.EdgeEnd : IfcVertex := IfcBooleanChoose 
 (Orientation, EdgeElement.EdgeEnd, EdgeElement.EdgeStart);
  WHERE
-	EdgeElementNotOriented : NOT('IFC4X3_DEV_541569b.IFCORIENTEDEDGE' IN TYPEOF(EdgeElement));
+	EdgeElementNotOriented : NOT('IFC4X3_DEV_2797029.IFCORIENTEDEDGE' IN TYPEOF(EdgeElement));
 END_ENTITY;
 
 ENTITY IfcOuterBoundaryCurve
@@ -8279,7 +8279,7 @@ ENTITY IfcOutlet
  (PredefinedType <> IfcOutletTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcOutletTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCOUTLETTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCOUTLETTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcOutletType
@@ -8337,7 +8337,7 @@ ENTITY IfcPavement
  (PredefinedType <> IfcPavementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPavementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPAVEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPAVEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPavementType
@@ -8443,7 +8443,7 @@ ENTITY IfcPile
  (PredefinedType <> IfcPileTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPileTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPILETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPILETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPileType
@@ -8462,7 +8462,7 @@ ENTITY IfcPipeFitting
  (PredefinedType <> IfcPipeFittingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPipeFittingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPIPEFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPIPEFITTINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPipeFittingType
@@ -8481,7 +8481,7 @@ ENTITY IfcPipeSegment
  (PredefinedType <> IfcPipeSegmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPipeSegmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPIPESEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPIPESEGMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPipeSegmentType
@@ -8546,7 +8546,7 @@ ENTITY IfcPlate
  (PredefinedType <> IfcPlateTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPlateTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPLATETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPLATETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPlateType
@@ -8608,9 +8608,9 @@ ENTITY IfcPolygonalBoundedHalfSpace
  WHERE
 	BoundaryDim : PolygonalBoundary.Dim = 2;
 	BoundaryType : SIZEOF(TYPEOF(PolygonalBoundary) * [
-    'IFC4X3_DEV_541569b.IfcPolyline',
-    'IFC4X3_DEV_541569b.IfcCompositeCurve',
-    'IFC4X3_DEV_541569b.IfcIndexedPolyCurve'
+    'IFC4X3_DEV_2797029.IfcPolyline',
+    'IFC4X3_DEV_2797029.IfcCompositeCurve',
+    'IFC4X3_DEV_2797029.IfcIndexedPolyCurve'
   ]) = 1;
 END_ENTITY;
 
@@ -8738,9 +8738,9 @@ ENTITY IfcPresentationLayerAssignment
  WHERE
 	ApplicableItems : SIZEOF(QUERY(temp <* AssignedItems | (
   SIZEOF(TYPEOF(temp) * [
-    'IFC4X3_DEV_541569b.IFCSHAPEREPRESENTATION',
-    'IFC4X3_DEV_541569b.IFCGEOMETRICREPRESENTATIONITEM',
-    'IFC4X3_DEV_541569b.IFCMAPPEDITEM']) = 1)
+    'IFC4X3_DEV_2797029.IFCSHAPEREPRESENTATION',
+    'IFC4X3_DEV_2797029.IFCGEOMETRICREPRESENTATIONITEM',
+    'IFC4X3_DEV_2797029.IFCMAPPEDITEM']) = 1)
 )) = SIZEOF(AssignedItems);
 END_ENTITY;
 
@@ -8751,7 +8751,7 @@ ENTITY IfcPresentationLayerWithStyle
 	LayerBlocked : IfcLogical;
 	LayerStyles : SET [0:?] OF IfcPresentationStyle;
  WHERE
-	ApplicableOnlyToItems : SIZEOF(QUERY(temp <* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3_DEV_541569b.IfcGeometricRepresentationItem','IFC4X3_DEV_541569b.IfcMappedItem']) >= 1))) = SIZEOF(AssignedItems);
+	ApplicableOnlyToItems : SIZEOF(QUERY(temp <* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3_DEV_2797029.IfcGeometricRepresentationItem','IFC4X3_DEV_2797029.IfcMappedItem']) >= 1))) = SIZEOF(AssignedItems);
 END_ENTITY;
 
 ENTITY IfcPresentationStyle
@@ -8809,7 +8809,7 @@ ENTITY IfcProduct
  WHERE
 	PlacementForShapeRepresentation : (EXISTS(Representation) AND EXISTS(ObjectPlacement))
             OR (EXISTS(Representation) AND 
-      (SIZEOF(QUERY(temp <* Representation.Representations | 'IFC4X3_DEV_541569b.IFCSHAPEREPRESENTATION' IN TYPEOF(temp))) = 0))
+      (SIZEOF(QUERY(temp <* Representation.Representations | 'IFC4X3_DEV_2797029.IFCSHAPEREPRESENTATION' IN TYPEOF(temp))) = 0))
             OR (NOT(EXISTS(Representation)));
 END_ENTITY;
 
@@ -8820,7 +8820,7 @@ ENTITY IfcProductDefinitionShape
 	HasShapeAspects : SET [0:?] OF IfcShapeAspect FOR PartOfProductDefinitionShape;
  WHERE
 	OnlyShapeModel : SIZEOF(QUERY(temp <* Representations | 
-  (NOT('IFC4X3_DEV_541569b.IFCSHAPEMODEL' IN TYPEOF(temp)))
+  (NOT('IFC4X3_DEV_2797029.IFCSHAPEMODEL' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;
 
@@ -8858,7 +8858,7 @@ ENTITY IfcProject
  WHERE
 	CorrectContext : NOT(EXISTS(SELF\IfcContext.RepresentationContexts)) OR
 (SIZEOF(QUERY(Temp <* SELF\IfcContext.RepresentationContexts |
- 'IFC4X3_DEV_541569b.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
+ 'IFC4X3_DEV_2797029.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
   )) = 0);
 	HasName : EXISTS(SELF\IfcRoot.Name);
 	NoDecomposition : SIZEOF(SELF\IfcObjectDefinition.Decomposes) = 0;
@@ -9076,7 +9076,7 @@ ENTITY IfcProtectiveDevice
  (PredefinedType <> IfcProtectiveDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcProtectiveDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPROTECTIVEDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPROTECTIVEDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcProtectiveDeviceTrippingUnit
@@ -9087,7 +9087,7 @@ ENTITY IfcProtectiveDeviceTrippingUnit
  (PredefinedType <> IfcProtectiveDeviceTrippingUnitTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcProtectiveDeviceTrippingUnitTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPROTECTIVEDEVICETRIPPINGUNITTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPROTECTIVEDEVICETRIPPINGUNITTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcProtectiveDeviceTrippingUnitType
@@ -9114,7 +9114,7 @@ ENTITY IfcPump
  (PredefinedType <> IfcPumpTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcPumpTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCPUMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCPUMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcPumpType
@@ -9197,7 +9197,7 @@ ENTITY IfcRail
  (PredefinedType <> IfcRailTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcRailTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCRAILTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCRAILTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRailType
@@ -9216,7 +9216,7 @@ ENTITY IfcRailing
  (PredefinedType <> IfcRailingTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcRailingTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCRAILINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCRAILINGTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRailingType
@@ -9254,7 +9254,7 @@ ENTITY IfcRamp
  (PredefinedType <> IfcRampTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcRampTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCRAMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCRAMPTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRampFlight
@@ -9265,7 +9265,7 @@ ENTITY IfcRampFlight
  (PredefinedType <> IfcRampFlightTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcRampFlightTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCRAMPFLIGHTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCRAMPFLIGHTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRampFlightType
@@ -9350,9 +9350,9 @@ ENTITY IfcRectangularTrimmedSurface
 	Vsense : IfcBoolean;
  WHERE
 	U1AndU2Different : U1 <> U2;
-	UsenseCompatible : (('IFC4X3_DEV_541569b.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
-         (NOT ('IFC4X3_DEV_541569b.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
-         ('IFC4X3_DEV_541569b.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
+	UsenseCompatible : (('IFC4X3_DEV_2797029.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3_DEV_2797029.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3_DEV_2797029.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 > U1));
 	V1AndV2Different : V1 <> V2;
 	VsenseCompatible : Vsense = (V2 > V1);
@@ -9425,7 +9425,7 @@ ENTITY IfcReinforcingBar
  (PredefinedType <> IfcReinforcingBarTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCREINFORCINGBARTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCREINFORCINGBARTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcReinforcingBarType
@@ -9480,7 +9480,7 @@ ENTITY IfcReinforcingMesh
  (PredefinedType <> IfcReinforcingMeshTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcReinforcingMeshTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCREINFORCINGMESHTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCREINFORCINGMESHTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcReinforcingMeshType
@@ -9627,16 +9627,16 @@ ENTITY IfcRelAssociatesMaterial
  WHERE
 	AllowedElements : SIZEOF(QUERY(temp <* SELF\IfcRelAssociates.RelatedObjects | (
   SIZEOF(TYPEOF(temp) * [   
-    'IFC4X3_DEV_541569b.IFCELEMENT', 
-    'IFC4X3_DEV_541569b.IFCELEMENTTYPE',
-    'IFC4X3_DEV_541569b.IFCWINDOWSTYLE',
-    'IFC4X3_DEV_541569b.IFCDOORSTYLE',
-    'IFC4X3_DEV_541569b.IFCSTRUCTURALMEMBER',
-    'IFC4X3_DEV_541569b.IFCPORT']) = 0) 
+    'IFC4X3_DEV_2797029.IFCELEMENT', 
+    'IFC4X3_DEV_2797029.IFCELEMENTTYPE',
+    'IFC4X3_DEV_2797029.IFCWINDOWSTYLE',
+    'IFC4X3_DEV_2797029.IFCDOORSTYLE',
+    'IFC4X3_DEV_2797029.IFCSTRUCTURALMEMBER',
+    'IFC4X3_DEV_2797029.IFCPORT']) = 0) 
 )) = 0;
 	NoVoidElement : SIZEOF(QUERY(temp <* SELF\IfcRelAssociates.RelatedObjects | 
-  ('IFC4X3_DEV_541569b.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
-  ('IFC4X3_DEV_541569b.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
+  ('IFC4X3_DEV_2797029.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
+  ('IFC4X3_DEV_2797029.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
 )) = 0;
 END_ENTITY;
 
@@ -9746,7 +9746,7 @@ ENTITY IfcRelContainedInSpatialStructure
 	RelatedElements : SET [1:?] OF IfcProduct;
 	RelatingStructure : IfcSpatialElement;
  WHERE
-	WR31 : SIZEOF(QUERY(temp <* RelatedElements | 'IFC4X3_DEV_541569b.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp))) = 0;
+	WR31 : SIZEOF(QUERY(temp <* RelatedElements | 'IFC4X3_DEV_2797029.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp))) = 0;
 END_ENTITY;
 
 ENTITY IfcRelCoversBldgElements
@@ -9799,7 +9799,7 @@ ENTITY IfcRelDefinesByProperties
 	RelatedObjects : SET [1:?] OF IfcObjectDefinition;
 	RelatingPropertyDefinition : IfcPropertySetDefinitionSelect;
  WHERE
-	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4X3_DEV_541569b.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
+	NoRelatedTypeObject : SIZEOF(QUERY(Types <* SELF\IfcRelDefinesByProperties.RelatedObjects |  'IFC4X3_DEV_2797029.IFCTYPEOBJECT' IN TYPEOF(Types))) = 0;
 END_ENTITY;
 
 ENTITY IfcRelDefinesByTemplate
@@ -9865,7 +9865,7 @@ ENTITY IfcRelReferencedInSpatialStructure
 	RelatedElements : SET [1:?] OF IfcSpatialReferenceSelect;
 	RelatingStructure : IfcSpatialElement;
  WHERE
-	AllowedRelatedElements : SIZEOF(QUERY(temp <* RelatedElements | ('IFC4X3_DEV_541569b.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp)) AND (NOT ('IFC4X3_DEV_541569b.IFCSPACE' IN TYPEOF(temp)))
+	AllowedRelatedElements : SIZEOF(QUERY(temp <* RelatedElements | ('IFC4X3_DEV_2797029.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp)) AND (NOT ('IFC4X3_DEV_2797029.IFCSPACE' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;
 
@@ -9898,11 +9898,11 @@ ENTITY IfcRelSpaceBoundary
 	InternalOrExternalBoundary : IfcInternalOrExternalEnum;
  WHERE
 	CorrectPhysOrVirt : ((PhysicalOrVirtualBoundary = IfcPhysicalOrVirtualEnum.Physical) 
-  AND (NOT('IFC4X3_DEV_541569b.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+  AND (NOT('IFC4X3_DEV_2797029.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
 OR 
 ((PhysicalOrVirtualBoundary = IfcPhysicalOrVirtualEnum.Virtual) 
-  AND (('IFC4X3_DEV_541569b.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)) 
-  OR   ('IFC4X3_DEV_541569b.IFCOPENINGELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+  AND (('IFC4X3_DEV_2797029.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)) 
+  OR   ('IFC4X3_DEV_2797029.IFCOPENINGELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
 OR 
 (PhysicalOrVirtualBoundary = IfcPhysicalOrVirtualEnum.NotDefined);
 END_ENTITY;
@@ -9988,7 +9988,7 @@ ENTITY IfcRepresentationMap;
 	HasShapeAspects : SET [0:?] OF IfcShapeAspect FOR PartOfProductDefinitionShape;
 	MapUsage : SET [0:?] OF IfcMappedItem FOR MappingSource;
  WHERE
-	ApplicableMappedRepr : 'IFC4X3_DEV_541569b.IFCSHAPEMODEL' IN TYPEOF(MappedRepresentation);
+	ApplicableMappedRepr : 'IFC4X3_DEV_2797029.IFCSHAPEMODEL' IN TYPEOF(MappedRepresentation);
 END_ENTITY;
 
 ENTITY IfcResource
@@ -10107,7 +10107,7 @@ ENTITY IfcRoof
  (PredefinedType <> IfcRoofTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcRoofTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCROOFTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCROOFTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcRoofType
@@ -10155,7 +10155,7 @@ ENTITY IfcSanitaryTerminal
  (PredefinedType <> IfcSanitaryTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSanitaryTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSANITARYTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSANITARYTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSanitaryTerminalType
@@ -10279,7 +10279,7 @@ ENTITY IfcSensor
  (PredefinedType <> IfcSensorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSensorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSENSORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSENSORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSensorType
@@ -10310,7 +10310,7 @@ ENTITY IfcShadingDevice
  (PredefinedType <> IfcShadingDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcShadingDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSHADINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSHADINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcShadingDeviceType
@@ -10347,17 +10347,17 @@ END_ENTITY;
 ENTITY IfcShapeRepresentation
  SUBTYPE OF (IfcShapeModel);
  WHERE
-	CorrectContext : 'IFC4X3_DEV_541569b.IFCGEOMETRICREPRESENTATIONCONTEXT' 
+	CorrectContext : 'IFC4X3_DEV_2797029.IFCGEOMETRICREPRESENTATIONCONTEXT' 
 IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);
 	CorrectItemsForType : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);
 	HasRepresentationIdentifier : EXISTS(SELF\IfcRepresentation.RepresentationIdentifier);
 	HasRepresentationType : EXISTS(SELF\IfcRepresentation.RepresentationType);
 	NoTopologicalItem : SIZEOF(QUERY(temp <* Items | 
-  ('IFC4X3_DEV_541569b.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
+  ('IFC4X3_DEV_2797029.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
     AND (NOT(SIZEOF(
-      ['IFC4X3_DEV_541569b.IFCVERTEXPOINT',
-       'IFC4X3_DEV_541569b.IFCEDGECURVE',
-       'IFC4X3_DEV_541569b.IFCFACESURFACE'] * TYPEOF(temp)) = 1))
+      ['IFC4X3_DEV_2797029.IFCVERTEXPOINT',
+       'IFC4X3_DEV_2797029.IFCEDGECURVE',
+       'IFC4X3_DEV_2797029.IFCFACESURFACE'] * TYPEOF(temp)) = 1))
 )) = 0;
 END_ENTITY;
 
@@ -10376,7 +10376,7 @@ ENTITY IfcSign
  (PredefinedType <> IfcSignTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSignTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSIGNTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSIGNTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSignType
@@ -10395,7 +10395,7 @@ ENTITY IfcSignal
  (PredefinedType <> IfcSignalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSignalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSIGNALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSIGNALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSignalType
@@ -10455,7 +10455,7 @@ ENTITY IfcSlab
  (PredefinedType <> IfcSlabTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSlabTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSLABTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSLABTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSlabType
@@ -10481,7 +10481,7 @@ ENTITY IfcSolarDevice
  (PredefinedType <> IfcSolarDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSolarDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSOLARDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSOLARDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSolarDeviceType
@@ -10520,7 +10520,7 @@ ENTITY IfcSpace
  (PredefinedType <> IfcSpaceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSpaceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSPACETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSPACETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSpaceHeater
@@ -10531,7 +10531,7 @@ ENTITY IfcSpaceHeater
  (PredefinedType <> IfcSpaceHeaterTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSpaceHeaterTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSPACEHEATERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSPACEHEATERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSpaceHeaterType
@@ -10583,10 +10583,10 @@ ENTITY IfcSpatialStructureElement
  WHERE
 	WR41 : (HIINDEX(SELF\IfcObjectDefinition.Decomposes) = 1) 
 AND
-('IFC4X3_DEV_541569b.IFCRELAGGREGATES' IN TYPEOF(SELF\IfcObjectDefinition.Decomposes[1])) 
+('IFC4X3_DEV_2797029.IFCRELAGGREGATES' IN TYPEOF(SELF\IfcObjectDefinition.Decomposes[1])) 
 AND
-(('IFC4X3_DEV_541569b.IFCPROJECT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject)) OR
- ('IFC4X3_DEV_541569b.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject))
+(('IFC4X3_DEV_2797029.IFCPROJECT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject)) OR
+ ('IFC4X3_DEV_2797029.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF (SELF\IfcObjectDefinition.Decomposes[1].RelatingObject))
 );
 END_ENTITY;
 
@@ -10637,7 +10637,7 @@ ENTITY IfcStackTerminal
  (PredefinedType <> IfcStackTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcStackTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSTACKTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSTACKTERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcStackTerminalType
@@ -10656,7 +10656,7 @@ ENTITY IfcStair
  (PredefinedType <> IfcStairTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcStairTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSTAIRTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSTAIRTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcStairFlight
@@ -10671,7 +10671,7 @@ ENTITY IfcStairFlight
  (PredefinedType <> IfcStairFlightTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcStairFlightTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSTAIRFLIGHTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSTAIRFLIGHTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcStairFlightType
@@ -10795,7 +10795,7 @@ ENTITY IfcStructuralLinearAction
  SUBTYPE OF (IfcStructuralCurveAction);
  WHERE
 	ConstPredefinedType : SELF\IfcStructuralCurveAction.PredefinedType = IfcStructuralCurveActivityTypeEnum.CONST;
-	SuitableLoadType : SIZEOF(['IFC4X3_DEV_541569b.IFCSTRUCTURALLOADLINEARFORCE', 'IFC4X3_DEV_541569b.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
+	SuitableLoadType : SIZEOF(['IFC4X3_DEV_2797029.IFCSTRUCTURALLOADLINEARFORCE', 'IFC4X3_DEV_2797029.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralLoad
@@ -10928,13 +10928,13 @@ ENTITY IfcStructuralPlanarAction
  SUBTYPE OF (IfcStructuralSurfaceAction);
  WHERE
 	ConstPredefinedType : SELF\IfcStructuralSurfaceAction.PredefinedType = IfcStructuralSurfaceActivityTypeEnum.CONST;
-	SuitableLoadType : SIZEOF(['IFC4X3_DEV_541569b.IFCSTRUCTURALLOADPLANARFORCE', 'IFC4X3_DEV_541569b.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
+	SuitableLoadType : SIZEOF(['IFC4X3_DEV_2797029.IFCSTRUCTURALLOADPLANARFORCE', 'IFC4X3_DEV_2797029.IFCSTRUCTURALLOADTEMPERATURE'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralPointAction
  SUBTYPE OF (IfcStructuralAction);
  WHERE
-	SuitableLoadType : SIZEOF(['IFC4X3_DEV_541569b.IFCSTRUCTURALLOADSINGLEFORCE', 'IFC4X3_DEV_541569b.IFCSTRUCTURALLOADSINGLEDISPLACEMENT'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
+	SuitableLoadType : SIZEOF(['IFC4X3_DEV_2797029.IFCSTRUCTURALLOADSINGLEFORCE', 'IFC4X3_DEV_2797029.IFCSTRUCTURALLOADSINGLEDISPLACEMENT'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralPointConnection
@@ -10945,7 +10945,7 @@ END_ENTITY;
 ENTITY IfcStructuralPointReaction
  SUBTYPE OF (IfcStructuralReaction);
  WHERE
-	SuitableLoadType : SIZEOF(['IFC4X3_DEV_541569b.IFCSTRUCTURALLOADSINGLEFORCE', 'IFC4X3_DEV_541569b.IFCSTRUCTURALLOADSINGLEDISPLACEMENT'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
+	SuitableLoadType : SIZEOF(['IFC4X3_DEV_2797029.IFCSTRUCTURALLOADSINGLEFORCE', 'IFC4X3_DEV_2797029.IFCSTRUCTURALLOADSINGLEDISPLACEMENT'] * TYPEOF(SELF\IfcStructuralActivity.AppliedLoad)) = 1;
 END_ENTITY;
 
 ENTITY IfcStructuralReaction
@@ -11017,14 +11017,14 @@ ENTITY IfcStyledItem
 	Styles : SET [1:?] OF IfcPresentationStyle;
 	Name : OPTIONAL IfcLabel;
  WHERE
-	ApplicableItem : NOT('IFC4X3_DEV_541569b.IFCSTYLEDITEM' IN TYPEOF(Item));
+	ApplicableItem : NOT('IFC4X3_DEV_2797029.IFCSTYLEDITEM' IN TYPEOF(Item));
 END_ENTITY;
 
 ENTITY IfcStyledRepresentation
  SUBTYPE OF (IfcStyleModel);
  WHERE
 	OnlyStyledItems : SIZEOF(QUERY(temp <* SELF\IfcRepresentation.Items | 
-  (NOT('IFC4X3_DEV_541569b.IFCSTYLEDITEM' IN TYPEOF(temp)))
+  (NOT('IFC4X3_DEV_2797029.IFCSTYLEDITEM' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;
 
@@ -11066,7 +11066,7 @@ ENTITY IfcSurfaceCurve
 	 BasisSurface : SET [1:2] OF IfcSurface := IfcGetBasisSurface(SELF);
  WHERE
 	CurveIs3D : Curve3D.Dim = 3;
-	CurveIsNotPcurve : NOT ('IFC4X3_DEV_541569b.IFCPCURVE' IN TYPEOF(Curve3D));
+	CurveIsNotPcurve : NOT ('IFC4X3_DEV_2797029.IFCPCURVE' IN TYPEOF(Curve3D));
 END_ENTITY;
 
 ENTITY IfcSurfaceCurveSweptAreaSolid
@@ -11130,23 +11130,23 @@ ENTITY IfcSurfaceStyle
 	Styles : SET [1:5] OF IfcSurfaceStyleElementSelect;
  WHERE
 	MaxOneExtDefined : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFC4X3_DEV_541569b.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
+  'IFC4X3_DEV_2797029.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneLighting : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFC4X3_DEV_541569b.IFCSURFACESTYLELIGHTING' IN
+  'IFC4X3_DEV_2797029.IFCSURFACESTYLELIGHTING' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneRefraction : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFC4X3_DEV_541569b.IFCSURFACESTYLEREFRACTION' IN
+  'IFC4X3_DEV_2797029.IFCSURFACESTYLEREFRACTION' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneShading : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFC4X3_DEV_541569b.IFCSURFACESTYLESHADING' IN
+  'IFC4X3_DEV_2797029.IFCSURFACESTYLESHADING' IN
    TYPEOF(Style)
   )) <= 1;
 	MaxOneTextures : SIZEOF(QUERY(Style <* SELF.Styles |
-  'IFC4X3_DEV_541569b.IFCSURFACESTYLEWITHTEXTURES' IN
+  'IFC4X3_DEV_2797029.IFCSURFACESTYLEWITHTEXTURES' IN
    TYPEOF(Style)
   )) <= 1;
 END_ENTITY;
@@ -11228,7 +11228,7 @@ ENTITY IfcSweptDiskSolid
 	EndParam : OPTIONAL IfcParameterValue;
  WHERE
 	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFC4X3_DEV_541569b.IFCCONIC', 'IFC4X3_DEV_541569b.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
+(SIZEOF(['IFC4X3_DEV_2797029.IFCCONIC', 'IFC4X3_DEV_2797029.IFCBOUNDEDCURVE'] * TYPEOF(Directrix)) = 1);
 	DirectrixDim : Directrix.Dim = 3;
 	InnerRadiusSize : (NOT EXISTS(InnerRadius)) OR (Radius > InnerRadius);
 END_ENTITY;
@@ -11238,8 +11238,8 @@ ENTITY IfcSweptDiskSolidPolygonal
 	FilletRadius : OPTIONAL IfcNonNegativeLengthMeasure;
  WHERE
 	CorrectRadii : NOT(EXISTS(FilletRadius)) OR (FilletRadius >= SELF\IfcSweptDiskSolid.Radius);
-	DirectrixIsPolyline : ('IFC4X3_DEV_541569b.IFCPOLYLINE' IN TYPEOF(SELF\IfcSweptDiskSolid.Directrix)) OR
-(('IFC4X3_DEV_541569b.IFCINDEXEDPOLYCURVE' IN TYPEOF(SELF\IfcSweptDiskSolid.Directrix)) AND NOT(EXISTS(SELF\IfcSweptDiskSolid.Directrix.Segments)));
+	DirectrixIsPolyline : ('IFC4X3_DEV_2797029.IFCPOLYLINE' IN TYPEOF(SELF\IfcSweptDiskSolid.Directrix)) OR
+(('IFC4X3_DEV_2797029.IFCINDEXEDPOLYCURVE' IN TYPEOF(SELF\IfcSweptDiskSolid.Directrix)) AND NOT(EXISTS(SELF\IfcSweptDiskSolid.Directrix.Segments)));
 END_ENTITY;
 
 ENTITY IfcSweptSurface
@@ -11261,7 +11261,7 @@ ENTITY IfcSwitchingDevice
  (PredefinedType <> IfcSwitchingDeviceTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSwitchingDeviceTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSWITCHINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSWITCHINGDEVICETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSwitchingDeviceType
@@ -11293,7 +11293,7 @@ ENTITY IfcSystemFurnitureElement
  (PredefinedType <> IfcSystemFurnitureElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcSystemFurnitureElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCSYSTEMFURNITUREELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCSYSTEMFURNITUREELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcSystemFurnitureElementType
@@ -11355,7 +11355,7 @@ ENTITY IfcTank
  (PredefinedType <> IfcTankTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTankTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTANKTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTANKTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTankType
@@ -11444,7 +11444,7 @@ ENTITY IfcTendon
  (PredefinedType <> IfcTendonTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTendonTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTENDONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTENDONTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTendonAnchor
@@ -11455,7 +11455,7 @@ ENTITY IfcTendonAnchor
  (PredefinedType <> IfcTendonAnchorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTendonAnchorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTENDONANCHORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTENDONANCHORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTendonAnchorType
@@ -11473,7 +11473,7 @@ ENTITY IfcTendonConduit
 	CorrectPredefinedType : (PredefinedType <> IfcTendonConduitTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTendonConduitTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTENDONCONDUITTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTENDONCONDUITTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTendonConduitType
@@ -11530,7 +11530,7 @@ ENTITY IfcTextLiteralWithExtent
 	Extent : IfcPlanarExtent;
 	BoxAlignment : IfcBoxAlignment;
  WHERE
-	WR31 : NOT('IFC4X3_DEV_541569b.IFCPLANARBOX' IN TYPEOF(Extent));
+	WR31 : NOT('IFC4X3_DEV_2797029.IFCPLANARBOX' IN TYPEOF(Extent));
 END_ENTITY;
 
 ENTITY IfcTextStyle
@@ -11549,7 +11549,7 @@ ENTITY IfcTextStyleFontModel
 	FontWeight : OPTIONAL IfcFontWeight;
 	FontSize : IfcSizeSelect;
  WHERE
-	MeasureOfFontSize : ('IFC4X3_DEV_541569b.IFCLENGTHMEASURE' IN TYPEOF(SELF.FontSize)) AND
+	MeasureOfFontSize : ('IFC4X3_DEV_2797029.IFCLENGTHMEASURE' IN TYPEOF(SELF.FontSize)) AND
 (SELF.FontSize > 0.);
 END_ENTITY;
 
@@ -11664,7 +11664,7 @@ ENTITY IfcTopologyRepresentation
  SUBTYPE OF (IfcShapeModel);
  WHERE
 	WR21 : SIZEOF(QUERY(temp <* SELF\IfcRepresentation.Items | 
-  NOT('IFC4X3_DEV_541569b.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
+  NOT('IFC4X3_DEV_2797029.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
 )) = 0
 
 ;
@@ -11688,7 +11688,7 @@ ENTITY IfcTrackElement
  (PredefinedType <> IfcTrackElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTrackElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTRACKELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTRACKELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTrackElementType
@@ -11707,7 +11707,7 @@ ENTITY IfcTransformer
  (PredefinedType <> IfcTransformerTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTransformerTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTRANSFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTRANSFORMERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTransformerType
@@ -11726,7 +11726,7 @@ ENTITY IfcTransportElement
  (PredefinedType <> IfcTransportElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTransportElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTRANSPORTELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTRANSPORTELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTransportElementType
@@ -11785,7 +11785,7 @@ ENTITY IfcTrimmedCurve
 	SenseAgreement : IfcBoolean;
 	MasterRepresentation : IfcTrimmingPreference;
  WHERE
-	NoTrimOfBoundedCurves : NOT('IFC4X3_DEV_541569b.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
+	NoTrimOfBoundedCurves : NOT('IFC4X3_DEV_2797029.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
 	Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) <> TYPEOF(Trim1[2]));
 	Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) <> TYPEOF(Trim2[2]));
 END_ENTITY;
@@ -11798,7 +11798,7 @@ ENTITY IfcTubeBundle
  (PredefinedType <> IfcTubeBundleTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcTubeBundleTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCTUBEBUNDLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCTUBEBUNDLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcTubeBundleType
@@ -11849,7 +11849,7 @@ ENTITY IfcTypeProduct
  WHERE
 	ApplicableOccurrence : NOT(EXISTS(SELF\IfcTypeObject.Types[1])) OR
 (SIZEOF(QUERY(temp <* SELF\IfcTypeObject.Types[1].RelatedObjects |
-  NOT('IFC4X3_DEV_541569b.IFCPRODUCT' IN TYPEOF(temp)))
+  NOT('IFC4X3_DEV_2797029.IFCPRODUCT' IN TYPEOF(temp)))
 ) = 0);
 END_ENTITY;
 
@@ -11892,7 +11892,7 @@ ENTITY IfcUnitaryControlElement
  (PredefinedType <> IfcUnitaryControlElementTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcUnitaryControlElementTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCUNITARYCONTROLELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCUNITARYCONTROLELEMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcUnitaryControlElementType
@@ -11911,7 +11911,7 @@ ENTITY IfcUnitaryEquipment
  (PredefinedType <> IfcUnitaryEquipmentTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcUnitaryEquipmentTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCUNITARYEQUIPMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCUNITARYEQUIPMENTTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcUnitaryEquipmentType
@@ -11930,7 +11930,7 @@ ENTITY IfcValve
  (PredefinedType <> IfcValveTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcValveTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCVALVETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCVALVETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcValveType
@@ -11963,7 +11963,7 @@ ENTITY IfcVehicle
  (PredefinedType <> IfcVehicleTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcVehicleTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCVEHICLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCVEHICLETYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcVehicleType
@@ -11998,7 +11998,7 @@ ENTITY IfcVibrationDamper
  (PredefinedType <> IfcDamperTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcDamperTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCVIBRATIONDAMPERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCVIBRATIONDAMPERTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcVibrationDamperType
@@ -12017,7 +12017,7 @@ ENTITY IfcVibrationIsolator
  (PredefinedType <> IfcVibrationIsolatorTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcVibrationIsolatorTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCVIBRATIONISOLATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCVIBRATIONISOLATORTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcVibrationIsolatorType
@@ -12066,15 +12066,15 @@ ENTITY IfcWall
  (PredefinedType <> IfcWallTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcWallTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCWALLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCWALLTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcWallStandardCase
  SUBTYPE OF (IfcWall);
  WHERE
-	HasMaterialLayerSetUsage : SIZEOF (QUERY(temp <* USEDIN(SELF, 'IFC4X3_DEV_541569b.IFCRELASSOCIATES.RELATEDOBJECTS') |
-              ('IFC4X3_DEV_541569b.IFCRELASSOCIATESMATERIAL' IN TYPEOF(temp)) AND
-              ('IFC4X3_DEV_541569b.IFCMATERIALLAYERSETUSAGE' IN TYPEOF(temp.RelatingMaterial))
+	HasMaterialLayerSetUsage : SIZEOF (QUERY(temp <* USEDIN(SELF, 'IFC4X3_DEV_2797029.IFCRELASSOCIATES.RELATEDOBJECTS') |
+              ('IFC4X3_DEV_2797029.IFCRELASSOCIATESMATERIAL' IN TYPEOF(temp)) AND
+              ('IFC4X3_DEV_2797029.IFCMATERIALLAYERSETUSAGE' IN TYPEOF(temp.RelatingMaterial))
               )) = 1;
 END_ENTITY;
 
@@ -12094,7 +12094,7 @@ ENTITY IfcWasteTerminal
  (PredefinedType <> IfcWasteTerminalTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcWasteTerminalTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCWASTETERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCWASTETERMINALTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcWasteTerminalType
@@ -12121,7 +12121,7 @@ ENTITY IfcWindow
  (PredefinedType <> IfcWindowTypeEnum.USERDEFINED) OR
  ((PredefinedType = IfcWindowTypeEnum.USERDEFINED) AND EXISTS (SELF\IfcObject.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_DEV_541569b.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
+  ('IFC4X3_DEV_2797029.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcObject.IsTypedBy[1].RelatingType));
 END_ENTITY;
 
 ENTITY IfcWindowLiningProperties
@@ -12145,9 +12145,9 @@ ENTITY IfcWindowLiningProperties
 	WR34 : (EXISTS(SELF\IfcPropertySetDefinition.DefinesType[1])) 
 AND 
 (
- ('IFC4X3_DEV_541569b.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
   OR
- ('IFC4X3_DEV_541569b.IFCWINDOWSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCWINDOWSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
 );
 END_ENTITY;
 
@@ -12162,9 +12162,9 @@ ENTITY IfcWindowPanelProperties
 	ApplicableToType : (EXISTS(SELF\IfcPropertySetDefinition.DefinesType[1])) 
 AND 
 (
- ('IFC4X3_DEV_541569b.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCWINDOWTYPE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
   OR
- ('IFC4X3_DEV_541569b.IFCWINDOWSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
+ ('IFC4X3_DEV_2797029.IFCWINDOWSTYLE' IN TYPEOF(SELF\IfcPropertySetDefinition.DefinesType[1]))
 );
 END_ENTITY;
 
@@ -12235,9 +12235,9 @@ ENTITY IfcZone
  WHERE
 	WR1 : (SIZEOF(SELF\IfcGroup.IsGroupedBy) = 0) OR
  (SIZEOF (QUERY (temp <* SELF\IfcGroup.IsGroupedBy[1].RelatedObjects |  
-  NOT(('IFC4X3_DEV_541569b.IFCZONE' IN TYPEOF(temp)) OR 
-  ('IFC4X3_DEV_541569b.IFCSPACE' IN TYPEOF(temp)) OR
-  ('IFC4X3_DEV_541569b.IFCSPATIALZONE' IN TYPEOF(temp))
+  NOT(('IFC4X3_DEV_2797029.IFCZONE' IN TYPEOF(temp)) OR 
+  ('IFC4X3_DEV_2797029.IFCSPACE' IN TYPEOF(temp)) OR
+  ('IFC4X3_DEV_2797029.IFCSPATIALZONE' IN TYPEOF(temp))
  ))) = 0);
 END_ENTITY;
 
@@ -12586,19 +12586,19 @@ END_LOCAL;
 
 
 External := SIZEOF(QUERY(Style <* Styles |
-  'IFC4X3_DEV_541569b.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
+  'IFC4X3_DEV_2797029.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
    TYPEOF(Style)));
 
 Hatching  := SIZEOF(QUERY(Style <* Styles |
-  'IFC4X3_DEV_541569b.IFCFILLAREASTYLEHATCHING' IN
+  'IFC4X3_DEV_2797029.IFCFILLAREASTYLEHATCHING' IN
    TYPEOF(Style)));
 
 Tiles     := SIZEOF(QUERY(Style <* Styles |
-  'IFC4X3_DEV_541569b.IFCFILLAREASTYLETILES' IN
+  'IFC4X3_DEV_2797029.IFCFILLAREASTYLETILES' IN
    TYPEOF(Style)));
 
 Colour    := SIZEOF(QUERY(Style <* Styles |
-  'IFC4X3_DEV_541569b.IFCCOLOUR' IN
+  'IFC4X3_DEV_2797029.IFCCOLOUR' IN
    TYPEOF(Style)));
 
 
@@ -12629,14 +12629,14 @@ FUNCTION IfcCorrectLocalPlacement
    RelPlacement : IfcObjectPlacement):LOGICAL;
 
   IF (EXISTS(RelPlacement)) THEN
-    IF ('IFC4X3_DEV_541569b.IFCGRIDPLACEMENT' IN TYPEOF(RelPlacement)) THEN
+    IF ('IFC4X3_DEV_2797029.IFCGRIDPLACEMENT' IN TYPEOF(RelPlacement)) THEN
       RETURN(?);
     END_IF;
-    IF ('IFC4X3_DEV_541569b.IFCLOCALPLACEMENT' IN TYPEOF(RelPlacement)) THEN
-      IF ('IFC4X3_DEV_541569b.IFCAXIS2PLACEMENT2D' IN TYPEOF(AxisPlacement)) THEN
+    IF ('IFC4X3_DEV_2797029.IFCLOCALPLACEMENT' IN TYPEOF(RelPlacement)) THEN
+      IF ('IFC4X3_DEV_2797029.IFCAXIS2PLACEMENT2D' IN TYPEOF(AxisPlacement)) THEN
         RETURN(TRUE);
       END_IF;
-      IF ('IFC4X3_DEV_541569b.IFCAXIS2PLACEMENT3D' IN TYPEOF(AxisPlacement)) THEN
+      IF ('IFC4X3_DEV_2797029.IFCAXIS2PLACEMENT3D' IN TYPEOF(AxisPlacement)) THEN
         IF (RelPlacement\IfcLocalPlacement.RelativePlacement.Dim = 3) THEN
           RETURN(TRUE);
         ELSE
@@ -12667,37 +12667,37 @@ END_LOCAL;
       IfcObjectTypeEnum.NOTDEFINED : RETURN(TRUE);
       IfcObjectTypeEnum.PRODUCT :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCPRODUCT' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCPRODUCT' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.PROCESS :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCPROCESS' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCPROCESS' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.CONTROL :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCCONTROL' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCCONTROL' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.RESOURCE :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCRESOURCE' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCRESOURCE' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.ACTOR :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCACTOR' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCACTOR' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.GROUP :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCGROUP' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCGROUP' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       IfcObjectTypeEnum.PROJECT :
         BEGIN
-          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_541569b.IFCPROJECT' IN TYPEOF(temp))));
+          Count := SIZEOF(QUERY(temp <* Objects | NOT('IFC4X3_DEV_2797029.IFCPROJECT' IN TYPEOF(temp))));
           RETURN(Count = 0);
         END;
       OTHERWISE : RETURN(?);
@@ -12717,15 +12717,15 @@ FUNCTION IfcCorrectUnitAssignment
     DerivedUnitNames   : SET OF IfcDerivedUnitEnum := [];
   END_LOCAL;
 
-  NamedUnitNumber    := SIZEOF(QUERY(temp <* Units | ('IFC4X3_DEV_541569b.IFCNAMEDUNIT' IN TYPEOF(temp)) AND NOT(temp\IfcNamedUnit.UnitType = IfcUnitEnum.USERDEFINED)));
-  DerivedUnitNumber  := SIZEOF(QUERY(temp <* Units | ('IFC4X3_DEV_541569b.IFCDERIVEDUNIT' IN TYPEOF(temp)) AND NOT(temp\IfcDerivedUnit.UnitType = IfcDerivedUnitEnum.USERDEFINED)));
-  MonetaryUnitNumber := SIZEOF(QUERY(temp <* Units |  'IFC4X3_DEV_541569b.IFCMONETARYUNIT' IN TYPEOF(temp)));
+  NamedUnitNumber    := SIZEOF(QUERY(temp <* Units | ('IFC4X3_DEV_2797029.IFCNAMEDUNIT' IN TYPEOF(temp)) AND NOT(temp\IfcNamedUnit.UnitType = IfcUnitEnum.USERDEFINED)));
+  DerivedUnitNumber  := SIZEOF(QUERY(temp <* Units | ('IFC4X3_DEV_2797029.IFCDERIVEDUNIT' IN TYPEOF(temp)) AND NOT(temp\IfcDerivedUnit.UnitType = IfcDerivedUnitEnum.USERDEFINED)));
+  MonetaryUnitNumber := SIZEOF(QUERY(temp <* Units |  'IFC4X3_DEV_2797029.IFCMONETARYUNIT' IN TYPEOF(temp)));
 
   REPEAT i := 1 TO SIZEOF(Units);
-    IF (('IFC4X3_DEV_541569b.IFCNAMEDUNIT' IN TYPEOF(Units[i])) AND NOT(Units[i]\IfcNamedUnit.UnitType = IfcUnitEnum.USERDEFINED)) THEN
+    IF (('IFC4X3_DEV_2797029.IFCNAMEDUNIT' IN TYPEOF(Units[i])) AND NOT(Units[i]\IfcNamedUnit.UnitType = IfcUnitEnum.USERDEFINED)) THEN
         NamedUnitNames := NamedUnitNames + Units[i]\IfcNamedUnit.UnitType;
     END_IF;
-    IF (('IFC4X3_DEV_541569b.IFCDERIVEDUNIT' IN TYPEOF(Units[i])) AND NOT(Units[i]\IfcDerivedUnit.UnitType = IfcDerivedUnitEnum.USERDEFINED)) THEN
+    IF (('IFC4X3_DEV_2797029.IFCDERIVEDUNIT' IN TYPEOF(Units[i])) AND NOT(Units[i]\IfcDerivedUnit.UnitType = IfcDerivedUnitEnum.USERDEFINED)) THEN
         DerivedUnitNames := DerivedUnitNames + Units[i]\IfcDerivedUnit.UnitType;
     END_IF;
   END_REPEAT;
@@ -12772,52 +12772,52 @@ FUNCTION IfcCurveDim
 (Curve : IfcCurve)
        : IfcDimensionCount;
 
-  IF ('IFC4X3_DEV_541569b.IFCLINE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCLINE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcLine.Pnt.Dim);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCCONIC' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCCONIC' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcConic.Position.Dim);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCPOLYLINE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCPOLYLINE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcPolyline.Points[1].Dim);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCTRIMMEDCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCTRIMMEDCURVE' IN TYPEOF(Curve))
     THEN RETURN(IfcCurveDim(Curve\IfcTrimmedCurve.BasisCurve));
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCGRADIENTCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCGRADIENTCURVE' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCSEGMENTEDREFERENCECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCSEGMENTEDREFERENCECURVE' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCCOMPOSITECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCCOMPOSITECURVE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcCompositeCurve.Segments[1].Dim);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCBSPLINECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCBSPLINECURVE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcBSplineCurve.ControlPointsList[1].Dim);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCOFFSETCURVE2D' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCOFFSETCURVE2D' IN TYPEOF(Curve))
     THEN RETURN(2); 
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCOFFSETCURVE3D' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCOFFSETCURVE3D' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCOFFSETCURVEBYDISTANCES' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCOFFSETCURVEBYDISTANCES' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCCURVESEGMENT2D' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCCURVESEGMENT2D' IN TYPEOF(Curve))
     THEN RETURN(2);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCPOLYNOMIALCURVE' IN TYPEOF(Curve)) THEN
+  IF ('IFC4X3_DEV_2797029.IFCPOLYNOMIALCURVE' IN TYPEOF(Curve)) THEN
     IF ( NOT EXISTS(Curve\IfcPolynomialCurve.CoefficientsZ) AND (Curve\IfcPolynomialCurve.Position.Dim = 2 ))
         THEN RETURN(2);
     END_IF;
     RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCPCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCPCURVE' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3_DEV_541569b.IFCINDEXEDPOLYCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_DEV_2797029.IFCINDEXEDPOLYCURVE' IN TYPEOF(Curve))
     THEN RETURN(Curve\IfcIndexedPolyCurve.Points.Dim);
   END_IF;
 RETURN (?);
@@ -13021,17 +13021,17 @@ FUNCTION IfcGetBasisSurface
   END_LOCAL;
 
   Surfs := [];
-  IF 'IFC4X3_DEV_541569b.IFCPCURVE' IN TYPEOF (C) THEN
+  IF 'IFC4X3_DEV_2797029.IFCPCURVE' IN TYPEOF (C) THEN
     Surfs := [C\IfcPCurve.BasisSurface];
   ELSE
-    IF 'IFC4X3_DEV_541569b.IFCSURFACECURVE' IN TYPEOF (C) THEN
+    IF 'IFC4X3_DEV_2797029.IFCSURFACECURVE' IN TYPEOF (C) THEN
       N := SIZEOF(C\IfcSurfaceCurve.AssociatedGeometry);
       REPEAT i := 1 TO N;
       Surfs := Surfs + IfcAssociatedSurface(C\IfcSurfaceCurve.AssociatedGeometry[i]);
       END_REPEAT;
     END_IF;
   END_IF;
-  IF 'IFC4X3_DEV_541569b.IFCCOMPOSITECURVEONSURFACE' IN TYPEOF (C) THEN
+  IF 'IFC4X3_DEV_2797029.IFCCOMPOSITECURVEONSURFACE' IN TYPEOF (C) THEN
 
     (* For an IfcCompositeCurveOnSurface the BasisSurface is the intersection of the BasisSurface of all the segments. *)
 
@@ -13152,7 +13152,7 @@ END_LOCAL;
   IF NOT EXISTS (Arg) THEN
     RETURN (?);
   ELSE
-    IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(Arg) THEN
+    IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(Arg) THEN
       BEGIN
         Ndim := Arg\IfcVector.Dim;
  V.DirectionRatios := Arg\IfcVector.Orientation.DirectionRatios;
@@ -13180,7 +13180,7 @@ END_LOCAL;
       REPEAT i := 1 TO Ndim;
         V.DirectionRatios[i] := V.DirectionRatios[i]/Mag;
       END_REPEAT;
-      IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(arg) THEN
+      IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(arg) THEN
         Vec.Orientation := V;
         Result := Vec;
       ELSE
@@ -13228,10 +13228,10 @@ FUNCTION IfcPointListDim
 (PointList : IfcCartesianPointList)
            : IfcDimensionCount;
 
-  IF ('IFC4X3_DEV_541569b.IFCCARTESIANPOINTLIST2D' IN TYPEOF(PointList))
+  IF ('IFC4X3_DEV_2797029.IFCCARTESIANPOINTLIST2D' IN TYPEOF(PointList))
     THEN RETURN(2);
   END_IF;     
-  IF ('IFC4X3_DEV_541569b.IFCCARTESIANPOINTLIST3D' IN TYPEOF(PointList))
+  IF ('IFC4X3_DEV_2797029.IFCCARTESIANPOINTLIST3D' IN TYPEOF(PointList))
     THEN RETURN(3);
   END_IF;     
   RETURN (?);
@@ -13342,7 +13342,7 @@ END_LOCAL;
   IF NOT EXISTS (Scalar) OR NOT EXISTS (Vec) THEN
     RETURN (?) ;
   ELSE
-    IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF (Vec) THEN
+    IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF (Vec) THEN
       V := Vec\IfcVector.Orientation;
       Mag := Scalar * Vec\IfcVector.Magnitude;
     ELSE
@@ -13394,98 +13394,98 @@ FUNCTION IfcShapeRepresentationTypes
     CASE RepType OF 
     'Point' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCPOINT' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCPOINT' IN TYPEOF(temp))));
       END;
 
     'PointCloud' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCCARTESIANPOINTLIST3D' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCCARTESIANPOINTLIST3D' IN TYPEOF(temp))));
       END;
 
     'Curve' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCCURVE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCCURVE' IN TYPEOF(temp))));
       END;
 
     'Curve2D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCCURVE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCCURVE' IN TYPEOF(temp)) 
                  AND (temp\IfcCurve.Dim = 2)));
       END;
 
     'Curve3D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCCURVE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCCURVE' IN TYPEOF(temp)) 
                  AND (temp\IfcCurve.Dim = 3)));
       END;
 
     'Segment' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSEGMENT' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSEGMENT' IN TYPEOF(temp))));
       END;
 
     'Surface' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(temp))));
       END;
 
     'Surface2D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(temp)) 
                  AND (temp\IfcSurface.Dim = 2)));
       END;
 
     'Surface3D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(temp)) 
                  AND (temp\IfcSurface.Dim = 3)));
       END;
 
     'FillArea' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCANNOTATIONFILLAREA' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCANNOTATIONFILLAREA' IN TYPEOF(temp))));
       END;
 
     'Text' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCTEXTLITERAL' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCTEXTLITERAL' IN TYPEOF(temp))));
       END;
 
     'AdvancedSurface' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | 'IFC4X3_DEV_541569b.IFCBSPLINESURFACE' IN TYPEOF(temp)));
+        Count := SIZEOF(QUERY(temp <* Items | 'IFC4X3_DEV_2797029.IFCBSPLINESURFACE' IN TYPEOF(temp)));
       END;
 
     'Annotation2D' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | (
                   SIZEOF(TYPEOF(temp) * [
-                   'IFC4X3_DEV_541569b.IFCPOINT',
-                   'IFC4X3_DEV_541569b.IFCCURVE',
-                   'IFC4X3_DEV_541569b.IFCGEOMETRICCURVESET',
-                   'IFC4X3_DEV_541569b.IFCANNOTATIONFILLAREA',
-                   'IFC4X3_DEV_541569b.IFCTEXTLITERAL']) = 1)
+                   'IFC4X3_DEV_2797029.IFCPOINT',
+                   'IFC4X3_DEV_2797029.IFCCURVE',
+                   'IFC4X3_DEV_2797029.IFCGEOMETRICCURVESET',
+                   'IFC4X3_DEV_2797029.IFCANNOTATIONFILLAREA',
+                   'IFC4X3_DEV_2797029.IFCTEXTLITERAL']) = 1)
                  ));
       END;
 
     'GeometricSet' : 
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCGEOMETRICSET' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCPOINT' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCCURVE' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCGEOMETRICSET' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCPOINT' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCCURVE' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(temp))));
       END;
 
     'GeometricCurveSet' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCGEOMETRICCURVESET' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCGEOMETRICSET' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCPOINT' IN TYPEOF(temp))
-                 OR ('IFC4X3_DEV_541569b.IFCCURVE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCGEOMETRICCURVESET' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCGEOMETRICSET' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCPOINT' IN TYPEOF(temp))
+                 OR ('IFC4X3_DEV_2797029.IFCCURVE' IN TYPEOF(temp))));
          REPEAT i:=1 TO HIINDEX(Items);  
-           IF ('IFC4X3_DEV_541569b.IFCGEOMETRICSET' IN TYPEOF(Items[i]))
+           IF ('IFC4X3_DEV_2797029.IFCGEOMETRICSET' IN TYPEOF(Items[i]))
            THEN
-             IF (SIZEOF(QUERY(temp <* Items[i]\IfcGeometricSet.Elements | 'IFC4X3_DEV_541569b.IFCSURFACE' IN TYPEOF(temp))) > 0)
+             IF (SIZEOF(QUERY(temp <* Items[i]\IfcGeometricSet.Elements | 'IFC4X3_DEV_2797029.IFCSURFACE' IN TYPEOF(temp))) > 0)
              THEN
                Count := Count - 1;
              END_IF;
@@ -13495,41 +13495,41 @@ FUNCTION IfcShapeRepresentationTypes
 
     'Tessellation' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp <* Items | 'IFC4X3_DEV_541569b.IFCTESSELLATEDITEM' IN TYPEOF(temp)));
+        Count := SIZEOF(QUERY(temp <* Items | 'IFC4X3_DEV_2797029.IFCTESSELLATEDITEM' IN TYPEOF(temp)));
       END;
 
     'SurfaceOrSolidModel' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCTESSELLATEDITEM',
-                   'IFC4X3_DEV_541569b.IFCSHELLBASEDSURFACEMODEL',
-                   'IFC4X3_DEV_541569b.IFCFACEBASEDSURFACEMODEL',
-                   'IFC4X3_DEV_541569b.IFCSOLIDMODEL'] * TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCTESSELLATEDITEM',
+                   'IFC4X3_DEV_2797029.IFCSHELLBASEDSURFACEMODEL',
+                   'IFC4X3_DEV_2797029.IFCFACEBASEDSURFACEMODEL',
+                   'IFC4X3_DEV_2797029.IFCSOLIDMODEL'] * TYPEOF(temp)) >= 1
                  ));      
       END;
 
     'SurfaceModel' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCTESSELLATEDITEM',
-                   'IFC4X3_DEV_541569b.IFCSHELLBASEDSURFACEMODEL',
-                   'IFC4X3_DEV_541569b.IFCFACEBASEDSURFACEMODEL'] * TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCTESSELLATEDITEM',
+                   'IFC4X3_DEV_2797029.IFCSHELLBASEDSURFACEMODEL',
+                   'IFC4X3_DEV_2797029.IFCFACEBASEDSURFACEMODEL'] * TYPEOF(temp)) >= 1
                  ));      
       END;
 
     'SolidModel' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSOLIDMODEL' IN TYPEOF(temp))));            
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSOLIDMODEL' IN TYPEOF(temp))));            
       END;
 
     'SweptSolid' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | (SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCEXTRUDEDAREASOLID',
-                   'IFC4X3_DEV_541569b.IFCREVOLVEDAREASOLID'] * TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCEXTRUDEDAREASOLID',
+                   'IFC4X3_DEV_2797029.IFCREVOLVEDAREASOLID'] * TYPEOF(temp)) >= 1
                    ) AND (SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCEXTRUDEDAREASOLIDTAPERED',
-                   'IFC4X3_DEV_541569b.IFCREVOLVEDAREASOLIDTAPERED'] * TYPEOF(temp)) = 0
+                   'IFC4X3_DEV_2797029.IFCEXTRUDEDAREASOLIDTAPERED',
+                   'IFC4X3_DEV_2797029.IFCREVOLVEDAREASOLIDTAPERED'] * TYPEOF(temp)) = 0
                    )
                  ));                             
       END;
@@ -13537,42 +13537,42 @@ FUNCTION IfcShapeRepresentationTypes
     'AdvancedSweptSolid' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCSWEPTAREASOLID',
-                   'IFC4X3_DEV_541569b.IFCSWEPTDISKSOLID',
-                   'IFC4X3_DEV_541569b.IFCSECTIONEDSOLIDHORIZONTAL'] *  TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCSWEPTAREASOLID',
+                   'IFC4X3_DEV_2797029.IFCSWEPTDISKSOLID',
+                   'IFC4X3_DEV_2797029.IFCSECTIONEDSOLIDHORIZONTAL'] *  TYPEOF(temp)) >= 1
                  ));      
       END;
 
     'CSG' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCBOOLEANRESULT',
-                   'IFC4X3_DEV_541569b.IFCCSGPRIMITIVE3D',
-                   'IFC4X3_DEV_541569b.IFCCSGSOLID'] *  TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCBOOLEANRESULT',
+                   'IFC4X3_DEV_2797029.IFCCSGPRIMITIVE3D',
+                   'IFC4X3_DEV_2797029.IFCCSGSOLID'] *  TYPEOF(temp)) >= 1
                  ));            
       END;
 
     'Clipping' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | SIZEOF([
-                   'IFC4X3_DEV_541569b.IFCCSGSOLID',
-                   'IFC4X3_DEV_541569b.IFCBOOLEANCLIPPINGRESULT'] * TYPEOF(temp)) >= 1
+                   'IFC4X3_DEV_2797029.IFCCSGSOLID',
+                   'IFC4X3_DEV_2797029.IFCBOOLEANCLIPPINGRESULT'] * TYPEOF(temp)) >= 1
                  )); 
       END;
 
     'Brep' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCFACETEDBREP' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCFACETEDBREP' IN TYPEOF(temp))));      
       END;
 
     'AdvancedBrep' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCMANIFOLDSOLIDBREP' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCMANIFOLDSOLIDBREP' IN TYPEOF(temp))));      
       END;
 
     'BoundingBox' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCBOUNDINGBOX' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCBOUNDINGBOX' IN TYPEOF(temp))));
         IF (SIZEOF(Items) > 1)
         THEN
           Count := 0;
@@ -13581,17 +13581,17 @@ FUNCTION IfcShapeRepresentationTypes
 
     'SectionedSpine' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCSECTIONEDSPINE' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCSECTIONEDSPINE' IN TYPEOF(temp))));      
       END;
 
     'LightSource' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCLIGHTSOURCE' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCLIGHTSOURCE' IN TYPEOF(temp))));      
       END;
 
     'MappedRepresentation' :
       BEGIN
-        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_541569b.IFCMAPPEDITEM' IN TYPEOF(temp))));  
+        Count := SIZEOF(QUERY(temp <* Items | ('IFC4X3_DEV_2797029.IFCMAPPEDITEM' IN TYPEOF(temp))));  
       END;
 
      OTHERWISE : RETURN(?);
@@ -13629,14 +13629,14 @@ LOCAL
    Result : LOGICAL := FALSE;
 END_LOCAL;
    
-IF ('IFC4X3_DEV_541569b.IFCPARAMETERIZEDPROFILEDEF' IN TYPEOF(StartArea)) THEN
-   IF ('IFC4X3_DEV_541569b.IFCDERIVEDPROFILEDEF' IN TYPEOF(EndArea)) THEN
+IF ('IFC4X3_DEV_2797029.IFCPARAMETERIZEDPROFILEDEF' IN TYPEOF(StartArea)) THEN
+   IF ('IFC4X3_DEV_2797029.IFCDERIVEDPROFILEDEF' IN TYPEOF(EndArea)) THEN
       Result := (StartArea :=: EndArea\IfcDerivedProfileDef.ParentProfile);
    ELSE
       Result := (TYPEOF(StartArea) = TYPEOF(EndArea));
    END_IF;
 ELSE
-   IF ('IFC4X3_DEV_541569b.IFCDERIVEDPROFILEDEF' IN TYPEOF(EndArea)) THEN
+   IF ('IFC4X3_DEV_2797029.IFCDERIVEDPROFILEDEF' IN TYPEOF(EndArea)) THEN
       Result := (StartArea :=: EndArea\IfcDerivedProfileDef.ParentProfile);
    ELSE
       Result := FALSE;
@@ -13658,28 +13658,28 @@ FUNCTION IfcTopologyRepresentationTypes
     'Vertex' :
       BEGIN 
         Count := SIZEOF(QUERY(temp <* Items | 
-                  ('IFC4X3_DEV_541569b.IFCVERTEX' IN TYPEOF(temp))));
+                  ('IFC4X3_DEV_2797029.IFCVERTEX' IN TYPEOF(temp))));
       END;
     'Edge' : 
       BEGIN 
         Count := SIZEOF(QUERY(temp <* Items | 
-                  ('IFC4X3_DEV_541569b.IFCEDGE' IN TYPEOF(temp))));
+                  ('IFC4X3_DEV_2797029.IFCEDGE' IN TYPEOF(temp))));
       END;
     'Path' : 
       BEGIN 
         Count := SIZEOF(QUERY(temp <* Items | 
-                  ('IFC4X3_DEV_541569b.IFCPATH' IN TYPEOF(temp))));
+                  ('IFC4X3_DEV_2797029.IFCPATH' IN TYPEOF(temp))));
       END;
     'Face' : 
       BEGIN 
         Count := SIZEOF(QUERY(temp <* Items | 
-                  ('IFC4X3_DEV_541569b.IFCFACE' IN TYPEOF(temp))));
+                  ('IFC4X3_DEV_2797029.IFCFACE' IN TYPEOF(temp))));
       END;
     'Shell' :
       BEGIN
         Count := SIZEOF(QUERY(temp <* Items | 
-                  ('IFC4X3_DEV_541569b.IFCOPENSHELL' IN TYPEOF(temp))
-                    OR ('IFC4X3_DEV_541569b.IFCCLOSEDSHELL' IN TYPEOF(temp))));
+                  ('IFC4X3_DEV_2797029.IFCOPENSHELL' IN TYPEOF(temp))
+                    OR ('IFC4X3_DEV_2797029.IFCCLOSEDSHELL' IN TYPEOF(temp))));
       END;
     'Undefined': RETURN(TRUE);
      OTHERWISE : RETURN(?);
@@ -13705,10 +13705,10 @@ END_IF;
 
 REPEAT i:=1 TO HIINDEX(Relations);
   Definition := Relations[i].RelatingPropertyDefinition;
-  IF 'IFC4X3_DEV_541569b.IFCPROPERTYSETDEFINITION' IN TYPEOF(Definition) THEN
+  IF 'IFC4X3_DEV_2797029.IFCPROPERTYSETDEFINITION' IN TYPEOF(Definition) THEN
     Properties := Properties + Definition;
   ELSE 
-    IF 'IFC4X3_DEV_541569b.IFCPROPERTYSETDEFINITIONSET' IN TYPEOF(Definition) THEN
+    IF 'IFC4X3_DEV_2797029.IFCPROPERTYSETDEFINITIONSET' IN TYPEOF(Definition) THEN
       BEGIN
         DefinitionSet := Definition;
         REPEAT j:= 1 TO HIINDEX(DefinitionSet);
@@ -13750,7 +13750,7 @@ LOCAL
 END_LOCAL;
 
 REPEAT i:=1 TO HIINDEX(Properties);
-  IF 'IFC4X3_DEV_541569b.IFCPROPERTYSET' IN TYPEOF(Properties[i]) THEN
+  IF 'IFC4X3_DEV_2797029.IFCPROPERTYSET' IN TYPEOF(Properties[i]) THEN
     Names := Names + Properties[i]\IfcRoot.Name;
   ELSE
     Unnamed := Unnamed + 1;
@@ -13805,14 +13805,14 @@ END_LOCAL;
     RETURN (?) ;
   ELSE
     BEGIN
-      IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(Arg1) THEN
+      IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(Arg1) THEN
         Mag1 := Arg1\IfcVector.Magnitude;
         Vec1 := Arg1\IfcVector.Orientation;
       ELSE
         Mag1 := 1.0;
         Vec1 := Arg1;
       END_IF;
-      IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(Arg2) THEN
+      IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(Arg2) THEN
         Mag2 := Arg2\IfcVector.Magnitude;
         Vec2 := Arg2\IfcVector.Orientation;
       ELSE
@@ -13855,14 +13855,14 @@ END_LOCAL;
     RETURN (?) ;
   ELSE
     BEGIN
-      IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(Arg1) THEN
+      IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(Arg1) THEN
         Mag1 := Arg1\IfcVector.Magnitude;
         Vec1 := Arg1\IfcVector.Orientation;
       ELSE
         Mag1 := 1.0;
         Vec1 := Arg1;
       END_IF;
-      IF 'IFC4X3_DEV_541569b.IFCVECTOR' IN TYPEOF(Arg2) THEN
+      IF 'IFC4X3_DEV_2797029.IFCVECTOR' IN TYPEOF(Arg2) THEN
         Mag2 := Arg2\IfcVector.Magnitude;
         Vec2 := Arg2\IfcVector.Orientation;
       ELSE
