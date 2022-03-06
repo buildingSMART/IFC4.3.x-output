@@ -629,6 +629,8 @@
 * The resource 'IfcBuiltSystemTypeEnum.NOTDEFINED' has no definition
 * The resource 'IfcBuiltSystemTypeEnum.OUTERSHELL' has no definition
 * The resource 'IfcBuiltSystemTypeEnum.PRESTRESSING' has no definition
+* The resource 'IfcBuiltSystemTypeEnum.RAILWAYLINE' has no definition
+* The resource 'IfcBuiltSystemTypeEnum.RAILWAYTRACK' has no definition
 * The resource 'IfcBuiltSystemTypeEnum.REINFORCING' has no definition
 * The resource 'IfcBuiltSystemTypeEnum.SHADING' has no definition
 * The resource 'IfcBuiltSystemTypeEnum.TRACKCIRCUIT' has no definition
@@ -3437,6 +3439,7 @@
 * The Property|Quantity Set 'IfcBuiltSystemTypeEnum.SHADING' should have at least one applicability
 * The Property|Quantity Set 'IfcBuiltSystemTypeEnum.TRACKCIRCUIT' should have at least one applicability
 * The Property|Quantity Set 'IfcBuiltSystemTypeEnum.TRANSPORT' should have at least one applicability
+* The Property|Quantity Set 'IfcBuiltSystemTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcBurnerType' should have at least one applicability
 * The Property|Quantity Set 'IfcBurnerTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcBurnerTypeEnum.USERDEFINED' should have at least one applicability
