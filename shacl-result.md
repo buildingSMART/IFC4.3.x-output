@@ -3,12 +3,6 @@
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
 ## DefinitionForProperty
 
-* The Property 'Pset_Address.ElectronicMailAddresses' has no definition
-* The Property 'Pset_Address.FacsimileNumbers' has no definition
-* The Property 'Pset_Address.MessagingIDs' has no definition
-* The Property 'Pset_Address.PagerNumber' has no definition
-* The Property 'Pset_Address.TelephoneNumbers' has no definition
-* The Property 'Pset_Address.WWWHomePageURL' has no definition
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
 * The Property 'Pset_AirSideSystemInformation.TotalAirFlow' has no definition
 * The Property 'Pset_AirTerminalBoxPHistory.AirFlowCurve' has no definition
