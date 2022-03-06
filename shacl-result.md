@@ -2616,64 +2616,154 @@
 * The concept usage 'Type Body Geometry' for entity 'IfcMemberType' in MVD 'GeneralUsage' is not modeled in UML
 ## PropertyForDefinition
 
+* For document 'AcidityConcentration.md/a/properties/docs' a property cannot be found
 * For document 'ActualWork.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentRange.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentRangeStepValue.md/a/properties/docs' a property cannot be found
 * For document 'AdjustmentValues.md/a/properties/docs' a property cannot be found
+* For document 'AdmixturesDescription.md/a/properties/docs' a property cannot be found
 * For document 'AffectsSurroundings.md/a/properties/docs' a property cannot be found
 * For document 'Aggregation.md/a/properties/docs' a property cannot be found
 * For document 'AirflowCurve.md/a/properties/docs' a property cannot be found
 * For document 'AirflowRateRange.md/a/properties/docs' a property cannot be found
 * For document 'AirflowSensible.md/a/properties/docs' a property cannot be found
 * For document 'AirflowType.md/a/properties/docs' a property cannot be found
+* For document 'AlkalinityConcentration.md/a/properties/docs' a property cannot be found
+* For document 'AppearanceGrade.md/a/properties/docs' a property cannot be found
+* For document 'ApplicableStructuralDesignMethod.md/a/properties/docs' a property cannot be found
 * For document 'Arrangement.md/a/properties/docs' a property cannot be found
 * For document 'AssessmentOfRisk.md/a/properties/docs' a property cannot be found
+* For document 'BaseChamfer.md/b/properties/docs' a property cannot be found
+* For document 'BearingStrength.md/b/properties/docs' a property cannot be found
 * For document 'BodyColor.md/b/properties/docs' a property cannot be found
+* For document 'BoilingPoint.md/b/properties/docs' a property cannot be found
+* For document 'BottomCover.md/b/properties/docs' a property cannot be found
 * For document 'BulbLiquidColor.md/b/properties/docs' a property cannot be found
+* For document 'CO2Content.md/c/properties/docs' a property cannot be found
+* For document 'COContent.md/c/properties/docs' a property cannot be found
 * For document 'CapColor.md/c/properties/docs' a property cannot be found
+* For document 'CarbonContent.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreBaseHeight.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreBaseWidth.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreMiddleHeight.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreSpacing.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreTopHeight.md/c/properties/docs' a property cannot be found
+* For document 'CenterCoreTopWidth.md/c/properties/docs' a property cannot be found
+* For document 'CentreOfGravityInX.md/c/properties/docs' a property cannot be found
+* For document 'CentreOfGravityInY.md/c/properties/docs' a property cannot be found
 * For document 'Color.md/c/properties/docs' a property cannot be found
 * For document 'ColorAppearance.md/c/properties/docs' a property cannot be found
 * For document 'ColorCode.md/c/properties/docs' a property cannot be found
 * For document 'ColorRenderingIndex.md/c/properties/docs' a property cannot be found
 * For document 'ColorTemperature.md/c/properties/docs' a property cannot be found
+* For document 'CombustionTemperature.md/c/properties/docs' a property cannot be found
+* For document 'CompStrength.md/c/properties/docs' a property cannot be found
+* For document 'CompStrengthPerp.md/c/properties/docs' a property cannot be found
+* For document 'CompressiveStrength.md/c/properties/docs' a property cannot be found
 * For document 'Condition.md/c/properties/docs' a property cannot be found
+* For document 'CoreBaseHeight.md/c/properties/docs' a property cannot be found
+* For document 'CoreBaseWidth.md/c/properties/docs' a property cannot be found
+* For document 'CoreMiddleHeight.md/c/properties/docs' a property cannot be found
+* For document 'CoreSpacing.md/c/properties/docs' a property cannot be found
+* For document 'CoreTopHeight.md/c/properties/docs' a property cannot be found
+* For document 'CoreTopWidth.md/c/properties/docs' a property cannot be found
 * For document 'CurrentCarryingCapasity.md/c/properties/docs' a property cannot be found
+* For document 'DimensionalChangeCoefficient.md/d/properties/docs' a property cannot be found
 * For document 'DisplacementAccomodated.md/d/properties/docs' a property cannot be found
+* For document 'DissolvedSolidsContent.md/d/properties/docs' a property cannot be found
+* For document 'DraftBaseOffset.md/d/properties/docs' a property cannot be found
+* For document 'DraftSideOffset.md/d/properties/docs' a property cannot be found
+* For document 'DynamicViscosity.md/d/properties/docs' a property cannot be found
+* For document 'EdgeDraft.md/e/properties/docs' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FinishColor.md/f/properties/docs' a property cannot be found
+* For document 'FlangeBaseFillet.md/f/properties/docs' a property cannot be found
+* For document 'FlangeChamfer.md/f/properties/docs' a property cannot be found
+* For document 'FlangeDepth.md/f/properties/docs' a property cannot be found
+* For document 'FlangeDraft.md/f/properties/docs' a property cannot be found
+* For document 'FlangeTopFillet.md/f/properties/docs' a property cannot be found
 * For document 'ForeignObjectDetectionSensorInterface.md/f/properties/docs' a property cannot be found
+* For document 'FreezingPoint.md/f/properties/docs' a property cannot be found
+* For document 'GasPressure.md/g/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
 * For document 'GlassColor.md/g/properties/docs' a property cannot be found
 * For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
+* For document 'HardeningModule.md/h/properties/docs' a property cannot be found
+* For document 'Hardness.md/h/properties/docs' a property cannot be found
+* For document 'HigherHeatingValue.md/h/properties/docs' a property cannot be found
 * For document 'IK.md/i/properties/docs' a property cannot be found
 * For document 'IP.md/i/properties/docs' a property cannot be found
 * For document 'Identifier.md/i/properties/docs' a property cannot be found
+* For document 'ImpuritiesContent.md/i/properties/docs' a property cannot be found
 * For document 'InPlane.md/i/properties/docs' a property cannot be found
+* For document 'InstabilityFactors.md/i/properties/docs' a property cannot be found
+* For document 'IsPotable.md/i/properties/docs' a property cannot be found
 * For document 'IsSignalFrameMiniature.md/i/properties/docs' a property cannot be found
+* For document 'IsothermalMoistureCapacity.md/i/properties/docs' a property cannot be found
 * For document 'JointRelativePosition.md/j/properties/docs/README.md/domain/schemas' a property cannot be found
+* For document 'KeyDepth.md/k/properties/docs' a property cannot be found
+* For document 'KeyHeight.md/k/properties/docs' a property cannot be found
+* For document 'KeyOffset.md/k/properties/docs' a property cannot be found
 * For document 'Layer.md/l/properties/docs' a property cannot be found
+* For document 'Layers.md/l/properties/docs' a property cannot be found
+* For document 'Layup.md/l/properties/docs' a property cannot be found
+* For document 'LeftFlangeWidth.md/l/properties/docs' a property cannot be found
 * For document 'Location.md/l/properties/docs' a property cannot be found
+* For document 'LowerHeatingValue.md/l/properties/docs' a property cannot be found
+* For document 'LowerVaporResistanceFactor.md/l/properties/docs' a property cannot be found
 * For document 'MainColor.md/m/properties/docs' a property cannot be found
 * For document 'MaintenanceType.md/m/properties/docs' a property cannot be found
+* For document 'MassDensity.md/m/properties/docs' a property cannot be found
 * For document 'Material.md/m/properties/docs' a property cannot be found
 * For document 'MaxAdjustmentX.md/m/properties/docs' a property cannot be found
+* For document 'MaxAggregateSize.md/m/properties/docs' a property cannot be found
+* For document 'MaximumPlateThickness.md/m/properties/docs' a property cannot be found
+* For document 'MaximumSectionModulusY.md/m/properties/docs' a property cannot be found
+* For document 'MaximumSectionModulusZ.md/m/properties/docs' a property cannot be found
+* For document 'MinimumPlateThickness.md/m/properties/docs' a property cannot be found
+* For document 'MinimumSectionModulusY.md/m/properties/docs' a property cannot be found
+* For document 'MinimumSectionModulusZ.md/m/properties/docs' a property cannot be found
 * For document 'Mode.md/m/properties/docs' a property cannot be found
+* For document 'MoistureCapacityThermalGradient.md/m/properties/docs' a property cannot be found
+* For document 'MoistureContent.md/m/properties/docs' a property cannot be found
+* For document 'MoistureDiffusivity.md/m/properties/docs' a property cannot be found
+* For document 'MolecularWeight.md/m/properties/docs' a property cannot be found
+* For document 'MomentOfInertiaY.md/m/properties/docs' a property cannot be found
+* For document 'MomentOfInertiaYZ.md/m/properties/docs' a property cannot be found
+* For document 'MomentOfInertiaZ.md/m/properties/docs' a property cannot be found
 * For document 'MountingType.md/m/properties/docs' a property cannot be found
+* For document 'N20Content.md/n/properties/docs' a property cannot be found
 * For document 'Name.md/n/properties/docs' a property cannot be found
 * For document 'Nesting.md/n/properties/docs' a property cannot be found
 * For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
 * For document 'OutOfPlane.md/o/properties/docs' a property cannot be found
+* For document 'OverallDepth.md/o/properties/docs' a property cannot be found
+* For document 'OverallWidth.md/o/properties/docs' a property cannot be found
+* For document 'PHLevel.md/p/properties/docs' a property cannot be found
 * For document 'PerformanceUnit.md/p/properties/docs' a property cannot be found
 * For document 'PlacementType.md/p/properties/docs' a property cannot be found
+* For document 'PlasticShapeFactorY.md/p/properties/docs' a property cannot be found
+* For document 'PlasticShapeFactorZ.md/p/properties/docs' a property cannot be found
+* For document 'PlasticStrain.md/p/properties/docs' a property cannot be found
+* For document 'Plies.md/p/properties/docs' a property cannot be found
+* For document 'PoissonRatio.md/p/properties/docs' a property cannot be found
+* For document 'Porosity.md/p/properties/docs' a property cannot be found
 * For document 'Position.md/p/properties/docs' a property cannot be found
 * For document 'PossibleFlowRateRange.md/p/properties/docs' a property cannot be found
 * For document 'PreventiveMeasures.md/p/properties/docs' a property cannot be found
 * For document 'PrimaryAirflowRateRange.md/p/properties/docs' a property cannot be found
+* For document 'ProportionalStress.md/p/properties/docs' a property cannot be found
 * For document 'ProtectedOpening.md/p/properties/docs' a property cannot be found
+* For document 'ProtectivePoreRatio.md/p/properties/docs' a property cannot be found
 * For document 'Pset.md/p/properties/docs' a property cannot be found
 * For document 'Qto.md/q/properties/docs' a property cannot be found
+* For document 'RaisedCompStrengthPerp.md/r/properties/docs' a property cannot be found
+* For document 'RaisedCompressiveStrength.md/r/properties/docs' a property cannot be found
+* For document 'ReferenceDepth.md/r/properties/docs' a property cannot be found
+* For document 'Relaxations.md/r/properties/docs' a property cannot be found
 * For document 'RemainingWork.md/r/properties/docs' a property cannot be found
+* For document 'RightFlangeWidth.md/r/properties/docs' a property cannot be found
 * For document 'RiskConsequence.md/r/properties/docs' a property cannot be found
 * For document 'RiskRating.md/r/properties/docs' a property cannot be found
 * For document 'RotationAccomodated.md/r/properties/docs' a property cannot be found
@@ -2682,8 +2772,20 @@
 * For document 'SecondaryAirflowRateRange.md/s/properties/docs' a property cannot be found
 * For document 'SelfExtinguishing60332.md/s/properties/docs' a property cannot be found
 * For document 'Shape.md/s/properties/docs' a property cannot be found
+* For document 'ShearAreaY.md/s/properties/docs' a property cannot be found
+* For document 'ShearAreaZ.md/s/properties/docs' a property cannot be found
+* For document 'ShearCentreY.md/s/properties/docs' a property cannot be found
+* For document 'ShearCentreZ.md/s/properties/docs' a property cannot be found
+* For document 'ShearDeformationAreaY.md/s/properties/docs' a property cannot be found
+* For document 'ShearDeformationAreaZ.md/s/properties/docs' a property cannot be found
+* For document 'ShearModulus.md/s/properties/docs' a property cannot be found
+* For document 'ShearModulusMin.md/s/properties/docs' a property cannot be found
+* For document 'ShearStrength.md/s/properties/docs' a property cannot be found
 * For document 'SheathColors.md/s/properties/docs' a property cannot be found
 * For document 'SignalElevationAngle.md/s/properties/docs' a property cannot be found
+* For document 'SolarReflectanceBack.md/s/properties/docs' a property cannot be found
+* For document 'SolarReflectanceFront.md/s/properties/docs' a property cannot be found
+* For document 'SolarRefractionIndex.md/s/properties/docs' a property cannot be found
 * For document 'SpaceHumidity.md/s/properties/docs' a property cannot be found
 * For document 'SpaceHumidityMax.md/s/properties/docs' a property cannot be found
 * For document 'SpaceHumidityMin.md/s/properties/docs' a property cannot be found
@@ -2696,18 +2798,56 @@
 * For document 'SpaceTemperatureSummerMin.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureWinterMax.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureWinterMin.md/s/properties/docs' a property cannot be found
+* For document 'Species.md/s/properties/docs' a property cannot be found
+* For document 'SpecificHeatCapacity.md/s/properties/docs' a property cannot be found
+* For document 'SpecificHeatTemperatureDerivative.md/s/properties/docs' a property cannot be found
+* For document 'StemBaseChamfer.md/s/properties/docs' a property cannot be found
+* For document 'StemBaseFillet.md/s/properties/docs' a property cannot be found
+* For document 'StemBaseWidth.md/s/properties/docs' a property cannot be found
+* For document 'StemTopChamfer.md/s/properties/docs' a property cannot be found
+* For document 'StemTopFillet.md/s/properties/docs' a property cannot be found
+* For document 'StemTopWidth.md/s/properties/docs' a property cannot be found
+* For document 'StrengthGrade.md/s/properties/docs' a property cannot be found
+* For document 'StructuralGrade.md/s/properties/docs' a property cannot be found
 * For document 'SurfaceColor.md/s/properties/docs' a property cannot be found
+* For document 'TensileStrengthPerp.md/t/properties/docs' a property cannot be found
+* For document 'ThermalConductivityTemperatureDerivative.md/t/properties/docs' a property cannot be found
+* For document 'ThermalIrEmissivityBack.md/t/properties/docs' a property cannot be found
+* For document 'ThermalIrEmissivityFront.md/t/properties/docs' a property cannot be found
+* For document 'ThermalIrTransmittance.md/t/properties/docs' a property cannot be found
+* For document 'ThicknessSwelling.md/t/properties/docs' a property cannot be found
+* For document 'TorsionalConstantX.md/t/properties/docs' a property cannot be found
+* For document 'TorsionalSectionModulus.md/t/properties/docs' a property cannot be found
 * For document 'TotalAirflow.md/t/properties/docs' a property cannot be found
 * For document 'TotalSensibleHeatGain.md/t/properties/docs' a property cannot be found
 * For document 'Transition.md/t/properties/docs' a property cannot be found
 * For document 'TypeDesignator.md/t/properties/docs' a property cannot be found
+* For document 'UltimateStrain.md/u/properties/docs' a property cannot be found
+* For document 'UltimateStress.md/u/properties/docs' a property cannot be found
 * For document 'Unit.md/u/properties/docs' a property cannot be found
+* For document 'UpperVaporResistanceFactor.md/u/properties/docs' a property cannot be found
 * For document 'User.md/u/properties/docs' a property cannot be found
 * For document 'Values.md/v/properties/docs' a property cannot be found
+* For document 'VaporPermeability.md/v/properties/docs' a property cannot be found
 * For document 'VentilationAirFlowRate.md/v/properties/docs' a property cannot be found
 * For document 'Version.md/v/properties/docs' a property cannot be found
 * For document 'VersionDate.md/v/properties/docs' a property cannot be found
+* For document 'ViscosityTemperatureDerivative.md/v/properties/docs' a property cannot be found
+* For document 'VisibleReflectanceBack.md/v/properties/docs' a property cannot be found
+* For document 'VisibleReflectanceFront.md/v/properties/docs' a property cannot be found
+* For document 'VisibleRefractionIndex.md/v/properties/docs' a property cannot be found
+* For document 'VisibleTransmittance.md/v/properties/docs' a property cannot be found
+* For document 'WarpingConstant.md/w/properties/docs' a property cannot be found
 * For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
+* For document 'WaterImpermeability.md/w/properties/docs' a property cannot be found
+* For document 'Workability.md/w/properties/docs' a property cannot be found
+* For document 'YieldStress.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusBending.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusCompression.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusMin.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusPerp.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusPerpMin.md/y/properties/docs' a property cannot be found
+* For document 'YoungModulusTension.md/y/properties/docs' a property cannot be found
 * For document 'zzInPlane.md/z/properties/docs' a property cannot be found
 * For document 'zzInPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzOutOfPlane.md/z/properties/docs' a property cannot be found
@@ -2747,30 +2887,8 @@
 * The Property|Quantity Set 'Pset_FlowInstrumentPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_HumidifierPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_IpNetworkEquipmentPHistory' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialCombustion' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialCommon' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialConcrete' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialEnergy' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialFuel' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialHygroscopic' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialMechanical' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialOptical' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialSteel' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialThermal' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialWater' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialWood' should have at least one applicability
-* The Property|Quantity Set 'Pset_MaterialWoodBasedStructure' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalBeamInPlane' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalBeamInPlaneNegative' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalBeamOutOfPlane' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalPanelInPlane' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlane' should have at least one applicability
-* The Property|Quantity Set 'Pset_MechanicalPanelOutOfPlaneNegative' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeFittingPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_PipeSegmentPHistory' should have at least one applicability
-* The Property|Quantity Set 'Pset_ProfileArbitraryDoubleT' should have at least one applicability
-* The Property|Quantity Set 'Pset_ProfileArbitraryHollowCore' should have at least one applicability
-* The Property|Quantity Set 'Pset_ProfileMechanical' should have at least one applicability
 * The Property|Quantity Set 'Pset_ProjectCommon' should have at least one applicability
 * The Property|Quantity Set 'Pset_PumpPHistory' should have at least one applicability
 * The Property|Quantity Set 'Pset_SensorPHistory' should have at least one applicability
