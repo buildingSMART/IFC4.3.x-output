@@ -14,7 +14,7 @@
 * The Property 'Pset_AirTerminalBoxPHistory.AirFlowCurve' has no definition
 * The Property 'Pset_AirTerminalBoxTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_AirTerminalOccurrence.AirFlowType' has no definition
-* The Property 'Pset_AirTerminalTypeCommon.AirFlowrateRange' has no definition
+* The Property 'Pset_AirTerminalTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_AirTerminalTypeCommon.FinishColour' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.PrimaryAirFlowRateRange' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
@@ -24,7 +24,7 @@
 * The Property 'Pset_CooledBeamTypeCommon.FinishColour' has no definition
 * The Property 'Pset_DistributionPortCommon.ColourCode' has no definition
 * The Property 'Pset_DoorWindowGlazingType.GlassColour' has no definition
-* The Property 'Pset_DuctSilencerTypeCommon.AirFlowrateRange' has no definition
+* The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_FireSuppressionTerminalTypeFireHydrant.BodyColour' has no definition
 * The Property 'Pset_FireSuppressionTerminalTypeFireHydrant.CapColour' has no definition
 * The Property 'Pset_FireSuppressionTerminalTypeSprinkler.BulbLiquidColour' has no definition
@@ -858,7 +858,6 @@
 * The resource 'IfcDamperTypeEnum.RELIEFDAMPER' has no definition
 * The resource 'IfcDamperTypeEnum.SMOKEDAMPER' has no definition
 * The resource 'IfcDamperTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDimensionsForSiUnit' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.ANCHORPLATE' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.BIRDPROTECTION' has no definition
 * The resource 'IfcDiscreteAccessoryTypeEnum.BRACKET' has no definition
@@ -2451,8 +2450,6 @@
 * The concept usage 'Body Clipping Geometry' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body Geometry' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
@@ -2463,6 +2460,7 @@
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Body SweptSolid Geometry' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
@@ -2524,6 +2522,7 @@
 * The concept usage 'Material Single' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Material Single' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcEvent' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Object Nesting' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
@@ -2547,7 +2546,6 @@
 * The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcOpeningStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
@@ -2561,9 +2559,7 @@
 * The concept usage 'Product Placement' for entity 'IfcWallStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Type Shape' for entity 'IfcTypeProduct' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Profile 3D Geometry' for entity 'IfcDoorStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Profile 3D Geometry' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Profile Geometry' for entity 'IfcWindowStandardCase' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Project Global Positioning' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Project Template Definitions' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Property Sets for Performance' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
@@ -3857,7 +3853,7 @@
 * The Property|Quantity Set 'IfcDerivedUnit' should have at least one applicability
 * The Property|Quantity Set 'IfcDerivedUnitElement' should have at least one applicability
 * The Property|Quantity Set 'IfcDimensionalExponents' should have at least one applicability
-* The Property|Quantity Set 'IfcDimensionsForSiUnit' should have at least one applicability
+* The Property|Quantity Set 'IfcDimensionsForSIUnit' should have at least one applicability
 * The Property|Quantity Set 'IfcDirection' should have at least one applicability
 * The Property|Quantity Set 'IfcDirectrixCurveSweptAreaSolid' should have at least one applicability
 * The Property|Quantity Set 'IfcDirectrixDerivedReferenceSweptAreaSolid' should have at least one applicability
@@ -4712,6 +4708,7 @@
 * The Property|Quantity Set 'IfcQuantityArea' should have at least one applicability
 * The Property|Quantity Set 'IfcQuantityCount' should have at least one applicability
 * The Property|Quantity Set 'IfcQuantityLength' should have at least one applicability
+* The Property|Quantity Set 'IfcQuantityNumber' should have at least one applicability
 * The Property|Quantity Set 'IfcQuantitySet' should have at least one applicability
 * The Property|Quantity Set 'IfcQuantityTime' should have at least one applicability
 * The Property|Quantity Set 'IfcQuantityVolume' should have at least one applicability
