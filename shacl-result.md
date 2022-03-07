@@ -1,6 +1,7 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
+* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -2239,6 +2240,7 @@
 * The resource 'Q_COMPLEX' has no definition
 * The resource 'Q_COUNT' has no definition
 * The resource 'Q_LENGTH' has no definition
+* The resource 'Q_NUMBER' has no definition
 * The resource 'Q_TIME' has no definition
 * The resource 'Q_VOLUME' has no definition
 * The resource 'Q_WEIGHT' has no definition
@@ -4926,7 +4928,6 @@
 * The Property|Quantity Set 'IfcSignalTypeEnum.VISUAL' should have at least one applicability
 * The Property|Quantity Set 'IfcSimpleProperty' should have at least one applicability
 * The Property|Quantity Set 'IfcSimplePropertyTemplate' should have at least one applicability
-* The Property|Quantity Set 'IfcSimplePropertyTemplateTypeEnum' should have at least one applicability
 * The Property|Quantity Set 'IfcSimpleValue' should have at least one applicability
 * The Property|Quantity Set 'IfcSineSpiral' should have at least one applicability
 * The Property|Quantity Set 'IfcSingleProjectInstance' should have at least one applicability
@@ -5649,6 +5650,7 @@
 * The Property|Quantity Set 'Q_COMPLEX' should have at least one applicability
 * The Property|Quantity Set 'Q_COUNT' should have at least one applicability
 * The Property|Quantity Set 'Q_LENGTH' should have at least one applicability
+* The Property|Quantity Set 'Q_NUMBER' should have at least one applicability
 * The Property|Quantity Set 'Q_TIME' should have at least one applicability
 * The Property|Quantity Set 'Q_VOLUME' should have at least one applicability
 * The Property|Quantity Set 'Q_WEIGHT' should have at least one applicability
