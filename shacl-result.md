@@ -14,7 +14,6 @@
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SheathColours' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_ConcreteElementGeneral.CastingMethod' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeCommon.FinishColour' has no definition
 * The Property 'Pset_DistributionPortCommon.ColourCode' has no definition
