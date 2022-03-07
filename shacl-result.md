@@ -84,10 +84,6 @@
 * The resource 'BoundedValueTorqueMeasure' has no definition
 * The resource 'BoundedValueVolumeMeasure' has no definition
 * The resource 'BoundedValueVolumetricFlowRateMeasure' has no definition
-* The resource 'BuildingBuildingStoreySite' has no definition
-* The resource 'BuildingBuildingStoreySiteSpace' has no definition
-* The resource 'BuildingStorey' has no definition
-* The resource 'BuildingStoreySpace' has no definition
 * The resource 'ClearanceGeometry' has no definition
 * The resource 'ComplexPropertyCP_MaterialMechanicalBeam' has no definition
 * The resource 'ComplexPropertyCP_MaterialMechanicalPanel' has no definition
@@ -2339,8 +2335,6 @@
 * The resource 'SingleValueVolumeMeasure' has no definition
 * The resource 'SingleValueVolumetricFlowRateMeasure' has no definition
 * The resource 'SingleValueWarpingConstantMeasure' has no definition
-* The resource 'SiteSpatialZone' has no definition
-* The resource 'Space' has no definition
 * The resource 'SpatialElementTypePredefinedType' has no definition
 * The resource 'SpatialInterference' has no definition
 * The resource 'SpatialInterferenceWithZones' has no definition
@@ -2577,44 +2571,7 @@
 * The concept usage 'Sequential Connectivity' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Sequential Connectivity' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Software Identity' for entity 'IfcRoot' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Spatial Composition' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcBeam' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcBuildingElementProxy' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcChimney' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcColumn' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcDistributionElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcElementAssembly' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcFeatureElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcMember' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcRailing' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcRampFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcShadingDevice' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcSlab' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcStair' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcStairFlight' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcTransportElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcWall' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'IfcWindow' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcProject' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcSite' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'IfcSpace' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface 3D Geometry' for entity 'IfcBuiltElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface 3D Geometry' for entity 'IfcPlate' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Surface Geometry' for entity 'IfcCovering' in MVD 'GeneralUsage' is not modeled in UML
@@ -2960,10 +2917,6 @@
 * The Property|Quantity Set 'BoundedValueTorqueMeasure' should have at least one applicability
 * The Property|Quantity Set 'BoundedValueVolumeMeasure' should have at least one applicability
 * The Property|Quantity Set 'BoundedValueVolumetricFlowRateMeasure' should have at least one applicability
-* The Property|Quantity Set 'BuildingBuildingStoreySite' should have at least one applicability
-* The Property|Quantity Set 'BuildingBuildingStoreySiteSpace' should have at least one applicability
-* The Property|Quantity Set 'BuildingStorey' should have at least one applicability
-* The Property|Quantity Set 'BuildingStoreySpace' should have at least one applicability
 * The Property|Quantity Set 'ClearanceGeometry' should have at least one applicability
 * The Property|Quantity Set 'ComplexPropertyCP_MaterialMechanicalBeam' should have at least one applicability
 * The Property|Quantity Set 'ComplexPropertyCP_MaterialMechanicalPanel' should have at least one applicability
@@ -5907,8 +5860,6 @@
 * The Property|Quantity Set 'SingleValueVolumeMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueVolumetricFlowRateMeasure' should have at least one applicability
 * The Property|Quantity Set 'SingleValueWarpingConstantMeasure' should have at least one applicability
-* The Property|Quantity Set 'SiteSpatialZone' should have at least one applicability
-* The Property|Quantity Set 'Space' should have at least one applicability
 * The Property|Quantity Set 'SpatialElementTypePredefinedType' should have at least one applicability
 * The Property|Quantity Set 'SpatialInterference' should have at least one applicability
 * The Property|Quantity Set 'SpatialInterferenceWithZones' should have at least one applicability
