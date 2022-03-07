@@ -30,6 +30,7 @@
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForPropertySet
 
+* The resource 'Pset_BuildingElementProxyCommon' has no definition
 * The resource 'Pset_MarinePartChamberCommon' has no definition
 * The resource 'Pset_VegetationCommon' has no definition
 ## DefinitionForQuantity
@@ -2231,6 +2232,7 @@
 * The resource 'PropertyReferenceValue' has no definition
 * The resource 'PropertySingleValue' has no definition
 * The resource 'PropertyTableValue' has no definition
+* The resource 'Pset_BuildingElementProxyCommon' has no definition
 * The resource 'Pset_MarinePartChamberCommon' has no definition
 * The resource 'Pset_VegetationCommon' has no definition
 * The resource 'Q_AREA' has no definition

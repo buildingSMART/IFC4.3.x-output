@@ -15653,6 +15653,116 @@
           }
         }
       },
+      "IfcVibrationIsolator": {
+        "Parent": "IfcElementComponent",
+        "Description": "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a structure.HISTORY  New entity in IFC4{ .note}",
+        "Psets": {
+          "Pset_VibrationIsolatorTypeCommon": {
+            "Properties": {
+              "IsolatorCompressibility": {
+                "type": "real",
+                "Description": "The compressibility of the vibration isolator."
+              },
+              "IsolatorStaticDeflection": {
+                "type": "real",
+                "Description": "Static deflection of the vibration isolator."
+              },
+              "MaximumSupportedWeight": {
+                "type": "real",
+                "Description": "The maximum weight that can be carried by the vibration isolator."
+              },
+              "NominalHeight": {
+                "type": "real",
+                "Description": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
+              },
+              "Status": {
+                "type": "PEnum_ElementStatus",
+                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
+                ]
+              },
+              "VibrationTransmissibility": {
+                "type": "real",
+                "Description": "The vibration transmissibility percentage."
+              }
+            }
+          },
+          "Qto_VibrationIsolatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "real",
+                "Description": "Total Gross Weight of the object without any add-on parts and not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
+              }
+            }
+          }
+        }
+      },
+      "IfcVibrationIsolatorType": {
+        "Parent": "IfcElementComponentType",
+        "Description": "The element component type IfcVibrationIsolatorType defines commonly shared information for occurrences of vibration isolators. The set of shared information may include:common properties with shared property sets\ncommon representations\ncommon materials\ncommon composition of elementsIt is used to define a vibration isolator type specification indicating the specific product information that is common to all occurrences of that product type. The IfcVibrationIsolatorType may be declared within IfcProject or IfcProjectLibrary using IfcRelDeclares and may be exchanged with or without occurrences of the type. Occurrences of IfcVibrationIsolatorType are represented by instances of IfcVibrationIsolator. Refer to the documentation at IfcVibrationIsolator for supported property sets, materials, and composition.HISTORY  New entity in IFC2x2{ .note}",
+        "Psets": {
+          "Pset_VibrationIsolatorTypeCommon": {
+            "Properties": {
+              "IsolatorCompressibility": {
+                "type": "real",
+                "Description": "The compressibility of the vibration isolator."
+              },
+              "IsolatorStaticDeflection": {
+                "type": "real",
+                "Description": "Static deflection of the vibration isolator."
+              },
+              "MaximumSupportedWeight": {
+                "type": "real",
+                "Description": "The maximum weight that can be carried by the vibration isolator."
+              },
+              "NominalHeight": {
+                "type": "real",
+                "Description": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
+              },
+              "Reference": {
+                "type": "string",
+                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
+              },
+              "Status": {
+                "type": "PEnum_ElementStatus",
+                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+                "values": [
+                  "DEMOLISH",
+                  "EXISTING",
+                  "NEW",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "TEMPORARY",
+                  "UNSET"
+                ]
+              },
+              "VibrationTransmissibility": {
+                "type": "real",
+                "Description": "The vibration transmissibility percentage."
+              }
+            }
+          },
+          "Qto_VibrationIsolatorBaseQuantities": {
+            "Properties": {
+              "GrossWeight": {
+                "type": "real",
+                "Description": "Total Gross Weight of the object without any add-on parts and not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
+              }
+            }
+          }
+        }
+      },
       "IfcActor": {
         "Parent": "IfcObject",
         "Description": "The IfcActor defines all actors or human agents involved in a project during its full life cycle. It facilitates the use of person and organization definitions in the resource part of the IFC object model. This includes name, address, telecommunication addresses, and roles.HISTORY  New entity in IFC2.0",
@@ -25536,116 +25646,6 @@
         "Parent": "IfcElementComponent",
         "Description": "A vibration damper is a device used to minimize the effects of vibration in a structure by dissipating kinetic energy. The damper may be passive (elastic, frictional, inertia) or active (in a system using sensors and actuators)."
       },
-      "IfcVibrationIsolator": {
-        "Parent": "IfcElementComponent",
-        "Description": "A vibration isolator is a device used to minimize the effects of vibration transmissibility in a building.HISTORY  New entity in IFC4",
-        "Psets": {
-          "Pset_VibrationIsolatorTypeCommon": {
-            "Properties": {
-              "IsolatorCompressibility": {
-                "type": "real",
-                "Description": "The compressibility of the vibration isolator."
-              },
-              "IsolatorStaticDeflection": {
-                "type": "real",
-                "Description": "Static deflection of the vibration isolator."
-              },
-              "MaximumSupportedWeight": {
-                "type": "real",
-                "Description": "The maximum weight that can be carried by the vibration isolator."
-              },
-              "NominalHeight": {
-                "type": "real",
-                "Description": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
-              },
-              "Status": {
-                "type": "PEnum_ElementStatus",
-                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
-                "values": [
-                  "DEMOLISH",
-                  "EXISTING",
-                  "NEW",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "TEMPORARY",
-                  "UNSET"
-                ]
-              },
-              "VibrationTransmissibility": {
-                "type": "real",
-                "Description": "The vibration transmissibility percentage."
-              }
-            }
-          },
-          "Qto_VibrationIsolatorBaseQuantities": {
-            "Properties": {
-              "GrossWeight": {
-                "type": "real",
-                "Description": "Total Gross Weight of the object without any add-on parts and not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
-              }
-            }
-          }
-        }
-      },
-      "IfcVibrationIsolatorType": {
-        "Parent": "IfcElementComponentType",
-        "Description": "The element component type IfcVibrationIsolatorType defines commonly shared information for occurrences of vibration isolators. The set of shared information may include:\n- common properties with shared property sets\n- common representations\n- common materials\n- common composition of elementsIt is used to define a vibration isolator type specification indicating the specific product information that is common to all occurrences of that product type. The IfcVibrationIsolatorType may be declared within IfcProject or IfcProjectLibrary using IfcRelDeclares and may be exchanged with or without occurrences of the type. Occurrences of IfcVibrationIsolatorType are represented by instances of IfcVibrationIsolator. Refer to the documentation at IfcVibrationIsolator for supported property sets, materials, and composition.",
-        "Psets": {
-          "Pset_VibrationIsolatorTypeCommon": {
-            "Properties": {
-              "IsolatorCompressibility": {
-                "type": "real",
-                "Description": "The compressibility of the vibration isolator."
-              },
-              "IsolatorStaticDeflection": {
-                "type": "real",
-                "Description": "Static deflection of the vibration isolator."
-              },
-              "MaximumSupportedWeight": {
-                "type": "real",
-                "Description": "The maximum weight that can be carried by the vibration isolator."
-              },
-              "NominalHeight": {
-                "type": "real",
-                "Description": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence."
-              },
-              "Reference": {
-                "type": "string",
-                "Description": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead."
-              },
-              "Status": {
-                "type": "PEnum_ElementStatus",
-                "Description": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
-                "values": [
-                  "DEMOLISH",
-                  "EXISTING",
-                  "NEW",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "TEMPORARY",
-                  "UNSET"
-                ]
-              },
-              "VibrationTransmissibility": {
-                "type": "real",
-                "Description": "The vibration transmissibility percentage."
-              }
-            }
-          },
-          "Qto_VibrationIsolatorBaseQuantities": {
-            "Properties": {
-              "GrossWeight": {
-                "type": "real",
-                "Description": "Total Gross Weight of the object without any add-on parts and not taking into account possible processing features (cut-out's, etc.) or openings and recesses."
-              }
-            }
-          }
-        }
-      },
       "IfcVirtualElement": {
         "Parent": "IfcElement",
         "Description": "A virtual element is a special element used to provide imaginary, placeholder, or provisional areas, volumes, and boundaries. Virtual elements are usually not displayed and do not have quantities, associated materials, and other measures.Uses of IfcVirtualElement include:An imaginary boundary such as between two adjacent, but not separated, spaces. The IfcVirtualElement may provide the 2D curve or 3D surface representation of the virtual space connection and is referenced by two instances of IfcRelSpaceBoundary, each pointing to one of the two adjacent IfcSpaces. The boundary is exhanged using PredefinedType = BOUNDARY.\nA provision for voids. Such as where a particular volume of space is requested by an engineering function that might later be accepted or rejected. If accepted it is transformed into a void within a building element, like a wall opening, or a slab opening. The provision for voids is exchanged using the PredefinedType = PROVISIONFORVOID. Typically this shall use a swept solid geometry, where the profile of the swept solid lies on/near the surface of the referred building element and the extrusion depths is equal to or bigger then (in case of round or otherwise irregular element shape) the thickness of the building element. The appropriate property set Pset_ProvisionForVoid should be attached.\nA clearance space. Typically a placeholder for the necessary space allocation for future designed elements, such as mechanical equipment that will be determined in a later design phase. The clearance is exchanged using the PredefinedType = CLEARANCE.Figure 1 describes how to use IfcRelSpaceBoundary in conjunction with IfcVirtualElement to define space boundaries.Figure 1 \u2014 Virtual element used as space boundariesIFC4.3.0.0 CHANGE Virtual elements can now be used for void provisions and clearance to replace existing functionality on IfcBuildingElementProxy.\nIFC2x2 CHANGE  The entity IfcVirtualElement has been added. Upward compatibility for file based exchange is guaranteed.\nHISTORY  New entity in IFC2x2 Addendum."
@@ -27589,7 +27589,7 @@
         "Parent": "IfcBuiltElement",
         "Description": "The IfcBuildingElementProxy is a proxy definition that provides the same functionality as subtypes of IfcBuildingElement, but without having a predefined meaning of the special type of building element it represents.IfcBuildingElementProxy may be used:To exchange special types of building elements for which the current specification does not yet provide a semantic definition.\nTo represent building elements for which the participating applications can not provide a semantic definition.IFC4.3.0.0 CHANGE IfcBuildingElementProxy should no longer be used as spatial placeholders or provisions. Use IfcVirtualElement instead.\nHISTORY  New entity in IFC2x.",
         "Psets": {
-          "Pset_BuiltElementProxyCommon": {
+          "Pset_BuildingElementProxyCommon": {
             "Properties": {
               "FireRating": {
                 "type": "string",
@@ -27837,7 +27837,7 @@
         "Parent": "IfcBuiltElementType",
         "Description": "IfcBuildingElementProxyType defines a list of commonly shared property set definitions of a building element proxy and an optional set of product representations. It is used to define an element specification (i.e. the specific product information, that is common to all occurrences of that product type).NOTE  The product representations are defined as representation maps (at the level of the supertype IfcTypeProduct, which gets assigned by an element occurrence instance through the IfcShapeRepresentation.Item[1] being an IfcMappedItem.A building element proxy type is used to define the common properties of a certain type of a building element proxy that may be applied to many instances of that\u00a0type to assign a specific style. Building element proxy types\u00a0may be exchanged without being already assigned to occurrences.NOTE  Although an building element proxy does not have a predefined ontological meaning the provision of a type may be helpful in sharing information among multiple occurrences. Applications that provide type information for element types not yet included in the current IFC specification can use the IfcBuildingElementProxyType to exchange such types.The occurrences of the IfcBuildingElementProxyType are represented by instances of IfcBuildingElementProxy.HISTORY  New entity in IFC2x3.",
         "Psets": {
-          "Pset_BuiltElementProxyCommon": {
+          "Pset_BuildingElementProxyCommon": {
             "Properties": {
               "FireRating": {
                 "type": "string",
