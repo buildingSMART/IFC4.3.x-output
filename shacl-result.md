@@ -32,6 +32,7 @@
 ## DefinitionForPropertySet
 
 * The resource 'Pset_BuildingElementProxyCommon' has no definition
+* The resource 'Pset_ConstructionOccurence' has no definition
 * The resource 'Pset_MarinePartChamberCommon' has no definition
 * The resource 'Pset_VegetationCommon' has no definition
 ## DefinitionForQuantity
@@ -2234,6 +2235,7 @@
 * The resource 'PropertySingleValue' has no definition
 * The resource 'PropertyTableValue' has no definition
 * The resource 'Pset_BuildingElementProxyCommon' has no definition
+* The resource 'Pset_ConstructionOccurence' has no definition
 * The resource 'Pset_MarinePartChamberCommon' has no definition
 * The resource 'Pset_VegetationCommon' has no definition
 * The resource 'Q_AREA' has no definition
