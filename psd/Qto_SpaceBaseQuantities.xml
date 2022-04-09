@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" templatetype="QTO_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/QTO_IFC4.xsd">
-  <IfcVersion version="IFC4X3_DEV_a512180"/>
+  <IfcVersion version="IFC4X3_DEV_8cc67ca"/>
   <Name>Qto_SpaceBaseQuantities</Name>
   <Definition>Base quantities that are common to the definition of all occurrences of spaces.</Definition>
   <Applicability/>
@@ -12,7 +12,9 @@
   <QtoDefs>
     <QtoDef>
       <Name>Height</Name>
-      <Definition>Characteristic height.</Definition>
+      <Definition>Characteristic height.
+
+Total height (from base slab without flooring to ceiling without suspended ceiling) for this space (measured from top of slab below to bottom of slab above). To be provided only if the space has a constant height.</Definition>
       <QtoType>Q_LENGTH</QtoType>
     </QtoDef>
     <QtoDef>
@@ -27,7 +29,9 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossPerimeter</Name>
-      <Definition>Gross perimeter at the outer contour of the object.</Definition>
+      <Definition>Gross perimeter at the outer contour of the object.
+
+Measured at floor level with all sides of the space, including those parts of the perimeter that are created by virtual boundaries and openings (like doors).</Definition>
       <QtoType>Q_LENGTH</QtoType>
     </QtoDef>
     <QtoDef>
@@ -37,12 +41,16 @@
     </QtoDef>
     <QtoDef>
       <Name>GrossFloorArea</Name>
-      <Definition>Sum of all gross floor areas covered by the spaces within the spatial structure element.</Definition>
+      <Definition>Sum of all gross floor areas covered by the spaces within the spatial structure element.
+
+Includes the area covered by elements inside the space (columns, inner walls, etc.) and excludes the area covered by wall claddings.</Definition>
       <QtoType>Q_AREA</QtoType>
     </QtoDef>
     <QtoDef>
       <Name>NetFloorArea</Name>
-      <Definition>Sum of all net usable floor areas.</Definition>
+      <Definition>Sum of all net usable floor areas.
+
+It excludes the area covered  by elements inside the space (columns, inner walls, built-in's etc.), slab openings, or other protruding elements. Varying heights are not taking into account (i.e. no reduction for areas under a minimum headroom).</Definition>
       <QtoType>Q_AREA</QtoType>
     </QtoDef>
     <QtoDef>
@@ -72,7 +80,9 @@
     </QtoDef>
     <QtoDef>
       <Name>NetVolume</Name>
-      <Definition>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.</Definition>
+      <Definition>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.
+
+Net volume enclosed by the space, excluding the volume of construction elements inside the space.</Definition>
       <QtoType>Q_VOLUME</QtoType>
     </QtoDef>
   </QtoDefs>
