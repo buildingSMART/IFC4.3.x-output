@@ -12,11 +12,9 @@
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.PrimaryAirFlowRateRange' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
-* The Property 'Pset_CableSegmentTypeCoreSegment.SheathColours' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_ShadingDeviceCommon.SurfaceColour' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForPropertySet
 
@@ -2728,12 +2726,10 @@
 * For document 'ShearModulus.md/s/properties/docs' a property cannot be found
 * For document 'ShearModulusMin.md/s/properties/docs' a property cannot be found
 * For document 'ShearStrength.md/s/properties/docs' a property cannot be found
-* For document 'SheathColors.md/s/properties/docs' a property cannot be found
 * For document 'SignalElevationAngle.md/s/properties/docs' a property cannot be found
 * For document 'SolarReflectanceBack.md/s/properties/docs' a property cannot be found
 * For document 'SolarReflectanceFront.md/s/properties/docs' a property cannot be found
 * For document 'SolarRefractionIndex.md/s/properties/docs' a property cannot be found
-* For document 'SpaceHumidity.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperature.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureMax.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureMin.md/s/properties/docs' a property cannot be found
@@ -2752,7 +2748,6 @@
 * For document 'StemTopWidth.md/s/properties/docs' a property cannot be found
 * For document 'StrengthGrade.md/s/properties/docs' a property cannot be found
 * For document 'StructuralGrade.md/s/properties/docs' a property cannot be found
-* For document 'SurfaceColor.md/s/properties/docs' a property cannot be found
 * For document 'TensileStrengthPerp.md/t/properties/docs' a property cannot be found
 * For document 'ThermalConductivityTemperatureDerivative.md/t/properties/docs' a property cannot be found
 * For document 'ThermalIrEmissivityBack.md/t/properties/docs' a property cannot be found
