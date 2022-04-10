@@ -2685,7 +2685,6 @@
 * For document 'LowerHeatingValue.md/l/properties/docs' a property cannot be found
 * For document 'LowerVaporResistanceFactor.md/l/properties/docs' a property cannot be found
 * For document 'MainColor.md/m/properties/docs' a property cannot be found
-* For document 'MaintenanceType.md/m/properties/docs' a property cannot be found
 * For document 'MassDensity.md/m/properties/docs' a property cannot be found
 * For document 'Material.md/m/properties/docs' a property cannot be found
 * For document 'MaxAdjustmentX.md/m/properties/docs' a property cannot be found
