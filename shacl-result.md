@@ -2617,7 +2617,6 @@
 * For document 'CenterCoreTopWidth.md/c/properties/docs' a property cannot be found
 * For document 'CentreOfGravityInX.md/c/properties/docs' a property cannot be found
 * For document 'CentreOfGravityInY.md/c/properties/docs' a property cannot be found
-* For document 'Color.md/c/properties/docs' a property cannot be found
 * For document 'ColorAppearance.md/c/properties/docs' a property cannot be found
 * For document 'ColorCode.md/c/properties/docs' a property cannot be found
 * For document 'ColorRenderingIndex.md/c/properties/docs' a property cannot be found
