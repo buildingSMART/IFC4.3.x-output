@@ -10,20 +10,13 @@
 * The Property 'Pset_AirTerminalBoxTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_AirTerminalOccurrence.AirFlowType' has no definition
 * The Property 'Pset_AirTerminalTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_AirTerminalTypeCommon.FinishColour' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.PrimaryAirFlowRateRange' has no definition
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
 * The Property 'Pset_CableSegmentTypeCoreSegment.SheathColours' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
-* The Property 'Pset_CooledBeamTypeCommon.FinishColour' has no definition
-* The Property 'Pset_DistributionPortCommon.ColourCode' has no definition
-* The Property 'Pset_DoorWindowGlazingType.GlassColour' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_FurnitureTypeCommon.MainColour' has no definition
-* The Property 'Pset_LampTypeCommon.ColourAppearance' has no definition
-* The Property 'Pset_LampTypeCommon.ColourRenderingIndex' has no definition
-* The Property 'Pset_LampTypeCommon.ColourTemperature' has no definition
 * The Property 'Pset_ShadingDeviceCommon.SurfaceColour' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForPropertySet
@@ -2617,10 +2610,6 @@
 * For document 'CenterCoreTopWidth.md/c/properties/docs' a property cannot be found
 * For document 'CentreOfGravityInX.md/c/properties/docs' a property cannot be found
 * For document 'CentreOfGravityInY.md/c/properties/docs' a property cannot be found
-* For document 'ColorAppearance.md/c/properties/docs' a property cannot be found
-* For document 'ColorCode.md/c/properties/docs' a property cannot be found
-* For document 'ColorRenderingIndex.md/c/properties/docs' a property cannot be found
-* For document 'ColorTemperature.md/c/properties/docs' a property cannot be found
 * For document 'CombustionTemperature.md/c/properties/docs' a property cannot be found
 * For document 'CompStrength.md/c/properties/docs' a property cannot be found
 * For document 'CompStrengthPerp.md/c/properties/docs' a property cannot be found
@@ -2634,7 +2623,6 @@
 * For document 'CoreTopWidth.md/c/properties/docs' a property cannot be found
 * For document 'CurrentCarryingCapasity.md/c/properties/docs' a property cannot be found
 * For document 'DimensionalChangeCoefficient.md/d/properties/docs' a property cannot be found
-* For document 'DisplacementAccomodated.md/d/properties/docs' a property cannot be found
 * For document 'DissolvedSolidsContent.md/d/properties/docs' a property cannot be found
 * For document 'DraftBaseOffset.md/d/properties/docs' a property cannot be found
 * For document 'DraftSideOffset.md/d/properties/docs' a property cannot be found
@@ -2642,7 +2630,6 @@
 * For document 'EdgeDraft.md/e/properties/docs' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
-* For document 'FinishColor.md/f/properties/docs' a property cannot be found
 * For document 'FlangeBaseFillet.md/f/properties/docs' a property cannot be found
 * For document 'FlangeChamfer.md/f/properties/docs' a property cannot be found
 * For document 'FlangeDepth.md/f/properties/docs' a property cannot be found
@@ -2652,7 +2639,6 @@
 * For document 'FreezingPoint.md/f/properties/docs' a property cannot be found
 * For document 'GasPressure.md/g/properties/docs' a property cannot be found
 * For document 'Geometry.md/g/properties/docs' a property cannot be found
-* For document 'GlassColor.md/g/properties/docs' a property cannot be found
 * For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
 * For document 'HardeningModule.md/h/properties/docs' a property cannot be found
 * For document 'Hardness.md/h/properties/docs' a property cannot be found
