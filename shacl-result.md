@@ -20,9 +20,6 @@
 * The Property 'Pset_DistributionPortCommon.ColourCode' has no definition
 * The Property 'Pset_DoorWindowGlazingType.GlassColour' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_FireSuppressionTerminalTypeFireHydrant.BodyColour' has no definition
-* The Property 'Pset_FireSuppressionTerminalTypeFireHydrant.CapColour' has no definition
-* The Property 'Pset_FireSuppressionTerminalTypeSprinkler.BulbLiquidColour' has no definition
 * The Property 'Pset_FurnitureTypeCommon.MainColour' has no definition
 * The Property 'Pset_LampTypeCommon.ColourAppearance' has no definition
 * The Property 'Pset_LampTypeCommon.ColourRenderingIndex' has no definition
@@ -2607,13 +2604,10 @@
 * For document 'AssessmentOfRisk.md/a/properties/docs' a property cannot be found
 * For document 'BaseChamfer.md/b/properties/docs' a property cannot be found
 * For document 'BearingStrength.md/b/properties/docs' a property cannot be found
-* For document 'BodyColor.md/b/properties/docs' a property cannot be found
 * For document 'BoilingPoint.md/b/properties/docs' a property cannot be found
 * For document 'BottomCover.md/b/properties/docs' a property cannot be found
-* For document 'BulbLiquidColor.md/b/properties/docs' a property cannot be found
 * For document 'CO2Content.md/c/properties/docs' a property cannot be found
 * For document 'COContent.md/c/properties/docs' a property cannot be found
-* For document 'CapColor.md/c/properties/docs' a property cannot be found
 * For document 'CarbonContent.md/c/properties/docs' a property cannot be found
 * For document 'CenterCoreBaseHeight.md/c/properties/docs' a property cannot be found
 * For document 'CenterCoreBaseWidth.md/c/properties/docs' a property cannot be found
