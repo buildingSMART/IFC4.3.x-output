@@ -16,7 +16,6 @@
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_FurnitureTypeCommon.MainColour' has no definition
 * The Property 'Pset_ShadingDeviceCommon.SurfaceColour' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 ## DefinitionForPropertySet
@@ -2663,7 +2662,6 @@
 * For document 'Location.md/l/properties/docs' a property cannot be found
 * For document 'LowerHeatingValue.md/l/properties/docs' a property cannot be found
 * For document 'LowerVaporResistanceFactor.md/l/properties/docs' a property cannot be found
-* For document 'MainColor.md/m/properties/docs' a property cannot be found
 * For document 'MassDensity.md/m/properties/docs' a property cannot be found
 * For document 'Material.md/m/properties/docs' a property cannot be found
 * For document 'MaxAdjustmentX.md/m/properties/docs' a property cannot be found
@@ -2716,7 +2714,6 @@
 * For document 'RightFlangeWidth.md/r/properties/docs' a property cannot be found
 * For document 'RiskConsequence.md/r/properties/docs' a property cannot be found
 * For document 'RiskRating.md/r/properties/docs' a property cannot be found
-* For document 'RotationAccomodated.md/r/properties/docs' a property cannot be found
 * For document 'ScheduleWork.md/s/properties/docs' a property cannot be found
 * For document 'Scope.md/s/properties/docs' a property cannot be found
 * For document 'SecondaryAirflowRateRange.md/s/properties/docs' a property cannot be found
@@ -2737,10 +2734,6 @@
 * For document 'SolarReflectanceFront.md/s/properties/docs' a property cannot be found
 * For document 'SolarRefractionIndex.md/s/properties/docs' a property cannot be found
 * For document 'SpaceHumidity.md/s/properties/docs' a property cannot be found
-* For document 'SpaceHumidityMax.md/s/properties/docs' a property cannot be found
-* For document 'SpaceHumidityMin.md/s/properties/docs' a property cannot be found
-* For document 'SpaceHumiditySummer.md/s/properties/docs' a property cannot be found
-* For document 'SpaceHumidityWinter.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperature.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureMax.md/s/properties/docs' a property cannot be found
 * For document 'SpaceTemperatureMin.md/s/properties/docs' a property cannot be found
