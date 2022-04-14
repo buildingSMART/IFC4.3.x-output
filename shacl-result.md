@@ -2384,20 +2384,6 @@
 * The resource 'UNKNOWN' has no definition
 * The resource 'WindowAttributes' has no definition
 * The resource 'WindowTypeAttributes' has no definition
-## IfcObjectAssociationForPropertySetAssoc
-
-* The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
-* The association 'IfcDistributionElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcDistributionElementType'
-* The association 'IfcElementTypePropertySetsforObjectsPset_ElementKinematics' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcElementType'
-* The association 'IfcMooringDeviceTypePropertySetsforObjectsPset_MooringDeviceCommon' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcMooringDeviceType'
-* The association 'IfcSpatialElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcSpatialElementType'
-* The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnergyRequirements' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
-* The association 'IfcTransportElementTypePropertySetsforObjectsPset_EnvironmentalEmissions' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
-* The association 'IfcTransportElementTypePropertySetsforObjectsPset_ProcessCapacity' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTransportationDeviceType'
-* The association 'IfcTypeProcessPropertySetsforObjectsPset_Risk' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProcess'
-* The association 'IfcTypeProductPropertySetsforObjectsPset_Risk' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
-* The association 'IfcTypeProductPropertySetsforObjectsPset_Tolerance' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
-* The association 'IfcTypeProductPropertySetsforObjectsPset_Uncertainty' in package 'PropertySetsforObjects' establishes an invalid relationship to 'IfcTypeProduct'
 ## ObjectTypeAssociationForTypeDrivenPropSets
 
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Condition' should be associated to an element with corresponding IfcObjectType, not IfcAsset
@@ -2414,18 +2400,10 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcDistributionSystem
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_ProcessCapacity' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcGroup
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProcess
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcTypeProcess
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Risk' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceFireSafetyRequirements' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceHVACDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceLightingDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceOccupancyRequirements' should be associated to an element with corresponding IfcObjectType, not IfcZone
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Tolerance' should be associated to an element with corresponding IfcObjectType, not IfcProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Tolerance' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Uncertainty' should be associated to an element with corresponding IfcObjectType, not IfcProduct
-* The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Uncertainty' should be associated to an element with corresponding IfcObjectType, not IfcTypeProduct
 ## ParametrizationForConceptUsageDocumentation
 
 * The concept usage 'Aggregation' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
@@ -3813,6 +3791,7 @@
 * The Property|Quantity Set 'IfcDistributionCircuit' should have at least one applicability
 * The Property|Quantity Set 'IfcDistributionControlElement' should have at least one applicability
 * The Property|Quantity Set 'IfcDistributionControlElementType' should have at least one applicability
+* The Property|Quantity Set 'IfcDistributionElementType' should have at least one applicability
 * The Property|Quantity Set 'IfcDistributionFlowElementType' should have at least one applicability
 * The Property|Quantity Set 'IfcDistributionPortTypeEnum.CABLECARRIER' should have at least one applicability
 * The Property|Quantity Set 'IfcDistributionPortTypeEnum.NOTDEFINED' should have at least one applicability
@@ -3998,6 +3977,7 @@
 * The Property|Quantity Set 'IfcElementAssemblyTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcElementComponentType' should have at least one applicability
 * The Property|Quantity Set 'IfcElementQuantity' should have at least one applicability
+* The Property|Quantity Set 'IfcElementType' should have at least one applicability
 * The Property|Quantity Set 'IfcElementarySurface' should have at least one applicability
 * The Property|Quantity Set 'IfcEllipse' should have at least one applicability
 * The Property|Quantity Set 'IfcEllipseProfileDef' should have at least one applicability
@@ -4428,6 +4408,7 @@
 * The Property|Quantity Set 'IfcModulusOfSubgradeReactionSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcModulusOfTranslationalSubgradeReactionSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcMonetaryUnit' should have at least one applicability
+* The Property|Quantity Set 'IfcMooringDeviceType' should have at least one applicability
 * The Property|Quantity Set 'IfcMooringDeviceTypeEnum.BOLLARD' should have at least one applicability
 * The Property|Quantity Set 'IfcMooringDeviceTypeEnum.LINETENSIONER' should have at least one applicability
 * The Property|Quantity Set 'IfcMooringDeviceTypeEnum.MAGNETICDEVICE' should have at least one applicability
@@ -4927,6 +4908,7 @@
 * The Property|Quantity Set 'IfcSpaceTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcSpaceTypeEnum.SPACE' should have at least one applicability
 * The Property|Quantity Set 'IfcSpaceTypeEnum.USERDEFINED' should have at least one applicability
+* The Property|Quantity Set 'IfcSpatialElementType' should have at least one applicability
 * The Property|Quantity Set 'IfcSpatialReferenceSelect' should have at least one applicability
 * The Property|Quantity Set 'IfcSpatialStructureElementType' should have at least one applicability
 * The Property|Quantity Set 'IfcSpatialZoneType' should have at least one applicability
@@ -5210,6 +5192,7 @@
 * The Property|Quantity Set 'IfcTransportElementTypeEnum.MOVINGWALKWAY' should have at least one applicability
 * The Property|Quantity Set 'IfcTransportElementTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcTransportElementTypeEnum.USERDEFINED' should have at least one applicability
+* The Property|Quantity Set 'IfcTransportationDeviceType' should have at least one applicability
 * The Property|Quantity Set 'IfcTrapeziumProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcTriangulatedFaceSet' should have at least one applicability
 * The Property|Quantity Set 'IfcTriangulatedIrregularNetwork' should have at least one applicability
@@ -5219,6 +5202,8 @@
 * The Property|Quantity Set 'IfcTubeBundleTypeEnum.NOTDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcTubeBundleTypeEnum.USERDEFINED' should have at least one applicability
 * The Property|Quantity Set 'IfcTypeObject' should have at least one applicability
+* The Property|Quantity Set 'IfcTypeProcess' should have at least one applicability
+* The Property|Quantity Set 'IfcTypeProduct' should have at least one applicability
 * The Property|Quantity Set 'IfcTypeResource' should have at least one applicability
 * The Property|Quantity Set 'IfcUShapeProfileDef' should have at least one applicability
 * The Property|Quantity Set 'IfcUniqueDefinitionNames' should have at least one applicability
