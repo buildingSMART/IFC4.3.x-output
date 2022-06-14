@@ -25707,15 +25707,108 @@
       },
       "IfcDamper.CONTROLDAMPER": {
         "Parent": "IfcDamper",
-        "Description": "Control damper used to modulate the flow of air by adjusting the position of the blades.  Commonly operated by an actuator of a building automation system."
+        "Description": "Control damper used to modulate the flow of air by adjusting the position of the blades.  Commonly operated by an actuator of a building automation system.",
+        "Psets": {
+          "Pset_DamperTypeControlDamper": {
+            "Properties": {
+              "ControlDamperOperation": {
+                "type": "PEnum_ControlDamperOperation",
+                "Description": "The inherent characteristic of the control damper operation.",
+                "values": [
+                  "EXPONENTIAL",
+                  "LINEAR",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "UNSET"
+                ]
+              }
+            }
+          }
+        }
       },
       "IfcDamper.FIREDAMPER": {
         "Parent": "IfcDamper",
-        "Description": "Fire damper used to prevent the spread of fire for a specified duration.  Commonly operated by fusable link that melts above a certain temperature."
+        "Description": "Fire damper used to prevent the spread of fire for a specified duration.  Commonly operated by fusable link that melts above a certain temperature.",
+        "Psets": {
+          "Pset_DamperTypeFireDamper": {
+            "Properties": {
+              "ActuationType": {
+                "type": "PEnum_FireDamperActuationType",
+                "Description": "Enumeration that identifies the different types of dampers.",
+                "values": [
+                  "GRAVITY",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "SPRING",
+                  "UNSET"
+                ]
+              },
+              "ClosureRatingEnum": {
+                "type": "PEnum_FireDamperClosureRating",
+                "Description": "Enumeration that identifies the closure rating for the damper.",
+                "values": [
+                  "DYNAMIC",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "STATIC",
+                  "UNSET"
+                ]
+              },
+              "FireResistanceRating": {
+                "type": "string",
+                "Description": "Measure of the fire resistance rating in hours (e.g., 1.5 hours, 2 hours, etc.)."
+              },
+              "FusibleLinkTemperature": {
+                "type": "real",
+                "Description": "The temperature that the fusible link melts."
+              }
+            }
+          }
+        }
       },
       "IfcDamper.FIRESMOKEDAMPER": {
         "Parent": "IfcDamper",
-        "Description": "Combination fire and smoke damper used to prevent the spread of fire and smoke.  Commonly operated by a fusable link and a smoke detector."
+        "Description": "Combination fire and smoke damper used to prevent the spread of fire and smoke.  Commonly operated by a fusable link and a smoke detector.",
+        "Psets": {
+          "Pset_DamperTypeFireSmokeDamper": {
+            "Properties": {
+              "ActuationType": {
+                "type": "PEnum_FireDamperActuationType",
+                "Description": "Enumeration that identifies the different types of dampers.",
+                "values": [
+                  "GRAVITY",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "SPRING",
+                  "UNSET"
+                ]
+              },
+              "ClosureRatingEnum": {
+                "type": "PEnum_FireDamperClosureRating",
+                "Description": "Enumeration that identifies the closure rating for the damper.",
+                "values": [
+                  "DYNAMIC",
+                  "NOTKNOWN",
+                  "OTHER",
+                  "STATIC",
+                  "UNSET"
+                ]
+              },
+              "DamperControlType": {
+                "type": "string",
+                "Description": "The type of control used to operate the damper (e.g., Open/Closed Indicator, Resettable Temperature Sensor, Temperature Override, etc.)."
+              },
+              "FireResistanceRating": {
+                "type": "string",
+                "Description": "Measure of the fire resistance rating in hours (e.g., 1.5 hours, 2 hours, etc.)."
+              },
+              "FusibleLinkTemperature": {
+                "type": "real",
+                "Description": "The temperature that the fusible link melts."
+              }
+            }
+          }
+        }
       },
       "IfcDamper.FUMEHOODEXHAUST": {
         "Parent": "IfcDamper",
@@ -25735,7 +25828,17 @@
       },
       "IfcDamper.SMOKEDAMPER": {
         "Parent": "IfcDamper",
-        "Description": "Smoke damper used to prevent the spread of smoke.  Commonly operated by a smoke detector of a building automation system."
+        "Description": "Smoke damper used to prevent the spread of smoke.  Commonly operated by a smoke detector of a building automation system.",
+        "Psets": {
+          "Pset_DamperTypeSmokeDamper": {
+            "Properties": {
+              "ControlType": {
+                "type": "string",
+                "Description": "The type controller, signal modification effected and applicable ports"
+              }
+            }
+          }
+        }
       },
       "IfcDamper.USERDEFINED": {
         "Parent": "IfcDamper",
@@ -30995,160 +31098,37 @@
         "Parent": "IfcVehicle",
         "Description": "Undefined type."
       },
-      "IfcVibrationDamper.BACKDRAFTDAMPER": {
+      "IfcVibrationDamper.AXIAL_YIELD": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Damper used for purposes of manually balancing pressure differences.  Commonly operated by mechanical adjustment."
+        "Description": "A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The axial yield type is a damper that yields energy by absorbing the steel material against deformation in the axial direction, that is, in the direction of expansion and contraction."
       },
-      "IfcVibrationDamper.BALANCINGDAMPER": {
+      "IfcVibrationDamper.BENDING_YIELD": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Backdraft damper used to restrict the movement of air in one direction.  Commonly operated by mechanical spring."
+        "Description": "A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The bending yield type is a damper, which yields steel material by bending."
       },
-      "IfcVibrationDamper.BLASTDAMPER": {
+      "IfcVibrationDamper.FRICTION": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Blast damper used to prevent protect occupants and equipment against overpressures resultant of an explosion.  Commonly operated by mechanical spring."
+        "Description": "The friction type is a damper utilizing friction acting on the contact surface of a material."
       },
-      "IfcVibrationDamper.CONTROLDAMPER": {
+      "IfcVibrationDamper.RUBBER": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Control damper used to modulate the flow of air by adjusting the position of the blades.  Commonly operated by an actuator of a building automation system.",
-        "Psets": {
-          "Pset_DamperTypeControlDamper": {
-            "Properties": {
-              "ControlDamperOperation": {
-                "type": "PEnum_ControlDamperOperation",
-                "Description": "The inherent characteristic of the control damper operation.",
-                "values": [
-                  "EXPONENTIAL",
-                  "LINEAR",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "UNSET"
-                ]
-              }
-            }
-          }
-        }
+        "Description": "The rubber mold is a damper that absorbs energy by utilizing deformation of laminated rubber. The difference between the seismic isolation bearing and the rubber type damper is whether or not to support the weight of the upper structures. The rubber damper does not transmit the weight of the upper structures to the sub structure."
       },
-      "IfcVibrationDamper.FIREDAMPER": {
+      "IfcVibrationDamper.SHEAR_YIELD": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Fire damper used to prevent the spread of fire for a specified duration.  Commonly operated by fusable link that melts above a certain temperature.",
-        "Psets": {
-          "Pset_DamperTypeFireDamper": {
-            "Properties": {
-              "ActuationType": {
-                "type": "PEnum_FireDamperActuationType",
-                "Description": "Enumeration that identifies the different types of dampers.",
-                "values": [
-                  "GRAVITY",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "SPRING",
-                  "UNSET"
-                ]
-              },
-              "ClosureRatingEnum": {
-                "type": "PEnum_FireDamperClosureRating",
-                "Description": "Enumeration that identifies the closure rating for the damper.",
-                "values": [
-                  "DYNAMIC",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "STATIC",
-                  "UNSET"
-                ]
-              },
-              "FireResistanceRating": {
-                "type": "string",
-                "Description": "Measure of the fire resistance rating in hours (e.g., 1.5 hours, 2 hours, etc.)."
-              },
-              "FusibleLinkTemperature": {
-                "type": "real",
-                "Description": "The temperature that the fusible link melts."
-              }
-            }
-          }
-        }
+        "Description": "A displacement dependent type damper in which the resistance force generated is determined by the plastic strain amount utilizing the plastic deformation of the steel material. The shear yield type is a damper, which causes the steel material to yield for deformation in the direction perpendicular to the member."
       },
-      "IfcVibrationDamper.FIRESMOKEDAMPER": {
+      "IfcVibrationDamper.VISCOUS": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Combination fire and smoke damper used to prevent the spread of fire and smoke.  Commonly operated by a fusable link and a smoke detector.",
-        "Psets": {
-          "Pset_DamperTypeFireSmokeDamper": {
-            "Properties": {
-              "ActuationType": {
-                "type": "PEnum_FireDamperActuationType",
-                "Description": "Enumeration that identifies the different types of dampers.",
-                "values": [
-                  "GRAVITY",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "SPRING",
-                  "UNSET"
-                ]
-              },
-              "ClosureRatingEnum": {
-                "type": "PEnum_FireDamperClosureRating",
-                "Description": "Enumeration that identifies the closure rating for the damper.",
-                "values": [
-                  "DYNAMIC",
-                  "NOTKNOWN",
-                  "OTHER",
-                  "STATIC",
-                  "UNSET"
-                ]
-              },
-              "DamperControlType": {
-                "type": "string",
-                "Description": "The type of control used to operate the damper (e.g., Open/Closed Indicator, Resettable Temperature Sensor, Temperature Override, etc.)."
-              },
-              "FireResistanceRating": {
-                "type": "string",
-                "Description": "Measure of the fire resistance rating in hours (e.g., 1.5 hours, 2 hours, etc.)."
-              },
-              "FusibleLinkTemperature": {
-                "type": "real",
-                "Description": "The temperature that the fusible link melts."
-              }
-            }
-          }
-        }
-      },
-      "IfcVibrationDamper.FUMEHOODEXHAUST": {
-        "Parent": "IfcVibrationDamper",
-        "Description": "Fume hood exhaust damper.  Commonly operated by actuator."
-      },
-      "IfcVibrationDamper.GRAVITYDAMPER": {
-        "Parent": "IfcVibrationDamper",
-        "Description": "Gravity damper closes from the force of gravity.  Commonly operated by gravitational weight."
-      },
-      "IfcVibrationDamper.GRAVITYRELIEFDAMPER": {
-        "Parent": "IfcVibrationDamper",
-        "Description": "Gravity-relief damper used to allow air to move upon a buildup of enough pressure to overcome the gravitational force exerted upon the damper blades.  Commonly operated by gravitational weight."
-      },
-      "IfcVibrationDamper.RELIEFDAMPER": {
-        "Parent": "IfcVibrationDamper",
-        "Description": "Relief damper used to allow air to move upon a buildup of a specified pressure differential.  Commonly operated by mechanical spring."
-      },
-      "IfcVibrationDamper.SMOKEDAMPER": {
-        "Parent": "IfcVibrationDamper",
-        "Description": "Smoke damper used to prevent the spread of smoke.  Commonly operated by a smoke detector of a building automation system.",
-        "Psets": {
-          "Pset_DamperTypeSmokeDamper": {
-            "Properties": {
-              "ControlType": {
-                "type": "string",
-                "Description": "The type controller, signal modification effected and applicable ports"
-              }
-            }
-          }
-        }
+        "Description": "The viscous type is a damper that absorbs energy by utilizing the resistance of a viscous body."
       },
       "IfcVibrationDamper.USERDEFINED": {
         "Parent": "IfcVibrationDamper",
-        "Description": "User-defined damper."
+        "Description": "User-defined vibration damper type."
       },
       "IfcVibrationDamper.NOTDEFINED": {
         "Parent": "IfcVibrationDamper",
-        "Description": "Undefined damper."
+        "Description": "Undefined vibration damper type."
       },
       "IfcVirtualElement.BOUNDARY": {
         "Parent": "IfcVirtualElement",
