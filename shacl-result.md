@@ -25,30 +25,6 @@
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.NetFootPrintArea' has no definition
-## DuplicateAssociations
-
-* For assocation 'IfcImpactProtectionDeviceTypeEnum.FENDER' - 'Pset_FenderCommon' 1 duplicate associations are found
-* For assocation 'IfcImpactProtectionDeviceTypeEnum.FENDER' - 'Pset_FenderCommon' 1 duplicate associations are found
-* For assocation 'IfcMechanicalFastenerTypeEnum.ROPE' - 'Pset_VesselLineCommon' 1 duplicate associations are found
-* For assocation 'IfcMechanicalFastenerTypeEnum.ROPE' - 'Pset_VesselLineCommon' 1 duplicate associations are found
-* For assocation 'IfcSpaceTypeEnum.BERTH' - 'Pset_BerthCommon' 1 duplicate associations are found
-* For assocation 'IfcSpaceTypeEnum.BERTH' - 'Pset_BerthCommon' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.CARGO' - 'Pset_CargoCommon' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.CARGO' - 'Pset_CargoCommon' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.ROLLINGSTOCK' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.ROLLINGSTOCK' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLE' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLE' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEAIR' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEAIR' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_MarineVehicleCommon' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_MarineVehicleCommon' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_MarineVehicleDesignCriteria' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_MarineVehicleDesignCriteria' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLEMARINE' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLETRACKED' - 'Pset_VehicleAvailability' 1 duplicate associations are found
-* For assocation 'IfcVehicleTypeEnum.VEHICLETRACKED' - 'Pset_VehicleAvailability' 1 duplicate associations are found
 ## ObjectTypeAssociationForTypeDrivenPropSets
 
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Condition' should be associated to an element with corresponding IfcObjectType, not IfcAsset
