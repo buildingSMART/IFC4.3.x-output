@@ -1,11 +1,11 @@
 # Express schema differences
 
-109 items
+113 items
 
 
 ### Missing data
 
-43 items
+47 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -14,6 +14,8 @@
 | IfcCosine                            |                                 | not in 'IFC.exp' |
 | IfcDoorStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
+| IfcDoorStyleConstructionEnum         |                                 | not in 'IFC.exp' |
+| IfcDoorStyleOperationEnum            |                                 | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
 | IfcMemberStandardCase                |                                 | not in 'IFC.exp' |
@@ -33,6 +35,8 @@
 | IfcWaterStratum                      |                                 | not in 'IFC.exp' |
 | IfcWindowStandardCase                |                                 | not in 'IFC.exp' |
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
+| IfcWindowStyleConstructionEnum       |                                 | not in 'IFC.exp' |
+| IfcWindowStyleOperationEnum          |                                 | not in 'IFC.exp' |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcCosineSpiral                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
