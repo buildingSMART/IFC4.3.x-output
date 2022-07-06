@@ -1,6 +1,17 @@
 ## DefinitionForEnumLiteral
 
+* The resource 'IfcBuildingSystemTypeEnum.EROSIONPREVENTION' has no definition
+* The resource 'IfcBuildingSystemTypeEnum.PRESTRESSING' has no definition
+* The resource 'IfcBuildingSystemTypeEnum.REINFORCING' has no definition
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_DOUBLE_SWING' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_FOLDING' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_LIFTING_VERTICAL' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_SINGLE_SWING' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_SINGLE_SWING_OPPOSITE_LEFT' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_SINGLE_SWING_OPPOSITE_RIGHT' has no definition
+* The resource 'IfcDoorTypeOperationEnum.DOUBLE_PANEL_SLIDING' has no definition
+* The resource 'IfcDoorTypeOperationEnum.REVOLVING_HORIZONTAL' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
