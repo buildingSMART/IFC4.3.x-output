@@ -1,6 +1,5 @@
 ## DefinitionForEnumLiteral
 
-* The resource 'IfcCableCarrierFittingTypeEnum.REDUCER' has no definition
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
