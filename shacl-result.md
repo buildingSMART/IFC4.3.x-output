@@ -25,6 +25,35 @@
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
 * The Property 'Qto_WallBaseQuantities.NetFootPrintArea' has no definition
+## LeafEntityHasPredefinedType
+
+* Leaf IfcObject 'IfcAlignmentCant' has no PredefinedType attribute
+* Leaf IfcObject 'IfcAlignmentHorizontal' has no PredefinedType attribute
+* Leaf IfcObject 'IfcAlignmentSegment' has no PredefinedType attribute
+* Leaf IfcObject 'IfcAlignmentVertical' has no PredefinedType attribute
+* Leaf IfcObject 'IfcAsset' has no PredefinedType attribute
+* Leaf IfcObject 'IfcBorehole' has no PredefinedType attribute
+* Leaf IfcObject 'IfcBuilding' has no PredefinedType attribute
+* Leaf IfcObject 'IfcBuildingStorey' has no PredefinedType attribute
+* Leaf IfcObject 'IfcCivilElement' has no PredefinedType attribute
+* Leaf IfcObject 'IfcDistributionCircuit' has no PredefinedType attribute
+* Leaf IfcObject 'IfcGeomodel' has no PredefinedType attribute
+* Leaf IfcObject 'IfcGeoslice' has no PredefinedType attribute
+* Leaf IfcObject 'IfcKerb' has no PredefinedType attribute
+* Leaf IfcObject 'IfcSite' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralCurveConnection' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralCurveMemberVarying' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralLinearAction' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralLoadCase' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralPlanarAction' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralPointAction' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralPointConnection' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralPointReaction' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralResultGroup' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralSurfaceConnection' has no PredefinedType attribute
+* Leaf IfcObject 'IfcStructuralSurfaceMemberVarying' has no PredefinedType attribute
+* Leaf IfcObject 'IfcWallStandardCase' has no PredefinedType attribute
+* Leaf IfcObject 'IfcZone' has no PredefinedType attribute
 ## ObjectTypeAssociationForTypeDrivenPropSets
 
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_Condition' should be associated to an element with corresponding IfcObjectType, not IfcAsset
