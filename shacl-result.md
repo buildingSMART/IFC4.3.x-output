@@ -1,3 +1,6 @@
+## DefinitionForEnum
+
+* The resource 'IfcKerbTypeEnum' has no definition
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
@@ -39,7 +42,6 @@
 * Leaf IfcObject 'IfcDistributionCircuit' has no PredefinedType attribute
 * Leaf IfcObject 'IfcGeomodel' has no PredefinedType attribute
 * Leaf IfcObject 'IfcGeoslice' has no PredefinedType attribute
-* Leaf IfcObject 'IfcKerb' has no PredefinedType attribute
 * Leaf IfcObject 'IfcSite' has no PredefinedType attribute
 * Leaf IfcObject 'IfcStructuralCurveConnection' has no PredefinedType attribute
 * Leaf IfcObject 'IfcStructuralCurveMemberVarying' has no PredefinedType attribute
@@ -604,3 +606,6 @@
 * The Property|Quantity Set 'Qto_WallBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WasteTerminalBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WindowBaseQuantities' should have at least one applicability
+## SimpleType
+
+* The resource 'IfcKerbTypeEnum' has no definition

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='ASCII'?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/19323d0" targetNamespace="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/19323d0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/044e97b" targetNamespace="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/044e97b" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="uos" type="ifc:uos" abstract="true"/>
 	<xs:simpleType name="Seq-anyURI">
 		<xs:list itemType="xs:anyURI"/>
@@ -4193,7 +4193,7 @@
 	<xs:complexType name="IfcKerb">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcBuiltElement">
-				<xs:attribute name="Mountable" type="ifc:IfcBoolean" use="optional"/>
+				<xs:attribute name="PredefinedType" type="ifc:IfcKerbTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -4201,7 +4201,7 @@
 	<xs:complexType name="IfcKerbType">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcBuiltElementType">
-				<xs:attribute name="Mountable" type="ifc:IfcBoolean" use="optional"/>
+				<xs:attribute name="PredefinedType" type="ifc:IfcKerbTypeEnum" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -12849,6 +12849,12 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="data"/>
 			<xs:enumeration value="power"/>
+			<xs:enumeration value="userdefined"/>
+			<xs:enumeration value="notdefined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IfcKerbTypeEnum">
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
