@@ -1,11 +1,11 @@
 # Express schema differences
 
-116 items
+117 items
 
 
 ### Missing data
 
-47 items
+48 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -47,6 +47,7 @@
 | IfcRailwayPart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcSineSpiral                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcStrippedOptional                  | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
