@@ -1,6 +1,6 @@
 # Express schema differences
 
-125 items
+124 items
 
 
 ### Missing data
@@ -80,7 +80,7 @@
 
 ### Entity definitions
 
-31 items
+30 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                                                         | IFC.exp                                                                                                                |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -94,7 +94,6 @@
 | IfcGroup inverses                            | ['IsGroupedBy']                                                                                                        | ['IsGroupedBy', 'ReferencedInStructures']                                                                              |
 | IfcImpactProtectionDevice.PredefinedType     | PredefinedType : optional IfcImpactProtectionDeviceTypeSelect                                                          | PredefinedType : optional IfcImpactProtectionDeviceTypeEnum                                                            |
 | IfcImpactProtectionDeviceType.PredefinedType | PredefinedType : IfcImpactProtectionDeviceTypeSelect                                                                   | PredefinedType : IfcImpactProtectionDeviceTypeEnum                                                                     |
-| IfcIndexedPolyCurve.SelfIntersect            | SelfIntersect : optional IfcBoolean                                                                                    | SelfIntersect : IfcLogical                                                                                             |
 | IfcIndexedPolygonalFace inverses             | ['ToFaceSet']                                                                                                          | ['ToFaceSet', 'HasTexCoords']                                                                                          |
 | IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                                                 | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                                         |
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                                                       | ['PlacesObject', 'ReferencedByPlacements']                                                                             |
