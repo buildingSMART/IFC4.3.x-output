@@ -1,15 +1,16 @@
 # Express schema differences
 
-133 items
+134 items
 
 
 ### Missing data
 
-49 items
+50 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
 | IfcBeamStandardCase                  |                                 | not in 'IFC.exp' |
+| IfcBearingTypeDisplacementEnum       |                                 | not in 'IFC.exp' |
 | IfcColumnStandardCase                |                                 | not in 'IFC.exp' |
 | IfcCosine                            |                                 | not in 'IFC.exp' |
 | IfcDoorStandardCase                  |                                 | not in 'IFC.exp' |
