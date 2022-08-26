@@ -1,6 +1,6 @@
 # Express schema differences
 
-132 items
+133 items
 
 
 ### Missing data
@@ -80,7 +80,7 @@
 
 ### Entity definitions
 
-27 items
+28 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                                                 | IFC.exp                                                                                                                |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +99,7 @@
 | IfcKerbType attributes                       | ['Mountable']                                                                                                          | ['PredefinedType']                                                                                                     |
 | IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                                                 | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                                         |
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                                                       | ['PlacesObject', 'ReferencedByPlacements']                                                                             |
+| IfcPolygonalFaceSet.Faces                    | Faces : list[1:?] of IfcIndexedPolygonalFace                                                                           | Faces : list[1:?] of unique IfcIndexedPolygonalFace                                                                    |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                                                | ['Name', 'Specification']                                                                                              |
 | IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                                                  | ['PredefinedType']                                                                                                     |
 | IfcRelInterferesElements attributes          | ['RelatingElement', 'RelatedElement', 'InterferenceGeometry', 'InterferenceSpace', 'InterferenceType', 'ImpliedOrder'] | ['RelatingElement', 'RelatedElement', 'InterferenceGeometry', 'InterferenceType', 'ImpliedOrder', 'InterferenceSpace'] |
