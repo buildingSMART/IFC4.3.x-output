@@ -5794,14 +5794,16 @@
                 "Description": "The code that is used by the country's postal service."
               },
               "Purpose": {
-                "type": "IfcAddressTypeEnum",
+                "type": "PEnum_AddressType",
                 "Description": "Indication of the purpose of this object",
                 "values": [
                   "DISTRIBUTIONPOINT",
                   "HOME",
                   "OFFICE",
+                  "OTHER",
                   "SITE",
-                  "USERDEFINED"
+                  "NOTKNOWN",
+                  "UNSET"
                 ]
               },
               "Region": {
@@ -8030,14 +8032,16 @@
                 "Description": "The code that is used by the country's postal service."
               },
               "Purpose": {
-                "type": "IfcAddressTypeEnum",
+                "type": "PEnum_AddressType",
                 "Description": "Indication of the purpose of this object",
                 "values": [
                   "DISTRIBUTIONPOINT",
                   "HOME",
                   "OFFICE",
+                  "OTHER",
                   "SITE",
-                  "USERDEFINED"
+                  "NOTKNOWN",
+                  "UNSET"
                 ]
               },
               "Region": {
@@ -9688,14 +9692,16 @@
                 "Description": "The code that is used by the country's postal service."
               },
               "Purpose": {
-                "type": "IfcAddressTypeEnum",
+                "type": "PEnum_AddressType",
                 "Description": "Indication of the purpose of this object",
                 "values": [
                   "DISTRIBUTIONPOINT",
                   "HOME",
                   "OFFICE",
+                  "OTHER",
                   "SITE",
-                  "USERDEFINED"
+                  "NOTKNOWN",
+                  "UNSET"
                 ]
               },
               "Region": {
@@ -11179,30 +11185,6 @@
                   "OTHER",
                   "TEMPORARY",
                   "UNSET"
-                ]
-              }
-            }
-          },
-          "Pset_TransportElementElevator": {
-            "Properties": {
-              "ClearDepth": {
-                "type": "real",
-                "Description": "The clear depth."
-              },
-              "ClearHeight": {
-                "type": "real",
-                "Description": "Clear height of the object (elevator).\nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
-              },
-              "ClearWidth": {
-                "type": "real",
-                "Description": "The clear width."
-              },
-              "FireFightingLift": {
-                "type": "boolean",
-                "Description": "Indication whether the elevator is designed to serve as a fire fighting lift the case of fire (TRUE) or not (FALSE). A fire fighting lift is used by fire fighters to access the location of fire and to evacuate people.",
-                "values": [
-                  "TRUE",
-                  "FALSE"
                 ]
               }
             }
@@ -30289,7 +30271,7 @@
       },
       "IfcGeographicElement.SOIL_BORING_POINT": {
         "Parent": "IfcGeographicElement",
-        "Description": "Soil boring point"
+        "Description": "Soil boring pointIFC4.3.0.0 DEPRECATION Use IfcBoreHole instead."
       },
       "IfcGeographicElement.TERRAIN": {
         "Parent": "IfcGeographicElement",
@@ -30778,7 +30760,33 @@
       },
       "IfcTransportElement.ELEVATOR": {
         "Parent": "IfcTransportElement",
-        "Description": "Elevator or lift being a transport device to move people of good vertically."
+        "Description": "Elevator or lift being a transport device to move people of good vertically.",
+        "Psets": {
+          "Pset_TransportElementElevator": {
+            "Properties": {
+              "ClearDepth": {
+                "type": "real",
+                "Description": "The clear depth."
+              },
+              "ClearHeight": {
+                "type": "real",
+                "Description": "Clear height of the object (elevator).\nThe shape information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the shape properties, provided in the attached property, the geometric parameters take precedence."
+              },
+              "ClearWidth": {
+                "type": "real",
+                "Description": "The clear width."
+              },
+              "FireFightingLift": {
+                "type": "boolean",
+                "Description": "Indication whether the elevator is designed to serve as a fire fighting lift the case of fire (TRUE) or not (FALSE). A fire fighting lift is used by fire fighters to access the location of fire and to evacuate people.",
+                "values": [
+                  "TRUE",
+                  "FALSE"
+                ]
+              }
+            }
+          }
+        }
       },
       "IfcTransportElement.ESCALATOR": {
         "Parent": "IfcTransportElement",
