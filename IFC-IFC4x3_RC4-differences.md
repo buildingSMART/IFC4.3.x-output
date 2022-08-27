@@ -1,25 +1,28 @@
 # Express schema differences
 
-141 items
+148 items
 
 
 ### Missing data
 
-50 items
+55 items
 
 | Name                                 | IFC4x3_RC4.exp          | IFC.exp          |
 |--------------------------------------|-------------------------|------------------|
 | IfcBeamStandardCase                  |                         | not in 'IFC.exp' |
 | IfcBearingTypeDisplacementEnum       |                         | not in 'IFC.exp' |
 | IfcColumnStandardCase                |                         | not in 'IFC.exp' |
+| IfcCorrectObjectAssignment           |                         | not in 'IFC.exp' |
 | IfcCosine                            |                         | not in 'IFC.exp' |
 | IfcDoorStandardCase                  |                         | not in 'IFC.exp' |
 | IfcDoorStyle                         |                         | not in 'IFC.exp' |
 | IfcDoorStyleConstructionEnum         |                         | not in 'IFC.exp' |
 | IfcDoorStyleOperationEnum            |                         | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                         | not in 'IFC.exp' |
+| IfcGradient                          |                         | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                         | not in 'IFC.exp' |
 | IfcMemberStandardCase                |                         | not in 'IFC.exp' |
+| IfcObjectTypeEnum                    |                         | not in 'IFC.exp' |
 | IfcOpeningStandardCase               |                         | not in 'IFC.exp' |
 | IfcPlant                             |                         | not in 'IFC.exp' |
 | IfcPlateStandardCase                 |                         | not in 'IFC.exp' |
@@ -45,9 +48,11 @@
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcKerbTypeEnum                      | not in 'IFC4x3_RC4.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4.exp' |                  |
+| IfcPointDim                          | not in 'IFC4x3_RC4.exp' |                  |
 | IfcQuantityNumber                    | not in 'IFC4x3_RC4.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4.exp' |                  |
+| IfcSegmentDim                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcSineSpiral                        | not in 'IFC4x3_RC4.exp' |                  |
 | IfcStrippedOptional                  | not in 'IFC4x3_RC4.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4.exp' |                  |
@@ -82,7 +87,7 @@
 
 ### Entity definitions
 
-33 items
+34 items
 
 | Name                                         | IFC4x3_RC4.exp                                                                                                         | IFC.exp                                                                                                                |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -105,6 +110,7 @@
 | IfcPolygonalFaceSet.Faces                    | Faces : list[1:?] of IfcIndexedPolygonalFace                                                                           | Faces : list[1:?] of unique IfcIndexedPolygonalFace                                                                    |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                                                | ['Name', 'Specification']                                                                                              |
 | IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                                                  | ['PredefinedType']                                                                                                     |
+| IfcRelAssigns.RelatedObjectsType             | RelatedObjectsType : optional IfcObjectTypeEnum                                                                        | RelatedObjectsType : optional IfcStrippedOptional                                                                      |
 | IfcRelInterferesElements attributes          | ['RelatingElement', 'RelatedElement', 'InterferenceGeometry', 'InterferenceSpace', 'InterferenceType', 'ImpliedOrder'] | ['RelatingElement', 'RelatedElement', 'InterferenceGeometry', 'InterferenceType', 'ImpliedOrder', 'InterferenceSpace'] |
 | IfcSectionedSolidHorizontal attributes       | ['CrossSectionPositions', 'FixedAxisVertical']                                                                         | ['CrossSectionPositions']                                                                                              |
 | IfcSectionedSurface attributes               | ['Directrix', 'CrossSectionPositions', 'CrossSections', 'FixedAxisVertical']                                           | ['Directrix', 'CrossSectionPositions', 'CrossSections']                                                                |
@@ -122,7 +128,7 @@
 
 ### Constraints
 
-45 items
+46 items
 
 | Name                                                | IFC4x3_RC4.exp                                                                                                                                                                                                                                                                                                                                                                                                                                                             | IFC.exp                                                                                                                                                                                                            |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,6 +158,7 @@
 | IfcRailway where rules                              | ['HasObjectType']                                                                                                                                                                                                                                                                                                                                                                                                                                                          | ['CorrectPredefinedType']                                                                                                                                                                                          |
 | IfcReinforcingBar.CorrectPredefinedType             | notexists(PredefinedType) or (PredefinedType <> IfcReinforcingBarTypeEnum.USERDEFINED) or ((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                                                                                                                                                                                                                                                                                 | not(exists(PredefinedType)) or (PredefinedType <> IfcReinforcingBarTypeEnum.USERDEFINED) or ((PredefinedType = IfcReinforcingBarTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                       |
 | IfcReinforcingMesh.CorrectPredefinedType            | notexists(PredefinedType) or (PredefinedType <> IfcReinforcingMeshTypeEnum.USERDEFINED) or ((PredefinedType = IfcReinforcingMeshTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                                                                                                                                                                                                                                                                               | not(exists(PredefinedType)) or (PredefinedType <> IfcReinforcingMeshTypeEnum.USERDEFINED) or ((PredefinedType = IfcReinforcingMeshTypeEnum.USERDEFINED) and exists(self\IfcObject.ObjectType))                     |
+| IfcRelAssigns where rules                           | ['WR1']                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | []                                                                                                                                                                                                                 |
 | IfcRelAssociatesMaterial.AllowedElements            | sizeof(query(temp <* self\IfcRelAssociates.RelatedObjects | (sizeof(typeof(temp)*['ifc4x3_dev.ifcelement','ifc4x3_dev.ifcelementtype','ifc4x3_dev.ifcwindowstyle','ifc4x3_dev.ifcdoorstyle','ifc4x3_dev.ifcstructuralmember','ifc4x3_dev.ifcport']) = 0))) = 0                                                                                                                                                                                                             | sizeof(query(temp <* self\IfcRelAssociates.RelatedObjects | (sizeof(typeof(temp)*['ifc4x3_dev.ifcelement','ifc4x3_dev.ifcelementtype','ifc4x3_dev.ifcstructuralmember','ifc4x3_dev.ifcport']) = 0))) = 0           |
 | IfcRevolvedAreaSolid.AxisStartInXY                  | Axis.Location.Coordinates[3] = 0.0                                                                                                                                                                                                                                                                                                                                                                                                                                         | ('ifc4x3_dev.ifccartesianpoint' in typeof(Axis.Location)) and (Axis.Location\IfcCartesianPoint.Coordinates[3] = 0.0)                                                                                               |
 | IfcRoad where rules                                 | ['HasObjectType']                                                                                                                                                                                                                                                                                                                                                                                                                                                          | ['CorrectPredefinedType']                                                                                                                                                                                          |
