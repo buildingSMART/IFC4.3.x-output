@@ -299,7 +299,6 @@
 * For document 'IsPotable.md/i/properties/docs' a property cannot be found
 * For document 'IsSignalFrameMiniature.md/i/properties/docs' a property cannot be found
 * For document 'IsothermalMoistureCapacity.md/i/properties/docs' a property cannot be found
-* For document 'JointRelativePosition.md/j/properties/docs/README.md/domain/schemas' a property cannot be found
 * For document 'KeyDepth.md/k/properties/docs' a property cannot be found
 * For document 'KeyHeight.md/k/properties/docs' a property cannot be found
 * For document 'KeyOffset.md/k/properties/docs' a property cannot be found
@@ -423,7 +422,7 @@
 * For document 'ViscosityTemperatureDerivative.md/v/properties/docs' a property cannot be found
 * For document 'VisibleReflectanceBack.md/v/properties/docs' a property cannot be found
 * For document 'VisibleReflectanceFront.md/v/properties/docs' a property cannot be found
-* For document 'VisibleRefractionIndex.md/v/properties/docs' a property cannot be found
+* For document 'VisibleRefractionIndex.md/v/properties/docs/README.md/core/schemas' a property cannot be found
 * For document 'VisibleTransmittance.md/v/properties/docs' a property cannot be found
 * For document 'WarpingConstant.md/w/properties/docs' a property cannot be found
 * For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
