@@ -1,6 +1,3 @@
-## DefinitionForEnum
-
-* The resource 'IfcKerbTypeEnum' has no definition
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
@@ -600,6 +597,3 @@
 * The Property|Quantity Set 'Qto_WallBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WasteTerminalBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WindowBaseQuantities' should have at least one applicability
-## SimpleType
-
-* The resource 'IfcKerbTypeEnum' has no definition
