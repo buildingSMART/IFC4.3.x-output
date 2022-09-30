@@ -1,3 +1,9 @@
+## DefinitionForEntity
+
+* The resource 'IfcGeographicCRS' has no definition
+* The resource 'IfcMapConversionScaled' has no definition
+* The resource 'IfcRigidOperation' has no definition
+* The resource 'IfcWellKnownText' has no definition
 ## DefinitionForEnum
 
 * The resource 'IfcKerbTypeEnum' has no definition
@@ -19,11 +25,6 @@
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
-## DefinitionForPropertySet
-
-* The resource 'Pset_BuildingElementProxyCommon' has no definition
-* The resource 'Pset_MarinePartChamberCommon' has no definition
-* The resource 'Pset_VegetationCommon' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition

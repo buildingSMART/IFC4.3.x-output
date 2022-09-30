@@ -1,11 +1,11 @@
 # Express schema differences
 
-142 items
+153 items
 
 
 ### Missing data
 
-55 items
+60 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
@@ -44,13 +44,16 @@
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcCosineSpiral                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcGeographicCRS                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcGeotechnicalStratumTypeEnum       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcKerbTypeEnum                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcMapConversionScaled               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcPointDim                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcQuantityNumber                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcRigidOperation                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcSegmentDim                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcSineSpiral                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
@@ -64,6 +67,8 @@
 | IfcVehicleType                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicleTypeEnum                   | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVirtualElementTypeEnum            | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcWellKnownText                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
+| IfcWellKnownTextLiteral              | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 
 ### Type definitions
 
@@ -86,11 +91,14 @@
 
 ### Entity definitions
 
-29 items
+34 items
 
 | Name                                         | IFC4x3_RC4_43c3555.exp                                                                                                 | IFC.exp                                                                                                                |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | IfcClassification attributes                 | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Location', 'ReferenceTokens']                             | ['Source', 'Edition', 'EditionDate', 'Name', 'Description', 'Specification', 'ReferenceTokens']                        |
+| IfcCoordinateReferenceSystem attributes      | ['Name', 'Description', 'GeodeticDatum', 'VerticalDatum']                                                              | ['Name', 'Description']                                                                                                |
+| IfcCoordinateReferenceSystem.Name            | Name : IfcLabel                                                                                                        | Name : optional IfcLabel                                                                                               |
+| IfcCoordinateReferenceSystem inverses        | ['HasCoordinateOperation']                                                                                             | ['HasCoordinateOperation', 'WellKnownText']                                                                            |
 | IfcCurveStyleFontAndScaling attributes       | ['Name', 'CurveFont', 'CurveFontScaling']                                                                              | ['Name', 'CurveStyleFont', 'CurveFontScaling']                                                                         |
 | IfcDerivedUnit attributes                    | ['Elements', 'UnitType', 'UserDefinedType']                                                                            | ['Elements', 'UnitType', 'UserDefinedType', 'Name']                                                                    |
 | IfcFacilityPart                              | not abstract                                                                                                           | abstract                                                                                                               |
@@ -103,9 +111,11 @@
 | IfcIndexedPolygonalFace inverses             | ['ToFaceSet']                                                                                                          | ['ToFaceSet', 'HasTexCoords']                                                                                          |
 | IfcKerb attributes                           | ['Mountable']                                                                                                          | ['PredefinedType']                                                                                                     |
 | IfcKerbType attributes                       | ['Mountable']                                                                                                          | ['PredefinedType']                                                                                                     |
+| IfcMapConversion attributes                  | ['Eastings', 'Northings', 'OrthogonalHeight', 'XAxisAbscissa', 'XAxisOrdinate', 'Scale', 'ScaleY', 'ScaleZ']           | ['Eastings', 'Northings', 'OrthogonalHeight', 'XAxisAbscissa', 'XAxisOrdinate', 'Scale']                               |
 | IfcMaterialRelationship attributes           | ['RelatingMaterial', 'RelatedMaterials', 'Expression']                                                                 | ['RelatingMaterial', 'RelatedMaterials', 'MaterialExpression']                                                         |
 | IfcObjectPlacement inverses                  | ['PlacesObject']                                                                                                       | ['PlacesObject', 'ReferencedByPlacements']                                                                             |
 | IfcPolygonalFaceSet.Faces                    | Faces : list[1:?] of IfcIndexedPolygonalFace                                                                           | Faces : list[1:?] of unique IfcIndexedPolygonalFace                                                                    |
+| IfcProjectedCRS attributes                   | ['MapProjection', 'MapZone', 'MapUnit']                                                                                | ['GeodeticDatum', 'VerticalDatum', 'MapProjection', 'MapZone', 'MapUnit']                                              |
 | IfcProperty attributes                       | ['Name', 'Description']                                                                                                | ['Name', 'Specification']                                                                                              |
 | IfcReferent attributes                       | ['PredefinedType', 'RestartDistance']                                                                                  | ['PredefinedType']                                                                                                     |
 | IfcRelAssigns.RelatedObjectsType             | RelatedObjectsType : optional IfcObjectTypeEnum                                                                        | RelatedObjectsType : optional IfcStrippedOptional                                                                      |
@@ -122,13 +132,14 @@
 
 ### Constraints
 
-46 items
+47 items
 
 | Name                                                | IFC4x3_RC4_43c3555.exp                                                                                                                                                                                                                                                                                                                                                                                                                                                     | IFC.exp                                                                                                                                                                                                                                   |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IfcBuildingSystem where rules                       | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ['CorrectPredefinedType']                                                                                                                                                                                                                 |
 | IfcCartesianPoint derive rules                      | ['Dim']                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | []                                                                                                                                                                                                                                        |
 | IfcCompositeCurveSegment derive rules               | ['Dim']                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | []                                                                                                                                                                                                                                        |
+| IfcCoordinateReferenceSystem where rules            | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ['NameOrWKT']                                                                                                                                                                                                                             |
 | IfcCurveSegment derive rules                        | ['Dim']                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | []                                                                                                                                                                                                                                        |
 | IfcDoor where rules                                 | ['CorrectPredefinedType', 'CorrectStyleAssigned', 'CorrectTypeAssigned']                                                                                                                                                                                                                                                                                                                                                                                                   | ['CorrectPredefinedType', 'CorrectTypeAssigned']                                                                                                                                                                                          |
 | IfcDoorLiningProperties.WR35                        | (exists(self\IfcPropertySetDefinition.DefinesType[1])) and (('ifc4x3_dev.ifcdoortype' in typeof(self\IfcPropertySetDefinition.DefinesType[1])) or ('ifc4x3_dev.ifcdoorstyle' in typeof(self\IfcPropertySetDefinition.DefinesType[1])))                                                                                                                                                                                                                                     | (exists(self\IfcPropertySetDefinition.DefinesType[1])) and ('ifc4x3_dev.ifcdoortype' in typeof(self\IfcPropertySetDefinition.DefinesType[1]))                                                                                             |
