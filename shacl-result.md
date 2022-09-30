@@ -1,9 +1,3 @@
-## DefinitionForEntity
-
-* The resource 'IfcGeographicCRS' has no definition
-* The resource 'IfcMapConversionScaled' has no definition
-* The resource 'IfcRigidOperation' has no definition
-* The resource 'IfcWellKnownText' has no definition
 ## DefinitionForEnum
 
 * The resource 'IfcKerbTypeEnum' has no definition
