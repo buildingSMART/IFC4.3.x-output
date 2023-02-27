@@ -1,23 +1,25 @@
 # Express schema differences
 
-199 items
+153 items
 
 
 ### Missing data
 
-106 items
+60 items
 
 | Name                                 | IFC4x3_RC4_43c3555.exp          | IFC.exp          |
 |--------------------------------------|---------------------------------|------------------|
 | IfcBeamStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcBearingTypeDisplacementEnum       |                                 | not in 'IFC.exp' |
 | IfcColumnStandardCase                |                                 | not in 'IFC.exp' |
+| IfcCorrectObjectAssignment           |                                 | not in 'IFC.exp' |
 | IfcCosine                            |                                 | not in 'IFC.exp' |
 | IfcDoorStandardCase                  |                                 | not in 'IFC.exp' |
 | IfcDoorStyle                         |                                 | not in 'IFC.exp' |
 | IfcDoorStyleConstructionEnum         |                                 | not in 'IFC.exp' |
 | IfcDoorStyleOperationEnum            |                                 | not in 'IFC.exp' |
 | IfcFacilityPartTypeSelect            |                                 | not in 'IFC.exp' |
+| IfcGradient                          |                                 | not in 'IFC.exp' |
 | IfcImpactProtectionDeviceTypeSelect  |                                 | not in 'IFC.exp' |
 | IfcMemberStandardCase                |                                 | not in 'IFC.exp' |
 | IfcObjectTypeEnum                    |                                 | not in 'IFC.exp' |
@@ -39,76 +41,28 @@
 | IfcWindowStyle                       |                                 | not in 'IFC.exp' |
 | IfcWindowStyleConstructionEnum       |                                 | not in 'IFC.exp' |
 | IfcWindowStyleOperationEnum          |                                 | not in 'IFC.exp' |
-| IfcAssociatedSurface                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBaseAxis                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBooleanChoose                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcBridgePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBuild2Axes                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcBuildAxes                         | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcConsecutiveSegments               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcConstraintsParamBSpline           | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcConvertDirectionInto2D            | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCorrectDimensions                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCorrectFillAreaStyle              | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCorrectLocalPlacement             | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCorrectUnitAssignment             | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcCosineSpiral                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCrossProduct                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCurveDim                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcCurveWeightsPositive              | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcDeriveDimensionalExponents        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcDimensionsForSIUnit               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcDotProduct                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcFacilityPartCommon                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcFirstProjAxis                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcGeographicCRS                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcGeotechnicalStratumTypeEnum       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcGetBasisSurface                   | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcIndexedPolygonalTextureMap        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcKerbTypeEnum                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcListToArray                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcLoopHeadToTail                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcMakeArrayOfArray                  | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMapConversionScaled               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcMarinePart                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcMlsTotalThickness                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcNormalise                         | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcOrthogonalComplement              | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcPathHeadToTail                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcPointDim                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcPointListDim                      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcQuantityNumber                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRailwayPart                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcRepresentationContextSameWCS      | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRigidOperation                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcRoadPart                          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSameAxis2Placement                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSameCartesianPoint                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSameDirection                     | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSameValidPrecision                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSameValue                         | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcScalarTimesVector                 | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSecondProjAxis                    | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcSegmentDim                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcShapeRepresentationTypes          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcSineSpiral                        | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSingleProjectInstance             | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcStrippedOptional                  | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcSurfaceWeightsPositive            | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcTaperedSweptAreaProfiles          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndices          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTextureCoordinateIndicesWithVoids | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcTopologyRepresentationTypes       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportElementTypeEnum          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportationDevice              | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcTransportationDeviceType          | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcUniqueDefinitionNames             | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcUniquePropertyName                | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcUniquePropertySetNames            | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcUniquePropertyTemplateNames       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcUniqueQuantityNames               | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcVectorDifference                  | not in 'IFC4x3_RC4_43c3555.exp' |                  |
-| IfcVectorSum                         | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicle                           | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicleType                       | not in 'IFC4x3_RC4_43c3555.exp' |                  |
 | IfcVehicleTypeEnum                   | not in 'IFC4x3_RC4_43c3555.exp' |                  |
