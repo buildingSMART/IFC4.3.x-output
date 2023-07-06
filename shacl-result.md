@@ -1,7 +1,6 @@
 ## DefinitionForEnumLiteral
 
 * The resource 'IfcArithmeticOperatorEnum.MODULO' has no definition
-* The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
@@ -166,8 +165,6 @@
 * The concept usage 'Process Assignment' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Geometric Representation' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
