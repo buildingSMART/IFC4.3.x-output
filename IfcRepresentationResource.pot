@@ -22,7 +22,7 @@ msgid "IfcCoordinateOperation"
 msgstr "IfcCoordinateOperation"
 
 msgid "IfcCoordinateOperation_DEFINITION"
-msgstr "The coordinate operation is an abstract supertype to handle any operation transformation or conversion between two coordinate reference systems. It is meant to provide expandability for future versions, since currently only the conversion of a local engineering coordinate system into a map coordinate reference system is dealt with by the subtype [[IfcMapConversion]]."
+msgstr "[[IfcCoordinateOperation]] is an abstract supertype to handle any operation transformation or conversion between two coordinate reference systems CRSs ."
 
 #:IFC.xml:37965
 msgid "IfcCoordinateOperation_TargetCRS"
@@ -50,28 +50,28 @@ msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation"
 msgstr "HasCoordinateOperation"
 
 msgid "IfcCoordinateReferenceSystem_HasCoordinateOperation_DEFINITION"
-msgstr "Indicates conversion between coordinate systems. In particular it refers to an [[IfcCoordinateOperation]] between this coordinate reference system, and another Geographic coordinate reference system."
+msgstr "Indicates conversion between coordinate reference systems. In particular it refers to an [[IfcCoordinateOperation]] between this coordinate reference system, and another coordinate reference system."
 
 #:IFC.xml:38019
 msgid "IfcCoordinateReferenceSystem_WellKnownText"
 msgstr "WellKnownText"
 
 msgid "IfcCoordinateReferenceSystem_WellKnownText_DEFINITION"
-msgstr "Well Known Text WKT definition for this Coordinate Reference System inversely associated as a [[IfcWellKnownText]] entity."
+msgstr "Well Known Text WKT definition for this coordinate reference system inversely associated as a [[IfcWellKnownText]] entity."
 
 #:IFC.xml:38002
 msgid "IfcCoordinateReferenceSystem_Description"
 msgstr "Description"
 
 msgid "IfcCoordinateReferenceSystem_Description_DEFINITION"
-msgstr "Informal description of this coordinate reference system"
+msgstr "Informal description of this coordinate reference system."
 
 #:IFC.xml:38007
 msgid "IfcCoordinateReferenceSystem_GeodeticDatum"
 msgstr "GeodeticDatum"
 
 msgid "IfcCoordinateReferenceSystem_GeodeticDatum_DEFINITION"
-msgstr "GeodeticDatum"
+msgstr "Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid s connection and orientation to the actual globe earth. It needs to be provided, if the Name identifier does not unambiguously define the geodetic datum as well."
 
 #:IFC.xml:38012
 msgid "IfcCoordinateReferenceSystem_Name"
@@ -92,21 +92,21 @@ msgid "IfcGeographicCRS"
 msgstr "IfcGeographicCRS"
 
 msgid "IfcGeographicCRS_DEFINITION"
-msgstr "A [[IfcGeographicCRS]] is a non Cartesian CRS that uses a three dimensional ellipsoid surface to reference locations on the Earth as a latitude, longitude pair and the elevation above or below the ellipsoid."
+msgstr "A [[IfcGeographicCRS]] is a coordinate reference system CRS that uses a three dimensional ellipsoid surface to reference locations on the Earth. Any location on Earth can be described by a point with longitude and latitude coordinates and the height above or below the ellipsoid surface."
 
 #:IFC.xml:23475
 msgid "IfcGeographicCRS_AngleUnit"
 msgstr "AngleUnit"
 
 msgid "IfcGeographicCRS_AngleUnit_DEFINITION"
-msgstr "AngleUnit"
+msgstr "Unit of latitude and longitude coordinate axes composing the geographic coordinate system."
 
 #:IFC.xml:23511
 msgid "IfcGeographicCRS_HeightUnit"
 msgstr "HeightUnit"
 
 msgid "IfcGeographicCRS_HeightUnit_DEFINITION"
-msgstr "HeightUnit"
+msgstr "Unit of the height coordinate axis of the geographic coordinate system."
 
 #:IFC.xml:38035
 msgid "IfcGeographicCRS_PrimeMeridian"
@@ -372,28 +372,28 @@ msgid "IfcMapConversionScaled"
 msgstr "IfcMapConversionScaled"
 
 msgid "IfcMapConversionScaled_DEFINITION"
-msgstr "An [[IfcMapConversionScaled]] is a type of [[IfcMapConversion]] that along with an EPSG code supplies a constant scale factor for coordinate conversion. The usage is restricted to when constant scale factors are explicitly exchanged. Typically, these are relatively speaking smaller facilities such as buildings where a constant scale factor is agreed on a project."
+msgstr "An [[IfcMapConversionScaled]] is a type of [[IfcMapConversion]] that supplies factors for coordinate conversion. The usage is restricted to when factors are explicitly exchanged."
 
 #:IFC.xml:38161
 msgid "IfcMapConversionScaled_FactorX"
 msgstr "FactorX"
 
 msgid "IfcMapConversionScaled_FactorX_DEFINITION"
-msgstr "FactorX"
+msgstr "Factor by which the length measures in local engineering CS of X axis have to be multiplied to get map coordinates"
 
 #:IFC.xml:38166
 msgid "IfcMapConversionScaled_FactorY"
 msgstr "FactorY"
 
 msgid "IfcMapConversionScaled_FactorY_DEFINITION"
-msgstr "FactorY"
+msgstr "Factor by which the length measures in local engineering CS of Y axis have to be multiplied to get map coordinates"
 
 #:IFC.xml:38171
 msgid "IfcMapConversionScaled_FactorZ"
 msgstr "FactorZ"
 
 msgid "IfcMapConversionScaled_FactorZ_DEFINITION"
-msgstr "FactorZ"
+msgstr "Factor by which the length measures in local engineering CS of Z axis have to be multiplied to get map coordinates"
 
 #:IFC.xml:38178
 msgid "IfcMaterialDefinitionRepresentation"
@@ -470,7 +470,7 @@ msgid "IfcProjectedCRS"
 msgstr "IfcProjectedCRS"
 
 msgid "IfcProjectedCRS_DEFINITION"
-msgstr "[[IfcProjectedCRS]] is a coordinate reference system of the map to which the map translation of the local engineering coordinate system of the construction or facility engineering project relates. The MapProjection and MapZone attributes uniquely identify the projection to the underlying geographic coordinate reference system, provided that they are well known in the receiving application. The projected coordinate reference system is assumed to be a 2D or 3D right handed Cartesian coordinate system, the optional MapUnit attribute can be used determine the length unit used by the map."
+msgstr "[[IfcProjectedCRS]] is a coordinate reference system CRS of the map to which the map translation of the local engineering coordinate system of the construction or facility engineering project relates. The projected coordinate reference system is assumed to be a 2D or 3D right handed Cartesian coordinate system, the optional MapUnit attribute can be used to determine the length unit used by the map."
 
 #:IFC.xml:23499
 msgid "IfcProjectedCRS_MapUnit"
@@ -596,7 +596,7 @@ msgid "IfcRigidOperation"
 msgstr "IfcRigidOperation"
 
 msgid "IfcRigidOperation_DEFINITION"
-msgstr "A rigid operation specifies an offset in the coordinate reference system. It does not specify any conversion or distortion only a translation. The coordinate axes of the [[IfcGeometricRepresentationContext]] can rotate and set a new basis coordinate system."
+msgstr "A rigid operation specifies an offset in the coordinate reference system. It does not specify any conversion or distortion. It is a coordinate operation that tells that the whole virtual model is translated in the same way. For example, using lengths to translate along x,y,z or using angles for a 2D translation e.g., lambda, phi , plus a change in height."
 
 #:IFC.xml:38290
 msgid "IfcRigidOperation_FirstCoordinate"
@@ -610,7 +610,7 @@ msgid "IfcRigidOperation_Height"
 msgstr "Height"
 
 msgid "IfcRigidOperation_Height_DEFINITION"
-msgstr "Height above positive or below negative the coordinate surface."
+msgstr "Translation above positive or below negative the coordinate surface."
 
 #:IFC.xml:38300
 msgid "IfcRigidOperation_SecondCoordinate"
