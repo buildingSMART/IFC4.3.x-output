@@ -630,8 +630,11 @@ concept {
                         <ConceptTemplate applicableEntity="IfcProduct" applicableSchema="IFC4X3" name="Material Layer Set Usage" status="sample" uuid="d5f7f6ef-8eff-54c3-9be2-094f6bf1d322" isPartial="false">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;A material layer set may be defined on an object type. In this scenario, all occurrences of that type must use this layer set to parametrically define their geometry.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;A material layer set can be used to model the material of a product as a set of homogeneous layers with constant thickness.&lt;/p&gt;
+&lt;p&gt;Material layer set usage defines layout at occurrences to indicate a direction and offset from the 'Axis' reference curve or the coordinate system established by the IfcExtrudedAreaSolid.Position (provided by its representation).&lt;/p&gt;
+&lt;p&gt;When the occurrence has an associated IfcObjectType, that object type may define the material layer set (no usage). In this scenario, all occurrences of that type must use that layer set.&lt;/p&gt;
 &lt;blockquote&gt;
+&lt;p&gt;EXAMPLE A wall type may define multiple layers of material (e.g brick - insulation - brick). A wall occurrence of that wall type will then have a geometry with a thickness that corresponds with the layers in the wall type.&lt;/p&gt;
 &lt;p&gt;EXAMPLE A wall type may define multiple layers of material. A wall of that wall type will then have a geometry with a thickness that corresponds with the layers in the wall type.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The usage may parametrically define an 'Axis' reference curve, and a direction, offset, and extent of the layers to extend along the axis. This allows layers to slope or only extend up to a particular height.&lt;/p&gt;
@@ -845,7 +848,7 @@ concept {
                         <ConceptTemplate applicableEntity="IfcProduct" applicableSchema="IFC4X3" name="Material Profile Set Usage" status="sample" uuid="60a51e27-c731-5219-9818-eb1bfcd57829" isPartial="false">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;A material profile set may be defined on an object type. In this scenario, all occurrences of that type must use this profile set to parametrically define their geometry.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;When the occurrence has an associated IfcObjectType, that object type may define the material profile set (no usage). In this scenario, all occurrences of that type must use that profile set.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;EXAMPLE A beam type may define a material profile. A beam of that beam type will then have a geometry correlating to that profile, extruded along an axis.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5441,7 +5444,6 @@ concept {
                                 <Definition>
                                     <Body lang="en">&lt;p&gt;Image textures are based on external files in common image formats such as PNG or JPEG. Such files may be located on servers according to absolute URLs, on the same server as the IFC file according to relative URLs, within the same local directory according to relative file path, within an IFC-ZIP file according to relative file path, or within an arbitrary directory according to absolute file path.&lt;/p&gt;
 &lt;p&gt;Absolute URLs are recommended for textures published at a location deemed to be permanent (independent of the building model data), while relative URLs are recommended for all other sharing scenarios. Local file paths should be avoided.&lt;/p&gt;
-&lt;p&gt;Scaling is supported to correlate the size of a texture with its physical dimensions, and enables usage of textures on parametric geometry such that texture coordinates need not be defined.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
@@ -13023,10 +13025,7 @@ ConstantTerm = 1&lt;/p&gt;
                                 <Definition>
                                     <Body lang="en">&lt;p&gt;A specific form of geometry representation is the 'Reference' geometry. It is used to provide a geometry used for various forms of assessments (like for quantities, etc.) but not for display and also not for implicit Boolean operations in a voiding relationship.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;EXAMPLE  An example is the use of 'Reference' representation is for opening elements that shall not be used to create a void using the &lt;em&gt;IfcRelVoidsElement&lt;/em&gt; relationship, since the voids are already part of the 'Body' representation of the voided element. The representation identifier of the representation is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;IfcShapeRepresentation&lt;/em&gt;.&lt;em&gt;RepresentationIdentifier&lt;/em&gt; = 'Reference'&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;EXAMPLE  An example is the use of 'Reference' representation is for opening elements that shall not be used to create a void using the &lt;em&gt;IfcRelVoidsElement&lt;/em&gt; relationship, since the voids are already part of the 'Body' representation of the voided element. The representation identifier of the representation is: &lt;em&gt;'Reference'&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;/p&gt;</Body>
                                 </Definition>
@@ -16758,8 +16757,6 @@ Figure 309 — Action request assignment&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PsetName[Value]='Pset_AnnotationLineOfSight'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_AnnotationSurveyArea'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_SoundAttenuation'" />
-                                <TemplateRule Parameters="PredefinedType[Value]='SUPERELEVATIONEVENT' AND PsetName[Value]='Pset_Superelevation'" />
-                                <TemplateRule Parameters="PredefinedType[Value]='WIDTHEVENT' AND PsetName[Value]='Pset_Width'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Containment" override="false" status="sample" uuid="a525e3d5-bb8f-53c1-aeb5-ae7c73e986e5">
@@ -16987,7 +16984,7 @@ Figure 309 — Action request assignment&lt;/p&gt;</Body>
                                     <Body lang="en">&lt;p&gt;Figure 196 illustrates assignment of &lt;em&gt;IfcMaterialProfileSetUsage&lt;/em&gt; and &lt;em&gt;IfcMaterialProfileSet&lt;/em&gt; to the &lt;em&gt;IfcBeamType&lt;/em&gt; and the &lt;em&gt;IfcBeam&lt;/em&gt; occurrence. Both the &lt;em&gt;IfcMaterialProfileSet&lt;/em&gt; and &lt;em&gt;IfcProfileDef&lt;/em&gt; is shared between all occurrences.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Material profile set and usage" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcbeam-01.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Figure 196 — Beam profile usage&lt;/p&gt;
-&lt;p&gt;Figure 197 illustrates cardinal point alignment. The use of &lt;em&gt;IfcCardinalPointEnum&lt;/em&gt; must be consistent with the placement of the extrusion body provided by &lt;em&gt;IfcExtrudedAreaSolid&lt;/em&gt;.&lt;em&gt;Position&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Figure 197 illustrates cardinal point alignment. The use of &lt;em&gt;IfcCardinalPointReference&lt;/em&gt; must be consistent with the placement of the extrusion body provided by &lt;em&gt;IfcExtrudedAreaSolid&lt;/em&gt;.&lt;em&gt;Position&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Cardinal point usage" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcbeam_cardinalpoint.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Figure 197 — Beam cardinal points&lt;/p&gt;
 &lt;p&gt;Figure 198 illustrates assignment of a composite profile by using &lt;em&gt;IfcCompositeProfileDef&lt;/em&gt; for geometric representation and several &lt;em&gt;IfcMaterialProfile&lt;/em&gt; entities within the &lt;em&gt;IfcMaterialProfileSet&lt;/em&gt;.&lt;/p&gt;
@@ -17168,19 +17165,33 @@ Figure 309 — Action request assignment&lt;/p&gt;</Body>
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Composition" override="false" status="sample" uuid="2afacd91-7d17-5ac9-b3c6-c665cbce8d54">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;blockquote&gt;
+&lt;p&gt;NOTE  By using the inverse relationship &lt;em&gt;IfcBridge.Decomposes&lt;/em&gt; it references &lt;em&gt;IfcProject&lt;/em&gt; || &lt;em&gt;IfcSite&lt;/em&gt; || &lt;em&gt;IfcBridge&lt;/em&gt; through &lt;em&gt;IfcRelAggregates.RelatingObject&lt;/em&gt;. If it refers to another instance of &lt;em&gt;IfcBridge&lt;/em&gt;, the referenced &lt;em&gt;IfcBridge&lt;/em&gt; needs to have a different and higher &lt;em&gt;CompositionType&lt;/em&gt;, i.e. COMPLEX (if the other &lt;em&gt;IfcBridge&lt;/em&gt; has ELEMENT), or ELEMENT (if the other &lt;em&gt;IfcBridge&lt;/em&gt; has PARTIAL).&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
                             <Template ref="3a31dd1b-6695-5aa9-b374-b147ae2f60e2" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatingObject[Type]='IfcProject'" />
-                                <TemplateRule Parameters="RelatingObject[Type]='IfcSite'" />
-                                <TemplateRule Parameters="RelatingObject[Type]='IfcBridge'" />
+                                <TemplateRule Parameters="RelatingObject[Type]='IfcProject'" Description="Direct assignment to project, if the bridge is the outermost spatial container, and no site information is provided for bridge projects." />
+                                <TemplateRule Parameters="RelatingObject[Type]='IfcSite'" Description="Assignment to site, if the bridge is the spatial container for the bridge project with site information." />
+                                <TemplateRule Parameters="RelatingObject[Type]='IfcBridge'" Description="Assignment to another bridge as spatial container, e.g. if this bridge represents a bridge section." />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Decomposition" override="false" status="sample" uuid="cfd26821-6112-5af1-a9d1-3c87a8f9dc65">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;blockquote&gt;
+&lt;p&gt;NOTE  By using the inverse relationship &lt;em&gt;IfcBridge.IsDecomposedBy&lt;/em&gt; it references &lt;em&gt;IfcBridge&lt;/em&gt; || &lt;em&gt;IfcBridgePart&lt;/em&gt; through &lt;em&gt;IfcRelAggregates.RelatedObjects&lt;/em&gt;. If it refers to another instance of &lt;em&gt;IfcBridge&lt;/em&gt;, the referenced &lt;em&gt;IfcBridge&lt;/em&gt; needs to have a different and lower &lt;em&gt;CompositionType&lt;/em&gt;, i.e. ELEMENT (if the other &lt;em&gt;IfcBridge&lt;/em&gt; has COMPLEX), or PARTIAL (if the other &lt;em&gt;IfcBridge&lt;/em&gt; has ELEMENT).&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
                             <Template ref="65ba5470-dae2-52b8-8b27-9568dbfb5bc2" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatedObjects[Type]='IfcBridge'" />
-                                <TemplateRule Parameters="RelatedObjects[Type]='IfcBridgePart'" />
-                                <TemplateRule Parameters="RelatedObjects[Type]='IfcSpace'" />
+                                <TemplateRule Parameters="RelatedObjects[Type]='IfcBridge'" Description="Spatial decomposition into other bridges, e.g. if this bridge represents a complex bridge that is subdivided into bridge sections." />
+                                <TemplateRule Parameters="RelatedObjects[Type]='IfcBridgePart'" Description="Spatial decomposition into other bridges, e.g. if this bridge represents a complex bridge that is subdivided into bridge sections." />
+                                <TemplateRule Parameters="RelatedObjects[Type]='IfcSpace'" Description="Spatial decomposition into other bridges, e.g. if this bridge represents a complex bridge that is subdivided into bridge sections." />
                             </TemplateRules>
                         </Concept>
                     </Concepts>
@@ -17188,15 +17199,29 @@ Figure 309 — Action request assignment&lt;/p&gt;</Body>
                 <ConceptRoot applicableRootEntity="IfcBridgePart" name="IfcBridgePart" status="sample" uuid="ed511190-3fad-511e-b2f0-b5f1317b6b0f">
                     <Concepts>
                         <Concept name="Spatial Composition" override="false" status="sample" uuid="cfcdb2a3-a3fe-53fe-8521-53dbb0064395">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;blockquote&gt;
+&lt;p&gt;NOTE  By using the inverse relationship &lt;em&gt;IfcBridgePart.Decomposes&lt;/em&gt; it references (&lt;em&gt;IfcBridge&lt;/em&gt;|| &lt;em&gt;IfcBridgePart&lt;/em&gt;) through &lt;em&gt;IfcRelAggregates.RelatingObject&lt;/em&gt;, the referenced &lt;em&gt;IfcBridgePart&lt;/em&gt; needs to have a different and higher &lt;em&gt;CompositionType&lt;/em&gt;, i.e. COMPLEX (if the other &lt;em&gt;IfcBridgePart&lt;/em&gt; has ELEMENT), or ELEMENT (if the other &lt;em&gt;IfcBridgePart&lt;/em&gt; has PARTIAL).&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
                             <Template ref="3a31dd1b-6695-5aa9-b374-b147ae2f60e2" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatingObject[Type]='IfcBridge'" />
+                                <TemplateRule Parameters="RelatingObject[Type]='IfcBridge'" Description="Assignment to another bridge part, e.g. if this bridge part is a part that refers to another bridge part." />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Decomposition" override="false" status="sample" uuid="3165495f-4332-54b2-918e-a898c14d2ee1">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;blockquote&gt;
+&lt;p&gt;NOTE  By using the inverse relationship &lt;em&gt;IfcBridgePart.IsDecomposedBy&lt;/em&gt; it references &lt;em&gt;IfcBridgePart&lt;/em&gt; through &lt;em&gt;IfcRelAggregates.RelatedObjects&lt;/em&gt;. If it refers to another instance of &lt;em&gt;IfcBridgePart&lt;/em&gt;, the referenced &lt;em&gt;IfcBridgePart&lt;/em&gt; needs to have a different and lower &lt;em&gt;CompositionType&lt;/em&gt;, i.e. ELEMENT (if the other &lt;em&gt;IfcBridgePart&lt;/em&gt; has COMPLEX), or PARTIAL (if the other &lt;em&gt;IfcBridgePart&lt;/em&gt; has ELEMENT).&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
                             <Template ref="65ba5470-dae2-52b8-8b27-9568dbfb5bc2" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatedObjects[Type]='IfcSpace'" />
+                                <TemplateRule Parameters="RelatedObjects[Type]='IfcSpace'" Description="Spatial decomposition into bridge parts, if this bridge part is a main bridge part having subdivisions." />
                             </TemplateRules>
                         </Concept>
                     </Concepts>
@@ -18524,29 +18549,29 @@ IfcBuildingStorey needs to have a different and higher
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcContext" name="IfcContext" status="sample" uuid="f0d2a479-77d8-5059-b851-389d08c7bd23">
                     <Concepts>
-                        <Concept name="Project Type Definitions" override="false" status="sample" uuid="49c6e7ef-628b-54a4-a2a9-7361b00b2aa0">
-                            <Template ref="7eb9f0c1-3fc3-5c4c-9e26-bd19b545237b" />
+                        <Concept name="Project Representation Context 3D" override="false" status="sample" uuid="9e782815-7b58-5c24-859c-519a0c5a0752">
+                            <Template ref="01a7d105-3408-51f7-9b72-5cd7e2996999" />
+                        </Concept>
+                        <Concept name="Project Document Information" override="false" status="sample" uuid="429c4831-caa3-5dbd-92ec-41bccb913364">
+                            <Template ref="8ecebac8-960f-52e6-bfdd-a05870570a52" />
                         </Concept>
                         <Concept name="Project Global Positioning" override="false" status="sample" uuid="8f5efe9f-0db9-5149-9d00-c3dda03996b1">
                             <Template ref="261b589f-d4db-5cfb-9c9b-a3d467b1ab5d" />
                         </Concept>
-                        <Concept name="Project Context" override="false" status="sample" uuid="ddea0eb2-b450-5647-90f2-e3b7ccabf0d3">
-                            <Template ref="0d8c1df0-4625-5199-ab0f-bd76c2368ce5" />
-                        </Concept>
-                        <Concept name="Project Classification Information" override="false" status="sample" uuid="bdd6eaa2-a2ca-531b-bc43-75f78aeefb92">
-                            <Template ref="d869880a-2b08-575a-acfa-ec93979c04fb" />
-                        </Concept>
-                        <Concept name="Project Template Definitions" override="false" status="sample" uuid="6b28b32b-c3ab-58e7-b5a9-e05d5997faef">
-                            <Template ref="46fa3b45-f03b-5d31-b7c5-4a32028641a0" />
-                        </Concept>
-                        <Concept name="Project Representation Context 3D" override="false" status="sample" uuid="9e782815-7b58-5c24-859c-519a0c5a0752">
-                            <Template ref="01a7d105-3408-51f7-9b72-5cd7e2996999" />
+                        <Concept name="Project Type Definitions" override="false" status="sample" uuid="49c6e7ef-628b-54a4-a2a9-7361b00b2aa0">
+                            <Template ref="7eb9f0c1-3fc3-5c4c-9e26-bd19b545237b" />
                         </Concept>
                         <Concept name="Project Library Information" override="false" status="sample" uuid="305412df-d4f3-5fd7-a96b-54ba34b702a5">
                             <Template ref="607c6f37-1905-54f3-a0c7-f44a56ac413c" />
                         </Concept>
-                        <Concept name="Project Document Information" override="false" status="sample" uuid="429c4831-caa3-5dbd-92ec-41bccb913364">
-                            <Template ref="8ecebac8-960f-52e6-bfdd-a05870570a52" />
+                        <Concept name="Project Context" override="false" status="sample" uuid="ddea0eb2-b450-5647-90f2-e3b7ccabf0d3">
+                            <Template ref="0d8c1df0-4625-5199-ab0f-bd76c2368ce5" />
+                        </Concept>
+                        <Concept name="Project Template Definitions" override="false" status="sample" uuid="6b28b32b-c3ab-58e7-b5a9-e05d5997faef">
+                            <Template ref="46fa3b45-f03b-5d31-b7c5-4a32028641a0" />
+                        </Concept>
+                        <Concept name="Project Classification Information" override="false" status="sample" uuid="bdd6eaa2-a2ca-531b-bc43-75f78aeefb92">
+                            <Template ref="d869880a-2b08-575a-acfa-ec93979c04fb" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -18792,7 +18817,7 @@ IfcBuildingStorey needs to have a different and higher
                             <Definitions>
                                 <Definition>
                                     <Body lang="en">&lt;p&gt;An IfcCostItem can be calculated based on quantities from objects through its relationship to IfcRelAssignsToControl.&lt;/p&gt;
-&lt;p&gt;For quantity-based costing, IfcElement, IfcTask, or IfcResource occurrence subtypes may be used. Multiple elements may be assigned of the same or different types, using IfcPhysicalQuantity entities defined at each object. Each IfcPhysicalQuantity type must be identical (for example, all values are IfcAreaQuantity) such that they can be added together.&lt;/p&gt;
+&lt;p&gt;For quantity-based costing, IfcElement, IfcTask, or IfcResource occurrence subtypes may be used. Multiple elements may be assigned of the same or different types, using IfcPhysicalQuantity entities defined at each object. Each IfcPhysicalQuantity type must be identical (for example, all values are IfcQuantityArea) such that they can be added together.&lt;/p&gt;
 &lt;p&gt;For rate-based costing (specifically for &lt;em&gt;IfcCostScheduleTypeEnum.SCHEDULEOFRATES&lt;/em&gt;), a single IfcTypeProduct, IfcTypeProcess, or IfcTypeResource subtype may be used to reflect rates for occurrences of such types. This enables the possibility to generate a quantity-based cost schedule for occurrences based on types with rate-based cost schedules.&lt;/p&gt;
 &lt;p&gt;IfcRelAssignsToControl is also used in the opposite direction to link the root IfcCostItem to an IfcCostSchedule where RelatingControl is the IfcCostSchedule.&lt;/p&gt;
 &lt;p&gt;Figure 311 illustrates cost item assignment derived from building elements. The IfcRelAssignsToControl relationship indicates building elements for which quantities are derived. Not shown, costs may also be derived from building elements by traversing assignment relationships from the assigned IfcProduct to IfcProcess to IfcResource, where all costs ultimately originate at resources. It is also possible for cost items to have assignments from processes or resources directly.&lt;/p&gt;
@@ -18814,10 +18839,7 @@ Figure 311 — Cost assignment&lt;/p&gt;</Body>
                             <Definitions>
                                 <Definition>
                                     <Body lang="en">&lt;p&gt;An IfcCostItem can nest other instances of IfcCostItem through its relationships to IfcRelNests. This can be used to enable the development of complex groups of costs as may be found in cost schedules through to pages, sections and complete cost schedules.&lt;/p&gt;
-&lt;p&gt;There is always a summary cost item as the root item of the tree representing the cost item nesting. Subsequent instances of IfcCostItem are assigned to the summary cost item using IfcRelNests. The summary cost item itself is assigned to IfcCostSchedule through the IfcRelAssignsToControl relationship.&lt;/p&gt;
-&lt;p&gt;Figure 310 illustrates a cost item composition used for a cost schedule. Each line item has a quantity and separate unit costs where IfcCostValue.Category indicates the category of cost. The summary item has a hierarchy of costs calculated according to IfcAppliedValueRelationship.ArithmeticOperator, where IfcCostValue.Category identifies the category to be totalled. The Tax component has IfcCostValue.Category set to 'Material' which indicates it is the sum of all nested values of the 'Material' category ($3 x 3000 + $118 x 100 = $20800). The Subtotal component has IfcCostValue.Category set to an asterisk ('*') which indicates it is the sum of all nested values of all categories.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="cost item" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifccostitem-composition.png"/&gt;
-Figure 310 — Cost composition&lt;/p&gt;</Body>
+&lt;p&gt;There is always a summary cost item as the root item of the tree representing the cost item nesting. Subsequent instances of IfcCostItem are assigned to the summary cost item using IfcRelNests. The summary cost item itself is assigned to IfcCostSchedule through the IfcRelAssignsToControl relationship.&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
                             <Template ref="65a3d399-be6a-529b-a715-e253970764c0" />
@@ -19307,7 +19329,7 @@ Figure 310 — Cost composition&lt;/p&gt;</Body>
                         <Concept name="Object Typing" override="false" status="sample" uuid="d2755fa9-b7f9-5cb8-a528-422ea154c1d5">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;The IfcDistributionElement defines the occurrence of any HVAC, electrical, sanitary or other element within a distribution system. Common information about distribution element types (or styles) is handled by subtypes of IfcDistributionElementType. The IfcDistributionElementType (if present) may establish the common type name, usage (or predefined) type, common material, common set of properties and common shape representations (using IfcRepresentationMap). The IfcDistributionElementType is attached using the &lt;em&gt;IfcRelDefinedByType.RelatingType&lt;/em&gt; objectified relationship and is accessible by the inverse IsDefinedBy attribute.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;The IfcDistributionElement defines the occurrence of any HVAC, electrical, sanitary or other element within a distribution system. Common information about distribution element types (or styles) is handled by subtypes of IfcDistributionElementType. The IfcDistributionElementType (if present) may establish the common type name, usage (or predefined) type, common material, common set of properties and common shape representations (using IfcRepresentationMap). The IfcDistributionElementType is attached using the &lt;em&gt;IfcRelDefinesByType.RelatingType&lt;/em&gt; objectified relationship and is accessible by the inverse IsDefinedBy attribute.&lt;/p&gt;
 &lt;p&gt;The assignment of types to distribution element occurrences is vital for providing the additional meaning, or ontology, of the distribution element. Many specialized type are defined in other schemas of this specification.&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
@@ -19452,9 +19474,6 @@ Figure 310 — Cost composition&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PredefinedType[Value]='PIPE' AND PsetName[Value]='Pset_DistributionPortPHistoryPipe'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Port to Distribution System" override="false" status="sample" uuid="d1c4387a-6f28-5841-8d7e-dd64b31d4b77">
-                            <Template ref="c46c93a6-299e-5f4b-93be-f948356fabbe" />
-                        </Concept>
                         <Concept name="Port Connectivity" override="false" status="sample" uuid="215ed4f7-3230-5a5a-911b-d282393008b4">
                             <Definitions>
                                 <Definition>
@@ -19469,6 +19488,9 @@ Figure 302 — Distribution port connectivity&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
                             <Template ref="53d79602-65fa-5eb2-a782-b68c3969dbec" />
+                        </Concept>
+                        <Concept name="Port to Distribution System" override="false" status="sample" uuid="d1c4387a-6f28-5841-8d7e-dd64b31d4b77">
+                            <Template ref="c46c93a6-299e-5f4b-93be-f948356fabbe" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -19526,12 +19548,15 @@ Figure 303 — Distribution system assignment&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="681345c4-acea-5de4-8dfe-42fbab23836d">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorLiningProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorPanelProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ProcessCapacity'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorCommon'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorWindowGlazingType'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='BOOM_BARRIER' AND PsetName[Value]='Pset_TicketProcessing'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TURNSTILE' AND PsetName[Value]='Pset_TicketProcessing'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TURNSTILE' AND PsetName[Value]='Pset_DoorTypeTurnstile'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="4a38ab56-dba5-53ed-a926-42b3016f2564">
@@ -19600,12 +19625,15 @@ Figure 303 — Distribution system assignment&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="b026999e-b049-586e-8d56-3f979a8affbe">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorLiningProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorPanelProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ProcessCapacity'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorCommon'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorWindowGlazingType'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='BOOM_BARRIER' AND PsetName[Value]='Pset_TicketProcessing'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TURNSTILE' AND PsetName[Value]='Pset_TicketProcessing'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TURNSTILE' AND PsetName[Value]='Pset_DoorTypeTurnstile'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="b17cbf0a-ee28-5104-b735-457d65e33855">
@@ -20333,45 +20361,34 @@ Figure 303 — Distribution system assignment&lt;/p&gt;</Body>
                         <Concept name="Surface Tessellation Geometry" override="false" status="sample" uuid="8d458e6e-b99f-580a-ba6b-3eb0ea8ab837">
                             <Template ref="e21c3a1e-3520-5de5-8591-e4558e19585d" />
                         </Concept>
-                        <Concept name="Element Projecting" override="false" status="sample" uuid="05aa6d4d-6f59-565b-b565-b2e8c4c4dc94">
-                            <Template ref="dcbfcbcd-7c12-5ab2-a847-eafd96b17ab7" />
-                        </Concept>
-                        <Concept name="Body CSG Geometry" override="false" status="sample" uuid="a1f7cb71-39c1-5290-ab89-c388119e721b">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented a CSG primitive or CSG tree. The CSG representation allows for the representation of complex element shape.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'CSG' geometry.&lt;/p&gt;
-&lt;/blockquote&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="b0e02a72-16d3-568a-9707-33687d7f5f7f" />
+                        <Concept name="Profile 3D Geometry" override="false" status="sample" uuid="8208d9b4-7e2c-5f67-85f1-5cfcfe1bfa33">
+                            <Template ref="bd174d28-71dd-524b-b86e-320a8abbdefd" />
                         </Concept>
                         <Concept name="Body SweptSolid Geometry" override="false" status="sample" uuid="00b6a58a-6137-5e03-ab9a-cc7b623496f0">
                             <Template ref="468d05f5-6757-5182-88b3-77a1d4ba88f8" />
                         </Concept>
-                        <Concept name="Surface 3D Geometry" override="false" status="sample" uuid="45bd34f4-8b8e-54f1-a5e5-38981ae536a1">
-                            <Template ref="97479a61-cb00-58d4-bdef-8c57fd2f492d" />
+                        <Concept name="Element Nesting" override="false" status="sample" uuid="eeec865f-63d9-5df9-ab73-c47da52b17e5">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;A host element can nest connected components. This should be used when there is a specific position or form factor to attach specific elements.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EXAMPLE A sink has a pre-drilled hole to attach a faucet.&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="2cef26b3-c687-5d78-bc38-9cbc293ffeb0" />
                         </Concept>
                         <Concept name="Element Voiding" override="false" status="sample" uuid="e6c6766e-706c-5d1c-8032-c912f7e673cc">
                             <Template ref="e261e06d-f08d-5fcf-a559-25a927f0bc1f" />
                         </Concept>
-                        <Concept name="Body AdvancedBrep Geometry" override="false" status="sample" uuid="38442a3c-1032-5606-8294-c66c5b5c940d">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;An IfcElement (so far no further constraints are defined at the level of its subtypes or by view definitions) may be represented as a single or multiple boundary representation models, which include advanced surfaces, usually refered to as NURBS surfaces. The 'AdvancedBrep' representation allows for the representation of complex free-form element shape.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'AdvancedBrep' geometry.&lt;/p&gt;
-&lt;/blockquote&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="e68298a2-262e-577f-be02-7a77013b3ec4" />
-                        </Concept>
-                        <Concept name="Profile 3D Geometry" override="false" status="sample" uuid="8208d9b4-7e2c-5f67-85f1-5cfcfe1bfa33">
-                            <Template ref="bd174d28-71dd-524b-b86e-320a8abbdefd" />
-                        </Concept>
                         <Concept name="Profile Geometry" override="false" status="sample" uuid="542d50b0-5155-5293-9fd3-6aa8112a391e">
                             <Template ref="063f019d-4390-56f3-ba3d-f8117b606fb1" />
+                        </Concept>
+                        <Concept name="Body AdvancedSweptSolid Geometry" override="false" status="sample" uuid="ba02dcf7-5bb2-54bd-ab78-03421f3e7298">
+                            <Template ref="042bbe89-d822-5f31-8609-80d4d5f27914" />
+                        </Concept>
+                        <Concept name="Body Clipping Geometry" override="false" status="sample" uuid="b20ba058-bf6f-51e8-9223-7969138b3e9f">
+                            <Template ref="6f2aec49-4c3a-5058-97d1-fc7b47e60c9f" />
                         </Concept>
                         <Concept name="Body Brep Geometry" override="false" status="sample" uuid="196f48c5-d6f5-5d1c-a9f8-71ff0081258c">
                             <Definitions>
@@ -20390,25 +20407,42 @@ shape.&lt;/p&gt;
                             </Definitions>
                             <Template ref="1e29bdb8-a674-5a35-a4bb-d4b66b9e0227" />
                         </Concept>
-                        <Concept name="Element Occurrence Attributes" override="false" status="sample" uuid="9bdf3216-6015-56ef-9f4e-021ac32d5265">
-                            <Template ref="01524ce3-33e2-5f37-be10-fd0b355e967f" />
+                        <Concept name="Element Projecting" override="false" status="sample" uuid="05aa6d4d-6f59-565b-b565-b2e8c4c4dc94">
+                            <Template ref="dcbfcbcd-7c12-5ab2-a847-eafd96b17ab7" />
                         </Concept>
-                        <Concept name="Lighting Geometry" override="false" status="sample" uuid="f4041d7a-7e2b-5c6a-8c66-e69c18b3683e">
-                            <Template ref="f54abf20-66f0-5c86-a92d-126c185e6aae" />
+                        <Concept name="Body CSG Geometry" override="false" status="sample" uuid="a1f7cb71-39c1-5290-ab89-c388119e721b">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented a CSG primitive or CSG tree. The CSG representation allows for the representation of complex element shape.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'CSG' geometry.&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="b0e02a72-16d3-568a-9707-33687d7f5f7f" />
                         </Concept>
                         <Concept name="Element Interference" override="false" status="sample" uuid="80bbcc4c-8e0d-5732-9a0f-87fde608f825">
                             <Template ref="6fe41c49-e4f4-56a8-9d7a-732a9524867f" />
                         </Concept>
-                        <Concept name="Element Nesting" override="false" status="sample" uuid="eeec865f-63d9-5df9-ab73-c47da52b17e5">
+                        <Concept name="Lighting Geometry" override="false" status="sample" uuid="f4041d7a-7e2b-5c6a-8c66-e69c18b3683e">
+                            <Template ref="f54abf20-66f0-5c86-a92d-126c185e6aae" />
+                        </Concept>
+                        <Concept name="Surface Geometry" override="false" status="sample" uuid="afbc7f1f-0beb-5dc7-936c-d390053c4c67">
+                            <Template ref="5ea8e98b-f46e-542e-a0a4-07aa78936461" />
+                        </Concept>
+                        <Concept name="Element Covering" override="false" status="sample" uuid="6dd6a7f1-5263-530d-ab39-1a6957c3c5c6">
+                            <Template ref="fa6797d6-762f-5c0a-a85d-07cea7e50e7e" />
+                        </Concept>
+                        <Concept name="Element Occurrence Attributes" override="false" status="sample" uuid="9bdf3216-6015-56ef-9f4e-021ac32d5265">
+                            <Template ref="01524ce3-33e2-5f37-be10-fd0b355e967f" />
+                        </Concept>
+                        <Concept name="Body SurfaceOrSolidModel Geometry" override="false" status="sample" uuid="f579084d-26a1-5c59-ae08-4b41bf0ba84d">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;A host element can nest connected components. This should be used when there is a specific position or form factor to attach specific elements.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;EXAMPLE A sink has a pre-drilled hole to attach a faucet.&lt;/p&gt;
-&lt;/blockquote&gt;</Body>
+                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a mixed representation, including surface and solid models.&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
-                            <Template ref="2cef26b3-c687-5d78-bc38-9cbc293ffeb0" />
+                            <Template ref="98402714-dc32-5cb8-802d-517f4413916b" />
                         </Concept>
                         <Concept name="Body SurfaceModel Geometry" override="false" status="sample" uuid="6f8cbd1a-92fd-55b9-9128-7da0ad3e1b14">
                             <Definitions>
@@ -20423,25 +20457,19 @@ shape.&lt;/p&gt;
                             </Definitions>
                             <Template ref="96d61789-69a6-5dbf-ada5-d8921ecd221d" />
                         </Concept>
-                        <Concept name="Surface Geometry" override="false" status="sample" uuid="afbc7f1f-0beb-5dc7-936c-d390053c4c67">
-                            <Template ref="5ea8e98b-f46e-542e-a0a4-07aa78936461" />
-                        </Concept>
-                        <Concept name="Body SurfaceOrSolidModel Geometry" override="false" status="sample" uuid="f579084d-26a1-5c59-ae08-4b41bf0ba84d">
+                        <Concept name="Body AdvancedBrep Geometry" override="false" status="sample" uuid="38442a3c-1032-5606-8294-c66c5b5c940d">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a mixed representation, including surface and solid models.&lt;/p&gt;</Body>
+                                    <Body lang="en">&lt;p&gt;An IfcElement (so far no further constraints are defined at the level of its subtypes or by view definitions) may be represented as a single or multiple boundary representation models, which include advanced surfaces, usually refered to as NURBS surfaces. The 'AdvancedBrep' representation allows for the representation of complex free-form element shape.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'AdvancedBrep' geometry.&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
                                 </Definition>
                             </Definitions>
-                            <Template ref="98402714-dc32-5cb8-802d-517f4413916b" />
+                            <Template ref="e68298a2-262e-577f-be02-7a77013b3ec4" />
                         </Concept>
-                        <Concept name="Body Clipping Geometry" override="false" status="sample" uuid="b20ba058-bf6f-51e8-9223-7969138b3e9f">
-                            <Template ref="6f2aec49-4c3a-5058-97d1-fc7b47e60c9f" />
-                        </Concept>
-                        <Concept name="Element Covering" override="false" status="sample" uuid="6dd6a7f1-5263-530d-ab39-1a6957c3c5c6">
-                            <Template ref="fa6797d6-762f-5c0a-a85d-07cea7e50e7e" />
-                        </Concept>
-                        <Concept name="Body AdvancedSweptSolid Geometry" override="false" status="sample" uuid="ba02dcf7-5bb2-54bd-ab78-03421f3e7298">
-                            <Template ref="042bbe89-d822-5f31-8609-80d4d5f27914" />
+                        <Concept name="Surface 3D Geometry" override="false" status="sample" uuid="45bd34f4-8b8e-54f1-a5e5-38981ae536a1">
+                            <Template ref="97479a61-cb00-58d4-bdef-8c57fd2f492d" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -20551,11 +20579,11 @@ shape.&lt;/p&gt;
                         <Concept name="Type Body Tessellated Geometry" override="false" status="sample" uuid="b92b0372-a08a-547e-90a7-a42a80c4c76d">
                             <Template ref="80fff84e-d50d-5f0d-ab4d-7a93425f4258" />
                         </Concept>
-                        <Concept name="Type Element Aggregation" override="false" status="sample" uuid="b7d7135a-6aa4-519c-8e1d-db3237b6f01c">
-                            <Template ref="e0280ce3-5597-5d34-95b6-bb7e9983b217" />
-                        </Concept>
                         <Concept name="Type Element Nesting" override="false" status="sample" uuid="5351b5e6-8c8f-56e4-ac38-11831e716699">
                             <Template ref="a9b756ac-ce4b-5e95-b4f6-8990f6e481ac" />
+                        </Concept>
+                        <Concept name="Type Element Aggregation" override="false" status="sample" uuid="b7d7135a-6aa4-519c-8e1d-db3237b6f01c">
+                            <Template ref="e0280ce3-5597-5d34-95b6-bb7e9983b217" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -21589,6 +21617,12 @@ shape.&lt;/p&gt;
                         <Concept name="Grid Attributes" override="false" status="sample" uuid="c27edbeb-c00f-5a6e-beb8-106c4aa7581e">
                             <Template ref="55214adb-fc2c-598f-876a-f3ef1106bfb1" />
                         </Concept>
+                        <Concept name="Spatial Containment" override="false" status="sample" uuid="caf935e0-1fb4-5672-b692-3ff6fa684a22">
+                            <Template ref="cf9aca5c-f3e7-5663-9707-87ef1301b3e3" />
+                            <TemplateRules operator="and">
+                                <TemplateRule Parameters="RelatingStructure[Type]='IfcSpatialElement'" />
+                            </TemplateRules>
+                        </Concept>
                     </Concepts>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcGroup" name="IfcGroup" status="sample" uuid="02a8896b-758c-5e9b-9050-743084705e89">
@@ -22102,16 +22136,6 @@ shape.&lt;/p&gt;
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
-                <ConceptRoot applicableRootEntity="IfcLinearElement" name="IfcLinearElement" status="sample" uuid="7cdcbb1c-996f-53e0-b339-958f680f5d28">
-                    <Concepts>
-                        <Concept name="Spatial Containment" override="false" status="sample" uuid="36cbbfe7-6a7c-5e41-8b8a-0214c270631d">
-                            <Template ref="cf9aca5c-f3e7-5663-9707-87ef1301b3e3" />
-                            <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatingStructure[Type]='IfcSpatialElement'" />
-                            </TemplateRules>
-                        </Concept>
-                    </Concepts>
-                </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcLiquidTerminal" name="IfcLiquidTerminal" status="sample" uuid="ea56f787-b561-50e0-807d-4c3f337f0d64">
                     <Concepts>
                         <Concept name="Object Typing" override="false" status="sample" uuid="96e606fb-8532-5806-b8b4-14019a9fe6c6">
@@ -22355,6 +22379,7 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="e81f9157-8661-517a-8db6-721f2f6df5ec">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorLiningProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementFabrication'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementGeneral'" />
@@ -22364,6 +22389,8 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PredefinedType[Value]='POST' AND PsetName[Value]='Pset_MemberTypePost'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='STAY_CABLE' AND PsetName[Value]='Pset_MemberTypeCatenaryStay'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TIEBAR' AND PsetName[Value]='Pset_MemberTypeTieBar'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowLiningProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="8c533fdf-9a1f-5ae5-b9c2-bfbc108623e0">
@@ -22379,6 +22406,7 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="57767788-c3c7-5d25-a4e5-9d2924a9cd9c">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorLiningProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementFabrication'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementGeneral'" />
@@ -22388,6 +22416,8 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PredefinedType[Value]='POST' AND PsetName[Value]='Pset_MemberTypePost'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='STAY_CABLE' AND PsetName[Value]='Pset_MemberTypeCatenaryStay'" />
                                 <TemplateRule Parameters="PredefinedType[Value]='TIEBAR' AND PsetName[Value]='Pset_MemberTypeTieBar'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowLiningProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="8a2acee6-dd16-59bd-9e57-8c99bd66f8f2">
@@ -22545,14 +22575,6 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="RelatingType[Type]='IfcTypeObject'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Property Sets with Override" override="false" status="sample" uuid="63354d87-182c-5141-98ad-d16256db599c">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="43f30624-7248-5491-afad-63b7e79dd12e" />
-                        </Concept>
                         <Concept name="Object User Identity" override="false" status="sample" uuid="6b7e68da-ed9a-5d06-87ad-cba4cfbdb1d0">
                             <Definitions>
                                 <Definition>
@@ -22567,25 +22589,18 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                         <Concept name="Object Predefined Type" override="false" status="sample" uuid="47d9db64-22dd-5c9f-b9b1-ae02f1f13a89">
                             <Template ref="6c5f9565-fbb2-5c91-95a9-14e7aa1d245b" />
                         </Concept>
+                        <Concept name="Property Sets with Override" override="false" status="sample" uuid="63354d87-182c-5141-98ad-d16256db599c">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.&lt;/p&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="43f30624-7248-5491-afad-63b7e79dd12e" />
+                        </Concept>
                     </Concepts>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcObjectDefinition" name="IfcObjectDefinition" status="sample" uuid="a0d7321f-3b63-5185-a4ca-6f42ac6f170c">
                     <Concepts>
-                        <Concept name="Constraint Association" override="false" status="sample" uuid="283fdd98-75b1-549d-8a87-fbcf90f6d967">
-                            <Template ref="45e6f6a8-4d96-5b7f-a1f1-aacc145d89db" />
-                        </Concept>
-                        <Concept name="Material Single" override="false" status="sample" uuid="a1d2aacc-e4b9-5c56-9be2-6fa72de8384f">
-                            <Template ref="bc34e293-06b1-55d2-8db2-8da5286d75b2" />
-                        </Concept>
-                        <Concept name="Approval Association" override="false" status="sample" uuid="85e18097-7b7c-5b43-be68-eb51b2aa390c">
-                            <Template ref="b2f35e46-fb33-5051-b22a-9004be43b318" />
-                        </Concept>
-                        <Concept name="Library Association" override="false" status="sample" uuid="c71200ef-a95c-5d84-99fa-ae4048242fa6">
-                            <Template ref="dedf8441-cb44-5b42-b3ef-834e2d5a49c6" />
-                        </Concept>
-                        <Concept name="Material Association" override="false" status="sample" uuid="44121f37-beed-58e0-a8aa-c4beae49b790">
-                            <Template ref="e1f88d05-a414-55b8-878a-e97978b8c33a" />
-                        </Concept>
                         <Concept name="Classification Association" override="false" status="sample" uuid="4765aee4-9f5d-537b-b566-5e9d78c73d24">
                             <Definitions>
                                 <Definition>
@@ -22594,14 +22609,29 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="e367ff81-1e9b-519b-822b-54b62f4f94f4" />
                         </Concept>
-                        <Concept name="Nesting" override="false" status="sample" uuid="31593997-0367-5213-8085-742dc53250f0">
-                            <Template ref="c1aba1f2-8873-571e-816d-34e75a38312f" />
+                        <Concept name="Material Association" override="false" status="sample" uuid="44121f37-beed-58e0-a8aa-c4beae49b790">
+                            <Template ref="e1f88d05-a414-55b8-878a-e97978b8c33a" />
+                        </Concept>
+                        <Concept name="Material Single" override="false" status="sample" uuid="a1d2aacc-e4b9-5c56-9be2-6fa72de8384f">
+                            <Template ref="bc34e293-06b1-55d2-8db2-8da5286d75b2" />
+                        </Concept>
+                        <Concept name="Approval Association" override="false" status="sample" uuid="85e18097-7b7c-5b43-be68-eb51b2aa390c">
+                            <Template ref="b2f35e46-fb33-5051-b22a-9004be43b318" />
                         </Concept>
                         <Concept name="Aggregation" override="false" status="sample" uuid="1d0eb73f-f65a-5240-91cc-e28c32679ad3">
                             <Template ref="0ba00fb8-d0eb-5c4e-8ab6-22104ea1f012" />
                         </Concept>
+                        <Concept name="Constraint Association" override="false" status="sample" uuid="283fdd98-75b1-549d-8a87-fbcf90f6d967">
+                            <Template ref="45e6f6a8-4d96-5b7f-a1f1-aacc145d89db" />
+                        </Concept>
+                        <Concept name="Nesting" override="false" status="sample" uuid="31593997-0367-5213-8085-742dc53250f0">
+                            <Template ref="c1aba1f2-8873-571e-816d-34e75a38312f" />
+                        </Concept>
                         <Concept name="Document Association" override="false" status="sample" uuid="c2058539-f349-5b51-9dae-d6f92d717713">
                             <Template ref="9e7e5792-ef1f-59cd-9f64-b04c1d42288a" />
+                        </Concept>
+                        <Concept name="Library Association" override="false" status="sample" uuid="c71200ef-a95c-5d84-99fa-ae4048242fa6">
+                            <Template ref="dedf8441-cb44-5b42-b3ef-834e2d5a49c6" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -23029,10 +23059,12 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="9a188eb5-9024-5bcc-a01a-062acc66d6c4">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorPanelProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementFabrication'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PlateCommon'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowPanelProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="7b9cbaac-cc02-515b-a191-98d327b44fef">
@@ -23048,10 +23080,12 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="ca7485e1-1147-58b7-b71c-bb289babd05f">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
+                                <TemplateRule Parameters="PsetName[Value]='Pset_DoorPanelProperties'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementFabrication'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PrecastConcreteElementGeneral'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_PlateCommon'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowPanelProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="9a0f2287-6c49-52c0-b3fe-2601139a3293">
@@ -23065,34 +23099,7 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                 <ConceptRoot applicableRootEntity="IfcPositioningElement" name="IfcPositioningElement" status="sample" uuid="4127cb50-afa9-5381-8e5a-967cf77b4fcb">
                     <Concepts>
                         <Concept name="FootPrint Geometry" override="false" status="sample" uuid="0a44a6f3-bcb2-5c60-a966-4de767c458c4">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;The 2D geometric representation of IfcGrid is defined using the 'GeometricCurveSet' geometry. The following attribute values should be inserted&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;IfcShapeRepresentation.RepresentationIdentifier&lt;/em&gt; = 'FootPrint'.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;IfcShapeRepresentation.RepresentationType&lt;/em&gt; = 'GeometricCurveSet' .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The following constraints apply to the 2D representation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The IfcGeometricCurveSet shall be an (and the only) Item of the IfcShapeRepresentation. It should contain an IfcGeometricCurveSet containing subtypes of IfcCurve, each representing a grid axis. Applicable subtypes of IfcCurve are: IfcPolyline, IfcCircle, IfcTrimmedCurve (based on BaseCurve referencing IfcLine or IfcCircle), and IfcOffsetCurve2D.&lt;/li&gt;
-&lt;li&gt;Each subtype of IfcCurve may have a curve style assigned, using IfcStyledItem referencing IfcCurveStyle.&lt;/li&gt;
-&lt;li&gt;Optionally the grid axis labels may be added as IfcTextLiteral, and they may have text styles assigned, using IfcStyledItem referencing IfcTextStyle.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="design grid" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcdesigngrid-layout1.gif"/&gt;&lt;/p&gt;
-&lt;p&gt;Figure 31 — Grid layout&lt;/p&gt;
-&lt;p&gt;As shown in Figure 31, the &lt;em&gt;IfcGrid&lt;/em&gt; defines a placement coordinate system using the &lt;em&gt;ObjectPlacement&lt;/em&gt;. The XY plane of the coordinate system is used to place the 2D grid axes.  The &lt;em&gt;Representation&lt;/em&gt; of &lt;em&gt;IfcGrid&lt;/em&gt; is defined using &lt;em&gt;IfcProductRepresentation&lt;/em&gt;, referencing an &lt;em&gt;IfcShapeRepresentation&lt;/em&gt;, that includes &lt;em&gt;IfcGeometricCurveSet&lt;/em&gt; as &lt;em&gt;Items&lt;/em&gt;. All grid axes are added as &lt;em&gt;IfcPolyline&lt;/em&gt; to the &lt;em&gt;IfcGeometricCurveSet&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="representation of a design grid" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcgrid-representation.png"/&gt;&lt;/p&gt;
-&lt;p&gt;Figure 32 — Grid representation&lt;/p&gt;
-&lt;p&gt;As shown in Figure 32, the attributes &lt;em&gt;UAxes&lt;/em&gt; and &lt;em&gt;VAxes&lt;/em&gt; define lists of &lt;em&gt;IfcGridAxis&lt;/em&gt; within the context of the grid. Each instance of &lt;em&gt;IfcGridAxis&lt;/em&gt; refers to the same instance of &lt;em&gt;IfcCurve&lt;/em&gt; (here the subtype &lt;em&gt;IfcPolyline&lt;/em&gt;) that is contained within the &lt;em&gt;IfcGeometricCurveSet&lt;/em&gt; that represents the &lt;em&gt;IfcGrid&lt;/em&gt;.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
                             <Template ref="510aef01-aca4-5b8a-bf9a-b425dc0b636b" />
-                        </Concept>
-                        <Concept name="Spatial Containment" override="false" status="sample" uuid="d3d4b46c-c388-537a-be89-3d9605ec3562">
-                            <Template ref="cf9aca5c-f3e7-5663-9707-87ef1301b3e3" />
-                            <TemplateRules operator="and">
-                                <TemplateRule Parameters="RelatingStructure[Type]='IfcSpatialElement'" />
-                            </TemplateRules>
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -23183,11 +23190,8 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PsetName[Value]='Qto_BodyGeometryValidation'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Reference SweptSolid PolyCurve Geometry" override="false" status="sample" uuid="bcbdc308-190d-5ea1-9717-26343cf3d3ae">
-                            <Template ref="f3f4dec8-4e22-5776-bfd9-7c9364a04b7d" />
-                        </Concept>
-                        <Concept name="Box Geometry" override="false" status="sample" uuid="0cc8f245-eec6-5b5d-ad95-2b79d5cd26a3">
-                            <Template ref="faf547af-a636-56fb-aec9-29a9e7b813b6" />
+                        <Concept name="Reference SweptSolid Geometry" override="false" status="sample" uuid="fdf5f1c8-bc03-5f7a-a334-d4ca127b0ab0">
+                            <Template ref="f25b2a1e-237d-5adf-87de-d05bc5bb52ae" />
                         </Concept>
                         <Concept name="Product Geometric Representation" override="false" status="sample" uuid="1b3b616e-dd5c-5b88-ba57-1b082db7a830">
                             <Definitions>
@@ -23200,20 +23204,23 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="1d1e1f42-b75d-5b73-bb76-155d0d87d974" />
                         </Concept>
-                        <Concept name="Reference Tessellation Geometry" override="false" status="sample" uuid="0b253088-5c07-5dbd-a707-279c8433b60f">
-                            <Template ref="f61cd51b-8995-592e-93d7-4f42ca3949a5" />
-                        </Concept>
-                        <Concept name="Mapped Geometry" override="false" status="sample" uuid="42565100-db73-5964-b6a2-d38b81e4e466">
-                            <Template ref="91206509-3e27-5853-8bb2-15ce800163b4" />
+                        <Concept name="Reference SweptSolid PolyCurve Geometry" override="false" status="sample" uuid="bcbdc308-190d-5ea1-9717-26343cf3d3ae">
+                            <Template ref="f3f4dec8-4e22-5776-bfd9-7c9364a04b7d" />
                         </Concept>
                         <Concept name="Reference Geometry" override="false" status="sample" uuid="638693d2-a6e9-5aec-8564-d73f8758cfb0">
                             <Template ref="1907cf17-4454-5de8-bc90-c158ef193bbe" />
                         </Concept>
-                        <Concept name="Reference SweptSolid Geometry" override="false" status="sample" uuid="fdf5f1c8-bc03-5f7a-a334-d4ca127b0ab0">
-                            <Template ref="f25b2a1e-237d-5adf-87de-d05bc5bb52ae" />
+                        <Concept name="Reference Tessellation Geometry" override="false" status="sample" uuid="0b253088-5c07-5dbd-a707-279c8433b60f">
+                            <Template ref="f61cd51b-8995-592e-93d7-4f42ca3949a5" />
                         </Concept>
                         <Concept name="CoG Geometry" override="false" status="sample" uuid="167a270f-e076-5a14-af24-64bcbca6debe">
                             <Template ref="603bfa57-1b51-54c2-86ab-dd3a2e870d5b" />
+                        </Concept>
+                        <Concept name="Product Topology Representation" override="false" status="sample" uuid="664a3a5f-4db1-51aa-9fe4-879a71446a22">
+                            <Template ref="74939127-0d27-5aa1-8be1-ff6bc4f5acb0" />
+                        </Concept>
+                        <Concept name="Product Local Placement" override="false" status="sample" uuid="666e99c2-c50c-51e7-9ba2-dbd355510fa7">
+                            <Template ref="bdfe407b-bdc6-5cef-baab-ff4ac3b089cb" />
                         </Concept>
                         <Concept name="Body Geometry" override="false" status="sample" uuid="e1e7e55f-0898-5860-a289-6133f22504c2">
                             <Definitions>
@@ -23227,11 +23234,11 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="9319a8d6-734d-50c0-82ca-879bd0da212d" />
                         </Concept>
-                        <Concept name="Product Local Placement" override="false" status="sample" uuid="666e99c2-c50c-51e7-9ba2-dbd355510fa7">
-                            <Template ref="bdfe407b-bdc6-5cef-baab-ff4ac3b089cb" />
+                        <Concept name="Mapped Geometry" override="false" status="sample" uuid="42565100-db73-5964-b6a2-d38b81e4e466">
+                            <Template ref="91206509-3e27-5853-8bb2-15ce800163b4" />
                         </Concept>
-                        <Concept name="Product Topology Representation" override="false" status="sample" uuid="664a3a5f-4db1-51aa-9fe4-879a71446a22">
-                            <Template ref="74939127-0d27-5aa1-8be1-ff6bc4f5acb0" />
+                        <Concept name="Box Geometry" override="false" status="sample" uuid="0cc8f245-eec6-5b5d-ad95-2b79d5cd26a3">
+                            <Template ref="faf547af-a636-56fb-aec9-29a9e7b813b6" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -23705,10 +23712,11 @@ Figure 314 — Project order assignment&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="1ac3e8af-5374-5a93-b46b-e9a2532ebf3c">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="PredefinedType[Value]='DILATATIONSUPERSTRUCTURE' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
-                                <TemplateRule Parameters="PredefinedType[Value]='PLAINTRACKSUPERSTRUCTURE' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
-                                <TemplateRule Parameters="PredefinedType[Value]='TRACKSTRUCTURE' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
-                                <TemplateRule Parameters="PredefinedType[Value]='TURNOUTSUPERSTRUCTURE' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='DILATIONTRACK' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='PLAINTRACK' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='TRACK' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='TURNOUTTRACK' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='TRACKPART' AND PsetName[Value]='Pset_RailwayTrackStructurePart'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Composition" override="false" status="sample" uuid="4b3833cf-2e9c-5822-b571-9188a155a8d2">
@@ -23851,9 +23859,11 @@ Figure 254 — Ramp flight axis&lt;/p&gt;</Body>
                         <Concept name="Property Sets for Objects" override="false" status="sample" uuid="d0d898dd-b014-5394-b250-e5e757415b2d">
                             <Template ref="ebaab3b6-b55b-5457-9ad2-8f13b06735b0" />
                             <TemplateRules operator="and">
-                                <TemplateRule Parameters="PredefinedType[Value]='POSITION' AND PsetName[Value]='Pset_LinearReferencingMethod'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_LinearReferencingMethod'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_ReferentCommon'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_Stationing'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='SUPERELEVATIONEVENT' AND PsetName[Value]='Pset_Superelevation'" />
+                                <TemplateRule Parameters="PredefinedType[Value]='WIDTHEVENT' AND PsetName[Value]='Pset_Width'" />
                             </TemplateRules>
                         </Concept>
                     </Concepts>
@@ -24014,7 +24024,7 @@ Figure 254 — Ramp flight axis&lt;/p&gt;</Body>
                             <Definitions>
                                 <Definition>
                                     <Body lang="en">&lt;p&gt;&lt;em&gt;Geometric representation by aggregated elements&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;If the &lt;em&gt;IfcRoof&lt;/em&gt; has components (referenced by &lt;em&gt;SELF\IfcObject.IsDecomposedBy&lt;/em&gt;) then no independent geometric representation shall be defined for the &lt;em&gt;IfcRoof&lt;/em&gt;. The &lt;em&gt;IfcRoof&lt;/em&gt; is then geometrically represented by the geometric representation of its components. The components are accessed via &lt;em&gt;SELF\IfcObject.IsDecomposedBy[1].RelatedObjects&lt;/em&gt;. The geometric representations that are supported for the aggregated elements are defined with each element. See geometric use definition for &lt;em&gt;IfcSlab&lt;/em&gt;, &lt;em&gt;IfcBeam&lt;/em&gt;, &lt;em&gt;IfcColumn&lt;/em&gt;, &lt;em&gt;IfcBuildingElementPart&lt;/em&gt; and other subtypes of &lt;em&gt;IfcBuildingElement&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;If the &lt;em&gt;IfcRoof&lt;/em&gt; has components (referenced by &lt;em&gt;SELF\IfcObject.IsDecomposedBy&lt;/em&gt;) then no independent geometric representation shall be defined for the &lt;em&gt;IfcRoof&lt;/em&gt;. The &lt;em&gt;IfcRoof&lt;/em&gt; is then geometrically represented by the geometric representation of its components. The components are accessed via &lt;em&gt;SELF\IfcObject.IsDecomposedBy[1].RelatedObjects&lt;/em&gt;. The geometric representations that are supported for the aggregated elements are defined with each element. See geometric use definition for &lt;em&gt;IfcSlab&lt;/em&gt;, &lt;em&gt;IfcBeam&lt;/em&gt;, &lt;em&gt;IfcColumn&lt;/em&gt;, &lt;em&gt;IfcBuildingElementPart&lt;/em&gt; and other subtypes of &lt;em&gt;IfcBuiltElement&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Figure 260 illustrates roof placement, with an &lt;em&gt;IfcRoof&lt;/em&gt; defining the local placement for all aggregated elements.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="roof" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcroof-layout1.gif"/&gt;
 Figure 260 — Roof placement&lt;/p&gt;</Body>
@@ -24069,14 +24079,6 @@ Figure 260 — Roof placement&lt;/p&gt;</Body>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcRoot" name="IfcRoot" status="sample" uuid="6bc2aacf-80c5-5e38-83f0-b05c76dc2dd3">
                     <Concepts>
-                        <Concept name="Revision Control" override="false" status="sample" uuid="6bd1786e-da06-5160-942c-f054f5cdd66c">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;Ownership, history, and merge state is captured using IfcOwnerHistory.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="7c2feb54-4279-5aa2-aa8f-eefe2d9d870c" />
-                        </Concept>
                         <Concept name="Software Identity" override="false" status="sample" uuid="42d96e95-e654-549a-8ef9-62cd49311a31">
                             <Definitions>
                                 <Definition>
@@ -24084,6 +24086,14 @@ Figure 260 — Roof placement&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
                             <Template ref="6c4314f9-70cd-5ba5-84dc-69d5079034d8" />
+                        </Concept>
+                        <Concept name="Revision Control" override="false" status="sample" uuid="6bd1786e-da06-5160-942c-f054f5cdd66c">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Ownership, history, and merge state is captured using IfcOwnerHistory.&lt;/p&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="7c2feb54-4279-5aa2-aa8f-eefe2d9d870c" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -24748,11 +24758,11 @@ Figure 182 — Site breaklines&lt;/p&gt;
                                 <TemplateRule Parameters="RelatedObjects[Type]='IfcSpace'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Space Boundaries 2nd Level" override="false" status="sample" uuid="aaac4692-c7ef-5559-9f54-73a63d435fdf">
-                            <Template ref="e0a83d2d-6cc1-5292-8cae-1f6d164522d1" />
-                        </Concept>
                         <Concept name="Space Attributes" override="false" status="sample" uuid="5daf83a8-9082-5109-b672-0ba07f56b8f4">
                             <Template ref="383f1ed4-eb19-5a09-a8af-0c18f883ddeb" />
+                        </Concept>
+                        <Concept name="Space Boundaries 2nd Level" override="false" status="sample" uuid="aaac4692-c7ef-5559-9f54-73a63d435fdf">
+                            <Template ref="e0a83d2d-6cc1-5292-8cae-1f6d164522d1" />
                         </Concept>
                         <Concept name="Space Boundaries 1st Level" override="false" status="sample" uuid="39454ed7-cb17-5db0-a053-944e10fbc8c0">
                             <Template ref="a61a7f1a-2126-5625-96f9-3dc13f842ba0" />
@@ -24884,8 +24894,7 @@ Figure 182 — Site breaklines&lt;/p&gt;
                             <TemplateRules operator="and">
                                 <TemplateRule Parameters="Type[Type]='IfcAnnotation'" />
                                 <TemplateRule Parameters="Type[Type]='IfcElement'" />
-                                <TemplateRule Parameters="Type[Type]='IfcLinearElement'" />
-                                <TemplateRule Parameters="Type[Type]='IfcPositioningElement'" />
+                                <TemplateRule Parameters="Type[Type]='IfcGrid'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Spatial Interference" override="false" status="sample" uuid="9265ff7b-90ab-5071-9588-62bd2bc137a7">
@@ -24894,11 +24903,11 @@ Figure 182 — Site breaklines&lt;/p&gt;
                         <Concept name="Spatial Interference With Zones" override="false" status="sample" uuid="9bada935-8b8e-5091-b973-4c9e8eef4745">
                             <Template ref="54961c05-263f-5779-af7b-753ba6e512de" />
                         </Concept>
-                        <Concept name="Spatial Service Connectivity" override="false" status="sample" uuid="4295b48d-e20a-550a-9914-fea4706f5fe2">
-                            <Template ref="0e70e911-15e7-5a51-9a35-1d3afb7dfd4e" />
-                        </Concept>
                         <Concept name="Spatial Element Attributes" override="false" status="sample" uuid="e86c28ed-68ff-51a0-8189-059758742cbe">
                             <Template ref="89e928ca-0da8-5339-b7c8-af5bdbd0f57a" />
+                        </Concept>
+                        <Concept name="Spatial Service Connectivity" override="false" status="sample" uuid="4295b48d-e20a-550a-9914-fea4706f5fe2">
+                            <Template ref="0e70e911-15e7-5a51-9a35-1d3afb7dfd4e" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -25768,7 +25777,7 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                         <Concept name="Object Typing" override="false" status="sample" uuid="7b3fb05a-3303-5014-83fb-53a357bb69d3">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;IfcTransportElement defines the occuurence of any transportation device, common information about transportation device types (or styles) is handled by IfcTransportElementType. The IfcTransportElementType (if present) may establish the common type name, usage (or predefined) type, common material layer set, common set of properties and common shape representations (using IfcRepresentationMap). The IfcTransportElementType is attached using the &lt;em&gt;IfcRelDefinedByType.RelatingType&lt;/em&gt; objectified relationship and is accessible by the inverse &lt;em&gt;&lt;font color="#0000FF"&gt;IsTypedBy&lt;/font&gt;&lt;/em&gt; attribute.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;IfcTransportElement defines the occuurence of any transportation device, common information about transportation device types (or styles) is handled by IfcTransportElementType. The IfcTransportElementType (if present) may establish the common type name, usage (or predefined) type, common material layer set, common set of properties and common shape representations (using IfcRepresentationMap). The IfcTransportElementType is attached using the &lt;em&gt;IfcRelDefinesByType.RelatingType&lt;/em&gt; objectified relationship and is accessible by the inverse &lt;em&gt;&lt;font color="#0000FF"&gt;IsTypedBy&lt;/font&gt;&lt;/em&gt; attribute.&lt;/p&gt;
 &lt;p&gt;If no IfcTransportElementType is attached (i.e. if only occurrence information is given) the PredefinedType should be provided. If set to .USERDEFINED. a user defined value can be provided by the ObjectType attribute.&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
@@ -25916,12 +25925,6 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="PsetName[Value]='Pset_Uncertainty'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Type Body Geometry" override="false" status="sample" uuid="78c8b5b7-4e0b-5aa4-8d47-fd5f920412ca">
-                            <Template ref="c1fb3879-74b9-53e9-a145-972bdf106259" />
-                        </Concept>
-                        <Concept name="Type Body AdvancedBrep Geometry" override="false" status="sample" uuid="b92daa18-1a30-5e68-9f28-724fb78f1762">
-                            <Template ref="9443c858-9dff-5c3b-b6ca-af9b7f447e17" />
-                        </Concept>
                         <Concept name="Product Type Shape" override="false" status="sample" uuid="8b5d367c-e625-54e9-9236-a96a3df59803">
                             <Definitions>
                                 <Definition>
@@ -25934,14 +25937,20 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="a7d02cf3-e8fb-5be2-a85b-88b6806d8ce1" />
                         </Concept>
-                        <Concept name="Product Type Geometric Representation" override="false" status="sample" uuid="30697b98-69c4-5b18-a0d7-f38dd34dfead">
-                            <Template ref="3c141b8d-19c0-57cd-ab61-9350f9e99651" />
+                        <Concept name="Type Body CSG Geometry" override="false" status="sample" uuid="71810da0-95da-51f9-95f2-4e59a336a907">
+                            <Template ref="e7a95046-4852-5035-b8a9-d1ff75dfcf57" />
+                        </Concept>
+                        <Concept name="Type Body Geometry" override="false" status="sample" uuid="78c8b5b7-4e0b-5aa4-8d47-fd5f920412ca">
+                            <Template ref="c1fb3879-74b9-53e9-a145-972bdf106259" />
                         </Concept>
                         <Concept name="Type Body Brep Geometry" override="false" status="sample" uuid="9bc322e1-8857-527a-9995-930e5b470c15">
                             <Template ref="71848688-9a06-5bb9-a3e6-001cda960bf2" />
                         </Concept>
-                        <Concept name="Type Body CSG Geometry" override="false" status="sample" uuid="71810da0-95da-51f9-95f2-4e59a336a907">
-                            <Template ref="e7a95046-4852-5035-b8a9-d1ff75dfcf57" />
+                        <Concept name="Product Type Geometric Representation" override="false" status="sample" uuid="30697b98-69c4-5b18-a0d7-f38dd34dfead">
+                            <Template ref="3c141b8d-19c0-57cd-ab61-9350f9e99651" />
+                        </Concept>
+                        <Concept name="Type Body AdvancedBrep Geometry" override="false" status="sample" uuid="b92daa18-1a30-5e68-9f28-724fb78f1762">
+                            <Template ref="9443c858-9dff-5c3b-b6ca-af9b7f447e17" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -26561,6 +26570,9 @@ then point into the positive y-axis of the reference coordinate system.&lt;/li&g
                             <TemplateRules operator="and">
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorWindowGlazingType'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_WindowCommon'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowLiningProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowPanelProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="8cb84c95-fbd9-5e9e-90eb-c94bc54df7f7">
@@ -26617,6 +26629,9 @@ then point into the positive y-axis of the reference coordinate system.&lt;/li&g
                             <TemplateRules operator="and">
                                 <TemplateRule Parameters="PsetName[Value]='Pset_DoorWindowGlazingType'" />
                                 <TemplateRule Parameters="PsetName[Value]='Pset_WindowCommon'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_PermeableCoveringProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowLiningProperties'" />
+                                <TemplateRule Parameters="PsetName[Value]='Pset_WindowPanelProperties'" />
                             </TemplateRules>
                         </Concept>
                         <Concept name="Quantity Sets" override="false" status="sample" uuid="9f6c055e-1928-5f8f-b3c7-d979d658b5e1">

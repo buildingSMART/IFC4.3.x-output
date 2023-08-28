@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='ASCII'?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/6a23ae8" targetNamespace="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/6a23ae8" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ifc="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/0152f9a" targetNamespace="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/3/DEV/0152f9a" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="uos" type="ifc:uos" abstract="true"/>
 	<xs:simpleType name="Seq-anyURI">
 		<xs:list itemType="xs:anyURI"/>
@@ -4541,9 +4541,9 @@
 	<xs:complexType name="IfcMapConversionScaled">
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcMapConversion">
-				<xs:attribute name="ScaleX" type="ifc:IfcReal" use="optional"/>
-				<xs:attribute name="ScaleY" type="ifc:IfcReal" use="optional"/>
-				<xs:attribute name="ScaleZ" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorX" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorY" type="ifc:IfcReal" use="optional"/>
+				<xs:attribute name="FactorZ" type="ifc:IfcReal" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -8470,7 +8470,7 @@
 		<xs:complexContent>
 			<xs:extension base="ifc:IfcCurve">
 				<xs:sequence>
-					<xs:element name="Position" minOccurs="0" nillable="true">
+					<xs:element name="Position">
 						<xs:complexType>
 							<xs:group ref="ifc:IfcAxis2Placement"/>
 						</xs:complexType>
@@ -11549,15 +11549,15 @@
 	</xs:simpleType>
 	<xs:simpleType name="IfcAnnotationTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="asbuiltarea"/>
-			<xs:enumeration value="asbuiltline"/>
-			<xs:enumeration value="asbuiltpoint"/>
-			<xs:enumeration value="assumedarea"/>
-			<xs:enumeration value="assumedline"/>
-			<xs:enumeration value="assumedpoint"/>
-			<xs:enumeration value="non_physical_signal"/>
-			<xs:enumeration value="superelevationevent"/>
-			<xs:enumeration value="widthevent"/>
+			<xs:enumeration value="contourline"/>
+			<xs:enumeration value="dimension"/>
+			<xs:enumeration value="isobar"/>
+			<xs:enumeration value="isolux"/>
+			<xs:enumeration value="isotherm"/>
+			<xs:enumeration value="leader"/>
+			<xs:enumeration value="survey"/>
+			<xs:enumeration value="symbol"/>
+			<xs:enumeration value="text"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -11694,7 +11694,6 @@
 			<xs:enumeration value="pylon"/>
 			<xs:enumeration value="substructure"/>
 			<xs:enumeration value="superstructure"/>
-			<xs:enumeration value="surfacestructure"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13455,14 +13454,15 @@
 	</xs:simpleType>
 	<xs:simpleType name="IfcRailwayPartTypeEnum">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="dilatationsuperstructure"/>
-			<xs:enumeration value="linesidestructure"/>
-			<xs:enumeration value="linesidestructurepart"/>
-			<xs:enumeration value="plaintracksuperstructure"/>
-			<xs:enumeration value="superstructure"/>
-			<xs:enumeration value="trackstructure"/>
-			<xs:enumeration value="trackstructurepart"/>
-			<xs:enumeration value="turnoutsuperstructure"/>
+			<xs:enumeration value="abovetrack"/>
+			<xs:enumeration value="dilationtrack"/>
+			<xs:enumeration value="lineside"/>
+			<xs:enumeration value="linesidepart"/>
+			<xs:enumeration value="plaintrack"/>
+			<xs:enumeration value="substructure"/>
+			<xs:enumeration value="track"/>
+			<xs:enumeration value="trackpart"/>
+			<xs:enumeration value="turnouttrack"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>
@@ -13515,6 +13515,8 @@
 			<xs:enumeration value="position"/>
 			<xs:enumeration value="referencemarker"/>
 			<xs:enumeration value="station"/>
+			<xs:enumeration value="superelevationevent"/>
+			<xs:enumeration value="widthevent"/>
 			<xs:enumeration value="userdefined"/>
 			<xs:enumeration value="notdefined"/>
 		</xs:restriction>

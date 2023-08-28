@@ -1,6 +1,20 @@
+## DefinitionForEntity
+
+* The resource 'Class1' has no definition
+* The resource 'Class2' has no definition
 ## DefinitionForEnumLiteral
 
+* The resource 'IfcAnnotationTypeEnum.CONTOURLINE' has no definition
+* The resource 'IfcAnnotationTypeEnum.DIMENSION' has no definition
+* The resource 'IfcAnnotationTypeEnum.ISOBAR' has no definition
+* The resource 'IfcAnnotationTypeEnum.ISOLUX' has no definition
+* The resource 'IfcAnnotationTypeEnum.ISOTHERM' has no definition
+* The resource 'IfcAnnotationTypeEnum.LEADER' has no definition
+* The resource 'IfcAnnotationTypeEnum.SURVEY' has no definition
+* The resource 'IfcAnnotationTypeEnum.SYMBOL' has no definition
+* The resource 'IfcAnnotationTypeEnum.TEXT' has no definition
 * The resource 'IfcArithmeticOperatorEnum.MODULO' has no definition
+* The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
@@ -14,8 +28,45 @@
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
+* The Property 'Pset_DoorLiningProperties.CasingDepth' has no definition
+* The Property 'Pset_DoorLiningProperties.CasingThickness' has no definition
+* The Property 'Pset_DoorLiningProperties.LiningDepth' has no definition
+* The Property 'Pset_DoorLiningProperties.LiningOffset' has no definition
+* The Property 'Pset_DoorLiningProperties.LiningToPanelOffsetX' has no definition
+* The Property 'Pset_DoorLiningProperties.LiningToPanelOffsetY' has no definition
+* The Property 'Pset_DoorLiningProperties.ThresholdDepth' has no definition
+* The Property 'Pset_DoorLiningProperties.ThresholdOffset' has no definition
+* The Property 'Pset_DoorLiningProperties.ThresholdThickness' has no definition
+* The Property 'Pset_DoorLiningProperties.TransomOffset' has no definition
+* The Property 'Pset_DoorLiningProperties.TransomThickness' has no definition
+* The Property 'Pset_DoorPanelProperties.PanelDepth' has no definition
+* The Property 'Pset_DoorPanelProperties.PanelOperation' has no definition
+* The Property 'Pset_DoorPanelProperties.PanelPosition' has no definition
+* The Property 'Pset_DoorPanelProperties.PanelWidth' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
+* The Property 'Pset_PermeableCoveringProperties.OperationType' has no definition
+* The Property 'Pset_PermeableCoveringProperties.PanelPosition' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
+* The Property 'Pset_Stationing.HasIncreasingStation' has no definition
+* The Property 'Pset_WindowLiningProperties.FirstMullionOffset' has no definition
+* The Property 'Pset_WindowLiningProperties.FirstTransomOffset' has no definition
+* The Property 'Pset_WindowLiningProperties.LiningDepth' has no definition
+* The Property 'Pset_WindowLiningProperties.LiningOffset' has no definition
+* The Property 'Pset_WindowLiningProperties.LiningToPanelOffsetX' has no definition
+* The Property 'Pset_WindowLiningProperties.LiningToPanelOffsetY' has no definition
+* The Property 'Pset_WindowLiningProperties.MullionThickness' has no definition
+* The Property 'Pset_WindowLiningProperties.SecondMullionOffset' has no definition
+* The Property 'Pset_WindowLiningProperties.SecondTransomOffset' has no definition
+* The Property 'Pset_WindowLiningProperties.TransomThickness' has no definition
+* The Property 'Pset_WindowPanelProperties.OperationType' has no definition
+* The Property 'Pset_WindowPanelProperties.PanelPosition' has no definition
+## DefinitionForPropertySet
+
+* The resource 'Pset_DoorLiningProperties' has no definition
+* The resource 'Pset_DoorPanelProperties' has no definition
+* The resource 'Pset_PermeableCoveringProperties' has no definition
+* The resource 'Pset_WindowLiningProperties' has no definition
+* The resource 'Pset_WindowPanelProperties' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
@@ -68,6 +119,46 @@
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceHVACDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceLightingDesign' should be associated to an element with corresponding IfcObjectType, not IfcZone
 * The Property|Quantity Set [PSET_TYPEDRIVENOVERRIDE] 'Pset_SpaceOccupancyRequirements' should be associated to an element with corresponding IfcObjectType, not IfcZone
+## OccurenceWithoutTypePredefinedTypeMandatory
+
+* Entity 'IfcActionRequest' has no mandatory PredefinedType attribute
+* Entity 'IfcAlignment' has no mandatory PredefinedType attribute
+* Entity 'IfcAnnotation' has no mandatory PredefinedType attribute
+* Entity 'IfcBridge' has no mandatory PredefinedType attribute
+* Entity 'IfcBridgePart' has no mandatory PredefinedType attribute
+* Entity 'IfcBuildingSystem' has no mandatory PredefinedType attribute
+* Entity 'IfcBuiltSystem' has no mandatory PredefinedType attribute
+* Entity 'IfcCostItem' has no mandatory PredefinedType attribute
+* Entity 'IfcCostSchedule' has no mandatory PredefinedType attribute
+* Entity 'IfcDistributionPort' has no mandatory PredefinedType attribute
+* Entity 'IfcDistributionSystem' has no mandatory PredefinedType attribute
+* Entity 'IfcEarthworksCut' has no mandatory PredefinedType attribute
+* Entity 'IfcEarthworksFill' has no mandatory PredefinedType attribute
+* Entity 'IfcExternalSpatialElement' has no mandatory PredefinedType attribute
+* Entity 'IfcFacilityPartCommon' has no mandatory PredefinedType attribute
+* Entity 'IfcGeotechnicalStratum' has no mandatory PredefinedType attribute
+* Entity 'IfcGrid' has no mandatory PredefinedType attribute
+* Entity 'IfcInventory' has no mandatory PredefinedType attribute
+* Entity 'IfcMarineFacility' has no mandatory PredefinedType attribute
+* Entity 'IfcMarinePart' has no mandatory PredefinedType attribute
+* Entity 'IfcOccupant' has no mandatory PredefinedType attribute
+* Entity 'IfcOpeningElement' has no mandatory PredefinedType attribute
+* Entity 'IfcPerformanceHistory' has no mandatory PredefinedType attribute
+* Entity 'IfcPermit' has no mandatory PredefinedType attribute
+* Entity 'IfcProjectOrder' has no mandatory PredefinedType attribute
+* Entity 'IfcProjectionElement' has no mandatory PredefinedType attribute
+* Entity 'IfcRailway' has no mandatory PredefinedType attribute
+* Entity 'IfcRailwayPart' has no mandatory PredefinedType attribute
+* Entity 'IfcReferent' has no mandatory PredefinedType attribute
+* Entity 'IfcReinforcedSoil' has no mandatory PredefinedType attribute
+* Entity 'IfcRoad' has no mandatory PredefinedType attribute
+* Entity 'IfcRoadPart' has no mandatory PredefinedType attribute
+* Entity 'IfcSurfaceFeature' has no mandatory PredefinedType attribute
+* Entity 'IfcVirtualElement' has no mandatory PredefinedType attribute
+* Entity 'IfcVoidingFeature' has no mandatory PredefinedType attribute
+* Entity 'IfcWorkCalendar' has no mandatory PredefinedType attribute
+* Entity 'IfcWorkPlan' has no mandatory PredefinedType attribute
+* Entity 'IfcWorkSchedule' has no mandatory PredefinedType attribute
 ## ParametrizationForConceptUsageDocumentation
 
 * The concept usage 'Aggregation' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
@@ -165,6 +256,8 @@
 * The concept usage 'Process Assignment' for entity 'IfcProcedure' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Process Assignment' for entity 'IfcTask' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Geometric Representation' for entity 'IfcProduct' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBridge' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity 'IfcBridgePart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuilding' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcBuildingStorey' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcCurtainWall' in MVD 'GeneralUsage' is not modeled in UML
@@ -174,7 +267,6 @@
 * The concept usage 'Product Local Placement' for entity 'IfcFacility' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcFacilityPart' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcOpeningElement' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'IfcPositioningElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcProjectionElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcRamp' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Product Local Placement' for entity 'IfcRoof' in MVD 'GeneralUsage' is not modeled in UML
@@ -596,3 +688,7 @@
 * The Property|Quantity Set 'Qto_WallBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WasteTerminalBaseQuantities' should have at least one applicability
 * The Property|Quantity Set 'Qto_WindowBaseQuantities' should have at least one applicability
+## TypeObjectPredefinedTypeMandatory
+
+* Entity 'IfcFurnitureType' has no mandatory PredefinedType attribute
+* Entity 'IfcSystemFurnitureElementType' has no mandatory PredefinedType attribute
