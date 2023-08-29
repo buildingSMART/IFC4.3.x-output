@@ -18701,26 +18701,26 @@ IfcBuildingStorey needs to have a different and higher
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcContext" name="IfcContext" status="sample" uuid="f0d2a479-77d8-5059-b851-389d08c7bd23">
                     <Concepts>
-                        <Concept name="Project Library Information" override="false" status="sample" uuid="305412df-d4f3-5fd7-a96b-54ba34b702a5">
-                            <Template ref="607c6f37-1905-54f3-a0c7-f44a56ac413c" />
+                        <Concept name="Project Representation Context 3D" override="false" status="sample" uuid="9e782815-7b58-5c24-859c-519a0c5a0752">
+                            <Template ref="01a7d105-3408-51f7-9b72-5cd7e2996999" />
                         </Concept>
                         <Concept name="Project Classification Information" override="false" status="sample" uuid="bdd6eaa2-a2ca-531b-bc43-75f78aeefb92">
                             <Template ref="d869880a-2b08-575a-acfa-ec93979c04fb" />
                         </Concept>
-                        <Concept name="Project Representation Context 3D" override="false" status="sample" uuid="9e782815-7b58-5c24-859c-519a0c5a0752">
-                            <Template ref="01a7d105-3408-51f7-9b72-5cd7e2996999" />
+                        <Concept name="Project Library Information" override="false" status="sample" uuid="305412df-d4f3-5fd7-a96b-54ba34b702a5">
+                            <Template ref="607c6f37-1905-54f3-a0c7-f44a56ac413c" />
                         </Concept>
                         <Concept name="Project Type Definitions" override="false" status="sample" uuid="49c6e7ef-628b-54a4-a2a9-7361b00b2aa0">
                             <Template ref="7eb9f0c1-3fc3-5c4c-9e26-bd19b545237b" />
                         </Concept>
-                        <Concept name="Project Template Definitions" override="false" status="sample" uuid="6b28b32b-c3ab-58e7-b5a9-e05d5997faef">
-                            <Template ref="46fa3b45-f03b-5d31-b7c5-4a32028641a0" />
+                        <Concept name="Project Context" override="false" status="sample" uuid="ddea0eb2-b450-5647-90f2-e3b7ccabf0d3">
+                            <Template ref="0d8c1df0-4625-5199-ab0f-bd76c2368ce5" />
                         </Concept>
                         <Concept name="Project Document Information" override="false" status="sample" uuid="429c4831-caa3-5dbd-92ec-41bccb913364">
                             <Template ref="8ecebac8-960f-52e6-bfdd-a05870570a52" />
                         </Concept>
-                        <Concept name="Project Context" override="false" status="sample" uuid="ddea0eb2-b450-5647-90f2-e3b7ccabf0d3">
-                            <Template ref="0d8c1df0-4625-5199-ab0f-bd76c2368ce5" />
+                        <Concept name="Project Template Definitions" override="false" status="sample" uuid="6b28b32b-c3ab-58e7-b5a9-e05d5997faef">
+                            <Template ref="46fa3b45-f03b-5d31-b7c5-4a32028641a0" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -20510,54 +20510,61 @@ Figure 303 — Distribution system assignment&lt;/p&gt;</Body>
                         <Concept name="Surface Tessellation Geometry" override="false" status="sample" uuid="8d458e6e-b99f-580a-ba6b-3eb0ea8ab837">
                             <Template ref="e21c3a1e-3520-5de5-8591-e4558e19585d" />
                         </Concept>
-                        <Concept name="Surface 3D Geometry" override="false" status="sample" uuid="45bd34f4-8b8e-54f1-a5e5-38981ae536a1">
-                            <Template ref="97479a61-cb00-58d4-bdef-8c57fd2f492d" />
-                        </Concept>
-                        <Concept name="Element Nesting" override="false" status="sample" uuid="eeec865f-63d9-5df9-ab73-c47da52b17e5">
+                        <Concept name="Body SurfaceModel Geometry" override="false" status="sample" uuid="6f8cbd1a-92fd-55b9-9128-7da0ad3e1b14">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;A host element can nest connected components. This should be used when there is a specific position or form factor to attach specific elements.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a single or multiple surface models, based on either shell or face based surface models. It may also include tessellated models.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="surface model" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcbuildingelement-surfacemodel-layout1.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;Figure 149 — Element surface model representation&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;EXAMPLE A sink has a pre-drilled hole to attach a faucet.&lt;/p&gt;
+&lt;p&gt;EXAMPLE  As shown in Figure 1, the surface model representation is given by an IfcShapeRepresentation, which includes a single item which is either an IfcShellBasedSurfaceModel, or an IfcFaceBasedSurfaceModel. In some cases it may also be useful to expose a simple representation as a bounding box representation of the same complex shape.&lt;/p&gt;
 &lt;/blockquote&gt;</Body>
                                 </Definition>
                             </Definitions>
-                            <Template ref="2cef26b3-c687-5d78-bc38-9cbc293ffeb0" />
-                        </Concept>
-                        <Concept name="Lighting Geometry" override="false" status="sample" uuid="f4041d7a-7e2b-5c6a-8c66-e69c18b3683e">
-                            <Template ref="f54abf20-66f0-5c86-a92d-126c185e6aae" />
-                        </Concept>
-                        <Concept name="Body Clipping Geometry" override="false" status="sample" uuid="b20ba058-bf6f-51e8-9223-7969138b3e9f">
-                            <Template ref="6f2aec49-4c3a-5058-97d1-fc7b47e60c9f" />
-                        </Concept>
-                        <Concept name="Element Occurrence Attributes" override="false" status="sample" uuid="9bdf3216-6015-56ef-9f4e-021ac32d5265">
-                            <Template ref="01524ce3-33e2-5f37-be10-fd0b355e967f" />
+                            <Template ref="96d61789-69a6-5dbf-ada5-d8921ecd221d" />
                         </Concept>
                         <Concept name="Element Projecting" override="false" status="sample" uuid="05aa6d4d-6f59-565b-b565-b2e8c4c4dc94">
                             <Template ref="dcbfcbcd-7c12-5ab2-a847-eafd96b17ab7" />
                         </Concept>
-                        <Concept name="Element Interference" override="false" status="sample" uuid="80bbcc4c-8e0d-5732-9a0f-87fde608f825">
-                            <Template ref="6fe41c49-e4f4-56a8-9d7a-732a9524867f" />
+                        <Concept name="Profile Geometry" override="false" status="sample" uuid="542d50b0-5155-5293-9fd3-6aa8112a391e">
+                            <Template ref="063f019d-4390-56f3-ba3d-f8117b606fb1" />
+                        </Concept>
+                        <Concept name="Body Clipping Geometry" override="false" status="sample" uuid="b20ba058-bf6f-51e8-9223-7969138b3e9f">
+                            <Template ref="6f2aec49-4c3a-5058-97d1-fc7b47e60c9f" />
                         </Concept>
                         <Concept name="Profile 3D Geometry" override="false" status="sample" uuid="8208d9b4-7e2c-5f67-85f1-5cfcfe1bfa33">
                             <Template ref="bd174d28-71dd-524b-b86e-320a8abbdefd" />
                         </Concept>
-                        <Concept name="Body CSG Geometry" override="false" status="sample" uuid="a1f7cb71-39c1-5290-ab89-c388119e721b">
+                        <Concept name="Body AdvancedSweptSolid Geometry" override="false" status="sample" uuid="ba02dcf7-5bb2-54bd-ab78-03421f3e7298">
+                            <Template ref="042bbe89-d822-5f31-8609-80d4d5f27914" />
+                        </Concept>
+                        <Concept name="Lighting Geometry" override="false" status="sample" uuid="f4041d7a-7e2b-5c6a-8c66-e69c18b3683e">
+                            <Template ref="f54abf20-66f0-5c86-a92d-126c185e6aae" />
+                        </Concept>
+                        <Concept name="Body SweptSolid Geometry" override="false" status="sample" uuid="00b6a58a-6137-5e03-ab9a-cc7b623496f0">
+                            <Template ref="468d05f5-6757-5182-88b3-77a1d4ba88f8" />
+                        </Concept>
+                        <Concept name="Body AdvancedBrep Geometry" override="false" status="sample" uuid="38442a3c-1032-5606-8294-c66c5b5c940d">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented a CSG primitive or CSG tree. The CSG representation allows for the representation of complex element shape.&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;An IfcElement (so far no further constraints are defined at the level of its subtypes or by view definitions) may be represented as a single or multiple boundary representation models, which include advanced surfaces, usually refered to as NURBS surfaces. The 'AdvancedBrep' representation allows for the representation of complex free-form element shape.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'CSG' geometry.&lt;/p&gt;
+&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'AdvancedBrep' geometry.&lt;/p&gt;
 &lt;/blockquote&gt;</Body>
                                 </Definition>
                             </Definitions>
-                            <Template ref="b0e02a72-16d3-568a-9707-33687d7f5f7f" />
+                            <Template ref="e68298a2-262e-577f-be02-7a77013b3ec4" />
                         </Concept>
-                        <Concept name="Profile Geometry" override="false" status="sample" uuid="542d50b0-5155-5293-9fd3-6aa8112a391e">
-                            <Template ref="063f019d-4390-56f3-ba3d-f8117b606fb1" />
+                        <Concept name="Surface 3D Geometry" override="false" status="sample" uuid="45bd34f4-8b8e-54f1-a5e5-38981ae536a1">
+                            <Template ref="97479a61-cb00-58d4-bdef-8c57fd2f492d" />
                         </Concept>
-                        <Concept name="Element Voiding" override="false" status="sample" uuid="e6c6766e-706c-5d1c-8032-c912f7e673cc">
-                            <Template ref="e261e06d-f08d-5fcf-a559-25a927f0bc1f" />
+                        <Concept name="Body SurfaceOrSolidModel Geometry" override="false" status="sample" uuid="f579084d-26a1-5c59-ae08-4b41bf0ba84d">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a mixed representation, including surface and solid models.&lt;/p&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="98402714-dc32-5cb8-802d-517f4413916b" />
                         </Concept>
                         <Concept name="Body Brep Geometry" override="false" status="sample" uuid="196f48c5-d6f5-5d1c-a9f8-71ff0081258c">
                             <Definitions>
@@ -20576,49 +20583,42 @@ shape.&lt;/p&gt;
                             </Definitions>
                             <Template ref="1e29bdb8-a674-5a35-a4bb-d4b66b9e0227" />
                         </Concept>
-                        <Concept name="Body SweptSolid Geometry" override="false" status="sample" uuid="00b6a58a-6137-5e03-ab9a-cc7b623496f0">
-                            <Template ref="468d05f5-6757-5182-88b3-77a1d4ba88f8" />
+                        <Concept name="Surface Geometry" override="false" status="sample" uuid="afbc7f1f-0beb-5dc7-936c-d390053c4c67">
+                            <Template ref="5ea8e98b-f46e-542e-a0a4-07aa78936461" />
                         </Concept>
-                        <Concept name="Body AdvancedBrep Geometry" override="false" status="sample" uuid="38442a3c-1032-5606-8294-c66c5b5c940d">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;An IfcElement (so far no further constraints are defined at the level of its subtypes or by view definitions) may be represented as a single or multiple boundary representation models, which include advanced surfaces, usually refered to as NURBS surfaces. The 'AdvancedBrep' representation allows for the representation of complex free-form element shape.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'AdvancedBrep' geometry.&lt;/p&gt;
-&lt;/blockquote&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="e68298a2-262e-577f-be02-7a77013b3ec4" />
+                        <Concept name="Element Occurrence Attributes" override="false" status="sample" uuid="9bdf3216-6015-56ef-9f4e-021ac32d5265">
+                            <Template ref="01524ce3-33e2-5f37-be10-fd0b355e967f" />
+                        </Concept>
+                        <Concept name="Element Voiding" override="false" status="sample" uuid="e6c6766e-706c-5d1c-8032-c912f7e673cc">
+                            <Template ref="e261e06d-f08d-5fcf-a559-25a927f0bc1f" />
                         </Concept>
                         <Concept name="Element Covering" override="false" status="sample" uuid="6dd6a7f1-5263-530d-ab39-1a6957c3c5c6">
                             <Template ref="fa6797d6-762f-5c0a-a85d-07cea7e50e7e" />
                         </Concept>
-                        <Concept name="Body AdvancedSweptSolid Geometry" override="false" status="sample" uuid="ba02dcf7-5bb2-54bd-ab78-03421f3e7298">
-                            <Template ref="042bbe89-d822-5f31-8609-80d4d5f27914" />
-                        </Concept>
-                        <Concept name="Surface Geometry" override="false" status="sample" uuid="afbc7f1f-0beb-5dc7-936c-d390053c4c67">
-                            <Template ref="5ea8e98b-f46e-542e-a0a4-07aa78936461" />
-                        </Concept>
-                        <Concept name="Body SurfaceOrSolidModel Geometry" override="false" status="sample" uuid="f579084d-26a1-5c59-ae08-4b41bf0ba84d">
+                        <Concept name="Element Nesting" override="false" status="sample" uuid="eeec865f-63d9-5df9-ab73-c47da52b17e5">
                             <Definitions>
                                 <Definition>
-                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a mixed representation, including surface and solid models.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="98402714-dc32-5cb8-802d-517f4413916b" />
-                        </Concept>
-                        <Concept name="Body SurfaceModel Geometry" override="false" status="sample" uuid="6f8cbd1a-92fd-55b9-9128-7da0ad3e1b14">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented as a single or multiple surface models, based on either shell or face based surface models. It may also include tessellated models.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="surface model" src="http://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/figures/ifcbuildingelement-surfacemodel-layout1.gif"/&gt;&lt;/p&gt;
-&lt;p&gt;Figure 149 — Element surface model representation&lt;/p&gt;
+                                    <Body lang="en">&lt;p&gt;A host element can nest connected components. This should be used when there is a specific position or form factor to attach specific elements.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;EXAMPLE  As shown in Figure 1, the surface model representation is given by an IfcShapeRepresentation, which includes a single item which is either an IfcShellBasedSurfaceModel, or an IfcFaceBasedSurfaceModel. In some cases it may also be useful to expose a simple representation as a bounding box representation of the same complex shape.&lt;/p&gt;
+&lt;p&gt;EXAMPLE A sink has a pre-drilled hole to attach a faucet.&lt;/p&gt;
 &lt;/blockquote&gt;</Body>
                                 </Definition>
                             </Definitions>
-                            <Template ref="96d61789-69a6-5dbf-ada5-d8921ecd221d" />
+                            <Template ref="2cef26b3-c687-5d78-bc38-9cbc293ffeb0" />
+                        </Concept>
+                        <Concept name="Body CSG Geometry" override="false" status="sample" uuid="a1f7cb71-39c1-5290-ab89-c388119e721b">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Any IfcElement (so far no further constraints are defined at the level of its subtypes) may be represented a CSG primitive or CSG tree. The CSG representation allows for the representation of complex element shape.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE  View definitions or implementer agreements may restrict or disallow the use of 'CSG' geometry.&lt;/p&gt;
+&lt;/blockquote&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="b0e02a72-16d3-568a-9707-33687d7f5f7f" />
+                        </Concept>
+                        <Concept name="Element Interference" override="false" status="sample" uuid="80bbcc4c-8e0d-5732-9a0f-87fde608f825">
+                            <Template ref="6fe41c49-e4f4-56a8-9d7a-732a9524867f" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -22724,14 +22724,6 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                                 <TemplateRule Parameters="RelatingType[Type]='IfcTypeObject'" />
                             </TemplateRules>
                         </Concept>
-                        <Concept name="Property Sets with Override" override="false" status="sample" uuid="63354d87-182c-5141-98ad-d16256db599c">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="43f30624-7248-5491-afad-63b7e79dd12e" />
-                        </Concept>
                         <Concept name="Object User Identity" override="false" status="sample" uuid="6b7e68da-ed9a-5d06-87ad-cba4cfbdb1d0">
                             <Definitions>
                                 <Definition>
@@ -22746,27 +22738,32 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                         <Concept name="Object Predefined Type" override="false" status="sample" uuid="47d9db64-22dd-5c9f-b9b1-ae02f1f13a89">
                             <Template ref="6c5f9565-fbb2-5c91-95a9-14e7aa1d245b" />
                         </Concept>
+                        <Concept name="Property Sets with Override" override="false" status="sample" uuid="63354d87-182c-5141-98ad-d16256db599c">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;Any object occurrence can hold property sets, either directly at the object occurrence as element specific property sets, or at the object type, as type property sets. In this case, the properties that are provided to the object occurrence are the combinations of element specific and type properties. In case that the same property (within the same property set) is defined both in occurrence and type properties, the property value of the occurrence property overrides the property value of the type property.&lt;/p&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="43f30624-7248-5491-afad-63b7e79dd12e" />
+                        </Concept>
                     </Concepts>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcObjectDefinition" name="IfcObjectDefinition" status="sample" uuid="a0d7321f-3b63-5185-a4ca-6f42ac6f170c">
                     <Concepts>
-                        <Concept name="Library Association" override="false" status="sample" uuid="c71200ef-a95c-5d84-99fa-ae4048242fa6">
-                            <Template ref="dedf8441-cb44-5b42-b3ef-834e2d5a49c6" />
-                        </Concept>
-                        <Concept name="Material Association" override="false" status="sample" uuid="44121f37-beed-58e0-a8aa-c4beae49b790">
-                            <Template ref="e1f88d05-a414-55b8-878a-e97978b8c33a" />
-                        </Concept>
                         <Concept name="Material Single" override="false" status="sample" uuid="a1d2aacc-e4b9-5c56-9be2-6fa72de8384f">
                             <Template ref="bc34e293-06b1-55d2-8db2-8da5286d75b2" />
                         </Concept>
                         <Concept name="Constraint Association" override="false" status="sample" uuid="283fdd98-75b1-549d-8a87-fbcf90f6d967">
                             <Template ref="45e6f6a8-4d96-5b7f-a1f1-aacc145d89db" />
                         </Concept>
+                        <Concept name="Nesting" override="false" status="sample" uuid="31593997-0367-5213-8085-742dc53250f0">
+                            <Template ref="c1aba1f2-8873-571e-816d-34e75a38312f" />
+                        </Concept>
+                        <Concept name="Approval Association" override="false" status="sample" uuid="85e18097-7b7c-5b43-be68-eb51b2aa390c">
+                            <Template ref="b2f35e46-fb33-5051-b22a-9004be43b318" />
+                        </Concept>
                         <Concept name="Aggregation" override="false" status="sample" uuid="1d0eb73f-f65a-5240-91cc-e28c32679ad3">
                             <Template ref="0ba00fb8-d0eb-5c4e-8ab6-22104ea1f012" />
-                        </Concept>
-                        <Concept name="Document Association" override="false" status="sample" uuid="c2058539-f349-5b51-9dae-d6f92d717713">
-                            <Template ref="9e7e5792-ef1f-59cd-9f64-b04c1d42288a" />
                         </Concept>
                         <Concept name="Classification Association" override="false" status="sample" uuid="4765aee4-9f5d-537b-b566-5e9d78c73d24">
                             <Definitions>
@@ -22776,11 +22773,14 @@ Figure 234 — Member composite profiles&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="e367ff81-1e9b-519b-822b-54b62f4f94f4" />
                         </Concept>
-                        <Concept name="Approval Association" override="false" status="sample" uuid="85e18097-7b7c-5b43-be68-eb51b2aa390c">
-                            <Template ref="b2f35e46-fb33-5051-b22a-9004be43b318" />
+                        <Concept name="Library Association" override="false" status="sample" uuid="c71200ef-a95c-5d84-99fa-ae4048242fa6">
+                            <Template ref="dedf8441-cb44-5b42-b3ef-834e2d5a49c6" />
                         </Concept>
-                        <Concept name="Nesting" override="false" status="sample" uuid="31593997-0367-5213-8085-742dc53250f0">
-                            <Template ref="c1aba1f2-8873-571e-816d-34e75a38312f" />
+                        <Concept name="Document Association" override="false" status="sample" uuid="c2058539-f349-5b51-9dae-d6f92d717713">
+                            <Template ref="9e7e5792-ef1f-59cd-9f64-b04c1d42288a" />
+                        </Concept>
+                        <Concept name="Material Association" override="false" status="sample" uuid="44121f37-beed-58e0-a8aa-c4beae49b790">
+                            <Template ref="e1f88d05-a414-55b8-878a-e97978b8c33a" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -23350,14 +23350,11 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="1d1e1f42-b75d-5b73-bb76-155d0d87d974" />
                         </Concept>
-                        <Concept name="Reference Geometry" override="false" status="sample" uuid="638693d2-a6e9-5aec-8564-d73f8758cfb0">
-                            <Template ref="1907cf17-4454-5de8-bc90-c158ef193bbe" />
-                        </Concept>
                         <Concept name="Reference Tessellation Geometry" override="false" status="sample" uuid="0b253088-5c07-5dbd-a707-279c8433b60f">
                             <Template ref="f61cd51b-8995-592e-93d7-4f42ca3949a5" />
                         </Concept>
-                        <Concept name="Box Geometry" override="false" status="sample" uuid="0cc8f245-eec6-5b5d-ad95-2b79d5cd26a3">
-                            <Template ref="faf547af-a636-56fb-aec9-29a9e7b813b6" />
+                        <Concept name="Product Local Placement" override="false" status="sample" uuid="666e99c2-c50c-51e7-9ba2-dbd355510fa7">
+                            <Template ref="bdfe407b-bdc6-5cef-baab-ff4ac3b089cb" />
                         </Concept>
                         <Concept name="Body Geometry" override="false" status="sample" uuid="e1e7e55f-0898-5860-a289-6133f22504c2">
                             <Definitions>
@@ -23371,23 +23368,26 @@ Figure 312 — Permit assignment&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="9319a8d6-734d-50c0-82ca-879bd0da212d" />
                         </Concept>
+                        <Concept name="Mapped Geometry" override="false" status="sample" uuid="42565100-db73-5964-b6a2-d38b81e4e466">
+                            <Template ref="91206509-3e27-5853-8bb2-15ce800163b4" />
+                        </Concept>
                         <Concept name="Reference SweptSolid Geometry" override="false" status="sample" uuid="fdf5f1c8-bc03-5f7a-a334-d4ca127b0ab0">
                             <Template ref="f25b2a1e-237d-5adf-87de-d05bc5bb52ae" />
-                        </Concept>
-                        <Concept name="Product Topology Representation" override="false" status="sample" uuid="664a3a5f-4db1-51aa-9fe4-879a71446a22">
-                            <Template ref="74939127-0d27-5aa1-8be1-ff6bc4f5acb0" />
                         </Concept>
                         <Concept name="CoG Geometry" override="false" status="sample" uuid="167a270f-e076-5a14-af24-64bcbca6debe">
                             <Template ref="603bfa57-1b51-54c2-86ab-dd3a2e870d5b" />
                         </Concept>
-                        <Concept name="Mapped Geometry" override="false" status="sample" uuid="42565100-db73-5964-b6a2-d38b81e4e466">
-                            <Template ref="91206509-3e27-5853-8bb2-15ce800163b4" />
+                        <Concept name="Reference Geometry" override="false" status="sample" uuid="638693d2-a6e9-5aec-8564-d73f8758cfb0">
+                            <Template ref="1907cf17-4454-5de8-bc90-c158ef193bbe" />
+                        </Concept>
+                        <Concept name="Box Geometry" override="false" status="sample" uuid="0cc8f245-eec6-5b5d-ad95-2b79d5cd26a3">
+                            <Template ref="faf547af-a636-56fb-aec9-29a9e7b813b6" />
                         </Concept>
                         <Concept name="Reference SweptSolid PolyCurve Geometry" override="false" status="sample" uuid="bcbdc308-190d-5ea1-9717-26343cf3d3ae">
                             <Template ref="f3f4dec8-4e22-5776-bfd9-7c9364a04b7d" />
                         </Concept>
-                        <Concept name="Product Local Placement" override="false" status="sample" uuid="666e99c2-c50c-51e7-9ba2-dbd355510fa7">
-                            <Template ref="bdfe407b-bdc6-5cef-baab-ff4ac3b089cb" />
+                        <Concept name="Product Topology Representation" override="false" status="sample" uuid="664a3a5f-4db1-51aa-9fe4-879a71446a22">
+                            <Template ref="74939127-0d27-5aa1-8be1-ff6bc4f5acb0" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -24242,14 +24242,6 @@ Figure 260 — Roof placement&lt;/p&gt;</Body>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcRoot" name="IfcRoot" status="sample" uuid="6bc2aacf-80c5-5e38-83f0-b05c76dc2dd3">
                     <Concepts>
-                        <Concept name="Software Identity" override="false" status="sample" uuid="42d96e95-e654-549a-8ef9-62cd49311a31">
-                            <Definitions>
-                                <Definition>
-                                    <Body lang="en">&lt;p&gt;IfcRoot assigns the globally unique ID. In addition it may provide for a name and a description about the concept.&lt;/p&gt;</Body>
-                                </Definition>
-                            </Definitions>
-                            <Template ref="6c4314f9-70cd-5ba5-84dc-69d5079034d8" />
-                        </Concept>
                         <Concept name="Revision Control" override="false" status="sample" uuid="6bd1786e-da06-5160-942c-f054f5cdd66c">
                             <Definitions>
                                 <Definition>
@@ -24257,6 +24249,14 @@ Figure 260 — Roof placement&lt;/p&gt;</Body>
                                 </Definition>
                             </Definitions>
                             <Template ref="7c2feb54-4279-5aa2-aa8f-eefe2d9d870c" />
+                        </Concept>
+                        <Concept name="Software Identity" override="false" status="sample" uuid="42d96e95-e654-549a-8ef9-62cd49311a31">
+                            <Definitions>
+                                <Definition>
+                                    <Body lang="en">&lt;p&gt;IfcRoot assigns the globally unique ID. In addition it may provide for a name and a description about the concept.&lt;/p&gt;</Body>
+                                </Definition>
+                            </Definitions>
+                            <Template ref="6c4314f9-70cd-5ba5-84dc-69d5079034d8" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -25066,11 +25066,11 @@ Figure 182 — Site breaklines&lt;/p&gt;
                         <Concept name="Spatial Interference With Zones" override="false" status="sample" uuid="9bada935-8b8e-5091-b973-4c9e8eef4745">
                             <Template ref="54961c05-263f-5779-af7b-753ba6e512de" />
                         </Concept>
-                        <Concept name="Spatial Service Connectivity" override="false" status="sample" uuid="4295b48d-e20a-550a-9914-fea4706f5fe2">
-                            <Template ref="0e70e911-15e7-5a51-9a35-1d3afb7dfd4e" />
-                        </Concept>
                         <Concept name="Spatial Element Attributes" override="false" status="sample" uuid="e86c28ed-68ff-51a0-8189-059758742cbe">
                             <Template ref="89e928ca-0da8-5339-b7c8-af5bdbd0f57a" />
+                        </Concept>
+                        <Concept name="Spatial Service Connectivity" override="false" status="sample" uuid="4295b48d-e20a-550a-9914-fea4706f5fe2">
+                            <Template ref="0e70e911-15e7-5a51-9a35-1d3afb7dfd4e" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -26057,11 +26057,11 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                 </ConceptRoot>
                 <ConceptRoot applicableRootEntity="IfcTypeObject" name="IfcTypeObject" status="sample" uuid="3781db42-f7fd-5cc5-bb38-7fa6919ebdeb">
                     <Concepts>
-                        <Concept name="Property Sets for Types" override="false" status="sample" uuid="610348c5-22ae-5103-9f5f-06377402946d">
-                            <Template ref="d8ea9289-a045-5b83-b0e0-fc3353348092" />
-                        </Concept>
                         <Concept name="Object Type Predefined Type" override="false" status="sample" uuid="1d55602b-e396-50c2-8fa5-a96141bc078b">
                             <Template ref="eefc230b-c93d-57bd-b116-25b1a79047ab" />
+                        </Concept>
+                        <Concept name="Property Sets for Types" override="false" status="sample" uuid="610348c5-22ae-5103-9f5f-06377402946d">
+                            <Template ref="d8ea9289-a045-5b83-b0e0-fc3353348092" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
@@ -26091,8 +26091,11 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                         <Concept name="Type Body AdvancedBrep Geometry" override="false" status="sample" uuid="b92daa18-1a30-5e68-9f28-724fb78f1762">
                             <Template ref="9443c858-9dff-5c3b-b6ca-af9b7f447e17" />
                         </Concept>
-                        <Concept name="Type Body Brep Geometry" override="false" status="sample" uuid="9bc322e1-8857-527a-9995-930e5b470c15">
-                            <Template ref="71848688-9a06-5bb9-a3e6-001cda960bf2" />
+                        <Concept name="Type Body Geometry" override="false" status="sample" uuid="78c8b5b7-4e0b-5aa4-8d47-fd5f920412ca">
+                            <Template ref="c1fb3879-74b9-53e9-a145-972bdf106259" />
+                        </Concept>
+                        <Concept name="Type Body CSG Geometry" override="false" status="sample" uuid="71810da0-95da-51f9-95f2-4e59a336a907">
+                            <Template ref="e7a95046-4852-5035-b8a9-d1ff75dfcf57" />
                         </Concept>
                         <Concept name="Product Type Shape" override="false" status="sample" uuid="8b5d367c-e625-54e9-9236-a96a3df59803">
                             <Definitions>
@@ -26106,14 +26109,11 @@ Figure 273 — Stair flight axis&lt;/p&gt;</Body>
                             </Definitions>
                             <Template ref="a7d02cf3-e8fb-5be2-a85b-88b6806d8ce1" />
                         </Concept>
-                        <Concept name="Type Body CSG Geometry" override="false" status="sample" uuid="71810da0-95da-51f9-95f2-4e59a336a907">
-                            <Template ref="e7a95046-4852-5035-b8a9-d1ff75dfcf57" />
-                        </Concept>
                         <Concept name="Product Type Geometric Representation" override="false" status="sample" uuid="30697b98-69c4-5b18-a0d7-f38dd34dfead">
                             <Template ref="3c141b8d-19c0-57cd-ab61-9350f9e99651" />
                         </Concept>
-                        <Concept name="Type Body Geometry" override="false" status="sample" uuid="78c8b5b7-4e0b-5aa4-8d47-fd5f920412ca">
-                            <Template ref="c1fb3879-74b9-53e9-a145-972bdf106259" />
+                        <Concept name="Type Body Brep Geometry" override="false" status="sample" uuid="9bc322e1-8857-527a-9995-930e5b470c15">
+                            <Template ref="71848688-9a06-5bb9-a3e6-001cda960bf2" />
                         </Concept>
                     </Concepts>
                 </ConceptRoot>
