@@ -13,7 +13,16 @@
 * The resource 'IfcAnnotationTypeEnum.SURVEY' has no definition
 * The resource 'IfcAnnotationTypeEnum.SYMBOL' has no definition
 * The resource 'IfcAnnotationTypeEnum.TEXT' has no definition
+* The resource 'IfcArithmeticOperatorEnum.MODULO' has no definition
+* The resource 'IfcRailwayPartTypeEnum.ABOVETRACK' has no definition
 * The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
+* The resource 'IfcRailwayPartTypeEnum.LINESIDE' has no definition
+* The resource 'IfcRailwayPartTypeEnum.LINESIDEPART' has no definition
+* The resource 'IfcRailwayPartTypeEnum.PLAINTRACK' has no definition
+* The resource 'IfcRailwayPartTypeEnum.SUBSTRUCTURE' has no definition
+* The resource 'IfcRailwayPartTypeEnum.TRACK' has no definition
+* The resource 'IfcRailwayPartTypeEnum.TRACKPART' has no definition
+* The resource 'IfcRailwayPartTypeEnum.TURNOUTTRACK' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
