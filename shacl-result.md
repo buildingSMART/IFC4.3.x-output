@@ -130,6 +130,17 @@
 * The concept usage 'Aggregation' for entity 'IfcPerformanceHistory' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcProjectOrder' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Aggregation' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Aggregation To Project' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal and Vertical' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Grouping' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layout - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layout - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layouts' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Spatial Reference' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcActionRequest' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcCostSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Approval Association' for entity 'IfcPermit' in MVD 'GeneralUsage' is not modeled in UML
@@ -184,6 +195,7 @@
 * The concept usage 'Document Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Document Association' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
