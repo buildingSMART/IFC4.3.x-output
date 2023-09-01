@@ -27,45 +27,9 @@
 * The Property 'Pset_AirToAirHeatRecoveryTypeCommon.SecondaryAirFlowRateRange' has no definition
 * The Property 'Pset_CoilTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
-* The Property 'Pset_DoorLiningProperties.CasingDepth' has no definition
-* The Property 'Pset_DoorLiningProperties.CasingThickness' has no definition
-* The Property 'Pset_DoorLiningProperties.LiningDepth' has no definition
-* The Property 'Pset_DoorLiningProperties.LiningOffset' has no definition
-* The Property 'Pset_DoorLiningProperties.LiningToPanelOffsetX' has no definition
-* The Property 'Pset_DoorLiningProperties.LiningToPanelOffsetY' has no definition
-* The Property 'Pset_DoorLiningProperties.ThresholdDepth' has no definition
-* The Property 'Pset_DoorLiningProperties.ThresholdOffset' has no definition
-* The Property 'Pset_DoorLiningProperties.ThresholdThickness' has no definition
-* The Property 'Pset_DoorLiningProperties.TransomOffset' has no definition
-* The Property 'Pset_DoorLiningProperties.TransomThickness' has no definition
-* The Property 'Pset_DoorPanelProperties.PanelDepth' has no definition
-* The Property 'Pset_DoorPanelProperties.PanelOperation' has no definition
-* The Property 'Pset_DoorPanelProperties.PanelPosition' has no definition
-* The Property 'Pset_DoorPanelProperties.PanelWidth' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
-* The Property 'Pset_PermeableCoveringProperties.OperationType' has no definition
-* The Property 'Pset_PermeableCoveringProperties.PanelPosition' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
 * The Property 'Pset_Stationing.HasIncreasingStation' has no definition
-* The Property 'Pset_WindowLiningProperties.FirstMullionOffset' has no definition
-* The Property 'Pset_WindowLiningProperties.FirstTransomOffset' has no definition
-* The Property 'Pset_WindowLiningProperties.LiningDepth' has no definition
-* The Property 'Pset_WindowLiningProperties.LiningOffset' has no definition
-* The Property 'Pset_WindowLiningProperties.LiningToPanelOffsetX' has no definition
-* The Property 'Pset_WindowLiningProperties.LiningToPanelOffsetY' has no definition
-* The Property 'Pset_WindowLiningProperties.MullionThickness' has no definition
-* The Property 'Pset_WindowLiningProperties.SecondMullionOffset' has no definition
-* The Property 'Pset_WindowLiningProperties.SecondTransomOffset' has no definition
-* The Property 'Pset_WindowLiningProperties.TransomThickness' has no definition
-* The Property 'Pset_WindowPanelProperties.OperationType' has no definition
-* The Property 'Pset_WindowPanelProperties.PanelPosition' has no definition
-## DefinitionForPropertySet
-
-* The resource 'Pset_DoorLiningProperties' has no definition
-* The resource 'Pset_DoorPanelProperties' has no definition
-* The resource 'Pset_PermeableCoveringProperties' has no definition
-* The resource 'Pset_WindowLiningProperties' has no definition
-* The resource 'Pset_WindowPanelProperties' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
@@ -350,6 +314,7 @@
 * For document 'CoreTopHeight.md/c/properties/docs' a property cannot be found
 * For document 'CoreTopWidth.md/c/properties/docs' a property cannot be found
 * For document 'CurrentCarryingCapasity.md/c/properties/docs' a property cannot be found
+* For document 'DefinitionType.md/d/properties/docs' a property cannot be found
 * For document 'DimensionalChangeCoefficient.md/d/properties/docs' a property cannot be found
 * For document 'DissolvedSolidsContent.md/d/properties/docs' a property cannot be found
 * For document 'DraftBaseOffset.md/d/properties/docs' a property cannot be found
@@ -437,6 +402,7 @@
 * For document 'RaisedCompStrengthPerp.md/r/properties/docs' a property cannot be found
 * For document 'RaisedCompressiveStrength.md/r/properties/docs' a property cannot be found
 * For document 'ReferenceDepth.md/r/properties/docs' a property cannot be found
+* For document 'ReinforcementSectionDefinitions.md/r/properties/docs' a property cannot be found
 * For document 'Relaxations.md/r/properties/docs' a property cannot be found
 * For document 'RemainingWork.md/r/properties/docs' a property cannot be found
 * For document 'RightFlangeWidth.md/r/properties/docs' a property cannot be found
