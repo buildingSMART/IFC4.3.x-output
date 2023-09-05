@@ -9611,7 +9611,7 @@
       },
       "IfcReferent": {
         "Parent": "IfcPositioningElement",
-        "Description": "IfcReferent defines a position at a particular offset along an alignment curve.Referents may be used for several scenarios:positioning physical elements at common locations along an alignment curve (e.g. bridge piers)\nindicating transitions for cross-sections (e.g. beginning of curvature where road is relatively flat, maximum curvature having super-elevated cross-slope to accommodate design speed)\nindicating broken chainage where distance measurements reset or reverse directions\nindicating domain-specific design parameters (via property sets) at locations along an alignment curve",
+        "Description": "IfcReferent defines a position at a particular offset along an alignment curve.Referents may be used for several scenarios:positioning physical elements at common locations along an alignment curve (e.g. bridge piers)\nindicating transitions for cross-sections (e.g. beginning of curvature where road is relatively flat, maximum curvature having super-elevated cross-slope to accommodate design speed)\nindicating broken chainage where distance measurements reset or reverse directions, or have jumps.\nindicating domain-specific design parameters (via property sets) at locations along an alignment curveNOTE  Referents can be nested to alignments, using IfcRelNests, to describe stations along an alignment. Being IfcRelNests.RelatedObjects an ordered list, the first nested referent is the starting station of a given alignment.\nNOTE  The stationing value of any object can be provided, using an IfcReferent and the respective Pset_Stationing. The relationship between the given object and the referent indicating its stationing value is an IfcRelPositions.",
         "Psets": {
           "Pset_LinearReferencingMethod": {
             "Properties": {
@@ -9655,7 +9655,7 @@
             "Properties": {
               "HasIncreasingStation": {
                 "type": "boolean",
-                "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/properties/h/HasIncreasingStation.md does not exist",
+                "Description": "Inform on the increasing or decreasing progress of stationing values, for referents nested in a given alignment.If present and true, or if not present, then the relevant subsequently nested referents are expected to have greater Pset_Stationing.Station values (i.e., increasing stations).If present and false, then the relevant subsequently nested referents are expected to have lower Pset_Stationing.Station values (i.e., decreasing stations).",
                 "values": [
                   "TRUE",
                   "FALSE"

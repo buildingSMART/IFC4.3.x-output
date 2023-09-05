@@ -29,7 +29,6 @@
 * The Property 'Pset_CooledBeamTypeActive.AirFlowRateRange' has no definition
 * The Property 'Pset_DuctSilencerTypeCommon.AirFlowRateRange' has no definition
 * The Property 'Pset_SpaceThermalPHistory.ExhaustAirFlowRate' has no definition
-* The Property 'Pset_Stationing.HasIncreasingStation' has no definition
 ## DefinitionForQuantity
 
 * The Property 'Qto_WallBaseQuantities.GrossFootPrintArea' has no definition
