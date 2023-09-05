@@ -7901,7 +7901,7 @@
       },
       "IfcAnnotation": {
         "Parent": "IfcProduct",
-        "Description": "An annotation is an information element within the geometric (and spatial) context of a project, that adds a note or meaning to the objects which constitutes the project model. Annotations include additional points, curves, text, dimensioning, hatching and other forms of graphical notes. It also includes virtual or symbolic representations of additional model components, not representing products or spatial structures, such as event elements, survey points, contour lines or similar.NOTE  Additional presentation information (often 2D) such as tag number or hatching, that is directly related to a particular product representation is included within the IfcProductDefinitionShape having various IfcShapeRepresentation's of the IfcElement (and its subtypes). Only those presentation information, that cannot be directly related to a single product, have to be wrapped within the IfcAnnotation.If available, the annotation should be related to the spatial context of the project, by containing the annotation within the appropriate level of the building structure (site, facility, facility part or building, storey, or space). This is handled by the IfcRelContainedInSpatialStructure relationship.The IfcAnnotation can provide specific 0D, 1D, and 2D geometric items as representation of the annotation, offering annotation point, curves, and surfaces. In addition to the predefined type values in IfcAnnotationTypeEnum, the following values can be used for the ObjectType (with PredefinedType attribute value USERDEFINED).Annotation point is an annotation provided by a point that has additional semantic. The inherited attribute ObjectType should be used to capture the type of point annotation, some suggested values are:\n\nSurveyPoint: A single survey point represented by a Cartesian point. A property set may add the conditions (method, accuracy, etc. to the survey point).\nSurveyArea: A set of survey points represented by Cartesian point. These coordinates are determined relative to the coordinates of a reference point, which acts as the datum for the survey. Properties attached apply equally to all points. The difference in elevation of the survey points enables terrain to be determined.\n\n\n\nAnnotation curve is an annotation provided by a curve that has additional semantic. The inherited attribute ObjectType should be used to capture the type of curve annotation, some suggested values are:\n\nContourLine: A line of constant elevation typically used on geographic maps where the spacing of lines at constant intervals of elevation may be used as an indication of slope.\nIsoBar: A line of constant pressure typically used on weather maps or to show pressure gradient in spaces, chambers or externally.\nIsoLux: A line of constant illumination typically used to show the distribution of illumination levels and/or day lighting in a space or externally.\nIsoTherm: A line of constant temperature typically used to show the distribution and effect of heating or cooling within a space or to show temperature distribution on a geographic map.\n\n\n\nAnnotation surface: is an annotation provided by a surface that has additional semantic. The inherited attribute ObjectType should be used to capture the type of surface annotation, some suggested values are:\n\nSurveyArea: A surface patch based on survey points.HISTORY  New entity in IFC2x2.",
+        "Description": "An annotation is an information element within the geometric (and spatial) context of a project, that adds a note or meaning to the objects which constitutes the project model. Annotations include additional points, curves, text, dimensioning, hatching and other forms of graphical notes. It also includes virtual or symbolic representations of additional model components, not representing products or spatial structures, such as survey points and lines, contour lines or similar.NOTE  Additional presentation information (often 2D) such as tag number or hatching, that is directly related to a particular product representation is included within the IfcProductDefinitionShape having various IfcShapeRepresentation's of the IfcElement (and its subtypes). Only those presentation information, that cannot be directly related to a single product, have to be wrapped within the IfcAnnotation.If available, the annotation should be related to the spatial context of the project, by containing the annotation within the appropriate level of the building structure (site, facility, facility part or building, storey, or space). This is handled by the IfcRelContainedInSpatialStructure relationship.The predefined type values in IfcAnnotationTypeEnum suggest some of the type of annotations that can be used.HISTORY  New entity in IFC2x2.",
         "Psets": {
           "Pset_AnnotationLineOfSight": {
             "Properties": {
@@ -9611,7 +9611,7 @@
       },
       "IfcReferent": {
         "Parent": "IfcPositioningElement",
-        "Description": "IfcReferent defines a position at a particular offset along an alignment curve.Referents may be used for several scenarios:positioning physical elements at common locations along an alignment curve (e.g. bridge piers)\nindicating transitions for cross-sections (e.g. beginning of curvature where road is relatively flat, maximum curvature having super-elevated cross-slope to accommodate design speed)\nindicating broken chainage where distance measurements reset or reverse directions, or have jumps.\nindicating domain-specific design parameters (via property sets) at locations along an alignment curveNOTE  Referents can be nested to alignments, using IfcRelNests, to describe stations along an alignment. Being IfcRelNests.RelatedObjects an ordered list, the first nested referent is the starting station of a given alignment.\nNOTE  The stationing value of any object can be provided, using an IfcReferent and the respective Pset_Stationing. The relationship between the given object and the referent indicating its stationing value is an IfcRelPositions.",
+        "Description": "IfcReferent defines a position at a particular offset along an alignment curve.Referents may be used for several scenarios:positioning physical elements at common locations along an alignment curve (e.g. bridge piers)\nindicating transitions for cross-sections (e.g. beginning of curvature where road is relatively flat, maximum curvature having super-elevated cross-slope to accommodate design speed)\nindicating events at a specific location (e.g. change in width or superelevation)\nindicating broken chainage where distance measurements reset or reverse directions, or have jumps.\nindicating domain-specific design parameters (via property sets) at locations along an alignment curveNOTE  Referents can be nested to alignments, using IfcRelNests, to describe stations along an alignment. Being IfcRelNests.RelatedObjects an ordered list, the first nested referent is the starting station of a given alignment.\nNOTE  The stationing value of any object can be provided, using an IfcReferent and the respective Pset_Stationing. The relationship between the given object and the referent indicating its stationing value is an IfcRelPositions.",
         "Psets": {
           "Pset_LinearReferencingMethod": {
             "Properties": {
@@ -29756,7 +29756,7 @@
       },
       "IfcAnnotation.CONTOURLINE": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'CONTOURLINE' heading",
+        "Description": "Annotation used to illustrate lines connecting points of equal elevation or depth, on a map or chart.EXAMPLE  Typically used in cartography, geography, or geology maps, where the spacing of lines at constant intervals of elevation may be used as an indication of slope.",
         "Psets": {
           "Pset_AnnotationContourLine": {
             "Properties": {
@@ -29770,27 +29770,27 @@
       },
       "IfcAnnotation.DIMENSION": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'DIMENSION' heading"
+        "Description": "Annotation used to illustrate the measurement or size of an object, often accompanied by numerical values."
       },
       "IfcAnnotation.ISOBAR": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'ISOBAR' heading"
+        "Description": "Annotation used to illustrate lines connecting points of equal pressure on a map or chart.EXAMPLE  Typically used on weather maps or to show pressure gradient in spaces, chambers or externally."
       },
       "IfcAnnotation.ISOLUX": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'ISOLUX' heading"
+        "Description": "Annotation used to illustrate lines connecting points of equal illuminance or light intensity.EXAMPLE  Typically used in lighting design or photometry to show the distribution of illumination levels and/or day lighting in a space or externally."
       },
       "IfcAnnotation.ISOTHERM": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'ISOTHERM' heading"
+        "Description": "Annotation used to illustrate lines connecting points of equal temperature on a map or chart.EXAMPLE  Typically used in to show the heating or cooling distribution within a space or to show temperature distribution on a geographic map."
       },
       "IfcAnnotation.LEADER": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'LEADER' heading"
+        "Description": "Annotation that includes a line or arrow.EXAMPLE  Typically used to connect an object to a specific point of reference or to an explanation."
       },
       "IfcAnnotation.SURVEY": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'SURVEY' heading",
+        "Description": "Annotation used for survey information, such as survey points, survey lines or survey areas.EXAMPLE  Typically used in surveying or mapping to indicate the location, elevation, or other relevant data about a specific point or area.\nNOTE  The shape representation of the IfcAnnotation indicates if it is a survey point, survey line, survey area or any other type of representation connected to survey.",
         "Psets": {
           "Pset_AnnotationSurveyArea": {
             "Properties": {
@@ -29822,11 +29822,11 @@
       },
       "IfcAnnotation.SYMBOL": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'SYMBOL' heading"
+        "Description": "Annotation that employs graphical symbols or icons to represent specific meanings."
       },
       "IfcAnnotation.TEXT": {
         "Parent": "IfcAnnotation",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcAnnotationTypeEnum.md has no 'TEXT' heading"
+        "Description": "A textual annotation."
       },
       "IfcAnnotation.USERDEFINED": {
         "Parent": "IfcAnnotation",
@@ -30972,11 +30972,11 @@
       },
       "IfcReferent.BOUNDARY": {
         "Parent": "IfcReferent",
-        "Description": "The referent represents where an administrative or maintenance boundary crosses the linear element being measured. This is typically the first time the boundary crosses the linear element. If the boundary runs along the linear element, it would be the point at which they first become collinear. The LRS (linear referencing system) should include specific rules about how boundaries are handled if this type of referent is permitted. If the linear element changes at the boundary as for a county route beginning at the county boundary, then the LRM (linear referencing method) is more correctly categorized as absolute.NOTE definition from ISO 19148:2021"
+        "Description": "The referent represents where an administrative or maintenance boundary crosses the linear element being measured. This is typically the first time the boundary crosses the linear element. If the boundary runs along the linear element, it would be the point at which they first become collinear. The LRS (linear referencing system) should include specific rules about how boundaries are handled if this type of referent is permitted. If the linear element changes at the boundary as for a county route beginning at the county boundary, then the LRM (linear referencing method) is more correctly categorized as absolute.NOTE  definition from ISO 19148:2021"
       },
       "IfcReferent.INTERSECTION": {
         "Parent": "IfcReferent",
-        "Description": "The referent is the location of an intersection specified by the referent name. The intersection location is typically taken as the location of the intersection of the reference lines of the streets comprising the intersection and is, therefore, not necessarily precise or deterministic. Physical markers can be installed to remedy this. The LRS (linear referencing system) should include specific rules about how intersection locations are determined if this type of referent is permitted.NOTE definition from ISO 19148:2021"
+        "Description": "The referent is the location of an intersection specified by the referent name. The intersection location is typically taken as the location of the intersection of the reference lines of the streets comprising the intersection and is, therefore, not necessarily precise or deterministic. Physical markers can be installed to remedy this. The LRS (linear referencing system) should include specific rules about how intersection locations are determined if this type of referent is permitted.NOTE  definition from ISO 19148:2021"
       },
       "IfcReferent.KILOPOINT": {
         "Parent": "IfcReferent",
@@ -30984,7 +30984,7 @@
       },
       "IfcReferent.LANDMARK": {
         "Parent": "IfcReferent",
-        "Description": "The referent is the location of a physical landmark visible in the field.NOTE definition from ISO 19148:2021"
+        "Description": "The referent is the location of a physical landmark visible in the field.NOTE  definition from ISO 19148:2021"
       },
       "IfcReferent.MILEPOINT": {
         "Parent": "IfcReferent",
@@ -30996,7 +30996,7 @@
       },
       "IfcReferent.REFERENCEMARKER": {
         "Parent": "IfcReferent",
-        "Description": "The reference marker is a notation referent, typically located in the right of way of the road, rail or other transportation system. Usually reference markers are initially spaced at a uniform distance along the linear element being measured, though subsequent re-alignments can result in uneven spacing between the markers.NOTE definition from ISO 19148:2021\nNOTE The physical manifestation of the IfcReferent.REFERENCEMARKER can be an IfcSign.MARKER (e.g., a bolt fixed on a post)"
+        "Description": "The reference marker is a notation referent, typically located in the right of way of the road, rail or other transportation system. Usually reference markers are initially spaced at a uniform distance along the linear element being measured, though subsequent re-alignments can result in uneven spacing between the markers.NOTE  definition from ISO 19148:2021\nNOTE  The physical manifestation of the IfcReferent.REFERENCEMARKER can be an IfcSign.MARKER (e.g., a bolt fixed on a post)"
       },
       "IfcReferent.STATION": {
         "Parent": "IfcReferent",
@@ -31004,7 +31004,7 @@
       },
       "IfcReferent.SUPERELEVATIONEVENT": {
         "Parent": "IfcReferent",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcReferentTypeEnum.md has no 'SUPERELEVATIONEVENT' heading",
+        "Description": "A kind of event that specifies the superelevation (cross slope) at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.The element(s) that are affected by the superelevation event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane).",
         "Psets": {
           "Pset_Superelevation": {
             "Properties": {
@@ -31034,7 +31034,7 @@
       },
       "IfcReferent.WIDTHEVENT": {
         "Parent": "IfcReferent",
-        "Description": "https://github.com/buildingSMART/IFC4.3.x-development/edit/master/docs/schemas/core/IfcProductExtension/Types/IfcReferentTypeEnum.md has no 'WIDTHEVENT' heading",
+        "Description": "A kind of event that specifies the width at a specific location along a road alignment, and the type of transition from the previous location. The locations are specified using an IfcLinearPlacement measured along the alignment axis curve.\nThe element(s) that are affected by the width event is currently proposed to be specified by containing the event in a specific lateral breakdown element of the road spatial structure (e.g. a Lane or the entire carriageway).",
         "Psets": {
           "Pset_Width": {
             "Properties": {

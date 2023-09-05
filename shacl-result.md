@@ -4,15 +4,6 @@
 * The resource 'Class2' has no definition
 ## DefinitionForEnumLiteral
 
-* The resource 'IfcAnnotationTypeEnum.CONTOURLINE' has no definition
-* The resource 'IfcAnnotationTypeEnum.DIMENSION' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOBAR' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOLUX' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOTHERM' has no definition
-* The resource 'IfcAnnotationTypeEnum.LEADER' has no definition
-* The resource 'IfcAnnotationTypeEnum.SURVEY' has no definition
-* The resource 'IfcAnnotationTypeEnum.SYMBOL' has no definition
-* The resource 'IfcAnnotationTypeEnum.TEXT' has no definition
 * The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
