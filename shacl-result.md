@@ -125,7 +125,6 @@
 * The concept usage 'Alignment Geometry - Horizontal' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Geometry - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Geometry - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Grouping' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Layout - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Layout - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
