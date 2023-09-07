@@ -125,7 +125,6 @@
 * The concept usage 'Alignment Geometry - Horizontal' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Geometry - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Geometry - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Grouping' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Layout - Horizontal, Vertical and Cant' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Alignment Layout - Reusing Horizontal Layout' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
@@ -185,7 +184,6 @@
 * The concept usage 'Document Association' for entity 'IfcConstructionResource' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Document Association' for entity 'IfcWorkSchedule' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Door Attributes' for entity 'IfcDoor' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'IfcAlignment' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcElement' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcJunctionBox' in MVD 'GeneralUsage' is not modeled in UML
 * The concept usage 'Element Nesting' for entity 'IfcSanitaryTerminal' in MVD 'GeneralUsage' is not modeled in UML
