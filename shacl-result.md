@@ -4,6 +4,7 @@
 * The resource 'Class2' has no definition
 ## DefinitionForEnumLiteral
 
+* The resource 'IfcBridgePartTypeEnum.SURFACESTRUCTURE' has no definition
 * The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
 * The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
