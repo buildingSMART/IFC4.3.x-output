@@ -379,6 +379,7 @@
 * For document 'Name.md/n/properties/docs' a property cannot be found
 * For document 'Nesting.md/n/properties/docs' a property cannot be found
 * For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
+* For document 'Orientation.md/o/properties/docs/README.md/resource/schemas' a property cannot be found
 * For document 'OutOfPlane.md/o/properties/docs' a property cannot be found
 * For document 'OverallDepth.md/o/properties/docs' a property cannot be found
 * For document 'OverallWidth.md/o/properties/docs' a property cannot be found
@@ -476,7 +477,6 @@
 * For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
 * For document 'WaterImpermeability.md/w/properties/docs' a property cannot be found
 * For document 'Workability.md/w/properties/docs' a property cannot be found
-* For document 'XDirectionLowerBarCount.md/x/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'YieldStress.md/y/properties/docs' a property cannot be found
 * For document 'YoungModulusBending.md/y/properties/docs' a property cannot be found
 * For document 'YoungModulusCompression.md/y/properties/docs' a property cannot be found
