@@ -322,6 +322,7 @@
 * For document 'DraftSideOffset.md/d/properties/docs' a property cannot be found
 * For document 'DynamicViscosity.md/d/properties/docs' a property cannot be found
 * For document 'EdgeDraft.md/e/properties/docs' a property cannot be found
+* For document 'EnergySource.md/e/properties/docs/README.md/domain/schemas' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FlangeBaseFillet.md/f/properties/docs' a property cannot be found
@@ -379,7 +380,6 @@
 * For document 'Name.md/n/properties/docs' a property cannot be found
 * For document 'Nesting.md/n/properties/docs' a property cannot be found
 * For document 'NetFootprintArea.md/n/properties/docs' a property cannot be found
-* For document 'Orientation.md/o/properties/docs/README.md/resource/schemas' a property cannot be found
 * For document 'OutOfPlane.md/o/properties/docs' a property cannot be found
 * For document 'OverallDepth.md/o/properties/docs' a property cannot be found
 * For document 'OverallWidth.md/o/properties/docs' a property cannot be found
