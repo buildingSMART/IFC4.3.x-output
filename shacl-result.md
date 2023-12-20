@@ -322,6 +322,7 @@
 * For document 'DraftSideOffset.md/d/properties/docs' a property cannot be found
 * For document 'DynamicViscosity.md/d/properties/docs' a property cannot be found
 * For document 'EdgeDraft.md/e/properties/docs' a property cannot be found
+* For document 'EnergySource.md/e/properties/docs/README.md/domain/schemas' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FlangeBaseFillet.md/f/properties/docs' a property cannot be found
@@ -476,7 +477,6 @@
 * For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
 * For document 'WaterImpermeability.md/w/properties/docs' a property cannot be found
 * For document 'Workability.md/w/properties/docs' a property cannot be found
-* For document 'XDirectionLowerBarCount.md/x/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'YieldStress.md/y/properties/docs' a property cannot be found
 * For document 'YoungModulusBending.md/y/properties/docs' a property cannot be found
 * For document 'YoungModulusCompression.md/y/properties/docs' a property cannot be found
