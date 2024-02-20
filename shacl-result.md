@@ -322,7 +322,6 @@
 * For document 'DraftSideOffset.md/d/properties/docs' a property cannot be found
 * For document 'DynamicViscosity.md/d/properties/docs' a property cannot be found
 * For document 'EdgeDraft.md/e/properties/docs' a property cannot be found
-* For document 'EnergySource.md/e/properties/docs/README.md/domain/schemas' a property cannot be found
 * For document 'ExhaustAirFlowRate.md/e/properties/docs' a property cannot be found
 * For document 'Exponent.md/e/properties/docs' a property cannot be found
 * For document 'FlangeBaseFillet.md/f/properties/docs' a property cannot be found
@@ -337,6 +336,7 @@
 * For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
 * For document 'HardeningModule.md/h/properties/docs' a property cannot be found
 * For document 'Hardness.md/h/properties/docs' a property cannot be found
+* For document 'HeatOutput.md/h/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'HigherHeatingValue.md/h/properties/docs' a property cannot be found
 * For document 'IK.md/i/properties/docs' a property cannot be found
 * For document 'IP.md/i/properties/docs' a property cannot be found
