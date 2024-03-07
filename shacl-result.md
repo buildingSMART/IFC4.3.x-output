@@ -6,7 +6,6 @@
 
 * The resource 'IfcBridgePartTypeEnum.SURFACESTRUCTURE' has no definition
 * The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
