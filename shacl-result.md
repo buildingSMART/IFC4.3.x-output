@@ -335,7 +335,6 @@
 * For document 'GrossFootprintArea.md/g/properties/docs' a property cannot be found
 * For document 'HardeningModule.md/h/properties/docs' a property cannot be found
 * For document 'Hardness.md/h/properties/docs' a property cannot be found
-* For document 'HeatOutput.md/h/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'HigherHeatingValue.md/h/properties/docs' a property cannot be found
 * For document 'IK.md/i/properties/docs' a property cannot be found
 * For document 'IP.md/i/properties/docs' a property cannot be found
@@ -487,7 +486,7 @@
 * For document 'zzInPlaneNegative.md/z/properties/docs' a property cannot be found
 * For document 'zzOutOfPlane.md/z/properties/docs' a property cannot be found
 * For document 'zzOutOfPlaneNegative.md/z/properties/docs' a property cannot be found
-* For document 'zzPerformanceUnit.md/z/properties/docs' a property cannot be found
+* For document 'zzPerformanceUnit.md/z/properties/docs/README.md/core/schemas' a property cannot be found
 * For document 'zzTargetPerformance.md/z/properties/docs' a property cannot be found
 ## PsetApplicability
 
