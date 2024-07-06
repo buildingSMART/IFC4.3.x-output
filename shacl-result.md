@@ -1146,2064 +1146,8 @@
 * The resource 'IfcWorkScheduleTypeEnum' has no definition
 ## DefinitionForEnumLiteral
 
-* The resource 'IfcActionRequestTypeEnum.EMAIL' has no definition
-* The resource 'IfcActionRequestTypeEnum.FAX' has no definition
-* The resource 'IfcActionRequestTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcActionRequestTypeEnum.PHONE' has no definition
-* The resource 'IfcActionRequestTypeEnum.POST' has no definition
-* The resource 'IfcActionRequestTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcActionRequestTypeEnum.VERBAL' has no definition
-* The resource 'IfcActionSourceTypeEnum.BRAKES' has no definition
-* The resource 'IfcActionSourceTypeEnum.BUOYANCY' has no definition
-* The resource 'IfcActionSourceTypeEnum.COMPLETION_G1' has no definition
-* The resource 'IfcActionSourceTypeEnum.CREEP' has no definition
-* The resource 'IfcActionSourceTypeEnum.CURRENT' has no definition
-* The resource 'IfcActionSourceTypeEnum.DEAD_LOAD_G' has no definition
-* The resource 'IfcActionSourceTypeEnum.EARTHQUAKE_E' has no definition
-* The resource 'IfcActionSourceTypeEnum.ERECTION' has no definition
-* The resource 'IfcActionSourceTypeEnum.FIRE' has no definition
-* The resource 'IfcActionSourceTypeEnum.ICE' has no definition
-* The resource 'IfcActionSourceTypeEnum.IMPACT' has no definition
-* The resource 'IfcActionSourceTypeEnum.IMPULSE' has no definition
-* The resource 'IfcActionSourceTypeEnum.LACK_OF_FIT' has no definition
-* The resource 'IfcActionSourceTypeEnum.LIVE_LOAD_Q' has no definition
-* The resource 'IfcActionSourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcActionSourceTypeEnum.PRESTRESSING_P' has no definition
-* The resource 'IfcActionSourceTypeEnum.PROPPING' has no definition
-* The resource 'IfcActionSourceTypeEnum.RAIN' has no definition
-* The resource 'IfcActionSourceTypeEnum.SETTLEMENT_U' has no definition
-* The resource 'IfcActionSourceTypeEnum.SHRINKAGE' has no definition
-* The resource 'IfcActionSourceTypeEnum.SNOW_S' has no definition
-* The resource 'IfcActionSourceTypeEnum.SYSTEM_IMPERFECTION' has no definition
-* The resource 'IfcActionSourceTypeEnum.TEMPERATURE_T' has no definition
-* The resource 'IfcActionSourceTypeEnum.TRANSPORT' has no definition
-* The resource 'IfcActionSourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcActionSourceTypeEnum.WAVE' has no definition
-* The resource 'IfcActionSourceTypeEnum.WIND_W' has no definition
-* The resource 'IfcActionTypeEnum.EXTRAORDINARY_A' has no definition
-* The resource 'IfcActionTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcActionTypeEnum.PERMANENT_G' has no definition
-* The resource 'IfcActionTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcActionTypeEnum.VARIABLE_Q' has no definition
-* The resource 'IfcActuatorTypeEnum.ELECTRICACTUATOR' has no definition
-* The resource 'IfcActuatorTypeEnum.HANDOPERATEDACTUATOR' has no definition
-* The resource 'IfcActuatorTypeEnum.HYDRAULICACTUATOR' has no definition
-* The resource 'IfcActuatorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcActuatorTypeEnum.PNEUMATICACTUATOR' has no definition
-* The resource 'IfcActuatorTypeEnum.THERMOSTATICACTUATOR' has no definition
-* The resource 'IfcActuatorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAddressTypeEnum.DISTRIBUTIONPOINT' has no definition
-* The resource 'IfcAddressTypeEnum.HOME' has no definition
-* The resource 'IfcAddressTypeEnum.OFFICE' has no definition
-* The resource 'IfcAddressTypeEnum.SITE' has no definition
-* The resource 'IfcAddressTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAirTerminalBoxTypeEnum.CONSTANTFLOW' has no definition
-* The resource 'IfcAirTerminalBoxTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAirTerminalBoxTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAirTerminalBoxTypeEnum.VARIABLEFLOWPRESSUREDEPENDANT' has no definition
-* The resource 'IfcAirTerminalBoxTypeEnum.VARIABLEFLOWPRESSUREINDEPENDANT' has no definition
-* The resource 'IfcAirTerminalTypeEnum.DIFFUSER' has no definition
-* The resource 'IfcAirTerminalTypeEnum.GRILLE' has no definition
-* The resource 'IfcAirTerminalTypeEnum.LOUVRE' has no definition
-* The resource 'IfcAirTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAirTerminalTypeEnum.REGISTER' has no definition
-* The resource 'IfcAirTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.FIXEDPLATECOUNTERFLOWEXCHANGER' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.FIXEDPLATECROSSFLOWEXCHANGER' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.FIXEDPLATEPARALLELFLOWEXCHANGER' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.HEATPIPE' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.ROTARYWHEEL' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.RUNAROUNDCOILLOOP' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.THERMOSIPHONCOILTYPEHEATEXCHANGERS' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.THERMOSIPHONSEALEDTUBEHEATEXCHANGERS' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.TWINTOWERENTHALPYRECOVERYLOOPS' has no definition
-* The resource 'IfcAirToAirHeatRecoveryTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAlarmTypeEnum.BELL' has no definition
-* The resource 'IfcAlarmTypeEnum.BREAKGLASSBUTTON' has no definition
-* The resource 'IfcAlarmTypeEnum.LIGHT' has no definition
-* The resource 'IfcAlarmTypeEnum.MANUALPULLBOX' has no definition
-* The resource 'IfcAlarmTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAlarmTypeEnum.RAILWAYCROCODILE' has no definition
-* The resource 'IfcAlarmTypeEnum.RAILWAYDETONATOR' has no definition
-* The resource 'IfcAlarmTypeEnum.SIREN' has no definition
-* The resource 'IfcAlarmTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAlarmTypeEnum.WHISTLE' has no definition
-* The resource 'IfcAlignmentHorizontalSegmentTypeEnum.CIRCULARARC' has no definition
-* The resource 'IfcAlignmentHorizontalSegmentTypeEnum.CLOTHOID' has no definition
-* The resource 'IfcAlignmentHorizontalSegmentTypeEnum.CUBIC' has no definition
-* The resource 'IfcAlignmentHorizontalSegmentTypeEnum.LINE' has no definition
-* The resource 'IfcAlignmentVerticalSegmentTypeEnum.CIRCULARARC' has no definition
-* The resource 'IfcAlignmentVerticalSegmentTypeEnum.CLOTHOID' has no definition
-* The resource 'IfcAlignmentVerticalSegmentTypeEnum.CONSTANTGRADIENT' has no definition
-* The resource 'IfcAlignmentVerticalSegmentTypeEnum.PARABOLICARC' has no definition
-* The resource 'IfcAnalysisModelTypeEnum.IN_PLANE_LOADING_2D' has no definition
-* The resource 'IfcAnalysisModelTypeEnum.LOADING_3D' has no definition
-* The resource 'IfcAnalysisModelTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAnalysisModelTypeEnum.OUT_PLANE_LOADING_2D' has no definition
-* The resource 'IfcAnalysisModelTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.FIRST_ORDER_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.FULL_NONLINEAR_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.SECOND_ORDER_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.THIRD_ORDER_THEORY' has no definition
-* The resource 'IfcAnalysisTheoryTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcAnnotationTypeEnum.CONTOURLINE' has no definition
-* The resource 'IfcAnnotationTypeEnum.DIMENSION' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOBAR' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOLUX' has no definition
-* The resource 'IfcAnnotationTypeEnum.ISOTHERM' has no definition
-* The resource 'IfcAnnotationTypeEnum.LEADER' has no definition
-* The resource 'IfcAnnotationTypeEnum.SURVEY' has no definition
-* The resource 'IfcAnnotationTypeEnum.SYMBOL' has no definition
-* The resource 'IfcAnnotationTypeEnum.TEXT' has no definition
-* The resource 'IfcArithmeticOperatorEnum.ADD' has no definition
-* The resource 'IfcArithmeticOperatorEnum.DIVIDE' has no definition
-* The resource 'IfcArithmeticOperatorEnum.MODULO' has no definition
-* The resource 'IfcArithmeticOperatorEnum.MULTIPLY' has no definition
-* The resource 'IfcArithmeticOperatorEnum.SUBTRACT' has no definition
-* The resource 'IfcAssemblyPlaceEnum.FACTORY' has no definition
-* The resource 'IfcAssemblyPlaceEnum.SITE' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.AMPLIFIER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.CAMERA' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.COMMUNICATIONTERMINAL' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.DISPLAY' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.MICROPHONE' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.PLAYER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.PROJECTOR' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.RECEIVER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.RECORDINGEQUIPMENT' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.SPEAKER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.SWITCHER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.TELEPHONE' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.TUNER' has no definition
-* The resource 'IfcAudioVisualApplianceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBSplineCurveForm.CIRCULAR_ARC' has no definition
-* The resource 'IfcBSplineCurveForm.ELLIPTIC_ARC' has no definition
-* The resource 'IfcBSplineCurveForm.HYPERBOLIC_ARC' has no definition
-* The resource 'IfcBSplineCurveForm.PARABOLIC_ARC' has no definition
-* The resource 'IfcBSplineCurveForm.POLYLINE_FORM' has no definition
-* The resource 'IfcBSplineCurveForm.UNSPECIFIED' has no definition
-* The resource 'IfcBSplineSurfaceForm.CONICAL_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.CYLINDRICAL_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.GENERALISED_CONE' has no definition
-* The resource 'IfcBSplineSurfaceForm.PLANE_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.QUADRIC_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.RULED_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.SPHERICAL_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.SURF_OF_LINEAR_EXTRUSION' has no definition
-* The resource 'IfcBSplineSurfaceForm.SURF_OF_REVOLUTION' has no definition
-* The resource 'IfcBSplineSurfaceForm.TOROIDAL_SURF' has no definition
-* The resource 'IfcBSplineSurfaceForm.UNSPECIFIED' has no definition
-* The resource 'IfcBeamTypeEnum.BEAM' has no definition
-* The resource 'IfcBeamTypeEnum.CORNICE' has no definition
-* The resource 'IfcBeamTypeEnum.DIAPHRAGM' has no definition
-* The resource 'IfcBeamTypeEnum.EDGEBEAM' has no definition
-* The resource 'IfcBeamTypeEnum.GIRDER_SEGMENT' has no definition
-* The resource 'IfcBeamTypeEnum.HATSTONE' has no definition
-* The resource 'IfcBeamTypeEnum.HOLLOWCORE' has no definition
-* The resource 'IfcBeamTypeEnum.JOIST' has no definition
-* The resource 'IfcBeamTypeEnum.LINTEL' has no definition
-* The resource 'IfcBeamTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBeamTypeEnum.PIERCAP' has no definition
-* The resource 'IfcBeamTypeEnum.SPANDREL' has no definition
-* The resource 'IfcBeamTypeEnum.T_BEAM' has no definition
-* The resource 'IfcBeamTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBearingTypeEnum.CYLINDRICAL' has no definition
-* The resource 'IfcBearingTypeEnum.DISK' has no definition
-* The resource 'IfcBearingTypeEnum.ELASTOMERIC' has no definition
-* The resource 'IfcBearingTypeEnum.GUIDE' has no definition
-* The resource 'IfcBearingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBearingTypeEnum.POT' has no definition
-* The resource 'IfcBearingTypeEnum.ROCKER' has no definition
-* The resource 'IfcBearingTypeEnum.ROLLER' has no definition
-* The resource 'IfcBearingTypeEnum.SPHERICAL' has no definition
-* The resource 'IfcBearingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBenchmarkEnum.EQUALTO' has no definition
-* The resource 'IfcBenchmarkEnum.GREATERTHAN' has no definition
-* The resource 'IfcBenchmarkEnum.GREATERTHANOREQUALTO' has no definition
-* The resource 'IfcBenchmarkEnum.INCLUDEDIN' has no definition
-* The resource 'IfcBenchmarkEnum.INCLUDES' has no definition
-* The resource 'IfcBenchmarkEnum.LESSTHAN' has no definition
-* The resource 'IfcBenchmarkEnum.LESSTHANOREQUALTO' has no definition
-* The resource 'IfcBenchmarkEnum.NOTEQUALTO' has no definition
-* The resource 'IfcBenchmarkEnum.NOTINCLUDEDIN' has no definition
-* The resource 'IfcBenchmarkEnum.NOTINCLUDES' has no definition
-* The resource 'IfcBoilerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBoilerTypeEnum.STEAM' has no definition
-* The resource 'IfcBoilerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBoilerTypeEnum.WATER' has no definition
-* The resource 'IfcBooleanOperator.DIFFERENCE' has no definition
-* The resource 'IfcBooleanOperator.INTERSECTION' has no definition
-* The resource 'IfcBooleanOperator.UNION' has no definition
-* The resource 'IfcBridgePartTypeEnum.ABUTMENT' has no definition
-* The resource 'IfcBridgePartTypeEnum.DECK' has no definition
-* The resource 'IfcBridgePartTypeEnum.DECK_SEGMENT' has no definition
-* The resource 'IfcBridgePartTypeEnum.FOUNDATION' has no definition
-* The resource 'IfcBridgePartTypeEnum.PIER' has no definition
-* The resource 'IfcBridgePartTypeEnum.PIER_SEGMENT' has no definition
-* The resource 'IfcBridgePartTypeEnum.PYLON' has no definition
-* The resource 'IfcBridgePartTypeEnum.SUBSTRUCTURE' has no definition
-* The resource 'IfcBridgePartTypeEnum.SUPERSTRUCTURE' has no definition
 * The resource 'IfcBridgePartTypeEnum.SURFACESTRUCTURE' has no definition
-* The resource 'IfcBridgeTypeEnum.ARCHED' has no definition
-* The resource 'IfcBridgeTypeEnum.CABLE_STAYED' has no definition
-* The resource 'IfcBridgeTypeEnum.CANTILEVER' has no definition
-* The resource 'IfcBridgeTypeEnum.CULVERT' has no definition
-* The resource 'IfcBridgeTypeEnum.FRAMEWORK' has no definition
-* The resource 'IfcBridgeTypeEnum.GIRDER' has no definition
-* The resource 'IfcBridgeTypeEnum.SUSPENSION' has no definition
-* The resource 'IfcBridgeTypeEnum.TRUSS' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.APRON' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.ARMOURUNIT' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.INSULATION' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.PRECASTPANEL' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.SAFETYCAGE' has no definition
-* The resource 'IfcBuildingElementPartTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.COMPLEX' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.ELEMENT' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.PARTIAL' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.PROVISIONFORSPACE' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.PROVISIONFORVOID' has no definition
-* The resource 'IfcBuildingElementProxyTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.FENESTRATION' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.FOUNDATION' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.LOADBEARING' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.OUTERSHELL' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.SHADING' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.TRANSPORT' has no definition
-* The resource 'IfcBuildingSystemTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.EROSIONPREVENTION' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.FENESTRATION' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.FOUNDATION' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.LOADBEARING' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.MOORING' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.OUTERSHELL' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.PRESTRESSING' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.RAILWAYLINE' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.RAILWAYTRACK' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.REINFORCING' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.SHADING' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.TRACKCIRCUIT' has no definition
-* The resource 'IfcBuiltSystemTypeEnum.TRANSPORT' has no definition
-* The resource 'IfcBurnerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcBurnerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.BEND' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.CONNECTOR' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.CROSS' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.JUNCTION' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.REDUCER' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.TEE' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.TRANSITION' has no definition
-* The resource 'IfcCableCarrierFittingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CABLEBRACKET' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CABLELADDERSEGMENT' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CABLETRAYSEGMENT' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CABLETRUNKINGSEGMENT' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CATENARYWIRE' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.CONDUITSEGMENT' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.DROPPER' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCableCarrierSegmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCableFittingTypeEnum.CONNECTOR' has no definition
-* The resource 'IfcCableFittingTypeEnum.ENTRY' has no definition
-* The resource 'IfcCableFittingTypeEnum.EXIT' has no definition
-* The resource 'IfcCableFittingTypeEnum.FANOUT' has no definition
-* The resource 'IfcCableFittingTypeEnum.JUNCTION' has no definition
-* The resource 'IfcCableFittingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCableFittingTypeEnum.TRANSITION' has no definition
-* The resource 'IfcCableFittingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCableSegmentTypeEnum.BUSBARSEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.CABLESEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.CONDUCTORSEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.CONTACTWIRESEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.CORESEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.FIBERSEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.FIBERTUBE' has no definition
-* The resource 'IfcCableSegmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCableSegmentTypeEnum.OPTICALCABLESEGMENT' has no definition
-* The resource 'IfcCableSegmentTypeEnum.STITCHWIRE' has no definition
-* The resource 'IfcCableSegmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCableSegmentTypeEnum.WIREPAIRSEGMENT' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.CAISSON' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCaissonFoundationTypeEnum.WELL' has no definition
-* The resource 'IfcChangeActionEnum.ADDED' has no definition
-* The resource 'IfcChangeActionEnum.DELETED' has no definition
-* The resource 'IfcChangeActionEnum.MODIFIED' has no definition
-* The resource 'IfcChangeActionEnum.NOCHANGE' has no definition
-* The resource 'IfcChangeActionEnum.NOTDEFINED' has no definition
-* The resource 'IfcChillerTypeEnum.AIRCOOLED' has no definition
-* The resource 'IfcChillerTypeEnum.HEATRECOVERY' has no definition
-* The resource 'IfcChillerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcChillerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcChillerTypeEnum.WATERCOOLED' has no definition
-* The resource 'IfcChimneyTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcChimneyTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCoilTypeEnum.DXCOOLINGCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.ELECTRICHEATINGCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.GASHEATINGCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.HYDRONICCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCoilTypeEnum.STEAMHEATINGCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCoilTypeEnum.WATERCOOLINGCOIL' has no definition
-* The resource 'IfcCoilTypeEnum.WATERHEATINGCOIL' has no definition
-* The resource 'IfcColumnTypeEnum.COLUMN' has no definition
-* The resource 'IfcColumnTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcColumnTypeEnum.PIERSTEM' has no definition
-* The resource 'IfcColumnTypeEnum.PIERSTEM_SEGMENT' has no definition
-* The resource 'IfcColumnTypeEnum.PILASTER' has no definition
-* The resource 'IfcColumnTypeEnum.STANDCOLUMN' has no definition
-* The resource 'IfcColumnTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.ANTENNA' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.AUTOMATON' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.COMPUTER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.FAX' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.GATEWAY' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.INTELLIGENTPERIPHERAL' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.IPNETWORKEQUIPMENT' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.LINESIDEELECTRONICUNIT' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.MODEM' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.NETWORKAPPLIANCE' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.NETWORKBRIDGE' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.NETWORKHUB' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.OPTICALLINETERMINAL' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.OPTICALNETWORKUNIT' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.PRINTER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.RADIOBLOCKCENTER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.REPEATER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.ROUTER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.SCANNER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.TELECOMMAND' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.TELEPHONYEXCHANGE' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.TRANSITIONCOMPONENT' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.TRANSPONDER' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.TRANSPORTEQUIPMENT' has no definition
-* The resource 'IfcCommunicationsApplianceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcComplexPropertyTemplateTypeEnum.P_COMPLEX' has no definition
-* The resource 'IfcComplexPropertyTemplateTypeEnum.Q_COMPLEX' has no definition
-* The resource 'IfcCompressorTypeEnum.BOOSTER' has no definition
-* The resource 'IfcCompressorTypeEnum.DYNAMIC' has no definition
-* The resource 'IfcCompressorTypeEnum.HERMETIC' has no definition
-* The resource 'IfcCompressorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCompressorTypeEnum.OPENTYPE' has no definition
-* The resource 'IfcCompressorTypeEnum.RECIPROCATING' has no definition
-* The resource 'IfcCompressorTypeEnum.ROLLINGPISTON' has no definition
-* The resource 'IfcCompressorTypeEnum.ROTARY' has no definition
-* The resource 'IfcCompressorTypeEnum.ROTARYVANE' has no definition
-* The resource 'IfcCompressorTypeEnum.SCROLL' has no definition
-* The resource 'IfcCompressorTypeEnum.SEMIHERMETIC' has no definition
-* The resource 'IfcCompressorTypeEnum.SINGLESCREW' has no definition
-* The resource 'IfcCompressorTypeEnum.SINGLESTAGE' has no definition
-* The resource 'IfcCompressorTypeEnum.TROCHOIDAL' has no definition
-* The resource 'IfcCompressorTypeEnum.TWINSCREW' has no definition
-* The resource 'IfcCompressorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCompressorTypeEnum.WELDEDSHELLHERMETIC' has no definition
-* The resource 'IfcCondenserTypeEnum.AIRCOOLED' has no definition
-* The resource 'IfcCondenserTypeEnum.EVAPORATIVECOOLED' has no definition
-* The resource 'IfcCondenserTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCondenserTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCondenserTypeEnum.WATERCOOLED' has no definition
-* The resource 'IfcCondenserTypeEnum.WATERCOOLEDBRAZEDPLATE' has no definition
-* The resource 'IfcCondenserTypeEnum.WATERCOOLEDSHELLCOIL' has no definition
-* The resource 'IfcCondenserTypeEnum.WATERCOOLEDSHELLTUBE' has no definition
-* The resource 'IfcCondenserTypeEnum.WATERCOOLEDTUBEINTUBE' has no definition
-* The resource 'IfcConnectionTypeEnum.ATEND' has no definition
-* The resource 'IfcConnectionTypeEnum.ATPATH' has no definition
-* The resource 'IfcConnectionTypeEnum.ATSTART' has no definition
-* The resource 'IfcConnectionTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcConstraintEnum.ADVISORY' has no definition
-* The resource 'IfcConstraintEnum.HARD' has no definition
-* The resource 'IfcConstraintEnum.NOTDEFINED' has no definition
-* The resource 'IfcConstraintEnum.SOFT' has no definition
-* The resource 'IfcConstraintEnum.USERDEFINED' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.DEMOLISHING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.EARTHMOVING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.ERECTING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.HEATING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.LIGHTING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.PAVING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.PUMPING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.TRANSPORTING' has no definition
-* The resource 'IfcConstructionEquipmentResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.AGGREGATES' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.CONCRETE' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.DRYWALL' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.FUEL' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.GYPSUM' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.MASONRY' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.METAL' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.PLASTIC' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcConstructionMaterialResourceTypeEnum.WOOD' has no definition
-* The resource 'IfcConstructionProductResourceTypeEnum.ASSEMBLY' has no definition
-* The resource 'IfcConstructionProductResourceTypeEnum.FORMWORK' has no definition
-* The resource 'IfcConstructionProductResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcConstructionProductResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcControllerTypeEnum.FLOATING' has no definition
-* The resource 'IfcControllerTypeEnum.MULTIPOSITION' has no definition
-* The resource 'IfcControllerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcControllerTypeEnum.PROGRAMMABLE' has no definition
-* The resource 'IfcControllerTypeEnum.PROPORTIONAL' has no definition
-* The resource 'IfcControllerTypeEnum.TWOPOSITION' has no definition
-* The resource 'IfcControllerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.BELTCONVEYOR' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.BUCKETCONVEYOR' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.CHUTECONVEYOR' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.SCREWCONVEYOR' has no definition
-* The resource 'IfcConveyorSegmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCooledBeamTypeEnum.ACTIVE' has no definition
-* The resource 'IfcCooledBeamTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCooledBeamTypeEnum.PASSIVE' has no definition
-* The resource 'IfcCooledBeamTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCoolingTowerTypeEnum.MECHANICALFORCEDDRAFT' has no definition
-* The resource 'IfcCoolingTowerTypeEnum.MECHANICALINDUCEDDRAFT' has no definition
-* The resource 'IfcCoolingTowerTypeEnum.NATURALDRAFT' has no definition
-* The resource 'IfcCoolingTowerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCoolingTowerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCostItemTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCostItemTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCostScheduleTypeEnum.BUDGET' has no definition
-* The resource 'IfcCostScheduleTypeEnum.COSTPLAN' has no definition
-* The resource 'IfcCostScheduleTypeEnum.ESTIMATE' has no definition
-* The resource 'IfcCostScheduleTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCostScheduleTypeEnum.PRICEDBILLOFQUANTITIES' has no definition
-* The resource 'IfcCostScheduleTypeEnum.SCHEDULEOFRATES' has no definition
-* The resource 'IfcCostScheduleTypeEnum.TENDER' has no definition
-* The resource 'IfcCostScheduleTypeEnum.UNPRICEDBILLOFQUANTITIES' has no definition
-* The resource 'IfcCostScheduleTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCourseTypeEnum.ARMOUR' has no definition
-* The resource 'IfcCourseTypeEnum.BALLASTBED' has no definition
-* The resource 'IfcCourseTypeEnum.CORE' has no definition
-* The resource 'IfcCourseTypeEnum.FILTER' has no definition
-* The resource 'IfcCourseTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCourseTypeEnum.PAVEMENT' has no definition
-* The resource 'IfcCourseTypeEnum.PROTECTION' has no definition
-* The resource 'IfcCourseTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCoveringTypeEnum.CEILING' has no definition
-* The resource 'IfcCoveringTypeEnum.CLADDING' has no definition
-* The resource 'IfcCoveringTypeEnum.COPING' has no definition
-* The resource 'IfcCoveringTypeEnum.FLOORING' has no definition
-* The resource 'IfcCoveringTypeEnum.INSULATION' has no definition
-* The resource 'IfcCoveringTypeEnum.MEMBRANE' has no definition
-* The resource 'IfcCoveringTypeEnum.MOLDING' has no definition
-* The resource 'IfcCoveringTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCoveringTypeEnum.ROOFING' has no definition
-* The resource 'IfcCoveringTypeEnum.SKIRTINGBOARD' has no definition
-* The resource 'IfcCoveringTypeEnum.SLEEVING' has no definition
-* The resource 'IfcCoveringTypeEnum.TOPPING' has no definition
-* The resource 'IfcCoveringTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCoveringTypeEnum.WRAPPING' has no definition
-* The resource 'IfcCrewResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCrewResourceTypeEnum.OFFICE' has no definition
-* The resource 'IfcCrewResourceTypeEnum.SITE' has no definition
-* The resource 'IfcCrewResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCurtainWallTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcCurtainWallTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcCurveInterpolationEnum.LINEAR' has no definition
-* The resource 'IfcCurveInterpolationEnum.LOG_LINEAR' has no definition
-* The resource 'IfcCurveInterpolationEnum.LOG_LOG' has no definition
-* The resource 'IfcCurveInterpolationEnum.NOTDEFINED' has no definition
-* The resource 'IfcDamperTypeEnum.BACKDRAFTDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.BALANCINGDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.BLASTDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.CONTROLDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.FIREDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.FIRESMOKEDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.FUMEHOODEXHAUST' has no definition
-* The resource 'IfcDamperTypeEnum.GRAVITYDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.GRAVITYRELIEFDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDamperTypeEnum.RELIEFDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.SMOKEDAMPER' has no definition
-* The resource 'IfcDamperTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDataOriginEnum.MEASURED' has no definition
-* The resource 'IfcDataOriginEnum.NOTDEFINED' has no definition
-* The resource 'IfcDataOriginEnum.PREDICTED' has no definition
-* The resource 'IfcDataOriginEnum.SIMULATED' has no definition
-* The resource 'IfcDataOriginEnum.USERDEFINED' has no definition
-* The resource 'IfcDerivedUnitEnum.ACCELERATIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.ANGULARVELOCITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.AREADENSITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.COMPOUNDPLANEANGLEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.CURVATUREUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.DYNAMICVISCOSITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.HEATFLUXDENSITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.HEATINGVALUEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.INTEGERCOUNTRATEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.IONCONCENTRATIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.ISOTHERMALMOISTURECAPACITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.KINEMATICVISCOSITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.LINEARFORCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.LINEARMOMENTUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.LINEARSTIFFNESSUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.LINEARVELOCITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.LUMINOUSINTENSITYDISTRIBUTIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MASSDENSITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MASSFLOWRATEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MASSPERLENGTHUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MODULUSOFELASTICITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MODULUSOFLINEARSUBGRADEREACTIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MODULUSOFROTATIONALSUBGRADEREACTIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MODULUSOFSUBGRADEREACTIONUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MOISTUREDIFFUSIVITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MOLECULARWEIGHTUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.MOMENTOFINERTIAUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.PHUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.PLANARFORCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.ROTATIONALFREQUENCYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.ROTATIONALMASSUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.ROTATIONALSTIFFNESSUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SECTIONAREAINTEGRALUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SECTIONMODULUSUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SHEARMODULUSUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SOUNDPOWERLEVELUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SOUNDPOWERUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SOUNDPRESSURELEVELUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SOUNDPRESSUREUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.SPECIFICHEATCAPACITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.TEMPERATUREGRADIENTUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.TEMPERATURERATEOFCHANGEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.THERMALADMITTANCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.THERMALCONDUCTANCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.THERMALEXPANSIONCOEFFICIENTUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.THERMALRESISTANCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.THERMALTRANSMITTANCEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.TORQUEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.USERDEFINED' has no definition
-* The resource 'IfcDerivedUnitEnum.VAPORPERMEABILITYUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.VOLUMETRICFLOWRATEUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.WARPINGCONSTANTUNIT' has no definition
-* The resource 'IfcDerivedUnitEnum.WARPINGMOMENTUNIT' has no definition
-* The resource 'IfcDirectionSenseEnum.NEGATIVE' has no definition
-* The resource 'IfcDirectionSenseEnum.POSITIVE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.ANCHORPLATE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.BIRDPROTECTION' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.BRACKET' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.CABLEARRANGER' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.ELASTIC_CUSHION' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.EXPANSION_JOINT_DEVICE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.FILLER' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.FLASHING' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.INSULATOR' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.LOCK' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.PANEL_STRENGTHENING' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.POINTMACHINEMOUNTINGDEVICE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.POINT_MACHINE_LOCKING_DEVICE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.RAILBRACE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.RAILPAD' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.RAIL_LUBRICATION' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.RAIL_MECHANICAL_EQUIPMENT' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.SHOE' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.SLIDINGCHAIR' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.SOUNDABSORPTION' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.TENSIONINGEQUIPMENT' has no definition
-* The resource 'IfcDiscreteAccessoryTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.CONSUMERUNIT' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.DISPATCHINGBOARD' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.DISTRIBUTIONBOARD' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.DISTRIBUTIONFRAME' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.MOTORCONTROLCENTRE' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.SWITCHBOARD' has no definition
-* The resource 'IfcDistributionBoardTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.FORMEDDUCT' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.INSPECTIONCHAMBER' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.INSPECTIONPIT' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.MANHOLE' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.METERCHAMBER' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.SUMP' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.TRENCH' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDistributionChamberElementTypeEnum.VALVECHAMBER' has no definition
-* The resource 'IfcDistributionPortTypeEnum.CABLE' has no definition
-* The resource 'IfcDistributionPortTypeEnum.CABLECARRIER' has no definition
-* The resource 'IfcDistributionPortTypeEnum.DUCT' has no definition
-* The resource 'IfcDistributionPortTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDistributionPortTypeEnum.PIPE' has no definition
-* The resource 'IfcDistributionPortTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDistributionPortTypeEnum.WIRELESS' has no definition
-* The resource 'IfcDistributionSystemEnum.AIRCONDITIONING' has no definition
-* The resource 'IfcDistributionSystemEnum.AUDIOVISUAL' has no definition
-* The resource 'IfcDistributionSystemEnum.CATENARY_SYSTEM' has no definition
-* The resource 'IfcDistributionSystemEnum.CHEMICAL' has no definition
-* The resource 'IfcDistributionSystemEnum.CHILLEDWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.COMMUNICATION' has no definition
-* The resource 'IfcDistributionSystemEnum.COMPRESSEDAIR' has no definition
-* The resource 'IfcDistributionSystemEnum.CONDENSERWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.CONTROL' has no definition
-* The resource 'IfcDistributionSystemEnum.CONVEYING' has no definition
-* The resource 'IfcDistributionSystemEnum.DATA' has no definition
-* The resource 'IfcDistributionSystemEnum.DISPOSAL' has no definition
-* The resource 'IfcDistributionSystemEnum.DOMESTICCOLDWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.DOMESTICHOTWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.DRAINAGE' has no definition
-* The resource 'IfcDistributionSystemEnum.EARTHING' has no definition
-* The resource 'IfcDistributionSystemEnum.ELECTRICAL' has no definition
-* The resource 'IfcDistributionSystemEnum.ELECTROACOUSTIC' has no definition
-* The resource 'IfcDistributionSystemEnum.EXHAUST' has no definition
-* The resource 'IfcDistributionSystemEnum.FIREPROTECTION' has no definition
-* The resource 'IfcDistributionSystemEnum.FIXEDTRANSMISSIONNETWORK' has no definition
-* The resource 'IfcDistributionSystemEnum.FUEL' has no definition
-* The resource 'IfcDistributionSystemEnum.GAS' has no definition
-* The resource 'IfcDistributionSystemEnum.HAZARDOUS' has no definition
-* The resource 'IfcDistributionSystemEnum.HEATING' has no definition
-* The resource 'IfcDistributionSystemEnum.LIGHTING' has no definition
-* The resource 'IfcDistributionSystemEnum.LIGHTNINGPROTECTION' has no definition
-* The resource 'IfcDistributionSystemEnum.MOBILENETWORK' has no definition
-* The resource 'IfcDistributionSystemEnum.MONITORINGSYSTEM' has no definition
-* The resource 'IfcDistributionSystemEnum.MUNICIPALSOLIDWASTE' has no definition
-* The resource 'IfcDistributionSystemEnum.NOTDEFINED' has no definition
-* The resource 'IfcDistributionSystemEnum.OIL' has no definition
-* The resource 'IfcDistributionSystemEnum.OPERATIONAL' has no definition
-* The resource 'IfcDistributionSystemEnum.OPERATIONALTELEPHONYSYSTEM' has no definition
-* The resource 'IfcDistributionSystemEnum.OVERHEAD_CONTACTLINE_SYSTEM' has no definition
-* The resource 'IfcDistributionSystemEnum.POWERGENERATION' has no definition
-* The resource 'IfcDistributionSystemEnum.RAINWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.REFRIGERATION' has no definition
-* The resource 'IfcDistributionSystemEnum.RETURN_CIRCUIT' has no definition
-* The resource 'IfcDistributionSystemEnum.SECURITY' has no definition
-* The resource 'IfcDistributionSystemEnum.SEWAGE' has no definition
-* The resource 'IfcDistributionSystemEnum.SIGNAL' has no definition
-* The resource 'IfcDistributionSystemEnum.STORMWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.TELEPHONE' has no definition
-* The resource 'IfcDistributionSystemEnum.TV' has no definition
-* The resource 'IfcDistributionSystemEnum.USERDEFINED' has no definition
-* The resource 'IfcDistributionSystemEnum.VACUUM' has no definition
-* The resource 'IfcDistributionSystemEnum.VENT' has no definition
-* The resource 'IfcDistributionSystemEnum.VENTILATION' has no definition
-* The resource 'IfcDistributionSystemEnum.WASTEWATER' has no definition
-* The resource 'IfcDistributionSystemEnum.WATERSUPPLY' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.CONFIDENTIAL' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.NOTDEFINED' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.PERSONAL' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.PUBLIC' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.RESTRICTED' has no definition
-* The resource 'IfcDocumentConfidentialityEnum.USERDEFINED' has no definition
-* The resource 'IfcDocumentStatusEnum.DRAFT' has no definition
-* The resource 'IfcDocumentStatusEnum.FINAL' has no definition
-* The resource 'IfcDocumentStatusEnum.FINALDRAFT' has no definition
-* The resource 'IfcDocumentStatusEnum.NOTDEFINED' has no definition
-* The resource 'IfcDocumentStatusEnum.REVISION' has no definition
-* The resource 'IfcDoorPanelOperationEnum.DOUBLE_ACTING' has no definition
-* The resource 'IfcDoorPanelOperationEnum.FIXEDPANEL' has no definition
-* The resource 'IfcDoorPanelOperationEnum.FOLDING' has no definition
-* The resource 'IfcDoorPanelOperationEnum.NOTDEFINED' has no definition
-* The resource 'IfcDoorPanelOperationEnum.REVOLVING' has no definition
-* The resource 'IfcDoorPanelOperationEnum.ROLLINGUP' has no definition
-* The resource 'IfcDoorPanelOperationEnum.SLIDING' has no definition
-* The resource 'IfcDoorPanelOperationEnum.SWINGING' has no definition
-* The resource 'IfcDoorPanelOperationEnum.USERDEFINED' has no definition
-* The resource 'IfcDoorPanelPositionEnum.LEFT' has no definition
-* The resource 'IfcDoorPanelPositionEnum.MIDDLE' has no definition
-* The resource 'IfcDoorPanelPositionEnum.NOTDEFINED' has no definition
-* The resource 'IfcDoorPanelPositionEnum.RIGHT' has no definition
-* The resource 'IfcDoorTypeEnum.BOOM_BARRIER' has no definition
-* The resource 'IfcDoorTypeEnum.DOOR' has no definition
-* The resource 'IfcDoorTypeEnum.GATE' has no definition
-* The resource 'IfcDoorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDoorTypeEnum.TRAPDOOR' has no definition
-* The resource 'IfcDoorTypeEnum.TURNSTILE' has no definition
-* The resource 'IfcDoorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_DOUBLE_SWING' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_FOLDING' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_LIFTING_VERTICAL' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_SINGLE_SWING' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_DOOR_SLIDING' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_SWING_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.DOUBLE_SWING_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.FOLDING_TO_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.FOLDING_TO_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.LIFTING_HORIZONTAL' has no definition
-* The resource 'IfcDoorTypeOperationEnum.LIFTING_VERTICAL_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.LIFTING_VERTICAL_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.NOTDEFINED' has no definition
-* The resource 'IfcDoorTypeOperationEnum.REVOLVING' has no definition
-* The resource 'IfcDoorTypeOperationEnum.REVOLVING_VERTICAL' has no definition
-* The resource 'IfcDoorTypeOperationEnum.ROLLINGUP' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SINGLE_SWING_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SINGLE_SWING_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SLIDING_TO_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SLIDING_TO_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SWING_FIXED_LEFT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.SWING_FIXED_RIGHT' has no definition
-* The resource 'IfcDoorTypeOperationEnum.USERDEFINED' has no definition
-* The resource 'IfcDuctFittingTypeEnum.BEND' has no definition
-* The resource 'IfcDuctFittingTypeEnum.CONNECTOR' has no definition
-* The resource 'IfcDuctFittingTypeEnum.ENTRY' has no definition
-* The resource 'IfcDuctFittingTypeEnum.EXIT' has no definition
-* The resource 'IfcDuctFittingTypeEnum.JUNCTION' has no definition
-* The resource 'IfcDuctFittingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDuctFittingTypeEnum.OBSTRUCTION' has no definition
-* The resource 'IfcDuctFittingTypeEnum.TRANSITION' has no definition
-* The resource 'IfcDuctFittingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDuctSegmentTypeEnum.FLEXIBLESEGMENT' has no definition
-* The resource 'IfcDuctSegmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDuctSegmentTypeEnum.RIGIDSEGMENT' has no definition
-* The resource 'IfcDuctSegmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcDuctSilencerTypeEnum.FLATOVAL' has no definition
-* The resource 'IfcDuctSilencerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcDuctSilencerTypeEnum.RECTANGULAR' has no definition
-* The resource 'IfcDuctSilencerTypeEnum.ROUND' has no definition
-* The resource 'IfcDuctSilencerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.BASE_EXCAVATION' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.CUT' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.DREDGING' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.EXCAVATION' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.OVEREXCAVATION' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.PAVEMENTMILLING' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.STEPEXCAVATION' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.TOPSOILREMOVAL' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.TRENCH' has no definition
-* The resource 'IfcEarthworksCutTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.BACKFILL' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.COUNTERWEIGHT' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.EMBANKMENT' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.SLOPEFILL' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.SUBGRADE' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.SUBGRADEBED' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.TRANSITIONSECTION' has no definition
-* The resource 'IfcEarthworksFillTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.DISHWASHER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.ELECTRICCOOKER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FREESTANDINGELECTRICHEATER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FREESTANDINGFAN' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FREESTANDINGWATERCOOLER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FREESTANDINGWATERHEATER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FREEZER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.FRIDGE_FREEZER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.HANDDRYER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.KITCHENMACHINE' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.MICROWAVE' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.PHOTOCOPIER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.REFRIGERATOR' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.TUMBLEDRYER' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.VENDINGMACHINE' has no definition
-* The resource 'IfcElectricApplianceTypeEnum.WASHINGMACHINE' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.CONSUMERUNIT' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.DISTRIBUTIONBOARD' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.MOTORCONTROLCENTRE' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.SWITCHBOARD' has no definition
-* The resource 'IfcElectricDistributionBoardTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.BATTERY' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.CAPACITOR' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.CAPACITORBANK' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.COMPENSATOR' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.HARMONICFILTER' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.INDUCTOR' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.INDUCTORBANK' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.RECHARGER' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.UPS' has no definition
-* The resource 'IfcElectricFlowStorageDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricFlowTreatmentDeviceTypeEnum.ELECTRONICFILTER' has no definition
-* The resource 'IfcElectricFlowTreatmentDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricFlowTreatmentDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricGeneratorTypeEnum.CHP' has no definition
-* The resource 'IfcElectricGeneratorTypeEnum.ENGINEGENERATOR' has no definition
-* The resource 'IfcElectricGeneratorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricGeneratorTypeEnum.STANDALONE' has no definition
-* The resource 'IfcElectricGeneratorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricMotorTypeEnum.DC' has no definition
-* The resource 'IfcElectricMotorTypeEnum.INDUCTION' has no definition
-* The resource 'IfcElectricMotorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricMotorTypeEnum.POLYPHASE' has no definition
-* The resource 'IfcElectricMotorTypeEnum.RELUCTANCESYNCHRONOUS' has no definition
-* The resource 'IfcElectricMotorTypeEnum.SYNCHRONOUS' has no definition
-* The resource 'IfcElectricMotorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElectricTimeControlTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcElectricTimeControlTypeEnum.RELAY' has no definition
-* The resource 'IfcElectricTimeControlTypeEnum.TIMECLOCK' has no definition
-* The resource 'IfcElectricTimeControlTypeEnum.TIMEDELAY' has no definition
-* The resource 'IfcElectricTimeControlTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.ABUTMENT' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.ACCESSORY_ASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.ARCH' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.BEAM_GRID' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.BRACED_FRAME' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.CROSS_BRACING' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.DECK' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.DILATATIONPANEL' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.ENTRANCEWORKS' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.GIRDER' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.GRID' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.MAST' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.PIER' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.PYLON' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.RAIL_MECHANICAL_EQUIPMENT_ASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.REINFORCEMENT_UNIT' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.RIGID_FRAME' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SHELTER' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SIGNALASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SLAB_FIELD' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SUMPBUSTER' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SUPPORTINGASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.SUSPENSIONASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.TRACKPANEL' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.TRACTION_SWITCHING_ASSEMBLY' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.TRAFFIC_CALMING_DEVICE' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.TRUSS' has no definition
-* The resource 'IfcElementAssemblyTypeEnum.TURNOUTPANEL' has no definition
-* The resource 'IfcElementCompositionEnum.COMPLEX' has no definition
-* The resource 'IfcElementCompositionEnum.ELEMENT' has no definition
-* The resource 'IfcElementCompositionEnum.PARTIAL' has no definition
-* The resource 'IfcEngineTypeEnum.EXTERNALCOMBUSTION' has no definition
-* The resource 'IfcEngineTypeEnum.INTERNALCOMBUSTION' has no definition
-* The resource 'IfcEngineTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEngineTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.DIRECTEVAPORATIVEAIRWASHER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.DIRECTEVAPORATIVEPACKAGEDROTARYAIRCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.DIRECTEVAPORATIVERANDOMMEDIAAIRCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.DIRECTEVAPORATIVERIGIDMEDIAAIRCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.DIRECTEVAPORATIVESLINGERSPACKAGEDAIRCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.INDIRECTDIRECTCOMBINATION' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.INDIRECTEVAPORATIVECOOLINGTOWERORCOILCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.INDIRECTEVAPORATIVEPACKAGEAIRCOOLER' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.INDIRECTEVAPORATIVEWETCOIL' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEvaporativeCoolerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEvaporatorTypeEnum.DIRECTEXPANSION' has no definition
-* The resource 'IfcEvaporatorTypeEnum.DIRECTEXPANSIONBRAZEDPLATE' has no definition
-* The resource 'IfcEvaporatorTypeEnum.DIRECTEXPANSIONSHELLANDTUBE' has no definition
-* The resource 'IfcEvaporatorTypeEnum.DIRECTEXPANSIONTUBEINTUBE' has no definition
-* The resource 'IfcEvaporatorTypeEnum.FLOODEDSHELLANDTUBE' has no definition
-* The resource 'IfcEvaporatorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEvaporatorTypeEnum.SHELLANDCOIL' has no definition
-* The resource 'IfcEvaporatorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEventTriggerTypeEnum.EVENTCOMPLEX' has no definition
-* The resource 'IfcEventTriggerTypeEnum.EVENTMESSAGE' has no definition
-* The resource 'IfcEventTriggerTypeEnum.EVENTRULE' has no definition
-* The resource 'IfcEventTriggerTypeEnum.EVENTTIME' has no definition
-* The resource 'IfcEventTriggerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEventTriggerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcEventTypeEnum.ENDEVENT' has no definition
-* The resource 'IfcEventTypeEnum.INTERMEDIATEEVENT' has no definition
-* The resource 'IfcEventTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcEventTypeEnum.STARTEVENT' has no definition
-* The resource 'IfcEventTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcExternalSpatialElementTypeEnum.EXTERNAL' has no definition
-* The resource 'IfcExternalSpatialElementTypeEnum.EXTERNAL_EARTH' has no definition
-* The resource 'IfcExternalSpatialElementTypeEnum.EXTERNAL_FIRE' has no definition
-* The resource 'IfcExternalSpatialElementTypeEnum.EXTERNAL_WATER' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.ABOVEGROUND' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.BELOWGROUND' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.JUNCTION' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.LEVELCROSSING' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.SEGMENT' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.SUBSTRUCTURE' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.SUPERSTRUCTURE' has no definition
-* The resource 'IfcFacilityPartCommonTypeEnum.TERMINAL' has no definition
-* The resource 'IfcFacilityUsageEnum.LATERAL' has no definition
-* The resource 'IfcFacilityUsageEnum.LONGITUDINAL' has no definition
-* The resource 'IfcFacilityUsageEnum.REGION' has no definition
-* The resource 'IfcFacilityUsageEnum.VERTICAL' has no definition
-* The resource 'IfcFanTypeEnum.CENTRIFUGALAIRFOIL' has no definition
-* The resource 'IfcFanTypeEnum.CENTRIFUGALBACKWARDINCLINEDCURVED' has no definition
-* The resource 'IfcFanTypeEnum.CENTRIFUGALFORWARDCURVED' has no definition
-* The resource 'IfcFanTypeEnum.CENTRIFUGALRADIAL' has no definition
-* The resource 'IfcFanTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFanTypeEnum.PROPELLORAXIAL' has no definition
-* The resource 'IfcFanTypeEnum.TUBEAXIAL' has no definition
-* The resource 'IfcFanTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFanTypeEnum.VANEAXIAL' has no definition
-* The resource 'IfcFastenerTypeEnum.GLUE' has no definition
-* The resource 'IfcFastenerTypeEnum.MORTAR' has no definition
-* The resource 'IfcFastenerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFastenerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFastenerTypeEnum.WELD' has no definition
-* The resource 'IfcFilterTypeEnum.AIRPARTICLEFILTER' has no definition
-* The resource 'IfcFilterTypeEnum.COMPRESSEDAIRFILTER' has no definition
-* The resource 'IfcFilterTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFilterTypeEnum.ODORFILTER' has no definition
-* The resource 'IfcFilterTypeEnum.OILFILTER' has no definition
-* The resource 'IfcFilterTypeEnum.STRAINER' has no definition
-* The resource 'IfcFilterTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFilterTypeEnum.WATERFILTER' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.BREECHINGINLET' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.FIREHYDRANT' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.FIREMONITOR' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.HOSEREEL' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.SPRINKLER' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.SPRINKLERDEFLECTOR' has no definition
-* The resource 'IfcFireSuppressionTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFlowDirectionEnum.NOTDEFINED' has no definition
-* The resource 'IfcFlowDirectionEnum.SINK' has no definition
-* The resource 'IfcFlowDirectionEnum.SOURCE' has no definition
-* The resource 'IfcFlowDirectionEnum.SOURCEANDSINK' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.AMMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.COMBINED' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.FREQUENCYMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.PHASEANGLEMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.POWERFACTORMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.PRESSUREGAUGE' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.THERMOMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.VOLTMETER' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.VOLTMETER_PEAK' has no definition
-* The resource 'IfcFlowInstrumentTypeEnum.VOLTMETER_RMS' has no definition
-* The resource 'IfcFlowMeterTypeEnum.ENERGYMETER' has no definition
-* The resource 'IfcFlowMeterTypeEnum.GASMETER' has no definition
-* The resource 'IfcFlowMeterTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFlowMeterTypeEnum.OILMETER' has no definition
-* The resource 'IfcFlowMeterTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFlowMeterTypeEnum.WATERMETER' has no definition
-* The resource 'IfcFootingTypeEnum.CAISSON_FOUNDATION' has no definition
-* The resource 'IfcFootingTypeEnum.FOOTING_BEAM' has no definition
-* The resource 'IfcFootingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFootingTypeEnum.PAD_FOOTING' has no definition
-* The resource 'IfcFootingTypeEnum.PILE_CAP' has no definition
-* The resource 'IfcFootingTypeEnum.STRIP_FOOTING' has no definition
-* The resource 'IfcFootingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcFurnitureTypeEnum.BED' has no definition
-* The resource 'IfcFurnitureTypeEnum.CHAIR' has no definition
-* The resource 'IfcFurnitureTypeEnum.DESK' has no definition
-* The resource 'IfcFurnitureTypeEnum.FILECABINET' has no definition
-* The resource 'IfcFurnitureTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcFurnitureTypeEnum.SHELF' has no definition
-* The resource 'IfcFurnitureTypeEnum.SOFA' has no definition
-* The resource 'IfcFurnitureTypeEnum.TABLE' has no definition
-* The resource 'IfcFurnitureTypeEnum.TECHNICALCABINET' has no definition
-* The resource 'IfcFurnitureTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcGeographicElementTypeEnum.SOIL_BORING_POINT' has no definition
-* The resource 'IfcGeographicElementTypeEnum.TERRAIN' has no definition
-* The resource 'IfcGeographicElementTypeEnum.VEGETATION' has no definition
-* The resource 'IfcGeometricProjectionEnum.ELEVATION_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.GRAPH_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.MODEL_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.NOTDEFINED' has no definition
-* The resource 'IfcGeometricProjectionEnum.PLAN_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.REFLECTED_PLAN_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.SECTION_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.SKETCH_VIEW' has no definition
-* The resource 'IfcGeometricProjectionEnum.USERDEFINED' has no definition
-* The resource 'IfcGeotechnicalStratumTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcGeotechnicalStratumTypeEnum.SOLID' has no definition
-* The resource 'IfcGeotechnicalStratumTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcGeotechnicalStratumTypeEnum.VOID' has no definition
-* The resource 'IfcGeotechnicalStratumTypeEnum.WATER' has no definition
-* The resource 'IfcGlobalOrLocalEnum.GLOBAL_COORDS' has no definition
-* The resource 'IfcGlobalOrLocalEnum.LOCAL_COORDS' has no definition
-* The resource 'IfcGridTypeEnum.IRREGULAR' has no definition
-* The resource 'IfcGridTypeEnum.RADIAL' has no definition
-* The resource 'IfcGridTypeEnum.RECTANGULAR' has no definition
-* The resource 'IfcGridTypeEnum.TRIANGULAR' has no definition
-* The resource 'IfcHeatExchangerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcHeatExchangerTypeEnum.PLATE' has no definition
-* The resource 'IfcHeatExchangerTypeEnum.SHELLANDTUBE' has no definition
-* The resource 'IfcHeatExchangerTypeEnum.TURNOUTHEATING' has no definition
-* The resource 'IfcHeatExchangerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICAIRWASHER' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICATOMIZING' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICCOMPRESSEDAIRNOZZLE' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICPAN' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICRIGIDMEDIA' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICULTRASONIC' has no definition
-* The resource 'IfcHumidifierTypeEnum.ADIABATICWETTEDELEMENT' has no definition
-* The resource 'IfcHumidifierTypeEnum.ASSISTEDBUTANE' has no definition
-* The resource 'IfcHumidifierTypeEnum.ASSISTEDELECTRIC' has no definition
-* The resource 'IfcHumidifierTypeEnum.ASSISTEDNATURALGAS' has no definition
-* The resource 'IfcHumidifierTypeEnum.ASSISTEDPROPANE' has no definition
-* The resource 'IfcHumidifierTypeEnum.ASSISTEDSTEAM' has no definition
-* The resource 'IfcHumidifierTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcHumidifierTypeEnum.STEAMINJECTION' has no definition
-* The resource 'IfcHumidifierTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.BUMPER' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.CRASHCUSHION' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.DAMPINGSYSTEM' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.FENDER' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcImpactProtectionDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcInterceptorTypeEnum.CYCLONIC' has no definition
-* The resource 'IfcInterceptorTypeEnum.GREASE' has no definition
-* The resource 'IfcInterceptorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcInterceptorTypeEnum.OIL' has no definition
-* The resource 'IfcInterceptorTypeEnum.PETROL' has no definition
-* The resource 'IfcInterceptorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcInternalOrExternalEnum.EXTERNAL' has no definition
-* The resource 'IfcInternalOrExternalEnum.EXTERNAL_EARTH' has no definition
-* The resource 'IfcInternalOrExternalEnum.EXTERNAL_FIRE' has no definition
-* The resource 'IfcInternalOrExternalEnum.EXTERNAL_WATER' has no definition
-* The resource 'IfcInternalOrExternalEnum.INTERNAL' has no definition
-* The resource 'IfcInventoryTypeEnum.ASSETINVENTORY' has no definition
-* The resource 'IfcInventoryTypeEnum.FURNITUREINVENTORY' has no definition
-* The resource 'IfcInventoryTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcInventoryTypeEnum.SPACEINVENTORY' has no definition
-* The resource 'IfcInventoryTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcJunctionBoxTypeEnum.DATA' has no definition
-* The resource 'IfcJunctionBoxTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcJunctionBoxTypeEnum.POWER' has no definition
-* The resource 'IfcJunctionBoxTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcKerbTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcKerbTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcKnotType.PIECEWISE_BEZIER_KNOTS' has no definition
-* The resource 'IfcKnotType.QUASI_UNIFORM_KNOTS' has no definition
-* The resource 'IfcKnotType.UNIFORM_KNOTS' has no definition
-* The resource 'IfcKnotType.UNSPECIFIED' has no definition
-* The resource 'IfcLaborResourceTypeEnum.ADMINISTRATION' has no definition
-* The resource 'IfcLaborResourceTypeEnum.CARPENTRY' has no definition
-* The resource 'IfcLaborResourceTypeEnum.CLEANING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.CONCRETE' has no definition
-* The resource 'IfcLaborResourceTypeEnum.DRYWALL' has no definition
-* The resource 'IfcLaborResourceTypeEnum.ELECTRIC' has no definition
-* The resource 'IfcLaborResourceTypeEnum.FINISHING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.FLOORING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.GENERAL' has no definition
-* The resource 'IfcLaborResourceTypeEnum.HVAC' has no definition
-* The resource 'IfcLaborResourceTypeEnum.LANDSCAPING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.MASONRY' has no definition
-* The resource 'IfcLaborResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcLaborResourceTypeEnum.PAINTING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.PAVING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.PLUMBING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.ROOFING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.SITEGRADING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.STEELWORK' has no definition
-* The resource 'IfcLaborResourceTypeEnum.SURVEYING' has no definition
-* The resource 'IfcLaborResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcLampTypeEnum.COMPACTFLUORESCENT' has no definition
-* The resource 'IfcLampTypeEnum.FLUORESCENT' has no definition
-* The resource 'IfcLampTypeEnum.HALOGEN' has no definition
-* The resource 'IfcLampTypeEnum.HIGHPRESSUREMERCURY' has no definition
-* The resource 'IfcLampTypeEnum.HIGHPRESSURESODIUM' has no definition
-* The resource 'IfcLampTypeEnum.LED' has no definition
-* The resource 'IfcLampTypeEnum.METALHALIDE' has no definition
-* The resource 'IfcLampTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcLampTypeEnum.OLED' has no definition
-* The resource 'IfcLampTypeEnum.TUNGSTENFILAMENT' has no definition
-* The resource 'IfcLampTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcLayerSetDirectionEnum.AXIS1' has no definition
-* The resource 'IfcLayerSetDirectionEnum.AXIS2' has no definition
-* The resource 'IfcLayerSetDirectionEnum.AXIS3' has no definition
-* The resource 'IfcLightDistributionCurveEnum.NOTDEFINED' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_A' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_B' has no definition
-* The resource 'IfcLightDistributionCurveEnum.TYPE_C' has no definition
-* The resource 'IfcLightEmissionSourceEnum.COMPACTFLUORESCENT' has no definition
-* The resource 'IfcLightEmissionSourceEnum.FLUORESCENT' has no definition
-* The resource 'IfcLightEmissionSourceEnum.HIGHPRESSUREMERCURY' has no definition
-* The resource 'IfcLightEmissionSourceEnum.HIGHPRESSURESODIUM' has no definition
-* The resource 'IfcLightEmissionSourceEnum.LIGHTEMITTINGDIODE' has no definition
-* The resource 'IfcLightEmissionSourceEnum.LOWPRESSURESODIUM' has no definition
-* The resource 'IfcLightEmissionSourceEnum.LOWVOLTAGEHALOGEN' has no definition
-* The resource 'IfcLightEmissionSourceEnum.MAINVOLTAGEHALOGEN' has no definition
-* The resource 'IfcLightEmissionSourceEnum.METALHALIDE' has no definition
-* The resource 'IfcLightEmissionSourceEnum.NOTDEFINED' has no definition
-* The resource 'IfcLightEmissionSourceEnum.TUNGSTENFILAMENT' has no definition
-* The resource 'IfcLightFixtureTypeEnum.DIRECTIONSOURCE' has no definition
-* The resource 'IfcLightFixtureTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcLightFixtureTypeEnum.POINTSOURCE' has no definition
-* The resource 'IfcLightFixtureTypeEnum.SECURITYLIGHTING' has no definition
-* The resource 'IfcLightFixtureTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcLiquidTerminalTypeEnum.HOSEREEL' has no definition
-* The resource 'IfcLiquidTerminalTypeEnum.LOADINGARM' has no definition
-* The resource 'IfcLiquidTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcLiquidTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcLoadGroupTypeEnum.LOAD_CASE' has no definition
-* The resource 'IfcLoadGroupTypeEnum.LOAD_COMBINATION' has no definition
-* The resource 'IfcLoadGroupTypeEnum.LOAD_GROUP' has no definition
-* The resource 'IfcLoadGroupTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcLoadGroupTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcLogicalOperatorEnum.LOGICALAND' has no definition
-* The resource 'IfcLogicalOperatorEnum.LOGICALNOTAND' has no definition
-* The resource 'IfcLogicalOperatorEnum.LOGICALNOTOR' has no definition
-* The resource 'IfcLogicalOperatorEnum.LOGICALOR' has no definition
-* The resource 'IfcLogicalOperatorEnum.LOGICALXOR' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.BARRIERBEACH' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.BREAKWATER' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.CANAL' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.DRYDOCK' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.FLOATINGDOCK' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.HYDROLIFT' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.JETTY' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.LAUNCHRECOVERY' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.MARINEDEFENCE' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.NAVIGATIONALCHANNEL' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.PORT' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.QUAY' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.REVETMENT' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.SHIPLIFT' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.SHIPLOCK' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.SHIPYARD' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.SLIPWAY' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.WATERWAY' has no definition
-* The resource 'IfcMarineFacilityTypeEnum.WATERWAYSHIPLIFT' has no definition
-* The resource 'IfcMarinePartTypeEnum.ABOVEWATERLINE' has no definition
-* The resource 'IfcMarinePartTypeEnum.ANCHORAGE' has no definition
-* The resource 'IfcMarinePartTypeEnum.APPROACHCHANNEL' has no definition
-* The resource 'IfcMarinePartTypeEnum.BELOWWATERLINE' has no definition
-* The resource 'IfcMarinePartTypeEnum.BERTHINGSTRUCTURE' has no definition
-* The resource 'IfcMarinePartTypeEnum.CHAMBER' has no definition
-* The resource 'IfcMarinePartTypeEnum.CILL_LEVEL' has no definition
-* The resource 'IfcMarinePartTypeEnum.COPELEVEL' has no definition
-* The resource 'IfcMarinePartTypeEnum.CORE' has no definition
-* The resource 'IfcMarinePartTypeEnum.CREST' has no definition
-* The resource 'IfcMarinePartTypeEnum.GATEHEAD' has no definition
-* The resource 'IfcMarinePartTypeEnum.GUDINGSTRUCTURE' has no definition
-* The resource 'IfcMarinePartTypeEnum.HIGHWATERLINE' has no definition
-* The resource 'IfcMarinePartTypeEnum.LANDFIELD' has no definition
-* The resource 'IfcMarinePartTypeEnum.LEEWARDSIDE' has no definition
-* The resource 'IfcMarinePartTypeEnum.LOWWATERLINE' has no definition
-* The resource 'IfcMarinePartTypeEnum.MANUFACTURING' has no definition
-* The resource 'IfcMarinePartTypeEnum.NAVIGATIONALAREA' has no definition
-* The resource 'IfcMarinePartTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMarinePartTypeEnum.PROTECTION' has no definition
-* The resource 'IfcMarinePartTypeEnum.SHIPTRANSFER' has no definition
-* The resource 'IfcMarinePartTypeEnum.STORAGEAREA' has no definition
-* The resource 'IfcMarinePartTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMarinePartTypeEnum.VEHICLESERVICING' has no definition
-* The resource 'IfcMarinePartTypeEnum.WATERFIELD' has no definition
-* The resource 'IfcMarinePartTypeEnum.WEATHERSIDE' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.ANCHORBOLT' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.BOLT' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.CHAIN' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.COUPLER' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.DOWEL' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.NAIL' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.NAILPLATE' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.RAILFASTENING' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.RAILJOINT' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.RIVET' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.ROPE' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.SCREW' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.SHEARCONNECTOR' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.STAPLE' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.STUDSHEARCONNECTOR' has no definition
-* The resource 'IfcMechanicalFastenerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.AIRSTATION' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.FEEDAIRUNIT' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.OXYGENGENERATOR' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.OXYGENPLANT' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMedicalDeviceTypeEnum.VACUUMSTATION' has no definition
-* The resource 'IfcMemberTypeEnum.ARCH_SEGMENT' has no definition
-* The resource 'IfcMemberTypeEnum.BRACE' has no definition
-* The resource 'IfcMemberTypeEnum.CHORD' has no definition
-* The resource 'IfcMemberTypeEnum.COLLAR' has no definition
-* The resource 'IfcMemberTypeEnum.MEMBER' has no definition
-* The resource 'IfcMemberTypeEnum.MULLION' has no definition
-* The resource 'IfcMemberTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMemberTypeEnum.PLATE' has no definition
-* The resource 'IfcMemberTypeEnum.POST' has no definition
-* The resource 'IfcMemberTypeEnum.PURLIN' has no definition
-* The resource 'IfcMemberTypeEnum.RAFTER' has no definition
-* The resource 'IfcMemberTypeEnum.STAY_CABLE' has no definition
-* The resource 'IfcMemberTypeEnum.STIFFENING_RIB' has no definition
-* The resource 'IfcMemberTypeEnum.STRINGER' has no definition
-* The resource 'IfcMemberTypeEnum.STRUCTURALCABLE' has no definition
-* The resource 'IfcMemberTypeEnum.STRUT' has no definition
-* The resource 'IfcMemberTypeEnum.STUD' has no definition
-* The resource 'IfcMemberTypeEnum.SUSPENDER' has no definition
-* The resource 'IfcMemberTypeEnum.SUSPENSION_CABLE' has no definition
-* The resource 'IfcMemberTypeEnum.TIEBAR' has no definition
-* The resource 'IfcMemberTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.ACCESSPOINT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.BASEBANDUNIT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.BASETRANSCEIVERSTATION' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.E_UTRAN_NODE_B' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.GATEWAY_GPRS_SUPPORT_NODE' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.MASTERUNIT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.MOBILESWITCHINGCENTER' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.MSCSERVER' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.PACKETCONTROLUNIT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.REMOTERADIOUNIT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.REMOTEUNIT' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.SERVICE_GPRS_SUPPORT_NODE' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.SUBSCRIBERSERVER' has no definition
-* The resource 'IfcMobileTelecommunicationsApplianceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.BOLLARD' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.LINETENSIONER' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.MAGNETICDEVICE' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.MOORINGHOOKS' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcMooringDeviceTypeEnum.VACUUMDEVICE' has no definition
-* The resource 'IfcMotorConnectionTypeEnum.BELTDRIVE' has no definition
-* The resource 'IfcMotorConnectionTypeEnum.COUPLING' has no definition
-* The resource 'IfcMotorConnectionTypeEnum.DIRECTDRIVE' has no definition
-* The resource 'IfcMotorConnectionTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcMotorConnectionTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcNavigationElementTypeEnum.BEACON' has no definition
-* The resource 'IfcNavigationElementTypeEnum.BUOY' has no definition
-* The resource 'IfcNavigationElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcNavigationElementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcObjectiveEnum.CODECOMPLIANCE' has no definition
-* The resource 'IfcObjectiveEnum.CODEWAIVER' has no definition
-* The resource 'IfcObjectiveEnum.DESIGNINTENT' has no definition
-* The resource 'IfcObjectiveEnum.EXTERNAL' has no definition
-* The resource 'IfcObjectiveEnum.HEALTHANDSAFETY' has no definition
-* The resource 'IfcObjectiveEnum.MERGECONFLICT' has no definition
-* The resource 'IfcObjectiveEnum.MODELVIEW' has no definition
-* The resource 'IfcObjectiveEnum.NOTDEFINED' has no definition
-* The resource 'IfcObjectiveEnum.PARAMETER' has no definition
-* The resource 'IfcObjectiveEnum.REQUIREMENT' has no definition
-* The resource 'IfcObjectiveEnum.SPECIFICATION' has no definition
-* The resource 'IfcObjectiveEnum.TRIGGERCONDITION' has no definition
-* The resource 'IfcObjectiveEnum.USERDEFINED' has no definition
-* The resource 'IfcOccupantTypeEnum.ASSIGNEE' has no definition
-* The resource 'IfcOccupantTypeEnum.ASSIGNOR' has no definition
-* The resource 'IfcOccupantTypeEnum.LESSEE' has no definition
-* The resource 'IfcOccupantTypeEnum.LESSOR' has no definition
-* The resource 'IfcOccupantTypeEnum.LETTINGAGENT' has no definition
-* The resource 'IfcOccupantTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcOccupantTypeEnum.OWNER' has no definition
-* The resource 'IfcOccupantTypeEnum.TENANT' has no definition
-* The resource 'IfcOccupantTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcOpeningElementTypeEnum.OPENING' has no definition
-* The resource 'IfcOpeningElementTypeEnum.RECESS' has no definition
-* The resource 'IfcOutletTypeEnum.AUDIOVISUALOUTLET' has no definition
-* The resource 'IfcOutletTypeEnum.COMMUNICATIONSOUTLET' has no definition
-* The resource 'IfcOutletTypeEnum.DATAOUTLET' has no definition
-* The resource 'IfcOutletTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcOutletTypeEnum.POWEROUTLET' has no definition
-* The resource 'IfcOutletTypeEnum.TELEPHONEOUTLET' has no definition
-* The resource 'IfcOutletTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPavementTypeEnum.FLEXIBLE' has no definition
-* The resource 'IfcPavementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPavementTypeEnum.RIGID' has no definition
-* The resource 'IfcPavementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPerformanceHistoryTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPerformanceHistoryTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPermeableCoveringOperationEnum.GRILL' has no definition
-* The resource 'IfcPermeableCoveringOperationEnum.LOUVER' has no definition
-* The resource 'IfcPermeableCoveringOperationEnum.NOTDEFINED' has no definition
-* The resource 'IfcPermeableCoveringOperationEnum.SCREEN' has no definition
-* The resource 'IfcPermeableCoveringOperationEnum.USERDEFINED' has no definition
-* The resource 'IfcPermitTypeEnum.ACCESS' has no definition
-* The resource 'IfcPermitTypeEnum.BUILDING' has no definition
-* The resource 'IfcPermitTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPermitTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPermitTypeEnum.WORK' has no definition
-* The resource 'IfcPhysicalOrVirtualEnum.PHYSICAL' has no definition
-* The resource 'IfcPhysicalOrVirtualEnum.VIRTUAL' has no definition
-* The resource 'IfcPileConstructionEnum.CAST_IN_PLACE' has no definition
-* The resource 'IfcPileConstructionEnum.COMPOSITE' has no definition
-* The resource 'IfcPileConstructionEnum.NOTDEFINED' has no definition
-* The resource 'IfcPileConstructionEnum.PRECAST_CONCRETE' has no definition
-* The resource 'IfcPileConstructionEnum.PREFAB_STEEL' has no definition
-* The resource 'IfcPileConstructionEnum.USERDEFINED' has no definition
-* The resource 'IfcPileTypeEnum.BORED' has no definition
-* The resource 'IfcPileTypeEnum.COHESION' has no definition
-* The resource 'IfcPileTypeEnum.DRIVEN' has no definition
-* The resource 'IfcPileTypeEnum.FRICTION' has no definition
-* The resource 'IfcPileTypeEnum.JETGROUTING' has no definition
-* The resource 'IfcPileTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPileTypeEnum.SUPPORT' has no definition
-* The resource 'IfcPileTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPipeFittingTypeEnum.BEND' has no definition
-* The resource 'IfcPipeFittingTypeEnum.CONNECTOR' has no definition
-* The resource 'IfcPipeFittingTypeEnum.ENTRY' has no definition
-* The resource 'IfcPipeFittingTypeEnum.EXIT' has no definition
-* The resource 'IfcPipeFittingTypeEnum.JUNCTION' has no definition
-* The resource 'IfcPipeFittingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPipeFittingTypeEnum.OBSTRUCTION' has no definition
-* The resource 'IfcPipeFittingTypeEnum.TRANSITION' has no definition
-* The resource 'IfcPipeFittingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.CULVERT' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.FLEXIBLESEGMENT' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.GUTTER' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.RIGIDSEGMENT' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.SPOOL' has no definition
-* The resource 'IfcPipeSegmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPlateTypeEnum.BASE_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.COVER_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.CURTAIN_PANEL' has no definition
-* The resource 'IfcPlateTypeEnum.FLANGE_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.GUSSET_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPlateTypeEnum.SHEET' has no definition
-* The resource 'IfcPlateTypeEnum.SPLICE_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.STIFFENER_PLATE' has no definition
-* The resource 'IfcPlateTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPlateTypeEnum.WEB_PLATE' has no definition
-* The resource 'IfcPreferredSurfaceCurveRepresentation.CURVE3D' has no definition
-* The resource 'IfcPreferredSurfaceCurveRepresentation.PCURVE_S1' has no definition
-* The resource 'IfcPreferredSurfaceCurveRepresentation.PCURVE_S2' has no definition
-* The resource 'IfcProcedureTypeEnum.ADVICE_CAUTION' has no definition
-* The resource 'IfcProcedureTypeEnum.ADVICE_NOTE' has no definition
-* The resource 'IfcProcedureTypeEnum.ADVICE_WARNING' has no definition
-* The resource 'IfcProcedureTypeEnum.CALIBRATION' has no definition
-* The resource 'IfcProcedureTypeEnum.DIAGNOSTIC' has no definition
-* The resource 'IfcProcedureTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcProcedureTypeEnum.SHUTDOWN' has no definition
-* The resource 'IfcProcedureTypeEnum.STARTUP' has no definition
-* The resource 'IfcProcedureTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcProfileTypeEnum.AREA' has no definition
-* The resource 'IfcProfileTypeEnum.CURVE' has no definition
-* The resource 'IfcProjectOrderTypeEnum.CHANGEORDER' has no definition
-* The resource 'IfcProjectOrderTypeEnum.MAINTENANCEWORKORDER' has no definition
-* The resource 'IfcProjectOrderTypeEnum.MOVEORDER' has no definition
-* The resource 'IfcProjectOrderTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcProjectOrderTypeEnum.PURCHASEORDER' has no definition
-* The resource 'IfcProjectOrderTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcProjectOrderTypeEnum.WORKORDER' has no definition
-* The resource 'IfcProjectedOrTrueLengthEnum.PROJECTED_LENGTH' has no definition
-* The resource 'IfcProjectedOrTrueLengthEnum.TRUE_LENGTH' has no definition
-* The resource 'IfcProjectionElementTypeEnum.BLISTER' has no definition
-* The resource 'IfcProjectionElementTypeEnum.DEVIATOR' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_MATERIALDRIVEN' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_OCCURRENCEDRIVEN' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_PERFORMANCEDRIVEN' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_PROFILEDRIVEN' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENONLY' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.PSET_TYPEDRIVENOVERRIDE' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.QTO_OCCURRENCEDRIVEN' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.QTO_TYPEDRIVENONLY' has no definition
-* The resource 'IfcPropertySetTemplateTypeEnum.QTO_TYPEDRIVENOVERRIDE' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.ELECTROMAGNETIC' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.ELECTRONIC' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.RESIDUALCURRENT' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.THERMAL' has no definition
-* The resource 'IfcProtectiveDeviceTrippingUnitTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.ANTI_ARCING_DEVICE' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.CIRCUITBREAKER' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.EARTHINGSWITCH' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.EARTHLEAKAGECIRCUITBREAKER' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.FUSEDISCONNECTOR' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.RESIDUALCURRENTCIRCUITBREAKER' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.RESIDUALCURRENTSWITCH' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.SPARKGAP' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.VARISTOR' has no definition
-* The resource 'IfcProtectiveDeviceTypeEnum.VOLTAGELIMITER' has no definition
-* The resource 'IfcPumpTypeEnum.CIRCULATOR' has no definition
-* The resource 'IfcPumpTypeEnum.ENDSUCTION' has no definition
-* The resource 'IfcPumpTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcPumpTypeEnum.SPLITCASE' has no definition
-* The resource 'IfcPumpTypeEnum.SUBMERSIBLEPUMP' has no definition
-* The resource 'IfcPumpTypeEnum.SUMPPUMP' has no definition
-* The resource 'IfcPumpTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcPumpTypeEnum.VERTICALINLINE' has no definition
-* The resource 'IfcPumpTypeEnum.VERTICALTURBINE' has no definition
-* The resource 'IfcRailTypeEnum.BLADE' has no definition
-* The resource 'IfcRailTypeEnum.CHECKRAIL' has no definition
-* The resource 'IfcRailTypeEnum.GUARDRAIL' has no definition
-* The resource 'IfcRailTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRailTypeEnum.RACKRAIL' has no definition
-* The resource 'IfcRailTypeEnum.RAIL' has no definition
-* The resource 'IfcRailTypeEnum.STOCKRAIL' has no definition
-* The resource 'IfcRailTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRailingTypeEnum.BALUSTRADE' has no definition
-* The resource 'IfcRailingTypeEnum.FENCE' has no definition
-* The resource 'IfcRailingTypeEnum.GUARDRAIL' has no definition
-* The resource 'IfcRailingTypeEnum.HANDRAIL' has no definition
-* The resource 'IfcRailingTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRailingTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRailwayPartTypeEnum.ABOVETRACK' has no definition
 * The resource 'IfcRailwayPartTypeEnum.DILATIONTRACK' has no definition
-* The resource 'IfcRailwayPartTypeEnum.LINESIDE' has no definition
-* The resource 'IfcRailwayPartTypeEnum.LINESIDEPART' has no definition
-* The resource 'IfcRailwayPartTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRailwayPartTypeEnum.PLAINTRACK' has no definition
-* The resource 'IfcRailwayPartTypeEnum.SUBSTRUCTURE' has no definition
-* The resource 'IfcRailwayPartTypeEnum.TRACK' has no definition
-* The resource 'IfcRailwayPartTypeEnum.TRACKPART' has no definition
-* The resource 'IfcRailwayPartTypeEnum.TURNOUTTRACK' has no definition
-* The resource 'IfcRailwayPartTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRailwayTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRailwayTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRampFlightTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRampFlightTypeEnum.SPIRAL' has no definition
-* The resource 'IfcRampFlightTypeEnum.STRAIGHT' has no definition
-* The resource 'IfcRampFlightTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRampTypeEnum.HALF_TURN_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRampTypeEnum.QUARTER_TURN_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.SPIRAL_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.STRAIGHT_RUN_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.TWO_QUARTER_TURN_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.TWO_STRAIGHT_RUN_RAMP' has no definition
-* The resource 'IfcRampTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRecurrenceTypeEnum.BY_DAY_COUNT' has no definition
-* The resource 'IfcRecurrenceTypeEnum.BY_WEEKDAY_COUNT' has no definition
-* The resource 'IfcRecurrenceTypeEnum.DAILY' has no definition
-* The resource 'IfcRecurrenceTypeEnum.MONTHLY_BY_DAY_OF_MONTH' has no definition
-* The resource 'IfcRecurrenceTypeEnum.MONTHLY_BY_POSITION' has no definition
-* The resource 'IfcRecurrenceTypeEnum.WEEKLY' has no definition
-* The resource 'IfcRecurrenceTypeEnum.YEARLY_BY_DAY_OF_MONTH' has no definition
-* The resource 'IfcRecurrenceTypeEnum.YEARLY_BY_POSITION' has no definition
-* The resource 'IfcReferentTypeEnum.BOUNDARY' has no definition
-* The resource 'IfcReferentTypeEnum.INTERSECTION' has no definition
-* The resource 'IfcReferentTypeEnum.KILOPOINT' has no definition
-* The resource 'IfcReferentTypeEnum.LANDMARK' has no definition
-* The resource 'IfcReferentTypeEnum.MILEPOINT' has no definition
-* The resource 'IfcReferentTypeEnum.POSITION' has no definition
-* The resource 'IfcReferentTypeEnum.REFERENCEMARKER' has no definition
-* The resource 'IfcReferentTypeEnum.STATION' has no definition
-* The resource 'IfcReferentTypeEnum.SUPERELEVATIONEVENT' has no definition
-* The resource 'IfcReferentTypeEnum.WIDTHEVENT' has no definition
-* The resource 'IfcReflectanceMethodEnum.BLINN' has no definition
-* The resource 'IfcReflectanceMethodEnum.FLAT' has no definition
-* The resource 'IfcReflectanceMethodEnum.GLASS' has no definition
-* The resource 'IfcReflectanceMethodEnum.MATT' has no definition
-* The resource 'IfcReflectanceMethodEnum.METAL' has no definition
-* The resource 'IfcReflectanceMethodEnum.MIRROR' has no definition
-* The resource 'IfcReflectanceMethodEnum.NOTDEFINED' has no definition
-* The resource 'IfcReflectanceMethodEnum.PHONG' has no definition
-* The resource 'IfcReflectanceMethodEnum.PHYSICAL' has no definition
-* The resource 'IfcReflectanceMethodEnum.PLASTIC' has no definition
-* The resource 'IfcReflectanceMethodEnum.STRAUSS' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.DYNAMICALLYCOMPACTED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.GROUTED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.REPLACED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.ROLLERCOMPACTED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.SURCHARGEPRELOADED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcReinforcedSoilTypeEnum.VERTICALLYDRAINED' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.ANCHORING' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.EDGE' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.LIGATURE' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.MAIN' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.NOTDEFINED' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.PUNCHING' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.RING' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.SHEAR' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.STUD' has no definition
-* The resource 'IfcReinforcingBarRoleEnum.USERDEFINED' has no definition
-* The resource 'IfcReinforcingBarSurfaceEnum.PLAIN' has no definition
-* The resource 'IfcReinforcingBarSurfaceEnum.TEXTURED' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.ANCHORING' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.EDGE' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.LIGATURE' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.MAIN' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.PUNCHING' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.RING' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.SHEAR' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.SPACEBAR' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.STUD' has no definition
-* The resource 'IfcReinforcingBarTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcReinforcingMeshTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcReinforcingMeshTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRoadPartTypeEnum.BICYCLECROSSING' has no definition
-* The resource 'IfcRoadPartTypeEnum.BUS_STOP' has no definition
-* The resource 'IfcRoadPartTypeEnum.CARRIAGEWAY' has no definition
-* The resource 'IfcRoadPartTypeEnum.CENTRALISLAND' has no definition
-* The resource 'IfcRoadPartTypeEnum.CENTRALRESERVE' has no definition
-* The resource 'IfcRoadPartTypeEnum.HARDSHOULDER' has no definition
-* The resource 'IfcRoadPartTypeEnum.INTERSECTION' has no definition
-* The resource 'IfcRoadPartTypeEnum.LAYBY' has no definition
-* The resource 'IfcRoadPartTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRoadPartTypeEnum.PARKINGBAY' has no definition
-* The resource 'IfcRoadPartTypeEnum.PASSINGBAY' has no definition
-* The resource 'IfcRoadPartTypeEnum.PEDESTRIAN_CROSSING' has no definition
-* The resource 'IfcRoadPartTypeEnum.RAILWAYCROSSING' has no definition
-* The resource 'IfcRoadPartTypeEnum.REFUGEISLAND' has no definition
-* The resource 'IfcRoadPartTypeEnum.ROADSEGMENT' has no definition
-* The resource 'IfcRoadPartTypeEnum.ROADSIDE' has no definition
-* The resource 'IfcRoadPartTypeEnum.ROADSIDEPART' has no definition
-* The resource 'IfcRoadPartTypeEnum.ROADWAYPLATEAU' has no definition
-* The resource 'IfcRoadPartTypeEnum.ROUNDABOUT' has no definition
-* The resource 'IfcRoadPartTypeEnum.SHOULDER' has no definition
-* The resource 'IfcRoadPartTypeEnum.SIDEWALK' has no definition
-* The resource 'IfcRoadPartTypeEnum.SOFTSHOULDER' has no definition
-* The resource 'IfcRoadPartTypeEnum.TOLLPLAZA' has no definition
-* The resource 'IfcRoadPartTypeEnum.TRAFFICISLAND' has no definition
-* The resource 'IfcRoadPartTypeEnum.TRAFFICLANE' has no definition
-* The resource 'IfcRoadPartTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRoadTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRoadTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcRoleEnum.ARCHITECT' has no definition
-* The resource 'IfcRoleEnum.BUILDINGOPERATOR' has no definition
-* The resource 'IfcRoleEnum.BUILDINGOWNER' has no definition
-* The resource 'IfcRoleEnum.CIVILENGINEER' has no definition
-* The resource 'IfcRoleEnum.CLIENT' has no definition
-* The resource 'IfcRoleEnum.COMMISSIONINGENGINEER' has no definition
-* The resource 'IfcRoleEnum.CONSTRUCTIONMANAGER' has no definition
-* The resource 'IfcRoleEnum.CONSULTANT' has no definition
-* The resource 'IfcRoleEnum.CONTRACTOR' has no definition
-* The resource 'IfcRoleEnum.COSTENGINEER' has no definition
-* The resource 'IfcRoleEnum.ELECTRICALENGINEER' has no definition
-* The resource 'IfcRoleEnum.ENGINEER' has no definition
-* The resource 'IfcRoleEnum.FACILITIESMANAGER' has no definition
-* The resource 'IfcRoleEnum.FIELDCONSTRUCTIONMANAGER' has no definition
-* The resource 'IfcRoleEnum.MANUFACTURER' has no definition
-* The resource 'IfcRoleEnum.MECHANICALENGINEER' has no definition
-* The resource 'IfcRoleEnum.OWNER' has no definition
-* The resource 'IfcRoleEnum.PROJECTMANAGER' has no definition
-* The resource 'IfcRoleEnum.RESELLER' has no definition
-* The resource 'IfcRoleEnum.STRUCTURALENGINEER' has no definition
-* The resource 'IfcRoleEnum.SUBCONTRACTOR' has no definition
-* The resource 'IfcRoleEnum.SUPPLIER' has no definition
-* The resource 'IfcRoleEnum.USERDEFINED' has no definition
-* The resource 'IfcRoofTypeEnum.BARREL_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.BUTTERFLY_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.DOME_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.FLAT_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.FREEFORM' has no definition
-* The resource 'IfcRoofTypeEnum.GABLE_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.GAMBREL_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.HIPPED_GABLE_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.HIP_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.MANSARD_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcRoofTypeEnum.PAVILION_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.RAINBOW_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.SHED_ROOF' has no definition
-* The resource 'IfcRoofTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSIPrefix.ATTO' has no definition
-* The resource 'IfcSIPrefix.CENTI' has no definition
-* The resource 'IfcSIPrefix.DECA' has no definition
-* The resource 'IfcSIPrefix.DECI' has no definition
-* The resource 'IfcSIPrefix.EXA' has no definition
-* The resource 'IfcSIPrefix.FEMTO' has no definition
-* The resource 'IfcSIPrefix.GIGA' has no definition
-* The resource 'IfcSIPrefix.HECTO' has no definition
-* The resource 'IfcSIPrefix.KILO' has no definition
-* The resource 'IfcSIPrefix.MEGA' has no definition
-* The resource 'IfcSIPrefix.MICRO' has no definition
-* The resource 'IfcSIPrefix.MILLI' has no definition
-* The resource 'IfcSIPrefix.NANO' has no definition
-* The resource 'IfcSIPrefix.PETA' has no definition
-* The resource 'IfcSIPrefix.PICO' has no definition
-* The resource 'IfcSIPrefix.TERA' has no definition
-* The resource 'IfcSIUnitName.AMPERE' has no definition
-* The resource 'IfcSIUnitName.BECQUEREL' has no definition
-* The resource 'IfcSIUnitName.CANDELA' has no definition
-* The resource 'IfcSIUnitName.COULOMB' has no definition
-* The resource 'IfcSIUnitName.CUBIC_METRE' has no definition
-* The resource 'IfcSIUnitName.DEGREE_CELSIUS' has no definition
-* The resource 'IfcSIUnitName.FARAD' has no definition
-* The resource 'IfcSIUnitName.GRAM' has no definition
-* The resource 'IfcSIUnitName.GRAY' has no definition
-* The resource 'IfcSIUnitName.HENRY' has no definition
-* The resource 'IfcSIUnitName.HERTZ' has no definition
-* The resource 'IfcSIUnitName.JOULE' has no definition
-* The resource 'IfcSIUnitName.KELVIN' has no definition
-* The resource 'IfcSIUnitName.LUMEN' has no definition
-* The resource 'IfcSIUnitName.LUX' has no definition
-* The resource 'IfcSIUnitName.METRE' has no definition
-* The resource 'IfcSIUnitName.MOLE' has no definition
-* The resource 'IfcSIUnitName.NEWTON' has no definition
-* The resource 'IfcSIUnitName.OHM' has no definition
-* The resource 'IfcSIUnitName.PASCAL' has no definition
-* The resource 'IfcSIUnitName.RADIAN' has no definition
-* The resource 'IfcSIUnitName.SECOND' has no definition
-* The resource 'IfcSIUnitName.SIEMENS' has no definition
-* The resource 'IfcSIUnitName.SIEVERT' has no definition
-* The resource 'IfcSIUnitName.SQUARE_METRE' has no definition
-* The resource 'IfcSIUnitName.STERADIAN' has no definition
-* The resource 'IfcSIUnitName.TESLA' has no definition
-* The resource 'IfcSIUnitName.VOLT' has no definition
-* The resource 'IfcSIUnitName.WATT' has no definition
-* The resource 'IfcSIUnitName.WEBER' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.BATH' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.BIDET' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.CISTERN' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.SANITARYFOUNTAIN' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.SHOWER' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.SINK' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.TOILETPAN' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.URINAL' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.WASHHANDBASIN' has no definition
-* The resource 'IfcSanitaryTerminalTypeEnum.WCSEAT' has no definition
-* The resource 'IfcSectionTypeEnum.TAPERED' has no definition
-* The resource 'IfcSectionTypeEnum.UNIFORM' has no definition
-* The resource 'IfcSensorTypeEnum.CO2SENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.CONDUCTANCESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.CONTACTSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.COSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.EARTHQUAKESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.FIRESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.FLOWSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.FOREIGNOBJECTDETECTIONSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.FROSTSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.GASSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.HEATSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.HUMIDITYSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.IDENTIFIERSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.IONCONCENTRATIONSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.LEVELSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.LIGHTSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.MOISTURESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.MOVEMENTSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSensorTypeEnum.OBSTACLESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.PHSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.PRESSURESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.RADIATIONSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.RADIOACTIVITYSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.RAINSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.SMOKESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.SNOWDEPTHSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.SOUNDSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.TEMPERATURESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.TRAINSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.TURNOUTCLOSURESENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSensorTypeEnum.WHEELSENSOR' has no definition
-* The resource 'IfcSensorTypeEnum.WINDSENSOR' has no definition
-* The resource 'IfcSequenceEnum.FINISH_FINISH' has no definition
-* The resource 'IfcSequenceEnum.FINISH_START' has no definition
-* The resource 'IfcSequenceEnum.NOTDEFINED' has no definition
-* The resource 'IfcSequenceEnum.START_FINISH' has no definition
-* The resource 'IfcSequenceEnum.START_START' has no definition
-* The resource 'IfcSequenceEnum.USERDEFINED' has no definition
-* The resource 'IfcShadingDeviceTypeEnum.AWNING' has no definition
-* The resource 'IfcShadingDeviceTypeEnum.JALOUSIE' has no definition
-* The resource 'IfcShadingDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcShadingDeviceTypeEnum.SHUTTER' has no definition
-* The resource 'IfcShadingDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSignTypeEnum.MARKER' has no definition
-* The resource 'IfcSignTypeEnum.MIRROR' has no definition
-* The resource 'IfcSignTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSignTypeEnum.PICTORAL' has no definition
-* The resource 'IfcSignTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSignalTypeEnum.AUDIO' has no definition
-* The resource 'IfcSignalTypeEnum.MIXED' has no definition
-* The resource 'IfcSignalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSignalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSignalTypeEnum.VISUAL' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_BOUNDEDVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_ENUMERATEDVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_LISTVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_REFERENCEVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_SINGLEVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.P_TABLEVALUE' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_AREA' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_COUNT' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_LENGTH' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_NUMBER' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_TIME' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_VOLUME' has no definition
-* The resource 'IfcSimplePropertyTemplateTypeEnum.Q_WEIGHT' has no definition
-* The resource 'IfcSlabTypeEnum.APPROACH_SLAB' has no definition
-* The resource 'IfcSlabTypeEnum.BASESLAB' has no definition
-* The resource 'IfcSlabTypeEnum.FLOOR' has no definition
-* The resource 'IfcSlabTypeEnum.LANDING' has no definition
-* The resource 'IfcSlabTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSlabTypeEnum.PAVING' has no definition
-* The resource 'IfcSlabTypeEnum.ROOF' has no definition
-* The resource 'IfcSlabTypeEnum.SIDEWALK' has no definition
-* The resource 'IfcSlabTypeEnum.TRACKSLAB' has no definition
-* The resource 'IfcSlabTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSlabTypeEnum.WEARING' has no definition
-* The resource 'IfcSolarDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSolarDeviceTypeEnum.SOLARCOLLECTOR' has no definition
-* The resource 'IfcSolarDeviceTypeEnum.SOLARPANEL' has no definition
-* The resource 'IfcSolarDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSpaceHeaterTypeEnum.CONVECTOR' has no definition
-* The resource 'IfcSpaceHeaterTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSpaceHeaterTypeEnum.RADIATOR' has no definition
-* The resource 'IfcSpaceHeaterTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSpaceTypeEnum.BERTH' has no definition
-* The resource 'IfcSpaceTypeEnum.EXTERNAL' has no definition
-* The resource 'IfcSpaceTypeEnum.GFA' has no definition
-* The resource 'IfcSpaceTypeEnum.INTERNAL' has no definition
-* The resource 'IfcSpaceTypeEnum.PARKING' has no definition
-* The resource 'IfcSpaceTypeEnum.SPACE' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.CONSTRUCTION' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.FIRESAFETY' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.INTERFERENCE' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.LIGHTING' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.OCCUPANCY' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.RESERVATION' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.SECURITY' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.THERMAL' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.TRANSPORT' has no definition
-* The resource 'IfcSpatialZoneTypeEnum.VENTILATION' has no definition
-* The resource 'IfcStackTerminalTypeEnum.BIRDCAGE' has no definition
-* The resource 'IfcStackTerminalTypeEnum.COWL' has no definition
-* The resource 'IfcStackTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStackTerminalTypeEnum.RAINWATERHOPPER' has no definition
-* The resource 'IfcStackTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStairFlightTypeEnum.CURVED' has no definition
-* The resource 'IfcStairFlightTypeEnum.FREEFORM' has no definition
-* The resource 'IfcStairFlightTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStairFlightTypeEnum.SPIRAL' has no definition
-* The resource 'IfcStairFlightTypeEnum.STRAIGHT' has no definition
-* The resource 'IfcStairFlightTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStairFlightTypeEnum.WINDER' has no definition
-* The resource 'IfcStairTypeEnum.CURVED_RUN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.DOUBLE_RETURN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.HALF_TURN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.HALF_WINDING_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.LADDER' has no definition
-* The resource 'IfcStairTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStairTypeEnum.QUARTER_TURN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.QUARTER_WINDING_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.SPIRAL_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.STRAIGHT_RUN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.THREE_QUARTER_TURN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.THREE_QUARTER_WINDING_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.TWO_CURVED_RUN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.TWO_QUARTER_TURN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.TWO_QUARTER_WINDING_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.TWO_STRAIGHT_RUN_STAIR' has no definition
-* The resource 'IfcStairTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStateEnum.LOCKED' has no definition
-* The resource 'IfcStateEnum.READONLY' has no definition
-* The resource 'IfcStateEnum.READONLYLOCKED' has no definition
-* The resource 'IfcStateEnum.READWRITE' has no definition
-* The resource 'IfcStateEnum.READWRITELOCKED' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.CONST' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.DISCRETE' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.EQUIDISTANT' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.LINEAR' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.PARABOLA' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.POLYGONAL' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.SINUS' has no definition
-* The resource 'IfcStructuralCurveActivityTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.CABLE' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.COMPRESSION_MEMBER' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.PIN_JOINED_MEMBER' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.RIGID_JOINED_MEMBER' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.TENSION_MEMBER' has no definition
-* The resource 'IfcStructuralCurveMemberTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.BILINEAR' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.CONST' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.DISCRETE' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.ISOCONTOUR' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStructuralSurfaceActivityTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcStructuralSurfaceMemberTypeEnum.BENDING_ELEMENT' has no definition
-* The resource 'IfcStructuralSurfaceMemberTypeEnum.MEMBRANE_ELEMENT' has no definition
-* The resource 'IfcStructuralSurfaceMemberTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcStructuralSurfaceMemberTypeEnum.SHELL' has no definition
-* The resource 'IfcStructuralSurfaceMemberTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSubContractResourceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSubContractResourceTypeEnum.PURCHASE' has no definition
-* The resource 'IfcSubContractResourceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSubContractResourceTypeEnum.WORK' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.DEFECT' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.HATCHMARKING' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.LINEMARKING' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.MARK' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.NONSKIDSURFACING' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.PAVEMENTSURFACEMARKING' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.RUMBLESTRIP' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.SYMBOLMARKING' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.TAG' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.TRANSVERSERUMBLESTRIP' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.TREATMENT' has no definition
-* The resource 'IfcSurfaceFeatureTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSurfaceSide.BOTH' has no definition
-* The resource 'IfcSurfaceSide.NEGATIVE' has no definition
-* The resource 'IfcSurfaceSide.POSITIVE' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.CONTACTOR' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.DIMMERSWITCH' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.EMERGENCYSTOP' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.KEYPAD' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.MOMENTARYSWITCH' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.RELAY' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.SELECTORSWITCH' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.STARTER' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.START_AND_STOP_EQUIPMENT' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.SWITCHDISCONNECTOR' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.TOGGLESWITCH' has no definition
-* The resource 'IfcSwitchingDeviceTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSystemFurnitureElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcSystemFurnitureElementTypeEnum.PANEL' has no definition
-* The resource 'IfcSystemFurnitureElementTypeEnum.SUBRACK' has no definition
-* The resource 'IfcSystemFurnitureElementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcSystemFurnitureElementTypeEnum.WORKSURFACE' has no definition
-* The resource 'IfcTankTypeEnum.BASIN' has no definition
-* The resource 'IfcTankTypeEnum.BREAKPRESSURE' has no definition
-* The resource 'IfcTankTypeEnum.EXPANSION' has no definition
-* The resource 'IfcTankTypeEnum.FEEDANDEXPANSION' has no definition
-* The resource 'IfcTankTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTankTypeEnum.OILRETENTIONTRAY' has no definition
-* The resource 'IfcTankTypeEnum.PRESSUREVESSEL' has no definition
-* The resource 'IfcTankTypeEnum.STORAGE' has no definition
-* The resource 'IfcTankTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTankTypeEnum.VESSEL' has no definition
-* The resource 'IfcTaskDurationEnum.ELAPSEDTIME' has no definition
-* The resource 'IfcTaskDurationEnum.NOTDEFINED' has no definition
-* The resource 'IfcTaskDurationEnum.WORKTIME' has no definition
-* The resource 'IfcTaskTypeEnum.ADJUSTMENT' has no definition
-* The resource 'IfcTaskTypeEnum.ATTENDANCE' has no definition
-* The resource 'IfcTaskTypeEnum.CALIBRATION' has no definition
-* The resource 'IfcTaskTypeEnum.CONSTRUCTION' has no definition
-* The resource 'IfcTaskTypeEnum.DEMOLITION' has no definition
-* The resource 'IfcTaskTypeEnum.DISMANTLE' has no definition
-* The resource 'IfcTaskTypeEnum.DISPOSAL' has no definition
-* The resource 'IfcTaskTypeEnum.EMERGENCY' has no definition
-* The resource 'IfcTaskTypeEnum.INSPECTION' has no definition
-* The resource 'IfcTaskTypeEnum.INSTALLATION' has no definition
-* The resource 'IfcTaskTypeEnum.LOGISTIC' has no definition
-* The resource 'IfcTaskTypeEnum.MAINTENANCE' has no definition
-* The resource 'IfcTaskTypeEnum.MOVE' has no definition
-* The resource 'IfcTaskTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTaskTypeEnum.OPERATION' has no definition
-* The resource 'IfcTaskTypeEnum.REMOVAL' has no definition
-* The resource 'IfcTaskTypeEnum.RENOVATION' has no definition
-* The resource 'IfcTaskTypeEnum.SAFETY' has no definition
-* The resource 'IfcTaskTypeEnum.SHUTDOWN' has no definition
-* The resource 'IfcTaskTypeEnum.STARTUP' has no definition
-* The resource 'IfcTaskTypeEnum.TESTING' has no definition
-* The resource 'IfcTaskTypeEnum.TROUBLESHOOTING' has no definition
-* The resource 'IfcTaskTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTendonAnchorTypeEnum.COUPLER' has no definition
-* The resource 'IfcTendonAnchorTypeEnum.FIXED_END' has no definition
-* The resource 'IfcTendonAnchorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTendonAnchorTypeEnum.TENSIONING_END' has no definition
-* The resource 'IfcTendonAnchorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTendonConduitTypeEnum.COUPLER' has no definition
-* The resource 'IfcTendonConduitTypeEnum.DIABOLO' has no definition
-* The resource 'IfcTendonConduitTypeEnum.DUCT' has no definition
-* The resource 'IfcTendonConduitTypeEnum.GROUTING_DUCT' has no definition
-* The resource 'IfcTendonConduitTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTendonConduitTypeEnum.TRUMPET' has no definition
-* The resource 'IfcTendonConduitTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTendonTypeEnum.BAR' has no definition
-* The resource 'IfcTendonTypeEnum.COATED' has no definition
-* The resource 'IfcTendonTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTendonTypeEnum.STRAND' has no definition
-* The resource 'IfcTendonTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTendonTypeEnum.WIRE' has no definition
-* The resource 'IfcTextPath.DOWN' has no definition
-* The resource 'IfcTextPath.LEFT' has no definition
-* The resource 'IfcTextPath.RIGHT' has no definition
-* The resource 'IfcTextPath.UP' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.CONTINUOUS' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.DISCRETE' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.DISCRETEBINARY' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.PIECEWISEBINARY' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.PIECEWISECONSTANT' has no definition
-* The resource 'IfcTimeSeriesDataTypeEnum.PIECEWISECONTINUOUS' has no definition
-* The resource 'IfcTrackElementTypeEnum.BLOCKINGDEVICE' has no definition
-* The resource 'IfcTrackElementTypeEnum.DERAILER' has no definition
-* The resource 'IfcTrackElementTypeEnum.FROG' has no definition
-* The resource 'IfcTrackElementTypeEnum.HALF_SET_OF_BLADES' has no definition
-* The resource 'IfcTrackElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTrackElementTypeEnum.SLEEPER' has no definition
-* The resource 'IfcTrackElementTypeEnum.SPEEDREGULATOR' has no definition
-* The resource 'IfcTrackElementTypeEnum.TRACKENDOFALIGNMENT' has no definition
-* The resource 'IfcTrackElementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTrackElementTypeEnum.VEHICLESTOP' has no definition
-* The resource 'IfcTransformerTypeEnum.CHOPPER' has no definition
-* The resource 'IfcTransformerTypeEnum.COMBINED' has no definition
-* The resource 'IfcTransformerTypeEnum.CURRENT' has no definition
-* The resource 'IfcTransformerTypeEnum.FREQUENCY' has no definition
-* The resource 'IfcTransformerTypeEnum.INVERTER' has no definition
-* The resource 'IfcTransformerTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTransformerTypeEnum.RECTIFIER' has no definition
-* The resource 'IfcTransformerTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcTransformerTypeEnum.VOLTAGE' has no definition
-* The resource 'IfcTransitionCode.CONTINUOUS' has no definition
-* The resource 'IfcTransitionCode.CONTSAMEGRADIENT' has no definition
-* The resource 'IfcTransitionCode.CONTSAMEGRADIENTSAMECURVATURE' has no definition
-* The resource 'IfcTransitionCode.DISCONTINUOUS' has no definition
-* The resource 'IfcTrimmingPreference.CARTESIAN' has no definition
-* The resource 'IfcTrimmingPreference.PARAMETER' has no definition
-* The resource 'IfcTrimmingPreference.UNSPECIFIED' has no definition
-* The resource 'IfcTubeBundleTypeEnum.FINNED' has no definition
-* The resource 'IfcTubeBundleTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcTubeBundleTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcUnitEnum.ABSORBEDDOSEUNIT' has no definition
-* The resource 'IfcUnitEnum.AMOUNTOFSUBSTANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.AREAUNIT' has no definition
-* The resource 'IfcUnitEnum.DOSEEQUIVALENTUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICCAPACITANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICCHARGEUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICCONDUCTANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICCURRENTUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICRESISTANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.ELECTRICVOLTAGEUNIT' has no definition
-* The resource 'IfcUnitEnum.ENERGYUNIT' has no definition
-* The resource 'IfcUnitEnum.FORCEUNIT' has no definition
-* The resource 'IfcUnitEnum.FREQUENCYUNIT' has no definition
-* The resource 'IfcUnitEnum.ILLUMINANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.INDUCTANCEUNIT' has no definition
-* The resource 'IfcUnitEnum.LENGTHUNIT' has no definition
-* The resource 'IfcUnitEnum.LUMINOUSFLUXUNIT' has no definition
-* The resource 'IfcUnitEnum.LUMINOUSINTENSITYUNIT' has no definition
-* The resource 'IfcUnitEnum.MAGNETICFLUXDENSITYUNIT' has no definition
-* The resource 'IfcUnitEnum.MAGNETICFLUXUNIT' has no definition
-* The resource 'IfcUnitEnum.MASSUNIT' has no definition
-* The resource 'IfcUnitEnum.PLANEANGLEUNIT' has no definition
-* The resource 'IfcUnitEnum.POWERUNIT' has no definition
-* The resource 'IfcUnitEnum.PRESSUREUNIT' has no definition
-* The resource 'IfcUnitEnum.RADIOACTIVITYUNIT' has no definition
-* The resource 'IfcUnitEnum.SOLIDANGLEUNIT' has no definition
-* The resource 'IfcUnitEnum.THERMODYNAMICTEMPERATUREUNIT' has no definition
-* The resource 'IfcUnitEnum.TIMEUNIT' has no definition
-* The resource 'IfcUnitEnum.USERDEFINED' has no definition
-* The resource 'IfcUnitEnum.VOLUMEUNIT' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.ALARMPANEL' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.BASESTATIONCONTROLLER' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.COMBINED' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.CONTROLPANEL' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.GASDETECTIONPANEL' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.HUMIDISTAT' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.INDICATORPANEL' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.MIMICPANEL' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.THERMOSTAT' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcUnitaryControlElementTypeEnum.WEATHERSTATION' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.AIRCONDITIONINGUNIT' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.AIRHANDLER' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.DEHUMIDIFIER' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.ROOFTOPUNIT' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.SPLITSYSTEM' has no definition
-* The resource 'IfcUnitaryEquipmentTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcValveTypeEnum.AIRRELEASE' has no definition
-* The resource 'IfcValveTypeEnum.ANTIVACUUM' has no definition
-* The resource 'IfcValveTypeEnum.CHANGEOVER' has no definition
-* The resource 'IfcValveTypeEnum.CHECK' has no definition
-* The resource 'IfcValveTypeEnum.COMMISSIONING' has no definition
-* The resource 'IfcValveTypeEnum.DIVERTING' has no definition
-* The resource 'IfcValveTypeEnum.DOUBLECHECK' has no definition
-* The resource 'IfcValveTypeEnum.DOUBLEREGULATING' has no definition
-* The resource 'IfcValveTypeEnum.DRAWOFFCOCK' has no definition
-* The resource 'IfcValveTypeEnum.FAUCET' has no definition
-* The resource 'IfcValveTypeEnum.FLUSHING' has no definition
-* The resource 'IfcValveTypeEnum.GASCOCK' has no definition
-* The resource 'IfcValveTypeEnum.GASTAP' has no definition
-* The resource 'IfcValveTypeEnum.ISOLATING' has no definition
-* The resource 'IfcValveTypeEnum.MIXING' has no definition
-* The resource 'IfcValveTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcValveTypeEnum.PRESSUREREDUCING' has no definition
-* The resource 'IfcValveTypeEnum.PRESSURERELIEF' has no definition
-* The resource 'IfcValveTypeEnum.REGULATING' has no definition
-* The resource 'IfcValveTypeEnum.SAFETYCUTOFF' has no definition
-* The resource 'IfcValveTypeEnum.STEAMTRAP' has no definition
-* The resource 'IfcValveTypeEnum.STOPCOCK' has no definition
-* The resource 'IfcValveTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcVehicleTypeEnum.CARGO' has no definition
-* The resource 'IfcVehicleTypeEnum.ROLLINGSTOCK' has no definition
-* The resource 'IfcVehicleTypeEnum.VEHICLE' has no definition
-* The resource 'IfcVehicleTypeEnum.VEHICLEAIR' has no definition
-* The resource 'IfcVehicleTypeEnum.VEHICLEMARINE' has no definition
-* The resource 'IfcVehicleTypeEnum.VEHICLETRACKED' has no definition
-* The resource 'IfcVehicleTypeEnum.VEHICLEWHEELED' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.AXIAL_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.BENDING_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.FRICTION' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.RUBBER' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.SHEAR_YIELD' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcVibrationDamperTypeEnum.VISCOUS' has no definition
-* The resource 'IfcVibrationIsolatorTypeEnum.BASE' has no definition
-* The resource 'IfcVibrationIsolatorTypeEnum.COMPRESSION' has no definition
-* The resource 'IfcVibrationIsolatorTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcVibrationIsolatorTypeEnum.SPRING' has no definition
-* The resource 'IfcVibrationIsolatorTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcVirtualElementTypeEnum.BOUNDARY' has no definition
-* The resource 'IfcVirtualElementTypeEnum.CLEARANCE' has no definition
-* The resource 'IfcVirtualElementTypeEnum.PROVISIONFORVOID' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.CHAMFER' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.CUTOUT' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.EDGE' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.HOLE' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.MITER' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.NOTCH' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcVoidingFeatureTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWallTypeEnum.ELEMENTEDWALL' has no definition
-* The resource 'IfcWallTypeEnum.MOVABLE' has no definition
-* The resource 'IfcWallTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWallTypeEnum.PARAPET' has no definition
-* The resource 'IfcWallTypeEnum.PARTITIONING' has no definition
-* The resource 'IfcWallTypeEnum.PLUMBINGWALL' has no definition
-* The resource 'IfcWallTypeEnum.POLYGONAL' has no definition
-* The resource 'IfcWallTypeEnum.RETAININGWALL' has no definition
-* The resource 'IfcWallTypeEnum.SHEAR' has no definition
-* The resource 'IfcWallTypeEnum.SOLIDWALL' has no definition
-* The resource 'IfcWallTypeEnum.STANDARD' has no definition
-* The resource 'IfcWallTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWallTypeEnum.WAVEWALL' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.FLOORTRAP' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.FLOORWASTE' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.GULLYSUMP' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.GULLYTRAP' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.ROOFDRAIN' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.WASTEDISPOSALUNIT' has no definition
-* The resource 'IfcWasteTerminalTypeEnum.WASTETRAP' has no definition
-* The resource 'IfcWindowPanelOperationEnum.BOTTOMHUNG' has no definition
-* The resource 'IfcWindowPanelOperationEnum.FIXEDCASEMENT' has no definition
-* The resource 'IfcWindowPanelOperationEnum.NOTDEFINED' has no definition
-* The resource 'IfcWindowPanelOperationEnum.OTHEROPERATION' has no definition
-* The resource 'IfcWindowPanelOperationEnum.PIVOTHORIZONTAL' has no definition
-* The resource 'IfcWindowPanelOperationEnum.PIVOTVERTICAL' has no definition
-* The resource 'IfcWindowPanelOperationEnum.REMOVABLECASEMENT' has no definition
-* The resource 'IfcWindowPanelOperationEnum.SIDEHUNGLEFTHAND' has no definition
-* The resource 'IfcWindowPanelOperationEnum.SIDEHUNGRIGHTHAND' has no definition
-* The resource 'IfcWindowPanelOperationEnum.SLIDINGHORIZONTAL' has no definition
-* The resource 'IfcWindowPanelOperationEnum.SLIDINGVERTICAL' has no definition
-* The resource 'IfcWindowPanelOperationEnum.TILTANDTURNLEFTHAND' has no definition
-* The resource 'IfcWindowPanelOperationEnum.TILTANDTURNRIGHTHAND' has no definition
-* The resource 'IfcWindowPanelOperationEnum.TOPHUNG' has no definition
-* The resource 'IfcWindowPanelPositionEnum.BOTTOM' has no definition
-* The resource 'IfcWindowPanelPositionEnum.LEFT' has no definition
-* The resource 'IfcWindowPanelPositionEnum.MIDDLE' has no definition
-* The resource 'IfcWindowPanelPositionEnum.NOTDEFINED' has no definition
-* The resource 'IfcWindowPanelPositionEnum.RIGHT' has no definition
-* The resource 'IfcWindowPanelPositionEnum.TOP' has no definition
-* The resource 'IfcWindowTypeEnum.LIGHTDOME' has no definition
-* The resource 'IfcWindowTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWindowTypeEnum.SKYLIGHT' has no definition
-* The resource 'IfcWindowTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWindowTypeEnum.WINDOW' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.DOUBLE_PANEL_HORIZONTAL' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.DOUBLE_PANEL_VERTICAL' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.NOTDEFINED' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.SINGLE_PANEL' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_BOTTOM' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_HORIZONTAL' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_LEFT' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_RIGHT' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_TOP' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.TRIPLE_PANEL_VERTICAL' has no definition
-* The resource 'IfcWindowTypePartitioningEnum.USERDEFINED' has no definition
-* The resource 'IfcWorkCalendarTypeEnum.FIRSTSHIFT' has no definition
-* The resource 'IfcWorkCalendarTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWorkCalendarTypeEnum.SECONDSHIFT' has no definition
-* The resource 'IfcWorkCalendarTypeEnum.THIRDSHIFT' has no definition
-* The resource 'IfcWorkCalendarTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWorkPlanTypeEnum.ACTUAL' has no definition
-* The resource 'IfcWorkPlanTypeEnum.BASELINE' has no definition
-* The resource 'IfcWorkPlanTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWorkPlanTypeEnum.PLANNED' has no definition
-* The resource 'IfcWorkPlanTypeEnum.USERDEFINED' has no definition
-* The resource 'IfcWorkScheduleTypeEnum.ACTUAL' has no definition
-* The resource 'IfcWorkScheduleTypeEnum.BASELINE' has no definition
-* The resource 'IfcWorkScheduleTypeEnum.NOTDEFINED' has no definition
-* The resource 'IfcWorkScheduleTypeEnum.PLANNED' has no definition
-* The resource 'IfcWorkScheduleTypeEnum.USERDEFINED' has no definition
 ## DefinitionForProperty
 
 * The Property 'Pset_AirSideSystemInformation.AirFlowSensible' has no definition
@@ -4117,273 +2061,288 @@
 * Entity 'IfcWorkSchedule' has no mandatory PredefinedType attribute
 ## ParametrizationForConceptUsageDocumentation
 
-* The concept usage 'Aggregation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Aggregation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Aggregation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Aggregation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Aggregation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Aggregation' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Aggregation To Project' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry - Horizontal and Vertical' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry - Horizontal' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry - Horizontal, Vertical and Cant' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Geometry - Reusing Horizontal Layout' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Grouping' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Layout - Horizontal, Vertical and Cant' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Layout - Reusing Horizontal Layout' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Layouts' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Alignment Spatial Reference' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Annotation 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Annotation 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Approval Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 2D Geometry' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Axis Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body AdvancedBrep Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body AdvancedSweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Brep Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Brep Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body CSG Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Clipping Geometry' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SurfaceModel Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SurfaceOrSolidModel Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body SweptSolid Geometry' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Body Tessellation Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Box Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Building Attributes' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Classification Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Clearance Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'CoG Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Constraint Association' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Constraint Association' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Control Assignment' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Document Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Document Association' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Door Attributes' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Voiding' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Element Voiding' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint GeomSet Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'FootPrint Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Footprint Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Group Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Library Association' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Library Association' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Lighting Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Mapped Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Mapped Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Mapped Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Mapped Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set Usage' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Layer Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set Usage' for entity 'Coordinate Systems' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Profile Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Set' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Material Single' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Nesting' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object Typing' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Object User Identity' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Port Connectivity' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Port Nesting' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Process Assignment' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Process Assignment' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Assignment' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Geometric Representation' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Linear Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Local Placement' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Placement' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Relative Positioning' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Product Type Shape' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Profile 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Profile 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Project Declaration' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Project Global Positioning' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Project Template Definitions' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets for Objects' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets for Performance' for entity 'Declaration use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets for Types' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets for Types' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Property Sets with Override' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference SweptSolid PolyCurve Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference Tessellation Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Reference Topology' for entity 'Coordinate Systems' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Revision Control' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Sequential Connectivity' for entity 'Attribute use definition' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Sequential Connectivity' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Sequential Connectivity' for entity 'Use definitions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Software Identity' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Composition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Container' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Containment' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Spatial Decomposition' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface 3D Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface 3D Geometry' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Surface Geometry' for entity 'Formal Propositions' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Type Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Type Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Type Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Type Body Geometry' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
-* The concept usage 'Window Attributes' for entity 'Attributes' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Aggregation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Aggregation To Project' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal and Vertical' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Horizontal, Vertical and Cant' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Geometry - Reusing Horizontal Layout' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Grouping' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layout - Horizontal, Vertical and Cant' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layout - Reusing Horizontal Layout' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Layouts' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Alignment Spatial Reference' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Annotation 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Annotation 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Approval Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 2D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Axis Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body AdvancedBrep Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body AdvancedSweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body AdvancedSweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body AdvancedSweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Brep Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Brep Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body CSG Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Clipping Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SurfaceModel Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SurfaceOrSolidModel Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body SweptSolid Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Body Tessellation Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Box Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Building Attributes' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Classification Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Clearance Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'CoG Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Constraint Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Constraint Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Control Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Document Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Document Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Door Attributes' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Voiding' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Element Voiding' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint GeomSet Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint GeomSet Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint GeomSet Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint GeomSet Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'FootPrint Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Footprint Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Group Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Group Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Group Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Library Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Library Association' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Lighting Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Mapped Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Layer Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set Usage' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Profile Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Set' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Material Single' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object Typing' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Object User Identity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Port Connectivity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Port Nesting' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Process Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Process Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Assignment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Geometric Representation' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Linear Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Local Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Placement' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Relative Positioning' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Product Type Shape' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Profile 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Profile 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Project Declaration' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Project Global Positioning' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Project Template Definitions' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Property Sets for Objects' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Property Sets for Performance' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Property Sets for Types' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Property Sets for Types' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Property Sets with Override' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference SweptSolid PolyCurve Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Tessellation Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Topology' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Topology' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Reference Topology' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Revision Control' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Sequential Connectivity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Sequential Connectivity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Sequential Connectivity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Software Identity' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Composition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Container' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Containment' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Spatial Decomposition' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface 3D Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Surface Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Axis Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Body Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Clearance Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Type Lighting Geometry' for entity '' in MVD 'GeneralUsage' is not modeled in UML
+* The concept usage 'Window Attributes' for entity '' in MVD 'GeneralUsage' is not modeled in UML
 ## PropertyForDefinition
 
 * For document 'AcidityConcentration.md/a/properties/docs' a property cannot be found
