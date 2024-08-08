@@ -400,7 +400,6 @@
 * For document 'ProtectivePoreRatio.md/p/properties/docs' a property cannot be found
 * For document 'Pset.md/p/properties/docs' a property cannot be found
 * For document 'Qto.md/q/properties/docs' a property cannot be found
-* For document 'QuaySectionType.md/q/properties/docs/README.md/core/schemas' a property cannot be found
 * For document 'RaisedCompStrengthPerp.md/r/properties/docs' a property cannot be found
 * For document 'RaisedCompressiveStrength.md/r/properties/docs' a property cannot be found
 * For document 'ReferenceDepth.md/r/properties/docs' a property cannot be found
@@ -474,7 +473,7 @@
 * For document 'VisibleRefractionIndex.md/v/properties/docs' a property cannot be found
 * For document 'VisibleTransmittance.md/v/properties/docs' a property cannot be found
 * For document 'WarpingConstant.md/w/properties/docs' a property cannot be found
-* For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
+* For document 'WarrantyEndDate.md/w/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'WaterImpermeability.md/w/properties/docs' a property cannot be found
 * For document 'Workability.md/w/properties/docs' a property cannot be found
 * For document 'YieldStress.md/y/properties/docs' a property cannot be found
