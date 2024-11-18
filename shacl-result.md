@@ -462,6 +462,7 @@
 * For document 'Unit.md/u/properties/docs' a property cannot be found
 * For document 'UpperVaporResistanceFactor.md/u/properties/docs' a property cannot be found
 * For document 'User.md/u/properties/docs' a property cannot be found
+* For document 'UserHistory.md/u/properties/docs/README.md/resource/schemas' a property cannot be found
 * For document 'Values.md/v/properties/docs' a property cannot be found
 * For document 'VaporPermeability.md/v/properties/docs' a property cannot be found
 * For document 'VentilationAirFlowRate.md/v/properties/docs' a property cannot be found
@@ -473,7 +474,7 @@
 * For document 'VisibleRefractionIndex.md/v/properties/docs' a property cannot be found
 * For document 'VisibleTransmittance.md/v/properties/docs' a property cannot be found
 * For document 'WarpingConstant.md/w/properties/docs' a property cannot be found
-* For document 'WarrantyEndDate.md/w/properties/docs/README.md/shared/schemas' a property cannot be found
+* For document 'WarrantyEndDate.md/w/properties/docs' a property cannot be found
 * For document 'WaterImpermeability.md/w/properties/docs' a property cannot be found
 * For document 'Workability.md/w/properties/docs' a property cannot be found
 * For document 'YieldStress.md/y/properties/docs' a property cannot be found
