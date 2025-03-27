@@ -460,6 +460,7 @@
 * For document 'UltimateStrain.md/u/properties/docs' a property cannot be found
 * For document 'UltimateStress.md/u/properties/docs' a property cannot be found
 * For document 'Unit.md/u/properties/docs' a property cannot be found
+* For document 'UplinkRadioBand.md/u/properties/docs/README.md/domain/schemas' a property cannot be found
 * For document 'UpperVaporResistanceFactor.md/u/properties/docs' a property cannot be found
 * For document 'User.md/u/properties/docs' a property cannot be found
 * For document 'Values.md/v/properties/docs' a property cannot be found
@@ -467,7 +468,6 @@
 * For document 'VentilationAirFlowRate.md/v/properties/docs' a property cannot be found
 * For document 'Version.md/v/properties/docs' a property cannot be found
 * For document 'VersionDate.md/v/properties/docs' a property cannot be found
-* For document 'VerticalBarPitch.md/v/properties/docs/README.md/shared/schemas' a property cannot be found
 * For document 'ViscosityTemperatureDerivative.md/v/properties/docs' a property cannot be found
 * For document 'VisibleReflectanceBack.md/v/properties/docs' a property cannot be found
 * For document 'VisibleReflectanceFront.md/v/properties/docs' a property cannot be found
