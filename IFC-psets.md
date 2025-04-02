@@ -1,1817 +1,195 @@
 
 Missing in output
 =================
-* Pset_CoveringCeiling.xml
-* Pset_SpaceThermalDesign.xml
-* Pset_MaterialWoodBasedBeam.xml
-* Pset_ThermalLoadAggregate.xml
-* Pset_ThermalLoadDesignCriteria.xml
-* Pset_PipeFittingTypeBend.xml
-* Pset_MaterialWoodBasedPanel.xml
 * Pset_PipeFittingTypeJunction.xml
-* Pset_ChamberCommon.xml
-* Pset_PlantCommon.xml
-* Pset_SpaceThermalRequirements.xml
-* Pset_SpaceLightingRequirements.xml
+* Pset_ThermalLoadAggregate.xml
 * Pset_BuildingElementProxyProvisionForVoid.xml
+* Pset_SpaceLightingRequirements.xml
+* Pset_PlantCommon.xml
+* Pset_SpaceThermalDesign.xml
+* Pset_ChamberCommon.xml
+* Pset_PipeFittingTypeBend.xml
+* Pset_CoveringCeiling.xml
+* Pset_MaterialWoodBasedBeam.xml
+* Pset_SpaceThermalRequirements.xml
+* Pset_MaterialWoodBasedPanel.xml
+* Pset_ThermalLoadDesignCriteria.xml
 
 Missing in reference
 =================
-* Pset_OpticalSplitter.xml
-* Pset_DistributionSystemTypeOverheadContactlineSystem.xml
+* Pset_MarkerGeneral.xml
+* Pset_SwitchingDeviceTypeRelay.xml
+* Pset_CommunicationsApplianceTypeTelecommand.xml
+* Pset_ElectricFlowStorageDeviceTypeBattery.xml
 * Pset_MarinePartChamberCommon.xml
-* Pset_ThermalLoad.xml
-* Pset_ElementAssemblyTypeOCSSuspension.xml
-* Pset_DiscreteAccessoryTypeCableArranger.xml
-* Pset_DiscreteAccessoryTypeRailBrace.xml
-* Pset_WindowLiningProperties.xml
+* Pset_PermeableCoveringProperties.xml
+* Pset_VegetationCommon.xml
+* Pset_CableSegmentTypeContactWire.xml
+* Pset_MechanicalFastenerTypeRailFastening.xml
+* Pset_SpaceHVACDesign.xml
+* Pset_CableFittingTypeFanout.xml
+* Pset_ElementAssemblyTypeSupportingAssembly.xml
+* Pset_MechanicalPanelOutOfPlane.xml
+* Pset_RailTypeRail.xml
 * Pset_MechanicalPanelOutOfPlaneNegative.xml
+* Pset_ConstructionAdministration.xml
+* Pset_SystemFurnitureElementTypeSubrack.xml
+* Pset_SensorTypeRainSensor.xml
+* Pset_ElectricFlowStorageDeviceTypeUPS.xml
+* Pset_ElementAssemblyTypeTrackPanel.xml
+* Pset_CommunicationsApplianceTypeOpticalLineTerminal.xml
+* Pset_MemberTypeTieBar.xml
+* Pset_SensorTypeTurnoutClosureSensor.xml
+* Pset_BuiltSystemRailwayTrack.xml
+* Pset_CommunicationsApplianceTypeAutomaton.xml
+* Pset_CableCarrierSegmentTypeDropper.xml
+* Qto_ConduitSegmentBaseQuantities.xml
+* Pset_MemberTypeOCSRigidSupport.xml
+* Pset_RailwaySignalAspect.xml
+* Pset_CableFittingTypeExit.xml
+* Pset_DiscreteAccessoryTypeBracket.xml
+* Pset_MemberTypeAnchoringBar.xml
+* Pset_DoorLiningProperties.xml
+* Pset_MechanicalFastenerOCSFitting.xml
+* Pset_TrackElementTypeSleeper.xml
+* Pset_DistributionBoardTypeDistributionFrame.xml
+* Pset_TrackElementPHistoryDerailer.xml
+* Pset_ImpactProtectionDeviceTypeBumper.xml
+* Pset_CableSegmentTypeEarthingConductor.xml
+* Pset_SignalFrame.xml
+* Pset_ProtectiveDeviceTypeAntiArcingDevice.xml
+* Pset_RailwayBalise.xml
+* Pset_DiscreteAccessoryTypeRailLubrication.xml
+* Pset_Address.xml
+* Pset_OpticalAdapter.xml
+* Pset_CableSegmentOccurenceFiberSegment.xml
+* Pset_PowerControlSystem.xml
+* Pset_OpticalSplitter.xml
+* Pset_MechanicalFastenerTypeRailJoint.xml
+* Pset_DataTransmissionUnit.xml
+* Pset_ElectricFlowStorageDeviceTypeInductor.xml
+* Pset_InstallationOccurrence.xml
+* Pset_DiscreteAccessoryTypeTensioningEquipment.xml
+* Pset_TrackElementTypeDerailer.xml
+* Pset_SpringTensioner.xml
+* Pset_ElementAssemblyTypeSteadyDevice.xml
+* Pset_SymmetricPairCable.xml
+* Pset_WiredCommunicationPortCommon.xml
+* Qto_BodyGeometryValidation.xml
+* Pset_SpaceAirHandlingDimensioning.xml
+* Pset_PatchCordCable.xml
+* Pset_ElectricalFeederLine.xml
+* Pset_JunctionBoxTypeData.xml
+* Pset_TrackElementOccurrenceSleeper.xml
+* Pset_CurrentInstrumentTransformer.xml
+* Pset_SensorTypeForeignObjectDetectionSensor.xml
+* Pset_IpNetworkEquipmentPHistory.xml
+* Pset_FittingJunction.xml
+* Pset_FittingTransition.xml
+* Qto_SleeperBaseQuantities.xml
+* Pset_SectionInsulator.xml
+* Pset_SignCommon.xml
+* Pset_Tiling.xml
+* Pset_AxleCountingEquipment.xml
+* Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal.xml
+* Pset_CommunicationsApplianceTypeGateway.xml
+* Pset_DiscreteAccessoryTypeLock.xml
+* Pset_CommunicationsApplianceTypeAntenna.xml
+* Pset_ElementAssemblyTypeOCSSuspension.xml
+* Pset_RailTypeCheckRail.xml
+* Pset_DiscreteAccessoryTypeCableArranger.xml
 * Pset_FittingBend.xml
 * Pset_TractionPowerSystem.xml
-* Pset_CableSegmentTypeOpticalCableSegment.xml
-* Pset_FittingTransition.xml
-* Pset_RailwaySignalSighting.xml
-* Pset_ElementAssemblyTypeTurnoutPanel.xml
-* Pset_DiscreteAccessoryTypeRailLubrication.xml
-* Pset_DistributionBoardTypeDistributionFrame.xml
-* Pset_CommunicationsApplianceTypeOpticalNetworkUnit.xml
-* Pset_ProtectiveDeviceTypeAntiArcingDevice.xml
-* Pset_VegetationCommon.xml
-* Pset_MechanicalBeamInPlaneNegative.xml
-* Pset_DiscreteAccessoryTypeInsulator.xml
-* Pset_RepairOccurrence.xml
-* Pset_SensorTypeTurnoutClosureSensor.xml
-* Pset_VoltageInstrumentTransformer.xml
-* Pset_ElectricFlowStorageDeviceTypeBattery.xml
-* Pset_BuiltSystemRailwayLine.xml
-* Pset_DoorPanelProperties.xml
-* Pset_DiscreteAccessoryTypeBracket.xml
-* Pset_SensorTypeRainSensor.xml
 * Pset_ElementAssemblyTypeTractionSwitchingAssembly.xml
-* Pset_ElectricFlowStorageDeviceTypeUPS.xml
-* Pset_MemberTypeAnchoringBar.xml
-* Pset_SignalFrame.xml
-* Pset_CommunicationsApplianceTypeAntenna.xml
-* Pset_CableSegmentOccurenceFiberSegment.xml
-* Pset_WindowPanelProperties.xml
-* Pset_RailwayCableCarrier.xml
-* Pset_AxleCountingEquipment.xml
-* Pset_RailTypeStockRail.xml
-* Pset_CurrentInstrumentTransformer.xml
-* Qto_RailBaseQuantities.xml
-* Pset_CableSegmentTypeFiberSegment.xml
-* Pset_CableCarrierSegmentTypeDropper.xml
-* Pset_ConstructionAdministration.xml
-* Pset_MechanicalBeamInPlane.xml
-* Qto_SpatialZoneBaseQuantities.xml
-* Pset_SectioningDevice.xml
-* Pset_ElectricalFeederLine.xml
-* Pset_Tiling.xml
-* Pset_ElementAssemblyTypeDilatationPanel.xml
-* Pset_DataTransmissionUnit.xml
-* Pset_ElectricFlowStorageDeviceTypeCapacitor.xml
-* Pset_SensorTypeEarthquakeSensor.xml
-* Pset_SensorTypeSnowSensor.xml
 * Pset_TelecomCableGeneral.xml
-* Pset_DistributionBoardTypeDispatchingBoard.xml
-* Pset_ElectricalDeviceCompliance.xml
-* Pset_SpaceHVACDesign.xml
-* Pset_ElectricFlowStorageDeviceTypeInductor.xml
-* Pset_CommunicationsApplianceTypeTelephonyExchange.xml
-* Pset_BalanceWeightTensionerDesignCriteria.xml
+* Pset_RailwayCableCarrier.xml
+* Pset_CableSegmentTypeOpticalCableSegment.xml
+* Pset_DoorPanelProperties.xml
 * Pset_ElectricFlowStorageDeviceTypeRecharger.xml
-* Pset_MechanicalFastenerOCSFitting.xml
-* Pset_ElementAssemblyTypeRigidFrame.xml
-* Pset_RailwaySignalType.xml
-* Pset_SpaceAirHandlingDimensioning.xml
+* Pset_DiscreteAccessoryTypeRailPad.xml
+* Pset_TransportEquipmentOTN.xml
+* Pset_WindowPanelProperties.xml
+* Pset_ElementAssemblyTypeMast.xml
+* Pset_ElectricFlowStorageDeviceTypeCapacitor.xml
+* Pset_BalanceWeightTensionerDesignCriteria.xml
+* Pset_CommunicationsApplianceTypeTransportEquipment.xml
+* Pset_FootingTypePadFooting.xml
+* Pset_ElementAssemblyTypeCantilever.xml
+* Pset_VoltageInstrumentTransformer.xml
+* Pset_MechanicalBeamInPlaneNegative.xml
+* Pset_ImpactProtectionDeviceOccurrenceBumper.xml
+* Pset_ConstructionOccurence.xml
+* Pset_ElementAssemblyTypeDilatationPanel.xml
+* Pset_RailTypeGuardRail.xml
 * Pset_AudioVisualApplianceTypeRecordingEquipment.xml
 * Pset_PointMachine.xml
-* Pset_CommunicationsApplianceTypeIpNetworkEquipment.xml
-* Pset_EnvironmentalCondition.xml
-* Pset_TicketVendingMachine.xml
-* Pset_CommunicationsApplianceTypeIntelligentPeripheral.xml
-* Pset_FittingJunction.xml
-* Qto_ConduitSegmentBaseQuantities.xml
-* Pset_MemberTypeTieBar.xml
-* Pset_TrackElementTypeDerailer.xml
-* Pset_SystemFurnitureElementTypeSubrack.xml
-* Pset_SpringTensioner.xml
-* Pset_SwitchingDeviceTypeRelay.xml
-* Pset_CableSegmentTypeEarthingConductor.xml
-* Pset_MechanicalPanelOutOfPlane.xml
-* Pset_TrackElementPHistoryDerailer.xml
-* Pset_PowerControlSystem.xml
-* Pset_CableSegmentTypeContactWire.xml
-* Pset_Address.xml
-* Pset_CableSegmentConnector.xml
-* Pset_InstallationOccurrence.xml
+* Pset_ElectricalDeviceCompliance.xml
 * Pset_MechanicalBeamOutOfPlane.xml
-* Pset_FootingTypePadFooting.xml
-* Pset_CommunicationsApplianceTypeGateway.xml
-* Pset_WiredCommunicationPortCommon.xml
-* Pset_ElementAssemblyTypeTrackPanel.xml
 * Pset_MemberTypePost.xml
-* Pset_ImpactProtectionDeviceOccurrenceBumper.xml
-* Pset_RailwaySignalAspect.xml
-* Pset_AudioVisualApplianceTypeRailwayCommunicationTerminal.xml
-* Pset_MaterialWoodBasedStructure.xml
-* Pset_CableFittingTypeFanout.xml
-* Pset_CableSegmentTypeStitchWire.xml
-* Pset_TransportEquipmentOTN.xml
-* Pset_SymmetricPairCable.xml
-* Pset_CoaxialCable.xml
-* Pset_DiscreteAccessoryTypeTensioningEquipment.xml
-* Pset_SensorTypeForeignObjectDetectionSensor.xml
-* Pset_SectionInsulator.xml
-* Pset_ElementAssemblyTypeSupportingAssembly.xml
-* Pset_PermeableCoveringProperties.xml
-* Pset_ElementAssemblyTypeHeadSpan.xml
-* Pset_MemberTypeOCSRigidSupport.xml
-* Pset_ProtectiveDeviceTypeSparkGap.xml
-* Pset_SignCommon.xml
-* Pset_RailTypeCheckRail.xml
-* Pset_CommunicationsApplianceTypeOpticalLineTerminal.xml
-* Pset_TrackElementTypeSleeper.xml
-* Pset_ElementAssemblyTypeSteadyDevice.xml
-* Qto_SleeperBaseQuantities.xml
-* Pset_RailTypeGuardRail.xml
 * Pset_CommunicationsApplianceTypeModem.xml
-* Pset_CommunicationsApplianceTypeTelecommand.xml
-* Pset_OpticalAdapter.xml
-* Pset_ProvisionForVoid.xml
-* Pset_PatchCordCable.xml
-* Pset_CommunicationsApplianceTypeTransportEquipment.xml
-* Pset_JunctionBoxTypeData.xml
-* Pset_MarkerGeneral.xml
-* Pset_DiscreteAccessoryTypeRailPad.xml
+* Pset_RailTypeStockRail.xml
+* Qto_SpatialZoneBaseQuantities.xml
+* Pset_TicketVendingMachine.xml
+* Pset_RailwaySignalSighting.xml
+* Pset_WindowLiningProperties.xml
+* Pset_MemberTypeCatenaryStay.xml
+* Pset_OpticalPigtail.xml
 * Pset_ElectricFlowTreatmentDeviceTypeElectronicFilter.xml
+* Pset_RepairOccurrence.xml
+* Pset_CableSegmentTypeFiberTubeSegment.xml
+* Pset_RailwayTrackStructurePart.xml
+* Pset_ProvisionForVoid.xml
+* Pset_FastenerRailWeld.xml
+* Pset_DiscreteAccessoryTypeInsulator.xml
+* Pset_SensorTypeEarthquakeSensor.xml
+* Pset_RailwayLevelCrossing.xml
+* Pset_CableSegmentTypeWirePairSegment.xml
+* Pset_CommunicationsApplianceTypeComputer.xml
+* Pset_RailwaySignalType.xml
+* Pset_ElementAssemblyTypeTurnoutPanel.xml
+* Pset_CableSegmentTypeFiberSegment.xml
+* Pset_SectioningDevice.xml
+* Pset_ElementAssemblyTypeRigidFrame.xml
+* Pset_BuiltSystemRailwayLine.xml
+* Pset_EnvironmentalCondition.xml
+* Pset_DiscreteAccessoryTypeRailBrace.xml
+* Pset_ProtectiveDeviceTypeSparkGap.xml
+* Pset_CommunicationsApplianceTypeTelephonyExchange.xml
+* Pset_ElementSize.xml
+* Pset_DistributionBoardTypeDispatchingBoard.xml
+* Pset_CableSegmentTypeStitchWire.xml
+* Pset_OnSiteTelecomControlUnit.xml
+* Qto_RailBaseQuantities.xml
+* Pset_ThermalLoad.xml
 * Pset_RailTypeBlade.xml
 * Pset_RailwaySignalOccurrence.xml
-* Pset_RailTypeRail.xml
-* Pset_DiscreteAccessoryTypeLock.xml
-* Pset_ElementAssemblyTypeCantilever.xml
-* Pset_ImpactProtectionDeviceTypeBumper.xml
-* Pset_ElementAssemblyTypeMast.xml
-* Pset_ElementSize.xml
-* Pset_FastenerRailWeld.xml
-* Pset_OpticalPigtail.xml
-* Pset_BuiltSystemRailwayTrack.xml
-* Pset_CableSegmentTypeFiberTubeSegment.xml
-* Pset_CommunicationsApplianceTypeAutomaton.xml
-* Pset_SpaceLightingDesign.xml
-* Pset_MechanicalPanelInPlane.xml
-* Pset_RailwayLevelCrossing.xml
-* Pset_CommunicationsApplianceTypeComputer.xml
-* Pset_MechanicalFastenerTypeRailJoint.xml
-* Pset_OnSiteTelecomControlUnit.xml
 * Pset_DiscreteAccessoryTypeSoundAbsorption.xml
+* Pset_MechanicalBeamInPlane.xml
+* Pset_ElementAssemblyTypeHeadSpan.xml
+* Pset_DistributionSystemTypeOverheadContactlineSystem.xml
 * Pset_DiscreteAccessoryTypeSlidingChair.xml
-* Pset_ConstructionOccurence.xml
-* Pset_IpNetworkEquipmentPHistory.xml
 * Pset_CableCarrierSegmentTypeCatenaryWire.xml
-* Pset_MemberTypeCatenaryStay.xml
-* Pset_MechanicalFastenerTypeRailFastening.xml
-* Pset_RailwayTrackStructurePart.xml
-* Pset_RailwayBalise.xml
-* Pset_TrackElementOccurrenceSleeper.xml
-* Pset_CableFittingTypeExit.xml
-* Pset_CableSegmentTypeWirePairSegment.xml
-* Pset_DoorLiningProperties.xml
-* Qto_BodyGeometryValidation.xml
+* Pset_CommunicationsApplianceTypeIntelligentPeripheral.xml
+* Pset_SpaceLightingDesign.xml
+* Pset_CommunicationsApplianceTypeIpNetworkEquipment.xml
+* Pset_CableSegmentConnector.xml
+* Pset_MaterialWoodBasedStructure.xml
+* Pset_CoaxialCable.xml
+* Pset_MechanicalPanelInPlane.xml
+* Pset_SensorTypeSnowSensor.xml
+* Pset_CommunicationsApplianceTypeOpticalNetworkUnit.xml
 
-Pset_EngineTypeCommon.xml
-=========================
+Pset_ProtectiveDeviceTrippingUnitTypeElectroMagnetic.xml
+========================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcEngineType"
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcEngine"
-  ~~IfcEngine~~ IfcEngine,IfcEngineType
-
-
-Pset_UnitaryControlElementBaseStationController.xml
-===================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType/BASESTATIONCONTROLLER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement/BASESTATIONCONTROLLER"
-  ~~IfcUnitaryControlElement/BASESTATIONCONTROLLER~~ IfcUnitaryControlElement/BASESTATIONCONTROLLER,IfcUnitaryControlElementType/BASESTATIONCONTROLLER
-* PropertyDefs > PropertyDef [Name="NumberOfManagedBTSs"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfManagedCarriers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Qto_ConstructionEquipmentResourceBaseQuantities.xml
-===================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcConstructionEquipmentResourceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcConstructionEquipmentResource"
-  ~~IfcConstructionEquipmentResource~~ IfcConstructionEquipmentResource,IfcConstructionEquipmentResourceType
-
-
-Pset_SpaceHeaterPHistory.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Exponent"] > Name "Exponent"
-  ~~Exponent~~ CharacteristicExponent
-
-
-Pset_UnitaryControlElementTypeThermostat.xml
-============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType/THERMOSTAT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement/THERMOSTAT"
-  ~~IfcUnitaryControlElement/THERMOSTAT~~ IfcUnitaryControlElement/THERMOSTAT,IfcUnitaryControlElementType/THERMOSTAT
-
-
-Pset_ProtectiveDeviceTrippingFunctionGCurve.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-
-
-Pset_ControllerTypeProportional.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType/PROPORTIONAL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController/PROPORTIONAL"
-  ~~IfcController/PROPORTIONAL~~ IfcController/PROPORTIONAL,IfcControllerType/PROPORTIONAL
-
-
-Pset_ActuatorPHistory.xml
-=========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Status"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Position"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Quality"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_GateHeadCommon.xml
-=======================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)"
-  ~~IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)~~ IfcMarinePart/GATEHEAD
-* ApplicableTypeValue "IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)"
-  ~~IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)~~ IfcMarinePart/GATEHEAD
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_FastenerWeld.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFastenerType/WELD"
-* PropertyDefs > PropertyDef [Name="NominalThroatThickness"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcFastener/WELD"
-  ~~IfcFastener/WELD~~ IfcFastener/WELD,IfcFastenerType/WELD
-* PropertyDefs > PropertyDef [Name="n"] > Name "n"
-  ~~n~~ NumberOfWeldElements
-* PropertyDefs > PropertyDef [Name="a"] > Name "a"
-  ~~a~~ WeldLegLength
-* PropertyDefs > PropertyDef [Name="s"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="e"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="d"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="l"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="c"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="z"]
-
-
-
-Qto_SensorBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor"
-  ~~IfcSensor~~ IfcSensor,IfcSensorType
-
-
-Qto_CableCarrierFittingBaseQuantities.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierFitting"
-  ~~IfcCableCarrierFitting~~ IfcCableCarrierFitting,IfcCableCarrierFittingType
-
-
-
-Pset_Asset.xml
-==============
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_MaterialEnergy.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-
-Pset_DistributionPortPHistoryDuct.xml
-=====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Velocity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="FlowCondition"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Temperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Pressure"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="MassFlowRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_RoadMarkingCommon.xml
-==========================
-
-modifications
--------------
-* ApplicableTypeValue "IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/HATCHMARKING,IfcSurfaceFeature/LINEMARKING,IfcSurfaceFeature/PAVEMENTSURFACEMARKING,IfcSurfaceFeature/SYMBOLMARKING
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.HATCHMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-
-Pset_DamperTypeFireDamper.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDamperType/FIREDAMPER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDamper/FIREDAMPER"
-  ~~IfcDamper/FIREDAMPER~~ IfcDamper/FIREDAMPER,IfcDamperType/FIREDAMPER
-
-
-Pset_DamperTypeControlDamper.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDamperType/CONTROLDAMPER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDamper/CONTROLDAMPER"
-  ~~IfcDamper/CONTROLDAMPER~~ IfcDamper/CONTROLDAMPER,IfcDamperType/CONTROLDAMPER
-
-
-Pset_CableSegmentTypeConductorSegment.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableSegmentType/CONDUCTORSEGMENT"
-* PropertyDefs > PropertyDef [Name="NominalCurrent"]
-* PropertyDefs > PropertyDef [Name="ACResistance"]
-* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
-* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
-* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
-* PropertyDefs > PropertyDef [Name="MassPerLength"]
-* PropertyDefs > PropertyDef [Name="TensileStrength"]
-* PropertyDefs > PropertyDef [Name="YoungModulus"]
-* PropertyDefs > PropertyDef [Name="DCResistance"]
-* PropertyDefs > PropertyDef [Name="OverallDiameter"]
-* PropertyDefs > PropertyDef [Name="NumberOfCores"]
-* PropertyDefs > PropertyDef [Name="RatedVoltage"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableSegment/CONDUCTORSEGMENT"
-  ~~IfcCableSegment/CONDUCTORSEGMENT~~ IfcCableSegment/CONDUCTORSEGMENT,IfcCableSegmentType/CONDUCTORSEGMENT
-* PropertyDefs > PropertyDef [Name="Material"] > Name "Material"
-  ~~Material~~ ConductorMaterial
-* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
-  ~~Shape~~ ConductorShape
-
-
-Pset_AudioVisualApplianceTypeCamera.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/CAMERA"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/CAMERA"
-  ~~IfcAudioVisualAppliance/CAMERA~~ IfcAudioVisualAppliance/CAMERA,IfcAudioVisualApplianceType/CAMERA
-* PropertyDefs > PropertyDef [Name="CameraType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_PrecastSlab.xml
-====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab"
-  ~~IfcSlab~~ IfcSlab,IfcSlabType
-
-
-Pset_CessBetweenRails.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
-* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "LEFT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab/TRACKSLAB"
-  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
-* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "LEFT_RAIL"
-  ~~LEFT_RAIL~~ RIGHT
-* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
-  ~~PEnum_JointRelativePosition~~ PEnum_RelativePosition
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "RIGHT_RAIL"
-
-
-Pset_BoilerTypeWater.xml
-========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBoilerType/WATER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBoiler/WATER"
-  ~~IfcBoiler/WATER~~ IfcBoiler/WATER,IfcBoilerType/WATER
-
-
-Pset_SanitaryTerminalTypeShower.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SHOWER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/SHOWER"
-  ~~IfcSanitaryTerminal/SHOWER~~ IfcSanitaryTerminal/SHOWER,IfcSanitaryTerminalType/SHOWER
-
-
-Pset_ProtectiveDeviceTypeCommon.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-Pset_WorkControlCommon.xml
-==========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Qto_SwitchingDeviceBaseQuantities.xml
-=====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice"
-  ~~IfcSwitchingDevice~~ IfcSwitchingDevice,IfcSwitchingDeviceType
-
-
-Pset_AudioVisualApplianceTypeReceiver.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/RECEIVER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/RECEIVER"
-  ~~IfcAudioVisualAppliance/RECEIVER~~ IfcAudioVisualAppliance/RECEIVER,IfcAudioVisualApplianceType/RECEIVER
-* PropertyDefs > PropertyDef [Name="ReceiverType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_DiscreteAccessoryStandardFixingPlate.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Standard fixing plate"
-  ~~IfcDiscreteAccessory/Standard fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Standard fixing plate"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_MaterialConcrete.xml
-=========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcMaterial/Concrete"
-  ~~IfcMaterial/Concrete~~ IfcMaterial
-* ApplicableTypeValue "IfcMaterial/Concrete"
-  ~~IfcMaterial/Concrete~~ IfcMaterial
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_FurnitureTypeTable.xml
-===========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFurnitureType/TABLE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFurniture/TABLE"
-  ~~IfcFurniture/TABLE~~ IfcFurniture/TABLE,IfcFurnitureType/TABLE
-* PropertyDefs > PropertyDef [Name="NumberOfChairs"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_FlowMeterTypeGasMeter.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType/GASMETER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter/GASMETER"
-  ~~IfcFlowMeter/GASMETER~~ IfcFlowMeter/GASMETER,IfcFlowMeterType/GASMETER
-
-
-Pset_TransformerTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTransformerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransformer"
-  ~~IfcTransformer~~ IfcTransformer,IfcTransformerType
-
-
-Pset_DistributionChamberElementTypeValveChamber.xml
-===================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/VALVECHAMBER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/VALVECHAMBER"
-  ~~IfcDistributionChamberElement/VALVECHAMBER~~ IfcDistributionChamberElement/VALVECHAMBER,IfcDistributionChamberElementType/VALVECHAMBER
-
-
-Pset_MaterialMechanical.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_TransportElementElevator.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTransportElementType/ELEVATOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/ELEVATOR"
-  ~~IfcTransportElement/ELEVATOR~~ IfcTransportElement/ELEVATOR,IfcTransportElementType/ELEVATOR
-
-
-Pset_SensorTypeGasSensor.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/GASSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/GASSENSOR"
-  ~~IfcSensor/GASSENSOR~~ IfcSensor/GASSENSOR,IfcSensorType/GASSENSOR
-
-
-Pset_PumpPHistory.xml
-=====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Power"] > Name "Power"
-  ~~Power~~ PowerHistory
-
-
-Pset_SensorTypeIonConcentrationSensor.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/IONCONCENTRATIONSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/IONCONCENTRATIONSENSOR"
-  ~~IfcSensor/IONCONCENTRATIONSENSOR~~ IfcSensor/IONCONCENTRATIONSENSOR,IfcSensorType/IONCONCENTRATIONSENSOR
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > Name "SetPointConcentration"
-  ~~SetPointConcentration~~ SetPointIonConcentration
-
-
-Pset_ElementComponentCommon.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementComponentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElementComponent"
-  ~~IfcElementComponent~~ IfcElementComponent,IfcElementComponentType
-
-
-Pset_OpeningElementCommon.xml
-=============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="FireRating"]
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-* PropertyDefs > PropertyDef [Name="ProtectedOpening"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="ProtectedOpening"] > Name "ProtectedOpening"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-
-
-Pset_CableCarrierSegmentTypeCommon.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment"
-  ~~IfcCableCarrierSegment~~ IfcCableCarrierSegment,IfcCableCarrierSegmentType
-
-
-Pset_PipeSegmentTypeGutter.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeSegmentType/GUTTER"
-* PropertyDefs > PropertyDef [Name="Complementaryfunction"]
-* PropertyDefs > PropertyDef [Name="OrthometricHeight"]
-* PropertyDefs > PropertyDef [Name="IsCovered"]
-* PropertyDefs > PropertyDef [Name="IsMonitored"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeSegment/GUTTER"
-  ~~IfcPipeSegment/GUTTER~~ IfcPipeSegment/GUTTER,IfcPipeSegmentType/GUTTER
-
-
-Pset_SanitaryTerminalTypeToiletPan.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/TOILETPAN"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/TOILETPAN"
-  ~~IfcSanitaryTerminal/TOILETPAN~~ IfcSanitaryTerminal/TOILETPAN,IfcSanitaryTerminalType/TOILETPAN
-
-
-Qto_ActuatorBaseQuantities.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcActuatorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcActuator"
-  ~~IfcActuator~~ IfcActuator,IfcActuatorType
-
-
-Pset_FireSuppressionTerminalTypeBreechingInlet.xml
-==================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/BREECHINGINLET"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFireSuppressionTerminal/BREECHINGINLET"
-  ~~IfcFireSuppressionTerminal/BREECHINGINLET~~ IfcFireSuppressionTerminal/BREECHINGINLET,IfcFireSuppressionTerminalType/BREECHINGINLET
-
-
-Pset_SensorTypeSmokeSensor.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/SMOKESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/SMOKESENSOR"
-  ~~IfcSensor/SMOKESENSOR~~ IfcSensor/SMOKESENSOR,IfcSensorType/SMOKESENSOR
-
-
-Pset_ChimneyCommon.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcChimneyType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcChimney"
-  ~~IfcChimney~~ IfcChimney,IfcChimneyType
-
-
-
-Pset_DistributionPortTypeCable.xml
-==================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="HasConnector"]
-* PropertyDefs > PropertyDef [Name="IsWelded"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ConnectionType"] > Name "ConnectionType"
-  ~~ConnectionType~~ ElectricalConnectionType
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_TrenchExcavationCommon.xml
-===============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcEarthworksCut/(.TRENCH.)"
-  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
-* ApplicableTypeValue "IfcEarthworksCut/(.TRENCH.)"
-  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_WaterStratumCommon.xml
-===========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcWaterStratum"
-  ~~IfcWaterStratum~~ IfcGeotechnicalStratum/WATER
-* ApplicableTypeValue "IfcWaterStratum"
-  ~~IfcWaterStratum~~ IfcGeotechnicalStratum/WATER
-
-
-Pset_SwitchingDeviceTypeEmergencyStop.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/EMERGENCYSTOP"
-* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
-* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
-* PropertyDefs > PropertyDef [Name="BreakingCapacity"]
-* PropertyDefs > PropertyDef [Name="NumberOfEarthFaultRelays"]
-* PropertyDefs > PropertyDef [Name="NumberOfEmergencyButtons"]
-* PropertyDefs > PropertyDef [Name="NumberOfRelays"]
-* PropertyDefs > PropertyDef [Name="NumberOfOverCurrentRelays"]
-* PropertyDefs > PropertyDef [Name="NumberOfAffectedPoles"]
-* PropertyDefs > PropertyDef [Name="NominalCurrent"]
-* PropertyDefs > PropertyDef [Name="RatedFrequency"]
-* PropertyDefs > PropertyDef [Name="RatedVoltage"]
-* PropertyDefs > PropertyDef [Name="TransformationRatio"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/EMERGENCYSTOP"
-  ~~IfcSwitchingDevice/EMERGENCYSTOP~~ IfcSwitchingDevice/EMERGENCYSTOP,IfcSwitchingDeviceType/EMERGENCYSTOP
-
-
-Pset_FurnitureTypeFileCabinet.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFurnitureType/FILECABINET"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFurniture/FILECABINET"
-  ~~IfcFurniture/FILECABINET~~ IfcFurniture/FILECABINET,IfcFurnitureType/FILECABINET
-
-
-Pset_SpaceCoveringRequirements.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpatialElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_JunctionBoxTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcJunctionBoxType"
-* PropertyDefs > PropertyDef [Name="NominalLength"]
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcJunctionBox"
-  ~~IfcJunctionBox~~ IfcJunctionBox,IfcJunctionBoxType
-* PropertyDefs > PropertyDef [Name="NumberOfGangs"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="MountingType"] > Name "MountingType"
-  ~~MountingType~~ JunctionBoxMountingType
-
-
-Pset_MaterialWater.xml
-======================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Qto_HumidifierBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcHumidifierType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcHumidifier"
-  ~~IfcHumidifier~~ IfcHumidifier,IfcHumidifierType
-
-
-Pset_AudioVisualApplianceTypeCommon.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance"
-  ~~IfcAudioVisualAppliance~~ IfcAudioVisualAppliance,IfcAudioVisualApplianceType
-
-
-
-Pset_SwitchingDeviceTypeToggleSwitch.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/TOGGLESWITCH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/TOGGLESWITCH"
-  ~~IfcSwitchingDevice/TOGGLESWITCH~~ IfcSwitchingDevice/TOGGLESWITCH,IfcSwitchingDeviceType/TOGGLESWITCH
-
-
-Pset_DuctSegmentOccurrence.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
-
-
-Qto_WasteTerminalBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal"
-  ~~IfcWasteTerminal~~ IfcWasteTerminal,IfcWasteTerminalType
-
-
-Pset_DistributionPortPHistoryCable.xml
-======================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="CurrentHistory"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Current"] > Name "Current"
-  ~~Current~~ PowerFactorHistory
-* PropertyDefs > PropertyDef [Name="Voltage"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="PowerFactor"]
-
-
-Pset_TubeBundleTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTubeBundleType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTubeBundle"
-  ~~IfcTubeBundle~~ IfcTubeBundle,IfcTubeBundleType
-* PropertyDefs > PropertyDef [Name="NumberOfRows"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfCircuits"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_CableCarrierSegmentTypeConduitSegment.xml
-==============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CONDUITSEGMENT"
-* PropertyDefs > PropertyDef [Name="NominalDiameter"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment/CONDUITSEGMENT"
-  ~~IfcCableCarrierSegment/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT,IfcCableCarrierSegmentType/CONDUITSEGMENT
-
-
-Pset_BuildingCommon.xml
-=======================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="ElevationOfRefHeight"]
-* PropertyDefs > PropertyDef [Name="ElevationOfTerrain"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NumberOfStoreys"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_AirTerminalTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirTerminal"
-  ~~IfcAirTerminal~~ IfcAirTerminal,IfcAirTerminalType
-* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
-  ~~Shape~~ AirTerminalShape
-* PropertyDefs > PropertyDef [Name="NumberOfSlots"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > Name "AirFlowrateRange"
-  ~~AirFlowrateRange~~ AirFlowRateRange
-* PropertyDefs > PropertyDef [Name="FinishColor"] > Name "FinishColor"
-  ~~FinishColor~~ FinishColour
-* PropertyDefs > PropertyDef [Name="MountingType"] > Name "MountingType"
-  ~~MountingType~~ AirTerminalMountingType
-
-
-Qto_EvaporatorBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcEvaporatorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcEvaporator"
-  ~~IfcEvaporator~~ IfcEvaporator,IfcEvaporatorType
-
-
-Pset_LightFixtureTypeCommon.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcLightFixtureType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcLightFixture"
-  ~~IfcLightFixture~~ IfcLightFixture,IfcLightFixtureType
-* PropertyDefs > PropertyDef [Name="NumberOfSources"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_AudioVisualApplianceTypeTuner.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/TUNER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/TUNER"
-  ~~IfcAudioVisualAppliance/TUNER~~ IfcAudioVisualAppliance/TUNER,IfcAudioVisualApplianceType/TUNER
-* PropertyDefs > PropertyDef [Name="TunerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_SensorTypeRadioactivitySensor.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/RADIOACTIVITYSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/RADIOACTIVITYSENSOR"
-  ~~IfcSensor/RADIOACTIVITYSENSOR~~ IfcSensor/RADIOACTIVITYSENSOR,IfcSensorType/RADIOACTIVITYSENSOR
-
-
-Pset_AudioVisualApplianceTypeProjector.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/PROJECTOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/PROJECTOR"
-  ~~IfcAudioVisualAppliance/PROJECTOR~~ IfcAudioVisualAppliance/PROJECTOR,IfcAudioVisualApplianceType/PROJECTOR
-* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_DiscreteAccessoryLadderTrussConnector.xml
-==============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Ladder truss connector"
-  ~~IfcDiscreteAccessory/Ladder truss connector~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Ladder truss connector"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-
-Qto_AirTerminalBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirTerminal"
-  ~~IfcAirTerminal~~ IfcAirTerminal,IfcAirTerminalType
-
-
-Pset_StackTerminalTypeCommon.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcStackTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcStackTerminal"
-  ~~IfcStackTerminal~~ IfcStackTerminal,IfcStackTerminalType
-
-
-Pset_CoilTypeCommon.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoilType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCoil"
-  ~~IfcCoil~~ IfcCoil,IfcCoilType
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
-  ~~AirflowRateRange~~ AirFlowRateRange
-* PropertyDefs > PropertyDef [Name="PlacementType"] > Name "PlacementType"
-  ~~PlacementType~~ CoilPlacement
-
-
-Pset_FireSuppressionTerminalTypeCommon.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFireSuppressionTerminal"
-  ~~IfcFireSuppressionTerminal~~ IfcFireSuppressionTerminal,IfcFireSuppressionTerminalType
-
-
-Qto_VehicleBaseQuantities.xml
-=============================
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)~~ IfcVehicle/ROLLINGSTOCK,IfcVehicle/VEHICLEAIR,IfcVehicle/VEHICLEMARINE,IfcVehicle/VEHICLE,IfcVehicle/VEHICLETRACKED,IfcVehicleType/ROLLINGSTOCK,IfcVehicleType/VEHICLEAIR,IfcVehicleType/VEHICLEMARINE,IfcVehicleType/VEHICLE,IfcVehicleType/VEHICLETRACKED
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Qto_FootingBaseQuantities.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFootingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFooting"
-  ~~IfcFooting~~ IfcFooting,IfcFootingType
-
-
-Pset_FilterTypeCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFilterType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFilter"
-  ~~IfcFilter~~ IfcFilter,IfcFilterType
-
-
-Pset_FlowMeterTypeWaterMeter.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType/WATERMETER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter/WATERMETER"
-  ~~IfcFlowMeter/WATERMETER~~ IfcFlowMeter/WATERMETER,IfcFlowMeterType/WATERMETER
-
-
-Pset_TubeBundleTypeFinned.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTubeBundleType/FINNED"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTubeBundle/FINNED"
-  ~~IfcTubeBundle/FINNED~~ IfcTubeBundle/FINNED,IfcTubeBundleType/FINNED
-
-
-Qto_SignBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableTypeValue "IfcSign,IfcSignType"
-
-
-Pset_SwitchingDeviceTypeContactor.xml
-=====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/CONTACTOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/CONTACTOR"
-  ~~IfcSwitchingDevice/CONTACTOR~~ IfcSwitchingDevice/CONTACTOR,IfcSwitchingDeviceType/CONTACTOR
-
-
-Pset_SensorTypeConductanceSensor.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/CONDUCTANCESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/CONDUCTANCESENSOR"
-  ~~IfcSensor/CONDUCTANCESENSOR~~ IfcSensor/CONDUCTANCESENSOR,IfcSensorType/CONDUCTANCESENSOR
-
-
-Pset_AlarmTypeCommon.xml
-========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAlarmType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAlarm"
-  ~~IfcAlarm~~ IfcAlarm,IfcAlarmType
-* PropertyDefs > PropertyDef [Name="Condition"] > Name "Condition"
-  ~~Condition~~ AlarmCondition
-
-
-Pset_GeotechnicalAssemblyCommon.xml
-===================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Purpose"] > Name "Purpose"
-  ~~Purpose~~ BoreHolePurpose
-
-
-Pset_ManufacturerTypeInformation.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement"
-  ~~IfcElement~~ IfcElement,IfcElementType
-
-
-Pset_EnvironmentalImpactIndicators.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement"
-  ~~IfcElement~~ IfcElement,IfcElementType
-* PropertyDefs > PropertyDef [Name="Unit"] > Name "Unit"
-  ~~Unit~~ IndicatorsUnit
-
-
-Pset_CoveringFlooring.xml
-=========================
-
-modifications
--------------
-* ApplicableTypeValue "IfcCovering/FLOORING,"
-  ~~IfcCovering/FLOORING,~~ IfcCovering/FLOORING,IfcCoveringType/FLOORING
-
-
-Qto_TransformerBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTransformerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransformer"
-  ~~IfcTransformer~~ IfcTransformer,IfcTransformerType
-
-
-
-Pset_ProtectiveDeviceTypeResidualCurrentSwitch.xml
-==================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType/RESIDUALCURRENTSWITCH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice/RESIDUALCURRENTSWITCH"
-  ~~IfcProtectiveDevice/RESIDUALCURRENTSWITCH~~ IfcProtectiveDevice/RESIDUALCURRENTSWITCH,IfcProtectiveDeviceType/RESIDUALCURRENTSWITCH
-
-
-Pset_CableCarrierSegmentTypeCableTraySegment.xml
-================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLETRAYSEGMENT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment/CABLETRAYSEGMENT"
-  ~~IfcCableCarrierSegment/CABLETRAYSEGMENT~~ IfcCableCarrierSegment/CABLETRAYSEGMENT,IfcCableCarrierSegmentType/CABLETRAYSEGMENT
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-
-
-Pset_RadiiKerbStone.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerb,IfcKerbType
-
-
-Pset_MaintenanceTriggerPerformance.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
-  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
-* PropertyDefs > PropertyDef [Name="MaintenanceLevel"] > Name "MaintenanceLevel"
-  ~~MaintenanceLevel~~ PerformanceMaintenanceLevel
-
-
-Qto_PipeFittingBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeFitting"
-  ~~IfcPipeFitting~~ IfcPipeFitting,IfcPipeFittingType
-
-
-Pset_BeamCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBeamType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam"
-  ~~IfcBeam~~ IfcBeam,IfcBeamType
-
-
-Pset_MechanicalFastenerAnchorBolt.xml
-=====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMechanicalFastenerType/ANCHORBOLT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMechanicalFastener/ANCHORBOLT"
-  ~~IfcMechanicalFastener/ANCHORBOLT~~ IfcMechanicalFastener/ANCHORBOLT,IfcMechanicalFastenerType/ANCHORBOLT
-
-
-Pset_CooledBeamTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCooledBeamType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCooledBeam"
-  ~~IfcCooledBeam~~ IfcCooledBeam,IfcCooledBeamType
-* PropertyDefs > PropertyDef [Name="FinishColor"] > Name "FinishColor"
-  ~~FinishColor~~ FinishColour
-
-
-Pset_EvaporatorTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcEvaporatorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcEvaporator"
-  ~~IfcEvaporator~~ IfcEvaporator,IfcEvaporatorType
-
-
-Pset_CivilElementCommon.xml
-===========================
-
-additions
----------
-* ApplicableTypeValue "IfcCivilElement,IfcCivilElementType"
-
-
-Qto_WallBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWallType"
-* QtoDefs > QtoDef [Name="GrossFootPrintArea"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcWall"
-  ~~IfcWall~~ IfcWall,IfcWallType
-* QtoDefs > QtoDef [Name="GrossFootprintArea"] > Name "GrossFootprintArea"
-  ~~GrossFootprintArea~~ NetFootPrintArea
-
-deletions
----------
-* QtoDefs > QtoDef [Name="NetFootprintArea"]
-
-
-Pset_ConstructionResource.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcConstructionResourceType"
-* PropertyDefs > PropertyDef [Name="ScheduleWorkProgression"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcConstructionResource"
-  ~~IfcConstructionResource~~ IfcConstructionResource,IfcConstructionResourceType
-* PropertyDefs > PropertyDef [Name="ScheduleWork"] > Name "ScheduleWork"
-  ~~ScheduleWork~~ RemainingWorkProgression
-* PropertyDefs > PropertyDef [Name="ActualWork"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="RemainingWork"]
-
-
-Pset_SpaceHeaterTypeConvector.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpaceHeaterType/CONVECTOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpaceHeater/CONVECTOR"
-  ~~IfcSpaceHeater/CONVECTOR~~ IfcSpaceHeater/CONVECTOR,IfcSpaceHeaterType/CONVECTOR
-
-
-
-Pset_ProtectiveDeviceTypeVaristor.xml
-=====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType/VARISTOR"
-* PropertyDefs > PropertyDef [Name="CharacteristicFunction"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice/VARISTOR"
-  ~~IfcProtectiveDevice/VARISTOR~~ IfcProtectiveDevice/VARISTOR,IfcProtectiveDeviceType/VARISTOR
-
-
-Pset_FireSuppressionTerminalTypeFireHydrant.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/FIREHYDRANT"
-* PropertyDefs > PropertyDef [Name="BodyColour"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcFireSuppressionTerminal/FIREHYDRANT"
-  ~~IfcFireSuppressionTerminal/FIREHYDRANT~~ IfcFireSuppressionTerminal/FIREHYDRANT,IfcFireSuppressionTerminalType/FIREHYDRANT
-* PropertyDefs > PropertyDef [Name="NumberOfHoseConnections"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="BodyColor"] > Name "BodyColor"
-  ~~BodyColor~~ CapColour
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CapColor"]
-
-
-
-Pset_ElementAssemblyCommon.xml
-==============================
-
-additions
----------
-* ApplicableTypeValue "IfcElementAssembly,IfcElementAssemblyType"
-
-
-Qto_RoofBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRoofType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRoof"
-  ~~IfcRoof~~ IfcRoof,IfcRoofType
-
-
-Pset_StructuralSurfaceMemberVaryingThickness.xml
-================================================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_MemberCommon.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMemberType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMember"
-  ~~IfcMember~~ IfcMember,IfcMemberType
-
-
-Pset_ProfileMechanical.xml
-==========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
-
-
-Pset_SpaceParking.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpaceType/PARKING"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace/PARKING"
-  ~~IfcSpace/PARKING~~ IfcSpace/PARKING,IfcSpaceType/PARKING
-
-
-Pset_TankTypePressureVessel.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType/PRESSUREVESSEL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTank/PRESSUREVESSEL"
-  ~~IfcTank/PRESSUREVESSEL~~ IfcTank/PRESSUREVESSEL,IfcTankType/PRESSUREVESSEL
-
-
-Qto_CoolingTowerBaseQuantities.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoolingTowerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCoolingTower"
-  ~~IfcCoolingTower~~ IfcCoolingTower,IfcCoolingTowerType
-
-
-Pset_OnSiteCastKerb.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerb,IfcKerbType
-
-
-
-Pset_ElectricApplianceTypeElectricCooker.xml
-============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricApplianceType/ELECTRICCOOKER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricAppliance/ELECTRICCOOKER"
-  ~~IfcElectricAppliance/ELECTRICCOOKER~~ IfcElectricAppliance/ELECTRICCOOKER,IfcElectricApplianceType/ELECTRICCOOKER
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC"
+  ~~IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC~~ IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC,IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC
 
 
 Pset_EnvironmentalEmissions.xml
@@ -1833,219 +211,30 @@ deletions
 * ApplicableClasses > ClassName "IfcTransportElementType"
 
 
-Pset_FurnitureTypeCommon.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFurnitureType"
+Pset_AnnotationLineOfSight.xml
+==============================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcFurniture"
-  ~~IfcFurniture~~ IfcFurniture,IfcFurnitureType
-* PropertyDefs > PropertyDef [Name="MainColor"] > Name "MainColor"
-  ~~MainColor~~ MainColour
-
-
-
-Qto_ValveBaseQuantities.xml
-===========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve"
-  ~~IfcValve~~ IfcValve,IfcValveType
-
-
-Pset_SensorTypeContactSensor.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/CONTACTSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/CONTACTSENSOR"
-  ~~IfcSensor/CONTACTSENSOR~~ IfcSensor/CONTACTSENSOR,IfcSensorType/CONTACTSENSOR
-
-
-
-Pset_SoundAttenuation.xml
-=========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/SOUND"
-  ~~IfcAnnotation/SOUND~~ IfcAnnotation
-* ApplicableTypeValue "IfcAnnotation/SOUND"
-  ~~IfcAnnotation/SOUND~~ IfcAnnotation
+* ApplicableClasses > ClassName "IfcAnnotation/LineOfSight"
+  ~~IfcAnnotation/LineOfSight~~ IfcAnnotation
+* ApplicableTypeValue "IfcAnnotation/LineOfSight"
+  ~~IfcAnnotation/LineOfSight~~ IfcAnnotation
 * 
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Pset_WasteTerminalTypeWasteDisposalUnit.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/WASTEDISPOSALUNIT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/WASTEDISPOSALUNIT"
-  ~~IfcWasteTerminal/WASTEDISPOSALUNIT~~ IfcWasteTerminal/WASTEDISPOSALUNIT,IfcWasteTerminalType/WASTEDISPOSALUNIT
-
-
-Pset_CableSegmentTypeCoreSegment.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableSegmentType/CORESEGMENT"
-* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
-* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
-* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
-* PropertyDefs > PropertyDef [Name="DCResistance"]
-* PropertyDefs > PropertyDef [Name="LayRatio"]
-* PropertyDefs > PropertyDef [Name="MassPerLength"]
-* PropertyDefs > PropertyDef [Name="TensileStrength"]
-* PropertyDefs > PropertyDef [Name="YoungModulus"]
-* PropertyDefs > PropertyDef [Name="ACResistance"]
-* PropertyDefs > PropertyDef [Name="StrandingMethod"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableSegment/CORESEGMENT"
-  ~~IfcCableSegment/CORESEGMENT~~ IfcCableSegment/CORESEGMENT,IfcCableSegmentType/CORESEGMENT
-* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="SheathColors"] > Name "SheathColors"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-
-
-Pset_PropertyAgreement.xml
+Pset_StairFlightCommon.xml
 ==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSpatialStructureElementType"
+* ApplicableClasses > ClassName "IfcStairFlightType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSpatialStructureElement"
-  ~~IfcSpatialStructureElement~~ IfcSpatialStructureElement,IfcSpatialStructureElementType
-* PropertyDefs > PropertyDef [Name="Identifier"] > Name "Identifier"
-  ~~Identifier~~ TrackingIdentifier
-* PropertyDefs > PropertyDef [Name="Version"] > Name "Version"
-  ~~Version~~ AgreementVersion
-* PropertyDefs > PropertyDef [Name="VersionDate"] > Name "VersionDate"
-  ~~VersionDate~~ AgreementDate
-
-
-Pset_TankTypePreformed.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTank/PREFORMED"
-  ~~IfcTank/PREFORMED~~ IfcTank,IfcTankType
-* ApplicableClasses > ClassName "IfcTank/PREFORMED"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Qto_DoorBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDoorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDoor"
-  ~~IfcDoor~~ IfcDoor,IfcDoorType
-
-
-Pset_FootingCommon.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFootingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFooting"
-  ~~IfcFooting~~ IfcFooting,IfcFootingType
-
-
-Pset_ManufacturerOccurrence.xml
-===============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="ManufacturingDate"]
-
-
-Pset_MarkingLinesCommon.xml
-===========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
-* ApplicableTypeValue "IfcSurfaceFeature/(.LINEMARKING.)"
-  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
-
-
-Pset_DistributionChamberElementTypeInspectionPit.xml
-====================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/INSPECTIONPIT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/INSPECTIONPIT"
-  ~~IfcDistributionChamberElement/INSPECTIONPIT~~ IfcDistributionChamberElement/INSPECTIONPIT,IfcDistributionChamberElementType/INSPECTIONPIT
-
-
-Qto_StackTerminalBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcStackTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcStackTerminal"
-  ~~IfcStackTerminal~~ IfcStackTerminal,IfcStackTerminalType
-
-
-
-Qto_ControllerBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController"
-  ~~IfcController~~ IfcController,IfcControllerType
+* ApplicableTypeValue "IfcStairFlight"
+  ~~IfcStairFlight~~ IfcStairFlight,IfcStairFlightType
 
 
 Pset_MedicalDeviceTypeCommon.xml
@@ -2061,316 +250,94 @@ modifications
   ~~IfcMedicalDevice~~ IfcMedicalDevice,IfcMedicalDeviceType
 
 
-Pset_FlowMeterTypeEnergyMeter.xml
-=================================
 
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType/ENERGYMETER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter/ENERGYMETER"
-  ~~IfcFlowMeter/ENERGYMETER~~ IfcFlowMeter/ENERGYMETER,IfcFlowMeterType/ENERGYMETER
-
-
-Pset_QuayDesignCriteria.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_FenderCommon.xml
-=====================
-
-modifications
--------------
-* ApplicableTypeValue "IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.),IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
-  ~~IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.),IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)~~ IfcImpactProtectionDevice/FENDER,IfcImpactProtectionDeviceType/FENDER
-* ApplicableClasses > ClassName "IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_PavementSurfaceCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPavementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPavement"
-  ~~IfcPavement~~ IfcPavement,IfcPavementType
-
-
-Pset_VibrationIsolatorTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcVibrationIsolatorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcVibrationIsolator"
-  ~~IfcVibrationIsolator~~ IfcVibrationIsolator,IfcVibrationIsolatorType
-
-
-Pset_BurnerTypeCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBurnerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBurner"
-  ~~IfcBurner~~ IfcBurner,IfcBurnerType
-
-
-Pset_SensorTypeHumiditySensor.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/HUMIDITYSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/HUMIDITYSENSOR"
-  ~~IfcSensor/HUMIDITYSENSOR~~ IfcSensor/HUMIDITYSENSOR,IfcSensorType/HUMIDITYSENSOR
-
-
-
-Pset_KerbStone.xml
-==================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerb,IfcKerbType
-
-
-Qto_TubeBundleBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTubeBundleType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTubeBundle"
-  ~~IfcTubeBundle~~ IfcTubeBundle,IfcTubeBundleType
-
-
-Pset_ProtectiveDeviceBreakerUnitTypeMCB.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType/CIRCUITBREAKER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice/CIRCUITBREAKER"
-  ~~IfcProtectiveDevice/CIRCUITBREAKER~~ IfcProtectiveDevice/CIRCUITBREAKER,IfcProtectiveDeviceType/CIRCUITBREAKER
-
-
-Pset_ProjectOrderWorkOrder.xml
-==============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_BearingCommon.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBearingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBearing"
-  ~~IfcBearing~~ IfcBearing,IfcBearingType
-* PropertyDefs > PropertyDef [Name="DisplacementAccomodated"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RotationAccomodated"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Qto_SpaceHeaterBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpaceHeaterType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpaceHeater"
-  ~~IfcSpaceHeater~~ IfcSpaceHeater,IfcSpaceHeaterType
-
-
-Pset_WasteTerminalTypeGullySump.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/GULLYSUMP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/GULLYSUMP"
-  ~~IfcWasteTerminal/GULLYSUMP~~ IfcWasteTerminal/GULLYSUMP,IfcWasteTerminalType/GULLYSUMP
-
-
-Pset_PipeSegmentOccurrence.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
-
-
-Qto_FireSuppressionTerminalBaseQuantities.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFireSuppressionTerminal"
-  ~~IfcFireSuppressionTerminal~~ IfcFireSuppressionTerminal,IfcFireSuppressionTerminalType
-
-
-Pset_DistributionChamberElementTypeFormedDuct.xml
-=================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/FORMEDDUCT"
-* PropertyDefs > PropertyDef [Name="CableDuctOccupancyRatio"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/FORMEDDUCT"
-  ~~IfcDistributionChamberElement/FORMEDDUCT~~ IfcDistributionChamberElement/FORMEDDUCT,IfcDistributionChamberElementType/FORMEDDUCT
-
-
-Pset_PipeFittingOccurrence.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
-
-
-Pset_FanCentrifugal.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED"
-* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALFORWARDCURVED"
-* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALRADIAL"
-* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALAIRFOIL"
-* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALBACKWARDINCLINEDCURVED"
-* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALFORWARDCURVED"
-* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALRADIAL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFan/CENTRIFUGAL"
-  ~~IfcFan/CENTRIFUGAL~~ IfcFan/CENTRIFUGALAIRFOIL,IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFan/CENTRIFUGALFORWARDCURVED,IfcFan/CENTRIFUGALRADIAL,IfcFanType/CENTRIFUGALAIRFOIL,IfcFanType/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFanType/CENTRIFUGALFORWARDCURVED,IfcFanType/CENTRIFUGALRADIAL
-* PropertyDefs > PropertyDef [Name="Arrangement"] > Name "Arrangement"
-  ~~Arrangement~~ FanArrangement
-* ApplicableClasses > ClassName "IfcFan/CENTRIFUGAL"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Qto_OutletBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcOutletType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcOutlet"
-  ~~IfcOutlet~~ IfcOutlet,IfcOutletType
-
-
-Pset_FilterTypeAirParticleFilter.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFilterType/AIRPARTICLEFILTER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFilter/AIRPARTICLEFILTER"
-  ~~IfcFilter/AIRPARTICLEFILTER~~ IfcFilter/AIRPARTICLEFILTER,IfcFilterType/AIRPARTICLEFILTER
-
-
-Qto_ElectricMotorBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricMotorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricMotor"
-  ~~IfcElectricMotor~~ IfcElectricMotor,IfcElectricMotorType
-
-
-Pset_DoorTypeTurnstile.xml
+Qto_CoilBaseQuantities.xml
 ==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDoorType/TURNSTILE"
+* ApplicableClasses > ClassName "IfcCoilType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDoor/TURNSTILE"
-  ~~IfcDoor/TURNSTILE~~ IfcDoor/TURNSTILE,IfcDoorType/TURNSTILE
+* ApplicableTypeValue "IfcCoil"
+  ~~IfcCoil~~ IfcCoil,IfcCoilType
 
 
-Pset_ElectricMotorTypeCommon.xml
-================================
+Qto_EarthworksCutBaseQuantities.xml
+===================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcElectricMotorType"
+* ApplicableTypeValue "IfcEarthworksCut"
+
+
+Pset_ControllerTypeProgrammable.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType/PROGRAMMABLE"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElectricMotor"
-  ~~IfcElectricMotor~~ IfcElectricMotor,IfcElectricMotorType
+* ApplicableTypeValue "IfcController/PROGRAMMABLE"
+  ~~IfcController/PROGRAMMABLE~~ IfcController/PROGRAMMABLE,IfcControllerType/PROGRAMMABLE
+
+
+Pset_CooledBeamTypeActive.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCooledBeamType/ACTIVE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCooledBeam/ACTIVE"
+  ~~IfcCooledBeam/ACTIVE~~ IfcCooledBeam/ACTIVE,IfcCooledBeamType/ACTIVE
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
+  ~~AirflowRateRange~~ AirFlowRateRange
+* PropertyDefs > PropertyDef [Name="ConnectionSize"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcLengthMeasure~~ IfcPositiveLengthMeasure
+
+
+Pset_ProjectOrderPurchaseOrder.xml
+==================================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SensorTypeIonConcentrationSensor.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/IONCONCENTRATIONSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/IONCONCENTRATIONSENSOR"
+  ~~IfcSensor/IONCONCENTRATIONSENSOR~~ IfcSensor/IONCONCENTRATIONSENSOR,IfcSensorType/IONCONCENTRATIONSENSOR
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > Name "SetPointConcentration"
+  ~~SetPointConcentration~~ SetPointIonConcentration
+
+
+Qto_DuctSilencerBaseQuantities.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDuctSilencerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDuctSilencer"
+  ~~IfcDuctSilencer~~ IfcDuctSilencer,IfcDuctSilencerType
+
 
 
 Pset_ProcessCapacity.xml
@@ -2403,36 +370,230 @@ deletions
 * ApplicableClasses > ClassName "IfcTransportElement"
 
 
-Pset_PrecastConcreteElementGeneral.xml
-======================================
+Pset_ManufacturerTypeInformation.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcBeamType"
-* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
-* ApplicableClasses > ClassName "IfcChimneyType"
-* ApplicableClasses > ClassName "IfcCivilElementType"
-* ApplicableClasses > ClassName "IfcColumnType"
-* ApplicableClasses > ClassName "IfcFootingType"
-* ApplicableClasses > ClassName "IfcMemberType"
-* ApplicableClasses > ClassName "IfcPileType"
-* ApplicableClasses > ClassName "IfcPlateType"
-* ApplicableClasses > ClassName "IfcRampFlightType"
-* ApplicableClasses > ClassName "IfcRampType"
-* ApplicableClasses > ClassName "IfcRoofType"
-* ApplicableClasses > ClassName "IfcSlabType"
-* ApplicableClasses > ClassName "IfcStairFlightType"
-* ApplicableClasses > ClassName "IfcStairType"
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement"
+  ~~IfcElement~~ IfcElement,IfcElementType
+
+
+Pset_CableCarrierSegmentTypeCableLadderSegment.xml
+==================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLELADDERSEGMENT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierSegment/CABLELADDERSEGMENT"
+  ~~IfcCableCarrierSegment/CABLELADDERSEGMENT~~ IfcCableCarrierSegment/CABLELADDERSEGMENT,IfcCableCarrierSegmentType/CABLELADDERSEGMENT
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+
+
+Pset_ReinforcementBarPitchOfWall.xml
+====================================
+
+additions
+---------
 * ApplicableClasses > ClassName "IfcWallType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
-  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcCivilElement,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRampFlight,IfcRamp,IfcRoof,IfcSlab,IfcStairFlight,IfcStair,IfcWall,IfcBeamType,IfcBuildingElementProxyType,IfcChimneyType,IfcCivilElementType,IfcColumnType,IfcFootingType,IfcMemberType,IfcPileType,IfcPlateType,IfcRampFlightType,IfcRampType,IfcRoofType,IfcSlabType,IfcStairFlightType,IfcStairType,IfcWallType
+* ApplicableTypeValue "IfcWall"
+  ~~IfcWall~~ IfcWall,IfcWallType
 
 
-Pset_ProtectiveDeviceBreakerUnitTypeMotorProtection.xml
-=======================================================
+Pset_SensorTypeFireSensor.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/FIRESENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/FIRESENSOR"
+  ~~IfcSensor/FIRESENSOR~~ IfcSensor/FIRESENSOR,IfcSensorType/FIRESENSOR
+
+
+Pset_MaintenanceTriggerPerformance.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
+  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
+* PropertyDefs > PropertyDef [Name="MaintenanceLevel"] > Name "MaintenanceLevel"
+  ~~MaintenanceLevel~~ PerformanceMaintenanceLevel
+
+
+Pset_DiscreteAccessoryColumnShoe.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType/SHOE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/SHOE"
+  ~~IfcDiscreteAccessory/SHOE~~ IfcDiscreteAccessory/SHOE,IfcDiscreteAccessoryType/SHOE
+
+
+Pset_BuildingStoreyCommon.xml
+=============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="ElevationOfSSLRelative"]
+* PropertyDefs > PropertyDef [Name="ElevationOfFFLRelative"]
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_CableSegmentBaseQuantities.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableSegment"
+  ~~IfcCableSegment~~ IfcCableSegment,IfcCableSegmentType
+
+
+Pset_CoilTypeCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoilType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCoil"
+  ~~IfcCoil~~ IfcCoil,IfcCoilType
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
+  ~~AirflowRateRange~~ AirFlowRateRange
+* PropertyDefs > PropertyDef [Name="PlacementType"] > Name "PlacementType"
+  ~~PlacementType~~ CoilPlacement
+
+
+Qto_ActuatorBaseQuantities.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator"
+  ~~IfcActuator~~ IfcActuator,IfcActuatorType
+
+
+Pset_ProjectOrderMaintenanceWorkOrder.xml
+=========================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="MaintenaceType"] > Name "MaintenaceType"
+  ~~MaintenaceType~~ MaintenanceType
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_VehicleBaseQuantities.xml
+=============================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)~~ IfcVehicle/ROLLINGSTOCK,IfcVehicle/VEHICLEAIR,IfcVehicle/VEHICLEMARINE,IfcVehicle/VEHICLE,IfcVehicle/VEHICLETRACKED,IfcVehicleType/ROLLINGSTOCK,IfcVehicleType/VEHICLEAIR,IfcVehicleType/VEHICLEMARINE,IfcVehicleType/VEHICLE,IfcVehicleType/VEHICLETRACKED
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_WindowCommon.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWindowType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWindow"
+  ~~IfcWindow~~ IfcWindow,IfcWindowType
+
+
+Pset_FlowMeterTypeOilMeter.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType/OILMETER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter/OILMETER"
+  ~~IfcFlowMeter/OILMETER~~ IfcFlowMeter/OILMETER,IfcFlowMeterType/OILMETER
+
+
+Pset_InterceptorTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcInterceptorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcInterceptor"
+  ~~IfcInterceptor~~ IfcInterceptor,IfcInterceptorType
+
+
+
+Pset_ProtectiveDeviceTypeCommon.xml
+===================================
 
 additions
 ---------
@@ -2444,17 +605,113 @@ modifications
   ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
 
 
-Qto_RampFlightBaseQuantities.xml
-================================
+Pset_SwitchingDeviceTypeContactor.xml
+=====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcRampFlightType"
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/CONTACTOR"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcRampFlight"
-  ~~IfcRampFlight~~ IfcRampFlight,IfcRampFlightType
+* ApplicableTypeValue "IfcSwitchingDevice/CONTACTOR"
+  ~~IfcSwitchingDevice/CONTACTOR~~ IfcSwitchingDevice/CONTACTOR,IfcSwitchingDeviceType/CONTACTOR
+
+
+Qto_AirToAirHeatRecoveryBaseQuantities.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAirToAirHeatRecoveryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAirToAirHeatRecovery"
+  ~~IfcAirToAirHeatRecovery~~ IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType
+
+
+Pset_BuildingCommon.xml
+=======================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="ElevationOfRefHeight"]
+* PropertyDefs > PropertyDef [Name="ElevationOfTerrain"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NumberOfStoreys"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+
+Pset_AudioVisualApplianceTypeAmplifier.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/AMPLIFIER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/AMPLIFIER"
+  ~~IfcAudioVisualAppliance/AMPLIFIER~~ IfcAudioVisualAppliance/AMPLIFIER,IfcAudioVisualApplianceType/AMPLIFIER
+* PropertyDefs > PropertyDef [Name="AmplifierType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_DuctSegmentTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDuctSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDuctSegment"
+  ~~IfcDuctSegment~~ IfcDuctSegment,IfcDuctSegmentType
+* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
+  ~~Shape~~ CrossSectionShape
+
+
+Pset_BurnerTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBurnerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBurner"
+  ~~IfcBurner~~ IfcBurner,IfcBurnerType
+
+
+Pset_FlowMeterTypeGasMeter.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType/GASMETER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter/GASMETER"
+  ~~IfcFlowMeter/GASMETER~~ IfcFlowMeter/GASMETER,IfcFlowMeterType/GASMETER
+
+
+
+Pset_JettyCommon.xml
+====================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
 Pset_LinearReferencingMethod.xml
@@ -2468,43 +725,39 @@ modifications
   ~~IfcAlignment,IfcReferent/(.POSITION.)~~ IfcAlignment,IfcReferent
 
 
-Pset_RoofCommon.xml
-===================
+Qto_CableFittingBaseQuantities.xml
+==================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcRoofType"
+* ApplicableClasses > ClassName "IfcCableFittingType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcRoof"
-  ~~IfcRoof~~ IfcRoof,IfcRoofType
+* ApplicableTypeValue "IfcCableFitting"
+  ~~IfcCableFitting~~ IfcCableFitting,IfcCableFittingType
 
 
-Pset_SwitchingDeviceTypeStarter.xml
-===================================
+Pset_ProtectiveDeviceTypeFuseDisconnector.xml
+=============================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/STARTER"
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType/FUSEDISCONNECTOR"
+* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
+* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
+* PropertyDefs > PropertyDef [Name="BreakingCapacity"]
+* PropertyDefs > PropertyDef [Name="ArcExtinctionType"]
+* PropertyDefs > PropertyDef [Name="NumberOfPoles"]
+* PropertyDefs > PropertyDef [Name="TransformationRatio"]
+* PropertyDefs > PropertyDef [Name="NominalFrequency"]
+* PropertyDefs > PropertyDef [Name="NominalCurrent"]
+* PropertyDefs > PropertyDef [Name="RatedVoltage"]
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSwitchingDevice/STARTER"
-  ~~IfcSwitchingDevice/STARTER~~ IfcSwitchingDevice/STARTER,IfcSwitchingDeviceType/STARTER
-
-
-Pset_ControllerTypeProgrammable.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType/PROGRAMMABLE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController/PROGRAMMABLE"
-  ~~IfcController/PROGRAMMABLE~~ IfcController/PROGRAMMABLE,IfcControllerType/PROGRAMMABLE
+* ApplicableTypeValue "IfcProtectiveDevice/FUSEDISCONNECTOR"
+  ~~IfcProtectiveDevice/FUSEDISCONNECTOR~~ IfcProtectiveDevice/FUSEDISCONNECTOR,IfcProtectiveDeviceType/FUSEDISCONNECTOR
 
 
 Pset_FurnitureTypeChair.xml
@@ -2520,67 +773,30 @@ modifications
   ~~IfcFurniture/CHAIR~~ IfcFurniture/CHAIR,IfcFurnitureType/CHAIR
 
 
-Pset_PipeConnectionFlanged.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeSegment"
-  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
-* PropertyDefs > PropertyDef [Name="NumberOfBoltholes"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_DuctSegmentPHistory.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="LeakageCurve"] > Name "LeakageCurve"
-  ~~LeakageCurve~~ LeakageCurveHistory
-
-
-Pset_CooledBeamTypeActive.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCooledBeamType/ACTIVE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCooledBeam/ACTIVE"
-  ~~IfcCooledBeam/ACTIVE~~ IfcCooledBeam/ACTIVE,IfcCooledBeamType/ACTIVE
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
-  ~~AirflowRateRange~~ AirFlowRateRange
-* PropertyDefs > PropertyDef [Name="ConnectionSize"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcLengthMeasure~~ IfcPositiveLengthMeasure
-
-
-Pset_LandRegistration.xml
-=========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_StairFlightCommon.xml
+Pset_CurtainWallCommon.xml
 ==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcStairFlightType"
+* ApplicableClasses > ClassName "IfcCurtainWallType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcStairFlight"
-  ~~IfcStairFlight~~ IfcStairFlight,IfcStairFlightType
+* ApplicableTypeValue "IfcCurtainWall"
+  ~~IfcCurtainWall~~ IfcCurtainWall,IfcCurtainWallType
+
+
+Pset_SanitaryTerminalTypeCistern.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/CISTERN"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/CISTERN"
+  ~~IfcSanitaryTerminal/CISTERN~~ IfcSanitaryTerminal/CISTERN,IfcSanitaryTerminalType/CISTERN
 
 
 Pset_CableSegmentTypeCableSegment.xml
@@ -2606,394 +822,8 @@ modifications
   ~~IfcInteger~~ IfcCountMeasure
 
 
-Pset_MaterialSteel.xml
-======================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="StructuralGrade"]
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcMaterial/Steel"
-  ~~IfcMaterial/Steel~~ IfcMaterial
-* ApplicableTypeValue "IfcMaterial/Steel"
-  ~~IfcMaterial/Steel~~ IfcMaterial
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Qto_ImpactProtectionDeviceBaseQuantities.xml
-============================================
-
-additions
----------
-* ApplicableTypeValue "IfcImpactProtectionDevice,IfcImpactProtectionDeviceType"
-
-
-Pset_FanTypeCommon.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFanType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFan"
-  ~~IfcFan~~ IfcFan,IfcFanType
-
-
-Pset_SystemFurnitureElementTypeWorkSurface.xml
-==============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSystemFurnitureElementType/WORKSURFACE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSystemFurnitureElement/WORKSURFACE"
-  ~~IfcSystemFurnitureElement/WORKSURFACE~~ IfcSystemFurnitureElement/WORKSURFACE,IfcSystemFurnitureElementType/WORKSURFACE
-
-
-Pset_HumidifierTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcHumidifierType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcHumidifier"
-  ~~IfcHumidifier~~ IfcHumidifier,IfcHumidifierType
-* PropertyDefs > PropertyDef [Name="Application"] > Name "Application"
-  ~~Application~~ HumidifierApplication
-
-
-Pset_SlabCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab"
-  ~~IfcSlab~~ IfcSlab,IfcSlabType
-
-
-Pset_ControllerTypeFloating.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType/FLOATING"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController/FLOATING"
-  ~~IfcController/FLOATING~~ IfcController/FLOATING,IfcControllerType/FLOATING
-
-
-Pset_SwitchingDeviceTypeSelectorSwitch.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/SELECTORSWITCH"
-* PropertyDefs > PropertyDef [Name="NominalCurrent"]
-* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
-* PropertyDefs > PropertyDef [Name="RatedFrequency"]
-* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
-* PropertyDefs > PropertyDef [Name="NominalPower"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/SELECTORSWITCH"
-  ~~IfcSwitchingDevice/SELECTORSWITCH~~ IfcSwitchingDevice/SELECTORSWITCH,IfcSwitchingDeviceType/SELECTORSWITCH
-
-
-Pset_UnitaryControlElementTypeCommon.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement"
-  ~~IfcUnitaryControlElement~~ IfcUnitaryControlElement,IfcUnitaryControlElementType
-* PropertyDefs > PropertyDef [Name="Mode"] > Name "Mode"
-  ~~Mode~~ OperationMode
-
-
-
-Qto_SanitaryTerminalBaseQuantities.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal"
-  ~~IfcSanitaryTerminal~~ IfcSanitaryTerminal,IfcSanitaryTerminalType
-
-
-Pset_ProtectiveDeviceBreakerUnitI2TCurve.xml
-============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-Pset_SolarDeviceTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSolarDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSolarDevice"
-  ~~IfcSolarDevice~~ IfcSolarDevice,IfcSolarDeviceType
-
-
-Pset_SensorTypeMoistureSensor.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/MOISTURESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/MOISTURESENSOR"
-  ~~IfcSensor/MOISTURESENSOR~~ IfcSensor/MOISTURESENSOR,IfcSensorType/MOISTURESENSOR
-
-
-Pset_SanitaryTerminalTypeBath.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/BATH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/BATH"
-  ~~IfcSanitaryTerminal/BATH~~ IfcSanitaryTerminal/BATH,IfcSanitaryTerminalType/BATH
-
-
-
-Pset_VehicleAvailability.xml
-============================
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)~~ IfcVehicle/ROLLINGSTOCK,IfcVehicle/VEHICLEAIR,IfcVehicle/VEHICLEMARINE,IfcVehicle/VEHICLE,IfcVehicle/VEHICLETRACKED,IfcVehicleType/ROLLINGSTOCK,IfcVehicleType/VEHICLEAIR,IfcVehicleType/VEHICLEMARINE,IfcVehicleType/VEHICLE,IfcVehicleType/VEHICLETRACKED
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_MaterialCommon.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_RampFlightCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRampFlightType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRampFlight"
-  ~~IfcRampFlight~~ IfcRampFlight,IfcRampFlightType
-
-
-Pset_DamperTypeSmokeDamper.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDamperType/SMOKEDAMPER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDamper/SMOKEDAMPER"
-  ~~IfcDamper/SMOKEDAMPER~~ IfcDamper/SMOKEDAMPER,IfcDamperType/SMOKEDAMPER
-
-
-Pset_AudioVisualApplianceTypeSpeaker.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/SPEAKER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/SPEAKER"
-  ~~IfcAudioVisualAppliance/SPEAKER~~ IfcAudioVisualAppliance/SPEAKER,IfcAudioVisualApplianceType/SPEAKER
-* PropertyDefs > PropertyDef [Name="SpeakerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-* PropertyDefs > PropertyDef [Name="SpeakerMounting"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_DistributionSystemTypeVentilation.xml
-==========================================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_SpaceOccupancyRequirements.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpatialElement"
-* ApplicableClasses > ClassName "IfcSpatialElementType"
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialZoneType
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType
-
-
-Qto_RailingBaseQuantities.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRailingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRailing"
-  ~~IfcRailing~~ IfcRailing,IfcRailingType
-
-
-Pset_PackingInstructions.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTaskType/MOVE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTask/MOVE"
-  ~~IfcTask/MOVE~~ IfcTask/MOVE,IfcTaskType/MOVE
-
-
-Pset_WasteTerminalTypeRoofDrain.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/ROOFDRAIN"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/ROOFDRAIN"
-  ~~IfcWasteTerminal/ROOFDRAIN~~ IfcWasteTerminal/ROOFDRAIN,IfcWasteTerminalType/ROOFDRAIN
-
-
-Pset_ProtectiveDeviceTrippingUnitTypeResidualCurrent.xml
-========================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/RESIDUALCURRENT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT"
-  ~~IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT~~ IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT,IfcProtectiveDeviceTrippingUnitType/RESIDUALCURRENT
-
-
-
-Pset_CableCarrierFittingTypeCommon.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierFitting"
-  ~~IfcCableCarrierFitting~~ IfcCableCarrierFitting,IfcCableCarrierFittingType
-
-
-Pset_ValveTypePressureRelief.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/PRESSURERELIEF"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/PRESSURERELIEF"
-  ~~IfcValve/PRESSURERELIEF~~ IfcValve/PRESSURERELIEF,IfcValveType/PRESSURERELIEF
-
-
-Pset_MaterialThermal.xml
-========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_DiscreteAccessoryFixingSocket.xml
-======================================
+Pset_DiscreteAccessoryStandardFixingPlate.xml
+=============================================
 
 additions
 ---------
@@ -3001,534 +831,38 @@ additions
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Fixing socket"
-  ~~IfcDiscreteAccessory/Fixing socket~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Fixing socket"
+* ApplicableTypeValue "IfcDiscreteAccessory/Standard fixing plate"
+  ~~IfcDiscreteAccessory/Standard fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Standard fixing plate"
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 
-Pset_SpatialZoneCommon.xml
-==========================
-
-additions
----------
-* ApplicableTypeValue "IfcSpatialZone,IfcSpatialZoneType"
-
-
-Pset_JettyCommon.xml
-====================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Qto_FlowInstrumentBaseQuantities.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowInstrumentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowInstrument"
-  ~~IfcFlowInstrument~~ IfcFlowInstrument,IfcFlowInstrumentType
-
-
-Pset_PlateCommon.xml
-====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPlateType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPlate"
-  ~~IfcPlate~~ IfcPlate,IfcPlateType
-
-
-Pset_SensorTypeLightSensor.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/LIGHTSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/LIGHTSENSOR"
-  ~~IfcSensor/LIGHTSENSOR~~ IfcSensor/LIGHTSENSOR,IfcSensorType/LIGHTSENSOR
-
-
-Pset_MaterialOptical.xml
-========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-* PropertyDefs > PropertyDef [Name="SolarTransmittance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ThermalIrEmissivityFront"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VisibleTransmittance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SolarReflectanceBack"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VisibleReflectanceBack"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ThermalIrEmissivityBack"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VisibleReflectanceFront"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="SolarReflectanceFront"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ThermalIrTransmittance"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-Pset_BreakwaterCommon.xml
-=========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ElectricApplianceTypeDishwasher.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricApplianceType/DISHWASHER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricAppliance/DISHWASHER"
-  ~~IfcElectricAppliance/DISHWASHER~~ IfcElectricAppliance/DISHWASHER,IfcElectricApplianceType/DISHWASHER
-
-
-Qto_CoilBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoilType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCoil"
-  ~~IfcCoil~~ IfcCoil,IfcCoilType
-
-
-Pset_SanitaryTerminalTypeCistern.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/CISTERN"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/CISTERN"
-  ~~IfcSanitaryTerminal/CISTERN~~ IfcSanitaryTerminal/CISTERN,IfcSanitaryTerminalType/CISTERN
-
-
-Pset_ProfileArbitraryDoubleT.xml
-================================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
-
-
-Qto_ChimneyBaseQuantities.xml
+Pset_CompressorTypeCommon.xml
 =============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcChimneyType"
+* ApplicableClasses > ClassName "IfcCompressorType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcChimney"
-  ~~IfcChimney~~ IfcChimney,IfcChimneyType
+* ApplicableTypeValue "IfcCompressor"
+  ~~IfcCompressor~~ IfcCompressor,IfcCompressorType
 
 
-Pset_ProtectiveDeviceTrippingUnitTypeElectroMagnetic.xml
+Pset_DistributionChamberElementTypeInspectionChamber.xml
 ========================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC"
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/INSPECTIONCHAMBER"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC"
-  ~~IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC~~ IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC,IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC
-
-
-Pset_TicketProcessing.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDoorType/BOOM_BARRIER"
-* ApplicableClasses > ClassName "IfcDoorType/TURNSTILE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDoor/TURNSTILE,IfcDoor/BOOM_BARRIER"
-  ~~IfcDoor/TURNSTILE,IfcDoor/BOOM_BARRIER~~ IfcDoor/BOOM_BARRIER,IfcDoor/TURNSTILE,IfcDoorType/BOOM_BARRIER,IfcDoorType/TURNSTILE
-* PropertyDefs > PropertyDef [Name="TicketStuckRate"] > Name "TicketStuckRate"
-  ~~TicketStuckRate~~ TicketStuckRatio
-
-
-Pset_CableSegmentTypeCommon.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableSegment"
-  ~~IfcCableSegment~~ IfcCableSegment,IfcCableSegmentType
-
-
-Pset_FlowInstrumentTypePressureGauge.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowInstrumentType/PRESSUREGAUGE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowInstrument/PRESSUREGAUGE"
-  ~~IfcFlowInstrument/PRESSUREGAUGE~~ IfcFlowInstrument/PRESSUREGAUGE,IfcFlowInstrumentType/PRESSUREGAUGE
-
-
-Pset_FlowMeterOccurrence.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Purpose"] > Name "Purpose"
-  ~~Purpose~~ FlowMeterOurpose
-
-
-Pset_SensorTypeFlowSensor.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/FLOWSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/FLOWSENSOR"
-  ~~IfcSensor/FLOWSENSOR~~ IfcSensor/FLOWSENSOR,IfcSensorType/FLOWSENSOR
-
-
-Qto_AlarmBaseQuantities.xml
-===========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAlarmType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAlarm"
-  ~~IfcAlarm~~ IfcAlarm,IfcAlarmType
-
-
-Pset_SwitchingDeviceTypeMomentarySwitch.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/MOMENTARYSWITCH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/MOMENTARYSWITCH"
-  ~~IfcSwitchingDevice/MOMENTARYSWITCH~~ IfcSwitchingDevice/MOMENTARYSWITCH,IfcSwitchingDeviceType/MOMENTARYSWITCH
-
-
-Qto_LightFixtureBaseQuantities.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcLightFixtureType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcLightFixture"
-  ~~IfcLightFixture~~ IfcLightFixture,IfcLightFixtureType
-
-
-
-Pset_WindowCommon.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWindowType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWindow"
-  ~~IfcWindow~~ IfcWindow,IfcWindowType
-
-
-Pset_AudioVisualApplianceTypeDisplay.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/DISPLAY"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/DISPLAY"
-  ~~IfcAudioVisualAppliance/DISPLAY~~ IfcAudioVisualAppliance/DISPLAY,IfcAudioVisualApplianceType/DISPLAY
-* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-
-Qto_SolarDeviceBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSolarDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSolarDevice"
-  ~~IfcSolarDevice~~ IfcSolarDevice,IfcSolarDeviceType
-
-
-Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit.xml
-=============================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/REMOTERADIOUNIT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT"
-  ~~IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT~~ IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT,IfcMobileTelecommunicationsApplianceType/REMOTERADIOUNIT
-* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_EvaporativeCoolerTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcEvaporativeCoolerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcEvaporativeCooler"
-  ~~IfcEvaporativeCooler~~ IfcEvaporativeCooler,IfcEvaporativeCoolerType
-
-
-Pset_RoadGuardElement.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRailingType/GUARDRAIL"
-* ApplicableClasses > ClassName "IfcWallType/PARAPET"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)"
-  ~~IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)~~ IfcRailing/GUARDRAIL,IfcWall/PARAPET,IfcRailingType/GUARDRAIL,IfcWallType/PARAPET
-* ApplicableClasses > ClassName "IfcWall/(.PARAPET.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcRailing/(.GUARDRAIL.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_UnitaryControlElementTypeIndicatorPanel.xml
-================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType/INDICATORPANEL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement/INDICATORPANEL"
-  ~~IfcUnitaryControlElement/INDICATORPANEL~~ IfcUnitaryControlElement/INDICATORPANEL,IfcUnitaryControlElementType/INDICATORPANEL
-* PropertyDefs > PropertyDef [Name="Application"] > Name "Application"
-  ~~Application~~ UnitaryApplication
-
-
-Qto_KerbBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableTypeValue "IfcKerb,IfcKerbType"
-
-
-Pset_DistributionChamberElementTypeMeterChamber.xml
-===================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/METERCHAMBER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/METERCHAMBER"
-  ~~IfcDistributionChamberElement/METERCHAMBER~~ IfcDistributionChamberElement/METERCHAMBER,IfcDistributionChamberElementType/METERCHAMBER
-
-
-Pset_DistributionChamberElementTypeManhole.xml
-==============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/MANHOLE"
-* PropertyDefs > PropertyDef [Name="IsAccessibleOnFoot"]
-* PropertyDefs > PropertyDef [Name="IsLocked"]
-* PropertyDefs > PropertyDef [Name="NumberOfCableEntries"]
-* PropertyDefs > PropertyDef [Name="NumberOfManholeCovers"]
-* PropertyDefs > PropertyDef [Name="TypeOfShaft"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/MANHOLE"
-  ~~IfcDistributionChamberElement/MANHOLE~~ IfcDistributionChamberElement/MANHOLE,IfcDistributionChamberElementType/MANHOLE
-
-
-Qto_ElectricFlowStorageDeviceBaseQuantities.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricFlowStorageDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricFlowStorageDevice"
-  ~~IfcElectricFlowStorageDevice~~ IfcElectricFlowStorageDevice,IfcElectricFlowStorageDeviceType
-
-
-Pset_FlowMeterTypeCommon.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter"
-  ~~IfcFlowMeter~~ IfcFlowMeter,IfcFlowMeterType
-
-
-Qto_TankBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTank"
-  ~~IfcTank~~ IfcTank,IfcTankType
-
-
-Qto_WindowBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWindowType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWindow"
-  ~~IfcWindow~~ IfcWindow,IfcWindowType
-
-
-Pset_CableCarrierSegmentTypeCableTrunkingSegment.xml
-====================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLETRUNKINGSEGMENT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment/CABLETRUNKINGSEGMENT"
-  ~~IfcCableCarrierSegment/CABLETRUNKINGSEGMENT~~ IfcCableCarrierSegment/CABLETRUNKINGSEGMENT,IfcCableCarrierSegmentType/CABLETRUNKINGSEGMENT
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-* PropertyDefs > PropertyDef [Name="NumberOfCompartments"]
-
-
-Pset_RailingCommon.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRailingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRailing"
-  ~~IfcRailing~~ IfcRailing,IfcRailingType
-
-
-
-Pset_TrackBase.xml
-==================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType/BASESLAB"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab/BASESLAB"
-  ~~IfcSlab/BASESLAB~~ IfcSlab/BASESLAB,IfcSlabType/BASESLAB
-
-
-Pset_SystemFurnitureElementTypePanel.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSystemFurnitureElementType/PANEL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSystemFurnitureElement/PANEL"
-  ~~IfcSystemFurnitureElement/PANEL~~ IfcSystemFurnitureElement/PANEL,IfcSystemFurnitureElementType/PANEL
+* ApplicableTypeValue "IfcDistributionChamberElement/INSPECTIONCHAMBER"
+  ~~IfcDistributionChamberElement/INSPECTIONCHAMBER~~ IfcDistributionChamberElement/INSPECTIONCHAMBER,IfcDistributionChamberElementType/INSPECTIONCHAMBER
+* PropertyDefs > PropertyDef [Name="InvertLevel"] > Name "InvertLevel"
+  ~~InvertLevel~~ InspectionChamberInvertLevel
 
 
 Pset_AirSideSystemInformation.xml
@@ -3558,42 +892,370 @@ deletions
 * PropertyDefs > PropertyDef [Name="LoadSafetyFactor"]
 
 
-Pset_DistributionChamberElementCommon.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType"
+Pset_ElementKinematics.xml
+==========================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDistributionChamberElement"
-  ~~IfcDistributionChamberElement~~ IfcDistributionChamberElement,IfcDistributionChamberElementType
+* PropertyDefs > PropertyDef [Name="MaximumConstantSpeed"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
 
 
-Qto_EarthworksFillBaseQuantities.xml
+Pset_ChillerTypeCommon.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcChillerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcChiller"
+  ~~IfcChiller~~ IfcChiller,IfcChillerType
+* PropertyDefs > PropertyDef [Name="NominalCapacity"] > Name "NominalCapacity"
+  ~~NominalCapacity~~ ChillerCapacity
+
+
+Qto_BuildingElementProxyQuantities.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBuildingElementProxy"
+  ~~IfcBuildingElementProxy~~ IfcBuildingElementProxy,IfcBuildingElementProxyType
+* QtoDefs > QtoDef [Name="NetVolume"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+* QtoDefs > QtoDef [Name="NetSurfaceArea"]
+  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
+
+
+Pset_BoundedCourseCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCourse"
+  ~~IfcCourse~~ IfcCourse,IfcCourseType
+
+
+Pset_SystemFurnitureElementTypeWorkSurface.xml
+==============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSystemFurnitureElementType/WORKSURFACE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSystemFurnitureElement/WORKSURFACE"
+  ~~IfcSystemFurnitureElement/WORKSURFACE~~ IfcSystemFurnitureElement/WORKSURFACE,IfcSystemFurnitureElementType/WORKSURFACE
+
+
+Pset_SensorTypeFrostSensor.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/FROSTSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/FROSTSENSOR"
+  ~~IfcSensor/FROSTSENSOR~~ IfcSensor/FROSTSENSOR,IfcSensorType/FROSTSENSOR
+
+
+Pset_BuildingElementProxyCommon.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBuildingElementProxy"
+  ~~IfcBuildingElementProxy~~ IfcBuildingElementProxy,IfcBuildingElementProxyType
+
+
+Pset_ProtectiveDeviceTrippingUnitTypeResidualCurrent.xml
+========================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/RESIDUALCURRENT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT"
+  ~~IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT~~ IfcProtectiveDeviceTrippingUnit/RESIDUALCURRENT,IfcProtectiveDeviceTrippingUnitType/RESIDUALCURRENT
+
+
+Pset_DiscreteAccessoryLadderTrussConnector.xml
+==============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/Ladder truss connector"
+  ~~IfcDiscreteAccessory/Ladder truss connector~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Ladder truss connector"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_MobileTelecommunicationsApplianceTypeCommon.xml
+====================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance"
+  ~~IfcMobileTelecommunicationsAppliance~~ IfcMobileTelecommunicationsAppliance,IfcMobileTelecommunicationsApplianceType
+
+
+Pset_CableFittingTypeCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableFitting"
+  ~~IfcCableFitting~~ IfcCableFitting,IfcCableFittingType
+
+
+Qto_ValveBaseQuantities.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve"
+  ~~IfcValve~~ IfcValve,IfcValveType
+
+
+Qto_SanitaryTerminalBaseQuantities.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal"
+  ~~IfcSanitaryTerminal~~ IfcSanitaryTerminal,IfcSanitaryTerminalType
+
+
+Pset_SensorTypeGasSensor.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/GASSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/GASSENSOR"
+  ~~IfcSensor/GASSENSOR~~ IfcSensor/GASSENSOR,IfcSensorType/GASSENSOR
+
+
+Pset_CoveringFlooring.xml
+=========================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCovering/FLOORING,"
+  ~~IfcCovering/FLOORING,~~ IfcCovering/FLOORING,IfcCoveringType/FLOORING
+
+
+Qto_DuctFittingBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDuctFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDuctFitting"
+  ~~IfcDuctFitting~~ IfcDuctFitting,IfcDuctFittingType
+
+
+Pset_MobileTelecommunicationsApplianceTypeBaseTransceiverStation.xml
+====================================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/BASETRANSCEIVERSTATION"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION"
+  ~~IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION~~ IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION,IfcMobileTelecommunicationsApplianceType/BASETRANSCEIVERSTATION
+* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfEmergencyTransceivers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Qto_CommunicationsApplianceBaseQuantities.xml
+=============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCommunicationsApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCommunicationsAppliance"
+  ~~IfcCommunicationsAppliance~~ IfcCommunicationsAppliance,IfcCommunicationsApplianceType
+
+
+Pset_CableSegmentTypeCoreSegment.xml
 ====================================
 
 additions
 ---------
-* ApplicableTypeValue "IfcEarthworksFill"
-
-
-Pset_ActuatorTypeLinearActuation.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcActuatorType"
+* ApplicableClasses > ClassName "IfcCableSegmentType/CORESEGMENT"
+* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
+* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
+* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
+* PropertyDefs > PropertyDef [Name="DCResistance"]
+* PropertyDefs > PropertyDef [Name="LayRatio"]
+* PropertyDefs > PropertyDef [Name="MassPerLength"]
+* PropertyDefs > PropertyDef [Name="TensileStrength"]
+* PropertyDefs > PropertyDef [Name="YoungModulus"]
+* PropertyDefs > PropertyDef [Name="ACResistance"]
+* PropertyDefs > PropertyDef [Name="StrandingMethod"]
 
 modifications
 -------------
-* ApplicableTypeValue "IfcActuator"
-  ~~IfcActuator~~ IfcActuator,IfcActuatorType
+* ApplicableTypeValue "IfcCableSegment/CORESEGMENT"
+  ~~IfcCableSegment/CORESEGMENT~~ IfcCableSegment/CORESEGMENT,IfcCableSegmentType/CORESEGMENT
+* PropertyDefs > PropertyDef [Name="SheathColors"] > Name "SheathColors"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="SheathColors"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 
 
-Pset_ShiplockComplex.xml
-========================
+Pset_UnitaryEquipmentTypeAirConditioningUnit.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryEquipmentType/AIRCONDITIONINGUNIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryEquipment/AIRCONDITIONINGUNIT"
+  ~~IfcUnitaryEquipment/AIRCONDITIONINGUNIT~~ IfcUnitaryEquipment/AIRCONDITIONINGUNIT,IfcUnitaryEquipmentType/AIRCONDITIONINGUNIT
+
+
+Pset_SensorTypeCO2Sensor.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/CO2SENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/CO2SENSOR"
+  ~~IfcSensor/CO2SENSOR~~ IfcSensor/CO2SENSOR,IfcSensorType/CO2SENSOR
+* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > Name "SetPointConcentration"
+  ~~SetPointConcentration~~ SetPointCO2Concentration
+
+
+Pset_ControllerTypeTwoPosition.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType/TWOPOSITION"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController/TWOPOSITION"
+  ~~IfcController/TWOPOSITION~~ IfcController/TWOPOSITION,IfcControllerType/TWOPOSITION
+
+
+Pset_DamperTypeFireDamper.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType/FIREDAMPER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper/FIREDAMPER"
+  ~~IfcDamper/FIREDAMPER~~ IfcDamper/FIREDAMPER,IfcDamperType/FIREDAMPER
+
+
+Pset_SwitchingDeviceTypeMomentarySwitch.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/MOMENTARYSWITCH"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/MOMENTARYSWITCH"
+  ~~IfcSwitchingDevice/MOMENTARYSWITCH~~ IfcSwitchingDevice/MOMENTARYSWITCH,IfcSwitchingDeviceType/MOMENTARYSWITCH
+
+
+Qto_DuctSegmentBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDuctSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDuctSegment"
+  ~~IfcDuctSegment~~ IfcDuctSegment,IfcDuctSegmentType
+
+
+Pset_MobileTelecommunicationsApplianceTypeAccessPoint.xml
+=========================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/ACCESSPOINT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/ACCESSPOINT"
+  ~~IfcMobileTelecommunicationsAppliance/ACCESSPOINT~~ IfcMobileTelecommunicationsAppliance/ACCESSPOINT,IfcMobileTelecommunicationsApplianceType/ACCESSPOINT
+* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_ProjectOrderMoveOrder.xml
+==============================
 
 modifications
 -------------
@@ -3601,21 +1263,330 @@ modifications
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Pset_ElectricFlowStorageDeviceTypeCommon.xml
-============================================
+Qto_CableCarrierSegmentBaseQuantities.xml
+=========================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcElectricFlowStorageDeviceType"
-* PropertyDefs > PropertyDef [Name="MaximumInsulatedVoltage"]
-* PropertyDefs > PropertyDef [Name="RatedCapacitance"]
-* PropertyDefs > PropertyDef [Name="PowerCapacity"]
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElectricFlowStorageDevice"
-  ~~IfcElectricFlowStorageDevice~~ IfcElectricFlowStorageDevice,IfcElectricFlowStorageDeviceType
+* ApplicableTypeValue "IfcCableCarrierSegment"
+  ~~IfcCableCarrierSegment~~ IfcCableCarrierSegment,IfcCableCarrierSegmentType
 
+
+Pset_SensorTypeContactSensor.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/CONTACTSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/CONTACTSENSOR"
+  ~~IfcSensor/CONTACTSENSOR~~ IfcSensor/CONTACTSENSOR,IfcSensorType/CONTACTSENSOR
+
+
+Pset_ReinforcementBarPitchOfColumn.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcColumnType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcColumn"
+  ~~IfcColumn~~ IfcColumn,IfcColumnType
+* PropertyDefs > PropertyDef [Name="XDirectionTieHoopCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="YDirectionTieHoopCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_DistributionSystemTypeElectrical.xml
+=========================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="RatedVoltageRange"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NumberOfLiveConductors"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_DoorCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDoorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDoor"
+  ~~IfcDoor~~ IfcDoor,IfcDoorType
+
+
+Pset_ConstructionResource.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcConstructionResourceType"
+* PropertyDefs > PropertyDef [Name="ScheduleWorkProgression"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcConstructionResource"
+  ~~IfcConstructionResource~~ IfcConstructionResource,IfcConstructionResourceType
+* PropertyDefs > PropertyDef [Name="ScheduleWork"] > Name "ScheduleWork"
+  ~~ScheduleWork~~ RemainingWorkProgression
+* PropertyDefs > PropertyDef [Name="ActualWork"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="RemainingWork"]
+
+
+Pset_QuayDesignCriteria.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_MaterialHygroscopic.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Qto_ControllerBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController"
+  ~~IfcController~~ IfcController,IfcControllerType
+
+
+Pset_FlowMeterOccurrence.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Purpose"] > Name "Purpose"
+  ~~Purpose~~ FlowMeterOurpose
+
+
+Pset_DistributionChamberElementTypeFormedDuct.xml
+=================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/FORMEDDUCT"
+* PropertyDefs > PropertyDef [Name="CableDuctOccupancyRatio"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/FORMEDDUCT"
+  ~~IfcDistributionChamberElement/FORMEDDUCT~~ IfcDistributionChamberElement/FORMEDDUCT,IfcDistributionChamberElementType/FORMEDDUCT
+
+
+Qto_ChimneyBaseQuantities.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcChimneyType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcChimney"
+  ~~IfcChimney~~ IfcChimney,IfcChimneyType
+
+
+Qto_CourseBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableTypeValue "IfcCourse,IfcCourseType"
+
+
+
+Qto_EvaporatorBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcEvaporatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcEvaporator"
+  ~~IfcEvaporator~~ IfcEvaporator,IfcEvaporatorType
+
+
+
+Pset_ActuatorTypePneumaticActuator.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType/PNEUMATICACTUATOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator/PNEUMATICACTUATOR"
+  ~~IfcActuator/PNEUMATICACTUATOR~~ IfcActuator/PNEUMATICACTUATOR,IfcActuatorType/PNEUMATICACTUATOR
+
+
+Pset_AnnotationSurveyArea.xml
+=============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/SurveyArea"
+  ~~IfcAnnotation/SurveyArea~~ IfcAnnotation/SURVEY
+* ApplicableTypeValue "IfcAnnotation/SurveyArea"
+  ~~IfcAnnotation/SurveyArea~~ IfcAnnotation/SURVEY
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_PileBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPileType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPile"
+  ~~IfcPile~~ IfcPile,IfcPileType
+
+
+Pset_AirTerminalBoxPHistory.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirflowCurve"] > Name "AirflowCurve"
+  ~~AirflowCurve~~ AirFlowCurve
+
+
+Pset_JunctionBoxTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcJunctionBoxType"
+* PropertyDefs > PropertyDef [Name="NominalLength"]
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcJunctionBox"
+  ~~IfcJunctionBox~~ IfcJunctionBox,IfcJunctionBoxType
+* PropertyDefs > PropertyDef [Name="NumberOfGangs"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="MountingType"] > Name "MountingType"
+  ~~MountingType~~ JunctionBoxMountingType
+
+
+Pset_EnergyRequirements.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTransportationDevice"
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcTransportElement"
+  ~~IfcTransportElement~~ IfcTransportationDeviceType
+* ApplicableTypeValue "IfcDistributionElement,IfcDistributionElementType,IfcTransportElement,IfcTransportElementType"
+  ~~IfcDistributionElement,IfcDistributionElementType,IfcTransportElement,IfcTransportElementType~~ IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType
+* PropertyDefs > PropertyDef [Name="EnergySource"] > Name "EnergySource"
+  ~~EnergySource~~ EnergySourceLabel
+
+deletions
+---------
+* ApplicableClasses > ClassName "IfcTransportElementType"
+
+
+Pset_HeatExchangerTypeCommon.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcHeatExchangerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcHeatExchanger"
+  ~~IfcHeatExchanger~~ IfcHeatExchanger,IfcHeatExchangerType
+* PropertyDefs > PropertyDef [Name="Arrangement"] > Name "Arrangement"
+  ~~Arrangement~~ FlowArrangement
+
+
+Pset_RoofCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRoofType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRoof"
+  ~~IfcRoof~~ IfcRoof,IfcRoofType
+
+
+Pset_OnSiteCastKerb.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerb,IfcKerbType
+
+
+Pset_PlateCommon.xml
+====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPlateType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPlate"
+  ~~IfcPlate~~ IfcPlate,IfcPlateType
 
 
 Pset_SwitchingDeviceTypeDimmerSwitch.xml
@@ -3631,13 +1602,498 @@ modifications
   ~~IfcSwitchingDevice/DIMMERSWITCH~~ IfcSwitchingDevice/DIMMERSWITCH,IfcSwitchingDeviceType/DIMMERSWITCH
 
 
-Pset_MaterialFuel.xml
-=====================
+Pset_BuildingSystemCommon.xml
+=============================
 
 modifications
 -------------
 * 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_StairCommon.xml
+====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcStairType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcStair"
+  ~~IfcStair~~ IfcStair,IfcStairType
+
+
+Pset_WaterStratumCommon.xml
+===========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcWaterStratum"
+  ~~IfcWaterStratum~~ IfcGeotechnicalStratum/WATER
+* ApplicableTypeValue "IfcWaterStratum"
+  ~~IfcWaterStratum~~ IfcGeotechnicalStratum/WATER
+
+
+Pset_DiscreteAccessoryWireLoop.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/Wire loop"
+  ~~IfcDiscreteAccessory/Wire loop~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Wire loop"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_ShiplockDesignCriteria.xml
+===============================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SanitaryTerminalTypeBidet.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/BIDET"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/BIDET"
+  ~~IfcSanitaryTerminal/BIDET~~ IfcSanitaryTerminal/BIDET,IfcSanitaryTerminalType/BIDET
+
+
+Pset_SwitchingDeviceTypeToggleSwitch.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/TOGGLESWITCH"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/TOGGLESWITCH"
+  ~~IfcSwitchingDevice/TOGGLESWITCH~~ IfcSwitchingDevice/TOGGLESWITCH,IfcSwitchingDeviceType/TOGGLESWITCH
+
+
+Pset_ProtectiveDeviceTrippingFunctionLCurve.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+
+
+Pset_DuctFittingTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDuctFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDuctFitting"
+  ~~IfcDuctFitting~~ IfcDuctFitting,IfcDuctFittingType
+
+
+Pset_RailingCommon.xml
+======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRailingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRailing"
+  ~~IfcRailing~~ IfcRailing,IfcRailingType
+
+
+
+Pset_SwitchingDeviceTypeSelectorSwitch.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/SELECTORSWITCH"
+* PropertyDefs > PropertyDef [Name="NominalCurrent"]
+* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
+* PropertyDefs > PropertyDef [Name="RatedFrequency"]
+* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
+* PropertyDefs > PropertyDef [Name="NominalPower"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/SELECTORSWITCH"
+  ~~IfcSwitchingDevice/SELECTORSWITCH~~ IfcSwitchingDevice/SELECTORSWITCH,IfcSwitchingDeviceType/SELECTORSWITCH
+
+
+
+Pset_OutsideDesignCriteria.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_CoolingTowerBaseQuantities.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoolingTowerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCoolingTower"
+  ~~IfcCoolingTower~~ IfcCoolingTower,IfcCoolingTowerType
+
+
+Qto_LaborResourceBaseQuantities.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLaborResourceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcLaborResource"
+  ~~IfcLaborResource~~ IfcLaborResource,IfcLaborResourceType
+
+
+Pset_SpaceThermalLoad.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpatialElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_ElectricMotorTypeCommon.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricMotorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricMotor"
+  ~~IfcElectricMotor~~ IfcElectricMotor,IfcElectricMotorType
+
+
+Pset_StackTerminalTypeCommon.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcStackTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcStackTerminal"
+  ~~IfcStackTerminal~~ IfcStackTerminal,IfcStackTerminalType
+
+
+
+Pset_EmbeddedTrack.xml
+======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab/TRACKSLAB"
+  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
+
+
+Qto_HeatExchangerBaseQuantities.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcHeatExchangerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcHeatExchanger"
+  ~~IfcHeatExchanger~~ IfcHeatExchanger,IfcHeatExchangerType
+
+
+Pset_DamperTypeControlDamper.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType/CONTROLDAMPER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper/CONTROLDAMPER"
+  ~~IfcDamper/CONTROLDAMPER~~ IfcDamper/CONTROLDAMPER,IfcDamperType/CONTROLDAMPER
+
+
+Pset_PipeConnectionFlanged.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeSegment"
+  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
+* PropertyDefs > PropertyDef [Name="NumberOfBoltholes"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_PipeFittingOccurrence.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+
+Pset_SanitaryTerminalTypeWashHandBasin.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/WASHHANDBASIN"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/WASHHANDBASIN"
+  ~~IfcSanitaryTerminal/WASHHANDBASIN~~ IfcSanitaryTerminal/WASHHANDBASIN,IfcSanitaryTerminalType/WASHHANDBASIN
+
+
+Pset_FilterTypeWaterFilter.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFilterType/WATERFILTER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFilter/WATERFILTER"
+  ~~IfcFilter/WATERFILTER~~ IfcFilter/WATERFILTER,IfcFilterType/WATERFILTER
+
+
+Qto_ReinforcedSoilBaseQuantities.xml
+====================================
+
+additions
+---------
+* ApplicableTypeValue "IfcReinforcedSoil"
+
+
+Pset_CableSegmentOccurrence.xml
+===============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="SequentialCode"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="NumberOfParallelCircuits"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="CurrentCarryingCapasity"] > Name "CurrentCarryingCapasity"
+  ~~CurrentCarryingCapasity~~ CurrentCarryingCapacity
+* PropertyDefs > PropertyDef [Name="PowerLoss"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcElectricCurrentMeasure~~ IfcPowerMeasure
+
+
+Pset_WorkControlCommon.xml
+==========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_MobileTeleCommunicationsApplianceTypeRemoteRadioUnit.xml
+=============================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/REMOTERADIOUNIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT"
+  ~~IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT~~ IfcMobileTelecommunicationsAppliance/REMOTERADIOUNIT,IfcMobileTelecommunicationsApplianceType/REMOTERADIOUNIT
+* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_ReinforcementBarPitchOfSlab.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab"
+  ~~IfcSlab~~ IfcSlab,IfcSlabType
+
+
+Pset_SwitchingDeviceTypeKeypad.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/KEYPAD"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/KEYPAD"
+  ~~IfcSwitchingDevice/KEYPAD~~ IfcSwitchingDevice/KEYPAD,IfcSwitchingDeviceType/KEYPAD
+
+
+Pset_LampTypeCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLampType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcLamp"
+  ~~IfcLamp~~ IfcLamp,IfcLampType
+* PropertyDefs > PropertyDef [Name="ColorAppearance"] > Name "ColorAppearance"
+  ~~ColorAppearance~~ ColourAppearance
+* PropertyDefs > PropertyDef [Name="ColorTemperature"] > Name "ColorTemperature"
+  ~~ColorTemperature~~ ColourTemperature
+* PropertyDefs > PropertyDef [Name="ColorRenderingIndex"] > Name "ColorRenderingIndex"
+  ~~ColorRenderingIndex~~ ColourRenderingIndex
+
+
+Pset_PrecastKerbStone.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerb,IfcKerbType
+
+
+Qto_WallBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWallType"
+* QtoDefs > QtoDef [Name="GrossFootPrintArea"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWall"
+  ~~IfcWall~~ IfcWall,IfcWallType
+* QtoDefs > QtoDef [Name="GrossFootprintArea"] > Name "GrossFootprintArea"
+  ~~GrossFootprintArea~~ NetFootPrintArea
+
+deletions
+---------
+* QtoDefs > QtoDef [Name="NetFootprintArea"]
+
+
+Qto_CurtainWallQuantities.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCurtainWallType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCurtainWall"
+  ~~IfcCurtainWall~~ IfcCurtainWall,IfcCurtainWallType
+
+
+Pset_SlabCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab"
+  ~~IfcSlab~~ IfcSlab,IfcSlabType
+
+
+Pset_CableCarrierSegmentTypeCableTraySegment.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLETRAYSEGMENT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierSegment/CABLETRAYSEGMENT"
+  ~~IfcCableCarrierSegment/CABLETRAYSEGMENT~~ IfcCableCarrierSegment/CABLETRAYSEGMENT,IfcCableCarrierSegmentType/CABLETRAYSEGMENT
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+
+
+Pset_FenderDesignCriteria.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpaceType/BERTH"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace/BERTH"
+  ~~IfcSpace/BERTH~~ IfcSpace/BERTH,IfcSpaceType/BERTH
+
 
 
 Pset_ShipLockCommon.xml
@@ -3647,6 +2103,2224 @@ modifications
 -------------
 * 
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_ActuatorTypeLinearActuation.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator"
+  ~~IfcActuator~~ IfcActuator,IfcActuatorType
+
+
+Pset_SpaceThermalLoadPHistory.xml
+=================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement
+* PropertyDefs > PropertyDef [Name="People"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ExhaustAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Lighting"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_Stationing.xml
+===================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="HasIncreasingStation"]
+
+
+Pset_PipeSegmentTypeGutter.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeSegmentType/GUTTER"
+* PropertyDefs > PropertyDef [Name="Complementaryfunction"]
+* PropertyDefs > PropertyDef [Name="OrthometricHeight"]
+* PropertyDefs > PropertyDef [Name="IsCovered"]
+* PropertyDefs > PropertyDef [Name="IsMonitored"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeSegment/GUTTER"
+  ~~IfcPipeSegment/GUTTER~~ IfcPipeSegment/GUTTER,IfcPipeSegmentType/GUTTER
+
+
+Pset_BuildingUse.xml
+====================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+
+Pset_ElectricalDeviceCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionElementType"
+* PropertyDefs > PropertyDef [Name="EarthingStyle"]
+* PropertyDefs > PropertyDef [Name="HeatDissipation"]
+* PropertyDefs > PropertyDef [Name="Power"]
+* PropertyDefs > PropertyDef [Name="NominalPowerConsumption"]
+* PropertyDefs > PropertyDef [Name="NumberOfPowerSupplyPorts"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionElement"
+  ~~IfcDistributionElement~~ IfcDistributionElement,IfcDistributionElementType
+* PropertyDefs > PropertyDef [Name="NumberOfPoles"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_AirTerminalBoxTypeCommon.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAirTerminalBoxType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAirTerminalBox"
+  ~~IfcAirTerminalBox~~ IfcAirTerminalBox,IfcAirTerminalBoxType
+* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
+  ~~AirflowRateRange~~ AirFlowRateRange
+
+
+Qto_ElectricTimeControlBaseQuantities.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricTimeControlType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricTimeControl"
+  ~~IfcElectricTimeControl~~ IfcElectricTimeControl,IfcElectricTimeControlType
+
+
+Pset_EnvironmentalImpactIndicators.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement"
+  ~~IfcElement~~ IfcElement,IfcElementType
+* PropertyDefs > PropertyDef [Name="Unit"] > Name "Unit"
+  ~~Unit~~ IndicatorsUnit
+
+
+Pset_MarineVehicleDesignCriteria.xml
+====================================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)~~ IfcVehicle/VEHICLEMARINE,IfcVehicleType/VEHICLEMARINE
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_AirTerminalPHistory.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirFlowRate"] > Name "AirFlowRate"
+  ~~AirFlowRate~~ AirFlowRateHistory
+
+
+Qto_SolarDeviceBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSolarDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSolarDevice"
+  ~~IfcSolarDevice~~ IfcSolarDevice,IfcSolarDeviceType
+
+
+Pset_FireSuppressionTerminalTypeCommon.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFireSuppressionTerminal"
+  ~~IfcFireSuppressionTerminal~~ IfcFireSuppressionTerminal,IfcFireSuppressionTerminalType
+
+
+Qto_ColumnBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcColumnType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcColumn"
+  ~~IfcColumn~~ IfcColumn,IfcColumnType
+
+
+Pset_ActuatorPHistory.xml
+=========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Status"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Position"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Quality"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+
+Pset_SensorTypeIdentifierSensor.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/IDENTIFIERSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/IDENTIFIERSENSOR"
+  ~~IfcSensor/IDENTIFIERSENSOR~~ IfcSensor/IDENTIFIERSENSOR,IfcSensorType/IDENTIFIERSENSOR
+
+
+Qto_EarthworksFillBaseQuantities.xml
+====================================
+
+additions
+---------
+* ApplicableTypeValue "IfcEarthworksFill"
+
+
+Pset_AudioVisualApplianceTypeDisplay.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/DISPLAY"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/DISPLAY"
+  ~~IfcAudioVisualAppliance/DISPLAY~~ IfcAudioVisualAppliance/DISPLAY,IfcAudioVisualApplianceType/DISPLAY
+* PropertyDefs > PropertyDef [Name="DisplayType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_DistributionPortTypeCable.xml
+==================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="HasConnector"]
+* PropertyDefs > PropertyDef [Name="IsWelded"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConnectionType"] > Name "ConnectionType"
+  ~~ConnectionType~~ ElectricalConnectionType
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_AudioVisualApplianceTypeReceiver.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/RECEIVER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/RECEIVER"
+  ~~IfcAudioVisualAppliance/RECEIVER~~ IfcAudioVisualAppliance/RECEIVER,IfcAudioVisualApplianceType/RECEIVER
+* PropertyDefs > PropertyDef [Name="ReceiverType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_MaterialCommon.xml
+=======================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_SwitchingDeviceTypeEmergencyStop.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/EMERGENCYSTOP"
+* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
+* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
+* PropertyDefs > PropertyDef [Name="BreakingCapacity"]
+* PropertyDefs > PropertyDef [Name="NumberOfEarthFaultRelays"]
+* PropertyDefs > PropertyDef [Name="NumberOfEmergencyButtons"]
+* PropertyDefs > PropertyDef [Name="NumberOfRelays"]
+* PropertyDefs > PropertyDef [Name="NumberOfOverCurrentRelays"]
+* PropertyDefs > PropertyDef [Name="NumberOfAffectedPoles"]
+* PropertyDefs > PropertyDef [Name="NominalCurrent"]
+* PropertyDefs > PropertyDef [Name="RatedFrequency"]
+* PropertyDefs > PropertyDef [Name="RatedVoltage"]
+* PropertyDefs > PropertyDef [Name="TransformationRatio"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/EMERGENCYSTOP"
+  ~~IfcSwitchingDevice/EMERGENCYSTOP~~ IfcSwitchingDevice/EMERGENCYSTOP,IfcSwitchingDeviceType/EMERGENCYSTOP
+
+
+Pset_RampFlightCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRampFlightType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRampFlight"
+  ~~IfcRampFlight~~ IfcRampFlight,IfcRampFlightType
+
+
+Pset_BoilerTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBoilerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBoiler"
+  ~~IfcBoiler~~ IfcBoiler,IfcBoilerType
+
+
+Pset_SpaceCoveringRequirements.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpatialElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_SolidStratumCapacity.xml
+=============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSolidStratum"
+  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
+* ApplicableTypeValue "IfcSolidStratum"
+  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
+* PropertyDefs > PropertyDef [Name="HydraulicConductivity"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
+* PropertyDefs > PropertyDef [Name="PwaveVelocity"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
+* PropertyDefs > PropertyDef [Name="SwaveVelocity"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
+* PropertyDefs > PropertyDef [Name="LoadbearingCapacity"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="LoadbearingCapacity"] > Name "LoadbearingCapacity"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+
+
+Pset_DistributionBoardTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricDistributionBoardType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricDistributionBoard"
+  ~~IfcElectricDistributionBoard~~ IfcElectricDistributionBoard,IfcElectricDistributionBoardType
+
+
+Pset_DistributionSystemTypeVentilation.xml
+==========================================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_ProtectiveDeviceTypeCircuitBreaker.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType/CIRCUITBREAKER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice/CIRCUITBREAKER"
+  ~~IfcProtectiveDevice/CIRCUITBREAKER~~ IfcProtectiveDevice/CIRCUITBREAKER,IfcProtectiveDeviceType/CIRCUITBREAKER
+
+
+Pset_ProtectiveDeviceTrippingCurve.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+Pset_SanitaryTerminalTypeShower.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SHOWER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/SHOWER"
+  ~~IfcSanitaryTerminal/SHOWER~~ IfcSanitaryTerminal/SHOWER,IfcSanitaryTerminalType/SHOWER
+
+
+Pset_PileCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPileType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPile"
+  ~~IfcPile~~ IfcPile,IfcPileType
+
+
+Qto_CondenserBaseQuantities.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCondenserType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCondenser"
+  ~~IfcCondenser~~ IfcCondenser,IfcCondenserType
+
+
+Pset_ProtectiveDeviceTypeEarthLeakageCircuitBreaker.xml
+=======================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType/EARTHLEAKAGECIRCUITBREAKER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER"
+  ~~IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER~~ IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER,IfcProtectiveDeviceType/EARTHLEAKAGECIRCUITBREAKER
+
+
+Pset_EngineTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcEngineType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcEngine"
+  ~~IfcEngine~~ IfcEngine,IfcEngineType
+
+
+Pset_TransformerTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTransformerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransformer"
+  ~~IfcTransformer~~ IfcTransformer,IfcTransformerType
+
+
+Qto_BuildingStoreyBaseQuantities.xml
+====================================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="NetHeigtht"] > Name "NetHeigtht"
+  ~~NetHeigtht~~ NetHeight
+
+
+Pset_PrecastConcreteElementGeneral.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBeamType"
+* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
+* ApplicableClasses > ClassName "IfcChimneyType"
+* ApplicableClasses > ClassName "IfcCivilElementType"
+* ApplicableClasses > ClassName "IfcColumnType"
+* ApplicableClasses > ClassName "IfcFootingType"
+* ApplicableClasses > ClassName "IfcMemberType"
+* ApplicableClasses > ClassName "IfcPileType"
+* ApplicableClasses > ClassName "IfcPlateType"
+* ApplicableClasses > ClassName "IfcRampFlightType"
+* ApplicableClasses > ClassName "IfcRampType"
+* ApplicableClasses > ClassName "IfcRoofType"
+* ApplicableClasses > ClassName "IfcSlabType"
+* ApplicableClasses > ClassName "IfcStairFlightType"
+* ApplicableClasses > ClassName "IfcStairType"
+* ApplicableClasses > ClassName "IfcWallType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
+  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcCivilElement,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRampFlight,IfcRamp,IfcRoof,IfcSlab,IfcStairFlight,IfcStair,IfcWall,IfcBeamType,IfcBuildingElementProxyType,IfcChimneyType,IfcCivilElementType,IfcColumnType,IfcFootingType,IfcMemberType,IfcPileType,IfcPlateType,IfcRampFlightType,IfcRampType,IfcRoofType,IfcSlabType,IfcStairFlightType,IfcStairType,IfcWallType
+
+
+Pset_WasteTerminalTypeWasteDisposalUnit.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/WASTEDISPOSALUNIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/WASTEDISPOSALUNIT"
+  ~~IfcWasteTerminal/WASTEDISPOSALUNIT~~ IfcWasteTerminal/WASTEDISPOSALUNIT,IfcWasteTerminalType/WASTEDISPOSALUNIT
+
+
+Pset_Permit.xml
+===============
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_DamperTypeSmokeDamper.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType/SMOKEDAMPER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper/SMOKEDAMPER"
+  ~~IfcDamper/SMOKEDAMPER~~ IfcDamper/SMOKEDAMPER,IfcDamperType/SMOKEDAMPER
+
+
+Pset_MobileTelecommunicationsApplianceTypeMasterUnit.xml
+========================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/MASTERUNIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/MASTERUNIT"
+  ~~IfcMobileTelecommunicationsAppliance/MASTERUNIT~~ IfcMobileTelecommunicationsAppliance/MASTERUNIT,IfcMobileTelecommunicationsApplianceType/MASTERUNIT
+
+
+Pset_AudioVisualApplianceTypeProjector.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/PROJECTOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/PROJECTOR"
+  ~~IfcAudioVisualAppliance/PROJECTOR~~ IfcAudioVisualAppliance/PROJECTOR,IfcAudioVisualApplianceType/PROJECTOR
+* PropertyDefs > PropertyDef [Name="ProjectorType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_TankTypePressureVessel.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType/PRESSUREVESSEL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank/PRESSUREVESSEL"
+  ~~IfcTank/PRESSUREVESSEL~~ IfcTank/PRESSUREVESSEL,IfcTankType/PRESSUREVESSEL
+
+
+Pset_TicketProcessing.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDoorType/BOOM_BARRIER"
+* ApplicableClasses > ClassName "IfcDoorType/TURNSTILE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDoor/TURNSTILE,IfcDoor/BOOM_BARRIER"
+  ~~IfcDoor/TURNSTILE,IfcDoor/BOOM_BARRIER~~ IfcDoor/BOOM_BARRIER,IfcDoor/TURNSTILE,IfcDoorType/BOOM_BARRIER,IfcDoorType/TURNSTILE
+* PropertyDefs > PropertyDef [Name="TicketStuckRate"] > Name "TicketStuckRate"
+  ~~TicketStuckRate~~ TicketStuckRatio
+
+
+Pset_HumidifierTypeCommon.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcHumidifierType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcHumidifier"
+  ~~IfcHumidifier~~ IfcHumidifier,IfcHumidifierType
+* PropertyDefs > PropertyDef [Name="Application"] > Name "Application"
+  ~~Application~~ HumidifierApplication
+
+
+Pset_UnitaryControlElementTypeThermostat.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType/THERMOSTAT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryControlElement/THERMOSTAT"
+  ~~IfcUnitaryControlElement/THERMOSTAT~~ IfcUnitaryControlElement/THERMOSTAT,IfcUnitaryControlElementType/THERMOSTAT
+
+
+Pset_ElementAssemblyCommon.xml
+==============================
+
+additions
+---------
+* ApplicableTypeValue "IfcElementAssembly,IfcElementAssemblyType"
+
+
+Pset_ControllerTypeMultiPosition.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType/MULTIPOSITION"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController/MULTIPOSITION"
+  ~~IfcController/MULTIPOSITION~~ IfcController/MULTIPOSITION,IfcControllerType/MULTIPOSITION
+* PropertyDefs > PropertyDef [Name="Range"] > Name "Range"
+  ~~Range~~ IntegerRange
+
+
+Pset_BoreholeCommon.xml
+=======================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="BoreholeState"] > PropertyType > TypePropertySingleValue
+  ~~TypePropertySingleValue~~ TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="BoreholeState"] > PropertyType > TypePropertySingleValue > DataType
+  ~~&lt;DataType&gt;~~ &lt;EnumList&gt;
+
+
+Pset_RoadSymbolsCommon.xml
+==========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
+* ApplicableTypeValue "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
+
+
+Pset_FlowInstrumentTypeThermometer.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowInstrumentType/THERMOMETER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowInstrument/THERMOMETER"
+  ~~IfcFlowInstrument/THERMOMETER~~ IfcFlowInstrument/THERMOMETER,IfcFlowInstrumentType/THERMOMETER
+
+
+
+Pset_WasteTerminalTypeWasteTrap.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/WASTETRAP"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/WASTETRAP"
+  ~~IfcWasteTerminal/WASTETRAP~~ IfcWasteTerminal/WASTETRAP,IfcWasteTerminalType/WASTETRAP
+
+
+Qto_ElectricGeneratorBaseQuantities.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricGeneratorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricGenerator"
+  ~~IfcElectricGenerator~~ IfcElectricGenerator,IfcElectricGeneratorType
+
+
+Qto_UnitaryControlElementBaseQuantities.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryControlElement"
+  ~~IfcUnitaryControlElement~~ IfcUnitaryControlElement,IfcUnitaryControlElementType
+
+
+Pset_SpatialZoneCommon.xml
+==========================
+
+additions
+---------
+* ApplicableTypeValue "IfcSpatialZone,IfcSpatialZoneType"
+
+
+Qto_SwitchingDeviceBaseQuantities.xml
+=====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice"
+  ~~IfcSwitchingDevice~~ IfcSwitchingDevice,IfcSwitchingDeviceType
+
+
+Pset_SanitaryTerminalTypeSink.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SINK"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/SINK"
+  ~~IfcSanitaryTerminal/SINK~~ IfcSanitaryTerminal/SINK,IfcSanitaryTerminalType/SINK
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+Qto_DamperBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper"
+  ~~IfcDamper~~ IfcDamper,IfcDamperType
+
+
+Pset_ManufacturerOccurrence.xml
+===============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="ManufacturingDate"]
+
+
+Pset_Risk.xml
+=============
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProcess,IfcTypeProcess,IfcProduct,IfcTypeProduct,IfcGroup"
+  ~~IfcProcess,IfcTypeProcess,IfcProduct,IfcTypeProduct,IfcGroup~~ IfcGroup,IfcProcess,IfcProduct,IfcTypeProcess,IfcTypeProduct
+
+
+Pset_VibrationIsolatorTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcVibrationIsolatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcVibrationIsolator"
+  ~~IfcVibrationIsolator~~ IfcVibrationIsolator,IfcVibrationIsolatorType
+
+
+Pset_LightFixtureTypeSecurityLighting.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLightFixtureType/SECURITYLIGHTING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcLightFixture/SECURITYLIGHTING"
+  ~~IfcLightFixture/SECURITYLIGHTING~~ IfcLightFixture/SECURITYLIGHTING,IfcLightFixtureType/SECURITYLIGHTING
+
+
+Pset_SwitchingDeviceTypeCommon.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice"
+  ~~IfcSwitchingDevice~~ IfcSwitchingDevice,IfcSwitchingDeviceType
+* PropertyDefs > PropertyDef [Name="NumberOfGangs"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_SensorTypeLevelSensor.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/LEVELSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/LEVEL"
+  ~~IfcSensor/LEVEL~~ IfcSensor/LEVELSENSOR,IfcSensorType/LEVELSENSOR
+* ApplicableClasses > ClassName "IfcSensor/LEVEL"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_ValveTypeFlushing.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/FLUSHING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/FLUSHING"
+  ~~IfcValve/FLUSHING~~ IfcValve/FLUSHING,IfcValveType/FLUSHING
+
+
+Pset_DistributionChamberElementTypeSump.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/SUMP"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/SUMP"
+  ~~IfcDistributionChamberElement/SUMP~~ IfcDistributionChamberElement/SUMP,IfcDistributionChamberElementType/SUMP
+* PropertyDefs > PropertyDef [Name="InvertLevel"] > Name "InvertLevel"
+  ~~InvertLevel~~ SumpInvertLevel
+
+
+Pset_ProtectiveDeviceTrippingFunctionICurve.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+
+
+
+Pset_MarineVehicleCommon.xml
+============================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)~~ IfcVehicle/VEHICLEMARINE,IfcVehicleType/VEHICLEMARINE
+* 
+  ~~QTO_TYPEDRIVENOVERRIDE~~ PSET_TYPEDRIVENOVERRIDE
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Qto_BurnerBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBurnerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBurner"
+  ~~IfcBurner~~ IfcBurner,IfcBurnerType
+
+
+Pset_MaterialMechanical.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Qto_BuildingBaseQuantities.xml
+==============================
+
+modifications
+-------------
+* QtoDefs > QtoDef [Name="FootprintArea"] > Name "FootprintArea"
+  ~~FootprintArea~~ FootPrintArea
+
+
+Pset_MaterialThermal.xml
+========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Qto_StairFlightBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcStairFlightType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcStairFlight"
+  ~~IfcStairFlight~~ IfcStairFlight,IfcStairFlightType
+
+
+Pset_TubeBundleTypeCommon.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTubeBundleType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTubeBundle"
+  ~~IfcTubeBundle~~ IfcTubeBundle,IfcTubeBundleType
+* PropertyDefs > PropertyDef [Name="NumberOfRows"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfCircuits"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_ProtectiveDeviceBreakerUnitTypeMotorProtection.xml
+=======================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+Pset_WasteTerminalTypeRoofDrain.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/ROOFDRAIN"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/ROOFDRAIN"
+  ~~IfcWasteTerminal/ROOFDRAIN~~ IfcWasteTerminal/ROOFDRAIN,IfcWasteTerminalType/ROOFDRAIN
+
+
+Qto_AudioVisualApplianceBaseQuantities.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance"
+  ~~IfcAudioVisualAppliance~~ IfcAudioVisualAppliance,IfcAudioVisualApplianceType
+
+
+Qto_TankBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank"
+  ~~IfcTank~~ IfcTank,IfcTankType
+
+
+Pset_ElectricApplianceTypeElectricCooker.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricApplianceType/ELECTRICCOOKER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricAppliance/ELECTRICCOOKER"
+  ~~IfcElectricAppliance/ELECTRICCOOKER~~ IfcElectricAppliance/ELECTRICCOOKER,IfcElectricApplianceType/ELECTRICCOOKER
+
+
+Qto_FlowInstrumentBaseQuantities.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowInstrumentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowInstrument"
+  ~~IfcFlowInstrument~~ IfcFlowInstrument,IfcFlowInstrumentType
+
+
+Pset_ZoneCommon.xml
+===================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SolarDeviceTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSolarDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSolarDevice"
+  ~~IfcSolarDevice~~ IfcSolarDevice,IfcSolarDeviceType
+
+
+Pset_FlowInstrumentTypePressureGauge.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowInstrumentType/PRESSUREGAUGE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowInstrument/PRESSUREGAUGE"
+  ~~IfcFlowInstrument/PRESSUREGAUGE~~ IfcFlowInstrument/PRESSUREGAUGE,IfcFlowInstrumentType/PRESSUREGAUGE
+
+
+Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.xml
+======================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > Name "AdjustmentRange"
+  ~~AdjustmentRange~~ CurrentAdjustmentRange
+* PropertyDefs > PropertyDef [Name="AdjustmentRangeStepValue"] > Name "AdjustmentRangeStepValue"
+  ~~AdjustmentRangeStepValue~~ CurrentAdjustmentRangeStepValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > Name "AdjustmentValues"
+  ~~AdjustmentValues~~ CurrentAdjustmentValues
+
+
+Qto_AirTerminalBoxTypeBaseQuantities.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAirTerminalBoxType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAirTerminalBox"
+  ~~IfcAirTerminalBox~~ IfcAirTerminalBox,IfcAirTerminalBoxType
+
+
+Qto_ReinforcingElementBaseQuantities.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcReinforcingElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcReinforcingElement"
+  ~~IfcReinforcingElement~~ IfcReinforcingElement,IfcReinforcingElementType
+
+
+Pset_ElectricApplianceTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricAppliance"
+  ~~IfcElectricAppliance~~ IfcElectricAppliance,IfcElectricApplianceType
+
+
+Pset_ShiplockComplex.xml
+========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+
+Pset_AudioVisualApplianceTypeTuner.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/TUNER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/TUNER"
+  ~~IfcAudioVisualAppliance/TUNER~~ IfcAudioVisualAppliance/TUNER,IfcAudioVisualApplianceType/TUNER
+* PropertyDefs > PropertyDef [Name="TunerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_MaterialFuel.xml
+=====================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_BoilerTypeSteam.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBoilerType/STEAM"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBoiler/STEAM"
+  ~~IfcBoiler/STEAM~~ IfcBoiler/STEAM,IfcBoilerType/STEAM
+* PropertyDefs > PropertyDef [Name="NominalEfficiency"] > Name "NominalEfficiency"
+  ~~NominalEfficiency~~ NominalEfficiencyTable
+
+
+Pset_FireSuppressionTerminalTypeBreechingInlet.xml
+==================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/BREECHINGINLET"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFireSuppressionTerminal/BREECHINGINLET"
+  ~~IfcFireSuppressionTerminal/BREECHINGINLET~~ IfcFireSuppressionTerminal/BREECHINGINLET,IfcFireSuppressionTerminalType/BREECHINGINLET
+
+
+Pset_SolidStratumComposition.xml
+================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSolidStratum"
+  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
+* ApplicableTypeValue "IfcSolidStratum"
+  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
+* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_AudioVisualApplianceTypePlayer.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/PLAYER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/PLAYER"
+  ~~IfcAudioVisualAppliance/PLAYER~~ IfcAudioVisualAppliance/PLAYER,IfcAudioVisualApplianceType/PLAYER
+* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Qto_CooledBeamBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCooledBeamType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCooledBeam"
+  ~~IfcCooledBeam~~ IfcCooledBeam,IfcCooledBeamType
+
+
+Pset_MaterialSteel.xml
+======================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="StructuralGrade"]
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcMaterial/Steel"
+  ~~IfcMaterial/Steel~~ IfcMaterial
+* ApplicableTypeValue "IfcMaterial/Steel"
+  ~~IfcMaterial/Steel~~ IfcMaterial
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+
+Pset_ValveTypeDrawOffCock.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/DRAWOFFCOCK"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/DRAWOFFCOCK"
+  ~~IfcValve/DRAWOFFCOCK~~ IfcValve/DRAWOFFCOCK,IfcValveType/DRAWOFFCOCK
+
+
+Pset_ProtectiveDeviceTrippingUnitTypeThermal.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/THERMAL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/THERMAL"
+  ~~IfcProtectiveDeviceTrippingUnit/THERMAL~~ IfcProtectiveDeviceTrippingUnit/THERMAL,IfcProtectiveDeviceTrippingUnitType/THERMAL
+
+
+Pset_DiscreteAccessoryCornerFixingPlate.xml
+===========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/Corner fixing plate"
+  ~~IfcDiscreteAccessory/Corner fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Corner fixing plate"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_DistributionPortCommon.xml
+===============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ColorCode"] > Name "ColorCode"
+  ~~ColorCode~~ ColourCode
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SpaceHeaterPHistory.xml
+============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Exponent"] > Name "Exponent"
+  ~~Exponent~~ CharacteristicExponent
+
+
+Pset_CableCarrierFittingTypeCommon.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierFitting"
+  ~~IfcCableCarrierFitting~~ IfcCableCarrierFitting,IfcCableCarrierFittingType
+
+
+Pset_DistributionChamberElementTypeInspectionPit.xml
+====================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/INSPECTIONPIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/INSPECTIONPIT"
+  ~~IfcDistributionChamberElement/INSPECTIONPIT~~ IfcDistributionChamberElement/INSPECTIONPIT,IfcDistributionChamberElementType/INSPECTIONPIT
+
+
+Pset_CoveringCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoveringType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCovering"
+  ~~IfcCovering~~ IfcCovering,IfcCoveringType
+
+
+
+Pset_ActuatorTypeElectricActuator.xml
+=====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType/ELECTRICACTUATOR"
+* PropertyDefs > PropertyDef [Name="ControlPulseCurrent"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator/ELECTRICACTUATOR"
+  ~~IfcActuator/ELECTRICACTUATOR~~ IfcActuator/ELECTRICACTUATOR,IfcActuatorType/ELECTRICACTUATOR
+
+
+Pset_BeamCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBeamType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam"
+  ~~IfcBeam~~ IfcBeam,IfcBeamType
+
+
+Pset_UnitaryEquipmentTypeCommon.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryEquipmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryEquipment"
+  ~~IfcUnitaryEquipment~~ IfcUnitaryEquipment,IfcUnitaryEquipmentType
+
+
+Pset_SensorTypeMovementSensor.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/MOVEMENTSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/MOVEMENTSENSOR"
+  ~~IfcSensor/MOVEMENTSENSOR~~ IfcSensor/MOVEMENTSENSOR,IfcSensorType/MOVEMENTSENSOR
+
+
+Pset_TubeBundleTypeFinned.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTubeBundleType/FINNED"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTubeBundle/FINNED"
+  ~~IfcTubeBundle/FINNED~~ IfcTubeBundle/FINNED,IfcTubeBundleType/FINNED
+
+
+Pset_DuctSegmentOccurrence.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+Pset_FurnitureTypeDesk.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFurnitureType/DESK"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFurniture/DESK"
+  ~~IfcFurniture/DESK~~ IfcFurniture/DESK,IfcFurnitureType/DESK
+
+
+Pset_CableSegmentTypeCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableSegment"
+  ~~IfcCableSegment~~ IfcCableSegment,IfcCableSegmentType
+
+
+Pset_ActuatorTypeRotationalActuation.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator"
+  ~~IfcActuator~~ IfcActuator,IfcActuatorType
+
+
+Pset_TankTypePreformed.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank/PREFORMED"
+  ~~IfcTank/PREFORMED~~ IfcTank,IfcTankType
+* ApplicableClasses > ClassName "IfcTank/PREFORMED"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Qto_CableCarrierFittingBaseQuantities.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierFitting"
+  ~~IfcCableCarrierFitting~~ IfcCableCarrierFitting,IfcCableCarrierFittingType
+
+
+Qto_HumidifierBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcHumidifierType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcHumidifier"
+  ~~IfcHumidifier~~ IfcHumidifier,IfcHumidifierType
+
+
+Qto_DoorBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDoorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDoor"
+  ~~IfcDoor~~ IfcDoor,IfcDoorType
+
+
+Pset_SiteWeather.xml
+====================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_ConstructionEquipmentResourceBaseQuantities.xml
+===================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcConstructionEquipmentResourceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcConstructionEquipmentResource"
+  ~~IfcConstructionEquipmentResource~~ IfcConstructionEquipmentResource,IfcConstructionEquipmentResourceType
+
+
+Pset_CourseApplicationConditions.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCourse"
+  ~~IfcCourse~~ IfcCourse,IfcCourseType
+
+
+Pset_PipeFittingTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeFittingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeFitting"
+  ~~IfcPipeFitting~~ IfcPipeFitting,IfcPipeFittingType
+
+
+Qto_ChillerBaseQuantities.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcChillerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcChiller"
+  ~~IfcChiller~~ IfcChiller,IfcChillerType
+
+
+Pset_DuctFittingOccurrence.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+Pset_TransportElementCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTransportationDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement"
+  ~~IfcTransportElement~~ IfcTransportationDevice,IfcTransportationDeviceType
+* ApplicableClasses > ClassName "IfcTransportElement"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_UnitaryControlElementPHistory.xml
+======================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Mode"] > Name "Mode"
+  ~~Mode~~ OperationModeHistory
+
+
+Qto_PavementBaseQuantities.xml
+==============================
+
+additions
+---------
+* ApplicableTypeValue "IfcPavement,IfcPavementType"
+
+
+Pset_UnitaryControlElementBaseStationController.xml
+===================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType/BASESTATIONCONTROLLER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryControlElement/BASESTATIONCONTROLLER"
+  ~~IfcUnitaryControlElement/BASESTATIONCONTROLLER~~ IfcUnitaryControlElement/BASESTATIONCONTROLLER,IfcUnitaryControlElementType/BASESTATIONCONTROLLER
+* PropertyDefs > PropertyDef [Name="NumberOfManagedBTSs"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfManagedCarriers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_SanitaryTerminalTypeSanitaryFountain.xml
+=============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SANITARYFOUNTAIN"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/SANITARYFOUNTAIN"
+  ~~IfcSanitaryTerminal/SANITARYFOUNTAIN~~ IfcSanitaryTerminal/SANITARYFOUNTAIN,IfcSanitaryTerminalType/SANITARYFOUNTAIN
+
+
+Pset_MobileTelecommunicationsApplianceTypeBasebandUnit.xml
+==========================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/BASEBANDUNIT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/BASEBANDUNIT"
+  ~~IfcMobileTelecommunicationsAppliance/BASEBANDUNIT~~ IfcMobileTelecommunicationsAppliance/BASEBANDUNIT,IfcMobileTelecommunicationsApplianceType/BASEBANDUNIT
+* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfEmergencyTransceivers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_SensorTypeRadioactivitySensor.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/RADIOACTIVITYSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/RADIOACTIVITYSENSOR"
+  ~~IfcSensor/RADIOACTIVITYSENSOR~~ IfcSensor/RADIOACTIVITYSENSOR,IfcSensorType/RADIOACTIVITYSENSOR
+
+
+Pset_DistributionChamberElementCommon.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement"
+  ~~IfcDistributionChamberElement~~ IfcDistributionChamberElement,IfcDistributionChamberElementType
+
+
+Pset_OutletTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcOutletType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcOutlet"
+  ~~IfcOutlet~~ IfcOutlet,IfcOutletType
+* PropertyDefs > PropertyDef [Name="NumberOfSockets"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_WasteTerminalTypeGullySump.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/GULLYSUMP"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/GULLYSUMP"
+  ~~IfcWasteTerminal/GULLYSUMP~~ IfcWasteTerminal/GULLYSUMP,IfcWasteTerminalType/GULLYSUMP
+
+
+Pset_MaterialEnergy.xml
+=======================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_MaterialWood.xml
+=====================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcMaterial/Wood"
+  ~~IfcMaterial/Wood~~ IfcMaterial
+* ApplicableTypeValue "IfcMaterial/Wood"
+  ~~IfcMaterial/Wood~~ IfcMaterial
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_AudioVisualAppliancePHistory.xml
+=====================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="MediaSourceHistory"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="MediaSource"] > Name "MediaSource"
+  ~~MediaSource~~ AudioVolumeHistory
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="AudioVolume"]
+
+
+Pset_PavementMillingCommon.xml
+==============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcEarthworksCut/(.PAVEMENTMILLING.)"
+  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
+* ApplicableTypeValue "IfcEarthworksCut/(.PAVEMENTMILLING.)"
+  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_MaintenanceStrategy.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
+  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
+
+
+Pset_ProtectiveDeviceTrippingUnitTypeElectronic.xml
+===================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/ELECTRONIC"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/ELECTRONIC"
+  ~~IfcProtectiveDeviceTrippingUnit/ELECTRONIC~~ IfcProtectiveDeviceTrippingUnit/ELECTRONIC,IfcProtectiveDeviceTrippingUnitType/ELECTRONIC
+
+
+
+
+Pset_SumpBusterCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementAssemblyType/SUMPBUSTER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElementAssembly/(.SUMPBUSTER.)"
+  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER,IfcElementAssemblyType/SUMPBUSTER
+* ApplicableClasses > ClassName "IfcElementAssembly/(.SUMPBUSTER.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_SensorTypeMoistureSensor.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/MOISTURESENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/MOISTURESENSOR"
+  ~~IfcSensor/MOISTURESENSOR~~ IfcSensor/MOISTURESENSOR,IfcSensorType/MOISTURESENSOR
+
+
+Pset_CondenserTypeCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCondenserType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCondenser"
+  ~~IfcCondenser~~ IfcCondenser,IfcCondenserType
+
+
+Pset_ValveTypeAirRelease.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/AIRRELEASE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/AIRRELEASE"
+  ~~IfcValve/AIRRELEASE~~ IfcValve/AIRRELEASE,IfcValveType/AIRRELEASE
+
+
+Pset_SpaceParking.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpaceType/PARKING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace/PARKING"
+  ~~IfcSpace/PARKING~~ IfcSpace/PARKING,IfcSpaceType/PARKING
+
+
+Qto_WindowBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWindowType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWindow"
+  ~~IfcWindow~~ IfcWindow,IfcWindowType
+
+
+Pset_BoilerTypeWater.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBoilerType/WATER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBoiler/WATER"
+  ~~IfcBoiler/WATER~~ IfcBoiler/WATER,IfcBoilerType/WATER
+
+
+Pset_FireSuppressionTerminalTypeFireHydrant.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/FIREHYDRANT"
+* PropertyDefs > PropertyDef [Name="BodyColour"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFireSuppressionTerminal/FIREHYDRANT"
+  ~~IfcFireSuppressionTerminal/FIREHYDRANT~~ IfcFireSuppressionTerminal/FIREHYDRANT,IfcFireSuppressionTerminalType/FIREHYDRANT
+* PropertyDefs > PropertyDef [Name="NumberOfHoseConnections"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="BodyColor"] > Name "BodyColor"
+  ~~BodyColor~~ CapColour
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CapColor"]
+
+
+Pset_ControllerTypeProportional.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType/PROPORTIONAL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController/PROPORTIONAL"
+  ~~IfcController/PROPORTIONAL~~ IfcController/PROPORTIONAL,IfcControllerType/PROPORTIONAL
+
+
+Pset_SensorTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor"
+  ~~IfcSensor~~ IfcSensor,IfcSensorType
+
+
+Pset_MaintenanceTriggerDuration.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
+  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
+
+
+Pset_ControllerTypeCommon.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController"
+  ~~IfcController~~ IfcController,IfcControllerType
+
+
+Pset_PipeSegmentTypeCommon.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeSegmentType"
+* PropertyDefs > PropertyDef [Name="Length"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeSegment"
+  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
+
+
+Qto_PipeSegmentBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeSegmentType"
+* QtoDefs > QtoDef [Name="FootPrintArea"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeSegment"
+  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
+
+
+
+Qto_SpaceBaseQuantities.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpaceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpace,IfcSpaceType
+
+
+Pset_PavementCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPavementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPavement"
+  ~~IfcPavement~~ IfcPavement,IfcPavementType
+
+
+Pset_ReinforcementBarPitchOfBeam.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBeamType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam"
+  ~~IfcBeam~~ IfcBeam,IfcBeamType
+
+
+Qto_FireSuppressionTerminalBaseQuantities.xml
+=============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFireSuppressionTerminal"
+  ~~IfcFireSuppressionTerminal~~ IfcFireSuppressionTerminal,IfcFireSuppressionTerminalType
+
+
+Qto_RoofBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRoofType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRoof"
+  ~~IfcRoof~~ IfcRoof,IfcRoofType
+
+
+Pset_FenderCommon.xml
+=====================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.),IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
+  ~~IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.),IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)~~ IfcImpactProtectionDevice/FENDER,IfcImpactProtectionDeviceType/FENDER
+* ApplicableClasses > ClassName "IfcImpactProtectionDeviceType/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcImpactProtectionDevice/IfcImpactProtectionDeviceTypeEnum(.FENDER.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_CableSegmentTypeConductorSegment.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableSegmentType/CONDUCTORSEGMENT"
+* PropertyDefs > PropertyDef [Name="NominalCurrent"]
+* PropertyDefs > PropertyDef [Name="ACResistance"]
+* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
+* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
+* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
+* PropertyDefs > PropertyDef [Name="MassPerLength"]
+* PropertyDefs > PropertyDef [Name="TensileStrength"]
+* PropertyDefs > PropertyDef [Name="YoungModulus"]
+* PropertyDefs > PropertyDef [Name="DCResistance"]
+* PropertyDefs > PropertyDef [Name="OverallDiameter"]
+* PropertyDefs > PropertyDef [Name="NumberOfCores"]
+* PropertyDefs > PropertyDef [Name="RatedVoltage"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableSegment/CONDUCTORSEGMENT"
+  ~~IfcCableSegment/CONDUCTORSEGMENT~~ IfcCableSegment/CONDUCTORSEGMENT,IfcCableSegmentType/CONDUCTORSEGMENT
+* PropertyDefs > PropertyDef [Name="Material"] > Name "Material"
+  ~~Material~~ ConductorMaterial
+* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
+  ~~Shape~~ ConductorShape
+
+
+Pset_FlowMeterTypeCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter"
+  ~~IfcFlowMeter~~ IfcFlowMeter,IfcFlowMeterType
+
+
+
+Pset_MaterialConcrete.xml
+=========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcMaterial/Concrete"
+  ~~IfcMaterial/Concrete~~ IfcMaterial
+* ApplicableTypeValue "IfcMaterial/Concrete"
+  ~~IfcMaterial/Concrete~~ IfcMaterial
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_ProtectiveDeviceTrippingFunctionGCurve.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+
+
+Pset_WallCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWallType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWall"
+  ~~IfcWall~~ IfcWall,IfcWallType
 
 
 Qto_FanBaseQuantities.xml
@@ -3662,13 +4336,492 @@ modifications
   ~~IfcFan~~ IfcFan,IfcFanType
 
 
-Qto_CourseBaseQuantities.xml
+Pset_SensorTypeHeatSensor.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/HEATSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/HEATSENSOR"
+  ~~IfcSensor/HEATSENSOR~~ IfcSensor/HEATSENSOR,IfcSensorType/HEATSENSOR
+
+
+
+Pset_DistributionPortPHistoryDuct.xml
+=====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Pressure"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VolumetricFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Temperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="FlowCondition"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="Velocity"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="MassFlowRate"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="WetBulbTemperature"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_ControllerPHistory.xml
+===========================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Value"] > Name "Value"
+  ~~Value~~ ValueHistory
+
+
+Pset_CommunicationsApplianceTypeCommon.xml
+==========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCommunicationsApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCommunicationsAppliance"
+  ~~IfcCommunicationsAppliance~~ IfcCommunicationsAppliance,IfcCommunicationsApplianceType
+
+
+Qto_UnitaryEquipmentBaseQuantities.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryEquipmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryEquipment"
+  ~~IfcUnitaryEquipment~~ IfcUnitaryEquipment,IfcUnitaryEquipmentType
+
+
+Pset_Width.xml
+==============
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/(.WIDTHEVENT.)"
+  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcReferent/WIDTHEVENT
+* ApplicableTypeValue "IfcAnnotation/(.WIDTHEVENT.)"
+  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcReferent/WIDTHEVENT
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_TankTypeExpansion.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType/EXPANSION"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank/EXPANSION"
+  ~~IfcTank/EXPANSION~~ IfcTank/EXPANSION,IfcTankType/EXPANSION
+
+
+
+Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.xml
+===================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > Name "AdjustmentRange"
+  ~~AdjustmentRange~~ TimeAdjustmentRange
+* PropertyDefs > PropertyDef [Name="AdjustmentRangeStepValue"] > Name "AdjustmentRangeStepValue"
+  ~~AdjustmentRangeStepValue~~ TimeAdjustmentRangeStepValue
+* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > Name "AdjustmentValues"
+  ~~AdjustmentValues~~ TimeAdjustmentValues
+
+
+Pset_BoilerPHistory.xml
+=======================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="WorkingPressureHistory"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="WorkingPressure"] > Name "WorkingPressure"
+  ~~WorkingPressure~~ CombustionChamberTemperature
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="CombustionTemperature"]
+
+
+Pset_DamperTypeFireSmokeDamper.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType/FIRESMOKEDAMPER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper/FIRESMOKEDAMPER"
+  ~~IfcDamper/FIRESMOKEDAMPER~~ IfcDamper/FIRESMOKEDAMPER,IfcDamperType/FIRESMOKEDAMPER
+* PropertyDefs > PropertyDef [Name="ControlType"] > Name "ControlType"
+  ~~ControlType~~ DamperControlType
+
+
+
+Pset_TankTypeCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank"
+  ~~IfcTank~~ IfcTank,IfcTankType
+* PropertyDefs > PropertyDef [Name="NominalCapacity"] > Name "NominalCapacity"
+  ~~NominalCapacity~~ TankNominalCapacity
+* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_SpaceThermalPHistory.xml
+=============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="VentilationAirFlowRateHistory"]
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement
+* PropertyDefs > PropertyDef [Name="VentilationAirFlowRate"] > Name "VentilationAirFlowRate"
+  ~~VentilationAirFlowRate~~ SpaceTemperatureHistory
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SpaceTemperature"]
+
+
+Pset_DistributionChamberElementTypeValveChamber.xml
+===================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/VALVECHAMBER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/VALVECHAMBER"
+  ~~IfcDistributionChamberElement/VALVECHAMBER~~ IfcDistributionChamberElement/VALVECHAMBER,IfcDistributionChamberElementType/VALVECHAMBER
+
+
+Pset_ValveTypeFaucet.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/FAUCET"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/FAUCET"
+  ~~IfcValve/FAUCET~~ IfcValve/FAUCET,IfcValveType/FAUCET
+
+
+Qto_SensorBaseQuantities.xml
 ============================
 
 additions
 ---------
-* ApplicableTypeValue "IfcCourse,IfcCourseType"
+* ApplicableClasses > ClassName "IfcSensorType"
 
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor"
+  ~~IfcSensor~~ IfcSensor,IfcSensorType
+
+
+Qto_CoveringBaseQuantities.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoveringType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCovering"
+  ~~IfcCovering~~ IfcCovering,IfcCoveringType
+
+
+Qto_RampFlightBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRampFlightType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRampFlight"
+  ~~IfcRampFlight~~ IfcRampFlight,IfcRampFlightType
+
+
+Pset_SanitaryTerminalTypeUrinal.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/URINAL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/URINAL"
+  ~~IfcSanitaryTerminal/URINAL~~ IfcSanitaryTerminal/URINAL,IfcSanitaryTerminalType/URINAL
+
+
+Pset_CoilPHistory.xml
+=====================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurveHistory"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > Name "AirPressureDropCurve"
+  ~~AirPressureDropCurve~~ SoundCurveHistory
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="SoundCurve"]
+
+
+Pset_PumpTypeCommon.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPumpType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPump"
+  ~~IfcPump~~ IfcPump,IfcPumpType
+
+
+Pset_ElectricGeneratorTypeCommon.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricGeneratorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricGenerator"
+  ~~IfcElectricGenerator~~ IfcElectricGenerator,IfcElectricGeneratorType
+
+
+Pset_DistributionPortPHistoryCable.xml
+======================================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="CurrentHistory"]
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Current"] > Name "Current"
+  ~~Current~~ PowerFactorHistory
+* PropertyDefs > PropertyDef [Name="Voltage"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="PowerFactor"]
+
+
+Qto_DistributionChamberElementBaseQuantities.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType"
+* QtoDefs > QtoDef [Name="Depth"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement"
+  ~~IfcDistributionChamberElement~~ IfcDistributionChamberElement,IfcDistributionChamberElementType
+
+
+Pset_DiscreteAccessoryEdgeFixingPlate.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/Edge fixing plate"
+  ~~IfcDiscreteAccessory/Edge fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Edge fixing plate"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_MaterialWater.xml
+======================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+
+Pset_ProtectiveDeviceTrippingFunctionSCurve.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+
+
+Pset_SystemFurnitureElementTypeCommon.xml
+=========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSystemFurnitureElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSystemFurnitureElement"
+  ~~IfcSystemFurnitureElement~~ IfcSystemFurnitureElement,IfcSystemFurnitureElementType
+
+
+
+Pset_DistributionChamberElementTypeManhole.xml
+==============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/MANHOLE"
+* PropertyDefs > PropertyDef [Name="IsAccessibleOnFoot"]
+* PropertyDefs > PropertyDef [Name="IsLocked"]
+* PropertyDefs > PropertyDef [Name="NumberOfCableEntries"]
+* PropertyDefs > PropertyDef [Name="NumberOfManholeCovers"]
+* PropertyDefs > PropertyDef [Name="TypeOfShaft"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/MANHOLE"
+  ~~IfcDistributionChamberElement/MANHOLE~~ IfcDistributionChamberElement/MANHOLE,IfcDistributionChamberElementType/MANHOLE
+
+
+Pset_ShadingDeviceCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcShadingDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcShadingDevice"
+  ~~IfcShadingDevice~~ IfcShadingDevice,IfcShadingDeviceType
+* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
+* PropertyDefs > PropertyDef [Name="SolarReflectance"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
+* PropertyDefs > PropertyDef [Name="VisibleLightTransmittance"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
+* PropertyDefs > PropertyDef [Name="VisibleLightReflectance"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
+* PropertyDefs > PropertyDef [Name="SurfaceColor"] > Name "SurfaceColor"
+  ~~SurfaceColor~~ SurfaceColour
+
+
+Pset_DistributionPortTypeDuct.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConnectionSubType"] > Name "ConnectionSubType"
+  ~~ConnectionSubType~~ ConnectionSubtype
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_PrecastSlab.xml
+====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab"
+  ~~IfcSlab~~ IfcSlab,IfcSlabType
+
+
+Pset_AudioVisualApplianceTypeSpeaker.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/SPEAKER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/SPEAKER"
+  ~~IfcAudioVisualAppliance/SPEAKER~~ IfcAudioVisualAppliance/SPEAKER,IfcAudioVisualApplianceType/SPEAKER
+* PropertyDefs > PropertyDef [Name="SpeakerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+* PropertyDefs > PropertyDef [Name="SpeakerMounting"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Qto_RailingBaseQuantities.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRailingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRailing"
+  ~~IfcRailing~~ IfcRailing,IfcRailingType
 
 
 Qto_JunctionBoxBaseQuantities.xml
@@ -3687,173 +4840,293 @@ modifications
   ~~IfcJunctionBox~~ IfcJunctionBox,IfcJunctionBoxType
 
 
-Qto_DistributionChamberElementBaseQuantities.xml
-================================================
+Qto_FootingBaseQuantities.xml
+=============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType"
-* QtoDefs > QtoDef [Name="Depth"]
+* ApplicableClasses > ClassName "IfcFootingType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDistributionChamberElement"
-  ~~IfcDistributionChamberElement~~ IfcDistributionChamberElement,IfcDistributionChamberElementType
+* ApplicableTypeValue "IfcFooting"
+  ~~IfcFooting~~ IfcFooting,IfcFootingType
 
 
-Pset_TankTypeExpansion.xml
+Pset_SpaceHeaterTypeConvector.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpaceHeaterType/CONVECTOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpaceHeater/CONVECTOR"
+  ~~IfcSpaceHeater/CONVECTOR~~ IfcSpaceHeater/CONVECTOR,IfcSpaceHeaterType/CONVECTOR
+
+
+
+Pset_ProfileMechanical.xml
 ==========================
 
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType/EXPANSION"
-
 modifications
 -------------
-* ApplicableTypeValue "IfcTank/EXPANSION"
-  ~~IfcTank/EXPANSION~~ IfcTank/EXPANSION,IfcTankType/EXPANSION
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
 
 
-Qto_SlabBaseQuantities.xml
-==========================
+Qto_EvaporativeCoolerBaseQuantities.xml
+=======================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSlabType"
+* ApplicableClasses > ClassName "IfcEvaporativeCoolerType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSlab"
-  ~~IfcSlab~~ IfcSlab,IfcSlabType
+* ApplicableTypeValue "IfcEvaporativeCooler"
+  ~~IfcEvaporativeCooler~~ IfcEvaporativeCooler,IfcEvaporativeCoolerType
 
 
-Pset_ValveTypeFlushing.xml
-==========================
+Qto_PlateBaseQuantities.xml
+===========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcValveType/FLUSHING"
+* ApplicableClasses > ClassName "IfcPlateType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcValve/FLUSHING"
-  ~~IfcValve/FLUSHING~~ IfcValve/FLUSHING,IfcValveType/FLUSHING
+* ApplicableTypeValue "IfcPlate"
+  ~~IfcPlate~~ IfcPlate,IfcPlateType
 
 
-Pset_WasteTerminalTypeFloorWaste.xml
+Pset_PipeSegmentOccurrence.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+Pset_SensorTypeFlowSensor.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/FLOWSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/FLOWSENSOR"
+  ~~IfcSensor/FLOWSENSOR~~ IfcSensor/FLOWSENSOR,IfcSensorType/FLOWSENSOR
+
+
+
+Pset_ValveTypeIsolating.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/ISOLATING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/ISOLATING"
+  ~~IfcValve/ISOLATING~~ IfcValve/ISOLATING,IfcValveType/ISOLATING
+
+
+Pset_OpeningElementCommon.xml
+=============================
+
+additions
+---------
+* PropertyDefs > PropertyDef [Name="FireRating"]
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+* PropertyDefs > PropertyDef [Name="ProtectedOpening"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+* PropertyDefs > PropertyDef [Name="ProtectedOpening"] > Name "ProtectedOpening"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+
+
+Pset_AlarmTypeCommon.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAlarmType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAlarm"
+  ~~IfcAlarm~~ IfcAlarm,IfcAlarmType
+* PropertyDefs > PropertyDef [Name="Condition"] > Name "Condition"
+  ~~Condition~~ AlarmCondition
+
+
+Pset_ProjectOrderWorkOrder.xml
+==============================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_StackTerminalBaseQuantities.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcStackTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcStackTerminal"
+  ~~IfcStackTerminal~~ IfcStackTerminal,IfcStackTerminalType
+
+
+Pset_RampCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRampType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRamp"
+  ~~IfcRamp~~ IfcRamp,IfcRampType
+
+
+Pset_MaintenanceTriggerCondition.xml
 ====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/FLOORWASTE"
+* ApplicableClasses > ClassName "IfcElementType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcWasteTerminal/FLOORWASTE"
-  ~~IfcWasteTerminal/FLOORWASTE~~ IfcWasteTerminal/FLOORWASTE,IfcWasteTerminalType/FLOORWASTE
+* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
+  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
 
 
-Qto_AirToAirHeatRecoveryBaseQuantities.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirToAirHeatRecoveryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirToAirHeatRecovery"
-  ~~IfcAirToAirHeatRecovery~~ IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType
-
-
-Qto_AirTerminalBoxTypeBaseQuantities.xml
-========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirTerminalBoxType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirTerminalBox"
-  ~~IfcAirTerminalBox~~ IfcAirTerminalBox,IfcAirTerminalBoxType
-
-
-Pset_SwitchingDeviceTypeCommon.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice"
-  ~~IfcSwitchingDevice~~ IfcSwitchingDevice,IfcSwitchingDeviceType
-* PropertyDefs > PropertyDef [Name="NumberOfGangs"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_AirTerminalBoxPHistory.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirflowCurve"] > Name "AirflowCurve"
-  ~~AirflowCurve~~ AirFlowCurve
-
-
-Pset_UnitaryControlElementTypeControlPanel.xml
-==============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType/CONTROLPANEL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement/CONTROLPANEL"
-  ~~IfcUnitaryControlElement/CONTROLPANEL~~ IfcUnitaryControlElement/CONTROLPANEL,IfcUnitaryControlElementType/CONTROLPANEL
-
-
-
-Qto_CooledBeamBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCooledBeamType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCooledBeam"
-  ~~IfcCooledBeam~~ IfcCooledBeam,IfcCooledBeamType
-
-
-Pset_ElectricTimeControlTypeCommon.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricTimeControlType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricTimeControl"
-  ~~IfcElectricTimeControl~~ IfcElectricTimeControl,IfcElectricTimeControlType
-
-
-Qto_PileBaseQuantities.xml
+Qto_PumpBaseQuantities.xml
 ==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcPileType"
+* ApplicableClasses > ClassName "IfcPumpType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcPile"
-  ~~IfcPile~~ IfcPile,IfcPileType
+* ApplicableTypeValue "IfcPump"
+  ~~IfcPump~~ IfcPump,IfcPumpType
+
+
+Pset_ValveTypePressureReducing.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/PRESSUREREDUCING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/PRESSUREREDUCING"
+  ~~IfcValve/PRESSUREREDUCING~~ IfcValve/PRESSUREREDUCING,IfcValveType/PRESSUREREDUCING
+
+
+Pset_JettyDesignCriteria.xml
+============================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_CessBetweenRails.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
+* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "LEFT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab/TRACKSLAB"
+  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
+* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "LEFT_RAIL"
+  ~~LEFT_RAIL~~ RIGHT
+* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList
+  ~~PEnum_JointRelativePosition~~ PEnum_RelativePosition
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="JointRelativePosition"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "RIGHT_RAIL"
+
+
+Qto_TubeBundleBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTubeBundleType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTubeBundle"
+  ~~IfcTubeBundle~~ IfcTubeBundle,IfcTubeBundleType
+
+
+Pset_TransitionSectionCommon.xml
+================================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcEarthworksFill/(.TRANSITIONSECTION.)"
+  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
+* ApplicableTypeValue "IfcEarthworksFill/(.TRANSITIONSECTION.)"
+  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_TrafficCalmingDeviceCommon.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementAssemblyType/TRAFFIC_CALMING_DEVICE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
+  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE,IfcElementAssemblyType/TRAFFIC_CALMING_DEVICE
+* ApplicableClasses > ClassName "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_CableCarrierSegmentTypeCommon.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierSegment"
+  ~~IfcCableCarrierSegment~~ IfcCableCarrierSegment,IfcCableCarrierSegmentType
 
 
 Pset_ActuatorTypeCommon.xml
@@ -3873,101 +5146,836 @@ modifications
   ~~Application~~ ActuatorApplication
 
 
-Pset_TrafficCalmingDeviceCommon.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementAssemblyType/TRAFFIC_CALMING_DEVICE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
-  ~~IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)~~ IfcElementAssembly/TRAFFIC_CALMING_DEVICE,IfcElementAssemblyType/TRAFFIC_CALMING_DEVICE
-* ApplicableClasses > ClassName "IfcElementAssembly/(.TRAFFIC_CALMING_DEVICE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-
-Pset_ProtectiveDeviceTrippingFunctionSCurve.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-
-
-Qto_LampBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcLampType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcLamp"
-  ~~IfcLamp~~ IfcLamp,IfcLampType
-
-
-Qto_LaborResourceBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcLaborResourceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcLaborResource"
-  ~~IfcLaborResource~~ IfcLaborResource,IfcLaborResourceType
-
-
-Qto_PipeSegmentBaseQuantities.xml
+Qto_SpaceHeaterBaseQuantities.xml
 =================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcPipeSegmentType"
-* QtoDefs > QtoDef [Name="FootPrintArea"]
+* ApplicableClasses > ClassName "IfcSpaceHeaterType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcPipeSegment"
-  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
+* ApplicableTypeValue "IfcSpaceHeater"
+  ~~IfcSpaceHeater~~ IfcSpaceHeater,IfcSpaceHeaterType
 
 
-Qto_DuctSilencerBaseQuantities.xml
+Qto_SignalBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableTypeValue "IfcSignal,IfcSignalType"
+
+
+Pset_PumpPHistory.xml
+=====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Power"] > Name "Power"
+  ~~Power~~ PowerHistory
+
+
+Pset_DistributionChamberElementTypeTrench.xml
+=============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/TRENCH"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionChamberElement/TRENCH"
+  ~~IfcDistributionChamberElement/TRENCH~~ IfcDistributionChamberElement/TRENCH,IfcDistributionChamberElementType/TRENCH
+
+
+Pset_ValveTypeGasTap.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/GASTAP"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/GASTAP"
+  ~~IfcValve/GASTAP~~ IfcValve/GASTAP,IfcValveType/GASTAP
+
+
+Qto_FlowMeterBaseQuantities.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter"
+  ~~IfcFlowMeter~~ IfcFlowMeter,IfcFlowMeterType
+
+
+Pset_FilterTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFilterType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFilter"
+  ~~IfcFilter~~ IfcFilter,IfcFilterType
+
+
+Pset_CableCarrierSegmentTypeConduitSegment.xml
+==============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CONDUITSEGMENT"
+* PropertyDefs > PropertyDef [Name="NominalDiameter"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierSegment/CONDUITSEGMENT"
+  ~~IfcCableCarrierSegment/CONDUITSEGMENT~~ IfcCableCarrierSegment/CONDUITSEGMENT,IfcCableCarrierSegmentType/CONDUITSEGMENT
+
+
+
+Pset_RoadGuardElement.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcRailingType/GUARDRAIL"
+* ApplicableClasses > ClassName "IfcWallType/PARAPET"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)"
+  ~~IfcRailing/(.GUARDRAIL.),IfcWall/(.PARAPET.)~~ IfcRailing/GUARDRAIL,IfcWall/PARAPET,IfcRailingType/GUARDRAIL,IfcWallType/PARAPET
+* ApplicableClasses > ClassName "IfcRailing/(.GUARDRAIL.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcWall/(.PARAPET.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_MotorConnectionTypeCommon.xml
 ==================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDuctSilencerType"
+* ApplicableClasses > ClassName "IfcMotorConnectionType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDuctSilencer"
-  ~~IfcDuctSilencer~~ IfcDuctSilencer,IfcDuctSilencerType
+* ApplicableTypeValue "IfcMotorConnection"
+  ~~IfcMotorConnection~~ IfcMotorConnection,IfcMotorConnectionType
 
 
-Pset_DistributionChamberElementTypeInspectionChamber.xml
-========================================================
+
+Qto_ProtectiveDeviceBaseQuantities.xml
+======================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/INSPECTIONCHAMBER"
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDistributionChamberElement/INSPECTIONCHAMBER"
-  ~~IfcDistributionChamberElement/INSPECTIONCHAMBER~~ IfcDistributionChamberElement/INSPECTIONCHAMBER,IfcDistributionChamberElementType/INSPECTIONCHAMBER
-* PropertyDefs > PropertyDef [Name="InvertLevel"] > Name "InvertLevel"
-  ~~InvertLevel~~ InspectionChamberInvertLevel
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+Pset_MobileTelecommunicationsApplianceTypeMSCServer.xml
+=======================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/MSCSERVER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/MSCSERVER"
+  ~~IfcMobileTelecommunicationsAppliance/MSCSERVER~~ IfcMobileTelecommunicationsAppliance/MSCSERVER,IfcMobileTelecommunicationsApplianceType/MSCSERVER
+
+
+Pset_SensorTypeSoundSensor.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/SOUNDSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/SOUNDSENSOR"
+  ~~IfcSensor/SOUNDSENSOR~~ IfcSensor/SOUNDSENSOR,IfcSensorType/SOUNDSENSOR
+
+
+Pset_WasteTerminalTypeCommon.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal"
+  ~~IfcWasteTerminal~~ IfcWasteTerminal,IfcWasteTerminalType
+
+
+Pset_UnitaryEquipmentTypeAirHandler.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryEquipmentType/AIRHANDLER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryEquipment/AIRHANDLER"
+  ~~IfcUnitaryEquipment/AIRHANDLER~~ IfcUnitaryEquipment/AIRHANDLER,IfcUnitaryEquipmentType/AIRHANDLER
+
+
+Pset_GeotechnicalStratumCommon.xml
+==================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Colour"] > Name "Colour"
+  ~~Colour~~ StratumColour
+
+
+Pset_SpaceCommon.xml
+====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpatialElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_WasteTerminalTypeFloorWaste.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/FLOORWASTE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/FLOORWASTE"
+  ~~IfcWasteTerminal/FLOORWASTE~~ IfcWasteTerminal/FLOORWASTE,IfcWasteTerminalType/FLOORWASTE
+
+
+
+Pset_Warranty.xml
+=================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement"
+  ~~IfcElement~~ IfcElement,IfcElementType
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="WarrantyEndDate"]
+
+
+Pset_Condition.xml
+==================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+* PropertyDefs > PropertyDef [Name="AssessmentFrequency"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement,IfcSystem,IfcAsset"
+  ~~IfcElement,IfcSystem,IfcAsset~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
+
+
+Pset_AirTerminalOccurrence.xml
+==============================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Location"] > Name "Location"
+  ~~Location~~ AirTerminalLocation
+* PropertyDefs > PropertyDef [Name="AirflowType"] > Name "AirflowType"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="AirflowType"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
+
+
+Pset_DamperTypeCommon.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDamperType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDamper"
+  ~~IfcDamper~~ IfcDamper,IfcDamperType
+
+
+Pset_SiteCommon.xml
+===================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_AirToAirHeatRecoveryTypeCommon.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAirToAirHeatRecoveryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAirToAirHeatRecovery"
+  ~~IfcAirToAirHeatRecovery~~ IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType
+* PropertyDefs > PropertyDef [Name="PrimaryAirflowRateRange"] > Name "PrimaryAirflowRateRange"
+  ~~PrimaryAirflowRateRange~~ PrimaryAirFlowRateRange
+* PropertyDefs > PropertyDef [Name="SecondaryAirflowRateRange"] > Name "SecondaryAirflowRateRange"
+  ~~SecondaryAirflowRateRange~~ SecondaryAirFlowRateRange
+
+
+Pset_DistributionPortTypePipe.xml
+=================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="ConnectionSubType"] > Name "ConnectionSubType"
+  ~~ConnectionSubType~~ ConnectionSubtype
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_ValveTypeMixing.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/MIXING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/MIXING"
+  ~~IfcValve/MIXING~~ IfcValve/MIXING,IfcValveType/MIXING
+
+
+Pset_CooledBeamTypeCommon.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCooledBeamType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCooledBeam"
+  ~~IfcCooledBeam~~ IfcCooledBeam,IfcCooledBeamType
+* PropertyDefs > PropertyDef [Name="FinishColor"] > Name "FinishColor"
+  ~~FinishColor~~ FinishColour
+
+
+
+Pset_BreakwaterCommon.xml
+=========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SoundGeneration.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDistributionFlowElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDistributionFlowElement"
+  ~~IfcDistributionFlowElement~~ IfcDistributionFlowElement,IfcDistributionFlowElementType
+
+
+Pset_ElectricApplianceTypeDishwasher.xml
+========================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricApplianceType/DISHWASHER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricAppliance/DISHWASHER"
+  ~~IfcElectricAppliance/DISHWASHER~~ IfcElectricAppliance/DISHWASHER,IfcElectricApplianceType/DISHWASHER
+
+
+Pset_Superelevation.xml
+=======================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
+  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcReferent/SUPERELEVATIONEVENT
+* ApplicableTypeValue "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
+  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcReferent/SUPERELEVATIONEVENT
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_HeatExchangerTypePlate.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcHeatExchangerType/PLATE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcHeatExchanger/PLATE"
+  ~~IfcHeatExchanger/PLATE~~ IfcHeatExchanger/PLATE,IfcHeatExchangerType/PLATE
+* PropertyDefs > PropertyDef [Name="NumberOfPlates"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_EnvironmentalImpactValues.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElement"
+  ~~IfcElement~~ IfcElement,IfcElementType
+
+
+Pset_RadiiKerbStone.xml
+=======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerb,IfcKerbType
+
+
+Pset_SensorTypeRadiationSensor.xml
+==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/RADIATIONSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/RADIATIONSENSOR"
+  ~~IfcSensor/RADIATIONSENSOR~~ IfcSensor/RADIATIONSENSOR,IfcSensorType/RADIATIONSENSOR
+
+
+
+Pset_ActuatorTypeHydraulicActuator.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcActuatorType/HYDRAULICACTUATOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcActuator/HYDRAULICACTUATOR"
+  ~~IfcActuator/HYDRAULICACTUATOR~~ IfcActuator/HYDRAULICACTUATOR,IfcActuatorType/HYDRAULICACTUATOR
+
+
+Pset_MobileTelecommunicationsApplianceTypeEUtranNodeB.xml
+=========================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/E_UTRAN_NODE_B"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B"
+  ~~IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B~~ IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B,IfcMobileTelecommunicationsApplianceType/E_UTRAN_NODE_B
+* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Qto_ElectricMotorBaseQuantities.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricMotorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricMotor"
+  ~~IfcElectricMotor~~ IfcElectricMotor,IfcElectricMotorType
+
+
+Pset_AudioVisualApplianceTypeCommon.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance"
+  ~~IfcAudioVisualAppliance~~ IfcAudioVisualAppliance,IfcAudioVisualApplianceType
+
+
+Pset_MemberCommon.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMemberType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMember"
+  ~~IfcMember~~ IfcMember,IfcMemberType
+
+
+Pset_FlowMeterTypeWaterMeter.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType/WATERMETER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter/WATERMETER"
+  ~~IfcFlowMeter/WATERMETER~~ IfcFlowMeter/WATERMETER,IfcFlowMeterType/WATERMETER
+
+
+Pset_GeotechnicalAssemblyCommon.xml
+===================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Purpose"] > Name "Purpose"
+  ~~Purpose~~ BoreHolePurpose
+
+
+Qto_AlarmBaseQuantities.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAlarmType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAlarm"
+  ~~IfcAlarm~~ IfcAlarm,IfcAlarmType
+
+
+Pset_CableSegmentTypeBusBarSegment.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableSegmentType/BUSBARSEGMENT"
+* PropertyDefs > PropertyDef [Name="NominalCurrent"]
+* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
+* PropertyDefs > PropertyDef [Name="ACResistance"]
+* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
+* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
+* PropertyDefs > PropertyDef [Name="DCResistance"]
+* PropertyDefs > PropertyDef [Name="MassPerLength"]
+* PropertyDefs > PropertyDef [Name="TensileStrength"]
+* PropertyDefs > PropertyDef [Name="YoungModulus"]
+* PropertyDefs > PropertyDef [Name="CrossSectionalArea"]
+* PropertyDefs > PropertyDef [Name="InsulationMethod"]
+* PropertyDefs > PropertyDef [Name="OverallDiameter"]
+* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"]
+* PropertyDefs > PropertyDef [Name="RatedVoltage"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableSegment/BUSBARSEGMENT"
+  ~~IfcCableSegment/BUSBARSEGMENT~~ IfcCableSegment/BUSBARSEGMENT,IfcCableSegmentType/BUSBARSEGMENT
+
+
+Pset_CivilElementCommon.xml
+===========================
+
+additions
+---------
+* ApplicableTypeValue "IfcCivilElement,IfcCivilElementType"
+
+
+Pset_ProtectiveDeviceBreakerUnitI2TCurve.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+Pset_SwitchingDeviceTypePHistory.xml
+====================================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="SetPoint"] > Name "SetPoint"
+  ~~SetPoint~~ SetPointHistory
+
+
+Pset_LightFixtureTypeCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLightFixtureType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcLightFixture"
+  ~~IfcLightFixture~~ IfcLightFixture,IfcLightFixtureType
+* PropertyDefs > PropertyDef [Name="NumberOfSources"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_MechanicalFastenerAnchorBolt.xml
+=====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMechanicalFastenerType/ANCHORBOLT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMechanicalFastener/ANCHORBOLT"
+  ~~IfcMechanicalFastener/ANCHORBOLT~~ IfcMechanicalFastener/ANCHORBOLT,IfcMechanicalFastenerType/ANCHORBOLT
+
+
+Pset_EvaporatorTypeCommon.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcEvaporatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcEvaporator"
+  ~~IfcEvaporator~~ IfcEvaporator,IfcEvaporatorType
+
+
+
+Qto_SignBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableTypeValue "IfcSign,IfcSignType"
+
+
+Qto_ImpactProtectionDeviceBaseQuantities.xml
+============================================
+
+additions
+---------
+* ApplicableTypeValue "IfcImpactProtectionDevice,IfcImpactProtectionDeviceType"
+
+
+Qto_MemberBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMemberType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMember"
+  ~~IfcMember~~ IfcMember,IfcMemberType
+
+
+Pset_SlabTypeTrackSlab.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab/TRACKSLAB"
+  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
+
+
+Qto_BoilerBaseQuantities.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBoilerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBoiler"
+  ~~IfcBoiler~~ IfcBoiler,IfcBoilerType
+
+
+Pset_ProtectiveDeviceBreakerUnitIPICurve.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+Pset_FlowMeterTypeEnergyMeter.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFlowMeterType/ENERGYMETER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFlowMeter/ENERGYMETER"
+  ~~IfcFlowMeter/ENERGYMETER~~ IfcFlowMeter/ENERGYMETER,IfcFlowMeterType/ENERGYMETER
+
+
+
+Pset_ValveTypeCommon.xml
+========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve"
+  ~~IfcValve~~ IfcValve,IfcValveType
+
+
+Pset_CoveringTypeMembrane.xml
+=============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoveringType/MEMBRANE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCovering/MEMBRANE"
+  ~~IfcCovering/MEMBRANE~~ IfcCovering/MEMBRANE,IfcCoveringType/MEMBRANE
+
+
+Pset_FastenerWeld.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFastenerType/WELD"
+* PropertyDefs > PropertyDef [Name="NominalThroatThickness"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFastener/WELD"
+  ~~IfcFastener/WELD~~ IfcFastener/WELD,IfcFastenerType/WELD
+* PropertyDefs > PropertyDef [Name="n"] > Name "n"
+  ~~n~~ NumberOfWeldElements
+* PropertyDefs > PropertyDef [Name="a"] > Name "a"
+  ~~a~~ WeldLegLength
+* PropertyDefs > PropertyDef [Name="d"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="e"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="c"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="l"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="s"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="z"]
+
+
+Pset_ProtectiveDeviceTypeVaristor.xml
+=====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType/VARISTOR"
+* PropertyDefs > PropertyDef [Name="CharacteristicFunction"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice/VARISTOR"
+  ~~IfcProtectiveDevice/VARISTOR~~ IfcProtectiveDevice/VARISTOR,IfcProtectiveDeviceType/VARISTOR
+
+
+Pset_CargoCommon.xml
+====================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
+  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)~~ IfcVehicle/CARGO,IfcVehicleType/CARGO
+* PropertyDefs > PropertyDef [Name="ProcessItem"] > PropertyType > TypePropertySingleValue
+  ~~TypePropertySingleValue~~ TypePropertyEnumeratedValue
+* PropertyDefs > PropertyDef [Name="ProcessItem"] > PropertyType > TypePropertySingleValue > DataType
+  ~~&lt;DataType&gt;~~ &lt;EnumList&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 
 Pset_ProtectiveDeviceTypeResidualCurrentCircuitBreaker.xml
@@ -3983,52 +5991,167 @@ modifications
   ~~IfcProtectiveDevice/RESIDUALCURRENTCIRCUITBREAKER~~ IfcProtectiveDevice/RESIDUALCURRENTCIRCUITBREAKER,IfcProtectiveDeviceType/RESIDUALCURRENTCIRCUITBREAKER
 
 
-Qto_ReinforcingElementBaseQuantities.xml
-========================================
+Pset_DoorTypeTurnstile.xml
+==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcReinforcingElementType"
+* ApplicableClasses > ClassName "IfcDoorType/TURNSTILE"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcReinforcingElement"
-  ~~IfcReinforcingElement~~ IfcReinforcingElement,IfcReinforcingElementType
+* ApplicableTypeValue "IfcDoor/TURNSTILE"
+  ~~IfcDoor/TURNSTILE~~ IfcDoor/TURNSTILE,IfcDoorType/TURNSTILE
 
 
-Pset_DuctFittingOccurrence.xml
-==============================
+
+Pset_FilterTypeCompressedAirFilter.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFilterType/COMPRESSEDAIRFILTER"
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
+* ApplicableTypeValue "IfcFilter/COMPRESSEDAIRFILTER"
+  ~~IfcFilter/COMPRESSEDAIRFILTER~~ IfcFilter/COMPRESSEDAIRFILTER,IfcFilterType/COMPRESSEDAIRFILTER
 
 
-Pset_StairCommon.xml
+Pset_QuayCommon.xml
+===================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_TransformerBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTransformerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransformer"
+  ~~IfcTransformer~~ IfcTransformer,IfcTransformerType
+
+
+Pset_ElectricTimeControlTypeCommon.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricTimeControlType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricTimeControl"
+  ~~IfcElectricTimeControl~~ IfcElectricTimeControl,IfcElectricTimeControlType
+
+
+
+
+Pset_MaterialCombustion.xml
+===========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+
+
+Pset_TrackBase.xml
+==================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSlabType/BASESLAB"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSlab/BASESLAB"
+  ~~IfcSlab/BASESLAB~~ IfcSlab/BASESLAB,IfcSlabType/BASESLAB
+
+
+Qto_BeamBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBeamType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBeam"
+  ~~IfcBeam~~ IfcBeam,IfcBeamType
+
+
+Pset_ProfileArbitraryHollowCore.xml
+===================================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
+
+
+Pset_ActorCommon.xml
 ====================
 
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="Category"] > Name "Category"
+  ~~Category~~ ActorCategory
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_TransportElementElevator.xml
+=================================
+
 additions
 ---------
-* ApplicableClasses > ClassName "IfcStairType"
+* ApplicableClasses > ClassName "IfcTransportElementType/ELEVATOR"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcStair"
-  ~~IfcStair~~ IfcStair,IfcStairType
+* ApplicableTypeValue "IfcTransportElement/ELEVATOR"
+  ~~IfcTransportElement/ELEVATOR~~ IfcTransportElement/ELEVATOR,IfcTransportElementType/ELEVATOR
 
 
-Pset_DistributionBoardTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricDistributionBoardType"
+Pset_DuctSegmentPHistory.xml
+============================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElectricDistributionBoard"
-  ~~IfcElectricDistributionBoard~~ IfcElectricDistributionBoard,IfcElectricDistributionBoardType
+* PropertyDefs > PropertyDef [Name="LeakageCurve"] > Name "LeakageCurve"
+  ~~LeakageCurve~~ LeakageCurveHistory
+
+
+Qto_VibrationIsolatorBaseQuantities.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcVibrationIsolatorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcVibrationIsolator"
+  ~~IfcVibrationIsolator~~ IfcVibrationIsolator,IfcVibrationIsolatorType
+
+
+Pset_LandRegistration.xml
+=========================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
 Qto_ElectricApplianceBaseQuantities.xml
@@ -4044,48 +6167,578 @@ modifications
   ~~IfcElectricAppliance~~ IfcElectricAppliance,IfcElectricApplianceType
 
 
-Pset_ProfileArbitraryHollowCore.xml
-===================================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
-
-
-Pset_SpaceHeaterTypeCommon.xml
+Pset_AirTerminalTypeCommon.xml
 ==============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSpaceHeaterType"
+* ApplicableClasses > ClassName "IfcAirTerminalType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSpaceHeater"
-  ~~IfcSpaceHeater~~ IfcSpaceHeater,IfcSpaceHeaterType
-* PropertyDefs > PropertyDef [Name="PlacementType"] > Name "PlacementType"
-  ~~PlacementType~~ SpaceHeaterPlacement
-* PropertyDefs > PropertyDef [Name="NumberOfPanels"] > PropertyType > TypePropertySingleValue > DataType
+* ApplicableTypeValue "IfcAirTerminal"
+  ~~IfcAirTerminal~~ IfcAirTerminal,IfcAirTerminalType
+* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
+  ~~Shape~~ AirTerminalShape
+* PropertyDefs > PropertyDef [Name="NumberOfSlots"] > PropertyType > TypePropertySingleValue > DataType
   ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="AirFlowrateRange"] > Name "AirFlowrateRange"
+  ~~AirFlowrateRange~~ AirFlowRateRange
+* PropertyDefs > PropertyDef [Name="FinishColor"] > Name "FinishColor"
+  ~~FinishColor~~ FinishColour
+* PropertyDefs > PropertyDef [Name="MountingType"] > Name "MountingType"
+  ~~MountingType~~ AirTerminalMountingType
 
 
-Pset_MobileTelecommunicationsApplianceTypeRemoteUnit.xml
-========================================================
+Pset_GateHeadCommon.xml
+=======================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)"
+  ~~IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)~~ IfcMarinePart/GATEHEAD
+* ApplicableTypeValue "IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)"
+  ~~IfcFacilityPart/IfcMarinePartTypeEnum(.GATEHEAD.)~~ IfcMarinePart/GATEHEAD
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_UnitaryControlElementTypeCommon.xml
+========================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/REMOTEUNIT"
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/REMOTEUNIT"
-  ~~IfcMobileTelecommunicationsAppliance/REMOTEUNIT~~ IfcMobileTelecommunicationsAppliance/REMOTEUNIT,IfcMobileTelecommunicationsApplianceType/REMOTEUNIT
-* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
+* ApplicableTypeValue "IfcUnitaryControlElement"
+  ~~IfcUnitaryControlElement~~ IfcUnitaryControlElement,IfcUnitaryControlElementType
+* PropertyDefs > PropertyDef [Name="Mode"] > Name "Mode"
+  ~~Mode~~ OperationMode
+
+
+Pset_FurnitureTypeCommon.xml
+============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFurnitureType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFurniture"
+  ~~IfcFurniture~~ IfcFurniture,IfcFurnitureType
+* PropertyDefs > PropertyDef [Name="MainColor"] > Name "MainColor"
+  ~~MainColor~~ MainColour
+
+
+Pset_SanitaryTerminalTypeToiletPan.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/TOILETPAN"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal/TOILETPAN"
+  ~~IfcSanitaryTerminal/TOILETPAN~~ IfcSanitaryTerminal/TOILETPAN,IfcSanitaryTerminalType/TOILETPAN
+
+
+Pset_TankTypeSectional.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcTankType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTank/SECTIONAL"
+  ~~IfcTank/SECTIONAL~~ IfcTank,IfcTankType
+* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* ApplicableClasses > ClassName "IfcTank/SECTIONAL"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_ValveTypePressureRelief.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcValveType/PRESSURERELIEF"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcValve/PRESSURERELIEF"
+  ~~IfcValve/PRESSURERELIEF~~ IfcValve/PRESSURERELIEF,IfcValveType/PRESSURERELIEF
+
+
+Pset_CoolingTowerTypeCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoolingTowerType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCoolingTower"
+  ~~IfcCoolingTower~~ IfcCoolingTower,IfcCoolingTowerType
+* PropertyDefs > PropertyDef [Name="NumberOfCells"] > PropertyType > TypePropertySingleValue > DataType
   ~~IfcInteger~~ IfcCountMeasure
 
+
+Pset_DoorWindowGlazingType.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDoorType"
+* ApplicableClasses > ClassName "IfcWindowType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDoor, IfcWindow"
+  ~~IfcDoor, IfcWindow~~ IfcDoor,IfcWindow,IfcDoorType,IfcWindowType
+* PropertyDefs > PropertyDef [Name="GlassColor"] > Name "GlassColor"
+  ~~GlassColor~~ GlassColour
+
+
+Pset_CourseCommon.xml
+=====================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCourseType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCourse"
+  ~~IfcCourse~~ IfcCourse,IfcCourseType
+
+
+Pset_ProtectiveDeviceBreakerUnitI2TFuseCurve.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice"
+  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
+
+
+
+Pset_SensorTypeLightSensor.xml
+==============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/LIGHTSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/LIGHTSENSOR"
+  ~~IfcSensor/LIGHTSENSOR~~ IfcSensor/LIGHTSENSOR,IfcSensorType/LIGHTSENSOR
+
+
+Pset_CoilTypeHydronic.xml
+=========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCoilType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCoil"
+  ~~IfcCoil~~ IfcCoil,IfcCoilType
+
+
+Pset_FurnitureTypeFileCabinet.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFurnitureType/FILECABINET"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFurniture/FILECABINET"
+  ~~IfcFurniture/FILECABINET~~ IfcFurniture/FILECABINET,IfcFurnitureType/FILECABINET
+
+
+Pset_DiscreteAccessoryFixingSocket.xml
+======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcDiscreteAccessory/Fixing socket"
+  ~~IfcDiscreteAccessory/Fixing socket~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
+* ApplicableClasses > ClassName "IfcDiscreteAccessory/Fixing socket"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_PropertyAgreement.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpatialStructureElementType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSpatialStructureElement"
+  ~~IfcSpatialStructureElement~~ IfcSpatialStructureElement,IfcSpatialStructureElementType
+* PropertyDefs > PropertyDef [Name="Identifier"] > Name "Identifier"
+  ~~Identifier~~ TrackingIdentifier
+* PropertyDefs > PropertyDef [Name="Version"] > Name "Version"
+  ~~Version~~ AgreementVersion
+* PropertyDefs > PropertyDef [Name="VersionDate"] > Name "VersionDate"
+  ~~VersionDate~~ AgreementDate
+
+
+Qto_WasteTerminalBaseQuantities.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal"
+  ~~IfcWasteTerminal~~ IfcWasteTerminal,IfcWasteTerminalType
+
+
+Pset_ControllerTypeFloating.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcControllerType/FLOATING"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcController/FLOATING"
+  ~~IfcController/FLOATING~~ IfcController/FLOATING,IfcControllerType/FLOATING
+
+
+Pset_PipeSegmentTypeCulvert.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcPipeSegmentType/CULVERT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcPipeSegment/CULVERT"
+  ~~IfcPipeSegment/CULVERT~~ IfcPipeSegment/CULVERT,IfcPipeSegmentType/CULVERT
+* PropertyDefs > PropertyDef [Name="InternalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ClearDepth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+
+Pset_SensorTypeTemperatureSensor.xml
+====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/TEMPERATURESENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/TEMPERATURESENSOR"
+  ~~IfcSensor/TEMPERATURESENSOR~~ IfcSensor/TEMPERATURESENSOR,IfcSensorType/TEMPERATURESENSOR
+
+
+Pset_VehicleAvailability.xml
+============================
+
+modifications
+-------------
+* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)~~ IfcVehicle/ROLLINGSTOCK,IfcVehicle/VEHICLEAIR,IfcVehicle/VEHICLEMARINE,IfcVehicle/VEHICLE,IfcVehicle/VEHICLETRACKED,IfcVehicleType/ROLLINGSTOCK,IfcVehicleType/VEHICLEAIR,IfcVehicleType/VEHICLEMARINE,IfcVehicleType/VEHICLE,IfcVehicleType/VEHICLETRACKED
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLETRACKED.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLE.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.ROLLINGSTOCK.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEAIR.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+
+
+Pset_ChimneyCommon.xml
+======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcChimneyType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcChimney"
+  ~~IfcChimney~~ IfcChimney,IfcChimneyType
+
+
+Pset_SoundAttenuation.xml
+=========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/SOUND"
+  ~~IfcAnnotation/SOUND~~ IfcAnnotation
+* ApplicableTypeValue "IfcAnnotation/SOUND"
+  ~~IfcAnnotation/SOUND~~ IfcAnnotation
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SensorTypePressureSensor.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/PRESSURESENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/PRESSURESENSOR"
+  ~~IfcSensor/PRESSURESENSOR~~ IfcSensor/PRESSURESENSOR,IfcSensorType/PRESSURESENSOR
+
+
+
+Pset_KerbCommon.xml
+===================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+* PropertyDefs > PropertyDef [Name="Mountable"]
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerb,IfcKerbType
+
+
+Pset_MechanicalFastenerBolt.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMechanicalFastenerType/BOLT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMechanicalFastener/BOLT"
+  ~~IfcMechanicalFastener/BOLT~~ IfcMechanicalFastener/BOLT,IfcMechanicalFastenerType/BOLT
+
+
+Pset_AudioVisualApplianceTypeCamera.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/CAMERA"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAudioVisualAppliance/CAMERA"
+  ~~IfcAudioVisualAppliance/CAMERA~~ IfcAudioVisualAppliance/CAMERA,IfcAudioVisualApplianceType/CAMERA
+* PropertyDefs > PropertyDef [Name="CameraType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
+  ~~UNSET.~~ UNSET
+
+
+Pset_DistributionSystemCommon.xml
+=================================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_FurnitureTypeTable.xml
+===========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFurnitureType/TABLE"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFurniture/TABLE"
+  ~~IfcFurniture/TABLE~~ IfcFurniture/TABLE,IfcFurnitureType/TABLE
+* PropertyDefs > PropertyDef [Name="NumberOfChairs"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_TrenchExcavationCommon.xml
+===============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcEarthworksCut/(.TRENCH.)"
+  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
+* ApplicableTypeValue "IfcEarthworksCut/(.TRENCH.)"
+  ~~IfcEarthworksCut/(.TRENCH.)~~ IfcEarthworksCut/TRENCH
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Qto_MotorConnectionBaseQuantities.xml
+=====================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcMotorConnectionType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcMotorConnection"
+  ~~IfcMotorConnection~~ IfcMotorConnection,IfcMotorConnectionType
+
+
+Pset_ReinforcementBarPitchOfContinuousFooting.xml
+=================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFootingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFooting"
+  ~~IfcFooting~~ IfcFooting,IfcFootingType
+
+
+Pset_StructuralSurfaceMemberVaryingThickness.xml
+================================================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_FireSuppressionTerminalTypeHoseReel.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/HOSEREEL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFireSuppressionTerminal/HOSEREEL"
+  ~~IfcFireSuppressionTerminal/HOSEREEL~~ IfcFireSuppressionTerminal/HOSEREEL,IfcFireSuppressionTerminalType/HOSEREEL
+
+
+Pset_UnitaryControlElementTypeControlPanel.xml
+==============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType/CONTROLPANEL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryControlElement/CONTROLPANEL"
+  ~~IfcUnitaryControlElement/CONTROLPANEL~~ IfcUnitaryControlElement/CONTROLPANEL,IfcUnitaryControlElementType/CONTROLPANEL
+
+
+
+
+Pset_Uncertainty.xml
+====================
+
+modifications
+-------------
+* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "INTERPRITATION"
+  ~~INTERPRITATION~~ INTERPRETATION
+
+
+Qto_KerbBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableTypeValue "IfcKerb,IfcKerbType"
+
+
+Pset_SensorTypeHumiditySensor.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSensorType/HUMIDITYSENSOR"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSensor/HUMIDITYSENSOR"
+  ~~IfcSensor/HUMIDITYSENSOR~~ IfcSensor/HUMIDITYSENSOR,IfcSensorType/HUMIDITYSENSOR
+
+
+Pset_CableCarrierSegmentTypeCableTrunkingSegment.xml
+====================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLETRUNKINGSEGMENT"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCableCarrierSegment/CABLETRUNKINGSEGMENT"
+  ~~IfcCableCarrierSegment/CABLETRUNKINGSEGMENT~~ IfcCableCarrierSegment/CABLETRUNKINGSEGMENT,IfcCableCarrierSegmentType/CABLETRUNKINGSEGMENT
+* PropertyDefs > PropertyDef [Name="NominalWidth"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+
+deletions
+---------
+* PropertyDefs > PropertyDef [Name="NominalHeight"]
+* PropertyDefs > PropertyDef [Name="NumberOfCompartments"]
+
+
+Pset_BearingCommon.xml
+======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcBearingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcBearing"
+  ~~IfcBearing~~ IfcBearing,IfcBearingType
+* PropertyDefs > PropertyDef [Name="DisplacementAccomodated"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="RotationAccomodated"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
 Pset_RevetmentCommon.xml
@@ -4093,6 +6746,44 @@ Pset_RevetmentCommon.xml
 
 modifications
 -------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_SpaceOccupancyRequirements.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSpatialElement"
+* ApplicableClasses > ClassName "IfcSpatialElementType"
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialZoneType
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType
+
+
+Pset_ShipyardCommon.xml
+=======================
+
+modifications
+-------------
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+
+
+Pset_AnnotationContourLine.xml
+==============================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcAnnotation/ContourLine"
+  ~~IfcAnnotation/ContourLine~~ IfcAnnotation/CONTOURLINE
+* ApplicableTypeValue "IfcAnnotation/ContourLine"
+  ~~IfcAnnotation/ContourLine~~ IfcAnnotation/CONTOURLINE
 * 
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
@@ -4121,124 +6812,40 @@ modifications
   ~~IfcSensor/WINDSENSOR~~ IfcSensor/WINDSENSOR,IfcSensorType/WINDSENSOR
 
 
-Pset_Warranty.xml
-=================
+Pset_FanCentrifugal.xml
+=======================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcElementType"
+* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED"
+* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALFORWARDCURVED"
+* ApplicableClasses > ClassName "IfcFan/CENTRIFUGALRADIAL"
+* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALAIRFOIL"
+* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALBACKWARDINCLINEDCURVED"
+* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALFORWARDCURVED"
+* ApplicableClasses > ClassName "IfcFanType/CENTRIFUGALRADIAL"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElement"
-  ~~IfcElement~~ IfcElement,IfcElementType
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="WarrantyEndDate"]
-
-
-Pset_PipeSegmentTypeCulvert.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeSegmentType/CULVERT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeSegment/CULVERT"
-  ~~IfcPipeSegment/CULVERT~~ IfcPipeSegment/CULVERT,IfcPipeSegmentType/CULVERT
-* PropertyDefs > PropertyDef [Name="InternalWidth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ClearDepth"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Pset_SpaceCommon.xml
-====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpatialElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
-* ApplicableClasses > ClassName "IfcSpace"
+* ApplicableTypeValue "IfcFan/CENTRIFUGAL"
+  ~~IfcFan/CENTRIFUGAL~~ IfcFan/CENTRIFUGALAIRFOIL,IfcFan/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFan/CENTRIFUGALFORWARDCURVED,IfcFan/CENTRIFUGALRADIAL,IfcFanType/CENTRIFUGALAIRFOIL,IfcFanType/CENTRIFUGALBACKWARDINCLINEDCURVED,IfcFanType/CENTRIFUGALFORWARDCURVED,IfcFanType/CENTRIFUGALRADIAL
+* PropertyDefs > PropertyDef [Name="Arrangement"] > Name "Arrangement"
+  ~~Arrangement~~ FanArrangement
+* ApplicableClasses > ClassName "IfcFan/CENTRIFUGAL"
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 
-Pset_MaterialCombustion.xml
-===========================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_DoorCommon.xml
-===================
+Pset_ProtectiveDeviceTrippingUnitTypeCommon.xml
+===============================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDoorType"
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDoor"
-  ~~IfcDoor~~ IfcDoor,IfcDoorType
-
-
-Pset_MaintenanceTriggerCondition.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
-  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
-
-
-Pset_EnvironmentalImpactValues.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement"
-  ~~IfcElement~~ IfcElement,IfcElementType
-
-
-Pset_ShiplockDesignCriteria.xml
-===============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_MaintenanceTriggerDuration.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
-  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
 
 
 Pset_RoadDesignCriteriaCommon.xml
@@ -4254,23 +6861,23 @@ modifications
   ~~IfcRoad,IfcFacilityPart/IfcRoadPartTypeEnum(.ROADSEGMENT.),IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.SEGMENT.),IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.JUNCTION.),IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.LEVELCROSSING.),IfcFacilityPart/IfcRoadPartTypeEnum(.RAILWAYCROSSING.),IfcFacilityPart/IfcRoadPartTypeEnum(.PEDESTRIAN_CROSSING.),IfcFacilityPart/IfcRoadPartTypeEnum(.BICYCLECROSSING.),IfcFacilityPart/IfcRoadPartTypeEnum(.ROUNDABOUT.),IfcFacilityPart/IfcRoadPartTypeEnum(.INTERSECTION.),IfcFacilityPart/IfcRoadPartTypeEnum(.TOLLPLAZA.)~~ IfcFacilityPartCommon/JUNCTION,IfcFacilityPartCommon/LEVELCROSSING,IfcFacilityPartCommon/SEGMENT,IfcRoadPart/BICYCLECROSSING,IfcRoadPart/INTERSECTION,IfcRoadPart/PEDESTRIAN_CROSSING,IfcRoadPart/RAILWAYCROSSING,IfcRoadPart/ROADSEGMENT,IfcRoadPart/ROUNDABOUT,IfcRoadPart/TOLLPLAZA,IfcRoad
 * 
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.ROADSEGMENT.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.LEVELCROSSING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.JUNCTION.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.SEGMENT.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.ROUNDABOUT.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 * ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.RAILWAYCROSSING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.BICYCLECROSSING.)"
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 * ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.PEDESTRIAN_CROSSING.)"
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 * ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.INTERSECTION.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.JUNCTION.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.LEVELCROSSING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.BICYCLECROSSING.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.ROADSEGMENT.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.ROUNDABOUT.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcFacilityPart/IfcFacilityPartCommonTypeEnum(.SEGMENT.)"
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 deletions
@@ -4278,445 +6885,31 @@ deletions
 * ApplicableClasses > ClassName "IfcFacilityPart/IfcRoadPartTypeEnum(.TOLLPLAZA.)"
 
 
-Pset_SensorTypeTemperatureSensor.xml
-====================================
 
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/TEMPERATURESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/TEMPERATURESENSOR"
-  ~~IfcSensor/TEMPERATURESENSOR~~ IfcSensor/TEMPERATURESENSOR,IfcSensorType/TEMPERATURESENSOR
-
-
-Pset_MobileTelecommunicationsApplianceTypeCommon.xml
-====================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance"
-  ~~IfcMobileTelecommunicationsAppliance~~ IfcMobileTelecommunicationsAppliance,IfcMobileTelecommunicationsApplianceType
-
-
-Pset_MobileTelecommunicationsApplianceTypeBasebandUnit.xml
-==========================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/BASEBANDUNIT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/BASEBANDUNIT"
-  ~~IfcMobileTelecommunicationsAppliance/BASEBANDUNIT~~ IfcMobileTelecommunicationsAppliance/BASEBANDUNIT,IfcMobileTelecommunicationsApplianceType/BASEBANDUNIT
-* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfEmergencyTransceivers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Qto_StairFlightBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcStairFlightType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcStairFlight"
-  ~~IfcStairFlight~~ IfcStairFlight,IfcStairFlightType
-
-
-Pset_FlowInstrumentTypeCommon.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowInstrumentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowInstrument"
-  ~~IfcFlowInstrument~~ IfcFlowInstrument,IfcFlowInstrumentType
-
-
-Pset_ReinforcementBarPitchOfWall.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWallType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWall"
-  ~~IfcWall~~ IfcWall,IfcWallType
-
-
-Pset_ConcreteElementGeneral.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBeamType"
-* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
-* ApplicableClasses > ClassName "IfcChimneyType"
-* ApplicableClasses > ClassName "IfcCivilElementType"
-* ApplicableClasses > ClassName "IfcColumnType"
-* ApplicableClasses > ClassName "IfcFootingType"
-* ApplicableClasses > ClassName "IfcMemberType"
-* ApplicableClasses > ClassName "IfcPileType"
-* ApplicableClasses > ClassName "IfcPlateType"
-* ApplicableClasses > ClassName "IfcRailingType"
-* ApplicableClasses > ClassName "IfcRampFlightType"
-* ApplicableClasses > ClassName "IfcRampType"
-* ApplicableClasses > ClassName "IfcRoofType"
-* ApplicableClasses > ClassName "IfcSlabType"
-* ApplicableClasses > ClassName "IfcStairFlightType"
-* ApplicableClasses > ClassName "IfcStairType"
-* ApplicableClasses > ClassName "IfcWallType"
-* PropertyDefs > PropertyDef [Name="AssemblyPlace"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
-  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcCivilElement,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRampFlight,IfcRamp,IfcRoof,IfcSlab,IfcStairFlight,IfcStair,IfcWall,IfcBeamType,IfcBuildingElementProxyType,IfcChimneyType,IfcCivilElementType,IfcColumnType,IfcFootingType,IfcMemberType,IfcPileType,IfcPlateType,IfcRailingType,IfcRampFlightType,IfcRampType,IfcRoofType,IfcSlabType,IfcStairFlightType,IfcStairType,IfcWallType
-* PropertyDefs > PropertyDef [Name="ConstructionMethod"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-* PropertyDefs > PropertyDef [Name="ConstructionMethod"] > Name "ConstructionMethod"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-
-
-
-Pset_CargoCommon.xml
-====================
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
-  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)~~ IfcVehicle/CARGO,IfcVehicleType/CARGO
-* PropertyDefs > PropertyDef [Name="ProcessItem"] > PropertyType > TypePropertySingleValue
-  ~~TypePropertySingleValue~~ TypePropertyEnumeratedValue
-* PropertyDefs > PropertyDef [Name="ProcessItem"] > PropertyType > TypePropertySingleValue > DataType
-  ~~&lt;DataType&gt;~~ &lt;EnumList&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.CARGO.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_ChillerTypeCommon.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcChillerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcChiller"
-  ~~IfcChiller~~ IfcChiller,IfcChillerType
-* PropertyDefs > PropertyDef [Name="NominalCapacity"] > Name "NominalCapacity"
-  ~~NominalCapacity~~ ChillerCapacity
-
-
-Pset_MarineVehicleCommon.xml
-============================
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)~~ IfcVehicle/VEHICLEMARINE,IfcVehicleType/VEHICLEMARINE
-* 
-  ~~QTO_TYPEDRIVENOVERRIDE~~ PSET_TYPEDRIVENOVERRIDE
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_CommunicationsApplianceTypeCommon.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCommunicationsApplianceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCommunicationsAppliance"
-  ~~IfcCommunicationsAppliance~~ IfcCommunicationsAppliance,IfcCommunicationsApplianceType
-
-
-Qto_VibrationIsolatorBaseQuantities.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcVibrationIsolatorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcVibrationIsolator"
-  ~~IfcVibrationIsolator~~ IfcVibrationIsolator,IfcVibrationIsolatorType
-
-
-Pset_ValveTypeAirRelease.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/AIRRELEASE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/AIRRELEASE"
-  ~~IfcValve/AIRRELEASE~~ IfcValve/AIRRELEASE,IfcValveType/AIRRELEASE
-
-
-Pset_ReinforcementBarCountOfIndependentFooting.xml
+Qto_ConstructionMaterialResourceBaseQuantities.xml
 ==================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcFootingType"
+* ApplicableClasses > ClassName "IfcConstructionMaterialResourceType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcFooting"
-  ~~IfcFooting~~ IfcFooting,IfcFootingType
-* PropertyDefs > PropertyDef [Name="XDirectionLowerBarCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="YDirectionLowerBarCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="XDirectionUpperBarCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="YDirectionUpperBarCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
+* ApplicableTypeValue "IfcConstructionMaterialResource"
+  ~~IfcConstructionMaterialResource~~ IfcConstructionMaterialResource,IfcConstructionMaterialResourceType
 
 
-Pset_ServiceLife.xml
-====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement"
-  ~~IfcElement~~ IfcElement,IfcElementType
-
-
-Pset_SwitchingDeviceTypeKeypad.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSwitchingDeviceType/KEYPAD"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSwitchingDevice/KEYPAD"
-  ~~IfcSwitchingDevice/KEYPAD~~ IfcSwitchingDevice/KEYPAD,IfcSwitchingDeviceType/KEYPAD
-
-
-Pset_PipeFittingTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeFitting"
-  ~~IfcPipeFitting~~ IfcPipeFitting,IfcPipeFittingType
-
-
-Qto_HeatExchangerBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcHeatExchangerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcHeatExchanger"
-  ~~IfcHeatExchanger~~ IfcHeatExchanger,IfcHeatExchangerType
-
-
-
-
-Pset_ProjectOrderMaintenanceWorkOrder.xml
-=========================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MaintenaceType"] > Name "MaintenaceType"
-  ~~MaintenaceType~~ MaintenanceType
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ColumnCommon.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcColumnType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcColumn"
-  ~~IfcColumn~~ IfcColumn,IfcColumnType
-
-
-Qto_MemberBaseQuantities.xml
+Qto_OutletBaseQuantities.xml
 ============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcMemberType"
+* ApplicableClasses > ClassName "IfcOutletType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcMember"
-  ~~IfcMember~~ IfcMember,IfcMemberType
-
-
-Qto_BuildingStoreyBaseQuantities.xml
-====================================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="NetHeigtht"] > Name "NetHeigtht"
-  ~~NetHeigtht~~ NetHeight
-
-
-Pset_SanitaryTerminalTypeSanitaryFountain.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SANITARYFOUNTAIN"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/SANITARYFOUNTAIN"
-  ~~IfcSanitaryTerminal/SANITARYFOUNTAIN~~ IfcSanitaryTerminal/SANITARYFOUNTAIN,IfcSanitaryTerminalType/SANITARYFOUNTAIN
-
-
-Qto_ProtectiveDeviceTrippingUnitBaseQuantities.xml
-==================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-
-
-Pset_AirTerminalBoxTypeCommon.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirTerminalBoxType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirTerminalBox"
-  ~~IfcAirTerminalBox~~ IfcAirTerminalBox,IfcAirTerminalBoxType
-* PropertyDefs > PropertyDef [Name="AirflowRateRange"] > Name "AirflowRateRange"
-  ~~AirflowRateRange~~ AirFlowRateRange
-
-
-Pset_ShipyardCommon.xml
-=======================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_Permit.xml
-===============
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_MotorConnectionTypeCommon.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMotorConnectionType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMotorConnection"
-  ~~IfcMotorConnection~~ IfcMotorConnection,IfcMotorConnectionType
-
-
-Pset_KerbCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-* PropertyDefs > PropertyDef [Name="Mountable"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerb,IfcKerbType
-
-
-
-Pset_SanitaryTerminalTypeCommon.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal"
-  ~~IfcSanitaryTerminal~~ IfcSanitaryTerminal,IfcSanitaryTerminalType
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
-
-
-Pset_ControllerTypeMultiPosition.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType/MULTIPOSITION"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController/MULTIPOSITION"
-  ~~IfcController/MULTIPOSITION~~ IfcController/MULTIPOSITION,IfcControllerType/MULTIPOSITION
-* PropertyDefs > PropertyDef [Name="Range"] > Name "Range"
-  ~~Range~~ IntegerRange
+* ApplicableTypeValue "IfcOutlet"
+  ~~IfcOutlet~~ IfcOutlet,IfcOutletType
 
 
 Pset_ActionRequest.xml
@@ -4728,289 +6921,10 @@ modifications
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Pset_SensorTypePHSensor.xml
-===========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/PHSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/PHSENSOR"
-  ~~IfcSensor/PHSENSOR~~ IfcSensor/PHSENSOR,IfcSensorType/PHSENSOR
 
 
-Pset_DuctFittingTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDuctFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDuctFitting"
-  ~~IfcDuctFitting~~ IfcDuctFitting,IfcDuctFittingType
-
-
-Pset_ActuatorTypeHydraulicActuator.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcActuatorType/HYDRAULICACTUATOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcActuator/HYDRAULICACTUATOR"
-  ~~IfcActuator/HYDRAULICACTUATOR~~ IfcActuator/HYDRAULICACTUATOR,IfcActuatorType/HYDRAULICACTUATOR
-
-
-Pset_MobileTelecommunicationsApplianceTypeMSCServer.xml
-=======================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/MSCSERVER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/MSCSERVER"
-  ~~IfcMobileTelecommunicationsAppliance/MSCSERVER~~ IfcMobileTelecommunicationsAppliance/MSCSERVER,IfcMobileTelecommunicationsApplianceType/MSCSERVER
-
-
-Pset_DiscreteAccessoryWireLoop.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Wire loop"
-  ~~IfcDiscreteAccessory/Wire loop~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Wire loop"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_ActuatorTypeElectricActuator.xml
-=====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcActuatorType/ELECTRICACTUATOR"
-* PropertyDefs > PropertyDef [Name="ControlPulseCurrent"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcActuator/ELECTRICACTUATOR"
-  ~~IfcActuator/ELECTRICACTUATOR~~ IfcActuator/ELECTRICACTUATOR,IfcActuatorType/ELECTRICACTUATOR
-
-
-Qto_CableSegmentBaseQuantities.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableSegment"
-  ~~IfcCableSegment~~ IfcCableSegment,IfcCableSegmentType
-
-
-Pset_MobileTelecommunicationsApplianceTypeBaseTransceiverStation.xml
-====================================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/BASETRANSCEIVERSTATION"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION"
-  ~~IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION~~ IfcMobileTelecommunicationsAppliance/BASETRANSCEIVERSTATION,IfcMobileTelecommunicationsApplianceType/BASETRANSCEIVERSTATION
-* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfEmergencyTransceivers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_AlarmPHistory.xml
-======================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="ConditionHistory"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Condition"] > Name "Condition"
-  ~~Condition~~ UserHistory
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="User"]
-
-
-Pset_WasteTerminalTypeGullyTrap.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/GULLYTRAP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/GULLYTRAP"
-  ~~IfcWasteTerminal/GULLYTRAP~~ IfcWasteTerminal/GULLYTRAP,IfcWasteTerminalType/GULLYTRAP
-
-
-Pset_BoilerPHistory.xml
-=======================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="WorkingPressureHistory"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="WorkingPressure"] > Name "WorkingPressure"
-  ~~WorkingPressure~~ CombustionChamberTemperature
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="CombustionTemperature"]
-
-
-Qto_ProtectiveDeviceBaseQuantities.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-Pset_DistributionChamberElementTypeTrench.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/TRENCH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/TRENCH"
-  ~~IfcDistributionChamberElement/TRENCH~~ IfcDistributionChamberElement/TRENCH,IfcDistributionChamberElementType/TRENCH
-
-
-Pset_FlowInstrumentTypeThermometer.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowInstrumentType/THERMOMETER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowInstrument/THERMOMETER"
-  ~~IfcFlowInstrument/THERMOMETER~~ IfcFlowInstrument/THERMOMETER,IfcFlowInstrumentType/THERMOMETER
-
-
-Qto_DamperBaseQuantities.xml
+Pset_BuildingUseAdjacent.xml
 ============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDamperType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDamper"
-  ~~IfcDamper~~ IfcDamper,IfcDamperType
-
-
-
-Pset_DistributionChamberElementTypeSump.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionChamberElementType/SUMP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionChamberElement/SUMP"
-  ~~IfcDistributionChamberElement/SUMP~~ IfcDistributionChamberElement/SUMP,IfcDistributionChamberElementType/SUMP
-* PropertyDefs > PropertyDef [Name="InvertLevel"] > Name "InvertLevel"
-  ~~InvertLevel~~ SumpInvertLevel
-
-
-Pset_FlowMeterTypeOilMeter.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType/OILMETER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter/OILMETER"
-  ~~IfcFlowMeter/OILMETER~~ IfcFlowMeter/OILMETER,IfcFlowMeterType/OILMETER
-
-
-Pset_ProtectiveDeviceTrippingUnitTypeElectronic.xml
-===================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/ELECTRONIC"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/ELECTRONIC"
-  ~~IfcProtectiveDeviceTrippingUnit/ELECTRONIC~~ IfcProtectiveDeviceTrippingUnit/ELECTRONIC,IfcProtectiveDeviceTrippingUnitType/ELECTRONIC
-
-
-Pset_CourseCommon.xml
-=====================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCourseType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCourse"
-  ~~IfcCourse~~ IfcCourse,IfcCourseType
-
-
-Pset_PipeSegmentTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPipeSegmentType"
-* PropertyDefs > PropertyDef [Name="Length"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcPipeSegment"
-  ~~IfcPipeSegment~~ IfcPipeSegment,IfcPipeSegmentType
-
-
-Pset_ProjectOrderChangeOrder.xml
-================================
 
 modifications
 -------------
@@ -5018,30 +6932,39 @@ modifications
   ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Pset_ControllerTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType"
+Pset_Asset.xml
+==============
 
 modifications
 -------------
-* ApplicableTypeValue "IfcController"
-  ~~IfcController~~ IfcController,IfcControllerType
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Qto_MotorConnectionBaseQuantities.xml
-=====================================
+Pset_PackingInstructions.xml
+============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcMotorConnectionType"
+* ApplicableClasses > ClassName "IfcTaskType/MOVE"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcMotorConnection"
-  ~~IfcMotorConnection~~ IfcMotorConnection,IfcMotorConnectionType
+* ApplicableTypeValue "IfcTask/MOVE"
+  ~~IfcTask/MOVE~~ IfcTask/MOVE,IfcTaskType/MOVE
+
+
+Qto_AirTerminalBaseQuantities.xml
+=================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcAirTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcAirTerminal"
+  ~~IfcAirTerminal~~ IfcAirTerminal,IfcAirTerminalType
 
 
 Pset_PrecastConcreteElementFabrication.xml
@@ -5072,418 +6995,6 @@ modifications
   ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcCivilElement,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRampFlight,IfcRamp,IfcRoof,IfcSlab,IfcStairFlight,IfcStair,IfcWall,IfcBeamType,IfcBuildingElementProxyType,IfcChimneyType,IfcCivilElementType,IfcColumnType,IfcFootingType,IfcMemberType,IfcPileType,IfcPlateType,IfcRampFlightType,IfcRampType,IfcRoofType,IfcSlabType,IfcStairFlightType,IfcStairType,IfcWallType
 
 
-Pset_SiteWeather.xml
-====================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_PrecastKerbStone.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcKerbType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcKerb"
-  ~~IfcKerb~~ IfcKerb,IfcKerbType
-
-
-Qto_DuctFittingBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDuctFittingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDuctFitting"
-  ~~IfcDuctFitting~~ IfcDuctFitting,IfcDuctFittingType
-
-
-Pset_SensorTypeCO2Sensor.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/CO2SENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/CO2SENSOR"
-  ~~IfcSensor/CO2SENSOR~~ IfcSensor/CO2SENSOR,IfcSensorType/CO2SENSOR
-* PropertyDefs > PropertyDef [Name="SetPointConcentration"] > Name "SetPointConcentration"
-  ~~SetPointConcentration~~ SetPointCO2Concentration
-
-
-Pset_SensorTypeCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor"
-  ~~IfcSensor~~ IfcSensor,IfcSensorType
-
-
-
-
-Pset_ElectricGeneratorTypeCommon.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricGeneratorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricGenerator"
-  ~~IfcElectricGenerator~~ IfcElectricGenerator,IfcElectricGeneratorType
-
-
-Pset_DistributionPortTypeDuct.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ConnectionSubType"] > Name "ConnectionSubType"
-  ~~ConnectionSubType~~ ConnectionSubtype
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Qto_BeamBaseQuantities.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBeamType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam"
-  ~~IfcBeam~~ IfcBeam,IfcBeamType
-
-
-
-Pset_FurnitureTypeDesk.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFurnitureType/DESK"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFurniture/DESK"
-  ~~IfcFurniture/DESK~~ IfcFurniture/DESK,IfcFurnitureType/DESK
-
-
-Qto_PlateBaseQuantities.xml
-===========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPlateType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPlate"
-  ~~IfcPlate~~ IfcPlate,IfcPlateType
-
-
-Qto_CompressorBaseQuantities.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCompressorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCompressor"
-  ~~IfcCompressor~~ IfcCompressor,IfcCompressorType
-
-
-Pset_Uncertainty.xml
-====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="UncertaintyBasis"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "INTERPRITATION"
-  ~~INTERPRITATION~~ INTERPRETATION
-
-
-Pset_FilterTypeWaterFilter.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFilterType/WATERFILTER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFilter/WATERFILTER"
-  ~~IfcFilter/WATERFILTER~~ IfcFilter/WATERFILTER,IfcFilterType/WATERFILTER
-
-
-Pset_CondenserTypeCommon.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCondenserType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCondenser"
-  ~~IfcCondenser~~ IfcCondenser,IfcCondenserType
-
-
-Pset_DistributionSystemTypeElectrical.xml
-=========================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="RatedVoltageRange"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NumberOfLiveConductors"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-
-Pset_ValveTypeFaucet.xml
-========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/FAUCET"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/FAUCET"
-  ~~IfcValve/FAUCET~~ IfcValve/FAUCET,IfcValveType/FAUCET
-
-
-Pset_WasteTerminalTypeCommon.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal"
-  ~~IfcWasteTerminal~~ IfcWasteTerminal,IfcWasteTerminalType
-
-
-Pset_Condition.xml
-==================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-* PropertyDefs > PropertyDef [Name="AssessmentFrequency"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement,IfcSystem,IfcAsset"
-  ~~IfcElement,IfcSystem,IfcAsset~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
-
-
-Pset_CoilTypeHydronic.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoilType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCoil"
-  ~~IfcCoil~~ IfcCoil,IfcCoilType
-
-
-Pset_DiscreteAccessoryColumnShoe.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType/SHOE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/SHOE"
-  ~~IfcDiscreteAccessory/SHOE~~ IfcDiscreteAccessory/SHOE,IfcDiscreteAccessoryType/SHOE
-
-
-
-Qto_CurtainWallQuantities.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCurtainWallType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCurtainWall"
-  ~~IfcCurtainWall~~ IfcCurtainWall,IfcCurtainWallType
-
-
-Pset_EmbeddedTrack.xml
-======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab/TRACKSLAB"
-  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
-
-
-Pset_SumpBusterCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementAssemblyType/SUMPBUSTER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElementAssembly/(.SUMPBUSTER.)"
-  ~~IfcElementAssembly/(.SUMPBUSTER.)~~ IfcElementAssembly/SUMPBUSTER,IfcElementAssemblyType/SUMPBUSTER
-* ApplicableClasses > ClassName "IfcElementAssembly/(.SUMPBUSTER.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_DuctSegmentTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDuctSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDuctSegment"
-  ~~IfcDuctSegment~~ IfcDuctSegment,IfcDuctSegmentType
-* PropertyDefs > PropertyDef [Name="Shape"] > Name "Shape"
-  ~~Shape~~ CrossSectionShape
-
-
-Pset_UnitaryEquipmentTypeCommon.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryEquipmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryEquipment"
-  ~~IfcUnitaryEquipment~~ IfcUnitaryEquipment,IfcUnitaryEquipmentType
-
-
-Pset_AudioVisualApplianceTypePlayer.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/PLAYER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/PLAYER"
-  ~~IfcAudioVisualAppliance/PLAYER~~ IfcAudioVisualAppliance/PLAYER,IfcAudioVisualApplianceType/PLAYER
-* PropertyDefs > PropertyDef [Name="PlayerType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Qto_DistributionBoardBaseQuantities.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricDistributionBoardType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricDistributionBoard"
-  ~~IfcElectricDistributionBoard~~ IfcElectricDistributionBoard,IfcElectricDistributionBoardType
-
-
-Pset_SensorTypeSoundSensor.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/SOUNDSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/SOUNDSENSOR"
-  ~~IfcSensor/SOUNDSENSOR~~ IfcSensor/SOUNDSENSOR,IfcSensorType/SOUNDSENSOR
-
-
-Pset_OutsideDesignCriteria.xml
-==============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-
-Pset_DamperTypeFireSmokeDamper.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDamperType/FIRESMOKEDAMPER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDamper/FIRESMOKEDAMPER"
-  ~~IfcDamper/FIRESMOKEDAMPER~~ IfcDamper/FIRESMOKEDAMPER,IfcDamperType/FIRESMOKEDAMPER
-* PropertyDefs > PropertyDef [Name="ControlType"] > Name "ControlType"
-  ~~ControlType~~ DamperControlType
-
-
-Pset_AudioVisualAppliancePHistory.xml
-=====================================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="MediaSourceHistory"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MediaSource"] > Name "MediaSource"
-  ~~MediaSource~~ AudioVolumeHistory
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="AudioVolume"]
-
-
 Pset_MobileTelecommunicationsApplianceTypeMobileSwitchingCenter.xml
 ===================================================================
 
@@ -5497,109 +7008,118 @@ modifications
   ~~IfcMobileTelecommunicationsAppliance/MOBILESWITCHINGCENTER~~ IfcMobileTelecommunicationsAppliance/MOBILESWITCHINGCENTER,IfcMobileTelecommunicationsApplianceType/MOBILESWITCHINGCENTER
 
 
-Pset_BoilerTypeSteam.xml
-========================
+Pset_SensorTypeConductanceSensor.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcBoilerType/STEAM"
+* ApplicableClasses > ClassName "IfcSensorType/CONDUCTANCESENSOR"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcBoiler/STEAM"
-  ~~IfcBoiler/STEAM~~ IfcBoiler/STEAM,IfcBoilerType/STEAM
-* PropertyDefs > PropertyDef [Name="NominalEfficiency"] > Name "NominalEfficiency"
-  ~~NominalEfficiency~~ NominalEfficiencyTable
+* ApplicableTypeValue "IfcSensor/CONDUCTANCESENSOR"
+  ~~IfcSensor/CONDUCTANCESENSOR~~ IfcSensor/CONDUCTANCESENSOR,IfcSensorType/CONDUCTANCESENSOR
 
 
-Qto_InterceptorBaseQuantities.xml
-=================================
+
+Pset_SpaceFireSafetyRequirements.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcInterceptorType"
+* ApplicableClasses > ClassName "IfcSpatialElement"
+* ApplicableClasses > ClassName "IfcSpatialElementType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcInterceptor"
-  ~~IfcInterceptor~~ IfcInterceptor,IfcInterceptorType
+* ApplicableClasses > ClassName "IfcSpace"
+  ~~IfcSpace~~ IfcSpatialZoneType
+* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
+  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType
 
 
-Pset_ProtectiveDeviceTrippingUnitTimeAdjustment.xml
-===================================================
+Pset_MarkingLinesCommon.xml
+===========================
+
+modifications
+-------------
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
+* ApplicableTypeValue "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~IfcSurfaceFeature/(.LINEMARKING.)~~ IfcSurfaceFeature/LINEMARKING
+
+
+Qto_PictorialSignQuantities.xml
+===============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
+* ApplicableTypeValue "IfcSign/PICTORAL,IfcSignType/PICTORAL"
+
+
+Pset_ElectricFlowStorageDeviceTypeCommon.xml
+============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricFlowStorageDeviceType"
+* PropertyDefs > PropertyDef [Name="MaximumInsulatedVoltage"]
+* PropertyDefs > PropertyDef [Name="RatedCapacitance"]
+* PropertyDefs > PropertyDef [Name="PowerCapacity"]
 
 modifications
 -------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > Name "AdjustmentRange"
-  ~~AdjustmentRange~~ TimeAdjustmentRange
-* PropertyDefs > PropertyDef [Name="AdjustmentRangeStepValue"] > Name "AdjustmentRangeStepValue"
-  ~~AdjustmentRangeStepValue~~ TimeAdjustmentRangeStepValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > Name "AdjustmentValues"
-  ~~AdjustmentValues~~ TimeAdjustmentValues
+* ApplicableTypeValue "IfcElectricFlowStorageDevice"
+  ~~IfcElectricFlowStorageDevice~~ IfcElectricFlowStorageDevice,IfcElectricFlowStorageDeviceType
 
 
-Pset_SlabTypeTrackSlab.xml
+Pset_SanitaryTerminalTypeCommon.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSanitaryTerminal"
+  ~~IfcSanitaryTerminal~~ IfcSanitaryTerminal,IfcSanitaryTerminalType
+* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
+  ~~Color~~ Colour
+
+
+Pset_RoadMarkingCommon.xml
 ==========================
 
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType/TRACKSLAB"
-
 modifications
 -------------
-* ApplicableTypeValue "IfcSlab/TRACKSLAB"
-  ~~IfcSlab/TRACKSLAB~~ IfcSlab/TRACKSLAB,IfcSlabType/TRACKSLAB
+* ApplicableTypeValue "IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~IfcSurfaceFeature/(.HATCHMARKING.),IfcSurfaceFeature/(.LINEMARKING.),IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.),IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/HATCHMARKING,IfcSurfaceFeature/LINEMARKING,IfcSurfaceFeature/PAVEMENTSURFACEMARKING,IfcSurfaceFeature/SYMBOLMARKING
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.HATCHMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.PAVEMENTSURFACEMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.LINEMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
+  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 
-Pset_ProtectiveDeviceTrippingUnitTypeThermal.xml
-================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType/THERMAL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit/THERMAL"
-  ~~IfcProtectiveDeviceTrippingUnit/THERMAL~~ IfcProtectiveDeviceTrippingUnit/THERMAL,IfcProtectiveDeviceTrippingUnitType/THERMAL
-
-
-Pset_LampTypeCommon.xml
-=======================
+Pset_AlarmPHistory.xml
+======================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcLampType"
+* PropertyDefs > PropertyDef [Name="ConditionHistory"]
 
 modifications
 -------------
-* ApplicableTypeValue "IfcLamp"
-  ~~IfcLamp~~ IfcLamp,IfcLampType
-* PropertyDefs > PropertyDef [Name="ColorAppearance"] > Name "ColorAppearance"
-  ~~ColorAppearance~~ ColourAppearance
-* PropertyDefs > PropertyDef [Name="ColorTemperature"] > Name "ColorTemperature"
-  ~~ColorTemperature~~ ColourTemperature
-* PropertyDefs > PropertyDef [Name="ColorRenderingIndex"] > Name "ColorRenderingIndex"
-  ~~ColorRenderingIndex~~ ColourRenderingIndex
+* PropertyDefs > PropertyDef [Name="Condition"] > Name "Condition"
+  ~~Condition~~ UserHistory
 
-
-Pset_CurtainWallCommon.xml
-==========================
-
-additions
+deletions
 ---------
-* ApplicableClasses > ClassName "IfcCurtainWallType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCurtainWall"
-  ~~IfcCurtainWall~~ IfcCurtainWall,IfcCurtainWallType
+* PropertyDefs > PropertyDef [Name="User"]
 
 
 Pset_SwitchingDeviceTypeSwitchDisconnector.xml
@@ -5615,354 +7135,114 @@ modifications
   ~~IfcSwitchingDevice/SWITCHDISCONNECTOR~~ IfcSwitchingDevice/SWITCHDISCONNECTOR,IfcSwitchingDeviceType/SWITCHDISCONNECTOR
 
 
-Pset_ZoneCommon.xml
-===================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ElectricApplianceTypeCommon.xml
-====================================
+Pset_MobileTelecommunicationsApplianceTypeRemoteUnit.xml
+========================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcElectricApplianceType"
+* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/REMOTEUNIT"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcElectricAppliance"
-  ~~IfcElectricAppliance~~ IfcElectricAppliance,IfcElectricApplianceType
+* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/REMOTEUNIT"
+  ~~IfcMobileTelecommunicationsAppliance/REMOTEUNIT~~ IfcMobileTelecommunicationsAppliance/REMOTEUNIT,IfcMobileTelecommunicationsApplianceType/REMOTEUNIT
+* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
 
 
-Pset_SensorTypeRadiationSensor.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/RADIATIONSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/RADIATIONSENSOR"
-  ~~IfcSensor/RADIATIONSENSOR~~ IfcSensor/RADIATIONSENSOR,IfcSensorType/RADIATIONSENSOR
-
-
-Pset_SensorTypeFrostSensor.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/FROSTSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/FROSTSENSOR"
-  ~~IfcSensor/FROSTSENSOR~~ IfcSensor/FROSTSENSOR,IfcSensorType/FROSTSENSOR
-
-
-Qto_UnitaryControlElementBaseQuantities.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryControlElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryControlElement"
-  ~~IfcUnitaryControlElement~~ IfcUnitaryControlElement,IfcUnitaryControlElementType
-
-
-Pset_PavementMillingCommon.xml
-==============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcEarthworksCut/(.PAVEMENTMILLING.)"
-  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
-* ApplicableTypeValue "IfcEarthworksCut/(.PAVEMENTMILLING.)"
-  ~~IfcEarthworksCut/(.PAVEMENTMILLING.)~~ IfcEarthworksCut/PAVEMENTMILLING
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_DistributionPortTypePipe.xml
-=================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ConnectionSubType"] > Name "ConnectionSubType"
-  ~~ConnectionSubType~~ ConnectionSubtype
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Qto_ReinforcedSoilBaseQuantities.xml
-====================================
-
-additions
----------
-* ApplicableTypeValue "IfcReinforcedSoil"
-
-
-Pset_ValveTypeDrawOffCock.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/DRAWOFFCOCK"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/DRAWOFFCOCK"
-  ~~IfcValve/DRAWOFFCOCK~~ IfcValve/DRAWOFFCOCK,IfcValveType/DRAWOFFCOCK
-
-
-Pset_PileCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPileType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPile"
-  ~~IfcPile~~ IfcPile,IfcPileType
-
-
-Pset_Superelevation.xml
-=======================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
-  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcReferent/SUPERELEVATIONEVENT
-* ApplicableTypeValue "IfcAnnotation/(.SUPERELEVATIONEVENT.)"
-  ~~IfcAnnotation/(.SUPERELEVATIONEVENT.)~~ IfcReferent/SUPERELEVATIONEVENT
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_FilterTypeCompressedAirFilter.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFilterType/COMPRESSEDAIRFILTER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFilter/COMPRESSEDAIRFILTER"
-  ~~IfcFilter/COMPRESSEDAIRFILTER~~ IfcFilter/COMPRESSEDAIRFILTER,IfcFilterType/COMPRESSEDAIRFILTER
-
-
-Pset_SolidStratumComposition.xml
+Pset_ProjectOrderChangeOrder.xml
 ================================
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcSolidStratum"
-  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
-* ApplicableTypeValue "IfcSolidStratum"
-  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
-* PropertyDefs > PropertyDef [Name="CompositeFractions"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
 
 
-Pset_UnitaryEquipmentTypeAirHandler.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryEquipmentType/AIRHANDLER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryEquipment/AIRHANDLER"
-  ~~IfcUnitaryEquipment/AIRHANDLER~~ IfcUnitaryEquipment/AIRHANDLER,IfcUnitaryEquipmentType/AIRHANDLER
-
-
-Pset_SanitaryTerminalTypeSink.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/SINK"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/SINK"
-  ~~IfcSanitaryTerminal/SINK~~ IfcSanitaryTerminal/SINK,IfcSanitaryTerminalType/SINK
-* PropertyDefs > PropertyDef [Name="Color"] > Name "Color"
-  ~~Color~~ Colour
-
-
-Pset_ProtectiveDeviceTrippingUnitCurrentAdjustment.xml
-======================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-* PropertyDefs > PropertyDef [Name="AdjustmentRange"] > Name "AdjustmentRange"
-  ~~AdjustmentRange~~ CurrentAdjustmentRange
-* PropertyDefs > PropertyDef [Name="AdjustmentRangeStepValue"] > Name "AdjustmentRangeStepValue"
-  ~~AdjustmentRangeStepValue~~ CurrentAdjustmentRangeStepValue
-* PropertyDefs > PropertyDef [Name="AdjustmentValues"] > Name "AdjustmentValues"
-  ~~AdjustmentValues~~ CurrentAdjustmentValues
-
-
-Qto_ElectricGeneratorBaseQuantities.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricGeneratorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricGenerator"
-  ~~IfcElectricGenerator~~ IfcElectricGenerator,IfcElectricGeneratorType
-
-
-Qto_PumpBaseQuantities.xml
+Qto_SlabBaseQuantities.xml
 ==========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcPumpType"
+* ApplicableClasses > ClassName "IfcSlabType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcPump"
-  ~~IfcPump~~ IfcPump,IfcPumpType
+* ApplicableTypeValue "IfcSlab"
+  ~~IfcSlab~~ IfcSlab,IfcSlabType
 
 
-Pset_FireSuppressionTerminalTypeHoseReel.xml
-============================================
+Pset_SensorTypeSmokeSensor.xml
+==============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcFireSuppressionTerminalType/HOSEREEL"
+* ApplicableClasses > ClassName "IfcSensorType/SMOKESENSOR"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcFireSuppressionTerminal/HOSEREEL"
-  ~~IfcFireSuppressionTerminal/HOSEREEL~~ IfcFireSuppressionTerminal/HOSEREEL,IfcFireSuppressionTerminalType/HOSEREEL
+* ApplicableTypeValue "IfcSensor/SMOKESENSOR"
+  ~~IfcSensor/SMOKESENSOR~~ IfcSensor/SMOKESENSOR,IfcSensorType/SMOKESENSOR
 
 
-Pset_DistributionPortCommon.xml
-===============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="ColorCode"] > Name "ColorCode"
-  ~~ColorCode~~ ColourCode
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-
-Qto_BurnerBaseQuantities.xml
-============================
+Qto_PipeFittingBaseQuantities.xml
+=================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcBurnerType"
+* ApplicableClasses > ClassName "IfcPipeFittingType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcBurner"
-  ~~IfcBurner~~ IfcBurner,IfcBurnerType
+* ApplicableTypeValue "IfcPipeFitting"
+  ~~IfcPipeFitting~~ IfcPipeFitting,IfcPipeFittingType
 
 
-Pset_TransitionSectionCommon.xml
-================================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcEarthworksFill/(.TRANSITIONSECTION.)"
-  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
-* ApplicableTypeValue "IfcEarthworksFill/(.TRANSITIONSECTION.)"
-  ~~IfcEarthworksFill/(.TRANSITIONSECTION.)~~ IfcEarthworksFill/TRANSITIONSECTION
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ValveTypeCommon.xml
-========================
+Pset_WasteTerminalTypeGullyTrap.xml
+===================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcValveType"
+* ApplicableClasses > ClassName "IfcWasteTerminalType/GULLYTRAP"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcValve"
-  ~~IfcValve~~ IfcValve,IfcValveType
+* ApplicableTypeValue "IfcWasteTerminal/GULLYTRAP"
+  ~~IfcWasteTerminal/GULLYTRAP~~ IfcWasteTerminal/GULLYTRAP,IfcWasteTerminalType/GULLYTRAP
 
 
-Pset_UnitaryControlElementPHistory.xml
-======================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Mode"] > Name "Mode"
-  ~~Mode~~ OperationModeHistory
-
-
-Pset_ProtectiveDeviceTrippingFunctionLCurve.xml
-===============================================
+Qto_SurfaceFeatureBaseQuantities.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
+* ApplicableTypeValue "IfcSurfaceFeature"
 
 
-Qto_CableFittingBaseQuantities.xml
-==================================
+Pset_FootingCommon.xml
+======================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcCableFittingType"
+* ApplicableClasses > ClassName "IfcFootingType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcCableFitting"
-  ~~IfcCableFitting~~ IfcCableFitting,IfcCableFittingType
+* ApplicableTypeValue "IfcFooting"
+  ~~IfcFooting~~ IfcFooting,IfcFootingType
 
 
-Pset_ElectricalDeviceCommon.xml
-===============================
+Pset_DistributionChamberElementTypeMeterChamber.xml
+===================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDistributionElementType"
-* PropertyDefs > PropertyDef [Name="EarthingStyle"]
-* PropertyDefs > PropertyDef [Name="HeatDissipation"]
-* PropertyDefs > PropertyDef [Name="Power"]
-* PropertyDefs > PropertyDef [Name="NominalPowerConsumption"]
-* PropertyDefs > PropertyDef [Name="NumberOfPowerSupplyPorts"]
+* ApplicableClasses > ClassName "IfcDistributionChamberElementType/METERCHAMBER"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDistributionElement"
-  ~~IfcDistributionElement~~ IfcDistributionElement,IfcDistributionElementType
-* PropertyDefs > PropertyDef [Name="NumberOfPoles"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
+* ApplicableTypeValue "IfcDistributionChamberElement/METERCHAMBER"
+  ~~IfcDistributionChamberElement/METERCHAMBER~~ IfcDistributionChamberElement/METERCHAMBER,IfcDistributionChamberElementType/METERCHAMBER
 
 
 Pset_SpaceHeaterTypeRadiator.xml
@@ -5978,99 +7258,7 @@ modifications
   ~~IfcSpaceHeater/RADIATOR~~ IfcSpaceHeater/RADIATOR,IfcSpaceHeaterType/RADIATOR
 
 
-Pset_SpaceThermalLoadPHistory.xml
-=================================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement
-* PropertyDefs > PropertyDef [Name="People"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RelativeHumidity"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="Lighting"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationOutdoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="DryBulbTemperature"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="VentilationIndoorAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="EquipmentSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalLatentLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="ExhaustAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalRadiantLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="AirExchangeRate"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="InfiltrationSensible"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="RecirculatedAir"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-* PropertyDefs > PropertyDef [Name="TotalSensibleLoad"]
-  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
-
-
-
-Qto_BoilerBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBoilerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBoiler"
-  ~~IfcBoiler~~ IfcBoiler,IfcBoilerType
-
-
-Pset_UnitaryEquipmentTypeAirConditioningUnit.xml
-================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryEquipmentType/AIRCONDITIONINGUNIT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryEquipment/AIRCONDITIONINGUNIT"
-  ~~IfcUnitaryEquipment/AIRCONDITIONINGUNIT~~ IfcUnitaryEquipment/AIRCONDITIONINGUNIT,IfcUnitaryEquipmentType/AIRCONDITIONINGUNIT
-
-
-Pset_ReinforcementBarPitchOfContinuousFooting.xml
-=================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFootingType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFooting"
-  ~~IfcFooting~~ IfcFooting,IfcFootingType
-
-
-Pset_AirTerminalOccurrence.xml
-==============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Location"] > Name "Location"
-  ~~Location~~ AirTerminalLocation
-* PropertyDefs > PropertyDef [Name="AirflowType"] > Name "AirflowType"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="AirflowType"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-
-
-Pset_ProtectiveDeviceTypeCircuitBreaker.xml
+Pset_ProtectiveDeviceBreakerUnitTypeMCB.xml
 ===========================================
 
 additions
@@ -6083,82 +7271,176 @@ modifications
   ~~IfcProtectiveDevice/CIRCUITBREAKER~~ IfcProtectiveDevice/CIRCUITBREAKER,IfcProtectiveDeviceType/CIRCUITBREAKER
 
 
-Pset_Stationing.xml
-===================
+Qto_InterceptorBaseQuantities.xml
+=================================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="HasIncreasingStation"]
-
-
-Pset_QuayCommon.xml
-===================
+* ApplicableClasses > ClassName "IfcInterceptorType"
 
 modifications
 -------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+* ApplicableTypeValue "IfcInterceptor"
+  ~~IfcInterceptor~~ IfcInterceptor,IfcInterceptorType
 
 
-Pset_CableFittingTypeCommon.xml
+Pset_ConcreteElementGeneral.xml
 ===============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcCableFittingType"
+* ApplicableClasses > ClassName "IfcBeamType"
+* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
+* ApplicableClasses > ClassName "IfcChimneyType"
+* ApplicableClasses > ClassName "IfcCivilElementType"
+* ApplicableClasses > ClassName "IfcColumnType"
+* ApplicableClasses > ClassName "IfcFootingType"
+* ApplicableClasses > ClassName "IfcMemberType"
+* ApplicableClasses > ClassName "IfcPileType"
+* ApplicableClasses > ClassName "IfcPlateType"
+* ApplicableClasses > ClassName "IfcRailingType"
+* ApplicableClasses > ClassName "IfcRampFlightType"
+* ApplicableClasses > ClassName "IfcRampType"
+* ApplicableClasses > ClassName "IfcRoofType"
+* ApplicableClasses > ClassName "IfcSlabType"
+* ApplicableClasses > ClassName "IfcStairFlightType"
+* ApplicableClasses > ClassName "IfcStairType"
+* ApplicableClasses > ClassName "IfcWallType"
+* PropertyDefs > PropertyDef [Name="AssemblyPlace"]
 
 modifications
 -------------
-* ApplicableTypeValue "IfcCableFitting"
-  ~~IfcCableFitting~~ IfcCableFitting,IfcCableFittingType
+* ApplicableTypeValue "IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement"
+  ~~IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement~~ IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcCivilElement,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRailing,IfcRampFlight,IfcRamp,IfcRoof,IfcSlab,IfcStairFlight,IfcStair,IfcWall,IfcBeamType,IfcBuildingElementProxyType,IfcChimneyType,IfcCivilElementType,IfcColumnType,IfcFootingType,IfcMemberType,IfcPileType,IfcPlateType,IfcRailingType,IfcRampFlightType,IfcRampType,IfcRoofType,IfcSlabType,IfcStairFlightType,IfcStairType,IfcWallType
+* PropertyDefs > PropertyDef [Name="ConstructionMethod"] > Name "ConstructionMethod"
+  ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="ConstructionMethod"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 
 
-Pset_DamperTypeCommon.xml
-=========================
+Pset_SystemFurnitureElementTypePanel.xml
+========================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDamperType"
+* ApplicableClasses > ClassName "IfcSystemFurnitureElementType/PANEL"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDamper"
-  ~~IfcDamper~~ IfcDamper,IfcDamperType
+* ApplicableTypeValue "IfcSystemFurnitureElement/PANEL"
+  ~~IfcSystemFurnitureElement/PANEL~~ IfcSystemFurnitureElement/PANEL,IfcSystemFurnitureElementType/PANEL
 
 
-Pset_DistributionSystemCommon.xml
-=================================
+Qto_DistributionBoardBaseQuantities.xml
+=======================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricDistributionBoardType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricDistributionBoard"
+  ~~IfcElectricDistributionBoard~~ IfcElectricDistributionBoard,IfcElectricDistributionBoardType
+
+
+Qto_LampBaseQuantities.xml
+==========================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLampType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcLamp"
+  ~~IfcLamp~~ IfcLamp,IfcLampType
+
+
+Qto_CompressorBaseQuantities.xml
+================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcCompressorType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcCompressor"
+  ~~IfcCompressor~~ IfcCompressor,IfcCompressorType
+
+
+Pset_MaterialOptical.xml
+========================
 
 modifications
 -------------
 * 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+* PropertyDefs > PropertyDef [Name="VisibleTransmittance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ThermalIrTransmittance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SolarReflectanceFront"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ThermalIrEmissivityFront"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VisibleReflectanceFront"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SolarReflectanceBack"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="ThermalIrEmissivityBack"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="VisibleReflectanceBack"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
+* PropertyDefs > PropertyDef [Name="SolarTransmittance"]
+  ~~&lt;PropertyDef&gt;~~ &lt;PropertyDef&gt;
 
 
-Pset_ValveTypeMixing.xml
-========================
+Pset_FilterTypeAirParticleFilter.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcValveType/MIXING"
+* ApplicableClasses > ClassName "IfcFilterType/AIRPARTICLEFILTER"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcValve/MIXING"
-  ~~IfcValve/MIXING~~ IfcValve/MIXING,IfcValveType/MIXING
+* ApplicableTypeValue "IfcFilter/AIRPARTICLEFILTER"
+  ~~IfcFilter/AIRPARTICLEFILTER~~ IfcFilter/AIRPARTICLEFILTER,IfcFilterType/AIRPARTICLEFILTER
 
 
-Pset_BoundedCourseCommon.xml
-============================
+Pset_MarineFacilityTransportation.xml
+=====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcCourseType"
+* ApplicableTypeValue "IfcMarineFacility"
+
+
+
+Pset_ProfileArbitraryDoubleT.xml
+================================
 
 modifications
 -------------
-* ApplicableTypeValue "IfcCourse"
-  ~~IfcCourse~~ IfcCourse,IfcCourseType
+* 
+  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_PROFILEDRIVEN
+
+
+Pset_UnitaryControlElementTypeIndicatorPanel.xml
+================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcUnitaryControlElementType/INDICATORPANEL"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcUnitaryControlElement/INDICATORPANEL"
+  ~~IfcUnitaryControlElement/INDICATORPANEL~~ IfcUnitaryControlElement/INDICATORPANEL,IfcUnitaryControlElementType/INDICATORPANEL
+* PropertyDefs > PropertyDef [Name="Application"] > Name "Application"
+  ~~Application~~ UnitaryApplication
 
 
 Pset_FireSuppressionTerminalTypeSprinkler.xml
@@ -6172,19 +7454,62 @@ modifications
 -------------
 * ApplicableTypeValue "IfcFireSuppressionTerminal/SPRINKLER"
   ~~IfcFireSuppressionTerminal/SPRINKLER~~ IfcFireSuppressionTerminal/SPRINKLER,IfcFireSuppressionTerminalType/SPRINKLER
-* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 * PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > Name "BulbLiquidColor"
   ~~&lt;Name&gt;~~ &lt;Name&gt;
+* PropertyDefs > PropertyDef [Name="BulbLiquidColor"] > PropertyType
+  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
 
 
-Pset_ProjectOrderPurchaseOrder.xml
+Qto_LightFixtureBaseQuantities.xml
 ==================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcLightFixtureType"
 
 modifications
 -------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
+* ApplicableTypeValue "IfcLightFixture"
+  ~~IfcLightFixture~~ IfcLightFixture,IfcLightFixtureType
+
+
+Qto_ElectricFlowStorageDeviceBaseQuantities.xml
+===============================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElectricFlowStorageDeviceType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElectricFlowStorageDevice"
+  ~~IfcElectricFlowStorageDevice~~ IfcElectricFlowStorageDevice,IfcElectricFlowStorageDeviceType
+
+
+Pset_ElementComponentCommon.xml
+===============================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcElementComponentType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcElementComponent"
+  ~~IfcElementComponent~~ IfcElementComponent,IfcElementComponentType
+
+
+Pset_WasteTerminalTypeFloorTrap.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcWasteTerminalType/FLOORTRAP"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcWasteTerminal/FLOORTRAP"
+  ~~IfcWasteTerminal/FLOORTRAP~~ IfcWasteTerminal/FLOORTRAP,IfcWasteTerminalType/FLOORTRAP
 
 
 Pset_DuctSilencerTypeCommon.xml
@@ -6204,587 +7529,129 @@ modifications
   ~~AirFlowrateRange~~ AirFlowRateRange
 
 
-Pset_AirTerminalPHistory.xml
-============================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="AirFlowRate"] > Name "AirFlowRate"
-  ~~AirFlowRate~~ AirFlowRateHistory
-
-
-Qto_SurfaceFeatureBaseQuantities.xml
-====================================
-
-additions
----------
-* ApplicableTypeValue "IfcSurfaceFeature"
-
-
-Pset_HeatExchangerTypePlate.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcHeatExchangerType/PLATE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcHeatExchanger/PLATE"
-  ~~IfcHeatExchanger/PLATE~~ IfcHeatExchanger/PLATE,IfcHeatExchangerType/PLATE
-* PropertyDefs > PropertyDef [Name="NumberOfPlates"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_CoilPHistory.xml
+Pset_ColumnCommon.xml
 =====================
 
 additions
 ---------
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurveHistory"]
+* ApplicableClasses > ClassName "IfcColumnType"
 
 modifications
 -------------
-* PropertyDefs > PropertyDef [Name="AirPressureDropCurve"] > Name "AirPressureDropCurve"
-  ~~AirPressureDropCurve~~ SoundCurveHistory
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SoundCurve"]
+* ApplicableTypeValue "IfcColumn"
+  ~~IfcColumn~~ IfcColumn,IfcColumnType
 
 
-Pset_WasteTerminalTypeWasteTrap.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/WASTETRAP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/WASTETRAP"
-  ~~IfcWasteTerminal/WASTETRAP~~ IfcWasteTerminal/WASTETRAP,IfcWasteTerminalType/WASTETRAP
-
-
-Pset_WallCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWallType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWall"
-  ~~IfcWall~~ IfcWall,IfcWallType
-
-
-Pset_MobileTelecommunicationsApplianceTypeAccessPoint.xml
-=========================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/ACCESSPOINT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/ACCESSPOINT"
-  ~~IfcMobileTelecommunicationsAppliance/ACCESSPOINT~~ IfcMobileTelecommunicationsAppliance/ACCESSPOINT,IfcMobileTelecommunicationsApplianceType/ACCESSPOINT
-* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_SensorTypeHeatSensor.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/HEATSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/HEATSENSOR"
-  ~~IfcSensor/HEATSENSOR~~ IfcSensor/HEATSENSOR,IfcSensorType/HEATSENSOR
-
-
-Pset_DiscreteAccessoryEdgeFixingPlate.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Edge fixing plate"
-  ~~IfcDiscreteAccessory/Edge fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Edge fixing plate"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_RoadSymbolsCommon.xml
-==========================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
-* ApplicableTypeValue "IfcSurfaceFeature/(.SYMBOLMARKING.)"
-  ~~IfcSurfaceFeature/(.SYMBOLMARKING.)~~ IfcSurfaceFeature/SYMBOLMARKING
-
-
-Pset_BuildingUse.xml
+Pset_ServiceLife.xml
 ====================
 
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_SiteCommon.xml
-===================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ActuatorTypeRotationalActuation.xml
-========================================
-
 additions
 ---------
-* ApplicableClasses > ClassName "IfcActuatorType"
+* ApplicableClasses > ClassName "IfcElementType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcActuator"
-  ~~IfcActuator~~ IfcActuator,IfcActuatorType
+* ApplicableTypeValue "IfcElement"
+  ~~IfcElement~~ IfcElement,IfcElementType
 
 
-Qto_SignalBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableTypeValue "IfcSignal,IfcSignalType"
-
-
-Pset_ActorCommon.xml
-====================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Category"] > Name "Category"
-  ~~Category~~ ActorCategory
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_AudioVisualApplianceTypeAmplifier.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType/AMPLIFIER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance/AMPLIFIER"
-  ~~IfcAudioVisualAppliance/AMPLIFIER~~ IfcAudioVisualAppliance/AMPLIFIER,IfcAudioVisualApplianceType/AMPLIFIER
-* PropertyDefs > PropertyDef [Name="AmplifierType"] > PropertyType > TypePropertyEnumeratedValue > EnumList > EnumItem "UNSET."
-  ~~UNSET.~~ UNSET
-
-
-Pset_SensorTypeFireSensor.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/FIRESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/FIRESENSOR"
-  ~~IfcSensor/FIRESENSOR~~ IfcSensor/FIRESENSOR,IfcSensorType/FIRESENSOR
-
-
-Pset_ElementKinematics.xml
-==========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="MaximumConstantSpeed"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
-
-
-Pset_ProtectiveDeviceTrippingUnitTypeCommon.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-
-
-Pset_ProtectiveDeviceTrippingCurve.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-
-Qto_UnitaryEquipmentBaseQuantities.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcUnitaryEquipmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcUnitaryEquipment"
-  ~~IfcUnitaryEquipment~~ IfcUnitaryEquipment,IfcUnitaryEquipmentType
-
-
-Pset_MaterialHygroscopic.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
-
-
-Pset_DiscreteAccessoryCornerFixingPlate.xml
-===========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDiscreteAccessoryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDiscreteAccessory/Corner fixing plate"
-  ~~IfcDiscreteAccessory/Corner fixing plate~~ IfcDiscreteAccessory,IfcDiscreteAccessoryType
-* ApplicableClasses > ClassName "IfcDiscreteAccessory/Corner fixing plate"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-
-Pset_CourseApplicationConditions.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCourseType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCourse"
-  ~~IfcCourse~~ IfcCourse,IfcCourseType
-
-
-Qto_CommunicationsApplianceBaseQuantities.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCommunicationsApplianceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCommunicationsAppliance"
-  ~~IfcCommunicationsAppliance~~ IfcCommunicationsAppliance,IfcCommunicationsApplianceType
-
-
-Pset_ReinforcementBarPitchOfBeam.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBeamType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBeam"
-  ~~IfcBeam~~ IfcBeam,IfcBeamType
-
-
-Qto_PictorialSignQuantities.xml
-===============================
-
-additions
----------
-* ApplicableTypeValue "IfcSign/PICTORAL,IfcSignType/PICTORAL"
-
-
-Qto_FlowMeterBaseQuantities.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcFlowMeterType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcFlowMeter"
-  ~~IfcFlowMeter~~ IfcFlowMeter,IfcFlowMeterType
-
-
-Pset_Risk.xml
-=============
-
-modifications
--------------
-* ApplicableTypeValue "IfcProcess,IfcTypeProcess,IfcProduct,IfcTypeProduct,IfcGroup"
-  ~~IfcProcess,IfcTypeProcess,IfcProduct,IfcTypeProduct,IfcGroup~~ IfcGroup,IfcProcess,IfcProduct,IfcTypeProcess,IfcTypeProduct
-
-
-Pset_SolidStratumCapacity.xml
-=============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSolidStratum"
-  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
-* ApplicableTypeValue "IfcSolidStratum"
-  ~~IfcSolidStratum~~ IfcGeotechnicalStratum/SOLID
-* PropertyDefs > PropertyDef [Name="HydraulicConductivity"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
-* PropertyDefs > PropertyDef [Name="PwaveVelocity"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
-* PropertyDefs > PropertyDef [Name="SwaveVelocity"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcVelocityMeasure~~ IfcLinearVelocityMeasure
-* PropertyDefs > PropertyDef [Name="LoadbearingCapacity"] > Name "LoadbearingCapacity"
-  ~~&lt;Name&gt;~~ &lt;Name&gt;
-* PropertyDefs > PropertyDef [Name="LoadbearingCapacity"] > PropertyType
-  ~~&lt;PropertyType&gt;~~ &lt;PropertyType&gt;
-
-
-Qto_DuctSegmentBaseQuantities.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDuctSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDuctSegment"
-  ~~IfcDuctSegment~~ IfcDuctSegment,IfcDuctSegmentType
-
-
-Pset_BoreholeCommon.xml
-=======================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="BoreholeState"] > PropertyType > TypePropertySingleValue
-  ~~TypePropertySingleValue~~ TypePropertyEnumeratedValue
-* PropertyDefs > PropertyDef [Name="BoreholeState"] > PropertyType > TypePropertySingleValue > DataType
-  ~~&lt;DataType&gt;~~ &lt;EnumList&gt;
-
-
-Pset_ActuatorTypePneumaticActuator.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcActuatorType/PNEUMATICACTUATOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcActuator/PNEUMATICACTUATOR"
-  ~~IfcActuator/PNEUMATICACTUATOR~~ IfcActuator/PNEUMATICACTUATOR,IfcActuatorType/PNEUMATICACTUATOR
-
-
-Pset_BuildingUseAdjacent.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_RampCommon.xml
-===================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcRampType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcRamp"
-  ~~IfcRamp~~ IfcRamp,IfcRampType
-
-
-
-Pset_JettyDesignCriteria.xml
-============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_ProtectiveDeviceTrippingFunctionICurve.xml
-===============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
-  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
-
-
-Pset_CoolingTowerTypeCommon.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoolingTowerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCoolingTower"
-  ~~IfcCoolingTower~~ IfcCoolingTower,IfcCoolingTowerType
-* PropertyDefs > PropertyDef [Name="NumberOfCells"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_ProtectiveDeviceTypeEarthLeakageCircuitBreaker.xml
-=======================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType/EARTHLEAKAGECIRCUITBREAKER"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER"
-  ~~IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER~~ IfcProtectiveDevice/EARTHLEAKAGECIRCUITBREAKER,IfcProtectiveDeviceType/EARTHLEAKAGECIRCUITBREAKER
-
-
-Pset_SystemFurnitureElementTypeCommon.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSystemFurnitureElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSystemFurnitureElement"
-  ~~IfcSystemFurnitureElement~~ IfcSystemFurnitureElement,IfcSystemFurnitureElementType
-
-
-Pset_BuildingSystemCommon.xml
-=============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-
-Pset_SanitaryTerminalTypeWashHandBasin.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/WASHHANDBASIN"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/WASHHANDBASIN"
-  ~~IfcSanitaryTerminal/WASHHANDBASIN~~ IfcSanitaryTerminal/WASHHANDBASIN,IfcSanitaryTerminalType/WASHHANDBASIN
-
-
-Pset_PumpTypeCommon.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPumpType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPump"
-  ~~IfcPump~~ IfcPump,IfcPumpType
-
-
-Pset_CableSegmentTypeBusBarSegment.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableSegmentType/BUSBARSEGMENT"
-* PropertyDefs > PropertyDef [Name="NominalCurrent"]
-* PropertyDefs > PropertyDef [Name="UltimateTensileStrength"]
-* PropertyDefs > PropertyDef [Name="ACResistance"]
-* PropertyDefs > PropertyDef [Name="ThermalExpansionCoefficient"]
-* PropertyDefs > PropertyDef [Name="CurrentCarryingCapacity"]
-* PropertyDefs > PropertyDef [Name="DCResistance"]
-* PropertyDefs > PropertyDef [Name="MassPerLength"]
-* PropertyDefs > PropertyDef [Name="TensileStrength"]
-* PropertyDefs > PropertyDef [Name="YoungModulus"]
-* PropertyDefs > PropertyDef [Name="CrossSectionalArea"]
-* PropertyDefs > PropertyDef [Name="InsulationMethod"]
-* PropertyDefs > PropertyDef [Name="OverallDiameter"]
-* PropertyDefs > PropertyDef [Name="OperationalTemperatureRange"]
-* PropertyDefs > PropertyDef [Name="RatedVoltage"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableSegment/BUSBARSEGMENT"
-  ~~IfcCableSegment/BUSBARSEGMENT~~ IfcCableSegment/BUSBARSEGMENT,IfcCableSegmentType/BUSBARSEGMENT
-
-
-Qto_ConstructionMaterialResourceBaseQuantities.xml
+Qto_ProtectiveDeviceTrippingUnitBaseQuantities.xml
 ==================================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcConstructionMaterialResourceType"
+* ApplicableClasses > ClassName "IfcProtectiveDeviceTrippingUnitType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcConstructionMaterialResource"
-  ~~IfcConstructionMaterialResource~~ IfcConstructionMaterialResource,IfcConstructionMaterialResourceType
+* ApplicableTypeValue "IfcProtectiveDeviceTrippingUnit"
+  ~~IfcProtectiveDeviceTrippingUnit~~ IfcProtectiveDeviceTrippingUnit,IfcProtectiveDeviceTrippingUnitType
 
 
-Pset_MobileTelecommunicationsApplianceTypeMasterUnit.xml
-========================================================
+Pset_SanitaryTerminalTypeBath.xml
+=================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/MASTERUNIT"
+* ApplicableClasses > ClassName "IfcSanitaryTerminalType/BATH"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/MASTERUNIT"
-  ~~IfcMobileTelecommunicationsAppliance/MASTERUNIT~~ IfcMobileTelecommunicationsAppliance/MASTERUNIT,IfcMobileTelecommunicationsApplianceType/MASTERUNIT
+* ApplicableTypeValue "IfcSanitaryTerminal/BATH"
+  ~~IfcSanitaryTerminal/BATH~~ IfcSanitaryTerminal/BATH,IfcSanitaryTerminalType/BATH
+
+
+Pset_FanTypeCommon.xml
+======================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFanType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFan"
+  ~~IfcFan~~ IfcFan,IfcFanType
+
+
+Pset_ReinforcementBarCountOfIndependentFooting.xml
+==================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcFootingType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcFooting"
+  ~~IfcFooting~~ IfcFooting,IfcFootingType
+* PropertyDefs > PropertyDef [Name="XDirectionLowerBarCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="YDirectionLowerBarCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="XDirectionUpperBarCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+* PropertyDefs > PropertyDef [Name="YDirectionUpperBarCount"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
+
+
+Pset_SwitchingDeviceTypeStarter.xml
+===================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcSwitchingDeviceType/STARTER"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcSwitchingDevice/STARTER"
+  ~~IfcSwitchingDevice/STARTER~~ IfcSwitchingDevice/STARTER,IfcSwitchingDeviceType/STARTER
+
+
+Pset_KerbStone.xml
+==================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcKerbType"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcKerb"
+  ~~IfcKerb~~ IfcKerb,IfcKerbType
+
+
+Pset_ProtectiveDeviceTypeResidualCurrentSwitch.xml
+==================================================
+
+additions
+---------
+* ApplicableClasses > ClassName "IfcProtectiveDeviceType/RESIDUALCURRENTSWITCH"
+
+modifications
+-------------
+* ApplicableTypeValue "IfcProtectiveDevice/RESIDUALCURRENTSWITCH"
+  ~~IfcProtectiveDevice/RESIDUALCURRENTSWITCH~~ IfcProtectiveDevice/RESIDUALCURRENTSWITCH,IfcProtectiveDeviceType/RESIDUALCURRENTSWITCH
 
 
 Qto_FilterBaseQuantities.xml
@@ -6800,404 +7667,50 @@ modifications
   ~~IfcFilter~~ IfcFilter,IfcFilterType
 
 
-Qto_BuildingBaseQuantities.xml
-==============================
-
-modifications
--------------
-* QtoDefs > QtoDef [Name="FootprintArea"] > Name "FootprintArea"
-  ~~FootprintArea~~ FootPrintArea
-
-
-Qto_CoveringBaseQuantities.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoveringType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCovering"
-  ~~IfcCovering~~ IfcCovering,IfcCoveringType
-
-
-Pset_CableCarrierSegmentTypeCableLadderSegment.xml
-==================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType/CABLELADDERSEGMENT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment/CABLELADDERSEGMENT"
-  ~~IfcCableCarrierSegment/CABLELADDERSEGMENT~~ IfcCableCarrierSegment/CABLELADDERSEGMENT,IfcCableCarrierSegmentType/CABLELADDERSEGMENT
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="NominalWidth"]
-* PropertyDefs > PropertyDef [Name="NominalHeight"]
-
-
-Pset_ProtectiveDeviceBreakerUnitIPICurve.xml
-============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-Pset_SensorTypeMovementSensor.xml
+Pset_FlowInstrumentTypeCommon.xml
 =================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSensorType/MOVEMENTSENSOR"
+* ApplicableClasses > ClassName "IfcFlowInstrumentType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSensor/MOVEMENTSENSOR"
-  ~~IfcSensor/MOVEMENTSENSOR~~ IfcSensor/MOVEMENTSENSOR,IfcSensorType/MOVEMENTSENSOR
+* ApplicableTypeValue "IfcFlowInstrument"
+  ~~IfcFlowInstrument~~ IfcFlowInstrument,IfcFlowInstrumentType
 
 
 
-Pset_ValveTypeIsolating.xml
-===========================
+Pset_EvaporativeCoolerTypeCommon.xml
+====================================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcValveType/ISOLATING"
+* ApplicableClasses > ClassName "IfcEvaporativeCoolerType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcValve/ISOLATING"
-  ~~IfcValve/ISOLATING~~ IfcValve/ISOLATING,IfcValveType/ISOLATING
+* ApplicableTypeValue "IfcEvaporativeCooler"
+  ~~IfcEvaporativeCooler~~ IfcEvaporativeCooler,IfcEvaporativeCoolerType
 
 
-Pset_EnergyRequirements.xml
-===========================
+Pset_SpaceHeaterTypeCommon.xml
+==============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcTransportationDevice"
+* ApplicableClasses > ClassName "IfcSpaceHeaterType"
 
 modifications
 -------------
-* ApplicableClasses > ClassName "IfcTransportElement"
-  ~~IfcTransportElement~~ IfcTransportationDeviceType
-* ApplicableTypeValue "IfcDistributionElement,IfcDistributionElementType,IfcTransportElement,IfcTransportElementType"
-  ~~IfcDistributionElement,IfcDistributionElementType,IfcTransportElement,IfcTransportElementType~~ IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType
-* PropertyDefs > PropertyDef [Name="EnergySource"] > Name "EnergySource"
-  ~~EnergySource~~ EnergySourceLabel
-
-deletions
----------
-* ApplicableClasses > ClassName "IfcTransportElementType"
-
-
-Pset_CableSegmentOccurrence.xml
-===============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="SequentialCode"]
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="NumberOfParallelCircuits"] > PropertyType > TypePropertySingleValue > DataType
+* ApplicableTypeValue "IfcSpaceHeater"
+  ~~IfcSpaceHeater~~ IfcSpaceHeater,IfcSpaceHeaterType
+* PropertyDefs > PropertyDef [Name="PlacementType"] > Name "PlacementType"
+  ~~PlacementType~~ SpaceHeaterPlacement
+* PropertyDefs > PropertyDef [Name="NumberOfPanels"] > PropertyType > TypePropertySingleValue > DataType
   ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="CurrentCarryingCapasity"] > Name "CurrentCarryingCapasity"
-  ~~CurrentCarryingCapasity~~ CurrentCarryingCapacity
-* PropertyDefs > PropertyDef [Name="PowerLoss"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcElectricCurrentMeasure~~ IfcPowerMeasure
-
-
-Pset_ProtectiveDeviceTypeFuseDisconnector.xml
-=============================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType/FUSEDISCONNECTOR"
-* PropertyDefs > PropertyDef [Name="NumberOfPhases"]
-* PropertyDefs > PropertyDef [Name="ReferenceEnvironmentTemperature"]
-* PropertyDefs > PropertyDef [Name="BreakingCapacity"]
-* PropertyDefs > PropertyDef [Name="ArcExtinctionType"]
-* PropertyDefs > PropertyDef [Name="NumberOfPoles"]
-* PropertyDefs > PropertyDef [Name="TransformationRatio"]
-* PropertyDefs > PropertyDef [Name="NominalFrequency"]
-* PropertyDefs > PropertyDef [Name="NominalCurrent"]
-* PropertyDefs > PropertyDef [Name="RatedVoltage"]
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice/FUSEDISCONNECTOR"
-  ~~IfcProtectiveDevice/FUSEDISCONNECTOR~~ IfcProtectiveDevice/FUSEDISCONNECTOR,IfcProtectiveDeviceType/FUSEDISCONNECTOR
-
-
-Pset_SpaceFireSafetyRequirements.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpatialElement"
-* ApplicableClasses > ClassName "IfcSpatialElementType"
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialZoneType
-* ApplicableTypeValue "IfcSpace, IfcSpatialZone, IfcZone"
-  ~~IfcSpace, IfcSpatialZone, IfcZone~~ IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType
-
-
-Pset_BoilerTypeCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBoilerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBoiler"
-  ~~IfcBoiler~~ IfcBoiler,IfcBoilerType
-
-
-
-Pset_MarineVehicleDesignCriteria.xml
-====================================
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.),IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)~~ IfcVehicle/VEHICLEMARINE,IfcVehicleType/VEHICLEMARINE
-* ApplicableClasses > ClassName "IfcTransportElementType/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-* ApplicableClasses > ClassName "IfcTransportElement/IfcTransportElementNonFixedTypeEnum(.VEHICLEMARINE.)"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Qto_PavementBaseQuantities.xml
-==============================
-
-additions
----------
-* ApplicableTypeValue "IfcPavement,IfcPavementType"
-
-
-Pset_InterceptorTypeCommon.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcInterceptorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcInterceptor"
-  ~~IfcInterceptor~~ IfcInterceptor,IfcInterceptorType
-
-
-Pset_ValveTypeGasTap.xml
-========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/GASTAP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/GASTAP"
-  ~~IfcValve/GASTAP~~ IfcValve/GASTAP,IfcValveType/GASTAP
-
-
-Pset_ControllerPHistory.xml
-===========================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Value"] > Name "Value"
-  ~~Value~~ ValueHistory
-
-
-Pset_Width.xml
-==============
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/(.WIDTHEVENT.)"
-  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcReferent/WIDTHEVENT
-* ApplicableTypeValue "IfcAnnotation/(.WIDTHEVENT.)"
-  ~~IfcAnnotation/(.WIDTHEVENT.)~~ IfcReferent/WIDTHEVENT
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_SensorTypePressureSensor.xml
-=================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/PRESSURESENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/PRESSURESENSOR"
-  ~~IfcSensor/PRESSURESENSOR~~ IfcSensor/PRESSURESENSOR,IfcSensorType/PRESSURESENSOR
-
-
-Pset_PavementCommon.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcPavementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcPavement"
-  ~~IfcPavement~~ IfcPavement,IfcPavementType
-
-
-Pset_SensorTypeIdentifierSensor.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/IDENTIFIERSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/IDENTIFIERSENSOR"
-  ~~IfcSensor/IDENTIFIERSENSOR~~ IfcSensor/IDENTIFIERSENSOR,IfcSensorType/IDENTIFIERSENSOR
-
-
-Qto_CondenserBaseQuantities.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCondenserType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCondenser"
-  ~~IfcCondenser~~ IfcCondenser,IfcCondenserType
-
-
-Pset_ProjectOrderMoveOrder.xml
-==============================
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_CompressorTypeCommon.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCompressorType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCompressor"
-  ~~IfcCompressor~~ IfcCompressor,IfcCompressorType
-
-
-Pset_ControllerTypeTwoPosition.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcControllerType/TWOPOSITION"
-
-modifications
--------------
-* ApplicableTypeValue "IfcController/TWOPOSITION"
-  ~~IfcController/TWOPOSITION~~ IfcController/TWOPOSITION,IfcControllerType/TWOPOSITION
-
-
-Pset_AnnotationContourLine.xml
-==============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/ContourLine"
-  ~~IfcAnnotation/ContourLine~~ IfcAnnotation/CONTOURLINE
-* ApplicableTypeValue "IfcAnnotation/ContourLine"
-  ~~IfcAnnotation/ContourLine~~ IfcAnnotation/CONTOURLINE
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_CoveringCommon.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoveringType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCovering"
-  ~~IfcCovering~~ IfcCovering,IfcCoveringType
-
-
-Pset_SwitchingDeviceTypePHistory.xml
-====================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="SetPoint"] > Name "SetPoint"
-  ~~SetPoint~~ SetPointHistory
-
-
-Qto_ElectricTimeControlBaseQuantities.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElectricTimeControlType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElectricTimeControl"
-  ~~IfcElectricTimeControl~~ IfcElectricTimeControl,IfcElectricTimeControlType
-
-
-Pset_FenderDesignCriteria.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpaceType/BERTH"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace/BERTH"
-  ~~IfcSpace/BERTH~~ IfcSpace/BERTH,IfcSpaceType/BERTH
-
-
-Pset_MaterialWood.xml
-=====================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcMaterial/Wood"
-  ~~IfcMaterial/Wood~~ IfcMaterial
-* ApplicableTypeValue "IfcMaterial/Wood"
-  ~~IfcMaterial/Wood~~ IfcMaterial
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_MATERIALDRIVEN
+* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
+  ~~IfcInteger~~ IfcCountMeasure
 
 
 Pset_DiscreteAccessoryDiagonalTrussConnector.xml
@@ -7215,541 +7728,28 @@ modifications
   ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
 
 
-Pset_MarineFacilityTransportation.xml
-=====================================
-
-additions
----------
-* ApplicableTypeValue "IfcMarineFacility"
-
-
-Pset_ShadingDeviceCommon.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcShadingDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcShadingDevice"
-  ~~IfcShadingDevice~~ IfcShadingDevice,IfcShadingDeviceType
-* PropertyDefs > PropertyDef [Name="SolarTransmittance"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
-* PropertyDefs > PropertyDef [Name="SolarReflectance"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
-* PropertyDefs > PropertyDef [Name="VisibleLightTransmittance"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
-* PropertyDefs > PropertyDef [Name="VisibleLightReflectance"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcPositiveRatioMeasure~~ IfcNormalisedRatioMeasure
-* PropertyDefs > PropertyDef [Name="SurfaceColor"] > Name "SurfaceColor"
-  ~~SurfaceColor~~ SurfaceColour
-
-
-Pset_BuildingStoreyCommon.xml
-=============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="ElevationOfSSLRelative"]
-* PropertyDefs > PropertyDef [Name="ElevationOfFFLRelative"]
-
-modifications
--------------
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Qto_SpaceBaseQuantities.xml
+Pset_SensorTypePHSensor.xml
 ===========================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcSpaceType"
+* ApplicableClasses > ClassName "IfcSensorType/PHSENSOR"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpace,IfcSpaceType
+* ApplicableTypeValue "IfcSensor/PHSENSOR"
+  ~~IfcSensor/PHSENSOR~~ IfcSensor/PHSENSOR,IfcSensorType/PHSENSOR
 
 
-Pset_HeatExchangerTypeCommon.xml
-================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcHeatExchangerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcHeatExchanger"
-  ~~IfcHeatExchanger~~ IfcHeatExchanger,IfcHeatExchangerType
-* PropertyDefs > PropertyDef [Name="Arrangement"] > Name "Arrangement"
-  ~~Arrangement~~ FlowArrangement
-
-
-Pset_OutletTypeCommon.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcOutletType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcOutlet"
-  ~~IfcOutlet~~ IfcOutlet,IfcOutletType
-* PropertyDefs > PropertyDef [Name="NumberOfSockets"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Qto_ChillerBaseQuantities.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcChillerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcChiller"
-  ~~IfcChiller~~ IfcChiller,IfcChillerType
-
-
-Pset_SoundGeneration.xml
-========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcDistributionFlowElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcDistributionFlowElement"
-  ~~IfcDistributionFlowElement~~ IfcDistributionFlowElement,IfcDistributionFlowElementType
-
-
-Pset_SanitaryTerminalTypeBidet.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/BIDET"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/BIDET"
-  ~~IfcSanitaryTerminal/BIDET~~ IfcSanitaryTerminal/BIDET,IfcSanitaryTerminalType/BIDET
-
-
-Pset_TankTypeCommon.xml
-=======================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTank"
-  ~~IfcTank~~ IfcTank,IfcTankType
-* PropertyDefs > PropertyDef [Name="NominalCapacity"] > Name "NominalCapacity"
-  ~~NominalCapacity~~ TankNominalCapacity
-* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_MaintenanceStrategy.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcElement,IfcAsset,IfcSystem"
-  ~~IfcElement,IfcAsset,IfcSystem~~ IfcAsset,IfcElement,IfcSystem,IfcElementType
-
-
-Pset_SanitaryTerminalTypeUrinal.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSanitaryTerminalType/URINAL"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSanitaryTerminal/URINAL"
-  ~~IfcSanitaryTerminal/URINAL~~ IfcSanitaryTerminal/URINAL,IfcSanitaryTerminalType/URINAL
-
-
-Pset_LightFixtureTypeSecurityLighting.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcLightFixtureType/SECURITYLIGHTING"
-
-modifications
--------------
-* ApplicableTypeValue "IfcLightFixture/SECURITYLIGHTING"
-  ~~IfcLightFixture/SECURITYLIGHTING~~ IfcLightFixture/SECURITYLIGHTING,IfcLightFixtureType/SECURITYLIGHTING
-
-
-Pset_AnnotationSurveyArea.xml
-=============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/SurveyArea"
-  ~~IfcAnnotation/SurveyArea~~ IfcAnnotation/SURVEY
-* ApplicableTypeValue "IfcAnnotation/SurveyArea"
-  ~~IfcAnnotation/SurveyArea~~ IfcAnnotation/SURVEY
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_TankTypeSectional.xml
-==========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTankType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTank/SECTIONAL"
-  ~~IfcTank/SECTIONAL~~ IfcTank,IfcTankType
-* PropertyDefs > PropertyDef [Name="NumberOfSections"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* ApplicableClasses > ClassName "IfcTank/SECTIONAL"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_SpaceThermalPHistory.xml
-=============================
-
-additions
----------
-* PropertyDefs > PropertyDef [Name="VentilationAirFlowRateHistory"]
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement
-* PropertyDefs > PropertyDef [Name="VentilationAirFlowRate"] > Name "VentilationAirFlowRate"
-  ~~VentilationAirFlowRate~~ SpaceTemperatureHistory
-
-deletions
----------
-* PropertyDefs > PropertyDef [Name="SpaceTemperature"]
-
-
-Pset_AnnotationLineOfSight.xml
-==============================
-
-modifications
--------------
-* ApplicableClasses > ClassName "IfcAnnotation/LineOfSight"
-  ~~IfcAnnotation/LineOfSight~~ IfcAnnotation
-* ApplicableTypeValue "IfcAnnotation/LineOfSight"
-  ~~IfcAnnotation/LineOfSight~~ IfcAnnotation
-* 
-  ~~PSET_TYPEDRIVENOVERRIDE~~ PSET_OCCURRENCEDRIVEN
-
-
-Pset_CoveringTypeMembrane.xml
-=============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCoveringType/MEMBRANE"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCovering/MEMBRANE"
-  ~~IfcCovering/MEMBRANE~~ IfcCovering/MEMBRANE,IfcCoveringType/MEMBRANE
-
-
-Pset_ProtectiveDeviceBreakerUnitI2TFuseCurve.xml
-================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcProtectiveDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcProtectiveDevice"
-  ~~IfcProtectiveDevice~~ IfcProtectiveDevice,IfcProtectiveDeviceType
-
-
-Pset_MobileTelecommunicationsApplianceTypeEUtranNodeB.xml
-=========================================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMobileTelecommunicationsApplianceType/E_UTRAN_NODE_B"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B"
-  ~~IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B~~ IfcMobileTelecommunicationsAppliance/E_UTRAN_NODE_B,IfcMobileTelecommunicationsApplianceType/E_UTRAN_NODE_B
-* PropertyDefs > PropertyDef [Name="NumberOfCarriers"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="NumberOfAntennas"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_GeotechnicalStratumCommon.xml
-==================================
-
-modifications
--------------
-* PropertyDefs > PropertyDef [Name="Colour"] > Name "Colour"
-  ~~Colour~~ StratumColour
-
-
-Qto_ColumnBaseQuantities.xml
-============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcColumnType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcColumn"
-  ~~IfcColumn~~ IfcColumn,IfcColumnType
-
-
-Pset_AirToAirHeatRecoveryTypeCommon.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAirToAirHeatRecoveryType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAirToAirHeatRecovery"
-  ~~IfcAirToAirHeatRecovery~~ IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType
-* PropertyDefs > PropertyDef [Name="PrimaryAirflowRateRange"] > Name "PrimaryAirflowRateRange"
-  ~~PrimaryAirflowRateRange~~ PrimaryAirFlowRateRange
-* PropertyDefs > PropertyDef [Name="SecondaryAirflowRateRange"] > Name "SecondaryAirflowRateRange"
-  ~~SecondaryAirflowRateRange~~ SecondaryAirFlowRateRange
-
-
-Pset_ValveTypePressureReducing.xml
-==================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcValveType/PRESSUREREDUCING"
-
-modifications
--------------
-* ApplicableTypeValue "IfcValve/PRESSUREREDUCING"
-  ~~IfcValve/PRESSUREREDUCING~~ IfcValve/PRESSUREREDUCING,IfcValveType/PRESSUREREDUCING
-
-
-
-Pset_ReinforcementBarPitchOfColumn.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcColumnType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcColumn"
-  ~~IfcColumn~~ IfcColumn,IfcColumnType
-* PropertyDefs > PropertyDef [Name="XDirectionTieHoopCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-* PropertyDefs > PropertyDef [Name="YDirectionTieHoopCount"] > PropertyType > TypePropertySingleValue > DataType
-  ~~IfcInteger~~ IfcCountMeasure
-
-
-Pset_ReinforcementBarPitchOfSlab.xml
-====================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSlabType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSlab"
-  ~~IfcSlab~~ IfcSlab,IfcSlabType
-
-
-Pset_MechanicalFastenerBolt.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcMechanicalFastenerType/BOLT"
-
-modifications
--------------
-* ApplicableTypeValue "IfcMechanicalFastener/BOLT"
-  ~~IfcMechanicalFastener/BOLT~~ IfcMechanicalFastener/BOLT,IfcMechanicalFastenerType/BOLT
-
-
-Qto_AudioVisualApplianceBaseQuantities.xml
-==========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcAudioVisualApplianceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcAudioVisualAppliance"
-  ~~IfcAudioVisualAppliance~~ IfcAudioVisualAppliance,IfcAudioVisualApplianceType
-
-
-
-Qto_EvaporativeCoolerBaseQuantities.xml
-=======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcEvaporativeCoolerType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcEvaporativeCooler"
-  ~~IfcEvaporativeCooler~~ IfcEvaporativeCooler,IfcEvaporativeCoolerType
-
-
-
-Pset_BuildingElementProxyCommon.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBuildingElementProxy"
-  ~~IfcBuildingElementProxy~~ IfcBuildingElementProxy,IfcBuildingElementProxyType
-
-
-Qto_CableCarrierSegmentBaseQuantities.xml
-=========================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcCableCarrierSegmentType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcCableCarrierSegment"
-  ~~IfcCableCarrierSegment~~ IfcCableCarrierSegment,IfcCableCarrierSegmentType
-
-
-Pset_TransportElementCommon.xml
-===============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcTransportationDeviceType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcTransportElement"
-  ~~IfcTransportElement~~ IfcTransportationDevice,IfcTransportationDeviceType
-* ApplicableClasses > ClassName "IfcTransportElement"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Qto_EarthworksCutBaseQuantities.xml
-===================================
-
-additions
----------
-* ApplicableTypeValue "IfcEarthworksCut"
-
-
-Pset_DoorWindowGlazingType.xml
+Pset_PavementSurfaceCommon.xml
 ==============================
 
 additions
 ---------
-* ApplicableClasses > ClassName "IfcDoorType"
-* ApplicableClasses > ClassName "IfcWindowType"
+* ApplicableClasses > ClassName "IfcPavementType"
 
 modifications
 -------------
-* ApplicableTypeValue "IfcDoor, IfcWindow"
-  ~~IfcDoor, IfcWindow~~ IfcDoor,IfcWindow,IfcDoorType,IfcWindowType
-* PropertyDefs > PropertyDef [Name="GlassColor"] > Name "GlassColor"
-  ~~GlassColor~~ GlassColour
-
-
-Pset_SpaceThermalLoad.xml
-=========================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSpatialElementType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSpace"
-  ~~IfcSpace~~ IfcSpatialElement,IfcSpatialElementType
-* ApplicableClasses > ClassName "IfcSpace"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
-
-
-Pset_WasteTerminalTypeFloorTrap.xml
-===================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcWasteTerminalType/FLOORTRAP"
-
-modifications
--------------
-* ApplicableTypeValue "IfcWasteTerminal/FLOORTRAP"
-  ~~IfcWasteTerminal/FLOORTRAP~~ IfcWasteTerminal/FLOORTRAP,IfcWasteTerminalType/FLOORTRAP
-
-
-Qto_BuildingElementProxyQuantities.xml
-======================================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcBuildingElementProxyType"
-
-modifications
--------------
-* ApplicableTypeValue "IfcBuildingElementProxy"
-  ~~IfcBuildingElementProxy~~ IfcBuildingElementProxy,IfcBuildingElementProxyType
-* QtoDefs > QtoDef [Name="NetVolume"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-* QtoDefs > QtoDef [Name="NetSurfaceArea"]
-  ~~&lt;QtoDef&gt;~~ &lt;QtoDef&gt;
-
-
-Pset_SensorTypeLevelSensor.xml
-==============================
-
-additions
----------
-* ApplicableClasses > ClassName "IfcSensorType/LEVELSENSOR"
-
-modifications
--------------
-* ApplicableTypeValue "IfcSensor/LEVEL"
-  ~~IfcSensor/LEVEL~~ IfcSensor/LEVELSENSOR,IfcSensorType/LEVELSENSOR
-* ApplicableClasses > ClassName "IfcSensor/LEVEL"
-  ~~&lt;ClassName&gt;~~ &lt;ClassName&gt;
+* ApplicableTypeValue "IfcPavement"
+  ~~IfcPavement~~ IfcPavement,IfcPavementType
 
