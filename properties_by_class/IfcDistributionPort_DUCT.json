@@ -1,0 +1,152 @@
+{
+  "ifcClass": "IfcDistributionPort/DUCT",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 17,
+  "propertySets": [
+    {
+      "name": "Pset_DistributionPortPHistoryDuct",
+      "definition": "Fluid flow performance history attached to an instance of IfcPerformanceHistory assigned to IfcDistributionPort.  This replaces the deprecated IfcFluidFlowProperties for performance values.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionPort/DUCT"
+      ],
+      "applicableTypeValue": "IfcDistributionPort/DUCT",
+      "properties": [
+        {
+          "name": "TemperatureHistory",
+          "definition": "Temperature of the fluid. For air this value represents the dry bulb temperature.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "WetBulbTemperatureHistory",
+          "definition": "Wet bulb temperature of the fluid; only applicable if the fluid is air.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "VolumetricFlowRateHistory",
+          "definition": "The volumetric flow rate of the fluid.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "MassFlowRateHistory",
+          "definition": "The mass flow rate of the fluid.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "FlowConditionHistory",
+          "definition": "Defines the flow condition as a percentage of the cross-sectional area.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "VelocityHistory",
+          "definition": "The velocity of the fluid.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "PressureHisotry",
+          "definition": "The pressure of the fluid.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_DistributionPortTypeDuct",
+      "definition": "Duct port occurrence attributes attached to an instance of IfcDistributionPort.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionPort/DUCT"
+      ],
+      "applicableTypeValue": "IfcDistributionPort/DUCT",
+      "properties": [
+        {
+          "name": "ConnectionType",
+          "definition": "The end-style treatment of the duct port:BEADEDSLEEVE: Beaded Sleeve.\nCOMPRESSION: Compression.\nCRIMP: Crimp.\nDRAWBAND: Drawband.\nDRIVESLIP: Drive slip.\nFLANGED: Flanged.\nOUTSIDESLEEVE: Outside Sleeve.\nSLIPON: Slipon.\nSOLDERED: Soldered.\nSSLIP: S-Slip.\nSTANDINGSEAM: Standing seam.\nSWEDGE: Swedge.\nWELDED: Welded.\nOTHER: Another type of end-style has been applied.\nNONE: No end-style has been applied.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DuctConnectionType",
+          "enumValues": [
+            "BEADEDSLEEVE",
+            "COMPRESSION",
+            "CRIMP",
+            "DRAWBAND",
+            "DRIVESLIP",
+            "FLANGED",
+            "NONE",
+            "OUTSIDESLEEVE",
+            "SLIPON",
+            "SOLDERED",
+            "SSLIP",
+            "STANDINGSEAM",
+            "SWEDGE",
+            "WELDED",
+            "OTHER",
+            "USERDEFINED",
+            "NOTDEFINED"
+          ]
+        },
+        {
+          "name": "ConnectionSubtype",
+          "definition": "The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M\nDIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P\nDSub: DA15, DB25, DC37, DD50, DE9, DE15\nEIAJ: RC5720\nHDMI: A, B, C\nRADIO: IEEE802.11g, IEEE802.11n\nRJ: 4P4C, 6P2C, 8P8C\nSOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40\nTRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NominalWidth",
+          "definition": "The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "NominalHeight",
+          "definition": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.\n\nThe nominal height of the duct connection. Only provided for rectangular shaped ducts.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NominalThickness",
+          "definition": "The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "DryBulbTemperature",
+          "definition": "Dry bulb temperature of the object.\n\nIndicates dry bulb temperature of the air.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "WetBulbTemperature",
+          "definition": "Wet bulb temperature of the air.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "VolumetricFlowRate",
+          "definition": "The volumetric flow rate of the fluid.",
+          "type": "BoundedValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "Velocity",
+          "definition": "The velocity of the fluid.",
+          "type": "BoundedValue",
+          "dataType": "IfcLinearVelocityMeasure"
+        },
+        {
+          "name": "Pressure",
+          "definition": "The pressure of  fluid.",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        }
+      ]
+    }
+  ]
+}

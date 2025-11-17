@@ -1,0 +1,492 @@
+{
+  "ifcClass": "IfcBuilding",
+  "propertySetsCount": 7,
+  "totalPropertiesCount": 64,
+  "propertySets": [
+    {
+      "name": "Pset_Address",
+      "definition": "This Property Set represents an address for delivery of paper based mail and other postal deliveries.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcActor",
+        "IfcBuilding",
+        "IfcSite"
+      ],
+      "applicableTypeValue": "IfcActor,IfcBuilding,IfcSite",
+      "properties": [
+        {
+          "name": "Purpose",
+          "definition": "Indication of the purpose of this object",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AddressType",
+          "enumValues": [
+            "DISTRIBUTIONPOINT",
+            "HOME",
+            "OFFICE",
+            "SITE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "Description",
+          "definition": "The Description of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "UserDefinedPurpose",
+          "definition": "Allows for specification of user specific purpose of the address beyond the enumeration values provided by Purpose attribute of type IfcAddressTypeEnum. When a value is provided for attribute UserDefinedPurpose, in parallel the attribute Purpose shall have enumeration value USERDEFINED.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "InternalLocation",
+          "definition": "An organization defined address for internal mail delivery.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AddressLines",
+          "definition": "The postal address.NOTE  A postal address may occupy several lines (or elements) when recorded. It is expected that normal usage will incorporate relevant elements of the following address concepts: A location within a building (e.g. 3rd Floor) Building name (e.g. Interoperability House) Street number (e.g. 6400) Street name (e.g. Alliance Boulevard). Typical content of address lines may vary in different countries.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "PostalBox",
+          "definition": "An address that is implied by an identifiable mail drop.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Town",
+          "definition": "The name of a town.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Region",
+          "definition": "The name of a region.EXAMPLE  The counties of the United Kingdom and the states of North America are examples of regions.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "PostalCode",
+          "definition": "The code that is used by the country's postal service.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Country",
+          "definition": "The two letter country code (from ISO 3166).",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "TelephoneNumbers",
+          "definition": "The list of telephone numbers at which telephone messages may be received.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "FacsimileNumbers",
+          "definition": "The list of fax numbers at which fax messages may be received.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "PagerNumber",
+          "definition": "The pager number at which paging messages may be received.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ElectronicMailAddresses",
+          "definition": "The list of Email addresses at which Email messages may be received.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "WWWHomePageURL",
+          "definition": "The world wide web address at which the preliminary page of information for the person or organization can be located.NOTE  Information on the world wide web for a person or organization may be separated into a number of pages and across a number of host sites, all of which may be linked together. It is assumed that all such information may be referenced from a single page that is termed the home page for that person or organization.",
+          "type": "SingleValue",
+          "dataType": "IfcURIReference"
+        },
+        {
+          "name": "MessagingIDs",
+          "definition": "IDs or addresses for any other means of telecommunication, for example instant messaging, voice-over-IP, or file transfer protocols. The communication protocol is indicated by the URI value with scheme designations such as irc:, sip:, or ftp:.",
+          "type": "ListValue",
+          "dataType": "IfcURIReference"
+        }
+      ]
+    },
+    {
+      "name": "Pset_BuildingCommon",
+      "definition": "Properties common to the definition of all instances of IfcBuilding. Please note that several building attributes are handled directly at the IfcBuilding instance, the building number (or short name) by IfcBuilding.Name, the building name (or long name) by IfcBuilding.LongName, and the description (or comments) by IfcBuilding.Description. Actual building quantities, like building perimeter, building area and building volume are provided by IfcElementQuantity, and the building classification according to national building code by IfcClassificationReference.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "BuildingID",
+          "definition": "A unique identifier assigned to a building. A temporary identifier is initially assigned at the time of making a planning application. This temporary identifier is changed to a permanent identifier when the building is registered into a statutory buildings and properties database.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "IsPermanentID",
+          "definition": "Indicates whether the identity assigned to the object is permanent (= TRUE) or temporary (=FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "ConstructionMethod",
+          "definition": "The type of construction action to the object, e.g. new construction, renovation, refurbishment, etc.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "FireProtectionClass",
+          "definition": "Main fire protection class for the building which is assigned from the fire protection classification table as given by the relevant national building code.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SprinklerProtection",
+          "definition": "Indication whether this object is sprinkler protected (TRUE) or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "SprinklerProtectionAutomatic",
+          "definition": "Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).\nIt should only be given, if the property \"SprinklerProtection\" is set to TRUE.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "OccupancyType",
+          "definition": "Occupancy type for this object.\nIt is defined according to the presiding national building code.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "GrossPlannedArea",
+          "definition": "Total planned gross area of the spatial structure element. Used for programming the spatial structure element.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "NetPlannedArea",
+          "definition": "Total planned net area of the object. Used for programming the object.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "NumberOfStoreys",
+          "definition": "The number of storeys within a building.\nCaptured for those cases where the IfcBuildingStorey entity is not used. Note that if IfcBuildingStorey is asserted and the number of storeys in a building can be determined from it, then this approach should be used in preference to setting a property for the number of storeys.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "YearOfConstruction",
+          "definition": "Year of construction of this building, including expected year of completion.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "YearOfLastRefurbishment",
+          "definition": "Year of last major refurbishment, or reconstruction, of the building (applies to reconstruction works).",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IsLandmarked",
+          "definition": "This builing is listed as a historic building (TRUE), or not (FALSE), or unknown.",
+          "type": "SingleValue",
+          "dataType": "IfcLogical"
+        },
+        {
+          "name": "ElevationOfRefHeight",
+          "definition": "Elevation above sea level of the reference height used for all storey elevation measures, equals to height 0.0. It is usually the ground floor level.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "ElevationOfTerrain",
+          "definition": "Elevation above the minimal terrain level around the foot print of the building, given in elevation above sea level.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_BuildingUse",
+      "definition": "Provides information on on the real estate context of the building of interest both current and anticipated.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": [
+        {
+          "name": "MarketCategory",
+          "definition": "Category of use e.g. residential, commercial, recreation etc.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "MarketSubCategory",
+          "definition": "Subset of category of use e.g. multi-family, 2 bedroom, low rise.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "PlanningControlStatus",
+          "definition": "Label of zoning category or class, or planning control category for the site or facility.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NarrativeText",
+          "definition": "Added information relating to the adjacent building use that is not appropriate to the general descriptive text associated with an entity through the inherited IfcRoot.Description.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "VacancyRateInCategoryNow",
+          "definition": "Percentage of vacancy found in the particular category currently.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "TenureModesAvailableNow",
+          "definition": "A list of the tenure modes that are currently available expressed in terms of IfcLabel.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "MarketSubCategoriesAvailableNow",
+          "definition": "A list of the sub categories of property that are currently available expressed in terms of IfcLabel.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "RentalRatesInCategoryNow",
+          "definition": "Range of the cost rates for property currently available in the required category.",
+          "type": "BoundedValue",
+          "dataType": "IfcMonetaryMeasure"
+        },
+        {
+          "name": "VacancyRateInCategoryFuture",
+          "definition": "Percentage of vacancy found in the particular category expected in the future.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "TenureModesAvailableFuture",
+          "definition": "A list of the tenure modes that are expected to be available in the future expressed in terms of IfcLabel.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "MarketSubCategoriesAvailableFuture",
+          "definition": "A list of the sub categories of property that are expected to be available in the future expressed in terms of IfcLabel.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "RentalRatesInCategoryFuture",
+          "definition": "Range of the cost rates for property expected to be available in the future in the required category.",
+          "type": "BoundedValue",
+          "dataType": "IfcMonetaryMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_BuildingUseAdjacent",
+      "definition": "Provides information on adjacent buildings and their uses to enable their impact on the building of interest to be determined. Note that for each instance of the property set used, where there is an existence of risk, there will be an instance of the property set Pset_Risk (q.v).",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": [
+        {
+          "name": "MarketCategory",
+          "definition": "Category of use e.g. residential, commercial, recreation etc.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "MarketSubCategory",
+          "definition": "Subset of category of use e.g. multi-family, 2 bedroom, low rise.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "PlanningControlStatus",
+          "definition": "Label of zoning category or class, or planning control category for the site or facility.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NarrativeText",
+          "definition": "Added information relating to the adjacent building use that is not appropriate to the general descriptive text associated with an entity through the inherited IfcRoot.Description.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        }
+      ]
+    },
+    {
+      "name": "Pset_OutsideDesignCriteria",
+      "definition": "Outside air conditions used as the basis for calculating thermal loads at peak conditions, as well as the weather data location from which these conditions were obtained. HISTORY: New property set in IFC Release 1.0.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": [
+        {
+          "name": "HeatingDryBulb",
+          "definition": "Dry bulb temperature for heating design.\n\nAt outside.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "HeatingWetBulb",
+          "definition": "Outside wet bulb temperature for heating design.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "HeatingDesignDay",
+          "definition": "The month, day and time that has been selected for the heating design calculations.",
+          "type": "SingleValue",
+          "dataType": "IfcDateTime"
+        },
+        {
+          "name": "CoolingDryBulb",
+          "definition": "Dry bulb temperature, usually for for cooling design.\n\nOutside dry bulb temperature",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "CoolingWetBulb",
+          "definition": "Outside wet bulb temperature for cooling design.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "CoolingDesignDay",
+          "definition": "The month, day  and time that has been selected for the cooling design calculations.",
+          "type": "SingleValue",
+          "dataType": "IfcDateTime"
+        },
+        {
+          "name": "WeatherDataStation",
+          "definition": "The site weather data station description or reference to the data source from which weather data was obtained for use in calculations.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "WeatherDataDate",
+          "definition": "The date for which the weather data was gathered.",
+          "type": "SingleValue",
+          "dataType": "IfcDateTime"
+        },
+        {
+          "name": "BuildingThermalExposure",
+          "definition": "The thermal exposure expected by the building based on surrounding site conditions.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_BuildingThermalExposure",
+          "enumValues": [
+            "HEAVY",
+            "LIGHT",
+            "MEDIUM",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "PrevailingWindDirection",
+          "definition": "The prevailing wind angle direction measured from True North (0 degrees) in a clockwise direction.",
+          "type": "SingleValue",
+          "dataType": "IfcPlaneAngleMeasure"
+        },
+        {
+          "name": "PrevailingWindVelocity",
+          "definition": "The design wind velocity coming from the direction specified by the PrevailingWindDirection attribute.",
+          "type": "SingleValue",
+          "dataType": "IfcLinearVelocityMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_UtilityConsumptionPHistory",
+      "definition": "Consumption of utility resources, typically applied to the IfcBuilding instance, used to identify how much was consumed on I.e., a monthly basis.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": [
+        {
+          "name": "Heat",
+          "definition": "The amount of heat energy consumed during the period specified in the time series.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "Electricity",
+          "definition": "The amount of electricity consumed during the period specified in the time series.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "Water",
+          "definition": "The amount of water consumed during the period specified in the time series.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "Fuel",
+          "definition": "The amount of fuel consumed during the period specified in the time series.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "Steam",
+          "definition": "The amount of steam consumed during the period specified in the time series.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Qto_BuildingBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all occurrences of building.",
+      "templateType": "QTO_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuilding"
+      ],
+      "applicableTypeValue": "IfcBuilding",
+      "properties": []
+    }
+  ]
+}

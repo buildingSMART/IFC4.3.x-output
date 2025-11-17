@@ -1,0 +1,212 @@
+{
+  "ifcClass": "IfcEvaporator",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 22,
+  "propertySets": [
+    {
+      "name": "Pset_EvaporatorPHistory",
+      "definition": "Evaporator performance history attributes.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcEvaporator"
+      ],
+      "applicableTypeValue": "IfcEvaporator",
+      "properties": [
+        {
+          "name": "HeatRejectionRate",
+          "definition": "Sum of the refrigeration effect and the heat equivalent of the power input to the compressor.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "ExteriorHeatTransferCoefficient",
+          "definition": "Exterior heat transfer coefficient associated with exterior surface area.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "InteriorHeatTransferCoefficient",
+          "definition": "Interior heat transfer coefficient associated with interior surface area.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "RefrigerantFoulingResistance",
+          "definition": "Fouling resistance on the refrigerant side.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "EvaporatingTemperature",
+          "definition": "Refrigerant evaporating temperature.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "LogarithmicMeanTemperatureDifference",
+          "definition": "Logarithmic mean temperature difference between refrigerant and water or air.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "UAcurves",
+          "definition": "UV = f (VExterior, VInterior), UV as a function of interior and exterior fluid flow velocity at the entrance.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "CompressorEvaporatorHeatGain",
+          "definition": "Heat gain between the evaporator outlet and the compressor inlet.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "CompressorEvaporatorPressureDrop",
+          "definition": "Pressure drop between the evaporator outlet and the compressor inlet.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "EvaporatorMeanVoidFraction",
+          "definition": "Mean void fraction in evaporator.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "WaterFoulingResistance",
+          "definition": "Fouling resistance on water/air side.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EvaporatorTypeCommon",
+      "definition": "Evaporator type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcEvaporator",
+        "IfcEvaporatorType"
+      ],
+      "applicableTypeValue": "IfcEvaporator,IfcEvaporatorType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "EvaporatorMediumType",
+          "definition": "ColdLiquid: Evaporator is using liquid type of fluid to exchange heat with refrigerant.\nColdAir: Evaporator is using air to exchange heat with refrigerant.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_EvaporatorMediumType",
+          "enumValues": [
+            "COLDAIR",
+            "COLDLIQUID",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "EvaporatorCoolant",
+          "definition": "The fluid used for the coolant in the evaporator.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_EvaporatorCoolant",
+          "enumValues": [
+            "BRINE",
+            "GLYCOL",
+            "WATER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "RefrigerantClass",
+          "definition": "Refrigerant class used by the object.\nCFC: Chlorofluorocarbons.\nHCFC: Hydrochlorofluorocarbons.\nHFC: Hydrofluorocarbons.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_RefrigerantClass",
+          "enumValues": [
+            "AMMONIA",
+            "CFC",
+            "CO2",
+            "H2O",
+            "HCFC",
+            "HFC",
+            "HYDROCARBONS",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ExternalSurfaceArea",
+          "definition": "External surface area (both primary and secondary area).",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "InternalSurfaceArea",
+          "definition": "Internal surface area.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "InternalRefrigerantVolume",
+          "definition": "Internal volume of object (refrigerant side).",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "InternalWaterVolume",
+          "definition": "Internal volume of object (water side).",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "NominalHeatTransferArea",
+          "definition": "Nominal heat transfer surface area associated with nominal overall heat transfer coefficient.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "NominalHeatTransferCoefficient",
+          "definition": "Nominal overall heat transfer coefficient associated with nominal heat transfer area.",
+          "type": "SingleValue",
+          "dataType": "IfcThermalTransmittanceMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_EvaporatorBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of evaporators.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcEvaporator",
+        "IfcEvaporatorType"
+      ],
+      "applicableTypeValue": "IfcEvaporator,IfcEvaporatorType",
+      "properties": []
+    }
+  ]
+}

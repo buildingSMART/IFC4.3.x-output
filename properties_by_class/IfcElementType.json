@@ -1,0 +1,891 @@
+{
+  "ifcClass": "IfcElementType",
+  "propertySetsCount": 13,
+  "totalPropertiesCount": 101,
+  "propertySets": [
+    {
+      "name": "Pset_Condition",
+      "definition": "Determines the state or condition of an element at a particular point in time.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "AssessmentDate",
+          "definition": "Date on which the overall condition is assessed",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "AssessmentCondition",
+          "definition": "The overall condition of a product based on an assessment of the contributions to the overall condition made by the various criteria considered. The meanings given to the values of assessed condition should be agreed and documented by local agreements. For instance, is overall condition measured on a scale of 1 - 10 or by assigning names such as Good, OK, Poor.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AssessmentDescription",
+          "definition": "Qualitative description of the condition.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "AssessmentType",
+          "definition": "Category of latest condition assessment report of the asset.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AssessmentMethod",
+          "definition": "External reference to assessment method or application used to perform the assessment.",
+          "type": "ReferenceValue",
+          "refType": "IfcDocumentReference"
+        },
+        {
+          "name": "LastAssessmentReport",
+          "definition": "Reference to latest condition (state of health) report.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NextAssessmentDate",
+          "definition": "Date of next condition inspection",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "AssessmentFrequency",
+          "definition": "Indicates how often the equipment should be assessed, to have a clear estimation on its working state, based on which the maintenance staff can decide whether it requires maintenance or requires to be updated or replaced.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ConstructionAdministration",
+      "definition": "Properties for Construction Administration. Often used for facility and asset management.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "ProcurementMethod",
+          "definition": "The method by which an IfcProductType/IfcProduct is acquired and installed. The value provided shall be one of the following four character acronyms: “CFCI” (meaning Contractor Furnished Contractor Installed), “OFCI” (meaning Owner Furnished Contractor Installed), or “OFOI” (meaning Owner Furnished Owner Installed).",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SpecificationSectionNumber",
+          "definition": "A reference number to an external contract technical specification section describing either (a) minimum performance requirements of a given IfcProductType/IfcProduct or (b) a preselection for a specific IfcProductType/IfcProduct made for this project.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SubmittalIdentifer",
+          "definition": "The reference number to an external construction administration submittal used by the construction contractor and/or subcontractor to verify that the referenced IfcProductType/IfcProduct selection conforms with the requirements found in the referenced SpecificationSectionNumber.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ElementKinematics",
+      "definition": "Information confirming that the element has cyclic and/or pathed kinematic behaviour. The resulting envelope may be available as a 'clearance' shape representation.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "CyclicPath",
+          "definition": "Represents the time:angle table of the kinematic behaviour.",
+          "type": "TableValue",
+          "definingValueType": "IfcTimeMeasure",
+          "definedValueType": "IfcPlaneAngleMeasure"
+        },
+        {
+          "name": "CyclicRange",
+          "definition": "Identifies the angular range of the kinematic behaviour",
+          "type": "SingleValue",
+          "dataType": "IfcPlaneAngleMeasure"
+        },
+        {
+          "name": "LinearPath",
+          "definition": "Represents the time:distance table of the kinematic behaviour.",
+          "type": "TableValue",
+          "definingValueType": "IfcTimeMeasure",
+          "definedValueType": "IfcLengthMeasure"
+        },
+        {
+          "name": "LinearRange",
+          "definition": "Identifies the linear range of the kinematic behaviour.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "MaximumAngularVelocity",
+          "definition": "Identifies the maximum angular velocity of the kinematic behaviour.",
+          "type": "SingleValue",
+          "dataType": "IfcAngularVelocityMeasure"
+        },
+        {
+          "name": "MaximumConstantSpeed",
+          "definition": "Identifies the maximum constant speed over the kinematic path.",
+          "type": "SingleValue",
+          "dataType": "IfcLinearVelocityMeasure"
+        },
+        {
+          "name": "MinimumTime",
+          "definition": "Identifies the minimum time for the kinematic behaviour.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnvironmentalCondition",
+      "definition": "Properties defining environment conditions required by the element.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "ReferenceAirRelativeHumidity",
+          "definition": "Measurement of the ratio of water vapor in the air.",
+          "type": "BoundedValue",
+          "dataType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "ReferenceEnvironmentTemperature",
+          "definition": "Ideal temperature range.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "MaximumAtmosphericPressure",
+          "definition": "Maximum level of atmospheric pressure that the equipment can operate effectively in.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "StorageTemperatureRange",
+          "definition": "Allowed storage temperature range that the element complies with.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "MaximumWindSpeed",
+          "definition": "Maximum resistance to wind load exposure.",
+          "type": "SingleValue",
+          "dataType": "IfcLinearVelocityMeasure"
+        },
+        {
+          "name": "OperationalTemperatureRange",
+          "definition": "The temperature range in which the device operates normally.\n\nAllowable operation ambient air temperature range.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "MaximumRainIntensity",
+          "definition": "Maximum level of rain intensity that the equipment can operate effectively in. It is usually measured in millimeter per hour (mm/h).",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "SaltMistLevel",
+          "definition": "Maximum level of salt mist that the equipment can operate effectively in. It is provided according to an international or national standard.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SeismicResistance",
+          "definition": "Maximum magnitude of earthquake that the equipment complies with. The value indicates earthquake intensity measured in Richter scale.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "SmokeLevel",
+          "definition": "Maximum level of smoke that the equipment complies with. It is provided according to an international or national standard.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "MaximumSolarRadiation",
+          "definition": "Maximum level of solar irradiance that the equipment can operate effectively in. This is usually tested and measured by a national or international standard. The value indicates power density measured in watt per square meter (w/m2).",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnvironmentalImpactIndicators",
+      "definition": "Environmental impact indicators are related to a given “functional unit” (ISO 14040 concept). An example of functional unit is a \"Double glazing window with PVC frame\" and the unit to consider is \"one square meter of opening elements filled by this product”.\nIndicators values are valid for the whole life cycle or only a specific phase (see LifeCyclePhase property). Values of all the indicators are expressed per year according to the expected service life. The first five properties capture the characteristics of the functional unit. The following properties are related to environmental indicators.\nThere is a consensus agreement international for the five one. Last ones are not yet fully and formally agreed at the international level.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "FunctionalUnitReference",
+          "definition": "Reference to a database or a classification",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IndicatorsUnit",
+          "definition": "The unit of the quantity the environmental indicators values are related with.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "LifeCyclePhase",
+          "definition": "The whole life cycle or only a given phase  from which environmental data are valid.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_LifeCyclePhase",
+          "enumValues": [
+            "ACQUISITION",
+            "CRADLETOSITE",
+            "DECONSTRUCTION",
+            "DISPOSAL",
+            "DISPOSALTRANSPORT",
+            "GROWTH",
+            "INSTALLATION",
+            "MAINTENANCE",
+            "MANUFACTURE",
+            "OCCUPANCY",
+            "OPERATION",
+            "PROCUREMENT",
+            "PRODUCTION",
+            "PRODUCTIONTRANSPORT",
+            "RECOVERY",
+            "REFURBISHMENT",
+            "REPAIR",
+            "REPLACEMENT",
+            "TRANSPORT",
+            "USAGE",
+            "WASTE",
+            "WHOLELIFECYCLE",
+            "USERDEFINED",
+            "NOTDEFINED"
+          ]
+        },
+        {
+          "name": "ExpectedServiceLife",
+          "definition": "Expected service life in years.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "TotalPrimaryEnergyConsumptionPerUnit",
+          "definition": "Quantity of energy used as defined in ISO21930:2007.",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "WaterConsumptionPerUnit",
+          "definition": "Quantity of water used.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "HazardousWastePerUnit",
+          "definition": "Quantity of hazardous waste generated",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "NonHazardousWastePerUnit",
+          "definition": "Quantity of non hazardous waste generated",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "ClimateChangePerUnit",
+          "definition": "Quantity of greenhouse gases emitted calculated in equivalent CO2",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "AtmosphericAcidificationPerUnit",
+          "definition": "Quantity of gases responsible for the atmospheric acidification calculated in equivalent SO2",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "RenewableEnergyConsumptionPerUnit",
+          "definition": "Quantity of renewable energy used as defined in ISO21930:2007",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "NonRenewableEnergyConsumptionPerUnit",
+          "definition": "Quantity of non-renewable energy used as defined in ISO21930:2007",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "ResourceDepletionPerUnit",
+          "definition": "Quantity of resources used calculated in equivalent antimony",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "InertWastePerUnit",
+          "definition": "Quantity of inert waste generated",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "RadioactiveWastePerUnit",
+          "definition": "Quantity of radioactive waste generated",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "StratosphericOzoneLayerDestructionPerUnit",
+          "definition": "Quantity of gases destroying the stratospheric ozone layer calculated in equivalent CFC-R11",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "PhotochemicalOzoneFormationPerUnit",
+          "definition": "Quantity of gases creating the photochemical ozone calculated in equivalent ethylene",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "EutrophicationPerUnit",
+          "definition": "Quantity of eutrophicating compounds calculated in equivalent PO4",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnvironmentalImpactValues",
+      "definition": "The following properties capture environmental impact values of an element. They correspond to the indicators defined into Pset_EnvironmentalImpactIndicators.\nEnvironmental impact values are obtained multiplying indicator value per unit by the relevant quantity of the element.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "TotalPrimaryEnergyConsumption",
+          "definition": "Quantity of energy used as defined in ISO21930:2007.",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "WaterConsumption",
+          "definition": "Quantity of water used.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "HazardousWaste",
+          "definition": "Quantity of hazardous waste generated.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "NonHazardousWaste",
+          "definition": "Quantity of non hazardous waste generated.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "ClimateChange",
+          "definition": "Quantity of greenhouse gases emitted calculated in equivalent CO2.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "AtmosphericAcidification",
+          "definition": "Quantity of gases responsible for the atmospheric acidification calculated in equivalent SO2.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "RenewableEnergyConsumption",
+          "definition": "Quantity of renewable energy used as defined in ISO21930:2007",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "NonRenewableEnergyConsumption",
+          "definition": "Quantity of non-renewable energy used as defined in ISO21930:2007",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "ResourceDepletion",
+          "definition": "Quantity of resources used calculated in equivalent antimony.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "InertWaste",
+          "definition": "Quantity of inert waste generated .",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "RadioactiveWaste",
+          "definition": "Quantity of radioactive waste generated.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "StratosphericOzoneLayerDestruction",
+          "definition": "Quantity of gases destroying the stratospheric ozone layer calculated in equivalent CFC-R11.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "PhotochemicalOzoneFormation",
+          "definition": "Quantity of gases creating the photochemical ozone calculated in equivalent ethylene.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "Eutrophication",
+          "definition": "Quantity of eutrophicating compounds calculated in equivalent PO4.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "LeadInTime",
+          "definition": "Lead in time before start of process.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "Duration",
+          "definition": "Duration.\n\nDuration of process.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "LeadOutTime",
+          "definition": "Lead out time after end of process.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceStrategy",
+      "definition": "Property set for the association of a maintenance strategy to an element, asset of system.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "AssetCriticality",
+          "definition": "Rating of the asset's criticality to the operation of the facility",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "AssetFrailty",
+          "definition": "Rating of the asset's frailty to breakage or deterioration",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "AssetPriority",
+          "definition": "Combined criticality and frailty rating indicating the operational and maintenance priority of the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "MonitoringType",
+          "definition": "Monitoring strategy chosen for the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_MonitoringType",
+          "enumValues": [
+            "FEEDBACK",
+            "INSPECTION",
+            "IOT",
+            "PPM",
+            "SENSORS"
+          ]
+        },
+        {
+          "name": "AccidentResponse",
+          "definition": "Accident response chosen for the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AccidentResponse",
+          "enumValues": [
+            "EMERGENCYINSPECTION",
+            "EMERGENCYPROCEDURE",
+            "REACTIVE",
+            "URGENTINSPECTION",
+            "URGENTPROCEDURE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerCondition",
+      "definition": "Trigger levels for an asset that has an inspection-based maintenance strategy",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "ConditionTargetPerformance",
+          "definition": "Target condition of the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionMaintenanceLevel",
+          "definition": "Condition that will trigger maintenance",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionReplacementLevel",
+          "definition": "Condition that will trigger a replacement process",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionDisposalLevel",
+          "definition": "Condition that will trigger a disposal process",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerDuration",
+      "definition": "Trigger levels for an asset that has an PPM based maintenance strategy.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "DurationTargetPerformance",
+          "definition": "Target time to failure of the asset",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationMaintenanceLevel",
+          "definition": "Duration interval at which maintenance is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationReplacementLevel",
+          "definition": "Duration interval at which replacement is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationDisposalLevel",
+          "definition": "Duration interval at which disposal is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerPerformance",
+      "definition": "Properties for performance based maintenance policies",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "TargetPerformance",
+          "definition": "Target capacity or performance of the asset. Units of the performance value are specified through the propertyValue units attribute.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "PerformanceMaintenanceLevel",
+          "definition": "Performance level at which maintenance takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "ReplacementLevel",
+          "definition": "Performance level at which replacement takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "DisposalLevel",
+          "definition": "Performance level at which disposal takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ManufacturerTypeInformation",
+      "definition": "Defines characteristics of types (ranges) of manufactured products that may be given by the manufacturer. Note that the term 'manufactured' may also be used to refer to products that are supplied and identified by the supplier or that are assembled off site by a third party provider.\nHISTORY: This property set replaces the entity IfcManufacturerInformation from previous IFC releases. IFC 2x4: AssemblyPlace property added.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "GlobalTradeItemNumber",
+          "definition": "The Global Trade Item Number (GTIN) is an identifier for trade items developed by GS1 (www.gs1.org).",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "ArticleNumber",
+          "definition": "Article number or reference that is be applied to a configured product according to a standard scheme for article number definition as defined by the manufacturer. It is often used as the purchasing number.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "ModelReference",
+          "definition": "The model number or designator of the product model (or product line) as assigned by the manufacturer of the manufactured item.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ModelLabel",
+          "definition": "The descriptive model name of the product model (or product line) as assigned by the manufacturer of the manufactured item.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Manufacturer",
+          "definition": "The organization that manufactured and/or assembled the item.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ProductionYear",
+          "definition": "The year of production of the manufactured item.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AssemblyPlace",
+          "definition": "Enumeration defining where the assembly is intended to take place, either in a factory, other offsite location or on the building site.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssemblyPlace",
+          "enumValues": [
+            "FACTORY",
+            "OFFSITE",
+            "SITE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "OperationalDocument",
+          "definition": "Manufacturer's operational document",
+          "type": "ReferenceValue",
+          "refType": "IfcExternalReference"
+        },
+        {
+          "name": "SafetyDocument",
+          "definition": "Manufacturer's safety document",
+          "type": "ReferenceValue",
+          "refType": "IfcDocumentReference"
+        },
+        {
+          "name": "PerformanceCertificate",
+          "definition": "Manufacturer's performance certificate",
+          "type": "ReferenceValue",
+          "refType": "IfcDocumentReference"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ServiceLife",
+      "definition": "Captures the period of time that an artifact will last.  HISTORY: Introduced in IFC2X4 as replacement for IfcServiceLife.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "ServiceLifeDuration",
+          "definition": "The length or duration of a service life.The lower bound indicates pessimistic service life, the upper bound indicates optimistic service life, and the setpoint indicates the typical service life.",
+          "type": "BoundedValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "MeanTimeBetweenFailure",
+          "definition": "The average time duration between instances of failure of a product.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        }
+      ]
+    },
+    {
+      "name": "Pset_Warranty",
+      "definition": "An assurance given by the seller or provider of an artefact that the artefact is without defects and will operate as described for a defined period of time without failure and that if a defect does arise during that time, that it will be corrected by the seller or provider.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElement",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcElement,IfcElementType",
+      "properties": [
+        {
+          "name": "WarrantyIdentifier",
+          "definition": "The identifier assigned to a warranty.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "WarrantyStartDate",
+          "definition": "The date on which the warranty commences.",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "IsExtendedWarranty",
+          "definition": "Indication of whether this is an extended warranty whose duration is greater than that normally assigned to an artefact (=TRUE) or not (= FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "WarrantyPeriod",
+          "definition": "The time duration during which a manufacturer or supplier guarantees or warrants the performance of an artefact.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "WarrantyContent",
+          "definition": "The content of the warranty.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "PointOfContact",
+          "definition": "The organization that should be contacted for action under the terms of the warranty. Note that the role of the organization (manufacturer, supplier, installer etc.) is determined by the IfcActorRole attribute of IfcOrganization.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Exclusions",
+          "definition": "Items, conditions or actions that may be excluded from the warranty or that may cause the warranty to become void.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "ifcClass": "IfcProtectiveDeviceTrippingUnit/ELECTRONIC",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 6,
+  "propertySets": [
+    {
+      "name": "Pset_ProtectiveDeviceTrippingUnitTypeElectronic",
+      "definition": "Information on tripping units that are electronically tripped.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDeviceTrippingUnit/ELECTRONIC",
+        "IfcProtectiveDeviceTrippingUnitType/ELECTRONIC"
+      ],
+      "applicableTypeValue": "IfcProtectiveDeviceTrippingUnit/ELECTRONIC,IfcProtectiveDeviceTrippingUnitType/ELECTRONIC",
+      "properties": [
+        {
+          "name": "ElectronicTrippingUnitType",
+          "definition": "A list of the available types of electronic tripping unit  from which that required may be selected.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElectronicTrippingUnitType",
+          "enumValues": [
+            "EP_BM",
+            "EP_MP",
+            "EP_SC",
+            "EP_STD",
+            "EP_TIMEDELAYED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NominalCurrents",
+          "definition": "A set of values providing information on available modules (chips) for setting the nominal current of the protective device.\n\nA set of values providing information on available modules (chips) for setting the nominal current of the protective device. If\nthe set is empty, no nominal current modules are available for the tripping unit.",
+          "type": "ListValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "N_Protection",
+          "definition": "An indication whether the electronic tripping unit has separate protection for the N conductor, or not.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "N_Protection_50",
+          "definition": "An indication whether the electronic tripping unit is tripping if the current in the N conductor is more than 50% of that of the phase conductors. The property is only asserted if the property N_Protection is asserted.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "N_Protection_100",
+          "definition": "An indication whether the electronic tripping unit is tripping if the current in the N conductor is more than 100% of that of the phase conductors. The property is only asserted if the property N_Protection is asserted.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "N_Protection_Select",
+          "definition": "An indication whether the use of the N_Protection can be selected by the user or not. If both the properties N_Protection_50 and N_Protection_100 are asserted, the value of N_Protection_Select property is set to TRUE. The property is only asserted if the property N_Protection is asserted.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "ifcClass": "IfcProtectiveDeviceTrippingUnitType/THERMAL",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 7,
+  "propertySets": [
+    {
+      "name": "Pset_ProtectiveDeviceTrippingUnitTypeThermal",
+      "definition": "Information on tripping units that are thermally tripped.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDeviceTrippingUnit/THERMAL",
+        "IfcProtectiveDeviceTrippingUnitType/THERMAL"
+      ],
+      "applicableTypeValue": "IfcProtectiveDeviceTrippingUnit/THERMAL,IfcProtectiveDeviceTrippingUnitType/THERMAL",
+      "properties": [
+        {
+          "name": "ThermalTrippingUnitType",
+          "definition": "A list of the available types of thermal tripping unit  from which that required may be selected.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ThermalTrippingUnitType",
+          "enumValues": [
+            "DIAZED",
+            "MINIZED",
+            "NEOZED",
+            "NH_FUSE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "I1",
+          "definition": "The (thermal) lower testing current limit in [x In], indicating that for currents lower than I1, the tripping time shall be longer than the associated tripping time, T2.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "I2",
+          "definition": "The (thermal) upper testing current limit in [x In], indicating that for currents larger than I2, the tripping time shall be shorter than the associated tripping time, T2.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "T2",
+          "definition": "The (thermal) testing time in [s] associated with the testing currents I1 and I2.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "DefinedTemperature",
+          "definition": "The ambient temperature at which the thermal current/time-curve associated with this protection device is defined.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureFactor",
+          "definition": "The correction factor (typically measured as %/deg K) for adjusting the thermal current/time to an ambient temperature different from the value given by the defined temperature.",
+          "type": "SingleValue",
+          "dataType": "IfcRatioMeasure"
+        },
+        {
+          "name": "CurveDesignation",
+          "definition": "The designation of the trippingcurve given by the manufacturer. For a MCB the designation should be in accordance with the designations given in IEC 60898.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    }
+  ]
+}

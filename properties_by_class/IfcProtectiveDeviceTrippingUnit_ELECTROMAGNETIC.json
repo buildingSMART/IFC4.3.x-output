@@ -1,0 +1,90 @@
+{
+  "ifcClass": "IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 10,
+  "propertySets": [
+    {
+      "name": "Pset_ProtectiveDeviceTrippingUnitTypeElectroMagnetic",
+      "definition": "Information on tripping units that are electrically or magnetically tripped.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC",
+        "IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC"
+      ],
+      "applicableTypeValue": "IfcProtectiveDeviceTrippingUnit/ELECTROMAGNETIC,IfcProtectiveDeviceTrippingUnitType/ELECTROMAGNETIC",
+      "properties": [
+        {
+          "name": "ElectroMagneticTrippingUnitType",
+          "definition": "A list of the available types of electric magnetic tripping unit  from which that required may be selected. These cover overload, none special, short circuit, motor protection and bi-metal tripping.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElectroMagneticTrippingUnitType",
+          "enumValues": [
+            "OL",
+            "TMP_BM",
+            "TMP_MP",
+            "TMP_SC",
+            "TMP_STD",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "I1",
+          "definition": "The (thermal) lower testing current limit in [x In], indicating that for currents lower than I1, the tripping time shall be longer than the associated tripping time, T2.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "I2",
+          "definition": "The (thermal) upper testing current limit in [x In], indicating that for currents larger than I2, the tripping time shall be shorter than the associated tripping time, T2.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "T2",
+          "definition": "The (thermal) testing time in [s] associated with the testing currents I1 and I2.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "DefinedTemperature",
+          "definition": "The ambient temperature at which the thermal current/time-curve associated with this protection device is defined.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureFactor",
+          "definition": "The correction factor (typically measured as %/deg K) for adjusting the thermal current/time to an ambient temperature different from the value given by the defined temperature.",
+          "type": "SingleValue",
+          "dataType": "IfcRatioMeasure"
+        },
+        {
+          "name": "I4",
+          "definition": "The lower electromagnetic testing current limit in [x In], indicating that for currents lower than I4, the tripping time shall be longer than the associated tripping time, T5, i.e. the device shall not trip instantaneous.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "I5",
+          "definition": "The upper electromagnetic testing current limit in [x In], indicating that for currents larger than I5, the tripping time shall be shorter than or equal to the associated tripping time, T5, i.e. the device shall trip instantaneous.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "T5",
+          "definition": "The electromagnetic testing time in [s] associated with the testing currents I4 and I5, i.e. electromagnetic tripping time",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "CurveDesignation",
+          "definition": "The designation of the trippingcurve given by the manufacturer. For a MCB the designation should be in accordance with the designations given in IEC 60898.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "ifcClass": "IfcAnnotation",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 8,
+  "propertySets": [
+    {
+      "name": "Pset_AnnotationLineOfSight",
+      "definition": "Specifies the properties of the line of sight. For example, it can be used to define the line of sight visibility at the junction between two roads (particularly between an access road and a public road); or in the design of a stadium or theatre.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAnnotation"
+      ],
+      "applicableTypeValue": "IfcAnnotation",
+      "properties": [
+        {
+          "name": "SetbackDistance",
+          "definition": "Setback distance from the point of connection on the major element along the axis of the minor element (e.g. distance from a public road at which the line of sigfht is measured.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "VisibleAngleLeft",
+          "definition": "Angle of visibility to the left of the access.",
+          "type": "SingleValue",
+          "dataType": "IfcPositivePlaneAngleMeasure"
+        },
+        {
+          "name": "VisibleAngleRight",
+          "definition": "Angle of visibility to the right of the access.",
+          "type": "SingleValue",
+          "dataType": "IfcPositivePlaneAngleMeasure"
+        },
+        {
+          "name": "RoadVisibleDistanceLeft",
+          "definition": "Distance visible to the left of the access.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "RoadVisibleDistanceRight",
+          "definition": "Distance visible to the right of the access.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SoundAttenuation",
+      "definition": "Common definition to capture sound pressure at a point on behalf of a device typically used within the context of building services and flow distribution systems.   To indicate sound values from an instance of IfcDistributionFlowElement at a particular location, IfcAnnotation instance(s) should be assigned to the IfcDistributionFlowElement through the IfcRelAssignsToProduct relationship. The IfcAnnotation should specify ObjectType of 'Sound' and geometric representation of 'Annotation Point' consisting of a single IfcPoint subtype as described at IfcAnnotation.  This property set is instantiated multiple times on an object for each frequency band.  HISTORY: New property set in IFC Release 2x4.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAnnotation"
+      ],
+      "applicableTypeValue": "IfcAnnotation",
+      "properties": [
+        {
+          "name": "SoundScale",
+          "definition": "The reference sound scale.DBA: Decibels in an A-weighted scale\nDBB: Decibels in an B-weighted scale\nDBC: Decibels in an C-weighted scale\nNC: Noise criteria\nNR: Noise rating",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_SoundScale",
+          "enumValues": [
+            "DBA",
+            "DBB",
+            "DBC",
+            "NC",
+            "NR"
+          ]
+        },
+        {
+          "name": "SoundFrequency",
+          "definition": "List of nominal sound frequencies, correlated to the SoundPressure time series values (IfcTimeSeries.ListValues)",
+          "type": "ListValue",
+          "dataType": "IfcFrequencyMeasure"
+        },
+        {
+          "name": "SoundPressure",
+          "definition": "A time series of sound pressure values measured in decibels at a reference pressure of 20 microPascals for the referenced octave band frequency.  Each value in IfcTimeSeries.ListValues is correlated to the sound frequency at the same position within SoundFrequencies.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    }
+  ]
+}

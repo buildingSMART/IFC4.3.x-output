@@ -1,0 +1,295 @@
+{
+  "ifcClass": "IfcTank",
+  "propertySetsCount": 5,
+  "totalPropertiesCount": 25,
+  "propertySets": [
+    {
+      "name": "Pset_TankOccurrence",
+      "definition": "Properties that relate to a tank. Note that a partial tank may be considered as a compartment within a compartmentalized tank.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTank"
+      ],
+      "applicableTypeValue": "IfcTank",
+      "properties": [
+        {
+          "name": "TankComposition",
+          "definition": "Defines the level of element composition where.COMPLEX: A set of elementary units aggregated together to fulfill the overall  required purpose.\nELEMENT: A single elementary unit that may exist of itself or as an aggregation of partial units..\nPARTIAL: A partial elementary unit.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TankComposition",
+          "enumValues": [
+            "COMPLEX",
+            "ELEMENT",
+            "PARTIAL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "HasLadder",
+          "definition": "Indication of whether the tank is provided with a ladder (set TRUE) for access to the top. If no ladder is provided then value is set FALSE.Note: No indication is given of the type of ladder (gooseneck etc.)",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "HasVisualIndicator",
+          "definition": "Indication of whether the tank is provided with a visual indicator (set TRUE) that shows the water level in the tank. If no visual indicator is provided then value is set FALSE.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Pset_TankTypeCommon",
+      "definition": "Common attributes of a tank type.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTank",
+        "IfcTankType"
+      ],
+      "applicableTypeValue": "IfcTank,IfcTankType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "AccessType",
+          "definition": "Defines the types of access (or cover) to a tank that may be specified.Note that covers are generally specified for rectangular tanks. For cylindrical tanks, access will normally be via a manhole.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TankAccessType",
+          "enumValues": [
+            "LOOSECOVER",
+            "MANHOLE",
+            "NONE",
+            "SECUREDCOVER",
+            "SECUREDCOVERWITHMANHOLE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "StorageType",
+          "definition": "Defines the general material category intended to be stored.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TankStorageType",
+          "enumValues": [
+            "FUEL",
+            "ICE",
+            "OIL",
+            "POTABLEWATER",
+            "RAINWATER",
+            "WASTEWATER",
+            "WATER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NominalLengthOrDiameter",
+          "definition": "The nominal length or, in the case of a vertical cylindrical tank, the nominal diameter of the tank.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NominalWidthOrDiameter",
+          "definition": "The nominal width or, in the case of a horizontal cylindrical tank, the nominal diameter of the tank.Note: Not required for a vertical cylindrical tank.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NominalDepth",
+          "definition": "Nominal Depth of the object",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "TankNominalCapacity",
+          "definition": "The total nominal or design volumetric capacity of the tank.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "EffectiveCapacity",
+          "definition": "The total effective or actual volumetric capacity of the tank.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "OperatingWeight",
+          "definition": "Operating weight of the tank including all of its contents.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "PatternType",
+          "definition": "Defines the types of pattern (or shape of a tank that may be specified.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TankPatternType",
+          "enumValues": [
+            "HORIZONTALCYLINDER",
+            "RECTANGULAR",
+            "VERTICALCYLINDER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "EndShapeType",
+          "definition": "Defines the types of end shapes that can be used for preformed tanks. The convention for reading these enumerated values is that for a vertical cylinder, the first value is the base and the second is the top; for a horizontal cylinder, the order of reading should be left to right. For a speherical tank, the value UNSET should be used.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_EndShapeType",
+          "enumValues": [
+            "CONCAVECONVEX",
+            "CONCAVEFLAT",
+            "CONVEXCONVEX",
+            "FLATCONVEX",
+            "FLATFLAT",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FirstCurvatureRadius",
+          "definition": "FirstCurvatureRadius should be defined as the base or left side radius of curvature value.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SecondCurvatureRadius",
+          "definition": "SecondCurvatureRadius should be defined as the top or right side radius of curvature value.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NumberOfSections",
+          "definition": "Number of sections.\n\nNumber of sections used in the construction of the tank. Default is 1.Note: All sections assumed to be the same size.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_TankTypePreformed",
+      "definition": "Fixed vessel manufactured as a single unit with one or more compartments for storing a liquid.Pset renamed from Pset_TankTypePreformedTank to Pset_TankTypePreformed in IFC2x2 Pset Addendum.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTank",
+        "IfcTankType"
+      ],
+      "applicableTypeValue": "IfcTank,IfcTankType",
+      "properties": [
+        {
+          "name": "PatternType",
+          "definition": "Defines the types of pattern (or shape of a tank that may be specified.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TankPatternType",
+          "enumValues": [
+            "HORIZONTALCYLINDER",
+            "RECTANGULAR",
+            "VERTICALCYLINDER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "EndShapeType",
+          "definition": "Defines the types of end shapes that can be used for preformed tanks. The convention for reading these enumerated values is that for a vertical cylinder, the first value is the base and the second is the top; for a horizontal cylinder, the order of reading should be left to right. For a speherical tank, the value UNSET should be used.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_EndShapeType",
+          "enumValues": [
+            "CONCAVECONVEX",
+            "CONCAVEFLAT",
+            "CONVEXCONVEX",
+            "FLATCONVEX",
+            "FLATFLAT",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FirstCurvatureRadius",
+          "definition": "FirstCurvatureRadius should be defined as the base or left side radius of curvature value.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SecondCurvatureRadius",
+          "definition": "SecondCurvatureRadius should be defined as the top or right side radius of curvature value.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_TankTypeSectional",
+      "definition": "Fixed vessel constructed from sectional parts with one or more compartments for storing a liquid.Note (1): All sectional construction tanks are considered to be rectangular by default.\nNote (2): Generally, it is not expected that sectional construction tanks will be used for the purposes of gas storage.Pset renamed from Pset_TankTypeSectionalTank to Pset_TankTypeSectional in IFC2x2 Pset Addendum.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTank",
+        "IfcTankType"
+      ],
+      "applicableTypeValue": "IfcTank,IfcTankType",
+      "properties": [
+        {
+          "name": "NumberOfSections",
+          "definition": "Number of sections.\n\nNumber of sections used in the construction of the tankNote: All sections assumed to be the same size.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "SectionLength",
+          "definition": "The length of a section used in the construction of the tank.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SectionWidth",
+          "definition": "The width of a section used in the construction of the tank.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_TankBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of tanks.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTank",
+        "IfcTankType"
+      ],
+      "applicableTypeValue": "IfcTank,IfcTankType",
+      "properties": []
+    }
+  ]
+}

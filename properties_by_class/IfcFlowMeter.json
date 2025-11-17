@@ -1,0 +1,98 @@
+{
+  "ifcClass": "IfcFlowMeter",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 5,
+  "propertySets": [
+    {
+      "name": "Pset_FlowMeterOccurrence",
+      "definition": "Flow meter occurrence common attributes.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFlowMeter"
+      ],
+      "applicableTypeValue": "IfcFlowMeter",
+      "properties": [
+        {
+          "name": "FlowMeterOurpose",
+          "definition": "Enumeration defining the purpose of the flow meter occurrence.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FlowMeterPurpose",
+          "enumValues": [
+            "MASTER",
+            "SUBMASTER",
+            "SUBMETER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_FlowMeterTypeCommon",
+      "definition": "Common attributes of a flow meter type",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFlowMeter",
+        "IfcFlowMeterType"
+      ],
+      "applicableTypeValue": "IfcFlowMeter,IfcFlowMeterType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ReadOutType",
+          "definition": "Indication of the form that readout from the meter takes. In the case of a dial read out, this may comprise multiple dials that give a cumulative reading and/or a mechanical odometer.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_MeterReadOutType",
+          "enumValues": [
+            "DIAL",
+            "DIGITAL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "RemoteReading",
+          "definition": "Indicates whether the meter has a connection for remote reading through connection of a communication device (set TRUE) or not (set FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Qto_FlowMeterBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of flow meters.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFlowMeter",
+        "IfcFlowMeterType"
+      ],
+      "applicableTypeValue": "IfcFlowMeter,IfcFlowMeterType",
+      "properties": []
+    }
+  ]
+}

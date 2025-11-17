@@ -1,0 +1,183 @@
+{
+  "ifcClass": "IfcPump",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 17,
+  "propertySets": [
+    {
+      "name": "Pset_PumpOccurrence",
+      "definition": "Pump occurrence attributes attached to an instance of IfcPump.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump"
+      ],
+      "applicableTypeValue": "IfcPump",
+      "properties": [
+        {
+          "name": "ImpellerDiameter",
+          "definition": "Diameter of object - used to scale performance of geometrically similar objects.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "BaseType",
+          "definition": "Defines general types of pump bases.FRAME: Frame.\nBASE: Base.\nNONE: There is no pump base, such as an inline pump.\nOTHER: Other type of pump base.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_PumpBaseType",
+          "enumValues": [
+            "BASE",
+            "FRAME",
+            "NONE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "DriveConnectionType",
+          "definition": "The way the pump drive mechanism is connected to the pump.DIRECTDRIVE: Direct drive.\nBELTDRIVE: Belt drive.\nCOUPLING: Coupling.\nOTHER: Other type of drive connection.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_PumpDriveConnectionType",
+          "enumValues": [
+            "BELTDRIVE",
+            "COUPLING",
+            "DIRECTDRIVE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_PumpPHistory",
+      "definition": "Pump performance history attributes.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump"
+      ],
+      "applicableTypeValue": "IfcPump",
+      "properties": [
+        {
+          "name": "MechanicalEfficiency",
+          "definition": "The objects operational mechanical efficiency.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "OverallEfficiency",
+          "definition": "Total efficiency of object.\n\nThe pump and motor overall operational efficiency.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "PressureRise",
+          "definition": "The developed pressure.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "RotationSpeed",
+          "definition": "Pump rotational speed.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "Flowrate",
+          "definition": "The flowrate of the fluid.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "PowerHistory",
+          "definition": "The actual power consumption of the pump.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PumpTypeCommon",
+      "definition": "Common attributes of a pump type.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump",
+        "IfcPumpType"
+      ],
+      "applicableTypeValue": "IfcPump,IfcPumpType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FlowRateRange",
+          "definition": "Allowable range of volume of fluid being pumped against the resistance specified.",
+          "type": "BoundedValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "FlowResistanceRange",
+          "definition": "Allowable range of frictional resistance against which the fluid is being pumped.",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "ConnectionSize",
+          "definition": "The connection size of the object.\n\nThe connection to and from the pump.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "TemperatureRange",
+          "definition": "Allowable maximum and minimum temperature.\n\nAllowable operational range of the fluid temperature.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "NetPositiveSuctionHead",
+          "definition": "Minimum liquid pressure at the pump inlet to prevent cavitation.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "NominalRotationSpeed",
+          "definition": "Rotational speed of the object under nominal conditions.\n\nPump rotational speed under nominal conditions.",
+          "type": "SingleValue",
+          "dataType": "IfcRotationalFrequencyMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_PumpBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of pumps.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump",
+        "IfcPumpType"
+      ],
+      "applicableTypeValue": "IfcPump,IfcPumpType",
+      "properties": []
+    }
+  ]
+}

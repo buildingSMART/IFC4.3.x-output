@@ -1,0 +1,147 @@
+{
+  "ifcClass": "IfcPavement",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 13,
+  "propertySets": [
+    {
+      "name": "Pset_PavementCommon",
+      "definition": "Describes the common properties and nominal dimensions of pavement.Property use clarification\nThe nominal thickness of the pavement remains constant with the value from NominalThickness, unless the property NominalThicknessEnd is provided. In which case NominalThickness is the value at the beginning of a transition (usually at the object placement location). e.g. a (road) transition segment where the pavement object's linear placement along an alignment denotes the beginning location and NominalThicknessEnd is the value at the end as indicated by the property NominalLength. In the case of local placements, it is user defined along which axis lengths and widths are measured.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPavement",
+        "IfcPavementType"
+      ],
+      "applicableTypeValue": "IfcPavement,IfcPavementType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NominalThicknessEnd",
+          "definition": "The nominal thickness of the object after a transition from its original value. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "StructuralSlope",
+          "definition": "The nominal side slope (allowable steepness) of the pavement structure (not including side slope fill) as a positive ratio measure. The slope  information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters take precedence. Value is typically less than 1.0 (1:1) but may be greater than that for steeper slopes.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "StructuralSlopeType",
+          "definition": "User defined description on the type of slope used for the pavement structure (not including side slope fill) . Examples are \"Even\" or \"Stepped\".",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NominalWidth",
+          "definition": "The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "NominalLength",
+          "definition": "The nominal overall length of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "NominalThickness",
+          "definition": "The nominal thickness of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In case of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PavementSurfaceCommon",
+      "definition": "Properties for a pavement surface.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPavement",
+        "IfcPavementType"
+      ],
+      "applicableTypeValue": "IfcPavement,IfcPavementType",
+      "properties": [
+        {
+          "name": "PavementRoughness",
+          "definition": "An assessment of the functional condition of the pavement surface indicated as an index according to the International Roughness Index (IRI).",
+          "type": "SingleValue",
+          "dataType": "IfcNumericMeasure"
+        },
+        {
+          "name": "PavementTexture",
+          "definition": "Characterization of pavement texture by mean profile depthNOTE  Definition according to ISO 13473-1:2019",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_Tiling",
+      "definition": "Properties about tiles.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPavement",
+        "IfcCovering",
+        "IfcPavementType",
+        "IfcCoveringType"
+      ],
+      "applicableTypeValue": "IfcPavement,IfcCovering,IfcPavementType,IfcCoveringType",
+      "properties": [
+        {
+          "name": "Permeability",
+          "definition": "Ratio of the permeability of the ceiling.\nThe ration can be used to indicate an open ceiling (that enables identification of whether ceiling construction should be considered as impeding distribution of sprinkler water, light etc. from installations within the ceiling area).",
+          "type": "SingleValue",
+          "dataType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "TileLength",
+          "definition": "Length of ceiling tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "TileWidth",
+          "definition": "Width of ceiling tiles. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_PavementBaseQuantities",
+      "definition": "Quantity set for Pavement.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPavement",
+        "IfcPavementType"
+      ],
+      "applicableTypeValue": "IfcPavement,IfcPavementType",
+      "properties": []
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "ifcClass": "IfcPipeFitting",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 10,
+  "propertySets": [
+    {
+      "name": "Pset_PipeFittingOccurrence",
+      "definition": "Pipe segment occurrence attributes attached to an instance of IfcPipeSegment.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeFitting"
+      ],
+      "applicableTypeValue": "IfcPipeFitting",
+      "properties": [
+        {
+          "name": "InteriorRoughnessCoefficient",
+          "definition": "The interior roughness of the material of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "Colour",
+          "definition": "Colour of this object.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PipeFittingPHistory",
+      "definition": "Pipe fitting performance history common attributes.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeFitting"
+      ],
+      "applicableTypeValue": "IfcPipeFitting",
+      "properties": [
+        {
+          "name": "LossCoefficient",
+          "definition": "Dimensionless loss coefficient used for calculating fluid resistance representing the ratio of total pressure loss to velocity pressure at a referenced cross-section.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "FlowrateLeakage",
+          "definition": "Leakage flowrate versus pressure difference.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PipeFittingTypeCommon",
+      "definition": "Pipe fitting type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeFitting",
+        "IfcPipeFittingType"
+      ],
+      "applicableTypeValue": "IfcPipeFitting,IfcPipeFittingType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "PressureClass",
+          "definition": "Nominal pressure rating of the object.\n\nThe test or rated pressure classification of the fitting.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "PressureRange",
+          "definition": "Allowable maximum and minimum working pressure (relative to ambient pressure).",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "TemperatureRange",
+          "definition": "Allowable maximum and minimum temperature.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "FittingLossFactor",
+          "definition": "A factor that determines the pressure loss due to friction through the fitting.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Qto_PipeFittingBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types and occurrences of pipe fittings.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeFitting",
+        "IfcPipeFittingType"
+      ],
+      "applicableTypeValue": "IfcPipeFitting,IfcPipeFittingType",
+      "properties": []
+    }
+  ]
+}

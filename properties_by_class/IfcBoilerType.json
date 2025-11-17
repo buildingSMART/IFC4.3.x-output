@@ -1,0 +1,143 @@
+{
+  "ifcClass": "IfcBoilerType",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 13,
+  "propertySets": [
+    {
+      "name": "Pset_BoilerTypeCommon",
+      "definition": "Boiler type common attributes.\nSoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. PrimaryEnergySource and AuxiliaryEnergySource attributes deleted in IFC2x2 Pset Addendum: Use IfcMaterialProperties instead.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBoiler",
+        "IfcBoilerType"
+      ],
+      "applicableTypeValue": "IfcBoiler,IfcBoilerType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "PressureRating",
+          "definition": "Pressure rating of the object.\n\nNominal pressure rating of the boiler as rated by the agency having jurisdiction.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "OperatingMode",
+          "definition": "Identifies the operating mode of the boiler.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_BoilerOperatingMode",
+          "enumValues": [
+            "FIXED",
+            "MODULATING",
+            "TWOSTEP",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "HeatTransferSurfaceArea",
+          "definition": "Total heat transfer area of the vessel.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "NominalPartLoadRatio",
+          "definition": "Allowable part load ratio range.",
+          "type": "BoundedValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "WaterInletTemperatureRange",
+          "definition": "Allowable water inlet temperature range.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "WaterStorageCapacity",
+          "definition": "Water storage capacity.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumeMeasure"
+        },
+        {
+          "name": "IsWaterStorageHeater",
+          "definition": "This is used to identify if the boiler has storage capacity (TRUE). If FALSE, then there is no storage capacity built into the boiler, such as an instantaneous hot water heater.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "PartialLoadEfficiencyCurves",
+          "definition": "Boiler efficiency as a function of the partial load factor; E = f (partialLaodfactor).",
+          "type": "TableValue",
+          "definingValueType": "IfcPositiveRatioMeasure",
+          "definedValueType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "OutletTemperatureRange",
+          "definition": "Allowable outlet temperature of either the water or the steam.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "NominalEnergyConsumption",
+          "definition": "Nominal fuel consumption rate required to produce the total boiler heat output.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "EnergySource",
+          "definition": "Enumeration defining the energy source or fuel cumbusted.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_EnergySource",
+          "enumValues": [
+            "COAL",
+            "COAL_PULVERIZED",
+            "ELECTRICITY",
+            "GAS",
+            "OIL",
+            "PROPANE",
+            "WOOD",
+            "WOOD_CHIP",
+            "WOOD_PELLET",
+            "WOOD_PULVERIZED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qto_BoilerBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of boilers.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBoiler",
+        "IfcBoilerType"
+      ],
+      "applicableTypeValue": "IfcBoiler,IfcBoilerType",
+      "properties": []
+    }
+  ]
+}

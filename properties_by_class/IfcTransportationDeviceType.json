@@ -1,0 +1,204 @@
+{
+  "ifcClass": "IfcTransportationDeviceType",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 19,
+  "propertySets": [
+    {
+      "name": "Pset_EnergyRequirements",
+      "definition": "Property set for the application of energy requirements to facility and physical elements",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcTransportationDevice",
+        "IfcDistributionElementType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "EnergyConsumption",
+          "definition": "Annual energy consumption requirement",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "PowerDemand",
+          "definition": "Power demand of the element",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "EnergySourceLabel",
+          "definition": "Type of energy source e.g. Electricity, Diesel, LPG etc. utilised by the element.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "EnergyConversionEfficiency",
+          "definition": "Measure of the efficiency of conversion of fuel energy to mechanical energy",
+          "type": "SingleValue",
+          "dataType": "IfcRatioMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnvironmentalEmissions",
+      "definition": "Property set for the application of energy emissions produced by facility and physical elements.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcTransportationDevice",
+        "IfcDistributionElementType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "CarbonDioxideEmissions",
+          "definition": "Rate of emission of carbon dioxide",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "SulphurDioxideEmissions",
+          "definition": "Rate of emission of sulphur dioxide",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "NitrogenOxidesEmissions",
+          "definition": "Rate of emission of nitrogen oxides",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "ParticulateMatterEmissions",
+          "definition": "Rate of emission of particulate matter",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "NoiseEmissions",
+          "definition": "Level of sound emission",
+          "type": "SingleValue",
+          "dataType": "IfcSoundPowerLevelMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProcessCapacity",
+      "definition": "Property set for the application of process data to spatial elements and transport assets",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuiltSystem",
+        "IfcDistributionSystem",
+        "IfcDoor",
+        "IfcSpace",
+        "IfcTransportationDevice",
+        "IfcZone",
+        "IfcDoorType",
+        "IfcSpaceType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcBuiltSystem,IfcDistributionSystem,IfcDoor,IfcSpace,IfcTransportationDevice,IfcZone,IfcDoorType,IfcSpaceType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "ProcessItem",
+          "definition": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ProcessItem",
+          "enumValues": [
+            "BARREL",
+            "CGT",
+            "PASSENGER",
+            "TEU",
+            "TONNE",
+            "VEHICLE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ProcessCapacity",
+          "definition": "The number of units that can be processed in the time defined in ProcessPerformance",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "ProcessPerformance",
+          "definition": "Minimum time to accept or dispatch the entire item capacity.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DownstreamConnections",
+          "definition": "Names of downstream connected equipment and spaces, if not otherwise represented",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "UpstreamConnections",
+          "definition": "Names of upstream connected equipment and spaces, if not otherwise represented",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_TransportElementCommon",
+      "definition": "Properties common to the definition of all occurrences of IfcTransportElement or IfcTransportElementType",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcTransportationDevice",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcTransportationDevice,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CapacityPeople",
+          "definition": "Capacity of the transportation element measured in numbers of person.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "CapacityWeight",
+          "definition": "Capacity of the transport element measured by weight.",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "FireExit",
+          "definition": "Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).\n\nHere whether the transport element (in case of e.g., a lift) is designed to serve as a fire exit, e.g., for fire escape purposes.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    }
+  ]
+}

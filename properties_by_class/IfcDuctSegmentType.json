@@ -1,0 +1,115 @@
+{
+  "ifcClass": "IfcDuctSegmentType",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 11,
+  "propertySets": [
+    {
+      "name": "Pset_DuctSegmentTypeCommon",
+      "definition": "Duct segment type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDuctSegment",
+        "IfcDuctSegmentType"
+      ],
+      "applicableTypeValue": "IfcDuctSegment,IfcDuctSegmentType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CrossSectionShape",
+          "definition": "Cross sectional shape. Note that this shape is uniform throughout the length of the segment. For nonuniform shapes, a transition fitting should be used instead.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DuctSegmentShape",
+          "enumValues": [
+            "FLATOVAL",
+            "RECTANGULAR",
+            "ROUND",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "WorkingPressure",
+          "definition": "Working pressure.\n\nPressure classification as defined by the authority having jurisdiction (e.g., SMACNA, etc.).",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "PressureRange",
+          "definition": "Allowable maximum and minimum working pressure (relative to ambient pressure).",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "TemperatureRange",
+          "definition": "Allowable maximum and minimum temperature.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "LongitudinalSeam",
+          "definition": "The type of seam to be used along the longitudinal axis of the duct segment.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "NominalDiameterOrWidth",
+          "definition": "The nominal diameter or width of the duct segment.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NominalHeight",
+          "definition": "The nominal height of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "Reinforcement",
+          "definition": "The type of reinforcement, if any, used for the duct segment.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ReinforcementSpacing",
+          "definition": "The spacing between reinforcing elements.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_DuctSegmentBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types and occurrences of duct segments.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDuctSegment",
+        "IfcDuctSegmentType"
+      ],
+      "applicableTypeValue": "IfcDuctSegment,IfcDuctSegmentType",
+      "properties": []
+    }
+  ]
+}

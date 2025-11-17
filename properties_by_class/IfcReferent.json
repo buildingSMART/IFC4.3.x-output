@@ -1,0 +1,104 @@
+{
+  "ifcClass": "IfcReferent",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 9,
+  "propertySets": [
+    {
+      "name": "Pset_LinearReferencingMethod",
+      "definition": "Describes the manner in which measurements are made along (and optionally offset from) a linear element.NOTE Definition according to ISO 19148:2021",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAlignment",
+        "IfcReferent"
+      ],
+      "applicableTypeValue": "IfcAlignment,IfcReferent",
+      "properties": [
+        {
+          "name": "LRMName",
+          "definition": "Gives the name of this Linear Referencing Method, such as “kilometre-point”.NOTE Definition according to ISO 19148:2021.\nNOTE Names of commonly used Linear Referencing Methods are included in ISO 19148, Annex C, along with recognized name aliases.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "LRMType",
+          "definition": "Gives the type of this Linear Referencing Method.NOTE Definition according to ISO 19148:2021, LRMType.\nNOTE Since the definition in ISO 19148:2021, LRMType is stereotyped as a CodeList it is open for user defined extensions. In this Pset this is handled by adding the enumeration constant LRM_USERDEFINED and the additional property UserDefinedLRMType",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_LRMType",
+          "enumValues": [
+            "LRM_ABSOLUTE",
+            "LRM_INTERPOLATIVE",
+            "LRM_RELATIVE",
+            "LRM_USERDEFINED"
+          ]
+        },
+        {
+          "name": "UserDefinedLRMType",
+          "definition": "Gives the user defined type of this Linear Referencing Method when property LRMType is LRM_USERDEFINED.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "LRMUnit",
+          "definition": "Specifies the units of measure used by this Linear Referencing Method for measures along the linear element being measured.NOTE Definition according to ISO 19148:2021.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "LRMConstraint",
+          "definition": "Allows for the specification of constraints imposed by this Linear Referencing Method. For example, a Reference Post Linear Referencing Method may specify that referents be of type “reference marker”.NOTE definition according to ISO 19148:2021",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ReferentCommon",
+      "definition": "Specifies common properties for IfcReferent",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcReferent"
+      ],
+      "applicableTypeValue": "IfcReferent",
+      "properties": [
+        {
+          "name": "NameFormat",
+          "definition": "Specifies a reference to or description of the formatting or encoding of the Name attribute of the IfcReferent occurrence.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_Stationing",
+      "definition": "Specifies stationing parameters for IfcReferent.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcReferent"
+      ],
+      "applicableTypeValue": "IfcReferent",
+      "properties": [
+        {
+          "name": "IncomingStation",
+          "definition": "The optional station value of the incoming segment that ends at this location. This value needs to be set if the intention is to specify a station equation, i.e. a location where stationing changes.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "Station",
+          "definition": "The station value at this location.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "HasIncreasingStation",
+          "definition": "Inform on the increasing or decreasing progress of stationing values, for referents nested in a given alignment.If present and true, or if not present, then the relevant subsequently nested referents are expected to have greater Pset_Stationing.Station values (i.e., increasing stations).If present and false, then the relevant subsequently nested referents are expected to have lower Pset_Stationing.Station values (i.e., decreasing stations).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    }
+  ]
+}

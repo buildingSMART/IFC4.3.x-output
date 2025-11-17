@@ -1,0 +1,157 @@
+{
+  "ifcClass": "IfcSign",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 15,
+  "propertySets": [
+    {
+      "name": "Pset_RailwaySignalAspect",
+      "definition": "Properties in this property set are applicable for IfcSignal and IfcSign applied in railways. These properties describe the signal aspect, which is the information on the signal or sign shown to the train driver.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSign",
+        "IfcSignalType",
+        "IfcSignType"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSign,IfcSignalType,IfcSignType",
+      "properties": [
+        {
+          "name": "SignalAspectSymbol",
+          "definition": "Content which is shown on the signal or sign, e.g. text, number, arrow or icon.",
+          "type": "ReferenceValue",
+          "refType": "IfcExternalReference"
+        },
+        {
+          "name": "AppliesToTrainCategory",
+          "definition": "Sign information relative to train category, e.g. freight, passenger.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TrainCategory",
+          "enumValues": [
+            "FREIGHT",
+            "PASSENGER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "SignalAspectType",
+          "definition": "The type of aspect, e.g. 2-display aspect for distant signal, 3-display aspect for block signal.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SignLegend",
+          "definition": "Text information written on the signal or sign.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        }
+      ]
+    },
+    {
+      "name": "Pset_RailwaySignalSighting",
+      "definition": "Properties that define information about signal sighting or visibility in railways. These properties are applicable to occurrences of IfcSignal and IfcSign.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSign"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSign",
+      "properties": [
+        {
+          "name": "SignalSightingAchievableDistance",
+          "definition": "Reading distance of the signal, which is achievable with the help of mitigation works.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalSightingAvailableDistance",
+          "definition": "Reading distance of the signal without having any mitigation works.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalSightingCombinedWithRepeater",
+          "definition": "Combined reading distance for the signal and any associated repeaters.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalSightingMinimum",
+          "definition": "Minimal distance in which the signal has to be readable.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalSightingPreferred",
+          "definition": "Preferred distance in which the signal shall be readable.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalSightingRouteIndicator",
+          "definition": "Required reading distance for the route indicator.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalViewingMinimumInFront",
+          "definition": "Smallest distance where the signal has to be readable (for train very close to the signal).",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SignCommon",
+      "definition": "Common properties for Signs.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSign",
+        "IfcSignType"
+      ],
+      "applicableTypeValue": "IfcSign,IfcSignType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "IsExternal",
+          "definition": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "Category",
+          "definition": "Designation of the category into which the actors in the population belong.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "TactileMarking",
+          "definition": "The kind of Tactile Marking of the element.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Qto_SignBaseQuantities",
+      "definition": "Base quantities for Signs.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSign",
+        "IfcSignType"
+      ],
+      "applicableTypeValue": "IfcSign,IfcSignType",
+      "properties": []
+    }
+  ]
+}

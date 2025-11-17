@@ -1,0 +1,305 @@
+{
+  "ifcClass": "IfcCableSegment",
+  "propertySetsCount": 5,
+  "totalPropertiesCount": 30,
+  "propertySets": [
+    {
+      "name": "Pset_CableSegmentConnector",
+      "definition": "Properties about cable connectors. This property set is applicable to a type or occurrence of IfcCableSegment, indicated that the cable segment has one or two connectors affiliated.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableSegment",
+        "IfcCableSegmentType"
+      ],
+      "applicableTypeValue": "IfcCableSegment,IfcCableSegmentType",
+      "properties": [
+        {
+          "name": "ConnectorAColour",
+          "definition": "Indicates the colour A- end of connector.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ConnectorBColour",
+          "definition": "Indicates the colour B- end of connector.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ConnectorAType",
+          "definition": "Indicates the type of A-end connector.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ConnectorBType",
+          "definition": "Indicates the type of B-end connector.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ConnectorAGender",
+          "definition": "Indicates the gender of A-end connector.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionPortGender",
+          "enumValues": [
+            "FEMALE",
+            "MALE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ConnectorBGender",
+          "definition": "Indicates the gender of B-end connector.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionPortGender",
+          "enumValues": [
+            "FEMALE",
+            "MALE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_CableSegmentOccurrence",
+      "definition": "Properties for the occurrence of an electrical cable, core or conductor that conforms to a type as specified by an appropriate type definition within IFC. NOTE: Maximum allowed voltage drop should be derived from the property within Pset_ElectricalCircuit.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableSegment"
+      ],
+      "applicableTypeValue": "IfcCableSegment",
+      "properties": [
+        {
+          "name": "DesignAmbientTemperature",
+          "definition": "The highest and lowest local ambient temperature likely to be encountered.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "UserCorrectionFactor",
+          "definition": "An arbitrary correction factor that may be applied by the user.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "NumberOfParallelCircuits",
+          "definition": "Number of parallel circuits.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "InstallationMethod",
+          "definition": "Method of installation of cable/conductor. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "InstallationMethodFlagEnum",
+          "definition": "Special installation conditions relating to particular types of installation based on IEC60364-5-52:2001 reference installation methods C and D.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_InstallationMethodFlagEnum",
+          "enumValues": [
+            "BELOWCEILING",
+            "INDUCT",
+            "INSOIL",
+            "ONWALL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "DistanceBetweenParallelCircuits",
+          "definition": "Distance measured between parallel circuits.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "SoilConductivity",
+          "definition": "Thermal conductivity of soil. Generally, within standards such as IEC 60364-5-52, table 52A-16, the resistivity of soil is required (measured in [SI] units of degK.m /W). This is the reciprocal of the conductivity value and needs to be calculated accordingly.",
+          "type": "SingleValue",
+          "dataType": "IfcThermalConductivityMeasure"
+        },
+        {
+          "name": "CarrierStackNumber",
+          "definition": "Number of carrier segments (tray, ladder etc.) that are vertically stacked (vertical is measured as the z-axis of the local coordinate system of the carrier segment).",
+          "type": "SingleValue",
+          "dataType": "IfcInteger"
+        },
+        {
+          "name": "MountingMethod",
+          "definition": "The method of mounting cable segment occurrences on a cable carrier occurrence from which the method required can be selected. This is for the purpose of carrying out 'worst case' cable sizing calculations and may be a conceptual requirement rather than a statement of the physical occurrences of cable and carrier segments.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_MountingMethodEnum",
+          "enumValues": [
+            "LADDER",
+            "PERFORATEDTRAY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "IsHorizontalCable",
+          "definition": "Indication of whether the cable occurrences are mounted horizontally (= TRUE) or vertically (= FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "IsMountedFlatCable",
+          "definition": "Indication of whether the cable occurrences are mounted flat (= TRUE) or in a trefoil pattern (= FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "CurrentCarryingCapacity",
+          "definition": "Maximum value of electric current which can be carried continuously by a conductor, a device or an apparatus, under specified conditions without its steady-state temperature exceeding a  specified value. Based on IEC60826-11-13. NOTE: The temperature specified value is maximum Design Ambient Temperature.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "MaximumCableLength",
+          "definition": "Maximum cable length based on voltagedrop. NOTE: This value may also be specified as a constraint within an IFC model if required but is included within the property set at this stage pending implementation of the required capabilities within software applications.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "PowerLoss",
+          "definition": "The power loss in [W].\n\nTotal loss of power across this cable.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "SequentialCode",
+          "definition": "Indicates the sequential code of the cable or wire.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_CableSegmentTypeCommon",
+      "definition": "Properties for the definitions of electrical cable segments.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableSegment",
+        "IfcCableSegmentType"
+      ],
+      "applicableTypeValue": "IfcCableSegment,IfcCableSegmentType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_TelecomCableGeneral",
+      "definition": "Properties common to occurrences and types of IfcCableSegment and IfcCableFitting applied in telecommunication domain.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableFitting",
+        "IfcCableSegment",
+        "IfcCableFittingType",
+        "IfcCableSegmentType"
+      ],
+      "applicableTypeValue": "IfcCableFitting,IfcCableSegment,IfcCableFittingType,IfcCableSegmentType",
+      "properties": [
+        {
+          "name": "Attenuation",
+          "definition": "Indicates the optical or electrical attenuation of the cable measured in dB, at a certain wavelength or frequency, changing with the length of the cable.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "FireRating",
+          "definition": "Fire rating for this object. It is given according to the national fire safety classification.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IsFireResistant",
+          "definition": "Indicates whether the cable is fire resistant.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "NominalDiameter",
+          "definition": "Nominal diameter or width of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "JacketColour",
+          "definition": "Indicates the colour of the cable or fitting jacket.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "CableFunctionType",
+          "definition": "Distinguishes between Telecom and Power Supply cables.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_CableFunctionType",
+          "enumValues": [
+            "POWERSUPPLY",
+            "TELECOMMUNICATION",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CableArmourType",
+          "definition": "The armour type of the cable for mechanical protection.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_CableArmourType",
+          "enumValues": [
+            "DIELECTRIC",
+            "METALLIC",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qto_CableSegmentBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all occurrences of cable segment.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableSegment",
+        "IfcCableSegmentType"
+      ],
+      "applicableTypeValue": "IfcCableSegment,IfcCableSegmentType",
+      "properties": []
+    }
+  ]
+}

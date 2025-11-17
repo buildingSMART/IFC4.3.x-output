@@ -1,0 +1,257 @@
+{
+  "ifcClass": "IfcDistributionElementType",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 28,
+  "propertySets": [
+    {
+      "name": "Pset_ElectricalDeviceCommon",
+      "definition": "A collection of properties that are commonly used by electrical device types.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcDistributionElementType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcDistributionElementType",
+      "properties": [
+        {
+          "name": "RatedCurrent",
+          "definition": "The current that a device is designed to handle.",
+          "type": "BoundedValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "RatedVoltage",
+          "definition": "The range of allowed voltage that a device is certified to handle. The upper bound of this value is the maximum.",
+          "type": "BoundedValue",
+          "dataType": "IfcElectricVoltageMeasure"
+        },
+        {
+          "name": "NominalFrequencyRange",
+          "definition": "The upper and lower limits of frequency for which the operation of the device is certified.",
+          "type": "BoundedValue",
+          "dataType": "IfcFrequencyMeasure"
+        },
+        {
+          "name": "PowerFactor",
+          "definition": "Power factor; usually as ratio.\n\nThe ratio between the rated electrical power and the product of the rated current and rated voltage",
+          "type": "SingleValue",
+          "dataType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "ConductorFunction",
+          "definition": "Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ConductorFunctionEnum",
+          "enumValues": [
+            "NEUTRAL",
+            "PHASE_L1",
+            "PHASE_L2",
+            "PHASE_L3",
+            "PROTECTIVEEARTH",
+            "PROTECTIVEEARTHNEUTRAL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NumberOfPoles",
+          "definition": "Number of poles that the object would affect.\n\nThe number of live lines that is intended to be handled by the device.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "HasProtectiveEarth",
+          "definition": "Indicates whether the object has a protective earth connection (=TRUE) or not (= FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "InsulationStandardClass",
+          "definition": "Insulation standard classes provides basic protection information against electric shock. Defines levels of insulation required in terms of constructional requirements (creepage and clearance distances) and electrical requirements (compliance with electric strength tests). Basic insulation is considered to be shorted under single fault conditions. The actual values required depend on the working voltage to which the insulation is subjected, as well as other factors. Also indicates whether the electrical device has a protective earth connection.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_InsulationStandardClass",
+          "enumValues": [
+            "CLASS0APPLIANCE",
+            "CLASS0IAPPLIANCE",
+            "CLASSIAPPLIANCE",
+            "CLASSIIAPPLIANCE",
+            "CLASSIIIAPPLIANCE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "IP_Code",
+          "definition": "IP Code, the International Protection Marking, IEC 60529), classifies and rates the degree of protection provided against intrusion.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IK_Code",
+          "definition": "IK Code according to IEC 62262 (2002) is a numeric classification for the degree of protection provided by enclosures for electrical equipment against external mechanical impacts.NOTE  In earlier labeling, the third numeral (1..) had been occasionally added to the closely related IP Code on ingress protection, to indicate the level of impact protection.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "EarthingStyle",
+          "definition": "Indicates the earthing style of the electric device.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "HeatDissipation",
+          "definition": "Indicates the heat dissipation of the electric device measured in power.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "Power",
+          "definition": "The actual power and operable range.",
+          "type": "BoundedValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "NominalPowerConsumption",
+          "definition": "Nominal total power consumption.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "NumberOfPowerSupplyPorts",
+          "definition": "Indicates the number of power supply ports of the electric device.",
+          "type": "TableValue",
+          "definingValueType": "IfcLabel",
+          "definedValueType": "IfcInteger"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ElectricalDeviceCompliance",
+      "definition": "Properties related to information about compliance to standards or regulations of electric devices.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcDistributionElementType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcDistributionElementType",
+      "properties": [
+        {
+          "name": "ElectroMagneticStandardsCompliance",
+          "definition": "Information about compliance with regard to electro magnetic related standards.",
+          "type": "TableValue",
+          "definingValueType": "IfcLabel",
+          "definedValueType": "IfcBoolean"
+        },
+        {
+          "name": "ExplosiveAtmosphereStandardsCompliance",
+          "definition": "Information about compliance with regard to explosive atmosphere related standards.",
+          "type": "TableValue",
+          "definingValueType": "IfcLabel",
+          "definedValueType": "IfcBoolean"
+        },
+        {
+          "name": "FireProofingStandardsCompliance",
+          "definition": "Information about compliance with regard to fire proofing related standards.",
+          "type": "TableValue",
+          "definingValueType": "IfcLabel",
+          "definedValueType": "IfcBoolean"
+        },
+        {
+          "name": "LightningProtectionStandardsCompliance",
+          "definition": "Information about compliance with regard to lightning protection related standards.",
+          "type": "TableValue",
+          "definingValueType": "IfcLabel",
+          "definedValueType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnergyRequirements",
+      "definition": "Property set for the application of energy requirements to facility and physical elements",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcTransportationDevice",
+        "IfcDistributionElementType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "EnergyConsumption",
+          "definition": "Annual energy consumption requirement",
+          "type": "SingleValue",
+          "dataType": "IfcEnergyMeasure"
+        },
+        {
+          "name": "PowerDemand",
+          "definition": "Power demand of the element",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "EnergySourceLabel",
+          "definition": "Type of energy source e.g. Electricity, Diesel, LPG etc. utilised by the element.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "EnergyConversionEfficiency",
+          "definition": "Measure of the efficiency of conversion of fuel energy to mechanical energy",
+          "type": "SingleValue",
+          "dataType": "IfcRatioMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_EnvironmentalEmissions",
+      "definition": "Property set for the application of energy emissions produced by facility and physical elements.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionElement",
+        "IfcTransportationDevice",
+        "IfcDistributionElementType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcDistributionElement,IfcTransportationDevice,IfcDistributionElementType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "CarbonDioxideEmissions",
+          "definition": "Rate of emission of carbon dioxide",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "SulphurDioxideEmissions",
+          "definition": "Rate of emission of sulphur dioxide",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "NitrogenOxidesEmissions",
+          "definition": "Rate of emission of nitrogen oxides",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "ParticulateMatterEmissions",
+          "definition": "Rate of emission of particulate matter",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "NoiseEmissions",
+          "definition": "Level of sound emission",
+          "type": "SingleValue",
+          "dataType": "IfcSoundPowerLevelMeasure"
+        }
+      ]
+    }
+  ]
+}

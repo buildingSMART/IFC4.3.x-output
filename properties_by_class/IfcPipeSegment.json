@@ -1,0 +1,216 @@
+{
+  "ifcClass": "IfcPipeSegment",
+  "propertySetsCount": 5,
+  "totalPropertiesCount": 23,
+  "propertySets": [
+    {
+      "name": "Pset_PipeConnectionFlanged",
+      "definition": "This property set is used to define the specifics of a flanged pipe connection used between occurrences of pipe segments and fittings.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeSegment",
+        "IfcPipeSegmentType"
+      ],
+      "applicableTypeValue": "IfcPipeSegment,IfcPipeSegmentType",
+      "properties": [
+        {
+          "name": "FlangeTable",
+          "definition": "Designation of the standard table to which the flange conforms.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "FlangeStandard",
+          "definition": "Designation of the standard describing the flange table.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "BoreSize",
+          "definition": "The nominal bore of the pipe flange.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "FlangeDiameter",
+          "definition": "Overall diameter of the flange.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "FlangeThickness",
+          "definition": "Thickness of the material from which the pipe bend is constructed.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "NumberOfBoltholes",
+          "definition": "Number of boltholes in the flange.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "BoltSize",
+          "definition": "Size of the bolts securing the flange.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "BoltholePitch",
+          "definition": "Diameter of the circle along which the boltholes are placed.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PipeSegmentOccurrence",
+      "definition": "Pipe segment occurrence attributes attached to an instance of IfcPipeSegment.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeSegment"
+      ],
+      "applicableTypeValue": "IfcPipeSegment",
+      "properties": [
+        {
+          "name": "InteriorRoughnessCoefficient",
+          "definition": "The interior roughness of the material of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "Colour",
+          "definition": "Colour of this object.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "Gradient",
+          "definition": "The gradient of the pipe segment.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "InvertElevation",
+          "definition": "The invert elevation relative to the datum established for the project.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PipeSegmentPHistory",
+      "definition": "Pipe segment performance history common attributes.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeSegment"
+      ],
+      "applicableTypeValue": "IfcPipeSegment",
+      "properties": [
+        {
+          "name": "LeakageCurve",
+          "definition": "Leakage versus pressure drop; Leakage = f (pressure).",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "FluidFlowLeakage",
+          "definition": "Volumetric leakage flow rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PipeSegmentTypeCommon",
+      "definition": "Pipe segment type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeSegment",
+        "IfcPipeSegmentType"
+      ],
+      "applicableTypeValue": "IfcPipeSegment,IfcPipeSegmentType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "WorkingPressure",
+          "definition": "Working pressure.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "PressureRange",
+          "definition": "Allowable maximum and minimum working pressure (relative to ambient pressure).",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "TemperatureRange",
+          "definition": "Allowable maximum and minimum temperature.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "NominalDiameter",
+          "definition": "Nominal diameter or width of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "InnerDiameter",
+          "definition": "The actual inner diameter of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "OuterDiameter",
+          "definition": "The actual outer diameter of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "Length",
+          "definition": "The length of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_PipeSegmentBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types and occurrences of pipe segments.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPipeSegment",
+        "IfcPipeSegmentType"
+      ],
+      "applicableTypeValue": "IfcPipeSegment,IfcPipeSegmentType",
+      "properties": []
+    }
+  ]
+}

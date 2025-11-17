@@ -1,0 +1,89 @@
+{
+  "ifcClass": "IfcPumpType",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 8,
+  "propertySets": [
+    {
+      "name": "Pset_PumpTypeCommon",
+      "definition": "Common attributes of a pump type.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump",
+        "IfcPumpType"
+      ],
+      "applicableTypeValue": "IfcPump,IfcPumpType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FlowRateRange",
+          "definition": "Allowable range of volume of fluid being pumped against the resistance specified.",
+          "type": "BoundedValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "FlowResistanceRange",
+          "definition": "Allowable range of frictional resistance against which the fluid is being pumped.",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "ConnectionSize",
+          "definition": "The connection size of the object.\n\nThe connection to and from the pump.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "TemperatureRange",
+          "definition": "Allowable maximum and minimum temperature.\n\nAllowable operational range of the fluid temperature.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "NetPositiveSuctionHead",
+          "definition": "Minimum liquid pressure at the pump inlet to prevent cavitation.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "NominalRotationSpeed",
+          "definition": "Rotational speed of the object under nominal conditions.\n\nPump rotational speed under nominal conditions.",
+          "type": "SingleValue",
+          "dataType": "IfcRotationalFrequencyMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_PumpBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of pumps.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcPump",
+        "IfcPumpType"
+      ],
+      "applicableTypeValue": "IfcPump,IfcPumpType",
+      "properties": []
+    }
+  ]
+}

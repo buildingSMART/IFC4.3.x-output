@@ -1,0 +1,168 @@
+{
+  "ifcClass": "IfcAirToAirHeatRecovery",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 18,
+  "propertySets": [
+    {
+      "name": "Pset_AirToAirHeatRecoveryPHistory",
+      "definition": "Air to Air Heat Recovery performance history common attributes.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAirToAirHeatRecovery"
+      ],
+      "applicableTypeValue": "IfcAirToAirHeatRecovery",
+      "properties": [
+        {
+          "name": "SensibleEffectiveness",
+          "definition": "Sensible heat transfer effectiveness, where effectiveness is defined as the ratio of heat transfer to maximum possible heat transfer.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "TotalEffectiveness",
+          "definition": "Total heat transfer effectiveness: The ratio of heat transfer to the maximum possible heat transfer.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "TemperatureEffectiveness",
+          "definition": "Temperature heat transfer effectiveness: The ratio of primary airflow temperature changes to maximum possible temperature changes.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DefrostTemperatureEffectiveness",
+          "definition": "Temperature heat transfer effectiveness when defrosting is active.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "HumidityEffectiveness",
+          "definition": "Humidity heat transfer effectiveness: The ratio of primary airflow absolute humidity changes to maximum possible absolute humidity changes.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "SensibleHeatTransferRate",
+          "definition": "Sensible heat transfer rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "LatentHeatTransferRate",
+          "definition": "Latent heat transfer rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "TotalHeatTransferRate",
+          "definition": "Total heat transfer rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "SensibleEffectivenessTable",
+          "definition": "Sensible heat transfer effectiveness curve as a function of the primary and secondary air flow rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "TotalEffectivenessTable",
+          "definition": "Total heat transfer effectiveness curve as a function of the primary and secondary air flow rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "AirPressureDropCurves",
+          "definition": "Air pressure drop as function of air flow rate.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_AirToAirHeatRecoveryTypeCommon",
+      "definition": "Air to Air Heat Recovery type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAirToAirHeatRecovery",
+        "IfcAirToAirHeatRecoveryType"
+      ],
+      "applicableTypeValue": "IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "HeatTransferTypeEnum",
+          "definition": "Type of heat transfer between the two air streams.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AirToAirHeatTransferHeatTransferType",
+          "enumValues": [
+            "LATENT",
+            "SENSIBLE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "HasDefrost",
+          "definition": "has the heat exchanger has defrost function or not.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "OperationalTemperatureRange",
+          "definition": "The temperature range in which the device operates normally.\n\nAllowable operation ambient air temperature range.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "PrimaryAirFlowRateRange",
+          "definition": "",
+          "type": "BoundedValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "SecondaryAirFlowRateRange",
+          "definition": "",
+          "type": "BoundedValue",
+          "dataType": "IfcPressureMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_AirToAirHeatRecoveryBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of air-to-air heat recovery elements.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAirToAirHeatRecovery",
+        "IfcAirToAirHeatRecoveryType"
+      ],
+      "applicableTypeValue": "IfcAirToAirHeatRecovery,IfcAirToAirHeatRecoveryType",
+      "properties": []
+    }
+  ]
+}

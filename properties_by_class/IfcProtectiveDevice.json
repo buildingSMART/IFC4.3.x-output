@@ -1,0 +1,383 @@
+{
+  "ifcClass": "IfcProtectiveDevice",
+  "propertySetsCount": 8,
+  "totalPropertiesCount": 33,
+  "propertySets": [
+    {
+      "name": "Pset_ProtectiveDeviceBreakerUnitI2TCurve",
+      "definition": "A coherent set of attributes representing a curve for let-through energy of a protective device. Note - A protective device may be associated with different instances of this pSet providing information related to different  basic characteristics",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "VoltageLevel",
+          "definition": "The voltage levels for which the data of the instance is valid. More than one value may be selected in the enumeration.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_VoltageLevels",
+          "enumValues": [
+            "U1000",
+            "U230",
+            "U400",
+            "U440",
+            "U525",
+            "U690",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NominalCurrent",
+          "definition": "The nominal current that is designed to be measured.\n\nA set of nominal currents in [A] for which the data of this instance is valid. At least one value shall be provided. Any value in the set shall not exceed the value of the\nUltimateRatedCurrent associated with the same breaker unit.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "BreakerUnitCurve",
+          "definition": "A curve that establishes the let through energy of a breaker unit when a particular prospective current is applied.  Note that the breaker unit curve is defined within a Cartesian coordinate system and this fact must be asserted within the property set:(1) Defining value: ProspectiveCurrent: A list of minimum 2 and maximum 16 numbers providing the currents in [A] for points in the current/I2t log/log coordinate space. The curve is drawn as a straight line between two consecutive points.\n(2) Defined value: LetThroughEnergy: A list of minimum 2 and maximum 16 numbers providing the let-through energy, I2t, in [A2s] for points in the current/I2t log/log coordinate space. The curve is drawn as a straight line between two consecutive points.",
+          "type": "TableValue",
+          "definingValueType": "IfcElectricCurrentMeasure",
+          "definedValueType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceBreakerUnitI2TFuseCurve",
+      "definition": "A coherent set of attributes representing curves for melting- and breaking-energy of a fuse. Note - A fuse may be associated with different instances of this property set providing information related to different  basic characteristics.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "VoltageLevel",
+          "definition": "The voltage levels for which the data of the instance is valid. More than one value may be selected in the enumeration.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_VoltageLevels",
+          "enumValues": [
+            "U1000",
+            "U230",
+            "U400",
+            "U440",
+            "U525",
+            "U690",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "BreakerUnitFuseMeltingCurve",
+          "definition": "A curve that establishes the energy required to melt the fuse of a breaker unit when a particular prospective melting current is applied.  Note that the breaker unit fuse melting curve is defined within a Cartesian coordinate system and this fact must be:(1) Defining value: ProspectiveCurrentMelting :A list of minimum 2 and maximum 8 numbers providing the currents in [A] for points in the\ncurrent/melting_energy log/log coordinate space. The curve is drawn as a straight line between two consecutive points.\n(2) Defined value: MeltingEnergy: A list of minimum 2 and maximum 8 numbers providing the energy whereby the fuse is starting to melt, I2t, in [A2s] for points in the current/melting_energy log/log coordinate space. The curve is drawn as a straight line between two consecutive points.",
+          "type": "TableValue",
+          "definingValueType": "IfcElectricCurrentMeasure",
+          "definedValueType": "IfcReal"
+        },
+        {
+          "name": "BreakerUnitFuseBreakingingCurve",
+          "definition": "A curve that establishes the let through breaking energy of a breaker unit when a particular prospective breaking current is applied.  Note that the breaker unit fuse breaking curve is defined within a Cartesian coordinate system and this fact must be:(1) Defining value: ProspectiveCurrentBreaking: A list of minimum 2 and maximum 8 numbers providing the currents in [A] for points in the\ncurrent/breaking energy log/log coordinate space. The curve is drawn as a straight line between two consecutive points.\n(2) Defined value: LetThroughBreakingEnergy: A list of minimum 2 and maximum 8 numbers providing the breaking energy whereby the fuse has provided a break, I2t, in [A2s] for points in the current/breakting_energy log/log coordinate space. The curve is drawn as a straight line between two consecutive.",
+          "type": "TableValue",
+          "definingValueType": "IfcElectricCurrentMeasure",
+          "definedValueType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceBreakerUnitIPICurve",
+      "definition": "A coherent set of attributes representing curves for  let-through currents of a protective device. Note - A protective device may be associated with different instances of this pSet providing information related to different  basic characteristics.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "VoltageLevel",
+          "definition": "The voltage levels for which the data of the instance is valid. More than one value may be selected in the enumeration.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_VoltageLevels",
+          "enumValues": [
+            "U1000",
+            "U230",
+            "U400",
+            "U440",
+            "U525",
+            "U690",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "NominalCurrent",
+          "definition": "The nominal current that is designed to be measured.\n\nA set of nominal currents in [A] for which the data of this instance is valid. At least one value shall be provided. Any value in the set shall not exceed the value of the\nUltimateRatedCurrent associated with the same breaker unit.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "BreakerUnitIPICurve",
+          "definition": "A curve that establishes the let through peak current of a breaker unit when a particular prospective current is applied.  Note that the breaker unit IPI curve is defined within a Cartesian coordinate system and this fact must be asserted within the property set:(1) Defining value: A list of minimum 2 and maximum 16 numbers providing the currents in [A] for points in the I/Î log/log coordinate space. The curve is drawn as a straight line between two consecutive points.\n(2) Defined value: A list of minimum 2 and maximum 16 numbers providing the let-through peak currents, Î, in [A] for points in the I/Î log/log coordinate space. The curve is drawn as a straight line between two consecutive points.",
+          "type": "TableValue",
+          "definingValueType": "IfcElectricCurrentMeasure",
+          "definedValueType": "IfcElectricCurrentMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceBreakerUnitTypeMotorProtection",
+      "definition": "A coherent set of attributes representing different capacities of a a motor protection device, defined in accordance with IEC 60947. Note - A protective device may be associated with different instances of this Pset.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "PerformanceClasses",
+          "definition": "A set of designations of performance classes for the breaker unit for which the data of this instance is valid.\n\nA set of designations of performance classes for the breaker unit for which the data of this instance is valid. A breaker unit being a motor protection device may be\nconstructed for different levels of breaking capacities. A maximum of 7 different\nperformance classes may be provided. Examples of performance classes that may be specified include B, C, N, S, H, L, V.",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "VoltageLevel",
+          "definition": "The voltage levels for which the data of the instance is valid. More than one value may be selected in the enumeration.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_VoltageLevels",
+          "enumValues": [
+            "U1000",
+            "U230",
+            "U400",
+            "U440",
+            "U525",
+            "U690",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ICU60947",
+          "definition": "The ultimate breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "ICS60947",
+          "definition": "The service breaking capacity in [A] for an object tested in accordance with the IEC 60947 series.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "ICW60947",
+          "definition": "The thermal withstand current in [A] for a circuit breaker or motor protection device tested in accordance with the IEC 60947 series. The value shall be related to 1 s.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "ICM60947",
+          "definition": "The making capacity in [A] for a circuit breaker or motor protection device tested in accordance with the IEC 60947 series.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceOccurrence",
+      "definition": "Properties that are applied to an occurrence of a protective device.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice",
+      "properties": [
+        {
+          "name": "PoleUsage",
+          "definition": "Pole usage.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_PoleUsage",
+          "enumValues": [
+            "1P",
+            "1PN",
+            "2P",
+            "3P",
+            "3PN",
+            "4P",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "LongTimeFunction",
+          "definition": "Applying long time function\nA flag indicating that the long time function (i.e. the thermal tripping) of the device is used. The value should be set to TRUE for all devices except those that allows the Long time function of the device not to be used.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "ShortTimeFunction",
+          "definition": "Applying short time function A flag indicating that the short time function of the device is used. The value should be set to FALSE for devices not having a short time function, or if the short time function is not selected to be used.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "ShortTimei2tFunction",
+          "definition": "Applying short time i2t function. A flag indicating that the I2t short time function of the device is used. The value should be set to TRUE only if the I2t function  is explicitly selected for the device.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "GroundFaultFunction",
+          "definition": "Applying ground fault function. A flag indicating that the ground fault function of the device is used. The value should be set to FALSE for devices not having a ground fault function, or if the ground fault function is not selected to be used.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "GroundFaulti2tFunction",
+          "definition": "Applying ground fault i2t function. A flag indicating that the I2t ground fault function of the device is used. The value should be set to TRUE only if the I2t function is explicitly selected for the device.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "LongTimeCurrentSetValue",
+          "definition": "Long time current set value. The set value of the long time tripping current if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "ShortTimeCurrentSetValue",
+          "definition": "Short time current set value. The set value of the long time tripping current if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "InstantaneousCurrentSetValue",
+          "definition": "Instantaneous current set value. The set value of the instantaneous tripping current if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "GroundFaultCurrentSetValue",
+          "definition": "Ground fault current set value. The set value of the ground tripping current if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "LongTimeDelay",
+          "definition": "Long time delay. The set value of the long time time-delay if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "ShortTimeTrippingTime",
+          "definition": "Short time tripping time. The set value of the short time tripping time if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "InstantaneousTrippingTime",
+          "definition": "Instantaneous tripping time. The set value of the instantaneous tripping time if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "GroundFaultTrippingTime",
+          "definition": "Ground fault tripping time. The set value of the ground fault tripping current if adjustable.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceTrippingCurve",
+      "definition": "Tripping curves are applied to thermal, thermal magnetic or MCB_RCD tripping units (i.e. tripping units having type property sets for thermal, thermal magnetic or MCB_RCD tripping defined). They are not applied to electronic tripping units.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "TrippingCurveType",
+          "definition": "The type of tripping curve that is represented by the property set.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TrippingCurveType",
+          "enumValues": [
+            "LOWER",
+            "UPPER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "TrippingCurve",
+          "definition": "A curve that establishes the release time of a tripping unit when a particular prospective current is applied.  Note that the tripping curve is defined within a Cartesian coordinate system and this fact must be asserted within the property set:(1) Defining value is the Prospective Current which is a list of minimum 2 and maximum 16 numbers providing the currents in [x In] for points in the current/time log/log coordinate space. The curve is drawn as a straight line between two consecutive points.\n(2) Defined value is a list of minimum 2 and maximum 16 numbers providing the release_time in [s] for points in the current/time log/log coordinate space. The curve is drawn as a straight line between two consecutive points. Note that a defined interpolation.",
+          "type": "TableValue",
+          "definingValueType": "IfcElectricCurrentMeasure",
+          "definedValueType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ProtectiveDeviceTypeCommon",
+      "definition": "Properties that are applied to a definition of a protective device.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qto_ProtectiveDeviceBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all occurrences of protective device.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcProtectiveDevice",
+        "IfcProtectiveDeviceType"
+      ],
+      "applicableTypeValue": "IfcProtectiveDevice,IfcProtectiveDeviceType",
+      "properties": []
+    }
+  ]
+}

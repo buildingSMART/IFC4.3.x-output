@@ -1,0 +1,83 @@
+{
+  "ifcClass": "IfcController/PROPORTIONAL",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 9,
+  "propertySets": [
+    {
+      "name": "Pset_ControllerTypeProportional",
+      "definition": "Properties for signal handling for an proportional controller taking setpoint and feedback inputs and creating a single valued output. HISTORY: In IFC4, SignalFactor1, SignalFactor2 and SignalFactor3 changed to ProportionalConstant, IntegralConstant and DerivativeConstant.  SignalTime1 and SignalTime2 changed to SignalTimeIncrease and SignalTimeDecrease.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcController/PROPORTIONAL",
+        "IfcControllerType/PROPORTIONAL"
+      ],
+      "applicableTypeValue": "IfcController/PROPORTIONAL,IfcControllerType/PROPORTIONAL",
+      "properties": [
+        {
+          "name": "ControlType",
+          "definition": "The type controller, signal modification effected and applicable ports\n\nPROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled.\nPROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse.\nPROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control (Kd) will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ControllerProportionalType",
+          "enumValues": [
+            "PROPORTIONAL",
+            "PROPORTIONALINTEGRAL",
+            "PROPORTIONALINTEGRALDERIVATIVE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "Labels",
+          "definition": "Table mapping values to labels\n\nLabels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.",
+          "type": "TableValue",
+          "definingValueType": "IfcReal",
+          "definedValueType": "IfcLabel"
+        },
+        {
+          "name": "Range",
+          "definition": "The physical range of values supported by the device.",
+          "type": "BoundedValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "Value",
+          "definition": "The expected range and default value.\n\nThe expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.",
+          "type": "BoundedValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "ProportionalConstant",
+          "definition": "The proportional gain factor of the controller (usually referred to as Kp).",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "IntegralConstant",
+          "definition": "The integral gain factor of the controller (usually referred to as Ki).  Asserted where ControlType is PROPORTIONALINTEGRAL or PROPORTIONALINTEGRALDERIVATIVE.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "DerivativeConstant",
+          "definition": "The derivative gain factor of the controller (usually referred to as Kd).  Asserted where ControlType is PROPORTIONALINTEGRALDERIVATIVE.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "SignalTimeIncrease",
+          "definition": "Time factor used for exponential increase.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "SignalTimeDecrease",
+          "definition": "Time factor used for exponential decrease.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    }
+  ]
+}

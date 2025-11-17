@@ -1,0 +1,413 @@
+{
+  "ifcClass": "IfcSystem",
+  "propertySetsCount": 8,
+  "totalPropertiesCount": 38,
+  "propertySets": [
+    {
+      "name": "Pset_Condition",
+      "definition": "Determines the state or condition of an element at a particular point in time.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "AssessmentDate",
+          "definition": "Date on which the overall condition is assessed",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "AssessmentCondition",
+          "definition": "The overall condition of a product based on an assessment of the contributions to the overall condition made by the various criteria considered. The meanings given to the values of assessed condition should be agreed and documented by local agreements. For instance, is overall condition measured on a scale of 1 - 10 or by assigning names such as Good, OK, Poor.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AssessmentDescription",
+          "definition": "Qualitative description of the condition.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "AssessmentType",
+          "definition": "Category of latest condition assessment report of the asset.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "AssessmentMethod",
+          "definition": "External reference to assessment method or application used to perform the assessment.",
+          "type": "ReferenceValue",
+          "refType": "IfcDocumentReference"
+        },
+        {
+          "name": "LastAssessmentReport",
+          "definition": "Reference to latest condition (state of health) report.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NextAssessmentDate",
+          "definition": "Date of next condition inspection",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "AssessmentFrequency",
+          "definition": "Indicates how often the equipment should be assessed, to have a clear estimation on its working state, based on which the maintenance staff can decide whether it requires maintenance or requires to be updated or replaced.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_InstallationOccurrence",
+      "definition": "Properties defining installation information for occurrences of element, asset or system.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem",
+      "properties": [
+        {
+          "name": "InstallationDate",
+          "definition": "Date on which the element is installed.",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "AcceptanceDate",
+          "definition": "Date on which the element is accepted by the manager or administrator.",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "PutIntoOperationDate",
+          "definition": "Date on which the element is put into operation.",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceStrategy",
+      "definition": "Property set for the association of a maintenance strategy to an element, asset of system.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "AssetCriticality",
+          "definition": "Rating of the asset's criticality to the operation of the facility",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "AssetFrailty",
+          "definition": "Rating of the asset's frailty to breakage or deterioration",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "AssetPriority",
+          "definition": "Combined criticality and frailty rating indicating the operational and maintenance priority of the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "MonitoringType",
+          "definition": "Monitoring strategy chosen for the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_MonitoringType",
+          "enumValues": [
+            "FEEDBACK",
+            "INSPECTION",
+            "IOT",
+            "PPM",
+            "SENSORS"
+          ]
+        },
+        {
+          "name": "AccidentResponse",
+          "definition": "Accident response chosen for the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AccidentResponse",
+          "enumValues": [
+            "EMERGENCYINSPECTION",
+            "EMERGENCYPROCEDURE",
+            "REACTIVE",
+            "URGENTINSPECTION",
+            "URGENTPROCEDURE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerCondition",
+      "definition": "Trigger levels for an asset that has an inspection-based maintenance strategy",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "ConditionTargetPerformance",
+          "definition": "Target condition of the asset",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionMaintenanceLevel",
+          "definition": "Condition that will trigger maintenance",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionReplacementLevel",
+          "definition": "Condition that will trigger a replacement process",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        },
+        {
+          "name": "ConditionDisposalLevel",
+          "definition": "Condition that will trigger a disposal process",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AssetRating",
+          "enumValues": [
+            "HIGH",
+            "LOW",
+            "MODERATE",
+            "VERYHIGH",
+            "VERYLOW"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerDuration",
+      "definition": "Trigger levels for an asset that has an PPM based maintenance strategy.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "DurationTargetPerformance",
+          "definition": "Target time to failure of the asset",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationMaintenanceLevel",
+          "definition": "Duration interval at which maintenance is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationReplacementLevel",
+          "definition": "Duration interval at which replacement is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DurationDisposalLevel",
+          "definition": "Duration interval at which disposal is performed",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        }
+      ]
+    },
+    {
+      "name": "Pset_MaintenanceTriggerPerformance",
+      "definition": "Properties for performance based maintenance policies",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem",
+        "IfcElementType"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem,IfcElementType",
+      "properties": [
+        {
+          "name": "TargetPerformance",
+          "definition": "Target capacity or performance of the asset. Units of the performance value are specified through the propertyValue units attribute.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "PerformanceMaintenanceLevel",
+          "definition": "Performance level at which maintenance takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "ReplacementLevel",
+          "definition": "Performance level at which replacement takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "DisposalLevel",
+          "definition": "Performance level at which disposal takes place",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        }
+      ]
+    },
+    {
+      "name": "Pset_RepairOccurrence",
+      "definition": "Properties defining repair information for occurrences of element, asset or system.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcAsset",
+        "IfcElement",
+        "IfcSystem"
+      ],
+      "applicableTypeValue": "IfcAsset,IfcElement,IfcSystem",
+      "properties": [
+        {
+          "name": "RepairContent",
+          "definition": "Content of repair, reason and nature can be given, e.g. display faults, communication failure, display exchange.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "RepairDate",
+          "definition": "Date on which the last repair is done on the asset.",
+          "type": "SingleValue",
+          "dataType": "IfcDate"
+        },
+        {
+          "name": "MeanTimeToRepair",
+          "definition": "Mean time to repair.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_ServiceLifeFactors",
+      "definition": "Captures various factors that impact the expected service life of elements within the system or zone.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSystem"
+      ],
+      "applicableTypeValue": "IfcSystem",
+      "properties": [
+        {
+          "name": "QualityOfComponents",
+          "definition": "Adjustment of the service life resulting from the effect of the quality of components used.",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "DesignLevel",
+          "definition": "Adjustment of the service life resulting from the effect of design level employed.",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "WorkExecutionLevel",
+          "definition": "Adjustment of the service life resulting from the effect of the quality of work executed.",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "IndoorEnvironment",
+          "definition": "Adjustment of the service life resulting from the effect of the indoor environment (where appropriate).",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "OutdoorEnvironment",
+          "definition": "Adjustment of the service life resulting from the effect of the outdoor environment (where appropriate)",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "InUseConditions",
+          "definition": "Adjustment of the service life resulting from the effect of the conditions in which components are operating.",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "MaintenanceLevel",
+          "definition": "Adjustment of the service life resulting from the effect of the level or degree of maintenance applied to dcomponents.",
+          "type": "BoundedValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        }
+      ]
+    }
+  ]
+}

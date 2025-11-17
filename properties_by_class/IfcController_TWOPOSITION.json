@@ -1,0 +1,63 @@
+{
+  "ifcClass": "IfcController/TWOPOSITION",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 4,
+  "propertySets": [
+    {
+      "name": "Pset_ControllerTypeTwoPosition",
+      "definition": "Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued binary output. HISTORY: In IFC4, extended properties to replace Pset_BinaryInput and Pset_BinaryOutput.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcController/TWOPOSITION",
+        "IfcControllerType/TWOPOSITION"
+      ],
+      "applicableTypeValue": "IfcController/TWOPOSITION,IfcControllerType/TWOPOSITION",
+      "properties": [
+        {
+          "name": "ControlType",
+          "definition": "The type controller, signal modification effected and applicable ports\n\nLOWERLIMITSWITCH: Single analog input is read and if less than Value.LowerBound then True is written to the output value.\nUPPERLIMITSWITCH: Single analog input is read and if more than Value.UpperBound then True is written to the output value.\nLOWERBANDSWITCH: Single analog input is read and if less than Value.LowerBound+BandWidth then True is written to the output value.\nUPPERBANDSWITCH: Single analog input is read and if more than Value.UpperBound-BandWidth then True is written to the output value.\nNOT: Single binary input is read and the opposite value is written to the output value.\nAND: Two binary inputs are read and if both are True then True is written to the output value.\nOR: Two binary inputs are read and if either is True then True is written to the output value.\nXOR: Two binary inputs are read and if one is true then True is written to the output value.\nCALENDAR: No inputs; the current time is compared with an IfcWorkCalendar to which the IfcController is assigned and True is written if active.\nINPUT: Controller element is a dedicated input.\nOUTPUT: Controller element is a dedicated output.\nVARIABLE: Controller element is an in-memory variable.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ControllerTwoPositionType",
+          "enumValues": [
+            "AND",
+            "AVERAGE",
+            "CALENDAR",
+            "INPUT",
+            "LOWERBANDSWITCH",
+            "LOWERLIMITSWITCH",
+            "NOT",
+            "OR",
+            "OUTPUT",
+            "UPPERBANDSWITCH",
+            "UPPERLIMITSWITCH",
+            "VARIABLE",
+            "XOR",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "Labels",
+          "definition": "Table mapping values to labels\n\nLabels indicate the meanings of True and False, such as 'Open' and 'Closed'",
+          "type": "TableValue",
+          "definingValueType": "IfcBoolean",
+          "definedValueType": "IfcLabel"
+        },
+        {
+          "name": "Polarity",
+          "definition": "True indicates normal polarity; False indicates reverse polarity.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "Value",
+          "definition": "The expected range and default value.\n\nThe default value such as normally-closed or normally-open.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    }
+  ]
+}

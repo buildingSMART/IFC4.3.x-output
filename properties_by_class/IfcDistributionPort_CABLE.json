@@ -1,0 +1,221 @@
+{
+  "ifcClass": "IfcDistributionPort/CABLE",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 21,
+  "propertySets": [
+    {
+      "name": "Pset_DistributionPortPHistoryCable",
+      "definition": "Log of electrical activity attached to an instance of IfcPerformanceHistory having an assigned IfcDistributionPort of type CABLE.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionPort/CABLE"
+      ],
+      "applicableTypeValue": "IfcDistributionPort/CABLE",
+      "properties": [
+        {
+          "name": "CurrentHistory",
+          "definition": "Log of electrical current.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "VoltageHistory",
+          "definition": "Log of electrical voltage.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "RealPower",
+          "definition": "Real power.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "ReactivePower",
+          "definition": "Reactive power.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "ApparentPower",
+          "definition": "Apparent power.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "PowerFactorHistory",
+          "definition": "Power factor.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DataTransmitted",
+          "definition": "For data ports, captures log of data transmitted.  The LIST at IfcTimeSeriesValue.Values may split out data according to Pset_DistributionPortTypeCable.Protocols.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DataReceived",
+          "definition": "For data ports, captures log of data received.  The LIST at IfcTimeSeriesValue.Values may split out data according to Pset_DistributionPortTypeCable.Protocols.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_DistributionPortTypeCable",
+      "definition": "Cable port occurrence attributes attached to an instance of IfcDistributionPort.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionPort/CABLE"
+      ],
+      "applicableTypeValue": "IfcDistributionPort/CABLE",
+      "properties": [
+        {
+          "name": "ElectricalConnectionType",
+          "definition": "The physical port connection:ACPLUG: AC plug\nDCPLUG: DC plug\nCRIMP: bare wire",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionPortElectricalType",
+          "enumValues": [
+            "ACPLUG",
+            "COAXIAL",
+            "CRIMP",
+            "DCPLUG",
+            "DIN",
+            "DSUB",
+            "DVI",
+            "EIAJ",
+            "HDMI",
+            "RADIO",
+            "RCA",
+            "RJ",
+            "SOCKET",
+            "TRS",
+            "USB",
+            "XLR",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ConnectionSubtype",
+          "definition": "The physical port connection subtype that further qualifies the ConnectionType. The following values are recommended:ACPLUG: A, B, C, D, E, F, EF, G, H, I, J, K, L, M\nDIN: Mini3P, Mini4P, Mini5P, Mini6P, Mini7P, Mini8P, Mini9P\nDSub: DA15, DB25, DC37, DD50, DE9, DE15\nEIAJ: RC5720\nHDMI: A, B, C\nRADIO: IEEE802.11g, IEEE802.11n\nRJ: 4P4C, 6P2C, 8P8C\nSOCKET: E-11, E-12, E-14, E-17, E-26, E-27, E-39, E-40\nTRS: TS_Mini, TS_SubMini, TRS_Mini, TRS_SubMini",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "ConnectionGender",
+          "definition": "The physical connection gender.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionPortGender",
+          "enumValues": [
+            "FEMALE",
+            "MALE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ConductorFunction",
+          "definition": "Indicates function of the conductors to which the load is connected. Where L1, L2 and L3 represent the phase lines according to IEC 60446 notation (sometimes phase lines may be referenced by color [Red, Blue, Yellow] or by number [1, 2, 3] etc). Protective Earth is sometimes also known as CPC or common protective conductor. Note that for an electrical device, a set of line conductor functions may be applied.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ConductorFunctionEnum",
+          "enumValues": [
+            "NEUTRAL",
+            "PHASE_L1",
+            "PHASE_L2",
+            "PHASE_L3",
+            "PROTECTIVEEARTH",
+            "PROTECTIVEEARTHNEUTRAL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CurrentContent3rdHarmonic",
+          "definition": "The ratio between the third harmonic current and the phase current.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "Current",
+          "definition": "The actual current and operable range.",
+          "type": "BoundedValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "Voltage",
+          "definition": "The actual voltage and operable range.",
+          "type": "BoundedValue",
+          "dataType": "IfcElectricVoltageMeasure"
+        },
+        {
+          "name": "Power",
+          "definition": "The actual power and operable range.",
+          "type": "BoundedValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "Protocols",
+          "definition": "For data ports, identifies the protocols used as defined by the Open System Interconnection (OSI) Basic Reference Model (ISO 7498).  Layers include: 1. Physical; 2. DataLink; 3. Network; 4. Transport; 5. Session; 6. Presentation; 7. Application.  Example: 3:IP, 4:TCP, 5:HTTP",
+          "type": "ListValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "HasConnector",
+          "definition": "Indicate whether the wire pair end point is terminated with a connector or not.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "IsWelded",
+          "definition": "Indicates whether the wire pair end point is joined to another wire pair end point by means of a welded junction.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Pset_WiredCommunicationPortCommon",
+      "definition": "Properties used for wired communication port.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionPort/CABLE"
+      ],
+      "applicableTypeValue": "IfcDistributionPort/CABLE",
+      "properties": [
+        {
+          "name": "CommunicationStandard",
+          "definition": "Indicates the communication standard supported by the physical wired communication port.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_CommunicationStandard",
+          "enumValues": [
+            "ETHERNET",
+            "STM_1",
+            "STM_16",
+            "STM_256",
+            "STM_4",
+            "STM_64",
+            "USB",
+            "XDSL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "MaximumTransferRate",
+          "definition": "Indicates the transmission rate in bit/s over the wired port.",
+          "type": "SingleValue",
+          "dataType": "IfcIntegerCountRateMeasure"
+        }
+      ]
+    }
+  ]
+}

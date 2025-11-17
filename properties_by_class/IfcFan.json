@@ -1,0 +1,302 @@
+{
+  "ifcClass": "IfcFan",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 29,
+  "propertySets": [
+    {
+      "name": "Pset_FanOccurrence",
+      "definition": "Fan occurrence attributes attached to an instance of IfcFan.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFan"
+      ],
+      "applicableTypeValue": "IfcFan",
+      "properties": [
+        {
+          "name": "DischargeType",
+          "definition": "Defines the type of connection at the fan discharge.Duct: Discharge into ductwork.\nScreen: Discharge into screen outlet.\nLouver: Discharge into a louver.\nDamper: Discharge into a damper.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanDischargeType",
+          "enumValues": [
+            "DAMPER",
+            "DUCT",
+            "LOUVER",
+            "SCREEN",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ApplicationOfFan",
+          "definition": "The functional application of the fan.SupplyAir: Supply air fan.\nReturnAir: Return air fan.\nExhaustAir: Exhaust air fan.\nOther: Other type of application not defined above.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanApplicationType",
+          "enumValues": [
+            "COOLINGTOWER",
+            "EXHAUSTAIR",
+            "RETURNAIR",
+            "SUPPLYAIR",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CoilPosition",
+          "definition": "Defines the relationship between a fan and a coil.DrawThrough: Fan located downstream of the coil.\nBlowThrough: Fan located upstream of the coil.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanCoilPosition",
+          "enumValues": [
+            "BLOWTHROUGH",
+            "DRAWTHROUGH",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "MotorPosition",
+          "definition": "Defines the location of the motor relative to the air stream.InAirStream: Fan motor is in the air stream.\nOutOfAirStream: Fan motor is out of the air stream.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanMotorPosition",
+          "enumValues": [
+            "INAIRSTREAM",
+            "OUTOFAIRSTREAM",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FanMountingType",
+          "definition": "Defines the method of mounting the fan in the building.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanMountingType",
+          "enumValues": [
+            "CONCRETEPAD",
+            "DUCTMOUNTED",
+            "FIELDERECTEDCURB",
+            "MANUFACTUREDCURB",
+            "SUSPENDED",
+            "WALLMOUNTED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FractionOfMotorHeatToAirStream",
+          "definition": "Fraction of the motor heat released into the fluid flow.",
+          "type": "SingleValue",
+          "dataType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "ImpellerDiameter",
+          "definition": "Diameter of object - used to scale performance of geometrically similar objects.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_FanPHistory",
+      "definition": "Fan performance history attributes.IFC2X2 CHANGE Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFan"
+      ],
+      "applicableTypeValue": "IfcFan",
+      "properties": [
+        {
+          "name": "FanRotationSpeed",
+          "definition": "Fan rotation speed.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "WheelTipSpeed",
+          "definition": "Fan blade tip speed, typically defined as the linear speed of the tip of the fan blade furthest from the shaft.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "FanEfficiency",
+          "definition": "Fan mechanical efficiency.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "OverallEfficiency",
+          "definition": "Total efficiency of object.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "FanPowerRate",
+          "definition": "Fan power consumption.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "ShaftPowerRate",
+          "definition": "Fan shaft power.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DischargeVelocity",
+          "definition": "The speed at which air discharges from the fan through the fan housing discharge opening.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DischargePressureLoss",
+          "definition": "Fan discharge pressure loss associated with the discharge arrangement.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "DrivePowerLoss",
+          "definition": "Fan drive power losses associated with the type of connection between the motor and the fan wheel.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_FanTypeCommon",
+      "definition": "Fan type common attributes.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFan",
+        "IfcFanType"
+      ],
+      "applicableTypeValue": "IfcFan,IfcFanType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "MotorDriveType",
+          "definition": "Motor drive type:\nDIRECTDRIVE: Direct drive.\nBELTDRIVE: Belt drive.\nCOUPLING: Coupling.\nOTHER: Other type of motor drive.\nUNKNOWN: Unknown motor drive type.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanMotorConnectionType",
+          "enumValues": [
+            "BELTDRIVE",
+            "COUPLING",
+            "DIRECTDRIVE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CapacityControlType",
+          "definition": "InletVane: Control by adjusting inlet vane.\nVariableSpeedDrive: Control by variable speed drive.\nBladePitchAngle: Control by adjusting blade pitch angle.\nTwoSpeed: Control by switch between high and low speed.\nDischargeDamper: Control by modulating discharge damper.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_FanCapacityControlType",
+          "enumValues": [
+            "BLADEPITCHANGLE",
+            "DISCHARGEDAMPER",
+            "INLETVANE",
+            "TWOSPEED",
+            "VARIABLESPEEDDRIVE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "OperationTemperatureRange",
+          "definition": "Allowable operation ambient air temperature range.",
+          "type": "BoundedValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "NominalAirFlowRate",
+          "definition": "Nominal air flow rate.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "NominalTotalPressure",
+          "definition": "Nominal total pressure rise across the fan.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "NominalStaticPressure",
+          "definition": "The static pressure within the air stream that the fan must overcome to insure designed circulation of air.",
+          "type": "SingleValue",
+          "dataType": "IfcPressureMeasure"
+        },
+        {
+          "name": "NominalRotationSpeed",
+          "definition": "Rotational speed of the object under nominal conditions.\n\nNominal fan wheel speed.",
+          "type": "SingleValue",
+          "dataType": "IfcRotationalFrequencyMeasure"
+        },
+        {
+          "name": "NominalPowerRate",
+          "definition": "Nominal fan power rate.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "OperationalCriteria",
+          "definition": "Time of operation at maximum operational ambient air temperature.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "PressureCurve",
+          "definition": "Pressure rise = f (flow rate).",
+          "type": "TableValue",
+          "definingValueType": "IfcVolumetricFlowRateMeasure",
+          "definedValueType": "IfcPressureMeasure"
+        },
+        {
+          "name": "EfficiencyCurve",
+          "definition": "Fan efficiency =f (flow rate).",
+          "type": "TableValue",
+          "definingValueType": "IfcVolumetricFlowRateMeasure",
+          "definedValueType": "IfcNormalisedRatioMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_FanBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of fans.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcFan",
+        "IfcFanType"
+      ],
+      "applicableTypeValue": "IfcFan,IfcFanType",
+      "properties": []
+    }
+  ]
+}

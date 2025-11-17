@@ -1,0 +1,446 @@
+{
+  "ifcClass": "IfcSpatialZone",
+  "propertySetsCount": 7,
+  "totalPropertiesCount": 52,
+  "propertySets": [
+    {
+      "name": "Pset_AirSideSystemInformation",
+      "definition": "Attributes that apply to an air side HVAC system.HISTORY New property set in IFC Release 1.0.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialElement",
+        "IfcSpatialZone",
+        "IfcZone"
+      ],
+      "applicableTypeValue": "IfcSpatialElement,IfcSpatialZone,IfcZone",
+      "properties": [
+        {
+          "name": "Description",
+          "definition": "The Description of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "AirSideSystemType",
+          "definition": "This enumeration specifies the basic types of possible air side systems (e.g., Constant Volume, Variable Volume, etc.).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AirSideSystemType",
+          "enumValues": [
+            "CONSTANTVOLUME",
+            "CONSTANTVOLUMEBYPASS",
+            "CONSTANTVOLUMEMULTIPLEZONEREHEAT",
+            "CONSTANTVOLUMESINGLEZONE",
+            "VARIABLEAIRVOLUME",
+            "VARIABLEAIRVOLUMEDUALCONDUIT",
+            "VARIABLEAIRVOLUMEFANPOWERED",
+            "VARIABLEAIRVOLUMEINDUCTION",
+            "VARIABLEAIRVOLUMEREHEAT",
+            "VARIABLEAIRVOLUMEVARIABLEDIFFUSERS",
+            "VARIABLEAIRVOLUMEVARIABLETEMPERATURE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "AirSideSystemDistributionType",
+          "definition": "This enumeration defines the basic types of air side systems (e.g., SingleDuct, DualDuct, Multizone, etc.).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_AirSideSystemDistributionType",
+          "enumValues": [
+            "DUALDUCT",
+            "MULTIZONE",
+            "SINGLEDUCT",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "TotalAirFlow",
+          "definition": "",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "EnergyGainTotal",
+          "definition": "The total amount of energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level total energy gains.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "AirFlowSensible",
+          "definition": "",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "EnergyGainSensible",
+          "definition": "The sum of total energy gains for the spaces served by the system during the peak cooling conditions, plus any system-level sensible energy gains.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "EnergyLoss",
+          "definition": "The sum of energy losses for the spaces served by the system during the peak heating conditions.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "InfiltrationDiversitySummer",
+          "definition": "Diversity factor for Summer infiltration.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "InfiltrationDiversityWinter",
+          "definition": "Diversity factor for Winter infiltration.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "ApplianceDiversity",
+          "definition": "Diversity of appliance load.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "HeatingTemperatureDelta",
+          "definition": "Heating temperature difference for calculating space air flow rates.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "CoolingTemperatureDelta",
+          "definition": "Cooling temperature difference for calculating space air flow rates.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "Ventilation",
+          "definition": "Required outside air ventilation.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "FanPower",
+          "definition": "Fan motor loads contributing to the cooling load.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SpaceFireSafetyRequirements",
+      "definition": "Properties related to fire protection of spaces that apply to the occurrences of IfcSpace or IfcZone.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialElement",
+        "IfcSpatialZone",
+        "IfcZone",
+        "IfcSpatialElementType",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType",
+      "properties": [
+        {
+          "name": "FireRiskFactor",
+          "definition": "Fire Risk factor assigned to the space according to local building regulations. It defines the fire risk of the space at several levels of fire hazard.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "FlammableStorage",
+          "definition": "Indication whether the space is intended to serve as a storage of flammable material (which is regarded as such by the presiding building code. (TRUE) indicates yes, (FALSE) otherwise.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "FireExit",
+          "definition": "Indication whether this object is designed to serve as an exit in the case of fire (TRUE) or not (FALSE).\n\nHere whether the space (in case of e.g., a corridor) is designed to serve as an exit space, e.g., for fire escape purposes.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "SprinklerProtection",
+          "definition": "Indication whether this object is sprinkler protected (TRUE) or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "SprinklerProtectionAutomatic",
+          "definition": "Indication whether this object has an automatic sprinkler protection (TRUE) or not (FALSE).\nIt should only be given, if the property \"SprinklerProtection\" is set to TRUE.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "AirPressurization",
+          "definition": "Indication whether the space is required to have pressurized air (TRUE) or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SpaceHVACDesign",
+      "definition": "Properties for HVAC requirements for spaces.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialElement",
+        "IfcSpatialZone",
+        "IfcZone",
+        "IfcSpatialElementType",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType",
+      "properties": [
+        {
+          "name": "TemperatureSetPoint",
+          "definition": "The temperature setpoint range and default setpoint.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureMax",
+          "definition": "Maximal temperature of the space or zone, that is required from user/designer view point.  If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureMin",
+          "definition": "Minimal temperature of the space or zone, that is required from user/designer view point. If no summer or winter space temperature requirements are given, it applies all year, otherwise for the intermediate period.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureSummerMax",
+          "definition": "Maximal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureSummerMin",
+          "definition": "Minimal temperature of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureWinterMax",
+          "definition": "Maximal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "TemperatureWinterMin",
+          "definition": "Minimal temperature of the space or zone for the cold (winter) period, that is required from user/designer view point and provided as requirement for heating.",
+          "type": "SingleValue",
+          "dataType": "IfcThermodynamicTemperatureMeasure"
+        },
+        {
+          "name": "HumiditySetPoint",
+          "definition": "Humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period. Provide this property, if no humidity range (Min-Max) is available.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "HumidityMax",
+          "definition": "Maximal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "HumidityMin",
+          "definition": "Minimal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "HumiditySummer",
+          "definition": "Humidity of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "HumidityWinter",
+          "definition": "Humidity of the space or zone for the cold (winter) period that is required from user/designer view point and provided as requirement for heating.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "DiscontinuedHeating",
+          "definition": "Indication whether discontinued heating is required/desirable from user/designer view point. (TRUE) if yes, (FALSE) otherwise.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "NaturalVentilation",
+          "definition": "Indication whether the space is required to have natural ventilation (TRUE), or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "NaturalVentilationRate",
+          "definition": "Indication of the requirement of a particular natural air ventilation rate, given in air changes per hour.",
+          "type": "SingleValue",
+          "dataType": "IfcNumericMeasure"
+        },
+        {
+          "name": "MechanicalVentilation",
+          "definition": "Indication whether the space is required to have mechanical ventilation (TRUE), or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "MechanicalVentilationRate",
+          "definition": "Indication of the requirement of a particular mechanical air ventilation rate, given in air changes per hour.",
+          "type": "SingleValue",
+          "dataType": "IfcNumericMeasure"
+        },
+        {
+          "name": "AirConditioning",
+          "definition": "Indication whether this space requires air conditioning provided (TRUE) or not (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "AirConditioningCentral",
+          "definition": "Indication whether the space  requires a central air conditioning provided (TRUE) or not (FALSE).\nIt should only be given, if the property \"AirConditioning\" is set to TRUE.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "AirHandlingName",
+          "definition": "The name of the air side system.IfcRelServicesBuildings should be used to reference the correct AirHandlingSystem (IfcSystem)",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SpaceLightingDesign",
+      "definition": "Properties for requirements on Lighting of spaces.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialElement",
+        "IfcSpatialZone",
+        "IfcZone",
+        "IfcSpatialElementType",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType",
+      "properties": [
+        {
+          "name": "ArtificialLighting",
+          "definition": "Indication whether this space  requires artificial lighting (as natural lighting would be not sufficient). (TRUE) indicates yes (FALSE) otherwise.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "Illuminance",
+          "definition": "Required average illuminance value for this space.",
+          "type": "SingleValue",
+          "dataType": "IfcIlluminanceMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SpaceOccupancyRequirements",
+      "definition": "Properties concerning work activities occurring or expected to occur within one or a set of similar spatial structure elements.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialElement",
+        "IfcSpatialZone",
+        "IfcZone",
+        "IfcSpatialElementType",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialElement,IfcSpatialZone,IfcZone,IfcSpatialElementType,IfcSpatialZoneType",
+      "properties": [
+        {
+          "name": "OccupancyType",
+          "definition": "Occupancy type for this object.\nIt is defined according to the presiding national building code.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "OccupancyNumber",
+          "definition": "Number of people required for the activity assigned to this space.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "OccupancyNumberPeak",
+          "definition": "Maximal number of people required for the activity assigned to this space in peak time.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "OccupancyTimePerDay",
+          "definition": "The amount of time during the day that the activity is required within this space.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "AreaPerOccupant",
+          "definition": "Design occupancy loading for this type of usage assigned to this space.",
+          "type": "SingleValue",
+          "dataType": "IfcAreaMeasure"
+        },
+        {
+          "name": "MinimumHeadroom",
+          "definition": "Headroom required for the activity assigned to this space.",
+          "type": "SingleValue",
+          "dataType": "IfcLengthMeasure"
+        },
+        {
+          "name": "IsOutlookDesirable",
+          "definition": "An indication of whether the outlook is desirable (set TRUE) or not (set FALSE)",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Pset_SpatialZoneCommon",
+      "definition": "Common properties for Spatial Zones.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialZone",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialZone,IfcSpatialZoneType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "IsExternal",
+          "definition": "Indication whether the element is designed for use in the exterior (TRUE) or not (FALSE). If (TRUE) it is an external element and faces the outside of the building.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Qto_SpatialZoneBaseQuantities",
+      "definition": "Base quantities set for Spatial Zones.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSpatialZone",
+        "IfcSpatialZoneType"
+      ],
+      "applicableTypeValue": "IfcSpatialZone,IfcSpatialZoneType",
+      "properties": []
+    }
+  ]
+}

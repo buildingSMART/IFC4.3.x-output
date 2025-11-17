@@ -1,0 +1,122 @@
+{
+  "ifcClass": "IfcElectricMotorType",
+  "propertySetsCount": 2,
+  "totalPropertiesCount": 12,
+  "propertySets": [
+    {
+      "name": "Pset_ElectricMotorTypeCommon",
+      "definition": "Defines a particular type of engine that is a machine for converting electrical energy into mechanical energy. Note that in cases where a close coupled or monobloc pump or close coupled fan is being driven by the motor, the motor may itself be considered to be directly part of the pump or fan. In this case , motor information may need to be specified directly at the pump or fan and not througfh separate motor/motor connection entities. NOTE: StartingTime and TeTime added at IFC4",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElectricMotor",
+        "IfcElectricMotorType"
+      ],
+      "applicableTypeValue": "IfcElectricMotor,IfcElectricMotorType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "MaximumPowerOutput",
+          "definition": "The maximum output power rating of the engine.",
+          "type": "SingleValue",
+          "dataType": "IfcPowerMeasure"
+        },
+        {
+          "name": "ElectricMotorEfficiency",
+          "definition": "The ratio of output capacity to intake capacity.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "StartCurrentFactor",
+          "definition": "IEC. Start current factor defines how large the peak starting current will become on the engine. StartCurrentFactor is multiplied to NominalCurrent and to give the start current.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "StartingTime",
+          "definition": "The time (in s) needed for the motor to reach its rated speed with its driven equipment attached, starting from standstill and at the nominal voltage applied at its terminals.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "TeTime",
+          "definition": "The maximum time (in s) at which the motor could run with locked rotor when the motor is used in an EX-environment. The time indicates that a protective device should trip before this time when the starting current of the motor is slowing through the device.",
+          "type": "SingleValue",
+          "dataType": "IfcTimeMeasure"
+        },
+        {
+          "name": "LockedRotorCurrent",
+          "definition": "Input current when a motor armature is energized but not rotating.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricCurrentMeasure"
+        },
+        {
+          "name": "MotorEnclosureType",
+          "definition": "A list of the available types of motor enclosure from which that required may be selected.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_MotorEnclosureType",
+          "enumValues": [
+            "OPENDRIPPROOF",
+            "TOTALLYENCLOSEDAIROVER",
+            "TOTALLYENCLOSEDFANCOOLED",
+            "TOTALLYENCLOSEDNONVENTILATED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "FrameSize",
+          "definition": "Designation of the frame size according to the named range of frame sizes designated at the place of use or according to a given standard.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IsGuarded",
+          "definition": "Indication of whether the motor enclosure is guarded (= TRUE) or not (= FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "HasPartWinding",
+          "definition": "Indication of whether the motor is single speed, i.e. has a single winding (= FALSE) or multi-speed i.e.has part winding (= TRUE) .",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        }
+      ]
+    },
+    {
+      "name": "Qto_ElectricMotorBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all occurrences of electric motor.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcElectricMotor",
+        "IfcElectricMotorType"
+      ],
+      "applicableTypeValue": "IfcElectricMotor,IfcElectricMotorType",
+      "properties": []
+    }
+  ]
+}

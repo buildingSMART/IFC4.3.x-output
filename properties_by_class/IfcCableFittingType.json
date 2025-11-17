@@ -1,0 +1,124 @@
+{
+  "ifcClass": "IfcCableFittingType",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 9,
+  "propertySets": [
+    {
+      "name": "Pset_CableFittingTypeCommon",
+      "definition": "Common properties for cable fittings.  HISTORY: Added in IFC4.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableFitting",
+        "IfcCableFittingType"
+      ],
+      "applicableTypeValue": "IfcCableFitting,IfcCableFittingType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_TelecomCableGeneral",
+      "definition": "Properties common to occurrences and types of IfcCableSegment and IfcCableFitting applied in telecommunication domain.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableFitting",
+        "IfcCableSegment",
+        "IfcCableFittingType",
+        "IfcCableSegmentType"
+      ],
+      "applicableTypeValue": "IfcCableFitting,IfcCableSegment,IfcCableFittingType,IfcCableSegmentType",
+      "properties": [
+        {
+          "name": "Attenuation",
+          "definition": "Indicates the optical or electrical attenuation of the cable measured in dB, at a certain wavelength or frequency, changing with the length of the cable.",
+          "type": "SingleValue",
+          "dataType": "IfcReal"
+        },
+        {
+          "name": "FireRating",
+          "definition": "Fire rating for this object. It is given according to the national fire safety classification.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "IsFireResistant",
+          "definition": "Indicates whether the cable is fire resistant.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "NominalDiameter",
+          "definition": "Nominal diameter or width of the object.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "JacketColour",
+          "definition": "Indicates the colour of the cable or fitting jacket.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "CableFunctionType",
+          "definition": "Distinguishes between Telecom and Power Supply cables.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_CableFunctionType",
+          "enumValues": [
+            "POWERSUPPLY",
+            "TELECOMMUNICATION",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "CableArmourType",
+          "definition": "The armour type of the cable for mechanical protection.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_CableArmourType",
+          "enumValues": [
+            "DIELECTRIC",
+            "METALLIC",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Qto_CableFittingBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all occurrences of flow cable fitting.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcCableFitting",
+        "IfcCableFittingType"
+      ],
+      "applicableTypeValue": "IfcCableFitting,IfcCableFittingType",
+      "properties": []
+    }
+  ]
+}

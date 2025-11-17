@@ -1,0 +1,239 @@
+{
+  "ifcClass": "IfcSignalType",
+  "propertySetsCount": 4,
+  "totalPropertiesCount": 22,
+  "propertySets": [
+    {
+      "name": "Pset_RailwaySignalAspect",
+      "definition": "Properties in this property set are applicable for IfcSignal and IfcSign applied in railways. These properties describe the signal aspect, which is the information on the signal or sign shown to the train driver.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSign",
+        "IfcSignalType",
+        "IfcSignType"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSign,IfcSignalType,IfcSignType",
+      "properties": [
+        {
+          "name": "SignalAspectSymbol",
+          "definition": "Content which is shown on the signal or sign, e.g. text, number, arrow or icon.",
+          "type": "ReferenceValue",
+          "refType": "IfcExternalReference"
+        },
+        {
+          "name": "AppliesToTrainCategory",
+          "definition": "Sign information relative to train category, e.g. freight, passenger.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_TrainCategory",
+          "enumValues": [
+            "FREIGHT",
+            "PASSENGER",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "SignalAspectType",
+          "definition": "The type of aspect, e.g. 2-display aspect for distant signal, 3-display aspect for block signal.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SignLegend",
+          "definition": "Text information written on the signal or sign.",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        }
+      ]
+    },
+    {
+      "name": "Pset_RailwaySignalType",
+      "definition": "Properties common to the definition of occurrences and types of IfcSignal applied in railways.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSignalType"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSignalType",
+      "properties": [
+        {
+          "name": "SignalIndicatorType",
+          "definition": "Type of the indicators on a signal, e.g. route indicator, speed restriction indicator etc.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_SignalIndicatorType",
+          "enumValues": [
+            "DEPARTUREINDICATOR",
+            "DEPARTUREROUTEINDICATOR",
+            "DERAILINDICATOR",
+            "ROLLINGSTOCKSTOPINDICATOR",
+            "ROUTEINDICATOR",
+            "SHUNTINGINDICATOR",
+            "SWITCHINDICATOR",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "LensDiffuserType",
+          "definition": "Type of the lens diffuser the signal is equipped with.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "HasConductorRailGuardBoard",
+          "definition": "Indicates if a guard board is provided.",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "MaximumDisplayDistance",
+          "definition": "The maximum distance that can be displayed. The value relates only to the signal type, not to the circumstances at a special position.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "RequiredDisplayDistance",
+          "definition": "The required distance that has to be displayed. The value relates only to the signal type, not to the circumstances at a special position.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "IsHighType",
+          "definition": "Indicates if the signal is high (TRUE) or dwarf (ground mounted) (FALSE).",
+          "type": "SingleValue",
+          "dataType": "IfcBoolean"
+        },
+        {
+          "name": "SignalHoodLength",
+          "definition": "Nominal length of the signal hood, which is the signal lamp cover against glaring sun.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "HotStripOrientation",
+          "definition": "Position of the hot strip, which indicates the direction of the focus of the light beam and is given in terms like \"left upper quadrant (LUQ)\" or \"5 o'clock\".",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "LensDiffuserOrientation",
+          "definition": "Orientation the lens diffuser has to have, which indicates the direction of the lens diffuser and is given in terms like \"left upper quadrant (LUQ)\" or \"5 o'clock\".",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NumberOfLamps",
+          "definition": "Number of lamps the signal is composed of.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "SignalMessage",
+          "definition": "All possible message available at this signal, e.g. \"3/4- display automatic blocking\".",
+          "type": "SingleValue",
+          "dataType": "IfcText"
+        },
+        {
+          "name": "RailwaySignalType",
+          "definition": "The type of railway signal, e.g. home signal, starting signal, shunting signal, level crossing signal.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_RailwaySignalType",
+          "enumValues": [
+            "APPROACHSIGNAL",
+            "BLOCKSIGNAL",
+            "DISTANTSIGNAL",
+            "HOMESIGNAL",
+            "HUMPAUXILIARYSIGANL",
+            "HUMPSIGNAL",
+            "LEVELCROSSINGSIGNAL",
+            "OBSTRUCTIONSIGNAL",
+            "REPEATINGSIGNAL",
+            "SHUNTINGSIGNAL",
+            "STARTINGSIGNAL",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pset_SignalFrame",
+      "definition": "Properties that define signal frame parameters for occurrences and types of IfcSignal applied in railways.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSignalType"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSignalType",
+      "properties": [
+        {
+          "name": "BackboardType",
+          "definition": "The type of the backboard of the signal frame.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "SignalFrameType",
+          "definition": "Type of frame, e.g. main frame, route indicator, speed indicator, direction indicator, etc.",
+          "type": "SingleValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "NominalWidth",
+          "definition": "The nominal overall width of the object. The size information is provided in addition to the shape representation and the geometric parameters used within. In cases of inconsistency between the geometric parameters and the size properties, provided in the attached property set, the geometric parameters take precedence.",
+          "type": "SingleValue",
+          "dataType": "IfcNonNegativeLengthMeasure"
+        },
+        {
+          "name": "SignalIndicatorType",
+          "definition": "Type of the indicators on a signal, e.g. route indicator, speed restriction indicator etc.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_SignalIndicatorType",
+          "enumValues": [
+            "DEPARTUREINDICATOR",
+            "DEPARTUREROUTEINDICATOR",
+            "DERAILINDICATOR",
+            "ROLLINGSTOCKSTOPINDICATOR",
+            "ROUTEINDICATOR",
+            "SHUNTINGINDICATOR",
+            "SWITCHINDICATOR",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "SignalFrameBackboardHeight",
+          "definition": "The nominal height of the signal frame backboard.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        },
+        {
+          "name": "SignalFrameBackboardDiameter",
+          "definition": "The nominal diameter of the signal frame backboard.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveLengthMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_SignalBaseQuantities",
+      "definition": "Base quantities for Signals.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcSignal",
+        "IfcSignalType"
+      ],
+      "applicableTypeValue": "IfcSignal,IfcSignalType",
+      "properties": []
+    }
+  ]
+}

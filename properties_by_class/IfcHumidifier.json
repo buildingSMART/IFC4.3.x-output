@@ -1,0 +1,143 @@
+{
+  "ifcClass": "IfcHumidifier",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 12,
+  "propertySets": [
+    {
+      "name": "Pset_HumidifierPHistory",
+      "definition": "Humidifier performance history attributes.\nSound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.",
+      "templateType": "PSET_PERFORMANCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcHumidifier"
+      ],
+      "applicableTypeValue": "IfcHumidifier",
+      "properties": [
+        {
+          "name": "AtmosphericPressure",
+          "definition": "Ambient atmospheric pressure.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        },
+        {
+          "name": "SaturationEfficiency",
+          "definition": "Saturation efficiency: Ratio of leaving air absolute humidity to the maximum absolute humidity.",
+          "type": "ReferenceValue",
+          "refType": "IfcTimeSeries"
+        }
+      ]
+    },
+    {
+      "name": "Pset_HumidifierTypeCommon",
+      "definition": "Humidifier type common attributes.\nWaterProperties attribute renamed to WaterRequirement and unit type modified in IFC2x2 Pset Addendum.",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcHumidifier",
+        "IfcHumidifierType"
+      ],
+      "applicableTypeValue": "IfcHumidifier,IfcHumidifierType",
+      "properties": [
+        {
+          "name": "Reference",
+          "definition": "Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as \"construction type\". It should be provided as an alternative to the name of the \"object type\", if the software does not support object types and no classification reference to a recognized classification system used.IFC4.3.0.0 DEPRECATION  The Reference property is deprecated and shall no longer be used, use attribute Name on the relating type instead.",
+          "type": "SingleValue",
+          "dataType": "IfcIdentifier"
+        },
+        {
+          "name": "Status",
+          "definition": "Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as \"New\" - element designed as new addition, \"Existing\" - element exists and remains, \"Demolish\" - element existed but is to be demolished,  \"Temporary\" - element will exists only temporary (like a temporary support structure).",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElementStatus",
+          "enumValues": [
+            "DEMOLISH",
+            "EXISTING",
+            "NEW",
+            "TEMPORARY",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "HumidifierApplication",
+          "definition": "Humidifier application.Fixed: Humidifier installed in a ducted flow distribution system.\nPortable: Humidifier is not installed in a ducted flow distribution system.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_HumidifierApplication",
+          "enumValues": [
+            "FIXED",
+            "PORTABLE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "Weight",
+          "definition": "Total weight of object",
+          "type": "SingleValue",
+          "dataType": "IfcMassMeasure"
+        },
+        {
+          "name": "NominalMoistureGain",
+          "definition": "Nominal rate of water vapor added into the airstream.",
+          "type": "SingleValue",
+          "dataType": "IfcMassFlowRateMeasure"
+        },
+        {
+          "name": "NominalAirFlowRate",
+          "definition": "Nominal air flow rate.\n\nNominal rate of air flow into which water vapor is added.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "InternalControl",
+          "definition": "Internal modulation control.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_HumidifierInternalControl",
+          "enumValues": [
+            "MODULATING",
+            "NONE",
+            "ONOFF",
+            "STEPPED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "WaterRequirement",
+          "definition": "Make-up water requirement.",
+          "type": "SingleValue",
+          "dataType": "IfcVolumetricFlowRateMeasure"
+        },
+        {
+          "name": "SaturationEfficiencyCurve",
+          "definition": "Saturation efficiency as a function of the air flow rate.",
+          "type": "TableValue",
+          "definingValueType": "IfcVolumetricFlowRateMeasure",
+          "definedValueType": "IfcNormalisedRatioMeasure"
+        },
+        {
+          "name": "AirPressureDropCurve",
+          "definition": "Air pressure drop as a function of air flow rate.\n\nAir pressure drop versus air-flow rate.",
+          "type": "TableValue",
+          "definingValueType": "IfcVolumetricFlowRateMeasure",
+          "definedValueType": "IfcPressureMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Qto_HumidifierBaseQuantities",
+      "definition": "Base quantities that are common to the definition of all types of humidifiers.",
+      "templateType": "QTO_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcHumidifier",
+        "IfcHumidifierType"
+      ],
+      "applicableTypeValue": "IfcHumidifier,IfcHumidifierType",
+      "properties": []
+    }
+  ]
+}

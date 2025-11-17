@@ -1,0 +1,68 @@
+{
+  "ifcClass": "IfcBuiltSystem",
+  "propertySetsCount": 1,
+  "totalPropertiesCount": 5,
+  "propertySets": [
+    {
+      "name": "Pset_ProcessCapacity",
+      "definition": "Property set for the application of process data to spatial elements and transport assets",
+      "templateType": "PSET_TYPEDRIVENOVERRIDE",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcBuiltSystem",
+        "IfcDistributionSystem",
+        "IfcDoor",
+        "IfcSpace",
+        "IfcTransportationDevice",
+        "IfcZone",
+        "IfcDoorType",
+        "IfcSpaceType",
+        "IfcTransportationDeviceType"
+      ],
+      "applicableTypeValue": "IfcBuiltSystem,IfcDistributionSystem,IfcDoor,IfcSpace,IfcTransportationDevice,IfcZone,IfcDoorType,IfcSpaceType,IfcTransportationDeviceType",
+      "properties": [
+        {
+          "name": "ProcessItem",
+          "definition": "The type of item (and its measurement method) being modelled within a process. This can be cargo, passengers or vehicles that pass through the system.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ProcessItem",
+          "enumValues": [
+            "BARREL",
+            "CGT",
+            "PASSENGER",
+            "TEU",
+            "TONNE",
+            "VEHICLE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ProcessCapacity",
+          "definition": "The number of units that can be processed in the time defined in ProcessPerformance",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "ProcessPerformance",
+          "definition": "Minimum time to accept or dispatch the entire item capacity.",
+          "type": "SingleValue",
+          "dataType": "IfcDuration"
+        },
+        {
+          "name": "DownstreamConnections",
+          "definition": "Names of downstream connected equipment and spaces, if not otherwise represented",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        },
+        {
+          "name": "UpstreamConnections",
+          "definition": "Names of upstream connected equipment and spaces, if not otherwise represented",
+          "type": "ListValue",
+          "dataType": "IfcLabel"
+        }
+      ]
+    }
+  ]
+}

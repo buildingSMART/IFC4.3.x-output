@@ -1,0 +1,149 @@
+{
+  "ifcClass": "IfcDistributionSystem/ELECTRICAL",
+  "propertySetsCount": 3,
+  "totalPropertiesCount": 12,
+  "propertySets": [
+    {
+      "name": "Pset_DistributionSystemTypeElectrical",
+      "definition": "Properties of electrical circuits.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionSystem/ELECTRICAL"
+      ],
+      "applicableTypeValue": "IfcDistributionSystem/ELECTRICAL",
+      "properties": [
+        {
+          "name": "ElectricalSystemType",
+          "definition": "For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are:•TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors,\n•TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system,\n•TN S type system, a TN type system having separate neutral and protective conductors throughout the system,\n•TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system,\n•TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source,\n•IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionSystemElectricalType",
+          "enumValues": [
+            "IT",
+            "TN",
+            "TN_C",
+            "TN_C_S",
+            "TN_S",
+            "TT",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ElectricalSystemCategory",
+          "definition": "Designates the voltage range of the circuit, according to IEC.  HIGHVOLTAGE indicates >1000V AC or >1500V DV; LOWVOLTAGE indicates 50-1000V AC or 120-1500V DC; EXTRALOWVOLTAGE indicates <50V AC or <120V DC.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_DistributionSystemElectricalCategory",
+          "enumValues": [
+            "EXTRALOWVOLTAGE",
+            "HIGHVOLTAGE",
+            "LOWVOLTAGE",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "Diversity",
+          "definition": "The ratio, expressed as a numerical\nvalue or as a percentage, of the\nsimultaneous maximum demand of\na group of electrical appliances or\nconsumers within a specified period,\nto the sum of their individual maximum\ndemands within the same\nperiod. The group of electrical appliances is in this case connected to this circuit. Definition from IEC 60050, IEV 691-10-04\nNOTE1: It is often not desirable to size each conductor in a distribution system to support the total connected load at that point in the network. Diversity is applied on the basis of the anticipated loadings that are likely to result from all loads not being connected at the same time.\nNOTE2: Diversity is applied to final circuits only, not to sub-main circuits supplying other DBs.",
+          "type": "SingleValue",
+          "dataType": "IfcPositiveRatioMeasure"
+        },
+        {
+          "name": "NumberOfLiveConductors",
+          "definition": "Number of live conductors within this circuit. Either this property or the ConductorFunction property (if only one) may be asserted.",
+          "type": "SingleValue",
+          "dataType": "IfcCountMeasure"
+        },
+        {
+          "name": "MaximumAllowedVoltageDrop",
+          "definition": "The maximum voltage drop across the circuit that must not be exceeded.\nThere are two  voltage drop limit settings that may be applied; one for sub-main circuits, and one in each Distribution Board or Consumer Unit for final circuits connected to that board. The settings should limit the overall voltage drop to the required level. Default settings of 1.5% for sub-main circuits and 2.5% for final circuits, giving an overall limit of 4% may be applied.\nNOTE: This value may also be specified as a constraint within an IFC model if required but is included within the property set at this stage pending implementation of the required capabilities within software applications.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricVoltageMeasure"
+        },
+        {
+          "name": "NetImpedance",
+          "definition": "The maximum earth loop impedance upstream of a circuit (typically stated as the variable Zs). This value is for 55o C (130oF) Celsius usage.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricResistanceMeasure"
+        },
+        {
+          "name": "RatedVoltageRange",
+          "definition": "Voltage range as declared by the manufacturer expressed by its lower and upper rated voltages [Source : IEC 62368-1:2010, 3.3.10.5].",
+          "type": "BoundedValue",
+          "dataType": "IfcElectricVoltageMeasure"
+        }
+      ]
+    },
+    {
+      "name": "Pset_PowerControlSystem",
+      "definition": "Properties of power control system. The property set can be used by the predefined type ELECTRICAL of IfcDistributionSystem. The property set can be used to characterize the system that controls the railway energy network.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionSystem/ELECTRICAL"
+      ],
+      "applicableTypeValue": "IfcDistributionSystem/ELECTRICAL",
+      "properties": [
+        {
+          "name": "AssemblyInstruction",
+          "definition": "Instructions to describe how the system / equipment / facility is assembled.",
+          "type": "ReferenceValue",
+          "refType": "IfcExternalReference"
+        }
+      ]
+    },
+    {
+      "name": "Pset_TractionPowerSystem",
+      "definition": "Properties of a traction power system. The property is associated to the predefined type ELECTRICAL of IfcDistributionSystem, and is used to characterise systems such as railway electrical distribution networks used to provide energy for rolling stock.",
+      "templateType": "PSET_OCCURRENCEDRIVEN",
+      "ifcVersion": "IFC4X3_DEV_c447b70",
+      "applicableClasses": [
+        "IfcDistributionSystem/ELECTRICAL"
+      ],
+      "applicableTypeValue": "IfcDistributionSystem/ELECTRICAL",
+      "properties": [
+        {
+          "name": "PowerSupplyMode",
+          "definition": "Power supply mode of the equipment or system.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_PowerSupplyMode",
+          "enumValues": [
+            "AC",
+            "DC",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "ElectrificationType",
+          "definition": "Indicates the type of railway electrification.",
+          "type": "EnumeratedValue",
+          "enumName": "PEnum_ElectrificationType",
+          "enumValues": [
+            "AC",
+            "DC",
+            "NON_ELECTRIFIED",
+            "OTHER",
+            "NOTKNOWN",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "RatedFrequency",
+          "definition": "Frequency of the AC electric power supply when the device or system reaches its optimum operating condition.",
+          "type": "SingleValue",
+          "dataType": "IfcFrequencyMeasure"
+        },
+        {
+          "name": "NominalVoltage",
+          "definition": "The optimum voltage for the electrical appliance or system.",
+          "type": "SingleValue",
+          "dataType": "IfcElectricVoltageMeasure"
+        }
+      ]
+    }
+  ]
+}
